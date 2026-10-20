@@ -259,8 +259,10 @@
     & .a13-ib { min-width: 34px; height: 34px; }
     & .a13-acct { width: 34px; height: 34px; }
     & .a13-spine { padding: 6px 4px; gap: 0; }
-    & .a13-mark { width: 30px; height: 30px; margin-bottom: 2px; }
-    & .a13-sbtn { width: 42px; min-height: 36px; padding: 4px 2px; }
+    & .a13-mark { width: 28px; height: 28px; margin-bottom: 2px; }
+    & .a13-sbtn { width: 42px; min-height: 32px; padding: 3px 2px; }
+    & .a13-me { min-height: 34px; }
+    & .a13-me .a13-av { --a13-av: 24px; }
     & .a13-sbtn-l { display: none; }
     & .a13-sep { margin: 3px 0; }
     & .sh-main { gap: 8px; padding-top: 4px; }

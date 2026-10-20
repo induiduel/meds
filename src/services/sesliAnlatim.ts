@@ -1381,14 +1381,16 @@ export function registerSesliAnlatimRoutes(
     // pdf_isaret.py bunlarla okunan cümlenin PDF'teki maddesini tahminsiz bulur; metin değişince hash tutmaz, yok sayılır.
     const capalar = Array.isArray(req.body?.capalar) && req.body.capalar.length === pars.length ? req.body.capalar : null;
     if (capalar) yaz(path.join(KOK, 'capa', `${k}.json`), { mdSha1: crypto.createHash('sha1').update(metin).digest('hex'), p: capalar });
-    // sesler: metin değiştiyse (ya da hiç ses yoksa) Emel varsayılan + EMA
+    // sesler: metin değiştiyse (ya da hiç ses yoksa). Kurul 1: Emel varsayılan + EMA. Kurul 2+: YALNIZ EMA (varsayılan);
+    // Emel ve XTTS kullanılmaz (kullanıcı kararı 2026-10-20).
     const kayit = kayitlar()[k] || [];
     const isteyen = 'ders-isci';
     const isler: string[] = [];
-    if (degisti || !kayit.some((v) => v.saglayici === 'edge-emel' && v.metinHash === hash(metin)))
+    const yalnizEma = Number((/^k(\d+)-/.exec(k) || [])[1] || 1) >= 2;
+    if (!yalnizEma && (degisti || !kayit.some((v) => v.saglayici === 'edge-emel' && v.metinHash === hash(metin))))
       isler.push(isEkle(k, 'edge-emel', 'Emel', { varsayilanYap: true, isteyen }).id);
     if (degisti || !kayit.some((v) => v.saglayici === 'ema-yerel' && v.metinHash === hash(metin)))
-      isler.push(isEkle(k, 'ema-yerel', 'Ema', { isteyen }).id);
+      isler.push(isEkle(k, 'ema-yerel', 'Ema', { isteyen, ...(yalnizEma ? { varsayilanYap: true } : {}) }).id);
     degisti && yayinla('sesli_anlatim', { neden: 'ders-ekle', key: k, at: simdi() });
     res.json({ ok: true, key: k, yeni: !var_, metinDegisti: degisti, paragraf: pars.length, hizalama, isler });
   });

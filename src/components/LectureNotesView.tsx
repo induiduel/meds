@@ -1097,7 +1097,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                             )}
                           </button>
                         </div>
-                        <SourceText text={String(page.content || '')} />
+                        <SourceText text={String(page.content || '')} maddele />
                         {page.keywords && page.keywords.length > 0 && (
                           <ul className="nr-kw" aria-label="Kavramlar">
                             {page.keywords.map((kw, i) => (

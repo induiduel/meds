@@ -10,7 +10,7 @@ Sunucu yalnız metinHash ve bayt tutarsa gönderir (src/services/canliDers.ts).
 
 Kullanım:
   kelime_zaman.py --key <ders> [--vid <varyant>] [--zorla] [--kuru]
-  kelime_zaman.py --hepsi [--saglayici ema-yerel]     (önce verilen sağlayıcı, sonra kalanlar)
+  kelime_zaman.py --hepsi [--saglayici ema-yerel]     (yalnız verilen sağlayıcı; Kurul 2+ yalnız EMA)
   kelime_zaman.py --hepsi --oracle [--gpu]            (Kurul 2 hattı: meds-kelime-zaman.timer)
 --oracle: metin/ses listesi canlı API'den (MEDS_ORACLE_API_URL), ses dosyası boyutu Oracle'dakiyle aynı değilse
   ssh ile birebir alınır; sonuçlar yerelde yazılır ve rsync ile Oracle'a gönderilir (Oracle zayıf ARM, GPU yok).
@@ -315,7 +315,7 @@ def main():
     ap.add_argument("--key")
     ap.add_argument("--vid")
     ap.add_argument("--hepsi", action="store_true")
-    ap.add_argument("--saglayici", help="--hepsi ile: önce bu sağlayıcının sesleri, sonra kalanlar")
+    ap.add_argument("--saglayici", help="--hepsi ile: yalnız bu sağlayıcının sesleri (ör. ema-yerel)")
     ap.add_argument("--zorla", action="store_true")
     ap.add_argument("--kuru", action="store_true")
     ap.add_argument("--oracle", action="store_true", help="canlı API + Oracle ses dosyaları; sonuç Oracle'a gönderilir")
@@ -328,7 +328,8 @@ def main():
         isler = [(a.key, None)]
     elif a.hepsi:
         keys = [x["key"] for x in api_json("/api/canli-ders")["dersler"]]
-        isler = ([(k, a.saglayici) for k in keys] if a.saglayici else []) + [(k, None) for k in keys]
+        # --saglayici verilirse YALNIZ o sağlayıcı (Kurul 2+: yalnız EMA, kullanıcı kararı 2026-10-20)
+        isler = [(k, a.saglayici) for k in keys] if a.saglayici else [(k, None) for k in keys]
     else:
         ap.error("--key ya da --hepsi")
     hata = 0

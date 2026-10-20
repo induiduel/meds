@@ -11,6 +11,22 @@ const CD_BEKLEYEN_CACHE = 'medsoru-cd-bekleyen';
 const PAKET_CACHE = 'medsor-paket-v1';
 const PAKET_SES_RE = /^\/api\/(cozucu-ses|patoloji-asistan\/ses|patoloji-cozucu\/ses|patoloji-cozucu-alt\/ses|ogren-ses)\//;
 
+/** İndirilmemiş ses klibi internetsiz istenince verilen 0,4 sn'lik sessiz klip: oynatıcı hata vermez, akış sessiz sürer */
+const SESSIZ_KLIP = '/ses/sessiz.mp3';
+let sesYokSon = 0;
+async function sessizYanit(req) {
+  // HEAD (Öğren sesi önce varlığını sorar): ses yok de, ekran sesi gizlesin
+  if (req.method === 'HEAD') return new Response(null, { status: 404, headers: { 'X-Cevrimdisi': 'ses-yok' } });
+  const hit = await caches.match(SESSIZ_KLIP, { ignoreSearch: true, ignoreVary: true });
+  if (Date.now() - sesYokSon > 20000) {
+    sesYokSon = Date.now();
+    self.clients.matchAll({ type: 'window' }).then((cs) => cs.forEach((c) => c.postMessage({ type: 'CEVRIMDISI_SES_YOK' }))).catch(() => {});
+  }
+  if (!hit) return new Response(null, { status: 503 });
+  const b = await hit.blob();
+  return new Response(b, { status: 200, headers: { 'Content-Type': 'audio/mpeg', 'Content-Length': String(b.size), 'X-Cevrimdisi': 'sessiz' } });
+}
+
 // Paket önbelleğindeki adresler (sürüm X-Paket-Surum başlığında). İstemci değiştirince PAKET_CHANGED gönderir.
 let paketler = null;
 let paketYukle = null;
@@ -119,6 +135,7 @@ const PRECACHE_ASSETS = [
   '/icons/icon-512x512.png',
   '/icons/maskable-icon-192x192.png',
   '/icons/maskable-icon-512x512.png',
+  SESSIZ_KLIP,
 ];
 
 // Varsayılan komiteler (çevrimdışıyken sunucuya hiç ulaşılamasa dahi arayüzün boş kalmasını önler)
@@ -189,7 +206,13 @@ self.addEventListener('fetch', (event) => {
     if (paketler) {
       if (paketler.has(k)) { event.respondWith(paketDosyasi(req, url)); return; }
     } else {
-      event.respondWith((paketYukle || paketleriYukle()).then(() => (paketler.has(k) ? paketDosyasi(req, url) : fetch(req))));
+      event.respondWith((paketYukle || paketleriYukle()).then(() => (paketler.has(k) ? paketDosyasi(req, url)
+        : fetch(req).catch(() => (PAKET_SES_RE.test(url.pathname) ? sessizYanit(req) : Promise.reject(new Error('çevrimdışı')))))));
+      return;
+    }
+    // Cihazda olmayan klip (ör. paket sessiz indirildi): ağ yoksa oynatıcı hata vermesin
+    if (PAKET_SES_RE.test(url.pathname)) {
+      event.respondWith(fetch(req).catch(() => sessizYanit(req)));
       return;
     }
   }
@@ -266,16 +289,22 @@ self.addEventListener('fetch', (event) => {
               <meta charset="utf-8">
               <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
               <title>MeDSor · Çevrimdışı Mod</title>
-              <link rel="stylesheet" href="/assets/asset-index.css">
+              <style>
+                /* Kendi içinde: derlenmiş CSS'in adı karmalı, burada yüklenemez. Açık/koyu sistem temasına uyar. */
+                :root { color-scheme: light dark; --bg: #F4F6F9; --card: #FFFFFF; --line: #DDE3EA; --ink: #121A24; --ink2: #384554; --acc: #1A5FB4; --on: #FFFFFF; }
+                @media (prefers-color-scheme: dark) { :root { --bg: #0D1420; --card: #151E2C; --line: #263349; --ink: #E3E9F2; --ink2: #B4BFCE; --acc: #5CC6E4; --on: #04141A; } }
+                body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 16px; box-sizing: border-box; background: var(--bg); color: var(--ink); font: 15px/1.5 system-ui, sans-serif; text-align: center; }
+                .k { max-width: 420px; width: 100%; padding: 24px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; }
+                h1 { font-size: 20px; margin: 8px 0; } p { color: var(--ink2); font-size: 14px; }
+                a { display: inline-block; margin-top: 8px; padding: 10px 20px; border-radius: 12px; background: var(--acc); color: var(--on); font-weight: 600; text-decoration: none; }
+              </style>
             </head>
-            <body class="bg-slate-900 text-white flex items-center justify-center min-h-screen p-4 text-center font-sans">
-              <div class="max-w-md w-full p-6 bg-slate-800 rounded-2xl border border-slate-700 shadow-xl space-y-4">
-                <div class="text-3xl">⚡</div>
-                <h1 class="text-xl font-bold">MeDSor Çevrimdışı Mod</h1>
-                <p class="text-sm text-slate-300">İnternet bağlantısı algılanamadı. Uygulama veritabanınız cihazınızda kuruluysa lütfen ana sayfaya dönünüz.</p>
-                <a href="/" class="inline-block px-5 py-2.5 bg-teal-600 hover:bg-teal-500 text-white font-semibold rounded-xl text-sm transition-colors">
-                  Ana Sayfaya Dön
-                </a>
+            <body>
+              <div class="k">
+                <div style="font-size: 28px">⚡</div>
+                <h1>MeDSor Çevrimdışı Mod</h1>
+                <p>İnternet bağlantısı algılanamadı. Uygulama veritabanınız cihazınızda kuruluysa lütfen ana sayfaya dönünüz.</p>
+                <a href="/">Ana Sayfaya Dön</a>
               </div>
             </body>
           </html>`,

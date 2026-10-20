@@ -22,6 +22,7 @@ export const PAKET_CACHE = 'medsor-paket-v1';
 const DB_ADI = 'medsor_cevrimdisi';
 const AYAR_KEY = 'medsoru_cevrimdisi_v1';
 const KUYRUK_KEY = 'medsoru_cevrimdisi_kuyruk_v1';
+const SECIM_KEY = 'medsoru_cevrimdisi_secim_v1';
 const KATALOG_KEY = '/__cevrimdisi/katalog';
 
 export type Modul = 'uygulama' | 'sesli' | 'cozucu' | 'onem' | 'alt' | 'ogren' | 'veri' | 'db';
@@ -37,7 +38,13 @@ export interface Paket {
   n: number;
   surum: string;
   zorunlu?: boolean;
+  /** İsteğe bağlı ağır parçalar (ses klipleri, ders PDF'leri) */
+  ek?: { ses?: { b: number; n: number }; pdf?: { b: number; n: number } };
+  surumT?: { veri: string; ses?: string; pdf?: string };
 }
+/** Paket başına içerik seçimi: sesler ve PDF'ler inecek mi */
+export interface Secim { ses: boolean; pdf: boolean }
+export type DosyaTuru = 'ses' | 'pdf' | 'veri';
 export interface Kayit {
   id: string;
   surum: string;
@@ -49,6 +56,9 @@ export interface Kayit {
   grup: string;
   /** İndirme sürüyor/yarıda kaldı: dosyalar planlanan listedir */
   yarim?: boolean;
+  /** İndirilirken geçerli içerik seçimi ve tür başına sürümler */
+  secim?: Secim;
+  surumT?: Paket['surumT'];
 }
 export type Durum = 'yok' | 'kuyrukta' | 'iniyor' | 'tamam' | 'guncelleme' | 'hata';
 export interface Ayar {
@@ -58,6 +68,12 @@ export interface Ayar {
   wifi: boolean;
   /** Güncellemeleri kendiliğinden indir */
   otoGuncelle: boolean;
+  /** Yeni indirmelerde varsayılan: ses klipleri de insin (kapalı = sessiz, çok daha az yer) */
+  ses: boolean;
+  /** Yeni indirmelerde varsayılan: ders PDF'leri de insin */
+  pdf: boolean;
+  /** Cihazda bırakılacak en az boş alan (bayt); indirme bunun altına düşürmez */
+  pay: number;
 }
 export interface Aktif { id: string; alinan: number; toplam: number; hiz: number; dosya: number; dosyaSay: number; bekliyor?: string }
 
@@ -73,6 +89,8 @@ interface Durumlar {
   ayar: Ayar;
   duraklat: boolean;
   hazir: boolean;
+  /** Paket başına içerik seçimi (yoksa ayardaki varsayılan) */
+  secimler: Record<string, Secim>;
 }
 const oku = <T,>(k: string, d: T): T => {
   try {
@@ -92,9 +110,10 @@ let S: Durumlar = {
   kuyruk: typeof localStorage !== 'undefined' ? oku<string[]>(KUYRUK_KEY, []) : [],
   aktif: null,
   hatalar: {},
-  ayar: { acik: false, wifi: false, otoGuncelle: true, ...(typeof localStorage !== 'undefined' ? oku<Partial<Ayar>>(AYAR_KEY, {}) : {}) },
+  ayar: { acik: false, wifi: false, otoGuncelle: true, ses: true, pdf: true, pay: 300 * 1024 * 1024, ...(typeof localStorage !== 'undefined' ? oku<Partial<Ayar>>(AYAR_KEY, {}) : {}) },
   duraklat: false,
   hazir: false,
+  secimler: typeof localStorage !== 'undefined' ? oku<Record<string, Secim>>(SECIM_KEY, {}) : {},
 };
 const subs = new Set<() => void>();
 let yayZaman = 0;
@@ -115,6 +134,7 @@ const guncelle = (p: Partial<Durumlar>, hemen = true) => {
   S = { ...S, ...p };
   if (p.kuyruk) yazLS(KUYRUK_KEY, p.kuyruk);
   if (p.ayar) yazLS(AYAR_KEY, p.ayar);
+  if (p.secimler) yazLS(SECIM_KEY, p.secimler);
   yay(hemen);
 };
 export const abone = (f: () => void) => {
@@ -129,6 +149,9 @@ export function useCevrimdisi(): Durumlar {
 /* ------------------------------------------------------------------ yardımcılar ------------------------------------------------------------------ */
 export const destek = () => typeof caches !== 'undefined' && typeof indexedDB !== 'undefined';
 const SES_RE = /^\/api\/(cozucu-ses|patoloji-asistan\/ses|patoloji-cozucu\/ses|patoloji-cozucu-alt\/ses|ogren-ses)\//;
+/** Dosya türü (sunucu cevrimdisiKatalog.dosyaTuru ile aynı kural) */
+export const dosyaTuru = (u: string): DosyaTuru =>
+  /\.mp3($|\?)/i.test(u) || SES_RE.test(u) ? 'ses' : u.startsWith('/api/lecture-pdf/') ? 'pdf' : 'veri';
 const tabanFor = (u: string) => (u.startsWith('/api/') ? (getCustomApiUrl(u) || '').replace(/\/$/, '') : '');
 /** Önbellek anahtarı (sw.js ile aynı kural): ses klipleri sorgusuz, diğerleri tam adres */
 export function anahtar(d: PDosya | string): string {
@@ -255,8 +278,31 @@ export function paketDurumu(id: string, s: Durumlar = S): Durum {
   const k = s.kayitlar[id];
   if (!k || k.yarim) return 'yok';
   const p = s.katalog.find((x) => x.id === id);
-  if (p && p.surum && k.surum !== p.surum) return 'guncelleme';
+  if (p && guncelMi(p, k) === false) return 'guncelleme';
   return 'tamam';
+}
+
+/** Paket için geçerli içerik seçimi: kullanıcının paket seçimi > cihazdaki kayıt > ayardaki varsayılan */
+export function secimAl(id: string, s: Durumlar = S): Secim {
+  return s.secimler[id] || s.kayitlar[id]?.secim || { ses: s.ayar.ses, pdf: s.ayar.pdf };
+}
+/** Seçime göre inecek bayt (ek parçası olmayan paketlerde tamamı) */
+export function secimliBayt(p: Paket, secim: Secim): number {
+  let b = p.bayt;
+  if (!secim.ses) b -= p.ek?.ses?.b || 0;
+  if (!secim.pdf) b -= p.ek?.pdf?.b || 0;
+  return Math.max(0, b);
+}
+/** Cihazdaki kopya katalogdakiyle aynı mı (yalnız inen türlerin sürümü karşılaştırılır) */
+function guncelMi(p: Paket, k: Kayit): boolean {
+  if (!p.surum) return true;
+  if (p.surumT && k.surumT && k.secim) {
+    if (p.surumT.veri !== k.surumT.veri) return false;
+    if (k.secim.ses && (p.surumT.ses || '') !== (k.surumT.ses || '')) return false;
+    if (k.secim.pdf && (p.surumT.pdf || '') !== (k.surumT.pdf || '')) return false;
+    return true;
+  }
+  return k.surum === p.surum;
 }
 
 /* ------------------------------------------------------------------ özel türler ------------------------------------------------------------------ */
@@ -271,13 +317,20 @@ export function ozelKaydet(m: Modul, t: OzelTur) { ozel[m] = t; }
 let calisiyor = false;
 let iptal: AbortController | null = null;
 
-export function kuyrugaEkle(ids: string[], basa = false) {
+export function kuyrugaEkle(ids: string[], basa = false, secim?: Secim) {
+  if (secim) {
+    const sm = { ...S.secimler };
+    ids.forEach((id) => { sm[id] = secim; });
+    guncelle({ secimler: sm });
+  }
   const yeni = ids.filter((id) => !S.kuyruk.includes(id) && S.aktif?.id !== id);
   if (!yeni.length) return;
   const h = { ...S.hatalar };
   yeni.forEach((id) => delete h[id]);
   guncelle({ kuyruk: basa ? [...yeni, ...S.kuyruk] : [...S.kuyruk, ...yeni], hatalar: h });
-  void calistir();
+  // Listeden indirildiyse (merkez hiç açılmadan) boyut/ilerleme için katalog da gelsin
+  if (!S.katalog.length) void katalogYenile().then(() => calistir());
+  else void calistir();
 }
 export function kuyruktanCikar(ids: string[]) {
   guncelle({ kuyruk: S.kuyruk.filter((x) => !ids.includes(x)) });
@@ -354,7 +407,9 @@ async function paketIndir(id: string, signal: AbortSignal) {
 
   const r = await fetch(`${tabanFor('/api/')}/api/cevrimdisi/paket/${encodeURIComponent(id)}`, { cache: 'no-store', signal });
   if (!r.ok) throw new Error(r.status === 404 ? 'Bu paket artık sunucuda yok.' : `Paket bilgisi alınamadı (${r.status}).`);
-  const bilgi: Paket & { dosyalar: PDosya[] } = await r.json();
+  const ham: Paket & { dosyalar: PDosya[] } = await r.json();
+  const secim = secimAl(id);
+  const bilgi = { ...ham, dosyalar: ham.dosyalar.filter((d) => { const t = dosyaTuru(d.u); return t === 'veri' || secim[t]; }) };
   const cache = await caches.open(PAKET_CACHE);
   const onceki = S.kayitlar[id];
   // Yarım kaldığında silinebilsin diye plan önce kaydedilir (eski dosyalar + yeni dosyalar)
@@ -376,7 +431,18 @@ async function paketIndir(id: string, signal: AbortSignal) {
     if (hit && (hit.headers.get('X-Paket-Surum') || '') === (d.v || '')) hazirBayt += d.b;
     else eksik.push(d);
   }
-  const toplam = bilgi.bayt || bilgi.dosyalar.reduce((a, d) => a + d.b, 0);
+  const toplam = bilgi.dosyalar.reduce((a, d) => a + d.b, 0);
+  // Yer denetimi: inecek kısım cihazdaki boş alanı (bırakılacak pay dahil) aşıyorsa hiç başlamadan dur
+  try {
+    const e = await navigator.storage?.estimate?.();
+    if (e?.quota) {
+      const bos = e.quota - (e.usage || 0);
+      const gerek = toplam - hazirBayt;
+      if (gerek > 0 && gerek > bos - S.ayar.pay) {
+        throw Object.assign(new Error(`Cihazda yer yetmiyor: ${mb(gerek)} gerekli, ${mb(Math.max(0, bos))} boş. Sesleri kapatarak ya da başka paketleri silerek yer aç.`), { name: 'YerYok' });
+      }
+    }
+  } catch (e: any) { if (e?.name === 'YerYok') throw e; }
   let alinan = hazirBayt;
   let biten = bilgi.dosyalar.length - eksik.length;
   guncelle({ aktif: { ...S.aktif!, toplam, alinan, dosya: biten, dosyaSay: bilgi.dosyalar.length } });
@@ -436,9 +502,73 @@ async function paketIndir(id: string, signal: AbortSignal) {
   // Artık kullanılmayan eski dosyalar (başka paket kullanmıyorsa) silinir
   const yeni = new Set(bilgi.dosyalar.map((d) => d.u));
   const atilacak = [...plan.values()].filter((d) => !yeni.has(d.u));
-  await kayitYaz({ id, surum: bilgi.surum, bayt: toplam, dosyalar: bilgi.dosyalar, at: Date.now(), baslik: bilgi.baslik, modul: bilgi.modul, grup: bilgi.grup });
+  await kayitYaz({ id, surum: bilgi.surum, bayt: toplam, dosyalar: bilgi.dosyalar, at: Date.now(), baslik: bilgi.baslik, modul: bilgi.modul, grup: bilgi.grup,
+    secim, surumT: bilgi.surumT });
   await dosyalariBirak(atilacak, id);
   swBildir();
+}
+
+const mb = (n: number) => (n >= 1024 ** 3 ? `${(n / 1024 ** 3).toFixed(1)} GB` : `${Math.max(1, Math.round(n / 1024 / 1024))} MB`).replace('.', ',');
+
+/**
+ * Paketlerin içerik seçimini değiştir. Bir türü kaldırmak internetsiz, anında yapılır (dosyalar silinir, ders sessiz kullanılır);
+ * eklemek için paket yeniden kuyruğa girer ve yalnız eksik dosyalar iner.
+ */
+export async function secimDegistir(ids: string[], degisim: Partial<Secim>) {
+  const sm = { ...S.secimler };
+  const indirilecek: string[] = [];
+  for (const id of ids) {
+    const eski = secimAl(id);
+    const yeni = { ...eski, ...degisim };
+    sm[id] = yeni;
+    const k = S.kayitlar[id];
+    if (!k || k.yarim) continue;
+    const ekle = (yeni.ses && !eski.ses) || (yeni.pdf && !eski.pdf) || (k.secim && ((yeni.ses && !k.secim.ses) || (yeni.pdf && !k.secim.pdf)));
+    // Kaldırılan türler: yerelde düş
+    const kalan = k.dosyalar.filter((d) => { const t = dosyaTuru(d.u); return t === 'veri' || yeni[t]; });
+    if (kalan.length !== k.dosyalar.length) {
+      const atilan = k.dosyalar.filter((d) => !kalan.includes(d));
+      await kayitYaz({ ...k, dosyalar: kalan, bayt: kalan.reduce((a, d) => a + d.b, 0), secim: { ses: !!(k.secim || eski).ses && yeni.ses, pdf: !!(k.secim || eski).pdf && yeni.pdf } });
+      await dosyalariBirak(atilan, id);
+    }
+    if (ekle) indirilecek.push(id);
+  }
+  guncelle({ secimler: sm });
+  if (indirilecek.length) kuyrugaEkle(indirilecek);
+  swBildir();
+  void depolamaYenile();
+}
+
+/** Modül başına cihazdaki bayt (yer kullanımı dökümü) */
+export function modulDokumu(s: Durumlar = S): { modul: Modul; bayt: number; n: number; ses: number }[] {
+  const m = new Map<Modul, { modul: Modul; bayt: number; n: number; ses: number }>();
+  for (const k of Object.values(s.kayitlar)) {
+    if (k.yarim) continue;
+    const x = m.get(k.modul) || { modul: k.modul, bayt: 0, n: 0, ses: 0 };
+    x.bayt += k.bayt;
+    x.n++;
+    x.ses += k.dosyalar.filter((d) => dosyaTuru(d.u) === 'ses').reduce((a, d) => a + d.b, 0);
+    m.set(k.modul, x);
+  }
+  return [...m.values()].sort((a, b) => b.bayt - a.bayt);
+}
+
+/** Hiçbir paketin kullanmadığı artık dosyaları (yarıda kalmış eski sürümler vb.) siler; boşalan baytı döndürür */
+export async function yerAc(): Promise<number> {
+  if (!destek()) return 0;
+  const kullanilan = new Set<string>([new URL(KATALOG_KEY, location.href).href]);
+  for (const k of Object.values(S.kayitlar)) k.dosyalar.forEach((d) => kullanilan.add(anahtar(d)));
+  const cache = await caches.open(PAKET_CACHE);
+  let bayt = 0;
+  for (const req of await cache.keys()) {
+    if (kullanilan.has(req.url)) continue;
+    const r = await cache.match(req);
+    bayt += Number(r?.headers.get('Content-Length') || 0);
+    await cache.delete(req);
+  }
+  swBildir();
+  await depolamaYenile();
+  return bayt;
 }
 
 /** Diğer paketlerin kullanmadığı dosyaları önbellekten siler */
@@ -523,6 +653,7 @@ export async function cevrimdisiBaslat() {
   // SW arka plan eşitleme mesajı: kuyruk sürsün
   navigator.serviceWorker?.addEventListener?.('message', (e: MessageEvent) => {
     if (e.data?.type === 'MEDSORU_BACKGROUND_SYNC') { void calistir(); }
+    if (e.data?.type === 'CEVRIMDISI_SES_YOK') bildir('Bu bölümün sesi cihazda yok; internet gelene dek sessiz devam ediliyor.');
   });
   await dogrula().catch(() => {});
   if (S.kuyruk.length || S.ayar.acik || Object.keys(S.kayitlar).length) {
@@ -530,6 +661,19 @@ export async function cevrimdisiBaslat() {
     void calistir();
     void otomatikTur();
   }
+}
+
+/** Kısa alt bildirim (React dışı; her ekranda, tam ekran derslerde de görünür). Stil: index.css .cv-toast */
+export function bildir(metin: string, ms = 4500) {
+  try {
+    document.querySelector('.cv-toast')?.remove();
+    const el = document.createElement('div');
+    el.className = 'cv-toast';
+    el.setAttribute('role', 'status');
+    el.textContent = metin;
+    document.body.appendChild(el);
+    window.setTimeout(() => el.remove(), ms);
+  } catch { /* DOM yok */ }
 }
 
 /** Çevrimdışı mod açıkken: uygulama paketi her zaman güncel, diğer güncellemeler ayara göre */
@@ -547,9 +691,10 @@ async function otomatikTur() {
 }
 
 /** Çevrimdışı modu aç: uygulama + seçilen paketler kuyruğa */
-export function cevrimdisiModuAc(ids: string[]) {
+export function cevrimdisiModuAc(ids: string[], secim?: Secim) {
   ayarYaz({ acik: true });
-  kuyrugaEkle(['uygulama', ...ids.filter((x) => x !== 'uygulama')]);
+  kuyrugaEkle(['uygulama']);
+  kuyrugaEkle(ids.filter((x) => x !== 'uygulama'), false, secim);
 }
 /** Çevrimdışı modu kapat (silmek isteğe bağlı) */
 export async function cevrimdisiModuKapat(sil: boolean) {

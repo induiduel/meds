@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import { foldText } from '../../services/searchText';
 import { focusMarks } from '../../services/questionFocus';
+import { maddele as maddeleMetin } from '../../utils/maddele';
 
 /**
  * Ders notu / ders özeti / açıklama gibi kaynak metinlerini düz metin yerine okunur biçimde gösterir:
@@ -47,7 +48,7 @@ function splitLongParagraph(text: string): string[] {
   return out;
 }
 
-export function parseSourceText(raw: string): Block[] {
+export function parseSourceText(raw: string, uzunBol = true): Block[] {
   const text = String(raw || '')
     .replace(/\r/g, '')
     // satır başı girintisi korunur (iç içe madde düzeyi ondan bulunur), satır içi boşluklar tekleşir
@@ -63,7 +64,7 @@ export function parseSourceText(raw: string): Block[] {
     if (!para.length) return;
     const joined = para.join(' ').trim();
     para = [];
-    if (joined) splitLongParagraph(joined).forEach((p) => blocks.push({ kind: 'p', text: p }));
+    if (joined) (uzunBol ? splitLongParagraph(joined) : [joined]).forEach((p) => blocks.push({ kind: 'p', text: p }));
   };
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i].trim();
@@ -158,8 +159,10 @@ export const SourceText: React.FC<{
   answerTerms?: string[];
   size?: 'sm' | 'md';
   className?: string;
-}> = ({ text, terms, answerTerms, size = 'md', className = '' }) => {
-  const blocks = useMemo(() => parseSourceText(text), [text]);
+  /** Düz anlatım paragraflarını sesli ders metnindeki gibi giriş + (iç içe) maddelere ayır */
+  maddele?: boolean;
+}> = ({ text, terms, answerTerms, size = 'md', className = '', maddele = false }) => {
+  const blocks = useMemo(() => parseSourceText(text, !maddele), [text, maddele]);
   const fold = (l?: string[]) => (l || []).map((t) => foldText(String(t || '').trim())).filter((t) => t.length >= 2);
   const folded = useMemo(() => fold(terms), [terms]);
   const ans = useMemo(() => fold(answerTerms), [answerTerms]);
@@ -185,6 +188,17 @@ export const SourceText: React.FC<{
                 </li>
               ))}
             </ul>
+          );
+        const md = maddele ? maddeleMetin(b.text) : null;
+        if (md)
+          return (
+            <div key={i} className="ms-src-p ms-src-md">
+              {md.map((m, j) => (
+                <span key={j} className={m.d === 0 ? 'ms-md-giris' : m.d === 2 ? 'ms-md-madde is-alt' : 'ms-md-madde'}>
+                  <Inline text={m.t} terms={folded} answerTerms={ans} lead={m.d === 0} />
+                </span>
+              ))}
+            </div>
           );
         return <p key={i} className="ms-src-p"><Inline text={b.text} terms={folded} answerTerms={ans} /></p>;
       })}

@@ -26,7 +26,16 @@ export interface Paket {
   surum: string;
   /** Uygulama paketi gibi çevrimdışı modda her zaman cihazda tutulanlar */
   zorunlu?: boolean;
+  /** İsteğe bağlı ağır parçalar (istemci "sesleri / PDF'leri de indir" seçimine göre atlar): bayt + dosya sayısı */
+  ek?: { ses?: { b: number; n: number }; pdf?: { b: number; n: number } };
+  /** Tür başına sürüm: sessiz indirilen paket yalnız ses değişince "güncelleme var" göstermesin */
+  surumT?: { veri: string; ses?: string; pdf?: string };
 }
+
+/** Dosya türü (istemci paketMotoru.dosyaTuru ile aynı kural) */
+export const dosyaTuru = (u: string): 'ses' | 'pdf' | 'veri' =>
+  /\.mp3($|\?)/i.test(u) || /^\/api\/(cozucu-ses|patoloji-asistan\/ses|patoloji-cozucu\/ses|patoloji-cozucu-alt\/ses|ogren-ses)\//.test(u) ? 'ses'
+    : u.startsWith('/api/lecture-pdf/') ? 'pdf' : 'veri';
 
 const KOK = process.cwd();
 const DIST = path.join(KOK, 'dist');
@@ -75,8 +84,18 @@ function kur(): Map<string, { p: Paket; dosyalar: PDosya[] }> {
     for (const d of dosyalar) if (d.b > 0 || d.u.startsWith('/api/')) tekil.set(d.u, d);
     const ds = [...tekil.values()];
     if (!ds.length) return;
+    const tur: Record<'ses' | 'pdf' | 'veri', PDosya[]> = { ses: [], pdf: [], veri: [] };
+    for (const d of ds) tur[dosyaTuru(d.u)].push(d);
+    const sur = (xs: PDosya[]) => ozet(xs.map((d) => `${d.u}@${d.v || ''}`).sort().join('|'));
+    const ek: Paket['ek'] = {};
+    const surumT: NonNullable<Paket['surumT']> = { veri: sur(tur.veri) };
+    for (const t of ['ses', 'pdf'] as const) {
+      if (!tur[t].length || p.modul === 'uygulama') continue;
+      ek[t] = { b: tur[t].reduce((a, d) => a + d.b, 0), n: tur[t].length };
+      surumT[t] = sur(tur[t]);
+    }
     out.set(p.id, {
-      p: { ...p, bayt: ds.reduce((a, d) => a + d.b, 0), n: ds.length, surum: ozet(ds.map((d) => `${d.u}@${d.v || ''}`).sort().join('|')) },
+      p: { ...p, bayt: ds.reduce((a, d) => a + d.b, 0), n: ds.length, surum: sur(ds), ...(Object.keys(ek).length ? { ek, surumT } : {}) },
       dosyalar: ds,
     });
   };

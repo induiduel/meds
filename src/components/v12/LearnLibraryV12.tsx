@@ -452,7 +452,7 @@ export const LearnLibraryV12: React.FC<LearnLibraryV12Props> = ({ decks: all, pr
                               {deckName(d, false)}
                             </button>
                             {metaOf(d)}
-                            <CihazdaIsaret paket={`ogren:${d.id}`} /><KonuSureEtiketi modul="ogren" konu={ogrenTakipId(d.id)} />
+                            <CihazdaIsaret paket={`ogren:${d.id}`} indir={false} /><KonuSureEtiketi modul="ogren" konu={ogrenTakipId(d.id)} />
                           </span>
                           <Prog pct={s.pct} done={s.status === 'done'} />
                           {takipDugme(d, s)}
@@ -470,7 +470,7 @@ export const LearnLibraryV12: React.FC<LearnLibraryV12Props> = ({ decks: all, pr
                             {deckName(d, false)}
                           </button>
                           {metaOf(d)}
-                          <CihazdaIsaret paket={`ogren:${d.id}`} /><KonuSureEtiketi modul="ogren" konu={ogrenTakipId(d.id)} />
+                          <CihazdaIsaret paket={`ogren:${d.id}`} indir={false} /><KonuSureEtiketi modul="ogren" konu={ogrenTakipId(d.id)} />
                           <span className="l12-tile-f">
                             <Prog pct={s.pct} done={s.status === 'done'} />
                             {takipDugme(d, s)}

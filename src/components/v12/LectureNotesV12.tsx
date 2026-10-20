@@ -148,7 +148,7 @@ const NoteReader: React.FC<{
                     <span aria-hidden>Kopyala</span>
                   </button>
                 </div>
-                <SourceText text={String(page.content || '')} />
+                <SourceText text={String(page.content || '')} maddele />
                 {page.keywords && page.keywords.length > 0 && (
                   <ul className="r12-kw" aria-label="Kavramlar">
                     {page.keywords.map((kw, i) => (

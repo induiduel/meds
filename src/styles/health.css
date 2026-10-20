@@ -184,7 +184,7 @@ html.ui-v7 :is(.cx-tab, .ms-chipbar:not(.is-wrap) > :is(.ms-chip, .ms-fchip)) { 
 html.ui-v7 :is(.cx-tab, .ms-chipbar:not(.is-wrap) > :is(.ms-chip, .ms-fchip))::after { display: none; }
 html.ui-v7 :is(.cx-tab, .ms-chipbar:not(.is-wrap) > :is(.ms-chip, .ms-fchip)):hover { background: color-mix(in srgb, var(--color-white) 90%, var(--color-ink)); }
 html.ui-v7 :is(.cx-tab.is-on, .cx-tab[aria-selected="true"], .ms-chipbar:not(.is-wrap) > :is(.ms-chip, .ms-fchip):is(.is-on, [aria-checked="true"])) { background: var(--color-ink); color: var(--color-white); font-weight: 600; }
-html.ui-v7 :is(.cx-tab, .ms-chip) small, html.ui-v7 :is(.ms-chip-count, .ms-chipbar .n) { font-family: var(--font-round); font-size: 12px; font-weight: 500; color: inherit; opacity: .6; }
+html.ui-v7 :is(.cx-tab, .ms-chip) small, html.ui-v7 :is(.ms-chip-count, .ms-chipbar .n) { font-family: var(--font-round); font-size: 12px; font-weight: 500; color: inherit; }
 html.ui-v7 .cx-tab.is-zero { opacity: .45; }
 html.ui-v7 .cx-rail { border-bottom: 0 !important; }
 html.ui-v7 .ds-tabrail { border-bottom: 0; align-items: center; }

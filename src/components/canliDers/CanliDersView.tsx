@@ -441,7 +441,7 @@ const DersSatiri = React.memo(function DersSatiri({ d, k }: { d: CdListeDers; k?
             <span className="cd-satir-sure-m">{fmtSure(v.sureSn)}</span>
             {sesN > 1 && <span>{sesN} ses</span>}
             <SatirIlerleme d={d} k={k} dur={v.sureSn} />
-            <CihazdaIsaret paket={`sesli:${d.key}`} />
+            <CihazdaIsaret paket={`sesli:${d.key}`} indir={false} />
             <KonuSureEtiketi modul="sesli" konu={d.key} />
           </small>
         </a>

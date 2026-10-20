@@ -1,5 +1,6 @@
 import './services/netInstall';
 import { Component, ErrorInfo, ReactNode } from 'react';
+import CevrimdisiYok from './components/cevrimdisi/CevrimdisiYok';
 import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
@@ -194,6 +195,7 @@ class RootErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState
     if (this.state.hasError) {
       const msg = this.state.error?.message || 'Bilinmeyen arayüz hatası';
       const isChunkError = /Failed to fetch dynamically imported module|Importing a module script failed/i.test(msg);
+      if (isChunkError && !navigator.onLine) return <CevrimdisiYok />;
 
       return (
         <div className="min-h-dvh bg-canvas text-ink flex flex-col items-center justify-center p-4">

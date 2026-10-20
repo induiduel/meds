@@ -1513,6 +1513,13 @@ html.theme-dark .ms-btn.is-armed { color: #2B0710; }
 .ms-src { display: flex; flex-direction: column; gap: 8px; font-size: 14.5px; line-height: 1.62; color: var(--color-ink-2); min-width: 0; overflow-wrap: anywhere; }
 .ms-src.is-sm { font-size: 13.5px; gap: 6px; line-height: 1.58; }
 .ms-src-p { margin: 0; }
+/* Ders notu madde görünümü (sesli ders ile aynı kural, src/utils/maddele.ts) */
+.ms-src-md > span { display: block; }
+.ms-src-md .ms-md-giris { font-weight: 600; color: var(--color-ink); }
+.ms-src-md .ms-md-madde { position: relative; padding-left: 1.15em; margin-top: 0.3em; }
+.ms-src-md .ms-md-madde::before { content: ""; position: absolute; left: 0.3em; top: 0.72em; width: 0.36em; height: 0.36em; border-radius: 50%; background: var(--color-accent); opacity: 0.75; }
+.ms-src-md .ms-md-madde.is-alt { padding-left: 2.4em; margin-top: 0.2em; font-size: 0.96em; color: var(--color-ink-2); }
+.ms-src-md .ms-md-madde.is-alt::before { left: 1.35em; top: 0.68em; width: 0.4em; height: 0.4em; background: transparent; border: 1.5px solid var(--color-accent); }
 .ms-src-h { margin: 4px 0 -2px; font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--color-ink); display: flex; align-items: center; gap: 8px; }
 .ms-src-h::after { content: ''; flex: 1; height: 1px; background: var(--color-line-soft); }
 .ms-src-h:first-child { margin-top: 0; }
@@ -3714,3 +3721,20 @@ html.ui-v3 .ms-tooltip { border-radius: 8px; font-size: 12px; }
 .cv-cihazda { display: inline-flex; align-items: center; gap: 3px; flex: none; padding: 1px 7px 1px 5px; border-radius: 999px; font: 600 11px/1.6 var(--font-sans); background: color-mix(in srgb, var(--color-ok) 14%, transparent); color: var(--color-ok); white-space: nowrap; vertical-align: middle; }
 .cv-cihazda svg { width: 12px; height: 12px; }
 .cv-cihazda.is-iniyor { background: var(--color-accent-soft); color: var(--color-accent); }
+.cv-cihazda-indir {
+  display: inline-flex; align-items: center; gap: 4px; min-height: 26px; padding: 2px 8px; border: 1px solid var(--color-line);
+  border-radius: 999px; background: transparent; color: var(--color-ink-3); font: 500 11.5px var(--font-sans); cursor: pointer;
+}
+.cv-cihazda-indir svg { width: 13px; height: 13px; }
+.cv-cihazda-indir:hover { color: var(--color-accent); border-color: var(--color-accent); }
+/* İnternetsiz bilgi ekranı ve "ses cihazda yok" bildirimi (components/cevrimdisi/CevrimdisiYok.tsx) */
+.cv-yok { max-width: 440px; margin: 48px auto; padding: 24px; text-align: center; border: 1px solid var(--color-line); border-radius: 16px; background: var(--color-white); }
+.cv-yok svg { width: 32px; height: 32px; color: var(--color-ink-3); }
+.cv-yok b { display: block; margin-top: 10px; font-size: 16px; color: var(--color-ink); }
+.cv-yok p { margin: 6px 0 16px; font-size: 13.5px; color: var(--color-ink-2); }
+.cv-yok > div { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.cv-toast {
+  position: fixed; left: 50%; bottom: calc(88px + env(safe-area-inset-bottom)); z-index: 90; transform: translateX(-50%);
+  max-width: min(92vw, 420px); padding: 10px 14px; border-radius: 12px; background: var(--color-ink); color: var(--color-canvas);
+  font-size: 13px; box-shadow: var(--shadow-lg);
+}

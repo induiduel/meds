@@ -1,16 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 110,
-  "baslik": "Yönetim paneli: moderatör rolü ve hat işlemleri",
+  "onem": 111,
+  "baslik": "İyileştirmeler ve düzeltmeler",
   "maddeler": [
-    "Moderatör rolü: yalnız moderasyon bölümlerine erişir, her işlemi kayda geçer.",
-    "Hat panosu: gece hattını şimdi çalıştırma; dersi PDF'ten baştan üretme."
+    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
   ],
-  "eklenen": [
-    "Moderatör rolü: yalnız moderasyon bölümlerine erişir, her işlemi kayda geçer.",
-    "Hat panosu: gece hattını şimdi çalıştırma; dersi PDF'ten baştan üretme."
+  "eklenen": [],
+  "degisen": [
+    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
   ],
-  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }
