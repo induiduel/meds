@@ -1,13 +1,13 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 107,
-  "baslik": "Sesli ders metninde daha fazla alt madde",
+  "onem": 108,
+  "baslik": "Ders PDF'i Geri ile geri geliyor",
   "maddeler": [
-    "Sesli ders metninde alt maddeler genişletildi: sıralamalar (1.'si, 2.'si), 'şunlardır' listeleri ve 'Çünkü/Özellikle' açıklamaları alt madde."
+    "Etkileşimli derste ders PDF'i açıkken başka sayfaya gidip Geri ile dönünce PDF aynı görünümde (yalnız PDF / yan yana), aynı sayfada ve büyütülmüşse büyütülmüş açılıyor."
   ],
   "eklenen": [],
   "degisen": [
-    "Sesli ders metninde alt maddeler genişletildi: sıralamalar (1.'si, 2.'si), 'şunlardır' listeleri ve 'Çünkü/Özellikle' açıklamaları alt madde."
+    "Etkileşimli derste ders PDF'i açıkken başka sayfaya gidip Geri ile dönünce PDF aynı görünümde (yalnız PDF / yan yana), aynı sayfada ve büyütülmüşse büyütülmüş açılıyor."
   ],
   "duzeltilen": [],
   "silinen": []

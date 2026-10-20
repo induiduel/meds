@@ -58,6 +58,7 @@ import { useDeckPdf } from '../../../services/deckPdfService';
 import { QuestionFocus, focusMarks } from '../../../services/questionFocus';
 import { detectIosDevice, openPwaInstallGuide } from '../../../services/pwaService';
 import { shouldAvoidNativeFullscreen } from '../../../utils/device';
+import { pdfAdresOku, pdfAdresYaz } from '../../../utils/pdfAdres';
 import { isAppFullscreen, releasePageFullscreen, wasRecentlyScrollingOrTouching } from '../../../utils/fullscreen';
 import { lockScroll, unlockScroll } from '../../../utils/scrollLock';
 import { toast } from '../../ui/Toast';
@@ -432,7 +433,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
   const isWide = useIsWide();
   const [layoutPref, setLayoutPref] = useState<Layout>(() => pref.get('medsoru_learn_layout', 'A', ['A', 'B'] as const));
   const layout: Layout = isPhone ? 'A' : layoutPref;
-  const [viewMode, setViewMode] = useState<DeckViewMode>(initialViewMode);
+  const [viewMode, setViewMode] = useState<DeckViewMode>(() => pdfAdresOku().mode ?? initialViewMode);
   /** v12 (canvas LearnPlayer): Stüdyo = Akış kabuğu (ray + okuma sütunu + bilgi çekmecesi + alt gezinme) içinde iki sütun;
    *  sağda tek etkin bloklu Pekiştir paneli. v10/v11'in kart + yan sekmeler + bilgi karoları Stüdyo'su yalnız onlarda kalır. */
   const appearance = useAppearance();
@@ -582,8 +583,12 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
 
   const pdfInfo = useDeckPdf(deck.id);
   const pdfLoc = useMemo(() => getSlidePdfLocation(deck.id, step.slide.slideNumber, step.slide, n, pdfInfo?.slides), [deck.id, step, n, pdfInfo?.slides]);
-  const [pdfPage, setPdfPage] = useState(pdfLoc.primaryPage);
-  const pdfUserScrolledPage = useRef<number | null>(null);
+  const [pdfPage, setPdfPage] = useState(() => pdfAdresOku().page ?? pdfLoc.primaryPage);
+  // Adresten gelen sayfa ilk adım eşlemesinde ezilmesin
+  const pdfUserScrolledPage = useRef<number | null>(pdfAdresOku().page ?? null);
+  useEffect(() => {
+    pdfAdresYaz(viewMode === 'interactive' ? { pdf: null, pdfs: null, pdftam: null } : { pdf: viewMode === 'split' ? 'yan' : '1', pdfs: String(pdfPage) });
+  }, [viewMode, pdfPage]);
   useEffect(() => {
     if (pdfUserScrolledPage.current !== null) {
       pdfUserScrolledPage.current = null;

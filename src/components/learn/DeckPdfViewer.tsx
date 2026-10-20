@@ -15,6 +15,7 @@ import { PDF_SAVED_EVENT, removeSavedPdf, savePdfOffline, savedPdfObjectUrl } fr
 import { shouldAvoidNativeFullscreen } from '../../utils/device';
 import { useAppFullscreenWhile, wasRecentlyScrollingOrTouching } from '../../utils/fullscreen';
 import { lockScroll, unlockScroll } from '../../utils/scrollLock';
+import { pdfAdresOku, pdfAdresYaz } from '../../utils/pdfAdres';
 import { toast } from '../ui/Toast';
 import './pdf/pdfDoc.css';
 
@@ -109,7 +110,8 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
 
   /* --- tam ekran: görüntüleyicinin kendisi; API yoksa ekranı kaplayan katman --- */
   const [isFs, setIsFs] = useState(false);
-  const [maxed, setMaxed] = useState(false);
+  // Büyütülmüş PDF adreste (?pdftam=1): Geri ile ders PDF görünümüne dönünce büyütülmüş açılır.
+  const [maxed, setMaxed] = useState(() => pdfAdresOku().tam);
   const hadNativeFsRef = useRef(false);
   useEffect(() => {
     const on = () => {
@@ -132,6 +134,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
     };
   }, []);
   const fsOn = isFs || maxed;
+  useEffect(() => { pdfAdresYaz({ pdftam: maxed ? '1' : null }); }, [maxed]);
   useAppFullscreenWhile(fsOn);
   const toggleFs = () => {
     const d = document as any;
