@@ -1,6 +1,7 @@
 import React from 'react';
 import { createPortal } from 'react-dom';
 import {
+  HeartPulse,
   ArrowLeft, ArrowRight, Check, ChevronLeft, ChevronRight, History, LayoutDashboard, LayoutGrid, List, ListTree, Presentation, Rows3, Rows4,
   SlidersHorizontal, Target, TriangleAlert,
 } from 'lucide-react';
@@ -176,9 +177,11 @@ export const SaglikBaslik: React.FC<GorunumAyar & {
     <>
       {genel ? (
         <header className="sbk-giris">
+          <span className="sbk-giris-ic" aria-hidden><HeartPulse /></span>
           <div className="sbk-giris-m">
+            <span className="sbk-giris-ust">Kurul 1 · Halk Sağlığı</span>
             <h1>Sağlık Bakanlığı</h1>
-            <p>Resmî halk sağlığı verileri; her sayı kaynaklı ve dersteki slaytına, çıkmış sorularına bağlı.</p>
+            <p>Resmî veriler; her sayı kaynaklı, dersteki slaytına ve çıkmış sorularına bağlı.</p>
           </div>
           {gorunumBtn}
         </header>

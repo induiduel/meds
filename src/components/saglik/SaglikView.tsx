@@ -61,9 +61,9 @@ export const SaglikView: React.FC = () => {
     try { localStorage.setItem('medsoru_saglik_gorunum', m); } catch { /* özel pencere */ }
   }, []);
   const gorunum = useMemo(() => ({ mod, setMod }), [mod, setMod]);
-  // Yoğunluk: Rahat (varsayılan) ya da Kompakt (daha küçük boşluk ve yazı, bloklarda açıklama satırı gizli)
+  // Yoğunluk: Kompakt (varsayılan, Genetik Check Up ile aynı yoğunluk) ya da Rahat (daha küçük boşluk ve yazı, bloklarda açıklama satırı gizli)
   const [kompakt, setKompaktHam] = useState<boolean>(() => {
-    try { return localStorage.getItem('medsoru_saglik_yogunluk') === 'kompakt'; } catch { return false; }
+    try { return localStorage.getItem('medsoru_saglik_yogunluk') !== 'rahat'; } catch { return true; }
   });
   const setKompakt = useCallback((k: boolean) => {
     setKompaktHam(k);

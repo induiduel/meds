@@ -1,19 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 59,
-  "baslik": "Genetik Check Up sayfası yenilendi",
+  "onem": 60,
+  "baslik": "Sağlık Bakanlığı sayfası daha kompakt",
   "maddeler": [
-    "Tıbbi Biyoloji ve Genetik sayfası daha sade ve kompakt: ilerleme başlık satırında, sekmeler kayarken üstte kalıyor.",
-    "Sesli derste 11 aşama solda bölümlere göre listeleniyor; anlatım, sınav kuralı ve sorular tek kartta sırayla geliyor.",
-    "Her aşamanın kendi karşılaştırma tablosu artık doğru gösteriliyor."
+    "Sağlık Bakanlığı (halk sağlığı) sayfası artık varsayılan olarak kompakt görünümde açılıyor; Görünüm menüsünden Rahat'a dönebilirsin.",
+    "Sayfa başlığı ve bölüm başlıkları Genetik Check Up ile aynı düzene getirildi."
   ],
   "eklenen": [],
   "degisen": [
-    "Tıbbi Biyoloji ve Genetik sayfası daha sade ve kompakt: ilerleme başlık satırında, sekmeler kayarken üstte kalıyor.",
-    "Sesli derste 11 aşama solda bölümlere göre listeleniyor; anlatım, sınav kuralı ve sorular tek kartta sırayla geliyor."
+    "Sağlık Bakanlığı (halk sağlığı) sayfası artık varsayılan olarak kompakt görünümde açılıyor; Görünüm menüsünden Rahat'a dönebilirsin.",
+    "Sayfa başlığı ve bölüm başlıkları Genetik Check Up ile aynı düzene getirildi."
   ],
-  "duzeltilen": [
-    "Her aşamanın kendi karşılaştırma tablosu artık doğru gösteriliyor."
-  ],
+  "duzeltilen": [],
   "silinen": []
 }
