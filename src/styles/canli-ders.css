@@ -857,3 +857,7 @@
   .cd-basla { bottom: 8px; }
   .cd-basla-btn small { display: none; }
 }
+/* Koyu tema: ters renk parlak bir kutu verir; kart koyu zeminde vurgu tonuyla ayrılır */
+:root[data-mode="dark"] .cd-liste .cd-devam { background: color-mix(in srgb, var(--color-accent) 16%, var(--color-white)); color: var(--color-ink); border: 1px solid color-mix(in srgb, var(--color-accent) 35%, transparent); }
+:root[data-mode="dark"] .cd-liste .cd-devam small { color: var(--color-ink-3); }
+:root[data-mode="dark"] .cd-liste .cd-devam .cd-ilerleme { background: color-mix(in srgb, var(--color-ink) 18%, transparent); }
