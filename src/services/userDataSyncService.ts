@@ -509,7 +509,9 @@ function scheduleRetry() {
   if (retryTimer) clearTimeout(retryTimer);
   const ms = Math.min(300_000, 15_000 * 2 ** retryCount++);
   retryTimer = window.setTimeout(() => { retryTimer = undefined; void autoBackupIfChanged(); }, ms);
-  requestBackgroundSync();
+  // Arka plan eşitlemesi yalnız bağlantı yokken kaydedilir: çevrimiçiyken tarayıcı 'sync'i hemen ateşler →
+  // MEDSORU_BACKGROUND_SYNC → yeniden gönderim → (429/5xx) → yeniden kayıt döngüsü saniyede binlerce istek üretiyordu.
+  if (getNetState() !== 'online') requestBackgroundSync();
 }
 /** Bağlantı gelince tarayıcı sekme kapalı olsa bile uygulamaya haber versin (destek varsa) */
 function requestBackgroundSync() {
@@ -585,7 +587,8 @@ export function installUserDataAutoBackup(): void {
   window.addEventListener('online', () => { retryCount = 0; void autoBackupIfChanged(); });
   // sw.js arka plan eşitlemesi (bağlantı geldi): bekleyen ilerleme hemen gider
   navigator.serviceWorker?.addEventListener?.('message', (e: MessageEvent) => {
-    if (e.data?.type === 'MEDSORU_BACKGROUND_SYNC') void autoBackupIfChanged();
+    // Geri çekilme zamanlayıcısı bekliyorsa (sunucu reddetti) onun süresine uyulur
+    if (e.data?.type === 'MEDSORU_BACKGROUND_SYNC' && !retryTimer) void autoBackupIfChanged();
   });
   // Ağ durumu (net.ts) zayıf/çevrimdışıdan çevrimiçine dönünce de
   void import('./net').then(({ onNetChange, getNetState: ns }) => {

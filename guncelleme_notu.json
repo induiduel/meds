@@ -1,14 +1,17 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 90,
-  "baslik": "İyileştirmeler ve düzeltmeler",
+  "onem": 91,
+  "baslik": "Daha hızlı açılış ve eşitleme düzeltmesi",
   "maddeler": [
-    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
+    "Site ilk açılışta yaklaşık %15 daha az veri indiriyor, daha hızlı açılıyor.",
+    "Arka planda aşırı yedekleme isteği gönderilmesine yol açan hata düzeltildi."
   ],
   "eklenen": [],
   "degisen": [
-    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
+    "Site ilk açılışta yaklaşık %15 daha az veri indiriyor, daha hızlı açılıyor."
   ],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Arka planda aşırı yedekleme isteği gönderilmesine yol açan hata düzeltildi."
+  ],
   "silinen": []
 }

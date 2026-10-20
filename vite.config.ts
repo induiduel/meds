@@ -1,6 +1,7 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
+import fs from 'fs';
 import { fileURLToPath } from 'url';
 import { defineConfig } from 'vite';
 import dotenv from 'dotenv';
@@ -12,14 +13,21 @@ dotenv.config();
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
+// Firestore kapalıyken (src/services/dbFlags.ts) SDK pakete girmesin: hafif yerine geçen modül.
+// Bayrak true olunca takma ad kalkar. Ayrıntı: src/services/firestoreKapali.ts
+const firestoreAcik = /FIREBASE_DB_ENABLED\s*=\s*true/.test(
+  fs.readFileSync(path.resolve(__dirname, 'src/services/dbFlags.ts'), 'utf8'),
+);
+
 export default defineConfig(({ mode }) => {
   return {
     base: process.env.VITE_BASE || '/',
     plugins: [splitLearningDecks(__dirname), surumDosyasi(__dirname), cevrimdisiManifest(__dirname), react(), tailwindcss()],
     resolve: {
-      alias: {
-        '@': path.resolve(__dirname, '.'),
-      },
+      alias: [
+        ...(firestoreAcik ? [] : [{ find: /^firebase\/firestore$/, replacement: path.resolve(__dirname, 'src/services/firestoreKapali.ts') }]),
+        { find: '@', replacement: path.resolve(__dirname, '.') },
+      ],
     },
     // Yazım yardımcısı işçisi (src/workers/composerWorker.ts) modeli dinamik içe aktarır: es biçimi gerekli
     worker: { format: 'es' as const },
