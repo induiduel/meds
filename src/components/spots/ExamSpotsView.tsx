@@ -1,3 +1,4 @@
+import { icKonum, icUrl } from '../../siteHaritasi';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Search, X } from 'lucide-react';
 import { useStorageRefresh } from '../../hooks/useStorageRefresh';
@@ -79,13 +80,13 @@ const OnemListesi = React.lazy(() => import('./OnemListesi'));
 const SoruCozucuSayfa = React.lazy(() => import('./cozucu/SoruCozucuSayfa'));
 type Gorunum = 'spot' | 'onem' | 'cozucu';
 const okuGorunum = (): Gorunum => {
-  try { const g = new URLSearchParams(location.search).get('gorunum'); return g === 'onem' || g === 'cozucu' ? g : 'spot'; } catch { return 'spot'; }
+  try { const g = new URLSearchParams(icKonum().search).get('gorunum'); return g === 'onem' || g === 'cozucu' ? g : 'spot'; } catch { return 'spot'; }
 };
 
 /** ?brans= yoksa null (başlangıç ekranı); eski derin bağlantı (?ders=/coz=/asistan= var, branş yok) patolojidir */
 const okuBrans = (): Brans | null => {
   try {
-    const p = new URLSearchParams(location.search);
+    const p = new URLSearchParams(icKonum().search);
     const b = p.get('brans');
     if (b) return bransOku(b);
     return p.get('ders') || p.get('coz') || p.get('asistan') ? 'patoloji' : null;
@@ -107,7 +108,7 @@ export const ExamSpotsView: React.FC<{ gorunum?: Gorunum }> = ({ gorunum: g = 's
   useEffect(() => {
     if (eski === 'spot') return;
     try {
-      const u = new URL(location.href);
+      const u = icUrl();
       u.searchParams.delete('gorunum');
       const yol = eski === 'cozucu' ? cozucuYolu() : onemYolu();
       history.replaceState(history.state, '', yol + u.search + u.hash);
@@ -160,7 +161,7 @@ export const ExamSpotsView: React.FC<{ gorunum?: Gorunum }> = ({ gorunum: g = 's
 
   const onDevamSpot = (s: LastSpotInfo) => {
     try {
-      const u = new URL(location.href);
+      const u = icUrl();
       if (s.id) u.searchParams.set('id', s.id);
       history.replaceState(history.state, '', u.pathname + u.search + u.hash);
       window.dispatchEvent(new PopStateEvent('popstate'));
@@ -208,7 +209,7 @@ const ExamSpotsClassic: React.FC = () => {
   useStorageRefresh([ANAHTAR], () => setOgrenilen(okuOgrenilen()));
   const [limit, setLimit] = useState(SAYFA);
   const [odak, setOdak] = useState<string | null>(() => {
-    try { return new URLSearchParams(window.location.search).get('id'); } catch { return null; }
+    try { return new URLSearchParams(icKonum().search).get('id'); } catch { return null; }
   });
   const [vurgu, setVurgu] = useState<string | null>(null);
 

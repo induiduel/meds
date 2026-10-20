@@ -1,3 +1,4 @@
+import { icKonum, icUrl } from '../../../siteHaritasi';
 import React, { useEffect, useMemo, useState } from 'react';
 import { Check, Clock, Headphones, History, Play, RotateCcw } from 'lucide-react';
 import { cozucuDizinYukle, ilerlemeYaz, ozet, setAdi, useIlerleme, type CDizin } from './cozucuVeri';
@@ -16,10 +17,10 @@ import CihazdaIsaret from '../../cevrimdisi/CihazdaIsaret';
  */
 const SoruCozucu = React.lazy(() => import('./SoruCozucu'));
 
-const urlOku = (k: string) => { try { return new URLSearchParams(location.search).get(k); } catch { return null; } };
+const urlOku = (k: string) => { try { return new URLSearchParams(icKonum().search).get(k); } catch { return null; } };
 const urlYaz = (p: Record<string, string | null>) => {
   try {
-    const u = new URL(location.href);
+    const u = icUrl();
     Object.entries(p).forEach(([k, v]) => (v === null ? u.searchParams.delete(k) : u.searchParams.set(k, v)));
     history.replaceState(history.state, '', u.pathname + u.search + u.hash);
   } catch { /* yok */ }
@@ -114,12 +115,7 @@ export const SoruCozucuSayfa: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji
           <Clock aria-hidden />
           <span>Süreler</span>
         </button>
-        {brans === 'patoloji' && (
-          <button type="button" className="scs-btn-sure" onClick={() => navigateTo(pathFor('alternatif_cozucu'))} title="Her soru baştan sona anlatılan alternatif çözücü">
-            <Headphones aria-hidden />
-            <span>Alternatif anlatım</span>
-          </button>
-        )}
+        {/* Alternatif çözücü öğrenciye kapatıldı (2026-10-21, merkezModel.KAPALI_SAYFALAR); düğmesi kaldırıldı */}
       </div>
 
       <ul className="scs-liste is-satir">
@@ -173,7 +169,7 @@ export const SoruCozucuSayfa: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji
           }}
           onDersAc={(b, k) => {
             if (b !== brans) {
-              const u = new URL(location.href);
+              const u = icUrl();
               u.searchParams.set('brans', b);
               u.searchParams.set('ders', k);
               u.searchParams.set('coz', '1');

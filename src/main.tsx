@@ -1,4 +1,5 @@
 import './services/netInstall';
+import { adresKatmaniniKur } from './siteHaritasi';
 import { installAdminFetchAuth } from './services/adminFetchAuth';
 import { Component, ErrorInfo, ReactNode } from 'react';
 import CevrimdisiYok from './components/cevrimdisi/CevrimdisiYok';
@@ -46,6 +47,8 @@ import { cevrimdisiGibi, sunucuyaUlasilir } from './services/cevrimdisi/baglanti
 
 // Yönetici oturumundaki API isteklerine Firebase jetonu (sunucu x-admin-email'e güvenmez; src/services/adminAuth.ts)
 installAdminFetchAuth();
+// Görünen adres katmanı (siteHaritasi): eski biçimli adresler ve history yazımları iç içe adrese çevrilir
+adresKatmaniniKur();
 applyTheme(readTheme());
 applyUiVersion();
 // iOS/iPadOS sınıfları: zoom ve tam ekran CSS kuralları bu sınıflara bağlı (macOS Safari'yi etkilemez).

@@ -4,6 +4,8 @@
  * Tek kaynak: data/genetik_asistan/g07.json (asistan_birlestir.py; EMA klipleri /api/patoloji-asistan/ses/g07/<klip>.mp3)
  * ve data/genetik_kamp/kalip.json (hızlı tekrar tabloları). Hızlı mod = puan ≥ 97 adımlar + adım başına 1 soru; Tam mod = hepsi.
  */
+import { icKonum, icUrl, TBG_YOL } from '../../siteHaritasi';
+import { navigateTo } from '../../router';
 import React, { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   Headphones,
@@ -58,29 +60,96 @@ const SEKMELER: [Sekme, string, string, React.ComponentType<{ 'aria-hidden'?: bo
   ['kalip', 'Kalıp kartları', 'Bulgu → tanı, kanser → ilaç', Table2],
   ['deneme', 'Deneme', '12 soruluk sınav provası', Shuffle],
 ];
-/** Sayfa adresi: /genetik-check-up?b=ders|kalip|deneme (yoksa sesli ders) — her bölüm ayrı sayfa, Geri ile dönülür */
+/** İç adres /genetik-check-up?b=ders|kalip|deneme (yoksa sesli ders); görünen /kamplar/kurul1/checkup/tbg/v1/<sayfa> (siteHaritasi) */
 const sekmeOku = (): Sekme => {
-  const b = new URLSearchParams(window.location.search).get('b');
+  const b = new URLSearchParams(icKonum().search).get('b');
   return b === 'ders' || b === 'kalip' || b === 'deneme' ? b : 'sesli';
 };
 function sekmeYaz(b: Sekme) {
-  const u = new URL(window.location.href);
+  const u = icUrl();
   if (b === 'sesli') u.searchParams.delete('b'); else u.searchParams.set('b', b);
   if (u.href !== window.location.href) window.history.pushState(window.history.state, '', u.pathname + u.search + u.hash);
 }
 
-/** Kampın ortak başı: ad + bölüm sayfaları (sesli ders ekranında geri bağlantısının yerine geçer) */
-function KampGezinme({ sekme, onSekme, sade = false }: { sekme: Sekme; onSekme: (s: Sekme) => void; sade?: boolean }) {
+/**
+ * TBG v1'in dört sayfası (2026-10-21): her biri ayrı adres ve ayrı görünüm —
+ *   /kamplar/kurul1/checkup/tbg/v1/sesli-ders · /soru-coz · /kaliplar · /deneme
+ * Sekme şeridi yok: üstte iz yolu + sayfanın kendi başlığı, altta kampın diğer sayfalarına kartlar.
+ */
+const SAYFA_YOL: Record<Sekme, string> = { sesli: 'sesli-ders', ders: 'soru-coz', kalip: 'kaliplar', deneme: 'deneme' };
+const SAYFA_TANIM: Record<Sekme, { ad: string; alt: string; ne: string }> = {
+  sesli: { ad: 'Sesli ders', alt: 'Aşama aşama, slaytlarla', ne: 'Altı genetik dersinin sınavda sorulan kısmını 10 aşamada dinle; metin ve slayt sesle akar.' },
+  ders: { ad: 'Soru çözerek tekrar', alt: 'Adım adım, her adımda çıkmış', ne: 'Her adımda kısa anlatımı dinle, ardından o bilginin çıkmış ve kalıba uygun sorusunu çöz.' },
+  kalip: { ad: 'Kalıp kartları', alt: 'Bulgu → tanı, kanser → ilaç', ne: 'Hocanın soru kalıplarını tablo olarak tara: bulgudan sendrom, kanserde hedef ilaç, spesifik belirteç.' },
+  deneme: { ad: 'Deneme', alt: '12 soruluk sınav provası', ne: 'Sınavdaki gibi 12 soru: çıkmış ağırlıklı, bölümler dengeli. Yanlışların ayrıca kaydedilir.' },
+};
+
+function TbgIzYolu() {
+  const git = (u: string) => (e: React.MouseEvent) => { if (e.button || e.metaKey || e.ctrlKey) return; e.preventDefault(); navigateTo(u); };
   return (
-    <nav className={`tk-gez${sade ? ' is-sade' : ''}`} aria-label="TBG Sınav Kampı bölümleri">
-      <span className="tk-gez-ad" title="Kurul 1 · Tıbbi Biyoloji ve Genetik · 12 soru"><Dna aria-hidden /><b>TBG Sınav Kampı</b></span>
-      <span className="tk-gez-sek" role="tablist">
-        {SEKMELER.map(([id, ad, alt, Ic]) => (
-          <button key={id} type="button" role="tab" aria-selected={sekme === id} className={sekme === id ? 'is-on' : ''} title={alt} onClick={() => onSekme(id)}>
-            <Ic aria-hidden /><span>{ad}</span>
-          </button>
+    <nav className="tk-iz" aria-label="Konum">
+      <a href="/kamplar/kurul1" onClick={git('/kamplar/kurul1')}>Kamplar · Kurul 1</a>
+      <ChevronRight aria-hidden />
+      <a href="/kamplar/kurul1/checkup" onClick={git('/kamplar/kurul1/checkup')}>Check Up</a>
+      <ChevronRight aria-hidden />
+      <span><Dna aria-hidden /> TBG <em>v1</em></span>
+    </nav>
+  );
+}
+
+/** Sayfanın kendi başı: iz yolu + sayfaya özgü simge, renk ve açıklama */
+function TbgSayfaBasi({ sekme, sade = false }: { sekme: Sekme; sade?: boolean }) {
+  const t = SAYFA_TANIM[sekme];
+  const Ic = SEKMELER.find(([id]) => id === sekme)![3];
+  if (sade) {
+    return (
+      <div className={`tk-sb is-sade is-${sekme}`}>
+        <TbgIzYolu />
+        <span className="tk-sb-ad"><Ic aria-hidden /><b>{t.ad}</b></span>
+        <span className="tk-sb-bag">
+          {SEKMELER.filter(([id]) => id !== sekme).map(([id, ad, , DIc]) => {
+            const u = `${TBG_YOL}/${SAYFA_YOL[id]}`;
+            return (
+              <a key={id} href={u} className={`is-${id}`} title={SAYFA_TANIM[id].alt}
+                onClick={(e) => { if (e.button || e.metaKey || e.ctrlKey) return; e.preventDefault(); navigateTo(u); }}>
+                <DIc aria-hidden /><span>{ad}</span>
+              </a>
+            );
+          })}
+        </span>
+      </div>
+    );
+  }
+  return (
+    <header className={`tk-sb is-${sekme}`}>
+      <TbgIzYolu />
+      <div className="tk-sb-gov">
+        <span className="tk-sb-ic" aria-hidden><Ic /></span>
+        <div className="tk-sb-t">
+          <span className="tk-ust">TBG Sınav Kampı · v1</span>
+          <h2>{t.ad}</h2>
+          <p>{t.ne}</p>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+/** Kampın diğer sayfaları (sayfa sonunda kart olarak) */
+function TbgDigerSayfalar({ sekme, onSekme }: { sekme: Sekme; onSekme: (s: Sekme) => void }) {
+  return (
+    <nav className="tk-diger" aria-label="TBG Sınav Kampı'nın diğer sayfaları">
+      <span className="tk-ust">Kampın diğer sayfaları</span>
+      <div className="tk-diger-l">
+        {SEKMELER.filter(([id]) => id !== sekme).map(([id, ad, alt, Ic]) => (
+          <a key={id} href={`${TBG_YOL}/${SAYFA_YOL[id]}`} className={`tk-diger-k is-${id}`}
+            onClick={(e) => { if (e.button || e.metaKey || e.ctrlKey) return; e.preventDefault(); onSekme(id); }}>
+            <span className="tk-diger-ic" aria-hidden><Ic /></span>
+            <span><b>{ad}</b><small>{alt}</small></span>
+            <ChevronRight aria-hidden />
+          </a>
         ))}
-      </span>
+      </div>
     </nav>
   );
 }
@@ -125,7 +194,7 @@ export const GenetikCheckUp: React.FC<{ onBack?: () => void }> = () => {
     window.addEventListener('popstate', f);
     return () => window.removeEventListener('popstate', f);
   }, []);
-  useEffect(() => { document.title = 'TBG Sınav Kampı · MeDSor'; }, [sekme]);
+  useEffect(() => { document.title = `${SAYFA_TANIM[sekme].ad} · TBG v1 · MeDSor`; }, [sekme]);
   const [tamEkran, setTamEkran] = useState<Mod | null>(null);
   const [yardim, setYardim] = useState<Record<string, boolean>>({});
   const [calan, setCalan] = useState<{ id: string; cumle: number; oynuyor: boolean } | null>(null);
@@ -269,15 +338,15 @@ export const GenetikCheckUp: React.FC<{ onBack?: () => void }> = () => {
     return (
       <div className="tk-sesli">
         <Suspense fallback={<div className="tk-bos">Yükleniyor…</div>}>
-          <CanliDersDers dersKey={TBG_DERS_KEY} kamp={{ geri: <KampGezinme sekme={sekme} onSekme={setSekme} sade /> }} />
+          <CanliDersDers dersKey={TBG_DERS_KEY} kamp={{ geri: <TbgSayfaBasi sekme={sekme} sade /> }} />
         </Suspense>
       </div>
     );
   }
 
   return (
-    <div className="tk">
-      <KampGezinme sekme={sekme} onSekme={(b) => { durdur(); setSekme(b); }} />
+    <div className={`tk tk-sayfa is-${sekme}`}>
+      <TbgSayfaBasi sekme={sekme} />
 
       {sekme !== 'kalip' && (
         <section className="tk-mod tk-mod-sade" aria-label="Çalışma modu">
@@ -406,6 +475,8 @@ export const GenetikCheckUp: React.FC<{ onBack?: () => void }> = () => {
 
       {sekme === 'kalip' && <KalipKartlari mod={mod} />}
       {sekme === 'deneme' && <Deneme mod={mod} havuz={adimlar} cal={cal} durdur={durdur} />}
+
+      <TbgDigerSayfalar sekme={sekme} onSekme={(b) => { durdur(); setSekme(b); }} />
 
       {tamEkran && <PatolojiAsistan key={tamEkran} kod={DERS.kod} suz={tamEkran === 'hizli' ? hizliSuz : tamEkran === 'yavas' ? yavasSuz : undefined} onClose={() => setTamEkran(null)} />}
     </div>

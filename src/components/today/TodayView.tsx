@@ -44,9 +44,9 @@ const readJson = <T,>(key: string, fallback: T): T => {
 type DeckProgress = Record<string, { last?: number; seen?: number[] } | undefined>;
 interface CardState { box: number; due: number; seen: number }
 
-const QUICK: AppRoute[] = ['glossary', 'diseases', 'kazanimlar', 'notes', 'practice', 'ornek_sorular'];
+const QUICK: AppRoute[] = ['glossary', 'diseases', 'kazanimlar', 'summaries', 'practice', 'ornek_sorular'];
 /** Yeni öğrenciye (henüz çalışma/tekrar/hedef yokken) yan sütunda önerilen başlangıç sayfaları */
-const START: AppRoute[] = ['sinav_calisma', 'canli_ders', 'spots', 'past_exams'];
+const START: AppRoute[] = ['soru_cozucu', 'canli_ders', 'son_prova', 'past_exams'];
 const WEEK_DAYS = ['Pt', 'Sa', 'Ça', 'Pe', 'Cu', 'Ct', 'Pz'];
 
 /** Tarihten sabit bir sayı (gün içinde aynı spot) */

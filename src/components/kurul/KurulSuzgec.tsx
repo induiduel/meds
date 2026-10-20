@@ -2,13 +2,14 @@
  * ?kurul=N süzgeci (Geçmiş kurullar bağlantıları): parametre yoksa ekran bugünkü gibi tüm içeriği gösterir;
  * varsa yalnız o kurulun içeriği + üstte "Kurul N · tümünü göster" hapı. Stil: styles/kurul-suzgec.css (.kh-*).
  */
+import { icKonum, icUrl } from '../../siteHaritasi';
 import React, { useEffect, useState } from 'react';
 import { X } from 'lucide-react';
 import { navigateTo } from '../../router';
 import '../../styles/kurul-suzgec.css';
 
 /** URL'deki ?kurul=N (1–6); yoksa null. */
-export function kurulParam(search: string = typeof location !== 'undefined' ? location.search : ''): number | null {
+export function kurulParam(search: string = typeof location !== 'undefined' ? icKonum().search : ''): number | null {
   try {
     const n = Number(new URLSearchParams(search).get('kurul'));
     return Number.isInteger(n) && n >= 1 && n <= 6 ? n : null;
@@ -34,10 +35,10 @@ export function kurulKimlikten(id: string | undefined | null): number {
 
 /** ?kurul= parametresini URL'den kaldırır (hash ve diğer parametreler korunur) ve ekranı yeniden kurar. */
 export function kurulSuzgeciniKaldir() {
-  const p = new URLSearchParams(location.search);
+  const p = new URLSearchParams(icKonum().search);
   p.delete('kurul');
   const q = p.toString();
-  navigateTo(`${location.pathname}${q ? `?${q}` : ''}${location.hash}`);
+  navigateTo(`${icKonum().pathname}${q ? `?${q}` : ''}${location.hash}`);
 }
 
 export const KurulHapi: React.FC<{ kurul: number; sayi?: number; className?: string; onTumu?: () => void }> = ({ kurul, sayi, className, onTumu }) => (

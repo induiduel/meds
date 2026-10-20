@@ -7,6 +7,7 @@
  *  - İlerleme ve tercih medsoru_checkup_v1 (userKvSync izin listesinde, profille eşitlenir).
  * Veri: checkupVeri.ts · stil: styles/checkup.css (.cu-*), yalnız palet tokenı.
  */
+import { icKonum, icUrl } from '../../siteHaritasi';
 import React, { useCallback, useDeferredValue, useEffect, useMemo, useState } from 'react';
 import { Check, Eye, EyeOff, RotateCcw, Search, Table2, X } from 'lucide-react';
 import { BOLUMLER, CHECKUP_KURUL, TOPLAM, kaynakGrupla, katla, type CuBolum, type CuNot, type CuTablo } from './checkupVeri';
@@ -39,7 +40,7 @@ const yaz = (k: Kayit) => {
 
 const urlBolum = () => {
   try {
-    const b = new URLSearchParams(window.location.search).get('bolum');
+    const b = new URLSearchParams(icKonum().search).get('bolum');
     return b && BOLUMLER.some((x) => x.id === b) ? b : null;
   } catch {
     return null;
@@ -162,7 +163,7 @@ export const PatolojiCheckUp: React.FC = () => {
   const sec = useCallback((id: string) => {
     setKayit((k) => ({ ...k, bolum: id }));
     try {
-      const u = new URL(window.location.href);
+      const u = icUrl();
       u.searchParams.set('bolum', id);
       window.history.replaceState(window.history.state, '', u.pathname + u.search);
     } catch {

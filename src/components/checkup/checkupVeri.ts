@@ -3,6 +3,7 @@
  * scripts/patoloji_checkup/dogrula.py, 0 HATA vermeden yayınlanmaz). Kaynak "kod:slayt" biçimindedir
  * (kod = Kurul 1 patoloji ders PDF'i, slayt = PDF sayfası); ders adları dersler.json'dan gelir.
  */
+import { icKonum, icUrl } from '../../siteHaritasi';
 import dersler from '../../data/patoloji_checkup/dersler.json';
 
 export interface CuTablo {
@@ -31,7 +32,7 @@ const DEFTER = import.meta.glob('../../data/dersler/k[2-6].json', { eager: true,
 
 /** ?kurul=N ve o kurulun Check Up verisi varsa o kurul; yoksa Kurul 1 (varsayılan davranış değişmez) */
 const istenen = (() => {
-  try { return Number(new URLSearchParams(window.location.search).get('kurul')) || 1; } catch { return 1; }
+  try { return Number(new URLSearchParams(icKonum().search).get('kurul')) || 1; } catch { return 1; }
 })();
 const kurulDosyalari = Object.keys(KURUL_DOSYALAR).filter((k) => k.includes(`/patoloji_checkup/k${istenen}/`));
 export const CHECKUP_KURUL: number = istenen >= 2 && kurulDosyalari.length ? istenen : 1;

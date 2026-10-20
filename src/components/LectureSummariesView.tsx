@@ -1,3 +1,4 @@
+import { icKonum, icUrl } from '../siteHaritasi';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { pathFor } from '../router';
 import { Check, ChevronRight, Download, Search } from 'lucide-react';
@@ -250,7 +251,7 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
       });
       setActive((cur) => (cur && cur.id === meta.id ? (detail ? { ...meta, ...detail, title: meta.title, discipline: meta.discipline, instructor: meta.instructor } : cur) : cur));
       if (!detail) return;
-      const highlight = new URLSearchParams(window.location.search).get('highlight');
+      const highlight = new URLSearchParams(icKonum().search).get('highlight');
       if (highlight) window.setTimeout(() => triggerDomHighlightAndScroll(highlight), 500);
     } catch (e) {
       console.warn('Özet detay yükleme hatası:', e);
@@ -263,8 +264,8 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
   const activeIdRef = useRef<string | null>(null);
   activeIdRef.current = active?.id ?? null;
   const yolId = () => {
-    const m = window.location.pathname.match(/^\/ozetler\/([^/?#]+)/);
-    return m ? decodeURIComponent(m[1]) : new URLSearchParams(window.location.search).get('id');
+    const m = icKonum().pathname.match(/^\/ozetler\/([^/?#]+)/);
+    return m ? decodeURIComponent(m[1]) : new URLSearchParams(icKonum().search).get('id');
   };
   const openAt = (meta: SummaryMeta, replace = false) => {
     void open(meta);
@@ -296,7 +297,7 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
   }, [byId]);
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(icKonum().search);
     const target = initialSummaryId || params.get('id') || params.get('summaryId') || params.get('noteId');
     const highlight = params.get('highlight');
     if (target) {

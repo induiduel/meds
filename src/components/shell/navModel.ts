@@ -74,7 +74,7 @@ const I: Record<string, NavItem> = {
   en_onemliler: { id: 'en_onemliler', label: 'En önemliler', short: 'Önemli', hint: 'Konu başına en önemli bilgiler, 100 puan', icon: Star, tint: '#F59E0B' },
   patoloji_checkup: { id: 'patoloji_checkup', label: 'Patoloji Check Up', short: 'Check Up', tile: 'Patoloji Check Up', hint: 'Mediyatör, sitokin, hücre ve hastalık tabloları; kendini sına', icon: Table2, tint: '#14B8A6' },
   son_prova: { id: 'son_prova', label: 'Son Prova', short: 'Prova', tile: 'Son Prova', hint: 'Kurulun tüm dersleri sesli özetle, aşama soruları, check-up ve 100 soruluk 3 deneme', icon: Flag, tint: '#E11D48' },
-  genetik_checkup: { id: 'genetik_checkup', label: 'TBG Sınav Kampı', short: 'Genetik', tile: 'TBG Sınav Kampı', hint: 'Hızlı ve tam mod sesli ders: bulgudan sendrom, kanserde hedef ilaç, belirteçler, çıkmışlar ve 12 soruluk deneme', icon: Dna, tint: '#10B981' },
+  genetik_checkup: { id: 'genetik_checkup', label: 'TBG Check Up', short: 'TBG', tile: 'TBG Check Up', hint: 'TBG Sınav Kampı v1: sesli ders, soru çözerek tekrar, kalıp kartları, deneme — her biri ayrı sayfa', icon: Dna, tint: '#10B981' },
   kamp: { id: 'kamp', label: 'Kurul kampı', short: 'Kamp', tile: 'Kurul kampı', hint: 'Hocanın derste verdiği ipuçlarından hızlı tekrar: sesli anlatım, kalıp kartları, deneme', icon: Tent, tint: '#EA580C' },
   spots: { id: 'spots', label: 'Sınav spotları', short: 'Spotlar', hint: 'En sık, ayırıcı bulgular, tuzaklar', icon: Crosshair, tint: '#FF3B30' },
   // Soru çöz
@@ -106,17 +106,19 @@ const I: Record<string, NavItem> = {
 export const NAV_ITEMS = I;
 
 /**
- * Menü grupları (2026-10-18): öğrencinin akışına göre —
- *   DERS ÇALIŞ (konuyu öğren) → SINAVA HAZIRLAN (sınav odaklı özet + sesli çözüm) → SORU ÇÖZ (soru kaynakları)
- *   → BAŞVURU (bakılan kaynaklar) → TOPLULUK → KİŞİSEL.
- * Grup içi sıra kullanım sıklığına göredir. "Soru ekle" menünün tepesinde tek başına duran birincil düğmedir;
- * telefonda alt gezinmenin ortasındadır. Bugün grupsuz en üsttedir.
+ * Menü grupları (2026-10-21, siteHaritasi.ts ile aynı şema): öğrencinin "ne yapmak istiyorum" sorusuna göre
+ *   DERS ÇALIŞ (/dersler) → SORU ÇÖZ (/sorular) → SINAVA HAZIRLAN (/kamplar) → CHECK UP (/kamplar/kurulN/checkup)
+ *   → BAŞVURU (/kaynaklar) → TOPLULUK → KİŞİSEL.
+ * Grup içi sıra components/merkez/merkezModel.ts MERKEZ_ARACLARI ile aynıdır (önerilen ilk adım başta).
+ * Öğrenciye kapatılan sayfalar (Sınav çalışması, Alternatif çözücü, Ders notları) menüde yoktur (merkezModel.KAPALI_SAYFALAR).
+ * "Soru ekle" menünün tepesinde tek başına duran birincil düğmedir; telefonda alt gezinmenin ortasındadır.
  */
 export const NAV_TREE: NavGroup[] = [
   { label: null, items: [I.today] },
-  { label: 'Ders çalış', items: [I.learn, I.canli_ders, I.notes, I.flashcards, I.summaries] },
-  { label: 'Sınava hazırlan', items: [I.son_prova, I.sinav_calisma, I.soru_cozucu, I.alternatif_cozucu, I.en_onemliler, I.kamp, I.patoloji_checkup, I.genetik_checkup, I.spots] },
-  { label: 'Soru çöz', items: [I.past_exams, I.questions, I.practice, I.ornek_sorular, I.olasi_sorular] },
+  { label: 'Ders çalış', items: [I.canli_ders, I.learn, I.summaries, I.flashcards] },
+  { label: 'Soru çöz', items: [I.soru_cozucu, I.past_exams, I.practice, I.questions, I.ornek_sorular, I.olasi_sorular] },
+  { label: 'Sınava hazırlan', items: [I.son_prova, I.kamp, I.en_onemliler, I.spots] },
+  { label: 'Check Up', items: [I.genetik_checkup, I.patoloji_checkup] },
   { label: 'Başvuru', items: [I.glossary, I.diseases, I.health_ministry, I.kazanimlar, I.gecmis_kurullar, I.guncellemeler] },
   { label: 'Topluluk', items: [I.basarimlar, I.leaderboard, I.matrix] },
   { label: 'Kişisel', items: [I.bitirdiklerim, I.cevrimdisi, I.study, I.stats, I.music] },
@@ -135,9 +137,10 @@ export const MORE_TREE: NavGroup[] = NAV_TREE.map((g) => ({ ...g, items: g.items
  */
 const V12_RAIL_IDS = new Set<AppRoute>([
   'today',
-  'learn', 'canli_ders', 'notes', 'flashcards',
-  'son_prova', 'sinav_calisma', 'soru_cozucu', 'alternatif_cozucu', 'en_onemliler', 'kamp', 'patoloji_checkup', 'genetik_checkup', 'spots',
-  'past_exams', 'questions', 'practice', 'olasi_sorular',
+  'canli_ders', 'learn', 'summaries', 'flashcards',
+  'soru_cozucu', 'past_exams', 'practice', 'questions', 'olasi_sorular',
+  'son_prova', 'kamp', 'en_onemliler', 'spots',
+  'genetik_checkup', 'patoloji_checkup',
   'glossary', 'diseases',
   'bitirdiklerim', 'cevrimdisi', 'basarimlar',
 ]);

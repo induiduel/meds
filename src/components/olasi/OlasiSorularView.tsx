@@ -39,14 +39,15 @@ const urlKurul = (): number => {
   return sonSinavKurul(ekranGunu())?.kurul ?? aktifKurul(ekranGunu()).kurul;
 };
 
-/** ders_ref.ders_id ("k1-02-…") → Öğren destesi (k1p-k1-02-…) varsa o, yoksa ders notu */
+/** ders_ref.ders_id ("k1-02-…") → Öğren destesi (k1p-k1-02-…) varsa o */
 const dersBagi = (ref?: OlasiSoru['ders_ref']): { url: string; ad: string } | null => {
   const id = ref?.ders_id;
   if (!id) return null;
   const m = /^k(\d)-/.exec(id);
   const deste = m ? `k${m[1]}p-${id}` : id;
   if ((SCHEDULE as Record<string, unknown>)[deste]) return { url: `/ogren/${encodeURIComponent(deste)}`, ad: 'Etkileşimli derste aç' };
-  return { url: `/notlar?id=${encodeURIComponent(id)}${ref?.sayfa ? `&page=${ref.sayfa}` : ''}`, ad: ref?.sayfa ? `Ders notu, sayfa ${ref.sayfa}` : 'Ders notunda aç' };
+  // Ders notları öğrenciye kapalı (2026-10-21); destesi olmayan derste bağlantı gösterilmez
+  return null;
 };
 
 const Bag: React.FC<{ url: string; className?: string; children: React.ReactNode }> = ({ url, className, children }) => (

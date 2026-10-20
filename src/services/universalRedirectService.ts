@@ -20,6 +20,7 @@
  * animasyonuyla gösterir.
  */
 
+import { icKonum, icUrl } from '../siteHaritasi';
 import { toast } from '../components/ui/Toast';
 import { navigateTo } from '../router';
 
@@ -468,11 +469,11 @@ export function executeDeepLinkFocus(target?: string | {
     options = target;
   }
 
-  const urlParams = new URLSearchParams(window.location.search);
+  const urlParams = new URLSearchParams(icKonum().search);
   const hash = window.location.hash ? decodeURIComponent(window.location.hash.slice(1)) : '';
   // Kimlik sorguda yoksa yoldan okunur: /cikmis/<id>, /sorular/<id>
   const pathId = (() => {
-    const m = window.location.pathname.match(/\/(?:cikmis|sorular)\/([^/?#]+)/);
+    const m = icKonum().pathname.match(/\/(?:cikmis|sorular|havuz)\/([^/?#]+)/);
     return m ? decodeURIComponent(m[1]) : '';
   })();
   const targetId = options?.targetId || urlParams.get('id') || urlParams.get('q') || pathId || '';

@@ -5,6 +5,7 @@
  * Veri: data/kamp/k<N>/<brans>.json (kampVeri.ts). Görünüm dili TBG Sınav Kampı'ndan (styles/genetik-kamp.css .tk-*),
  * kampa özel ekler styles/kamp.css (.km-*). Tüyo önerisi: TuyoFormu → POST /api/kamp/tuyo-oner.
  */
+import { icKonum, icUrl } from '../../siteHaritasi';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   ArrowLeft, Check, ChevronLeft, ChevronRight, Eye, EyeOff, Lightbulb, Pause, Play, RotateCcw, Search, Shuffle,
@@ -34,8 +35,8 @@ function Zengin({ t }: { t: string }) {
 }
 
 function adresOku(): { kurul: number; brans?: string } {
-  const segs = window.location.pathname.replace(/^\/meds(?=\/|$)/, '').split('/').filter(Boolean);
-  const q = Number(new URLSearchParams(window.location.search).get('kurul'));
+  const segs = icKonum().pathname.split('/').filter(Boolean);
+  const q = Number(new URLSearchParams(icKonum().search).get('kurul'));
   const yol = Number(segs[1]);
   const kurul = [yol, q].find((n) => Number.isInteger(n) && n >= 1 && n <= 6) || aktifKurul().kurul;
   const brans = segs[2] && /^[a-z0-9]{2,30}$/.test(segs[2]) ? segs[2] : undefined;

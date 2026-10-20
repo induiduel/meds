@@ -37,7 +37,7 @@ const readJson = <T,>(key: string, fallback: T): T => {
 type DeckProgress = Record<string, { last?: number; seen?: number[] } | undefined>;
 interface CardState { box: number; due: number; seen: number }
 
-const QUICK: AppRoute[] = ['glossary', 'diseases', 'kazanimlar', 'notes', 'practice', 'ornek_sorular'];
+const QUICK: AppRoute[] = ['glossary', 'diseases', 'kazanimlar', 'summaries', 'practice', 'ornek_sorular'];
 const WEEK_DAYS = ['Pt', 'Sa', 'Ça', 'Pe', 'Cu', 'Ct', 'Pz'];
 
 /** Tarihten sabit bir sayı (gün içinde aynı spot) */

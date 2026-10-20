@@ -24,8 +24,13 @@
  *   /saglik      → Sağlık Bakanlığı: resmî veriler + ders bağları, /saglik/<bölüm> (asi, karabuk, yenidogan …)
  *
  * Old `#tab` links keep working: they are rewritten to the matching path on load.
+ *
+ * 2026-10-21: adres çubuğunda görünen adres iç içedir (/dersler/…, /sorular/…, /kamplar/kurul1/…); ROUTE_PATHS iç
+ * (eski) adreslerdir. Çeviri tek yerde: siteHaritasi.ts (icYol / disYol). pathFor ve navigateTo görünen adres üretir,
+ * parseLocation görünen adresi iç adrese çevirip okur. Kurallar: docs/SITE_HARITASI_KURALLARI.md
  */
 import type React from 'react';
+import { disYol, icYol, kanonik } from './siteHaritasi';
 
 export type AppRoute =
   | 'quick_add'
@@ -72,7 +77,11 @@ export type AppRoute =
   | 'olasi_sorular'
   | 'gecmis_kurullar'
   | 'kamp'
-  | 'guncellemeler';
+  | 'guncellemeler'
+  | 'hub_dersler'
+  | 'hub_sorular'
+  | 'hub_kamplar'
+  | 'hub_kaynaklar';
 
 export const ROUTE_PATHS: Record<AppRoute, string> = {
   quick_add: '/',
@@ -80,7 +89,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   learn: '/ogren',
   glossary: '/sozluk',
   flashcards: '/kartlar',
-  questions: '/sorular',
+  questions: '/havuz',
   past_exams: '/cikmis',
   study: '/calis',
   practice: '/test',
@@ -120,6 +129,11 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   gecmis_kurullar: '/gecmis-kurullar',
   kamp: '/kamp',
   guncellemeler: '/guncellemeler',
+  // merkez sayfaları: görünen /dersler · /sorular · /kamplar · /kaynaklar (siteHaritasi çevirir)
+  hub_dersler: '/ders-merkezi',
+  hub_sorular: '/soru-merkezi',
+  hub_kamplar: '/kamp-merkezi',
+  hub_kaynaklar: '/kaynak-merkezi',
 };
 
 export const ROUTE_TITLES: Record<AppRoute, string> = {
@@ -168,6 +182,10 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   gecmis_kurullar: 'Geçmiş kurullar',
   kamp: 'Kurul kampı',
   guncellemeler: 'Güncelleme günlüğü',
+  hub_dersler: 'Ders çalış',
+  hub_sorular: 'Soru çöz',
+  hub_kamplar: 'Sınava hazırlan',
+  hub_kaynaklar: 'Başvuru',
 };
 
 const BY_SEGMENT: Record<string, AppRoute> = Object.fromEntries(
@@ -193,6 +211,7 @@ const ALIASES: Record<string, AppRoute> = {
   flashcards: 'flashcards',
   'ezber-kartlari': 'flashcards',
   questions: 'questions',
+  sorular: 'questions',
   havuz: 'questions',
   ornek_sorular: 'ornek_sorular',
   'ornek-sorular': 'ornek_sorular',
@@ -293,7 +312,6 @@ const ALIASES: Record<string, AppRoute> = {
   'gecmis-kurul': 'gecmis_kurullar',
   arsiv: 'gecmis_kurullar',
   'kurul-arsivi': 'gecmis_kurullar',
-  kamplar: 'kamp',
   'sinav-kampi': 'kamp',
   guncellemeler: 'guncellemeler',
   guncelleme: 'guncellemeler',
@@ -311,7 +329,8 @@ export interface ParsedRoute {
 /** Strips a deployment prefix such as /meds so the same build works under a sub-path. */
 const stripBase = (pathname: string) => pathname.replace(/^\/meds(?=\/|$)/, '') || '/';
 
-export const parseLocation = (loc: Pick<Location, 'pathname' | 'hash' | 'search'> = typeof window !== 'undefined' ? window.location : { pathname: '/', hash: '', search: '' }): ParsedRoute => {
+export const parseLocation = (gorunen: Pick<Location, 'pathname' | 'hash' | 'search'> = typeof window !== 'undefined' ? window.location : { pathname: '/', hash: '', search: '' }): ParsedRoute => {
+  const loc = icAdres(gorunen);
   const hash = decodeURIComponent(loc.hash.replace(/^#\/?/, ''));
   const cleanPath = stripBase(loc.pathname);
 
@@ -352,8 +371,22 @@ export const parseLocation = (loc: Pick<Location, 'pathname' | 'hash' | 'search'
   return { route: 'quick_add' };
 };
 
-export const pathFor = (route: AppRoute, param?: string) =>
+/** Görünen adresi iç adrese çevirir (siteHaritasi.icYol); hash korunur */
+function icAdres(l: Pick<Location, 'pathname' | 'hash' | 'search'>): Pick<Location, 'pathname' | 'hash' | 'search'> {
+  try {
+    const u = new URL(icYol(l.pathname + l.search), 'https://x.invalid');
+    return { pathname: u.pathname, search: u.search, hash: l.hash };
+  } catch {
+    return l;
+  }
+}
+
+/** Bir sayfanın iç (eski) adresi — yalnız çeviri katmanı ve sınamalar için */
+export const icPathFor = (route: AppRoute, param?: string) =>
   ROUTE_PATHS[route] + (param ? `/${encodeURIComponent(param)}` : '');
+
+/** Bir sayfanın adres çubuğunda görünen adresi */
+export const pathFor = (route: AppRoute, param?: string) => disYol(icPathFor(route, param));
 
 /** Push (or replace) the address bar without reloading; no-op if already there. */
 export const writeLocation = (route: AppRoute, param?: string, replace = false) => {
@@ -404,7 +437,7 @@ export const deepLinkIdFor = (route: AppRoute, param?: string): string | undefin
 export const navigateTo = (url: string) => {
   try {
     const u = new URL(url, window.location.origin);
-    const next = u.pathname + u.search + u.hash;
+    const next = kanonik(u.pathname + u.search + u.hash);
     if (window.location.pathname + window.location.search + window.location.hash !== next) {
       window.history.pushState({}, '', next);
     }
