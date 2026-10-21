@@ -5,6 +5,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { ChevronDown, Headphones, MessageCircleQuestion, Play, Star, Target } from 'lucide-react';
 import { sureYaz, useTakip, type Hiz, type TakipModul } from '../../services/calismaTakip';
+import SinavSenaryo from './SinavSenaryo';
 import { ASAMA_AD, planHesapla, planVerisiYukle, type AdimTur, type PlanAdim, type PlanVeri } from './sinavPlani';
 
 const SAAT_KEY = 'medsoru_sinav_plani_saat_v1';
@@ -135,6 +136,8 @@ export default function SinavPlani({ hiz }: { hiz: Partial<Record<TakipModul, Hi
               );
             })}
           </ul>
+
+          <SinavSenaryo branslar={plan.branslar} hedef={plan.hedef} planli={plan.adimlar.length > 0} />
 
           {plan.gunler.some((g) => g.adimlar.length) && <h3 className="sp-h">Aşama aşama yol haritası</h3>}
           {plan.gunler.filter((g) => g.adimlar.length).map((g) => {

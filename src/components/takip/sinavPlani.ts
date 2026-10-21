@@ -126,24 +126,24 @@ const puan2 = (d: number, n: number) => (2 * d >= n ? 2 * d : 4 * d - n);
 export const bransPuani = (d: number, n: number) => puan2(d, n) / 2;
 
 /** Dağılım: { min, p[] } — puan2 = min + i */
-interface Dag { min: number; p: number[] }
-function bransDag(n: number, p: number): Dag {
+export interface Dag { min: number; p: number[] }
+export function bransDag(n: number, p: number): Dag {
   const bb = betaBinom(n, p);
   const min = puan2(0, n), max = puan2(n, n);
   const arr = new Array(max - min + 1).fill(0);
   bb.forEach((v, d) => { arr[puan2(d, n) - min] += v; });
   return { min, p: arr };
 }
-function birlestir(x: Dag, y: Dag): Dag {
+export function birlestir(x: Dag, y: Dag): Dag {
   const p = new Array(x.p.length + y.p.length - 1).fill(0);
   for (let i = 0; i < x.p.length; i++) { const a = x.p[i]; if (a < 1e-12) continue; for (let j = 0; j < y.p.length; j++) p[i + j] += a * y.p[j]; }
   return { min: x.min + y.min, p };
 }
-const BIR: Dag = { min: 0, p: [1] };
-const beklenen = (d: Dag) => d.p.reduce((s, v, i) => s + v * (d.min + i), 0) / 2;
-const enAz = (d: Dag, hedef: number) => d.p.reduce((s, v, i) => s + (d.min + i >= hedef * 2 ? v : 0), 0);
+export const BIR: Dag = { min: 0, p: [1] };
+export const beklenen = (d: Dag) => d.p.reduce((s, v, i) => s + v * (d.min + i), 0) / 2;
+export const enAz = (d: Dag, hedef: number) => d.p.reduce((s, v, i) => s + (d.min + i >= hedef * 2 ? v : 0), 0);
 /** Puanın %20 olasılıkla altında kalacağı değer (kötü gün) */
-const yuzdelik = (d: Dag, q: number) => { let s = 0; for (let i = 0; i < d.p.length; i++) { s += d.p[i]; if (s >= q) return (d.min + i) / 2; } return (d.min + d.p.length - 1) / 2; };
+export const yuzdelik = (d: Dag, q: number) => { let s = 0; for (let i = 0; i < d.p.length; i++) { s += d.p[i]; if (s >= q) return (d.min + i) / 2; } return (d.min + d.p.length - 1) / 2; };
 
 /* ── Plan ────────────────────────────────────────────────────────────── */
 

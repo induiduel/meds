@@ -323,3 +323,57 @@
 .sp-b-net b span { font-size: 12.5px; font-weight: 500; color: var(--color-ink-3); }
 .sp-b-net em { font-style: normal; font-size: 12px; color: var(--color-ink-2); font-variant-numeric: tabular-nums; }
 .sp-b.is-altta .sp-b-net > div:first-child b { color: var(--color-danger, #c0392b); }
+
+/* ── Sınav senaryosu — components/takip/SinavSenaryo.tsx ─────────────── */
+.ss { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.ss-acik { font-size: 13.5px; line-height: 1.5; color: var(--color-ink-2); }
+.ss-kaynak { display: flex; gap: 6px; flex-wrap: wrap; }
+.ss-kaynak button, .ss-sayi button {
+  min-height: 36px; padding: 0 12px; border: 1px solid var(--color-line); border-radius: 999px; background: var(--color-white); cursor: pointer; font-size: 13.5px;
+}
+.ss-kaynak button.is-on { border-color: var(--color-accent); background: var(--color-accent); color: var(--color-white); font-weight: 600; }
+.ss-dersler { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; }
+.ss-d { display: flex; flex-direction: column; gap: 10px; padding: 12px; border: 1px solid var(--color-line); border-radius: 12px; min-width: 0; }
+.ss-d-ust { display: flex; flex-direction: column; gap: 2px; }
+.ss-d-ust b { font-size: 15px; }
+.ss-d-ust span { font-size: 12.5px; color: var(--color-ink-3); }
+.ss-alan { display: flex; flex-direction: column; gap: 10px; }
+.ss-aralik { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; font-size: 13.5px; }
+.ss-sayilar { display: inline-flex; align-items: center; gap: 6px; }
+.ss-sayilar em { font-style: normal; color: var(--color-ink-3); }
+.ss-sayi { display: inline-flex; align-items: center; border: 1px solid var(--color-line); border-radius: 999px; overflow: hidden; }
+.ss-sayi button { border: 0; border-radius: 0; min-width: 34px; padding: 0; font-size: 17px; color: var(--color-ink-2); }
+.ss-sayi button:disabled { opacity: .35; cursor: default; }
+.ss-sayi input {
+  width: 38px; min-height: 36px; border: 0; border-inline: 1px solid var(--color-line); text-align: center; background: transparent;
+  font: 600 14.5px var(--font-sans); font-variant-numeric: tabular-nums; color: var(--color-ink); -moz-appearance: textfield;
+}
+.ss-sayi input::-webkit-outer-spin-button, .ss-sayi input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.ss-kaydir { display: flex; flex-direction: column; gap: 4px; font-size: 13.5px; }
+.ss-kaydir b { font-variant-numeric: tabular-nums; color: var(--color-accent); }
+.ss-kaydir input { width: 100%; accent-color: var(--color-accent); min-height: 28px; }
+.ss-sen { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.ss-s {
+  display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border: 1px solid var(--color-line); border-radius: 12px;
+  background: var(--color-white); text-align: left; cursor: pointer; min-width: 0;
+}
+.ss-s small { font: 600 11.5px var(--font-sans); letter-spacing: .05em; text-transform: uppercase; color: var(--color-ink-3); }
+.ss-s b { font: 700 28px/1.1 var(--font-sans); font-variant-numeric: tabular-nums; }
+.ss-s b span { font-size: 14px; font-weight: 500; color: var(--color-ink-3); }
+.ss-s em { font-style: normal; font-size: 12.5px; color: var(--color-ink-2); font-variant-numeric: tabular-nums; }
+.ss-s i { font-style: normal; font-size: 12px; line-height: 1.4; color: var(--color-ink-3); }
+.ss-s.is-kotu b { color: var(--color-danger, #c0392b); }
+.ss-s.is-mantik b { color: var(--color-accent); }
+.ss-s.is-iyi b { color: var(--color-ok); }
+.ss-s.is-secili { border-color: var(--color-ink-2); box-shadow: inset 0 0 0 1px var(--color-ink-2); }
+.ss-tablo { display: flex; flex-direction: column; border: 1px solid var(--color-line); border-radius: 12px; overflow: hidden; }
+.ss-tr { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, .7fr); gap: 8px; padding: 9px 12px; font-size: 13.5px; font-variant-numeric: tabular-nums; border-top: 1px solid var(--color-line); }
+.ss-tr.is-bas { border-top: 0; font: 600 11.5px var(--font-sans); letter-spacing: .04em; text-transform: uppercase; color: var(--color-ink-3); background: color-mix(in srgb, var(--color-line) 35%, transparent); }
+.ss-tr span:last-child { text-align: right; }
+.ss-tr.is-altta span:last-child b { color: var(--color-danger, #c0392b); }
+@container bd (max-width: 640px) {
+  .ss-sen { grid-template-columns: minmax(0, 1fr); }
+  .ss-s i { display: none; }
+  .ss-dersler { grid-template-columns: minmax(0, 1fr); }
+  .ss-tr { padding: 8px 10px; font-size: 12.5px; gap: 6px; }
+}
