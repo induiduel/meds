@@ -8,7 +8,7 @@ import { createPortal } from 'react-dom';
 import { kutlamaKapat, kutlamalariAtla, sayi, useBasarim, type Odul } from '../../services/basarimIstemci';
 import { AtpIkon, Ikon } from './ortak';
 
-type Efekt = 'konfeti' | 'mitoz' | 'sentaz';
+type Efekt = 'konfeti' | 'mitoz' | 'sentaz' | 'kalp';
 
 const hareketAz = () => typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 
@@ -29,7 +29,7 @@ function Parcacik({ efekt, renk, ust }: { efekt: Efekt; renk: string; ust: boole
     type P = { x: number; y: number; vx: number; vy: number; r: number; a: number; va: number; renk: string; omur: number; tur: number; bol?: boolean };
     const ps: P[] = [];
     const cx = W() / 2, cy = H() * 0.42;
-    const say = (ust ? 1.6 : 1) * (efekt === 'konfeti' ? 140 : efekt === 'mitoz' ? 26 : 36);
+    const say = (ust ? 1.6 : 1) * (efekt === 'konfeti' ? 140 : efekt === 'mitoz' ? 26 : efekt === 'kalp' ? 34 : 36);
     for (let i = 0; i < say; i++) {
       const aci = Math.random() * Math.PI * 2;
       const hiz = (efekt === 'konfeti' ? 6 + Math.random() * 9 : 2 + Math.random() * 4) * dpr;
@@ -62,6 +62,7 @@ function Parcacik({ efekt, renk, ust }: { efekt: Efekt; renk: string; ust: boole
         p.omur++;
         if (efekt === 'konfeti') { p.vy += 0.25 * dpr; p.vx *= 0.985; p.vy *= 0.985; }
         else if (efekt === 'mitoz') { p.vx *= 0.97; p.vy = p.vy * 0.97 + 0.04 * dpr; }
+        else if (efekt === 'kalp') { p.vx *= 0.97; p.vy = p.vy * 0.97 - 0.06 * dpr; }
         else { const aci = Math.atan2(p.vy, p.vx) + 0.025; const h = Math.hypot(p.vx, p.vy) * 1.004; p.vx = Math.cos(aci) * h; p.vy = Math.sin(aci) * h; }
         p.x += p.vx; p.y += p.vy; p.a += p.va;
         const alfa = Math.max(0, 1 - p.omur / (efekt === 'konfeti' ? 170 : 150));
@@ -73,6 +74,14 @@ function Parcacik({ efekt, renk, ust }: { efekt: Efekt; renk: string; ust: boole
           if (p.tur === 0) ctx.fillRect(-p.r, -p.r / 2.5, p.r * 2, p.r / 1.25);
           else if (p.tur === 1) { ctx.beginPath(); ctx.arc(0, 0, p.r / 1.6, 0, 7); ctx.fill(); }
           else { ctx.beginPath(); ctx.moveTo(0, -p.r); ctx.lineTo(p.r, p.r); ctx.lineTo(-p.r, p.r); ctx.fill(); }
+          ctx.restore();
+        } else if (efekt === 'kalp') {
+          // Kalp: atım ritmiyle büyüyüp küçülür (EKG gibi çift vuruş)
+          const faz = (p.omur % 50) / 50;
+          const atim = 1 + (faz < 0.12 ? faz * 2.2 : faz < 0.24 ? (0.24 - faz) * 2.2 : faz < 0.34 ? (faz - 0.24) * 1.6 : faz < 0.44 ? (0.44 - faz) * 1.6 : 0);
+          const z = p.r * 0.9 * atim;
+          ctx.save(); ctx.translate(p.x, p.y); ctx.scale(z / 10, z / 10); ctx.fillStyle = p.tur === 0 ? '#FF375F' : p.tur === 1 ? '#FF6B81' : p.renk;
+          ctx.beginPath(); ctx.moveTo(0, 3); ctx.bezierCurveTo(-10, -5, -5, -12, 0, -6); ctx.bezierCurveTo(5, -12, 10, -5, 0, 3); ctx.fill();
           ctx.restore();
         } else if (efekt === 'mitoz') {
           // hücre: zar + çekirdek; 40. karede ikiye bölünür
@@ -109,7 +118,7 @@ function Sayac({ hedef, sure = 900 }: { hedef: number; sure?: number }) {
   return <>{sayi(v)}</>;
 }
 
-const BASLIK: Record<Odul['t'], string> = { hedef: 'Hedef tamamlandı', basarim: 'Başarım açıldı', siralama: 'Sıralama ödülü', baslangic: 'Hoş geldin', harcama: 'Kilit açıldı' };
+const BASLIK: Record<Odul['t'], string> = { hedef: 'Hedef tamamlandı', basarim: 'Başarım açıldı', siralama: 'Sıralama ödülü', baslangic: 'Hoş geldin', harcama: 'Kilit açıldı', yonetici: 'Yönetici hediyesi' };
 
 export function KutlamaKatmani() {
   const { kutlama, tanim, durum } = useBasarim();
@@ -123,7 +132,7 @@ export function KutlamaKatmani() {
     const renk = b?.renk || (o.t === 'siralama' ? '#F59E0B' : o.ust ? '#EAB308' : 'var(--color-accent)');
     return { ikon: b?.ikon || h?.ikon || (o.t === 'siralama' ? 'trophy' : 'crown'), renk, seviye, ad: (b?.ad || h?.ad || o.ad.split(' · ')[0]), aciklama: b?.aciklama };
   }, [o, tanim]);
-  const efekt: Efekt = durum?.secili.efekt === 'efekt_mitoz' ? 'mitoz' : durum?.secili.efekt === 'efekt_sentaz' ? 'sentaz' : 'konfeti';
+  const efekt: Efekt = durum?.secili.efekt === 'efekt_mitoz' ? 'mitoz' : durum?.secili.efekt === 'efekt_sentaz' ? 'sentaz' : durum?.secili.efekt === 'efekt_kalp' ? 'kalp' : 'konfeti';
 
   useEffect(() => {
     if (!o) return;
@@ -155,7 +164,7 @@ export function KutlamaKatmani() {
           {o.p > 0 && <span className="bs-k-p"><b>+<Sayac hedef={o.p} /></b> puan</span>}
           {o.a > 0 && <span className="bs-k-a"><AtpIkon boyut={20} canli /><b>+<Sayac hedef={o.a} sure={1200} /></b> mol ATP</span>}
         </div>
-        {o.a > 0 && durum && durum.atp.kuyrukta > 0 && (
+        {o.a > 0 && durum && durum.atp.tavan != null && durum.atp.kuyrukta > 0 && (
           <p className="bs-k-not">Günlük {durum.atp.tavan} mol sınırı dolduysa ATP kuyruğa alınır, sonraki günlerde hesabına geçer.</p>
         )}
         <div className="bs-k-eylem">

@@ -4,7 +4,8 @@
  */
 import React, { useState } from 'react';
 import { Lock, Sparkles } from 'lucide-react';
-import { satinAl, sayi, useBasarim, yenile } from '../../services/basarimIstemci';
+import { kilitOnbellek, satinAl, sayi, useBasarim, yenile } from '../../services/basarimIstemci';
+import { cevrimdisiGibi } from '../../services/cevrimdisi/baglanti';
 import { auth, ADMIN_EMAIL } from '../../services/auth';
 import { navigateTo, pathFor } from '../../router';
 import { AtpIkon } from './ortak';
@@ -16,7 +17,19 @@ export function KilitKapisi({ kilit, aciklama, children }: { kilit: string; acik
   const [ileti, setIleti] = useState('');
   const item = tanim.kilitler.find((k) => k.id === kilit);
   const yonetici = String(auth?.currentUser?.email || '').toLowerCase() === ADMIN_EMAIL.toLowerCase();
-  if (!item || !item.etkin || yonetici || uid === 'ai-test' || durum?.kilit[kilit]) return <>{children}</>;
+  if (!item || !item.etkin || yonetici || uid === 'ai-test' || durum?.kilit[kilit] || durum?.ozel?.muaf) return <>{children}</>;
+  // İnternetsiz: daha önce açılmışsa cihazdaki kayıtla geçer; açılmamışsa iskelet yerine açık bilgi
+  if (!durum && kilitOnbellek()[kilit]) return <>{children}</>;
+  if (!durum && (cevrimdisiGibi() || hata)) {
+    return (
+      <div className="bs bs-kilit"><div className="bs-kilit-kart">
+        <span className="bs-kilit-ikon" aria-hidden><Lock /></span>
+        <h1>{item.ad}</h1>
+        <p>Bu içerik ATP ile açılır. Kilidin durumunu görmek ya da açmak için internet gerekir; bir kez açtıktan sonra internetsiz de açılır.</p>
+        <button type="button" className="bs-dk-kaydet" onClick={() => void yenile(true)}>Yeniden dene</button>
+      </div></div>
+    );
+  }
   if (!durum) {
     return <div className="bs"><div className="bs-iskelet" aria-busy="true" aria-label="Yükleniyor" />{hata && <p className="bs-bos">{hata} <button type="button" className="bs-baglanti" onClick={() => void yenile(true)}>Yeniden dene</button></p>}</div>;
   }

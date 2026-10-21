@@ -11,19 +11,24 @@ import { safeJsonFetch } from './api';
 export type Seviye = [number, number, number];
 export interface HedefT { id: string; donem: 'gun' | 'hafta' | 'kurul'; ad: string; olcu: string; ikon?: string; seviyeler: Seviye[] }
 export interface BasarimT { id: string; ad: string; aciklama?: string; olcu: string; ikon?: string; renk?: string; topluluk?: boolean; seviyeler: Seviye[] }
-export interface KilitT { id: string; tur: 'unvan' | 'cerceve' | 'efekt' | 'icerik'; ad: string; fiyat: number; etkin: boolean; renk?: string }
+export interface KilitT { id: string; tur: 'unvan' | 'cerceve' | 'efekt' | 'icerik' | 'renk' | 'esya'; ad: string; fiyat: number; etkin: boolean; renk?: string; aciklama?: string; kidem?: number; kidemAcar?: boolean; eski?: boolean }
+export interface KidemT { no: number; ad: string; tavan: number; aciklama?: string }
 export interface Tanim {
   atp: { baslangic: number; gunlukTavan: number; haftalikSiralama: number[]; kurulSiralama: number[]; siralamaEsikPuan: { hafta: number; kurul: number } };
   taban: Record<string, number>;
   eylemler: { id: string; ad: string; p: number; gunlukTavan: number }[];
-  hedefler: HedefT[]; basarimlar: BasarimT[]; kilitler: KilitT[];
+  hedefler: HedefT[]; basarimlar: BasarimT[]; kilitler: KilitT[]; kidemler?: KidemT[];
 }
-export interface Odul { id: string; t: 'baslangic' | 'hedef' | 'basarim' | 'siralama' | 'harcama'; ad: string; p: number; a: number; at: string; g: string; ust?: boolean; ref?: string }
+export interface Odul { id: string; t: 'baslangic' | 'hedef' | 'basarim' | 'siralama' | 'harcama' | 'yonetici'; by?: string; geriAlindi?: string; ad: string; p: number; a: number; at: string; g: string; ust?: boolean; ref?: string }
 export interface Pencere { id: string; bas: string; son: string; ad: string }
 export interface Durum {
   profil: { donem: number | null; kurul: number | null; ad: string };
   puan: { toplam: number; bugun: number };
-  atp: { bakiye: number; kuyrukta: number; bugunAlinan: number; tavan: number };
+  /** tavan null: sınırsız (yönetici / muaf) */
+  atp: { bakiye: number; kuyrukta: number; bugunAlinan: number; tavan: number | null };
+  kidem?: KidemT & { sonraki: KidemT | null };
+  esya?: Record<string, number>;
+  calisma?: { bugun: number; hafta: number; dersler: CalismaDers[] };
   seri: number;
   hedefler: { id: string; deger: number; pencere: Pencere; alinan: number }[];
   basarimlar: { id: string; deger: number; alinan: number }[];
@@ -32,7 +37,9 @@ export interface Durum {
   defter: Odul[];
   yeni: Odul[];
   kilit: Record<string, string>;
-  secili: { unvan?: string; cerceve?: string; efekt?: string };
+  secili: { unvan?: string; cerceve?: string; efekt?: string; renk?: string };
+  /** Yöneticinin verdiği gizli unvan (muaf: günlük sınırlar ve içerik kilitleri uygulanmaz) */
+  ozel?: { unvan: string; muaf: boolean } | null;
 }
 
 interface Durumu { tanim: Tanim; durum: Durum | null; hata: string; uid: string | null; kutlama: Odul[] }
@@ -45,7 +52,8 @@ export const basarimDurumu = () => s;
 
 const goste = new Set<string>();
 const durumAl = (d: Durum) => {
-  const yeni = (d.yeni || []).filter((o) => !goste.has(o.id));
+  // Yönetici düzeltmesi (düşme, not) ve geri alınan ödül kutlanmaz; yalnız hediye kutlanır
+  const yeni = (d.yeni || []).filter((o) => !goste.has(o.id) && !o.geriAlindi && (o.t !== 'yonetici' || o.p > 0 || o.a > 0));
   yeni.forEach((o) => goste.add(o.id));
   // Aynı anda çok ödül gelirse (ilk açılış) en değerli 6'sı tek tek, gerisi özet olarak gösterilir
   const sirali = [...yeni].sort((a, b) => b.a * 20 + b.p - (a.a * 20 + a.p));
@@ -55,7 +63,14 @@ const durumAl = (d: Durum) => {
     kutlama.push({ id: `ozet-${Date.now()}`, t: 'hedef', ad: `${kalan.length} ödül daha`, p: kalan.reduce((x, o) => x + o.p, 0), a: kalan.reduce((x, o) => x + o.a, 0), at: kalan[0].at, g: kalan[0].g });
   }
   yay({ durum: d, hata: '', kutlama });
+  // Açılmış kilitler cihazda da tutulur: internetsizken (durum gelmeden) açılmış içerik kilit ekranında kalmasın
+  try { if (s.uid) localStorage.setItem(`${KILIT_KEY}:${s.uid}`, JSON.stringify(d.kilit || {})); } catch { /* gizli pencere */ }
 };
+const KILIT_KEY = 'medsoru_basarim_kilit_v1';
+/** Son bilinen açık kilitler (sunucu durumu henüz gelmediyse / internet yoksa) */
+export function kilitOnbellek(): Record<string, string> {
+  try { return s.uid ? JSON.parse(localStorage.getItem(`${KILIT_KEY}:${s.uid}`) || '{}') : {}; } catch { return {}; }
+}
 
 async function istek<T>(url: string, init?: RequestInit): Promise<T> {
   const r = await safeJsonFetch<any>(url, { ...init, headers: { 'Content-Type': 'application/json', ...(init?.headers || {}) } });
@@ -107,7 +122,7 @@ export async function profilKaydet(donem: number, kurul: number, ad?: string) {
 export async function satinAl(id: string) {
   durumAl(await istek<Durum>('/api/basarim/satin-al', { method: 'POST', body: JSON.stringify({ id }) }));
 }
-export async function sec(tur: 'unvan' | 'cerceve' | 'efekt', id: string | null) {
+export async function sec(tur: 'unvan' | 'cerceve' | 'efekt' | 'renk', id: string | null) {
   durumAl(await istek<Durum>('/api/basarim/sec', { method: 'POST', body: JSON.stringify({ tur, id }) }));
 }
 /** Kutlama kuyruğunun başı kapandı. */
@@ -125,7 +140,11 @@ export function kutlamalariAtla() {
   if (at) void istek('/api/basarim/goruldu', { method: 'POST', body: JSON.stringify({ at }) }).catch(() => 0);
 }
 
-export interface SiraSatir { sira: number; ad: string; puan: number; ben: boolean; unvan?: string; cerceve?: string; basarim: number }
+export interface CalismaDers { id: string; ad: string; modul: string; sn: number }
+export interface CalismaSatir { sira: number; ad: string; sn: number; ben: boolean; renk?: string; cerceve?: string; kidem?: string; dersler: CalismaDers[] }
+export const calismaGetir = (kapsam: 'gun' | 'hafta', donem?: number) =>
+  istek<{ donem: number; pencere: Pencere; satir: CalismaSatir[]; benim: number | null; odul: number; esikSn: number }>(`/api/basarim/calisma?kapsam=${kapsam}${donem ? `&donem=${donem}` : ''}`);
+export interface SiraSatir { sira: number; ad: string; puan: number; ben: boolean; unvan?: string; ozel?: boolean; renk?: string; kidem?: string; cerceve?: string; basarim: number }
 export const siralamaGetir = (kapsam: 'hafta' | 'kurul' | 'tum', donem?: number) =>
   istek<{ donem: number; pencere: Pencere; satir: SiraSatir[]; atpOdul: number[] }>(`/api/basarim/siralama?kapsam=${kapsam}${donem ? `&donem=${donem}` : ''}`);
 
@@ -142,4 +161,5 @@ export function olcuYaz(olcu: string, n: number): string {
   };
   return `${sayi(n)} ${birim[olcu] || ''}`.trim();
 }
-export const KILIT_TUR_AD: Record<KilitT['tur'], string> = { unvan: 'Unvanlar', cerceve: 'Çerçeveler', efekt: 'Kutlama efektleri', icerik: 'İçerikler' };
+export const KILIT_TUR_AD: Record<KilitT['tur'], string> = { unvan: 'Kıdem ve unvanlar', cerceve: 'Çerçeveler', efekt: 'Kutlama efektleri', icerik: 'İçerikler', renk: 'İsim renkleri', esya: 'Eşyalar' };
+export const sureYaz = (sn: number) => { const sa = Math.floor(sn / 3600), dk = Math.floor((sn % 3600) / 60); return sa ? `${sa} sa ${dk} dk` : `${dk} dk`; };

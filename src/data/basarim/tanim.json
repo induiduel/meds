@@ -1,100 +1,1372 @@
 {
-  "surum": 1,
+  "surum": 2,
   "aciklama": "MeDSor puan + ATP kurallari. Tek kaynak; sunucuda data/basarim/tanim.json varsa onu kullanir (yonetici ucu PUT /api/admin/basarim/tanim). Odul: p = puan, a = mol ATP. Olcu: calisma_sn (saniye), soru, bitirilen (gercekten bitirilen konu), oturum, aktif_gun, giris_gun, seri, soru_ekle, parca, sik, yorum, begeni, hata, ust_hedef, podyum.",
   "atp": {
     "baslangic": 100,
     "gunlukTavan": 100,
-    "haftalikSiralama": [50, 40, 30, 20, 10],
-    "kurulSiralama": [120, 90, 60, 40, 20],
-    "siralamaEsikPuan": { "hafta": 400, "kurul": 2000 }
+    "haftalikSiralama": [
+      50,
+      40,
+      30,
+      20,
+      10
+    ],
+    "kurulSiralama": [
+      120,
+      90,
+      60,
+      40,
+      20
+    ],
+    "siralamaEsikPuan": {
+      "hafta": 400,
+      "kurul": 2000
+    },
+    "calismaHaftaBirinci": 50,
+    "calismaEsikSn": 18000,
+    "gunlukTavanAciklama": "gunlukTavan = en alt kidemin tavani; kidem tavanlari kidemler listesinde. Yonetici ve muaf gizli unvanlilarda sinir yok."
   },
   "taban": {
     "aciklama": "Her gun icin kendiliginden puan (yalniz puan).",
-    "soruBasina": 1, "soruGunlukTavan": 300,
-    "onDakikaBasina": 5, "calismaGunlukTavanSn": 50400,
-    "bitirilenBasina": 20, "bitirilenGunlukTavan": 10,
+    "soruBasina": 1,
+    "soruGunlukTavan": 300,
+    "onDakikaBasina": 5,
+    "calismaGunlukTavanSn": 50400,
+    "bitirilenBasina": 20,
+    "bitirilenGunlukTavan": 10,
     "bitirmeAsgariSn": 600
   },
   "eylemler": [
-    { "id": "soru_ekle", "ad": "Soru ekleme", "p": 10, "gunlukTavan": 20 },
-    { "id": "parca", "ad": "Soru katkısı (hatıra parçası)", "p": 5, "gunlukTavan": 30 },
-    { "id": "sik", "ad": "Şık katkısı", "p": 5, "gunlukTavan": 30 },
-    { "id": "yorum", "ad": "Yorum", "p": 2, "gunlukTavan": 25 },
-    { "id": "begeni", "ad": "Beğeni", "p": 1, "gunlukTavan": 40 },
-    { "id": "hata", "ad": "Hata bildirimi", "p": 5, "gunlukTavan": 15 }
+    {
+      "id": "soru_ekle",
+      "ad": "Soru ekleme",
+      "p": 10,
+      "gunlukTavan": 20
+    },
+    {
+      "id": "parca",
+      "ad": "Soru katkısı (hatıra parçası)",
+      "p": 5,
+      "gunlukTavan": 30
+    },
+    {
+      "id": "sik",
+      "ad": "Şık katkısı",
+      "p": 5,
+      "gunlukTavan": 30
+    },
+    {
+      "id": "yorum",
+      "ad": "Yorum",
+      "p": 2,
+      "gunlukTavan": 25
+    },
+    {
+      "id": "begeni",
+      "ad": "Beğeni",
+      "p": 1,
+      "gunlukTavan": 40
+    },
+    {
+      "id": "hata",
+      "ad": "Hata bildirimi",
+      "p": 5,
+      "gunlukTavan": 15
+    }
   ],
   "hedefler": [
-    { "id": "g_calisma", "donem": "gun", "ad": "Günlük çalışma", "olcu": "calisma_sn", "ikon": "clock",
-      "seviyeler": [[3600, 100, 0], [7200, 150, 0], [10800, 200, 0], [14400, 250, 3], [18000, 0, 10]] },
-    { "id": "g_soru", "donem": "gun", "ad": "Günlük soru", "olcu": "soru", "ikon": "target",
-      "seviyeler": [[25, 60, 0], [50, 90, 0], [100, 140, 0], [150, 180, 3], [250, 0, 8]] },
-    { "id": "g_bitir", "donem": "gun", "ad": "Günün dersleri", "olcu": "bitirilen", "ikon": "check",
-      "seviyeler": [[1, 80, 0], [2, 120, 0], [3, 160, 2], [5, 0, 6]] },
-    { "id": "g_oturum", "donem": "gun", "ad": "Düzenli dönüş", "olcu": "oturum", "ikon": "door",
-      "seviyeler": [[2, 20, 0], [3, 30, 0], [5, 40, 0], [7, 50, 1], [10, 0, 3]] },
-
-    { "id": "h_calisma", "donem": "hafta", "ad": "Haftalık çalışma", "olcu": "calisma_sn", "ikon": "clock",
-      "seviyeler": [[18000, 250, 0], [36000, 400, 0], [54000, 550, 0], [72000, 700, 10], [108000, 0, 25]] },
-    { "id": "h_soru", "donem": "hafta", "ad": "Haftalık soru", "olcu": "soru", "ikon": "target",
-      "seviyeler": [[150, 250, 0], [300, 400, 0], [500, 550, 0], [750, 700, 10], [1000, 0, 25]] },
-    { "id": "h_bitir", "donem": "hafta", "ad": "Haftanın dersleri", "olcu": "bitirilen", "ikon": "check",
-      "seviyeler": [[3, 200, 0], [6, 350, 0], [10, 500, 0], [15, 650, 8], [20, 0, 20]] },
-    { "id": "h_gun", "donem": "hafta", "ad": "Aktif günler", "olcu": "aktif_gun", "ikon": "calendar",
-      "seviyeler": [[3, 150, 0], [4, 220, 0], [5, 300, 0], [6, 380, 5], [7, 0, 15]] },
-
-    { "id": "k_calisma", "donem": "kurul", "ad": "Kurul boyunca çalışma", "olcu": "calisma_sn", "ikon": "clock",
-      "seviyeler": [[72000, 800, 0], [144000, 1200, 0], [216000, 1600, 0], [288000, 2000, 25], [432000, 0, 60]] },
-    { "id": "k_soru", "donem": "kurul", "ad": "Kurul boyunca soru", "olcu": "soru", "ikon": "target",
-      "seviyeler": [[500, 800, 0], [1000, 1200, 0], [2000, 1600, 0], [3000, 2000, 25], [5000, 0, 60]] },
-    { "id": "k_bitir", "donem": "kurul", "ad": "Kurulun dersleri", "olcu": "bitirilen", "ikon": "check",
-      "seviyeler": [[10, 600, 0], [20, 1000, 0], [35, 1400, 0], [50, 1800, 20], [70, 0, 50]] },
-    { "id": "k_gun", "donem": "kurul", "ad": "Kurul aktif günleri", "olcu": "aktif_gun", "ikon": "calendar",
-      "seviyeler": [[10, 500, 0], [15, 800, 0], [20, 1100, 0], [25, 1400, 15], [30, 0, 40]] }
+    {
+      "id": "g_calisma",
+      "donem": "gun",
+      "ad": "Günlük çalışma",
+      "olcu": "calisma_sn",
+      "ikon": "clock",
+      "seviyeler": [
+        [
+          3600,
+          100,
+          0
+        ],
+        [
+          7200,
+          150,
+          0
+        ],
+        [
+          10800,
+          200,
+          0
+        ],
+        [
+          14400,
+          250,
+          3
+        ],
+        [
+          18000,
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "id": "g_soru",
+      "donem": "gun",
+      "ad": "Günlük soru",
+      "olcu": "soru",
+      "ikon": "target",
+      "seviyeler": [
+        [
+          25,
+          60,
+          0
+        ],
+        [
+          50,
+          90,
+          0
+        ],
+        [
+          100,
+          140,
+          0
+        ],
+        [
+          150,
+          180,
+          3
+        ],
+        [
+          250,
+          0,
+          8
+        ]
+      ]
+    },
+    {
+      "id": "g_bitir",
+      "donem": "gun",
+      "ad": "Günün dersleri",
+      "olcu": "bitirilen",
+      "ikon": "check",
+      "seviyeler": [
+        [
+          1,
+          80,
+          0
+        ],
+        [
+          2,
+          120,
+          0
+        ],
+        [
+          3,
+          160,
+          2
+        ],
+        [
+          5,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "id": "g_oturum",
+      "donem": "gun",
+      "ad": "Düzenli dönüş",
+      "olcu": "oturum",
+      "ikon": "door",
+      "seviyeler": [
+        [
+          2,
+          20,
+          0
+        ],
+        [
+          3,
+          30,
+          0
+        ],
+        [
+          5,
+          40,
+          0
+        ],
+        [
+          7,
+          50,
+          1
+        ],
+        [
+          10,
+          0,
+          3
+        ]
+      ]
+    },
+    {
+      "id": "h_calisma",
+      "donem": "hafta",
+      "ad": "Haftalık çalışma",
+      "olcu": "calisma_sn",
+      "ikon": "clock",
+      "seviyeler": [
+        [
+          18000,
+          250,
+          0
+        ],
+        [
+          36000,
+          400,
+          0
+        ],
+        [
+          54000,
+          550,
+          0
+        ],
+        [
+          72000,
+          700,
+          10
+        ],
+        [
+          108000,
+          0,
+          25
+        ]
+      ]
+    },
+    {
+      "id": "h_soru",
+      "donem": "hafta",
+      "ad": "Haftalık soru",
+      "olcu": "soru",
+      "ikon": "target",
+      "seviyeler": [
+        [
+          150,
+          250,
+          0
+        ],
+        [
+          300,
+          400,
+          0
+        ],
+        [
+          500,
+          550,
+          0
+        ],
+        [
+          750,
+          700,
+          10
+        ],
+        [
+          1000,
+          0,
+          25
+        ]
+      ]
+    },
+    {
+      "id": "h_bitir",
+      "donem": "hafta",
+      "ad": "Haftanın dersleri",
+      "olcu": "bitirilen",
+      "ikon": "check",
+      "seviyeler": [
+        [
+          3,
+          200,
+          0
+        ],
+        [
+          6,
+          350,
+          0
+        ],
+        [
+          10,
+          500,
+          0
+        ],
+        [
+          15,
+          650,
+          8
+        ],
+        [
+          20,
+          0,
+          20
+        ]
+      ]
+    },
+    {
+      "id": "h_gun",
+      "donem": "hafta",
+      "ad": "Aktif günler",
+      "olcu": "aktif_gun",
+      "ikon": "calendar",
+      "seviyeler": [
+        [
+          3,
+          150,
+          0
+        ],
+        [
+          4,
+          220,
+          0
+        ],
+        [
+          5,
+          300,
+          0
+        ],
+        [
+          6,
+          380,
+          5
+        ],
+        [
+          7,
+          0,
+          15
+        ]
+      ]
+    },
+    {
+      "id": "k_calisma",
+      "donem": "kurul",
+      "ad": "Kurul boyunca çalışma",
+      "olcu": "calisma_sn",
+      "ikon": "clock",
+      "seviyeler": [
+        [
+          72000,
+          800,
+          0
+        ],
+        [
+          144000,
+          1200,
+          0
+        ],
+        [
+          216000,
+          1600,
+          0
+        ],
+        [
+          288000,
+          2000,
+          25
+        ],
+        [
+          432000,
+          0,
+          60
+        ]
+      ]
+    },
+    {
+      "id": "k_soru",
+      "donem": "kurul",
+      "ad": "Kurul boyunca soru",
+      "olcu": "soru",
+      "ikon": "target",
+      "seviyeler": [
+        [
+          500,
+          800,
+          0
+        ],
+        [
+          1000,
+          1200,
+          0
+        ],
+        [
+          2000,
+          1600,
+          0
+        ],
+        [
+          3000,
+          2000,
+          25
+        ],
+        [
+          5000,
+          0,
+          60
+        ]
+      ]
+    },
+    {
+      "id": "k_bitir",
+      "donem": "kurul",
+      "ad": "Kurulun dersleri",
+      "olcu": "bitirilen",
+      "ikon": "check",
+      "seviyeler": [
+        [
+          10,
+          600,
+          0
+        ],
+        [
+          20,
+          1000,
+          0
+        ],
+        [
+          35,
+          1400,
+          0
+        ],
+        [
+          50,
+          1800,
+          20
+        ],
+        [
+          70,
+          0,
+          50
+        ]
+      ]
+    },
+    {
+      "id": "k_gun",
+      "donem": "kurul",
+      "ad": "Kurul aktif günleri",
+      "olcu": "aktif_gun",
+      "ikon": "calendar",
+      "seviyeler": [
+        [
+          10,
+          500,
+          0
+        ],
+        [
+          15,
+          800,
+          0
+        ],
+        [
+          20,
+          1100,
+          0
+        ],
+        [
+          25,
+          1400,
+          15
+        ],
+        [
+          30,
+          0,
+          40
+        ]
+      ]
+    }
   ],
   "basarimlar": [
-    { "id": "kitap_kurdu", "ad": "Kitap Kurdu", "aciklama": "Toplam çalışma saati", "olcu": "calisma_sn", "ikon": "book", "renk": "#8B5CF6",
-      "seviyeler": [[36000, 200, 0], [360000, 500, 0], [900000, 1000, 0], [1800000, 1500, 20], [3600000, 0, 100]] },
-    { "id": "soru_canavari", "ad": "Soru Canavarı", "aciklama": "Toplam çözülen soru", "olcu": "soru", "ikon": "flame", "renk": "#F97316",
-      "seviyeler": [[100, 150, 0], [1000, 400, 0], [2500, 800, 0], [5000, 1200, 20], [10000, 0, 100]] },
-    { "id": "ders_avcisi", "ad": "Ders Avcısı", "aciklama": "Gerçekten bitirilen ders/konu", "olcu": "bitirilen", "ikon": "check", "renk": "#22C55E",
-      "seviyeler": [[5, 150, 0], [25, 400, 0], [50, 800, 0], [100, 1200, 15], [200, 0, 80]] },
-    { "id": "sadik", "ad": "Sadık Tıbbiyeli", "aciklama": "Giriş yapılan farklı gün", "olcu": "giris_gun", "ikon": "door", "renk": "#0EA5E9",
-      "seviyeler": [[10, 100, 0], [30, 250, 0], [60, 500, 0], [120, 800, 10], [200, 0, 50]] },
-    { "id": "zincir", "ad": "Kopmayan Zincir", "aciklama": "Ard arda giriş günü", "olcu": "seri", "ikon": "link", "renk": "#EF4444",
-      "seviyeler": [[3, 50, 0], [7, 150, 0], [30, 500, 0], [60, 900, 15], [100, 0, 80]] },
-    { "id": "ayrilamayan", "ad": "Ayrılamayan", "aciklama": "Bir günde en çok oturum", "olcu": "oturum_max", "ikon": "repeat", "renk": "#14B8A6",
-      "seviyeler": [[3, 40, 0], [5, 80, 0], [7, 120, 0], [10, 200, 5]] },
-    { "id": "hedef_ustasi", "ad": "Hedef Ustası", "aciklama": "Ulaşılan en üst seviye hedef", "olcu": "ust_hedef", "ikon": "crown", "renk": "#EAB308",
-      "seviyeler": [[1, 100, 0], [10, 300, 0], [30, 600, 0], [75, 1000, 15], [150, 0, 70]] },
-    { "id": "podyum", "ad": "Podyum", "aciklama": "Haftalık sıralamada ilk 5", "olcu": "podyum", "ikon": "trophy", "renk": "#F59E0B",
-      "seviyeler": [[1, 200, 0], [3, 400, 0], [5, 700, 0], [10, 1000, 10], [20, 0, 60]] },
-
-    { "id": "soru_mimari", "ad": "Soru Mimarı", "aciklama": "Eklenen soru", "olcu": "soru_ekle", "ikon": "plus", "renk": "#6366F1", "topluluk": true,
-      "seviyeler": [[1, 50, 0], [10, 150, 0], [25, 300, 0], [50, 600, 0], [100, 1200, 0]] },
-    { "id": "hafiza_ortagi", "ad": "Hafıza Ortağı", "aciklama": "Soru katkısı (hatıra parçası)", "olcu": "parca", "ikon": "puzzle", "renk": "#A855F7", "topluluk": true,
-      "seviyeler": [[5, 50, 0], [25, 150, 0], [50, 300, 0], [100, 600, 0], [250, 1200, 0]] },
-    { "id": "sik_ustasi", "ad": "Şık Ustası", "aciklama": "Şık katkısı", "olcu": "sik", "ikon": "list", "renk": "#EC4899", "topluluk": true,
-      "seviyeler": [[5, 50, 0], [25, 150, 0], [50, 300, 0], [100, 600, 0], [250, 1200, 0]] },
-    { "id": "tartismaci", "ad": "Tartışmacı", "aciklama": "Yazılan yorum", "olcu": "yorum", "ikon": "message", "renk": "#06B6D4", "topluluk": true,
-      "seviyeler": [[10, 50, 0], [100, 200, 0], [250, 400, 0], [500, 700, 0], [1000, 1200, 0]] },
-    { "id": "destekci", "ad": "Destekçi", "aciklama": "Verilen beğeni", "olcu": "begeni", "ikon": "heart", "renk": "#F43F5E", "topluluk": true,
-      "seviyeler": [[10, 30, 0], [50, 100, 0], [100, 200, 0], [250, 400, 0], [500, 700, 0]] },
-    { "id": "hata_avcisi", "ad": "Hata Avcısı", "aciklama": "Hata bildirimi", "olcu": "hata", "ikon": "bug", "renk": "#84CC16", "topluluk": true,
-      "seviyeler": [[1, 30, 0], [10, 150, 0], [25, 300, 0], [50, 600, 0], [100, 1000, 0]] }
+    {
+      "id": "kitap_kurdu",
+      "ad": "Kitap Kurdu",
+      "aciklama": "Toplam çalışma saati",
+      "olcu": "calisma_sn",
+      "ikon": "book",
+      "renk": "#8B5CF6",
+      "seviyeler": [
+        [
+          36000,
+          200,
+          0
+        ],
+        [
+          360000,
+          500,
+          0
+        ],
+        [
+          900000,
+          1000,
+          0
+        ],
+        [
+          1800000,
+          1500,
+          20
+        ],
+        [
+          3600000,
+          0,
+          100
+        ]
+      ]
+    },
+    {
+      "id": "soru_canavari",
+      "ad": "Soru Canavarı",
+      "aciklama": "Toplam çözülen soru",
+      "olcu": "soru",
+      "ikon": "flame",
+      "renk": "#F97316",
+      "seviyeler": [
+        [
+          100,
+          150,
+          0
+        ],
+        [
+          1000,
+          400,
+          0
+        ],
+        [
+          2500,
+          800,
+          0
+        ],
+        [
+          5000,
+          1200,
+          20
+        ],
+        [
+          10000,
+          0,
+          100
+        ]
+      ]
+    },
+    {
+      "id": "ders_avcisi",
+      "ad": "Ders Avcısı",
+      "aciklama": "Gerçekten bitirilen ders/konu",
+      "olcu": "bitirilen",
+      "ikon": "check",
+      "renk": "#22C55E",
+      "seviyeler": [
+        [
+          5,
+          150,
+          0
+        ],
+        [
+          25,
+          400,
+          0
+        ],
+        [
+          50,
+          800,
+          0
+        ],
+        [
+          100,
+          1200,
+          15
+        ],
+        [
+          200,
+          0,
+          80
+        ]
+      ]
+    },
+    {
+      "id": "sadik",
+      "ad": "Sadık Tıbbiyeli",
+      "aciklama": "Giriş yapılan farklı gün",
+      "olcu": "giris_gun",
+      "ikon": "door",
+      "renk": "#0EA5E9",
+      "seviyeler": [
+        [
+          10,
+          100,
+          0
+        ],
+        [
+          30,
+          250,
+          0
+        ],
+        [
+          60,
+          500,
+          0
+        ],
+        [
+          120,
+          800,
+          10
+        ],
+        [
+          200,
+          0,
+          50
+        ]
+      ]
+    },
+    {
+      "id": "zincir",
+      "ad": "Kopmayan Zincir",
+      "aciklama": "Ard arda giriş günü",
+      "olcu": "seri",
+      "ikon": "link",
+      "renk": "#EF4444",
+      "seviyeler": [
+        [
+          3,
+          50,
+          0
+        ],
+        [
+          7,
+          150,
+          0
+        ],
+        [
+          30,
+          500,
+          0
+        ],
+        [
+          60,
+          900,
+          15
+        ],
+        [
+          100,
+          0,
+          80
+        ]
+      ]
+    },
+    {
+      "id": "ayrilamayan",
+      "ad": "Ayrılamayan",
+      "aciklama": "Bir günde en çok oturum",
+      "olcu": "oturum_max",
+      "ikon": "repeat",
+      "renk": "#14B8A6",
+      "seviyeler": [
+        [
+          3,
+          40,
+          0
+        ],
+        [
+          5,
+          80,
+          0
+        ],
+        [
+          7,
+          120,
+          0
+        ],
+        [
+          10,
+          200,
+          5
+        ]
+      ]
+    },
+    {
+      "id": "hedef_ustasi",
+      "ad": "Hedef Ustası",
+      "aciklama": "Ulaşılan en üst seviye hedef",
+      "olcu": "ust_hedef",
+      "ikon": "crown",
+      "renk": "#EAB308",
+      "seviyeler": [
+        [
+          1,
+          100,
+          0
+        ],
+        [
+          10,
+          300,
+          0
+        ],
+        [
+          30,
+          600,
+          0
+        ],
+        [
+          75,
+          1000,
+          15
+        ],
+        [
+          150,
+          0,
+          70
+        ]
+      ]
+    },
+    {
+      "id": "podyum",
+      "ad": "Podyum",
+      "aciklama": "Haftalık sıralamada ilk 5",
+      "olcu": "podyum",
+      "ikon": "trophy",
+      "renk": "#F59E0B",
+      "seviyeler": [
+        [
+          1,
+          200,
+          0
+        ],
+        [
+          3,
+          400,
+          0
+        ],
+        [
+          5,
+          700,
+          0
+        ],
+        [
+          10,
+          1000,
+          10
+        ],
+        [
+          20,
+          0,
+          60
+        ]
+      ]
+    },
+    {
+      "id": "soru_mimari",
+      "ad": "Soru Mimarı",
+      "aciklama": "Eklenen soru",
+      "olcu": "soru_ekle",
+      "ikon": "plus",
+      "renk": "#6366F1",
+      "topluluk": true,
+      "seviyeler": [
+        [
+          1,
+          50,
+          0
+        ],
+        [
+          10,
+          150,
+          0
+        ],
+        [
+          25,
+          300,
+          0
+        ],
+        [
+          50,
+          600,
+          0
+        ],
+        [
+          100,
+          1200,
+          0
+        ]
+      ]
+    },
+    {
+      "id": "hafiza_ortagi",
+      "ad": "Hafıza Ortağı",
+      "aciklama": "Soru katkısı (hatıra parçası)",
+      "olcu": "parca",
+      "ikon": "puzzle",
+      "renk": "#A855F7",
+      "topluluk": true,
+      "seviyeler": [
+        [
+          5,
+          50,
+          0
+        ],
+        [
+          25,
+          150,
+          0
+        ],
+        [
+          50,
+          300,
+          0
+        ],
+        [
+          100,
+          600,
+          0
+        ],
+        [
+          250,
+          1200,
+          0
+        ]
+      ]
+    },
+    {
+      "id": "sik_ustasi",
+      "ad": "Şık Ustası",
+      "aciklama": "Şık katkısı",
+      "olcu": "sik",
+      "ikon": "list",
+      "renk": "#EC4899",
+      "topluluk": true,
+      "seviyeler": [
+        [
+          5,
+          50,
+          0
+        ],
+        [
+          25,
+          150,
+          0
+        ],
+        [
+          50,
+          300,
+          0
+        ],
+        [
+          100,
+          600,
+          0
+        ],
+        [
+          250,
+          1200,
+          0
+        ]
+      ]
+    },
+    {
+      "id": "tartismaci",
+      "ad": "Tartışmacı",
+      "aciklama": "Yazılan yorum",
+      "olcu": "yorum",
+      "ikon": "message",
+      "renk": "#06B6D4",
+      "topluluk": true,
+      "seviyeler": [
+        [
+          10,
+          50,
+          0
+        ],
+        [
+          100,
+          200,
+          0
+        ],
+        [
+          250,
+          400,
+          0
+        ],
+        [
+          500,
+          700,
+          0
+        ],
+        [
+          1000,
+          1200,
+          0
+        ]
+      ]
+    },
+    {
+      "id": "destekci",
+      "ad": "Destekçi",
+      "aciklama": "Verilen beğeni",
+      "olcu": "begeni",
+      "ikon": "heart",
+      "renk": "#F43F5E",
+      "topluluk": true,
+      "seviyeler": [
+        [
+          10,
+          30,
+          0
+        ],
+        [
+          50,
+          100,
+          0
+        ],
+        [
+          100,
+          200,
+          0
+        ],
+        [
+          250,
+          400,
+          0
+        ],
+        [
+          500,
+          700,
+          0
+        ]
+      ]
+    },
+    {
+      "id": "hata_avcisi",
+      "ad": "Hata Avcısı",
+      "aciklama": "Hata bildirimi",
+      "olcu": "hata",
+      "ikon": "bug",
+      "renk": "#84CC16",
+      "topluluk": true,
+      "seviyeler": [
+        [
+          1,
+          30,
+          0
+        ],
+        [
+          10,
+          150,
+          0
+        ],
+        [
+          25,
+          300,
+          0
+        ],
+        [
+          50,
+          600,
+          0
+        ],
+        [
+          100,
+          1000,
+          0
+        ]
+      ]
+    }
   ],
   "kilitler": [
-    { "id": "unvan_asistan", "tur": "unvan", "ad": "Unvan: Asistan Adayı", "fiyat": 50, "etkin": true },
-    { "id": "unvan_nobetci", "tur": "unvan", "ad": "Unvan: Nöbetçi", "fiyat": 150, "etkin": true },
-    { "id": "unvan_uzman", "tur": "unvan", "ad": "Unvan: Uzman", "fiyat": 400, "etkin": true },
-    { "id": "unvan_bashekim", "tur": "unvan", "ad": "Unvan: Başhekim", "fiyat": 1000, "etkin": true },
-    { "id": "cerceve_bronz", "tur": "cerceve", "ad": "Bronz çerçeve", "fiyat": 100, "etkin": true, "renk": "#B45309" },
-    { "id": "cerceve_gumus", "tur": "cerceve", "ad": "Gümüş çerçeve", "fiyat": 250, "etkin": true, "renk": "#94A3B8" },
-    { "id": "cerceve_altin", "tur": "cerceve", "ad": "Altın çerçeve", "fiyat": 500, "etkin": true, "renk": "#EAB308" },
-    { "id": "cerceve_mito", "tur": "cerceve", "ad": "Mitokondri çerçevesi (hareketli)", "fiyat": 800, "etkin": true, "renk": "#F97316" },
-    { "id": "efekt_mitoz", "tur": "efekt", "ad": "Kutlama efekti: Mitoz", "fiyat": 150, "etkin": true },
-    { "id": "efekt_sentaz", "tur": "efekt", "ad": "Kutlama efekti: ATP sentaz", "fiyat": 300, "etkin": true },
-    { "id": "icerik_deneme", "tur": "icerik", "ad": "Kurul deneme sınavı", "fiyat": 250, "etkin": true },
-    { "id": "icerik_olasi_erken", "tur": "icerik", "ad": "Olası sorular", "fiyat": 400, "etkin": true },
-    { "id": "icerik_kamp", "tur": "icerik", "ad": "Kurul kampı ek paketi", "fiyat": 600, "etkin": false }
+    {
+      "id": "u1_kantin",
+      "tur": "unvan",
+      "ad": "Kantin Müdavimi",
+      "fiyat": 150,
+      "etkin": true,
+      "kidem": 1
+    },
+    {
+      "id": "u1_steteskop",
+      "tur": "unvan",
+      "ad": "Steteskop Taşıyıcısı",
+      "fiyat": 150,
+      "etkin": true,
+      "kidem": 1
+    },
+    {
+      "id": "u2_stajyer",
+      "tur": "unvan",
+      "ad": "Stajyer",
+      "fiyat": 400,
+      "etkin": true,
+      "kidem": 2,
+      "kidemAcar": true
+    },
+    {
+      "id": "u2_fotokopi",
+      "tur": "unvan",
+      "ad": "Fotokopi Ustası",
+      "fiyat": 250,
+      "etkin": true,
+      "kidem": 2
+    },
+    {
+      "id": "u2_vizit",
+      "tur": "unvan",
+      "ad": "Vizit Arkası Gözlemcisi",
+      "fiyat": 250,
+      "etkin": true,
+      "kidem": 2
+    },
+    {
+      "id": "u3_intorn",
+      "tur": "unvan",
+      "ad": "İntörn",
+      "fiyat": 800,
+      "etkin": true,
+      "kidem": 3,
+      "kidemAcar": true
+    },
+    {
+      "id": "u3_kan",
+      "tur": "unvan",
+      "ad": "Kan Alma Ninjası",
+      "fiyat": 450,
+      "etkin": true,
+      "kidem": 3
+    },
+    {
+      "id": "u3_nobet",
+      "tur": "unvan",
+      "ad": "Nöbet Kurdu",
+      "fiyat": 450,
+      "etkin": true,
+      "kidem": 3
+    },
+    {
+      "id": "u4_pratisyen",
+      "tur": "unvan",
+      "ad": "Pratisyen Hekim",
+      "fiyat": 1300,
+      "etkin": true,
+      "kidem": 4,
+      "kidemAcar": true
+    },
+    {
+      "id": "u4_recete",
+      "tur": "unvan",
+      "ad": "Reçete Şairi",
+      "fiyat": 700,
+      "etkin": true,
+      "kidem": 4
+    },
+    {
+      "id": "u4_acil",
+      "tur": "unvan",
+      "ad": "Acil Servis Kahramanı",
+      "fiyat": 700,
+      "etkin": true,
+      "kidem": 4
+    },
+    {
+      "id": "u5_asistan",
+      "tur": "unvan",
+      "ad": "Asistan",
+      "fiyat": 2000,
+      "etkin": true,
+      "kidem": 5,
+      "kidemAcar": true
+    },
+    {
+      "id": "u5_uykusuz",
+      "tur": "unvan",
+      "ad": "36 Saat Uykusuz",
+      "fiyat": 1000,
+      "etkin": true,
+      "kidem": 5
+    },
+    {
+      "id": "u5_konsul",
+      "tur": "unvan",
+      "ad": "Konsültasyon Avcısı",
+      "fiyat": 1000,
+      "etkin": true,
+      "kidem": 5
+    },
+    {
+      "id": "u6_uzman",
+      "tur": "unvan",
+      "ad": "Uzman Doktor",
+      "fiyat": 3000,
+      "etkin": true,
+      "kidem": 6,
+      "kidemAcar": true
+    },
+    {
+      "id": "u6_dedektif",
+      "tur": "unvan",
+      "ad": "Ayırıcı Tanı Dedektifi",
+      "fiyat": 1500,
+      "etkin": true,
+      "kidem": 6
+    },
+    {
+      "id": "u6_vizit",
+      "tur": "unvan",
+      "ad": "Vizit Lideri",
+      "fiyat": 1500,
+      "etkin": true,
+      "kidem": 6
+    },
+    {
+      "id": "u7_docent",
+      "tur": "unvan",
+      "ad": "Doçent",
+      "fiyat": 4500,
+      "etkin": true,
+      "kidem": 7,
+      "kidemAcar": true
+    },
+    {
+      "id": "u7_makale",
+      "tur": "unvan",
+      "ad": "Makale Makinesi",
+      "fiyat": 2200,
+      "etkin": true,
+      "kidem": 7
+    },
+    {
+      "id": "u7_kongre",
+      "tur": "unvan",
+      "ad": "Kongre Gezgini",
+      "fiyat": 2200,
+      "etkin": true,
+      "kidem": 7
+    },
+    {
+      "id": "u8_profesor",
+      "tur": "unvan",
+      "ad": "Profesör",
+      "fiyat": 6500,
+      "etkin": true,
+      "kidem": 8,
+      "kidemAcar": true
+    },
+    {
+      "id": "u8_kitap",
+      "tur": "unvan",
+      "ad": "Yaşayan Ders Kitabı",
+      "fiyat": 3200,
+      "etkin": true,
+      "kidem": 8
+    },
+    {
+      "id": "u8_hoca",
+      "tur": "unvan",
+      "ad": "Hocaların Hocası",
+      "fiyat": 3200,
+      "etkin": true,
+      "kidem": 8
+    },
+    {
+      "id": "cerceve_ekg",
+      "tur": "cerceve",
+      "ad": "EKG çerçevesi (hareketli)",
+      "fiyat": 600,
+      "etkin": true,
+      "renk": "#22C55E"
+    },
+    {
+      "id": "cerceve_dna",
+      "tur": "cerceve",
+      "ad": "DNA sarmalı çerçevesi (hareketli)",
+      "fiyat": 900,
+      "etkin": true,
+      "renk": "#6366F1"
+    },
+    {
+      "id": "efekt_kalp",
+      "tur": "efekt",
+      "ad": "Kutlama efekti: Kalp atışı",
+      "fiyat": 400,
+      "etkin": true
+    },
+    {
+      "id": "renk_mavi",
+      "tur": "renk",
+      "ad": "Sıralamada okyanus mavisi isim",
+      "fiyat": 300,
+      "etkin": true,
+      "renk": "#0A84FF"
+    },
+    {
+      "id": "renk_mor",
+      "tur": "renk",
+      "ad": "Sıralamada nöron moru isim",
+      "fiyat": 500,
+      "etkin": true,
+      "renk": "#AF52DE"
+    },
+    {
+      "id": "renk_altin",
+      "tur": "renk",
+      "ad": "Sıralamada altın isim (parlayan)",
+      "fiyat": 900,
+      "etkin": true,
+      "renk": "#E5B000"
+    },
+    {
+      "id": "esya_seri",
+      "tur": "esya",
+      "ad": "Seri koruyucu",
+      "fiyat": 120,
+      "etkin": true,
+      "aciklama": "Girmediğin bir günü kapatır, zincir kopmaz. Tek kullanımlık; birden çok alınabilir."
+    },
+    {
+      "id": "cerceve_bronz",
+      "tur": "cerceve",
+      "ad": "Bronz çerçeve",
+      "fiyat": 100,
+      "etkin": true,
+      "renk": "#B45309"
+    },
+    {
+      "id": "cerceve_gumus",
+      "tur": "cerceve",
+      "ad": "Gümüş çerçeve",
+      "fiyat": 250,
+      "etkin": true,
+      "renk": "#94A3B8"
+    },
+    {
+      "id": "cerceve_altin",
+      "tur": "cerceve",
+      "ad": "Altın çerçeve",
+      "fiyat": 500,
+      "etkin": true,
+      "renk": "#EAB308"
+    },
+    {
+      "id": "cerceve_mito",
+      "tur": "cerceve",
+      "ad": "Mitokondri çerçevesi (hareketli)",
+      "fiyat": 800,
+      "etkin": true,
+      "renk": "#F97316"
+    },
+    {
+      "id": "efekt_mitoz",
+      "tur": "efekt",
+      "ad": "Kutlama efekti: Mitoz",
+      "fiyat": 150,
+      "etkin": true
+    },
+    {
+      "id": "efekt_sentaz",
+      "tur": "efekt",
+      "ad": "Kutlama efekti: ATP sentaz",
+      "fiyat": 300,
+      "etkin": true
+    },
+    {
+      "id": "icerik_deneme",
+      "tur": "icerik",
+      "ad": "Kurul deneme sınavı",
+      "fiyat": 250,
+      "etkin": true
+    },
+    {
+      "id": "icerik_olasi_erken",
+      "tur": "icerik",
+      "ad": "Olası sorular",
+      "fiyat": 400,
+      "etkin": true
+    },
+    {
+      "id": "icerik_kamp",
+      "tur": "icerik",
+      "ad": "Kurul kampı ek paketi",
+      "fiyat": 600,
+      "etkin": false
+    },
+    {
+      "id": "unvan_asistan",
+      "tur": "unvan",
+      "ad": "Unvan: Asistan Adayı",
+      "fiyat": 50,
+      "etkin": false,
+      "eski": true
+    },
+    {
+      "id": "unvan_nobetci",
+      "tur": "unvan",
+      "ad": "Unvan: Nöbetçi",
+      "fiyat": 150,
+      "etkin": false,
+      "eski": true
+    },
+    {
+      "id": "unvan_uzman",
+      "tur": "unvan",
+      "ad": "Unvan: Uzman",
+      "fiyat": 400,
+      "etkin": false,
+      "eski": true
+    },
+    {
+      "id": "unvan_bashekim",
+      "tur": "unvan",
+      "ad": "Unvan: Başhekim",
+      "fiyat": 1000,
+      "etkin": false,
+      "eski": true
+    }
+  ],
+  "kidemler": [
+    {
+      "no": 1,
+      "ad": "Çömez",
+      "tavan": 100,
+      "aciklama": "Herkes buradan başlar."
+    },
+    {
+      "no": 2,
+      "ad": "Stajyer",
+      "tavan": 150,
+      "aciklama": "Beyaz önlük artık biraz bol değil."
+    },
+    {
+      "no": 3,
+      "ad": "İntörn",
+      "tavan": 200,
+      "aciklama": "Nöbet listesinde adın var."
+    },
+    {
+      "no": 4,
+      "ad": "Pratisyen",
+      "tavan": 300,
+      "aciklama": "Reçete yazabilirsin (kâğıt üstünde)."
+    },
+    {
+      "no": 5,
+      "ad": "Asistan",
+      "tavan": 400,
+      "aciklama": "Uyku isteğe bağlıdır."
+    },
+    {
+      "no": 6,
+      "ad": "Uzman",
+      "tavan": 550,
+      "aciklama": "Konsültasyonlar sana gelir."
+    },
+    {
+      "no": 7,
+      "ad": "Doçent",
+      "tavan": 750,
+      "aciklama": "Makalen kongrede okunur."
+    },
+    {
+      "no": 8,
+      "ad": "Profesör",
+      "tavan": 1000,
+      "aciklama": "Kürsü senin."
+    }
   ]
 }

@@ -8,6 +8,7 @@
  *   POST /api/basarim/satin-al {id}         ATP ile kilit açma
  *   POST /api/basarim/sec {tur,id}          unvan/çerçeve/efekt seçimi
  *   GET  /api/basarim/siralama?kapsam=hafta|kurul|tum&donem=3
+ *   GET  /api/basarim/calisma?kapsam=gun|hafta&donem=3     çalışma süresi sıralaması + en çok çalışılan dersler
  *   PUT  /api/admin/basarim/tanim           kuralları güncelle (doğrulayıcı geçmezse 400)
  *
  * Ara katman: başarılı (2xx) topluluk isteklerinde doğrulanmış kullanıcıya eylem yazar (yalnız puan). Kimliksiz istek
@@ -83,10 +84,18 @@ export function registerBasarimRoutes(app: express.Express, motor: BasarimMotor,
   }));
   app.post('/api/basarim/sec', korumali((req, res, uid) => {
     const tur = req.body?.tur;
-    if (!['unvan', 'cerceve', 'efekt'].includes(tur)) return res.status(400).json({ error: 'Geçersiz tür.' });
+    if (!['unvan', 'cerceve', 'efekt', 'renk'].includes(tur)) return res.status(400).json({ error: 'Geçersiz tür.' });
     if (!motor.sec(uid, tur, req.body?.id || null)) return res.status(400).json({ error: 'Bu kilit açık değil.' });
     res.json(motor.ozet(motor.kisi(uid)));
   }));
+  // Çalışma süresi sıralaması (gün/hafta) + en çok çalışılan dersler
+  app.get('/api/basarim/calisma', async (req, res) => {
+    const u = await kim(req);
+    const kapsam = req.query.kapsam === 'gun' ? 'gun' : 'hafta';
+    const donem = Number(req.query.donem) || (u ? motor.kisi(u.uid).donem : null) || 3;
+    res.set('Cache-Control', 'no-store');
+    res.json({ donem, ...motor.calismaListesi(u?.uid || null, donem, kapsam) });
+  });
   app.get('/api/basarim/siralama', async (req, res) => {
     const u = await kim(req);
     const kapsam = (['hafta', 'kurul', 'tum'].includes(String(req.query.kapsam)) ? req.query.kapsam : 'hafta') as 'hafta' | 'kurul' | 'tum';
@@ -101,6 +110,18 @@ export function registerBasarimRoutes(app: express.Express, motor: BasarimMotor,
     motor.birlestir(kaynak, hedef);
     opts.onDegisti?.(kaynak);
     res.json({ ok: true });
+  });
+  // ───── Yönetim: kişi bazında puan/ATP/kilit/unvan; her işlem gerekçeli ve kalıcı günlüklü ─────
+  const yonetici = async (req: express.Request) => (await requestUser(req)).user?.email || ((req as any).adminAuth?.via ? `yönetici (${(req as any).adminAuth.via})` : 'yönetici');
+  app.get('/api/admin/basarim/kisiler', opts.requireAdmin, (_req, res) => { res.set('Cache-Control', 'no-store'); res.json({ kisiler: motor.yonetimListe(), tanim: motor.tanim() }); });
+  app.get('/api/admin/basarim/kisi/:uid', opts.requireAdmin, (req, res) => { res.set('Cache-Control', 'no-store'); res.json(motor.yonetimKisi(String(req.params.uid))); });
+  app.get('/api/admin/basarim/gunluk', opts.requireAdmin, (req, res) => { res.set('Cache-Control', 'no-store'); res.json({ gunluk: motor.yonetimGunlugu(Math.min(2000, Number(req.query.limit) || 300)) }); });
+  app.post('/api/admin/basarim/kisi/:uid/islem', opts.requireAdmin, async (req, res) => {
+    const uid = String(req.params.uid);
+    const r = motor.yonetimIslem(uid, await yonetici(req), String(req.body?.tur || ''), req.body?.veri || {}, String(req.body?.gerekce || ''));
+    if (r.hata) return res.status(400).json({ error: r.hata });
+    opts.onDegisti?.(uid);
+    res.json(motor.yonetimKisi(uid));
   });
   app.put('/api/admin/basarim/tanim', opts.requireAdmin, (req, res) => {
     const h = motor.tanimYaz(req.body);

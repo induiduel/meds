@@ -4,8 +4,8 @@
  * Kurallar sunucudaki tanımdan gelir (src/data/basarim/tanim.json) — liste burada olduğu gibi gösterilir.
  */
 import React, { useEffect, useMemo, useState } from 'react';
-import { Award, CalendarClock, Check, ChevronDown, Flame, History, Lock, ScrollText, ShoppingBag, Sparkles, Target, Trophy } from 'lucide-react';
-import { KILIT_TUR_AD, olcuYaz, profilKaydet, satinAl, sayi, sec, useBasarim, yenile, type BasarimT, type HedefT, type KilitT } from '../../services/basarimIstemci';
+import { Award, CalendarClock, Crown, ShieldCheck, Check, ChevronDown, Flame, History, Lock, ScrollText, ShoppingBag, Sparkles, Target, Trophy } from 'lucide-react';
+import { KILIT_TUR_AD, sureYaz, olcuYaz, profilKaydet, satinAl, sayi, sec, useBasarim, yenile, type BasarimT, type HedefT, type KilitT } from '../../services/basarimIstemci';
 import { navigateTo, pathFor } from '../../router';
 import { AtpIkon, Basamaklar, Ikon, OdulCip } from './ortak';
 import { DonemKurulSecici } from './BasarimKatmani';
@@ -44,7 +44,7 @@ export default function BasarimView() {
   if (!uid) return <div className="bs"><p className="bs-bos">Başarımlarını görmek için giriş yap.</p></div>;
   if (!durum) return <div className="bs"><div className="bs-iskelet" aria-busy="true" aria-label="Yükleniyor" />{hata && <p className="bs-bos">{hata}</p>}</div>;
 
-  const atpOran = Math.min(1, durum.atp.bugunAlinan / Math.max(1, durum.atp.tavan));
+  const atpOran = durum.atp.tavan == null ? 0 : Math.min(1, durum.atp.bugunAlinan / Math.max(1, durum.atp.tavan));
   return (
     <div className="bs">
       <header className="bs-bas">
@@ -52,6 +52,8 @@ export default function BasarimView() {
           <div>
             <h1>Başarımlar</h1>
             <p className="bs-bas-profil">
+              {durum.ozel && <span className="bs-ozel-unvan" title={durum.ozel.muaf ? 'Yönetici tarafından verildi; günlük sınırlar ve içerik kilitleri sana uygulanmaz' : 'Yönetici tarafından verildi'}><Crown aria-hidden /> {durum.ozel.unvan}</span>}
+              {durum.kidem && <span className="bs-kidem-cip" title={`Günlük ATP sınırı: ${durum.atp.tavan ?? 'sınırsız'}`}>{durum.kidem.no}. kıdem · {durum.kidem.ad}</span>}
               {durum.profil.donem}. Dönem · {durum.profil.kurul}. Kurul
               <button type="button" className="bs-baglanti" onClick={() => setProfilAc((x) => !x)} aria-expanded={profilAc}>Değiştir</button>
             </p>
@@ -72,8 +74,8 @@ export default function BasarimView() {
           <div className="bs-ozet-k is-atp">
             <span className="bs-ozet-e"><AtpIkon boyut={13} canli /> ATP</span>
             <b className="bs-ozet-s">{sayi(durum.atp.bakiye)}<small> mol</small></b>
-            <span className="bs-ozet-cubuk" title={`Bugün ${durum.atp.bugunAlinan}/${durum.atp.tavan} mol`}><i style={{ width: `${atpOran * 100}%` }} /></span>
-            <span className="bs-ozet-a">Bugün {durum.atp.bugunAlinan}/{durum.atp.tavan}{durum.atp.kuyrukta > 0 ? ` · kuyrukta ${sayi(durum.atp.kuyrukta)}` : ''}</span>
+            <span className="bs-ozet-cubuk" title={durum.atp.tavan == null ? 'Günlük sınır yok' : `Bugün ${durum.atp.bugunAlinan}/${durum.atp.tavan} mol`}><i style={{ width: `${atpOran * 100}%` }} /></span>
+            <span className="bs-ozet-a">Bugün {durum.atp.bugunAlinan}{durum.atp.tavan == null ? ' · sınırsız' : `/${durum.atp.tavan}`}{durum.atp.kuyrukta > 0 ? ` · kuyrukta ${sayi(durum.atp.kuyrukta)}` : ''}</span>
           </div>
           <div className="bs-ozet-k is-seri">
             <span className="bs-ozet-e"><Flame aria-hidden /> Seri</span>
@@ -140,6 +142,21 @@ function Hedefler() {
   return (
     <div className="bs-bolumler">
       <p className="bs-aciklama">Her hedefin seviyeleri vardır; alt seviyeler puan, üst seviyeler ATP verir. Ders, gerçekten bitirildiğinde (“Bitirdim” + en az 10 dk etkin çalışma) sayılır.</p>
+      {durum!.calisma && durum!.calisma.dersler.length > 0 && (
+        <section className="bs-bolum">
+          <header className="bs-bolum-bas"><h2>Bu hafta en çok çalıştığın dersler</h2><span className="bs-kalan">Bugün {sureYaz(durum!.calisma.bugun)} · bu hafta {sureYaz(durum!.calisma.hafta)}</span></header>
+          <ol className="bs-ders-liste">
+            {durum!.calisma.dersler.map((x, i) => (
+              <li key={x.id}>
+                <span className="bs-ders-no">{i + 1}</span>
+                <span className="bs-ders-ad"><b>{x.ad}</b><small>{x.modul}</small></span>
+                <span className="bs-ders-cubuk" aria-hidden><i style={{ width: `${(x.sn / Math.max(1, durum!.calisma!.dersler[0].sn)) * 100}%` }} /></span>
+                <span className="bs-ders-sn">{sureYaz(x.sn)}</span>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
       {BOLUM.map(({ donem, ad }) => {
         const p = pen(donem);
         return (
@@ -220,12 +237,46 @@ function AtpMagaza() {
   const [onay, setOnay] = useState<KilitT | null>(null);
   const [bekle, setBekle] = useState(false);
   const [ileti, setIleti] = useState('');
-  const turler = useMemo(() => (['unvan', 'cerceve', 'efekt', 'icerik'] as const).map((t) => ({ t, liste: tanim.kilitler.filter((k) => k.tur === t) })).filter((x) => x.liste.length), [tanim]);
+  const d = durum!;
+  const kidemNo = d.kidem?.no || 1;
+  const kidemler = tanim.kidemler || [];
+  const turler = useMemo(
+    () => (['cerceve', 'renk', 'efekt', 'esya', 'icerik'] as const).map((t) => ({ t, liste: tanim.kilitler.filter((k) => k.tur === t && (!k.eski || d.kilit[k.id])) })).filter((x) => x.liste.length),
+    [tanim, d.kilit],
+  );
+  const eskiUnvan = tanim.kilitler.filter((k) => k.tur === 'unvan' && k.eski && d.kilit[k.id]);
   const al = async (k: KilitT) => {
     setBekle(true); setIleti('');
-    try { await satinAl(k.id); setIleti(`${k.ad} açıldı.`); setOnay(null); } catch (e: any) { setIleti(e?.message || 'Açılamadı'); } finally { setBekle(false); }
+    try { await satinAl(k.id); setIleti(k.kidemAcar ? `Tebrikler, artık ${kidemler.find((x) => x.no === k.kidem)?.ad || ''} kıdemindesin.` : k.tur === 'esya' ? `${k.ad} çantana eklendi.` : `${k.ad} açıldı.`); setOnay(null); } catch (e: any) { setIleti(e?.message || 'Açılamadı'); } finally { setBekle(false); }
   };
-  const d = durum!;
+
+  const Urun = ({ k }: { k: KilitT }) => {
+    const t = k.tur;
+    const adet = t === 'esya' ? d.esya?.[k.id] || 0 : 0;
+    const sahip = t !== 'esya' && !!d.kilit[k.id];
+    const secili = t !== 'icerik' && t !== 'esya' && (d.secili as any)[t] === k.id;
+    const yetmez = d.atp.bakiye < k.fiyat;
+    const kidemGerek = t === 'unvan' && k.kidem ? (k.kidemAcar ? k.kidem - 1 : k.kidem) : 0;
+    const kidemKilit = kidemGerek > kidemNo;
+    return (
+      <article className={`bs-urun is-${t}${sahip ? ' is-sahip' : ''}${!k.etkin && !sahip ? ' is-yakinda' : ''}${k.kidemAcar ? ' is-kidem' : ''}${kidemKilit ? ' is-kidemkilit' : ''}`} style={k.renk ? ({ '--bs-renk': k.renk } as React.CSSProperties) : undefined}>
+        <span className="bs-urun-gorsel" aria-hidden>
+          {t === 'cerceve' ? <span className={`bs-cerceve-ornek ${k.id}`} /> : t === 'unvan' ? (k.kidemAcar ? <Crown /> : <Award />) : t === 'efekt' ? <Sparkles /> : t === 'renk' ? <span className={`bs-renk-ornek ${k.id}`}>Aa</span> : t === 'esya' ? <ShieldCheck /> : <Lock />}
+        </span>
+        <span className="bs-urun-ad">{k.ad.replace(/^(Unvan|Kutlama efekti):\s*/, '')}</span>
+        {k.kidemAcar && <span className="bs-urun-not">Kıdemi yükseltir: günde {kidemler.find((x) => x.no === k.kidem)?.tavan} mol</span>}
+        {k.aciklama && <span className="bs-urun-not">{k.aciklama}</span>}
+        {t === 'esya' && adet > 0 && <span className="bs-urun-not is-adet">Çantanda: {adet}</span>}
+        <span className="bs-urun-fiyat"><AtpIkon boyut={11} /> {sayi(k.fiyat)} mol</span>
+        {!k.etkin && !sahip ? <span className="bs-urun-dug is-pasif">Yakında</span>
+          : sahip ? (t === 'icerik' ? <span className="bs-urun-dug is-pasif"><Check aria-hidden /> Açık</span>
+            : <button type="button" className={`bs-urun-dug${secili ? ' is-secili' : ''}`} onClick={() => void sec(t as any, secili ? null : k.id)}>{secili ? <><Check aria-hidden /> Kullanılıyor</> : 'Kullan'}</button>)
+          : kidemKilit ? <span className="bs-urun-dug is-pasif"><Lock aria-hidden /> {kidemler.find((x) => x.no === kidemGerek)?.ad} kıdemi gerekli</span>
+          : <button type="button" className="bs-urun-dug is-al" disabled={yetmez} onClick={() => setOnay(k)} title={yetmez ? `${k.fiyat - d.atp.bakiye} mol eksik` : undefined}>{yetmez ? `${sayi(k.fiyat - d.atp.bakiye)} mol eksik` : t === 'esya' ? 'Satın al' : k.kidemAcar ? 'Kıdem atla' : 'Kilidi aç'}</button>}
+      </article>
+    );
+  };
+
   return (
     <div className="bs-bolumler">
       <section className="bs-atp-bilgi">
@@ -234,43 +285,49 @@ function AtpMagaza() {
           <div><b>{sayi(d.atp.bakiye)} mol</b><span>harcanabilir ATP</span></div>
         </div>
         <ul className="bs-atp-kural">
-          <li><b>Nasıl kazanılır?</b> Hedeflerin ve çalışma başarımlarının üst seviyeleri, haftalık sıralamada ilk 5 ({tanim.atp.haftalikSiralama.join(' / ')} mol) ve kurul sonu ilk 5 ({tanim.atp.kurulSiralama.join(' / ')} mol).</li>
-          <li><b>Günlük sınır:</b> Kimse bir günde {tanim.atp.gunlukTavan} molden fazla alamaz; fazlası kuyruğa girer, sonraki günlerde hesaba geçer. Bugün: {d.atp.bugunAlinan}/{d.atp.tavan}{d.atp.kuyrukta ? `, kuyrukta ${sayi(d.atp.kuyrukta)} mol` : ''}.</li>
+          <li><b>Nasıl kazanılır?</b> Hedeflerin ve çalışma başarımlarının üst seviyeleri, haftalık sıralamada ilk 5 ({tanim.atp.haftalikSiralama.join(' / ')} mol), haftanın en çok çalışanı ({(tanim.atp as any).calismaHaftaBirinci || 0} mol) ve kurul sonu ilk 5 ({tanim.atp.kurulSiralama.join(' / ')} mol).</li>
+          <li><b>Günlük sınır kıdemine bağlı:</b> {d.atp.tavan == null ? 'Senin için sınır yok.' : `${d.kidem?.ad || 'Çömez'} kıdeminde günde en çok ${d.atp.tavan} mol; fazlası kuyruğa girer, sonraki günlerde hesaba geçer.`} Bugün: {d.atp.bugunAlinan}{d.atp.tavan != null ? `/${d.atp.tavan}` : ''}{d.atp.kuyrukta ? `, kuyrukta ${sayi(d.atp.kuyrukta)} mol` : ''}.</li>
           <li><b>Ne kazandırmaz?</b> Soru ekleme, yorum, beğeni, katkı ve hata bildirimi yalnız puan verir.</li>
         </ul>
       </section>
       {ileti && <p className="bs-ileti" role="status">{ileti}</p>}
-      {turler.map(({ t, liste }) => (
-        <section key={t} className="bs-bolum">
-          <header className="bs-bolum-bas"><h2>{KILIT_TUR_AD[t]}</h2>{t === 'icerik' && <span className="bs-kalan">Bir kez açılır, kalıcıdır</span>}</header>
-          <div className="bs-magaza">
-            {liste.map((k) => {
-              const sahip = !!d.kilit[k.id];
-              const secili = t !== 'icerik' && (d.secili as any)[t] === k.id;
-              const yetmez = d.atp.bakiye < k.fiyat;
+
+      {kidemler.length > 0 && (
+        <section className="bs-bolum">
+          <header className="bs-bolum-bas"><h2>{KILIT_TUR_AD.unvan}</h2><span className="bs-kalan">Kıdem unvanı bir üst kıdeme geçirir; diğer unvanlar o kıdemde açılır</span></header>
+          <ol className="bs-kidem-merdiven">
+            {kidemler.map((kd) => {
+              const unvanlar = tanim.kilitler.filter((k) => k.tur === 'unvan' && !k.eski && k.kidem === kd.no).sort((a, b) => Number(!!b.kidemAcar) - Number(!!a.kidemAcar));
+              const durumu = kd.no < kidemNo ? 'gecti' : kd.no === kidemNo ? 'simdi' : kd.no === kidemNo + 1 ? 'sirada' : 'kilitli';
               return (
-                <article key={k.id} className={`bs-urun is-${t}${sahip ? ' is-sahip' : ''}${!k.etkin ? ' is-yakinda' : ''}`} style={k.renk ? ({ '--bs-renk': k.renk } as React.CSSProperties) : undefined}>
-                  <span className="bs-urun-gorsel" aria-hidden>{t === 'cerceve' ? <span className={`bs-cerceve-ornek ${k.id}`} /> : t === 'unvan' ? <Award /> : t === 'efekt' ? <Sparkles /> : <Lock />}</span>
-                  <span className="bs-urun-ad">{k.ad.replace(/^(Unvan|Kutlama efekti):\s*/, '')}</span>
-                  <span className="bs-urun-fiyat"><AtpIkon boyut={11} /> {sayi(k.fiyat)} mol</span>
-                  {!k.etkin ? <span className="bs-urun-dug is-pasif">Yakında</span>
-                    : sahip ? (t === 'icerik' ? <span className="bs-urun-dug is-pasif"><Check aria-hidden /> Açık</span>
-                      : <button type="button" className={`bs-urun-dug${secili ? ' is-secili' : ''}`} onClick={() => void sec(t as any, secili ? null : k.id)}>{secili ? <><Check aria-hidden /> Kullanılıyor</> : 'Kullan'}</button>)
-                    : <button type="button" className="bs-urun-dug is-al" disabled={yetmez} onClick={() => setOnay(k)} title={yetmez ? `${k.fiyat - d.atp.bakiye} mol eksik` : undefined}>{yetmez ? `${sayi(k.fiyat - d.atp.bakiye)} mol eksik` : 'Kilidi aç'}</button>}
-                </article>
+                <li key={kd.no} className={`bs-kidem is-${durumu}`}>
+                  <header>
+                    <span className="bs-kidem-no">{kd.no}</span>
+                    <div><h3>{kd.ad}{durumu === 'simdi' && <em>Sen buradasın</em>}</h3><p>{kd.aciklama} · günde en çok <b>{kd.tavan} mol</b> ATP</p></div>
+                  </header>
+                  {unvanlar.length > 0 && <div className="bs-magaza">{unvanlar.map((k) => <Urun key={k.id} k={k} />)}</div>}
+                </li>
               );
             })}
-          </div>
+          </ol>
+          {eskiUnvan.length > 0 && <div className="bs-magaza">{eskiUnvan.map((k) => <Urun key={k.id} k={k} />)}</div>}
+        </section>
+      )}
+
+      {turler.map(({ t, liste }) => (
+        <section key={t} className="bs-bolum">
+          <header className="bs-bolum-bas"><h2>{KILIT_TUR_AD[t]}</h2>{t === 'icerik' && <span className="bs-kalan">Bir kez açılır, kalıcıdır</span>}{t === 'esya' && <span className="bs-kalan">Tükenir, yeniden alınabilir</span>}</header>
+          <div className="bs-magaza">{liste.map((k) => <Urun key={k.id} k={k} />)}</div>
         </section>
       ))}
       {onay && (
         <div className="bs-onay" role="dialog" aria-modal="true" aria-labelledby="bs-onay-b">
           <div className="bs-onay-kart">
             <h3 id="bs-onay-b">{onay.ad}</h3>
-            <p><b>{sayi(onay.fiyat)} mol ATP</b> harcanacak. Kalan: {sayi(d.atp.bakiye - onay.fiyat)} mol. Bu işlem geri alınamaz.</p>
+            <p><b>{sayi(onay.fiyat)} mol ATP</b> harcanacak. Kalan: {sayi(d.atp.bakiye - onay.fiyat)} mol.{onay.kidemAcar ? ` Kıdemin ${kidemler.find((x) => x.no === onay.kidem)?.ad} olur; günlük ATP sınırın ${kidemler.find((x) => x.no === onay.kidem)?.tavan} mole çıkar.` : ''} Bu işlem geri alınamaz.</p>
             <div className="bs-onay-dug">
               <button type="button" onClick={() => setOnay(null)} disabled={bekle}>Vazgeç</button>
-              <button type="button" className="is-al" onClick={() => void al(onay)} disabled={bekle}>{bekle ? 'Açılıyor…' : 'Kilidi aç'}</button>
+              <button type="button" className="is-al" onClick={() => void al(onay)} disabled={bekle}>{bekle ? 'Açılıyor…' : onay.tur === 'esya' ? 'Satın al' : 'Kilidi aç'}</button>
             </div>
           </div>
         </div>
@@ -286,8 +343,8 @@ function Gecmis() {
   return (
     <ol className="bs-defter">
       {liste.map((o) => (
-        <li key={o.id} className={`is-${o.t}${o.ust ? ' is-ust' : ''}`}>
-          <span className="bs-defter-ikon" aria-hidden>{o.t === 'siralama' ? <Trophy /> : o.t === 'harcama' ? <ShoppingBag /> : o.t === 'basarim' ? <Award /> : o.t === 'baslangic' ? <Sparkles /> : <Target />}</span>
+        <li key={o.id} className={`is-${o.t}${o.ust ? ' is-ust' : ''}${o.geriAlindi ? ' is-geri' : ''}`}>
+          <span className="bs-defter-ikon" aria-hidden>{o.t === 'siralama' ? <Trophy /> : o.t === 'harcama' ? <ShoppingBag /> : o.t === 'basarim' ? <Award /> : o.t === 'baslangic' ? <Sparkles /> : o.t === 'yonetici' ? <Crown /> : <Target />}</span>
           <span className="bs-defter-ad">{o.ad}<time dateTime={o.at}>{tarihYaz(o.at)}</time></span>
           <OdulCip p={o.p} a={o.a} kucuk />
         </li>

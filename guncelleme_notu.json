@@ -1,16 +1,23 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 161,
-  "baslik": "Bitirdiklerim: kişiye özel 60 planı",
+  "onem": 162,
+  "baslik": "Kıdemler, yeni unvanlar ve çalışma süresi sıralaması",
   "maddeler": [
-    "Bitirdiklerim'de yeni \"60 planı\": baraj kuralına göre sınavdan en az 60 için hangi derse ne kadar çalışman gerektiğini gün gün gösterir; her adım sesli derse, sesli asistana ya da soru çözücüye götürür.",
-    "Kalan süre tahmini artık çalışma hızına ve çalışmadığın günlere göre daha gerçekçi."
+    "Kıdem sistemi: Çömez'den Profesör'e 8 kıdem. Kıdem unvanını ATP ile alınca günlük ATP sınırın yükselir (100 → 1000 mol).",
+    "Her kıdemde gerçek ve eğlenceli yeni unvanlar: Kan Alma Ninjası, 36 Saat Uykusuz, Ayırıcı Tanı Dedektifi, Yaşayan Ders Kitabı…",
+    "Yeni ögeler: EKG ve DNA çerçeveleri, Kalp atışı kutlama efekti, sıralamada renkli isim, seri koruyucu.",
+    "Sıralama › Çalışma süresi: bugün ve bu hafta en çok çalışanlar, en çok çalıştıkları derslerle. Haftanın birincisine 50 mol ATP.",
+    "Başarımlar sayfasında bu hafta en çok çalıştığın dersler."
   ],
   "eklenen": [
-    "Bitirdiklerim'de yeni \"60 planı\": baraj kuralına göre sınavdan en az 60 için hangi derse ne kadar çalışman gerektiğini gün gün gösterir; her adım sesli derse, sesli asistana ya da soru çözücüye götürür."
+    "Kıdem sistemi: Çömez'den Profesör'e 8 kıdem. Kıdem unvanını ATP ile alınca günlük ATP sınırın yükselir (100 → 1000 mol).",
+    "Her kıdemde gerçek ve eğlenceli yeni unvanlar: Kan Alma Ninjası, 36 Saat Uykusuz, Ayırıcı Tanı Dedektifi, Yaşayan Ders Kitabı…",
+    "Yeni ögeler: EKG ve DNA çerçeveleri, Kalp atışı kutlama efekti, sıralamada renkli isim, seri koruyucu.",
+    "Sıralama › Çalışma süresi: bugün ve bu hafta en çok çalışanlar, en çok çalıştıkları derslerle. Haftanın birincisine 50 mol ATP.",
+    "Başarımlar sayfasında bu hafta en çok çalıştığın dersler."
   ],
   "degisen": [
-    "Kalan süre tahmini artık çalışma hızına ve çalışmadığın günlere göre daha gerçekçi."
+    "Unvanların fiyatı arttı; eski unvanlar sahiplerinde kalır."
   ],
   "duzeltilen": [],
   "silinen": []
