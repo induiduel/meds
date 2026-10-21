@@ -1,5 +1,6 @@
 import {
   Medal,
+  Gauge,
   Activity,
   Archive,
   History,
@@ -90,6 +91,7 @@ const I: Record<string, NavItem> = {
   health_ministry: { id: 'health_ministry', label: 'Sağlık Bakanlığı', short: 'Bakanlık', hint: 'Resmî veriler: aşı, yenidoğan, anne, tarama, salgın, Karabük', icon: Landmark, tint: '#C8102E' },
   gecmis_kurullar: { id: 'gecmis_kurullar', label: 'Geçmiş kurullar', short: 'Geçmiş', tile: 'Geçmiş kurullar', hint: 'Sınavı biten kurulların dersleri, spotları ve soruları', icon: History, tint: '#8E8E93' },
   guncellemeler: { id: 'guncellemeler', label: 'Güncelleme günlüğü', short: 'Sürümler', tile: 'Güncellemeler', hint: 'Her sürümde eklenen, değişen ve kaldırılanlar', icon: ScrollText, tint: '#5E5CE6' },
+  oncelikli_dersler: { id: 'oncelikli_dersler', label: 'Öncelikli dersler', short: 'Öncelikli', tile: 'Öncelikli dersler', hint: 'Az ezberli, mantıkla çözülen, kolay puan getiren sesli dersler önce', icon: Gauge, tint: '#34C759' },
   kazanimlar: { id: 'kazanimlar', label: 'Kazanımlar', hint: 'Müfredat ve kazanım haritası', icon: Compass, tint: '#00A79D' },
   // Topluluk
   matrix: { id: 'matrix', label: 'Soru haritası', short: 'Harita', hint: 'Havuzda 1–100 soru doluluğu', icon: LayoutGrid, tint: '#64748B' },
@@ -121,7 +123,7 @@ export const NAV_TREE: NavGroup[] = [
   { label: 'Soru çöz', items: [I.soru_cozucu, I.past_exams, I.practice, I.questions, I.ornek_sorular, I.olasi_sorular] },
   { label: 'Sınava hazırlan', items: [I.sinav_plani, I.son_prova, I.cikmis_cozucu, I.kamp, I.en_onemliler, I.spots] },
   { label: 'Check Up', items: [I.genetik_checkup, I.patoloji_checkup] },
-  { label: 'Başvuru', items: [I.glossary, I.diseases, I.health_ministry, I.kazanimlar, I.gecmis_kurullar, I.guncellemeler] },
+  { label: 'Başvuru', items: [I.oncelikli_dersler, I.glossary, I.diseases, I.health_ministry, I.kazanimlar, I.gecmis_kurullar, I.guncellemeler] },
   { label: 'Topluluk', items: [I.basarimlar, I.leaderboard, I.matrix] },
   { label: 'Kişisel', items: [I.bitirdiklerim, I.cevrimdisi, I.study, I.stats, I.music] },
 ];

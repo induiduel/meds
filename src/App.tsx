@@ -123,6 +123,7 @@ const DataCoreView = React.lazy(() => wrapLazy(import('./components/core/DataCor
 const TestCikmisView = React.lazy(() => wrapLazy(import('./components/TestCikmisView').then(m => ({ default: m.TestCikmisView }))));
 const TesterOzetView = React.lazy(() => wrapLazy(import('./components/TesterOzetView').then(m => ({ default: m.TesterOzetView }))));
 const PracticeQuestionsView = React.lazy(() => wrapLazy(import('./components/PracticeQuestionsView')));
+const OncelikliDerslerView = React.lazy(() => wrapLazy(import('./components/oncelikli/OncelikliDerslerView')));
 const KazanimlarView = React.lazy(() => wrapLazy(import('./components/KazanimlarView').then(m => ({ default: m.KazanimlarView }))));
 const DiseasesView = React.lazy(() => wrapLazy(import('./components/diseases/DiseasesView').then(m => ({ default: m.DiseasesView }))));
 const SaglikView = React.lazy(() => wrapLazy(import('./components/saglik/SaglikView').then(m => ({ default: m.SaglikView }))));
@@ -2011,6 +2012,13 @@ export default function App() {
         {activeTab === 'cevrimdisi' && (
           <Suspense fallback={<ViewFallback />}>
             <CevrimdisiView />
+          </Suspense>
+        )}
+
+        {/* TAB: /oncelikli-dersler — az ezber / mantık / çıkmış analizine göre sesli ders önceliği */}
+        {activeTab === 'oncelikli_dersler' && (
+          <Suspense fallback={<ViewFallback />}>
+            <OncelikliDerslerView />
           </Suspense>
         )}
 

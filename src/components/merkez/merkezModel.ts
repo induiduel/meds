@@ -38,6 +38,7 @@ export const MERKEZ_ARACLARI: Record<KategoriId, MerkezArac[]> = {
     { id: 'spots', ne: 'Sık sorulan bulguları ve tuzakları taramak istiyorsan' },
   ],
   kaynaklar: [
+    { id: 'oncelikli_dersler', ne: 'Az ezberli, mantıkla çözülen ve kolay puan getiren sesli derslerden başlamak istiyorsan', oner: true },
     { id: 'glossary', ne: 'Bir terimin, ilacın ya da kavramın anlamına bakmak istiyorsan' },
     { id: 'diseases', ne: 'Bir hastalığın kliniğini, tanısını ve tedavisini görmek istiyorsan' },
     { id: 'health_ministry', ne: 'Aşı takvimi, tarama programları gibi resmî verilere bakmak istiyorsan' },

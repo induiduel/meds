@@ -60,6 +60,7 @@ export type AppRoute =
   | 'tester_ozet'
   | 'ornek_sorular'
   | 'kazanimlar'
+  | 'oncelikli_dersler'
   | 'music'
   | 'datacore'
   | 'diseases'
@@ -99,6 +100,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   tester_ozet: '/tester/ozet',
   ornek_sorular: '/ornek-sorular',
   kazanimlar: '/kazanimlar',
+  oncelikli_dersler: '/oncelikli-dersler',
   datacore: '/veri',
   leaderboard: '/siralama',
   music: '/muzik',
@@ -157,6 +159,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   tester_ozet: '2026-2027 Ders Notları Test Laboratuvarı',
   ornek_sorular: 'Örnek sorular',
   kazanimlar: 'Kazanımlar',
+  oncelikli_dersler: 'Öncelikli dersler',
   datacore: 'Veri Merkezi (Core v2)',
   leaderboard: 'Sıralama',
   music: 'Müzik',
@@ -223,6 +226,9 @@ const ALIASES: Record<string, AppRoute> = {
   ornek_sorular: 'ornek_sorular',
   'ornek-sorular': 'ornek_sorular',
   kazanimlar: 'kazanimlar',
+  'oncelikli-dersler': 'oncelikli_dersler',
+  oncelikli: 'oncelikli_dersler',
+  'kolay-dersler': 'oncelikli_dersler',
   kazanim: 'kazanimlar',
   mufredat: 'kazanimlar',
   curriculum: 'kazanimlar',
