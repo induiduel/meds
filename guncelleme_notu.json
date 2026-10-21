@@ -1,19 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 215,
-  "baslik": "Sesli ders: rakamlar ve kısaltmalar slayttaki gibi yazılıyor",
+  "onem": 216,
+  "baslik": "Bitirdiklerim menüsü ekrana sığıyor",
   "maddeler": [
-    "Sesli ders metninde sayılar ve sıra sayıları rakamla yazılıyor: “14. hafta”, “20-24. hafta”, “12+6 hafta”, “500 gram”, “%15-20”.",
-    "Kısaltmalar yazılı biçimiyle gösteriliyor (“β-hCG”, “δ”); açılımlar ilk geçtiğinde kısaltmasıyla: “doku plazminojen aktivatörü (t-PA)”.",
-    "Seslendirmede rakamlar doğru okunuyor: “14.” artık “on dördüncü”, “12+6” “on iki artı altı” diye okunur."
+    "Bitirdiklerim'de ⋯ menüsü artık listenin en altında ve dar ekranlarda da tam görünüyor: yer yoksa yukarı açılıyor, kenardan taşmıyor."
   ],
   "eklenen": [],
-  "degisen": [
-    "Sesli ders metninde sayılar ve sıra sayıları rakamla yazılıyor: “14. hafta”, “20-24. hafta”, “12+6 hafta”, “500 gram”, “%15-20”.",
-    "Kısaltmalar yazılı biçimiyle gösteriliyor (“β-hCG”, “δ”); açılımlar ilk geçtiğinde kısaltmasıyla: “doku plazminojen aktivatörü (t-PA)”."
-  ],
+  "degisen": [],
   "duzeltilen": [
-    "Seslendirmede rakamlar doğru okunuyor: “14.” artık “on dördüncü”, “12+6” “on iki artı altı” diye okunur."
+    "Bitirdiklerim'de ⋯ menüsü artık listenin en altında ve dar ekranlarda da tam görünüyor: yer yoksa yukarı açılıyor, kenardan taşmıyor."
   ],
   "silinen": []
 }

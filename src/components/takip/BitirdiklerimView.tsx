@@ -278,6 +278,17 @@ function OzetKartlari({ genel, hiz, modul, sirada, izHiz }: { genel: ReturnType<
 
 function KonuSatiri({ modul, k, bitti, tekrar, elendi, disari, onEleme }: { modul: TakipModul; k: BdKonu; bitti: boolean; tekrar: boolean; elendi?: ElemeTur; disari: boolean; onEleme: (t: ElemeTur | null) => void }) {
   const [menu, setMenu] = useState(false);
+  const [yukari, setYukari] = useState(false);
+  const [genis, setGenis] = useState(300);
+  // menü ekranda en çok boş alan olan tarafa açılır (alttaki konular, telefonun alt çubuğu)
+  const menuAc = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (menu) { setMenu(false); return; }
+    const r = e.currentTarget.getBoundingClientRect();
+    const alt = window.innerHeight - r.bottom - 96;
+    setYukari(alt < 280 && r.top > alt);
+    setGenis(Math.max(200, Math.min(300, r.right - 12))); // sağdan hizalı: sol kenardan taşmasın
+    setMenu(true);
+  };
   useEffect(() => {
     if (!menu) return;
     const kapat = () => setMenu(false);
@@ -296,7 +307,7 @@ function KonuSatiri({ modul, k, bitti, tekrar, elendi, disari, onEleme }: { modu
     );
   }
   return (
-    <li className={`bd-konu${bitti ? ' is-bitti' : ''}${tekrar ? ' is-tekrar' : ''}`}>
+    <li className={`bd-konu${bitti ? ' is-bitti' : ''}${tekrar ? ' is-tekrar' : ''}${menu ? ' is-menu' : ''}`}>
       <KonuIsaret modul={modul} konu={k.id} ad={k.ad} turetilen={k.turetilen} />
       <button type="button" className="bd-konu-ad" onClick={k.ac} title="Konuyu aç">
         {k.no != null && k.no !== '' && <span className="bd-no">{k.no}</span>}
@@ -312,11 +323,11 @@ function KonuSatiri({ modul, k, bitti, tekrar, elendi, disari, onEleme }: { modu
         </span>
       </button>
       <span className="bd-menu-kap">
-        <button type="button" className="kt-btn bd-menu-btn" aria-haspopup="menu" aria-expanded={menu} onClick={() => setMenu(!menu)} aria-label={`Seçenekler: ${k.ad}`} title="Başka yerden çalıştım · Çalışmayacağım · Sınavda sorusu yok">
+        <button type="button" className="kt-btn bd-menu-btn" aria-haspopup="menu" aria-expanded={menu} onClick={menuAc} aria-label={`Seçenekler: ${k.ad}`} title="Başka yerden çalıştım · Çalışmayacağım · Sınavda sorusu yok">
           <MoreHorizontal aria-hidden />
         </button>
         {menu && (
-          <span className="bd-menu" role="menu">
+          <span className={`bd-menu${yukari ? ' is-yukari' : ''}`} role="menu" style={{ width: genis }}>
             {elendi === 'baska'
               ? <button type="button" role="menuitem" onClick={() => onEleme(null)}><b>İşareti kaldır</b><small>Başka yerden çalıştım işaretini geri al</small></button>
               : <button type="button" role="menuitem" onClick={() => onEleme('baska')}><b>Başka yerden çalıştım</b><small>Bitti sayılır, kalan süreden düşer; çalışma hızını etkilemez</small></button>}

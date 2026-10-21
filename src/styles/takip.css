@@ -520,3 +520,10 @@
 .bd-eleme.is-baska { background: var(--color-ok-soft); color: var(--color-ok); }
 .bd-eleme.is-calisma { background: color-mix(in srgb, var(--color-warn, #c27a00) 16%, transparent); color: var(--color-warn, #c27a00); }
 .bd-eleme.is-sorusuz { background: color-mix(in srgb, var(--color-line) 70%, transparent); color: var(--color-ink-2); }
+/* ⋯ menüsü kart dışına taşabilsin: kart kesmesin, köşeleri başlık/son satır yuvarlar */
+.bd-ders { overflow: visible; }
+.bd-ders > .bd-ders-bas { border-radius: 13px 13px 0 0; }
+.bd-ders:not(.is-acik) > .bd-ders-bas { border-radius: 13px; }
+.bd-konular > li:last-child { border-radius: 0 0 13px 13px; }
+.bd-menu.is-yukari { top: auto; bottom: calc(100% + 6px); }
+.bd-konu.is-menu { position: relative; z-index: 5; }
