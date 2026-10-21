@@ -1,14 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 188,
-  "baslik": "Kayıtlar daha güvenilir gönderiliyor",
+  "onem": 189,
+  "baslik": "Yönetim: hesap birleştirme",
   "maddeler": [
-    "Notlar ve ilerleme yedeği gönderilirken ara sıra yaşanan bağlantı kopması giderildi; yanlış \"çevrimdışı\" uyarısı ve bekleyen işlem kuyruğu artık çıkmıyor."
+    "Aynı öğrencinin ikinci hesabı panelden asıl hesaba bağlanabiliyor; çalışma verisi kayıpsız aktarılıyor."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "Aynı öğrencinin ikinci hesabı panelden asıl hesaba bağlanabiliyor; çalışma verisi kayıpsız aktarılıyor."
+  ],
   "degisen": [],
-  "duzeltilen": [
-    "Notlar ve ilerleme yedeği gönderilirken ara sıra yaşanan bağlantı kopması giderildi; yanlış \"çevrimdışı\" uyarısı ve bekleyen işlem kuyruğu artık çıkmıyor."
-  ],
+  "duzeltilen": [],
   "silinen": []
 }

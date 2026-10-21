@@ -540,9 +540,12 @@ const peopleInsights = registerPeopleInsights(app, {
   getPoolQuestions: () => (db?.questions || []) as any[],
   broadcastAdmin: (event, data) => broadcastRealtimeEvent(event, data, true),
   oracleApiUrl: process.env.MEDS_ORACLE_API_URL || 'https://api.nofrostlife.com.tr',
+  hesapBagi: (uid) => basarimMotor.bag(uid),
+  hesapBirlestir: (kaynak, hedef) => { basarimMotor.birlestir(kaynak, hedef); basarimHaber(kaynak); },
   // Yönetici düzeltmesi öğrencinin açık cihazlarına hemen insin (profil kaydıyla aynı yol)
   onBackupEdited: (uid, bundle) => {
     if (!uid) return;
+    basarimYedekSonrasi(uid);
     broadcastRealtimeEvent('user_data_changed', { who: userEventHash(uid), origin: 'admin', at: Date.now() });
     if (!pgOnline) return;
     void pgDb

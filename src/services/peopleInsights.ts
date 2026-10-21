@@ -38,6 +38,9 @@ export interface PeopleDeps {
   oracleApiUrl: string;
   /** Yönetici bir profil yedeğini düzenledi: kullanıcının cihazlarına `user_data_changed` + meds-pg yansısı */
   onBackupEdited?: (uid: string, bundle: Any) => void;
+  /** Sıralama hesap bağı (başarım motoru): kaynak → asıl hesap uid'i, null bağı kaldırır */
+  hesapBagi?: (uid: string) => string | null;
+  hesapBirlestir?: (kaynakUid: string, hedefUid: string | null) => void;
 }
 
 const clip = (v: unknown, n: number) => String(v ?? '').replace(/\s+/g, ' ').trim().slice(0, n);
@@ -1122,6 +1125,99 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
       invalidate();
       deps.onBackupEdited?.(String(fresh.uid || p.uid || ''), fresh);
       res.json({ success: true, changed: n });
+    } catch (e: any) {
+      res.status(500).json({ error: e?.message || String(e) });
+    }
+  });
+
+  // ── Hesap birleştirme: aynı öğrencinin ikinci hesabı ──
+  // Sıralamada ikinci hesap gizlenir (kayıt silinmez); istenirse çalışma takibi asıl hesaba kayıpsız aktarılır:
+  // asılda olmayan konu eklenir, ortak konuda süre/soru büyüğü alınır, DURUM asıl hesabınki kalır (öğrencinin
+  // asıl hesaptaki geri almaları korunur; asılda durum yoksa kaynağınki gelir). Gün sayaçlarında büyük olan alınır.
+  const kisiBul = (key: string) => {
+    const bare = lc(key.replace(/^u:/, ''));
+    return people().find((x) => x.key === key) || people().find((x) => x.ids.has(key.replace(/^u:/, '')) || x.ids.has(bare));
+  };
+  const calismaBirlesimi = (kaynak: Any, hedef: Any) => {
+    const a = calismaVeri(kaynak), h = calismaVeri(hedef);
+    const k: Record<string, Any> = JSON.parse(JSON.stringify(h.k));
+    const g: Record<string, Record<string, number>> = JSON.parse(JSON.stringify(h.g));
+    let eklenen = 0, artan = 0, durumFarki = 0;
+    for (const [id, r] of Object.entries<any>(a.k)) {
+      const c = k[id];
+      if (!c) { k[id] = { ...r }; eklenen++; continue; }
+      const sn = Math.max(Number(c.sn) || 0, Number(r.sn) || 0), soru = Math.max(Number(c.soru) || 0, Number(r.soru) || 0);
+      if (sn !== (Number(c.sn) || 0) || soru !== (Number(c.soru) || 0)) artan++;
+      c.sn = sn; c.soru = soru;
+      if (!c.durum && r.durum) { c.durum = r.durum; if (r.bittiAt) c.bittiAt = r.bittiAt; }
+      else if (r.durum && r.durum !== c.durum) durumFarki++;
+      if (r.ilkAt && (!c.ilkAt || r.ilkAt < c.ilkAt)) c.ilkAt = r.ilkAt;
+    }
+    for (const [m, gunler] of Object.entries<any>(a.g)) for (const [d, v] of Object.entries<any>(gunler || {})) {
+      const row = (g[m] ||= {});
+      row[d] = Math.max(Number(row[d]) || 0, Number(v) || 0);
+    }
+    return { k, g, eklenen, artan, durumFarki };
+  };
+  app.get('/api/admin/people/:key/birlestir', async (req, res) => {
+    if (!(await guard(req, res))) return;
+    try {
+      const p = kisiBul(String(req.params.key));
+      if (!p) return res.status(404).json({ error: 'Kişi bulunamadı.' });
+      const bag = p.uid && deps.hesapBagi ? deps.hesapBagi(p.uid) : null;
+      const bagli = bag ? people().find((x) => x.uid === bag) : null;
+      const adaylar = people().filter((x) => x.kind === 'account' && x.uid && x.key !== p.key).map((x) => ({ key: x.key, ad: x.name, email: x.email }));
+      let onizleme: Any | null = null;
+      const hedefKey = String(req.query.hedef || '');
+      if (hedefKey) {
+        const h = kisiBul(hedefKey);
+        if (h?.backup && p.backup) {
+          const { eklenen, artan, durumFarki } = calismaBirlesimi(p.backup, h.backup);
+          onizleme = { eklenen, artan, durumFarki, kaynakKonu: Object.keys(calismaVeri(p.backup).k).length, hedefKonu: Object.keys(calismaVeri(h.backup).k).length };
+        }
+      }
+      res.setHeader('Cache-Control', 'no-store');
+      res.json({ uid: p.uid, kind: p.kind, bag: bag ? { uid: bag, key: bagli?.key || null, ad: bagli?.name || bag } : null, adaylar, onizleme });
+    } catch (e: any) {
+      res.status(500).json({ error: e?.message || String(e) });
+    }
+  });
+  app.post('/api/admin/people/:key/birlestir', async (req, res) => {
+    if (!(await guard(req, res))) return;
+    try {
+      if (!deps.hesapBirlestir) return res.status(501).json({ error: 'Başarım motoru bağlı değil.' });
+      const p = kisiBul(String(req.params.key));
+      if (!p?.uid) return res.status(404).json({ error: 'Bu kayıt bir giriş hesabı değil.' });
+      const body: Any = req.body || {};
+      if (body.geriAl) { deps.hesapBirlestir(p.uid, null); invalidate(); return res.json({ success: true }); }
+      const h = kisiBul(String(body.hedef || ''));
+      if (!h?.uid || h.key === p.key) return res.status(400).json({ error: 'Asıl hesap bulunamadı.' });
+      let aktarim: Any | null = null;
+      if (body.calismaAktar && p.backup && h.backup?.__file) {
+        const file = h.backup.__file as string;
+        const fresh = JSON.parse(fs.readFileSync(file, 'utf8'));
+        const src = JSON.parse(fs.readFileSync(p.backup.__file, 'utf8'));
+        const m = calismaBirlesimi(src, fresh);
+        const now = new Date().toISOString();
+        // Değişen konular adm damgası alır: öğrencinin cihazındaki eski kayıt birleşimi ezmez
+        const once = calismaVeri(fresh).k;
+        for (const [id, r] of Object.entries<any>(m.k)) if (JSON.stringify(once[id]) !== JSON.stringify(r)) r.adm = now;
+        // Önce yedek (geri dönüş için)
+        const yedekDir = path.join(path.dirname(file), '..', 'user_backups_birlestirme');
+        fs.mkdirSync(yedekDir, { recursive: true });
+        fs.writeFileSync(path.join(yedekDir, `${path.basename(file, '.json')}-${Date.now()}.json`), JSON.stringify(fresh));
+        fresh.kv = fresh.kv && typeof fresh.kv === 'object' ? fresh.kv : {};
+        fresh.kv[CALISMA_KEY] = { v: JSON.stringify({ k: m.k, g: m.g }), at: now };
+        fresh.serverSavedAt = now;
+        const tmp = `${file}.${process.pid}.${Date.now()}.tmp`;
+        fs.writeFileSync(tmp, JSON.stringify(fresh), 'utf8');
+        fs.renameSync(tmp, file);
+        deps.onBackupEdited?.(String(fresh.uid || h.uid), fresh);
+        aktarim = { eklenen: m.eklenen, artan: m.artan };
+      }
+      deps.hesapBirlestir(p.uid, h.uid);
+      invalidate();
+      res.json({ success: true, aktarim });
     } catch (e: any) {
       res.status(500).json({ error: e?.message || String(e) });
     }

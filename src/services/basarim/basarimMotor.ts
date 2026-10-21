@@ -514,6 +514,7 @@ export function createBasarimMotor(deps: MotorDeps) {
       degerlendir(k);
       return this.ozet(k);
     },
+    bag(uid: string) { return onbellek.get(uid)?.birlesti || kisi(uid).birlesti || null; },
     /** İkinci hesabı asıl hesaba bağlar (geri almak için hedef null). */
     birlestir(kaynak: string, hedef: string | null) {
       const k = kisi(kaynak);

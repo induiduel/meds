@@ -12,6 +12,7 @@ import { deletePastComment, resolveInboxReport, sendUserEmail, deleteManageUser 
 import { ApiService } from '../../services/api';
 import { EmptyState, ConfirmButton } from './consoleUi';
 import '../../styles/manage-people.css';
+import { HesapBirlestir } from './HesapBirlestir';
 import { useAppearance } from '../../utils/appearance';
 import { ManagePeopleV12 } from '../v12/ManagePeopleV12';
 import { PersonStudy } from './PersonStudy';
@@ -453,6 +454,7 @@ const PersonPane: React.FC<{
 
       <div className="pp-body" role="tabpanel">
         {tab === 'ozet' && <Overview d={d} setTab={setTab} />}
+        {tab === 'calisma' && <HesapBirlestir personKey={d.person.key} reload={reload} notify={notify} />}
         {tab === 'calisma' && <PersonStudy d={d} reload={reload} notify={notify} />}
         {tab === 'etkinlik' && <Timeline d={d} reload={reload} notify={notify} />}
         {tab === 'katkilar' && <ItemList items={contribs} adminEmail={adminEmail} notify={notify} reload={reload} empty="Yorum, soru, ipucu, şık ya da beğeni yok." filterable />}

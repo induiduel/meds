@@ -249,3 +249,15 @@ export interface StudyMatrixPerson {
   konular: Record<string, { sn: number; soru: number; durum: string | null; sonAt: string | null; bittiAt: string | null }>;
 }
 export const loadStudyMatrix = () => adminCall<{ at: string; kisiler: StudyMatrixPerson[] }>('/api/admin/people/calisma-matris');
+
+/** Hesap birleştirme: ikinci hesap sıralamadan çıkar, istenirse çalışma takibi asıl hesaba aktarılır */
+export interface MergeInfo {
+  uid: string | null; kind: string;
+  bag: { uid: string; key: string | null; ad: string } | null;
+  adaylar: { key: string; ad: string; email: string | null }[];
+  onizleme: { eklenen: number; artan: number; durumFarki: number; kaynakKonu: number; hedefKonu: number } | null;
+}
+export const loadMergeInfo = (key: string, hedef?: string) =>
+  adminCall<MergeInfo>(`/api/admin/people/${encodeURIComponent(key)}/birlestir${hedef ? `?hedef=${encodeURIComponent(hedef)}` : ''}`);
+export const mergeAccount = (key: string, body: { hedef?: string; calismaAktar?: boolean; geriAl?: boolean }) =>
+  adminCall<{ success: boolean; aktarim: { eklenen: number; artan: number } | null }>(`/api/admin/people/${encodeURIComponent(key)}/birlestir`, { method: 'POST', body: JSON.stringify(body) });

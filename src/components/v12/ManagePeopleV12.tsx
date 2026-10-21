@@ -8,7 +8,9 @@ import { PageActions, StatRow, Toolbar, Tabs14, SearchField, DataTable, Pill, De
 import { BulkBar, useSelection } from '../v14/manageKit';
 import type { PeopleV12Parts, PeopleFilter, PeopleSort, PeopleTab } from '../manage/ManagePeopleSection';
 import { AccessBulkDrawer, AccessPills, AccessSection, useUserAccess, type UserAccessApi } from '../manage/UserAccessControls';
+import { HesapBirlestir } from '../manage/HesapBirlestir';
 import '../../styles/v12/manage.css';
+import '../../styles/manage-people.css';
 
 /**
  * Yönetim › Kişiler — v14 düzeni (canvas: Kisiler.dc.html): sayılar, görünüm sekmeleri + arama, toplu işlem çubuğu, seçimli tablo;
@@ -500,6 +502,7 @@ const PersonDrawer: React.FC<Props & { d: PersonDetail; access: UserAccessApi }>
         {tab === 'ozet' && <Summary d={d} setTab={setTab} parts={parts} />}
         {tab !== 'ozet' && (
           <div className="m12-dsec m12-pp-legacy">
+            {tab === 'calisma' && <HesapBirlestir personKey={d.person.key} reload={reload} notify={notify} />}
             {tab === 'calisma' && <parts.PersonStudy d={d} reload={reload} notify={notify} />}
             {tab === 'etkinlik' && <parts.Timeline d={d} reload={reload} notify={notify} />}
             {tab === 'katkilar' && <parts.ItemList items={contribs} adminEmail={adminEmail} notify={notify} reload={reload} empty="Yorum, soru, ipucu, şık ya da beğeni yok." filterable />}
