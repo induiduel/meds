@@ -83,6 +83,20 @@ const R_ARALIK = new RegExp(`${ON}(${DIZI})\\s+ile\\s+(${DIZI})(${EK})${SON}`, '
 const R_SIRA = new RegExp(`${ON}(${SDIZI})(${EK})${SON}`, 'gu');
 const R_SAYI = new RegExp(`${ON}(${DIZI})(${EK})${SON}`, 'gu');
 const R_YUZDE_ILE = new RegExp(`%(\\d+(?:,\\d+)?)\\s+ile\\s+(${DIZI})(${EK})${SON}`, 'gu');
+const BIRIM: Record<string, string> = {
+  'mili ünite': 'mIU', 'ünite': 'U', 'miligram': 'mg', 'mikrogram': 'µg', 'nanogram': 'ng', 'gram': 'g', 'kilogram': 'kg',
+  'mililitre': 'mL', 'desilitre': 'dL', 'litre': 'L', 'milimetre cıva': 'mmHg', 'milimetre': 'mm', 'santimetre': 'cm',
+  'mikrometre': 'µm', 'milimol': 'mmol', 'miliosmol': 'mOsm', 'mikromol': 'µmol', 'nanomol': 'nmol', 'pikogram': 'pg',
+};
+const BIRIM_RE = Object.keys(BIRIM).sort((a, b) => b.length - a.length).map((k) => k.replace(' ', '\\s+')).join('|');
+const birim = (s: string) => BIRIM[tr(s).replace(/\s+/g, ' ')] ?? s;
+const R_TIRE = new RegExp(`(\\d+)\\s+tire\\s+(\\d+)${SON}`, 'gu');
+const R_KARYO = new RegExp(`(?<![\\d,])(4[5-9]|69|92)\\s+([XY]{1,4})${SON}`, 'gu');
+const R_KARYO_ARTI = new RegExp(`(\\d,[XY]{1,4})\\s+artı\\s+(\\d+)${SON}`, 'gu');
+const R_ISARET = new RegExp(`${ON}(eksi|artı)\\s+(\\d+(?:,\\d+)?)${SON}`, 'giu');
+// "mili ünite bölü mililitre" → "mIU/mL"; "miligram" yalnız rakamdan sonra → "200 mg" (düz "gram" sözcüğü rakamla bile yazıda kalır)
+const R_BOLU = new RegExp(`${ON}(${BIRIM_RE})\\s+bölü\\s+(${BIRIM_RE})(${EK})${SON}`, 'giu');
+const R_BIRIM = new RegExp(`(\\d)\\s+(${BIRIM_RE.replace('|gram|', '|')})(${EK})${SON}`, 'giu');
 const GUN_HAFTA: Record<string, string> = { e: 'ya', de: 'da', den: 'dan', dür: 'dır', lük: 'lık', ün: 'ın', ü: 'ı' };
 
 const tekSozluk = (dizi: string) => !/\s/.test(dizi.trim());
@@ -149,6 +163,13 @@ function adimlar(): [RegExp | null, Fn][] {
     [R_SIRA, (_m: string, a: string, ek: string) => ekli(`${say(a)}.`, ek)],
     [R_YUZDE_ILE, (_m: string, n: string, b: string, ek: string) => ekli(`%${n}-${say(b)}`, ek)],
     [R_SAYI, (m: string, a: string, ek: string, i: number, s: string) => sayiGec(a, ek, onu(s, i)) ?? m],
+    // rakamlar yerleştikten sonra işaretler ve birimler (okunuş değil yazım: "2-5", "47,XY,+18", "-3", "mIU/mL", "25 mm")
+    [R_TIRE, (_m: string, a: string, b: string) => `${a}-${b}`],
+    [R_KARYO, (_m: string, n: string, k: string) => `${n},${k}`],
+    [R_KARYO_ARTI, (_m: string, k: string, n: string) => `${k},+${n}`],
+    [R_ISARET, (_m: string, isaret: string, n: string) => `${tr(isaret) === 'eksi' ? '-' : '+'}${n}`],
+    [R_BOLU, (_m: string, a: string, b: string, ek: string) => ekli(`${birim(a)}/${birim(b)}`, ek)],
+    [R_BIRIM, (_m: string, n: string, b: string, ek: string) => ekli(`${n} ${birim(b)}`, ek)],
   ];
 }
 

@@ -1,14 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 216,
-  "baslik": "Bitirdiklerim menüsü ekrana sığıyor",
+  "onem": 217,
+  "baslik": "Sesli ders: işaret ve birimler de yazılı biçimde",
   "maddeler": [
-    "Bitirdiklerim'de ⋯ menüsü artık listenin en altında ve dar ekranlarda da tam görünüyor: yer yoksa yukarı açılıyor, kenardan taşmıyor."
+    "Sesli ders metninde okunuş yerine yazım gösteriliyor: “iki tire beş” → 2-5, “mili ünite bölü mililitre” → mIU/mL, “milimetre cıva” → mmHg, “eksi üç” → -3, “kırk yedi XY artı on sekiz” → 47,XY,+18.",
+    "Rakamdan sonra gelen birimler kısaltmayla yazılıyor: 200 mg, 25 mm, 5 µg, 2 kg."
   ],
   "eklenen": [],
   "degisen": [],
   "duzeltilen": [
-    "Bitirdiklerim'de ⋯ menüsü artık listenin en altında ve dar ekranlarda da tam görünüyor: yer yoksa yukarı açılıyor, kenardan taşmıyor."
+    "Sesli ders metninde okunuş yerine yazım gösteriliyor: “iki tire beş” → 2-5, “mili ünite bölü mililitre” → mIU/mL, “milimetre cıva” → mmHg, “eksi üç” → -3, “kırk yedi XY artı on sekiz” → 47,XY,+18.",
+    "Rakamdan sonra gelen birimler kısaltmayla yazılıyor: 200 mg, 25 mm, 5 µg, 2 kg."
   ],
   "silinen": []
 }
