@@ -212,3 +212,10 @@
   .sp-ust-gez .sp-geri-bag { min-width: 40px; justify-content: center; }
   .sp-ust-gez { gap: 4px; }
 }
+/* telefon: Son Prova gezinmesi ders başlığının üstünde kendi satırında (başlıkla çakışmasın) */
+@media (max-width: 560px) {
+  .sp-part-sayfa .cd-ders-bas { flex-wrap: wrap; row-gap: 6px; }
+  .sp-part-sayfa .cd-ders-bas > .sp-ust-gez { flex: 1 0 100%; order: -1; }
+  .sp-part-sayfa .cd-ders-bas > .sp-ust-gez .sp-btn-kucuk span { display: inline; }
+  .sp-part-sayfa .cd-ders-baslik { min-width: 0; flex: 1 1 0; }
+}
