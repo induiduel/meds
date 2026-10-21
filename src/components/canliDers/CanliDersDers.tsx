@@ -1435,7 +1435,7 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
   );
 }
 
-/** ⋯ menüsü: motivasyon konuşmaları ve mola hatırlatması (varsayılan açık) */
+/** ⋯ menüsü: motivasyon konuşmaları ve mola hatırlatması (varsayılan kapalı) */
 function MotivasyonDugme() {
   const acik = useCdMotivasyonAcik();
   return (

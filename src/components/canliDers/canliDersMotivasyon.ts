@@ -25,13 +25,13 @@ const SON_SAKLA = 30;
 
 /* ---------- tercih (açık/kapalı) ---------- */
 const tercihAbone = new Set<() => void>();
-export const cdMotivasyonAcik = (): boolean => { try { return localStorage.getItem(ACIK_KEY) !== '0'; } catch { return true; } };
+export const cdMotivasyonAcik = (): boolean => { try { return localStorage.getItem(ACIK_KEY) === '1'; } catch { return false; } };
 export function cdMotivasyonAyarla(acik: boolean) {
   try { localStorage.setItem(ACIK_KEY, acik ? '1' : '0'); } catch { /* yok */ }
   tercihAbone.forEach((f) => f());
 }
 export const useCdMotivasyonAcik = () => useSyncExternalStore(
-  (f) => { tercihAbone.add(f); return () => tercihAbone.delete(f); }, cdMotivasyonAcik, () => true,
+  (f) => { tercihAbone.add(f); return () => tercihAbone.delete(f); }, cdMotivasyonAcik, () => false,
 );
 
 /* ---------- bağlam (öğrencinin ilerleyişi) ---------- */
