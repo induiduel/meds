@@ -1,18 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 168,
-  "baslik": "Asklepios Asası geldi",
+  "onem": 169,
+  "baslik": "Son Prova: telefon düzeni",
   "maddeler": [
-    "Yeni çerçeve: Asklepios Asası — profil resminin çevresinde dolanan yılan (1.200 mol ATP).",
-    "Yeni kutlama efekti: Asklepios Asası — altın asa belirir, yılan dolanarak tırmanır, ışıltılar yükselir (800 mol ATP).",
-    "Yeni unvan: Asklepios'un Çırağı (Uzman kıdeminde, 1.800 mol ATP)."
+    "Son Prova telefonda: aşama soruları ve check-up düğmeleri dersin üstünde ayrı satırda; soru düğmeleri ses oynatıcısının altında kalmaz."
   ],
-  "eklenen": [
-    "Yeni çerçeve: Asklepios Asası — profil resminin çevresinde dolanan yılan (1.200 mol ATP).",
-    "Yeni kutlama efekti: Asklepios Asası — altın asa belirir, yılan dolanarak tırmanır, ışıltılar yükselir (800 mol ATP).",
-    "Yeni unvan: Asklepios'un Çırağı (Uzman kıdeminde, 1.800 mol ATP)."
-  ],
+  "eklenen": [],
   "degisen": [],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Son Prova telefonda: aşama soruları ve check-up düğmeleri dersin üstünde ayrı satırda; soru düğmeleri ses oynatıcısının altında kalmaz."
+  ],
   "silinen": []
 }

@@ -394,23 +394,29 @@ function PartOynatici({ ix, ders, part, asama, gez }: { ix: SpIndex; ders: SpDer
 
   const soruAsama = suAn || part.asamalar[0];
   const soruDurum = k.asama[`${key}:${soruAsama.no}`];
-  const ust = (
-    <nav className="sp-ust-gez" aria-label="Son Prova">
-      <Geri yol={`/son-prova/${ders.brans}`} metin={BRANS_KISA[ders.brans]} />
+  const dugmeler = (
+    <>
       <button type="button" className={`sp-btn sp-btn-kucuk${soruDurum ? ' is-tamam' : ''}`} onClick={() => { cdDuraklat(); setTest(soruAsama); }}
-        aria-label={`Aşama ${soruAsama.no} soruları`}
-        title={`Aşama ${soruAsama.no} · ${soruAsama.baslik} — ${soruAsama.dersNo}) ${soruAsama.dersAd}`}>
+        aria-label={`Aşama ${soruAsama.no} soruları`} title={`Aşama ${soruAsama.no} · ${soruAsama.baslik} — ${soruAsama.dersNo}) ${soruAsama.dersAd}`}>
         {soruDurum ? <CheckCircle2 aria-hidden /> : <ListChecks aria-hidden />}
         <span>Aşama {soruAsama.no} soruları{soruDurum ? ` · ${soruDurum.d}/${soruDurum.n}` : ''}</span>
       </button>
       <button type="button" className={`sp-btn sp-btn-kucuk${k.checkup[key] ? ' is-tamam' : ''}`} onClick={() => git(`/son-prova/${ders.brans}/${part.no}/checkup`)} aria-label="Part check-up">
         <Target aria-hidden /><span>Check-up</span>
       </button>
+    </>
+  );
+  const ust = (
+    <nav className="sp-ust-gez" aria-label="Son Prova">
+      <Geri yol={`/son-prova/${ders.brans}`} metin={BRANS_KISA[ders.brans]} />
+      <span className="sp-ust-masaustu">{dugmeler}</span>
     </nav>
   );
 
   return (
     <div className="sp-part-sayfa">
+      {/* Telefon: aşama soruları ve check-up dersin üstünde kendi satırında (başlık dar) */}
+      {!test && !checkupSor && <div className="sp-ust-telefon">{dugmeler}</div>}
       {/* Soru ya da check-up önerisi açıkken ders (metin + PDF) gizlenir; bileşen yerinde kalır, ses ve konum korunur */}
       <div className={test || checkupSor ? 'sp-gizli' : 'sp-ders-alan'}>
         <Suspense fallback={<div className="sp-kart sp-bos"><Loader2 className="sp-don" aria-hidden /></div>}>

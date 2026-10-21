@@ -212,10 +212,12 @@
   .sp-ust-gez .sp-geri-bag { min-width: 40px; justify-content: center; }
   .sp-ust-gez { gap: 4px; }
 }
-/* telefon: Son Prova gezinmesi ders başlığının üstünde kendi satırında (başlıkla çakışmasın) */
+/* part gezinmesi: masaüstünde ders başlığında, telefonda dersin üstünde ayrı satır */
+.sp-ust-masaustu { display: inline-flex; gap: 6px; align-items: center; }
+.sp-ust-telefon { display: none; }
 @media (max-width: 560px) {
-  .sp-part-sayfa .cd-ders-bas { flex-wrap: wrap; row-gap: 6px; }
-  .sp-part-sayfa .cd-ders-bas > .sp-ust-gez { flex: 1 0 100%; order: -1; }
-  .sp-part-sayfa .cd-ders-bas > .sp-ust-gez .sp-btn-kucuk span { display: inline; }
-  .sp-part-sayfa .cd-ders-baslik { min-width: 0; flex: 1 1 0; }
+  .sp-ust-masaustu { display: none; }
+  .sp-ust-telefon { display: flex; gap: 8px; padding: 8px 12px 0; }
+  .sp-ust-telefon .sp-btn-kucuk { flex: 1 1 0; min-height: 40px; }
+  .sp-ust-telefon .sp-btn-kucuk span { display: inline; }
 }
