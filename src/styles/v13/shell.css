@@ -223,11 +223,11 @@
 
 /* Tam ekran ve tam ekran katmanları: adalar gizlenir, içerik kenardan kenara (çıkış hapı s12-fs-exit kalır) */
 :root[data-v13='on'].is-app-fullscreen :is(.a13-top, .a13-side, .a13-island-wrap) { display: none !important; }
-:root[data-v13='on']:has(.ls-root, .lv-skel, .sr-root, .cd-ders.is-tam, .pa, .sc, .r12-root.is-focus, .r12-root.is-immersive) :is(.a13-top, .a13-side, .a13-island-wrap) {
+:root[data-v13='on'].kb-gizle :is(.a13-top, .a13-side, .a13-island-wrap) {
   display: none !important;
 }
 @media (max-width: 767px) {
-  :root[data-v13='on']:has(.r12-root) :is(.a13-top, .a13-island-wrap) { display: none !important; }
+  :root[data-v13='on'].kb-r12 :is(.a13-top, .a13-island-wrap) { display: none !important; }
 }
 
 /* Telefon kompakt: kapsül 44 px, alt ada 60 px, sayfa boşlukları dar */

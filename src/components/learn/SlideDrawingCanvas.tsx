@@ -219,7 +219,7 @@ export const SlideDrawingCanvas: React.FC<{
       if (!container || !canvas) return;
 
       const rect = container.getBoundingClientRect();
-      const dpr = window.devicePixelRatio || 1;
+      const dpr = Math.min(window.devicePixelRatio || 1, 2); // 3× ekranda tuval belleği 2,25 kat şişmesin
       const displayWidth = Math.max(300, Math.round(rect.width));
       const displayHeight = Math.max(300, Math.round(rect.height));
 

@@ -137,8 +137,14 @@ const norm = (t: string) => t.toLocaleLowerCase('tr').replace(/\s+/g, ' ');
 
 const GAP = 12;
 const PAD = 12;
-const MAX_CANVAS_PX = 12_000_000; // iOS tuval sınırının altında
-const KEEP = 4; // görünür aralığın dışında tutulacak çizili sayfa
+// Telefon/az bellekli cihaz: her tuval GPU belleğinde piksel × 4 bayt tutar; yakınlaştırmada 12 MP × 10 tuval
+// (~500 MB) telefonda GPU sürecini düşürüp ekranı simsiyah bırakıyordu. Orada tuval tavanı ve tutulan sayfa az.
+const LOW_END =
+  typeof window !== 'undefined' &&
+  (window.matchMedia?.('(pointer: coarse)').matches || ((navigator as any).deviceMemory ?? 8) <= 4);
+const MAX_CANVAS_PX = LOW_END ? 3_000_000 : 12_000_000; // iOS tuval sınırının altında
+const KEEP = LOW_END ? 1 : 4; // görünür aralığın dışında tutulacak çizili sayfa
+const MAX_PRELOAD = LOW_END ? 2 : Infinity; // ön çizim (preload) tavanı
 
 interface Slot {
   canvas?: HTMLCanvasElement;
@@ -404,7 +410,7 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
     if (last + 1 < sz.length) renderSlot(last + 2, false);
     if (first > 0) renderSlot(first, false);
     // Ön çizim: görünenler bittikten sonra sıradaki slaytlar (metin katmanı görünür olunca kurulur)
-    const on = new Set((preloadRef.current || []).filter((n) => n >= 1 && n <= sz.length));
+    const on = new Set((preloadRef.current || []).filter((n) => n >= 1 && n <= sz.length).slice(0, MAX_PRELOAD));
     for (const n of on) renderSlot(n, false);
     for (const n of [...slots.current.keys()]) if ((n < first + 1 - KEEP || n > last + 1 + KEEP) && !on.has(n)) evict(n);
   }, [doc, renderSlot]);

@@ -1,16 +1,18 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 222,
-  "baslik": "PDF ayarları ayrı pencerede",
+  "onem": 223,
+  "baslik": "Telefonda daha akıcı site",
   "maddeler": [
-    "PDF ayarları artık indirme menüsünün içinde değil, \"Ayarla\" düğmesiyle açılan ayrı bir pencerede; menüde yalnız seçimlerin kısa özeti görünüyor.",
-    "Toplu PDF penceresi sadeleşti; telefonda ayar penceresi alttan açılıyor."
+    "Sayfalardaki takılma ve donmalar azaldı: sesli ders, soru çözme ve yazma sırasında tarayıcı artık tüm sayfayı yeniden hesaplamıyor.",
+    "Telefonda ara sıra ekranın simsiyah kalmasına yol açabilen yüksek grafik belleği kullanımı (PDF büyütme, bulanık cam efektleri) sınırlandı.",
+    "Ana sayfa telefonda daha hızlı açılıyor."
   ],
   "eklenen": [],
-  "degisen": [
-    "PDF ayarları artık indirme menüsünün içinde değil, \"Ayarla\" düğmesiyle açılan ayrı bir pencerede; menüde yalnız seçimlerin kısa özeti görünüyor.",
-    "Toplu PDF penceresi sadeleşti; telefonda ayar penceresi alttan açılıyor."
+  "degisen": [],
+  "duzeltilen": [
+    "Sayfalardaki takılma ve donmalar azaldı: sesli ders, soru çözme ve yazma sırasında tarayıcı artık tüm sayfayı yeniden hesaplamıyor.",
+    "Telefonda ara sıra ekranın simsiyah kalmasına yol açabilen yüksek grafik belleği kullanımı (PDF büyütme, bulanık cam efektleri) sınırlandı.",
+    "Ana sayfa telefonda daha hızlı açılıyor."
   ],
-  "duzeltilen": [],
   "silinen": []
 }

@@ -1,3 +1,4 @@
+import { installKabukBayraklari } from './services/kabukBayraklari';
 import './services/netInstall';
 import { adresKatmaniniKur } from './siteHaritasi';
 import { installAdminFetchAuth } from './services/adminFetchAuth';
@@ -114,6 +115,7 @@ prefetchIdle();
 installAutoReveal();
 installSelectionShare();
 installStudyTimer();
+installKabukBayraklari();
 
 // Auto reload on stale Vite chunk after a new deployment
 // (Wi-Fi bağlı ama internetsizken de yenilenmez: önce sunucuya ulaşılıyor mu bakılır)

@@ -359,7 +359,7 @@
 }
 /* Kopyala düğmesi alt çubukta diğer eylemlerle aynı görünür (bileşenin kendi çerçevesi kalkar) */
 :root[data-design='v12'] .qk-f > button.qk-act { width: 32px; height: 32px; padding: 0; justify-content: center; border: 0; border-radius: 8px; background: transparent; }
-:root[data-design='v12'] .qk-f > button.qk-act:has(> svg:only-child) svg { width: 15px; height: 15px; }
+:root[data-design='v12'] .qk-f > button.qk-act > svg:only-child { width: 15px; height: 15px; }
 :root[data-design='v12'] .qk-f > button.qk-act:not(:has(> svg:only-child)) { width: auto; padding: 0 8px; }
 /* Zengin çıkmış kartı (ck-*, v12): şık sağında hızlı düğme yer kaplar (metin altına girmez), görünürlüğü üzerine gelince */
 :root[data-design='v12'] {
@@ -460,13 +460,13 @@
 }
 /* Tam ekran oynatıcı/okuyucu açıkken üst kapsayıcıda zoom/animasyon/transform sıfırlanır (WebKit/Blink yığınlama ve
  * sabit konumlandırma kabı hatasını önler) */
-:root[data-design='v12'] .sh-main:has(.ls-root, .lv-skel, .r12-root, .sr-root, .cd-ders.is-tam, .pa, .sc) > * {
+:root[data-design='v12'].kb-tam .sh-main > * {
   zoom: 1 !important;
   --in-zoom: 1 !important;
   animation: none !important;
   transform: none !important;
 }
-:root[data-design='v12'] .sh-main:has(.ls-root, .lv-skel, .r12-root, .sr-root, .cd-ders.is-tam, .pa, .sc) :is(.ls-root, .r12-root, .sr-root, .ms-overlay, .wt-full, .cf-root, .lf-overlay, .p12-pause, .fixed.inset-0):not(:is(.ls-root, .r12-root, .sr-root, .ms-overlay, .wt-full, .cf-root, .lf-overlay, .p12-pause, .fixed.inset-0) *) {
+:root[data-design='v12'].kb-tam .sh-main :is(.ls-root, .r12-root, .sr-root, .ms-overlay, .wt-full, .cf-root, .lf-overlay, .p12-pause, .fixed.inset-0):not(:is(.ls-root, .r12-root, .sr-root, .ms-overlay, .wt-full, .cf-root, .lf-overlay, .p12-pause, .fixed.inset-0) *) {
   zoom: 1 !important;
 }
 
@@ -474,11 +474,11 @@
  * Tam ekran modları ve iOS (Safari + Chrome/CriOS) uyumluluğu
  * ========================================================================= */
 /* Tam ekran ders/okuyucu/asistan katmanı açıkken kabuk çubukları gizlenir (mobil alt çubuğun üstüne binmesini önler) */
-:root:has(.ls-root, .lv-skel, .sr-root, .cd-ders.is-tam, .pa, .sc, .r12-root.is-focus, .r12-root.is-immersive) :is(.s12-top, .sh-top, .s12-rail, .sh-side, .s12-tabs, .sh-tabs) {
+:root.kb-gizle :is(.s12-top, .sh-top, .s12-rail, .sh-side, .s12-tabs, .sh-tabs) {
   display: none !important;
 }
 @media (max-width: 767px) {
-  :root:has(.r12-root) :is(.s12-top, .sh-top, .s12-tabs, .sh-tabs) {
+  :root.kb-r12 :is(.s12-top, .sh-top, .s12-tabs, .sh-tabs) {
     display: none !important;
   }
 }
@@ -536,7 +536,7 @@
   .s12-fs-exit { padding: 0 9px; height: 32px; font-size: 11px; }
   :root.is-app-fullscreen .on-arac-1 { padding-right: 120px; }
 }
-:root:has(.ls-root, .r12-root, .sr-root, .cd-ders.is-tam, .pa, .sc) .s12-fs-exit {
+:root.kb-fs .s12-fs-exit {
   display: none !important;
 }
 

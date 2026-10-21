@@ -303,7 +303,7 @@
    çalışma alanı solda (≤720), "Göz at" listesi sağda yapışkan, kendi içinde kayan panel. Satır izleri: 12 otomatik + 1 esnek
    (yapışkan panelin boyu sol sütuna boşluk olarak dağılmasın). */
 @container f12 (min-width: 1240px) {
-  :root[data-design='v12'] .f12-col:has(> .f12-browse) {
+  :root[data-design='v12'] .f12-col.has-browse {
     max-width: 1320px; display: grid; grid-template-columns: minmax(0, 720px) minmax(380px, 1fr); grid-template-rows: repeat(12, auto) 1fr;
     column-gap: 28px; row-gap: 0; align-items: start;
     & > :not(.f12-browse) { grid-column: 1; min-width: 0; }

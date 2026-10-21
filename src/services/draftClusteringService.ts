@@ -286,8 +286,12 @@ export function warmMedicalIndex(): void {
     });
   };
   const ric = (window as any).requestIdleCallback as undefined | ((cb: () => void, o?: { timeout: number }) => void);
-  if (ric) ric(run, { timeout: 4000 });
-  else setTimeout(run, 1500);
+  const later = () => (ric ? ric(run, { timeout: 4000 }) : setTimeout(run, 1500));
+  // Telefonda 2,4 MB JSON'un ayrıştırılması tek parça ~0,6 sn donma: yalnız kullanıcı yazmaya başlayınca yüklenir
+  const lowEnd = window.matchMedia?.('(pointer: coarse)').matches || ((navigator as any).deviceMemory ?? 8) <= 4;
+  if (!lowEnd) return void later();
+  const onInput = () => { document.removeEventListener('input', onInput, true); later(); };
+  document.addEventListener('input', onInput, true);
 }
 
 // Metinden eşleşen Tıbbi Kavram Bankalarını bulma (5,000+ kavram üzerinde anlık O(1) eşleşme)

@@ -156,7 +156,7 @@ const OptRow: React.FC<{
 
   return (
     <li id={`opt-${qid}-${k}`} className={`qk-opt-li qk-lift ${lifted ? 'is-lifted' : ''} ${dx !== null ? 'is-drag' : ''} ${quick ? 'has-quick' : ''} ${eliminated ? 'is-elim' : ''}`}>
-      <div className="qk-lift-row" style={dx !== null ? { transform: `translate3d(${dx}px,0,0)` } : undefined}>
+      <div className="qk-lift-row" style={dx !== null ? { transform: `translate3d(${dx}px,0,0)`, willChange: 'transform' } : undefined}>
         <button
           type="button"
           className={`${cls} qk-lift-front`}

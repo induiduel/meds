@@ -856,7 +856,7 @@ html.ui-v7 .cx-tabs { padding-right: 24px; }
 .cx-dock > .cx-rail { overflow: clip; overflow-clip-margin: 4px; }
 /* Yapışkan yuva katlanıp açılınca tarayıcı scroll anchoring ile sayfayı yuva yüksekliği kadar kaydırıyor,
    bu da kaydırma olayı üretip yuvayı yeniden katlıyordu (titreme döngüsü). Yuvalı sayfalarda kapatılır. */
-html:has(.cx-dock), html:has(.cx-dock) body { overflow-anchor: none; }
+html.kb-cxdock, html.kb-cxdock body { overflow-anchor: none; }
 /* Telefonda künye satırı iki düzenli sıra: üstte kurul · künye · düğmeler, altta ders · işaretler.
    (Önceden işaretler ve ⋯ menüsü ayrı satırlara dağılıyordu.) */
 /* Ekran değil kartın kendi genişliği belirler (tablette yan rayla da kart dar kalabiliyor). */
@@ -943,7 +943,7 @@ html.ui-v7[data-dock="hidden"] .cx-dock::after { opacity: 0; }
  *  - Üst çubukta sayfa araması açıkken çevrimdışı rozeti ve tema düğmesi yer açmak için gizlenir. */
 .ms-fab-wrap { transition: transform 280ms cubic-bezier(.22, 1, .36, 1), opacity 200ms ease; }
 html[data-dock="hidden"] .ms-fab-wrap:not(:has(.ms-fab.is-open)) { transform: translateY(calc(100% + 24px)); opacity: 0; pointer-events: none; }
-@media (max-width: 767px) { .sh-main:has(.ms-fab-wrap) { padding-bottom: calc(var(--sh-tabs-h, 58px) + 88px); } }
+@media (max-width: 767px) { html.kb-fab .sh-main { padding-bottom: calc(var(--sh-tabs-h, 58px) + 88px); } }
 @media (max-width: 639px) {
   .sh-top.has-pq .sh-top-tools > :not(.sh-acct-anchor):not([aria-label^="Bildirimler"]) { display: none; }
 }
@@ -1633,7 +1633,7 @@ html.theme-dark .deep-link-highlight-pulse, html[data-mode="dark"] .deep-link-hi
 /* 49 · Şık etkileşimleri v3 (2026-10-11 gece 23): ÇEK-BIRAK ile kalkan şık + gömülü kapsül, TEK DOKUNUŞ ile oklu balon. */
 .qk-opts.is-lift .qk-opt-li { display: block; position: relative; }
 @media (min-width: 720px) { .qk-opts.is-lift.is-short { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.qk-lift-row { position: relative; transition: transform 520ms cubic-bezier(.34, 1.56, .64, 1); will-change: transform; }
+.qk-lift-row { position: relative; transition: transform 520ms cubic-bezier(.34, 1.56, .64, 1); } /* will-change yalnız kaydırırken (CikmisCard): her kartta ayrı GPU katmanı telefonda belleği tüketiyordu */
 .qk-lift.is-drag .qk-lift-row { transition: none; }
 .qk-lift-front { position: relative; z-index: 1; width: 100%; background: var(--color-white); touch-action: pan-y; user-select: none; -webkit-user-select: none; cursor: pointer;
   transition: transform 460ms cubic-bezier(.34, 1.4, .64, 1), box-shadow 320ms ease, border-radius 320ms ease, padding 320ms ease, background 150ms; }
@@ -1735,3 +1735,9 @@ html.theme-dark .deep-link-highlight-pulse, html[data-mode="dark"] .deep-link-hi
 .qk > :is(.cx-note, .cx-alt) { margin-inline: var(--qk-x, 12px); min-width: 0; }
 .qk > .cx-alt { margin-top: 0; padding: 8px 0 10px; }
 .qk > .cx-alt > span { max-width: 100%; overflow-wrap: anywhere; }
+
+/* Dokunmatik cihazlar: backdrop-filter (cam bulanıklığı) yapışkan/sabit çubuklarda her kaydırma karesinde arkayı yeniden
+   bulanıklaştırır; telefonda takılma ve GPU belleği taşınca ekranın simsiyah kalmasına yol açıyordu. Orada kapalı. */
+@media (pointer: coarse) {
+  *, *::before, *::after { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+}
