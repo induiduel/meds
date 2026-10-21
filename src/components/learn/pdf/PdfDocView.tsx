@@ -81,6 +81,12 @@ function imlecDurum(path: number[][], c: number): { x: number; y: number; i: num
   return { x: z[1], y: z[2], i: path.length - 1 };
 }
 
+/** Halka bölgeyi içten kesmesin: dikdörtgeni dıştan saran elips kutusu (√2 büyütme + küçük pay) */
+const halka = (r: number[]) => {
+  const w = r[2] - r[0], h = r[3] - r[1], ex = w * 0.23 + 0.006, ey = h * 0.23 + 0.006;
+  return [r[0] - ex, r[1] - ey, r[2] + ex, r[3] + ey];
+};
+
 const Imlec = memo(function Imlec({ path, useChar }: { path: number[][]; useChar: () => number }) {
   const { x, y, i } = imlecDurum(path, useChar());
   const n = path[i];
@@ -89,10 +95,10 @@ const Imlec = memo(function Imlec({ path, useChar }: { path: number[][]; useChar
   return (
     <>
       {r && (
-        <svg key={`c${i}`} className={`pdv-cizim${alt ? ' is-alt' : ''}`} style={pct(r)} viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden>
+        <svg key={`c${i}`} className={`pdv-cizim${alt ? ' is-alt' : ''}`} style={alt ? pct(r) : pct(halka(r))} viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden>
           {alt
-            ? <path d="M-2 104 Q 30 98, 55 103 T 102 101" pathLength={1} />
-            : <path d="M50 -6 C 88 -8, 108 24, 104 52 C 100 86, 70 108, 44 106 C 12 104, -8 78, -5 48 C -2 18, 22 -4, 58 -2" pathLength={1} />}
+            ? <path d="M-1 112 Q 30 108, 55 112 T 101 110" pathLength={1} />
+            : <path d="M50 1 C 78 1, 99 22, 99 50 C 99 78, 78 99, 50 99 C 22 99, 1 78, 1 50 C 1 22, 22 1, 54 2" pathLength={1} />}
         </svg>
       )}
       <span className="pdv-imlec-kap" style={{ left: `${x * 100}%`, top: `${y * 100}%` }}>
@@ -113,7 +119,7 @@ const MarkLayer = memo(function MarkLayer({ m }: { m: PdfMarks }) {
   const f = fi >= 0 ? m.words[fi] : null;
   const r = m.kind === 'resim' && !m.path ? m.lines[0] : null;
   return (
-    <div className={`pdv-marks is-${m.kind}`} aria-hidden>
+    <div className={`pdv-marks is-${m.kind}${m.path ? ' has-yol' : ''}`} aria-hidden>
       {m.lines.map((b, i) => <span key={i} className="pdv-mark-line" style={pct(b)} />)}
       {f && <span className="pdv-mark-word" style={pct(f)} />}
       {m.path && m.useChar && <Imlec path={m.path} useChar={m.useChar} />}

@@ -1399,10 +1399,10 @@ export function registerSesliAnlatimRoutes(
     const isler: string[] = [];
     // Kurul 2+ ve modül dersleri (yalnizEma: true, ör. TBG Sınav Kampı): yalnız EMA, varsayılan
     const yalnizEma = Number((/^k(\d+)-/.exec(k) || [])[1] || 1) >= 2 || req.body?.yalnizEma === true;
-    if (!yalnizEma && (degisti || !kayit.some((v) => v.saglayici === 'edge-emel' && v.metinHash === hash(metin))))
-      isler.push(isEkle(k, 'edge-emel', 'Emel', { varsayilanYap: true, isteyen }).id);
+    // Kullanıcı kararı (2026-10-21): sesli derslerde yalnız EMA; Emel üretilmez, EMA varsayılan olur.
+    void yalnizEma;
     if (degisti || !kayit.some((v) => v.saglayici === 'ema-yerel' && v.metinHash === hash(metin)))
-      isler.push(isEkle(k, 'ema-yerel', 'Ema', { isteyen, ...(yalnizEma ? { varsayilanYap: true } : {}) }).id);
+      isler.push(isEkle(k, 'ema-yerel', 'Ema', { isteyen, varsayilanYap: true }).id);
     degisti && yayinla('sesli_anlatim', { neden: 'ders-ekle', key: k, at: simdi() });
     res.json({ ok: true, key: k, yeni: !var_, metinDegisti: degisti, paragraf: pars.length, hizalama, isler });
   });

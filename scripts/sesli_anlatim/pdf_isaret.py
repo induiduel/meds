@@ -55,7 +55,7 @@ API = os.environ.get("MEDS_API", "http://127.0.0.1:3000")
 KELIME = re.compile(r"[\wçğıöşüâîû]+", re.I)
 MADDE_IMI = re.compile(r"^(?:[•●▪■◦○➢➤►▶✓✔\-–—*]|\d{1,2}[.)]|[a-zA-Z][.)])$")
 GORSEL = re.compile(r"\b(görsel|görüntü|şekil|resim|fotoğraf|grafik|şema|tablo|çizim|mikrograf|kesit|plak|görürsünüz|görüyoruz|görülüyor|görülen|bakın|bakalım)", re.I)
-SURUM = 5  # eşleme kuralı değişince artır: tüm dersler yeniden üretilir
+SURUM = 6  # eşleme kuralı değişince artır: tüm dersler yeniden üretilir
 MADDE_ORAN = 0.80  # slayt maddesinin en az bu kadarı okunan cümlede geçmeli (kullanıcı kuralı)
 CUMLE_RE = re.compile(r"[.!?…]+[\"'”’)\]]*(?:\s+|$)")
 
@@ -393,12 +393,39 @@ def imlec_yolu(cumle: str, capalar: list[dict]) -> list[list[float]]:
     return out
 
 
+def bolge_sikilastir(yol: list[list[float]], sy: "Sayfa | None") -> list[list[float]]:
+    """Yazı içeren bölgeyi (r) içindeki gerçek kelime kutularına oturtur: çizim tam anlatılan satır/hücreyi çevreler,
+    komşu yapıları kapatmaz. İmleç noktası bölgenin dışındaysa bölgenin sol-ortasına çekilir."""
+    if not sy:
+        return yol
+    for v in yol:
+        if len(v) < 7:
+            continue
+        x0, y0, x1, y1 = v[3:7]
+        ws = []
+        for _, _, b in sy.kelimeler:
+            n = sy.n(b)
+            cx, cy = (n[0] + n[2]) / 2, (n[1] + n[3]) / 2
+            if x0 <= cx <= x1 and y0 <= cy <= y1:
+                ws.append(n)
+        if ws:
+            ux0, uy0 = min(w[0] for w in ws), min(w[1] for w in ws)
+            ux1, uy1 = max(w[2] for w in ws), max(w[3] for w in ws)
+            # yalnız yazı bölgesi (resim değil): kelimeler bölgenin anlamlı kısmını kaplıyorsa sıkılaştır
+            if (ux1 - ux0) * (uy1 - uy0) >= 0.25 * max(1e-6, (x1 - x0) * (y1 - y0)):
+                v[3:7] = [round(ux0 - 0.004, 4), round(uy0 - 0.004, 4), round(ux1 + 0.004, 4), round(uy1 + 0.004, 4)]
+                x0, y0, x1, y1 = v[3:7]
+        if not (x0 <= v[1] <= x1 and y0 <= v[2] <= y1):
+            v[1], v[2] = round(x0 + 0.01, 4), round((y0 + y1) / 2, 4)
+    return yol
+
+
 def capali(cumle: str, capalar: list[dict], pdf: "Pdf | None") -> dict | None:
     isr = capali_ic(cumle, capalar, pdf)
     if isr:
         yol = imlec_yolu(cumle, capalar)
         if yol:
-            isr["y"] = yol
+            isr["y"] = bolge_sikilastir(yol, pdf.sayfa(int(isr["s"])) if pdf else None)
     return isr
 
 

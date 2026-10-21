@@ -3,339 +3,174 @@
 @@ Tanım ve ön koşullar
 Uykuda yatağa ya da giysilere yineleyen biçimde idrar kaçırmaya enürezis diyoruz. Tanımın özünde 2 şey var: olay uyku sırasında oluyor ve tekrarlıyor. Yani tek bir gece kazası enürezis sayılmaz. Enürezis nokturna ise daha dar bir tanımdır. Doğuştan ya da kazanılmış santral sinir sistemi defekti olmayan, 5 yaşın üstündeki bir çocukta, istemsiz olarak uykuda gece altını ıslatmaya enürezis nokturna denir.
 
-Bu tanımın 2 ön koşulunu aklınızda tutun.
-1.'si yaş eşiğidir: 5 yaşından küçük bir çocukta gece ıslatma, mesane kontrolünün olgunlaşma sürecinin bir parçası kabul edilir.
-2.'si nörolojik koşuldur: santral sinir sistemi defekti olan bir çocuktaki gece ıslatması enürezis nokturna olarak adlandırılmaz.
-Ders notunda tanım biraz daha ayrıntılı verilir: ıslatmanın 3 ay süreyle en az haftada 2 kez ortaya çıkması, okul ya da sosyal yaşamda sıkıntı yaratması ve bir tıbbi hastalığa bağlı olmaması gerekir.
-Burası önemli, yaş sınırı ve santral sinir sistemi defektinin yokluğu tanımın sınavda en çok sorulan 2 parçasıdır.
+Bu tanımın 2 ön koşulunu aklınızda tutun. 1.'si yaş eşiğidir: 5 yaşından küçük bir çocukta gece ıslatma, mesane kontrolünün olgunlaşma sürecinin bir parçası kabul edilir. 2.'si nörolojik koşuldur: santral sinir sistemi defekti olan bir çocuktaki gece ıslatması enürezis nokturna olarak adlandırılmaz. Ders notunda tanım biraz daha ayrıntılı verilir: ıslatmanın 3 ay süreyle en az haftada 2 kez ortaya çıkması, okul ya da sosyal yaşamda sıkıntı yaratması ve bir tıbbi hastalığa bağlı olmaması gerekir. Burası önemli, yaş sınırı ve santral sinir sistemi defektinin yokluğu tanımın sınavda en çok sorulan 2 parçasıdır.
 
 @@ Oluş zamanına göre sınıflama: primer ve sekonder
 Enürezis ilk olarak oluş zamanına göre sınıflanır. Belirleyici soru, çocuğun daha önce kuru kalabildiği bir dönem olup olmadığıdır. Primer noktürnal enüreziste çocuk doğumdan itibaren yaşamı boyunca hiç kuru kalamamıştır. Sekonder noktürnal enüreziste ise çocuk en az 6 ay boyunca kuru kalmış, ardından yeniden ıslatmaya başlamıştır.
 
-Burası önemli, bu bilgi çıkmış sorularda soruldu: sekonder noktürnal enürezis tanısı için en az 6 aylık kuru dönem gerekir.
-1 ay, 3 ay ya da 12 ay sık kullanılan çeldiricilerdir; kısa süreli kuru geceler sekonder tanıyı koydurmaz.
-Öyküde sorduğumuz pratik soru şudur: daha önce uzun süre kuru kaldığı bir dönem oldu mu?
-Bu ayrım klinik açıdan değerlidir, çünkü sekonder formda yeni başlayan bir tetikleyiciyi aramamız gerekir.
+Burası önemli, bu bilgi çıkmış sorularda soruldu: sekonder noktürnal enürezis tanısı için en az 6 aylık kuru dönem gerekir. 1 ay, 3 ay ya da 12 ay sık kullanılan çeldiricilerdir; kısa süreli kuru geceler sekonder tanıyı koydurmaz. Öyküde sorduğumuz pratik soru şudur: daha önce uzun süre kuru kaldığı bir dönem oldu mu? Bu ayrım klinik açıdan değerlidir, çünkü sekonder formda yeni başlayan bir tetikleyiciyi aramamız gerekir.
 
 @@ Semptomlara göre sınıflama: monosemptomatik ve monosemptomatik olmayan
 İkinci sınıflama ekseni eşlik eden semptomlardır. Monosemptomatik enürezis, basit enürezis olarak da bilinir ve çocuğun yalnız gece yatağı ıslattığı tablodur. Bu tanı için noktüri hariç hiçbir alt üriner sistem semptomu olmamalı, önceden tanımlanmış bir mesane işlev bozukluğu bulunmamalı ve gündüz semptomları eşlik etmemelidir. Gündüz semptomları listesinde ani sıkışma hissi, gündüz idrar kaçırma ve sık idrara gitme yanında kronik kabızlık ve dışkı kaçırma da vardır. Noktüri, yani idrar yapmak için gece uyanma, bu tanıyı bozmaz.
 
-Dikkat edin, kronik kabızlığı ya da dışkı kaçırması olan çocuk yalnız gece ıslatsa bile monosemptomatik kabul edilmez.
-Monosemptomatik olmayan enürezis ise komplike ya da polisemptomatik enürezis olarak da adlandırılır.
-Bunu düşündüren 4 ölçüt vardır: gün boyu inkontinans; aciliyet, yani ani, beklenmedik ve zorunlu işeme dürtüsü; zayıf akış, tereddüt ve zorlu işeme ihtiyacı gibi işeme güçlükleri; ve anormal gündüz işeme sıklığı, yani günde 4'ten az ya da 7'den fazla işeme.
-Normal gündüz işeme sıklığı günde 4 ile 7 kez arasındadır.
-Bu ölçütler mesanenin depolama ya da boşaltım işlevinde bir bozukluk olduğunu gösterir; bu yüzden tablo basit enürezisten farklı ele alınır.
+Dikkat edin, kronik kabızlığı ya da dışkı kaçırması olan çocuk yalnız gece ıslatsa bile monosemptomatik kabul edilmez. Monosemptomatik olmayan enürezis ise komplike ya da polisemptomatik enürezis olarak da adlandırılır. Bunu düşündüren 4 ölçüt vardır: gün boyu inkontinans; aciliyet, yani ani, beklenmedik ve zorunlu işeme dürtüsü; zayıf akış, tereddüt ve zorlu işeme ihtiyacı gibi işeme güçlükleri; ve anormal gündüz işeme sıklığı, yani günde 4'ten az ya da 7'den fazla işeme. Normal gündüz işeme sıklığı günde 4 ile 7 kez arasındadır. Bu ölçütler mesanenin depolama ya da boşaltım işlevinde bir bozukluk olduğunu gösterir; bu yüzden tablo basit enürezisten farklı ele alınır.
 
 @@ Çocuklarda inkontinans sınıflaması
 Derste verilen şemada çocuklardaki idrar kaçırma 3 kutuda toplanır: nokturnal enürezis, gündüz ve gece inkontinansı ve gündüz inkontinansı. Nokturnal enürezis kutusu şemada vurgulanmıştır ve 3 alt mekanizmaya ayrılır: poliüri, uyanma güçlüğü ve nokturnal detrusor hiperaktivitesi. Bu 3 kol ileride patogenezin ana başlıkları olarak karşımıza çıkacak. Şemanın mesajı şu: gece ıslatma sabit bir anatomik soruna değil, idrar miktarı, uyanma ve mesane aktivitesi arasındaki dengeye bağlıdır.
 
-Gündüz ya da gece ve gündüz inkontinansının altında fonksiyonel ve yapısal nedenler bulunur.
-Fonksiyonel inkontinans yapısal bir bozukluk olmadan gelişir ve 4 türü vardır: detrusor hiperaktivitesi, işeme disfonksiyonu, işemeyi erteleme ve kıkırdama inkontinansı.
-İşemeyi ertelemede çocuk çömelme ya da bacak çaprazlama gibi tutma manevraları yapar.
+Gündüz ya da gece ve gündüz inkontinansının altında fonksiyonel ve yapısal nedenler bulunur. Fonksiyonel inkontinans yapısal bir bozukluk olmadan gelişir ve 4 türü vardır: detrusor hiperaktivitesi, işeme disfonksiyonu, işemeyi erteleme ve kıkırdama inkontinansı. İşemeyi ertelemede çocuk çömelme ya da bacak çaprazlama gibi tutma manevraları yapar.
 
-Yapısal inkontinans 2 gruptur.
-Nörojenik mesane nedenleri spina bifida, gergin omurilik, sakral malformasyon, serebral palsi, spinal kord tümörleri, imperfore anüs ve travmadır.
-Anatomik anomaliler ise ekstrofi epispadias kompleksi, ektopik üreter ve üreterosel, kloaka anomalileri, üretral valv ve siringoseldir.
-Bu liste, enürezis tanımındaki santral sinir sistemi defekti olmamalı koşulunun klinik karşılığıdır; gece ıslatan çocukta sırt, genital bölge ve nörolojik muayeneyi bu yapısal nedenleri kaçırmamak için yaparız.
+Yapısal inkontinans 2 gruptur. Nörojenik mesane nedenleri spina bifida, gergin omurilik, sakral malformasyon, serebral palsi, spinal kord tümörleri, imperfore anüs ve travmadır. Anatomik anomaliler ise ekstrofi epispadias kompleksi, ektopik üreter ve üreterosel, kloaka anomalileri, üretral valv ve siringoseldir. Bu liste, enürezis tanımındaki santral sinir sistemi defekti olmamalı koşulunun klinik karşılığıdır; gece ıslatan çocukta sırt, genital bölge ve nörolojik muayeneyi bu yapısal nedenleri kaçırmamak için yaparız.
 
 @@ Mesane kapasitesi ve noktürnal poliüri
 Sınıflamanın 2 ekseni birleştiğinde en sık görülen tablo primer monosemptomatik noktürnal enürezistir. Burası önemli, çıkmış sorularda doğru ifade olarak yer aldı: primer monosemptomatik noktürnal enürezis en sık görülen enürezis formudur. Bu formun altta yatan sebepleri, tedavisi ve prognozu monosemptomatik olmayan enürezisten farklıdır.
 
-Mesanenin depolama kapasitesi, işenen hacimleri bir işeme çizelgesi aracılığıyla değerlendirerek yaklaşık olarak tahmin edilir.
-Her işemede boşaltılan idrar miktarından ortalama ve maksimum işeme hacimleri hesaplanır.
-Yaşa göre beklenen mesane kapasitesinin formülü şudur: yıl olarak yaş çarpı 30, artı 30 mililitre.
-Örneğin 6 yaşındaki bir çocukta beklenen kapasite 210 mililitredir; 5 yaşta 180, 7 yaşta 240, 10 yaşta 330 mililitredir.
-Bu formül, yetişkin kapasitesi olan 400 mililitreye ulaşılana kadar geçerlidir.
+Mesanenin depolama kapasitesi, işenen hacimleri bir işeme çizelgesi aracılığıyla değerlendirerek yaklaşık olarak tahmin edilir. Her işemede boşaltılan idrar miktarından ortalama ve maksimum işeme hacimleri hesaplanır. Yaşa göre beklenen mesane kapasitesinin formülü şudur: yıl olarak yaş çarpı 30, artı 30 mililitre. Örneğin 6 yaşındaki bir çocukta beklenen kapasite 210 mililitredir; 5 yaşta 180, 7 yaşta 240, 10 yaşta 330 mililitredir. Bu formül, yetişkin kapasitesi olan 400 mililitreye ulaşılana kadar geçerlidir.
 
-Noktürnal poliüri, enürezisin önemli bir patogenetik mekanizmasıdır.
-Enürezisli bir gecede idrar hacminin, yaşa göre beklenen mesane kapasitesinin en az %130'u olması olarak tanımlanır.
-Peki gece idrar hacmini nasıl ölçeriz?
-İki bileşeni toplarız: ıslanan çarşafın ya da yatak koruyucu bezin ağırlığı, yani yatağa kaçan idrar, ve sabah ilk idrar hacmi, yani gece üretilip mesanede biriken idrar.
+Noktürnal poliüri, enürezisin önemli bir patogenetik mekanizmasıdır. Enürezisli bir gecede idrar hacminin, yaşa göre beklenen mesane kapasitesinin en az %130'u olması olarak tanımlanır. Peki gece idrar hacmini nasıl ölçeriz? İki bileşeni toplarız: ıslanan çarşafın ya da yatak koruyucu bezin ağırlığı, yani yatağa kaçan idrar, ve sabah ilk idrar hacmi, yani gece üretilip mesanede biriken idrar.
 
-Burası önemli, bu bilgi çıkmış sorularda soruldu: noktürnal poliüri tanısı için gece idrar hacmi beklenen mesane kapasitesinin %130'undan fazla olmalıdır.
-%50, %80, %100 ve %150 çeldiricidir.
-Örnekle düşünelim: 6 yaşında beklenen kapasite 210 mililitre ise, gece idrarı yaklaşık 273 mililitre ve üzerindeyse noktürnal poliüri vardır.
+Burası önemli, bu bilgi çıkmış sorularda soruldu: noktürnal poliüri tanısı için gece idrar hacmi beklenen mesane kapasitesinin %130'undan fazla olmalıdır. %50, %80, %100 ve %150 çeldiricidir. Örnekle düşünelim: 6 yaşında beklenen kapasite 210 mililitre ise, gece idrarı yaklaşık 273 mililitre ve üzerindeyse noktürnal poliüri vardır.
 
 @@ Epidemiyoloji
 Enürezis yaygın bir sorundur ve sıklığı yaşla azalır, ama erişkinlikte bile sıfırlanmaz. 7 yaşındaki çocukların yaklaşık %5 ile 10'unda görülür. Ergenlerde prevalans yaklaşık %3, yetişkinlerde ise %0,5 ile 1 arasındadır. Tedavisiz kendiliğinden düzelme, yani yıllık spontan remisyon oranı %15'tir. Enürezis sıklığı fazla ise, tedavi olmaksızın kuru kalma şansı belirgin şekilde daha düşüktür.
 
-Burası önemli, çıkmış sorularda doğru ifade olarak tekrar tekrar kullanıldı: yıllık spontan rezolüsyon oranı yaklaşık %15'tir ve enürezis sıklığı arttıkça spontan rezolüsyon oranı azalır.
-Yaş büyüdükçe görülme sıklığının azalması da doğru bir ifadedir.
-Yıllık %15'lik remisyon, her yıl enüretik çocukların yalnız küçük bir bölümünün kendiliğinden düzeldiği anlamına gelir; yani sorun yıllarca sürebilir.
+Burası önemli, çıkmış sorularda doğru ifade olarak tekrar tekrar kullanıldı: yıllık spontan rezolüsyon oranı yaklaşık %15'tir ve enürezis sıklığı arttıkça spontan rezolüsyon oranı azalır. Yaş büyüdükçe görülme sıklığının azalması da doğru bir ifadedir. Yıllık %15'lik remisyon, her yıl enüretik çocukların yalnız küçük bir bölümünün kendiliğinden düzeldiği anlamına gelir; yani sorun yıllarca sürebilir.
 
-Derste gösterilen sıklık eğrisi, 5 ile 19 yaş arasındaki 16.512 çocuk ve ergende, 7455 erkek ve 9057 kızda yapılmış geniş bir epidemiyolojik çalışmadan alınmıştır.
-Sıklık 5 yaşta en yüksektir: erkeklerde yaklaşık %21, kızlarda yaklaşık %10,5, toplamda yaklaşık %15,5.
-5 ile 9 yaş arasında hızla düşer ve 9 yaşta toplam yaklaşık %3'e iner.
-Küçük yaşlarda erkeklerde belirgin olarak daha sıktır, 10 yaştan sonra fark büyük ölçüde kapanır.
-10 ile 19 yaş arasında ise sıklık %1 ile 3 düzeyinde yatay seyreder; bu plato, bir kısım çocukta enürezisin kendiliğinden düzelmediğini gösterir.
+Derste gösterilen sıklık eğrisi, 5 ile 19 yaş arasındaki 16.512 çocuk ve ergende, 7455 erkek ve 9057 kızda yapılmış geniş bir epidemiyolojik çalışmadan alınmıştır. Sıklık 5 yaşta en yüksektir: erkeklerde yaklaşık %21, kızlarda yaklaşık %10,5, toplamda yaklaşık %15,5. 5 ile 9 yaş arasında hızla düşer ve 9 yaşta toplam yaklaşık %3'e iner. Küçük yaşlarda erkeklerde belirgin olarak daha sıktır, 10 yaştan sonra fark büyük ölçüde kapanır. 10 ile 19 yaş arasında ise sıklık %1 ile 3 düzeyinde yatay seyreder; bu plato, bir kısım çocukta enürezisin kendiliğinden düzelmediğini gösterir.
 
 @@ Patogenez: multifaktöryel model ve genetik
 Monosemptomatik enürezis nokturnanın etiyolojisinin daha çok multifaktöryel olduğu düşünülür. 4 ana faktör vardır: genetik faktörler, uyanma bozukluğu, noktürnal poliüri ve artmış detrusor aktivitesi ile gece düşük mesane kapasitesi. Bunlara ek olarak diğer faktörler sayılır: psikososyal faktörler, diyet, obstrüktif uyku apnesi ve kabızlık ya da dışkı kaçırma.
 
-Derste fizyopatolojiyi özetleyen 3 halkalı bir şema vardır.
-Enürezis nokturna, 3 halkanın kesişiminde durur: yetersiz antidiüretik hormon salımına bağlı noktürnal poliüri, gece fonksiyonel mesane kapasitesinin azalması ve mesane doluluğuna karşı uykudan uyanamama.
-Gece üretilen idrar mesanenin taşıyabileceğini aştığında ya da mesane erken kasıldığında, çocuk bu uyarıyla uyanamazsa yatak ıslanır.
-Yani poliüri ya da düşük kapasite tek başına yetmez; uyanamama ortak paydadır.
+Derste fizyopatolojiyi özetleyen 3 halkalı bir şema vardır. Enürezis nokturna, 3 halkanın kesişiminde durur: yetersiz antidiüretik hormon salımına bağlı noktürnal poliüri, gece fonksiyonel mesane kapasitesinin azalması ve mesane doluluğuna karşı uykudan uyanamama. Gece üretilen idrar mesanenin taşıyabileceğini aştığında ya da mesane erken kasıldığında, çocuk bu uyarıyla uyanamazsa yatak ıslanır. Yani poliüri ya da düşük kapasite tek başına yetmez; uyanamama ortak paydadır.
 
-Genetik yatkınlık en güçlü risk faktörlerinden biridir.
-Anne ve babanın ikisinde de noktürnal enürezis öyküsü varsa çocukta görülme olasılığı %77, ikisinden birinde öykü varsa %44'tür.
-Monozigotik ikiz kardeş enüretikse diğer ikizde oran %65 ile 70, dizigotik ikiz kardeş enüretikse %31 ile 44'tür; monozigotlarda oranın daha yüksek olması genetik katkının kanıtıdır.
-Genetik çalışmalara göre 10'dan fazla kromozom enürezisle ilişkilidir.
-Kromozom 5, 11, 12, 13 ve son zamanlarda kromozom 22 enüretik gen ailesini oluşturur.
-Bu kadar çok kromozomun işin içinde olması, enürezisin tek gen hastalığı değil heterojen bir yatkınlık olduğunu gösterir.
-Çıkmış sorularda hastalığın genetik temeli olduğu doğru ifade olarak yer almıştır.
+Genetik yatkınlık en güçlü risk faktörlerinden biridir. Anne ve babanın ikisinde de noktürnal enürezis öyküsü varsa çocukta görülme olasılığı %77, ikisinden birinde öykü varsa %44'tür. Monozigotik ikiz kardeş enüretikse diğer ikizde oran %65 ile 70, dizigotik ikiz kardeş enüretikse %31 ile 44'tür; monozigotlarda oranın daha yüksek olması genetik katkının kanıtıdır. Genetik çalışmalara göre 10'dan fazla kromozom enürezisle ilişkilidir. Kromozom 5, 11, 12, 13 ve son zamanlarda kromozom 22 enüretik gen ailesini oluşturur. Bu kadar çok kromozomun işin içinde olması, enürezisin tek gen hastalığı değil heterojen bir yatkınlık olduğunu gösterir. Çıkmış sorularda hastalığın genetik temeli olduğu doğru ifade olarak yer almıştır.
 
 @@ Uyanma bozukluğu
 Üç halkalı şemadaki uyanamama, enüretik çocukların uyku özelliklerinden kaynaklanır. Enüretik çocukların uyku kalitesi genellikle kötüdür. Uyandırmak için yapılan uyarılara normal çocuklara göre daha az yanıt verirler; yani uyarılma eşikleri artmıştır. Mesane doluluğunun ve kontraksiyonlarının algılanmasında ve inhibisyonunda gelişimsel bir gecikme olduğu bildirilmektedir. Bu gelişimsel gecikme, çocuk büyüdükçe yeteneğin olgunlaşmasıyla spontan remisyonun yıllar içinde neden gerçekleştiğini de açıklar.
 
-Burası önemli, bu bilgi çıkmış sorularda yanlış ifade olarak soruldu: enüretik çocuklarda uyarılma eşiği yüksek olduğu için derin ve kaliteli uyku uyudukları ifadesi yanlıştır.
-Artan uyarılma eşikleri bu çocukların iyi uyudukları anlamına gelmez; ailenin çok derin uyuyor gözlemini kaliteli uyku diye yorumlamayın.
-Öte yandan uyanma güçlüğünün enüreziste sıklıkla eşlik ettiği ve derin uyku sırasında mesane doluluğuna karşı yetersiz uyanma refleksinin enürezisle ilişkili olduğu doğru ifadelerdir.
+Burası önemli, bu bilgi çıkmış sorularda yanlış ifade olarak soruldu: enüretik çocuklarda uyarılma eşiği yüksek olduğu için derin ve kaliteli uyku uyudukları ifadesi yanlıştır. Artan uyarılma eşikleri bu çocukların iyi uyudukları anlamına gelmez; ailenin çok derin uyuyor gözlemini kaliteli uyku diye yorumlamayın. Öte yandan uyanma güçlüğünün enüreziste sıklıkla eşlik ettiği ve derin uyku sırasında mesane doluluğuna karşı yetersiz uyanma refleksinin enürezisle ilişkili olduğu doğru ifadelerdir.
 
-Burası önemli, arşivdeki çıkmış bir soru ıslatmanın uykunun hangi döneminde olduğunu sordu ve yanıt olarak uykunun üçüncü dönemi kabul edildi.
-Yani primer enürezis nokturnada altına kaçırma derin uyku döneminde olur; uyanıklık dönemi ya da REM uykusu bu sorunun çeldiricileridir.
-Bu bilgi, uyanma bozukluğunun derin uykuda mesane sinyaline yanıt verememekle ilgili olduğunu 1 kez daha hatırlatır.
+Burası önemli, arşivdeki çıkmış bir soru ıslatmanın uykunun hangi döneminde olduğunu sordu ve yanıt olarak uykunun üçüncü dönemi kabul edildi. Yani primer enürezis nokturnada altına kaçırma derin uyku döneminde olur; uyanıklık dönemi ya da REM uykusu bu sorunun çeldiricileridir. Bu bilgi, uyanma bozukluğunun derin uykuda mesane sinyaline yanıt verememekle ilgili olduğunu 1 kez daha hatırlatır.
 
 @@ Noktürnal poliüri ve antidiüretik hormon ritmi
 Şemanın bir diğer halkası noktürnal poliüridir. 12 yaş altında gece idrar miktarının beklenen mesane kapasitesinin %130'undan fazla olması olarak tanımlanır. Mekanizmanın hormonal temeli şudur: normal koşullarda gece antidiüretik hormon salgısı gündüze göre yüksektir ve %50 daha az idrar çıkışına neden olur. Böylece uyku sırasında üretilen idrar mesane kapasitesi içinde kalır. Bu döngüsel ritim bozulduğunda gece idrar üretimi artar, fonksiyonel mesane kapasitesi aşılır ve enürezis gelişebilir.
 
-Gece gündüz döngüsel ritminin eksikliği, patofizyolojik bir bozukluk olmaktan çok çocuğun gelişim sürecindeki gecikmeye bağlanır.
-Bu yorum, ritim olgunlaştıkça enürezisin düzelebileceğini açıklar ve ileride göreceğimiz, eksik antidiüretik etkiyi yerine koyan tedavinin mantığını hazırlar.
-Burası önemli, çıkmış sorularda vazopressin salınımındaki bozukluğun enürezise yol açabileceği doğru ifade olarak yer aldı.
-Buna karşılık prolaktin hormonu düzeylerinin enürezis gelişiminde temel rol oynadığı ifadesi yanlıştır; enüreziste rol oynayan hormon antidiüretik hormondur, yani vazopressindir.
+Gece gündüz döngüsel ritminin eksikliği, patofizyolojik bir bozukluk olmaktan çok çocuğun gelişim sürecindeki gecikmeye bağlanır. Bu yorum, ritim olgunlaştıkça enürezisin düzelebileceğini açıklar ve ileride göreceğimiz, eksik antidiüretik etkiyi yerine koyan tedavinin mantığını hazırlar. Burası önemli, çıkmış sorularda vazopressin salınımındaki bozukluğun enürezise yol açabileceği doğru ifade olarak yer aldı. Buna karşılık prolaktin hormonu düzeylerinin enürezis gelişiminde temel rol oynadığı ifadesi yanlıştır; enüreziste rol oynayan hormon antidiüretik hormondur, yani vazopressindir.
 
 @@ Artmış detrusor aktivitesi ve gece düşük mesane kapasitesi
 Dördüncü ana faktörü anlamak için 2 kapasite kavramını ayırmamız gerekir. Total mesane kapasitesi, mesanenin anatomik olarak alabildiği hacimdir. Fonksiyonel mesane kapasitesi ise mesanenin günlük yaşamda kasılma başlamadan önce gerçekte tuttuğu hacimdir. Enürezis nokturnalı hastalarda yapılan ürodinamik çalışmalarda total mesane kapasitesi normal, fonksiyonel mesane kapasitesi ise düşük bulunmuştur. Yani sorun mesanenin küçüklüğü değil, erken dolmuş gibi davranmasıdır. Bunun primer bir neden mi, yoksa noktürnal poliüriye bağlı göreceli bir kapasite azlığı mı olduğu hâlâ tartışmalıdır; gece çok idrar üreten çocukta normal kapasite de görece yetersiz kalabilir.
 
-Normal çocuklarda gece mesane kapasitesi gündüze göre daha fazladır.
-Bunun, uykunun işeme merkezine inhibitör etkisinden kaynaklandığı düşünülür; uyku işeme refleksini baskılar ve mesanenin daha fazla dolmasına izin verir.
-Enürezisli çocukların büyük bir kısmında ise detrusor instabilitesi vardır ve detrusor uzun süreli, yüksek basınçlı kontraksiyonlar yapar.
-Bu istemsiz kasılmalar fonksiyonel mesane kapasitesini azaltır ve gece beklenen kapasite artışı gerçekleşmez.
-Bu mekanizma, inkontinans şemasındaki nokturnal detrusor hiperaktivitesi kolunun karşılığıdır.
-Çıkmış sorularda detrusor kasının aşırı aktivitesinin ve küçük mesane kapasitesinin enürezisle ilişkili olduğu doğru ifadeler olarak geçmiştir.
+Normal çocuklarda gece mesane kapasitesi gündüze göre daha fazladır. Bunun, uykunun işeme merkezine inhibitör etkisinden kaynaklandığı düşünülür; uyku işeme refleksini baskılar ve mesanenin daha fazla dolmasına izin verir. Enürezisli çocukların büyük bir kısmında ise detrusor instabilitesi vardır ve detrusor uzun süreli, yüksek basınçlı kontraksiyonlar yapar. Bu istemsiz kasılmalar fonksiyonel mesane kapasitesini azaltır ve gece beklenen kapasite artışı gerçekleşmez. Bu mekanizma, inkontinans şemasındaki nokturnal detrusor hiperaktivitesi kolunun karşılığıdır. Çıkmış sorularda detrusor kasının aşırı aktivitesinin ve küçük mesane kapasitesinin enürezisle ilişkili olduğu doğru ifadeler olarak geçmiştir.
 
 @@ Diğer faktörler: psikososyal etkenler, dikkat eksikliği ve diyet
 Diğer faktörlerin ilki psikososyal etkenlerdir ve burada ilişkinin yönü önemlidir. Psikopatolojik bozukluklar enüreziste etiyolojik faktör olarak kabul edilmez. Tersine, enürezis nokturnanın yarattığı stres çocukta ve ailede anksiyeteye yol açar. Bununla birlikte, mesane işlevlerinin kazanıldığı hassas bir dönem olan hayatın 2. ile 4. yılları arasında akut ve kronik anksiyete yaratan faktörler devreye girerse sekonder enürezis gelişebilir. Ailenin bölünmesi, anne ve babadan geçici olarak ayrı kalma, kardeş doğumu, ev değiştirme ve kazalar gibi olaylar özellikle sekonder enürezisle ilişkilidir. Yani yaşam olaylarını sekonder enüreziste sorgularız, ama primer enürezisi psikolojik bir hastalık gibi yorumlamayız.
 
-10 yaş ve üzerindeki primer enürezisli çocukların önemli bir kısmında dikkat eksikliği ve hiperaktivite bozukluğuyla ilişkili semptomlar gözlenmiştir; bu nedenle büyük çocuklarda davranış ve konsantrasyon sorunları sorgulanmalıdır.
-Diyet de değiştirilebilir bir faktördür.
-Yüksek oranda kafein içeren içecekler, kakao ve turunçgiller noktürnal poliüriye neden olabilir.
-Özellikle dikkat eksikliği ve hiperaktivite bozukluğu ile migren gibi hastalıklarda kısıtlı diyet uygulayanlarda enürezisin ortadan kalktığı gözlemlenmiştir.
+10 yaş ve üzerindeki primer enürezisli çocukların önemli bir kısmında dikkat eksikliği ve hiperaktivite bozukluğuyla ilişkili semptomlar gözlenmiştir; bu nedenle büyük çocuklarda davranış ve konsantrasyon sorunları sorgulanmalıdır. Diyet de değiştirilebilir bir faktördür. Yüksek oranda kafein içeren içecekler, kakao ve turunçgiller noktürnal poliüriye neden olabilir. Özellikle dikkat eksikliği ve hiperaktivite bozukluğu ile migren gibi hastalıklarda kısıtlı diyet uygulayanlarda enürezisin ortadan kalktığı gözlemlenmiştir.
 
 @@ Diğer faktörler: obstrüktif uyku apnesi ve kabızlık
 Üst hava yolu obstrüksiyonu ve uyku apnesi hormonal bir yol üzerinden etki eder. Atriyal natriüretik peptidin gece salınımını artırırlar; bu peptid sodyumla birlikte su atılımını artırır ve sonuçta noktürnal poliüri gelişir. Bu mekanizma sıklıkla sekonder enürezise neden olabilir. Ağır horlama, gece solunum duraklamaları ve gündüz uykululuk bu çocukta dikkat çekici ipuçlarıdır.
 
-Kabızlık, gündüz inkontinansı olan çocuklarda son derece yaygındır; monosemptomatik olmayan enüreziste ve muhtemelen monosemptomatik enüreziste de sık görülür.
-Bunun nedeni, kabızlık ile detrusor aşırı aktivitesinin birbiriyle güçlü biçimde ilişkili olmasıdır.
-Kabızlık ve rektal distansiyon detrusor aşırı aktivitesini tetikleyerek enürezise zemin hazırlar.
-Bu yüzden monosemptomatik olmayan enüreziste enürezisin tedavisi, kabızlık ekarte edilmeden ya da başarıyla tedavi edilmeden başlatılmamalıdır.
-Çıkmış sorularda enürezisin bağırsak alışkanlıklarıyla ilişkili olabileceği doğru ifade olarak geçmiştir.
+Kabızlık, gündüz inkontinansı olan çocuklarda son derece yaygındır; monosemptomatik olmayan enüreziste ve muhtemelen monosemptomatik enüreziste de sık görülür. Bunun nedeni, kabızlık ile detrusor aşırı aktivitesinin birbiriyle güçlü biçimde ilişkili olmasıdır. Kabızlık ve rektal distansiyon detrusor aşırı aktivitesini tetikleyerek enürezise zemin hazırlar. Bu yüzden monosemptomatik olmayan enüreziste enürezisin tedavisi, kabızlık ekarte edilmeden ya da başarıyla tedavi edilmeden başlatılmamalıdır. Çıkmış sorularda enürezisin bağırsak alışkanlıklarıyla ilişkili olabileceği doğru ifade olarak geçmiştir.
 
-Burası önemli, çıkmış sorularda kabızlığın risk faktörleri de soruldu.
-Düşük lif, meyve ve sebze tüketimi, obezite, cinsel ve fiziksel istismar ve dikkat eksikliği ve hiperaktivite bozukluğu kabızlığın risk faktörleri arasında sayılmıştır; obstrüktif uyku apnesi ise kabızlığın risk faktörü değildir.
-Uyku apnesini enürezisle noktürnal poliüri üzerinden ilişkilendiriyoruz, kabızlıkla değil.
-Benzer biçimde fonksiyonel kabızlığa yol açan durumlar olarak okul çağında hijyenik olmayan tuvaletlerden kaçınma, bebeklikte anne sütünden kesilme, lifli gıdaların az tüketilmesi ve tuvalet eğitimi sırasında ebeveynlerle kontrol ve bağımsızlık mücadelesi sayılmıştır.
-Diabetes mellitus ise fonksiyonel kabızlığa neden olmaz.
+Burası önemli, çıkmış sorularda kabızlığın risk faktörleri de soruldu. Düşük lif, meyve ve sebze tüketimi, obezite, cinsel ve fiziksel istismar ve dikkat eksikliği ve hiperaktivite bozukluğu kabızlığın risk faktörleri arasında sayılmıştır; obstrüktif uyku apnesi ise kabızlığın risk faktörü değildir. Uyku apnesini enürezisle noktürnal poliüri üzerinden ilişkilendiriyoruz, kabızlıkla değil. Benzer biçimde fonksiyonel kabızlığa yol açan durumlar olarak okul çağında hijyenik olmayan tuvaletlerden kaçınma, bebeklikte anne sütünden kesilme, lifli gıdaların az tüketilmesi ve tuvalet eğitimi sırasında ebeveynlerle kontrol ve bağımsızlık mücadelesi sayılmıştır. Diabetes mellitus ise fonksiyonel kabızlığa neden olmaz.
 
 @@ İlk değerlendirme: uyarı işaretleri
 İlk değerlendirme, klinisyenin önemli uyarı işaretlerine gecikmeden tepki vermesini sağlamalıdır. Uyarı işaretleri, enürezisin altında organik bir hastalık olabileceğini gösterir ve 5'inin de ortak eylemi fizik bakıdır. Kilo kaybı, büyüme geriliği ya da mide bulantısı varsa kreatinin ve idrar glikozu kontrol edilir; böylece böbrek yetmezliği ve diyabet gibi sistemik nedenler dışlanır. Gece içme ihtiyacıyla birlikte aşırı susuzluk varsa idrar glikozu kontrol edilir, bir sıvı alım listesi doldurulur, kreatinin ve sabah idrar ozmolalitesi ölçülür. Sabah ozmolalitesi böbreğin gece idrarı yoğunlaştırma yeteneğini gösterir.
 
-İşeme güçlüklerinde, yani zayıf işeme ve zorlu işeme ihtiyacında üroflow ile rezidü idrar kontrol edilir.
-Yakın zamanda ortaya çıkan sekonder enüreziste idrar glikozu kontrol edilir, çünkü daha önce kuru olan çocukta yeni ıslatma, şekere bağlı poliürinin ilk bulgusu olabilir.
-Ağır horlama ya da uyku apnelerinde kulak burun boğaz uzmanıyla iletişime geçilir.
+İşeme güçlüklerinde, yani zayıf işeme ve zorlu işeme ihtiyacında üroflow ile rezidü idrar kontrol edilir. Yakın zamanda ortaya çıkan sekonder enüreziste idrar glikozu kontrol edilir, çünkü daha önce kuru olan çocukta yeni ıslatma, şekere bağlı poliürinin ilk bulgusu olabilir. Ağır horlama ya da uyku apnelerinde kulak burun boğaz uzmanıyla iletişime geçilir.
 
-Burası önemli, bu mantık çıkmış bir vaka sorusunda soruldu.
-3 yaşında tuvalet eğitimini tamamlamış, gece ve gündüz kontinan olan 6 yaşında bir kız çocuğu düşünün.
-Üç haftadır geceleri yatak ıslatıyor, son bir haftadır günde 3,5 litre su içiyor ve günde 15 kez idrara gidiyor; fizik ve nörolojik muayenesi normal.
-Bu, yeni başlayan sekonder enürezis ile aşırı susuzluğun birleşimidir.
-Bir sonraki adım idrar analizi ve açlık kan şekeri bakılmasıdır.
-Uyku analizi, spinal manyetik rezonans, ürodinami ya da psikolojik konsültasyon bu aşamada doğru değildir.
+Burası önemli, bu mantık çıkmış bir vaka sorusunda soruldu. 3 yaşında tuvalet eğitimini tamamlamış, gece ve gündüz kontinan olan 6 yaşında bir kız çocuğu düşünün. Üç haftadır geceleri yatak ıslatıyor, son bir haftadır günde 3,5 litre su içiyor ve günde 15 kez idrara gidiyor; fizik ve nörolojik muayenesi normal. Bu, yeni başlayan sekonder enürezis ile aşırı susuzluğun birleşimidir. Bir sonraki adım idrar analizi ve açlık kan şekeri bakılmasıdır. Uyku analizi, spinal manyetik rezonans, ürodinami ya da psikolojik konsültasyon bu aşamada doğru değildir.
 
 @@ Öykü
 Tıbbi öykü, enüretik çocuğun değerlendirilmesinin en önemli ve bazen tek gerekli kısmıdır. Öykünün 2 amacı vardır: ek değerlendirmeye gerek olup olmadığını bulmak ve çocuk ve aileyle birlikte birinci basamak tedaviyi seçebilmek için yeterli bilgi toplamak. Klinisyen yalnız ebeveynle değil, çocukla da konuşmalıdır.
 
-Öykü belirli başlıklara odaklanır.
-Genel sağlıkta büyüme ve gelişmenin normal olup olmadığını, kilo kaybını, bulantıyı ve diyabeti düşündüren, gece içme ihtiyacıyla birlikte aşırı susuzluğu sorarız.
-Enürezis paterninde her gece mi ıslak olduğunu, yoksa daha seyrek mi olduğunu ve uzun süreli kuru dönemler olup olmadığını sorarız; sıklık prognozu, kuru dönem öyküsü ise primer sekonder ayrımını belirler.
-Gündüz işeme alışkanlıklarında gündüz inkontinansı varsa ne sıklıkla ve ne zaman olduğunu, aciliyet yaşayıp yaşamadığını, zayıf akım ya da zorlu işeme ihtiyacı gibi işeme güçlüklerini, çömelme ya da diğer tutma manevralarını ve daha önce idrar yolu enfeksiyonu geçirip geçirmediğini sorgularız.
-Bu sorulardan birine olumlu yanıt, çocuğun monosemptomatik olmayan grupta olabileceğini düşündürür; gündüz semptomlarını sormadan çocuğu yalnız gece ıslatıyor diye monosemptomatik kabul etmek sık yapılan bir hatadır.
+Öykü belirli başlıklara odaklanır. Genel sağlıkta büyüme ve gelişmenin normal olup olmadığını, kilo kaybını, bulantıyı ve diyabeti düşündüren, gece içme ihtiyacıyla birlikte aşırı susuzluğu sorarız. Enürezis paterninde her gece mi ıslak olduğunu, yoksa daha seyrek mi olduğunu ve uzun süreli kuru dönemler olup olmadığını sorarız; sıklık prognozu, kuru dönem öyküsü ise primer sekonder ayrımını belirler. Gündüz işeme alışkanlıklarında gündüz inkontinansı varsa ne sıklıkla ve ne zaman olduğunu, aciliyet yaşayıp yaşamadığını, zayıf akım ya da zorlu işeme ihtiyacı gibi işeme güçlüklerini, çömelme ya da diğer tutma manevralarını ve daha önce idrar yolu enfeksiyonu geçirip geçirmediğini sorgularız. Bu sorulardan birine olumlu yanıt, çocuğun monosemptomatik olmayan grupta olabileceğini düşündürür; gündüz semptomlarını sormadan çocuğu yalnız gece ıslatıyor diye monosemptomatik kabul etmek sık yapılan bir hatadır.
 
-Uyku problemlerinde sürekli ağır horlama, uyku apneleri ve gündüz uykululuk sorulur.
-Davranış sorunlarında konsantrasyon güçlüğü ve evde ya da okulda sosyal etkileşim sorunları sorgulanır; ayrıca yatak ıslatmanın çocuk için büyük bir sorun olup olmadığı ve öyleyse neden olduğu sorulur, bu da çocuğun motivasyonunu gösterir.
-Önceki tedavilerde hangi tedavi ve stratejilerin kullanıldığı ve neden işe yaramadıkları öğrenilir.
+Uyku problemlerinde sürekli ağır horlama, uyku apneleri ve gündüz uykululuk sorulur. Davranış sorunlarında konsantrasyon güçlüğü ve evde ya da okulda sosyal etkileşim sorunları sorgulanır; ayrıca yatak ıslatmanın çocuk için büyük bir sorun olup olmadığı ve öyleyse neden olduğu sorulur, bu da çocuğun motivasyonunu gösterir. Önceki tedavilerde hangi tedavi ve stratejilerin kullanıldığı ve neden işe yaramadıkları öğrenilir.
 
-Bağırsak alışkanlıkları Roma IV kriterlerine göre sorgulanır.
-Kabızlık tanısı için aşağıdaki kriterlerden en az 2'si en az 4 hafta süreyle bulunmalıdır: haftada 2 ya da daha az dışkılama, aşırı dışkı tutma öyküsü, ağrılı ya da sert bağırsak hareketleri öyküsü, tuvaleti tıkayabilecek geniş çaplı dışkı öyküsü, haftada en az 1 kez fekal inkontinans ve rektumda büyük bir fekal kitlenin varlığı.
-Son kriter rutin değildir, yalnız tanısal şüphe olduğunda değerlendirilir.
+Bağırsak alışkanlıkları Roma IV kriterlerine göre sorgulanır. Kabızlık tanısı için aşağıdaki kriterlerden en az 2'si en az 4 hafta süreyle bulunmalıdır: haftada 2 ya da daha az dışkılama, aşırı dışkı tutma öyküsü, ağrılı ya da sert bağırsak hareketleri öyküsü, tuvaleti tıkayabilecek geniş çaplı dışkı öyküsü, haftada en az 1 kez fekal inkontinans ve rektumda büyük bir fekal kitlenin varlığı. Son kriter rutin değildir, yalnız tanısal şüphe olduğunda değerlendirilir.
 
 @@ Fizik bakı
 Temel ilke şudur: monosemptomatik enürezis nokturnalı çocukların fizik bakısı normaldir. Bu yüzden her anormal bulgu ek değerlendirme gerekçesidir. Hastanın genel tam sistemik muayenesi yapılır ve vital bulguları değerlendirilir. Büyüme ve gelişmenin değerlendirilmesi, altta yatan önemli bir organik sorunun ortaya konmasına yardımcı olur. Genital organlar, karın ve sırt bölgesi, postür ve gerektiğinde işemenin kendisi gözlemlenir.
 
-Ürogenital bakıda kız çocuklarda vulvit, vajinit ve labial yapışıklık aranır; özellikle damla damla ıslatma varlığında ektopik üreter mutlaka düşünülmelidir, çünkü sürekli damlama normal işemeden bağımsız bir idrar kaynağına işaret eder.
-Erkek çocuklarda meatal stenoz, yani dış üretral ağzın darlığı, epispadias ve hipospadias aranır.
-Sırt bölgesinde spinal disrafizme ait kıllanma ya da deride renk değişikliği aranır.
-Nörolojik muayene ile sakral refleks arkının sağlamlığı, yani anal sfinkter tonusu ve perianal refleks, ayrıca yürüyüş değerlendirilir.
-Konstipasyon öyküsü olanlarda fekalomlar araştırılır.
-Son olarak mesanenin işeme sonrası palpe edilebilir olmasına dikkat edilir; işemeden sonra elle hissedilen mesane, tam boşalmadığını gösterir.
+Ürogenital bakıda kız çocuklarda vulvit, vajinit ve labial yapışıklık aranır; özellikle damla damla ıslatma varlığında ektopik üreter mutlaka düşünülmelidir, çünkü sürekli damlama normal işemeden bağımsız bir idrar kaynağına işaret eder. Erkek çocuklarda meatal stenoz, yani dış üretral ağzın darlığı, epispadias ve hipospadias aranır. Sırt bölgesinde spinal disrafizme ait kıllanma ya da deride renk değişikliği aranır. Nörolojik muayene ile sakral refleks arkının sağlamlığı, yani anal sfinkter tonusu ve perianal refleks, ayrıca yürüyüş değerlendirilir. Konstipasyon öyküsü olanlarda fekalomlar araştırılır. Son olarak mesanenin işeme sonrası palpe edilebilir olmasına dikkat edilir; işemeden sonra elle hissedilen mesane, tam boşalmadığını gösterir.
 
 @@ İşeme çizelgesi ve laboratuvar
 İşeme çizelgesi, Uluslararası Çocuk Kontinans Derneği tarafından tanımlanmıştır. Tüm enüretik çocukların ilk değerlendirmesinde tavsiye edilir ve enürezisin monosemptomatik olmayan tipte olduğuna dair herhangi bir gösterge varsa zorunludur. İdeal süresi 1 haftadır, ancak pratikteki uygulama zorluğu nedeniyle ardışık 2 gün boyunca tutulur. Çizelgeye sıvı alışkanlıkları, işeme sıklığı, işeme hacimleri ve ek mesane semptomları kaydedilir. Dışkılama alışkanlıkları ise en az 1 hafta süreyle kaydedilmelidir. Çizelgenin amacı, öyküde çocuk ve aile tarafından tam ifade edilemeyen objektif verilere ulaşmak, monosemptomatik olmayan enürezis ayrımını yapmak ve ek inceleme gerektiren vakaları belirlemektir. Çizelgedeki hacimler, daha önce konuştuğumuz beklenen mesane kapasitesi ve noktürnal poliüri hesaplarının veri kaynağıdır.
 
-Laboratuvarda ilke minimal tetkiktir.
-Monosemptomatik enürezisli çocuklarda tam idrar bakısı, hem uluslararası hem ulusal rehberde önerilen tek laboratuvar incelemesidir.
-İdrar bakısı ile diabetes mellitus, diabetes insipidus, üriner enfeksiyon ve kronik renal yetmezliğin ayırıcı tanısı yapılabilir.
-Klinik olarak idrar yolu enfeksiyonu şüphesinde lökositüri ya da pozitif nitrit testi idrar kültürüne yönlendirmelidir.
-Klinik değerlendirme ve tam idrar bakısı ile monosemptomatik enürezis tanısı alan çocukta ileri tetkike gerek yoktur.
+Laboratuvarda ilke minimal tetkiktir. Monosemptomatik enürezisli çocuklarda tam idrar bakısı, hem uluslararası hem ulusal rehberde önerilen tek laboratuvar incelemesidir. İdrar bakısı ile diabetes mellitus, diabetes insipidus, üriner enfeksiyon ve kronik renal yetmezliğin ayırıcı tanısı yapılabilir. Klinik olarak idrar yolu enfeksiyonu şüphesinde lökositüri ya da pozitif nitrit testi idrar kültürüne yönlendirmelidir. Klinik değerlendirme ve tam idrar bakısı ile monosemptomatik enürezis tanısı alan çocukta ileri tetkike gerek yoktur.
 
-Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: gündüz alt üriner sistem semptomu olmayan bir çocukta monosemptomatik noktürnal enürezis tanısında önerilen tetkik tam idrar tetkikidir.
-Ultrasonografi ile mesane duvar kalınlığının ölçülmesi, üroflowmetri, işeme sonrası rezidüel idrar, spinal manyetik rezonans, işeme sistogramı ve invaziv ürodinami bu soruların çeldiricileridir; bunlar rutin değildir.
+Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: gündüz alt üriner sistem semptomu olmayan bir çocukta monosemptomatik noktürnal enürezis tanısında önerilen tetkik tam idrar tetkikidir. Ultrasonografi ile mesane duvar kalınlığının ölçülmesi, üroflowmetri, işeme sonrası rezidüel idrar, spinal manyetik rezonans, işeme sistogramı ve invaziv ürodinami bu soruların çeldiricileridir; bunlar rutin değildir.
 
-Kan örnekleri yalnız glukozüri ya da poliürik böbrek yetmezliğini düşündüren genel uyarı işaretleri varsa endikedir.
-Gündüz semptomları olan çocukta ise ultrasonografi ile mesane duvar kalınlığı ölçülebilir, işeme sonrası rezidüel idrara bakılabilir, gerektiğinde işeme sistogramı, sistoskopi ve ürodinami yapılabilir.
-Özellikle nörolojik bulgusu olan çocukta spinal bölgenin manyetik rezonans görüntülemesi yapılabilir.
-Burası önemli, çıkmış bir soruda enürezis değerlendirmesinde kullanılmayan yöntem soruldu: tam idrar tetkiki, işeme çizelgesi, işeme sistogramı ve sistoskopi kullanılabilir, anterograd piyelografi ise kullanılmaz.
-Aynı konudaki bir başka çıkmış soruda da şıklar arasından işeme sistogramı işaretlenmiştir; bu ileri incelemelerin yalnız gündüz semptomu olan seçilmiş çocuklarda gündeme geldiğini hatırlayın.
+Kan örnekleri yalnız glukozüri ya da poliürik böbrek yetmezliğini düşündüren genel uyarı işaretleri varsa endikedir. Gündüz semptomları olan çocukta ise ultrasonografi ile mesane duvar kalınlığı ölçülebilir, işeme sonrası rezidüel idrara bakılabilir, gerektiğinde işeme sistogramı, sistoskopi ve ürodinami yapılabilir. Özellikle nörolojik bulgusu olan çocukta spinal bölgenin manyetik rezonans görüntülemesi yapılabilir. Burası önemli, çıkmış bir soruda enürezis değerlendirmesinde kullanılmayan yöntem soruldu: tam idrar tetkiki, işeme çizelgesi, işeme sistogramı ve sistoskopi kullanılabilir, anterograd piyelografi ise kullanılmaz. Aynı konudaki bir başka çıkmış soruda da şıklar arasından işeme sistogramı işaretlenmiştir; bu ileri incelemelerin yalnız gündüz semptomu olan seçilmiş çocuklarda gündeme geldiğini hatırlayın.
 
-Burası önemli, ileri tetkik endikasyonu bir vaka sorusunda da soruldu.
-6 yaşında, gece ve gündüz idrar kaçıran, kabızlığı olmayan, rahat uyandırılabilen, idrar tahlili ve nörolojik ve genital muayenesi normal bir erkek çocuk düşünün.
-Aile işeme ve sıvı önerilerini tam uygulamış ama sorun geçmemiş; işeme günlüğünde en fazla işenen hacim 90 mililitre, yani 6 yaş için beklenen 210 mililitrenin çok altında.
-Gündüz semptomu olan ve ürotarapiye yanıt vermeyen bu çocukta bir sonraki aşama ürodinamik incelemedir.
-Nörolojik bulgu olmadığı için lumbospinal manyetik rezonans, uykusu normal olduğu için uyku analizi gerekmez.
+Burası önemli, ileri tetkik endikasyonu bir vaka sorusunda da soruldu. 6 yaşında, gece ve gündüz idrar kaçıran, kabızlığı olmayan, rahat uyandırılabilen, idrar tahlili ve nörolojik ve genital muayenesi normal bir erkek çocuk düşünün. Aile işeme ve sıvı önerilerini tam uygulamış ama sorun geçmemiş; işeme günlüğünde en fazla işenen hacim 90 mililitre, yani 6 yaş için beklenen 210 mililitrenin çok altında. Gündüz semptomu olan ve ürotarapiye yanıt vermeyen bu çocukta bir sonraki aşama ürodinamik incelemedir. Nörolojik bulgu olmadığı için lumbospinal manyetik rezonans, uykusu normal olduğu için uyku analizi gerekmez.
 
 @@ Tedavinin gerekçesi ve zamanı
 Enürezisli çocukları tedavi etmenin ana nedenleri somatik değil, psikolojik ve sosyaldir. Çocukların özgüvenleri ve sosyal etkileşimleri olumsuz etkilenmeden önce kuru kalmaları için yardıma ihtiyaçları vardır. Durumundan rahatsız olacak yaştaki çocuğun yönetiminde bekle gör tutumu yeterli değildir. Bu, genellikle çocuk 6 yaşına geldiğinde hem genel tavsiyeye hem de aktif tedaviye ihtiyacı olduğu anlamına gelir. Gündüz inkontinansının ise daha erken yaşlarda tedavi edilmesi gerekebilir.
 
-Burası önemli, bu bilgi çıkmış sorularda birçok kez yanlış ifade olarak soruldu.
-Büyük çocuklarda tedavi vermeden enürezisin spontan rezolüsyonunun beklendiği ifadesi yanlıştır.
-3 yaşın üzerindeki çocukların tedavi gerektirdiği ifadesi yanlıştır.
-Tedavinin başarılı olması için 4 yaşından önce başlanması gerektiği ifadesi de yanlıştır.
-Doğrusu, tanım 5 yaşın üstünde konur ve aktif tedavi genellikle 6 yaş civarında gerekir.
+Burası önemli, bu bilgi çıkmış sorularda birçok kez yanlış ifade olarak soruldu. Büyük çocuklarda tedavi vermeden enürezisin spontan rezolüsyonunun beklendiği ifadesi yanlıştır. 3 yaşın üzerindeki çocukların tedavi gerektirdiği ifadesi yanlıştır. Tedavinin başarılı olması için 4 yaşından önce başlanması gerektiği ifadesi de yanlıştır. Doğrusu, tanım 5 yaşın üstünde konur ve aktif tedavi genellikle 6 yaş civarında gerekir.
 
-Ders notunda genel tavsiyeler de vurgulanır.
-Çocuğa ve aileye problemin anlatılması ve ayrıntılı bilgi verilmesi tedavinin başarısında önemlidir; her şeyden önce çocuk bunun kendi hatası olmadığını bilmelidir.
-Enürezisin kötü ebeveynlik ya da psikolojik faktörlerden kaynaklandığı yanılgısı ortadan kaldırılmalıdır ve tedaviye çocuğun aktif katılımı sağlanmalıdır.
-Çocuğu düzenli olarak geceleri uyandıran ebeveynler, bu stratejinin tek başına tıbbi olarak motive edici ya da iyileştirici olmadığını bilmelidir.
-Akşamları sıvı kısıtlayan ebeveynler, net bir fayda görmüyorlarsa bu uygulamadan vazgeçmelidir; çıkmış sorularda bu ifade doğru kabul edilmiştir.
-Gündüz fazladan sıvı alma tavsiyesi sık verilir, ancak kanıt temeli yetersizdir, kanıt düzeyi 4'tür.
-Gece idrar kaçırmada temel mesane tavsiyelerinin ve ürotarapinin değeri, randomize kontrollü çalışma olmadığı için belirsizdir; gündüz inkontinansındaki önemli rolü nedeniyle monosemptomatik olmayan enüreziste yararlı olduğunu varsaymak mantıklıdır.
+Ders notunda genel tavsiyeler de vurgulanır. Çocuğa ve aileye problemin anlatılması ve ayrıntılı bilgi verilmesi tedavinin başarısında önemlidir; her şeyden önce çocuk bunun kendi hatası olmadığını bilmelidir. Enürezisin kötü ebeveynlik ya da psikolojik faktörlerden kaynaklandığı yanılgısı ortadan kaldırılmalıdır ve tedaviye çocuğun aktif katılımı sağlanmalıdır. Çocuğu düzenli olarak geceleri uyandıran ebeveynler, bu stratejinin tek başına tıbbi olarak motive edici ya da iyileştirici olmadığını bilmelidir. Akşamları sıvı kısıtlayan ebeveynler, net bir fayda görmüyorlarsa bu uygulamadan vazgeçmelidir; çıkmış sorularda bu ifade doğru kabul edilmiştir. Gündüz fazladan sıvı alma tavsiyesi sık verilir, ancak kanıt temeli yetersizdir, kanıt düzeyi 4'tür. Gece idrar kaçırmada temel mesane tavsiyelerinin ve ürotarapinin değeri, randomize kontrollü çalışma olmadığı için belirsizdir; gündüz inkontinansındaki önemli rolü nedeniyle monosemptomatik olmayan enüreziste yararlı olduğunu varsaymak mantıklıdır.
 
 @@ Destekleyici tedavi
 Destekleyici tedavi, ilaç ya da cihazdan önce her enüretik çocuğa önerilen yaşam düzenlemeleridir ve derste 11 madde halinde verilir. 1.'si, beslenme alışkanlıkları gözden geçirilir ve günlük sıvı alımı düzenlenir: gün içinde 13 kez 250 mililitre kadar, ya da kilogram başına günde 30 mililitre olacak şekilde sıvı alınır. 2.'si, akşamları yatmadan 2 saat önce aşırı sıvı alımı mümkün olduğunca kısıtlanır; akşam yemeğinden sonra ve yatmadan önce kafein, çay, kahve, kola, gazlı içecekler, tuzlu gıdalar ve kalsiyum alımından kaçınılır. Amaç sıvıyı gündüze kaydırmak ve gece idrar yükünü azaltmaktır.
 
-3.'sü, kabızlık ve boşaltım sorunları çözülür ve düzenli gaita yapma alışkanlığı kazandırılır; bunun için diyet ve gerekirse ilaç önerilir.
-4.'sü, fiziksel aktivite düzenlenir; uzun süreli televizyon izleme ve bilgisayar oyunu gibi uzun süre oturur pozisyonda kalma engellenir.
-5.'si, evde ve okulda 5 saatte bir, yani günde 5 ile 7 kez düzenli tuvalete gidilir.
-Pelvik taban kaslarının gevşemesi, mesanenin ve bağırsakların tam boşalması için çocuk tuvalette uygun pozisyonda oturmalı, ayakları yere basmalı, gerekirse ayaklarının altına bir basamak konmalıdır.
+3.'sü, kabızlık ve boşaltım sorunları çözülür ve düzenli gaita yapma alışkanlığı kazandırılır; bunun için diyet ve gerekirse ilaç önerilir. 4.'sü, fiziksel aktivite düzenlenir; uzun süreli televizyon izleme ve bilgisayar oyunu gibi uzun süre oturur pozisyonda kalma engellenir. 5.'si, evde ve okulda 2 ile 3 saatte bir, yani günde 5 ile 7 kez düzenli tuvalete gidilir. Pelvik taban kaslarının gevşemesi, mesanenin ve bağırsakların tam boşalması için çocuk tuvalette uygun pozisyonda oturmalı, ayakları yere basmalı, gerekirse ayaklarının altına bir basamak konmalıdır.
 
-6.'sı, yatmadan önce mesane mutlaka boşaltılır ve çocuk uyuduktan 2 saat sonra uyandırılarak idrar yapması sağlanır.
-7.'si, gece tuvalete kolay ulaşması sağlanır; yataktan iniş kolay olmalı, gerekirse koridor ışıkları açık tutulmalıdır.
-8.'si, bez bağlamaktan kaçınılır.
-9.'su, idrar kaçırma sonrasında çocuğun ve giysilerinin temizlenmesinde, çarşafın değiştirilmesinde çocuğun aktif katkısı sağlanır.
-10.'su, ailenin ceza uygulaması önlenir; enürezis istemsizdir ve ceza yalnız anksiyeteyi artırır.
-11.'si, çocuktan ıslak ve kuru geceleri takvim şeklinde not etmesi istenir; takvim hem ilerlemeyi gösterir hem de çocuğu sürece katarak motivasyonu artırır.
+6.'sı, yatmadan önce mesane mutlaka boşaltılır ve çocuk uyuduktan 2 saat sonra uyandırılarak idrar yapması sağlanır. 7.'si, gece tuvalete kolay ulaşması sağlanır; yataktan iniş kolay olmalı, gerekirse koridor ışıkları açık tutulmalıdır. 8.'si, bez bağlamaktan kaçınılır. 9.'su, idrar kaçırma sonrasında çocuğun ve giysilerinin temizlenmesinde, çarşafın değiştirilmesinde çocuğun aktif katkısı sağlanır. 10.'su, ailenin ceza uygulaması önlenir; enürezis istemsizdir ve ceza yalnız anksiyeteyi artırır. 11.'si, çocuktan ıslak ve kuru geceleri takvim şeklinde not etmesi istenir; takvim hem ilerlemeyi gösterir hem de çocuğu sürece katarak motivasyonu artırır.
 
 @@ Monosemptomatik olmayan enüreziste tedavi önceliği
 Monosemptomatik olmayan enüreziste destekleyici tedavi belli bir öncelik sırasıyla uygulanır. Kabızlık tedavi edilmelidir. Davranış sorunlarının yaygınlığı akılda tutulmalı ve gerekirse bir psikolog ya da psikiyatristten destek alınmalıdır. Rahatsız edici gündüz alt üriner sistem semptomları, gece idrar kaçırmaya yönelmeden önce tedavi edilmelidir. Burası önemli, çıkmış sorularda doğru ifade olarak geçti: monosemptomatik olmayan enüreziste tedavinin ilk basamağında eşlik eden kabızlığın ve gündüz işeme alışkanlıklarının düzeltilmesi yer alır.
 
-Bu nedenle monosemptomatik olmayan enürezisli çocuğa 3 şey önerilir: günde yaklaşık 6 kez işeme ile düzenli işeme alışkanlığı oluşturmak, özellikle sabahları ve öğle yemeğinde yeterli miktarda sıvı almak ve uylukları iyi desteklenerek iyi bir işeme postürü sağlamak.
-Öte yandan gündüz semptomları önemsiz olan ve aile için endişe nedeni olmayan, yani hafif aciliyeti, marjinal inkontinans epizotları ya da yüksek veya düşük işeme sıklığı olan çocukta spesifik antienüretik tedaviye geciktirmeden başlanmalıdır.
+Bu nedenle monosemptomatik olmayan enürezisli çocuğa 3 şey önerilir: günde yaklaşık 6 kez işeme ile düzenli işeme alışkanlığı oluşturmak, özellikle sabahları ve öğle yemeğinde yeterli miktarda sıvı almak ve uylukları iyi desteklenerek iyi bir işeme postürü sağlamak. Öte yandan gündüz semptomları önemsiz olan ve aile için endişe nedeni olmayan, yani hafif aciliyeti, marjinal inkontinans epizotları ya da yüksek veya düşük işeme sıklığı olan çocukta spesifik antienüretik tedaviye geciktirmeden başlanmalıdır.
 
 @@ Birinci basamak tedavi ve enürezis alarmı
 Monosemptomatik enüreziste yerleşik 2 birinci basamak tedavi vardır: enürezis alarmı ve desmopressin. İkisinin de kanıt düzeyi 1a, yani en yüksek düzeydir. Seçilen tedavi ne olursa olsun ebeveynlerin rolü çok önemlidir. Burası önemli, çıkmış sorularda tekrar tekrar soruldu: enürezis alarmı ve desmopressin, monosemptomatik enüreziste kanıta dayalı birinci basamak tedavilerdir. Birinci basamak tedavinin kabızlık tedavisi olduğu ifadesi ise yanlıştır; kabızlığın tedavisi monosemptomatik olmayan enüreziste önceliklidir ama özgün birinci basamak tedavi değildir. Kabızlığın sorgulanması gerektiği ise doğru bir ifadedir.
 
-Enürezis alarmı, idrar çocuğun yatağında ya da giysisinde bulunan bir dedektörü harekete geçirdiği anda çocuğa ve aileye, genellikle akustik, yani sesli, güçlü bir uyarı veren cihazdır.
-Mesane doluluğuna karşı uyanamamayı hedefler.
-Başarı oranı %50 ile 70 arasındadır ve başarıyla tedavi edilenlerin büyük bir kısmı kalıcı olarak iyileşir; etki cihaz bırakıldıktan sonra da sürer.
+Enürezis alarmı, idrar çocuğun yatağında ya da giysisinde bulunan bir dedektörü harekete geçirdiği anda çocuğa ve aileye, genellikle akustik, yani sesli, güçlü bir uyarı veren cihazdır. Mesane doluluğuna karşı uyanamamayı hedefler. Başarı oranı %50 ile 70 arasındadır ve başarıyla tedavi edilenlerin büyük bir kısmı kalıcı olarak iyileşir; etki cihaz bırakıldıktan sonra da sürer.
 
-Alarm yalnız iyi motive edilmiş ve iyi bilgilendirilmiş aileler tarafından kullanılmalıdır.
-Cihaz hem çocuğa hem ebeveynlere kapsamlı biçimde tanıtılmalı ve her gece kesintisiz kullanılmalıdır.
-Ebeveynler sinyal duyulduğunda çocuğu hemen uyandırmaya hazır olmalıdır, çünkü tedavinin ilk haftalarında çocuk sinyalle kendisi uyanmaz.
-6 hafta sonra herhangi bir ilerleme belirtisi yoksa tedavi durdurulur; ilerleme varsa arka arkaya 14 kuru gece elde edilene kadar sürdürülür.
+Alarm yalnız iyi motive edilmiş ve iyi bilgilendirilmiş aileler tarafından kullanılmalıdır. Cihaz hem çocuğa hem ebeveynlere kapsamlı biçimde tanıtılmalı ve her gece kesintisiz kullanılmalıdır. Ebeveynler sinyal duyulduğunda çocuğu hemen uyandırmaya hazır olmalıdır, çünkü tedavinin ilk haftalarında çocuk sinyalle kendisi uyanmaz. 6 hafta sonra herhangi bir ilerleme belirtisi yoksa tedavi durdurulur; ilerleme varsa arka arkaya 14 kuru gece elde edilene kadar sürdürülür.
 
-Bazı durumlar alarmı zorlaştırır.
-Ebeveynlerin uyku sorunları varsa ya da çocuk kardeşleriyle aynı odayı paylaşıyorsa uyum zor olabilir.
-Eşlik eden dikkat eksikliği ve hiperaktivite bozukluğu başarı oranını düşürebilir.
-Enürezisi seyrek ya da periyodik olan çocukta alarm ilk seçenek değildir ve gecede birden fazla ıslatan çocukta monoterapi olarak alarm ilk seçenek olmayabilir.
+Bazı durumlar alarmı zorlaştırır. Ebeveynlerin uyku sorunları varsa ya da çocuk kardeşleriyle aynı odayı paylaşıyorsa uyum zor olabilir. Eşlik eden dikkat eksikliği ve hiperaktivite bozukluğu başarı oranını düşürebilir. Enürezisi seyrek ya da periyodik olan çocukta alarm ilk seçenek değildir ve gecede birden fazla ıslatan çocukta monoterapi olarak alarm ilk seçenek olmayabilir.
 
 @@ Desmopressin
 Desmopressin, arginin vazopressinin sentetik analoğudur. Antidiüretik etkisiyle hem idrar üretimini azaltır hem de idrarın konsantrasyonunu artırır. Antienüretik etkisi, gece idrar üretimini mesane içinde barındırılabilecek bir düzeye düşürmesiyle açıklanır; yani mesanenin kapasitesini değiştirmez, üretimi kapasiteye uydurur. Enüretik çocukların yaklaşık üçte biri ilacı kullandıkları sürece güvenilir biçimde kuru kalır, üçte birinde hiçbir fayda olmaz, üçte birinde orta düzeyde yanıt alınır. Kullandıkları sürece ifadesine dikkat edin; alarmdan farklı olarak etki ilaç alındığı sürece devam eder.
 
-Desmopressin önemli riskler olmadan uzun süre kullanılabilir ve yan etkileri nadirdir.
-Habitüel polidipside kontrendikedir.
-Aşırı sıvı alımı durumunda dilüsyonel hiponatremi ile su intoksikasyonu ortaya çıkabilir, bu yüzden sıvı alımı kısıtlanmalıdır.
-Mekanizması şudur: ilaç böbrekten su atılımını azaltırken çocuk fazla sıvı alırsa su vücutta birikir, kandaki sodyum seyrelir ve ağır olguda su intoksikasyonu gelişir.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: desmopressinin en önemli güvenlik uyarısı, aşırı sıvı alımı devam ederse dilüsyonel hiponatremi ve su intoksikasyonu, yani konvülziyon riskidir.
-Nefrotoksisite, gut, hipertansif acil ya da agranülositoz bu sorunun çeldiricileridir.
-Desmopressinin habitüel polidipside kontrendike olduğu da çıkmış sorularda doğru ifade olarak geçmiştir.
+Desmopressin önemli riskler olmadan uzun süre kullanılabilir ve yan etkileri nadirdir. Habitüel polidipside kontrendikedir. Aşırı sıvı alımı durumunda dilüsyonel hiponatremi ile su intoksikasyonu ortaya çıkabilir, bu yüzden sıvı alımı kısıtlanmalıdır. Mekanizması şudur: ilaç böbrekten su atılımını azaltırken çocuk fazla sıvı alırsa su vücutta birikir, kandaki sodyum seyrelir ve ağır olguda su intoksikasyonu gelişir. Burası önemli, bu bilgi çıkmış sorularda soruldu: desmopressinin en önemli güvenlik uyarısı, aşırı sıvı alımı devam ederse dilüsyonel hiponatremi ve su intoksikasyonu, yani konvülziyon riskidir. Nefrotoksisite, gut, hipertansif acil ya da agranülositoz bu sorunun çeldiricileridir. Desmopressinin habitüel polidipside kontrendike olduğu da çıkmış sorularda doğru ifade olarak geçmiştir.
 
-Yanıt şansı, noktürnal poliürisi olan ve gündüz işeme hacimleri normal olan monosemptomatik enürezisli çocuklarda en yüksektir.
-Standart doz tabletlerde 0,2 ile 0,4 miligram, dil altında eriyen liyofilizat formunda, yani meltte 120 ile 240 mikrogramdır.
-Tedavi tam dozla başlanıp iyi etki varsa 1 hafta sonra titre edilebilir ya da tersi strateji kullanılabilir.
-Her iki durumda da etkinlik ya da etkisizlik hemen ortaya çıkar; 1-2 hafta içinde yanıt alınmazsa tedavi kesilmelidir.
-Bu, alarmla belirgin bir karşıtlıktır: alarmda yanıtsızlık için 6 hafta beklenirken desmopressinde 1-2 haftada karar verilir.
+Yanıt şansı, noktürnal poliürisi olan ve gündüz işeme hacimleri normal olan monosemptomatik enürezisli çocuklarda en yüksektir. Standart doz tabletlerde 0,2 ile 0,4 miligram, dil altında eriyen liyofilizat formunda, yani meltte 120 ile 240 mikrogramdır. Tedavi tam dozla başlanıp iyi etki varsa 1 hafta sonra titre edilebilir ya da tersi strateji kullanılabilir. Her iki durumda da etkinlik ya da etkisizlik hemen ortaya çıkar; 1-2 hafta içinde yanıt alınmazsa tedavi kesilmelidir. Bu, alarmla belirgin bir karşıtlıktır: alarmda yanıtsızlık için 6 hafta beklenirken desmopressinde 1-2 haftada karar verilir.
 
-Derste desmopressin meltin kullanma şeması da verilir.
-Başlangıç dozu 120 mikrogramdır ve 2 hafta verilir.
-Tam yanıtla kuruluk sağlandıysa meltle 3 ay devam edilir.
-Kuruluk sağlanmadıysa doz en fazla 240 mikrograma çıkılır ve 2 hafta sonra yeniden değerlendirilir; kısmi yanıtla kuruluk sağlandıysa 3 aylık tedaviye geçilir, sağlanmadıysa başka bir tedavi eklenebilir.
-3 ayın sonunda 1 haftalık ilaçsız dönem uygulanır.
-İlaçsız kuruluk devam ediyorsa ilaç doz azaltılarak kesilir; devam etmiyorsa aynı dozda 3 ay daha sürdürülür.
+Derste desmopressin meltin kullanma şeması da verilir. Başlangıç dozu 120 mikrogramdır ve 2 hafta verilir. Tam yanıtla kuruluk sağlandıysa meltle 3 ay devam edilir. Kuruluk sağlanmadıysa doz en fazla 240 mikrograma çıkılır ve 2 hafta sonra yeniden değerlendirilir; kısmi yanıtla kuruluk sağlandıysa 3 aylık tedaviye geçilir, sağlanmadıysa başka bir tedavi eklenebilir. 3 ayın sonunda 1 haftalık ilaçsız dönem uygulanır. İlaçsız kuruluk devam ediyorsa ilaç doz azaltılarak kesilir; devam etmiyorsa aynı dozda 3 ay daha sürdürülür.
 
 @@ Birinci basamak tedavinin seçimi
 Ders notunda alarm ile desmopressin arasındaki seçimin, prognostik göstergelere göre 2 stratejiyle yapılabileceği anlatılır. A stratejisinde aile, gece idrar üretiminin ölçümlerini içeren bir işeme çizelgesini tamamlamış olmalıdır. Çocuğun noktürnal poliürisi var ve gündüz işeme hacimleri normalse önce desmopressin denenir. Gece idrar çıkışı normal ve maksimum işeme hacmi düşükse alarm verilir. Hem noktürnal poliüri hem de maksimum işeme hacminde azalma, yani beklenen mesane kapasitesinin %65 ile 70'inin altında bir hacim varsa, desmopressin ile alarm kombinasyonu düşünülebilir. B stratejisinde ise aile, 2 seçeneğin artıları ve eksileri hakkında bilgilendirildikten sonra önce hangisini kullanacağını kendisi seçer; iyi motive olmuş aileler genellikle alarmı seçer.
 
-Burası önemli, bu seçim çıkmış vaka sorularında birkaç kez soruldu.
-Yalnız gece yatağı ıslatma yakınmasıyla ilk kez başvuran 6 yaşında bir erkek çocukta işeme çizelgesiyle noktürnal poliüri saptanmış, gündüz işeme hacimleri ise normal bulunmuşsa tedaviye desmopressin ile başlanır.
-Alarm, kombinasyonlar ve oksibutinin bu sorunun çeldiricileridir.
+Burası önemli, bu seçim çıkmış vaka sorularında birkaç kez soruldu. Yalnız gece yatağı ıslatma yakınmasıyla ilk kez başvuran 6 yaşında bir erkek çocukta işeme çizelgesiyle noktürnal poliüri saptanmış, gündüz işeme hacimleri ise normal bulunmuşsa tedaviye desmopressin ile başlanır. Alarm, kombinasyonlar ve oksibutinin bu sorunun çeldiricileridir.
 
-Burası önemli, başka bir çıkmış vakada 8 yaşında, hiç kuru dönemi olmayan, uykusu ağır, ağabeyinde 11 yaşına kadar enürezis olan bir erkek çocukta sabah ilk idrarı yaklaşık 450 mililitre, gündüz mesane kapasitesi ortalama 300 mililitre ölçülmüştür.
-8 yaş için beklenen kapasite 270 mililitredir; yani gündüz hacmi normal, gece idrarı ise beklenenin %130'unun belirgin üstündedir.
-Ürotarapi bilgilendirmesinden 2 hafta sonra ıslatma sürüyorsa doğru yaklaşım desmopressin başlamak ve 2 hafta sonra kontrole çağırmaktır.
-Serum biyokimyası istemek, ağabeyin kendiliğinden düzelmesine bakıp beklemek, antidiüretik hormon düzeyine bakmak ya da mesane kapasitesi düşük diye antikolinerjik başlamak yanlıştır.
+Burası önemli, başka bir çıkmış vakada 8 yaşında, hiç kuru dönemi olmayan, uykusu ağır, ağabeyinde 11 yaşına kadar enürezis olan bir erkek çocukta sabah ilk idrarı yaklaşık 450 mililitre, gündüz mesane kapasitesi ortalama 300 mililitre ölçülmüştür. 8 yaş için beklenen kapasite 270 mililitredir; yani gündüz hacmi normal, gece idrarı ise beklenenin %130'unun belirgin üstündedir. Ürotarapi bilgilendirmesinden 2 hafta sonra ıslatma sürüyorsa doğru yaklaşım desmopressin başlamak ve 2 hafta sonra kontrole çağırmaktır. Serum biyokimyası istemek, ağabeyin kendiliğinden düzelmesine bakıp beklemek, antidiüretik hormon düzeyine bakmak ya da mesane kapasitesi düşük diye antikolinerjik başlamak yanlıştır.
 
 @@ İkinci basamak: antikolinerjik tedavi
 Rezidü idrar olmaması ve kabızlığın dışlanması ya da başarıyla tedavi edilmesi koşuluyla antikolinerjikler, desmopressin ile kombinasyon halinde ikinci basamak antienüretik tedavi olarak düşünülebilir. Bunun mantığı, detrusor aşırı aktivitesinin enüreziste önemli bir patogenetik mekanizma olmasıdır. Desmopressin gece idrar üretimini azaltırken antikolinerjik mesanenin bu idrarı tutabilmesini sağlar. Burası önemli, çıkmış sorularda doğru ifade olarak geçti: ikinci basamakta antikolinerjik ve desmopressin kombinasyonu uygulanabilir.
 
-Pediatrik popülasyonda klinik olarak en önemli yan etkiler kabızlık, işeme sonrası rezidüel idrar ve ağız kuruluğudur.
-Kabızlık alt üriner sistem fonksiyonunu da etkileyebilir; ağız kuruluğu ise diş çürüğüne neden olabilir.
-Duygu durum dalgalanmaları gibi psikiyatrik yan etkiler de görülebilir.
-Dikkat edin, kabızlık ve rezidü idrar hem ön koşul hem yan etki listesindedir; ilaç başlanmadan önce yokluğu doğrulanır, başladıktan sonra izlenir.
+Pediatrik popülasyonda klinik olarak en önemli yan etkiler kabızlık, işeme sonrası rezidüel idrar ve ağız kuruluğudur. Kabızlık alt üriner sistem fonksiyonunu da etkileyebilir; ağız kuruluğu ise diş çürüğüne neden olabilir. Duygu durum dalgalanmaları gibi psikiyatrik yan etkiler de görülebilir. Dikkat edin, kabızlık ve rezidü idrar hem ön koşul hem yan etki listesindedir; ilaç başlanmadan önce yokluğu doğrulanır, başladıktan sonra izlenir.
 
-İlaç yatmadan 1 saat önce alınır ve tablodaki alt dozla başlanır; tüm dozlar oral tablettir.
-Oksibutinin 2,5 ile 5 miligram, tolterodin 2 ile 4 miligram, fesoterodin 4 ile 8 miligram, solifenasin 5 ile 10 miligram dozunda verilir.
-Tolterodin, fesoterodin ve solifenasin henüz çocuklarda kullanım için onaylanmamıştır; tablodaki tek onaylı ilaç oksibutinindir.
+İlaç yatmadan 1 saat önce alınır ve tablodaki alt dozla başlanır; tüm dozlar oral tablettir. Oksibutinin 2,5 ile 5 miligram, tolterodin 2 ile 4 miligram, fesoterodin 4 ile 8 miligram, solifenasin 5 ile 10 miligram dozunda verilir. Tolterodin, fesoterodin ve solifenasin henüz çocuklarda kullanım için onaylanmamıştır; tablodaki tek onaylı ilaç oksibutinindir.
 
-Ders notunda tedaviye dirençli çocuklarla ilgili 3 ek bilgi daha verilir.
-Bu çocukların çoğunun kabızlık için Uluslararası Çocuk Kontinans Derneği kılavuzlarına göre tedavi edilmesi gerekir.
-Bazılarının bir çocuk psikoloğu ya da psikiyatristinin yardımına ihtiyacı olur.
-Bir alt grup da uykuda solunum bozukluğu için cerrahi tedaviye ihtiyaç duyabilir.
+Ders notunda tedaviye dirençli çocuklarla ilgili 3 ek bilgi daha verilir. Bu çocukların çoğunun kabızlık için Uluslararası Çocuk Kontinans Derneği kılavuzlarına göre tedavi edilmesi gerekir. Bazılarının bir çocuk psikoloğu ya da psikiyatristinin yardımına ihtiyacı olur. Bir alt grup da uykuda solunum bozukluğu için cerrahi tedaviye ihtiyaç duyabilir.
 
 @@ Üçüncü basamak: imipramin
 Üçüncü basamak antidepresan tedavidir ve kullanılan ilaç trisiklik antidepresan imipramindir. Desmopressin, alarm ve antikolinerjiklerin tümü başarısız olduğunda ya da kontrendike olduğunda, uzmanlar tarafından üçüncü basamak alternatif olarak kullanılabilen kanıta dayalı bir antienüretik tedavidir; kanıt düzeyi 1a'dır. Enüreziste etki şekli net değildir. Yararlı etkisi, mesane, idrar üretimi ve uyarılma mekanizmaları üzerindeki noradrenerjik, serotoninerjik ve antikolinerjik etkilerin kombinasyonuna bağlı olabilir. Tedaviye dirençli enüretik çocukların %30 ile 50'sinin imipraminden fayda görmesi beklenir ve desmopressin eklenirse bu oran artar.
 
-Enüreziste trisikliklerin kullanımını kısıtlayan en önemli faktör kardiyotoksisitedir.
-Klinik uygulamada en yaygın ve sınırlayıcı yan etkiler ise duygu durum dalgalanmaları ve bulantıdır; en tehlikeli olanla en sık görüleni karıştırmayın.
-İmipramin yatmadan yaklaşık 1 saat önce, 25 ile 50 miligram dozunda verilir.
-Terapötik yanıt 1 ay sonra değerlendirilir ve etki tam değilse desmopressin eklenebilir.
+Enüreziste trisikliklerin kullanımını kısıtlayan en önemli faktör kardiyotoksisitedir. Klinik uygulamada en yaygın ve sınırlayıcı yan etkiler ise duygu durum dalgalanmaları ve bulantıdır; en tehlikeli olanla en sık görüleni karıştırmayın. İmipramin yatmadan yaklaşık 1 saat önce, 25 ile 50 miligram dozunda verilir. Terapötik yanıt 1 ay sonra değerlendirilir ve etki tam değilse desmopressin eklenebilir.
 
-Burası önemli, bu bilgi çıkmış sorularda soruldu: noktürnal enürezis tedavi yöntemleri arasında kullanımı kardiyak yan etki nedeniyle sınırlanan ilaç imipramindir; oral desmopressin, alarm, oksibutinin ve indometazin bu sorunun çeldiricileridir.
-Üçüncü basamak tedavinin trisiklik antidepresan imipramin ile yapıldığı da çıkmış sorularda doğru ifade olarak yer almıştır.
-Burası önemli, bir başka çıkmış soruda enürezis tedavisinde kullanılan yöntemler soruldu: enürezis alarmı, antikolinerjikler, desmopressin ve antidepresanlar kullanılır; antiadrenerjik reseptör agonistleri ise enürezis tedavisinde kullanılan yöntemlerden biri değildir.
+Burası önemli, bu bilgi çıkmış sorularda soruldu: noktürnal enürezis tedavi yöntemleri arasında kullanımı kardiyak yan etki nedeniyle sınırlanan ilaç imipramindir; oral desmopressin, alarm, oksibutinin ve indometazin bu sorunun çeldiricileridir. Üçüncü basamak tedavinin trisiklik antidepresan imipramin ile yapıldığı da çıkmış sorularda doğru ifade olarak yer almıştır. Burası önemli, bir başka çıkmış soruda enürezis tedavisinde kullanılan yöntemler soruldu: enürezis alarmı, antikolinerjikler, desmopressin ve antidepresanlar kullanılır; antiadrenerjik reseptör agonistleri ise enürezis tedavisinde kullanılan yöntemlerden biri değildir.
 
 @@ Farmakolojik tedavi algoritması
 Ders sonunda verilen algoritma tüm basamakları tek akışta birleştirir. Başlangıç noktası 5 yaş ve üzerindeki enürezisli çocuktur. Önce ilintili sorunlar sorgulanır: ürolojik semptomlar, üriner enfeksiyonlar, kabızlık ve enkoprezis, anormal sıvı tüketimi ve bilinen davranış bozuklukları. Bunlardan biri varsa ilk önce bu problemler tedavi edilir. Yoksa tablo monosemptomatik noktürnal enürezis kabul edilir. Hasta ve aileyle görüşülür, ayrıntılı bilgi verilir, olası nedenler açıklanır, tedavi seçenekleri anlatılır ve hasta ile ebeveynin tedavi motivasyonu sağlanır. Burası önemli, çıkmış sorularda doğru ifade olarak geçti: çocuğa ve aileye hastalık hakkında detaylı bilgi verilmelidir. Ardından sıvı tüketimi, işeme eğitimi ve beslenme önerileri verilir ve işeme günlüğü doldurtulur.
 
-Sonra ebeveyn ve hastayla görüşülerek olguya göre alarm ya da desmopressin önerilir.
-Her iki kolda da ilk takip birinci aydadır ve bu kontrolde tedaviye uyum değerlendirilir.
-Düzelme varsa aynı tedaviyle devam edilir.
-Düzelme, ya daha az ıslak olmak, ya ıslatılan gece sayısının azalması ya da tamamen kuru kalmak demektir.
-Alarm kolunda çocuk ardışık 14 gece kuru kaldıysa 6 ile 8 haftalık izlem sonrasında alarm kesilir.
-Desmopressin kolunda 3 ay boyunca kuru kaldıysa doz azaltılarak tedavi kesilir.
-Her iki kolda da başarıyla kesilen tedaviden sonra 1 yıl boyunca nüks açısından takip yapılır.
+Sonra ebeveyn ve hastayla görüşülerek olguya göre alarm ya da desmopressin önerilir. Her iki kolda da ilk takip birinci aydadır ve bu kontrolde tedaviye uyum değerlendirilir. Düzelme varsa aynı tedaviyle devam edilir. Düzelme, ya daha az ıslak olmak, ya ıslatılan gece sayısının azalması ya da tamamen kuru kalmak demektir. Alarm kolunda çocuk ardışık 14 gece kuru kaldıysa 6 ile 8 haftalık izlem sonrasında alarm kesilir. Desmopressin kolunda 3 ay boyunca kuru kaldıysa doz azaltılarak tedavi kesilir. Her iki kolda da başarıyla kesilen tedaviden sonra 1 yıl boyunca nüks açısından takip yapılır.
 
-6 ile 8 haftalık dönemde düzelme yoksa yeniden klinik değerlendirme yapılır, monosemptomatik noktürnal enürezis tanısı teyit edilir ve tedavi değiştirilir.
-Yine düzelme yoksa alarm ve desmopressin kombinasyonu uygulanır ya da çocuk ikinci veya üçüncü basamak sağlık kuruluşlarına sevk edilir.
-Sevk, ikinci basamaktaki antikolinerjik kombinasyonu ve üçüncü basamaktaki imipraminin uzman eliyle uygulanmasının yoludur.
+6 ile 8 haftalık dönemde düzelme yoksa yeniden klinik değerlendirme yapılır, monosemptomatik noktürnal enürezis tanısı teyit edilir ve tedavi değiştirilir. Yine düzelme yoksa alarm ve desmopressin kombinasyonu uygulanır ya da çocuk ikinci veya üçüncü basamak sağlık kuruluşlarına sevk edilir. Sevk, ikinci basamaktaki antikolinerjik kombinasyonu ve üçüncü basamaktaki imipraminin uzman eliyle uygulanmasının yoludur.
 
-Özetle sıralamayı şöyle aklınızda tutun: önce değerlendirme ve destekleyici tedavi, sonra birinci basamakta alarm ya da desmopressin, ikinci basamakta desmopressin ile antikolinerjik kombinasyonu, üçüncü basamakta ise kardiyotoksisitesi nedeniyle dikkatle kullanılan imipramin.
-Her basamakta mekanizmayı hatırlayın: alarm uyanamamayı, desmopressin noktürnal poliüriyi, antikolinerjik detrusor aşırı aktivitesini hedefler.
+Özetle sıralamayı şöyle aklınızda tutun: önce değerlendirme ve destekleyici tedavi, sonra birinci basamakta alarm ya da desmopressin, ikinci basamakta desmopressin ile antikolinerjik kombinasyonu, üçüncü basamakta ise kardiyotoksisitesi nedeniyle dikkatle kullanılan imipramin. Her basamakta mekanizmayı hatırlayın: alarm uyanamamayı, desmopressin noktürnal poliüriyi, antikolinerjik detrusor aşırı aktivitesini hedefler.
