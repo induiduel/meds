@@ -179,7 +179,7 @@
     "meds/src/data/k{N}<brans>_onem|_cozucu|_asistan/",
     "meds_temp/hat/dersler/<id>.json"
    ],
-   "not": "Yayımlanmış her Kurul 2+ dersi: hazirla → onem → cozucu → denetim (bağımsız) → birlestir → asistan → ses (EMA) → oracle. Her adım kapılı; gece başına en çok 3 ders."
+   "not": "Yayımlanmış her Kurul 2+ dersi: hazirla → onem → cozucu → denetim (bağımsız) → birlestir → asistan → ses (EMA) → oracle. Her adım kapılı; gece başına en çok 3 ders. Son adım capa (2026-10-21): anlamsal slayt çapası — capa_dok.py → Claude TALIMAT_CAPA.md → kapı capa_dogrula.py (≥%70 madde/resim/kutu) → data/sesli_anlatim/capa/<key>.json cihaz + Oracle (Oracle pdf_isaret 30 dk)."
   },
   {
    "id": "bilgi_deposu",
@@ -328,6 +328,27 @@
     "Oracle data/kamp/ses/k{N}/<brans>/"
    ],
    "not": "Kurul kampı: ONAYLI hoca tüyoları (/api/kamp/tuyolar) + ders bilgi deposu → Claude TALIMAT_KAMP.md → kapı scripts/kamp/dogrula.py (kaynak kod:sayfa, her tüyo işlenmiş, şık açıklama, üslup) → EMA (scripts/kamp/ses.py) → yayın. Kapı geçmezse önceki sürüm + bildirim."
+  },
+  {
+   "id": "son_prova",
+   "kapsam": "kurul",
+   "durum": "hazir",
+   "gerekir": [
+    "bilgi_deposu",
+    "soru_cozucu"
+   ],
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "komut": "python3 meds/otomasyon/son_prova_zinciri.py",
+   "cikti": [
+    "meds/src/data/son_prova/k{N}/",
+    "meds/data/son_prova/pdf/k{N}-8x-son-prova-*.pdf",
+    "Oracle data/sesli_anlatim/{metin,hizalama,vurgu}/k{N}-8x-son-prova-*",
+    "Oracle data/k{N}<slug>_cozucu/ses/sNN/"
+   ],
+   "not": "Kurul 2+ Son Prova: sınava 9 gün kala açılır. plan_kurul.py (kayıt defteri + bilgi deposu, PDF okunmaz) → Claude yazar (TALIMAT + YENI_SORU) → kapı dogrula.py → bağımsız denetçi (DENETIM + YENI_DENETIM, H19 çıkmış anahtarı) → PART 0 HATA → derle → özet PDF → soru_dagit → EMA (yeni_ses) → Oracle ders-ekle (yalnizEma). Tüm partlar geçmeden sorular/yayın yok; sınav dağılımı duyurusu yoksa tahmin + bildirim."
   },
   {
    "id": "icerik_dagit",

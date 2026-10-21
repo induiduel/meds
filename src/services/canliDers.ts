@@ -78,11 +78,14 @@ const SON_PROVA_BRANS: Record<string, string> = {
   patoloji: 'Tıbbi Patoloji', enfeksiyon: 'Enfeksiyon Hastalıkları', genetik: 'Tıbbi Genetik', uroloji: 'Üroloji',
   'halk-sagligi': 'Halk Sağlığı', 'kadin-dogum': 'Kadın Hastalıkları ve Doğum', farmakoloji: 'Tıbbi Farmakoloji',
 };
+/** Kurul 2+ Son Prova anahtarları branş slug'ını branslar.json'dan taşır (otomasyon/son_prova_zinciri.py: k2-81-son-prova-noroloji) */
+const slugBrans = (slug: string): string | undefined =>
+  oku<{ branslar?: { slug: string; ad: string }[] }>(path.join(process.cwd(), 'src', 'data', 'dersler', 'branslar.json'), {}).branslar?.find((b) => b.slug === slug)?.ad;
 const MODUL_DERS: Record<string, [string, string]> = { 'k1-70-tbg-sinav-kampi': ['Tıbbi Genetik', 'Sınav kampı'] };
 function bransBilgisi(d: Ders): { brans: string; bransNo: number | string; kurul: number; parca?: number } {
   const kurul = Number(/^k(\d+)-/.exec(d.key)?.[1]) || 0;
   const sp = /^k\d+-\d+-son-prova-([a-z-]+?)(?:-(\d+))?$/.exec(d.key);
-  const modul = MODUL_DERS[d.key] || (sp ? [SON_PROVA_BRANS[sp[1]] || 'Son Prova', `Son Prova${sp[2] ? ` ${sp[2]}` : ''}`] as [string, string] : undefined);
+  const modul = MODUL_DERS[d.key] || (sp ? [SON_PROVA_BRANS[sp[1]] || slugBrans(sp[1]) || 'Son Prova', `Son Prova${sp[2] ? ` ${sp[2]}` : ''}`] as [string, string] : undefined);
   if (modul) return { brans: modul[0], bransNo: modul[1], kurul };
   // Kurul 2+: branş ve branş içi numara YALNIZ ders kayıt defterinden (kod "2n07" → 7). Drive dosya adındaki "33)"
   // numarası çakışabiliyor (Kurul 1: Meme Kanseri ile Memenin Benign ikisi de 33) — KURUL2_YAPILMAYACAK_HATALAR H16.

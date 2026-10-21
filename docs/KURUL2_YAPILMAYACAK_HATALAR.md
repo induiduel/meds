@@ -181,3 +181,12 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - Baştan üretme: `POST /kuyruk/<is>/yeniden-uret` (aynı gün ikinci kez 409, yeni is_id) — elle PDF yeniden işletme
   bundan başka yolla yapılmaz (el kitabı §hat panosu).
 - PDF görüntüleyici kabı esnek sütun + sınırlı yükseklik (H15); tam ekran katmanı `body`'ye portal.
+
+### H20 — Kurul 1'de elle kurulan Son Prova ve anlamsal çapa Kurul 2'de unutulmasın / K1'e sabit kalmasın (2026-10-21)
+- **Görülen:** Son Prova betikleri `Kurul 1` yolu, sabit branş tabloları (`BRANS_KLASOR`), `KURUL = 1`, yalnız `meds_temp`'te
+  duran talimatlar (YENI_SORU.md, YENI_DENETIM.md) ve `[a-z]?\d{2}` slayt kodu kalıbıyla yazılmıştı; anlamsal çapa 83 derste
+  ajanlarla elle yazıldı, hatta adımı yoktu.
+- **Kural:** kurul başına elle yapılan her yeni ürün, ertesi gün hat.json'a aşama olarak girer; betik kurul/branş/kod
+  biçimini plandan ya da kayıt defterinden alır, talimatları depoda (`meds/scripts/...`) tutulur.
+- **Kapı — EKLENDİ:** `son_prova` aşaması (plan_kurul.py + son_prova_zinciri.py), `ders_zinciri` `capa` adımı
+  (capa_dogrula.py). Son Prova sınav dağılımı duyurusu yoksa bildirim gider.

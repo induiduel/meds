@@ -31,7 +31,7 @@ def sh(kom, **k):
 
 def zincir_klasorleri():
     d = MEDS / "src/data"
-    ek = [d / "cozucu_ogren", d / "kamp"] + sorted((d / "patoloji_checkup").glob("k[2-6]"))  # Öğren eşlemesi, kamp, Check Up K2+
+    ek = [d / "cozucu_ogren", d / "kamp"] + sorted((d / "patoloji_checkup").glob("k[2-6]")) + sorted((d / "son_prova").glob("k[2-6]"))  # Öğren eşlemesi, kamp, Check Up K2+, Son Prova K2+
     return sorted([p for p in d.glob("k[2-6]*_onem")] + [p for p in d.glob("k[2-6]*_cozucu")] +
                   [p for p in d.glob("k[2-6]*_asistan")] + [p for p in ek if p.exists()])
 

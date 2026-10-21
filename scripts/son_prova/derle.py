@@ -31,7 +31,7 @@ KISA_BRANS = {"patoloji": "Patoloji", "enfeksiyon": "Enfeksiyon", "genetik": "Ge
               "halksagligi": "Halk Sağlığı", "kadindogum": "Kadın Doğum", "farmakoloji": "Farmakoloji"}
 
 
-def klasor(part: dict) -> str:
+def drive_klasoru(part: dict) -> str:
     return part.get("drive_klasor") or BRANS_KLASOR[part["brans"]]
 
 
@@ -76,7 +76,7 @@ def kaynak_pdf(part: dict, ders: dict) -> str:
     """Drive'daki kaynak PDF'in göreli yolu (meds_downloads/drive_root'a göre). Kurul 2+: plan_kurul.py `drive_yol` verir."""
     if ders.get("drive_yol") and (ROOT / "meds_downloads/drive_root" / ders["drive_yol"]).exists():
         return ders["drive_yol"]
-    p = Path(f"Kurul {PLAN['kurul']}") / klasor(part) / (ders.get("drive_ad") or ders["pdf_ad"])
+    p = Path(f"Kurul {PLAN['kurul']}") / drive_klasoru(part) / (ders.get("drive_ad") or ders["pdf_ad"])
     tam = ROOT / "meds_downloads/drive_root" / p
     if not tam.exists():
         # Drive adları NFD gelebilir
@@ -86,7 +86,7 @@ def kaynak_pdf(part: dict, ders: dict) -> str:
         adaylar = [f for f in klasor.iterdir() if nfc(f.name) == hedef] or \
             [f for f in klasor.iterdir() if f.suffix.lower() == ".pdf" and ad_anahtar(f.name) == ad_anahtar(hedef)]
         if len(adaylar) == 1:
-            return str(Path(f"Kurul {PLAN['kurul']}") / klasor(part) / adaylar[0].name)
+            return str(Path(f"Kurul {PLAN['kurul']}") / drive_klasoru(part) / adaylar[0].name)
         if not adaylar and ders.get("pdf_yok"):
             return f"@metin:{ders['pdf_metin']}"
         raise SystemExit(f"kaynak PDF yok ya da belirsiz: {tam} ({[a.name for a in adaylar]})")

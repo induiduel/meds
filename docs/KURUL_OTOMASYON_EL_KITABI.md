@@ -262,3 +262,35 @@ bildirim otomatik; gizleme/düzeltme kararı yöneticinin). Genetik sınav kamp�
 - `saglik.py` artık ders kayıt defterinde kimlik/kod/branş numarası çiftini (`kayit_defteri`) ve EMA alt süreç okunuş
   ayarını (`kapi_ariza`) denetler; ikisi de sabah özetinde sorun olarak görünür.
 - K2+ sesli ders listesinde branş numarası kayıt defterinden gelir (`canliDers.ts`); Drive `NN)` öneki kullanılmaz.
+
+## Son Prova ve anlamsal slayt çapası — Kurul 2+ (2026-10-21)
+Kurul 1'de iki iş elle (alt ajanlarla) yapıldı; Kurul 2'den itibaren hatta bağlıdır.
+
+### Son Prova (`son_prova` aşaması, `otomasyon/son_prova_zinciri.py`)
+- **Ne zaman:** aktif kurulun sınavına **9 gün** kala (dahil) her gece; gece başına en çok 5 sa (`MEDS_SON_PROVA_SAAT`),
+  kalan partlar ertesi gece. Elle: `python3 meds/otomasyon/son_prova_zinciri.py --kurul 2 [--part KEY] [--zorla]`;
+  deneme: `--kuru` (yalnız akış), `--prova` (ilk part; src/data, data/, Oracle'a dokunmaz).
+- **Plan:** `scripts/son_prova/plan_kurul.py` — ders kayıt defteri sırası + bilgi deposu (`ders_bilgi/<id>/`: kaynak.md
+  `=== SAYFA N ===`, önem, çıkmış), soru havuzu `src/data/k<N><slug>_cozucu/`. Part ≤ 9.000 kelime, branş içinde eşit
+  boy; anahtar `k<N>-81…99-son-prova-<slug>[-<no>]` (ders kimlikleri ≤ 70 ile çakışmaz; canliDers.ts branş adını
+  `branslar.json`'dan alır). Bilgi deposu olmayan ders partlara girmez, bildirimde listelenir.
+- **Sınav dağılımı:** fakülte duyurusu `src/data/son_prova/k<N>/sinav.json` (`{"noroloji": 20, …}`, branş slug'ı) —
+  **yönetici yazar**; yoksa ders saatinden tahmin + bildirim (denemeler yanlış dağılımla kurulur, duyuru gelince
+  `--zorla` gerekmez: soru_dagit her gece yeniden çalışır).
+- **Adımlar:** yazar Claude (TALIMAT + YENI_SORU, yazar grubu ≤3 ders, bir ders = bir aşama) → kapı `dogrula.py <dosya>`
+  → bağımsız denetçi Claude (DENETIM + YENI_DENETIM, H19 çıkmış anahtarı) → `dogrula.py --part` PART 0 HATA → `derle.py`
+  → özet PDF (`pdf_kirp.mjs`) → **tüm partlar hazırsa** `soru_dagit.py` + EMA (`yeni_ses.py`, `SON_PROVA_KOK`) →
+  Oracle (metin/hizalama/vurgu/özet PDF/ses rsync, `ders-ekle` yalnizEma). Yarım Son Prova yayınlanmaz.
+- Çalışma klasörü `meds_temp/son_prova_k<N>/` (betikler oraya kopyalanır, talimat yolları çevrilir; `iz.txt` ders
+  kümesi değişmedikçe partı yeniden yazdırmaz; değişirse eski part `_eski/`'ye). `src/data/son_prova/k<N>/` gece
+  içerik dağıtımıyla (`icerik_dagit.py`) sitede yayınlanır.
+- Kurul 1 Son Provası `meds_temp/son_prova/` (elle plan.py) olarak kalır; genelleştirilen betikler K1 çıktısını bayt bayt
+  aynı üretir (2026-10-21 sınaması: 14 part doğrulama sonucu aynı, farmakoloji derlemesi birebir).
+
+### Anlamsal slayt çapası (`ders_zinciri` son adımı `capa`)
+- Sesli dersin her cümlesi slayttaki madde (M#) / resim (R#) kutusuna ya da elle kutuya bağlanır; resim anlatımında
+  hareketli imleç (`yol`). Döküm `scripts/sesli_anlatim/capa_dok.py` (Oracle API ile), yazar Claude
+  `scripts/sesli_anlatim/TALIMAT_CAPA.md`, kapı `capa_dogrula.py` (mdSha1, paragraf/cümle sayısı, sayfa/madde/resim
+  aralığı, ≥%70 anlamsal kapsama). Çıktı cihaz + Oracle `data/sesli_anlatim/capa/<key>.json`; Oracle
+  `meds-cumle-zaman` zamanlayıcısındaki `pdf_isaret.py --hepsi` 30 dk içinde işaretlere çevirir.
+- Metin değişirse (mdSha1 tutmaz) eski çapa yok sayılır; ders yeniden üretilirse zincir baştan → çapa da yeniden.

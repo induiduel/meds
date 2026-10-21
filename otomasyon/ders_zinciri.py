@@ -25,7 +25,7 @@ sys.path.insert(0, str(SC))
 import aday_hazirla as AH  # noqa: E402  gizli_silinen, aday, grupla, ornek_hedefi, norm
 
 BRANS_SLUG = {b["ad"]: b["slug"] for b in json.loads((MEDS / "src/data/dersler/branslar.json").read_text())["branslar"]}  # tek kaynak
-ADIMLAR = ["hazirla", "onem", "cozucu", "denetim", "birlestir", "asistan", "ses", "oracle"]
+ADIMLAR = ["hazirla", "onem", "cozucu", "denetim", "birlestir", "asistan", "ses", "oracle", "capa"]
 IZIN = "Read,Write,Edit,Glob,Grep,Bash(python3 *),Bash(curl -s http://127.0.0.1:3000/*)"
 
 
@@ -362,8 +362,40 @@ def a_oracle(d, pk, W, kuru):
     return 0
 
 
+def a_capa(d, pk, W, kuru):
+    """Anlamsal slayt çapası (2026-10-21, Kurul 1'de elle yazıldı): sesli dersin her cümlesine slayttaki madde/resim kutusu.
+    Oracle'daki metin + hizalama + v2 çapası alınır → capa_dok.py görüntü dökümü → Claude TALIMAT_CAPA.md → kapı
+    capa_dogrula.py 0 HATA → data/sesli_anlatim/capa/<key>.json cihaz + Oracle (Oracle pdf_isaret zamanlayıcısı 30 dk'da işler)."""
+    key, S = pk["ders_id"], MEDS / "data/sesli_anlatim"
+    uz = "medsor-oracle:/home/ubuntu/medsor/meds/data/sesli_anlatim"
+    for alt, ad in (("metin", f"{key}.md"), ("hizalama", f"{key}.json"), ("capa", f"{key}.json")):
+        (S / alt).mkdir(parents=True, exist_ok=True)
+        calistir(f"rsync -az {uz}/{alt}/{ad} {S}/{alt}/", kuru=kuru)
+    if not kuru and not ((S / "metin" / f"{key}.md").exists() and (S / "hizalama" / f"{key}.json").exists()):
+        print(f"   {key}: sesli ders metni/hizalaması henüz yok"); return 13
+    C = W / "capa" / d["kod"]; C.mkdir(parents=True, exist_ok=True)
+    py, api = MEDS / ".venv-ocr/bin/python", "MEDS_API=https://api.nofrostlife.com.tr"
+    r = calistir(f"{api} {py} {MEDS}/scripts/sesli_anlatim/capa_dok.py {key} {C}/dok", cwd=MEDS, kuru=kuru)
+    if r:
+        return r
+    if not kuru:
+        sha = hashlib.sha1((S / "metin" / f"{key}.md").read_bytes()).hexdigest()
+        bas = json.loads((S / "capa" / f"{key}.json").read_text()) if (S / "capa" / f"{key}.json").exists() else {"p": []}
+        bas["mdSha1"] = sha
+        if not (C / "capa.json").exists():
+            (C / "capa.json").write_text(json.dumps(bas, ensure_ascii=False))
+    kapi = f"{api} {py} {MEDS}/scripts/sesli_anlatim/capa_dogrula.py {key} {C}/capa.json"
+    istem = (f"{MEDS}/scripts/sesli_anlatim/TALIMAT_CAPA.md talimatını uygula. Ders anahtarı {key}; çalışma klasörü {C} "
+             f"(dok/ ve capa.json orada). Bitince şu kapıyı 0 HATA olana dek çalıştır: {kapi}")
+    r = kapili_claude(istem, kapi, C, kuru)
+    if r or kuru:
+        return r
+    shutil.copy(C / "capa.json", S / "capa" / f"{key}.json")
+    return calistir(f"rsync -az --rsync-path='flock /tmp/meds-deploy.lock sudo rsync' {S}/capa/{key}.json {uz}/capa/", kuru=kuru)
+
+
 IS = {"hazirla": a_hazirla, "onem": a_onem, "cozucu": a_cozucu, "denetim": a_denetim, "birlestir": a_birlestir,
-      "asistan": a_asistan, "ses": a_ses, "oracle": a_oracle}
+      "asistan": a_asistan, "ses": a_ses, "oracle": a_oracle, "capa": a_capa}
 
 
 def main():
