@@ -740,7 +740,13 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
       .map(([p, v]) => ({ p, ...v }))
       .sort((x: any, y: any) => (Number(y.at) || 0) - (Number(x.at) || 0))
       .slice(0, 100);
-    return { ozet: calismaOzet(b), konular, gunluk, ziyaret, konum, son: konumRaw?.son || null, kvAt: b?.kv?.[CALISMA_KEY]?.at || null };
+    // 60 planı: sınav senaryosu girdileri + son hesaplanan senaryolar, günlük saat (SinavSenaryo.tsx)
+    const senRaw = kvJson(b, 'medsoru_sinav_senaryo_v1', null);
+    const senaryo = senRaw && typeof senRaw === 'object'
+      ? { g: senRaw.g && typeof senRaw.g === 'object' ? senRaw.g : senRaw, s: senRaw.s || null, at: senRaw.at || b?.kv?.['medsoru_sinav_senaryo_v1']?.at || null }
+      : null;
+    const planSaat = Number(kvJson(b, 'medsoru_sinav_plani_saat_v1', 0)) || null;
+    return { ozet: calismaOzet(b), konular, gunluk, ziyaret, konum, son: konumRaw?.son || null, kvAt: b?.kv?.[CALISMA_KEY]?.at || null, senaryo, planSaat };
   };
 
   const buildList = async () => {

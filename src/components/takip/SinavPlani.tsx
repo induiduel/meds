@@ -32,6 +32,11 @@ export default function SinavPlani({ hiz }: { hiz: Partial<Record<TakipModul, Hi
   const [tumGun, setTumGun] = useState<Record<number, boolean>>({});
   const takip = useTakip();
 
+  useEffect(() => {
+    const f = (e: StorageEvent) => { if (e.key == null || e.key === SAAT_KEY) setSaat0(okuSaat()); };
+    window.addEventListener('storage', f);
+    return () => window.removeEventListener('storage', f);
+  }, []);
   useEffect(() => { let c = true; planVerisiYukle().then((v) => c && setVeri(v), () => c && setVeri(null)); return () => { c = false; }; }, []);
   const setSaat = (n: number) => { setSaat0(n); try { localStorage.setItem(SAAT_KEY, String(n)); } catch { /* yok */ } };
 

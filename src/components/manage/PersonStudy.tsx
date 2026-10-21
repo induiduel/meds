@@ -5,6 +5,7 @@ import {
   type PersonDetail, type StudyEditOp, type StudyModule, type StudyTopic,
 } from '../../services/peopleService';
 import { EmptyState, ConfirmButton } from './consoleUi';
+import { bransTanim, type Brans } from '../spots/brans';
 
 /**
  * Kişiler › Çalışma: öğrencinin konu bazlı çalışma takibi (calismaTakip.ts → profil kv `medsoru_calisma_takip_v1`),
@@ -143,6 +144,8 @@ export const PersonStudy: React.FC<{ d: PersonDetail; notify: (m: string) => voi
           </ul>
         </div>
       )}
+
+      {c.senaryo && Object.keys(c.senaryo.g || {}).length > 0 && <SenaryoKarti sen={c.senaryo} saat={c.planSaat ?? null} />}
 
       <div className="ps-seg" role="tablist" aria-label="Çalışma görünümü">
         {([['konular', `Konular (${c.konular.length})`], ['gunler', `Günler (${c.gunluk.length})`], ['ziyaret', `Sayfa ziyaretleri (${c.ziyaret.length})`]] as const).map(([id, l]) => (
@@ -326,6 +329,62 @@ export const PersonStudy: React.FC<{ d: PersonDetail; notify: (m: string) => voi
           )}
         </>
       )}
+    </div>
+  );
+};
+
+/** 60 planı › öğrencinin sınav senaryosu: girdiler ve son hesaplanan üç senaryo (profil kv medsoru_sinav_senaryo_v1) */
+const SenaryoKarti: React.FC<{ sen: NonNullable<PersonDetail['calisma']>['senaryo'] & object; saat: number | null }> = ({ sen, saat }) => {
+  const r = sen.s;
+  const f = (n: number) => (Math.round(n * 10) / 10).toLocaleString('tr-TR').replace('-', '−');
+  const adOf = (b: string) => r?.mantik.satir.find((x) => x.brans === b)?.ad || bransTanim(b as Brans).ad;
+  const nOf = (b: string) => r?.mantik.satir.find((x) => x.brans === b)?.n;
+  return (
+    <div className="pp-card ps-sen">
+      <h3>Sınav senaryosu (60 planı)</h3>
+      <p className="pp-muted">
+        Güncelleme {fmtDT(r?.at || sen.at)}{r ? ` · ${r.kaynak === 'plan' ? 'planı bitirirse' : 'bugünkü durumuyla'}` : ''}{saat ? ` · günde ${saat} sa plan` : ''}
+      </p>
+      {r && (
+        <div className="pp-tiles">
+          {([['kotu', 'Kötümser'], ['mantik', 'Mantıksal'], ['iyi', 'İyimser']] as const).map(([id, ad]) => (
+            <div key={id} className="pp-tile">
+              <span className="pp-tile-l">{ad}</span>
+              <span className="pp-tile-v">{f(r[id].ort)} net</span>
+              <span className="pp-tile-s">%80: {f(r[id].alt)} ile {f(r[id].ust)} · 60 olasılığı %{Math.round(r[id].p60 * 100)}</span>
+            </div>
+          ))}
+          <div className="pp-tile">
+            <span className="pp-tile-l">Kendi tahmini</span>
+            <span className="pp-tile-v">{f(r.kendi)} net</span>
+            <span className="pp-tile-s">{Math.abs(r.kendi - r.mantik.ort) < 3 ? 'mantıksalla uyumlu' : r.kendi > r.mantik.ort ? `~${f(r.kendi - r.mantik.ort)} puan fazla güveniyor` : `~${f(r.mantik.ort - r.kendi)} puan eksik değerlendiriyor`}</span>
+          </div>
+        </div>
+      )}
+      <div className="pp-table-wrap">
+        <table className="pp-table">
+          <thead>
+            <tr><th>Ders</th><th className="n">Emin doğru</th><th className="n">Sallama</th><th className="n">Sallama isabeti</th>{r && <><th className="n">Kötümser</th><th className="n">Mantıksal</th><th className="n">İyimser</th></>}</tr>
+          </thead>
+          <tbody>
+            {Object.entries(sen.g).map(([b, g]) => {
+              const net = (id: 'kotu' | 'mantik' | 'iyi') => r?.[id].satir.find((x) => x.brans === b);
+              return (
+                <tr key={b}>
+                  <td><b>{adOf(b)}</b>{nOf(b) ? <small> · {nOf(b)} soru</small> : null}</td>
+                  <td className="n">{g.a}–{g.b}</td>
+                  <td className="n">%{g.salla}</td>
+                  <td className="n">%{g.isabet}</td>
+                  {r && (['kotu', 'mantik', 'iyi'] as const).map((id) => {
+                    const x = net(id);
+                    return <td key={id} className="n">{x ? `${f(x.puan)} (${f(x.d)} d)` : '—'}</td>;
+                  })}
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

@@ -13,14 +13,25 @@
  *  - Doğru beklentisi d → beta-binom dağılımı → baraj puanı → dersler birleştirilir: ortalama, %10–%90 aralığı, P(≥60).
  *  - Öğrencinin kendi hesabı (aralık ortası tam doğru + sallama × kendi isabeti) mantıksalla karşılaştırılıp fazla/eksik tahmin söylenir.
  */
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { BIR, beklenen, birlestir, bransDag, enAz, yuzdelik, type BransPlan, type Dag } from './sinavPlani';
 
-const KEY = 'medsoru_sinav_senaryo_v1';
+/** Profil kv (userKvSync ile cihazlar arası): { g: ders → girdi, s: son hesaplanan senaryolar (yönetim › Kişiler'de görünür), at } */
+export const SENARYO_KEY = 'medsoru_sinav_senaryo_v1';
+const KEY = SENARYO_KEY;
 interface Girdi { a: number; b: number; salla: number; isabet: number }
 type Kayit = Record<string, Girdi>;
-const oku = (): Kayit => { try { return JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch { return {}; } };
-const yaz = (k: Kayit) => { try { localStorage.setItem(KEY, JSON.stringify(k)); } catch { /* yok */ } };
+export interface SenaryoOzet { ort: number; alt: number; ust: number; p60: number; satir: { brans: string; ad: string; n: number; d: number; puan: number }[] }
+export interface SenaryoKaydi { g: Kayit; s?: { kaynak: 'simdi' | 'plan'; kendi: number; kotu: SenaryoOzet; mantik: SenaryoOzet; iyi: SenaryoOzet; at: string }; at?: string }
+const okuHam = (): SenaryoKaydi => {
+  try {
+    const x = JSON.parse(localStorage.getItem(KEY) || '{}') || {};
+    return x && typeof x.g === 'object' ? x : { g: x }; // eski biçim: doğrudan ders → girdi
+  } catch { return { g: {} }; }
+};
+const oku = (): Kayit => okuHam().g || {};
+const yazHam = (v: SenaryoKaydi) => { try { localStorage.setItem(KEY, JSON.stringify(v)); } catch { /* yok */ } };
+const yaz = (k: Kayit) => yazHam({ ...okuHam(), g: k, at: new Date().toISOString() });
 
 const TOPLUM_ISABET = 0.30;
 const fmt = (n: number) => (Math.round(n * 10) / 10).toLocaleString('tr-TR').replace('-', '−');
@@ -38,6 +49,12 @@ export default function SinavSenaryo({ branslar, hedef, planli }: { branslar: Br
   const [kayit, setKayit] = useState<Kayit>(oku);
   const [kaynak, setKaynak] = useState<'simdi' | 'plan'>('simdi');
   const [acikSen, setAcikSen] = useState<SenId | null>('mantik');
+  // başka cihazdan eşitlenince girdileri yenile
+  useEffect(() => {
+    const f = (e: StorageEvent) => { if (e.key == null || e.key === KEY) setKayit(oku()); };
+    window.addEventListener('storage', f);
+    return () => window.removeEventListener('storage', f);
+  }, []);
 
   const model = (b: BransPlan) => {
     const d = kaynak === 'plan' ? b.planDogru : b.dogru;
@@ -87,6 +104,24 @@ export default function SinavSenaryo({ branslar, hedef, planli }: { branslar: Br
   }, [branslar, kayit, kaynak, hedef]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fark = sonuc.kendi - sonuc.mantik.ort;
+
+  // Sonuçları profile yaz (yönetici görür): yalnız öğrenci girdi yazmışsa ve yuvarlanmış sonuç değiştiyse, 3 sn sonra.
+  // Plan her süre tıkında yeniden hesaplanır; zamanlayıcı yalnız yuvarlanmış sonucun imzası değişince yeniden kurulur.
+  const imza = useMemo(() => {
+    if (!Object.keys(kayit).length) return '';
+    const oz = (r: typeof sonuc.mantik): SenaryoOzet => ({
+      ort: Math.round(r.ort * 10) / 10, alt: Math.round(r.alt), ust: Math.round(r.ust), p60: Math.round(r.p60 * 100) / 100,
+      satir: r.satir.map((x) => ({ brans: x.b.brans, ad: x.b.ad, n: x.b.n, d: Math.round(x.d * 10) / 10, puan: Math.round(x.puan * 10) / 10 })),
+    });
+    return JSON.stringify({ kaynak, kendi: Math.round(sonuc.kendi * 10) / 10, kotu: oz(sonuc.kotu), mantik: oz(sonuc.mantik), iyi: oz(sonuc.iyi) });
+  }, [sonuc, kaynak, kayit]);
+  useEffect(() => {
+    if (!imza) return;
+    const eski = okuHam().s;
+    if (eski) { const { at: _at, ...e } = eski; if (JSON.stringify(e) === imza) return; }
+    const t = window.setTimeout(() => yazHam({ ...okuHam(), s: { ...JSON.parse(imza), at: new Date().toISOString() } }), 3000);
+    return () => window.clearTimeout(t);
+  }, [imza]);
 
   return (
     <div className="ss">

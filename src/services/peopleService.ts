@@ -71,7 +71,18 @@ export interface StudyDetail {
   konum: { p: string; at: number; t: string; s: number; n: number; k: number }[];
   son: string | null;
   kvAt: string | null;
+  /** 60 planı sınav senaryosu (profil kv medsoru_sinav_senaryo_v1) */
+  senaryo?: {
+    g: Record<string, { a: number; b: number; salla: number; isabet: number }>;
+    s: null | {
+      kaynak: 'simdi' | 'plan'; kendi: number; at?: string;
+      kotu: SenaryoSonuc; mantik: SenaryoSonuc; iyi: SenaryoSonuc;
+    };
+    at: string | null;
+  } | null;
+  planSaat?: number | null;
 }
+export interface SenaryoSonuc { ort: number; alt: number; ust: number; p60: number; satir: { brans: string; ad: string; n: number; d: number; puan: number }[] }
 export interface StudyEditOp {
   id: string;
   durum?: 'bitti' | 'acik' | 'tekrar' | null;

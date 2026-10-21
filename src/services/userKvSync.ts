@@ -26,6 +26,8 @@ const SYNC_PATTERNS: RegExp[] = [
   /^medsoru_lesson_day_mode$/,
   // Son Prova: aşama/check-up/deneme ilerlemesi (components/sonProva/spIlerleme.ts)
   /^medsoru_son_prova_v1$/,
+  // 60 planı: günlük saat ve sınav senaryosu girdileri/sonuçları (components/takip/SinavPlani, SinavSenaryo)
+  /^medsoru_sinav_(plani_saat|senaryo)_v1$/,
   // Canlı ders oynatma listesi ve tekrar tercihi
   /^medsoru_canli_ders_(liste|tekrar|varsayilan_ses|konum|vurgu|tur_ders|tur_liste)_v1$/,
   /^medsoru_canli_ders_(hiz|gorunum|tam_yazi)$/,
