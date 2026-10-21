@@ -72,7 +72,8 @@ export interface CdDetay {
   isaret?: Record<string, (CdIsaret | null)[]> | null;
 }
 /** Kutular sayfa oranıdır (0–1). l: ≥%80'i okunan madde satırları (ya da resim); w: [kelimenin cümle içi baş, son, x0, y0, x1, y1] */
-export interface CdIsaret { d: number; s: number; t: 'metin' | 'tablo' | 'kelime' | 'resim' | 'sayfa'; l: number[][]; w: number[][] }
+/** y: hareketli imleç yolu [[cümle içi karakter, x, y]] — ses o karaktere gelince imleç (x, y)'ye kayar */
+export interface CdIsaret { d: number; s: number; t: 'metin' | 'tablo' | 'kelime' | 'resim' | 'sayfa'; l: number[][]; w: number[][]; y?: number[][] }
 /** Çalmaya başlamak için en az bu kadarı yeter (liste satırından hızlı oynatma) */
 export interface CdOzet { key: string; no: string | number; brans?: string; parca?: number; baslik: string; varyantlar: CdVaryant[] }
 

@@ -58,7 +58,39 @@ export interface PdfMarks {
   words: number[][];
   /** o an konuşulan kelimenin words dizini (-1: yok). Yalnız işaret katmanını yeniden çizer. */
   useFocus?: () => number;
+  /** hareketli imleç: [[cümle içi karakter, x, y]]; useChar o an konuşulan karakteri verir */
+  path?: number[][];
+  useChar?: () => number;
 }
+
+/** İmleç: konuşulan karakter iki yol noktası arasında ilerledikçe sürekli kayar (anlatan hocanın eli gibi);
+ *  noktada bölge (r) varsa o bölge ince çerçeveyle gösterilir. */
+function imlecDurum(path: number[][], c: number): { x: number; y: number; r: number[] | null } {
+  if (c < 0 || c <= path[0][0]) return { x: path[0][1], y: path[0][2], r: path[0].length >= 7 ? path[0].slice(3, 7) : null };
+  for (let i = 0; i + 1 < path.length; i++) {
+    const a = path[i], b = path[i + 1];
+    if (c < b[0]) {
+      // noktaya varınca kısa bir duruş, sonra bir sonraki noktaya doğru süzülme
+      const span = Math.max(1, b[0] - a[0]);
+      const o = Math.max(0, Math.min(1, ((c - a[0]) / span - 0.35) / 0.65));
+      return { x: a[1] + (b[1] - a[1]) * o, y: a[2] + (b[2] - a[2]) * o, r: a.length >= 7 ? a.slice(3, 7) : null };
+    }
+  }
+  const z = path[path.length - 1];
+  return { x: z[1], y: z[2], r: z.length >= 7 ? z.slice(3, 7) : null };
+}
+
+const Imlec = memo(function Imlec({ path, useChar }: { path: number[][]; useChar: () => number }) {
+  const { x, y, r } = imlecDurum(path, useChar());
+  return (
+    <>
+      {r && <span className="pdv-imlec-bolge" style={pct(r)} />}
+      <svg className="pdv-imlec" style={{ left: `${x * 100}%`, top: `${y * 100}%` }} width="15" height="15" viewBox="0 0 24 24" aria-hidden>
+        <path d="M3 2l7.5 19 2.6-7.9L21 10.5z" />
+      </svg>
+    </>
+  );
+});
 
 const pct = (b: number[]) => ({ left: `${b[0] * 100}%`, top: `${b[1] * 100}%`, width: `${(b[2] - b[0]) * 100}%`, height: `${(b[3] - b[1]) * 100}%` });
 const noFocus = () => -1;
@@ -67,11 +99,12 @@ const noFocus = () => -1;
 const MarkLayer = memo(function MarkLayer({ m }: { m: PdfMarks }) {
   const fi = (m.useFocus || noFocus)();
   const f = fi >= 0 ? m.words[fi] : null;
-  const r = m.kind === 'resim' ? m.lines[0] : null;
+  const r = m.kind === 'resim' && !m.path ? m.lines[0] : null;
   return (
     <div className={`pdv-marks is-${m.kind}`} aria-hidden>
       {m.lines.map((b, i) => <span key={i} className="pdv-mark-line" style={pct(b)} />)}
       {f && <span className="pdv-mark-word" style={pct(f)} />}
+      {m.path && m.useChar && <Imlec path={m.path} useChar={m.useChar} />}
       {r && <span className="pdv-laser" style={{ left: `${((r[0] + r[2]) / 2) * 100}%`, top: `${((r[1] + r[3]) / 2) * 100}%` }} />}
     </div>
   );

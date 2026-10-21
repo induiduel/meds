@@ -369,7 +369,40 @@ def pdf_indir(deck_id: str, f: dict, fi: int) -> Path | None:
     return hedef
 
 
+def imlec_yolu(cumle: str, capalar: list[dict]) -> list[list[float]]:
+    """Hareketli imleç: çapadaki "yol" = [{"k": cümledeki ifade, "x":, "y": (sayfa oranı)}] → [[karakter, x, y]]
+    (ifadenin cümledeki başlangıcı; ses o kelimeye gelince imleç o noktaya kayar)."""
+    trk = lambda t: t.replace("İ", "i").replace("I", "ı").lower()  # uzunluk korunur (İ.lower() iki karakter olur)
+    out, kucuk, konum = [], trk(cumle), 0
+    for c in capalar:
+        for n in c.get("yol") or []:
+            k = trk(str(n.get("k") or "")).strip()
+            i = kucuk.find(k, konum) if k else -1
+            if i < 0 and k:
+                i = kucuk.find(k)
+            if i < 0:
+                i = 0 if not out else -1
+            if i < 0:
+                continue
+            konum = max(konum, i)
+            v = [i, round(float(n["x"]), 4), round(float(n["y"]), 4)]
+            if isinstance(n.get("r"), list) and len(n["r"]) == 4:  # o an anlatılan bölge (ince çerçeve)
+                v += [round(float(z), 4) for z in n["r"]]
+            out.append(v)
+    out.sort(key=lambda v: v[0])
+    return out
+
+
 def capali(cumle: str, capalar: list[dict], pdf: "Pdf | None") -> dict | None:
+    isr = capali_ic(cumle, capalar, pdf)
+    if isr:
+        yol = imlec_yolu(cumle, capalar)
+        if yol:
+            isr["y"] = yol
+    return isr
+
+
+def capali_ic(cumle: str, capalar: list[dict], pdf: "Pdf | None") -> dict | None:
     """Yazar çapasından işaret: sayfa ve madde tahminsiz; şekil anlatılıyorsa resim + lazer."""
     if not pdf:
         return None
@@ -449,9 +482,10 @@ def ders_isle(key: str, kuru: bool, zorla: bool = False) -> dict | None:
         for ci, e in enumerate(sinir):
             cumle = m[(sinir[ci - 1] if ci else 0):e]
             if cc and cc[ci] and es:
-                isr = capali(cumle, cc[ci], pdfler[es.get("dosya", 0)] if es.get("dosya", 0) < len(pdfler) else None)
+                cd = next((int(c["dosya"]) for c in cc[ci] if c.get("dosya") is not None), es.get("dosya", 0))
+                isr = capali(cumle, cc[ci], pdfler[cd] if cd < len(pdfler) else None)
                 if isr:
-                    isr["d"] = es.get("dosya", 0)
+                    isr["d"] = cd
                     say[isr["t"]] += 1
                     say["capa"] += 1
                     liste.append(isr)

@@ -1,15 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 166,
-  "baslik": "60 planı ve süre tahmini daha gerçekçi",
+  "onem": 167,
+  "baslik": "Sesli ders: hareketli imleç ve fetal iyilik hali yeniden",
   "maddeler": [
-    "60 planında bir dersin yalnız sesli dersini, en önemlilerini ya da sorularını bitirmek de artık güçlü sayılır; en çok soru çözmek, sonra sesli ders kazandırır.",
-    "Ders süreleri artık seçtiğin ses hızına (1×–2×) göre hesaplanır."
+    "Sesli derste resim, tablo ve traseler anlatılırken PDF üzerinde ince bir imleç anlatılan yerde dolaşıyor, o an konuşulan bölge çerçeveyle gösteriliyor.",
+    "Gebelik terminolojisi: fetal iyilik hali (NST, kontraksiyon stres testi, deselerasyonlar, biyofizik profil) amaç odaklı, daha sade ve geniş anlatıldı; traseler imleçle adım adım gösteriliyor."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "Sesli derste resim, tablo ve traseler anlatılırken PDF üzerinde ince bir imleç anlatılan yerde dolaşıyor, o an konuşulan bölge çerçeveyle gösteriliyor."
+  ],
   "degisen": [
-    "60 planında bir dersin yalnız sesli dersini, en önemlilerini ya da sorularını bitirmek de artık güçlü sayılır; en çok soru çözmek, sonra sesli ders kazandırır.",
-    "Ders süreleri artık seçtiğin ses hızına (1×–2×) göre hesaplanır."
+    "Gebelik terminolojisi: fetal iyilik hali (NST, kontraksiyon stres testi, deselerasyonlar, biyofizik profil) amaç odaklı, daha sade ve geniş anlatıldı; traseler imleçle adım adım gösteriliyor."
   ],
   "duzeltilen": [],
   "silinen": []
