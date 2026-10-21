@@ -66,16 +66,16 @@ export default function SinavPlani({ hiz }: { hiz: Partial<Record<TakipModul, Hi
         <div className="sp-ic-alan">
           <div className="sp-skor">
             <div className="sp-skor-k">
-              <small>Bugünkü durumunla</small>
-              <b>~{tamYaz(simdi.beklenen)}</b>
+              <small>Şu an net puanın</small>
+              <b>~{tamYaz(simdi.beklenen)} <span>/ 100</span></b>
               <em>60 olasılığı {yuzde(simdi.olasilik)}</em>
               <span className="sp-olc" aria-hidden><i style={{ width: `${Math.round(simdi.olasilik * 100)}%` }} /></span>
             </div>
             <div className="sp-skor-ok" aria-hidden>→</div>
             <div className="sp-skor-k is-plan">
-              <small>Planı uygularsan</small>
-              <b>~{tamYaz(sonra.beklenen)}</b>
-              <em>60 olasılığı {yuzde(sonra.olasilik)} · kötü günde bile ~{tamYaz(sonra.kotu)}</em>
+              <small>Planı uygularsan net puanın</small>
+              <b>~{tamYaz(sonra.beklenen)} <span>/ 100</span></b>
+              <em>+{tamYaz(sonra.beklenen - simdi.beklenen)} puan · 60 olasılığı {yuzde(sonra.olasilik)} · kötü günde bile ~{tamYaz(sonra.kotu)}</em>
               <span className="sp-olc" aria-hidden><i style={{ width: `${Math.round(sonra.olasilik * 100)}%` }} /></span>
             </div>
           </div>
@@ -112,9 +112,17 @@ export default function SinavPlani({ hiz }: { hiz: Partial<Record<TakipModul, Hi
                     <i className="is-simdi" style={{ width: `${(b.dogru / b.n) * 100}%` }} />
                     <span className="sp-b-baraj" style={{ left: '50%' }} />
                   </div>
-                  <div className="sp-b-alt">
-                    <span>~{puanYaz(b.dogru)} doğru{b.planDogru - b.dogru > 0.2 ? ` → ~${puanYaz(b.planDogru)}` : ''}</span>
-                    <span className="sp-b-puan">{puanYaz(b.puan)}{b.planPuan - b.puan > 0.2 ? ` → ${puanYaz(b.planPuan)}` : ''} puan</span>
+                  <div className="sp-b-net">
+                    <div>
+                      <small>Şu an net</small>
+                      <b>{puanYaz(b.puan)} <span>puan</span></b>
+                      <em>~{puanYaz(b.dogru)} doğru / {b.n}</em>
+                    </div>
+                    <div className={b.planPuan - b.puan > 0.2 ? 'is-plan' : 'is-ayni'}>
+                      <small>Planla net</small>
+                      <b>{puanYaz(b.planPuan)} <span>puan</span></b>
+                      <em>{b.planPuan - b.puan > 0.2 ? `+${puanYaz(b.planPuan - b.puan)} puan · ~${puanYaz(b.planDogru)} doğru` : 'Değişmiyor'}</em>
+                    </div>
                   </div>
                   <div className="sp-b-oneri">
                     {sure

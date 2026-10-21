@@ -313,3 +313,13 @@
   .sp-a-ac span { display: none; }
   .sp-a-ac { width: 36px; padding: 0; }
 }
+.sp-skor-k b span { font-size: 15px; font-weight: 500; color: var(--color-ink-3); }
+.sp-b-net { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.sp-b-net > div { display: flex; flex-direction: column; gap: 2px; padding: 8px 10px; border-radius: 10px; background: color-mix(in srgb, var(--color-line) 45%, transparent); min-width: 0; }
+.sp-b-net > div.is-plan { background: var(--color-accent-soft); }
+.sp-b-net small { font: 600 11px var(--font-sans); letter-spacing: .04em; text-transform: uppercase; color: var(--color-ink-3); }
+.sp-b-net b { font: 700 20px/1.15 var(--font-sans); font-variant-numeric: tabular-nums; color: var(--color-ink); }
+.sp-b-net .is-plan b { color: var(--color-accent); }
+.sp-b-net b span { font-size: 12.5px; font-weight: 500; color: var(--color-ink-3); }
+.sp-b-net em { font-style: normal; font-size: 12px; color: var(--color-ink-2); font-variant-numeric: tabular-nums; }
+.sp-b.is-altta .sp-b-net > div:first-child b { color: var(--color-danger, #c0392b); }
