@@ -47,12 +47,12 @@
    "kod": "k01-1",
    "no": 1,
    "baslik": "Abortus",
-   "soru": 38,
-   "ornek": 34,
-   "cikmis": 4,
+   "soru": 29,
+   "ornek": 27,
+   "cikmis": 2,
    "ses": true,
    "set": 1,
-   "setSay": 2,
+   "setSay": 3,
    "sayfa": [
     1,
     41
@@ -62,14 +62,29 @@
    "kod": "k01-2",
    "no": 1,
    "baslik": "Abortus",
-   "soru": 37,
-   "ornek": 35,
-   "cikmis": 2,
+   "soru": 29,
+   "ornek": 25,
+   "cikmis": 4,
    "ses": true,
    "set": 2,
-   "setSay": 2,
+   "setSay": 3,
    "sayfa": [
-    26,
+    20,
+    37
+   ]
+  },
+  {
+   "kod": "k01-3",
+   "no": 1,
+   "baslik": "Abortus",
+   "soru": 29,
+   "ornek": 29,
+   "cikmis": 0,
+   "ses": true,
+   "set": 3,
+   "setSay": 3,
+   "sayfa": [
+    29,
     42
    ]
   },
@@ -77,8 +92,8 @@
    "kod": "k02-1",
    "no": 2,
    "baslik": "Gebelik Terminolojisi ve Kavramları",
-   "soru": 30,
-   "ornek": 16,
+   "soru": 37,
+   "ornek": 23,
    "cikmis": 14,
    "ses": true,
    "set": 1,
@@ -92,14 +107,14 @@
    "kod": "k02-2",
    "no": 2,
    "baslik": "Gebelik Terminolojisi ve Kavramları",
-   "soru": 29,
-   "ornek": 27,
+   "soru": 36,
+   "ornek": 34,
    "cikmis": 2,
    "ses": true,
    "set": 2,
    "setSay": 2,
    "sayfa": [
-    24,
+    28,
     59
    ]
   }
