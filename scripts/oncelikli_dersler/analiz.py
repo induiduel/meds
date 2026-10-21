@@ -82,14 +82,40 @@ def sade(s: str) -> str:
     return s
 
 
+# Derlemde tek başına geçen sözcükler: ek ancak kalan kök de gerçek bir sözcükse atılır ("trombüs" → "trombü"
+# gibi kesik kök üretmemek için; YZ denetimi 2026-10-22 bu hatayı yakaladı). vocab_kur() ile doldurulur.
+VOCAB: set[str] = set()
+
+
+def vocab_kur(metinler) -> None:
+    VOCAB.clear()
+    for m in metinler:
+        VOCAB.update(sade(w).strip("-'") for w in SOZCUK.findall(m))
+
+
 def kok(w: str) -> str:
     w = sade(w).strip("-'")
     if "'" in w:
         return w.split("'")[0]
     for e in EKLER:
-        if len(w) - len(e) >= 4 and w.endswith(e):
-            return w[: -len(e)]
+        if len(w) - len(e) >= 4 and w.endswith(e) and w[: -len(e)] in VOCAB:
+            return kok(w[: -len(e)]) if len(w) - len(e) > 4 else w[: -len(e)]
     return w
+
+
+BURADA = Path(__file__).resolve().parent
+
+
+def liste_oku(ad: str) -> set[str]:
+    """Satır başına bir kök; # yorum. YZ denetiminin bulduğu hatalardan kurulur (yz_birlestir.py)."""
+    f = BURADA / ad
+    if not f.exists():
+        return set()
+    return {kok(x.split('#')[0].strip()) for x in f.read_text().splitlines() if x.split('#')[0].strip()}
+
+
+TURKCE = liste_oku('turkce_sozcukler.txt')   # terim sanılan Türkçe/genel sözcükler
+EK_TERIM = liste_oku('ek_terimler.txt')      # kaçırılan yabancı terimler
 
 
 def sozluk() -> tuple[dict[str, str], set[str]]:
@@ -112,8 +138,25 @@ def genel_kokler(metinler: dict[str, str]) -> set[str]:
     return {k for k, n in df.items() if n >= esik}
 
 
+def bilinen_kok(k: str, sozluk_kok: set[str]) -> str:
+    """Ek almış biçimi bilinen terime indir: "vankomisine" → "vankomisin" (ek terim ya da sözlük kökü, ek ≤ 4 harf)."""
+    if k in EK_TERIM or k in sozluk_kok:
+        return k
+    for n in range(1, 5):
+        b = k[:-n]
+        if len(b) >= 4 and (b in EK_TERIM or b in sozluk_kok):
+            return b
+    return k
+
+
 def yabanci_mi(ham: str, k: str, genel: set[str], sozluk_kok: set[str]) -> bool:
-    if len(k) < 4 or k in genel:
+    if re.fullmatch(r'[A-ZÇĞİÖŞÜ]{2,}[0-9]*', ham) or re.search(r'[A-Za-z]+\d', ham):
+        return k not in TURKCE  # kısaltma, gen adı (KPC, ATM, BRCA1, p53) — 3 harfliler de sayılır
+    if len(k) < 4 or k in TURKCE:
+        return False
+    if k in EK_TERIM:
+        return True
+    if k in genel:
         return False
     if re.fullmatch(r'[A-ZÇĞİÖŞÜ]{2,}[0-9]*', ham) or re.search(r'[A-Za-z]+\d', ham):
         return True  # kısaltma, gen adı (BRCA1, p53)
@@ -132,11 +175,24 @@ def metin_olc(m: str, genel: set[str], ifade: dict[str, str], sozluk_kok: set[st
     n = max(1, len(sozcukler))
     kucuk = sade(duz)
     terimler: set[str] = set()
-    for i, w in enumerate(sozcukler):
-        # cümle başı büyük harf özel ad sayılmaz; ortada büyük harfle başlayan yabancı biçimli sözcük özel addır
-        k = kok(w)
+    # Cümle ortasında büyük harfle başlayan sözcük özel addır (eponim: Chadwick, Kimmelstiel-Wilson, Sertoli);
+    # büyük harfli cins adını izleyen küçük harfli sözcük Latince tür adıdır (Treponema pallidum, Listeria monocytogenes).
+    # YZ denetimi bu iki sınıfın sistematik olarak kaçtığını gösterdi.
+    for mt in re.finditer(r"(?<=[^.!?:\n•\-\s(“\"])\s+([A-ZÇĞİÖŞÜ][a-zçğıöşü]+(?:-[A-ZÇĞİÖŞÜ]?[a-zçğıöşü]+)*)(?:\s+([a-z]{4,}))?", duz):
+        ad, tur = mt.group(1), mt.group(2)
+        k = kok(ad)
+        if len(k) >= 4 and k not in TURKCE and k not in genel and not TURKCE_IZ.search(k[3:]):
+            terimler.add(k)
+            if tur and re.search(r'(um|us|is|ae|ii|i|a|es|enes|ogenes|ensis|ella)$', tur) and kok(tur) not in genel:
+                terimler.add(kok(tur))
+    for w in sozcukler:
+        k = bilinen_kok(kok(w), sozluk_kok)
         if yabanci_mi(w, k, genel, sozluk_kok):
             terimler.add(k)
+    # çok sözcüklü ek terimler ("asit fosfataz", "fibrinoid nekroz") ifade olarak aranır
+    for t in EK_TERIM:
+        if ' ' in t and t in kucuk:
+            terimler.add(t)
     kategori = Counter()
     for t, c in ifade.items():
         if len(t) >= 5 and t in kucuk and c in ('ilac', 'hastalik', 'patojen', 'genetik'):
@@ -158,18 +214,27 @@ def metin_olc(m: str, genel: set[str], ifade: dict[str, str], sozluk_kok: set[st
     }
 
 
-def cikmislar(brans: str, no: int) -> list[dict]:
+def _baslik_sozcuk(s: str) -> set[str]:
+    katla = str.maketrans('çğıöşüâîû', 'cgiosuaiu')
+    return {w for w in re.findall(r'\w{4,}', sade(s).translate(katla))}
+
+
+def cikmislar(brans: str, no: int, baslik: str) -> list[dict]:
+    """Dersin çıkmışları. Sesli ders numarası çözücü numarasıyla her zaman aynı değil (k1-65 Meme Kanseri sesli
+    listede 34, çözücüde 35 — YZ denetimi yakaladı): dosya başlıkla doğrulanır, uymazsa aynı branşta başlığı en çok
+    örtüşen dosya alınır."""
+    def dosyalar(klasor: Path) -> list[dict]:
+        l = [json.loads(f.read_text()) for f in sorted(klasor.glob('*.json')) if f.name != 'index.json']
+        hedef = _baslik_sozcuk(baslik)
+        ayni = [d for d in l if int(d.get('no', -1)) == no and _baslik_sozcuk(d.get('baslik', '')) & hedef]
+        if ayni:
+            return ayni
+        puan = {id(d): len(_baslik_sozcuk(d.get('baslik', '')) & hedef) for d in l}
+        en = max(puan.values(), default=0)
+        return [d for d in l if en >= 2 and puan[id(d)] == en]
     qs: list[dict] = []
-    for f in sorted((VERI / f'{brans}_cozucu').glob('*.json')):
-        if f.name == 'index.json':
-            continue
-        d = json.loads(f.read_text())
-        if int(d.get('no', -1)) == no:
-            qs += [q for q in d.get('sorular', []) if q.get('tur') == 'cikmis']
-    for f in sorted((VERI / 'cikmis_paket' / 'ek' / brans).glob('*.json')):
-        d = json.loads(f.read_text())
-        if int(d.get('no', -1)) == no:
-            qs += [q for q in d.get('sorular', []) if q.get('tur') == 'cikmis']
+    for d in dosyalar(VERI / f'{brans}_cozucu') + dosyalar(VERI / 'cikmis_paket' / 'ek' / brans):
+        qs += [q for q in d.get('sorular', []) if q.get('tur') == 'cikmis']
     # aynı kök iki modülde → tekil
     gor, tekil = set(), []
     for q in qs:
@@ -223,6 +288,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument('--kurul', type=int, default=1)
     ap.add_argument('--liste')
+    ap.add_argument('--dok', help='her dersin tüm terim listesini bu klasöre yaz (YZ denetimi için)')
     a = ap.parse_args()
 
     if a.liste:
@@ -234,6 +300,7 @@ def main() -> None:
                and d.get('brans') in BRANS and d['key'] not in GIZLI and (METIN / f"{d['key']}.md").exists()]
     metinler = {d['key']: (METIN / f"{d['key']}.md").read_text() for d in dersler}
     tum = {p.stem: p.read_text() for p in METIN.glob(f'k{a.kurul}-*.md')}
+    vocab_kur(tum.values())
     genel = genel_kokler(tum)
     ifade, sozluk_kok = sozluk()
     dagilim = json.loads((VERI / 'sinav_dagilimi.json').read_text())['kurullar'].get(str(a.kurul), {}).get('branslar', {})
@@ -242,7 +309,9 @@ def main() -> None:
     for d in dersler:
         b = BRANS[d['brans']]
         m = metin_olc(metinler[d['key']], genel, ifade, sozluk_kok)
-        c = cikmis_olc(cikmislar(b, d['no']), genel, sozluk_kok)
+        cq = cikmislar(b, d['no'], d['baslik'])
+        c = cikmis_olc(cq, genel, sozluk_kok)
+        c['_cq'] = [{'soru': q.get('soru'), 'secenekler': q.get('secenekler'), 'dogru': q.get('dogru'), 'sinav': q.get('sinav')} for q in cq]
         ornek = sorted(m.pop('_terimler'))
         satirlar.append({'key': d['key'], 'baslik': d['baslik'], 'brans': b, 'no': d['no'],
                          'sureSn': (d.get('varsayilan') or {}).get('sureSn'), **m, **c, '_ornek': ornek})
@@ -273,6 +342,18 @@ def main() -> None:
             'getiri': round(yuzdelik([x['beklenen'] / max(1, x['kelime']) for x in satirlar],
                                      s['beklenen'] / max(1, s['kelime']))),
         }
+    # YZ yargısı (yz/k<N>.json, Claude ders metnini + çıkmışları okuyarak verdi): azEzber / mantik / kolayCikmis
+    # boyutlarında YZ %60, metin ölçümü %40; tür, gerekçe, ezber çekirdeği ve konu türleri doğrudan YZ'den.
+    yzf = BURADA / 'yz' / f'k{a.kurul}.json'
+    yz = json.loads(yzf.read_text()) if yzf.exists() else {}
+    for s in satirlar:
+        y = yz.get(s['key'])
+        if not y:
+            continue
+        for k in ('azEzber', 'mantik', 'kolayCikmis'):
+            if isinstance(y.get(k), (int, float)):
+                s['boyut'][k] = round(0.6 * y[k] + 0.4 * (s['boyut'][k] if s['boyut'][k] is not None else y[k]))
+        s['yz'] = {k: y[k] for k in ('tur', 'gerekce', 'ezberCekirdegi', 'konular', 'cikmisNot') if k in y}
     VARSAYILAN = {'azEzber': 3, 'mantik': 2.5, 'kolayCikmis': 1.5, 'kisa': 1.5, 'getiri': 1.5, 'sikCikmis': 1}
     for s in satirlar:
         tp = ag = 0.0
@@ -284,8 +365,14 @@ def main() -> None:
             ag += w
         s['puan'] = round(tp / ag)
         b = s['boyut']
-        s['tur'] = ('mantik' if b['mantik'] >= 60 and b['azEzber'] >= 55 else
+        s['tur'] = s.get('yz', {}).get('tur') or ('mantik' if b['mantik'] >= 60 and b['azEzber'] >= 55 else
                     'ezber' if b['azEzber'] < 40 else 'karma')
+        if a.dok:
+            Path(a.dok).mkdir(parents=True, exist_ok=True)
+            (Path(a.dok) / f"{s['key']}.json").write_text(json.dumps(
+                {'key': s['key'], 'baslik': s['baslik'], 'brans': s['brans'], 'no': s['no'], 'terimler': s['_ornek'], 'metin': str(METIN / f"{s['key']}.md"), 'cikmislar': s['_cq']},
+                ensure_ascii=False, indent=0))
+        s.pop('_cq', None)
         s['ornekTerim'] = sorted(s.pop('_ornek'), key=lambda t: (-len(t), t))[:8]
     satirlar.sort(key=lambda s: -s['puan'])
     for i, s in enumerate(satirlar, 1):

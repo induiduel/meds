@@ -22,6 +22,8 @@ const BRANS_AD: Record<string, string> = {
 };
 type Durum = 'kalan' | 'tum' | 'biten';
 const DURUM_AD: Record<Durum, string> = { kalan: 'Çalışabileceklerim', tum: 'Tümü', biten: 'Bitirdiklerim' };
+const KONU_SIRA: Record<DersTuru, number> = { mantik: 0, karma: 1, ezber: 2 };
+const TUR_KISA: Record<DersTuru, string> = { mantik: 'Mantık', karma: 'Karma', ezber: 'Ezber' };
 const AYAR_KEY = 'medsoru_oncelikli_ayar_v1';
 
 interface Ayar { profil: string; agirlik: Agirlik; esik: Boyut[]; brans: string[]; tur: DersTuru[]; durum: Durum }
@@ -201,6 +203,23 @@ export default function OncelikliDerslerView() {
                   </div>
                   {acikMi && (
                     <div className="od-detay">
+                      {d.yz?.gerekce && <p className="od-gerekce">{d.yz.gerekce}</p>}
+                      {d.yz?.konular && d.yz.konular.length > 0 && (
+                        <div className="od-konular">
+                          <small>Konular (önce mantıkla çözülenler):</small>
+                          <ul>
+                            {[...d.yz.konular].sort((x, y) => KONU_SIRA[x.tur] - KONU_SIRA[y.tur]).map((k, i) => (
+                              <li key={i} className={`is-${k.tur}`}>
+                                <span className={`od-tur is-${k.tur}`}>{TUR_KISA[k.tur]}</span> {k.baslik}{k.cikmis ? <em> · çıkmış</em> : null}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                      {d.yz?.ezberCekirdegi && d.yz.ezberCekirdegi.length > 0 && (
+                        <p className="od-terim"><b className="od-etiket">Kaçınılmaz ezber:</b> {d.yz.ezberCekirdegi.join(', ')}</p>
+                      )}
+                      {d.yz?.cikmisNot && <p className="od-terim"><b className="od-etiket">Çıkmışlar:</b> {d.yz.cikmisNot}</p>}
                       <ul>
                         <li><b>{sayi(d.terim)}</b> farklı yabancı terim ({sayi(d.terim1000, 1)} / 1000 kelime) · <b>{d.ilac}</b> ilaç · <b>{d.hastalik}</b> hastalık/etken adı · <b>{d.sayi}</b> sayısal değer</li>
                         <li>Neden-sonuç bağlacı: <b>{sayi(d.mantik1000, 1)}</b> / 1000 kelime · anlatım <b>{sayi(d.kelime)}</b> kelime</li>
@@ -209,7 +228,6 @@ export default function OncelikliDerslerView() {
                           {d.cikmisIsim != null && <> · isim soran soru %{Math.round(d.cikmisIsim * 100)} · olumsuz kök %{Math.round((d.cikmisNegatif || 0) * 100)}</>}
                         </li>
                         <li>Bu dersten sınavda beklenen ≈ <b>{sayi(d.beklenen, 1)}</b> soru</li>
-                        {d.ornekTerim.length > 0 && <li className="od-terim">Ezber gerektiren örnek terimler: {d.ornekTerim.join(', ')}</li>}
                       </ul>
                       <button type="button" className="kt-btn" onClick={() => ac(d.key)}><Headphones aria-hidden /> Dersi dinle</button>
                     </div>
@@ -225,7 +243,7 @@ export default function OncelikliDerslerView() {
             </button>
             {nasil && (
               <div>
-                <p>Her sesli dersin anlatım metni ve o dersten gelmiş çıkmış sorular otomatik incelendi. Her ders altı ölçütte 0–100 puan aldı (yüksek puan senin lehine):</p>
+                <p>Her sesli dersin anlatım metni ve o dersten gelmiş çıkmış sorular hem sayısal olarak ölçüldü hem de yapay zekâ tarafından baştan sona okunup değerlendirildi (ezber, mantık ve çıkmış puanlarında yapay zekâ yargısı %60, metin ölçümü %40). Her ders altı ölçütte 0–100 puan aldı (yüksek puan senin lehine):</p>
                 <ul>
                   {BOYUTLAR.map((b) => <li key={b.id}><b>{b.ad}:</b> {b.ne}.</li>)}
                 </ul>

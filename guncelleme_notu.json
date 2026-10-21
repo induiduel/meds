@@ -1,18 +1,19 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 220,
-  "baslik": "Bu sayfayı çevrimdışı kullan",
+  "onem": 221,
+  "baslik": "Öncelikli dersler: yapay zekâ değerlendirmesi",
   "maddeler": [
-    "Üst çubuktaki bulut simgesi bulunduğun sayfaya bakar: sayfa cihazındaysa onay işareti görünür.",
-    "Simgeye dokununca bu sayfanın internetsiz çalışması için gerekenler boyutuyla gösterilir; tek dokunuşla indirirsin.",
-    "Bir dersi indirirken aynı dersin soru çözücü ve en önemliler paketleri de öneri olarak sunulur."
+    "Öncelikli derslerde her sesli ders yapay zekâ tarafından baştan sona okunup ezber, mantık ve çıkmış kolaylığı açısından değerlendirildi; sıralama buna göre yenilendi.",
+    "Ders ayrıntısında gerekçe, konuların mantık/karma/ezber türü (mantıkla çözülenler önce), kaçınılmaz ezber listesi ve çıkmışların ne sorduğu görünüyor.",
+    "Meme Kanseri ile Erkek Genital derslerinin çıkmışları yer değiştirmişti; düzeltildi."
   ],
   "eklenen": [
-    "Üst çubuktaki bulut simgesi bulunduğun sayfaya bakar: sayfa cihazındaysa onay işareti görünür.",
-    "Simgeye dokununca bu sayfanın internetsiz çalışması için gerekenler boyutuyla gösterilir; tek dokunuşla indirirsin.",
-    "Bir dersi indirirken aynı dersin soru çözücü ve en önemliler paketleri de öneri olarak sunulur."
+    "Öncelikli derslerde her sesli ders yapay zekâ tarafından baştan sona okunup ezber, mantık ve çıkmış kolaylığı açısından değerlendirildi; sıralama buna göre yenilendi.",
+    "Ders ayrıntısında gerekçe, konuların mantık/karma/ezber türü (mantıkla çözülenler önce), kaçınılmaz ezber listesi ve çıkmışların ne sorduğu görünüyor."
   ],
   "degisen": [],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Meme Kanseri ile Erkek Genital derslerinin çıkmışları yer değiştirmişti; düzeltildi."
+  ],
   "silinen": []
 }

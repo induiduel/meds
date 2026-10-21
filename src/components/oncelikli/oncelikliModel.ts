@@ -42,6 +42,14 @@ export interface OncelikliDers {
   puan: number;
   tur: DersTuru;
   ornekTerim: string[];
+  /** YZ yargısı (Claude, ders metni + çıkmışlar okunarak): scripts/oncelikli_dersler/yz/k<N>.json */
+  yz?: {
+    tur?: DersTuru;
+    gerekce?: string;
+    ezberCekirdegi?: string[];
+    konular?: { baslik: string; tur: DersTuru; cikmis?: boolean }[];
+    cikmisNot?: string;
+  };
 }
 export interface OncelikliVeri { kurul: number; varsayilanAgirlik: Record<Boyut, number>; dersler: OncelikliDers[] }
 
