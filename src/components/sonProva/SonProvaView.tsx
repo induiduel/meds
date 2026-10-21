@@ -409,24 +409,27 @@ function PartOynatici({ ix, ders, part, asama, gez }: { ix: SpIndex; ders: SpDer
 
   return (
     <div className="sp-part-sayfa">
-      <Suspense fallback={<div className="sp-kart sp-bos"><Loader2 className="sp-don" aria-hidden /></div>}>
-        <CanliDersDers dersKey={key} kamp={{ geri: ust }} />
-      </Suspense>
+      {/* Soru ya da check-up önerisi açıkken ders (metin + PDF) gizlenir; bileşen yerinde kalır, ses ve konum korunur */}
+      <div className={test || checkupSor ? 'sp-gizli' : 'sp-ders-alan'}>
+        <Suspense fallback={<div className="sp-kart sp-bos"><Loader2 className="sp-don" aria-hidden /></div>}>
+          <CanliDersDers dersKey={key} kamp={{ geri: ust }} />
+        </Suspense>
+      </div>
 
       {test && (
-        <div className="sp-katman" role="dialog" aria-modal="true" aria-label={`Aşama ${test.no} soruları`}>
-          <div className="sp-katman-ic">
+        <section className="sp-sayfa-ici" aria-label={`Aşama ${test.no} soruları`}>
+          <div className="sp-sayfa-ici-ic">
             <SpTest key={`${key}:${test.no}`} ix={ix} kip="asama" refs={test.sorular} anahtar={`${key}:${test.no}`}
               baslik={`Aşama ${test.no} soruları`} alt={`${test.baslik} · ${test.dersNo}) ${test.dersAd}`}
               onKapat={() => kapat(true)} onGit={(y) => { setTest(null); git(y); }}
               devamEtiket={test.no === part.asamalar[part.asamalar.length - 1].no ? 'Partı bitir' : 'Derse devam'} />
-            <button type="button" className="sp-btn sp-katman-atla" onClick={() => kapat(false)}>Şimdi değil, sonra çözerim</button>
+            <button type="button" className="sp-btn sp-katman-atla" onClick={() => kapat(false)}>Şimdi değil, derse dön</button>
           </div>
-        </div>
+        </section>
       )}
       {checkupSor && (
-        <div className="sp-katman" role="dialog" aria-modal="true" aria-label="Part tamamlandı">
-          <div className="sp-katman-ic sp-kart sp-kapi">
+        <section className="sp-sayfa-ici" aria-label="Part tamamlandı">
+          <div className="sp-sayfa-ici-ic sp-kart sp-kapi">
             <span className="sp-ic"><CheckCircle2 aria-hidden /></span>
             <h2 className="sp-h3">Part bitti</h2>
             <p>Şimdi partın check-up testiyle ({part.asamalar.reduce((n, a) => n + a.checkup.length, 0)} soru) eksiklerini gör.</p>
@@ -435,7 +438,7 @@ function PartOynatici({ ix, ders, part, asama, gez }: { ix: SpIndex; ders: SpDer
               <button type="button" className="sp-btn sp-btn-ana" onClick={() => git(`/son-prova/${ders.brans}/${part.no}/checkup`)}><ListChecks aria-hidden /> Check-up'a başla</button>
             </div>
           </div>
-        </div>
+        </section>
       )}
     </div>
   );

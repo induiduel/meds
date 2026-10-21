@@ -193,3 +193,12 @@
 .sp-btn-kucuk.is-tamam { color: var(--color-ok, var(--color-accent)); }
 @media (max-width: 560px) { .sp-ust-gez .sp-btn-kucuk span { display: none; } .sp-ust-gez .sp-btn-kucuk { min-width: 40px; } }
 .sp-chip.is-yeni { background: var(--color-accent-soft); color: var(--color-accent); }
+
+/* aşama soruları sayfa içinde: ders alanı gizlenir */
+.sp-gizli { display: none; }
+.sp-sayfa-ici { width: 100%; max-width: 820px; margin: 0 auto; padding: 12px 16px 48px; box-sizing: border-box; font-family: var(--font-sans); color: var(--color-ink); }
+.sp-sayfa-ici-ic { display: grid; gap: 10px; }
+.sp-sayfa-ici :where(h2, h3, p) { margin: 0; }
+.sp-sayfa-ici button { font: inherit; color: inherit; cursor: pointer; }
+.sp-sayfa-ici svg { flex: none; width: 16px; height: 16px; }
+.sp-sayfa-ici .sp-btn-ana { background: var(--color-accent); border-color: transparent; color: var(--color-on-accent); }

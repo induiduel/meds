@@ -1,14 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 155,
-  "baslik": "Sıralamada çift hesap birleştirildi",
+  "onem": 156,
+  "baslik": "Son Prova: sorular sayfa içinde",
   "maddeler": [
-    "Aynı öğrencinin iki hesabı sıralamada artık tek satır görünüyor."
+    "Son Prova'da aşama soruları artık pencere olarak değil sayfanın içinde açılır; soru çözerken ders metni ve PDF gizlenir, bitince kaldığın yerden devam eder.",
+    "Son Prova PDF'lerinde okunan cümle ve kelime slaytta işaretlenir."
   ],
   "eklenen": [],
-  "degisen": [],
-  "duzeltilen": [
-    "Aynı öğrencinin iki hesabı sıralamada artık tek satır görünüyor."
+  "degisen": [
+    "Son Prova'da aşama soruları artık pencere olarak değil sayfanın içinde açılır; soru çözerken ders metni ve PDF gizlenir, bitince kaldığın yerden devam eder.",
+    "Son Prova PDF'lerinde okunan cümle ve kelime slaytta işaretlenir."
   ],
+  "duzeltilen": [],
   "silinen": []
 }

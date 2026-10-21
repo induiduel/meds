@@ -377,6 +377,17 @@ def capali(cumle: str, capalar: list[dict], pdf: "Pdf | None") -> dict | None:
     sy = pdf.sayfa(int(sayfa)) if sayfa else None
     if not sy:
         return None
+    # Anlamsal çapa (2026-10-21): "madde" = Sayfa.maddeler dizinleri (capa_dok.py'nin numaraladığı M kutuları),
+    # "resim" = Sayfa.resimler dizini (R kutuları), "kutu" = elle sayfa oranı kutu; kelime eşlemesi yalnız madde içinde.
+    if any(c.get("madde") for c in capalar):
+        ms = {int(i) for c in capalar for i in (c.get("madde") or []) if 0 <= int(i) < len(sy.maddeler)}
+        if ms:
+            return {"s": int(sayfa), **eslestir_capa(cumle, sy, ms)}
+    for c in capalar:
+        if c.get("kutu"):
+            return {"s": int(sayfa), "t": "resim", "l": [[round(float(v), 4) for v in c["kutu"]]], "w": []}
+        if c.get("resim") is not None and 0 <= int(c["resim"]) < len(sy.resimler):
+            return {"s": int(sayfa), "t": "resim", "l": [sy.n(sy.resimler[int(c["resim"])])], "w": []}
     satirlar = [x for c in capalar for x in (c.get("satir") or [])]
     ms = capa_maddeleri(sy, satirlar) if satirlar else set()
     if ms:
@@ -418,6 +429,8 @@ def ders_isle(key: str, kuru: bool, zorla: bool = False) -> dict | None:
     pdfler: list[Pdf | None] = []
     for fi, f in enumerate(hz["dosyalar"]):
         yol = INDIR / f["path"]
+        if str(f.get("path", "")).startswith("Son Prova/"):  # Son Prova özet PDF'i (scripts/son_prova/pdf_kirp.mjs)
+            yol = MEDS / "data" / "son_prova" / "pdf" / Path(f["path"]).name
         if not yol.exists() and os.environ.get("HIZALA_PDF_DIZIN"):
             ek = f"_{fi}" if fi else ""
             yol = Path(os.environ["HIZALA_PDF_DIZIN"]) / f"{hz['deckId']}{ek}.pdf"
