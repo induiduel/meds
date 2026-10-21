@@ -174,6 +174,8 @@ SAYI_TTS: list = [
     # sıra sayısı: "14. hafta", "2. trimester", "3.'sü" (cümle sonundaki "… 14." değil: arkasında küçük harfli sözcük/ek olmalı)
     (re.compile(r"(?<![\w.,])(\d+)\.(?:['’]s[iıuü])?(?=\s+[a-zçğıöşü(]|['’]|[,;)])"),
      lambda m: sira_oku(int(m.group(1))) + (m.group(0)[-2:] if m.group(0)[-3:-2] in "'’" else "")),
+    # tireyle harfe bağlı sayı: "alfa-1" → "alfa bir", "IL-6" → "IL altı", "HTLV-1" → "HTLV bir"
+    (re.compile(r"(?<=[A-Za-zçğıöşüÇĞİÖŞÜα-ω])-(\d{1,3})(?![\d.,]\d|\w)"), lambda m: " " + sayi_oku(int(m.group(1)))),
     # ondalık ve düz sayı (harf/rakama bitişik olanlar — CD4, BRCA1, 47,XXY — dokunulmaz)
     (re.compile(r"(?<![\w.,%+\-])(\d+),(\d+)(?![\w,])"), _ondalik),
     (re.compile(r"(?<![\w.,%+\-/])(\d{1,9})(?![\w.,/]\d|\w)"), lambda m: sayi_oku(int(m.group(1)))),
@@ -183,6 +185,8 @@ SAYI_TTS: list = [
 def sayi_imi(cumleler) -> str:
     """Klip özetine eklenir: rakam içeren klipler SAYI_TTS okunuşuyla (2026-10-22) bir kez yeniden üretilir."""
     metin = cumleler if isinstance(cumleler, str) else "\n".join(cumleler)
+    if re.search(r"[A-Za-zçğıöşüα-ω]-\d", metin):
+        return "|sayi3"  # "alfa-1" okunuşu sonradan eklendi (2026-10-22)
     return "|sayi2" if re.search(r"\d", metin) else ""
 
 
