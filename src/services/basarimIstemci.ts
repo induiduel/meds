@@ -141,10 +141,10 @@ export function kutlamalariAtla() {
 }
 
 export interface CalismaDers { id: string; ad: string; modul: string; sn: number }
-export interface CalismaSatir { sira: number; ad: string; sn: number; ben: boolean; renk?: string; cerceve?: string; kidem?: string; dersler: CalismaDers[] }
+export interface CalismaSatir { sira: number; ad: string; sn: number; ben: boolean; foto?: string; renk?: string; cerceve?: string; kidem?: string; dersler: CalismaDers[] }
 export const calismaGetir = (kapsam: 'gun' | 'hafta', donem?: number) =>
   istek<{ donem: number; pencere: Pencere; satir: CalismaSatir[]; benim: number | null; odul: number; esikSn: number }>(`/api/basarim/calisma?kapsam=${kapsam}${donem ? `&donem=${donem}` : ''}`);
-export interface SiraSatir { sira: number; ad: string; puan: number; ben: boolean; unvan?: string; ozel?: boolean; renk?: string; kidem?: string; cerceve?: string; basarim: number }
+export interface SiraSatir { sira: number; ad: string; puan: number; ben: boolean; foto?: string; unvan?: string; ozel?: boolean; renk?: string; kidem?: string; cerceve?: string; basarim: number }
 export const siralamaGetir = (kapsam: 'hafta' | 'kurul' | 'tum', donem?: number) =>
   istek<{ donem: number; pencere: Pencere; satir: SiraSatir[]; atpOdul: number[] }>(`/api/basarim/siralama?kapsam=${kapsam}${donem ? `&donem=${donem}` : ''}`);
 

@@ -1,14 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 193,
-  "baslik": "Son Prova sesli ders listesinden ayrıldı",
+  "onem": 194,
+  "baslik": "Sıralamada profil fotoğrafları",
   "maddeler": [
-    "Son Prova partları artık branş derslerine karışmıyor; listelerde ayrı \"Son Prova\" kategorisinde, en sonda görünür ve tıklayınca Son Prova sayfası açılır."
+    "Sıralama ve çalışma süresi listelerinde artık herkesin profil fotoğrafı görünüyor."
   ],
-  "eklenen": [],
-  "degisen": [
-    "Son Prova partları artık branş derslerine karışmıyor; listelerde ayrı \"Son Prova\" kategorisinde, en sonda görünür ve tıklayınca Son Prova sayfası açılır."
+  "eklenen": [
+    "Sıralama ve çalışma süresi listelerinde artık herkesin profil fotoğrafı görünüyor."
   ],
+  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }

@@ -137,12 +137,12 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({ currentUser })
           {[1, 0, 2].map((i) => {
             const item = top3[i];
             if (!item) return <li key={i} className="lbx-col is-empty" aria-hidden />;
-            const photo = item.ben ? currentUser?.photoURL : null;
+            const photo = (item.ben && currentUser?.photoURL) || item.foto || null;
             return (
               <li key={`${item.sira}-${item.ad}`} className={`lbx-col t${i + 1} ${item.ben ? 'is-me' : ''}`}>
                 <span className="lbx-who">
                   {i === 0 && <CrownIcon className="lbx-crown" />}
-                  <span className={`lbx-av${cerceve(item.cerceve)}`}>{photo ? <img src={photo} alt="" /> : initials(item.ad)}</span>
+                  <span className={`lbx-av${cerceve(item.cerceve)}`}>{photo ? <img src={photo} alt="" referrerPolicy="no-referrer" /> : initials(item.ad)}</span>
                   <b className={item.renk ? `bs-isim ${item.renk}` : undefined}>{item.ad}</b>
                   {item.unvan && <span className={`lbx-unvan${item.ozel ? " bs-ozel-unvan" : ""}`}>{item.unvan}</span>}
                 </span>
@@ -173,7 +173,7 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({ currentUser })
             {filteredLeaderboard.map((item) => (
               <li key={`${item.sira}-${item.ad}`} data-id={`${item.ad}`} className={`lbx-row ${item.ben ? 'is-me' : ''}`}>
                 <span className={`lbx-rank ${item.sira <= 3 ? `t${item.sira}` : ''}`}>{item.sira}</span>
-                <span className={`lbx-av is-sm${cerceve(item.cerceve)}`}>{item.ben && currentUser?.photoURL ? <img src={currentUser.photoURL} alt="" /> : initials(item.ad)}</span>
+                <span className={`lbx-av is-sm${cerceve(item.cerceve)}`}>{(item.ben && currentUser?.photoURL) || item.foto ? <img src={(item.ben && currentUser?.photoURL) || item.foto} alt="" referrerPolicy="no-referrer" /> : initials(item.ad)}</span>
                 <span className="lbx-name">
                   <b className={item.renk ? `bs-isim ${item.renk}` : undefined}>{item.ad}{item.ben && <span className="lbx-me">Sen</span>}</b>
                   <span>{item.kidem ? `${item.kidem} · ` : ''}{item.unvan ? `${item.unvan} · ` : ''}{item.basarim} başarım seviyesi{kapsam !== 'tum' && item.sira <= 5 ? ' · ' : ''}{kapsam !== 'tum' && item.sira <= 5 && atpRozet(item.sira, item.puan)}</span>
@@ -239,7 +239,7 @@ function CalismaSiralama({ donem, photo }: { donem: number; photo: string | null
             <li key={`${x.sira}-${x.ad}`} className={`lbc-satir${x.ben ? ' is-me' : ''}${x.sira <= 3 ? ` t${x.sira}` : ''}`}>
               <button type="button" className="lbc-bas" onClick={() => setAcik(acik === x.sira ? null : x.sira)} aria-expanded={acik === x.sira}>
                 <span className={`lbx-rank ${x.sira <= 3 ? `t${x.sira}` : ''}`}>{x.sira}</span>
-                <span className={`lbx-av is-sm${x.cerceve ? ` bs-cerceve ${x.cerceve}` : ''}`}>{x.ben && photo ? <img src={photo} alt="" /> : bas(x.ad)}</span>
+                <span className={`lbx-av is-sm${x.cerceve ? ` bs-cerceve ${x.cerceve}` : ''}`}>{(x.ben && photo) || x.foto ? <img src={(x.ben && photo) || x.foto} alt="" referrerPolicy="no-referrer" /> : bas(x.ad)}</span>
                 <span className="lbc-kim">
                   <b className={x.renk ? `bs-isim ${x.renk}` : undefined}>{x.ad}{x.ben && <span className="lbx-me">Sen</span>}</b>
                   <small>{x.kidem ? `${x.kidem} · ` : ''}{x.dersler[0] ? `en çok: ${x.dersler[0].ad}` : 'ders bilgisi yok'}</small>

@@ -146,7 +146,7 @@ export interface Kisi {
 /** Yönetim günlüğü satırı (data/basarim/yonetim_gunlugu.jsonl, yalnız ekleme). */
 export interface YonetimKaydi { at: string; by: string; uid: string; ad: string; tur: string; gerekce: string; ayrinti: any; once: any; sonra: any }
 
-export interface MotorDeps { dataDir: string; srcDir: string; okuYedek: (uid: string) => any | null }
+export interface MotorDeps { dataDir: string; srcDir: string; okuYedek: (uid: string) => any | null; fotoBul?: (uid: string) => string | null }
 
 export function createBasarimMotor(deps: MotorDeps) {
   const kok = path.join(deps.dataDir, 'basarim');
@@ -423,6 +423,10 @@ export function createBasarimMotor(deps: MotorDeps) {
   /** Dönem seçmemiş kişiler bu dönemin sıralamasında görünür (takvimdeki dönem). */
   const VARSAYILAN_DONEM = Number((takvim as any).donem || 3);
   const puanAralik = (k: Kisi, bas: string, son: string) => Object.entries(k.gunPuan).reduce((a, [g, p]) => (g >= bas && g <= son ? a + p : a), 0);
+  /** Sıralamada herkesin profil fotoğrafı görünür; yalnız https adresleri (veri URI'si listeyi şişirir). */
+  const foto = (uid: string): string | undefined => {
+    try { const f = deps.fotoBul?.(uid); return f && /^https:\/\//.test(f) && f.length < 1000 ? f : undefined; } catch { return undefined; }
+  };
   const siralama = (donem: number, kapsam: 'hafta' | 'kurul' | 'tum', g = gunOf()) => {
     hepsiniYukle();
     const p = kapsam === 'hafta' ? { bas: haftaOf(g), son: gunEkle(haftaOf(g), 6), ad: 'Bu hafta', id: haftaOf(g) } : kapsam === 'kurul' ? kurulPencere(donem, g) : { bas: '0000', son: '9999', ad: 'Tüm zamanlar', id: 'tum' };
@@ -622,7 +626,7 @@ export function createBasarimMotor(deps: MotorDeps) {
       try { odemeleriIsle(); } catch { /* */ }
       const s = calismaSiralama(donem, kapsam);
       const satir = s.satir.slice(0, 100).map((x, i) => ({
-        sira: i + 1, ad: x.k.ad || 'Tıbbiyeli', sn: x.sn, ben: x.k.uid === uid, renk: x.k.secili.renk, cerceve: x.k.secili.cerceve, kidem: kidemOf(x.k).ad,
+        sira: i + 1, ad: x.k.ad || 'Tıbbiyeli', sn: x.sn, ben: x.k.uid === uid, foto: foto(x.k.uid), renk: x.k.secili.renk, cerceve: x.k.secili.cerceve, kidem: kidemOf(x.k).ad,
         dersler: enCokDersler(x.k, s.pencere.bas, s.pencere.son, 3),
       }));
       const benim = uid ? s.satir.findIndex((x) => x.k.uid === uid) : -1;
@@ -632,7 +636,7 @@ export function createBasarimMotor(deps: MotorDeps) {
       try { odemeleriIsle(); } catch { /* */ }
       const s = siralama(donem, kapsam);
       const satir = s.satir.slice(0, 100).map((x, i) => ({
-        sira: i + 1, ad: x.k.ad || 'Tıbbiyeli', puan: x.puan, ben: x.k.uid === uid,
+        sira: i + 1, ad: x.k.ad || 'Tıbbiyeli', puan: x.puan, ben: x.k.uid === uid, foto: foto(x.k.uid),
         ozel: !!x.k.ozel?.gorunur,
         unvan: x.k.ozel?.gorunur ? x.k.ozel.unvan : x.k.secili.unvan ? tanim.kilitler.find((t) => t.id === x.k.secili.unvan)?.ad.replace(/^Unvan:\s*/, '') : undefined,
         cerceve: x.k.secili.cerceve,
@@ -641,7 +645,7 @@ export function createBasarimMotor(deps: MotorDeps) {
         basarim: x.k.defter.filter((d) => d.t === 'basarim').length,
       }));
       const benim = uid ? s.satir.findIndex((x) => x.k.uid === uid) : -1;
-      if (benim >= 100) satir.push({ sira: benim + 1, ad: s.satir[benim].k.ad, puan: s.satir[benim].puan, ben: true, ozel: false, unvan: undefined, cerceve: undefined, renk: undefined, kidem: kidemOf(s.satir[benim].k).ad, basarim: 0 });
+      if (benim >= 100) satir.push({ sira: benim + 1, ad: s.satir[benim].k.ad, puan: s.satir[benim].puan, ben: true, foto: foto(s.satir[benim].k.uid), ozel: false, unvan: undefined, cerceve: undefined, renk: undefined, kidem: kidemOf(s.satir[benim].k).ad, basarim: 0 });
       return { pencere: s.pencere, satir, atpOdul: kapsam === 'hafta' ? tanim.atp.haftalikSiralama : kapsam === 'kurul' ? tanim.atp.kurulSiralama : [] };
     },
     // ───── Yönetim (yalnız yönetici uçları çağırır; her işlem gerekçeli, defterde iz + yonetim_gunlugu.jsonl) ─────

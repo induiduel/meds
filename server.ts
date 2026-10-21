@@ -25,6 +25,7 @@ import { registerDersVideoIsRoutes } from './src/services/dersVideoIs';
 import { registerPatolojiAsistanRoutes } from './src/services/patolojiAsistan';
 import { registerOlasiSoruRoutes } from './src/services/olasiSoruRoutes';
 import { registerKimlikRoutes } from './src/services/kimlikRoutes';
+import { registerAiTestRoutes, aiTestGecerli } from './src/services/aiTestErisim';
 import { registerIcerikYayinRoutes } from './src/services/icerikYayinRoutes';
 import { registerKampRoutes } from './src/services/kampRoutes';
 import { registerPatolojiCozucuRoutes } from './src/services/patolojiCozucu';
@@ -397,6 +398,16 @@ const basarimMotor = createBasarimMotor({
       return fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')) : null;
     } catch { return null; }
   },
+  fotoBul: (() => {
+    let harita: Map<string, string> | null = null; let zaman = 0;
+    return (uid: string) => {
+      if (!harita || Date.now() - zaman > 60_000) {
+        harita = new Map(); zaman = Date.now();
+        for (const u of loadUsers()) if (u.uid && u.photoURL) harita.set(u.uid, u.photoURL);
+      }
+      return harita.get(uid) || null;
+    };
+  })(),
 });
 // Kişinin kendi özeti (basarim_changed) + herkesin sıralama ekranı (siralama_changed, en sık 3 sn'de bir)
 let siralamaHaberZaman: NodeJS.Timeout | null = null;
@@ -421,7 +432,7 @@ const basarimTumunuTara = () => {
 };
 setTimeout(basarimTumunuTara, 45_000).unref?.();
 setInterval(basarimTumunuTara, 30 * 60_000).unref?.();
-registerBasarimRoutes(app, basarimMotor, { requireAdmin, onDegisti: basarimHaber });
+registerBasarimRoutes(app, basarimMotor, { requireAdmin, onDegisti: basarimHaber, aiTestGecerli });
 const basarimBekleyen = new Map<string, NodeJS.Timeout>();
 const basarimYedekSonrasi = (uid: string) => {
   clearTimeout(basarimBekleyen.get(uid));
@@ -680,6 +691,8 @@ app.get('/api/surum', (_req, res) => {
     res.json({ surum: '', onem: 0 });
   }
 });
+
+registerAiTestRoutes(app);
 
 // Hybrid Database & Server Health Check
 app.get('/api/health', (req, res) => {
