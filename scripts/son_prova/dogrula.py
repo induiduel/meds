@@ -60,6 +60,17 @@ def havuz_refleri(part: dict) -> dict[str, dict]:
         for f in fs:
             for q in json.loads(f.read_text(encoding="utf-8"))["sorular"]:
                 out[f"{b}/{f.stem}#{q['no']}"] = {**q, "_ders": kod}
+    # Son Prova denetiminde yeniden yazılan sorular (duzelt_uygula.py): eski kimlik → <brans>/t0N#<no>, yayındaki soru
+    # src/data/son_prova/k<N>/sorular/<brans>.json'da. Özgün soru çözücüde sonradan yeniden numaralansa/silinse de geçerli.
+    es = KOK / "duzelt" / "eslem.json"
+    sj = ROOT / "meds" / f"src/data/son_prova/k{PLAN['kurul']}/sorular/{b}.json"
+    if es.exists() and sj.exists():
+        yayin = json.loads(sj.read_text(encoding="utf-8"))
+        kodlar = {x["kod"] for x in part["dersler"]}
+        for eski, yeni in json.loads(es.read_text(encoding="utf-8")).items():
+            kod = re.sub(r"-\d+$", "", eski.split("/")[-1].split("#")[0])
+            if eski.startswith(b + "/") and eski not in out and kod in kodlar and yeni in yayin:
+                out[eski] = {**yayin[yeni], "_ders": kod, "_yerine": yeni}
     return out
 
 
