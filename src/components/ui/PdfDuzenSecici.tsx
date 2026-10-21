@@ -3,8 +3,9 @@
  *  Sayfa (yaprağa kaç sayfa, kâğıt, kenar, sayfa aralığı, yön/sıra/çerçeve) · Yazı (metin/başlık boyutu, satır aralığı)
  *  Renk (tema, önemli işaretleri) · Ekler (kapak, konu başına yeni sayfa, üst bilgi, sayfa numarası, kenar yazısı).
  */
-import React, { useState } from 'react';
-import { RotateCcw } from 'lucide-react';
+import React, { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
+import { RotateCcw, Settings2, X } from 'lucide-react';
 import { VARSAYILAN_DUZEN, type PdfDuzen, type PdfStil, type SayfaSayisi } from '../../services/pdfDuzen';
 import '../../styles/pdf-duzen.css';
 
@@ -181,6 +182,53 @@ export function PdfDuzenSecici({ deger, onDegis, ad = 'pdz' }: { deger: PdfDuzen
             </>}
           </div>
         </div>
+      </div>
+    </div>
+  );
+}
+
+/** Ayar paneli ayrı diyalogda: menüler/diyaloglar içinde yalnız özet + "Ayarla" düğmesi durur */
+export function PdfAyarDugme({ deger, onDegis, ad = 'pdz' }: { deger: PdfDuzen; onDegis: (d: PdfDuzen) => void; ad?: string }) {
+  const [acik, setAcik] = useState(false);
+  const ozet = [
+    deger.nup > 1 ? `${deger.nup} sayfa/yaprak` : deger.kagit.toUpperCase(),
+    { kucuk: 'küçük yazı', normal: 'normal yazı', buyuk: 'büyük yazı', cokbuyuk: 'çok büyük yazı' }[deger.yaziBoyutu],
+    RENK.find((r) => r.id === deger.renk)?.ad.toLowerCase(),
+    deger.kapak && 'kapak',
+    deger.sayfaAraligi.trim() && `sayfa ${deger.sayfaAraligi.trim()}`,
+  ].filter(Boolean).join(' · ');
+  return (
+    <>
+      <button type="button" className="pdz-ac" onClick={() => setAcik(true)} aria-haspopup="dialog">
+        <Settings2 aria-hidden />
+        <span><b>PDF ayarları</b><small>{ozet}</small></span>
+        <span className="pdz-ac-git">Ayarla</span>
+      </button>
+      {acik && createPortal(<PdfAyarDiyalog deger={deger} onDegis={onDegis} ad={ad} onKapat={() => setAcik(false)} />, document.body)}
+    </>
+  );
+}
+
+function PdfAyarDiyalog({ deger, onDegis, ad, onKapat }: { deger: PdfDuzen; onDegis: (d: PdfDuzen) => void; ad: string; onKapat: () => void }) {
+  const kapatRef = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    kapatRef.current?.focus();
+    const k = (e: KeyboardEvent) => { if (e.key === 'Escape') { e.stopPropagation(); onKapat(); } };
+    document.addEventListener('keydown', k, true);
+    return () => document.removeEventListener('keydown', k, true);
+  }, [onKapat]);
+  return (
+    <div className="pdz-perde" data-ls-keep role="presentation" onClick={(e) => { if (e.target === e.currentTarget) onKapat(); }}>
+      <div className="pdz-diyalog" role="dialog" aria-modal="true" aria-labelledby={`${ad}-db`}>
+        <header className="pdz-d-bas">
+          <b id={`${ad}-db`}>PDF ayarları</b>
+          <button ref={kapatRef} type="button" className="pdz-d-x" onClick={onKapat} aria-label="Kapat"><X aria-hidden /></button>
+        </header>
+        <div className="pdz-d-govde"><PdfDuzenSecici deger={deger} onDegis={onDegis} ad={ad} /></div>
+        <footer className="pdz-d-alt">
+          <small>Seçimler bu cihazda hatırlanır.</small>
+          <button type="button" className="pdz-d-tamam" onClick={onKapat}>Tamam</button>
+        </footer>
       </div>
     </div>
   );

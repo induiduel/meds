@@ -8,8 +8,8 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { FileDown, X } from 'lucide-react';
 import type { AktarBelge, AktarBolum } from '../../services/metinDisaAktar';
-import { duzenEtiketi, duzenOku, duzenYaz, type PdfDuzen } from '../../services/pdfDuzen';
-import { PdfDuzenSecici } from './PdfDuzenSecici';
+import { duzenOku, duzenYaz, type PdfDuzen } from '../../services/pdfDuzen';
+import { PdfAyarDugme } from './PdfDuzenSecici';
 import '../../styles/toplu-pdf.css';
 
 export interface TopluOge { key: string; grup: string; etiket?: string; baslik: string }
@@ -160,8 +160,7 @@ function TopluPdfDiyalog({ ad, ogeler, belgeAl, secenek, altMetin, onKapat }: To
 
           <fieldset className="tp-ayar" disabled={calisiyor}>
             <legend className="tp-gizli">Sayfa düzeni</legend>
-            <b className="tp-alt-baslik">PDF ayarları <small>{duzenEtiketi(duzen) || "tek yaprakta bir sayfa"}</small></b>
-            <PdfDuzenSecici ad="tp-duzen" deger={duzen} onDegis={setDuzen} />
+            <PdfAyarDugme ad="tp-duzen" deger={duzen} onDegis={setDuzen} />
           </fieldset>
 
           <div className="tp-ust">

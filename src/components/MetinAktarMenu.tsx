@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Download, FileDown, Loader2 } from 'lucide-react';
 import type { AktarBelge, AktarBicim } from '../services/metinDisaAktar';
 import { duzenOku, duzenYaz, type PdfDuzen } from '../services/pdfDuzen';
-import { PdfDuzenSecici } from './ui/PdfDuzenSecici';
+import { PdfAyarDugme } from './ui/PdfDuzenSecici';
 import '../styles/metin-aktar.css';
 
 const BICIMLER: { id: AktarBicim; ad: string; alt: string }[] = [
@@ -45,8 +45,7 @@ export function MetinAktarMenu({ belge, dosyaAdi, dugmeSinif = 'cd-btn', etiket 
             </button>
           ))}
           <div className="cd-aktar-duzen">
-            <small>PDF ayarları</small>
-            <PdfDuzenSecici ad="cd-aktar-duzen" deger={duzen} onDegis={setDuzen} />
+            <PdfAyarDugme ad="cd-aktar-duzen" deger={duzen} onDegis={setDuzen} />
           </div>
           {hata && <p className="cd-aktar-hata" role="alert">{hata}</p>}
         </div>
