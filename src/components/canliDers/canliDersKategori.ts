@@ -42,13 +42,14 @@ export function cdKategoriGrupla(ds: CdListeDers[]): { kat: CdKategori; dersler:
   const cokKurul = new Set(ds.map((d) => d.kurul || 0)).size > 1;
   const m = new Map<string, { kat: CdKategori; dersler: CdListeDers[] }>();
   for (const d of ds) {
-    const ad = bransAdi(d);
+    // Son Prova partları normal ders değil: branşlarına karışmaz, kendi kategorisinde (en sonda) durur
+    const ad = /-son-prova-/.test(d.key) ? 'Son Prova' : bransAdi(d);
     const id = `${cokKurul ? `k${d.kurul || 0}-` : ''}${ad}`;
     let g = m.get(id);
     if (!g) m.set(id, (g = { kat: { id, ad, kisa: cdBransKisa(ad), alt: cokKurul && d.kurul ? `Kurul ${d.kurul}` : '' }, dersler: [] }));
     g.dersler.push(d);
   }
-  const diger = (g: { kat: CdKategori }) => (g.kat.ad === 'Diğer' ? 1 : 0);
+  const diger = (g: { kat: CdKategori }) => (g.kat.ad === 'Son Prova' ? 2 : g.kat.ad === 'Diğer' ? 1 : 0);
   return [...m.values()]
     .map((g) => ({ ...g, dersler: g.dersler.sort((a, b) => noSayi(a) - noSayi(b) || (a.parca ?? 0) - (b.parca ?? 0) || (a.sira ?? 0) - (b.sira ?? 0)) }))
     .sort((a, b) => diger(a) - diger(b) || (a.kat.alt || '').localeCompare(b.kat.alt || '', 'tr')

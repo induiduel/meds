@@ -1,13 +1,13 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 192,
-  "baslik": "Sesli ders: motivasyon konuşmaları varsayılan kapalı",
+  "onem": 193,
+  "baslik": "Son Prova sesli ders listesinden ayrıldı",
   "maddeler": [
-    "Sesli derste motivasyon konuşmaları ve mola hatırlatması artık varsayılan kapalı; ⋯ menüsünden açılabilir. Daha önce seçim yapanların tercihi korunur."
+    "Son Prova partları artık branş derslerine karışmıyor; listelerde ayrı \"Son Prova\" kategorisinde, en sonda görünür ve tıklayınca Son Prova sayfası açılır."
   ],
   "eklenen": [],
   "degisen": [
-    "Sesli derste motivasyon konuşmaları ve mola hatırlatması artık varsayılan kapalı; ⋯ menüsünden açılabilir. Daha önce seçim yapanların tercihi korunur."
+    "Son Prova partları artık branş derslerine karışmıyor; listelerde ayrı \"Son Prova\" kategorisinde, en sonda görünür ve tıklayınca Son Prova sayfası açılır."
   ],
   "duzeltilen": [],
   "silinen": []

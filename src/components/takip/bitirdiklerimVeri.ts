@@ -63,6 +63,12 @@ const ilgiliCozulenler = async (): Promise<Map<string, number>> => {
   return m;
 };
 
+/** Son Prova partı (k1-81-son-prova-patoloji-1) → /son-prova/patoloji/1 (CanliDersView.sonProvaYolu ile aynı) */
+const sonProvaYolu = (key: string) => {
+  const m = /^k\d+-\d+-son-prova-([a-z-]+?)(?:-(\d+))?$/.exec(key);
+  return m ? `/son-prova/${m[1].replace(/-/g, '')}/${m[2] || 1}` : null;
+};
+
 async function sesliYukle(): Promise<BdDers[]> {
   const [ds, ilgili] = await Promise.all([cdListeGetir(), ilgiliCozulenler().catch(() => new Map<string, number>())]);
   return cdKategoriGrupla(ds).map(({ kat, dersler }) => ({
@@ -73,7 +79,8 @@ async function sesliYukle(): Promise<BdDers[]> {
       const sb = d.brans ? CD_SPOT_BRANS[d.brans] : undefined;
       // Part 1/2 aynı konunun iki parçası: ilgili sorular yalnız ilk parçada sayılır
       const ek = sb && (d.parca || 1) === 1 ? ilgili.get(`${sb}|${Number(d.no)}`) || 0 : 0;
-      const ac = () => navigateTo(pathFor('canli_ders', d.key));
+      const sp = sonProvaYolu(d.key);
+      const ac = () => navigateTo(sp || pathFor('canli_ders', d.key));
       return {
         id: d.key,
         no: d.no,
