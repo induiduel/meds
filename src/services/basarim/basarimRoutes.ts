@@ -57,6 +57,27 @@ export function registerBasarimRoutes(app: express.Express, motor: BasarimMotor,
     next();
   });
 
+  // İçerik kilitlerinin sunucu kapısı (2026-10-21): kilitli içeriğin API'si yalnız kilidi açık kişiye veri verir.
+  // Yönetici (doğrulanmış), yapay zekâ test oturumu ve muaf gizli unvanlı geçer. Liste/sayı uçları açık kalır.
+  const KILITLI_API: { m: string; re: RegExp; kilit: string }[] = [
+    { m: 'GET', re: /^\/api\/olasi-sorular\/[^/]+$/, kilit: 'icerik_olasi_erken' },
+    { m: 'POST', re: /^\/api\/olasi-sorular\/[^/]+\/[^/]+\/geri-bildirim$/, kilit: 'icerik_olasi_erken' },
+  ];
+  app.use(async (req, res, next) => {
+    const kural = KILITLI_API.find((k) => k.m === req.method && k.re.test(req.path));
+    if (!kural) return next();
+    try {
+      if ((req as any).adminAuth?.ok || opts.aiTestGecerli?.(req)) return next();
+      const who = await requestUser(req);
+      if (!who.user) return res.status(401).json({ error: 'Bu içerik için giriş gerekli.', kilit: kural.kilit });
+      if (!motor.kilitAcikMi(who.user.uid, kural.kilit)) {
+        const item = motor.tanim().kilitler.find((x) => x.id === kural.kilit);
+        return res.status(403).json({ error: `Bu içerik ATP ile açılır (${item?.fiyat ?? '?'} mol).`, kilit: kural.kilit, fiyat: item?.fiyat });
+      }
+      next();
+    } catch (e: any) { res.status(500).json({ error: e?.message || 'Kilit denetlenemedi' }); }
+  });
+
   app.get('/api/basarim/tanim', (_req, res) => { res.set('Cache-Control', 'no-cache'); res.json(motor.tanim()); });
 
   const korumali = (f: (req: express.Request, res: express.Response, uid: string, ad: string) => void) => async (req: express.Request, res: express.Response) => {

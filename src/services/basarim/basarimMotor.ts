@@ -577,6 +577,13 @@ export function createBasarimMotor(deps: MotorDeps) {
       k.eylem.toplam[tur] = (k.eylem.toplam[tur] || 0) + 1;
       degerlendir(k);
     },
+    /** İçerik kilidi açık mı: kilit etkin değilse herkese açık; açılmışsa, muaf gizli unvanlı ya da yöneticiyse geçer. */
+    kilitAcikMi(uid: string, id: string): boolean {
+      const item = tanim.kilitler.find((x) => x.id === id);
+      if (!item || !item.etkin) return true;
+      const k = kisi(uid);
+      return !!k.kilit[id] || !!k.ozel?.muaf || yoneticiMi(k);
+    },
     satinAl(uid: string, id: string): { ok: true } | { hata: string } {
       const k = kisi(uid);
       const item = tanim.kilitler.find((x) => x.id === id);
