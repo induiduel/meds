@@ -415,3 +415,9 @@
 @media (max-width: 380px) {
   .sc-ust .sc-olcek { display: none; }
 }
+/* Çıkmış çözücü: çözümün altında kısa not (spot bilgisi) */
+.sc-kisanot { background: var(--color-white); border-color: var(--color-line); border-left: 3px solid var(--color-ok); }
+.sc-kisanot > b { color: color-mix(in srgb, var(--color-ok) 70%, var(--color-ink)); }
+.sc-kisanot ul { margin: 0; padding: 0 0 0 18px; display: flex; flex-direction: column; gap: 4px; font-size: 15.5px; line-height: 1.55; color: var(--color-ink-2); }
+.sc-kisanot li { padding: 2px 6px; margin-left: -6px; border-radius: 8px; transition: background .2s, color .2s; }
+.sc-kisanot li.is-aktif { background: var(--color-accent-soft); color: var(--color-ink); }

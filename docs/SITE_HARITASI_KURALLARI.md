@@ -17,7 +17,7 @@ Tek kaynak: `src/siteHaritasi.ts` (adres çevirisi + kategoriler) ve `src/compon
 |---|---|---|
 | Ders çalış | `/dersler` | `/dersler/canliders[/kurul1[/tbg]]`, `/dersler/canliders/kurul1/<dersKey>`, `/dersler/interaktif[/<desteId>]`, `/dersler/ozetler`, `/dersler/kartlar` |
 | Soru çöz | `/sorular` | `/sorular/soru-cozucu[/kurul1/<branş>]?ders=…`, `/sorular/cikmis[/<id>]`, `/sorular/deneme`, `/sorular/havuz[/<id>]`, `/sorular/ornek`, `/sorular/olasi` |
-| Sınava hazırlan | `/kamplar[/kurulN]` | `/kamplar/kurul1/son-prova/…`, `/kamplar/kurul1/kamp[/<branş>]`, `/kamplar/kurul1/en-onemliler/<branş>`, `/kamplar/spotlar` |
+| Sınava hazırlan | `/kamplar[/kurulN]` | `/kamplar/kurul1/son-prova/…`, `/kamplar/kurul1/cikmis-cozucu[/<branş>]?ders=cp1-<branş>-<n>&coz=1`, `/kamplar/kurul1/kamp[/<branş>]`, `/kamplar/kurul1/en-onemliler/<branş>`, `/kamplar/spotlar` |
 | Check Up (ayrı sekme) | `/kamplar/kurul1/checkup` | `/kamplar/kurul1/checkup/patoloji`, `/kamplar/kurul1/checkup/tbg/v1/{sesli-ders,soru-coz,kaliplar,deneme}` |
 | Başvuru | `/kaynaklar` | sözlük, hastalıklar, Sağlık Bakanlığı, kazanımlar, geçmiş kurullar, güncellemeler (düz adreslerinde kalır) |
 

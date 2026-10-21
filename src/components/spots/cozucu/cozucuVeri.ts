@@ -15,7 +15,12 @@ export const HARFLER: Harf[] = ['A', 'B', 'C', 'D', 'E'];
 export interface Klip { v: string; sure: number; zaman: [number, number][] }
 export type SoruTur = 'ornek' | 'benzer' | 'cikmis';
 export type Zorluk = 'kolay' | 'orta' | 'zor';
-export interface CSoru { no: number; tur?: SoruTur; sinav?: string; zorluk?: Zorluk; soru: string; secenekler: Record<Harf, string>; dogru: Harf; ipucu: string; siklar: Record<Harf, string>; cozum: string; sayfa: number[] }
+export interface CSoru { no: number; tur?: SoruTur; sinav?: string; zorluk?: Zorluk; soru: string; secenekler: Record<Harf, string>; dogru: Harf; ipucu: string; siklar: Record<Harf, string>; cozum: string; sayfa: number[]
+  /** paket sorusu: ses klasörü + klip numarası (asıl derste no) ve kaynak ders (Öğren paneli, etiket) */
+  klasor?: string; kn?: number; kaynak?: { kod: string; no: number; baslik: string; dersNo: number };
+  /** kısa not (spot bilgisi, slayttan): klasor "@a/<asistan kodu>" + klip ise EMA ile okunur */
+  not?: { baslik: string; cumleler: string[]; kaynak: string; klasor?: string; klip?: string };
+}
 export interface CDers {
   kod: string; no: number; baslik: string; sorular: CSoru[]; klip: Record<string, Klip>;
   /** ses klasörü (setlere bölünen derste ders kodu; yoksa kod) */

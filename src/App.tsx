@@ -130,6 +130,7 @@ const CanliDersView = React.lazy(() => wrapLazy(import('./components/canliDers/C
 const PatolojiCheckUp = React.lazy(() => wrapLazy(import('./components/checkup/PatolojiCheckUp')));
 const GenetikCheckUp = React.lazy(() => wrapLazy(import('./components/checkup/GenetikCheckUp')));
 const SonProvaView = React.lazy(() => wrapLazy(import('./components/sonProva/SonProvaView')));
+const CikmisCozucuView = React.lazy(() => wrapLazy(import('./components/cikmisCozucu/CikmisCozucuView')));
 const BasarimView = React.lazy(() => wrapLazy(import('./components/basarim/BasarimView')));
 const BasarimKatmani = React.lazy(() => wrapLazy(import('./components/basarim/BasarimKatmani')));
 const BitirdiklerimView = React.lazy(() => wrapLazy(import('./components/takip/BitirdiklerimView')));
@@ -1974,6 +1975,13 @@ export default function App() {
         {activeTab === 'son_prova' && (
           <Suspense fallback={<ViewFallback />}>
             <SonProvaView />
+          </Suspense>
+        )}
+
+        {/* TAB: /cikmis-cozucu — Sınava hazırlan › Çıkmış çözücü: branş başına sınav soru sayısı kadar çıkmış paketi, sesli çözücüyle */}
+        {activeTab === 'cikmis_cozucu' && (
+          <Suspense fallback={<ViewFallback />}>
+            <CikmisCozucuView />
           </Suspense>
         )}
 

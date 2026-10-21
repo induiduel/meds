@@ -16,6 +16,7 @@
  *   /sorular/cikmis[/<id>] · /sorular/havuz[/<id>] · /sorular/deneme · /sorular/ornek · /sorular/olasi
  *   /kamplar[/kurul1]                        Sınava hazırlan merkezi (sekmeler: Son Prova, Kamplar, Check Up, En önemliler)
  *   /kamplar/kurul1/son-prova/...            Son Prova
+ *   /kamplar/kurul1/cikmis-cozucu[/<branş>]  Çıkmış çözücü (?ders=<paket>&coz=1)
  *   /kamplar/kurul1/kamp[/<branş>]           Hoca tüyolarından kurul kampı
  *   /kamplar/kurul1/checkup/patoloji         Patoloji Check Up
  *   /kamplar/kurul1/checkup/tbg/v1/{sesli-ders,soru-coz,kaliplar,deneme}   TBG Sınav Kampı (her bölüm ayrı sayfa)
@@ -202,6 +203,18 @@ export function disYol(adres: string): string {
       sp.delete('kurul');
       return birlestir(`${kampOnek(k)}/kamp${yk && s[2] ? `/${enc(s[2])}` : ''}`, sp, hash);
     }
+    case 'cikmis-cozucu': {
+      const b = sp.get('brans');
+      sp.delete('brans');
+      if (b) {
+        const { kurul, slug } = bransAdresi(b);
+        sp.delete('kurul');
+        return birlestir(`/kamplar/kurul${kurul}/cikmis-cozucu/${enc(slug)}`, sp, hash);
+      }
+      const k = sorguKurul(sp) ?? mevcutKampKurulu() ?? takvimKurulu();
+      sp.delete('kurul');
+      return birlestir(`${kampOnek(k)}/cikmis-cozucu`, sp, hash);
+    }
     case 'genetik-check-up': {
       const b = sp.get('b') || '';
       sp.delete('b');
@@ -300,6 +313,11 @@ export function icYol(adres: string): string {
     if (arac === 'son-prova') {
       koy('kurul', k);
       return birlestir(`/son-prova${geri.length ? `/${geri.map(enc).join('/')}` : ''}`, sp, hash);
+    }
+    if (arac === 'cikmis-cozucu') {
+      if (geri[0]) koy('brans', bransKimligi(k || 1, geri[0]) || geri[0]);
+      koy('kurul', k);
+      return birlestir('/cikmis-cozucu', sp, hash);
     }
     if (arac === 'kamp') {
       if (geri[0]) return birlestir(`/kamp/${k || 1}/${enc(geri[0])}`, sp, hash);

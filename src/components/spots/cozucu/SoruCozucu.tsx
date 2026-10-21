@@ -50,6 +50,10 @@ interface Props {
   kisaAnlatim?: string[];
   /** Özel sorularda ilerleme çözücünün deposuna yazılmaz; sonuçlar (soru no → sonuç) çağırana bildirilir */
   onOzelSonuc?: (sonuc: Record<string, Sonuc>) => void;
+  /** Başka bir dizin/ders kaynağı (Çıkmış çözücü paketleri): menü ve "sonraki" bu dizinden; etiket üst başlıktaki ad */
+  kaynak?: { ders: (kod: string) => Promise<CDers>; dizin: () => Promise<CDizin>; etiket: string };
+  /** açılır açılmaz otomatik çöz (hızlı: oku → doğru şıkkı seç → nedeni → kısa not → sonraki), öğrenciyi beklemez */
+  otoBasla?: boolean;
 }
 type Durum = 'acik' | 'cozuluyor' | 'dogru' | 'gosterildi';
 
@@ -113,6 +117,8 @@ export const SoruCozucu: React.FC<Props> = ({
   ozetAnlatim,
   kisaAnlatim,
   onOzelSonuc,
+  kaynak,
+  otoBasla,
 }) => {
   const bt = bransTanim(brans);
   const [kod, setKod] = useState(kod0);
@@ -160,7 +166,7 @@ export const SoruCozucu: React.FC<Props> = ({
   const [yardim, setYardim] = useState(false); // bu soruda yardım ya da yanlış deneme oldu
   const [sonSecim, setSonSecim] = useState<Harf | null>(null);
   const [yanlisSecti, setYanlisSecti] = useState(false);
-  const [okunan, setOkunan] = useState<{ yer: 'kok' | 'sik' | 'ipucu' | 'aciklama' | 'cozum'; h?: Harf; j?: number } | null>(null);
+  const [okunan, setOkunan] = useState<{ yer: 'kok' | 'sik' | 'ipucu' | 'aciklama' | 'cozum' | 'not'; h?: Harf; j?: number } | null>(null);
 
   const audio = useRef<HTMLAudioElement | null>(null);
   const zamanlayici = useRef<number | null>(null);
@@ -214,7 +220,7 @@ export const SoruCozucu: React.FC<Props> = ({
   }, [kod, sorular]);
 
   useEffect(() => { lockScroll(); return () => unlockScroll(); }, []);
-  useEffect(() => { cozucuDizinYukle(brans).then(setDizin).catch(() => {}); }, [brans]);
+  useEffect(() => { (kaynak ? kaynak.dizin() : cozucuDizinYukle(brans)).then(setDizin).catch(() => {}); }, [brans]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (ozelSorular && ozelSorular.length > 0) {
       setDers({
@@ -231,7 +237,7 @@ export const SoruCozucu: React.FC<Props> = ({
     }
     let canli = true;
     setDers(null); setHata(false); setListe(null); setTekrar(false); setI(0); setBitti(false); setDevamSor(null);
-    cozucuDersYukle(kod, brans).then((d) => {
+    (kaynak ? kaynak.ders(kod) : cozucuDersYukle(kod, brans)).then((d) => {
       if (!canli) return;
       const k = ilerlemeOku()[kod];
       setSonuc(k?.s || {});
@@ -253,7 +259,8 @@ export const SoruCozucu: React.FC<Props> = ({
     if (ozelSorular?.length) { onOzelSonuc?.(sonuc); return; }
     // ders.kod: ders değişirken bu etki eski dersin durumuyla bir kez daha çalışır; kayıt yine eski derse gider
     ilerlemeYaz(ders.kod, tekrar ? { s: sonuc } : { s: sonuc, i: bitti ? 0 : i, q: bitti ? undefined : sorular[i]?.no });
-    if (!ozelSorular?.length && ders) {
+    // paket (kaynak) dersi "kaldığın yer" kaydına girmez: o bağlantı /soru-cozucu'yu açar
+    if (!ozelSorular?.length && ders && !kaynak) {
       kaydetCozucuZiyaret({
         brans,
         kod: ders.kod,
@@ -316,7 +323,8 @@ export const SoruCozucu: React.FC<Props> = ({
     }
     const alt = ses !== varsayilanSes ? ders?.klipSes?.[ses]?.[klip] : undefined;
     if (alt) return { k: alt, ses };
-    const k = ders?.klip[klip];
+    // paket dersinde sorular farklı derslerin klasöründen gelir: klipler "<klasör>/<klip>" anahtarıyla
+    const k = ders?.klip[`${klasor}/${klip}`] || ders?.klip[klip];
     return k ? { k, ses: varsayilanSes } : undefined;
   }, [ders, dizin, ses, varsayilanSes]);
   const calSira = useCallback((adimlar: Adim[], bitince?: () => void) => {
@@ -380,7 +388,9 @@ export const SoruCozucu: React.FC<Props> = ({
       if (!audio.current) audio.current = new Audio();
       const el = audio.current;
       const basSn = a.bas !== undefined && k.zaman[a.bas] ? Math.max(0, k.zaman[a.bas][0] - 0.05) : 0;
-      el.src = `${getCustomApiUrl() || ''}${klipYolu(brans, kb.ses, a.klasor, a.klip)}?v=${k.v}${basSn ? `#t=${basSn.toFixed(2)}` : ''}`;
+      // @a/<kod>: sesli sınav asistanının klibi (kısa not)
+      const yolu = a.klasor.startsWith('@a/') ? `/api/patoloji-asistan/ses/${encodeURIComponent(a.klasor.slice(3))}/${encodeURIComponent(a.klip)}.mp3` : klipYolu(brans, kb.ses, a.klasor, a.klip);
+      el.src = `${getCustomApiUrl() || ''}${yolu}?v=${k.v}${basSn ? `#t=${basSn.toFixed(2)}` : ''}`;
       el.playbackRate = hiz;
       try { (el as HTMLAudioElement & { preservesPitch?: boolean }).preservesPitch = true; } catch { /* eski tarayıcı */ }
       const kesSn = a.kes !== undefined && k.zaman[a.kes] ? k.zaman[a.kes][1] + 0.15 : Infinity;
@@ -408,14 +418,20 @@ export const SoruCozucu: React.FC<Props> = ({
 
   // ---------- adım kurucular
   const kokAdimi = useCallback((s: CSoru, siklar: boolean): Adim => ({
-    klasor: klasorAdi, klip: `q-${s.no}`, metinler: [s.soru, ...HARFLER.map((h) => `${HARF_SES[h]}, ${s.secenekler[h]}`)],
+    klasor: s.klasor || klasorAdi, klip: `q-${s.kn ?? s.no}`, metinler: [s.soru, ...HARFLER.map((h) => `${HARF_SES[h]}, ${s.secenekler[h]}`)],
     kes: siklar ? undefined : 0,
     onCumle: (j) => setOkunan(j === 0 ? { yer: 'kok' } : { yer: 'sik', h: HARFLER[j - 1] }),
   }), [klasorAdi]);
   const sikAdimi = useCallback((s: CSoru, h: Harf, onBasla?: () => void): Adim => ({
-    klasor: klasorAdi, klip: `s-${s.no}-${h}`, metinler: [s.siklar[h]],
+    klasor: s.klasor || klasorAdi, klip: `s-${s.kn ?? s.no}-${h}`, metinler: [s.siklar[h]],
     onBasla, onCumle: (j) => setOkunan({ yer: 'aciklama', h, j }),
   }), [klasorAdi]);
+
+  /** Kısa not (spot bilgisi): yalnız sesi varsa okunur; metni çözüm kartının altında her zaman görünür */
+  const notAdimlari = useCallback((s: CSoru): Adim[] => (s.not?.klip && s.not.klasor ? [{
+    klasor: s.not.klasor, klip: s.not.klip, metinler: s.not.cumleler,
+    onBasla: () => kaydir('.sc-kisanot'), onCumle: (j) => setOkunan({ yer: 'not', j }),
+  }] : []), []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const ileri = useCallback(() => {
     if (otoRef.current) { window.clearTimeout(otoRef.current); otoRef.current = null; }
@@ -452,7 +468,7 @@ export const SoruCozucu: React.FC<Props> = ({
     if (h === q.dogru) {
       setDurum('dogru');
       sonucYaz(q.no, yardim || elenen.length ? 'd2' : 'd');
-      calSira([{ klasor: klasorAdi, klip: `d-${q.no}`, metinler: ['Doğru!', q.cozum], onCumle: (j) => setOkunan(j > 0 ? { yer: 'cozum' } : null) }], () => {
+      calSira([{ klasor: q.klasor || klasorAdi, klip: `d-${q.kn ?? q.no}`, metinler: ['Doğru!', q.cozum], onCumle: (j) => setOkunan(j > 0 ? { yer: 'cozum' } : null) }, ...notAdimlari(q)], () => {
         if (tercih.otomatik) otoRef.current = window.setTimeout(() => { otoRef.current = null; ileri(); }, 900);
       });
       kaydir('.sc-cozum');
@@ -468,7 +484,7 @@ export const SoruCozucu: React.FC<Props> = ({
   const ipucu = () => {
     if (!q || durum !== 'acik') return;
     setIpucuAcik(true); setYardim(true);
-    calSira([{ klasor: klasorAdi, klip: `i-${q.no}`, metinler: [q.ipucu], onCumle: () => setOkunan({ yer: 'ipucu' }) }]);
+    calSira([{ klasor: q.klasor || klasorAdi, klip: `i-${q.kn ?? q.no}`, metinler: [q.ipucu], onCumle: () => setOkunan({ yer: 'ipucu' }) }]);
     kaydir('.sc-ipucu');
   };
   const kalanYanlis = q ? HARFLER.filter((h) => h !== q.dogru && !elenen.includes(h)) : [];
@@ -487,43 +503,46 @@ export const SoruCozucu: React.FC<Props> = ({
       acikla(h); if (h !== q.dogru) ele(h); kaydir('.sc-aciklamalar');
     }));
     adimlar.push({
-      klasor: klasorAdi, klip: `c-${q.no}`, metinler: [`Doğru cevap ${q.dogru}, ${q.secenekler[q.dogru]}.`, q.cozum],
+      klasor: q.klasor || klasorAdi, klip: `c-${q.kn ?? q.no}`, metinler: [`Doğru cevap ${q.dogru}, ${q.secenekler[q.dogru]}.`, q.cozum],
       onBasla: () => { setDurum('gosterildi'); setSonSecim(q.dogru); setElenen(HARFLER.filter((x) => x !== q.dogru)); kaydir('.sc-cozum'); },
       onCumle: (j) => setOkunan(j > 0 ? { yer: 'cozum' } : null),
-    });
+    }, ...notAdimlari(q));
     // çözüm bitince (otomatik geçiş açıksa) sonraki soruya
     calSira(adimlar, () => {
       if (tercih.otomatik) otoRef.current = window.setTimeout(() => { otoRef.current = null; ileri(); }, 1400);
     });
   };
   // ---------- otomatik çöz: oku → çözüm yolu → yanlışları gerekçesiyle ele → doğruyu açıkla → çözüm
-  const [otoCoz, setOtoCoz] = useState(false);
+  const [otoCoz, setOtoCoz] = useState(!!otoBasla);
+  // otoBasla ile açılınca hızlı biçim (kaydedilmez); ayardan biçim değişirse kayıtlı tercihe dönülür
+  const [ocStilY, setOcStilY] = useState<'tam' | 'hizli' | null>(otoBasla ? 'hizli' : null);
+  const ocStil = ocStilY ?? tercih.ocStil;
   const ocAdim = (klip: string): Adim => ({ klasor: 'ortak', klip, metinler: [OC[klip]], onCumle: () => setOkunan(null) });
   const otomatikCoz = useCallback((s: CSoru) => {
     setDurum('cozuluyor'); setElenen([]); setAciklanan([]); setIpucuAcik(false); setSonSecim(null); setYanlisSecti(false);
     const secenekAdimi = (h: Harf): Adim => ({ ...kokAdimi(s, true), bas: HARFLER.indexOf(h) + 1, kes: HARFLER.indexOf(h) + 1 });
-    if (tercih.ocStil === 'hizli') { // oku → doğru şıkkı seç → yalnız onun açıklaması → sonraki soru
+    if (ocStil === 'hizli') { // oku → doğru şıkkı seç → yalnız onun açıklaması → sonraki soru
       calSira([kokAdimi(s, true), {
         ...secenekAdimi(s.dogru),
         onBasla: () => { setDurum('gosterildi'); setSonSecim(s.dogru); setElenen(HARFLER.filter((x) => x !== s.dogru)); },
-      }, sikAdimi(s, s.dogru, () => { acikla(s.dogru); kaydir('.sc-aciklamalar'); })],
+      }, sikAdimi(s, s.dogru, () => { acikla(s.dogru); kaydir('.sc-aciklamalar'); }), ...notAdimlari(s)],
       () => { otoRef.current = window.setTimeout(() => { otoRef.current = null; ileri(); }, 1000); });
       return;
     }
     const adimlar: Adim[] = [ocAdim('oc-bas'), kokAdimi(s, true), ocAdim('oc-yol'),
-      { klasor: klasorAdi, klip: `i-${s.no}`, metinler: [s.ipucu], onBasla: () => { setIpucuAcik(true); kaydir('.sc-ipucu'); }, onCumle: () => setOkunan({ yer: 'ipucu' }) },
+      { klasor: s.klasor || klasorAdi, klip: `i-${s.kn ?? s.no}`, metinler: [s.ipucu], onBasla: () => { setIpucuAcik(true); kaydir('.sc-ipucu'); }, onCumle: () => setOkunan({ yer: 'ipucu' }) },
       ocAdim('oc-ele')];
     for (const h of HARFLER.filter((x) => x !== s.dogru)) {
       adimlar.push(secenekAdimi(h), sikAdimi(s, h, () => { acikla(h); kaydir('.sc-aciklamalar'); }),
         { ...ocAdim('oc-elendi'), onBasla: () => ele(h) });
     }
     adimlar.push(ocAdim('oc-kalan'), secenekAdimi(s.dogru), sikAdimi(s, s.dogru, () => { acikla(s.dogru); kaydir('.sc-aciklamalar'); }), {
-      klasor: klasorAdi, klip: `c-${s.no}`, metinler: [`Doğru cevap ${s.dogru}, ${s.secenekler[s.dogru]}.`, s.cozum],
+      klasor: s.klasor || klasorAdi, klip: `c-${s.kn ?? s.no}`, metinler: [`Doğru cevap ${s.dogru}, ${s.secenekler[s.dogru]}.`, s.cozum],
       onBasla: () => { setDurum('gosterildi'); setSonSecim(s.dogru); kaydir('.sc-cozum'); },
       onCumle: (j) => setOkunan(j > 0 ? { yer: 'cozum' } : null),
-    }, ocAdim('oc-son'));
+    }, ...notAdimlari(s), ocAdim('oc-son'));
     calSira(adimlar, () => { otoRef.current = window.setTimeout(() => { otoRef.current = null; ileri(); }, 1600); });
-  }, [calSira, kokAdimi, sikAdimi, klasorAdi, ileri, tercih.ocStil]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [calSira, kokAdimi, sikAdimi, notAdimlari, klasorAdi, ileri, ocStil]); // eslint-disable-line react-hooks/exhaustive-deps
   const otoCozDegis = () => {
     if (otoCoz) { setOtoCoz(false); if (otoRef.current) { window.clearTimeout(otoRef.current); otoRef.current = null; } durdur(); return; }
     setOtoCoz(true); setAyarAcik(false);
@@ -682,7 +701,7 @@ export const SoruCozucu: React.FC<Props> = ({
         <div className="sc-ders">
           <button type="button" className="sc-ders-b" onClick={() => !ozelSorular?.length && setDersMenu((v) => !v)} aria-expanded={ozelSorular?.length ? undefined : dersMenu} aria-haspopup={ozelSorular?.length ? undefined : 'listbox'}>
             <span className="sc-ders-no">{ders?.no ?? '…'}</span>
-            <span className="sc-ders-t"><small>{ozelSorular?.length ? 'Sınav Çalışması' : bt.ad} · soru çözücü{ders && setAdi(ders) ? ` · ${setAdi(ders)}` : ''}{mod === 'cikmis' && tekrar ? ' · çıkmış sorular' : tekrar ? ' · yanlışların tekrarı' : ''}</small><b>{ders?.baslik ?? 'Yükleniyor…'}</b></span>
+            <span className="sc-ders-t"><small>{ozelSorular?.length ? 'Sınav Çalışması' : bt.ad} · {kaynak?.etiket || 'soru çözücü'}{ders && setAdi(ders) ? ` · ${setAdi(ders)}` : ''}{mod === 'cikmis' && tekrar ? ' · çıkmış sorular' : tekrar ? ' · yanlışların tekrarı' : ''}</small><b>{ders?.baslik ?? 'Yükleniyor…'}</b></span>
             {!ozelSorular?.length && <ChevronDown aria-hidden />}
           </button>
           {dersMenu && dizin && !ozelSorular?.length && (
@@ -906,10 +925,22 @@ export const SoruCozucu: React.FC<Props> = ({
                   </button>
                 </div>
                 <p><Metin metin={q.cozum} /></p>
-                <small>{q.sayfa.length > 0 ? `Ders sunumu · s. ${q.sayfa.join(', ')}` : ''}{q.sayfa.length > 0 && aciklanan.length < 5 ? ' · ' : ''}{aciklanan.length < 5 ? 'Diğer seçeneklerin açıklamasını dinlemek için üzerine dokun.' : ''}</small>
+                <small>{q.sayfa.length > 0 ? `${q.kaynak ? `${q.kaynak.dersNo}. ${q.kaynak.baslik} · ` : ''}Ders sunumu · s. ${q.sayfa.join(', ')}` : ''}{q.sayfa.length > 0 && aciklanan.length < 5 ? ' · ' : ''}{aciklanan.length < 5 ? 'Diğer seçeneklerin açıklamasını dinlemek için üzerine dokun.' : ''}</small>
                 {ogrenVar && !ogrenAcik && (
                   <button type="button" className="sc-ogren-b" onClick={() => setOgrenAcik(true)}><BookOpenText aria-hidden />Bu bilgiyi Öğren'de gör</button>
                 )}
+              </div>
+            )}
+
+            {cozuldu && q.not && (
+              <div className={`sc-not sc-kisanot${okunan?.yer === 'not' && caliyor ? ' is-aktif' : ''}`}>
+                <b><Lightbulb aria-hidden />Kısa not <span>· {q.not.baslik}</span></b>
+                <ul>
+                  {q.not.cumleler.map((c, j) => (
+                    <li key={j} className={okunan?.yer === 'not' && okunan.j === j && caliyor ? 'is-aktif' : ''}><Metin metin={c} /></li>
+                  ))}
+                </ul>
+                <small>{q.not.kaynak}</small>
               </div>
             )}
 
@@ -959,7 +990,7 @@ export const SoruCozucu: React.FC<Props> = ({
       </main>
 
       {ogrenAcik && ogrenVar && ders && devamSor === null && !bitti && (
-        <OgrenYeri brans={brans} kod={kod} tur="s" id={q?.no} baglam={`Soru ${i + 1}`} onKapat={() => setOgrenAcik(false)} />
+        <OgrenYeri brans={brans} kod={q?.kaynak?.kod ?? kod} tur="s" id={q?.kaynak?.no ?? q?.no} baglam={`Soru ${i + 1}`} onKapat={() => setOgrenAcik(false)} />
       )}
       {engel && ders && devamSor === null && !bitti && (
         <button type="button" className="sc-baslat" onClick={() => { setEngel(false); oynatDuraklat(); }}>
@@ -1001,7 +1032,7 @@ export const SoruCozucu: React.FC<Props> = ({
             </label>
             <label className="sc-oto" title="Otomatik çöz biçimi: tam anlatım ya da yalnız doğru şık ve açıklaması">
               <WandSparkles aria-hidden />
-              <select value={tercih.ocStil} onChange={(e) => setTercih({ ocStil: e.target.value as 'tam' | 'hizli' })} aria-label="Otomatik çöz biçimi">
+              <select value={ocStil} onChange={(e) => { setOcStilY(null); setTercih({ ocStil: e.target.value as 'tam' | 'hizli' }); }} aria-label="Otomatik çöz biçimi">
                 <option value="tam">Otomatik çöz: tam anlatım</option>
                 <option value="hizli">Otomatik çöz: doğru şık + açıklama</option>
               </select>

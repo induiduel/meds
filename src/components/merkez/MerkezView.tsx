@@ -27,6 +27,7 @@ function aracYolu(id: AppRoute, kurul: number | null): string {
   const k = kurul ? `/kurul${kurul}` : '';
   if (id === 'son_prova') return `/kamplar${k}/son-prova`;
   if (id === 'kamp') return `/kamplar${k}/kamp`;
+  if (id === 'cikmis_cozucu') return `/kamplar${k}/cikmis-cozucu`;
   if (id === 'en_onemliler') return `/kamplar${k}/en-onemliler`;
   return pathFor(id);
 }
@@ -62,7 +63,7 @@ function seritGizli(route: AppRoute): boolean {
   if (route === 'canli_ders') return p.startsWith('/canliders/');
   if (route === 'son_prova') return p.replace(/\/+$/, '') !== '/son-prova';
   if (route === 'kamp') return /^\/kamp\/\d/.test(p);
-  if (route === 'soru_cozucu' || route === 'en_onemliler') return !!(sp.get('coz') || sp.get('asistan'));
+  if (route === 'soru_cozucu' || route === 'en_onemliler' || route === 'cikmis_cozucu') return !!(sp.get('coz') || sp.get('asistan'));
   return false;
 }
 
@@ -90,7 +91,7 @@ export const BolumSeridi: React.FC<{ route: AppRoute }> = ({ route }) => {
 
 type KampSekme = 'hepsi' | 'son-prova' | 'kamp' | 'checkup' | 'en-onemliler';
 const KAMP_SEKMELER: [KampSekme, string][] = [['hepsi', 'Hepsi'], ['son-prova', 'Son Prova'], ['kamp', 'Kamplar'], ['checkup', 'Check Up'], ['en-onemliler', 'En önemliler']];
-const SEKME_ROUTE: Partial<Record<KampSekme, AppRoute[]>> = { 'son-prova': ['son_prova'], kamp: ['kamp'], 'en-onemliler': ['en_onemliler', 'spots'] };
+const SEKME_ROUTE: Partial<Record<KampSekme, AppRoute[]>> = { 'son-prova': ['son_prova', 'cikmis_cozucu'], kamp: ['kamp'], 'en-onemliler': ['en_onemliler', 'spots'] };
 
 const kampOku = () => {
   const sp = new URLSearchParams(icKonum().search);

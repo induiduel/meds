@@ -244,6 +244,24 @@
    "not": "Sesli ders EMA işi yayinla.py içinde kuyruğa giriyor (hazir); Öğren adım sesi, asistan ve çözücü sesi elle. Kurul 2+: ders_zinciri.py içinde otomatik (2026-10-20). Kurul 1: elle."
   },
   {
+   "id": "cikmis_paket",
+   "kapsam": "kurul",
+   "durum": "hazir",
+   "gerekir": [
+    "soru_cozucu",
+    "ses_ema"
+   ],
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "komut": "bash meds/scripts/cikmis_paket/not_ses.sh && python3 meds/scripts/cikmis_paket/paketle.py",
+   "cikti": [
+    "meds/src/data/cikmis_paket/k{kurul}.json"
+   ],
+   "not": "Sınava hazırlan › Çıkmış çözücü: branş başına sinav_dagilimi.json soru sayısı kadar paket; yalnız çözücüdeki slayt sayfalı + EMA sesli çıkmışlar (LLM yok). Yeni kurulun dağılımı JSON'a eklenmeden paket çıkmaz. Kısa not: sesli asistan noktası (kök eşleşmesi/slayt sayfası); asistanı olmayan derste scripts/cikmis_paket/notlar.json (slayttan, yazar+denetçi) + EMA n-<no> klibi. Yeni ders/kurulda eksik not paketle.py çıktısında 'yok' sayısıyla görünür."
+  },
+  {
    "id": "hastalik_birlestir",
    "kapsam": "genel",
    "durum": "hazir",

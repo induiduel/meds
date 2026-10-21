@@ -35,6 +35,7 @@ import { disYol, icYol, kanonik } from './siteHaritasi';
 export type AppRoute =
   | 'quick_add'
   | 'son_prova'
+  | 'cikmis_cozucu'
   | 'today'
   | 'learn'
   | 'glossary'
@@ -122,6 +123,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   patoloji_checkup: '/patoloji-check-up',
   genetik_checkup: '/genetik-check-up',
   son_prova: '/son-prova',
+  cikmis_cozucu: '/cikmis-cozucu',
   bitirdiklerim: '/bitirdiklerim',
   basarimlar: '/basarimlar',
   cevrimdisi: '/cevrimdisi',
@@ -175,6 +177,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   patoloji_checkup: 'Patoloji Hızlı Check Up',
   genetik_checkup: 'TBG Sınav Kampı',
   son_prova: 'Son Prova',
+  cikmis_cozucu: 'Çıkmış çözücü',
   bitirdiklerim: 'Bitirdiklerim',
   basarimlar: 'Başarımlar',
   cevrimdisi: 'Çevrimdışı',
@@ -284,6 +287,8 @@ const ALIASES: Record<string, AppRoute> = {
   'patoloji-checkup': 'patoloji_checkup',
   genetik_checkup: 'genetik_checkup',
   son_prova: 'son_prova',
+  cikmis_cozucu: 'cikmis_cozucu',
+  'cikmis-cozucu': 'cikmis_cozucu',
   'son-prova': 'son_prova',
   sonprova: 'son_prova',
   prova: 'son_prova',

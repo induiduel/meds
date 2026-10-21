@@ -188,7 +188,8 @@ def klasor(S: Saglayici, kok: Path, ad: str, K: dict[str, list[str]], kbps: int,
         if yeni % 10 == 0:
             kp.write_text(json.dumps(kayit, ensure_ascii=False), encoding="utf-8")
     if silinsin:
-        for klip in [a for a in kayit if a not in K]:
+        # n-<no>: Çıkmış çözücü kısa not klipleri (scripts/cikmis_paket/not_ses.py) bu klasörde yaşar, silinmez
+        for klip in [a for a in kayit if a not in K and not a.startswith("n-")]:
             kayit.pop(klip)
             (d / f"{klip}.mp3").unlink(missing_ok=True)
     kp.write_text(json.dumps(kayit, ensure_ascii=False), encoding="utf-8")

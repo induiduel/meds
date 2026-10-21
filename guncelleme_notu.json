@@ -1,14 +1,18 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 200,
-  "baslik": "TBG Sınav Kampı: kalıp kartı düzeltmesi",
+  "onem": 201,
+  "baslik": "Yeni: Çıkmış çözücü (Sınava hazırlan)",
   "maddeler": [
-    "TBG kalıp kartlarında kistik higroma + ASD/VSD satırı sınav kuralına göre düzeltildi: Turner (şıkta yoksa Down)."
+    "Sınava hazırlan › Çıkmış çözücü: her ders için kurul sınavındaki soru sayısı kadar çıkmış paketi (Kurul 1: 450 soru, 33 paket), yalnız slaytta anlatılan kazanımlar.",
+    "Sesli asistanla birlikte çöz: yanlış şıkta nedenini dinle, ipucu ve çözüm; çözümden sonra konunun kısa notu sesli okunur.",
+    "Otomatik çöz: asistan seni beklemeden soruyu okur, doğru şıkkı seçer, nedenini ve kısa notu anlatıp sonraki soruya geçer."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "Sınava hazırlan › Çıkmış çözücü: her ders için kurul sınavındaki soru sayısı kadar çıkmış paketi (Kurul 1: 450 soru, 33 paket), yalnız slaytta anlatılan kazanımlar.",
+    "Sesli asistanla birlikte çöz: yanlış şıkta nedenini dinle, ipucu ve çözüm; çözümden sonra konunun kısa notu sesli okunur.",
+    "Otomatik çöz: asistan seni beklemeden soruyu okur, doğru şıkkı seçer, nedenini ve kısa notu anlatıp sonraki soruya geçer."
+  ],
   "degisen": [],
-  "duzeltilen": [
-    "TBG kalıp kartlarında kistik higroma + ASD/VSD satırı sınav kuralına göre düzeltildi: Turner (şıkta yoksa Down)."
-  ],
+  "duzeltilen": [],
   "silinen": []
 }
