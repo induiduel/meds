@@ -88,6 +88,29 @@ def kur(kurul: int):
         yontem = {'soru': 0, 'sayfa': 0, 'yazili': 0, None: 0}
         yazili = json.loads((Path(__file__).parent / 'notlar.json').read_text())
         notlar = {}
+        ek_gorulen, ek_say, atlanan_ek = set(), [0], [0]
+        def ek_ekle(ep, kl, l):
+            if not ep.exists() or kl in ek_gorulen:
+                return
+            ek_gorulen.add(kl)
+            ex = json.loads(ep.read_text())
+            for q in ex['sorular']:
+                if not q.get('sayfa') or f"q-{q['no']}" not in ex.get('klip', {}):
+                    atlanan_ek[0] += 1
+                    continue
+                a = anahtar(q)
+                if a in gorulen:
+                    continue
+                gorulen.add(a)
+                nt, y = not_bul(brans, kl, q, kok, noktalar)
+                if not nt and q.get('notYazili'):
+                    nk = ex['klip'].get(f"n-{q['no']}")
+                    notlar[f"ek:{kl}/{q['no']}"] = {**q['notYazili'], **({'klip': nk} if nk else {})}
+                    nt, y = ['y'], 'yazili'
+                yontem[y] += 1
+                ek_say[0] += 1
+                l.append([f'ek:{kl}', q['no'], *(nt or [])])
+
         for d in dizin['dersler']:
             x = json.loads((klasor / f"{d['kod']}.json").read_text())
             l = []
@@ -111,6 +134,16 @@ def kur(kurul: int):
                     nt, y = ['y'], 'yazili'
                 yontem[y] += 1
                 l.append([d['kod'], q['no'], *(nt or [])])  # [kod, no, tür, ders, id]
+            # ek modül (çözücüde olmayan çıkmışlar, ek_uygula.py): dersin klasörünün ilk setinde, kendi sesleriyle
+            kl = x.get('klasor') or d['kod']
+            ep = VERI / 'cikmis_paket' / 'ek' / brans / f'{kl}.json'
+            ek_ekle(ep, kl, l)
+            if l:
+                dersler.append(l)
+        # çözücüde karşılığı olmayan ek dersler (ör. g07 TBG Sınav Kampı) en sonda
+        for ep in sorted((VERI / 'cikmis_paket' / 'ek' / brans).glob('*.json')):
+            l = []
+            ek_ekle(ep, ep.stem, l)
             if l:
                 dersler.append(l)
         toplam = sum(len(l) for l in dersler)
@@ -127,12 +160,14 @@ def kur(kurul: int):
             kovalar[i // n].append(r)
         # paket içinde ders sırası
         ders_sira = {d['kod']: i for i, d in enumerate(dizin['dersler'])}
+        for d in dizin['dersler']:  # ek modül: dersin klasörünün sırası
+            ders_sira.setdefault(f"ek:{json.loads((klasor / (d['kod'] + '.json')).read_text()).get('klasor') or d['kod']}", ders_sira[d['kod']] + 0.5)
         paketler = []
         for i, k in enumerate(kovalar, 1):
-            k.sort(key=lambda r: (ders_sira[r[0]], r[1]))
+            k.sort(key=lambda r: (ders_sira.get(r[0], 999), r[1]))
             paketler.append({'no': i, 'sorular': k, 'ders': len({r[0] for r in k})})
         cikti['branslar'].append({'brans': brans, 'sinavSoru': n, 'soru': toplam, 'paketler': paketler, 'notlar': notlar})
-        print(f'  {brans}: {toplam} çıkmış → {paket_say} paket × {n} (son {len(kovalar[-1])}); atlanan {atlanan}; not: soru {yontem['soru']}, sayfa {yontem['sayfa']}, yazılı {yontem['yazili']}, yok {yontem[None]}')
+        print(f'  {brans}: {toplam} çıkmış → {paket_say} paket × {n} (son {len(kovalar[-1])}); ek {ek_say[0]}; atlanan {atlanan + atlanan_ek[0]}; not: soru {yontem['soru']}, sayfa {yontem['sayfa']}, yazılı {yontem['yazili']}, yok {yontem[None]}')
     ham = json.dumps(cikti, ensure_ascii=False, separators=(',', ':'))
     cikti['surum'] = hashlib.sha1(ham.encode()).hexdigest()[:10]
     yol = VERI / 'cikmis_paket' / f'k{kurul}.json'

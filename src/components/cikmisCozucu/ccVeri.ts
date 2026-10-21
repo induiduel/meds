@@ -19,6 +19,12 @@ const DOSYA = import.meta.glob('../../data/cikmis_paket/k*.json') as Record<stri
 export const ccKurullar = (): number[] =>
   Object.keys(DOSYA).map((k) => Number(/\/k(\d+)\.json$/.exec(k)?.[1])).filter(Boolean).sort((a, b) => a - b);
 
+/** ek modül: çözücüde olmayan çıkmışlar (scripts/cikmis_paket/ek_uygula.py), çözücü ders biçiminde; paket başvurusu "ek:<klasör>" */
+const EK_DOSYA = import.meta.glob('../../data/cikmis_paket/ek/*/*.json') as Record<string, () => Promise<{ default: CDers }>>;
+const ekYukle = (brans: string, kl: string): Promise<CDers> => {
+  const f = EK_DOSYA[`../../data/cikmis_paket/ek/${brans}/${kl}.json`];
+  return f ? f().then((m) => m.default) : Promise.reject(new Error(`ek yok: ${kl}`));
+};
 const NOT_DOSYA = import.meta.glob('../../data/*_asistan/*.json') as Record<string, () => Promise<{ default: NotDosya }>>;
 interface NotDosya {
   kod: string; baslik: string;
@@ -74,7 +80,9 @@ export const ccDers = async (kod: string): Promise<CDers> => {
   const p = bp?.paketler.find((x) => x.no === c.no);
   if (!bp || !p) throw new Error(`paket yok: ${kod}`);
   const kaynaklar = new Map<string, CDers>();
-  await Promise.all([...new Set(p.sorular.map((r) => r[0]))].map(async (dk) => { kaynaklar.set(dk, await cozucuDersYukle(dk, c.brans)); }));
+  await Promise.all([...new Set(p.sorular.map((r) => r[0]))].map(async (dk) => {
+    kaynaklar.set(dk, await (dk.startsWith('ek:') ? ekYukle(c.brans, dk.slice(3)) : cozucuDersYukle(dk, c.brans)));
+  }));
   const notYol = (r: PaketSoru) => (r[2] === 'a' ? `../../data/${c.brans}_asistan/${r[3]}.json` : '');
   const notlar = new Map<string, NotDosya | null>();
   await Promise.all([...new Set(p.sorular.map(notYol).filter(Boolean))].map(async (y) => { notlar.set(y, await notYukle(y)); }));
@@ -87,6 +95,7 @@ export const ccDers = async (kod: string): Promise<CDers> => {
     if (!d || !q) return; // çözücüde silinmiş soru: paket yeniden üretilene dek atlanır
     const klasor = d.klasor || d.kod;
     const dersNo = dizin.dersler.find((x) => x.kod === dk)?.no ?? d.no;
+    const asilKod = dk.startsWith('ek:') ? (dizin.dersler.find((x) => x.no === d.no)?.kod ?? d.kod) : d.kod;
     const nd = notlar.get(notYol(r));
     let not: CSoru['not'];
     if (nd && r[2] === 'a') {
@@ -103,7 +112,7 @@ export const ccDers = async (kod: string): Promise<CDers> => {
         if (y.klip) klip[`${klasor}/n-${no}`] = y.klip;
       }
     }
-    sorular.push({ ...q, no: i + 1, kn: q.no, klasor, kaynak: { kod: d.kod, no: q.no, baslik: d.baslik, dersNo }, not });
+    sorular.push({ ...q, no: i + 1, kn: q.no, klasor, kaynak: { kod: asilKod, no: q.no, baslik: d.baslik, dersNo }, not });
     for (const [ad, v] of Object.entries(d.klip)) {
       const m = KLIP.exec(ad);
       if (m && Number(m[1]) === no) klip[`${klasor}/${ad}`] = v;
