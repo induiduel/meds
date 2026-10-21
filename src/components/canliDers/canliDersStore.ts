@@ -161,7 +161,25 @@ function sayilariDuzelt(d: CdDetay): CdDetay {
           const b0 = ci ? sinir[ci - 1] : 0;
           const y0 = r.konum(b0);
           x.w = x.w.map(([b, e, ...k]) => [r.konum(b0 + b) - y0, r.konum(b0 + e, true) - y0, ...k]);
+          // hareketli imleç yolu da cümle içi karakter konumuyla: yeni metne taşınır
+          if (x.y) x.y = x.y.map(([c, ...k]) => [r.konum(b0 + c) - y0, ...k]);
         });
+      }
+      // Ölçülü kelime zamanı eski metnin kelimelerine göredir ("yirmi dört" iki kelime, "24" bir): yeni metnin her
+      // kelimesine, içine düşen ilk eski kelimenin başlangıcı verilir. Taşınmazsa sayılı paragrafta takip tahmine düşer.
+      const eski = [...p.metin.matchAll(/\S+/g)].map((m) => r.konum(m.index!));
+      const yeni = [...r.metin.matchAll(/\S+/g)].map((m) => m.index!);
+      for (const va of d.varyantlar || []) {
+        const kz = va.kelimeZaman?.[String(p.i)];
+        if (!Array.isArray(kz) || kz.length !== eski.length) continue;
+        const out: number[] = [];
+        let w = 0;
+        for (let j = 0; j < yeni.length; j++) {
+          const son = j + 1 < yeni.length ? yeni[j + 1] : Infinity;
+          while (w < eski.length && eski[w] < yeni[j]) w++;
+          out.push(w < eski.length && eski[w] < son ? kz[w] : out.length ? out[out.length - 1] : kz[0]);
+        }
+        va.kelimeZaman![String(p.i)] = out;
       }
       p.metin = r.metin;
       const v = d.vurgu?.[p.i];
