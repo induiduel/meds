@@ -62,7 +62,7 @@ const dk = (n: number) => (n >= 60 ? `${Math.floor(n / 60)} sa ${n % 60 ? `${n %
 
 function Geri({ yol, metin }: { yol: string; metin: string }) {
   return (
-    <a className="sp-geri-bag" href={yol} onClick={(e) => { if (e.button || e.metaKey || e.ctrlKey) return; e.preventDefault(); git(yol); }}>
+    <a className="sp-geri-bag" href={yol} aria-label={`Geri: ${metin}`} onClick={(e) => { if (e.button || e.metaKey || e.ctrlKey) return; e.preventDefault(); git(yol); }}>
       <ArrowLeft aria-hidden /> <span>{metin}</span>
     </a>
   );
@@ -398,11 +398,12 @@ function PartOynatici({ ix, ders, part, asama, gez }: { ix: SpIndex; ders: SpDer
     <nav className="sp-ust-gez" aria-label="Son Prova">
       <Geri yol={`/son-prova/${ders.brans}`} metin={BRANS_KISA[ders.brans]} />
       <button type="button" className={`sp-btn sp-btn-kucuk${soruDurum ? ' is-tamam' : ''}`} onClick={() => { cdDuraklat(); setTest(soruAsama); }}
+        aria-label={`Aşama ${soruAsama.no} soruları`}
         title={`Aşama ${soruAsama.no} · ${soruAsama.baslik} — ${soruAsama.dersNo}) ${soruAsama.dersAd}`}>
         {soruDurum ? <CheckCircle2 aria-hidden /> : <ListChecks aria-hidden />}
         <span>Aşama {soruAsama.no} soruları{soruDurum ? ` · ${soruDurum.d}/${soruDurum.n}` : ''}</span>
       </button>
-      <button type="button" className={`sp-btn sp-btn-kucuk${k.checkup[key] ? ' is-tamam' : ''}`} onClick={() => git(`/son-prova/${ders.brans}/${part.no}/checkup`)}>
+      <button type="button" className={`sp-btn sp-btn-kucuk${k.checkup[key] ? ' is-tamam' : ''}`} onClick={() => git(`/son-prova/${ders.brans}/${part.no}/checkup`)} aria-label="Part check-up">
         <Target aria-hidden /><span>Check-up</span>
       </button>
     </nav>

@@ -202,3 +202,13 @@
 .sp-sayfa-ici button { font: inherit; color: inherit; cursor: pointer; }
 .sp-sayfa-ici svg { flex: none; width: 16px; height: 16px; }
 .sp-sayfa-ici .sp-btn-ana { background: var(--color-accent); border-color: transparent; color: var(--color-on-accent); }
+
+/* telefon: alttaki sesli ders oynatıcısı (--cd-dock-h) soru düğmelerini örtmesin */
+.sp-sayfa-ici { padding-bottom: calc(48px + var(--cd-dock-h, 0px)); }
+.sp-sayfa-ici .sp-test-alt { bottom: var(--cd-dock-h, 0px); }
+@media (max-width: 560px) {
+  /* part başlığı: geri yalnız simge; düğmeler simge (başlığa yer kalsın) */
+  .sp-ust-gez .sp-geri-bag span { display: none; }
+  .sp-ust-gez .sp-geri-bag { min-width: 40px; justify-content: center; }
+  .sp-ust-gez { gap: 4px; }
+}

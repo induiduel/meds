@@ -2578,8 +2578,28 @@ function flushPastQuestionsDbSync() {
     console.error('Error flushing pastQuestions.json:', e);
   }
 }
+// Düzgün kapanış (dağıtımda docker restart -t 20 / stop_grace_period 15s): önce dinlemeyi bırak (yeni bağlantılar
+// reddedilir, Caddy kapısı onları 60 sn bekletip yeni sürece aktarır), SSE akışlarını kapat (istemci ~1 sn'de yeniden
+// bağlanır, kaçanlar lastEventId ile gelir), yoldaki istekleri en çok 10 sn bitirt, sonra çık. Eskiden hemen
+// process.exit: yarım kalan /api/user-data/backup, /api/notes yazmaları "connection reset" alıp istemcide
+// çevrimdışı uyarısı ve kuyruk açıyordu (2026-10-21).
+let httpServerRef: import('http').Server | null = null;
+let kapaniyor = false;
 for (const sig of ['SIGTERM', 'SIGINT'] as const) {
-  process.once(sig, () => { flushPastQuestionsDbSync(); process.exit(0); });
+  process.once(sig, () => {
+    if (kapaniyor) return;
+    kapaniyor = true;
+    const bitir = () => { flushPastQuestionsDbSync(); process.exit(0); };
+    const srv = httpServerRef;
+    if (!srv) return bitir();
+    setTimeout(bitir, 10_000).unref();
+    srv.close(() => bitir());
+    for (const c of realtimeClients.values()) { try { c.res.end(); } catch { /* kapalı */ } }
+    realtimeClients.clear();
+    const bos = () => { try { (srv as any).closeIdleConnections?.(); } catch { /* eski Node */ } };
+    bos();
+    setInterval(bos, 250).unref();
+  });
 }
 process.once('beforeExit', () => flushPastQuestionsDbSync());
 
@@ -11927,7 +11947,7 @@ async function startServer() {
     res.json(result);
   });
 
-  app.listen(PORT, () => {
+  httpServerRef = app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT} (isProd: ${isProd})`);
     // 🤖 Ücretsiz Gemini Hata İnceleme ve Onarım Otomasyonunu Başlat
     hydrateExistingReportsToAutoRepair();

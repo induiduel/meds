@@ -1,24 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 162,
-  "baslik": "Kıdemler, yeni unvanlar ve çalışma süresi sıralaması",
+  "onem": 163,
+  "baslik": "Son Prova: telefon düzeni",
   "maddeler": [
-    "Kıdem sistemi: Çömez'den Profesör'e 8 kıdem. Kıdem unvanını ATP ile alınca günlük ATP sınırın yükselir (100 → 1000 mol).",
-    "Her kıdemde gerçek ve eğlenceli yeni unvanlar: Kan Alma Ninjası, 36 Saat Uykusuz, Ayırıcı Tanı Dedektifi, Yaşayan Ders Kitabı…",
-    "Yeni ögeler: EKG ve DNA çerçeveleri, Kalp atışı kutlama efekti, sıralamada renkli isim, seri koruyucu.",
-    "Sıralama › Çalışma süresi: bugün ve bu hafta en çok çalışanlar, en çok çalıştıkları derslerle. Haftanın birincisine 50 mol ATP.",
-    "Başarımlar sayfasında bu hafta en çok çalıştığın dersler."
+    "Son Prova telefonda: soru düğmeleri alttaki ses oynatıcısının altında kalmaz, part başlığı sıkışmaz."
   ],
-  "eklenen": [
-    "Kıdem sistemi: Çömez'den Profesör'e 8 kıdem. Kıdem unvanını ATP ile alınca günlük ATP sınırın yükselir (100 → 1000 mol).",
-    "Her kıdemde gerçek ve eğlenceli yeni unvanlar: Kan Alma Ninjası, 36 Saat Uykusuz, Ayırıcı Tanı Dedektifi, Yaşayan Ders Kitabı…",
-    "Yeni ögeler: EKG ve DNA çerçeveleri, Kalp atışı kutlama efekti, sıralamada renkli isim, seri koruyucu.",
-    "Sıralama › Çalışma süresi: bugün ve bu hafta en çok çalışanlar, en çok çalıştıkları derslerle. Haftanın birincisine 50 mol ATP.",
-    "Başarımlar sayfasında bu hafta en çok çalıştığın dersler."
+  "eklenen": [],
+  "degisen": [],
+  "duzeltilen": [
+    "Son Prova telefonda: soru düğmeleri alttaki ses oynatıcısının altında kalmaz, part başlığı sıkışmaz."
   ],
-  "degisen": [
-    "Unvanların fiyatı arttı; eski unvanlar sahiplerinde kalır."
-  ],
-  "duzeltilen": [],
   "silinen": []
 }
