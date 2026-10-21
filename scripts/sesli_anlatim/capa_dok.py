@@ -14,6 +14,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import pymupdf
 from pdf_isaret import Sayfa, INDIR, KOK, API, cumle_sonlari, pdf_indir
 
+_op = urllib.request.build_opener(); _op.addheaders = [('User-Agent', 'medsor-capa/1')]; urllib.request.install_opener(_op)  # Oracle 403'ü önler
 key, out = sys.argv[1], Path(sys.argv[2]); out.mkdir(parents=True, exist_ok=True)
 hz = json.loads((KOK / "hizalama" / f"{key}.json").read_text())
 cok = len(hz["dosyalar"]) > 1

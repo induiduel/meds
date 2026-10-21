@@ -63,31 +63,43 @@ export interface PdfMarks {
   useChar?: () => number;
 }
 
-/** İmleç: konuşulan karakter iki yol noktası arasında ilerledikçe sürekli kayar (anlatan hocanın eli gibi);
- *  noktada bölge (r) varsa o bölge ince çerçeveyle gösterilir. */
-function imlecDurum(path: number[][], c: number): { x: number; y: number; r: number[] | null } {
-  if (c < 0 || c <= path[0][0]) return { x: path[0][1], y: path[0][2], r: path[0].length >= 7 ? path[0].slice(3, 7) : null };
+/** İmleç: konuşulan karakter iki yol noktası arasında ilerledikçe akıcı biçimde kayar (anlatan hocanın eli gibi);
+ *  noktaya varınca bölgeyi (r) elle çizer gibi çevreler — geniş/alçak bölgenin altını çizer —, beklerken küçük daireler atar. */
+function imlecDurum(path: number[][], c: number): { x: number; y: number; i: number } {
+  if (c < 0 || c <= path[0][0]) return { x: path[0][1], y: path[0][2], i: 0 };
   for (let i = 0; i + 1 < path.length; i++) {
     const a = path[i], b = path[i + 1];
     if (c < b[0]) {
-      // noktaya varınca kısa bir duruş, sonra bir sonraki noktaya doğru süzülme
+      // noktada kısa duruş (çevreleme), sonra bir sonraki noktaya erkenden süzülme
       const span = Math.max(1, b[0] - a[0]);
-      const o = Math.max(0, Math.min(1, ((c - a[0]) / span - 0.35) / 0.65));
-      return { x: a[1] + (b[1] - a[1]) * o, y: a[2] + (b[2] - a[2]) * o, r: a.length >= 7 ? a.slice(3, 7) : null };
+      const o = Math.max(0, Math.min(1, ((c - a[0]) / span - 0.55) / 0.45));
+      const e = o * o * (3 - 2 * o);
+      return { x: a[1] + (b[1] - a[1]) * e, y: a[2] + (b[2] - a[2]) * e, i: e > 0.5 ? i + 1 : i };
     }
   }
   const z = path[path.length - 1];
-  return { x: z[1], y: z[2], r: z.length >= 7 ? z.slice(3, 7) : null };
+  return { x: z[1], y: z[2], i: path.length - 1 };
 }
 
 const Imlec = memo(function Imlec({ path, useChar }: { path: number[][]; useChar: () => number }) {
-  const { x, y, r } = imlecDurum(path, useChar());
+  const { x, y, i } = imlecDurum(path, useChar());
+  const n = path[i];
+  const r = n && n.length >= 7 ? n.slice(3, 7) : null;
+  const alt = r ? (r[2] - r[0]) > 3.2 * (r[3] - r[1]) : false; // geniş, alçak bölge (satır) → altını çiz
   return (
     <>
-      {r && <span className="pdv-imlec-bolge" style={pct(r)} />}
-      <svg className="pdv-imlec" style={{ left: `${x * 100}%`, top: `${y * 100}%` }} width="15" height="15" viewBox="0 0 24 24" aria-hidden>
-        <path d="M3 2l7.5 19 2.6-7.9L21 10.5z" />
-      </svg>
+      {r && (
+        <svg key={`c${i}`} className={`pdv-cizim${alt ? ' is-alt' : ''}`} style={pct(r)} viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden>
+          {alt
+            ? <path d="M-2 104 Q 30 98, 55 103 T 102 101" pathLength={1} />
+            : <path d="M50 -6 C 88 -8, 108 24, 104 52 C 100 86, 70 108, 44 106 C 12 104, -8 78, -5 48 C -2 18, 22 -4, 58 -2" pathLength={1} />}
+        </svg>
+      )}
+      <span className="pdv-imlec-kap" style={{ left: `${x * 100}%`, top: `${y * 100}%` }}>
+        <svg key={`i${i}`} className="pdv-imlec" width="15" height="15" viewBox="0 0 24 24" aria-hidden>
+          <path d="M3 2l7.5 19 2.6-7.9L21 10.5z" />
+        </svg>
+      </span>
     </>
   );
 });

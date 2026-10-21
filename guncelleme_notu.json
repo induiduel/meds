@@ -1,16 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 177,
-  "baslik": "60 planına sınav senaryosu eklendi",
+  "onem": 178,
+  "baslik": "Sesli ders: slayt işaretleri anlama göre (68 ders)",
   "maddeler": [
-    "Bitirdiklerim › 60 planı: her ders için emin olduğun doğru aralığını, ne kadar sallayacağını ve salladıklarının ne kadarının tutacağını yaz; kötümser, mantıksal ve iyimser üç senaryoda net puanın, olası aralığı ve 60 olasılığı hesaplanır.",
-    "Kendi tahminin çalışma durumunla karşılaştırılır: kendine fazla mı yoksa eksik mi güvendiğini gösterir."
+    "Sesli derslerde PDF işareti okunan cümlenin gerçekten anlattığı madde, tablo ya da resme gidiyor; şema ve tablolarda ince imleç anlatılan yerde dolaşıyor. Şu an 68 derste etkin."
   ],
-  "eklenen": [
-    "Bitirdiklerim › 60 planı: her ders için emin olduğun doğru aralığını, ne kadar sallayacağını ve salladıklarının ne kadarının tutacağını yaz; kötümser, mantıksal ve iyimser üç senaryoda net puanın, olası aralığı ve 60 olasılığı hesaplanır.",
-    "Kendi tahminin çalışma durumunla karşılaştırılır: kendine fazla mı yoksa eksik mi güvendiğini gösterir."
+  "eklenen": [],
+  "degisen": [
+    "Sesli derslerde PDF işareti okunan cümlenin gerçekten anlattığı madde, tablo ya da resme gidiyor; şema ve tablolarda ince imleç anlatılan yerde dolaşıyor. Şu an 68 derste etkin."
   ],
-  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }
