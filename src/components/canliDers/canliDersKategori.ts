@@ -51,7 +51,7 @@ export function cdKategoriGrupla(ds: CdListeDers[]): { kat: CdKategori; dersler:
   }
   const diger = (g: { kat: CdKategori }) => (g.kat.ad === 'Son Prova' ? 2 : g.kat.ad === 'Diğer' ? 1 : 0);
   return [...m.values()]
-    .map((g) => ({ ...g, dersler: g.dersler.sort((a, b) => noSayi(a) - noSayi(b) || (a.parca ?? 0) - (b.parca ?? 0) || (a.sira ?? 0) - (b.sira ?? 0)) }))
+    .map((g) => ({ ...g, dersler: g.dersler.sort((a, b) => (a.listeNo ?? noSayi(a)) - (b.listeNo ?? noSayi(b)) || (a.parca ?? 0) - (b.parca ?? 0) || (a.sira ?? 0) - (b.sira ?? 0)) }))
     .sort((a, b) => diger(a) - diger(b) || (a.kat.alt || '').localeCompare(b.kat.alt || '', 'tr')
       || b.dersler.length - a.dersler.length || a.kat.ad.localeCompare(b.kat.ad, 'tr'));
 }

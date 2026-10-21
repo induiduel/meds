@@ -51,13 +51,15 @@ const dersler = () => oku<Ders[]>(P.dersler, []);
  * BRANS_DUZELT: Drive numarası çakışan/hatalı ya da başka dersin PDF'ine hizalı dersler (her zaman).
  * BRANS_YEDEK: hizalaması (PDF'i) henüz olmayan dersler; Drive numaraları Oracle hizalamasıyla aynı.
  */
-const BRANS_DUZELT: Record<string, [string, number, number?]> = {
+const BRANS_DUZELT: Record<string, [string, number, number?, number?]> = {
   // Drive: Böbrek ve Mesane ikisi de "26)", İnvaziv Serviks "39)" — patoloji önem listesiyle aynı numara
   'k1-46-mesane-hastaliklari-ve-tumorleri': ['Tıbbi Patoloji', 27],
   'k1-49-invaziv-serviks-kanseri-ve-endometriyozis': ['Tıbbi Patoloji', 29],
-  // Drive: Meme Kanseri de "33)" (Memenin Benign ile çakışır); liste sırayla gitsin diye 34, Erkek Genital 35
-  'k1-65-meme-kanseri-ve-molekuler-tipleri': ['Tıbbi Patoloji', 34],
-  'k1-66-erkek-genital-sistem-ve-prostat-hastaliklari': ['Tıbbi Patoloji', 35],
+  // Drive: Meme Kanseri de "33)" (Memenin Benign ile çakışır). Numara = soru çözücü/önem/asistan numarası (34 Erkek
+  // Genital, 35 Meme Kanseri; eşleşme numarayla yapılır). 4. öge listeNo: sesli ders listesi anlatım sırasıyla gitsin
+  // (Meme önce). Kapı: scripts/sesli_anlatim/cozucu_eslesme_dogrula.py
+  'k1-65-meme-kanseri-ve-molekuler-tipleri': ['Tıbbi Patoloji', 35, undefined, 34.5],
+  'k1-66-erkek-genital-sistem-ve-prostat-hastaliklari': ['Tıbbi Patoloji', 34],
 };
 /** Listede gösterilmeyen dersler (adresle açılmaya devam eder). Uterus Düz Kas ve Trofoblastik: ayrı slaytı yok,
  *  30. PDF s.76–91 (Endometrial dersinin sonu) + 32. PDF s.35–64 (Gebelik Hastalıkları) tekrarı — kullanıcı kararı. */
@@ -82,7 +84,7 @@ const SON_PROVA_BRANS: Record<string, string> = {
 const slugBrans = (slug: string): string | undefined =>
   oku<{ branslar?: { slug: string; ad: string }[] }>(path.join(process.cwd(), 'src', 'data', 'dersler', 'branslar.json'), {}).branslar?.find((b) => b.slug === slug)?.ad;
 const MODUL_DERS: Record<string, [string, string]> = { 'k1-70-tbg-sinav-kampi': ['Tıbbi Genetik', 'Sınav kampı'] };
-function bransBilgisi(d: Ders): { brans: string; bransNo: number | string; kurul: number; parca?: number } {
+function bransBilgisi(d: Ders): { brans: string; bransNo: number | string; kurul: number; parca?: number; listeNo?: number } {
   const kurul = Number(/^k(\d+)-/.exec(d.key)?.[1]) || 0;
   const sp = /^k\d+-\d+-son-prova-([a-z-]+?)(?:-(\d+))?$/.exec(d.key);
   const modul = MODUL_DERS[d.key] || (sp ? [SON_PROVA_BRANS[sp[1]] || slugBrans(sp[1]) || 'Son Prova', `Son Prova${sp[2] ? ` ${sp[2]}` : ''}`] as [string, string] : undefined);
@@ -97,7 +99,7 @@ function bransBilgisi(d: Ders): { brans: string; bransNo: number | string; kurul
     if (r && no) return { brans: r.brans, bransNo: no, kurul };
   }
   const elle = BRANS_DUZELT[d.key];
-  if (elle) return { brans: elle[0], bransNo: elle[1], kurul, ...(elle[2] ? { parca: elle[2] } : {}) };
+  if (elle) return { brans: elle[0], bransNo: elle[1], kurul, ...(elle[2] ? { parca: elle[2] } : {}), ...(elle[3] ? { listeNo: elle[3] } : {}) };
   const p = P.hizalama(d.key);
   let mtime = -1;
   try { mtime = fs.statSync(p).mtimeMs; } catch { /* PDF yok */ }
@@ -144,6 +146,7 @@ export function registerCanliDersRoutes(app: Express) {
           kurulNo: d.no,
           brans: b.brans,
           parca: b.parca,
+          listeNo: b.listeNo,
           kurul: b.kurul,
           baslik: d.baslik,
           sira: d.sira,

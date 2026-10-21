@@ -37,6 +37,8 @@ export interface CdListeDers {
   brans?: string;
   /** Aynı PDF iki derste anlatıldıysa 1/2 ("Part 1") */
   parca?: number;
+  /** Listede sıralama numarası no'dan farklıysa (no çözücü numarasıdır; Meme Kanseri 35 ama listede 34,5) */
+  listeNo?: number;
   kurul?: number;
   kurulNo?: number;
   baslik: string;
