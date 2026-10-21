@@ -1,14 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 164,
-  "baslik": "Altyapı: kural güncellemeleri anında yürürlüğe girer",
+  "onem": 165,
+  "baslik": "Güncelleme sırasında bağlantı kopmuyor",
   "maddeler": [
-    "Başarım kuralları, kurul takvimi ve ders listesi güncellendiğinde sunucu yeni kuralları hemen kullanır."
+    "Site güncellenirken yarıda kalan kayıtlar (notlar, ilerleme yedeği) artık tamamlanıyor; canlı bağlantı kesintisiz yeniden kuruluyor."
   ],
   "eklenen": [],
-  "degisen": [
-    "Başarım kuralları, kurul takvimi ve ders listesi güncellendiğinde sunucu yeni kuralları hemen kullanır."
+  "degisen": [],
+  "duzeltilen": [
+    "Site güncellenirken yarıda kalan kayıtlar (notlar, ilerleme yedeği) artık tamamlanıyor; canlı bağlantı kesintisiz yeniden kuruluyor."
   ],
-  "duzeltilen": [],
   "silinen": []
 }

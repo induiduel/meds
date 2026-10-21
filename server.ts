@@ -2586,7 +2586,8 @@ function flushPastQuestionsDbSync() {
 let httpServerRef: import('http').Server | null = null;
 let kapaniyor = false;
 for (const sig of ['SIGTERM', 'SIGINT'] as const) {
-  process.once(sig, () => {
+  // once değil on: tsx sinyali çocuğa bir kez daha iletir; dinleyici kalmazsa tsx'in gizli işleyicisi süreci hemen öldürür
+  process.on(sig, () => {
     if (kapaniyor) return;
     kapaniyor = true;
     const t0 = Date.now();
