@@ -1,13 +1,18 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 152,
-  "baslik": "Öğren: tam ekran düzeni iyileştirildi",
+  "onem": 153,
+  "baslik": "Kadın Doğum: Abortus ve Gebelik terminolojisi genişletildi",
   "maddeler": [
-    "Geniş ekranda tam ekrana geçince anlatım ve Pekiştir paneli artık ekranı dolduruyor; içerik ortada küçük kalmıyor, yazı bir kademe büyüyor."
+    "Abortus ve Gebelik terminolojisi derslerinde en önemli yerler hocanın işaretleri ve çıkmış sorulara göre yeniden belirlendi.",
+    "Soru çözücüye yeni sorular eklendi (toplam 119), Gebelik terminolojisine sesli sınav asistanı geldi.",
+    "Sesli dersler genişletildi: NST, biyofizik profil, OGTT, antenatal bakım, Naegele, missed abortus, septik düşük, TGK ve APS üzerinde daha uzun duruluyor."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "Soru çözücüye yeni sorular eklendi (toplam 119), Gebelik terminolojisine sesli sınav asistanı geldi."
+  ],
   "degisen": [
-    "Geniş ekranda tam ekrana geçince anlatım ve Pekiştir paneli artık ekranı dolduruyor; içerik ortada küçük kalmıyor, yazı bir kademe büyüyor."
+    "Abortus ve Gebelik terminolojisi derslerinde en önemli yerler hocanın işaretleri ve çıkmış sorulara göre yeniden belirlendi.",
+    "Sesli dersler genişletildi: NST, biyofizik profil, OGTT, antenatal bakım, Naegele, missed abortus, septik düşük, TGK ve APS üzerinde daha uzun duruluyor."
   ],
   "duzeltilen": [],
   "silinen": []

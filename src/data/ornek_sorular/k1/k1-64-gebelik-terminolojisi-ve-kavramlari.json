@@ -6,7 +6,7 @@
  "konu": "Gebelik Terminolojisi ve Kavramları",
  "ogretim_uyesi": "Dr. Öğr. Üyesi Hilal Ezgi Türkmen",
  "tarih": "2026-10-16",
- "soru_sayisi": 92,
+ "soru_sayisi": 100,
  "kazanimlar": [
   {
    "no": 1,
@@ -842,6 +842,30 @@
       18
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k04-q01",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Son adet tarihi 26 Ocak 2026 olan gebenin Naegele kuralına göre beklenen doğum tarihi hangisidir?",
+     "secenekler": {
+      "A": "26 Ekim 2026",
+      "B": "19 Ekim 2026",
+      "C": "2 Ekim 2026",
+      "D": "2 Kasım 2026",
+      "E": "2 Kasım 2027"
+     },
+     "dogru": "D",
+     "aciklama": "26 Ocak'a 7 gün eklenince ay taşar ve 2 Şubat olur; 3 ay geri gidilince 2 Kasım 2025, 1 yıl eklenince 2 Kasım 2026 bulunur.",
+     "sik_aciklamalari": {
+      "A": "7 gün eklenmeden yalnız ay ve yıl kaydırılmıştır; doğum tarihi bir hafta erken hesaplanır.",
+      "B": "7 gün eklemek yerine çıkarılmıştır; Naegele kuralında gün her zaman eklenir.",
+      "C": "Gün doğru taşınmış ama 3 ay şubattan geri sayılmamıştır; şubattan 3 ay geri kasımdır.",
+      "D": "Doğru: ay taşması hesaba katılınca sonuç 2 Kasım 2026'dır.",
+      "E": "Yıl iki kez artırılmıştır; şubattan 3 ay geri gidince 2025'e düşülür, 1 yıl eklenince 2026 olur."
+     },
+     "bilgi": [],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": [
@@ -1623,6 +1647,54 @@
       31
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k08-q01",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "75 g OGTT yapılan 26 haftalık gebede açlık 88, 1. saat 185, 2. saat 140 mg/dL bulunuyor. Doğru yorum hangisidir?",
+     "secenekler": {
+      "A": "Test normaldir",
+      "B": "Gestasyonel diyabet tanısı konur",
+      "C": "Tanı için iki yüksek değer gerekir",
+      "D": "100 g test ile doğrulanmalıdır",
+      "E": "Açlık değeri tanı koydurur"
+     },
+     "dogru": "B",
+     "aciklama": "75 g OGTT'de açlık ≥92, 1. saat ≥180, 2. saat ≥153 mg/dL eşiklerinden birinin aşılması tanı için yeterlidir; burada 1. saat eşiği aşılmıştır.",
+     "sik_aciklamalari": {
+      "A": "Açlık ve 2. saat normal olsa da 1. saat 180 eşiğini aştığı için test normal değildir.",
+      "B": "Doğru: 75 g testte tek bir değerin eşiğe ulaşması gestasyonel diyabet tanısı koydurur.",
+      "C": "İki yüksek değer şartı 100 g, 3 saatlik testin genel yorumudur; 75 g testte tek değer yeterlidir.",
+      "D": "75 g OGTT kendisi tanı testidir; eşik aşıldığında ayrıca 100 g testle doğrulama gerekmez.",
+      "E": "75 g testte açlık eşiği 92 mg/dL'dir; 88 normaldir, tanıyı 1. saat değeri koydurur."
+     },
+     "bilgi": [],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k08-q02",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Gebelikte birinci trimesterde TSH için kabul edilen üst sınır hangisidir?",
+     "secenekler": {
+      "A": "0,1 mIU/L",
+      "B": "3 mIU/L",
+      "C": "2,5 mIU/L",
+      "D": "0,3 mIU/L",
+      "E": "5 mIU/L"
+     },
+     "dogru": "C",
+     "aciklama": "Gebelikte TSH üst sınırı 1. trimesterde 2,5 mIU/L, 2. ve 3. trimesterde 3 mIU/L'dir.",
+     "sik_aciklamalari": {
+      "A": "0,1 mIU/L birinci trimesterin alt sınırıdır, üst sınır değildir.",
+      "B": "3 mIU/L ikinci ve üçüncü trimesterin üst sınırıdır.",
+      "C": "Doğru: birinci trimesterde TSH üst sınırı 2,5 mIU/L'dir.",
+      "D": "0,3 mIU/L üçüncü trimesterin alt sınırıdır.",
+      "E": "5 mIU/L gebelik TSH tablosunda yer alan bir sınır değildir."
+     },
+     "bilgi": [],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -1813,6 +1885,30 @@
       27,
       36
      ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k09-q01",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Preeklampsi öngörüsüne göre aşağıdaki gebelerden hangisine 12-35. haftalarda 80 mg/gün aspirin başlanmalıdır?",
+     "secenekler": {
+      "A": "İlk gebeliği olan 25 yaşında gebe",
+      "B": "38 yaşında multipar gebe",
+      "C": "Kronik hipertansiyonlu gebe",
+      "D": "VKİ 30 kg/m2 olan gebe",
+      "E": "Ailede diyabet öyküsü olan gebe"
+     },
+     "dogru": "C",
+     "aciklama": "En az bir majör ya da en az iki minör risk faktörü varsa aspirin verilir; kronik hipertansiyon majör risk faktörüdür.",
+     "sik_aciklamalari": {
+      "A": "İlk gebelik tek bir minör risk faktörüdür; aspirin için en az iki minör faktör gerekir.",
+      "B": "Minör faktör yaş ≥40'tır; 38 yaş ve multiparite aspirin endikasyonu oluşturmaz.",
+      "C": "Doğru: kronik hipertansiyon majör risk faktörüdür ve tek başına aspirin endikasyonudur.",
+      "D": "Minör faktör VKİ ≥35 kg/m2'dir; 30 kg/m2 bu eşiğin altındadır.",
+      "E": "Ailede diyabet öyküsü gestasyonel diyabet riskidir; preeklampside aile öyküsü ailede preeklampsi bulunmasıdır."
+     },
+     "bilgi": [],
      "benzer_cikmis": []
     }
    ],
@@ -2196,6 +2292,30 @@
       34
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k11-q01",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Antenatal bakımda kurum ile önerdiği izlem sayısı eşleştirmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "DSÖ – en az 4 izlem",
+      "B": "NICE nullipar – 7 izlem",
+      "C": "ACOG – toplam 8 izlem",
+      "D": "DSÖ – en az 8 izlem",
+      "E": "NICE multipar – 10 izlem"
+     },
+     "dogru": "D",
+     "aciklama": "Sağlık Bakanlığı en az 4, DSÖ en az 8, NICE nulliparda 10 ve multiparda 7, ACOG toplam 12-14 izlem önerir.",
+     "sik_aciklamalari": {
+      "A": "En az 4 izlem Sağlık Bakanlığı 2018 rehberinin sayısıdır; DSÖ 4 izlemli modelde perinatal ölümlerin arttığını bildirir.",
+      "B": "NICE nullipar gebeye 10, multipar gebeye 7 izlem önerir.",
+      "C": "ACOG komplikasyonsuz ilk gebelikte toplam 12-14 izlem önerir.",
+      "D": "Doğru: DSÖ perinatal mortaliteyi azaltmak için en az 8 izlemli modeli önerir.",
+      "E": "10 izlem NICE'ın nullipar gebe için önerdiği sayıdır; multiparda 7'dir."
+     },
+     "bilgi": [],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -2384,6 +2504,78 @@
      "bilgi": [
       37
      ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k12-q01",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Kardiyotokografide fetal asidozu düşündüren ve tehlikeli kabul edilen bulgu hangisidir?",
+     "secenekler": {
+      "A": "Erken deselerasyon",
+      "B": "Değişken deselerasyon",
+      "C": "Geç deselerasyon",
+      "D": "Reaktif akselerasyonlar",
+      "E": "Variabilite 5-15 atım"
+     },
+     "dogru": "C",
+     "aciklama": "Geç deselerasyon kasılmanın tepesinden sonra başlar, kasılma bittikten sonra düzelir ve fetal asidozu düşündürür.",
+     "sik_aciklamalari": {
+      "A": "Erken deselerasyon kasılmanın ayna görüntüsüdür ve fizyolojik kabul edilir.",
+      "B": "Değişken deselerasyon ani başlayıp ani biter ve kord basısıyla ilişkilidir.",
+      "C": "Doğru: geç deselerasyon tehlikelidir ve fetal asidozu düşündürür.",
+      "D": "Akselerasyonlar fetüsün iyi durumda olduğunu gösterir; reaktif NST'nin temelidir.",
+      "E": "5-15 atımlık variabilite normal dalgalanmadır ve iyi fetal durumu destekler."
+     },
+     "bilgi": [],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k12-q02",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Biyofizik profilde NST reaktif, amniyon cebi 3 cm, 35 saniyelik bir solunum epizodu ve el açıp kapama var; 30 dakikada yalnız iki gövde hareketi görülüyor. Sonuç hangisidir?",
+     "secenekler": {
+      "A": "10/10, normal",
+      "B": "8/10, normal",
+      "C": "6/10, şüpheli",
+      "D": "4/10, anormal",
+      "E": "8/10, anormal"
+     },
+     "dogru": "B",
+     "aciklama": "Gövde hareketi için en az 3 hareket gerekir ve bu bileşen 0 puan alır; diğer dört bileşen 2'şer puanla skor 8/10'dur ve 8-10 normaldir.",
+     "sik_aciklamalari": {
+      "A": "Gövde hareketi eşiği 3 olduğu için iki hareket 0 puan alır; skor 10 olamaz.",
+      "B": "Doğru: dört bileşen 2'şer puan, gövde hareketi 0 puan; 8/10 normaldir.",
+      "C": "6/10 için iki bileşenin eksik olması gerekir; burada yalnız gövde hareketi eksiktir.",
+      "D": "4/10 ve altı anormaldir ve acil doğumu düşündürür; bu gebede dört bileşen karşılanmıştır.",
+      "E": "8/10 normal kabul edilir; anormal sınır 4/10 ve altıdır."
+     },
+     "bilgi": [],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k12-q03",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Kontraksiyon stres testinin pozitif kabul edilmesini sağlayan bulgu hangisidir?",
+     "secenekler": {
+      "A": "Hiç geç deselerasyon olmaması",
+      "B": "Aralıklı geç deselerasyonlar",
+      "C": "10 dakikada üçten az kasılma",
+      "D": "Kasılmaların 2 dakikadan sık olması",
+      "E": "Kasılmaların %50 ve fazlasında geç deselerasyon"
+     },
+     "dogru": "E",
+     "aciklama": "Kasılmaların %50 ve fazlasını izleyen geç deselerasyon, 10 dakikada 3'ten az kasılma olsa bile, testi pozitif yapar.",
+     "sik_aciklamalari": {
+      "A": "Geç ya da belirgin değişken deselerasyon olmaması negatif sonuçtur.",
+      "B": "Aralıklı geç ya da belirgin değişken deselerasyonlar şüpheli sonuçtur.",
+      "C": "Deselerasyon yoksa 10 dakikada 3'ten az kasılma yetersiz testtir.",
+      "D": "Kasılmaların 2 dakikadan sık ya da 90 saniyeden uzun olması hiperstimülasyondur, şüpheli kabul edilir.",
+      "E": "Doğru: kasılmaların yarısını ve fazlasını izleyen geç deselerasyon pozitif testtir."
+     },
+     "bilgi": [],
      "benzer_cikmis": []
     }
    ],

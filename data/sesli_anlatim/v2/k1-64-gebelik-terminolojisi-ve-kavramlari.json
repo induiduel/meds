@@ -776,6 +776,20 @@
        "ekran": "Her soruda önce güne 7 ekleyin, sonra ayı 3 geri alın, en son yılı ayarlayın.",
        "duzey": 0,
        "vurgu": []
+      },
+      {
+       "id": "k1-64-c0093",
+       "ses": "Gün eklenince ay değişiyorsa işlemlere taşınmış tarihten devam edin: son adet 26 Ocak 2026 ise 7 gün eklenince 2 Şubat olur, 3 ay geri gidince 2 Kasım 2025, 1 yıl eklenince beklenen doğum 2 Kasım 2026 bulunur.",
+       "ekran": "Gün eklenince ay değişiyorsa işlemlere taşınmış tarihten devam edin: son adet 26 Ocak 2026 ise 7 gün eklenince 2 Şubat olur, 3 ay geri gidince 2 Kasım 2025, 1 yıl eklenince beklenen doğum 2 Kasım 2026 bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-64-c0094",
+       "ses": "Ters soruda işlemleri tersine yapın: beklenen doğum 22 Temmuz 2026 ise 7 gün çıkarır, 3 ay ekler ve 1 yıl geri gidersiniz; son adet 15 Ekim 2025'tir.",
+       "ekran": "Ters soruda işlemleri tersine yapın: beklenen doğum 22 Temmuz 2026 ise 7 gün çıkarır, 3 ay ekler ve 1 yıl geri gidersiniz; son adet 15 Ekim 2025'tir.",
+       "duzey": 0,
+       "vurgu": []
       }
      ]
     }
@@ -790,49 +804,49 @@
      "sayfa": 10,
      "cumleler": [
       {
-       "id": "k1-64-c0093",
+       "id": "k1-64-c0095",
        "ses": "Gebeliğin görüntülenmesinde ilk yaklaşım transabdominal ultrasonografidir.",
        "ekran": "Gebeliğin görüntülenmesinde ilk yaklaşım transabdominal ultrasonografidir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0094",
+       "id": "k1-64-c0096",
        "ses": "Burada düşük frekans ve düşük rezolüsyon söz konusudur; 3 ile 5 megahertz.",
        "ekran": "Burada düşük frekans ve düşük rezolüsyon söz konusudur; 3 ile 5 megahertz.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0095",
+       "id": "k1-64-c0097",
        "ses": "Düşük frekans daha derine ulaşır ama ayrıntı azdır.",
        "ekran": "Düşük frekans daha derine ulaşır ama ayrıntı azdır.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0096",
+       "id": "k1-64-c0098",
        "ses": "Kıvrık lineer prob kullanılır ve probun ön yüzünde yön için bir işaretleyici bulunur.",
        "ekran": "Kıvrık lineer prob kullanılır ve probun ön yüzünde yön için bir işaretleyici bulunur.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0097",
+       "id": "k1-64-c0099",
        "ses": "İyi görüntü için mesane dolu olmalıdır; dolu mesane akustik pencere oluşturur ve barsakları iter.",
        "ekran": "İyi görüntü için mesane dolu olmalıdır; dolu mesane akustik pencere oluşturur ve barsakları iter.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0098",
+       "id": "k1-64-c0100",
        "ses": "Koronal ve sagital kesit alınmalıdır.",
        "ekran": "Koronal ve sagital kesit alınmalıdır.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0099",
+       "id": "k1-64-c0101",
        "ses": "Görüntüde dolu mesanenin arkasında uterus, vajen ve serviks izlenir.",
        "ekran": "Görüntüde dolu mesanenin arkasında uterus, vajen ve serviks izlenir.",
        "duzey": 0,
@@ -845,35 +859,35 @@
      "sayfa": 11,
      "cumleler": [
       {
-       "id": "k1-64-c0100",
+       "id": "k1-64-c0102",
        "ses": "Transvajinal ultrasonografide ise yüksek frekans ve yüksek rezolüsyon vardır; 5 ile 10 megahertz.",
        "ekran": "Transvajinal ultrasonografide ise yüksek frekans ve yüksek rezolüsyon vardır; 5 ile 10 megahertz.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0101",
+       "id": "k1-64-c0103",
        "ses": "Vajinal prob kullanılır ve görüntü boş mesane ile alınır.",
        "ekran": "Vajinal prob kullanılır ve görüntü boş mesane ile alınır.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0102",
+       "id": "k1-64-c0104",
        "ses": "Dikkat edin, transabdominal ile transvajinal yer değiştirilerek sorulur: dolu mesane transabdominal inceleme için gereklidir, transvajinal öncesinde mesane boşaltılır.",
        "ekran": "Dikkat edin, transabdominal ile transvajinal yer değiştirilerek sorulur: dolu mesane transabdominal inceleme için gereklidir, transvajinal öncesinde mesane boşaltılır.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0103",
+       "id": "k1-64-c0105",
        "ses": "Önce abdominal görüntü alınmayacaksa transvajinal yaklaşım hasta açısından daha rahatlatıcı olabilir.",
        "ekran": "Önce abdominal görüntü alınmayacaksa transvajinal yaklaşım hasta açısından daha rahatlatıcı olabilir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0104",
+       "id": "k1-64-c0106",
        "ses": "Transvajinal görüntüde uterin fundus ve serviks yakından ve yüksek çözünürlükte izlenir.",
        "ekran": "Transvajinal görüntüde uterin fundus ve serviks yakından ve yüksek çözünürlükte izlenir.",
        "duzey": 0,
@@ -886,35 +900,28 @@
      "sayfa": 13,
      "cumleler": [
       {
-       "id": "k1-64-c0105",
+       "id": "k1-64-c0107",
        "ses": "Erken gebelikte yapılar belirli bir sırayla görünür hâle gelir: önce gestasyonel kese, sonra yolk kesesi, ardından embriyo ve amniyon.",
        "ekran": "Erken gebelikte yapılar belirli bir sırayla görünür hâle gelir: önce gestasyonel kese, sonra yolk kesesi, ardından embriyo ve amniyon.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0106",
+       "id": "k1-64-c0108",
        "ses": "Gestasyonel kese yaklaşık 5. haftada, yolk kesesi 5 ile 5,5 haftada, kalp atımı olan embriyo ise yaklaşık 6. haftada görülür.",
        "ekran": "Gestasyonel kese yaklaşık 5. haftada, yolk kesesi 5 ile 5,5 haftada, kalp atımı olan embriyo ise yaklaşık 6. haftada görülür.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0107",
-       "ses": "Bu sıranın bozulması yerleşim ve canlılığın yeniden sorgulanmasını gerektirir.",
-       "ekran": "Bu sıranın bozulması yerleşim ve canlılığın yeniden sorgulanmasını gerektirir.",
-       "duzey": 0,
-       "vurgu": []
-      },
-      {
-       "id": "k1-64-c0108",
+       "id": "k1-64-c0109",
        "ses": "İlerleyen gebelikte fetal biyometri 3 temel ölçümle yapılır: baş kesitinde biparietal çap, karın kesitinde abdominal çevre ve uzun kemik kesitinde femur uzunluğu.",
        "ekran": "İlerleyen gebelikte fetal biyometri 3 temel ölçümle yapılır: baş kesitinde biparietal çap, karın kesitinde abdominal çevre ve uzun kemik kesitinde femur uzunluğu.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0109",
+       "id": "k1-64-c0110",
        "ses": "Bu ölçümler gebelik yaşının ve fetal büyümenin değerlendirilmesinde kullanılır ve birlikte tahmini fetal ağırlık hesabına girer.",
        "ekran": "Bu ölçümler gebelik yaşının ve fetal büyümenin değerlendirilmesinde kullanılır ve birlikte tahmini fetal ağırlık hesabına girer.",
        "duzey": 0,
@@ -933,28 +940,28 @@
      "sayfa": 14,
      "cumleler": [
       {
-       "id": "k1-64-c0110",
+       "id": "k1-64-c0111",
        "ses": "Karın muayenesinde fundus yüksekliği, uterus büyüklüğünün gebelik haftasıyla uyumunu gösteren basit bir göstergedir.",
        "ekran": "Karın muayenesinde fundus yüksekliği, uterus büyüklüğünün gebelik haftasıyla uyumunu gösteren basit bir göstergedir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0111",
+       "id": "k1-64-c0112",
        "ses": "Burası önemli: 12. haftada fundus pelvis seviyesinde, 20. haftada umbilikus seviyesinde, 36. haftada ksifoid seviyesindedir.",
        "ekran": "Burası önemli: 12. haftada fundus pelvis seviyesinde, 20. haftada umbilikus seviyesinde, 36. haftada ksifoid seviyesindedir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0112",
+       "id": "k1-64-c0113",
        "ses": "Gebe uterus hafifçe sağa döner, buna dekstrorotasyon denir; nedeni sol pelviste yer alan sigmoid kolondur ve fizyolojiktir.",
        "ekran": "Gebe uterus hafifçe sağa döner, buna dekstrorotasyon denir; nedeni sol pelviste yer alan sigmoid kolondur ve fizyolojiktir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0113",
+       "id": "k1-64-c0114",
        "ses": "Fundus seviyesi ile gebelik haftası arasındaki uyumsuzluk ileri değerlendirme gerektirir.",
        "ekran": "Fundus seviyesi ile gebelik haftası arasındaki uyumsuzluk ileri değerlendirme gerektirir.",
        "duzey": 0,
@@ -967,42 +974,42 @@
      "sayfa": 15,
      "cumleler": [
       {
-       "id": "k1-64-c0114",
+       "id": "k1-64-c0115",
        "ses": "Fetüsün uterustaki durumu 4 basamaklı Leopold manevralarıyla değerlendirilir.",
        "ekran": "Fetüsün uterustaki durumu 4 basamaklı Leopold manevralarıyla değerlendirilir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0115",
+       "id": "k1-64-c0116",
        "ses": "Birinci manevrada uterin fundus değerlendirilir; fundusta baş mı, yani sefalik kutup mu, yoksa makat mı, yani podalik kutup mu olduğu belirlenir.",
        "ekran": "Birinci manevrada uterin fundus değerlendirilir; fundusta baş mı, yani sefalik kutup mu, yoksa makat mı, yani podalik kutup mu olduğu belirlenir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0116",
+       "id": "k1-64-c0117",
        "ses": "Sert yuvarlak kitle baş, yumuşak düzensiz kitle makattır.",
        "ekran": "Sert yuvarlak kitle baş, yumuşak düzensiz kitle makattır.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0117",
+       "id": "k1-64-c0118",
        "ses": "İkinci manevrada fetal sırt, ekstremiteler ve fetal yönelim saptanır; sırtın tarafı fetal kalp sesinin dinleneceği yeri gösterir.",
        "ekran": "İkinci manevrada fetal sırt, ekstremiteler ve fetal yönelim saptanır; sırtın tarafı fetal kalp sesinin dinleneceği yeri gösterir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0118",
+       "id": "k1-64-c0119",
        "ses": "Üçüncü manevrada prezentasyon, yani pelvise önde gelen kısım değerlendirilir.",
        "ekran": "Üçüncü manevrada prezentasyon, yani pelvise önde gelen kısım değerlendirilir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0119",
+       "id": "k1-64-c0120",
        "ses": "Dördüncü manevrada manevrayı yapan kişi yön değiştirir, hastanın ayak ucuna döner ve prezente olan kısmın pelvise ne kadar indiği saptanır.",
        "ekran": "Dördüncü manevrada manevrayı yapan kişi yön değiştirir, hastanın ayak ucuna döner ve prezente olan kısmın pelvise ne kadar indiği saptanır.",
        "duzey": 0,
@@ -1021,35 +1028,35 @@
      "sayfa": 16,
      "cumleler": [
       {
-       "id": "k1-64-c0120",
+       "id": "k1-64-c0121",
        "ses": "Gebelikte uterus fetüsü, plasentayı ve amniyon sıvısını barındırmak için büyük bir uyum gösterir.",
        "ekran": "Gebelikte uterus fetüsü, plasentayı ve amniyon sıvısını barındırmak için büyük bir uyum gösterir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0121",
+       "id": "k1-64-c0122",
        "ses": "Normalde 50 ile 70 gram olan uterus, miyometriyal hipertrofiyle termde 800 ile 1200 grama ulaşır.",
        "ekran": "Normalde 50 ile 70 gram olan uterus, miyometriyal hipertrofiyle termde 800 ile 1200 grama ulaşır.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0122",
+       "id": "k1-64-c0123",
        "ses": "Uterin kavite 10 mililitreden 5 litreye genişler; polihidramniyoz ve çoğul gebelikte daha da büyüyebilir.",
        "ekran": "Uterin kavite 10 mililitreden 5 litreye genişler; polihidramniyoz ve çoğul gebelikte daha da büyüyebilir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0123",
+       "id": "k1-64-c0124",
        "ses": "Term uterusta kan akımı dakikada 500 ile 1000 mililitredir ve bu kanın %85'i plasentaya gider.",
        "ekran": "Term uterusta kan akımı dakikada 500 ile 1000 mililitredir ve bu kanın %85'i plasentaya gider.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0124",
+       "id": "k1-64-c0125",
        "ses": "Bu yüksek akım, term uterustan gelişen bir kanamanın kısa sürede ağır kan kaybına dönüşebileceğini açıklar.",
        "ekran": "Bu yüksek akım, term uterustan gelişen bir kanamanın kısa sürede ağır kan kaybına dönüşebileceğini açıklar.",
        "duzey": 0,
@@ -1062,63 +1069,63 @@
      "sayfa": 16,
      "cumleler": [
       {
-       "id": "k1-64-c0125",
+       "id": "k1-64-c0126",
        "ses": "Serviks de gebelik hormonlarının hedefidir.",
        "ekran": "Serviks de gebelik hormonlarının hedefidir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0126",
+       "id": "k1-64-c0127",
        "ses": "Progesteron ve östrojenin etkisiyle servikal kanlanma artar ve serviks mavimsi bir görünüm alır; buna Chadwick bulgusu denir.",
        "ekran": "Progesteron ve östrojenin etkisiyle servikal kanlanma artar ve serviks mavimsi bir görünüm alır; buna Chadwick bulgusu denir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0127",
+       "id": "k1-64-c0128",
        "ses": "Burası önemli, çıkmış sorularda defalarca soruldu: gebelikte artan konjesyona bağlı olarak vajen mukozası ve serviksin koyu mavi renk alması Chadwick belirtisidir.",
        "ekran": "Burası önemli, çıkmış sorularda defalarca soruldu: gebelikte artan konjesyona bağlı olarak vajen mukozası ve serviksin koyu mavi renk alması Chadwick belirtisidir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0128",
+       "id": "k1-64-c0129",
        "ses": "Aynı hormonal etkiyle, servikal dokuda artan vaskülarite sonucu serviksin yumuşamasına ise Goodell belirtisi denir.",
        "ekran": "Aynı hormonal etkiyle, servikal dokuda artan vaskülarite sonucu serviksin yumuşamasına ise Goodell belirtisi denir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0129",
+       "id": "k1-64-c0130",
        "ses": "Bu da çıkmış sorularda tekrar tekrar soruldu, burası önemli.",
        "ekran": "Bu da çıkmış sorularda tekrar tekrar soruldu, burası önemli.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0130",
+       "id": "k1-64-c0131",
        "ses": "Kısa yol şöyle: renk değişikliği Chadwick, kıvam değişikliği Goodell.",
        "ekran": "Kısa yol şöyle: renk değişikliği Chadwick, kıvam değişikliği Goodell.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0131",
+       "id": "k1-64-c0132",
        "ses": "Sorularda çeldirici olarak Piskacek, Hartman ve Hegar belirtileri de verilir; renk ve yumuşama için doğru cevaplar Chadwick ve Goodell'dir.",
        "ekran": "Sorularda çeldirici olarak Piskacek, Hartman ve Hegar belirtileri de verilir; renk ve yumuşama için doğru cevaplar Chadwick ve Goodell'dir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0132",
+       "id": "k1-64-c0133",
        "ses": "Ayrıca progesteron etkisiyle servikal bezlerden daha fazla muköz salgı salınır ve bu salgı servikal kanalda bir tıkaç oluşturur.",
        "ekran": "Ayrıca progesteron etkisiyle servikal bezlerden daha fazla muköz salgı salınır ve bu salgı servikal kanalda bir tıkaç oluşturur.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0133",
+       "id": "k1-64-c0134",
        "ses": "Buna nişane denir; tıkaç servikal kanalı yükselen enfeksiyona karşı korur, atılması ise servikal değişimin başladığını gösterir.",
        "ekran": "Buna nişane denir; tıkaç servikal kanalı yükselen enfeksiyona karşı korur, atılması ise servikal değişimin başladığını gösterir.",
        "duzey": 0,
@@ -1137,28 +1144,28 @@
      "sayfa": 17,
      "cumleler": [
       {
-       "id": "k1-64-c0134",
+       "id": "k1-64-c0135",
        "ses": "Kardiyovasküler sistem gebeliğe en erken uyum gösteren sistemlerdendir.",
        "ekran": "Kardiyovasküler sistem gebeliğe en erken uyum gösteren sistemlerdendir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0135",
+       "id": "k1-64-c0136",
        "ses": "Burası önemli: kardiyak output %30 ile 60 oranında artar ve bu artışın büyük kısmı ilk trimesterde gerçekleşir.",
        "ekran": "Burası önemli: kardiyak output %30 ile 60 oranında artar ve bu artışın büyük kısmı ilk trimesterde gerçekleşir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0136",
+       "id": "k1-64-c0137",
        "ses": "Kardiyak output 20 ile 24. haftalar arasında maksimum düzeye ulaşır ve doğuma kadar bu düzeyde korunur.",
        "ekran": "Kardiyak output 20 ile 24. haftalar arasında maksimum düzeye ulaşır ve doğuma kadar bu düzeyde korunur.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0137",
+       "id": "k1-64-c0138",
        "ses": "Yükselen debi, artan uterin kan akımının karşılanmasına katkı sağlar.",
        "ekran": "Yükselen debi, artan uterin kan akımının karşılanmasına katkı sağlar.",
        "duzey": 0,
@@ -1171,28 +1178,28 @@
      "sayfa": 17,
      "cumleler": [
       {
-       "id": "k1-64-c0138",
+       "id": "k1-64-c0139",
        "ses": "Debi artarken periferik damar yatağı genişler; sistemik vasküler direnç azalır ve bu nedenle arteriyel kan basıncı yükselmez, aksine düşer.",
        "ekran": "Debi artarken periferik damar yatağı genişler; sistemik vasküler direnç azalır ve bu nedenle arteriyel kan basıncı yükselmez, aksine düşer.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0139",
+       "id": "k1-64-c0140",
        "ses": "Sistolik basınç yaklaşık 5 ile 10 milimetre cıva, diyastolik basınç ise yaklaşık 10 ile 15 milimetre cıva azalır; yani düşüş diyastolikte daha belirgindir.",
        "ekran": "Sistolik basınç yaklaşık 5 ile 10 milimetre cıva, diyastolik basınç ise yaklaşık 10 ile 15 milimetre cıva azalır; yani düşüş diyastolikte daha belirgindir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0140",
+       "id": "k1-64-c0141",
        "ses": "Kan basıncı 24. haftada en düşük noktasına ulaşır, sonra yavaş yavaş gebelik öncesi düzeylere döner.",
        "ekran": "Kan basıncı 24. haftada en düşük noktasına ulaşır, sonra yavaş yavaş gebelik öncesi düzeylere döner.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0141",
+       "id": "k1-64-c0142",
        "ses": "Bu en düşük nokta, kardiyak outputun zirve yaptığı haftalarla örtüşür.",
        "ekran": "Bu en düşük nokta, kardiyak outputun zirve yaptığı haftalarla örtüşür.",
        "duzey": 0,
@@ -1211,35 +1218,35 @@
      "sayfa": 18,
      "cumleler": [
       {
-       "id": "k1-64-c0142",
+       "id": "k1-64-c0143",
        "ses": "Gebelikte kanın hücresel ve sıvı bileşenleri farklı oranlarda artar.",
        "ekran": "Gebelikte kanın hücresel ve sıvı bileşenleri farklı oranlarda artar.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0143",
+       "id": "k1-64-c0144",
        "ses": "Burası önemli: eritrosit hacmi %20 ile 30 artarken plazma hacmi %45 ile 55 artar.",
        "ekran": "Burası önemli: eritrosit hacmi %20 ile 30 artarken plazma hacmi %45 ile 55 artar.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0144",
+       "id": "k1-64-c0145",
        "ses": "Plazma artışı eritrosit artışını geçtiği için kan sulanır ve dilüsyonel anemi gelişir.",
        "ekran": "Plazma artışı eritrosit artışını geçtiği için kan sulanır ve dilüsyonel anemi gelişir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0145",
+       "id": "k1-64-c0146",
        "ses": "Yani eritrosit kitlesi azalmaz, aksine artar; düşen yalnızca konsantrasyondur.",
        "ekran": "Yani eritrosit kitlesi azalmaz, aksine artar; düşen yalnızca konsantrasyondur.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0146",
+       "id": "k1-64-c0147",
        "ses": "Bu yüzden hemoglobin değeri gebelik öncesine göre daha düşük okunur.",
        "ekran": "Bu yüzden hemoglobin değeri gebelik öncesine göre daha düşük okunur.",
        "duzey": 0,
@@ -1252,21 +1259,21 @@
      "sayfa": 18,
      "cumleler": [
       {
-       "id": "k1-64-c0147",
+       "id": "k1-64-c0148",
        "ses": "Beyaz küre sayısı gebelikte mililitrede 6 ile 16 milyona yükselir; doğum sırasında ve doğumdan kısa süre sonra 20 milyona kadar çıkabilir.",
        "ekran": "Beyaz küre sayısı gebelikte mililitrede 6 ile 16 milyona yükselir; doğum sırasında ve doğumdan kısa süre sonra 20 milyona kadar çıkabilir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0148",
+       "id": "k1-64-c0149",
        "ses": "Doğum çevresindeki bu lökositoz tek başına enfeksiyon göstergesi sayılmaz.",
        "ekran": "Doğum çevresindeki bu lökositoz tek başına enfeksiyon göstergesi sayılmaz.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0149",
+       "id": "k1-64-c0150",
        "ses": "Trombosit konsantrasyonu ise artan plazma hacmi nedeniyle hafifçe azalır, ancak genellikle normal sınırlar içinde kalır; bu da eritrositteki dilüsyonla aynı mekanizmadır.",
        "ekran": "Trombosit konsantrasyonu ise artan plazma hacmi nedeniyle hafifçe azalır, ancak genellikle normal sınırlar içinde kalır; bu da eritrositteki dilüsyonla aynı mekanizmadır.",
        "duzey": 0,
@@ -1279,35 +1286,35 @@
      "sayfa": 18,
      "cumleler": [
       {
-       "id": "k1-64-c0150",
+       "id": "k1-64-c0151",
        "ses": "Gebelik bir hiperkoagülabilite durumudur.",
        "ekran": "Gebelik bir hiperkoagülabilite durumudur.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0151",
+       "id": "k1-64-c0152",
        "ses": "Fibrinojen ve faktör VII'den faktör X'a kadar olan pıhtılaşma faktörlerinin düzeyleri artar; buna karşın pıhtılaşma ve kanama süreleri genellikle değişmeden kalır.",
        "ekran": "Fibrinojen ve faktör VII'den faktör X'a kadar olan pıhtılaşma faktörlerinin düzeyleri artar; buna karşın pıhtılaşma ve kanama süreleri genellikle değişmeden kalır.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0152",
+       "id": "k1-64-c0153",
        "ses": "Artmış venöz staz ve hasarlı damar endoteli nedeniyle tromboembolik olayların oranı artar.",
        "ekran": "Artmış venöz staz ve hasarlı damar endoteli nedeniyle tromboembolik olayların oranı artar.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0153",
+       "id": "k1-64-c0154",
        "ses": "Bu risk ilk trimesterde başlar ve doğumdan sonra en az 12 hafta devam eder.",
        "ekran": "Bu risk ilk trimesterde başlar ve doğumdan sonra en az 12 hafta devam eder.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0154",
+       "id": "k1-64-c0155",
        "ses": "Yani lohusalık tromboemboli açısından güvenli bir dönem değildir.",
        "ekran": "Yani lohusalık tromboemboli açısından güvenli bir dönem değildir.",
        "duzey": 0,
@@ -1326,28 +1333,28 @@
      "sayfa": 20,
      "cumleler": [
       {
-       "id": "k1-64-c0155",
+       "id": "k1-64-c0156",
        "ses": "Büyüyen uterus diyaframı yukarı iter ve total akciğer kapasitesinde %5'lik azalmaya yol açar.",
        "ekran": "Büyüyen uterus diyaframı yukarı iter ve total akciğer kapasitesinde %5'lik azalmaya yol açar.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0156",
+       "id": "k1-64-c0157",
        "ses": "Buna karşın tidal hacim %30 ile 40 artar ve bu artış ekspiratuar rezerv hacminde %20'lik azalmaya neden olur.",
        "ekran": "Buna karşın tidal hacim %30 ile 40 artar ve bu artış ekspiratuar rezerv hacminde %20'lik azalmaya neden olur.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0157",
+       "id": "k1-64-c0158",
        "ses": "Solunum hızı sabit kalırken tidal hacim arttığı için dakika ventilasyonu %30 ile 40 artar.",
        "ekran": "Solunum hızı sabit kalırken tidal hacim arttığı için dakika ventilasyonu %30 ile 40 artar.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0158",
+       "id": "k1-64-c0159",
        "ses": "Yani gebelikte solunumun hızı değil derinliği artar.",
        "ekran": "Yani gebelikte solunumun hızı değil derinliği artar.",
        "duzey": 0,
@@ -1360,30 +1367,23 @@
      "sayfa": 20,
      "cumleler": [
       {
-       "id": "k1-64-c0159",
+       "id": "k1-64-c0160",
        "ses": "Artan dakika ventilasyonu alveolar ve arteriyel oksijen parsiyel basınçlarını yükseltir, alveolar ve arteriyel karbondioksit parsiyel basınçlarını ise düşürür.",
        "ekran": "Artan dakika ventilasyonu alveolar ve arteriyel oksijen parsiyel basınçlarını yükseltir, alveolar ve arteriyel karbondioksit parsiyel basınçlarını ise düşürür.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0160",
+       "id": "k1-64-c0161",
        "ses": "Burası önemli: arteriyel karbondioksit basıncı gebelik öncesindeki 40 milimetre cıvadan 20. haftaya kadar 30 milimetre cıvaya düşer.",
        "ekran": "Burası önemli: arteriyel karbondioksit basıncı gebelik öncesindeki 40 milimetre cıvadan 20. haftaya kadar 30 milimetre cıvaya düşer.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0161",
+       "id": "k1-64-c0162",
        "ses": "Bu düşüş fetüs ile anne arasında daha büyük bir karbondioksit gradyanı yaratır ve böylece fetüste oksijen iletimi ile karbondioksit giderimi artar.",
        "ekran": "Bu düşüş fetüs ile anne arasında daha büyük bir karbondioksit gradyanı yaratır ve böylece fetüste oksijen iletimi ile karbondioksit giderimi artar.",
-       "duzey": 0,
-       "vurgu": []
-      },
-      {
-       "id": "k1-64-c0162",
-       "ses": "Gebe bir hastanın kan gazını yorumlarken gebelik dışındaki 40 referansını doğrudan uygulamayın.",
-       "ekran": "Gebe bir hastanın kan gazını yorumlarken gebelik dışındaki 40 referansını doğrudan uygulamayın.",
        "duzey": 0,
        "vurgu": []
       }
@@ -1542,13 +1542,6 @@
        "ekran": "Daha az etkili tübüler geri emilim nedeniyle glikoz ve ürenin atılımı da artar.",
        "duzey": 0,
        "vurgu": []
-      },
-      {
-       "id": "k1-64-c0181",
-       "ses": "Bu yüzden gebelik dışı referansa göre normal görünen bir kreatinin, gebede göreceli olarak yüksek sayılabilir.",
-       "ekran": "Bu yüzden gebelik dışı referansa göre normal görünen bir kreatinin, gebede göreceli olarak yüksek sayılabilir.",
-       "duzey": 0,
-       "vurgu": []
       }
      ]
     },
@@ -1557,42 +1550,42 @@
      "sayfa": 26,
      "cumleler": [
       {
-       "id": "k1-64-c0182",
+       "id": "k1-64-c0181",
        "ses": "Deride de hormonal değişiklikler görülür ve sorumlu etken eşleşmesi sık sorulur.",
        "ekran": "Deride de hormonal değişiklikler görülür ve sorumlu etken eşleşmesi sık sorulur.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0183",
+       "id": "k1-64-c0182",
        "ses": "Burası önemli: hiperpigmentasyondan melanosit uyarıcı hormon sorumludur; göbek hizasında orta hatta linea nigra belirir.",
        "ekran": "Burası önemli: hiperpigmentasyondan melanosit uyarıcı hormon sorumludur; göbek hizasında orta hatta linea nigra belirir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0184",
+       "id": "k1-64-c0183",
        "ses": "Kloazma, yani melazma gravidarum, yüzde gelişen ve kalıcı olabilen gebelik maskesidir.",
        "ekran": "Kloazma, yani melazma gravidarum, yüzde gelişen ve kalıcı olabilen gebelik maskesidir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0185",
+       "id": "k1-64-c0184",
        "ses": "Telenjiektaziden östrojen sorumludur.",
        "ekran": "Telenjiektaziden östrojen sorumludur.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0186",
+       "id": "k1-64-c0185",
        "ses": "Stria gravidarum ise kollajen kırılmasına bağlıdır ve geri dönüşsüzdür.",
        "ekran": "Stria gravidarum ise kollajen kırılmasına bağlıdır ve geri dönüşsüzdür.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0187",
+       "id": "k1-64-c0186",
        "ses": "Bu eşleşmeler yer değiştirilerek sorulur; pigmentasyon melanosit uyarıcı hormon, telenjiektazi östrojen demektir.",
        "ekran": "Bu eşleşmeler yer değiştirilerek sorulur; pigmentasyon melanosit uyarıcı hormon, telenjiektazi östrojen demektir.",
        "duzey": 0,
@@ -1611,35 +1604,35 @@
      "sayfa": 28,
      "cumleler": [
       {
-       "id": "k1-64-c0188",
+       "id": "k1-64-c0187",
        "ses": "Antenatal bakım, gebeliğin sağlıklı ilerlemesini ve riskli durumların erken saptanmasını amaçlayan planlı izlemdir.",
        "ekran": "Antenatal bakım, gebeliğin sağlıklı ilerlemesini ve riskli durumların erken saptanmasını amaçlayan planlı izlemdir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0189",
+       "id": "k1-64-c0188",
        "ses": "Türkiye Sağlık Bakanlığının 2018 protokolüne göre her gebe en az 4 kez nitelikli olarak izlenmelidir.",
        "ekran": "Türkiye Sağlık Bakanlığının 2018 protokolüne göre her gebe en az 4 kez nitelikli olarak izlenmelidir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0190",
+       "id": "k1-64-c0189",
        "ses": "Doğum sonrasında hastanede 3 ve evde 3 olmak üzere toplam 6 kez lohusa izlemi yapılır.",
        "ekran": "Doğum sonrasında hastanede 3 ve evde 3 olmak üzere toplam 6 kez lohusa izlemi yapılır.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0191",
+       "id": "k1-64-c0190",
        "ses": "Normal doğumdan sonra 24 saat, sezaryenden sonra 48 saat hastanede takip edilir.",
        "ekran": "Normal doğumdan sonra 24 saat, sezaryenden sonra 48 saat hastanede takip edilir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0192",
+       "id": "k1-64-c0191",
        "ses": "Her doğum hastanede gerçekleştirilmeli ve gerektiğinde gebe stabilize edilerek bir üst düzey hastaneye sevk edilmelidir.",
        "ekran": "Her doğum hastanede gerçekleştirilmeli ve gerektiğinde gebe stabilize edilerek bir üst düzey hastaneye sevk edilmelidir.",
        "duzey": 0,
@@ -1652,14 +1645,14 @@
      "sayfa": 29,
      "cumleler": [
       {
-       "id": "k1-64-c0193",
+       "id": "k1-64-c0192",
        "ses": "Bakanlık modelinde birinci izlem ilk 14 hafta içinde, ikinci izlem 18 ile 24. haftalarda, üçüncü izlem 28 ile 32. haftalarda, dördüncü izlem 36 ile 38. haftalarda yapılır.",
        "ekran": "Bakanlık modelinde birinci izlem ilk 14 hafta içinde, ikinci izlem 18 ile 24. haftalarda, üçüncü izlem 28 ile 32. haftalarda, dördüncü izlem 36 ile 38. haftalarda yapılır.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0194",
+       "id": "k1-64-c0193",
        "ses": "Her izlemde aynı 8 basamak izlenir: iletişim, öykü alma, fizik muayene, laboratuvar testleri, ilaç desteği ile bağışıklama ve tedaviler, bilgilendirme ve danışmanlık, sevk edilecek durumlar ve son olarak izlemin kayıt altına alınması.",
        "ekran": "Her izlemde aynı 8 basamak izlenir: iletişim, öykü alma, fizik muayene, laboratuvar testleri, ilaç desteği ile bağışıklama ve tedaviler, bilgilendirme ve danışmanlık, sevk edilecek durumlar ve son olarak izlemin kayıt altına alınması.",
        "duzey": 0,
@@ -1672,44 +1665,44 @@
      "sayfa": 30,
      "cumleler": [
       {
-       "id": "k1-64-c0195",
+       "id": "k1-64-c0194",
        "ses": "Uluslararası modeller daha sık temas önerir.",
        "ekran": "Uluslararası modeller daha sık temas önerir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0196",
+       "id": "k1-64-c0195",
        "ses": "Dünya Sağlık Örgütü, 2015 ve 2016 önerilerinde perinatal mortaliteyi azaltmak ve gebe memnuniyetini artırmak için en az 8 izlemli bir model önerir, çünkü 4 izlemli modelde perinatal ölümlerin arttığını gösteren kanıtlar vardır.",
        "ekran": "Dünya Sağlık Örgütü, 2015 ve 2016 önerilerinde perinatal mortaliteyi azaltmak ve gebe memnuniyetini artırmak için en az 8 izlemli bir model önerir, çünkü 4 izlemli modelde perinatal ölümlerin arttığını gösteren kanıtlar vardır.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0197",
+       "id": "k1-64-c0196",
        "ses": "İngiltere'nin NICE kılavuzunda, 2017, ilk izlem 10. hafta civarında yapılır; komplikasyonsuz nullipar gebeye 10, komplikasyonsuz multipar gebeye 7 izlem önerilir.",
        "ekran": "İngiltere'nin NICE kılavuzunda, 2017, ilk izlem 10. hafta civarında yapılır; komplikasyonsuz nullipar gebeye 10, komplikasyonsuz multipar gebeye 7 izlem önerilir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0198",
+       "id": "k1-64-c0197",
        "ses": "Amerikan Obstetrisyen ve Jinekologlar Koleji ise komplikasyonsuz ilk gebelikte 28. haftaya kadar 4 haftada bir, 29 ile 35. haftalar arasında 2 ile 3 haftada bir, 36. haftadan sonra haftalık izlem önerir; toplam 12 ile 14 izlem eder.",
        "ekran": "Amerikan Obstetrisyen ve Jinekologlar Koleji ise komplikasyonsuz ilk gebelikte 28. haftaya kadar 4 haftada bir, 29 ile 35. haftalar arasında 2 ile 3 haftada bir, 36. haftadan sonra haftalık izlem önerir; toplam 12 ile 14 izlem eder.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0199",
+       "id": "k1-64-c0198",
        "ses": "Daha önce sorunsuz gebelik geçirmiş, medikal ve obstetrik problemi olmayan multiparlarda bu sıklık azaltılabilir.",
        "ekran": "Daha önce sorunsuz gebelik geçirmiş, medikal ve obstetrik problemi olmayan multiparlarda bu sıklık azaltılabilir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0200",
-       "ses": "Kurumları sayılarla eşleyin: Bakanlık 4, Dünya Sağlık Örgütü 8, NICE 10 ve 7, Amerikan kolejinde 12 ile 14.",
-       "ekran": "Kurumları sayılarla eşleyin: Bakanlık 4, Dünya Sağlık Örgütü 8, NICE 10 ve 7, Amerikan kolejinde 12 ile 14.",
+       "id": "k1-64-c0199",
+       "ses": "Burası önemli, hocanın en çok işaretlediği sayılar bunlardır; kurumları sayılarla eşleyin: Bakanlık en az 4, Dünya Sağlık Örgütü en az 8, NICE 10 ve 7, Amerikan kolejinde 12 ile 14.",
+       "ekran": "Burası önemli, hocanın en çok işaretlediği sayılar bunlardır; kurumları sayılarla eşleyin: Bakanlık en az 4, Dünya Sağlık Örgütü en az 8, NICE 10 ve 7, Amerikan kolejinde 12 ile 14.",
        "duzey": 0,
        "vurgu": []
       }
@@ -1726,42 +1719,42 @@
      "sayfa": 33,
      "cumleler": [
       {
-       "id": "k1-64-c0201",
+       "id": "k1-64-c0200",
        "ses": "İlk izlem, risklerin belirlendiği en kapsamlı izlemdir; gebeliğin ilk 14 haftasında yapılır ve 30 dakika zaman ayrılır.",
        "ekran": "İlk izlem, risklerin belirlendiği en kapsamlı izlemdir; gebeliğin ilk 14 haftasında yapılır ve 30 dakika zaman ayrılır.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0202",
+       "id": "k1-64-c0201",
        "ses": "14. haftadan sonra tespit edilen gebe de ilk izlem olarak değerlendirilir ve tüm basamaklar uygulanır.",
        "ekran": "14. haftadan sonra tespit edilen gebe de ilk izlem olarak değerlendirilir ve tüm basamaklar uygulanır.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0203",
+       "id": "k1-64-c0202",
        "ses": "İletişimde kendini tanıtmak, gebenin adını öğrenip kullanmak, beden dili, uygun mesafe, göz teması, soru sorabileceğini belirtmek ve mahremiyeti sağlamak yer alır.",
        "ekran": "İletişimde kendini tanıtmak, gebenin adını öğrenip kullanmak, beden dili, uygun mesafe, göz teması, soru sorabileceğini belirtmek ve mahremiyeti sağlamak yer alır.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0204",
+       "id": "k1-64-c0203",
        "ses": "Öyküde kişisel ve sosyokültürel bilgiler, soy geçmişi, genel tıbbi öykü, sigara, alkol ve madde alışkanlıkları, aşılanma ve menstrüel öykü sorgulanır.",
        "ekran": "Öyküde kişisel ve sosyokültürel bilgiler, soy geçmişi, genel tıbbi öykü, sigara, alkol ve madde alışkanlıkları, aşılanma ve menstrüel öykü sorgulanır.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0205",
+       "id": "k1-64-c0204",
        "ses": "Obstetrik öyküde geçirilmiş abortus ve erken doğum, önceki gebelikteki fetal ve maternal komplikasyonlar, tekrarlayan gebelik kayıpları, preeklampsi, eklampsi, gestasyonel diyabet, intrauterin gelişme geriliği, makrozomi, postpartum kanama, zor doğum, sezaryen ve konjenital anomalili bebek sorulur.",
        "ekran": "Obstetrik öyküde geçirilmiş abortus ve erken doğum, önceki gebelikteki fetal ve maternal komplikasyonlar, tekrarlayan gebelik kayıpları, preeklampsi, eklampsi, gestasyonel diyabet, intrauterin gelişme geriliği, makrozomi, postpartum kanama, zor doğum, sezaryen ve konjenital anomalili bebek sorulur.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0206",
+       "id": "k1-64-c0205",
        "ses": "Üreme sağlığı öyküsü ve cinsel yolla bulaşan hastalıklar da sorgulanır.",
        "ekran": "Üreme sağlığı öyküsü ve cinsel yolla bulaşan hastalıklar da sorgulanır.",
        "duzey": 0,
@@ -1774,35 +1767,35 @@
      "sayfa": 34,
      "cumleler": [
       {
-       "id": "k1-64-c0207",
+       "id": "k1-64-c0206",
        "ses": "Fizik muayenede boy ve kilo, arteriyel tansiyon, göğüs ve kalp oskültasyonu, pretibial ödem ve varis, anemi bulguları, gestasyonel yaş tahmini için uterus büyüklüğü ve fetal kalp atımı değerlendirilir.",
        "ekran": "Fizik muayenede boy ve kilo, arteriyel tansiyon, göğüs ve kalp oskültasyonu, pretibial ödem ve varis, anemi bulguları, gestasyonel yaş tahmini için uterus büyüklüğü ve fetal kalp atımı değerlendirilir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0208",
+       "id": "k1-64-c0207",
        "ses": "Burası önemli: preeklampsi öngörüsünde en az 1 majör ya da en az 2 minör risk faktörü varsa, kontrendikasyon yoksa 12 ile 35. haftalarda günde 80 miligram aspirin verilir.",
        "ekran": "Burası önemli: preeklampsi öngörüsünde en az 1 majör ya da en az 2 minör risk faktörü varsa, kontrendikasyon yoksa 12 ile 35. haftalarda günde 80 miligram aspirin verilir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0209",
+       "id": "k1-64-c0208",
        "ses": "Majör faktörler önceki gebelikte hipertansif hastalık, kronik böbrek hastalığı, sistemik lupus eritematozus ya da antifosfolipid sendromu gibi otoimmün hastalıklar, Tip 1 ya da Tip 2 diyabet ve kronik hipertansiyondur.",
        "ekran": "Majör faktörler önceki gebelikte hipertansif hastalık, kronik böbrek hastalığı, sistemik lupus eritematozus ya da antifosfolipid sendromu gibi otoimmün hastalıklar, Tip 1 ya da Tip 2 diyabet ve kronik hipertansiyondur.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0210",
+       "id": "k1-64-c0209",
        "ses": "Minör faktörler ilk gebelik, 40 yaş üstü, 10 yıldan uzun gebelik aralığı, vücut kitle indeksinin 35 ve üstü olması, ailede preeklampsi öyküsü ve çoğul gebeliktir.",
        "ekran": "Minör faktörler ilk gebelik, 40 yaş üstü, 10 yıldan uzun gebelik aralığı, vücut kitle indeksinin 35 ve üstü olması, ailede preeklampsi öyküsü ve çoğul gebeliktir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0211",
+       "id": "k1-64-c0210",
        "ses": "Tek bir minör faktör tek başına yeterli değildir.",
        "ekran": "Tek bir minör faktör tek başına yeterli değildir.",
        "duzey": 0,
@@ -1815,28 +1808,28 @@
      "sayfa": 34,
      "cumleler": [
       {
-       "id": "k1-64-c0212",
+       "id": "k1-64-c0211",
        "ses": "Ölçülen boy ve kiloyla gebelik öncesi vücut kitle indeksi hesaplanır ve hedef kilo alımı buna göre belirlenir.",
        "ekran": "Ölçülen boy ve kiloyla gebelik öncesi vücut kitle indeksi hesaplanır ve hedef kilo alımı buna göre belirlenir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0213",
+       "id": "k1-64-c0212",
        "ses": "Zayıf gebede toplam 12,5 ile 18 kilogram, haftada yaklaşık yarım kilogram; normal kilolu gebede 11,5 ile 16 kilogram, haftada yaklaşık 420 gram; fazla kilolu gebede 7 ile 11,5 kilogram, haftada yaklaşık 280 gram; obez gebede 5 ile 9 kilogram, haftada yaklaşık 220 gram önerilir.",
        "ekran": "Zayıf gebede toplam 12,5 ile 18 kilogram, haftada yaklaşık yarım kilogram; normal kilolu gebede 11,5 ile 16 kilogram, haftada yaklaşık 420 gram; fazla kilolu gebede 7 ile 11,5 kilogram, haftada yaklaşık 280 gram; obez gebede 5 ile 9 kilogram, haftada yaklaşık 220 gram önerilir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0214",
+       "id": "k1-64-c0213",
        "ses": "Haftalık hedefler ikinci ve üçüncü trimester içindir.",
        "ekran": "Haftalık hedefler ikinci ve üçüncü trimester içindir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0215",
+       "id": "k1-64-c0214",
        "ses": "Kural tektir: vücut kitle indeksi arttıkça önerilen kilo alımı azalır.",
        "ekran": "Kural tektir: vücut kitle indeksi arttıkça önerilen kilo alımı azalır.",
        "duzey": 0,
@@ -1855,28 +1848,28 @@
      "sayfa": 34,
      "cumleler": [
       {
-       "id": "k1-64-c0216",
+       "id": "k1-64-c0215",
        "ses": "Gebeler ilk izlemde venöz tromboemboli risk faktörleri açısından puanlı bir formla değerlendirilir ve sistemik hastalık varsa gerekli konsültasyonlar yaptırılır.",
        "ekran": "Gebeler ilk izlemde venöz tromboemboli risk faktörleri açısından puanlı bir formla değerlendirilir ve sistemik hastalık varsa gerekli konsültasyonlar yaptırılır.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0217",
+       "id": "k1-64-c0216",
        "ses": "Majör cerrahiyle ilgisi olmayan geçirilmiş tromboemboli öyküsü ve yalnız birinci trimesterde ovaryan hiperstimülasyon sendromu 4 puandır.",
        "ekran": "Majör cerrahiyle ilgisi olmayan geçirilmiş tromboemboli öyküsü ve yalnız birinci trimesterde ovaryan hiperstimülasyon sendromu 4 puandır.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0218",
+       "id": "k1-64-c0217",
        "ses": "Majör cerrahi sonrası tromboemboli, yüksek riskli trombofili, kanser, kalp yetmezliği, aktif lupus, aktif inflamatuar barsak hastalığı, inflamatuar poliartropati, nefrotik sendrom, nefropatili Tip 1 diyabet, orak hücre hastalığı ve damar içi ilaç bağımlılığı gibi ciddi hastalıklar, gebelikte ya da lohusalıkta cerrahi işlem ve hiperemezis gravidarum 3 puandır.",
        "ekran": "Majör cerrahi sonrası tromboemboli, yüksek riskli trombofili, kanser, kalp yetmezliği, aktif lupus, aktif inflamatuar barsak hastalığı, inflamatuar poliartropati, nefrotik sendrom, nefropatili Tip 1 diyabet, orak hücre hastalığı ve damar içi ilaç bağımlılığı gibi ciddi hastalıklar, gebelikte ya da lohusalıkta cerrahi işlem ve hiperemezis gravidarum 3 puandır.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0219",
+       "id": "k1-64-c0218",
        "ses": "Vücut kitle indeksinin 40'ın üstünde olması ve eylemde sezaryen 2 puandır.",
        "ekran": "Vücut kitle indeksinin 40'ın üstünde olması ve eylemde sezaryen 2 puandır.",
        "duzey": 0,
@@ -1889,14 +1882,14 @@
      "sayfa": 34,
      "cumleler": [
       {
-       "id": "k1-64-c0220",
+       "id": "k1-64-c0219",
        "ses": "1 puanlık faktörler daha uzun bir listedir: birinci derece akrabada tetiklenmemiş ya da östrojenle ilişkili tromboemboli, düşük riskli trombofili, 35 yaş üstü, vücut kitle indeksinin 30'un üstünde olması, parite 3 ve üstü, günde 10'dan fazla sigara, büyük variköz ven, preeklampsi, yalnız antenatal dönemde tüp bebek tedavisi, çoğul gebelik, elektif sezaryen, orta pelvis ya da rotasyonel operatif doğum, 24 saati aşan uzamış eylem, 1 litreyi aşan ya da transfüzyon gerektiren postpartum kanama, 37 haftadan önce preterm doğum, ölü doğum, sistemik enfeksiyon, 3 günü aşan immobilizasyon ya da dehidratasyon ve 4 saati aşan uzun yolculuk.",
        "ekran": "1 puanlık faktörler daha uzun bir listedir: birinci derece akrabada tetiklenmemiş ya da östrojenle ilişkili tromboemboli, düşük riskli trombofili, 35 yaş üstü, vücut kitle indeksinin 30'un üstünde olması, parite 3 ve üstü, günde 10'dan fazla sigara, büyük variköz ven, preeklampsi, yalnız antenatal dönemde tüp bebek tedavisi, çoğul gebelik, elektif sezaryen, orta pelvis ya da rotasyonel operatif doğum, 24 saati aşan uzamış eylem, 1 litreyi aşan ya da transfüzyon gerektiren postpartum kanama, 37 haftadan önce preterm doğum, ölü doğum, sistemik enfeksiyon, 3 günü aşan immobilizasyon ya da dehidratasyon ve 4 saati aşan uzun yolculuk.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0221",
+       "id": "k1-64-c0220",
        "ses": "Düşük riskli trombofili faktör V Leiden heterozigotluğu ve protrombin mutasyonudur; yüksek riskli trombofili ise antitrombin, protein C ya da protein S eksikliği ile birden çok ya da homozigot düşük riskli trombofilidir.",
        "ekran": "Düşük riskli trombofili faktör V Leiden heterozigotluğu ve protrombin mutasyonudur; yüksek riskli trombofili ise antitrombin, protein C ya da protein S eksikliği ile birden çok ya da homozigot düşük riskli trombofilidir.",
        "duzey": 0,
@@ -1909,30 +1902,30 @@
      "sayfa": 34,
      "cumleler": [
       {
-       "id": "k1-64-c0222",
+       "id": "k1-64-c0221",
        "ses": "Toplam puan profilaksinin zamanını belirler.",
        "ekran": "Toplam puan profilaksinin zamanını belirler.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0223",
+       "id": "k1-64-c0222",
        "ses": "Burası önemli: antenatal toplam puan 4 ve üzeriyse birinci trimesterden itibaren, 3 ise 28. gebelik haftasından itibaren tromboprofilaksi önerilir.",
        "ekran": "Burası önemli: antenatal toplam puan 4 ve üzeriyse birinci trimesterden itibaren, 3 ise 28. gebelik haftasından itibaren tromboprofilaksi önerilir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0224",
+       "id": "k1-64-c0223",
        "ses": "Postnatal toplam puan 2 ve üzeriyse en az 10 gün tromboprofilaksi yapılır.",
        "ekran": "Postnatal toplam puan 2 ve üzeriyse en az 10 gün tromboprofilaksi yapılır.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0225",
-       "ses": "Doğum öncesinde düşük molekül ağırlıklı ya da anfraksiyone heparin alan ve sezaryen ihtimali olan gebe, doğumdan 1 gün önce profilaktik dozunu almalı, ancak operasyon sabah dozu alınmadan yapılmalıdır; böylece ameliyatta kanama artmadan tromboz koruması sürer.",
-       "ekran": "Doğum öncesinde düşük molekül ağırlıklı ya da anfraksiyone heparin alan ve sezaryen ihtimali olan gebe, doğumdan 1 gün önce profilaktik dozunu almalı, ancak operasyon sabah dozu alınmadan yapılmalıdır; böylece ameliyatta kanama artmadan tromboz koruması sürer.",
+       "id": "k1-64-c0224",
+       "ses": "Doğum öncesinde düşük molekül ağırlıklı ya da fraksiyone olmayan heparin alan ve sezaryen ihtimali olan gebe, doğumdan 1 gün önce profilaktik dozunu almalı, ancak operasyon sabah dozu alınmadan yapılmalıdır; böylece ameliyatta kanama artmadan tromboz koruması sürer.",
+       "ekran": "Doğum öncesinde düşük molekül ağırlıklı ya da fraksiyone olmayan heparin alan ve sezaryen ihtimali olan gebe, doğumdan 1 gün önce profilaktik dozunu almalı, ancak operasyon sabah dozu alınmadan yapılmalıdır; böylece ameliyatta kanama artmadan tromboz koruması sürer.",
        "duzey": 0,
        "vurgu": []
       }
@@ -1942,35 +1935,35 @@
   },
   {
    "id": "k1-64-b17",
-   "baslik": "İlk izlem laboratuvarı ve Rezus uyuşmazlığı",
+   "baslik": "İlk izlem laboratuvarı ve Rh uyuşmazlığı",
    "paragraflar": [
     {
      "id": "k1-64-p045",
      "sayfa": 37,
      "cumleler": [
       {
-       "id": "k1-64-c0226",
+       "id": "k1-64-c0225",
        "ses": "İlk izlemin laboratuvar basamağında tam idrar tetkiki ve idrar kültürü istenir.",
        "ekran": "İlk izlemin laboratuvar basamağında tam idrar tetkiki ve idrar kültürü istenir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0227",
+       "id": "k1-64-c0226",
        "ses": "Asemptomatik bakteriüri saptanırsa yakınma olmasa da tedavi başlanır, çünkü tedavi edilmezse piyelonefrit ve erken doğum riski artar.",
        "ekran": "Asemptomatik bakteriüri saptanırsa yakınma olmasa da tedavi başlanır, çünkü tedavi edilmezse piyelonefrit ve erken doğum riski artar.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0228",
+       "id": "k1-64-c0227",
        "ses": "Progesteronla genişlemiş, hipotonik üreterler bakteriürinin yukarı ilerlemesini kolaylaştırır.",
        "ekran": "Progesteronla genişlemiş, hipotonik üreterler bakteriürinin yukarı ilerlemesini kolaylaştırır.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0229",
+       "id": "k1-64-c0228",
        "ses": "Tam kan sayımında hemoglobin desilitrede 11 gramın, ortalama eritrosit hacmi 80 femtolitrenin altındaysa demir tedavisi başlanır; gebelikte mikrositer aneminin en sık nedeni demir eksikliğidir.",
        "ekran": "Tam kan sayımında hemoglobin desilitrede 11 gramın, ortalama eritrosit hacmi 80 femtolitrenin altındaysa demir tedavisi başlanır; gebelikte mikrositer aneminin en sık nedeni demir eksikliğidir.",
        "duzey": 0,
@@ -1983,35 +1976,35 @@
      "sayfa": 37,
      "cumleler": [
       {
-       "id": "k1-64-c0230",
+       "id": "k1-64-c0229",
        "ses": "Kan grubu hem anne hem baba için bakılır; gerekirse indirekt Coombs testi yapılır ve anti-D immünoglobulin G, yani RhoGAM uygulanır.",
        "ekran": "Kan grubu hem anne hem baba için bakılır; gerekirse indirekt Coombs testi yapılır ve anti-D immünoglobulin G, yani RhoGAM uygulanır.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0231",
+       "id": "k1-64-c0230",
        "ses": "Hepatit B yüzey antijeni gebe aşılanmış olsa dahi bakılır.",
        "ekran": "Hepatit B yüzey antijeni gebe aşılanmış olsa dahi bakılır.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0232",
+       "id": "k1-64-c0231",
        "ses": "HIV testi gebenin bilgisi ve onayı dahilinde istenir.",
        "ekran": "HIV testi gebenin bilgisi ve onayı dahilinde istenir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0233",
+       "id": "k1-64-c0232",
        "ses": "Sifiliz taraması tüm gebelerde yapılır ve tiroid uyarıcı hormon ile tiroid işlevi değerlendirilir.",
        "ekran": "Sifiliz taraması tüm gebelerde yapılır ve tiroid uyarıcı hormon ile tiroid işlevi değerlendirilir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0234",
+       "id": "k1-64-c0233",
        "ses": "Burası önemli, çıkmış sorularda pek çok kez soruldu: gebelik planlayan kişinin ya da gebenin ilk değerlendirmesinde sifiliz serolojisi, açlık kan şekeri, HIV serolojisi ve hemogram istenir; anti streptolizin O ise bu rutin tetkiklerden biri değildir.",
        "ekran": "Burası önemli, çıkmış sorularda pek çok kez soruldu: gebelik planlayan kişinin ya da gebenin ilk değerlendirmesinde sifiliz serolojisi, açlık kan şekeri, HIV serolojisi ve hemogram istenir; anti streptolizin O ise bu rutin tetkiklerden biri değildir.",
        "duzey": 0,
@@ -2024,35 +2017,35 @@
      "sayfa": 38,
      "cumleler": [
       {
+       "id": "k1-64-c0234",
+       "ses": "Rh uyuşmazlığı, annenin Rh negatif, bebeğin Rh pozitif olmasıdır.",
+       "ekran": "Rh uyuşmazlığı, annenin Rh negatif, bebeğin Rh pozitif olmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
        "id": "k1-64-c0235",
-       "ses": "Rezus uyuşmazlığı, annenin Rezus negatif, bebeğin Rezus pozitif olmasıdır.",
-       "ekran": "Rezus uyuşmazlığı, annenin Rezus negatif, bebeğin Rezus pozitif olmasıdır.",
+       "ses": "Rh izoimmünizasyonu ise fetomaternal hemorajiyle bebekten D antijeninin anneye geçmesi ve annede anti-D antikorlarının oluşmasıdır.",
+       "ekran": "Rh izoimmünizasyonu ise fetomaternal hemorajiyle bebekten D antijeninin anneye geçmesi ve annede anti-D antikorlarının oluşmasıdır.",
        "duzey": 0,
        "vurgu": []
       },
       {
        "id": "k1-64-c0236",
-       "ses": "Rezus izoimmünizasyonu ise fetomaternal hemorajiyle bebekten D antijeninin anneye geçmesi ve annede anti-D antikorlarının oluşmasıdır.",
-       "ekran": "Rezus izoimmünizasyonu ise fetomaternal hemorajiyle bebekten D antijeninin anneye geçmesi ve annede anti-D antikorlarının oluşmasıdır.",
+       "ses": "Oluşan immünoglobulin G yapısındaki antikorlar plasentayı geçer ve sonraki Rh pozitif fetüsün eritrositlerini yıkarak hemolitik hastalığa yol açabilir.",
+       "ekran": "Oluşan immünoglobulin G yapısındaki antikorlar plasentayı geçer ve sonraki Rh pozitif fetüsün eritrositlerini yıkarak hemolitik hastalığa yol açabilir.",
        "duzey": 0,
        "vurgu": []
       },
       {
        "id": "k1-64-c0237",
-       "ses": "Oluşan immünoglobulin G yapısındaki antikorlar plasentayı geçer ve sonraki Rezus pozitif fetüsün eritrositlerini yıkarak hemolitik hastalığa yol açabilir.",
-       "ekran": "Oluşan immünoglobulin G yapısındaki antikorlar plasentayı geçer ve sonraki Rezus pozitif fetüsün eritrositlerini yıkarak hemolitik hastalığa yol açabilir.",
-       "duzey": 0,
-       "vurgu": []
-      },
-      {
-       "id": "k1-64-c0238",
        "ses": "Burası önemli: hiçbir şey yapılmazsa immünizasyon riski %13'tür, doğumda anti-D profilaksisiyle %2'ye, buna ek olarak 28. haftada da anti-D verilirse %0,1'e iner.",
        "ekran": "Burası önemli: hiçbir şey yapılmazsa immünizasyon riski %13'tür, doğumda anti-D profilaksisiyle %2'ye, buna ek olarak 28. haftada da anti-D verilirse %0,1'e iner.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0239",
+       "id": "k1-64-c0238",
        "ses": "Antenatal doz gebeliğin son dönemindeki sessiz kanamalara karşı korur, doğumdaki doz ise en büyük fetal kan geçişini kapsar.",
        "ekran": "Antenatal doz gebeliğin son dönemindeki sessiz kanamalara karşı korur, doğumdaki doz ise en büyük fetal kan geçişini kapsar.",
        "duzey": 0,
@@ -2071,28 +2064,28 @@
      "sayfa": 39,
      "cumleler": [
       {
-       "id": "k1-64-c0240",
+       "id": "k1-64-c0239",
        "ses": "Gebe gestasyonel diyabet açısından risk grubundaysa glukoz değerlendirmesi beklenmeden ilk izlemde yapılır.",
        "ekran": "Gebe gestasyonel diyabet açısından risk grubundaysa glukoz değerlendirmesi beklenmeden ilk izlemde yapılır.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0241",
+       "id": "k1-64-c0240",
        "ses": "Risk grubu şunlardır: 4500 gram ve üzeri makrozomik doğum öyküsü, önceki gebelikte gestasyonel diyabet, vücut kitle indeksinin 30 ve üzerinde olması, birinci derece yakınlarda diyabet, polikistik over sendromu gibi bilinen bozulmuş glukoz toleransı, hipertansiyon ve kardiyovasküler hastalık.",
        "ekran": "Risk grubu şunlardır: 4500 gram ve üzeri makrozomik doğum öyküsü, önceki gebelikte gestasyonel diyabet, vücut kitle indeksinin 30 ve üzerinde olması, birinci derece yakınlarda diyabet, polikistik over sendromu gibi bilinen bozulmuş glukoz toleransı, hipertansiyon ve kardiyovasküler hastalık.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0242",
+       "id": "k1-64-c0241",
        "ses": "Bu gebede açlık kan şekeri desilitrede 126 miligram ve üzeri ya da rastgele kan şekeri 200 miligram ve üzeriyse aşikâr diyabet tanısı konur.",
        "ekran": "Bu gebede açlık kan şekeri desilitrede 126 miligram ve üzeri ya da rastgele kan şekeri 200 miligram ve üzeriyse aşikâr diyabet tanısı konur.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0243",
+       "id": "k1-64-c0242",
        "ses": "Değerler bunun altındaysa 75 gramlık oral glukoz tolerans testi yapılır; test negatifse 24 ile 28. haftalar arasında tekrarlanır, çünkü insülin direnci gebelik ilerledikçe artar.",
        "ekran": "Değerler bunun altındaysa 75 gramlık oral glukoz tolerans testi yapılır; test negatifse 24 ile 28. haftalar arasında tekrarlanır, çünkü insülin direnci gebelik ilerledikçe artar.",
        "duzey": 0,
@@ -2102,19 +2095,26 @@
     },
     {
      "id": "k1-64-p049",
-     "sayfa": 39,
+     "sayfa": 40,
      "cumleler": [
       {
-       "id": "k1-64-c0244",
+       "id": "k1-64-c0243",
        "ses": "75 gramlık 2 saatlik testte Uluslararası Diyabet ve Gebelik Çalışma Grupları Birliği ve Amerikan Diyabet Derneği eşikleri açlıkta 92, birinci saatte 180, ikinci saatte 153 miligram bölü desilitredir.",
        "ekran": "75 gramlık 2 saatlik testte Uluslararası Diyabet ve Gebelik Çalışma Grupları Birliği ve Amerikan Diyabet Derneği eşikleri açlıkta 92, birinci saatte 180, ikinci saatte 153 miligram bölü desilitredir.",
        "duzey": 0,
        "vurgu": []
       },
       {
+       "id": "k1-64-c0244",
+       "ses": "Burası önemli, hoca bu tabloyu bilinmesi gereken tablo olarak işaretledi: bu tek basamaklı yaklaşımda değerlerden bir tanesinin bile eşiğe eşit ya da üzerinde olması tanı koydurur.",
+       "ekran": "Burası önemli, hoca bu tabloyu bilinmesi gereken tablo olarak işaretledi: bu tek basamaklı yaklaşımda değerlerden bir tanesinin bile eşiğe eşit ya da üzerinde olması tanı koydurur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
        "id": "k1-64-c0245",
-       "ses": "Bu tek basamaklı yaklaşımda değerlerden bir tanesinin bile eşiğe eşit ya da üzerinde olması tanı koydurur.",
-       "ekran": "Bu tek basamaklı yaklaşımda değerlerden bir tanesinin bile eşiğe eşit ya da üzerinde olması tanı koydurur.",
+       "ses": "Örneğin 26 haftalık gebede açlık 88, birinci saat 185, ikinci saat 140 ise yalnız birinci saat eşiği aştığı hâlde gestasyonel diyabet tanısı konur.",
+       "ekran": "Örneğin 26 haftalık gebede açlık 88, birinci saat 185, ikinci saat 140 ise yalnız birinci saat eşiği aştığı hâlde gestasyonel diyabet tanısı konur.",
        "duzey": 0,
        "vurgu": []
       },
@@ -2602,8 +2602,8 @@
       },
       {
        "id": "k1-64-c0302",
-       "ses": "Spoting, lekelenme tarzında kanamadır ve ovülasyon sırasında fizyolojik spoting görülebilir.",
-       "ekran": "Spoting, lekelenme tarzında kanamadır ve ovülasyon sırasında fizyolojik spoting görülebilir.",
+       "ses": "Spotting, lekelenme tarzında kanamadır ve ovülasyon sırasında fizyolojik spotting görülebilir.",
+       "ekran": "Spotting, lekelenme tarzında kanamadır ve ovülasyon sırasında fizyolojik spotting görülebilir.",
        "duzey": 0,
        "vurgu": []
       },
@@ -2690,8 +2690,8 @@
       },
       {
        "id": "k1-64-c0312",
-       "ses": "Bunlara preeklampsi ve eklampsi, gestasyonel diyabet, venöz tromboemboli, ektopik gebelik, Rezus uygunsuzluğu, antepartum kanama, plasenta previa, plasenta dekolmanı, postpartum kanama ile zor ve müdahaleli doğum eklenir.",
-       "ekran": "Bunlara preeklampsi ve eklampsi, gestasyonel diyabet, venöz tromboemboli, ektopik gebelik, Rezus uygunsuzluğu, antepartum kanama, plasenta previa, plasenta dekolmanı, postpartum kanama ile zor ve müdahaleli doğum eklenir.",
+       "ses": "Bunlara preeklampsi ve eklampsi, gestasyonel diyabet, venöz tromboemboli, ektopik gebelik, Rh uygunsuzluğu, antepartum kanama, plasenta previa, plasenta dekolmanı, postpartum kanama ile zor ve müdahaleli doğum eklenir.",
+       "ekran": "Bunlara preeklampsi ve eklampsi, gestasyonel diyabet, venöz tromboemboli, ektopik gebelik, Rh uygunsuzluğu, antepartum kanama, plasenta previa, plasenta dekolmanı, postpartum kanama ile zor ve müdahaleli doğum eklenir.",
        "duzey": 0,
        "vurgu": []
       }
@@ -2710,15 +2710,15 @@
       },
       {
        "id": "k1-64-c0314",
-       "ses": "Rezus uygunsuzluğu, çoğul gebelik, gestasyonel diyabet, plasenta previa, tromboemboli, varis, polihidramniyoz ya da oligohidramniyoz, anomalili fetüs, servikal yetmezlik, vajinal kanama, preeklampsi, gebelikte cerrahi, yatış gerektiren hiperemezis, preterm eylem, travma, şiddetli enfeksiyon, hemoglobinin desilitrede 7 gramın altında olduğu ciddi anemi ve preterm erken membran rüptürü de ölçütlerdir.",
-       "ekran": "Rezus uygunsuzluğu, çoğul gebelik, gestasyonel diyabet, plasenta previa, tromboemboli, varis, polihidramniyoz ya da oligohidramniyoz, anomalili fetüs, servikal yetmezlik, vajinal kanama, preeklampsi, gebelikte cerrahi, yatış gerektiren hiperemezis, preterm eylem, travma, şiddetli enfeksiyon, hemoglobinin desilitrede 7 gramın altında olduğu ciddi anemi ve preterm erken membran rüptürü de ölçütlerdir.",
+       "ses": "Rh uygunsuzluğu, çoğul gebelik, gestasyonel diyabet, plasenta previa, tromboemboli, varis, polihidramniyoz ya da oligohidramniyoz, anomalili fetüs, servikal yetmezlik, vajinal kanama, preeklampsi, gebelikte cerrahi, yatış gerektiren hiperemezis, preterm eylem, travma, şiddetli enfeksiyon, hemoglobinin desilitrede 7 gramın altında olduğu ciddi anemi ve preterm erken membran rüptürü de ölçütlerdir.",
+       "ekran": "Rh uygunsuzluğu, çoğul gebelik, gestasyonel diyabet, plasenta previa, tromboemboli, varis, polihidramniyoz ya da oligohidramniyoz, anomalili fetüs, servikal yetmezlik, vajinal kanama, preeklampsi, gebelikte cerrahi, yatış gerektiren hiperemezis, preterm eylem, travma, şiddetli enfeksiyon, hemoglobinin desilitrede 7 gramın altında olduğu ciddi anemi ve preterm erken membran rüptürü de ölçütlerdir.",
        "duzey": 0,
        "vurgu": []
       },
       {
        "id": "k1-64-c0315",
-       "ses": "Anormal HPV ve smir sonucu, tekrarlayan sistit, intrauterin gelişme geriliği ve hafta ile uterus büyüklüğü uyumsuzluğu da listededir.",
-       "ekran": "Anormal HPV ve smir sonucu, tekrarlayan sistit, intrauterin gelişme geriliği ve hafta ile uterus büyüklüğü uyumsuzluğu da listededir.",
+       "ses": "Anormal HPV ve smear sonucu, tekrarlayan sistit, intrauterin gelişme geriliği ve hafta ile uterus büyüklüğü uyumsuzluğu da listededir.",
+       "ekran": "Anormal HPV ve smear sonucu, tekrarlayan sistit, intrauterin gelişme geriliği ve hafta ile uterus büyüklüğü uyumsuzluğu da listededir.",
        "duzey": 0,
        "vurgu": []
       },
@@ -2786,12 +2786,12 @@
     },
     {
      "id": "k1-64-p066",
-     "sayfa": 52,
+     "sayfa": 51,
      "cumleler": [
       {
        "id": "k1-64-c0322",
-       "ses": "Kontraksiyon stres testi, ya da oksitosin çelenç testi, uterus kasılmaları sırasında fetal kalp hızının geç deselerasyon verip vermediğini sınar.",
-       "ekran": "Kontraksiyon stres testi, ya da oksitosin çelenç testi, uterus kasılmaları sırasında fetal kalp hızının geç deselerasyon verip vermediğini sınar.",
+       "ses": "Kontraksiyon stres testi, ya da oksitosin challenge testi, uterus kasılmaları sırasında fetal kalp hızının geç deselerasyon verip vermediğini sınar.",
+       "ekran": "Kontraksiyon stres testi, ya da oksitosin challenge testi, uterus kasılmaları sırasında fetal kalp hızının geç deselerasyon verip vermediğini sınar.",
        "duzey": 0,
        "vurgu": []
       },
@@ -2811,8 +2811,8 @@
       },
       {
        "id": "k1-64-c0325",
-       "ses": "Kontraksiyonların yarısından fazlasını geç deselerasyon izliyorsa pozitiftir.",
-       "ekran": "Kontraksiyonların yarısından fazlasını geç deselerasyon izliyorsa pozitiftir.",
+       "ses": "Kontraksiyonların yüzde elli ve fazlasını geç deselerasyon izliyorsa, 10 dakikada 3'ten az kasılma olsa bile test pozitiftir; hocanın notuyla pozitif test doğum nedenidir.",
+       "ekran": "Kontraksiyonların yüzde elli ve fazlasını geç deselerasyon izliyorsa, 10 dakikada 3'ten az kasılma olsa bile test pozitiftir; hocanın notuyla pozitif test doğum nedenidir.",
        "duzey": 0,
        "vurgu": []
       },
@@ -2873,20 +2873,27 @@
       },
       {
        "id": "k1-64-c0333",
-       "ses": "40 dakikayı aşan takipte yeterli akselerasyon yoksa test non-reaktiftir.",
-       "ekran": "40 dakikayı aşan takipte yeterli akselerasyon yoksa test non-reaktiftir.",
+       "ses": "Reaktif NST örneğindeki trasede kalp hızı çizgisi bazal etrafında küçük dalgalanmalarla ilerler ve kasılmadan bağımsız üç belirgin tepe, yani akselerasyon görülür; hoca normal variabiliteyi 5 ile 15 atım olarak not etti.",
+       "ekran": "Reaktif NST örneğindeki trasede kalp hızı çizgisi bazal etrafında küçük dalgalanmalarla ilerler ve kasılmadan bağımsız üç belirgin tepe, yani akselerasyon görülür; hoca normal variabiliteyi 5 ile 15 atım olarak not etti.",
        "duzey": 0,
        "vurgu": []
       },
       {
        "id": "k1-64-c0334",
+       "ses": "40 dakikayı aşan takipte yeterli akselerasyon yoksa test non-reaktiftir; non-reaktif örnekteki trase tepesiz, düz bir çizgidir ve hoca karar vermeden önce en az 40 dakika kayıt alınmasını vurguladı.",
+       "ekran": "40 dakikayı aşan takipte yeterli akselerasyon yoksa test non-reaktiftir; non-reaktif örnekteki trase tepesiz, düz bir çizgidir ve hoca karar vermeden önce en az 40 dakika kayıt alınmasını vurguladı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-64-c0335",
        "ses": "Fetal uyku 20 ile 40 dakika sürebildiği için kayıt uzatılır; non-reaktif trase uyku, sedatif ilaç ya da prematüriteye bağlı olabilir ve ek testle değerlendirilir.",
        "ekran": "Fetal uyku 20 ile 40 dakika sürebildiği için kayıt uzatılır; non-reaktif trase uyku, sedatif ilaç ya da prematüriteye bağlı olabilir ve ek testle değerlendirilir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0335",
+       "id": "k1-64-c0336",
        "ses": "Yanlış pozitiflik %55 ile 90 gibi yüksektir.",
        "ekran": "Yanlış pozitiflik %55 ile 90 gibi yüksektir.",
        "duzey": 0,
@@ -2905,35 +2912,42 @@
      "sayfa": 55,
      "cumleler": [
       {
-       "id": "k1-64-c0336",
+       "id": "k1-64-c0337",
        "ses": "Deselerasyon, fetal kalp hızının bazalin altına geçici düşüşüdür; kademeli deselerasyonlarda başlangıçtan dibe geçen süre 30 saniyeden uzundur.",
        "ekran": "Deselerasyon, fetal kalp hızının bazalin altına geçici düşüşüdür; kademeli deselerasyonlarda başlangıçtan dibe geçen süre 30 saniyeden uzundur.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0337",
+       "id": "k1-64-c0338",
        "ses": "Erken deselerasyon kasılmayla eş zamanlı başlar ve biter, kasılma eğrisinin ayna görüntüsü gibidir; baş basısının uyardığı vagal yanıtla oluşur ve iyi huyludur.",
        "ekran": "Erken deselerasyon kasılmayla eş zamanlı başlar ve biter, kasılma eğrisinin ayna görüntüsü gibidir; baş basısının uyardığı vagal yanıtla oluşur ve iyi huyludur.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0338",
+       "id": "k1-64-c0339",
        "ses": "Geç deselerasyon kasılmanın tepesinden sonra başlar ve kasılma bittikten sonra bazale döner; uteroplasental yetmezliği gösterir ve tekrarlıyorsa fetal distres bulgusudur.",
        "ekran": "Geç deselerasyon kasılmanın tepesinden sonra başlar ve kasılma bittikten sonra bazale döner; uteroplasental yetmezliği gösterir ve tekrarlıyorsa fetal distres bulgusudur.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0339",
+       "id": "k1-64-c0340",
        "ses": "Erken ile geç deselerasyonun biçimi benzerdir; ayrım yalnız zamanlamayla yapılır.",
        "ekran": "Erken ile geç deselerasyonun biçimi benzerdir; ayrım yalnız zamanlamayla yapılır.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0340",
+       "id": "k1-64-c0341",
+       "ses": "Burası önemli: hoca geç deselerasyon trasesinin yanına bu tehlikeli ve asidoz notunu düştü, erken deselerasyonu ise fizyolojik olarak işaretledi.",
+       "ekran": "Burası önemli: hoca geç deselerasyon trasesinin yanına bu tehlikeli ve asidoz notunu düştü, erken deselerasyonu ise fizyolojik olarak işaretledi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-64-c0342",
        "ses": "Değişken deselerasyon ise ani başlar, 30 saniyeden kısa sürede dibe iner, biçimi ve zamanlaması kasılmayla değişir ve kord basısına bağlıdır; doğum eyleminde en sık görülen deselerasyondur.",
        "ekran": "Değişken deselerasyon ise ani başlar, 30 saniyeden kısa sürede dibe iner, biçimi ve zamanlaması kasılmayla değişir ve kord basısına bağlıdır; doğum eyleminde en sık görülen deselerasyondur.",
        "duzey": 0,
@@ -2943,31 +2957,38 @@
     },
     {
      "id": "k1-64-p069",
-     "sayfa": 52,
+     "sayfa": 58,
      "cumleler": [
       {
-       "id": "k1-64-c0341",
+       "id": "k1-64-c0343",
        "ses": "Biyofizik profil, non-stres testi ile ultrasonografiyi birleştirir ve 5 bileşen 30 dakika içinde aranır: reaktif non-stres testi, en az 30 saniye süren en az 1 fetal solunum epizodu, en az 3 ayrı vücut hareketi, ekstremitenin ekstansiyon ve fleksiyona dönüşü ya da el açıp kapama ile gösterilen tonus ve en derin dikey cebi 2 santimetre ve üzerinde olan amniyon sıvısı.",
        "ekran": "Biyofizik profil, non-stres testi ile ultrasonografiyi birleştirir ve 5 bileşen 30 dakika içinde aranır: reaktif non-stres testi, en az 30 saniye süren en az 1 fetal solunum epizodu, en az 3 ayrı vücut hareketi, ekstremitenin ekstansiyon ve fleksiyona dönüşü ya da el açıp kapama ile gösterilen tonus ve en derin dikey cebi 2 santimetre ve üzerinde olan amniyon sıvısı.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0342",
+       "id": "k1-64-c0344",
        "ses": "Her bileşen tamsa 2, değilse 0 puan alır; en yüksek skor 10'dur.",
        "ekran": "Her bileşen tamsa 2, değilse 0 puan alır; en yüksek skor 10'dur.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0343",
-       "ses": "8 ve üstü normal, 6 şüphelidir; 4'ün altındaki skor anormaldir.",
-       "ekran": "8 ve üstü normal, 6 şüphelidir; 4'ün altındaki skor anormaldir.",
+       "id": "k1-64-c0345",
+       "ses": "8 ile 10 arası normal, 6 şüpheli, 4 ve altı anormaldir; hocanın notuyla 4'ün altındaki skor acil doğum demektir.",
+       "ekran": "8 ile 10 arası normal, 6 şüpheli, 4 ve altı anormaldir; hocanın notuyla 4'ün altındaki skor acil doğum demektir.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0344",
+       "id": "k1-64-c0346",
+       "ses": "Örneğin reaktif test, 3 santimetrelik cep, 35 saniyelik solunum ve el açıp kapama varken 30 dakikada yalnız 2 gövde hareketi görülürse hareket bileşeni 0 alır ve skor 8, yani normaldir.",
+       "ekran": "Örneğin reaktif test, 3 santimetrelik cep, 35 saniyelik solunum ve el açıp kapama varken 30 dakikada yalnız 2 gövde hareketi görülürse hareket bileşeni 0 alır ve skor 8, yani normaldir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-64-c0347",
        "ses": "Modifiye biyofizik profilde reaktif test ile 2 santimetreden derin cep normal, non-reaktif test ya da 2 santimetre ve altı cep anormaldir.",
        "ekran": "Modifiye biyofizik profilde reaktif test ile 2 santimetreden derin cep normal, non-reaktif test ya da 2 santimetre ve altı cep anormaldir.",
        "duzey": 0,
@@ -2980,21 +3001,21 @@
      "sayfa": 53,
      "cumleler": [
       {
-       "id": "k1-64-c0345",
+       "id": "k1-64-c0348",
        "ses": "Özetle, gebeliğin dili 20. hafta, 500 gram ve son adet tarihi üzerine kuruludur.",
        "ekran": "Özetle, gebeliğin dili 20. hafta, 500 gram ve son adet tarihi üzerine kuruludur.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0346",
+       "id": "k1-64-c0349",
        "ses": "Fizyolojide plazma artışı, düşen direnç ve progesteron etkisi ana temalardır.",
        "ekran": "Fizyolojide plazma artışı, düşen direnç ve progesteron etkisi ana temalardır.",
        "duzey": 0,
        "vurgu": []
       },
       {
-       "id": "k1-64-c0347",
+       "id": "k1-64-c0350",
        "ses": "İzlemde ilk izlem, laboratuvar taramaları ve risk formu hastalığı erken yakalamayı, fetal testler ise fetüsün iyi olup olmadığını göstermeyi amaçlar.",
        "ekran": "İzlemde ilk izlem, laboratuvar taramaları ve risk formu hastalığı erken yakalamayı, fetal testler ise fetüsün iyi olup olmadığını göstermeyi amaçlar.",
        "duzey": 0,
