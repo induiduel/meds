@@ -207,33 +207,73 @@ export interface KonuGirdi {
 }
 
 export interface Hiz {
-  /** gerçek süre / beklenen süre (bitirilen konulardan); veri yoksa 1 */
+  /** gerçek süre / beklenen süre (bitirilen konulardan, yeniliğe göre ağırlıklı, ön değere çekilmiş); veri yoksa ön değer */
   oran: number;
   kaynak: 'senin' | 'icerik';
   /** bitirilen ve süresi ölçülen konu sayısı */
   ornek: number;
-  /** son 14 günde çalışılan günlerin ortalaması (sn/gün); veri yoksa 0 */
+  /** son 14 günün takvim günü ortalaması (çalışmadığın günler de sayılır, yeni günler ağır basar; sn/gün); veri yoksa 0 */
   gunluk: number;
+  /** yalnız çalıştığın günlerin ortalaması (sn/gün) */
+  aktifGunluk: number;
+  /** son 14 günde çalışılan gün sayısı */
+  aktifGun: number;
 }
 
 /** Hız ölçümüne yalnız uygulamada gerçekten çalışılmış konular girer: önceden çalışılıp "Bitirdim" ile işaretlenen
  *  (beklenen sürenin %25'inden ve 2 dk'dan az süreli) konular hızı bozmasın. */
 const olculebilir = (sn: number, beklenen: number) => sn >= Math.max(120, beklenen * 0.25);
 
+/** Modül başına ön değer (içerik süresi × oran): ses durdurma/geri sarma, soru başına düşünme, madde okuma payı. */
+const ON_ORAN: Record<TakipModul, number> = { sesli: 1.15, ogren: 1.0, cozucu: 1.1, onem: 1.2, kamp: 1.1 };
+/** Ön değerin ağırlığı (sanal konu sayısı): az konuda tek bir uç değer tahmini savurmasın. */
+const ON_AGIRLIK = 2;
+/** Eski konuların hız ölçüsündeki ağırlığı her 10 günde yarıya iner (çalışma hızın değişir). */
+const YARI_OMUR_GUN = 10;
+
+/** Son 14 günün günlük çalışması (yeni gün ağırlıklı, ilk çalışma gününden önceki günler sayılmaz). */
+export function gunlukHiz(mg: Record<string, number>, simdi = Date.now()): { gunluk: number; aktifGunluk: number; aktifGun: number } {
+  const ilk = Object.keys(mg).filter((d) => (mg[d] || 0) >= 120).sort()[0];
+  let ag = 0, top = 0, aktifTop = 0, aktifGun = 0;
+  for (let i = 0; i < 14; i++) {
+    const d = gunAnahtari(new Date(simdi - i * 86400_000));
+    if (!ilk || d < ilk) break;
+    const sn = mg[d] || 0;
+    // bugün henüz bitmedi: bugün az çalışıldıysa ortalamayı aşağı çekmesin
+    if (i === 0 && sn < 1800) continue;
+    const w = Math.pow(0.5, i / 7);
+    ag += w; top += w * sn;
+    if (sn >= 120) { aktifTop += sn; aktifGun++; }
+  }
+  return { gunluk: ag ? top / ag : 0, aktifGunluk: aktifGun ? aktifTop / aktifGun : 0, aktifGun };
+}
+
+/** Modüllerin tümünün günlük toplamı (plan bütçesi için). */
+export function toplamGunluk(v: TakipVeri = oku()) {
+  const mg: Record<string, number> = {};
+  for (const m of Object.values(v.g)) for (const [d, sn] of Object.entries(m || {})) mg[d] = (mg[d] || 0) + sn;
+  return gunlukHiz(mg);
+}
+
 /** Modülün ortalama ilerleme hızı: bitirdiği konularda harcadığı süre ÷ içeriğin beklenen süresi. */
 export function hizHesapla(m: TakipModul, konular: KonuGirdi[], v: TakipVeri = oku()): Hiz {
-  let gercek = 0, beklenen = 0, ornek = 0;
+  const on = ON_ORAN[m] ?? 1;
+  let gercek = 0, beklenen = 0, ornek = 0, bTop = 0;
+  const simdi = Date.now();
   for (const g of konular) {
     const k = v.k[anahtar(m, g.id)];
     if (!k || !g.beklenen || !olculebilir(k.sn, g.beklenen) || !bittiMi(k, g.turetilen)) continue;
-    gercek += k.sn; beklenen += g.beklenen; ornek++;
+    // tek konudaki aşırı oran (ör. sekme açık unutuldu) ortalamayı bozmasın: konu başına 0,4–3 arası
+    const sn = Math.max(g.beklenen * 0.4, Math.min(g.beklenen * 3, k.sn));
+    const yas = Math.max(0, (simdi - Date.parse(k.bittiAt || k.sonAt || '') || 0) / 86400_000);
+    const w = Number.isFinite(yas) ? Math.pow(0.5, yas / YARI_OMUR_GUN) : 0.5;
+    gercek += w * sn; beklenen += w * g.beklenen; bTop += g.beklenen; ornek++;
   }
-  const oran = ornek ? Math.max(0.35, Math.min(4, gercek / beklenen)) : 1;
-  const mg = v.g[m] || {};
-  const sinir = gunAnahtari(new Date(Date.now() - 13 * 86400_000));
-  const gunler = Object.entries(mg).filter(([d, sn]) => d >= sinir && sn >= 120);
-  const gunluk = gunler.length ? gunler.reduce((s, [, sn]) => s + sn, 0) / gunler.length : 0;
-  return { oran, kaynak: ornek ? 'senin' : 'icerik', ornek, gunluk };
+  const ort = ornek ? bTop / ornek : 0;
+  const oran = ornek
+    ? Math.max(0.35, Math.min(4, (gercek + ON_AGIRLIK * on * ort) / (beklenen + ON_AGIRLIK * ort)))
+    : on;
+  return { oran, kaynak: ornek ? 'senin' : 'icerik', ornek, ...gunlukHiz(v.g[m] || {}, simdi) };
 }
 
 export interface GrupOzeti {

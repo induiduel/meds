@@ -1,0 +1,18 @@
+{
+  "aciklama": "Kurul teorik sınavı branş başına soru sayısı (fakülte duyurusu). Baraj: bir branşta soruların yarısından az doğru yapılırsa eksik kalan her doğru kadar puan düşülür (puan = 2·doğru − n/2). Bitirdiklerim › 60 planı (components/takip/sinavPlani.ts) okur; scripts/son_prova/plan.py ile aynı olmalı.",
+  "kurullar": {
+    "1": {
+      "toplam": 100,
+      "hedef": 60,
+      "branslar": {
+        "patoloji": 34,
+        "enfeksiyon": 22,
+        "genetik": 12,
+        "uroloji": 12,
+        "halksagligi": 10,
+        "kadindogum": 6,
+        "farmakoloji": 4
+      }
+    }
+  }
+}

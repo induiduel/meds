@@ -211,3 +211,105 @@
   .bd-modul-kisa { display: inline; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
   .bd-modul button { gap: 6px; padding: 6px 8px; font-size: 13.5px; }
 }
+
+/* ── Sınav planı (60 hedefi) — components/takip/SinavPlani.tsx ───────── */
+.sp { border: 1px solid var(--color-line); border-radius: 16px; background: var(--color-white); min-width: 0; }
+.sp :where(h3, p, ol, ul) { margin: 0; }
+.sp ol, .sp ul { list-style: none; padding: 0; }
+.sp-bos { display: flex; align-items: center; gap: 10px; padding: 16px; color: var(--color-ink-2); font-size: 14px; }
+.sp-bas {
+  display: flex; align-items: center; gap: 12px; width: 100%; padding: 14px 16px; border: 0; background: none;
+  text-align: left; cursor: pointer; -webkit-tap-highlight-color: transparent;
+}
+.sp-ic { display: grid; place-items: center; flex: none; width: 40px; height: 40px; border-radius: 12px; background: var(--color-accent-soft); color: var(--color-accent); }
+.sp-ic svg { width: 22px; height: 22px; }
+.sp-bas-t { display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1; }
+.sp-bas-t b { font: 650 16px/1.3 var(--font-sans); }
+.sp-bas-t small { font-size: 13px; color: var(--color-ink-2); }
+.sp.is-acik .sp-bas .bd-ok { transform: rotate(180deg); }
+.sp-ic-alan { display: flex; flex-direction: column; gap: 14px; padding: 0 16px 16px; }
+.sp-h { font: 650 14px var(--font-sans); color: var(--color-ink); margin-top: 4px !important; }
+
+.sp-skor { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 10px; align-items: stretch; }
+.sp-skor-ok { align-self: center; color: var(--color-ink-3); font-size: 20px; }
+.sp-skor-k { display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border: 1px solid var(--color-line); border-radius: 12px; min-width: 0; }
+.sp-skor-k small { font: 600 11.5px var(--font-sans); letter-spacing: .05em; text-transform: uppercase; color: var(--color-ink-3); }
+.sp-skor-k b { font: 700 28px/1.1 var(--font-sans); font-variant-numeric: tabular-nums; }
+.sp-skor-k em { font-style: normal; font-size: 13px; color: var(--color-ink-2); }
+.sp-skor-k.is-plan { border-color: var(--color-accent); background: var(--color-accent-soft); }
+.sp-skor-k.is-plan b { color: var(--color-accent); }
+.sp-olc { display: block; height: 6px; border-radius: 99px; background: var(--color-line); overflow: hidden; margin-top: 2px; }
+.sp-olc i { display: block; height: 100%; border-radius: inherit; background: var(--color-ok); }
+
+.sp-saat { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; font-size: 14px; }
+.sp-saat > span { font-weight: 600; }
+.sp-saat > div { display: flex; gap: 6px; flex-wrap: wrap; }
+.sp-saat button {
+  min-height: 36px; min-width: 52px; padding: 0 12px; border: 1px solid var(--color-line); border-radius: 999px;
+  background: var(--color-white); cursor: pointer; font-variant-numeric: tabular-nums; font-size: 13.5px;
+}
+.sp-saat button.is-on { border-color: var(--color-accent); background: var(--color-accent); color: var(--color-white); font-weight: 600; }
+.sp-saat small { flex-basis: 100%; font-size: 12.5px; color: var(--color-ink-3); line-height: 1.45; }
+
+.sp-not { padding: 10px 12px; border-radius: 10px; font-size: 14px; line-height: 1.5; }
+.sp-not.is-iyi { background: var(--color-ok-soft); color: var(--color-ink); }
+.sp-not.is-uyari { background: color-mix(in srgb, var(--color-warn, #c27a00) 14%, transparent); color: var(--color-ink); }
+
+.sp-brans { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
+.sp-b { display: flex; flex-direction: column; gap: 8px; padding: 12px; border: 1px solid var(--color-line); border-radius: 12px; min-width: 0; }
+.sp-b.is-altta { border-color: color-mix(in srgb, var(--color-danger, #c0392b) 45%, var(--color-line)); }
+.sp-b.is-sakin { opacity: .8; }
+.sp-b-ust { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.sp-b-ust b { font-size: 15px; }
+.sp-b-ust span { font-size: 12.5px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.sp-b-cubuk { position: relative; height: 10px; border-radius: 99px; background: var(--color-line); overflow: visible; }
+.sp-b-cubuk i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 99px; max-width: 100%; }
+.sp-b-cubuk i.is-plan { background: color-mix(in srgb, var(--color-accent) 35%, transparent); }
+.sp-b-cubuk i.is-simdi { background: var(--color-accent); }
+.sp-b.is-altta .sp-b-cubuk i.is-simdi { background: var(--color-danger, #c0392b); }
+.sp-b-baraj { position: absolute; top: -3px; bottom: -3px; width: 2px; margin-left: -1px; background: var(--color-ink); border-radius: 1px; }
+.sp-b-alt { display: flex; justify-content: space-between; gap: 8px; font-size: 13px; color: var(--color-ink-2); font-variant-numeric: tabular-nums; flex-wrap: wrap; }
+.sp-b-puan { font-weight: 600; color: var(--color-ink); }
+.sp-b-oneri { display: flex; flex-wrap: wrap; gap: 6px; font-size: 12.5px; }
+.sp-b-oneri span { padding: 3px 8px; border-radius: 99px; background: var(--color-accent-soft); color: var(--color-accent); font-weight: 600; }
+.sp-b-oneri em { flex-basis: 100%; font-style: normal; color: var(--color-danger, #c0392b); }
+.sp-b-oneri em.is-gri { color: var(--color-ink-3); }
+
+.sp-gun { display: flex; flex-direction: column; gap: 6px; }
+.sp-gun-bas { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 6px 2px; border-bottom: 1px solid var(--color-line); }
+.sp-gun-bas b { font-size: 15px; }
+.sp-gun-bas span { font-size: 13px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.sp-adimlar { display: flex; flex-direction: column; gap: 6px; }
+.sp-a { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 1px solid var(--color-line); border-radius: 12px; min-width: 0; }
+.sp-a-no {
+  display: grid; place-items: center; flex: none; width: 28px; height: 28px; border-radius: 50%;
+  background: var(--color-line); font: 600 12.5px var(--font-sans); font-variant-numeric: tabular-nums;
+}
+.sp-a.is-baraj .sp-a-no { background: color-mix(in srgb, var(--color-danger, #c0392b) 16%, transparent); color: var(--color-danger, #c0392b); }
+.sp-a.is-puan .sp-a-no { background: var(--color-accent-soft); color: var(--color-accent); }
+.sp-a.is-pekistir .sp-a-no { background: var(--color-ok-soft); color: var(--color-ok); }
+.sp-a-t { display: flex; flex-direction: column; gap: 3px; min-width: 0; flex: 1; }
+.sp-a-t b { font-size: 14.5px; line-height: 1.35; overflow-wrap: anywhere; }
+.sp-a-etiket { font: 600 11px var(--font-sans); letter-spacing: .04em; text-transform: uppercase; color: var(--color-ink-3); }
+.sp-a.is-baraj .sp-a-etiket { color: var(--color-danger, #c0392b); }
+.sp-a-t small { display: flex; flex-wrap: wrap; gap: 4px 10px; font-size: 12.5px; color: var(--color-ink-2); }
+.sp-a-tur { display: inline-flex; align-items: center; gap: 4px; font-weight: 600; color: var(--color-ink); }
+.sp-a-tur svg { width: 14px; height: 14px; color: var(--color-accent); }
+.sp-a-k { color: var(--color-ok); font-weight: 600; font-variant-numeric: tabular-nums; }
+.sp-daha { align-self: flex-start; min-height: 34px; padding: 0 12px; border: 0; background: none; color: var(--color-accent); font-weight: 600; cursor: pointer; }
+
+.sp-nasil { border-top: 1px solid var(--color-line); padding-top: 10px; font-size: 13.5px; line-height: 1.55; color: var(--color-ink-2); }
+.sp-nasil summary { cursor: pointer; font-weight: 600; color: var(--color-ink); min-height: 32px; display: flex; align-items: center; }
+.sp-nasil ul { display: flex; flex-direction: column; gap: 6px; margin-top: 6px; }
+.sp-nasil b { color: var(--color-ink); }
+
+@container bd (max-width: 560px) {
+  .sp-skor { grid-template-columns: minmax(0, 1fr); }
+  .sp-skor-ok { display: none; }
+  .sp-ic-alan { padding: 0 12px 12px; }
+  .sp-bas { padding: 12px; }
+  .sp-brans { grid-template-columns: minmax(0, 1fr); }
+  .sp-a { padding: 10px; align-items: flex-start; }
+  .sp-a-ac span { display: none; }
+  .sp-a-ac { width: 36px; padding: 0; }
+}

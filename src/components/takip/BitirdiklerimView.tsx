@@ -11,6 +11,7 @@ import {
 } from '../../services/calismaTakip';
 import { KonuIsaret, KonuSureEtiketi } from './KonuTakip';
 import { MODUL_YUKLE, type BdDers, type BdKonu } from './bitirdiklerimVeri';
+import SinavPlani from './SinavPlani';
 import '../../styles/takip.css';
 
 const MODULLER: { id: TakipModul; ikon: React.ComponentType<{ 'aria-hidden'?: boolean }> }[] = [
@@ -79,6 +80,10 @@ export default function BitirdiklerimView() {
     return r;
   }, [durumlar, takip]);
 
+  // plan modülü hızı değişmedikçe yeniden hesaplamasın
+  const hizAnahtar = MODULLER.map(({ id }) => { const h = ozetler[id]?.hiz; return h ? `${h.oran.toFixed(2)}` : '-'; }).join('|');
+  const planHiz = useMemo(() => Object.fromEntries(MODULLER.map(({ id }) => [id, ozetler[id]?.hiz]).filter(([, h]) => h)), [hizAnahtar]); // eslint-disable-line react-hooks/exhaustive-deps
+
   const dz = durumlar[modul];
   const oz = ozetler[modul];
   const q = katla(ara.trim());
@@ -106,6 +111,8 @@ export default function BitirdiklerimView() {
           <p>Konuları işaretle; her konuda geçirdiğin süre, çözdüğün soru ve kalanların tahmini süresi burada.</p>
         </div>
       </header>
+
+      <SinavPlani hiz={planHiz} />
 
       <div className="bd-modul" role="tablist" aria-label="Modül">
         {MODULLER.map(({ id, ikon: Ikon }) => {
@@ -217,7 +224,7 @@ function OzetKartlari({ genel, hiz, modul }: { genel: ReturnType<typeof grupOzet
       <div className="bd-kart">
         <small>Toplam çalışma</small>
         <b>{sureYaz(genel.sn)}</b>
-        <em>{hiz.gunluk ? `Günde ort. ${sureYaz(hiz.gunluk)} (son 14 gün)` : 'Etkin süre: sekme açık ve etkileşimdeyken'}</em>
+        <em>{hiz.gunluk ? `Günde ort. ${sureYaz(hiz.gunluk)} (son 14 gün, boş günler dahil; çalıştığın ${hiz.aktifGun} günde ${sureYaz(hiz.aktifGunluk)})` : 'Etkin süre: sekme açık ve etkileşimdeyken'}</em>
       </div>
       <div className="bd-kart">
         <small>Çözülen soru</small>
