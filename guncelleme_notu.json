@@ -1,21 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 187,
-  "baslik": "TBG Sınav Kampı: yeni çıkmışlar eklendi",
+  "onem": 188,
+  "baslik": "Kayıtlar daha güvenilir gönderiliyor",
   "maddeler": [
-    "Tıbbi genetik çıkmış derlemesindeki eksik 9 soru kampa eklendi (bankada 286 soru): kalıtsal böbrek hastalıkları (polikistik böbrek, Alport, sistinüri, Wilms, VHL), abortus kromozom anomalileri, G-bantlama çözünürlüğü.",
-    "Sesli derse \"Kalıtsal böbrek hastalıkları\" bölümü ve abortus bilgisi eklendi.",
-    "2025 ve 2026'da tekrar sorulan çıkmışlar \"tekrar eden\" olarak işaretlendi.",
-    "Kurul 2–6 çıkmışlarında 51 cevap anahtarı ders kaynağına göre düzeltildi; her düzeltilen soruda eski anahtar ve gerekçe yazıyor."
+    "Notlar ve ilerleme yedeği gönderilirken ara sıra yaşanan bağlantı kopması giderildi; yanlış \"çevrimdışı\" uyarısı ve bekleyen işlem kuyruğu artık çıkmıyor."
   ],
-  "eklenen": [
-    "Tıbbi genetik çıkmış derlemesindeki eksik 9 soru kampa eklendi (bankada 286 soru): kalıtsal böbrek hastalıkları (polikistik böbrek, Alport, sistinüri, Wilms, VHL), abortus kromozom anomalileri, G-bantlama çözünürlüğü.",
-    "Sesli derse \"Kalıtsal böbrek hastalıkları\" bölümü ve abortus bilgisi eklendi.",
-    "2025 ve 2026'da tekrar sorulan çıkmışlar \"tekrar eden\" olarak işaretlendi."
-  ],
+  "eklenen": [],
   "degisen": [],
   "duzeltilen": [
-    "Kurul 2–6 çıkmışlarında 51 cevap anahtarı ders kaynağına göre düzeltildi; her düzeltilen soruda eski anahtar ve gerekçe yazıyor."
+    "Notlar ve ilerleme yedeği gönderilirken ara sıra yaşanan bağlantı kopması giderildi; yanlış \"çevrimdışı\" uyarısı ve bekleyen işlem kuyruğu artık çıkmıyor."
   ],
   "silinen": []
 }

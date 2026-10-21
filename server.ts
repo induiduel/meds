@@ -11979,6 +11979,10 @@ async function startServer() {
       resyncLocalToDb().catch(() => {});
     }, 20000);
   });
+  // Boşta bağlantı süresi Caddy kapısınınkinden (2 dk) uzun: Node varsayılanı 5 sn'de kapatırken Caddy aynı bağlantıyı
+  // yeniden kullanınca yolda kalan POST/PUT'lar "connection reset" alıyordu (Caddy yazmaları yeniden denemez; 2026-10-21).
+  httpServerRef.keepAliveTimeout = 130_000;
+  httpServerRef.headersTimeout = 131_000;
 }
 
 /**
