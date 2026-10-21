@@ -1,18 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 201,
-  "baslik": "Yeni: Çıkmış çözücü (Sınava hazırlan)",
+  "onem": 202,
+  "baslik": "TBG Sınav Kampı: Wilms anlatımı slaytlara göre bölündü",
   "maddeler": [
-    "Sınava hazırlan › Çıkmış çözücü: her ders için kurul sınavındaki soru sayısı kadar çıkmış paketi (Kurul 1: 450 soru, 33 paket), yalnız slaytta anlatılan kazanımlar.",
-    "Sesli asistanla birlikte çöz: yanlış şıkta nedenini dinle, ipucu ve çözüm; çözümden sonra konunun kısa notu sesli okunur.",
-    "Otomatik çöz: asistan seni beklemeden soruyu okur, doğru şıkkı seçer, nedenini ve kısa notu anlatıp sonraki soruya geçer."
+    "TBG Sınav Kampı'nda Wilms tümörü cümlesi ikiye bölündü; imleç önce genel özellikler slaytını, sonra Bölüm 4 notunu gösteriyor."
   ],
-  "eklenen": [
-    "Sınava hazırlan › Çıkmış çözücü: her ders için kurul sınavındaki soru sayısı kadar çıkmış paketi (Kurul 1: 450 soru, 33 paket), yalnız slaytta anlatılan kazanımlar.",
-    "Sesli asistanla birlikte çöz: yanlış şıkta nedenini dinle, ipucu ve çözüm; çözümden sonra konunun kısa notu sesli okunur.",
-    "Otomatik çöz: asistan seni beklemeden soruyu okur, doğru şıkkı seçer, nedenini ve kısa notu anlatıp sonraki soruya geçer."
+  "eklenen": [],
+  "degisen": [
+    "TBG Sınav Kampı'nda Wilms tümörü cümlesi ikiye bölündü; imleç önce genel özellikler slaytını, sonra Bölüm 4 notunu gösteriyor."
   ],
-  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }
