@@ -8,7 +8,7 @@ import { createPortal } from 'react-dom';
 import { kutlamaKapat, kutlamalariAtla, sayi, useBasarim, type Odul } from '../../services/basarimIstemci';
 import { AtpIkon, Ikon } from './ortak';
 
-type Efekt = 'konfeti' | 'mitoz' | 'sentaz' | 'kalp';
+type Efekt = 'konfeti' | 'mitoz' | 'sentaz' | 'kalp' | 'asklepios';
 
 const hareketAz = () => typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 
@@ -29,7 +29,7 @@ function Parcacik({ efekt, renk, ust }: { efekt: Efekt; renk: string; ust: boole
     type P = { x: number; y: number; vx: number; vy: number; r: number; a: number; va: number; renk: string; omur: number; tur: number; bol?: boolean };
     const ps: P[] = [];
     const cx = W() / 2, cy = H() * 0.42;
-    const say = (ust ? 1.6 : 1) * (efekt === 'konfeti' ? 140 : efekt === 'mitoz' ? 26 : efekt === 'kalp' ? 34 : 36);
+    const say = (ust ? 1.6 : 1) * (efekt === 'konfeti' ? 140 : efekt === 'mitoz' ? 26 : efekt === 'kalp' ? 34 : efekt === 'asklepios' ? 46 : 36);
     for (let i = 0; i < say; i++) {
       const aci = Math.random() * Math.PI * 2;
       const hiz = (efekt === 'konfeti' ? 6 + Math.random() * 9 : 2 + Math.random() * 4) * dpr;
@@ -51,6 +51,38 @@ function Parcacik({ efekt, renk, ust }: { efekt: Efekt; renk: string; ust: boole
     const ciz = () => {
       kare++;
       ctx.clearRect(0, 0, W(), H());
+      if (efekt === 'asklepios' && kare < 190) {
+        // Asklepios Asası: altın asa belirir, yılan alttan yukarı dolanarak tırmanır, sonra söner
+        const alfa = kare < 150 ? Math.min(1, kare / 20) : Math.max(0, 1 - (kare - 150) / 40);
+        const boy = 120 * dpr, ust = cy - boy, alt = cy + boy;
+        ctx.save(); ctx.globalAlpha = alfa;
+        const asa = ctx.createLinearGradient(cx - 6 * dpr, 0, cx + 6 * dpr, 0);
+        asa.addColorStop(0, '#8A6A00'); asa.addColorStop(0.5, '#FFE58A'); asa.addColorStop(1, '#8A6A00');
+        ctx.fillStyle = asa; ctx.beginPath(); ctx.roundRect?.(cx - 5 * dpr, ust - 10 * dpr, 10 * dpr, boy * 2 + 20 * dpr, 5 * dpr); ctx.fill();
+        const ilerle = Math.min(1, Math.max(0, (kare - 12) / 70));
+        const adim = 140, sar = 3.2;
+        const nokta = (i: number) => { const t = i / adim; const y = alt - t * boy * 1.9; return { x: cx + Math.sin(t * Math.PI * 2 * sar) * 26 * dpr * (1 - t * 0.25), y, on: Math.cos(t * Math.PI * 2 * sar) > 0 }; };
+        const son = Math.floor(adim * ilerle);
+        // önce asanın arkasında kalan parçalar, sonra öndekiler (dolanma derinliği)
+        for (const katman of [false, true]) {
+          for (let i = 1; i <= son; i++) {
+            const a = nokta(i - 1), b = nokta(i);
+            if (b.on !== katman) continue;
+            ctx.strokeStyle = katman ? '#22C55E' : '#166534'; ctx.lineWidth = (katman ? 9 : 7) * dpr * (1 - (i / adim) * 0.35); ctx.lineCap = 'round';
+            ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+          }
+        }
+        if (son > 2) {
+          const h = nokta(son), o = nokta(son - 2);
+          const aci = Math.atan2(h.y - o.y, h.x - o.x);
+          ctx.save(); ctx.translate(h.x, h.y); ctx.rotate(aci); ctx.fillStyle = '#15803D';
+          ctx.beginPath(); ctx.ellipse(4 * dpr, 0, 10 * dpr, 6.5 * dpr, 0, 0, 7); ctx.fill();
+          ctx.fillStyle = '#FDE047'; ctx.beginPath(); ctx.arc(8 * dpr, -2.5 * dpr, 1.6 * dpr, 0, 7); ctx.fill();
+          if (kare % 30 < 12) { ctx.strokeStyle = '#EF4444'; ctx.lineWidth = 1.5 * dpr; ctx.beginPath(); ctx.moveTo(13 * dpr, 0); ctx.lineTo(19 * dpr, -2 * dpr); ctx.moveTo(13 * dpr, 0); ctx.lineTo(19 * dpr, 2 * dpr); ctx.stroke(); }
+          ctx.restore();
+        }
+        ctx.restore();
+      }
       if (efekt === 'sentaz' && kare < 140) {
         // dönen F0 rotoru
         ctx.save(); ctx.translate(cx, cy); ctx.rotate(kare * 0.12); ctx.strokeStyle = renk; ctx.lineWidth = 3 * dpr; ctx.globalAlpha = Math.max(0, 1 - kare / 140);
@@ -63,6 +95,7 @@ function Parcacik({ efekt, renk, ust }: { efekt: Efekt; renk: string; ust: boole
         if (efekt === 'konfeti') { p.vy += 0.25 * dpr; p.vx *= 0.985; p.vy *= 0.985; }
         else if (efekt === 'mitoz') { p.vx *= 0.97; p.vy = p.vy * 0.97 + 0.04 * dpr; }
         else if (efekt === 'kalp') { p.vx *= 0.97; p.vy = p.vy * 0.97 - 0.06 * dpr; }
+        else if (efekt === 'asklepios') { if (kare < 70) { p.omur--; continue; } p.vx *= 0.96; p.vy = p.vy * 0.96 - 0.05 * dpr; }
         else { const aci = Math.atan2(p.vy, p.vx) + 0.025; const h = Math.hypot(p.vx, p.vy) * 1.004; p.vx = Math.cos(aci) * h; p.vy = Math.sin(aci) * h; }
         p.x += p.vx; p.y += p.vy; p.a += p.va;
         const alfa = Math.max(0, 1 - p.omur / (efekt === 'konfeti' ? 170 : 150));
@@ -74,6 +107,12 @@ function Parcacik({ efekt, renk, ust }: { efekt: Efekt; renk: string; ust: boole
           if (p.tur === 0) ctx.fillRect(-p.r, -p.r / 2.5, p.r * 2, p.r / 1.25);
           else if (p.tur === 1) { ctx.beginPath(); ctx.arc(0, 0, p.r / 1.6, 0, 7); ctx.fill(); }
           else { ctx.beginPath(); ctx.moveTo(0, -p.r); ctx.lineTo(p.r, p.r); ctx.lineTo(-p.r, p.r); ctx.fill(); }
+          ctx.restore();
+        } else if (efekt === 'asklepios') {
+          // Işıltı: dört köşeli yıldız (yeşil / altın)
+          const z = p.r * 0.55 * (0.7 + 0.3 * Math.sin(p.omur * 0.3));
+          ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.a); ctx.fillStyle = p.tur === 0 ? '#E5B000' : p.tur === 1 ? '#4ADE80' : '#BBF7D0';
+          ctx.beginPath(); ctx.moveTo(0, -z); ctx.quadraticCurveTo(0, 0, z, 0); ctx.quadraticCurveTo(0, 0, 0, z); ctx.quadraticCurveTo(0, 0, -z, 0); ctx.quadraticCurveTo(0, 0, 0, -z); ctx.fill();
           ctx.restore();
         } else if (efekt === 'kalp') {
           // Kalp: atım ritmiyle büyüyüp küçülür (EKG gibi çift vuruş)
@@ -97,7 +136,7 @@ function Parcacik({ efekt, renk, ust }: { efekt: Efekt; renk: string; ust: boole
         } else atp(p);
       }
       ctx.globalAlpha = 1;
-      if (canli > 0 || kare < 140) raf = requestAnimationFrame(ciz);
+      if (canli > 0 || kare < (efekt === 'asklepios' ? 190 : 140)) raf = requestAnimationFrame(ciz);
     };
     raf = requestAnimationFrame(ciz);
     return () => { cancelAnimationFrame(raf); window.removeEventListener('resize', boyut); };
@@ -132,7 +171,7 @@ export function KutlamaKatmani() {
     const renk = b?.renk || (o.t === 'siralama' ? '#F59E0B' : o.ust ? '#EAB308' : 'var(--color-accent)');
     return { ikon: b?.ikon || h?.ikon || (o.t === 'siralama' ? 'trophy' : 'crown'), renk, seviye, ad: (b?.ad || h?.ad || o.ad.split(' · ')[0]), aciklama: b?.aciklama };
   }, [o, tanim]);
-  const efekt: Efekt = durum?.secili.efekt === 'efekt_mitoz' ? 'mitoz' : durum?.secili.efekt === 'efekt_sentaz' ? 'sentaz' : durum?.secili.efekt === 'efekt_kalp' ? 'kalp' : 'konfeti';
+  const efekt: Efekt = durum?.secili.efekt === 'efekt_mitoz' ? 'mitoz' : durum?.secili.efekt === 'efekt_sentaz' ? 'sentaz' : durum?.secili.efekt === 'efekt_kalp' ? 'kalp' : durum?.secili.efekt === 'efekt_asklepios' ? 'asklepios' : 'konfeti';
 
   useEffect(() => {
     if (!o) return;

@@ -1115,6 +1115,14 @@
       "kidem": 6
     },
     {
+      "id": "u6_asklepios",
+      "tur": "unvan",
+      "ad": "Asklepios'un Çırağı",
+      "fiyat": 1800,
+      "etkin": true,
+      "kidem": 6
+    },
+    {
       "id": "u7_docent",
       "tur": "unvan",
       "ad": "Doçent",
@@ -1179,6 +1187,23 @@
       "fiyat": 900,
       "etkin": true,
       "renk": "#6366F1"
+    },
+    {
+      "id": "cerceve_asklepios",
+      "tur": "cerceve",
+      "ad": "Asklepios Asası çerçevesi (hareketli)",
+      "fiyat": 1200,
+      "etkin": true,
+      "renk": "#16A34A",
+      "aciklama": "Halkaya dolanan yılan; hekimliğin simgesi."
+    },
+    {
+      "id": "efekt_asklepios",
+      "tur": "efekt",
+      "ad": "Kutlama efekti: Asklepios Asası",
+      "fiyat": 800,
+      "etkin": true,
+      "aciklama": "Altın asa belirir, yılan dolanarak tırmanır, ışıltılar yükselir."
     },
     {
       "id": "efekt_kalp",
