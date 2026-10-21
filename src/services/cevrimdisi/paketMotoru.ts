@@ -43,6 +43,8 @@ export interface Paket {
   surumT?: { veri: string; ses?: string; pdf?: string };
   /** Birlikte inmesi gereken paketler (sunucu kataloğu) */
   bagimli?: string[];
+  /** İsteğe bağlı öneri: aynı dersin öteki modüllerdeki paketleri */
+  ilgili?: string[];
 }
 /** Paket başına içerik seçimi: sesler ve PDF'ler inecek mi */
 export interface Secim { ses: boolean; pdf: boolean }

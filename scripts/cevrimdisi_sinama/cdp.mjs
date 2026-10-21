@@ -4,7 +4,7 @@ import fs from 'node:fs';
 export const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 export async function tarayici({ profil, temiz = false } = {}) {
   const PORT = 9800 + Math.floor(Math.random() * 150);
-  const dir = profil || `/tmp/claude-1000/cevrimdisi-chrome-${PORT}`;
+  const dir = profil || `${process.env.HOME}/.cache/medsor-cevrimdisi/chrome-${PORT}`;
   if (temiz) fs.rmSync(dir, { recursive: true, force: true });
   const chrome = spawn('/opt/google/chrome/chrome', ['--headless=new', `--remote-debugging-port=${PORT}`, `--user-data-dir=${dir}`, '--no-first-run',
     '--disable-extensions', '--mute-audio', '--autoplay-policy=no-user-gesture-required', '--window-size=1280,900'], { stdio: 'ignore' });

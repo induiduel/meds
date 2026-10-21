@@ -14,6 +14,7 @@ import {
 } from '../../services/cevrimdisi/paketMotoru';
 import { useNetState } from '../../services/net';
 import EsitlemeKarti from './EsitlemeKarti';
+import { sayfaPaketleri } from '../../services/cevrimdisi/sayfaPaketleri';
 import '../../styles/cevrimdisi.css';
 
 type Sekme = 'sesli' | 'cozucu' | 'onem' | 'alt' | 'ogren' | 'veri';
@@ -255,6 +256,9 @@ export default function CevrimdisiView() {
           <p>Dersleri cihazına indir; internet yokken ya da bağlantı yavaşken sesli dersler, soru çözücü, en önemliler ve sorular aynı hızla açılır. Çözdüğün sorular ve çalışma süren bağlantı gelince kendiliğinden eşitlenir.</p>
         </div>
       </header>
+
+      {/* Bu sayfa (üst çubuktaki bulut simgesinden ?sayfa= ile gelinir) */}
+      <SayfaKarti S={S} />
 
       {/* Mod + durum */}
       <section className="cv-kart cv-mod" aria-label="Çevrimdışı mod">
@@ -530,6 +534,53 @@ function AlanKarti() {
       </div>
       {sonuc && <p className="cv-not" role="status">{sonuc}</p>}
       <p className="cv-not">Sesleri kaldırılan dersler internetsiz de açılır; ses yerine metin ve açıklamalar gösterilir.</p>
+    </section>
+  );
+}
+
+/** Geldiğin sayfanın internetsiz çalışması için gerekenler: durum, boyut, tek dokunuşla indir */
+function SayfaKarti({ S }: { S: ReturnType<typeof useCevrimdisi> }) {
+  const sayfa = useMemo(() => { try { return new URLSearchParams(location.search).get('sayfa') || ''; } catch { return ''; } }, []);
+  if (!sayfa || !S.katalog.length) return null;
+  const ids = sayfaPaketleri(sayfa, S.katalog);
+  const paketler = ids.map((id) => S.katalog.find((p) => p.id === id)).filter((p): p is Paket => !!p);
+  const eksik = paketler.filter((p) => !['tamam', 'guncelleme', 'kuyrukta', 'iniyor'].includes(paketDurumu(p.id, S)));
+  const suruyor = paketler.some((p) => ['kuyrukta', 'iniyor'].includes(paketDurumu(p.id, S)));
+  const bayt = eksik.reduce((a, p) => a + secimliBayt(p, secimAl(p.id, S)), 0);
+  const ad = paketler.length === 1 ? paketler[0].baslik : `${paketler.length} paket`;
+  // Aynı dersin öteki modülleri (öneri; zorunlu değil): cihazda olmayanlar
+  const ilgili = paketler.length <= 3
+    ? [...new Set(paketler.flatMap((p) => p.ilgili || []))].filter((id) => !ids.includes(id) && paketDurumu(id, S) === 'yok')
+      .map((id) => S.katalog.find((p) => p.id === id)).filter((p): p is Paket => !!p)
+    : [];
+  const MODUL_AD: Record<string, string> = { ogren: 'Etkileşimli ders', cozucu: 'Soru çözücü', onem: 'En önemliler' };
+  return (
+    <section className="cv-kart" aria-label="Bu sayfa">
+      <div className="cv-kart-bas">
+        <div>
+          <h2>Bu sayfa</h2>
+          <small>
+            {!paketler.length ? 'Bu sayfa internet gerektirir ya da indirilecek ayrı içeriği yok.'
+              : !eksik.length ? (suruyor ? `${ad} iniyor…` : `${ad} cihazında: bu sayfa internetsiz açılır.`)
+                : `${ad} · ${eksik.length < paketler.length ? `${eksik.length} eksik · ` : ''}${boyutYaz(bayt)}`}
+          </small>
+        </div>
+        {eksik.length > 0 && (
+          <button type="button" className="cv-btn is-birincil" onClick={() => kuyrugaEkle(eksik.map((p) => p.id))}>
+            <CloudDownload aria-hidden /> İndir
+          </button>
+        )}
+      </div>
+      {ilgili.length > 0 && (
+        <ul className="cv-ilgili" aria-label="Aynı dersin öteki bölümleri">
+          {ilgili.map((p) => (
+            <li key={p.id}>
+              <span><b>{MODUL_AD[p.modul] || p.grup}</b> · {p.baslik} · {boyutYaz(secimliBayt(p, secimAl(p.id, S)))}</span>
+              <button type="button" className="cv-btn" onClick={() => kuyrugaEkle([p.id])}>Ekle</button>
+            </li>
+          ))}
+        </ul>
+      )}
     </section>
   );
 }

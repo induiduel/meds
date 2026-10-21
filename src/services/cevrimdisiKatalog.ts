@@ -30,6 +30,8 @@ export interface Paket {
   ek?: { ses?: { b: number; n: number }; pdf?: { b: number; n: number } };
   /** Bu paket indirilince birlikte inmesi gereken paketler (ör. TBG kampı → sesli dersi); istemci kuyruğa kendisi ekler */
   bagimli?: string[];
+  /** İsteğe bağlı öneri: aynı dersin öteki modüllerdeki paketleri (Öğren dersi ↔ soru çözücü / en önemliler) */
+  ilgili?: string[];
   /** Tür başına sürüm: sessiz indirilen paket yalnız ses değişince "güncelleme var" göstermesin */
   surumT?: { veri: string; ses?: string; pdf?: string };
 }
@@ -280,6 +282,26 @@ function kur(): Map<string, { p: Paket; dosyalar: PDosya[] }> {
     [...m.kod.filter((f) => !/composer_model/.test(f)).map(parca), ...kucuk.map(parca), ...dizinler.map(parca), ...simgeler, ...yaziTipi,
       { u: '/index.html', b: boyut(path.join(DIST, 'index.html')), v: m.olusturma }]);
   if (buyuk.length) ekle({ id: 'veri:diger', modul: 'veri', grup: 'Başvuru', baslik: 'Diğer içerik', alt: 'Kalan büyük veri dosyaları', sira: 9 }, buyuk.map(parca));
+
+  // İlgili paketler: cozucu_ogren eşlemesi (çözücü dersi → hangi Öğren destesinin slaytlarına dayanıyor). Bir destenin
+  // eşlemelerdeki payı ≥%30 ise o ders "ilgili"; iki yönlü yazılır (deste ↔ çözücü, en önemliler)
+  for (const b of Object.keys(BRANS)) {
+    const e = jsonOku(path.join(SRC_DATA, 'cozucu_ogren', `${b}.json`));
+    if (!e?.desteler || !e?.dersler) continue;
+    for (const [kod, x] of Object.entries<any>(e.dersler)) {
+      const say = new Map<number, number>();
+      let top = 0;
+      for (const es of Object.values<any>(x?.s || {})) for (const [i] of es as number[][]) { say.set(i, (say.get(i) || 0) + 1); top++; }
+      const komsu = [`cozucu:${b}:${kod}`, `onem:${b}:${kod}`].filter((id) => out.has(id));
+      if (!top || !komsu.length) continue;
+      for (const [i, n] of say) {
+        const ogren = out.get(`ogren:${e.desteler[i]}`);
+        if (!ogren || n / top < 0.3) continue;
+        ogren.p.ilgili = [...new Set([...(ogren.p.ilgili || []), ...komsu])];
+        for (const id of komsu) { const k = out.get(id)!; k.p.ilgili = [...new Set([...(k.p.ilgili || []), ogren.p.id])]; }
+      }
+    }
+  }
 
   onbellek = { anahtar, paketler: out };
   return out;

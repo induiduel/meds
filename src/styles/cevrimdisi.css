@@ -227,3 +227,9 @@
 .cv-dokum li small { color: var(--color-ink-3); }
 .cv-dokum li .cv-cubuk { grid-column: 1 / -1; }
 .cv-alan-eylem { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* Bu sayfa kartı: aynı dersin öteki bölümleri (öneri) */
+.cv-ilgili { list-style: none; margin: 10px 0 0; padding: 10px 0 0; border-top: 1px solid var(--color-line); display: grid; gap: 8px; }
+.cv-ilgili li { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 13px; color: var(--color-ink-2); }
+.cv-ilgili li span { min-width: 0; overflow-wrap: anywhere; }
+.cv-ilgili b { color: var(--color-ink); font-weight: 600; }

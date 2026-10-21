@@ -39,5 +39,15 @@ for (const r of ROTALAR) {
 }
 await kapsamKur(); for (const r of Object.keys(ham)) rapor[r].eksik = ham[r].filter((x) => !kapsam.has(x.u) && !kapsam.has(x.u.split('?')[0]) && x.tur !== 'Document').map((x) => `${x.tur} ${x.u}`);
 fs.writeFileSync(OUT.replace('.json', '_ham.json'), JSON.stringify(ham));
+// Bilerek pakete girmeyenler: canlı akış/kişisel/yapay zekâ uçları ve internetsizken ekranın kendi yedeğiyle çalışan canlı katman
+const BILEREK = [
+  /^\/api\/(realtime|presence|live|ai|ai-test|music|notes|user-data|learn\/(social|feedback)|audit|surum|basarim|gemini-v3|search|transcriptions|cevrimdisi\/katalog)\b/,
+  /^\/api\/(content\/(manifest|deck-catalog|glossary)|committees|questions|pool-clusters|past-exams|past-question-reviews|learn-match-index|learn-links|db\/query|decks\/|diseases\/[^/]+\/insights)/,
+  /^\/api\/canli-ders/, // sesli ders kendi sistemiyle iner (sesli:<key>)
+];
+const yeni = new Set();
+for (const r of Object.keys(rapor)) { rapor[r].eksik = rapor[r].eksik.filter((e) => { const u = e.split(' ')[1]; return !BILEREK.some((re) => re.test(u)); }); rapor[r].eksik.forEach((e) => yeni.add(e)); }
+console.log(yeni.size ? `KAPSAM DIŞI ${yeni.size} adres:\n  ${[...yeni].join('\n  ')}` : 'Kapsam tam: bilerek çevrimiçi olanlar dışında eksik adres yok');
+process.exitCode = yeni.size ? 1 : 0;
 fs.writeFileSync(OUT, JSON.stringify(rapor, null, 1));
-t.kapat(); process.exit(0);
+t.kapat(); process.exit(process.exitCode || 0);

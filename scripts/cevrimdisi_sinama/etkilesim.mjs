@@ -4,8 +4,8 @@
 import fs from 'node:fs';
 import { tarayici, sleep, ag } from './cdp.mjs';
 const BASE = 'http://localhost:3100';
-const OUT = process.env.OUT || '/tmp/claude-1000/cevrimdisi-sinama';
-const PROFIL = process.env.PROFIL || '/tmp/claude-1000/cevrimdisi-profil';
+const OUT = process.env.OUT || `${process.env.HOME}/.cache/medsor-cevrimdisi/cikti`;
+const PROFIL = process.env.PROFIL || `${process.env.HOME}/.cache/medsor-cevrimdisi/profil`;
 const paketler = JSON.parse(fs.readFileSync(`${OUT}/paketler.json`, 'utf8'));
 const pk = (onek) => paketler.find((x) => x.startsWith(onek))?.split(':');
 const [, cBrans, cKod] = pk('cozucu:') || [];

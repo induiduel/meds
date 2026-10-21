@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { CloudDownload, CloudCheck, WifiOff } from 'lucide-react';
 import { offlineDatabaseService, OfflineState } from '../../services/offlineDatabaseService';
+import { paketDurumu, useCevrimdisi } from '../../services/cevrimdisi/paketMotoru';
+import { sayfaPaketleri } from '../../services/cevrimdisi/sayfaPaketleri';
+import { navigateTo } from '../../router';
 
 interface OfflineStatusBadgeProps {
   onClick: () => void;
@@ -13,10 +16,18 @@ interface OfflineStatusBadgeProps {
  * Üst çubuktaki çevrimdışı göstergesi. Öğrenci: sessiz simge, yalnız internet yokken ya da
  * indirme sürerken yazı belirir. Yönetici: durum + boyut + kuyruk tek hapta.
  */
-export const OfflineStatusBadge: React.FC<OfflineStatusBadgeProps> = ({ onClick, className = '', isAdmin }) => {
+export const OfflineStatusBadge: React.FC<OfflineStatusBadgeProps> = ({ onClick: _ilk, className = '', isAdmin }) => {
+  let onClick = _ilk;
   const [o, setO] = useState<OfflineState>(offlineDatabaseService.getState());
   useEffect(() => offlineDatabaseService.subscribe(setO), []);
-  const { isOnline, isDatabaseDownloaded, isDownloading, progress, stats, queuedActionsCount } = o;
+  const { isOnline, isDownloading, progress, stats, queuedActionsCount } = o;
+  // Simge bulunulan sayfaya göre: bu sayfanın paketleri cihazdaysa "hazır"; dokununca Çevrimdışı merkezi bu sayfanın kartıyla açılır
+  const S = useCevrimdisi();
+  const adres = typeof location !== 'undefined' ? location.pathname + location.search : '/';
+  const ids = sayfaPaketleri(adres, S.katalog);
+  const sayfaHazir = ids.length > 0 && ids.every((id) => ['tamam', 'guncelleme'].includes(paketDurumu(id, S)));
+  const isDatabaseDownloaded = ids.length ? sayfaHazir : o.isDatabaseDownloaded;
+  onClick = () => { if (!location.pathname.startsWith('/cevrimdisi')) navigateTo(`/cevrimdisi?sayfa=${encodeURIComponent(adres)}`); };
 
   if (isDownloading) {
     return (
@@ -52,8 +63,8 @@ export const OfflineStatusBadge: React.FC<OfflineStatusBadgeProps> = ({ onClick,
       type="button"
       onClick={onClick}
       className={`of-badge is-icon ${isDatabaseDownloaded ? 'is-ready' : ''} ${className}`}
-      title={isDatabaseDownloaded ? 'Çevrimdışı hazır' : 'Çevrimdışı kullanım için indir'}
-      aria-label={isDatabaseDownloaded ? 'Çevrimdışı hazır' : 'Çevrimdışı kullanım için indir'}
+      title={isDatabaseDownloaded ? 'Bu sayfa çevrimdışı hazır' : 'Bu sayfayı çevrimdışı kullan'}
+      aria-label={isDatabaseDownloaded ? 'Bu sayfa çevrimdışı hazır' : 'Bu sayfayı çevrimdışı kullan'}
     >
       {isDatabaseDownloaded ? <CloudCheck aria-hidden /> : <CloudDownload aria-hidden />}
     </button>

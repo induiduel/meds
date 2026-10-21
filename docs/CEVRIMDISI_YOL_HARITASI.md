@@ -56,11 +56,17 @@ olaylar (SSE), yönetim paneli, soru ekleme gönderimi (kuyruğa alınır, bağl
 
 Çalıştırma: `node scripts/cevrimdisi_sinama/vekil.mjs &` sonra `node scripts/cevrimdisi_sinama/sinama.mjs && node scripts/cevrimdisi_sinama/etkilesim.mjs`.
 
-## 4. Yol haritası (kalanlar)
+## 4. Yol haritası
 
-- [ ] Sınama sonuçlarındaki kalan eksikler (etkileşim senaryoları) — `DEGISIKLIK_KAYDI.md`'de güncel durum.
-- [ ] Oracle'da (gerçek SW, HTTPS, telefon) uçak modu sınaması: sesli ders + çözücü + Öğren PDF.
-- [ ] "Bu sayfayı çevrimdışı kullan" kısayolu: liste ekranlarında sayfanın gerektirdiği paket kümesini tek dokunuşla indir.
-- [ ] Bağımlılık alanının genişletilmesi (ör. Öğren dersi → aynı dersin çözücü/asistan paketleri isteğe bağlı öneri).
-- [ ] Gece hattı yeni bir içerik türü eklediğinde katalog kapsam denetimi: `envanter.mjs` çıktısında "eksik" API'ler 0 olmalı
-      (bilerek çevrimiçi olanlar hariç listesiyle).
+- [x] Sınama sonuçlarındaki eksikler: 34/34 rota, 13/13 etkileşim (2026-10-21).
+- [x] "Bu sayfayı çevrimdışı kullan": üst çubuktaki bulut simgesi bulunulan sayfanın paketlerine bakar (hazırsa ✓), dokununca
+      `/cevrimdisi?sayfa=<adres>` → "Bu sayfa" kartı: durum, boyut, tek dokunuşla İndir. Eşleme `services/cevrimdisi/sayfaPaketleri.ts`.
+- [x] İlgili paketler (`ilgili`, öneri): `cozucu_ogren` eşlemesinden Öğren destesi ↔ aynı dersin soru çözücü / en önemliler
+      paketleri (pay ≥%30); "Bu sayfa" kartında "Ekle" ile önerilir (239 paket).
+- [x] Kapsam denetimi: `envanter.mjs` bilerek çevrimiçi uçlar (BILEREK listesi) dışında pakete girmeyen adres bulursa
+      listeler ve 1 ile çıkar. Yeni içerik türü eklenince çalıştır.
+- [x] Canlı veriyle sınama: `HEDEF=https://nofrostlife.com.tr node vekil.mjs` → `sinama.mjs` / `etkilesim.mjs` (OUT/PROFIL ayrı).
+- [x] Canlı sınama sonucu (2026-10-21): 34/34 rota, TBG kampı bağımlı sesli dersiyle dolu açıldı; 12/13 etkileşim — deneme
+      sınavı ATP kilidi (KilitKapisi) internetsizken iskelette kalıyordu → açık kilitler cihazda saklanır (`medsoru_basarim_kilit_v1:<uid>`),
+      açılmamışsa "internet gerekir" bilgisi.
+- [ ] Telefonda (iOS Safari / Android Chrome) uçak modu turu — elle.

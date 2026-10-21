@@ -5,12 +5,12 @@
 import fs from 'node:fs';
 import { tarayici, sleep, SEED, ag } from './cdp.mjs';
 const BASE = 'http://localhost:3100';
-const OUT = process.env.OUT || '/tmp/claude-1000/cevrimdisi-sinama';
-const PROFIL = process.env.PROFIL || '/tmp/claude-1000/cevrimdisi-profil';
+const OUT = process.env.OUT || `${process.env.HOME}/.cache/medsor-cevrimdisi/cikti`;
+const PROFIL = process.env.PROFIL || `${process.env.HOME}/.cache/medsor-cevrimdisi/profil`;
 fs.mkdirSync(OUT, { recursive: true });
 const gizli = (fs.readFileSync(new URL('../../.env', import.meta.url), 'utf8').match(/^MEDS_PANEL_SECRET=(.*)$/m) || [])[1]?.trim().replace(/^"|"$/g, '');
 await ag(false);
-const t = await tarayici({ profil: PROFIL, temiz: !process.env.ATLA_INDIR });
+const t = await tarayici({ profil: PROFIL, temiz: !process.env.ATLA_INDIR && !process.env.DEVAM });
 // Giriş kapısı: yapay zekâ test erişimi çevrimiçiyken çerezle; internetsizken durum sorusu sınama aracınca yanıtlanır
 await t.send('Fetch.enable', { patterns: [{ urlPattern: '*/api/ai-test/durum*' }] });
 t.on((m, p) => { if (m === 'Fetch.requestPaused') t.send('Fetch.fulfillRequest', { requestId: p.requestId, responseCode: 200, responseHeaders: [{ name: 'Content-Type', value: 'application/json' }], body: Buffer.from('{"ok":true}').toString('base64') }).catch(() => {}); });
@@ -51,7 +51,7 @@ if (!process.env.ATLA_INDIR) {
     await sleep(3000);
     const d = await t.ev(`(()=>{const s=${M}.durumAl();return {k:s.kuyruk.length,a:s.aktif&&s.aktif.id,d:${JSON.stringify(['uygulama', ...PAKETLER])}.map(id=>id+':'+${M}.paketDurumu(id))}})()`);
     if (!d.k && !d.a) { console.log(d.d.join(' ')); break; }
-    if (Date.now() - t0 > 20 * 60_000) { console.log('ZAMAN AŞIMI', d); break; }
+    if (Date.now() - t0 > Number(process.env.SURE_DK || 20) * 60_000) { console.log('ZAMAN AŞIMI', d); break; }
   }
 }
 const kayit = await t.ev(`Object.fromEntries(Object.entries(${M}.durumAl().kayitlar).map(([k,v])=>[k,v.yarim?'YARIM':'tamam']))`);
