@@ -9,6 +9,7 @@
 #   · origin/main'in en güncel hâlini temiz worktree'ye (/home/indu/medsor/meds-dagitim) alır — çalışma ağacından
 #     derlemez, başka oturumların yarım işi canlıya çıkmaz
 #   · canlı (dist/dagitim.json) kirli dağıtılmışsa ya da canlı commit hedefte yoksa DURUR (geri alma yok)
+#   · server.ts'ten ulaşılan bir import dosyası commit'te yoksa durur (import_denetimi.mjs)
 #   · guncelleme_notu.json `onem` canlıdakinden büyük değilse durur (Kural 13; yalnız küçük düzeltme: --sessiz)
 #   · deploy-code.sh'ı onaylı modda çalıştırır; eşitlemenin ([0] yayinla --esitle) attığı commit'i origin/main'e gönderir
 set -euo pipefail
@@ -42,6 +43,8 @@ fi
 if [[ "$CANLI" == "$HEDEF" ]]; then echo "Canlı zaten güncel (${HEDEF:0:8})."; exit 0; fi
 
 git -C "$WT" checkout -q -f --detach "$HEDEF"
+# commit'lenmemiş dosyaya import → canlı açılış çökmesi (2026-10-21)
+node "$WT/deploy/oracle/import_denetimi.mjs" "$WT" server.ts || exit 76
 YENI_ONEM="$(python3 -c 'import json,sys;print(json.load(open(sys.argv[1]))["onem"])' "$WT/guncelleme_notu.json")"
 CANLI_ONEM="$(curl -s -m 15 https://api.nofrostlife.com.tr/api/surum | python3 -c 'import json,sys;print(json.load(sys.stdin).get("onem",0))' 2>/dev/null || echo 0)"
 if [[ "$SESSIZ" == "0" && "$YENI_ONEM" -le "$CANLI_ONEM" ]]; then
