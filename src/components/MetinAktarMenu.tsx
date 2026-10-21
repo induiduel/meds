@@ -45,7 +45,7 @@ export function MetinAktarMenu({ belge, dosyaAdi, dugmeSinif = 'cd-btn', etiket 
             </button>
           ))}
           <div className="cd-aktar-duzen">
-            <small>PDF sayfa düzeni</small>
+            <small>PDF ayarları</small>
             <PdfDuzenSecici ad="cd-aktar-duzen" deger={duzen} onDegis={setDuzen} />
           </div>
           {hata && <p className="cd-aktar-hata" role="alert">{hata}</p>}

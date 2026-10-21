@@ -15,3 +15,45 @@
 .pdz-ek select { min-height: 32px; padding: 0 6px; border: 1px solid var(--color-line); border-radius: 8px; background: var(--color-white); color: var(--color-ink); font: inherit; }
 .pdz-kutu input { width: 16px; height: 16px; margin: 0; accent-color: var(--color-accent); }
 @media (max-width: 360px) { .pdz-nup-ops { font-size: 11.5px; padding: 8px 2px; } }
+
+/* v2: şablonlar + önizleme + sekmeli ayarlar */
+.pdz-sablon { display: grid; grid-template-columns: repeat(auto-fit, minmax(128px, 1fr)); gap: 6px; }
+.pdz-sablon button { display: grid; gap: 2px; padding: 8px 10px; text-align: left; border: 1px solid var(--color-line); border-radius: 10px; background: transparent; color: var(--color-ink); font: inherit; cursor: pointer; }
+.pdz-sablon button b { font-size: 13px; }
+.pdz-sablon button small { font-size: 11.5px; color: var(--color-ink-3); line-height: 1.25; }
+.pdz-sablon button.is-on { border-color: var(--color-accent); background: color-mix(in srgb, var(--color-accent) 10%, transparent); }
+.pdz-govde { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 12px; align-items: start; }
+.pdz-oniz { width: 96px; height: auto; position: sticky; top: 0; filter: drop-shadow(0 2px 6px rgb(0 0 0 / 0.12)); }
+.pdz-panel { display: grid; gap: 8px; min-width: 0; }
+.pdz-sekmeler { display: flex; align-items: center; gap: 2px; padding: 3px; border-radius: 10px; background: color-mix(in srgb, var(--color-ink) 6%, transparent); }
+.pdz-sekmeler button { flex: 1; min-height: 30px; border: 0; border-radius: 8px; background: transparent; color: var(--color-ink-2, var(--color-ink)); font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; }
+.pdz-sekmeler button.is-on { background: var(--color-white); color: var(--color-ink); box-shadow: 0 1px 3px rgb(0 0 0 / 0.12); }
+.pdz-sekmeler .pdz-sifirla { flex: 0 0 30px; display: grid; place-items: center; color: var(--color-ink-3); }
+.pdz-sifirla svg { width: 15px; height: 15px; }
+.pdz-icerik { display: grid; gap: 10px; }
+.pdz-satir { display: grid; gap: 4px; }
+.pdz-etiket { font-size: 12px; font-weight: 600; color: var(--color-ink-3); }
+.pdz-seg { display: flex; flex-wrap: wrap; gap: 4px; }
+.pdz-seg button { min-height: 30px; padding: 0 10px; border: 1px solid var(--color-line); border-radius: 8px; background: transparent; color: var(--color-ink); font: inherit; font-size: 13px; cursor: pointer; }
+.pdz-seg button.is-on { border-color: var(--color-accent); background: var(--color-accent); color: var(--color-white); font-weight: 600; }
+.pdz-girdi { min-height: 32px; padding: 0 10px; border: 1px solid var(--color-line); border-radius: 8px; background: var(--color-white); color: var(--color-ink); font: inherit; font-size: 13px; width: 100%; box-sizing: border-box; }
+.pdz-renkler { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; }
+.pdz-renkler button { display: flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 8px; border: 1px solid var(--color-line); border-radius: 8px; background: transparent; color: var(--color-ink); font: inherit; font-size: 12.5px; cursor: pointer; min-width: 0; }
+.pdz-renkler button span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pdz-renkler button i { flex: 0 0 14px; height: 14px; border-radius: 50%; }
+.pdz-renkler button.is-on { border-color: var(--color-accent); box-shadow: inset 0 0 0 1px var(--color-accent); font-weight: 600; }
+.pdz-anahtar { position: relative; display: flex; align-items: flex-start; gap: 10px; cursor: pointer; font-size: 13px; }
+.pdz-anahtar input { position: absolute; opacity: 0; pointer-events: none; }
+.pdz-anahtar-yuva { flex: 0 0 34px; height: 20px; margin-top: 1px; border-radius: 10px; background: color-mix(in srgb, var(--color-ink) 22%, transparent); position: relative; transition: background 0.15s; }
+.pdz-anahtar-yuva::after { content: ''; position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; border-radius: 50%; background: #fff; box-shadow: 0 1px 2px rgb(0 0 0 / 0.25); transition: transform 0.15s; }
+.pdz-anahtar input:checked + .pdz-anahtar-yuva { background: var(--color-accent); }
+.pdz-anahtar input:checked + .pdz-anahtar-yuva::after { transform: translateX(14px); }
+.pdz-anahtar input:focus-visible + .pdz-anahtar-yuva { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.pdz-anahtar > span:last-child { display: grid; gap: 1px; }
+.pdz-anahtar small { font-size: 11.5px; color: var(--color-ink-3); }
+.pdz-seg button:focus-visible, .pdz-sablon button:focus-visible, .pdz-renkler button:focus-visible, .pdz-sekmeler button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+@media (max-width: 420px) {
+  .pdz-govde { grid-template-columns: 1fr; }
+  .pdz-oniz { position: static; width: 72px; justify-self: center; }
+  .pdz-renkler { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

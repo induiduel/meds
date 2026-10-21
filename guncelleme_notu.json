@@ -1,16 +1,18 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 217,
-  "baslik": "Sesli ders: işaret ve birimler de yazılı biçimde",
+  "onem": 218,
+  "baslik": "PDF indirme: yeni ayarlar ve şablonlar",
   "maddeler": [
-    "Sesli ders metninde okunuş yerine yazım gösteriliyor: “iki tire beş” → 2-5, “mili ünite bölü mililitre” → mIU/mL, “milimetre cıva” → mmHg, “eksi üç” → -3, “kırk yedi XY artı on sekiz” → 47,XY,+18.",
-    "Rakamdan sonra gelen birimler kısaltmayla yazılıyor: 200 mg, 25 mm, 5 µg, 2 kg."
+    "Ders PDF'i indirirken metin ve başlık boyutu, satır aralığı, kenar boşluğu, kâğıt (A4/A5/Letter) seçilebiliyor.",
+    "Altı renk teması, önemli yer işaretlerini açıp kapatma, kapak sayfası, her konuyu yeni sayfada başlatma eklendi.",
+    "Üst bilgi, sayfa numarası yeri, kenar yazısı ve sayfa aralığı (örn. 1-5, 8) seçilebiliyor; hazır şablonlar ve canlı önizleme var."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "Ders PDF'i indirirken metin ve başlık boyutu, satır aralığı, kenar boşluğu, kâğıt (A4/A5/Letter) seçilebiliyor.",
+    "Altı renk teması, önemli yer işaretlerini açıp kapatma, kapak sayfası, her konuyu yeni sayfada başlatma eklendi.",
+    "Üst bilgi, sayfa numarası yeri, kenar yazısı ve sayfa aralığı (örn. 1-5, 8) seçilebiliyor; hazır şablonlar ve canlı önizleme var."
+  ],
   "degisen": [],
-  "duzeltilen": [
-    "Sesli ders metninde okunuş yerine yazım gösteriliyor: “iki tire beş” → 2-5, “mili ünite bölü mililitre” → mIU/mL, “milimetre cıva” → mmHg, “eksi üç” → -3, “kırk yedi XY artı on sekiz” → 47,XY,+18.",
-    "Rakamdan sonra gelen birimler kısaltmayla yazılıyor: 200 mg, 25 mm, 5 µg, 2 kg."
-  ],
+  "duzeltilen": [],
   "silinen": []
 }

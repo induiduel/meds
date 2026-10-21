@@ -92,7 +92,7 @@ function TopluPdfDiyalog({ ad, ogeler, belgeAl, secenek, altMetin, onKapat }: To
     const ayar: TopluAyar = { vurgu: !!secenek?.vurgu && vurgu, basliklar: !!secenek?.basliklar && basliklar };
     const { metinDosyasi: hamPdf, zipIkili } = await import('../../services/metinDisaAktar');
     const { pdfDuzenle } = await import('../../services/pdfDuzen');
-    const metinDosyasi = async (b: AktarBelge, f: 'pdf') => pdfDuzenle(await hamPdf(b, f), duzen);
+    const metinDosyasi = async (b: AktarBelge, f: 'pdf') => pdfDuzenle(await hamPdf(b, f, duzen), duzen);
     const dosyalar: [string, Uint8Array][] = [];
     const birlesik: AktarBolum[] = [];
     const icindekiler: string[] = [];
@@ -160,7 +160,7 @@ function TopluPdfDiyalog({ ad, ogeler, belgeAl, secenek, altMetin, onKapat }: To
 
           <fieldset className="tp-ayar" disabled={calisiyor}>
             <legend className="tp-gizli">Sayfa düzeni</legend>
-            <b className="tp-alt-baslik">Sayfa düzeni <small>{duzen.nup > 1 ? duzenEtiketi(duzen) : 'tek yaprakta bir sayfa'}</small></b>
+            <b className="tp-alt-baslik">PDF ayarları <small>{duzenEtiketi(duzen) || "tek yaprakta bir sayfa"}</small></b>
             <PdfDuzenSecici ad="tp-duzen" deger={duzen} onDegis={setDuzen} />
           </fieldset>
 

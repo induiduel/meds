@@ -7,6 +7,7 @@
  * DOCX bağımlılıksız (sıkıştırmasız ZIP + WordprocessingML), PDF jsPDF + Türkçe Liberation fontuyla üretilir.
  */
 import { setupPdfFonts } from './drive';
+import { VARSAYILAN_STIL, type PdfStil } from './pdfDuzen';
 
 export type AktarBicim = 'txt' | 'md' | 'docx' | 'pdf';
 export interface AktarBolum {
@@ -214,17 +215,28 @@ export function zipIkili(dosyalar: [string, Uint8Array][], tip = 'application/zi
 /* ---------------- PDF ---------------- */
 
 type RGB = readonly [number, number, number];
-const INK: RGB = [14, 26, 38], SOL: RGB = [118, 130, 143], VURGU: RGB = [13, 110, 150], KIRMIZI: RGB = [200, 38, 45], MARKER: RGB = [255, 233, 128], CIZGI: RGB = [214, 220, 227];
+const TEMA_RENK: Record<PdfStil['renk'], RGB> = {
+  mavi: [13, 110, 150], yesil: [22, 120, 82], mor: [104, 64, 168], bordo: [150, 36, 58], turuncu: [190, 92, 20], murekkep: [40, 40, 40],
+};
+const INK: RGB = [14, 26, 38], SOL: RGB = [118, 130, 143], KIRMIZI0: RGB = [200, 38, 45], MARKER: RGB = [255, 233, 128], CIZGI: RGB = [214, 220, 227];
 
-async function pdf(b: AktarBelge): Promise<Blob> {
+async function pdf(b: AktarBelge, gorunum?: PdfStil): Promise<Blob> {
+  const S = { ...VARSAYILAN_STIL, ...gorunum };
+  const k = { kucuk: 0.88, normal: 1, buyuk: 1.12, cokbuyuk: 1.26 }[S.yaziBoyutu];
+  const hk = k * { kucuk: 0.9, normal: 1, buyuk: 1.12 }[S.baslikBoyutu];
+  const PT = { govde: 10.5 * k, alt: 11.2 * hk, kucuk: 9.5 * k, not: 10 * k, tablo: 9 * k, belge: 19 * hk, ders: 17 * hk, bolum: (b.dersDuzeni ? 15.5 : 13) * hk };
+  const VURGU = TEMA_RENK[S.renk];
+  const KIRMIZI: RGB = S.renk === 'murekkep' ? INK : KIRMIZI0;
+  const NOT_ZEMIN: RGB = S.renk === 'murekkep' ? [244, 244, 244] : [Math.round(255 - (255 - VURGU[0]) * 0.08), Math.round(255 - (255 - VURGU[1]) * 0.08), Math.round(255 - (255 - VURGU[2]) * 0.08)];
   const { jsPDF } = await import('jspdf');
-  const doc = new jsPDF({ unit: 'mm', format: 'a4', compress: true });
+  const doc = new jsPDF({ unit: 'mm', format: S.kagit, compress: true });
   const { font: F, T } = await setupPdfFonts(doc);
   const W = doc.internal.pageSize.getWidth(), H = doc.internal.pageSize.getHeight();
-  const M = 18, CW = W - 2 * M, ALT = H - 16;
-  let y = M;
-  const lh = (pt: number) => pt * 0.3528 * 1.4;
-  const yer = (h: number) => { if (y + h > ALT) { doc.addPage(); y = M; return true; } return false; };
+  const M = { dar: 11, normal: 18, genis: 25 }[S.kenar], CW = W - 2 * M, ALT = H - (S.altBilgi === 'yok' ? 10 : 16);
+  const UST = M + (S.ustBilgi ? 5 : 0);
+  let y = UST;
+  const lh = (pt: number) => pt * 0.3528 * { sik: 1.25, normal: 1.4, ferah: 1.6 }[S.satirAraligi];
+  const yer = (h: number) => { if (y + h > ALT) { doc.addPage(); y = UST; return true; } return false; };
   const stil = (r: Run) => (r.b || r.m ? (r.i ? 'bolditalic' : 'bold') : r.i ? 'italic' : 'normal');
   const fontAyar = (r: Run, pt: number) => {
     const s = stil(r);
@@ -262,30 +274,30 @@ async function pdf(b: AktarBelge): Promise<Blob> {
     let cx = x;
     s.forEach((k, i) => {
       const sonraki = i < s.length - 1 && k.bosluk ? sp : 0;
-      if (k.r.m) {
+      if (k.r.m && S.vurgu) {
         const devam = i < s.length - 1 && s[i + 1].r.m ? sonraki : 0;
         doc.setFillColor(...MARKER); doc.rect(cx - 0.3, yy - pt * 0.3528 * 0.8, k.w + devam + 0.6, pt * 0.3528 * 1.05, 'F');
       }
       fontAyar(k.r, pt);
-      doc.setTextColor(...(k.r.m ? KIRMIZI : renk));
+      doc.setTextColor(...(k.r.m && S.vurgu ? KIRMIZI : renk));
       doc.text(k.t, cx, yy);
       cx += k.w + sonraki;
     });
   };
   const hesaplaBlokH = (x: Blok): number => {
     if (x.tur === 'h') {
-      return satirla(x.r.map((r) => ({ ...r, b: true })), CW, 11.2).length * lh(11.2) + 2.3;
+      return satirla(x.r.map((r) => ({ ...r, b: true })), CW, PT.alt).length * lh(PT.alt) + 2.3;
     }
     if (x.tur === 'p') {
-      return satirla(x.r, CW, 10.5).length * lh(10.5) + 1.8;
+      return satirla(x.r, CW, PT.govde).length * lh(PT.govde) + 1.8;
     }
     if (x.tur === 'li') {
       const ic = x.isaret === '•' ? 5 : b.dersDuzeni ? 8 : 6.5;
       const gen = CW - ic - x.dz * 5;
-      return satirla(x.r, gen, 10.5).length * lh(10.5) + (x.dz ? 1 : 1.8);
+      return satirla(x.r, gen, PT.govde).length * lh(PT.govde) + (x.dz ? 1 : 1.8);
     }
     if (x.tur === 'not') {
-      const pt = 10, gen = CW - 9;
+      const pt = PT.not, gen = CW - 9;
       const satirlar = x.satirlar.map((r, i) =>
         satirla(i === 0 && x.etiket ? [{ t: `${x.etiket}: `, b: true }, ...r] : r, gen, pt)
       );
@@ -293,7 +305,7 @@ async function pdf(b: AktarBelge): Promise<Blob> {
     }
     if (x.tur === 'tablo') {
       const sut = Math.max(...x.satirlar.map((r) => r.length), 1);
-      const cw = CW / sut, pt = 9, pad = 1.6;
+      const cw = CW / sut, pt = PT.tablo, pad = 1.6;
       let th = 4;
       for (let ri = 0; ri < x.satirlar.length; ri++) {
         const r = x.satirlar[ri];
@@ -324,15 +336,15 @@ async function pdf(b: AktarBelge): Promise<Blob> {
   };
   /** Küme sayfaya sığıyor ama kalan yere sığmıyorsa yeni sayfa; alt başlık kümesi sığmıyorsa içindeki madde kümelerine bakılır */
   const kumeyiTut = (dz: Blok[], i: number) => {
-    if (!b.dersDuzeni || y <= M) return;
+    if (!b.dersDuzeni || y <= UST) return;
     const x = dz[i];
     if (x.tur !== 'h' && !(x.tur === 'li' && x.dz === 0)) return;
     const h = kumeH(dz, i, kumeBitis(dz, i));
-    if (h <= ALT - M) { if (y + h > ALT) { doc.addPage(); y = M; } return; }
+    if (h <= ALT - UST) { if (y + h > ALT) { doc.addPage(); y = UST; } return; }
     // Alt başlık kümesi tek sayfayı aşıyor: başlık ilk madde kümesiyle birlikte
     if (x.tur === 'h' && i + 1 < dz.length) {
       const ilk = kumeH(dz, i, kumeBitis(dz, i + 1));
-      if (ilk <= ALT - M && y + ilk > ALT) { doc.addPage(); y = M; }
+      if (ilk <= ALT - UST && y + ilk > ALT) { doc.addPage(); y = UST; }
     }
   };
 
@@ -352,16 +364,16 @@ async function pdf(b: AktarBelge): Promise<Blob> {
 
     // Paragraf veya madde tek bir sayfaya sığıyorsa ve mevcut sayfada kalan yere sığmıyorsa:
     // Cümleyi/paragrafı yarıda kesme, doğrudan yeni sayfada başlat!
-    if (blokH <= ALT - M && y + blokH > ALT) {
+    if (blokH <= ALT - UST && y + blokH > ALT) {
       doc.addPage();
-      y = M;
+      y = UST;
     }
 
     once?.();
     for (const s of sat) {
       if (y + lh(pt) > ALT) {
         doc.addPage();
-        y = M;
+        y = UST;
       }
       satirCiz(s, x, y + pt * 0.3528, pt, renk);
       y += lh(pt);
@@ -369,31 +381,49 @@ async function pdf(b: AktarBelge): Promise<Blob> {
     y += ekstraAltBosluk;
   };
 
-  akit([{ t: b.baslik, b: true }], M, CW, 19, INK, undefined, 0);
-  doc.setFont(F, 'normal'); doc.setFontSize(9.5); doc.setTextColor(...SOL);
-  doc.text(T(b.alt), M, y + 3); y += 5.5;
-  doc.setDrawColor(...CIZGI); doc.setLineWidth(0.3); doc.line(M, y, W - M, y); y += 5;
+  y = UST;
+  if (S.kapak) {
+    // Kapak sayfası: renkli şerit, ortalanmış başlık, alt satır ve tarih
+    doc.setFillColor(...VURGU); doc.rect(0, 0, W, 9, 'F');
+    doc.setFont(F, 'bold'); doc.setFontSize(PT.belge * 1.35); doc.setTextColor(...INK);
+    const ks = doc.splitTextToSize(T(b.baslik), CW) as string[];
+    let ky = H * 0.38;
+    ks.forEach((t) => { doc.text(t, W / 2, ky, { align: 'center' }); ky += lh(PT.belge * 1.35); });
+    doc.setDrawColor(...VURGU); doc.setLineWidth(0.8); doc.line(W / 2 - 20, ky, W / 2 + 20, ky); ky += 9;
+    doc.setFont(F, 'normal'); doc.setFontSize(11); doc.setTextColor(...SOL);
+    (doc.splitTextToSize(T(b.alt), CW) as string[]).forEach((t) => { doc.text(t, W / 2, ky, { align: 'center' }); ky += 5.5; });
+    doc.text(new Date().toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }), W / 2, H - 28, { align: 'center' });
+    doc.addPage(); y = UST;
+  } else {
+    akit([{ t: b.baslik, b: true }], M, CW, PT.belge, INK, undefined, 0);
+    doc.setFont(F, 'normal'); doc.setFontSize(PT.kucuk); doc.setTextColor(...SOL);
+    doc.text(T(b.alt), M, y + 3); y += 5.5;
+    doc.setDrawColor(...CIZGI); doc.setLineWidth(0.3); doc.line(M, y, W - M, y); y += 5;
+  }
+  let ilkBolum = true;
 
   for (const bo of b.bolumler) {
     const blokDizisi = bloklar(bo.md);
     if (bo.ders) {
       // Birleşik belge: her ders yeni sayfada, belge başlığı biçiminde; PDF yer imi (içindekiler) eklenir
-      if (y > M + 1) { doc.addPage(); y = M; }
-      akit([{ t: bo.ders.baslik, b: true }], M, CW, 17, INK, undefined, 0);
-      doc.setFont(F, 'normal'); doc.setFontSize(9.5); doc.setTextColor(...SOL);
+      if (y > UST + 1) { doc.addPage(); y = UST; }
+      akit([{ t: bo.ders.baslik, b: true }], M, CW, PT.ders, INK, undefined, 0);
+      doc.setFont(F, 'normal'); doc.setFontSize(PT.kucuk); doc.setTextColor(...SOL);
       doc.text(T(bo.ders.alt), M, y + 3); y += 5.5;
       doc.setDrawColor(...CIZGI); doc.setLineWidth(0.3); doc.line(M, y, W - M, y); y += 5;
       try { (doc as unknown as { outline?: { add: (p: unknown, t: string, o: { pageNumber: number }) => void } }).outline?.add(null, T(bo.ders.baslik), { pageNumber: doc.getNumberOfPages() }); } catch { /* yer imi desteklenmiyor */ }
     }
+    if (S.bolumYeniSayfa && !ilkBolum && !bo.ders && y > UST + 1) { doc.addPage(); y = UST; }
+    ilkBolum = false;
     if (bo.baslik) {
       // dersDuzeni: bölüm başlığı slayt alt başlıklarından belirgin büyük
-      const BP = b.dersDuzeni ? 15.5 : 13;
+      const BP = PT.bolum;
       doc.setFont(F, 'bold'); doc.setFontSize(BP);
       const s = doc.splitTextToSize(T(bo.baslik), CW - 4) as string[];
       const hBaslik = s.length * lh(BP) + 4.5;
-      const hAlt = bo.alt ? satirla([{ t: bo.alt, i: true }], CW - 3.5, 9.5).length * lh(9.5) + 1 : 0;
+      const hAlt = bo.alt ? satirla([{ t: bo.alt, i: true }], CW - 3.5, PT.kucuk).length * lh(PT.kucuk) + 1 : 0;
       const hIlk = !blokDizisi.length ? 20
-        : b.dersDuzeni && (blokDizisi[0].tur === 'h' || blokDizisi[0].tur === 'li') && kumeH(blokDizisi, 0, kumeBitis(blokDizisi, 0)) <= ALT - M - 30
+        : b.dersDuzeni && (blokDizisi[0].tur === 'h' || blokDizisi[0].tur === 'li') && kumeH(blokDizisi, 0, kumeBitis(blokDizisi, 0)) <= ALT - UST - 30
           ? kumeH(blokDizisi, 0, kumeBitis(blokDizisi, 0))
           : hesaplaBlokH(blokDizisi[0]);
 
@@ -402,10 +432,10 @@ async function pdf(b: AktarBelge): Promise<Blob> {
       // (+1: başlıktan sonraki boşluk, +2: yuvarlama payı — başlık sayfa sonunda yalnız kalmasın)
       // dersDuzeni: bölümün tamamı bir sayfaya sığıyorsa bölünmez (sayfa sayısı artabilir)
       const hTum = b.dersDuzeni && blokDizisi.length ? hBaslik + hAlt + 1 + kumeH(blokDizisi, 0, blokDizisi.length) : Infinity;
-      if (y > M && hTum <= ALT - M && y + hTum > ALT) { doc.addPage(); y = M; }
-      if (y > M && (y + hBaslik + hAlt + 1 + hIlk + 2 > ALT || ALT - y < 45)) {
+      if (y > UST && hTum <= ALT - UST && y + hTum > ALT) { doc.addPage(); y = UST; }
+      if (y > UST && (y + hBaslik + hAlt + 1 + hIlk + 2 > ALT || ALT - y < 45)) {
         doc.addPage();
-        y = M;
+        y = UST;
       }
 
       y += 3;
@@ -417,7 +447,7 @@ async function pdf(b: AktarBelge): Promise<Blob> {
       if (b.dersDuzeni) { doc.setDrawColor(...CIZGI); doc.setLineWidth(0.3); doc.line(M, y + 0.5, W - M, y + 0.5); y += 2.5; }
     }
     if (bo.alt) {
-      akit([{ t: bo.alt, i: true }], M + 3.5, CW - 3.5, 9.5, SOL, undefined, 1);
+      akit([{ t: bo.alt, i: true }], M + 3.5, CW - 3.5, PT.kucuk, SOL, undefined, 1);
     }
     y += 1;
 
@@ -427,26 +457,26 @@ async function pdf(b: AktarBelge): Promise<Blob> {
       if (x.tur === 'h') {
         const sonrakiBlok = blokDizisi[bIdx + 1];
         const sonrakiH = sonrakiBlok ? hesaplaBlokH(sonrakiBlok) : 15;
-        const baslikSatirlar = satirla(x.r.map((r) => ({ ...r, b: true })), CW, 11.2);
-        const baslikH = baslikSatirlar.length * lh(11.2) + 2.3;
+        const baslikSatirlar = satirla(x.r.map((r) => ({ ...r, b: true })), CW, PT.alt);
+        const baslikH = baslikSatirlar.length * lh(PT.alt) + 2.3;
 
         // Alt başlık + sonraki blok mevcut sayfaya sığmıyorsa yeni sayfada başlat
         // Sonraki blok tek sayfaya sığıyorsa bütün taşınır; o yüzden başlık onun tamamıyla birlikte ölçülür
-        if (y > M && y + 1.5 + baslikH + (sonrakiH <= ALT - M ? sonrakiH : 35) + 2 > ALT) {
+        if (y > UST && y + 1.5 + baslikH + (sonrakiH <= ALT - UST ? sonrakiH : 35) + 2 > ALT) {
           doc.addPage();
-          y = M;
+          y = UST;
         }
         y += 1.5;
-        akit(x.r.map((r) => ({ ...r, b: true })), M, CW, 11.2, INK, undefined, 0.8);
+        akit(x.r.map((r) => ({ ...r, b: true })), M, CW, PT.alt, INK, undefined, 0.8);
       } else if (x.tur === 'p') {
-        akit(x.r, M, CW, 10.5, INK, undefined, 1.8);
+        akit(x.r, M, CW, PT.govde, INK, undefined, 1.8);
       } else if (x.tur === 'li') {
         const gx = M + x.dz * 5, ic = x.isaret === '•' ? 5 : b.dersDuzeni ? 8 : 6.5;
         akit(
           x.r,
           gx + ic,
           CW - ic - x.dz * 5,
-          10.5,
+          PT.govde,
           INK,
           () => {
             if (x.isaret === '•') {
@@ -458,15 +488,15 @@ async function pdf(b: AktarBelge): Promise<Blob> {
               else doc.circle(gx + 1.3, y + 2.6, x.dz ? 0.6 : 0.75, x.dz ? 'S' : 'F');
             } else {
               doc.setFont(F, 'bold');
-              doc.setFontSize(10.5);
+              doc.setFontSize(PT.govde);
               doc.setTextColor(...VURGU);
-              doc.text(b.dersDuzeni ? x.isaret.replace(/^(\d+)[.)]$/, '$1 -') : x.isaret, gx, y + 3.7);
+              doc.text(b.dersDuzeni ? x.isaret.replace(/^(\d+)[.)]$/, '$1 -') : x.isaret, gx, y + PT.govde * 0.3528);
             }
           },
           x.dz ? 1 : 1.8
         );
       } else if (x.tur === 'not') {
-        const pt = 10, gen = CW - 9;
+        const pt = PT.not, gen = CW - 9;
         const satirlar = x.satirlar.map((r, i) =>
           satirla(i === 0 && x.etiket ? [{ t: `${x.etiket}: `, b: true }, ...r] : r, gen, pt)
         );
@@ -474,20 +504,20 @@ async function pdf(b: AktarBelge): Promise<Blob> {
         const kutuH = tumu.length * lh(pt) + 3;
 
         // Not kutusu tek sayfaya sığıyor ama şu anki sayfaya sığmıyorsa yeni sayfada başlat
-        if (kutuH <= ALT - M && y + kutuH + 2.5 > ALT) {
+        if (kutuH <= ALT - UST && y + kutuH + 2.5 > ALT) {
           doc.addPage();
-          y = M;
+          y = UST;
         }
         y += 1;
         let k = 0;
         while (k < tumu.length) {
           if (y + lh(pt) + 3 > ALT) {
             doc.addPage();
-            y = M;
+            y = UST;
           }
           const sigan = Math.max(1, Math.min(tumu.length - k, Math.floor((ALT - y - 3) / lh(pt))));
           const h = sigan * lh(pt) + 3;
-          doc.setFillColor(238, 245, 249);
+          doc.setFillColor(...NOT_ZEMIN);
           doc.rect(M, y, CW, h, 'F');
           doc.setFillColor(...VURGU);
           doc.rect(M, y, 1.1, h, 'F');
@@ -498,7 +528,7 @@ async function pdf(b: AktarBelge): Promise<Blob> {
         y += 2.5;
       } else if (x.tur === 'tablo') {
         const sut = Math.max(...x.satirlar.map((r) => r.length), 1);
-        const cw = CW / sut, pt = 9, pad = 1.6;
+        const cw = CW / sut, pt = PT.tablo, pad = 1.6;
         const satirVerileri = x.satirlar.map((r, ri) => {
           const hucre = Array.from({ length: sut }, (_, ci) =>
             satirla((r[ci] || []).map((z) => (ri === 0 ? { ...z, b: true } : z)), cw - 2 * pad, pt)
@@ -509,18 +539,18 @@ async function pdf(b: AktarBelge): Promise<Blob> {
         const toplamTabloH = satirVerileri.reduce((acc, row) => acc + row.h, 0);
 
         // Tablo tek sayfaya sığıyor ama mevcut alana sığmıyorsa yeni sayfada başlat
-        if (toplamTabloH <= ALT - M && y + toplamTabloH + 3 > ALT) {
+        if (toplamTabloH <= ALT - UST && y + toplamTabloH + 3 > ALT) {
           doc.addPage();
-          y = M;
+          y = UST;
         }
         y += 1;
         satirVerileri.forEach(({ hucre, h, ri }) => {
           if (y + h > ALT) {
             doc.addPage();
-            y = M;
+            y = UST;
           }
           if (ri === 0) {
-            doc.setFillColor(238, 243, 247);
+            doc.setFillColor(...NOT_ZEMIN);
             doc.rect(M, y, CW, h, 'F');
           }
           doc.setDrawColor(...CIZGI);
@@ -536,26 +566,37 @@ async function pdf(b: AktarBelge): Promise<Blob> {
     }
   }
   const n = doc.getNumberOfPages();
-  for (let i = 1; i <= n; i++) {
+  const kisa = T(b.baslik.length > 90 ? b.baslik.slice(0, 89) + '…' : b.baslik);
+  for (let i = S.kapak ? 2 : 1; i <= n; i++) {
     doc.setPage(i); doc.setFont(F, 'normal'); doc.setFontSize(8.5); doc.setTextColor(...SOL);
-    doc.text(T(b.baslik.length > 90 ? b.baslik.slice(0, 89) + '…' : b.baslik), M, H - 9);
-    doc.text(`${i} / ${n}`, W - M, H - 9, { align: 'right' });
+    const no = S.kapak ? `${i - 1} / ${n - 1}` : `${i} / ${n}`;
+    if (S.ustBilgi) {
+      doc.text(T(S.ustBilgi.slice(0, 120)), M, 9);
+      doc.setDrawColor(...CIZGI); doc.setLineWidth(0.2); doc.line(M, 10.8, W - M, 10.8);
+    }
+    if (S.altBilgi === 'baslik-no') { doc.text(kisa, M, H - 9); doc.text(no, W - M, H - 9, { align: 'right' }); }
+    else if (S.altBilgi === 'no-orta') doc.text(no, W / 2, H - 9, { align: 'center' });
+    else if (S.altBilgi === 'no-sag') doc.text(no, W - M, H - 9, { align: 'right' });
+    if (S.filigran) {
+      doc.setFontSize(9); doc.setTextColor(200, 205, 212);
+      doc.text(T(S.filigran.slice(0, 60)), W - 4, H / 2, { angle: 90, align: 'center' });
+    }
   }
   return doc.output('blob');
 }
 
 /* ---------------- indirme ---------------- */
 
-export async function metinDosyasi(b: AktarBelge, bicim: AktarBicim): Promise<Blob> {
+export async function metinDosyasi(b: AktarBelge, bicim: AktarBicim, stil?: PdfStil): Promise<Blob> {
   return bicim === 'txt' ? new Blob(['﻿' + txt(b)], { type: 'text/plain;charset=utf-8' })
     : bicim === 'md' ? new Blob([md(b)], { type: 'text/markdown;charset=utf-8' })
     : bicim === 'docx' ? zip(docxXml(b))
-    : pdf(b);
+    : pdf(b, stil);
 }
 
 export async function metniIndir(b: AktarBelge, bicim: AktarBicim, dosyaAdi: string, duzen?: import('./pdfDuzen').PdfDuzen): Promise<void> {
-  let blob = await metinDosyasi(b, bicim);
-  if (bicim === 'pdf' && duzen && duzen.nup > 1) blob = await (await import('./pdfDuzen')).pdfDuzenle(blob, duzen);
+  let blob = await metinDosyasi(b, bicim, duzen);
+  if (bicim === 'pdf' && duzen) blob = await (await import('./pdfDuzen')).pdfDuzenle(blob, duzen);
   const ad = dosyaAdi.replace(/[\\/:*?"<>|\u0000-\u001f]/g, '-').replace(/\s+/g, ' ').trim().slice(0, 120);
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
