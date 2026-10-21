@@ -1,20 +1,19 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 213,
-  "baslik": "Bitirdiklerim: konuyu hesaptan çıkar",
+  "onem": 214,
+  "baslik": "Çıkmış çözücü: 347 yeni çıkmış soru",
   "maddeler": [
-    "Bitirdiklerim'de her konunun ⋯ menüsü: \"Başka yerden çalıştım\" (bitti sayılır), \"Çalışmayacağım\" ve \"Sınavda sorusu yok\" (kalan süreden çıkar). Sınav planı bu seçimlere göre hesaplanır.",
-    "Sınav kampı sesli ders listesinden ve sınav planından çıkarıldı.",
-    "Yanıltıcı \"≈ N gün\" tahminleri kaldırıldı."
+    "Çıkmış çözücüye çözücüde olmayan 347 Kurul 1 çıkmışı eklendi (toplam 797): Patoloji 389, Enfeksiyon 161, Üroloji 109, Halk Sağlığı 54, TBG 44, Kadın Doğum 25, Farmakoloji 15.",
+    "Yalnız konusu ders slaytlarında anlatılan sorular alındı; her soru slayt sayfasına bağlı, ipucu, her şıkkın açıklaması, çözüm ve kısa not EMA ile seslendirildi. Cevap anahtarı yanlış olan çıkmışlar tıben doğru şıkka göre düzeltildi.",
+    "Tek soruluk kısa paketler kaldırıldı; artakalan sorular son pakete katıldı."
   ],
   "eklenen": [
-    "Bitirdiklerim'de her konunun ⋯ menüsü: \"Başka yerden çalıştım\" (bitti sayılır), \"Çalışmayacağım\" ve \"Sınavda sorusu yok\" (kalan süreden çıkar). Sınav planı bu seçimlere göre hesaplanır."
+    "Çıkmış çözücüye çözücüde olmayan 347 Kurul 1 çıkmışı eklendi (toplam 797): Patoloji 389, Enfeksiyon 161, Üroloji 109, Halk Sağlığı 54, TBG 44, Kadın Doğum 25, Farmakoloji 15.",
+    "Yalnız konusu ders slaytlarında anlatılan sorular alındı; her soru slayt sayfasına bağlı, ipucu, her şıkkın açıklaması, çözüm ve kısa not EMA ile seslendirildi. Cevap anahtarı yanlış olan çıkmışlar tıben doğru şıkka göre düzeltildi."
   ],
   "degisen": [
-    "Sınav kampı sesli ders listesinden ve sınav planından çıkarıldı."
+    "Tek soruluk kısa paketler kaldırıldı; artakalan sorular son pakete katıldı."
   ],
   "duzeltilen": [],
-  "silinen": [
-    "Yanıltıcı \"≈ N gün\" tahminleri kaldırıldı."
-  ]
+  "silinen": []
 }

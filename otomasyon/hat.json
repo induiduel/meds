@@ -259,7 +259,7 @@
    "cikti": [
     "meds/src/data/cikmis_paket/k{kurul}.json"
    ],
-   "not": "Sınava hazırlan › Çıkmış çözücü: branş başına sinav_dagilimi.json soru sayısı kadar paket; yalnız çözücüdeki slayt sayfalı + EMA sesli çıkmışlar (LLM yok). Yeni kurulun dağılımı JSON'a eklenmeden paket çıkmaz. Kısa not: sesli asistan noktası (kök eşleşmesi/slayt sayfası); asistanı olmayan derste scripts/cikmis_paket/notlar.json (slayttan, yazar+denetçi) + EMA n-<no> klibi. Yeni ders/kurulda eksik not paketle.py çıktısında 'yok' sayısıyla görünür."
+   "not": "Sınava hazırlan › Çıkmış çözücü: branş başına sinav_dagilimi.json soru sayısı kadar paket; yalnız çözücüdeki slayt sayfalı + EMA sesli çıkmışlar (LLM yok). Yeni kurulun dağılımı JSON'a eklenmeden paket çıkmaz. Kısa not: sesli asistan noktası (kök eşleşmesi/slayt sayfası); asistanı olmayan derste scripts/cikmis_paket/notlar.json (slayttan, yazar+denetçi) + EMA n-<no> klibi. Yeni ders/kurulda eksik not paketle.py çıktısında 'yok' sayısıyla görünür. Ek modül (2026-10-22): çözücüde olmayan DB çıkmışları meds_temp/cikmis_paket/ek (TALIMAT/DENETIM, kapı ek_dogrula.py; yazar+denetçi, LLM) → ek_uygula(_gpu).sh → src/data/cikmis_paket/ek/<brans>/<klasör>.json (no ≥1001, kendi klipleri). Yeni kurulda bu adım elle/Claude ile."
   },
   {
    "id": "hastalik_birlestir",

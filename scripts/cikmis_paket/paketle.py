@@ -7,7 +7,7 @@ bunlar yazar + bağımsız denetçi hattından geçmiş, slayt sayfasına (`sayf
 olmayan (kazanımı mevcut slaytlarda anlatılmayan) ya da sesi eksik soru alınmaz; aynı soru birden çok derste varsa bir kez.
 
 Dağıtım: dersler sırayla tek tek dolaşılarak (round-robin) sorular paketlere dağıtılır; böylece her paket gerçek sınav
-gibi branşın tüm derslerine yayılır. Paket içinde sıra ders sırasıdır. Son paket eksik kalırsa kısa paket olarak kalır.
+gibi branşın tüm derslerine yayılır. Paket içinde sıra ders sırasıdır. Son paket sınav sayısının yarısından kısaysa bir önceki pakete katılır, yoksa kısa paket kalır.
 
 Kısa not: her soruya sesli sınav asistanının (src/data/<brans>_asistan) bir noktası bağlanır — spot bilgisi, slayttan
 yazılmış, denetlenmiş ve EMA ile seslendirilmiş (klip a-<id>). Önce asistanın o soruyu bağladığı nokta (kök eşleşmesi),
@@ -158,6 +158,9 @@ def kur(kurul: int):
         kovalar = [[] for _ in range(paket_say)]
         for i, r in enumerate(sira):
             kovalar[i // n].append(r)
+        # sınav sayısının yarısından kısa artık, son tam pakete katılır (1–2 soruluk paket olmasın)
+        if len(kovalar) > 1 and len(kovalar[-1]) < n / 2:
+            kovalar[-2].extend(kovalar.pop())
         # paket içinde ders sırası
         ders_sira = {d['kod']: i for i, d in enumerate(dizin['dersler'])}
         for d in dizin['dersler']:  # ek modül: dersin klasörünün sırası
