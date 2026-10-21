@@ -324,3 +324,5 @@
 .tk-sb-bag a { display: inline-flex; align-items: center; gap: 5px; min-height: 34px; padding: 0 10px; border-radius: 999px; font-size: 13px; font-weight: 600; white-space: nowrap; color: var(--color-ink-2); background: var(--color-field); text-decoration: none; }
 .tk-sb-bag a:hover { color: var(--tk-c); }
 @media (max-width: 760px) { .tk-sb-bag a span { display: none; } .tk-sb-bag a { padding: 0 10px; } }
+.tk-etiketler { display: inline-flex; flex-wrap: wrap; gap: 6px; min-width: 0; }
+.tk-etiket.is-tekrar { background: var(--color-accent); color: var(--color-on-accent); }

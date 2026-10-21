@@ -50,6 +50,8 @@ const modda = (n: { puan: number }, m: string) => (m === 'hizli' ? n.puan >= HIZ
 const HIZLAR = [1, 1.15, 1.25, 1.5, 1.75, 2];
 const ANAHTAR = 'medsoru_genetik_kamp_v1';
 const YANLIS_KEY = 'medsoru_genetik_kamp_yanlis_v1';
+/** Hocanın son yıllarda tekrar sorduğu çıkmış (soru bankasında sinav etiketi "tekrar eden") */
+const tekrarEden = (s: { sinav?: string }) => /tekrar eden/i.test(s.sinav || '');
 const KATEGORI: Record<string, string> = { sendrom: 'Bulgu → sendrom', ilac: 'Kanser → ilaç', belirtec: 'Belirteç', tani: 'Tanı yöntemi' };
 
 type Mod = 'hizli' | 'yavas' | 'tam';
@@ -491,7 +493,10 @@ function SoruKart({ s, no, secim, yardimAcik, onSec, onOku, onYardim, onTekrar }
   return (
     <section className="tk-soru">
       <div className="tk-soru-ust">
-        <span className={`tk-etiket${s.tur === 'cikmis' ? ' is-cik' : ''}`}>{s.tur === 'cikmis' ? `Çıkmış${s.sinav ? ` · ${s.sinav}` : ''}` : 'Kalıba uygun örnek'}</span>
+        <span className="tk-etiketler">
+        <span className={`tk-etiket${s.tur === 'cikmis' ? ' is-cik' : ''}`}>{s.tur === 'cikmis' ? `Çıkmış${s.sinav ? ` · ${s.sinav.replace(/\s*·\s*tekrar eden.*$/i, '')}` : ''}` : 'Kalıba uygun örnek'}</span>
+        {tekrarEden(s) && <span className="tk-etiket is-tekrar" title="Hoca bu soruyu 2025 ve 2026'da tekrar sordu">Tekrar eden</span>}
+        </span>
         <span className="tk-soru-arac">
           <button type="button" className="tk-metin-btn" onClick={onOku} title="Soruyu sesli oku"><Volume2 aria-hidden /></button>
           {bitti && <button type="button" className="tk-metin-btn" onClick={onTekrar} title="Yeniden çöz"><RotateCcw aria-hidden /></button>}
@@ -589,7 +594,12 @@ function Deneme({ mod, havuz, cal, durdur }: { mod: Mod; havuz: Nokta[]; cal: (i
       const B = [...new Set(havuz.map((n) => n.bolum))];
       const kuyruk = (t: 'cikmis' | 'ornek') => B.map((b) => karis(havuz.filter((n) => n.bolum === b).flatMap((n) => n.sorular).filter((x) => x.tur === t)));
       const al = (Q: Soru[][], n: number) => { const out: Soru[] = []; for (let r = 0; out.length < n && Q.some((q) => q.length); r++) for (const q of karis(Q)) { if (out.length >= n) break; const x = q.shift(); if (x) out.push(x); } return out; };
-      const cik = al(kuyruk('cikmis'), tur === 'cikmis' ? 12 : 8);
+      // Öncelik: son yıllarda tekrar sorulan çıkmışlar ("tekrar eden") her denemeye önce girer, kalan yer bölümlere dengeli dağılır
+      const tekrar = karis(DERS.noktalar.flatMap((n) => n.sorular).filter((x) => tekrarEden(x))); // moddan bağımsız: hızlı modda da
+      const cikHedef = tur === 'cikmis' ? 12 : 8;
+      const once = tekrar.slice(0, cikHedef);
+      const kalanCik = kuyruk('cikmis').map((q) => q.filter((x) => !once.includes(x)));
+      const cik = [...once, ...al(kalanCik, cikHedef - once.length)];
       secilen = tur === 'cikmis' ? cik : [...cik, ...al(kuyruk('ornek'), 12 - cik.length)];
     }
     setSet(karis(secilen)); setCevap({}); setYardim({}); setI(0);
@@ -597,12 +607,13 @@ function Deneme({ mod, havuz, cal, durdur }: { mod: Mod; havuz: Nokta[]; cal: (i
   if (!set) {
     const cikSay = havuz.reduce((t, n) => t + n.sorular.filter((x) => x.tur === 'cikmis').length, 0);
     const ornSay = havuz.reduce((t, n) => t + n.sorular.filter((x) => x.tur === 'ornek').length, 0);
+    const tekSay = DERS.noktalar.reduce((t, n) => t + n.sorular.filter(tekrarEden).length, 0);
     const Y = new Set(yanlislar);
     const ySay = havuz.flatMap((n) => n.sorular).filter((x) => Y.has(x.k)).length;
     return (
       <div className="tk-deneme-giris">
         <h3>Sınav provası</h3>
-        <p>{MOD_AD[mod]} havuzu: <b>{cikSay}</b> çıkmış · <b>{ornSay}</b> kalıba uygun örnek. Her denemede bölümler dengeli dağılır; her yanlışta neden yanlış olduğu sesli anlatılır, "Yardım al" her şıkkı açıklar.</p>
+        <p>{MOD_AD[mod]} havuzu: <b>{cikSay}</b> çıkmış (<b>{tekSay}</b> tekrar eden) · <b>{ornSay}</b> kalıba uygun örnek. Tekrar eden çıkmışlar her denemeye önce girer, kalanı bölümlere dengeli dağılır; her yanlışta neden yanlış olduğu sesli anlatılır, "Yardım al" her şıkkı açıklar.</p>
         <div className="tk-deneme-sec">
           <button type="button" className="tk-btn tk-btn-ana" onClick={() => basla('karma')}><Shuffle aria-hidden /> 12 soru: çıkmış ağırlıklı</button>
           <button type="button" className="tk-btn" onClick={() => basla('cikmis')} disabled={!cikSay}><Layers aria-hidden /> Yalnız çıkmışlar</button>
