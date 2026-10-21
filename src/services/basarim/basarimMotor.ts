@@ -423,9 +423,14 @@ export function createBasarimMotor(deps: MotorDeps) {
   /** Dönem seçmemiş kişiler bu dönemin sıralamasında görünür (takvimdeki dönem). */
   const VARSAYILAN_DONEM = Number((takvim as any).donem || 3);
   const puanAralik = (k: Kisi, bas: string, son: string) => Object.entries(k.gunPuan).reduce((a, [g, p]) => (g >= bas && g <= son ? a + p : a), 0);
-  /** Sıralamada herkesin profil fotoğrafı görünür; yalnız https adresleri (veri URI'si listeyi şişirir). */
+  /** Sıralamada herkesin profil fotoğrafı görünür: https adresi ya da profilden yüklenen kırpılmış resim (256 px JPEG, ~15–30 KB; 60 KB üstü atlanır). */
   const foto = (uid: string): string | undefined => {
-    try { const f = deps.fotoBul?.(uid); return f && /^https:\/\//.test(f) && f.length < 1000 ? f : undefined; } catch { return undefined; }
+    try {
+      const f = deps.fotoBul?.(uid);
+      if (!f) return undefined;
+      if (/^https:\/\//.test(f)) return f.length < 1000 ? f : undefined;
+      return /^data:image\/(jpeg|png|webp);base64,/.test(f) && f.length < 80_000 ? f : undefined;
+    } catch { return undefined; }
   };
   const siralama = (donem: number, kapsam: 'hafta' | 'kurul' | 'tum', g = gunOf()) => {
     hepsiniYukle();
