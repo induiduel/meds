@@ -175,9 +175,9 @@ export default function SinavPlani({ hiz }: { hiz: Partial<Record<TakipModul, Hi
             <ul>
               <li><b>Baraj:</b> bir dersin sorularının yarısından az doğru yaparsan eksik kalan her doğru kadar puan düşülür. 20 soruda 8 doğru 6 puan, 5 doğru 0 puan. Bu yüzden baraj altındaki derste her yeni doğru 2 puan değerindedir.</li>
               <li><b>Ders payı:</b> sınavdaki soru sayısı dersin konularına kazanım (en önemli madde) sayısı, soru bankası büyüklüğü ve ders süresine göre dağıtılır.</li>
-              <li><b>Bilgi düzeyi:</b> sesli ders, en önemliler ve soru çözücüde bitirdiğin her konu doğru olasılığını artırır; hiç çalışılmamış konuda bile şık elemeyle bir pay vardır. 12 günden eski çalışmada biraz unutma hesaba katılır.</li>
-              <li><b>Hata payı:</b> çalıştığın konudan gelen soruyu da yanlış yapabilirsin; çalışılmış konuda bile doğru olasılığı ~%75 sayılır, soru çözücüdeki ilk deneme sonuçların bunu sana göre düzeltir. Olasılık, şanslı ve şanssız günleri birlikte hesaplar.</li>
-              <li><b>Sıra:</b> her adımda "kazandıracağı puan ÷ süresi" en yüksek iş seçilir; önce konu (en kısa yol: en önemliler asistanı), sonra o konunun soruları. 60 olasılığı %90'a ulaşınca plan durur.</li>
+              <li><b>Bilgi düzeyi:</b> bir dersin sesli dersini, en önemliler/asistanını ya da sorularını bitirmek tek başına değerlidir: en çok soru çözücü işe yarar (çıkmış ve çıkmış üslubunda sorular), ardından sesli ders, sonra en önemliler. İkinci ve üçüncü kaynak az ek kazanç getirir. Hiç çalışılmamış konuda bile derse girmiş olmak ve şık eleme payı (~%30) vardır; 12 günden eski çalışmada biraz unutma hesaba katılır.</li>
+              <li><b>Hata payı:</b> çalıştığın konudan gelen soruyu da yanlış yapabilirsin; tek kaynakla ~%61–65, üçüyle ~%78 doğru sayılır, soru çözücüdeki ilk deneme sonuçların bunu sana göre düzeltir. Olasılık, şanslı ve şanssız günleri birlikte hesaplar.</li>
+              <li><b>Sıra:</b> her adımda "kazandıracağı puan ÷ süresi" en yüksek iş seçilir; her ders için önce en kısa sürede en çok doğru getiren kaynak seçilir, diğerleri ancak vakit kalırsa eklenir. 60 olasılığı %90'a ulaşınca plan durur.</li>
               <li><b>Süre:</b> içerik süresi senin çalışma hızınla (bitirdiğin konulardaki gerçek süre) çarpılır; her saatin 10 dakikası mola, gece 23.30 sonrası ve sınav sabahı plana konmaz.</li>
             </ul>
           </details>

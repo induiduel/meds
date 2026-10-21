@@ -7,7 +7,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { BookOpen, ChevronDown, Tent, Headphones, ListChecks, MessageCircleQuestion, Play, RotateCcw, Search, Star, X } from 'lucide-react';
 import {
-  MODUL_AD, bittiMi, grupOzeti, gunYaz, hizHesapla, sureYaz, tekrarBasla, useTakip, type Hiz, type TakipModul,
+  MODUL_AD, bittiMi, sesHizi, grupOzeti, gunYaz, hizHesapla, sureYaz, tekrarBasla, useTakip, type Hiz, type TakipModul,
 } from '../../services/calismaTakip';
 import { KonuIsaret, KonuSureEtiketi } from './KonuTakip';
 import { MODUL_YUKLE, type BdDers, type BdKonu } from './bitirdiklerimVeri';
@@ -183,7 +183,7 @@ export default function BitirdiklerimView() {
                       {o.biten < o.toplam
                         ? (
                           <>
-                            <span className="is-icerik">{o.toplam - o.biten} kalan ders · {sureYaz(o.kalanIcerikSn)} ders süresi (toplam {sureYaz(o.toplamIcerikSn)})</span>
+                            <span className="is-icerik">{o.toplam - o.biten} kalan ders · {sureYaz(o.kalanIcerikSn)} ders süresi 1× (toplam {sureYaz(o.toplamIcerikSn)})</span>
                             <span className="is-kalan">Hızına göre tahmini: ~{sureYaz(o.kalanSn)}{kalanGun ? ` (${kalanGun})` : ''}</span>
                           </>
                         )
@@ -237,7 +237,7 @@ function OzetKartlari({ genel, hiz, modul }: { genel: ReturnType<typeof grupOzet
         <em>
           {!kalan
             ? `Hepsi bitti · toplam ${sureYaz(genel.toplamIcerikSn)}`
-            : `Hızdan bağımsız (${sayi(kalan)} kalan ders · toplam ${sureYaz(genel.toplamIcerikSn)})`}
+            : `1× ses hızında (${sayi(kalan)} kalan ders · toplam ${sureYaz(genel.toplamIcerikSn)})`}
         </em>
       </div>
       <div className="bd-kart">
@@ -245,8 +245,8 @@ function OzetKartlari({ genel, hiz, modul }: { genel: ReturnType<typeof grupOzet
         <b>{kalan ? `~${sureYaz(genel.kalanSn)}` : '—'}</b>
         <em>
           {!kalan ? 'Hepsi bitti' : hiz.kaynak === 'senin'
-            ? `Hızına göre (${hiz.ornek} konu, içerik süresinin %${Math.round(hiz.oran * 100)}'i)${gun ? ` · ${gun}` : ''}`
-            : `Çalışılan süre düşülerek; konu bitirdikçe hızına uyar${gun ? ` · ${gun}` : ''}`}
+            ? `Hızına göre (${hiz.ornek} konu, içerik süresinin %${Math.round(hiz.oran * 100)} kadarı)${gun ? ` · ${gun}` : ''}`
+            : `${modul === 'sesli' || modul === 'onem' || modul === 'cozucu' ? `${sesHizi(modul).toLocaleString('tr-TR')}× ses hızına göre, ` : ''}çalışılan süre düşülerek; konu bitirdikçe hızına uyar${gun ? ` · ${gun}` : ''}`}
         </em>
       </div>
     </section>

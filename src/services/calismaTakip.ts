@@ -224,8 +224,31 @@ export interface Hiz {
  *  (beklenen sürenin %25'inden ve 2 dk'dan az süreli) konular hızı bozmasın. */
 const olculebilir = (sn: number, beklenen: number) => sn >= Math.max(120, beklenen * 0.25);
 
-/** Modül başına ön değer (içerik süresi × oran): ses durdurma/geri sarma, soru başına düşünme, madde okuma payı. */
-const ON_ORAN: Record<TakipModul, number> = { sesli: 1.15, ogren: 1.0, cozucu: 1.1, onem: 1.2, kamp: 1.1 };
+/** Modül başına ön değer (içerik süresi × oran, 1× ses hızında): durdurma/geri sarma, soru başına düşünme payı.
+ *  Sesli içerik 1×–2× arası dinlendiği için öğrencinin seçtiği oynatma hızına bölünür (hız seçilmemişse ~1,4×). */
+const ON_ORAN_1X: Record<TakipModul, number> = { sesli: 1.1, ogren: 1.0, cozucu: 1.15, onem: 1.1, kamp: 1.1 };
+const HIZ_ANAHTAR: Partial<Record<TakipModul, [string, boolean]>> = {
+  sesli: ['medsoru_canli_ders_hiz', false],
+  onem: ['medsoru_onem_asistan_tercih_v1', true],
+  cozucu: ['medsoru_cozucu_tercih_v1', true],
+};
+const VARSAYILAN_SES_HIZI = 1.4;
+/** Öğrencinin modülde seçtiği ses hızı (1–2×) */
+export function sesHizi(m: TakipModul): number {
+  const t = HIZ_ANAHTAR[m];
+  if (!t) return 1;
+  try {
+    const ham = localStorage.getItem(t[0]);
+    if (ham == null) return VARSAYILAN_SES_HIZI;
+    const v = t[1] ? Number(JSON.parse(ham)?.hiz) : Number(ham);
+    return v >= 0.75 && v <= 2.5 ? v : VARSAYILAN_SES_HIZI;
+  } catch { return VARSAYILAN_SES_HIZI; }
+}
+// soru çözücüde süre yalnız kısmen sestir (düşünme süresi hızlanmaz): hızın yarısı kadar etki
+const onOran = (m: TakipModul) => {
+  const h = sesHizi(m);
+  return ON_ORAN_1X[m] / (m === 'cozucu' ? 1 + (h - 1) / 2 : h);
+};
 /** Ön değerin ağırlığı (sanal konu sayısı): az konuda tek bir uç değer tahmini savurmasın. */
 const ON_AGIRLIK = 2;
 /** Eski konuların hız ölçüsündeki ağırlığı her 10 günde yarıya iner (çalışma hızın değişir). */
@@ -257,7 +280,7 @@ export function toplamGunluk(v: TakipVeri = oku()) {
 
 /** Modülün ortalama ilerleme hızı: bitirdiği konularda harcadığı süre ÷ içeriğin beklenen süresi. */
 export function hizHesapla(m: TakipModul, konular: KonuGirdi[], v: TakipVeri = oku()): Hiz {
-  const on = ON_ORAN[m] ?? 1;
+  const on = onOran(m);
   let gercek = 0, beklenen = 0, ornek = 0, bTop = 0;
   const simdi = Date.now();
   for (const g of konular) {

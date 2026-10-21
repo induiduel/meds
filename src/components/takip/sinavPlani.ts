@@ -9,8 +9,9 @@
  *
  * Model:
  *  - Dersin branştaki payı w = 0,5·madde payı + 0,3·soru bankası payı + 0,2·ders süresi payı (kazanım, çıkmış sıklığı, ders uzunluğu).
- *  - Bilgi düzeyi k = 1 − (1 − 0,55·sesli)(1 − 0,45·önemliler)(1 − 0,40·soru); 12 günden eski çalışma %10 unutulur.
- *  - Doğru olasılığı p = 0,22 + 0,62·k (çalışılmamış konuda şıklardan eleme payı, çalışılmış konuda da hata payı var: en çok ~%75).
+ *  - Bilgi düzeyi k = 1 − (1 − 0,70·soru)(1 − 0,65·sesli)(1 − 0,62·önemliler): tek kaynağı bitirmek tek başına değerlidir
+ *    (soru ~%65, sesli ~%63, önemliler ~%61 doğru), üçü birden ~%78; 12 günden eski çalışma %10 unutulur.
+ *  - Doğru olasılığı p = 0,30 + 0,50·k (çalışılmamış konuda derse girmiş olmak + şık eleme payı; çalışılmış konuda da hata payı var).
  *  - Öğrencinin soru çözücüdeki ilk deneme doğruları modeli branş bazında düzeltir (çok soru çözdükçe ağırlığı artar).
  *  - Branşta doğru sayısı beta-binom (tahmin belirsizliği + dikkat hatası); branş puanları birleştirilip P(puan ≥ 60) tam hesaplanır.
  * Plan: her ders için sıradaki adım (en önemliler asistanı → soru çözücü → sesli ders) adayı; amaç E[puan] + 30·P(≥60),
@@ -92,11 +93,13 @@ export async function planVerisiYukle(): Promise<PlanVeri | null> {
 
 interface Durum { sesli: number; onem: number; soru: number; eski: boolean }
 const bilgi = (s: Durum) => {
-  const k = 1 - (1 - 0.55 * s.sesli) * (1 - 0.45 * s.onem) * (1 - 0.40 * s.soru);
+  // Tek kaynak tek başına güçlüdür; ikinci/üçüncü kaynak az ekler (doygunluk). Değerler sınav sorusu tutturmaya katkıya göre:
+  // soru çözücü (çıkmış + çıkmış üslubunda sorular, şık açıklamaları) > sesli ders (tüm içerik) > en önemliler / asistan (kazanım özeti).
+  const k = 1 - (1 - 0.70 * s.soru) * (1 - 0.65 * s.sesli) * (1 - 0.62 * s.onem);
   return s.eski ? k * 0.9 : k;
 };
-const TABAN = 0.22;
-const pOf = (s: Durum, kal: number) => TABAN + 0.62 * bilgi(s) * kal;
+const TABAN = 0.30;
+const pOf = (s: Durum, kal: number) => TABAN + 0.50 * bilgi(s) * kal;
 
 /* beta-binom: doğru sayısı dağılımı (n soru, ortalama p, yoğunluk c) */
 const lgam = (x: number): number => {
@@ -354,8 +357,8 @@ export function planHesapla(veri: PlanVeri, hiz: Partial<Record<TakipModul, Hiz>
         const adaylar: [AdimTur, number, Partial<Durum>][] = [];
         if (x.kal.onem > 0) adaylar.push(['onem', x.kal.onem, { onem: 1, eski: false }]);
         if (x.kal.sesli > 0) adaylar.push(['sesli', x.kal.sesli, { sesli: 1, eski: false }]);
-        // soru çözmeye konu en az bir kez çalışıldıktan sonra geçilir
-        if (x.kal.cozucu > 0 && (x.s.onem >= 0.6 || x.s.sesli >= 0.5)) adaylar.push(['cozucu', x.kal.cozucu, { soru: 1, eski: false }]);
+        // soru çözmek tek başına da değerli: konu çalışılmadan da aday
+        if (x.kal.cozucu > 0) adaylar.push(['cozucu', x.kal.cozucu, { soru: 1, eski: false }]);
         for (const [t, sn, deg] of adaylar) {
           if (sn > kalanButce + 600) continue;
           const eskiS = x.s;

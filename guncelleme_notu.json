@@ -1,14 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 165,
-  "baslik": "Güncelleme sırasında bağlantı kopmuyor",
+  "onem": 166,
+  "baslik": "60 planı ve süre tahmini daha gerçekçi",
   "maddeler": [
-    "Site güncellenirken yarıda kalan kayıtlar (notlar, ilerleme yedeği) artık tamamlanıyor; canlı bağlantı kesintisiz yeniden kuruluyor."
+    "60 planında bir dersin yalnız sesli dersini, en önemlilerini ya da sorularını bitirmek de artık güçlü sayılır; en çok soru çözmek, sonra sesli ders kazandırır.",
+    "Ders süreleri artık seçtiğin ses hızına (1×–2×) göre hesaplanır."
   ],
   "eklenen": [],
-  "degisen": [],
-  "duzeltilen": [
-    "Site güncellenirken yarıda kalan kayıtlar (notlar, ilerleme yedeği) artık tamamlanıyor; canlı bağlantı kesintisiz yeniden kuruluyor."
+  "degisen": [
+    "60 planında bir dersin yalnız sesli dersini, en önemlilerini ya da sorularını bitirmek de artık güçlü sayılır; en çok soru çözmek, sonra sesli ders kazandırır.",
+    "Ders süreleri artık seçtiğin ses hızına (1×–2×) göre hesaplanır."
   ],
+  "duzeltilen": [],
   "silinen": []
 }
