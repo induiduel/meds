@@ -201,3 +201,12 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kurul 2 kuralı:** Son Prova yazıldıktan sonra çözücü değişirse part yeniden yazılır — `son_prova_zinciri.part_izi` ders
   başına havuz soru sayısını içerir, değişince part `_eski/`'ye alınıp baştan yazılır. Kurul 1'de `soru_dagit.py` elle yeniden
   çalıştırılmamalı (kayan 15 eski kimlik havuzda yok); gerekirse önce parça referansları güncellenir.
+
+## [2026-10-21] Çıkmış soruda iç uyarı metni ve kalıp şık açıklaması (h06/19 Refik Saydam)
+
+- **Hata:** Çözücüdeki çıkmış sorunun kökünde "[Dikkat — olası hatalı kayıt …]" iç notu kalmıştı; öğrenciye gösterildi ve EMA ile
+  okundu. Aynı sorunun şık açıklamaları "bu soruda aranan özellik değildir ve elenir" kalıbıydı, ipucu konu dışıydı.
+- **Karar (kullanıcı):** cevap anahtarı çelişkisinde tıbben/tarihen doğru olan esas alınır (224 sayılı Kanun 1961; Refik Saydam
+  1942'de öldü → E). Not kökten çıkarıldı, şıklar ne/ne işe yarar/neden standardıyla yeniden yazılıp seslendirildi.
+- **Kurul 2 kuralı:** soru kökü, şık ve seçeneklerde köşeli parantezli iç not ("Dikkat", "olası hatalı", "öğrenci notundan")
+  yayına giremez; kaynak çelişkisi denetçi tarafından tıbbi doğruya göre çözülür ve gerekçesi kayda yazılır.
