@@ -69,14 +69,14 @@ export const KonuIsaret: React.FC<Omit<DugmeProps, 'onTekrar' | 'kucuk'>> = ({ m
 };
 
 /** "⏱ 12 dk · 8 soru" — konuda harcanan etkin süre ve çözülen soru (hiç yoksa çizilmez). */
-export const KonuSureEtiketi: React.FC<{ modul: TakipModul; konu: string; ekSoru?: number; className?: string }> = ({ modul, konu, ekSoru = 0, className }) => {
+export const KonuSureEtiketi: React.FC<{ modul: TakipModul; konu: string; ekSoru?: number; className?: string; /** "Çalıştığın: …" önekiyle */ uzun?: boolean }> = ({ modul, konu, ekSoru = 0, className, uzun }) => {
   const k = useKonuKaydi(modul, konu);
   const soru = (k?.soru || 0) + ekSoru;
   if (!k?.sn && !soru) return null;
   return (
     <span className={`kt-sure${className ? ` ${className}` : ''}`} title="Bu konuda geçirdiğin etkin çalışma süresi">
       <Timer aria-hidden />
-      <span>{k?.sn ? sureYaz(k.sn) : '0 dk'}</span>
+      <span>{uzun ? 'Çalıştığın: ' : ''}{k?.sn ? sureYaz(k.sn) : '0 dk'}</span>
       {soru > 0 && <span className="kt-sure-s">· {soru.toLocaleString('tr-TR')} soru</span>}
       {!!k?.tur && <span className="kt-sure-s">· {k.tur}× tekrar</span>}
     </span>

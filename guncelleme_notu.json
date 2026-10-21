@@ -1,14 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 208,
-  "baslik": "Sıralamada yüklenen profil fotoğrafları",
+  "onem": 209,
+  "baslik": "Bitirdiklerim sayfası sadeleşti",
   "maddeler": [
-    "Profil sayfasından yüklenen fotoğraflar da artık sıralamada herkese görünüyor."
+    "Bitirdiklerim adım adım ilerliyor: çalışma türünü seç, durumunu tek cümlede gör, \"Sıradaki konu\" kartındaki Devam et ile bitmemiş ilk konuya geç.",
+    "Süreler daha anlaşılır: her konuda \"Süresi\" ve \"Çalıştığın\" ayrı yazıyor; hesap ayrıntıları açılır bölüme taşındı."
   ],
   "eklenen": [],
-  "degisen": [],
-  "duzeltilen": [
-    "Profil sayfasından yüklenen fotoğraflar da artık sıralamada herkese görünüyor."
+  "degisen": [
+    "Bitirdiklerim adım adım ilerliyor: çalışma türünü seç, durumunu tek cümlede gör, \"Sıradaki konu\" kartındaki Devam et ile bitmemiş ilk konuya geç.",
+    "Süreler daha anlaşılır: her konuda \"Süresi\" ve \"Çalıştığın\" ayrı yazıyor; hesap ayrıntıları açılır bölüme taşındı."
   ],
+  "duzeltilen": [],
   "silinen": []
 }

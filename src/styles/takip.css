@@ -443,3 +443,29 @@
   .sp-tablo li { grid-template-columns: minmax(0, 1fr); gap: 6px; }
   .sp-kutu { padding: 12px; }
 }
+
+/* ── Bitirdiklerim sade düzen (2026-10-21) ── */
+.bd > .sp-h { margin-top: 4px !important; }
+.bd-ozet2 { display: flex; flex-direction: column; gap: 10px; }
+.sp-hukum.is-iyi { background: var(--color-ok-soft); }
+.sp-hukum.is-orta { background: var(--color-accent-soft); }
+.bd-ozet2 .sp-iki .bd-cubuk { margin-top: 4px; }
+.bd-ozet-b { font-size: 15px !important; font-weight: 500; color: var(--color-ink-3); }
+.bd-sirada { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--color-accent); min-width: 0; }
+.bd-sirada > div { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0; }
+.bd-sirada small { font-size: 12.5px; color: var(--color-ink-2); }
+.bd-sirada b { font-size: 15px; overflow-wrap: anywhere; }
+.bd-sirada span { font-size: 12.5px; color: var(--color-ink-2); }
+.bd-nasil { font-size: 13.5px; line-height: 1.55; color: var(--color-ink-2); }
+.bd-nasil summary { cursor: pointer; font-weight: 600; color: var(--color-ink); min-height: 32px; display: flex; align-items: center; }
+.bd-nasil ul { list-style: none; padding: 0; margin: 6px 0 0; display: flex; flex-direction: column; gap: 6px; }
+.bd-nasil b { color: var(--color-ink); }
+.bd > .sp-nasil-kullan { margin: 0; padding: 0; list-style: none; }
+/* sekme: kısa ad + biten/toplam, alt alta; ızgara kendini sığdırır */
+.bd .bd-modul { display: grid; grid-template-columns: repeat(auto-fit, minmax(128px, 1fr)); gap: 6px; }
+.bd .bd-modul button { display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-rows: auto auto; column-gap: 8px; row-gap: 1px; align-items: center; text-align: left; padding: 8px 10px; }
+.bd .bd-modul button svg { grid-row: 1 / span 2; }
+.bd .bd-modul-ad { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.bd .bd-modul-kisa { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; font-size: 13.5px; }
+.bd .bd-modul-n { font-family: var(--font-sans); }
+.bd .bd-modul-s { display: none; }
