@@ -134,6 +134,7 @@ const CikmisCozucuView = React.lazy(() => wrapLazy(import('./components/cikmisCo
 const BasarimView = React.lazy(() => wrapLazy(import('./components/basarim/BasarimView')));
 const BasarimKatmani = React.lazy(() => wrapLazy(import('./components/basarim/BasarimKatmani')));
 const BitirdiklerimView = React.lazy(() => wrapLazy(import('./components/takip/BitirdiklerimView')));
+const SinavPlaniView = React.lazy(() => wrapLazy(import('./components/takip/SinavPlaniView')));
 const CevrimdisiView = React.lazy(() => wrapLazy(import('./components/cevrimdisi/CevrimdisiView')));
 const OlasiSorularView = React.lazy(() => wrapLazy(import('./components/olasi/OlasiSorularView')));
 const GecmisKurullarView = React.lazy(() => wrapLazy(import('./components/olasi/GecmisKurullarView')));
@@ -1961,6 +1962,13 @@ export default function App() {
         {activeTab === 'olasi_sorular' && (
           <Suspense fallback={<ViewFallback />}>
             <OlasiSorularView uid={currentUser?.uid} />
+          </Suspense>
+        )}
+
+        {/* TAB: /sinav-plani (görünen /kamplar/sinav-plani) — en az 60 için kişiye özel yol haritası */}
+        {activeTab === 'sinav_plani' && (
+          <Suspense fallback={<ViewFallback />}>
+            <SinavPlaniView />
           </Suspense>
         )}
 

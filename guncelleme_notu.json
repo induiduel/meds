@@ -1,15 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 204,
-  "baslik": "Çıkmış sorularda şık açıklamaları yenilendi",
+  "onem": 205,
+  "baslik": "Sınav planı ayrı sayfada",
   "maddeler": [
-    "Soru çözücüdeki 427 çıkmış sorunun tüm şık açıklamaları yeniden yazıldı: her şıkta kavramın ne olduğu, ne işe yaradığı ve bu soruda neden doğru ya da yanlış olduğu anlatılıyor (\"bu sorunun cevabı değil\" gibi kalıplar kaldırıldı).",
-    "Açıklamalar ders slaytlarına göre bağımsız denetimden geçti; kalıp ipucu ve çözümler düzeltildi, cevabı ele veren ipuçları yenilendi. Yeni açıklamalar EMA ile seslendirildi."
+    "60 sınav planı Bitirdiklerim'den ayrılıp kendi sayfasına taşındı: Sınava hazırlan › Sınav planı (/kamplar/sinav-plani).",
+    "Bitirdiklerim sayfasında plana giden kısa bir bağlantı kaldı."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "60 sınav planı Bitirdiklerim'den ayrılıp kendi sayfasına taşındı: Sınava hazırlan › Sınav planı (/kamplar/sinav-plani)."
+  ],
   "degisen": [
-    "Soru çözücüdeki 427 çıkmış sorunun tüm şık açıklamaları yeniden yazıldı: her şıkta kavramın ne olduğu, ne işe yaradığı ve bu soruda neden doğru ya da yanlış olduğu anlatılıyor (\"bu sorunun cevabı değil\" gibi kalıplar kaldırıldı).",
-    "Açıklamalar ders slaytlarına göre bağımsız denetimden geçti; kalıp ipucu ve çözümler düzeltildi, cevabı ele veren ipuçları yenilendi. Yeni açıklamalar EMA ile seslendirildi."
+    "Bitirdiklerim sayfasında plana giden kısa bir bağlantı kaldı."
   ],
   "duzeltilen": [],
   "silinen": []

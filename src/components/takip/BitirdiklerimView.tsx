@@ -5,13 +5,13 @@
  * Veri: services/calismaTakip (süre, soru, durum) + bitirdiklerimVeri (konu listeleri). Stil: styles/takip.css (.bd-*).
  */
 import React, { useEffect, useMemo, useState } from 'react';
-import { BookOpen, ChevronDown, Tent, Headphones, ListChecks, MessageCircleQuestion, Play, RotateCcw, Search, Star, X } from 'lucide-react';
+import { BookOpen, ChevronDown, Tent, Headphones, ListChecks, MessageCircleQuestion, Play, RotateCcw, Search, Star, Target, ChevronRight, X } from 'lucide-react';
 import {
   MODUL_AD, bittiMi, sesHizi, grupOzeti, gunYaz, hizHesapla, sureYaz, tekrarBasla, useTakip, type Hiz, type TakipModul,
 } from '../../services/calismaTakip';
 import { KonuIsaret, KonuSureEtiketi } from './KonuTakip';
 import { MODUL_YUKLE, type BdDers, type BdKonu } from './bitirdiklerimVeri';
-import SinavPlani from './SinavPlani';
+import { navigateTo, pathFor } from '../../router';
 import '../../styles/takip.css';
 
 const MODULLER: { id: TakipModul; ikon: React.ComponentType<{ 'aria-hidden'?: boolean }> }[] = [
@@ -80,10 +80,6 @@ export default function BitirdiklerimView() {
     return r;
   }, [durumlar, takip]);
 
-  // plan modülü hızı değişmedikçe yeniden hesaplamasın
-  const hizAnahtar = MODULLER.map(({ id }) => { const h = ozetler[id]?.hiz; return h ? `${h.oran.toFixed(2)}` : '-'; }).join('|');
-  const planHiz = useMemo(() => Object.fromEntries(MODULLER.map(({ id }) => [id, ozetler[id]?.hiz]).filter(([, h]) => h)), [hizAnahtar]); // eslint-disable-line react-hooks/exhaustive-deps
-
   const dz = durumlar[modul];
   const oz = ozetler[modul];
   const q = katla(ara.trim());
@@ -112,7 +108,9 @@ export default function BitirdiklerimView() {
         </div>
       </header>
 
-      <SinavPlani hiz={planHiz} />
+      <a className="bd-plan-bag" href={pathFor('sinav_plani')} onClick={(e) => { if (e.button || e.metaKey || e.ctrlKey) return; e.preventDefault(); navigateTo(pathFor('sinav_plani')); }}>
+        <Target aria-hidden /> <span>Sınav planı: en az 60 için gün gün yol haritası</span> <ChevronRight aria-hidden />
+      </a>
 
       <div className="bd-modul" role="tablist" aria-label="Modül">
         {MODULLER.map(({ id, ikon: Ikon }) => {

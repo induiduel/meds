@@ -377,3 +377,9 @@
   .ss-dersler { grid-template-columns: minmax(0, 1fr); }
   .ss-tr { padding: 8px 10px; font-size: 12.5px; gap: 6px; }
 }
+
+/* Bitirdiklerim → Sınav planı sayfasına bağlantı */
+.bd-plan-bag { display: flex; align-items: center; gap: 8px; padding: 12px 14px; margin: 0 0 14px; border-radius: 12px; border: 1px solid var(--line, rgba(127,127,127,.25)); color: inherit; text-decoration: none; font-weight: 600; }
+.bd-plan-bag svg { width: 18px; height: 18px; flex: none; }
+.bd-plan-bag span { flex: 1; min-width: 0; }
+.bd-plan-bag:hover { background: color-mix(in srgb, currentColor 6%, transparent); }

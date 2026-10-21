@@ -30,6 +30,7 @@ export const MERKEZ_ARACLARI: Record<KategoriId, MerkezArac[]> = {
     { id: 'olasi_sorular', ne: 'Sınavdan sonra kurulan olası soruları çözmek istiyorsan' },
   ],
   kamplar: [
+    { id: 'sinav_plani', ne: 'En az 60 için nereye ne kadar çalışacağını gün gün görmek istiyorsan' },
     { id: 'son_prova', ne: 'Sınavdan önceki son günlerde kurulun tamamını sesli özetle bitirmek istiyorsan', oner: true },
     { id: 'cikmis_cozucu', ne: 'Sınavdaki soru sayısı kadar çıkmış paketini sesli asistanla birlikte çözmek istiyorsan' },
     { id: 'kamp', ne: 'Hocanın derste verdiği ipuçlarından hızlı tekrar yapmak istiyorsan' },

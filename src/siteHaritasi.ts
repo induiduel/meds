@@ -20,7 +20,7 @@
  *   /kamplar/kurul1/kamp[/<branş>]           Hoca tüyolarından kurul kampı
  *   /kamplar/kurul1/checkup/patoloji         Patoloji Check Up
  *   /kamplar/kurul1/checkup/tbg/v1/{sesli-ders,soru-coz,kaliplar,deneme}   TBG Sınav Kampı (her bölüm ayrı sayfa)
- *   /kamplar/kurul1/en-onemliler/<branş> · /kamplar/spotlar
+ *   /kamplar/kurul1/en-onemliler/<branş> · /kamplar/spotlar · /kamplar/sinav-plani
  *   /kaynaklar                               Başvuru merkezi (sözlük, hastalıklar … kendi düz adreslerinde kalır)
  *
  * Ekranlar ve eski bağlantılar hâlâ "iç adres" biçimini konuşur (/canliders/<key>, /soru-cozucu?brans=…,
@@ -235,6 +235,8 @@ export function disYol(adres: string): string {
       }
       return birlestir(`${kampOnek(mevcutKampKurulu())}/en-onemliler`, sp, hash);
     }
+    case 'sinav-plani':
+      return birlestir('/kamplar/sinav-plani', sp, hash);
     case 'spotlar':
       if (sp.get('gorunum')) return adres; // eski /spotlar?gorunum=… ExamSpotsView'da yönlenir
       return birlestir('/kamplar/spotlar', sp, hash);
@@ -339,6 +341,7 @@ export function icYol(adres: string): string {
       return birlestir('/en-onemliler', sp, hash);
     }
     if (arac === 'spotlar') return birlestir('/spotlar', sp, hash);
+    if (arac === 'sinav-plani') return birlestir('/sinav-plani', sp, hash);
     koy('kurul', k);
     return birlestir('/kamp-merkezi', sp, hash);
   }
