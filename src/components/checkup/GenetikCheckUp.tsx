@@ -52,6 +52,10 @@ const ANAHTAR = 'medsoru_genetik_kamp_v1';
 const YANLIS_KEY = 'medsoru_genetik_kamp_yanlis_v1';
 /** Hocanın son yıllarda tekrar sorduğu çıkmış (soru bankasında sinav etiketi "tekrar eden") */
 const tekrarEden = (s: { sinav?: string }) => /tekrar eden/i.test(s.sinav || '');
+// İkinci öncelik: "Tıbbi genetik çıkmışlar" PDF'indeki (son yıllar) çıkmışların kamptaki karşılıkları (2026-10-21 eşleşmesi)
+const PDF_CIKMIS = new Set(['c45', 'c38', 'c25', 'e3-04', 'c40', 'c44', 'e8-01', 'c10', 'c30', 'c46', 'e8-09', 'e1-05', 'c01', 'e7-02', 'c43', 'e1-01', 'c28',
+  'e2-19', 'e4-20', 'e4-21', 'e4-22', 'e4-23', 'e4-24', 'e4-25', 'e4-26']);
+const pdfCikmis = (s: { k: string; sinav?: string }) => PDF_CIKMIS.has(s.k) && !tekrarEden(s);
 const KATEGORI: Record<string, string> = { sendrom: 'Bulgu → sendrom', ilac: 'Kanser → ilaç', belirtec: 'Belirteç', tani: 'Tanı yöntemi' };
 
 type Mod = 'hizli' | 'yavas' | 'tam';
@@ -495,6 +499,7 @@ function SoruKart({ s, no, secim, yardimAcik, onSec, onOku, onYardim, onTekrar }
       <div className="tk-soru-ust">
         <span className="tk-etiketler">
         <span className={`tk-etiket${s.tur === 'cikmis' ? ' is-cik' : ''}`}>{s.tur === 'cikmis' ? `Çıkmış${s.sinav ? ` · ${s.sinav.replace(/\s*·\s*tekrar eden.*$/i, '')}` : ''}` : 'Kalıba uygun örnek'}</span>
+        {pdfCikmis(s) && <span className="tk-etiket is-pdf" title="Son yılların çıkmış listesinde yer alıyor">Son yıllar</span>}
         {tekrarEden(s) && <span className="tk-etiket is-tekrar" title="Hoca bu soruyu 2025 ve 2026'da tekrar sordu">Tekrar eden</span>}
         </span>
         <span className="tk-soru-arac">
@@ -597,7 +602,8 @@ function Deneme({ mod, havuz, cal, durdur }: { mod: Mod; havuz: Nokta[]; cal: (i
       // Öncelik: son yıllarda tekrar sorulan çıkmışlar ("tekrar eden") her denemeye önce girer, kalan yer bölümlere dengeli dağılır
       const tekrar = karis(DERS.noktalar.flatMap((n) => n.sorular).filter((x) => tekrarEden(x))); // moddan bağımsız: hızlı modda da
       const cikHedef = tur === 'cikmis' ? 12 : 8;
-      const once = tekrar.slice(0, cikHedef);
+      const ikinci = karis(DERS.noktalar.flatMap((n) => n.sorular).filter((x) => pdfCikmis(x)));
+      const once = [...tekrar, ...ikinci].slice(0, cikHedef);
       const kalanCik = kuyruk('cikmis').map((q) => q.filter((x) => !once.includes(x)));
       const cik = [...once, ...al(kalanCik, cikHedef - once.length)];
       secilen = tur === 'cikmis' ? cik : [...cik, ...al(kuyruk('ornek'), 12 - cik.length)];
@@ -608,12 +614,13 @@ function Deneme({ mod, havuz, cal, durdur }: { mod: Mod; havuz: Nokta[]; cal: (i
     const cikSay = havuz.reduce((t, n) => t + n.sorular.filter((x) => x.tur === 'cikmis').length, 0);
     const ornSay = havuz.reduce((t, n) => t + n.sorular.filter((x) => x.tur === 'ornek').length, 0);
     const tekSay = DERS.noktalar.reduce((t, n) => t + n.sorular.filter(tekrarEden).length, 0);
+    const pdfSay = DERS.noktalar.reduce((t, n) => t + n.sorular.filter(pdfCikmis).length, 0);
     const Y = new Set(yanlislar);
     const ySay = havuz.flatMap((n) => n.sorular).filter((x) => Y.has(x.k)).length;
     return (
       <div className="tk-deneme-giris">
         <h3>Sınav provası</h3>
-        <p>{MOD_AD[mod]} havuzu: <b>{cikSay}</b> çıkmış (<b>{tekSay}</b> tekrar eden) · <b>{ornSay}</b> kalıba uygun örnek. Tekrar eden çıkmışlar her denemeye önce girer, kalanı bölümlere dengeli dağılır; her yanlışta neden yanlış olduğu sesli anlatılır, "Yardım al" her şıkkı açıklar.</p>
+        <p>{MOD_AD[mod]} havuzu: <b>{cikSay}</b> çıkmış (<b>{tekSay}</b> tekrar eden, <b>{pdfSay}</b> son yıllar listesinden) · <b>{ornSay}</b> kalıba uygun örnek. Önce tekrar eden çıkmışlar, ardından son yıllar listesindeki çıkmışlar girer; kalanı bölümlere dengeli dağılır; her yanlışta neden yanlış olduğu sesli anlatılır, "Yardım al" her şıkkı açıklar.</p>
         <div className="tk-deneme-sec">
           <button type="button" className="tk-btn tk-btn-ana" onClick={() => basla('karma')}><Shuffle aria-hidden /> 12 soru: çıkmış ağırlıklı</button>
           <button type="button" className="tk-btn" onClick={() => basla('cikmis')} disabled={!cikSay}><Layers aria-hidden /> Yalnız çıkmışlar</button>

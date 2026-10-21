@@ -326,3 +326,4 @@
 @media (max-width: 760px) { .tk-sb-bag a span { display: none; } .tk-sb-bag a { padding: 0 10px; } }
 .tk-etiketler { display: inline-flex; flex-wrap: wrap; gap: 6px; min-width: 0; }
 .tk-etiket.is-tekrar { background: var(--color-accent); color: var(--color-on-accent); }
+.tk-etiket.is-pdf { background: var(--color-accent-soft, var(--color-surface-2)); color: var(--color-accent); }
