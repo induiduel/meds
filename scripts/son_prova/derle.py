@@ -30,6 +30,14 @@ BRANS_KLASOR = {"patoloji": "Tıbbi Patoloji", "enfeksiyon": "Enfeksiyon Hastal�
 KISA_BRANS = {"patoloji": "Patoloji", "enfeksiyon": "Enfeksiyon", "genetik": "Genetik", "uroloji": "Üroloji",
               "halksagligi": "Halk Sağlığı", "kadindogum": "Kadın Doğum", "farmakoloji": "Farmakoloji"}
 
+
+def klasor(part: dict) -> str:
+    return part.get("drive_klasor") or BRANS_KLASOR[part["brans"]]
+
+
+def kisa(part: dict) -> str:
+    return part.get("kisa") or KISA_BRANS[part["brans"]]
+
 ONEMLI = re.compile(r"^(Burası önemli|Çıkmış sorularda)|çıkmış sorularda|çıkmış soruda|sınavda soru|sınavda sorul")
 DIKKAT = re.compile(r"^(Dikkat edin|Vaka kökünde|Karıştırılmasın)")
 
@@ -65,8 +73,10 @@ def ders_no(ad: str) -> str:
 
 
 def kaynak_pdf(part: dict, ders: dict) -> str:
-    """Drive'daki kaynak PDF'in göreli yolu (meds_downloads/drive_root'a göre)"""
-    p = Path("Kurul 1") / BRANS_KLASOR[part["brans"]] / (ders.get("drive_ad") or ders["pdf_ad"])
+    """Drive'daki kaynak PDF'in göreli yolu (meds_downloads/drive_root'a göre). Kurul 2+: plan_kurul.py `drive_yol` verir."""
+    if ders.get("drive_yol") and (ROOT / "meds_downloads/drive_root" / ders["drive_yol"]).exists():
+        return ders["drive_yol"]
+    p = Path(f"Kurul {PLAN['kurul']}") / klasor(part) / (ders.get("drive_ad") or ders["pdf_ad"])
     tam = ROOT / "meds_downloads/drive_root" / p
     if not tam.exists():
         # Drive adları NFD gelebilir
@@ -76,7 +86,7 @@ def kaynak_pdf(part: dict, ders: dict) -> str:
         adaylar = [f for f in klasor.iterdir() if nfc(f.name) == hedef] or \
             [f for f in klasor.iterdir() if f.suffix.lower() == ".pdf" and ad_anahtar(f.name) == ad_anahtar(hedef)]
         if len(adaylar) == 1:
-            return str(Path("Kurul 1") / BRANS_KLASOR[part["brans"]] / adaylar[0].name)
+            return str(Path(f"Kurul {PLAN['kurul']}") / klasor(part) / adaylar[0].name)
         if not adaylar and ders.get("pdf_yok"):
             return f"@metin:{ders['pdf_metin']}"
         raise SystemExit(f"kaynak PDF yok ya da belirsiz: {tam} ({[a.name for a in adaylar]})")
@@ -104,7 +114,7 @@ def derle(part: dict) -> dict:
     sayfalar = sorted(kullan, key=lambda x: (sira[x[0]], x[1]))
     yeni = {x: i + 1 for i, x in enumerate(sayfalar)}
 
-    baslik_part = f"{KISA_BRANS[part['brans']]} · {part['baslik']}"
+    baslik_part = f"{kisa(part)} · {part['baslik']}"
     md = [f"# {baslik_part}", ""]
     hz = []
     vurgu = {}
@@ -159,7 +169,7 @@ def derle(part: dict) -> dict:
     out.mkdir(parents=True, exist_ok=True)
     metin = "\n".join(md).rstrip() + "\n"
     (out / f"{key}.md").write_text(metin, encoding="utf-8")
-    pdf_ad = f"Son Prova - {KISA_BRANS[part['brans']]}{' ' + str(part['no']) if part['key'][-1].isdigit() else ''} - özet slaytlar.pdf"
+    pdf_ad = f"Son Prova - {kisa(part)}{' ' + str(part['no']) if part['key'][-1].isdigit() else ''} - özet slaytlar.pdf"
     kaynak = []
     for kod, s in sayfalar:
         d = dersler[kod]
@@ -180,7 +190,7 @@ def derle(part: dict) -> dict:
     (out / "kirp.json").write_text(json.dumps({
         "cikti": f"data/son_prova/pdf/{key}.pdf", "ad": pdf_ad,
         "kaynaklar": kaynaklar,
-        "sayfalar": [{"kod": k, "s": s, "etiket": f"{KISA_BRANS[part['brans']]} {ders_no(dersler[k]['pdf_ad'])}) {ders_adi(dersler[k])} · slayt {s}"}
+        "sayfalar": [{"kod": k, "s": s, "etiket": f"{kisa(part)} {dersler[k].get('no') or ders_no(dersler[k]['pdf_ad'])}) {ders_adi(dersler[k])} · slayt {s}"}
                      for k, s in sayfalar],
     }, ensure_ascii=False, indent=1), encoding="utf-8")
     (out / "asamalar.json").write_text(json.dumps(asamalar, ensure_ascii=False, indent=1), encoding="utf-8")

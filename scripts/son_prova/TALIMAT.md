@@ -1,7 +1,7 @@
 # Son Prova — Sesli Özet Ders Yazım Talimatı (yazar alt ajanlar için)
 
-Kurul 1 sınavı yaklaşıyor (100 teorik soru: Patoloji 34, Enfeksiyon 22, Genetik 12, Üroloji 12, Halk Sağlığı 10,
-Kadın Doğum 6, Farmakoloji 4). "Son Prova" her dersi 1–4 parta bölünmüş **sesli özet derslerle** tekrar ettirir.
+Kurul sınavı yaklaşıyor. Kurul ve branş soru dağılımı `plan.json` → `kurul`, `sinav` (Kurul 1: 100 teorik soru — Patoloji 34,
+Enfeksiyon 22, Genetik 12, Üroloji 12, Halk Sağlığı 10, Kadın Doğum 6, Farmakoloji 4; Kurul 2+ dağılımı plan_kurul.py yazar). "Son Prova" her dersi 1–4 parta bölünmüş **sesli özet derslerle** tekrar ettirir.
 Amaç: öğrenci yalnız bu modülle sınavın **en az yarısını** yapabilsin. Bu yüzden içerik **özet ama eksiksiz**:
 çıkmış soruların sınadığı her bilgi, sınavda sorulmaya müsait her hap bilgi (tanım, sınıflama, sıralama, en sık/en önemli,
 tanı ölçütü, bulgu ve belirti, tedavi ve ilaç, sayı/oran/süre), karıştırılan kavram çiftleri. Dolgu, tekrar, giriş/kapanış yok.
@@ -14,14 +14,15 @@ partın sonunda check-up testi gelir.
 Görevde sana partın `plan.json` girdisi verilir; her ders için:
 - `pdf_metin` — **BİRİNCİL kaynak**, slayt metni, `=== SAYFA N ===` ile sayfa numaralı. Her cümlenin bilgisi burada olmalı.
   OCR'ı bozuk ya da görsel ağırlıklı sayfalar varsa ve bilgi oradaysa PDF'in kendisine bakabilirsin:
-  `meds_downloads/drive_root/Kurul 1/<Branş klasörü>/<pdf_ad>` (Read aracı PDF sayfalarını görüntü olarak okur, `pages` ile).
-- `sesli_anlatim` — bu dersin 69 ders hattındaki tam sesli anlatımı (güvenilir, aynı slaytlardan; yapı ve vurgu için).
+  `meds_downloads/drive_root/<drive_yol>` (Kurul 2+, plan'da) ya da `meds_downloads/drive_root/Kurul <N>/<Branş klasörü>/<pdf_ad>` (Read aracı PDF sayfalarını görüntü olarak okur, `pages` ile).
+- `sesli_anlatim` — bu dersin sesli ders hattındaki tam sesli anlatımı (güvenilir, aynı slaytlardan; yapı ve vurgu için).
 - `ders_notu` — amfi ders notu (varsa).
 - `onem` — "Sınav için en önemliler" listesi (`maddeler`: puan, bilgi, alt, alinti sayfası, neden). Puanı 85+ olan her madde metinde geçmeli.
 - `havuz_katalog` — `meds_temp/son_prova/havuz/<slayt_kod>.md`: bu dersin **çıkmış soruları** ve **soru havuzu** (ref'li).
 
 Kaynakta olmayan bilgi, kendi literatür bilgin, uydurma sayı **YASAK**. Kaynaklar çelişirse güncel slaytı (pdf_metin) esas al.
-Çıkmış sorunun anahtarı slaytla çelişiyorsa slaytı yaz ve `atlanan_cikmis`e gerekçesini yaz.
+Çıkmış sorunun anahtarı slaytla çelişiyorsa slaytı yaz ve `atlanan_cikmis`e gerekçesini yaz. Anahtarı körü körüne kopyalama;
+aynı bilgiyi soran tekrar çiftlerini şık METNİYLE karşılaştırıp tek karara bağla (KURUL2_YAPILMAYACAK_HATALAR H19).
 
 ## Kapsam önceliği
 1. **Her çıkmış sorunun** sınadığı bilgi (doğru şıkkın bilgisi + kökün sınadığı kavram + çeldiricilerin doğru yeri) metinde geçer.

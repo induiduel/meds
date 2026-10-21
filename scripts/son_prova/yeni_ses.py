@@ -9,12 +9,13 @@ Kullanım (CPU, makine korunarak):
     ~/.local/share/meds-ema/venv/bin/python meds/scripts/son_prova/yeni_ses.py [part-key ...]
 """
 import json
+import os
 import re
 import sys
 from pathlib import Path
 
 MEDS = Path(__file__).resolve().parents[2]
-KOK = MEDS.parent / "meds_temp/son_prova"
+KOK = Path(os.environ.get("SON_PROVA_KOK") or MEDS.parent / "meds_temp/son_prova")  # Kurul 2+: meds_temp/son_prova_k<N>
 sys.path.insert(0, str(MEDS / "scripts/spot_cozucu"))
 import ses as SC  # noqa: E402
 

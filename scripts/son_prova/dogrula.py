@@ -139,7 +139,7 @@ def denetle(p: Path, ozet: dict | None = None) -> int:
         for e in uslup(t, yer):
             H.append(f"üslup {e}")
         if k is not None:
-            mm = re.fullmatch(r"([a-z]?\d{2}b?):(\d+)", str(k))
+            mm = re.fullmatch(r"(\d?[a-z]?\d{2}b?):(\d+)", str(k))
             if not mm:
                 H.append(f"{yer}: slayt biçimi 'kod:sayfa' olmalı (ör. p07:23, e05:12): {k}")
             elif mm.group(1) not in sayfa:

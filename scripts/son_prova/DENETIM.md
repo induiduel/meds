@@ -9,7 +9,7 @@ Sen yazarın işini **bağımsız** denetleyen kıdemli bir tıp eğitimcisi ve 
 1. **Bilgi doğruluğu:** her cümlenin bilgisi `k` sayfasında (pdf_metin `=== SAYFA N ===`) gerçekten var mı, sayılar/oranlar/süreler/
    dozlar birebir mi? `k: null` cümleler sesli anlatım ya da ders notunda var mı? Kaynakta olmayan, abartılmış, genellenmiş,
    yanlış eşleşmiş (ilaç–hastalık, etken–tablo, gen–sendrom) her ifadeyi düzelt ya da sil.
-   OCR'ı bozuk sayfada şüphe varsa PDF'i görüntü olarak oku: `meds_downloads/drive_root/Kurul 1/<Branş>/<pdf_ad>` (Read, `pages`).
+   OCR'ı bozuk sayfada şüphe varsa PDF'i görüntü olarak oku: `meds_downloads/drive_root/<drive_yol>` (plan) ya da `Kurul <N>/<Branş>/<pdf_ad>` (Read, `pages`).
 2. **Slayt atfı:** `k` sayfası o cümlenin bilgisini gösteren en iyi sayfa mı? Öğrenci bu sayfayı kırpılmış PDF'te görecek;
    alakasız sayfaya giden atfı düzelt. Önemli tablo/şema sayfası atıfsız kaldıysa uygun cümleye bağla.
 3. **Sorular:** `sorular` ve `checkup` içindeki her sorunun (havuz kataloğu ya da `meds/src/data/<brans>_cozucu/<dosya>.json`)
@@ -35,3 +35,7 @@ Sen yazarın işini **bağımsız** denetleyen kıdemli bir tıp eğitimcisi ve 
 ## Son rapor (kısa)
 Dosya başına: düzeltilen bilgi hatası sayısı (en önemlileri tek satır örnekle), değiştirilen atıf sayısı, değiştirilen/çıkarılan
 soru (ref ve neden), eklenen eksik bilgi, kalan şüpheler. Son satır: dogrula --part sonucu.
+
+
+## Çıkmış anahtarı (H19, Kurul 2+ zorunlu)
+Her çıkmışın anahtarını slayta karşı denetle; tıbben hatalıysa metinde doğrusunu yaz, `atlanan_cikmis`'e "anahtar X, slayt Y: gerekçe" yaz ve son raporda bildir. Aynı bilgiyi farklı harfle soran tekrarlar şık metniyle karşılaştırılır.

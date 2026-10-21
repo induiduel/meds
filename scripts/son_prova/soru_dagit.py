@@ -247,7 +247,7 @@ def main():
             "brans": b, "ad": PLAN["sinav"][b]["ad"], "soru": PLAN["sinav"][b]["soru"], "genel": genel[b],
             "partlar": [{
                 "key": p["key"], "no": p["no"], "baslik": p["baslik"], "kelime": p["_kelime"], "tahminiDk": round(p["_kelime"] / dk),
-                "sayfa": p["_sayfa"], "dersler": [{"kod": d["slayt_kod"], "no": re.match(r"\s*(\d+)", d["pdf_ad"]).group(1), "ad": a_ad}
+                "sayfa": p["_sayfa"], "dersler": [{"kod": d["slayt_kod"], "no": d.get("no") or re.match(r"\s*(\d+)", d["pdf_ad"]).group(1), "ad": a_ad}
                                                   for d, a_ad in ((d, next((a["dersAd"] for a in p["asamalar"] if a["ders"] == d["slayt_kod"]), d["ad"])) for d in p["dersler"])],
                 "asamalar": [{k: a[k] for k in ("no", "baslik", "ders", "dersAd", "dersNo", "p", "sorular", "checkup")} for a in p["asamalar"]],
             } for p in ps],

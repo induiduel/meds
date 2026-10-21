@@ -23,3 +23,10 @@ sınav dağılımıyla 3 deneme. Ön yüz `/son-prova` (`src/components/sonProva
    dağıtılmadan önce durdurulur (Kurul 1'de patoloji-2 parçaları silinip yeniden üretildi).
    Kelime/cümle zamanlaması ve PDF işaretleri mevcut zamanlayıcılarla kendiliğinden gelir.
 8. **Dağıtım** — commit + `bash deploy/oracle/dagit.sh` (onem +1).
+
+## Soru denetimi ve düzeltme (2026-10-21)
+- Denemeler ve kusurlu havuz soruları bağımsız denetlenir (`meds_temp/son_prova/deneme_denetim/`, kanıtlı ikinci tur `SIKI.md`).
+- Kurtarılabilen soru yeniden yazılır (`duzelt/TALIMAT.md`, kapı `duzelt/denetle.py`) → `duzelt_uygula.py`: Son Prova'ya özel kimlik
+  `<brans>/t0N#n`, sesler `data/<brans>_cozucu/ses/t0N/` (soru çözücü havuzu değişmez). Denemede yalnız değiştirme: `deneme_degistir.py`.
+- ⚠ `soru_dagit.py` yeniden çalışırsa bu düzeltmeler ezilir: ardından `duzelt_uygula.py --sessiz` ve `deneme_degistir.py` çalıştır.
+- ⚠ e11 (2026) PDF'inin bazı sayfaları görüntüdür: metin çıkarımında yok diye "kaynakta yok" deme, sayfayı görüntü olarak oku.
