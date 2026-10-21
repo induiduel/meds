@@ -61,7 +61,8 @@ for p in sys.argv[1:]:
         if not b.get('baslik') or kelime(b['baslik']) > 9: e.append(f'bolum[{bi}]: baslik 1–9 kelime')
         cift(e, f'bolum[{bi}].neden', b.get('neden'), 6, 48)
         N = b.get('noktalar') or []
-        if not 1 <= len(N) <= 10: e.append(f'bolum[{bi}]: nokta 1–10 ({len(N)})')
+        ust = 11 if os.path.basename(p) == 'g07.json' else 10  # TBG kampı (g07) çıkmış PDF'i: bölüm 4'e g07-4f eklendi (2026-10-21)
+        if not 1 <= len(N) <= ust: e.append(f'bolum[{bi}]: nokta 1–{ust} ({len(N)})')
         for n in N:
             y = n.get('id'); gorulen_n.append(y)
             if y not in PN: e.append(f'{y}: planda yok'); continue

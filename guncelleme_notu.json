@@ -1,14 +1,21 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 186,
-  "baslik": "Sesli ders: slayt işaretleri anlama göre (83 ders)",
+  "onem": 187,
+  "baslik": "TBG Sınav Kampı: yeni çıkmışlar eklendi",
   "maddeler": [
-    "Sesli derslerde PDF işareti okunan cümlenin gerçekten anlattığı madde, tablo ya da resme gidiyor; şema ve tablolarda ince imleç anlatılan yerde dolaşıyor. Şu an 83 derste etkin."
+    "Tıbbi genetik çıkmış derlemesindeki eksik 9 soru kampa eklendi (bankada 286 soru): kalıtsal böbrek hastalıkları (polikistik böbrek, Alport, sistinüri, Wilms, VHL), abortus kromozom anomalileri, G-bantlama çözünürlüğü.",
+    "Sesli derse \"Kalıtsal böbrek hastalıkları\" bölümü ve abortus bilgisi eklendi.",
+    "2025 ve 2026'da tekrar sorulan çıkmışlar \"tekrar eden\" olarak işaretlendi.",
+    "Kurul 2–6 çıkmışlarında 51 cevap anahtarı ders kaynağına göre düzeltildi; her düzeltilen soruda eski anahtar ve gerekçe yazıyor."
   ],
-  "eklenen": [],
-  "degisen": [
-    "Sesli derslerde PDF işareti okunan cümlenin gerçekten anlattığı madde, tablo ya da resme gidiyor; şema ve tablolarda ince imleç anlatılan yerde dolaşıyor. Şu an 83 derste etkin."
+  "eklenen": [
+    "Tıbbi genetik çıkmış derlemesindeki eksik 9 soru kampa eklendi (bankada 286 soru): kalıtsal böbrek hastalıkları (polikistik böbrek, Alport, sistinüri, Wilms, VHL), abortus kromozom anomalileri, G-bantlama çözünürlüğü.",
+    "Sesli derse \"Kalıtsal böbrek hastalıkları\" bölümü ve abortus bilgisi eklendi.",
+    "2025 ve 2026'da tekrar sorulan çıkmışlar \"tekrar eden\" olarak işaretlendi."
   ],
-  "duzeltilen": [],
+  "degisen": [],
+  "duzeltilen": [
+    "Kurul 2–6 çıkmışlarında 51 cevap anahtarı ders kaynağına göre düzeltildi; her düzeltilen soruda eski anahtar ve gerekçe yazıyor."
+  ],
   "silinen": []
 }
