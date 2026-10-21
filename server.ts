@@ -513,6 +513,8 @@ function requireWritePassword(req: express.Request, res: express.Response, next:
   if (readOnlyPosts.some((p) => reqPath === p || reqPath.endsWith(p))) return next();
   // Öğren ortak notları / metin bildirimleri: kimliği ve hız sınırını kendisi denetler (learnSocialRoutes.ts)
   if (reqPath.startsWith('/api/learn/social/') || reqPath === '/api/learn/social') return next();
+  // Profil eşitleme kimliği kendisi doğrular (Firebase ID jetonu, yalnız kendi kaydı); parola istemez.
+  if (reqPath === '/api/users/sync') return next();
   // Yönetici (nofrostlife@gmail.com) veya yerel loopback admin istekleri şifre sorgusundan muaf tutulur
   const adminEmail = (req.headers['x-admin-email'] || req.body?.adminEmail || req.query?.adminEmail) as string;
   const ip = req.ip || req.socket?.remoteAddress || '';
@@ -8828,6 +8830,15 @@ app.post('/api/users/sync', async (req, res) => {
   if (!uid && !email) {
     return res.status(400).json({ error: 'uid veya email zorunludur.' });
   }
+
+  // Parola dışında yalnız doğrulanmış kişi kendi kaydını yazar (başkasının profilini ezmek olmasın).
+  if (!hasValidWritePassword(req)) {
+    const { user: me } = await requestUser(req).catch(() => ({ user: null as any }));
+    if (!me || (uid && me.uid !== uid) || (email && String(me.email || '').toLowerCase() !== String(email).trim().toLowerCase())) {
+      return res.status(401).json({ error: 'Oturum doğrulanamadı.' });
+    }
+  }
+  if (typeof photoURL === 'string' && photoURL.length > 200_000) return res.status(413).json({ error: 'Fotoğraf çok büyük.' });
 
   const users = loadUsers();
   const targetEmail = (email || '').trim().toLowerCase();

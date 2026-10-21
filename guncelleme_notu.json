@@ -1,19 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 210,
-  "baslik": "İzleme hızına göre kalan süre",
+  "onem": 211,
+  "baslik": "Profil fotoğrafı herkese görünüyor",
   "maddeler": [
-    "Bitirdiklerim ve Sınav planında dersleri kaç × izlediğini (1×–2,5×) kaydırıcıyla seçebilirsin; kalan ders süresi ve plan buna göre hesaplanır.",
-    "Bitirdiklerim'deki \"Kalan ders süresi\" artık çalışma hızından bağımsız: kalan ders süresi ÷ seçtiğin hız.",
-    "Son Prova partları Bitirdiklerim listesinden ve Sınav planından çıkarıldı."
+    "Profilden yüklenen fotoğraf artık sunucuya kaydediliyor ve sıralamada diğer öğrencilere görünüyor (fotoğrafını daha önce yüklediysen bir kez yeniden yükle)."
   ],
-  "eklenen": [
-    "Bitirdiklerim ve Sınav planında dersleri kaç × izlediğini (1×–2,5×) kaydırıcıyla seçebilirsin; kalan ders süresi ve plan buna göre hesaplanır."
+  "eklenen": [],
+  "degisen": [],
+  "duzeltilen": [
+    "Profilden yüklenen fotoğraf artık sunucuya kaydediliyor ve sıralamada diğer öğrencilere görünüyor (fotoğrafını daha önce yüklediysen bir kez yeniden yükle)."
   ],
-  "degisen": [
-    "Bitirdiklerim'deki \"Kalan ders süresi\" artık çalışma hızından bağımsız: kalan ders süresi ÷ seçtiğin hız.",
-    "Son Prova partları Bitirdiklerim listesinden ve Sınav planından çıkarıldı."
-  ],
-  "duzeltilen": [],
   "silinen": []
 }
