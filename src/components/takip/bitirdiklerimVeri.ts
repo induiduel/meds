@@ -71,7 +71,8 @@ const sonProvaYolu = (key: string) => {
 
 async function sesliYukle(): Promise<BdDers[]> {
   const [ds, ilgili] = await Promise.all([cdListeGetir(), ilgiliCozulenler().catch(() => new Map<string, number>())]);
-  return cdKategoriGrupla(ds).map(({ kat, dersler }) => ({
+  // Son Prova partları takip/plan dışında (kullanıcı kararı 2026-10-21): kendi sayfasında izlenir
+  return cdKategoriGrupla(ds.filter((d) => !sonProvaYolu(d.key))).filter(({ dersler }) => dersler.length).map(({ kat, dersler }) => ({
     id: kat.id,
     ad: kat.ad,
     konular: dersler.map((d) => {
@@ -79,8 +80,7 @@ async function sesliYukle(): Promise<BdDers[]> {
       const sb = d.brans ? CD_SPOT_BRANS[d.brans] : undefined;
       // Part 1/2 aynı konunun iki parçası: ilgili sorular yalnız ilk parçada sayılır
       const ek = sb && (d.parca || 1) === 1 ? ilgili.get(`${sb}|${Number(d.no)}`) || 0 : 0;
-      const sp = sonProvaYolu(d.key);
-      const ac = () => navigateTo(sp || pathFor('canli_ders', d.key));
+      const ac = () => navigateTo(pathFor('canli_ders', d.key));
       return {
         id: d.key,
         no: d.no,

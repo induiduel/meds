@@ -64,6 +64,8 @@ const SYNC_PATTERNS: RegExp[] = [
   /^medsoru_(test_kriter_v1|pdf_sel_v1|saglik_sina_v1|quickadd_draft_v1|nav_recent_v1)$/,
   /^medsoru_(cikmis_gorunum|pool_segment|saglik_gorunum|saglik_yogunluk|r12_reader)$/,
   /^medsoru_calisma_takip_v1$/,
+  // Bitirdiklerim / Sınav planı: kalan süre hesabındaki izleme hızı (calismaTakip.izlemeHizi)
+  /^medsoru_izleme_hizi_v1$/,
   /^medsoru_ornek_(k1_cevap|k1_ders|k1_social|havuz_social|sekme)$/,
   /^cikmis_quiz$/,
   /^my_(comment|report)_ids$/,

@@ -7,8 +7,9 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { BookOpen, ChevronDown, Tent, Headphones, ListChecks, MessageCircleQuestion, Play, RotateCcw, Search, Star, Target, ChevronRight, X } from 'lucide-react';
 import {
-  MODUL_AD, bittiMi, sesHizi, grupOzeti, gunYaz, hizHesapla, sureYaz, tekrarBasla, useTakip, type Hiz, type TakipModul,
+  MODUL_AD, bittiMi, sesHizi, grupOzeti, gunYaz, hizHesapla, sureYaz, tekrarBasla, useIzlemeHizi, useTakip, type Hiz, type TakipModul,
 } from '../../services/calismaTakip';
+import IzlemeHizi from './IzlemeHizi';
 import { KonuIsaret, KonuSureEtiketi } from './KonuTakip';
 import { MODUL_YUKLE, type BdDers, type BdKonu } from './bitirdiklerimVeri';
 import { navigateTo, pathFor } from '../../router';
@@ -43,6 +44,7 @@ export default function BitirdiklerimView() {
   const [suzgec, setSuzgec] = useState<Suzgec>('tum');
   const [acik, setAcik] = useState<Record<string, boolean>>({});
   const takip = useTakip();
+  const izHiz = useIzlemeHizi();
 
   useEffect(() => { document.title = 'Bitirdiklerim · MeDSor'; }, []);
   useEffect(() => {
@@ -78,7 +80,7 @@ export default function BitirdiklerimView() {
       r[id] = { hiz, dersler: dz.veri.map((d) => ({ d, o: grupOzeti(id, d.konular, hiz, takip) })), genel: grupOzeti(id, tum, hiz, takip) };
     }
     return r;
-  }, [durumlar, takip]);
+  }, [durumlar, takip, izHiz]);
 
   const dz = durumlar[modul];
   const oz = ozetler[modul];
@@ -153,7 +155,8 @@ export default function BitirdiklerimView() {
       ) : (
         <>
           <h3 className="sp-h"><span className="sp-h-no">2</span> Durumun</h3>
-          <OzetKartlari genel={oz.genel} hiz={oz.hiz} modul={modul} sirada={siradaki} />
+          {(modul === 'sesli' || modul === 'onem' || modul === 'cozucu') && <IzlemeHizi />}
+          <OzetKartlari genel={oz.genel} hiz={oz.hiz} modul={modul} sirada={siradaki} izHiz={izHiz} />
 
           <h3 className="sp-h"><span className="sp-h-no">3</span> Konu konu liste</h3>
 
@@ -218,10 +221,14 @@ export default function BitirdiklerimView() {
   );
 }
 
-function OzetKartlari({ genel, hiz, modul, sirada }: { genel: ReturnType<typeof grupOzeti>; hiz: Hiz; modul: TakipModul; sirada: { d: BdDers; k: BdKonu } | null }) {
+function OzetKartlari({ genel, hiz, modul, sirada, izHiz }: { genel: ReturnType<typeof grupOzeti>; hiz: Hiz; modul: TakipModul; sirada: { d: BdDers; k: BdKonu } | null; izHiz: number | null }) {
   const yuzde = genel.toplam ? Math.round((genel.biten / genel.toplam) * 100) : 0;
   const kalan = genel.toplam - genel.biten;
   const gun = gunYaz(genel.kalanSn, hiz.gunluk);
+  // "Kalan" kutusu ölçülen hızdan bağımsız: kalan ders süresi ÷ seçilen izleme hızı (sesli modüller)
+  const x = modul === 'sesli' || modul === 'onem' || modul === 'cozucu' ? (izHiz ?? 1) : 1;
+  const xYaz = `${x.toLocaleString('tr-TR', { maximumFractionDigits: 2 })}×`;
+  const kalanDers = genel.kalanIcerikSn / x;
   const cumle = !kalan
     ? `${MODUL_AD[modul]} bölümündeki konuların hepsini bitirdin. İstersen tekrar turuna başlayabilirsin.`
     : genel.biten === 0
@@ -232,7 +239,7 @@ function OzetKartlari({ genel, hiz, modul, sirada }: { genel: ReturnType<typeof 
       <p className={`sp-hukum ${!kalan ? 'is-iyi' : 'is-orta'}`}>{cumle}</p>
       <div className="sp-iki">
         <div><small>Bitirdiğin</small><b>{sayi(genel.biten)}<span className="bd-ozet-b"> / {sayi(genel.toplam)}</span></b><span className="bd-cubuk" aria-hidden><i style={{ width: `${yuzde}%` }} /></span></div>
-        <div className="is-plan"><small>Kalan</small><b>{kalan ? `~${sureYaz(genel.kalanSn)}` : '—'}</b><span>{kalan ? `${sayi(kalan)} konu, senin hızınla` : 'Hepsi bitti'}</span></div>
+        <div className="is-plan"><small>Kalan ders süresi</small><b>{kalan ? sureYaz(kalanDers) : '—'}</b><span>{kalan ? `${sayi(kalan)} konu · ${xYaz} izlersen` : 'Hepsi bitti'}</span></div>
         <div><small>Şimdiye kadar</small><b>{sureYaz(genel.sn)}</b><span>{genel.soru ? `${sayi(genel.soru)} soru çözdün` : 'çalıştın'}</span></div>
       </div>
       {sirada && (

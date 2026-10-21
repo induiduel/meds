@@ -233,10 +233,36 @@ const HIZ_ANAHTAR: Partial<Record<TakipModul, [string, boolean]>> = {
   cozucu: ['medsoru_cozucu_tercih_v1', true],
 };
 const VARSAYILAN_SES_HIZI = 1.4;
+
+/** Bitirdiklerim / Sınav planı'nda öğrencinin girdiği izleme hızı (1–2,5×). Bitirdiklerim'in "Kalan" kutusu içerik ÷ bu hız,
+ *  Sınav planı sesli modüllerin süresini bu hızla hesaplar (ölçülen hız yalnız özet cümlesinde); profil kv ile cihazlar arası eşitlenir. */
+export const IZLEME_HIZI_KEY = 'medsoru_izleme_hizi_v1';
+export const IZLEME_HIZI_MODULLER: TakipModul[] = ['sesli', 'onem', 'cozucu'];
+const izlemeAbone = new Set<() => void>();
+export function izlemeHizi(): number | null {
+  try {
+    const v = Number(localStorage.getItem(IZLEME_HIZI_KEY));
+    return v >= 1 && v <= 2.5 ? v : null;
+  } catch { return null; }
+}
+export function izlemeHiziYaz(v: number | null) {
+  try { if (v == null) localStorage.removeItem(IZLEME_HIZI_KEY); else localStorage.setItem(IZLEME_HIZI_KEY, String(v)); } catch { /* yok */ }
+  izlemeAbone.forEach((f) => f());
+}
+const izlemeAboneOl = (f: () => void) => {
+  izlemeAbone.add(f);
+  const st = (e: StorageEvent) => { if (e.key == null || e.key === IZLEME_HIZI_KEY) f(); };
+  window.addEventListener('storage', st);
+  return () => { izlemeAbone.delete(f); window.removeEventListener('storage', st); };
+};
+export const useIzlemeHizi = () => useSyncExternalStore(izlemeAboneOl, izlemeHizi, () => null);
+
 /** Öğrencinin modülde seçtiği ses hızı (1–2×) */
 export function sesHizi(m: TakipModul): number {
   const t = HIZ_ANAHTAR[m];
   if (!t) return 1;
+  const iz = izlemeHizi();
+  if (iz != null) return iz;
   try {
     const ham = localStorage.getItem(t[0]);
     if (ham == null) return VARSAYILAN_SES_HIZI;
@@ -245,7 +271,7 @@ export function sesHizi(m: TakipModul): number {
   } catch { return VARSAYILAN_SES_HIZI; }
 }
 // soru çözücüde süre yalnız kısmen sestir (düşünme süresi hızlanmaz): hızın yarısı kadar etki
-const onOran = (m: TakipModul) => {
+export const onOran = (m: TakipModul) => {
   const h = sesHizi(m);
   return ON_ORAN_1X[m] / (m === 'cozucu' ? 1 + (h - 1) / 2 : h);
 };

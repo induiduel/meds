@@ -1,15 +1,18 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 209,
-  "baslik": "Bitirdiklerim sayfası sadeleşti",
+  "onem": 210,
+  "baslik": "İzleme hızına göre kalan süre",
   "maddeler": [
-    "Bitirdiklerim adım adım ilerliyor: çalışma türünü seç, durumunu tek cümlede gör, \"Sıradaki konu\" kartındaki Devam et ile bitmemiş ilk konuya geç.",
-    "Süreler daha anlaşılır: her konuda \"Süresi\" ve \"Çalıştığın\" ayrı yazıyor; hesap ayrıntıları açılır bölüme taşındı."
+    "Bitirdiklerim ve Sınav planında dersleri kaç × izlediğini (1×–2,5×) kaydırıcıyla seçebilirsin; kalan ders süresi ve plan buna göre hesaplanır.",
+    "Bitirdiklerim'deki \"Kalan ders süresi\" artık çalışma hızından bağımsız: kalan ders süresi ÷ seçtiğin hız.",
+    "Son Prova partları Bitirdiklerim listesinden ve Sınav planından çıkarıldı."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "Bitirdiklerim ve Sınav planında dersleri kaç × izlediğini (1×–2,5×) kaydırıcıyla seçebilirsin; kalan ders süresi ve plan buna göre hesaplanır."
+  ],
   "degisen": [
-    "Bitirdiklerim adım adım ilerliyor: çalışma türünü seç, durumunu tek cümlede gör, \"Sıradaki konu\" kartındaki Devam et ile bitmemiş ilk konuya geç.",
-    "Süreler daha anlaşılır: her konuda \"Süresi\" ve \"Çalıştığın\" ayrı yazıyor; hesap ayrıntıları açılır bölüme taşındı."
+    "Bitirdiklerim'deki \"Kalan ders süresi\" artık çalışma hızından bağımsız: kalan ders süresi ÷ seçtiğin hız.",
+    "Son Prova partları Bitirdiklerim listesinden ve Sınav planından çıkarıldı."
   ],
   "duzeltilen": [],
   "silinen": []

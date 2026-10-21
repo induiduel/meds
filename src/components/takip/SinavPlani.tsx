@@ -5,6 +5,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Headphones, MessageCircleQuestion, Play, Star } from 'lucide-react';
 import { sureYaz, useTakip, type Hiz, type TakipModul } from '../../services/calismaTakip';
+import IzlemeHizi from './IzlemeHizi';
 import SinavSenaryo from './SinavSenaryo';
 import { planHesapla, planVerisiYukle, type AdimTur, type PlanAdim, type PlanGun, type PlanVeri } from './sinavPlani';
 
@@ -101,13 +102,14 @@ export default function SinavPlani({ hiz }: { hiz: Partial<Record<TakipModul, Hi
   return (
     <section className="sp is-sayfa" aria-label="Sınav planı">
       <ol className="sp-nasil-kullan" aria-label="Nasıl kullanılır">
-        <li><span>1</span><div><b>Günlük saatini seç</b><small>Plan bu süreye göre gün gün bölünür.</small></div></li>
+        <li><span>1</span><div><b>Günlük saatini seç</b><small>Saatini ve dersleri kaç × izlediğini seç; plan buna göre bölünür.</small></div></li>
         <li><span>2</span><div><b>Bugünün listesine bas</b><small>"Başla" ilgili dersi ya da soruları açar.</small></div></li>
         <li><span>3</span><div><b>Bitince işaretle</b><small>Biten iş listeden düşer, puanın güncellenir.</small></div></li>
       </ol>
 
       <div className="sp-kutu">
         <h3 className="sp-h"><span className="sp-h-no">1</span> Günde kaç saat çalışabilirsin?</h3>
+        <IzlemeHizi />
         <div className="sp-saat">
           <div role="group" aria-label="Günlük çalışma saati">
             {SAATLER.map((n) => (

@@ -4,7 +4,7 @@
  */
 import React, { useEffect, useMemo, useState } from 'react';
 import { Target } from 'lucide-react';
-import { hizHesapla, useTakip, type Hiz, type TakipModul } from '../../services/calismaTakip';
+import { IZLEME_HIZI_MODULLER, hizHesapla, onOran, useIzlemeHizi, useTakip, type Hiz, type TakipModul } from '../../services/calismaTakip';
 import { MODUL_YUKLE, type BdDers } from './bitirdiklerimVeri';
 import SinavPlani from './SinavPlani';
 import '../../styles/takip.css';
@@ -14,6 +14,7 @@ const MODULLER: TakipModul[] = ['sesli', 'ogren', 'cozucu', 'onem', 'kamp'];
 export default function SinavPlaniView() {
   const [veriler, setVeriler] = useState<Partial<Record<TakipModul, BdDers[]>>>({});
   const takip = useTakip();
+  const izHiz = useIzlemeHizi();
 
   useEffect(() => { document.title = 'Sınav planı · MeDSor'; }, []);
   useEffect(() => {
@@ -24,11 +25,15 @@ export default function SinavPlaniView() {
 
   const hizlar = useMemo(() => {
     const r: Partial<Record<TakipModul, Hiz>> = {};
-    for (const id of MODULLER) { const v = veriler[id]; if (v) r[id] = hizHesapla(id, v.flatMap((d) => d.konular), takip); }
+    for (const id of MODULLER) { const v = veriler[id]; if (!v) continue;
+      const h = hizHesapla(id, v.flatMap((d) => d.konular), takip);
+      // izleme hızı girildiyse sesli modüllerin süresi yalnız o hızla (onOran zaten seçilen hızı kullanır)
+      r[id] = izHiz != null && IZLEME_HIZI_MODULLER.includes(id) ? { ...h, oran: onOran(id), kaynak: 'icerik' } : h;
+    }
     return r;
-  }, [veriler, takip]);
+  }, [veriler, takip, izHiz]);
   // plan hızı değişmedikçe yeniden hesaplamasın
-  const anahtar = MODULLER.map((id) => hizlar[id]?.oran.toFixed(2) ?? '-').join('|');
+  const anahtar = MODULLER.map((id) => hizlar[id]?.oran.toFixed(3) ?? '-').join('|');
   const planHiz = useMemo(() => hizlar, [anahtar]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
