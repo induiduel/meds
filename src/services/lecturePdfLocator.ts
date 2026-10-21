@@ -166,6 +166,12 @@ export const SANAL_DESTELER: Record<string, { title: string; decks: string[] }> 
       'k1p-k1-31-urogenital-sistem-tumorlerinde-genetik-belirtecler-v2',
       'k1p-k1-35-prenatal-tani-yontemleri-v2',
       'k1p-k1-60-preimplantasyon-genetik-tani-pgt',
+      // PDF çıkmış entegrasyonu (2026-10-21): abortus ve kalıtsal böbrek hastalıkları slaytları
+      'k1p-k1-61-abortus-v2',
+      'k1p-k1-44-vaskuler-ve-kistik-bobrek-hastaliklari-v2',
+      'k1p-k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-v2',
+      'k1p-k1-38-glomeruler-hastaliklar-nefritik-sendrom-v2',
+      'k1p-k1-45-bobrek-tumorleri-v2',
     ],
   },
 };
