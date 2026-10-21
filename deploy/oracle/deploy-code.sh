@@ -133,7 +133,9 @@ if grep -vE '^(dist/|public/|docs/|src/(components|screens|styles|pages)/|.*\.(t
 # Sunucu kodu karması (2026-10-20): değişen dosya listesi yetmez — dosya Oracle'a başka bir yoldan (tek dosya rsync,
 # başka oturum) yeniden başlatmasız gelmiş olabilir; rsync saat damgasını da korur. Çalışan sunucunun yüklediği kodun
 # karması her yeniden başlatmada .sunucu_kod_karma'ya yazılır; Oracle'daki kodun karması farklıysa yeniden başlat.
-KOD_KARMA_KOMUT="cd $ORACLE_DIR && find server.ts src/services src/serverLectureNotes.ts src/config src/types -type f \( -name '*.ts' -o -name '*.json' \) 2>/dev/null | LC_ALL=C sort | xargs sha256sum | sha256sum | cut -c1-16"
+# Sunucunun açılışta içe aktardığı kural verisi de karmaya girer (2026-10-21): başarım tanımı, kurul takvimi, ders kayıt
+# defteri — yalnız bunlar değişse de meds-app yeniden başlar (önceden elle `docker restart meds-app` gerekiyordu).
+KOD_KARMA_KOMUT="cd $ORACLE_DIR && find server.ts src/services src/serverLectureNotes.ts src/config src/types src/data/basarim src/data/dersler src/data/kurul_takvimi_ozet.json -type f \( -name '*.ts' -o -name '*.json' \) 2>/dev/null | LC_ALL=C sort | xargs sha256sum | sha256sum | cut -c1-16"
 UZAK_KARMA="$($SSH "$ORACLE_USER@$ORACLE_HOST" "$KOD_KARMA_KOMUT" 2>/dev/null || true)"
 YUKLU_KARMA="$($SSH "$ORACLE_USER@$ORACLE_HOST" "cat $ORACLE_DIR/.sunucu_kod_karma 2>/dev/null" || true)"
 if [[ -n "$UZAK_KARMA" && "$UZAK_KARMA" != "$YUKLU_KARMA" ]]; then

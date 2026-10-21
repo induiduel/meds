@@ -2589,7 +2589,9 @@ for (const sig of ['SIGTERM', 'SIGINT'] as const) {
   process.once(sig, () => {
     if (kapaniyor) return;
     kapaniyor = true;
-    const bitir = () => { flushPastQuestionsDbSync(); process.exit(0); };
+    const t0 = Date.now();
+    console.log(`[kapanış] ${sig}: yeni bağlantı alınmıyor, yoldaki istekler bekleniyor (en çok 10 sn)`);
+    const bitir = () => { console.log(`[kapanış] bitti (${Date.now() - t0} ms)`); flushPastQuestionsDbSync(); process.exit(0); };
     const srv = httpServerRef;
     if (!srv) return bitir();
     setTimeout(bitir, 10_000).unref();
