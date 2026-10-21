@@ -1,16 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 207,
-  "baslik": "Sınav planı sayfası sadeleşti",
+  "onem": 208,
+  "baslik": "Sıralamada yüklenen profil fotoğrafları",
   "maddeler": [
-    "Sınav planı adım adım ilerliyor: önce günlük saatini seç, sonra durumunu gör, ardından bugün yapacaklarına \"Başla\" ile geç.",
-    "Sonuçlar düz cümleyle anlatılıyor: bugün sınava girsen kaç puan, planı bitirirsen kaç puan ve 60 alma şansın; her ders için baraj durumu etiketle gösteriliyor."
+    "Profil sayfasından yüklenen fotoğraflar da artık sıralamada herkese görünüyor."
   ],
   "eklenen": [],
-  "degisen": [
-    "Sınav planı adım adım ilerliyor: önce günlük saatini seç, sonra durumunu gör, ardından bugün yapacaklarına \"Başla\" ile geç.",
-    "Sonuçlar düz cümleyle anlatılıyor: bugün sınava girsen kaç puan, planı bitirirsen kaç puan ve 60 alma şansın; her ders için baraj durumu etiketle gösteriliyor."
+  "degisen": [],
+  "duzeltilen": [
+    "Profil sayfasından yüklenen fotoğraflar da artık sıralamada herkese görünüyor."
   ],
-  "duzeltilen": [],
   "silinen": []
 }
