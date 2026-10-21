@@ -90,7 +90,7 @@ function CanliDersListe() {
 
   const yukle = (yenile = false) => {
     setHata(null);
-    cdListeGetir(yenile).then((ds) => { cdListeOzetleri(ds); setDersler(ds); }, (e) => setHata(e?.message || 'Liste alınamadı.'));
+    cdListeGetir(yenile).then((ds) => { cdListeOzetleri(ds); setDersler(ds.filter((d) => !/-son-prova-/.test(d.key))); /* Son Prova partları kendi sayfasında (/son-prova) */ }, (e) => setHata(e?.message || 'Liste alınamadı.'));
   };
   useEffect(() => {
     document.title = 'Sesli ders · MeDSor';
