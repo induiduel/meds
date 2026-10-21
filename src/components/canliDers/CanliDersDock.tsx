@@ -25,7 +25,8 @@ const gizliOku = () => { try { return localStorage.getItem(GIZLI_KEY) === '1'; }
 export default function CanliDersDock({ activeTab, dersKey }: { activeTab: string; dersKey?: string }) {
   useEffect(() => { cdMotivasyonKur(); }, []);
   const key = useCd((s) => s.key);
-  const tam = activeTab === 'canli_ders' && !!dersKey && dersKey === key;
+  // Ders ekranında tam oynatıcı: /canliders/<ders> ve Son Prova partı (yüklü ders o sayfanın partıysa)
+  const tam = (activeTab === 'canli_ders' && !!dersKey && dersKey === key) || (activeTab === 'son_prova' && !!key && /-son-prova-/.test(key));
   const ref = useRef<HTMLDivElement>(null);
   const [alt, setAlt] = useState(0);
   const [kucuk, setKucukHam] = useState(gizliOku);

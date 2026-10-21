@@ -1,16 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 156,
-  "baslik": "Son Prova: sorular sayfa içinde",
+  "onem": 157,
+  "baslik": "Son Prova: tam oynatıcı ve aşama çubuğu",
   "maddeler": [
-    "Son Prova'da aşama soruları artık pencere olarak değil sayfanın içinde açılır; soru çözerken ders metni ve PDF gizlenir, bitince kaldığın yerden devam eder.",
-    "Son Prova PDF'lerinde okunan cümle ve kelime slaytta işaretlenir."
+    "Son Prova partlarında alttaki ses oynatıcısı artık tam açılır (hız, sarma, bölüm atlama).",
+    "Aşama çubuğu her ekranda düzgün görünür."
   ],
   "eklenen": [],
-  "degisen": [
-    "Son Prova'da aşama soruları artık pencere olarak değil sayfanın içinde açılır; soru çözerken ders metni ve PDF gizlenir, bitince kaldığın yerden devam eder.",
-    "Son Prova PDF'lerinde okunan cümle ve kelime slaytta işaretlenir."
+  "degisen": [],
+  "duzeltilen": [
+    "Son Prova partlarında alttaki ses oynatıcısı artık tam açılır (hız, sarma, bölüm atlama).",
+    "Aşama çubuğu her ekranda düzgün görünür."
   ],
-  "duzeltilen": [],
   "silinen": []
 }

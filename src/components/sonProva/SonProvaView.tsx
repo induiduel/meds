@@ -26,6 +26,7 @@ import {
   type SpAsama, type SpDers, type SpIndex, type SpPart,
 } from './spVeri';
 import SpTest from './SpTest';
+import '../../styles/genetik-kamp.css'; // kamp kipinin aşama çubuğu (.cd-k-cubuk) stilleri
 import '../../styles/son-prova.css';
 
 const CanliDersDers = lazy(() => import('../canliDers/CanliDersDers'));
