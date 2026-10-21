@@ -1,11 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 158,
-  "baslik": "Kadın Doğum: sesli derste slayt işaretleri anlamına göre, yeni sorular",
+  "onem": 159,
+  "baslik": "Yanlış çevrimdışı uyarısı giderildi",
   "maddeler": [
-    "Abortus ve Gebelik terminolojisi sesli derslerinde PDF'teki işaret artık okunan cümlenin gerçekten anlattığı madde, tablo satırı ya da resme gidiyor.",
-    "Kadın Doğum soru çözücüye 15 yeni soru eklendi (toplam 134); En önemliler listesine VTE puanlaması maddesi geldi.",
-    "Bu iki derste metnine uymayan eski sesler kaldırıldı; kelime takibi sesle eşleşiyor."
+    "İnternet varken bazı sayfalarda çıkan \"Çevrimdışısın\", \"Bağlantı zayıf\" ve \"Bağlantı geri geldi\" uyarıları artık yalnız bağlantı gerçekten koptuğunda gösterilir."
   ],
   "eklenen": [
     "Kadın Doğum soru çözücüye 15 yeni soru eklendi (toplam 134); En önemliler listesine VTE puanlaması maddesi geldi."
@@ -14,7 +12,7 @@
     "Abortus ve Gebelik terminolojisi sesli derslerinde PDF'teki işaret artık okunan cümlenin gerçekten anlattığı madde, tablo satırı ya da resme gidiyor."
   ],
   "duzeltilen": [
-    "Bu iki derste metnine uymayan eski sesler kaldırıldı; kelime takibi sesle eşleşiyor."
+    "İnternet varken bazı sayfalarda çıkan \"Çevrimdışısın\", \"Bağlantı zayıf\" ve \"Bağlantı geri geldi\" uyarıları artık yalnız bağlantı gerçekten koptuğunda gösterilir."
   ],
   "silinen": []
 }

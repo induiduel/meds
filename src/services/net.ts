@@ -43,17 +43,41 @@ function reportOk() {
   failTimes = [];
   if (state !== 'online' && (typeof navigator === 'undefined' || navigator.onLine !== false)) setState('online');
 }
-/** SW ağa ulaşamadığını bildirdi (X-Cevrimdisi): Wi-Fi bağlı ama internetsizken de "çevrimdışı" gösterilir */
+// Tek istek hatası (CORS, üçüncü taraf servis, sunucuda yavaş bir uç, SW'nin "ağ yok" yanıtı) bağlantı durumunu
+// doğrudan değiştirmez: önce sunucu ayrıca yoklanır (/api/surum, SW'den geçmez). Yalnız yoklama da başarısızsa
+// "offline", yoklama yavaşsa "slow" olur; yoklama hızlı yanıt verirse uyarı çıkmaz (2026-10-21: internet varken
+// "Çevrimdışısın / Bağlantı geri geldi" uyarıları).
+let nativeFetchRef: typeof fetch | null = null;
+let probing: Promise<void> | null = null;
+let lastProbe = 0;
+function probe(suspect: 'offline' | 'slow') {
+  if (probing || Date.now() - lastProbe < 5_000) return;
+  const f = nativeFetchRef || (typeof fetch === 'function' ? fetch : null);
+  if (!f) return setState(suspect);
+  const ctl = new AbortController();
+  const started = Date.now();
+  const t = setTimeout(() => ctl.abort(), 6_000);
+  probing = f(`/api/surum?t=${started}`, { cache: 'no-store', signal: ctl.signal })
+    .then((r) => {
+      if (!r.ok) throw new Error(String(r.status));
+      if (Date.now() - started > 4_000) setState('slow');
+      else reportOk();
+    })
+    .catch(() => setState(navigator.onLine === false ? 'offline' : suspect === 'offline' ? 'offline' : 'slow'))
+    .finally(() => { clearTimeout(t); lastProbe = Date.now(); probing = null; });
+}
+/** SW ağa ulaşamadığını bildirdi (X-Cevrimdisi): sunucu yoklaması da başarısızsa "çevrimdışı" (Wi-Fi bağlı ama internetsiz) */
 function reportOffline() {
   failTimes = [];
-  setState('offline');
+  if (typeof navigator !== 'undefined' && navigator.onLine === false) return setState('offline');
+  probe('offline');
 }
 function reportFail() {
   if (typeof navigator !== 'undefined' && navigator.onLine === false) return setState('offline');
   const now = Date.now();
   failTimes = failTimes.filter((t) => now - t < 30_000);
   failTimes.push(now);
-  if (failTimes.length >= 2) setState('slow');
+  if (failTimes.length >= 2) probe('slow');
 }
 
 /** Zaman aşımı: isteğin türüne göre ms. */
@@ -80,6 +104,7 @@ export function installFetchGuard() {
   if (installed || typeof window === 'undefined' || typeof window.fetch !== 'function') return;
   installed = true;
   const nativeFetch = window.fetch.bind(window);
+  nativeFetchRef = nativeFetch;
   type Waiter = [(r: Response) => void, (e: unknown) => void];
   const inflight = new Map<string, Waiter[]>();
 
