@@ -1,18 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 159,
-  "baslik": "Yanlış çevrimdışı uyarısı giderildi",
+  "onem": 160,
+  "baslik": "Hatalı istekte yanlış çevrimdışı uyarısı giderildi",
   "maddeler": [
-    "İnternet varken bazı sayfalarda çıkan \"Çevrimdışısın\", \"Bağlantı zayıf\" ve \"Bağlantı geri geldi\" uyarıları artık yalnız bağlantı gerçekten koptuğunda gösterilir."
+    "Sunucunun reddettiği bir istek (ör. bozuk veri) artık internet kopmuş gibi \"çevrimdışı\" uyarısı vermez."
   ],
-  "eklenen": [
-    "Kadın Doğum soru çözücüye 15 yeni soru eklendi (toplam 134); En önemliler listesine VTE puanlaması maddesi geldi."
-  ],
-  "degisen": [
-    "Abortus ve Gebelik terminolojisi sesli derslerinde PDF'teki işaret artık okunan cümlenin gerçekten anlattığı madde, tablo satırı ya da resme gidiyor."
-  ],
+  "eklenen": [],
+  "degisen": [],
   "duzeltilen": [
-    "İnternet varken bazı sayfalarda çıkan \"Çevrimdışısın\", \"Bağlantı zayıf\" ve \"Bağlantı geri geldi\" uyarıları artık yalnız bağlantı gerçekten koptuğunda gösterilir."
+    "Sunucunun reddettiği bir istek (ör. bozuk veri) artık internet kopmuş gibi \"çevrimdışı\" uyarısı vermez."
   ],
   "silinen": []
 }

@@ -358,15 +358,8 @@ const PORT = 3000;
 // iletebilmek ve SSE'nin sıkıştırmaya takılmaması için compression ve express.json'dan ÖNCE (bkz. src/services/adminAuth.ts)
 app.use(panelOracleProxyMiddleware());
 
-app.use(compression({ threshold: 1024 }));
-
-app.use(express.json({ limit: '100mb' }));
-// Yönetici doğrulaması (/api/*): gizli anahtar | gerçek loopback | yöneticinin Firebase jetonu → req.adminAuth
-configureAdminAuthLog(path.resolve(__dirname, 'data'));
-app.use(adminAuthMiddleware('nofrostlife@gmail.com'));
-app.use(express.urlencoded({ extended: true, limit: '100mb' }));
-
-// Enable CORS for all origins (canlı alan adı ve tünel erişimi)
+// Enable CORS for all origins (canlı alan adı ve tünel erişimi). Gövde ayrıştırıcılardan ÖNCE: bozuk/çok büyük
+// JSON 400/413 yanıtı da başlığı taşısın (yoksa tarayıcı ağ hatası, SW "çevrimdışı" sanıyordu).
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, PATCH');
@@ -384,6 +377,14 @@ app.use((req, res, next) => {
   }
   next();
 });
+
+app.use(compression({ threshold: 1024 }));
+
+app.use(express.json({ limit: '100mb' }));
+// Yönetici doğrulaması (/api/*): gizli anahtar | gerçek loopback | yöneticinin Firebase jetonu → req.adminAuth
+configureAdminAuthLog(path.resolve(__dirname, 'data'));
+app.use(adminAuthMiddleware('nofrostlife@gmail.com'));
+app.use(express.urlencoded({ extended: true, limit: '100mb' }));
 
 // Başarım: puan + ATP, hedefler, başarımlar, sıralama (src/services/basarim; kurallar src/data/basarim/tanim.json).
 // CORS'tan sonra (api. alt alanından okunur), diğer rotalardan önce kurulur (topluluk eylemi ara katmanı); profil yedeği kaydedilince kişi yeniden değerlendirilir.
