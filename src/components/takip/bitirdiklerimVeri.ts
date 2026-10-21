@@ -33,6 +33,8 @@ export interface BdKonu {
   turetilen: boolean;
   /** başka modülden gelen ilgili soru sayısı (sesli derste aynı konunun soru çözücüsü) */
   ekSoru?: number;
+  /** modüller arası ortak ders anahtarı `<branş>|<no>` (Sınav planı ile aynı; konu eleme bunu kullanır) */
+  ders?: string;
   ac: () => void;
   tekrar: () => void;
 }
@@ -71,8 +73,8 @@ const sonProvaYolu = (key: string) => {
 
 async function sesliYukle(): Promise<BdDers[]> {
   const [ds, ilgili] = await Promise.all([cdListeGetir(), ilgiliCozulenler().catch(() => new Map<string, number>())]);
-  // Son Prova partları takip/plan dışında (kullanıcı kararı 2026-10-21): kendi sayfasında izlenir
-  return cdKategoriGrupla(ds.filter((d) => !sonProvaYolu(d.key))).filter(({ dersler }) => dersler.length).map(({ kat, dersler }) => ({
+  // Son Prova partları ve sınav kampları takip/plan dışında (kullanıcı kararı 2026-10-21): kendi sayfalarında izlenir
+  return cdKategoriGrupla(ds.filter((d) => !sonProvaYolu(d.key) && !/-sinav-kampi/.test(d.key))).filter(({ dersler }) => dersler.length).map(({ kat, dersler }) => ({
     id: kat.id,
     ad: kat.ad,
     konular: dersler.map((d) => {
@@ -89,6 +91,7 @@ async function sesliYukle(): Promise<BdDers[]> {
         beklenen: v?.sureSn || 0,
         turetilen: false,
         ekSoru: ek,
+        ders: sb && d.no != null && d.no !== '' ? `${sb}|${Number(d.no)}` : undefined,
         ac,
         tekrar: () => { if (v) cdOynat(d, v.id, { t: 0 }); ac(); },
       };
@@ -146,6 +149,7 @@ async function cozucuYukle(): Promise<BdDers[]> {
         return {
           id: `${b.id}/${d.kod}`,
           no: d.no,
+          ders: `${b.id}|${Number(d.no)}`,
           ad: d.baslik,
           alt: [setAdi(d), `${d.soru} soru`].filter(Boolean).join(' · '),
           beklenen: d.sure || d.soru * SORU_SN,
@@ -175,6 +179,7 @@ async function onemYukle(): Promise<BdDers[]> {
         return {
           id: `${b.id}/${d.kod}`,
           no: d.no,
+          ders: `${b.id}|${Number(d.no)}`,
           ad: d.baslik,
           alt: `${d.madde} madde · ${say.get(d.kod) || 0} öğrenildi`,
           beklenen: asistanSure.get(`${b.id}/${d.kod}`) || d.madde * MADDE_SN,

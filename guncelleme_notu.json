@@ -1,18 +1,20 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 212,
-  "baslik": "Sesli asistan ve Son Prova: çıkmış soru açıklamaları yenilendi",
+  "onem": 213,
+  "baslik": "Bitirdiklerim: konuyu hesaptan çıkar",
   "maddeler": [
-    "Sesli sınav asistanındaki 751 çıkmış sorunun \"Yardım al\" ve yanlış şık açıklamaları yenilendi: her şıkta kavramın ne olduğu, ne işe yaradığı ve bu soruda neden doğru ya da yanlış olduğu anlatılıyor; yeni açıklamalar EMA ile seslendirildi.",
-    "Son Prova aşama sorularındaki çıkmışlar da aynı açıklamaları kullanıyor.",
-    "Poststreptokokal GN ve Refik Saydam sorularının açıklamaları slayt ile güncel bilgi arasındaki farkı açıkça anlatacak şekilde düzeltildi."
+    "Bitirdiklerim'de her konunun ⋯ menüsü: \"Başka yerden çalıştım\" (bitti sayılır), \"Çalışmayacağım\" ve \"Sınavda sorusu yok\" (kalan süreden çıkar). Sınav planı bu seçimlere göre hesaplanır.",
+    "Sınav kampı sesli ders listesinden ve sınav planından çıkarıldı.",
+    "Yanıltıcı \"≈ N gün\" tahminleri kaldırıldı."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "Bitirdiklerim'de her konunun ⋯ menüsü: \"Başka yerden çalıştım\" (bitti sayılır), \"Çalışmayacağım\" ve \"Sınavda sorusu yok\" (kalan süreden çıkar). Sınav planı bu seçimlere göre hesaplanır."
+  ],
   "degisen": [
-    "Sesli sınav asistanındaki 751 çıkmış sorunun \"Yardım al\" ve yanlış şık açıklamaları yenilendi: her şıkta kavramın ne olduğu, ne işe yaradığı ve bu soruda neden doğru ya da yanlış olduğu anlatılıyor; yeni açıklamalar EMA ile seslendirildi.",
-    "Son Prova aşama sorularındaki çıkmışlar da aynı açıklamaları kullanıyor.",
-    "Poststreptokokal GN ve Refik Saydam sorularının açıklamaları slayt ile güncel bilgi arasındaki farkı açıkça anlatacak şekilde düzeltildi."
+    "Sınav kampı sesli ders listesinden ve sınav planından çıkarıldı."
   ],
   "duzeltilen": [],
-  "silinen": []
+  "silinen": [
+    "Yanıltıcı \"≈ N gün\" tahminleri kaldırıldı."
+  ]
 }

@@ -5,11 +5,12 @@
  * Veri: services/calismaTakip (süre, soru, durum) + bitirdiklerimVeri (konu listeleri). Stil: styles/takip.css (.bd-*).
  */
 import React, { useEffect, useMemo, useState } from 'react';
-import { BookOpen, ChevronDown, Tent, Headphones, ListChecks, MessageCircleQuestion, Play, RotateCcw, Search, Star, Target, ChevronRight, X } from 'lucide-react';
+import { BookOpen, ChevronDown, Tent, Headphones, ListChecks, MessageCircleQuestion, Play, RotateCcw, Search, Star, Target, ChevronRight, X, MoreHorizontal, Undo2 } from 'lucide-react';
 import {
-  MODUL_AD, bittiMi, sesHizi, grupOzeti, gunYaz, hizHesapla, sureYaz, tekrarBasla, useIzlemeHizi, useTakip, type Hiz, type TakipModul,
+  MODUL_AD, bittiMi, sesHizi, grupOzeti, hizHesapla, sureYaz, tekrarBasla, useIzlemeHizi, useTakip, type Hiz, type TakipModul,
 } from '../../services/calismaTakip';
 import IzlemeHizi from './IzlemeHizi';
+import { ELEME_AD, elemeAnahtari, elemeYaz, konuElemesi, useEleme, type ElemeTur } from '../../services/konuEleme';
 import { KonuIsaret, KonuSureEtiketi } from './KonuTakip';
 import { MODUL_YUKLE, type BdDers, type BdKonu } from './bitirdiklerimVeri';
 import { navigateTo, pathFor } from '../../router';
@@ -23,8 +24,8 @@ const MODULLER: { id: TakipModul; ikon: React.ComponentType<{ 'aria-hidden'?: bo
   { id: 'kamp', ikon: Tent },
 ];
 const MODUL_KISA: Record<TakipModul, string> = { sesli: 'Sesli ders', ogren: 'Etkileşimli', cozucu: 'Soru çözücü', onem: 'En önemliler', kamp: 'Kurul kampı' };
-type Suzgec = 'tum' | 'kalan' | 'biten' | 'tekrar';
-const SUZGEC_AD: Record<Suzgec, string> = { tum: 'Tümü', kalan: 'Kalanlar', biten: 'Bitenler', tekrar: 'Tekrarda' };
+type Suzgec = 'tum' | 'kalan' | 'biten' | 'tekrar' | 'elenen';
+const SUZGEC_AD: Record<Suzgec, string> = { tum: 'Tümü', kalan: 'Kalanlar', biten: 'Bitenler', tekrar: 'Tekrarda', elenen: 'Hesap dışı' };
 
 const sayi = (n: number) => n.toLocaleString('tr-TR');
 const katla = (s: string) => s.toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ı/g, 'i');
@@ -45,6 +46,7 @@ export default function BitirdiklerimView() {
   const [acik, setAcik] = useState<Record<string, boolean>>({});
   const takip = useTakip();
   const izHiz = useIzlemeHizi();
+  const eleme = useEleme();
 
   useEffect(() => { document.title = 'Bitirdiklerim · MeDSor'; }, []);
   useEffect(() => {
@@ -75,12 +77,17 @@ export default function BitirdiklerimView() {
     for (const { id } of MODULLER) {
       const dz = durumlar[id];
       if (!dz || !('veri' in dz)) continue;
-      const tum = dz.veri.flatMap((d) => d.konular);
+      // hesaba girenler: çalışmayacağım / sorusuz düşer; başka yerden çalışılan bitmiş sayılır (süresi ölçülmediği için hıza girmez)
+      const hesap = (L: BdKonu[]) => L.flatMap((k) => {
+        const e = konuElemesi(eleme, id, k);
+        return e === 'calisma' || e === 'sorusuz' ? [] : [e === 'baska' ? { ...k, turetilen: true } : k];
+      });
+      const tum = hesap(dz.veri.flatMap((d) => d.konular));
       const hiz = hizHesapla(id, tum, takip);
-      r[id] = { hiz, dersler: dz.veri.map((d) => ({ d, o: grupOzeti(id, d.konular, hiz, takip) })), genel: grupOzeti(id, tum, hiz, takip) };
+      r[id] = { hiz, dersler: dz.veri.map((d) => ({ d, o: grupOzeti(id, hesap(d.konular), hiz, takip) })), genel: grupOzeti(id, tum, hiz, takip) };
     }
     return r;
-  }, [durumlar, takip, izHiz]);
+  }, [durumlar, takip, izHiz, eleme]);
 
   const dz = durumlar[modul];
   const oz = ozetler[modul];
@@ -88,20 +95,27 @@ export default function BitirdiklerimView() {
 
   const konuDurumu = (k: BdKonu) => {
     const kayit = takip.k[`${modul}:${k.id}`];
-    return { kayit, bitti: bittiMi(kayit, k.turetilen), tekrar: kayit?.durum === 'tekrar' };
+    const elendi = konuElemesi(eleme, modul, k);
+    const disari = elendi === 'calisma' || elendi === 'sorusuz';
+    return { kayit, elendi, disari, bitti: !disari && bittiMi(kayit, k.turetilen || elendi === 'baska'), tekrar: kayit?.durum === 'tekrar' };
+  };
+  const elemeSec = (k: BdKonu, tur: ElemeTur | null) => {
+    const once = konuElemesi(eleme, modul, k);
+    if (once) elemeYaz(elemeAnahtari(modul, k, once), null);
+    if (tur) elemeYaz(elemeAnahtari(modul, k, tur), tur);
   };
   // sıradaki: yarım kalan derste (yoksa ilk derste) bitmemiş ilk konu
   const siradaki = useMemo(() => {
     if (!oz) return null;
     const L = [...oz.dersler.filter(({ o }) => o.biten > 0 && o.biten < o.toplam), ...oz.dersler];
-    for (const { d } of L) { const k = d.konular.find((x) => !konuDurumu(x).bitti); if (k) return { d, k }; }
+    for (const { d } of L) { const k = d.konular.find((x) => { const z = konuDurumu(x); return !z.bitti && !z.disari; }); if (k) return { d, k }; }
     return null;
-  }, [oz, modul]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [oz, modul, eleme]); // eslint-disable-line react-hooks/exhaustive-deps
   const gorunur = (k: BdKonu) => {
     if (q && !katla(`${k.no ?? ''} ${k.ad} ${k.alt || ''}`).includes(q)) return false;
     if (suzgec === 'tum') return true;
     const s = konuDurumu(k);
-    return suzgec === 'biten' ? s.bitti : suzgec === 'kalan' ? !s.bitti : s.tekrar;
+    return suzgec === 'elenen' ? !!s.elendi : suzgec === 'biten' ? s.bitti : suzgec === 'kalan' ? !s.bitti && !s.disari : s.tekrar;
   };
   // varsayılan açık ders: yarım kalanlar; hiç yoksa ilki
   const varsayilanAcik = (d: BdDers, o: ReturnType<typeof grupOzeti>, i: number) =>
@@ -119,7 +133,7 @@ export default function BitirdiklerimView() {
 
       <ol className="sp-nasil-kullan" aria-label="Nasıl kullanılır">
         <li><span>1</span><div><b>Çalışma türünü seç</b><small>Sesli ders, etkileşimli ders, soru çözücü…</small></div></li>
-        <li><span>2</span><div><b>Bitirdiğin konuyu işaretle</b><small>Konunun solundaki daireye dokun; yanlışsa yeniden dokun.</small></div></li>
+        <li><span>2</span><div><b>Bitirdiğin konuyu işaretle</b><small>Soldaki daireye dokun. Başka yerden çalıştıysan, çalışmayacaksan ya da sınavda sorusu yoksa ⋯ düğmesini kullan.</small></div></li>
         <li><span>3</span><div><b>Sıradakine geç</b><small>"Devam et" bitmemiş ilk konuyu açar.</small></div></li>
       </ol>
 
@@ -168,8 +182,9 @@ export default function BitirdiklerimView() {
             </label>
             <div className="bd-suz" role="group" aria-label="Duruma göre süz">
               {(Object.keys(SUZGEC_AD) as Suzgec[]).map((s) => {
-                const n = s === 'tum' ? oz.genel.toplam : s === 'biten' ? oz.genel.biten : s === 'kalan' ? oz.genel.toplam - oz.genel.biten : oz.genel.tekrarda;
-                if (s === 'tekrar' && !n) return null;
+                const n = s === 'tum' ? oz.genel.toplam : s === 'biten' ? oz.genel.biten : s === 'kalan' ? oz.genel.toplam - oz.genel.biten
+                  : s === 'elenen' ? (dz.veri.flatMap((d) => d.konular).filter((k) => konuElemesi(eleme, modul, k)).length) : oz.genel.tekrarda;
+                if ((s === 'tekrar' || s === 'elenen') && !n) return null;
                 return (
                   <button key={s} type="button" aria-pressed={suzgec === s} className={suzgec === s ? 'is-on' : ''} onClick={() => setSuzgec(s)}>
                     {SUZGEC_AD[s]} <span>{sayi(n)}</span>
@@ -185,7 +200,6 @@ export default function BitirdiklerimView() {
               if (!konular.length) return null;
               const ac = q || suzgec !== 'tum' ? true : acik[d.id] ?? varsayilanAcik(d, o, i);
               const yuzde = o.toplam ? Math.round((o.biten / o.toplam) * 100) : 0;
-              const kalanGun = gunYaz(o.kalanSn, oz.hiz.gunluk);
               return (
                 <section key={d.id} className={`bd-ders${ac ? ' is-acik' : ''}${o.biten === o.toplam ? ' is-tamam' : ''}`} aria-label={d.ad}>
                   <button type="button" className="bd-ders-bas" aria-expanded={ac} onClick={() => setAcik((a) => ({ ...a, [d.id]: !ac }))}>
@@ -197,7 +211,7 @@ export default function BitirdiklerimView() {
                     <span className="bd-cubuk" aria-hidden><i style={{ width: `${yuzde}%` }} /></span>
                     <span className="bd-ders-meta">
                       {o.biten < o.toplam
-                        ? <span className="is-kalan">{o.toplam - o.biten} konu kaldı · bitirmesi ~{sureYaz(o.kalanSn)}{kalanGun ? ` (${kalanGun})` : ''}</span>
+                        ? <span className="is-kalan">{o.toplam - o.biten} konu kaldı · bitirmesi ~{sureYaz(o.kalanSn)}</span>
                         : <span className="is-tamam">Tamamlandı</span>}
                       {o.sn > 0 && <span>{sureYaz(o.sn)} çalıştın</span>}
                       {o.soru > 0 && <span>{sayi(o.soru)} soru çözdün</span>}
@@ -205,7 +219,7 @@ export default function BitirdiklerimView() {
                   </button>
                   {ac && (
                     <ul className="bd-konular">
-                      {konular.map((k) => <KonuSatiri key={k.id} modul={modul} k={k} {...konuDurumu(k)} />)}
+                      {konular.map((k) => <KonuSatiri key={k.id} modul={modul} k={k} {...konuDurumu(k)} onEleme={(t) => elemeSec(k, t)} />)}
                     </ul>
                   )}
                 </section>
@@ -224,7 +238,6 @@ export default function BitirdiklerimView() {
 function OzetKartlari({ genel, hiz, modul, sirada, izHiz }: { genel: ReturnType<typeof grupOzeti>; hiz: Hiz; modul: TakipModul; sirada: { d: BdDers; k: BdKonu } | null; izHiz: number | null }) {
   const yuzde = genel.toplam ? Math.round((genel.biten / genel.toplam) * 100) : 0;
   const kalan = genel.toplam - genel.biten;
-  const gun = gunYaz(genel.kalanSn, hiz.gunluk);
   // "Kalan" kutusu ölçülen hızdan bağımsız: kalan ders süresi ÷ seçilen izleme hızı (sesli modüller)
   const x = modul === 'sesli' || modul === 'onem' || modul === 'cozucu' ? (izHiz ?? 1) : 1;
   const xYaz = `${x.toLocaleString('tr-TR', { maximumFractionDigits: 2 })}×`;
@@ -233,7 +246,7 @@ function OzetKartlari({ genel, hiz, modul, sirada, izHiz }: { genel: ReturnType<
     ? `${MODUL_AD[modul]} bölümündeki konuların hepsini bitirdin. İstersen tekrar turuna başlayabilirsin.`
     : genel.biten === 0
       ? `${MODUL_AD[modul]} bölümünde henüz bitirdiğin konu yok. Aşağıdaki "Devam et" ile ilk konudan başla.`
-      : `${sayi(genel.toplam)} konunun ${sayi(genel.biten)} tanesini bitirdin. Kalan ${sayi(kalan)} konu senin hızınla yaklaşık ${sureYaz(genel.kalanSn)} sürer${gun ? ` (${gun})` : ''}.`;
+      : `${sayi(genel.toplam)} konunun ${sayi(genel.biten)} tanesini bitirdin. Kalan ${sayi(kalan)} konu senin hızınla yaklaşık ${sureYaz(genel.kalanSn)} sürer.`;
   return (
     <section className="bd-ozet2" aria-label="Özet">
       <p className={`sp-hukum ${!kalan ? 'is-iyi' : 'is-orta'}`}>{cumle}</p>
@@ -263,7 +276,25 @@ function OzetKartlari({ genel, hiz, modul, sirada, izHiz }: { genel: ReturnType<
   );
 }
 
-function KonuSatiri({ modul, k, bitti, tekrar }: { modul: TakipModul; k: BdKonu; bitti: boolean; tekrar: boolean }) {
+function KonuSatiri({ modul, k, bitti, tekrar, elendi, disari, onEleme }: { modul: TakipModul; k: BdKonu; bitti: boolean; tekrar: boolean; elendi?: ElemeTur; disari: boolean; onEleme: (t: ElemeTur | null) => void }) {
+  const [menu, setMenu] = useState(false);
+  useEffect(() => {
+    if (!menu) return;
+    const kapat = () => setMenu(false);
+    const t = setTimeout(() => document.addEventListener('click', kapat, { once: true }));
+    return () => { clearTimeout(t); document.removeEventListener('click', kapat); };
+  }, [menu]);
+  if (disari) {
+    return (
+      <li className="bd-konu is-disari">
+        <span className="bd-konu-ad is-pasif">
+          {k.no != null && k.no !== '' && <span className="bd-no">{k.no}</span>}
+          <span className="bd-konu-t"><b>{k.ad}</b><small><span className={`bd-eleme is-${elendi}`}>{ELEME_AD[elendi!]}</span><span>hesaba katılmıyor</span></small></span>
+        </span>
+        <button type="button" className="kt-btn" onClick={() => onEleme(null)} aria-label={`Hesaba geri kat: ${k.ad}`}><Undo2 aria-hidden /><span>Geri al</span></button>
+      </li>
+    );
+  }
   return (
     <li className={`bd-konu${bitti ? ' is-bitti' : ''}${tekrar ? ' is-tekrar' : ''}`}>
       <KonuIsaret modul={modul} konu={k.id} ad={k.ad} turetilen={k.turetilen} />
@@ -275,10 +306,25 @@ function KonuSatiri({ modul, k, bitti, tekrar }: { modul: TakipModul; k: BdKonu;
             {k.alt && <span>{k.alt}</span>}
             {k.beklenen > 0 && <span>Süresi ~{sureYaz(k.beklenen)}</span>}
             {tekrar && <span className="bd-etiket">Tekrarda</span>}
+            {elendi === 'baska' && <span className="bd-eleme is-baska">Başka yerden çalıştın</span>}
           </small>
           <KonuSureEtiketi modul={modul} konu={k.id} ekSoru={k.ekSoru} uzun />
         </span>
       </button>
+      <span className="bd-menu-kap">
+        <button type="button" className="kt-btn bd-menu-btn" aria-haspopup="menu" aria-expanded={menu} onClick={() => setMenu(!menu)} aria-label={`Seçenekler: ${k.ad}`} title="Başka yerden çalıştım · Çalışmayacağım · Sınavda sorusu yok">
+          <MoreHorizontal aria-hidden />
+        </button>
+        {menu && (
+          <span className="bd-menu" role="menu">
+            {elendi === 'baska'
+              ? <button type="button" role="menuitem" onClick={() => onEleme(null)}><b>İşareti kaldır</b><small>Başka yerden çalıştım işaretini geri al</small></button>
+              : <button type="button" role="menuitem" onClick={() => onEleme('baska')}><b>Başka yerden çalıştım</b><small>Bitti sayılır, kalan süreden düşer; çalışma hızını etkilemez</small></button>}
+            <button type="button" role="menuitem" onClick={() => onEleme('calisma')}><b>Çalışmayacağım</b><small>Sınavda soru gelir ama bu dersi çalışmayacaksın; kalan süreden ve plandan çıkar</small></button>
+            <button type="button" role="menuitem" onClick={() => onEleme('sorusuz')}><b>Sınavda sorusu yok</b><small>Bu dersten soru gelmeyecek; süreden ve sınav hesabından tamamen çıkar</small></button>
+          </span>
+        )}
+      </span>
       {bitti ? (
         <button type="button" className="kt-btn is-tekrar" onClick={() => { tekrarBasla(modul, k.id); k.tekrar(); }} aria-label={`Tekrar et: ${k.ad}`}>
           <RotateCcw aria-hidden /><span>Tekrar et</span>

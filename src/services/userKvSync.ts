@@ -66,6 +66,8 @@ const SYNC_PATTERNS: RegExp[] = [
   /^medsoru_calisma_takip_v1$/,
   // Bitirdiklerim / Sınav planı: kalan süre hesabındaki izleme hızı (calismaTakip.izlemeHizi)
   /^medsoru_izleme_hizi_v1$/,
+  // Bitirdiklerim: çalışmayacağım / sınavda sorusu yok işaretleri (konuEleme.ts)
+  /^medsoru_konu_eleme_v1$/,
   /^medsoru_ornek_(k1_cevap|k1_ders|k1_social|havuz_social|sekme)$/,
   /^cikmis_quiz$/,
   /^my_(comment|report)_ids$/,

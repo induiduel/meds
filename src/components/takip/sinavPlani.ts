@@ -20,6 +20,7 @@
  */
 import dagilim from '../../data/sinav_dagilimi.json';
 import { navigateTo, pathFor } from '../../router';
+import { elemeOku } from '../../services/konuEleme';
 import { bittiMi, type Hiz, type TakipModul, takipOku } from '../../services/calismaTakip';
 import { aktifKurul } from '../../services/kurulTakvimi';
 import { cdListeGetir, type CdListeDers } from '../canliDers/canliDersStore';
@@ -82,7 +83,7 @@ export async function planVerisiYukle(): Promise<PlanVeri | null> {
   // Sesli ders yalnız bilinen bir derse bağlanır (kamp / son prova bölümleri ayrı)
   for (const d of sesli as CdListeDers[]) {
     const b = d.brans ? CD_SPOT_BRANS[d.brans] : undefined;
-    if (!b || (d.kurul && d.kurul !== k.kurul) || /-son-prova-/.test(d.key)) continue;
+    if (!b || (d.kurul && d.kurul !== k.kurul) || /-son-prova-|-sinav-kampi/.test(d.key)) continue;
     const x = dersler.get(`${b}|${Number(d.no)}`);
     if (x) x.sesli.push(d);
   }
@@ -235,6 +236,8 @@ export function planHesapla(veri: PlanVeri, hiz: Partial<Record<TakipModul, Hiz>
   const oran = (m: TakipModul) => hiz[m]?.oran ?? 1.1;
   const simdi = Date.now();
   const kayit = (m: TakipModul, id: string) => tk.k[`${m}:${id}`];
+  // Bitirdiklerim › konu eleme: sorusuz ders dağılımdan çıkar, çalışılmayacak derse adım konmaz
+  const eleme = elemeOku();
 
   // Ders durumları
   interface D { d: PlanDers; w: number; s: Durum; kal: { sesli: number; onem: number; cozucu: number }; dogru: number; cozulen: number }
@@ -242,7 +245,7 @@ export function planHesapla(veri: PlanVeri, hiz: Partial<Record<TakipModul, Hiz>
   const ders: Record<string, D[]> = {};
   let hepsiSn = 0;
   for (const b of branslar) {
-    const L = veri.dersler.filter((d) => d.brans === b);
+    const L = veri.dersler.filter((d) => d.brans === b && eleme[d.anahtar] !== 'sorusuz');
     const top = (f: (d: PlanDers) => number) => L.reduce((s, d) => s + f(d), 0);
     const madde = (d: PlanDers) => d.onem?.madde || 0;
     const soru = (d: PlanDers) => d.cozucu.reduce((s, c) => s + c.soru, 0);
@@ -260,7 +263,7 @@ export function planHesapla(veri: PlanVeri, hiz: Partial<Record<TakipModul, Hiz>
         const k = kayit('sesli', c.key);
         const t = c.varsayilan?.sureSn || 0;
         if (k?.sonAt) son = Math.max(son, Date.parse(k.sonAt));
-        if (bittiMi(k)) sesliBit++;
+        if (bittiMi(k) || eleme[`sesli:${c.key}`] === 'baska') sesliBit++;
         else sesliKalan += Math.max(t * 0.15, t * oran('sesli') - (k?.durum === 'tekrar' ? 0 : k?.sn || 0));
       }
       // en önemliler
@@ -269,16 +272,18 @@ export function planHesapla(veri: PlanVeri, hiz: Partial<Record<TakipModul, Hiz>
         const k = kayit('onem', `${b}/${d.onem.kod}`);
         if (k?.sonAt) son = Math.max(son, Date.parse(k.sonAt));
         const n = ogrSay.get(d.onem.kod) || 0;
-        onemF = bittiMi(k, (d.onem.madde > 0 && n >= d.onem.madde) || asistanBitti.has(`${b}/${d.onem.kod}`)) ? 1 : d.onem.madde ? Math.min(1, n / d.onem.madde) : 0;
+        onemF = eleme[`onem:${b}/${d.onem.kod}`] === 'baska' || bittiMi(k, (d.onem.madde > 0 && n >= d.onem.madde) || asistanBitti.has(`${b}/${d.onem.kod}`)) ? 1 : d.onem.madde ? Math.min(1, n / d.onem.madde) : 0;
         onemKalan = onemF >= 1 ? 0 : d.onem.sure * oran('onem') * (1 - onemF);
       }
       // soru çözücü
-      let cozulen = 0, toplamSoru = 0, dogru = 0, cozKalan = 0;
+      let cozulen = 0, toplamSoru = 0, dogru = 0, cozKalan = 0, baskaSoru = 0;
       for (const c of d.cozucu) {
         const o = ozet(il[c.kod], c.soru);
         const k = kayit('cozucu', `${b}/${c.kod}`);
         if (k?.sonAt) son = Math.max(son, Date.parse(k.sonAt));
-        const tamam = bittiMi(k, o.tamam);
+        const baska = eleme[`cozucu:${b}/${c.kod}`] === 'baska';
+        const tamam = bittiMi(k, o.tamam) || baska;
+        if (baska) baskaSoru += Math.max(0, c.soru - o.cozulen);
         const coz = tamam ? c.soru : o.cozulen;
         cozulen += o.cozulen; dogru += o.d + 0.5 * o.d2; toplamSoru += c.soru;
         const sSn = (c.sure && c.soru ? c.sure / c.soru : SORU_SN) * oran('cozucu');
@@ -287,10 +292,12 @@ export function planHesapla(veri: PlanVeri, hiz: Partial<Record<TakipModul, Hiz>
       const s: Durum = {
         sesli: d.sesli.length ? sesliBit / d.sesli.length : 0,
         onem: onemF,
-        soru: toplamSoru ? Math.min(1, cozulen / toplamSoru) : 0,
+        soru: toplamSoru ? Math.min(1, (cozulen + baskaSoru) / toplamSoru) : 0,
         eski: son > 0 && simdi - son > 12 * 86400_000,
       };
-      const kal = { sesli: d.sesli.length && s.sesli < 1 ? sesliKalan : 0, onem: onemKalan, cozucu: cozKalan };
+      const kal = eleme[d.anahtar] === 'calisma'
+        ? { sesli: 0, onem: 0, cozucu: 0 }
+        : { sesli: d.sesli.length && s.sesli < 1 ? sesliKalan : 0, onem: onemKalan, cozucu: cozKalan };
       hepsiSn += kal.sesli + kal.onem + kal.cozucu;
       return { d, w, s, kal, dogru, cozulen };
     });
