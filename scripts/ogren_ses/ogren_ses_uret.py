@@ -159,7 +159,7 @@ def deste_uret(tts, deck: dict, force: bool = False, adim_filtre: int | None = N
             continue
 
         # Kurul 2+ desteleri uzun harf okunuşuyla (ema-2); Kurul 1 ema-1'de kalır (toplu yeniden üretim yok)
-        h = hashlib.sha1(((SURUM_K2 if E.UZUN_KISALTMA else SURUM) + f"|{E.HIZ}|" + "\n".join(cumleler)).encode()).hexdigest()[:12]
+        h = hashlib.sha1(((SURUM_K2 if E.UZUN_KISALTMA else SURUM) + f"|{E.HIZ}|" + "\n".join(cumleler) + E.okunus.sayi_imi(cumleler)).encode()).hexdigest()[:12]
         mp3_yolu = cikis_dizin / f"{adim_no}.mp3"
 
         mevcut = kayit.get(str(adim_no))

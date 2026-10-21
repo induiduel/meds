@@ -118,6 +118,74 @@ def _en_iyi(metin: str, eslesme: list, i: int, K: set):
     return None
 
 
+_BIR = ["", "bir", "iki", "üç", "dört", "beş", "altı", "yedi", "sekiz", "dokuz"]
+_ON = ["", "on", "yirmi", "otuz", "kırk", "elli", "altmış", "yetmiş", "seksen", "doksan"]
+
+
+def sayi_oku(n: int) -> str:
+    """Tamsayı → Türkçe okunuş (bitişik değil, sözcük sözcük: "on dört", "bin dokuz yüz")."""
+    if n == 0:
+        return "sıfır"
+    out = []
+    for deger, ad in ((10**9, "milyar"), (10**6, "milyon"), (1000, "bin")):
+        if n >= deger:
+            q, n = divmod(n, deger)
+            out.append(ad if (q == 1 and deger == 1000) else f"{sayi_oku(q)} {ad}")
+    if n >= 100:
+        q, n = divmod(n, 100)
+        out.append("yüz" if q == 1 else f"{_BIR[q]} yüz")
+    out += [x for x in (_ON[n // 10], _BIR[n % 10]) if x]
+    return " ".join(out)
+
+
+_SIRA_EK = {"bir": "inci", "iki": "nci", "üç": "üncü", "dört": "üncü", "beş": "inci", "altı": "ncı", "yedi": "nci",
+            "sekiz": "inci", "dokuz": "uncu", "on": "uncu", "yirmi": "nci", "otuz": "uncu", "kırk": "ıncı", "elli": "nci",
+            "altmış": "ıncı", "yetmiş": "inci", "seksen": "inci", "doksan": "ıncı", "yüz": "üncü", "bin": "inci",
+            "milyon": "uncu", "milyar": "ıncı", "sıfır": "ıncı"}
+
+
+def sira_oku(n: int) -> str:
+    s = sayi_oku(n)
+    son = s.split()[-1]
+    return (s[:-1] + "düncü") if son == "dört" else s + _SIRA_EK[son]
+
+
+def _ondalik(m: re.Match) -> str:
+    tam, kes = m.group(1), m.group(2)
+    sifir = len(kes) - len(kes.lstrip("0"))
+    return f"{sayi_oku(int(tam))} virgül " + " ".join(["sıfır"] * sifir + ([sayi_oku(int(kes))] if kes.strip("0") else []))
+
+
+def _sayi(t: str) -> str:
+    return _ondalik(re.match(r"(\d+),(\d+)", t)) if "," in t else sayi_oku(int(t))
+
+
+_S = r"\d+(?:,\d+)?"
+SAYI_TTS: list = [
+    # %20-40 → yüzde yirmi ile kırk; %12,5 → yüzde on iki virgül beş
+    (re.compile(rf"%\s?({_S})\s?[-–]\s?%?({_S})"), lambda m: f"yüzde {_sayi(m.group(1))} ile {_sayi(m.group(2))}"),
+    (re.compile(rf"%\s?({_S})"), lambda m: f"yüzde {_sayi(m.group(1))}"),
+    # 12+6 → on iki artı altı
+    (re.compile(r"(?<![\w.])(\d+)\s?\+\s?(\d+)(?![\d.,])"), lambda m: f"{sayi_oku(int(m.group(1)))} artı {sayi_oku(int(m.group(2)))}"),
+    # 20-24. hafta → yirminci ile yirmi dördüncü hafta
+    (re.compile(r"(?<![\w.\-])(\d{1,4})\s?[-–]\s?(\d{1,4})\.(?=\s+[a-zçğıöşü])"), lambda m: f"{sira_oku(int(m.group(1)))} ile {sira_oku(int(m.group(2)))}"),
+    # 20-24 → yirmi ile yirmi dört (yalnız aralık; tarih/kod değil)
+    (re.compile(r"(?<![\w.\-])(\d{1,4})\s?[-–]\s?(\d{1,4})(?![\d.,\-]|\.\d)"), lambda m: f"{sayi_oku(int(m.group(1)))} ile {sayi_oku(int(m.group(2)))}"),
+    # sıra sayısı: "14. hafta", "2. trimester", "3.'sü" (cümle sonundaki "… 14." değil: arkasında küçük harfli sözcük/ek olmalı)
+    (re.compile(r"(?<![\w.,])(\d+)\.(?:['’]s[iıuü])?(?=\s+[a-zçğıöşü(]|['’]|[,;)])"),
+     lambda m: sira_oku(int(m.group(1))) + (m.group(0)[-2:] if m.group(0)[-3:-2] in "'’" else "")),
+    # ondalık ve düz sayı (harf/rakama bitişik olanlar — CD4, BRCA1, 47,XXY — dokunulmaz)
+    (re.compile(r"(?<![\w.,%+\-])(\d+),(\d+)(?![\w,])"), _ondalik),
+    (re.compile(r"(?<![\w.,%+\-/])(\d{1,9})(?![\w.,/]\d|\w)"), lambda m: sayi_oku(int(m.group(1)))),
+]
+
+
+def sayi_imi(cumleler) -> str:
+    """Klip özetine eklenir: rakam içeren klipler SAYI_TTS okunuşuyla (2026-10-22) bir kez yeniden üretilir."""
+    metin = cumleler if isinstance(cumleler, str) else "\n".join(cumleler)
+    return "|sayi2" if re.search(r"\d", metin) else ""
+
+
 FONETIK_TTS: list[tuple[re.Pattern, str]] = [
     (re.compile(r"\bBCG(['’][a-zçğıöşü]+)?\b", re.IGNORECASE), "becege"),
     (re.compile(r"\bDNA(['’][a-zçğıöşü]+)?\b"), "denea"),
@@ -154,36 +222,9 @@ FONETIK_TTS: list[tuple[re.Pattern, str]] = [
     (re.compile(r"\bNeisseria gonorrhoeae\b", re.IGNORECASE), "Nayseria gonorea"),
     (re.compile(r"\bChlamydia trachomatis\b", re.IGNORECASE), "Klamidya trakomatis"),
     (re.compile(r"\bHelicobacter pylori\b", re.IGNORECASE), "Helikobakter pilori"),
-    # Sıra sayıları ve yüzdeler (TTS telaffuzu)
-    (re.compile(r"\b1\.(?=\s|[,\)]|$)"), "birinci"),
-    (re.compile(r"\b2\.(?=\s|[,\)]|$)"), "ikinci"),
-    (re.compile(r"\b3\.(?=\s|[,\)]|$)"), "üçüncü"),
-    (re.compile(r"\b4\.(?=\s|[,\)]|$)"), "dördüncü"),
-    (re.compile(r"\b5\.(?=\s|[,\)]|$)"), "beşinci"),
-    (re.compile(r"\b6\.(?=\s|[,\)]|$)"), "altıncı"),
-    (re.compile(r"\b7\.(?=\s|[,\)]|$)"), "yedinci"),
-    (re.compile(r"\b8\.(?=\s|[,\)]|$)"), "sekizinci"),
-    (re.compile(r"\b9\.(?=\s|[,\)]|$)"), "dokuzuncu"),
-    (re.compile(r"\b10\.(?=\s|[,\)]|$)"), "onuncu"),
-    (re.compile(r"\b11\.(?=\s|[,\)]|$)"), "on birinci"),
-    (re.compile(r"\b12\.(?=\s|[,\)]|$)"), "on ikinci"),
-    (re.compile(r"\b13\.(?=\s|[,\)]|$)"), "on üçüncü"),
-    (re.compile(r"\b14\.(?=\s|[,\)]|$)"), "on dördüncü"),
-    (re.compile(r"\b15\.(?=\s|[,\)]|$)"), "on beşinci"),
-    (re.compile(r"\b16\.(?=\s|[,\)]|$)"), "on altıncı"),
-    (re.compile(r"\b17\.(?=\s|[,\)]|$)"), "on yedinci"),
-    (re.compile(r"\b18\.(?=\s|[,\)]|$)"), "on sekizinci"),
-    (re.compile(r"\b19\.(?=\s|[,\)]|$)"), "on dokuzuncu"),
-    (re.compile(r"\b20\.(?=\s|[,\)]|$)"), "yirminci"),
-    (re.compile(r"\b21\.(?=\s|[,\)]|$)"), "yirmi birinci"),
-    (re.compile(r"\b22\.(?=\s|[,\)]|$)"), "yirmi ikinci"),
-    (re.compile(r"\b23\.(?=\s|[,\)]|$)"), "yirmi üçüncü"),
-    (re.compile(r"\b1\.'si\b"), "birincisi"),
-    (re.compile(r"\b2\.'si\b"), "ikincisi"),
-    (re.compile(r"\b3\.'sü\b"), "üçüncüsü"),
-    (re.compile(r"\b4\.'sü\b"), "dördüncüsü"),
-    (re.compile(r"\b5\.'si\b"), "beşincisi"),
-    (re.compile(r"%([0-9]+)"), r"yüzde \1"),
+    # Rakamlar (TTS telaffuzu): "14." → "on dördüncü", "12+6" → "on iki artı altı", "%20-40" → "yüzde yirmi ile kırk",
+    # "14 hafta" → "on dört hafta". Rakamla bırakılan sayı EMA'da duraklamalı/yanlış okunuyordu (kullanıcı, 2026-10-22).
+    *SAYI_TTS,
 ]
 
 

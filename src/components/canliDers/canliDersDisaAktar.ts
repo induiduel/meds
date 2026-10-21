@@ -6,7 +6,7 @@
  * Önemli cümleler ==…==, terimler **…**; okunuş için yazıya dökülmüş sayılar ("iki virgül bir") rakama döner.
  */
 import type { AktarBelge } from '../../services/metinDisaAktar';
-import { sayilariYaz } from '../../services/sayiYazim';
+import { ekranYazimi } from '../../services/ekranYazim';
 import { paragrafMd } from '../../services/maddeDuzen';
 import { konusmaRedakte } from '../../services/konusmaRedakte';
 import type { CdDetay } from './canliDersStore';
@@ -44,7 +44,7 @@ export function cdAktarBelgesi(detay: CdDetay, etiket: string, vurguAcik = true,
         baslik: b.baslik.trim(),
         md: b.paragraflar.filter((p) => p.metin.trim())
           .map((p) => {
-            const govde = konusmaRedakte(paragrafMd(sayilariYaz(tekSatir(vurgula(p.metin, vurguAcik ? detay.vurgu?.[p.i] : undefined)))));
+            const govde = konusmaRedakte(paragrafMd(ekranYazimi(tekSatir(vurgula(p.metin, vurguAcik ? detay.vurgu?.[p.i] : undefined)))));
             const e = basliklar && detay.pdf?.paragraflar?.[p.i];
             const sb = e ? basliklar!.get(`${e.dosya}:${e.sayfa}`) : undefined;
             if (!sb || katla(sb) === onceki) return govde;

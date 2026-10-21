@@ -104,7 +104,7 @@ def main(kodlar: list[str]) -> None:
         yeni = toplam_sn = 0
         t0 = time.time()
         for ad, cumleler in K.items():
-            h = hashlib.sha1((SURUM + f"|{E.HIZ}|" + "\n".join(cumleler)).encode()).hexdigest()[:12]
+            h = hashlib.sha1((SURUM + f"|{E.HIZ}|" + "\n".join(cumleler) + E.okunus.sayi_imi(cumleler)).encode()).hexdigest()[:12]
             if kayit.get(ad, {}).get("h") == h and (d / f"{ad}.mp3").exists():
                 continue
             if tts is None:

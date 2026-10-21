@@ -47,7 +47,7 @@ def ders(tts, kod: str) -> None:
     for q in sorular:
         ad = str(q["no"])
         cumleler = cumlelere(q["ses"])
-        h = hashlib.sha1((SURUM + f"|{E.HIZ}|" + "\n".join(cumleler)).encode()).hexdigest()[:12]
+        h = hashlib.sha1((SURUM + f"|{E.HIZ}|" + "\n".join(cumleler) + E.okunus.sayi_imi(cumleler)).encode()).hexdigest()[:12]
         if kayit.get(ad, {}).get("h") == h and (d / f"{ad}.mp3").exists():
             continue
         mp3, zaman, sure, notlar = C.seslendir(tts, cumleler)

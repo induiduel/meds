@@ -132,7 +132,7 @@ def klasor(m: Model, ad: str, K: dict[str, list[str]], silinsin: bool = True) ->
     yeni = toplam_sn = 0
     t0 = time.time()
     for klip, cumleler in K.items():
-        h = hashlib.sha1((SURUM + f"|{E.HIZ}|" + "\n".join(cumleler)).encode()).hexdigest()[:12]
+        h = hashlib.sha1((SURUM + f"|{E.HIZ}|" + "\n".join(cumleler) + E.okunus.sayi_imi(cumleler)).encode()).hexdigest()[:12]
         if kayit.get(klip, {}).get("h") == h and (d / f"{klip}.mp3").exists():
             continue
         mp3, zaman, sure, notlar = seslendir(m(), cumleler)

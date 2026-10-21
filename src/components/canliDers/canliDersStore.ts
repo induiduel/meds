@@ -7,7 +7,7 @@
  * Durum `useCd(seçici)` ile okunur; seçici ilkel değer döndürmeli (her çağrıda yeni nesne → sonsuz çizim).
  * Zaman (t) çalarken her karede güncellenir; paragraf/cümle dizini yalnız değişince değişir (metin listesi yeniden çizilmez).
  */
-import { sayilariYazEslemeli } from '../../services/sayiYazim';
+import { ekranYazimiEslemeli } from '../../services/ekranYazim';
 import { useSyncExternalStore } from 'react';
 import { getCustomApiUrl, safeJsonFetch } from '../../services/api';
 import { cdCevrimdisiKayitlari, cdCevrimdisiVid } from './canliDersCevrimdisiKayit';
@@ -145,12 +145,12 @@ export function cdListeGetir(yenile = false): Promise<CdListeDers[]> {
 }
 // Ders ayrıntısı (metin + zamanlama + PDF eşlemesi) 3 dk önbellekte: ses yeniden üretilir/onarılırsa zamanlama da tazelenir
 const DETAY_OMUR_MS = 3 * 60 * 1000;
-/** Okunuş için yazıya dökülmüş sayıları ("iki virgül bir", "yüzde kırkına") ekranda rakamla gösterir; önemli cümle /
+/** Okunuşla yazılmış sayı, sıra sayısı, kısaltma ve açılımları ekranda yazılı biçimiyle gösterir (ekranYazim.ts); önemli cümle /
  *  terim aralıkları yeni metne taşınır. Cümle sınırları değişmez (dönüşüm nokta eklemez/silmez), ses senkronu korunur. */
 function sayilariDuzelt(d: CdDetay): CdDetay {
   for (const b of d.bolumler) {
     for (const p of b.paragraflar) {
-      const r = sayilariYazEslemeli(p.metin);
+      const r = ekranYazimiEslemeli(p.metin);
       if (r.metin === p.metin) continue;
       // PDF işaretinin kelime konumları cümle başına göredir: eski metindeki mutlak konum üzerinden yeni metne taşınır
       const is = d.isaret?.[String(p.i)];
