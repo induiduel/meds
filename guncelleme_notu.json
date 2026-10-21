@@ -1,16 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 205,
-  "baslik": "Sınav planı ayrı sayfada",
+  "onem": 207,
+  "baslik": "Sınav planı sayfası sadeleşti",
   "maddeler": [
-    "60 sınav planı Bitirdiklerim'den ayrılıp kendi sayfasına taşındı: Sınava hazırlan › Sınav planı (/kamplar/sinav-plani).",
-    "Bitirdiklerim sayfasında plana giden kısa bir bağlantı kaldı."
+    "Sınav planı adım adım ilerliyor: önce günlük saatini seç, sonra durumunu gör, ardından bugün yapacaklarına \"Başla\" ile geç.",
+    "Sonuçlar düz cümleyle anlatılıyor: bugün sınava girsen kaç puan, planı bitirirsen kaç puan ve 60 alma şansın; her ders için baraj durumu etiketle gösteriliyor."
   ],
-  "eklenen": [
-    "60 sınav planı Bitirdiklerim'den ayrılıp kendi sayfasına taşındı: Sınava hazırlan › Sınav planı (/kamplar/sinav-plani)."
-  ],
+  "eklenen": [],
   "degisen": [
-    "Bitirdiklerim sayfasında plana giden kısa bir bağlantı kaldı."
+    "Sınav planı adım adım ilerliyor: önce günlük saatini seç, sonra durumunu gör, ardından bugün yapacaklarına \"Başla\" ile geç.",
+    "Sonuçlar düz cümleyle anlatılıyor: bugün sınava girsen kaç puan, planı bitirirsen kaç puan ve 60 alma şansın; her ders için baraj durumu etiketle gösteriliyor."
   ],
   "duzeltilen": [],
   "silinen": []

@@ -37,7 +37,7 @@ export default function SinavPlaniView() {
         <span className="bd-ic" aria-hidden><Target /></span>
         <div>
           <h1>Sınav planı</h1>
-          <p>Bitirdiklerine ve çalışma hızına göre en az 60 için gün gün yol haritası; her adım ilgili sayfayı açar.</p>
+          <p>Bitirdiklerine bakarak sınavda kaç puan alacağını tahmin eder ve 60 için bugün neyi çalışman gerektiğini sıralar.</p>
         </div>
       </header>
       <SinavPlani hiz={planHiz} />
