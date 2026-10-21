@@ -1021,6 +1021,26 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
     }
   });
 
+  // Ders ilerlemesi (tüm öğrenciler): kişi başına konu kayıtları (çalışma takibi). /:key'den önce kurulmalı.
+  app.get('/api/admin/people/calisma-matris', async (req, res) => {
+    if (!(await guard(req, res))) return;
+    try {
+      const kisiler = people()
+        .filter((p) => p.backup)
+        .map((p) => {
+          const { k } = calismaVeri(p.backup);
+          const konular: Record<string, { sn: number; soru: number; durum: string | null; sonAt: string | null; bittiAt: string | null }> = {};
+          for (const [id, r] of Object.entries<any>(k)) konular[id] = { sn: Number(r?.sn) || 0, soru: Number(r?.soru) || 0, durum: r?.durum || null, sonAt: r?.sonAt || null, bittiAt: r?.bittiAt || null };
+          return { key: p.key, kind: p.kind, ad: p.name, email: p.email, ozet: calismaOzet(p.backup), konular };
+        })
+        .filter((x) => Object.keys(x.konular).length);
+      res.setHeader('Cache-Control', 'no-store');
+      res.json({ at: new Date().toISOString(), kisiler });
+    } catch (e: any) {
+      res.status(500).json({ error: e?.message || String(e) });
+    }
+  });
+
   app.get('/api/admin/people/:key', async (req, res) => {
     if (!(await guard(req, res))) return;
     try {

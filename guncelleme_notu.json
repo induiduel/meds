@@ -1,19 +1,19 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 153,
-  "baslik": "Kadın Doğum: Abortus ve Gebelik terminolojisi genişletildi",
+  "onem": 154,
+  "baslik": "Sıralama düzeltildi ve anlık güncelleniyor",
   "maddeler": [
-    "Abortus ve Gebelik terminolojisi derslerinde en önemli yerler hocanın işaretleri ve çıkmış sorulara göre yeniden belirlendi.",
-    "Soru çözücüye yeni sorular eklendi (toplam 119), Gebelik terminolojisine sesli sınav asistanı geldi.",
-    "Sesli dersler genişletildi: NST, biyofizik profil, OGTT, antenatal bakım, Naegele, missed abortus, septik düşük, TGK ve APS üzerinde daha uzun duruluyor."
+    "Sıralamada eksik görünen öğrenciler artık listede; puanlar düzenli olarak yeniden hesaplanıyor.",
+    "Biri puan kazanınca sıralama ekranı anında yenileniyor.",
+    "Sıralamadaki adlar profildeki güncel adı gösteriyor."
   ],
-  "eklenen": [
-    "Soru çözücüye yeni sorular eklendi (toplam 119), Gebelik terminolojisine sesli sınav asistanı geldi."
-  ],
+  "eklenen": [],
   "degisen": [
-    "Abortus ve Gebelik terminolojisi derslerinde en önemli yerler hocanın işaretleri ve çıkmış sorulara göre yeniden belirlendi.",
-    "Sesli dersler genişletildi: NST, biyofizik profil, OGTT, antenatal bakım, Naegele, missed abortus, septik düşük, TGK ve APS üzerinde daha uzun duruluyor."
+    "Biri puan kazanınca sıralama ekranı anında yenileniyor."
   ],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Sıralamada eksik görünen öğrenciler artık listede; puanlar düzenli olarak yeniden hesaplanıyor.",
+    "Sıralamadaki adlar profildeki güncel adı gösteriyor."
+  ],
   "silinen": []
 }

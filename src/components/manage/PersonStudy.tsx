@@ -12,13 +12,13 @@ import { EmptyState, ConfirmButton } from './consoleUi';
  * soru sayısını düzeltebilir ya da konuyu sıfırlayabilir; kayıt `adm` damgasıyla öğrencinin cihazlarına iner.
  * Konu adları sitenin kendi kataloglarından (Bitirdiklerim ile aynı kaynak) tembel çözülür.
  */
-const MODUL: Record<string, string> = { sesli: 'Sesli ders', ogren: 'Etkileşimli ders', cozucu: 'Soru çözücü', onem: 'En önemliler', diger: 'Diğer' };
+export const MODUL: Record<string, string> = { sesli: 'Sesli ders', ogren: 'Etkileşimli ders', cozucu: 'Soru çözücü', onem: 'En önemliler', diger: 'Diğer' };
 const DURUM: Record<string, string> = { bitti: 'Bitti', tekrar: 'Tekrarda', acik: 'Açık' };
-type Ad = { ad: string; ders: string; beklenen: number };
+export type Ad = { ad: string; ders: string; beklenen: number };
 
 /** Konu kimliği → okunur ad (MODUL_YUKLE kataloglarından, panel oturumu boyunca bir kez) */
 let adOnbellek: Promise<Map<string, Ad>> | null = null;
-const adlariYukle = () => {
+export const adlariYukle = () => {
   if (!adOnbellek)
     adOnbellek = import('../takip/bitirdiklerimVeri')
       .then(async ({ MODUL_YUKLE }) => {

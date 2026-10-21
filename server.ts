@@ -397,7 +397,29 @@ const basarimMotor = createBasarimMotor({
     } catch { return null; }
   },
 });
-const basarimHaber = (uid: string) => { try { broadcastRealtimeEvent('basarim_changed', { who: userEventHash(uid), at: Date.now() }); } catch { /* açılış */ } };
+// Kişinin kendi özeti (basarim_changed) + herkesin sıralama ekranı (siralama_changed, en sık 3 sn'de bir)
+let siralamaHaberZaman: NodeJS.Timeout | null = null;
+const siralamaHaber = () => {
+  if (siralamaHaberZaman) return;
+  siralamaHaberZaman = setTimeout(() => { siralamaHaberZaman = null; try { broadcastRealtimeEvent('siralama_changed', { at: Date.now() }); } catch { /* açılış */ } }, 3000);
+};
+const basarimHaber = (uid: string) => { try { broadcastRealtimeEvent('basarim_changed', { who: userEventHash(uid), at: Date.now() }); } catch { /* açılış */ } siralamaHaber(); };
+/** Doğrulanmış tüm profil yedekleri: sıralamaya hiç uğramamış kişiler de girer, ölçüler tazelenir (açılışta + 30 dk'da bir). */
+const basarimTumunuTara = () => {
+  try {
+    const dir = path.join(__dirname, 'data', 'user_backups');
+    const uidler: string[] = [];
+    for (const f of fs.existsSync(dir) ? fs.readdirSync(dir) : []) {
+      if (!f.endsWith('.json')) continue;
+      try { const b = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')); if (b?.verified && typeof b.uid === 'string' && b.uid) uidler.push(b.uid); } catch { /* bozuk */ }
+    }
+    const n = basarimMotor.tumunuDegerlendir(uidler);
+    siralamaHaber();
+    console.log(`[basarim] ${n} kişi değerlendirildi`);
+  } catch (e: any) { console.warn('[basarim] tarama:', e?.message); }
+};
+setTimeout(basarimTumunuTara, 45_000).unref?.();
+setInterval(basarimTumunuTara, 30 * 60_000).unref?.();
 registerBasarimRoutes(app, basarimMotor, { requireAdmin, onDegisti: basarimHaber });
 const basarimBekleyen = new Map<string, NodeJS.Timeout>();
 const basarimYedekSonrasi = (uid: string) => {
@@ -405,7 +427,7 @@ const basarimYedekSonrasi = (uid: string) => {
   basarimBekleyen.set(uid, setTimeout(() => {
     basarimBekleyen.delete(uid);
     try { basarimMotor.yenidenDegerlendir(uid); basarimHaber(uid); } catch (e: any) { console.warn('[basarim] değerlendirme:', e?.message); }
-  }, 20_000));
+  }, 5_000));
 };
 
 // All data-changing routes require the local write password. The password lives

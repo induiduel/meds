@@ -253,3 +253,17 @@ button.pp-tile:hover { border-color: var(--color-line-2); background: var(--colo
 .m12-linkbtn { border: 0; background: none; padding: 2px 4px; margin: -2px -4px; border-radius: 6px; cursor: pointer; color: inherit; font: inherit; white-space: nowrap; }
 .m12-linkbtn:hover { background: var(--color-accent-soft); }
 .m12-linkbtn:focus-visible { outline: 2px solid var(--color-accent); }
+
+/* Ders ilerlemesi (ManageStudyProgress) */
+.sp-root .ps-bar { flex-wrap: wrap; }
+.sp-grup + .sp-grup { margin-top: 18px; }
+.sp-baslik { font-size: 0.95rem; font-weight: 650; margin: 6px 0 8px; }
+.sp-satir { cursor: pointer; }
+.sp-satir .ps-konu { white-space: normal; }
+.sp-satir .ps-konu svg { display: inline-block; width: 14px; height: 14px; vertical-align: -2px; opacity: 0.6; margin-right: 4px; }
+.sp-ic > td { background: var(--ms-bg-2, rgba(127, 127, 127, 0.06)); }
+.sp-kisiler { list-style: none; margin: 0 0 8px; padding: 0; display: grid; gap: 4px; }
+.sp-kisiler li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.sp-durum { font-size: 0.78rem; padding: 1px 8px; border-radius: 999px; background: rgba(127, 127, 127, 0.14); }
+.sp-durum.is-bitti { background: rgba(34, 160, 90, 0.16); color: #1c8a4d; }
+.sp-durum.is-tekrar { background: rgba(214, 140, 20, 0.16); color: #a8670a; }

@@ -472,7 +472,7 @@ class RealtimeEventService {
 const KNOWN_EVENTS = [
   'questions_changed', 'past_questions_changed', 'database_sync', 'db_change', 'votes_changed', 'live', 'notes_changed',
   'user_data_changed', 'content_changed', 'learn_social', 'learn_feedback_changed', 'people_changed', 'admin_notification',
-  'inbox_update', 'auto_repair_update', 'basarim_changed', 'question_updated', 'past_question_updated',
+  'inbox_update', 'auto_repair_update', 'basarim_changed', 'siralama_changed', 'question_updated', 'past_question_updated',
 ];
 
 export const realtimeEventService = new RealtimeEventService();

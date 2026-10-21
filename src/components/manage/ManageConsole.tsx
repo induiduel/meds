@@ -74,6 +74,7 @@ import { ManagePendingOperationsSection } from './ManagePendingOperationsSection
 import { ManageHatSection } from './ManageHatSection';
 import { ManageKampSection } from './ManageKampSection';
 import { ManageDatabaseExplorer } from './ManageDatabaseExplorer';
+import { ManageStudyProgress } from './ManageStudyProgress';
 import { ManageDatabaseV14 } from '../v14/sections/ManageDatabaseV14';
 import { ManageShortcuts } from './ManageShortcuts';
 const ManageSesliAnlatimSection = lazy(() => import('./ManageSesliAnlatimSection'));
@@ -102,7 +103,7 @@ import {
   deleteDraftEverywhere,
 } from '../../services/manageConsoleService';
 
-export type ManageSection = 'overview' | 'pending' | 'inbox' | 'intake' | 'pool' | 'catalog' | 'data' | 'phases' | 'merges' | 'raw_pool' | 'ders_isci' | 'drafts' | 'studio' | 'moderation' | 'people' | 'users' | 'scripts' | 'system' | 'automation' | 'datacore' | 'notebooklm' | 'database' | 'sesli' | 'hat' | 'dbexplorer' | 'shortcuts' | 'kamp';
+export type ManageSection = 'overview' | 'pending' | 'inbox' | 'intake' | 'pool' | 'catalog' | 'data' | 'phases' | 'merges' | 'raw_pool' | 'ders_isci' | 'drafts' | 'studio' | 'moderation' | 'people' | 'users' | 'scripts' | 'system' | 'automation' | 'datacore' | 'notebooklm' | 'database' | 'sesli' | 'hat' | 'dbexplorer' | 'shortcuts' | 'kamp' | 'study';
 
 interface ManageConsoleProps {
   adminEmail: string;
@@ -141,6 +142,7 @@ const SECTIONS: { id: ManageSection; slug: string; label: string; hint: string; 
   { id: 'drafts', slug: 'taslaklar', label: 'Taslaklar', hint: 'Öğrenci taslaklarını kümele, birleştir, düzenle ya da AI ile tam soruya dönüştür.', icon: Layers, group: 'İçerik', keywords: 'parça taslak' },
   { id: 'studio', slug: 'studyo', label: 'Taslak stüdyosu', hint: 'Parçaları elle eşle: ağaç, pano, akış ve terim görünümleri.', icon: Workflow, group: 'İçerik', keywords: 'eşle pano' },
   { id: 'people', slug: 'kisiler', label: 'Kişiler', hint: 'Her kullanıcının tüm izi: cihazlar, kullanım süresi, skorlar, etkinlik, yorumlar, notlar, sorular, şıklar, beğeniler ve bildirimler — canlı.', icon: UserSearch, group: 'Topluluk', keywords: 'kişi kullanıcı cihaz süre skor yorum not bildirim şikayet beğeni öneri etkinlik geçmiş çevrimiçi' },
+  { id: 'study', slug: 'ders-ilerlemesi', label: 'Ders ilerlemesi', hint: 'Tüm öğrenciler: hangi dersi kim bitirdi, hangisinde ne kadar ilerledi; ders ve öğrenci görünümü, canlı.', icon: BookOpenCheck, group: 'Topluluk', keywords: 'çalışma ilerleme bitirdi ders konu öğrenci süre takip bitirdiklerim' },
   { id: 'users', slug: 'kullanicilar', label: 'Kullanıcılar', hint: 'Katkılar, hesaplar, roller ve e-posta.', icon: Users, group: 'Topluluk', keywords: 'öğrenci hesap rol smtp e-posta' },
   { id: 'scripts', slug: 'betikler', label: 'Betikler', hint: 'Veri hattı betiklerini ve zincirleri çalıştır, çıktıyı canlı izle.', icon: Terminal, group: 'Sistem', keywords: 'script görev zincir' },
   { id: 'system', slug: 'sistem', label: 'Sistem ve günlükler', hint: 'Veritabanı ve AI sağlığı, servisler, tarayıcı konsolu.', icon: Activity, group: 'Sistem', keywords: 'log sağlık servis' },
@@ -156,7 +158,7 @@ const V12_GROUPS: { label: string; ids: ManageSection[] }[] = [
   { label: 'Sorular', ids: ['pool', 'raw_pool', 'intake', 'drafts', 'studio', 'merges'] },
   { label: 'Öğrenme içeriği', ids: ['ders_isci', 'sesli', 'kamp', 'catalog', 'notebooklm'] },
   { label: 'Veri', ids: ['dbexplorer', 'data', 'phases', 'datacore', 'database', 'shortcuts'] },
-  { label: 'Kişiler ve denetim', ids: ['people', 'users'] },
+  { label: 'Kişiler ve denetim', ids: ['people', 'study', 'users'] },
   { label: 'Sistem', ids: ['system', 'automation', 'hat', 'scripts'] },
 ];
 const V12_SECTIONS = V12_GROUPS.flatMap((g) => g.ids.map((id) => {
@@ -800,6 +802,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
       {section === 'hat' && <ManageHatSection adminEmail={adminEmail} />}
       {section === 'kamp' && <ManageKampSection adminEmail={adminEmail} />}
       {section === 'dbexplorer' && <ManageDatabaseExplorer notify={notify} />}
+      {section === 'study' && <ManageStudyProgress notify={notify} />}
       {section === 'shortcuts' && <ManageShortcuts notify={notify} />}
       {section === 'automation' && <Tabs14 label="Otomasyon görünümü" value={autoTab} onChange={setAutoTab} options={[{ id: 'schedule', label: 'Zamanlama ve anahtarlar' }, { id: 'services', label: 'Drive ve servisler' }]} />}
       {section === 'automation' && autoTab === 'schedule' && (

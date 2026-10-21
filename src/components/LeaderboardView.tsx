@@ -43,7 +43,12 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({ currentUser })
     const al = () => siralamaGetir(kapsam, etkinDonem).then((v) => { if (canli) { setVeri(v); setHata(''); } }, (e) => canli && setHata(e.message));
     void al();
     const t = window.setInterval(() => { if (document.visibilityState === 'visible') void al(); }, 60_000);
-    return () => { canli = false; window.clearInterval(t); };
+    // Herhangi bir öğrencinin puanı değişince sunucu `siralama_changed` yayar: anında tazele
+    let kapat: (() => void) | null = null;
+    void import('../services/realtimeEvents').then(({ realtimeEventService }) => {
+      if (canli) kapat = realtimeEventService.on('siralama_changed', () => { if (document.visibilityState === 'visible') void al(); });
+    }).catch(() => 0);
+    return () => { canli = false; window.clearInterval(t); kapat?.(); };
   }, [kapsam, etkinDonem, durum?.puan.toplam]);
 
   const leaderboard = veri?.satir || [];

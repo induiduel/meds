@@ -230,3 +230,11 @@ export const relTime = (iso?: string | null) => {
   if (d < 86400 * 7) return `${Math.round(d / 86400)} gün önce`;
   return new Date(iso).toLocaleDateString('tr-TR', { day: 'numeric', month: 'short', year: 'numeric' });
 };
+
+/** Ders ilerlemesi: tüm kişilerin konu kayıtları (çalışma takibi) */
+export interface StudyMatrixPerson {
+  key: string; kind: string; ad: string; email: string | null;
+  ozet: { sn: number; haftaSn: number; konu: number; bitti: number; soru: number; son: string | null };
+  konular: Record<string, { sn: number; soru: number; durum: string | null; sonAt: string | null; bittiAt: string | null }>;
+}
+export const loadStudyMatrix = () => adminCall<{ at: string; kisiler: StudyMatrixPerson[] }>('/api/admin/people/calisma-matris');

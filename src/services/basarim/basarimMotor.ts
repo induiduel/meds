@@ -277,11 +277,13 @@ export function createBasarimMotor(deps: MotorDeps) {
     k.gunPuan = gp;
   };
 
-  /** Kişiyi yeniden değerlendirir: ölçüleri yedekten tazeler, hedef/başarım ödüllerini verir, kuyruğu işler. */
+  /** Kişiyi yeniden değerlendirir: ölçüleri yedekten tazeler, hedef/başarım ödüllerini verir, kuyruğu işler.
+   *  Dönem seçmemiş kişinin yalnız ölçüleri ve taban puanı güncellenir (sıralamada varsayılan dönemde görünür), ödül verilmez. */
   const degerlendir = (k: Kisi) => {
     const b = deps.okuYedek(k.uid);
     if (b) {
-      if (!k.ad && b.displayName) k.ad = String(b.displayName).slice(0, 40);
+      const ad = String(b.displayName || '').trim().slice(0, 40);
+      if (ad) k.ad = ad;
       for (const [g, m] of Object.entries(yedektenMetrik(b))) {
         const c = k.metrik[g] || { sn: 0, soru: 0, bitir: 0 };
         k.metrik[g] = { sn: Math.max(c.sn, m.sn), soru: Math.max(c.soru, m.soru), bitir: Math.max(c.bitir, m.bitir) };
@@ -290,6 +292,7 @@ export function createBasarimMotor(deps: MotorDeps) {
       }
     }
     const bugun = gunOf();
+    if (!k.donem) { gunPuanHesapla(k); k.degerAt = new Date().toISOString(); kaydet(k); return; }
     // Hedefler: bugün + dün (geç eşitlenen veri), bu + geçen hafta, bu + geçen kurul
     for (const h of tanim.hedefler) {
       const gunler = h.donem === 'gun' ? [bugun, gunEkle(bugun, -1)] : h.donem === 'hafta' ? [bugun, gunEkle(bugun, -7)] : [bugun];
@@ -315,11 +318,13 @@ export function createBasarimMotor(deps: MotorDeps) {
   };
 
   // ───── Sıralama ─────
+  /** Dönem seçmemiş kişiler bu dönemin sıralamasında görünür (takvimdeki dönem). */
+  const VARSAYILAN_DONEM = Number((takvim as any).donem || 3);
   const puanAralik = (k: Kisi, bas: string, son: string) => Object.entries(k.gunPuan).reduce((a, [g, p]) => (g >= bas && g <= son ? a + p : a), 0);
   const siralama = (donem: number, kapsam: 'hafta' | 'kurul' | 'tum', g = gunOf()) => {
     hepsiniYukle();
     const p = kapsam === 'hafta' ? { bas: haftaOf(g), son: gunEkle(haftaOf(g), 6), ad: 'Bu hafta', id: haftaOf(g) } : kapsam === 'kurul' ? kurulPencere(donem, g) : { bas: '0000', son: '9999', ad: 'Tüm zamanlar', id: 'tum' };
-    const satir = [...onbellek.values()].filter((k) => k.donem === donem && k.uid !== 'ai-test').map((k) => ({ k, puan: puanAralik(k, p.bas, p.son) }))
+    const satir = [...onbellek.values()].filter((k) => (k.donem || VARSAYILAN_DONEM) === donem && k.uid !== 'ai-test').map((k) => ({ k, puan: puanAralik(k, p.bas, p.son) }))
       .filter((x) => x.puan > 0)
       .sort((a, b) => b.puan - a.puan || a.k.uid.localeCompare(b.k.uid));
     return { pencere: p, satir };
@@ -376,11 +381,18 @@ export function createBasarimMotor(deps: MotorDeps) {
       if (simdi - (k.giris.son || 0) > OTURUM_ARA) { const g = gunOf(simdi); k.giris.gun[g] = (k.giris.gun[g] || 0) + 1; }
       k.giris.son = simdi;
       try { odemeleriIsle(); } catch (e: any) { console.warn('[basarim] ödeme:', e?.message); }
-      // Dönem seçilmeden ödül verilmez (kurul penceresi döneme bağlı); yalnız giriş kaydedilir
-      if (k.donem) degerlendir(k); else kaydet(k);
+      // Dönem seçilmeden ödül verilmez (kurul penceresi döneme bağlı); ölçü ve taban puan yine güncellenir
+      degerlendir(k);
       return this.ozet(k);
     },
-    yenidenDegerlendir(uid: string) { const k = kisi(uid); if (k.donem) degerlendir(k); },
+    yenidenDegerlendir(uid: string) { degerlendir(kisi(uid)); },
+    /** Tüm profil yedeklerini tarar: kaydı olmayan kişiler de sıralamaya girer, eski ölçüler tazelenir. */
+    tumunuDegerlendir(uidler: string[]) {
+      hepsiniYukle();
+      let n = 0;
+      for (const uid of uidler) { try { degerlendir(kisi(uid)); n++; } catch (e: any) { console.warn('[basarim] tarama:', uid.slice(0, 8), e?.message); } }
+      return n;
+    },
     ozet(k: Kisi) {
       const bugun = gunOf();
       const hedefler = tanim.hedefler.map((h) => {
@@ -424,7 +436,7 @@ export function createBasarimMotor(deps: MotorDeps) {
       const gg = (k.eylem.gun[g] ||= {});
       gg[tur] = (gg[tur] || 0) + 1;
       k.eylem.toplam[tur] = (k.eylem.toplam[tur] || 0) + 1;
-      if (k.donem) degerlendir(k); else kaydet(k);
+      degerlendir(k);
     },
     satinAl(uid: string, id: string): { ok: true } | { hata: string } {
       const k = kisi(uid);
