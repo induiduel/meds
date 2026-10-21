@@ -1,16 +1,20 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 157,
-  "baslik": "Son Prova: tam oynatıcı ve aşama çubuğu",
+  "onem": 158,
+  "baslik": "Kadın Doğum: sesli derste slayt işaretleri anlamına göre, yeni sorular",
   "maddeler": [
-    "Son Prova partlarında alttaki ses oynatıcısı artık tam açılır (hız, sarma, bölüm atlama).",
-    "Aşama çubuğu her ekranda düzgün görünür."
+    "Abortus ve Gebelik terminolojisi sesli derslerinde PDF'teki işaret artık okunan cümlenin gerçekten anlattığı madde, tablo satırı ya da resme gidiyor.",
+    "Kadın Doğum soru çözücüye 15 yeni soru eklendi (toplam 134); En önemliler listesine VTE puanlaması maddesi geldi.",
+    "Bu iki derste metnine uymayan eski sesler kaldırıldı; kelime takibi sesle eşleşiyor."
   ],
-  "eklenen": [],
-  "degisen": [],
+  "eklenen": [
+    "Kadın Doğum soru çözücüye 15 yeni soru eklendi (toplam 134); En önemliler listesine VTE puanlaması maddesi geldi."
+  ],
+  "degisen": [
+    "Abortus ve Gebelik terminolojisi sesli derslerinde PDF'teki işaret artık okunan cümlenin gerçekten anlattığı madde, tablo satırı ya da resme gidiyor."
+  ],
   "duzeltilen": [
-    "Son Prova partlarında alttaki ses oynatıcısı artık tam açılır (hız, sarma, bölüm atlama).",
-    "Aşama çubuğu her ekranda düzgün görünür."
+    "Bu iki derste metnine uymayan eski sesler kaldırıldı; kelime takibi sesle eşleşiyor."
   ],
   "silinen": []
 }
