@@ -1,19 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 154,
-  "baslik": "Sıralama düzeltildi ve anlık güncelleniyor",
+  "onem": 155,
+  "baslik": "Sıralamada çift hesap birleştirildi",
   "maddeler": [
-    "Sıralamada eksik görünen öğrenciler artık listede; puanlar düzenli olarak yeniden hesaplanıyor.",
-    "Biri puan kazanınca sıralama ekranı anında yenileniyor.",
-    "Sıralamadaki adlar profildeki güncel adı gösteriyor."
+    "Aynı öğrencinin iki hesabı sıralamada artık tek satır görünüyor."
   ],
   "eklenen": [],
-  "degisen": [
-    "Biri puan kazanınca sıralama ekranı anında yenileniyor."
-  ],
+  "degisen": [],
   "duzeltilen": [
-    "Sıralamada eksik görünen öğrenciler artık listede; puanlar düzenli olarak yeniden hesaplanıyor.",
-    "Sıralamadaki adlar profildeki güncel adı gösteriyor."
+    "Aynı öğrencinin iki hesabı sıralamada artık tek satır görünüyor."
   ],
   "silinen": []
 }

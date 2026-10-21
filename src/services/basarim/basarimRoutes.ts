@@ -94,6 +94,14 @@ export function registerBasarimRoutes(app: express.Express, motor: BasarimMotor,
     res.set('Cache-Control', 'no-store');
     res.json({ donem, ...motor.siralamaListesi(u?.uid || null, donem, kapsam) });
   });
+  // Aynı kişinin ikinci hesabını sıralamadan çıkar: {kaynak, hedef} (hedef null → geri al)
+  app.post('/api/admin/basarim/birlestir', opts.requireAdmin, (req, res) => {
+    const kaynak = String(req.body?.kaynak || ''), hedef = req.body?.hedef ? String(req.body.hedef) : null;
+    if (!kaynak || kaynak === hedef) return res.status(400).json({ error: 'kaynak ve hedef farklı uid olmalı.' });
+    motor.birlestir(kaynak, hedef);
+    opts.onDegisti?.(kaynak);
+    res.json({ ok: true });
+  });
   app.put('/api/admin/basarim/tanim', opts.requireAdmin, (req, res) => {
     const h = motor.tanimYaz(req.body);
     if (h.length) return res.status(400).json({ error: 'Tanım geçersiz', hatalar: h });

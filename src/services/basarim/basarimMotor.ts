@@ -116,6 +116,8 @@ export interface Kisi {
   secili: { unvan?: string; cerceve?: string; efekt?: string };
   goruldu: string;
   degerAt?: string;
+  /** Aynı kişinin ikinci hesabı: asıl hesabın uid'i; sıralamada görünmez (kayıt silinmez) */
+  birlesti?: string;
 }
 
 export interface MotorDeps { dataDir: string; srcDir: string; okuYedek: (uid: string) => any | null }
@@ -324,7 +326,7 @@ export function createBasarimMotor(deps: MotorDeps) {
   const siralama = (donem: number, kapsam: 'hafta' | 'kurul' | 'tum', g = gunOf()) => {
     hepsiniYukle();
     const p = kapsam === 'hafta' ? { bas: haftaOf(g), son: gunEkle(haftaOf(g), 6), ad: 'Bu hafta', id: haftaOf(g) } : kapsam === 'kurul' ? kurulPencere(donem, g) : { bas: '0000', son: '9999', ad: 'Tüm zamanlar', id: 'tum' };
-    const satir = [...onbellek.values()].filter((k) => (k.donem || VARSAYILAN_DONEM) === donem && k.uid !== 'ai-test').map((k) => ({ k, puan: puanAralik(k, p.bas, p.son) }))
+    const satir = [...onbellek.values()].filter((k) => (k.donem || VARSAYILAN_DONEM) === donem && k.uid !== 'ai-test' && !k.birlesti).map((k) => ({ k, puan: puanAralik(k, p.bas, p.son) }))
       .filter((x) => x.puan > 0)
       .sort((a, b) => b.puan - a.puan || a.k.uid.localeCompare(b.k.uid));
     return { pencere: p, satir };
@@ -384,6 +386,12 @@ export function createBasarimMotor(deps: MotorDeps) {
       // Dönem seçilmeden ödül verilmez (kurul penceresi döneme bağlı); ölçü ve taban puan yine güncellenir
       degerlendir(k);
       return this.ozet(k);
+    },
+    /** İkinci hesabı asıl hesaba bağlar (geri almak için hedef null). */
+    birlestir(kaynak: string, hedef: string | null) {
+      const k = kisi(kaynak);
+      if (hedef) k.birlesti = hedef; else delete k.birlesti;
+      kaydet(k);
     },
     yenidenDegerlendir(uid: string) { degerlendir(kisi(uid)); },
     /** Tüm profil yedeklerini tarar: kaydı olmayan kişiler de sıralamaya girer, eski ölçüler tazelenir. */
