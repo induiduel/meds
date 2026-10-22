@@ -51,8 +51,17 @@ def ciz(p: pymupdf.Page) -> np.ndarray:
 def murekkep(a: np.ndarray, b: np.ndarray) -> np.ndarray:
     """Öğrenci sayfasında asıl sayfada olmayan belirgin renk/koyuluk farkı; tek piksellik kenar gürültüsü atılır."""
     # yalnız renkli mürekkep (kalem/fosforlu): kayan siyah yazı kenarı gri kalır, işaret sayılmaz
-    renk = (a.max(axis=2) - a.min(axis=2)) >= 60
+    doy = a.max(axis=2) - a.min(axis=2)
+    renk = (doy >= 60) | ((a.mean(axis=2) < 150) & (doy >= 20))  # koyu lacivert/mor kalem az doygundur
     f = (np.abs(a - b).max(axis=2) > 70) & renk
+    # siyah/koyu kalem: öğrenci sayfasında koyu, asıl sayfada açık ve asıl yazının 2 piksel yakınında değil
+    # (kayan siyah yazı kenarı bu yakınlık payında kalır, işaret sayılmaz)
+    koyu_b = b.mean(axis=2) < 170
+    yakin = koyu_b.copy()
+    for dy in range(-2, 3):
+        for dx in range(-2, 3):
+            yakin |= np.roll(np.roll(koyu_b, dy, 0), dx, 1)
+    f |= (a.mean(axis=2) < 110) & (b.mean(axis=2) > 190) & ~yakin
     # kenar yumuşatma farkı: en az 2 komşusu da farklı olan pikseller
     k = f.astype(np.int8)
     n = k[:-2, 1:-1] + k[2:, 1:-1] + k[1:-1, :-2] + k[1:-1, 2:]

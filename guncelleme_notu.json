@@ -1,17 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 236,
-  "baslik": "Sesli ders seslendirme düzeni",
+  "onem": 237,
+  "baslik": "Öğrenci notu: siyah kalem işaretleri",
   "maddeler": [
-    "Sesli derslerin EMA sesleri artık yalnız ana bilgisayarda üretiliyor; seslendirme daha hızlı tamamlanır."
+    "Öğrenci notlarındaki siyah ve koyu lacivert kalem işaretleri (altı çizili, daire) de PDF'te kırmızı marker ile gösteriliyor."
   ],
-  "eklenen": [
-    "İmmünofarmakoloji sesli dersinde de öğrenci notunda işaretli yerler PDF'te kırmızı marker ile gösteriliyor.",
-    "İşaretli her pasajın başına küçük bir yıldız kondu; sayfa köşesindeki yıldız da duruyor."
+  "eklenen": [],
+  "degisen": [
+    "Öğrenci notlarındaki siyah ve koyu lacivert kalem işaretleri (altı çizili, daire) de PDF'te kırmızı marker ile gösteriliyor."
   ],
-  "degisen": [],
-  "duzeltilen": [
-    "Sayfayı çapraz geçen kalem çizgileri artık yanlışlıkla işaret sayılmıyor."
-  ],
+  "duzeltilen": [],
   "silinen": []
 }
