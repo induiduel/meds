@@ -68,8 +68,12 @@ metin bloğu bir paragraftır), `kaynak.md`'deki `=== SAYFA n ===` numaralarıyl
 - Soru yılı, soru numarası ya da şık harfi okuma.
 
 ## Uzunluk
-- Hız ~112 kelime/dk. **En az 1.150, en fazla 6.000 kelime.** İçerikli slayt başına kabaca 60–80 kelime; 40 sayfalık
-  ders ≈ 2.500–3.500, 90+ sayfalık yoğun ders ≈ 5.000–6.000. 6.000'i asla aşma: tekrarları kıs, bilgiyi kısma.
+- Hız ~112 kelime/dk. **En fazla 6.000 kelime; alt sınır ve süre hedefi YOKTUR.** Konu eksiksiz anlatıldıysa metin
+  kısa kalabilir; kelime ya da dakikaya ulaşmak için cümle ekleme. 6.000'i asla aşma: tekrarları kıs, bilgiyi kısma.
+- **Dolgu yasak (H22, 2026-10-22):** "hoca bunu vurguladı/işaretledi/altını çizdi" gibi dayanaksız meta cümleler, tekrar
+  eden geçiş/özet cümleleri ("şimdi gelelim", "bir kez daha hatırlatalım", "daha önce de söylediğimiz gibi") yazılmaz.
+  Önem yalnız dayanağı olan kritik noktada (çıkmış soru, öğrenci notu) "Burası önemli" ile belirtilir. Kapı:
+  `sesli_anlatim/metin_denetle.py` bunları HATA sayar.
 
 ## Telaffuz (seslendirme motoru metni harfi harfine okur)
 - **Kısaltmalar** okunduğu gibi: "DNA" → "de ne a", "HPV" → "ha pe ve", "CD4" → "ce de dört", "TP53" → "te pe elli üç",

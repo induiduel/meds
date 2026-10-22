@@ -1,18 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 226,
-  "baslik": "Tablet ve bölünmüş ekran düzeltmeleri",
+  "onem": 227,
+  "baslik": "Sesli ders metin kalitesi kuralı",
   "maddeler": [
-    "Bölünmüş ekranda (iPad yarım ekran) Sesli ders listesindeki ders adları artık harf harf alt alta dizilmiyor.",
-    "Sınav kampı sesli ders başlığındaki konum satırı dar ekranda düzgün görünüyor.",
-    "Tam ekran artık geniş ekranlarda da ekranın tamamını kaplıyor."
+    "Kurul 2 ve sonrası sesli derslerde gereksiz dolgu ve dayanaksız \"hoca vurguladı\" cümleleri artık otomatik denetimde engelleniyor; dersler kısa, öz ve eksiksiz."
   ],
   "eklenen": [],
-  "degisen": [],
-  "duzeltilen": [
-    "Bölünmüş ekranda (iPad yarım ekran) Sesli ders listesindeki ders adları artık harf harf alt alta dizilmiyor.",
-    "Sınav kampı sesli ders başlığındaki konum satırı dar ekranda düzgün görünüyor.",
-    "Tam ekran artık geniş ekranlarda da ekranın tamamını kaplıyor."
+  "degisen": [
+    "Kurul 2 ve sonrası sesli derslerde gereksiz dolgu ve dayanaksız \"hoca vurguladı\" cümleleri artık otomatik denetimde engelleniyor; dersler kısa, öz ve eksiksiz."
   ],
+  "duzeltilen": [],
   "silinen": []
 }

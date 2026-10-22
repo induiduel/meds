@@ -8,6 +8,13 @@ from pathlib import Path
 
 MIN_W, MAX_W = 1150, 6000
 WPM = 112
+# Kurul 2+ dolgu ve asılsız vurgu kalıpları (kullanıcı kuralı 2026-10-22, H22)
+DOLGU = (
+    r'hoca(mız)?\s+(bunu\s+|burayı\s+|bu\s+noktayı\s+)?(özellikle\s+|ayrıca\s+|bilhassa\s+)?(vurgula|altını\s+çiz|işaretle|üzerinde\s+dur)',
+    r'hocanın\s+(özellikle\s+)?(vurgu|altını\s+çiz|işaret)',
+    r'tekrar\s+etmekte\s+fayda', r'bir\s+kez\s+daha\s+hatırlatalım', r'şimdi\s+gelelim',
+    r'daha\s+önce\s+de\s+söylediğimiz\s+gibi', r'özetlemek\s+gerekirse', r'sözü\s+uzatmadan',
+)
 
 def denetle(p: Path):
     hatalar, uyarilar = [], []
@@ -21,7 +28,8 @@ def denetle(p: Path):
     body = [l for l in lines[1:] if not l.startswith('@@ ')]
     text = '\n'.join(body)
     words = len(text.split())
-    if words < MIN_W: hatalar.append(f'kelime {words} < {MIN_W}')
+    # Alt sınır hedef değil: kısa ama eksiksiz metin geçer; dolguyla uzatmak yasak (KURUL2_YAPILMAYACAK_HATALAR H22).
+    if words < MIN_W: uyarilar.append(f'kelime {words} < {MIN_W} — eksik konu yoksa sorun değil, dolguyla uzatma')
     if words > MAX_W: hatalar.append(f'kelime {words} > {MAX_W}')
     for i, l in enumerate(lines, 1):
         if l.startswith(('# ', '@@ ')) or not l.strip():
@@ -39,6 +47,14 @@ def denetle(p: Path):
         if re.search(r'https?:|www\.', l): hatalar.append(f'{i}: URL')
     for kalip in ('merhaba', 'teşekkür ederim', 'dinlediğiniz için', 'bu derste şunları', 'kaynakça'):
         if kalip in text.lower(): uyarilar.append(f'giriş/kapanış kalıbı: "{kalip}"')
+    # H22: asılsız "hoca vurguladı" meta cümleleri ve süre/kelime dolgusu yasak.
+    low = text.lower()
+    for kalip in DOLGU:
+        for m in re.finditer(kalip, low):
+            hatalar.append(f'dolgu/asılsız vurgu: "{low[max(0, m.start() - 25):m.end() + 25].strip()}"')
+    onemli_n = len(re.findall(r'burası önemli|sınavda sık|çok önemli', low))
+    if onemli_n > max(3, len(bolum) // 2):
+        hatalar.append(f'önem vurgusu {onemli_n} kez — yalnız çıkmış/öğrenci notu dayanaklı kritik noktalarda kullan')
     paras = [x for x in re.split(r'\n\s*\n', text) if x.strip()]
     for x in paras:
         n = len(x.split())

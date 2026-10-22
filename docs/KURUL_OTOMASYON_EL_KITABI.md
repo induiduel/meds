@@ -176,7 +176,7 @@ Göçler `deploy/pg/sql/goc/NNNN_ad.sql` (yalnız ekler; idempotent; commit'lenm
 
 ## 8. Kalite kapıları (hepsi 0 HATA)
 `validate_learning_decks.py [--oyun-zorunlu --kurul2]` · `turkce_uslup.py` · `sik_aciklama.py` · `ders_isci/denetle.py` ·
-`sesli_anlatim/metin_denetle.py` · `sesli_anlatim/konusma_v2.py --dogrula` · `spot_cozucu/{onem,cozucu,asistan}_dogrula.py` ·
+`sesli_anlatim/metin_denetle.py` (H22 dolgu/asılsız vurgu kapısı) · `sesli_anlatim/konusma_v2.py --dogrula` · `spot_cozucu/{onem,cozucu,asistan}_dogrula.py` ·
 `patoloji_cozucu/okunus_denet.py` · `sinav_spotlari/dogrula.py --kurul2` · `olasi_soru/dogrula.py` ·
 `diseases/hastalik_profilleri.py denetle` · `yayinla.py` (kimlik/sadakat/defter) · `otomasyon/hat.py --dogrula`.
 
