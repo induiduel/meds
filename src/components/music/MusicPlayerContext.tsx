@@ -283,8 +283,10 @@ export const MusicPlayerProvider: React.FC<{ children: React.ReactNode }> = ({ c
     if (k && !k.paused) k.pause();
   }, []);
 
-  // YouTube IFrame API'yi bir kez yükle
+  // YouTube IFrame API'yi bir kez yükle: yalnız kullanıcı müziği ilk kez başlatınca. Eskiden her açılışta gizli bir
+  // YouTube oynatıcısı (iframe_api + embed + widgetapi, ~1 MB ve uzun işlemci işi) kuruluyordu; tablet/telefonda açılışı yoruyordu.
   useEffect(() => {
+    if (!started) return;
     if (window.YT?.Player) {
       setApiReady(true);
       return;
@@ -301,7 +303,7 @@ export const MusicPlayerProvider: React.FC<{ children: React.ReactNode }> = ({ c
       s.setAttribute('data-yt-api', '1');
       document.head.appendChild(s);
     }
-  }, []);
+  }, [started]);
 
   const next = useCallback(() => {
     if (tracksLenRef.current === 0) return;

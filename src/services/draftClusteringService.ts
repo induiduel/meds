@@ -116,18 +116,14 @@ export function loadMedicalConcepts(): Promise<void> {
 // METİN NORMALİZASYONU (TÜRKÇE DESTEKLİ)
 // ==========================================
 
+const TR_ASCII: Record<string, string> = { ı: 'i', ğ: 'g', ü: 'u', ş: 's', ö: 'o', ç: 'c' };
+// Dizin ısıtılırken 5000 kavramın her terimi için çağrılır: harf çevirisi tek geçişte (eskiden 6 ayrı replace)
 export function normalizeMedicalText(text: string = ''): string {
   if (!text) return '';
   return text
     .toLocaleLowerCase('tr-TR')
-    .replace(/ı/g, 'i')
-    .replace(/ğ/g, 'g')
-    .replace(/ü/g, 'u')
-    .replace(/ş/g, 's')
-    .replace(/ö/g, 'o')
-    .replace(/ç/g, 'c')
-    .replace(/[^a-z0-9\s]/gi, ' ')
-    .replace(/\s+/g, ' ')
+    .replace(/[ığüşöç]/g, (h) => TR_ASCII[h])
+    .replace(/[^a-z0-9]+/g, ' ')
     .trim();
 }
 
