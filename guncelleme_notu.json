@@ -1,14 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 239,
-  "baslik": "Wi-Fi'de daha hızlı açılış",
+  "onem": 240,
+  "baslik": "Takılan sayfa yüklemesi düzeltildi",
   "maddeler": [
-    "Çevrimdışı paket indirmeleri artık sayfa isteklerini bekletmiyor; Wi-Fi'de sayfalar daha hızlı açılıyor."
+    "Site bazen yükleme çubuğunda dakikalarca takılı kalıyordu; sunucu bağlantısı daha kararlı bir yönteme geçirildi."
   ],
   "eklenen": [],
   "degisen": [],
   "duzeltilen": [
-    "Çevrimdışı paket indirmeleri artık sayfa isteklerini bekletmiyor; Wi-Fi'de sayfalar daha hızlı açılıyor."
+    "Site bazen yükleme çubuğunda dakikalarca takılı kalıyordu; sunucu bağlantısı daha kararlı bir yönteme geçirildi."
   ],
   "silinen": []
 }

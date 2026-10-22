@@ -136,7 +136,9 @@ services:
     restart: unless-stopped
     # Token, Zero Trust → Networks → Tunnels → medsoru-oracle → Configure → Token
     # (.env'deki CLOUDFLARE_TUNNEL_TOKEN; compose --env-file ile okunur)
-    command: tunnel --no-autoupdate run --token ${CLOUDFLARE_TUNNEL_TOKEN}
+    # --protocol http2: QUIC bağlantıları ara ara sessizce takılıyordu ("failed to accept QUIC stream: timeout: no recent
+    # network activity"); takılan bağlantıdaki tüm istekler düşene dek bekliyor, sayfa yükleme çubuğu dakikalarca ilerlemiyordu (2026-10-23)
+    command: tunnel --no-autoupdate --protocol http2 run --token ${CLOUDFLARE_TUNNEL_TOKEN}
     depends_on:
       - meds-server
     logging:
