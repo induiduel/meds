@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Sesli anlatım metni denetleyicisi: biçim, uzunluk, telaffuz tuzakları.
 
-Kullanım: metin_denetle.py <metin.md> [...]   → HATA sayısı 0 ise çıkış kodu 0.
+Kullanım: metin_denetle.py [--yazim] <metin.md> [...]
+--yazim: metin kısaltmaları yazımla tutar (CD2, IL-2); rakam/kısaltma/Yunan denetimi EMA'ya giden okunuşa
+(modul_okunus.donustur) uygulanır (KURUL2_YAPILMAYACAK_HATALAR H23).   → HATA sayısı 0 ise çıkış kodu 0.
 """
 import re, sys
 from pathlib import Path
@@ -15,6 +17,9 @@ DOLGU = (
     r'tekrar\s+etmekte\s+fayda', r'bir\s+kez\s+daha\s+hatırlatalım', r'şimdi\s+gelelim',
     r'daha\s+önce\s+de\s+söylediğimiz\s+gibi', r'özetlemek\s+gerekirse', r'sözü\s+uzatmadan',
 )
+
+YAZIM = False
+
 
 def denetle(p: Path):
     hatalar, uyarilar = [], []
@@ -34,6 +39,9 @@ def denetle(p: Path):
     for i, l in enumerate(lines, 1):
         if l.startswith(('# ', '@@ ')) or not l.strip():
             continue
+        if YAZIM:
+            import modul_okunus
+            l = modul_okunus.donustur(l)
         if re.search(r'[*#|>\[\]{}=_`~]', l): hatalar.append(f'{i}: markdown/simge: {l[:70]}')
         if re.match(r'\s*[-•–]\s', l): hatalar.append(f'{i}: madde imi: {l[:70]}')
         if re.search(r'\d', l):
@@ -68,5 +76,6 @@ def denetle(p: Path):
     return len(hatalar)
 
 if __name__ == '__main__':
-    toplam = sum(denetle(Path(a)) for a in sys.argv[1:])
+    YAZIM = '--yazim' in sys.argv
+    toplam = sum(denetle(Path(a)) for a in sys.argv[1:] if a != '--yazim')
     sys.exit(1 if toplam else 0)

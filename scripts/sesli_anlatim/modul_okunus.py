@@ -12,7 +12,7 @@ from __future__ import annotations
 import re
 import sys
 
-MODUL_ANAHTARLAR = {"k1-70-tbg-sinav-kampi"}
+MODUL_ANAHTARLAR = {"k1-70-tbg-sinav-kampi", "k1-59-immunofarmakoloji-v2"}  # V2: yazımla yazılmış metin (CD2, IL-2), okunuş burada
 SON_PROVA = re.compile(r"^k\d+-\d+-son-prova-")  # Son Prova partları da modül yazımıyla (BRCA1, IL-6) yazılır
 
 
@@ -37,10 +37,13 @@ KELIME = {
     "AIDS": "eyds", "ELISA": "eliza", "SOFA": "sofa", "SIRS": "sirs", "TORCH": "torç", "TORCHS": "torçs", "ANCA": "anka",
     "UNICEF": "yunisef", "MERS": "mers", "CREST": "krest", "PUMA": "puma", "SNAIL": "sneyl", "TWIST": "tvist",
     "HELLP": "help", "NICE": "nays", "KRAS": "kaa ras", "HRAS": "haa ras", "BRAF": "bee raf", "MALT": "malt", "JAK": "jak",
-    "SMAD": "smad", "RANKL": "rankl", "AmpC": "amp cee", "CAR": "kar", "NAPQI": "nee aa pee kiyu ıı", "KETEM": "ketem",
+    "SMAD": "smad", "RANKL": "rank el", "AmpC": "amp cee", "CAR": "kar", "NAPQI": "nee aa pee kiyu ıı", "KETEM": "ketem",
     "SARS": "sars", "CoV": "kov", "SCID": "skid", "GLUT": "glut", "AIRE": "eyr", "CART": "kart", "OXA": "oksa",
     "VISA": "vize", "MRSA": "mee ree see aa", "Scl": "skl", "Sm": "smit",
 }
+# İmmünofarmakoloji V2 (2026-10-22): I harfi "ıı" değil; IL = interlökin
+KELIME.update({"IL": "interlökin", "IVIG": "ii vee ii gee", "KIR": "kaa ii ree", "HAMA": "hama", "IgE": "immünoglobulin ee",
+               "IgG": "immünoglobulin gee", "IgM": "immünoglobulin mee", "Rh": "ree haa", "pH": "pee haa"})
 # Roma rakamı (tip II, faktör XIII, sınıf IV): sayıyla. XX, XXX, XY gibi kromozom formülleri DEĞİL (X tek başına da değil)
 ROMEN = {"II": 2, "III": 3, "IV": 4, "VI": 6, "VII": 7, "VIII": 8, "IX": 9, "XI": 11, "XII": 12, "XIII": 13}
 ROMEN_RE = re.compile(r"^(II|III|IV|VI|VII|VIII|IX|XI|XII|XIII)([abAB]?)$")
@@ -77,6 +80,8 @@ def parca_oku(p: str) -> str:
             out.append(KELIME[x])
         elif sum(c.isupper() for c in x) >= 2 or (len(x) == 1 and x.isupper()) or (len(x) <= 2 and x[:1].isupper()):
             out.append(harfler(x))
+        elif len(x) == 1 and out and x.lower() in "abcdefghijklmnoprstuvyz":
+            out.append(UZUN[x.upper()])  # C3b, C5a: rakamdan sonraki tek küçük harf de harf adıyla
         else:
             out.append(x)
     return " ".join(out)
