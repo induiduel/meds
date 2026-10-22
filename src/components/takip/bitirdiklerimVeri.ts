@@ -8,7 +8,7 @@
 import { navigateTo, pathFor } from '../../router';
 import type { TakipModul } from '../../services/calismaTakip';
 import { cdListeGetir, cdOynat, cdTercihVaryant } from '../canliDers/canliDersStore';
-import { CD_SPOT_BRANS, cdKategoriGrupla, cdParca } from '../canliDers/canliDersKategori';
+import { CD_SPOT_BRANS, cdKategoriGrupla, cdParca, cdTekSurum } from '../canliDers/canliDersKategori';
 import { BRANSLAR, type Brans } from '../spots/brans';
 import { cozucuDizinYukle, ilerlemeOku, ilerlemeYaz, ozet, setAdi, type CDizin } from '../spots/cozucu/cozucuVeri';
 import { dizinYukle as onemDizinYukle, ogrenilenler, type Dizin as OnemDizin } from '../spots/onem/onemVeri';
@@ -74,7 +74,7 @@ const sonProvaYolu = (key: string) => {
 async function sesliYukle(): Promise<BdDers[]> {
   const [ds, ilgili] = await Promise.all([cdListeGetir(), ilgiliCozulenler().catch(() => new Map<string, number>())]);
   // Son Prova partları ve sınav kampları takip/plan dışında (kullanıcı kararı 2026-10-21): kendi sayfalarında izlenir
-  return cdKategoriGrupla(ds.filter((d) => !sonProvaYolu(d.key) && !/-sinav-kampi/.test(d.key))).filter(({ dersler }) => dersler.length).map(({ kat, dersler }) => ({
+  return cdKategoriGrupla(cdTekSurum(ds).filter((d) => !sonProvaYolu(d.key) && !/-sinav-kampi/.test(d.key))).filter(({ dersler }) => dersler.length).map(({ kat, dersler }) => ({
     id: kat.id,
     ad: kat.ad,
     konular: dersler.map((d) => {

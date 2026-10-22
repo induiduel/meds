@@ -6,7 +6,7 @@
  */
 import React, { useEffect, useMemo, useState } from 'react';
 import { ChevronDown, Gauge, Headphones, SlidersHorizontal } from 'lucide-react';
-import { bittiMi, useTakip, sureYaz } from '../../services/calismaTakip';
+import { bittiMi, sesliKonuId, useTakip, sureYaz } from '../../services/calismaTakip';
 import { KonuIsaret } from '../takip/KonuTakip';
 import { navigateTo, pathFor } from '../../router';
 import {
@@ -54,7 +54,7 @@ export default function OncelikliDerslerView() {
   const degistir = <T,>(l: T[], x: T) => (l.includes(x) ? l.filter((y) => y !== x) : [...l, x]);
 
   const durumOf = (d: OncelikliDers) => {
-    const k = takip.k[`sesli:${d.key}`];
+    const k = takip.k[`sesli:${sesliKonuId(d.key)}`];
     return { bitti: bittiMi(k), basladi: !!k && k.sn > 60 };
   };
 

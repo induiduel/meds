@@ -28,6 +28,12 @@ export const cdBransKisa = (brans: string) => KISA[brans] || brans.replace(/^Tı
 const bransAdi = (d: CdListeDers) => d.brans || 'Diğer';
 const noSayi = (d: CdListeDers) => Number(d.no) || 9999;
 
+/** Aynı dersin V2'si (`…-v2`) V1'i varsa ayrı ders sayılmaz (Bitirdiklerim, sınav planı) */
+export const cdTekSurum = <T extends { key: string }>(ds: T[]): T[] => {
+  const ks = new Set(ds.map((d) => d.key));
+  return ds.filter((d) => !(d.key.endsWith('-v2') && ks.has(d.key.slice(0, -3))));
+};
+
 /** Grup başlığındaki sayı: Part 1/2 tek konu (PDF) sayılır */
 export const cdKonuSayisi = (ds: CdListeDers[]) => new Set(ds.map((d) => `${d.brans}|${d.no}`)).size;
 

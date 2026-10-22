@@ -21,10 +21,10 @@
 import dagilim from '../../data/sinav_dagilimi.json';
 import { navigateTo, pathFor } from '../../router';
 import { elemeOku } from '../../services/konuEleme';
-import { bittiMi, type Hiz, type TakipModul, takipOku } from '../../services/calismaTakip';
+import { bittiMi, type Hiz, type TakipModul, takipOku, sesliKonuId } from '../../services/calismaTakip';
 import { aktifKurul } from '../../services/kurulTakvimi';
 import { cdListeGetir, type CdListeDers } from '../canliDers/canliDersStore';
-import { CD_SPOT_BRANS } from '../canliDers/canliDersKategori';
+import { CD_SPOT_BRANS, cdTekSurum } from '../canliDers/canliDersKategori';
 import { bransTanim, type Brans } from '../spots/brans';
 import { cozucuDizinYukle, ilerlemeOku, ozet, type CDizinDers } from '../spots/cozucu/cozucuVeri';
 import { dizinYukle as onemDizinYukle, ogrenilenler, type DizinDers } from '../spots/onem/onemVeri';
@@ -81,7 +81,7 @@ export async function planVerisiYukle(): Promise<PlanVeri | null> {
     for (const d of c?.dersler || []) al(b, Number(d.no), d.baslik).cozucu.push(d);
   });
   // Sesli ders yalnız bilinen bir derse bağlanır (kamp / son prova bölümleri ayrı)
-  for (const d of sesli as CdListeDers[]) {
+  for (const d of cdTekSurum(sesli as CdListeDers[])) {
     const b = d.brans ? CD_SPOT_BRANS[d.brans] : undefined;
     if (!b || (d.kurul && d.kurul !== k.kurul) || /-son-prova-|-sinav-kampi/.test(d.key)) continue;
     const x = dersler.get(`${b}|${Number(d.no)}`);
@@ -263,7 +263,7 @@ export function planHesapla(veri: PlanVeri, hiz: Partial<Record<TakipModul, Hiz>
         const k = kayit('sesli', c.key);
         const t = c.varsayilan?.sureSn || 0;
         if (k?.sonAt) son = Math.max(son, Date.parse(k.sonAt));
-        if (bittiMi(k) || eleme[`sesli:${c.key}`] === 'baska') sesliBit++;
+        if (bittiMi(k) || eleme[`sesli:${sesliKonuId(c.key)}`] === 'baska') sesliBit++;
         else sesliKalan += Math.max(t * 0.15, t * oran('sesli') - (k?.durum === 'tekrar' ? 0 : k?.sn || 0));
       }
       // en önemliler
@@ -436,7 +436,7 @@ export function planHesapla(veri: PlanVeri, hiz: Partial<Record<TakipModul, Hiz>
 
 function adimAc(d: PlanDers, t: AdimTur): () => void {
   if (t === 'sesli') {
-    const il = d.sesli.find((c) => !bittiMi(takipOku().k[`sesli:${c.key}`])) || d.sesli[0];
+    const il = d.sesli.find((c) => !bittiMi(takipOku().k[`sesli:${sesliKonuId(c.key)}`])) || d.sesli[0];
     return () => navigateTo(pathFor('canli_ders', il.key));
   }
   if (t === 'onem' && d.onem) {

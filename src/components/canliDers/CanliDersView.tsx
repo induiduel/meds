@@ -22,7 +22,7 @@ import { bransAdresi, icKonum } from '../../siteHaritasi';
 import { useCdTvGezinme } from './CanliDersTv';
 import { useYildizliSayisi } from '../../services/yildizliParagrafStore';
 import { YildizliParagraflarPanel } from '../study/YildizliParagraflarModal';
-import { bittiMi, sureYaz, useKonuKaydi, useTakip } from '../../services/calismaTakip';
+import { bittiMi, sureYaz, sesliKonuId, useKonuKaydi, useTakip } from '../../services/calismaTakip';
 import { KonuDugmeleri, KonuIsaret, KonuSureEtiketi } from '../takip/KonuTakip';
 import '../../styles/canli-ders.css';
 import CihazdaIsaret from '../cevrimdisi/CihazdaIsaret';
@@ -312,7 +312,7 @@ const dk = (s: number) => Math.round(s / 60);
 /** Süreler sekmesi: her branşta her ders (konu) ayrı satır, dakika + saat; branş ara toplamı ve genel toplam. Part 1/2 tek konu altında. */
 function SureListesi({ dersler, onDersAc }: { dersler: CdListeDers[]; onDersAc?: () => void }) {
   const takip = useTakip();
-  const harcanan = (ps: CdListeDers[]) => ps.reduce((n, p) => n + (takip.k[`sesli:${p.key}`]?.sn || 0), 0);
+  const harcanan = (ps: CdListeDers[]) => ps.reduce((n, p) => n + (takip.k[`sesli:${sesliKonuId(p.key)}`]?.sn || 0), 0);
   const gruplar = useMemo(() => cdKategoriGrupla(dersler).map((g) => {
     const konular: { no: string; baslik: string; parcalar: CdListeDers[]; sure: number }[] = [];
     for (const d of g.dersler) {
@@ -358,7 +358,7 @@ function SureListesi({ dersler, onDersAc }: { dersler: CdListeDers[]; onDersAc?:
                     )}
                   </td>
                   <td className="cd-sl-sure"><b>{dk(k.sure)} dk</b><small>{fmtSure(k.sure)}</small></td>
-                  <td className="cd-sl-sure">{harcanan(k.parcalar) ? <b>{sureYaz(harcanan(k.parcalar))}</b> : <small>—</small>}{k.parcalar.every((p) => bittiMi(takip.k[`sesli:${p.key}`])) && <small className="cd-sl-bitti">bitti</small>}</td>
+                  <td className="cd-sl-sure">{harcanan(k.parcalar) ? <b>{sureYaz(harcanan(k.parcalar))}</b> : <small>—</small>}{k.parcalar.every((p) => bittiMi(takip.k[`sesli:${sesliKonuId(p.key)}`])) && <small className="cd-sl-bitti">bitti</small>}</td>
                 </tr>
               ))}
             </tbody>

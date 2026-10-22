@@ -12,7 +12,7 @@
 import { useSyncExternalStore } from 'react';
 import havuzVeri from '../../data/sesli_motivasyon/havuz.json';
 import { cdAbone, cdAralik, cdDurum, cdDuraklat, cdToggle, cdAtla } from './canliDersStore';
-import { takipOku } from '../../services/calismaTakip';
+import { sesliKonuId, takipOku } from '../../services/calismaTakip';
 import { sinavaKalanGun } from '../../services/kurulTakvimi';
 
 type Yer = 'basla' | 'orta' | 'son' | 'mola';
@@ -39,7 +39,7 @@ function baglamlar(key: string): string[] {
   const k = takipOku().k;
   const sesli = Object.entries(k).filter(([a]) => a.startsWith('sesli:'));
   const biten = sesli.filter(([, v]) => v.durum === 'bitti').length;
-  const bu = k[`sesli:${key}`];
+  const bu = k[`sesli:${sesliKonuId(key)}`];
   const gun = (() => { try { return sinavaKalanGun(); } catch { return 99; } })();
   const saat = new Date().getHours();
   const b: string[] = [];

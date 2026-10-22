@@ -1,14 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 228,
-  "baslik": "Üroloji sesli derslerine sınav odaklı ikinci versiyon",
+  "onem": 229,
+  "baslik": "Bitirdiklerim: V2 sesli dersler ayrı ders sayılmıyor",
   "maddeler": [
-    "Üroloji'nin 5 dersine (Üriner Obstrüksiyon, Ürolitiyazis, Üriner Sistem Enfeksiyonları, Spesifik Enfeksiyonlar, Enürezis) öğrenci notu ve çıkmış sorulara odaklanan kısa, anlaşılır ikinci sesli ders versiyonu eklendi (EMA sesi)."
+    "Sesli derslerin ikinci versiyonu (V2) artık Bitirdiklerim ve sınav planında ayrı ders olarak görünmüyor; V1 ve V2'de geçen süre ve bitirme tek derste toplanıyor."
   ],
-  "eklenen": [
-    "Üroloji'nin 5 dersine (Üriner Obstrüksiyon, Ürolitiyazis, Üriner Sistem Enfeksiyonları, Spesifik Enfeksiyonlar, Enürezis) öğrenci notu ve çıkmış sorulara odaklanan kısa, anlaşılır ikinci sesli ders versiyonu eklendi (EMA sesi)."
+  "eklenen": [],
+  "degisen": [
+    "Sesli derslerin ikinci versiyonu (V2) artık Bitirdiklerim ve sınav planında ayrı ders olarak görünmüyor; V1 ve V2'de geçen süre ve bitirme tek derste toplanıyor."
   ],
-  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }

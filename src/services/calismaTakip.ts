@@ -47,7 +47,25 @@ export const MODUL_AD: Record<TakipModul, string> = {
   kamp: 'Kurul kampı',
 };
 
-const anahtar = (m: TakipModul, konu: string) => `${m}:${konu}`;
+/** Sesli dersin V2'si (`…-v2`) aynı dersin başka sürümü: takipte V1 ile tek konu sayılır */
+export const sesliKonuId = (key: string) => key.replace(/-v2$/, '');
+const anahtar = (m: TakipModul, konu: string) => `${m}:${m === 'sesli' ? sesliKonuId(konu) : konu}`;
+/** Eski `sesli:…-v2` kayıtlarını V1 kaydına katar (süre/soru toplanır, bitti korunur) */
+const v2Katla = (k: Record<string, KonuKaydi>) => {
+  if (!Object.keys(k).some((a) => a.startsWith('sesli:') && a.endsWith('-v2'))) return k;
+  const y: Record<string, KonuKaydi> = {};
+  for (const [a, r] of Object.entries(k)) {
+    const b = a.startsWith('sesli:') ? `sesli:${sesliKonuId(a.slice(6))}` : a;
+    const e = y[b];
+    y[b] = !e ? r : {
+      ...e, ...r,
+      sn: (e.sn || 0) + (r.sn || 0), soru: (e.soru || 0) + (r.soru || 0),
+      durum: e.durum === 'bitti' || r.durum === 'bitti' ? 'bitti' : r.durum || e.durum,
+      ilkAt: [e.ilkAt, r.ilkAt].filter(Boolean).sort()[0],
+    } as KonuKaydi;
+  }
+  return y;
+};
 const gunAnahtari = (d = new Date()) =>
   `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 
@@ -59,7 +77,7 @@ const oku = (): TakipVeri => {
     let v: TakipVeri = { k: {}, g: {} };
     try {
       const x = JSON.parse(ham || '{}');
-      if (x && typeof x === 'object') v = { k: x.k && typeof x.k === 'object' ? x.k : {}, g: x.g && typeof x.g === 'object' ? x.g : {} };
+      if (x && typeof x === 'object') v = { k: x.k && typeof x.k === 'object' ? v2Katla(x.k) : {}, g: x.g && typeof x.g === 'object' ? x.g : {} };
     } catch { /* bozuk kayıt */ }
     onbellek = { ham, v };
   }
