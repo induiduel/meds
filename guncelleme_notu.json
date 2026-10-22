@@ -1,16 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 224,
-  "baslik": "Meme Kanseri ve Erkek Genital eşleşmesi düzeldi",
+  "onem": 225,
+  "baslik": "PDF ayarları yenilendi: canlı önizleme",
   "maddeler": [
-    "Patoloji'de Meme Kanseri ve Erkek Genital Sistem sesli derslerinin sonundaki “Soru çöz” ve sesli asistan önerisi artık doğru derse gidiyor.",
-    "Bitirdiklerim ve sınav planında bu iki dersin ilgili soru sayıları doğru dersle eşleşiyor."
+    "PDF ayar penceresi yeniden tasarlandı: seçtiğin ayarlarla hazırlanan gerçek örnek sayfa anında görünüyor.",
+    "Ayarlar sade sorular hâlinde tek sayfada: hazır görünümler, yazı büyüklüğü, başlık rengi, bir kâğıda kaç sayfa, kapak ve vurgu; diğerleri \"Daha fazla ayar\" altında."
   ],
   "eklenen": [],
-  "degisen": [],
-  "duzeltilen": [
-    "Patoloji'de Meme Kanseri ve Erkek Genital Sistem sesli derslerinin sonundaki “Soru çöz” ve sesli asistan önerisi artık doğru derse gidiyor.",
-    "Bitirdiklerim ve sınav planında bu iki dersin ilgili soru sayıları doğru dersle eşleşiyor."
+  "degisen": [
+    "PDF ayar penceresi yeniden tasarlandı: seçtiğin ayarlarla hazırlanan gerçek örnek sayfa anında görünüyor.",
+    "Ayarlar sade sorular hâlinde tek sayfada: hazır görünümler, yazı büyüklüğü, başlık rengi, bir kâğıda kaç sayfa, kapak ve vurgu; diğerleri \"Daha fazla ayar\" altında."
   ],
+  "duzeltilen": [],
   "silinen": []
 }

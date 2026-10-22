@@ -1,81 +1,112 @@
-/* PDF sayfa düzeni seçici (components/ui/PdfDuzenSecici.tsx) */
-.pdz { display: grid; gap: 8px; }
-.pdz-nup { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
-.pdz-nup-ops { position: relative; display: grid; justify-items: center; gap: 4px; padding: 8px 4px; border: 1px solid var(--color-line); border-radius: 10px; font-size: 12.5px; font-weight: 600; cursor: pointer; }
-.pdz-nup-ops { min-width: 0; text-align: center; line-height: 1.2; }
-.pdz-nup-ops span { white-space: nowrap; }
-.pdz-nup-ops input { position: absolute; opacity: 0; pointer-events: none; }
-.pdz-nup-ops.is-on { border-color: var(--color-accent); background: color-mix(in srgb, var(--color-accent) 10%, transparent); }
-.pdz-nup-ops:focus-within { outline: 2px solid var(--color-accent); outline-offset: 2px; }
-.pdz-simge { display: grid; gap: 2px; width: 24px; height: 32px; padding: 2px; border: 1px solid var(--color-ink-3); border-radius: 2px; }
-.pdz-simge.is-yatay { width: 32px; height: 24px; }
-.pdz-simge i { border-radius: 1px; background: color-mix(in srgb, var(--color-ink) 28%, transparent); }
-.pdz-ek { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; font-size: 13px; }
-.pdz-ek label { display: inline-flex; align-items: center; gap: 6px; }
-.pdz-ek select { min-height: 32px; padding: 0 6px; border: 1px solid var(--color-line); border-radius: 8px; background: var(--color-white); color: var(--color-ink); font: inherit; }
-.pdz-kutu input { width: 16px; height: 16px; margin: 0; accent-color: var(--color-accent); }
-@media (max-width: 360px) { .pdz-nup-ops { font-size: 11.5px; padding: 8px 2px; } }
+/* PDF ayar penceresi (components/ui/PdfDuzenSecici.tsx + PdfOnizleme.tsx) */
 
-/* v2: şablonlar + önizleme + sekmeli ayarlar */
-.pdz-sablon { display: grid; grid-template-columns: repeat(auto-fit, minmax(128px, 1fr)); gap: 6px; }
-.pdz-sablon button { display: grid; gap: 2px; padding: 8px 10px; text-align: left; border: 1px solid var(--color-line); border-radius: 10px; background: transparent; color: var(--color-ink); font: inherit; cursor: pointer; }
-.pdz-sablon button b { font-size: 13px; }
-.pdz-sablon button small { font-size: 11.5px; color: var(--color-ink-3); line-height: 1.25; }
-.pdz-sablon button.is-on { border-color: var(--color-accent); background: color-mix(in srgb, var(--color-accent) 10%, transparent); }
-.pdz-govde { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 12px; align-items: start; }
-.pdz-oniz { width: 96px; height: auto; position: sticky; top: 0; filter: drop-shadow(0 2px 6px rgb(0 0 0 / 0.12)); }
-.pdz-panel { display: grid; gap: 8px; min-width: 0; }
-.pdz-sekmeler { display: flex; align-items: center; gap: 2px; padding: 3px; border-radius: 10px; background: color-mix(in srgb, var(--color-ink) 6%, transparent); }
-.pdz-sekmeler button { flex: 1; min-height: 30px; border: 0; border-radius: 8px; background: transparent; color: var(--color-ink-2, var(--color-ink)); font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; }
-.pdz-sekmeler button.is-on { background: var(--color-white); color: var(--color-ink); box-shadow: 0 1px 3px rgb(0 0 0 / 0.12); }
-.pdz-sekmeler .pdz-sifirla { flex: 0 0 30px; display: grid; place-items: center; color: var(--color-ink-3); }
-.pdz-sifirla svg { width: 15px; height: 15px; }
-.pdz-icerik { display: grid; gap: 10px; }
-.pdz-satir { display: grid; gap: 4px; }
-.pdz-etiket { font-size: 12px; font-weight: 600; color: var(--color-ink-3); }
-.pdz-seg { display: flex; flex-wrap: wrap; gap: 4px; }
-.pdz-seg button { min-height: 30px; padding: 0 10px; border: 1px solid var(--color-line); border-radius: 8px; background: transparent; color: var(--color-ink); font: inherit; font-size: 13px; cursor: pointer; }
-.pdz-seg button.is-on { border-color: var(--color-accent); background: var(--color-accent); color: var(--color-white); font-weight: 600; }
-.pdz-girdi { min-height: 32px; padding: 0 10px; border: 1px solid var(--color-line); border-radius: 8px; background: var(--color-white); color: var(--color-ink); font: inherit; font-size: 13px; width: 100%; box-sizing: border-box; }
-.pdz-renkler { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; }
-.pdz-renkler button { display: flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 8px; border: 1px solid var(--color-line); border-radius: 8px; background: transparent; color: var(--color-ink); font: inherit; font-size: 12.5px; cursor: pointer; min-width: 0; }
-.pdz-renkler button span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.pdz-renkler button i { flex: 0 0 14px; height: 14px; border-radius: 50%; }
-.pdz-renkler button.is-on { border-color: var(--color-accent); box-shadow: inset 0 0 0 1px var(--color-accent); font-weight: 600; }
-.pdz-anahtar { position: relative; display: flex; align-items: flex-start; gap: 10px; cursor: pointer; font-size: 13px; }
-.pdz-anahtar input { position: absolute; opacity: 0; pointer-events: none; }
-.pdz-anahtar-yuva { flex: 0 0 34px; height: 20px; margin-top: 1px; border-radius: 10px; background: color-mix(in srgb, var(--color-ink) 22%, transparent); position: relative; transition: background 0.15s; }
-.pdz-anahtar-yuva::after { content: ''; position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; border-radius: 50%; background: #fff; box-shadow: 0 1px 2px rgb(0 0 0 / 0.25); transition: transform 0.15s; }
-.pdz-anahtar input:checked + .pdz-anahtar-yuva { background: var(--color-accent); }
-.pdz-anahtar input:checked + .pdz-anahtar-yuva::after { transform: translateX(14px); }
-.pdz-anahtar input:focus-visible + .pdz-anahtar-yuva { outline: 2px solid var(--color-accent); outline-offset: 2px; }
-.pdz-anahtar > span:last-child { display: grid; gap: 1px; }
-.pdz-anahtar small { font-size: 11.5px; color: var(--color-ink-3); }
-.pdz-seg button:focus-visible, .pdz-sablon button:focus-visible, .pdz-renkler button:focus-visible, .pdz-sekmeler button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
-@media (max-width: 420px) {
-  .pdz-govde { grid-template-columns: 1fr; }
-  .pdz-oniz { position: static; width: 72px; justify-self: center; }
-  .pdz-renkler { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-
-/* Ayar düğmesi (menü içinde özet) + ayrı diyalog */
-.pdz-ac { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 44px; padding: 8px 10px; border: 1px solid var(--color-line); border-radius: 10px; background: transparent; color: var(--color-ink); font: inherit; text-align: left; cursor: pointer; }
+/* Menüde/diyalogda duran özet düğmesi */
+.pdz-ac { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 48px; padding: 8px 12px; border: 1px solid var(--color-line); border-radius: 12px; background: transparent; color: var(--color-ink); font: inherit; text-align: left; cursor: pointer; }
 .pdz-ac:hover { background: color-mix(in srgb, var(--color-ink) 5%, transparent); }
 .pdz-ac:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
 .pdz-ac > svg { flex: 0 0 18px; width: 18px; height: 18px; color: var(--color-accent); }
 .pdz-ac > span:nth-child(2) { display: grid; gap: 1px; min-width: 0; flex: 1; }
-.pdz-ac b { font-size: 13px; }
-.pdz-ac small { font-size: 11.5px; color: var(--color-ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.pdz-ac-git { flex: 0 0 auto; font-size: 12.5px; font-weight: 600; color: var(--color-accent); }
-.pdz-perde { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 16px; background: rgb(0 0 0 / 0.45); }
-.pdz-diyalog { display: flex; flex-direction: column; width: min(560px, 100%); max-height: min(720px, calc(100dvh - 32px)); border-radius: 16px; background: var(--color-white); color: var(--color-ink); box-shadow: 0 20px 50px rgb(0 0 0 / 0.3); overflow: hidden; }
-.pdz-d-bas, .pdz-d-alt { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 16px; }
-.pdz-d-bas { border-bottom: 1px solid var(--color-line); font-size: 15px; }
+.pdz-ac b { font-size: 13.5px; }
+.pdz-ac small { font-size: 12px; color: var(--color-ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pdz-ac-git { flex: 0 0 auto; padding: 5px 12px; border-radius: 999px; background: color-mix(in srgb, var(--color-accent) 12%, transparent); font-size: 12.5px; font-weight: 600; color: var(--color-accent); }
+
+/* Diyalog */
+.pdz-perde { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 20px; background: rgb(0 0 0 / 0.5); }
+.pdz-diyalog { display: flex; flex-direction: column; width: min(860px, 100%); max-height: min(760px, calc(100dvh - 40px)); border-radius: 18px; background: var(--color-white); color: var(--color-ink); box-shadow: 0 24px 60px rgb(0 0 0 / 0.3); overflow: hidden; }
+.pdz-d-bas, .pdz-d-alt { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 20px; }
+.pdz-d-bas { border-bottom: 1px solid var(--color-line); }
+.pdz-d-bas > span { display: grid; gap: 2px; }
+.pdz-d-bas b { font-size: 17px; }
+.pdz-d-bas small { font-size: 12.5px; color: var(--color-ink-3); }
 .pdz-d-alt { border-top: 1px solid var(--color-line); }
 .pdz-d-alt small { font-size: 12px; color: var(--color-ink-3); }
-.pdz-d-govde { flex: 1; overflow: auto; padding: 14px 16px; overscroll-behavior: contain; }
-.pdz-d-x { display: grid; place-items: center; width: 34px; height: 34px; border: 0; border-radius: 8px; background: transparent; color: var(--color-ink); cursor: pointer; }
+.pdz-d-govde { flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; }
+.pdz-d-x { display: grid; place-items: center; width: 36px; height: 36px; border: 0; border-radius: 10px; background: transparent; color: var(--color-ink); cursor: pointer; }
+.pdz-d-x:hover { background: color-mix(in srgb, var(--color-ink) 7%, transparent); }
 .pdz-d-x svg { width: 18px; height: 18px; }
-.pdz-d-tamam { min-height: 36px; padding: 0 18px; border: 0; border-radius: 10px; background: var(--color-accent); color: var(--color-white); font: inherit; font-weight: 600; cursor: pointer; }
+.pdz-d-tamam { min-height: 40px; padding: 0 24px; border: 0; border-radius: 12px; background: var(--color-accent); color: var(--color-white); font: inherit; font-weight: 600; cursor: pointer; }
 .pdz-d-x:focus-visible, .pdz-d-tamam:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
-@media (max-width: 480px) { .pdz-perde { padding: 0; align-items: end; } .pdz-diyalog { width: 100%; max-height: 92dvh; border-radius: 16px 16px 0 0; } }
+
+/* İki kolon: önizleme + ayarlar */
+.pdz { display: grid; grid-template-columns: 300px minmax(0, 1fr); min-height: 100%; }
+.pdz-oniz-kol { padding: 20px; background: color-mix(in srgb, var(--color-ink) 5%, transparent); border-right: 1px solid var(--color-line); }
+.pdo { position: sticky; top: 0; margin: 0; display: grid; gap: 10px; }
+.pdo-kagit { min-height: 340px; border-radius: 4px; background: #fff; box-shadow: 0 2px 4px rgb(0 0 0 / 0.08), 0 8px 24px rgb(0 0 0 / 0.12); overflow: hidden; transition: opacity 0.2s; }
+.pdo-kagit canvas { display: block; }
+.pdo-kagit.is-yuk { opacity: 0.55; }
+.pdo-alt { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 12.5px; color: var(--color-ink-3); }
+.pdo-alt button { width: 30px; height: 30px; border: 1px solid var(--color-line); border-radius: 8px; background: var(--color-white); color: var(--color-ink); font-size: 18px; line-height: 1; cursor: pointer; }
+.pdo-alt button:disabled { opacity: 0.35; cursor: default; }
+
+.pdz-ayarlar { display: grid; align-content: start; gap: 20px; padding: 20px; }
+.pdz-soru { display: grid; gap: 8px; }
+.pdz-soru h4 { margin: 0; font-size: 14px; font-weight: 700; color: var(--color-ink); }
+
+.pdz-sablon { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.pdz-sablon button, .pdz-yazi button, .pdz-nup-ops { border: 1.5px solid var(--color-line); border-radius: 12px; background: transparent; color: var(--color-ink); font: inherit; cursor: pointer; transition: border-color 0.12s, background 0.12s; }
+.pdz-sablon button { display: grid; gap: 2px; padding: 10px 12px; text-align: left; }
+.pdz-sablon b { font-size: 14px; }
+.pdz-sablon small { font-size: 12px; color: var(--color-ink-3); line-height: 1.3; }
+.pdz-sablon button:hover, .pdz-yazi button:hover, .pdz-nup-ops:hover { border-color: color-mix(in srgb, var(--color-accent) 50%, var(--color-line)); }
+.pdz-sablon .is-on, .pdz-yazi .is-on, .pdz-nup-ops.is-on { border-color: var(--color-accent); background: color-mix(in srgb, var(--color-accent) 9%, transparent); }
+
+.pdz-yazi { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.pdz-yazi button { display: grid; justify-items: center; align-content: end; gap: 2px; min-height: 64px; padding: 8px 4px; }
+.pdz-yazi button span { font-weight: 700; line-height: 1; }
+.pdz-yazi small { font-size: 11.5px; color: var(--color-ink-3); white-space: nowrap; }
+
+.pdz-renkler { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.pdz-renkler button { display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 2px solid transparent; border-radius: 50%; background: transparent; cursor: pointer; }
+.pdz-renkler button i { width: 26px; height: 26px; border-radius: 50%; }
+.pdz-renkler button.is-on { border-color: var(--color-ink); }
+.pdz-renk-ad { font-size: 13px; color: var(--color-ink-3); }
+
+.pdz-nup { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.pdz-nup-ops { position: relative; display: grid; justify-items: center; gap: 6px; padding: 10px 4px; font-size: 12.5px; font-weight: 600; text-align: center; }
+.pdz-nup-ops input { position: absolute; opacity: 0; pointer-events: none; }
+.pdz-nup-ops:focus-within { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.pdz-simge { display: grid; gap: 2px; width: 24px; height: 32px; padding: 2px; border: 1px solid var(--color-ink-3); border-radius: 2px; }
+.pdz-simge.is-yatay { width: 32px; height: 24px; }
+.pdz-simge i { border-radius: 1px; background: color-mix(in srgb, var(--color-ink) 28%, transparent); }
+
+.pdz-anahtarlar { display: grid; border: 1px solid var(--color-line); border-radius: 12px; }
+.pdz-anahtarlar .pdz-anahtar + .pdz-anahtar { border-top: 1px solid var(--color-line); }
+.pdz-anahtar { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 12px; cursor: pointer; font-size: 13.5px; }
+.pdz-anahtar > span:first-child { display: grid; gap: 1px; }
+.pdz-anahtar small { font-size: 12px; color: var(--color-ink-3); }
+.pdz-anahtar input { position: absolute; opacity: 0; pointer-events: none; }
+.pdz-anahtar-yuva { flex: 0 0 40px; height: 24px; border-radius: 12px; background: color-mix(in srgb, var(--color-ink) 22%, transparent); position: relative; transition: background 0.15s; }
+.pdz-anahtar-yuva::after { content: ''; position: absolute; top: 2px; left: 2px; width: 20px; height: 20px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgb(0 0 0 / 0.25); transition: transform 0.15s; }
+.pdz-anahtar input:checked + .pdz-anahtar-yuva { background: var(--color-accent); }
+.pdz-anahtar input:checked + .pdz-anahtar-yuva::after { transform: translateX(16px); }
+.pdz-anahtar input:focus-visible + .pdz-anahtar-yuva { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+
+.pdz-daha { border: 1px solid var(--color-line); border-radius: 12px; }
+.pdz-daha summary { padding: 12px; font-size: 14px; font-weight: 700; cursor: pointer; list-style-position: inside; }
+.pdz-daha[open] summary { border-bottom: 1px solid var(--color-line); }
+.pdz-daha-ic { display: grid; gap: 14px; padding: 14px 12px; }
+.pdz-daha-ic .pdz-anahtar { padding: 0; }
+.pdz-satir { display: grid; gap: 6px; }
+.pdz-etiket { font-size: 12.5px; font-weight: 600; color: var(--color-ink-3); }
+.pdz-seg { display: flex; flex-wrap: wrap; gap: 6px; }
+.pdz-seg button { min-height: 34px; padding: 0 12px; border: 1px solid var(--color-line); border-radius: 999px; background: transparent; color: var(--color-ink); font: inherit; font-size: 13px; cursor: pointer; }
+.pdz-seg button.is-on { border-color: var(--color-accent); background: var(--color-accent); color: var(--color-white); font-weight: 600; }
+.pdz-girdi { min-height: 38px; padding: 0 12px; border: 1px solid var(--color-line); border-radius: 10px; background: var(--color-white); color: var(--color-ink); font: inherit; font-size: 13.5px; width: 100%; box-sizing: border-box; }
+.pdz-sifirla { justify-self: start; display: inline-flex; align-items: center; gap: 6px; padding: 6px 0; border: 0; background: transparent; color: var(--color-ink-3); font: inherit; font-size: 13px; cursor: pointer; }
+.pdz-sifirla svg { width: 14px; height: 14px; }
+.pdz-sablon button:focus-visible, .pdz-yazi button:focus-visible, .pdz-renkler button:focus-visible, .pdz-seg button:focus-visible, .pdz-sifirla:focus-visible, .pdz-daha summary:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+
+/* Telefon: önizleme üstte küçük, ayarlar altta; pencere alttan açılır */
+@media (max-width: 720px) {
+  .pdz { grid-template-columns: 1fr; }
+  .pdz-oniz-kol { border-right: 0; border-bottom: 1px solid var(--color-line); padding: 14px; }
+  .pdo { position: static; width: min(170px, 55%); margin: 0 auto; }
+  .pdo-kagit { min-height: 150px; }
+  .pdz-ayarlar { padding: 16px; }
+}
+@media (max-width: 480px) {
+  .pdz-perde { padding: 0; align-items: end; }
+  .pdz-diyalog { width: 100%; max-height: 94dvh; border-radius: 18px 18px 0 0; }
+  .pdz-d-bas, .pdz-d-alt { padding: 12px 16px; }
+  .pdz-yazi, .pdz-nup { gap: 6px; }
+}
