@@ -164,3 +164,8 @@
 @keyframes pdv-ciz { to { stroke-dashoffset: 0; } }
 @media (prefers-reduced-motion: reduce) { .pdv-imlec-kap { transition: none; } .pdv-imlec { animation: none; } .pdv-cizim path { animation: none; stroke-dashoffset: 0; } }
 .pdv-marks.has-yol .pdv-mark-line { outline-width: 1px; outline-color: rgb(220 38 38 / .25); background: none; }
+
+/* Öğrenci notu: işaretli (önemli) yerler kırmızı marker, sayfa başına bir yıldız */
+.pdv-not { position: absolute; inset: 0; z-index: 1; pointer-events: none; contain: strict; container-type: size; }
+.pdv-not-m { position: absolute; background: rgb(239 68 68 / .32); mix-blend-mode: multiply; border-radius: 3px; box-shadow: 0 0 0 2px rgb(239 68 68 / .32); transform: skewX(-4deg); }
+.pdv-not-y { position: absolute; transform: translate(-50%, -50%); font-size: clamp(14px, 3.2cqw, 30px); line-height: 1; color: #dc2626; text-shadow: 0 0 2px #fff, 0 0 4px #fff; }

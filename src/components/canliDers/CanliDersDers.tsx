@@ -1409,6 +1409,7 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
               highlight={canli && !durdu && es ? [hedef.sayfa, hedef.sayfa] : undefined}
               highlightLabel="Şu an anlatılan"
               marks={marks}
+              notes={detay.ogrenciNot?.[String(gor.dosya)] || null}
               preload={preload}
               zoom={zoom}
               onZoom={setZoom}

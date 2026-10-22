@@ -14,6 +14,9 @@ import { cdCevrimdisiKayitlari, cdCevrimdisiVid } from './canliDersCevrimdisiKay
 import { cdDersEtiketi } from './canliDersKategori';
 import { bitir as konuBitir, sureEkle } from '../../services/calismaTakip';
 
+/** Bir PDF sayfasındaki öğrenci notu işaretleri (sayfa oranı 0–1) */
+export interface PdfNot { l: number[][]; y?: number[] }
+
 export interface CdVaryant {
   id: string;
   etiket: string;
@@ -72,6 +75,8 @@ export interface CdDetay {
   vurgu?: Record<string, [number, number, "c" | "t", number][]> | null;
   /** okunan cümlenin slayttaki karşılığı, paragraf dizini → cümle başına (pdf_isaret.py) */
   isaret?: Record<string, (CdIsaret | null)[]> | null;
+  /** öğrenci notunda işaretli yerler: dosya dizini → sayfa → kırmızı marker kutuları + yıldız */
+  ogrenciNot?: Record<string, Record<string, PdfNot>> | null;
 }
 /** Kutular sayfa oranıdır (0–1). l: ≥%80'i okunan madde satırları (ya da resim); w: [kelimenin cümle içi baş, son, x0, y0, x1, y1] */
 /** y: hareketli imleç yolu [[cümle içi karakter, x, y]] — ses o karaktere gelince imleç (x, y)'ye kayar */

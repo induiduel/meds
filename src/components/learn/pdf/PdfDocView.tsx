@@ -46,6 +46,8 @@ export interface PdfDocViewProps {
   marks?: PdfMarks | null;
   /** Yakında gösterilecek sayfalar (canlı derste sıradaki cümlelerin slaytları): önceden çizilir, atlamada hazırdır */
   preload?: number[];
+  /** Sayfa başına kalıcı vurgu (öğrenci notunda işaretli yerler): kırmızı marker kutuları + köşede tek yıldız */
+  notes?: Record<string, { l: number[][]; y?: number[] }> | null;
   onSearch?: (r: { hits: PdfSearchHit[]; done: boolean } | null) => void;
 }
 
@@ -114,6 +116,16 @@ const pct = (b: number[]) => ({ left: `${b[0] * 100}%`, top: `${b[1] * 100}%`, w
 const noFocus = () => -1;
 
 /** Metin: madde zemini + konuşulan kelimenin zemini/altı. Lazer yalnız metni olmayan yerde (resim/şekil). */
+/** Öğrenci notu katmanı: işaretli yerlerin üstünde kırmızı marker, sayfada önemli bir yer olduğunu gösteren tek yıldız */
+const NotLayer = memo(function NotLayer({ n }: { n: { l: number[][]; y?: number[] } }) {
+  return (
+    <div className="pdv-not" aria-hidden>
+      {n.l.map((b, i) => <span key={i} className="pdv-not-m" style={pct(b)} />)}
+      {n.y && <span className="pdv-not-y" style={{ left: `${n.y[0] * 100}%`, top: `${n.y[1] * 100}%` }} title="Öğrenci notunda önemli işaretli">★</span>}
+    </div>
+  );
+});
+
 const MarkLayer = memo(function MarkLayer({ m }: { m: PdfMarks }) {
   const fi = (m.useFocus || noFocus)();
   const f = fi >= 0 ? m.words[fi] : null;
@@ -154,7 +166,7 @@ interface Slot {
   textFor?: number; // metin katmanı kuruldu (döndürme)
 }
 
-export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu adımın kaynağı', zoom, onZoom, onVisiblePage, onLoaded, onError, fit = 'width', rotation = 0, thumbs = false, query = '', onSearch, marks = null, preload }: PdfDocViewProps) {
+export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu adımın kaynağı', zoom, onZoom, onVisiblePage, onLoaded, onError, fit = 'width', rotation = 0, thumbs = false, query = '', onSearch, marks = null, preload, notes = null }: PdfDocViewProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [doc, setDoc] = useState<PDFDocumentProxy | null>(null);
   const [sizes, setSizes] = useState<{ w: number; h: number }[]>([]);
@@ -559,6 +571,7 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
               style={{ top: tops[i], width: s.w * sc, height: s.h * sc, ['--scale-factor' as any]: sc }}
             >
               {src && n === hs && <span className="pdv-src-tag">{highlightLabel}</span>}
+              {notes?.[n] && !rot && <NotLayer n={notes[n]} />}
               {marks && marks.page === n && !rot && <MarkLayer m={marks} />}
               <span className="pdv-no" aria-hidden>{n}</span>
             </div>

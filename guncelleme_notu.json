@@ -1,16 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 231,
-  "baslik": "İmmünofarmakoloji sesli ders V2",
+  "onem": 232,
+  "baslik": "Sesli derste öğrenci notu işaretleri",
   "maddeler": [
-    "İmmünofarmakoloji V2 sesli dersi işaretli slayta göre baştan yazıldı: hocanın okumadığı kısımlar çıkarıldı, önemli noktalar açıklayıcı anlatılıyor.",
-    "Kısaltmalar artık doğal okunuyor (ör. IL-2 → interlökin iki)."
+    "Üroloji sesli derslerinde (V1 ve Sınav Odaklı Özet) öğrenci notunda işaretli önemli yerler, PDF'te kırmızı marker ile gösteriliyor.",
+    "İşaretli yer olan her sayfanın sağ üst köşesinde bir yıldız var: bu sayfada önemli bir şey olduğu hemen anlaşılır."
   ],
-  "eklenen": [],
-  "degisen": [
-    "İmmünofarmakoloji V2 sesli dersi işaretli slayta göre baştan yazıldı: hocanın okumadığı kısımlar çıkarıldı, önemli noktalar açıklayıcı anlatılıyor.",
-    "Kısaltmalar artık doğal okunuyor (ör. IL-2 → interlökin iki)."
+  "eklenen": [
+    "Üroloji sesli derslerinde (V1 ve Sınav Odaklı Özet) öğrenci notunda işaretli önemli yerler, PDF'te kırmızı marker ile gösteriliyor.",
+    "İşaretli yer olan her sayfanın sağ üst köşesinde bir yıldız var: bu sayfada önemli bir şey olduğu hemen anlaşılır."
   ],
+  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }

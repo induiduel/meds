@@ -20,6 +20,7 @@ const P = {
   cumle: (k: string) => path.join(KOK, 'cumle_zaman', `${k}.json`),
   kelime: (k: string) => path.join(KOK, 'kelime_zaman', `${k}.json`),
   isaret: (k: string) => path.join(KOK, 'isaret', `${k}.json`),
+  ogrenciNot: (fileId: string) => path.join(KOK, 'ogrenci_not', `${fileId.replace(/[^\w-]/g, '')}.json`),
 };
 
 interface Ders { key: string; no: number; baslik: string; sira: number }
@@ -252,6 +253,17 @@ export function registerCanliDersRoutes(app: Express) {
         if (!is || !pdf) return null;
         const h = crypto.createHash('sha1').update(pars.map((p) => p.t).join('\n')).digest('hex');
         return is.metinHash === h ? is.c : null;
+      })(),
+      // öğrenci notunda işaretli (önemli) yerler, PDF dosyası başına (scripts/sesli_anlatim/ogrenci_not_isaret.py):
+      // { "<dosya i>": { "<sayfa>": { l: [[x0,y0,x1,y1]], y: [x,y] } } } — kırmızı marker + sayfa başına bir yıldız
+      ogrenciNot: (() => {
+        if (!pdf || !Array.isArray(pdf.dosyalar)) return null;
+        const out: Record<string, any> = {};
+        pdf.dosyalar.forEach((f: any, i: number) => {
+          const n = f?.fileId ? oku<any>(P.ogrenciNot(String(f.fileId)), null) : null;
+          if (n?.s && Object.keys(n.s).length) out[String(i)] = n.s;
+        });
+        return Object.keys(out).length ? out : null;
       })(),
     });
   });
