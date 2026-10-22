@@ -501,6 +501,8 @@
   .cd-ders-uc .cd-btn-yildizli[data-sayi]::after { content: attr(data-sayi); position: absolute; top: -5px; right: -5px; min-width: 16px; height: 16px; padding: 0 4px; box-sizing: border-box;
     border-radius: 99px; background: #f59e0b; color: #1F1300; font-size: 10px; font-weight: 700; line-height: 16px; text-align: center; }
   .cd-ders-bas > .cd-ders-arac { grid-area: arac; flex-wrap: wrap; gap: 4px; }
+  /* Adsız çocuklar (ör. kamp konum şeridi .tk-sb) ilk 34 px 'geri' hücresine düşüp harf harf diziliyordu: tam satır */
+  .cd-ders-bas > :not(.cd-geri, .cd-ders-ad, .cd-ders-uc, .cd-ders-arac, .cd-ders-baslik) { grid-column: 1 / -1; }
   .cd-ders-bas .cd-sekmeler { flex: 1; min-width: 140px; margin: 0; display: flex; }
   .cd-ders-bas .cd-sekmeler button { flex: 1; min-width: 0; justify-content: center; height: 30px; padding: 0 6px; font-size: 12px; }
   .cd-ders-bas .cd-sekmeler button > svg { display: none; }
@@ -821,11 +823,16 @@
 .cd-serit .cd-kat-cipler > button.is-on { background: var(--color-ink); border-color: var(--color-ink); color: var(--color-white); }
 
 .cd-liste .cd-satirlar { border-radius: 16px; }
-.cd-liste .cd-satir-ana:not(.cd-lm-satir) { grid-template-columns: 44px 30px minmax(0, 1fr) auto auto; gap: 12px; padding: 10px 14px; }
+.cd-liste .cd-satir-ana:not(.cd-lm-satir) { grid-template-columns: 44px auto minmax(0, 1fr) auto auto; gap: 12px; padding: 10px 14px;
+  /* ≤640 px eski satır kuralının 'no ad diger' alanları 5 sütunlu listeye karışıyordu (561–640 px: ad sütunu 30 px,
+     yazı harf harf alt alta — iPad bölünmüş ekran). Liste satırı alan adı kullanmaz. */
+  grid-template-areas: none; }
+.cd-liste .cd-satir-ana:not(.cd-lm-satir) > * { grid-area: auto; }
+
 .cd-liste .cd-satir-ana > .cd-btn.is-yuvarlak { width: 44px; height: 44px; border-radius: 50%; background: var(--color-field); border-color: transparent; }
 .cd-liste .cd-satir-ana > .cd-btn.is-yuvarlak.is-on { background: var(--color-accent); color: var(--color-on-accent, #fff); }
 .cd-liste .cd-satir.is-bitti .cd-satir-ana > .cd-btn.is-yuvarlak:not(.is-on) { background: color-mix(in srgb, var(--color-ok) 16%, transparent); color: var(--color-ok); }
-.cd-liste .cd-no { width: 30px; height: auto; background: none; justify-content: end; color: var(--color-ink-3); font-size: 13px; }
+.cd-liste .cd-no { width: auto; min-width: 30px; white-space: nowrap; height: auto; background: none; justify-content: end; color: var(--color-ink-3); font-size: 13px; }
 .cd-liste .cd-satir.is-caliyor .cd-no { background: none; color: var(--color-accent); }
 .cd-liste .cd-satir-ad b { font-size: 15px; }
 .cd-satir-sure-m { display: none; }

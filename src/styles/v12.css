@@ -499,6 +499,8 @@
   padding-left: 0 !important;
 }
 :root.is-app-fullscreen .sh-main {
+  /* Tam ekran tüm ekranı kaplar: görüntüleme modunun (akış 820 / pano 1320 px) genişlik tavanı kalkar, odak gibi davranır */
+  max-width: none !important;
   /* Tam ekranda üst çubuk gizlenir ama çıkış hapı görünür: 48 px güvenli şerit bırak. */
   padding-top: calc(48px + env(safe-area-inset-top, 0px)) !important;
   padding-bottom: calc(max(20px, env(safe-area-inset-bottom, 0px)) + var(--cd-dock-h, 0px)) !important;

@@ -120,6 +120,10 @@
   :root[data-design='v12'][data-v13='on'] .tb-src { padding: 8px; gap: 6px; min-height: 0; }
   :root[data-design='v12'][data-v13='on'] .tb-src small, :root[data-design='v12'][data-v13='on'] .tb-src-d { display: none; }
 }
+/* 360 px altı (iPad Slide Over 320): iki sütunda kart adı 41 px'e düşüp harf harf kırılıyordu → tek sütun */
+@media (max-width: 359px) {
+  :root[data-design='v12'][data-v13='on'] .tb-srcs, :root[data-design='v12'][data-v13='on'] .tb-src-grid { grid-template-columns: minmax(0, 1fr) !important; }
+}
 @media (max-width: 767px), (max-height: 500px) {
   :root[data-design='v12'][data-v13='on'] .tb-src { grid-template-columns: minmax(0, 1fr) auto; }
   :root[data-design='v12'][data-v13='on'] .tb-src .tb-src-ic { display: none; }

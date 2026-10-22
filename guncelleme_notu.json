@@ -1,16 +1,18 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 225,
-  "baslik": "PDF ayarları yenilendi: canlı önizleme",
+  "onem": 226,
+  "baslik": "Tablet ve bölünmüş ekran düzeltmeleri",
   "maddeler": [
-    "PDF ayar penceresi yeniden tasarlandı: seçtiğin ayarlarla hazırlanan gerçek örnek sayfa anında görünüyor.",
-    "Ayarlar sade sorular hâlinde tek sayfada: hazır görünümler, yazı büyüklüğü, başlık rengi, bir kâğıda kaç sayfa, kapak ve vurgu; diğerleri \"Daha fazla ayar\" altında."
+    "Bölünmüş ekranda (iPad yarım ekran) Sesli ders listesindeki ders adları artık harf harf alt alta dizilmiyor.",
+    "Sınav kampı sesli ders başlığındaki konum satırı dar ekranda düzgün görünüyor.",
+    "Tam ekran artık geniş ekranlarda da ekranın tamamını kaplıyor."
   ],
   "eklenen": [],
-  "degisen": [
-    "PDF ayar penceresi yeniden tasarlandı: seçtiğin ayarlarla hazırlanan gerçek örnek sayfa anında görünüyor.",
-    "Ayarlar sade sorular hâlinde tek sayfada: hazır görünümler, yazı büyüklüğü, başlık rengi, bir kâğıda kaç sayfa, kapak ve vurgu; diğerleri \"Daha fazla ayar\" altında."
+  "degisen": [],
+  "duzeltilen": [
+    "Bölünmüş ekranda (iPad yarım ekran) Sesli ders listesindeki ders adları artık harf harf alt alta dizilmiyor.",
+    "Sınav kampı sesli ders başlığındaki konum satırı dar ekranda düzgün görünüyor.",
+    "Tam ekran artık geniş ekranlarda da ekranın tamamını kaplıyor."
   ],
-  "duzeltilen": [],
   "silinen": []
 }
