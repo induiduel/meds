@@ -13,7 +13,7 @@ import re
 import sys
 
 MODUL_ANAHTARLAR = {"k1-70-tbg-sinav-kampi", "k1-59-immunofarmakoloji-v2"}  # V2: yazımla yazılmış metin (CD2, IL-2), okunuş burada
-SON_PROVA = re.compile(r"^k\d+-\d+-son-prova-")  # Son Prova partları da modül yazımıyla (BRCA1, IL-6) yazılır
+SON_PROVA = re.compile(r"^k\d+-\d+-(son-prova|blok-ozet)-")  # Son Prova partları da modül yazımıyla (BRCA1, IL-6) yazılır
 
 
 def modul_mu(anahtar: str) -> bool:

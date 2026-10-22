@@ -83,7 +83,7 @@ export async function planVerisiYukle(): Promise<PlanVeri | null> {
   // Sesli ders yalnız bilinen bir derse bağlanır (kamp / son prova bölümleri ayrı)
   for (const d of cdTekSurum(sesli as CdListeDers[])) {
     const b = d.brans ? CD_SPOT_BRANS[d.brans] : undefined;
-    if (!b || (d.kurul && d.kurul !== k.kurul) || /-son-prova-|-sinav-kampi/.test(d.key)) continue;
+    if (!b || (d.kurul && d.kurul !== k.kurul) || /-son-prova-|-blok-ozet-|-sinav-kampi/.test(d.key)) continue;
     const x = dersler.get(`${b}|${Number(d.no)}`);
     if (x) x.sesli.push(d);
   }

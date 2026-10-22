@@ -333,6 +333,7 @@
 /* ---------- Listem (oynatma listesi + tekrar; CanliDersListem.tsx) ---------- */
 .cd-gorunum { align-self: flex-start; }
 .cd-sekme-sayi { display: inline-grid; place-items: center; min-width: 18px; height: 18px; padding: 0 5px; margin-left: 2px; border-radius: 99px; background: var(--color-accent); color: var(--color-on-accent, #fff); font-size: 11px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.cd-blok-not { margin: 4px 0 12px; color: var(--color-text-muted, inherit); font-size: 14px; }
 .cd-btn:disabled, .cd-ib:disabled { opacity: .4; cursor: default; pointer-events: none; }
 .cd-btn.is-tehlike { border-color: var(--color-bad); color: var(--color-bad); background: var(--color-bad-soft, var(--color-field)); }
 .cd-chip.is-on { background: var(--color-accent); color: var(--color-on-accent, #fff); }

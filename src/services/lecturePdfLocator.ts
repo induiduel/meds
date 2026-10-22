@@ -248,7 +248,7 @@ export function resolveDeckPdfs(deckId: string): ResolvedDeckPdf[] {
  * kaynak derslerin PDF'lerinden kırpılıp tek PDF'te birleştirilir → data/son_prova/pdf/<partKey>.pdf (+ .json: ad, sayfa).
  * Deste kimliği "k<kurul>p-<partKey>" (ör. k1p-k1-81-son-prova-patoloji-1); eşleme dosyasına girmez.
  */
-const OZET_DECK_RE = /^k\d+p-(k\d+-\d+-son-prova-[a-z0-9-]+)$/;
+const OZET_DECK_RE = /^k\d+p-(k\d+-\d+-(?:son-prova|blok-ozet)-[a-z0-9-]+)$/; // blok özet (Patoloji 16–20 …) aynı hattan
 const ozetDir = () => path.resolve(process.cwd(), 'data', 'son_prova', 'pdf');
 function ozetPdf(deckId: string): ResolvedDeckPdf | null {
   const m = OZET_DECK_RE.exec(deckId);

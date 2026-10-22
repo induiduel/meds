@@ -66,7 +66,7 @@ def main() -> int:
     goruldu: dict[tuple[str, int], str] = {}
     for d in liste:
         b = BRANS.get(d.get('brans') or '')
-        if not b or '-son-prova-' in d['key'] or '-sinav-kampi' in d['key']:
+        if not b or '-son-prova-' in d['key'] or '-blok-ozet-' in d['key'] or '-sinav-kampi' in d['key']:
             continue
         try:
             no = int(d['no'])

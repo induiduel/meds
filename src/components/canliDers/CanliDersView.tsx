@@ -59,6 +59,8 @@ const konumHaritasi = () => new Map(cdKonumListesi().map((k) => [k.key, k as Kon
 function CanliDersListe() {
   useCdTvGezinme('liste');
   const [hamDersler, setDersler] = useState<CdListeDers[] | null>(null);
+  // Blok özetler (k1-95-blok-ozet-patoloji-1 …): birkaç dersi tek sesli derste anlatır; ayrı sekmede listelenir
+  const [hamBlok, setBlok] = useState<CdListeDers[]>([]);
   const kurul = useKurulParam();
   // ?kurul=N: yalnız o kurulun dersleri (parametre yoksa hepsi)
   const dersler = useMemo(
@@ -67,7 +69,8 @@ function CanliDersListe() {
   );
   const [hata, setHata] = useState<string | null>(null);
   const [q, setQ] = useState('');
-  const [gorunum, setGorunum] = useState<'tum' | 'liste' | 'yildiz'>(() => (location.hash === '#listem' ? 'liste' : location.hash === '#yildiz' ? 'yildiz' : 'tum'));
+  const [gorunum, setGorunum] = useState<'tum' | 'liste' | 'yildiz' | 'blok'>(() => (location.hash === '#listem' ? 'liste' : location.hash === '#yildiz' ? 'yildiz' : location.hash === '#blok' ? 'blok' : 'tum'));
+  const blok = useMemo(() => (kurul ? hamBlok.filter((d) => (d.kurul ?? kurulKimlikten(d.key)) === kurul) : hamBlok), [hamBlok, kurul]);
   const [sureAcik, setSureAcik] = useState(() => location.hash === '#sureler');
   const listeN = useCdListe((s) => s.keys.length);
   const yildizN = useYildizliSayisi();
@@ -76,6 +79,7 @@ function CanliDersListe() {
     const f = () => {
       if (location.hash === '#listem') setGorunum('liste');
       else if (location.hash === '#yildiz') setGorunum('yildiz');
+      else if (location.hash === '#blok') setGorunum('blok');
     };
     window.addEventListener('popstate', f);
     return () => window.removeEventListener('popstate', f);
@@ -90,7 +94,7 @@ function CanliDersListe() {
 
   const yukle = (yenile = false) => {
     setHata(null);
-    cdListeGetir(yenile).then((ds) => { cdListeOzetleri(ds); setDersler(ds.filter((d) => !/-son-prova-/.test(d.key))); /* Son Prova partları kendi sayfasında (/son-prova) */ }, (e) => setHata(e?.message || 'Liste alınamadı.'));
+    cdListeGetir(yenile).then((ds) => { cdListeOzetleri(ds); setDersler(ds.filter((d) => !/-son-prova-|-blok-ozet-/.test(d.key))); setBlok(ds.filter((d) => /-blok-ozet-/.test(d.key))); /* Son Prova partları kendi sayfasında (/son-prova) */ }, (e) => setHata(e?.message || 'Liste alınamadı.'));
   };
   useEffect(() => {
     document.title = 'Sesli ders · MeDSor';
@@ -172,6 +176,11 @@ function CanliDersListe() {
               <button type="button" role="tab" aria-selected={gorunum === 'yildiz'} className={gorunum === 'yildiz' ? 'is-on' : ''} onClick={() => setGorunum('yildiz')}>
                 Yıldızlılar{yildizN > 0 && <span className="cd-sekme-sayi">{yildizN}</span>}
               </button>
+              {blok.length > 0 && (
+                <button type="button" role="tab" aria-selected={gorunum === 'blok'} className={gorunum === 'blok' ? 'is-on' : ''} onClick={() => setGorunum('blok')}>
+                  Blok özetler<span className="cd-sekme-sayi">{blok.length}</span>
+                </button>
+              )}
             </div>
             {gorunum === 'tum' && <label className="cd-ara">
               <Search aria-hidden />
@@ -219,6 +228,13 @@ function CanliDersListe() {
         <div className="cd-bos" role="status"><span className="cd-spin" aria-hidden /> Dersler yükleniyor…</div>
       ) : gorunum === 'liste' ? (
         <Listem dersler={dersler} onTumu={() => setGorunum('tum')} />
+      ) : gorunum === 'blok' ? (
+        <>
+          <p className="cd-blok-not">Birkaç dersi tek sesli derste, çıkmış sorulara odaklanarak anlatır. Her biri bir ile iki saat arası.</p>
+          <ul className="cd-satirlar">
+            {blok.map((d) => <DersSatiri key={d.key} d={d} k={konum.get(d.key)} />)}
+          </ul>
+        </>
       ) : gorunum === 'yildiz' ? (
         <YildizliParagraflarPanel inline onClose={() => setGorunum('tum')} />
       ) : kurul && !dersler.length ? (
