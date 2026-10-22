@@ -1174,6 +1174,8 @@ export function registerSesliAnlatimRoutes(
     sinyal(req);
     if (ayar().yerelAktif === false) return res.json({ is: null, neden: 'Yerel işçi panelden kapalı' });
     const ad = isciAdi(req);
+    // Kullanıcı kararı (2026-10-22): Oracle'daki EMA konteynerine (oracle-ema) iş verilmez; yalnız yerel bilgisayar işçileri
+    if (/^oracle-/.test(ad)) return res.json({ is: null, neden: 'Oracle EMA işçisi kapalı (yalnız yerel bilgisayar)' });
     const sag = isciSaglayici(req);
     const q = kuyruk();
     const an = Date.now();

@@ -370,6 +370,11 @@ def dene(metin: str, cikti: str) -> None:
 if __name__ == "__main__":
     a = sys.argv[1:]
     if a[:1] == ["bekle"]:
+        # Kullanıcı kararı (2026-10-22): Oracle'daki EMA işçisine (meds-ema konteyneri, MEDS_EMA_AD=oracle-ema) iş verilmez;
+        # EMA işleri yalnız bu bilgisayardaki meds-ema birimiyle üretilir.
+        if ISCI == "oracle-ema" or os.path.exists("/.dockerenv"):
+            print("Oracle EMA işçisi kapalı (kullanıcı kararı 2026-10-22); işler yalnız yerel bilgisayarda üretilir.")
+            sys.exit(0)
         bekle()
     elif a[:1] == ["sentezle"] and len(a) == 2:
         signal.signal(signal.SIGTERM, lambda *_: sys.exit(3))

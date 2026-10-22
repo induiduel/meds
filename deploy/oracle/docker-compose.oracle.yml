@@ -236,7 +236,10 @@ services:
       dockerfile: deploy/oracle/Dockerfile.ema
     image: medsoru-ema:latest
     container_name: meds-ema
-    restart: unless-stopped
+    # KAPALI (kullanıcı kararı 2026-10-22): Oracle EMA işçisine iş verilmez; yalnız `--profile ema-oracle` ile başlar,
+    # başlasa da ema_isci.py ve /yerel/al reddeder. EMA sesleri yalnız yerel bilgisayardaki meds-ema biriminde.
+    profiles: ["ema-oracle"]
+    restart: "no"
     depends_on:
       - meds-server
       - meds-app
