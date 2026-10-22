@@ -99,6 +99,27 @@ function anySignal(signals: AbortSignal[]): AbortSignal {
 }
 
 let installed = false;
+/** Ön plandaki (sayfanın beklediği) isteklerden yanıt başlığı henüz gelmemiş olanların sayısı */
+let onUcus = 0;
+let sonOnIstek = 0;
+
+/**
+ * Arka plan indirmesi (çevrimdışı paketleri vb.): fetch korumasından geçmez, düşük öncelikle gider ve ön plan isteği
+ * uçuşurken (ya da son 1,5 sn'de istek başladıysa) başlamadan bekler. Böylece Wi-Fi'de bile büyük ses/PDF indirmeleri
+ * sayfa geçişlerini sıraya sokmaz.
+ */
+export async function arkaPlanFetch(url: string, init: RequestInit = {}): Promise<Response> {
+  await onPlanBosalinca(init.signal || undefined);
+  const f = nativeFetchRef || fetch;
+  return f(url, { ...init, priority: 'low' } as RequestInit);
+}
+export async function onPlanBosalinca(signal?: AbortSignal) {
+  const bas = Date.now();
+  // En çok 20 sn bekler: sürekli yoklayan bir ekran indirmeyi tamamen kilitlemesin
+  while ((onUcus > 0 || Date.now() - sonOnIstek < 1_500) && Date.now() - bas < 20_000 && !signal?.aborted) {
+    await new Promise((r) => setTimeout(r, 300));
+  }
+}
 
 export function installFetchGuard() {
   if (installed || typeof window === 'undefined' || typeof window.fetch !== 'function') return;
@@ -127,6 +148,8 @@ export function installFetchGuard() {
     }
 
     const run = async () => {
+      onUcus++;
+      sonOnIstek = Date.now();
       const timer = new AbortController();
       const ms = timeoutFor(url, method);
       let timedOut = false;
@@ -151,6 +174,7 @@ export function installFetchGuard() {
         throw err;
       } finally {
         window.clearTimeout(t);
+        onUcus--;
       }
     };
 

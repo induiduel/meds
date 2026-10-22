@@ -17,6 +17,7 @@
  */
 import { useSyncExternalStore } from 'react';
 import { getCustomApiUrl } from '../api';
+import { arkaPlanFetch } from '../net';
 
 export const PAKET_CACHE = 'medsor-paket-v1';
 const DB_ADI = 'medsor_cevrimdisi';
@@ -461,9 +462,17 @@ async function paketIndir(id: string, signal: AbortSignal) {
   let biten = bilgi.dosyalar.length - eksik.length;
   guncelle({ aktif: { ...S.aktif!, toplam, alinan, dosya: biten, dosyaSay: bilgi.dosyalar.length } });
 
-  const paralel = agTuru().yavas ? 2 : 4;
+  // Sayfa açıkken tek istek (ön plan istekleri öncelikli, arkaPlanFetch); yalnız sekme gizliyken hızlı ağda 3
+  const paralel = () => (agTuru().yavas || document.visibilityState === 'visible' ? 1 : 3);
   let sira = 0;
-  const isci = async () => {
+  // Ek işçiler sayfa görünürken bekler (sekme gizlenince devreye girer)
+  const isciSirali = async (i: number) => {
+    while (sira < eksik.length) {
+      if (i > 0 && document.visibilityState === 'visible') { await bekle(1000); if (signal.aborted) return; continue; }
+      await isci(true);
+    }
+  };
+  const isci = async (tek = false) => {
     while (sira < eksik.length) {
       if (signal.aborted) throw Object.assign(new Error('İptal'), { name: 'AbortError' });
       const d = eksik[sira++];
@@ -471,7 +480,7 @@ async function paketIndir(id: string, signal: AbortSignal) {
       for (;;) {
         let dosyaAlinan = 0;
         try {
-          const res = await fetch(indirmeAdresi(d), { signal });
+          const res = await arkaPlanFetch(indirmeAdresi(d), { signal });
           if (!res.ok) {
             if (res.status === 404) break; // sunucuda yok: paket yine de kullanılabilir (o klip ağdan da gelmez)
             throw new Error(`HTTP ${res.status}`);
@@ -509,9 +518,10 @@ async function paketIndir(id: string, signal: AbortSignal) {
       }
       biten++;
       guncelle({ aktif: { ...S.aktif!, dosya: biten } }, false);
+      if (tek) return;
     }
   };
-  await Promise.all(Array.from({ length: Math.min(paralel, eksik.length) }, isci));
+  await Promise.all(Array.from({ length: Math.min(paralel(), eksik.length) }, (_, i) => isciSirali(i)));
   // Google yazı tipi CSS'i indiyse içindeki Türkçe için gereken (latin, latin-ext) woff2 dosyaları da iner ve pakete yazılır
   for (const d of bilgi.dosyalar.filter((x) => x.u.startsWith('https://fonts.googleapis.com/'))) {
     try {
@@ -689,6 +699,9 @@ export async function cevrimdisiBaslat() {
   });
   await dogrula().catch(() => {});
   if (S.kuyruk.length || S.ayar.acik || Object.keys(S.kayitlar).length) {
+    // Açılışta sayfanın kendi istekleri önce bitsin: paket işleri 8 sn sonra boşta başlar
+    await bekle(8000);
+    await new Promise((r) => ((window as any).requestIdleCallback ? (window as any).requestIdleCallback(r, { timeout: 5000 }) : r(null)));
     await katalogYenile().catch(() => {});
     void calistir();
     void otomatikTur();

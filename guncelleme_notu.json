@@ -1,14 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 238,
-  "baslik": "Sesli ders videosunda öğrenci notu işaretleri",
+  "onem": 239,
+  "baslik": "Wi-Fi'de daha hızlı açılış",
   "maddeler": [
-    "Sesli ders videosu dışa aktarılırken öğrenci notunda işaretli yerler de videoda kırmızı marker ve yıldızlarla görünüyor."
+    "Çevrimdışı paket indirmeleri artık sayfa isteklerini bekletmiyor; Wi-Fi'de sayfalar daha hızlı açılıyor."
   ],
-  "eklenen": [
-    "Sesli ders videosu dışa aktarılırken öğrenci notunda işaretli yerler de videoda kırmızı marker ve yıldızlarla görünüyor."
-  ],
+  "eklenen": [],
   "degisen": [],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Çevrimdışı paket indirmeleri artık sayfa isteklerini bekletmiyor; Wi-Fi'de sayfalar daha hızlı açılıyor."
+  ],
   "silinen": []
 }
