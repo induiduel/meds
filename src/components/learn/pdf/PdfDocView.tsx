@@ -47,7 +47,7 @@ export interface PdfDocViewProps {
   /** Yakında gösterilecek sayfalar (canlı derste sıradaki cümlelerin slaytları): önceden çizilir, atlamada hazırdır */
   preload?: number[];
   /** Sayfa başına kalıcı vurgu (öğrenci notunda işaretli yerler): kırmızı marker kutuları + köşede tek yıldız */
-  notes?: Record<string, { l: number[][]; y?: number[] }> | null;
+  notes?: Record<string, { l: number[][]; y?: number[]; b?: number[][] }> | null;
   onSearch?: (r: { hits: PdfSearchHit[]; done: boolean } | null) => void;
 }
 
@@ -117,10 +117,11 @@ const noFocus = () => -1;
 
 /** Metin: madde zemini + konuşulan kelimenin zemini/altı. Lazer yalnız metni olmayan yerde (resim/şekil). */
 /** Öğrenci notu katmanı: işaretli yerlerin üstünde kırmızı marker, sayfada önemli bir yer olduğunu gösteren tek yıldız */
-const NotLayer = memo(function NotLayer({ n }: { n: { l: number[][]; y?: number[] } }) {
+const NotLayer = memo(function NotLayer({ n }: { n: { l: number[][]; y?: number[]; b?: number[][] } }) {
   return (
     <div className="pdv-not" aria-hidden>
       {n.l.map((b, i) => <span key={i} className="pdv-not-m" style={pct(b)} />)}
+      {n.b?.map((p, i) => <span key={`b${i}`} className="pdv-not-b" style={{ left: `${p[0] * 100}%`, top: `${p[1] * 100}%` }}>★</span>)}
       {n.y && <span className="pdv-not-y" style={{ left: `${n.y[0] * 100}%`, top: `${n.y[1] * 100}%` }} title="Öğrenci notunda önemli işaretli">★</span>}
     </div>
   );

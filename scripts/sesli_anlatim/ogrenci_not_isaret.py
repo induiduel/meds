@@ -7,7 +7,7 @@ mürekkebe değenler (üstünü boyayan, altını çizen ya da çevreleyen) "ön
 değmeyen el yazısı satır sayılmaz. Sayfada önemli yer varsa sağ üst köşeye tek yıldız konur.
 
 Çıktı: data/sesli_anlatim/ogrenci_not/<Drive fileId>.json
-  { surum, kaynak, s: { "<sayfa>": { l: [[x0,y0,x1,y1], …], y: [x, y] } } }   (sayfa oranı 0–1)
+  { surum, kaynak, s: { "<sayfa>": { l: [[x0,y0,x1,y1], …], y: [x, y], b: [[x, y], …] }  (b: işaretli pasaj başları) } }   (sayfa oranı 0–1)
 Sunucu (canliDers.ts) bu dosyayı dersin hizalamasındaki dosya kimliğiyle bulur; aynı PDF'i kullanan V1 ve V2 ikisi de gösterir.
 
 Kullanım (.venv-ocr): python scripts/sesli_anlatim/ogrenci_not_isaret.py [--onizle DIZIN]
@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import unicodedata
 import os
 from pathlib import Path
 
@@ -25,7 +26,7 @@ import numpy as np  # noqa: E402
 import pymupdf  # noqa: E402
 
 MEDS = Path(__file__).resolve().parents[2]
-ASIL = MEDS.parent / "meds_downloads" / "drive_root" / "Kurul 1" / "Üroloji"
+ASIL = MEDS.parent / "meds_downloads" / "drive_root" / "Kurul 1"
 NOT = Path(os.environ.get("OGRENCI_NOT_DIZIN", str(Path.home() / "İndirilenler")))
 CIKTI = MEDS / "data" / "sesli_anlatim" / "ogrenci_not"
 SURUM = 1
@@ -33,11 +34,12 @@ DPI = 72  # 960×540 sayfa → 960×540 piksel
 
 # (öğrenci notu dosyası, asıl ders PDF'i, Drive fileId)
 DERSLER = [
-    ("Üriner Obstrüksiyonders pptx_260918_144127.pdf", "1)Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi.pdf", "1dIUpRGGlkJsuyK4rrTqUBw3V82cQazvv"),
-    ("22-23 Ürolitiyazis Patofizyolojisi_260923_135832.pdf", "2)Ürolitiyazis Patofizyolojisi.pdf", "1bvyIs3jM82_zu3HwqDr6t_wfMNTI9_eD"),
-    ("4)'Üriner Sistem Enfeksiyonlarının Epidemiyoloji, _260930_103812.pdf", "4)'Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi'.pdf", "1wsnQe7-lUuwTTyAhBWZbQbFm4-DzcciE"),
-    ("yeni spesifik_261001_105814.pdf", "5) Üriner Sistemin Spesifik Enfeksiyonları.pdf", "1HJWgSxlk0an9wqpLHU2z319wEOi26D_L"),
-    ("enürezis_261012_113028.pdf", "6)Enürezis.pdf", "1HxaHEJLrssKterb0N8BlH_ePCZ4FqOfV"),
+    ("Üriner Obstrüksiyonders pptx_260918_144127.pdf", "Üroloji/1)Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi.pdf", "1dIUpRGGlkJsuyK4rrTqUBw3V82cQazvv"),
+    ("22-23 Ürolitiyazis Patofizyolojisi_260923_135832.pdf", "Üroloji/2)Ürolitiyazis Patofizyolojisi.pdf", "1bvyIs3jM82_zu3HwqDr6t_wfMNTI9_eD"),
+    ("4)'Üriner Sistem Enfeksiyonlarının Epidemiyoloji, _260930_103812.pdf", "Üroloji/4)'Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi'.pdf", "1wsnQe7-lUuwTTyAhBWZbQbFm4-DzcciE"),
+    ("yeni spesifik_261001_105814.pdf", "Üroloji/5) Üriner Sistemin Spesifik Enfeksiyonları.pdf", "1HJWgSxlk0an9wqpLHU2z319wEOi26D_L"),
+    ("enürezis_261012_113028.pdf", "Üroloji/6)Enürezis.pdf", "1HxaHEJLrssKterb0N8BlH_ePCZ4FqOfV"),
+    ("55 İmmunofarmakoloji.pdf", "Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf", "1xbAdOVfCOECQYYRkaL3lOqZSN-5pXGJj"),
 ]
 
 
@@ -48,7 +50,9 @@ def ciz(p: pymupdf.Page) -> np.ndarray:
 
 def murekkep(a: np.ndarray, b: np.ndarray) -> np.ndarray:
     """Öğrenci sayfasında asıl sayfada olmayan belirgin renk/koyuluk farkı; tek piksellik kenar gürültüsü atılır."""
-    f = np.abs(a - b).max(axis=2) > 70
+    # yalnız renkli mürekkep (kalem/fosforlu): kayan siyah yazı kenarı gri kalır, işaret sayılmaz
+    renk = (a.max(axis=2) - a.min(axis=2)) >= 60
+    f = (np.abs(a - b).max(axis=2) > 70) & renk
     # kenar yumuşatma farkı: en az 2 komşusu da farklı olan pikseller
     k = f.astype(np.int8)
     n = k[:-2, 1:-1] + k[2:, 1:-1] + k[1:-1, :-2] + k[1:-1, 2:]
@@ -62,17 +66,39 @@ def kelimeler(p: pymupdf.Page) -> list[tuple]:
     return [w[:4] + (w[5], w[6]) for w in p.get_text("words") if len(w[4].strip("•–-·▪➢")) >= 2]
 
 
+def _yatay(ink: np.ndarray, ya: int, yb: int, xa: int, xb: int) -> float:
+    """Bant içindeki en iyi İNCE yatay çizginin (3 piksel) kelime genişliğini kaplama oranı. Komşu satırın fosforlusu
+    (üstünde ya da altında 5 piksel ötede de dolu) çizgi sayılmaz."""
+    ya, yb = max(0, ya), min(ink.shape[0], yb)
+    if yb - ya < 1:
+        return 0.0
+    kol = ink[:, xa:xb]
+    kap = lambda r: kol[max(0, r - 1):r + 2].any(axis=0).mean() if 0 <= r < kol.shape[0] else 0.0
+    en = 0.0
+    for r in range(ya, yb):
+        c = kap(r)
+        if c > en and max(kap(r - 5), kap(r + 5)) < 0.3:
+            en = c
+    return en
+
+
 def isaretli(ink: np.ndarray, b) -> bool:
-    """Kelime mürekkebe değiyor mu: kendisi + üstü/altı (yarım satır pay) sütunlarının ≥%40'ında mürekkep
-    (fosforlu kalem üstünü, altı çizgisi altını, daire üst ve alt yayını kaplar)."""
+    """Kelime gerçekten işaretli mi (sayfayı çapraz geçen kalem çizgisi sayılmaz):
+    fosforlu = kelime kutusunun ≥%30'u mürekkep; altı çizili = altında kelimenin ≥%60'ını geçen yatay çizgi;
+    daire = üstte ve altta ≥%50'lik yay."""
     x0, y0, x1, y1 = (int(round(v)) for v in b[:4])
     h = max(4, y1 - y0)
-    ya, yb = max(0, y0 - h // 3), min(ink.shape[0], y1 + h // 2)
     xa, xb = max(0, x0), min(ink.shape[1], x1)
     if xb - xa < 4:
         return False
-    bant = ink[ya:yb, xa:xb]
-    return bant.any(axis=0).mean() >= 0.4 and bant.sum() >= 12
+    ic = ink[max(0, y0):min(ink.shape[0], y1), xa:xb]
+    if ic.size and ic.mean() >= 0.30:
+        return True
+    alt = _yatay(ink, y1 - h // 5, y1 + int(h * 0.6), xa, xb)
+    if alt >= 0.6:
+        return True
+    ust = _yatay(ink, y0 - h // 2, y0 + h // 5, xa, xb)
+    return alt >= 0.5 and ust >= 0.5
 
 
 def parcalar(ws: list[tuple], ink: np.ndarray) -> list[list[float]]:
@@ -108,10 +134,17 @@ def isle(not_pdf: Path, asil_pdf: Path, onizle: Path | None, ad: str) -> dict:
         if not lis:
             continue
         lis.sort(key=lambda s: (s[1], s[0]))
-        yildiz = [0.965, 0.06]  # sayfa başına tek yıldız: sağ üst köşe (metni örtmez)
+        yildiz = [0.965, 0.06]  # sayfa başına bir yıldız: sağ üst köşe (metni örtmez)
+        # işaretli metnin başına küçük yıldız: art arda satırlardaki parçalar tek pasaj sayılır, yıldız pasajın başına
+        bas, son = [], None
+        for r in lis:
+            if not (son and r[1] - son[3] < (son[3] - son[1]) * 0.8):
+                bas.append([round(r[0] / W, 4), round((r[1] + r[3]) / 2 / H, 4)])
+            son = r
         sayfalar[str(i + 1)] = {
             "l": [[round(s[0] / W, 4), round(s[1] / H, 4), round(s[2] / W, 4), round(s[3] / H, 4)] for s in lis],
             "y": [round(yildiz[0], 4), round(yildiz[1], 4)],
+            "b": bas,
         }
         if onizle:
             for s in lis:
@@ -130,7 +163,8 @@ def main() -> None:
     ar = ap.parse_args()
     CIKTI.mkdir(parents=True, exist_ok=True)
     for notf, asilf, fid in DERSLER:
-        s = isle(NOT / notf, ASIL / asilf, ar.onizle, fid[:6])
+        nf = next((x for x in NOT.glob('*.pdf') if unicodedata.normalize('NFC', x.name) == unicodedata.normalize('NFC', notf)), NOT / notf)
+        s = isle(nf, ASIL / asilf, ar.onizle, fid[:6])
         (CIKTI / f"{fid}.json").write_text(json.dumps({"surum": SURUM, "kaynak": notf, "s": s}, ensure_ascii=False))
         print(f"{asilf[:40]:40} işaretli sayfa {len(s):3}  satır {sum(len(v['l']) for v in s.values())}")
 

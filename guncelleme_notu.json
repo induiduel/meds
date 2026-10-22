@@ -1,16 +1,19 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 232,
-  "baslik": "Sesli derste öğrenci notu işaretleri",
+  "onem": 233,
+  "baslik": "Öğrenci notu işaretleri: farmakoloji + yıldızlar",
   "maddeler": [
-    "Üroloji sesli derslerinde (V1 ve Sınav Odaklı Özet) öğrenci notunda işaretli önemli yerler, PDF'te kırmızı marker ile gösteriliyor.",
-    "İşaretli yer olan her sayfanın sağ üst köşesinde bir yıldız var: bu sayfada önemli bir şey olduğu hemen anlaşılır."
+    "İmmünofarmakoloji sesli dersinde de öğrenci notunda işaretli yerler PDF'te kırmızı marker ile gösteriliyor.",
+    "İşaretli her pasajın başına küçük bir yıldız kondu; sayfa köşesindeki yıldız da duruyor.",
+    "Sayfayı çapraz geçen kalem çizgileri artık yanlışlıkla işaret sayılmıyor."
   ],
   "eklenen": [
-    "Üroloji sesli derslerinde (V1 ve Sınav Odaklı Özet) öğrenci notunda işaretli önemli yerler, PDF'te kırmızı marker ile gösteriliyor.",
-    "İşaretli yer olan her sayfanın sağ üst köşesinde bir yıldız var: bu sayfada önemli bir şey olduğu hemen anlaşılır."
+    "İmmünofarmakoloji sesli dersinde de öğrenci notunda işaretli yerler PDF'te kırmızı marker ile gösteriliyor.",
+    "İşaretli her pasajın başına küçük bir yıldız kondu; sayfa köşesindeki yıldız da duruyor."
   ],
   "degisen": [],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Sayfayı çapraz geçen kalem çizgileri artık yanlışlıkla işaret sayılmıyor."
+  ],
   "silinen": []
 }

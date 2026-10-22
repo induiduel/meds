@@ -169,3 +169,4 @@
 .pdv-not { position: absolute; inset: 0; z-index: 1; pointer-events: none; contain: strict; container-type: size; }
 .pdv-not-m { position: absolute; background: rgb(239 68 68 / .32); mix-blend-mode: multiply; border-radius: 3px; box-shadow: 0 0 0 2px rgb(239 68 68 / .32); transform: skewX(-4deg); }
 .pdv-not-y { position: absolute; transform: translate(-50%, -50%); font-size: clamp(14px, 3.2cqw, 30px); line-height: 1; color: #dc2626; text-shadow: 0 0 2px #fff, 0 0 4px #fff; }
+.pdv-not-b { position: absolute; transform: translate(-105%, -55%); font-size: clamp(9px, 1.9cqw, 18px); line-height: 1; color: #dc2626; text-shadow: 0 0 2px #fff, 0 0 3px #fff; }

@@ -15,7 +15,7 @@ import { cdDersEtiketi } from './canliDersKategori';
 import { bitir as konuBitir, sureEkle } from '../../services/calismaTakip';
 
 /** Bir PDF sayfasındaki öğrenci notu işaretleri (sayfa oranı 0–1) */
-export interface PdfNot { l: number[][]; y?: number[] }
+export interface PdfNot { l: number[][]; y?: number[]; b?: number[][] }
 
 export interface CdVaryant {
   id: string;
