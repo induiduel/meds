@@ -682,10 +682,16 @@ let basladi = false;
 export async function cevrimdisiBaslat() {
   if (basladi || !destek()) return;
   basladi = true;
+  // IndexedDB açılışı bazı tarayıcılarda (iPad Safari, dolu depo) hiç dönmeyebiliyor: ekran "Paketler yükleniyor…"da
+  // kalmasın diye en çok 5 sn beklenir, defter gelince sonradan yazılır
+  const sinir = <T,>(p: Promise<T>) => Promise.race([p, bekle(5000).then(() => { throw new Error('zaman aşımı'); })]);
+  const defter = kayitlariOku();
   try {
-    guncelle({ kayitlar: await kayitlariOku() });
-  } catch { /* IndexedDB kapalı */ }
-  await import('./uyarlayicilar').then((m) => m.uyarlayicilariKur()).catch(() => {});
+    guncelle({ kayitlar: await sinir(defter) });
+  } catch {
+    defter.then((k) => guncelle({ kayitlar: k }), () => {});
+  }
+  await sinir(import('./uyarlayicilar').then((m) => m.uyarlayicilariKur())).catch(() => {});
   guncelle({ hazir: true });
   // Otomatik çevrimdışı sınaması (scripts/cevrimdisi_sinama) motoru arayüzsüz sürer
   (window as any).__medsorCevrimdisi = { kuyrugaEkle, durumAl, katalogYenile, paketSil, ayarYaz, paketDurumu, cevrimdisiModuAc };

@@ -17,7 +17,7 @@ let sesYokSon = 0;
 async function sessizYanit(req) {
   // HEAD (Öğren sesi önce varlığını sorar): ses yok de, ekran sesi gizlesin
   if (req.method === 'HEAD') return new Response(null, { status: 404, headers: { 'X-Cevrimdisi': 'ses-yok' } });
-  const hit = await caches.match(SESSIZ_KLIP, { ignoreSearch: true, ignoreVary: true });
+  const hit = await onbellekte(SESSIZ_KLIP);
   if (Date.now() - sesYokSon > 20000) {
     sesYokSon = Date.now();
     self.clients.matchAll({ type: 'window' }).then((cs) => cs.forEach((c) => c.postMessage({ type: 'CEVRIMDISI_SES_YOK' }))).catch(() => {});
@@ -134,6 +134,25 @@ async function cdSesYanit(req, url) {
       'Accept-Ranges': 'bytes',
     },
   });
+}
+
+// Önbellek araması. caches.match(…, { ignoreSearch }) TÜM önbellekleri dizinsiz, kayıt kayıt tarar; çevrimdışı paket
+// önbelleğinde binlerce ses/PDF varken açılıştaki her dosya isteği bu taramayı baştan yapıyor, paket indirmiş cihazlarda
+// (tablet) sayfa dakikalarca açılmıyordu, önbellek silinince düzeliyordu (2026-10-23). Burada yalnız tam adresle (dizinli)
+// ve bilinen önbelleklerde sırayla aranır; sorgusuz=true ise sorgu dizesiz adres de denenir.
+const ARAMA_SIRASI = [STATIC_CACHE, RUNTIME_CACHE, PAKET_CACHE, DATA_CACHE];
+async function onbellekte(istek, sorgusuz = false) {
+  const u = new URL(typeof istek === 'string' ? istek : istek.url, self.location.href);
+  const adresler = sorgusuz && u.search ? [u.href, u.origin + u.pathname] : [u.href];
+  for (const ad of ARAMA_SIRASI) {
+    if (!(await caches.has(ad))) continue;
+    const c = await caches.open(ad);
+    for (const a of adresler) {
+      const r = await c.match(a, { ignoreVary: true });
+      if (r) return r;
+    }
+  }
+  return undefined;
 }
 
 const PRECACHE_ASSETS = [
@@ -271,22 +290,12 @@ self.addEventListener('fetch', (event) => {
 
         // Ağ gecikti veya başarısız oldu: Önce önbelleklerde index.html ara
         // (ignoreVary: kayıtlı yanıt 'Vary: Accept-Encoding' taşır; başlıksız '/index.html' isteğiyle eşleşmiyordu)
-        const matchDirect = await caches.match(req, { ignoreSearch: true, ignoreVary: true });
+        const matchDirect = await onbellekte(req, true);
         if (matchDirect) return matchDirect;
 
         const matchHtml =
-          (await caches.match('/index.html', { ignoreSearch: true, ignoreVary: true })) ||
-          (await caches.match('/', { ignoreSearch: true, ignoreVary: true }));
+          (await onbellekte('/index.html')) || (await onbellekte('/'));
         if (matchHtml) return matchHtml;
-
-        const allKeys = await caches.keys();
-        for (const k of allKeys) {
-          const c = await caches.open(k);
-          const found =
-            (await c.match('/index.html', { ignoreSearch: true, ignoreVary: true })) ||
-            (await c.match('/', { ignoreSearch: true, ignoreVary: true }));
-          if (found) return found;
-        }
 
         // Ağ isteği arka planda tamamlanırsa son çare bekle
         const slowRes = await fetchPromise;
@@ -352,7 +361,7 @@ self.addEventListener('fetch', (event) => {
   if (url.origin === self.location.origin && url.pathname.startsWith('/ses/') && /\.mp3$/i.test(url.pathname)) {
     event.respondWith(
       (async () => {
-        const hit = await caches.match(url.origin + url.pathname, { ignoreSearch: true, ignoreVary: true });
+        const hit = await onbellekte(url.origin + url.pathname);
         if (hit) return aralikYaniti(req, hit, 'audio/mpeg');
         return fetch(req).catch(() => sessizYanit(req));
       })()
@@ -364,7 +373,7 @@ self.addEventListener('fetch', (event) => {
   if (url.pathname.startsWith('/vendor/pdfjs/')) {
     event.respondWith(
       (async () => {
-        const cached = await caches.match(req, { ignoreSearch: true, ignoreVary: true });
+        const cached = await onbellekte(req, true);
         if (cached) return cached;
         const res = await fetch(req);
         if (res && res.status === 200) {
@@ -381,7 +390,7 @@ self.addEventListener('fetch', (event) => {
   if (url.hostname === 'fonts.googleapis.com') {
     event.respondWith(
       (async () => {
-        const cached = await caches.match(req.url, { ignoreVary: true });
+        const cached = await onbellekte(req.url);
         const ag = fetch(req).then((res) => {
           if (res && res.ok) { const k = res.clone(); caches.open(RUNTIME_CACHE).then((c) => c.put(req.url, k)).catch(() => {}); }
           return res;
@@ -404,7 +413,7 @@ self.addEventListener('fetch', (event) => {
     const isImmutableAsset = url.pathname.startsWith('/assets/');
     event.respondWith(
       (async () => {
-        const cached = await caches.match(req, { ignoreSearch: true, ignoreVary: true });
+        const cached = await onbellekte(req, true);
         if (cached && isImmutableAsset) {
           return cached;
         }
@@ -459,6 +468,7 @@ self.addEventListener('fetch', (event) => {
       url.pathname.startsWith('/api/live/') ||
       url.pathname.startsWith('/api/presence') ||
       url.pathname === '/api/surum' || // sürüm denetimi her zaman ağdan (güncelleme diyaloğu)
+      url.pathname.startsWith('/api/ai-test/') || // test erişimi çerezi: önbellekten asla
       url.pathname.startsWith('/api/canli-ders/ses/') || // ses akışı (Range/206): tarayıcı doğrudan alır, önbelleğe yazılmaz
       url.pathname.startsWith('/api/patoloji-asistan/ses/') || // sınav asistanı EMA klipleri (Range/206)
       url.pathname.startsWith('/api/patoloji-cozucu/ses/') || // soru çözücü EMA klipleri (Range/206)
@@ -516,7 +526,7 @@ self.addEventListener('fetch', (event) => {
           return networkRes;
         });
         // Zayıf ağ: 4 sn içinde yanıt yoksa önbellekteki kopya hemen verilir (ağ arka planda önbelleği tazeler)
-        const cached = cacheable ? await caches.match(req.url) : undefined;
+        const cached = cacheable ? await (await caches.open(DATA_CACHE)).match(req.url) : undefined;
         if (cached) {
           const slow = new Promise((resolve) => setTimeout(() => resolve(null), 4000));
           const winner = await Promise.race([network.catch(() => null), slow]);

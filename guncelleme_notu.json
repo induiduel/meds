@@ -1,14 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 240,
-  "baslik": "Takılan sayfa yüklemesi düzeltildi",
+  "onem": 241,
+  "baslik": "Tablette açılmama sorunu düzeltildi",
   "maddeler": [
-    "Site bazen yükleme çubuğunda dakikalarca takılı kalıyordu; sunucu bağlantısı daha kararlı bir yönteme geçirildi."
+    "Çevrimdışı paket indirilmiş cihazlarda (özellikle tablet) site dakikalarca açılmıyordu; önbellek araması hızlandırıldı.",
+    "Çevrimdışı ekranı artık \"Paketler yükleniyor…\" yazısında takılı kalmıyor."
   ],
   "eklenen": [],
   "degisen": [],
   "duzeltilen": [
-    "Site bazen yükleme çubuğunda dakikalarca takılı kalıyordu; sunucu bağlantısı daha kararlı bir yönteme geçirildi."
+    "Çevrimdışı paket indirilmiş cihazlarda (özellikle tablet) site dakikalarca açılmıyordu; önbellek araması hızlandırıldı.",
+    "Çevrimdışı ekranı artık \"Paketler yükleniyor…\" yazısında takılı kalmıyor."
   ],
   "silinen": []
 }
