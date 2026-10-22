@@ -1,11 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 234,
-  "baslik": "Sesli Dersler: Patoloji blok özetleri",
+  "onem": 235,
+  "baslik": "Sesli ders seslendirme düzeni",
   "maddeler": [
-    "Sesli Dersler ekranında yeni \"Blok özetler\" sekmesi.",
-    "Patoloji 16–20, 21–27 ve 28–35 dersleri üç sesli derste, çıkmış odaklı anlatıldı (her biri 73–85 dakika).",
-    "Her blok özette okunan cümle kırpılmış slaytla eşleşir."
+    "Sesli derslerin EMA sesleri artık yalnız ana bilgisayarda üretiliyor; seslendirme daha hızlı tamamlanır."
   ],
   "eklenen": [
     "İmmünofarmakoloji sesli dersinde de öğrenci notunda işaretli yerler PDF'te kırmızı marker ile gösteriliyor.",
