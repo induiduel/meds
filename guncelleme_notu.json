@@ -1,14 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 237,
-  "baslik": "Öğrenci notu: siyah kalem işaretleri",
+  "onem": 238,
+  "baslik": "Sesli ders videosunda öğrenci notu işaretleri",
   "maddeler": [
-    "Öğrenci notlarındaki siyah ve koyu lacivert kalem işaretleri (altı çizili, daire) de PDF'te kırmızı marker ile gösteriliyor."
+    "Sesli ders videosu dışa aktarılırken öğrenci notunda işaretli yerler de videoda kırmızı marker ve yıldızlarla görünüyor."
   ],
-  "eklenen": [],
-  "degisen": [
-    "Öğrenci notlarındaki siyah ve koyu lacivert kalem işaretleri (altı çizili, daire) de PDF'te kırmızı marker ile gösteriliyor."
+  "eklenen": [
+    "Sesli ders videosu dışa aktarılırken öğrenci notunda işaretli yerler de videoda kırmızı marker ve yıldızlarla görünüyor."
   ],
+  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }

@@ -283,7 +283,7 @@ function satirlaraBol(ctx: OffscreenCanvasRenderingContext2D, kelimeler: { s: st
   return satir;
 }
 
-function ciz(ctx: OffscreenCanvasRenderingContext2D, W: number, H: number, an: An, bmp: ImageBitmap | null, o: { baslik: string; etiket: string; t: number; sure: number }) {
+function ciz(ctx: OffscreenCanvasRenderingContext2D, W: number, H: number, an: An, bmp: ImageBitmap | null, o: { baslik: string; etiket: string; t: number; sure: number; not?: CdDetay['ogrenciNot'] }) {
   const k = H / 720;
   ctx.fillStyle = RENK.zemin; ctx.fillRect(0, 0, W, H);
   // üst şerit
@@ -303,6 +303,23 @@ function ciz(ctx: OffscreenCanvasRenderingContext2D, W: number, H: number, an: A
     const w = bmp.width * s, h = bmp.height * s, x = ax + (aw - w) / 2, y = ay + (ah - h) / 2;
     ctx.save(); ctx.shadowColor = 'rgba(0,0,0,.45)'; ctx.shadowBlur = 24 * k; ctx.fillStyle = '#fff'; ctx.fillRect(x, y, w, h); ctx.restore();
     ctx.drawImage(bmp, x, y, w, h);
+    // öğrenci notunda işaretli yerler: kırmızı marker + pasaj başı yıldızı + sağ üst köşe yıldızı (PdfDocView ile aynı)
+    const nt = an.sayfa ? o.not?.[String(an.sayfa[0])]?.[String(an.sayfa[1])] : null;
+    if (nt) {
+      ctx.save();
+      ctx.globalCompositeOperation = 'multiply';
+      ctx.fillStyle = 'rgba(239,68,68,.32)';
+      for (const [x0, y0, x1, y1] of nt.l) ctx.fillRect(x + x0 * w - 2 * k, y + y0 * h - 2 * k, (x1 - x0) * w + 4 * k, (y1 - y0) * h + 4 * k);
+      ctx.restore();
+      const yildiz = (px: number, py: number, boy: number, sag: boolean) => {
+        ctx.font = `700 ${boy}px ${FONT}`; ctx.textBaseline = 'middle'; ctx.textAlign = sag ? 'center' : 'right';
+        ctx.lineWidth = 3 * k; ctx.strokeStyle = '#fff'; ctx.strokeText('★', px, py);
+        ctx.fillStyle = '#dc2626'; ctx.fillText('★', px, py);
+        ctx.textAlign = 'left';
+      };
+      for (const [bx, by] of nt.b || []) yildiz(x + bx * w - 1 * k, y + by * h, Math.max(10, w * 0.019), false);
+      if (nt.y) yildiz(x + nt.y[0] * w, y + nt.y[1] * h, Math.max(14, w * 0.032), true);
+    }
     const is = an.isaret;
     if (is && an.sayfa && is.d === an.sayfa[0] && is.s === an.sayfa[1] && an.p) {
       ctx.fillStyle = RENK.vurgu;
@@ -427,7 +444,7 @@ export async function cdVideoOlustur(o: CdVideoSecenek): Promise<Blob | null> {
       // görüntü yalnız okunan kelime/sayfa ya da ilerleme çubuğu pikseli değişince yeniden çizilir
       const anahtar = `${an.p?.i}|${an.w}|${sonSayfa?.join(':')}|${Math.floor((t / sure) * b.w)}`;
       if (anahtar !== sonAnahtar) {
-        ciz(ctx, b.w, b.h, an, bmp, { baslik: o.detay.baslik, etiket: o.etiket, t, sure });
+        ciz(ctx, b.w, b.h, an, bmp, { baslik: o.detay.baslik, etiket: o.etiket, t, sure, not: o.detay.ogrenciNot });
         sonAnahtar = anahtar;
       }
       await video.add(t, dt);

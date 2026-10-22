@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import argparse
 import bisect
+import math
 import json
 import os
 import re
@@ -268,6 +269,14 @@ def uret(key: str, vid: str, coz: str, cikti: Path, en_cok_sn: float | None = No
             return im
 
         isaret = detay.get("isaret") or {}
+        ogr_not = detay.get("ogrenciNot") or {}
+
+        def yildiz(dr, cx: float, cy: float, r: float) -> None:
+            """beş köşeli kırmızı yıldız, beyaz kenarlı (canlı derste ★ ile aynı)"""
+            nk = [(cx + (r if i % 2 == 0 else r * 0.45) * math.sin(i * math.pi / 5),
+                   cy - (r if i % 2 == 0 else r * 0.45) * math.cos(i * math.pi / 5)) for i in range(10)]
+            dr.polygon(nk, fill=(220, 38, 38, 255), outline=(255, 255, 255, 255), width=max(1, int(1.5 * k)))
+
         pbas = [p["bas"] for p in paras]
         pkt = [[x[2] for x in p["kel"]] for p in paras]
 
@@ -291,6 +300,16 @@ def uret(key: str, vid: str, coz: str, cikti: Path, en_cok_sn: float | None = No
             if sr:
                 x0, y0 = ax + (aw - sr.width) // 2, ay + (ah - sr.height) // 2
                 im.paste(sr, (x0, y0))
+                # öğrenci notunda işaretli yerler: kırmızı marker + pasaj başı yıldızı + sağ üst köşe yıldızı
+                nt = (ogr_not.get(str(sd[1])) or {}).get(str(sd[2]))
+                if nt:
+                    for a, b2, c2, d2 in nt.get("l") or []:
+                        dr.rectangle([x0 + a * sr.width - 2 * k, y0 + b2 * sr.height - 2 * k, x0 + c2 * sr.width + 2 * k, y0 + d2 * sr.height + 2 * k], fill=(239, 68, 68, 82))
+                    for bx, by in nt.get("b") or []:
+                        r = max(5, sr.width * 0.009)
+                        yildiz(dr, x0 + bx * sr.width - r * 1.1, y0 + by * sr.height, r)
+                    if nt.get("y"):
+                        yildiz(dr, x0 + nt["y"][0] * sr.width, y0 + nt["y"][1] * sr.height, max(8, sr.width * 0.016))
                 isr = None
                 if p and c >= 0:
                     L = isaret.get(str(p["i"])) or []
