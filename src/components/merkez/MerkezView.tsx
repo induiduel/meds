@@ -1,8 +1,9 @@
 /**
  * Merkez sayfaları (2026-10-21): /dersler · /sorular · /kamplar[/kurulN] · /kaynaklar
  * Öğrenci önce ne yapmak istediğini seçer (dört kategori sekmesi), sonra araçlar "ne zaman kullanılır" cümlesiyle
- * listelenir; kategorinin önerilen ilk adımı büyük kartta durur. Kamplar merkezi kurul seçimi ve
- * Son Prova · Kamplar · Check Up · En önemliler sekmelerini taşır (?sekme= → /kamplar/kurulN/<sekme>).
+ * listelenir; kategorinin önerilen ilk adımı büyük kartta durur. Ders çalış · Soru çöz · Sınava hazırlan merkezleri
+ * Kurul 1–6 seçicisini taşır (/dersler/kurulN, /sorular/kurulN, /kamplar/kurulN; kurula bağlı araçlar o kurulda açılır).
+ * Kamplar merkezi ayrıca Son Prova · Kamplar · Check Up · En önemliler sekmelerini taşır (?sekme= → /kamplar/kurulN/<sekme>).
  * Model: merkezModel.ts · adresler: siteHaritasi.ts · stil: styles/merkez.css (.mz-*)
  */
 import React, { useEffect, useState } from 'react';
@@ -10,7 +11,7 @@ import { ArrowRight, ChevronLeft, BookOpenText, ClipboardCheck, Download, FileTe
 import { linkClick, navigateTo, pathFor, type AppRoute } from '../../router';
 import { KATEGORILER, icKonum, type KategoriId } from '../../siteHaritasi';
 import { NAV_ITEMS } from '../shell/navModel';
-import { aktifKurul } from '../../services/kurulTakvimi';
+import { KurulSecici, kurulIcerikVar, varsayilanKurul } from '../kurul/KurulSecici';
 import { CHECKUPLAR, MERKEZ_ARACLARI, MERKEZ_ROUTE, PDF_NOTLAR, kategoriOf } from './merkezModel';
 import '../../styles/merkez.css';
 
@@ -22,13 +23,17 @@ const Bag: React.FC<{ url: string; className?: string; children: React.ReactNode
   <a href={url} className={className} onClick={linkClick(() => navigateTo(url))} {...aria}>{children}</a>
 );
 
-/** Kamplar araçları seçili kurulun altında açılır */
+/** Kurula bağlı araçlar merkezde seçili kurulun altında açılır (kurulsuz araçlar kendi adresinde) */
 function aracYolu(id: AppRoute, kurul: number | null): string {
   const k = kurul ? `/kurul${kurul}` : '';
   if (id === 'son_prova') return `/kamplar${k}/son-prova`;
   if (id === 'kamp') return `/kamplar${k}/kamp`;
   if (id === 'cikmis_cozucu') return `/kamplar${k}/cikmis-cozucu`;
   if (id === 'en_onemliler') return `/kamplar${k}/en-onemliler`;
+  if (id === 'spots') return `/kamplar${k}/spotlar`;
+  if (id === 'canli_ders') return `/dersler/canliders${k}`;
+  if (id === 'soru_cozucu') return `/sorular/soru-cozucu${k}`;
+  if (kurul && (id === 'learn' || id === 'past_exams' || id === 'olasi_sorular')) return `${pathFor(id)}?kurul=${kurul}`;
   return pathFor(id);
 }
 
@@ -111,7 +116,8 @@ export default function MerkezView({ kategori }: { kategori: KategoriId }) {
   useEffect(() => { document.title = `${tanim.ad} · MeDSor`; }, [tanim.ad]);
 
   const kampMi = kategori === 'kamplar';
-  const kurul = kampMi ? (kamp.kurul ?? aktifKurul().kurul) : null;
+  // Ders çalış · Soru çöz · Sınava hazırlan kurul seçer (adres → son seçim → takvim); Başvuru kurulsuz
+  const kurul = kategori === 'kaynaklar' ? null : (kamp.kurul ?? varsayilanKurul());
   const sekme = kampMi ? kamp.sekme : 'hepsi';
   const araclar = MERKEZ_ARACLARI[kategori].filter((a) => sekme === 'hepsi' || (SEKME_ROUTE[sekme] || []).includes(a.id));
   const oneri = sekme === 'hepsi' ? araclar.find((a) => a.oner) : undefined;
@@ -119,7 +125,9 @@ export default function MerkezView({ kategori }: { kategori: KategoriId }) {
   const checkuplar = CHECKUPLAR.filter((c) => c.kurul === kurul);
   const pdfler = PDF_NOTLAR.filter((p) => p.kurul === kurul);
   const Ic = KATEGORI_IKON[kategori];
-  const kurulYol = (k: number, s: KampSekme = sekme) => `/kamplar/kurul${k}${s === 'hepsi' ? '' : `/${s}`}`;
+  const kurulYol = (k: number, s: KampSekme = sekme) => (kampMi ? `/kamplar/kurul${k}${s === 'hepsi' ? '' : `/${s}`}` : `${tanim.yol}/kurul${k}`);
+  /** Kartın kurul rozeti: araç bu kurulda henüz içerik taşımıyorsa */
+  const bosRozet = (id: AppRoute) => (kurul && kurulIcerikVar(id, kurul) === false ? <em className="mz-yok">Kurul {kurul}: henüz yok</em> : null);
 
   return (
     <div className={`mz is-${kategori}`}>
@@ -133,18 +141,14 @@ export default function MerkezView({ kategori }: { kategori: KategoriId }) {
         </div>
       </header>
 
-      {kampMi && (
+      {kurul && (
         <div className="mz-kamp-ust">
-          <div className="mz-kurullar" role="group" aria-label="Kurul">
-            {[1, 2, 3, 4, 5, 6].filter((k) => k <= Math.max(aktifKurul().kurul, kurul || 1)).map((k) => (
-              <Bag key={k} url={kurulYol(k)} className={`mz-kurul${k === kurul ? ' is-on' : ''}`} aria={k === kurul ? { 'aria-current': 'true' } : undefined}>Kurul {k}</Bag>
-            ))}
-          </div>
-          <div className="mz-sekmeler" role="tablist" aria-label="Sınava hazırlık bölümleri">
+          <KurulSecici secili={kurul} yol={(k) => kurulYol(k)} />
+          {kampMi && <div className="mz-sekmeler" role="tablist" aria-label="Sınava hazırlık bölümleri">
             {KAMP_SEKMELER.map(([id, ad]) => (
-              <Bag key={id} url={kurulYol(kurul || 1, id)} className={`mz-sekme${id === sekme ? ' is-on' : ''}`} aria={{ role: 'tab', 'aria-selected': id === sekme }}>{ad}</Bag>
+              <Bag key={id} url={kurulYol(kurul, id)} className={`mz-sekme${id === sekme ? ' is-on' : ''}`} aria={{ role: 'tab', 'aria-selected': id === sekme }}>{ad}</Bag>
             ))}
-          </div>
+          </div>}
         </div>
       )}
 
@@ -156,7 +160,7 @@ export default function MerkezView({ kategori }: { kategori: KategoriId }) {
             <span className="mz-oneri-ic" style={{ '--mz-t': it.tint } as React.CSSProperties} aria-hidden><AIc /></span>
             <span className="mz-oneri-t">
               <span className="mz-ust">Buradan başla</span>
-              <b>{it.label}</b>
+              <b>{it.label}{bosRozet(oneri.id)}</b>
               <span>{oneri.ne}</span>
             </span>
             <span className="mz-oneri-git">Aç <ArrowRight aria-hidden /></span>
@@ -217,7 +221,7 @@ export default function MerkezView({ kategori }: { kategori: KategoriId }) {
                 <Bag key={a.id} url={aracYolu(a.id, kurul)} className="mz-kart">
                   <span className="mz-kart-ic" style={{ '--mz-t': it.tint } as React.CSSProperties} aria-hidden><AIc /></span>
                   <span className="mz-kart-t">
-                    <b>{it.label}</b>
+                    <b>{it.label}{bosRozet(a.id)}</b>
                     <span>{a.ne}</span>
                   </span>
                   <ArrowRight className="mz-ok" aria-hidden />

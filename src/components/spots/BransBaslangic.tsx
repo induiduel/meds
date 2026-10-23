@@ -13,7 +13,8 @@ import { getAsistanSureGruplari, getCozucuSureGruplari } from './sure/spotsSureV
 import { SpotsSureDiyalog } from './sure/SpotsSureDiyalog';
 import { SpotCozucuIstatistikModal } from './stats/SpotCozucuIstatistikModal';
 import { cozucuyaGit, onemeGit } from './spotsYol';
-import { KurulBos, KurulHapi, kurulKimlikten, useKurulParam } from '../kurul/KurulSuzgec';
+import { KurulBos, kurulKimlikten, useKurulParam } from '../kurul/KurulSuzgec';
+import { KurulSecici, kurulIcerikVar } from '../kurul/KurulSecici';
 
 /** ?kurul=N varsa yalnız o kurulun branşları (Kurul 1: önek yok; Kurul 2+: k2noroloji) */
 const kurulBranslari = (k: number | null) => (k ? BRANSLAR.filter((b) => kurulKimlikten(b.id) === k) : BRANSLAR);
@@ -90,7 +91,7 @@ export const CozucuBaslangic: React.FC = () => {
         devam={devam}
         listeAd="Bir ders seç"
         satirlar={satirlar}
-        ust={kurul ? <KurulHapi kurul={kurul} /> : undefined}
+        ust={<KurulSecici secili={kurul} yol={(k) => `/sorular/soru-cozucu/kurul${k}`} tumuYol="/sorular/soru-cozucu" icerik={(k) => kurulIcerikVar('soru_cozucu', k)} />}
         bos={kurul ? <KurulBos kurul={kurul} ne="soru çözücü dersi" /> : undefined}
         alt={
           <>
@@ -183,7 +184,7 @@ export const OnemBaslangic: React.FC = () => {
         devam={devam}
         listeAd="Bir ders seç"
         satirlar={satirlar}
-        ust={kurul ? <KurulHapi kurul={kurul} /> : undefined}
+        ust={<KurulSecici secili={kurul} yol={(k) => `/kamplar/kurul${k}/en-onemliler`} tumuYol="/en-onemliler" icerik={(k) => kurulIcerikVar('en_onemliler', k)} />}
         bos={kurul ? <KurulBos kurul={kurul} ne="önem listesi" /> : undefined}
         alt={<button type="button" className="bs-link" onClick={() => setSure(true)}><Clock aria-hidden />Sesli asistan süreleri</button>}
       />

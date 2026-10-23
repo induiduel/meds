@@ -20,6 +20,7 @@ import {
 import { linkClick, navigateTo } from '../../router';
 import { KURULLAR, aktifKurul } from '../../services/kurulTakvimi';
 import { kurulAdi } from '../../services/kurulPencere';
+import { KurulSecici } from '../kurul/KurulSecici';
 import {
   bransAdi, bransKisa, kampSesUrl, kaynakHedef, kaynakYaz, kurulKampYollari, type Kamp, type KampSoru,
 } from './kampVeri';
@@ -112,11 +113,7 @@ function KampListesi({ kurul }: { kurul: number }) {
         </div>
       </header>
 
-      <nav className="km-kurullar" aria-label="Kurul seç">
-        {KURULLAR.map((k) => (
-          <Git key={k.kurul} url={`/kamp?kurul=${k.kurul}`} className={`km-kurul${k.kurul === kurul ? ' is-on' : ''}`}>Kurul {k.kurul}</Git>
-        ))}
-      </nav>
+      <KurulSecici secili={kurul} yol={(k) => `/kamplar/kurul${k}/kamp`} />
 
       {form && <TuyoFormu kurul={kurul} onKapat={() => setForm(false)} />}
 

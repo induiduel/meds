@@ -106,3 +106,4 @@
 .mz-kapali h1 { font: 700 22px/1.25 var(--font-sans); margin: 0; }
 .mz-kapali p { margin: 0; font-size: 14.5px; line-height: 1.55; color: var(--color-ink-2); }
 .mz-bugun { width: 100%; box-sizing: border-box; min-width: 0; padding: 14px 0 6px; }
+.mz-yok { margin-left: 8px; padding: 2px 8px; border-radius: 999px; background: var(--color-field); color: var(--color-ink-3); font: 600 11.5px/1.4 var(--font-sans); font-style: normal; vertical-align: 2px; white-space: nowrap; }

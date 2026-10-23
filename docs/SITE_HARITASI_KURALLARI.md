@@ -15,14 +15,21 @@ Tek kaynak: `src/siteHaritasi.ts` (adres çevirisi + kategoriler) ve `src/compon
 
 | Kategori | Merkez | Araçlar (görünen adres) |
 |---|---|---|
-| Ders çalış | `/dersler` | `/dersler/canliders[/kurul1[/tbg]]`, `/dersler/canliders/kurul1/<dersKey>`, `/dersler/interaktif[/<desteId>]`, `/dersler/ozetler`, `/dersler/kartlar` |
-| Soru çöz | `/sorular` | `/sorular/soru-cozucu[/kurul1/<branş>]?ders=…`, `/sorular/cikmis[/<id>]`, `/sorular/deneme`, `/sorular/havuz[/<id>]`, `/sorular/ornek`, `/sorular/olasi` |
-| Sınava hazırlan | `/kamplar[/kurulN]` | `/kamplar/kurul1/son-prova/…`, `/kamplar/kurul1/cikmis-cozucu[/<branş>]?ders=cp1-<branş>-<n>&coz=1`, `/kamplar/kurul1/kamp[/<branş>]`, `/kamplar/kurul1/en-onemliler/<branş>`, `/kamplar/spotlar` |
+| Ders çalış | `/dersler[/kurulN]` | `/dersler/canliders[/kurul1[/tbg]]`, `/dersler/canliders/kurul1/<dersKey>`, `/dersler/interaktif[/<desteId>]`, `/dersler/ozetler`, `/dersler/kartlar` |
+| Soru çöz | `/sorular[/kurulN]` | `/sorular/soru-cozucu[/kurulN[/<branş>]]?ders=…`, `/sorular/cikmis[/<id>]`, `/sorular/deneme`, `/sorular/havuz[/<id>]`, `/sorular/ornek`, `/sorular/olasi` |
+| Sınava hazırlan | `/kamplar[/kurulN]` | `/kamplar/kurul1/son-prova/…`, `/kamplar/kurul1/cikmis-cozucu[/<branş>]?ders=cp1-<branş>-<n>&coz=1`, `/kamplar/kurul1/kamp[/<branş>]`, `/kamplar/kurulN/en-onemliler[/<branş>]`, `/kamplar[/kurulN]/spotlar` |
 | Check Up (ayrı sekme) | `/kamplar/kurul1/checkup` | `/kamplar/kurul1/checkup/patoloji`, `/kamplar/kurul1/checkup/tbg/v1/{sesli-ders,soru-coz,kaliplar,deneme}` |
 | Başvuru | `/kaynaklar` | sözlük, hastalıklar, Sağlık Bakanlığı, kazanımlar, geçmiş kurullar, güncellemeler (düz adreslerinde kalır) |
 
 - **Branş adres adları:** patoloji, enfeksiyon, uroloji, **tbg** (genetik), halk-sagligi, kadin-dogum, farmakoloji.
   Kurul 2+: `k2noroloji` ↔ `kurul2/noroloji` (`bransAdresi` / `bransKimligi`).
+- **Kurul seçici (2026-10-24):** Ders çalış · Soru çöz · Sınava hazırlan merkezleri ve kurula bağlı araçlar
+  (sesli ders, soru çözücü, Son Prova, çıkmış çözücü, kamp, en önemliler, spotlar) başta Kurul 1–6 şeridini taşır
+  (`components/kurul/KurulSecici.tsx`). Seçili kurul: adres → öğrencinin son seçimi (cihazda `medsoru_secili_kurul`,
+  takvimde aktif kurul değişince düşer) → takvimdeki aktif kurul (`kurulTakvimi.aktifKurul`). İçeriği olmayan kurul
+  seçilebilir; araç `KurulBos` boş durumunu gösterir (bozuk sayfa / başka kurulun içeriği değil). Kurul içeriği var mı:
+  `kurulIcerikVar` (yalnız dosya adları; yeni kurula bağlı veri eklenince buraya kural ekle). Check-up'u olmayan kurulun
+  check-up adresi o kurulun Check Up sekmesine düşer.
 - **Kamp / check-up sürümü:** içerik baştan yeniden kurulursa yeni sürüm (`v2`) açılır, eski sürüm adresi kalır.
 - **Sayfa içi bölüm şeridi yok:** bölüm adı kabuğun üst çubuğunda görünür; kardeş araçlara merkez sayfasından geçilir (kullanıcı: şerit tasarımı bozuyordu).
 - **Her bölüm ayrı sayfa:** bir kampın bölümleri sekme değil ayrı adrestir ve kendi başlığı/rengiyle ayrı görünür

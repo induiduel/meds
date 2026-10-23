@@ -1,9 +1,12 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Check, ChevronLeft, History, Play, RotateCcw, WandSparkles } from 'lucide-react';
 import { icKonum, icUrl } from '../../siteHaritasi';
+import { navigateTo } from '../../router';
 import { ilerlemeYaz, ozet, useIlerleme } from '../spots/cozucu/cozucuVeri';
 import { bransTanim, type Brans } from '../spots/brans';
 import { ccDers, ccDizin, ccKurulYukle, ccKurullar, paketAdi, paketKod, type KurulPaket } from './ccVeri';
+import { KurulBos } from '../kurul/KurulSuzgec';
+import { KurulSecici, kurulIcerikVar } from '../kurul/KurulSecici';
 import '../../styles/soru-cozucu.css';
 
 /**
@@ -19,7 +22,8 @@ const oku = () => {
   const k = Number(sp.get('kurul'));
   const l = ccKurullar();
   return {
-    kurul: l.includes(k) ? k : l[l.length - 1] ?? 1,
+    // adresteki kurul her zaman uyulur (içeriği yoksa boş durum); yoksa içeriği olan en yeni kurul
+    kurul: Number.isInteger(k) && k >= 1 && k <= 6 ? k : l[l.length - 1] ?? 1,
     brans: (sp.get('brans') || null) as Brans | null,
     ders: sp.get('ders'),
     coz: sp.get('coz'),
@@ -54,7 +58,17 @@ export const CikmisCozucuView: React.FC = () => {
   const kapat = () => { yaz({ coz: null }); setA(oku()); };
 
   if (!veri) return <p className="scs-bos">Yükleniyor…</p>;
-  if (!veri.branslar.length) return <p className="scs-bos">Kurul {a.kurul} için çıkmış paketleri hazırlanıyor.</p>;
+  const secici = (
+    <KurulSecici secili={a.kurul} yol={(k) => `/kamplar/kurul${k}/cikmis-cozucu`} icerik={(k) => kurulIcerikVar('cikmis_cozucu', k)} />
+  );
+  if (!veri.branslar.length) {
+    return (
+      <div className="scs">
+        {secici}
+        <KurulBos kurul={a.kurul} ne="çıkmış paketi" onTumu={() => navigateTo('/kamplar/kurul1/cikmis-cozucu')} tumuEtiket="Kurul 1 paketlerine git" />
+      </div>
+    );
+  }
 
   const paketOzet = (kod: string, n: number) => ozet(ilerleme[kod], n);
 
@@ -62,6 +76,7 @@ export const CikmisCozucuView: React.FC = () => {
     <div className="scs">
       {!bp ? (
         <>
+          {secici}
           <header className="scs-head">
             <div className="scs-head-t">
               <h2><History aria-hidden />Çıkmış çözücü · Kurul {a.kurul}</h2>

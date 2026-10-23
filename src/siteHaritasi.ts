@@ -6,12 +6,12 @@
  *   /<kategori>/<araç>/kurul<N>/<branş>/<öğe>          (dersler, sorular)
  *   /kamplar/kurul<N>/<araç>/<branş|konu>/<sürüm>/<bölüm>  (kamplar: kurul önce gelir)
  *
- *   /dersler                                 Ders çalış merkezi
+ *   /dersler[/kurulN]                        Ders çalış merkezi (kurul seçici; kurula bağlı araçlar o kurulda açılır)
  *   /dersler/interaktif[/<desteId>]          Etkileşimli ders (Öğren)
  *   /dersler/canliders[/kurul1[/tbg]]        Sesli ders listesi (kurul / branş süzgeci)
  *   /dersler/canliders/kurul1/<dersKey>      Tek sesli ders
  *   /dersler/ozetler[/<id>] · /dersler/kartlar
- *   /sorular                                 Soru çöz merkezi
+ *   /sorular[/kurulN]                        Soru çöz merkezi
  *   /sorular/soru-cozucu[/kurul1/patoloji]   Sesli soru çözücü (?ders=&coz= korunur)
  *   /sorular/cikmis[/<id>] · /sorular/havuz[/<id>] · /sorular/deneme · /sorular/ornek · /sorular/olasi
  *   /kamplar[/kurul1]                        Sınava hazırlan merkezi (sekmeler: Son Prova, Kamplar, Check Up, En önemliler)
@@ -20,7 +20,8 @@
  *   /kamplar/kurul1/kamp[/<branş>]           Hoca tüyolarından kurul kampı
  *   /kamplar/kurul1/checkup/patoloji         Patoloji Check Up
  *   /kamplar/kurul1/checkup/tbg/v1/{sesli-ders,soru-coz,kaliplar,deneme}   TBG Sınav Kampı (her bölüm ayrı sayfa)
- *   /kamplar/kurul1/en-onemliler/<branş> · /kamplar/spotlar · /kamplar/sinav-plani
+ *   /kamplar[/kurulN]/en-onemliler[/<branş>] · /kamplar[/kurulN]/spotlar · /kamplar/sinav-plani
+ *   Check-up'u olmayan kurulun check-up adresi (/kamplar/kurul2/checkup/patoloji) o kurulun Check Up sekmesine düşer.
  *   /kaynaklar                               Başvuru merkezi (sözlük, hastalıklar … kendi düz adreslerinde kalır)
  *
  * Ekranlar ve eski bağlantılar hâlâ "iç adres" biçimini konuşur (/canliders/<key>, /soru-cozucu?brans=…,
@@ -154,9 +155,11 @@ export function disYol(adres: string): string {
       return birlestir(`/dersler/canliders${k ? `/kurul${k}` : ''}`, sp, hash);
     }
     case 'soru-merkezi':
-      return birlestir('/sorular', sp, hash);
-    case 'ders-merkezi':
-      return birlestir('/dersler', sp, hash);
+    case 'ders-merkezi': {
+      const k = sorguKurul(sp);
+      sp.delete('kurul');
+      return birlestir(`/${ilk === 'soru-merkezi' ? 'sorular' : 'dersler'}${k ? `/kurul${k}` : ''}`, sp, hash);
+    }
     case 'kaynak-merkezi':
       return birlestir('/kaynaklar', sp, hash);
     case 'soru-cozucu': {
@@ -167,7 +170,9 @@ export function disYol(adres: string): string {
         sp.delete('kurul');
         return birlestir(`/sorular/soru-cozucu/kurul${kurul}/${enc(slug)}`, sp, hash);
       }
-      return birlestir('/sorular/soru-cozucu', sp, hash);
+      const k = sorguKurul(sp);
+      sp.delete('kurul');
+      return birlestir(`/sorular/soru-cozucu${k ? `/kurul${k}` : ''}`, sp, hash);
     }
     case 'cikmis':
       return birlestir(`/sorular/cikmis${s[1] ? `/${s.slice(1).map(enc).join('/')}` : ''}`, sp, hash);
@@ -233,13 +238,20 @@ export function disYol(adres: string): string {
         sp.delete('kurul');
         return birlestir(`/kamplar/kurul${kurul}/en-onemliler/${enc(slug)}`, sp, hash);
       }
-      return birlestir(`${kampOnek(mevcutKampKurulu())}/en-onemliler`, sp, hash);
+      // kurul yalnız sorgudan: süzgeçsiz /en-onemliler bulunulan kurula geri dönmesin ("tümünü göster")
+      const k = sorguKurul(sp);
+      sp.delete('kurul');
+      return birlestir(`${kampOnek(k)}/en-onemliler`, sp, hash);
     }
     case 'sinav-plani':
       return birlestir('/kamplar/sinav-plani', sp, hash);
     case 'spotlar':
       if (sp.get('gorunum')) return adres; // eski /spotlar?gorunum=… ExamSpotsView'da yönlenir
-      return birlestir('/kamplar/spotlar', sp, hash);
+      {
+        const k = sorguKurul(sp);
+        sp.delete('kurul');
+        return birlestir(`${kampOnek(k)}/spotlar`, sp, hash);
+      }
     default:
       return adres;
   }
@@ -262,7 +274,7 @@ export function icYol(adres: string): string {
 
   if (ilk === 'dersler') {
     const arac = s[1];
-    if (!arac) return birlestir('/ders-merkezi', sp, hash);
+    if (!arac || kurulSeg(arac)) { koy('kurul', kurulSeg(arac)); return birlestir('/ders-merkezi', sp, hash); }
     if (arac === 'interaktif') return birlestir(`/ogren${s[2] && !kurulSeg(s[2]) ? `/${enc(s[2])}` : s[3] ? `/${enc(s[3])}` : ''}`, sp, hash);
     if (arac === 'ozetler') return birlestir(`/ozetler${s[2] ? `/${enc(s[2])}` : ''}`, sp, hash);
     if (arac === 'kartlar') return birlestir(`/kartlar${s[2] ? `/${enc(s[2])}` : ''}`, sp, hash);
@@ -285,7 +297,7 @@ export function icYol(adres: string): string {
 
   if (ilk === 'sorular') {
     const arac = s[1];
-    if (!arac) return birlestir('/soru-merkezi', sp, hash);
+    if (!arac || kurulSeg(arac)) { koy('kurul', kurulSeg(arac)); return birlestir('/soru-merkezi', sp, hash); }
     if (arac === 'soru-cozucu') {
       const k = kurulSeg(s[2]);
       if (k && s[3]) koy('brans', bransKimligi(k, s[3]) || s[3]);
@@ -327,6 +339,8 @@ export function icYol(adres: string): string {
       return birlestir('/kamp', sp, hash);
     }
     if (arac === 'checkup') {
+      // Check-up'lar şimdilik yalnız Kurul 1'de: başka kurulun check-up adresi o kurulun Check Up sekmesine (boş durum) düşer
+      if (k && k !== 1 && geri[0]) { koy('kurul', k); koy('sekme', 'checkup'); return birlestir('/kamp-merkezi', sp, hash); }
       if (geri[0] === 'patoloji') { koy('kurul', k); return birlestir('/patoloji-check-up', sp, hash); }
       if (geri[0] === 'tbg' || geri[0] === 'genetik') {
         const b = TBG_BOLUM_TERS[geri[2] || ''];
@@ -338,9 +352,10 @@ export function icYol(adres: string): string {
     }
     if (arac === 'en-onemliler') {
       if (geri[0]) koy('brans', bransKimligi(k || 1, geri[0]) || geri[0]);
+      else koy('kurul', k);
       return birlestir('/en-onemliler', sp, hash);
     }
-    if (arac === 'spotlar') return birlestir('/spotlar', sp, hash);
+    if (arac === 'spotlar') { koy('kurul', k); return birlestir('/spotlar', sp, hash); }
     if (arac === 'sinav-plani') return birlestir('/sinav-plani', sp, hash);
     koy('kurul', k);
     return birlestir('/kamp-merkezi', sp, hash);

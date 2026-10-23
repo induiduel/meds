@@ -26,6 +26,8 @@ import {
   type SpAsama, type SpDers, type SpIndex, type SpPart,
 } from './spVeri';
 import SpTest from './SpTest';
+import { KurulBos } from '../kurul/KurulSuzgec';
+import { KurulSecici, kurulIcerikVar } from '../kurul/KurulSecici';
 import '../../styles/genetik-kamp.css'; // kamp kipinin aşama çubuğu (.cd-k-cubuk) stilleri
 import '../../styles/son-prova.css';
 
@@ -82,11 +84,22 @@ export default function SonProvaView() {
   useEffect(() => { spIndexYukle(kurul).then(setIx).catch((e) => setHata(String(e?.message || e))); }, [kurul]);
   useEffect(() => { document.title = 'Son Prova · MeDSor'; }, [yol]);
 
+  const secici = <KurulSecici secili={kurul} yol={(k) => `/kamplar/kurul${k}/son-prova`} icerik={(k) => kurulIcerikVar('son_prova', k)} />;
+  // İçeriği olmayan kurul: bozuk sayfa değil, kurul seçicisiyle boş durum
+  if (!kurullar.includes(kurul)) {
+    return (
+      <div className="sp">
+        {secici}
+        <KurulBos kurul={kurul} ne="Son Prova" tumuEtiket={`Kurul ${kurullar[kurullar.length - 1] || 1} Son Prova'sına git`}
+          onTumu={() => navigateTo(`/kamplar/kurul${kurullar[kurullar.length - 1] || 1}/son-prova`)} />
+      </div>
+    );
+  }
   if (hata) return <div className="sp"><div className="sp-kart sp-bos"><p>{hata}</p></div></div>;
   if (!ix) return <div className="sp"><div className="sp-kart sp-bos"><Loader2 className="sp-don" aria-hidden /> <p>Yükleniyor…</p></div></div>;
   const ders = 'brans' in yol ? ix.dersler.find((d) => d.brans === yol.brans) : undefined;
 
-  if (yol.t === 'merkez') return <Merkez ix={ix} />;
+  if (yol.t === 'merkez') return <Merkez ix={ix} secici={secici} />;
   if (yol.t === 'deneme') {
     const d = ix.denemeler.find((x) => x.no === yol.no);
     if (!d) return <Bulunamadi />;
@@ -132,7 +145,7 @@ function Bulunamadi() {
 }
 
 /* ---------------- merkez ---------------- */
-function Merkez({ ix }: { ix: SpIndex }) {
+function Merkez({ ix, secici }: { ix: SpIndex; secici: React.ReactNode }) {
   const k = useSpKayit();
   const toplam = Object.values(ix.sinav).reduce((a, s) => a + s.soru, 0);
   const tumAsama = ix.dersler.flatMap((d) => d.partlar.flatMap((p) => p.asamalar.map((a) => `${p.key}:${a.no}`)));
@@ -140,6 +153,7 @@ function Merkez({ ix }: { ix: SpIndex }) {
   const sure = ix.dersler.reduce((a, d) => a + d.partlar.reduce((b, p) => b + p.tahminiDk, 0), 0);
   return (
     <div className="sp">
+      {secici}
       <header className="sp-bas">
         <span className="sp-ic"><Flag aria-hidden /></span>
         <div className="sp-bas-t">

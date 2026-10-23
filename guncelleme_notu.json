@@ -1,14 +1,20 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 263,
-  "baslik": "Kurul 1 sınav günü: eklenen sorular güvenle toplanıyor",
+  "onem": 264,
+  "baslik": "Kurul seçici: Kurul 1–6 arasında kolayca geçin",
   "maddeler": [
-    "Sınavdan sonra eklediğiniz sorular olduğu gibi kaydedilir; yönetici incelemesine kadar otomatik düzenleme yapılmaz."
+    "Ders çalış, Soru çöz ve Sınava hazırlan sayfalarının başında artık Kurul 1–6 sekmeleri var; açılışta takvimdeki güncel kurul seçilir, seçiminiz hatırlanır.",
+    "Sesli ders, soru çözücü, Son Prova, çıkmış çözücü, kamp, en önemliler ve sınav spotları seçtiğiniz kurulun içeriğiyle açılır; Kurul 1 içerikleri Kurul 1 sekmesinde.",
+    "Henüz içeriği hazırlanmamış kurullarda boş sayfa yerine açıklayıcı bir bilgi görünür."
   ],
-  "eklenen": [],
-  "degisen": [
-    "Sınavdan sonra eklediğiniz sorular olduğu gibi kaydedilir; yönetici incelemesine kadar otomatik düzenleme yapılmaz."
+  "eklenen": [
+    "Ders çalış, Soru çöz ve Sınava hazırlan sayfalarının başında artık Kurul 1–6 sekmeleri var; açılışta takvimdeki güncel kurul seçilir, seçiminiz hatırlanır.",
+    "Sesli ders, soru çözücü, Son Prova, çıkmış çözücü, kamp, en önemliler ve sınav spotları seçtiğiniz kurulun içeriğiyle açılır; Kurul 1 içerikleri Kurul 1 sekmesinde."
   ],
-  "duzeltilen": [],
+  "degisen": [],
+  "duzeltilen": [
+    "Henüz içeriği hazırlanmamış kurullarda boş sayfa yerine açıklayıcı bir bilgi görünür.",
+    "Çıkmış çözücü ve Son Prova başka kurulun adresinde yanlış içerik ya da hata göstermiyor."
+  ],
   "silinen": []
 }

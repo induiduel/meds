@@ -26,7 +26,8 @@ import { bittiMi, sureYaz, sesliKonuId, useKonuKaydi, useTakip } from '../../ser
 import { KonuDugmeleri, KonuIsaret, KonuSureEtiketi } from '../takip/KonuTakip';
 import '../../styles/canli-ders.css';
 import CihazdaIsaret from '../cevrimdisi/CihazdaIsaret';
-import { KurulBos, KurulHapi, kurulKimlikten, useKurulParam } from '../kurul/KurulSuzgec';
+import { KurulBos, kurulKimlikten, useKurulParam } from '../kurul/KurulSuzgec';
+import { KurulSecici } from '../kurul/KurulSecici';
 
 const fold = (s: string) =>
   s.toLocaleLowerCase('tr').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ı/g, 'i').replace(/\s+/g, ' ').trim();
@@ -162,7 +163,7 @@ function CanliDersListe() {
             {dersler && !!dersler.length && <TopluPdfDugme dersler={cevrimdisi.liste.length ? cevrimdisi.liste : dersler} />}
           </div>
         </div>
-        {kurul && <KurulHapi kurul={kurul} sayi={dersler ? cdKonuSayisi(dersler) : undefined} />}
+        <KurulSecici secili={kurul} yol={(k) => `/dersler/canliders/kurul${k}`} tumuYol="/dersler/canliders" />
         {son && gorunum === 'tum' && !q && suzgec === 'tum' && <DevamKarti d={son.d} k={son.k} />}
         <div className="cd-serit">
           <div className="cd-liste-sira">

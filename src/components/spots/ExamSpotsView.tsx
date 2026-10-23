@@ -9,7 +9,8 @@ import { ANAHTAR, KATEGORILER, Kategori, Spot, Veri, azHareket, kucuk, okuOgreni
 import { useAppearance } from '../../utils/appearance';
 import { SpotsV12 } from '../v12/SpotsV12';
 import { bransOku, bransTanim, type Brans } from './brans';
-import { KurulBos, KurulHapi, useKurulParam } from '../kurul/KurulSuzgec';
+import { KurulBos, useKurulParam } from '../kurul/KurulSuzgec';
+import { KurulSecici, kurulIcerikVar } from '../kurul/KurulSecici';
 
 /** Sınav spotlarının içerdiği kurul (veri: data/exam_spots_k1.json) */
 const SPOT_KURUL = 1;
@@ -173,7 +174,7 @@ export const ExamSpotsView: React.FC<{ gorunum?: Gorunum }> = ({ gorunum: g = 's
     return (
       <>
         <h1 className="sr-only">Sınav spotları · Kurul {kurulP}</h1>
-        <div className="kh-ust"><KurulHapi kurul={kurulP} /></div>
+        <div className="ks-ust"><KurulSecici secili={kurulP} yol={(k) => `/kamplar/kurul${k}/spotlar`} icerik={(k) => kurulIcerikVar('spots', k)} /></div>
         {kurulP === SPOT_KURUL ? (v12 ? <SpotsV12 /> : <ExamSpotsClassic />) : <KurulBos kurul={kurulP} ne="sınav spotu" />}
       </>
     );

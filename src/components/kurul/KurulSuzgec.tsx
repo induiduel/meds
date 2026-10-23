@@ -51,10 +51,10 @@ export const KurulHapi: React.FC<{ kurul: number; sayi?: number; className?: str
 );
 
 /** Süzgeç açıkken içerik yoksa gösterilen boş durum. */
-export const KurulBos: React.FC<{ kurul: number; ne: string; onTumu?: () => void }> = ({ kurul, ne, onTumu }) => (
+export const KurulBos: React.FC<{ kurul: number; ne: string; onTumu?: () => void; tumuEtiket?: string }> = ({ kurul, ne, onTumu, tumuEtiket }) => (
   <div className="kh-bos">
     <b>Kurul {kurul} için henüz {ne} yok</b>
     <p>Bu kurulun içeriği hazırlandıkça burada görünecek.</p>
-    <button type="button" className="kh-tumu" onClick={onTumu || kurulSuzgeciniKaldir}>Tüm kurulları göster</button>
+    <button type="button" className="kh-tumu" onClick={onTumu || kurulSuzgeciniKaldir}>{tumuEtiket || 'Tüm kurulları göster'}</button>
   </div>
 );
