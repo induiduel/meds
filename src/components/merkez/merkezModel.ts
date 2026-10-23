@@ -65,9 +65,9 @@ export const CHECKUPLAR: CheckUpTanim[] = [
 export interface PdfNotTanim { id: string; ad: string; alt: string; dosya: string; kurul: number; sayfa: number }
 export const PDF_NOTLAR: PdfNotTanim[] = [
   {
-    id: 'halk-sagligi-k1', kurul: 1, sayfa: 15, dosya: '/pdf/halk-sagligi-kurul1-sayisal-notlar.pdf',
+    id: 'halk-sagligi-k1', kurul: 1, sayfa: 14, dosya: '/pdf/halk-sagligi-kurul1-sayisal-notlar.pdf',
     ad: 'Halk Sağlığı: sayısal veriler ve önemli notlar',
-    alt: '7 dersin tüm slaytları + çıkmışlar; kişiler, buluşlar, sayılar tek satır halinde, çıkmışta sorulanlar işaretli',
+    alt: '7 dersin tüm slaytlarından; kişiler, buluşlar, sayılar tek satır halinde, çıkmışta sorulanlar işaretli',
   },
 ];
 
