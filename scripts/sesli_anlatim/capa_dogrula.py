@@ -14,6 +14,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from pdf_isaret import API, INDIR, KOK, Pdf, cumle_sonlari, pdf_indir  # noqa: E402
 
 ESIK = 0.7
+
+
+def _kucuk(t: str) -> str:  # Türkçe küçük harf: "İ".lower() iki karakter verir, "I" → "ı"
+    return t.replace("İ", "i").replace("I", "ı").lower()
 _op = urllib.request.build_opener(); _op.addheaders = [("User-Agent", "medsor-capa/1")]; urllib.request.install_opener(_op)
 
 
@@ -75,7 +79,7 @@ def main():
             for y in c.get("yol") or []:
                 if not (0 <= float(y.get("x", -1)) <= 1 and 0 <= float(y.get("y", -1)) <= 1):
                     H.append(f"{yer}: yol noktası 0–1 dışında")
-                if str(y.get("k", "")).lower() not in cm.lower():
+                if _kucuk(str(y.get("k", ""))) not in _kucuk(cm):
                     H.append(f"{yer}: yol ifadesi cümlede yok: {y.get('k')!r}")
             anlamsal += ok
     oran = anlamsal / max(1, toplam)

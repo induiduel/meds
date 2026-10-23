@@ -127,6 +127,26 @@ const R_ACI = ACI.length
   : null;
 const ACI_HARITA = new Map(ACI.map(([a, k]) => [a, k]));
 const YUNAN = sozluk.yunan as Record<string, string>;
+// Rakamla bitişik kısaltmalar (TP53, HER2, C3, Ki-67): sözlük harf kısmını, sayı geçişi rakamı verir → "TP 53" birleşir.
+// Harf adıyla okunan kısa biçim de ("ce üç" → "ce 3") kaynakta bitişik geçiyorsa birleşir ("C3"); "se" C yerine de okunur.
+const BITISIK = new Set((sozluk as { bitisik?: string[] }).bitisik ?? []);
+const HARF = (sozluk as { harf?: Record<string, string> }).harf ?? {};
+const HARF_ADI = Object.keys(HARF).sort((a, b) => b.length - a.length).map(esc).join('|');
+const R_BITISIK = new RegExp(`${ON}([A-Za-z]{1,6}) (\\d{1,3}[a-z]?)${SON}`, 'gu');
+const R_HARF_SAYI = HARF_ADI ? new RegExp(`${ON}((?:(?:${HARF_ADI})\\s+){0,3}(?:${HARF_ADI})) (\\d{1,3})${SON}`, 'giu') : null;
+const R_BIR = new RegExp(`${ON}([A-Z]{2,6}) bir${SON}`, 'gu');
+// anahtar: büyük harf, tiresiz ("BCL2") → kaynaktaki en sık biçim ("BCL-2")
+const BITISIK_K = new Map([...BITISIK].map((b) => [b.replace('-', '').toUpperCase(), b]));
+const BAGLAC_HARF = new Set(['ve', 'de', 'a', 'e', 'o', 'en', 'el', 'ne']);
+/** Kaynakta bitişik geçen biçim: harf adlarından gelende büyük/küçük harf duyarsız ("TH"+"2" → "Th2"), yazılı kısaltmada
+ *  harf kısmı birebir ("Her 2" birleşmez). */
+function bitistir(harf: string, n: string, duyarsiz = true): string | null {
+  for (const h of [harf, harf.replace(/^S/, 'C')]) {
+    const b = BITISIK_K.get(`${h}${n}`.toUpperCase());
+    if (b && (duyarsiz || b.startsWith(h))) return b;
+  }
+  return null;
+}
 const R_YUNAN = new RegExp(`${ON}(${Object.keys(YUNAN).join('|')})${SON}`, 'giu');
 
 function zincir(metin: string, adimlar: [RegExp | null, Fn][]): { metin: string; konum: Konum } {
@@ -179,6 +199,24 @@ export function ekranYazimiEslemeli(metin: string): { metin: string; konum: Konu
   const b = zincir(a.metin, adimlar());
   // "%15 ile 20" → "%15-20"
   const c = gecis(b.metin, /(%\d+(?:,\d+)?) ile (\d+(?:,\d+)?)(?![\d,])/gu, (_m: string, x: string, y: string) => `${x}-${y}`);
-  return { metin: c.yeni, konum: (k, bitis) => c.f(b.konum(a.konum(k, bitis), bitis), bitis) };
+  const d = zincir(c.yeni, [
+    [R_BITISIK, (m: string, h: string, n: string) => (h.length >= 2 ? bitistir(h, n, false) : null) ?? m],
+    // "BRCA bir": "bir" sayı geçişinde tek başına rakama dönmez (belgisiz sıfat); kısaltmadan sonra bitişik biçim varsa 1
+    [R_BIR, (m: string, h: string) => bitistir(h, '1', false) ?? m],
+    [R_HARF_SAYI, (m: string, adlar: string, n: string) => {
+      // baştaki bağlaçlar ("ve ce 3") kısaltmaya katılmaz; tek harf adı yalnız C (kompleman: "ce üç", "se dört")
+      const adl = adlar.split(/\s+/);
+      let i = 0;
+      while (i < adl.length - 1 && BAGLAC_HARF.has(tr(adl[i]))) i++;
+      const govde = adl.slice(i);
+      const h = govde.map((x) => HARF[tr(x)] ?? '?').join('');
+      if (h.includes('?')) return m;
+      const on = adl.slice(0, i).map((x) => x + ' ').join('');
+      if (govde.length === 1) return /^(ce|se)$/.test(tr(govde[0])) && bitistir('C', n) ? `${on}C${n}` : m;
+      // kaynakta bitişik biçim yoksa da ≥2 harf adı + sayı kısaltmadır ("ce de 138" → "CD138")
+      return on + (bitistir(h, n) ?? `${h}${n}`);
+    }],
+  ]);
+  return { metin: d.metin, konum: (k, bitis) => d.konum(c.f(b.konum(a.konum(k, bitis), bitis), bitis), bitis) };
 }
 export const ekranYazimi = (metin: string) => ekranYazimiEslemeli(metin).metin;

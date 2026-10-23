@@ -31,7 +31,16 @@ EL_ACILIM = {"doku plazminojen aktivatörü": "t-PA", "glikoprotein ib": "Gp Ib"
 # okunuşu kaynaktan türetilemeyen yazımlar (çok sözcüklü / sayı üslü; k1-51 V2, 2026-10-23)
 EL_KISALTMA = {"ce re pe": "CRP", "pe ha": "pH", "ha ı ve": "HIV", "e koli": "E. coli", "hepatit be": "hepatit B",
                "pe fimbriya": "P fimbriya", "tamm horsfall": "Tamm-Horsfall",
-               "on üzeri beş": "10⁵", "on üzeri dört": "10⁴", "on üzeri üç": "10³"}
+               "on üzeri beş": "10⁵", "on üzeri dört": "10⁴", "on üzeri üç": "10³",
+               # patoloji V2 okunuşları (2026-10-23)
+               "anka": "ANCA", "pe i ka üç ce a": "PIK3CA", "ka ras": "KRAS", "i ge a": "IgA", "i ge ge": "IgG",
+               "i ge e": "IgE", "i ge em": "IgM", "pe i üç ka": "PI3K", "pe i üç kinaz": "PI3 kinaz",
+               "e er": "ER", "pe er": "PR", "a ef pe": "AFP", "pe de el bir": "PD-L1",
+               "pe em el ra ra": "PML-RARA", "e em el dört alk": "EML4-ALK", "pe de ge ef": "PDGF", "be ce ar abl": "BCR-ABL",
+               "be ce er abl": "BCR-ABL", "ef se epsilon": "Fcε", "se te el a": "CTLA", "en a pe ku i": "NAPQI", "e te es": "ETS",
+               "be ka": "BK", "a le amiloid": "AL amiloid", "a a amiloid": "AA amiloid", "a le ve a a": "AL ve AA",
+               "pe de bir": "PD-1", "se te el a dört": "CTLA-4", "se te el a dörde": "CTLA-4'e", "se te el a dörttür": "CTLA-4'tür",
+               "ce te el a dört": "CTLA-4", "ce de kırka": "CD40'a", "ce a on dokuz dokuz": "CA 19-9", "te em pe ar es es iki": "TMPRSS2"}
 
 
 ELE = {"germinal vezikül varlığı", "tetanoz bağışıklaması", "fingolimod hidroklorür", "nitrik oksit sentaz", "glatiramer asetat"}
@@ -70,7 +79,12 @@ def main():
             anahtar = "".join(O.HARF[h] for h in heceler)
             adaylar = biçim.get(anahtar)
             if adaylar and len(heceler) >= 2 and not (len(heceler) == 2 and set(heceler) & {"o", "e", "a", "de"}):
+                # rakamlı biçim ("TP53") okunuşun ardındaki sayıyı da içerir: harf kısmı alınır, rakam sayı geçişinden gelir
+                # ve ekranda "bitisik" listesiyle birleşir ("te pe elli üç" → "TP 53" → "TP53"; eskiden "TP53 53")
                 yazim = adaylar.most_common(1)[0][0]
+                if re.search(r"\d$", yazim):
+                    alt = [t for t, _ in adaylar.most_common() if re.fullmatch(r"[A-Za-z]+", t) and sum(c.isupper() for c in t) >= 2]
+                    yazim = alt[0] if alt else re.sub(r"-?\d+$", "", yazim)
                 okun = " ".join(heceler)
                 # önceki sözcük Yunan harfiyse ("beta ha ce ge") ve kaynakta "β-hCG" geçiyorsa birlikte
                 once = O.tr_lower(es[i - 1].group(0)) if i else ""
@@ -114,7 +128,15 @@ def main():
     acilim.update(EL_ACILIM)
     kisa.update(EL_KISALTMA)
     CIKTI.parent.mkdir(parents=True, exist_ok=True)
-    veri = {"yunan": YUNAN,
+    # rakamla bitişik yazılan kısaltmalar (TP53, HER2, BRCA1, C3, CD4, Ki-67): ekranda "TP 53" → "TP53"
+    # aynı kısaltmanın en sık biçimi seçilir ("BCL-2" mi "BCL2" mi kaynaktaki sıklığa göre)
+    bsay = collections.Counter(t for t in re.findall(r"(?<![A-Za-z0-9])[A-Za-z]{1,6}-?\d{1,3}[a-z]?(?![A-Za-z0-9])", kaynak)
+                               if sum(c.isupper() for c in t) >= 1)
+    enc: dict[str, str] = {}
+    for t, _ in bsay.most_common():
+        enc.setdefault(t.replace("-", "").upper(), t)
+    bitisik = sorted(enc.values())
+    veri = {"yunan": YUNAN, "harf": O.HARF, "bitisik": bitisik,
             "kisaltma": sorted(kisa.items(), key=lambda x: -len(x[0])),
             "acilim": sorted(acilim.items(), key=lambda x: -len(x[0]))}
     CIKTI.write_text(json.dumps(veri, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")

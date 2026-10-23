@@ -1,16 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 247,
-  "baslik": "Patoloji sınav odaklı özetler: PDF işaretleri",
+  "onem": 248,
+  "baslik": "Sesli derslerde kısaltmalar ve vurgular düzeldi",
   "maddeler": [
-    "Patoloji sınav odaklı sesli özetlerinde PDF işareti artık okunan cümlenin anlattığı maddeye, tabloya ya da resme gidiyor; şema ve tablolarda ince imleç anlatılan yeri gösteriyor.",
-    "Meme Kanseri özeti asıl ders PDF'iyle (Meme Kanseri ve Moleküler Tipleri) yeniden yazıldı ve seslendirildi."
+    "Sesli ders ekranında rakamlı kısaltmalar doğru yazılıyor: TP53, HER2, BRCA1, C3, CD4, Ki-67 (eskiden 'TP53 53', 'HER2 2' gibi çift rakam ya da okunuş görünüyordu).",
+    "Patoloji sınav odaklı özetlerinin tümünde önemli cümle ve terim vurguları ile anlama göre PDF işaretleri etkin."
   ],
   "eklenen": [],
-  "degisen": [
-    "Patoloji sınav odaklı sesli özetlerinde PDF işareti artık okunan cümlenin anlattığı maddeye, tabloya ya da resme gidiyor; şema ve tablolarda ince imleç anlatılan yeri gösteriyor.",
-    "Meme Kanseri özeti asıl ders PDF'iyle (Meme Kanseri ve Moleküler Tipleri) yeniden yazıldı ve seslendirildi."
+  "degisen": [],
+  "duzeltilen": [
+    "Sesli ders ekranında rakamlı kısaltmalar doğru yazılıyor: TP53, HER2, BRCA1, C3, CD4, Ki-67 (eskiden 'TP53 53', 'HER2 2' gibi çift rakam ya da okunuş görünüyordu).",
+    "Patoloji sınav odaklı özetlerinin tümünde önemli cümle ve terim vurguları ile anlama göre PDF işaretleri etkin."
   ],
-  "duzeltilen": [],
   "silinen": []
 }
