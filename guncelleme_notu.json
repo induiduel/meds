@@ -1,16 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 248,
-  "baslik": "Sesli derslerde kısaltmalar ve vurgular düzeldi",
+  "onem": 249,
+  "baslik": "Patoloji: Sınav Odaklı Anlatım (V3)",
   "maddeler": [
-    "Sesli ders ekranında rakamlı kısaltmalar doğru yazılıyor: TP53, HER2, BRCA1, C3, CD4, Ki-67 (eskiden 'TP53 53', 'HER2 2' gibi çift rakam ya da okunuş görünüyordu).",
-    "Patoloji sınav odaklı özetlerinin tümünde önemli cümle ve terim vurguları ile anlama göre PDF işaretleri etkin."
+    "Patoloji sesli derslerine yeni V3 sürümü eklendi: slaytı sırasıyla izler, hocanın önemli maddelerinin ve çıkmış soruların tamamını konu içinde anlatır; aslının yaklaşık yarısı uzunluktadır. V2 özetler yerinde duruyor.",
+    "İlk V3 dersleri: Tromboz, Emboli-Enfarktüs-Şok, Genetik-Pediatrik-Çevresel Patoloji, Karsinojenezin Moleküler Temeli. Kelime takibi, vurgular ve PDF işaretleri etkin."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "Patoloji sesli derslerine yeni V3 sürümü eklendi: slaytı sırasıyla izler, hocanın önemli maddelerinin ve çıkmış soruların tamamını konu içinde anlatır; aslının yaklaşık yarısı uzunluktadır. V2 özetler yerinde duruyor.",
+    "İlk V3 dersleri: Tromboz, Emboli-Enfarktüs-Şok, Genetik-Pediatrik-Çevresel Patoloji, Karsinojenezin Moleküler Temeli. Kelime takibi, vurgular ve PDF işaretleri etkin."
+  ],
   "degisen": [],
-  "duzeltilen": [
-    "Sesli ders ekranında rakamlı kısaltmalar doğru yazılıyor: TP53, HER2, BRCA1, C3, CD4, Ki-67 (eskiden 'TP53 53', 'HER2 2' gibi çift rakam ya da okunuş görünüyordu).",
-    "Patoloji sınav odaklı özetlerinin tümünde önemli cümle ve terim vurguları ile anlama göre PDF işaretleri etkin."
-  ],
+  "duzeltilen": [],
   "silinen": []
 }
