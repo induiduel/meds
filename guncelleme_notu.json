@@ -1,16 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 242,
-  "baslik": "Daha hafif açılış",
+  "onem": 243,
+  "baslik": "Patoloji sesli ders: Sınav Odaklı Özet",
   "maddeler": [
-    "Müzik çalar artık yalnız müziği başlatınca yükleniyor; her açılışta gizli YouTube oynatıcısı kurulmuyor, telefon ve tablet daha az yoruluyor.",
-    "Tıbbi kavram dizini daha hızlı hazırlanıyor."
+    "Patoloji sesli derslerine (12. dersten itibaren) kısa, sınav odaklı ikinci sürüm ekleniyor: çıkmış sorular ve hocanın kalın yazdığı yerler ağırlıklı, aslının yaklaşık üçte biri uzunlukta.",
+    "İlk dersler: Tromboz, Emboli-Enfarktüs-Şok, Genetik-Pediatrik-Çevresel Patoloji, Tümör Biyolojisi. Sesleri EMA ile hazırlanıyor."
   ],
-  "eklenen": [],
-  "degisen": [
-    "Müzik çalar artık yalnız müziği başlatınca yükleniyor; her açılışta gizli YouTube oynatıcısı kurulmuyor, telefon ve tablet daha az yoruluyor.",
-    "Tıbbi kavram dizini daha hızlı hazırlanıyor."
+  "eklenen": [
+    "Patoloji sesli derslerine (12. dersten itibaren) kısa, sınav odaklı ikinci sürüm ekleniyor: çıkmış sorular ve hocanın kalın yazdığı yerler ağırlıklı, aslının yaklaşık üçte biri uzunlukta.",
+    "İlk dersler: Tromboz, Emboli-Enfarktüs-Şok, Genetik-Pediatrik-Çevresel Patoloji, Tümör Biyolojisi. Sesleri EMA ile hazırlanıyor."
   ],
+  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }
