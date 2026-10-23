@@ -151,8 +151,9 @@ def main():
         key = d["key"]
         if a.ders and key != a.ders: continue
         if a.eksik and (CIKTI / f"{key}.json").exists(): continue
-        sp = ogeler(key, d["no"], d["baslik"], spotlar, cikmislar)
-        det = json.load(urllib.request.urlopen(f"http://127.0.0.1:3000/api/canli-ders/{key}", timeout=60))
+        # V2 (sınav odaklı özet): örnek soru ve çıkmışlar asıl dersinkilerdir
+        sp = ogeler(re.sub(r"-v2$", "", key), d["no"], re.sub(r"\s*—\s*Sınav Odaklı Özet$", "", d["baslik"]), spotlar, cikmislar)
+        det = json.load(urllib.request.urlopen(urllib.request.Request(f"{os.environ.get('MEDS_API', 'http://127.0.0.1:3000')}/api/canli-ders/{key}", headers={"User-Agent": "medsor-vurgu/1"}), timeout=60))
         pars = [p for b in det["bolumler"] for p in b["paragraflar"]]
         cs = [(p["i"], s, e, p["metin"][s:e]) for p in pars for s, e in cumleler(p["metin"])]
         if not sp or not cs:

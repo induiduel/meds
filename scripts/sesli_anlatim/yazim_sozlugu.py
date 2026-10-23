@@ -28,6 +28,12 @@ EL_ACILIM = {"doku plazminojen aktivatörü": "t-PA", "glikoprotein ib": "Gp Ib"
              "von willebrand faktörü": "vWF", "insan koryonik gonadotropini": "hCG"}
 
 
+# okunuşu kaynaktan türetilemeyen yazımlar (çok sözcüklü / sayı üslü; k1-51 V2, 2026-10-23)
+EL_KISALTMA = {"ce re pe": "CRP", "pe ha": "pH", "ha ı ve": "HIV", "e koli": "E. coli", "hepatit be": "hepatit B",
+               "pe fimbriya": "P fimbriya", "tamm horsfall": "Tamm-Horsfall",
+               "on üzeri beş": "10⁵", "on üzeri dört": "10⁴", "on üzeri üç": "10³"}
+
+
 ELE = {"germinal vezikül varlığı", "tetanoz bağışıklaması", "fingolimod hidroklorür", "nitrik oksit sentaz", "glatiramer asetat"}
 
 
@@ -106,6 +112,7 @@ def main():
     for k in [k for k, v in acilim.items() if re.search(r"\d", v) or k in ELE]:
         del acilim[k]
     acilim.update(EL_ACILIM)
+    kisa.update(EL_KISALTMA)
     CIKTI.parent.mkdir(parents=True, exist_ok=True)
     veri = {"yunan": YUNAN,
             "kisaltma": sorted(kisa.items(), key=lambda x: -len(x[0])),

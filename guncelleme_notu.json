@@ -1,16 +1,19 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 245,
-  "baslik": "Patoloji sesli ders: Sınav Odaklı Özet tamamlandı",
+  "onem": 246,
+  "baslik": "Üroloji: Üriner Sistem Enfeksiyonları sınav odaklı sesli özet",
   "maddeler": [
-    "Patoloji sınav odaklı sesli özetleri tamamlandı: 12. dersten sona kadar 24 dersin hepsinde kısa ikinci sürüm var.",
-    "Son eklenenler: Uterus düz kas ve trofoblastik tümörler, Over tümörleri, Memenin benign hastalıkları, Meme kanseri, Erkek genital sistem ve prostat."
+    "Üroloji 3. ders (Üriner Sistem Enfeksiyonları) için kısa, sınav odaklı ikinci sesli ders eklendi (≈15 dk): hocanın ders kaydındaki vurgular ve 60 çıkmış sorunun tamamı.",
+    "Öğrenci notundaki işaretler (kırmızı işaret + yıldız) slaytlarda doğru satırlarda; anlatılan yer imleçle gösteriliyor.",
+    "Sesli derste kısaltmalar ekranda slayttaki gibi yazılıyor (CRP, pH, HIV, E. coli, 10⁵)."
   ],
   "eklenen": [
-    "Patoloji sınav odaklı sesli özetleri tamamlandı: 12. dersten sona kadar 24 dersin hepsinde kısa ikinci sürüm var.",
-    "Son eklenenler: Uterus düz kas ve trofoblastik tümörler, Over tümörleri, Memenin benign hastalıkları, Meme kanseri, Erkek genital sistem ve prostat."
+    "Üroloji 3. ders (Üriner Sistem Enfeksiyonları) için kısa, sınav odaklı ikinci sesli ders eklendi (≈15 dk): hocanın ders kaydındaki vurgular ve 60 çıkmış sorunun tamamı.",
+    "Öğrenci notundaki işaretler (kırmızı işaret + yıldız) slaytlarda doğru satırlarda; anlatılan yer imleçle gösteriliyor."
   ],
-  "degisen": [],
+  "degisen": [
+    "Sesli derste kısaltmalar ekranda slayttaki gibi yazılıyor (CRP, pH, HIV, E. coli, 10⁵)."
+  ],
   "duzeltilen": [],
   "silinen": []
 }
