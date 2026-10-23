@@ -1,18 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 246,
-  "baslik": "Üroloji: Üriner Sistem Enfeksiyonları sınav odaklı sesli özet",
+  "onem": 247,
+  "baslik": "Patoloji sınav odaklı özetler: PDF işaretleri",
   "maddeler": [
-    "Üroloji 3. ders (Üriner Sistem Enfeksiyonları) için kısa, sınav odaklı ikinci sesli ders eklendi (≈15 dk): hocanın ders kaydındaki vurgular ve 60 çıkmış sorunun tamamı.",
-    "Öğrenci notundaki işaretler (kırmızı işaret + yıldız) slaytlarda doğru satırlarda; anlatılan yer imleçle gösteriliyor.",
-    "Sesli derste kısaltmalar ekranda slayttaki gibi yazılıyor (CRP, pH, HIV, E. coli, 10⁵)."
+    "Patoloji sınav odaklı sesli özetlerinde PDF işareti artık okunan cümlenin anlattığı maddeye, tabloya ya da resme gidiyor; şema ve tablolarda ince imleç anlatılan yeri gösteriyor.",
+    "Meme Kanseri özeti asıl ders PDF'iyle (Meme Kanseri ve Moleküler Tipleri) yeniden yazıldı ve seslendirildi."
   ],
-  "eklenen": [
-    "Üroloji 3. ders (Üriner Sistem Enfeksiyonları) için kısa, sınav odaklı ikinci sesli ders eklendi (≈15 dk): hocanın ders kaydındaki vurgular ve 60 çıkmış sorunun tamamı.",
-    "Öğrenci notundaki işaretler (kırmızı işaret + yıldız) slaytlarda doğru satırlarda; anlatılan yer imleçle gösteriliyor."
-  ],
+  "eklenen": [],
   "degisen": [
-    "Sesli derste kısaltmalar ekranda slayttaki gibi yazılıyor (CRP, pH, HIV, E. coli, 10⁵)."
+    "Patoloji sınav odaklı sesli özetlerinde PDF işareti artık okunan cümlenin anlattığı maddeye, tabloya ya da resme gidiyor; şema ve tablolarda ince imleç anlatılan yeri gösteriyor.",
+    "Meme Kanseri özeti asıl ders PDF'iyle (Meme Kanseri ve Moleküler Tipleri) yeniden yazıldı ve seslendirildi."
   ],
   "duzeltilen": [],
   "silinen": []

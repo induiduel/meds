@@ -156,7 +156,14 @@ function deckSources(): SourcesFile {
  * Sanal desteler: birden çok dersin PDF'lerini tek destede birleştirir (sıra = dosya indeksi). TBG Sınav Kampı sesli dersi
  * altı genetik dersinin slaytlarını tek görüntüleyicide açar (data/sesli_anlatim/hizalama/k1-70-tbg-sinav-kampi.json).
  */
-export const SANAL_DESTELER: Record<string, { title: string; decks: string[] }> = {
+export const SANAL_DESTELER: Record<string, { title: string; decks: string[]; files?: SourceFile[] }> = {
+  // Sesli ders V2 (2026-10-23): Öğren destesi k1p-k1-65 eski birleşik PDF'e (33) Memenin Benign) bağlı; sınav odaklı sesli
+  // özet asıl ders PDF'iyle anlatıldı ve hizalandı.
+  'k1p-k1-65-meme-kanseri-ve-molekuler-tipleri-sesli-v2': {
+    title: 'Meme Kanseri ve Moleküler Tipleri',
+    decks: [],
+    files: [{ path: 'Kurul 1/Tıbbi Patoloji/35) Meme Kanseri ve Moleküler Tipleri.pdf', name: '35) Meme Kanseri ve Moleküler Tipleri.pdf', pages: 67, fileId: '1xtoC_Gck7KgK4YCeRMCSQqVZ8vB9Wl2g' } as SourceFile],
+  },
   'k1p-k1-70-tbg-sinav-kampi': {
     title: 'TBG Sınav Kampı',
     decks: [
@@ -178,6 +185,7 @@ export const SANAL_DESTELER: Record<string, { title: string; decks: string[] }> 
 function sanalDeste(deckId: string, decks: Record<string, DeckSourceEntry>): DeckSourceEntry | undefined {
   const s = SANAL_DESTELER[deckId];
   if (!s) return undefined;
+  if (s.files) return { title: s.title, files: s.files } as DeckSourceEntry;
   const files = s.decks.map((id) => decks[id]?.files?.[0]).filter((f): f is SourceFile => !!f);
   return files.length === s.decks.length ? { title: s.title, files } as DeckSourceEntry : undefined;
 }
