@@ -655,6 +655,8 @@ export interface IntakeDeps {
   writeback?: (raw: IntakeRaw, parse: IntakeParse, units: ParsedUnit[]) => WritebackResult;
   /** Geri doldurma için havuzdaki sorular */
   getQuestions?: () => any[];
+  /** true iken ayrıştırma ve geri yazma durur; ham girdi yine kaydedilir (havuzDondur.ts). */
+  frozen?: () => boolean;
 }
 
 export function createQuestionIntake(dataDir: string, rootDir: string, deps: IntakeDeps = {}) {
@@ -736,7 +738,7 @@ export function createQuestionIntake(dataDir: string, rootDir: string, deps: Int
   function tryWriteback(id: string) {
     const raw = raws.get(id);
     const p = parses.get(id);
-    if (!deps.writeback || !raw || !p || p.status !== 'ayristirildi') return;
+    if (!deps.writeback || !raw || !p || p.status !== 'ayristirildi' || deps.frozen?.()) return;
     const { attached } = splitUnits(raw, p);
     if (!raw.questionId || !attached.length) { setStatus(id, { geriYazma: 'yok' }); return; }
     let r: WritebackResult = 'retry';
@@ -823,7 +825,7 @@ export function createQuestionIntake(dataDir: string, rootDir: string, deps: Int
   }
 
   async function drain() {
-    if (running) return;
+    if (running || deps.frozen?.()) return;
     running = true;
     try {
       for (;;) {

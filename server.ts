@@ -161,6 +161,7 @@ import { registerDataCatalogRoutes } from './src/services/dataCatalogService.ts'
 import { registerRagRelatedRoutes } from './src/services/ragRelatedRoutes.ts';
 import { registerUserNotesRoutes, createNotesStore } from './src/services/userNotesService.ts';
 import { createQuestionIntake, formatUnitsForPrompt, applyIntakeToQuestion } from './src/services/questionIntake.ts';
+import { havuzDondurDosyasi, havuzDonduruldu } from './src/services/havuzDondur.ts';
 import { createPoolClusterService } from './src/services/poolClusterService.ts';
 import { createRecallFeedback } from './src/services/recall/feedback.ts';
 import { registerUserPushRoutes } from './src/services/userPushService.ts';
@@ -6975,8 +6976,10 @@ registerUserNotesRoutes(app, notesStore);
 
 // Serbest metin soru girişi: ham kayıt + ücretsiz Gemini ile ayrıştırma kuyruğu (src/services/questionIntake.ts).
 // Ayrıştırma bitince sonuç soru kaydına `intake` alanı olarak yazılır ve kümeler yeniden hesaplanır.
+havuzDondurDosyasi(DATA_DIR);
 const questionIntake = createQuestionIntake(DATA_DIR, __dirname, {
   getQuestions: () => db.questions,
+  frozen: havuzDonduruldu,
   writeback: (raw, parse, units) => {
     const idx = db.questions.findIndex((q) => q.id === raw.questionId);
     if (idx === -1) return 'retry'; // istemcinin PUT'u henüz gelmedi
@@ -6997,6 +7000,7 @@ const poolClusters = createPoolClusterService({
   getOrphanUnits: () => questionIntake.orphanUnits(),
   getPastQuestions: () => getPastQuestionsDb(),
   splitsFile: path.join(DATA_DIR, 'pool_cluster_splits.json'),
+  frozen: havuzDonduruldu,
 });
 questionIntake.onProcessed(() => poolClusters.schedule());
 onQuestionsSaved = () => poolClusters.schedule();
@@ -7007,7 +7011,7 @@ const recallFeedback = createRecallFeedback(DATA_DIR);
   let learnedAt = recallFeedback.count();
   let learning = false;
   const tryLearn = () => {
-    if (learning || recallFeedback.count() - learnedAt < 20) return;
+    if (learning || havuzDonduruldu() || recallFeedback.count() - learnedAt < 20) return;
     learning = true;
     const child = spawn('nice', ['-n', '15', path.join(process.env.MEDS_NODE_MODULES || path.join(__dirname, 'node_modules'), '.bin/tsx'), 'scripts/recall/learn.mts', '--write'], {
       cwd: __dirname, env: { ...process.env, CUDA_VISIBLE_DEVICES: '' }, stdio: ['ignore', 'pipe', 'pipe'],

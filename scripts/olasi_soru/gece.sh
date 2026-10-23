@@ -37,6 +37,14 @@ if son and (bugun - dt.date.fromisoformat(next(k["sinav"] for k in json.load(ope
 isaret.parent.mkdir(parents=True, exist_ok=True); isaret.write_text(json.dumps(gonderilen))
 PYEOF
 [ "$K" = 0 ] && { echo "Henüz sınavı yapılmış kurul yok; olası soru işi bekliyor"; exit 0; }
+# Havuz dondurulduysa (data/havuz_dondur.json, src/services/havuzDondur.ts) öğrenci kayıtlarına dokunulmaz: yerel ya da
+# Oracle kopyasında dondur:true varsa çık. Oracle'a ulaşılamazsa da güvenli tarafta kal (çık).
+dondu() { python3 -c "import json,sys;sys.exit(0 if json.load(sys.stdin).get('dondur') is True else 1)" 2>/dev/null; }
+if dondu < "$KOK/meds/data/havuz_dondur.json" \
+   || ssh -o ConnectTimeout=15 medsor-oracle "cat /home/ubuntu/medsor/meds/data/havuz_dondur.json 2>/dev/null || echo '{}'" | dondu \
+   || ! ssh -o ConnectTimeout=15 medsor-oracle true 2>/dev/null; then
+  echo "Havuz donduruldu (ya da Oracle'a ulaşılamadı): olası soru işi atlandı, kayıtlara dokunulmadı"; exit 0
+fi
 # Öğrenci kayıtları canlıda (Oracle) birikir: güncel kopyayı salt-okunur çek (çekilemezse DUR, eski veriyle sentez yok)
 V="$KOK/meds_temp/olasi_soru/oracle_veri"; mkdir -p "$V/question_ledger" "$V/olasi_sorular"
 U=medsor-oracle:/home/ubuntu/medsor/meds/data

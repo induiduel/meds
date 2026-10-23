@@ -366,6 +366,8 @@ export function createPoolClusterService(opts: {
   getPastQuestions?: () => any[];
   /** Yöneticinin ayırdığı çiftler (data/pool_cluster_splits.json); verilmezse ayırma kalıcı olmaz. */
   splitsFile?: string;
+  /** true iken kümeleme ve yapay zekâ birleştirmesi durur (havuzDondur.ts). */
+  frozen?: () => boolean;
 }) {
   let clusters: PoolCluster[] = [];
   try { clusters = JSON.parse(fs.readFileSync(opts.file, 'utf8')); } catch { clusters = []; }
@@ -541,7 +543,7 @@ export function createPoolClusterService(opts: {
   }
 
   async function runAi() {
-    if (aiRunning || Date.now() < aiRetryAt) return;
+    if (aiRunning || Date.now() < aiRetryAt || opts.frozen?.()) return;
     aiRunning = true;
     try {
       while (aiQueue.length) {
@@ -570,6 +572,7 @@ export function createPoolClusterService(opts: {
   /** Tek seferde tek hesap; çalışırken gelen istek bir sonraki tura birleştirilir (toplu istek artımlıyı kapsar). */
   let pendingMode: 'full' | 'incremental' | null = null;
   function runNow(mode: 'full' | 'incremental' = 'full'): Promise<void> {
+    if (opts.frozen?.()) return Promise.resolve();
     pendingMode = pendingMode === 'full' || mode === 'full' ? 'full' : 'incremental';
     if (running) { again = true; return running; }
     running = (async () => {
@@ -593,6 +596,7 @@ export function createPoolClusterService(opts: {
   let fullTimer: ReturnType<typeof setTimeout> | null = null;
   let fullDue = 0;
   function schedule(delayMs = 2_000) {
+    if (opts.frozen?.()) return;
     if (timer) clearTimeout(timer);
     timer = setTimeout(() => { timer = null; runNow(state ? 'incremental' : 'full'); }, delayMs);
     timer.unref?.();
