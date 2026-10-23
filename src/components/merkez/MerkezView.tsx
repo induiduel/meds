@@ -6,12 +6,12 @@
  * Model: merkezModel.ts · adresler: siteHaritasi.ts · stil: styles/merkez.css (.mz-*)
  */
 import React, { useEffect, useState } from 'react';
-import { ArrowRight, ChevronLeft, BookOpenText, ClipboardCheck, Flag, GraduationCap, MessageCircleQuestion } from 'lucide-react';
+import { ArrowRight, ChevronLeft, BookOpenText, ClipboardCheck, Download, FileText, Flag, GraduationCap, MessageCircleQuestion } from 'lucide-react';
 import { linkClick, navigateTo, pathFor, type AppRoute } from '../../router';
 import { KATEGORILER, icKonum, type KategoriId } from '../../siteHaritasi';
 import { NAV_ITEMS } from '../shell/navModel';
 import { aktifKurul } from '../../services/kurulTakvimi';
-import { CHECKUPLAR, MERKEZ_ARACLARI, MERKEZ_ROUTE, kategoriOf } from './merkezModel';
+import { CHECKUPLAR, MERKEZ_ARACLARI, MERKEZ_ROUTE, PDF_NOTLAR, kategoriOf } from './merkezModel';
 import '../../styles/merkez.css';
 
 export const KATEGORI_IKON: Record<KategoriId, React.ElementType> = {
@@ -117,6 +117,7 @@ export default function MerkezView({ kategori }: { kategori: KategoriId }) {
   const oneri = sekme === 'hepsi' ? araclar.find((a) => a.oner) : undefined;
   const digerleri = araclar.filter((a) => a !== oneri);
   const checkuplar = CHECKUPLAR.filter((c) => c.kurul === kurul);
+  const pdfler = PDF_NOTLAR.filter((p) => p.kurul === kurul);
   const Ic = KATEGORI_IKON[kategori];
   const kurulYol = (k: number, s: KampSekme = sekme) => `/kamplar/kurul${k}${s === 'hepsi' ? '' : `/${s}`}`;
 
@@ -181,6 +182,27 @@ export default function MerkezView({ kategori }: { kategori: KategoriId }) {
           ) : (
             <p className="mz-bos">Kurul {kurul} için henüz check-up yok; içerik hazırlandıkça burada görünecek.</p>
           )}
+        </section>
+      )}
+
+      {kampMi && (sekme === 'hepsi' || sekme === 'en-onemliler') && pdfler.length > 0 && (
+        <section className="mz-bolum" aria-labelledby="mz-pdf-h">
+          <h2 id="mz-pdf-h" className="mz-h2"><FileText aria-hidden /> PDF notlar</h2>
+          <div className="mz-izgara">
+            {pdfler.map((p) => (
+              <div key={p.id} className="mz-kart is-pdf">
+                <span className="mz-kart-ic" aria-hidden><FileText /></span>
+                <span className="mz-kart-t">
+                  <b>{p.ad}<em className="mz-surum">{p.sayfa} sayfa</em></b>
+                  <span>{p.alt}</span>
+                  <span className="mz-pdf-eylem">
+                    <a href={p.dosya} target="_blank" rel="noopener" className="mz-pdf-btn is-ana">Aç</a>
+                    <a href={p.dosya} download className="mz-pdf-btn"><Download aria-hidden /> İndir</a>
+                  </span>
+                </span>
+              </div>
+            ))}
+          </div>
         </section>
       )}
 

@@ -261,6 +261,8 @@ self.addEventListener('fetch', (event) => {
   // Çevrimdışıyken veya zayıf ağda 1.2 saniyeden uzun bekletme: doğrudan önbellekteki index.html'i ver!
   // Kısa kimlik bağlantıları (/k/k2-07-c0142) sunucuda 302 ile çözülür; uygulama kabuğu verilmez.
   if (req.mode === 'navigate' && url.pathname.startsWith('/k/')) return;
+  // İndirilebilir PDF notlar (/pdf/*.pdf): kabuk verilmez ve yanıt '/index.html' olarak önbelleğe yazılmaz.
+  if (req.mode === 'navigate' && url.pathname.startsWith('/pdf/')) return;
 
   if (req.mode === 'navigate') {
     event.respondWith(
