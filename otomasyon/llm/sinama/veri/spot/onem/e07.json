@@ -1,0 +1,841 @@
+{
+ "kod": "e07",
+ "baslik": "Sifiliz",
+ "pdf": "7)Sifiliz .pdf",
+ "ozet": "Bu ilk 10 sayfada spiroketlerin yapısal özellikleri, Treponema türleri, sifiliz bulaş yolları ve patogenezi ile birlikte primer, sekonder, latent ve tersiyer sifilizin klinik evreleri ve karakteristik lezyonları anlatılmaktadır. Bu ders parçası sekonder, latent ve tersiyer sifiliz klinik evrelerini, nörosifiliz ve kardiyovasküler tutulumları, serolojik tanı testlerinin farklarını ve penisilin tedavi protokollerini incelemektedir.",
+ "neden_onemli": "Bu dersten 16 farklı çıkmış soru 2019–2026 sınavlarında soruldu; en çok Primer Sifilizin Karakteristik Bulguları, Sekonder Sifilizin Kutanöz ve Mukozal Bulguları, Tersiyer Sifiliz ve Gom Lezyonları konuları soruluyor.",
+ "maddeler": [
+  {
+   "id": "e07-01",
+   "puan": 80,
+   "baslik": "Spiroketlerin Genel Özellikleri ve Mikroskopisi",
+   "bilgi": "Spiroketler spiral şekilli, Gram negatif benzeri duvar yapısına sahip, Gram ile iyi boyanmayan ve periplazmik aralıktaki **flajella** ile burgu hareketi yapan bakterilerdir.",
+   "alt": [
+    "Gram boyası ile iyi boyanmazlar",
+    "Karanlık alan mikroskopisi ile görülürler",
+    "Periplazmik aralıkta flajella barındırırlar"
+   ],
+   "tur": "tanim",
+   "alinti": [
+    {
+     "sayfa": 2,
+     "metin": "Spiroketler • Spiral şekilli • İnce duvar yapılı - Sitoplazmik membran - İnce peptidoglikan - Dış membran - Gram negatif hücre ile benzer duvar yapısı - Gram boyası ile iyi"
+    }
+   ],
+   "neden": "Spiroketlerin mikroskobik inceleme özellikleri ve hareket mekanizması temel mikroorganizma bilgisidir.",
+   "detay": "- **Hücre Duvarı Yapısı:** Gram negatif bakterilerle benzerlik gösterir; sitoplazmik membran, ince peptidoglikan ve dış membran katmanlarını içerir.\n- **Mikroskopi Özelliği:** Gram boyası ile iyi boyanmadıkları için standart ışık mikroskobunda direkt görünmezler; saptanmalarında karanlık alan mikroskopisi tercih edilir.\n- **Hareket Yeteneği:** Periplazmik aralıkta yer alan flajella sayesinde karakterize burgu hareketi gerçekleştirirler, bu yapıları onları diğer bakterilerden ayırır.",
+   "cikmis": [],
+   "ornek": [
+    {
+     "kok": "Spiroketlerin mikroskobik özellikleri ve hareket mekanizmaları ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Gram boyası ile kuvvetli pozitif boyanırlar",
+      "B": "Periplazmik flajellaları ile burgu hareketi yaparlar",
+      "C": "Işık mikroskopunda doğrudan kolayca incelenirler",
+      "D": "Hücre duvarında peptidoglikan tabaka bulunmaz",
+      "E": "Dış membran yapısı taşımayan tek katmanlı yapılardır"
+     },
+     "dogru": "B",
+     "zorluk": "kolay",
+     "aciklama": "Spiroketler Gram negatif benzeri duvar yapısına sahip olup periplazmik aralıktaki flajella yardımıyla burgu hareketi gerçekleştirirler; Gram ile iyi boyanmaz ve karanlık alan mikroskopisi gerektirirler.",
+     "sayfa": [
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e07-02",
+   "puan": 85,
+   "baslik": "Treponema Alttürleri ve Klinik Hastalıklar",
+   "bilgi": "Venerel sifiliz etkeni **Treponema pallidum subsp. pallidum** cinsel yolla bulaşırken, yaws, bejel ve pinta alttürleri cilt/mukoza temasıyla bulaşır.",
+   "alt": [
+    "T. pallidum subsp. pertenue: Yaws (cilt teması)",
+    "T. pallidum subsp. endemicum: Bejel (cilt, mukoza, kaplar)",
+    "Treponema carateum: Pinta (yalnız cilt tutulumu, kemik tutulumu yok)"
+   ],
+   "tur": "eslesme",
+   "alinti": [
+    {
+     "sayfa": 3,
+     "metin": "Treponema cinsi • Treponema pallidum subsp. pallidum →veneral sifiliz - Tüm dünyada yaygın - Cinsel yolla bulaş • Treponema pallidum subsp. pertenue →yaws - Tropikal Asya, Afrika, Kuzey ve Güney"
+    }
+   ],
+   "neden": "Treponema alttürlerinin coğrafi dağılımı, bulaş yolları ve kemik tutulumu farkları ayırt edici sınav sorusudur.",
+   "detay": "- **Treponema pallidum subsp. pallidum:** Venerel sifiliz etkenidir, tüm dünyada yaygındır ve cinsel yolla bulaşır.\n- **Treponema pallidum subsp. pertenue:** Yaws hastalığına yol açar; Tropikal Asya, Afrika ve Amerika'da cilt temasıyla bulaşır; cilt ve kemik tutulumu yapar.\n- **Treponema pallidum subsp. endemicum:** Bejel etkenidir; Afrika ve Orta Doğu'da temas ve kontamine kaplarla bulaşır; cilt ve kemik tutulumu gösterir.\n- **Treponema carateum:** Pinta etkenidir; Kuzey ve Güney Amerika'da görülür; cilt tutulumu vardır fakat kemik tutulumu yapmaz.",
+   "cikmis": [],
+   "ornek": [
+    {
+     "kok": "Non-venerel treponematöz enfeksiyonlar arasında yer alan Treponema carateum (pinta) hastalığını Yaws ve Bejel'den ayıran temel klinik özellik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Genital bölge şankrı oluşturması",
+      "B": "Sadece bebeklerde görülmesi",
+      "C": "VDRL testinin negatif çıkması",
+      "D": "Damlacık yoluyla bulaşması",
+      "E": "Kemik tutulumunun olmaması"
+     },
+     "dogru": "E",
+     "zorluk": "orta",
+     "aciklama": "Pinta (Treponema carateum) cilt tutulumu yapmasına rağmen Yaws ve Bejel'den farklı olarak kemik tutulumu yapmaz.",
+     "sayfa": [
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e07-03",
+   "puan": 97,
+   "baslik": "Sifilizde Bulaş Yolları",
+   "bilgi": "Sifiliz enfeksiyonu **direkt temas** (şankr, kondiloma lata), transplasental/doğum, kan transfüzyonu ve perkutan yaralanma yollarıyla bulaşır.",
+   "alt": [
+    "Cinsel ilişki sırasında lezyonlara temas ana yoldur",
+    "Transplasental geçiş gebelikte gerçekleşebilir",
+    "Damlacık yoluyla bulaş görülmez"
+   ],
+   "tur": "tuzak",
+   "alinti": [
+    {
+     "sayfa": 5,
+     "metin": "Bulaş yolları • Enfekte lezyonlara direk temas (şankr, kondiloma lata) - Cinsel ilişki • Transplasental veya doğum sırasında • Kan transfüzyonu • Perkutan yaralanma"
+    }
+   ],
+   "neden": "Sorgulanan bulaş yollarında solunum/damlacık yolunun bulunmaması klasik çeldirici tuzaktır.",
+   "detay": "- **Bulaş Mekanizmaları:** Bulaş en sık aktif enfekte lezyonlara (şankr, kondiloma lata) cinsel temas ile gerçekleşir ve hastalıklı dokuların teması temel yayılım yoludur.\n- **Diğer Bulaş Yolları:** Anneden bebeğe transplasental veya doğum esnasında temasla, enfekte kan transfüzyonuyla ve perkutan sağlık yaralanmalarıyla bulaş mümkündür.\n- **Sınav Tuzağı:** Solunum yolu, damlacık veya vektörler aracılığıyla sifiliz bulaşı kesinlikle gerçekleşmez, bu durum çeldiricilerde sıkça kullanılır.",
+   "cikmis": [
+    "k1-2023-2024-q009"
+   ],
+   "ornek": []
+  },
+  {
+   "id": "e07-04",
+   "puan": 84,
+   "baslik": "Sifiliz Patogenezi ve İnkübasyon Süresi",
+   "bilgi": "Treponema pallidum mukozadan veya bütünlüğü bozulmuş ciltten girerek perivasküler alanda çoğalır; ortalama **3 hafta** inkübasyon süresine sahiptir.",
+   "alt": [
+    "İnkübasyon süresi: 3-90 gün (genellikle 3 hafta)",
+    "Damar endotellerinde çoğalır",
+    "Kan ve lenf yoluyla tüm vücuda yayılır"
+   ],
+   "tur": "mekanizma",
+   "alinti": [
+    {
+     "sayfa": 6,
+     "metin": "Patogenez • Mukozal yüzeyden veya bütünlüğü bozulmuş ciltten girer • Giriş yerinde çoğalır • Kan ve lenf yoluyla tüm vücuda yayılır • Damar endotellerinde çoğalır, perivasküler hücrelere girer • İnkübasyon"
+    }
+   ],
+   "neden": "Patogenez adımları ve inkübasyon süreleri klinik evrelerin oluşumu açısından temel önemdedir.",
+   "detay": "- **Giriş ve Yayılım:** Bakteri sağlam görünen mukozalardan ya da mikroabrazyonlu ciltten girer, giriş yerinde yerel olarak çoğalır ve tüm vücuda yayılır.\n- **Diseminasyon:** Kısa sürede kan ve lenf damarlarına geçerek sistemik dolaşıma katılır, damar endotellerinde ve perivasküler dokularda çoğalır.\n- **Süreç:** Girişten ilk klinik bulgu olan şankr oluşumuna kadar geçen inkübasyon süresi 3 ila 90 gün arasında değişir, ortalama süre 3 haftadır.",
+   "cikmis": [],
+   "ornek": [
+    {
+     "kok": "Sifiliz patogenezi ve T. pallidum'un vücuttaki yayılımı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Giriş yeri genellikle mukoza veya bütünlüğü bozulmuş cilttir",
+      "B": "Giriş yerinde çoğaldıktan sonra kan ve lenf yoluyla yayılır",
+      "C": "Hastalığın inkübasyon süresi sıklıkla 3 yıldır",
+      "D": "Bakteriler damar endotellerinde ve perivasküler alanda çoğalır",
+      "E": "Giriş yerinde ortalama 3 hafta sonra ilk lezyon gelişir"
+     },
+     "dogru": "C",
+     "zorluk": "kolay",
+     "aciklama": "Sifilizde inkübasyon süresi 3-90 gün (genellikle 3 hafta) kadardır; 3 yıl tersiyer/geç dönem için geçerli bir süredir.",
+     "sayfa": [
+      6,
+      7
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e07-05",
+   "puan": 79,
+   "baslik": "Sifiliz Bulaş Süresine Göre Sınıflama",
+   "bilgi": "Bulaş sonrası geçen süreye göre evreler **erken sifiliz** (<1 yıl, infeksiyöz) ve **geç sifiliz** (>1 yıl, non-infeksiyöz) olarak ikiye ayrılır.",
+   "alt": [
+    "Erken Sifiliz: Primer (10-90 gün), Sekonder (4 hf - 6 ay), Erken Latent (<1 yıl)",
+    "Geç Sifiliz: Geç Latent (>1 yıl), Tersiyer (3-20 yıl)",
+    "Tersiyer Formlar: Gomatöz, Kardiyovasküler, Nörosifiliz"
+   ],
+   "tur": "siniflama",
+   "alinti": [
+    {
+     "sayfa": 7,
+     "metin": "Bulaş sonrası geçen süre Sınıflama Erken (infeksiyöz) sifiliz 10-90 gün Primer 4 hafta - 6ay Sekonder < Iyıl Erken Latent Geç (non-infeksiyöz) sifiliz atyil Geg Latent 3-20 yil Tersiyer *Gomatöz"
+    }
+   ],
+   "neden": "Bulaştırıcılık durumu ve evrelerin zamansal sınırları (1 yıl sınırı) klinik sınıflamanın temelidir.",
+   "detay": "- **Erken (İnfeksiyöz) Sifiliz:** Bulaştırıcılığın devam ettiği dönemi kapsar. Primer, sekonder ve bulaştan itibaren 1 yılı doldurmamış erken latent sifiliz bu gruptadır ve bulaş riski yüksektir.\n- **Geç (Non-infeksiyöz) Sifiliz:** Bulaşın 1 yıldan uzun olduğu durumdur. Geç latent ve 3-20 yıl içinde gelişen tersiyer sifiliz (gomatöz, kardiyovasküler, nörosifiliz) bu gruptadır.",
+   "cikmis": [],
+   "ornek": [
+    {
+     "kok": "Sifiliz sınıflamasında enfeksiyonun bulaştırıcı (infeksiyöz) kabul edildiği \"Erken Sifiliz\" dönemi için üst zaman sınırı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "1 yıl",
+      "B": "6 ay",
+      "C": "3 hafta",
+      "D": "3 yıl",
+      "E": "5 yıl"
+     },
+     "dogru": "A",
+     "zorluk": "orta",
+     "aciklama": "Bulaş sonrası 1 yıldan kısa süre 'Erken Sifiliz' (infeksiyöz) olarak adlandırılır; 1 yıldan uzun süreli durumlar ise 'Geç Sifiliz' kabul edilir.",
+     "sayfa": [
+      7
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e07-06",
+   "puan": 100,
+   "baslik": "Primer Sifilizin Karakteristik Bulguları",
+   "bilgi": "Primer sifilizde bulaş yerinde ağrısız, sert tabanlı **şankr** ve bundan 1 hafta sonra gelişen ağrısız bölgesel lenfadenopati görülür.",
+   "alt": [
+    "Şankr yüksek oranda bulaştırıcıdır",
+    "Şankr yaklaşık 1 ay içinde tedavisiz iyileşir",
+    "Bölgesel LAP ağrısızdır ve daha uzun sebat eder",
+    "Yaklaşık 3'te 2'si kendiliğinden iyileşir"
+   ],
+   "tur": "karakteristik",
+   "alinti": [
+    {
+     "sayfa": 8,
+     "metin": "Primer sifiliz • Yaklaşık 3 hafta inkübasyon sonrası şankr (ağrısız ülser) → bulaştırıcı • Şankrdan 1 hafta sonra ağrısız bölgesel LAP • Yaklaşık 1 ay içinde şankr iyileşir • LAP"
+    }
+   ],
+   "neden": "Ağrısız şankr ve ağrısız LAP kombinasyonu defalarca çıkmış sorularda ve vaka sorularında sorulmuştur.",
+   "detay": "- **Şankr Özellikleri:** İnkübasyondan sonra bakteri giriş yerinde (genital mukoza, penis, labia vb.) oluşan, ağrısız, sert tabanlı, oldukça bulaştırıcı bir ülseratif lezyondur.\n- **Lenfadenopati:** Şankrın belirmesinden 1 hafta sonra bölgesel lenf nodlarında ağrısız büyüme (LAP) gerçekleşir ve hastada ağrı hissi oluşturmaz.\n- **Seyir:** Şankr yaklaşık 1 ay içerisinde kendiliğinden iyileşir ancak LAP daha uzun süre kalabilir. Vakaların yaklaşık 2/3'si bu dönemde tedavisiz iyileşme gösterir.",
+   "cikmis": [
+    "k1-2021-2022-q013",
+    "k1-2019-2020-q005",
+    "k1-2019-2020-q067",
+    "past-1790877041564-499994",
+    "k1-2021-2022-q020"
+   ],
+   "ornek": []
+  },
+  {
+   "id": "e07-07",
+   "puan": 93,
+   "baslik": "Sekonder Sifilizin Kutanöz ve Mukozal Bulguları",
+   "bilgi": "Sekonder sifilizde kaşıntısız, simetrik döküntüler ve **avuç içi-ayak tabanı** tutulumu ile mukoza ve kıvrım yerlerinde bulaştırıcı kondiloma lata görülür.",
+   "alt": [
+    "Şankrdan 2-8 hafta (24 haftaya kadar) sonra gelişir",
+    "Tipik döküntüler kaşıntısız, simetrik, bilateral ve yaygındır",
+    "El ve ayak tabanındaki döküntüler sifilizi özellikle düşündürmelidir",
+    "Kondiloma lata: Vulva, perine, meme altında gri-beyaz bulaştırıcı lezyonlar"
+   ],
+   "tur": "karakteristik",
+   "alinti": [
+    {
+     "sayfa": 9,
+     "metin": "Sekonder sifiliz • Genellikle şankr oluşumundan 2-8 hafta sonra (24 haftaya kadar uzayabilir) • En sık cilt lezyonları görülür (maküler, makülopapüler, püstüler, psoriatik) • Mukoza tutulumları - Tipik cilt lezyonları"
+    }
+   ],
+   "neden": "El ayası/ayak tabanı döküntüleri ve kondiloma lata sekonder sifilizin en belirgin sınav soru odaklarıdır.",
+   "detay": "- **Döküntü Özellikleri:** En sık klinik bulgu cilt lezyonlarıdır. Lezyonlar kaşıntısız, bilateral, simetrik ve yaygındır (maküler, papüler, püstüler çeşitleri bulunur).\n- **Özgül Bölgeler:** Avuç içi (el ayası) ve ayak tabanında görülen döküntüler sifilizin karakteristik bulgusudur ve klinik şüphe uyandırmalıdır.\n- **Mukoza ve Kıvrım Bölgeleri:** Ağız ve genital mukoza eritemli gri-beyaz lezyonlar içerir. Perine, vulva, skrotum ve meme altı gibi nemli alanlarda oluşan gri-beyaz verrüköz papüller **kondiloma lata** olarak adlandırılır ve yüksek derecede bulaştırıcıdır.",
+   "cikmis": [
+    "84eda84539cb",
+    "k1-2025-2026-q021"
+   ],
+   "ornek": []
+  },
+  {
+   "id": "e07-08",
+   "puan": 83,
+   "baslik": "Sekonder Sifilizin Sistemik Organ Tutulumları",
+   "bilgi": "Sekonder sifilizin yaygın spiroketemi evresinde döküntülere **hepatit**, menenjit ve glomerülonefrit gibi organ tutulumları eşlik edebilir.",
+   "alt": [
+    "Menenjit gelişebilir",
+    "Hepatit ve karaciğer tutulumu görülebilir",
+    "Glomerülonefrit tablosu eşlik edebilir"
+   ],
+   "tur": "tani_tedavi",
+   "alinti": [
+    {
+     "sayfa": 7,
+     "metin": "Secondary syphilis Tertia syphilis"
+    },
+    {
+     "sayfa": 7,
+     "metin": "No symptoms: Average Chancre: May be at Rash: May be incubation period is 3 site of inoculation— accompanied weeks. for example, on penis, by hepatitis, labia, or vagina. meningitis, or"
+    }
+   ],
+   "neden": "Sekonder dönemin sadece deriden ibaret olmadığını ve sistemik organ tutulumları yapabileceğini bilmek ayırıcı tanı için önemlidir.",
+   "detay": "- **Sistemik Döküntü ve Organ Tutulumu:** Sekonder sifiliz sırasında bakterinin hematojen yayılımına bağlı olarak döküntüler dışında organlarda da lezyonlar belirebilir ve tablo genişleyebilir.\n- **Klinik Tablolar:** Klinik seyre santral sinir sistemi tutulumuna bağlı menenjit, karaciğer tutulumuna bağlı hepatit veya immün kompleks birikimine bağlı glomerülonefrit tabloları eklenebilir. Bu bulgular spiroketemiye ikincil olarak gelişir.",
+   "cikmis": [],
+   "ornek": [
+    {
+     "kok": "Sekonder sifilizin yaygın spiroketemi döneminde ortaya çıkabilecek sistemik organ tutulumları arasında aşağıdakilerden hangisi yer alır?",
+     "secenekler": {
+      "A": "Gom lezyonu",
+      "B": "Aort anevrizması",
+      "C": "Tabes dorsalis",
+      "D": "Hepatit",
+      "E": "Hutchinson dişleri"
+     },
+     "dogru": "D",
+     "zorluk": "orta",
+     "aciklama": "Menenjit, hepatit ve glomerülonefrit sekonder sifilizdeki hematojen yayılım sırasında görülebilecek sistemik tutulumlardır; aort anevrizması, tabes dorsalis ve gom ise geç dönem bulgularıdır.",
+     "sayfa": [
+      7
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e07-09",
+   "puan": 70,
+   "baslik": "Latent Sifiliz ve Klinik Seyri",
+   "bilgi": "Latent sifiliz, serolojik testlerin pozitif olduğu ancak hiçbir **klinik belirti** bulunmadığı evredir.",
+   "alt": [
+    "Asemptomatik seyreder",
+    "Erken latent dönemde sekonder evreye nüksler görülebilir",
+    "Serolojik testler pozitif kalmaya devam eder"
+   ],
+   "tur": "tanim",
+   "alinti": [
+    {
+     "sayfa": 7,
+     "metin": "Asymptomatic Reversion to secondary stage Latent syphilis >"
+    },
+    {
+     "sayfa": 7,
+     "metin": "No symptoms: Average Chancre: May be at Rash: May be"
+    },
+    {
+     "sayfa": 7,
+     "metin": "< Iyıl Erken Latent"
+    }
+   ],
+   "neden": "Latent dönemin asemptomatik doğası ve evreler arası geçiş mekanizması soru değeri taşır.",
+   "detay": "- **Tanım:** Klinik olarak aktif lezyonu olmayan ancak serolojik olarak enfeksiyonun varlığı kanıtlanan ve hastada belirti vermeyen evredir.\n- **Klinik Özellikler:** Hastada hiçbir semptom veya fiziki muayene bulgusu yoktur. Erken latent sifiliz döneminde sekonder sifiliz bulgularına geri dönüş yaşanabilir ancak seroloji pozitiftir.",
+   "cikmis": [],
+   "ornek": [
+    {
+     "kok": "Sifiliz enfeksiyonunda serolojik testlerin pozitif bulunmasına rağmen hastada hiçbir klinik lezyon veya semptomun saptanmadığı evre aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Primer sifiliz",
+      "B": "Latent sifiliz",
+      "C": "Sekonder sifiliz",
+      "D": "Tersiyer sifiliz",
+      "E": "Nörosifiliz"
+     },
+     "dogru": "B",
+     "zorluk": "orta",
+     "aciklama": "Latent sifiliz dönemi tamamen asemptomatik seyreder, lezyon bulunmaz ancak serolojik testler pozitiftir.",
+     "sayfa": [
+      7
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e07-10",
+   "puan": 81,
+   "baslik": "Geç Sifiliz Formları ve Organ Tutulumları",
+   "bilgi": "Enfeksiyondan 3-20 yıl sonra ortaya çıkan tersiyer sifiliz **gomatöz**, kardiyovasküler ve nörosifiliz klinik formlarında gelişir.",
+   "alt": [
+    "Tersiyer sifiliz non-infeksiyöz kabul edilir",
+    "Enfeksiyondan 3 ila 20 yıl sonra belirir",
+    "Destrüktif gomatöz lezyonlar içerebilir"
+   ],
+   "tur": "siniflama",
+   "alinti": [
+    {
+     "sayfa": 7,
+     "metin": "Tertia syphilis No symptoms: Average Chancre: May be at Rash: May be"
+    },
+    {
+     "sayfa": 7,
+     "metin": "Geç (non-infeksiyöz) sifiliz atyil Geg Latent"
+    },
+    {
+     "sayfa": 7,
+     "metin": "3-20 yil Tersiyer *Gomatöz *Kardiyovasküler *Nörosifiliz"
+    }
+   ],
+   "neden": "Tersiyer sifilizin başlangıç süresi ve organ tutulum türleri sınavlarda klinik evre ayırımı için sorulur.",
+   "detay": "- **Tersiyer Dönem:** Bulaştan 3 ila 20 yıl sonra gelişen, bulaştırıcılığı olmayan (non-infeksiyöz) geç sifiliz evresidir ve uzun vadeli doku hasarları ile karakterizedir.\n- **Klinik Şekiller:** Dokularda yıkıcı granülomatöz reaksiyonlarla seyreden Gomatöz Sifiliz, damar tutulumuyla seyreden Kardiyovasküler Sifiliz ve santral sinir sistemini etkileyen Nörosifiliz olmak üzere başlıca 3 formda görülür.",
+   "cikmis": [],
+   "ornek": [
+    {
+     "kok": "Tersiyer sifiliz ile ilgili aşağıdaki ifadelerden hangisidir?",
+     "secenekler": {
+      "A": "Enfekte lezyon teması ile bulaştırıcılığı son derece yüksektir",
+      "B": "Primer şankr ortaya çıktıktan tam 1 hafta sonra başlar",
+      "C": "Tanısında karanlık alan mikroskopisi ilk tercih yöntemdir",
+      "D": "Sadece el ayası ve ayak tabanlarında döküntüyle karakterizedir",
+      "E": "Bulaş sonrasında 3-20 yıl içinde gelişen non-infeksiyöz dönemdir"
+     },
+     "dogru": "E",
+     "zorluk": "orta",
+     "aciklama": "Tersiyer sifiliz bulaştan 3-20 yıl sonra gelişen geç (non-infeksiyöz) sifiliz dönemidir.",
+     "sayfa": [
+      7
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e07-11",
+   "puan": 87,
+   "baslik": "Kondiloma Lata ve Kondiloma Aküminata Ayrımı",
+   "bilgi": "Sekonder sifilizde görülen **kondiloma lata** geniş, düz, gri-beyaz ve bulaştırıcı iken; HPV enfeksiyonunda görülen kondiloma aküminata siğilsi yapıdadır.",
+   "alt": [
+    "Kondiloma lata: Sekonder sifiliz lezyonudur",
+    "Meme altı, perine, vulva ve skrotumda yerleşir",
+    "Oldukça bulaştırıcı gri-beyaz maküler/papüler/verrüköz lezyonlardır"
+   ],
+   "tur": "tuzak",
+   "alinti": [
+    {
+     "sayfa": 9,
+     "metin": "- Vulva, skrotum, perine, meme altında gri-beyaz maküler, papüler veya verrüköz lezyonlar (kondiloma lata) → bulaştırıcı"
+    },
+    {
+     "sayfa": 10,
+     "metin": "- Vulva, skrotum, perine, meme altında gri-beyaz maküler, papüler veya verrüköz lezyonlar (kondiloma lata) → bulaştırıcı"
+    }
+   ],
+   "neden": "Çıkmış soruda kondiloma aküminata terimi çeldirici olarak kullanılmış, ikisinin ayrımı sınavlarda sıklıkla sorulmuştur.",
+   "detay": "- **Kondiloma Lata Özellikleri:** Sekonder sifilizin tipik anogenital ve kıvrım bölgesi lezyonudur. Gri-beyaz renkli, hafif kabarık, nemli, oldukça bulaştırıcı lezyonlardır.\n- **Klasik Sınav Tuzağı:** HPV enfeksiyonunda görülen 'kondiloma aküminata' (genital siğil) ile sifilizde görülen 'kondiloma lata' sıkça karıştırılır. Kondiloma aküminata sifiliz bulgusu olmayıp viral etkenlidir.",
+   "cikmis": [],
+   "ornek": [
+    {
+     "kok": "Anogenital bölgede geniş tabanlı, nemli, gri-beyaz renkli, oldukça bulaştırıcı lezyonlar saptanan ve sekonder sifiliz düşünülerek takibe alınan bir hastadaki spesifik lezyon ile bu lezyonu taklit eden viral klinik tablo eşleştirmesi hangisidir?\n\nI. Sifilizdeki Lezyon: Kondiloma lata\nII. Sifilizdeki Lezyon: Kondiloma aküminata\nIII. Karıştırılan Viral Etken: HPV\nIV. Karıştırılan Viral Etken: HSV?",
+     "secenekler": {
+      "A": "II ve III",
+      "B": "I ve IV",
+      "C": "I ve III",
+      "D": "II ve IV",
+      "E": "Yalnız I"
+     },
+     "dogru": "C",
+     "zorluk": "zor",
+     "aciklama": "Sekonder sifilizdeki bulaştırıcı genital lezyon 'kondiloma lata'dır. HPV'nin neden olduğu 'kondiloma aküminata' ile sıklıkla çeldirici olarak karıştırılır.",
+     "sayfa": [
+      9,
+      10
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e07-12",
+   "puan": 89,
+   "baslik": "Sekonder Sifiliz Sistemik ve Organ Tutulumları",
+   "bilgi": "Sekonder sifilizde kıl folikülü tutulumu ile toksik alopesi, lenfadenopati ve **akut nörosifiliz** tablosunda en sık 7 ve 8. kafa çifti tutulumları görülür.",
+   "alt": [
+    "Kıl foliküllerinin tutulumu ile kaşlarda dökülme ve toksik alopesi gelişir.",
+    "Epitroklear lenfadenopati görüldüğünde özellikle sifiliz düşünülmelidir.",
+    "Sistemik belirtiler ateş, halsizlik, kilo kaybı, farenjit ve artraljidir.",
+    "Akut nörosifilizde baş ağrısı, kusma, ense sertliği ve en sık 7 ve 8. kafa çifti tutulumu olur."
+   ],
+   "tur": "karakteristik",
+   "alinti": [
+    {
+     "sayfa": 11,
+     "metin": "- SSS tutulumu (akut nörosifiliz): baş ağrısı, kusma ve ense sertliği ile menenjit veya KS tutulumları (en sık 7 ve 8)"
+    }
+   ],
+   "neden": "Çıkmış sınavlarda sekonder ve tersiyer evre bulgularının ayrımı sıklıkla sorulmaktadır.",
+   "detay": "- **Kıl ve Lenf Nod Tutulumu:** Sekonder sifilizde kıl folikülleri tutularak kaşlarda dökülme ve toksik alopesi ortaya çıkar. Inguinal, servikal, submental, aksiller LAP yanında özellikle epitroklear LAP varlığı sifiliz açısından uyarıcıdır.\n- **Sistemik ve Organ Tutulumları:** Ateş, halsizlik, kilo kaybı, farenjit, artralji gibi sistemik bulguların yanı sıra hepatit, üveit, sinovit, osteit, glomerülonefrit ve SSS tutulumu görülebilir.\n- **Akut Nörosifiliz:** Baş ağrısı, kusma, ense sertliği ile seyreden menenjit ve kafa çifti tutulumları gelişebilir. En sık etkilenen kafa çiftleri 7 ve 8'dir.",
+   "cikmis": [
+    "d3-k1-enf-019"
+   ],
+   "ornek": [
+    {
+     "kok": "Sekonder sifiliz tanısıyla takip edilen bir hastada gelişen akut nörosifiliz tablosunda en sık etkilenen kafa çiftleri aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "7 ve 8",
+      "B": "5 ve 6",
+      "C": "3 ve 4",
+      "D": "9 ve 10",
+      "E": "11 ve 12"
+     },
+     "dogru": "A",
+     "zorluk": "kolay",
+     "aciklama": "Sekonder sifilizin organ tutulumları arasında yer alan akut nörosifilizde kafa çifti tutulumları görülebilir ve en sık 7 ile 8. kafa çiftleri etkilenir.",
+     "sayfa": [
+      11
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e07-13",
+   "puan": 59,
+   "baslik": "Latent Sifiliz Evresi ve Relaps Özellikleri",
+   "bilgi": "Sekonder sifiliz bulgularının kaybolmasıyla başlayan **latent sifiliz** asemptomatik seyreder ve relapslar en sık ilk 1 yılda mukokutanöz bulgularla gelişir.",
+   "alt": [
+    "İlk 1 yıl erken latent dönem, 1 yıldan sonrası geç latent dönemdir.",
+    "Relapsların %75-90 kadarı hastalığın ilk 1 yılında gerçekleşir.",
+    "Latent dönem 3-30 yıl sürebilir.",
+    "Olguların %60-70 kadarında latent dönem ömür boyu sürebilir."
+   ],
+   "tur": "siniflama",
+   "alinti": [
+    {
+     "sayfa": 12,
+     "metin": "• Hastalığın ilk 4 yılında sekonder sifiliz relapsları gelişebilir (%75-90 ilk yılda) - En sık mukokutanöz bulgularla relaps"
+    }
+   ],
+   "neden": "Semptomsuz seyreden ancak nüks riski barındıran latent evrenin süre sınırları ve relaps oranları klasik sınav sorusu niteliğindedir.",
+   "detay": "- **Tanım:** Sekonder sifiliz klinik bulgularının gerilemesinden tersiyer sifiliz bulgularının çıkışına kadar geçen klinik olarak asemptomatik evredir.\n- **Sınıflama:** İlk 1 yıl erken latent dönem, 1 yıldan uzun süren dönem ise geç latent dönem olarak adlandırılır.\n- **Relaps ve Seyir:** Hastalığın ilk 4 yılında sekonder relapslar görülebilir; bu relapsların %75-90'ı ilk 1 yıl içerisinde ve en sık mukokutanöz bulgularla ortaya çıkar. Latent dönem 3-30 yıl sürebileceği gibi olguların %60-70'inde ömür boyu kalıcı olabilir.",
+   "cikmis": [
+    "k1-2020-2021-b-q025"
+   ],
+   "ornek": [
+    {
+     "kok": "Latent sifiliz dönemi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Dönem boyunca hasta tamamen asemptomatiktir",
+      "B": "İlk 1 yıl erken latent dönem olarak adlandırılır",
+      "C": "Relapsların büyük kısmı ilk yıl içinde görülür",
+      "D": "Olguların tamamında hastalık 3 yıl içinde ilerler",
+      "E": "Latent dönem 3-30 yıl sürebilir"
+     },
+     "dogru": "D",
+     "zorluk": "orta",
+     "aciklama": "Latent dönem olguların %60-70'inde ömür boyu sürebilir, tamamında 3 yıl içinde ilerleme görülmez.",
+     "sayfa": [
+      12
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e07-14",
+   "puan": 82,
+   "baslik": "Tersiyer Sifiliz ve Gom Lezyonları",
+   "bilgi": "Tersiyer sifilizin tipik granülomatöz lezyonu olan **gom**, genellikle bakteri içermeyen tip IV aşırı duyarlılık reaksiyonu sonucu gelişir.",
+   "alt": [
+    "Gom genellikle bakteri içermeyen tip IV aşırı duyarlılık sonucu oluşur.",
+    "En sık cilt, kemik ve karaciğerde gözlenir.",
+    "Kemik tutulumunda gece ağrıları ve lokal hassasiyet olur.",
+    "Karaciğer tutulumu sarılık, karaciğer yetmezliği ve siroza yol açabilir."
+   ],
+   "tur": "karakteristik",
+   "alinti": [
+    {
+     "sayfa": 13,
+     "metin": "- Genellikle bakteri içermeyen tip IV aşırı duyarlılık sonucu gelişen granülomlar - Tüm doku ve organlarda olabilir ancak genellikle cilt, kemik ve karaciğerde"
+    }
+   ],
+   "neden": "Gom lezyonunun immünolojik mekanizması ve yerleşim yerleri sınavlarda doğrudan sorulmaktadır.",
+   "detay": "- **Mekanizma:** Gom lezyonları, dokularda bakteri içermeyen veya çok az bakteri barındıran, tip IV aşırı duyarlılık reaksiyonu gelişimiyle oluşan yıkıcı granülomlardır.\n- **Klinik Yerleşim:** Tüm organlarda gelişebilmekle birlikte en sık cilt, kemik ve karaciğer tutulur.\n- **Kemik ve Organ Bulguları:** Kemiklerden sıklıkla tibia, fibula, klavikula ve kraniyum etkilenerek gece ağrıları ile lokal hassasiyete neden olur. Karaciğerde ise sarılık, karaciğer yetmezliği ve siroz tablosu oluşturabilir.",
+   "cikmis": [
+    "522fba66356c",
+    "past-1790877492618-37520"
+   ],
+   "ornek": []
+  },
+  {
+   "id": "e07-15",
+   "puan": 86,
+   "baslik": "Kronik Nörosifiliz Klinik Formları",
+   "bilgi": "Tersiyer dönemde kronik nörosifilizin en sık formu **asemptomatik** tip olup, parankimatöz tutulumda Tabes dorsalis ve genel parezi gelişir.",
+   "alt": [
+    "Asemptomatik nörosifiliz en sık görülen tiptir.",
+    "Meningovasküler sifiliste damar tutulumuna bağlı kişilik değişikliği görülür.",
+    "Tabes dorsalis, spinal kord dorsal kök gangliyonlarının tutulumu ile ataksi ve Romberg belirtisi verir.",
+    "Genel parezi nöron hasarı sonucu gelişen demans ve unutkanlık ile seyreder."
+   ],
+   "tur": "siniflama",
+   "alinti": [
+    {
+     "sayfa": 14,
+     "metin": "- Asemptomatik: en sık tip - Meningovasküler sifiliz: beyin, spinal kord ve meningslerin damarlarının tutulumu; kişilik"
+    }
+   ],
+   "neden": "Nörosifiliz alt tiplerine ait karakteristik nörolojik klinik bulgular ayırt edici soru potansiyeline sahiptir.",
+   "detay": "- **Asemptomatik Nörosifiliz:** En sık görülen nörosifiliz formudur.\n- **Meningovasküler Sifiliz:** Beyin, spinal kord ve meningslerin damarlarının tutulmasıyla seyreder; kişilik değişikliği, baş ağrısı ve paraliziye yol açar.\n- **Parankimatöz Nörosifiliz:** Nöron hasarı ve demiyelinizasyon ile karakterizedir. Tabes dorsalis, spinal kord dorsal kök gangliyonlarının tutulmasıyla parezi, parestezi, düşük ayak, ataksi ve Romberg belirtisi tablosu oluşturur. Genel parezi ise irritabilite, kişilik değişikliği, baş ağrısı, unutkanlık, depresyon ve demans tablosu ile belirgindir.",
+   "cikmis": [],
+   "ornek": [
+    {
+     "kok": "Spinal kord dorsal kök gangliyonlarının tutulumu sonucu parestezi, düşük ayak, ataksi ve Romberg belirtisi ile seyreden nörosifiliz formu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Meningovasküler sifiliz",
+      "B": "Tabes dorsalis",
+      "C": "Genel parezi",
+      "D": "Akut sifilitik menenjit",
+      "E": "Asemptomatik nörosifiliz"
+     },
+     "dogru": "B",
+     "zorluk": "orta",
+     "aciklama": "Tabes dorsalis, parankimatöz nörosifiliz çatısı altında dorsal kök gangliyonlarının tutulmasıyla karakterize olup ataksi, düşük ayak ve Romberg belirtisi verir.",
+     "sayfa": [
+      14
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e07-16",
+   "puan": 50,
+   "baslik": "Kardiyovasküler Sifiliz ve Bulaştırıcılık Özelliği",
+   "bilgi": "Kardiyovasküler sifiliste temel patoloji vasa vasorumların **endarteritis obliterans** gelişimidir ve bu dönemde bulaştırıcılık yoktur.",
+   "alt": [
+    "Endarteritis obliterans damar oklüzyonuna neden olur.",
+    "Sıklıkla çıkan aort tutulur ve kalsifikasyon görülebilir.",
+    "Aort anevrizması ve aort yetmezliği gelişir.",
+    "Tersiyer kardiyovasküler sifiliz döneminde bulaştırıcılık yoktur."
+   ],
+   "tur": "mekanizma",
+   "alinti": [
+    {
+     "sayfa": 15,
+     "metin": "- Endarteritis obliterans: endotelin iç tabakasının enflamasyonu sonucu damar oklüzyonu - Sıklıkla çıkan aort tutulumu, kalsifikasyon (grafilerde görülebilir)"
+    }
+   ],
+   "neden": "Kardiyovasküler tutulumun damar patolojisi ve tersiyer evredeki bulaştırıcılık durumu çeldiricilerde sıklıkla kullanılır.",
+   "detay": "- **Patoloji:** Kardiyovasküler sifilizin temel mekanizması, endotelin iç tabakasının enflamasyonu ve damar oklüzyonu ile karakterize endarteritis obliterans durumudur.\n- **Klinik Sonuçlar:** En sık çıkan aort tutulur; direkt grafilerde kalsifikasyonlar saptanabilir. Aort anevrizması, aort yetmezliği ve koroner tutuluma bağlı anjina tablosu ortaya çıkar.\n- **Bulaştırıcılık:** Tersiyer sifiliz evresinde bulunan hastaların bulaştırıcılık özelliği tamamen kaybolmuştur.",
+   "cikmis": [
+    "55880e6415f8"
+   ],
+   "ornek": []
+  },
+  {
+   "id": "e07-17",
+   "puan": 69,
+   "baslik": "Sifiliz Tanı Yöntemleri Genel Sınıflaması",
+   "bilgi": "Sifiliz tanısında direk incelemede **karanlık saha mikroskobisi**, serolojide ise spesifik ve spesifik olmayan testler kullanılır.",
+   "alt": [
+    "Karanlık saha mikroskobisi şankr ve mukozal lezyonlardan yapılır.",
+    "Spesifik olmayan testler VDRL ve RPR'dir.",
+    "Spesifik testler TPHA ve FTA-ABS'dir.",
+    "Moleküler tanıda PCR yöntemi kullanılır."
+   ],
+   "tur": "tani_tedavi",
+   "alinti": [
+    {
+     "sayfa": 16,
+     "metin": "Karanlık saha mikroskobisi • Şankr, kondiloma lata ve mukozal lezyonlardan seröz akıntının incelenmesi"
+    }
+   ],
+   "neden": "Tanı yöntemlerinin hangi kategoride yer aldığını bilmek temel mikrobiyoloji ve klinik sorularını çözdürür.",
+   "detay": "- **Direk İnceleme Yöntemleri:** Canlı spiroketlerin doğrudan gösterilmesi amacıyla primer evrede şankr, sekonder evrede kondiloma lata ve mukozal lezyonların seröz akıntısı karanlık saha mikroskobu ile incelenir.\n- **Serolojik Testler:** Sifiliz tanısında antikor varlığını saptamak üzere iki ana serolojik test grubu kullanılır. Bunlar kardiyolipin antijenlerine bakan spesifik olmayan testler ve bakteri antijenlerine bakan spesifik testlerdir.\n- **Moleküler Yöntemler:** Tanı sürecinde duyarlılığı artırmak için PCR gibi moleküler testler de laboratuvar koşullarında tercih edilebilir.",
+   "cikmis": [
+    "k1-2019-2020-q017"
+   ],
+   "ornek": []
+  },
+  {
+   "id": "e07-18",
+   "puan": 90,
+   "baslik": "Spesifik Olmayan (Nontreponemal) Serolojik Testler",
+   "bilgi": "Spesifik olmayan testler doku hasarıyla salınan **kardiyolipin-lesitin-kolesterol** antijenlerine karşı oluşan antikorları saptar ve tedavi takibinde kullanılır.",
+   "alt": [
+    "Bakterinin kendisine karşı oluşan antikorları tespit etmez.",
+    "VDRL ve RPR bu gruptadır.",
+    "Tarama testi, tedavi takibi ve nörosifiliz tanısında kullanılır.",
+    "Tedavi ile 1-2 yıl içinde negatifleştiği için tedavi takibinde kullanılır."
+   ],
+   "tur": "tani_tedavi",
+   "alinti": [
+    {
+     "sayfa": 17,
+     "metin": "• Bakterinin verdiği hasar sonucu dokudan kardiyolipin-lesitin-kolestrol antijenleri salınır"
+    }
+   ],
+   "neden": "VDRL ve RPR'nin antijen yapısı ile tedavi takibindeki kullanım değerini ölçen sorular sürekli karşımıza çıkar.",
+   "detay": "- **Etki Mekanizması ve Antijen Yapısı:** Spesifik olmayan nontreponemal testler, spiroketin doğrudan kendisine karşı oluşan antikorları değil, enfeksiyon sürecinde doku hasarı sonucu açığa çıkan kardiyolipin, lesitin ve kolesterol bileşenli içsel antijenlere karşı gelişen IgM ve IgG yapısındaki antikorları saptar.\n- **Kullanım Alanları ve Tedavi Takibi:** Toplum taramalarında, nörosifiliz vakalarının tetkikinde ve özellikle tedavi etkinliğinin izlenmesinde temel rol oynar. Primer ve sekonder dönemlerde pozitifleşen bu testler, başarılı bir antibiyotik tedavisi sonrasında bir ila iki yıl içinde negatifleştiği için tedavi takibinde güvenle kullanılır.",
+   "cikmis": [
+    "past-1790877460395-121656",
+    "past-1790877464398-851174"
+   ],
+   "ornek": [
+    {
+     "kok": "Sifiliz şüphesi olan bir hastada kullanılan VDRL testinin pozitifleşmesini sağlayan antikorlar aşağıdaki antijenlerden hangisine karşı oluşur?",
+     "secenekler": {
+      "A": "Bakteriyel kamçı proteini",
+      "B": "Rekombinant TPHA antijeni",
+      "C": "Hücre duvarı peptidoglikanı",
+      "D": "Dış membran lipopolisakkariti",
+      "E": "Kardiyolipin-lesitin-kolesterol"
+     },
+     "dogru": "E",
+     "zorluk": "orta",
+     "aciklama": "Nontreponemal bir test olan VDRL, bakterinin dokularda yarattığı hasar sonucu salınan kardiyolipin-lesitin-kolesterol antijenlerine karşı oluşan antikorları saptar.",
+     "sayfa": [
+      17
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e07-19",
+   "puan": 88,
+   "baslik": "Spesifik (Treponemal) Serolojik Testler",
+   "bilgi": "Spesifik testler doğrudan bakterinin kendisine karşı oluşan antikorları tespit eder, en erken yükselen ve en **spesifik** testlerdir ancak tedavi takibinde kullanılamaz.",
+   "alt": [
+    "TPHA ve FTA-ABS bu gruptaki temel testlerdir.",
+    "Primer sifiliz döneminde pozitifleşir ve ömür boyu kalır.",
+    "Ömür boyu pozitif kaldıklarından tedavi takibinde kullanılamazlar.",
+    "Tarama testi ve nörosifiliz tanısında kullanılırlar."
+   ],
+   "tur": "tani_tedavi",
+   "alinti": [
+    {
+     "sayfa": 18,
+     "metin": "• Bakterinin kendisine karşı oluşan antikorları tespit eder • Tarama testi olarak, tedavi takibinde ve nörosifiliz tanısında kullanılır"
+    }
+   ],
+   "neden": "Treponemal testlerin yaşam boyu pozitif kalması ve bu nedenle tedavi takibinde kullanılamaması klasik çeldirici unsurudur.",
+   "detay": "- **Özellikleri ve Antijen Hedefi:** Treponemal spesifik testler, doğrudan Treponema pallidum bakterisinin kendi hücre yapılarına karşı oluşan antikorları tespit eder. Enfeksiyon sürecinde en erken yükselen ve özgüllüğü en yüksek serolojik testler olarak kabul edilirler.\n- **Klinik Seyir ve Kısıtlılıklar:** Primer sifiliz döneminden itibaren pozitifleşirler ve hastanın hayatı boyunca pozitif kalmaya devam ederler. Bu ömür boyu pozitif kalma özelliği nedeniyle, başarılı bir tedavi sonrasında hastalığın nüksünü veya iyileşmesini takip etmek amacıyla kullanılamazlar; tarama ve tanı koyma amaçlı tercih edilirler.",
+   "cikmis": [],
+   "ornek": [
+    {
+     "kok": "Sifiliz tanısında kullanılan treponemal serolojik testler ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Doku hasarıyla oluşan kardiyolipini ölçer",
+      "B": "Başarılı tedavi sonrası 1 yılda negatifleşir",
+      "C": "En erken yükselen ve en spesifik testlerdir",
+      "D": "Tedavi takibinde tercih edilen testlerdir",
+      "E": "Yanlış pozitiflik oranları VDRL'den yüksektir"
+     },
+     "dogru": "C",
+     "zorluk": "orta",
+     "aciklama": "Treponemal testler doğrudan bakteriye karşı oluşan antikorları saptar, en erken yükselen ve en spesifik testlerdir ancak ömür boyu pozitif kaldıklarından tedavi izleminde kullanılmazlar.",
+     "sayfa": [
+      18
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e07-20",
+   "puan": 82,
+   "baslik": "Sifiliste Erken ve Geç Evre Penisilin Tedavi Rejimleri",
+   "bilgi": "Primer, sekonder ve erken latent sifilizde **Benzatin penisilin** tek doz uygulanırken, geç latent, gummatöz ve kardiyovasküler sifilizde 3 hafta boyunca haftada 1 doz verilir.",
+   "alt": [
+    "Primer, sekonder ve erken latent sifilizde tek doz 2.4 milyon ünite IM.",
+    "Geç latent sifilizde haftada 1 kez (3 hafta) 2.4 milyon ünite IM.",
+    "Gummatöz sifilizde haftada 1 kez (3 hafta) 2.4 milyon ünite IM.",
+    "Kardiyovasküler sifilizde haftada 1 kez (3 hafta) 2.4 milyon ünite IM."
+   ],
+   "tur": "tani_tedavi",
+   "alinti": [
+    {
+     "sayfa": 19,
+     "metin": "Benzatin penisilin tek doz 2.4 milyon ünite IM ✓Primer sifiliz"
+    }
+   ],
+   "neden": "Hastalığın evresine göre tek doz ile 3 haftalık benzatin penisilin dozaj ayrımı en temel tedavi sorularındandır.",
+   "detay": "- **Tek Doz Uygulama Alanları:** Primer sifiliz, sekonder sifiliz ve erken latent sifiliz evresindeki hastaların tedavisinde Benzatin penisilin 2.4 milyon ünite IM formülasyonu tek doz şeklinde uygulanarak başarılı sonuçlar elde edilir.\n- **Üç Doz Uygulama Alanları:** Hastalığın daha geç ve sistemik formları olan geç latent sifiliz, gummatöz tersiyer sifiliz ve kardiyovasküler sifiliz durumlarında ise Benzatin penisilin 2.4 milyon ünite IM haftada bir doz olmak üzere toplam üç hafta süreyle verilmelidir.",
+   "cikmis": [],
+   "ornek": [
+    {
+     "kok": "Geç latent sifiliz tanısı konulan bir hastada standart antibiyotik tedavisi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Benzatin penisilin 3 hafta boyunca haftada 1 kez",
+      "B": "Benzatin penisilin tek doz IM",
+      "C": "Kristalize penisilin 14 gün boyunca IV",
+      "D": "Doksisiklin 2 hafta boyunca oral",
+      "E": "Seftriakson 7 gün boyunca IM"
+     },
+     "dogru": "A",
+     "zorluk": "orta",
+     "aciklama": "Geç latent sifiliz tedavisinde Benzatin penisilin 2.4 milyon ünite IM haftada bir doz olmak üzere toplam 3 hafta süreyle uygulanır.",
+     "sayfa": [
+      19
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e07-21",
+   "puan": 60,
+   "baslik": "Penisilin Alerjisinde Alternatif Tedavi Seçenekleri",
+   "bilgi": "Penisilin alerjisi olan sifiliz hastalarında alternatif olarak **Doksisiklin** 4 hafta veya Seftriakson 10-14 gün süreyle kullanılır.",
+   "alt": [
+    "Doksisiklin 2x100 mg 4 hafta süreyle verilir.",
+    "Seftriakson 1 gr IM/IV 10-14 gün uygulanır.",
+    "Azitromisin 1x500 mg 1 hafta kullanılabilir ancak direnç riski vardır.",
+    "Penisilin alerjisi alternatif tedavinin temel gerekçesidir."
+   ],
+   "tur": "tani_tedavi",
+   "alinti": [
+    {
+     "sayfa": 20,
+     "metin": "Penisilin alerjisi varsa ✓Doksisiklin 2x100mg 4 hafta"
+    }
+   ],
+   "neden": "Penisilin alerjisi varlığında seçilecek ikincil ilaçlar ve kullanım süreleri tedavi protokol sorularında sorgulanır.",
+   "detay": "- **Doksisiklin Kullanımı:** Penisilin alerjisi belgelenmiş olan sifiliz hastalarında en sık tercih edilen oral alternatif tedavi seçeneğidir; 2x100 mg dozunda 4 hafta süreyle düzenli olarak kullanılır.\n- **Seftriakson Alternatifi:** Parenteral tedavi gerektiren veya oral uyumsuzluğu olan penisilin alerjik hastalarda Seftriakson 1 gram IM veya IV yoldan 10 ila 14 gün boyunca uygulanabilir.\n- **Azitromisin Uyarısı:** Azitromisin 1x500 mg 1 hafta süreyle alternatifler arasında yer alsa da, bakteriyel direnç gelişimi riski nedeniyle klinikte dikkatli olunması gerekmektedir.",
+   "cikmis": [],
+   "ornek": [
+    {
+     "kok": "Penisilin alerjisi bilinen bir hastada alternatif olarak başlanan oral Doksisiklin tedavisinin önerilen standart süresi kaç haftadır?",
+     "secenekler": {
+      "A": "1 hafta",
+      "B": "2 hafta",
+      "C": "3 hafta",
+      "D": "4 hafta",
+      "E": "6 hafta"
+     },
+     "dogru": "D",
+     "zorluk": "kolay",
+     "aciklama": "Penisilin alerjisi durumunda alternatif oral ilaç olan Doksisiklin 2x100 mg dozunda 4 hafta süreyle reçete edilir.",
+     "sayfa": [
+      20
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e07-22",
+   "puan": 87,
+   "baslik": "Nörosifiliz, Oküler Sifiliz ve Otosifiliz Tedavisi",
+   "bilgi": "Nörosifiliz, oküler sifiliz ve otosifiliz tedavisinde parenteral **Kristalize penisilin** 10-14 gün boyunca uygulanmalıdır.",
+   "alt": [
+    "Nörosifiliz tutulumunda depo penisilin yetersizdir.",
+    "Kristalize penisilin 6x2-4 milyon ünite/gün verilir.",
+    "Tedavi süresi 10-14 gündür.",
+    "Oküler ve otosifiliz de bu protokolle tedavi edilir."
+   ],
+   "tur": "tani_tedavi",
+   "alinti": [
+    {
+     "sayfa": 20,
+     "metin": "Nörosifiliz, oküler sifiliz, otosifiliz ✓Kristalize penisilin 6x2-4milyon ünite (10-14 gün)"
+    }
+   ],
+   "neden": "Santral sinir sistemi ve özel organ tutulumlarında kullanılan parenteral penisilin formu depo penisilinlerden farklıdır ve yüksek puana sahiptir.",
+   "detay": "- **Özel Organ Tutulumları:** Sifilitik enfeksiyonun santral sinir sistemini etkilediği nörosifiliz, gözü tuttuğu oküler sifiliz ve kulağı etkilediği otosifiliz durumlarında standart depo penisilinler kan-beyin bariyerini yeterince geçemediği için yetersiz kalır.\n- **Kristalize Penisilin Protokolü:** Bu özel ve kritik tutulumlarda tercih edilmesi gereken temel ilaç parenteral Kristalize penisilindir. İlaç günlük olarak 6 çarpı 2 ila 4 milyon ünite dozunda, 10 ila 14 gün süreyle hastane koşullarında intravenöz yoldan uygulanmalıdır.",
+   "cikmis": [],
+   "ornek": [
+    {
+     "kok": "Kronik nörosifiliz tanısı konulan bir hastada başlanması gereken en uygun penisilin formu ve uygulama süresi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Benzatin penisilin - Tek doz IM",
+      "B": "Kristalize penisilin - 10-14 gün IV",
+      "C": "Benzatin penisilin - 3 hafta IM",
+      "D": "Procaine penisilin - Tek doz IM",
+      "E": "Ampisilin - 7 gün IV"
+     },
+     "dogru": "B",
+     "zorluk": "zor",
+     "aciklama": "Nörosifiliz, oküler sifiliz ve otosifiliz tedavisinde kan-beyin bariyerini geçen Kristalize penisilin 6x2-4 milyon ünite dozunda 10-14 gün boyunca IV uygulanır.",
+     "sayfa": [
+      20
+     ]
+    }
+   ]
+  }
+ ],
+ "elenen_cikmis": [
+  {
+   "id": "k1-2024-2025-q005",
+   "neden": "pdf_disi",
+   "not": "Sifilizin en bulaşıcı olduğu dönem bilgisi sayfa 11-20 arasında geçmemektedir."
+  }
+ ],
+ "_kaynak": {
+  "yontem": "gorev",
+  "parca": 2,
+  "harf_degisen": 13
+ }
+}

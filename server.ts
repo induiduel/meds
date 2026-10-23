@@ -1,5 +1,6 @@
 import express from 'express';
 import { dersIsciRouter } from './src/services/dersIsciProxy';
+import { dersIsciEkRouter } from './src/services/dersIsciEkRoutes';
 import { dersRevizeRouter } from './src/services/dersRevizeRoutes';
 import compression from 'compression';
 import { createServer as createViteServer } from 'vite';
@@ -4706,6 +4707,8 @@ app.put('/api/past-question-reviews/:id/proposal', requireAdmin, (req, res) => {
 });
 
 // Ders işçisi onay ekranı (Yönetim → Yeni dersler): işçinin iç API'sine yönetici vekili (src/services/dersIsciProxy.ts)
+// Onay kapısı ekleri (öğrenci notu / ses kaydı): diske akan yükleme; işçi aynı klasörü salt okunur görür
+app.use('/api/admin/ders-isci-ek', requireAdmin, dersIsciEkRouter());
 app.use('/api/admin/ders-isci', requireAdmin, dersIsciRouter());
 // Revize ders işçisi (cihazda yeniden üretilen taslaklar; yer değiştir / ekle / kaldır / her ikisini tut)
 app.use('/api/admin/ders-revize', requireAdmin, dersRevizeRouter(__dirname));

@@ -1,0 +1,6 @@
+# Ses metni (`ses`, `kok_ses`, `secenek_ses`) — EMA harfi harfine okur
+- `ses` = `metin`le aynı içerik, yalnız okunuş yazımı. Sayı ve simgeler YAZIYLA: "%10" → "yüzde on", "1–2" → "bir ile iki", "≥" → "eşit ya da büyük", "2 g" → "iki gram"; Roma rakamı sayıyla ("tip iki", "öncül üç").
+- Seste YASAK: rakam, %, /, →, ±, ≈, ~, <, >, =, +, parantez, köşeli parantez, *, #, :, ;, tırnak, **; ":" ve ";" yerine virgül ya da nokta.
+- Kısaltmalar harf harf, Türkçe harf adlarıyla, boşlukla ayrık: A a, B be, C ce, Ç çe, D de, E e, F fe, G ge, H ha, I ı, İ i, J je, K ka, L le, M me, N ne, O o, Ö ö, P pe, R re, S se, Ş şe, T te, U u, Ü ü, V ve, Y ye, Z ze, Q ku, W çift ve, X iks. Örnek: HIV → "ha i ve", PCR → "pe ce re", CRP → "ce re pe", VDRL → "ve de re le". Birleşik okunuş ("hıv", "denea") YASAK; yalnız AIDS → "eyds", TORCH → "torç" kelime gibi.
+- Seste büyük harfli ya da karışık harfli kısaltma (IgG, mRNA) ve cümle ortasında tek büyük harf YOK; Latince/İngilizce adlar Türkçe okunuşla ("Treponema pallidum", "Nayseriya gonore", "Klamidya trakomatis"); α alfa, β beta, γ gama.
+- Ses cümlesi en çok 25 kelime; uzunu ikiye böl. `kok_ses` kökün okunuşudur (şıkları içermez); öncüllü soruda öncüller köke dahil ("Bir, … İki, …"). `secenek_ses` yalnız şık metninin okunuşu ("I ve III" → "bir ve üç").

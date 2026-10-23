@@ -9,6 +9,7 @@ import { Card14, DataTable, DetailNav, PageActions, Pill, SearchField, Tabs14, T
 import { BulkBar, useSelection } from '../v14/manageKit';
 import { IsciKontrol, type IsciDurum } from './ManageDersIsciKontrol';
 import { AsamaSeridi, type SesDurumu, type TaslakAsama } from './ManageDersIsciAsama';
+import { OnayKapisi } from './ManageDersIsciOnay';
 
 const LessonPlayer = React.lazy(() => import('../learn/lesson/LessonPlayer').then((m) => ({ default: m.LessonPlayer })));
 
@@ -546,6 +547,8 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
           </button>
         </PageActions>
       )}
+
+      {!hata && <OnayKapisi api={api} adminEmail={adminEmail} onDegisti={yukle} tazele={tazele} />}
 
       {(ozet?.sayim || olay) && (
         <Card14 title="Drive ve 2026-27 checklist">

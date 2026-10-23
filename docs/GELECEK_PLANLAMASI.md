@@ -159,6 +159,7 @@ Biçim: `<kurul>-<ders>-<tür>-<sıra>`; küçük harf, ASCII, kararlı. Yeniden
 | Asistan noktası | `k2-07-a13` | mevcut `01-13` takma ad |
 | Çözücü sorusu | `k2-07-q05` | |
 | Örnek soru | `k2-07-os-012` | |
+| Parça sorusu (sesli ders bölümü) | `k2-07-b03-ps1` | `gorev.py parca_sorusu`, ICERIK_MOTORU_V3 §3.2 |
 | Olası soru | `k2-os-037` | yuva numarası |
 | Terim / hastalık | `t-<slug>` / `h-<slug>` | ad değişse de slug sabit |
 
@@ -284,3 +285,34 @@ Bulunan ve kapatılan hatalar:
   PDF içerik tekrarı, görsel sayfa "boş" sayılamaz, türev veri tamlığı, K2 sesli ders vurguları v2'den, "Öğren'de bu bilgi" zincirde.
 - **Açık:** H10 (çıkmış anahtarı PDF ile çelişirse karantina), kelime zamanlaması yalnız cihazda, Check Up / sınav kampı K2 kararı,
   test bankası K2. Ölçüm: canlıda 15 K1 sesli dersinde cümle zamanı eksik (metin bugün değişmiş).
+
+## 15. Son Prova (2026-10-21) — her kurul için sınav öncesi son tekrar
+- **Kurulan (Kurul 1, canlı):** `/son-prova`; 7 ders, 14 sesli özet part (Patoloji 4, diğerleri 1–2; 30–62 dk), 89 aşama, aşama sonu
+  soruları (sesli asistan), part check-up, genel check-up, sınav dağılımıyla 3 × 100 deneme, yanlıştan eksik aşamaya yönlendirme,
+  kırpılmış özet PDF (ders + slayt şeridi), indirme şartı + çevrimdışı paketler, özet PDF/DOCX indirme. Hat: `scripts/son_prova/README.md`.
+- **Kurul 2 yol haritası (sınavdan ~5 gün önce, otomatik hatta aşama olarak):**
+  1. `plan.py`'ye `SINAV` (fakülte duyurusu) + `PARTLAR` (kN-8x anahtarları) — duyuru gelince elle, sonrası otomatik.
+  2. Yazar + bağımsız denetçi (TALIMAT/DENETIM; `--kurul2` kapıları: şık açıklaması, Türkçe üslup) → `dogrula.py --part` 0 HATA.
+  3. `derle.py` → `pdf_kirp.mjs` → `soru_dagit.py` → ders-ekle (yalnız EMA) → kelime/cümle zamanlayıcıları → dagit.sh.
+  4. `otomasyon/hat.json`'a "son_prova" aşaması olarak eklenmesi (açık iş): kurul takvimi (`aktif_kurul.py`) sınav tarihi − 5 gün tetikler.
+- **Kurul 1 notları:** e11 slayt metni eski yıldandı → bu yılın PDF'iyle yeniden yazıldı; h07 PDF'i Drive'da yok → özet PDF'te
+  slayt metni sayfaları; Oracle `meds-ema` konteyneri kod dağıtımından önce iş almamalı (eski okunuşla patoloji-2 parçaları üretmişti).
+
+## 16. P5 — İçerik Motoru v3 (2026-10-23, kullanıcı önerisi uyarlandı)
+Ayrıntı: **`meds/docs/ICERIK_MOTORU_V3.md`**. Özet:
+- **Maliyet katmanları:** önce betik (B), sonra ücretsiz bulut (Ü: `cloud_llm` zinciri), en son Claude (C, bütçeli). Görev
+  yönlendiricisi `otomasyon/llm/` (`gorevler.json`, `yonlendir.py`, bütçe, önbellek); yazar ≠ denetçi model ailesiyle.
+  Hedef: Kurul 2 dersi başına Claude çağrısı ≈7 → ≤1. 2026-10-20 "LLM yalnız Claude" kararı yönlendirici devreye girdikçe görev görev gevşer.
+- **Kroki L0/L1/L2** ders bilgi deposunda (`ders_bilgi/<id>/l0|l1|l2`); sayfa izi (SimHash + pHash) ile slayt kayması → yalnız yeni sayfa okunur.
+- **Delta motoru:** değişen sayfa/parça/okunuş yalnız etkilediği ürünleri yeniden üretir.
+- **Sıfır-token betikler:** OpenCV ile öğrenci notu (hizalı fark + IoU), EKG eğrisi iskeleti + faz, ok yakalama, kontur;
+  bge-m3 ile cümle düzeyi çıkmış (yeşil); hoca kaydı döküm + hizalama + kalıp avı (kırmızı); cümle ses önbelleği + VAD.
+- **Çizim motoru** (kontur, akış, eğri fazı, şema) cümle/kelime kimliğine bağlı; renkler palet jetonu; mor = kişisel zayıf nokta.
+- **`.medspak`** türetilmiş SQLite paket (doğruluk kaynağı değil); okuyucu mevcut ekranlar + "Çıkmışı göster", parça sonu 1–6 soru, "Anlatıldığı yere git".
+- **Görev sözleşmesi (§14):** her LLM işi `otomasyon/gorev.py hazirla → calistir → derle → dogrula → uygula`; model tek bir
+  görev paketi okur, kısa etiketli cevap yazar; çözücü/derleyici ve kapılar betiktir; `--katman elle` ile herhangi bir LLM.
+- **Hedefli çıkmış taraması (§15):** çıkmış dizini (bir kez, artımlı) + PDF başına tarama planı + yeni çıkmışta ters yön.
+- **Kanıt bölgeleri (§16):** her soru → doğru/çeldirici/kök bölgesi (betik şartları, belirsizde görev) → otomatik tekrar sunumu.
+- **Kalite (§17):** SoM, makro harita → pencereli anlatım, sıfır kayıp kapsam denetimi, çeldirici, ok açılımı (yalnız PDF mekanizması).
+- **R0 kuruldu (2026-10-23):** `otomasyon/gorev.py` (El kitabı §15). **R1 + R2 ve R3 + R4'ün ilk görevleri (kanit_bagla, som_sec, gölge) kuruldu (aynı gün):** `scripts/kroki/`, `scripts/cikmis_dizin/`, gece aşaması `kroki` (El kitabı §16; K1 ölçümleri ICERIK_MOTORU_V3 §10). Sıra: R0 sözleşme → R1 L0 + betikler, R2 hedefli çıkmış + kanıt (paralel) → R3 gölge kipi → R4 görev görev geçiş →
+  R5 L1 akışları + delta → R6 ses/çizim/öğrenci özellikleri → R7 paket.

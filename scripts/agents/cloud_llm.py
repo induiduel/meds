@@ -3,8 +3,8 @@
 Ortak bulut LLM istemcisi (yerel model yok). Faz 5/6/7 v2, hakem ve lib.chat bunu kullanır.
 
 Model zinciri (yalnız ücretsiz anahtarlar; faturalı GEMINI_BILLED_KEY hiçbir fazda kullanılmaz, MEDS_FREE_ONLY=1):
-  groq:openai/gpt-oss-120b → groq:qwen/qwen3.8-27b → [zen:muse-spark-1.3-contributor-free, OPENCODE_API_KEY varsa]
-  → gemini:gemini-flash-latest → gemini:gemini-3.5-flash
+  varsayılan DEFAULT_CHAIN: Gemini (flash, flash-lite, 3.5-flash, 3.5-flash-lite) → Groq (gpt-oss-120b, qwen3.8-27b);
+  → OpenRouter ücretsiz (Nemotron 3 Ultra, Gemma 4 31B). Zen yalnız MEDS_CLOUD_ZEN=1 ile; MEDS_CLOUD_CHAIN ile tümü değiştirilir.
   (+ MEDS_CLOUD_EXTRA_MODELS, ör. "openrouter:meta/muse-spark-1.3" — OpenRouter hesabında model açılınca)
 Kota: 429 "günlük" yanıtı veren model o gün bir daha denenmez (meds_temp/state/cloud_llm.json, süreçler arası);
 dakikalık 429'da kısa beklenir. 400/401/403/404 veren model bu süreçte atlanır. Anahtar havuzu sırayla denenir.
@@ -25,7 +25,9 @@ TEMP = Path(os.environ.get("MEDS_TEMP_DIR") or ROOT.parent / "meds_temp")
 STATE = TEMP / "state" / "cloud_llm.json"
 UA = "MedSor/1.0"
 
-DEFAULT_CHAIN = ["gemini:gemini-flash-latest", "gemini:gemini-flash-lite-latest", "gemini:gemini-3.5-flash", "gemini:gemini-3.5-flash-lite", "groq:openai/gpt-oss-120b", "groq:qwen/qwen3.8-27b"]
+DEFAULT_CHAIN = ["gemini:gemini-flash-latest", "gemini:gemini-flash-lite-latest", "gemini:gemini-3.5-flash", "gemini:gemini-3.5-flash-lite", "groq:openai/gpt-oss-120b", "groq:qwen/qwen3.8-27b",
+                 # OpenRouter ücretsiz (2026-10-23 sınaması: Nemotron 3 Ultra Türkçe + Naegele hesabı doğru, 5 sn)
+                 "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter:google/gemma-4-31b-it:free"]
 
 
 def _env() -> dict:
@@ -59,8 +61,9 @@ ZEN_FREE = "zen:muse-spark-1.3-contributor-free"
 def chain() -> list[str]:
     extra = [m.strip() for m in (ENV.get("MEDS_CLOUD_EXTRA_MODELS") or "").split(",") if m.strip()]
     base = [m.strip() for m in (ENV.get("MEDS_CLOUD_CHAIN") or "").split(",") if m.strip()] or DEFAULT_CHAIN
-    # Ücretsiz Muse Spark anahtar varsa zincire kendiliğinden girer (Groq'tan sonra, Gemini'den önce)
-    if KEYS["zen"] and ZEN_FREE not in base and ZEN_FREE not in extra:
+    # Zen ücretsiz Muse Spark kaldırıldı (HTTP 410) ve Zen ücretsiz katmanı yalnız OpenCode istemcisinden kullanılabiliyor
+    # (403 FreeTierError, 2026-10-23) → kendiliğinden eklenmez; MEDS_CLOUD_ZEN=1 ile (ücretli Zen anahtarı) yeniden açılır.
+    if KEYS["zen"] and ENV.get("MEDS_CLOUD_ZEN") == "1" and ZEN_FREE not in base and ZEN_FREE not in extra:
         i = next((j for j, m in enumerate(base) if m.startswith("gemini:")), len(base))
         base = base[:i] + [ZEN_FREE] + base[i:]
     return base + extra
@@ -68,6 +71,7 @@ def chain() -> list[str]:
 
 # ---- günlük kota durumu (süreçler arası)
 _skip_session: set[str] = set()
+_skip_key: set[tuple[str, str]] = set()
 
 
 def _load_state() -> dict:
@@ -121,23 +125,38 @@ def _openai_style(base: str, key: str, model: str, system: str | None, prompt: s
 
 
 def _gemini(key: str, model: str, system: str | None, prompt: str, as_json: bool, max_tokens: int, temperature: float,
-            timeout: int) -> str:
+            timeout: int, dusunme: int | None = None) -> str:
     body = {"contents": [{"parts": [{"text": prompt}]}],
             "generationConfig": {"temperature": temperature, "maxOutputTokens": max_tokens}}
+    if dusunme is not None:
+        # Gemini'de düşünme belirteçleri maxOutputTokens'tan düşer → uzun JSON yarıda kalıyordu (MAX_TOKENS).
+        # Düşünme payı ayrı verilir, çıktı sınırı o kadar büyütülür.
+        body["generationConfig"]["thinkingConfig"] = {"thinkingBudget": dusunme}
+        body["generationConfig"]["maxOutputTokens"] = max_tokens + dusunme
     if system:
         body["systemInstruction"] = {"parts": [{"text": system}]}
     if as_json:
         body["generationConfig"]["responseMimeType"] = "application/json"
     d = _post(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent", body, {"x-goog-api-key": key}, timeout)
-    return d["candidates"][0]["content"]["parts"][0]["text"]
+    # "parts" yoksa (düşünme payı maxOutputTokens'ı doldurdu, güvenlik süzgeci) boş yanıt: çağıran sıradaki modele geçer.
+    # Eskiden KeyError ağ hatası gibi aynı modelde yeniden deneniyordu (boşuna bekleme, sessiz).
+    aday = (d.get("candidates") or [{}])[0]
+    metin = "".join(p.get("text", "") for p in (aday.get("content") or {}).get("parts") or [] if not p.get("thought"))
+    if not metin:
+        raise BosYanit(f"gemini boş yanıt (finishReason={aday.get('finishReason')})")
+    return metin
 
 
-def _call(spec: str, key: str, system, prompt, as_json, max_tokens, temperature, timeout) -> str:
+class BosYanit(Exception):
+    """Model yanıt verdi ama metin yok — yeniden deneme değil, sıradaki model."""
+
+
+def _call(spec: str, key: str, system, prompt, as_json, max_tokens, temperature, timeout, dusunme=None) -> str:
     prov, model = spec.split(":", 1)
     if prov == "groq":
         return _openai_style("https://api.groq.com/openai/v1", key, model, system, prompt, as_json, max_tokens, temperature, timeout)
     if prov == "gemini":
-        return _gemini(key, model, system, prompt, as_json, max_tokens, temperature, timeout)
+        return _gemini(key, model, system, prompt, as_json, max_tokens, temperature, timeout, dusunme)
     if prov == "zen":
         return _openai_style("https://opencode.ai/zen/v1", key, model, system, prompt, as_json, max_tokens, temperature, timeout)
     if prov == "openrouter":
@@ -165,9 +184,13 @@ last_model: dict = {"ad": None}
 
 
 def chat(prompt: str, system: str | None = None, as_json: bool = False, max_tokens: int = 2048,
-         temperature: float = 0.1, timeout: int = 90, models: list[str] | None = None, log=None):
+         temperature: float = 0.1, timeout: int = 90, models: list[str] | None = None, log=None,
+         dusunme: int | None = None, json_ham: bool = False):
     """Zincirdeki ilk çalışan modelden yanıt (as_json: dict). Hiçbiri yanıt vermezse None.
-    models: zinciri bu çağrı için değiştirir (ör. konsensüs için farklı model ailesi)."""
+    models: zinciri bu çağrı için değiştirir (ör. konsensüs için farklı model ailesi).
+    dusunme: Gemini düşünme payı (belirteç; None = model varsayılanı, 0 = kapalı); çıktı sınırına eklenir.
+    json_ham: as_json iken ayrıştırılamayan dolu yanıtı atma, ham metin döndür (çağıranın daha hoşgörülü ayrıştırıcısı ve
+    düzeltme turu için; görev katmanı kullanır — 2026-10-23 Nemotron 10 bin karakterlik yanıtı böyle kayboluyordu)."""
     exhausted = set(_load_state()["kota_dolu"])
     for spec in models or chain():
         if spec in exhausted or spec in _skip_session:
@@ -177,19 +200,33 @@ def chat(prompt: str, system: str | None = None, as_json: bool = False, max_toke
         if not keys:
             _skip_session.add(spec)
             continue
+        gunluk_kota = 0                                 # yalnız TÜM anahtarlar günlük kota derse model bugün kapanır
         for key in keys:
+            if (prov, key) in _skip_key:
+                continue
             done_with_key = False
             for attempt in range(2):
                 try:
-                    raw = _call(spec, key, system, prompt, as_json, max_tokens, temperature, timeout)
+                    raw = _call(spec, key, system, prompt, as_json, max_tokens, temperature, timeout, dusunme)
                 except urllib.error.HTTPError as e:
                     body = e.read()[:400].decode("utf-8", "replace")
                     if e.code == 429:
-                        if any(t in body for t in ("per day", "TPD", "RPD", "PerDay", "daily", "quota")):
+                        if any(t in body for t in ("per day", "TPD", "RPD", "PerDay", "daily", "quota", "spending cap", "billing")):
+                            if log:
+                                log(f"{spec}: HTTP 429 günlük kota — anahtar (…{key[-4:]}) ({body[:100]})")
                             done_with_key = True        # bu anahtarın günlük kotası; sıradaki anahtar
+                            gunluk_kota += 1
                             break
+                        if log:
+                            log(f"{spec}: HTTP 429 dakikalık sınır — 20 sn bekleniyor ({body[:100]})")
                         time.sleep(20)
                         continue
+                    if e.code == 413:
+                        # istek modelin dakikalık belirteç sınırından büyük (Groq ücretsiz TPM): bekleyip yinelemek boşuna
+                        if log:
+                            log(f"{spec}: HTTP 413 istek çok büyük ({len(prompt)} karakter) — bu çağrı atlandı")
+                        done_with_key = True
+                        break
                     if e.code == 400:
                         # 400 çoğunlukla bu yanıta özgüdür (Groq json_validate_failed, uzun bağlam): yalnız bu çağrı
                         # başarısız sayılır. Eskiden model süreç boyunca atlanıyordu → uzun Faz 14 işinde gpt-oss tek bir
@@ -198,32 +235,55 @@ def chat(prompt: str, system: str | None = None, as_json: bool = False, max_toke
                             log(f"{spec}: HTTP 400 — bu çağrı atlandı ({body[:120]})")
                         done_with_key = True
                         break
-                    if e.code in (401, 403, 404):
+                    if e.code in (401, 403):
+                        # geçersiz/yetkisiz ANAHTAR: yalnız bu anahtar atlanır (önceden model tüm anahtarlarıyla
+                        # süreç boyunca atlanıyordu — sağlam ikinci anahtar boşa gidiyordu, 2026-10-23)
                         if log:
-                            log(f"{spec}: HTTP {e.code} — bu süreçte atlanıyor")
+                            log(f"{spec}: HTTP {e.code} — bu anahtar (…{key[-4:]}) bu süreçte atlanıyor")
+                        _skip_key.add((prov, key))
+                        done_with_key = True
+                        break
+                    if e.code in (404, 410):              # 410: model kaldırıldı (zen ModelDeprecated, 2026-10-23)
+                        if log:
+                            log(f"{spec}: HTTP {e.code} — model bu süreçte atlanıyor ({body[:80]})")
                         _skip_session.add(spec)
                         done_with_key = True
                         break
+                    if log:
+                        log(f"{spec}: HTTP {e.code} ({body[:100]}) — yineleniyor")
                     time.sleep(5)
                     continue
-                except Exception:  # noqa: BLE001
+                except BosYanit as e:
+                    if log:
+                        log(f"{spec}: {e}")
+                    break                               # sıradaki modele (aynı modeli yeniden denemek boşuna)
+                except Exception as e:  # noqa: BLE001
+                    if log:
+                        log(f"{spec}: {type(e).__name__}: {str(e)[:120]}")
                     time.sleep(3)
                     continue
                 out = _parse_json(raw) if as_json else re.sub(r"<think>.*?</think>", "", raw or "", flags=re.S).strip()
+                if not out and as_json and json_ham and (raw or "").strip():
+                    out = re.sub(r"<think>.*?</think>", "", raw, flags=re.S).strip()
                 if out:
                     last_model["ad"] = spec
                     _count(spec)
                     return out
+                if log:
+                    log(f"{spec}: boş ya da ayrıştırılamayan yanıt ({len(raw or '')} karakter) — sıradaki model")
                 break                                   # boş/bozuk yanıt: sıradaki modele
             if spec in _skip_session:
                 break
             if not done_with_key:
                 break
         else:
-            # tüm anahtarların günlük kotası doldu
-            if log:
-                log(f"{spec}: günlük kota doldu, bugün atlanacak")
-            _mark_exhausted(spec)
+            # döngü bitti: anahtarların hepsi günlük kota dediyse model bugün kapanır; 400/401 karışımı kota DEĞİLDİR
+            # (2026-10-23: 400 + geçersiz ikinci anahtar gpt-oss-120b'yi bütün gün kapatıyordu)
+            gecerli = sum(1 for k_ in keys if (prov, k_) not in _skip_key)
+            if gunluk_kota and gunluk_kota >= gecerli:
+                if log:
+                    log(f"{spec}: günlük kota doldu, bugün atlanacak")
+                _mark_exhausted(spec)
     return None
 
 
@@ -243,7 +303,7 @@ VISION_PROMPT = ("Bu görüntü bir tıp fakültesi ders slaytı, ders notu ya d
                  "ekleme yapma, imla düzeltme yapma, açıklama yazma. Görüntüde okunabilir metin yoksa yalnızca BOŞ yaz.")
 
 
-def vision_ocr(png_bytes: bytes, prompt: str = VISION_PROMPT, timeout: int = 120, log=None) -> str | None:
+def vision_ocr(png_bytes: bytes, prompt: str = VISION_PROMPT, timeout: int = 120, log=None, mime: str = "image/png") -> str | None:
     """Görüntüdeki metni Gemini ile çıkarır. Yanıt yoksa None (çağıran Tesseract'a düşer)."""
     import base64
     exhausted = set(_load_state()["kota_dolu"])
@@ -255,7 +315,7 @@ def vision_ocr(png_bytes: bytes, prompt: str = VISION_PROMPT, timeout: int = 120
         keys = KEYS["gemini"]
         all_daily = bool(keys)
         for key in keys:
-            body = {"contents": [{"parts": [{"inline_data": {"mime_type": "image/png", "data": data}}, {"text": prompt}]}],
+            body = {"contents": [{"parts": [{"inline_data": {"mime_type": mime, "data": data}}, {"text": prompt}]}],
                     "generationConfig": {"temperature": 0, "maxOutputTokens": 8000, "thinkingConfig": {"thinkingBudget": 0}}}
             for attempt in range(2):
                 try:

@@ -5,7 +5,8 @@ yayımladığı paket yayin_kaydi.json'dan bulunur (ders_id = <defter id>-<slug>
 
 Her adım kapı ile biter (0 HATA değilse ders o adımda kalır, sonraki gece yeniden dener; sessiz geçiş yok).
 Durum: meds_temp/hat/dersler/<ders id>.json → {kaynak_sha, adimlar: {adim: {zaman, kod, not}}}. Kaynak (kaynak.md)
-değişirse zincir baştan çalışır. LLM adımları yalnız Claude (claude -p) ile — kullanıcı kararı 2026-10-20.
+değişirse zincir baştan çalışır. LLM adımları Claude (claude -p) ile; önem/çözücü adımları otomasyon/llm/gorevler.json `mod`
+alanına göre görev yoluyla (aktif) ya da Claude + gölge görev (golge) — R4, 2026-10-23.
 
 Branş klasörü kurul öneklidir: meds_temp/spot_cozucu/k<N><brans>/ (ör. k2noroloji) — Kurul 1 klasörleri ezilmez.
 Kodlar defterden (2n03): kurullar ve branşlar arası tekil.
@@ -107,6 +108,34 @@ def kapili_claude(istem, kapi, W, kuru, tur=3):
 
 
 # ── adımlar ────────────────────────────────────────────────────────────────────────────────────────────────────────
+def _konu_kati(k):
+    """Konu adı yazım farkları ("Gebelik Terminolojisi/Kavramları" ↔ "Gebelik Terminolojisi ve Kavramları"): /, &, "ve",
+    noktalama ve boşluk yok sayılır."""
+    k = AH.norm(k or "")
+    k = re.sub(r"\s*(/|&|\+|,|-|–)\s*", " ve ", k)
+    return re.sub(r"[^0-9a-zçğıöşü ]+", " ", re.sub(r"\bve\b", " ", k)).split()
+
+
+def konu_eslesen_cikmislar(Q, d, hedef_konu, gizli, silinen):
+    """Dersin çıkmışları: önce müfredat konusu BİREBİR, tutmazsa yazım farkı yok sayılarak, o da tutmazsa ≥0,92 benzerlik.
+    (2026-10-23 prova: birebir eşleme "/" ↔ "ve" farkı yüzünden dersi sessizce çıkmışsız bırakıyordu.)"""
+    import difflib
+    adaylar = []
+    for q in Q:
+        m = (q.get("checkSolve") or {}).get("mufredat") or {}
+        if m.get("kurul") == d.get("cikmis_kurul", d["kurul"]) and m.get("ders") == d["brans"]:
+            adaylar.append((q, m.get("konu")))
+    hedef_kat = [_konu_kati(k) for k in hedef_konu]
+    for yol, uyar in (("birebir", lambda k: AH.norm(k) in hedef_konu),
+                      ("yazım farkı yok sayılarak", lambda k: _konu_kati(k) in hedef_kat),
+                      ("benzerlik ≥0,92", lambda k: any(difflib.SequenceMatcher(None, " ".join(_konu_kati(k)), " ".join(h)).ratio()
+                                                        >= 0.92 for h in hedef_kat))):
+        L = [c for q, k in adaylar if k and uyar(k) for c in [AH.aday(q, gizli, silinen)] if c]
+        if L:
+            return L, yol
+    return [], "yok"
+
+
 def a_hazirla(d, pk, W, kuru):
     """pdf_metin + pdf_liste + cikmis (müfredat konusu = defter konusu, tekrar grupları) + girdi."""
     kod = d["kod"]
@@ -128,12 +157,9 @@ def a_hazirla(d, pk, W, kuru):
     Q = json.load(open(MEDS / "data/pastQuestions.json"))
     gizli, silinen = AH.gizli_silinen()
     hedef_konu = {AH.norm(d["konu"])} | {AH.norm(k) for k in d.get("cikmis_konular") or []}
-    L = []
-    for q in Q:
-        m = (q.get("checkSolve") or {}).get("mufredat") or {}
-        if m.get("kurul") == d.get("cikmis_kurul", d["kurul"]) and m.get("ders") == d["brans"] and AH.norm(m.get("konu")) in hedef_konu:
-            c = AH.aday(q, gizli, silinen)
-            if c: L.append(c)
+    L, yol = konu_eslesen_cikmislar(Q, d, hedef_konu, gizli, silinen)
+    if L:
+        print(f"   çıkmış konu eşlemesi: {yol}")
     cik = AH.grupla(L) if L else []
     (W / "cikmis" / f"{kod}.json").write_text(json.dumps(cik, ensure_ascii=False, indent=1))
     (W / "girdi" / f"{kod}.json").write_text(json.dumps(
@@ -158,7 +184,55 @@ def a_onem(d, pk, W, kuru):
     return r
 
 
+def gorev_modu(gorev):
+    """otomasyon/llm/gorevler.json → mod: aktif (görev yolu) | golge (Claude + yanında ücretsiz görev yolu, kıyas)."""
+    try:
+        g = next(x for x in json.loads((MEDS / "otomasyon/llm/gorevler.json").read_text())["gorevler"] if x["id"] == gorev)
+        return g.get("mod", "golge")
+    except Exception:  # noqa: BLE001
+        return "kapali"
+
+
+def spot_gorev(adim, W, kod, golge, kuru):
+    """R4: önem/çözücü adımını görev yoluyla yürütür (otomasyon/llm/spot_zinciri.py). Gölgede yalnız ücretsiz katman,
+    çıktı W/_golge/ aynasında (Claude dosyalarını ezmez) ve kıyas meds_temp/golge/<gün>.jsonl'a yazılır."""
+    kom = [str(MEDS / ".venv-ocr/bin/python"), str(MEDS / "otomasyon/llm/spot_zinciri.py"), adim, str(W), kod]
+    if golge:
+        kom += ["--golge", "--katman", "A"]   # gölge = Claude dışı ajanlar (spot_zinciri --golge MEDS_AJAN_CLAUDE=0 koyar)
+    r = calistir(kom, kuru=kuru)
+    if golge and not kuru:
+        try:
+            alt = {"onem": "onem", "cozucu": "cozucu", "asistan": "asistan/cikti"}[adim]
+            gs = W / "_golge" / alt / f"{kod}.json"
+            cs = W / alt / f"{kod}.json"
+            kayit = {"zaman": dt.datetime.now().isoformat(timespec="seconds"), "gorev": f"zincir_{adim}", "hedef": kod,
+                     "kapi": r == 0, "kod": r}
+            if r == 0 and gs.exists() and cs.exists() and adim == "onem":
+                g, c_ = json.loads(gs.read_text()), json.loads(cs.read_text())
+                kul = lambda o: {x for m in o["maddeler"] for x in m.get("cikmis") or []}  # noqa: E731
+                ortak = (kul(g) | {x["id"] for x in g.get("elenen_cikmis") or []})
+                kayit.update({"madde": [len(g["maddeler"]), len(c_["maddeler"])],
+                              "cikmis_karar_uyumu": sum(1 for x in ortak if (x in kul(g)) == (x in kul(c_))) / max(len(ortak), 1)})
+            (KOK / "meds_temp/golge").mkdir(parents=True, exist_ok=True)
+            with open(KOK / f"meds_temp/golge/{dt.date.today().isoformat()}.jsonl", "a") as f:
+                f.write(json.dumps(kayit, ensure_ascii=False) + "\n")
+        except Exception as e:  # noqa: BLE001
+            print(f"   gölge kıyası yazılamadı: {e}")
+    return r
+
+
 def _a_onem(d, pk, W, kuru):
+    k = d["kod"]
+    mod = gorev_modu("onem_listesi")
+    if mod == "aktif":
+        return spot_gorev("onem", W, k, False, kuru)
+    r = _a_onem_claude(d, pk, W, kuru)
+    if r == 0 and mod == "golge":
+        spot_gorev("onem", W, k, True, kuru)          # gölge sonucu zinciri ETKİLEMEZ
+    return r
+
+
+def _a_onem_claude(d, pk, W, kuru):
     k = d["kod"]
     return kapili_claude(
         f"{SC}/TALIMAT_ONEM.md talimatını uygula. Çalışma klasörü: {W} (branş klasörü {W.name}, Kurul {d['kurul']} "
@@ -199,6 +273,17 @@ def karantina_onerileri(d, W):
 
 def a_cozucu(d, pk, W, kuru):
     k = d["kod"]
+    mod = gorev_modu("cozucu_sorusu")
+    if mod == "aktif":
+        return spot_gorev("cozucu", W, k, False, kuru)
+    r = _a_cozucu_claude(d, pk, W, kuru)
+    if r == 0 and mod == "golge" and (W / "_golge" / "onem" / f"{k}.json").exists():
+        spot_gorev("cozucu", W, k, True, kuru)
+    return r
+
+
+def _a_cozucu_claude(d, pk, W, kuru):
+    k = d["kod"]
     return kapili_claude(
         f"{SC}/TALIMAT_COZUCU.md talimatını uygula. Çalışma klasörü: {W}. Yalnız ders kodu {k}: onem/{k}.json + "
         f"cikmis/{k}.json + pdf_metin/{k}.md → cozucu/{k}.json. Şık açıklamaları {MEDS}/docs/SIK_ACIKLAMA_STANDARDI.md'ye uyar.",
@@ -214,8 +299,14 @@ def onayli_yaz(W, kod, ekle):
 
 
 def a_denetim(d, pk, W, kuru):
-    """Bağımsız denetçi (yazar ≠ denetçi): DENETIM.md; düzeltmeden sonra iki kapı yeniden."""
+    """Bağımsız denetçi (yazar ≠ denetçi): DENETIM.md; düzeltmeden sonra iki kapı yeniden. Önem/çözücü görev yoluyla
+    üretildiyse (mod aktif) denetim de görev yoluyla: yazarın ailesi dışından denetçi (spot_zinciri.py denetim)."""
     k = d["kod"]
+    if gorev_modu("onem_listesi") == "aktif":
+        r = spot_gorev("denetim", W, k, False, kuru)
+        if not kuru:
+            onayli_yaz(W, k, r == 0)
+        return r
     claude(f"Sen bağımsız denetçisin (yazar değil). {SC}/DENETIM.md talimatını uygula. Çalışma klasörü: {W}. Yalnız ders "
            f"kodu {k}: onem/{k}.json ve cozucu/{k}.json'u pdf_metin/{k}.md'ye karşı denetle, hataları düzelt, "
            f"denetim/{k}.md raporu yaz.", W, kuru)
@@ -306,7 +397,10 @@ def a_birlestir(d, pk, W, kuru):
     tut = kopya_tutarliligi(W.name, d["kod"])
     if tut:
         print("   HATA (H7) aynı soru ürünler arasında farklı:", *tut[:8], sep="\n     "); return 13
-    # "Öğren'de bu bilgi": çözücü/asistan ↔ Öğren adımı eşlemesi (tüm branşlar, ~3 sn)
+    # "Öğren'de bu bilgi": çözücü/asistan ↔ Öğren adımı eşlemesi (tüm branşlar, ~3 sn). Provada atlanır: bütün branşların
+    # cozucu_ogren dosyalarını yeniden yazıyordu (2026-10-24, K1 dosyalarına istenmeyen dokunuş)
+    if os.environ.get("MEDS_PROVA") == "1":
+        return 0
     return calistir(f"python3 {SC}/ogren_esle.py", cwd=MEDS)
 
 
@@ -319,9 +413,15 @@ def a_asistan(d, pk, W, kuru):
         birlestir_asistan = lambda: calistir(f"python3 {SC}/asistan_birlestir.py {W.name}")  # noqa: E731
     else:
         hedef, birlestir_asistan = [], lambda: calistir(f"python3 {SC}/asistan_birlestir.py {W.name}", kuru=True)  # noqa: E731
-    r = kapili_claude(f"{SC}/TALIMAT_ASISTAN.md talimatını uygula. Çalışma klasörü: {W}/asistan. Yalnız ders kodu {k}. "
-                      f"Anlatım bir tıp doktorunun öğrenciye Türkçe anlatımı üslubunda; ekranda madde madde.",
-                      f"python3 {SC}/asistan_dogrula.py {W}/asistan/cikti/{k}.json", W, kuru)
+    mod = gorev_modu("asistan_nokta")
+    if mod == "aktif":
+        r = spot_gorev("asistan", W, k, False, kuru)
+    else:
+        r = kapili_claude(f"{SC}/TALIMAT_ASISTAN.md talimatını uygula. Çalışma klasörü: {W}/asistan. Yalnız ders kodu {k}. "
+                          f"Anlatım bir tıp doktorunun öğrenciye Türkçe anlatımı üslubunda; ekranda madde madde.",
+                          f"python3 {SC}/asistan_dogrula.py {W}/asistan/cikti/{k}.json", W, kuru)
+        if r == 0 and mod == "golge":
+            spot_gorev("asistan", W, k, True, kuru)       # gölge: W/_golge/asistan/cikti, zinciri etkilemez
     return r or (korumali(hedef, birlestir_asistan) if hedef else birlestir_asistan())
 
 

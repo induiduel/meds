@@ -184,6 +184,7 @@ def cikmis_adaylari(metin: str, kurul: int | None, en_cok: int = 40) -> list[dic
     parcalar = [" ".join(p.split())[:700] for p in parcalar if len(p) > 120]
     grup = [" ".join(parcalar[i:i + 3])[:1000] for i in range(0, len(parcalar), 3)][:30]
     toplam: dict[str, dict] = {}
+    basarili = 0
     for g in grup:
         body = {"text": g, "limit": 8}
         if kurul:
@@ -197,8 +198,12 @@ def cikmis_adaylari(metin: str, kurul: int | None, en_cok: int = 40) -> list[dic
                                                 "cevap": r.get("correctAnswer") or r.get("answer"), "puan": 0.0, "kez": 0})
                 e["puan"] = max(e["puan"], float(r.get("score") or 0))
                 e["kez"] += 1
+            basarili += 1
         except Exception as ex:  # noqa: BLE001
             log(f"benzer soru araması başarısız: {ex}")
+    if grup and not basarili:
+        # sessiz başarısızlık yasak (GELECEK_PLANLAMASI E11): boş aday listesiyle paket üretilmez, iş sonra yeniden dener
+        raise RuntimeError(f"benzer soru araması {len(grup)} sorguda da başarısız ({API})")
     return sorted(toplam.values(), key=lambda e: (-e["kez"], -e["puan"]))[:en_cok]
 
 
@@ -341,8 +346,11 @@ def claude(d: Path, istem: str, oturum: str | None = None, sure: int = 3 * 3600,
             "oturum": oturum_id, "maliyet": js.get("total_cost_usd"), "tur": js.get("num_turns")}
 
 
-def bildir(baslik: str, ayrinti: str, hedef: str):
-    body = {"targetType": "pipeline", "targetId": hedef, "reason": baslik, "details": ayrinti, "reportedBy": "Ders işçisi"}
+def bildir(baslik: str, ayrinti: str, hedef: str, link: str | None = None):
+    if os.environ.get("MEDS_ISCI_BILDIRIM") == "0":   # sınama koşusu: yöneticinin telefonuna gitmesin
+        log(f"bildirim (kapalı): {baslik}"); return
+    body = {"targetType": "pipeline", "targetId": hedef, "reason": baslik, "details": ayrinti, "reportedBy": "Ders işçisi",
+            **({"link": link} if link else {})}
     h = {"Content-Type": "application/json"}
     if os.environ.get("MEDSORU_API_PASSWORD"):
         h["X-API-Password"] = os.environ["MEDSORU_API_PASSWORD"]
@@ -488,6 +496,13 @@ def _isle_tek(j: dict) -> dict:
         log(f"bağlam: {b['ders_id']} · eşleşme {b['program'].get('guven')} ({b['program'].get('skor')}) · "
             f"{len(b['cikmis_adaylari'])} çıkmış aday · {len(b['kazanimlar'])} kazanım")
     b = oku(d / "baglam.json", {})
+    if j.get("ekler"):   # onay kapısı: yöneticinin öğrenci notu / ses kaydı (ekler.py)
+        import ekler
+        e = ekler.hazirla(j, d)
+        if e.get("uyarilar") and "ekler_uyari" not in b:
+            b["ekler_uyari"] = e["uyarilar"]
+            b["uyari"] = "; ".join(x for x in [b.get("uyari"), "ekler: " + "; ".join(e["uyarilar"])] if x)
+            yaz(d / "baglam.json", b)
 
     if (d / "ana_bitti.json").exists():  # deste vb. bitti, yalnız konuşma metni kalmış (kota kesintisi)
         return _sesli_ve_bitir(j, d, b, oku(d / "ana_bitti.json", {}))
@@ -495,6 +510,9 @@ def _isle_tek(j: dict) -> dict:
     onceki = oku(d / "oturum.json", {}).get("session_id")
     istem = (f"Talimat dosyası: {TALIMAT}. Önce onu ve çalışma dizinindeki baglam.json + kaynak.md'yi oku, sonra "
              "talimattaki iş sırasıyla tüm çıktıları üret ve denetle.py 0 HATA olana kadar düzelt.")
+    if j.get("ekler"):
+        import ekler
+        istem += ekler.istem_eki(d)
     if j.get("duzeltme_notu"):
         istem += (" ÖNEMLİ — yöneticinin önceki taslağa düzeltme notu (bunlara mutlaka uy, rapor.md'de nasıl uyduğunu yaz): "
                   + j["duzeltme_notu"])

@@ -1,0 +1,1898 @@
+{
+ "kod": "e07",
+ "sorular": [
+  {
+   "ref": "o:e07-01:1",
+   "tur": "ornek",
+   "onem_id": "e07-01",
+   "zorluk": "kolay",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Spiroketlerin mikroskobik özellikleri ve hareket mekanizmaları ile ilgili aşağıdakilerden hangisi doğrudur?",
+   "secenekler": {
+    "A": "Gram boyası ile kuvvetli pozitif boyanırlar",
+    "B": "Periplazmik flajellaları ile burgu hareketi yaparlar",
+    "C": "Işık mikroskopunda doğrudan kolayca incelenirler",
+    "D": "Hücre duvarında peptidoglikan tabaka bulunmaz",
+    "E": "Dış membran yapısı taşımayan tek katmanlı yapılardır"
+   },
+   "dogru": "B",
+   "kok_ses": "Spiroketlerin mikroskobik özellikleri ve hareket mekanizmaları ile ilgili aşağıdakilerden hangisi doğrudur?",
+   "secenek_ses": {
+    "A": "Gram boyası ile kuvvetli pozitif boyanırlar",
+    "B": "Periplazmik flajellaları ile burgu hareketi yaparlar",
+    "C": "Işık mikroskopunda doğrudan kolayca incelenirler",
+    "D": "Hücre duvarında peptidoglikan tabaka bulunmaz",
+    "E": "Dış membran yapısı taşımayan tek katmanlı yapılardır"
+   },
+   "ipucu": {
+    "metin": "Özel konumdaki mikroskobik organeller bakterinin karakteristik dönüş biçimini belirler.",
+    "ses": "Özel konumdaki mikroskobik organeller bakterinin karakteristik dönüş biçimini belirler."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Gram boyası bakterilerin hücre duvarı yapısını incelemede kullanılan temel bir yöntemdir. Bu mikroorganizmalar Gram negatif benzeri duvar yapısına sahiptir ancak Gram boyası ile iyi boyanmazlar. Bu nedenle bu ifade yanlış bir bilgi içermektedir.",
+     "ses": "Gram boyası bakterilerin hücre duvarı yapısını incelemede kullanılan temel bir yöntemdir. Bu mikroorganizmalar Gram negatif benzeri duvar yapısına sahiptir ancak gram boyası ile iyi boyanmazlar. Bu nedenle bu ifade yanlış bir bilgi içermektedir."
+    },
+    "B": {
+     "metin": "Periplazmik flajella bakterilerin hücre zar ile dış zar arasında yer alan özel hareket organelleridir. Bu yapılar mikroorganizmanın sıvı ortamlarda ilerlemesini sağlayan karakteristik burgu hareketini oluşturur. Soru metnine göre bu ifade **doğru** bir bilgidir.",
+     "ses": "Periplazmik flajella bakterilerin hücre zar ile dış zar arasında yer alan özel hareket organelleridir. Bu yapılar mikroorganizmanın sıvı ortamlarda ilerlemesini sağlayan karakteristik burgu hareketini oluşturur. Soru metnine göre bu ifade doğru bir bilgidir."
+    },
+    "C": {
+     "metin": "Işık mikroskobu rutin laboratuvar incelemelerinde kullanılan standart bir görüntüleme cihazıdır. İnce duvar yapıları ve boyanma özellikleri nedeniyle bu etkenler standart ışık mikroskobunda doğrudan görülemez. Bu yüzden belirtilen yargı doğru değildir.",
+     "ses": "Işık mikroskobu rutin laboratuvar incelemelerinde kullanılan standart bir görüntüleme cihazıdır. İnce duvar yapıları ve boyanma özellikleri nedeniyle bu etkenler standart ışık mikroskobunda doğrudan görülemez. Bu yüzden belirtilen yargı doğru değildir."
+    },
+    "D": {
+     "metin": "Peptidoglikan tabaka bakteri hücre duvarına dayanıklılık sağlayan temel bir bileşendir. Spiroketler gram negatif bakterilere benzer şekilde ince bir peptidoglikan tabakaya sahiptir. Dolayısıyla bu ifadede yer alan görüş gerçeği yansıtmamaktadır.",
+     "ses": "Peptidoglikan tabaka bakteri hücre duvarına dayanıklılık sağlayan temel bir bileşendir. Spiroketler gram negatif bakterilere benzer şekilde ince bir peptidoglikan tabakaya sahiptir. Dolayısıyla bu ifadede yer alan görüş gerçeği yansıtmamaktadır."
+    },
+    "E": {
+     "metin": "Dış membran hücre duvarının dış kısmında yer alan koruyucu bir katmandır. Bu mikroorganizmalar sitoplazmik membran, ince peptidoglikan ve dış membran içeren çok katmanlı bir yapıya sahiptir. Bu nedenle ifade doğru değildir.",
+     "ses": "Dış membran hücre duvarının dış kısmında yer alan koruyucu bir katmandır. Bu mikroorganizmalar sitoplazmik membran, ince peptidoglikan ve dış membran içeren çok katmanlı bir yapıya sahiptir. Bu nedenle ifade doğru değildir."
+    }
+   },
+   "cozum": {
+    "metin": "Spiroketler periplazmik aralıkta bulunan **flajella** sayesinde karakterize burgu hareketi gerçekleştirir ve standart ışık mikroskobunda doğrudan görünmezler.",
+    "ses": "Spiroketler periplazmik aralıkta bulunan flajella sayesinde karakterize burgu hareketi gerçekleştirir ve standart ışık mikroskobunda doğrudan görünmezler."
+   },
+   "sayfa": [
+    2
+   ]
+  },
+  {
+   "ref": "o:e07-02:1",
+   "tur": "ornek",
+   "onem_id": "e07-02",
+   "zorluk": "orta",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Non-venerel treponematöz enfeksiyonlar arasında yer alan Treponema carateum (pinta) hastalığını Yaws ve Bejel'den ayıran temel klinik özellik aşağıdakilerden hangisidir?",
+   "secenekler": {
+    "A": "Genital bölge şankrı oluşturması",
+    "B": "Sadece bebeklerde görülmesi",
+    "C": "VDRL testinin negatif çıkması",
+    "D": "Damlacık yoluyla bulaşması",
+    "E": "Kemik tutulumunun olmaması"
+   },
+   "dogru": "E",
+   "kok_ses": "Non-venerel treponematöz enfeksiyonlar arasında yer alan Treponema carateum pinta hastalığını Yaws ve Bejel'den ayıran temel klinik özellik aşağıdakilerden hangisidir?",
+   "secenek_ses": {
+    "A": "Genital bölge şankrı oluşturması",
+    "B": "Sadece bebeklerde görülmesi",
+    "C": "ve de re le testinin negatif çıkması",
+    "D": "Damlacık yoluyla bulaşması",
+    "E": "Kemik tutulumunun olmaması"
+   },
+   "ipucu": {
+    "metin": "Etkenin oluşturduğu lezyonların yayılım gösterdiği doku sınırları tanısal ayrımda önemlidir.",
+    "ses": "Etkenin oluşturduğu lezyonların yayılım gösterdiği doku sınırları tanısal ayrımda önemlidir."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Genital bölge şankrı cinsel yolla bulaşan sifiliz enfeksiyonunun primer bulgusudur. Treponema ka rate um cilt temasıyla bulaşan pinta etkenidir ve bu tür lezyonlar oluşturmaz. Bu nedenle ifade yanlıştır.",
+     "ses": "Genital bölge şankrı cinsel yolla bulaşan sifiliz enfeksiyonunun primer bulgusudur. Treponema ka rate um cilt temasıyla bulaşan pinta etkenidir ve bu tür lezyonlar oluşturmaz. Bu nedenle ifade yanlıştır."
+    },
+    "B": {
+     "metin": "Bulaşıcı hastalıklar belirli yaş gruplarını daha sık etkileyebilir ancak bu etkenler farklı yaşlardaki bireylerde görülebilir. Pinta hastalığı sadece bebeklere özgü bir enfeksiyon değildir. Bu yüzden seçenek doğru değildir.",
+     "ses": "Bulaşıcı hastalıklar belirli yaş gruplarını daha sık etkileyebilir ancak bu etkenler farklı yaşlardaki bireylerde görülebilir. Pinta hastalığı sadece bebeklere özgü bir enfeksiyon değildir. Bu yüzden seçenek doğru değildir."
+    },
+    "C": {
+     "metin": "Serolojik testler treponemal enfeksiyonların tanısında bağışıklık yanıtını saptamak için kullanılır. V e de re le testi bu gruptaki enfeksiyonların tanısında kullanılan tarama testlerinden biridir. Bu özellik hastalıkları birbirinden ayıran temel kriter değildir.",
+     "ses": "Serolojik testler treponemal enfeksiyonların tanısında bağışıklık yanıtını saptamak için kullanılır. V e de re le testi bu gruptaki enfeksiyonların tanısında kullanılan tarama testlerinden biridir. Bu özellik hastalıkları birbirinden ayıran temel kriter değildir."
+    },
+    "D": {
+     "metin": "Damlacık yolu solunum yolu etkenlerinin yayılmasında rol oynayan bir bulaş mekanizmasıdır. Bu gruptaki treponematöz enfeksiyonlar genellikle cilt veya mukoza temasıyla bulaşır. Bu nedenle damlacık yoluyla bulaş tarif edilmez.",
+     "ses": "Damlacık yolu solunum yolu etkenlerinin yayılmasında rol oynayan bir bulaş mekanizmasıdır. Bu gruptaki treponematöz enfeksiyonlar genellikle cilt veya mukoza temasıyla bulaşır. Bu nedenle damlacık yoluyla bulaş tarif edilmez."
+    },
+    "E": {
+     "metin": "Treponematöz enfeksiyonlar vücutta farklı organ ve dokularda lezyonlar meydana getirebilir. Pinta etkeni cilt tutulumu yaparken kemik tutulumu yapmamasıyla diğer benzer enfeksiyonlardan ayrılır. Soru metnine göre bu ifade **doğrudur**.",
+     "ses": "Treponematöz enfeksiyonlar vücutta farklı organ ve dokularda lezyonlar meydana getirebilir. Pinta etkeni cilt tutulumu yaparken kemik tutulumu yapmamasıyla diğer benzer enfeksiyonlardan ayrılır. Soru metnine göre bu ifade doğrudur."
+    }
+   },
+   "cozum": {
+    "metin": "**Treponema carateum** cilt tutulumu yapmasına karşın kemik tutulumu yapmamasıyla yaws ve bejel hastalıklarından klinik olarak ayrılır.",
+    "ses": "Treponema ka rate um cilt tutulumu yapmasına karşın kemik tutulumu yapmamasıyla yaws ve bejel hastalıklarından klinik olarak ayrılır."
+   },
+   "sayfa": [
+    3
+   ]
+  },
+  {
+   "ref": "c:k1-2023-2024-q009",
+   "tur": "cikmis",
+   "onem_id": "e07-03",
+   "sinav": "2023-2024 Kurul 1",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Sifiliz enfeksiyonunun bulaş yolları hakkında aşağıdakilerden hangisi yanlıştır?",
+   "secenekler": {
+    "A": "Cinsel ilişkiyle bulaşır",
+    "B": "Kan nakliyle bulaşır",
+    "C": "Damlacık yoluyla bulaşır",
+    "D": "Lezyonlara direkt temasla bulaşır",
+    "E": "Anneden bebeğe bulaşır"
+   },
+   "dogru": "C",
+   "kok_ses": "Sifiliz enfeksiyonunun bulaş yolları hakkında aşağıdakilerden hangisi yanlıştır?",
+   "secenek_ses": {
+    "A": "Cinsel ilişkiyle bulaşır",
+    "B": "Kan nakliyle bulaşır",
+    "C": "Damlacık yoluyla bulaşır",
+    "D": "Lezyonlara direkt temasla bulaşır",
+    "E": "Anneden bebeğe bulaşır"
+   },
+   "ipucu": {
+    "metin": "Etkenin duyarlı konakçılara geçişinde solunum sistemi yolları rol oynamaz.",
+    "ses": "Etkenin duyarlı konakçılara geçişinde solunum sistemi yolları rol oynamaz."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Cinsel ilişki mikroorganizmaların mukoza yoluyla aktarımını sağlayan en yaygın bulaş yoludur. Sifiliz etkeni enfekte lezyonlarla cinsel temas sırasında kolayca bulaşır. Bu nedenle verilen ifade doğru bir bilgidir.",
+     "ses": "Cinsel ilişki mikroorganizmaların mukoza yoluyla aktarımını sağlayan en yaygın bulaş yoludur. Sifiliz etkeni enfekte lezyonlarla cinsel temas sırasında kolayca bulaşır. Bu nedenle verilen ifade doğru bir bilgidir."
+    },
+    "B": {
+     "metin": "Kan transfüzyonu etkenin doğrudan dolaşım sistemine verilmesine neden olan bir bulaş yoludur. Etken kanda bulunabildiği için enfekte kan nakli ile sağlıklı bireylerere geçebilir. Dolayısıyla bu ifade de doğrudur.",
+     "ses": "Kan transfüzyonu etkenin doğrudan dolaşım sistemine verilmesine neden olan bir bulaş yoludur. Etken kanda bulunabildiği için enfekte kan nakli ile sağlıklı bireylere geçebilir. Dolayısıyla bu ifade de doğrudur."
+    },
+    "C": {
+     "metin": "Solunum yolu sekresyonlarıyla yayılan etkenler damlacık yoluyla bulaş özelliği gösterir. Sifiliz etkeni bu yolla bulaşmaz ve bu durum sınavlarda yanlış bir ifade olarak sıkça karşımıza çıkar. Soru kökünde yanlış arandığı için bu seçenek **doğru** yanıttır.",
+     "ses": "Solunum yolu sekresyonlarıyla yayılan etkenler damlacık yoluyla bulaş özelliği gösterir. Sifiliz etkeni bu yolla bulaşmaz ve bu durum sınavlarda yanlış bir ifade olarak sıkça karşımıza çıkar. Soru kökünde yanlış arandığı için bu seçenek doğru yanıttır."
+    },
+    "D": {
+     "metin": "Aktif enfekte lezyonlar yüksek miktarda bakteri barındıran bulaştırıcı odaklardır. Şankr veya kondiloma lata gibi lezyonlara direkt temas edilmesi etkenin geçişini sağlar. Bu nedenle ifade doğrudur.",
+     "ses": "Aktif enfekte lezyonlar yüksek miktarda bakteri barındıran bulaştırıcı odaklardır. Şankr veya kondiloma lata gibi lezyonlara direkt temas edilmesi etkenin geçişini sağlar. Bu nedenle ifade doğrudur."
+    },
+    "E": {
+     "metin": "Gebelik ve doğum süreci anneden bebeğe mikroorganizma geçişine zemin hazırlayabilir. Sifiliz etkeni transplasental yolla veya doğum sırasında bebeğe bulaşabilmektedir. Bu yüzden bu ifade de doğrudur.",
+     "ses": "Gebelik ve doğum süreci anneden bebeğe mikroorganizma geçişine zemin hazırlayabilir. Sifiliz etkeni transplasental yolla veya doğum sırasında bebeğe bulaşabilmektedir. Bu yüzden bu ifade de doğrudur."
+    }
+   },
+   "cozum": {
+    "metin": "Sifiliz enfeksiyonu cinsel temas, direkt lezyon teması, kan nakli ve transplasental yolla bulaşırken damlacık yoluyla **asla** bulaşmaz.",
+    "ses": "Sifiliz enfeksiyonu cinsel temas, direkt lezyon teması, kan nakli ve transplasental yolla bulaşırken damlacık yoluyla asla bulaşmaz."
+   },
+   "sayfa": [
+    5
+   ]
+  },
+  {
+   "ref": "o:e07-04:1",
+   "tur": "ornek",
+   "onem_id": "e07-04",
+   "zorluk": "kolay",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Sifiliz patogenezi ve T. pallidum'un vücuttaki yayılımı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+   "secenekler": {
+    "A": "Giriş yeri genellikle mukoza veya bütünlüğü bozulmuş cilttir",
+    "B": "Giriş yerinde çoğaldıktan sonra kan ve lenf yoluyla yayılır",
+    "C": "Hastalığın inkübasyon süresi sıklıkla 3 yıldır",
+    "D": "Bakteriler damar endotellerinde ve perivasküler alanda çoğalır",
+    "E": "Giriş yerinde ortalama 3 hafta sonra ilk lezyon gelişir"
+   },
+   "dogru": "C",
+   "kok_ses": "Sifiliz patogenezi ve treponema pallidumun vücuttaki yayılımı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+   "secenek_ses": {
+    "A": "Giriş yeri genellikle mukoza veya bütünlüğü bozulmuş cilttir",
+    "B": "Giriş yerinde çoğaldıktan sonra kan ve lenf yoluyla yayılır",
+    "C": "Hastalığın inkübasyon süresi sıklıkla üç yıldır",
+    "D": "Bakteriler damar endotellerinde ve perivasküler alanda çoğalır",
+    "E": "Giriş yerinde ortalama üç hafta sonra ilk lezyon gelişir"
+   },
+   "ipucu": {
+    "metin": "Bakterinin vücuda girmesinden ilk bulguların ortaya çıkmasına kadar geçen süre haftalarla ifade edilir.",
+    "ses": "Bakterinin vücuda girmesinden ilk bulguların ortaya çıkmasına kadar geçen süre haftalarla ifade edilir."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Mikroorganizmaların vücuda yerleşebilmesi için uygun bir giriş kapısına ihtiyacı vardır. Sifiliz etkeni genellikle sağlam olmayan mukoza veya bütünlüğü bozulmuş cilt yoluyla vücuda girer. Bu nedenle bu ifade doğru bir bilgidir.",
+     "ses": "Mikroorganizmaların vücuda yerleşebilmesi için uygun bir giriş kapısına ihtiyacı vardır. Sifiliz etkeni genellikle sağlam olmayan mukoza veya bütünlüğü bozulmuş cilt yoluyla vücuda girer. Bu nedenle bu ifade doğru bir bilgidir."
+    },
+    "B": {
+     "metin": "Lenf ve kan damarları etkenlerin tüm vücuda taşınmasında ana yolları oluşturur. Bakteri giriş bölgesinde çoğaldıktan sonra bu sistemler aracılığıyla sistemik dolaşıma katılarak yayılır. Dolayısıyla bu ifade de doğrudur.",
+     "ses": "Lenf ve kan damarları etkenlerin tüm vücuda taşınmasında ana yolları oluşturur. Bakteri giriş bölgesinde çoğaldıktan sonra bu sistemler aracılığıyla sistemik dolaşıma katılarak yayılır. Dolayısıyla bu ifade de doğrudur."
+    },
+    "C": {
+     "metin": "İnkübasyon süresi etkenin alımından ilk klinik belirtilerin çıkışına kadar geçen zamandır. Sifiliz için bu süre yıllarla değil gün ve haftalarla ifade edilir ve ortalama üç haftadır. Soru kökünde yanlış arandığı için bu seçenek **doğru** yanıttır.",
+     "ses": "İnkübasyon süresi etkenin alımından ilk klinik belirtilerin çıkışına kadar geçen zamandır. Sifiliz için bu süre yıllarla değil gün ve haftalarla ifade edilir ve ortalama üç haftadır. Soru kökünde yanlış arandığı için bu seçenek doğru yanıttır."
+    },
+    "D": {
+     "metin": "Damarların iç yüzeyini döşeyen hücreler ve çevre dokular bazı etkenler için yerleşim yeridir. Sifiliz etkeni damar endotellerinde çoğalır ve perivasküler alandaki hücrelere yerleşerek hasar yapar. Bu nedenle ifade doğrudur.",
+     "ses": "Damarların iç yüzeyini döşeyen hücreler ve çevre dokular bazı etkenler için yerleşim yeridir. Sifiliz etkeni damar endotellerinde çoğalır ve perivasküler alandaki hücrelere yerleşerek hasar yapar. Bu nedenle ifade doğrudur."
+    },
+    "E": {
+     "metin": "Primer lezyon olan şankr etkenin vücuda girdiği yerde bağışıklık yanıtıyla oluşur. Bu klinik bulgu genellikle maruziyetten ortalama üç hafta sonra ortaya çıkmaktadır. Dolayısıyla bu ifade de doğrudur.",
+     "ses": "Primer lezyon olan şankr etkenin vücuda girdiği yerde bağışıklık yanıtıyla oluşur. Bu klinik bulgu genellikle maruziyetten ortalama üç hafta sonra ortaya çıkmaktadır. Dolayısıyla bu ifade de doğrudur."
+    }
+   },
+   "cozum": {
+    "metin": "Treponema pallidum enfeksiyonunun inkübasyon süresi yıllar değil, genellikle **üç hafta** süren kısa bir dönemi kapsar.",
+    "ses": "Treponema pallidum enfeksiyonunun inkübasyon süresi yıllar değil, genellikle üç hafta süren kısa bir dönemi kapsar."
+   },
+   "sayfa": [
+    6,
+    7
+   ]
+  },
+  {
+   "ref": "o:e07-05:1",
+   "tur": "ornek",
+   "onem_id": "e07-05",
+   "zorluk": "orta",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Sifiliz sınıflamasında enfeksiyonun bulaştırıcı (infeksiyöz) kabul edildiği \"Erken Sifiliz\" dönemi için üst zaman sınırı aşağıdakilerden hangisidir?",
+   "secenekler": {
+    "A": "1 yıl",
+    "B": "6 ay",
+    "C": "3 hafta",
+    "D": "3 yıl",
+    "E": "5 yıl"
+   },
+   "dogru": "A",
+   "kok_ses": "Sifiliz sınıflamasında enfeksiyonun bulaştırıcı kabul edildiği Erken Sifiliz dönemi için üst zaman sınırı aşağıdakilerden hangisidir?",
+   "secenek_ses": {
+    "A": "Bir yıl",
+    "B": "Altı ay",
+    "C": "Üç hafta",
+    "D": "Üç yıl",
+    "E": "Beş yıl"
+   },
+   "ipucu": {
+    "metin": "Bulaş sonrası geçen süre sınıflandırmasında erken dönem kriteri temel alınmaktadır.",
+    "ses": "Bulaş sonrası geçen süre sınıflandırmasında erken dönem kriteri temel alınmaktadır."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Bulaş sonrası geçen süreye göre evreler ayrılırken kullanılan **erken sifiliz** dönemi, bir yıldan kısa süreyi kapsar ve bu evrede hastalar oldukça bulaştırıcıdır. Bu soruda doğru yanıt olarak belirlenen bir yıllık üst sınır, infeksiyöz dönemin bitiş çizgisini gösterir.",
+     "ses": "Bulaş sonrası geçen süreye göre evreler ayrılırken kullanılan erken sifiliz dönemi, bir yıldan kısa süreyi kapsar ve bu evrede hastalar oldukça bulaştırıcıdır. Bu soruda doğru yanıt olarak belirlenen bir yıllık üst sınır, infeksiyöz dönemin bitiş çizgisini gösterir."
+    },
+    "B": {
+     "metin": "Altı aylık süre, primer dönemdeki bazı bulguların gelişim zamanı ile ilişkilidir ancak erken sifiliz için genel bir üst sınır oluşturmaz. Sınıflamada bu süre kullanılmamaktadır.",
+     "ses": "Altı aylık süre, primer dönemdeki bazı bulguların gelişim zamanı ile ilişkilidir ancak erken sifiliz için genel bir üst sınır oluşturmaz. Sınıflamada bu süre kullanılmamaktadır."
+    },
+    "C": {
+     "metin": "Üç haftalık süre, etkenin vücuda girmesinden sonra belirtilerin ortaya çıkmasına kadar geçen inkübasyon süresini ifade eder. Sınıflamada üst sınır olarak yer almaz.",
+     "ses": "Üç haftalık süre, etkenin vücuda girmesinden sonra belirtilerin ortaya çıkmasına kadar geçen inkübasyon süresini ifade eder. Sınıflamada üst sınır olarak yer almaz."
+    },
+    "D": {
+     "metin": "Üç yıllık süre, geç dönemde bazı tersiyer bulguların gelişim aralığı içinde yer alan bir zaman dilimidir. Erken dönemin üst sınırı ile bir bağı bulunmaz.",
+     "ses": "Üç yıllık süre, geç dönemde bazı tersiyer bulguların gelişim aralığı içinde yer alan bir zaman dilimidir. Erken dönemin üst sınırı ile bir bağı bulunmaz."
+    },
+    "E": {
+     "metin": "Beş yıllık süre, sifiliz evrelerinin ayrımında kullanılan temel sınıflama kriterleri arasında bulunmaz. Bu nedenle aranan üst sınır bu seçenek olamaz.",
+     "ses": "Beş yıllık süre, sifiliz evrelerinin ayrımında kullanılan temel sınıflama kriterleri arasında bulunmaz. Bu nedenle aranan üst sınır bu seçenek olamaz."
+    }
+   },
+   "cozum": {
+    "metin": "Sifiliz enfeksiyonunda bulaş sonrası geçen süre bir yıldan kısa ise erken sifiliz olarak adlandırılır ve bu dönem bulaştırıcıdır.",
+    "ses": "Sifiliz enfeksiyonunda bulaş sonrası geçen süre bir yıldan kısa ise erken sifiliz olarak adlandırılır ve bu dönem bulaştırıcıdır."
+   },
+   "sayfa": [
+    7
+   ]
+  },
+  {
+   "ref": "c:k1-2019-2020-q005",
+   "tur": "cikmis",
+   "onem_id": "e07-06",
+   "sinav": "2019-2020 Kurul 1",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Peniste bir adet ağrısız ülseri olan 24 yaşında erkek hastada yapılan VDRL testi pozitif saptanmıştır. Tanı aşağıdakilerden hangisidir?",
+   "secenekler": {
+    "A": "Herpes simpleks infeksiyonu",
+    "B": "Primer sifilis",
+    "C": "Ulkus molle",
+    "D": "Lenfogranüloma venereum",
+    "E": "Anogenital siğil (kondiloma akuminata)"
+   },
+   "dogru": "B",
+   "kok_ses": "Peniste bir adet ağrısız ülseri olan yirmi dört yaşında erkek hastada yapılan ve de re le testi pozitif saptanmıştır. Tanı aşağıdakilerden hangisidir?",
+   "secenek_ses": {
+    "A": "Herpes simpleks infeksiyonu",
+    "B": "Primer sifilis",
+    "C": "Ulkus molle",
+    "D": "Lenfogranüloma venereum",
+    "E": "Anogenital siğil kondiloma akuminata"
+   },
+   "ipucu": {
+    "metin": "Genital bölgede tek ve ağrısız ülser tablosu ile serolojik test pozitifliği önem taşır.",
+    "ses": "Genital bölgede tek ve ağrısız ülser tablosu ile serolojik test pozitifliği önem taşır."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Herpes simpleks enfeksiyonu genital bölgede ağrılı vezikül ve ülserlerle seyreden viral bir tablodur. Bu hastadaki ağrısız tek ülser bulgusu ile uyuşmaz.",
+     "ses": "Herpes simpleks enfeksiyonu genital bölgede ağrılı vezikül ve ülserlerle seyreden viral bir tablodur. Bu hastadaki ağrısız tek ülser bulgusu ile uyuşmaz."
+    },
+    "B": {
+     "metin": "Primer sifiliz, bulaş bölgesinde ağrısız ve sert şankr ile seyreden bakteriyel bir enfeksiyondur. Bu soruda doğru tanı olarak yer alır.",
+     "ses": "Primer sifiliz, bulaş bölgesinde ağrısız ve sert şankr ile seyreden bakteriyel bir enfeksiyondur. Bu soruda doğru tanı olarak yer alır."
+    },
+    "C": {
+     "metin": "Ulkus molle, genellikle ağrılı ve yumuşak karakterli genital ülserlerle karakterize bir tablodur. Bu hastadaki ağrısız lezyon tablosunu açıklamaz.",
+     "ses": "Ulkus molle, genellikle ağrılı ve yumuşak karakterli genital ülserlerle karakterize bir tablodur. Bu hastadaki ağrısız lezyon tablosunu açıklamaz."
+    },
+    "D": {
+     "metin": "Lenfogranüloma venereum, sıklıkla geçici genital lezyon ve belirgin lenf nodu tutulumu ile seyreden bir tablodur. Bu hastadaki tipik şankr bulgusunu yansıtmaz.",
+     "ses": "Lenfogranüloma venereum, sıklıkla geçici genital lezyon ve belirgin lenf nodu tutulumu ile seyreden bir tablodur. Bu hastadaki tipik şankr bulgusunu yansıtmaz."
+    },
+    "E": {
+     "metin": "Anogenital siğil, HPV enfeksiyonu sonucu karnabahar görünümünde lezyonlar oluşturan bir tablodur. Ülseratif bir karakter taşımadığı için bu hasta için geçerli değildir.",
+     "ses": "Anogenital siğil, ha pe ve enfeksiyonu sonucu karnabahar görünümünde lezyonlar oluşturan bir tablodur. Ülseratif bir karakter taşımadığı için bu hasta için geçerli değildir."
+    }
+   },
+   "cozum": {
+    "metin": "Peniste tek ve ağrısız ülser ile serolojik test pozitifliği bulunan hastada primer sifiliz tanısı konulur.",
+    "ses": "Peniste tek ve ağrısız ülser ile serolojik test pozitifliği bulunan hastada primer sifiliz tanısı konulur."
+   },
+   "sayfa": [
+    8
+   ]
+  },
+  {
+   "ref": "c:past-1790877464398-851174",
+   "tur": "cikmis",
+   "onem_id": "e07-18",
+   "sinav": "Yılı belirsiz",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Hangisi sifiliz hastalığının tedavi izleminde kullanılan tanı yöntemidir?",
+   "secenekler": {
+    "A": "TPHA",
+    "B": "VDRL",
+    "C": "ELISA",
+    "D": "IFAT",
+    "E": "MHA-TP"
+   },
+   "dogru": "B",
+   "kok_ses": "Hangisi sifiliz hastalığının tedavi izleminde kullanılan tanı yöntemidir?",
+   "secenek_ses": {
+    "A": "te pe ha ek",
+    "B": "ve de re le",
+    "C": "e li sa",
+    "D": "i fe a te",
+    "E": "me ha te pe"
+   },
+   "ipucu": {
+    "metin": "Bu yöntem tedavi takibinde kullanılan spesifik olmayan test grubundandır.",
+    "ses": "Bu yöntem tedavi takibinde kullanılan spesifik olmayan test grubundandır."
+   },
+   "siklar": {
+    "A": {
+     "metin": "te pe ha doğrudan bakterinin kendisine karşı oluşan antikorları tespit eden spesifik bir testtir. Tarama amacıyla kullanılır ancak başarılı bir tedavi sonrasında takip için tercih edilmez.",
+     "ses": "te pe ha doğrudan bakterinin kendisine karşı oluşan antikorları tespit eden spesifik bir testtir. Tarama amacıyla kullanılır ancak başarılı bir tedavi sonrasında takip için tercih edilmez."
+    },
+    "B": {
+     "metin": "ve de re le doku hasarı sonucunda açığa çıkan **kardiyolipin-lesitin-kolesterol** antijenlerine karşı oluşan antikorları saptayan testtir. Tedavi sonrasında bir ile iki yıl içinde negatifleştiği için bu soruda tedavi izleminde doğru yöntemdir.",
+     "ses": "ve de re le doku hasarı sonucunda açığa çıkan kardiyolipin, lesitin ve kolesterol antijenlerine karşı oluşan antikorları saptayan testtir. Tedavi sonrasında bir ile iki yıl içinde negatifleştiği için bu soruda tedavi izleminde doğru yöntemdir."
+    },
+    "C": {
+     "metin": "e li sa farklı enfeksiyon hastalıklarının tanısında antikor veya antijen varlığını gösteren bir yöntemdir. Sifiliz tedavisinin etkinliğini ve takibini izlemek amacıyla rutin olarak kullanılmaz.",
+     "ses": "e li sa farklı enfeksiyon hastalıklarının tanısında antikor veya antijen varlığını gösteren bir yöntemdir. Sifiliz tedavisinin etkinliğini ve takibini izlemek amacıyla rutin olarak kullanılmaz."
+    },
+    "D": {
+     "metin": "i fe a te floresan antikor teknikleri kullanarak mikroorganizmaları gösteren laboratuvar incelemesidir. Bu test sifiliz enfeksiyonunun tedavi başarısını izlemek için uygun değildir.",
+     "ses": "i fe a te floresan antikor teknikleri kullanarak mikroorganizmaları gösteren laboratuvar incelemesidir. Bu test sifiliz enfeksiyonunun tedavi başarısını izlemek için uygun değildir."
+    },
+    "E": {
+     "metin": "me ha te pe treponemal yapılara karşı gelişen antikorları saptayan özgül bir tanı testidir. Ömür boyu pozitif kalma özelliği nedeniyle tedavi sonrasındaki iyileşme sürecini takip etmez.",
+     "ses": "me ha te pe treponemal yapılara karşı gelişen antikorları saptayan özgül bir tanı testidir. Ömür boyu pozitif kalma özelliği nedeniyle tedavi sonrasındaki iyileşme sürecini takip etmez."
+    }
+   },
+   "cozum": {
+    "metin": "Spesifik olmayan nontreponemal testler doku hasarı sonucu oluşan **kardiyolipin** antijenlerini saptar ve tedavi sonrasında bir ile iki yıl içinde negatifleşerek tedavi takibinde kullanılır.",
+    "ses": "Spesifik olmayan nontreponemal testler doku hasarı sonucu oluşan kardiyolipin antijenlerini saptar ve tedavi sonrasında bir ile iki yıl içinde negatifleşerek tedavi takibinde kullanılır."
+   },
+   "sayfa": [
+    17
+   ]
+  },
+  {
+   "ref": "o:e07-19:1",
+   "tur": "ornek",
+   "onem_id": "e07-19",
+   "zorluk": "orta",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Sifiliz tanısında kullanılan treponemal serolojik testler ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+   "secenekler": {
+    "A": "Doku hasarıyla oluşan kardiyolipini ölçer",
+    "B": "Başarılı tedavi sonrası 1 yılda negatifleşir",
+    "C": "En erken yükselen ve en spesifik testlerdir",
+    "D": "Tedavi takibinde tercih edilen testlerdir",
+    "E": "Yanlış pozitiflik oranları VDRL'den yüksektir"
+   },
+   "dogru": "C",
+   "kok_ses": "Sifiliz tanısında kullanılan treponemal serolojik testler ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+   "secenek_ses": {
+    "A": "Doku hasarıyla oluşan kardiyolipini ölçer",
+    "B": "Başarılı tedavi sonrası bir yılda negatifleşir",
+    "C": "En erken yükselen ve en spesifik testlerdir",
+    "D": "Tedavi takibinde tercih edilen testlerdir",
+    "E": "Yanlış pozitiflik oranları ve de re le den yüksektir"
+   },
+   "ipucu": {
+    "metin": "Bu incelemeler doğrudan etkenin kendisine karşı gelişen bağışıklık yanıtını saptar.",
+    "ses": "Bu incelemeler doğrudan etkenin kendisine karşı gelişen bağışıklık yanıtını saptar."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Doku hasarı sonucu açığa çıkan kardiyolipin bileşenlerini ölçen yöntemler spesifik olmayan testlerdir. Treponemal testler ise doğrudan bakterinin kendi hücresel yapılarını hedef alır.",
+     "ses": "Doku hasarı sonucu açığa çıkan kardiyolipin bileşenlerini ölçen yöntemler spesifik olmayan testlerdir. Treponemal testler ise doğrudan bakterinin kendi hücresel yapılarını hedef alır."
+    },
+    "B": {
+     "metin": "Başarılı bir tedavi sonrasında bir yıl içinde negatifleşen testler nontreponemal gruptakilerdir. Treponemal testler hastanın hayatı boyunca pozitif kalmaya devam eder.",
+     "ses": "Başarılı bir tedavi sonrasında bir yıl içinde negatifleşen testler nontreponemal gruptakilerdir. Treponemal testler hastanın hayatı boyunca pozitif kalmaya devam eder."
+    },
+    "C": {
+     "metin": "Doğrudan bakterinin kendisine karşı oluşan antikorları tespit eden treponemal incelemeler en erken yükselen yöntemlerdir. Bu özellikleri sayesinde özgüllüğü en yüksek serolojik tetkiklerdir ve bu soruda doğru seçenektir.",
+     "ses": "Doğrudan bakterinin kendisine karşı oluşan antikorları tespit eden treponemal incelemeler en erken yükselen yöntemlerdir. Bu özellikleri sayesinde özgüllüğü en yüksek serolojik tetkiklerdir ve bu soruda doğru seçenektir."
+    },
+    "D": {
+     "metin": "Tedavi takibinde tercih edilen testler doku hasarı ürünlerini ölçen nontreponemal yöntemlerdir. Ömür boyu pozitif kalan treponemal testler tedavi izleminde kullanılamaz.",
+     "ses": "Tedavi takibinde tercih edilen testler doku hasarı ürünlerini ölçen nontreponemal yöntemlerdir. Ömür boyu pozitif kalan treponemal testler tedavi izleminde kullanılamaz."
+    },
+    "E": {
+     "metin": "ve de re le gibi testler spesifik olmadığından yanlış pozitiflik oranları daha yüksektir. Treponemal testler ise özgüllüğü en yüksek serolojik incelemelerdir ve bu orandan düşüktür.",
+     "ses": "ve de re le gibi testler spesifik olmadığından yanlış pozitiflik oranları daha yüksektir. Treponemal testler ise özgüllüğü en yüksek serolojik incelemelerdir ve bu orandan düşüktür."
+    }
+   },
+   "cozum": {
+    "metin": "Treponemal testler doğrudan bakterinin yapısına karşı oluşan antikorları gösterir, en erken yükselen ve en **spesifik** testlerdir ancak ömür boyu pozitif kaldığı için tedavi takibinde kullanılmaz.",
+    "ses": "Treponemal testler doğrudan bakterinin yapısına karşı oluşan antikorları gösterir, en erken yükselen ve en spesifik testlerdir ancak ömür boyu pozitif kaldığı için tedavi takibinde kullanılmaz."
+   },
+   "sayfa": [
+    18
+   ]
+  },
+  {
+   "ref": "o:e07-20:1",
+   "tur": "ornek",
+   "onem_id": "e07-20",
+   "zorluk": "orta",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Geç latent sifiliz tanısı konulan bir hastada standart antibiyotik tedavisi aşağıdakilerden hangisidir?",
+   "secenekler": {
+    "A": "Benzatin penisilin 3 hafta boyunca haftada 1 kez",
+    "B": "Benzatin penisilin tek doz IM",
+    "C": "Kristalize penisilin 14 gün boyunca IV",
+    "D": "Doksisiklin 2 hafta boyunca oral",
+    "E": "Seftriakson 7 gün boyunca IM"
+   },
+   "dogru": "A",
+   "kok_ses": "Geç latent sifiliz tanısı konulan bir hastada standart antibiyotik tedavisi aşağıdakilerden hangisidir?",
+   "secenek_ses": {
+    "A": "Benzatin penisilin üç hafta boyunca haftada bir kez",
+    "B": "Benzatin penisilin tek doz kas içi",
+    "C": "Kristalize penisilin on dört gün boyunca damar içi",
+    "D": "Doksisiklin iki hafta boyunca oral",
+    "E": "Seftriakson yedi gün boyunca kas içi"
+   },
+   "ipucu": {
+    "metin": "Sistemik ve geç evre sifiliz enfeksiyonlarında tedavi birden fazla doz gerektirir.",
+    "ses": "Sistemik ve geç evre sifiliz enfeksiyonlarında tedavi birden fazla doz gerektirir."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Benzatin penisilin iki nokta dört milyon ünite dozunda haftada bir olmak üzere üç hafta boyunca uygulanır. Geç latent sifiliz tablosunda bu uygulama bu soruda doğru tedavi yaklaşımıdır.",
+     "ses": "Benzatin penisilin iki nokta dört milyon ünite dozunda haftada bir olmak üzere üç hafta boyunca uygulanır. Geç latent sifiliz tablosunda bu uygulama bu soruda doğru tedavi yaklaşımıdır."
+    },
+    "B": {
+     "metin": "Benzatin penisilin tek doz uygulaması primer, sekonder ve erken latent sifiliz evrelerinde tercih edilir. Geç latent sifiliz hastalarında tek doz tedavi yetersiz kalmaktadır.",
+     "ses": "Benzatin penisilin tek doz uygulaması primer, sekonder ve erken latent sifiliz evrelerinde tercih edilir. Geç latent sifiliz hastalarında tek doz tedavi yetersiz kalmaktadır."
+    },
+    "C": {
+     "metin": "Kristalize penisilin genellikle nörosifiliz gibi özel ve merkezi sinir sistemi tutulumu olan durumlarda damar yoluyla uygulanır. Geç latent sifiliz için standart rejim kas içi benzatin penisilindir.",
+     "ses": "Kristalize penisilin genellikle nörosifiliz gibi özel ve merkezi sinir sistemi tutulumu olan durumlarda damar yoluyla uygulanır. Geç latent sifiliz için standart rejim kas içi benzatin penisilindir."
+    },
+    "D": {
+     "metin": "Doksisiklin oral yoldan kullanılan bir antibiyotik olup penisilin alerjisi bulunan hastalarda alternatif olarak tercih edilir. Süresi ise iki hafta değil dört haftadır.",
+     "ses": "Doksisiklin oral yoldan kullanılan bir antibiyotik olup penisilin alerjisi bulunan hastalarda alternatif olarak tercih edilir. Süresi ise iki hafta değil dört haftadır."
+    },
+    "E": {
+     "metin": "Seftriakson penisilin alerjisi olan sifiliz hastalarında parenteral bir alternatif tedavi seçeneğidir. Ancak uygulama süresi yedi gün değil on ile on dört gün arasındadır.",
+     "ses": "Seftriakson penisilin alerjisi olan sifiliz hastalarında parenteral bir alternatif tedavi seçeneğidir. Ancak uygulama süresi yedi gün değil on ile on dört gün arasındadır."
+    }
+   },
+   "cozum": {
+    "metin": "Erken evrelerde **Benzatin penisilin** tek doz uygulanırken, geç latent sifilizde aynı ilaç haftada bir doz olmak üzere toplam üç hafta süreyle verilmelidir.",
+    "ses": "Erken evrelerde Benzatin penisilin tek doz uygulanırken, geç latent sifilizde aynı ilaç haftada bir doz olmak üzere toplam üç hafta süreyle verilmelidir."
+   },
+   "sayfa": [
+    19
+   ]
+  },
+  {
+   "ref": "o:e07-21:1",
+   "tur": "ornek",
+   "onem_id": "e07-21",
+   "zorluk": "kolay",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Penisilin alerjisi bilinen bir hastada alternatif olarak başlanan oral Doksisiklin tedavisinin önerilen standart süresi kaç haftadır?",
+   "secenekler": {
+    "A": "1 hafta",
+    "B": "2 hafta",
+    "C": "3 hafta",
+    "D": "4 hafta",
+    "E": "6 hafta"
+   },
+   "dogru": "D",
+   "kok_ses": "Penisilin alerjisi bilinen bir hastada alternatif olarak başlanan oral Doksisiklin tedavisinin önerilen standart süresi kaç haftadır?",
+   "secenek_ses": {
+    "A": "Bir hafta",
+    "B": "İki hafta",
+    "C": "Üç hafta",
+    "D": "Dört hafta",
+    "E": "Altı hafta"
+   },
+   "ipucu": {
+    "metin": "Penisilin dışı oral alternatif tedavi bir aydan kısa sürmemektedir.",
+    "ses": "Penisilin dışı oral alternatif tedavi bir aydan kısa sürmemektedir."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Bir günlük veya bir haftalık süreler sifiliz tedavisinde yetersiz kalır. Azitromisin gibi bazı farklı alternatifler bir hafta kullanılsa da Doksisiklin süresi daha uzundur.",
+     "ses": "Bir günlük veya bir haftalık süreler sifiliz tedavisinde yetersiz kalır. Azitromisin gibi bazı farklı alternatifler bir hafta kullanılsa da Doksisiklin süresi daha uzundur."
+    },
+    "B": {
+     "metin": "İki haftalık süre enfeksiyonun tamamen eradike edilmesi için klinikte kısa bir süredir. Doksisiklin tedavisi bu süreden daha uzun bir süre boyunca devam ettirilmelidir.",
+     "ses": "İki haftalık süre enfeksiyonun tamamen eradike edilmesi için klinikte kısa bir süredir. Doksisiklin tedavisi bu süreden daha uzun bir süre boyunca devam ettirilmelidir."
+    },
+    "C": {
+     "metin": "Üç haftalık tedavi süresi geç latent sifilizdeki penisilin uygulama süresidir. Alerji durumunda oral yoldan verilen Doksisiklin için bu süre geçerli değildir.",
+     "ses": "Üç haftalık tedavi süresi geç latent sifilizdeki penisilin uygulama süresidir. Alerji durumunda oral yoldan verilen Doksisiklin için bu süre geçerli değildir."
+    },
+    "D": {
+     "metin": "Penisilin alerjisi olan hastalarda oral **Doksisiklin** iki yüz miligram günlük dozda kullanılır. Bu tedavi seçeneği dört hafta süreyle uygulanır ve bu soruda doğru süredir.",
+     "ses": "Penisilin alerjisi olan hastalarda oral Doksisiklin iki yüz miligram günlük dozda kullanılır. Bu tedavi seçeneği dört hafta süreyle uygulanır ve bu soruda doğru süredir."
+    },
+    "E": {
+     "metin": "Altı haftalık süre standart sifiliz tedavisinde önerilen bir uygulama süresi değildir. Alerjik hastalarda oral Doksisiklin için dört hafta yeterli süredir.",
+     "ses": "Altı haftalık süre standart sifiliz tedavisinde önerilen bir uygulama süresi değildir. Alerjik hastalarda oral Doksisiklin için dört hafta yeterli süredir."
+    }
+   },
+   "cozum": {
+    "metin": "Penisilin alerjisi bulunan sifiliz hastalarında oral **Doksisiklin** tedavisi iki yüz miligram günlük dozda dört hafta boyunca düzenli olarak uygulanır.",
+    "ses": "Penisilin alerjisi bulunan sifiliz hastalarında oral Doksisiklin tedavisi iki yüz miligram günlük dozda dört hafta boyunca düzenli olarak uygulanır."
+   },
+   "sayfa": [
+    20
+   ]
+  },
+  {
+   "ref": "o:e07-22:1",
+   "tur": "ornek",
+   "onem_id": "e07-22",
+   "zorluk": "zor",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Kronik nörosifiliz tanısı konulan bir hastada başlanması gereken en uygun penisilin formu ve uygulama süresi aşağıdakilerden hangisidir?",
+   "secenekler": {
+    "A": "Benzatin penisilin - Tek doz IM",
+    "B": "Kristalize penisilin - 10-14 gün IV",
+    "C": "Benzatin penisilin - 3 hafta IM",
+    "D": "Procaine penisilin - Tek doz IM",
+    "E": "Ampisilin - 7 gün IV"
+   },
+   "dogru": "B",
+   "kok_ses": "Kronik nörosifiliz tanısı konulan bir hastada başlanması gereken en uygun penisilin formu ve uygulama süresi aşağıdakilerden hangisidir?",
+   "secenek_ses": {
+    "A": "Benzatin penisilin - Tek doz i me",
+    "B": "Kristalize penisilin - on ila on dört gün i ve",
+    "C": "Benzatin penisilin - üç hafta i me",
+    "D": "Prokayin penisilin - Tek doz i me",
+    "E": "Ampisilin - yedi gün i ve"
+   },
+   "ipucu": {
+    "metin": "Merkezi sinir sistemini etkileyen tutulumlarda depo formlar yetersiz kalmaktadır.",
+    "ses": "Merkezi sinir sistemini etkileyen tutulumlarda depo formlar yetersiz kalmaktadır."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Benzatin penisilin standart bir depo formdur ve kas içine uygulanır. Kan beyin bariyerini yeterince geçemediği için santral sinir sistemi enfeksiyonlarında yetersiz kalır. Bu nedenle nörosifiliz tedavisinde bu yaklaşım doğru değildir.",
+     "ses": "Benzatin penisilin standart bir depo formdur ve kas içine uygulanır. Kan beyin bariyerini yeterince geçemediği için santral sinir sistemi enfeksiyonlarında yetersiz kalır. Bu nedenle nörosifiliz tedavisinde bu yaklaşım doğru değildir."
+    },
+    "B": {
+     "metin": "Parenteral **Kristalize penisilin** santral sinir sistemi tutulumlarında tercih edilen temel ilaçtır. Hastane koşullarında damar yoluyla on ila on dört gün süreyle uygulanır. Bu özel enfeksiyon tablosunda en uygun tedavi seçeneği olduğu için bu yaklaşım doğrudur.",
+     "ses": "Parenteral Kristalize penisilin santral sinir sistemi tutulumlarında tercih edilen temel ilaçtır. Hastane koşullarında damar yoluyla on ila on dört gün süreyle uygulanır. Bu özel enfeksiyon tablosunda en uygun tedavi seçeneği olduğu için bu yaklaşım doğrudur."
+    },
+    "C": {
+     "metin": "Uzun süreli kas içi uygulama sağlayan bu formlar depo özellik taşır. Kan beyin bariyerini aşamadığı için özel organ tutulumlarında etkili olamaz. Nörosifiliz tedavisinde bu protokolün uygulanması yetersiz kalır.",
+     "ses": "Uzun süreli kas içi uygulama sağlayan bu formlar depo özellik taşır. Kan beyin bariyerini aşamadığı için özel organ tutulumlarında etkili olamaz. Nörosifiliz tedavisinde bu protokolün uygulanması yetersiz kalır."
+    },
+    "D": {
+     "metin": "Prokayin penisilin kas içine yapılan bir diğer formdur ve belirli enfeksiyonlarda kullanılır. Santral sinir sistemine geçişi yetersiz olduğu için nörosifiliz tedavisinde tercih edilmez. Bu nedenle bu seçenek hastada kullanılmaz.",
+     "ses": "Prokayin penisilin kas içine yapılan bir diğer formdur ve belirli enfeksiyonlarda kullanılır. Santral sinir sistemine geçişi yetersiz olduğu için nörosifiliz tedavisinde tercih edilmez. Bu nedenle bu seçenek hastada kullanılmaz."
+    },
+    "E": {
+     "metin": "Ampisilin geniş spektrumlu bir beta laktam antibiyotiktir ve hücre duvarı sentezini engelleyerek bakteriyel enfeksiyonları tedavi eder. Sifilitik enfeksiyonların tedavisinde etki mekanizması ve spektrumu uygun olmadığı için nörosifiliz tedavisinde kullanılmaz.",
+     "ses": "Ampisilin geniş spektrumlu bir beta laktam antibiyotiktir ve hücre duvarı sentezini engelleyerek bakteriyel enfeksiyonları tedavi eder. Sifilitik enfeksiyonların tedavisinde etki mekanizması ve spektrumu uygun olmadığı için nörosifiliz tedavisinde kullanılmaz."
+    }
+   },
+   "cozum": {
+    "metin": "Nörosifiliz gibi merkezi sinir sistemini tutan enfeksiyonlarda standart depo formlar bariyeri geçemez. Bu durumda hastane koşullarında damar yoluyla uygulanan **Kristalize penisilin** tercih edilmelidir.",
+    "ses": "Nörosifiliz gibi merkezi sinir sistemini tutan enfeksiyonlarda standart depo formlar bariyeri geçemez. Bu durumda hastane koşullarında damar yoluyla uygulanan Kristalize penisilin tercih edilmelidir."
+   },
+   "sayfa": [
+    20
+   ]
+  },
+  {
+   "ref": "c:k1-2021-2022-q013",
+   "tur": "cikmis",
+   "onem_id": "e07-06",
+   "sinav": "2021-2022 Kurul 1",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Primer sifiliz için aşağıdakilerden hangisi yanlıştır?",
+   "secenekler": {
+    "A": "Şankr mevcuttur",
+    "B": "Şankr bulaştırıcı değildir",
+    "C": "Şankr tedavisiz iyileşir",
+    "D": "Şankr ile birlikte LAP bulunabilir",
+    "E": "Şankr ve eşlik eden LAP genellikle ağrısızdır"
+   },
+   "dogru": "B",
+   "kok_ses": "Primer sifiliz için aşağıdakilerden hangisi yanlıştır?",
+   "secenek_ses": {
+    "A": "Şankr mevcuttur",
+    "B": "Şankr bulaştırıcı değildir",
+    "C": "Şankr tedavisiz iyileşir",
+    "D": "Şankr ile birlikte le a pe bulunabilir",
+    "E": "Şankr ve eşlik eden le a pe genellikle ağrısızdır"
+   },
+   "ipucu": {
+    "metin": "Etkenin giriş kapısındaki primer lezyon yoğun mikroorganizma içerdiği için temas anında son derece tehlikelidir.",
+    "ses": "Etkenin giriş kapısındaki primer lezyon yoğun mikroorganizma içerdiği için temas anında son derece tehlikelidir."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Şankr, primer sifiliz evresinde bakterinin giriş kapısında meydana gelen tipik ülser lezyonudur. Enfeksiyonun ilk klinik bulgusu olarak rol oynar. Bu evrede varlığı beklenen temel lezyon olduğu için ifade doğrudur.",
+     "ses": "Şankr, primer sifiliz evresinde bakterinin giriş kapısında meydana gelen tipik ülser lezyonudur. Enfeksiyonun ilk klinik bulgusu olarak rol oynar. Bu evrede varlığı beklenen temel lezyon olduğu için ifade doğrudur."
+    },
+    "B": {
+     "metin": "Primer sifiliz şankrı canlı spiroketler barındıran sert tabanlı bir yara yapısıdır. Mikroorganizmaların cinsel temasla diğer kişilere aktarılmasını sağlar. Lezyon **bulaştırıcı** özellik taşıdığı için bu ifade yanlıştır ve aranan doğru cevaptır.",
+     "ses": "Primer sifiliz şankrı canlı spiroketler barındıran sert tabanlı bir yara yapısıdır. Mikroorganizmaların cinsel temasla diğer kişilere aktarılmasını sağlar. Lezyon bulaştırıcı özellik taşıdığı için bu ifade yanlıştır ve aranan doğru cevaptır."
+    },
+    "C": {
+     "metin": "Primer şankr, organizmanın bağışıklık yanıtı ve lokal doku döngüsüyle sınırlanan geçici bir lezyondur. Yaklaşık bir ay içinde kendiliğinden gerileyerek doku bütünlüğünü sağlar. Tedavisiz kendiliğinden iyileşebildiği için bu ifade klinik seyirle uyumludur.",
+     "ses": "Primer şankr, organizmanın bağışıklık yanıtı ve lokal doku döngüsüyle sınırlanan geçici bir lezyondur. Yaklaşık bir ay içinde kendiliğinden gerileyerek doku bütünlüğünü sağlar. Tedavisiz kendiliğinden iyileşebildiği için bu ifade klinik seyirle uyumludur."
+    },
+    "D": {
+     "metin": "Bölgesel lenfadenopati, şankrın ortaya çıkışından yaklaşık bir hafta sonra gelişen lenf bezi büyümesidir. Bölgesel immün savunmayı ve drenajı yürütür. Şankra sıklıkla eşlik eden bir bulgu olduğu için ifade doğrudur.",
+     "ses": "Bölgesel lenfadenopati, şankrın ortaya çıkışından yaklaşık bir hafta sonra gelişen lenf bezi büyümesidir. Bölgesel immün savunmayı ve drenajı yürütür. Şankra sıklıkla eşlik eden bir bulgu olduğu için ifade doğrudur."
+    },
+    "E": {
+     "metin": "Ağrısız seyir, primer evredeki lezyonların ve lenf nodlarının inflamatuar özelliğidir. Doku hasarına rağmen nosiseptif uyarı oluşturmadan ilerler. Hem lezyon hem de lenf bezi büyümesi tipik olarak ağrısız seyrettiğinden ifade geçerlidir.",
+     "ses": "Ağrısız seyir, primer evredeki lezyonların ve lenf nodlarının inflamatuar özelliğidir. Doku hasarına rağmen nosiseptif uyarı oluşturmadan ilerler. Hem lezyon hem de lenf bezi büyümesi tipik olarak ağrısız seyrettiğinden ifade geçerlidir."
+    }
+   },
+   "cozum": {
+    "metin": "Primer sifiliz döneminde görülen ağrısız ve sert tabanlı **şankr** yüksek düzeyde bulaştırıcı bir lezyondur.",
+    "ses": "Primer sifiliz döneminde görülen ağrısız ve sert tabanlı şankr yüksek düzeyde bulaştırıcı bir lezyondur."
+   },
+   "sayfa": [
+    8
+   ]
+  },
+  {
+   "ref": "c:k1-2019-2020-q067",
+   "tur": "cikmis",
+   "onem_id": "e07-06",
+   "sinav": "2019-2020 Kurul 1",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Sifiliz ile ilgili hangisi doğrudur?",
+   "secenekler": {
+    "A": "Primer sifilizde yumuşak şankr oluşur",
+    "B": "Sekonder sifilizin mukokutanöz lezyonları bulaşıcı değildir",
+    "C": "Primer sifilizde bölgesel lenf nodları ağrısızdır",
+    "D": "Tersiyer sifilizde görülen gomların görülme sıklığı artmaktadır",
+    "E": "Nörosifiliz tersiyer sifiliz vakalarının %80'den fazlasını oluşturur"
+   },
+   "dogru": "C",
+   "kok_ses": "Sifiliz ile ilgili hangisi doğrudur?",
+   "secenek_ses": {
+    "A": "Primer sifilizde yumuşak şankr oluşur",
+    "B": "Sekonder sifilizin mukokutanöz lezyonları bulaşıcı değildir",
+    "C": "Primer sifilizde bölgesel lenf nodları ağrısızdır",
+    "D": "Tersiyer sifilizde görülen gomların görülme sıklığı artmaktadır",
+    "E": "Nörosifiliz tersiyer sifiliz vakalarının yüzde sekseninden fazlasını oluşturur"
+   },
+   "ipucu": {
+    "metin": "Hastalığın başlangıç basamağında gelişen lenf bezi büyümesi hastada herhangi bir hassasiyet yaratmaz.",
+    "ses": "Hastalığın başlangıç basamağında gelişen lenf bezi büyümesi hastada herhangi bir hassasiyet yaratmaz."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Yumuşak şankr farklı bir cinsel yolla bulaşan enfeksiyonun lezyon tipidir. Dokuda hassas ve yumuşak kıvamlı ülserasyon meydana getirir. Primer sifiliz lezyonu sert tabanlı olduğundan bu ifade doğru değildir.",
+     "ses": "Yumuşak şankr farklı bir cinsel yolla bulaşan enfeksiyonun lezyon tipidir. Dokuda hassas ve yumuşak kıvamlı ülserasyon meydana getirir. Primer sifiliz lezyonu sert tabanlı olduğundan bu ifade doğru değildir."
+    },
+    "B": {
+     "metin": "Sekonder dönem döküntüleri yaygın spiroket diseminasyonunu yansıtan deri ve mukoza lezyonlarıdır. Bakterinin çevreye saçılmasında kritik rol üstlenir. Mukokutanöz odaklar yoğun bakteri içerip bulaşıcı olduğu için ifade yanlıştır.",
+     "ses": "Sekonder dönem döküntüleri yaygın spiroket diseminasyonunu yansıtan deri ve mukoza lezyonlarıdır. Bakterinin çevreye saçılmasında kritik rol üstlenir. Mukokutanöz odaklar yoğun bakteri içerip bulaşıcı olduğu için ifade yanlıştır."
+    },
+    "C": {
+     "metin": "Bölgesel lenf nodu büyümesi, primer odaktan drene olan lenfatiklerin immün yanıtıdır. Çevre dokulara yayılımı sınırlamaya katkı sunar. Primer sifilizde lenfadenopatinin **ağrısız** karakterde olması beklenen doğru klinik tablodur.",
+     "ses": "Bölgesel lenf nodu büyümesi, primer odaktan drene olan lenfatiklerin immün yanıtıdır. Çevre dokulara yayılımı sınırlamaya katkı sunar. Primer sifilizde lenfadenopatinin ağrısız karakterde olması beklenen doğru klinik tablodur."
+    },
+    "D": {
+     "metin": "Gom lezyonları tersiyer sifilizde rastlanan granülomatöz doku yıkım yapılarıdır. Geç dönem hücresel reaksiyonu temsil eder. Güncel klinik tabloda ve ders bilgisinde sıklığının arttığına dair bulgu bulunmadığından yanlıştır.",
+     "ses": "Gom lezyonları tersiyer sifilizde rastlanan granülomatöz doku yıkım yapılarıdır. Geç dönem hücresel reaksiyonu temsil eder. Güncel klinik tabloda ve ders bilgisinde sıklığının arttığına dair bulgu bulunmadığından yanlıştır."
+    },
+    "E": {
+     "metin": "Nörosifiliz, merkezi sinir sistemine spiroket invazyonu ile gelişen ciddi bir klinik tablodur. Nörolojik disfonksiyon yaratır. Vakaların büyük çoğunluğunu oluşturduğu yönündeki bu oran ders içeriğinde desteklenmediği için yanlıştır.",
+     "ses": "Nörosifiliz, merkezi sinir sistemine spiroket invazyonu ile gelişen ciddi bir klinik tablodur. Nörolojik disfonksiyon yaratır. Vakaların büyük çoğunluğunu oluşturduğu yönündeki bu oran ders içeriğinde desteklenmediği için yanlıştır."
+    }
+   },
+   "cozum": {
+    "metin": "Primer sifilizde gelişen bölgesel lenfadenopati tipik olarak **ağrısız** seyir gösterir.",
+    "ses": "Primer sifilizde gelişen bölgesel lenfadenopati tipik olarak ağrısız seyir gösterir."
+   },
+   "sayfa": [
+    8
+   ]
+  },
+  {
+   "ref": "c:past-1790877041564-499994",
+   "tur": "cikmis",
+   "onem_id": "e07-06",
+   "sinav": "Yılı belirsiz",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Peniste bir adet ağrısız ülseri olan 24 yaşında erkek hastada yapılan VDRL testi pozitif saptanmıştır. Tanı aşağıdakilerden hangisidir?",
+   "secenekler": {
+    "A": "Herpes simplex enfeksiyonu",
+    "B": "Primer sifiliz",
+    "C": "Şankroid",
+    "D": "Lenfogranüloma venerum",
+    "E": "Granüloma inguinale"
+   },
+   "dogru": "B",
+   "kok_ses": "Peniste bir adet ağrısız ülseri olan yirmi dört yaşında erkek hastada yapılan ve de re le testi pozitif saptanmıştır. Tanı aşağıdakilerden hangisidir?",
+   "secenek_ses": {
+    "A": "Herpes simpleks enfeksiyonu",
+    "B": "Primer sifiliz",
+    "C": "Şankroid",
+    "D": "Lenfogranüloma venerum",
+    "E": "Granüloma inguinale"
+   },
+   "ipucu": {
+    "metin": "Etkenin giriş bölgesinde oluşan tekil ve hassasiyetsiz yara serolojik non treponemal taramayla doğrulanır.",
+    "ses": "Etkenin giriş bölgesinde oluşan tekil ve hassasiyetsiz yara serolojik non treponemal taramayla doğrulanır."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Herpes simpleks, viral kökenli tekrarlayan veziküloülseratif genital döküntülere yol açan bir hastalıktır. Genellikle belirgin derecede ağrılı lezyonlarla seyreder. Ağrısız tek ülser ve serolojik pozitiflik tablosuna uymadığı için yanlıştır.",
+     "ses": "Herpes simpleks, viral kökenli tekrarlayan veziküloülseratif genital döküntülere yol açan bir hastalıktır. Genellikle belirgin derecede ağrılı lezyonlarla seyreder. Ağrısız tek ülser ve serolojik pozitiflik tablosuna uymadığı için yanlıştır."
+    },
+    "B": {
+     "metin": "Primer sifiliz, Treponema pallidum enfeksiyonunun tekil ve sert lezyonla seyreden ilk aşamasıdır. Hastalığın erken dönem klinik yayılımını başlatır. Ağrısız ülser ve pozitif seroloji bulguları ile bu tanı **doğru** kabul edilir.",
+     "ses": "Primer sifiliz, Treponema pallidum enfeksiyonunun tekil ve sert lezyonla seyreden ilk aşamasıdır. Hastalığın erken dönem klinik yayılımını başlatır. Ağrısız ülser ve pozitif seroloji bulguları ile bu tanı doğru kabul edilir."
+    },
+    "C": {
+     "metin": "Şankroid, bakteriyel etkenle gelişen yumuşak tabanlı genital yara tablosudur. İleri derecede ağrılı ve pürülan tabanlı lezyonlara neden olur. Ağrısız seyir ve serolojik test pozitifliği bu hastalıkla bağdaşmadığı için yanlıştır.",
+     "ses": "Şankroid, bakteriyel etkenle gelişen yumuşak tabanlı genital yara tablosudur. İleri derecede ağrılı ve pürülan tabanlı lezyonlara neden olur. Ağrısız seyir ve serolojik test pozitifliği bu hastalıkla bağdaşmadığı için yanlıştır."
+    },
+    "D": {
+     "metin": "Lenfogranüloma venerum, klamidya serovarlarının lenfatik sistemi tutmasıyla beliren sistemik bir enfeksiyondur. Belirgin ve süpüratif lenf bezi tutulumlarıyla karakterizedir. Serolojik test antijenleriyle ilişkili olmadığından bu tabloyu açıklamaz.",
+     "ses": "Lenfogranüloma venerum, klamidya serovarlarının lenfatik sistemi tutmasıyla beliren sistemik bir enfeksiyondur. Belirgin ve süpüratif lenf bezi tutulumlarıyla karakterizedir. Serolojik test antijenleriyle ilişkili olmadığından bu tabloyu açıklamaz."
+    },
+    "E": {
+     "metin": "Granüloma inguinale, ilerleyici granülasyon dokusu oluşturan kronik bir genital enfeksiyondur. Geniş doku harabiyeti ve kanamalı psödoülserlerle seyreder. İlgili seroloji ve klasik şankr özellikleri taşımadığı için yanlıştır.",
+     "ses": "Granüloma inguinale, ilerleyici granülasyon dokusu oluşturan kronik bir genital enfeksiyondur. Geniş doku harabiyeti ve kanamalı psödoülserlerle seyreder. İlgili seroloji ve klasik şankr özellikleri taşımadığı için yanlıştır."
+    }
+   },
+   "cozum": {
+    "metin": "Genital bölgedeki ağrısız sert tabanlı lezyon ve pozitif seroloji birlikteliği **primer sifiliz** tablosunu işaret eder.",
+    "ses": "Genital bölgedeki ağrısız sert tabanlı lezyon ve pozitif seroloji birlikteliği primer sifiliz tablosunu işaret eder."
+   },
+   "sayfa": [
+    8
+   ]
+  },
+  {
+   "ref": "c:k1-2021-2022-q020",
+   "tur": "cikmis",
+   "onem_id": "e07-06",
+   "sinav": "2021-2022 Kurul 1",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Peniste ağrısız yara ile başvuran, fizik muayenede 1-2 cm çaplı, tabanı sert ülser saptanan ve lenfadenopati (LAP) saptanmayan hastada öncelikle düşünülmesi gereken enfeksiyon hastalığı hangisidir?",
+   "secenekler": {
+    "A": "HSV enfeksiyonu",
+    "B": "Lenfogranüloma venereum",
+    "C": "Sifiliz",
+    "D": "Şankroid",
+    "E": "Granüloma inguinale"
+   },
+   "dogru": "C",
+   "kok_ses": "Peniste agrisiz yara ile basvuran, fizik muayenede bir ile iki santimetre capli, tabani sert ulser saptanan ve lenfadenopati saptanmayan hastada oncelikle dusunulmesi gereken enfeksiyon hastaligi hangisidir?",
+   "secenek_ses": {
+    "A": "ha i ve enfeksiyonu",
+    "B": "Lenfogranuloma venereum",
+    "C": "Sifiliz",
+    "D": "Sankroid",
+    "E": "Granuloma inguinale"
+   },
+   "ipucu": {
+    "metin": "Bulaş yerinde sert tabanlı ve ağrısız lezyon gelişimiyle karakterizedir.",
+    "ses": "Bulas yerinde sert tabanli ve agrisiz lezyon gelisimiyle karakterizedir."
+   },
+   "siklar": {
+    "A": {
+     "metin": "HSV enfeksiyonu, genital bölgede ağrılı veziküller ve ülserlerle karakterize viral bir hastalıktır. Hücre içi yerleşim göstererek tekrarlayan lezyonlara yol açar. Bu soruda tanımlanan ağrısız ve sert tabanlı ülser tablosuyla uyumlu değildir.",
+     "ses": "ha i ve enfeksiyonu, genital bolgede agrili vezikuller ve ulserlerle karakterize viral bir hastaliktir. Hucre ici yerlesim gostererek tekrarlayan lezyonlara yol acar. Bu soruda tanimlanan agrisiz ve sert tabanli ulser tablosuyla uyumlu degildir."
+    },
+    "B": {
+     "metin": "Lenfogranuloma venereum, Chlamydia trachomatis etkeniyle gelişen ve genellikle ağrılı inguinal lenf nodu tutulumu yapan bir enfeksiyondur. Bölgesel lenfatiklerde inflamasyona neden olur. Bu sorudaki ağrısız lezyon ve lenfadenopati olmaması tablosunu açıklamaz.",
+     "ses": "Lenfogranuloma venereum, Klamidya trakomatis etkeniyle gelisen ve genellikle agrili inguinal lenf nodu tutulumu yapan bir enfeksiyondur. Bolgesel lenfatiklerde inflamasyona neden olur. Bu sorudaki agrisiz lezyon ve lenfadenopati olmamasi tablosunu aciklamaz."
+    },
+    "C": {
+     "metin": "Sifiliz, Treponema pallidum bakterisinin yol açtığı ve temel bulgusu **şankr** olan sistemik bir hastalıktır. Genital bölgede ağrısız, sert tabanlı ülser oluşumuyla kendini gösterir. Bu sorudaki klinik bulgular primer sifiliz tablosunu doğru olarak yansıtır.",
+     "ses": "Sifiliz, Treponema palidum bakterisinin yol actigi ve temel bulgusu sankr olan sistemik bir hastaliktir. Genital bolgede agrisiz, sert tabanli ulser olusumuyla kendini gosterir. Bu sorudaki klinik bulgular primer sifiliz tablosunu dogru olarak yansitir."
+    },
+    "D": {
+     "metin": "Şankroid, Haemophilus ducreyi etkeniyle ortaya çıkan ve genital bölgede oldukça ağrılı, yumuşak tabanlı ülserlere neden olan bir hastalıktır. Bölgesel lenfadenopati eşlik edebilir. Bu sorudaki ağrısız ve sert lezyon özellikleriyle çelişir.",
+     "ses": "Sankroid, Haemofilus dukreyi etkeniyle ortaya cikan ve genital bolgede oldukca agrili, yumusak tabanli ulserlere neden olan bir hastaliktir. Bolgesel lenfadenopati eslik edebilir. Bu sorudaki agrisiz ve sert lezyon ozellikleriyle celisir."
+    },
+    "E": {
+     "metin": "Granüloma inguinale, Klebsiella granulomatis bakterisinin neden olduğu, genital bölgede ağrısız ancak kırmızı renkli ve kolay kanayan ülseratif lezyonlar yapan bir enfeksiyondur. Deri altı dokularda yıkıma yol açar. Bu sorudaki sert tabanlı ülser bulgusuyla uyumlu değildir.",
+     "ses": "Granuloma inguinale, Klebsiella granulomatis bakterisinin neden oldugu, genital bolgede agrisiz ancak kirmizi renkli ve kolay kanayan ulseratif lezyonlar yapan bir enfeksiyondur. Deri alti dokularda yikima yol acar. Bu sorudaki sert tabanli ulser bulgusuyla uyumlu degildir."
+    }
+   },
+   "cozum": {
+    "metin": "Primer sifilizde bulaş yerinde ortaya çıkan ağrısız ve sert tabanlı **şankr**, hastanın ilk başvuru bulgusudur. Bölgesel lenfadenopati daha sonra gelişebilir.",
+    "ses": "Primer sifilizde bulas yerinde ortaya cikan agrisiz ve sert tabanli sankr, hastanin ilk basvuru bulgusudur. Bolgesel lenfadenopati daha sonra gelisebilir."
+   },
+   "sayfa": [
+    8
+   ]
+  },
+  {
+   "ref": "c:84eda84539cb",
+   "tur": "cikmis",
+   "onem_id": "e07-07",
+   "sinav": "Yılı belirsiz Final (?)",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Sifiliz ile ilgili aşağıdakilerden hangisi doğrudur?",
+   "secenekler": {
+    "A": "Sekonder sifilizde anogenital bölgede kondiloma aküminata adı verilen lezyonlar görülür.",
+    "B": "El ayaları ve ayak tabanlarında deri tutulumu sık görülür.",
+    "C": "Gomlarda bulaşıcılık yüksektir.",
+    "D": "Primer sifilizde yumuşak şankr görülür.",
+    "E": "Tersiyer sifiliz vakalarının %80'inden fazlasını nörosifiliz oluşturur."
+   },
+   "dogru": "B",
+   "kok_ses": "Sifiliz ile ilgili asagidakilerden hangisi dogrudur?",
+   "secenek_ses": {
+    "A": "Sekonder sifilizde anogenital bolgede kondiloma akuminata adi verilen lezyonlar gorulur.",
+    "B": "El ayalari ve ayak tabanlarinda deri tutulumu sik gorulur.",
+    "C": "Gomlarda bulasicilik yuksektir.",
+    "D": "Primer sifilizde yumusak sankr gorulur.",
+    "E": "Tersiyer sifiliz vakalarinin yuzde sekseninden fazlasini nurosifiliz olusturur."
+   },
+   "ipucu": {
+    "metin": "Cilt bulgularının simetrik yayılımı ve ekstremite uçlarındaki lokalizasyonu tanısaldır.",
+    "ses": "Cilt bulgularinin simetrik yayilimi ve ekstremite uclarindaki lokalizasyonu tanisaldir."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Kondiloma aküminata, insan papilloma virüsünün neden olduğu karnabahar görünümünde lezyonlardır. Anogenital bölgede siğil formasyonları oluşturur. Sekonder sifilizde ise kondiloma lata adı verilen farklı lezyonlar görülür.",
+     "ses": "Kondiloma akuminata, insan papilloma virusunun neden oldugu karnabahar gorunumunde lezyonlardir. Anogenital bolgede sigil formasyonlari olusturur. Sekonder sifilizde ise kondiloma lata adi verilen farkli lezyonlar gorulur."
+    },
+    "B": {
+     "metin": "El ayaları ve ayak tabanlarında ortaya çıkan simetrik döküntüler sekonder sifilizin en karakteristik bulgusudur. Hastada yaygın spiroketemiye bağlı kaşıntısız cilt lezyonları gelişir. Bu ifade sifiliz için doğrudur.",
+     "ses": "El ayalari ve ayak tabanlarinda ortaya cikan simetrik dokuntuler sekonder sifilizin en karakteristik bulgusudur. Hastada yaygin spiroketemiyede bagli kasintisiz cilt lezyonlari gelisir. Bu ifade sifiliz icin dogrudur."
+    },
+    "C": {
+     "metin": "Gomlar, tersiyer sifiliz döneminde görülen granülomatöz ve yıkıcı lezyonlardır. İç organlarda ve deride nekrozla seyreden kitleler oluşturur. Bu lezyonlarda bakteri sayısı çok az olduğu için bulaştırıcılık düşüktür.",
+     "ses": "Gomlar, tersiyer sifiliz doneminde gorulen granulomatoz ve yikici lezyonlardir. Ic organlarda ve deride nekrozla seyreden kitleler olusturur. Bu lezyonlarda bakteri sayisi cok az oldugu icin bulasicilik dusuktur."
+    },
+    "D": {
+     "metin": "Primer sifiliz, spiroketin giriş yerinde gelişen ağrısız ve sert bir ülser olan şankr ile karakterizedir. Yerel lenf bezlerini etkileyen enfeksiyon tablosu oluşturur. Şankr sert yapısıyla bilinir, yumuşak değildir.",
+     "ses": "Primer sifiliz, spiroketin giris yerinde gelisen agrisiz ve sert bir ulser olan sankr ile karakterizedir. Yerel lenf bezlerini etkileyen enfeksiyon tablosu olusturur. Sankr sert yapisiyla bilinir, yumusak degildir."
+    },
+    "E": {
+     "metin": "Tersiyer sifiliz, kardiyovasküler tutulum ve nörosifiliz gibi geç dönem sistemik bozukluklarla kendini gösterir. Merkezi sinir sistemi etkilenimi önemli bir yer tutar. Ancak bu oran belirtilen düzeyde değildir.",
+     "ses": "Tersiyer sifiliz, kardiyovaskuler tutulum ve nurosifiliz gibi gec donem sistemik bozukluklarla kendini gosterir. Merkezi sinir sistemi etkilenimi onemli bir yer tutar. Ancak bu oran belirtilen duzeyde degildir."
+    }
+   },
+   "cozum": {
+    "metin": "Sekonder sifiliz evresinde el ayası ve ayak tabanında görülen yaygın ve simetrik döküntüler, klinik tanıda en önemli yol gösterici bulgulardandır.",
+    "ses": "Sekonder sifiliz evresinde el ayasi ve ayak tabaninda gorulen yaygin ve simetrik dokuntuler, klinik tanida en onemli yol gosterici bulgulardandir."
+   },
+   "sayfa": [
+    9
+   ]
+  },
+  {
+   "ref": "o:e07-08:1",
+   "tur": "ornek",
+   "onem_id": "e07-08",
+   "zorluk": "orta",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Sekonder sifilizin yaygın spiroketemi döneminde ortaya çıkabilecek sistemik organ tutulumları arasında aşağıdakilerden hangisi yer alır?",
+   "secenekler": {
+    "A": "Gom lezyonu",
+    "B": "Aort anevrizması",
+    "C": "Tabes dorsalis",
+    "D": "Hepatit",
+    "E": "Hutchinson dişleri"
+   },
+   "dogru": "D",
+   "kok_ses": "Sekonder sifilizin yaygın spiroketemi döneminde ortaya çıkabilecek sistemik organ tutulumları arasında aşağıdakilerden hangisi yer alır",
+   "secenek_ses": {
+    "A": "Gom lezyonu",
+    "B": "Aort anevrizması",
+    "C": "Tabes dorsalis",
+    "D": "Hepatit",
+    "E": "Hutchinson dişleri"
+   },
+   "ipucu": {
+    "metin": "Kan yoluyla yayılan etken karaciğer fonksiyonlarını etkileyebilir.",
+    "ses": "Kan yoluyla yayılan etken karaciğer fonksiyonlarını etkileyebilir."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Gom lezyonu tersiyer evrede dokularda yıkıcı granülomatöz reaksiyonlarla ortaya çıkan bir bulgudur. Kronik doku hasarını temsil eder ve sekonder spiroketemi döneminde görülmez. Bu nedenle sorunun doğru cevabı değildir.",
+     "ses": "Gom lezyonu tersiyer evrede dokularda yıkıcı granülomatöz reaksiyonlarla ortaya çıkan bir bulgudur. Kronik doku hasarını temsil eder ve sekonder spiroketemi döneminde görülmez. Bu nedenle sorunun doğru cevabı değildir."
+    },
+    "B": {
+     "metin": "Aort anevrizması damar tutulumu ile karakterize olan kardiyovasküler sifilizin bir sonucudur. Uzun yıllar sonra gelişen geç dönem komplikasyonları arasında yer alır. Erken yayılım dönemine ait değildir.",
+     "ses": "Aort anevrizması damar tutulumu ile karakterize olan kardiyovasküler sifilizin bir sonucudur. Uzun yıllar sonra gelişen geç dönem komplikasyonları arasında yer alır. Erken yayılım dönemine ait değildir."
+    },
+    "C": {
+     "metin": "Tabes dorsalis santral sinir sistemini etkileyen nörosifiliz tablosunun bir formudur. Sinir dokusunda harabiyet yaratarak geç dönemde bulgu verir. Bu soru için doğru seçenek değildir.",
+     "ses": "Tabes dorsalis santral sinir sistemini etkileyen nörosifiliz tablosunun bir formudur. Sinir dokusunda harabiyet yaratarak geç dönemde bulgu verir. Bu soru için doğru seçenek değildir."
+    },
+    "D": {
+     "metin": "Hepatit karaciğer tutulumuna bağlı olarak sekonder sifilizin yaygın spiroketemi evresinde görülebilen sistemik bir bulgudur. Bakterinin hematojen yayılımı sırasında organlarda bu tür tablolar belirebilir. Bu seçenek doğrudur.",
+     "ses": "Hepatit karaciğer tutulumuna bağlı olarak sekonder sifilizin yaygın spiroketemi evresinde görülebilen sistemik bir bulgudur. Bakterinin hematojen yayılımı sırasında organlarda bu tür tablolar belirebilir. Bu seçenek doğrudur."
+    },
+    "E": {
+     "metin": "Hutchinson dişleri konjenital yani doğumsal sifilizin geç dönem bulgularından biridir. Anne karnından bulaşan enfeksiyonun izlerini taşır. Edinsel sekonder evre spiroketemi bulgusu değildir.",
+     "ses": "Hutchinson dişleri konjenital yani doğumsal sifilizin geç dönem bulgularından biridir. Anne karnından bulaşan enfeksiyonun izlerini taşır. Edinsel sekonder evre spiroketemi bulgusu değildir."
+    }
+   },
+   "cozum": {
+    "metin": "Sekonder sifilizde bakterinin kana karışmasıyla döküntüler yanında hepatit, menenjit gibi organ tutulumları gelişebilir. Gom ve anevrizma geç dönem bulgularıdır.",
+    "ses": "Sekonder sifilizde bakterinin kana karışmasıyla döküntüler yanında hepatit, menenjit gibi organ tutulumları gelişebilir. Gom ve anevrizma geç dönem bulgularıdır."
+   },
+   "sayfa": [
+    7
+   ]
+  },
+  {
+   "ref": "o:e07-09:1",
+   "tur": "ornek",
+   "onem_id": "e07-09",
+   "zorluk": "orta",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Sifiliz enfeksiyonunda serolojik testlerin pozitif bulunmasına rağmen hastada hiçbir klinik lezyon veya semptomun saptanmadığı evre aşağıdakilerden hangisidir?",
+   "secenekler": {
+    "A": "Primer sifiliz",
+    "B": "Latent sifiliz",
+    "C": "Sekonder sifiliz",
+    "D": "Tersiyer sifiliz",
+    "E": "Nörosifiliz"
+   },
+   "dogru": "B",
+   "kok_ses": "Sifiliz enfeksiyonunda serolojik testlerin pozitif bulunmasına rağmen hastada hiçbir klinik lezyon veya semptomun saptanmadığı evre aşağıdakilerden hangisidir",
+   "secenek_ses": {
+    "A": "Primer sifiliz",
+    "B": "Latent sifiliz",
+    "C": "Sekonder sifiliz",
+    "D": "Tersiyer sifiliz",
+    "E": "Nörosifiliz"
+   },
+   "ipucu": {
+    "metin": "Bu dönemde laboratuvar pozitifliği vardır ancak fizik muayene bulgusu izlenmez.",
+    "ses": "Bu dönemde laboratuvar pozitifliği vardır ancak fizik muayene bulgusu izlenmez."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Primer sifiliz giriş bölgesinde şankr adı verilen karakteristik ülserin oluştuğu ilk dönemdir. Fizik muayenede lezyonların rahatlıkla saptanabildiği bir evredir. Bu nedenle semptomsuz evre tanımına uymaz.",
+     "ses": "Primer sifiliz giriş bölgesinde şankr adı verilen karakteristik ülserin oluştuğu ilk dönemdir. Fizik muayenede lezyonların rahatlıkla saptanabildiği bir evredir. Bu nedenle semptomsuz evre tanımına uymaz."
+    },
+    "B": {
+     "metin": "Latent sifiliz serolojik testlerin pozitif olduğu ancak hiçbir klinik belirti veya bulgu bulunmadığı evredir. Hastada fizik muayenede saptanan aktif lezyon yer almaz. Bu seçenek doğrudur.",
+     "ses": "Latent sifiliz serolojik testlerin pozitif olduğu ancak hiçbir klinik belirti veya bulgu bulunmadığı evredir. Hastada fizik muayenede saptanan aktif lezyon yer almaz. Bu seçenek doğrudur."
+    },
+    "C": {
+     "metin": "Sekonder sifiliz yaygın cilt döküntüleri ve kondiloma lata gibi bulguların görüldüğü aktif bir dönemdir. Sistemik organ tutulumları ve deri lezyonları ile kendini gösterir. Asemptomatik seyretmez.",
+     "ses": "Sekonder sifiliz yaygın cilt döküntüleri ve kondiloma lata gibi bulguların görüldüğü aktif bir dönemdir. Sistemik organ tutulumları ve deri lezyonları ile kendini gösterir. Asemptomatik seyretmez."
+    },
+    "D": {
+     "metin": "Tersiyer sifiliz enfeksiyondan yıllar sonra ortaya çıkan gomatöz ve kardiyovasküler hasarlarla karakterizedir. Dokularda yıkıcı granülomatöz reaksiyonlara neden olur. Sessiz kalan latent evre değildir.",
+     "ses": "Tersiyer sifiliz enfeksiyondan yıllar sonra ortaya çıkan gomatöz ve kardiyovasküler hasarlarla karakterizedir. Dokularda yıkıcı granülomatöz reaksiyonlara neden olur. Sessiz kalan latent evre değildir."
+    },
+    "E": {
+     "metin": "Nörosifiliz santral sinir sistemini tutarak nörolojik kayıplara yol açan ilerleyici bir tablodur. Sinir dokusunda kalıcı hasar oluşturarak klinik belirtiler verir. Bu yüzden semptomsuz evre değildir.",
+     "ses": "Nörosifiliz santral sinir sistemini tutarak nörolojik kayıplara yol açan ilerleyici bir tablodur. Sinir dokusunda kalıcı hasar oluşturarak klinik belirtiler verir. Bu yüzden semptomsuz evre değildir."
+    }
+   },
+   "cozum": {
+    "metin": "Latent sifiliz, laboratuvar testleriyle kanıtlanan ancak hastada hiçbir klinik belirti veya fizik muayene bulgusu vermeyen özel bir evredir.",
+    "ses": "Latent sifiliz, laboratuvar testleriyle kanıtlanan ancak hastada hiçbir klinik belirti veya fizik muayene bulgusu vermeyen özel bir evredir."
+   },
+   "sayfa": [
+    7
+   ]
+  },
+  {
+   "ref": "o:e07-10:1",
+   "tur": "ornek",
+   "onem_id": "e07-10",
+   "zorluk": "orta",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Tersiyer sifiliz ile ilgili aşağıdaki ifadelerden hangisidir?",
+   "secenekler": {
+    "A": "Enfekte lezyon teması ile bulaştırıcılığı son derece yüksektir",
+    "B": "Primer şankr ortaya çıktıktan tam 1 hafta sonra başlar",
+    "C": "Tanısında karanlık alan mikroskopisi ilk tercih yöntemdir",
+    "D": "Sadece el ayası ve ayak tabanlarında döküntüyle karakterizedir",
+    "E": "Bulaş sonrasında 3-20 yıl içinde gelişen non-infeksiyöz dönemdir"
+   },
+   "dogru": "E",
+   "kok_ses": "Tersiyer sifiliz ile ilgili aşağıdaki ifadelerden hangisidir",
+   "secenek_ses": {
+    "A": "Enfekte lezyon teması ile bulaştırıcılığı son derece yüksektir",
+    "B": "Primer şankr ortaya çıktıktan tam bir hafta sonra başlar",
+    "C": "Tanısında karanlık alan mikroskopisi ilk tercih yöntemdir",
+    "D": "Sadece el ayası ve ayak tabanlarında döküntüyle karakterizedir",
+    "E": "Temastan sonra yıllar içinde gelişen non infeksiyöz dönemdir"
+   },
+   "ipucu": {
+    "metin": "İlerlemiş süreçte ortaya çıkan bu tablo uzun vadeli doku harabiyetiyle seyreder.",
+    "ses": "İlerlemiş süreçte ortaya çıkan bu tablo uzun vadeli doku harabiyetiyle seyreder."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Enfekte lezyonlar erken dönemde yüksek bulaştırıcılık özelliği gösterir ve temasla kolayca yayılır. Bu durum genellikle primer ve sekonder evrelerde ön planda yer alan bir özellik olarak dikkat çeker. Tersiyer evre ise bulaştırıcılığı olmayan bir süreç olduğu için bu ifade yanlıştır.",
+     "ses": "Enfekte lezyonlar erken dönemde yüksek bulaştırıcılık özelliği gösterir ve temasla kolayca yayılır. Bu durum genellikle primer ve sekonder evrelerde ön planda yer alan bir özellik olarak dikkat çeker. Tersiyer evre ise bulaştırıcılığı olmayan bir süreç olduğu için bu ifade yanlıştır."
+    },
+    "B": {
+     "metin": "Primer şankr etkenin vücuda girdiği alanda gelişen ilk klinik lezyon olma özelliği taşır. Bu lezyonun ortaya çıkışı genellikle haftalar süren bir kuluçka dönemini takip eder. Tersiyer evrenin başlangıç zamanı ile primer şankrın görülme süresi arasında doğrudan bu şekilde bir zaman bağı bulunmaz.",
+     "ses": "Primer şankr etkenin vücuda girdiği alanda gelişen ilk klinik lezyon olma özelliği taşır. Bu lezyonun ortaya çıkışı genellikle haftalar süren bir kuluçka dönemini takip eder. Tersiyer evrenin başlangıç zamanı ile primer şankrın görülme süresi arasında doğrudan bu şekilde bir zaman bağı bulunmaz."
+    },
+    "C": {
+     "metin": "Karanlık alan mikroskopisi erken evredeki açık lezyonlardan örnek alınarak etkenin gösterilmesinde kullanılır. Bu yöntem canlı mikroorganizmaların hareketlerinin incelenmesine olanak tanır ve erken tanı için değerlidir. Tersiyer evrede ise bu mikroskopi yöntemi ilk tercih edilen tanı aracı değildir.",
+     "ses": "Karanlık alan mikroskopisi erken evredeki açık lezyonlardan örnek alınarak etkenin gösterilmesinde kullanılır. Bu yöntem canlı mikroorganizmaların hareketlerinin incelenmesine olanak tanır ve erken tanı için değerlidir. Tersiyer evrede ise bu mikroskopi yöntemi ilk tercih edilen tanı aracı değildir."
+    },
+    "D": {
+     "metin": "El ayası ve ayak tabanında görülen lezyonlar sekonder evrenin karakteristik bulguları arasında yer alır. Bu bölgelerdeki döküntüler klinisyene tanı konusunda önemli bir yönlendirme sağlar. Tersiyer dönemde ise gomatöz, kardiyovasküler ve nörolojik tutulumlar ön plana çıktığı için bu ifade yanlıştır.",
+     "ses": "El ayası ve ayak tabanında görülen lezyonlar sekonder evrenin karakteristik bulguları arasında yer alır. Bu bölgelerdeki döküntüler klinisyene tanı konusunda önemli bir yönlendirme sağlar. Tersiyer dönemde ise gomatöz, kardiyovasküler ve nörolojik tutulumlar ön plana çıktığı için bu ifade yanlıştır."
+    },
+    "E": {
+     "metin": "Temas sonrasında uzun yıllar geçtikten sonra ortaya çıkan bu evre organlarda kalıcı hasarlar bırakır. Bu süreçte **non infeksiyöz** yani bulaştırıcılığı olmayan geç dönem bulguları izlenir ve gomatöz yapılar gelişebilir. İfadenin bu dönemin özelliklerini tam olarak yansıtması nedeniyle bu seçenek **doğru** olarak kabul edilir.",
+     "ses": "Temas sonrasında uzun yıllar geçtikten sonra ortaya çıkan bu evre organlarda kalıcı hasarlar bırakır. Bu süreçte non infeksiyöz yani bulaştırıcılığı olmayan geç dönem bulguları izlenir ve gomatöz yapılar gelişebilir. İfadenin bu dönemin özelliklerini tam olarak yansıtması nedeniyle bu seçenek doğru olarak kabul edilir."
+    }
+   },
+   "cozum": {
+    "metin": "Tersiyer sifiliz bulaştan uzun süre sonra ortaya çıkan, bulaştırıcılığı olmayan ve gomatöz ile kardiyovasküler tutulumlarla seyreden bir evredir.",
+    "ses": "Tersiyer sifiliz bulaştan uzun süre sonra ortaya çıkan, bulaştırıcılığı olmayan ve gomatöz ile kardiyovasküler tutulumlarla seyreden bir evredir."
+   },
+   "sayfa": [
+    7
+   ]
+  },
+  {
+   "ref": "o:e07-12:1",
+   "tur": "ornek",
+   "onem_id": "e07-12",
+   "zorluk": "kolay",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Sekonder sifiliz tanısıyla takip edilen bir hastada gelişen akut nörosifiliz tablosunda en sık etkilenen kafa çiftleri aşağıdakilerden hangisidir?",
+   "secenekler": {
+    "A": "7 ve 8",
+    "B": "5 ve 6",
+    "C": "3 ve 4",
+    "D": "9 ve 10",
+    "E": "11 ve 12"
+   },
+   "dogru": "A",
+   "kok_ses": "Sekonder sifiliz tanısıyla takip edilen hastada gelişen akut nörosifiliz tablosunda en sık etkilenen kafa çiftleri hangileridir",
+   "secenek_ses": {
+    "A": "yedi ve sekiz",
+    "B": "beş ve altı",
+    "C": "üç ve dört",
+    "D": "dokuz ve on",
+    "E": "on bir ve on iki"
+   },
+   "ipucu": {
+    "metin": "İşitme ve denge ile yüz hareketlerini idare eden kraniyal sinirler bu tabloda sıklıkla tutulur.",
+    "ses": "İşitme ve denge ile yüz hareketlerini idare eden kraniyal sinirler bu tabloda sıklıkla tutulur."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Akut nörosifiliz tablosunda beyin zarının tutulmasıyla birlikte kraniyal sinir paralizileri gelişebilir. Bu süreçte en yüksek oranda etkilenen sinirler yedinci ve sekizinci kafa çiftleri olarak bildirilmiştir. Klinik bulguların bu sinirlerin tutulumunu göstermesi nedeniyle bu seçenek **doğru** kabul edilir.",
+     "ses": "Akut nörosifiliz tablosunda beyin zarının tutulmasıyla birlikte kraniyal sinir paralizileri gelişebilir. Bu süreçte en yüksek oranda etkilenen sinirler yedinci ve sekizinci kafa çiftleri olarak bildirilmiştir. Klinik bulguların bu sinirlerin tutulumunu göstermesi nedeniyle bu seçenek doğru kabul edilir."
+    },
+    "B": {
+     "metin": "Beşinci ve altıncı kafa çiftleri yüzde duyu ve göz hareketlerini sağlayan önemli sinir yapılarıdır. Bu sinirlerin işlev bozuklukları farklı nörolojik tablolar sırasında karşımıza çıkabilir. Ancak sifilizin merkezi sinir sistemi tutulumunda en sık etkilenen öncelikli sinirler bunlar değildir.",
+     "ses": "Beşinci ve altıncı kafa çiftleri yüzde duyu ve göz hareketlerini sağlayan önemli sinir yapılarıdır. Bu sinirlerin işlev bozuklukları farklı nörolojik tablolar sırasında karşımıza çıkabilir. Ancak sifilizin merkezi sinir sistemi tutulumunda en sık etkilenen öncelikli sinirler bunlar değildir."
+    },
+    "C": {
+     "metin": "Üçüncü ve dördüncü kafa çiftleri göz küresinin hareketlerinde görev yapan temel sinirler arasında yer alır. Bu sinirlerin hasar görmesi durumunda çeşitli göz kası felçleri ve görme sorunları izlenir. Sifilize bağlı akut menenjit tablosunda en baskın olarak etkilenen sinir grubu bu değildir.",
+     "ses": "Üçüncü ve dördüncü kafa çiftleri göz küresinin hareketlerinde görev yapan temel sinirler arasında yer alır. Bu sinirlerin hasar görmesi durumunda çeşitli göz kası felçleri ve görme sorunları izlenir. Sifilize bağlı akut menenjit tablosunda en baskın olarak etkilenen sinir grubu bu değildir."
+    },
+    "D": {
+     "metin": "Dokuzuncu ve onuncu kafa çiftleri yutma, konuşma ve otonom sinir sistemi fonksiyonlarında etkilidir. Bu sinirlerin tutulumu yutma güçlüğü ve ses kısıklığı gibi bulgulara yol açabilir. Akut nörosifiliz hastalarında bu sinirler en sık tutulan ilk iki kafa çifti sınıfına girmez.",
+     "ses": "Dokuzuncu ve onuncu kafa çiftleri yutma, konuşma ve otonom sinir sistemi fonksiyonlarında etkilidir. Bu sinirlerin tutulumu yutma güçlüğü ve ses kısıklığı gibi bulgulara yol açabilir. Akut nörosifiliz hastalarında bu sinirler en sık tutulan ilk iki kafa çifti sınıfına girmez."
+    },
+    "E": {
+     "metin": "On birinci ve on ikinci kafa çiftleri boyun hareketleri ve dil kaslarının çalışmasını denetler. Bu sinirlerin hasarlanması başı çevirme ve dili hareket ettirme becerilerinde kusurlara neden olur. Sifilizin merkezi sinir sistemi komplikasyonlarında bu sinirler öncelikli hedef değildir.",
+     "ses": "On birinci ve on ikinci kafa çiftleri boyun hareketleri ve dil kaslarının çalışmasını denetler. Bu sinirlerin hasarlanması başı çevirme ve dili hareket ettirme becerilerinde kusurlara neden olur. Sifilizin merkezi sinir sistemi komplikasyonlarında bu sinirler öncelikli hedef değildir."
+    }
+   },
+   "cozum": {
+    "metin": "Akut nörosifiliz tablosunda baş ağrısı ve ense sertliği görülebilir; bu süreçte en sık etkilenen kafa çiftleri **yedi** ve **sekiz** numaralı sinirlerdir.",
+    "ses": "Akut nörosifiliz tablosunda baş ağrısı ve ense sertliği görülebilir, bu süreçte en sık etkilenen kafa çiftleri yedi ve sekiz numaralı sinirlerdir."
+   },
+   "sayfa": [
+    11
+   ]
+  },
+  {
+   "ref": "c:k1-2025-2026-q021",
+   "tur": "cikmis",
+   "onem_id": "e07-07",
+   "sinav": "2025-2026 Kurul 1",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Sifilizle ilgili aşağıdaki ifadeler veriliyor:\nI. Şankr (genellikle ağrısız, sert tabanlı ülser), primer sifilizin karakteristik bulgusudur.\nII. Latent dönem asemptomatiktir; bu nedenle tedavi gerektirmez.\nIII. Tedavide ilk tercih penisilin G'dir; kullanılacak preparat ve tedavi süresi hastalığın evresine göre belirlenir.\nIV. Sekonder sifilizde avuç içi ve ayak tabanlarını da tutabilen yaygın döküntü görülebilir.\nBu ifadelerden hangileri doğrudur?",
+   "secenekler": {
+    "A": "I ve II",
+    "B": "I ve III",
+    "C": "II ve IV",
+    "D": "I, III ve IV",
+    "E": "I, II, III ve IV"
+   },
+   "dogru": "D",
+   "kok_ses": "Sifilizle ilgili verilen ifadelerden hangileri doğrudur? Bir, şankr primer sifilizin karakteristik bulgusudur. İki, latent dönem asemptomatiktir, bu nedenle tedavi gerektirmez. Üç, tedavide ilk tercih penisilin G'dir, kullanılacak preparat ve tedavi süresi hastalığın evresine göre belirlenir. Dört, sekonder sifilizde avuç içi ve ayak tabanlarını da tutabilen yaygın döküntü görülebilir.",
+   "secenek_ses": {
+    "A": "bir ve iki",
+    "B": "bir ve üç",
+    "C": "iki ve dört",
+    "D": "bir, üç ve dört",
+    "E": "bir, iki, üç ve dört"
+   },
+   "ipucu": {
+    "metin": "Semptomsuz seyreden evrelerde dahi enfeksiyonu ortadan kaldırmak için tedavi uygulanmalıdır.",
+    "ses": "Semptomsuz seyreden evrelerde dahi enfeksiyonu ortadan kaldırmak için tedavi uygulanmalıdır."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Sifilizde şankr ilk evre belirtisidir. Ancak latent dönem asemptomatik olsa bile tedavi edilir. İkinci öncül yanlış olduğu için bu ifade yanlıştır.",
+     "ses": "Sifilizde şankr ilk evre belirtisidir. Ancak latent dönem asemptomatik olsa bile tedavi edilir. İkinci öncül yanlış olduğu için bu ifade yanlıştır."
+    },
+    "B": {
+     "metin": "İlk evre lezyonu ve penisilin kullanımı doğru bilgilerdir. Fakat sekonder evredeki avuç içi döküntüleri eksik bırakılmıştır. Bu nedenle ifade yetersizdir.",
+     "ses": "İlk evre lezyonu ve penisilin kullanımı doğru bilgilerdir. Fakat sekonder evredeki avuç içi döküntüleri eksik bırakılmıştır. Bu nedenle ifade yetersizdir."
+    },
+    "C": {
+     "metin": "Asemptomatik evrede tedaviye gerek olmadığı bilgisi hatadır. Ayrıca birinci öncüldeki tipik şankr tanımı eksik bırakılmıştır. Bu yüzden bu ifade yanlıştır.",
+     "ses": "Asemptomatik evrede tedaviye gerek olmadığı bilgisi hatadır. Ayrıca birinci öncüldeki tipik şankr tanımı eksik bırakılmıştır. Bu yüzden bu ifade yanlıştır."
+    },
+    "D": {
+     "metin": "Primer evrede şankr görülmesi, tedavide penisilin kullanılması ve ikinci evrede el ile ayak tabanı döküntüleri olması **doğru** ifadelerdir. Latent dönemde de tedavi şarttır.",
+     "ses": "Primer evrede şankr görülmesi, tedavide penisilin kullanılması ve ikinci evrede el ile ayak tabanı döküntüleri olması doğru ifadelerdir. Latent dönemde de tedavi şarttır."
+    },
+    "E": {
+     "metin": "Latent evrede klinik belirti olmaması tedavinin yapılmayacağı anlamına gelmez. İkinci öncül hatalı bir bilgi içerdiği için bu ifade yanlıştır.",
+     "ses": "Latent evrede klinik belirti olmaması tedavinin yapılmayacağı anlamına gelmez. İkinci öncül hatalı bir bilgi içerdiği için bu ifade yanlıştır."
+    }
+   },
+   "cozum": {
+    "metin": "Sifilizin gizli evresi asemptomatik seyretse de tedavi edilmelidir. Diğer evrelerde tipik **şankr**, yaygın döküntüler görülür ve tedavide evreye uygun penisilin G seçilir.",
+    "ses": "Sifilizin gizli evresi asemptomatik seyretse de tedavi edilmelidir. Diğer evrelerde tipik şankr, yaygın döküntüler görülür ve tedavide evreye uygun penisilin ge seçilir."
+   },
+   "sayfa": [
+    9
+   ]
+  },
+  {
+   "ref": "c:d3-k1-enf-019",
+   "tur": "cikmis",
+   "onem_id": "e07-12",
+   "sinav": "Yılı belirsiz",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Aşağıdakilerden hangisi sekonder sifiliz bulgularından biri değildir?",
+   "secenekler": {
+    "A": "El ve ayak tabanında makülopapüler döküntü",
+    "B": "Hepatit",
+    "C": "Menenjit",
+    "D": "Kondiloma lata",
+    "E": "Tabes dorsalis"
+   },
+   "dogru": "E",
+   "kok_ses": "Aşağıdakilerden hangisi sekonder sifiliz bulgularından biri değildir?",
+   "secenek_ses": {
+    "A": "el ve ayak tabanında makülopapüler döküntü",
+    "B": "hepatit",
+    "C": "menenjit",
+    "D": "kondiloma lata",
+    "E": "tabes dorsalis"
+   },
+   "ipucu": {
+    "metin": "Erken dönem sistemik yayılım bulguları ile geç dönem omurilik tutulumları klinik olarak birbirinden ayrılır.",
+    "ses": "Erken dönem sistemik yayılım bulguları ile geç dönem omurilik tutulumları klinik olarak birbirinden ayrılır."
+   },
+   "siklar": {
+    "A": {
+     "metin": "El ve ayak tabanı döküntüleri ikinci evre sifiliz için karakteristik lezyonlardır. Ciltte simetrik yayılım göstererek tanıya yardımcı olurlar. İkinci evre bulgusu olduğu için aranan yanıt değildir.",
+     "ses": "El ve ayak tabanı döküntüleri ikinci evre sifiliz için karakteristik lezyonlardır. Ciltte simetrik yayılım göstererek tanıya yardımcı olurlar. İkinci evre bulgusu olduğu için aranan yanıt değildir."
+    },
+    "B": {
+     "metin": "İkinci evrede bakterinin kanla yayılımıyla organ tutulumları gelişebilir. Karaciğer iltihaplanması da bu dönemde sistemik tutuluma eşlik edebilir. Dolayısıyla bu ifade aranan yanıt değildir.",
+     "ses": "İkinci evrede bakterinin kanla yayılımıyla organ tutulumları gelişebilir. Karaciğer iltihaplanması da bu dönemde sistemik tutuluma eşlik edebilir. Dolayısıyla bu ifade aranan yanıt değildir."
+    },
+    "C": {
+     "metin": "Erken nörosifiliz tablosunda baş ağrısı ve ense sertliği ile seyreden zar iltihabı oluşabilir. Merkezi sinir sistemi etkilenimi bu erken yayılım döneminde izlenebilir. Bu yüzden aranan yanıt değildir.",
+     "ses": "Erken nörosifiliz tablosunda baş ağrısı ve ense sertliği ile seyreden zar iltihabı oluşabilir. Merkezi sinir sistemi etkilenimi bu erken yayılım döneminde izlenebilir. Bu yüzden aranan yanıt değildir."
+    },
+    "D": {
+     "metin": "Kıvrım bölgelerinde oluşan gri beyaz renkli bulaştırıcı mukoza lezyonları ikincil evrede görülür. Yüksek bakteri yükü taşıyarak bulaşta önemli rol oynarlar. Bu nedenle aranan yanıt değildir.",
+     "ses": "Kıvrım bölgelerinde oluşan gri beyaz renkli bulaştırıcı mukoza lezyonları ikincil evrede görülür. Yüksek bakteri yükü taşıyarak bulaşta önemli rol oynarlar. Bu nedenle aranan yanıt değildir."
+    },
+    "E": {
+     "metin": "Omurilik arka kordon tutulumu geç nörosifiliz yani üçüncül evre tablosudur. Derin duyu kaybı ve ataksiye yol açar. İkinci evre bulgusu olmadığı için bu ifade **doğru** cevaptır.",
+     "ses": "Omurilik arka kordon tutulumu geç nörosifiliz yani üçüncül evre tablosudur. Derin duyu kaybı ve ataksiye yol açar. İkinci evre bulgusu olmadığı için bu ifade doğru cevaptır."
+    }
+   },
+   "cozum": {
+    "metin": "Döküntüler, hepatit, akut menenjit ve lezyonlar ikinci evre sifilizde izlenir. **Tabes** dorsalis ise geç dönem nörosifiliz yani üçüncül evre bulgusudur.",
+    "ses": "Döküntüler, hepatit, akut menenjit ve lezyonlar ikinci evre sifilizde izlenir. Tabes dorsalis ise geç dönem nörosifiliz yani üçüncül evre bulgusudur."
+   },
+   "sayfa": [
+    11
+   ]
+  },
+  {
+   "ref": "o:e07-13:1",
+   "tur": "ornek",
+   "onem_id": "e07-13",
+   "zorluk": "orta",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Latent sifiliz dönemi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+   "secenekler": {
+    "A": "Dönem boyunca hasta tamamen asemptomatiktir",
+    "B": "İlk 1 yıl erken latent dönem olarak adlandırılır",
+    "C": "Relapsların büyük kısmı ilk yıl içinde görülür",
+    "D": "Olguların tamamında hastalık 3 yıl içinde ilerler",
+    "E": "Latent dönem 3-30 yıl sürebilir"
+   },
+   "dogru": "D",
+   "kok_ses": "Latent sifiliz dönemi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+   "secenek_ses": {
+    "A": "dönem boyunca hasta tamamen asemptomatiktir",
+    "B": "ilk bir yıl erken latent dönem olarak adlandırılır",
+    "C": "relapsların büyük kısmı ilk yıl içinde görülür",
+    "D": "olguların tamamında hastalık üç yıl içinde ilerler",
+    "E": "latent dönem üç ile otuz yıl sürebilir"
+   },
+   "ipucu": {
+    "metin": "Gizli evreye giren vakaların belirgin bir kısmında klinik tablo ömür boyu sessiz kalabilir.",
+    "ses": "Gizli evreye giren vakaların belirgin bir kısmında klinik tablo ömür boyu sessiz kalabilir."
+   },
+   "siklar": {
+    "A": {
+     "metin": "İkinci evre bulgularının kaybolmasıyla başlayan bu süreç klinik olarak belirtisiz ilerler. Serolojik olarak tanı konabilen bu evrede hastanın semptomsuz olması beklenen bir durumdur.",
+     "ses": "İkinci evre bulgularının kaybolmasıyla başlayan bu süreç klinik olarak belirtisiz ilerler. Serolojik olarak tanı konabilen bu evrede hastanın semptomsuz olması beklenen bir durumdur."
+    },
+    "B": {
+     "metin": "Gizli dönemin ilk on iki ayı erken evre olarak kabul edilir. Bulaştırıcılık riskini derecelendiren bu zamanlamaya dayalı sınıflama tıp pratiğinde kabul gördüğü için cümle doğrudur.",
+     "ses": "Gizli dönemin ilk on iki ayı erken evre olarak kabul edilir. Bulaştırıcılık riskini derecelendiren bu zamanlamaya dayalı sınıflama tıp pratiğinde kabul gördüğü için cümle doğrudur."
+    },
+    "C": {
+     "metin": "Semptomların tekrar ortaya çıkması sıklıkla ilk yıl içerisinde gerçekleşir. Mukokutanöz nükslerin büyük oranı erken latent evrede görüldüğü için verilen bilgi doğrudur.",
+     "ses": "Semptomların tekrar ortaya çıkması sıklıkla ilk yıl içerisinde gerçekleşir. Mukokutanöz nükslerin büyük oranı erken latent evrede görüldüğü için verilen bilgi doğrudur."
+    },
+    "D": {
+     "metin": "Gizli evredeki vakaların çoğunda enfeksiyon ömür boyu kalıcı kalabilir. Bütün vakalarda üçüncül evreye geçiş olacağı bilgisi yanlış olduğu için bu ifade **doğru** seçenektir.",
+     "ses": "Gizli evredeki vakaların çoğunda enfeksiyon ömür boyu kalıcı kalabilir. Bütün vakalarda üçüncül evreye geçiş olacağı bilgisi yanlış olduğu için bu ifade doğru seçenektir."
+    },
+    "E": {
+     "metin": "Sessiz geçen bu evrenin süresi kişiden kişiye değişerek onlarca yıl sürebilir. İmmün yanıtla ilişkili bu zaman aralığı literatürle uyumlu olduğu için verilen ifade doğrudur.",
+     "ses": "Sessiz geçen bu evrenin süresi kişiden kişiye değişerek onlarca yıl sürebilir. İmmün yanıtla ilişkili bu zaman aralığı literatürle uyumlu olduğu için verilen ifade doğrudur."
+    }
+   },
+   "cozum": {
+    "metin": "Gizli evre yıllarca sürebilir ve vakaların çoğunda yaşam boyu sessiz kalır. Hastalık vakaların tamamında kısa sürede **ilerleme** göstermez.",
+    "ses": "Gizli evre yıllarca sürebilir ve vakaların çoğunda yaşam boyu sessiz kalır. Hastalık vakaların tamamında kısa sürede ilerleme göstermez."
+   },
+   "sayfa": [
+    12
+   ]
+  },
+  {
+   "ref": "c:k1-2020-2021-b-q025",
+   "tur": "cikmis",
+   "onem_id": "e07-13",
+   "sinav": "2020-2021 Kurul 1",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Sifiliz kliniği için aşağıdakilerden hangisi yanlıştır?",
+   "secenekler": {
+    "A": "Primer sifilizde şankr mevcuttur",
+    "B": "Sekonder sifiliz asemptomatiktir",
+    "C": "Latent sifilizde treponemal testler pozitiftir",
+    "D": "Tersiyer sifilizde gummatöz lezyonlar görülür",
+    "E": "Tersiyer sifilizde nörolojik tutulum görülür"
+   },
+   "dogru": "B",
+   "kok_ses": "Sifiliz kliniği için aşağıdakilerden hangisi yanlıştır?",
+   "secenek_ses": {
+    "A": "Primer sifilizde şankr mevcuttur",
+    "B": "Sekonder sifiliz asemptomatiktir",
+    "C": "Latent sifilizde treponemal testler pozitiftir",
+    "D": "Tersiyer sifilizde gummatöz lezyonlar görülür",
+    "E": "Tersiyer sifilizde nörolojik tutulum görülür"
+   },
+   "ipucu": {
+    "metin": "Belirtilerin kaybolduğu dönem sessiz seyreder ancak testler pozitiftir.",
+    "ses": "Belirtilerin kaybolduğu dönem sessiz seyreder ancak testler pozitiftir."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Primer sifilizde şankr görülür ve bu ifade doğrudur. Bölgesel lenfadenopati eşliğinde ağrısız ülser şeklinde karşımıza çıkarak tanıya yardımcı olur.",
+     "ses": "Primer sifilizde şankr görülür ve bu ifade doğrudur. Bölgesel lenfadenopati eşliğinde ağrısız ülser şeklinde karşımıza çıkarak tanıya yardımcı olur."
+    },
+    "B": {
+     "metin": "Sekonder sifiliz asemptomatiktir ifadesi yanlıştır ve sorunun **doğru** yanıtıdır. Bu evre yaygın döküntüler ve sistemik bulgularla seyrederek klinik belirtiler verir.",
+     "ses": "Sekonder sifiliz asemptomatiktir ifadesi yanlıştır ve sorunun doğru yanıtıdır. Bu evre yaygın döküntüler ve sistemik bulgularla seyrederek klinik belirtiler verir."
+    },
+    "C": {
+     "metin": "Latent sifiliz döneminde serolojik testler pozitif kalmaya devam eder. Bu evre klinik bulguların olmadığı sessiz bir safhadır ancak bağışıklık yanıtı sürer.",
+     "ses": "Latent sifiliz döneminde serolojik testler pozitif kalmaya devam eder. Bu evre klinik bulguların olmadığı sessiz bir safhadır ancak bağışıklık yanıtı sürer."
+    },
+    "D": {
+     "metin": "Tersiyer sifilizde gummatöz lezyonlar izlenir ve bu bilgi doğrudur. Dokularda yıkıcı granülomlar şeklinde ortaya çıkarak organ hasarına yol açar.",
+     "ses": "Tersiyer sifilizde gummatöz lezyonlar izlenir ve bu bilgi doğrudur. Dokularda yıkıcı granülomlar şeklinde ortaya çıkarak organ hasarına yol açar."
+    },
+    "E": {
+     "metin": "Tersiyer sifilizde nörolojik tutulum görülmesi doğrudur. Merkezî sinir sistemi tutulumu bu geç dönemde gelişerek ciddi tablolar ortaya çıkarır.",
+     "ses": "Tersiyer sifilizde nörolojik tutulum görülmesi doğrudur. Merkezî sinir sistemi tutulumu bu geç dönemde gelişerek ciddi tablolar ortaya çıkarır."
+    }
+   },
+   "cozum": {
+    "metin": "Sekonder sifiliz bulgularının gerilemesiyle latent dönem başlar ve bu evre klinik olarak asemptomatiktir.",
+    "ses": "Sekonder sifiliz bulgularının gerilemesiyle latent dönem başlar ve bu evre klinik olarak asemptomatiktir."
+   },
+   "sayfa": [
+    12
+   ]
+  },
+  {
+   "ref": "c:522fba66356c",
+   "tur": "cikmis",
+   "onem_id": "e07-14",
+   "sinav": "2020-2021 Kurul 4",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Üçüncü devrinde gom oluşumu sonucu damakta perforasyona neden olabilen spesifik hastalık aşağıdakilerden hangisidir?",
+   "secenekler": {
+    "A": "Sifiliz",
+    "B": "Tüberküloz",
+    "C": "Lepra",
+    "D": "Gonokok stomatitisi",
+    "E": "Behçet hastalığı"
+   },
+   "dogru": "A",
+   "kok_ses": "Üçüncü devrinde gom oluşumu sonucu damakta perforasyona neden olabilen spesifik hastalık aşağıdakilerden hangisidir?",
+   "secenek_ses": {
+    "A": "Sifiliz",
+    "B": "Tüberküloz",
+    "C": "Lepra",
+    "D": "Gonokok stomatitisi",
+    "E": "Behçet hastalığı"
+   },
+   "ipucu": {
+    "metin": "Geç dönemde yıkıcı granülomlar oluşturan bu enfeksiyon sistemik tutulum yapar.",
+    "ses": "Geç dönemde yıkıcı granülomlar oluşturan bu enfeksiyon sistemik tutulum yapar."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Sifiliz geç döneminde **gom** adı verilen granülomatöz lezyonlar oluşturur ve bu sorunun **doğru** yanıtıdır. Bu lezyonlar doku yıkımı yaparak damakta delinmelere neden olabilir.",
+     "ses": "Sifiliz geç döneminde gom adı verilen granülomatöz lezyonlar oluşturur ve bu sorunun doğru yanıtıdır. Bu lezyonlar doku yıkımı yaparak damakta delinmelere neden olabilir."
+    },
+    "B": {
+     "metin": "Tüberküloz kronik seyirli bir granülomatöz hastalıktır ve temel olarak akciğer parenkimini tutar. Karşılaşılan iltihabi süreçler akciğer dokusunda yıkıma yol açar ancak bu soruda istenen damak perforasyonu tablosunu açıklamaz.",
+     "ses": "Tüberküloz kronik seyirli bir granülomatöz hastalıktır ve temel olarak akciğer parenkimini tutar. Karşılaşılan iltihabi süreçler akciğer dokusunda yıkıma yol açar ancak bu soruda istenen damak perforasyonu tablosunu açıklamaz."
+    },
+    "C": {
+     "metin": "Lepra periferik sinirleri ve cildi tutan kronik seyirli bakteriyel bir enfeksiyondur. Duyu kayıpları ve cilt bozuklukları ile seyreder ancak geç dönemde damak perforasyonu ile karakterize bu tabloyu oluşturmaz.",
+     "ses": "Lepra periferik sinirleri ve cildi tutan kronik seyirli bakteriyel bir enfeksiyondur. Duyu kayıpları ve cilt bozuklukları ile seyreder ancak geç dönemde damak perforasyonu ile karakterize bu tabloyu oluşturmaz."
+    },
+    "D": {
+     "metin": "Gonokok stomatitisi ağız mukozasında iltihabi ve yüzeysel lezyonlar oluşturan akut bir enfeksiyondur. Ağız içinde kızarıklık ve hassasiyete yol açar ancak derin doku yıkımı ve damak perforasyonu yapmaz.",
+     "ses": "Gonokok stomatitisi ağız mukozasında iltihabi ve yüzeysel lezyonlar oluşturan akut bir enfeksiyondur. Ağız içinde kızarıklık ve hassasiyete yol açar ancak derin doku yıkımı ve damak perforasyonu yapmaz."
+    },
+    "E": {
+     "metin": "Behçet hastalığı damar iltihabı ile seyreden ve tekrarlayan rekürren oral ülserler oluşturan sistemik bir rahatsızlıktır. Ağızda ağrılı aftlara neden olur fakat geç dönemde kemik ve damak perforasyonu oluşturan bu tabloyu açıklamaz.",
+     "ses": "Behçet hastalığı damar iltihabı ile seyreden ve tekrarlayan rekürren oral ülserler oluşturan sistemik bir rahatsızlıktır. Ağızda ağrılı aftlara neden olur fakat geç dönemde kemik ve damak perforasyonu oluşturan bu tabloyu açıklamaz."
+    }
+   },
+   "cozum": {
+    "metin": "Tersiyer sifilizde izlenen **gom** lezyonları tip dört aşırı duyarlılık ile doku yıkımı ve damak perforasyonu yapar.",
+    "ses": "Tersiyer sifilizde izlenen gom lezyonları tip dört aşırı duyarlılık ile doku yıkımı ve damak perforasyonu yapar."
+   },
+   "sayfa": [
+    13
+   ]
+  },
+  {
+   "ref": "o:e07-11:1",
+   "tur": "ornek",
+   "onem_id": "e07-11",
+   "zorluk": "zor",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Anogenital bölgede geniş tabanlı, nemli, gri-beyaz renkli, oldukça bulaştırıcı lezyonlar saptanan ve sekonder sifiliz düşünülerek takibe alınan bir hastadaki spesifik lezyon ile bu lezyonu taklit eden viral klinik tablo eşleştirmesi hangisidir?\n\nI. Sifilizdeki Lezyon: Kondiloma lata\nII. Sifilizdeki Lezyon: Kondiloma aküminata\nIII. Karıştırılan Viral Etken: HPV\nIV. Karıştırılan Viral Etken: HSV?",
+   "secenekler": {
+    "A": "II ve III",
+    "B": "I ve IV",
+    "C": "I ve III",
+    "D": "II ve IV",
+    "E": "Yalnız I"
+   },
+   "dogru": "C",
+   "kok_ses": "Anogenital bolgede genis tabanli, nemli, gri beyaz renkli lezyonlar saptanan ve sekonder sifiliz dusunulen hastadaki spesifik lezyon ile bu lezyonu taklit eden viral tablo hangisidir. bir, Sifilizdeki Lezyon, Kondiloma lata. iki, Sifilizdeki Lezyon, Kondiloma akuminata. uc, Karistirilan Viral Etken, ha pe ve. dort, Karistirilan Viral Etken, ha es ve soru isareti.",
+   "secenek_ses": {
+    "A": "iki ve uc",
+    "B": "bir ve dort",
+    "C": "bir ve uc",
+    "D": "iki ve dort",
+    "E": "yalniz bir"
+   },
+   "ipucu": {
+    "metin": "Benzer gorunumlu iki farkli yapidan biri bakteriyel digeri viral etkenlidir.",
+    "ses": "Benzer gorunumlu iki farkli yapidan biri bakteriyel digeri viral etkenlidir."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Kondiloma akuminata sifiliz bulgusu olmayip viral etkenlidir. Genital bolgede siğilsi yapilar olusturan ve siklikla karistirilan bir tablodur. Bu soruda dogru kombinasyonda yer almadigi icin yanlistir.",
+     "ses": "Kondiloma akuminata sifiliz bulgusu olmayip viral etkenlidir. Genital bolgede sigilsi yapilar olusturan ve siklikla karistirilan bir tablodur. Bu soruda dogru kombinasyonda yer almadigi icin yanlistir."
+    },
+    "B": {
+     "metin": "Verilen eslestirmelerden bazilari yanlis icerik barindirir. Sifiliz tablosundaki bulgular ile viral etkenlerin dogru eslesmesi gerekmektedir. Bu secenek istenen dogru eslesmeyi kapsamamaktadir.",
+     "ses": "Verilen eslestirmelerden bazilari yanlis icerik barindirir. Sifiliz tablosundaki bulgular ile viral etkenlerin dogru eslesmesi gerekmektedir. Bu secenek istenen dogru eslesmeyi kapsamamaktadir."
+    },
+    "C": {
+     "metin": "Sekonder donemde gorulen **kondiloma lata** gri beyaz renkli ve bulastirici bir lezyondur. Karistirilan viral etken ise ha pe ve enfeksiyonudur. Bu doğru kombinasyon sorunun yanıtını vermektedir.",
+     "ses": "Sekonder donemde gorulen kondiloma lata gri beyaz renkli ve bulastirici bir lezyondur. Karistirilan viral etken ise ha pe ve enfeksiyonudur. Bu dogru kombinasyon sorunun yanitini vermektedir."
+    },
+    "D": {
+     "metin": "Verilen oncul numaralarinin yanlis eslestirildigi bir secenektir. Klinik tablolarin etiyolojik kokenleri dikkate alindiginda bu secenek gecersiz kalmaktadir. Bu nedenle aradigimiz dogru yanit degildir.",
+     "ses": "Verilen oncul numaralarinin yanlis eslestirildigi bir secenektir. Klinik tablolarin etiyolojik kokenleri dikkate alindiginda bu secenek gecersiz kalmaktadir. Bu nedenle aradigimiz dogru yanit degildir."
+    },
+    "E": {
+     "metin": "Yalnizca bir numarali onculun secilmesi eksik bir degerlendirme olusturur. Viral etken eslesmesinin de dahil edilmesi gerekmektedir. Bu yuzden bu secenek yetersiz kalmaktadir.",
+     "ses": "Yalnizca bir numarali onculun secilmesi eksik bir degerlendirme olusturur. Viral etken eslesmesinin de dahil edilmesi gerekmektedir. Bu yuzden bu secenek yetersiz kalmaktadir."
+    }
+   },
+   "cozum": {
+    "metin": "Sekonder sifilizde izlenen **kondiloma lata** ile ha pe ve enfeksiyonuna bagli kondiloma akuminata gorunum olarak sikca birbirleriyle karistirilir.",
+    "ses": "Sekonder sifilizde izlenen kondiloma lata ile ha pe ve enfeksiyonuna bagli kondiloma akuminata gorunum olarak sikca birbirleriyle karistirilir."
+   },
+   "sayfa": [
+    9,
+    10
+   ]
+  },
+  {
+   "ref": "c:past-1790877492618-37520",
+   "tur": "cikmis",
+   "onem_id": "e07-14",
+   "sinav": "Yılı belirsiz",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Aşağıdakilerden hangisi tersiyer (geç) sifiliz lezyonudur?",
+   "secenekler": {
+    "A": "Gom",
+    "B": "Roseol",
+    "C": "Şankr",
+    "D": "Kondiloma lata",
+    "E": "Kılıç kını tibia"
+   },
+   "dogru": "A",
+   "kok_ses": "Asagidakilerden hangisi tersiyer gec sifiliz lezyonudur.",
+   "secenek_ses": {
+    "A": "Gom",
+    "B": "Roseol",
+    "C": "Sankr",
+    "D": "Kondiloma lata",
+    "E": "Kilic kini tibia"
+   },
+   "ipucu": {
+    "metin": "Bu lezyon dokularda tip dort asiri duyarlilik reaksiyonu ile gelisen granulomlardir.",
+    "ses": "Bu lezyon dokularda tip dort asiri duyarlilik reaksiyonu ile gelisen granulomlardir."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Tersiyer donemin tipik granulomatoz lezyonu olan **gom**, dokularda bakteri icermeyen tip dort asiri duyarlilik reaksiyonuyla gelisir. Tum organlarda harabiyete yol acabilen bu doğru lezyon secenektir.",
+     "ses": "Tersiyer donemin tipik granulomatoz lezyonu olan gom, dokularda bakteri icermeyen tip dort asiri duyarlilik reaksiyonuyla gelisir. Tum organlarda harabiyete yol acabilen bu dogru lezyon secenektir."
+    },
+    "B": {
+     "metin": "Roseol cindide gorulen erken dokuntulerden biridir ve erken donem bulgusudur. Genellikle akut enfeksiyon surecinde ortaya cikar. Bu sorudaki gec donem lezyonu degildir.",
+     "ses": "Roseol cindide gorulen erken dokuntulerden biridir ve erken donem bulgusudur. Genellikle akut enfeksiyon surecinde ortaya cikar. Bu sorudaki gec donem lezyonu degildir."
+    },
+    "C": {
+     "metin": "Sankr primer sifiliz evresinde ortaya cikan ilk lezyondur. Enfeksiyonun baslangic bolgesinde sert karakterli bir yara olarak belirmektedir. Bu nedenle tersiyer evre bulgusu degildir.",
+     "ses": "Sankr primer sifiliz evresinde ortaya cikan ilk lezyondur. Enfeksiyonun baslangic bolgesinde sert karakterli bir yara olarak belirmektedir. Bu nedenle tersiyer evre bulgusu degildir."
+    },
+    "D": {
+     "metin": "Kondiloma lata sekonder donemde gozlenen bulastirici bir mukoza lezyonudur. Genis ve gri beyaz gorunumuyle karakterizedir. Gec donem lezyonu sinifinda yer almaz.",
+     "ses": "Kondiloma lata sekonder donemde gozlenen bulastirici bir mukoza lezyonudur. Genis ve gri beyaz gorunumuyle karakterizedir. Gec donem lezyonu sinifinda yer almaz."
+    },
+    "E": {
+     "metin": "Kilic kini tibia dogustan sifiliz bulgulari arasinda tanimlanan bir kemik deformitesidir. Gec kazanilan tersiyer lezyonlardan farkli bir klinik gidisata sahiptir.",
+     "ses": "Kilic kini tibia dogustan sifiliz bulgulari arasinda tanimlanan bir kemik deformitesidir. Gec kazanilan tersiyer lezyonlardan farkli bir klinik gidisata sahiptir."
+    }
+   },
+   "cozum": {
+    "metin": "Tersiyer sifiliz evresinde gorulen en tipik yavas seyirli ve destrutif lezyon bakteri icermeyen tip dort asiri duyarlilik sonucu olusan **gom**dur.",
+    "ses": "Tersiyer sifiliz evresinde gorulen en tipik yavas seyirli ve destrutif lezyon bakteri icermeyen tip dort asiri duyarlilik sonucu olusan gomdur."
+   },
+   "sayfa": [
+    13
+   ]
+  },
+  {
+   "ref": "o:e07-15:1",
+   "tur": "ornek",
+   "onem_id": "e07-15",
+   "zorluk": "orta",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Spinal kord dorsal kök gangliyonlarının tutulumu sonucu parestezi, düşük ayak, ataksi ve Romberg belirtisi ile seyreden nörosifiliz formu aşağıdakilerden hangisidir?",
+   "secenekler": {
+    "A": "Meningovasküler sifiliz",
+    "B": "Tabes dorsalis",
+    "C": "Genel parezi",
+    "D": "Akut sifilitik menenjit",
+    "E": "Asemptomatik nörosifiliz"
+   },
+   "dogru": "B",
+   "kok_ses": "Spinal kord dorsal kok gangliyonlarinin tutulumu sonucu parestezi, dusuk ayak, ataksi ve Romberg belirtisi ile seyreden nurosifiliz formu asagidakilerden hangisidir.",
+   "secenek_ses": {
+    "A": "Meningovaskuler sifiliz",
+    "B": "Tabes dorsalis",
+    "C": "Genel parezi",
+    "D": "Akut sifilitik menenjit",
+    "E": "Asemptomatik nurosifiliz"
+   },
+   "ipucu": {
+    "metin": "Parankim tutulumunda spinal kord koklerinin etkilendigi ozel bir klinik formdur.",
+    "ses": "Parankim tutulumunda spinal kord koklerinin etkilendigi ozel bir klinik formdur."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Meningovaskuler sifiliz beyin ve omurilik damarlarinin tutulmasiyla seyreden bir formdur. Kisilik degisikligi ve paralizi gibi bulgulara yol acar. Soru kokundeki dorsal kok tutulumunu tanimlamaz.",
+     "ses": "Meningovaskuler sifiliz beyin ve omurilik damarlarinin tutulmasiyla seyreden bir formdur. Kisilik degisikligi ve paralizi gibi bulgulara yol acar. Soru kokundeki dorsal kok tutulumunu tanimlamaz."
+    },
+    "B": {
+     "metin": "Parankimatoz nurosifiliz alt basligi olan **Tabes dorsalis**, dorsal kok gangliyonlarinin tutulumuyla gelisir. Parestezi, ataksi ve Romberg belirtisi olusturmasi nedeniyle bu doğru sorunun yanitidir.",
+     "ses": "Parankimatoz nurosifiliz alt basligi olan Tabes dorsalis, dorsal kok gangliyonlarinin tutulumuyla gelisir. Parestezi, ataksi ve Romberg belirtisi olusturmasi nedeniyle bu dogru sorunun yanitidir."
+    },
+    "C": {
+     "metin": "Genel parezi irritabilite, unutkanlik ve demans tablosu ile karakterize bir nurosifiliz formudur. Serebral korteks tutulumuna bagli psikiyatrik bulgular on plandadir. Omurilik kokleri bu formun ana hedefi degildir.",
+     "ses": "Genel parezi irritabilite, unutkanlik ve demans tablosu ile karakterize bir nurosifiliz formudur. Serebral korteks tutulumuna bagli psikiyatrik bulgular on plandadir. Omurilik kokleri bu formun ana hedefi degildir."
+    },
+    "D": {
+     "metin": "Akut sifilitik menenjit erken donemde meningeal irritasyon bulgulari veren bir tablodur. Sinir sisteminin erken tutulumlarinda gorulebilir. Kok tutulumuna bagli bu kronik tabloyu aciklamaz.",
+     "ses": "Akut sifilitik menenjit erken donemde meningeal irritasyon bulgulari veren bir tablodur. Sinir sisteminin erken tutulumlarinda gorulebilir. Kok tutulumuna bagli bu kronik tabloyu aciklamaz."
+    },
+    "E": {
+     "metin": "Asemptomatik nurosifiliz klinik belirti vermeyen ancak laboratuvar testleriyle saptanan en sik tipdir. Herhangi bir norolojik defisit olusturmaz. Soru kokundeki bulgularla seyretmez.",
+     "ses": "Asemptomatik nurosifiliz klinik belirti vermeyen ancak laboratuvar testleriyle saptanan en sik tipdir. Herhangi bir norolojik defisit olusturmaz. Soru kokundeki bulgularla seyretmez."
+    }
+   },
+   "cozum": {
+    "metin": "Spinal kord dorsal kok gangliyonlarinin hasarlanmasi ile ataksi, parestezi ve Romberg bulgusu veren parankimatoz nurosifiliz formu **Tabes dorsalis**dir.",
+    "ses": "Spinal kord dorsal kok gangliyonlarinin hasarlanmasi ile ataksi, parestezi ve Romberg bulgusu veren parankimatoz nurosifiliz formu Tabes dorsalisdir."
+   },
+   "sayfa": [
+    14
+   ]
+  },
+  {
+   "ref": "c:55880e6415f8",
+   "tur": "cikmis",
+   "onem_id": "e07-16",
+   "sinav": "2020-2021 Kurul 5",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Döküntü şikayetiyle başvuran 37 yaşında erkek hastada öncelikle yapılması gerekenler arasında hangisi yer almaz?",
+   "secenekler": {
+    "A": "Sifiliz serolojisi istenmesi",
+    "B": "HIV serolojisi istenmesi",
+    "C": "Hepatit serolojisi istenmesi",
+    "D": "Sekonder sifiliz ön tanısıyla kardiyovasküler komplikasyonlar açısından araştırılması",
+    "E": "Hastanın cinsel partnerinin taranması ve tedavi edilmesi"
+   },
+   "dogru": "D",
+   "kok_ses": "Dokuntu sikayetiyle basvuran otuz yedi yasinda erkek hastada oncelikle yapilmasi gerekenler arasinda hangisi yer almaz.",
+   "secenek_ses": {
+    "A": "Sifiliz serolojisi istenmesi",
+    "B": "ha i ve serolojisi istenmesi",
+    "C": "Hepatit serolojisi istenmesi",
+    "D": "Sekonder sifiliz on tanisiyla kardiyovaskuler komplikasyonlar acisindan arastirilmasi",
+    "E": "Hastanin cinsel partnerinin taranmasi ve tedavi edilmesi"
+   },
+   "ipucu": {
+    "metin": "Enfeksiyonun erken donemindeki bir hastada gec donem komplikasyonlari arastirilmaz.",
+    "ses": "Enfeksiyonun erken donemindeki bir hastada gec donem komplikasyonlari arastirilmaz."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Dokuntu ile basvuran hastalarda etiyolojiyi saptamak icin sifiliz serolojisi istenmesi standart yaklasimdir. Taninin kesinlestirilmesinde temel bir incelemedir. Bu nedenle yapilmasi gerekenler arasindadir.",
+     "ses": "Dokuntu ile basvuran hastalarda etiyolojiyi saptamak icin sifiliz serolojisi istenmesi standart yaklasimdir. Taninin kesinlestirilmesinde temel bir incelemedir. Bu nedenle yapilmasi gerekenler arasindadir."
+    },
+    "B": {
+     "metin": "Cinsel yolla bulasan hastaliklar birliktelik gosterebildigi icin ha i ve serolojisi taranmalidir. Eslik eden enfeksiyonlarin dislanmasi acisindan bu tetkik onemlidir. Bu nedenle yapilmasi gereken islemlerdendir.",
+     "ses": "Cinsel yolla bulasan hastaliklar birliktelik gosterebildigi icin ha i ve serolojisi taranmalidir. Eslik eden enfeksiyonlarin dislanmasi acisindan bu tetkik onemlidir. Bu nedenle yapilmasi gereken islemlerdendir."
+    },
+    "C": {
+     "metin": "Benzer bulasma yollarina sahip olan diger etkenleri dislamak adina hepatit serolojisi istenmelidir. Risk faktoru tasiyan hastalarda rutin degerlendirmenin bir parcasidir. Bu yuzden yapilmasi gerekenler arasinda yer alir.",
+     "ses": "Benzer bulasma yollarina sahip olan diger etkenleri dislamak adina hepatit serolojisi istenmelidir. Risk faktoru tasiyan hastalarda rutin degerlendirmenin bir parcasidir. Bu yuzden yapilmasi gerekenler arasinda yer alir."
+    },
+    "D": {
+     "metin": "Kardiyovaskuler sifiliz yillar sonra gelisen tersiyer donem bulgusudur ve bu evrede bulastiricilik yoktur. Dokuntu ile basvuran erken donem hastada bu arastirma yapilmaz. Bu nedenle doğru secenek budur.",
+     "ses": "Kardiyovaskuler sifiliz yillar sonra gelisen tersiyer donem bulgusudur ve bu evrede bulastiricilik yoktur. Dokuntu ile basvuran erken donem hastada bu arastirma yapilmaz. Bu nedenle dogru secenek budur."
+    },
+    "E": {
+     "metin": "Cinsel yolla bulasan enfeksiyonlarda bulasma zincirini kirmak icin partner takibi zorunludur. Hastanin temas ettigi kisilerin taranmasi tedavinin basarisi icin gereklidir. Bu nedenle yapilmasi gereken uygulamalardandir.",
+     "ses": "Cinsel yolla bulasan enfeksiyonlarda bulasma zincirini kirmak icin partner takibi zorunludur. Hastanin temas ettigi kisilerin taranmasi tedavinin basarisi icin gereklidir. Bu nedenle yapilmasi gereken uygulamalardandir."
+    }
+   },
+   "cozum": {
+    "metin": "Dokuntuyle basvuran sekonder sifiliz supheli hastada gec donem tersiyer komplikasyonlar gorulmez ve bu evrede bulastiricilik yoktur.",
+    "ses": "Dokuntuyle basvuran sekonder sifiliz supheli hastada gec donem tersiyer komplikasyonlar gorulmez ve bu evrede bulastiricilik yoktur."
+   },
+   "sayfa": [
+    15
+   ]
+  },
+  {
+   "ref": "c:k1-2019-2020-q017",
+   "tur": "cikmis",
+   "onem_id": "e07-17",
+   "sinav": "2019-2020 Kurul 1",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Sifilis infeksiyonu etkeni için aşağıdakilerden hangisi yanlıştır?",
+   "secenekler": {
+    "A": "Treponema pallidum subsp. pallidum etkendir",
+    "B": "Karanlık alan mikroskobisinde incelenir",
+    "C": "Tanıda treponemal ve nontreponemal testler kullanılmaktadır",
+    "D": "Isıya, kuruluğa ve antiseptiklere duyarlıdır",
+    "E": "Tanı için kültür yapmak gerekir"
+   },
+   "dogru": "E",
+   "kok_ses": "Sifilis infeksiyonu etkeni için aşağıdakilerden hangisi yanlıştır?",
+   "secenek_ses": {
+    "A": "Treponema pallidum subsp pallidum etkendir",
+    "B": "Karanlık alan mikroskobisinde incelenir",
+    "C": "Tanıda treponemal ve nontreponemal testler kullanılmaktadır",
+    "D": "Isıya kuruluğa ve antiseptiklere duyarlıdır",
+    "E": "Tanı için kültür yapmak gerekir"
+   },
+   "ipucu": {
+    "metin": "Etkenin laboratuvar ortamında üretilmesi rutin yöntemlerle mümkün değildir.",
+    "ses": "Etkenin laboratuvar ortamında üretilmesi rutin yöntemlerle mümkün değildir."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Sifilis etkeni **Treponema pallidum** alt türü olan bir spiroket bakteridir. İnsanlarda cinsel yolla bulaşan sistemik bir enfeksiyona yol açar. Bu soruda ifadenin doğru olmasını sağlar.",
+     "ses": "Sifilis etkeni Treponema pallidum alt türü olan bir spiroket bakteridir. İnsanlarda cinsel yolla bulaşan sistemik bir enfeksiyona yol açar. Bu soruda ifadenin doğru olmasını sağlar."
+    },
+    "B": {
+     "metin": "Canlı mikroorganizmaları doğrudan göstermeye yarayan özel bir mikroskopi yöntemidir. Primer ve sekonder lezyonlardaki akıntının incelenmesinde kullanılır. Bu soruda doğru bir inceleme basamağıdır.",
+     "ses": "Canlı mikroorganizmaları doğrudan göstermeye yarayan özel bir mikroskopi yöntemidir. Primer ve sekonder lezyonlardaki akıntının incelenmesinde kullanılır. Bu soruda doğru bir inceleme basamağıdır."
+    },
+    "C": {
+     "metin": "Serolojik tetkikler, antikor varlığını saptamak amacıyla iki farklı grupta uygulanır. Spesifik testler ile doku hasarını gösteren testler tanı sürecinde birlikte kullanılır. Bu soruda ifade doğrudur.",
+     "ses": "Serolojik tetkikler, antikor varlığını saptamak amacıyla iki farklı grupta uygulanır. Spesifik testler ile doku hasarını gösteren testler tanı sürecinde birlikte kullanılır. Bu soruda ifade doğrudur."
+    },
+    "D": {
+     "metin": "Spiroket yapısındaki bu etken çevresel koşullara karşı oldukça hassastır. Fiziksel etkenlerle kolayca inaktive olarak canlılığını yitirir. Bu soruda bakterinin özelliklerini doğru olarak tanımlar.",
+     "ses": "Spiroket yapısındaki bu etken çevresel koşullara karşı oldukça hassastır. Fiziksel etkenlerle kolayca inaktive olarak canlılığını yitirir. Bu soruda bakterinin özelliklerini doğru olarak tanımlar."
+    },
+    "E": {
+     "metin": "Etken standart laboratuvar besiyerlerinde rutin olarak üretilemeyen zorunlu bir patojendir. Tanı aşamasında kültür yerine mikroskopi ve serolojik testler tercih edilir. Bu ifadenin doğru olmadığını gösteren bir yanlıştır.",
+     "ses": "Etken standart laboratuvar besiyerlerinde rutin olarak üretilemeyen zorunlu bir patojendir. Tanı aşamasında kültür yerine mikroskopi ve serolojik testler tercih edilir. Bu ifadenin doğru olmadığını gösteren bir yanlıştır."
+    }
+   },
+   "cozum": {
+    "metin": "**Treponema pallidum** standart besiyerlerinde üretilemediği için tanısında mikroskopi ve seroloji kullanılır.",
+    "ses": "Treponema pallidum standart besiyerlerinde üretilemediği için tanısında mikroskopi ve seroloji kullanılır."
+   },
+   "sayfa": [
+    16
+   ]
+  },
+  {
+   "ref": "o:e07-18:1",
+   "tur": "ornek",
+   "onem_id": "e07-18",
+   "zorluk": "orta",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "Sifiliz şüphesi olan bir hastada kullanılan VDRL testinin pozitifleşmesini sağlayan antikorlar aşağıdaki antijenlerden hangisine karşı oluşur?",
+   "secenekler": {
+    "A": "Bakteriyel kamçı proteini",
+    "B": "Rekombinant TPHA antijeni",
+    "C": "Hücre duvarı peptidoglikanı",
+    "D": "Dış membran lipopolisakkariti",
+    "E": "Kardiyolipin-lesitin-kolesterol"
+   },
+   "dogru": "E",
+   "kok_ses": "Sifiliz şüphesi olan bir hastada kullanılan ve de re le testinin pozitifleşmesini sağlayan antikorlar aşağıdaki antijenlerden hangisine karşı oluşur?",
+   "secenek_ses": {
+    "A": "Bakteriyel kamçı proteini",
+    "B": "Rekombinant te pe ha antijeni",
+    "C": "Hücre duvarı peptidoglikanı",
+    "D": "Dış membran lipopolisakkariti",
+    "E": "Kardiyolipin lesitin kolesterol"
+   },
+   "ipucu": {
+    "metin": "Spesifik olmayan testler bakterinin yapısını değil doku harabiyeti ürünlerini hedef alır.",
+    "ses": "Spesifik olmayan testler bakterinin yapısını değil doku harabiyeti ürünlerini hedef alır."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Bakterilerin hareket etmesini sağlayan ve bağışıklık yanıtı uyandıran yapısal proteinlerdir. Hücrelerin hareket yeteneğini düzenleyen bu moleküller hücresel yapılarda görev alır. Sifiliz tanısında hedeflenen temel bileşenler değildir.",
+     "ses": "Bakterilerin hareket etmesini sağlayan ve bağışıklık yanıtı uyandıran yapısal proteinlerdir. Hücrelerin hareket yeteneğini düzenleyen bu moleküller hücresel yapılarda görev alır. Sifiliz tanısında hedeflenen temel bileşenler değildir."
+    },
+    "B": {
+     "metin": "Spesifik testlerde kullanılan özel antijenik yapılardan elde edilen bileşenlerdir. Yalnızca belirli antikorların saptanmasında görev yaparlar. Bu soruda aranan nontreponemal test etkeni değildir.",
+     "ses": "Spesifik testlerde kullanılan özel antijenik yapılardan elde edilen bileşenlerdir. Yalnızca belirli antikorların saptanmasında görev yaparlar. Bu soruda aranan nontreponemal test etkeni değildir."
+    },
+    "C": {
+     "metin": "Bakteri hücre duvarına dayanıklılık kazandıran temel yapısal polisakkarit kompleksidir. Hücre bütünlüğünü koruyan bu tabaka bakterinin dış etkenlere direncini artırır. Vücutta enfeksiyon sırasında bağışıklık uyarımı yapsa da bu testin hedefi değildir.",
+     "ses": "Bakteri hücre duvarına dayanıklılık kazandıran temel yapısal polisakkarit kompleksidir. Hücre bütünlüğünü koruyan bu tabaka bakterinin dış etkenlere direncini artırır. Vücutta enfeksiyon sırasında bağışıklık uyarımı yapsa da bu testin hedefi değildir."
+    },
+    "D": {
+     "metin": "Gram negatif bakteri dış zarında bulunan ve endotoksik etki gösteren moleküldür. Konakta güçlü enflamatuar yanıt başlatan bu yapı toksik etki oluşturur. Sifiliz etkeni olan spiroketin dış yapısında bu bileşen bulunmaz.",
+     "ses": "Gram negatif bakteri dış zarında bulunan ve endotoksik etki gösteren moleküldür. Konakta güçlü enflamatuar yanıt başlatan bu yapı toksik etki oluşturur. Sifiliz etkeni olan spiroketin dış yapısında bu bileşen bulunmaz."
+    },
+    "E": {
+     "metin": "Doku hasarı sonucu açığa çıkan içsel bileşenler olup nontreponemal testlerin hedefidir. Hücre yıkımı ile serbest kalan bu moleküller bağışıklık yanıtını tetikler. Bu maddelere karşı gelişen antikorlar testin pozitifleşmesini sağlar ve doğru seçenektir.",
+     "ses": "Doku hasarı sonucu açığa çıkan içsel bileşenler olup nontreponemal testlerin hedefidir. Hücre yıkımı ile serbest kalan bu moleküller bağışıklık yanıtını tetikler. Bu maddelere karşı gelişen antikorlar testin pozitifleşmesini sağlar ve doğru seçenektir."
+    }
+   },
+   "cozum": {
+    "metin": "Nontreponemal testler enfeksiyon sırasında doku yıkımıyla ortaya çıkan **kardiyolipin-lesitin-kolesterol** bileşenlerine karşı oluşan antikorları saptar.",
+    "ses": "Nontreponemal testler enfeksiyon sırasında doku yıkımıyla ortaya çıkan kardiyolipin lesitin kolesterol bileşenlerine karşı oluşan antikorları saptar."
+   },
+   "sayfa": [
+    17
+   ]
+  },
+  {
+   "ref": "c:past-1790877460395-121656",
+   "tur": "cikmis",
+   "onem_id": "e07-18",
+   "sinav": "Yılı belirsiz",
+   "kontrol": {
+    "durum": "tamam"
+   },
+   "soru": "VDRL (Venereal Disease Research Laboratory) testi hangi hastalıkta tarama testi olarak kullanılır?",
+   "secenekler": {
+    "A": "Bruselloz",
+    "B": "Sifiliz",
+    "C": "Gonore",
+    "D": "Lyme hastalığı",
+    "E": "Tifo"
+   },
+   "dogru": "B",
+   "kok_ses": "V de re le testi hangi hastalıkta tarama testi olarak kullanılır?",
+   "secenek_ses": {
+    "A": "Bruselloz",
+    "B": "Sifiliz",
+    "C": "Gonore",
+    "D": "Lyme hastalığı",
+    "E": "Tifo"
+   },
+   "ipucu": {
+    "metin": "Bu test spiroket enfeksiyonunda doku harabiyetini gösteren serolojik bir yöntemdir.",
+    "ses": "Bu test spiroket enfeksiyonunda doku harabiyetini gösteren serolojik bir yöntemdir."
+   },
+   "siklar": {
+    "A": {
+     "metin": "Zoonotik karakterli ve genellikle süt ürünleriyle bulaşan sistemik bir enfeksiyondur. Vücutta uzun süren ateş ve eklem ağrılarına yol açarak seyreder. Tanısında aglütinasyon testleri ve kan kültürü tercih edilir.",
+     "ses": "Zoonotik karakterli ve genellikle süt ürünleriyle bulaşan sistemik bir enfeksiyondur. Vücutta uzun süren ateş ve eklem ağrılarına yol açarak seyreder. Tanısında aglütinasyon testleri ve kan kültürü tercih edilir."
+    },
+    "B": {
+     "metin": "**Treponema pallidum** etkeniyle gelişen ve sistemik bulgular veren bir enfeksiyondur. Vücutta farklı evrelerle ilerleyen bu tablo kronikleşebilir. Belirtilen tarama testi bu hastalığın tanısında ve tedavi takibinde kullanılır ve doğru seçenektir.",
+     "ses": "Treponema pallidum etkeniyle gelişen ve sistemik bulgular veren bir enfeksiyondur. Vücutta farklı evrelerle ilerleyen bu tablo kronikleşebilir. Belirtilen tarama testi bu hastalığın tanısında ve tedavi takibinde kullanılır ve doğru seçenektir."
+    },
+    "C": {
+     "metin": "Nayseriya gonore bakterisinin yol açtığı cinsel yolla bulaşan bir enfeksiyondur. Mukozal yüzeylerde iltihabi akıntı ve ağrıya neden olan klinik tablolar oluşturur. Tanısında genellikle doğrudan yayma ve moleküler testler ön plandadır.",
+     "ses": "Nayseriya gonore bakterisinin yol açtığı cinsel yolla bulaşan bir enfeksiyondur. Mukozal yüzeylerde iltihabi akıntı ve ağrıya neden olan klinik tablolar oluşturur. Tanısında genellikle doğrudan yayma ve moleküler testler ön plandadır."
+    },
+    "D": {
+     "metin": "Kene ısırığıyla bulaşan ve eklem ile sinir sistemini etkileyen bir spiroket hastalığıdır. Vücutta karakteristik deri döküntüleri ve nörolojik belirtilerle kendini gösterir. Tanısında spesifik antikorları saptayan farklı serolojik yöntemler uygulanır.",
+     "ses": "Kene ısırığıyla bulaşan ve eklem ile sinir sistemini etkileyen bir spiroket hastalığıdır. Vücutta karakteristik deri döküntüleri ve nörolojik belirtilerle kendini gösterir. Tanısında spesifik antikorları saptayan farklı serolojik yöntemler uygulanır."
+    },
+    "E": {
+     "metin": "Salmonella enterika serotip Typhi bakterisinin neden olduğu ateşli bir tablodur. Sindirim sistemi yoluyla bulaşan bu hastalık sistemik enfeksiyon oluşturur. Tanısında bakteri izolasyonu ve serolojik Widal testi kullanılır.",
+     "ses": "Salmonella enterika serotip Typhi bakterisinin neden olduğu ateşli bir tablodur. Sindirim sistemi yoluyla bulaşan bu hastalık sistemik enfeksiyon oluşturur. Tanısında bakteri izolasyonu ve serolojik Vidal testi kullanılır."
+    }
+   },
+   "cozum": {
+    "metin": "V de re le testi spiroket kökenli **sifiliz** hastalığının taramasında ve tedavi takibinde kullanılan temel nontreponemal testtir.",
+    "ses": "V de re le testi spiroket kökenli sifiliz hastalığının taramasında ve tedavi takibinde kullanılan temel nontreponemal testtir."
+   },
+   "sayfa": [
+    17
+   ]
+  }
+ ],
+ "_kaynak": {
+  "yontem": "gorev"
+ }
+}

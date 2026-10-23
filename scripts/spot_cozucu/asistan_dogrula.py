@@ -3,6 +3,8 @@ Kullanım: python3 asistan_dogrula.py meds_temp/spot_cozucu/<brans>/asistan/cikt
 Plan: aynı klasörün ../plan/<kod>.json; PDF metni: ../../pdf_metin/<kod>.md.
 """
 import json, os, re, sys
+# cümle sınırı: "8-10. haftalar" gibi sıra sayısı noktası cümle sonu sayılmaz (2026-10-24, H36)
+CUMLE_SINIRI = re.compile(r'(?<=[.!?])(?<!\d\.)\s+|(?<=\d\.)\s+(?=[A-ZÇĞİÖŞÜ])')
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 from turkce_uslup import denetle as uslup_denetle  # noqa: E402  (meds/docs/TURKCE_USLUP_STANDARDI.md)
 from sik_aciklama import denetle as sik_denetle  # noqa: E402  (meds/docs/SIK_ACIKLAMA_STANDARDI.md)
@@ -29,19 +31,19 @@ def cift(e, yer, x, enaz, encok):
     e.extend(uslup_denetle(m, yer))
     if s.count('|') > 4: e.append(f'{yer}: durak işareti çok')
     if not enaz <= kelime(s) <= encok: e.append(f'{yer}: ses {kelime(s)} kelime ({enaz}–{encok})')
-    for cm in re.split(r'(?<=[.!?])\s+', sd):
+    for cm in re.split(CUMLE_SINIRI, sd):
         if kelime(cm) > 28: e.append(f'{yer}: ses cümlesi {kelime(cm)} kelime (en çok 25; böl)'); break
     r = kelime(s) / max(1, kelime(m.replace('**', '')))
     if not 0.6 <= r <= 2.6: e.append(f'{yer}: metin ile ses uzunluğu uyumsuz (oran {r:.2f})')
 
 
-te = tu = 0
-for p in sys.argv[1:]:
+def check(p):
+    """Bir asistan çıktısının (e, u) hata/uyarı listeleri — CLI ile birebir aynı kurallar."""
     e, u = [], []
     o = json.load(open(p)); kod = o.get('kod')
     W = os.path.dirname(os.path.dirname(os.path.abspath(p)))
     pp = f'{W}/plan/{kod}.json'
-    if not os.path.exists(pp): print('HATA', p, 'plan yok'); te += 1; continue
+    if not os.path.exists(pp): return ['plan yok'], [], kod
     plan = json.load(open(pp))
     pdf = open(f'{W}/../pdf_metin/{kod}.md', encoding='utf-8').read()
     pdf_sayilar = set(re.findall(r'\d+(?:[.,]\d+)?', pdf)); plan_metin = json.dumps(plan, ensure_ascii=False)
@@ -107,7 +109,16 @@ for p in sys.argv[1:]:
     if sorted(gorulen_s) != sorted(PS): e.append(f'soru eksik/fazla: eksik {sorted(set(PS) - set(gorulen_s))[:6]} fazla {sorted(set(gorulen_s) - set(PS))[:6]}')
     if len(gorulen_s) != len(set(gorulen_s)): e.append('soru tekrar')
     if dikkat > 5: u.append(f'"Dikkat" {dikkat} kez (en çok 5)')
-    for x in e: print('HATA', kod, x)
-    for x in u: print('UYARI', kod, x)
-    te += len(e); tu += len(u)
-print(te, 'HATA', tu, 'UYARI'); sys.exit(1 if te else 0)
+    return e, u, kod
+
+
+if __name__ == '__main__':
+    te = tu = 0
+    for p in sys.argv[1:]:
+        e, u, kod = check(p)
+        if e == ['plan yok']:
+            print('HATA', p, 'plan yok'); te += 1; continue
+        for x in e: print('HATA', kod, x)
+        for x in u: print('UYARI', kod, x)
+        te += len(e); tu += len(u)
+    print(te, 'HATA', tu, 'UYARI'); sys.exit(1 if te else 0)

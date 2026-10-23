@@ -120,13 +120,24 @@ def ema_alt_surec_okunusu():
         return [f"ema_isci yüklenemedi: {e}"]
 
 
+def claude_cli():
+    """Gece hattının LLM aşamaları `claude -p` ile çalışır. 2026-10-23'te masaüstü uygulaması CLI'ı başka klasöre taşıdı,
+    ~/.local/bin/claude sarmalayıcısı bulamadı ve her Claude aşaması sessizce düştü → sürüm sorgusu sağlık maddesi."""
+    import subprocess
+    try:
+        r = subprocess.run(["claude", "--version"], capture_output=True, text=True, timeout=60)
+        return r.returncode == 0 and "Claude Code" in r.stdout
+    except Exception:  # noqa: BLE001
+        return False
+
+
 def main():
     s = {
         "zaman": time.strftime("%Y-%m-%dT%H:%M:%S"),
         "canli_api": http("https://api.nofrostlife.com.tr/api/health"),
         "oracle_ssh": ssh_ok(),
         "yerel_3000": http("http://127.0.0.1:3000/api/health"),
-        "embed_bge": birim("meds-embed-bge"), "ema_isci": birim("meds-ema"),
+        "embed_bge": birim("meds-embed-bge"), "ema_isci": birim("meds-ema"), "claude_cli": claude_cli(),
         "disk_bos_gb": round(shutil.disk_usage(str(KOK)).free / 1e9, 1),
     }
     s["oracle_ok"] = s["canli_api"] == 200 and s["oracle_ssh"]
@@ -135,7 +146,8 @@ def main():
     s["turev_eksik"] = turev_eksikleri() if s["canli_api"] == 200 else {"hata": "canlı API yok"}
     sorun = [k for k, ok in [("canli_api", s["canli_api"] == 200), ("oracle_ssh", s["oracle_ssh"]),
                              ("yerel_3000", s["yerel_3000"] == 200), ("embed_bge", s["embed_bge"] == "active"),
-                             ("ema_isci", s["ema_isci"] == "active"), ("disk", s["disk_bos_gb"] >= 10),
+                             ("ema_isci", s["ema_isci"] == "active"), ("claude_cli", s["claude_cli"]),
+                             ("disk", s["disk_bos_gb"] >= 10),
                              ("kapi_ariza", not s["kapi_ariza"]), ("kayit_defteri", not s["kayit_defteri"]),
                              ("turev_eksik_k2", not (s["turev_eksik"].get("k2") or []))] if not ok]  # K1 eksikleri yalnız rapor
     s["sorun"] = sorun

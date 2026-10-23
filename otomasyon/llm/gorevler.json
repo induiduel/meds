@@ -1,0 +1,293 @@
+{
+ "surum": 1,
+ "aciklama": "Görev defteri (ICERIK_MOTORU_V3.md §14). Her kayıt: gorevler/<id>.py modülü (hazirla/derle/dogrula/tersine/ozet/uygula, isteğe bağlı betik). katmanlar: A ajan CLI'leri (sıra = etkin profil, butce.json profiller; 2026-10-24 varsayılan), B betik (modülde betik() varsa her zaman önce), Ü ücretsiz bulut (yazar_aileleri sırasıyla), C Claude (bütçeli). deneme: katman başına düzeltme turu. denetim_zorunlu: uygula öncesi 'denetim' görevi 'gecer' olmalı. denetim_engelleyen: bu türde bulgusu olan iş uygulanamaz (diğer türler kayıtta görünür, engel değildir).",
+ "gorevler": [
+  {
+   "id": "parca_sorusu",
+   "hedef": "bölüm kimliği kN-NN-bNN",
+   "katmanlar": [
+    "A"
+   ],
+   "yazar_aileleri": [
+    "gemini",
+    "groq",
+    "openrouter"
+   ],
+   "deneme": {
+    "Ü": 2,
+    "C": 1,
+    "A": 3
+   },
+   "cikti": "json",
+   "max_cikti": 8000,
+   "sicaklik": 0.3,
+   "zaman_asimi_sn": 240,
+   "girdi_sinir_kelime": 6000,
+   "risk": "orta",
+   "denetim_zorunlu": true,
+   "kapi": "_ortak.soru_denetle (şık açıklama standardı, Türkçe üslup, kök sızıntısı, sözcüksel kanıt) + adet + kanıt aynı derste",
+   "mod": "aktif",
+   "denetim_engelleyen": [
+    "tibbi_hata",
+    "kaynak_disi",
+    "celiski",
+    "cevap_hatali",
+    "belirsiz_soru"
+   ]
+  },
+  {
+   "id": "sik_aciklama",
+   "hedef": "örnek soru kimliği kN-NN-…-kNN-qNN",
+   "katmanlar": [
+    "A"
+   ],
+   "yazar_aileleri": [
+    "gemini",
+    "groq",
+    "openrouter"
+   ],
+   "deneme": {
+    "Ü": 2,
+    "C": 1,
+    "A": 3
+   },
+   "cikti": "json",
+   "max_cikti": 3000,
+   "sicaklik": 0.2,
+   "zaman_asimi_sn": 180,
+   "girdi_sinir_kelime": 4000,
+   "risk": "dusuk",
+   "denetim_zorunlu": false,
+   "kapi": "sik_aciklama.denetle (20–65 kelime, 2–4 cümle) + önek Doğru./Yanlış. + Türkçe üslup + sayfa dayanağı",
+   "mod": "aktif",
+   "denetim_engelleyen": [
+    "tibbi_hata",
+    "celiski",
+    "cevap_hatali"
+   ]
+  },
+  {
+   "id": "denetim",
+   "hedef": "denetlenecek işin is_id'si",
+   "katmanlar": [
+    "A"
+   ],
+   "yazar_aileleri": [
+    "groq",
+    "gemini",
+    "openrouter"
+   ],
+   "deneme": {
+    "Ü": 1,
+    "C": 1,
+    "A": 1
+   },
+   "cikti": "json",
+   "max_cikti": 3000,
+   "sicaklik": 0.1,
+   "zaman_asimi_sn": 240,
+   "girdi_sinir_kelime": 9000,
+   "risk": "orta",
+   "denetim_zorunlu": false,
+   "kapi": "karar/bulgu tutarlılığı, bulgu türü; yazarın model ailesi hariç",
+   "mod": "aktif"
+  },
+  {
+   "id": "kanit_bagla",
+   "hedef": "<ders>/parti/<n> (6'lık parti) ya da <ders>/<soru_id>",
+   "katmanlar": [
+    "A"
+   ],
+   "yazar_aileleri": [
+    "groq",
+    "gemini",
+    "openrouter"
+   ],
+   "deneme": {
+    "Ü": 2,
+    "C": 1,
+    "A": 3
+   },
+   "cikti": "json",
+   "max_cikti": 2500,
+   "sicaklik": 0.0,
+   "zaman_asimi_sn": 180,
+   "girdi_sinir_kelime": 7000,
+   "risk": "dusuk",
+   "denetim_zorunlu": false,
+   "mod": "aktif",
+   "kapi": "etiket o sorunun adayı; seçilen birimde doğru cevabın kökü/sayısı (olumsuzda ≥2 çeldirici); çeldirici birimi şıkkı içerir"
+  },
+  {
+   "id": "som_sec",
+   "hedef": "sayfa kimliği kN-NN-pNN + --ayar sorgu=\"…\"",
+   "katmanlar": [
+    "A"
+   ],
+   "yazar_aileleri": [
+    "gemini"
+   ],
+   "deneme": {
+    "A": 1
+   },
+   "cikti": "json",
+   "max_cikti": 200,
+   "sicaklik": 0.0,
+   "zaman_asimi_sn": 120,
+   "girdi_sinir_kelime": 1500,
+   "gorsel": true,
+   "risk": "dusuk",
+   "denetim_zorunlu": false,
+   "mod": "kapali",
+   "kapi": "numara SoM eşlemesinde; etiketi sorguyla örtüşen bölge varken başkası seçilemez"
+  },
+  {
+   "id": "onem_listesi",
+   "hedef": "<brans>:<kod>/parca/<n> (--ayar w=<çalışma klasörü> sınamada)",
+   "katmanlar": [
+    "A"
+   ],
+   "yazar_aileleri": [
+    "gemini",
+    "groq",
+    "openrouter"
+   ],
+   "deneme": {
+    "Ü": 3,
+    "C": 1,
+    "A": 3
+   },
+   "cikti": "json",
+   "max_cikti": 16000,
+   "sicaklik": 0.3,
+   "zaman_asimi_sn": 420,
+   "girdi_sinir_kelime": 9000,
+   "risk": "orta",
+   "denetim_zorunlu": false,
+   "mod": "golge",
+   "zincir_adimi": "onem",
+   "kapi": "resmî onem_dogrula.py (parçaya uygulanır) + parça hedefleri; ders düzeyi kurallar spot_birlestir.py onem",
+   "denetim_engelleyen": [
+    "tibbi_hata",
+    "kaynak_disi",
+    "celiski",
+    "cevap_hatali",
+    "belirsiz_soru"
+   ]
+  },
+  {
+   "id": "cozucu_sorusu",
+   "hedef": "<brans>:<kod>/parti/<n> (4'lük; --ayar w=<çalışma klasörü> sınamada)",
+   "katmanlar": [
+    "A"
+   ],
+   "yazar_aileleri": [
+    "gemini",
+    "groq",
+    "openrouter"
+   ],
+   "deneme": {
+    "Ü": 3,
+    "C": 1,
+    "A": 3
+   },
+   "cikti": "json",
+   "max_cikti": 12000,
+   "sicaklik": 0.3,
+   "zaman_asimi_sn": 420,
+   "girdi_sinir_kelime": 7000,
+   "risk": "orta",
+   "denetim_zorunlu": false,
+   "mod": "golge",
+   "zincir_adimi": "cozucu",
+   "kapi": "resmî cozucu_dogrula.py (partiye) — ses yazımı, ipucu sızıntısı, şık açıklama standardı, üslup; kısmi kabul",
+   "denetim_engelleyen": [
+    "tibbi_hata",
+    "celiski",
+    "cevap_hatali",
+    "belirsiz_soru"
+   ]
+  },
+  {
+   "id": "asistan_iskelet",
+   "hedef": "<brans>:<kod>/iskelet/0",
+   "katmanlar": [
+    "A"
+   ],
+   "yazar_aileleri": [
+    "gemini",
+    "groq",
+    "openrouter"
+   ],
+   "deneme": {
+    "Ü": 3,
+    "C": 1,
+    "A": 3
+   },
+   "cikti": "json",
+   "max_cikti": 5000,
+   "sicaklik": 0.3,
+   "zaman_asimi_sn": 300,
+   "girdi_sinir_kelime": 7000,
+   "risk": "orta",
+   "denetim_zorunlu": false,
+   "mod": "golge",
+   "zincir_adimi": "asistan",
+   "kapi": "zorunlu noktalar tam bir kez, 3–8 bölüm, taşıma yalnız ileri, giriş/kapanış/neden asistan_dogrula.cift"
+  },
+  {
+   "id": "asistan_nokta",
+   "hedef": "<brans>:<kod>/nokta/0 (≤3 nokta, ≤4 soru)",
+   "katmanlar": [
+    "A"
+   ],
+   "yazar_aileleri": [
+    "gemini",
+    "groq",
+    "openrouter"
+   ],
+   "deneme": {
+    "Ü": 3,
+    "C": 1,
+    "A": 3
+   },
+   "cikti": "json",
+   "max_cikti": 14000,
+   "sicaklik": 0.3,
+   "zaman_asimi_sn": 420,
+   "girdi_sinir_kelime": 7000,
+   "risk": "orta",
+   "denetim_zorunlu": false,
+   "mod": "golge",
+   "zincir_adimi": "asistan",
+   "kapi": "resmî asistan_dogrula.check (partinin noktaları), kısmi kabul nokta düzeyinde"
+  },
+  {
+   "id": "sesli_bolum",
+   "hedef": "<ad>/bolum/<n> + --ayar w=<ders işçisi taslak klasörü>",
+   "katmanlar": [
+    "A"
+   ],
+   "yazar_aileleri": [
+    "gemini",
+    "groq",
+    "openrouter"
+   ],
+   "deneme": {
+    "Ü": 3,
+    "C": 1,
+    "A": 3
+   },
+   "cikti": "json",
+   "max_cikti": 16000,
+   "sicaklik": 0.3,
+   "zaman_asimi_sn": 480,
+   "girdi_sinir_kelime": 9000,
+   "risk": "orta",
+   "denetim_zorunlu": false,
+   "mod": "golge",
+   "zincir_adimi": "ders_isci_sesli",
+   "kapi": "konusma_v2.dogrula (bölüm) + metin_denetle (dolgu/telaffuz) + çıkmış 'Burası önemli' + sıfır kayıp (sayı+birim ekranda)"
+  }
+ ]
+}

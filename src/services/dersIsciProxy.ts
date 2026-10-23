@@ -7,9 +7,9 @@ import express from 'express';
 
 const ISCI_URL = (process.env.MEDS_ISCI_URL || 'http://meds-ders-isci:8095').replace(/\/$/, '');
 const ID = '[0-9]{8}-[0-9a-f]{10}(?:-\\d+)?';
-const IZINLI_GET = new RegExp(`^/(saglik|taslaklar|checklist|kuyruk|zamanlama|olaylar|ayarlar|taslak/${ID}(?:/dosya/[a-z_]+\\.(?:json|jsonl|md))?)$`);
-// Yazan uçlar: karar, yeniden gönder, eşiği yok say, kuyruk eylemleri, ayarlar, Drive taraması, elle kuyruğa alma
-const IZINLI_POST = new RegExp(`^/(taslak/${ID}/(?:karar|yeniden|esik-atla)|kuyruk/${ID}/(?:simdi|one-al|sona-at|kaldir|yeniden-dene)|ayarlar|tara|pdf/kuyruga)$`);
+const IZINLI_GET = new RegExp(`^/(saglik|taslaklar|checklist|kuyruk|onay|zamanlama|olaylar|ayarlar|taslak/${ID}(?:/dosya/[a-z_]+\\.(?:json|jsonl|md))?)$`);
+// Yazan uçlar: karar, yeniden gönder, eşiği yok say, kuyruk eylemleri (onay kapısı dahil), ayarlar, Drive taraması, elle kuyruğa alma
+const IZINLI_POST = new RegExp(`^/(taslak/${ID}/(?:karar|yeniden|esik-atla)|kuyruk/${ID}/(?:simdi|one-al|sona-at|kaldir|yeniden-dene|onayla|onay-atla)|ayarlar|tara|pdf/kuyruga)$`);
 
 export function dersIsciRouter(): express.Router {
   const r = express.Router();

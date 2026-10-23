@@ -1,5 +1,7 @@
 """Soru çözücü çıktısı doğrulayıcı: python3 dogrula.py cikti/<kod>.json [...] → HATA/UYARI (HATA varsa çıkış 1)."""
 import json, os, re, sys
+# cümle sınırı: "8-10. haftalar" gibi sıra sayısı noktası cümle sonu sayılmaz (2026-10-24, H36)
+CUMLE_SINIRI = re.compile(r'(?<=[.!?])(?<!\d\.)\s+|(?<=\d\.)\s+(?=[A-ZÇĞİÖŞÜ])')
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 from turkce_uslup import denetle as uslup_denetle  # noqa: E402  (meds/docs/TURKCE_USLUP_STANDARDI.md)
 from sik_aciklama import denetle as sik_denetle  # noqa: E402  (meds/docs/SIK_ACIKLAMA_STANDARDI.md)
@@ -26,7 +28,7 @@ def ses_denet(e, yer, s):
     if re.search(r'\b(denea|renea|atepe|hapeve|anka)\b', s, re.I): e.append(f'{yer}: kısaltma kelime gibi yazılmış (harf harf, boşlukla)')
     tek = [m.group(1) for m in re.finditer(r'(?<![.!?]\s)(?<!^)\b([A-ZÇĞİÖŞÜ])\b(?![\'’])', s.strip())]
     if tek: e.append(f'{yer}: seste cümle ortasında tek büyük harf {tek[:3]} (okunuşla yaz)')
-    for cm in re.split(r'(?<=[.!?])\s+', t):
+    for cm in re.split(CUMLE_SINIRI, t):
         if kelime(cm) > 27: e.append(f'{yer}: ses cümlesi {kelime(cm)} kelime (en çok 25)'); break
     if s.count('|') > 2: e.append(f'{yer}: durak işareti çok')
 
@@ -45,7 +47,7 @@ def cift(e, yer, x, enaz, encok, cumle=2):
     e.extend(uslup_denetle(m, yer))
     if not enaz <= kelime(s) <= encok: e.append(f'{yer}: ses {kelime(s)} kelime ({enaz}–{encok})')
     if not enaz - 2 <= kelime(m.replace('**', '')) <= encok + 4: e.append(f'{yer}: metin {kelime(m)} kelime ({enaz}–{encok})')
-    nc = len([c for c in re.split(r'(?<=[.!?])\s+', m) if c.strip()])
+    nc = len([c for c in re.split(CUMLE_SINIRI, m) if c.strip()])
     if nc > cumle: e.append(f'{yer}: {nc} cümle (en çok {cumle})')
     r = kelime(s) / max(1, kelime(m.replace('**', '')))
     if not 0.7 <= r <= 2.4: e.append(f'{yer}: metin–ses uzunluk oranı {r:.2f} (aynı içerik olmalı)')

@@ -9,6 +9,9 @@ yönetici yetkisiyle buraya vekil olur.
   POST /taslak/<is_id>/karar           ← {"karar": "onayla"|"reddet"|"duzelt", "not": "...", "kim": "..."}
   GET  /checklist                      → checklist.json (2026-27 durum raporu verisi)
   GET  /kuyruk                         → kuyruk.json özeti (sonra/basladi dahil)
+  GET  /onay                           → onay bekleyen PDF'ler + yüklenmiş ekler (onay kapısı, 2026-10-24)
+  POST /kuyruk/<is_id>/onayla          ← {"mod": "ekli"|"yalniz_pdf", "kim"}  onay bekleyen PDF'i kuyruğa al
+  POST /kuyruk/<is_id>/onay-atla       ← {"kim"}  onay bekleyen PDF'i işlemeden geç
   GET  /zamanlama                      → işçi zamanlaması + bekleyen işlerin tahmini başlama saatleri (plan)
   POST /kuyruk/<is_id>/yeniden-uret    ← {"hemen": bool, "kim": "..."}  Hat panosu "Baştan üret": aynı PDF'i yeniden
                                           okuyup paketi baştan üretir (ayrıntı: _yeniden_uret)
@@ -22,8 +25,8 @@ import threading
 import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
-from ayarlar import (AYAR_TANIM, EFORLAR, KAYIT, KUYRUK, KUYRUK_KILIT, MODELLER, STATE, TASLAK, ayar, ayar_kaydet,
-                     log, oku, yaz)
+from ayarlar import (AYAR_TANIM, EFORLAR, EK_DIZIN, KAYIT, KUYRUK, KUYRUK_KILIT, MODELLER, STATE, TASLAK, ayar,
+                     ayar_kaydet, log, oku, yaz)
 
 DOSYALAR = {"deck.json", "ornek_sorular.json", "sozluk.json", "hastaliklar.json", "bilgi_havuzu.jsonl",
             "cikmis_baglantilari.json", "ders_notu.md", "ders_paketi.json", "rapor.md", "denetim.json", "konusma_metni.md"}
@@ -188,6 +191,8 @@ class H(BaseHTTPRequestHandler):
             return self._json(200, sorted(liste, key=lambda x: x.get("zaman") or 0, reverse=True))
         if yol == "/checklist":
             return self._json(200, oku(STATE / "checklist.json", {}))
+        if yol == "/onay":
+            return self._json(200, onay_listesi())
         if yol == "/kuyruk":
             return self._json(200, [{k: j.get(k) for k in ("is_id", "yol", "durum", "eklendi", "deneme", "son_mesaj",
                                                                  "sonra", "basladi", "uyari")}
@@ -219,6 +224,13 @@ class H(BaseHTTPRequestHandler):
 
     def do_POST(self):  # noqa: N802
         yol = self.path.split("?")[0].rstrip("/")
+        o = re.match(r"^/kuyruk/([0-9]{8}-[0-9a-f]{10}(?:-\d+)?)/(onayla|onay-atla)$", yol)
+        if o:
+            try:
+                body = json.loads(self.rfile.read(min(int(self.headers.get("Content-Length") or 0), 20000)) or b"{}")
+            except Exception:  # noqa: BLE001
+                return self._json(400, {"hata": "geçersiz JSON"})
+            return self._onay(o.group(1), o.group(2), str(body.get("mod") or ""), str(body.get("kim") or "")[:200])
         h = re.match(r"^/kuyruk/([0-9]{8}-[0-9a-f]{10}(?:-\d+)?)/(simdi|one-al|sona-at|kaldir|yeniden-dene)$", yol)
         if h:
             return self._simdi(h.group(1)) if h.group(2) == "simdi" else self._kuyruk_eylem(h.group(1), h.group(2))
@@ -278,6 +290,33 @@ class H(BaseHTTPRequestHandler):
         log(f"karar: {d.name} → {karar}" + (f" ({k['not'][:80]})" if k["not"] else ""))
         return self._json(200, {"ok": True, "karar": k})
 
+
+    def _onay(self, is_id: str, eylem: str, mod: str, kim: str):
+        """Onay kapısı (2026-10-24): onay bekleyen PDF → "ekli" (yönetici notu/ses yükledi) ya da "yalniz_pdf" ile kuyruğa
+        (bekliyor; normal sıra kuralları), "onay-atla" ile atlandı (kayıtta; yeniden taramada kuyruğa girmez)."""
+        with KUYRUK_KILIT:
+            kuyruk = oku(KUYRUK, [])
+            j = next((k for k in kuyruk if k["is_id"] == is_id), None)
+            if not j:
+                return self._json(404, {"hata": "kuyrukta yok"})
+            if j["durum"] != "onay_bekliyor":
+                return self._json(409, {"hata": f"iş onay beklemiyor ({j['durum']})"})
+            if eylem == "onay-atla":
+                kuyruk.remove(j)
+                kayit = oku(KAYIT, {})
+                kayit[j["sha256"]] = {"durum": "atlandi", "yol": j["yol"], "zaman": time.time(), "kim": kim, "neden": "yönetici onay ekranı"}
+                yaz(KAYIT, kayit); yaz(KUYRUK, kuyruk)
+                log(f"onay: atlandı {is_id} ({kim})")
+                return self._json(200, {"ok": True})
+            if mod not in ("ekli", "yalniz_pdf"):
+                return self._json(400, {"hata": "mod ekli|yalniz_pdf olmalı"})
+            ekler = ek_listesi(is_id) if mod == "ekli" else {"not": [], "ses": []}
+            if mod == "ekli" and not (ekler["not"] or ekler["ses"]):
+                return self._json(409, {"hata": "yüklenmiş not ya da ses yok — önce yükleyin ya da yalnız PDF ile başlatın"})
+            j.update(durum="bekliyor", onay={"mod": mod, "kim": kim, "zaman": time.time()}, ekler=ekler)
+            yaz(KUYRUK, kuyruk)
+        log(f"onay: {is_id} → {mod} ({kim}; not {len(ekler['not'])}, ses {len(ekler['ses'])})")
+        return self._json(200, {"ok": True, "ekler": ekler})
 
     def _simdi(self, is_id: str):
         """Programlanmış dersi hemen işle (panel "Hemen işle"): duraklat, saat penceresi, günlük sınır ve ders arası
@@ -440,3 +479,20 @@ def baslat(port: int = 8095):
     threading.Thread(target=srv.serve_forever, daemon=True, name="isci-api").start()
     log(f"iç API dinliyor: :{port}")
     return srv
+
+
+def ek_listesi(is_id: str) -> dict:
+    """Site sunucusunun yazdığı ekler: EK_DIZIN/<is_id>/{not,ses}/<dosya> → {not: [{ad, yol, boyut}], ses: [...]}."""
+    out = {"not": [], "ses": []}
+    for tur in out:
+        d = EK_DIZIN / is_id / tur
+        if d.is_dir():
+            out[tur] = [{"ad": f.name, "yol": str(f), "boyut": f.stat().st_size} for f in sorted(d.iterdir()) if f.is_file()]
+    return out
+
+
+def onay_listesi() -> list[dict]:
+    """Onay bekleyen PDF'ler (panel onay kartı): kimlik, dosya, konular, eklenme zamanı, yüklenmiş ekler."""
+    return [{"is_id": j["is_id"], "yol": j["yol"], "ad": j["yol"].split("/")[-1], "konular": j.get("konular") or [],
+             "eklendi": j.get("eklendi"), "uyari": j.get("uyari") or "", "ekler": ek_listesi(j["is_id"])}
+            for j in oku(KUYRUK, []) if j.get("durum") == "onay_bekliyor"]

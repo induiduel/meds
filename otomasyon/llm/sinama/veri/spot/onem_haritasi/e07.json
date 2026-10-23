@@ -1,0 +1,548 @@
+{
+ "surum": 1,
+ "kod": "e07",
+ "cikmis_sayisi": 17,
+ "sayfalar": [
+  {
+   "sayfa": 2,
+   "puan": 0,
+   "cikmis": [],
+   "vurgu": false
+  },
+  {
+   "sayfa": 3,
+   "puan": 26,
+   "cikmis": [
+    {
+     "id": "k1-2019-2020-q017",
+     "benzerlik": 0.647,
+     "kez": 1,
+     "yillar": [
+      "2019-2020"
+     ]
+    },
+    {
+     "id": "84eda84539cb",
+     "benzerlik": 0.599,
+     "kez": 1,
+     "yillar": [
+      "2023-2024"
+     ]
+    }
+   ],
+   "vurgu": false
+  },
+  {
+   "sayfa": 4,
+   "puan": 0,
+   "cikmis": [],
+   "vurgu": false
+  },
+  {
+   "sayfa": 5,
+   "puan": 31,
+   "cikmis": [
+    {
+     "id": "k1-2023-2024-q009",
+     "benzerlik": 0.563,
+     "kez": 2,
+     "yillar": [
+      "2019-2020",
+      "2023-2024"
+     ]
+    }
+   ],
+   "vurgu": false
+  },
+  {
+   "sayfa": 6,
+   "puan": 0,
+   "cikmis": [],
+   "vurgu": false
+  },
+  {
+   "sayfa": 7,
+   "puan": 37,
+   "cikmis": [
+    {
+     "id": "k1-2019-2020-q017",
+     "benzerlik": 0.621,
+     "kez": 1,
+     "yillar": [
+      "2019-2020"
+     ]
+    },
+    {
+     "id": "k1-2024-2025-q005",
+     "benzerlik": 0.596,
+     "kez": 1,
+     "yillar": [
+      "2024-2025"
+     ]
+    },
+    {
+     "id": "k1-2020-2021-b-q025",
+     "benzerlik": 0.581,
+     "kez": 1,
+     "yillar": [
+      "2020-2021"
+     ]
+    }
+   ],
+   "vurgu": false
+  },
+  {
+   "sayfa": 8,
+   "puan": 100,
+   "cikmis": [
+    {
+     "id": "k1-2025-2026-q021",
+     "benzerlik": 0.728,
+     "kez": 1,
+     "yillar": [
+      "2025-2026"
+     ]
+    },
+    {
+     "id": "k1-2021-2022-q020",
+     "benzerlik": 0.663,
+     "kez": 1,
+     "yillar": [
+      "2021-2022"
+     ]
+    },
+    {
+     "id": "k1-2019-2020-q067",
+     "benzerlik": 0.64,
+     "kez": 1,
+     "yillar": [
+      "2019-2020"
+     ]
+    },
+    {
+     "id": "k1-2021-2022-q013",
+     "benzerlik": 0.591,
+     "kez": 2,
+     "yillar": [
+      "2020-2021",
+      "2021-2022"
+     ]
+    },
+    {
+     "id": "k1-2024-2025-q005",
+     "benzerlik": 0.571,
+     "kez": 1,
+     "yillar": [
+      "2024-2025"
+     ]
+    },
+    {
+     "id": "past-1790877041564-499994",
+     "benzerlik": 0.563,
+     "kez": 1,
+     "yillar": [
+      "2020-2021"
+     ]
+    },
+    {
+     "id": "k1-2019-2020-q005",
+     "benzerlik": 0.553,
+     "kez": 1,
+     "yillar": [
+      "2019-2020"
+     ]
+    }
+   ],
+   "vurgu": false
+  },
+  {
+   "sayfa": 9,
+   "puan": 85,
+   "cikmis": [
+    {
+     "id": "k1-2025-2026-q021",
+     "benzerlik": 0.712,
+     "kez": 1,
+     "yillar": [
+      "2025-2026"
+     ]
+    },
+    {
+     "id": "84eda84539cb",
+     "benzerlik": 0.638,
+     "kez": 1,
+     "yillar": [
+      "2023-2024"
+     ]
+    },
+    {
+     "id": "k1-2024-2025-q005",
+     "benzerlik": 0.599,
+     "kez": 1,
+     "yillar": [
+      "2024-2025"
+     ]
+    },
+    {
+     "id": "k1-2020-2021-b-q025",
+     "benzerlik": 0.582,
+     "kez": 1,
+     "yillar": [
+      "2020-2021"
+     ]
+    },
+    {
+     "id": "55880e6415f8",
+     "benzerlik": 0.573,
+     "kez": 1,
+     "yillar": [
+      "2020-2021"
+     ]
+    }
+   ],
+   "vurgu": true
+  },
+  {
+   "sayfa": 10,
+   "puan": 83,
+   "cikmis": [
+    {
+     "id": "k1-2025-2026-q021",
+     "benzerlik": 0.698,
+     "kez": 1,
+     "yillar": [
+      "2025-2026"
+     ]
+    },
+    {
+     "id": "84eda84539cb",
+     "benzerlik": 0.63,
+     "kez": 1,
+     "yillar": [
+      "2023-2024"
+     ]
+    },
+    {
+     "id": "k1-2024-2025-q005",
+     "benzerlik": 0.58,
+     "kez": 1,
+     "yillar": [
+      "2024-2025"
+     ]
+    },
+    {
+     "id": "55880e6415f8",
+     "benzerlik": 0.573,
+     "kez": 1,
+     "yillar": [
+      "2020-2021"
+     ]
+    },
+    {
+     "id": "k1-2020-2021-b-q025",
+     "benzerlik": 0.573,
+     "kez": 1,
+     "yillar": [
+      "2020-2021"
+     ]
+    }
+   ],
+   "vurgu": true
+  },
+  {
+   "sayfa": 11,
+   "puan": 83,
+   "cikmis": [
+    {
+     "id": "k1-2025-2026-q021",
+     "benzerlik": 0.706,
+     "kez": 1,
+     "yillar": [
+      "2025-2026"
+     ]
+    },
+    {
+     "id": "84eda84539cb",
+     "benzerlik": 0.615,
+     "kez": 1,
+     "yillar": [
+      "2023-2024"
+     ]
+    },
+    {
+     "id": "k1-2020-2021-b-q025",
+     "benzerlik": 0.612,
+     "kez": 1,
+     "yillar": [
+      "2020-2021"
+     ]
+    },
+    {
+     "id": "55880e6415f8",
+     "benzerlik": 0.595,
+     "kez": 1,
+     "yillar": [
+      "2020-2021"
+     ]
+    },
+    {
+     "id": "d3-k1-enf-019",
+     "benzerlik": 0.55,
+     "kez": 1,
+     "yillar": [
+      "2024-2025"
+     ]
+    }
+   ],
+   "vurgu": true
+  },
+  {
+   "sayfa": 12,
+   "puan": 53,
+   "cikmis": [
+    {
+     "id": "k1-2025-2026-q021",
+     "benzerlik": 0.68,
+     "kez": 1,
+     "yillar": [
+      "2025-2026"
+     ]
+    },
+    {
+     "id": "k1-2024-2025-q005",
+     "benzerlik": 0.62,
+     "kez": 1,
+     "yillar": [
+      "2024-2025"
+     ]
+    },
+    {
+     "id": "k1-2020-2021-b-q025",
+     "benzerlik": 0.612,
+     "kez": 1,
+     "yillar": [
+      "2020-2021"
+     ]
+    }
+   ],
+   "vurgu": true
+  },
+  {
+   "sayfa": 13,
+   "puan": 42,
+   "cikmis": [
+    {
+     "id": "past-1790877492618-37520",
+     "benzerlik": 0.685,
+     "kez": 1,
+     "yillar": [
+      "2020-2021"
+     ]
+    },
+    {
+     "id": "522fba66356c",
+     "benzerlik": 0.6,
+     "kez": 1,
+     "yillar": [
+      "2020-2021"
+     ]
+    },
+    {
+     "id": "84eda84539cb",
+     "benzerlik": 0.599,
+     "kez": 1,
+     "yillar": [
+      "2023-2024"
+     ]
+    }
+   ],
+   "vurgu": false
+  },
+  {
+   "sayfa": 14,
+   "puan": 47,
+   "cikmis": [
+    {
+     "id": "84eda84539cb",
+     "benzerlik": 0.607,
+     "kez": 1,
+     "yillar": [
+      "2023-2024"
+     ]
+    },
+    {
+     "id": "55880e6415f8",
+     "benzerlik": 0.555,
+     "kez": 1,
+     "yillar": [
+      "2020-2021"
+     ]
+    },
+    {
+     "id": "d3-k1-enf-019",
+     "benzerlik": 0.551,
+     "kez": 1,
+     "yillar": [
+      "2024-2025"
+     ]
+    }
+   ],
+   "vurgu": true
+  },
+  {
+   "sayfa": 15,
+   "puan": 13,
+   "cikmis": [
+    {
+     "id": "55880e6415f8",
+     "benzerlik": 0.584,
+     "kez": 1,
+     "yillar": [
+      "2020-2021"
+     ]
+    }
+   ],
+   "vurgu": true
+  },
+  {
+   "sayfa": 16,
+   "puan": 32,
+   "cikmis": [
+    {
+     "id": "k1-2019-2020-q017",
+     "benzerlik": 0.634,
+     "kez": 1,
+     "yillar": [
+      "2019-2020"
+     ]
+    },
+    {
+     "id": "past-1790877464398-851174",
+     "benzerlik": 0.618,
+     "kez": 1,
+     "yillar": [
+      "2020-2021"
+     ]
+    },
+    {
+     "id": "past-1790877460395-121656",
+     "benzerlik": 0.569,
+     "kez": 1,
+     "yillar": [
+      "2020-2021"
+     ]
+    }
+   ],
+   "vurgu": false
+  },
+  {
+   "sayfa": 17,
+   "puan": 32,
+   "cikmis": [
+    {
+     "id": "k1-2019-2020-q017",
+     "benzerlik": 0.65,
+     "kez": 1,
+     "yillar": [
+      "2019-2020"
+     ]
+    },
+    {
+     "id": "past-1790877460395-121656",
+     "benzerlik": 0.586,
+     "kez": 1,
+     "yillar": [
+      "2020-2021"
+     ]
+    },
+    {
+     "id": "55880e6415f8",
+     "benzerlik": 0.58,
+     "kez": 1,
+     "yillar": [
+      "2020-2021"
+     ]
+    }
+   ],
+   "vurgu": false
+  },
+  {
+   "sayfa": 18,
+   "puan": 43,
+   "cikmis": [
+    {
+     "id": "k1-2019-2020-q017",
+     "benzerlik": 0.645,
+     "kez": 1,
+     "yillar": [
+      "2019-2020"
+     ]
+    },
+    {
+     "id": "past-1790877460395-121656",
+     "benzerlik": 0.607,
+     "kez": 1,
+     "yillar": [
+      "2020-2021"
+     ]
+    },
+    {
+     "id": "past-1790877464398-851174",
+     "benzerlik": 0.572,
+     "kez": 1,
+     "yillar": [
+      "2020-2021"
+     ]
+    },
+    {
+     "id": "55880e6415f8",
+     "benzerlik": 0.551,
+     "kez": 1,
+     "yillar": [
+      "2020-2021"
+     ]
+    }
+   ],
+   "vurgu": false
+  },
+  {
+   "sayfa": 19,
+   "puan": 11,
+   "cikmis": [
+    {
+     "id": "past-1790877041564-499994",
+     "benzerlik": 0.561,
+     "kez": 1,
+     "yillar": [
+      "2020-2021"
+     ]
+    }
+   ],
+   "vurgu": false
+  },
+  {
+   "sayfa": 20,
+   "puan": 19,
+   "cikmis": [
+    {
+     "id": "past-1790877041564-499994",
+     "benzerlik": 0.559,
+     "kez": 1,
+     "yillar": [
+      "2020-2021"
+     ]
+    },
+    {
+     "id": "k1-2019-2020-q005",
+     "benzerlik": 0.552,
+     "kez": 1,
+     "yillar": [
+      "2019-2020"
+     ]
+    }
+   ],
+   "vurgu": false
+  }
+ ],
+ "baglanamayan": []
+}

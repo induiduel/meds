@@ -1,5 +1,7 @@
 """Soru çözücü 2. tur doğrulayıcı: python3 dogrula2.py cikti2/<kod>.json [...] → HATA/UYARI (HATA varsa çıkış 1)."""
 import json, os, re, sys, collections
+# cümle sınırı: "8-10. haftalar" gibi sıra sayısı noktası cümle sonu sayılmaz (2026-10-24, H36)
+CUMLE_SINIRI = re.compile(r'(?<=[.!?])(?<!\d\.)\s+|(?<=\d\.)\s+(?=[A-ZÇĞİÖŞÜ])')
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 from turkce_uslup import denetle as uslup_denetle  # noqa: E402  (meds/docs/TURKCE_USLUP_STANDARDI.md)
 from sik_aciklama import denetle as sik_denetle  # noqa: E402  (meds/docs/SIK_ACIKLAMA_STANDARDI.md)
@@ -7,7 +9,10 @@ W = "/home/indu/medsor/meds_temp/patoloji_ornek26/cozucu"
 YASAK_SES = re.compile(r'[0-9%/→←↑↓±≈~<>=+⁺⁻²³()\[\]*#_{}@&$€£^\\:;"“”‘’«»…–—]')
 KISALTMA = re.compile(r'\b[A-ZÇĞİÖŞÜ]{2,}[0-9]*\b')
 KARISIK = re.compile(r"\b\w*[a-zçğıöşü][A-ZÇĞİÖŞÜ]\w*\b")
-IC_DIL = re.compile(r"\b(pdf\w*|kaynak\w*|slayt\w*|ders not\w*|talimat\w*|ipucu(?!\s+hücre)\w*|çeldirici\w*|şık\w*|hoca\w*)\b", re.I)
+# "kaynak": yalnız süreç dili biçimleri (kaynakta, kaynağa göre, kaynakça …). "kaynaklı", "kaynaklanır", "enfeksiyon
+# kaynağı", "kaynak hasta" tıbbi Türkçedir — eski kalıp (kaynak\w*) bunları da yasaklıyordu (2026-10-23).
+IC_DIL = re.compile(r"\b(pdf\w*|kaynak(ta|tan|ça|lara göre|a göre)|kaynağa göre|kaynak metin\w*|slayt\w*|ders not\w*|talimat\w*|"
+                    r"ipucu(?!\s+hücre)\w*|çeldirici\w*|şık\w*|hoca\w*)\b", re.I)
 HARF_AN = re.compile(r"\b[A-E] ?(şıkkı|seçeneği|şıkk)|\b(be|ce|de) şıkkı", re.I)
 # birleşik okunan kısaltma (harf adları bitişik): denea, atepe, hapeve … ve kelime gibi okunan yasaklılar
 BIRLESIK = re.compile(r"\b(denea|renea|atepe|hapeve|anka|cede\w*|pese\w*|acete\w*)\b", re.I)
@@ -30,7 +35,7 @@ def ses_denet(e, yer, s):
     if BIRLESIK.search(s): e.append(f'{yer}: kısaltma birleşik/kelime gibi yazılmış: {BIRLESIK.search(s).group()!r} (harf harf, boşlukla)')
     if '**' in s: e.append(f'{yer}: seste ** var')
     if re.search(r'\b(tip|faktör|sınıf|evre|derece|kompleks)\s+(ı|ıı|ııı|ıv|v|vıı|vııı|ıx|xıı|i|ii|iii|iv|vii|viii|ix|xii)\b', s, re.I): e.append(f'{yer}: seste Roma rakamı harf gibi (sayıyla yaz: tip dört, faktör bir)')
-    for cm in re.split(r'(?<=[.!?])\s+', t):
+    for cm in re.split(CUMLE_SINIRI, t):
         if kelime(cm) > 27: e.append(f'{yer}: ses cümlesi {kelime(cm)} kelime (en çok 25)'); break
     if s.count('|') > 2: e.append(f'{yer}: durak işareti çok')
 
@@ -48,7 +53,7 @@ def cift(e, yer, x, enaz, encok, cumle=2):
     if '(' in m or ')' in m: e.append(f'{yer}: metin parantez içeriyor')
     e.extend(uslup_denetle(m, yer))
     if not enaz <= kelime(s) <= encok: e.append(f'{yer}: ses {kelime(s)} kelime ({enaz}–{encok})')
-    nc = len([c for c in re.split(r'(?<=[.!?])\s+', m) if c.strip()])
+    nc = len([c for c in re.split(CUMLE_SINIRI, m) if c.strip()])
     if nc > cumle: e.append(f'{yer}: {nc} cümle (en çok {cumle})')
     r = kelime(s) / max(1, kelime(m.replace('**', '')))
     if not 0.7 <= r <= 2.6: e.append(f'{yer}: metin–ses uzunluk oranı {r:.2f}')

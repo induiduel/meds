@@ -1,0 +1,219 @@
+{
+ "aciklama": "Ajan (A) ve Claude bütçeleri — yönlendirici aşmaz; aşınca iş 'bekliyor_butce' olur ve ertesi gün sürer. Sayaçlar meds_temp/state/claude_butce.json ve ajan_butce.json. 'ajanlar' sırası = A katmanında yazar sırası (görev 'yazar_ajanlari' ile değiştirir). Komutta {model} modelle değiştirilir; istem stdin'den verilir; ajan boş bir klasörde salt okunur kipte çalışır Kullanıcı kararı 2026-10-24: hat tek bir profille de (yalnız OpenCode / Antigravity / Claude / Command Code) uçtan uca çalışabilir; varsayılan 'karma' = OpenCode, yetmezse yerel Claude.",
+ "claude": {
+  "gunluk_cagri": 12,
+  "model": "claude-opus-5-5",
+  "zaman_asimi_sn": 900,
+  "profil_gunluk_cagri": 120
+ },
+ "ajanlar": {
+  "opencode": {
+   "komut": [
+    "/opt/OpenCode/resources/opencode-cli",
+    "run",
+    "--agent",
+    "plan",
+    "-m",
+    "{model}"
+   ],
+   "modeller": [
+    "opencode/deepseek-v4.1-flash-free"
+   ],
+   "gunluk_cagri": 300,
+   "zaman_asimi_sn": 900,
+   "not": "OpenCode ücretsiz DeepSeek (yazar sırasında ilk)"
+  },
+  "opencode_glm": {
+   "komut": [
+    "/opt/OpenCode/resources/opencode-cli",
+    "run",
+    "--agent",
+    "plan",
+    "-m",
+    "{model}"
+   ],
+   "modeller": [
+    "opencode/glm-5.3-flash-free"
+   ],
+   "gunluk_cagri": 300,
+   "zaman_asimi_sn": 900,
+   "not": "aynı OpenCode CLI, farklı model ailesi (GLM): denetçi ≠ yazar için"
+  },
+  "antigravity": {
+   "komut": [
+    "/snap/bin/agy",
+    "--sandbox",
+    "--mode",
+    "plan",
+    "-p={istem}"
+   ],
+   "model_bayrak": [
+    "--model",
+    "{model}"
+   ],
+   "modeller": [
+    "gemini-3.8-flash-medium"
+   ],
+   "gunluk_cagri": 150,
+   "zaman_asimi_sn": 900,
+   "not": "giriş yapıldı (2026-10-24); istem argümanla (-p={istem}; stdin okumaz, 120 KB üstü paket atlanır); --disable-slash-commands plan kipini etkisiz kıldığı için yok; modeller: agy models"
+  },
+  "antigravity_alt": {
+   "komut": [
+    "/snap/bin/agy",
+    "--sandbox",
+    "--mode",
+    "plan",
+    "-p={istem}"
+   ],
+   "model_bayrak": [
+    "--model",
+    "{model}"
+   ],
+   "modeller": [
+    "gpt-oss-120b-medium"
+   ],
+   "gunluk_cagri": 150,
+   "zaman_asimi_sn": 900,
+   "not": "Antigravity, farklı model ailesi (GPT-OSS): denetçi ≠ yazar"
+  },
+  "commandcode": {
+   "komut": [
+    "node",
+    "/opt/Command Code/resources/app/node_modules/command-code/dist/index.mjs",
+    "-p",
+    "--plan",
+    "--no-session",
+    "--skip-onboarding",
+    "--no-auto-update",
+    "--max-turns",
+    "3"
+   ],
+   "model_bayrak": [
+    "-m",
+    "{model}"
+   ],
+   "modeller": [
+    null
+   ],
+   "gunluk_cagri": 150,
+   "zaman_asimi_sn": 900,
+   "not": "Command Code hesabının varsayılan modeli (modeller: [\"moonshotai/kimi-k3\"] gibi değiştirilebilir)"
+  },
+  "commandcode_alt": {
+   "komut": [
+    "node",
+    "/opt/Command Code/resources/app/node_modules/command-code/dist/index.mjs",
+    "-p",
+    "--plan",
+    "--no-session",
+    "--skip-onboarding",
+    "--no-auto-update",
+    "--max-turns",
+    "3"
+   ],
+   "model_bayrak": [
+    "-m",
+    "{model}"
+   ],
+   "modeller": [
+    "moonshotai/kimi-k3"
+   ],
+   "gunluk_cagri": 150,
+   "zaman_asimi_sn": 900,
+   "not": "Command Code, farklı model ailesi (Kimi): denetçi ≠ yazar"
+  },
+  "claude": {
+   "not": "yerel `claude -p`, model claude.model; bütçe claude.gunluk_cagri (claude profilinde claude.profil_gunluk_cagri)"
+  },
+  "claude_alt": {
+   "claude_model": "claude-sonnet-5-5",
+   "not": "yerel `claude -p` Sonnet: claude profilinde denetçi (yazar Opus)"
+  },
+  "oturum": {
+   "not": "bir Claude Code oturumu: hat paketi hazırlayıp kuyruğa yazar ve durur (kod 3); oturum /kuyruk ile çözer (gorev.py kuyruk). Yazar ≠ denetçi: denetim paketleri her zaman yeni bağlamlı alt ajana verilir."
+  }
+ },
+ "profiller": {
+  "aciklama": "Hattı hangi ajan(lar)ın yürüteceği. Etkin profil: MEDS_AJAN_PROFIL ortam değişkeni > --profil > etkin_profil. yazar: üretim görevleri sırası; denetci: denetim sırası (yazar ajanı ayrıca atlanır); son_care: iki düzeltmeden sonra hâlâ engel varsa düzeltmeyi yapan.",
+  "karma": {
+   "yazar": [
+    "opencode",
+    "opencode_glm",
+    "claude"
+   ],
+   "denetci": [
+    "opencode_glm",
+    "opencode",
+    "claude"
+   ],
+   "son_care": [
+    "claude"
+   ]
+  },
+  "opencode": {
+   "yazar": [
+    "opencode",
+    "opencode_glm"
+   ],
+   "denetci": [
+    "opencode_glm",
+    "opencode"
+   ],
+   "son_care": [
+    "opencode_glm"
+   ]
+  },
+  "antigravity": {
+   "yazar": [
+    "antigravity",
+    "antigravity_alt"
+   ],
+   "denetci": [
+    "antigravity_alt",
+    "antigravity"
+   ],
+   "son_care": [
+    "antigravity_alt"
+   ]
+  },
+  "claude": {
+   "yazar": [
+    "claude",
+    "claude_alt"
+   ],
+   "denetci": [
+    "claude_alt",
+    "claude"
+   ],
+   "son_care": [
+    "claude"
+   ]
+  },
+  "commandcode": {
+   "yazar": [
+    "commandcode",
+    "commandcode_alt"
+   ],
+   "denetci": [
+    "commandcode_alt",
+    "commandcode"
+   ],
+   "son_care": [
+    "commandcode_alt"
+   ]
+  },
+  "oturum": {
+   "yazar": [
+    "oturum"
+   ],
+   "denetci": [
+    "oturum"
+   ],
+   "son_care": [
+    "oturum"
+   ]
+  }
+ },
+ "etkin_profil": "claude"
+}

@@ -1,0 +1,317 @@
+{
+ "parca_sorusu": {
+  "hedef": "k1-03-b02",
+  "ayar": {
+   "adet": "1"
+  },
+  "iyi": {
+   "sorular": [
+    {
+     "kok": "Bir hücre artan talebe uyum sağladıktan sonra uyaran ortadan kalktığında özgün durumuna dönebiliyorsa, bu yanıtı geri dönüşümsüz hasardan ayıran temel özellik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hücre sayısının artması",
+      "B": "Hücre boyutunun büyümesi",
+      "C": "Değişikliğin geri dönüşümlü olması",
+      "D": "Hücre ölümüyle sonuçlanması",
+      "E": "Stresin tamamen ortadan kaldırılması"
+     },
+     "dogru": "C",
+     "aciklama": "Adaptasyonu geri dönüşümsüz hasardan ayıran özellik geri dönüşümlülüktür; uyaran kalktığında hücre özgün durumuna dönebilir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Hücre sayısının artması, hücre popülasyonunun büyüdüğü bir adaptasyon değişikliğidir ve artan talebi karşılamaya yarar. Bu değişiklik adaptasyonun içeriğini anlatır; uyaran kalkınca özgün duruma dönebilmeyi, yani adaptasyonu hasardan ayıran özelliği tek başına tanımlamaz.",
+      "B": "Yanlış. Hücre boyutunun büyümesi, tek tek hücrelerin büyüdüğü bir adaptasyon değişikliğidir ve hücrenin iş kapasitesini artırır. Adaptasyonda boyut, sayı ve fenotip değişebilir; ancak bunları hasardan ayıran şey değişikliğin türü değil, uyaran kalkınca geri dönebilmesidir.",
+      "C": "Doğru. Geri dönüşümlülük, uyaran ortadan kalktığında hücrenin özgün durumuna dönebilmesidir ve adaptasyon tanımının temel kelimesidir. Bu özellik adaptasyonu geri dönüşümsüz hasardan kesin biçimde ayırır; bu yüzden sorunun sorduğu ayırt edici özellik budur.",
+      "D": "Yanlış. Hücre ölümü, hücrenin canlılığını yitirdiği ve hasar zincirinin en sonunda yer alan durumdur. Adaptasyon ise hasar ve ölümden önce gelen, geri dönebilen bir yanıttır; ölümle sonuçlanmak adaptasyonun değil hasarın özelliğidir.",
+      "E": "Yanlış. Stresin ortadan kaldırılması, hücreyi zorlayan uyaranın sona ermesi anlamına gelir. Adaptasyonun amacı stresi kaldırmak değil, yeni bir kararlı denge kurarak stresle birlikte yaşayabilmek ve hücre canlılığını sürdürmektir."
+     },
+     "kanit": [
+      "S6",
+      "S7"
+     ]
+    }
+   ]
+  },
+  "kotu": [
+   {
+    "ad": "girdide olmayan etiket",
+    "degistir": [
+     [
+      [
+       "sorular",
+       0,
+       "kanit"
+      ],
+      [
+       "S99"
+      ]
+     ]
+    ],
+    "beklenen": "girdide olmayan etiket"
+   },
+   {
+    "ad": "geçiştirici şık",
+    "degistir": [
+     [
+      [
+       "sorular",
+       0,
+       "sik_aciklamalari",
+       "A"
+      ],
+      "Yanlış. Hücre sayısının artması bu sorunun cevabı değil."
+     ]
+    ],
+    "beklenen": "geçiştirici kalıp"
+   },
+   {
+    "ad": "önek uyumsuz",
+    "degistir": [
+     [
+      [
+       "sorular",
+       0,
+       "sik_aciklamalari",
+       "C"
+      ],
+      "Yanlış. Geri dönüşümlülük, uyaran ortadan kalktığında hücrenin özgün durumuna dönebilmesidir ve adaptasyon tanımının temel kelimesidir. Bu özellik adaptasyonu geri dönüşümsüz hasardan kesin biçimde ayırır."
+     ]
+    ],
+    "beklenen": "bu şık doğru"
+   },
+   {
+    "ad": "eksik şık",
+    "degistir": [
+     [
+      [
+       "sorular",
+       0,
+       "secenekler"
+      ],
+      {
+       "A": "x",
+       "B": "y",
+       "C": "z",
+       "D": "w"
+      }
+     ]
+    ],
+    "beklenen": "A–E"
+   },
+   {
+    "ad": "dayanaksız doğru şık",
+    "degistir": [
+     [
+      [
+       "sorular",
+       0,
+       "kanit"
+      ],
+      [
+       "S2"
+      ]
+     ]
+    ],
+    "beklenen": "kanıt cümleleri"
+   },
+   {
+    "ad": "çeviri mecaz",
+    "degistir": [
+     [
+      [
+       "sorular",
+       0,
+       "aciklama"
+      ],
+      "Geri dönüşümlülük adaptasyonun imzasıdır ve hasardan ayıran temel özelliktir, bu yüzden doğrudur."
+     ]
+    ],
+    "beklenen": "imza"
+   },
+   {
+    "ad": "adet",
+    "degistir": [
+     [
+      [
+       "sorular"
+      ],
+      []
+     ]
+    ],
+    "beklenen": "tam 1 olmalı"
+   },
+   {
+    "ad": "uzunluk ipucu",
+    "degistir": [
+     [
+      [
+       "sorular",
+       0,
+       "secenekler",
+       "C"
+      ],
+      "Değişikliğin uyaran ortadan kalktığında tamamen geri dönebilmesi ve hücrenin özgün durumuna kavuşabilmesi"
+     ]
+    ],
+    "beklenen": "uzunluk ipucu"
+   },
+   {
+    "ad": "ders dışı şık",
+    "degistir": [
+     [
+      [
+       "sorular",
+       0,
+       "secenekler",
+       "E"
+      ],
+      "Tiroid hormonu salgılanması"
+     ]
+    ],
+    "beklenen": "bölümde/slaytta geçmiyor"
+   }
+  ]
+ },
+ "sik_aciklama": {
+  "hedef": "k1-03-hucresel-adaptasyonlar-k01-q01",
+  "iyi": {
+   "sik_aciklamalari": {
+    "A": "Yanlış. Metaplazi, olgun bir hücre tipinin strese daha dayanıklı başka bir olgun hücre tipiyle yer değiştirmesidir. Bir adaptasyon biçimidir ve hücreyi zorlayıcı koşula uydurur; değişen koşullarda iç dengenin korunmasını tanımlayan kavram ise homeostazdır (s. 28).",
+    "B": "Yanlış. Otofaji, hücrenin kendi bileşenlerini lizozomlarda sindirerek yeniden kullandığı bir süreçtir. Besin yetersizliği gibi streste hücrenin hayatta kalmasına yardım eder; ancak değişen koşullarda iç dengenin korunmasını tanımlayan kavram homeostazdır (s. 34).",
+    "C": "Doğru. Homeostaz, değişen iç ve dış koşullara rağmen hücrenin iç dengesini korumasıdır. Fizyolojik durumda hücre büyüklüğü, sayısı ve fonksiyonu bu denge sayesinde belirli sınırlar içinde tutulur; sorunun tanımladığı kavram budur (s. 4).",
+    "D": "Yanlış. Hiperplazi, bir doku ya da organda hücre sayısının artmasıdır. Artan talebe karşı gelişen bir adaptasyondur ve homeostazın zorlandığı durumda ortaya çıkar; iç dengenin kendisini değil, dengeyi korumak için verilen yanıtı anlatır (s. 18).",
+    "E": "Yanlış. Apoptoz, hücrenin kendi programını çalıştırarak düzenli biçimde öldüğü bir hücre ölümü türüdür. Strese yanıt dizisinin geri dönüşümsüz ucunda yer alır; iç dengenin korunması ise canlı hücrenin homeostaz yeteneğidir (s. 36)."
+   }
+  },
+  "kotu": [
+   {
+    "ad": "kısa mevcut biçim",
+    "degistir": [
+     [
+      [
+       "sik_aciklamalari",
+       "B"
+      ],
+      "Yanlış. Otofaji hücrenin kendi bileşenlerini lizozomlarda sindirmesidir; iç dengenin genel tanımı değildir (s. 34)."
+     ]
+    ],
+    "beklenen": "en az 20"
+   },
+   {
+    "ad": "dayanaksız sayfa",
+    "degistir": [
+     [
+      [
+       "sik_aciklamalari",
+       "C"
+      ],
+      "Doğru. Homeostaz, değişen iç ve dış koşullara rağmen hücrenin iç dengesini korumasıdır. Fizyolojik durumda hücre büyüklüğü, sayısı ve fonksiyonu bu denge sayesinde belirli sınırlar içinde tutulur; sorunun tanımladığı kavram budur (s. 99)."
+     ]
+    ],
+    "beklenen": "dayanakta yok"
+   },
+   {
+    "ad": "harf anma",
+    "degistir": [
+     [
+      [
+       "sik_aciklamalari",
+       "D"
+      ],
+      "Yanlış. Hiperplazi, bir doku ya da organda hücre sayısının artmasıdır. D şıkkı artan talebe karşı gelişen bir adaptasyondur ve homeostazın zorlandığı durumda ortaya çıkar; dengeyi korumak için verilen yanıtı anlatır."
+     ]
+    ],
+    "beklenen": "harf anılmış"
+   }
+  ]
+ },
+ "denetim": {
+  "hedef": "(önceki iş)",
+  "iyi": {
+   "karar": "gecer",
+   "bulgular": []
+  },
+  "kotu": [
+   {
+    "ad": "gecer ama bulgu",
+    "degistir": [
+     [
+      [
+       "bulgular"
+      ],
+      [
+       {
+        "yer": "1. soru",
+        "tur": "uslup",
+        "aciklama": "küçük bir üslup notu burada",
+        "oneri": "-"
+       }
+      ]
+     ]
+    ],
+    "beklenen": "karar gecer ama bulgu var"
+   },
+   {
+    "ad": "tanımsız tür",
+    "degistir": [
+     [
+      [
+       "karar"
+      ],
+      "duzelt"
+     ],
+     [
+      [
+       "bulgular"
+      ],
+      [
+       {
+        "yer": "1. soru",
+        "tur": "zevk",
+        "aciklama": "bu bir zevk farkı açıklaması",
+        "oneri": "-"
+       }
+      ]
+     ]
+    ],
+    "beklenen": "tanımsız"
+   },
+   {
+    "ad": "duzelt bulgusuz",
+    "degistir": [
+     [
+      [
+       "karar"
+      ],
+      "duzelt"
+     ]
+    ],
+    "beklenen": "bulgu yok"
+   }
+  ]
+ },
+ "kanit_bagla": {
+  "hedef": "k1-12/754ee6b9da96",
+  "uretici": true
+ },
+ "som_sec": {
+  "hedef": "k1-03-p16",
+  "ayar": {
+   "sorgu": "hipertrofiye uğramış miyosit"
+  },
+  "uretici": true
+ },
+ "cozucu_sorusu": {
+  "hedef": "x:e07/parti/0",
+  "ayar": {
+   "w": "{VERI}/spot"
+  },
+  "uretici": true
+ },
+ "onem_listesi": {
+  "hedef": "x:e07/parca/0",
+  "ayar": {
+   "w": "{VERI}/spot"
+  },
+  "uretici": true
+ }
+}

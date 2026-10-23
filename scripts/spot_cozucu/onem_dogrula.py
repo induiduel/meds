@@ -10,7 +10,10 @@ from turkce_uslup import denetle_yapi as uslup_yapi  # noqa: E402  (meds/docs/TU
 
 TUR = {'tanim', 'en_sik', 'karakteristik', 'sayi', 'eslesme', 'mekanizma', 'siniflama', 'tuzak', 'tani_tedavi'}
 ELEN = re.compile(r'^(pdf_disi|anahtar_celiskili|gorsel|belirsiz|tekrar:\S+)$')
-IC_DIL = re.compile(r"\b(aday\w*|bağlan\w*|eşlen\w*|pdf'?te yok|talimat\w*|ajan\w*)\b", re.I)
+# yalnız süreç dili (H4); "ajan" (etken ajan) ve "bağlantı" (klinik bağlantısı) tıbbi Türkçedir — eski kalıp ikisini de
+# yasaklıyordu (2026-10-23, H28)
+IC_DIL = re.compile(r"\b(aday (soru|madde|çıkmış)\w*|adaylar\w*|bağlanan (çıkmış|soru)\w*|bağlandı\w*|eşlen(en|di|miş)\w*|"
+                    r"pdf'?te yok|talimat\w*|yazar ajan\w*|ajan(lar)? (tarafından|yazdı)\w*)\b", re.I)
 DUR = set('aşağıdakilerden aşağıdaki hangisi hangisidir hangileri değildir olan olarak için ile veya daha çok sıklıkla genellikle '
           'en sık olası doğru yanlış hastada hasta yaşında hangisinde bulunur görülür yer almaz almaz'.split())
 

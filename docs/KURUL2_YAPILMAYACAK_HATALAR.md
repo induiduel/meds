@@ -246,3 +246,97 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Uygulama:** `meds_temp/sesli_anlatim/v3_pat/{TALIMAT,DENETIM}.md`, blok için `meds_temp/blok_ozet_v2/EK_V2.md`.
 - **Ek tuzaklar:** ders–PDF eşlemesi içerikle doğrulanır (k1-65 Meme Kanseri Öğren destesi 33) Benign PDF'ine bağlıydı →
   sesli V2/V3 sanal deste `k1p-k1-65-…-sesli-v2`); kitte slayt metni yoksa (k1-66) PDF metni ayrıca verilir.
+
+### H25 — Claude CLI yolu değişti, gece hattının bütün Claude aşamaları sessizce düştü (2026-10-23)
+- **Belirti:** masaüstü uygulaması 02:18'de güncellenip Claude Code'u `~/.config/Claude/claude-code/<sürüm>/<karma>/claude`
+  altına taşıdı; `~/.local/bin/claude` sarmalayıcısı yalnız `<sürüm>/claude`'a baktığı için "Claude Code bulunamadı" ile
+  çıktı. `claude -p` kullanan her aşama (ders zinciri, olası soru — o akşam Kurul 1 sınav günüydü —, hastalık, kamp, Son Prova)
+  çalışmazdı; hata yalnız aşamanın kendi `claude.log`'unda kalırdı.
+- **Düzeltme:** sarmalayıcı iki düzeni de arar, en yüksek sürümü seçer (yedek: oturum karalama klasörü). **Kapı:**
+  `otomasyon/saglik.py` → `claude_cli` (`claude --version`); başarısızsa sabah özetinde sorun.
+
+### H26 — Ücretsiz modelde sessiz boş yanıt ve yarım JSON (Gemini düşünme payı, 2026-10-23)
+- **Belirti:** Gemini düşünme belirteçleri `maxOutputTokens`'tan düşüyor → uzun JSON yarıda (`finishReason=MAX_TOKENS`),
+  `parts` yok → `KeyError` ağ hatası sanılıp aynı model yeniden deneniyor; hiçbir şey günlüğe yazılmıyordu (86 sn bekleyip `None`).
+- **Düzeltme:** `cloud_llm.chat(dusunme=N)` düşünme payını ayrı verir, çıktı sınırını o kadar büyütür; boş yanıt `BosYanit` →
+  doğrudan sıradaki model; her istisna ve ayrıştırılamayan yanıt `log`'a. Görev yönlendiricisi Gemini'ye varsayılan 2048 pay verir
+  (`gorevler.json` → `gemini_dusunme`), uyarılar `meds_temp/gorev/gunluk.jsonl`'de (`model_uyari`).
+
+### H27 — Ücretsiz model zinciri sağlam modeli bütün gün kapatıyordu (cloud_llm, 2026-10-23)
+- **Belirti:** bir anahtar `400` (yanıta özgü JSON hatası), ikinci anahtar `401` (geçersiz) verince anahtar döngüsü "tüm
+  anahtarların günlük kotası doldu" dalına düşüyor, `groq:openai/gpt-oss-120b` `meds_temp/state/cloud_llm.json`'a "kota dolu"
+  yazılıyor → o gün BÜTÜN süreçlerde (Faz 14 kuyruğu, görev yönlendiricisi) en güçlü Groq modeli kullanılmıyordu. Ayrıca tek
+  anahtarın `401`'i modeli tüm anahtarlarıyla süreç boyunca atlatıyordu.
+- **Düzeltme:** model yalnız TÜM geçerli anahtarlar günlük kota (429 günlük) dediyse kapanır; `401/403` yalnız o anahtarı,
+  `404` modeli atlatır. Yanlış kayıt temizlendi. **Açık (kullanıcı):** `.env` `GROQ_API_KEY_2` geçersiz (401; değer anahtar
+  adına benziyor) — düzeltilmeli ya da silinmeli.
+
+### H28 — Doğrulayıcı tıbbi "kaynaklı"yı süreç dili sanıyordu; önem ↔ çözücü şık uzunluğu uyumsuzdu (2026-10-23)
+- `patoloji_cozucu/cozucu_dogrula2.py` `IC_DIL` `kaynak\w*` kalıbı "plazma kaynaklı", "endotelden kaynaklanır", "enfeksiyon
+  kaynağı" ifadelerini HATA sayıyordu (çözücü ve asistan şık açıklamaları). Kalıp yalnız süreç biçimlerine daraltıldı
+  (kaynakta, kaynağa göre, kaynakça, kaynak metin).
+- Önem listesi talimatı örnek şıklara ≤14 kelime (uyarı) izin verirken çözücü kapısı örnek şıkta ≤6 kelime istiyor → önem
+  aşamasından geçen soru çözücüde kalıyordu. Görev kuralı 6 kelimeye indirildi (`kurallar/ornek_soru_spot.md`).
+- Not: Kurul 1 Claude çözücüleri (ör. e07) bugünkü kapıdan geçmez (486 HATA, 2026-10-18 şık standardından önce üretildi);
+  K1 çıktısı kalite kıyasında referans alınırken bu bilinmeli.
+
+### H29 — "Burası önemli" kuralları birbiriyle çelişiyordu; OCR'lı sayıda sıfır kayıp yanlış alarmı (2026-10-23)
+- `TALIMAT_SESLI.md` her ilgili çıkmışta "Burası önemli" isterken `metin_denetle.py` (H22) toplamı `max(3, bölüm/2)` ile sınırlar
+  → çok çıkmışlı derste ikisi birden sağlanamaz. Karar: H22 (daha yeni kullanıcı kuralı) esas; her çıkmış `vurgu tur=cikmis` ile
+  işaretlenir, "Burası önemli" sınır içinde en çok sorulanlarda. Talimat güncellendi (Oracle'da sonraki dağıtımla); görev yolunda
+  `sesli_bolum` bölüm başına en çok 1, birleştirici ders sınırını betikle uygular (`onem_sinirla`).
+- Sesli metin ekranında sayılar yazıyla yazılmıştı ("iki yüz seksen gün") — okunuş ekrana sızması (önceki H "Okunuş ekrana");
+  görev kuralı: ekran rakamla, okunuş yalnız `ses`te; sıfır kayıp kapısı bunu yakalar.
+- OCR'lı tablo sayfasında bozuk sayılar ("185-249 kg/m" = 18,5–24,9) düzeltilerek anlatılınca sıfır kayıp kapısı yanlış alarm
+  veriyordu → `baglam.ocr_sayfalar` sayfaları ve ondalık ayracı düşmüş eşdeğerler muaf.
+
+## H30 — Çıkmış konu eşlemesi birebir olunca ders sessizce çıkmışsız kalıyordu (2026-10-23 K2 provası)
+- Ders kayıt defterindeki konu "Gebelik Terminolojisi ve Kavramları", çıkmış bankasındaki müfredat konusu
+  "Gebelik Terminolojisi/Kavramları" → `a_hazirla` 0 çıkmış buldu ve hata vermeden devam etti (önem listesi ve çözücü boş kalırdı).
+- Düzeltme: `ders_zinciri.konu_eslesen_cikmislar` üç basamak: birebir → yazım farkı ("/", "&", "ve", noktalama) yok sayılarak →
+  ≥0,92 benzerlik; hangi yolla eşlendiği günlüğe yazılır. Sınama: Gebelik 27 (yazım farkı), Sifilis 19 (birebir).
+
+## H31 — Hesap sorusu yanlış alarmı + iç etiketin öğrenci metnine sızması (2026-10-23 K2 provası)
+- Naegele tarih sorusunun doğru şıkkı ("10.02.2021") maddede yazmaz, kuraldan hesaplanır; önem görevinin çözülebilirlik kapısı
+  "çözülemiyor" diyordu → doğru şık yalnız sayı/tarih/birimse kökteki kural terimlerinden ≥2'si maddede olması yeter.
+- Ücretsiz model detay alanına "Q3 ve Q4'te verilen tarihler…" yazdı (öğrenci Q3'ü bilmez). Ortak kapı
+  `cekirdek.etiket_sizintisi` (yönlendirici + `gorev.py dogrula`): pakette verilmiş kısa etiket öğrenci metninde kalırsa HATA;
+  girdide tıbbi anlamda da geçen (S1 kalp sesi, L4 omur) muaf; iç veri görevleri `OGRENCI_METNI = False`. Kural `cikti_disiplini.md`.
+
+## H32 — Zorluk parça içinde yuvarlanınca ders toplamı hedefin altında kalıyordu (2026-10-23 K2 provası)
+- 6 parçanın 6'sı ücretsiz katmanda geçti ama birleştirme "zor %9 (hedef %15–25)" ile durdu: 3 soruluk parçada %20 zor → 0.
+- Düzeltme: `_spot.zorluk_dagit` zorluğu ders düzeyinde dağıtıp parçalara dilimler; parça kapısı zor soruda plandan eksiği kabul etmez.
+
+## H33 — Türkçe harfsiz metin kabul ediliyordu + kabul edilmiş iş yeni kapıdan geçirilmiyordu (2026-10-23 K2 provası)
+- Gemini Flash-Lite bazı çözücü partilerini ve bir sesli bölümü baştan sona harfsiz yazdı ("dogum", "bagli", "oykusu");
+  hiçbir kapı yakalamadı, partiler KABUL edildi (önceki e07 çözücü ve k1-64 sesli sınamalarında da vardı; yalnız geçici kopya).
+- Ortak kapı `cekirdek.turkce_katlama`: sözlük paketin kendi girdisinden; girdide Türkçe harfle geçen kelimenin katlanmış
+  biçimi ≥3 kelimelik bir alanda ≥2 kez varsa HATA (İngilizce alıntı, kimlik/tür alanı, büyük harfli OCR yanlış alarm vermez).
+- Kabul edilmiş iş yeniden kullanılırken `yonlendir.kapi` ile güncel kapılardan geçirilir; geçemezse "yeniden" koşar.
+- Betik onarımı `cekirdek.ses_onar` (SES_ONAR görevleri): ses alanlarında kısaltma/Roma rakamı `modul_okunus.donustur`
+  ile ("MSH" → "mee see haa"); modelin üç turda düzeltemediği "büyük harfli kısaltma" hatası kalktı.
+- Öncüllü soruda "kökle uzunluk uyumsuz" hatasına düzeltme ipucu eklendi (kok_ses öncüllerin hepsini okur).
+
+## H34 — Ücretsiz katman zinciri: Gemini tavanı, Zen kapandı, OpenRouter eklendi (2026-10-23)
+- Bir dersin önem + çözücü adımı ~50 Gemini çağrısı harcadı; ardından bütün Gemini anahtarları 429 ("quota" / "monthly
+  spending cap"). "spending cap" dakikalık sınır sanılıp 20 sn bekleniyordu → artık anahtar tükenmiş sayılır.
+- Zen: Muse Spark kaldırıldı (410), Zen ücretsiz katmanı yalnız OpenCode istemcisinden (403 FreeTierError) → zincirden çıktı
+  (`MEDS_CLOUD_ZEN=1` ile geri açılır). 410 artık 404 gibi model atlatır.
+- OpenRouter ücretsiz modeller zincire eklendi (`nvidia/nemotron-3-ultra-550b-a55b:free`, `google/gemma-4-31b-it:free`);
+  görev defterinde `zen` yerine `openrouter`. Groq ücretsiz katmanında ~24 bin karakterlik düzeltme istemi 413 alıyor.
+
+## H35 — Ücretsiz/yazılı içerikte betik kapılarından geçen tıbbi hatalar; denetim bulguları düzeltilmiyordu (2026-10-24)
+- Betik kapılarından 0 HATA ile geçen 2x99 içeriğinde OpenCode GLM denetçisi gerçek hatalar buldu: gravida 8 yerine "7",
+  çoğul gebelik minör iken "majör", VTE eşikleri ">4"/">2" yerine "4 ve üzeri"/"2 ve üzeri", ders dışı Leopold ayrıntısı.
+- Düzeltme: denetim bulguları yazara geri döner (`yonlendir.bulgu_duzelt`), kapılar + önemde yapı sabit kalır
+  (`onem_listesi.duzeltme_kisiti`: madde/örnek sayısı, puan), yeniden uygulanır ve yeniden denetlenir (iş başına ≤2 tur).
+  2x99: 5 engelli işin 5'i OpenCode ile düzeldi, yeniden denetim 0 engelleyici.
+- Yan hatalar: aynı W yolunda eski provaların işleri denetime karışıyordu → ders iş defteri `W/gorev/<kod>/isler.json`;
+  çözücü `uygula` her çağrıda yeni numaralı dosya açıp kopya üretiyordu → dosya adı soru kimliklerinden, eski kopya temizlenir;
+  önem değişince çözücü kaydı eski soruya göre kalabiliyordu → `cozucu_sorusu.eskiyen` kapısı (birleştirme HATA verir,
+  çözücü adımı eskiyeni düşürüp yeniden üretir).
+
+## H36 — Cümle sayacı sıra sayısı noktasını cümle sonu sayıyordu (2026-10-24, oturum kuyruğu sınaması)
+- "8-10. haftalarda" iki cümle sayılıp "4 cümle (en çok 3)" yanlış alarmı veriyordu; yazar ifadeyi bozarak geçiyordu.
+- `CUMLE_SINIRI` (cozucu_dogrula2.py, cozucu_dogrula.py, spot_cozucu/asistan_dogrula.py): rakamdan sonraki nokta ancak
+  ardından büyük harfle başlayan cümle gelirse sınırdır. Sayım yalnız azalabilir; veri değişmedi.

@@ -17,6 +17,9 @@ DATABASE = Path(os.environ.get("MEDS_DATABASE_DIR") or ROOT / "meds_database")
 STATE = Path(os.environ.get("MEDS_ISCI_DIR") or ROOT / "ders_isci")
 KAYIT = STATE / "islenen.json"          # sha256 → {durum, yol, is_id, zaman}
 KUYRUK = STATE / "kuyruk.json"          # bekleyen işler
+# yöneticinin onay ekranından yüklediği öğrenci notu / ses kaydı: site sunucusu yazar (data/ders_isci_ekler/<is_id>/{not,ses}/),
+# işçi salt okunur görür (/app/data …) — iki konteynerin ortak yazılabilir klasörü yok (2026-10-24)
+EK_DIZIN = Path(os.environ.get("MEDS_ISCI_EK_DIZIN") or APP / "data" / "ders_isci_ekler")
 TASLAK = STATE / "taslak"               # her iş: taslak/<is_id>/ (onay bekleyen çıktılar)
 GUNLUK = STATE / "gunluk.log"
 
@@ -86,6 +89,8 @@ AYAR_TANIM: dict[str, tuple] = {  # anahtar → (tür, varsayılan, alt, üst)
     "duraklat": (bool, False, None, None),               # işleme başlama durur (Drive taraması sürer)
     "otomatik_tarama": (bool, True, None, None),         # Drive'ı düzenli tara
     "otomatik_kuyruk": (bool, True, None, None),         # taramada yeni PDF'leri kendiliğinden kuyruğa al
+    "onay_iste": (bool, True, None, None),               # kullanıcı kararı (2026-10-24): yeni PDF önce yönetici onayı bekler
+                                                          # (telefon bildirimi; not/ses ekleyip ya da yalnız PDF ile başlatır)
     "gunluk_sinir": (int, 8, 0, 48),                     # kullanıcı kararı (2026-10-15): günde en çok 8 ders
     "ders_arasi_dk": (int, 60, 0, 1440),                 # kullanıcı kararı (2026-10-15): saatte en çok 1 ders
     "saat_bas": (int, 0, 0, 23),                         # işleme penceresi başlangıç saati (TR)

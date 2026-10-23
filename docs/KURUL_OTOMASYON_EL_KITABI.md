@@ -14,7 +14,9 @@
 1. **Kaynak sadakati:** içerik yalnız hocanın PDF'inden (müfredat = PDF). Çıkmış sorular önemi belirler, bilgiyi değil.
    Standart kaynakla tamamlama yalnız `kanit.referans` ile ve raporda listelenerek.
 2. **Kapı olmadan yayın yok:** her aşamanın doğrulayıcısı 0 HATA vermeden sonraki aşamaya geçilmez. Yazar ≠ denetçi.
-3. **LLM yalnız Claude** (`claude -p`, dar izin listesi; kullanıcı kararı 2026-10-20). Yerel GPU yasak (AGENTS.md 10;
+3. **LLM yalnız Claude** (`claude -p`, dar izin listesi; kullanıcı kararı 2026-10-20). **Geçiş (kullanıcı kararı 2026-10-23):** maliyet katmanlı
+   yönlendirici (`ICERIK_MOTORU_V3.md` §1) devreye girdikçe görev görev betik → ücretsiz bulut → Claude sırasına geçilir;
+   bir görev yönlendiriciye bağlanana dek bu kural o görev için geçerlidir. Yerel GPU yasak (AGENTS.md 10;
    izinli 3 istisna: XTTS, EMA çözücü sesi, vurgu üretimi — koruyucu + saat kilidi ile).
 4. **Kurul 1 verisine otomatik toplu müdahale yok.** Kurul 1 elle/eski hatta kalır; otomatik hatlar `k[2-6]` ile sınırlı.
 5. **Türkçe üslup + şık açıklaması standardı** (`TURKCE_USLUP_STANDARDI.md`, `SIK_ACIKLAMA_STANDARDI.md`): Kurul 2+'da HATA.
@@ -294,3 +296,109 @@ Kurul 1'de iki iş elle (alt ajanlarla) yapıldı; Kurul 2'den itibaren hatta ba
   aralığı, ≥%70 anlamsal kapsama). Çıktı cihaz + Oracle `data/sesli_anlatim/capa/<key>.json`; Oracle
   `meds-cumle-zaman` zamanlayıcısındaki `pdf_isaret.py --hepsi` 30 dk içinde işaretlere çevirir.
 - Metin değişirse (mdSha1 tutmaz) eski çapa yok sayılır; ders yeniden üretilirse zincir baştan → çapa da yeniden.
+
+## 15. Görev sözleşmesi — modelden bağımsız LLM işleri (`otomasyon/gorev.py`, 2026-10-23, R0)
+Tasarım: `ICERIK_MOTORU_V3.md` §1 ve §14. Bir LLM işi = **görev** (`otomasyon/llm/gorevler.json` kaydı + `otomasyon/llm/gorevler/<id>.py`)
+× **hedef** (kimlik). Model dosya sistemi görmez; tek bir `paket.md` okur, kısa etiketli (S1, Q1 …) JSON yazar; kimlik, koordinat,
+birleştirme ve doğrulama betiktir.
+| Komut | Ne yapar |
+|---|---|
+| `gorev.py yap <gorev> <hedef> [--denetle] [--cikis DİZİN]` | hazırla → çalıştır → (bağımsız denetim) → (uygula) |
+| `gorev.py hazirla <gorev> <hedef> [--ayar adet=2]` | çözücü: `meds_temp/gorev/<is_id>/paket.md` (aynı girdi → aynı is_id) |
+| `gorev.py calistir <is_id> [--katman B\|Ü\|C\|elle] [--aile groq]` | yönlendirici: betik → ücretsiz bulut aile aile (≤2 düzeltme turu) → Claude (bütçeli) |
+| `gorev.py derle <is_id> [--cevap DOSYA]` | elle/dış LLM cevabını derle + doğrula (her LLM, web sohbeti dahil) |
+| `gorev.py uygula <is_id> [--cikis DİZİN] [--k1-izin]` | yedekli yazım; `denetim_zorunlu` görevde denetim `gecer` şart; Kurul 1'e yalnız `--k1-izin` |
+| `gorev.py durum`, `defter`, `sinama` | son işler; görevler + kalan Claude bütçesi; model çağırmayan öz-sınama |
+- Görevler (R0): `parca_sorusu` (bölüm → 1–6 soru, kimlik `kN-NN-bNN-psN`, çıktı `ders_bilgi/<ders>/l2/parca_sorulari/`),
+  `sik_aciklama` (örnek soru şık açıklamaları; mevcut zaten standartsa model çağrılmaz), `denetim` (başka işin bağımsız denetimi,
+  yazarın model ailesi hariç). Kural parçaları `otomasyon/llm/kurallar/*.md` (tek yerde; paketlere betikle eklenir).
+- Çıkış kodları: 0 · 1 kapı/ret · 3 elle bekliyor · 4 Claude bütçesi doldu (ertesi gün; Ü cevapları önbellekte) · 5 model yanıt yok.
+- Bütçe `otomasyon/llm/butce.json` (günlük Claude çağrısı, varsayılan 12), sayaç `meds_temp/state/claude_butce.json`;
+  önbellek `meds_temp/llm_onbellek/`; günlük `meds_temp/gorev/gunluk.jsonl` (`cagri`, `model_uyari`, `claude_hata`).
+- Gece: `gorev_sinama` aşaması (`hat.json`) öz-sınamayı koşar; HATA = görev kapısı arızası.
+- Yeni görev: kayıt + modül (`hazirla/derle/dogrula/tersine/ozet/uygula`, isteğe bağlı `betik`) + `sinama/ornekler.json`'a iyi
+  örnek ve en az 3 kötü örnek (kapı her şeyi geçirmesin, H5). Mevcut zincirler (onem, çözücü, asistan…) henüz `claude -p` ile
+  çalışır; R3 gölge kipinde sırayla bu sözleşmeye taşınır.
+
+## 16. Kroki zinciri — L0 / L1 (R1 + R2, `kroki` aşaması, 2026-10-23)
+Tasarım: `ICERIK_MOTORU_V3.md` §2, §12, §15, §16. Model yok; ortam `meds/.venv-ocr` (PyMuPDF, OpenCV, SciPy), vektör bge-m3 CPU
+(tek dosyalık önbellek `meds_temp/kroki/vektor_onbellek.sqlite`). Gece: `kroki` aşaması → `scripts/kroki/zincir.py`.
+| Betik | Ne yapar | Çıktı |
+|---|---|---|
+| `scripts/kroki/l0.py --ders kN-NN` | PDF bir kez: kelime/satır/blok kutuları, vurgulu, resim, tablo (cikar.py ölçütü), zemin ışıklılığı, varlıklar, sayfa izi (SimHash + pHash); OCR yalnız metinsiz resme; önceki L0 ile eşleşen "aynı" sayfanın OCR/roi/egri/ok'u TAŞINIR | `ders_bilgi/<ders>/l0/sayfalar.json`, `sayfa_eslesme.json` (aynı/değişmiş/yeni + eski kimlik takma adları) |
+| `scripts/kroki/ok.py` | vektör çizimden oklar (çizgi + üçgen/dart baş, blok ok, ⊣), uçlar doğrultu konisinde metin BLOĞUNA | L0 `ok[]` (`guven`: çizgi yüksek, blok düşük) |
+| `scripts/kroki/som.py` | resim içi bölgeler (Canny + kontur), numaralı kopya (SoM) | L0 `roi[]`, `meds_temp/kroki/<ders>/som/pNN.webp` |
+| `scripts/kroki/egri.py --sinama` / `--ders --sayfa --yaz` | grafik eğrisi (ızgara/eksen atılır, sütun izi, tepe/çukur, yükseliş/iniş) — kapı: kapsama, isabet, tekillik | L0 `egri[]` |
+| `scripts/kroki/ogrenci_not.py --ders --not NOT.pdf` | öğrenci notu: sayfa izi eşleme + ECC hizalama + mevcut mürekkep kuralları; yazı uyumu < %85 sayfa yazılmaz | `l1/ogrenci_not/<not_sha>.json` (canlı katmana yayın ayrı karar) |
+| `scripts/cikmis_dizin/dizin.py` | çıkmış dizini (Dönem 3, aile, varlık, bge-m3), ters dizinler; değişen çıkmış → etkilenen dersler | `meds_database_v2/cikmis_dizin/`, `meds_temp/cikmis_dizin/degisen.json` |
+| `scripts/cikmis_dizin/plan.py --ders [--tam]` | hedefli tarama: branş/kurul + varlık kesişimi → yalnız adaylarda vektör; `--tam` kaçanı ölçer | `l1/tarama_plani.json` |
+| `scripts/cikmis_dizin/kanit.py --ders [--olc]` | soru → doğru/çeldirici bölgesi (sözcüksel + anlamsal şart, kesin/olası/bağsız), çelişki kapısı, tekrar listesi | `l1/kanit.json` |
+- Zincir: `scripts/kroki/zincir.py [--kurul N|--ders]` — L0 → ok/SoM → dizin → plan (TEK DERS kuralı tüm dersleri birlikte
+  görür; konu kilidi) → kanıt. Artımlı koşu saniyeler. PDF bulunamayan/içerikle doğrulanamayan ders HATA değil
+  `meds_temp/kroki/eksik_kaynak.json` (2026-10-23: k1-06, k1-47).
+- Kanıt güven katmanları: `kesin` (sözcüksel + anlamsal) → bilgi amaçlı; `tekrar: true` (kesin + cevabın tüm kökleri + en
+  benzer sayfa) → öğrenciye otomatik tekrar kartı (K1 kabul %98,8); `olasi`/olumsuz kök → R4 `kanit_bagla` görevi.
+- Vektör servisleri CPU kotalı (bge 2 CPU): ilk kurulum uzun (dizin 40 dk, sayfalar ~35 dk); önbellek
+  `meds_temp/kroki/vektor_onbellek.sqlite` silinmemeli.
+- Kurul 1 dahil çalışır: yalnız OKUR ve kendi `l0/`, `l1/` klasörlerine yazar (içerik dosyalarına dokunmaz).
+- Tuzaklar: sayfa izi her yerde aynı girdiden (`l0.metin_izi`: sözcükler `sort=True`) — farklı metin kaynağı aynı PDF'i bile
+  "yeni" gösterir; `find_tables` süs kutularını tablo sanar (ölçüt şart); fotoğraf OCR'ı harf yığını üretir (`ocr_anlamli`);
+  sayfa dışı (negatif koordinat) çizimler ok değildir; dikdörtgen köşesi ⊣ sanılmasın (bağımsız çubuk şartı).
+
+## 17. Gölge kipi ve görev devri (R3 + R4, 2026-10-23)
+- **Gölge (`golge` aşaması, `otomasyon/golge.py`):** her gece küçük, belirlenimci örneklemlerle (tarih tohumlu; Kurul 1
+  salt okunur, çıktılar `meds_temp/`) görevleri yalnız ücretsiz katmanda koşar; kayıt `meds_temp/golge/<gün>.jsonl`, özet
+  `meds_temp/golge/ozet.json` (son 30 gün: kapı oranı, tur, bağımsız denetim, referans uyumu, modeller). Eşik
+  (`gorevler.json` → `gecis_esigi`, varsayılan ≥30 örnek, kapı %95, denetim %90, referans %95) aşılınca görev
+  "GEÇİŞE HAZIR" görünür — **öneridir**; Claude zincirindeki bir adımın bu göreve devri kullanıcı kararıdır.
+  Referanslar: `kanit_bagla` → örnek sorunun elle konan kanıt sayfası; `som_sec` → k1-03 s16 elle doğrulanmış 5 sorgu.
+- **Görev modu:** `gorevler.json` → `mod: aktif|golge`. `aktif` görev gece politikasıyla gerçek veriye uygulanır.
+- **Gece politikası (`gorev_gece` aşaması, `otomasyon/llm/gece.py --parti 20`):** şimdilik `kanit_bagla`: Kurul 2+ derslerinin
+  olası/bağsız kanıtları 6'lık partilerle; geçen sorular uygulanır, hatalılar (≤ yarısı) partiden düşer ve sonraki
+  gece yeniden sorulur (kısmi kabul). Kurul 1 yalnız `--k1`. Kod 4/5 = kota; kalan sonraki gece.
+- **Model kararları kalıcı:** `l1/kanit_model.json` (PDF karmasıyla); `kanit.py` yeniden koşunca kararları yeniden uygular,
+  PDF değişince yok sayar. Tekrar kartı model kararında da yalnız cevabın TÜM kökleri birimdeyse (olumsuz kökte hiç).
+- **Görsel görev `som_sec`:** yalnız Gemini görsel (`cloud_llm.vision_ocr(..., mime=)`) ya da elle; Claude araçsız
+  çağrıda görüntü görmez. Seçim `l1/som_secim.json`. Model "yok" derse çizim yedek kipe (halka) düşer.
+- Yeni görev eklerken `sinama_ornekleri(meta)` (paket veriden kuruluyorsa) ya da `sinama/ornekler.json` (sabit) zorunlu.
+
+## 18. Önem listesi ve soru çözücü görev yolu (R4, 2026-10-23)
+- **Görevler:** `onem_listesi` (sayfa grubu başına: ≤10 sayfa / ≤2.600 sözcük; hedef madde/örnek/zorluk ders düzeyinden
+  belirlenimci paylaşılır) ve `cozucu_sorusu` (4'lük parti; soru kümesi resmî `cozucu_dogrula.beklenen` ile aynı).
+  Model alıntı metnini değil satır etiketini (L12) seçer; soru/şık/anahtarı çözücüde betik kopyalar.
+- **Kapı:** resmî `onem_dogrula.py` / `cozucu_dogrula.py` parçaya uygulanır (ders düzeyi kurallar birleştirmede) + ek betik
+  kapıları: bağlı çıkmış maddeyle ÇÖZÜLEBİLMELİ (doğru cevabın kökü detayda; olumsuz kökte öteki şıklardan ≥2'si),
+  parça özetinde "sayfa/parça" yok. Pakette dersin TÜM çıkmışları etiketli (örnek soru hiçbiriyle aynı bilgiyi sormasın).
+- **Birleştirme `otomasyon/llm/spot_birlestir.py onem|cozucu W kod`:** puan bantları (modelin sırası korunur), doğru harf
+  dengesi (şık yer değiştirme), örnek üst sınırı, çıkmış–çıkmış tekrarının `tekrar:<id>` ile elenmesi, başlık/özet/"neden
+  önemli"; resmî doğrulayıcı 0 HATA değilse hedef dosya değişmez. Çözücüde `sorunlu` işaretli soru önem listesinden de çıkar.
+- **Yürütücü `otomasyon/llm/spot_zinciri.py onem|cozucu W kod [--golge] [--katman Ü]`.** Ders zinciri `gorevler.json` →
+  `mod`: `aktif` = adım görev yoluyla; `golge` (varsayılan) = Claude adımı + aynı adım ücretsiz katmanda `W/_golge/`
+  aynasında, kıyas `meds_temp/golge/<gün>.jsonl` (`zincir_onem`: madde sayısı, çıkmış karar uyumu). Geçiş kullanıcı kararı.
+- Ölçüm (K1 e07 Sifiliz, sınama klasörü, canlıya yazılmadı):
+  - önem, ilk kapılarla: 2 parça yalnız Ü (7 çağrı, ~10 dk), birleşik liste resmî kapıdan 0 HATA (22 madde, 16 örnek);
+  - önem, çözülebilirlik + tekrar kapılarıyla: Ü son 1–4 hatayı kapatamadı, Claude yedeği 3 çağrıyla bitirdi → 0 HATA
+    (23 madde, 13 bağlı / 4 elenen çıkmış). Claude'un K1 listesiyle çıkmış karar uyumu 12/17; "PDF dışı" kararları iki
+    Claude koşusu arasında da değişiyor (sınırda kararlar);
+  - çözücü: 32 soru, 12 parti, 25 Ü çağrısı (~31 dk), Claude 0, resmî kapı 0 HATA. Kapıdan geçen ama yargı gerektiren
+    kusurlar görüldü (yazım hatası, eşanlamlıyla sızan ipucu, "sınavlarda sıkça" genellemesi) → zincirin Claude bağımsız
+    denetim adımı korunur.
+- Yönlendirici düzeltme turu artık o ana kadarki EN İYİ cevabın üstüne ister (tam yeniden yazımda 1 → 7 hata gerilemesi görüldü).
+- Öz-sınama: `sinama/veri/spot/` (e07 girdileri + altın parça/çözücü) — `onem_listesi`, `cozucu_sorusu` dahil 7 görev 0 HATA.
+
+### 18.1 Kurul 2 provası ve kapasite (2026-10-23)
+- Prova: `nice .venv-ocr/bin/python -u otomasyon/prova.py --is <yayın işi> --gorev --sesli --ses-yok` (Claude'suz; çıktı
+  `meds_temp/spot_cozucu/provak2`, yeniden koşmadan önce klasörü `meds_temp/prova/`'ya taşı). Sonuçlar ve kapasite:
+  `ICERIK_MOTORU_V3.md` §20. Ücretsiz katman ≈ günde 2 ders; kota dolunca iş "hazır" kalır, ertesi koşu önbellekten sürer.
+- Ortak kapılar (her görev, `yonlendir.kapi`): görev `dogrula` + iç etiket sızıntısı + Türkçe harf kaybı; ses alanları
+  `cekirdek.ses_onar` ile betikle onarılır. Kabul edilmiş iş yeniden kullanılırken güncel kapılardan yeniden geçer.
+- Ücretsiz zincir: Gemini → Groq → OpenRouter (Nemotron 3 Ultra, Gemma 4 31B); Zen kapalı (`MEDS_CLOUD_ZEN=1`).
+
+### 18.2 Ajan katmanı (2026-10-24, kullanıcı kararı)
+- LLM gerektiren görevleri yalnız **OpenCode CLI** (`/opt/OpenCode/resources/opencode-cli run --agent plan`, ücretsiz DeepSeek
+  ve GLM) yürütür; OpenCode yetmezse (limit, hata, kapı geçilemedi) bu makinede **yerel Claude** (`claude -p`, 12/gün).
+  Doğrudan API zinciri ve Command Code/Antigravity kapalı. Ayar `otomasyon/llm/butce.json`, ayrıntı `ICERIK_MOTORU_V3.md` §21.
+- Denetim ders başına toplu; düzeltme turu yalnız hatalı ögeleri gönderir.
+- **Profiller (2026-10-24):** `python3 meds/otomasyon/gorev.py profil [ad]` — karma | opencode | antigravity | claude |
+  commandcode | oturum. `oturum`: hat paketleri kuyruğa yazıp bekler, bir Claude Code oturumu `/kuyruk` ile çözer
+  (`ICERIK_MOTORU_V3.md` §21.1–21.2).

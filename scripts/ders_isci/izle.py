@@ -140,7 +140,9 @@ def _kuyruga_al(liste: dict, otomatik: bool, zorla: set) -> int:
     from checklist import olustur  # noqa: E402
     kayit = oku(KAYIT, {})
     kuyruk = oku(KUYRUK, [])
-    bekleyen = {j["sha256"] for j in kuyruk if j["durum"] in ("bekliyor", "isleniyor", "taslak")}
+    bekleyen = {j["sha256"] for j in kuyruk if j["durum"] in ("bekliyor", "isleniyor", "taslak", "onay_bekliyor")}
+    onay = ayar().get("onay_iste", True)
+    yeni_onay = []
     yeni = 0
     for p in pdfler():
         if "ders programı" in p["yol"].lower():
@@ -161,16 +163,33 @@ def _kuyruga_al(liste: dict, otomatik: bool, zorla: set) -> int:
             kayit.setdefault(p["sha256"], {"durum": "kapsanmis", "yol": p["yol"], "zaman": time.time()})
             continue
         uyari = "dosya adında eski yıl işareti var" if yil_sinifi(p["yol"], IZLENEN_KOK) == "gecmis" else ""
+        # onay kapısı (2026-10-24): taramada gelen PDF hemen işlenmez; yönetici not/ses ekleyip ya da yalnız PDF ile başlatır.
+        # Panelden elle kuyruğa alınan (zorla) PDF zaten yönetici kararıdır → doğrudan bekliyor.
+        durum = "onay_bekliyor" if onay and p["yol"] not in zorla else "bekliyor"
         kuyruk.append({"is_id": is_id(p["yol"], p["sha256"]), "yol": p["yol"], "tam": p["tam"], "sha256": p["sha256"],
-                       "yil": "bu_yil", "uyari": uyari, "durum": "bekliyor", "eklendi": time.time(), "deneme": 0,
+                       "yil": "bu_yil", "uyari": uyari, "durum": durum, "eklendi": time.time(), "deneme": 0,
                        "konular": eksik})
         kayit.pop(p["sha256"], None)
         yeni += 1
-        log(f"kuyruğa alındı: {p['yol']} → " + ", ".join(f"{k['konu']} (s.{k.get('sayfa_bas')}–{k.get('sayfa_bit')})" for k in eksik))
+        if durum == "onay_bekliyor":
+            yeni_onay.append(kuyruk[-1])
+        log(f"kuyruğa alındı ({durum}): {p['yol']} → " + ", ".join(f"{k['konu']} (s.{k.get('sayfa_bas')}–{k.get('sayfa_bit')})" for k in eksik))
     yaz(KAYIT, kayit)
     yaz(KUYRUK, kuyruk)
+    for j in yeni_onay:
+        onay_bildir(j)
     olustur()  # kuyruk değişti: checklist + rapor güncel kalsın
     return yeni
+
+
+def onay_bildir(j: dict) -> None:
+    """Yöneticinin telefonuna (Web Push, triggerAdminNotification) "yeni PDF onay bekliyor" — bağlantı onay kartına gider."""
+    from isle import bildir  # noqa: E402
+    ad = j["yol"].split("/")[-1]
+    konular = ", ".join(k["konu"] for k in j.get("konular") or [])[:300]
+    bildir(f"Yeni ders PDF'i onay bekliyor: {ad}",
+           f"Konu: {konular or '—'}\nÖğrenci notu ya da ders ses kaydı ekleyip başlatabilir ya da yalnız PDF ile başlatabilirsiniz.",
+           j["is_id"], link=f"/manage/yeni-dersler?onay={j['is_id']}")
 
 
 def bugun_islenen() -> int:

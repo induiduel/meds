@@ -1,0 +1,474 @@
+{
+ "surum": 1,
+ "kod": "e07",
+ "parca": 0,
+ "sayfa": [
+  1,
+  10
+ ],
+ "maddeler": [
+  {
+   "id": "e07-01",
+   "puan": 98,
+   "baslik": "Primer sifilizde şankr",
+   "bilgi": "Primer sifilizin lezyonu olan **şankr** ağrısız bir ülserdir ve **bulaştırıcıdır**.",
+   "alt": [
+    "Şankr yaklaşık 1 ay içinde iyileşir",
+    "Ağrısız ülser primer sifilizi düşündürür"
+   ],
+   "tur": "karakteristik",
+   "alinti": [
+    {
+     "sayfa": 8,
+     "metin": "• Yaklaşık 3 hafta inkübasyon sonrası şankr (ağrısız ülser) → bulaştırıcı"
+    }
+   ],
+   "_alinti_L": [
+    "L79"
+   ],
+   "neden": "Şankrın bulaştırıcılığı 2020-2021 ve 2021-2022'de, ağrısız ülser vakası 2019-2020 ve 2021-2022'de soruldu.",
+   "detay": "- **Lezyon:** Primer sifilizin lezyonu şankrdır. Şankr ağrısız bir ülserdir.\n- **Bulaştırıcılık:** Şankr bulaştırıcıdır. Enfekte lezyonlara doğrudan temas, hastalığın temel bulaş yoludur. Bu yüzden \"şankr bulaştırıcı değildir\" ifadesi yanlıştır.\n- **Seyir:** Tedavi edilmese de şankr yaklaşık 1 ay içinde kendiliğinden iyileşir.\n- **Eşlik eden bulgu:** Şankrdan yaklaşık 1 hafta sonra bölgesel lenfadenopati (LAP) gelişebilir. Bu LAP da ağrısızdır.\n- **Vakada tanı:** Peniste tek ve ağrısız bir ülser görüldüğünde, özellikle lenfadenopati henüz yokken, öncelikle primer sifiliz düşünülmelidir.",
+   "cikmis": [
+    "k1-2021-2022-q013",
+    "k1-2019-2020-q005",
+    "k1-2021-2022-q020"
+   ],
+   "ornek": [
+    {
+     "kok": "Tedavi edilmeyen primer sifilizde şankr yaklaşık ne kadar sürede iyileşir?",
+     "secenekler": {
+      "A": "1 hafta",
+      "B": "3 hafta",
+      "C": "1 ay",
+      "D": "6 ay",
+      "E": "24 hafta"
+     },
+     "dogru": "C",
+     "zorluk": "orta",
+     "aciklama": "Şankr yaklaşık 1 ay içinde iyileşir. 1 hafta, bölgesel lenfadenopatinin şankrdan sonra ortaya çıktığı süredir. 3 hafta ise ortalama inkübasyon süresidir.",
+     "sayfa": [
+      8
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e07-02",
+   "puan": 94,
+   "baslik": "Sifilizin bulaş yolları",
+   "bilgi": "Sifiliz, şankr ve kondiloma lata gibi **enfekte lezyonlara doğrudan temasla**, cinsel yolla ve **transplasental** yolla bulaşır.",
+   "alt": [
+    "Doğum sırasında da bulaşabilir",
+    "Kan transfüzyonuyla bulaşabilir",
+    "Perkütan yaralanmayla bulaşabilir"
+   ],
+   "tur": "siniflama",
+   "alinti": [
+    {
+     "sayfa": 5,
+     "metin": "• Enfekte lezyonlara direk temas (şankr, kondiloma lata) - Cinsel ilişki • Transplasental veya doğum sırasında"
+    }
+   ],
+   "_alinti_L": [
+    "L36",
+    "L37",
+    "L38"
+   ],
+   "neden": "2019-2020 ve 2023-2024 yıllarında bulaş yolları \"hangisi yanlıştır\" biçiminde soruldu.",
+   "detay": "- **Doğrudan temas:** Şankr ve kondiloma lata gibi enfekte lezyonlara doğrudan temasla bulaşır. Bu temas en çok cinsel ilişki sırasında olur.\n- **Anneden bebeğe:** Transplasental yolla ya da doğum sırasında bulaşır.\n- **Kan yoluyla:** Kan transfüzyonuyla bulaşabilir.\n- **Perkütan yaralanma:** İğne batması gibi deriyi delen yaralanmalarla bulaşabilir.\n- **Sınav tuzağı:** Bulaş yolları yalnız bu beş başlıktan oluşur. Damlacık ya da solunum yolu aralarında yer almaz. Bu nedenle \"damlacık yoluyla bulaşır\" ifadesi yanlıştır.",
+   "cikmis": [
+    "k1-2023-2024-q009"
+   ],
+   "ornek": []
+  },
+  {
+   "id": "e07-03",
+   "puan": 92,
+   "baslik": "Primer sifilizde bölgesel LAP",
+   "bilgi": "Primer sifilizde şankrdan 1 hafta sonra **ağrısız bölgesel LAP** gelişir; LAP şankrdan **daha uzun süre** sürebilir.",
+   "alt": [
+    "Şankr yaklaşık 1 ay içinde iyileşir",
+    "LAP iyileşmeden kalabilir"
+   ],
+   "tur": "karakteristik",
+   "alinti": [
+    {
+     "sayfa": 8,
+     "metin": "• Şankrdan 1 hafta sonra ağrısız bölgesel LAP • Yaklaşık 1 ay içinde şankr iyileşir • LAP daha uzun süre sebat edebilir"
+    }
+   ],
+   "_alinti_L": [
+    "L80",
+    "L81",
+    "L82"
+   ],
+   "neden": "2019-2020'de primer sifilizde bölgesel lenf nodlarının ağrısız olması doğru seçenek olarak soruldu.",
+   "detay": "- **Zamanlama:** Bölgesel lenfadenopati (LAP), şankr çıktıktan yaklaşık 1 hafta sonra gelişir.\n- **Ağrı:** Hem şankr hem de bölgesel LAP ağrısızdır. Bu nedenle \"primer sifilizde bölgesel lenf nodları ağrısızdır\" ifadesi doğrudur.\n- **Süre:** Şankr yaklaşık 1 ay içinde iyileşir. LAP ise daha uzun süre kalabilir. Ülser kapandıktan sonra lenfadenopatinin sürmesi, primer sifilizin olağan seyridir.\n- **Ayırt etme:** Bu tabloda görülen ülser şankrdır. Kondiloma lata ve yaygın döküntü sekonder sifilizde görülür.",
+   "cikmis": [
+    "k1-2019-2020-q067"
+   ],
+   "ornek": [
+    {
+     "kok": "Peniste ağrısız ülser gelişen hastada bir hafta sonra kasıkta ağrısız LAP çıkıyor; ülser bir ay içinde iyileşirken LAP sürüyor. En uygun yorum hangisidir?",
+     "secenekler": {
+      "A": "Primer sifilizin olağan seyri",
+      "B": "Sekonder sifilize geçiş",
+      "C": "Geç latent sifiliz",
+      "D": "Kondiloma lata gelişimi",
+      "E": "Tersiyer sifiliz başlangıcı"
+     },
+     "dogru": "A",
+     "zorluk": "zor",
+     "aciklama": "Primer sifilizde şankrdan 1 hafta sonra ağrısız bölgesel LAP gelişir. Şankr 1 ay içinde iyileşirken LAP daha uzun süre kalabilir. Sekonder sifiliz düşünmek için cilt ya da mukoza lezyonları gerekir, bu hastada ise yalnız lenfadenopati vardır.",
+     "sayfa": [
+      8
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e07-04",
+   "puan": 90,
+   "baslik": "Sekonder sifilizin cilt lezyonları",
+   "bilgi": "Sekonder sifilizin tipik cilt lezyonları **kaşıntısız, simetrik, bilateral ve yaygındır**; **el ve ayak tabanı** döküntüsünde sifiliz özellikle düşünülmelidir.",
+   "alt": [
+    "Ağız, farinks, larinks ve vulvada eritemli gri-beyaz lezyonlar görülür"
+   ],
+   "tur": "karakteristik",
+   "alinti": [
+    {
+     "sayfa": 9,
+     "metin": "- Tipik cilt lezyonları kaşıntısız, simetrik, bilateral ve yaygın - Ağız, farinks, larinks, vulvada eritemli gri-beyaz lezyonlar - El ve ayak tabanı döküntüleri sifiliz özellikle düşünülmeli"
+    }
+   ],
+   "_alinti_L": [
+    "L89",
+    "L90",
+    "L91"
+   ],
+   "neden": "2023-2024'te el ayası ve ayak tabanı tutulumu doğru seçenek olarak soruldu.",
+   "detay": "- **Cilt lezyonlarının özellikleri:** Tipik lezyonlar kaşıntısızdır. Simetrik, iki taraflı (bilateral) ve yaygın dağılım gösterirler.\n- **Görünüm:** Maküler, makülopapüler, püstüler ya da psoriatik olabilirler.\n- **El ve ayak tabanı:** Avuç içi ve ayak tabanında döküntü görüldüğünde özellikle sifiliz düşünülmelidir. Bu tutulum sekonder sifilizin sık görülen ve tanıyı yönlendiren bulgusudur.\n- **Mukoza tutulumu:** Ağız, farinks, larinks ve vulvada eritemli, gri-beyaz lezyonlar görülür.\n- **Sınav tuzağı:** Tek taraflı ya da kaşıntılı lezyon tanımları, sekonder sifilizin tipik tablosuna uymaz.",
+   "cikmis": [
+    "84eda84539cb"
+   ],
+   "ornek": [
+    {
+     "kok": "Sekonder sifilizin tipik cilt lezyonları için aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kaşıntısızdır",
+      "B": "Simetriktir",
+      "C": "Tek taraflıdır",
+      "D": "Yaygındır",
+      "E": "Psoriatik görünümde olabilir"
+     },
+     "dogru": "C",
+     "zorluk": "orta",
+     "aciklama": "Tipik lezyonlar bilateral, yani iki taraflıdır. Bu nedenle \"tek taraflıdır\" ifadesi yanlıştır. Kaşıntısız olması da tipik bir özelliktir. Bu yüzden A doğru bir ifadedir ve sorunun cevabı olamaz.",
+     "sayfa": [
+      9,
+      10
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e07-05",
+   "puan": 85,
+   "baslik": "Kondiloma lata",
+   "bilgi": "Sekonder sifilizde vulva, skrotum, perine ve meme altında görülen gri-beyaz lezyonlar **kondiloma lata**dır ve **bulaştırıcıdır**.",
+   "alt": [
+    "Maküler, papüler ya da verrüköz olabilir"
+   ],
+   "tur": "tuzak",
+   "alinti": [
+    {
+     "sayfa": 9,
+     "metin": "- Vulva, skrotum, perine, meme altında gri-beyaz maküler, papüler veya verrüköz lezyonlar (kondiloma lata) → bulaştırıcı"
+    }
+   ],
+   "_alinti_L": [
+    "L92",
+    "L93"
+   ],
+   "neden": "2019-2020'de mukokutanöz lezyonların bulaştırıcılığı, 2023-2024'te kondiloma lata ile kondiloma akuminata karışıklığı çeldirici olarak soruldu.",
+   "detay": "- **Yerleşim:** Vulva, skrotum, perine ve meme altı gibi nemli bölgelerde görülür.\n- **Görünüm:** Gri-beyaz renkli maküler, papüler ya da verrüköz lezyonlardır.\n- **Bulaştırıcılık:** Kondiloma lata bulaştırıcıdır. Şankr ile birlikte, doğrudan temasla bulaşa neden olan lezyonlar arasında sayılır. Bu nedenle \"sekonder sifilizin mukokutanöz lezyonları bulaşıcı değildir\" ifadesi yanlıştır.\n- **Sınav tuzağı:** Sekonder sifilizde anogenital bölgede görülen lezyonun adı kondiloma latadır. Kondiloma akuminata (anogenital siğil) farklı bir hastalıktır. Bu ikisini karıştıran seçenek yanlıştır.",
+   "cikmis": [
+    "84eda84539cb",
+    "k1-2019-2020-q067"
+   ],
+   "ornek": []
+  },
+  {
+   "id": "e07-06",
+   "puan": 82,
+   "baslik": "Sekonder sifilizin zamanı ve en sık bulgusu",
+   "bilgi": "**Sekonder sifiliz** genellikle şankrdan 2-8 hafta sonra başlar; en sık **cilt lezyonları** görülür.",
+   "alt": [
+    "Başlangıç 24 haftaya kadar uzayabilir",
+    "Lezyonlar maküler, makülopapüler, püstüler ya da psoriatik olabilir"
+   ],
+   "tur": "en_sik",
+   "alinti": [
+    {
+     "sayfa": 9,
+     "metin": "• Genellikle şankr oluşumundan 2-8 hafta sonra (24 haftaya kadar uzayabilir) • En sık cilt lezyonları görülür (maküler, makülopapüler, püstüler, psoriatik)"
+    }
+   ],
+   "_alinti_L": [
+    "L86",
+    "L87"
+   ],
+   "neden": "Slaytta sekonder sifilizde \"en sık\" görülen bulgu olarak cilt lezyonları vurgulanmıştır.",
+   "detay": "- **Başlangıç zamanı:** Sekonder sifiliz genellikle şankr çıktıktan 2-8 hafta sonra başlar. Bu süre 24 haftaya kadar uzayabilir.\n- **En sık bulgu:** Bu evrede en sık cilt lezyonları görülür. Lezyonlar maküler, makülopapüler, püstüler ya da psoriatik olabilir.\n- **Diğer tutulumlar:** Cilt lezyonlarının yanında mukoza da tutulur. Ağız, farinks, larinks ve vulvada lezyonlar görülebilir.\n- **Ayırt etme:** Lenfadenopati primer evrenin bulgusudur. Kardiyovasküler tutulum ise tersiyer evrede görülür. Bu iki bulgu sekonder sifilizin en sık bulgusu değildir.",
+   "cikmis": [],
+   "ornek": [
+    {
+     "kok": "Sekonder sifilizde en sık görülen tutulum hangisidir?",
+     "secenekler": {
+      "A": "Cilt lezyonları",
+      "B": "Mukoza lezyonları",
+      "C": "Bölgesel lenfadenopati",
+      "D": "Kemik tutulumu",
+      "E": "Kardiyovasküler tutulum"
+     },
+     "dogru": "A",
+     "zorluk": "kolay",
+     "aciklama": "Sekonder sifilizde en sık cilt lezyonları görülür. Mukoza tutulumu da bu evrede görülür, ancak en sık bulgu cilt lezyonlarıdır.",
+     "sayfa": [
+      9
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e07-07",
+   "puan": 75,
+   "baslik": "Patogenez ve inkübasyon süresi",
+   "bilgi": "Treponema **damar endotellerinde çoğalır**; sifilizin **inkübasyon süresi** 3-90 gün, genellikle 3 haftadır.",
+   "alt": [
+    "Mukoza ya da bütünlüğü bozulmuş ciltten girer",
+    "Kan ve lenf yoluyla tüm vücuda yayılır"
+   ],
+   "tur": "sayi",
+   "alinti": [
+    {
+     "sayfa": 6,
+     "metin": "• Damar endotellerinde çoğalır, perivasküler hücrelere girer • İnkübasyon süresi: 3-90 gün (genellikle 3 hafta)"
+    }
+   ],
+   "_alinti_L": [
+    "L45",
+    "L46"
+   ],
+   "neden": "Slaytta inkübasyon süresi aralık ve tipik değer olarak verilmiştir; sayı soruları için klasik bir konudur.",
+   "detay": "- **Giriş:** Etken vücuda mukozal yüzeyden ya da bütünlüğü bozulmuş ciltten girer.\n- **Yerel çoğalma:** Önce giriş yerinde çoğalır.\n- **Yayılım:** Ardından kan ve lenf yoluyla tüm vücuda yayılır.\n- **Hedef doku:** Damar endotellerinde çoğalır ve perivasküler hücrelere girer.\n- **İnkübasyon süresi:** 3-90 gün arasında değişir, genellikle 3 haftadır. Şankr da yaklaşık 3 haftalık inkübasyondan sonra ortaya çıkar.\n- **Sınav tuzağı:** 1 hafta, şankrdan sonra lenfadenopatinin gelişme süresidir. 90 gün ise inkübasyonun üst sınırıdır, tipik süre değildir.",
+   "cikmis": [],
+   "ornek": [
+    {
+     "kok": "Sifilizde inkübasyon süresi genellikle ne kadardır?",
+     "secenekler": {
+      "A": "3 gün",
+      "B": "1 hafta",
+      "C": "3 hafta",
+      "D": "90 gün",
+      "E": "6 ay"
+     },
+     "dogru": "C",
+     "zorluk": "kolay",
+     "aciklama": "İnkübasyon süresi 3-90 gün arasında değişir ve genellikle 3 haftadır. 3 gün ve 90 gün bu aralığın sınırlarıdır, tipik süre değildir.",
+     "sayfa": [
+      6
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e07-08",
+   "puan": 72,
+   "baslik": "Sifilizin evrelere göre sınıflaması",
+   "bilgi": "**Erken (infeksiyöz) sifiliz** primer, sekonder ve erken latent evreleri; **geç (non-infeksiyöz) sifiliz** geç latent ve tersiyer evreleri kapsar.",
+   "alt": [
+    "Sınıflama bulaştan sonra geçen süreye göre yapılır"
+   ],
+   "tur": "siniflama",
+   "alinti": [
+    {
+     "sayfa": 7,
+     "metin": "Erken (infeksiyöz) sifiliz 10-90 gün Primer 4 hafta - 6ay Sekonder"
+    }
+   ],
+   "_alinti_L": [
+    "L68",
+    "L69",
+    "L70"
+   ],
+   "neden": "Slaytta evreler bulaştan sonra geçen süreye göre tablo halinde verilmiştir; evre ile süre eşleştirmesi klasik bir sorudur.",
+   "detay": "- **Primer sifiliz:** Bulaştan 10-90 gün sonra görülür.\n- **Sekonder sifiliz:** Bulaştan 4 hafta ile 6 ay arasında görülür.\n- **Erken latent sifiliz:** Bulaştan sonraki ilk bir yıl içinde, bulgusuz geçen dönemdir.\n- **Erken (infeksiyöz) grup:** Primer, sekonder ve erken latent evrelerden oluşur.\n- **Geç (non-infeksiyöz) grup:** Geç latent ve tersiyer sifilizden oluşur.\n- **Latent dönemin seyri:** Latent dönem bulgusuzdur. Bu dönemden sekonder evreye geri dönüş olabilir.",
+   "cikmis": [],
+   "ornek": [
+    {
+     "kok": "Bulaştan 4 hafta ile 6 ay arasında görülen sifiliz evresi hangisidir?",
+     "secenekler": {
+      "A": "Primer sifiliz",
+      "B": "Sekonder sifiliz",
+      "C": "Erken latent sifiliz",
+      "D": "Geç latent sifiliz",
+      "E": "Tersiyer sifiliz"
+     },
+     "dogru": "B",
+     "zorluk": "orta",
+     "aciklama": "Sınıflamada 4 hafta ile 6 ay arası sekonder sifilize karşılık gelir. Primer sifiliz bulaştan 10-90 gün sonra görülür. Bu yüzden zaman aralığı primer evreyle karıştırılmamalıdır.",
+     "sayfa": [
+      7
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e07-09",
+   "puan": 65,
+   "baslik": "Tersiyer sifiliz",
+   "bilgi": "**Tersiyer sifiliz** bulaştan 3-20 yıl sonra gelişir; **gomatöz, kardiyovasküler** ve **nörosifiliz** biçimleri vardır.",
+   "alt": [
+    "Geç (non-infeksiyöz) sifiliz grubundadır"
+   ],
+   "tur": "siniflama",
+   "alinti": [
+    {
+     "sayfa": 7,
+     "metin": "3-20 yil Tersiyer *Gomatöz *Kardiyovasküler"
+    }
+   ],
+   "_alinti_L": [
+    "L74",
+    "L75",
+    "L76"
+   ],
+   "neden": "Slaytta tersiyer sifilizin üç biçimi ayrı ayrı sıralanmıştır.",
+   "detay": "- **Zaman:** Tersiyer sifiliz bulaştan 3-20 yıl sonra ortaya çıkar.\n- **Grup:** Geç (non-infeksiyöz) sifiliz grubunda yer alır. Geç latent sifiliz de aynı gruptadır.\n- **Gomatöz sifiliz:** Gom oluşumuyla seyreden biçimdir.\n- **Kardiyovasküler sifiliz:** Damar ve kalp tutulumuyla seyreden biçimdir.\n- **Nörosifiliz:** Sinir sistemi tutulumuyla seyreden biçimdir.\n- **Ayırt etme:** Bu üç biçim geç dönemin bulgusudur. Şankr ve kondiloma lata ise erken evrelerde görülür.",
+   "cikmis": [],
+   "ornek": []
+  },
+  {
+   "id": "e07-10",
+   "puan": 62,
+   "baslik": "Treponema türleri ve hastalıklar",
+   "bilgi": "**Treponema pallidum subsp. pallidum** tüm dünyada yaygın ve cinsel yolla bulaşan **veneral sifilizin** etkenidir.",
+   "alt": [
+    "subsp. pertenue: yaws",
+    "subsp. endemicum: bejel",
+    "Treponema carateum: pinta"
+   ],
+   "tur": "eslesme",
+   "alinti": [
+    {
+     "sayfa": 3,
+     "metin": "Treponema cinsi • Treponema pallidum subsp. pallidum →veneral sifiliz"
+    }
+   ],
+   "_alinti_L": [
+    "L13",
+    "L14"
+   ],
+   "neden": "Slaytta treponemal hastalıklar etken ve bulaş yoluyla birlikte listelenmiştir; etken ile hastalığın eşleştirilmesi klasik bir sorudur.",
+   "detay": "- **Veneral sifiliz:** Etkeni T. pallidum subsp. pallidum'dur. Tüm dünyada yaygındır ve cinsel yolla bulaşır.\n- **Yaws:** Etkeni T. pallidum subsp. pertenue'dir. Tropikal Asya, Afrika, Kuzey ve Güney Amerika'da görülür. Cilt temasıyla bulaşır.\n- **Bejel:** Etkeni T. pallidum subsp. endemicum'dur. Afrika ve Orta Doğu'da görülür. Cilt teması, mukozal bulaş ve kontamine yiyecek-içecek kaplarıyla bulaşır.\n- **Pinta:** Etkeni Treponema carateum'dur. Kuzey ve Güney Amerika'da görülür. Cilt temasıyla bulaşır.\n- **Sınav tuzağı:** Pinta etkeni bir pallidum alt türü değildir, ayrı bir türdür.",
+   "cikmis": [],
+   "ornek": [
+    {
+     "kok": "Aşağıdaki etken–hastalık eşleştirmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "subsp. pertenue – yaws",
+      "B": "subsp. endemicum – pinta",
+      "C": "T. carateum – bejel",
+      "D": "subsp. pallidum – yaws",
+      "E": "subsp. endemicum – veneral sifiliz"
+     },
+     "dogru": "A",
+     "zorluk": "orta",
+     "aciklama": "Yaws hastalığının etkeni T. pallidum subsp. pertenue'dir. Subsp. endemicum bejelin etkenidir, pintanın etkeni ise T. carateum'dur. Bu nedenle B ve C seçeneklerinde etkenler yer değiştirmiştir.",
+     "sayfa": [
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e07-11",
+   "puan": 60,
+   "baslik": "Spiroketlerin yapısı ve görüntülenmesi",
+   "bilgi": "Spiroketlerin duvarı **Gram negatife benzer**, ancak **Gram boyası ile iyi boyanmaz**; **karanlık alan mikroskopisi** ile görülür.",
+   "alt": [
+    "Spiral şekilli ve ince duvarlıdır",
+    "Periplazmik flajella burgu hareketi sağlar"
+   ],
+   "tur": "karakteristik",
+   "alinti": [
+    {
+     "sayfa": 2,
+     "metin": "- Gram negatif hücre ile benzer duvar yapısı - Gram boyası ile iyi boyanmaz - Karanlık alan mikroskopisi ile görülür"
+    }
+   ],
+   "_alinti_L": [
+    "L9",
+    "L10",
+    "L11"
+   ],
+   "neden": "Slaytta Gram boyası ile iyi boyanmama ve karanlık alan mikroskopisi vurgulanmıştır; bu bilgi sık kullanılan bir tuzaktır.",
+   "detay": "- **Şekil:** Spiroketler spiral şekilli ve ince duvarlı bakterilerdir.\n- **Duvar katmanları:** Duvarda sitoplazmik membran, ince peptidoglikan ve dış membran bulunur. Bu yapı Gram negatif hücreye benzer.\n- **Boyanma:** Duvar yapısı Gram negatife benzese de Gram boyası ile iyi boyanmazlar.\n- **Görüntüleme:** Bu nedenle karanlık alan mikroskopisi ile görülürler.\n- **Hareket:** Flajella periplazmik aralıkta yer alır ve bakteriye burgu hareketi kazandırır.\n- **Sınav tuzağı:** \"Gram boyası ile iyi boyanır\" ifadesi yanlıştır.",
+   "cikmis": [],
+   "ornek": [
+    {
+     "kok": "Spiroketler için aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Spiral şekillidir",
+      "B": "İnce peptidoglikan içerir",
+      "C": "Gram boyasıyla iyi boyanır",
+      "D": "Flajellası periplazmik aralıktadır",
+      "E": "Dış membran taşır"
+     },
+     "dogru": "C",
+     "zorluk": "orta",
+     "aciklama": "Spiroketler Gram negatife benzer bir duvara sahiptir, ancak Gram boyası ile iyi boyanmaz ve karanlık alan mikroskopisi ile görülür. Flajellanın periplazmik aralıkta yer alması doğru bir bilgidir ve burgu hareketini açıklar.",
+     "sayfa": [
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e07-12",
+   "puan": 50,
+   "baslik": "Primer sifilizde spiroketemi ve seyir",
+   "bilgi": "Primer sifilizde gelişen **spiroketemi** organ invazyonuna kaynak olabilir; olguların yaklaşık **3'te 2'si** iyileşir.",
+   "alt": [],
+   "tur": "mekanizma",
+   "alinti": [
+    {
+     "sayfa": 8,
+     "metin": "• Spiroketemi → organ invazyonu için kaynak olabilir • Yaklaşık 3’te 2’si iyileşir"
+    }
+   ],
+   "_alinti_L": [
+    "L83",
+    "L84"
+   ],
+   "neden": "Slaytta primer evrenin sistemik yayılım potansiyeli ve iyileşme oranı ayrıca belirtilmiştir.",
+   "detay": "- **Spiroketemi:** Primer evrede etken kana geçer. Bu spiroketemi, organların tutulmasına kaynak olabilir.\n- **Yayılımın temeli:** Etken kan ve lenf yoluyla tüm vücuda yayılır. Damar endotellerinde çoğalarak dokulara yerleşir.\n- **İyileşme oranı:** Primer sifiliz olgularının yaklaşık 3'te 2'si iyileşir.\n- **Klinik anlamı:** Şankrın kendiliğinden kapanması hastalığın bittiğini göstermez. Kana geçmiş olan etken, ileri evrelerde organ tutulumuna yol açabilir.",
+   "cikmis": [],
+   "ornek": []
+  }
+ ],
+ "elenen_cikmis": [
+  {
+   "id": "past-1790877041564-499994",
+   "neden": "tekrar:k1-2019-2020-q005",
+   "not": "Q3 ile aynı vaka kökünü ve aynı tanıyı soruyor, sayfa 8"
+  },
+  {
+   "id": "k1-2025-2026-q021",
+   "neden": "pdf_disi",
+   "not": "Latent dönemin tedavisi ve penisilin G seçimi bu bölümde yer almıyor, sayfa 7-10"
+  }
+ ],
+ "parca_ozeti": "Spiroketlerin yapısı, treponemal hastalıklar, sifilizin bulaş yolları, patogenezi, evrelere göre sınıflaması, primer sifilizde şankr ve lenfadenopati, sekonder sifilizin cilt-mukoza lezyonları ve kondiloma lata anlatılmaktadır."
+}

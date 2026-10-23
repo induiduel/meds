@@ -63,7 +63,9 @@ metin bloğu bir paragraftır), `kaynak.md`'deki `=== SAYFA n ===` numaralarıyl
 
 ## "Burası önemli" (zorunlu)
 - `cikmis_baglantilari.json`'da `ilgili: true` olan **her** çıkmış sorunun ölçtüğü bilgi (doğru şık + kökün test ettiği
-  kavram) anlatımda geçmeli ve orada **"Burası önemli"** denmeli ("Burası önemli, bu bilgi çıkmış sorularda soruldu: …").
+  kavram) anlatımda geçmeli; v2'de o cümlenin `cikmis` listesine soru kimliği ve `vurgu`suna `tur: "cikmis"` yazılır.
+  **"Burası önemli"** derste en çok `max(3, bölüm sayısı / 2)` kez, en çok sorulan çıkmışların noktasında denir
+  (`metin_denetle.py` H22 sınırı; 2026-10-23 — eski "her çıkmışta" kuralı bu sınırla çelişiyordu).
 - Destedeki yüksek önemli sınav spotları için de kullanabilirsin; her paragrafa serpiştirme.
 - Soru yılı, soru numarası ya da şık harfi okuma.
 

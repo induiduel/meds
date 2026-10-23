@@ -46,6 +46,39 @@
    "not": "deploy/pg/sql/goc/NNNN_ad.sql numaralı, yalnız ekleyen göçler; iki makinede aynı sırayla bir kez. İçerik sürümleri icerik_setleri tablosunda (0001)."
   },
   {
+   "id": "gorev_sinama",
+   "kapsam": "genel",
+   "durum": "hazir",
+   "gerekir": [
+    "saglik"
+   ],
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "komut": "python3 meds/otomasyon/gorev.py sinama",
+   "cikti": [],
+   "not": "Görev sözleşmesi öz-sınaması (ICERIK_MOTORU_V3 §14.3): paket belirlenimciliği, gidiş-dönüş, iyi örnek geçer / kötü örnekler reddedilir. Model çağırmaz; HATA = görev kapısı arızası, yönlendiricili işler o gece güvenilmez."
+  },
+  {
+   "id": "golge",
+   "kapsam": "genel",
+   "durum": "hazir",
+   "gerekir": [
+    "gorev_sinama"
+   ],
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "komut": "cd meds && nice -n 10 .venv-ocr/bin/python otomasyon/golge.py --butce 24",
+   "cikti": [
+    "meds_temp/golge/<gün>.jsonl",
+    "meds_temp/golge/ozet.json"
+   ],
+   "not": "R3 gölge kipi: ücretsiz modeller küçük örneklemlerle (K1 salt okunur) görevleri koşar; kapı, bağımsız denetim ve referans uyumu kaydedilir; gecis_esigi aşılınca görev 'geçişe hazır' (öneri, devir kullanıcı kararı)."
+  },
+  {
    "id": "drive_tarama",
    "kapsam": "genel",
    "durum": "hazir",
@@ -197,6 +230,43 @@
     "meds_database_v2/ders_bilgi/<ders>/{manifest.json,ozet.md}"
    ],
    "not": "Her PDF bir kez okunur (ders işçisi, karma değişince). Depo: bilgi paketi + önem + tablolar + hoca vurgusu + çıkmışlar → ozet.md (kod:sayfa). Yeni ürünler PDF yerine bunu okur; girdiler değişmezse yeniden üretilmez."
+  },
+  {
+   "id": "kroki",
+   "kapsam": "kurul",
+   "durum": "hazir",
+   "gerekir": [
+    "bilgi_deposu"
+   ],
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "komut": "cd meds && nice -n 10 .venv-ocr/bin/python scripts/kroki/zincir.py",
+   "cikti": [
+    "meds_database_v2/ders_bilgi/<ders>/l0/{sayfalar.json,sayfa_eslesme.json}",
+    "meds_database_v2/ders_bilgi/<ders>/l1/{tarama_plani.json,kanit.json}",
+    "meds_database_v2/cikmis_dizin/{dizin.json,vektor.npy,ters.json}",
+    "meds_temp/kroki/<ders>/som/"
+   ],
+   "not": "R1+R2 (ICERIK_MOTORU_V3 §2, §12, §15, §16): L0 kroki (sayfa izi, OCR yalnız metinsiz resim, aynı sayfa taşınır) → ok + SoM → çıkmış dizini (artımlı, yeni çıkmışın etkilediği dersler meds_temp/cikmis_dizin/degisen.json) → ders başına hedefli tarama planı → kanıt bölgeleri + tekrar listesi. Yalnız girdisi değişen adım çalışır. Model yok; bge-m3 CPU."
+  },
+  {
+   "id": "gorev_gece",
+   "kapsam": "kurul",
+   "durum": "hazir",
+   "gerekir": [
+    "kroki"
+   ],
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "komut": "cd meds && nice -n 10 .venv-ocr/bin/python otomasyon/llm/gece.py --parti 20",
+   "cikti": [
+    "meds_database_v2/ders_bilgi/<ders>/l1/{kanit_model.json,kanit.json}"
+   ],
+   "not": "R4: aktif görevler (şimdilik kanit_bagla) Kurul 2+ derslerinin bekleyen olası/bağsız kanıtlarını 6'lık partilerle modele seçtirir; kapıdan geçen uygulanır, tekrar listesi güncellenir. Kurul 1 yalnız --k1."
   },
   {
    "id": "spot_onem",
