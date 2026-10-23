@@ -1,16 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 259,
-  "baslik": "Blok özetler V2 ve Patoloji V3 tamamlandı",
+  "onem": 260,
+  "baslik": "Blok özet V2: PDF işaretleri anlama göre",
   "maddeler": [
-    "Sesli Dersler › Blok özetler sekmesine V2 eklendi (Patoloji 16–20, 21–27, 28–35): denetimden geçmiş V3 anlatımlara dayanır, konuları yarım bırakmadan, çıkmışları ve hocanın önemli maddelerini konu içinde anlatır. V1 blok özetler yerinde.",
-    "Patoloji 12. dersten itibaren 24 dersin tamamında Sınav Odaklı Anlatım (V3) yayında."
+    "Blok özet V2 derslerinde (Patoloji 16–20, 21–27, 28–35) PDF işareti artık okunan cümlenin anlattığı maddeye, tabloya ya da resme gidiyor; tablolarda ince imleç satır satır, şemalarda yapıdan yapıya geziyor."
   ],
-  "eklenen": [
-    "Sesli Dersler › Blok özetler sekmesine V2 eklendi (Patoloji 16–20, 21–27, 28–35): denetimden geçmiş V3 anlatımlara dayanır, konuları yarım bırakmadan, çıkmışları ve hocanın önemli maddelerini konu içinde anlatır. V1 blok özetler yerinde.",
-    "Patoloji 12. dersten itibaren 24 dersin tamamında Sınav Odaklı Anlatım (V3) yayında."
+  "eklenen": [],
+  "degisen": [
+    "Blok özet V2 derslerinde (Patoloji 16–20, 21–27, 28–35) PDF işareti artık okunan cümlenin anlattığı maddeye, tabloya ya da resme gidiyor; tablolarda ince imleç satır satır, şemalarda yapıdan yapıya geziyor."
   ],
-  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }
