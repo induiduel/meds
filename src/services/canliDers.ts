@@ -91,8 +91,8 @@ function bransBilgisi(d: Ders): { brans: string; bransNo: number | string; kurul
   const modul = MODUL_DERS[d.key] || (sp ? [SON_PROVA_BRANS[sp[1]] || slugBrans(sp[1]) || 'Son Prova', `Son Prova${sp[2] ? ` ${sp[2]}` : ''}`] as [string, string] : undefined);
   if (modul) return { brans: modul[0], bransNo: modul[1], kurul };
   // Blok özet (k1-95-blok-ozet-patoloji-1): birkaç dersi tek sesli derste anlatır; liste sayfasında ayrı sekme
-  const bo = /^k\d+-\d+-blok-ozet-([a-z-]+?)(?:-(\d+))?$/.exec(d.key);
-  if (bo) return { brans: SON_PROVA_BRANS[bo[1]] || slugBrans(bo[1]) || 'Blok özet', bransNo: `Blok özet${bo[2] ? ` ${bo[2]}` : ''}`, kurul };
+  const bo = /^k\d+-\d+-blok-ozet-([a-z-]+?)(?:-(\d+))?(?:-v(\d+))?$/.exec(d.key);
+  if (bo) return { brans: SON_PROVA_BRANS[bo[1]] || slugBrans(bo[1]) || 'Blok özet', bransNo: `Blok özet${bo[2] ? ` ${bo[2]}` : ''}${bo[3] ? ` · V${bo[3]}` : ''}`, kurul };
   // Kurul 2+: branş ve branş içi numara YALNIZ ders kayıt defterinden (kod "2n07" → 7). Drive dosya adındaki "33)"
   // numarası çakışabiliyor (Kurul 1: Meme Kanseri ile Memenin Benign ikisi de 33) — KURUL2_YAPILMAYACAK_HATALAR H16.
   const dk = /^k([2-6])-(\d{2})/.exec(d.key);
