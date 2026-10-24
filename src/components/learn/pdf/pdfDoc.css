@@ -335,6 +335,7 @@ ol.pdv-sb-liste { list-style-type: decimal; } ul.pdv-sb-liste { list-style-type:
 .pdv-sb-maske-satir.is-alt .pdv-sb-maske-ogeler { filter: blur(.25em); opacity: .35; transition: filter .6s ease-out, opacity .6s ease-out; }
 .pdv-sb-maske-satir.is-alt.is-acik .pdv-sb-maske-ogeler { filter: none; opacity: 1; }
 @media (prefers-reduced-motion: reduce) { .pdv-sb-maske-satir.is-alt .pdv-sb-maske-ogeler { transition: none; } }
+.pdv-cz path.pdv-cz-etiket-bag { stroke: #0f172a; stroke-width: 1.4; stroke-dasharray: 4 3; opacity: .75; fill: none; animation: pdv-cz-gel .3s ease-out both; }
 @keyframes pdv-cz-uza-d { from { transform: scaleY(0); } to { transform: scaleY(1); } }
 @keyframes pdv-cz-uza { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 /* grup / dal: liste alt alta, "}" (dalda "{") ayracı */

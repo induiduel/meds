@@ -54,6 +54,9 @@ export interface CizimKomut {
   /** dallı ok: aynı kaynaktan çıkan dalların grubu, sırası, sayısı */
   dal?: { g: string; i: number; n: number };
   etiket_konum?: number[];
+  /** etiket hedefinden uzaksa bağlantı çizgisinin hedef ucu ve etiketin yüksekliği (sayfa oranı) */
+  etiket_hedef?: number[];
+  etiket_boy?: number;
   etiket_genislik?: number;
   konum?: number[];
   genislik?: number;
@@ -114,6 +117,16 @@ function yolNokta(y: number[][], u: number): number[] {
     kalan -= seg[i];
   }
   return y[y.length - 1];
+}
+
+/** Etiket hedefinden uzakta kaldıysa: etiketin en yakın kenarından hedefe ince kesikli bağlantı (hangi çizime ait belli olsun) */
+function EtiketBag({ z }: { z: CizimKomut }) {
+  if (!z.etiket_hedef || !z.etiket_konum) return null;
+  const [x0, y0] = z.etiket_konum;
+  const x1 = x0 + (z.etiket_genislik || 0.3), y1 = y0 + (z.etiket_boy || 0.04);
+  const [hx, hy] = z.etiket_hedef;
+  const bx = Math.min(Math.max(hx, x0), x1), by = Math.min(Math.max(hy, y0), y1);
+  return <path d={`M${P([bx, by])} L${P([hx, hy])}`} className="pdv-cz-etiket-bag" vectorEffect="non-scaling-stroke" />;
 }
 
 function Komut({ z, t }: { z: CizimKomut; t: number }) {
@@ -474,7 +487,7 @@ export const CizimLayer = memo(function CizimLayer({ z, useChar }: { z: CizimKom
             // dallı okta dallar konuşma aralığını paylaşır: i. dal kendi diliminde çizilir (kaynak → 1. hedef → 2. hedef …)
             const t0 = ilerleme(x, c);
             const t = x.dal && t0 >= 0 && x.dal.i > 0 ? (t0 * x.dal.n - x.dal.i < 0 ? -1 : Math.min(1, t0 * x.dal.n - x.dal.i)) : x.dal && t0 > 0 ? Math.min(1, t0 * x.dal.n) : t0;
-            return t < 0 ? null : <Komut key={i} z={x} t={t} />;
+            return t < 0 ? null : <g key={i}><Komut z={x} t={t} />{t >= 1 && <EtiketBag z={x} />}</g>;
           })}
         </svg>
       )}

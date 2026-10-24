@@ -72,6 +72,12 @@ Betik her panel için sürümleri öncelik sırasıyla dener ve slaytın boşlu�
   kenar rengi). Sayfanın ek panelleri aynı yeri paylaşır (her panel yalnız kendi cümlesinde görünür). Sayfa kutusu ve
   işaret koordinatları değişmez; "Şu an anlatılan" çerçevesi ek alanı da sarar; gece kipinde ek alan da tersine döner.
 
+## 5b. Etiket ve mevcut ok (H52)
+
+- Etiket hedefinin (odak çerçevesi, boyalı bölge, ok ucu) hemen sağına/soluna/üstüne/altına konur; boşluk 0,02'den büyükse
+  etiketten hedefe ince kesikli bağlantı çizilir.
+- PDF'te zaten çizili ok (vektör aday ya da a→b boyunca çizili hat) yeniden çizilmez; çerçevelenip etiketlenir.
+
 ## 6. Görünürlük ve anlam
 
 - Her çizgi beyaz hale üstünde 2,4 px tam opak. Ok etiketsiz çizilmez. Okun başlangıcı (kaynak kutusu ya da halkalı

@@ -316,3 +316,9 @@ Ayrıntı: **`meds/docs/ICERIK_MOTORU_V3.md`**. Özet:
 - **Kalite (§17):** SoM, makro harita → pencereli anlatım, sıfır kayıp kapsam denetimi, çeldirici, ok açılımı (yalnız PDF mekanizması).
 - **R0 kuruldu (2026-10-23):** `otomasyon/gorev.py` (El kitabı §15). **R1 + R2 ve R3 + R4'ün ilk görevleri (kanit_bagla, som_sec, gölge) kuruldu (aynı gün):** `scripts/kroki/`, `scripts/cikmis_dizin/`, gece aşaması `kroki` (El kitabı §16; K1 ölçümleri ICERIK_MOTORU_V3 §10). Sıra: R0 sözleşme → R1 L0 + betikler, R2 hedefli çıkmış + kanıt (paralel) → R3 gölge kipi → R4 görev görev geçiş →
   R5 L1 akışları + delta → R6 ses/çizim/öğrenci özellikleri → R7 paket.
+
+## Güncelleme 2026-10-24 — canlı çizim v2 hazır (R6 tamam)
+- Kurul 2+ her derste çizim: şablon + anlam denetimi + otomatik sınama ders zincirinde; kurallar `docs/CIZIM_KURALLARI.md`.
+- Sıradaki fikirler: karşılaştırma tablosunda farklı hücre vurgusu, skor toplam sayacı, ders sonu "hatırla" kartları;
+  canlı denetleyicinin (örtme ölçümü) hatta başsız Chrome ile bağlanması.
+

@@ -343,6 +343,8 @@ def ok_yerlesimi(k: dict, r, satirlar: list) -> dict:
     """Akış okunun uçları gerçek yazı kutularına oturur; rota içeriğin önünü en az kapatan seçenekten: düz (yatay/dikey),
     dirsek (dikey→yatay ya da yatay→dikey, köşe yuvarlak) ya da kavis (kullanıcı 2026-10-24: "her zaman kavis gerekmez;
     okun ucu nereyi gösteriyor belli olmalı"). Hedef, halka yerine yazının kendi kutusuyla belirtilir."""
+    if k.get("pdf_oku"):
+        return {**{x: v for x, v in k.items() if x != "pdf_oku"}, "odak": k["pdf_oku"]}
     pa, pb = k.get("a"), k.get("b")
     A = _kutu_bul(pa, k.get("kaynak_metin"), satirlar) or _resim_kutusu(pa, r) or ([pa[0], pa[1], pa[0], pa[1]] if pa else None)
     B = _kutu_bul(pb, k.get("hedef_metin"), satirlar) or _resim_kutusu(pb, r)
@@ -445,7 +447,25 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
             o = [k["odak"][2], k["odak"][1]]
         elif k["tur"] == "kontur" and k.get("nokta"):
             o = [max(n[0] for n in k["nokta"]) + 0.01, min(n[1] for n in k["nokta"])]   # bölgenin sağ üstü
-        aday = [(o[0] + ox, o[1] + oy) for ox in (0.0, -0.02, 0.04, -0.1, -0.2, 0.1, -0.3) for oy in (-0.04, 0.0, -0.06, 0.03, -0.12, 0.09)]
+        # etiketin bağlı olduğu hedef kutu: odak çerçevesi, boyanan bölgenin sınırı ya da okun ucu (H52: etiketler çizimden
+        # kopuk duruyordu). Adaylar önce kutunun hemen sağı/solu/üstü/altı; seçim etiketle kutu arasındaki boşluğa göre.
+        if k.get("odak"):
+            T = k["odak"]
+        elif k["tur"] == "kontur" and k.get("nokta"):
+            T = [min(n[0] for n in k["nokta"]), min(n[1] for n in k["nokta"]), max(n[0] for n in k["nokta"]), max(n[1] for n in k["nokta"])]
+        elif k["tur"] == "akis" and (k.get("hedef_kutu") or k.get("b")):
+            T = k.get("hedef_kutu") or [k["b"][0] - 0.01, k["b"][1] - 0.01, k["b"][0] + 0.01, k["b"][1] + 0.01]
+        else:
+            T = [o[0], o[1], o[0], o[1]]
+        bos = 0.012
+        aday = []
+        for f in (0.0, 0.5, 1.0):
+            yy = T[1] + f * max(0.0, (T[3] - T[1]) - h)
+            aday += [(T[2] + bos, yy), (T[0] - g - bos, yy)]
+            xx = T[0] + f * max(0.0, (T[2] - T[0]) - g)
+            aday += [(xx, T[1] - h - bos), (xx, T[3] + bos)]
+        aday += [(o[0] + ox, o[1] + oy) for ox in (0.0, -0.02, 0.04, -0.1, -0.2, 0.1, -0.3) for oy in (-0.04, 0.0, -0.06, 0.03, -0.12, 0.09)]
+        aralik = lambda x, y: (max(T[0] - (x + g), 0, x - T[2]) ** 2 + max(T[1] - (y + h), 0, y - T[3]) ** 2) ** 0.5
         iyi = [(r.kutu_doluluk(x - 0.012, y - 0.012, x + g + 0.012, y + h + 0.012), x, y) for x, y in aday
                if 0 <= x and x + g <= 1 and 0 <= y and y + h * 1.5 <= 1]
         uygun = lambda z: z[0] < 0.02 and not any(_kesisir((z[1], z[2], z[1] + g, z[2] + h), o) for o in (dolu or [])) \
@@ -462,11 +482,15 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
             # o da yoksa bütün sayfada (%2 adım) boş yer; en yakını seçilir — yazının üstüne konmaz (H48)
             tum = [(r.kutu_doluluk(xi / 50 - 0.012, yi / 50 - 0.012, xi / 50 + g + 0.012, yi / 50 + h + 0.012), xi / 50, yi / 50)
                    for xi in range(0, int((1 - g) * 50) + 1) for yi in range(0, int((1 - h * 1.5) * 50) + 1)]
-            iyi = [z for z in tum if uygun(z) and ((z[1] - o[0]) ** 2 + (z[2] - o[1]) ** 2) ** 0.5 < 0.35]
+            iyi = [z for z in tum if uygun(z) and aralik(z[1], z[2]) < 0.3]
         if iyi:
-            # boş adaylardan bölgeye en yakını (etiket anlattığı yerin yanında dursun)
-            _, x, y = min(iyi, key=lambda z: (z[1] - o[0]) ** 2 + (z[2] - o[1]) ** 2)
+            # boş adaylardan hedef kutuya en yakını; kutuya değmiyorsa ince bağlantı çizgisi (etiket_hedef) çizilir
+            _, x, y = min(iyi, key=lambda z: aralik(z[1], z[2]))
             k = {**k, "etiket_konum": [round(x, 4), round(y, 4)], "etiket_genislik": round(g, 3)}
+            if aralik(x, y) > 0.02:
+                cx, cy = x + g / 2, y + h / 2
+                k["etiket_hedef"] = [round(min(max(cx, T[0]), T[2]), 4), round(min(max(cy, T[1]), T[3]), 4)]
+                k["etiket_boy"] = round(h, 4)
             if dolu is not None:
                 dolu.append((x, y, x + g, y + h))
         elif k["tur"] == "akis" and k.get("odak"):
@@ -777,8 +801,27 @@ def main() -> int:
                 k = {**k, **{x: ad[x] for x in ("a", "b", "nokta", "fazlar") if x in ad}}
                 if "iliski" in ad and k.get("tur") == "akis":
                     k["iliski"] = k.get("iliski") or ad["iliski"]
+            # PDF'in kendi okunu kopyalayan ok (H52, s.27: slaytın kırmızı okları mavi okla yeniden çiziliyordu): uçları bir
+            # aday okun uçlarına (≤0,1) denk gelen akış, o adayın kesin koordinatına oturur ve odak çerçevesine çevrilir
+            if k.get("tur") == "akis" and not ad and k.get("a") and k.get("b") and s in ADAY_LISTE:
+                yak = lambda p_, q_: ((p_[0] - q_[0]) ** 2 + (p_[1] - q_[1]) ** 2) ** 0.5
+                for x in ADAY_LISTE[s][0]:
+                    if min(max(yak(k["a"], x["a"]), yak(k["b"], x["b"])), max(yak(k["a"], x["b"]), yak(k["b"], x["a"]))) < 0.1:
+                        x0, x1 = sorted((x["a"][0], x["b"][0])); y0, y1 = sorted((x["a"][1], x["b"][1]))
+                        k = {**k, "a": x["a"], "b": x["b"], "pdf_oku": [round(max(0, x0 - 0.015), 4), round(max(0, y0 - 0.015), 4),
+                                                                        round(min(1, x1 + 0.015), 4), round(min(1, y1 + 0.015), 4)]}
+                        say["pdf_oku_odak"] = say.get("pdf_oku_odak", 0) + 1
+                        break
             if s and s not in raster and belge is not None and 1 <= s <= belge.page_count:
                 raster[s] = CD.SayfaRaster(belge[s - 1])
+            # aday olarak algılanmayan (raster) mevcut ok: a→b düz çizgisi boyunca slaytta çizili hat varsa yeni ok çizilmez
+            if k.get("tur") == "akis" and not k.get("pdf_oku") and k.get("a") and k.get("b") and raster.get(s) is not None:
+                a_, b_ = k["a"], k["b"]
+                orn = [[a_[0] + (b_[0] - a_[0]) * i / 20, a_[1] + (b_[1] - a_[1]) * i / 20] for i in range(3, 18)]
+                if ((a_[0] - b_[0]) ** 2 + (a_[1] - b_[1]) ** 2) ** 0.5 > 0.08 and raster[s].kenar_orani(orn) >= 0.8:
+                    x0, x1 = sorted((a_[0], b_[0])); y0, y1 = sorted((a_[1], b_[1]))
+                    k = {**k, "pdf_oku": [round(max(0, x0 - 0.012), 4), round(max(0, y0 - 0.012), 4), round(min(1, x1 + 0.012), 4), round(min(1, y1 + 0.012), 4)]}
+                    say["pdf_oku_odak"] = say.get("pdf_oku_odak", 0) + 1
             onceki = " ".join(C[x] for x in sira[:sira.index(cid) + 1])
             if k.get("_sil"):
                 say["ret"]["anlam denetimi sildi"] = say["ret"].get("anlam denetimi sildi", 0) + 1
@@ -825,7 +868,7 @@ def main() -> int:
             komut = {x: k[x] for x in ("tur", "nokta", "a", "b", "iliski", "fazlar", "dugum", "kenar", "etiket",
                                        "kaynak_metin", "hedef_metin", "dal", "sablon", "sablon_ad", "duzen", "basliklar",
                                        "bag", "satirlar", "ogeler", "kaynaklar", "sonuc", "soru", "dallar", "gorunen", "altta",
-                                       "kutuplar", "baslik", "numarali") if x in k}
+                                       "kutuplar", "baslik", "numarali", "pdf_oku") if x in k}
             komut.update(s=s, k=[ka[k["bas"]][0], ka[k["son"]][1]])
             if s not in satir_onbellek and belge is not None and 1 <= s <= belge.page_count:
                 satir_onbellek[s] = sayfa_satirlari(belge[s - 1])

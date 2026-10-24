@@ -404,3 +404,19 @@ Tasarım: `ICERIK_MOTORU_V3.md` §2, §12, §15, §16. Model yok; ortam `meds/.v
   (`ICERIK_MOTORU_V3.md` §21.1–21.2).
 
 > Canlı çizim/işaretleme kuralları (bütün dersler): `docs/CIZIM_KURALLARI.md`.
+
+### 18.3 Canlı çizim ve sesli ders ekranı (2026-10-24, k2-02 sınamasından; bütün dersler)
+
+- **Kurallar:** `docs/CIZIM_KURALLARI.md` (tek kaynak), model talimatı `scripts/cizim/TALIMAT_CIZIM.md` (1–20), hata defteri H40–H52.
+- **Akış (ders zinciri `cizim` adımı):** `cizim_uret.py` → sayfa partileri Claude (görüntüye bakarak; şablon seçer, uygun
+  şablon yoksa `yeni_sablon` önerir) → `cizim_dogrula.py` kapısı → yeni şablon kaydı (`sablonlar.json`) → bağımsız tıbbi anlam
+  denetimi (tamam/düzelt/sil, önbellek `<is>/anlam_denetimi/`) → yerleşim (rota, etiket, panel sürümü, ek alan) →
+  `panel_sinama.mjs` (366/567/1100 px; 0 hata) → cihaz + Oracle.
+- **Yeniden kullanım (az limit):** parti çıktıları ve anlam denetimi önbellekli; yerleşim/tasarım kuralı değişince
+  `cizim_uret.py` aynı `--is-dizini` ile Claude çağırmadan saniyeler içinde yeniden yerleştirir. Yalnız içerik kuralı
+  değişen sayfaların partisi silinip yeniden üretilir (`parti*/cizim.json` → `cizim_onceki.json`).
+- **Sınama araçları:** `panel_sinama.mjs <ders>` (yerleşim), canlı denetleyici (masaüstü + telefon, örtme ve yazı kesişimi;
+  oturumdaki tarayıcıda) — yayından sonra bir kez.
+- **Ekran:** izleme düzeni (anlatılmayan paragraflar soluk, slayt %60), telefonda görünüm döngü düğmesi, sayfa takibi
+  kare kare kaydırma + ekran ölçümü (program kaydırması takibi durdurmaz), kelime takipçisi harfleri kapatmaz.
+

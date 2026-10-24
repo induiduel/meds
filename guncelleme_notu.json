@@ -1,11 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 314,
-  "baslik": "Görsel slaytlarda anlatım görselin üstünde",
+  "onem": 315,
+  "baslik": "Çizim etiketleri ve slayt okları",
   "maddeler": [
-    "Şema ve resim slaytlarında anlatım artık görselin üstünde: ok, boyama, odak",
-    "Panellerde yazılar kırılmıyor, sığmıyorsa alt alta diziliyor; numaralar ve ok açıklamaları görünüyor",
-    "\"Altta yatan neden\" paneli daha anlaşılır: ilk izlenim → atlanmaması gereken"
+    "Etiketler anlattıkları çizimin hemen yanında; uzaksa ince bir çizgiyle bağlı",
+    "Slaytta zaten çizili oklar tekrar çizilmiyor, çerçevelenip açıklanıyor"
   ],
   "eklenen": [],
   "degisen": [

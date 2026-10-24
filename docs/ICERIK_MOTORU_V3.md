@@ -730,3 +730,15 @@ kullanıcı izler ve araya girebilir.
 
 k2-02 (62 sayfa): sesli metin 1.628 → **2.189 kelime (~20 dk), 106 cümle**, atlanan sayfa 0; işaret kapsamı **%96**;
 çizim (kroki adaylarıyla) 76 aday → **68 komut** (34 akış — 16'sı PDF okundan, 21 şema, 13 kontur; 8 atıldı); paket 4,4 MB (Opus), 0 HATA. EMA sesi GPU'da ~1 dk.
+
+## 23. Canlı çizim v2: anlam şablonları, anlam denetimi, otomatik sınama (2026-10-24)
+
+R6 çizim motoru k2-02 sınamasında kullanıcı geri bildirimleriyle olgunlaştı; ayrıntı `docs/CIZIM_KURALLARI.md`.
+- **Şablon kütüphanesi** (`scripts/cizim/sablonlar.json`, `sablon.py`): dersten bağımsız anlam → düzen eşlemesi (13 + üretilen);
+  istemci genel düzenleri çizer (`CizimLayer.SablonPanel`), yeni şablon kod gerektirmez. Model önerisi kapıdan geçince eklenir.
+- **Tıbbi anlam denetimi:** ikinci Claude geçişi her paneli/etiketi öğrencinin okuyacağı biçimde cümleyle karşılaştırır.
+- **Görsel önceliği:** resim slaytında panel yok; PDF'in kendi oku kopyalanmaz (aday ya da çizili hat → odak çerçevesi).
+- **Yerleşim betikte, ölçümle doğrulanır:** panel boyu em hesabı (`panel_boyu`, %32 pay), sürümler yatay/dikey × normal/kompakt,
+  ek alan yalnız taşan kadar, etiket hedef kutusuna bitişik ya da bağlantı çizgili; `panel_sinama.mjs` 0 hata kapısı.
+- **Maliyet:** k2-02 yeniden yerleşim Claude'suz ~3 sn; içerik kuralı değişince yalnız ilgili partiler (≈1 dk/parti) + anlam denetimi.
+
