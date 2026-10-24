@@ -70,5 +70,8 @@ zenginleştirmedir: yalnız cümle gerçekten o görseli/ilişkiyi anlatıyorsa 
 14. **Panel sığmıyorsa sayfa uzar:** sayfada boş yer yoksa panel gizlenmez; betik `ek_alt` (sayfa oranı) ve `ek_renk`
     (slaytın alt kenar rengi) yazar, görüntüleyici o sayfanın altına aynı renkte alan ekler ve paneli oraya koyar (y > 1).
     Sayfanın kendi kutusu, işaret/vurgu/imleç koordinatları değişmez; ek alan ders boyunca sabittir (sayfalar kaymaz).
+15. **Panel sayfayla orantılı:** panel ve etiket yazısı sayfa genişliğinin %1,45'i / %1,6'sı (cqw); dar bölmede de geniş
+    ekranda da slaytla aynı oranda görünür. Betik panel yüksekliğini istemcideki dizilimle aynı em hesabıyla tahmin eder
+    (`panel_boyu`, %15 pay); 0,30'dan dar panel kullanılmaz, sığmazsa ek alana gider.
 
 Yalnız `cizim.json`'u yaz; başka dosyaya dokunma. Bitince tek satır: `BİTTİ: <komut sayısı>`.

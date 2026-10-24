@@ -178,6 +178,71 @@ def panel_tipi(k: dict) -> str:
     return "zincir"
 
 
+EM = 0.0145          # panel yazı boyu = sayfa genişliğinin %1,45'i (pdfDoc.css .pdv-cz-sema 1.45cqw)
+
+
+def _bilesenler(k: dict) -> list[tuple[list, list]]:
+    """Bağlı bileşenler (CizimLayer.Sema ile aynı): [(düğümler, kenarlar)]."""
+    dg, kn = k.get("dugum") or [], k.get("kenar") or []
+    kok = {d.get("id"): d.get("id") for d in dg}
+
+    def bul(x):
+        while kok.get(x, x) != x:
+            x = kok[x]
+        return x
+    for e in kn:
+        if e.get("a") in kok and e.get("b") in kok:
+            kok[bul(e["a"])] = bul(e["b"])
+    out: dict = {}
+    for d in dg:
+        out.setdefault(bul(d.get("id")), ([], []))[0].append(d)
+    for e in kn:
+        if e.get("a") in kok:
+            out[bul(e["a"])][1].append(e)
+    return list(out.values())
+
+
+def panel_boyu(k: dict, g: float, oran: float) -> float:
+    """Panelin sayfa yüksekliği oranı cinsinden yüksekliği; istemcideki dizilimin em ile kopyası (oran = genişlik/yükseklik).
+    Ölçüm: tarayıcıda 567 ve 1100 px sayfada gerçek yükseklikle karşılaştırıldı."""
+    W = g / EM                                   # panel iç genişliği (em)
+    dar = g < 0.32
+    gw = lambda t: len(t) * 0.58 + 1.4          # düğüm genişliği (em)
+    DH = 1.85                                    # düğüm yüksekliği + satır payı (em)
+    toplam = 1.6                                 # panel iç boşluğu
+    parcalar = _bilesenler(k)
+    for j, (dg, kn) in enumerate(parcalar):
+        tip = panel_tipi({"kenar": kn})
+        if j:
+            toplam += 1.0                        # ayraç + parça boşluğu
+        if tip in ("grup", "dal"):
+            say: dict = {}
+            for e in kn:
+                say[e.get("b" if tip == "grup" else "a")] = say.get(e.get("b" if tip == "grup" else "a"), 0) + 1
+            n = max(say.values() or [1])
+            satir_ek = 0
+            for d in dg:                          # dar sütunda uzun düğüm iki satıra iner
+                if gw(d["metin"]) > W * 0.6:
+                    satir_ek += 1
+            toplam += n * (DH + (0.5 if tip == "dal" else 0.3)) + satir_ek * 1.3 + (DH if dar else 0)
+        elif tip == "maske":
+            toplam += 2 * 1.2 + 2 * DH + 0.6 + (2.2 if dar else 0)
+        elif tip == "karsit":
+            toplam += DH if not dar else 3 * DH
+        else:                                     # zincir
+            if dar:
+                toplam += len(dg) * DH + max(0, len(dg) - 1) * 1.6 + sum(1.3 for e in kn if e.get("etiket"))
+            else:
+                satir, x = 1, 0.0
+                for i, d in enumerate(dg):
+                    w = gw(d["metin"]) + (0 if i == 0 else (6.4 if any(e.get("etiket") for e in kn) else 2.6))
+                    if x and x + w > W:
+                        satir += 1; x = 0.0
+                    x += w
+                toplam += satir * DH + (satir * 1.2 if any(e.get("etiket") for e in kn) else 0) + (satir - 1) * 0.4
+    return toplam * EM * oran * 1.15            # %15 pay (tarayıcı ölçümünde en çok %31 sapma, maske dar)
+
+
 def oku_panele(k: dict, satirlar: list) -> dict | None:
     """Yazı slaytında iki satır arasındaki ok okunmuyor ve amacı anlaşılmıyor (H40, kullanıcı 2026-10-24 s.18): iki ucu da
     yazı satırına düşen ok, sayfanın boşluğunda ilişkiyi kendi içinde canlandıran panele çevrilir. Ok yalnız resim/şema
@@ -385,10 +450,8 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
         grup = satir
         if k["tip"] in ("maske", "karsit"):
             grup = max(grup, 3)
-        c_ = len(bilesen)
-        boy = ([(0.42, 0.045 * grup + 0.025 * c_ + 0.025), (0.5, 0.04 * grup + 0.025 * c_ + 0.02),
-                (0.3, 0.06 * grup + 0.03 * c_ + 0.03), (0.22, 0.08 * grup + 0.04 * c_ + 0.03)] if grup >= 2 else
-               [(min(0.6, 0.12 * n + 0.08), 0.08), (min(0.45, 0.09 * n + 0.06), 0.12), (min(0.32, 0.07 * n + 0.05), 0.16), (0.22, 0.06 * n + 0.04)])
+        oran = r.w / r.h
+        boy = [(g, panel_boyu(k, g, oran)) for g in (0.42, 0.5, 0.6, 0.34, 0.3)]
         # yazının ağırlık merkezi: panel içeriğe yakın, kenara yapışmadan (≥%3 pay) ve boş yerde durur
         ys, xs = np.nonzero(r.ince[::4, ::4])
         mx, my = (xs.mean() * 4 / r.w, ys.mean() * 4 / r.h) if len(xs) else (0.5, 0.5)
@@ -415,19 +478,20 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
             if en:
                 break
         if en:
-            k = {**k, "konum": [round(en[1], 4), round(en[2], 4)], "genislik": round(en[3], 3), "doluluk": round(en[5], 3)}
+            k = {**k, "konum": [round(en[1], 4), round(en[2], 4)], "genislik": round(en[3], 3), "doluluk": round(en[5], 3),
+                 "kutu_h": round(en[4], 3)}
             if dolu is not None:
                 dolu.append((en[1], en[2], en[1] + en[3], en[2] + en[4]))
         else:
             # boş yer yok (genel kural 14, kullanıcı 2026-10-24): panel sayfanın ALTINA eklenen alana konur; görüntüleyici
             # o sayfayı ek_alt kadar uzatır, alanı sayfanın alt kenar rengiyle boyar (slaytın kendisi gibi görünür).
             # Koordinatlar sayfa oranı olarak kalır (y > 1), işaret/vurgu/imleç katmanları etkilenmez.
-            g, h = boy[0]
+            g, h = boy[1]
             onceki = max([o[3] for o in (dolu or []) if o[1] >= 1.0] + [1.0])
             x = min(max(0.02, mx - g / 2), 0.98 - g)
             y = onceki + 0.015
             k = {**k, "konum": [round(x, 4), round(y, 4)], "genislik": round(g, 3), "doluluk": 0.0,
-                 "ek_alt": round(y + h * 1.3 + 0.03 - 1.0, 4), "ek_renk": r.alt_renk}
+                 "ek_alt": round(y + h * 1.1 + 0.03 - 1.0, 4), "ek_renk": r.alt_renk, "kutu_h": round(h * 1.1, 3)}
             if dolu is not None:
                 dolu.append((x, y, x + g, y + h))
     return k

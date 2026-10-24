@@ -1,10 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 285,
-  "baslik": "Sesli derste daha sade PDF araç çubuğu",
+  "onem": 286,
+  "baslik": "Çizim panelleri her ekranda düzgün",
   "maddeler": [
-    "Sesli derste PDF araçları sadeleşti: tek 'Çiz' düğmesinden kalem, fosforlu kalem, silgi ve renk seçilir; telefonda araç çubuğu tek satıra sığar.",
-    "Çıkmış soru listesi telefonda ekran dışına taşmaz; klavyeyle ve Esc ile kullanılabilir."
+    "Paneller ve etiketler slaytla aynı oranda büyüyüp küçülüyor; dar ekranda yazının üstüne binmiyor",
+    "Kelimeler harf harf kırılmıyor",
+    "Sığmayan paneller slaytın altına eklenen alanda"
   ],
   "eklenen": [],
   "degisen": [

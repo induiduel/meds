@@ -64,9 +64,9 @@ const ilerleme = (z: CizimKomut, c: number) => (c < z.k[0] ? -1 : AZ_HAREKET ? 1
 function Etiket({ z }: { z: CizimKomut }) {
   if (!z.etiket || !z.etiket_konum) return null;
   return (
-    <foreignObject x={z.etiket_konum[0] * V} y={z.etiket_konum[1] * V} width={(z.etiket_genislik || 0.3) * V} height={34}>
-      <div className="pdv-cz-etiket">{z.etiket}</div>
-    </foreignObject>
+    <div className="pdv-cz-etiket-kap" style={{ left: `${z.etiket_konum[0] * 100}%`, top: `${z.etiket_konum[1] * 100}%`, maxWidth: `${(z.etiket_genislik || 0.3) * 100}%` }}>
+      <span className="pdv-cz-etiket">{z.etiket}</span>
+    </div>
   );
 }
 
@@ -104,7 +104,6 @@ function Komut({ z, t }: { z: CizimKomut; t: number }) {
         {t > 0 && <path d={egri(z.nokta, true)} className="pdv-cz-boya" style={{ opacity: Math.min(1, t * 1.5) }} />}
         <path d={egri(z.nokta, true)} {...ciz} className="pdv-cz-hale" vectorEffect="non-scaling-stroke" />
         <path d={egri(z.nokta, true)} {...ciz} vectorEffect="non-scaling-stroke" />
-        {t >= 1 && <Etiket z={z} />}
       </g>
     );
   }
@@ -116,7 +115,6 @@ function Komut({ z, t }: { z: CizimKomut; t: number }) {
               strokeDasharray={1} strokeDashoffset={1 - t} vectorEffect="non-scaling-stroke" />
         <rect x={o[0] * V} y={o[1] * V} width={(o[2] - o[0]) * V} height={(o[3] - o[1]) * V} rx={8} className="pdv-cz-odak" pathLength={1}
               strokeDasharray={1} strokeDashoffset={1 - t} vectorEffect="non-scaling-stroke" />
-        {t >= 1 && <Etiket z={z} />}
       </g>
     );
   }
@@ -143,7 +141,6 @@ function Komut({ z, t }: { z: CizimKomut; t: number }) {
         {t >= 1 && hk && (
           <rect x={hk[0] * V} y={hk[1] * V} width={(hk[2] - hk[0]) * V} height={(hk[3] - hk[1]) * V} rx={6} className="pdv-cz-hedef" vectorEffect="non-scaling-stroke" />
         )}
-        {t >= 1 && <Etiket z={z} />}
       </g>
     );
   }
@@ -157,7 +154,6 @@ function Komut({ z, t }: { z: CizimKomut; t: number }) {
           <path key={i} className={`is-${fazOf(i)}`} d={`M${P(p)} L${P(z.nokta![i + 1])}`} vectorEffect="non-scaling-stroke" />
         ))}
         <circle cx={z.nokta[ulasilan][0] * V} cy={z.nokta[ulasilan][1] * V} r={4} className="pdv-cz-parca" />
-        {t >= 1 && <Etiket z={z} />}
       </g>
     );
   }
@@ -198,7 +194,7 @@ function SemaParca({ z, t, ic }: { z: CizimKomut; t: number; ic?: boolean }) {
   const say = (k: 'a' | 'b') => { const m = new Map<string, typeof kn>(); for (const e of kn) m.set(e[k], [...(m.get(e[k]) || []), e]); return m; };
   const tip = ic ? tipBul(kn) : z.tip || tipBul(kn);
   const kap = (icerik: React.ReactNode) => ic ? <div className={`pdv-cz-sema-parca is-${tip}`}>{icerik}</div> : (
-    <div className={`pdv-cz-sema is-${tip}`} role="img" aria-label={dg.map((d) => d.metin).join(', ')} style={stil}>{icerik}</div>
+    <div className={`pdv-cz-sema is-${tip}${(z.genislik || 1) < 0.32 ? ' is-dar' : ''}`} role="img" aria-label={dg.map((d) => d.metin).join(', ')} style={stil}>{icerik}</div>
   );
 
   if (tip === 'maske' && kn[0]) {
@@ -295,7 +291,7 @@ function Sema({ z, t }: { z: CizimKomut; t: number }) {
   const gorunen = new Set(dg.slice(0, Math.max(1, Math.ceil(t * dg.length))).map((d) => d.id));
   const stil = z.konum ? { left: `${z.konum[0] * 100}%`, top: `${z.konum[1] * 100}%`, right: 'auto', bottom: 'auto', maxWidth: `${(z.genislik || 0.6) * 100}%` } : undefined;
   return (
-    <div className="pdv-cz-sema is-coklu" role="img" aria-label={dg.map((d) => d.metin).join(', ')} style={stil}>
+    <div className={`pdv-cz-sema is-coklu${(z.genislik || 1) < 0.32 ? ' is-dar' : ''}`} role="img" aria-label={dg.map((d) => d.metin).join(', ')} style={stil}>
       {[...gruplar.values()].map((ids, i) => {
         const g = ids.filter((x) => gorunen.has(x)).length;
         if (!g) return null;
@@ -331,6 +327,8 @@ export const CizimLayer = memo(function CizimLayer({ z, useChar }: { z: CizimKom
           })}
         </svg>
       )}
+      {/* etiketler HTML katmanında: SVG oransız ölçeklendiği için yazı orada bozulurdu; boyut sayfa genişliğiyle orantılı */}
+      {cizimler.map((x, i) => (x.etiket && ilerleme(x, c) >= 1 ? <Etiket key={`e${i}`} z={x} /> : null))}
       {sema && ilerleme(sema, c) >= 0 && <Sema z={sema} t={ilerleme(sema, c)} />}
     </>
   );
