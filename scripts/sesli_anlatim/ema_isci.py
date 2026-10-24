@@ -20,6 +20,12 @@ Ortam: MEDS_EMA_SUNUCU (varsayılan MEDS_ORACLE_API_URL ya da https://api.nofros
 from __future__ import annotations
 
 import os
+import sys as _sys
+# GPU başlatıcısı (cozucu_ses_gpu.sh) EMA site-packages'ı yalnız ana sürecin yoluna ekler; "sentezle" alt süreci de
+# görsün diye MEDS_EK_SITE'tan (sona eklenir: XTTS venv'in CUDA torch'u önde kalır) — 2026-10-24
+for _y in filter(None, os.environ.get("MEDS_EK_SITE", "").split(os.pathsep)):
+    if _y not in _sys.path:
+        _sys.path.append(_y)
 
 # GPU yasak — torch'tan önce. Tek istisna (kullanıcı, 2026-10-18): EMA_CIHAZ=cuda + meds-gpuguard etkin + saat kilidi
 # (sudo nvidia-smi -lgc 300,1500); VRAM payı 0,6, koruyucu %60/ısı protokolüyle dondurur.
