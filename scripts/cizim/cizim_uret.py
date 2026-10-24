@@ -331,12 +331,15 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
         o = k.get("nokta", [k.get("c") or k.get("a") or [0.5, 0.5]])[0] if k["tur"] != "sema" else [0.5, 0.5]
         if k.get("odak"):
             o = [k["odak"][2], k["odak"][1]]
-        aday = [(o[0] + ox, o[1] + oy) for ox in (-0.02, 0.04, -0.2, 0.1, -0.3) for oy in (-0.06, 0.03, -0.12, 0.09)]
+        elif k["tur"] == "kontur" and k.get("nokta"):
+            o = [max(n[0] for n in k["nokta"]) + 0.01, min(n[1] for n in k["nokta"])]   # bölgenin sağ üstü
+        aday = [(o[0] + ox, o[1] + oy) for ox in (0.0, -0.02, 0.04, -0.1, -0.2, 0.1, -0.3) for oy in (-0.04, 0.0, -0.06, 0.03, -0.12, 0.09)]
         iyi = [(r.kutu_doluluk(x - 0.012, y - 0.012, x + g + 0.012, y + h + 0.012), x, y) for x, y in aday
                if 0 <= x and x + g <= 1 and 0 <= y and y + h <= 1]
         iyi = [z for z in iyi if z[0] < 0.02 and not any(_kesisir((z[1], z[2], z[1] + g, z[2] + h), o) for o in (dolu or []))]
         if iyi:
-            _, x, y = min(iyi)
+            # boş adaylardan bölgeye en yakını (etiket anlattığı yerin yanında dursun)
+            _, x, y = min(iyi, key=lambda z: (z[1] - o[0]) ** 2 + (z[2] - o[1]) ** 2)
             k = {**k, "etiket_konum": [round(x, 4), round(y, 4)], "etiket_genislik": round(g, 3)}
             if dolu is not None:
                 dolu.append((x, y, x + g, y + h))
