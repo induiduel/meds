@@ -1,0 +1,3430 @@
+{
+ "surum": 2,
+ "ders_id": "k2-06",
+ "baslik": "Ağrı Yolları ve Mekanizmaları",
+ "bolumler": [
+  {
+   "id": "k2-06-b01",
+   "baslik": "Ağrının tanımı ve öznelliği",
+   "paragraflar": [
+    {
+     "id": "k2-06-p001",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k2-06-c0001",
+       "ses": "Uluslararası Ağrı Araştırmaları Teşkilatının tanımına göre ağrı, vücudun herhangi bir yerinden kaynaklanan, gerçek ya da olası bir doku hasarı ile birlikte bulunan, hastanın geçmişteki deneyimleriyle ilgili, duyusal, afektif, hoş olmayan bir duyudur.",
+       "ekran": "IASP: ağrı, gerçek ya da olası doku hasarıyla birlikte bulunan, **duyusal, afektif**, hoş olmayan bir duyu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "duyusal, afektif",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "gerçek ya da olası bir doku hasarı ile birlikte",
+         "duyusal, afektif, hoş olmayan bir duyudur."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0002",
+       "ses": "Yani ağrı yalnız fiziksel bir sinyal değil, aynı zamanda duygusal bir deneyimdir; tanım sorularında bu duyusal ve afektif ikiliyi arayın.",
+       "ekran": "Ağrı hem fiziksel hem duygusal bir deneyimdir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Vücudun herhangi bir yerinden kaynaklanan"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0003",
+       "ses": "Doku hasarının olması son tanımlamalarda şart olarak görülmemiştir; yani doku hasarı gösterilemese de ağrı gerçek kabul edilir.",
+       "ekran": "Son tanımlarda **doku hasarı şart değil**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "doku hasarı şart değil",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Doku hasarının olması son tanımlamalarda şart olarak görülmemiştir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0004",
+       "ses": "Uluslararası Ağrı Araştırmaları Teşkilatı iki bin yirmi tanımında öznel kısmına vurguyu artırmıştır, bu nedenle kişiden kişiye ağrı tanımı farklılıklar taşır.",
+       "ekran": "IASP **2020** tanımı: öznelliğe vurgu arttı; ağrı tanımı kişiden kişiye değişir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "2020",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "IASP 2020 tanımında öznel kısmına vurguyu artırmıştır.",
+         "kişiden kişiye ağrı tanımı farklılıklar taşır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p002",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k2-06-c0005",
+       "ses": "Bu tanımdaki önemli öğelerden biri, olası bir doku hasarının bulunup bulunmamasıdır; birçok kronik ağrıda, örneğin migrende ya da trigeminal nevraljide belirgin objektif bir bulgu elde edilemeyebilir.",
+       "ekran": "Migren, trigeminal nevralji gibi **kronik ağrılarda** objektif bulgu olmayabilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kronik ağrılarda",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s02",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "olası bir doku hasarının bulunup bulunmamasıdır.",
+         "trigeminal nevraljide) belirgin objektif bir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0006",
+       "ses": "Ancak bu durum hastanın yakınmasının psikolojik olduğu anlamına gelmez; bulgu yokluğu ağrıyı geçersiz kılmaz ve hastanın ağrı bildirimi ciddiye alınır.",
+       "ekran": "Bulgu yokluğu → yakınma **psikolojik demek değildir**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "psikolojik demek değildir",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s02",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Ancak bu durum hastanın yakınmasının psikolojik olduğu anlamına gelmez."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p003",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k2-06-c0007",
+       "ses": "Ağrının önemli bir özelliği duyusal, yani sinir lifleri ile taşınan objektif bir duyu olmasıdır.",
+       "ekran": "Duyusal özellik: **sinir lifleriyle taşınan** objektif duyu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sinir lifleriyle taşınan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Ağrının önemli bir özelliği duyusal, yani sinir lifleri ile taşınan objektif bir duyu olmasıdır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0008",
+       "ses": "Diğer özelliği ise emosyonel, yani yukarıda sözü edilen diğer tüm öğelerden etkilenmesidir; bu iki yüz nedeniyle tedavi hem duyusal hem duygusal boyutu hedefler.",
+       "ekran": "Emosyonel özellik: diğer tüm öğelerden etkilenir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Diğer bir özelliği ise emosyonel, yani yukarıda sözü edilen diğer tüm öğelerden etkilenmesidir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p004",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k2-06-c0009",
+       "ses": "Ağrı her zaman kişiye özneldir ve nosiseptif uyarı, yani duyusal uyarı ile ağrı aynı anlama gelmez; uyarının varlığı ağrının nasıl yaşanacağını tek başına belirlemez.",
+       "ekran": "Ağrı daima öznel; **nosiseptif uyarı ≠ ağrı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "nosiseptif uyarı ≠ ağrı",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s04",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Ağrı her zaman kişiye özneldir.",
+         "Nosiseptif uyarı yani duyusal uyarı ile ağrı aynı anlama gelmez."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0010",
+       "ses": "Yaşla beraber kişinin edindiği tecrübelerle ağrı kavramı değişebilir.",
+       "ekran": "Ağrı kavramı yaşla ve tecrübeyle değişebilir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s04",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Yaşla beraber kişinin edindiği tecrübelerle ağrı kavramı değişebilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0011",
+       "ses": "Ağrı ayrıca kişinin psikolojik ve sosyal yaşamını etkileyebilir.",
+       "ekran": "Psikolojik ve sosyal yaşamı etkiler",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s04",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Kişinin psikolojik ve sosyal yaşamını etkileyebilir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p005",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k2-06-c0012",
+       "ses": "İnsanoğlu doğduğu andan başlayarak birçok uyaranla karşı karşıya gelir; dini, konuştuğu dili, cinsiyeti ve kültürü onun emosyonel yapısını oluşturur.",
+       "ekran": "**Din, dil, cinsiyet, kültür** emosyonel yapıyı oluşturur",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Din, dil, cinsiyet, kültür",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s05",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "İnsanoğlu doğduğu andan başlayarak bir çok uyaranla karşı karşıya gelir.",
+         "Kültürü onun emosyonel yapısını oluşturur."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0013",
+       "ses": "Objektif uyaranların yanı sıra bu sübjektif özellikler, ağrı eşiği adını verdiğimiz, ağrıya karşı yanıtında önemli rol oynar.",
+       "ekran": "Sübjektif özellikler **ağrı eşiğini** belirler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ağrı eşiğini",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s05",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Objektif uyaranların yanı sıra bu sübjektif özellikleri onun ağrı eşiği adını verdiğimiz"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0014",
+       "ses": "İşte bu yüzden ağrılı bir uyarana karşı yanıtta kişiden kişiye farklılıklar görülür.",
+       "ekran": "Aynı uyarana yanıt kişiden kişiye farklı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s05",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "ağrılı bir uyarana karşı yanıtta kişiden kişiye farklılıklar görülür."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-06-b02",
+   "baslik": "Ağrının periferik ve santral komponentleri",
+   "paragraflar": [
+    {
+     "id": "k2-06-p006",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k2-06-c0015",
+       "ses": "Ağrının tanımlanmasında birinci öğe fizyolojik, yani fiziksel ya da periferik komponenttir.",
+       "ekran": "1. **Fizyolojik (periferik) komponent**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Fizyolojik (periferik) komponent",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Fizyolojik ( fiziksel komponent) ve ya Periferik komponent"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0016",
+       "ses": "Bu komponent nosiseptörler vasıtasıyla santral sistemlere giden anatomik duyusal yolları içerir ve bir duyusal uyarıdır.",
+       "ekran": "Nosiseptörlerden santrale giden anatomik duyusal yollar; duyusal uyarı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "nosiseptörler vasıtasıyla santral sistemlere giden anatomik duyusal yolları içerir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0017",
+       "ses": "Sinirlerin özellikleri ile birlikte yüksek merkezler arasındaki bağlantıyı oluşturur.",
+       "ekran": "Yüksek merkezlerle bağlantıyı kurar",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "birlikte yüksek merkezler arasında ki bağlantıyı oluşturur."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p007",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k2-06-c0018",
+       "ses": "İkinci öğe psikolojik ya da santral komponenttir ve üç büyük psikolojik boyutu içerir.",
+       "ekran": "2. **Santral (psikolojik) komponent**: üç boyut",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Santral (psikolojik) komponent",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Psikolojik ve ya Santral komponent",
+         "3 büyük psikolojik boyutu içerir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0019",
+       "ses": "Duyusal diskriminatif boyut, fiziksel duyusal ağrının algılandığı boyuttur; somatosensoriyel korteks ve talamus bölgelerinde olur ve ağrının nerede olduğu, süresi, şiddeti ve özelliği burada tariflenir.",
+       "ekran": "**Duyusal-diskriminatif**: somatosensoriyel korteks + talamus; yer, süre, şiddet, özellik",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Duyusal-diskriminatif",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Somatosensoriyel korteks ve talamus bölgelerinde olmaktadır.",
+         "Ağrının nerede olduğu, süresini,şiddetini,özelliğini tariflediği boyuttur."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0020",
+       "ses": "Motivasyonel afektif boyut limbik sistem ve anterior singulat korteks tarafından gerçekleştirilir; ağrıyı hoş olmayan bir his olarak algılamamızı, korku ve kaygı gibi yanıtlar vermemizi sağlar.",
+       "ekran": "**Motivasyonel-afektif**: limbik sistem + anterior singulat korteks; korku, kaygı",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Motivasyonel-afektif",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Limbik sistem ve anterior singulat korteks tarafından gerçekleştirilir.",
+         "Korku,kaygı gibi yanıtlar vermemizi sağlar"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0021",
+       "ses": "Kognitif değerlendirme boyutu ise kişinin ağrıyı düşünsel süreçlerle değerlendirdiği boyuttur; prefrontal korteks, anterior singulat korteks ve orbitofrontal korteks bölgelerinde olur, ağrı anlamlandırılır ve ağrı belleği oluşturulur.",
+       "ekran": "**Kognitif-değerlendirme**: prefrontal, anterior singulat, orbitofrontal korteks; ağrı belleği",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Kognitif-değerlendirme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Kişinin ağrıyı düşünsel süreçlerle değerlendirdiği boyutudur.",
+         "Ağrının anlamlandırıldığı ve ağrı belleğinin oluşturulduğu durumdur."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-06-b03",
+   "baslik": "Ağrı terminolojisi",
+   "paragraflar": [
+    {
+     "id": "k2-06-p008",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k2-06-c0022",
+       "ses": "Terminolojiye allodini ile başlayalım: allodini, ağrılı olmayan bir stimulusun ağrıya sebep olmasıdır; örneğin hafif dokunmanın acıtması.",
+       "ekran": "**Allodini**: ağrısız uyaranın ağrı yapması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Allodini",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s08",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Allodynia: Ağrılı olmayan bir stimulusun ağrıya sebep olması"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0023",
+       "ses": "Anestezi dolorosa, bir anestezik bölge ya da alanda oluşan ağrıdır; yani hissin kaybolduğu yerde ağrı vardır.",
+       "ekran": "**Anestezi dolorosa**: anestezik bölgede ağrı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Anestezi dolorosa",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s08",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Anesthesia Dolorosa: Bir anestezik bölge ve ya alanda oluşan ağrı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0024",
+       "ses": "Kozalji, travmatik bir sinir lezyonundan sonra devam eden yanıcı ağrıdır; bu tanım çıkmışta soruldu, allodini ve hiperpatiyle karıştırmayın.",
+       "ekran": "**Kozalji**: travmatik sinir lezyonu sonrası devam eden yanıcı ağrı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kozalji",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s08",
+       "cikmis": [
+        "q-2__kurul_-12"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Kozalji: Travmatik bir sinir lezyonundan sonra devam eden yanıcı ağrı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0025",
+       "ses": "Santral ağrı ise bir santral sinir sistemi lezyonu ile birlikte olan ağrıdır.",
+       "ekran": "**Santral ağrı**: SSS lezyonuyla birlikte ağrı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Santral ağrı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s08",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Santral ağrı: Bir santral sinir sistemi lezyonu ile birlikte olan ağrı"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p009",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k2-06-c0026",
+       "ses": "Disestezi hoş olmayan anormal duyu, parestezi ise yalnızca anormal duyudur; aradaki fark hoş olmama niteliğidir.",
+       "ekran": "**Disestezi**: hoş olmayan anormal duyu; **parestezi**: anormal duyu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Disestezi",
+         "tur": "terim"
+        },
+        {
+         "metin": "parestezi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s10",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Disestezi: Hoş olmayan anormal duyu",
+         "Parestezi: Anormal duyu"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0027",
+       "ses": "Hiperaljezi, ağrılı uyarana karşı duyarlılığın ve cevabın artmasıdır; hiperestezi ise herhangi bir stimulasyona karşı duyarlılığın artmasıdır.",
+       "ekran": "**Hiperaljezi**: ağrılı uyarana yanıt artar; **hiperestezi**: her uyarana duyarlılık artar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hiperaljezi",
+         "tur": "tuzak"
+        },
+        {
+         "metin": "hiperestezi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s10",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Hiperaljezi:Ağrılı uyarana karşı duyarlılığın ve cevabın artması",
+         "Hiperestezi: Stimulasyona karşı duyarlılığın artması"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0028",
+       "ses": "Hiperpati, hiperaljezi ve aşırı reaksiyonla karakterize ağrılı bir sendromdur.",
+       "ekran": "**Hiperpati**: hiperaljezi + aşırı reaksiyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hiperpati",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s10",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Hiperpati: Hiperaljezi ve aşırı reaksiyonla karakterize ağrılı sendrom"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0029",
+       "ses": "Hipoaljezi ise tersine, ağrılı uyarana karşı duyarlılığın ve cevabın azalmasıdır.",
+       "ekran": "**Hipoaljezi**: ağrılı uyarana yanıt azalır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hipoaljezi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s10",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Hipoaljezi: Ağrılı uyarana karşı duyarlılığın ve cevabın azalması"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p010",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k2-06-c0030",
+       "ses": "Hipoestezi uyarıya karşı duyarlılığın azalması, nöralji bir sinire yayılan ağrıdır.",
+       "ekran": "**Hipoestezi**: duyarlılık azalır; **nöralji**: sinire yayılan ağrı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hipoestezi",
+         "tur": "terim"
+        },
+        {
+         "metin": "nöralji",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s12",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Hipoestezi: Uyarıya karşı duyalılığın azalması",
+         "Nöralji: Bir sinire yayılan ağrı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0031",
+       "ses": "Nöropati, bir sinirdeki patolojik değişiklik ya da fonksiyonundaki bozukluktur.",
+       "ekran": "**Nöropati**: sinirde patolojik değişiklik veya fonksiyon bozukluğu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Nöropati",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s12",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Nöropati: Bir sinirdeki patlojik değişiklik"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0032",
+       "ses": "Nosiseptör, ağrılı ya da potansiyel olarak ağrılı uyarıya karşı duyarlı spesifik reseptördür; noksiyöz uyarı ise doku hasarı oluşturan uyarıdır.",
+       "ekran": "**Nosiseptör**: ağrılı uyarıya duyarlı spesifik reseptör; **noxious**: doku hasarı oluşturan uyarı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Nosiseptör",
+         "tur": "terim"
+        },
+        {
+         "metin": "noxious",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s12",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "ağrılı uyarıya karşı duyarlı spesifik resptör",
+         "Noxious: Doku hasarı oluşturan uyarı"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p011",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k2-06-c0033",
+       "ses": "Ağrı eşiği, kişide ağrıya neden olan en küçük uyarının şiddetidir.",
+       "ekran": "**Ağrı eşiği**: ağrı yapan en küçük uyarı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Ağrı eşiği",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s13",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Ağrı eşiği: Kişide ağrıya neden olan en küçük uyarının şiddeti"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0034",
+       "ses": "Ağrı tolerans seviyesi ise kişinin tolere etmeye hazır olduğu, ağrıya neden olan en büyük uyarıdır; eşik alt sınırı, tolerans üst sınırı anlatır.",
+       "ekran": "**Tolerans seviyesi**: tolere edilen en büyük uyarı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tolerans seviyesi",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s13",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Ağrı tolerans seviyesi: Kişinin tolere etmeye hazır olduğu, ağrıya neden olan en büyük uyarı"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-06-b04",
+   "baslik": "Başlama süresine göre ağrı",
+   "paragraflar": [
+    {
+     "id": "k2-06-p012",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k2-06-c0035",
+       "ses": "Ağrı sınıflandırmasında ilk ölçüt ağrının başlama süresidir; bu slayt yalnız bölüm başlığını taşır, arka plandaki görsel süs amaçlıdır.",
+       "ekran": "Sınıflama I: **başlama süresine göre**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "başlama süresine göre",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s14",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Ağrı Sınıflandırması",
+         "Ağrının başlama süresine göre sınıflama:"
+        ],
+        "sekil": "Başlık slaytı; arka plan süs görseli, şema yok"
+       }
+      },
+      {
+       "id": "k2-06-c0036",
+       "ses": "Bu ölçüte göre ağrı akut, subakut ve kronik olarak üçe ayrılır.",
+       "ekran": "Akut, subakut, kronik",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s14",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Ağrının başlama süresine göre"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p013",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k2-06-c0037",
+       "ses": "Akut ağrı daima nosiseptif niteliktedir ve vücuda zarar veren bir olayın varlığını gösterir.",
+       "ekran": "Akut ağrı **daima nosiseptif**; zarar veren olayı gösterir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "daima nosiseptif",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s14",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Daima nosiseptif nitelikte olup, vücuda zarar veren bir olayın varlığını gösterir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0038",
+       "ses": "Neden olan lezyon ile ağrı arasında yer, şiddet ve zaman bakımından yakın ilişki vardır; lezyon nerede ve ne kadar ağırsa ağrı da ona uyar.",
+       "ekran": "Lezyonla **yer, şiddet, zaman** yönünden yakın ilişki",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yer, şiddet, zaman",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s14",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Neden olan lezyon ile ağrı arasında yer, şiddet ve zaman bakımından yakın ilişki vardır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0039",
+       "ses": "Nedenleri arasında travma, enfeksiyon, doku hipoksisi ve enflamasyon sayılabilir; postoperatif akut ağrı en iyi örnektir.",
+       "ekran": "Nedenler: travma, enfeksiyon, hipoksi, enflamasyon; en iyi örnek **postoperatif ağrı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "postoperatif ağrı",
+         "tur": "terim"
+        },
+        {
+         "metin": "postoperatif ağrı",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s14",
+       "cikmis": [
+        "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-62"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Nedenleri arasında, travma, enfeksiyon, doku hipoksisi ve enflamasyon sayılabilir.",
+         "Postoperatif akut ağrı en iyi örnektir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p014",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k2-06-c0040",
+       "ses": "Üç ila altı aydan daha uzun süreli ağrıya kronik ağrı denir.",
+       "ekran": "Kronik ağrı: **3-6 aydan** uzun",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "3-6 aydan",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s15",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "3-6 aydan daha uzun süreli ağrıya kronik ağrı denir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0041",
+       "ses": "Kronik ağrı çoğu kez nosiseptif nitelikte olup uyarıcı işlevi geçtikten sonra kişinin hayat kalitesini değiştiren, kişileri anormal davranışlara yönelten, psikolojik etkenlerin rol oynadığı kompleks bir tablodur.",
+       "ekran": "Uyarıcı işlevi geçmiş; hayat kalitesini bozan, psikolojik etkenli kompleks tablo",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s15",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "uyarıcı işlevi geçtikten sonra, kişinin hayat kalitesini değiştiren"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0042",
+       "ses": "Nöropatik ağrı ve fibromiyalji kronik ağrıya örnek verilebilir.",
+       "ekran": "Örnek: nöropatik ağrı, fibromiyalji",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s15",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Nöropatik ağrı,fibromiyalji örnek verilebilir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p015",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k2-06-c0043",
+       "ses": "Subakut ağrı altı haftadan üç aya kadar süren ağrılardır ve akut ağrıdan kronik ağrıya geçiş dönemidir.",
+       "ekran": "Subakut: **6 hafta – 3 ay**; akuttan kroniğe geçiş",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "6 hafta – 3 ay",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s16",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "6 haftadan – 3 aya kadar süren ağrılara denilir.",
+         "Akut ağrıdan kronik ağrıya geçiş dönemidir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0044",
+       "ses": "Miyofasyal ağrılar subakut ağrıya örnek verilebilir.",
+       "ekran": "Örnek: miyofasyal ağrılar",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s16",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Miyofasyal ağrılar örnek verilebilir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-06-b05",
+   "baslik": "Mekanizmaya göre: nosiseptif ve nöropatik ağrı",
+   "paragraflar": [
+    {
+     "id": "k2-06-p016",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k2-06-c0045",
+       "ses": "İkinci sınıflama mekanizmalara göre yapılır: nosiseptif, nöropatik, psikojenik ve nosiplastik ağrı.",
+       "ekran": "Sınıflama II: **mekanizmaya göre**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "mekanizmaya göre",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s17",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Mekanizmalarına göre ağrı sınıflaması"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p017",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k2-06-c0046",
+       "ses": "Nosiseptif ağrı, fizyopatolojik bir takım olayların ve süreçlerin nosiseptör adını verdiğimiz ağrı algılayıcılarını uyarmasına bağlı olarak ortaya çıkar.",
+       "ekran": "**Nosiseptif ağrı**: süreçlerin nosiseptörleri uyarması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Nosiseptif ağrı",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s17",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Fizyopatolojik bir takım olayların ve süreçlerin nosiseptör adını verdiğimiz ağrı algılayıcılarını uyarmasına bağlı olarak ortaya çıkar."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0047",
+       "ses": "Nosiseptörlerin somatik kökenli ağrılarda ve visseral ağrılarda olduğu gibi uyarılmasıyla, genellikle ağrı olarak bildiğimiz durum ortaya çıkar.",
+       "ekran": "Somatik ve visseral kökenli olabilir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s17",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "somatik kökenli ağrılarda, visseral ağrılarda olduğu gibi uyarılmasıyla"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0048",
+       "ses": "İletim A delta ve C lifleri ile sağlanır; bu ağrılar iyi lokalize edilir ve kas iskelet sistemi ağrıları örnek gösterilebilir.",
+       "ekran": "**A-delta ve C lifleri**; iyi lokalize; örnek: kas-iskelet ağrıları",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "A-delta ve C lifleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s17",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "A-delta ve C lifleri ile iletim sağlanır.",
+         "İyi lokalize edilirler. Kas-iskelet sistemi ağrıları"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p018",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k2-06-c0049",
+       "ses": "Nöropatik ağrı, periferik sinirlerde travma veya metabolik bir hastalık sonucunda nosiseptörlerin doğrudan etki altında kalmasıyla ortaya çıkan bir ağrıdır.",
+       "ekran": "**Nöropatik ağrı**: travma/metabolik hastalıkla sinirin doğrudan etkilenmesi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Nöropatik ağrı",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s18",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Periferik sinirlerde, travma veya metabolik bir hastalık sonucunda nosiseptörlerin doğrudan etki altında kalmasıyla ortaya çıkan bir ağrıdır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0050",
+       "ses": "Disk hernisinde olduğu gibi mekanik bir travma doğrudan nöropatik ağrıya yol açabilir; disk hernisi ağrısının tipi çıkmışta soruldu ve cevap nöropatik ağrıdır.",
+       "ekran": "**Disk hernisi**: mekanik travma → nöropatik ağrı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Disk hernisi",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s18",
+       "cikmis": [
+        "past-q-_SKENDERUN_T_M_d_rl___ne0__1__230709_230251-7"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Disk hernisinde olduğu gibi mekanik bir travma doğrudan nöropatik ağrıya yol açabilir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0051",
+       "ses": "Diyabetik nöropatilerde olduğu gibi salgılanan çeşitli metabolitler de sinir dokusunu etkileyerek nöropatik ağrıya yol açabilir.",
+       "ekran": "**Diyabetik nöropati**: metabolitler sinir dokusunu etkiler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Diyabetik nöropati",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s18",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "diabetik nöropatilerde olduğu gibi salgılanan çeşitli metabolitler sinir dokusunu etkileyerek nöropatik ağrıya yol açabilir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p019",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k2-06-c0052",
+       "ses": "Nöropatik ağrı duysal bozukluğun olduğu bölgede algılanır; aralıklı, kısa süreli, batıcı, saplanıcı bir ağrıdır.",
+       "ekran": "Duysal bozukluk bölgesinde; **aralıklı, kısa süreli, batıcı, saplanıcı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "aralıklı, kısa süreli, batıcı, saplanıcı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s19",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Nöropatik ağrı, duysal bozukluğun olduğu bölgede algılanır.",
+         "Aralıklı, kısa süreli, batıcı, saplanıcı bir ağrıdır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0053",
+       "ses": "Normalde ağrılı olmayan uyaranlar da sinir dokusunun hassaslaşmasına bağlı olarak ağrıya yol açar ve tekrarlayan uyaranlar ağrının daha fazla artmasına neden olur.",
+       "ekran": "Ağrısız uyaranlar da ağrı yapar; tekrarlayan uyaran ağrıyı artırır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s19",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "olmayan uyaranlar da sinir dokusunun hassaslaşmasına bağlı olarak ağrıya",
+         "Tekrarlayan uyaranlar ağrının daha fazla artmasına neden olur."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0054",
+       "ses": "Ağrı, o anda doku harabiyeti oluşturan patolojinin devam etmemesine rağmen mevcuttur ve tahribata neden olan olaydan hemen sonra değil, daha sonra da ortaya çıkabilir.",
+       "ekran": "Harabiyet sürmese de ağrı devam eder; **gecikmeli başlayabilir**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "gecikmeli başlayabilir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s19",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "anda doku harabiyeti oluşturan patolojinin devam etmemesine rağmen",
+         "Ağrı, tahribata neden olan olaydan hemen sonra değil, daha sonra da"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0055",
+       "ses": "Hoş olmayan uyuşukluk hissi, yanma, elektrik çarpması, karıncalanma ve keçeleşme gibi hisler eşlik eder; nöropatik ağrı periferik ve santral olarak ikiye ayrılır, periferik tipe diyabetik nöropati ve postherpetik nevralji, santral tipe serebrovasküler olay ve multipl skleroza bağlı ağrı örnektir.",
+       "ekran": "Yanma, elektrik çarpması, karıncalanma; **periferik**: diyabetik nöropati, postherpetik nevralji; **santral**: SVO, MS",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "periferik",
+         "tur": "terim"
+        },
+        {
+         "metin": "santral",
+         "tur": "terim"
+        },
+        {
+         "metin": "periferik",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s19",
+       "cikmis": [
+        "4c4eb178b88b"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Hoş olmayan uyuşukluk hissi, yanma, elektrik çarpması, karıncalanma,",
+         "Periferik nöropatik ağrıya diyabetik nöropati ve postherpetik nevralji",
+         "Santral nöropatik ağrıya serebrovasküler olay ve multiple skleroza bağlı"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-06-b06",
+   "baslik": "Deafferentasyon ve sempatik ağrılar",
+   "paragraflar": [
+    {
+     "id": "k2-06-p020",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k2-06-c0056",
+       "ses": "İlginç ağrı tiplerinden biri deafferentasyon ağrısıdır ve yeni sınıflamaya göre artık nöropatik ağrının alt mekanizması olarak görülmektedir.",
+       "ekran": "**Deafferentasyon ağrısı**: yeni sınıflamada nöropatik ağrının alt mekanizması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Deafferentasyon ağrısı",
+         "tur": "terim"
+        },
+        {
+         "metin": "nöropatik ağrının alt mekanizması",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s20",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "İlginç ağrı tiplerinden birisi de deafferentasyon ağrısıdır.",
+         "nöropatik ağrının alt mekanizması olarak görülmektedir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0057",
+       "ses": "Periferik sinir sistemi veya santral sinir sistemindeki lezyonlara bağlı olarak somatosensoriyel uyaranların santral iletiminin kesilmesine bağlı olarak ortaya çıkar.",
+       "ekran": "Somatosensoryal uyaranların SSS'deki iletimi kesilir",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Somatosensoryal uyaranların SSS'deki iletimi",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s20",
+       "cikmis": [
+        "4ba07c308e35"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "somatosensoryal uyaranların SSS'deki iletiminin kesilmesine bağlı olarak ortaya çıkar."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p021",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k2-06-c0058",
+       "ses": "Deafferentasyon ağrılarına örnek olarak travmatik paraplejiler ve fantom ağrısı verilebilir.",
+       "ekran": "Örnek: **travmatik parapleji, fantom ağrısı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "travmatik parapleji, fantom ağrısı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s21",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Deafferentasyon ağrılarına örnek olarak travmatik paraplejiler, fantom ağrısı verilebilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0059",
+       "ses": "Normalde önce medulla spinalise, sonra merkez sinir sistemine giden ileti sinir travmasına bağlı olarak kesilmiştir; bir anlamda sinirin elektriksel deşarjında kısa devreler meydana gelir ve bu kısa devreler başlı başına bir odak olarak ağrıya yol açar.",
+       "ekran": "İleti kesilir; elektriksel deşarjdaki **kısa devreler** ağrı odağı olur",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kısa devreler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s21",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "sinirin elektriksel deşarjında kısa devreler meydana gelmekte",
+         "devreler başlı başına bir odak olarak ağrıya yol açmaktadır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0060",
+       "ses": "Bu ağrı yanıcı özelliktedir ve duysal kaybın olduğu bölgededir.",
+       "ekran": "Yanıcı; duysal kayıp bölgesinde",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s21",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Yanıcı özelliktedir. Duysal kaybın olduğu bölgededir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0061",
+       "ses": "İlk birkaç ay içerisinde tedavi edilmediği takdirde çok uzun süreli ve geçmeyen inatçı ağrılara yol açabilir, ancak her lezyon sonrasında görülmez.",
+       "ekran": "İlk birkaç ayda tedavi edilmezse **inatçılaşır**; her lezyonda görülmez",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "inatçılaşır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s21",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "İlk bir kaç ay içerisinde tedavi edilmediği taktirde çok",
+         "Her lezyon sonrasında da görülmez."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p022",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k2-06-c0062",
+       "ses": "Sempatik ağrılar daha önce kaynaklandığı bölgeye göre ağrılar sınıfında iken yeni kılavuzlarda nöropatik ağrı sınıflandırmasında geçmektedir; sempatik sinir sisteminin rol aldığı ağrılardır.",
+       "ekran": "**Sempatik ağrı**: yeni kılavuzlarda nöropatik sınıfta; sempatik sistem tutulur",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Sempatik ağrı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s22",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "nöropatik ağrı sınıflandırmasında geçmektedir.",
+         "Sempatik sinir sisteminin rol aldığı/tutulduğu ağrılardır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0063",
+       "ses": "Primer hastalık geçtikten bir süre sonra, haftalar hatta aylar sonra başlar ve şiddeti gittikçe artar.",
+       "ekran": "Primer hastalıktan **haftalar-aylar sonra** başlar, şiddeti artar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "haftalar-aylar sonra",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s22",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Primer hastalık geçtikten bir süre sonra, haftalar hatta aylar sonra başlar, şiddeti gittikçe artar."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0064",
+       "ses": "Deri yüzeyi hassas ve soğuktur, soğuk ortamda ağrı daha da artar.",
+       "ekran": "Deri hassas ve soğuk; soğukta artar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s22",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Deri yüzeyi hassas ve soğuktur. Soğuk ortamda daha da artar"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0065",
+       "ses": "En önemli özelliklerinden biri yanma tarzında olmasıdır; hasta, karda uzun süre çıplak kalındığındaki gibi yanma ile üşüme arasında bir his tanımlar.",
+       "ekran": "En önemli özellik: **yanma ile üşüme arası** his",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yanma ile üşüme arası",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s22",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "yanma tarzında olmasıdır.",
+         "yanma ile üşüme arasında bir his tanımlar."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p023",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k2-06-c0066",
+       "ses": "Sempatik ağrı özellikle geceleri artar ve ağrının yanı sıra ekstremitelerde trofik bozukluklar ortaya çıkar.",
+       "ekran": "Geceleri artar; ekstremitelerde **trofik bozukluk**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "trofik bozukluk",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s23",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Ağrı özellikle geceleri artar.",
+         "ekstremitelerde trofik bozukluklar ortaya çıkar."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0067",
+       "ses": "Damarlardan kaynaklanan ağrılar ve kozalji dediğimiz yanma tarzındaki ağrılar sempatik ağrılara örnek olarak verilebilir.",
+       "ekran": "Örnek: damar kaynaklı ağrılar, **kozalji**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kozalji",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s23",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Damarlardan kaynaklanan ağrılar,",
+         "kozalji dediğimiz yanma tarzındaki ağrılar,"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-06-b07",
+   "baslik": "Psikojenik ve nosiplastik ağrı",
+   "paragraflar": [
+    {
+     "id": "k2-06-p024",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k2-06-c0068",
+       "ses": "Kronik ağrılı hastalarda kronik ağrıya bağlı olarak birtakım psikolojik semptomların ortaya çıkması doğaldır, çünkü hasta işinden gücünden alıkonmakta ve ister istemez toplumun dışına çıkmaktadır.",
+       "ekran": "Kronik ağrıda psikolojik semptomlar **doğaldır**: işten ve toplumdan uzaklaşma",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "doğaldır",
+         "tur": "terim"
+        },
+        {
+         "metin": "doğaldır",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s24",
+       "cikmis": [
+        "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-76",
+        "past-1790877044869-84754"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Kronik ağrılı hastalarda kronik ağrıya bağlı olarak birtakım psikolojik semptomların ortaya çıkması doğaldır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0069",
+       "ses": "Ancak psikosomatik ağrı bundan daha farklı bir kavramdır.",
+       "ekran": "**Psikosomatik ağrı** farklı bir kavramdır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Psikosomatik ağrı",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s24",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Ancak psikosomatik ağrı daha farklı bir kavramdır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p025",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k2-06-c0070",
+       "ses": "Psikojenik ya da fonksiyonel ağrı, hastanın psişik ya da psikososyal sorunlarını ağrı biçiminde ifade etmesidir; somatizasyon dediğimiz klinik durum buna örnektir ve limbik ve kortikal ağlara bağlı olabilir.",
+       "ekran": "**Psikojenik ağrı**: psikososyal sorunların ağrı olarak ifadesi; örnek **somatizasyon**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Psikojenik ağrı",
+         "tur": "terim"
+        },
+        {
+         "metin": "somatizasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s24",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "sorunlarını ağrı biçiminde ifade etmesidir.",
+         "Buna örnek olarak somatizasyon dediğimiz",
+         "Limbik ve kortikal ağlara bağlı olabilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0071",
+       "ses": "Hasta bir anlamda ağrıyı kullanmakta, kişisel, ekonomik ve toplumsal sorunlarını ağrı biçiminde ifade ederek ilgi çekmeye ve toplumun dikkatini kendi üzerinde toplamaya çalışmakta olabilir.",
+       "ekran": "Hasta ağrıyı ilgi çekmek için kullanabilir",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s24",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Hasta bir anlamda ağrıyı kullanmakta,"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p026",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k2-06-c0072",
+       "ses": "Nosiplastik ağrı, belirgin doku hasarı veya sinir lezyonu olmamasına rağmen santral ağrı işleminde anormallik olduğu durumdur.",
+       "ekran": "**Nosiplastik ağrı**: hasar/lezyon yok, santral ağrı işlemi anormal",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Nosiplastik ağrı",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s25",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Belirgin doku hasarı veya sinir lezyonu olmamasına rağmen santral ağrı işleminde anormallik olduğu durumdur."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0073",
+       "ses": "Mekanizmasında santral sensitizasyon ve ağrı modülasyon bozukluğu rol alır.",
+       "ekran": "Mekanizma: **santral sensitizasyon** + modülasyon bozukluğu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "santral sensitizasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s25",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Mekanizmasında santral sensitizasyon ve ağrı modülasyon bozukluğu rol alır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0074",
+       "ses": "Ağrı yaygın, değişken ve orantısızdır; irritabl barsak sendromu ve temporomandibular ağrı örnek verilebilir.",
+       "ekran": "Yaygın, değişken, orantısız; örnek: irritabl barsak sendromu, temporomandibular ağrı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s25",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Ağrı yaygın, değişken ve orantısızdır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-06-b08",
+   "baslik": "Kaynaklandığı bölgeye göre ağrı",
+   "paragraflar": [
+    {
+     "id": "k2-06-p027",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k2-06-c0075",
+       "ses": "Üçüncü sınıflama ağrının kaynaklandığı bölgeye göredir ve ağrı somatik ve visseral olarak ikiye ayrılır.",
+       "ekran": "Sınıflama III: **kaynak bölgeye göre** — somatik, visseral",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kaynak bölgeye göre",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s26",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Kaynaklandığı bölgeye göre ağrı:"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p028",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k2-06-c0076",
+       "ses": "Somatik ağrı daha çok somatik sinir lifleriyle taşınan ağrıdır; ani başlar, keskindir, iyi lokalize edilir ve batma, sızlama, zonklama tarzındadır, somatik ağrının özellikleri çıkmışta soruldu.",
+       "ekran": "**Somatik ağrı**: somatik liflerle; ani, keskin, iyi lokalize; batma-sızlama-zonklama",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Somatik ağrı",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s26",
+       "cikmis": [
+        "01a96a18bccf"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Daha çok somatik sinir lifleriyle taşınan ağrıdır.",
+         "Ani olarak başlar, keskindir, iyi lokalize edilir; batma, sızlama, zonklama tarzındadır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0077",
+       "ses": "Sinirlerin yayılım bölgesinde algılanır ve genellikle travma, kırık, çıkık gibi durumlarda görülür; visseral peritondan kaynaklanan ağrı ise somatik değil visseraldir.",
+       "ekran": "Sinirin yayılım bölgesinde; travma, kırık, çıkık",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s26",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Sinirlerin yayılım bölgesinde algılanır.",
+         "Genellikle travma,kırık,çıkık gibi"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p029",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k2-06-c0078",
+       "ses": "Somatik yüzeyel ağrı deri ve mukozal kaynaklıdır, iyi lokalize edilir ve yanık ağrısı örnek verilebilir.",
+       "ekran": "**Yüzeyel somatik**: deri, mukoza; iyi lokalize; yanık ağrısı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yüzeyel somatik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s27",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Somatik yüzeyel ağrı deri ve mukozal kaynaklıdır.",
+         "Yanık ağrısı örnek verilebilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0079",
+       "ses": "Somatik derin ağrı kas, eklem ve bağ dokusu kaynaklıdır, künt ve yaygın özelliklidir; miyofasiyal ağrı ve artrit ağrısı örnektir.",
+       "ekran": "**Derin somatik**: kas, eklem, bağ dokusu; künt, yaygın; miyofasiyal, artrit",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Derin somatik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s27",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Somatik derin ağrı kas, eklem, bağ dokusu kaynaklıdır.",
+         "Künt ve yaygın özelliklidir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p030",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k2-06-c0080",
+       "ses": "Visseral ağrı iç organlardan kaynaklanan ağrıdır ve bağırsak patolojilerine bağlı ağrının visseral ağrı olduğu çıkmışta soruldu.",
+       "ekran": "**Visseral ağrı**: iç organ kaynaklı; bağırsak ağrısı visseraldir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Visseral ağrı",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s28",
+       "cikmis": [
+        "58700c98a3db"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "İç organlardan kaynaklanan ağrılardır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0081",
+       "ses": "İç organların tümü ağrıya karşı her zaman hassas değildir; örneğin bağırsaklarda meydana gelen gerilme, organların çeperinde bulunan sinir liflerini uyararak ağrıya yol açar.",
+       "ekran": "Her iç organ ağrıya hassas değil; bağırsakta **gerilme** çeperdeki lifleri uyarır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "gerilme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s28",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "İç organların tümü ağrıya karşı her zaman hassas değildir.",
+         "Bağırsaklarda meydana gelen gerilme organların çeperinde bulunan sinir liflerini uyararak ağrıya yol açabilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0082",
+       "ses": "Visseral ağrı genellikle künttür, yavaş yavaş artar, kolay lokalize edilemez ve başka bölgelere yayılır; batma, sızlama, zonklama visseral değil somatik ağrının özelliğidir ve bu ayrım çıkmışta soruldu.",
+       "ekran": "Künt, yavaş artan, **kolay lokalize edilemez**, yayılır; batma-zonklama somatiktir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kolay lokalize edilemez",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s28",
+       "cikmis": [
+        "392041a09b26",
+        "303055c213d3"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "İç organlardan kaynaklanan ağrılar genellikle künttür, yavaş yavaş artar, kolay lokalize edilemez, başka bölgelere yayılır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0083",
+       "ses": "Pankreas ağrısı sağ omuza, apandisit ağrısı göbeğe, miyokarddan kaynaklanan ağrılar sol kola yayılır; aynı biçimde her organa özgü deri bölgelerinde hipersensitivite vardır.",
+       "ekran": "Yayılım: pankreas → sağ omuz, apandisit → göbek, miyokard → sol kol; organa özgü deri hipersensitivitesi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sol kol",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s28",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "apandisit ağrısının göbeğe yayılması, miyokarddan kaynaklanan ağrıların sol kola yayılması gibi)",
+         "her organa özgü deri bölgelerinde hipersensitivite vardır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-06-b09",
+   "baslik": "Patogeneze ve tedaviye yanıta göre ağrı",
+   "paragraflar": [
+    {
+     "id": "k2-06-p031",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k2-06-c0084",
+       "ses": "Patogeneze göre ilk tip inflamatuar ağrıdır; prostaglandin, bradikinin ve histamin aracılığıyla duyarlılık artışına bağlı ortaya çıkar ve artrit ile enfeksiyona bağlı ağrılar örnektir.",
+       "ekran": "**İnflamatuar ağrı**: prostaglandin, bradikinin, histamin; artrit, enfeksiyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İnflamatuar ağrı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s31",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "İnflamatuar ağrı, Prostaglandin, bradikinin, histamin aracılığıyla duyarlılık artışı bağlı ortaya çıkar."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0085",
+       "ses": "İskemik ağrı, dokularda oksijen yetersizliği ve laktik asit birikimine bağlı ortaya çıkar; angina pektoris ve periferik arter hastalığına bağlı ağrı örnektir.",
+       "ekran": "**İskemik ağrı**: oksijen yetersizliği, laktik asit; angina pektoris, periferik arter hastalığı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İskemik ağrı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s31",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "İskemik ağrı, dokularda oksijen yetersizliği, laktik asit birikimine bağlı ortaya çıkan ağrılardır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0086",
+       "ses": "Deafferentasyon ağrısı sinir kesisi veya spinal lezyon sonrası spontan oluşan ağrılardır ve amputasyon sonrası fantom ağrısı örnektir.",
+       "ekran": "**Deafferentasyon**: sinir kesisi/spinal lezyon sonrası spontan; fantom ağrısı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Deafferentasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s31",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Sinir kesisi veya spinal lezyon sonrası gelişen spontan oluşan ağrılardır.",
+         "Amputasyon sonrası olan fantom ağrısı örnek verilebilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0087",
+       "ses": "İdiyopatik ağrıda tanımlanabilir bir neden yoktur ve kronik pelvik ağrı örnek verilebilir.",
+       "ekran": "**İdiyopatik**: neden yok; kronik pelvik ağrı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İdiyopatik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s31",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Tanımlanabilir bir neden olmaz.",
+         "Kronik pelvik ağrı örnek verilebilir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p032",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k2-06-c0088",
+       "ses": "Tedaviye cevabına göre opioide duyarlı ağrı nosiseptör kaynaklıdır, morfin gibi narkotik analjeziklere iyi yanıt verir ve postoperatif ağrı örnektir.",
+       "ekran": "**Opioid-duyarlı**: nosiseptör kaynaklı; morfine iyi yanıt; postoperatif ağrı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Opioid-duyarlı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s33",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Opioid-duyarlı ağrı,Nosiseptör kaynaklı ağrılardır.",
+         "Morfin vb. narkotik analjeziklere iyi yanıt verirler."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0089",
+       "ses": "Opioide duyarsız ağrı ise nöropatik veya santral tip ağrıdır, adjuvan tedavi vermek gerekir; diyabetik nöropati ve fibromiyalji örnektir.",
+       "ekran": "**Opioid-duyarsız**: nöropatik/santral; adjuvan tedavi; diyabetik nöropati, fibromiyalji",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Opioid-duyarsız",
+         "tur": "terim"
+        },
+        {
+         "metin": "adjuvan tedavi",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s33",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Nöropatik veya santral tip ağrılardır, adjuvan tedavi vermek gerekir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-06-b10",
+   "baslik": "Ağrı algılamasının dört aşaması",
+   "paragraflar": [
+    {
+     "id": "k2-06-p033",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k2-06-c0090",
+       "ses": "Ağrı mekanizmaları bölümünde ağrının periferden yüksek merkezlere nasıl algılandığını inceleyeceğiz.",
+       "ekran": "**Ağrı mekanizmaları**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Ağrı mekanizmaları",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s34",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Ağrı Mekanizmaları:"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p034",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "id": "k2-06-c0091",
+       "ses": "Ağrının algılanması, periferde bulunan ağrıya hassas nosiseptörlerin aktivasyonu veya hasar görmüş dokudan salınan mediyatörler tarafından başlatılır, medulla spinalise afferent transmisyon ve dorsal boynuz üzerinden yüksek merkezlere ileti aşamaları ile gerçekleşir.",
+       "ekran": "Nosiseptör aktivasyonu/mediyatörler → medulla spinalis → **dorsal boynuz** → yüksek merkezler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dorsal boynuz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s34",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "hasar görmüş dokudan salınan mediyatörler tarafından,",
+         "dorsal boynuz üzerinden yüksek merkezlere ileti aşamaları ile gerçekleşir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p035",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k2-06-c0092",
+       "ses": "Ağrı algılaması dört aşamada olur: transdüksiyon, transmisyon, modülasyon ve persepsiyon; remisyon bu aşamalardan biri değildir ve bu çeldirici çıkmışta soruldu.",
+       "ekran": "4 aşama: transdüksiyon, transmisyon, modülasyon, persepsiyon; **remisyon aşama değil**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "remisyon aşama değil",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s35",
+       "cikmis": [
+        "5afc023320d4",
+        "57c4c3ee7531"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Ağrı algılaması 4 aşama da olur;"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0093",
+       "ses": "Birinci aşama transdüksiyon, bir enerjinin başka bir enerjiye dönüşmesidir; zararlı termal, mekanik ya da kimyasal enerjinin elektriksel sinyale çevrildiği bu aşama da çıkmışta soruldu.",
+       "ekran": "**Transdüksiyon**: bir enerjinin başka enerjiye dönüşmesi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Transdüksiyon",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s35",
+       "cikmis": [
+        "11cec678fef5"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Transdüksiyon: Bir enerjinin başka bir enerjiye dönüşmesidir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0094",
+       "ses": "Örneğin her sıcak uyaran ağrılı değildir; sıcak bir uyaranın ağrılı hale geçebilmesi için belirli bir derecenin üzerine çıkması gerekir.",
+       "ekran": "Her sıcak uyaran ağrılı değil; **belirli derecenin üstü** gerekir",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "belirli derecenin üstü",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s35",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Örneğin her sıcak uyaran ağrılı değildir.",
+         "belirli bir derecenin üzerine çıkması gerekir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0095",
+       "ses": "Nosiseptörler normal ısıya karşı duyarsız kalırken ısının artışı ile duyarlı hale geçerler.",
+       "ekran": "Nosiseptör normal ısıya duyarsız, artan ısıya duyarlı",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s35",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Nosiseptörler normal ısıya karşı duyarsız kalırken ısının artışı ile duyarlı hale geçerler."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p036",
+     "sayfa": 38,
+     "cumleler": [
+      {
+       "id": "k2-06-c0096",
+       "ses": "İkinci aşama transmisyon, nosiseptörler tarafından algılanan ağrı bilgisinin daha üst merkezlere doğru iletilmesidir ve bu iletimde miyelinli A delta lifleri ile miyelinsiz C lifleri etkin rol üstlenir.",
+       "ekran": "**Transmisyon**: ağrı bilgisinin üst merkezlere iletimi; A-delta (miyelinli), C (miyelinsiz)",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Transmisyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s36",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Transmisyon, nosiseptörler tarafından algılanan ağrı bilgisinin daha üst merkezlere doğru iletilmesidir.",
+         "iletimde miyelinli A-delta lifleri ve miyelinsiz C lifleri"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0097",
+       "ses": "Miyelinli A delta lifleri hızlı ileten, sensitizasyona açık, termal ve mekanik uyaranlarla uyarılan liflerdir.",
+       "ekran": "A-delta: **hızlı**, sensitizasyona açık, termal ve mekanik",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "hızlı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s36",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Miyelinli A-delta lifleri hızlı ileten, sensitizasyona açık, termal ve mekanik uyaranlarla uyarılan liflerdir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0098",
+       "ses": "Miyelinsiz C lifleri ise polimodal bir özellik gösteren, her türlü uyarana karşı duyarlı, yavaş ileten liflerdir; diğer sinir lifleri de çeşitli biçimlerde ağrılı uyaranın iletimine katılır.",
+       "ekran": "C lifi: **polimodal**, her uyarana duyarlı, **yavaş**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "polimodal",
+         "tur": "terim"
+        },
+        {
+         "metin": "yavaş",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s36",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Miyelinsiz C lifleri ise polimodal bir özellik gösteren,",
+         "Diğer sinir lifleri de çeşitli biçimlerde ağrılı"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p037",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k2-06-c0099",
+       "ses": "Üçüncü aşama modülasyon, başlıca medulla spinalis seviyesinde oluşan bir olaydır.",
+       "ekran": "**Modülasyon**: başlıca medulla spinalis düzeyinde",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Modülasyon",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s37",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Başlıca medulla spinalis seviyesinde oluşan bir olaydır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0100",
+       "ses": "Ağrılı uyaran spinal kord düzeyinde bir değişime uğrar ve bu değişim sonucunda daha üst merkezlere iletilir.",
+       "ekran": "Uyaran spinal kordda değişip üst merkezlere gider",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s37",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Ağrılı uyaran spinal kord düzeyinde bir değişime uğramakta"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p038",
+     "sayfa": 40,
+     "cumleler": [
+      {
+       "id": "k2-06-c0101",
+       "ses": "Dördüncü aşama persepsiyondur: medulla spinalisten geçen uyaran çeşitli çıkan yollar aracılığıyla üst merkezlere doğru iletilir ve ağrı algılanır.",
+       "ekran": "**Persepsiyon**: çıkan yollarla üst merkezlerde ağrının algılanması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Persepsiyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s38",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Medulla spinalisden geçen uyaran çeşitli çıkan yollar aracılığıyla üst merkezlere doğru iletilir ve ağrının algılanmasıdır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p039",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "id": "k2-06-c0102",
+       "ses": "Bu şema ağrı yolunu gösterir: zararlı uyaran primer afferent nosiseptörü uyarır, sinyal spinal korda girer, spinotalamik traktusla talamusa ve oradan kortekse ulaşarak algılanır.",
+       "ekran": "Şema: zararlı uyaran → primer afferent → spinal kord → **spinotalamik traktus** → talamus → korteks",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "spinotalamik traktus",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s39",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [],
+        "sekil": "Ağrı yolu şeması: noxious uyaran, primer afferent nosiseptör, spinal kord, spinotalamik traktus, talamus, korteks"
+       }
+      },
+      {
+       "id": "k2-06-c0103",
+       "ses": "Şemada transdüksiyon intravenöz, intraplevral, intraperitoneal ve insizyonel lokal anesteziklerle, transmisyon ise epidural, subaraknoid ve çölyak pleksus düzeyindeki lokal anesteziklerle hedeflenir.",
+       "ekran": "Transdüksiyon ve transmisyon: **lokal anestezikler** (insizyonel, epidural, subaraknoid, çölyak pleksus)",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "lokal anestezikler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s39",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [],
+        "sekil": "Transdüksiyon ve transmisyon için lokal anestezik etki yerleri"
+       }
+      },
+      {
+       "id": "k2-06-c0104",
+       "ses": "Modülasyon epidural ve subaraknoid opioidlerle hedeflenir, sistemik opioidler ise hem spinal kordda hem de üst merkezlerde etki eder.",
+       "ekran": "Modülasyon: epidural/subaraknoid **opioidler**; sistemik opioidler spinal kord + üst merkezler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "opioidler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s39",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [],
+        "sekil": "Modülasyon için epidural/subaraknoid opioid ve sistemik opioid etki yerleri"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-06-b11",
+   "baslik": "Periferik sensitizasyon",
+   "paragraflar": [
+    {
+     "id": "k2-06-p040",
+     "sayfa": 42,
+     "cumleler": [
+      {
+       "id": "k2-06-c0105",
+       "ses": "Moleküler ve santral mekanizmalar periferik sensitizasyon, santral sensitizasyon, disinhibisyon ve reorganizasyon başlıklarında incelenir.",
+       "ekran": "**Moleküler ve santral mekanizmalar**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Moleküler ve santral mekanizmalar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s41",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "Moleküler ve Santral mekanizmalar:"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p041",
+     "sayfa": 43,
+     "cumleler": [
+      {
+       "id": "k2-06-c0106",
+       "ses": "Periferik sensitizasyonda, inflamatuar sürecin bir parçası olarak tahrip olan bölgelere makrofaj, lenfosit ve mast hücreleri gibi çeşitli immün sistem hücreleri göç eder.",
+       "ekran": "**Periferik sensitizasyon**: makrofaj, lenfosit, mast hücresi göçü",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Periferik sensitizasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s41",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "Periferik sensitizasyon (hassaslaşma);",
+         "tahrip olan bölgelere makrofaj, lenfosit ve mast hücreleri gibi çeşitli immün sistem hücreleri göç eder."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0107",
+       "ses": "Nosiseptif uyaranın kendisi de nörojenik bir inflamasyon cevabı oluşturarak P maddesi, nörokinin A ve kalsitonin geniyle ilişkili peptid salgılanmasına yol açar.",
+       "ekran": "Nörojenik inflamasyon → **P maddesi, nörokinin A, CGRP**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "P maddesi, nörokinin A, CGRP",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s41",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "Nosiseptif uyaranın kendisi de nörojenik bir inflamasyon cevabı oluşturarak P maddesi,"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p042",
+     "sayfa": 44,
+     "cumleler": [
+      {
+       "id": "k2-06-c0108",
+       "ses": "Bu peptidlerin salgılanması sensoryal ve sempatik sinir liflerinde uyarılmada değişikliğe, vazodilatasyona, plazma proteinlerinin ekstravazasyonuna ve inflamatuar hücrelerin çeşitli kimyasal mediatörler salgılamasına yol açar.",
+       "ekran": "Peptidler → vazodilatasyon, plazma proteini **ekstravazasyonu**, mediatör salınımı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ekstravazasyonu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s42",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "sempatik sinir liflerinde uyarılmada değişikliğe, vazodilatasyona, plazma proteinlerinin ekstravazasyonuna"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0109",
+       "ses": "Bu şekilde serotonin, P maddesi, nitrik oksit, siklooksijenaz ve lipooksijenaz yollarındaki inflamatuar mediatörlerin salgılanması yüksek eşik değerdeki nosiseptörleri uyararak periferik sensitizasyon dediğimiz olayı meydana getirir.",
+       "ekran": "Serotonin, P maddesi, NO, COX/LOX mediatörleri **yüksek eşikli nosiseptörleri** uyarır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüksek eşikli nosiseptörleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s42",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "Bu şekilde serotonin, P maddesi, nitrik oksit,",
+         "yüksek eşik değerdeki nosiseptörleri uyararak periferik sensitizasyon"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p043",
+     "sayfa": 45,
+     "cumleler": [
+      {
+       "id": "k2-06-c0110",
+       "ses": "Sensitizasyondan sonra düşük şiddetteki mekanik uyaranlar, normalde ağrıya yol açmayacakken ağrılı olarak algılanmaya başlar.",
+       "ekran": "Sensitizasyon sonrası **düşük şiddetli mekanik uyaran** ağrılı algılanır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "düşük şiddetli mekanik uyaran",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s43",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Sensitizasyondan sonra düşük şiddetteki mekanik uyaranlar normalde ağrıya yol açmayacakken ağrılı olarak algılanmaya başlarlar."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0111",
+       "ses": "Aynı biçimde harabiyet bölgesinde termal uyarana karşı yanıtta artış meydana gelir.",
+       "ekran": "Harabiyet bölgesinde termal yanıt artar",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s43",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Aynı biçimde harabiyet bölgesinde termal uyarana karşı yanıtta artış meydana gelir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p044",
+     "sayfa": 46,
+     "cumleler": [
+      {
+       "id": "k2-06-c0112",
+       "ses": "Tahribat bölgesindeki bu primer hiperaljezi bölgesindeki periferik değişiklikler çeşitli cerrahi girişim ve travmalardan sonra görülür; inflamatuar cevabı durdurmak için genellikle aspirin, parasetamol ve diğer nonsteroid antiinflamatuarlar kullanılır.",
+       "ekran": "**Primer hiperaljezi**: cerrahi/travma sonrası; aspirin, parasetamol, NSAİİ",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Primer hiperaljezi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s44",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "Tahribat bölgesindeki bu primer hiperaljezi",
+         "aspirin, parasetamol ve diğer nonsteroid antiinflamatuarlar kullanılır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0113",
+       "ses": "Nonsteroidler etkilerini siklooksijenaz yolu üzerinden gösterir ve siklooksijenazın iki türü bilinmektedir: siklooksijenaz bir ve siklooksijenaz iki.",
+       "ekran": "NSAİİ'ler **siklooksijenaz** yolu üzerinden; iki tür: COX-1, COX-2",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "siklooksijenaz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s44",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "Nonsteroidler etkilerini siklooksijenaz yolu üzerinden gösterirler.",
+         "Siklooksijenazın iki türü (COX-1 ve COX-2) bilinmektedir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0114",
+       "ses": "Siklooksijenaz bir dokularda ve gastrointestinal mukozada sürekli yer alırken, siklooksijenaz iki sadece inflamasyon sırasında ortaya çıkar; bu fark yeni ajanların geliştirilmesinde önemli rol oynar.",
+       "ekran": "COX-1: dokular ve GİS mukozasında **sürekli**; COX-2: **yalnız inflamasyonda**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "sürekli",
+         "tur": "terim"
+        },
+        {
+         "metin": "yalnız inflamasyonda",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s44",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "dokularda ve gastrointestinal mukozada sürekli yer alırken, COX-2 sadece inflamasyon sırasında ortaya çıkmaktadır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-06-b12",
+   "baslik": "Santral sensitizasyon, disinhibisyon ve reorganizasyon",
+   "paragraflar": [
+    {
+     "id": "k2-06-p045",
+     "sayfa": 47,
+     "cumleler": [
+      {
+       "id": "k2-06-c0115",
+       "ses": "Santral sensitizasyonda spinal dorsal boynuzdaki nöronlar aşırı uyarılabilir hale gelir.",
+       "ekran": "**Santral sensitizasyon**: dorsal boynuz nöronları aşırı uyarılabilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Santral sensitizasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s45",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 47,
+        "satir": [
+         "Spinal dorsal boynuzda nöronlar aşırı uyarılabilir hale gelir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0116",
+       "ses": "Bu durumda en em de a reseptör aktivasyonu olur, interlökin bir beta ve tümör nekroz faktörü alfa gibi mikroglial sitokinler etki gösterir.",
+       "ekran": "**NMDA** aktivasyonu; mikroglial sitokinler IL-1β, TNF-α",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "NMDA",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s45",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 47,
+        "satir": [
+         "NMDA reseptör aktivasyonu olur,mikroglial sitokinler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0117",
+       "ses": "Sonuçta hiperaljezi, allodini ve spontan ağrı gibi durumlar ortaya çıkar.",
+       "ekran": "Sonuç: hiperaljezi, allodini, spontan ağrı",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s45",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 47,
+        "satir": [
+         "Hiperaljezi, allodini, spontan ağrı gibi durumlar ortaya çıkar."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p046",
+     "sayfa": 48,
+     "cumleler": [
+      {
+       "id": "k2-06-c0118",
+       "ses": "Disinhibisyon, normalde ağrı iletimini inhibe eden sistemlerin etkinliğinin azalması sonucu ağrı eşiğinin düşmesi ve ağrının kolaylaşması durumudur ve özellikle kronik ağrı sendromlarında görülür.",
+       "ekran": "**Disinhibisyon**: inhibitör sistemler zayıflar → eşik düşer; kronik ağrı sendromları",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Disinhibisyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s46",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "Normalde ağrı iletimini inhibe eden sistemlerin etkinliğininazalması sonucu ağrı eşiğinin düşmesi ve ağrının kolaylaşması durumudur."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p047",
+     "sayfa": 49,
+     "cumleler": [
+      {
+       "id": "k2-06-c0119",
+       "ses": "Disinhibisyonda serotonin ve noradrenalin azalması gibi inen inhibitör sistemlerin zayıflaması ve dorsal boynuzda gama aminobütirik asit ve glisin inhibisyonunun kaybı görülür.",
+       "ekran": "İnen inhibitör sistemler zayıflar (serotonin/noradrenalin ↓); **GABA/glisin** inhibisyonu kaybı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "GABA/glisin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s47",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 49,
+        "satir": [
+         "İnen inhibitör sistemlerin zayıflaması(serotonin/noradrenalin azalması gibi)",
+         "Dorsal boynuzda GABA/glisin inhibisyonunun kaybı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0120",
+       "ses": "Spinal nöronlarda membran hiperpolarizasyonunun azalması, en em de a reseptör aktivasyonu ve glutamat birikimi ile ağrı sinyalleri aşırı hale gelir ve hiperaljezi meydana gelir.",
+       "ekran": "Hiperpolarizasyon ↓, NMDA aktivasyonu, glutamat birikimi → **hiperaljezi**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hiperaljezi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s47",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 49,
+        "satir": [
+         "Spinal nöronlarda membran hiperpolarizasyonunun azalması",
+         "NMDA reseptör aktivasyonu ve glutamat birikimi",
+         "Ağrı sinyallerinin aşırı olması sonucunda hiperaljezi meydana gelir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p048",
+     "sayfa": 50,
+     "cumleler": [
+      {
+       "id": "k2-06-c0121",
+       "ses": "Reorganizasyon, ağrı uyarımında süre uzadıkça somatosensoryal bölgede yeni oluşum olması durumudur; spinal kord, talamus ve korteks düzeyinde olur, santral sensitizasyon devam eder ve kronik ağrı sendromlarına yol açar.",
+       "ekran": "**Reorganizasyon**: uzun uyarımda yeni oluşum; spinal kord, talamus, korteks → kronik ağrı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Reorganizasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s48",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 50,
+        "satir": [
+         "Ağrı uyarımında süre uzadıkça somatosensoryal bölgede yeni oluşum olma durumudur.",
+         "Santral sensitizasyon devam eder ve kronik ağrı sendromlarına yol açar."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-06-b13",
+   "baslik": "Nosiseptörler ve farmakolojik hedefler",
+   "paragraflar": [
+    {
+     "id": "k2-06-p049",
+     "sayfa": 51,
+     "cumleler": [
+      {
+       "id": "k2-06-c0122",
+       "ses": "Ağrı reseptörleri yani nosiseptörler, gerçek ya da potansiyel doku hasarına yol açabilecek uyaranları algılar; miyelinli veya miyelinsiz afferent sinir uçlarıdır, kapsülsüz serbest sinir uçları şeklindedir ve transdüksiyon bu reseptörlerle başlar.",
+       "ekran": "**Nosiseptör**: kapsülsüz serbest sinir ucu; transdüksiyon burada başlar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Nosiseptör",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s49",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 51,
+        "satir": [
+         "Gerçek ya da potansiyel doku hasarına yol açabilecek uyaranları algılarlar",
+         "Kapsülsüz serbest sinir uçları şeklindedir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0123",
+       "ses": "Deride, kaslarda, eklemlerde, periostta, damar duvarlarında, diş pulpasında ve visseral organlarda bulunurlar.",
+       "ekran": "Deri, kas, eklem, periost, damar duvarı, diş pulpası, visseral organlar",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s49",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 51,
+        "satir": [
+         "Deride, kaslarda, eklemlerde, periostta, damar duvarlarında, diş pulpasında ve visseral organlarda bulunur."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0124",
+       "ses": "A delta lifleri ince miyelinlidir, saniyede beş ila otuz metre hızla iletim sağlar ve keskin, iyi lokalize ağrıda görevlidir.",
+       "ekran": "A-delta: ince miyelinli, **5–30 m/s**, keskin iyi lokalize ağrı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "5–30 m/s",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s49",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 51,
+        "satir": [
+         "A-delta lifleri:İnce miyelinlidir.",
+         "Keskin, iyi lokalize ağrıda görevli."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0125",
+       "ses": "C lifleri miyelinsizdir, saniyede sıfır virgül dört ila iki metre hızla iletim sağlar ve künt, yanıcı, yaygın tarzda ağrıda görevlidir.",
+       "ekran": "C lifi: miyelinsiz, **0.4–2 m/s**, künt yanıcı yaygın ağrı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "0.4–2 m/s",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s49",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 51,
+        "satir": [
+         "C-lifleri:Miyelinsizdir.",
+         "yanıcı, yaygın tarzda ağrıda görevlidir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p050",
+     "sayfa": 52,
+     "cumleler": [
+      {
+       "id": "k2-06-c0126",
+       "ses": "Nosiseptörler mekanik, termal, kimyasal ve polimodal nosiseptörler olarak sınıflandırılır.",
+       "ekran": "Tipler: mekanik, termal, kimyasal, **polimodal**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "polimodal",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s51",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "Mekanik, termal, kimyasal ve polimodal nosiseptörler olarak sınıflandırılırlar."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0127",
+       "ses": "Nonsteroid antiinflamatuar ilaçlar prostaglandin sentezini inhibe ederek nosiseptör aktivasyonunu azaltır; lokal anestezikler ise sodyum kanallarını bloke ederek aksiyon potansiyelini durdurur.",
+       "ekran": "NSAİİ: prostaglandin sentezi ↓; lokal anestezik: **sodyum kanalı blokajı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sodyum kanalı blokajı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s51",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "prostaglandin sentezini inhibe ederek nosiseptör aktivasyonunu azaltır.",
+         "Lokal anestezikler, sodyum kanallarını bloke ederek aksiyon potansiyelini durdurur."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0128",
+       "ses": "Kapsaisin kremi vanilloid reseptörü olan te er pe ve bir reseptörlerini aşırı aktive edip desensitize eder ve analjezi sağlar.",
+       "ekran": "**Kapsaisin**: TRPV1'i aşırı aktive edip desensitize eder → analjezi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kapsaisin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s51",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "Kapsaisin kremi, TRPV1(-vanilloid-) reseptörlerini aşırı aktive edip desensitize eder ve analjezi sağlar."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0129",
+       "ses": "Kronik inflamasyonda ise te er pe kalsiyum ve sodyum kanalları aşırı duyarlı hale gelir ve hiperaljeziye sebep olur.",
+       "ekran": "Kronik inflamasyonda TRP kanalları aşırı duyarlı → hiperaljezi",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s51",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "Kronik inflamasyonda, TRP(Ca ve Na kanalları aşırı duyarlı hale gelir"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-06-b14",
+   "baslik": "Nörotransmiterler ve kapı kontrol sistemi",
+   "paragraflar": [
+    {
+     "id": "k2-06-p051",
+     "sayfa": 53,
+     "cumleler": [
+      {
+       "id": "k2-06-c0130",
+       "ses": "Arka boynuzdaki ağrı sürecinde çeşitli nörotransmiter ve nöromodülatörler yer alır; özellikle glutamat ve aspartat gibi eksitatör aminoasitler ağrılı uyaranın iletiminde rol alır ve en em de a, en em de a dışı ve glutamat reseptörleri işin içine girer.",
+       "ekran": "Arka boynuz: **glutamat, aspartat**; NMDA, non-NMDA, glutamat reseptörleri",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "glutamat, aspartat",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s52",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "Özellikle glutamat ve aspartat gibi eksitatör aminoasitler",
+         "NMDA ve non-NMDA reseptörleri ve glutamat reseptörleri"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0131",
+       "ses": "Primer afferentlerden salgılanan P maddesi, nörokinin A ve kalsitonin geniyle ilişkili peptid nosisepsiyonda rol alır; P maddesi nörokinin reseptörleri üzerine etki eder.",
+       "ekran": "Peptidler: P maddesi, nörokinin A, CGRP; **P maddesi → nörokinin reseptörü**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "P maddesi → nörokinin reseptörü",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s52",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "Primer afferentlerden salgılanan çeşitli peptidler nosisepsiyonda rol alırlar.",
+         "P maddesi nörokinin reseptörleri üzerine etki eder."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p052",
+     "sayfa": 54,
+     "cumleler": [
+      {
+       "id": "k2-06-c0132",
+       "ses": "Nosiseptif transmisyon ya da modülasyonda yer alan başka reseptörler de vardır: opioid, gama aminobütirik asit, alfa adrenerjik, serotonin ve adenozin reseptörleri.",
+       "ekran": "Diğer reseptörler: opioid, GABA, alfa-adrenerjik, serotonin (5-HT), adenozin",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s53",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 54,
+        "satir": [
+         "Nosiseptif transmisyon ya da modülasyonda yer alan başka reseptörler de vardır.",
+         "serotonin (5-HT) ve adenozin reseptörleridir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0133",
+       "ses": "Ağrı kontrolündeki geleneksel yöntemler klasik bağ reseptör blokajına yönelmiştir; moleküler ve genetik mekanizmaların hızlı gelişimi ise ileride gen ekspresyonunu değiştirebilecek ve spesifik reseptörlere etkili yeni yaklaşımlar getirebilir.",
+       "ekran": "Geleneksel: reseptör blokajı; gelecekte **gen ekspresyonunu** değiştiren yaklaşımlar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "gen ekspresyonunu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s53",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 54,
+        "satir": [
+         "yöntemler klasik bağ reseptör blokajına yönelmiştir.",
+         "İleride gen ekspresyonunu değiştirebilecek ve spesifik"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p053",
+     "sayfa": 55,
+     "cumleler": [
+      {
+       "id": "k2-06-c0134",
+       "ses": "Bu şekil kapı kontrol sistemini gösterir: büyük çaplı A lifi ve küçük çaplı C lifi substantia gelatinosa ve santral iletim yapan te hücresine bağlanır.",
+       "ekran": "Kapı kontrol: **A lifi (büyük)** ve **C fiber (small fiber)** → substantia gelatinosa ve T hücresi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "A lifi (büyük)",
+         "tur": "terim"
+        },
+        {
+         "metin": "C fiber (small fiber)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s54",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 55,
+        "satir": [
+         "C fiber",
+         "(Small fiber)"
+        ],
+        "sekil": "Kapı kontrol sistemi şeması: A lifi, C lifi, substantia gelatinosa, T hücresi"
+       }
+      },
+      {
+       "id": "k2-06-c0135",
+       "ses": "Büyük A lifi substantia gelatinosayı uyararak kapıyı kapatır, küçük C lifi ise onu inhibe ederek kapıyı açar; sinyal te hücresinden beyne ulaşır ve santral kontrol yukarıdan kapıyı etkiler.",
+       "ekran": "A lifi SG'yi uyarır → kapı kapanır; C lifi SG'yi inhibe eder → kapı açılır; santral kontrol iner",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s54",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 55,
+        "satir": [],
+        "sekil": "Kapı kontrol şemasında artı ve eksi okları, santral kontrol ve T hücresi çıkışı"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p054",
+     "sayfa": 56,
+     "cumleler": [
+      {
+       "id": "k2-06-c0136",
+       "ses": "Toplumun çok büyük bir kesimini ilgilendiren ağrı ile baş edebilmek için ağrı mekanizmalarının iyi bilinmesi gerekir.",
+       "ekran": "Ağrıyla baş etmek için **mekanizmalar** bilinmeli",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "mekanizmalar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-06-d-s55",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 56,
+        "satir": [
+         "ilgilendiren ağrı ile baş edebilmek için ağrı mekanizmalarının iyi bilinmesi gerekir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-06-c0137",
+       "ses": "Son yıllarda epeyce yol alınmasına karşın, ağrı ve fizyopatolojisi konusunda bilinmeyenler bilinenlerden daha fazladır.",
+       "ekran": "Bilinmeyenler bilinenlerden fazla",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s55",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 56,
+        "satir": [
+         "bilinmeyenler bilinenlerden daha fazladır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "anahtar": "y25-k2-06-agri-yollari-ve-mekanizmalari",
+ "donem": "2025-2026"
+}
