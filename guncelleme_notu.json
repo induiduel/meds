@@ -1,15 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 290,
-  "baslik": "Kelime takibi ve slayt uzatma düzeltmeleri",
+  "onem": 291,
+  "baslik": "Kurul 1 2026-2027 çıkmış sorular: konu bilgisi ve KTG sorusu",
   "maddeler": [
-    "Konuşulan kelimenin işareti artık yazıyı kapatmıyor",
-    "Slayt yalnız gerektiğinde ve gerektiği kadar uzatılıyor; panel önce slaytın kendi boşluğunu kullanıyor",
-    "Panel oklarındaki açıklamalar kesilmiyor"
+    "Her sorunun başında kurul, ders ve konu (ders notu) bilgisi var",
+    "Kadın doğumdaki KTG/NST sorusu görseliyle eklendi",
+    "Sorular ders notlarıyla eşleştirildi"
   ],
   "eklenen": [],
   "degisen": [
-    "/api/test/kurul1/2627 PDF tasarımı"
+    "/api/test/kurul1/2627 PDF"
   ],
   "duzeltilen": [],
   "silinen": []

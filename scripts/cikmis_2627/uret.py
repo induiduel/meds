@@ -3,6 +3,7 @@
 Kullanım: python3 scripts/cikmis_2627/uret.py
 Sunulduğu yer: GET /api/test/kurul1/2627
 """
+import json
 import sys
 from pathlib import Path
 from xml.sax.saxutils import escape
@@ -13,7 +14,7 @@ from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.units import mm
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-from reportlab.platypus import (BaseDocTemplate, CondPageBreak, Frame, KeepTogether, NextPageTemplate, PageBreak,
+from reportlab.platypus import (BaseDocTemplate, CondPageBreak, Frame, Image, KeepTogether, NextPageTemplate, PageBreak,
                                 PageTemplate, Paragraph, Spacer, Table, TableStyle)
 
 sys.path.insert(0, str(Path(__file__).parent))
@@ -21,6 +22,8 @@ from sorular import DERSLER, S  # noqa: E402
 
 KOK = Path(__file__).resolve().parents[2]
 CIKTI = KOK / "data" / "cikmis_2627" / "kurul1_2627.pdf"
+ESLESME = KOK / "data" / "cikmis_2627" / "kurul1_2627.json"  # eslestir.py üretir
+KTG = KOK / "data" / "cikmis_2627" / "ktg.jpeg"
 
 FONT = "/usr/share/fonts/truetype/dejavu/"
 pdfmetrics.registerFont(TTFont("DV", FONT + "DejaVuSans.ttf"))
@@ -54,6 +57,7 @@ def st(ad, **k):
     return ParagraphStyle(ad, **k)
 
 
+st_konu = st("konu", fontSize=6.6, leading=8.6, textColor=GRI, spaceAfter=2)
 st_kok = st("kok", fontName="DVB", fontSize=8.6, leading=11.6)
 st_sik = st("sik", fontSize=8.3, leading=10.8, leftIndent=11, firstLineIndent=-11, textColor=H("#292524"))
 st_not = st("not", fontSize=7.3, leading=9.6, textColor=H("#44403c"))
@@ -83,7 +87,7 @@ def ders_basligi(ad, bas, son, n):
     return t
 
 
-def soru_karti(ders, no, kok, siklar, cevap, notu, kesin):
+def soru_karti(ders, no, kok, siklar, cevap, notu, kesin, konu=None):
     koyu, acik = RENK[ders]
     turler = ([] if kesin else ["tahmini"]) + ([] if siklar else ["kismi"]) + \
              (["uretildi"] if notu and URETILDI in notu else []) + \
@@ -91,7 +95,13 @@ def soru_karti(ders, no, kok, siklar, cevap, notu, kesin):
     baslik = f'<font name="DVB" color="{koyu.hexval()}">{no}.</font> {escape(kok).replace(chr(10), "<br/>")}'
     if turler:
         baslik += "<br/>" + rozetler(turler)
-    icerik = [Paragraph(baslik, st_kok), Spacer(1, 1.6 * mm)]
+    icerik = []
+    if konu:
+        icerik.append(Paragraph(f'<font name="DVB" color="{koyu.hexval()}">KURUL 1</font>  ·  {escape(ders)}  ·  {escape(konu)}', st_konu))
+    icerik += [Paragraph(baslik, st_kok), Spacer(1, 1.6 * mm)]
+    if "NST trasesi" in kok and KTG.exists():
+        en = SUTUN - 14
+        icerik += [Image(str(KTG), width=en, height=en * 336 / 644), Spacer(1, 1.6 * mm)]
     if siklar:
         icerik += [Paragraph(f'<font name="DVB" color="{koyu.hexval()}">{"ABCDE"[j]})</font> {escape(s)}', st_sik)
                    for j, s in enumerate(siklar)]
@@ -165,6 +175,7 @@ def anahtar_tablosu(ad, kayitlar):
 
 def main():
     yer = yerlestir()
+    konular = {k["sinav_no"]: k["konu"] for k in json.loads(ESLESME.read_text())["sorular"] if k.get("konu")}
     toplanan = sum(len(S[a]) for a, _, _ in DERSLER)
     kismi = sum(1 for a, _, _ in DERSLER for q in S[a] if not q[2] or URETILDI in q[4])
 
@@ -244,7 +255,7 @@ def main():
             if eksik:
                 hikaye += eksik_satiri(eksik); eksik = []
             _, kok, siklar, cevap, notu = q
-            hikaye.append(soru_karti(ad, no, kok, siklar, cevap, notu, kesin))
+            hikaye.append(soru_karti(ad, no, kok, siklar, cevap, notu, kesin, konular.get(no)))
         if eksik:
             hikaye += eksik_satiri(eksik)
         hikaye.append(Spacer(1, 2 * mm))
