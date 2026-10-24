@@ -451,6 +451,7 @@ export const LearnLibrary: React.FC<{
                           ))}
                         </span>
                       )}
+                      {(d as any).sinama && <span className="lv-nosrc" title={(d as any).sinama.aciklama || 'Sınama dersi'}>{(d as any).sinama.etiket || 'Sınama'}</span>}
                       {noSrc && <span className="lv-nosrc" title={noSrcTip}><FileQuestionMark aria-hidden /><span className="sr-only">Uyarı: kaynak PDF bilinmiyor</span></span>}
                       {(review.counts[d.id]?.due ?? 0) > 0 && <span className="lr-badge" title="Bu derste tekrar zamanı gelen hata defteri ögeleri"><RotateCcw aria-hidden width={11} height={11} />{review.counts[d.id].due}</span>}
                       <span className="lv-n">{d.slideCount} slayt</span>

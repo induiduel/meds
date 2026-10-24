@@ -248,6 +248,11 @@ export const LearnLibraryV12: React.FC<LearnLibraryV12Props> = ({ decks: all, pr
             <RotateCcw aria-hidden /><span className="l12-num">{due}</span> tekrar
           </span>
         )}
+        {(d as any).sinama && (
+          <span className="l12-badge is-warn" title={(d as any).sinama.aciklama || 'Sınama dersi'}>
+            {(d as any).sinama.etiket || 'Sınama'}
+          </span>
+        )}
         {noSrc && (
           <span className="l12-badge" title={`Bu dersin 2026-27 slaytı Drive'da yok${pdfMissing?.[d.id] ? ` (ders ${trDate(pdfMissing[d.id])})` : ''}; içerik önceki yılın kaynağından hazırlandı, hangi PDF'e ait olduğu bilinmiyor.`}>
             <FileQuestionMark aria-hidden />Kaynak?<span className="sr-only"> kaynak PDF bilinmiyor</span>

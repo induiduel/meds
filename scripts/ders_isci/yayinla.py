@@ -512,7 +512,12 @@ def uygula(dizinler: list[Path], kimlik, deneme: bool = False) -> tuple[list[Yay
         dizinler = [d for d in dizinler if kurullar[d] == k]
     for d in dizinler:
         y = Yayin(d, deneme, yedek)
-        ok = y.denetle(kimlik(y))
+        # sınama dersi (2026-10-24, kullanıcı kararı): Drive'a konmayan geçen yıl PDF'i — kaynak kimliği PDF özetinden;
+        # deste "sinama" etiketini taşır (sitede "Sınama" etiketiyle herkese açık). Gerçek PDF gelince aynı dersi günceller.
+        sinama = (y.b.get("sinama") or {}) if isinstance(y.b.get("sinama"), dict) else {}
+        ok = y.denetle(f"sinama-{sinama['sha256'][:12]}" if sinama.get("sha256") else kimlik(y))
+        if sinama and isinstance(getattr(y, "deck", None), dict):
+            y.deck["sinama"] = {"etiket": "Sınama", "aciklama": sinama.get("aciklama") or "Geçen yılın slaytından hazırlanmış sınama dersi."}
         print(f"== {d.name} · {y.b.get('ders_id')} · sadakat {getattr(y, 'sadakat', '?')} · "
               f"{'DENETİM TAMAM' if ok else 'DENETİM HATALI'}")
         for h in y.hata:
