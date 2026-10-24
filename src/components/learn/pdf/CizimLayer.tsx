@@ -136,19 +136,64 @@ function Komut({ z, t }: { z: CizimKomut; t: number }) {
   return null;
 }
 
-/** Şema: köşede yarı saydam panel, düğümler soldan sağa sırayla belirir (yerleşim istemcide; koordinat yok) */
+const OK = (tur?: string) => (tur === 'inhibe' ? '⊣' : tur === 'donusur' ? '⇒' : '→');
+
+/**
+ * Şema: betiğin boş bulduğu yerde (konum) panel, düğümler sırayla belirir. Birden çok düğüm aynı hedefe gidiyorsa
+ * (ör. dört neden → acil beyin görüntülemesi) tek okla değil, alt alta dizilip "}" ile toplanarak hedefe bağlanır
+ * (kullanıcı 2026-10-24: tek ok grubun tamamını kapsadığını anlatmıyor). Kalan kenarlar soldan sağa zincir.
+ */
 function Sema({ z, t }: { z: CizimKomut; t: number }) {
   const dg = z.dugum || [];
+  const kn = z.kenar || [];
   const gorunen = Math.max(1, Math.ceil(t * dg.length));
   const sira = new Map(dg.map((d, i) => [d.id, i]));
+  const gelen = new Map<string, typeof kn>();
+  for (const e of kn) gelen.set(e.b, [...(gelen.get(e.b) || []), e]);
+  const grupHedef = [...gelen.entries()].filter(([, es]) => es.length >= 2).sort((x, y) => y[1].length - x[1].length)[0];
+  const stil = z.konum ? { left: `${z.konum[0] * 100}%`, top: `${z.konum[1] * 100}%`, right: 'auto', bottom: 'auto', maxWidth: `${(z.genislik || 0.6) * 100}%` } : undefined;
+  const aria = dg.map((d) => d.metin).join(', ');
+  const gor = (id: string) => (sira.get(id) ?? 99) < gorunen;
+
+  if (grupHedef) {
+    const [hid, es] = grupHedef;
+    const kaynak = es.map((e) => dg.find((d) => d.id === e.a)).filter(Boolean) as { id: string; metin: string }[];
+    const hedef = dg.find((d) => d.id === hid);
+    const tamam = kaynak.every((d) => gor(d.id));
+    const diger = dg.filter((d) => d.id !== hid && !kaynak.includes(d));
+    return (
+      <div className="pdv-cz-sema is-grup" role="img" aria-label={aria} style={stil}>
+        <div className="pdv-cz-grup">
+          <div className="pdv-cz-grup-kaynak">
+            {kaynak.filter((d) => gor(d.id)).map((d) => <span key={d.id} className="pdv-cz-dugum pdv-cz-dugum-kap">{d.metin}</span>)}
+          </div>
+          {tamam && <span className="pdv-cz-kume" aria-hidden />}
+          {tamam && hedef && gor(hid) && (
+            <span className="pdv-cz-dugum-kap">
+              <span className={`pdv-cz-sema-ok is-${es[0].tur}`}>{OK(es[0].tur)}</span>
+              <span className="pdv-cz-dugum is-hedef">{hedef.metin}</span>
+            </span>
+          )}
+        </div>
+        {diger.filter((d) => gor(d.id)).map((d) => {
+          const g = kn.find((e) => e.b === d.id);
+          return (
+            <span key={d.id} className="pdv-cz-dugum-kap">
+              {g && <span className={`pdv-cz-sema-ok is-${g.tur}`}>{OK(g.tur)}</span>}
+              <span className="pdv-cz-dugum">{d.metin}</span>
+            </span>
+          );
+        })}
+      </div>
+    );
+  }
   return (
-    <div className="pdv-cz-sema" role="img" aria-label={dg.map((d) => d.metin).join(', ')}
-         style={z.konum ? { left: `${z.konum[0] * 100}%`, top: `${z.konum[1] * 100}%`, right: 'auto', bottom: 'auto', maxWidth: `${(z.genislik || 0.6) * 100}%` } : undefined}>
+    <div className="pdv-cz-sema" role="img" aria-label={aria} style={stil}>
       {dg.slice(0, gorunen).map((d, i) => {
-        const gelen = (z.kenar || []).find((e) => sira.get(e.b) === i && (sira.get(e.a) ?? 99) < i);
+        const g = kn.find((e) => sira.get(e.b) === i && (sira.get(e.a) ?? 99) < i);
         return (
           <span key={d.id} className="pdv-cz-dugum-kap">
-            {gelen && <span className={`pdv-cz-sema-ok is-${gelen.tur}`}>{gelen.tur === 'inhibe' ? '⊣' : gelen.tur === 'donusur' ? '⇒' : '→'}</span>}
+            {g && <span className={`pdv-cz-sema-ok is-${g.tur}`}>{OK(g.tur)}</span>}
             <span className="pdv-cz-dugum">{d.metin}</span>
           </span>
         );

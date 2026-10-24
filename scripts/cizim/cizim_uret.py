@@ -25,6 +25,8 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
+import numpy as np
+
 HERE = Path(__file__).resolve().parent
 MEDS = HERE.parents[1]
 sys.path.insert(0, str(HERE))
@@ -266,24 +268,37 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
             k = {**k}; k.pop("etiket", None)                               # boş yer yok: etiket gösterilmez
     if k["tur"] == "sema":
         n = len(k.get("dugum") or [])
+        # gruplu şema (≥2 düğüm aynı hedefe: "}" ile toplanır, CizimLayer.Sema) dikey sütun; değilse yatay zincir
+        hedefe = {}
+        for e in k.get("kenar") or []:
+            hedefe.setdefault(e.get("b"), set()).add(e.get("a"))
+        grup = max((len(v) for v in hedefe.values()), default=0)
+        boy = ([(0.42, 0.05 * grup + 0.04), (0.36, 0.05 * grup + 0.06)] if grup >= 2 else
+               [(min(0.6, 0.12 * n + 0.08), 0.08), (min(0.45, 0.09 * n + 0.06), 0.12), (min(0.32, 0.07 * n + 0.05), 0.16)])
+        # yazının ağırlık merkezi: panel içeriğe yakın, kenara yapışmadan (≥%3 pay) ve boş yerde durur
+        ys, xs = np.nonzero(r.ince[::4, ::4])
+        mx, my = (xs.mean() * 4 / r.w, ys.mean() * 4 / r.h) if len(xs) else (0.5, 0.5)
         en = None
-        for g, h in ((min(0.6, 0.12 * n + 0.08), 0.1), (min(0.45, 0.09 * n + 0.06), 0.13), (min(0.32, 0.07 * n + 0.05), 0.17)):
-            for xi in range(0, int((1 - g) * 50) + 1):           # bütün sayfa, %2 adım
-                for yi in range(0, int((1 - h) * 50) + 1):
+        for g, h in boy:
+            for xi in range(2, int((0.97 - g) * 50) + 1):
+                for yi in range(2, int((0.97 - h) * 50) + 1):
                     x, y = xi / 50, yi / 50
                     if any(_kesisir((x, y, x + g, y + h), o) for o in (dolu or [])):
                         continue
-                    dl = r.kutu_doluluk(x - 0.01, y - 0.01, x + g + 0.01, y + h + 0.01)
-                    if en is None or dl < en[0] - 1e-9:
-                        en = (dl, x, y, g)
-            if en and en[0] < 0.03:
+                    dl = r.kutu_doluluk(x - 0.015, y - 0.015, x + g + 0.015, y + h + 0.015)
+                    if dl >= 0.03:
+                        continue
+                    puan = dl * 8 + ((x + g / 2 - mx) ** 2 + (y + h / 2 - my) ** 2) ** 0.5
+                    if en is None or puan < en[0]:
+                        en = (puan, x, y, g, h, dl)
+            if en:
                 break
-        if en and en[0] < 0.03:
-            k = {**k, "konum": [round(en[1], 4), round(en[2], 4)], "genislik": round(en[3], 3), "doluluk": round(en[0], 3)}
+        if en:
+            k = {**k, "konum": [round(en[1], 4), round(en[2], 4)], "genislik": round(en[3], 3), "doluluk": round(en[5], 3)}
             if dolu is not None:
-                dolu.append((en[1], en[2], en[1] + en[3], en[2] + 0.1))
+                dolu.append((en[1], en[2], en[1] + en[3], en[2] + en[4]))
         else:
-            k = {**k, "konum": None, "doluluk": round(en[0], 3) if en else None}   # boş yer yok: sayfa üstünde gösterilmez
+            k = {**k, "konum": None, "doluluk": None}   # boş yer yok: sayfa üstünde gösterilmez
     return k
 
 
