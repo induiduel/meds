@@ -1415,6 +1415,20 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
     }
     return out;
   }, [canli, aktif, cumle, pdf, detay.isaret, gor.dosya]);
+  // Panel sayfaya sığmadıysa (cizim_uret: ek_alt) o sayfa altına boş alan eklenerek uzatılır; ders boyunca sabit
+  // (anlatılan cümleye göre değişirse sayfalar kayardı)
+  const ekAlt = useMemo(() => {
+    const out: Record<number, { h: number; renk?: string }> = {};
+    for (const cs of Object.values(detay.isaret || {})) {
+      for (const x of cs || []) {
+        if (!x || x.d !== gor.dosya) continue;
+        for (const z of ((x as any).z || []) as any[]) {
+          if (z?.ek_alt > 0) out[z.s] = { h: Math.max(out[z.s]?.h || 0, Math.min(0.6, z.ek_alt)), renk: z.ek_renk || out[z.s]?.renk };
+        }
+      }
+    }
+    return Object.keys(out).length ? out : null;
+  }, [detay.isaret, gor.dosya]);
   // Kelime takibi yalnız işaret katmanında (useFocus): görüntüleyici cümle başına bir kez çizilir, kelimede yeniden çizilmez
   const marks = useMemo<PdfMarks | null>(() => {
     if (!canli || durdu || !isr || (isr.t === 'sayfa' && !isr.y?.length && !(isr as any).z?.length) || isr.d !== gor.dosya) return null;
@@ -1521,6 +1535,7 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
               onError={setHataMsj}
               fit="width"
               pageOverlay={pageOverlay}
+              ekAlt={ekAlt}
             />
           </Suspense>
         ) : (

@@ -52,6 +52,9 @@ export interface PdfDocViewProps {
   onSearch?: (r: { hits: PdfSearchHit[]; done: boolean } | null) => void;
   /** Sayfa üstü katman (ör. çizim tuvali); yalnız görünen sayfa ±2 için kurulur */
   pageOverlay?: (page: number) => React.ReactNode;
+  /** sayfa altına eklenecek boş alan (sayfa yüksekliği oranı) ve zemin rengi: sayfaya sığmayan çizim paneli buraya
+   *  konur (cizim_uret ek_alt). Sayfanın kendi kutusu ve işaret koordinatları değişmez; alan sayfanın altına eklenir. */
+  ekAlt?: Record<number, { h: number; renk?: string }> | null;
 }
 
 export interface PdfMarks {
@@ -173,7 +176,7 @@ interface Slot {
   textFor?: number; // metin katmanı kuruldu (döndürme)
 }
 
-export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu adımın kaynağı', zoom, onZoom, onVisiblePage, onLoaded, onError, fit = 'width', rotation = 0, thumbs = false, query = '', onSearch, marks = null, preload, notes = null, pageOverlay }: PdfDocViewProps) {
+export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu adımın kaynağı', zoom, onZoom, onVisiblePage, onLoaded, onError, fit = 'width', rotation = 0, thumbs = false, query = '', onSearch, marks = null, preload, notes = null, pageOverlay, ekAlt = null }: PdfDocViewProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [doc, setDoc] = useState<PDFDocumentProxy | null>(null);
   const [sizes, setSizes] = useState<{ w: number; h: number }[]>([]);
@@ -294,11 +297,12 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
     const base = fit === 'page' ? Math.min(avail / d.w, availH / d.h) : avail / d.w;
     return base * zoom;
   };
+  const ekOf = (i: number) => (!rot && ekAlt?.[i + 1]?.h) || 0;
   const tops: number[] = [];
   let acc = PAD;
   dims.forEach((s, i) => {
     tops.push(acc);
-    acc += s.h * scaleOf(i) + GAP;
+    acc += s.h * scaleOf(i) * (1 + ekOf(i)) + GAP;
   });
   const totalH = acc + PAD - GAP;
   const geo = useRef({ tops, sizes: dims, scaleOf, rot });
@@ -573,10 +577,12 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
                 if (el) slotEls.current.set(n, el);
                 else slotEls.current.delete(n);
               }}
-              className={`pdv-page${src ? ' is-src' : ''}`}
+              className={`pdv-page${src ? ' is-src' : ''}${ekOf(i) ? ' has-ek' : ''}`}
               data-page={n}
-              style={{ top: tops[i], width: s.w * sc, height: s.h * sc, ['--scale-factor' as any]: sc }}
+              style={{ top: tops[i], width: s.w * sc, height: s.h * sc, ['--scale-factor' as any]: sc,
+                       ...(ekOf(i) ? { ['--ek-h' as any]: `${s.h * sc * ekOf(i)}px`, ['--ek-renk' as any]: ekAlt?.[n]?.renk || '#fff' } : null) }}
             >
+              {ekOf(i) ? <span className="pdv-page-ek" aria-hidden /> : null}
               {src && n === hs && <span className="pdv-src-tag">{highlightLabel}</span>}
               {notes?.[n] && !rot && <NotLayer n={notes[n]} />}
               {marks && marks.page === n && !rot && <MarkLayer m={marks} />}

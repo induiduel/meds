@@ -37,6 +37,9 @@ class SayfaRaster:
         gri = cv2.cvtColor(img[:, :, :3], cv2.COLOR_RGB2GRAY)
         self.h, self.w = gri.shape
         self.gri = gri
+        # sayfanın alt kenar rengi (panel için sayfa altına eklenen alan aynı zeminle boyanır, slaytın parçası gibi)
+        alt = img[int(self.h * 0.985):, :, :3].reshape(-1, 3)
+        self.alt_renk = "#%02x%02x%02x" % tuple(int(v) for v in np.median(alt, axis=0))
         kenar = cv2.Canny(gri, 50, 150)
         self.kenar = cv2.dilate(kenar, np.ones((11, 11), np.uint8)) > 0
         arka = np.median(gri)

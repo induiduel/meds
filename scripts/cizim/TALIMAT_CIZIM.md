@@ -59,7 +59,7 @@ zenginleştirmedir: yalnız cümle gerçekten o görseli/ilişkiyi anlatıyorsa 
 5. **Resimdeki mevcut ok:** kopyası çizilmez; şekildeki ok çerçevelenip etiketlenir (betik kendisi yapar).
 6. **Yazı ↔ yazı ilişkisi:** ok değil `sema` paneli (zincir / grup / dal / maske / karşıt).
 7. **Bir → çok:** dallı ok (`dallar`), kaynak bir kez gösterilir.
-8. **Kapatma yok:** etiket ve panel boş alana; yer yoksa panel gösterilmez.
+8. **Kapatma yok:** etiket ve panel boş alana; panelin yeri yoksa sayfa altına ek alan açılır (kural 14).
 9. **Eş zamanlı:** `bas`–`son`, çizilen şeyin ADI konuşulurken olmalı (terim cümlede geçtiği kelimede başlar; betik kaymayı
    düzeltir). Çizim, tarif edilen bölgenin kendisine oturur; yakınına ya da benzer bir yere değil.
 10. **Ayrı ilişkiler ayrı:** birbirine bağlı olmayan iki ilişki aynı panelde yan yana dizilmez; her biri ayrı satırda
@@ -67,5 +67,8 @@ zenginleştirmedir: yalnız cümle gerçekten o görseli/ilişkiyi anlatıyorsa 
 11. **Dallanma sayfada da:** resimde bir kaynaktan birden çok yere giden ilişki dallı oktur; dallar ortak gövdeden çıkar.
 12. **Akıcı animasyon:** çizgiler konuşmayla yumuşak ve sürekli uzar (sıçrama yok); düğümler sırayla süzülür.
 13. Bu kurallar bütün dersler içindir; kullanıcının her yeni çizim geri bildirimi buraya kural olarak eklenir.
+14. **Panel sığmıyorsa sayfa uzar:** sayfada boş yer yoksa panel gizlenmez; betik `ek_alt` (sayfa oranı) ve `ek_renk`
+    (slaytın alt kenar rengi) yazar, görüntüleyici o sayfanın altına aynı renkte alan ekler ve paneli oraya koyar (y > 1).
+    Sayfanın kendi kutusu, işaret/vurgu/imleç koordinatları değişmez; ek alan ders boyunca sabittir (sayfalar kaymaz).
 
 Yalnız `cizim.json`'u yaz; başka dosyaya dokunma. Bitince tek satır: `BİTTİ: <komut sayısı>`.

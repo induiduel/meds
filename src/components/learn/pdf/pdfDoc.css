@@ -48,6 +48,16 @@
 /* ---------- PDF.js sayfaları ---------- */
 .pdv { position: relative; flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; background: var(--color-canvas); outline: none; -webkit-overflow-scrolling: touch; }
 .pdv-track { position: relative; min-height: 100%; }
+.pdv-page.has-ek { overflow: visible; border-radius: 4px 4px 0 0; }
+/* sayfa altı ek alanı: sayfanın alt kenar rengiyle, slaytın devamı gibi; panel (y > 1) bunun üstünde durur */
+.pdv-page-ek { position: absolute; left: 0; right: 0; top: 100%; height: var(--ek-h); background: var(--ek-renk, #fff);
+  border-radius: 0 0 4px 4px; box-shadow: 0 6px 10px -6px rgb(0 0 0 / .12); pointer-events: none; }
+.pdv-page.has-ek .pdv-marks { contain: layout style; }   /* paint containment paneli (y > 1) kesmesin */
+.dpv.is-night .pdv-page-ek { filter: invert(.9) hue-rotate(180deg); }
+/* "şu an anlatılan" çerçevesi ek alanı da sarar: sayfa ile ek tek parça görünür */
+.pdv-page.is-src.has-ek { box-shadow: none; }
+.pdv-page.is-src.has-ek::after { content: ''; position: absolute; left: 0; right: 0; top: 0; height: calc(100% + var(--ek-h)); border-radius: 4px;
+  box-shadow: 0 0 0 3px var(--color-warn), 0 4px 18px rgb(0 0 0 / .12); pointer-events: none; z-index: 0; }
 .pdv-page {
   position: absolute; left: 50%; transform: translateX(-50%);
   background: #fff; border-radius: 4px; overflow: hidden;
@@ -63,6 +73,7 @@
 .pdv-src-tag { position: absolute; z-index: 3; top: 8px; left: 8px; padding: 3px 9px; border-radius: 99px; background: var(--color-warn); color: var(--color-on-solid); font-size: 11.5px; font-weight: 700; pointer-events: none; box-shadow: 0 1px 4px rgb(0 0 0 / .2); }
 .pdv-no { position: absolute; z-index: 3; right: 8px; bottom: 6px; padding: 1px 7px; border-radius: 6px; background: rgb(0 0 0 / .45); color: #fff; font-size: 11px; font-variant-numeric: tabular-nums; pointer-events: none; opacity: 0; transition: opacity .2s; }
 .pdv-page:hover .pdv-no { opacity: 1; }
+.pdv-page.has-ek .pdv-no { bottom: calc(6px - var(--ek-h)); }
 
 .pdv-loading { position: sticky; top: 40%; z-index: 4; margin: 0 auto; width: max-content; display: flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 12px; background: var(--color-white); color: var(--color-ink-2); font-size: 13px; box-shadow: var(--shadow-sm, 0 2px 10px rgb(0 0 0 / .1)); }
 .pdv-spin { width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--color-line); border-top-color: var(--color-accent); animation: pdv-rot .8s linear infinite; }

@@ -419,7 +419,17 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
             if dolu is not None:
                 dolu.append((en[1], en[2], en[1] + en[3], en[2] + en[4]))
         else:
-            k = {**k, "konum": None, "doluluk": None}   # boş yer yok: sayfa üstünde gösterilmez
+            # boş yer yok (genel kural 14, kullanıcı 2026-10-24): panel sayfanın ALTINA eklenen alana konur; görüntüleyici
+            # o sayfayı ek_alt kadar uzatır, alanı sayfanın alt kenar rengiyle boyar (slaytın kendisi gibi görünür).
+            # Koordinatlar sayfa oranı olarak kalır (y > 1), işaret/vurgu/imleç katmanları etkilenmez.
+            g, h = boy[0]
+            onceki = max([o[3] for o in (dolu or []) if o[1] >= 1.0] + [1.0])
+            x = min(max(0.02, mx - g / 2), 0.98 - g)
+            y = onceki + 0.015
+            k = {**k, "konum": [round(x, 4), round(y, 4)], "genislik": round(g, 3), "doluluk": 0.0,
+                 "ek_alt": round(y + h * 1.3 + 0.03 - 1.0, 4), "ek_renk": r.alt_renk}
+            if dolu is not None:
+                dolu.append((x, y, x + g, y + h))
     return k
 
 

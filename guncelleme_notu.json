@@ -1,11 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 282,
-  "baslik": "Canlı çizim panelleri daha anlaşılır",
+  "onem": 283,
+  "baslik": "Sığmayan çizim panelleri sayfa altında",
   "maddeler": [
-    "Birbirinden bağımsız ilişkiler panelde ayrı satırlarda gösteriliyor",
-    "Panel anlattığı satırların yanına yerleşiyor",
-    "Dallı oklar ortak noktadan çıkıyor, çizgiler yumuşak ve akıcı uzuyor"
+    "Slaytta yer yoksa açıklama paneli artık gizlenmiyor: slayt altına aynı renkte alan eklenip panel oraya konuyor",
+    "Slaytın kendisi, vurgular ve işaretçi yerinde kalıyor"
   ],
   "eklenen": [],
   "degisen": [
