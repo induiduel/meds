@@ -2,6 +2,7 @@
 
 Kullanım: python3 scripts/cikmis_2627/eslestir.py && python3 scripts/cikmis_2627/uret.py
 Soru yerleşimi, konu ve durum bilgisi eslestir.py'nin ürettiği JSON'dan okunur.
+Sınav kitapçığı düzeni: iki eşit sütun, tek yazı ailesi, renk yalnız durum noktasında ve işaretli şıklarda.
 Sunulduğu yer: GET /api/test/kurul1/2627
 """
 import json
@@ -26,61 +27,56 @@ CIKTI = KOK / "data" / "cikmis_2627" / "kurul1_2627.pdf"
 ESLESME = KOK / "data" / "cikmis_2627" / "kurul1_2627.json"
 KTG = KOK / "data" / "cikmis_2627" / "ktg.jpeg"
 
-NOTO = "/usr/share/fonts/truetype/noto/"
-for ad, dosya in [("Serif", "NotoSerif-Regular"), ("SerifB", "NotoSerif-Bold"), ("SerifI", "NotoSerif-Italic"),
-                  ("Display", "NotoSerifDisplay-Bold"), ("Sans", "NotoSans-Regular"), ("SansB", "NotoSans-Bold"),
-                  ("SansI", "NotoSans-Italic")]:
-    pdfmetrics.registerFont(TTFont(ad, NOTO + dosya + ".ttf"))
-pdfmetrics.registerFontFamily("Serif", normal="Serif", bold="SerifB", italic="SerifI", boldItalic="SerifB")
-pdfmetrics.registerFontFamily("Sans", normal="Sans", bold="SansB", italic="SansI", boldItalic="SansB")
+FONT = "/usr/share/fonts/truetype/dejavu/"
+for ad, dosya in [("F", "DejaVuSans"), ("FB", "DejaVuSans-Bold"), ("FI", "DejaVuSans-Oblique")]:
+    pdfmetrics.registerFont(TTFont(ad, FONT + dosya + ".ttf"))
+pdfmetrics.registerFontFamily("F", normal="F", bold="FB", italic="FI", boldItalic="FB")
 
 H = colors.HexColor
-MUREKKEP, METIN, GRI, SOLUK, CIZGI, KAGIT = (H("#1a1a1a"), H("#2b2b2b"), H("#6b6b6b"), H("#a3a3a3"),
-                                            H("#e4e1dc"), H("#f7f5f1"))
-# Renk yalnız durumu gösterir; ders başlıkları ve sorular siyah-beyazdır.
-DURUM = {
-    "emin": (H("#1f7a3f"), "cevap doğrulandı"),
-    "tartisma": (H("#b42318"), "tartışmalı"),
-    "eksik": (H("#b42318"), "şık eksik"),
-    "eklendi": (H("#2551b3"), "sonradan eklendi"),
-    "uretildi": (H("#2551b3"), "şıklar üretildi"),
-    "tahmini": (H("#a15c07"), "yeri tahmini"),
+SIYAH, METIN, GRI, CIZGI = H("#111111"), H("#222222"), H("#6e6e6e"), H("#d9d9d9")
+DURUM = {  # renk yalnız durum içindir
+    "emin": (H("#1e7b3c"), "doğrulandı"),
+    "tartisma": (H("#b3261e"), "tartışmalı"),
+    "eksik": (H("#b3261e"), "şık eksik"),
+    "eklendi": (H("#1f4fb3"), "sonradan eklendi"),
+    "uretildi": (H("#1f4fb3"), "şıklar üretildi"),
+    "tahmini": (H("#9a5b00"), "yeri tahmini"),
     "kismi": (GRI, "hatırlanmadı"),
 }
 
 SAYFA_G, SAYFA_Y = A4
-KENAR_SOL, KENAR_SAG, UST, ALT = 22 * mm, 20 * mm, 20 * mm, 18 * mm
-OLUK = 17 * mm  # soru numarası sütunu
-GEN = SAYFA_G - KENAR_SOL - KENAR_SAG
-METIN_GEN = GEN - OLUK
+KENAR, ARA = 15 * mm, 8 * mm
+SUTUN = (SAYFA_G - 2 * KENAR - ARA) / 2
+GEN = SAYFA_G - 2 * KENAR
+UST, ALT, BASLIK_ILK = 17 * mm, 15 * mm, 47 * mm
+GIRINTI = 7 * mm  # soru numarasının asılı girintisi; kök, şık ve cevap bu hizadan başlar
+
+BOY, SATIR = 8.6, 11.6
 
 
 def st(ad, **k):
-    k.setdefault("fontName", "Serif"); k.setdefault("textColor", METIN)
+    k.setdefault("fontName", "F"); k.setdefault("fontSize", BOY); k.setdefault("leading", SATIR)
+    k.setdefault("textColor", METIN)
     return ParagraphStyle(ad, **k)
 
 
-st_kok = st("kok", fontSize=10.2, leading=14.6)
-st_sik = st("sik", fontSize=9.8, leading=13.4, leftIndent=16, firstLineIndent=-16)
-st_meta = st("meta", fontName="Sans", fontSize=7, leading=9.5, textColor=GRI)
-st_no = st("no", fontName="Display", fontSize=17, leading=19, textColor=MUREKKEP)
-st_rozet = st("rozet", fontName="SansB", fontSize=6, leading=8)
-st_cevap = st("cevap", fontName="Sans", fontSize=8.6, leading=11.5, alignment=2)
-st_not = st("not", fontName="Sans", fontSize=7.6, leading=10.6, textColor=H("#4a4a4a"))
-st_eksik = st("eksik", fontName="SansI", fontSize=8.2, leading=11, textColor=SOLUK)
-st_govde = st("govde", fontName="Sans", fontSize=8.6, leading=12.4, textColor=H("#3a3a3a"))
-st_h1 = st("h1", fontName="Display", fontSize=24, leading=28, textColor=MUREKKEP)
-st_ust = st("ust", fontName="SansB", fontSize=7, leading=9, textColor=GRI)
-st_hucre = st("hucre", fontName="Sans", fontSize=7.8, leading=10.2)
-st_hucre_b = st("hucreb", fontName="SansB", fontSize=7.2, leading=9.2, alignment=1)
+st_kok = st("kok", fontName="FB", leftIndent=GIRINTI, firstLineIndent=-GIRINTI)
+st_sik = st("sik", leftIndent=GIRINTI + 4.5 * mm, firstLineIndent=-4.5 * mm)
+st_konu = st("konu", fontSize=6.6, leading=8.6, textColor=GRI, leftIndent=GIRINTI)
+st_cevap = st("cevap", fontSize=7.8, leading=10.4, leftIndent=GIRINTI)
+st_ders = st("ders", fontName="FB", fontSize=9, leading=11, textColor=colors.white)
+st_ders_sag = st("derssag", fontSize=7.2, leading=11, textColor=colors.white, alignment=2)
+st_eksik = st("eksik", fontName="FI", fontSize=7.8, leading=10.4, textColor=GRI, leftIndent=GIRINTI, firstLineIndent=-GIRINTI)
+st_h = st("h", fontName="FB", fontSize=11, leading=14, textColor=SIYAH)
+st_kucuk = st("kucuk", fontSize=7.2, leading=9.8, textColor=GRI)
+st_hucre = st("hucre", fontSize=7.4, leading=9.6)
+st_hucre_b = st("hucreb", fontName="FB", fontSize=7.2, leading=9.2)
+st_not_no = st("notno", fontName="FB", fontSize=7.4, leading=9.8)
+st_not = st("not", fontSize=7.4, leading=9.8, textColor=H("#333333"))
 
 
 def p(metin, stil):
     return Paragraph(escape(metin).replace("\n", "<br/>"), stil)
-
-
-def cizgi(kalinlik=0.4, renk=CIZGI):
-    return Table([[""]], colWidths=[GEN], rowHeights=[0.1], style=TableStyle([("LINEBELOW", (0, 0), (-1, -1), kalinlik, renk)]))
 
 
 def durumlar(k):
@@ -94,82 +90,62 @@ def durumlar(k):
     return t
 
 
-def ana_renk(t):
-    for k in ("tartisma", "eksik", "uretildi", "eklendi", "emin", "kismi"):
-        if k in t:
-            return DURUM[k][0]
-    return MUREKKEP
+def ana_durum(t):
+    return next(k for k in ("tartisma", "eksik", "uretildi", "eklendi", "emin", "kismi") if k in t)
 
 
-def rozetler(turler):
-    return "<br/>".join(f'<font color="{DURUM[t][0].hexval()}">{DURUM[t][1]}</font>' for t in turler)
+def nokta(renk):
+    return f'<font color="{renk.hexval()}" size="9">●</font>'
 
 
 def soru_blogu(k):
-    turler = durumlar(k)
-    renk = ana_renk(turler).hexval()
-    sag = [p(f"{k['ders']}  ·  {k['konu']}", st_meta), Spacer(1, 1.2 * mm),
-           Paragraph(escape(k["kok"]).replace("\n", "<br/>"), st_kok), Spacer(1, 2 * mm)]
+    t = durumlar(k)
+    ana = ana_durum(t)
+    parca = [p(f"{k['ders']} · {k['konu']}", st_konu), Spacer(1, 0.8 * mm),
+             Paragraph(f"{k['sinav_no']}.<font name='F'> </font>" + escape(k["kok"]).replace("\n", "<br/>"), st_kok),
+             Spacer(1, 1.2 * mm)]
     if "NST trasesi" in k["kok"] and KTG.exists():
-        sag += [Image(str(KTG), width=METIN_GEN * 0.92, height=METIN_GEN * 0.92 * 336 / 644), Spacer(1, 2 * mm)]
+        en = SUTUN - GIRINTI
+        img = Image(str(KTG), width=en, height=en * 336 / 644)
+        img.hAlign = "RIGHT"
+        parca += [img, Spacer(1, 1.2 * mm)]
     isaret = k.get("sik_isaretleri", {})
     if k["siklar"]:
         for j, s in enumerate(k["siklar"]):
             harf, metin = "ABCDE"[j], escape(s)
-            if harf in isaret.get("supheli", []):
-                metin = f'<u><font color="{DURUM["tartisma"][0].hexval()}">{metin}</font></u>'
-            elif harf in isaret.get("uretildi", []):
-                metin = f'<u><font color="{DURUM["uretildi"][0].hexval()}">{metin}</font></u>'
-            sag.append(Paragraph(f'<font name="SansB" size="8.6" color="#6b6b6b">{harf}</font> {metin}', st_sik))
-        cv = k["cevap"]
-        dogru = f'{cv}) {k["siklar"]["ABCDE".index(cv)]}' if cv in "ABCDE" else cv
+            for tur, durum in (("supheli", "tartisma"), ("uretildi", "uretildi")):
+                if harf in isaret.get(tur, []):
+                    metin = f'<u><font color="{DURUM[durum][0].hexval()}">{metin}</font></u>'
+                    break
+            parca.append(Paragraph(f"{harf}) {metin}", st_sik))
+        cevap = k["cevap"]
     else:
-        sag.append(p("Şıklar toplanmadı.", st_eksik))
-        dogru = k["cevap"] if k["cevap"] != "?" else "belirlenemedi"
-    sag += [Spacer(1, 1.6 * mm),
-            Paragraph(f'<font color="{renk}">Tahmini cevap  <font name="SansB">{escape(dogru)}</font></font>', st_cevap)]
-    if k.get("not"):
-        not_t = Table([[p(k["not"], st_not)]], colWidths=[METIN_GEN])
-        not_t.setStyle(TableStyle([("LINEBEFORE", (0, 0), (0, 0), 0.8, CIZGI), ("LEFTPADDING", (0, 0), (-1, -1), 7),
-                                   ("RIGHTPADDING", (0, 0), (-1, -1), 0), ("TOPPADDING", (0, 0), (-1, -1), 1),
-                                   ("BOTTOMPADDING", (0, 0), (-1, -1), 1)]))
-        sag += [Spacer(1, 1.6 * mm), not_t]
-    sol = [p(str(k["sinav_no"]), st_no), Spacer(1, 1 * mm), Paragraph(rozetler(turler), st_rozet)]
-    t = Table([[sol, sag]], colWidths=[OLUK, METIN_GEN])
-    t.setStyle(TableStyle([("VALIGN", (0, 0), (-1, -1), "TOP"), ("LEFTPADDING", (0, 0), (-1, -1), 0),
-                           ("RIGHTPADDING", (0, 0), (-1, -1), 0), ("TOPPADDING", (0, 0), (-1, -1), 0),
-                           ("BOTTOMPADDING", (0, 0), (-1, -1), 0)]))
-    return KeepTogether([t, Spacer(1, 4.5 * mm), cizgi(), Spacer(1, 4.5 * mm)])
+        parca.append(p("Şıklar toplanmadı.", st_eksik))
+        cevap = k["cevap"] if k["cevap"] != "?" else "belirlenemedi"
+    ek = [DURUM[x][1] for x in t if x not in ("emin", ana)]
+    satir = f'{nokta(DURUM[ana][0])} <font name="FB">Cevap: {escape(cevap)}</font>' \
+            f'<font color="{GRI.hexval()}"> {DURUM[ana][1]}{" · " + " · ".join(ek) if ek else ""}' \
+            f'{" · not ↓" if k.get("not") else ""}</font>'
+    parca += [Spacer(1, 1.2 * mm), Paragraph(satir, st_cevap), Spacer(1, 4.2 * mm)]
+    return KeepTogether(parca)
 
 
-def eksik_blogu(nolar):
-    aralik = f"{nolar[0]}–{nolar[-1]}" if len(nolar) > 1 else str(nolar[0])
-    soru = "Bu numaradaki soru" if len(nolar) == 1 else f"Bu numaralardaki {len(nolar)} soru"
-    t = Table([[p(aralik, st("ne", fontName="Display", fontSize=12, leading=14, textColor=SOLUK)),
-                p(f"Toplanmadı. {soru} hiçbir kaynakta hatırlanmadı.", st_eksik)]], colWidths=[OLUK, METIN_GEN])
-    t.setStyle(TableStyle([("VALIGN", (0, 0), (-1, -1), "MIDDLE"), ("LEFTPADDING", (0, 0), (-1, -1), 0),
+def ders_basligi(ad, bas, son, n):
+    t = Table([[p(ad.upper(), st_ders), p(f"Soru {bas}–{son} · {n}/{son - bas + 1}", st_ders_sag)]],
+              colWidths=[SUTUN * 0.62, SUTUN * 0.38], rowHeights=[7 * mm])
+    t.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, -1), SIYAH), ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+                           ("LEFTPADDING", (0, 0), (-1, -1), 2.5 * mm), ("RIGHTPADDING", (0, 0), (-1, -1), 2.5 * mm),
                            ("TOPPADDING", (0, 0), (-1, -1), 0), ("BOTTOMPADDING", (0, 0), (-1, -1), 0)]))
-    return [t, Spacer(1, 4.5 * mm), cizgi(), Spacer(1, 4.5 * mm)]
+    return [CondPageBreak(45 * mm), t, Spacer(1, 4 * mm)]
 
 
-def ders_acilisi(ad, bas, son, kayit):
-    n = sum(1 for k in kayit if k["durum"] != "toplanmadi")
-    konular = []
-    for k in kayit:
-        if k.get("konu") and k["konu"] not in konular:
-            konular.append(k["konu"])
-    return [CondPageBreak(80 * mm), Spacer(1, 2 * mm), p(f"SORU {bas}–{son}  ·  {n}/{son - bas + 1} TOPLANDI", st_ust),
-            Spacer(1, 1.5 * mm), p(ad, st_h1), Spacer(1, 2 * mm), p("Konular: " + " · ".join(konular), st_meta),
-            Spacer(1, 3 * mm), cizgi(1.2, MUREKKEP), Spacer(1, 6 * mm)]
-
-
-def tablo(satirlar, gen, hizala_sol=1, ek=()):
+def tablo(satirlar, gen, ek=()):
     t = Table(satirlar, colWidths=gen, repeatRows=1)
-    t.setStyle(TableStyle([("FONTNAME", (0, 0), (-1, -1), "Sans"), ("FONTSIZE", (0, 0), (-1, -1), 7.8),
-                           ("VALIGN", (0, 0), (-1, -1), "MIDDLE"), ("ALIGN", (hizala_sol, 0), (-1, -1), "CENTER"),
-                           ("LINEBELOW", (0, 0), (-1, 0), 0.8, MUREKKEP), ("LINEBELOW", (0, 1), (-1, -1), 0.4, CIZGI),
-                           ("LEFTPADDING", (0, 0), (-1, -1), 3), ("TOPPADDING", (0, 0), (-1, -1), 4),
-                           ("BOTTOMPADDING", (0, 0), (-1, -1), 4)] + list(ek)))
+    t.setStyle(TableStyle([("FONTNAME", (0, 0), (-1, -1), "F"), ("FONTSIZE", (0, 0), (-1, -1), 7.4),
+                           ("VALIGN", (0, 0), (-1, -1), "MIDDLE"), ("LINEBELOW", (0, 0), (-1, 0), 0.8, SIYAH),
+                           ("LINEBELOW", (0, 1), (-1, -1), 0.3, CIZGI), ("LEFTPADDING", (0, 0), (-1, -1), 2),
+                           ("RIGHTPADDING", (0, 0), (-1, -1), 2), ("TOPPADDING", (0, 0), (-1, -1), 3),
+                           ("BOTTOMPADDING", (0, 0), (-1, -1), 3)] + list(ek)))
     return t
 
 
@@ -178,126 +154,138 @@ def main():
     ders_kayit = {ad: [k for k in kayitlar if k["ders"] == ad] for ad, _, _ in DERSLER}
     toplanan = [k for k in kayitlar if k["durum"] != "toplanmadi"]
     kesin = sum(1 for k in toplanan if k["sinav_no_kesin"])
-    uretilen = sum(1 for k in toplanan if "uretildi" in durumlar(k))
 
-    def kapak(c, d):
+    def ilk(c, d):
         c.saveState()
-        c.setFillColor(KAGIT); c.rect(0, 0, SAYFA_G, SAYFA_Y, stroke=0, fill=1)
-        c.setFillColor(GRI); c.setFont("SansB", 7.5)
-        c.drawString(KENAR_SOL, SAYFA_Y - 24 * mm, "MeDSor  ·  DÖNEM 3  ·  KURUL 1  ·  ÖĞRENCİ DERLEMESİ")
-        c.setFillColor(MUREKKEP); c.setFont("Display", 40)
-        c.drawString(KENAR_SOL, SAYFA_Y - 44 * mm, "Çıkmış Sorular")
-        c.drawString(KENAR_SOL, SAYFA_Y - 60 * mm, "2026–2027")
-        c.setFont("Serif", 10); c.setFillColor(METIN)
-        c.drawString(KENAR_SOL, SAYFA_Y - 71 * mm, "Derleme PDF'leri, “Konu çalışma grubu” tartışması (23.10 10:00 – 24.10 16:31),")
-        c.drawString(KENAR_SOL, SAYFA_Y - 76 * mm, "ders notları ve geçmiş yılların çıkmış soruları birleştirilerek hazırlandı.")
-        x = KENAR_SOL
-        for deger, ad in [(len(toplanan), "toplanan / 100"), (kesin, "numarası kesin"),
-                          (uretilen, "şıkları üretilen"), (100 - len(toplanan), "toplanmadı")]:
-            c.setFillColor(MUREKKEP); c.setFont("Display", 26); c.drawString(x, SAYFA_Y - 96 * mm, str(deger))
-            c.setFillColor(GRI); c.setFont("Sans", 7.5); c.drawString(x, SAYFA_Y - 101 * mm, ad)
-            x += 40 * mm
-        c.setStrokeColor(MUREKKEP); c.setLineWidth(1.2)
-        c.line(KENAR_SOL, SAYFA_Y - 110 * mm, SAYFA_G - KENAR_SAG, SAYFA_Y - 110 * mm)
+        y = SAYFA_Y - 15 * mm
+        c.setFillColor(SIYAH); c.setFont("FB", 15); c.drawString(KENAR, y - 5 * mm, "DÖNEM 3 KURUL 1 ÇIKMIŞ SORULAR")
+        c.setFont("F", 8.5); c.setFillColor(METIN)
+        c.drawRightString(SAYFA_G - KENAR, y - 5 * mm, "2026–2027 · Öğrenci derlemesi")
+        c.setFillColor(GRI); c.setFont("F", 7.4)
+        c.drawString(KENAR, y - 11 * mm, f"{len(toplanan)}/100 soru toplandı · {kesin} sorunun sınav numarası kesin · "
+                                         f"{100 - len(toplanan)} soru toplanmadı · resmî değildir")
+        c.setStrokeColor(SIYAH); c.setLineWidth(1); c.line(KENAR, y - 14 * mm, SAYFA_G - KENAR, y - 14 * mm)
+        # durum açıklaması: tek satır, eşit aralıklı
+        x, yy = KENAR, y - 19.5 * mm
+        for tur in ("emin", "tartisma", "uretildi", "tahmini", "kismi"):
+            renk, ad = DURUM[tur]
+            c.setFillColor(renk); c.setFont("F", 9); c.drawString(x, yy, "●")
+            c.setFillColor(METIN); c.setFont("F", 7.2); c.drawString(x + 3.6 * mm, yy + 0.3, ad)
+            x += GEN / 5
+        c.setFillColor(GRI); c.setFont("F", 6.8)
+        c.drawString(KENAR, yy - 5 * mm, "Altı çizili mavi şık: sonradan eklendi ya da ders notundan üretildi.  "
+                                          "Altı çizili kırmızı şık: şüpheli.  Notlar sondaki Notlar bölümünde.")
+        c.setStrokeColor(CIZGI); c.setLineWidth(0.4); c.line(KENAR, yy - 8 * mm, SAYFA_G - KENAR, yy - 8 * mm)
+        alt(c, d)
         c.restoreState()
 
-    def sayfa(c, d):
+    def alt(c, d):
+        c.setStrokeColor(CIZGI); c.setLineWidth(0.4); c.line(KENAR, 10.5 * mm, SAYFA_G - KENAR, 10.5 * mm)
+        c.setFillColor(GRI); c.setFont("F", 6.8)
+        c.drawString(KENAR, 7 * mm, "Dönem 3 Kurul 1 · 2026–2027 çıkmış sorular")
+        c.drawRightString(SAYFA_G - KENAR, 7 * mm, f"Sayfa {d.page}")
+
+    def diger(c, d):
         c.saveState()
-        c.setFillColor(GRI); c.setFont("SansB", 6.8)
-        c.drawString(KENAR_SOL, SAYFA_Y - 11 * mm, "ÇIKMIŞ SORULAR 2026–2027")
-        c.setFont("Sans", 6.8); c.drawRightString(SAYFA_G - KENAR_SAG, SAYFA_Y - 11 * mm, "Dönem 3 · Kurul 1")
-        c.setFillColor(SOLUK)
-        c.drawString(KENAR_SOL, 9 * mm, "Öğrencilerin hatırladıklarından derlenmiştir; resmî değildir.")
-        c.setFillColor(MUREKKEP); c.setFont("Display", 9); c.drawRightString(SAYFA_G - KENAR_SAG, 9 * mm, str(d.page))
+        c.setFillColor(SIYAH); c.setFont("FB", 7.4); c.drawString(KENAR, SAYFA_Y - 10 * mm, "DÖNEM 3 KURUL 1 ÇIKMIŞ SORULAR")
+        c.setFillColor(GRI); c.setFont("F", 7.4); c.drawRightString(SAYFA_G - KENAR, SAYFA_Y - 10 * mm, "2026–2027")
+        c.setStrokeColor(SIYAH); c.setLineWidth(0.8); c.line(KENAR, SAYFA_Y - 12 * mm, SAYFA_G - KENAR, SAYFA_Y - 12 * mm)
+        if d.page > 1:
+            c.setStrokeColor(CIZGI); c.setLineWidth(0.4)
+            orta = KENAR + SUTUN + ARA / 2
+            c.line(orta, ALT, orta, SAYFA_Y - UST)
+        alt(c, d)
         c.restoreState()
 
-    doc = BaseDocTemplate(str(CIKTI), pagesize=A4, title="Kurul 1 2026-2027 Çıkmış Sorular", author="MeDSor")
+    def iki_sutun(ust):
+        h = SAYFA_Y - ust - ALT
+        return [Frame(KENAR, ALT, SUTUN, h, 0, 0, 0, 0), Frame(KENAR + SUTUN + ARA, ALT, SUTUN, h, 0, 0, 0, 0)]
+
+    def ilk_sayfa(c, d):
+        ilk(c, d)
+        c.saveState(); c.setStrokeColor(CIZGI); c.setLineWidth(0.4)
+        orta = KENAR + SUTUN + ARA / 2
+        c.line(orta, ALT, orta, SAYFA_Y - BASLIK_ILK); c.restoreState()
+
+    doc = BaseDocTemplate(str(CIKTI), pagesize=A4, title="Dönem 3 Kurul 1 Çıkmış Sorular 2026-2027", author="MeDSor")
     doc.addPageTemplates([
-        PageTemplate("kapak", [Frame(KENAR_SOL, ALT, GEN, SAYFA_Y - 118 * mm - ALT, 0, 0, 0, 0)], onPage=kapak),
-        PageTemplate("govde", [Frame(KENAR_SOL, ALT, GEN, SAYFA_Y - UST - ALT, 0, 0, 0, 0)], onPage=sayfa)])
+        PageTemplate("ilk", iki_sutun(BASLIK_ILK), onPage=ilk_sayfa),
+        PageTemplate("iki", iki_sutun(UST), onPage=diger),
+        PageTemplate("tek", [Frame(KENAR, ALT, GEN, SAYFA_Y - UST - ALT, 0, 0, 0, 0)], onPage=diger),
+    ])
 
-    # Kapak: içindekiler ve işaretler
-    hikaye = [NextPageTemplate("govde"), p("İÇİNDEKİLER", st_ust), Spacer(1, 2 * mm)]
-    satir = [[p("Ders", st_hucre_b), p("Sınavda", st_hucre_b), p("Toplanan", st_hucre_b),
-              p("Numarası kesin", st_hucre_b), p("Toplanmadı", st_hucre_b)]]
+    hikaye = [NextPageTemplate("iki")]
     for ad, bas, son in DERSLER:
-        kay = [k for k in ders_kayit[ad] if k["durum"] != "toplanmadi"]
-        satir.append([p(f"{ad}  ({bas}–{son})", st_hucre), str(son - bas + 1), str(len(kay)),
-                      str(sum(k["sinav_no_kesin"] for k in kay)), str(son - bas + 1 - len(kay))])
-    hikaye += [tablo(satir, [GEN * 0.44] + [GEN * 0.14] * 4), Spacer(1, 8 * mm), p("İŞARETLER", st_ust),
-               Spacer(1, 2 * mm)]
-    isaret = [[Paragraph(f'<font color="{DURUM[t][0].hexval()}" name="SansB">{DURUM[t][1]}</font>', st_hucre),
-               p(acik, st_hucre)] for t, acik in [
-        ("emin", "Cevap ders notuyla uyumlu, öğrenciler arasında tartışma yok."),
-        ("tartisma", "Cevap kesinleşmedi; gerekçe sorunun notunda."),
-        ("eksik", "Sorunun bazı şıkları hatırlanmadı."),
-        ("eklendi", "Soru ilk derlemeden sonra gruptan eklendi."),
-        ("uretildi", "Eksik şıklar ders notundan, hocanın soru üslubuyla üretildi."),
-        ("tahmini", "Numara grupta yazılmadı; ders notlarının işleniş sırasına göre boş numaraya kondu."),
-        ("kismi", "Soru hatırlanmadı.")]]
-    isaret += [[Paragraph(f'<u><font color="{DURUM["uretildi"][0].hexval()}">Altı çizili mavi şık</font></u>', st_hucre),
-                p("Sonradan eklenen ya da üretilen şık.", st_hucre)],
-               [Paragraph(f'<u><font color="{DURUM["tartisma"][0].hexval()}">Altı çizili kırmızı şık</font></u>', st_hucre),
-                p("Öğrencilerin emin olmadığı ya da değiştirdiği şık.", st_hucre)]]
-    it = Table(isaret, colWidths=[GEN * 0.3, GEN * 0.7])
-    it.setStyle(TableStyle([("LINEBELOW", (0, 0), (-1, -1), 0.4, CIZGI), ("TOPPADDING", (0, 0), (-1, -1), 3.5),
-                            ("BOTTOMPADDING", (0, 0), (-1, -1), 3.5), ("LEFTPADDING", (0, 0), (-1, -1), 0)]))
-    hikaye += [it, PageBreak()]
-
-    for ad, bas, son in DERSLER:
-        hikaye += ders_acilisi(ad, bas, son, ders_kayit[ad])
+        kay = ders_kayit[ad]
+        hikaye += ders_basligi(ad, bas, son, sum(k["durum"] != "toplanmadi" for k in kay))
         eksik = []
-        for k in ders_kayit[ad]:
+
+        def eksik_yaz():
+            if eksik:
+                a = f"{eksik[0]}–{eksik[-1]}." if len(eksik) > 1 else f"{eksik[0]}."
+                hikaye.extend([p(f"{a} Toplanmadı.", st_eksik), Spacer(1, 4.2 * mm)])
+                eksik.clear()
+        for k in kay:
             if k["durum"] == "toplanmadi":
                 eksik.append(k["sinav_no"]); continue
-            if eksik:
-                hikaye += eksik_blogu(eksik); eksik = []
+            eksik_yaz()
             hikaye.append(soru_blogu(k))
-        if eksik:
-            hikaye += eksik_blogu(eksik)
+        eksik_yaz()
+        hikaye.append(Spacer(1, 2 * mm))
 
-    # Ek 1: cevap anahtarı
-    hikaye += [PageBreak(), p("EK 1", st_ust), Spacer(1, 1 * mm), p("Cevap anahtarı", st_h1), Spacer(1, 2 * mm),
-               p("Harfin rengi durumu gösterir: yeşil doğrulandı, kırmızı tartışmalı ya da şık eksik, mavi sonradan "
-                 "eklendi ya da şıkları üretildi, gri toplanmadı. “metin”: şık yok, cevap soru sayfasında.", st_govde),
-               Spacer(1, 6 * mm)]
-    hucreler = []
+    # Cevap anahtarı
+    hikaye += [NextPageTemplate("tek"), PageBreak(), p("CEVAP ANAHTARI", st_h), Spacer(1, 1.5 * mm),
+               p("Harfin rengi durumu gösterir (ilk sayfadaki açıklama). “—”: toplanmadı. “m”: şık yok, cevap soruda.",
+                 st_kucuk), Spacer(1, 4 * mm)]
+    hucre = []
     for k in kayitlar:
         if k["durum"] == "toplanmadi":
-            hucreler.append((str(k["sinav_no"]), "—", DURUM["kismi"][0]))
+            hucre.append((str(k["sinav_no"]), "—", GRI))
         else:
-            hucreler.append((str(k["sinav_no"]), k["cevap"] if k["siklar"] else "metin", ana_renk(durumlar(k))))
+            hucre.append((str(k["sinav_no"]), k["cevap"] if k["siklar"] else "m", DURUM[ana_durum(durumlar(k))][0]))
     satirlar, stil = [], []
-    for i in range(0, 100, 10):
-        parca = hucreler[i:i + 10]
-        satirlar += [[a for a, _, _ in parca], [b for _, b, _ in parca]]
-        r0 = len(satirlar) - 2
-        stil += [("TEXTCOLOR", (0, r0), (-1, r0), SOLUK), ("FONTSIZE", (0, r0), (-1, r0), 7),
-                 ("FONTNAME", (0, r0 + 1), (-1, r0 + 1), "SansB"), ("FONTSIZE", (0, r0 + 1), (-1, r0 + 1), 10),
-                 ("LINEBELOW", (0, r0 + 1), (-1, r0 + 1), 0.4, CIZGI)]
-        stil += [("TEXTCOLOR", (c, r0 + 1), (c, r0 + 1), rr) for c, (_, _, rr) in enumerate(parca)]
-    at = Table(satirlar, colWidths=[GEN / 10] * 10, rowHeights=[5 * mm, 8 * mm] * 10)
-    at.setStyle(TableStyle([("FONTNAME", (0, 0), (-1, -1), "Sans"), ("ALIGN", (0, 0), (-1, -1), "CENTER"),
-                            ("VALIGN", (0, 0), (-1, -1), "MIDDLE")] + stil))
+    for sat in range(25):  # 4 blok × (No, Cevap), dikey okunur
+        satir = []
+        for blok in range(4):
+            no, cv, r = hucre[blok * 25 + sat]
+            satir += [no, cv]
+            stil.append(("TEXTCOLOR", (blok * 2 + 1, sat + 1), (blok * 2 + 1, sat + 1), r))
+        satirlar.append(satir)
+    at = Table([["No", "Cevap"] * 4] + satirlar, colWidths=[GEN / 8] * 8, rowHeights=[6 * mm] + [5.6 * mm] * 25)
+    at.setStyle(TableStyle([("FONTNAME", (0, 0), (-1, -1), "F"), ("FONTSIZE", (0, 0), (-1, -1), 8),
+                            ("FONTNAME", (0, 0), (-1, 0), "FB"), ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+                            ("VALIGN", (0, 0), (-1, -1), "MIDDLE"), ("GRID", (0, 0), (-1, -1), 0.3, CIZGI),
+                            ("LINEBELOW", (0, 0), (-1, 0), 0.8, SIYAH), ("BACKGROUND", (0, 0), (-1, 0), H("#f2f2f2"))]
+                           + [("FONTNAME", (c, 1), (c, -1), "FB") for c in (1, 3, 5, 7)] + stil))
     hikaye.append(at)
 
-    # Ek 2: grubun PDF'inde olmayanlar, Ek 3: istatistik
-    hikaye += [PageBreak(), p("EK 2", st_ust), Spacer(1, 1 * mm), p("Grubun PDF'inde olmayan sorular", st_h1),
-               Spacer(1, 2 * mm),
-               p("Grubun cevap anahtarlı PDF'i (24.10 16:31, 78 soru) ile karşılaştırıldı. Aşağıdaki sorular yalnız bu "
-                 "derlemede var.", st_govde), Spacer(1, 4 * mm)]
+    # Notlar
+    hikaye += [PageBreak(), p("NOTLAR", st_h), Spacer(1, 1.5 * mm),
+               p("Soru kartında “not ↓” işareti olan soruların açıklamaları.", st_kucuk), Spacer(1, 4 * mm)]
+    satir = [[p(str(k["sinav_no"]), st_not_no), p(k["not"], st_not)] for k in toplanan if k.get("not")]
+    nt = Table(satir, colWidths=[10 * mm, GEN - 10 * mm])
+    nt.setStyle(TableStyle([("VALIGN", (0, 0), (-1, -1), "TOP"), ("LINEBELOW", (0, 0), (-1, -1), 0.3, CIZGI),
+                            ("LEFTPADDING", (0, 0), (-1, -1), 0), ("TOPPADDING", (0, 0), (-1, -1), 3),
+                            ("BOTTOMPADDING", (0, 0), (-1, -1), 3)]))
+    hikaye.append(nt)
+
+    # Karşılaştırma ve istatistik
+    hikaye += [PageBreak(), p("GRUBUN PDF'İNDE OLMAYAN SORULAR", st_h), Spacer(1, 1.5 * mm),
+               p("Grubun cevap anahtarlı PDF'i (24.10 16:31, 78 soru) ile karşılaştırıldı; aşağıdaki sorular yalnız bu "
+                 "derlemede var.", st_kucuk), Spacer(1, 4 * mm)]
     satir = [[p("No", st_hucre_b), p("Ders", st_hucre_b), p("Soru", st_hucre_b), p("Dayanak", st_hucre_b)]]
     for k in toplanan:
         if not k["grup_pdfinde"]:
-            satir.append([str(k["sinav_no"]), p(k["ders"], st_hucre), p(k["kok"].split("\n")[0], st_hucre),
+            satir.append([p(str(k["sinav_no"]), st_hucre), p(k["ders"], st_hucre), p(k["kok"].split("\n")[0], st_hucre),
                           p(k["grup_pdf_disi_dayanak"], st_hucre)])
-    hikaye += [tablo(satir, [GEN * 0.07, GEN * 0.18, GEN * 0.45, GEN * 0.30], hizala_sol=99),
-               Spacer(1, 10 * mm), p("EK 3", st_ust), Spacer(1, 1 * mm), p("İstatistikler", st_h1), Spacer(1, 2 * mm),
-               p("“Numarası kesin”: grupta sınavdaki numarasıyla yazılan sorular. “Tam”: kök ve şıklar hatırlandı, cevap "
-                 "tartışmasız. “Grup PDF'inde”: grubun son PDF'inde de yer alan sorular.", st_govde), Spacer(1, 4 * mm)]
-    basliklar = ["Ders", "Sınavda", "Toplanan", "Numara\nkesin", "Grup\nPDF'inde", "Yalnız\nbizde", "Tam",
-                 "Şıkları\nüretilen", "Tartış-\nmalı", "Toplan-\nmadı"]
-    satir, toplam = [[p(b, st_hucre_b) for b in basliklar]], [0] * 9
+    hikaye += [tablo(satir, [GEN * 0.06, GEN * 0.18, GEN * 0.46, GEN * 0.30]), Spacer(1, 9 * mm),
+               p("İSTATİSTİKLER", st_h), Spacer(1, 1.5 * mm),
+               p("Numara kesin: grupta sınavdaki numarasıyla yazılan sorular. Tam: kök ve şıklar hatırlandı, cevap "
+                 "tartışmasız. Grup PDF'inde: grubun son PDF'inde de yer alan sorular.", st_kucuk), Spacer(1, 4 * mm)]
+    bas_ = ["Ders", "Sınavda", "Toplanan", "Numara kesin", "Grup PDF'inde", "Yalnız bizde", "Tam", "Şıkları üretilen",
+            "Tartışmalı", "Toplanmadı"]
+    hs = st("hs", fontName="FB", fontSize=6.8, leading=8.6, alignment=1)
+    satir, toplam = [[p(bas_[0], st_hucre_b)] + [p(b, hs) for b in bas_[1:]]], [0] * 9
     for ad, bas, son in DERSLER:
         kay = [k for k in ders_kayit[ad] if k["durum"] != "toplanmadi"]
         dz = [durumlar(k) for k in kay]
@@ -307,15 +295,13 @@ def main():
         toplam = [a + b for a, b in zip(toplam, say)]
         satir.append([p(ad, st_hucre)] + [str(x) for x in say])
     satir.append([p("<b>Toplam</b>", st_hucre)] + [str(x) for x in toplam])
-    ek = [("TEXTCOLOR", (3, 1), (3, -1), DURUM["emin"][0]), ("TEXTCOLOR", (6, 1), (6, -1), DURUM["emin"][0]),
-          ("TEXTCOLOR", (5, 1), (5, -1), DURUM["eklendi"][0]), ("TEXTCOLOR", (7, 1), (7, -1), DURUM["uretildi"][0]),
-          ("TEXTCOLOR", (8, 1), (8, -1), DURUM["tartisma"][0]), ("TEXTCOLOR", (9, 1), (9, -1), GRI),
-          ("FONTNAME", (1, -1), (-1, -1), "SansB"), ("LINEABOVE", (0, -1), (-1, -1), 0.8, MUREKKEP)]
-    hikaye.append(tablo(satir, [GEN * 0.235] + [GEN * 0.085] * 9, ek=ek))
+    hikaye.append(tablo(satir, [GEN * 0.235] + [GEN * 0.085] * 9,
+                        ek=[("ALIGN", (1, 0), (-1, -1), "CENTER"), ("FONTNAME", (1, -1), (-1, -1), "FB"),
+                            ("LINEABOVE", (0, -1), (-1, -1), 0.8, SIYAH)]))
 
     CIKTI.parent.mkdir(parents=True, exist_ok=True)
     doc.build(hikaye)
-    print(CIKTI, len(toplanan), uretilen)
+    print(CIKTI, len(toplanan))
 
 
 if __name__ == "__main__":
