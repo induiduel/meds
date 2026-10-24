@@ -305,7 +305,6 @@ export default function LottieVideo({ ad, kod, ses, zaman, kompakt, otomatik, on
         {/* durgun ve başta: ilk bölümün bir karesi kapak olarak (boş sahne görünmesin) */}
         <LottieSahne ref={sahne} ad={ad} kare={!cal && t < 0.05 ? Math.min(sure, (v.bolumler[0]?.bas ?? 0) + 1.2) : t} />
         <Katman v={v} t={t} />
-        {altyazi && <div className={`kmb-lv-altyazi${konusuyor ? '' : ' sessiz'}`}><span>{bolum?.metin}</span></div>}
         {/* dokunma alanları: sol 10 sn geri, orta oynat/duraklat, sağ 10 sn ileri */}
         <button className="kmb-lv-alan sol" aria-label="10 saniye geri" onClick={() => atla(-1)}><span>⟲ 10</span></button>
         <button className="kmb-lv-alan orta" aria-label={cal ? 'Duraklat' : 'Oynat'} onClick={() => (cal ? durdur() : oynat())} />
@@ -320,6 +319,8 @@ export default function LottieVideo({ ad, kod, ses, zaman, kompakt, otomatik, on
         )}
         {tamMi && !doldur && <div className="kmb-lv-ust"><b>{v.baslik}</b><span>{bolum?.baslik}</span><button onClick={tamEkran} aria-label="Tam ekrandan çık">✕</button></div>}
       </div>
+      {/* altyazı görüntünün üstünde değil, altında kendi bandında: hiçbir çizimi örtmez, yüksekliği sabit (zıplamaz) */}
+      {altyazi && <div className={`kmb-lv-altyazi${konusuyor ? '' : ' sessiz'}`} aria-live="polite"><span>{bolum?.metin}</span></div>}
       <div className="kmb-lv-cubuk">
         <div className="kmb-lv-zaman">
           {v.bolumler.map((b, i) => <span key={i} className="kmb-lv-bolum-isaret" style={{ left: `${(b.bas / sure) * 100}%` }} title={b.baslik} />)}

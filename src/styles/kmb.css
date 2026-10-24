@@ -426,3 +426,26 @@
 .kmb-lv.gizli .kmb-lv-altyazi { padding-bottom: 2.5%; }
 @media (max-height: 520px) { .kmb-lv.tam .kmb-lv-altyazi, .kmb-lv.doldur .kmb-lv-altyazi { padding-bottom: 58px; } .kmb-lv.tam .kmb-lv-altyazi span, .kmb-lv.doldur .kmb-lv-altyazi span { -webkit-line-clamp: 1; } }
 .kmb-lv.kompakt .kmb-lv-altyazi span { font-size: clamp(10px, 1.35cqi, 14px); }
+
+/* altyazı v5: görüntünün ALTINDA kendi bandı (üstüne binmez). İki satır sabit yükseklik; uzun cümle iki satıra sığacak
+   kadar küçülür ve kırpılır (tam metin anlatım listesinde). Tam ekranda düzen: sahne · altyazı bandı · denetimler. */
+.kmb-lv .kmb-lv-altyazi, .kmb-lv.tam .kmb-lv-altyazi, .kmb-lv.doldur .kmb-lv-altyazi, .kmb-lv.gizli .kmb-lv-altyazi {
+  position: static; flex: none; display: flex; align-items: center; justify-content: center; pointer-events: none;
+  background: #0e1218; padding: 6px 4%; height: calc(2 * 1.4em + 12px); font-size: clamp(12px, 1.6vw, 16px); }
+.kmb-lv .kmb-lv-altyazi span, .kmb-lv.tam .kmb-lv-altyazi span, .kmb-lv.doldur .kmb-lv-altyazi span {
+  display: -webkit-box !important; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;
+  max-width: 980px; padding: 0; background: none; border-radius: 0; color: #f1f4f8; text-align: center;
+  font-size: 1em !important; line-height: 1.4; }
+.kmb-lv.tam .kmb-lv-altyazi, .kmb-lv.doldur .kmb-lv-altyazi { background: #000; font-size: clamp(13px, min(1.45vw, 2.6vh), 20px); }
+.kmb-lv .kmb-lv-altyazi.sessiz span { opacity: .35; }
+.kmb-lv.kompakt .kmb-lv-altyazi { font-size: 12.5px; }
+/* tam ekran: denetimler de akışta (sahnenin üstüne binmez); hareketsizken soluklaşır ama yer kaplamayı sürdürür */
+.kmb-lv.tam .kmb-lv-cubuk, .kmb-lv.doldur .kmb-lv-cubuk { position: static; background: #000; padding: 4px 16px 10px; }
+.kmb-lv.gizli .kmb-lv-cubuk { opacity: .15; pointer-events: auto; }
+.kmb-lv.gizli .kmb-lv-cubuk:hover { opacity: 1; }
+@media (max-height: 520px) {
+  .kmb-lv.tam .kmb-lv-altyazi, .kmb-lv.doldur .kmb-lv-altyazi { height: calc(1.4em + 8px); padding: 4px 3%; }
+  .kmb-lv.tam .kmb-lv-altyazi span, .kmb-lv.doldur .kmb-lv-altyazi span { -webkit-line-clamp: 1; }
+  .kmb-lv.tam .kmb-lv-cubuk, .kmb-lv.doldur .kmb-lv-cubuk { padding: 2px 10px 4px; }
+}
+.kmb-dv, .kmb-dv.kmb-kok { inset: 0; height: auto; width: auto; z-index: 2147483000; }

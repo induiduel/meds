@@ -1,16 +1,17 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 323,
-  "baslik": "KMB videoları: daha küçük altyazı, düzeltilmiş kareler",
+  "onem": 324,
+  "baslik": "KMB videolarında altyazı görüntünün altında",
   "maddeler": [
-    "Altyazı küçüldü, en çok iki satır; görüntüyü kapatmıyor",
-    "Ultrason ekranı, eldivenler, malzeme tepsisi ve iletişim sahneleri düzeltildi",
-    "Yatan hasta ve figürler bütün videolarda yeni çizimle"
+    "Tam ekranda altyazı artık görüntünün üstüne binmiyor; altında kendi bandında, en çok iki satır",
+    "Denetimler görüntüyü kapatmıyor"
   ],
   "eklenen": [],
   "degisen": [
     "/dersler/kmb videoları"
   ],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Tam ekran altyazı"
+  ],
   "silinen": []
 }
