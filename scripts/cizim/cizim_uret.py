@@ -57,6 +57,50 @@ def kutular(txt: Path) -> list[list[float]]:
     return out
 
 
+def adaylar(sayfa) -> tuple[list[dict], list[dict]]:
+    """Kroki (R1) adayları: vektör okları (kroki/ok.py, PDF çiziminden kesin) ve resim kutularındaki eğriler
+    (kroki/egri.py egri_cikar + kapı). Koordinatlar sayfa oranı (0–1)."""
+    sys.path.insert(0, str(MEDS / "scripts" / "kroki"))
+    oklar_, egriler = [], []
+    W, H = sayfa.rect.width, sayfa.rect.height
+    try:
+        import ok as OK
+        for i, o in enumerate(OK.oklar(sayfa)[:12], 1):
+            oklar_.append({"id": f"A{i}", "a": [round(o["kuyruk"][0] / W, 4), round(o["kuyruk"][1] / H, 4)],
+                           "b": [round(o["uc"][0] / W, 4), round(o["uc"][1] / H, 4)], "iliski": o["tur"]})
+    except Exception as e:  # noqa: BLE001
+        print(f"  ok adayı çıkarılamadı (s. {sayfa.number + 1}): {e}")
+    try:
+        import cv2
+        import numpy as np
+        import pymupdf
+        import egri as EG
+        for j, im in enumerate(sayfa.get_image_info()[:4], 1):
+            x0, y0, x1, y1 = im["bbox"]
+            if (x1 - x0) * (y1 - y0) < 0.03 * W * H:
+                continue
+            pm = sayfa.get_pixmap(matrix=pymupdf.Matrix(3, 3), clip=pymupdf.Rect(x0, y0, x1, y1), alpha=False)
+            rgb = np.frombuffer(pm.samples, np.uint8).reshape(pm.height, pm.width, pm.n)[:, :, :3]
+            e = EG.egri_cikar(cv2.cvtColor(rgb, cv2.COLOR_RGB2BGR))
+            if not EG.kapidan_gecer(e):
+                continue
+            sx, sy = (x1 - x0) / e["w"], (y1 - y0) / e["h"]
+            n = [[round((x0 + x * sx) / W, 4), round((y0 + y * sy) / H, 4)] for x, y in zip(e["xs"], e["ys"])]
+            adim = max(1, len(n) // 24)
+            n = n[::adim]
+            xs = [q[0] for q in n]
+            fz = []
+            for f in e["fazlar"]:
+                a = min(range(len(xs)), key=lambda k: abs(xs[k] - (x0 + f["bas"] * sx) / W))
+                b = min(range(len(xs)), key=lambda k: abs(xs[k] - (x0 + f["son"] * sx) / W))
+                if a < b:
+                    fz.append({"aralik": [a, b], "faz": f["faz"] if f["faz"] in ("yukselis", "inis", "plato") else "plato"})
+            egriler.append({"id": f"E{len(egriler) + 1}", "nokta": n, "fazlar": fz})
+    except Exception as e:  # noqa: BLE001
+        print(f"  eğri adayı çıkarılamadı (s. {sayfa.number + 1}): {e}")
+    return oklar_, egriler
+
+
 def claude(cwd: Path, istem: str, sure: int = 1800) -> str:
     b = json.loads((MEDS / "otomasyon" / "llm" / "butce.json").read_text())
     kom = ["claude", "-p", istem, "--permission-mode", "bypassPermissions", "--model", b["claude"].get("model", "claude-opus-5-5"),
@@ -96,6 +140,13 @@ def main() -> int:
     W.mkdir(parents=True, exist_ok=True)
     print(f"{a.key}: {len(sayfalar)} anlatılan sayfa, {len(partiler)} parti, {a.paralel} eşzamanlı")
 
+    ADAY: dict[int, dict] = {}
+    ADAY_LISTE: dict[int, tuple] = {}
+    for s_ in sayfalar:                    # partilerden önce (önbellekteki parti de adayla çözülsün)
+        if belge is not None and 1 <= s_ <= belge.page_count:
+            ADAY_LISTE[s_] = adaylar(belge[s_ - 1])
+            ADAY[s_] = {x["id"]: x for x in ADAY_LISTE[s_][0] + ADAY_LISTE[s_][1]}
+
     def parti_isle(i_sp):
         i, sp = i_sp
         d = W / f"parti{i:02d}"
@@ -108,6 +159,13 @@ def main() -> int:
             satir.append(f"## Sayfa {s} — görüntü: {png}")
             satir += [x for x in (dok / f"s{s:02d}.txt").read_text(encoding="utf-8").splitlines() if x.startswith(("R", "M"))][:30] \
                 if (dok / f"s{s:02d}.txt").exists() else []
+            if s in ADAY_LISTE:
+                ao, ae = ADAY_LISTE[s]
+                for x in ao:
+                    satir.append(f"Aday ok {x['id']} (PDF çiziminden, kesin): kuyruk {x['a']} → uç {x['b']} ({x['iliski']})")
+                for x in ae:
+                    satir.append(f"Aday eğri {x['id']} (görüntüden çıkarıldı, kesin): {len(x['nokta'])} nokta, fazlar "
+                                 + ", ".join(f"{f['faz']} {f['aralik']}" for f in x["fazlar"]))
             for cid in sayfa_cumle[s]:
                 ks = C[cid].split()
                 satir.append(f"{cid}: " + " ".join(f"[{j}]{w}" for j, w in enumerate(ks)))
@@ -143,6 +201,11 @@ def main() -> int:
             if cid not in C:
                 say["ret"]["bilinmeyen cümle"] = say["ret"].get("bilinmeyen cümle", 0) + 1; continue
             s = int(k.get("sayfa") or 0)
+            ad = (ADAY.get(s) or {}).get(str(k.get("aday") or ""))
+            if ad:                       # aday seçildi: koordinat betikle adaydan (tahmin değil, PDF/görüntü çizimi)
+                k = {**k, **{x: ad[x] for x in ("a", "b", "nokta", "fazlar") if x in ad}}
+                if "iliski" in ad and k.get("tur") == "akis":
+                    k["iliski"] = k.get("iliski") or ad["iliski"]
             if s and s not in raster and belge is not None and 1 <= s <= belge.page_count:
                 raster[s] = CD.SayfaRaster(belge[s - 1])
             onceki = " ".join(C[x] for x in sira[:sira.index(cid) + 1])

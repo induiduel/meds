@@ -49,6 +49,7 @@ def cek(goreli: str, hedef: Path) -> Path | None:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("key"); ap.add_argument("--ekler", action="store_true"); ap.add_argument("--cikti")
+    ap.add_argument("--mp3", action="store_true", help="sesi Opus'a çevirme (ffmpeg yoksa da MP3 kalır)")
     a = ap.parse_args()
     key = a.key
     T = Path(tempfile.mkdtemp(prefix="medspak_"))
@@ -120,8 +121,18 @@ def main() -> int:
         mp3 = cek(f"{S}/ses/{key}/{v['id']}.mp3", T / "ses" / f"{v['id']}.mp3")
         if not mp3:
             continue
-        db.execute("INSERT INTO ses_parca VALUES (?,?,?,?,?,?,?)", (v["id"], "mp3", v.get("sureSn"), v.get("metinHash"),
-                                                                     mp3.read_bytes(), json.dumps(v.get("zamanlama")),
+        veri, bicim = mp3.read_bytes(), "mp3"
+        if not a.mp3:   # paket içinde Opus (§6; konuşma için tek kanal 32 kbps VBR). Süre aynı → zamanlama/kelime zamanı geçerli
+            ogg = mp3.with_suffix(".opus")
+            r = subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(mp3), "-ac", "1", "-c:a", "libopus", "-b:a", "32k",
+                                "-vbr", "on", "-application", "voip", str(ogg)], capture_output=True, text=True)
+            if r.returncode == 0 and ogg.exists() and ogg.stat().st_size:
+                veri, bicim = ogg.read_bytes(), "opus"
+                print(f"  ses {v['id']}: MP3 {round(len(mp3.read_bytes()) / 1048576, 1)} MB → Opus {round(len(veri) / 1048576, 1)} MB")
+            else:
+                print(f"  ses {v['id']}: Opus dönüşümü yapılamadı, MP3 kalır ({(r.stderr or '')[-120:]})")
+        db.execute("INSERT INTO ses_parca VALUES (?,?,?,?,?,?,?)", (v["id"], bicim, v.get("sureSn"), v.get("metinHash"),
+                                                                     veri, json.dumps(v.get("zamanlama")),
                                                                      json.dumps(kz.get(v["id"]) if isinstance(kz, dict) and v["id"] in kz else kz)))
     if a.ekler:
         for f in hz.get("dosyalar") or []:
@@ -133,7 +144,8 @@ def main() -> int:
             "baslik": v2.get("baslik") or (deste or {}).get("title") or key,
             "metin_hash": mh, "isaret_metin_hash": isr.get("metinHash"),
             "cizim_metin_hash": cz.get("metinHash"), "kaynak_sha": hashlib.sha256(json.dumps(v2, sort_keys=True).encode()).hexdigest()[:16],
-            "uretildi": dt.datetime.now().isoformat(timespec="seconds"), "ses_bicim": "mp3", "ekler": int(a.ekler)}
+            "uretildi": dt.datetime.now().isoformat(timespec="seconds"),
+            "ses_bicim": (db.execute("SELECT bicim FROM ses_parca LIMIT 1").fetchone() or ["yok"])[0], "ekler": int(a.ekler)}
     db.executemany("INSERT INTO meta VALUES (?,?)", [(k, json.dumps(v, ensure_ascii=False) if not isinstance(v, str) else v) for k, v in meta.items()])
     db.commit()
     say = {t: db.execute(f"SELECT COUNT(*) FROM {t}").fetchone()[0] for t in ("cumle", "cizim", "soru", "ses_parca", "ek")}

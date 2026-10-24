@@ -35,6 +35,9 @@ zenginleştirmedir: yalnız cümle gerçekten o görseli/ilişkiyi anlatıyorsa 
 - **sema** (görseli olmayan ya da metin ağırlıklı slaytta bir mekanizma/sınıflama): en çok 8 düğüm, her düğüm metni o
   cümlede ya da DAHA ÖNCEKİ cümlelerde geçen terim (ileri sızıntı yasak); kenar türü `aktive` | `inhibe` | `donusur`.
   Koordinat yazma (yerleşim istemcide).
+- **Aday varsa kullan:** sayfalar.md'de "Aday ok A#" (PDF'in kendi ok çiziminden) ve "Aday eğri E#" (grafikten çıkarılmış
+  eğri) satırları kesin koordinattır. Cümle o oku/eğriyi anlatıyorsa komuta `"aday": "A2"` (ya da `"E1"`) yaz;
+  koordinat ve faz alanlarını yazma, betik adaydan doldurur. Aday yoksa görüntüden oku.
 - Bir cümlede en çok 2 çizim; sayfa başına en çok 8. Etiket en çok 6 kelime, Türkçe.
 - Görseli zaten imleçle yeterince gösterilen basit bir cümleyi çizme; çizim anlamı açmalı (sınır, yön, faz, ilişki).
 
