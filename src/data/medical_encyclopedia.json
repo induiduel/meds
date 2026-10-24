@@ -89281,5 +89281,682 @@
       "accuracyScore": 100,
       "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
     }
+  },
+  {
+    "id": "s13-bilinc",
+    "term": "Bilinç",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.2",
+    "definition": "Uyanıklık (arousal) ve çevresinin ve kendinin farkında olma (farkındalık) bileşenlerinden oluşan durumdur; uyanıklık beyin sapı ARAS'ına, farkındalık serebral korteks ve bağlantılarına bağlıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Bilinç bozukluğunda olguların %85'i metabolik/sistemik, %15'i SSS kaynaklıdır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-asendan_retikuler_aktive_edici_sistem_aras",
+    "term": "Asendan retiküler aktive edici sistem (ARAS)",
+    "aliases": [
+      "ARAS",
+      "Assendan retiküler aktivasyon sistemi"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.5",
+    "definition": "Rostral pons ve mezensefalonun santral gri cevherinden çıkan, talamus, hipotalamus, bazal ön beyin ve korteks üzerinden uyanıklığı sağlayan eksitatör ağdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "ARAS'ı veya iki hemisferi birden etkileyen lezyon koma yapar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-somnolans",
+    "term": "Somnolans",
+    "aliases": [
+      "Somnolan",
+      "Letarji"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.6",
+    "definition": "Hastanın uyuklama hâlinde olduğu, ancak çabuk uyandırılabildiği ve uyandığında farkındalığının korunduğu hafif bilinç bozukluğudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Letarji ile birlikte anılır; uyaran kesilince hasta yeniden uykuya dalar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-stupor",
+    "term": "Stupor",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.6",
+    "definition": "Hastanın ancak güçlü ve tekrarlayan uyaranlarla zorlukla uyandırılabildiği, farkındalığın azaldığı bilinç düzeyidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Komadan farkı, hastanın yine de uyandırılabilmesidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-koma",
+    "term": "Koma",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.6",
+    "definition": "Hastanın güçlü uyaranla bile uyandırılamadığı ve kendinin ve çevresinin farkında olmadığı en ağır bilinç bozukluğudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Uyandırılamama + farkındalık yokluğu = koma.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-vejetatif_durum",
+    "term": "Vejetatif durum",
+    "aliases": [
+      "Persistan vejetatif durum",
+      "Apallik sendrom"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.6",
+    "definition": "Uyku-uyanıklık döngüsü ve göz açma korunduğu hâlde (uyandırılabilir) çevrenin farkında olunmayan bilinç bozukluğudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Komadan farkı uyandırılabilmesidir; farkındalık ikisinde de yoktur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-konfuzyon",
+    "term": "Konfüzyon",
+    "aliases": [
+      "Konfüzyonel durum"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.7",
+    "definition": "Dikkat ve düşünce akışının bozulduğu, yönelimin (oryantasyon) kaybolduğu hafif bilinç bozukluğu tablosudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Postiktal konfüzyonda dil ısırığı nöbeti düşündürür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-beyin_olumu",
+    "term": "Beyin ölümü",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.7",
+    "definition": "Beyin sapı dahil tüm beyin işlevlerinin geri dönüşsüz kaybıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Bilinç bozukluğu yelpazesinin geri dönüşsüz ucudur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-serebral_herniasyon",
+    "term": "Serebral herniasyon",
+    "aliases": [
+      "Beyin herniasyonu"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.14",
+    "definition": "Kafa içi basınç artışı ya da kitle etkisiyle beyin dokusunun dural yapılar veya kafatası açıklıkları arasından yer değiştirmesidir; unkal, santral, singulat, transkalvarial ve tonsiller tipleri vardır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Unkal herniasyon III. kraniyal siniri sıkıştırıp aynı tarafta dilate-fikse pupil yapar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-glasgow_koma_skalasi",
+    "term": "Glasgow koma skalası",
+    "aliases": [
+      "GKS",
+      "GCS",
+      "Glasgow koma skoru"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.24",
+    "definition": "Göz açma (1–4), motor yanıt (1–6) ve sözel yanıt (1–5) toplamıyla bilinç düzeyini 3–15 arasında puanlayan skaladır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "En yüksek puan 15, en düşük 3'tür; motor yanıtın en yüksek puanı 6 (emre uyma).",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dortlu_test_four_skoru",
+    "term": "Dörtlü test (FOUR skoru)",
+    "aliases": [
+      "FOUR skoru",
+      "Full Outline of UnResponsiveness"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.20",
+    "definition": "Koma hastasında göz, motor yanıt, beyin sapı refleksleri ve solunumu değerlendiren koma skorudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Derste Glasgow ve hepatik koma skalası ile birlikte sayılan koma skorlarındandır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dekortike_postur",
+    "term": "Dekortike postür",
+    "aliases": [
+      "Dekortikasyon",
+      "Anormal fleksiyon"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.24",
+    "definition": "Ağrılı uyaranla kollarda fleksiyon, bacaklarda ekstansiyon ile görülen anormal postürdür; Glasgow motor yanıtında 3 puandır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Daha üst düzey (hemisfer/üst mezensefalon) lezyonu düşündürür; deserebrattan daha iyi prognozludur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-deserebre_postur",
+    "term": "Deserebre postür",
+    "aliases": [
+      "Deserebrasyon",
+      "Anormal ekstansiyon"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.24",
+    "definition": "Ağrılı uyaranla kol ve bacaklarda ekstansiyon ve iç rotasyonla görülen anormal postürdür; Glasgow motor yanıtında 2 puandır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Mezensefalon-üst pons düzeyinde hasarı düşündürür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-pinpoint_pupil",
+    "term": "Pinpoint pupil",
+    "aliases": [
+      "Toplu iğne başı pupil",
+      "İleri miyotik pupil"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.32",
+    "definition": "Toplu iğne başı kadar küçük pupildir; komada pons lezyonunu ve opiat intoksikasyonunu düşündürür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Pons kanaması ve opiat zehirlenmesi en tipik iki nedendir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hippus",
+    "term": "Hippus",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.32",
+    "definition": "Işık uyarısına rağmen pupil çapında ritmik dalgalanmadır; komada pretektal lezyonda büyük, fikse pupille birlikte görülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-okulosefalik_refleks",
+    "term": "Okülosefalik refleks",
+    "aliases": [
+      "Bebek gözü fenomeni",
+      "Doll's eye"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.34",
+    "definition": "Baş iki yana çevrildiğinde gözlerin ters yöne kayarak sabit kalmasıdır (bebek gözü fenomeni); bilinci kapalı hastada beyin sapının sağlam olduğunu gösterir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Beyin sapı hasarında gözler başla birlikte hareket eder, refleks kaybolur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-vestibulo_okuler_refleks_kalorik_test",
+    "term": "Vestibülo-oküler refleks (kalorik test)",
+    "aliases": [
+      "Kalorik test",
+      "Okülovestibüler refleks"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.37",
+    "definition": "Dış kulak yoluna soğuk su verilerek vestibüler sistemin uyarılması ve göz yanıtının izlenmesidir; bilinci kapalı hastada beyin sapı bütünlüğünü sınar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Komada beyin sapı sağlamsa gözler soğuk su verilen tarafa tonik sapar; hasarlıysa yanıt yoktur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-cheyne_stokes_solunumu",
+    "term": "Cheyne-Stokes solunumu",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.40",
+    "definition": "Giderek derinleşip sonra yüzeyelleşen solunum dönemleriyle apne dönemlerinin düzenli olarak birbirini izlediği solunum paternidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Bilateral hemisferik ya da diensefalik tutulumda ve metabolik komada görülür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-santral_norojenik_hiperventilasyon",
+    "term": "Santral nörojenik hiperventilasyon",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.40",
+    "definition": "Hızlı, derin ve sürekli hiperventilasyonla giden solunum paternidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Mezensefalon-üst pons lezyonlarını düşündürür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-apnestik_solunum",
+    "term": "Apnestik solunum",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.40",
+    "definition": "Derin inspiryumun sonunda uzamış duraklama (inspiratuvar tutma) ile karakterize solunum paternidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Pons lezyonunu düşündürür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ataksik_solunum",
+    "term": "Ataksik solunum",
+    "aliases": [
+      "Biot solunumu"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.40",
+    "definition": "Derinliği ve ritmi tamamen düzensiz solunum paternidir (Biot solunumu).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Bulbus (medulla) tutulumunda görülür; apneye ilerleyebilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kume_solunumu",
+    "term": "Küme solunumu",
+    "aliases": [
+      "Cluster solunum"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.40",
+    "definition": "Düzensiz aralıklarla apne dönemleriyle bölünen, kümeler hâlinde gelen solunum paternidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Alt pons-üst medulla lezyonlarında görülür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-locked_in_sendromu",
+    "term": "Locked-in sendromu",
+    "aliases": [
+      "Kilitlenme sendromu",
+      "Locked-in synd"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.48",
+    "definition": "Bilincin ve farkındalığın korunduğu, ancak göz hareketleri dışında tüm istemli motor işlevin kaybolduğu durumdur; komayla karışabilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Yanıt alınamayan ama bilinci açık hastanın ayırıcı tanısında psikojen yanıtsızlık ve nöromüsküler paraliziyle birlikte düşünülür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-psikojenik_koma",
+    "term": "Psikojenik koma",
+    "aliases": [
+      "Psikojen yanıtsızlık"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.48",
+    "definition": "Organik neden olmadan yanıtsızlıkla giden, bilincin aslında korunduğu psikiyatrik kökenli tablodur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Yanıt alınamayan hastada bilinç açıksa ayırıcı tanıda yer alır; kalorik testte nistagmus korunur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-naloksan",
+    "term": "Naloksan",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.51",
+    "definition": "Opioid reseptör antagonistidir; bilinci kapalı hastada opioid zehirlenmesini hem tanılamak hem tedavi etmek için IV verilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Pinpoint pupil + solunum depresyonu olan komada ilk denenecek ilaçlardandır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-tiamin",
+    "term": "Tiamin",
+    "aliases": [
+      "B1 vitamini"
+    ],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.59",
+    "definition": "B1 vitaminidir; Wernicke ensefalopatisini önlemek için bilinci kapalı hastada, özellikle alkolikte glukozla birlikte verilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Derste posterior fossa/toksik-metabolik dalında glukoz ve tiamin önerilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hepatik_ensefalopati",
+    "term": "Hepatik ensefalopati",
+    "aliases": [
+      "Hepatik koma"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.11",
+    "definition": "Karaciğer yetmezliğinde amonyak gibi toksinlerin birikmesiyle gelişen, bilinç bozukluğuna kadar ilerleyebilen yaygın beyin işlev bozukluğudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Komada NH3 ve AST bakılması bu nedeni aramak içindir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-uremik_ensefalopati",
+    "term": "Üremik ensefalopati",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.11",
+    "definition": "Böbrek yetmezliğinde üremik toksinlerin birikmesine bağlı gelişen metabolik ensefalopatidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Komada üre ve kreatinin bu nedenle istenir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hipertansif_ensefalopati",
+    "term": "Hipertansif ensefalopati",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.11",
+    "definition": "Ağır kan basıncı yükselmesine bağlı serebral otoregülasyonun bozulmasıyla gelişen yaygın beyin işlev bozukluğudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Derste SSS'yi difüz etkileyen sistemik nedenler arasında sayılır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-serotonin_sendromu",
+    "term": "Serotonin sendromu",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.12",
+    "definition": "Serotonerjik ilaçların fazlalığı ya da etkileşimiyle gelişen, bilinç değişikliği, otonomik instabilite ve nöromüsküler hiperaktiviteyle giden toksik tablodur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Bilinç bozukluğunun ilaç etkileşimine bağlı sistemik nedenlerindendir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-noroleptik_malign_sendrom",
+    "term": "Nöroleptik malign sendrom",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.12",
+    "definition": "Antipsikotik (nöroleptik) ilaç kullanımına bağlı ateş, rijidite, otonomik bozukluk ve bilinç değişikliğiyle giden ağır reaksiyondur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Bilinç bozukluğunun toksik-ilaç kökenli sistemik nedenlerindendir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-status_epileptikus",
+    "term": "Status epileptikus",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.13",
+    "definition": "Uzamış ya da aralarında bilincin düzelmediği tekrarlayan epileptik nöbet durumudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Bilinç bozukluğunun SSS nedenlerindendir; postiktal dönem de bilinç bozukluğu yapar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-postiktal_donem",
+    "term": "Postiktal dönem",
+    "aliases": [
+      "Postiktal periyod"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım s.18",
+    "definition": "Epileptik nöbetin ardından gelen, konfüzyon ve bilinç bulanıklığıyla giden geçici iyileşme dönemidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Konfüze hastada dil ısırığı postiktal durumu düşündürür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-24",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
   }
 ]
