@@ -49,9 +49,11 @@ def ders_seridi(ad, bas, son, n):
 def main():
     hikaye = [
         p("Dönem 3 Kurul 1 Çıkmış Sorular — 2026-2027", st_baslik), Spacer(1, 2 * mm),
-        p("Öğrencilerin hatırladıklarından derlendi (24.10.2026). Sorular sınavdaki ders aralıklarına yerleştirildi; "
-          "ders içindeki sıra kesin değildir, numaralar tahminidir. Toplanamayan sorular \"toplanmadı\" diye "
-          "gösterilir. Cevaplar derleme anahtarıyla karşılaştırılıp kontrol edildi; farklılıklar soru altında not edildi.",
+        p("Öğrencilerin hatırladıklarından derlendi (24.10.2026): derleme PDF'i + \"Konu çalışma grubu\" tartışması "
+          "(23.10 10:00 – 24.10 15:25). Grupta numarası yazılan sorular kendi numarasında; diğerleri dersin boş "
+          "numaralarına yerleştirildi ve \"yeri tahmini\" diye işaretlendi. Yalnız konusu hatırlanan sorular "
+          "\"Şıklar toplanmadı\" diye, hiç bilinmeyenler \"toplanmadı\" diye gösterilir. Cevaplar kontrol edildi; "
+          "tartışmalı olanlar soru altında not edildi.",
           st_alt), Spacer(1, 4 * mm),
     ]
     anahtar = []
@@ -60,20 +62,27 @@ def main():
         sorular = S[ad]
         toplam += len(sorular)
         hikaye += [ders_seridi(ad, bas, son, len(sorular)), Spacer(1, 2.5 * mm)]
-        for i, (kok, siklar, cevap, notu) in enumerate(sorular):
-            no = bas + i
-            blok = [p(f"{no}. {kok}", st_kok)]
-            blok += [p(f"{'ABCDE'[j]}) {s}", st_sik) for j, s in enumerate(siklar)]
+        # Grupta numarası yazılanlar yerine; kalanlar boş numaralara sırayla (yeri tahmini)
+        yer = {q[0]: (q, True) for q in sorular if q[0]}
+        bos = [n for n in range(bas, son + 1) if n not in yer]
+        for q, n in zip([q for q in sorular if not q[0]], bos):
+            yer[n] = (q, False)
+        for no in range(bas, son + 1):
+            if no not in yer:
+                hikaye += [p(f"{no}. toplanmadı", st_eksik), Spacer(1, 2.5 * mm)]
+                anahtar.append((no, "—"))
+                continue
+            (_, kok, siklar, cevap, notu), kesin = yer[no]
+            blok = [p(f"{no}. {kok}" + ("" if kesin else "  (yeri tahmini)"), st_kok)]
+            if siklar:
+                blok += [p(f"{'ABCDE'[j]}) {s}", st_sik) for j, s in enumerate(siklar)]
+            else:
+                blok.append(p("Şıklar toplanmadı." + (f" Hatırlanan cevap: {cevap}" if cevap != "?" else ""), st_sik))
             if notu:
                 blok.append(p("Not: " + notu, st_not))
             blok.append(Spacer(1, 3 * mm))
             hikaye.append(KeepTogether(blok))
-            anahtar.append((no, cevap))
-        eksik = list(range(bas + len(sorular), son + 1))
-        if eksik:
-            aralik = f"{eksik[0]}–{eksik[-1]}" if len(eksik) > 1 else str(eksik[0])
-            hikaye += [p(f"{aralik}: toplanmadı ({len(eksik)} soru)", st_eksik), Spacer(1, 4 * mm)]
-            anahtar += [(n, "—") for n in eksik]
+            anahtar.append((no, cevap if siklar else ("kısmi" if cevap == "?" else "kısmi*")))
 
     hikaye += [Spacer(1, 4 * mm), p("Cevap anahtarı (tahmini numaralarla)", st_baslik), Spacer(1, 2 * mm)]
     satirlar = []
@@ -89,7 +98,7 @@ def main():
                            ("GRID", (0, 0), (-1, -1), 0.4, colors.HexColor("#cbd5e1")),
                            ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#e2e8f0"))]))
     hikaye.append(t)
-    hikaye += [Spacer(1, 3 * mm), p(f"Toplanan: {toplam}/100 · Toplanmayan: {100 - toplam}", st_alt)]
+    hikaye += [Spacer(1, 3 * mm), p(f"Toplanan: {toplam}/100 (kısmi olanlar dahil) · Toplanmayan: {100 - toplam} · kısmi* = şıklar yok, doğru cevap metinde", st_alt)]
 
     def altbilgi(c, d):
         c.setFont("DV", 7.5)

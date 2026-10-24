@@ -1,16 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 287,
-  "baslik": "Telefonda okunur çizim panelleri",
+  "onem": 288,
+  "baslik": "Kurul 1 2026-2027 çıkmış sorular güncellendi",
   "maddeler": [
-    "Paneller telefonda da okunur boyutta",
-    "Panel yazıların kenarına bile binmiyor; sığmazsa slayt altındaki alanda",
-    "Slayt altı alan gereğinden uzun değil"
+    "Öğrenci grubundaki tartışmalarla soru sayısı 73'ten 91'e çıktı (bir kısmı yalnız konu olarak)",
+    "Grupta yazılan gerçek soru numaraları ve öğrencilerin şık/kök düzeltmeleri işlendi",
+    "Tartışmalı cevaplar soru altında not edildi"
   ],
   "eklenen": [],
   "degisen": [
-    "Sesli derste PDF araçları sadeleşti: tek 'Çiz' düğmesinden kalem, fosforlu kalem, silgi ve renk seçilir; telefonda araç çubuğu tek satıra sığar.",
-    "Çıkmış soru listesi telefonda ekran dışına taşmaz; klavyeyle ve Esc ile kullanılabilir."
+    "/api/test/kurul1/2627 PDF'i güncellendi"
   ],
   "duzeltilen": [],
   "silinen": []
