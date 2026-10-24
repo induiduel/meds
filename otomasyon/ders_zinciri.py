@@ -507,10 +507,17 @@ def a_cizim(d, pk, W, kuru):
     (S / "isaret").mkdir(parents=True, exist_ok=True)
     r = r or calistir(f"rsync -az {uz}/isaret/{key}.json {S}/isaret/", kuru=kuru)
     py = MEDS / ".venv-ocr/bin/python"
-    r = r or calistir(f"{py} {MEDS}/scripts/cizim/cizim_uret.py {key} --dok {C}/dok --capa {C}/capa.json "
-                      f"--isaret {S}/isaret/{key}.json --is-dizini {W}/cizim/{d['kod']}", cwd=MEDS, kuru=kuru)
+    uret = (f"{py} {MEDS}/scripts/cizim/cizim_uret.py {key} --dok {C}/dok --capa {C}/capa.json "
+            f"--isaret {S}/isaret/{key}.json --is-dizini {W}/cizim/{d['kod']}")
+    r = r or calistir(uret, cwd=MEDS, kuru=kuru)
     if r:
         return r
+    # panel/etiket sınaması (scripts/cizim/panel_sinama.mjs, 3 genişlik, 0 hata şart; H51). Düşerse daha geniş yerleşim
+    # payıyla bir kez yeniden yerleştirilir (Claude çağrısı yok, parti önbelleği); yine düşerse çizim yayına gitmez.
+    sin = f"node {MEDS}/scripts/cizim/panel_sinama.mjs {key}"
+    if calistir(sin, cwd=MEDS, kuru=kuru):
+        if calistir(f"CIZIM_PAY=1.4 {uret}", cwd=MEDS, kuru=kuru) or calistir(sin, cwd=MEDS, kuru=kuru):
+            print(f"   {key}: çizim sınaması düştü — yayına gönderilmedi"); return 14
     return calistir(f"rsync -az --rsync-path='flock /tmp/meds-deploy.lock sudo rsync' --chown=ubuntu:ubuntu {S}/cizim/{key}.json {uz}/cizim/", kuru=kuru)
 
 

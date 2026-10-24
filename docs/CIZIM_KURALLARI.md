@@ -106,7 +106,20 @@ Betik her panel için sürümleri öncelik sırasıyla dener ve slaytın boşlu�
 - Dar PDF bölmesinde araç çubuğu düğmeleri kırılmaz (ölçüt bölme genişliği, container query).
 - Telefonda görünüm seçici (Metin / Metin + Slayt / Slayt) başlık satırında tek döngü düğmesidir.
 
+## 8b. Resim slaytı ve yatay zincir (H51)
+
+- Slaytın asıl içeriği görselse (≥%35 resim kutusu ya da metin katmanı olmayan dolu taranmış sayfa) panel kurulmaz; ilişki
+  görselin üstünde çizilir (boyama, ok, odak). Kapı (`resim_sayfasi`) paneli reddeder.
+- Yatay zincirde her kutu tek satırdır; sığmıyorsa sürüm geçersizdir ve dikey (oklar aşağı) çizilir.
+- Maske şablonu: "İlk izlenim" → ⚠ maskeleyebilir ↓ → "Atlanmaması gereken" (bulanıktan netleşir).
+
 ## 9. Sınama (her yeni ders ya da yerleşim değişikliğinde)
+
+**Otomatik kapı:** `node scripts/cizim/panel_sinama.mjs <ders>` — gerçek bileşen + stil, başsız Chrome, 366/567/1100 px;
+taşma, iç taşma, ayrılan yükseklik aşımı, yatay zincirde kırılma, kelime ortasından kırılma, kesik yazı, panel içi üst üste
+binme, 7 px altı yazı. Ders zinciri (`cizim` adımı) çalıştırır; düşerse `CIZIM_PAY=1.4` ile bir kez yeniden yerleştirir,
+yine düşerse çizim yayına gönderilmez (çıkış 14).
+
 
 1. `cizim_uret.py` → kapı 0 HATA. 2. Sınama sayfası (gerçek `CizimLayer` + `pdfDoc.css`): bütün paneller 366 / 567 /
    1100 px'te — ayrılan alan aşımı, sayfa/ek alan taşması, kırık yatay zincir, kesik etiket = 0. 3. Canlıda denetleyici

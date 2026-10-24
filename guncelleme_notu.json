@@ -1,12 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 313,
-  "baslik": "Çizimlerde öğreten animasyonlar",
+  "onem": 314,
+  "baslik": "Görsel slaytlarda anlatım görselin üstünde",
   "maddeler": [
-    "Resimde anlatılan bölge öne çıkıyor, slaytın geri kalanı hafifçe kararıyor",
-    "Panellerde o an anlatılan satır vurgulanıyor",
-    "Neden-sonuç oklarında yönü gösteren akış",
-    "Tablolar her ekranda doğru genişlikte"
+    "Şema ve resim slaytlarında anlatım artık görselin üstünde: ok, boyama, odak",
+    "Panellerde yazılar kırılmıyor, sığmıyorsa alt alta diziliyor; numaralar ve ok açıklamaları görünüyor",
+    "\"Altta yatan neden\" paneli daha anlaşılır: ilk izlenim → atlanmaması gereken"
   ],
   "eklenen": [],
   "degisen": [

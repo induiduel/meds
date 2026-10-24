@@ -376,15 +376,16 @@ function SablonPanel({ z, t }: { z: CizimKomut; t: number }) {
       );
     }
     case 'maske': {
+      // "ilk izlenim" → ⚠ (bağ sözü) ↓ → "atlanmaması gereken" (bulanıktan netleşir). Başlıklar şablondan (sablonlar.json)
+      const [b1, b2] = [z.basliklar?.[0] || 'İlk izlenim', z.basliklar?.[1] || 'Atlanmaması gereken'];
       const acik = t >= 0.5;
       return kap(
-        <div className="pdv-cz-maske">
-          <span className="pdv-cz-maske-baslik">Görünen</span>
-          <span className="pdv-sb-kutu">{z.gorunen}</span>
-          <span className="pdv-cz-maske-baslik">Altta aranacak</span>
-          <div className={`pdv-cz-maske-alt${acik ? ' is-acik' : ''}`}>
-            {(z.altta || []).map((x, i) => <span key={i} className="pdv-sb-kutu is-sonuc">{x}</span>)}
-            <span className="pdv-cz-perde" aria-hidden>{z.bag || '?'}</span>
+        <div className="pdv-sb-maske">
+          <div className="pdv-sb-maske-satir"><span className="pdv-sb-etk">{b1}</span><span className="pdv-sb-kutu">{z.gorunen}</span></div>
+          <div className="pdv-sb-maske-uyari" aria-hidden><span className="pdv-sb-maske-ok">↓</span><span>⚠ {z.bag || 'gizleyebilir'}</span></div>
+          <div className={`pdv-sb-maske-satir is-alt${acik ? ' is-acik' : ''}`}>
+            <span className="pdv-sb-etk is-uyari">{b2}</span>
+            <span className="pdv-sb-maske-ogeler">{(z.altta || []).map((x, i) => <span key={i} className="pdv-sb-kutu is-sonuc">{x}</span>)}</span>
           </div>
         </div>,
       );

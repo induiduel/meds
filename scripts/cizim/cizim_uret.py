@@ -60,6 +60,18 @@ def kutular(txt: Path) -> list[list[float]]:
     return out
 
 
+def resim_sayfasi(kutu_listesi: list, satirlar: list, r) -> bool:
+    """Slaytın anlatılan içeriği bir görsel mi (şema/resim)? Öyleyse ilişki görselin ÜSTÜNDE (ok, boyama, odak) anlatılır,
+    yan panel kurulmaz (kullanıcı 2026-10-24, H51: herniasyon şeması anlatılırken altta metin paneli çıkıyordu).
+    Ölçüt: sayfanın ≥%35'ini kaplayan resim kutusu, ya da PDF'te ≤4 yazı satırı varken sayfanın ≥%30'u mürekkepli
+    (tek parça taranmış görüntü: resim kutusu algılanamaz)."""
+    if any((b[2] - b[0]) * (b[3] - b[1]) >= 0.35 for b in kutu_listesi or []):
+        return True
+    if r is not None and len(satirlar or []) <= 4 and r.kutu_doluluk(0.05, 0.05, 0.95, 0.95) >= 0.30:
+        return True
+    return False
+
+
 def adaylar(sayfa) -> tuple[list[dict], list[dict]]:
     """Kroki (R1) adayları: vektör okları (kroki/ok.py, PDF çiziminden kesin) ve resim kutularındaki eğriler
     (kroki/egri.py egri_cikar + kapı). Koordinatlar sayfa oranı (0–1)."""
@@ -184,6 +196,7 @@ EM = 0.0175          # panel yazı boyu = sayfa genişliğinin %1,75'i (pdfDoc.c
 # öncelik sırasıyla denenir; slayta (ek alansız) sığan ilk sürüm seçilir. yon: yatay | dikey (zincir alt alta, oklar
 # aşağı); olcek: 1 normal | 0,85 kompakt. Yatay zincir tek satıra sığmıyorsa o sürüm geçersizdir (kırılan zincirde
 # yana bakan ok yanlış okunuyordu) → dikey.
+PAY_EK = float(os.environ.get("CIZIM_PAY", "1"))   # sınama düşerse ders zinciri daha geniş payla yeniden yerleştirir
 SURUMLER = (("yatay", 1.0), ("dikey", 1.0), ("yatay", 0.85), ("dikey", 0.85))
 
 
@@ -222,7 +235,7 @@ def yazi_kesisir(kutu, satirlar, pay: float = 0.01) -> bool:
 def panel_boyu(k: dict, g: float, oran: float, yon: str = "yatay", olcek: float = 1.0) -> float:
     olcek = 1.0       # kompakt sürüm telefonda en küçük yazı sınırı (7,5 px) yüzünden küçülemiyor: boy tam ölçekle tahmin edilir
     if k.get("duzen"):                            # şablonlu panel (sablon.py)
-        return SB.boyu(k, g, oran, EM, yon, olcek)
+        return SB.boyu(k, g, oran, EM, yon, olcek) * PAY_EK
     """Panelin sayfa yüksekliği oranı cinsinden yüksekliği; istemcideki dizilimin em ile kopyası (oran = genişlik/yükseklik).
     Ölçüm: tarayıcıda 567 ve 1100 px sayfada gerçek yükseklikle karşılaştırıldı."""
     W = g / (EM * olcek)                         # panel iç genişliği (em)
@@ -270,7 +283,7 @@ def panel_boyu(k: dict, g: float, oran: float, yon: str = "yatay", olcek: float 
                 if satir > 1:
                     return 9.0                    # yatay zincir kırılıyor: bu sürüm geçersiz (dikey denenecek)
                 toplam += satir * DH + (satir * 1.2 if any(e.get("etiket") for e in kn) else 0) + (satir - 1) * 0.4
-    return toplam * EM * olcek * oran * 1.32            # %32 pay: telefonda en küçük yazı 7,5 px (dar sayfada %1,75 cqw'den büyük)
+    return toplam * EM * olcek * oran * 1.32 * PAY_EK            # %32 pay: telefonda en küçük yazı 7,5 px (dar sayfada %1,75 cqw'den büyük)
 
 
 def oku_panele(k: dict, satirlar: list) -> dict | None:
@@ -770,6 +783,13 @@ def main() -> int:
             if k.get("_sil"):
                 say["ret"]["anlam denetimi sildi"] = say["ret"].get("anlam denetimi sildi", 0) + 1
                 continue
+            if k.get("tur") == "sema":
+                if s not in satir_onbellek and belge is not None and 1 <= s <= belge.page_count:
+                    satir_onbellek[s] = sayfa_satirlari(belge[s - 1])
+                if resim_sayfasi(kutular(dok / f"s{s:02d}.txt"), satir_onbellek.get(s), raster.get(s)):
+                    say["ret"]["resim sayfasında panel (görsel üstünde çiz, H51)"] = say["ret"].get("resim sayfasında panel (görsel üstünde çiz, H51)", 0) + 1
+                    say.setdefault("resim_sayfasi_panel", []).append(s)
+                    continue
             if k.get("tur") == "sema" and k.get("sablon"):
                 k, neden_s = SB.coz(k, kut)
                 if neden_s:

@@ -279,24 +279,29 @@
 .pdv-sb-tablo td + td, .pdv-sb-tablo th + th { border-left: 1px dashed #cbd5e1; }
 .pdv-sb-tablo td.is-sonuc { color: #1d4ed8; }
 /* liste: aynı gruptaki sıralı öğeler numaralı, ayrı şeyler madde imli; öğeler kesikli çizgiyle ayrılır */
-.pdv-sb-liste { margin: 0; padding-left: 1.5em; display: flex; flex-direction: column; }
+.pdv-sb-liste { margin: 0; padding-left: 1.7em; display: block; list-style-position: outside; }   /* flex kapta numaralar basılmıyordu */
+ol.pdv-sb-liste { list-style-type: decimal; } ul.pdv-sb-liste { list-style-type: disc; }
+.pdv-sb-liste li { display: list-item; }
 .pdv-sb-liste li { padding: .2em 0; font-weight: 600; color: #0f172a; border-top: 1px dashed #e2e8f0; animation: pdv-cz-gel .35s ease-out both; }
 .pdv-sb-liste li:first-child { border-top: 0; }
 .pdv-sb-liste li::marker { color: #1d4ed8; font-weight: 800; }
 /* zincir: yatay oklar ya da dikeyde aşağı oklar (ok ve sözü okunur boyutta) */
 .pdv-sb-zincir { display: flex; align-items: center; flex-wrap: nowrap; gap: .3em; }
 .pdv-sb-zincir.is-dikey { flex-direction: column; align-items: flex-start; }
+.pdv-sb-zincir:not(.is-dikey) .pdv-sb-kutu { white-space: nowrap; }   /* yatay zincirde kutu tek satır (sığmayan dikey çizilir) */
 .pdv-sb-zincir-oge { display: inline-flex; align-items: center; gap: .3em; }
 .pdv-sb-zincir.is-dikey .pdv-sb-zincir-oge { flex-direction: column; align-items: flex-start; }
-.pdv-sb-ok { display: inline-flex; flex-direction: column; align-items: center; color: #1d4ed8; min-width: 2.6em; }
-.pdv-sb-bag { font-size: .78em; font-weight: 700; white-space: nowrap; line-height: 1.1; }
+.pdv-sb-ok { display: inline-flex; flex-direction: column; align-items: stretch; color: #1d4ed8; min-width: 3em; width: max-content; flex: none; padding: 0 .15em; }
+.pdv-sb-bag { font-size: .78em; font-weight: 700; white-space: nowrap; line-height: 1.1; text-align: center; padding: 0 .3em .15em; }
 .pdv-sb-ok-cizgi { position: relative; width: 100%; height: .15em; background: currentColor; transform-origin: left; animation: pdv-cz-uza .6s ease-out both; }
 .pdv-sb-ok-cizgi::after { content: ''; position: absolute; right: -.1em; top: 50%; transform: translateY(-50%); border: .38em solid transparent; border-left: .55em solid currentColor; border-right: 0; }
 .pdv-sb-ok.is-dikey { flex-direction: row; align-items: center; gap: .4em; min-width: 0; margin-left: .9em; }
 .pdv-sb-ok.is-dikey .pdv-sb-ok-cizgi { width: .15em; height: 1.3em; transform-origin: top; animation-name: pdv-cz-uza-d; order: -1; }
 .pdv-sb-ok.is-dikey .pdv-sb-ok-cizgi::after { right: auto; top: auto; left: 50%; bottom: -.25em; transform: translateX(-50%); border: .38em solid transparent; border-top: .55em solid currentColor; border-bottom: 0; }
 /* grup: numaralı kaynaklar } tek sonuç */
-.pdv-sb-grup { display: flex; align-items: center; gap: .4em; }
+.pdv-sb-grup { display: grid; grid-template-columns: minmax(0, max-content) auto auto minmax(0, 1fr); align-items: center; column-gap: .35em; }
+.pdv-sb-grup > .pdv-sb-kutu.is-sonuc { justify-self: start; max-width: 100%; min-width: 0; }
+.pdv-sb-grup .pdv-sb-bag { white-space: normal; max-width: 6.5em; }
 .pdv-sb-liste.is-kaynak { padding-left: 1.4em; }
 /* dal: soru solda, koşullu dallar kesikli çizgiyle ayrık */
 .pdv-sb-dal { display: flex; align-items: center; gap: .6em; }
@@ -313,12 +318,23 @@
 .pdv-sb-liste li.is-simdi { background: rgb(250 204 21 / .28); border-radius: .3em; }
 .pdv-sb-kutu.is-simdi { box-shadow: 0 0 0 .18em rgb(250 204 21 / .75); }
 /* neden-sonuç akışı: ok boyunca nedenden sonuca akan parçacık (yönü sezdirir) */
-.pdv-sb-ok-cizgi::before { content: ''; position: absolute; top: 50%; left: 0; width: .45em; height: .45em; margin-top: -.225em; border-radius: 50%;
+.pdv-sb-ok-cizgi::before { content: ''; position: absolute; top: 50%; left: 0; width: .38em; height: .38em; margin-top: -.19em; border-radius: 50%;
   background: #fff; box-shadow: 0 0 0 .1em currentColor; animation: pdv-sb-akis 1.6s .7s ease-in-out infinite; }
 .pdv-sb-ok.is-dikey .pdv-sb-ok-cizgi::before { left: 50%; top: 0; margin: 0 0 0 -.225em; animation-name: pdv-sb-akis-d; }
-@keyframes pdv-sb-akis { from { left: 0; opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } to { left: calc(100% - .45em); opacity: 0; } }
+@keyframes pdv-sb-akis { from { left: 0; opacity: 0; } 15% { opacity: 1; } 75% { opacity: 1; } to { left: calc(100% - 1.1em); opacity: 0; } }
 @keyframes pdv-sb-akis-d { from { top: 0; opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } to { top: calc(100% - .45em); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .pdv-sb-ok-cizgi::before { animation: none; display: none; } .pdv-cz g path.pdv-cz-mercek { transition: none; } }
+.pdv-sb-maske { display: grid; gap: .35em; }
+.pdv-sb-maske-satir { display: grid; grid-template-columns: max-content minmax(0, 1fr); align-items: center; column-gap: .5em; }
+.pdv-sb-etk { font-size: .74em; font-weight: 800; letter-spacing: .03em; color: #64748b; text-transform: uppercase; }
+.pdv-sb-etk.is-uyari { color: #b45309; }
+.pdv-sb-maske-ogeler { display: flex; flex-wrap: wrap; gap: .3em; }
+.pdv-sb-maske-uyari { display: flex; align-items: center; gap: .4em; padding-left: .3em; color: #b45309; font-size: .82em; font-weight: 800; }
+.pdv-sb-maske-ok { font-size: 1.2em; line-height: 1; }
+/* altta yatan: önce bulanık ve soluk, konuşma ilerleyince netleşir */
+.pdv-sb-maske-satir.is-alt .pdv-sb-maske-ogeler { filter: blur(.25em); opacity: .35; transition: filter .6s ease-out, opacity .6s ease-out; }
+.pdv-sb-maske-satir.is-alt.is-acik .pdv-sb-maske-ogeler { filter: none; opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .pdv-sb-maske-satir.is-alt .pdv-sb-maske-ogeler { transition: none; } }
 @keyframes pdv-cz-uza-d { from { transform: scaleY(0); } to { transform: scaleY(1); } }
 @keyframes pdv-cz-uza { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 /* grup / dal: liste alt alta, "}" (dalda "{") ayracı */

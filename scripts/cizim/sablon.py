@@ -144,7 +144,10 @@ def boyu(k: dict, g: float, oran: float, em: float, yon: str = "yatay", olcek: f
             toplam += max(satir(c, sutun) for c in r) * 1.3 + 0.55
     elif d == "zincir":
         og = k.get("ogeler") or []
-        if yon == "dikey" or sum(gw(x) for x in og) + 2.8 * (len(og) - 1) > W:
+        bag_w = max(3.0, len(_metin(k.get("bag"))) * 0.46 + 1.2)
+        if yon != "dikey" and sum(gw(x) for x in og) + bag_w * (len(og) - 1) > W:
+            return 9.0            # yatay zincir tek satıra sığmıyor: kutular içinde kırılıyordu (H51) → dikey sürüm
+        if yon == "dikey":
             toplam += sum(satir(x, W) * 1.3 + 0.55 for x in og) + (len(og) - 1) * (1.4 + (1.1 if k.get("bag") else 0))
         else:
             toplam += 1.85 + (1.2 if k.get("bag") else 0)
@@ -159,5 +162,5 @@ def boyu(k: dict, g: float, oran: float, em: float, yon: str = "yatay", olcek: f
         dl = k.get("dallar") or []
         toplam += satir(k.get("soru"), W) * 1.3 + 0.8 + sum(satir(x[1], W * 0.6) * 1.3 + 0.6 for x in dl)
     elif d == "maske":
-        toplam += 2 * 1.2 + 1.85 + sum(satir(x, W) * 1.3 + 0.4 for x in k.get("altta") or [])
+        toplam += 2 * 1.85 + 1.3 + 0.7 + max(0, sum(gw(x) + 0.3 for x in k.get("altta") or []) - (W - 9)) / max(4.0, W - 9) * 1.85
     return toplam * em * olcek * oran * 1.32

@@ -43,6 +43,10 @@ zenginleştirmedir: yalnız cümle gerçekten o görseli/ilişkiyi anlatıyorsa 
   "dekortike ↔ deserebre"); kenara en çok 5 kelimelik `etiket` yazılabilir. Panel türü yapıdan kendiliğinden seçilir:
   zincir (A→B→C), grup (birden çok → bir, "}"), dal (bir → birden çok, karar), maske (perde kalkar), karşıt (yan yana).
   Koordinat yazma (yerleşim betikte).
+- **Resim/şema slaytında panel YOK (H51):** slaytın asıl içeriği bir görselse (şema, anatomik çizim, akış şeması görüntüsü,
+  taranmış slayt) ilişkiyi görselin ÜSTÜNDE anlat: `kontur` (bölgeyi boya), `akis` (yapıdan yapıya ok; görseldeki mevcut
+  ok için kısa ok → betik odak çerçevesine çevirir), dallı ok. Örn. herniasyon şemasında "kanama unkusu aşağı iter" →
+  kanamadan unkusa ok + unkus konturu. Böyle sayfada `sema` yazma; betik reddeder.
 - **Panel = şablon (ZORUNLU, 2026-10-24):** yazıdan yazıya ilişki paneli `"tur": "sema"` + `"sablon": "<kimlik>"` ile yazılır;
   şablonlar çalışma dizinindeki `sablonlar.json`'dadır (dersten bağımsız). Önce ANLAMI belirle, sonra şablonu seç:
   - durum/şüphe → bakılacak tetkik: `tani_tetkik` (tablo; ok DEĞİL — test hastalığa yol açmaz)
@@ -98,3 +102,5 @@ Yalnız `cizim.json`'u yaz; başka dosyaya dokunma. Bitince tek satır: `BİTTİ
     üstüne dolgu ya da kalın iç çizgi konmaz (küçük slayt yazısında okunmaz hale getiriyordu).
 18. **Panel sürümleri ve boyut:** panel yazısı sayfa genişliğinin %1,75'i; betik yatay/dikey × normal/kompakt sürümlerinden
     slayta sığanı seçer. Satıra kırılan yatay zincir kullanılmaz → dikey (oklar aşağı). Ayrıntı: `docs/CIZIM_KURALLARI.md`.
+19. **Resim slaytında panel yok:** görsel slaytta anlatım görselin üstünde (kontur/akış/odak); panel yalnız yazı slaytında.
+20. **Yatay zincir tek satır:** kutular tek satıra sığmıyorsa dikey çizilir (betik seçer); sınama `panel_sinama.mjs` 0 hata.
