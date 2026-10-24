@@ -87,12 +87,14 @@ def main() -> int:
     """)
     paragraflar = [p for b in v2.get("bolumler", []) for p in b.get("paragraflar", [])]
     n_cumle = 0
+    import re as _re
+    adim_no = lambda a: a if isinstance(a, int) else (int(m.group(1)) if (m := _re.search(r"-s(\d+)$", str(a or ""))) else None)  # noqa: E731
     for pi, p in enumerate(paragraflar):
         for ci, c in enumerate(p.get("cumleler", [])):
             i = (isr.get("c") or {}).get(str(pi)) or []
             db.execute("INSERT INTO cumle VALUES (?,?,?,?,?,?,?,?,?,?,?)", (
                 c["id"], pi, ci, c.get("ses"), c.get("ekran"), c.get("duzey"), json.dumps(c.get("vurgu") or [], ensure_ascii=False),
-                c.get("slayt_adim"), json.dumps(c.get("cikmis") or [], ensure_ascii=False), json.dumps(c.get("spot"), ensure_ascii=False),
+                adim_no(c.get("slayt_adim")), json.dumps(c.get("cikmis") or [], ensure_ascii=False), json.dumps(c.get("spot"), ensure_ascii=False),
                 json.dumps(i[ci] if ci < len(i) else None)))
             for si, z in enumerate(((cz.get("p") or {}).get(str(pi)) or {}).get(str(ci)) or []):
                 db.execute("INSERT INTO cizim VALUES (?,?,?)", (c["id"], si, json.dumps(z, ensure_ascii=False)))
@@ -111,7 +113,10 @@ def main() -> int:
                 cumle_by_cikmis.setdefault(str(q), c["id"])
     for q, cid in cumle_by_cikmis.items():
         db.execute("INSERT OR IGNORE INTO soru VALUES (?,?,?,?)", (f"cikmis:{q}", "cikmis", json.dumps({"id": q}), cid))
+    mh = fnv(metin)
     for v in varyantlar:
+        if v.get("metinHash") != mh:          # eski metnin sesi pakete girmez (ekranda metin, seste başka metin olur)
+            continue
         mp3 = cek(f"{S}/ses/{key}/{v['id']}.mp3", T / "ses" / f"{v['id']}.mp3")
         if not mp3:
             continue
@@ -126,7 +131,7 @@ def main() -> int:
                 db.execute("INSERT OR IGNORE INTO ek VALUES (?,?,?)", (f.get("name") or aday[-1].name, "pdf", aday[-1].read_bytes()))
     meta = {"surum": SURUM, "ders_id": key, "deste_id": deste_id, "kurul": (deste or {}).get("committee") or "",
             "baslik": v2.get("baslik") or (deste or {}).get("title") or key,
-            "metin_hash": fnv(metin), "isaret_metin_hash": isr.get("metinHash"),
+            "metin_hash": mh, "isaret_metin_hash": isr.get("metinHash"),
             "cizim_metin_hash": cz.get("metinHash"), "kaynak_sha": hashlib.sha256(json.dumps(v2, sort_keys=True).encode()).hexdigest()[:16],
             "uretildi": dt.datetime.now().isoformat(timespec="seconds"), "ses_bicim": "mp3", "ekler": int(a.ekler)}
     db.executemany("INSERT INTO meta VALUES (?,?)", [(k, json.dumps(v, ensure_ascii=False) if not isinstance(v, str) else v) for k, v in meta.items()])

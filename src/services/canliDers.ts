@@ -289,7 +289,8 @@ export function registerCanliDersRoutes(app: Express) {
             d: Number(c.duzey) || 0,
             v: (Array.isArray(c.vurgu) ? c.vurgu : []).filter((x: any) => x?.metin && x?.tur).map((x: any) => [String(x.metin), String(x.tur)]),
             c: Array.isArray(c.cikmis) ? c.cikmis.map(String) : [],
-            a: Number.isFinite(c.slayt_adim) ? c.slayt_adim : null,
+            // slayt_adim şemada adım KİMLİĞİ ("k2-07-d-s05", konusma_v2.py) → destenin slideNumber'ı (eski sayı biçimi de kabul)
+            a: Number.isFinite(c.slayt_adim) ? c.slayt_adim : (/-s(\d+)$/.exec(String(c.slayt_adim || '')) ? Number(/-s(\d+)$/.exec(String(c.slayt_adim))![1]) : null),
             s: c.spot ?? null,
           }));
         });
