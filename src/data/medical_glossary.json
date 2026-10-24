@@ -11596,7 +11596,8 @@
         "kurul": 2,
         "sayfa": 10
       }
-    ]
+    ],
+    "clinicalPearl": "Anestezide premedikasyonda anksiyeteyi giderip anterograd amnezi yapar; etkileri redistribüsyonla sonlanır."
   },
   "benzoil peroksit": {
     "term": "Benzoil peroksit",
@@ -18015,7 +18016,8 @@
         "kurul": 2,
         "sayfa": 97
       }
-    ]
+    ],
+    "clinicalPearl": "Bağlama duyarlı yarılanma ömrü en kısa benzodiazepindir; anestezide premedikasyon ve indüksiyonda kullanılır, etkisi flumazenille geri döner."
   },
   "huntington hastalığı (nöropatoloji)": {
     "term": "Huntington hastalığı (nöropatoloji)",
@@ -101051,6 +101053,655 @@
         "kurul": 2,
         "sayfa": 43,
         "alinti": "COHbg: (CO, Duman zehirlenmesi) Tam Kan Sayımı (uzamış kanama zamanı önemli)"
+      }
+    ]
+  },
+  "genel anestezi": {
+    "term": "Genel anestezi",
+    "category": "terim",
+    "definition": "Nörolojik fonksiyonlarda geri döndürülebilir değişiklik ve vital fonksiyonlarda geçici değişimle birlikte bilinç, refleks ve duyu kaybının oluştuğu durumdur.",
+    "description": "Nörolojik fonksiyonlarda geri döndürülebilir değişiklik ve vital fonksiyonlarda geçici değişimle birlikte bilinç, refleks ve duyu kaybının oluştuğu durumdur.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "Ögeleri bilinç kaybı, duyu kaybı, amnezi, analjezi ve hareketsizliktir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261024-9c0a71cde3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "_SINAMA/Kurul 2/Tıbbi Farmakoloji/1. Genel Anestezik İlaçlar.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 2,
+        "sayfa": 3,
+        "alinti": "Nörolojik fonksiyonlardaki geri döndürülebilir değişiklikler veya vital fonksiyonlarda geçici bir değişim ile bilinç, refleks ve duyu kaybı"
+      }
+    ]
+  },
+  "minimum alveolar konsantrasyon (mak)": {
+    "term": "Minimum alveolar konsantrasyon (MAK)",
+    "category": "fizyoloji",
+    "definition": "1 atm basınçta deneklerin %50'sinde ağrılı uyarana yanıtı engelleyen en düşük alveolar anestezik konsantrasyonudur; inhalasyon anesteziklerinin gücünü gösterir.",
+    "description": "1 atm basınçta deneklerin %50'sinde ağrılı uyarana yanıtı engelleyen en düşük alveolar anestezik konsantrasyonudur; inhalasyon anesteziklerinin gücünü gösterir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "MAK değeri düştükçe ajan güçlenir; vücut ısısındaki her 1 °C düşüş MAK'ı %3-4 azaltır.",
+    "aliases": [
+      "MAC"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261024-9c0a71cde3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "_SINAMA/Kurul 2/Tıbbi Farmakoloji/1. Genel Anestezik İlaçlar.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 2,
+        "sayfa": 11,
+        "alinti": "deneklerin %50’sinde ağrılı herhangi bir uyarana karsı bir yanıt oluşmasını engellemek için gerekli olan minimum alveolar konsantrasyondur"
+      }
+    ]
+  },
+  "kan-gaz partisyon katsayısı": {
+    "term": "Kan-gaz partisyon katsayısı",
+    "category": "fizyoloji",
+    "definition": "Anesteziğin kan ve alveoldeki konsantrasyonları eşitlendiği anda kandaki ve gazdaki parsiyel basınçlarının oranıdır.",
+    "description": "Anesteziğin kan ve alveoldeki konsantrasyonları eşitlendiği anda kandaki ve gazdaki parsiyel basınçlarının oranıdır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "Katsayı büyüdükçe indüksiyon yavaşlar; ksenon (0,14) en hızlı ajandır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261024-9c0a71cde3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "_SINAMA/Kurul 2/Tıbbi Farmakoloji/1. Genel Anestezik İlaçlar.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 2,
+        "sayfa": 12,
+        "alinti": "Kan-gaz partisyon katsayısı ne kadar büyükse anestezi indüksiyonu o kadar yavaştır"
+      }
+    ]
+  },
+  "dengeli anestezi": {
+    "term": "Dengeli anestezi",
+    "category": "tedavi",
+    "definition": "İnhalasyon anestezikleri, sedatif-hipnotikler, opioidler ve nöromüsküler blokerlerin birlikte kullanılarak her ilacın yan etkisinin azaltıldığı anestezi yöntemidir.",
+    "description": "İnhalasyon anestezikleri, sedatif-hipnotikler, opioidler ve nöromüsküler blokerlerin birlikte kullanılarak her ilacın yan etkisinin azaltıldığı anestezi yöntemidir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "Örnek: izofluran (+N2O+O2) + fentanil.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261024-9c0a71cde3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "_SINAMA/Kurul 2/Tıbbi Farmakoloji/1. Genel Anestezik İlaçlar.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 2,
+        "sayfa": 27,
+        "alinti": "Inhalasyon anestezi, sedatif-hipnotikler, opioidler, nöromüsküler bloker ilaçlar, ile beraber dengeli bir anestezi oluşturulabilir"
+      }
+    ]
+  },
+  "nörolept anestezi": {
+    "term": "Nörolept anestezi",
+    "category": "tedavi",
+    "definition": "Fentanil ile droperidolün birlikte kullanılmasıyla yapılan intravenöz anestezi türüdür.",
+    "description": "Fentanil ile droperidolün birlikte kullanılmasıyla yapılan intravenöz anestezi türüdür.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261024-9c0a71cde3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "_SINAMA/Kurul 2/Tıbbi Farmakoloji/1. Genel Anestezik İlaçlar.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 2,
+        "sayfa": 14,
+        "alinti": "Nörolept anestezi Fentanil+ Droperidol"
+      }
+    ]
+  },
+  "disosiyatif anestezi": {
+    "term": "Disosiyatif anestezi",
+    "category": "terim",
+    "definition": "Ketaminin oluşturduğu, gözlerin açık ve nistagmuslu olduğu, reflekslerin korunduğu kataleptik anestezi durumudur.",
+    "description": "Ketaminin oluşturduğu, gözlerin açık ve nistagmuslu olduğu, reflekslerin korunduğu kataleptik anestezi durumudur.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261024-9c0a71cde3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "_SINAMA/Kurul 2/Tıbbi Farmakoloji/1. Genel Anestezik İlaçlar.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 2,
+        "sayfa": 47,
+        "alinti": "gözü açık nistagmus bakışı vardır. Bu kataleptik durum olarak tanımlanır"
+      }
+    ]
+  },
+  "monitörize anestezi bakımı": {
+    "term": "Monitörize anestezi bakımı",
+    "category": "tedavi",
+    "definition": "Küçük girişimlerde sedatif ve lokal anesteziklerin birlikte kullanıldığı tekniktir; hasta hava yolunu korur ve sözel komutlara yanıt verebilir.",
+    "description": "Küçük girişimlerde sedatif ve lokal anesteziklerin birlikte kullanıldığı tekniktir; hasta hava yolunu korur ve sözel komutlara yanıt verebilir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261024-9c0a71cde3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "_SINAMA/Kurul 2/Tıbbi Farmakoloji/1. Genel Anestezik İlaçlar.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 2,
+        "sayfa": 15,
+        "alinti": "oral veya parenteral sedatifler, lokal anestezikler, kombine edilerek '' monitörize anestezi bakımı'' tekniği kullanılabilir"
+      }
+    ]
+  },
+  "vaporizatör": {
+    "term": "Vaporizatör",
+    "category": "terim",
+    "definition": "Sıvı hâldeki inhalasyon anesteziklerini buharlaştırarak inhalasyonla verilmesini sağlayan cihazdır.",
+    "description": "Sıvı hâldeki inhalasyon anesteziklerini buharlaştırarak inhalasyonla verilmesini sağlayan cihazdır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261024-9c0a71cde3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "_SINAMA/Kurul 2/Tıbbi Farmakoloji/1. Genel Anestezik İlaçlar.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 2,
+        "sayfa": 7,
+        "alinti": "Vaporizatör yardımı ile buharlaştırılarak, inhalasyon yoluyla uygulanır"
+      }
+    ]
+  },
+  "sevofluran": {
+    "term": "Sevofluran",
+    "category": "ilac",
+    "definition": "Halojenli uçucu inhalasyon anesteziğidir; kişisel ya da ailesel malign hipertermi öyküsünde kullanılmaz.",
+    "description": "Halojenli uçucu inhalasyon anesteziğidir; kişisel ya da ailesel malign hipertermi öyküsünde kullanılmaz.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "Metabolitlerinden açığa çıkan florür iyonu nefrotoksisiteden sorumlu tutulur.",
+    "aliases": [
+      "Sevorane"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261024-9c0a71cde3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "_SINAMA/Kurul 2/Tıbbi Farmakoloji/1. Genel Anestezik İlaçlar.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 2,
+        "sayfa": 9,
+        "alinti": "malign hipertermi (vücut sıcaklığında hızlı artış) adı verilen bir durum yaşadığını biliyorsanız"
+      }
+    ]
+  },
+  "halotan": {
+    "term": "Halotan",
+    "category": "ilac",
+    "definition": "Halojenli uçucu inhalasyon anesteziğidir; miyokardı başta adrenalin olmak üzere katekolaminlere duyarlı kılar.",
+    "description": "Halojenli uçucu inhalasyon anesteziğidir; miyokardı başta adrenalin olmak üzere katekolaminlere duyarlı kılar.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "Karaciğere ciddi etkisi olan tek uçucu anesteziktir; yaklaşık 1/30.000 sıklıkta fulminan hepatit görülmüştür.",
+    "aliases": [
+      "Fluothane"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261024-9c0a71cde3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "_SINAMA/Kurul 2/Tıbbi Farmakoloji/1. Genel Anestezik İlaçlar.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 2,
+        "sayfa": 23,
+        "alinti": "Halotan miyokardı başta adrenalin olmak üzere dolaşımdaki katekolaminlere duyarlı kılar"
+      }
+    ]
+  },
+  "izofluran": {
+    "term": "İzofluran",
+    "category": "ilac",
+    "definition": "Vazodilatasyonla ön ve art yükü azaltıp kalp debisini koruyan halojenli uçucu anesteziktir.",
+    "description": "Vazodilatasyonla ön ve art yükü azaltıp kalp debisini koruyan halojenli uçucu anesteziktir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "Miyokard fonksiyonu bozuk hastalarda iyi seçenektir.",
+    "aliases": [
+      "Forane"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261024-9c0a71cde3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "_SINAMA/Kurul 2/Tıbbi Farmakoloji/1. Genel Anestezik İlaçlar.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 2,
+        "sayfa": 22,
+        "alinti": "Dolayısıyla miyokart fonksiyonu bozulmuş hastalarda iyi bir seçenektirler"
+      }
+    ]
+  },
+  "desfluran": {
+    "term": "Desfluran",
+    "category": "ilac",
+    "definition": "Kan/gaz katsayısı 0,42 olan, indüksiyon ve uyanması çok hızlı halojenli uçucu anesteziktir.",
+    "description": "Kan/gaz katsayısı 0,42 olan, indüksiyon ve uyanması çok hızlı halojenli uçucu anesteziktir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "Keskin kokusu öksürük ve solunum tutmaya yol açabilir; yüksek dozda kalp hızını belirgin artırır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261024-9c0a71cde3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "_SINAMA/Kurul 2/Tıbbi Farmakoloji/1. Genel Anestezik İlaçlar.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 2,
+        "sayfa": 23,
+        "alinti": "Halotan miyokardı başta adrenalin olmak üzere dolaşımdaki katekolaminlere duyarlı kılar"
+      }
+    ]
+  },
+  "azot protoksit": {
+    "term": "Azot protoksit",
+    "category": "ilac",
+    "definition": "Oda sıcaklığında gaz olan, MAK değeri 100'ün üzerinde, zayıf etkili inhalasyon anesteziğidir.",
+    "description": "Oda sıcaklığında gaz olan, MAK değeri 100'ün üzerinde, zayıf etkili inhalasyon anesteziğidir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "Uzun maruziyette megaloblastik anemiye yol açar; diş hekimliği odalarında meslek hastalığıdır.",
+    "aliases": [
+      "Nitröz oksit",
+      "N2O"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261024-9c0a71cde3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "_SINAMA/Kurul 2/Tıbbi Farmakoloji/1. Genel Anestezik İlaçlar.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 2,
+        "sayfa": 25,
+        "alinti": "Hematolojik olarak nitröz oksit megaloblastik anemiye neden olur"
+      }
+    ]
+  },
+  "ksenon": {
+    "term": "Ksenon",
+    "category": "ilac",
+    "definition": "Oda sıcaklığında gaz olan, kan/gaz katsayısı 0,14 ile indüksiyonu en hızlı inhalasyon anesteziğidir.",
+    "description": "Oda sıcaklığında gaz olan, kan/gaz katsayısı 0,14 ile indüksiyonu en hızlı inhalasyon anesteziğidir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261024-9c0a71cde3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "_SINAMA/Kurul 2/Tıbbi Farmakoloji/1. Genel Anestezik İlaçlar.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 2,
+        "sayfa": 13,
+        "alinti": "Ksenon 0.14 1.9 71.0 Gaz Yok En hızlı"
+      }
+    ]
+  },
+  "propofol": {
+    "term": "Propofol",
+    "category": "ilac",
+    "definition": "Soya yağı, gliserol ve yumurta sarısı lesitini içeren emülsiyon hâlinde, GABA-A aracılı Cl- akımını artırdığı düşünülen IV hipnotik anesteziktir.",
+    "description": "Soya yağı, gliserol ve yumurta sarısı lesitini içeren emülsiyon hâlinde, GABA-A aracılı Cl- akımını artırdığı düşünülen IV hipnotik anesteziktir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "Analjezik etkisi yoktur; antiemetiktir ve indüksiyon dozunda apne yapar.",
+    "aliases": [
+      "Diprivan"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261024-9c0a71cde3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "_SINAMA/Kurul 2/Tıbbi Farmakoloji/1. Genel Anestezik İlaçlar.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 2,
+        "sayfa": 28,
+        "alinti": "Etki mekanizması GABAA reseptör aracılı Cl- akımını arttırmak olduğu sanılmaktadır"
+      }
+    ]
+  },
+  "fospropofol": {
+    "term": "Fospropofol",
+    "category": "ilac",
+    "definition": "Suda çözünen propofol ön ilacıdır; metabolizmasıyla propofol, fosfat ve formaldehit oluşur.",
+    "description": "Suda çözünen propofol ön ilacıdır; metabolizmasıyla propofol, fosfat ve formaldehit oluşur.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261024-9c0a71cde3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "_SINAMA/Kurul 2/Tıbbi Farmakoloji/1. Genel Anestezik İlaçlar.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 2,
+        "sayfa": 32,
+        "alinti": "Metabolizasyon sonrası propofol fosfat ve formaldehit oluşur"
+      }
+    ]
+  },
+  "tiyopental": {
+    "term": "Tiyopental",
+    "category": "ilac",
+    "definition": "En sık kullanılan barbitürat indüksiyon ajanıdır; alkali (pH>10) solüsyon olarak IV %1-2,5'lik, 5-7 mg/kg verilir.",
+    "description": "En sık kullanılan barbitürat indüksiyon ajanıdır; alkali (pH>10) solüsyon olarak IV %1-2,5'lik, 5-7 mg/kg verilir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "Porfiride kesinlikle kontrendikedir; intraarteriyel verilirse nekroz yapar.",
+    "aliases": [
+      "Pental sodyum",
+      "Pentothal"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261024-9c0a71cde3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "_SINAMA/Kurul 2/Tıbbi Farmakoloji/1. Genel Anestezik İlaçlar.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 2,
+        "sayfa": 35,
+        "alinti": "Porfiride kesinlikle kontrendikedir ve ölüme yol açabilir"
+      }
+    ]
+  },
+  "metoheksital": {
+    "term": "Metoheksital",
+    "category": "ilac",
+    "definition": "Kısa etkili barbitürat anesteziktir; diğer barbitüratların tersine epileptik odakları aktive eder.",
+    "description": "Kısa etkili barbitürat anesteziktir; diğer barbitüratların tersine epileptik odakları aktive eder.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "Elektrokonvülsif terapide ve epilepsi cerrahisinde odak belirlemede kullanılır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261024-9c0a71cde3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "_SINAMA/Kurul 2/Tıbbi Farmakoloji/1. Genel Anestezik İlaçlar.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 2,
+        "sayfa": 36,
+        "alinti": "Metoheksital tam tersine epileptik odakları aktive eder"
+      }
+    ]
+  },
+  "etomidat": {
+    "term": "Etomidat",
+    "category": "ilac",
+    "definition": "Analjezik olmayan, hemodinamik etkileri minimal, GABA-A üzerinden etkili imidazol türevi hipnotiktir.",
+    "description": "Analjezik olmayan, hemodinamik etkileri minimal, GABA-A üzerinden etkili imidazol türevi hipnotiktir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "Kolesterolün kortizole dönüşümünü baskılayarak adrenokortikal supresyon yapar; %50'den fazla hastada miyoklonus görülür.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261024-9c0a71cde3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "_SINAMA/Kurul 2/Tıbbi Farmakoloji/1. Genel Anestezik İlaçlar.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 2,
+        "sayfa": 45,
+        "alinti": "Etomidat adrenokortikal supresyon yaparak kolesterolün kortizol dönüşümünü suprese eder"
+      }
+    ]
+  },
+  "ketamin": {
+    "term": "Ketamin",
+    "category": "ilac",
+    "definition": "NMDA reseptör kompleksini inhibe eden, lipid çözünürlüğü yüksek fensiklidin türevi analjezik anesteziktir.",
+    "description": "NMDA reseptör kompleksini inhibe eden, lipid çözünürlüğü yüksek fensiklidin türevi analjezik anesteziktir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "Beyin kan akımını artırır, kafa içi basıncı artmış hastaya önerilmez.",
+    "aliases": [
+      "Ketalar"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261024-9c0a71cde3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "_SINAMA/Kurul 2/Tıbbi Farmakoloji/1. Genel Anestezik İlaçlar.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 2,
+        "sayfa": 47,
+        "alinti": "NMDA reseptör kompleksini inhibe etmesi temel mekanizma olarak bilinir"
+      }
+    ]
+  },
+  "deksmedetomidin": {
+    "term": "Deksmedetomidin",
+    "category": "ilac",
+    "definition": "Yüksek derecede selektif α2 adrenerjik agonist, hipnotik ve omurilik düzeyinde analjezik ilaçtır.",
+    "description": "Yüksek derecede selektif α2 adrenerjik agonist, hipnotik ve omurilik düzeyinde analjezik ilaçtır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "Başlıca kullanımı yoğun bakımda ventile hastaların sedasyonudur.",
+    "aliases": [
+      "Precedex"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261024-9c0a71cde3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "_SINAMA/Kurul 2/Tıbbi Farmakoloji/1. Genel Anestezik İlaçlar.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 2,
+        "sayfa": 51,
+        "alinti": "Yüksek derecede selektif α-2 adrenerjik agonisttir"
+      }
+    ]
+  },
+  "dantrolen": {
+    "term": "Dantrolen",
+    "category": "ilac",
+    "definition": "Sarkoplazmik retikulumdan Ca++ çıkışını azaltan kas gevşeticidir; malign hipertermi tedavisinde verilir.",
+    "description": "Sarkoplazmik retikulumdan Ca++ çıkışını azaltan kas gevşeticidir; malign hipertermi tedavisinde verilir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261024-9c0a71cde3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "_SINAMA/Kurul 2/Tıbbi Farmakoloji/1. Genel Anestezik İlaçlar.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 2,
+        "sayfa": 25,
+        "alinti": "Tedavisinde sarkoplazmik retikulumdan Ca++ çıkışını azaltmak için dantrolen verilir"
+      }
+    ]
+  },
+  "malign hipertermi": {
+    "term": "Malign hipertermi",
+    "category": "hastalik",
+    "definition": "Genetik yatkın bireylerde uçucu anestezikler ve süksinilkolinle tetiklenen, ryanodin reseptörü (RyR1) aracılı nadir tablodur.",
+    "description": "Genetik yatkın bireylerde uçucu anestezikler ve süksinilkolinle tetiklenen, ryanodin reseptörü (RyR1) aracılı nadir tablodur.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "Tedavi: dantrolen.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261024-9c0a71cde3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "_SINAMA/Kurul 2/Tıbbi Farmakoloji/1. Genel Anestezik İlaçlar.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 2,
+        "sayfa": 25,
+        "alinti": "Tedavisinde sarkoplazmik retikulumdan Ca++ çıkışını azaltmak için dantrolen verilir"
+      }
+    ]
+  },
+  "bağlama duyarlı yarılanma ömrü": {
+    "term": "Bağlama duyarlı yarılanma ömrü",
+    "category": "terim",
+    "definition": "Sürekli infüzyon kesildikten sonra plazma konsantrasyonunun yarıya inmesi için geçen süredir.",
+    "description": "Sürekli infüzyon kesildikten sonra plazma konsantrasyonunun yarıya inmesi için geçen süredir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "Propofolde uzun infüzyonda bile kısadır; midazolam bu değeri en kısa benzodiazepindir.",
+    "aliases": [
+      "Context-sensitive half-time"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261024-9c0a71cde3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "_SINAMA/Kurul 2/Tıbbi Farmakoloji/1. Genel Anestezik İlaçlar.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 2,
+        "sayfa": 29,
+        "alinti": "Bağlama duyarlı yarılanma ömrü demek sürekli infüzyon sonrası eliminasyon yarı ömrü demektir"
+      }
+    ]
+  },
+  "propofol infüzyon sendromu": {
+    "term": "Propofol infüzyon sendromu",
+    "category": "hastalik",
+    "definition": "Uzun süreli propofol infüzyonundan sonra metabolik asidozla seyreden tablodur.",
+    "description": "Uzun süreli propofol infüzyonundan sonra metabolik asidozla seyreden tablodur.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261024-9c0a71cde3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "_SINAMA/Kurul 2/Tıbbi Farmakoloji/1. Genel Anestezik İlaçlar.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 2,
+        "sayfa": 31,
+        "alinti": "Propofolün ilginç ve istenen yan etkisi antiemetik aktivitesidir"
       }
     ]
   }
