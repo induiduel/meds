@@ -20,6 +20,7 @@ const P = {
   cumle: (k: string) => path.join(KOK, 'cumle_zaman', `${k}.json`),
   kelime: (k: string) => path.join(KOK, 'kelime_zaman', `${k}.json`),
   isaret: (k: string) => path.join(KOK, 'isaret', `${k}.json`),
+  cizim: (k: string) => path.join(KOK, 'cizim', `${k}.json`),
   v2: (k: string) => path.join(KOK, 'v2', `${k}.json`),
   cikmisKonum: (k: string) => path.join(KOK, 'cikmis_konum', `${k}.json`),
   ogrenciNot: (fileId: string) => path.join(KOK, 'ogrenci_not', `${fileId.replace(/[^\w-]/g, '')}.json`),
@@ -257,7 +258,19 @@ export function registerCanliDersRoutes(app: Express) {
         const is = oku<any>(P.isaret(key), null);
         if (!is || !pdf) return null;
         const h = crypto.createHash('sha1').update(pars.map((p) => p.t).join('\n')).digest('hex');
-        return is.metinHash === h ? is.c : null;
+        if (is.metinHash !== h) return null;
+        // canlı çizim (R6, scripts/cizim/cizim_uret.py): aynı metin sürümünden komutlar cümle işaretine `z` olarak eklenir
+        const cz = oku<any>(P.cizim(key), null);
+        if (cz?.metinHash !== h || !cz?.p) return is.c;
+        const c: Record<string, any[]> = {};
+        for (const [pi, cs] of Object.entries<any[]>(is.c || {})) {
+          c[pi] = (cs || []).map((x: any, ci: number) => {
+            const z = cz.p?.[pi]?.[String(ci)];
+            if (!z?.length) return x;
+            return { ...(x || { s: z[0].s, t: 'sayfa', l: [], w: [], d: 0 }), z };
+          });
+        }
+        return c;
       })(),
       // Kurul 2+ sesli metin v2 (konusma_v2.py): cümle başına ekran maddesi, düzey, vurgu türleri, çıkmış, slayt adımı.
       // Paragraf, cümle sesleri birleşince metindeki paragrafla aynıysa gönderilir (metin değiştiyse o paragraf yok sayılır).

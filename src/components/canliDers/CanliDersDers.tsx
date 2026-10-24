@@ -1417,7 +1417,7 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
   }, [canli, aktif, cumle, pdf, detay.isaret, gor.dosya]);
   // Kelime takibi yalnız işaret katmanında (useFocus): görüntüleyici cümle başına bir kez çizilir, kelimede yeniden çizilmez
   const marks = useMemo<PdfMarks | null>(() => {
-    if (!canli || durdu || !isr || (isr.t === 'sayfa' && !isr.y?.length) || isr.d !== gor.dosya) return null;
+    if (!canli || durdu || !isr || (isr.t === 'sayfa' && !isr.y?.length && !(isr as any).z?.length) || isr.d !== gor.dosya) return null;
     const ws = isr.w;
     const yol = isr.y?.length ? isr.y : undefined;
     const useChar = (): number => useCd(() => cdKonusulanKarakter()?.c ?? -1);
@@ -1428,7 +1428,8 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
       // yalnız o an konuşulan kelimenin slayttaki karşılığı; karşılıksız kelimede işaret yok
       return ws.findIndex((w) => k.c >= w[0] && k.c < w[1]);
     });
-    return { page: isr.s, kind: isr.t, lines: isr.l, words: ws.map((w) => w.slice(2)), useFocus, path: yol, useChar: yol ? useChar : undefined };
+    const cizim = (isr as any).z as PdfMarks['cizim'];   // canlı çizim (R6): sunucu işarete ekler (canliDers.ts)
+    return { page: isr.s, kind: isr.t, lines: isr.l, words: ws.map((w) => w.slice(2)), useFocus, path: yol, useChar: yol || cizim?.length ? useChar : undefined, cizim };
   }, [canli, durdu, isr, gor.dosya]);
 
   useEffect(() => { if (!durdu) setElle(null); }, [durdu]);
