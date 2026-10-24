@@ -1,15 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 288,
-  "baslik": "Kurul 1 2026-2027 çıkmış sorular güncellendi",
+  "onem": 289,
+  "baslik": "Kurul 1 2026-2027 çıkmış sorular PDF’i yenilendi",
   "maddeler": [
-    "Öğrenci grubundaki tartışmalarla soru sayısı 73'ten 91'e çıktı (bir kısmı yalnız konu olarak)",
-    "Grupta yazılan gerçek soru numaraları ve öğrencilerin şık/kök düzeltmeleri işlendi",
-    "Tartışmalı cevaplar soru altında not edildi"
+    "PDF yeni tasarımda: iki sütun, ders renkleri, soru kartları ve etiketler",
+    "Şıkları toplanamayan 13 sorunun şıkları ders notlarından üretildi ve işaretlendi",
+    "Cevap anahtarı derslere göre ayrıldı"
   ],
   "eklenen": [],
   "degisen": [
-    "/api/test/kurul1/2627 PDF'i güncellendi"
+    "/api/test/kurul1/2627 PDF tasarımı"
   ],
   "duzeltilen": [],
   "silinen": []
