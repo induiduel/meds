@@ -213,10 +213,10 @@
 .pdv-cz-egri path.is-plato { stroke: #64748b; }
 .pdv-cz-etiket-kap { position: absolute; pointer-events: none; animation: pdv-cz-gel .3s ease-out both; }
 .pdv-cz-etiket { display: inline-block; max-width: 100%; padding: 0.133em 0.533em; border-radius: 0.4em; background: rgba(15, 23, 42, .9);
-  color: #fff; font: 600 2.3cqw/1.3 system-ui, sans-serif; white-space: normal; overflow-wrap: break-word; }
+  color: #fff; font: 600 max(7px, 1.9cqw)/1.3 system-ui, sans-serif; white-space: normal; overflow-wrap: break-word; }
 .pdv-cz-sema { position: absolute; right: 3%; bottom: 3%; max-width: 70%; padding: 0.692em 0.923em; border-radius: 1.08em;
   background: rgba(255, 255, 255, .97); border: 0.0769em solid rgba(29, 78, 216, .16); box-shadow: 0 0.769em 2.15em -10px rgba(15, 23, 42, .35);
-  pointer-events: none; font-size: 2.2cqw; line-height: 1.25; color: #0f172a; animation: pdv-cz-gel .3s ease-out both; }
+  pointer-events: none; font-size: max(7px, 1.75cqw); line-height: 1.25; color: #0f172a; animation: pdv-cz-gel .3s ease-out both; }
 .pdv-cz-zincir { display: flex; flex-wrap: wrap; align-items: center; gap: 0.462em 0.308em; }
 .pdv-cz-dugum-kap { display: inline-flex; align-items: center; gap: 0.308em; }
 .pdv-cz-dugum { display: inline-block; animation-duration: .5s !important; padding: 0.231em 0.692em; border-radius: 0.615em; background: #eef2ff; color: #1e1b4b; font-weight: 650;
@@ -259,6 +259,7 @@
 .pdv-cz-sema.is-tablo .pdv-cz-dugum { justify-self: start; }
 /* baskılama ucu (⊣) görünür boyutta */
 .pdv-cz-bag.is-inhibe .pdv-cz-bag-uc { font-size: 1.15em; font-weight: 800; margin-left: -.15em; line-height: 1; }
+.pdv-cz-sema.is-kompakt { font-size: max(6.5px, calc(1.75cqw * .85)); padding: .5em .7em; }
 @keyframes pdv-cz-uza-d { from { transform: scaleY(0); } to { transform: scaleY(1); } }
 @keyframes pdv-cz-uza { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 /* grup / dal: liste alt alta, "}" (dalda "{") ayracı */

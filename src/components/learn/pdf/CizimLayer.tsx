@@ -19,6 +19,9 @@ export interface CizimKomut {
   kenar?: { a: string; b: string; tur: string; etiket?: string }[];
   /** şema panel türü (cizim_uret.panel_tipi) */
   tip?: 'zincir' | 'grup' | 'dal' | 'maske' | 'karsit';
+  /** tasarım sürümü (cizim_uret.SURUMLER): dizilim ve yazı ölçeği */
+  yon?: 'yatay' | 'dikey';
+  olcek?: number;
   etiket?: string;
   /** yerleşim (cizim_uret.yerlesim, içeriğin önü kapanmasın): ok kavisinin denetim noktası, asıl hedef, etiketin ve
    *  şema panelinin boş yerdeki konumu (sayfa oranı) */
@@ -196,7 +199,7 @@ function SemaParca({ z, t, ic }: { z: CizimKomut; t: number; ic?: boolean }) {
   const say = (k: 'a' | 'b') => { const m = new Map<string, typeof kn>(); for (const e of kn) m.set(e[k], [...(m.get(e[k]) || []), e]); return m; };
   const tip = ic ? tipBul(kn) : z.tip || tipBul(kn);
   const kap = (icerik: React.ReactNode) => ic ? <div className={`pdv-cz-sema-parca is-${tip}`}>{icerik}</div> : (
-    <div className={`pdv-cz-sema is-${tip}${(z.genislik || 1) < 0.32 ? ' is-dar' : ''}`} role="img" aria-label={dg.map((d) => d.metin).join(', ')} style={stil}>{icerik}</div>
+    <div className={`pdv-cz-sema is-${tip}${surumSinif(z)}`} role="img" aria-label={dg.map((d) => d.metin).join(', ')} style={stil}>{icerik}</div>
   );
 
   if (tip === 'maske' && kn[0]) {
@@ -266,6 +269,9 @@ function SemaParca({ z, t, ic }: { z: CizimKomut; t: number; ic?: boolean }) {
   );
 }
 
+/** sürüm sınıfı ve yazı ölçeği: dikey (alt alta, oklar aşağı) ve kompakt (olcek < 1) */
+const surumSinif = (z: CizimKomut) => ((z.yon === 'dikey' || (z.genislik || 1) < 0.32) ? ' is-dar' : '') + (z.olcek && z.olcek < 1 ? ' is-kompakt' : '');
+
 /** panel türü (cizim_uret.panel_tipi ile aynı kural) */
 function tipBul(kn: NonNullable<CizimKomut['kenar']>): NonNullable<CizimKomut['tip']> {
   if (kn.some((e) => e.tur === 'karsit')) return 'karsit';
@@ -297,7 +303,7 @@ function Sema({ z, t }: { z: CizimKomut; t: number }) {
   const parcalar = [...gruplar.values()];
   if (parcalar.every((ids) => ids.length === 2 && kn.filter((e) => ids.includes(e.a)).length === 1)) {
     return (
-      <div className="pdv-cz-sema is-tablo" role="img" aria-label={dg.map((d) => d.metin).join(', ')} style={stil}>
+      <div className={`pdv-cz-sema is-tablo${surumSinif(z).replace(' is-dar', '')}`} role="img" aria-label={dg.map((d) => d.metin).join(', ')} style={stil}>
         {parcalar.map((ids, i) => {
           const e = kn.find((x) => ids.includes(x.a))!;
           const a = dg.find((d) => d.id === e.a), b = dg.find((d) => d.id === e.b);
@@ -313,7 +319,7 @@ function Sema({ z, t }: { z: CizimKomut; t: number }) {
     );
   }
   return (
-    <div className={`pdv-cz-sema is-coklu${(z.genislik || 1) < 0.32 ? ' is-dar' : ''}`} role="img" aria-label={dg.map((d) => d.metin).join(', ')} style={stil}>
+    <div className={`pdv-cz-sema is-coklu${surumSinif(z)}`} role="img" aria-label={dg.map((d) => d.metin).join(', ')} style={stil}>
       {[...gruplar.values()].map((ids, i) => {
         const g = ids.filter((x) => gorunen.has(x)).length;
         if (!g) return null;

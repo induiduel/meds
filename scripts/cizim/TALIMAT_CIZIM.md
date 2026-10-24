@@ -81,3 +81,5 @@ Yalnız `cizim.json`'u yaz; başka dosyaya dokunma. Bitince tek satır: `BİTTİ
     oturur; sığmazsa slaytın alt boşluğundan başlar ve sayfa yalnız taşan kısım kadar uzatılır (en az ek alan seçilir).
 17. **Kelime takipçisi yazıyı kapatmaz:** konuşulan kelime hafif zemin + harflerin altında ince çizgiyle gösterilir; harflerin
     üstüne dolgu ya da kalın iç çizgi konmaz (küçük slayt yazısında okunmaz hale getiriyordu).
+18. **Panel sürümleri ve boyut:** panel yazısı sayfa genişliğinin %1,75'i; betik yatay/dikey × normal/kompakt sürümlerinden
+    slayta sığanı seçer. Satıra kırılan yatay zincir kullanılmaz → dikey (oklar aşağı). Ayrıntı: `docs/CIZIM_KURALLARI.md`.

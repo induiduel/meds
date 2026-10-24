@@ -422,7 +422,11 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
     const cur = atEnd ? t.length : find(top + el.clientHeight * 0.35) + 1;
     const sk = seeking.current;
     if (sk && (cur === sk.page || Date.now() > sk.until)) seeking.current = null;
-    if (!seeking.current && cur !== visible.current) {
+    // anlatılan satırı görünür alana alan program kaydırması kullanıcı gezinmesi sayılmaz (sayılınca takip 8 sn duruyor,
+    // satır oynatıcı altında kalıyordu): görünen sayfa sessizce güncellenir, dışarı bildirilmez
+    if (Date.now() < progKaydirma.current) {
+      if (cur !== visible.current) { visible.current = cur; lastTarget.current = cur; setCurrent(cur); }
+    } else if (!seeking.current && cur !== visible.current) {
       visible.current = cur;
       setCurrent(cur);
       lastTarget.current = cur;
@@ -467,6 +471,7 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
   // gerekirse yalnız yetecek kadar kaydır (kullanıcı 2026-10-24: oynatıcı "monitörizasyon" satırını örtüyordu)
   const isaretRef = useRef<{ page: number; lines: number[][] } | null>(null);
   const isaretZam = useRef(0);
+  const progKaydirma = useRef(0);
   const isaretAnahtar = marks && !rot ? `${marks.page}|${marks.lines.map((b) => b.join(',')).join(';')}` : '';
   useEffect(() => {
     isaretRef.current = marks && !rot && marks.lines.length ? { page: marks.page, lines: marks.lines } : null;
@@ -489,6 +494,7 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
       const alt = t + Math.max(...m.lines.map((b) => b[3])) * h;
       const altPay = parseFloat(getComputedStyle(el).scrollPaddingBottom) || 0;
       const gorAlt = el.scrollTop + el.clientHeight - altPay - 12;
+      progKaydirma.current = Date.now() + 1200;
       if (alt > gorAlt) el.scrollTo({ top: Math.max(0, Math.min(ust - 24, el.scrollTop + (alt - gorAlt))), behavior: 'smooth' });
       else if (ust < el.scrollTop + 8) el.scrollTo({ top: Math.max(0, ust - 24), behavior: 'smooth' });
     }, gecikme); };

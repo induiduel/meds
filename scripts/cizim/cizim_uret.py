@@ -178,7 +178,12 @@ def panel_tipi(k: dict) -> str:
     return "zincir"
 
 
-EM = 0.022           # panel yazı boyu = sayfa genişliğinin %2,2si (pdfDoc.css .pdv-cz-sema 2.2cqw)
+EM = 0.0175          # panel yazı boyu = sayfa genişliğinin %1,75'i (pdfDoc.css .pdv-cz-sema 1.75cqw; kullanıcı: 2,2 fazla büyük)
+# Panel tasarım sürümleri (kullanıcı 2026-10-24: "en uygun biçimde yer alabilmesi için farklı tasarım versiyonları"):
+# öncelik sırasıyla denenir; slayta (ek alansız) sığan ilk sürüm seçilir. yon: yatay | dikey (zincir alt alta, oklar
+# aşağı); olcek: 1 normal | 0,85 kompakt. Yatay zincir tek satıra sığmıyorsa o sürüm geçersizdir (kırılan zincirde
+# yana bakan ok yanlış okunuyordu) → dikey.
+SURUMLER = (("yatay", 1.0), ("dikey", 1.0), ("yatay", 0.85), ("dikey", 0.85))
 
 
 def _bilesenler(k: dict) -> list[tuple[list, list]]:
@@ -213,11 +218,11 @@ def yazi_kesisir(kutu, satirlar, pay: float = 0.01) -> bool:
     return False
 
 
-def panel_boyu(k: dict, g: float, oran: float) -> float:
+def panel_boyu(k: dict, g: float, oran: float, yon: str = "yatay", olcek: float = 1.0) -> float:
     """Panelin sayfa yüksekliği oranı cinsinden yüksekliği; istemcideki dizilimin em ile kopyası (oran = genişlik/yükseklik).
     Ölçüm: tarayıcıda 567 ve 1100 px sayfada gerçek yükseklikle karşılaştırıldı."""
-    W = g / EM                                   # panel iç genişliği (em)
-    dar = g < 0.32
+    W = g / (EM * olcek)                         # panel iç genişliği (em)
+    dar = g < 0.32 or yon == "dikey"
     gw = lambda t: len(t) * 0.58 + 1.4          # düğüm genişliği (em)
     DH = 1.85                                    # düğüm yüksekliği + satır payı (em)
     toplam = 1.6                                 # panel iç boşluğu
@@ -258,8 +263,10 @@ def panel_boyu(k: dict, g: float, oran: float) -> float:
                     if x and x + w > W:
                         satir += 1; x = 0.0
                     x += w
+                if satir > 1:
+                    return 9.0                    # yatay zincir kırılıyor: bu sürüm geçersiz (dikey denenecek)
                 toplam += satir * DH + (satir * 1.2 if any(e.get("etiket") for e in kn) else 0) + (satir - 1) * 0.4
-    return toplam * EM * oran * 1.25            # %25 pay: 366–1100 px sayfada ölçülen en büyük sapma %11
+    return toplam * EM * olcek * oran * 1.25            # %25 pay: 366–1100 px sayfada ölçülen en büyük sapma %11
 
 
 def oku_panele(k: dict, satirlar: list) -> dict | None:
@@ -413,9 +420,9 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
     if k.get("etiket"):
         # etiket yazısı sayfa genişliğinin %2,3ü (pdfDoc.css .pdv-cz-etiket 2.3cqw); karakter ≈0,58 em, satır 1,3 em + pay
         oran_e = r.w / r.h
-        gerek = 0.023 * (0.58 * len(k["etiket"]) + 1.2)
+        gerek = 0.019 * (0.58 * len(k["etiket"]) + 1.2)
         satir = max(1, -(-gerek // 0.42))                   # uzun etiket kırpılmaz, satıra iner (H48)
-        g, h = min(0.42, gerek), 0.023 * (1.3 * satir + 0.45) * oran_e
+        g, h = min(0.42, gerek), 0.019 * (1.3 * satir + 0.45) * oran_e
         o = k.get("nokta", [k.get("c") or k.get("a") or [0.5, 0.5]])[0] if k["tur"] != "sema" else [0.5, 0.5]
         if k.get("odak"):
             o = [k["odak"][2], k["odak"][1]]
@@ -488,7 +495,9 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
         if k["tip"] in ("maske", "karsit"):
             grup = max(grup, 3)
         oran = r.w / r.h
-        boy = [(g, panel_boyu(k, g, oran)) for g in (0.5, 0.42, 0.6, 0.34, 0.3)]
+        boy = [(g, panel_boyu(k, g, oran, yon, olcek), yon, olcek) for yon, olcek in SURUMLER
+               for g in ((0.5, 0.42, 0.6, 0.34, 0.3) if yon == "yatay" else (0.34, 0.42, 0.3, 0.5))]
+        boy = [b for b in boy if b[1] < 0.98]
         # yazının ağırlık merkezi: panel içeriğe yakın, kenara yapışmadan (≥%3 pay) ve boş yerde durur
         ys, xs = np.nonzero(r.ince[::4, ::4])
         mx, my = (xs.mean() * 4 / r.w, ys.mean() * 4 / r.h) if len(xs) else (0.5, 0.5)
@@ -500,7 +509,7 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
             mx = sum((b[0] + b[2]) / 2 for b in ilgili) / len(ilgili)
             my = sum((b[1] + b[3]) / 2 for b in ilgili) / len(ilgili)
         en = None
-        for g, h in boy:
+        for g, h, yon, olcek in boy:
             for xi in range(1, int((0.99 - g) * 100) + 1):     # %1 adım, kenardan %1 pay
                 for yi in range(1, int((0.99 - h) * 100) + 1):
                     x, y = xi / 100, yi / 100
@@ -513,12 +522,12 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
                         continue
                     puan = dl * 8 + ((x + g / 2 - mx) ** 2 + (y + h / 2 - my) ** 2) ** 0.5
                     if en is None or puan < en[0]:
-                        en = (puan, x, y, g, h, dl)
+                        en = (puan, x, y, g, h, dl, yon, olcek)
             if en:
                 break
         if en:
             k = {**k, "konum": [round(en[1], 4), round(en[2], 4)], "genislik": round(en[3], 3), "doluluk": round(en[5], 3),
-                 "kutu_h": round(en[4], 3)}
+                 "kutu_h": round(en[4], 3), "yon": en[6], "olcek": en[7]}
             if dolu is not None:
                 dolu.append((en[1], en[2], en[1] + en[3], en[2] + en[4]))
         else:
@@ -529,8 +538,10 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
             # sığmayan kısmı için sayfa uzatılır. Aday: genişlik × x × başlangıç y; slayt içindeki parçada mürekkep < %1.
             # Seçim: en az ek alan, sonra anlatılan satırlara yakınlık.
             en2 = None
-            for g in (0.9, 0.7, 0.5):
-                h = panel_boyu(k, g, oran)
+            for g, yon, olcek in [(g_, y_, o_) for y_, o_ in SURUMLER for g_ in (0.9, 0.7, 0.5)]:
+                h = panel_boyu(k, g, oran, yon, olcek)
+                if h >= 0.98:
+                    continue
                 for x in sorted({0.05, round(min(max(0.03, mx - g / 2), 0.97 - g), 2)}):
                     for yi in range(30, 101):
                         y = yi / 100
@@ -542,11 +553,13 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
                                 continue
                         ek = max(0.0, y + h + 0.02 - 1.0)
                         puan = ek * 10 + abs(y - my) * 0.5
+                        puan += (0 if olcek == 1.0 else 0.05) + (0 if yon == "yatay" else 0.02)
                         if en2 is None or puan < en2[0]:
-                            en2 = (puan, x, y, g, h, ek)
-            _, x, y, g, h, ek = en2
+                            en2 = (puan, x, y, g, h, ek, yon, olcek)
+            _, x, y, g, h, ek, yon, olcek = en2
             y = max(y, 1.015) if ek and y > 0.985 else y
-            k = {**k, "konum": [round(x, 4), round(y, 4)], "genislik": round(g, 3), "doluluk": 0.0, "kutu_h": round(h, 3)}
+            k = {**k, "konum": [round(x, 4), round(y, 4)], "genislik": round(g, 3), "doluluk": 0.0, "kutu_h": round(h, 3),
+                 "yon": yon, "olcek": olcek}
             if ek > 0:
                 k.update(ek_alt=round(max(ek, y + h + 0.02 - 1.0), 4), ek_renk=r.alt_renk)
     return k

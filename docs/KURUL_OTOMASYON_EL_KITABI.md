@@ -402,3 +402,5 @@ Tasarım: `ICERIK_MOTORU_V3.md` §2, §12, §15, §16. Model yok; ortam `meds/.v
 - **Profiller (2026-10-24):** `python3 meds/otomasyon/gorev.py profil [ad]` — karma | opencode | antigravity | claude |
   commandcode | oturum. `oturum`: hat paketleri kuyruğa yazıp bekler, bir Claude Code oturumu `/kuyruk` ile çözer
   (`ICERIK_MOTORU_V3.md` §21.1–21.2).
+
+> Canlı çizim/işaretleme kuralları (bütün dersler): `docs/CIZIM_KURALLARI.md`.
