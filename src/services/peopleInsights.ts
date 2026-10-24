@@ -313,9 +313,10 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
     const params = (rule.re.exec(p) || []).slice(1).map((x) => decodeURIComponent(x));
     const body: Any = req.body && typeof req.body === 'object' ? { ...req.body } : {};
     // Yönetici eylemleri öğrenci günlüğüne yazılmaz
-    const adminHeader = lc(req.headers['x-admin-email'] || body.adminEmail);
+    // (yalnız doğrulanmış yönetici; e-posta başlığı taklit edilip öğrenci eylemi günlükten gizlenemez)
+    const verifiedAdmin = !!req.adminAuth?.ok;
     res.on('finish', () => {
-      if (res.statusCode >= 400 || adminHeader === lc(deps.adminEmail)) return;
+      if (res.statusCode >= 400 || verifiedAdmin) return;
       void (async () => {
         try {
           const a = await actorOf(req);

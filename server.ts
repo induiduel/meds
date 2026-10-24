@@ -177,7 +177,7 @@ import { registerBasarimRoutes } from './src/services/basarim/basarimRoutes.ts';
 import { registerUserDataBackupRoutes, userEventHash, type ServerUserNotification } from './src/services/userDataBackupService.ts';
 import { registerPeopleInsights } from './src/services/peopleInsights.ts';
 import { initContentOverlay, resolveContent, writableContent, markContentChanged, contentManifest } from './src/services/contentOverlay.ts';
-import { adminAuthMiddleware, configureAdminAuthLog, isRequestAdminVerified, panelOracleProxyMiddleware } from './src/services/adminAuth.ts';
+import { adminAuthMiddleware, configureAdminAuthLog, isRequestAdminVerified, panelOracleProxyMiddleware, verifiedUid, verifiedEmail } from './src/services/adminAuth.ts';
 
 // @ts-ignore - dynamic ES module runner
 import {
@@ -517,14 +517,8 @@ function requireWritePassword(req: express.Request, res: express.Response, next:
   if (reqPath.startsWith('/api/learn/social/') || reqPath === '/api/learn/social') return next();
   // Profil eşitleme kimliği kendisi doğrular (Firebase ID jetonu, yalnız kendi kaydı); parola istemez.
   if (reqPath === '/api/users/sync') return next();
-  // Yönetici (nofrostlife@gmail.com) veya yerel loopback admin istekleri şifre sorgusundan muaf tutulur
-  const adminEmail = (req.headers['x-admin-email'] || req.body?.adminEmail || req.query?.adminEmail) as string;
-  const ip = req.ip || req.socket?.remoteAddress || '';
-  const isLoopback = ip.includes('127.0.0.1') || ip.includes('::1') || ip.includes('localhost') || ip.includes('::ffff:127.0.0.1');
-  const isAdminCaller = (adminEmail && adminEmail.toLowerCase() === 'nofrostlife@gmail.com') || (isLoopback && (!adminEmail || adminEmail.toLowerCase() === 'nofrostlife@gmail.com'));
-  if (isAdminCaller) {
-    return next();
-  }
+  // Doğrulanmış yönetici (Firebase jetonu / gizli anahtar / vekilsiz gerçek loopback) şifre sorgusundan muaf
+  if (isRequestAdmin(req)) return next();
 
   const studentRoute = studentWriteRoute(req.method, reqPath);
   if (studentRoute >= 0) {
@@ -1211,34 +1205,26 @@ function isRequestAdmin(req: express.Request): boolean {
   return isRequestAdminVerified(req, ADMIN_EMAIL);
 }
 
+// Sahiplik yalnız doğrulanmış kimlikle (Firebase jetonundan uid/e-posta) ya da yalnız yazarın bildiği
+// ownershipToken ile kanıtlanır; istemcinin yolladığı uid/e-posta/ad alanları herkese açık olduğundan kimlik sayılmaz.
+function ownsRecord(rec: any, req: express.Request, uidField: string, emailField: string): boolean {
+  const uid = verifiedUid(req);
+  const email = verifiedEmail(req);
+  const token = req.body?.ownershipToken || req.query?.ownershipToken || req.headers['x-ownership-token'];
+  if (uid && rec[uidField] && uid === String(rec[uidField])) return true;
+  if (email && rec[emailField] && email === String(rec[emailField]).toLowerCase()) return true;
+  if (token && rec.ownershipToken && String(token) === String(rec.ownershipToken)) return true;
+  return false;
+}
+
 function canUserManageComment(comment: any, req: express.Request): boolean {
   if (isRequestAdmin(req)) return true;
-  if (!comment) return false;
-  const uid = req.body?.authorUid || req.query?.authorUid || req.headers['x-user-uid'];
-  const email = req.body?.authorEmail || req.query?.authorEmail || req.headers['x-user-email'];
-  const author = req.body?.author || req.query?.author || req.headers['x-user-name'];
-  const token = req.body?.ownershipToken || req.query?.ownershipToken || req.headers['x-ownership-token'];
-
-  if (uid && comment.authorUid && String(uid) === String(comment.authorUid)) return true;
-  if (email && comment.authorEmail && String(email).toLowerCase() === String(comment.authorEmail).toLowerCase()) return true;
-  if (author && comment.author && String(author).trim().toLowerCase() === String(comment.author).trim().toLowerCase()) return true;
-  if (token && comment.ownershipToken && String(token) === String(comment.ownershipToken)) return true;
-  return false;
+  return !!comment && ownsRecord(comment, req, 'authorUid', 'authorEmail');
 }
 
 function canUserManageReport(report: any, req: express.Request): boolean {
   if (isRequestAdmin(req)) return true;
-  if (!report) return false;
-  const uid = req.body?.reporterUid || req.query?.reporterUid || req.headers['x-user-uid'];
-  const email = req.body?.reporterEmail || req.query?.reporterEmail || req.headers['x-user-email'];
-  const reportedBy = req.body?.reportedBy || req.query?.reportedBy || req.headers['x-user-name'];
-  const token = req.body?.ownershipToken || req.query?.ownershipToken || req.headers['x-ownership-token'];
-
-  if (uid && report.reporterUid && String(uid) === String(report.reporterUid)) return true;
-  if (email && report.reporterEmail && String(email).toLowerCase() === String(report.reporterEmail).toLowerCase()) return true;
-  if (reportedBy && report.reportedBy && String(reportedBy).trim().toLowerCase() === String(report.reportedBy).trim().toLowerCase()) return true;
-  if (token && report.ownershipToken && String(token) === String(report.ownershipToken)) return true;
-  return false;
+  return !!report && ownsRecord(report, req, 'reporterUid', 'reporterEmail');
 }
 
 function ledgerAdminActor(req: express.Request): rawLedger.LedgerActor {

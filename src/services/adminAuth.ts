@@ -9,8 +9,8 @@
  *   (c) `Authorization: Bearer <Firebase ID jetonu>` ve e-postası yönetici e-postası — tarayıcıdaki yönetici.
  *
  * Geçiş anahtarı MEDS_ADMIN_AUTH:
- *   - 'log' (varsayılan): doğrulanmamış ama eski e-posta iddiası geçen istek yine kabul edilir, data/admin_auth_log.jsonl'e yazılır.
- *   - 'strict': yalnız doğrulanmış istek yönetici sayılır.
+ *   - 'strict' (varsayılan, 2026-10-24): yalnız doğrulanmış istek yönetici sayılır; eski iddia yine günlüğe yazılır.
+ *   - 'log': acil geri dönüş — doğrulanmamış ama eski e-posta iddiası geçen istek kabul edilir, günlüğe yazılır.
  *
  * Ayrıca: yerel panel (localhost, "Canlı" hedef) istekleri aynı kökene `x-panel-proxy: oracle` (EventSource için
  * `?panelProxy=oracle`) ile gelir; yalnız gerçek loopback isteği Oracle'a gizli anahtarla akış olarak iletilir.
@@ -29,6 +29,8 @@ export type AdminAuthState = { ok: boolean; via: AdminAuthVia };
 declare module 'express-serve-static-core' {
   interface Request {
     adminAuth?: AdminAuthState;
+    /** Ara katmanın doğruladığı Firebase kullanıcısı (geçerli Bearer jetonu varsa; yönetici olmasa da). */
+    verifiedUser?: { uid: string; email: string } | null;
   }
 }
 
@@ -41,23 +43,26 @@ export function panelSecretOk(req: express.Request): boolean {
   return crypto.timingSafeEqual(Buffer.from(supplied), Buffer.from(expected));
 }
 
+/** Varsayılan 'strict' (2026-10-24); eski e-posta iddiasını geçici kabul için yalnız MEDS_ADMIN_AUTH=log. */
 export function adminAuthMode(): 'log' | 'strict' {
-  return lc(process.env.MEDS_ADMIN_AUTH) === 'strict' ? 'strict' : 'log';
+  return lc(process.env.MEDS_ADMIN_AUTH) === 'log' ? 'log' : 'strict';
+}
+
+/** Doğrulanmış Firebase uid'i (ara katman hesaplar); yoksa ''. İstemcinin yolladığı uid/e-posta/ad kimlik sayılmaz. */
+export function verifiedUid(req: express.Request): string {
+  return String(req.verifiedUser?.uid || '');
+}
+export function verifiedEmail(req: express.Request): string {
+  return lc(req.verifiedUser?.email);
 }
 
 /** /api/* için yönetici doğrulamasını önceden hesaplar (isRequestAdmin senkron kalsın diye). */
 export function adminAuthMiddleware(adminEmail: string): express.RequestHandler {
   return (req, _res, next) => {
     if (!req.path.startsWith('/api/')) return next();
-    if (panelSecretOk(req)) {
-      req.adminAuth = { ok: true, via: 'secret' };
-      return next();
-    }
-    if (isLoopback(req)) {
-      req.adminAuth = { ok: true, via: 'loopback' };
-      return next();
-    }
-    req.adminAuth = { ok: false, via: null };
+    if (panelSecretOk(req)) req.adminAuth = { ok: true, via: 'secret' };
+    else if (isLoopback(req)) req.adminAuth = { ok: true, via: 'loopback' };
+    else req.adminAuth = { ok: false, via: null };
     // EventSource başlık yollayamaz: yalnız canlı olay akışında jeton sorgu parametresiyle gelebilir
     const qTok = req.path === '/api/realtime/events' ? String((req.query as any)?.idToken || '') : '';
     if (qTok && !req.headers.authorization) req.headers.authorization = `Bearer ${qTok}`;
@@ -65,7 +70,8 @@ export function adminAuthMiddleware(adminEmail: string): express.RequestHandler 
     // firebaseIdentity jeton doğrulamasını jeton özetine göre 10 dk önbellekte tutar (her istekte Google'a gidilmez)
     requestUser(req)
       .then((who) => {
-        if (who.user && lc(who.user.email) === lc(adminEmail)) req.adminAuth = { ok: true, via: 'token' };
+        req.verifiedUser = who.user || null;
+        if (!req.adminAuth?.ok && who.user && lc(who.user.email) === lc(adminEmail)) req.adminAuth = { ok: true, via: 'token' };
       })
       .catch(() => {})
       .finally(() => next());

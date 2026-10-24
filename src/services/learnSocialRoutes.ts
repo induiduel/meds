@@ -24,6 +24,7 @@
 import type express from 'express';
 import crypto from 'crypto';
 import { pgPool } from './pgDb';
+import { verifiedUid } from './adminAuth';
 
 export type LearnNoteKind = 'spot' | 'onemli' | 'vurgu';
 const KINDS = new Set<LearnNoteKind>(['spot', 'onemli', 'vurgu']);
@@ -119,7 +120,11 @@ export function learnThreadLink(deckId: string, stepNumber: number, threadId: st
 
 export function registerLearnSocialRoutes(app: express.Express, deps: LearnSocialDeps) {
   const censor = deps.censor || ((s: string) => s);
-  const uidOf = (req: express.Request) => clip(req.body?.author?.id || req.body?.uid || req.query?.uid || req.headers['x-user-uid'], 120);
+  // Yazarlık/sahiplik: Firebase jetonundan doğrulanmış uid önceliklidir. author.id herkese açık yayınlandığından
+  // istemcinin yolladığı kimlik yalnız jetonsuz (cihaz kimliği) yazımda ve "mine" gösteriminde kullanılır; silme/durum
+  // gibi sahiplik gerektiren işlemler ownerOf ile yalnız doğrulanmış uid'e bakar.
+  const uidOf = (req: express.Request) => verifiedUid(req) || clip(req.body?.author?.id || req.body?.uid || req.query?.uid || req.headers['x-user-uid'], 120);
+  const ownerOf = (req: express.Request) => verifiedUid(req);
   const nameOf = (req: express.Request) => clip(req.body?.author?.name, LIMITS.name) || 'Anonim öğrenci';
   // Aynı derste gezinen veya sekmeler arası geçiş yapan öğrenciler için 8 sn'lik satır önbelleği + singleflight
   const deckSocialCache = new Map<string, { expiresAt: number; notes: any[]; threads: any[] }>();
@@ -223,7 +228,7 @@ export function registerLearnSocialRoutes(app: express.Express, deps: LearnSocia
     try {
       const { rows } = await pgPool.query('select id, deck_id, author_id from learn_notes where id = $1', [id]);
       if (!rows[0]) return fail(res, 404, 'Not bulunamadı.');
-      if (!admin && (!uid || rows[0].author_id !== uid)) return fail(res, 403, 'Yalnız kendi notunu silebilirsin.');
+      if (!admin && (!ownerOf(req) || rows[0].author_id !== ownerOf(req))) return fail(res, 403, 'Yalnız kendi notunu silebilirsin.');
       await pgPool.query('delete from learn_notes where id = $1', [id]);
       emit(rows[0].deck_id, 'note', 'delete', { id });
       res.json({ success: true });
@@ -356,7 +361,7 @@ export function registerLearnSocialRoutes(app: express.Express, deps: LearnSocia
         [id]
       );
       if (!rows[0]) return fail(res, 404, 'Mesaj bulunamadı.');
-      if (!admin && (!uid || rows[0].author_id !== uid)) return fail(res, 403, 'Yalnız kendi mesajını silebilirsin.');
+      if (!admin && (!ownerOf(req) || rows[0].author_id !== ownerOf(req))) return fail(res, 403, 'Yalnız kendi mesajını silebilirsin.');
       await pgPool.query('delete from learn_thread_messages where id = $1', [id]);
       const upd = await pgPool.query(
         `update learn_threads set message_count = (select count(*) from learn_thread_messages where thread_id = $1) where id = $1 returning *`,
@@ -379,7 +384,7 @@ export function registerLearnSocialRoutes(app: express.Express, deps: LearnSocia
     try {
       const t = await pgPool.query('select id, deck_id, reporter_id from learn_threads where id = $1', [id]);
       if (!t.rows[0]) return fail(res, 404, 'Tartışma bulunamadı.');
-      if (!admin && (!uid || t.rows[0].reporter_id !== uid)) return fail(res, 403, 'Bu bildirimi yalnız bildiren ya da yönetici kapatabilir.');
+      if (!admin && (!ownerOf(req) || t.rows[0].reporter_id !== ownerOf(req))) return fail(res, 403, 'Bu bildirimi yalnız bildiren ya da yönetici kapatabilir.');
       const upd = await pgPool.query('update learn_threads set status = $2 where id = $1 returning *', [id, status]);
       const item = threadView(upd.rows[0], uid, admin);
       emit(t.rows[0].deck_id, 'thread', 'update', { item: publicView(item) });

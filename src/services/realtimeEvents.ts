@@ -100,7 +100,8 @@ class RealtimeEventService {
       if (streamToken) qs.set('idToken', streamToken);
       if (this.lastEventId) qs.set('lastEventId', this.lastEventId);
       const url = `${base}/api/realtime/events${qs.toString() ? `?${qs}` : ''}`;
-      this.connectedAdmin = !!adminSession?.email;
+      // Sunucu yalnız doğrulanmış jetonla yönetici sayar: yerel oturum işareti tek başına yetmez
+      this.connectedAdmin = Boolean(streamToken);
 
       const es = new EventSource(url);
       this.lastDataAt = Date.now();
@@ -317,7 +318,7 @@ class RealtimeEventService {
 
   /** Yönetici oturumu açıldı/kapandı: yönetici olaylarını almak için akış yeni yetkiyle kurulur. */
   public refreshAuth() {
-    const isAdmin = !!getLocalAdminSession()?.email;
+    const isAdmin = Boolean(adminIdTokenForStream());
     if (isAdmin !== this.connectedAdmin && this.eventSource) this.restart();
   }
 

@@ -60,7 +60,11 @@ export function installAdminFetchAuth() {
   window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {
     try {
       if (isOurApi(input)) {
-        const { auth } = await import('./auth');
+        const { auth, getLocalAdminSession } = await import('./auth');
+        // Açılışta Firebase oturumu henüz geri yüklenmemişse yönetici istekleri jetonsuz gidip reddedilmesin
+        if (!auth?.currentUser && getLocalAdminSession() && typeof (auth as any)?.authStateReady === 'function') {
+          await Promise.race([(auth as any).authStateReady(), new Promise((r) => setTimeout(r, 4000))]).catch(() => {});
+        }
         const user = auth?.currentUser;
         if (user && (String(user.email || '').toLowerCase() === ADMIN || ogrenciJetonu(input, init))) {
           const base = init?.headers ?? (typeof Request !== 'undefined' && input instanceof Request ? input.headers : undefined);

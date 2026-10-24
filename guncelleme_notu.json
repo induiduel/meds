@@ -1,16 +1,20 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 326,
-  "baslik": "KMB videoları: beyaz zemin, bantsız tam ekran",
+  "onem": 327,
+  "baslik": "Güvenlik: yönetici ve sahiplik doğrulaması sıkılaştırıldı",
   "maddeler": [
-    "Tam ekranda yalnız beyaz zemin ve animasyon; üstte/altta bant yok",
-    "Altyazı en altta, görüntünün üstünde hafif saydam 1–2 satır",
-    "Denetimler ve adım şeridi görüntünün üstünde yüzer, birkaç saniyede gizlenir"
+    "Yönetici işlemleri yalnız doğrulanmış girişle yapılabilir",
+    "Ortak notlarını, mesajlarını ve yorumlarını yalnız sen (ya da yönetici) silebilirsin",
+    "Yönetici paneli açılışta oturumu bekleyip canlı akışa doğru yetkiyle bağlanır"
   ],
   "eklenen": [],
   "degisen": [
-    "/dersler/kmb videoları"
+    "Yönetici yetkisi",
+    "Öğren ortak notları",
+    "Yorum/bildirim sahipliği"
   ],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Başlık taklidiyle yönetici olunabilmesi"
+  ],
   "silinen": []
 }
