@@ -461,8 +461,8 @@ def konusma_metni(d: Path) -> dict:
             if r["kota"]:
                 return {"durum": "kota", "ozet": "kota doldu (konuşma metni düzeltmesi)"}
             den = metin_denetle(d)
-    ilk = (den["cikti"].splitlines() or [""])[0]
-    m = re.search(r"(\d+) kelime.*?(\d+) bölüm.*?\"Burası önemli\" (\d+)", ilk)
+    # Kurul 2+'da ilk satır v2 kapısının özeti ("15 bölüm · 85 cümle · 0 HATA"); kelime satırı sonra gelir → tüm çıktıda ara
+    m = re.search(r"(\d+) kelime.*?(\d+) bölüm.*?\"Burası önemli\" (\d+)", den["cikti"])
     ozet = f"konuşma metni {m.group(1)} kelime · {m.group(2)} bölüm · {m.group(3)} önemli" if m else "konuşma metni yok"
     return {"durum": "tamam" if den["hata"] == 0 else "hata", "ozet": ozet + ("" if den["hata"] == 0 else f" · {den['hata']} HATA")}
 

@@ -426,15 +426,15 @@ def a_asistan(d, pk, W, kuru):
 
 
 def a_ses(d, pk, W, kuru):
-    """EMA: çözücü + asistan + Öğren adımları. Ses işçileri flock'lu ve makine korumalı (CPU; GPU yalnız izinli kapsamda)."""
+    """EMA: çözücü + asistan + Öğren adımları. Ses işçileri flock'lu; DAİMA GPU (cozucu_ses_gpu.sh, koruyucu + ısı protokolü)."""
     k = d["kod"]
     r = calistir(f"bash {SC}/ses_kuyruk.sh {W.name} --ses ema {k}", kuru=kuru)
     r = r or calistir(f"bash {SC}/asistan_ses_kuyruk.sh {W.name} {k}", kuru=kuru)
     deste = pk.get("deste_id")
     if deste:
         # Öğren adım sesleri: EMA venv, makine korumalı kapsam, bitince Oracle'a rsync (--oracle)
-        r = r or calistir(f"systemd-run --user --scope -q -p CPUQuota=300% -p MemoryMax=2200M --nice=10 "
-                          f"env CUDA_VISIBLE_DEVICES= {Path.home()}/.local/share/meds-ema/venv/bin/python "
+        # EMA daima GPU (kullanıcı kararı 2026-10-24): koruyuculu GPU başlatıcısı (cozucu_ses_gpu.sh)
+        r = r or calistir(f"bash {MEDS}/scripts/patoloji_cozucu/cozucu_ses_gpu.sh "
                           f"{MEDS}/scripts/ogren_ses/ogren_ses_uret.py {deste} --oracle", cwd=MEDS, kuru=kuru)
     return r or calistir(f"python3 {SC}/birlestir.py {W.name} --taslak", kuru=kuru)
 
