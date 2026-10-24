@@ -1,20 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 265,
-  "baslik": "Yeni ders PDF'leri yönetici onayıyla işleniyor",
+  "onem": 266,
+  "baslik": "Yeni dersler çok daha hızlı hazırlanıyor",
   "maddeler": [
-    "Drive'a gelen yeni ders PDF'i artık hemen işlenmiyor: yöneticiye telefon bildirimi gidiyor; yönetici öğrenci notu ve ders ses kaydı ekleyip ya da yalnız PDF ile başlatıyor.",
-    "Kurul 2 ve sonrası için içerik hattı sağlamlaştırıldı: her içerik bağımsız denetçiden geçiyor, bulunan hatalar kendiliğinden düzeltilip yeniden denetleniyor.",
-    "Sesli metinlerde Türkçe karakter kaybı ve iç etiket sızıntısı artık yayına girmeden yakalanıyor."
+    "Yeni ders PDF'inden Öğren destesi, ders notu, sorular, sözlük ve sesli anlatım artık aynı anda hazırlanıyor: 62 sayfalık bir ders yaklaşık 20 dakikada hazır (önceden 1–3 saat)."
   ],
-  "eklenen": [
-    "Drive'a gelen yeni ders PDF'i artık hemen işlenmiyor: yöneticiye telefon bildirimi gidiyor; yönetici öğrenci notu ve ders ses kaydı ekleyip ya da yalnız PDF ile başlatıyor."
-  ],
+  "eklenen": [],
   "degisen": [
-    "Kurul 2 ve sonrası için içerik hattı sağlamlaştırıldı: her içerik bağımsız denetçiden geçiyor, bulunan hatalar kendiliğinden düzeltilip yeniden denetleniyor."
+    "Yeni ders PDF'inden Öğren destesi, ders notu, sorular, sözlük ve sesli anlatım artık aynı anda hazırlanıyor: 62 sayfalık bir ders yaklaşık 20 dakikada hazır (önceden 1–3 saat)."
   ],
-  "duzeltilen": [
-    "Sesli metinlerde Türkçe karakter kaybı ve iç etiket sızıntısı artık yayına girmeden yakalanıyor."
-  ],
+  "duzeltilen": [],
   "silinen": []
 }
