@@ -1,9 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 296,
-  "baslik": "Kurul 1 2026-2027 çıkmış sorular: şık işaretleri",
+  "onem": 297,
+  "baslik": "Slayt takibi ve etiket düzeltmesi",
   "maddeler": [
-    "Sonradan eklenen şıklar mavi ve altı çizili, şüpheli şıklar kırmızı ve altı çizili gösteriliyor"
+    "Hızlı dinlemede de anlatılan satır oynatıcının altında kalmıyor",
+    "Uzun çizim etiketleri kesilmiyor, iki satıra iniyor"
   ],
   "eklenen": [],
   "degisen": [
