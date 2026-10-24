@@ -264,6 +264,13 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
             k = {**k, "etiket_konum": [round(x, 4), round(y, 4)], "etiket_genislik": round(g, 3)}
             if dolu is not None:
                 dolu.append((x, y, x + g, y + h))
+        elif k["tur"] == "akis" and k.get("yol"):
+            # ok etiketsiz kalmasın (H40): boş yer yoksa yolun ortasına, okunur koyu hap olarak
+            y = k["yol"]; m = y[len(y) // 2]
+            x, yy = min(max(0.0, m[0] - g / 2), 1 - g), min(max(0.0, m[1] - h - 0.008), 1 - h)
+            k = {**k, "etiket_konum": [round(x, 4), round(yy, 4)], "etiket_genislik": round(g, 3)}
+            if dolu is not None:
+                dolu.append((x, yy, x + g, yy + h))
         else:
             k = {**k}; k.pop("etiket", None)                               # boş yer yok: etiket gösterilmez
     if k["tur"] == "sema":
@@ -415,6 +422,8 @@ def main() -> int:
             neden = CD.denetle(k, len(C[cid].split()), kutular(dok / f"s{s:02d}.txt"), raster.get(s), onceki)
             p, c = cid[1:].split(".C")
             mevcut = out.setdefault(p, {}).setdefault(c, [])
+            if not neden and k.get("tur") == "akis" and not str(k.get("etiket") or "").strip():
+                neden = "etiketsiz ok (amacı anlaşılmıyor, H40)"
             if not neden and len(mevcut) >= 2:
                 neden = "cümlede 2'den çok çizim"
             if not neden and sayfa_say.get(s, 0) >= 8:

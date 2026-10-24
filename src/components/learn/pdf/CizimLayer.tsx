@@ -94,6 +94,7 @@ function Komut({ z, t }: { z: CizimKomut; t: number }) {
   if (z.tur === 'kontur' && z.nokta) {
     return (
       <g className="pdv-cz-kontur">
+        <path d={egri(z.nokta, true)} {...ciz} className="pdv-cz-hale" vectorEffect="non-scaling-stroke" />
         <path d={egri(z.nokta, true)} {...ciz} vectorEffect="non-scaling-stroke" />
         {t >= 1 && <Etiket z={z} />}
       </g>
@@ -110,6 +111,7 @@ function Komut({ z, t }: { z: CizimKomut; t: number }) {
     const hk = z.hedef_kutu;
     return (
       <g className={`pdv-cz-akis is-${z.iliski || 'aktive'}`}>
+        <path d={yolD(yol, z.rota)} {...ciz} className="pdv-cz-hale" vectorEffect="non-scaling-stroke" />
         <path d={yolD(yol, z.rota)} {...ciz} markerEnd={t >= 1 ? `url(#pdv-cz-${ui ? 'dur' : 'ok'})` : undefined} vectorEffect="non-scaling-stroke" />
         {t > 0 && t < 1 && <circle cx={m[0] * V} cy={m[1] * V} r={4} className="pdv-cz-parca" />}
         {t >= 1 && hk && (

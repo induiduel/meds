@@ -174,21 +174,23 @@
 /* Canlı çizim katmanı (R6, CizimLayer.tsx) — imleç/işaret katmanıyla aynı sayfa koordinatı */
 .pdv-cz { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
 .pdv-cz path { fill: none; stroke-linecap: round; stroke-linejoin: round; }
-.pdv-cz-kontur path { stroke: rgb(225 29 72 / .85); stroke-width: 1.6; }
-.pdv-cz-akis path { stroke: rgb(37 99 235 / .85); stroke-width: 1.5; }
+/* H40: her çizginin altında beyaz hale — resim/renkli zemin üstünde de okunur; çizgi ince ama tam opak */
+.pdv-cz-kontur path { stroke: #e11d48; stroke-width: 2.4; }
+.pdv-cz-akis path { stroke: #1d4ed8; stroke-width: 2.4; }
+.pdv-cz g path.pdv-cz-hale { stroke: #fff; stroke-width: 5.5; opacity: .9; }
 .pdv-cz-akis.is-inhibe path { stroke: #dc2626; }
 .pdv-cz-akis.is-donusur path { stroke: #7c3aed; stroke-dasharray: none; }
 .pdv-cz-uc { fill: #2563eb; }
 .pdv-cz-uc-dur { stroke: #dc2626; stroke-width: 2; }
 .pdv-cz-parca { fill: #f59e0b; stroke: #fff; stroke-width: 1; }
-.pdv-cz-hedef { fill: rgb(37 99 235 / .06); stroke: rgb(37 99 235 / .75); stroke-width: 1.3; animation: pdv-cz-hedef-gel .3s ease-out both; }
+.pdv-cz-hedef { fill: rgb(37 99 235 / .08); stroke: #1d4ed8; stroke-width: 2; animation: pdv-cz-hedef-gel .3s ease-out both; }
 @keyframes pdv-cz-hedef-gel { from { opacity: 0; } to { opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { .pdv-cz-hedef { animation: none; } }
 .pdv-cz-egri path { stroke-width: 2; }
 .pdv-cz-egri path.is-yukselis { stroke: #ea580c; }
 .pdv-cz-egri path.is-inis { stroke: #0284c7; }
 .pdv-cz-egri path.is-plato { stroke: #64748b; }
-.pdv-cz-etiket { display: inline-block; max-width: 100%; padding: 2px 8px; border-radius: 6px; background: rgba(15, 23, 42, .72);
+.pdv-cz-etiket { display: inline-block; max-width: 100%; padding: 2px 8px; border-radius: 6px; background: rgba(15, 23, 42, .9);
   color: #fff; font: 600 15px/1.3 system-ui, sans-serif; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .pdv-cz-sema { position: absolute; right: 3%; bottom: 3%; max-width: 70%; display: flex; flex-wrap: wrap; align-items: center; gap: 5px 4px;
   padding: 7px 10px; border-radius: 12px; background: rgba(255, 255, 255, .95); border: 1px solid rgba(37, 99, 235, .18);

@@ -1,12 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 277,
-  "baslik": "Canlı çizim şemaları daha anlaşılır",
+  "onem": 278,
+  "baslik": "Canlı çizimler daha görünür ve anlaşılır",
   "maddeler": [
-    "Birden çok terim aynı sonuca gidiyorsa alt alta dizilip } ayracıyla toplanıyor",
-    "Şema paneli ilgili yazının yanındaki boşluğa yerleşiyor, kenara yapışmıyor",
-    "Panel tasarımı sadeleştirildi",
-    "Resimli sayfalarda oklar şemadaki kutunun kenarına gidiyor"
+    "Çizgiler beyaz kenarlıkla her zeminde okunuyor, daha belirgin",
+    "Her okun yanında ne anlattığını söyleyen etiket var",
+    "Aynı sonuca giden terimler } ayracıyla gruplanıyor"
   ],
   "eklenen": [],
   "degisen": [
