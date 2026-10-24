@@ -413,7 +413,9 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
     if k.get("etiket"):
         # etiket yazısı sayfa genişliğinin %2,3ü (pdfDoc.css .pdv-cz-etiket 2.3cqw); karakter ≈0,58 em, satır 1,3 em + pay
         oran_e = r.w / r.h
-        g, h = min(0.42, 0.023 * (0.58 * len(k["etiket"]) + 1.2)), 0.023 * 1.75 * oran_e
+        gerek = 0.023 * (0.58 * len(k["etiket"]) + 1.2)
+        satir = max(1, -(-gerek // 0.42))                   # uzun etiket kırpılmaz, satıra iner (H48)
+        g, h = min(0.42, gerek), 0.023 * (1.3 * satir + 0.45) * oran_e
         o = k.get("nokta", [k.get("c") or k.get("a") or [0.5, 0.5]])[0] if k["tur"] != "sema" else [0.5, 0.5]
         if k.get("odak"):
             o = [k["odak"][2], k["odak"][1]]

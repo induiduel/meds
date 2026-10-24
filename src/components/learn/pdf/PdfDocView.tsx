@@ -465,27 +465,34 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
 
   // Anlatılan satırlar alttaki oynatıcının (kayan alanın scroll-padding-bottom'u) ya da görünür alanın altında kalmasın:
   // gerekirse yalnız yetecek kadar kaydır (kullanıcı 2026-10-24: oynatıcı "monitörizasyon" satırını örtüyordu)
+  const isaretRef = useRef<{ page: number; lines: number[][] } | null>(null);
+  const isaretZam = useRef(0);
   const isaretAnahtar = marks && !rot ? `${marks.page}|${marks.lines.map((b) => b.join(',')).join(';')}` : '';
   useEffect(() => {
-    const el = scrollRef.current;
-    if (!el || !marks || rot || !marks.lines.length) return;
-    const i = marks.page - 1;
-    const t = geo.current.tops[i];
-    const d = geo.current.sizes[i];
-    if (t == null || !d) return;
-    const h = d.h * geo.current.scaleOf(i);
-    const ust = t + Math.min(...marks.lines.map((b) => b[1])) * h;
-    const alt = t + Math.max(...marks.lines.map((b) => b[3])) * h;
-    const altPay = parseFloat(getComputedStyle(el).scrollPaddingBottom) || 0;
-    // sayfa geçişindeki yumuşak kaydırma (goTo, ≤900 ms) bitince ölç
-    const id = window.setTimeout(() => {
+    isaretRef.current = marks && !rot && marks.lines.length ? { page: marks.page, lines: marks.lines } : null;
+    // kısıtlayıcı (iptal edilmez): hızlı dinlemede cümleler 1 sn'den kısa sürer; her değişimde sıfırlanan bir zamanlayıcı
+    // hiç çalışmıyordu. Bekleyen yoksa 600 ms sonra EN SON anlatılan satırlara bakılır.
+    if (isaretZam.current || !isaretRef.current) return;
+    isaretZam.current = window.setTimeout(() => {
+      isaretZam.current = 0;
+      const el = scrollRef.current;
+      const m = isaretRef.current;
+      if (!el || !m || (seeking.current && Date.now() < seeking.current.until)) return;
+      const i = m.page - 1;
+      const t = geo.current.tops[i];
+      const d = geo.current.sizes[i];
+      if (t == null || !d) return;
+      const h = d.h * geo.current.scaleOf(i);
+      const ust = t + Math.min(...m.lines.map((b) => b[1])) * h;
+      const alt = t + Math.max(...m.lines.map((b) => b[3])) * h;
+      const altPay = parseFloat(getComputedStyle(el).scrollPaddingBottom) || 0;
       const gorAlt = el.scrollTop + el.clientHeight - altPay - 12;
       if (alt > gorAlt) el.scrollTo({ top: Math.max(0, Math.min(ust - 24, el.scrollTop + (alt - gorAlt))), behavior: 'smooth' });
       else if (ust < el.scrollTop + 8) el.scrollTo({ top: Math.max(0, ust - 24), behavior: 'smooth' });
-    }, 950);
-    return () => window.clearTimeout(id);
+    }, 600);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isaretAnahtar]);
+  useEffect(() => () => window.clearTimeout(isaretZam.current), []);
 
   /* ---- hedef sayfaya git ---- */
   const goTo = useCallback((p: number, smooth: boolean) => {
