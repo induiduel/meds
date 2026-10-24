@@ -1,20 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 318,
-  "baslik": "KMB asistanı: Ders çalış altında, yeni oynatıcı ve öğrenme yolu",
+  "onem": 319,
+  "baslik": "KMB videoları akıcı: donma giderildi",
   "maddeler": [
-    "KMB görsel asistan artık Ders çalış bölümünde (/dersler/kmb)",
-    "Öğrenme yolu: İzle → Öğren → Hedefler → Sınav; kaldığın yerden devam, bitince sonrakine geçiş",
-    "Yeni video oynatıcı: tam ekran, video üstünde altyazı, ekranın sağı/solu 10 sn ileri/geri",
-    "Mobil ve tablette donma giderildi; ses takılmıyor, adım geçişleri kesintisiz",
-    "Animasyonlar cümle cümle gözden geçirildi: eksik görseller eklendi, ultrason ve delikli örtü düzeltildi"
+    "Animasyonlar artık saniyede 60 kare akıyor (önceden 10 kareydi)",
+    "Canvas çizim: mobil ve tablette çok daha hafif",
+    "Görünmeyen katmanlar hesaplanmıyor; delikli örtü opak"
   ],
-  "eklenen": [
-    "/dersler/kmb/uretral-kateter"
+  "eklenen": [],
+  "degisen": [],
+  "duzeltilen": [
+    "/dersler/kmb videolarında donma"
   ],
-  "degisen": [
-    "/kamplar/kmb → /dersler/kmb"
-  ],
-  "duzeltilen": [],
   "silinen": []
 }

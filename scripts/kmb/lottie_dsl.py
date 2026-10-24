@@ -272,7 +272,40 @@ class Anim:
         kamera_ekle(self.kamera_k, t1, 0.5, cx, cy, z)
         self.kamera_k.append((round(t2, 3), *self.kamera_k[-1][1:]))
 
+    @staticmethod
+    def etkin_aralik(katmanlar, op):
+        """Başarım: her katman yalnız görünür olduğu aralıkta etkin (ip/op). Gizli katmanlar oynatıcıda hiç işlenmez."""
+        for L in katmanlar:
+            o = L['ks']['o']
+            if not o.get('a'):
+                if o.get('k') == 0:
+                    L['ip'], L['op'] = 0, 1
+                continue
+            ks = o['k']
+            deg = lambda k: (k['s'][0] if isinstance(k.get('s'), list) else k.get('s', 0))  # noqa: E731
+            bas, bit = None, None
+            for i, k in enumerate(ks):
+                v = deg(k)
+                sonraki = ks[i + 1] if i + 1 < len(ks) else None
+                if v > 0 or (sonraki and deg(sonraki) > 0):
+                    if bas is None:
+                        bas = k['t'] if v > 0 else k['t']
+                    bit = sonraki['t'] if (sonraki and not (v > 0 and deg(sonraki) > 0 and False)) else op
+                    if v > 0 and sonraki is None:
+                        bit = op
+            if bas is None:
+                L['ip'], L['op'] = 0, 1
+            else:
+                if deg(ks[0]) > 0:
+                    bas = 0
+                if deg(ks[-1]) > 0:
+                    bit = op
+                L['ip'], L['op'] = max(0, int(bas) - 1), min(op, int(bit) + 2)
+
     def json(self):
+        Anim.etkin_aralik(self.katmanlar, self.op)
+        for a in self.varliklar:
+            Anim.etkin_aralik(a['layers'], self.op)
         L = list(reversed(self.katmanlar))
         if len(self.kamera_k) > 1:
             k = self.kamera_temiz()

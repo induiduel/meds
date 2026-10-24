@@ -43,7 +43,8 @@ export function lottieOnYukle(ad: string): Promise<any> {
   return p;
 }
 let OYNATICI: Promise<any> | null = null;
-const oynaticiYukle = () => (OYNATICI ||= import('lottie-web/build/player/lottie_light').then((L: any) => L.default || L));
+// canvas çizici: mobil/tablette yüzlerce SVG öğesi yerine tek tuval boyanır (çok daha hızlı)
+const oynaticiYukle = () => (OYNATICI ||= import('lottie-web/build/player/lottie_canvas').then((L: any) => L.default || L));
 
 /** Kamera (lottie_dsl.kamera ile aynı kareler; Lottie kolaylaştırmasına yakın smoothstep) → [cx, cy, z] */
 export function kameraAn(v: LottieBilgi, t: number): [number, number, number] {
@@ -93,12 +94,22 @@ export function Katman({ v, t }: { v: LottieBilgi; t: number }) {
   );
 }
 
-/** Lottie sahnesi: ekrana yaklaşınca kurulur, uzaklaşınca yok edilir; `kare` (sn) değişince çizer */
-export function LottieSahne({ ad, kare, onHazir }: { ad: string; kare: number; onHazir?: () => void }) {
+export type SahneTutamac = { ciz: (sn: number) => void };
+
+/** Lottie sahnesi (canvas): ekrana yaklaşınca kurulur, uzaklaşınca yok edilir. Kareyi React'ten bağımsız çizmek için
+ *  `tutamac.ciz(sn)` her ekran yenilemesinde çağrılır (arayüz durumu 10 fps; animasyon 60 fps). `kare` ilk/durgun kare. */
+export const LottieSahne = React.forwardRef<SahneTutamac, { ad: string; kare: number; onHazir?: () => void }>(function LottieSahne({ ad, kare, onHazir }, ref) {
   const kap = useRef<HTMLDivElement>(null);
   const anim = useRef<any>(null);
   const son = useRef(-1);
   const [gorunur, setGorunur] = useState(false);
+  const ciz = useCallback((s: number) => {
+    const a = anim.current;
+    if (!a) return;
+    const f = Math.max(0, Math.min(a.totalFrames - 1, Math.round(s * 30)));
+    if (f !== son.current) { son.current = f; a.goToAndStop(f, true); }
+  }, []);
+  React.useImperativeHandle(ref, () => ({ ciz }), [ciz]);
   useEffect(() => {
     const el = kap.current;
     if (!el || typeof IntersectionObserver === 'undefined') { setGorunur(true); return; }
@@ -109,25 +120,28 @@ export function LottieSahne({ ad, kare, onHazir }: { ad: string; kare: number; o
   useEffect(() => {
     if (!gorunur) return;
     let iptal = false;
+    let ro: ResizeObserver | null = null;
     Promise.all([lottieOnYukle(ad), oynaticiYukle()]).then(([data, L]) => {
       if (iptal || !kap.current) return;
-      anim.current = L.loadAnimation({ container: kap.current, renderer: 'svg', loop: false, autoplay: false,
-        animationData: JSON.parse(JSON.stringify(data)), rendererSettings: { preserveAspectRatio: 'xMidYMid meet', progressiveLoad: true, hideOnTransparent: true } });
+      anim.current = L.loadAnimation({ container: kap.current, renderer: 'canvas', loop: false, autoplay: false,
+        animationData: JSON.parse(JSON.stringify(data)),
+        rendererSettings: { preserveAspectRatio: 'xMidYMid meet', clearCanvas: true, progressiveLoad: false,
+          // yüksek yoğunluklu ekranlarda 2'nin üstü gereksiz boyama yükü
+          dpr: Math.min(2, window.devicePixelRatio || 1) } });
       anim.current.setSubframe(false);
       son.current = -1;
-      anim.current.addEventListener('DOMLoaded', () => { onHazir?.(); });
+      anim.current.addEventListener('DOMLoaded', () => { ciz(kareRef.current); onHazir?.(); });
+      ro = new ResizeObserver(() => anim.current?.resize());
+      ro.observe(kap.current);
     });
-    return () => { iptal = true; anim.current?.destroy(); anim.current = null; };
+    return () => { iptal = true; ro?.disconnect(); anim.current?.destroy(); anim.current = null; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ad, gorunur]);
-  useEffect(() => {
-    const a = anim.current;
-    if (!a) return;
-    const f = Math.max(0, Math.min(a.totalFrames - 1, Math.round(kare * 30)));
-    if (f !== son.current) { son.current = f; a.goToAndStop(f, true); }
-  });
+  const kareRef = useRef(kare);
+  kareRef.current = kare;
+  useEffect(() => { ciz(kare); }, [kare, ciz]);
   return <div ref={kap} className="kmb-lv-lottie" />;
-}
+});
 
 type Props = {
   ad: string; kod: string; ses: SesKayit | null;
@@ -150,6 +164,7 @@ export default function LottieVideo({ ad, kod, ses, zaman, kompakt, otomatik, on
   const audio = useRef<HTMLAudioElement | null>(null);
   const saat = useRef({ bas: 0, t: 0 });
   const tRef = useRef(0);
+  const sahne = useRef<SahneTutamac>(null);
   const bekliyor = useRef(false);
   const sonSes = useRef(-1);
   const [t, setT] = useState(0);
@@ -215,6 +230,7 @@ export default function LottieVideo({ ad, kod, ses, zaman, kompakt, otomatik, on
         return;
       }
       tRef.current = s;
+      sahne.current?.ciz(s); // her ekran yenilemesinde kare (React'ten bağımsız)
       if (now - son > 100) { setT(s); onZaman?.(s); son = now; }
       id = requestAnimationFrame(adim);
     };
@@ -287,7 +303,7 @@ export default function LottieVideo({ ad, kod, ses, zaman, kompakt, otomatik, on
       tabIndex={0} onKeyDown={tus} onMouseMove={uyandir} onTouchStart={uyandir} aria-label={`Video: ${v.baslik}`}>
       <div className="kmb-lv-sahne">
         {/* durgun ve başta: ilk bölümün bir karesi kapak olarak (boş sahne görünmesin) */}
-        <LottieSahne ad={ad} kare={!cal && t < 0.05 ? Math.min(sure, (v.bolumler[0]?.bas ?? 0) + 1.2) : t} />
+        <LottieSahne ref={sahne} ad={ad} kare={!cal && t < 0.05 ? Math.min(sure, (v.bolumler[0]?.bas ?? 0) + 1.2) : t} />
         <Katman v={v} t={t} />
         {altyazi && <div className={`kmb-lv-altyazi${konusuyor ? '' : ' sessiz'}`}><span>{bolum?.metin}</span></div>}
         {/* dokunma alanları: sol 10 sn geri, orta oynat/duraklat, sağ 10 sn ileri */}
