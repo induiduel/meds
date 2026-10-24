@@ -187,7 +187,7 @@ const Bag = ({ tur, etiket, dikey, gecikme = 0 }: { tur?: string; etiket?: strin
  *  zincir A → B → C · grup (çok → bir, "}") · dal (bir → çok, karar) · maske (görünen neden, perde kalkınca altta
  *  yatan) · karşıt (iki kutup yan yana). Düğümler konuşmayla (t) sırayla belirir.
  */
-function Sema({ z, t }: { z: CizimKomut; t: number }) {
+function SemaParca({ z, t, ic }: { z: CizimKomut; t: number; ic?: boolean }) {
   const dg = z.dugum || [];
   const kn = z.kenar || [];
   const gorunen = Math.max(1, Math.ceil(t * dg.length));
@@ -196,9 +196,9 @@ function Sema({ z, t }: { z: CizimKomut; t: number }) {
   const gor = (id: string) => (sira.get(id) ?? 99) < gorunen;
   const stil = z.konum ? { left: `${z.konum[0] * 100}%`, top: `${z.konum[1] * 100}%`, right: 'auto', bottom: 'auto', maxWidth: `${(z.genislik || 0.6) * 100}%` } : undefined;
   const say = (k: 'a' | 'b') => { const m = new Map<string, typeof kn>(); for (const e of kn) m.set(e[k], [...(m.get(e[k]) || []), e]); return m; };
-  const tip = z.tip || ([...say('b').values()].some((v) => v.length >= 2) ? 'grup' : 'zincir');
-  const kap = (ic: React.ReactNode) => (
-    <div className={`pdv-cz-sema is-${tip}`} role="img" aria-label={dg.map((d) => d.metin).join(', ')} style={stil}>{ic}</div>
+  const tip = ic ? tipBul(kn) : z.tip || tipBul(kn);
+  const kap = (icerik: React.ReactNode) => ic ? <div className={`pdv-cz-sema-parca is-${tip}`}>{icerik}</div> : (
+    <div className={`pdv-cz-sema is-${tip}`} role="img" aria-label={dg.map((d) => d.metin).join(', ')} style={stil}>{icerik}</div>
   );
 
   if (tip === 'maske' && kn[0]) {
@@ -265,6 +265,44 @@ function Sema({ z, t }: { z: CizimKomut; t: number }) {
         );
       })}
     </div>,
+  );
+}
+
+/** panel türü (cizim_uret.panel_tipi ile aynı kural) */
+function tipBul(kn: NonNullable<CizimKomut['kenar']>): NonNullable<CizimKomut['tip']> {
+  if (kn.some((e) => e.tur === 'karsit')) return 'karsit';
+  if (kn.some((e) => e.tur === 'maske')) return 'maske';
+  const gir = new Map<string, number>(), cik = new Map<string, number>();
+  for (const e of kn) { gir.set(e.b, (gir.get(e.b) || 0) + 1); cik.set(e.a, (cik.get(e.a) || 0) + 1); }
+  if ([...gir.values()].some((n) => n >= 2)) return 'grup';
+  if ([...cik.values()].some((n) => n >= 2)) return 'dal';
+  return 'zincir';
+}
+
+/**
+ * Şema: birbirine bağlı olmayan ilişkiler ayrı satırlara bölünür (kullanıcı 2026-10-24 s.43: "uzamış kanama zamanı →
+ * intrakraniyal kanama" ile "trombositopeni → kanama, sepsis" yan yana dizilince tek zincir gibi okunuyordu). Her bağlı
+ * bileşen kendi türüyle (zincir / grup / dal / maske / karşıt) çizilir, aralarında ince ayraç.
+ */
+function Sema({ z, t }: { z: CizimKomut; t: number }) {
+  const dg = z.dugum || [], kn = z.kenar || [];
+  const kok = new Map(dg.map((d) => [d.id, d.id]));
+  const bul = (x: string): string => (kok.get(x) === x ? x : bul(kok.get(x)!));
+  for (const e of kn) if (kok.has(e.a) && kok.has(e.b)) kok.set(bul(e.a), bul(e.b));
+  const gruplar = new Map<string, string[]>();
+  for (const d of dg) gruplar.set(bul(d.id), [...(gruplar.get(bul(d.id)) || []), d.id]);
+  if (gruplar.size <= 1) return <SemaParca z={z} t={t} />;
+  const gorunen = new Set(dg.slice(0, Math.max(1, Math.ceil(t * dg.length))).map((d) => d.id));
+  const stil = z.konum ? { left: `${z.konum[0] * 100}%`, top: `${z.konum[1] * 100}%`, right: 'auto', bottom: 'auto', maxWidth: `${(z.genislik || 0.6) * 100}%` } : undefined;
+  return (
+    <div className="pdv-cz-sema is-coklu" role="img" aria-label={dg.map((d) => d.metin).join(', ')} style={stil}>
+      {[...gruplar.values()].map((ids, i) => {
+        const g = ids.filter((x) => gorunen.has(x)).length;
+        if (!g) return null;
+        const sub = { ...z, konum: undefined, dugum: dg.filter((d) => ids.includes(d.id)), kenar: kn.filter((e) => ids.includes(e.a)) };
+        return <SemaParca key={i} z={sub} t={g / ids.length} ic />;
+      })}
+    </div>
   );
 }
 

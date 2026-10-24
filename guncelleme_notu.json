@@ -1,10 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 281,
-  "baslik": "Bilinç bozukluğu dersinin çizimleri yenilendi",
+  "onem": 282,
+  "baslik": "Canlı çizim panelleri daha anlaşılır",
   "maddeler": [
-    "Ders çizimleri yeni kurallarla baştan üretildi: resimde bölge boyama, dallanma ve grup panelleri",
-    "Etiketler anlattıkları bölgenin hemen yanında"
+    "Birbirinden bağımsız ilişkiler panelde ayrı satırlarda gösteriliyor",
+    "Panel anlattığı satırların yanına yerleşiyor",
+    "Dallı oklar ortak noktadan çıkıyor, çizgiler yumuşak ve akıcı uzuyor"
   ],
   "eklenen": [],
   "degisen": [

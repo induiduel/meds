@@ -62,5 +62,10 @@ zenginleştirmedir: yalnız cümle gerçekten o görseli/ilişkiyi anlatıyorsa 
 8. **Kapatma yok:** etiket ve panel boş alana; yer yoksa panel gösterilmez.
 9. **Eş zamanlı:** `bas`–`son`, çizilen şeyin ADI konuşulurken olmalı (terim cümlede geçtiği kelimede başlar; betik kaymayı
    düzeltir). Çizim, tarif edilen bölgenin kendisine oturur; yakınına ya da benzer bir yere değil.
+10. **Ayrı ilişkiler ayrı:** birbirine bağlı olmayan iki ilişki aynı panelde yan yana dizilmez; her biri ayrı satırda
+    kendi türüyle (betik/istemci bağlı bileşenlere böler). Panelde bağsız iki düğüm yan yana durmaz.
+11. **Dallanma sayfada da:** resimde bir kaynaktan birden çok yere giden ilişki dallı oktur; dallar ortak gövdeden çıkar.
+12. **Akıcı animasyon:** çizgiler konuşmayla yumuşak ve sürekli uzar (sıçrama yok); düğümler sırayla süzülür.
+13. Bu kurallar bütün dersler içindir; kullanıcının her yeni çizim geri bildirimi buraya kural olarak eklenir.
 
 Yalnız `cizim.json`'u yaz; başka dosyaya dokunma. Bitince tek satır: `BİTTİ: <komut sayısı>`.

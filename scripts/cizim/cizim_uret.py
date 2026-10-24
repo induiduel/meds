@@ -361,25 +361,52 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
         hedefe = {}
         for e in k.get("kenar") or []:
             hedefe.setdefault(e.get("b"), set()).add(e.get("a"))
-        cikan = {}
+        # yükseklik bağlı bileşenlerden (istemci her bileşeni ayrı satırda çizer): bileşen başına satır = en büyük
+        # dallanma/toplanma (en az 1), artı satır payı
+        kok = {d.get("id"): d.get("id") for d in k.get("dugum") or []}
+
+        def bul(x):
+            while kok.get(x, x) != x:
+                x = kok[x]
+            return x
         for e in k.get("kenar") or []:
-            cikan.setdefault(e.get("a"), set()).add(e.get("b"))
-        grup = max([len(v) for v in hedefe.values()] + [len(v) for v in cikan.values()] + [0])
+            if e.get("a") in kok and e.get("b") in kok:
+                kok[bul(e["a"])] = bul(e["b"])
+        bilesen: dict = {}
+        for d in kok:
+            bilesen.setdefault(bul(d), []).append(d)
+        satir = 0
+        for ids in bilesen.values():
+            gir, cik = {}, {}
+            for e in k.get("kenar") or []:
+                if e.get("a") in ids:
+                    gir[e["b"]] = gir.get(e["b"], 0) + 1; cik[e["a"]] = cik.get(e["a"], 0) + 1
+            satir += max([1] + list(gir.values()) + list(cik.values())) + (1 if len(ids) > 3 and max([0] + list(gir.values()) + list(cik.values())) < 2 else 0)
+        grup = satir
         if k["tip"] in ("maske", "karsit"):
-            grup = max(grup, 2)
-        boy = ([(0.42, 0.05 * grup + 0.05), (0.36, 0.05 * grup + 0.07)] if grup >= 2 else
-               [(min(0.6, 0.12 * n + 0.08), 0.08), (min(0.45, 0.09 * n + 0.06), 0.12), (min(0.32, 0.07 * n + 0.05), 0.16)])
+            grup = max(grup, 3)
+        c_ = len(bilesen)
+        boy = ([(0.42, 0.045 * grup + 0.025 * c_ + 0.025), (0.5, 0.04 * grup + 0.025 * c_ + 0.02),
+                (0.3, 0.06 * grup + 0.03 * c_ + 0.03), (0.22, 0.08 * grup + 0.04 * c_ + 0.03)] if grup >= 2 else
+               [(min(0.6, 0.12 * n + 0.08), 0.08), (min(0.45, 0.09 * n + 0.06), 0.12), (min(0.32, 0.07 * n + 0.05), 0.16), (0.22, 0.06 * n + 0.04)])
         # yazının ağırlık merkezi: panel içeriğe yakın, kenara yapışmadan (≥%3 pay) ve boş yerde durur
         ys, xs = np.nonzero(r.ince[::4, ::4])
         mx, my = (xs.mean() * 4 / r.w, ys.mean() * 4 / r.h) if len(xs) else (0.5, 0.5)
+        # panel anlattığı satırların yanına: düğüm terimlerinin geçtiği satırların merkezi (yoksa yazının ağırlık merkezi)
+        from cizim_dogrula import _kok
+        kk = _kok(" ".join(d.get("metin", "") for d in k.get("dugum") or []))
+        ilgili = [s_["kutu"] for s_ in (satirlar or []) if kk & _kok(s_["metin"])]
+        if ilgili:
+            mx = sum((b[0] + b[2]) / 2 for b in ilgili) / len(ilgili)
+            my = sum((b[1] + b[3]) / 2 for b in ilgili) / len(ilgili)
         en = None
         for g, h in boy:
-            for xi in range(2, int((0.97 - g) * 50) + 1):
-                for yi in range(2, int((0.97 - h) * 50) + 1):
-                    x, y = xi / 50, yi / 50
+            for xi in range(1, int((0.99 - g) * 100) + 1):     # %1 adım, kenardan %1 pay
+                for yi in range(1, int((0.99 - h) * 100) + 1):
+                    x, y = xi / 100, yi / 100
                     if any(_kesisir((x, y, x + g, y + h), o) for o in (dolu or [])):
                         continue
-                    dl = r.kutu_doluluk(x - 0.015, y - 0.015, x + g + 0.015, y + h + 0.015)
+                    dl = r.kutu_doluluk(x - 0.008, y - 0.008, x + g + 0.008, y + h + 0.008)
                     if dl >= 0.03:
                         continue
                     puan = dl * 8 + ((x + g / 2 - mx) ** 2 + (y + h / 2 - my) ** 2) ** 0.5
@@ -561,6 +588,16 @@ def main() -> int:
             for j, ms in enumerate(x for x in gruplar.values() if len(x) >= 2):
                 for i, m in enumerate(ms):
                     m["dal"] = {"g": f"{c}-o{j}", "i": i, "n": len(ms)}
+        # dallı ok sayfada ortak gövdeden çıkar: bütün dallar ilk dalın çıkış noktasından başlar (genel kural 10)
+        for c, v in cs.items():
+            ilk_cikis: dict = {}
+            for m in v:
+                if m.get("dal") and m.get("yol"):
+                    g = m["dal"]["g"]
+                    if g not in ilk_cikis:
+                        ilk_cikis[g] = m["yol"][0]
+                    elif m["yol"][0] != ilk_cikis[g]:
+                        m["yol"] = [ilk_cikis[g]] + m["yol"]; m["rota"] = "kavis"; m["a"] = ilk_cikis[g]
     out = {p: {c: v for c, v in cs.items() if v} for p, cs in out.items()}
     out = {p: cs for p, cs in out.items() if cs}
     turler: dict[str, int] = {}
