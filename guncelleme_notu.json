@@ -1,12 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 316,
-  "baslik": "KMB görsel asistan: Üretral kateter",
+  "onem": 317,
+  "baslik": "Resim üstünde çizimde yakınlaşma",
   "maddeler": [
-    "Sınava hazırlan › KMB görsel asistan: önce sesli ve videolu öğren, sonra OSCE ve vaka sınavı",
-    "Her adım ayrı animasyon videosu: anlatılan her cümle görüntüde, altyazılı, tam ekranda video gibi",
-    "Hedeflerle çalış: KMB belgesindeki 15 öğrenim hedefi, önce kendin anlat, sonra karşılaştır",
-    "Dallanan OSCE sıralama: idrar geldi mi, gelmedi mi? Duruma göre yol değişir"
+    "Şema ve resimler üzerinde çizim yapılırken slayt o bölgeye yumuşakça yaklaşıyor, çizimden sonra geri dönüyor",
+    "Çizim anlatılan yapının önünü kapatmıyor"
   ],
   "eklenen": [
     "/kamplar/kmb",

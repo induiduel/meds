@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { memo, useEffect, useLayoutEffect, useRef, useState } from 'react';
 
 /**
  * Canlı çizim katmanı (R6, ICERIK_MOTORU_V3.md §4): hoca konuşurken PDF üstünde kontur / akış oku / eğri fazı / şema.
@@ -54,6 +54,8 @@ export interface CizimKomut {
   /** dallı ok: aynı kaynaktan çıkan dalların grubu, sırası, sayısı */
   dal?: { g: string; i: number; n: number };
   etiket_konum?: number[];
+  /** resim üstündeki çizimde yakınlaşma bölgesi (cizim_uret.yakinlasma): çizim boyunca sayfa buraya büyür, sonra döner */
+  yakin?: number[];
   /** etiket hedefinden uzaksa bağlantı çizgisinin hedef ucu ve etiketin yüksekliği (sayfa oranı) */
   etiket_hedef?: number[];
   etiket_boy?: number;
@@ -466,13 +468,76 @@ function Sema({ z, t }: { z: CizimKomut; t: number }) {
   );
 }
 
+/** Yakınlaşma (kullanıcı 2026-10-24): resim üstündeki çizim asıl yapının önünü kapatmasın diye çizim başlarken sayfa içeriği
+ *  çizim bölgesine yumuşakça büyür (bölge ortaya gelir), çizim biter, BEKLE ms sonra geri döner. Sayfanın kendi kutusu ve
+ *  kaydırma değişmez; yalnız tuval + metin + işaret katmanları dönüşür (pdfDoc.css .pdv-page.is-yakin). */
+const BEKLE = 1600;
+const AZ_HAREKET_Y = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+function yakinUygula(pg: HTMLElement, b: number[] | null) {
+  if (!b) {
+    pg.style.removeProperty('--yakin-t');
+    window.setTimeout(() => { if (!pg.style.getPropertyValue('--yakin-t')) pg.classList.remove('is-yakin'); }, 700);
+    return;
+  }
+  const w = b[2] - b[0], h = b[3] - b[1];
+  const s = Math.min(2.4, 0.8 / Math.max(w, h, 0.01));
+  if (s < 1.15) { yakinUygula(pg, null); return; }
+  const sinir = 0.5 - 0.5 / s;                                    // sayfa kenarı açığa çıkmasın
+  const tx = Math.max(-sinir, Math.min(sinir, 0.5 - (b[0] + b[2]) / 2));
+  const ty = Math.max(-sinir, Math.min(sinir, 0.5 - (b[1] + b[3]) / 2));
+  pg.classList.add('is-yakin');
+  pg.style.setProperty('--yakin-t', `scale(${s.toFixed(3)}) translate(${(tx * 100).toFixed(2)}%, ${(ty * 100).toFixed(2)}%)`);
+}
+
 export const CizimLayer = memo(function CizimLayer({ z, useChar }: { z: CizimKomut[]; useChar: () => number }) {
   const c = useChar();
+  // yakınlaşma hedefi: çizimi süren (0 ≤ t < 1) ya da bitişinin üstünden BEKLE ms geçmemiş yakınlaşmalı komut
+  const kokRef = useRef<SVGSVGElement & HTMLSpanElement>(null);
+  const bitis = useRef(new Map<string, number>());
+  const [, yenile] = useState(0);
+  // Cümledeki bütün yakınlaşmalı çizimlerin birleşik bölgesi tek ve sabit hedeftir (ayrı ayrı hedefler arasında gidip
+  // gelmesin): ilk çizim başlayınca yakınlaşır, sonuncusu bitip BEKLE ms geçince döner.
+  let hedef: number[] | null = null;
+  let kalan = 0;
+  if (!AZ_HAREKET_Y) {
+    const yk = z.filter((x) => x.yakin);
+    const tler = yk.map((x) => ilerleme(x, c));
+    if (yk.length && tler.some((t) => t >= 0)) {
+      const anahtar = yk.map((x) => `${x.s}:${x.k.join('-')}`).join('|');
+      let etkin = tler.some((t) => t >= 0 && t < 1) || tler.some((t) => t < 0);
+      if (!etkin) {
+        const b = bitis.current.get(anahtar) ?? Date.now();
+        bitis.current.set(anahtar, b);
+        const gecen = Date.now() - b;
+        if (gecen < BEKLE) { etkin = true; kalan = BEKLE - gecen; }
+      } else bitis.current.delete(anahtar);
+      if (etkin) {
+        const B = yk.map((x) => x.yakin!);
+        hedef = [Math.min(...B.map((b) => b[0])), Math.min(...B.map((b) => b[1])), Math.max(...B.map((b) => b[2])), Math.max(...B.map((b) => b[3]))];
+      }
+    }
+  }
+  const hedefAnahtar = hedef ? hedef.join(',') : '';
+  useLayoutEffect(() => {
+    const pg = kokRef.current?.closest('.pdv-page') as HTMLElement | null;
+    if (pg) yakinUygula(pg, hedef);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [hedefAnahtar]);
+  useEffect(() => {                      // cümle sustuysa da bekleme bitince dön
+    if (!kalan) return;
+    const id = window.setTimeout(() => yenile((n) => n + 1), kalan + 30);
+    return () => window.clearTimeout(id);
+  }, [kalan, hedefAnahtar]);
+  useEffect(() => () => {                // işaret katmanı kalkınca (cümle bitti / sayfa değişti) sayfa normale döner
+    const pg = kokRef.current?.closest('.pdv-page') as HTMLElement | null;
+    if (pg) yakinUygula(pg, null);
+  }, []);
   const cizimler = z.filter((x) => x.tur !== 'sema');
   // şema yalnız betiğin boş bulduğu yerde (konum); boş yer yoksa (konum null) sayfanın önü kapanmasın diye gösterilmez
   const sema = z.find((x) => x.tur === 'sema' && (x.konum || x.konum === undefined));
   return (
     <>
+      <span ref={kokRef} className="pdv-cz-kok" aria-hidden />
       {cizimler.length > 0 && (
         <svg className="pdv-cz" viewBox={`0 0 ${V} ${V}`} preserveAspectRatio="none" aria-hidden>
           <defs>

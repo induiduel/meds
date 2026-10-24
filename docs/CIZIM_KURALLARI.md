@@ -102,6 +102,14 @@ Betik her panel için sürümleri öncelik sırasıyla dener ve slaytın boşlu�
 - Hareket azaltma tercihinde (prefers-reduced-motion) hepsi kapanır.
 - Sıradaki fikirler: karşıtlık tablosunda farklı hücre vurgusu, skor toplamında sayaç, ders sonunda panelleri "hatırla" kartı.
 
+## 7c. Yakınlaşma (H53)
+
+- Resim üstündeki çizimde (resim sayfası ya da resim kutusu içinde; bölge sayfanın %40'ından küçük) betik yakınlaşma
+  bölgesi yazar (`yakin`: çizim + etiket sınırı, %6 pay). Görüntüleyici cümlenin ilk resim çizimi başlarken tuval/metin/işaret
+  katmanlarını o bölgeye yumuşakça büyütür (bölge ortaya gelir, ≤2,4×, sayfa kenarı açığa çıkmaz), çizimler büyütülmüş
+  görünümde akar, sonuncusu bitince 1,6 sn sonra geri döner. Bir cümlede birden çok çizim varsa birleşik bölge tek hedeftir
+  (gidip gelmez). Sayfa kutusu, kaydırma ve sayfa takibi değişmez; hareket azaltma tercihinde kapalı.
+
 ## 8. Ekran
 
 - **İzleme düzeni:** ders oynarken metinde yalnız anlatılan paragraf ve onun ekran maddeleri tam görünür, diğerleri

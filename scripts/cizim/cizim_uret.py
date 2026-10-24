@@ -60,6 +60,34 @@ def kutular(txt: Path) -> list[list[float]]:
     return out
 
 
+def yakinlasma(k: dict, kutu_listesi: list, resim: bool) -> list | None:
+    """Resim üstündeki çizim için yakınlaşma bölgesi (kullanıcı 2026-10-24: "çizim asıl mevzunun önünü kapatıyor; o bölgeye
+    zoom yapılsın, çizilsin, geri dönülsün"). Çizimin (boyalı bölge / ok yolu / odak çerçevesi + etiket) sınır kutusu,
+    %6 pay; resim sayfasında ya da bir resim kutusunun içindeyse ve bölge sayfanın %40'ından küçükse. → [x0,y0,x1,y1] | None"""
+    if k.get("tur") not in ("kontur", "akis", "egri_faz"):
+        return None
+    pts = list(k.get("nokta") or []) + list(k.get("yol") or [])
+    if k.get("odak"):
+        pts += [k["odak"][:2], k["odak"][2:]]
+    if k.get("hedef_kutu"):
+        pts += [k["hedef_kutu"][:2], k["hedef_kutu"][2:]]
+    if not pts:
+        return None
+    x0, y0 = min(p_[0] for p_ in pts), min(p_[1] for p_ in pts)
+    x1, y1 = max(p_[0] for p_ in pts), max(p_[1] for p_ in pts)
+    if k.get("etiket_konum"):
+        ex, ey = k["etiket_konum"]
+        x0, y0 = min(x0, ex), min(y0, ey)
+        x1, y1 = max(x1, ex + (k.get("etiket_genislik") or 0.2)), max(y1, ey + (k.get("etiket_boy") or 0.04))
+    icinde = any(b[0] - 0.02 <= x0 and x1 <= b[2] + 0.02 and b[1] - 0.02 <= y0 and y1 <= b[3] + 0.02 for b in kutu_listesi or [])
+    if not (resim or icinde):
+        return None
+    x0, y0, x1, y1 = max(0, x0 - 0.06), max(0, y0 - 0.06), min(1, x1 + 0.06), min(1, y1 + 0.06)
+    if (x1 - x0) * (y1 - y0) > 0.4:
+        return None
+    return [round(x0, 4), round(y0, 4), round(x1, 4), round(y1, 4)]
+
+
 def resim_sayfasi(kutu_listesi: list, satirlar: list, r) -> bool:
     """Slaytın anlatılan içeriği bir görsel mi (şema/resim)? Öyleyse ilişki görselin ÜSTÜNDE (ok, boyama, odak) anlatılır,
     yan panel kurulmaz (kullanıcı 2026-10-24, H51: herniasyon şeması anlatılırken altta metin paneli çıkıyordu).
@@ -872,7 +900,12 @@ def main() -> int:
             komut.update(s=s, k=[ka[k["bas"]][0], ka[k["son"]][1]])
             if s not in satir_onbellek and belge is not None and 1 <= s <= belge.page_count:
                 satir_onbellek[s] = sayfa_satirlari(belge[s - 1])
-            mevcut.append(yerlesim(komut, raster.get(s), sayfa_dolu.setdefault(s, []), satir_onbellek.get(s)))
+            yer = yerlesim(komut, raster.get(s), sayfa_dolu.setdefault(s, []), satir_onbellek.get(s))
+            kb = kutular(dok / f"s{s:02d}.txt")
+            yk = yakinlasma(yer, kb, resim_sayfasi(kb, satir_onbellek.get(s), raster.get(s)))
+            if yk:
+                yer["yakin"] = yk
+            mevcut.append(yer)
             sayfa_say[s] = sayfa_say.get(s, 0) + 1
             say["gecti"] += 1
     # aynı cümlede aynı kaynak kutusundan çıkan oklar dallı ok olur (kaynak bir kez, dallar sırayla)
