@@ -1,16 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 322,
-  "baslik": "Sesli dersler yenilendi",
+  "onem": 323,
+  "baslik": "KMB videoları: daha küçük altyazı, düzeltilmiş kareler",
   "maddeler": [
-    "Sesli ders listesi yeni düzende: solda kurul, görünüm ve branş menüsü (branş başına bitti sayısı), üstte \"Kaldığın yerden devam\" ve \"Sıradaki ders\" kartları.",
-    "Derse girince açılış ekranı: devam et / baştan başla, görünüm, hız, ses seçimi ve dokunduğun bölümden başlatma."
+    "Altyazı küçüldü, en çok iki satır; görüntüyü kapatmıyor",
+    "Ultrason ekranı, eldivenler, malzeme tepsisi ve iletişim sahneleri düzeltildi",
+    "Yatan hasta ve figürler bütün videolarda yeni çizimle"
   ],
-  "eklenen": [
-    "Derse girince açılış ekranı: devam et / baştan başla, görünüm, hız, ses seçimi ve dokunduğun bölümden başlatma."
-  ],
+  "eklenen": [],
   "degisen": [
-    "Sesli ders listesi yeni düzende: solda kurul, görünüm ve branş menüsü (branş başına bitti sayısı), üstte \"Kaldığın yerden devam\" ve \"Sıradaki ders\" kartları."
+    "/dersler/kmb videoları"
   ],
   "duzeltilen": [],
   "silinen": []

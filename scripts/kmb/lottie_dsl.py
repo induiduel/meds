@@ -181,6 +181,20 @@ def tm(e, s=None):
 
 
 def G(*it, p=(0, 0), a=(0, 0), s=(100, 100), r=0, o=100):
+    """Şekil grubu. Lottie'de grupta önce gelen öge üstte çizilir; burada yazım sırası alttan üste olsun diye iç gruplar
+    ve ardışık şekil/boya blokları ters sıralanır (bloğun kendi içi — şekil, dolgu, çizgi, kırpma — korunur)."""
+    bloklar, cari = [], []
+    for x in it:
+        if x.get('ty') == 'gr':
+            if cari:
+                bloklar.append(cari); cari = []
+            bloklar.append([x])
+        else:
+            cari.append(x)
+    if cari:
+        bloklar.append(cari)
+    if len(bloklar) > 1 and any(b[0].get('ty') == 'gr' for b in bloklar):
+        it = [x for b in reversed(bloklar) for x in b]
     return {'ty': 'gr', 'it': [*it, tr(p, a, s, r, o)]}
 
 

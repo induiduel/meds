@@ -171,9 +171,9 @@ def jel_ucuna(A, b, ml='~2 mL'):
            G(rc(520, 330, 70, 24, 10), fl('#e8c25c'), st('#8a6a1e', 1.2)), o=gorun(A, b, b))
     A.ekle('tup', G(yol('M640 110 L760 70 L780 130 L668 178 Z'), fl('#eef3f8'), st('#6b7a90', 2)), G(yol('M640 110 L668 178 L620 210 L606 200 Z'), fl('#dfe6ee'), st('#6b7a90', 1.5)),
            G(yol('M700 110 L746 94'), st('#2f6fd6', 6)),
-           s=K((0, [100, 100, 100]), (T(b, .1), [100, 100, 100]), (T(b, .35), [100, 82, 100])), a=(700, 80), p=S([700, 80, 0]), o=gorun(A, b, b))
+           s=K((0, [100, 100, 100]), (T(b, .1), [100, 100, 100]), (T(b, .35), [100, 82, 100])), a=(700, 80), p=S([700, 172, 0]), o=gorun(A, b, b))
     A.ekle('damla', G(el(0, 0, 26, 30), fl('#cfe9ff', o=90), st('#8fb8e6', 1.5)), G(el(-5, -6, 7, 5), fl('#ffffff')),
-           p=K((0, [612, 208, 0]), (T(b, .3), [612, 208, 0]), (T(b, .5), [606, 312, 0])), s=K((0, [20, 20, 100]), (T(b, .15), [20, 20, 100]), (T(b, .3), [100, 100, 100])),
+           p=K((0, [612, 300, 0]), (T(b, .3), [612, 300, 0]), (T(b, .5), [606, 318, 0])), s=K((0, [20, 20, 100]), (T(b, .15), [20, 20, 100]), (T(b, .3), [100, 100, 100])),
            o=K((0, 0), (T(b, .15), 0), (T(b, .2), 100), (T(b, .55), 100), (T(b, .6), 0)))
     A.ekle('jel-yayilma', G(el(0, 0, 90, 30), fl('#cfe9ff', o=80)), G(el(-10, -6, 40, 8), fl('#ffffff', o=90)),
            p=S([590, 326, 0]), s=K((0, [10, 40, 100]), (T(b, .55), [10, 40, 100]), (T(b, .8), [100, 100, 100])), o=belir(A, b, .55, b))
@@ -468,8 +468,10 @@ def a_malzeme(A):
     for j, (b, f, sh, (lx, ly, m)) in enumerate(O):
         k = T(b, f)
         A.ekle(f'oge{j}', *sh, p=K((0, [0, -560, 0]), (k, [0, -560, 0]), (k + 16, [0, 0, 0])), o=K((0, 0), (k, 0), (k + 4, 100), (T(4, 1) + 8, 100), (T(4, 1) + 16, 0)))
-        et(A, b, lx, ly, m, 'bilgi', f + .05)
+        et(A, b, lx, ly + (26 if j % 2 else 0), m, 'bilgi', f + .05)
     et(A, 1, 300, 330, 'Lidokain: kayganlaştırır + anestezi', 'dogru', .5)
+    # kamera: her cümlede ilgili rafa yaklaş
+    A.kamera(0, 400, 140, 128); A.kamera(1, 220, 270, 170); A.kamera(2, 500, 280, 135); A.kamera(3, 400, 420, 128); A.kamera(4, 400, 250, 100)
     A.ekle('steril-alan', G(rc(400, 180, 760, 330, 14), fl('#cfe7d8', o=30), st('#2e9e5b', 4, kesik=(14, 8))), o=belir(A, 4, .05, 4))
     A.ekle('yardimci', yumruk(760, 220, .7, 180, steril=False), p=K((0, [120, 0, 0]), (T(4, .1), [120, 0, 0]), (T(4, .35), [0, 0, 0])), o=belir(A, 4, .1, 4))
     A.ekle('alan-el', yumruk(560, 240, .7, 0, steril=True), p=K((0, [-60, 120, 0]), (T(4, .4), [-60, 120, 0]), (T(4, .65), [0, 0, 0])), o=belir(A, 4, .4, 4))
@@ -537,12 +539,13 @@ def a_iletisim(A):
     A.ekle('hekim1', *kisi(200, 170, '#ffffff', 1.3, True), o=gorun(A, 1, 1))
     konusma(A, 1, 0, 520, 130, f2=.5)
     et(A, 1, 520, 130, '"Yatın, sonda takacağım"', 'uyari', .05, .5)
-    carpi(A, 520, 130, 1, .25)
+    A.ekle('carpi1', G(yol('M484 94 L556 166 M556 94 L484 166'), st('#d23b3b', 11)), o=K((0, 0), (A.T(1, .25), 0), (A.T(1, .28), 100), (A.T(1, .5), 100), (A.T(1, .53), 0)))
     konusma(A, 1, 0, 520, 300, renk='#2e9e5b', f1=.55, f2=1)
     et(A, 1, 520, 300, 'Neden gerektiğini anlatır, onam alır', 'dogru', .55)
     A.ekle('cocuk-ebeveyn', G(rc(150, 110, 220, 150, 14), fl('#ffffff', o=95), st('#2f6fd6', 2)), *kisi(110, 80, '#a3b9d9', .65), *kisi(185, 100, '#f2b8d0', .45),
            o=belir(A, 3, .5, 3))
     et(A, 3, 150, 200, 'Çocukta ebeveyn · karşı cinste karşı cins personel', 'bilgi', .5)
+    A.kamera_sabit(3, 3, 400, 250, 100)
     kavram_ikonlar(A, 4, [(260, 220, ikon_kutu(260, 220, '#2e9e5b', [G(el(260, 220, 70, 70), gf(DERI, (250, 210), (270, 230), radyal=True)), G(yol('M240 230 C250 244 270 244 280 230'), st('#3b2a1e', 4))]), 'Hasta rahat', 'dogru'),
                           (540, 220, ikon_kutu(540, 220, '#2f6fd6', [G(yol('M540 170 L590 190 L586 236 C580 262 560 274 540 282 C520 274 500 262 494 236 L490 190 Z'), fl('#2f6fd6'))]), 'Medikolegal koruma', 'bilgi')], 'koruma')
 
@@ -593,10 +596,10 @@ def a_kadin_temizlik(A):
     # yardımcı (mavi eldiven) steril paketi soyar; steril el kateteri ve jeli alır
     A.ekle('paket', G(rc(0, 0, 170, 110, 8), fl('#fbfaf6'), st('#c9b48a', 2)), G(yol('M-70 -10 C-30 -40 30 20 70 -10'), st('#e3b544', 7)),
            G(yol_morph('M-85 -55 L85 -55 L85 -50 L-85 -50 Z', 'M-85 -55 L85 -55 L60 -120 L-60 -120 Z', T(4, .1), T(4, .35)), fl('#e8e0cc'), st('#c9b48a', 1.5)),
-           p=K((0, [720, 220, 0]), (T(4, .05), [720, 220, 0]), (T(4, .4), [470, 300, 0])), o=gorun(A, 4, 4))
-    A.ekle('yardimci-sol', yumruk(0, 0, .6, 200, steril=False), p=K((0, [800, 180, 0]), (T(4, .05), [800, 180, 0]), (T(4, .4), [560, 250, 0])), o=gorun(A, 4, 4))
-    A.ekle('yardimci-sag', yumruk(0, 0, .6, 160, steril=False), p=K((0, [800, 300, 0]), (T(4, .05), [800, 300, 0]), (T(4, .4), [560, 350, 0])), o=gorun(A, 4, 4))
-    A.ekle('steril-el', yumruk(0, 0, .65, 0, steril=True), p=K((0, [0, 300, 0]), (T(4, .45), [0, 300, 0]), (T(4, .75), [380, 300, 0])), o=belir(A, 4, .45, 4))
+           p=K((0, [720, 220, 0]), (T(4, .05), [720, 220, 0]), (T(4, .4), [400, 300, 0])), o=gorun(A, 4, 4))
+    A.ekle('yardimci-sol', yumruk(0, 0, .55, 180, steril=False), p=K((0, [800, 200, 0]), (T(4, .05), [800, 200, 0]), (T(4, .4), [560, 230, 0])), o=gorun(A, 4, 4))
+    A.ekle('yardimci-sag', yumruk(0, 0, .55, 180, steril=False), p=K((0, [800, 400, 0]), (T(4, .05), [800, 400, 0]), (T(4, .4), [560, 370, 0])), o=gorun(A, 4, 4))
+    A.ekle('steril-el', yumruk(0, 0, .65, 0, steril=True), p=K((0, [-80, 300, 0]), (T(4, .45), [-80, 300, 0]), (T(4, .75), [240, 300, 0])), o=belir(A, 4, .45, 4))
     et(A, 4, 560, 120, 'Yardımcı paketi açar, steril uzatır', 'bilgi', .1); et(A, 4, 300, 430, 'Steril el yalnız steril malzemeye', 'dogru', .6)
 
 
@@ -633,13 +636,14 @@ def a_erkek_yerlestirme(A):
     T = A.T
     avuc_kateter(A, 0, renk='#f2f5f8', kenar='#8a96a6', steril=True)
     et(A, 0, 400, 460, 'Avuca dola', 'dogru', .4)
-    panel(A, 0, .7, 1, 640, 360, 280, 200, 'gevsek', G(el(560, 300, 50, 40), fl('#fdf6ea'), st('#b59c72', 2)),
-          G(yol_morph('M580 300 C620 330 640 380 650 440', 'M580 300 C630 300 680 330 740 370', T(0, .72), T(0, .9)), st('#f2f5f8', 7)),
-          G(yol('M610 330 L670 390 M670 330 L610 390'), st('#d23b3b', 7)), kenar='#d23b3b')
+    panel(A, 0, .7, 1, 640, 360, 280, 200, 'gevsek',
+          yumruk(560, 300, .42, 0, steril=True),
+          G(yol('M590 300 C630 320 650 370 640 440'), st('#8a96a6', 10)), G(yol('M590 300 C630 320 650 370 640 440'), st('#f2f5f8', 7)),
+          G(yol('M690 330 L750 390 M750 330 L690 390'), st('#d23b3b', 7)), kenar='#d23b3b')
     et(A, 0, 640, 280, 'Uçtan gevşek tutarsan ilerletemezsin', 'uyari', .7)
     ic_ekle(A, LU.erkek_ilerleyis, [1, 1, 1, 2, 2, 2, 3, 4], [(1, 4)])
     # penisi dik ve gergin tutan sol el + çekme oku
-    A.ekle('tutan-el', yumruk(560, 300, .55, 180, steril=True), o=gorun(A, 1, 1))
+    A.ekle('tutan-el', yumruk(545, 300, .72, 180, steril=False), o=gorun(A, 1, 1))
     A.ekle('gergin', G(yol('M620 240 L720 240'), st('#2f6fd6', 5)), G(yol('M700 226 L722 240 L700 254'), st('#2f6fd6', 5)), o=belir(A, 1, .1, 1))
     et(A, 1, 620, 200, 'Penis dik ve gergin', 'bilgi', .1)
     et(A, 2, 400, 470, 'Makette takılabilir · gerçek hastada daha kolay', 'bilgi', .5)
@@ -649,7 +653,7 @@ def a_idrar_gelmezse(A):
     T = A.T
     ic_ekle(A, LU.yikama, [0, 2, 2, 3, 4, 4], [(0, 0), (2, 4)])
     A.ekle('yanlis-sisirme', *enjektor(640, 120, 110, 30), G(yol('M590 70 L690 170 M690 70 L590 170'), st('#d23b3b', 9)), o=belir(A, 0, .45, 0))
-    et(A, 0, 640, 200, 'İdrar yok → balonu şişirme', 'uyari', .45)
+    A.kamera_sabit(0, 0, 450, 240, 108)
     ic_ekle(A, LU.yanlis_balon, [1, None, None, None, None], [(1, 1)], 'kivrim')
     panel(A, 1, .02, .5, 200, 250, 300, 260, 'bos', G(el(200, 230, 120, 60), gf(MESANE, (180, 210), (220, 250), radyal=True), st('#a8554e', 4)),
           G(yol('M200 260 L200 360'), st('#eef2f6', 7)), G(el(200, 236, 10, 10), fl('#eef2f6'), st('#5b6676', 1)), kenar='#2f6fd6')

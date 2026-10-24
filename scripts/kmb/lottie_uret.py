@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from lottie_dsl import FR, Anim, G, K, KD, S, el, fl, fl_cift, gf, kisi, parmak_ucu, rc, st, tm, yol, yol_morph, yumruk  # noqa: E402
+from lottie_dsl import FR, Anim, G, K, KD, S, el, fl, fl_cift, gf, kisi, yatan_hasta, parmak_ucu, rc, st, tm, yol, yol_morph, yumruk  # noqa: E402
 
 MEDS = Path(__file__).resolve().parents[2]
 CIKTI = MEDS / 'src/data/kmb/lottie'
@@ -523,7 +523,7 @@ def erkek_jel(z):
            G(rc(760, 250, 14, 48, 3), fl('#6b7a90')),
            p=K((0, [300, 0, 0]), (T(2), [300, 0, 0]), (T(2, .8), [0, 0, 0]), (T(4, .2), [0, 0, 0]), (T(4, .5), [300, 0, 0])))
     # başparmak üstten, işaret parmağı alttan glansı sıkıştırır (jel üretrada kalsın, lidokain etki etsin)
-    A.ekle('parmak', parmak_ucu(470, 134, -90, 1.1), parmak_ucu(470, 366, 90, 1.1), o=A.gor(T(4, .3)),
+    A.ekle('parmak', parmak_ucu(470, 138, -90, 1.7), parmak_ucu(470, 362, 90, 1.7), o=A.gor(T(4, .3)),
            p=K((0, [0, 0, 0]), (T(4, .3), [0, 0, 0]), (T(4, .45), [0, 0, 0])))
     A.sayac(4, .3, 4, 1, 0, 3, 'dk', 680, 120, 1)
     A.etiket(0, 0, 160, 100, 'Prepisyum geri', 'bilgi'); A.etiket(1, 1, 640, 420, 'Meatustan dışa · 3 kez', 'bilgi')
@@ -684,10 +684,7 @@ def mahremiyet(z):
     ], z)
     T = A.T
     zemin(A)
-    A.ekle('yatak', G(rc(390, 250, 480, 150, 14), fl('#9aa6b4')), G(rc(390, 250, 468, 138, 10), gf([(0, '#f4f7fa'), (1, '#d6dee7')], (390, 180), (390, 320))), G(rc(186, 250, 56, 70, 14), fl('#ffffff')))
-    A.ekle('hasta', G(el(205, 250, 52, 48), gf(DERI, (195, 240), (215, 265), radyal=True), st('#b9805a', 1.5)),
-           G(yol('M232 222 L420 220 C432 220 436 280 420 280 L232 278 C222 270 222 230 232 222 Z'), fl('#8fc1c9'), st('#4c8590', 1.5)),
-           G(yol('M420 228 L612 232 L612 268 L420 272 Z'), fl('#7fb0b8')))
+    A.ekle('hasta', *yatan_hasta(220, 290, .95))
     A.ekle('hekim', *kisi(90, 110, olcek=1.0, beyaz=True))
     A.ekle('balon', G(yol('M140 60 L330 60 C344 60 344 110 330 110 L190 110 L160 130 L168 110 L140 110 C126 110 126 60 140 60 Z'), fl('#ffffff'), st('#2f6fd6', 2)),
            o=K((0, 0), (T(0, .1), 0), (T(0, .2), 100), (T(1), 100), (T(1, .1), 0)))
