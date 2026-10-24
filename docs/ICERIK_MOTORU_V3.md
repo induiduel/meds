@@ -724,9 +724,9 @@ kullanıcı izler ve araya girebilir.
 | Aşama | Yapılan | Kalan |
 |---|---|---|
 | Sesli metin kapsamı | `isle.sesli_kapsam`: her içerik/şekil sayfası anlatılır, sayfa başına bilgi maddesi kadar cümle (görselde +1, ≤4); TALIMAT_SESLI "Derinlik" | — |
-| R5 delta | `scripts/ders_isci/delta.py` (iz eşleme → ekler / kısmi / tam), `isle.py` paralel üretimden önce; taslağa `sayfa_izleri.json` | kısmi kipte bilgi paketi güncellenmez; Drive `changes.watch` ve ayrı `Ogrenci_Notu/`, `Hoca_Ses/` klasörleri yok (onay kapısı yüklemesi bunun yerine) |
-| R6 çizim | `scripts/cizim/` (cizim_uret + cizim_dogrula + TALIMAT_CIZIM), ders zinciri `cizim` adımı, `CizimLayer.tsx` (kontur, akış, eğri fazı, şema), sunucu işarete `z` ekler | eğri fazı derste örnek çıkmadı (k2-02'de grafik yok); kroki OpenCV adayları (ok/eğri) istemde henüz kullanılmıyor — Claude görüntüden okuyor, kapı pikselle doğruluyor |
-| R7 paket | `scripts/paket/medspak_uret.py` + `medspak_dogrula.py` (SQLite; ses MP3) | okuyucu uyarlayıcısı (`paketMotoru.ts` `medspak:` türü), Opus dönüşümü (ffmpeg yok) |
+| R5 delta | `scripts/ders_isci/delta.py` (iz eşleme → ekler / kısmi / tam); Drive hızlı bakış `hizli_bakis.py` (5 dk, kök + aktif/sonraki kurul klasörleri, değişiklikte tam tarama) | kısmi kipte bilgi paketi güncellenmez; `changes.watch` için Drive API kimliği yok (herkese açık sayfa okunuyor) — hızlı bakış bunun yerine |
+| R6 çizim | `scripts/cizim/` (cizim_uret + cizim_dogrula + TALIMAT_CIZIM), ders zinciri `cizim` adımı, `CizimLayer.tsx` (kontur, akış, eğri fazı, şema), sunucu işarete `z` ekler; kroki adayları (vektör ok `ok.py`, eğri `egri.py`) istemde `"aday": "A#"` → koordinat betikten | eğri fazı derste örnek çıkmadı (k2-02'de grafik yok) |
+| R7 paket | `scripts/paket/medspak_uret.py` + `medspak_dogrula.py` (SQLite; ses Opus 32 kbps, k2-02 4,4 MB) | okuyucu uyarlayıcısı (`paketMotoru.ts` `medspak:` türü, sql.js) |
 
 k2-02 (62 sayfa): sesli metin 1.628 → **2.189 kelime (~20 dk), 106 cümle**, atlanan sayfa 0; işaret kapsamı **%96**;
-çizim 80 aday → **68 komut** (38 akış, 23 şema, 7 kontur; 12 kapıda atıldı); paket 8,1 MB, 0 HATA. EMA sesi GPU'da ~1 dk.
+çizim (kroki adaylarıyla) 76 aday → **68 komut** (34 akış — 16'sı PDF okundan, 21 şema, 13 kontur; 8 atıldı); paket 4,4 MB (Opus), 0 HATA. EMA sesi GPU'da ~1 dk.
