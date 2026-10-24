@@ -1,15 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 298,
-  "baslik": "Çizim panellerinde hizalı ilişkiler",
+  "onem": 299,
+  "baslik": "Kurul 1 2026-2027 çıkmış sorular: farmakoloji sorusu",
   "maddeler": [
-    "Aynı paneldeki ayrı ilişkiler hizalı sütunlarda (kaynak, ok, sonuç)",
-    "Baskılama oku daha belirgin"
+    "Takrolimus sorusu asıl sınava daha yakın kısa biçimiyle güncellendi"
   ],
   "eklenen": [],
-  "degisen": [
-    "/api/test/kurul1/2627 PDF"
+  "degisen": [],
+  "duzeltilen": [
+    "/api/test/kurul1/2627 soru 97"
   ],
-  "duzeltilen": [],
   "silinen": []
 }

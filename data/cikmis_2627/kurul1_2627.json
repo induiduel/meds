@@ -4351,37 +4351,37 @@
    "ogretim_uyesi": "Prof. Dr. Mehmet Özdemir",
    "durum": "tam",
    "tartismali": false,
-   "kok": "Böbrek nakli yapılan hastada T lenfosit aktivasyonunu baskılamak için başlanan takrolimusun temel etki mekanizması aşağıdakilerden hangisidir?",
+   "kok": "Takrolimusun temel etki mekanizması nedir?",
    "siklar": [
-    "mTOR proteinini inhibe ederek IL-2 yanıtını engellemek",
-    "Dihidrofolat redüktazı inhibe ederek DNA sentezini bozmak",
-    "Kalsinörini inhibe ederek IL-2 gen transkripsiyonunu engellemek",
-    "IL-2 reseptörünün alfa alt birimini (CD25) bloke etmek",
-    "İnozin monofosfat dehidrojenaz enzimini inhibe etmek"
+    "mTOR inhibisyonu",
+    "Dihidrofolat redüktaz inhibisyonu",
+    "Kalsinörin inhibisyonu ile IL-2 transkripsiyonunu engellemek",
+    "IL-2 reseptör blokajı",
+    "IMPDH inhibisyonu"
    ],
    "cevap": "C",
-   "not": "",
+   "not": "Kök ve şıklar grubun cevap anahtarlı PDF'indeki (24.10 16:31) sürüme göre kısaltıldı; asıl sınava daha yakın.",
    "sik_isaretleri": {
     "uretildi": [],
     "supheli": []
    },
    "eslesme": {
     "yontem": "otomatik",
-    "puan": 60.7,
+    "puan": 26.9,
     "ikinci_aday": {
-     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite",
-     "puan": 16.5
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi",
+     "puan": 10.1
     },
     "kanit": [
      {
-      "satir": 270,
-      "metin": "- ==Basiliksimab== aktive T lenfositleri yüzeyindeki IL-2 reseptörü alfa zinciri ==CD25'e bağlanan kimerik fare-insan IgG1'dir==; ==daklizumab== da IL-2 reseptörünün alfa altünitesine bağlanan insansılaştırılmış IgG1'dir. ==İkisi de renal transplant hastalarında akut organ rejeksiyonu profilaksisinde endikedir.==",
-      "puan": 9.6
+      "satir": 358,
+      "metin": "**Klinik & Patofizyolojik Çözüm Notu:** Kalsinörin inhibitörleri (siklosporin, takrolimus) nefrotoksisite açısından majör endişe oluşturur. Renal toksisite genelde gözlenmediği için sirolimus sıklıkla solid organ ve kök hücre transplantasyonunda ilk tercih edilen immünosupresif tedavidir. (Cevap ders notundan belirlenmiştir; sınav anahtarı mevcut değildir.)",
+      "puan": 6.4
      },
      {
-      "satir": 184,
-      "metin": "- Her ikisi de ==mitokondriyal enzim dihidroorotat dehidrojenazı geri dönüşümlü olarak inhibe eder== ve azalmış lenfosit aktivasyonuna yol açar.",
-      "puan": 9.0
+      "satir": 135,
+      "metin": "- Siklosporin siklofiline bağlanırken ==takrolimus FK-bağlayıcı protein (FKBP) immünofilinine bağlanır==; her iki kompleks de NF-AT aktivasyonu için gerekli kalsinörini inhibe eder.",
+      "puan": 5.8
      }
     ]
    },
