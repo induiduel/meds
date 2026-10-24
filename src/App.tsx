@@ -477,6 +477,10 @@ export default function App() {
     return null;
   });
   const [accessToken, setAccessToken] = useState<string | null>(null);
+  // Zorunlu giriş kapısı: hesapsız (misafir) kullanım yok. Oturum durumu çözülünce kullanıcı yoksa giriş ekranı
+  // kapatılamaz biçimde açılır. Tek istisna yapay zekâ test erişimi: sunucunun imzalı HttpOnly çerezi (aiTestErisim.ts).
+  const [authHazir, setAuthHazir] = useState(false);
+  const [aiTest, setAiTest] = useState<boolean | null>(null);
   const [isLoggingIn, setIsLoggingIn] = useState<boolean>(false);
 
   // Drive upload state
@@ -630,6 +634,15 @@ export default function App() {
     }
   }, [loading]);
 
+  useEffect(() => {
+    let iptal = false;
+    fetch('/api/ai-test/durum', { credentials: 'same-origin', cache: 'no-store' })
+      .then((r) => (r.ok ? r.json() : { ok: false }))
+      .then((d) => { if (!iptal) setAiTest(d?.ok === true); })
+      .catch(() => { if (!iptal) setAiTest(false); });
+    return () => { iptal = true; };
+  }, []);
+
   // Initialize Auth on mount
   useEffect(() => {
     try {
@@ -643,6 +656,7 @@ export default function App() {
       (user, token) => {
         setCurrentUser(user);
         setAccessToken(token);
+        setAuthHazir(true);
         // Oturum açılınca: cihazdaki notlar hesabın defterine birleşir, istatistikler hesap yedeğiyle birleştirilir
         // (sunucu birleştirir; yeni/boş cihaz hesabın verisini silmez, diğer cihazlardaki veri buraya gelir).
         setTimeout(() => {
@@ -658,6 +672,7 @@ export default function App() {
           setCurrentUser(null);
           setAccessToken(null);
         }
+        setAuthHazir(true);
       }
     );
     return () => unsubscribe();
@@ -1474,6 +1489,9 @@ export default function App() {
     return () => window.clearTimeout(t);
   }, [justAddedId, questions]);
 
+  // Hesapsız giriş yok: tanıtım/kayıt ekranı kapatılamaz; yapay zekâ test çerezi doğrulanana dek de açık kalır
+  const girisKapisi = !currentUser && aiTest !== true && (showOnboarding || (authHazir && aiTest === false));
+
   return (
     <GlossaryProvider>
     <MusicPlayerProvider>
@@ -1482,14 +1500,11 @@ export default function App() {
           <GirisUyarisi onKabul={() => setGirisUyarisi(false)} />
         </Suspense>
       )}
-      {showOnboarding && !currentUser && <Onboarding onAuthSuccess={handleAuthSuccess} onClose={() => {
-        try { sessionStorage.setItem('medsoru_tanitim_kapatildi', '1'); } catch { /* özel pencere */ }
-        setShowOnboarding(false); setIsAuthModalOpen(false);
-      }} />}
+      {girisKapisi && <Onboarding onAuthSuccess={handleAuthSuccess} />}
       {/* Başarım: dönem/kurul seçimi (girişte zorunlu) + ödül kutlamaları */}
-      {currentUser?.uid && (
+      {(currentUser?.uid || aiTest) && !girisKapisi && (
         <Suspense fallback={null}>
-          <BasarimKatmani uid={currentUser.uid} ad={currentUser.displayName} kapali={girisUyarisi} />
+          <BasarimKatmani uid={currentUser?.uid || 'ai-test'} ad={currentUser?.displayName} kapali={girisUyarisi} />
         </Suspense>
       )}
       {showTour && (
@@ -1498,7 +1513,7 @@ export default function App() {
         </Suspense>
       )}
       {/* v13 "Ada" daveti: açılışta bir kez sorulur (başka pencere açıkken beklenir) */}
-      {!girisUyarisi && !showTour && !(showOnboarding && !currentUser) && !getAppearance().v13Asked && (
+      {!girisUyarisi && !showTour && !girisKapisi && !getAppearance().v13Asked && (
         <Suspense fallback={null}>
           <V13Invite />
         </Suspense>
@@ -1626,7 +1641,6 @@ export default function App() {
       <main ref={mainRef} className={`sh-main ${activeTab === 'ai_chat' ? 'ms-chat-main' : ''}`}>
 
         {/* Bölüm adı üst çubukta görünür (kabuğun grup etiketi); sayfa içinde ayrıca şerit yok (kullanıcı kararı 2026-10-21) */}
-
         {/* Merkez sayfaları: /dersler · /sorular · /kamplar[/kurulN] · /kaynaklar */}
         {(activeTab === 'hub_dersler' || activeTab === 'hub_sorular' || activeTab === 'hub_kamplar' || activeTab === 'hub_kaynaklar') && (
           <Suspense fallback={<ViewFallback />}>
@@ -1952,6 +1966,13 @@ export default function App() {
           </Suspense>
         )}
 
+        {/* TAB: /sinav-plani (görünen /kamplar/sinav-plani) — en az 60 için kişiye özel yol haritası */}
+        {activeTab === 'sinav_plani' && (
+          <Suspense fallback={<ViewFallback />}>
+            <SinavPlaniView />
+          </Suspense>
+        )}
+
         {/* TAB: /bitirdiklerim — konu konu kontrol listesi, süre, soru ve kalan tahmini */}
         {activeTab === 'bitirdiklerim' && (
           <Suspense fallback={<ViewFallback />}>
@@ -1963,13 +1984,6 @@ export default function App() {
         {activeTab === 'olasi_sorular' && (
           <Suspense fallback={<ViewFallback />}>
             <OlasiSorularView uid={currentUser?.uid} />
-          </Suspense>
-        )}
-
-        {/* TAB: /sinav-plani (görünen /kamplar/sinav-plani) — en az 60 için kişiye özel yol haritası */}
-        {activeTab === 'sinav_plani' && (
-          <Suspense fallback={<ViewFallback />}>
-            <SinavPlaniView />
           </Suspense>
         )}
 
