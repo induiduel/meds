@@ -35,6 +35,31 @@ sys.path.insert(0, str(MEDS / "scripts" / "cizim"))
 sys.path.insert(0, str(MEDS / "scripts" / "paket"))
 
 
+def json_kilitli_guncelle(yol: Path, varsayilan, guncelle_fn):
+    import fcntl
+    yol.parent.mkdir(parents=True, exist_ok=True)
+    lock_yol = yol.with_suffix(yol.suffix + ".lock")
+    with open(lock_yol, "w", encoding="utf-8") as lf:
+        fcntl.flock(lf, fcntl.LOCK_EX)
+        try:
+            mevcut = json.loads(yol.read_text(encoding="utf-8")) if yol.exists() else varsayilan
+        except Exception:
+            mevcut = varsayilan
+        yeni = guncelle_fn(mevcut)
+        tmp = yol.with_suffix(yol.suffix + f".{os.getpid()}.tmp")
+        tmp.write_text(json.dumps(yeni, ensure_ascii=False, indent=2), encoding="utf-8")
+        tmp.replace(yol)
+        return yeni
+
+
+def gpu_kilit_al():
+    import fcntl
+    kilit_yol = Path("/tmp/meds_arsiv_gpu.lock")
+    f = open(kilit_yol, "w", encoding="utf-8")
+    fcntl.flock(f, fcntl.LOCK_EX)
+    return f
+
+
 def fnv(s: str) -> str:
     h = 2166136261
     b = s.encode("utf-16-le")
@@ -206,6 +231,7 @@ def kelime_zaman_yerel(key: str, pars: list[dict], mp3_yol: Path, zamanlama: lis
         for lib_d in (site_pkgs / "nvidia").glob("*/lib"):
             ld_paths.append(str(lib_d))
     env = os.environ.copy()
+    env.pop("CUDA_VISIBLE_DEVICES", None)
     if ld_paths:
         env["LD_LIBRARY_PATH"] = ":".join(ld_paths + ([env["LD_LIBRARY_PATH"]] if env.get("LD_LIBRARY_PATH") else []))
     kod = f"""
@@ -413,9 +439,9 @@ def cizim_dogrula_ve_yerlestir(taslak: Path, key: str, pdf_yol: Path, pars: list
     import cizim_uret as CU
     import sablon as SB
 
+    doc = pymupdf.open(pdf_yol)
     aday_yol = taslak / "cizim_aday.json"
     komutlar = json.loads(aday_yol.read_text(encoding="utf-8")).get("komutlar", []) if aday_yol.exists() else []
-    doc = pymupdf.open(pdf_yol)
 
     # Cümle sözlüğü P<i>.C<j> ve k<N>-<NN>-c<NNNN> eşlemesi
     from pdf_isaret import Sayfa, cumle_sonlari
@@ -721,33 +747,37 @@ def main() -> int:
         encoding="utf-8"
     )
 
-    # 3. EMA GPU ses üretimi
-    print(f"[{a.key}] 3/6 EMA GPU ses sentezi çalıştırılıyor...")
-    ema_cmd = [
-        "bash", str(MEDS / "scripts" / "patoloji_cozucu" / "cozucu_ses_gpu.sh"),
-        str(MEDS / "scripts" / "arsiv_25_26" / "ema_yerel_uret.py"),
-        "--key", a.key,
-        "--metin", str(SA_KOK / "metin" / f"{a.key}.md"),
-        "--kok", str(SA_KOK),
-    ]
-    if a.ses_zorla:
-        ema_cmd.append("--zorla")
-    r = subprocess.run(ema_cmd, cwd=MEDS)
-    if r.returncode != 0:
-        print(f"HATA: EMA GPU ses üretimi başarısız (kod {r.returncode})", file=sys.stderr)
-        return r.returncode
+    # 3. EMA GPU ses üretimi (çapraz oturum GPU kilidi ile)
+    print(f"[{a.key}] 3/6 EMA GPU ses sentezi çalıştırılıyor (GPU kilidi bekleniyor)...")
+    _gpu_lock = gpu_kilit_al()
+    try:
+        ema_cmd = [
+            "bash", str(MEDS / "scripts" / "patoloji_cozucu" / "cozucu_ses_gpu.sh"),
+            str(MEDS / "scripts" / "arsiv_25_26" / "ema_yerel_uret.py"),
+            "--key", a.key,
+            "--metin", str(SA_KOK / "metin" / f"{a.key}.md"),
+            "--kok", str(SA_KOK),
+        ]
+        if a.ses_zorla:
+            ema_cmd.append("--zorla")
+        r = subprocess.run(ema_cmd, cwd=MEDS)
+        if r.returncode != 0:
+            print(f"HATA: EMA GPU ses üretimi başarısız (kod {r.returncode})", file=sys.stderr)
+            return r.returncode
 
-    kayit = json.loads((SA_KOK / "kayit.json").read_text(encoding="utf-8"))
-    varyant = kayit[a.key][0]
-    mp3_yol = SA_KOK / "ses" / a.key / f"{varyant['id']}.mp3"
+        kayit = json.loads((SA_KOK / "kayit.json").read_text(encoding="utf-8"))
+        varyant = kayit[a.key][0]
+        mp3_yol = SA_KOK / "ses" / a.key / f"{varyant['id']}.mp3"
 
-    # 4. Cümle zamanı, Kelime zamanı (GPU), PDF işaret, Çıkmış konum ve Canlı Çizim
-    print(f"[{a.key}] 4/6 Cümle zamanı, kelime zamanı, PDF işareti, çıkmış konum ve canlı çizim üretiliyor...")
-    metin_sha1 = hashlib.sha1("\n".join(p["t"] for p in pars).encode("utf-8")).hexdigest()
-    cz_zaman = cumle_zaman_yerel(a.key, pars, mp3_yol, varyant["zamanlama"], metin_sha1)
-    (SA_KOK / "cumle_zaman" / f"{a.key}.json").write_text(json.dumps(cz_zaman, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+        # 4. Cümle zamanı, Kelime zamanı (GPU), PDF işaret, Çıkmış konum ve Canlı Çizim
+        print(f"[{a.key}] 4/6 Cümle zamanı, kelime zamanı, PDF işareti, çıkmış konum ve canlı çizim üretiliyor...")
+        metin_sha1 = hashlib.sha1("\n".join(p["t"] for p in pars).encode("utf-8")).hexdigest()
+        cz_zaman = cumle_zaman_yerel(a.key, pars, mp3_yol, varyant["zamanlama"], metin_sha1)
+        (SA_KOK / "cumle_zaman" / f"{a.key}.json").write_text(json.dumps(cz_zaman, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
-    kz = kelime_zaman_yerel(a.key, pars, mp3_yol, varyant["zamanlama"], metin_sha1)
+        kz = kelime_zaman_yerel(a.key, pars, mp3_yol, varyant["zamanlama"], metin_sha1)
+    finally:
+        _gpu_lock.close()
     isr = pdf_isaret_yerel(a.key, pars, pdf_yol, hz, capalar_list, metin_sha1)
     ck = cikmis_konum_yerel(a.key, pars, v2, baglam, metin_sha1)
     cz = cizim_dogrula_ve_yerlestir(taslak, a.key, pdf_yol, pars, capalar_list, metin_sha1, v2)
@@ -790,9 +820,8 @@ def main() -> int:
     })
     (paket_dir / f"{a.key}.json").write_text(json.dumps(paket_obj, ensure_ascii=False, indent=1), encoding="utf-8")
 
-    # dersler.json güncelle (data/arsiv_25_26/sesli_anlatim/dersler.json)
+    # dersler.json güncelle (data/arsiv_25_26/sesli_anlatim/dersler.json) — fcntl kilitli
     dersler_yol = SA_KOK / "dersler.json"
-    dersler = json.loads(dersler_yol.read_text(encoding="utf-8")) if dersler_yol.exists() else []
     ders_kaydi = {
         "key": a.key,
         "donem": "2025-2026",
@@ -806,9 +835,13 @@ def main() -> int:
         "desteId": deste_id,
         "sayfaSayisi": int(baglam["sayfa"]),
     }
-    dersler = [d for d in dersler if d.get("key") != a.key] + [ders_kaydi]
-    dersler.sort(key=lambda x: (int(x.get("kurul") or 2), int(x.get("sira") or 0)))
-    dersler_yol.write_text(json.dumps(dersler, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    def _dersler_guncelle(mevcut_l):
+        yeni_l = [d for d in (mevcut_l or []) if d.get("key") != a.key] + [ders_kaydi]
+        yeni_l.sort(key=lambda x: (int(x.get("kurul") or 2), int(x.get("sira") or 0)))
+        return yeni_l
+
+    json_kilitli_guncelle(dersler_yol, [], _dersler_guncelle)
 
     # 6. Güncelleme Günlüğü + .medspak üretimi ve doğrulaması
     print(f"[{a.key}] 6/6 Güncelleme günlüğü ve .medspak üretiliyor...")
