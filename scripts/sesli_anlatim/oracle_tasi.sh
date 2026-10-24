@@ -22,7 +22,7 @@ echo "    çalışan iş kalmadı"
 UCRETLI=$(python3 -c "import json;print(1 if json.load(open('$MEDS_DIR/data/sesli_anlatim/ayar.json')).get('ucretliAktif') else 0)" 2>/dev/null || echo 0)
 
 echo "==> [2/5] data/sesli_anlatim → Oracle (ayar.json hariç)"
-rsync -az --rsync-path="sudo rsync" --exclude='ayar.json' --exclude='*.tmp' \
+rsync -az --rsync-path="sudo rsync" --chown=ubuntu:ubuntu --exclude='ayar.json' --exclude='*.tmp' \
   "$MEDS_DIR/data/sesli_anlatim/" "medsor-oracle:$KOK/"
 
 echo "==> [3/5] Oracle: durdurma nedeniyle bekleyen işler sıraya, işçi açık, ücretli üretim=$UCRETLI"

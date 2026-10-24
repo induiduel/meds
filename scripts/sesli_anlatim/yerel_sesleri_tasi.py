@@ -43,7 +43,7 @@ if KURU:
 
 liste = "\n".join(dosyalar + (["ornek/"] if "--ornek" in sys.argv else []))
 if dosyalar or "--ornek" in sys.argv:
-    subprocess.run(["rsync", "-az", "--rsync-path=sudo rsync", "--files-from=-", "-r", f"{KOK}/", f"medsor-oracle:{UZAK}/"],
+    subprocess.run(["rsync", "-az", "--rsync-path=sudo rsync", "--chown=ubuntu:ubuntu", "--files-from=-", "-r", f"{KOK}/", f"medsor-oracle:{UZAK}/"],
                    input=liste, text=True, check=True, timeout=7200)
 
 # Oracle'da birleştir: MP3'ü gelmiş ve kayıtta olmayan varyantı sona ekle (atomik)

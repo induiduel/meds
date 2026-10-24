@@ -444,7 +444,7 @@ def a_oracle(d, pk, W, kuru):
     hedef, r = "/home/ubuntu/medsor/meds/data", 0
     for alt in (f"{W.name}_cozucu", f"{W.name}_asistan"):
         if (MEDS / "data" / alt).exists() or kuru:
-            r = r or calistir(f"rsync -az --rsync-path='sudo rsync' {MEDS}/data/{alt}/ medsor-oracle:{hedef}/{alt}/", kuru=kuru)
+            r = r or calistir(f"rsync -az --rsync-path='sudo rsync' --chown=ubuntu:ubuntu {MEDS}/data/{alt}/ medsor-oracle:{hedef}/{alt}/", kuru=kuru)
     if r or kuru:
         return r
     # H11: ses gerçekten canlıda mı (404 olursa tarayıcı sesine düşüyordu) — bu dersin rastgele 5 klibi
@@ -491,7 +491,7 @@ def a_capa(d, pk, W, kuru):
     if r or kuru:
         return r
     shutil.copy(C / "capa.json", S / "capa" / f"{key}.json")
-    return calistir(f"rsync -az --rsync-path='flock /tmp/meds-deploy.lock sudo rsync' {S}/capa/{key}.json {uz}/capa/", kuru=kuru)
+    return calistir(f"rsync -az --rsync-path='flock /tmp/meds-deploy.lock sudo rsync' --chown=ubuntu:ubuntu {S}/capa/{key}.json {uz}/capa/", kuru=kuru)
 
 
 def a_cizim(d, pk, W, kuru):
@@ -511,7 +511,7 @@ def a_cizim(d, pk, W, kuru):
                       f"--isaret {S}/isaret/{key}.json --is-dizini {W}/cizim/{d['kod']}", cwd=MEDS, kuru=kuru)
     if r:
         return r
-    return calistir(f"rsync -az --rsync-path='flock /tmp/meds-deploy.lock sudo rsync' {S}/cizim/{key}.json {uz}/cizim/", kuru=kuru)
+    return calistir(f"rsync -az --rsync-path='flock /tmp/meds-deploy.lock sudo rsync' --chown=ubuntu:ubuntu {S}/cizim/{key}.json {uz}/cizim/", kuru=kuru)
 
 
 IS = {"hazirla": a_hazirla, "onem": a_onem, "cozucu": a_cozucu, "denetim": a_denetim, "birlestir": a_birlestir,

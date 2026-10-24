@@ -114,7 +114,7 @@ for k in metin hizalama vurgu capa ogrenci_not cikmis_konum; do
   if [[ -n "$(git -C "$MEDS_DIR" status --porcelain -- "$SA/$k" 2>/dev/null)" ]]; then
     echo "  ATLANDI $k: commit'lenmemiş değişiklik var (önce commit edin)"; continue
   fi
-  n=$(rsync -az --checksum --rsync-path='sudo rsync' --out-format='%i %n' -e "$SSH" \
+  n=$(rsync -az --checksum --rsync-path='sudo rsync' --chown=ubuntu:ubuntu --out-format='%i %n' -e "$SSH" \
     "$MEDS_DIR/$SA/$k/" "$ORACLE_USER@$ORACLE_HOST:$ORACLE_DIR/$SA/$k/" | grep -c '^>f' || true)
   echo "  $k: $n dosya"
 done
