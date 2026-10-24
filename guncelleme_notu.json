@@ -1,16 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 283,
-  "baslik": "Sığmayan çizim panelleri sayfa altında",
+  "onem": 284,
+  "baslik": "Kurul 1 2026-2027 çıkmış sorular PDF",
   "maddeler": [
-    "Slaytta yer yoksa açıklama paneli artık gizlenmiyor: slayt altına aynı renkte alan eklenip panel oraya konuyor",
-    "Slaytın kendisi, vurgular ve işaretçi yerinde kalıyor"
+    "Kurul 1 2026-2027 sınavından toplanan 73 soru, ders aralıklarına yerleştirilmiş PDF olarak eklendi",
+    "Toplanamayan sorular ve tartışmalı cevaplar PDF içinde işaretli"
   ],
-  "eklenen": [],
-  "degisen": [
-    "Oklar boş alandan kavisle geçiyor ve hedefi ince bir halkayla gösteriyor; şema ve etiketler sayfanın boş yerine yerleşiyor, yazı ve resimlerin üstüne binmiyor.",
-    "Çizgiler inceldi, kırmızı işaretçi küçüldü."
+  "eklenen": [
+    "/api/test/kurul1/2627 adresinden açılan çıkmış sorular PDF’i"
   ],
+  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }

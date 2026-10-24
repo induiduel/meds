@@ -698,6 +698,16 @@ app.get('/api/surum', (_req, res) => {
 
 registerAiTestRoutes(app);
 
+// Kurul 1 2026-2027 çıkmış sorular PDF'i (scripts/cikmis_2627/uret.py üretir)
+app.get('/api/test/kurul1/2627', (req, res) => {
+  const file = path.join(__dirname, 'data', 'cikmis_2627', 'kurul1_2627.pdf');
+  if (!fs.existsSync(file)) return res.status(404).json({ error: 'Bulunamadı' });
+  res.setHeader('Cache-Control', 'no-cache');
+  res.setHeader('Content-Disposition', 'inline; filename="kurul1_2026-2027_cikmis.pdf"');
+  res.type('application/pdf');
+  res.sendFile(file);
+});
+
 // Hybrid Database & Server Health Check
 app.get('/api/health', (req, res) => {
   res.json({
