@@ -1,12 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 310,
-  "baslik": "Sesli derste anlaşılır paneller ve sakin ekran",
+  "onem": 311,
+  "baslik": "Telefonda okunur paneller",
   "maddeler": [
-    "Paneller anlamına göre çiziliyor: tetkik, tedavi ve bulgu eşleşmeleri başlıklı tablolarda; sıralı öğeler numaralı, ayrı satırlar kesikli çizgiyle ayrık",
-    "Her panel ayrıca tıbbi doğruluk açısından denetleniyor",
-    "Ders oynarken yalnız anlatılan paragraf öne çıkıyor; slayt daha geniş",
-    "Slayt anlatılan satırı kaçırmadan takip ediyor"
+    "Çizim panellerinin yazısı telefonda da okunur boyutta"
   ],
   "eklenen": [],
   "degisen": [
