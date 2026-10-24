@@ -11,7 +11,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import lottie_uret as LU  # noqa: E402
-from lottie_dsl import FR, Anim, G, K, KD, S, el, fl, fl_cift, gf, ic_ekle, parmak_ucu, rc, st, tm, yol, yol_morph, yumruk  # noqa: E402
+from lottie_dsl import FR, Anim, G, K, KD, S, el, fl, fl_cift, gf, ic_ekle, kisi, parmak_ucu, rc, st, tm, yol, yol_morph, yumruk  # noqa: E402
 
 MEDS = Path(__file__).resolve().parents[2]
 VERI = MEDS / 'src/data/kmb'
@@ -37,15 +37,6 @@ def belir(A, b, fr=0.0, son=None):
     if son is not None:
         ks += [(A.T(son, 1) + 4, 100), (A.T(son, 1) + 12, 0)]
     return K(*ks)
-
-
-def kisi(x, y, renk='#8fc1c9', olcek=1.0, beyaz=False):
-    """Basit insan figürü (önden): baş, saç, gövde, kollar."""
-    s = olcek
-    return [G(yol(f'M{x - 30 * s} {y + 70 * s} C{x - 30 * s} {y + 30 * s} {x + 30 * s} {y + 30 * s} {x + 30 * s} {y + 70 * s} L{x + 36 * s} {y + 150 * s} L{x - 36 * s} {y + 150 * s} Z'),
-              fl('#ffffff' if beyaz else renk), st('#7d8aa0', 1.5)),
-            G(el(x, y, 44 * s, 46 * s), gf(DERI, (x - 6, y - 6), (x + 10, y + 14), radyal=True), st('#b9805a', 1.2)),
-            G(yol(f'M{x - 22 * s} {y - 4 * s} C{x - 20 * s} {y - 30 * s} {x + 20 * s} {y - 30 * s} {x + 22 * s} {y - 4 * s} C{x + 12 * s} {y - 14 * s} {x - 12 * s} {y - 14 * s} {x - 22 * s} {y - 4 * s} Z'), fl('#3b2a1e'))]
 
 
 def carpi(A, x, y, b, fr=0.3, r=36):

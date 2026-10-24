@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from lottie_dsl import FR, Anim, G, K, KD, S, el, fl, fl_cift, gf, parmak_ucu, rc, st, tm, yol, yol_morph, yumruk  # noqa: E402
+from lottie_dsl import FR, Anim, G, K, KD, S, el, fl, fl_cift, gf, kisi, parmak_ucu, rc, st, tm, yol, yol_morph, yumruk  # noqa: E402
 
 MEDS = Path(__file__).resolve().parents[2]
 CIKTI = MEDS / 'src/data/kmb/lottie'
@@ -457,7 +457,7 @@ def kadin_temizlik(z):
     def pens(bez='#8a3a12'):
         """Gazlı bez (pens ucunda, antiseptikli) + pens kolları + mavi (steril olmayan) eldivenli el."""
         return [G(yol('M8 4 L150 92 M12 -4 L156 80'), st('#7d8794', 4)), G(el(158, 92, 16, 16), st('#7d8794', 3)), G(el(164, 80, 16, 16), st('#7d8794', 3)),
-                yumruk(170, 100, .5, 32, steril=False), G(el(0, 0, 40, 34), fl(bez), st('#5c2508', 1.5)), G(el(-6, -6, 14, 9), fl('#c46a2c', o=70))]
+                yumruk(178, 106, .8, 32, steril=False), G(el(0, 0, 40, 34), fl(bez), st('#5c2508', 1.5)), G(el(-6, -6, 14, 9), fl('#c46a2c', o=70))]
     for i in range(3):
         e = K((0, 0), (T(1 + i), 0), (T(1 + i, .9), 100))
         A.ekle(f'iz{i}', G(yol(SPIRAL), st(renkler[i], 6 - i, o=70), tm(e)), o=K((0, 100), (T(4), 100), (T(4, .3), 0)))
@@ -516,7 +516,7 @@ def erkek_jel(z):
     for i in range(3):
         A.ekle(f'temiz{i}', G(yol(spr), st(['#7a3410', '#9a4a18', '#b5551d'][i], 5, o=70), tm(K((0, 0), (T(1, i / 3), 0), (T(1, (i + .9) / 3), 100)))),
                o=K((0, 100), (T(2), 100), (T(2, .2), 0)))
-        A.ekle(f'bez{i}', G(yol('M8 4 L150 92 M12 -4 L156 80'), st('#7d8794', 4)), yumruk(170, 100, .5, 32, steril=False),
+        A.ekle(f'bez{i}', G(yol('M8 4 L150 92 M12 -4 L156 80'), st('#7d8794', 4)), yumruk(178, 106, .8, 32, steril=False),
                G(el(0, 0, 36, 30), fl(['#7a3410', '#9a4a18', '#b5551d'][i]), st('#5c2508', 1.5)),
                p=A.boyunca(spr, T(1, i / 3), T(1, (i + .9) / 3), 50), o=K((0, 0), (T(1, i / 3) - 2, 0), (T(1, i / 3), 100), (T(1, (i + .9) / 3), 100), (T(1, (i + .95) / 3), 0)))
     A.ekle('jel', G(rc(680, 250, 150, 36, 6), fl('#eef3f8', .92), st('#6b7a90', 2)), G(rc(670, 250, 110, 24), fl('#cfe6ff', .9)), G(rc(590, 250, 40, 10, 2), fl('#9aa6b4')),
@@ -688,14 +688,13 @@ def mahremiyet(z):
     A.ekle('hasta', G(el(205, 250, 52, 48), gf(DERI, (195, 240), (215, 265), radyal=True), st('#b9805a', 1.5)),
            G(yol('M232 222 L420 220 C432 220 436 280 420 280 L232 278 C222 270 222 230 232 222 Z'), fl('#8fc1c9'), st('#4c8590', 1.5)),
            G(yol('M420 228 L612 232 L612 268 L420 272 Z'), fl('#7fb0b8')))
-    A.ekle('hekim', G(yol('M50 150 C50 120 130 120 130 150 L138 270 L42 270 Z'), fl('#ffffff'), st('#9aa6b4', 1.5)), G(el(90, 104, 48, 48), gf(DERI, (80, 95), (100, 115), radyal=True), st('#b9805a')))
+    A.ekle('hekim', *kisi(90, 110, olcek=1.0, beyaz=True))
     A.ekle('balon', G(yol('M140 60 L330 60 C344 60 344 110 330 110 L190 110 L160 130 L168 110 L140 110 C126 110 126 60 140 60 Z'), fl('#ffffff'), st('#2f6fd6', 2)),
            o=K((0, 0), (T(0, .1), 0), (T(0, .2), 100), (T(1), 100), (T(1, .1), 0)))
     for i in range(3):
         A.ekle(f'paravan{i}', G(rc(0, 0, 32, 400, 4), fl('#e6eef7', .9), st('#7d8aa0', 2)),
                p=K((0, [880, 250, 0]), (T(1, .1 + i * .1), [880, 250, 0]), (T(1, .5 + i * .1), [680 + i * 34, 250, 0])))
-    A.ekle('yardimci', G(yol('M640 380 C640 356 700 356 700 380 L706 468 L634 468 Z'), fl('#8fc1c9'), st('#4c8590')), G(el(670, 340, 40, 40), gf(DERI, (662, 332), (678, 350), radyal=True), st('#b9805a')),
-           p=K((0, [200, 0, 0]), (T(2), [200, 0, 0]), (T(2, .4), [0, 0, 0])))
+    A.ekle('yardimci', *kisi(670, 330, '#8fc1c9', .9, sac='#5a3a24'), p=K((0, [200, 0, 0]), (T(2), [200, 0, 0]), (T(2, .4), [0, 0, 0])))
     A.etiket(0, 0, 235, 85, 'Tanıt · anlat · onam', 'bilgi'); A.etiket(1, 1, 700, 30, 'Paravan', 'bilgi')
     A.etiket(2, 2, 660, 488, 'Yardımcı personel', 'dogru')
     # kamera: bölüm başında ilgili bölgeye yumuşak yakınlaşma

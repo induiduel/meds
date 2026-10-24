@@ -1,16 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 319,
-  "baslik": "KMB videoları akıcı: donma giderildi",
+  "onem": 320,
+  "baslik": "KMB videolarında daha gerçekçi figürler",
   "maddeler": [
-    "Animasyonlar artık saniyede 60 kare akıyor (önceden 10 kareydi)",
-    "Canvas çizim: mobil ve tablette çok daha hafif",
-    "Görünmeyen katmanlar hesaplanmıyor; delikli örtü opak"
+    "Hekim (beyaz önlük, steteskop) ve hemşire figürleri yeniden çizildi",
+    "Pensli gazlı bezi tutan eller büyütüldü"
   ],
   "eklenen": [],
-  "degisen": [],
-  "duzeltilen": [
-    "/dersler/kmb videolarında donma"
+  "degisen": [
+    "/dersler/kmb videoları"
   ],
+  "duzeltilen": [],
   "silinen": []
 }

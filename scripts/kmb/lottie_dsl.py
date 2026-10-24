@@ -426,3 +426,41 @@ def parmak_ucu(cx, cy, r=0, s=1.0, steril=True):
     return G(G(yol('M0 -17 C-14 -17 -20 -8 -20 0 C-20 8 -14 17 0 17 L150 20 L150 -20 Z'), gf(g, (0, -20), (0, 20)), st(k, 2)),
              G(yol('M34 -15 C38 -6 38 6 34 15'), st(k, 1.3, o=70)), G(yol('M84 -17 C88 -6 88 6 84 17'), st(k, 1.3, o=70)),
              G(yol('M-8 -10 C0 -14 16 -14 28 -12'), st('#ffffff', 2.5, o=60)), p=(cx, cy), s=(100 * s, 100 * s), r=r)
+
+
+DERI = [(0, '#f6d6bd'), (.7, '#e9b896'), (1, '#d49a76')]
+
+
+def kisi(x, y, renk='#8fc1c9', olcek=1.0, beyaz=False, sac='#3b2a1e'):
+    """İnsan figürü (önden, bele kadar): omuzlu gövde, boyun, kulaklı baş, yüz, saç, kollar ve eller.
+    beyaz=True: beyaz önlüklü hekim (yaka, cep, steteskop); değilse renkli forma (V yaka)."""
+    s = olcek
+    P = lambda dx, dy: f'{x + dx * s:.1f} {y + dy * s:.1f}'  # noqa: E731
+    koyu = '#7d8aa0' if beyaz else '#4c8590'
+    giysi = [(0, '#ffffff'), (1, '#dbe3ec')] if beyaz else [(0, renk), (1, renk)]
+    parca = [
+        # kollar (gövdenin arkasında)
+        G(yol(f'M{P(-44, 60)} C{P(-58, 80)} {P(-60, 120)} {P(-56, 146)} L{P(-40, 148)} C{P(-40, 120)} {P(-38, 96)} {P(-30, 76)} Z'), gf(giysi, (x - 50 * s, y + 60 * s), (x - 40 * s, y + 150 * s)), st(koyu, 1.2)),
+        G(yol(f'M{P(44, 60)} C{P(58, 80)} {P(60, 120)} {P(56, 146)} L{P(40, 148)} C{P(40, 120)} {P(38, 96)} {P(30, 76)} Z'), gf(giysi, (x + 50 * s, y + 60 * s), (x + 40 * s, y + 150 * s)), st(koyu, 1.2)),
+        G(el(x - 48 * s, y + 152 * s, 16 * s, 16 * s), fl('#e9b896')), G(el(x + 48 * s, y + 152 * s, 16 * s, 16 * s), fl('#e9b896')),
+        # boyun
+        G(rc(x, y + 30 * s, 18 * s, 26 * s, 6 * s), fl('#e2a983')),
+        # gövde (omuzlar)
+        G(yol(f'M{P(-46, 156)} C{P(-50, 80)} {P(-42, 50)} {P(-14, 40)} L{P(14, 40)} C{P(42, 50)} {P(50, 80)} {P(46, 156)} Z'), gf(giysi, (x, y + 40 * s), (x, y + 156 * s)), st(koyu, 1.5)),
+    ]
+    if beyaz:
+        parca += [G(yol(f'M{P(-14, 40)} L{P(0, 74)} L{P(14, 40)}'), fl('#8fc1c9')),
+                  G(yol(f'M{P(-14, 40)} L{P(-4, 92)} M{P(14, 40)} L{P(4, 92)}'), st('#b9c4d0', 1.5)),
+                  G(rc(x + 26 * s, y + 104 * s, 16 * s, 14 * s, 2), st('#b9c4d0', 1.2)),
+                  G(yol(f'M{P(-12, 44)} C{P(-26, 70)} {P(-18, 100)} {P(-8, 106)} M{P(12, 44)} C{P(22, 70)} {P(14, 96)} {P(4, 104)}'), st('#3e4a58', 2.2)),
+                  G(el(x - 6 * s, y + 108 * s, 10 * s, 10 * s), fl('#9aa6b4'), st('#3e4a58', 1.5))]
+    else:
+        parca += [G(yol(f'M{P(-14, 40)} L{P(0, 62)} L{P(14, 40)} Z'), fl('#e2a983')), G(rc(x - 22 * s, y + 100 * s, 16 * s, 12 * s, 2), st(koyu, 1.2))]
+    parca += [
+        G(el(x - 23 * s, y + 2 * s, 8 * s, 12 * s), fl('#e2a983')), G(el(x + 23 * s, y + 2 * s, 8 * s, 12 * s), fl('#e2a983')),
+        G(el(x, y, 44 * s, 50 * s), gf(DERI, (x - 6 * s, y - 8 * s), (x + 10 * s, y + 18 * s), radyal=True), st('#b9805a', 1)),
+        G(el(x - 8 * s, y + 2 * s, 4 * s, 4 * s), fl('#3b2a1e')), G(el(x + 8 * s, y + 2 * s, 4 * s, 4 * s), fl('#3b2a1e')),
+        G(yol(f'M{P(-7, 13)} C{P(-3, 16)} {P(3, 16)} {P(7, 13)}'), st('#a8705f', 1.4)),
+        G(yol(f'M{P(-23, -2)} C{P(-26, -30)} {P(26, -30)} {P(23, -2)} C{P(18, -14)} {P(6, -18)} {P(-4, -16)} C{P(-12, -14)} {P(-18, -10)} {P(-23, -2)} Z'), fl(sac)),
+    ]
+    return parca
