@@ -558,6 +558,11 @@ def _isle_tek(j: dict) -> dict:
         istem = "Kota/kesinti nedeniyle yarım kaldın. Klasördeki mevcut dosyalara bakıp kaldığın yerden devam et; " + istem
     if ayar().get("paralel_uretim", True):
         import paralel
+        try:                      # R5 delta: aynı dersin önceki taslağından yalnız etkilenen parçalar yeniden (delta.py)
+            import delta
+            delta.hazirla(j, d, b)
+        except Exception as e:  # noqa: BLE001  (delta yapılamazsa tam üretim)
+            log(f"delta yapılamadı, tam üretim: {e}")
         ek = ""
         if j.get("ekler"):
             import ekler
