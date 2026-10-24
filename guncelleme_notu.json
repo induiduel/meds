@@ -1,17 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 273,
-  "baslik": "Yeni dersler daha hızlı yakalanıyor; çizimler daha isabetli",
+  "onem": 274,
+  "baslik": "Ders paketini dosyadan açın",
   "maddeler": [
-    "Drive'a eklenen yeni ders PDF'i artık birkaç dakika içinde fark ediliyor.",
-    "Sesli derste canlı çizimler slaytın kendi oklarını ve şekillerini daha doğru izliyor."
+    "Çevrimdışı merkezinde '.medspak' ders paketini bu cihazda açıp sesli anlatımı ekran maddeleri ve vurgularla dinleyebilirsiniz; dosya sunucuya gönderilmez."
   ],
   "eklenen": [
-    "Drive'a eklenen yeni ders PDF'i artık birkaç dakika içinde fark ediliyor."
+    "Çevrimdışı merkezinde '.medspak' ders paketini bu cihazda açıp sesli anlatımı ekran maddeleri ve vurgularla dinleyebilirsiniz; dosya sunucuya gönderilmez."
   ],
-  "degisen": [
-    "Sesli derste canlı çizimler slaytın kendi oklarını ve şekillerini daha doğru izliyor."
-  ],
+  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }

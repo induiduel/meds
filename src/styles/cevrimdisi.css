@@ -233,3 +233,21 @@
 .cv-ilgili li { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 13px; color: var(--color-ink-2); }
 .cv-ilgili li span { min-width: 0; overflow-wrap: anywhere; }
 .cv-ilgili b { color: var(--color-ink); font-weight: 600; }
+
+/* Ders paketi okuyucusu (.medspak, MedspakOkuyucu.tsx) */
+.cv-aciklama { font-size: 14px; line-height: 1.5; color: var(--color-ink-2); margin: 0 0 10px; }
+.mp-okuyucu { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.mp-ozet { font-size: 14px; color: var(--color-ink-2); overflow-wrap: anywhere; }
+.mp-ses { width: 100%; }
+.mp-paragraflar { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; max-height: 60vh; overflow: auto; }
+.mp-paragraflar li { padding: 8px 10px; border-radius: 10px; border: 1px solid transparent; cursor: pointer; }
+.mp-paragraflar li:hover { background: var(--color-field); }
+.mp-paragraflar li.is-etkin { background: var(--color-accent-soft); border-color: var(--color-accent); }
+.mp-cumle { margin: 2px 0; font-size: 14px; line-height: 1.5; color: var(--color-ink); overflow-wrap: anywhere; }
+.mp-cumle.d1 { padding-left: 14px; }
+.mp-cumle.d2 { padding-left: 28px; }
+.mp-vurgu { margin-left: 6px; padding: 0 6px; border-radius: 999px; font-size: 11px; font-style: normal; font-weight: 600;
+  background: var(--color-accent-soft); color: var(--color-accent); white-space: nowrap; }
+.mp-vurgu.is-tuzak { background: color-mix(in srgb, var(--color-bad) 14%, transparent); color: var(--color-bad); }
+.mp-vurgu.is-cikmis { background: color-mix(in srgb, var(--color-warn) 16%, transparent); color: var(--color-warn); }
+.mp-cizim { width: 14px; height: 14px; margin-left: 6px; vertical-align: -2px; color: var(--color-accent); }

@@ -14,6 +14,7 @@ import {
 } from '../../services/cevrimdisi/paketMotoru';
 import { useNetState } from '../../services/net';
 import EsitlemeKarti from './EsitlemeKarti';
+const MedspakOkuyucu = React.lazy(() => import('./MedspakOkuyucu'));
 import { sayfaPaketleri } from '../../services/cevrimdisi/sayfaPaketleri';
 import '../../styles/cevrimdisi.css';
 
@@ -465,6 +466,7 @@ export default function CevrimdisiView() {
       {cihazSay > 0 && <AlanKarti />}
 
       <EsitlemeKarti />
+      <React.Suspense fallback={null}><MedspakOkuyucu /></React.Suspense>
 
       {cihazSay > 0 && (
         <section className="cv-kart cv-tehlike">
