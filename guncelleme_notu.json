@@ -1,17 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 292,
-  "baslik": "Sesli ders ekranında düzen düzeltmeleri",
+  "onem": 293,
+  "baslik": "Kurul 1 2026-2027 çıkmış sorular: abortus sorusu düzeltildi",
   "maddeler": [
-    "Oynatıcı artık anlatılan satırları örtmüyor; slayt kendiliğinden kayıyor",
-    "Telefonda görünüm seçici başlık satırında tek düğme; slayta daha çok yer kalıyor",
-    "Dar slayt bölmesinde “Çiz” düğmesi bozulmuyor",
-    "Çizim panelleri yazı satırlarına yapışmıyor"
+    "Spontan düşük sorusunda radyasyon şıkkı asıl sınavdaki gibi \"2 rad\" olarak düzeltildi"
   ],
   "eklenen": [],
-  "degisen": [
-    "/api/test/kurul1/2627 PDF"
+  "degisen": [],
+  "duzeltilen": [
+    "/api/test/kurul1/2627 abortus sorusu A şıkkı"
   ],
-  "duzeltilen": [],
   "silinen": []
 }
