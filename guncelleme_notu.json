@@ -1,11 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 286,
-  "baslik": "Çizim panelleri her ekranda düzgün",
+  "onem": 287,
+  "baslik": "Telefonda okunur çizim panelleri",
   "maddeler": [
-    "Paneller ve etiketler slaytla aynı oranda büyüyüp küçülüyor; dar ekranda yazının üstüne binmiyor",
-    "Kelimeler harf harf kırılmıyor",
-    "Sığmayan paneller slaytın altına eklenen alanda"
+    "Paneller telefonda da okunur boyutta",
+    "Panel yazıların kenarına bile binmiyor; sığmazsa slayt altındaki alanda",
+    "Slayt altı alan gereğinden uzun değil"
   ],
   "eklenen": [],
   "degisen": [

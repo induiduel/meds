@@ -178,7 +178,7 @@ def panel_tipi(k: dict) -> str:
     return "zincir"
 
 
-EM = 0.0145          # panel yazı boyu = sayfa genişliğinin %1,45'i (pdfDoc.css .pdv-cz-sema 1.45cqw)
+EM = 0.022           # panel yazı boyu = sayfa genişliğinin %2,2si (pdfDoc.css .pdv-cz-sema 2.2cqw)
 
 
 def _bilesenler(k: dict) -> list[tuple[list, list]]:
@@ -216,15 +216,21 @@ def panel_boyu(k: dict, g: float, oran: float) -> float:
         if j:
             toplam += 1.0                        # ayraç + parça boşluğu
         if tip in ("grup", "dal"):
+            anahtar = "b" if tip == "grup" else "a"
             say: dict = {}
             for e in kn:
-                say[e.get("b" if tip == "grup" else "a")] = say.get(e.get("b" if tip == "grup" else "a"), 0) + 1
-            n = max(say.values() or [1])
-            satir_ek = 0
-            for d in dg:                          # dar sütunda uzun düğüm iki satıra iner
-                if gw(d["metin"]) > W * 0.6:
-                    satir_ek += 1
-            toplam += n * (DH + (0.5 if tip == "dal" else 0.3)) + satir_ek * 1.3 + (DH if dar else 0)
+                say[e.get(anahtar)] = say.get(e.get(anahtar), 0) + 1
+            merkez_id = max(say, key=say.get) if say else None
+            merkez = next((d for d in dg if d.get("id") == merkez_id), None)
+            uclar = [d for d in dg if d is not merkez]
+            mw = min(gw(merkez["metin"]) if merkez else 0, W * 0.4)
+            kosul = max([len(e.get("etiket") or "") * 0.45 for e in kn] + [0]) if tip == "dal" else 0
+            sutun = max(4.0, W - 1.8 - mw - (3.8 if tip == "grup" else 1.4) - kosul)     # uçların sütun genişliği
+            for d in uclar:
+                satir = max(1, -(-gw(d["metin"]) // sutun))
+                toplam += satir * 1.3 + 0.65 + (0.5 if tip == "dal" else 0.3)
+            if merkez and gw(merkez["metin"]) > W * 0.4:
+                toplam = max(toplam, 1.6 + (-(-gw(merkez["metin"]) // (W * 0.4))) * 1.3 + 0.65)
         elif tip == "maske":
             toplam += 2 * 1.2 + 2 * DH + 0.6 + (2.2 if dar else 0)
         elif tip == "karsit":
@@ -240,7 +246,7 @@ def panel_boyu(k: dict, g: float, oran: float) -> float:
                         satir += 1; x = 0.0
                     x += w
                 toplam += satir * DH + (satir * 1.2 if any(e.get("etiket") for e in kn) else 0) + (satir - 1) * 0.4
-    return toplam * EM * oran * 1.15            # %15 pay (tarayıcı ölçümünde en çok %31 sapma, maske dar)
+    return toplam * EM * oran * 1.25            # %25 pay: 366–1100 px sayfada ölçülen en büyük sapma %11
 
 
 def oku_panele(k: dict, satirlar: list) -> dict | None:
@@ -392,7 +398,9 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
     if k["tur"] == "sema":
         k = {**k, "tip": panel_tipi(k)}
     if k.get("etiket"):
-        g, h = min(0.3, 0.012 * len(k["etiket"]) + 0.04), 0.034
+        # etiket yazısı sayfa genişliğinin %2,3ü (pdfDoc.css .pdv-cz-etiket 2.3cqw); karakter ≈0,58 em, satır 1,3 em + pay
+        oran_e = r.w / r.h
+        g, h = min(0.42, 0.023 * (0.58 * len(k["etiket"]) + 1.2)), 0.023 * 1.75 * oran_e
         o = k.get("nokta", [k.get("c") or k.get("a") or [0.5, 0.5]])[0] if k["tur"] != "sema" else [0.5, 0.5]
         if k.get("odak"):
             o = [k["odak"][2], k["odak"][1]]
@@ -451,7 +459,7 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
         if k["tip"] in ("maske", "karsit"):
             grup = max(grup, 3)
         oran = r.w / r.h
-        boy = [(g, panel_boyu(k, g, oran)) for g in (0.42, 0.5, 0.6, 0.34, 0.3)]
+        boy = [(g, panel_boyu(k, g, oran)) for g in (0.5, 0.42, 0.6, 0.34, 0.3)]
         # yazının ağırlık merkezi: panel içeriğe yakın, kenara yapışmadan (≥%3 pay) ve boş yerde durur
         ys, xs = np.nonzero(r.ince[::4, ::4])
         mx, my = (xs.mean() * 4 / r.w, ys.mean() * 4 / r.h) if len(xs) else (0.5, 0.5)
@@ -469,8 +477,8 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
                     x, y = xi / 100, yi / 100
                     if any(_kesisir((x, y, x + g, y + h), o) for o in (dolu or [])):
                         continue
-                    dl = r.kutu_doluluk(x - 0.008, y - 0.008, x + g + 0.008, y + h + 0.008)
-                    if dl >= 0.03:
+                    dl = r.kutu_doluluk(x - 0.012, y - 0.012, x + g + 0.012, y + h + 0.012)
+                    if dl >= 0.01:            # yazının kenarına bile binmesin (H46)
                         continue
                     puan = dl * 8 + ((x + g / 2 - mx) ** 2 + (y + h / 2 - my) ** 2) ** 0.5
                     if en is None or puan < en[0]:
@@ -486,14 +494,13 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
             # boş yer yok (genel kural 14, kullanıcı 2026-10-24): panel sayfanın ALTINA eklenen alana konur; görüntüleyici
             # o sayfayı ek_alt kadar uzatır, alanı sayfanın alt kenar rengiyle boyar (slaytın kendisi gibi görünür).
             # Koordinatlar sayfa oranı olarak kalır (y > 1), işaret/vurgu/imleç katmanları etkilenmez.
-            g, h = boy[1]
-            onceki = max([o[3] for o in (dolu or []) if o[1] >= 1.0] + [1.0])
-            x = min(max(0.02, mx - g / 2), 0.98 - g)
-            y = onceki + 0.015
+            g = 0.9                                   # ek alan boş: panel tam genişlikte, en kısa boyda
+            h = panel_boyu(k, g, oran)
+            # her panel yalnız kendi cümlesinde görünür (istemci cümle başına tek şema): ek alandaki paneller aynı yeri
+            # paylaşır, üst üste dizilmez; ek alan sayfadaki en uzun panel kadardır (görüntüleyici sayfa başına en büyüğü alır)
+            x, y = 0.05, 1.015
             k = {**k, "konum": [round(x, 4), round(y, 4)], "genislik": round(g, 3), "doluluk": 0.0,
-                 "ek_alt": round(y + h * 1.1 + 0.03 - 1.0, 4), "ek_renk": r.alt_renk, "kutu_h": round(h * 1.1, 3)}
-            if dolu is not None:
-                dolu.append((x, y, x + g, y + h))
+                 "ek_alt": round(y + h + 0.03 - 1.0, 4), "ek_renk": r.alt_renk, "kutu_h": round(h, 3)}
     return k
 
 
