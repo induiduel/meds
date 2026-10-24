@@ -79,7 +79,11 @@ export interface CdDetay {
   ogrenciNot?: Record<string, Record<string, PdfNot>> | null;
   /** çıkmış sorular ve dayandıkları cümle (paragraf p, cümle c); PDF yeri isaret[p][c]'den */
   cikmisKonum?: CdCikmisKonum[] | null;
+  /** Kurul 2+ sesli metin v2: paragraf dizini → cümle başına ekran maddesi (e), düzey (d), vurgu [metin, tür] (v),
+   *  çıkmış kimlikleri (c), Öğren destesinde slayt adımı (a); deste = Öğren deste kimliği */
+  v2?: { deste: string; p: Record<string, CdV2Cumle[]> } | null;
 }
+export interface CdV2Cumle { e: string; d: number; v: [string, string][]; c: string[]; a: number | null; s?: unknown }
 export interface CdCikmisKonum { id: string; kok: string; cevap: string; yil?: number | string | null; p: number; c: number; skor: number }
 /** Kutular sayfa oranıdır (0–1). l: ≥%80'i okunan madde satırları (ya da resim); w: [kelimenin cümle içi baş, son, x0, y0, x1, y1] */
 /** y: hareketli imleç yolu [[cümle içi karakter, x, y]] — ses o karaktere gelince imleç (x, y)'ye kayar */

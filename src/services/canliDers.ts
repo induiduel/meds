@@ -20,6 +20,7 @@ const P = {
   cumle: (k: string) => path.join(KOK, 'cumle_zaman', `${k}.json`),
   kelime: (k: string) => path.join(KOK, 'kelime_zaman', `${k}.json`),
   isaret: (k: string) => path.join(KOK, 'isaret', `${k}.json`),
+  v2: (k: string) => path.join(KOK, 'v2', `${k}.json`),
   cikmisKonum: (k: string) => path.join(KOK, 'cikmis_konum', `${k}.json`),
   ogrenciNot: (fileId: string) => path.join(KOK, 'ogrenci_not', `${fileId.replace(/[^\w-]/g, '')}.json`),
 };
@@ -257,6 +258,29 @@ export function registerCanliDersRoutes(app: Express) {
         if (!is || !pdf) return null;
         const h = crypto.createHash('sha1').update(pars.map((p) => p.t).join('\n')).digest('hex');
         return is.metinHash === h ? is.c : null;
+      })(),
+      // Kurul 2+ sesli metin v2 (konusma_v2.py): cümle başına ekran maddesi, düzey, vurgu türleri, çıkmış, slayt adımı.
+      // Paragraf, cümle sesleri birleşince metindeki paragrafla aynıysa gönderilir (metin değiştiyse o paragraf yok sayılır).
+      v2: (() => {
+        const v = oku<any>(P.v2(key), null);
+        const vp = Array.isArray(v?.bolumler) ? v.bolumler.flatMap((b: any) => (Array.isArray(b?.paragraflar) ? b.paragraflar : [])) : [];
+        if (vp.length !== pars.length) return null;
+        const sade = (t: string) => String(t || '').replace(/\s+/g, ' ').trim();
+        const out: Record<string, any[]> = {};
+        vp.forEach((p: any, i: number) => {
+          const cs = Array.isArray(p?.cumleler) ? p.cumleler : [];
+          if (!cs.length || sade(cs.map((c: any) => c.ses).join(' ')) !== sade(pars[i].t)) return;
+          if (!cs.some((c: any) => (c.ekran && sade(c.ekran) !== sade(c.ses)) || c.vurgu?.length || c.cikmis?.length || c.slayt_adim != null)) return;
+          out[String(i)] = cs.map((c: any) => ({
+            e: String(c.ekran || ''),
+            d: Number(c.duzey) || 0,
+            v: (Array.isArray(c.vurgu) ? c.vurgu : []).filter((x: any) => x?.metin && x?.tur).map((x: any) => [String(x.metin), String(x.tur)]),
+            c: Array.isArray(c.cikmis) ? c.cikmis.map(String) : [],
+            a: Number.isFinite(c.slayt_adim) ? c.slayt_adim : null,
+            s: c.spot ?? null,
+          }));
+        });
+        return Object.keys(out).length ? { deste: `k2p-${key}`, p: out } : null;
       })(),
       // çıkmış soru → dayandığı cümle (scripts/sesli_anlatim/cikmis_konum.py); PDF yeri ön yüzde isaret[p][c]'den
       cikmisKonum: (() => {

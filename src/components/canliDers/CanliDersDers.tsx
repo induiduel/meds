@@ -35,7 +35,7 @@ import { YildizliParagraflarModal } from '../study/YildizliParagraflarModal';
 import '../learn/pdf/pdfDoc.css';
 import { DrawingModeToolbarTrigger, SlideDrawingCanvas, getDrawingGlobalState, setDrawingGlobalState, undoLastDrawing, useCanUndoDrawing } from '../learn/SlideDrawingCanvas';
 import { Undo2 } from 'lucide-react';
-import type { CdCikmisKonum } from './canliDersStore';
+import type { CdCikmisKonum, CdV2Cumle } from './canliDersStore';
 
 /** iPhone/iPad'de tarayıcı sekmesinde adres çubuğu gizlenemez: gerçek tam ekran için PWA'yı öner. */
 let pwaIpucuGosterildi = false;
@@ -999,6 +999,67 @@ function CdParagrafYildizDugme({
   );
 }
 
+const V2_TUR: Record<string, string> = { terim: 'Terim', sayi: 'Sayı', tuzak: 'Tuzak', cikmis: 'Çıkmış', tanim: 'Tanım' };
+
+/** Ekran maddesi: **kalın** işaretleri + vurgu türleri (terim/sayı/tuzak/çıkmış/tanım) renkli parçalar olarak */
+function v2Parcalar(ekran: string, vurgu: [string, string][]) {
+  let duz = '';
+  const kalin: [number, number][] = [];
+  ekran.split('**').forEach((t, k) => { if (k % 2) kalin.push([duz.length, duz.length + t.length]); duz += t; });
+  const tur = new Array<string | null>(duz.length).fill(null);
+  const kucuk = duz.toLocaleLowerCase('tr');
+  for (const [m, t] of vurgu) {
+    const at = kucuk.indexOf(m.toLocaleLowerCase('tr'));
+    if (at >= 0) for (let j = at; j < at + m.length; j++) tur[j] ??= t;
+  }
+  const out: { t: string; k: boolean; tur: string | null }[] = [];
+  for (let j = 0; j < duz.length; j++) {
+    const k = kalin.some(([a, b]) => j >= a && j < b);
+    const son = out[out.length - 1];
+    if (son && son.k === k && son.tur === tur[j]) son.t += duz[j];
+    else out.push({ t: duz[j], k, tur: tur[j] });
+  }
+  return out;
+}
+
+/** Kurul 2+ (sesli metin v2): paragrafın ekran maddeleri; okunan cümlenin maddesi CdV2Su ile işaretlenir */
+const CdV2Maddeler = memo(function CdV2Maddeler({ i, cs, deste }: { i: number; cs: CdV2Cumle[]; deste: string }) {
+  return (
+    <ul className="cd-v2" aria-label="Ekran maddeleri">
+      {cs.map((c, ci) => c.e && (
+        <li key={ci} data-i={i} data-c={ci} className="cd-v2-m" style={{ ['--d' as string]: Math.min(3, c.d) }}>
+          <span className="cd-v2-e">
+            {v2Parcalar(c.e, c.v).map((x, k) => {
+              const ic = x.k ? <b>{x.t}</b> : x.t;
+              return x.tur ? <mark key={k} className={`cd-v2-v is-${x.tur}`} title={V2_TUR[x.tur] || x.tur}>{ic}</mark> : <React.Fragment key={k}>{ic}</React.Fragment>;
+            })}
+          </span>
+          {(c.c.length > 0 || c.a != null) && (
+            <span className="cd-v2-rozetler">
+              {c.c.length > 0 && <span className="cd-v2-cik" title={`Çıkmışta sorulmuş: ${c.c.join(', ')}`}><Star aria-hidden /> Çıkmış{c.c.length > 1 ? ` ×${c.c.length}` : ''}</span>}
+              {c.a != null && (
+                <a className="cd-v2-adim" href={`/ogren/${encodeURIComponent(deste)}?adim=${c.a}`}
+                  onClick={(e) => { e.preventDefault(); navigateTo(`/ogren/${encodeURIComponent(deste)}?adim=${c.a}`); }}
+                  title="Etkileşimli derste bu slayt adımını aç">Slayt {c.a}</a>
+              )}
+            </span>
+          )}
+        </li>
+      ))}
+    </ul>
+  );
+});
+
+/** Okunan cümlenin ekran maddesini işaretler (DOM sınıfı; ders metni yeniden çizilmez) */
+function CdV2Su({ pane, aktif, cumle }: { pane: React.RefObject<HTMLDivElement | null>; aktif: number; cumle: number }) {
+  useEffect(() => {
+    const el = aktif >= 0 && cumle >= 0 ? pane.current?.querySelector<HTMLElement>(`.cd-v2-m[data-i="${aktif}"][data-c="${cumle}"]`) : null;
+    el?.classList.add('is-su');
+    return () => el?.classList.remove('is-su');
+  }, [pane, aktif, cumle]);
+  return null;
+}
+
 /** Paragraf listesi bir kez çizilir; vurgu DOM üzerinden değişir (uzun metinde yeniden çizim yok). */
 const MetinListe = memo(function MetinListe({ detay, onTik, kamp = false }: { detay: CdDetay; onTik: (i: number) => void; kamp?: boolean }) {
   return (
@@ -1015,6 +1076,7 @@ const MetinListe = memo(function MetinListe({ detay, onTik, kamp = false }: { de
           {b.paragraflar.map((p) => (
             <div key={p.i} className="cd-p-sar">
               <p data-i={p.i} className="cd-p" onClick={() => onTik(p.i)}><VurguluMetin metin={p.metin} v={detay.vurgu?.[p.i]} i={p.i} /></p>
+              {detay.v2?.p[p.i] && <CdV2Maddeler i={p.i} cs={detay.v2.p[p.i]} deste={detay.v2.deste} />}
               <div className="cd-p-araclar">
                 <CdParagrafYildizDugme
                   dersKey={detay.key}
@@ -1264,6 +1326,7 @@ function CdMetinBolme({ detay, canli, kamp = false }: { detay: CdDetay; canli: b
         )}
       </div>
       <CdKelimeIsaret pane={paneRef} aktif={aktif} acik={canli && !durdu} />
+      {detay.v2 && <CdV2Su pane={paneRef} aktif={aktif} cumle={cumle} />}
       {durdu && canli ? (
         <button type="button" className="cd-donus" onClick={() => { surdur(); requestAnimationFrame(() => kaydir()); }}>
           <Crosshair aria-hidden /> Canlı konuma dön
