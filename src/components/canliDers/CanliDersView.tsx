@@ -5,7 +5,7 @@
  *    çubuktadır (CanliDersDock, App düzeyinde) — ses öğesi canliDersStore'da tek ve kalıcıdır.
  */
 import React, { useEffect, useMemo, useState } from 'react';
-import { ChevronDown, Clock, Download, History, MoreHorizontal, Pause, Play, Search, X } from 'lucide-react';
+import { AudioLines, BookOpen, Check, ChevronDown, Clock, Download, Headphones, History, Layers, LayoutList, ListMusic, MoreHorizontal, Pause, Play, Search, Star, Video, X } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import {
   cdDosyaAdi, cdKonumListesi, cdSesKimlik, cdTercihVaryant, cdVarsayilanSesAyarla, useCdVarsayilanSes, cdListeGetir, cdOynat, cdSesKisa, cdSesUrl, cdToggle, fmtMb, fmtSure, useCd,
@@ -25,6 +25,7 @@ import { YildizliParagraflarPanel } from '../study/YildizliParagraflarModal';
 import { bittiMi, sureYaz, sesliKonuId, useKonuKaydi, useTakip } from '../../services/calismaTakip';
 import { KonuDugmeleri, KonuIsaret, KonuSureEtiketi } from '../takip/KonuTakip';
 import '../../styles/canli-ders.css';
+import '../../styles/canli-ders-liste.css';
 import CihazdaIsaret from '../cevrimdisi/CihazdaIsaret';
 import { KurulBos, kurulKimlikten, useKurulParam } from '../kurul/KurulSuzgec';
 import { KurulSecici } from '../kurul/KurulSecici';
@@ -58,10 +59,21 @@ type Konum = { vid: string; t: number; at: number };
 /** Kaldığın yer: sayfa açılınca bir kez okunur (ders ekranından dönünce liste yeniden kurulur). */
 const konumHaritasi = () => new Map(cdKonumListesi().map((k) => [k.key, k as Konum]));
 
+type ListeGorunum = 'tum' | 'yarim' | 'liste' | 'yildiz' | 'blok';
+const HASH_GORUNUM: Record<string, ListeGorunum> = { '#listem': 'liste', '#yildiz': 'yildiz', '#blok': 'blok', '#yarim': 'yarim' };
+const KAPALI_KEY = 'medsoru_canli_ders_kapali_kat_v1';
+const kapaliOku = (): Set<string> => { try { return new Set(JSON.parse(localStorage.getItem(KAPALI_KEY) || '[]')); } catch { return new Set(); } };
+
+/**
+ * Liste iskeleti (2026-10-24 yeniden kurulum):
+ *  - üst: başlık + genel ilerleme, arama, araçlar (süreler, ses, toplu PDF, tanıtım)
+ *  - sol ray (telefonda üstte yatay şeritler): kurul, görünüm (Tüm / Yarım kalan / Listem / Yıldızlı / Blok), branşlar (ilerleme çubuğuyla)
+ *  - içerik: "Devam et" + "Sıradaki ders" kartları, branş bölümleri (bitti/toplam, sıradakini dinle), ders satırları
+ */
 function CanliDersListe() {
   useCdTvGezinme('liste');
   const [hamDersler, setDersler] = useState<CdListeDers[] | null>(null);
-  // Blok özetler (k1-95-blok-ozet-patoloji-1 …): birkaç dersi tek sesli derste anlatır; ayrı sekmede listelenir
+  // Blok özetler (k1-95-blok-ozet-patoloji-1 …): birkaç dersi tek sesli derste anlatır; ayrı görünümde listelenir
   const [hamBlok, setBlok] = useState<CdListeDers[]>([]);
   const kurul = useKurulParam();
   // ?kurul=N: yalnız o kurulun dersleri (parametre yoksa hepsi)
@@ -71,26 +83,28 @@ function CanliDersListe() {
   );
   const [hata, setHata] = useState<string | null>(null);
   const [q, setQ] = useState('');
-  const [gorunum, setGorunum] = useState<'tum' | 'liste' | 'yildiz' | 'blok'>(() => (location.hash === '#listem' ? 'liste' : location.hash === '#yildiz' ? 'yildiz' : location.hash === '#blok' ? 'blok' : 'tum'));
+  const [gorunum, setGorunum0] = useState<ListeGorunum>(() => HASH_GORUNUM[location.hash] || 'tum');
+  const setGorunum = (g: ListeGorunum) => {
+    setGorunum0(g);
+    const h = Object.entries(HASH_GORUNUM).find(([, v]) => v === g)?.[0] || '';
+    try { history.replaceState(history.state, '', location.pathname + location.search + h); } catch { /* yok */ }
+  };
   const blok = useMemo(() => (kurul ? hamBlok.filter((d) => (d.kurul ?? kurulKimlikten(d.key)) === kurul) : hamBlok), [hamBlok, kurul]);
   const [sureAcik, setSureAcik] = useState(() => location.hash === '#sureler');
   const listeN = useCdListe((s) => s.keys.length);
   const yildizN = useYildizliSayisi();
-  // Oynatıcıdaki "Listem" göstergesi /canliders#listem açar (sayfa zaten açıksa da sekmeye geçilsin)
+  const takip = useTakip();
+  // Oynatıcıdaki "Listem" göstergesi /canliders#listem açar (sayfa zaten açıksa da görünüme geçilsin)
   useEffect(() => {
-    const f = () => {
-      if (location.hash === '#listem') setGorunum('liste');
-      else if (location.hash === '#yildiz') setGorunum('yildiz');
-      else if (location.hash === '#blok') setGorunum('blok');
-    };
+    const f = () => { const g = HASH_GORUNUM[location.hash]; if (g) setGorunum0(g); };
     window.addEventListener('popstate', f);
     return () => window.removeEventListener('popstate', f);
   }, []);
-  /** 'tum' | 'yarim' | kategori kimliği */
+  /** 'tum' | kategori kimliği */
   const [suzgec, setSuzgec0] = useState<string>('tum');
-  // Adresteki branş (/dersler/canliders/kurul1/tbg → ?brans=tbg): liste gelince o branşın çipi seçilir
+  // Adresteki branş (/dersler/canliders/kurul1/tbg → ?brans=tbg): liste gelince o branş seçilir
   const [urlBrans] = useState(() => new URLSearchParams(icKonum().search).get('brans'));
-  const [kapali, setKapali] = useState<Set<string>>(() => new Set());
+  const [kapali, setKapali] = useState<Set<string>>(kapaliOku);
   const [konum] = useState(konumHaritasi);
   const tanitim = useCdTur('liste', !!dersler?.length, () => !!document.querySelector('.cd-satir'));
 
@@ -103,30 +117,33 @@ function CanliDersListe() {
     yukle();
   }, []);
 
+  const bitti = (d: CdListeDers) => bittiMi(takip.k[`sesli:${sesliKonuId(d.key)}`]);
   const liste = useMemo(() => {
     if (!dersler) return [];
     const f = fold(q);
-    let l = suzgec === 'yarim' ? dersler.filter((d) => konum.has(d.key)) : dersler;
+    let l = gorunum === 'yarim' ? dersler.filter((d) => konum.has(d.key)) : dersler;
     if (f) l = l.filter((d) => fold(`${d.brans ? `${d.brans} ${cdBransKisa(d.brans)} ` : ''}${d.no} ${d.baslik}`).includes(f));
     return l;
-  }, [dersler, q, suzgec, konum]);
+  }, [dersler, q, gorunum, konum]);
   const cevrimdisi = useCevrimdisiSuzgec(liste);
-  // Tüm derslerin kategorileri (çip sayıları aramadan bağımsız); görünen gruplar süzülmüş listeden
+  // Tüm derslerin kategorileri (ray sayıları aramadan bağımsız); görünen gruplar süzülmüş listeden
   const tumGruplar = useMemo(() => cdKategoriGrupla(dersler || []), [dersler]);
   const gruplar = useMemo(() => {
     const g = cdKategoriGrupla(cevrimdisi.liste);
-    return suzgec === 'tum' || suzgec === 'yarim' ? g : g.filter((x) => x.kat.id === suzgec);
+    return suzgec === 'tum' ? g : g.filter((x) => x.kat.id === suzgec);
   }, [cevrimdisi.liste, suzgec]);
-  // Branş çipi seçilince adres de o branşa döner (/dersler/canliders/kurul<N>/<branş>); paylaşılabilir, geri tuşu bozulmaz
+  // Branş seçilince adres de o branşa döner (/dersler/canliders/kurul<N>/<branş>); paylaşılabilir, geri tuşu bozulmaz
   const setSuzgec = (id: string) => {
     setSuzgec0(id);
+    if (gorunum !== 'tum' && gorunum !== 'yarim') setGorunum0('tum');
     const kat = tumGruplar.find((g) => g.kat.id === id);
     const k = kurul ?? kat?.dersler[0]?.kurul ?? (dersler?.[0] ? (dersler[0].kurul ?? kurulKimlikten(dersler[0].key)) : null);
     const sp = new URLSearchParams(icKonum().search);
     sp.delete('brans'); sp.delete('kurul');
     if (kat && k) { sp.set('kurul', String(k)); sp.set('brans', katSlug(kat.kat)); } else if (kurul) sp.set('kurul', String(kurul));
-    const q = sp.toString();
-    try { history.replaceState(history.state, '', `/canliders${q ? `?${q}` : ''}${location.hash}`); } catch { /* yok */ }
+    const qs = sp.toString();
+    try { history.replaceState(history.state, '', `/canliders${qs ? `?${qs}` : ''}`); } catch { /* yok */ }
+    document.querySelector('.cdl-icerik')?.scrollIntoView({ block: 'start', behavior: 'smooth' });
   };
   useEffect(() => {
     if (!urlBrans || !tumGruplar.length) return;
@@ -134,8 +151,13 @@ function CanliDersListe() {
     if (g) setSuzgec0(g.kat.id);
   }, [urlBrans, tumGruplar]);
   const gorunenN = gruplar.reduce((n, g) => n + g.dersler.length, 0);
-  const katDegistir = (id: string) => setKapali((s) => { const n = new Set(s); n.has(id) ? n.delete(id) : n.add(id); return n; });
+  const katDegistir = (id: string) => setKapali((s) => {
+    const n = new Set(s); n.has(id) ? n.delete(id) : n.add(id);
+    try { localStorage.setItem(KAPALI_KEY, JSON.stringify([...n])); } catch { /* yok */ }
+    return n;
+  });
   const yarimSayi = useMemo(() => (dersler ? dersler.filter((d) => konum.has(d.key)).length : 0), [dersler, konum]);
+  const bittiN = useMemo(() => (dersler ? dersler.filter(bitti).length : 0), [dersler, takip]);
   // En son dinlenen (listede olan) ders: "Kaldığın yerden devam"
   const son = useMemo(() => {
     if (!dersler) return null;
@@ -146,121 +168,130 @@ function CanliDersListe() {
     }
     return null;
   }, [dersler]);
+  // Sıradaki ders: son dinlenenin branşında ondan sonraki bitmemiş ders; yoksa ilk bitmemiş ders
+  const siradaki = useMemo(() => {
+    if (!dersler?.length) return null;
+    const sira = tumGruplar.flatMap((g) => g.dersler);
+    const i = son ? sira.findIndex((d) => d.key === son.d.key) : -1;
+    const aday = [...sira.slice(i + 1), ...sira.slice(0, Math.max(0, i))].find((d) => !bitti(d) && d.key !== son?.d.key);
+    return aday || null;
+  }, [dersler, tumGruplar, son, takip]);
+  const odak = gorunum === 'tum' && !q && suzgec === 'tum';
+  const oran = dersler?.length ? bittiN / dersler.length : 0;
 
   return (
-    <div className="cd-root cd-liste">
-      <header className="cd-liste-bas">
-        <div className="cd-liste-baslik">
+    <div className="cd-root cd-liste cdl">
+      <header className="cdl-ust">
+        <div className="cdl-kimlik cd-liste-baslik">
+          <span className="cdl-halka" style={{ '--x': oran } as React.CSSProperties} aria-hidden><Headphones /></span>
           <div>
-            {dersler && <p className="cd-liste-ust">{cdKonuSayisi(dersler)} ders · {fmtSaat(toplamSure(dersler))}</p>}
             <h1>Sesli Dersler</h1>
-          </div>
-          <div className="cd-liste-arac">
-            {tanitim.dugme}
-            <button type="button" className="cd-btn" onClick={() => setSureAcik(true)} aria-haspopup="dialog">
-              <Clock aria-hidden /> <span>Süreler</span>
-            </button>
-            {dersler && <VarsayilanSesSecici dersler={dersler} />}
-            {dersler && !!dersler.length && <TopluPdfDugme dersler={cevrimdisi.liste.length ? cevrimdisi.liste : dersler} />}
+            <p>{dersler ? <>{cdKonuSayisi(dersler)} ders · {fmtSaat(toplamSure(dersler))} · <b>{bittiN} bitti</b></> : 'Yükleniyor…'}</p>
           </div>
         </div>
-        <KurulSecici secili={kurul} yol={(k) => `/dersler/canliders/kurul${k}`} tumuYol="/dersler/canliders" />
-        {son && gorunum === 'tum' && !q && suzgec === 'tum' && <DevamKarti d={son.d} k={son.k} />}
-        {gorunum === 'tum' && !q && suzgec === 'tum' && <KmbKarti />}
-        <div className="cd-serit">
-          <div className="cd-liste-sira">
-            <div className="cd-sekmeler cd-gorunum" role="tablist" aria-label="Görünüm">
-              <button type="button" role="tab" aria-selected={gorunum === 'tum'} className={gorunum === 'tum' ? 'is-on' : ''} onClick={() => setGorunum('tum')}>
-                Tüm dersler
-              </button>
-              <button type="button" role="tab" aria-selected={gorunum === 'liste'} className={gorunum === 'liste' ? 'is-on' : ''} onClick={() => setGorunum('liste')}>
-                Listem{listeN > 0 && <span className="cd-sekme-sayi">{listeN}</span>}
-              </button>
-              <button type="button" role="tab" aria-selected={gorunum === 'yildiz'} className={gorunum === 'yildiz' ? 'is-on' : ''} onClick={() => setGorunum('yildiz')}>
-                Yıldızlılar{yildizN > 0 && <span className="cd-sekme-sayi">{yildizN}</span>}
-              </button>
-              {blok.length > 0 && (
-                <button type="button" role="tab" aria-selected={gorunum === 'blok'} className={gorunum === 'blok' ? 'is-on' : ''} onClick={() => setGorunum('blok')}>
-                  Blok özetler<span className="cd-sekme-sayi">{blok.length}</span>
-                </button>
-              )}
-            </div>
-            {gorunum === 'tum' && <label className="cd-ara">
-              <Search aria-hidden />
-              <input
-                type="search"
-                value={q}
-                onChange={(e) => setQ(e.target.value)}
-                placeholder="Ders ara: ad, branş ya da numara"
-                aria-label="Ders ara"
-              />
-              {q && (
-                <button type="button" className="cd-ara-sil" onClick={() => setQ('')} aria-label="Aramayı temizle">
-                  <X />
-                </button>
-              )}
-            </label>}
-          </div>
-          {gorunum === 'tum' && dersler && !!dersler.length && (
-            <div className="cd-kat-cipler" role="group" aria-label="Branşa göre süz">
-              <button type="button" aria-pressed={suzgec === 'tum'} className={suzgec === 'tum' ? 'is-on' : ''} onClick={() => setSuzgec('tum')}>
-                Tümü <span>{cdKonuSayisi(dersler)}</span>
-              </button>
-              {yarimSayi > 0 && (
-                <button type="button" aria-pressed={suzgec === 'yarim'} className={`is-yarim${suzgec === 'yarim' ? ' is-on' : ''}`} onClick={() => setSuzgec('yarim')}>
-                  <History aria-hidden /> Yarım kalanlar <span>{yarimSayi}</span>
-                </button>
-              )}
-              {tumGruplar.map(({ kat, dersler: ds }) => (
-                <button key={kat.id} type="button" aria-pressed={suzgec === kat.id} className={suzgec === kat.id ? 'is-on' : ''}
-                  onClick={() => setSuzgec(suzgec === kat.id ? 'tum' : kat.id)}>
-                  {kat.kisa} <span>{cdKonuSayisi(ds)}</span>
-                </button>
-              ))}
-            </div>
-          )}
+        <label className="cd-ara cdl-ara">
+          <Search aria-hidden />
+          <input type="search" value={q} onChange={(e) => { setQ(e.target.value); if (gorunum !== 'tum' && gorunum !== 'yarim') setGorunum0('tum'); }}
+            placeholder="Ders ara: ad, branş ya da numara" aria-label="Ders ara" />
+          {q && <button type="button" className="cd-ara-sil" onClick={() => setQ('')} aria-label="Aramayı temizle"><X /></button>}
+        </label>
+        <div className="cdl-arac">
+          <button type="button" className="cd-btn" onClick={() => setSureAcik(true)} aria-haspopup="dialog"><Clock aria-hidden /> <span>Süreler</span></button>
+          {dersler && <VarsayilanSesSecici dersler={dersler} />}
+          {dersler && !!dersler.length && <TopluPdfDugme dersler={cevrimdisi.liste.length ? cevrimdisi.liste : dersler} />}
+          {tanitim.dugme}
         </div>
       </header>
 
-      {hata ? (
-        <div className="cd-bos">
-          <p>{hata}</p>
-          <button type="button" className="cd-btn" onClick={() => yukle(true)}>Yeniden dene</button>
-        </div>
-      ) : !dersler ? (
-        <div className="cd-bos" role="status"><span className="cd-spin" aria-hidden /> Dersler yükleniyor…</div>
-      ) : gorunum === 'liste' ? (
-        <Listem dersler={dersler} onTumu={() => setGorunum('tum')} />
-      ) : gorunum === 'blok' ? (
-        <>
-          <p className="cd-blok-not">Birkaç dersi tek sesli derste, çıkmış sorulara odaklanarak anlatır. Her biri bir ile iki saat arası.</p>
-          <ul className="cd-satirlar">
-            {blok.map((d) => <DersSatiri key={d.key} d={d} k={konum.get(d.key)} />)}
-          </ul>
-        </>
-      ) : gorunum === 'yildiz' ? (
-        <YildizliParagraflarPanel inline onClose={() => setGorunum('tum')} />
-      ) : kurul && !dersler.length ? (
-        <KurulBos kurul={kurul} ne="sesli ders" />
-      ) : !liste.length ? (
-        <div className="cd-bos"><p>{q ? `"${q}" için ders bulunamadı.` : 'Henüz sesi hazır ders yok.'}</p></div>
-      ) : (
-        <>
-          {cevrimdisi.serit}
-          {!gorunenN ? (
-            <div className="cd-bos"><p>{q ? `"${q}" için bu kategoride ders bulunamadı.` : 'Bu kategoride ders yok.'}</p></div>
-          ) : gruplar.map(({ kat, dersler: ds }) => (
-            <KategoriBolumu key={kat.id} kat={kat} n={cdKonuSayisi(ds)} sure={toplamSure(ds)} acik={!!q || !kapali.has(kat.id)} onDegistir={() => katDegistir(kat.id)}>
-              <ul className="cd-satirlar">
-                {ds.map((d) => <DersSatiri key={d.key} d={d} k={konum.get(d.key)} />)}
-              </ul>
-            </KategoriBolumu>
-          ))}
-        </>
-      )}
+      <div className="cdl-govde">
+        <aside className="cdl-ray" aria-label="Sesli ders gezinme">
+          <KurulSecici className="cdl-kurul" secili={kurul} yol={(k) => `/dersler/canliders/kurul${k}`} tumuYol="/dersler/canliders" />
+          <nav className="cdl-gorunum" aria-label="Görünüm">
+            <RayDugme on={gorunum === 'tum'} ikon={<LayoutList />} ad="Tüm dersler" n={dersler ? cdKonuSayisi(dersler) : undefined} onClick={() => setGorunum('tum')} />
+            {yarimSayi > 0 && <RayDugme on={gorunum === 'yarim'} ikon={<History />} ad="Yarım kalanlar" n={yarimSayi} onClick={() => setGorunum('yarim')} />}
+            <RayDugme on={gorunum === 'liste'} ikon={<ListMusic />} ad="Listem" n={listeN || undefined} onClick={() => setGorunum('liste')} />
+            <RayDugme on={gorunum === 'yildiz'} ikon={<Star />} ad="Yıldızlılar" n={yildizN || undefined} onClick={() => setGorunum('yildiz')} />
+            {blok.length > 0 && <RayDugme on={gorunum === 'blok'} ikon={<Layers />} ad="Blok özetler" n={blok.length} onClick={() => setGorunum('blok')} />}
+          </nav>
+          {dersler && !!dersler.length && (gorunum === 'tum' || gorunum === 'yarim') && (
+            <nav className="cdl-branslar cd-kat-cipler" aria-label="Branşa göre süz">
+              <p className="cdl-ray-bas">Branşlar</p>
+              <button type="button" aria-pressed={suzgec === 'tum'} className={`cdl-brans${suzgec === 'tum' ? ' is-on' : ''}`} onClick={() => setSuzgec('tum')}>
+                <span className="cdl-brans-ad">Tümü</span><span className="cdl-brans-n">{cdKonuSayisi(dersler)}</span>
+              </button>
+              {tumGruplar.map(({ kat, dersler: ds }) => {
+                const b = ds.filter(bitti).length;
+                return (
+                  <button key={kat.id} type="button" aria-pressed={suzgec === kat.id} className={`cdl-brans${suzgec === kat.id ? ' is-on' : ''}`}
+                    onClick={() => setSuzgec(suzgec === kat.id ? 'tum' : kat.id)} title={`${kat.ad}: ${b}/${ds.length} bitti`}>
+                    <span className="cdl-brans-ad">{kat.kisa}</span>
+                    <span className="cdl-brans-n">{b ? `${b}/` : ''}{ds.length}</span>
+                    <span className="cdl-brans-cubuk" aria-hidden><i style={{ transform: `scaleX(${ds.length ? b / ds.length : 0})` }} /></span>
+                  </button>
+                );
+              })}
+            </nav>
+          )}
+          <KmbKarti />
+        </aside>
+
+        <main className="cdl-icerik">
+          {odak && dersler && (son || siradaki) && (
+            <div className="cdl-kahraman">
+              {son && <DevamKarti d={son.d} k={son.k} />}
+              {siradaki && <SiradakiKart d={siradaki} ilk={!son} />}
+            </div>
+          )}
+          {hata ? (
+            <div className="cd-bos">
+              <p>{hata}</p>
+              <button type="button" className="cd-btn" onClick={() => yukle(true)}>Yeniden dene</button>
+            </div>
+          ) : !dersler ? (
+            <div className="cd-bos" role="status"><span className="cd-spin" aria-hidden /> Dersler yükleniyor…</div>
+          ) : gorunum === 'liste' ? (
+            <Listem dersler={dersler} onTumu={() => setGorunum('tum')} />
+          ) : gorunum === 'blok' ? (
+            <section className="cd-kat cdl-kat">
+              <div className="cdl-kat-bas"><span className="cdl-kat-ad"><b>Blok özetler</b><small>Birkaç dersi tek sesli derste, çıkmış sorulara odaklanarak anlatır. Her biri bir ile iki saat arası.</small></span></div>
+              <ul className="cd-satirlar">{blok.map((d) => <DersSatiri key={d.key} d={d} k={konum.get(d.key)} />)}</ul>
+            </section>
+          ) : gorunum === 'yildiz' ? (
+            <YildizliParagraflarPanel inline onClose={() => setGorunum('tum')} />
+          ) : kurul && !dersler.length ? (
+            <KurulBos kurul={kurul} ne="sesli ders" />
+          ) : !liste.length ? (
+            <div className="cd-bos"><p>{q ? `"${q}" için ders bulunamadı.` : gorunum === 'yarim' ? 'Yarım kalan ders yok.' : 'Henüz sesi hazır ders yok.'}</p></div>
+          ) : (
+            <>
+              {cevrimdisi.serit}
+              {!gorunenN ? (
+                <div className="cd-bos"><p>{q ? `"${q}" için bu branşta ders bulunamadı.` : 'Bu branşta ders yok.'}</p></div>
+              ) : gruplar.map(({ kat, dersler: ds }) => (
+                <KategoriBolumu key={kat.id} kat={kat} ds={ds} bitenN={ds.filter(bitti).length} sonraki={ds.find((d) => !bitti(d))}
+                  acik={!!q || suzgec !== 'tum' || !kapali.has(kat.id)} onDegistir={() => katDegistir(kat.id)}>
+                  <ul className="cd-satirlar">
+                    {ds.map((d) => <DersSatiri key={d.key} d={d} k={konum.get(d.key)} />)}
+                  </ul>
+                </KategoriBolumu>
+              ))}
+            </>
+          )}
+        </main>
+      </div>
       {sureAcik && dersler && <SureDiyalog dersler={dersler} onKapat={() => { setSureAcik(false); if (location.hash === '#sureler') history.replaceState(history.state, '', location.pathname + location.search); }} />}
       {tanitim.tur}
     </div>
+  );
+}
+
+function RayDugme({ on, ikon, ad, n, onClick }: { on: boolean; ikon: React.ReactNode; ad: string; n?: number; onClick: () => void }) {
+  return (
+    <button type="button" className={`cdl-rd${on ? ' is-on' : ''}`} aria-current={on ? 'page' : undefined} onClick={onClick}>
+      <span className="cdl-rd-ikon" aria-hidden>{ikon}</span>
+      <span className="cdl-rd-ad">{ad}</span>
+      {n != null && <span className="cdl-rd-n">{n}</span>}
+    </button>
   );
 }
 
@@ -395,6 +426,7 @@ function DevamKarti({ d, k }: { d: CdListeDers; k: Konum }) {
   const v = d.varyantlar.find((x) => x.id === k.vid) || cdTercihVaryant(d.varyantlar) || d.varsayilan;
   const dur = v?.sureSn || 0;
   const yuklu = useCd((s) => s.key === d.key);
+  const caliyor = useCd((s) => s.key === d.key && s.playing);
   const canliT = useCd((s) => (s.key === d.key ? Math.floor(s.t) : -1));
   const t = canliT >= 0 ? canliT : k.t;
   const oran = dur ? Math.min(1, t / dur) : 0;
@@ -403,15 +435,36 @@ function DevamKarti({ d, k }: { d: CdListeDers; k: Konum }) {
     dersAc(d.key);
   };
   return (
-    <section className="cd-devam" aria-label="Kaldığın yerden devam et">
-      <button type="button" className="cd-devam-oynat" onClick={devam} aria-label={yuklu ? `Derse dön: ${d.baslik}` : `Devam et: ${d.baslik}, ${fmtSure(k.t)} konumundan`}>
-        <Play aria-hidden />
-      </button>
-      <div className="cd-devam-ad">
-        <small>{yuklu ? 'Şu an dinlediğin ders' : 'Kaldığın yerden devam et'}</small>
-        <b>{cdDersEtiketi(d)} · {d.baslik}</b>
-        <span className="cd-ilerleme" aria-hidden><i style={{ transform: `scaleX(${oran})` }} /></span>
-        <small className="cd-devam-t">{fmtSure(Math.max(0, dur - t))} kaldı · %{Math.round(oran * 100)} dinlendi</small>
+    <section className="cdl-kart is-devam" aria-label="Kaldığın yerden devam et">
+      <small className="cdl-kart-ust">{caliyor ? 'Şu an çalıyor' : yuklu ? 'Duraklatıldı' : 'Kaldığın yerden devam et'}</small>
+      <b className="cdl-kart-ad">{d.baslik}</b>
+      <span className="cdl-kart-alt">{cdDersEtiketi(d)} · {fmtSure(Math.max(0, dur - t))} kaldı</span>
+      <span className="cd-ilerleme cdl-kart-cubuk" aria-hidden><i style={{ transform: `scaleX(${oran})` }} /></span>
+      <div className="cdl-kart-eylem">
+        <button type="button" className="cd-btn is-ana" onClick={devam}>
+          <Play aria-hidden /> {yuklu ? 'Derse dön' : `Devam et · ${fmtSure(k.t)}`}
+        </button>
+        {yuklu && (
+          <button type="button" className="cd-btn" onClick={() => cdToggle()} aria-label={caliyor ? 'Duraklat' : 'Sesi sürdür'}>
+            {caliyor ? <Pause aria-hidden /> : <Play aria-hidden />} <span>{caliyor ? 'Duraklat' : 'Sürdür'}</span>
+          </button>
+        )}
+      </div>
+    </section>
+  );
+}
+
+/** Sıradaki önerilen ders: son dinlenenden sonra gelen ilk bitmemiş ders */
+function SiradakiKart({ d, ilk }: { d: CdListeDers; ilk: boolean }) {
+  const v = cdTercihVaryant(d.varyantlar) || d.varsayilan;
+  return (
+    <section className="cdl-kart is-sira" aria-label="Sıradaki ders">
+      <small className="cdl-kart-ust">{ilk ? 'Buradan başla' : 'Sıradaki ders'}</small>
+      <b className="cdl-kart-ad">{d.baslik}</b>
+      <span className="cdl-kart-alt">{cdDersEtiketi(d)}{v ? ` · ${fmtSure(v.sureSn)}` : ''}</span>
+      <div className="cdl-kart-eylem">
+        <button type="button" className="cd-btn" onClick={() => dersAc(d.key)}><BookOpen aria-hidden /> Dersi aç</button>
+        {v && <OynatDugme d={d} v={v} />}
       </div>
     </section>
   );
@@ -434,7 +487,7 @@ function SatirIlerleme({ d, k, dur }: { d: CdListeDers; k?: Konum; dur: number }
 function OynatDugme({ d, v, kucuk, yuvarlak }: { d: CdListeDers; v: CdVaryant; kucuk?: boolean; yuvarlak?: boolean }) {
   const buMu = useCd((s) => s.key === d.key && s.vid === v.id);
   const caliyor = useCd((s) => s.key === d.key && s.vid === v.id && s.playing);
-  const etiket = caliyor ? 'Duraklat' : 'Oynat';
+  const etiket = caliyor ? 'Duraklat' : yuvarlak ? 'Oynat' : 'Yalnız sesi çal';
   return (
     <button
       type="button"
@@ -444,7 +497,7 @@ function OynatDugme({ d, v, kucuk, yuvarlak }: { d: CdListeDers; v: CdVaryant; k
       title={yuvarlak ? (caliyor ? 'Duraklat' : 'Yalnız sesi çal — sayfada gezinirken alt çubukta sürer') : undefined}
     >
       {caliyor ? <Pause aria-hidden /> : <Play aria-hidden />}
-      {!yuvarlak && <span>{etiket}</span>}
+      {!yuvarlak && <span>{kucuk ? (caliyor ? 'Duraklat' : 'Oynat') : etiket}</span>}
     </button>
   );
 }
@@ -463,14 +516,28 @@ function IndirDugme({ d, v, kucuk }: { d: CdListeDers; v: CdVaryant; kucuk?: boo
   );
 }
 
-function KategoriBolumu({ kat, n, sure, acik, onDegistir, children }: { kat: CdKategori; n: number; sure: number; acik: boolean; onDegistir: () => void; children: React.ReactNode }) {
+/** Branş bölümü: başlıkta ilerleme (bitti/toplam), toplam süre ve "Sıradakini aç"; başlığa dokununca katlanır */
+function KategoriBolumu({ kat, ds, bitenN, sonraki, acik, onDegistir, children }: {
+  kat: CdKategori; ds: CdListeDers[]; bitenN: number; sonraki?: CdListeDers; acik: boolean; onDegistir: () => void; children: React.ReactNode;
+}) {
+  const n = cdKonuSayisi(ds);
   return (
-    <section className={`cd-kat${acik ? '' : ' is-kapali'}`} aria-label={kat.ad}>
-      <button type="button" className="cd-kat-bas" aria-expanded={acik} onClick={onDegistir}>
-        <span className="cd-kat-ad"><b>{kat.ad}</b>{kat.alt && <small>{kat.alt}</small>}</span>
-        <span className="cd-kat-n">{n} ders · {fmtSaat(sure)}</span>
-        <span className="cd-kat-eylem">{acik ? 'Gizle' : 'Dersleri göster'}<ChevronDown aria-hidden className="cd-kat-ok" /></span>
-      </button>
+    <section className={`cd-kat cdl-kat${acik ? '' : ' is-kapali'}`} aria-label={kat.ad}>
+      <div className="cdl-kat-bas">
+        <button type="button" className="cdl-kat-ac" aria-expanded={acik} onClick={onDegistir}>
+          <ChevronDown aria-hidden className="cd-kat-ok" />
+          <span className="cdl-kat-ad"><b>{kat.ad}</b><small>{kat.alt ? `${kat.alt} · ` : ''}{n} ders · {fmtSaat(toplamSure(ds))}</small></span>
+        </button>
+        <span className="cdl-kat-ilerleme" title={`${bitenN}/${ds.length} bitti`}>
+          <span className="cd-ilerleme" aria-hidden><i style={{ transform: `scaleX(${ds.length ? bitenN / ds.length : 0})` }} /></span>
+          <small>{bitenN}/{ds.length} bitti</small>
+        </span>
+        {sonraki && (
+          <button type="button" className="cd-btn is-ince cdl-kat-sira" onClick={() => dersAc(sonraki.key)} title={`Sıradaki: ${sonraki.baslik}`}>
+            <Play aria-hidden /> <span>{bitenN ? 'Sıradakini aç' : 'Başla'}</span>
+          </button>
+        )}
+      </div>
       {acik && children}
     </section>
   );
@@ -485,12 +552,11 @@ const DersSatiri = React.memo(function DersSatiri({ d, k }: { d: CdListeDers; k?
   if (!v) return null;
   const sesN = d.varyantlar.length;
   return (
-    <li className={`cd-satir${caliyor ? ' is-caliyor' : ''}${acik ? ' is-acik' : ''}${bitti ? ' is-bitti' : ''}`}>
-      <div className="cd-satir-ana">
-        <OynatDugme d={d} v={v} yuvarlak />
-        <span className="cd-no" aria-hidden>{d.no}</span>
+    <li className={`cd-satir cdl-satir${caliyor ? ' is-caliyor' : ''}${acik ? ' is-acik' : ''}${bitti ? ' is-bitti' : ''}`}>
+      <div className="cdl-satir-ana">
+        <span className="cdl-no" aria-hidden>{bitti ? <Check /> : caliyor ? <AudioLines /> : d.no}</span>
         <a
-          className="cd-satir-ad"
+          className="cd-satir-ad cdl-satir-ad"
           href={pathFor('canli_ders', d.key)}
           onClick={(e) => {
             if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
@@ -500,21 +566,20 @@ const DersSatiri = React.memo(function DersSatiri({ d, k }: { d: CdListeDers; k?
         >
           <b>{d.parca ? <><em className="cd-parca">{cdParca(d)}</em> </> : null}{d.baslik}</b>
           <small>
-            <span className="cd-satir-sure-m">{fmtSure(v.sureSn)}</span>
+            <span>{fmtSure(v.sureSn)}</span>
+            {d.pdf && <span>slaytlı</span>}
             {sesN > 1 && <span>{sesN} ses</span>}
             <SatirIlerleme d={d} k={k} dur={v.sureSn} />
             <CihazdaIsaret paket={`sesli:${d.key}`} indir={false} />
             <KonuSureEtiketi modul="sesli" konu={d.key} />
           </small>
         </a>
-        <div className="cd-satir-eylem">
-          <span className="cd-satir-sure">{fmtSure(v.sureSn)}</span>
+        <div className="cdl-satir-eylem">
           <KonuIsaret modul="sesli" konu={d.key} ad={d.baslik} />
-        </div>
-        <div className="cd-satir-diger">
+          <OynatDugme d={d} v={v} yuvarlak />
           <button
             type="button"
-            className={`cd-btn is-ikon${acik ? ' is-acik' : ''}`}
+            className={`cd-btn is-ikon${acik ? ' is-on' : ''}`}
             aria-expanded={acik}
             aria-label={`Seçenekler: ${d.baslik} (sesler, MP3, çevrimdışı, listem)`}
             title="Sesler, indirme ve listem"
@@ -530,7 +595,6 @@ const DersSatiri = React.memo(function DersSatiri({ d, k }: { d: CdListeDers; k?
             <CevrimdisiDugme dersKey={d.key} baslik={d.baslik} varyantlar={d.varyantlar} />
             <ListeEkleDugme dersKey={d.key} baslik={d.baslik} etiketli />
             <KonuDugmeleri kucuk modul="sesli" konu={d.key} ad={d.baslik} onTekrar={() => { cdOynat(d, v.id, { t: 0 }); dersAc(d.key); }} />
-            {d.pdf && <span className="cd-secenek-not">Slaytlar sesle birlikte açılır</span>}
           </div>
           <p className="cd-secenek-bas">{sesN > 1 ? `Sesler (${sesN})` : 'Ses'}</p>
           <ul className="cd-varyantlar">
@@ -552,25 +616,18 @@ const DersSatiri = React.memo(function DersSatiri({ d, k }: { d: CdListeDers; k?
 });
 
 
-/** KMB (Klinik Mesleki Beceri) sesli video dersleri: sesli dersler arasında, Ders çalış altında (/dersler/kmb/<beceri>) */
+/** KMB (Klinik Mesleki Beceri) sesli video dersleri: rayda kısa bağlantı listesi (/dersler/kmb/<beceri>) */
 function KmbKarti() {
   const hazir = KMB_INDEX.beceriler.filter((b) => b.durum === 'hazir');
   if (!hazir.length) return null;
   return (
-    <section className="cd-kmb" aria-labelledby="cd-kmb-h">
-      <div className="cd-kmb-bas">
-        <span className="cd-kmb-rozet">KMB</span>
-        <h2 id="cd-kmb-h">Klinik Mesleki Beceri · sesli video dersler</h2>
-        <a href="/dersler/kmb" onClick={(e) => { e.preventDefault(); navigateTo('/kmb'); }}>Tümü ›</a>
-      </div>
-      <div className="cd-kmb-liste">
-        {hazir.map((b) => (
-          <a key={b.slug} href={`/dersler/kmb/${b.slug}`} className="cd-kmb-kart" onClick={(e) => { e.preventDefault(); navigateTo(`/kmb?beceri=${b.slug}`); }}>
-            <b>{b.ad}</b><span>{b.belgeKodu} · izle, öğren, sınan</span>
-          </a>
-        ))}
-      </div>
+    <section className="cdl-kmb" aria-labelledby="cd-kmb-h">
+      <p className="cdl-ray-bas" id="cd-kmb-h">KMB video dersler</p>
+      {hazir.map((b) => (
+        <a key={b.slug} href={`/dersler/kmb/${b.slug}`} className="cdl-kmb-bag" onClick={(e) => { e.preventDefault(); navigateTo(`/kmb?beceri=${b.slug}`); }}>
+          <Video aria-hidden /><span><b>{b.ad}</b><small>{b.belgeKodu}</small></span>
+        </a>
+      ))}
     </section>
   );
 }
-

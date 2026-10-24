@@ -5,6 +5,7 @@
  * kaydırınca/PDF'i gezince takip 8 sn durur ve "Canlı konuma dön" çıkar. Oynatıcı alt çubuktadır (CanliDersDock).
  */
 import CanliDersKimlikHedef from './CanliDersKimlikHedef';
+import { CanliDersBaslangic } from './CanliDersBaslangic';
 import React, { Suspense, lazy, memo, useCallback, useMemo, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { ArrowLeftRight, ArrowUpDown, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Check, Columns2, Copy, Crosshair, FileText, Maximize2, Minimize2, Minus, Pause, Play, Plus, RotateCcw, Rows2, ScrollText } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
@@ -199,6 +200,10 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
     return v;
   });
   const [oynaticiAcik, setOynaticiAcik] = useState(true);
+  // Açılış paneli: bu ders zaten çalmıyorsa ve paragraf bağlantısıyla gelinmediyse ders açılınca gösterilir
+  const [acilis, setAcilis] = useState(() => !kamp && !(cdDurum().key === dersKey && cdDurum().playing)
+    && !new URLSearchParams(location.search).get('p') && !location.hash.startsWith('#p-'));
+  useEffect(() => { if (buDersCaliyor) setAcilis(false); }, [buDersCaliyor]);
   const [yildizModalAcik, setYildizModalAcik] = useState(false);
   const yildizSayisi = useYildizliSayisi();
   const rootRef = useRef<HTMLDivElement>(null);
@@ -636,8 +641,13 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
           </button>
         </div>
       )}
+      {acilis && (
+        <CanliDersBaslangic detay={detay} gorunum={mod} pdfVar={pdfVar}
+          setGorunum={(g) => setGorunum(g)} onKapat={() => { setAcilis(false); setBaglanti(cdDetayBagla(detay)); }} />
+      )}
       <div
         ref={govdeRef}
+        hidden={acilis}
         className={`cd-govde${mod === 'ikisi' ? (aktifYon === 'yan-yana' ? ' is-iki' : ' is-ust-alt') : ''}`}
         style={govdeStil}
       >

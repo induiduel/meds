@@ -1,16 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 321,
-  "baslik": "KMB sesli dersler: Sesli ders sayfasında ve ana sayfada",
+  "onem": 322,
+  "baslik": "Sesli dersler yenilendi",
   "maddeler": [
-    "KMB dersleri Ders çalış › Sesli ders sayfasında ve ana sayfa hızlı erişimde",
-    "Kenar menüsünde Ders çalış altında: KMB sesli dersler",
-    "Videolarda yatan hasta, hekim ve hemşire çizimleri yenilendi"
+    "Sesli ders listesi yeni düzende: solda kurul, görünüm ve branş menüsü (branş başına bitti sayısı), üstte \"Kaldığın yerden devam\" ve \"Sıradaki ders\" kartları.",
+    "Derse girince açılış ekranı: devam et / baştan başla, görünüm, hız, ses seçimi ve dokunduğun bölümden başlatma."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "Derse girince açılış ekranı: devam et / baştan başla, görünüm, hız, ses seçimi ve dokunduğun bölümden başlatma."
+  ],
   "degisen": [
-    "/dersler/canliders",
-    "/bugun"
+    "Sesli ders listesi yeni düzende: solda kurul, görünüm ve branş menüsü (branş başına bitti sayısı), üstte \"Kaldığın yerden devam\" ve \"Sıradaki ders\" kartları."
   ],
   "duzeltilen": [],
   "silinen": []
