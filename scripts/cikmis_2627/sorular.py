@@ -252,3 +252,24 @@ def sik_isareti(kok):
         if parca in kok:
             return isaret
     return {}
+
+# Grubun cevap anahtarlı PDF'inde (24.10 16:31, 78 soru) olmayan sorular: kökte geçen parça → dayanak
+GRUP_PDF_DISI = {
+    "ROS artışı kronikleşirse": "Patoloji 35–49 listesi (kullanıcı), numara 37",
+    "Fibrinöz perikarditte": "Patoloji 35–49 listesi (kullanıcı), numara 40",
+    "Komplement sisteminin": "Patoloji 35–49 listesi (kullanıcı), numara 41",
+    "Kronik enflamasyonun morfolojik": "Patoloji 35–49 listesi (kullanıcı), numara 42",
+    "Sekonder yara": "Patoloji 35–49 listesi (kullanıcı), numara 43",
+    "Virchow": "Patoloji 35–49 listesi (kullanıcı), numara 45",
+    "Kurşun maruziyeti": "Patoloji 35–49 listesi (kullanıcı), numara 49",
+    "Bilateral over tutulumu": "Grupta 64. soru için ders slaytı paylaşıldı",
+    "Paget": "Grupta 67. soru olarak yazıldı",
+    "Korunma düzeyleri ile ilgili": "Grupta iki öğrenci öncüllerini hatırladı",
+    "kesin tanısı amacıyla": "Grupta birkaç öğrenci tartışıp tamamladı",
+    "fetal iyilik halinin": "Grupta 94. soru olarak yazıldı; ilk derleme PDF'inde vardı, son PDF'ten çıkarılmış",
+    "Spontan düşükler": "Grupta iki öğrenci ifadelerini hatırladı",
+}
+
+
+def grup_pdf_disi(kok):
+    return next((v for k, v in GRUP_PDF_DISI.items() if k in kok), None)

@@ -18,7 +18,7 @@ from reportlab.platypus import (BaseDocTemplate, CondPageBreak, Frame, Image, Ke
                                 PageTemplate, Paragraph, Spacer, Table, TableStyle)
 
 sys.path.insert(0, str(Path(__file__).parent))
-from sorular import DERSLER, S, sik_isareti  # noqa: E402
+from sorular import DERSLER, S, grup_pdf_disi, sik_isareti  # noqa: E402
 
 KOK = Path(__file__).resolve().parents[2]
 CIKTI = KOK / "data" / "cikmis_2627" / "kurul1_2627.pdf"
@@ -193,6 +193,53 @@ def anahtar_tablosu(ad, kayitlar):
     return t
 
 
+def istatistik_bolumu(yer):
+    tam_gen = SAYFA_G - 2 * KENAR
+    bolum = [PageBreak(), p("Grubun PDF'inde olmayan sorular", st_h), Spacer(1, 1.5 * mm),
+             p("Grubun cevap anahtarlı PDF'i (24.10 16:31, 78 soru) ile karşılaştırıldı. Aşağıdaki sorular yalnız bu "
+               "derlemede var; dayanakları yanlarında yazılı.", st_kucuk), Spacer(1, 3 * mm)]
+    satirlar = [["No", "Ders", "Soru", "Dayanak"]]
+    for ad, _, _ in DERSLER:
+        for no, q, _ in yer[ad]:
+            if q and grup_pdf_disi(q[1]):
+                satirlar.append([str(no), p(ad, st_not), p(q[1].split("\n")[0], st_not), p(grup_pdf_disi(q[1]), st_not)])
+    t = Table(satirlar, colWidths=[10 * mm, 30 * mm, tam_gen - 105 * mm, 65 * mm], repeatRows=1)
+    t.setStyle(TableStyle([("FONTNAME", (0, 0), (-1, 0), "DVB"), ("FONTSIZE", (0, 0), (-1, -1), 7.5),
+                           ("BACKGROUND", (0, 0), (-1, 0), ZEMIN), ("VALIGN", (0, 0), (-1, -1), "TOP"),
+                           ("LINEBELOW", (0, 0), (-1, -1), 0.4, CIZGI), ("TOPPADDING", (0, 0), (-1, -1), 3),
+                           ("BOTTOMPADDING", (0, 0), (-1, -1), 3)]))
+    bolum += [t, Spacer(1, 8 * mm), p("İstatistikler", st_h), Spacer(1, 1.5 * mm),
+              p("“Numarası kesin”: grupta sınavdaki numarasıyla yazılan sorular; bunların sınavda o numarada olduğu kesindir. "
+                "“Grup PDF'inde”: grubun son PDF'inde de yer alan sorular. “Tam”: kök ve şıklar hatırlandı, cevap "
+                "tartışmasız.", st_kucuk), Spacer(1, 3 * mm)]
+    basliklar = ["Ders", "Sınavda", "Topla-\nnan", "Numarası\nkesin", "Grup\nPDF'inde", "Yalnız\nbizde", "Tam",
+                 "Şıkları\nüretilen", "Tartış-\nmalı", "Toplan-\nmadı"]
+    satirlar, toplam = [basliklar], [0] * 9
+    for ad, bas, son in DERSLER:
+        kay = [(q, kesin) for _, q, kesin in yer[ad] if q]
+        durum = [durumlar(q[2], q[4], kesin) for q, kesin in kay]
+        say = [son - bas + 1, len(kay), sum(k for _, k in kay), sum(not grup_pdf_disi(q[1]) for q, _ in kay),
+               sum(bool(grup_pdf_disi(q[1])) for q, _ in kay), sum("emin" in d for d in durum),
+               sum("uretildi" in d for d in durum), sum("tartisma" in d for d in durum), son - bas + 1 - len(kay)]
+        toplam = [a + b for a, b in zip(toplam, say)]
+        satirlar.append([ad] + [str(x) for x in say])
+    satirlar.append(["Toplam"] + [str(x) for x in toplam])
+    satirlar[0] = [p(x, st("ib", fontName="DVB", fontSize=6.6, leading=8.2, alignment=1 if i else 0))
+                   for i, x in enumerate(basliklar)]
+    t = Table(satirlar, colWidths=[40 * mm] + [(tam_gen - 40 * mm) / 9] * 9)
+    t.setStyle(TableStyle([("FONTNAME", (0, 0), (-1, -1), "DV"), ("FONTSIZE", (0, 0), (-1, -1), 7.3),
+                           ("FONTNAME", (0, 0), (-1, 0), "DVB"), ("FONTNAME", (0, -1), (-1, -1), "DVB"),
+                           ("BACKGROUND", (0, 0), (-1, 0), ZEMIN), ("BACKGROUND", (0, -1), (-1, -1), ZEMIN),
+                           ("ALIGN", (1, 0), (-1, -1), "CENTER"), ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+                           ("GRID", (0, 0), (-1, -1), 0.4, CIZGI), ("TOPPADDING", (0, 0), (-1, -1), 4),
+                           ("BOTTOMPADDING", (0, 0), (-1, -1), 4),
+                           ("TEXTCOLOR", (3, 1), (3, -1), DURUM["emin"][0]), ("TEXTCOLOR", (6, 1), (6, -1), DURUM["emin"][0]),
+                           ("TEXTCOLOR", (5, 1), (5, -1), DURUM["eklendi"][0]), ("TEXTCOLOR", (7, 1), (7, -1), DURUM["uretildi"][0]),
+                           ("TEXTCOLOR", (8, 1), (8, -1), DURUM["tartisma"][0]), ("TEXTCOLOR", (9, 1), (9, -1), DURUM["kismi"][0])]))
+    bolum.append(t)
+    return bolum
+
+
 def main():
     yer = yerlestir()
     konular = {k["sinav_no"]: k["konu"] for k in json.loads(ESLESME.read_text())["sorular"] if k.get("konu")}
@@ -294,6 +341,8 @@ def main():
                                            f'  <font color="{GRI.hexval()}" size="7.5">{bas}–{son}</font>',
                                            st("ah", fontSize=9.5, leading=13)),
                                  Spacer(1, 1.5 * mm), anahtar_tablosu(ad, yer[ad]), Spacer(1, 5 * mm)])]
+
+    hikaye += istatistik_bolumu(yer)
 
     CIKTI.parent.mkdir(parents=True, exist_ok=True)
     doc.build(hikaye)
