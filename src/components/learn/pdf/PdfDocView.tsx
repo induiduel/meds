@@ -473,11 +473,13 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
     // kısıtlayıcı (iptal edilmez): hızlı dinlemede cümleler 1 sn'den kısa sürer; her değişimde sıfırlanan bir zamanlayıcı
     // hiç çalışmıyordu. Bekleyen yoksa 600 ms sonra EN SON anlatılan satırlara bakılır.
     if (isaretZam.current || !isaretRef.current) return;
-    isaretZam.current = window.setTimeout(() => {
+    const bak = (gecikme: number) => { isaretZam.current = window.setTimeout(() => {
       isaretZam.current = 0;
       const el = scrollRef.current;
       const m = isaretRef.current;
-      if (!el || !m || (seeking.current && Date.now() < seeking.current.until)) return;
+      if (!el || !m) return;
+      // sayfa geçişi kaydırması sürüyorsa bitince yeniden bak (atlayıp bırakınca satır 2-3 sn oynatıcı altında kalıyordu)
+      if (seeking.current && Date.now() < seeking.current.until) { bak(seeking.current.until - Date.now() + 60); return; }
       const i = m.page - 1;
       const t = geo.current.tops[i];
       const d = geo.current.sizes[i];
@@ -489,7 +491,8 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
       const gorAlt = el.scrollTop + el.clientHeight - altPay - 12;
       if (alt > gorAlt) el.scrollTo({ top: Math.max(0, Math.min(ust - 24, el.scrollTop + (alt - gorAlt))), behavior: 'smooth' });
       else if (ust < el.scrollTop + 8) el.scrollTo({ top: Math.max(0, ust - 24), behavior: 'smooth' });
-    }, 600);
+    }, gecikme); };
+    bak(300);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isaretAnahtar]);
   useEffect(() => () => window.clearTimeout(isaretZam.current), []);
