@@ -260,7 +260,9 @@ export function resolveDeckPdfs(deckId: string): ResolvedDeckPdf[] {
  */
 const OZET_DECK_RE = /^k\d+p-(k\d+-\d+-(?:son-prova|blok-ozet)-[a-z0-9-]+)$/; // blok özet (Patoloji 16–20 …) aynı hattan
 const ARSIV_DECK_RE = /^k(\d+)p-(y25-k\d+-\d+-[a-z0-9-]+)$/;
-const arsivPdfDir = () => path.resolve(process.cwd(), '..', 'meds_database_25_26', 'pdf');
+const arsivPdfDir = () => fs.existsSync('/home/ubuntu/medsor/meds_database_25_26/pdf')
+  ? '/home/ubuntu/medsor/meds_database_25_26/pdf'
+  : path.resolve(process.cwd(), '..', 'meds_database_25_26', 'pdf');
 const arsivHizalamaDir = () => path.resolve(process.cwd(), 'data', 'arsiv_25_26', 'sesli_anlatim', 'hizalama');
 function arsivPdf(deckId: string): ResolvedDeckPdf | null {
   const m = ARSIV_DECK_RE.exec(deckId);

@@ -14,7 +14,9 @@ const ARSIV_KOK = path.join(process.cwd(), 'data', 'arsiv_25_26', 'sesli_anlatim
 const GUNLUK_KOK = path.join(process.cwd(), 'data', 'sesli_anlatim', 'gunluk');
 const ARSIV_GUNLUK_KOK = path.join(process.cwd(), 'data', 'arsiv_25_26', 'gunluk');
 const ARSIV_DECKS_KOK = path.join(process.cwd(), 'data', 'arsiv_25_26', 'decks');
-const MEDSPAK_25_26 = path.resolve(process.cwd(), '..', 'meds_database_25_26', 'medspak');
+const MEDSPAK_25_26 = fs.existsSync('/home/ubuntu/medsor/meds_database_25_26/medspak')
+  ? '/home/ubuntu/medsor/meds_database_25_26/medspak'
+  : path.resolve(process.cwd(), '..', 'meds_database_25_26', 'medspak');
 const MEDSPAK_EXPORT = path.resolve(process.cwd(), '..', 'meds_export', 'medspak');
 
 const arsivMi = (k: string) => /^y25-k\d+-\d+-[a-z0-9-]+$/.test(k);

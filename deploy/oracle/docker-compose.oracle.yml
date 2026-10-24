@@ -70,6 +70,7 @@ services:
       - ../../data:/app/data
       - /home/ubuntu/medsor/meds_database:/home/ubuntu/medsor/meds_database:ro
       - /home/ubuntu/medsor/meds_database_v2:/home/ubuntu/medsor/meds_database_v2:ro
+      - /home/ubuntu/medsor/meds_database_25_26:/home/ubuntu/medsor/meds_database_25_26:ro
       - /home/ubuntu/medsor/meds_database_core:/home/ubuntu/medsor/meds_database_core:ro
       - /home/ubuntu/medsor/meds_temp:/home/ubuntu/medsor/meds_temp:ro
       - /home/ubuntu/medsor/meds_downloads:/home/ubuntu/medsor/meds_downloads:ro
