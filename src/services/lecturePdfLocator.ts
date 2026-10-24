@@ -223,6 +223,8 @@ function resolveFile(f: SourceFile): string | null {
  * eşleme dosyasında olmayan deste için boş döner (başlığa göre tahmin yapılmaz).
  */
 export function resolveDeckPdfs(deckId: string): ResolvedDeckPdf[] {
+  const arsiv = arsivPdf(deckId);
+  if (arsiv) return [arsiv];
   const ozet = ozetPdf(deckId);
   if (ozet) return [ozet];
   const entry = deckSourceEntry(deckId);
@@ -257,6 +259,38 @@ export function resolveDeckPdfs(deckId: string): ResolvedDeckPdf[] {
  * Deste kimliği "k<kurul>p-<partKey>" (ör. k1p-k1-81-son-prova-patoloji-1); eşleme dosyasına girmez.
  */
 const OZET_DECK_RE = /^k\d+p-(k\d+-\d+-(?:son-prova|blok-ozet)-[a-z0-9-]+)$/; // blok özet (Patoloji 16–20 …) aynı hattan
+const ARSIV_DECK_RE = /^k(\d+)p-(y25-k\d+-\d+-[a-z0-9-]+)$/;
+const arsivPdfDir = () => path.resolve(process.cwd(), '..', 'meds_database_25_26', 'pdf');
+const arsivHizalamaDir = () => path.resolve(process.cwd(), 'data', 'arsiv_25_26', 'sesli_anlatim', 'hizalama');
+function arsivPdf(deckId: string): ResolvedDeckPdf | null {
+  const m = ARSIV_DECK_RE.exec(deckId);
+  if (!m) return null;
+  const [, kurul, key] = m;
+  const full = path.join(arsivPdfDir(), `kurul${kurul}`, `${key}.pdf`);
+  let meta: { name?: string; pages?: number; fileId?: string } = {};
+  try {
+    const hz = JSON.parse(fs.readFileSync(path.join(arsivHizalamaDir(), `${key}.json`), 'utf8'));
+    const f = hz?.dosyalar?.[0];
+    if (f) meta = { name: f.name, pages: f.pages, fileId: f.fileId };
+  } catch { /* yok */ }
+  let size = 0;
+  let mtimeMs = 0;
+  try { const st = fs.statSync(full); size = st.size; mtimeMs = st.mtimeMs; } catch { /* henüz üretilmedi */ }
+  return { name: meta.name || `${key}.pdf`, folder: `2025-2026 Kurul ${kurul}`, full: size ? full : null, size, mtimeMs, pages: meta.pages, fileId: meta.fileId };
+}
+const arsivDesteleri = (): string[] => {
+  try {
+    const out: string[] = [];
+    for (let k = 2; k <= 6; k++) {
+      const dir = path.join(arsivPdfDir(), `kurul${k}`);
+      if (!fs.existsSync(dir)) continue;
+      for (const f of fs.readdirSync(dir)) {
+        if (/\.pdf$/.test(f)) out.push(`k${k}p-${f.replace(/\.pdf$/, '')}`);
+      }
+    }
+    return out;
+  } catch { return []; }
+};
 const ozetDir = () => path.resolve(process.cwd(), 'data', 'son_prova', 'pdf');
 function ozetPdf(deckId: string): ResolvedDeckPdf | null {
   const m = OZET_DECK_RE.exec(deckId);
@@ -284,7 +318,7 @@ export const toPublic = (f: ResolvedDeckPdf): DeckPdfPublic => ({ name: f.name, 
 /** Tüm desteler için diskte açılabilen PDF listesi (Öğren kataloğundaki PDF düğmeleri için). */
 export function deckPdfAvailability(): Record<string, DeckPdfPublic[]> {
   const out: Record<string, DeckPdfPublic[]> = {};
-  for (const id of [...Object.keys(deckSources().decks), ...Object.keys(SANAL_DESTELER), ...ozetDesteleri()]) {
+  for (const id of [...Object.keys(deckSources().decks), ...Object.keys(SANAL_DESTELER), ...ozetDesteleri(), ...arsivDesteleri()]) {
     const files = resolveDeckPdfs(id);
     if (files.some((f) => f.full)) out[id] = files.map(toPublic);
   }

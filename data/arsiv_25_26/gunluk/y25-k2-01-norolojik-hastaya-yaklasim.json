@@ -1,0 +1,35 @@
+{
+  "key": "y25-k2-01-norolojik-hastaya-yaklasim",
+  "donem": "2025-2026",
+  "kurul": 2,
+  "brans": "Nöroloji",
+  "baslik": "Nörolojik Hastaya Yaklaşım",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-10-24 23:38",
+      "neden": "Kurul 2 2025-2026 Arşivi İlk Üretim ve Kalite Kapısı Doğrulaması",
+      "hatali_bilgiler": [
+        "Taslak aşamasında deck.json 1. adım pdfSayfalari [1,2] kapak sayfasını içeriyordu; sayfa_haritasi.json ile uyumlu olarak [2,2] (içerik sayfası) şeklinde düzeltildi.",
+        "konusma_v2.json içinde cikmis_baglantilari.json ile eşleşen 7 çıkmış sorunun (Parkinson ilk izlenim, MS atak-düzelme, migren anamnez tanısı, akut hemipleji, akut inmede BBT/MRG) sesli vurguları 'sınavda soruldu / bu bilgi çıkmışta soruldu' kalıbıyla tamamlandı."
+      ],
+      "degisiklikler": [
+        "9 sayfalık PDF eksiksiz işlendi (sayfa 1 kapak, sayfa 2-9 içerik); tüm şekil ve tablolar sayfa_haritasi.json ve konusma_v2.json içinde açıklandı.",
+        "7 çıkmış soru bağlantısı hem sesli anlatımda (cikmis + vurgu tur=cikmis) hem bge-m3 tabanlı vurgu/cikmis_konum katmanlarında işaretlendi.",
+        "12 adımlı Öğren destesi (2 Checkpoint + 1 Ders Sonu Oyunları sayfası) ve PDF gömülü .medspak (ek tablosu tur='ders_pdf', meta.ekler=1) üretildi."
+      ],
+      "metrikler": {
+        "sureSn": 997,
+        "sureDk": 16.6,
+        "sayfaSayisi": 9,
+        "atlananSayfa": 0,
+        "bolumSayisi": 7,
+        "paragrafSayisi": 14,
+        "cumleSayisi": 114,
+        "slaytAdimSayisi": 12,
+        "cizimSayisi": 15,
+        "cikmisEslesme": 22
+      }
+    }
+  ]
+}

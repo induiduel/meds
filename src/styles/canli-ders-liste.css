@@ -197,5 +197,37 @@
   .cdb-gorunum button { grid-template-columns: 22px minmax(0, 1fr) auto; grid-template-rows: auto; }
   .cdb-gorunum button > svg { grid-row: auto; }
   .cdb-bolumler ol { grid-template-columns: minmax(0, 1fr); }
-  .cdb-boyn { opacity: 1; }
+  .cd-boyn { opacity: 1; }
 }
+
+/* ---------- 2025-2026 dönem seçici, arşiv uyarısı ve güncelleme günlüğü ---------- */
+.cdl-donem-sec { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; padding: 4px; border-radius: 12px; background: var(--color-field); }
+.cdl-donem-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 40px; padding: 4px 6px; border: 0; border-radius: 9px;
+  background: transparent; color: var(--color-ink-2); font: inherit; cursor: pointer; text-align: center; line-height: 1.15; transition: background-color .15s, color .15s; }
+.cdl-donem-btn b { font-size: 12.5px; font-weight: 700; }
+.cdl-donem-btn small { font-size: 10.5px; color: var(--color-ink-3); }
+.cdl-donem-btn.is-on { background: var(--color-white); color: var(--color-ink); box-shadow: 0 1px 2px rgb(0 0 0 / .08); }
+.cdl-donem-btn.is-arsiv.is-on { border: 1px solid var(--color-warn, #d97706); background: var(--color-warn-soft, #fef3c7); color: var(--color-ink); }
+
+.cd-chip.is-arsiv { display: inline-flex; align-items: center; height: 20px; padding: 0 7px; margin-right: 6px; border-radius: 6px;
+  background: var(--color-warn-soft, #fef3c7); color: var(--color-warn, #b45309); font-size: 11px; font-weight: 700; letter-spacing: .02em; vertical-align: middle; }
+
+.cd-arsiv-uyari { display: flex; align-items: flex-start; gap: 10px; padding: 12px 14px; border: 1px solid var(--color-warn, #d97706); border-radius: 14px;
+  background: var(--color-warn-soft, #fffbeb); color: var(--color-ink); font-size: 13px; line-height: 1.45; }
+.cd-arsiv-uyari > svg { width: 18px; height: 18px; flex: none; margin-top: 2px; color: var(--color-warn, #d97706); }
+.cd-arsiv-uyari p { margin: 3px 0 0; color: var(--color-ink-2); }
+.cd-arsiv-uyari.is-kompakt { align-items: center; padding: 7px 12px; border-radius: 10px; font-size: 12.5px; }
+.cd-arsiv-uyari.is-kompakt > svg { margin-top: 0; width: 16px; height: 16px; }
+
+.cd-gunluk-govde { display: flex; flex-direction: column; gap: 12px; padding: 14px 18px 18px; max-height: 75vh; overflow-y: auto; }
+.cd-gunluk-liste { display: flex; flex-direction: column; gap: 12px; }
+.cd-gunluk-ust { display: flex; flex-wrap: wrap; gap: 6px; }
+.cd-gunluk-kart { display: flex; flex-direction: column; gap: 10px; padding: 14px; border: 1px solid var(--color-line); border-radius: 12px; background: var(--color-canvas); }
+.cd-gunluk-kart-bas { display: flex; align-items: center; justify-content: space-between; gap: 8px; border-bottom: 1px solid var(--color-line-soft, var(--color-line)); padding-bottom: 6px; }
+.cd-gunluk-kart-bas b { font-size: 14.5px; color: var(--color-accent); }
+.cd-gunluk-kart-bas time { font-size: 12px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.cd-gunluk-neden { margin: 0; font-size: 13.5px; line-height: 1.45; color: var(--color-ink); }
+.cd-gunluk-metrikler { display: flex; flex-wrap: wrap; gap: 6px 10px; padding: 8px 10px; border-radius: 9px; background: var(--color-white); border: 1px solid var(--color-line-soft, var(--color-line)); font-size: 12px; color: var(--color-ink-2); }
+.cd-gunluk-blok h4 { margin: 0 0 4px; font-size: 12.5px; font-weight: 700; color: var(--color-ink-2); text-transform: uppercase; letter-spacing: .03em; }
+.cd-gunluk-blok ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; font-size: 13px; line-height: 1.45; color: var(--color-ink); }
+

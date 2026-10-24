@@ -5,11 +5,11 @@
  *    çubuktadır (CanliDersDock, App düzeyinde) — ses öğesi canliDersStore'da tek ve kalıcıdır.
  */
 import React, { useEffect, useMemo, useState } from 'react';
-import { AudioLines, BookOpen, Check, ChevronDown, Clock, Download, Headphones, History, Layers, LayoutList, ListMusic, MoreHorizontal, Pause, Play, Search, Star, Video, X } from 'lucide-react';
+import { AlertTriangle, Archive, AudioLines, BookOpen, Check, ChevronDown, Clock, Download, FileText, Headphones, History, Layers, LayoutList, ListMusic, MoreHorizontal, Package, Pause, Play, Search, Star, Video, X } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import {
-  cdDosyaAdi, cdKonumListesi, cdSesKimlik, cdTercihVaryant, cdVarsayilanSesAyarla, useCdVarsayilanSes, cdListeGetir, cdOynat, cdSesKisa, cdSesUrl, cdToggle, fmtMb, fmtSure, useCd,
-  type CdListeDers, type CdVaryant,
+  cdDosyaAdi, cdGunlukGetir, cdKonumListesi, cdMedspakUrl, cdSesKimlik, cdTercihVaryant, cdVarsayilanSesAyarla, useCdVarsayilanSes, cdListeGetir, cdOynat, cdSesKisa, cdSesUrl, cdToggle, fmtMb, fmtSure, useCd,
+  type CdGunluk, type CdListeDers, type CdVaryant,
 } from './canliDersStore';
 import CanliDersDers from './CanliDersDers';
 import { TopluPdfDugme } from './CanliDersTopluPdf';
@@ -72,6 +72,10 @@ const kapaliOku = (): Set<string> => { try { return new Set(JSON.parse(localStor
  */
 function CanliDersListe() {
   useCdTvGezinme('liste');
+  const [donem, setDonem0] = useState<'2026-2027' | '2025-2026'>(() => {
+    const d = new URLSearchParams(icKonum().search).get('donem');
+    return d === '2025-2026' ? '2025-2026' : '2026-2027';
+  });
   const [hamDersler, setDersler] = useState<CdListeDers[] | null>(null);
   // Blok özetler (k1-95-blok-ozet-patoloji-1 …): birkaç dersi tek sesli derste anlatır; ayrı görünümde listelenir
   const [hamBlok, setBlok] = useState<CdListeDers[]>([]);
@@ -91,12 +95,18 @@ function CanliDersListe() {
   };
   const blok = useMemo(() => (kurul ? hamBlok.filter((d) => (d.kurul ?? kurulKimlikten(d.key)) === kurul) : hamBlok), [hamBlok, kurul]);
   const [sureAcik, setSureAcik] = useState(() => location.hash === '#sureler');
+  const [gunlukModalKey, setGunlukModalKey] = useState<string | null>(null);
   const listeN = useCdListe((s) => s.keys.length);
   const yildizN = useYildizliSayisi();
   const takip = useTakip();
   // Oynatıcıdaki "Listem" göstergesi /canliders#listem açar (sayfa zaten açıksa da görünüme geçilsin)
   useEffect(() => {
-    const f = () => { const g = HASH_GORUNUM[location.hash]; if (g) setGorunum0(g); };
+    const f = () => {
+      const g = HASH_GORUNUM[location.hash];
+      if (g) setGorunum0(g);
+      const d = new URLSearchParams(icKonum().search).get('donem');
+      setDonem0(d === '2025-2026' ? '2025-2026' : '2026-2027');
+    };
     window.addEventListener('popstate', f);
     return () => window.removeEventListener('popstate', f);
   }, []);
@@ -108,14 +118,26 @@ function CanliDersListe() {
   const [konum] = useState(konumHaritasi);
   const tanitim = useCdTur('liste', !!dersler?.length, () => !!document.querySelector('.cd-satir'));
 
-  const yukle = (yenile = false) => {
+  const setDonem = (yeni: '2026-2027' | '2025-2026') => {
+    if (yeni === donem) return;
+    setDonem0(yeni);
+    setSuzgec0('tum');
+    const sp = new URLSearchParams(icKonum().search);
+    if (yeni === '2025-2026') sp.set('donem', '2025-2026');
+    else sp.delete('donem');
+    const qs = sp.toString();
+    try { history.replaceState(history.state, '', `/canliders${qs ? `?${qs}` : ''}`); } catch { /* yok */ }
+  };
+
+  const yukle = (yenile = false, aktifDonem = donem) => {
     setHata(null);
-    cdListeGetir(yenile).then((ds) => { cdListeOzetleri(ds); setDersler(ds.filter((d) => !/-son-prova-|-blok-ozet-/.test(d.key))); setBlok(ds.filter((d) => /-blok-ozet-/.test(d.key))); /* Son Prova partları kendi sayfasında (/son-prova) */ }, (e) => setHata(e?.message || 'Liste alınamadı.'));
+    setDersler(null);
+    cdListeGetir(yenile, aktifDonem).then((ds) => { cdListeOzetleri(ds); setDersler(ds.filter((d) => !/-son-prova-|-blok-ozet-/.test(d.key))); setBlok(ds.filter((d) => /-blok-ozet-/.test(d.key))); /* Son Prova partları kendi sayfasında (/son-prova) */ }, (e) => setHata(e?.message || 'Liste alınamadı.'));
   };
   useEffect(() => {
-    document.title = 'Sesli ders · MeDSor';
-    yukle();
-  }, []);
+    document.title = donem === '2025-2026' ? '2025-2026 Arşiv Sesli Dersler · MeDSor' : 'Sesli ders · MeDSor';
+    yukle(false, donem);
+  }, [donem]);
 
   const bitti = (d: CdListeDers) => bittiMi(takip.k[`sesli:${sesliKonuId(d.key)}`]);
   const liste = useMemo(() => {
@@ -205,7 +227,32 @@ function CanliDersListe() {
 
       <div className="cdl-govde">
         <aside className="cdl-ray" aria-label="Sesli ders gezinme">
-          <KurulSecici className="cdl-kurul" secili={kurul} yol={(k) => `/dersler/canliders/kurul${k}`} tumuYol="/dersler/canliders" />
+          <div className="cdl-donem-sec" role="group" aria-label="Akademik dönem seçimi">
+            <button
+              type="button"
+              className={`cdl-donem-btn${donem === '2026-2027' ? ' is-on' : ''}`}
+              aria-pressed={donem === '2026-2027'}
+              onClick={() => setDonem('2026-2027')}
+            >
+              <b>2026-2027</b>
+              <small>Güncel Dönem</small>
+            </button>
+            <button
+              type="button"
+              className={`cdl-donem-btn is-arsiv${donem === '2025-2026' ? ' is-on' : ''}`}
+              aria-pressed={donem === '2025-2026'}
+              onClick={() => setDonem('2025-2026')}
+            >
+              <b>2025-2026</b>
+              <small>Geçen Yıl Arşivi</small>
+            </button>
+          </div>
+          <KurulSecici
+            className="cdl-kurul"
+            secili={kurul}
+            yol={(k) => `/dersler/canliders/kurul${k}${donem === '2025-2026' ? '?donem=2025-2026' : ''}`}
+            tumuYol={`/dersler/canliders${donem === '2025-2026' ? '?donem=2025-2026' : ''}`}
+          />
           <nav className="cdl-gorunum" aria-label="Görünüm">
             <RayDugme on={gorunum === 'tum'} ikon={<LayoutList />} ad="Tüm dersler" n={dersler ? cdKonuSayisi(dersler) : undefined} onClick={() => setGorunum('tum')} />
             {yarimSayi > 0 && <RayDugme on={gorunum === 'yarim'} ikon={<History />} ad="Yarım kalanlar" n={yarimSayi} onClick={() => setGorunum('yarim')} />}
@@ -236,6 +283,18 @@ function CanliDersListe() {
         </aside>
 
         <main className="cdl-icerik">
+          {donem === '2025-2026' && (
+            <div className="cd-arsiv-uyari" role="note">
+              <AlertTriangle aria-hidden />
+              <div>
+                <b>2025-2026 Dönemi (Geçen Yıl Arşivi · Kurul 2–6 Sınama Paketi)</b>
+                <p>
+                  Bu listedeki dersler geçen yılın (2025-2026) slaytlarından ve çıkmış sorularından üretilmiş arşiv dersleridir.
+                  <b> 2026-2027 güncel dönem dersleriyle kesinlikle karışmaz</b>; yeni dönem PDF'leri gelene kadar ön çalışma ve sınama amacıyla ayrı veritabanında tutulmaktadır.
+                </p>
+              </div>
+            </div>
+          )}
           {odak && dersler && (son || siradaki) && (
             <div className="cdl-kahraman">
               {son && <DevamKarti d={son.d} k={son.k} />}
@@ -271,7 +330,7 @@ function CanliDersListe() {
                 <KategoriBolumu key={kat.id} kat={kat} ds={ds} bitenN={ds.filter(bitti).length} sonraki={ds.find((d) => !bitti(d))}
                   acik={!!q || suzgec !== 'tum' || !kapali.has(kat.id)} onDegistir={() => katDegistir(kat.id)}>
                   <ul className="cd-satirlar">
-                    {ds.map((d) => <DersSatiri key={d.key} d={d} k={konum.get(d.key)} />)}
+                    {ds.map((d) => <DersSatiri key={d.key} d={d} k={konum.get(d.key)} onGunlukAc={setGunlukModalKey} />)}
                   </ul>
                 </KategoriBolumu>
               ))}
@@ -280,6 +339,7 @@ function CanliDersListe() {
         </main>
       </div>
       {sureAcik && dersler && <SureDiyalog dersler={dersler} onKapat={() => { setSureAcik(false); if (location.hash === '#sureler') history.replaceState(history.state, '', location.pathname + location.search); }} />}
+      {gunlukModalKey && <GunlukDiyalog dersKey={gunlukModalKey} onKapat={() => setGunlukModalKey(null)} />}
       {tanitim.tur}
     </div>
   );
@@ -543,7 +603,7 @@ function KategoriBolumu({ kat, ds, bitenN, sonraki, acik, onDegistir, children }
   );
 }
 
-const DersSatiri = React.memo(function DersSatiri({ d, k }: { d: CdListeDers; k?: Konum }) {
+const DersSatiri = React.memo(function DersSatiri({ d, k, onGunlukAc }: { d: CdListeDers; k?: Konum; onGunlukAc?: (key: string) => void }) {
   const [acik, setAcik] = useState(false);
   useCdVarsayilanSes();
   const v = cdTercihVaryant(d.varyantlar) || d.varsayilan;
@@ -551,8 +611,9 @@ const DersSatiri = React.memo(function DersSatiri({ d, k }: { d: CdListeDers; k?
   const bitti = bittiMi(useKonuKaydi('sesli', d.key));
   if (!v) return null;
   const sesN = d.varyantlar.length;
+  const isArsiv = d.arsiv || d.donem === '2025-2026' || d.key.startsWith('y25-');
   return (
-    <li className={`cd-satir cdl-satir${caliyor ? ' is-caliyor' : ''}${acik ? ' is-acik' : ''}${bitti ? ' is-bitti' : ''}`}>
+    <li className={`cd-satir cdl-satir${caliyor ? ' is-caliyor' : ''}${acik ? ' is-acik' : ''}${bitti ? ' is-bitti' : ''}${isArsiv ? ' is-arsiv' : ''}`}>
       <div className="cdl-satir-ana">
         <span className="cdl-no" aria-hidden>{bitti ? <Check /> : caliyor ? <AudioLines /> : d.no}</span>
         <a
@@ -564,10 +625,16 @@ const DersSatiri = React.memo(function DersSatiri({ d, k }: { d: CdListeDers; k?
             dersAc(d.key);
           }}
         >
-          <b>{d.parca ? <><em className="cd-parca">{cdParca(d)}</em> </> : null}{d.baslik}</b>
+          <b>
+            {isArsiv && <span className="cd-chip is-arsiv">2025-2026 Arşiv</span>}
+            {d.parca ? <><em className="cd-parca">{cdParca(d)}</em> </> : null}
+            {d.baslik}
+          </b>
           <small>
             <span>{fmtSure(v.sureSn)}</span>
             {d.pdf && <span>slaytlı</span>}
+            {d.desteId && <span>Öğren desteli</span>}
+            {d.medspakVar && <span>.medspak</span>}
             {sesN > 1 && <span>{sesN} ses</span>}
             <SatirIlerleme d={d} k={k} dur={v.sureSn} />
             <CihazdaIsaret paket={`sesli:${d.key}`} indir={false} />
@@ -575,6 +642,16 @@ const DersSatiri = React.memo(function DersSatiri({ d, k }: { d: CdListeDers; k?
           </small>
         </a>
         <div className="cdl-satir-eylem">
+          {d.gunlukVar && onGunlukAc && (
+            <button
+              type="button"
+              className="cd-btn is-ince"
+              onClick={() => onGunlukAc(d.key)}
+              title="Sesli ders güncelleme günlüğü"
+            >
+              <FileText aria-hidden /> <span>Günlük</span>
+            </button>
+          )}
           <KonuIsaret modul="sesli" konu={d.key} ad={d.baslik} />
           <OynatDugme d={d} v={v} yuvarlak />
           <button
@@ -594,6 +671,21 @@ const DersSatiri = React.memo(function DersSatiri({ d, k }: { d: CdListeDers; k?
           <div className="cd-secenek-arac">
             <CevrimdisiDugme dersKey={d.key} baslik={d.baslik} varyantlar={d.varyantlar} />
             <ListeEkleDugme dersKey={d.key} baslik={d.baslik} etiketli />
+            {d.desteId && (
+              <button type="button" className="cd-btn is-ince" onClick={() => navigateTo(`/dersler/interaktif/${d.desteId}`)}>
+                <BookOpen aria-hidden /> <span>Öğren Destesi</span>
+              </button>
+            )}
+            {d.medspakVar && (
+              <a className="cd-btn is-ince" href={cdMedspakUrl(d.key)} download={`${d.key}.medspak`}>
+                <Package aria-hidden /> <span>.medspak İndir</span>
+              </a>
+            )}
+            {onGunlukAc && (
+              <button type="button" className="cd-btn is-ince" onClick={() => onGunlukAc(d.key)}>
+                <FileText aria-hidden /> <span>Güncelleme Günlüğü</span>
+              </button>
+            )}
             <KonuDugmeleri kucuk modul="sesli" konu={d.key} ad={d.baslik} onTekrar={() => { cdOynat(d, v.id, { t: 0 }); dersAc(d.key); }} />
           </div>
           <p className="cd-secenek-bas">{sesN > 1 ? `Sesler (${sesN})` : 'Ses'}</p>
@@ -614,6 +706,83 @@ const DersSatiri = React.memo(function DersSatiri({ d, k }: { d: CdListeDers; k?
     </li>
   );
 });
+
+export function GunlukDiyalog({ dersKey, onKapat }: { dersKey: string; onKapat: () => void }) {
+  const [veri, setVeri] = useState<CdGunluk | null>(null);
+  const [hata, setHata] = useState<string | null>(null);
+  const kapatRef = React.useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    kapatRef.current?.focus();
+    const k = (e: KeyboardEvent) => { if (e.key === 'Escape') onKapat(); };
+    document.addEventListener('keydown', k);
+    cdGunlukGetir(dersKey).then(setVeri, (e) => setHata(e?.message || 'Günlük alınamadı.'));
+    return () => document.removeEventListener('keydown', k);
+  }, [dersKey, onKapat]);
+
+  return (
+    <div className="cd-dlg" role="presentation" onClick={(e) => { if (e.target === e.currentTarget) onKapat(); }}>
+      <div className="cd-dlg-kart is-genis" role="dialog" aria-modal="true" aria-labelledby="cd-gnl-b">
+        <header className="cd-dlg-bas">
+          <b id="cd-gnl-b" className="cd-dlg-baslik"><FileText aria-hidden /> Güncelleme Günlüğü · {veri?.baslik || dersKey}</b>
+          <button ref={kapatRef} type="button" className="cd-btn is-ikon" onClick={onKapat} aria-label="Kapat"><X aria-hidden /></button>
+        </header>
+        <div className="cd-dlg-govde cd-gunluk-govde">
+          {hata ? (
+            <p className="cd-hata">{hata}</p>
+          ) : !veri ? (
+            <div className="cd-bos" role="status"><span className="cd-spin" aria-hidden /> Günlük yükleniyor…</div>
+          ) : !veri.kayitlar.length ? (
+            <p className="cd-bos">Bu ders için henüz kayıtlı güncelleme günlüğü yok.</p>
+          ) : (
+            <div className="cd-gunluk-liste">
+              <div className="cd-gunluk-ust">
+                <span className="cd-chip is-arsiv">Dönem: {veri.donem}</span>
+                <span className="cd-chip">Kurul {veri.kurul}</span>
+                {veri.brans && <span className="cd-chip">{veri.brans}</span>}
+              </div>
+              {veri.kayitlar.slice().reverse().map((k) => (
+                <article key={k.surum} className="cd-gunluk-kart">
+                  <header className="cd-gunluk-kart-bas">
+                    <b>Sürüm v{k.surum}</b>
+                    <time>{k.tarih}</time>
+                  </header>
+                  <p className="cd-gunluk-neden"><b>Güncelleme Nedeni:</b> {k.neden}</p>
+                  {k.metrikler && (
+                    <div className="cd-gunluk-metrikler">
+                      {k.metrikler.sureDk != null && <span>Süre: <b>{k.metrikler.sureDk} dk</b></span>}
+                      {k.metrikler.sayfaSayisi != null && <span>PDF Sayfa: <b>{k.metrikler.sayfaSayisi} (Atlanan: {k.metrikler.atlananSayfa ?? 0})</b></span>}
+                      {k.metrikler.paragrafSayisi != null && <span>Paragraf/Cümle: <b>{k.metrikler.paragrafSayisi} / {k.metrikler.cumleSayisi}</b></span>}
+                      {k.metrikler.slaytAdimSayisi != null && <span>Öğren Adımı: <b>{k.metrikler.slaytAdimSayisi}</b></span>}
+                      {k.metrikler.cizimSayisi != null && <span>Canlı Çizim: <b>{k.metrikler.cizimSayisi}</b></span>}
+                      {k.metrikler.cikmisEslesme != null && <span>Çıkmış Eşleşme: <b>{k.metrikler.cikmisEslesme}</b></span>}
+                    </div>
+                  )}
+                  {k.hatali_bilgiler?.length > 0 && (
+                    <div className="cd-gunluk-blok">
+                      <h4>Tespit Edilen / Denetlenen Hatalar ve Eksikler</h4>
+                      <ul>
+                        {k.hatali_bilgiler.map((m, i) => <li key={i}>{m}</li>)}
+                      </ul>
+                    </div>
+                  )}
+                  {k.degisiklikler?.length > 0 && (
+                    <div className="cd-gunluk-blok">
+                      <h4>Yapılan Değişiklikler ve İyileştirmeler</h4>
+                      <ul>
+                        {k.degisiklikler.map((m, i) => <li key={i}>{m}</li>)}
+                      </ul>
+                    </div>
+                  )}
+                </article>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 
 /** KMB (Klinik Mesleki Beceri) sesli video dersleri: rayda kısa bağlantı listesi (/dersler/kmb/<beceri>) */

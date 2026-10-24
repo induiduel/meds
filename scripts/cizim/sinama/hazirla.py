@@ -6,12 +6,20 @@ from pathlib import Path
 
 import pymupdf
 
-KOK = Path(__file__).resolve().parents[3] / "data" / "sesli_anlatim"
-key, hedef = sys.argv[1], Path(sys.argv[2])
+MEDS_KOK = Path(__file__).resolve().parents[3]
+key, hedef = sys.argv[1].removesuffix(".json"), Path(sys.argv[2])
+if "/" in key:
+    key = Path(key).stem
+arsiv_mi = key.startswith("y25-")
+KOK = MEDS_KOK / "data" / ("arsiv_25_26/sesli_anlatim" if arsiv_mi else "sesli_anlatim")
 hedef.mkdir(parents=True, exist_ok=True)
 cz = json.loads((KOK / "cizim" / f"{key}.json").read_text())
 hz = json.loads((KOK / "hizalama" / f"{key}.json").read_text())
-pdf = sorted(glob.glob(str(KOK / ".pdf_onbellek" / f"{hz['deckId']}_0_*.pdf")))[-1]
+if arsiv_mi:
+    kurul = key.split("-")[1].replace("k", "kurul")
+    pdf = str(MEDS_KOK.parent / "meds_database_25_26" / "pdf" / kurul / f"{key}.pdf")
+else:
+    pdf = sorted(glob.glob(str(KOK / ".pdf_onbellek" / f"{hz['deckId']}_0_*.pdf")))[-1]
 doc = pymupdf.open(pdf)
 komut, oran = {}, {}
 for cs in cz["p"].values():

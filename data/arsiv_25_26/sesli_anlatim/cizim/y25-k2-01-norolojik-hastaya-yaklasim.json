@@ -1,0 +1,610 @@
+{
+ "surum": 1,
+ "metinHash": "30853dcaa88b1e80650b6b4410e74369928dcdc7",
+ "p": {
+  "0": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Anatomik lokalizasyon",
+      "Lezyonun natürü ve etyolojisi"
+     ],
+     "baslik": "Nörolojik yaklaşım soruları",
+     "s": 1,
+     "k": [
+      0,
+      95
+     ],
+     "tip": "liste",
+     "konum": [
+      0.25,
+      0.6
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "6": [
+    {
+     "tur": "sema",
+     "sablon": "algoritma",
+     "sablon_ad": "Yaklaşım basamakları",
+     "duzen": "adimlar",
+     "ogeler": [
+      "Ayrıntılı anamnez",
+      "Nörolojik muayene",
+      "Sendromik bütünlük ve tetkik"
+     ],
+     "s": 1,
+     "k": [
+      0,
+      141
+     ],
+     "tip": "adimlar",
+     "konum": [
+      0.05,
+      0.6
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.345,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "1": {
+   "6": [
+    {
+     "tur": "sema",
+     "sablon": "maskeleyen",
+     "sablon_ad": "Görünen neden altta yatanı örter",
+     "duzen": "maske",
+     "basliklar": [
+      "İlk izlenim",
+      "Atlanmaması gereken"
+     ],
+     "bag": "maskeleyebilir",
+     "gorunen": "Uyuşma yakınması",
+     "altta": [
+      "Duyu kusuru",
+      "Motor kuvvet kaybı"
+     ],
+     "s": 2,
+     "k": [
+      16,
+      159
+     ],
+     "tip": "maske",
+     "konum": [
+      0.03,
+      0.88
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.357,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2574,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "2": {
+   "6": [
+    {
+     "tur": "sema",
+     "sablon": "karar",
+     "sablon_ad": "Karar dalı",
+     "duzen": "dal",
+     "soru": "Hasta bilinçsiz veya konuşma bozukluğu mu?",
+     "dallar": [
+      [
+       "Bilinçsiz veya afazi",
+       "Yakınından ya da getiren kişiden anamnez"
+      ],
+      [
+       "Bilinci açık hasta",
+       "Hastanın esas sıkıntısı ve öyküsü"
+      ]
+     ],
+     "s": 2,
+     "k": [
+      0,
+      142
+     ],
+     "tip": "dal",
+     "konum": [
+      0.03,
+      0.88
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.366,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2656,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "3": {
+   "7": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "Akut başlangıç (dakika/saat)",
+       "Hemipleji"
+      ],
+      [
+       "Sinsi başlangıç (aylar/yıllar)",
+       "Beyin tümörü, dejeneratif"
+      ],
+      [
+       "Dalgalı gidiş (atak ve iyileşme)",
+       "Relapsing remitting multipl skleroz"
+      ]
+     ],
+     "s": 3,
+     "k": [
+      0,
+      139
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.7
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.413,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1328,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "4": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karar",
+     "sablon_ad": "Karar dalı",
+     "duzen": "dal",
+     "soru": "Klinik düzelme neye bağlı?",
+     "dallar": [
+      [
+       "Uygulanan tedaviye",
+       "Gerçek tedavi yanıtı"
+      ],
+      [
+       "Doğal seyrine",
+       "Spontan remisyon dönemi"
+      ]
+     ],
+     "s": 3,
+     "k": [
+      0,
+      151
+     ],
+     "tip": "dal",
+     "konum": [
+      0.03,
+      0.7
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.366,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0856,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "5": {
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Migren",
+      "Trigeminal nevralji",
+      "Epilepsi (klinik tanı)"
+     ],
+     "baslik": "Tanısı öyküye dayanan hastalıklar",
+     "s": 4,
+     "k": [
+      0,
+      114
+     ],
+     "tip": "liste",
+     "konum": [
+      0.68,
+      0.06
+     ],
+     "genislik": 0.3,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "6": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "Normal elektroensefalografi",
+       "Epilepsi tanısından uzaklaştırmaz"
+      ],
+      [
+       "Gözleri sıkıca kapatma ve direnç",
+       "Psödonöbet lehine bulgu"
+      ]
+     ],
+     "s": 4,
+     "k": [
+      0,
+      200
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.83
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1868,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "6": {
+   "6": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "Kol gövdeye yapışık, bacak oraklama",
+       "Hemiplejik yürüyüş"
+      ],
+      [
+       "Maske yüz, kolları sallamama, fleksör postür",
+       "Parkinson hastalığı"
+      ],
+      [
+       "Karın önde badi badi ördek yürüyüşü",
+       "Kas distrofisi"
+      ]
+     ],
+     "s": 5,
+     "k": [
+      0,
+      133
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.77
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.466,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2562,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "7": {
+   "6": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Konuşma kusuru",
+       "Motor telaffuz ve artikülasyon",
+       "Kortikal dil anlama ve ifade"
+      ],
+      [
+       "Kelime ve anlama",
+       "Kelimeler doğru seçilir",
+       "Doğru kelimeyi bulamaz ve anlayamaz"
+      ]
+     ],
+     "kutuplar": [
+      "Dizartri",
+      "Afazi"
+     ],
+     "s": 5,
+     "k": [
+      0,
+      165
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.77
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.444,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2336,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "8": {
+   "7": [
+    {
+     "tur": "sema",
+     "sablon": "lezyon_bulgu",
+     "sablon_ad": "Lezyon yeri → bulgu",
+     "duzen": "tablo",
+     "basliklar": [
+      "Lezyon düzeyi",
+      "Bulgu"
+     ],
+     "satirlar": [
+      [
+       "Sol hemisfer",
+       "Afazi ve sağ hemipleji"
+      ],
+      [
+       "Beyin sapında lezyon",
+       "Diplopi, vertigo, piramidal, serebellar"
+      ],
+      [
+       "Medulla spinalis",
+       "Parapleji, duyu seviyesi, sfinkter"
+      ],
+      [
+       "Birinci sakral radiks",
+       "Bacak arkası ağrı, aşil kaybı"
+      ]
+     ],
+     "s": 6,
+     "k": [
+      0,
+      141
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.72
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.489,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2288,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "10": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "Hipertansiyon ve diyabetle akut hemipleji",
+       "Damarsal etyoloji"
+      ],
+      [
+       "Yavaş yerleşen ve ağırlaşan hemipleji",
+       "Yer kaplayan lezyon"
+      ],
+      [
+       "Malignite öyküsüyle ilerleyen hemipleji",
+       "Beyin metastazı"
+      ]
+     ],
+     "s": 7,
+     "k": [
+      0,
+      139
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.85
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.413,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2828,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "8": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "Genç hasta, tekrarlayan farklı bölge epizodları",
+       "Multipl skleroz"
+      ],
+      [
+       "Yaşlı hasta ve aterosklerozla akut bulgu",
+       "Serebrovasküler olay"
+      ],
+      [
+       "Sinsi ilerleyici parapleji",
+       "Medulla spinalis basısı"
+      ],
+      [
+       "Aşı veya viral enfeksiyon sonrası parapleji",
+       "Post enfeksiyöz miyelit"
+      ]
+     ],
+     "s": 7,
+     "k": [
+      0,
+      144
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.85
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.596,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.4656,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "12": {
+   "7": [
+    {
+     "tur": "sema",
+     "sablon": "tani_tetkik",
+     "sablon_ad": "Durum → bakılacak tetkik",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum / şüphe",
+      "Bakılacak tetkik"
+     ],
+     "satirlar": [
+      [
+       "Santral enfeksiyon ve subaraknoid kanama",
+       "Beyin omurilik sıvısı incelemesi"
+      ],
+      [
+       "Epilepsi ve periferik kas hastalığı",
+       "Elektroensefalografi ve elektromiyografi"
+      ],
+      [
+       "Sessiz demiyelinizan plaklar",
+       "Uyarılmış potansiyeller"
+      ],
+      [
+       "Akut inme ve yapısal lezyon",
+       "Bilgisayarlı tomografi ve manyetik rezonans"
+      ]
+     ],
+     "s": 8,
+     "k": [
+      0,
+      208
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.74
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.542,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3022,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "13": {
+   "7": [
+    {
+     "tur": "sema",
+     "sablon": "algoritma",
+     "sablon_ad": "Yaklaşım basamakları",
+     "duzen": "adimlar",
+     "ogeler": [
+      "Vital bulguları ve solunum yolunu açık tutmak",
+      "Nöbeti durdurmak ve progresyonu fark etmek",
+      "Bilinç düzeyi, saat ve pupil büyüklüklerini kaydetmek"
+     ],
+     "s": 9,
+     "k": [
+      0,
+      149
+     ],
+     "tip": "adimlar",
+     "konum": [
+      0.03,
+      0.86
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.345,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.225,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  }
+ },
+ "rapor": {
+  "aday": 15,
+  "gecti": 15,
+  "ret": {}
+ }
+}

@@ -1,0 +1,3113 @@
+{
+ "surum": 2,
+ "ders_id": "k2-01",
+ "anahtar": "y25-k2-01-norolojik-hastaya-yaklasim",
+ "baslik": "Nörolojik Hastaya Yaklaşım",
+ "bolumler": [
+  {
+   "id": "k2-01-b01",
+   "baslik": "Nörolojik Yaklaşımın Temel İlkeleri ve Klinik Yöntem",
+   "sayfa_araligi": [
+    1,
+    1
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-01-p001",
+     "sayfa": 1,
+     "slayt_adim": "k2-01-d-s01",
+     "cumleler": [
+      {
+       "id": "k2-01-c0001",
+       "ses": "Nörolojik hastaya yaklaşım, sinir sisteminin karmaşık yapısını klinik verilerle adım adım çözümleyen sistematik bir tanı sürecidir.",
+       "ekran": "**Nörolojik Hastaya Yaklaşım:** Sinir sistemini klinik verilerle çözümleyen sistematik tanı süreci",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Nörolojik Hastaya Yaklaşım",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "NÖROLOJİK HASTAYA YAKLAŞIM"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 1,
+        "alinti": "NÖROLOJİK HASTAYA"
+       }
+      },
+      {
+       "id": "k2-01-c0002",
+       "ses": "Klinik nörolojide hekimin temel amacı iki ana soruya doğru yanıt bulmaktır, bunlardan birincisi lezyonun sinir sisteminin neresinde olduğu yani anatomik lokalizasyondur.",
+       "ekran": "**Birinci Temel Soru:** Lezyon neresindedir, yani **anatomik lokalizasyon**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "anatomik lokalizasyon",
+         "tur": "terim"
+        },
+        {
+         "metin": "Birinci Temel Soru:",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s01",
+       "cikmis": [
+        "4f0d71643782"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "NÖROLOJİK HASTAYA YAKLAŞIM"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 1,
+        "alinti": "YAKLAŞIM"
+       }
+      },
+      {
+       "id": "k2-01-c0003",
+       "ses": "İkinci temel soru ise bu bozukluğa yol açan patolojik sürecin ne olduğu yani lezyonun natürü ve etyolojisidir.",
+       "ekran": "**İkinci Temel Soru:** Lezyonun yapısı nedir, yani **lezyonun natürü ve etyoloji**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "lezyonun natürü ve etyoloji",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "NÖROLOJİK HASTAYA YAKLAŞIM"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 1,
+        "alinti": "NÖROLOJİK HASTAYA"
+       }
+      },
+      {
+       "id": "k2-01-c0004",
+       "ses": "Sinir sistemi serebral korteksten beyin sapına, medulla spinalisten radikslere, periferik sinirlere ve kas kavşağına kadar uzanan kesintisiz bir ağ oluşturur.",
+       "ekran": "**Sinir Sistemi Hiyerarşisi:** Korteks, beyin sapı, omurilik, radiks, periferik sinir ve kas ağı",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Sinir Sistemi Hiyerarşisi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "NÖROLOJİK HASTAYA YAKLAŞIM"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 1,
+        "alinti": "YAKLAŞIM"
+       }
+      },
+      {
+       "id": "k2-01-c0005",
+       "ses": "Bu anatomik hiyerarşinin her bir düzeyi kendine özgü fizyolojik görevler üstlendiği için, ortaya çıkan nörolojik kayıp doğrudan hasarlanan bölgeyi işaret eder.",
+       "ekran": "**Fizyopatolojik Karşılık:** Her anatomik düzeyin hasarı kendine özgü klinik bulgular verir",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "NÖROLOJİK HASTAYA YAKLAŞIM"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 1,
+        "alinti": "NÖROLOJİK HASTAYA"
+       }
+      },
+      {
+       "id": "k2-01-c0006",
+       "ses": "Bu nedenle nörolojik değerlendirme ayrıntılı bir anamnez ile başlar ve bulguları birleştiren dikkatli bir nörolojik muayene ile devam eder.",
+       "ekran": "**Değerlendirme Sırası:** Ayrıntılı **anamnez** ve ardından dikkatli **nörolojik muayene**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "anamnez",
+         "tur": "terim"
+        },
+        {
+         "metin": "nörolojik muayene",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "NÖROLOJİK HASTAYA YAKLAŞIM"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 1,
+        "alinti": "YAKLAŞIM"
+       }
+      },
+      {
+       "id": "k2-01-c0007",
+       "ses": "Elde edilen klinik veriler sendromik bir bütünlüğe oturtulduktan sonra, en uygun laboratuvar ve görüntüleme yöntemleri seçilerek kesin tanıya ulaşılır.",
+       "ekran": "**Kesin Tanı Basamağı:** Klinik sendromun belirlenmesi ve hedefe yönelik tetkik seçimi",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "NÖROLOJİK HASTAYA YAKLAŞIM"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 1,
+        "alinti": "NÖROLOJİK HASTAYA"
+       }
+      },
+      {
+       "id": "k2-01-c0008",
+       "ses": "Hiçbir modern teknolojik tetkik, hastayı dinleyerek ve muayene ederek kurulan klinik muhakemenin yerini tutamaz ve plansız tetkik istemi zaman kaybettirir.",
+       "ekran": "**Klinik Muhakeme:** Teknolojik tetkiklerden önce gelen temel hekimlik becerisi",
+       "duzey": 2,
+       "vurgu": [
+        {
+         "metin": "Klinik Muhakeme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "NÖROLOJİK HASTAYA YAKLAŞIM"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 1,
+        "alinti": "YAKLAŞIM"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-01-b02",
+   "baslik": "Nörolojide Anamnezin Önemi ve Yakınmaların Sorgulanması",
+   "sayfa_araligi": [
+    2,
+    2
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-01-p002",
+     "sayfa": 2,
+     "slayt_adim": "k2-01-d-s02",
+     "cumleler": [
+      {
+       "id": "k2-01-c0009",
+       "ses": "Ünlü nörolog Merritt, hastayı dinledikten sonra nesi olduğunu anlamadıysanız muayene ettikten sonra da anlamayacaksınız diyerek öykünün tanıdaki belirleyici yerini ortaya koymuştur.",
+       "ekran": "**Merritt İlkesi:** Dinledikten sonra anlaşılmayan hasta muayeneden sonra da anlaşılamaz",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Merritt İlkesi",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s02",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "«Hastayı dinledikten sonra nesi olduğunu anlamadıysanız muayene ettikten sonra da anlamayacaksınız.» Merritt"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 2,
+        "alinti": "Hastayı dinledikten sonra"
+       }
+      },
+      {
+       "id": "k2-01-c0010",
+       "ses": "Gerçekten de iyi alınan bir anamnez, hekime hastanın sorunu hakkında doğru bir yönelim ve klinik yaklaşım sağlar.",
+       "ekran": "**İyi Bir Anamnez:** Doğru tanısal yönelim ve klinik yaklaşım sağlar",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "İyi Bir Anamnez",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s02",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "İyi bir anamnez doğru bir yönelim ve yaklaşım sağlar"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 2,
+        "alinti": "İyi bir anamnez"
+       }
+      },
+      {
+       "id": "k2-01-c0011",
+       "ses": "Hastanın temel yakınması, belirtilerin başlangıç şekli ve zaman içindeki kronolojik gidişi, anatomik lokalizasyon ve etyoloji yönünden problemi büyük ölçüde aydınlatır.",
+       "ekran": "**Başlangıç ve Kronolojik Gidiş:** Anatomik lokalizasyon ve etyolojiyi büyük ölçüde aydınlatır",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Başlangıç ve Kronolojik Gidiş",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s02",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Hastanın yakınması, belirtilerin başlangıç şekli, kronolojik gidişi anatomik lokalizasyon ve etyoloji yönünden problemi büyük ölçüde aydınlatır"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 2,
+        "alinti": "belirtilerin başlangıç şekli"
+       }
+      },
+      {
+       "id": "k2-01-c0012",
+       "ses": "Örneğin saniyeler içinde gelişen bir belirti damarsal ya da elektriksel bir olayı düşündürürken, aylara yayılan bir tablo büyüyen bir kitleyi veya dejenerasyonu işaret eder.",
+       "ekran": "**Zamansal Profil:** Saniyeler içinde vasküler veya epileptik, aylar içinde tümöral veya dejeneratif",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s02",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Hastanın yakınması, belirtilerin başlangıç şekli, kronolojik gidişi anatomik lokalizasyon ve etyoloji yönünden problemi büyük ölçüde aydınlatır"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 2,
+        "alinti": "lokalizasyon ve etyoloji"
+       }
+      },
+      {
+       "id": "k2-01-c0013",
+       "ses": "Hastanın öyküsü alınırken kullandığı kelimelerle gerçekte neyi kastettiğini anlamak tanı açısından kritik bir gerekliliktir.",
+       "ekran": "**Kelimelerin Anlamı:** Hastanın kullandığı ifadelerle neyi kastettiğini anlamak esastır",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s02",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Hastanın öyküsü alınırken kullandığı kelimelerle neyi kasdettiğini anlamak çok önemli."
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 2,
+        "alinti": "kullandığı kelimelerle neyi kasdettiğini"
+       }
+      },
+      {
+       "id": "k2-01-c0014",
+       "ses": "Çünkü hastalar tıbbi kavramları günlük dildeki alışkanlıklarıyla farklı anlamlarda kullanabilirler ve bu ifadeler sorgulanmadan yazılırsa hekimi yanlış lokalizasyona götürebilir.",
+       "ekran": "**Yanlış Yönelim Riski:** Günlük dildeki ifadelerin sorgulanmadan kabul edilmesi tanı hatası yaratır",
+       "duzey": 2,
+       "vurgu": [
+        {
+         "metin": "Yanlış Yönelim Riski",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s02",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Hastanın öyküsü alınırken kullandığı kelimelerle neyi kasdettiğini anlamak çok önemli."
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 2,
+        "alinti": "anlamak çok önemli"
+       }
+      },
+      {
+       "id": "k2-01-c0015",
+       "ses": "Somut bir örnek olarak, hastanın kolumda veya bacağımda uyuşma var demesi gerçek bir duyu kusuru olabileceği gibi aslında motor bir kuvvet kaybını da anlatıyor olabilir.",
+       "ekran": "**«Uyuşma» Yakınması:** Gerçek bir **duyu kusuru** veya motor **kuvvet kaybı** olabilir",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "duyu kusuru",
+         "tur": "terim"
+        },
+        {
+         "metin": "kuvvet kaybı",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s02",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "«Uyuşma» duyu kusuru olabilir ya da kuvvet kaybını anlatıyor olabilir"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 2,
+        "alinti": "duyu kusuru olabilir"
+       }
+      },
+      {
+       "id": "k2-01-c0016",
+       "ses": "Bu ayrımı netleştirmek için hastaya dokunulanı mı hissetmediği, yoksa elindeki bardağı tutmakta veya ayağını kaldırmakta mı güçlük çektiği açıkça sorulmalıdır.",
+       "ekran": "**Ayırıcı Sorgulama:** Dokunma hissi kaybı ile motor güçsüzlük somut sorularla ayırt edilmelidir",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s02",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "«Uyuşma» duyu kusuru olabilir ya da kuvvet kaybını anlatıyor olabilir"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 2,
+        "alinti": "kuvvet kaybını anlatıyor olabilir"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p003",
+     "sayfa": 2,
+     "slayt_adim": "k2-01-d-s02",
+     "cumleler": [
+      {
+       "id": "k2-01-c0017",
+       "ses": "Benzer biçimde ağrı tamamen sübjektif bir yakınmadır ve yönlendirici olmayan dikkatli sorularla tüm nitelikleri ortaya konmalıdır.",
+       "ekran": "**Ağrının Değerlendirilmesi:** Ağrı **sübjektif** olduğundan sorularla nitelikleri ortaya konmalıdır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sübjektif",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s02",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Ağrı sübjektif, sorularla nitelikleri ortaya konmalı"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 2,
+        "alinti": "sorularla nitelikleri ortaya konmalı"
+       }
+      },
+      {
+       "id": "k2-01-c0018",
+       "ses": "Ağrının lokalizasyonu, yayılımı, zonklayıcı veya şimşek çakar tarzda oluşu, süresi ve tetikleyici faktörleri sorgulanarak spesifik ağrı sendromları birbirinden ayrılır.",
+       "ekran": "**Ağrı Nitelikleri:** Lokalizasyon, yayılım, karakter, süre ve tetikleyici faktörler",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s02",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Ağrı sübjektif, sorularla nitelikleri ortaya konmalı"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 2,
+        "alinti": "Ağrı sübjektif"
+       }
+      },
+      {
+       "id": "k2-01-c0019",
+       "ses": "Özellikle hastanın hayatımda gördüğüm en şiddetli baş ağrısı şeklinde tanımladığı ani başlangıçlı baş ağrısında subaraknoid kanama mutlaka ilk sırada düşünülmelidir.",
+       "ekran": "**Ani En Şiddetli Baş Ağrısı:** İlk sırada **subaraknoid kanama** düşünülmelidir",
+       "duzey": 2,
+       "vurgu": [
+        {
+         "metin": "subaraknoid kanama",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s02",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Ağrı sübjektif, sorularla nitelikleri ortaya konmalı"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 2,
+        "alinti": "sorularla nitelikleri ortaya konmalı"
+       }
+      },
+      {
+       "id": "k2-01-c0020",
+       "ses": "Hekim, hastanın esas sıkıntısının ne olduğunu ve ne söylemek istediğini tam olarak anlamadan nörolojik muayeneye geçmemelidir.",
+       "ekran": "**Muayene Öncesi Kural:** Hastanın «sıkıntı»sı ve ne söylemek istediği anlaşılmadan muayeneye geçilmemelidir",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s02",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Hekim hastanın «sıkıntı»sının ne olduğunu, ne söylemek istediğini anlamadan muayeneye geçmemelidir."
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 2,
+        "alinti": "muayeneye geçmemelidir"
+       }
+      },
+      {
+       "id": "k2-01-c0021",
+       "ses": "Çünkü öyküden elde edilen ön tanı hipotezleri, muayene sırasında hangi nörolojik sistemin daha derinlemesine inceleneceğini doğrudan belirler.",
+       "ekran": "**Öykünün Rehberliği:** Muayenede hangi sistemin derinlemesine inceleneceğini belirler",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s02",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Hekim hastanın «sıkıntı»sının ne olduğunu, ne söylemek istediğini anlamadan muayeneye geçmemelidir."
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 2,
+        "alinti": "ne söylemek istediğini anlamadan"
+       }
+      },
+      {
+       "id": "k2-01-c0022",
+       "ses": "Ayrıca hekim ile hastanın ortak bir zeminde buluşması, hastanın beklentilerinin ve duygularının anlaşılması tanısal doğruluğu ve hasta uyumunu artırır.",
+       "ekran": "**Hasta Merkezli İletişim:** Hastanın beklentilerini ve yakınmasını anlamak tanı başarısını artırır",
+       "duzey": 2,
+       "vurgu": [
+        {
+         "metin": "Hasta Merkezli İletişim",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s02",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Hekim hastanın «sıkıntı»sının ne olduğunu, ne söylemek istediğini anlamadan muayeneye geçmemelidir."
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 2,
+        "alinti": "Hekim hastanın"
+       }
+      },
+      {
+       "id": "k2-01-c0023",
+       "ses": "Eğer hasta bilinçsiz ise ya da afazi gibi bir konuşma bozukluğu varsa, anamnez mutlaka hastanın yakınından ya da onu hastaneye getiren kişiden alınmalıdır.",
+       "ekran": "**Bilinçsiz veya Konuşma Bozukluğu Olan Hasta:** Öykü **yakını ya da getiren kişiden** alınır",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "yakını ya da getiren kişiden",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s02",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Hasta bilinçsiz, ya da konuşma bozukluğu varsa yakını ya da getiren kişiden"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 2,
+        "alinti": "konuşma bozukluğu varsa"
+       }
+      },
+      {
+       "id": "k2-01-c0024",
+       "ses": "Epileptik nöbet, senkop veya akut konfüzyon gibi hastanın atak anını hatırlayamadığı durumlarda da olaya tanıklık eden kişilerin gözlemleri tanı için vazgeçilmezdir.",
+       "ekran": "**Tanık Anamnezi:** Bilinç kaybı ve nöbet ataklarında tanıkların gözlemi tanı için şarttır",
+       "duzey": 2,
+       "vurgu": [
+        {
+         "metin": "Tanık Anamnezi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s02",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Hasta bilinçsiz, ya da konuşma bozukluğu varsa yakını ya da getiren kişiden"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 2,
+        "alinti": "yakını ya da getiren kişiden"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-01-b03",
+   "baslik": "Hastalıklarda Başlangıç Şekli, Doğal Gidiş ve Öyküyle Tanı",
+   "sayfa_araligi": [
+    3,
+    4
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-01-p004",
+     "sayfa": 3,
+     "slayt_adim": "k2-01-d-s03",
+     "cumleler": [
+      {
+       "id": "k2-01-c0025",
+       "ses": "Nörolojik hastalıklarda belirtilerin başlayış şekli ve doğal gidişi, altta yatan patolojik mekanizmayı doğrudan yansıtan en güçlü klinik ipuçlarıdır.",
+       "ekran": "**Başlayış Şekli ve Doğal Gidiş:** Altta yatan patolojik mekanizmayı doğrudan yansıtır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Başlayış Şekli ve Doğal Gidiş",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Nörolojik Hastalıklarda Başlayış Şekli ve Doğal Gidiş"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 3,
+        "alinti": "Başlayış Şekli ve Doğal Gidiş"
+       }
+      },
+      {
+       "id": "k2-01-c0026",
+       "ses": "Sınavda soruldu; akut başlangıçlı nörolojik hastalıklar dakikalar veya saatler içinde hızla yerleşir ve bunun en tipik klinik örneği inme sonucu gelişen hemiplejidir.",
+       "ekran": "**Akut Başlangıç:** Dakika veya saat içinde yerleşir; en tipik örneği **hemipleji**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "hemipleji",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s03",
+       "cikmis": [
+        "q-2__kurul_-1"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Akut başlangıç. Dakika veya saat içinde. Örneğin hemipleji."
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 3,
+        "alinti": "Dakika veya saat içinde"
+       }
+      },
+      {
+       "id": "k2-01-c0027",
+       "ses": "Serebral bir arterin tromboemboli ile tıkanması veya yırtılarak kanaması beyin dokusunu aniden kansız bıraktığı için motor güç kaybı dakikalar içinde en üst düzeyine ulaşır.",
+       "ekran": "**Akut Vasküler Mekanizma:** Ani iskemi veya kanama sonucu dakikalar içinde gelişen defisit",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Akut başlangıç. Dakika veya saat içinde. Örneğin hemipleji."
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 3,
+        "alinti": "Örneğin hemipleji"
+       }
+      },
+      {
+       "id": "k2-01-c0028",
+       "ses": "Buna karşılık bazı nörolojik hastalıklar sinsi başlar ve haftalar, aylar ya da yıllar içinde yavaşça yerleşerek ilerleyici bir seyir gösterir.",
+       "ekran": "**Sinsi Başlangıç:** Haftalar, aylar veya yıllar içinde yavaş ve ilerleyici yerleşim",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Sinsi Başlangıç",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Bazı hastalıklar sinsi başlar. Haftalar, aylar, yıllar içinde yerleşir. Beyin tümörü, dejeneratif hastalıklar gibi"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 3,
+        "alinti": "Bazı hastalıklar sinsi başlar"
+       }
+      },
+      {
+       "id": "k2-01-c0029",
+       "ses": "Sinsi başlayan ve kronik ilerleyen bu tablolara beyin tümörü gibi yer kaplayan kitleler ile Alzheimer, Parkinson veya amiyotrofik lateral skleroz gibi dejeneratif hastalıklar örnek verilir.",
+       "ekran": "**Sinsi Seyirli Örnekler:** **Beyin tümörü** ve **dejeneratif hastalıklar** (Alzheimer, Parkinson, ALS)",
+       "duzey": 2,
+       "vurgu": [
+        {
+         "metin": "Beyin tümörü",
+         "tur": "terim"
+        },
+        {
+         "metin": "dejeneratif hastalıklar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Bazı hastalıklar sinsi başlar. Haftalar, aylar, yıllar içinde yerleşir. Beyin tümörü, dejeneratif hastalıklar gibi"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 3,
+        "alinti": "dejeneratif hastalıklar gibi"
+       }
+      },
+      {
+       "id": "k2-01-c0030",
+       "ses": "Bu hastalıklarda başlangıç o kadar yavaştır ki hasta ve yakınları belirtilerin tam olarak hangi gün başladığını söyleyemez, yalnızca aylar içinde giderek arttığını fark ederler.",
+       "ekran": "**Kronik Progresyon Özelliği:** Belirtilerin başlangıç günü belirsizdir, aylar içinde yavaşça ağırlaşır",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Bazı hastalıklar sinsi başlar. Haftalar, aylar, yıllar içinde yerleşir. Beyin tümörü, dejeneratif hastalıklar gibi"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 3,
+        "alinti": "Haftalar, aylar, yıllar içinde"
+       }
+      },
+      {
+       "id": "k2-01-c0031",
+       "ses": "Üçüncü temel seyir tipi ise kötüleşme yani atak ve iyileşme yani remisyon dönemleri ile karakterize olan dalgalı gidiştir.",
+       "ekran": "**Dalgalı Gidiş:** Kötüleşme (atak) ve iyileşme (remisyon) dönemleriyle seyreder",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Dalgalı Gidiş",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Dalgalı gidiş. Kötüleşme ve iyileşme dönemleri vardır. Relapsing-remitting MS"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 3,
+        "alinti": "Kötüleşme ve iyileşme dönemleri"
+       }
+      },
+      {
+       "id": "k2-01-c0032",
+       "ses": "Kötüleşme ve iyileşme dönemleri gösteren bu dalgalı gidişin klinikteki en klasik örneği yineleyici düzelen yani relapsing remitting multipl sklerozdur.",
+       "ekran": "**Dalgalı Gidiş Örneği:** **Relapsing-remitting MS** (ataklar ve düzelmelerle seyreden multipl skleroz)",
+       "duzey": 2,
+       "vurgu": [
+        {
+         "metin": "Relapsing-remitting MS",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s03",
+       "cikmis": [
+        "4c4eb178b88b",
+        "4ba07c308e35"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Dalgalı gidiş. Kötüleşme ve iyileşme dönemleri vardır. Relapsing-remitting MS"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 3,
+        "alinti": "Relapsing-remitting MS"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p005",
+     "sayfa": 3,
+     "slayt_adim": "k2-01-d-s03",
+     "cumleler": [
+      {
+       "id": "k2-01-c0033",
+       "ses": "Hastalığın doğal gidişini bilmek, doğru tanı koymak yönünden olduğu kadar uygulanan tedavi sonuçlarının değerlendirilmesi bakımından da belirleyicidir.",
+       "ekran": "**Doğal Gidişin Önemi:** Hem tanı koymada hem de **tedavi sonuçlarının değerlendirilmesinde** kritiktir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tedavi sonuçlarının değerlendirilmesinde",
+         "tur": "terim"
+        },
+        {
+         "metin": "Doğal Gidişin Önemi:",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s03",
+       "cikmis": [
+        "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-76"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Hastalığın doğal gidişi tanı yönünden olduğu kadar tedavi sonuçlarının değerlendirilmesi bakımından da önemlidir"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 3,
+        "alinti": "Hastalığın doğal gidişi"
+       }
+      },
+      {
+       "id": "k2-01-c0034",
+       "ses": "Hekim hastadaki klinik düzelmenin gerçekten uygulanan tedaviye mi bağlı olduğunu yoksa hastalığın kendi doğal seyrine mi ait olduğunu bu bilgiyle ayırt eder.",
+       "ekran": "**Kritik Değerlendirme:** Düzelme **uygulanan tedaviye mi** bağlı yoksa **doğal seyrine mi**?",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "doğal seyrine mi",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Düzelme uygulanan tedaviye mi bağlı yoksa doğal seyrine mi?"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 3,
+        "alinti": "doğal seyrine mi"
+       }
+      },
+      {
+       "id": "k2-01-c0035",
+       "ses": "Örneğin multipl skleroz atağındaki bir hasta kendiliğinden remisyona girebileceği için, bu doğal iyileşmeyi etkisiz bir tedavinin başarısı sanmamak gerekir.",
+       "ekran": "**Klinik Tuzak:** Doğal remisyon dönemini uygulanan tedavinin etkisi sanmamak gerekir",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Düzelme uygulanan tedaviye mi bağlı yoksa doğal seyrine mi?"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 3,
+        "alinti": "Düzelme uygulanan tedaviye"
+       }
+      },
+      {
+       "id": "k2-01-c0036",
+       "ses": "Tersine, doğal seyrinde ilerleyici olan dejeneratif bir hastalıkta belirtilerin sabit kalması bile uygulanan tedavinin kısmi bir başarısı olarak değerlendirilebilir.",
+       "ekran": "**Dejeneratif Seyirde Tedavi Yanıtı:** İlerleyici hastalıklarda klinik stabilizasyon bile tedavi başarısı sayılabilir",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Hastalığın doğal gidişi tanı yönünden olduğu kadar tedavi sonuçlarının değerlendirilmesi bakımından da önemlidir"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 3,
+        "alinti": "tedavi sonuçlarının değerlendirilmesi"
+       }
+      },
+      {
+       "id": "k2-01-c0037",
+       "ses": "Dolayısıyla her nörolojik sendromun tedavisiz bırakıldığında nasıl seyredeceğini bilmek, kanıta dayalı klinik karar vermenin ön koşuludur.",
+       "ekran": "**Klinik Karar İlkesi:** Hastalığın doğal seyrini bilmek doğru tedavi takibinin temelidir",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Hastalığın doğal gidişi tanı yönünden olduğu kadar tedavi sonuçlarının değerlendirilmesi bakımından da önemlidir"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 3,
+        "alinti": "doğal gidişi tanı yönünden"
+       }
+      },
+      {
+       "id": "k2-01-c0038",
+       "ses": "Öyküde bu zamansal seyir eğrisi netleştirildikten sonra, muayenede bulgu vermeyen ancak öyküsüyle tanınan özel nörolojik hastalıklara geçilir.",
+       "ekran": "**Öyküden Tanıya Geçiş:** Zamansal seyir analizi öyküye dayalı klinik tanıları aydınlatır",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Nörolojik Hastalıklarda Başlayış Şekli ve Doğal Gidiş"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 3,
+        "alinti": "Nörolojik Hastalıklarda Başlayış"
+       }
+      },
+      {
+       "id": "k2-01-c0039",
+       "ses": "Çünkü bazı paroksismal nörolojik bozukluklarda hasta polikliniğe başvurduğu sırada tamamen normal bir nörolojik muayeneye sahiptir.",
+       "ekran": "**Paroksismal Bozukluklar:** Ataklar dışında hasta muayenede tamamen normal bulunabilir",
+       "duzey": 2,
+       "vurgu": [
+        {
+         "metin": "Paroksismal Bozukluklar:",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s03",
+       "cikmis": [
+        "dd00370e9106",
+        "6630634703c0",
+        "41dfe004f570"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Dalgalı gidiş. Kötüleşme ve iyileşme dönemleri vardır. Relapsing-remitting MS"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 3,
+        "alinti": "iyileşme dönemleri vardır"
+       }
+      },
+      {
+       "id": "k2-01-c0040",
+       "ses": "Bu gibi durumlarda tanısal ipucu muayene masasında değil, hastanın atak dönemine ilişkin anlattığı ayrıntılarda gizlidir.",
+       "ekran": "**Atak Öyküsü:** Muayenenin normal olduğu paroksismal hastalıklarda tanı öyküde gizlidir",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Hastalığın doğal gidişi tanı yönünden olduğu kadar tedavi sonuçlarının değerlendirilmesi bakımından da önemlidir"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 3,
+        "alinti": "tanı yönünden olduğu kadar"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p006",
+     "sayfa": 4,
+     "slayt_adim": "k2-01-d-s04",
+     "cumleler": [
+      {
+       "id": "k2-01-c0041",
+       "ses": "Bu bilgi çıkmışta soruldu; bazı nörolojik hastalıkların tanısı esas olarak hastadan alınan öyküye dayanır ve bunların başında migren ile trigeminal nevralji gelir.",
+       "ekran": "**Tanısı Öyküye Dayanan Hastalıklar:** Başlıca örnekleri **migren** ve **trigeminal nevralji**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "migren",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "trigeminal nevralji",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s04",
+       "cikmis": [
+        "past-1790877039274-141162",
+        "past-1790877044869-84754"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Tanısı Öyküye Dayanan Nörolojik Hastalıklar",
+         "Migren",
+         "Trigeminal nevralji"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 4,
+        "alinti": "Tanısı Öyküye Dayanan"
+       }
+      },
+      {
+       "id": "k2-01-c0042",
+       "ses": "Migrende saatler süren tek taraflı zonklayıcı baş ağrısı ve bulantı öyküsü, trigeminal nevraljide ise yüzde saniyeler süren şimşek çakar tarzda ağrı öyküsü tanıyı koydurur.",
+       "ekran": "**Tipik Ağrı Öyküsü:** Migrende zonklayıcı atak, trigeminal nevraljide şimşek çakar tarzda yüz ağrısı",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s04",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Migren",
+         "Trigeminal nevralji"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 4,
+        "alinti": "Trigeminal nevralji"
+       }
+      },
+      {
+       "id": "k2-01-c0043",
+       "ses": "Migren ve trigeminal nevralji hastalarında ataklar dışında yapılan nörolojik muayenede patolojik bir nörolojik belirti veya laboratuvar bulgusu yoktur.",
+       "ekran": "**Muayene ve Laboratuvar:** Migren ve trigeminal nevraljide **nörolojik belirti ve lab. bulgusu yoktur**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "nörolojik belirti ve lab. bulgusu yoktur",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s04",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Nörolojik belirti, lab. bulgusu yoktur"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 4,
+        "alinti": "bulgusu yoktur"
+       }
+      },
+      {
+       "id": "k2-01-c0044",
+       "ses": "Bu hastalarda bilgisayarlı tomografi veya manyetik rezonans görüntüleme, primer hastalığı doğrudan görmek için değil, ikincil nedenleri dışlayıp tanının doğru olduğunu göstermek için çekilir.",
+       "ekran": "**BT ve MR'ın Rolü:** Sekonder nedenleri dışlayıp **tanının doğru olduğunu göstermek** için çekilir",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "tanının doğru olduğunu göstermek",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s04",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "BT, MR tanının doğru olduğunu göstermek için çekilir"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 4,
+        "alinti": "tanının doğru olduğunu göstermek"
+       }
+      },
+      {
+       "id": "k2-01-c0045",
+       "ses": "Benzer şekilde epilepsi de esas olarak klinik bir tanıdır ve hastanın veya tanığın nöbet anına dair verdiği öyküye dayanır.",
+       "ekran": "**Epilepsi Tanısı:** Esas olarak öyküye dayanan **klinik bir tanıdır**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "klinik bir tanıdır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s04",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Epilepsi de klinik tanıdır. EEG normal olması tanıdan uzaklaştırmaz"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 4,
+        "alinti": "Epilepsi de klinik tanıdır"
+       }
+      },
+      {
+       "id": "k2-01-c0046",
+       "ses": "Nöbetler arasındaki dönemde çekilen elektroensefalografinin normal olması epilepsi tanısından kesinlikle uzaklaştırmaz.",
+       "ekran": "**Kritik EEG Kuralı:** İnteriktal **EEG normal olması** epilepsi **tanıdan uzaklaştırmaz**",
+       "duzey": 2,
+       "vurgu": [
+        {
+         "metin": "EEG normal olması",
+         "tur": "tuzak"
+        },
+        {
+         "metin": "tanıdan uzaklaştırmaz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s04",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Epilepsi de klinik tanıdır. EEG normal olması tanıdan uzaklaştırmaz"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 4,
+        "alinti": "EEG normal olması tanıdan uzaklaştırmaz"
+       }
+      },
+      {
+       "id": "k2-01-c0047",
+       "ses": "Ayrıca epileptik nöbet ile psikojenik nonepileptik nöbet ayırıcı tanısında, atak sırasında gözlerin sıkıca kapatılması ve muayenede göz açılmasına direnç gösterilmesi psödonöbet lehine belirleyici bir bulgudur.",
+       "ekran": "**Psödonöbet Ayrımı:** Atakta **gözlerin sıkıca kapatılması** ve açılmasına direnç gösterilmesi",
+       "duzey": 2,
+       "vurgu": [
+        {
+         "metin": "gözlerin sıkıca kapatılması",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s04",
+       "cikmis": [
+        "d3-k2-psi-004"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Epilepsi de klinik tanıdır. EEG normal olması tanıdan uzaklaştırmaz"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 4,
+        "alinti": "Epilepsi de klinik tanıdır"
+       }
+      },
+      {
+       "id": "k2-01-c0048",
+       "ses": "Ünlü nörolog Gordon Holmes, hasta karşınızda bir muamma gibi duruyorsa onu ikinci kez dinleyiniz, bütün araştırma yöntemlerine oranla bilmeceyi çözme şansınız daha büyük olacaktır demiştir.",
+       "ekran": "**Gordon Holmes İlkesi:** «Hasta muamma gibi duruyorsa **onu ikinci kez dinleyiniz**»",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "onu ikinci kez dinleyiniz",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s04",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "«Hasta karşınızda bir muamma gibi duruyorsa onu ikinci kez dinleyiniz.",
+         "Bütün araştırma yöntemlerine oranla bilmeceyi çözme şansınız daha büyük olacaktır» Gordon Holmes"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 4,
+        "alinti": "onu ikinci kez dinleyiniz"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-01-b04",
+   "baslik": "Nörolojik Muayenede İlk İzlenim, Postür ve Yürüyüş",
+   "sayfa_araligi": [
+    5,
+    5
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-01-p007",
+     "sayfa": 5,
+     "slayt_adim": "k2-01-d-s05",
+     "cumleler": [
+      {
+       "id": "k2-01-c0049",
+       "ses": "Nörolojik muayene, hekimin eline refleks çekicini almasıyla değil, hastayı gördüğü ilk anda edindiği izlenimle başlar ve bu ilk izlenim bile tanıya yardımcı olur.",
+       "ekran": "**Nörolojik Muayene:** Hastayla karşılaşılan **ilk izlenim bile tanıya yardımcı olur**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ilk izlenim bile tanıya yardımcı olur",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s05",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Nörolojik Muayene",
+         "İlk izlenim bile tanıya yardımcı olur"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 5,
+        "alinti": "İlk izlenim bile"
+       }
+      },
+      {
+       "id": "k2-01-c0050",
+       "ses": "Hastanın muayene odasına girerken yürümesi, karşınıza oturduğunda yüzü, bakışları, ses tonu ve konuşması daha baştan itibaren pek çok klinik ipucu verir.",
+       "ekran": "**Gözlemlenen İpuçları:** Odaya girerken **yürümesi, yüzü, bakışları, ses tonu ve konuşması**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "yürümesi, yüzü, bakışları, ses tonu ve konuşması",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s05",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Odaya girerken yürümesi, karşınıza oturduğunda yüzü, bakışları, ses tonu, konuşması baştan itibaren pek çok ipucu verir"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 5,
+        "alinti": "Odaya girerken yürümesi"
+       }
+      },
+      {
+       "id": "k2-01-c0051",
+       "ses": "Piramidal yol lezyonu olan bir hastada hemiplejik kolun fleksiyonda gövdeye yapışık olması ve yürürken bacağını dıştan daire çizerek oraklaması tipiktir.",
+       "ekran": "**Hemiplejik Yürüyüş:** Kolun **gövdeye yapışık olması** ve yürürken **bacağını oraklaması**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "gövdeye yapışık olması",
+         "tur": "terim"
+        },
+        {
+         "metin": "bacağını oraklaması",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s05",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Hemiplejik kolun gövdeye yapışık olması, yürürken bacağını oraklaması"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 5,
+        "alinti": "bacağını oraklaması"
+       }
+      },
+      {
+       "id": "k2-01-c0052",
+       "ses": "Üst motor nöron hasarına bağlı spastisite kolda fleksör, bacakta ekstansör kaslarda baskın olduğu için hasta dizini bükemez ve bacağını oraklayarak atar.",
+       "ekran": "**Oraklama Mekanizması:** Üstte fleksör, altta ekstansör spastisite nedeniyle bacağın daire çizmesi",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s05",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Hemiplejik kolun gövdeye yapışık olması, yürürken bacağını oraklaması"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 5,
+        "alinti": "Hemiplejik kolun gövdeye yapışık"
+       }
+      },
+      {
+       "id": "k2-01-c0053",
+       "ses": "Sınavda soruldu; Parkinson hastalığında mimiklerin azaldığı maske yüz, monoton konuşma, salya akması, yürürken kollarını sallamaması ve vücudun fleksör postürü görülür.",
+       "ekran": "**Parkinson Hastalığı:** **Maske yüz, monoton konuşma, salya akması, kolları sallamama, fleksör postür**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Maske yüz, monoton konuşma, salya akması, kolları sallamama, fleksör postür",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s05",
+       "cikmis": [
+        "804e82ac79db",
+        "5e72fc758888"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Parkinson H. maske yüz, monoton konuşma, salya akması, yürürken kollarını sallamaması, vücudun fleksör postürü"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 5,
+        "alinti": "maske yüz, monoton konuşma"
+       }
+      },
+      {
+       "id": "k2-01-c0054",
+       "ses": "Dopaminerjik kayıp sonucu gelişen akinezi ve rijidite, hastanın odaya girerken yavaş yürümesine ve fizyolojik kol salınımlarının kaybolmasına yol açar.",
+       "ekran": "**Parkinsonizm Fizyopatolojisi:** Akinezi ve rijiditeye bağlı yavaş yürüme ve asosye hareket kaybı",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s05",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Parkinson H. maske yüz, monoton konuşma, salya akması, yürürken kollarını sallamaması, vücudun fleksör postürü"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 5,
+        "alinti": "vücudun fleksör postürü"
+       }
+      },
+      {
+       "id": "k2-01-c0055",
+       "ses": "Kas distrofisinde ise pelvik kuşak kaslarının güçsüzlüğüne bağlı olarak karın önde durur ve ördeğe benzeyen badi badi yürüyüşü ortaya çıkar.",
+       "ekran": "**Kas Distrofisi:** Karın önde, ördeğe benzeyen **«badi-badi» yürüyüşü** (ördekvari yürüyüş)",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "«badi-badi» yürüyüşü",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s05",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Kas distrofisinde karın önde «badi-badi» yürüyüşü ördeğe benzer"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 5,
+        "alinti": "yürüyüşü ördeğe benzer"
+       }
+      },
+      {
+       "id": "k2-01-c0056",
+       "ses": "Ayrıca hastayla ilk iletişim kurulduğu anda artikülasyon kusuru olan dizartri ile dilin anlama veya ifade bozukluğu olan afazi hemen fark edilir.",
+       "ekran": "**Konuşma Bozuklukları:** **Dizartri** (artikülasyon kusuru) ve **afazi** (dil bozukluğu) hemen fark edilir",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Dizartri",
+         "tur": "terim"
+        },
+        {
+         "metin": "afazi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s05",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Dizartri, afazi hemen farkedilir"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 5,
+        "alinti": "Dizartri, afazi hemen farkedilir"
+       }
+      },
+      {
+       "id": "k2-01-c0057",
+       "ses": "Yüksek kortikal dil işlevlerinden biri olan okuduğunu anlama yeteneğinin bozulması yani aleksi ise dominant pariyetal lobdaki angular girus lezyonlarında görülür.",
+       "ekran": "**Angular Gyrus Lezyonu:** Okuduklarını anlayamama (**aleksi**) ile karakterize kortikal bulgu",
+       "duzey": 2,
+       "vurgu": [
+        {
+         "metin": "Angular Gyrus Lezyonu",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s05",
+       "cikmis": [
+        "past-1790877481517-691074"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Dizartri, afazi hemen farkedilir"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 5,
+        "alinti": "Dizartri, afazi"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p008",
+     "sayfa": 5,
+     "slayt_adim": "k2-01-d-s05",
+     "cumleler": [
+      {
+       "id": "k2-01-c0058",
+       "ses": "Nörolojik muayenede yürüyüş ve postür analizi, piramidal, ekstrapiramidal ve nöromüsküler sistemlerin hangisinin tutulduğunu saniyeler içinde ayırt ettirir.",
+       "ekran": "**Yürüyüş Analizinin Değeri:** Piramidal, ekstrapiramidal ve miyopatik tutulumu hızla ayırır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yürüyüş Analizinin Değeri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s05",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Odaya girerken yürümesi, karşınıza oturduğunda yüzü, bakışları, ses tonu, konuşması baştan itibaren pek çok ipucu verir"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 5,
+        "alinti": "Odaya girerken yürümesi"
+       }
+      },
+      {
+       "id": "k2-01-c0059",
+       "ses": "Hemiplejik yürüyüşte tek taraflı üst motor nöron hasarı söz konusuyken, Parkinson yürüyüşünde bazal gangliyonların hareketi başlatma ve otomatik sürdürme işlevi bozulmuştur.",
+       "ekran": "**Piramidal ve Ekstrapiramidal Fark:** Oraklama yürüyüşü spastisiteye, bradikinetik yürüyüş akineziye bağlıdır",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s05",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Hemiplejik kolun gövdeye yapışık olması, yürürken bacağını oraklaması",
+         "Parkinson H. maske yüz, monoton konuşma, salya akması, yürürken kollarını sallamaması, vücudun fleksör postürü"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 5,
+        "alinti": "yürürken kollarını sallamaması"
+       }
+      },
+      {
+       "id": "k2-01-c0060",
+       "ses": "Parkinson hastalarında yutma refleksinin yavaşlamasına bağlı gelişen salya akması yani siyalore ve yüz kaslarındaki hipomimi, muayene odasında otururken bile hemen dikkat çeker.",
+       "ekran": "**Parkinson Yüz ve Bulber Bulguları:** Hipomimi (**maske yüz**) ve yutma yavaşlamasına bağlı **salya akması**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "maske yüz",
+         "tur": "terim"
+        },
+        {
+         "metin": "salya akması",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s05",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Parkinson H. maske yüz, monoton konuşma, salya akması, yürürken kollarını sallamaması, vücudun fleksör postürü"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 5,
+        "alinti": "salya akması"
+       }
+      },
+      {
+       "id": "k2-01-c0061",
+       "ses": "Kas distrofilerinde görülen ördekvari badi badi yürüyüşü ise santral sinir sisteminden değil, doğrudan kalça çevresi proksimal iskelet kaslarının primer zaafından kaynaklanır.",
+       "ekran": "**Miyopatik Yürüyüş Kökeni:** Proksimal pelvik kuşak kaslarının primer güçsüzlüğü",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s05",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Kas distrofisinde karın önde «badi-badi» yürüyüşü ördeğe benzer"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 5,
+        "alinti": "Kas distrofisinde karın önde"
+       }
+      },
+      {
+       "id": "k2-01-c0062",
+       "ses": "Benzer şekilde konuşma muayenesinde dizartri ile afaziyi birbirinden ayırmak, lezyonun kortikal dil merkezlerinde mi yoksa sesin çıkarılmasını sağlayan motor yollarda mı olduğunu gösterir.",
+       "ekran": "**Dizartri ve Afazi Ayrımı:** Dizartri motor artikülasyon kusuru, afazi ise kortikal dil işlevi bozukluğudur",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Dizartri ve Afazi Ayrımı",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s05",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Dizartri, afazi hemen farkedilir"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 5,
+        "alinti": "Dizartri, afazi"
+       }
+      },
+      {
+       "id": "k2-01-c0063",
+       "ses": "Dizartride hasta söylemek istediği kelimeleri doğru seçer ve dilbilgisi tamdır, ancak dil, dudak, damak veya serebellar koordinasyon bozukluğu nedeniyle kelimeleri peltek ve bozuk telaffuz eder.",
+       "ekran": "**Dizartri Özelliği:** Kelime seçimi ve anlama korunur, motor telaffuz ve sesletim bozulur",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s05",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Dizartri, afazi hemen farkedilir"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 5,
+        "alinti": "Dizartri, afazi hemen farkedilir"
+       }
+      },
+      {
+       "id": "k2-01-c0064",
+       "ses": "Afazide ise ses çıkarma kasları sağlam olmasına rağmen, dominant hemisfer hasarı nedeniyle hasta konuşulanı anlayamaz, doğru kelimeyi bulamaz veya anlamsız kelimeler üretir.",
+       "ekran": "**Afazi Özelliği:** Dominant hemisfer hasarına bağlı anlama, adlandırma veya ifade kaybı",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s05",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Dizartri, afazi hemen farkedilir"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 5,
+        "alinti": "hemen farkedilir"
+       }
+      },
+      {
+       "id": "k2-01-c0065",
+       "ses": "Böylece hastanın sadece odaya girişini izlemek ve birkaç cümlelik konuşmasını dinlemek bile lokalizasyon basamağına güçlü bir temel hazırlar.",
+       "ekran": "**Gözlemden Lokalizasyona:** İlk izlenim bulguları sistematik nörolojik lokalizasyona zemin hazırlar",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s05",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "İlk izlenim bile tanıya yardımcı olur"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 5,
+        "alinti": "tanıya yardımcı olur"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-01-b05",
+   "baslik": "Nörolojik Lokalizasyon ve Klasik Anatomik Sendromlar",
+   "sayfa_araligi": [
+    6,
+    6
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-01-p009",
+     "sayfa": 6,
+     "slayt_adim": "k2-01-d-s06",
+     "cumleler": [
+      {
+       "id": "k2-01-c0066",
+       "ses": "Nörolojik lokalizasyon aşamasında, öykü ve muayeneden elde edilen bulguların bir araya gelmesiyle hemipleji sendromu veya parapleji sendromu gibi bir sendrom ortaya çıkar.",
+       "ekran": "**Sendrom Kavramı:** Bulguların bir araya gelmesiyle **hemipleji** veya **parapleji sendromu** oluşur",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hemipleji",
+         "tur": "terim"
+        },
+        {
+         "metin": "parapleji sendromu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Nörolojik Lokalizasyon",
+         "Elde edilen bulguların bir araya gelmesiyle bir sendrom ortaya çıkar. Hemipleji send, parapleji sendromu g.b"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 6,
+        "alinti": "bir sendrom ortaya çıkar"
+       }
+      },
+      {
+       "id": "k2-01-c0067",
+       "ses": "Bazen muayene bulguları birbirini anatomik olarak o derece tamamlar ki, bu tablo sinir sisteminde sadece tek bir bölgeye karşılık gelir.",
+       "ekran": "**Kesin Lokalizasyon:** Birbirini tamamlayan bulgular **sadece tek bir anatomik bölgeye** karşılık gelir",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Bazen bulgular birbirini o derece tamamlar ki sadece bir bölgeye karşılık gelir"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 6,
+        "alinti": "sadece bir bölgeye karşılık gelir"
+       }
+      },
+      {
+       "id": "k2-01-c0068",
+       "ses": "Birinci klasik lokalizasyon örneğinde, afazi ile birlikte sağ hemipleji görülmesi piramidal yolun ve konuşma alanının tutulduğunu, yani lezyonun sol hemisferde olduğunu gösterir.",
+       "ekran": "**1. Sol Hemisfer Lezyonu:** **Afazi + sağ hemipleji** (piramidal yol + konuşma alanı tutulumu)",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Afazi + sağ hemipleji",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "1. Afazi+ sağ hemipleji piramidal yolu+ konuşma alanı. Sol hemisferde lezyon"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 6,
+        "alinti": "Sol hemisferde lezyon"
+       }
+      },
+      {
+       "id": "k2-01-c0069",
+       "ses": "Çünkü sol dominant hemisferdeki konuşma merkezleri ile motor korteksten inen piramidal yol komşudur ve bu yol bulbus alt ucunda çaprazlaşarak sağ vücut yarısını yönetir.",
+       "ekran": "**Anatomik Temel:** Sol dominant hemisfer konuşma merkezi ve çaprazlaşan piramidal yol",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "1. Afazi+ sağ hemipleji piramidal yolu+ konuşma alanı. Sol hemisferde lezyon"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 6,
+        "alinti": "piramidal yolu+ konuşma alanı"
+       }
+      },
+      {
+       "id": "k2-01-c0070",
+       "ses": "İkinci klasik örnekte, diplopi yani çift görme, vertigo, piramidal bulgu ve serebellar bulgunun bir arada bulunması lezyonun beyin sapında olduğunu kanıtlar.",
+       "ekran": "**2. Beyin Sapı Lezyonu:** **Diplopi + vertigo + piramidal bulgu + serebellar bulgu**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Diplopi + vertigo + piramidal bulgu + serebellar bulgu",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "2. Diplopi+ vertigo+ piramidal bulgu+serebellar bulgu lezyon beyin sapında"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 6,
+        "alinti": "lezyon beyin sapında"
+       }
+      },
+      {
+       "id": "k2-01-c0071",
+       "ses": "Kraniyal sinir muayenesinde bir diğer lokalizasyon örneği olarak, dil dışarı çıkarıldığında sağ tarafa sapma varsa lezyon aynı taraftaki sağ nervus hipoglossustadır.",
+       "ekran": "**Kraniyal Sinir Lokalizasyonu:** Dil dışarı çıkarıldığında sağa sapıyorsa lezyon **sağ nervus hypoglossus**tadır",
+       "duzey": 2,
+       "vurgu": [
+        {
+         "metin": "sağ nervus hypoglossus",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s06",
+       "cikmis": [
+        "88612c9f5ce5",
+        "ca9d700174bb"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "2. Diplopi+ vertigo+ piramidal bulgu+serebellar bulgu lezyon beyin sapında"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 6,
+        "alinti": "lezyon beyin sapında"
+       }
+      },
+      {
+       "id": "k2-01-c0072",
+       "ses": "Üçüncü örnekte, her iki bacakta felç yani parapleji, gövdede seviye veren duyu kaybı ve sfinkter bozukluğu birlikteliği lezyonun medulla spinaliste olduğunu gösterir.",
+       "ekran": "**3. Medulla Spinalis Lezyonu:** **Parapleji + gövdede seviye veren duyu kaybı + sfinkter bozukluğu**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Parapleji + gövdede seviye veren duyu kaybı + sfinkter bozukluğu",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "3. Parapleji+ gövdede seviye veren duyu kaybı+ sfinkter boz. Medulla spinalis"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 6,
+        "alinti": "seviye veren duyu kaybı"
+       }
+      },
+      {
+       "id": "k2-01-c0073",
+       "ses": "Dördüncü örnekte ise belden başlayıp bacak arkasına vuran ağrı ile birlikte muayenede aşil refleksi alınamıyorsa lezyon birinci sakral radiks düzeyindedir.",
+       "ekran": "**4. Birinci Sakral Radiks (S1):** **Bel ve bacak arkasına vuran ağrı + aşil refleksi kaybı**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Bel ve bacak arkasına vuran ağrı + aşil refleksi kaybı",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "4. Bel ve bacak arkasına vuran ağrı+ aşil refleksi alınamıyorsa 1. sakral radiks"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 6,
+        "alinti": "aşil refleksi alınamıyorsa"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p010",
+     "sayfa": 6,
+     "slayt_adim": "k2-01-d-s06",
+     "cumleler": [
+      {
+       "id": "k2-01-c0074",
+       "ses": "Bu dört klasik lokalizasyon sendromunu karşılaştırdığımızda, kortikal, beyin sapı, spinal ve radiküler düzeylerin birbirinden net sınırlarla ayrıldığını görürüz.",
+       "ekran": "**Düzeylerin Karşılaştırılması:** Kortikal, beyin sapı, medulla spinalis ve radiks sendromlarının ayrımı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Düzeylerin Karşılaştırılması",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Nörolojik Lokalizasyon",
+         "Bazen bulgular birbirini o derece tamamlar ki sadece bir bölgeye karşılık gelir"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 6,
+        "alinti": "Nörolojik Lokalizasyon"
+       }
+      },
+      {
+       "id": "k2-01-c0075",
+       "ses": "Afazi gibi yüksek kortikal bir işlev bozukluğunun sağ hemiplejiye eşlik etmesi, lezyonun beyin sapı veya omurilikte değil kesinlikle sol serebral korteks veya subkortikal ak maddede olduğunu gösterir.",
+       "ekran": "**Kortikal İşaret:** **Afazi** varlığı lezyonu beyin sapı ve omurilikten ayırıp **sol hemisfere** odaklar",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Afazi",
+         "tur": "terim"
+        },
+        {
+         "metin": "sol hemisfere",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "1. Afazi+ sağ hemipleji piramidal yolu+ konuşma alanı. Sol hemisferde lezyon"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 6,
+        "alinti": "Afazi+ sağ hemipleji"
+       }
+      },
+      {
+       "id": "k2-01-c0076",
+       "ses": "Diplopi ve vertigo gibi kraniyal sinir ve vestibüler sistem bulgularının uzun traktus yani piramidal ve serebellar bulgularla birleşmesi ise yalnız beyin sapı lezyonlarına özgüdür.",
+       "ekran": "**Beyin Sapı İşareti:** Kraniyal sinir bulguları (**diplopi, vertigo**) ile **piramidal ve serebellar** bulguların birlikteliği",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "diplopi, vertigo",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "2. Diplopi+ vertigo+ piramidal bulgu+serebellar bulgu lezyon beyin sapında"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 6,
+        "alinti": "piramidal bulgu+serebellar bulgu"
+       }
+      },
+      {
+       "id": "k2-01-c0077",
+       "ses": "Her iki bacağı tutan parapleji tablosunda kraniyal sinirler tamamen sağlamdır ve gövdede seviye veren duyu kaybı ile sfinkter kusuru lezyonu medulla spinalise lokalize eder.",
+       "ekran": "**Medulla Spinalis İşareti:** Kraniyal bulgu olmadan **parapleji, duyu seviyesi ve sfinkter bozukluğu**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "parapleji, duyu seviyesi ve sfinkter bozukluğu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "3. Parapleji+ gövdede seviye veren duyu kaybı+ sfinkter boz. Medulla spinalis"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 6,
+        "alinti": "Parapleji+ gövdede seviye veren"
+       }
+      },
+      {
+       "id": "k2-01-c0078",
+       "ses": "Medulla spinalis yaralanmalarında ayrıca inme sonrası rehabilitasyon sürecinde de dikkat edilmesi gereken otonomik disrefleksi ve mesane disfonksiyonu gibi komplikasyonlar gelişebilir.",
+       "ekran": "**Spinal ve Serebral Rehabilitasyon:** Omurilik ve inme hastalarında sfinkter, bası yarası ve derin ven trombozu takibi",
+       "duzey": 2,
+       "vurgu": [
+        {
+         "metin": "Spinal ve Serebral Rehabilitasyon",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s06",
+       "cikmis": [
+        "d3-k2-ftr-001"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "3. Parapleji+ gövdede seviye veren duyu kaybı+ sfinkter boz. Medulla spinalis"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 6,
+        "alinti": "sfinkter boz. Medulla spinalis"
+       }
+      },
+      {
+       "id": "k2-01-c0079",
+       "ses": "Birinci sakral radiks lezyonunda ise üst motor nöron bulgusu veya sfinkter kaybı olmaksızın, yalnızca bacak arkasına yayılan radiküler ağrı ve aşil refleksi kaybı saptanır.",
+       "ekran": "**Radiküler İşaret:** Dermatomal yayılımlı **bacak arkası ağrısı** ve izole **aşil refleksi kaybı**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "aşil refleksi kaybı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "4. Bel ve bacak arkasına vuran ağrı+ aşil refleksi alınamıyorsa 1. sakral radiks"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 6,
+        "alinti": "Bel ve bacak arkasına vuran"
+       }
+      },
+      {
+       "id": "k2-01-c0080",
+       "ses": "Derin tendon refleksinin alınamaması lezyonun santral piramidal yolda değil, periferik refleks arkını oluşturan spinal kök veya periferik sinir düzeyinde olduğunu kanıtlar.",
+       "ekran": "**Arefleksi Anlamı:** Refleks arkının kesilmesi alt motor nöron veya kök (radiks) tutulumunu gösterir",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "4. Bel ve bacak arkasına vuran ağrı+ aşil refleksi alınamıyorsa 1. sakral radiks"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 6,
+        "alinti": "1. sakral radiks"
+       }
+      },
+      {
+       "id": "k2-01-c0081",
+       "ses": "Görüldüğü gibi nörolojik muayenedeki her bir bulgu diğerini tamamlayarak hekimi geniş bir anatomik alandan noktasal bir hedefe ulaştırır.",
+       "ekran": "**Tamamlayıcı Bulgular:** Her bulgu anatomik çemberi daraltarak tek bir hedefi işaret eder",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Bazen bulgular birbirini o derece tamamlar ki sadece bir bölgeye karşılık gelir"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 6,
+        "alinti": "birbirini o derece tamamlar"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-01-b06",
+   "baslik": "Lezyonun Natürü ve Klinik Etyolojik Ayırıcı Tanı",
+   "sayfa_araligi": [
+    7,
+    7
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-01-p011",
+     "sayfa": 7,
+     "slayt_adim": "k2-01-d-s07",
+     "cumleler": [
+      {
+       "id": "k2-01-c0082",
+       "ses": "Anatomik lokalizasyon yapıldıktan sonra ikinci adım lezyonun natürünü belirlemektir; çünkü aynı lokalizasyon sendromu farklı etyolojilerden kaynaklanabilir.",
+       "ekran": "**Lezyonun Natürü:** Aynı anatomik sendrom farklı etyolojik süreçlerden kaynaklanabilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Lezyonun Natürü",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Lezyonun Natürü"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 7,
+        "alinti": "Lezyonun Natürü"
+       }
+      },
+      {
+       "id": "k2-01-c0083",
+       "ses": "Örneğin hemipleji ile gelen hastada hipertansiyon ve diyabetes mellitus öyküsü varsa ve tablo akut gelişmişse ilk sırada damarsal etyoloji düşünülür.",
+       "ekran": "**Hemiplejide HT + DM:** Akut başlangıçla birlikte ilk sırada **damarsal etyoloji (SVO)**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "damarsal etyoloji (SVO)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Hemipleji HT+DM ilk sırada damarsal etyoloji"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 7,
+        "alinti": "ilk sırada damarsal etyoloji"
+       }
+      },
+      {
+       "id": "k2-01-c0084",
+       "ses": "Eğer aynı hemipleji tablosu yavaş yerleşmişse ve giderek ağırlaşıyorsa, bu kez kafa içi yer kaplayan lezyon yani beyin tümörü akla gelmelidir.",
+       "ekran": "**Yavaş Yerleşen ve Ağırlaşan Hemipleji:** Kafa içi **yer kaplayan lezyon (YKL)** düşünülür",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "yer kaplayan lezyon (YKL)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "yavaş yerleşmişse, giderek ağırlaşıyorsa YKL"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 7,
+        "alinti": "giderek ağırlaşıyorsa YKL"
+       }
+      },
+      {
+       "id": "k2-01-c0085",
+       "ses": "Yavaş ilerleyen hemipleji tablosuna hastanın özgeçmişinde bilinen bir malignite öyküsü eşlik ediyorsa, etyolojide öncelikle beyin metastazı düşünülür.",
+       "ekran": "**Hemipleji + Malignite Öyküsü:** Etyolojide öncelikle **beyin metastazı** düşünülür",
+       "duzey": 2,
+       "vurgu": [
+        {
+         "metin": "beyin metastazı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "malignite öyküsü + metastaz"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 7,
+        "alinti": "malignite öyküsü"
+       }
+      },
+      {
+       "id": "k2-01-c0086",
+       "ses": "Sınavda soruldu; beyin sapı lokalizasyonu saptanan genç hastada tablo kısa zamanda gelişmişse ve öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği epizodlar geçirip düzelmişse tanı multipl sklerozdur.",
+       "ekran": "**Beyin Sapı + Genç Hasta + Farklı Bölge Epizodları:** En olası tanı **Multipl Skleroz (MS)**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Multipl Skleroz (MS)",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s07",
+       "cikmis": [
+        "4c4eb178b88b",
+        "4ba07c308e35"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Beyin sapı lokalizasyonu genç hasta, kısa zamanda gelişmiş, öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği epizodlar geçirip düzelmişse MS"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 7,
+        "alinti": "epizodlar geçirip düzelmişse MS"
+       }
+      },
+      {
+       "id": "k2-01-c0087",
+       "ses": "Sinir sisteminin farklı bölgelerinin tutulması ve atakların tekrarlayıp düzelmesi, multipl sklerozun mekanda ve zamanda yayılım özelliğini yansıtır.",
+       "ekran": "**MS Tanı Kriteri:** Sinir sisteminde **zamanda ve mekanda yayılım** gösteren demiyelinizan ataklar",
+       "duzey": 2,
+       "vurgu": [
+        {
+         "metin": "zamanda ve mekanda yayılım",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Beyin sapı lokalizasyonu genç hasta, kısa zamanda gelişmiş, öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği epizodlar geçirip düzelmişse MS"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 7,
+        "alinti": "farklı bölgelerinin etkilendiği"
+       }
+      },
+      {
+       "id": "k2-01-c0088",
+       "ses": "Aynı beyin sapı bulguları yaşlı ve aterosklerozu olan bir hastada akut gelişmişse, etyolojide serebrovasküler olay düşünülür.",
+       "ekran": "**Beyin Sapı + Yaşlı Hasta + Ateroskleroz:** Etyolojide **serebrovasküler olay (SVO)** düşünülür",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "serebrovasküler olay (SVO)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Yaşlı hasta+ ateroskleroz SVO"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 7,
+        "alinti": "ateroskleroz SVO"
+       }
+      },
+      {
+       "id": "k2-01-c0089",
+       "ses": "Parapleji sendromunda ise tablo sinsi başlangıçlı ve ilerleyici bir seyir gösteriyorsa, tümör gibi bir nedene bağlı medulla spinalis basısı akla gelmelidir.",
+       "ekran": "**Parapleji + Sinsi ve İlerleyici Seyir:** Etyolojide **medulla spinalis basısı** düşünülür",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "medulla spinalis basısı",
+         "tur": "terim"
+        },
+        {
+         "metin": "Parapleji + Sinsi ve İlerleyici Seyir:",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s07",
+       "cikmis": [
+        "past-1790877041988-964226"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Parapleji sinsi başlangıç, ilerleyici seyir medulla spinalis basısı"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 7,
+        "alinti": "medulla spinalis basısı"
+       }
+      },
+      {
+       "id": "k2-01-c0090",
+       "ses": "Buna karşılık parapleji yakın zamanda geçirilmiş bir aşı ya da viral enfeksiyon sonrasında gelişmişse, tanı otoimmün mekanizmalı post enfeksiyöz miyelittir.",
+       "ekran": "**Parapleji + Aşı veya Viral Enfeksiyon Öyküsü:** Tanı **post-infeksiyöz miyelit**",
+       "duzey": 2,
+       "vurgu": [
+        {
+         "metin": "post-infeksiyöz miyelit",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "aşı ya da viral enf + post-infeksiyöz miyelit"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 7,
+        "alinti": "post-infeksiyöz miyelit"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p012",
+     "sayfa": 7,
+     "slayt_adim": "k2-01-d-s07",
+     "cumleler": [
+      {
+       "id": "k2-01-c0091",
+       "ses": "Lezyonun natürünü belirlerken hastanın yaşı, vasküler risk faktörleri, sistemik hastalıkları ve tablonun zamansal seyri birlikte değerlendirilir.",
+       "ekran": "**Etyolojik Sentez:** Hasta yaşı, risk faktörleri (HT, DM, malignite) ve zamansal seyrin birleştirilmesi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Etyolojik Sentez",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Lezyonun Natürü",
+         "Hemipleji HT+DM ilk sırada damarsal etyoloji"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 7,
+        "alinti": "Hemipleji HT+DM"
+       }
+      },
+      {
+       "id": "k2-01-c0092",
+       "ses": "Hemipleji sendromunda akut başlangıç ve hipertansiyon veya diyabet varlığı damarsal tıkanıklık ya da kanamayı düşündürürken, haftalar içinde ilerleyen seyir yer kaplayan kitleyi işaret eder.",
+       "ekran": "**Hemipleji Ayırıcı Tanısı:** Akut + HT/DM ise **vasküler**, yavaş ilerleyici ise **yer kaplayan lezyon (YKL)**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "yer kaplayan lezyon (YKL)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Hemipleji HT+DM ilk sırada damarsal etyoloji",
+         "yavaş yerleşmişse, giderek ağırlaşıyorsa YKL"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 7,
+        "alinti": "yavaş yerleşmişse"
+       }
+      },
+      {
+       "id": "k2-01-c0093",
+       "ses": "Benzer şekilde beyin sapı sendromunda genç yaş ve geçmişte düzelmiş farklı nörolojik atakların varlığı demiyelinizan multipl skleroz plaklarını düşündürür.",
+       "ekran": "**Genç Hastada Beyin Sapı Sendromu:** Tekrarlayıp düzelen farklı bölge ataklarıyla **multipl skleroz (MS)**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "multipl skleroz (MS)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Beyin sapı lokalizasyonu genç hasta, kısa zamanda gelişmiş, öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği epizodlar geçirip düzelmişse MS"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 7,
+        "alinti": "genç hasta, kısa zamanda gelişmiş"
+       }
+      },
+      {
+       "id": "k2-01-c0094",
+       "ses": "Oysa aynı beyin sapı bulguları ileri yaşta ve ateroskleroz zemininde aniden ortaya çıktığında vertebrobaziler sistemdeki bir serebrovasküler olay ilk sıraya yerleşir.",
+       "ekran": "**Yaşlı Hastada Beyin Sapı Sendromu:** Ateroskleroz zemininde akut gelişen **serebrovasküler olay (SVO)**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "serebrovasküler olay (SVO)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Yaşlı hasta+ ateroskleroz SVO"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 7,
+        "alinti": "Yaşlı hasta+ ateroskleroz"
+       }
+      },
+      {
+       "id": "k2-01-c0095",
+       "ses": "Parapleji tablosunda da sinsi başlangıç ve kronik ilerleme omuriliği dıştan sıkıştıran bir kitle basısını gösterirken, enfeksiyon veya aşı sonrası akut gelişim inflamatuar miyeliti düşündürür.",
+       "ekran": "**Parapleji Ayırıcı Tanısı:** Sinsi ilerleyici seyirde **medulla spinalis basısı**, aşı/enfeksiyon sonrasında **post-infeksiyöz miyelit**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "medulla spinalis basısı",
+         "tur": "terim"
+        },
+        {
+         "metin": "post-infeksiyöz miyelit",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Parapleji sinsi başlangıç, ilerleyici seyir medulla spinalis basısı",
+         "aşı ya da viral enf + post-infeksiyöz miyelit"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 7,
+        "alinti": "sinsi başlangıç, ilerleyici seyir"
+       }
+      },
+      {
+       "id": "k2-01-c0096",
+       "ses": "Sinsi ilerleyen medulla spinalis basısında erken tanı konup cerrahi dekompresyon yapılmazsa omurilikteki iskemi kalıcı paraplejiye ve sfinkter kaybına dönüşür.",
+       "ekran": "**Spinal Basıda Erken Tanı:** Kalıcı omurilik hasarını önlemek için basının hızla saptanması gerekir",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Parapleji sinsi başlangıç, ilerleyici seyir medulla spinalis basısı"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 7,
+        "alinti": "medulla spinalis basısı"
+       }
+      },
+      {
+       "id": "k2-01-c0097",
+       "ses": "Post enfeksiyöz miyelitte ise viral bir enfeksiyonu veya aşılama öyküsünü izleyen günlerde omurilikte immün aracılı demiyelinizasyon ve ödem gelişir.",
+       "ekran": "**Post-İnfeksiyöz Miyelit Mekanizması:** Viral enfeksiyon veya aşı sonrası gelişen immün aracılı spinal inflamasyon",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "aşı ya da viral enf + post-infeksiyöz miyelit"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 7,
+        "alinti": "aşı ya da viral enf"
+       }
+      },
+      {
+       "id": "k2-01-c0098",
+       "ses": "Böylece anatomik lokalizasyon ve lezyonun natürü sorularına yanıt veren hekim, hangi hastada anjiyografi, hangi hastada lomber ponksiyon veya kontrastlı manyetik rezonans isteyeceğini kesin olarak bilir.",
+       "ekran": "**Tetkik Seçimine Geçiş:** Lokalizasyon ve natür sentezi, istenecek spesifik tetkiki doğrudan belirler",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Lezyonun Natürü"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 7,
+        "alinti": "Lezyonun Natürü"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-01-b07",
+   "baslik": "Nörolojide Laboratuvar İncelemeleri ve Acil Özel Durumlar",
+   "sayfa_araligi": [
+    8,
+    9
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-01-p013",
+     "sayfa": 8,
+     "slayt_adim": "k2-01-d-s08",
+     "cumleler": [
+      {
+       "id": "k2-01-c0099",
+       "ses": "Klinik lokalizasyon ve etyolojik ön tanı belirlendikten sonra başvurulan laboratuvar incelemeleri, genel metodlar ve nörolojiye özgü spesifik incelemeler olarak ikiye ayrılır.",
+       "ekran": "**Laboratuvar İncelemeleri:** Genel metodlar ve spesifik nörolojik tetkikler olarak ikiye ayrılır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Laboratuvar İncelemeleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s08",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Laboratuvar İncelemeleri",
+         "Genel metodlar: biyokimya, bakteriyolojik metodlar g.b"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 8,
+        "alinti": "Laboratuvar İncelemeleri"
+       }
+      },
+      {
+       "id": "k2-01-c0100",
+       "ses": "Genel metodlar arasında yer alan rutin biyokimya ve bakteriyolojik incelemeler, sinir sistemini ikincil olarak etkileyen metabolik ve enfeksiyöz tabloları saptamakta kullanılır.",
+       "ekran": "**Genel Metodlar:** **Biyokimya** ve **bakteriyolojik metodlar** ile sistemik nedenlerin taranması",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Biyokimya",
+         "tur": "terim"
+        },
+        {
+         "metin": "bakteriyolojik metodlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s08",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Genel metodlar: biyokimya, bakteriyolojik metodlar g.b"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 8,
+        "alinti": "bakteriyolojik metodlar"
+       }
+      },
+      {
+       "id": "k2-01-c0101",
+       "ses": "Özellikle bilinç bozukluğu olan her hastanın ayırıcı tanısında, beyinde hızla kalıcı hasar bırakan hipoglisemi mutlaka biyokimyasal olarak düşünülmeli ve kan şekeri ölçülmelidir.",
+       "ekran": "**Bilinç Bozukluğunda İlk Biyokimya:** Ayırıcı tanıda **hipoglisemi** mutlaka düşünülmelidir",
+       "duzey": 2,
+       "vurgu": [
+        {
+         "metin": "hipoglisemi",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s08",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Genel metodlar: biyokimya, bakteriyolojik metodlar g.b"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 8,
+        "alinti": "Genel metodlar"
+       }
+      },
+      {
+       "id": "k2-01-c0102",
+       "ses": "Spesifik nörolojik tetkiklerin ilki olan beyin omurilik sıvısı incelemesi, santral sinir sistemi enfeksiyonları, subaraknoid kanama ve demiyelinizan hastalıkların tanısında temel yöntemdir.",
+       "ekran": "**Spesifik Tetkik — BOS İncelemesi:** Menenjit, SAK ve demiyelinizan hastalıkların tanısında temeldir",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "BOS İncelemesi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s08",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Spesifik: BOS incelemesi"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 8,
+        "alinti": "BOS incelemesi"
+       }
+      },
+      {
+       "id": "k2-01-c0103",
+       "ses": "Elektroensefalografi beynin elektriksel aktivitesini kaydederek epilepsi ve ensefalopatileri değerlendirirken, elektromiyografi periferik sinir, kök ve kas hastalıklarını inceler.",
+       "ekran": "**Elektrofizyolojik İncelemeler:** **EEG** (kortikal aktivite, epilepsi) ve **EMG** (periferik sinir ve kas)",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "EEG",
+         "tur": "terim"
+        },
+        {
+         "metin": "EMG",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s08",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "EEG",
+         "EMG"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 8,
+        "alinti": "EEG"
+       }
+      },
+      {
+       "id": "k2-01-c0104",
+       "ses": "Uyarılmış potansiyeller ise görsel, işitsel veya duyusal yolların iletim hızını ölçerek özellikle multipl sklerozdaki sessiz demiyelinizan plakları ortaya koyar.",
+       "ekran": "**Uyarılmış Potansiyeller (EP):** Görsel, işitsel ve somatosensoriyel yolların iletim bütünlüğünü ölçer",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Uyarılmış Potansiyeller (EP)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s08",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Uyarılmış potansiyeller- EP evoked potentials"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 8,
+        "alinti": "Uyarılmış potansiyeller"
+       }
+      },
+      {
+       "id": "k2-01-c0105",
+       "ses": "Nörogörüntülemede beyin bilgisayarlı tomografisi ve beyin manyetik rezonans görüntüleme yapısal lezyonları doğrudan gösteren en güçlü araçlardır.",
+       "ekran": "**Nörogörüntüleme:** **BBT** (bilgisayarlı tomografi) ve **beyin MRI** (manyetik rezonans görüntüleme)",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "BBT",
+         "tur": "terim"
+        },
+        {
+         "metin": "beyin MRI",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s08",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "BBT",
+         "beyin MRI"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 8,
+        "alinti": "beyin MRI"
+       }
+      },
+      {
+       "id": "k2-01-c0106",
+       "ses": "Bu bilgi çıkmışta soruldu; hipertansiyon öyküsü olan, ani güç kaybı ve dizartri ile acile başvuran akut inme hastasında kanamayı dışlamak ve erken iskemiyi görmek için öncelikle kontrastsız beyin bilgisayarlı tomografisi ve difüzyon manyetik rezonans görüntüleme istenir.",
+       "ekran": "Akut inmede ilk tetkik olarak **kontrastsız beyin BT ve difüzyon MR** görüntüleme istenir",
+       "duzey": 2,
+       "vurgu": [
+        {
+         "metin": "kontrastsız beyin BT ve difüzyon MR",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s08",
+       "cikmis": [
+        "3807e9b207c5",
+        "365430593b97"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "BBT",
+         "beyin MRI"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 8,
+        "alinti": "BBT"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p014",
+     "sayfa": 9,
+     "slayt_adim": "k2-01-d-s09",
+     "cumleler": [
+      {
+       "id": "k2-01-c0107",
+       "ses": "Acil servise getirilen nörolojik hastalarda bazı özel durumlar söz konusudur; hasta bilinçsiz ya da afazik olabilir ve getiren kişi bilgi sahibi olmayabilir.",
+       "ekran": "**Acil Özel Durumlar:** Hasta **bilinçsiz veya afazik** olabilir, getiren kişi bilgi sahibi olmayabilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bilinçsiz veya afazik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s09",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Bazı Özel durumlar",
+         "Acil olarak getirilen hasta bilinçsiz ya da afazik olabilir. Getiren kişi bilgi sahibi olmayabilir."
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 9,
+        "alinti": "bilinçsiz ya da afazik olabilir"
+       }
+      },
+      {
+       "id": "k2-01-c0108",
+       "ses": "Böyle bir durumda geri dönüşü olmayan bir noktaya gelmeden önce hızla müdahale etmek gerekir; çünkü zaman hastanın ve hekimin aleyhine işler.",
+       "ekran": "**Erken Müdahale Zorunluluğu:** Geri dönüşü olmayan noktaya gelmeden müdahale edilmelidir",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-01-d-s09",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Böyle bir durumda geri dönüşü olmayan bir noktaya gelmeden önce müdahale etmek gerekiyor. Zaman hastanın ve hekimin aleyhine işler."
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 9,
+        "alinti": "hekimin aleyhine işler"
+       }
+      },
+      {
+       "id": "k2-01-c0109",
+       "ses": "Nörolojik acillerde bu temel kural zaman beyindir ilkesiyle özetlenir; zira iskemi veya kesintisiz nöbet süresince her dakika milyonlarca nöron kaybedilir.",
+       "ekran": "**Temel Acil İlkesi:** **«Zaman = Beyin»** (her dakika kalıcı nöron kaybı demektir)",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "«Zaman = Beyin»",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s09",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Zaman=beyin"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 9,
+        "alinti": "Zaman=beyin"
+       }
+      },
+      {
+       "id": "k2-01-c0110",
+       "ses": "Bu nedenle hızlı bir şekilde bilgi toplarken tedaviye de başlanır; vital bulguları stabil hale getirmek, solunum yolunu açık tutmak ve nöbeti durdurmak ilk önceliktir.",
+       "ekran": "**Eş Zamanlı Acil Yaklaşım:** **Vital bulguları stabil tutmak, solunum yolunu açmak, nöbeti durdurmak**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Vital bulguları stabil tutmak, solunum yolunu açmak, nöbeti durdurmak",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s09",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Hızlı bir şekilde bilgi toplarken tedaviye de başlanır. Vital bulguları stabil hale getirmek g.b solunum yolunu açık tutmak, nöbet geçiriyorsa durdurmaya çalışmak"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 9,
+        "alinti": "Vital bulguları stabil hale"
+       }
+      },
+      {
+       "id": "k2-01-c0111",
+       "ses": "İlk gören hekim hastanın giderek kapandığını ve progrese olduğunu fark etmeli, tanı konulamayan veya tedavi edilemeyen hastayı nöroloji kliniğine göndermelidir.",
+       "ekran": "**İlk Gören Hekimin Sorumluluğu:** Progresyonu fark etmeli ve hastayı **nöroloji kliniğine göndermelidir**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "nöroloji kliniğine göndermelidir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s09",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "İlk gören hekim hastanın giderek kapandığını, progrese olduğunu farketmeli. Tanı konulamayan, tedavi edilemeyen hastayı nöroloji kliniğine göndermeli"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 9,
+        "alinti": "nöroloji kliniğine göndermeli"
+       }
+      },
+      {
+       "id": "k2-01-c0112",
+       "ses": "Bilinç takibinde sözel uyaranla uyandırılabilen ancak uyaran kesilince tekrar uykuya meyilli olan hastanın durumu somnolans olarak tanımlanır.",
+       "ekran": "**Bilinç Düzeyi — Somnolans:** Sözel uyaranla uyanıp uyaran kesilince **tekrar uykuya meyil**",
+       "duzey": 2,
+       "vurgu": [
+        {
+         "metin": "Somnolans",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s09",
+       "cikmis": [
+        "past-1790877044163-968531",
+        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-5"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "İlk gören hekim hastanın giderek kapandığını, progrese olduğunu farketmeli. Tanı konulamayan, tedavi edilemeyen hastayı nöroloji kliniğine göndermeli"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 9,
+        "alinti": "giderek kapandığını"
+       }
+      },
+      {
+       "id": "k2-01-c0113",
+       "ses": "Gönderirken öykü ve muayene bulgularını açık ve anlaşılır yazmalı, anlaşılmaz kısaltmalar kullanmamalı, epilepsi, miyokloni veya kore gibi deyimler yerine gördüğünü yazmalıdır.",
+       "ekran": "**Sevk Notu Kuralları:** Kısaltma ve terim (epilepsi, miyokloni, kore) yerine **doğrudan görülen yazılmalıdır**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "doğrudan görülen yazılmalıdır",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s09",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Gönderirken öykü ve muayene bulgularını açık, anlaşılır bir şekilde yazmalı. Anlaşılmaz kısaltmalar kullanmamalı, epilepsi, miyokloni, kore gibi deyimler yerine gördüğünü yazmalı."
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 9,
+        "alinti": "yerine gördüğünü yazmalı"
+       }
+      },
+      {
+       "id": "k2-01-c0114",
+       "ses": "Sevk kağıdına bilinç düzeyini, saatini ve pupil büyüklüklerini kaydetmeli, hemipareziyi bacağını kaldıramıyor ancak yatak içinde çekebiliyor şeklinde açıklamalıdır.",
+       "ekran": "**Kayıt Detayları:** **Bilinç düzeyi, saat, pupil büyüklükleri** ve **hemiparezinin açık tarifi**",
+       "duzey": 2,
+       "vurgu": [
+        {
+         "metin": "Bilinç düzeyi, saat, pupil büyüklükleri",
+         "tur": "terim"
+        },
+        {
+         "metin": "hemiparezinin açık tarifi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-01-d-s09",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Bilinç düzeyini , saatini, pupil büyüklüklerini kaydetmeli. Hemiparezi açıklamalı ( bacağını kaldıramıyor yatak içinde çekebiliyor)"
+        ],
+        "sekil": null
+       },
+       "capa": {
+        "sayfa": 9,
+        "alinti": "pupil büyüklüklerini kaydetmeli"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "donem": "2025-2026"
+}

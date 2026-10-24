@@ -10,23 +10,47 @@ import crypto from 'crypto';
 import { metinParagraflari } from './sesliAnlatim';
 
 const KOK = path.join(process.cwd(), 'data', 'sesli_anlatim');
+const ARSIV_KOK = path.join(process.cwd(), 'data', 'arsiv_25_26', 'sesli_anlatim');
+const GUNLUK_KOK = path.join(process.cwd(), 'data', 'sesli_anlatim', 'gunluk');
+const ARSIV_GUNLUK_KOK = path.join(process.cwd(), 'data', 'arsiv_25_26', 'gunluk');
+const ARSIV_DECKS_KOK = path.join(process.cwd(), 'data', 'arsiv_25_26', 'decks');
+const MEDSPAK_25_26 = path.resolve(process.cwd(), '..', 'meds_database_25_26', 'medspak');
+const MEDSPAK_EXPORT = path.resolve(process.cwd(), '..', 'meds_export', 'medspak');
+
+const arsivMi = (k: string) => /^y25-k\d+-\d+-[a-z0-9-]+$/.test(k);
+const kokSec = (k: string) => (arsivMi(k) ? ARSIV_KOK : KOK);
+
 const P = {
   dersler: path.join(KOK, 'dersler.json'),
-  kayit: path.join(KOK, 'kayit.json'),
-  metin: (k: string) => path.join(KOK, 'metin', `${k}.md`),
-  ses: (k: string, v: string) => path.join(KOK, 'ses', k, `${v}.mp3`),
-  hizalama: (k: string) => path.join(KOK, 'hizalama', `${k}.json`),
-  vurgu: (k: string) => path.join(KOK, 'vurgu', `${k}.json`),
-  cumle: (k: string) => path.join(KOK, 'cumle_zaman', `${k}.json`),
-  kelime: (k: string) => path.join(KOK, 'kelime_zaman', `${k}.json`),
-  isaret: (k: string) => path.join(KOK, 'isaret', `${k}.json`),
-  cizim: (k: string) => path.join(KOK, 'cizim', `${k}.json`),
-  v2: (k: string) => path.join(KOK, 'v2', `${k}.json`),
-  cikmisKonum: (k: string) => path.join(KOK, 'cikmis_konum', `${k}.json`),
+  arsivDersler: path.join(ARSIV_KOK, 'dersler.json'),
+  kayit: (arsiv = false) => path.join(arsiv ? ARSIV_KOK : KOK, 'kayit.json'),
+  metin: (k: string) => path.join(kokSec(k), 'metin', `${k}.md`),
+  ses: (k: string, v: string) => path.join(kokSec(k), 'ses', k, `${v}.mp3`),
+  hizalama: (k: string) => path.join(kokSec(k), 'hizalama', `${k}.json`),
+  vurgu: (k: string) => path.join(kokSec(k), 'vurgu', `${k}.json`),
+  cumle: (k: string) => path.join(kokSec(k), 'cumle_zaman', `${k}.json`),
+  kelime: (k: string) => path.join(kokSec(k), 'kelime_zaman', `${k}.json`),
+  isaret: (k: string) => path.join(kokSec(k), 'isaret', `${k}.json`),
+  cizim: (k: string) => path.join(kokSec(k), 'cizim', `${k}.json`),
+  v2: (k: string) => path.join(kokSec(k), 'v2', `${k}.json`),
+  cikmisKonum: (k: string) => path.join(kokSec(k), 'cikmis_konum', `${k}.json`),
   ogrenciNot: (fileId: string) => path.join(KOK, 'ogrenci_not', `${fileId.replace(/[^\w-]/g, '')}.json`),
+  gunluk: (k: string) => path.join(arsivMi(k) ? ARSIV_GUNLUK_KOK : GUNLUK_KOK, `${k}.json`),
 };
 
-interface Ders { key: string; no: number; baslik: string; sira: number }
+interface Ders {
+  key: string;
+  no: number;
+  kurulNo?: number;
+  kurul?: number;
+  brans?: string;
+  hoca?: string;
+  donem?: '2025-2026' | '2026-2027';
+  desteId?: string;
+  sayfaSayisi?: number;
+  baslik: string;
+  sira: number;
+}
 interface KayitVaryant {
   id: string;
   saglayici: string;
@@ -44,10 +68,16 @@ const oku = <T,>(p: string, bos: T): T => {
     return bos;
   }
 };
-const anahtarGecerli = (k: unknown): k is string => typeof k === 'string' && /^k\d+-\d+-[a-z0-9-]+$/.test(k);
+const anahtarGecerli = (k: unknown): k is string => typeof k === 'string' && /^(?:y25-)?k\d+-\d+-[a-z0-9-]+$/.test(k);
 const vidGecerli = (v: unknown): v is string => typeof v === 'string' && /^[a-z0-9-]+$/.test(v);
 
-const dersler = () => oku<Ders[]>(P.dersler, []);
+const dersler = (donem?: string): Ders[] => {
+  if (donem === '2025-2026') return oku<Ders[]>(P.arsivDersler, []);
+  if (donem === 'hepsi') return [...oku<Ders[]>(P.dersler, []), ...oku<Ders[]>(P.arsivDersler, [])];
+  return oku<Ders[]>(P.dersler, []);
+};
+const dersBul = (key: string): Ders | undefined =>
+  (arsivMi(key) ? oku<Ders[]>(P.arsivDersler, []) : oku<Ders[]>(P.dersler, [])).find((x) => x.key === key);
 
 /*
  * Ders (branş) ve branş içi numara. Kaynak: dersin slayt PDF'inin Drive yolu (hizalama › dosyalar[0].path,
@@ -89,7 +119,10 @@ const slugBrans = (slug: string): string | undefined =>
   oku<{ branslar?: { slug: string; ad: string }[] }>(path.join(process.cwd(), 'src', 'data', 'dersler', 'branslar.json'), {}).branslar?.find((b) => b.slug === slug)?.ad;
 const MODUL_DERS: Record<string, [string, string]> = { 'k1-70-tbg-sinav-kampi': ['Tıbbi Genetik', 'Sınav kampı'] };
 function bransBilgisi(d: Ders): { brans: string; bransNo: number | string; kurul: number; parca?: number; listeNo?: number } {
-  const kurul = Number(/^k(\d+)-/.exec(d.key)?.[1]) || 0;
+  const kurul = d.kurul || Number(/^(?:y25-)?k(\d+)-/.exec(d.key)?.[1]) || 0;
+  if (arsivMi(d.key) && d.brans) {
+    return { brans: d.brans, bransNo: d.no, kurul };
+  }
   const sp = /^k\d+-\d+-son-prova-([a-z-]+?)(?:-(\d+))?$/.exec(d.key);
   const modul = MODUL_DERS[d.key] || (sp ? [SON_PROVA_BRANS[sp[1]] || slugBrans(sp[1]) || 'Son Prova', `Son Prova${sp[2] ? ` ${sp[2]}` : ''}`] as [string, string] : undefined);
   if (modul) return { brans: modul[0], bransNo: modul[1], kurul };
@@ -98,7 +131,7 @@ function bransBilgisi(d: Ders): { brans: string; bransNo: number | string; kurul
   if (bo) return { brans: SON_PROVA_BRANS[bo[1]] || slugBrans(bo[1]) || 'Blok özet', bransNo: `Blok özet${bo[2] ? ` ${bo[2]}` : ''}${bo[3] ? ` · V${bo[3]}` : ''}`, kurul };
   // Kurul 2+: branş ve branş içi numara YALNIZ ders kayıt defterinden (kod "2n07" → 7). Drive dosya adındaki "33)"
   // numarası çakışabiliyor (Kurul 1: Meme Kanseri ile Memenin Benign ikisi de 33) — KURUL2_YAPILMAYACAK_HATALAR H16.
-  const dk = /^k([2-6])-(\d{2})/.exec(d.key);
+  const dk = /^(?:y25-)?k([2-6])-(\d{2})/.exec(d.key);
   if (dk) {
     const kd = oku<{ dersler?: { id: string; kod: string; brans: string }[] }>(path.join(process.cwd(), 'src', 'data', 'dersler', `k${dk[1]}.json`), {});
     const r = kd.dersler?.find((x) => x.id === `k${dk[1]}-${dk[2]}`);
@@ -119,11 +152,11 @@ function bransBilgisi(d: Ders): { brans: string; bransNo: number | string; kurul
   }
   if (o.v) return { ...o.v, kurul };
   const y = BRANS_YEDEK[d.key];
-  return y ? { brans: y[0], bransNo: y[1], kurul } : { brans: 'Diğer', bransNo: d.no, kurul };
+  return y ? { brans: y[0], bransNo: y[1], kurul } : { brans: d.brans || 'Diğer', bransNo: d.no, kurul };
 }
 /** Kayıtlı ve dosyası diskte olan varyantlar (ilki varsayılan). */
 function varyantlar(key: string): KayitVaryant[] {
-  const k = oku<Record<string, KayitVaryant[]>>(P.kayit, {});
+  const k = oku<Record<string, KayitVaryant[]>>(P.kayit(arsivMi(key)), {});
   return (k[key] || []).filter((v) => vidGecerli(v.id) && fs.existsSync(P.ses(key, v.id)));
 }
 /** surum: dosyanın değiştirilme zamanı — ses onarılınca/yeniden üretilince adres değişsin (aynı bayt boyutu olsa bile). */
@@ -136,36 +169,58 @@ const surum = (key: string, vid: string) => {
 };
 const ozet = (key: string) => (v: KayitVaryant) => ({ id: v.id, etiket: v.etiket, saglayici: v.saglayici, ses: v.ses, sureSn: v.sureSn, bayt: v.bayt, surum: surum(key, v.id) });
 
+function medspakYoluBul(key: string): string | null {
+  const m = /^(?:y25-)?k(\d+)-/.exec(key);
+  const kurul = m ? Number(m[1]) : 2;
+  const adaylar = [
+    path.join(MEDSPAK_25_26, `kurul${kurul}`, `${key}.medspak`),
+    path.join(MEDSPAK_EXPORT, `kurul${kurul}`, `${key}.medspak`),
+    path.join(MEDSPAK_EXPORT, `${key}.medspak`),
+  ];
+  for (const a of adaylar) {
+    if (fs.existsSync(a)) return a;
+  }
+  return null;
+}
+
 export function registerCanliDersRoutes(app: Express) {
-  app.get('/api/canli-ders', (_req: Request, res: Response) => {
-    const out = dersler()
+  app.get('/api/canli-ders', (req: Request, res: Response) => {
+    const donem = String(req.query.donem || '2026-2027');
+    const out = dersler(donem)
       // Son Prova partları listede kalır (zamanlama betikleri ve çevrimdışı paketler bu listeyi okur); sesli ders ekranı onları süzer
       .filter((d) => !LISTEDE_GIZLI.has(d.key))
-      .sort((a, b) => a.sira - b.sira)
+      .sort((a, b) => (a.kurul || 1) - (b.kurul || 1) || a.sira - b.sira)
       .map((d) => {
         const vs = varyantlar(d.key);
         if (!vs.length) return null;
         const b = bransBilgisi(d);
+        const isArsiv = arsivMi(d.key) || d.donem === '2025-2026';
         return {
           key: d.key,
+          donem: isArsiv ? '2025-2026' : '2026-2027',
+          arsiv: isArsiv,
           // no: branş içi numara (Tıbbi Patoloji 16); kurulNo: kurul genelindeki sıra
           no: b.bransNo,
-          kurulNo: d.no,
+          kurulNo: d.kurulNo ?? d.no,
           brans: b.brans,
+          hoca: d.hoca,
           parca: b.parca,
           listeNo: b.listeNo,
           kurul: b.kurul,
           baslik: d.baslik,
           sira: d.sira,
+          desteId: d.desteId || (isArsiv ? `k${b.kurul}p-${d.key}` : undefined),
           varsayilan: ozet(d.key)(vs[0]),
           varyantlar: vs.map(ozet(d.key)),
           pdf: fs.existsSync(P.hizalama(d.key)),
+          gunlukVar: fs.existsSync(P.gunluk(d.key)),
+          medspakVar: Boolean(medspakYoluBul(d.key)),
         };
       })
       .filter(Boolean);
     // Express res.json zayıf ETag üretir ve If-None-Match'te 304 döner.
-    res.setHeader('Cache-Control', out.length ? 'public, max-age=60' : 'no-store');
-    res.json({ dersler: out });
+    res.setHeader('Cache-Control', out.length ? 'public, max-age=30' : 'no-store');
+    res.json({ donem, dersler: out });
   });
 
   app.get('/api/canli-ders/ses/:key/:dosya', (req: Request, res: Response) => {
@@ -174,7 +229,7 @@ export function registerCanliDersRoutes(app: Express) {
     if (!anahtarGecerli(key) || !vidGecerli(vid)) return res.status(400).json({ error: 'geçersiz istek' });
     const v = varyantlar(key).find((x) => x.id === vid);
     if (!v) return res.status(404).json({ error: 'ses yok' });
-    const d = dersler().find((x) => x.key === key);
+    const d = dersBul(key);
     if (req.query.indir) {
       const b = d ? bransBilgisi(d) : null;
       const ad = `${b ? `${b.brans} ${String(b.bransNo).padStart(2, '0')}${b.parca ? ` Part ${b.parca}` : ''}` : ''} - ${d?.baslik || key} - ${v.etiket || vid}.mp3`.replace(/[\\/:*?"<>|\u0000-\u001f]/g, '-');
@@ -196,10 +251,35 @@ export function registerCanliDersRoutes(app: Express) {
     });
   });
 
+  app.get('/api/canli-ders/:key/gunluk', (req: Request, res: Response) => {
+    const key = req.params.key;
+    if (!anahtarGecerli(key)) return res.status(400).json({ error: 'geçersiz ders' });
+    const d = dersBul(key);
+    const g = oku<any>(P.gunluk(key), null);
+    if (g) return res.json(g);
+    return res.json({
+      key,
+      donem: arsivMi(key) ? '2025-2026' : '2026-2027',
+      kurul: d?.kurul || Number(/^(?:y25-)?k(\d+)-/.exec(key)?.[1]) || 1,
+      brans: d?.brans || '',
+      baslik: d?.baslik || key,
+      kayitlar: [],
+    });
+  });
+
+  app.get('/api/canli-ders/:key/medspak', (req: Request, res: Response) => {
+    const key = req.params.key;
+    if (!anahtarGecerli(key)) return res.status(400).json({ error: 'geçersiz ders' });
+    const yol = medspakYoluBul(key);
+    if (!yol) return res.status(404).json({ error: 'medspak bulunamadı' });
+    res.setHeader('Content-Disposition', `attachment; filename="${key}.medspak"`);
+    res.sendFile(yol, { headers: { 'Content-Type': 'application/vnd.sqlite3' } });
+  });
+
   app.get('/api/canli-ders/:key', (req: Request, res: Response) => {
     const key = req.params.key;
     if (!anahtarGecerli(key)) return res.status(400).json({ error: 'geçersiz ders' });
-    const d = dersler().find((x) => x.key === key);
+    const d = dersBul(key);
     if (!d || !fs.existsSync(P.metin(key))) return res.status(404).json({ error: 'ders yok' });
     const vs = varyantlar(key);
     if (!vs.length) return res.status(404).json({ error: 'bu dersin sesi henüz yok' });
@@ -214,6 +294,8 @@ export function registerCanliDersRoutes(app: Express) {
       ? { deckId: hz.deckId, dosyalar: hz.dosyalar, paragraflar: hz.paragraflar, ...(Array.isArray(hz.sayfaKaynak) ? { sayfaKaynak: hz.sayfaKaynak } : {}) }
       : null;
     const b = bransBilgisi(d);
+    const isArsiv = arsivMi(key) || d.donem === '2025-2026';
+    const desteId = d.desteId || hz?.deckId || (isArsiv ? `k${b.kurul}p-${key}` : `k${b.kurul}p-${key}`);
     // Cümle başlangıçları (scripts/sesli_anlatim/cumle_zaman.py): yalnız metin ve ses dosyası ölçüldüğü hâliyle duruyorsa
     const cz = oku<any>(P.cumle(key), null);
     const czHash = crypto.createHash('sha1').update(pars.map((p) => p.t).join('\n')).digest('hex');
@@ -231,12 +313,18 @@ export function registerCanliDersRoutes(app: Express) {
       if (!e || !e.p) return null;
       try { return fs.statSync(P.ses(key, vid)).size === e.bayt ? e.p : null; } catch { return null; }
     };
-    res.setHeader('Cache-Control', 'public, max-age=60');
+    res.setHeader('Cache-Control', 'public, max-age=30');
     res.json({
       key,
+      donem: isArsiv ? '2025-2026' : '2026-2027',
+      arsiv: isArsiv,
+      desteId,
+      gunlukVar: fs.existsSync(P.gunluk(key)),
+      medspakVar: Boolean(medspakYoluBul(key)),
       no: b.bransNo,
-      kurulNo: d.no,
+      kurulNo: d.kurulNo ?? d.no,
       brans: b.brans,
+      hoca: d.hoca,
       parca: b.parca,
       kurul: b.kurul,
       sira: d.sira,
@@ -294,7 +382,7 @@ export function registerCanliDersRoutes(app: Express) {
             s: c.spot ?? null,
           }));
         });
-        return Object.keys(out).length ? { deste: `k2p-${key}`, p: out } : null;
+        return Object.keys(out).length ? { deste: desteId, p: out } : null;
       })(),
       // çıkmış soru → dayandığı cümle (scripts/sesli_anlatim/cikmis_konum.py); PDF yeri ön yüzde isaret[p][c]'den
       cikmisKonum: (() => {

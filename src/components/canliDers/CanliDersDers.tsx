@@ -7,7 +7,7 @@
 import CanliDersKimlikHedef from './CanliDersKimlikHedef';
 import { CanliDersBaslangic } from './CanliDersBaslangic';
 import React, { Suspense, lazy, memo, useCallback, useMemo, useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { ArrowLeftRight, ArrowUpDown, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Check, Columns2, Copy, Crosshair, FileText, Maximize2, Minimize2, Minus, Pause, Play, Plus, RotateCcw, Rows2, ScrollText } from 'lucide-react';
+import { AlertTriangle, ArrowLeftRight, ArrowUpDown, BookOpen, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Check, Columns2, Copy, Crosshair, FileText, Maximize2, Minimize2, Minus, Package, Pause, Play, Plus, RotateCcw, Rows2, ScrollText } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import { driveViewUrl, useDeckPdf } from '../../services/deckPdfService';
 import { releasePageFullscreen, wasRecentlyScrollingOrTouching } from '../../utils/fullscreen';
@@ -16,8 +16,9 @@ import { isIosBrowserTab, shouldAvoidNativeFullscreen } from '../../utils/device
 import { openPwaInstallGuide } from '../../services/pwaService';
 import { cumleDuzeyleri } from '../../utils/maddele';
 import {
-  cdCumleAraligi, cdParagrafSinirlari, cdDetayBagla, cdKelimeBas, cdKonusulanKarakter, cdDetayGetir, cdDurum, cdOynat, cdParagrafa, cdTercihVaryant, cdToggle, fmtSure, useCd, type CdDetay,
+  cdCumleAraligi, cdParagrafSinirlari, cdDetayBagla, cdKelimeBas, cdKonusulanKarakter, cdDetayGetir, cdDurum, cdMedspakUrl, cdOynat, cdParagrafa, cdTercihVaryant, cdToggle, fmtSure, useCd, type CdDetay,
 } from './canliDersStore';
+import { GunlukDiyalog } from './CanliDersView';
 import { useCdTur } from './useCdTur';
 import { cdDersEtiketi } from './canliDersKategori';
 import { ListeEkleDugme } from './CanliDersListem';
@@ -27,7 +28,7 @@ import { cdMotivasyonAyarla, useCdMotivasyonAcik } from './canliDersMotivasyon';
 import { CdTvKumanda } from './CanliDersTv';
 import { MetniAktarDugme } from './CanliDersAktarDugme';
 import { VideoOlusturDugme } from './CanliDersVideo';
-import { Highlighter, Sparkles, Star } from 'lucide-react';
+import { Highlighter, SlidersHorizontal, Sparkles, Star } from 'lucide-react';
 import { useKonuSayaci } from '../../services/calismaTakip';
 import { KonuDugmeleri } from '../takip/KonuTakip';
 import { toast } from '../ui/Toast';
@@ -193,6 +194,8 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
 
   const [tamEkran, setTamEkran] = useState(() => document.documentElement.classList.contains('is-app-fullscreen'));
   const hadNativeFsRef = useRef(false);
+  /** Tam ekranda yüzen araçlar (yazı boyutu, PDF araç çubuğu) yalnız istenince açılır. */
+  const [aracAcik, setAracAcik] = useState(false);
   const [yazi, setYaziDurum] = useState<number>(() => { try { return Number(localStorage.getItem(YAZI_KEY)) || 20; } catch { return 20; } });
   const setYazi = (n: number | ((y: number) => number)) => setYaziDurum((y) => {
     const v = Math.min(YAZI_ENCOK, Math.max(YAZI_ENAZ, typeof n === 'function' ? n(y) : n));
@@ -205,6 +208,7 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
     && !new URLSearchParams(location.search).get('p') && !location.hash.startsWith('#p-'));
   useEffect(() => { if (buDersCaliyor) setAcilis(false); }, [buDersCaliyor]);
   const [yildizModalAcik, setYildizModalAcik] = useState(false);
+  const [gunlukAcik, setGunlukAcik] = useState(false);
   const yildizSayisi = useYildizliSayisi();
   const rootRef = useRef<HTMLDivElement>(null);
   const govdeRef = useRef<HTMLDivElement>(null);
@@ -482,14 +486,20 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
 
   return (
     <div
-      className={`cd-root cd-ders is-${mod}${tamEkran ? ' is-tam' : ''}${vurguAcik ? '' : ' cd-vurgu-kapali'}${kamp ? ' cd-kamp' : ''}`}
+      className={`cd-root cd-ders is-${mod}${tamEkran ? ' is-tam' : ''}${tamEkran && aracAcik ? ' is-arac-acik' : ''}${vurguAcik ? '' : ' cd-vurgu-kapali'}${kamp ? ' cd-kamp' : ''}`}
       ref={rootRef}
       style={tamEkran ? ({ '--cd-tam-yazi': `${yazi}px` } as React.CSSProperties) : yuk ? ({ height: yuk, ...(kamp ? { '--cd-tam-yazi': `${yazi}px` } : {}) } as React.CSSProperties) : undefined}
     >
       <header className="cd-ders-bas">
-        {kamp ? kamp.geri : <GeriBag />}
+        {kamp ? kamp.geri : <GeriBag arsiv={Boolean(detay.arsiv || detay.donem === '2025-2026' || detay.key.startsWith('y25-'))} />}
         <div className="cd-ders-baslik">
-          <small className="cd-ders-ust">{cdDersEtiketi(detay)}<DersBolumEtiketi detay={detay} /></small>
+          <small className="cd-ders-ust">
+            {(detay.arsiv || detay.donem === '2025-2026' || detay.key.startsWith('y25-')) && (
+              <span className="cd-chip is-arsiv">2025-2026 Arşiv</span>
+            )}
+            {cdDersEtiketi(detay)}
+            <DersBolumEtiketi detay={detay} />
+          </small>
           <h1 className="cd-ders-ad" title={`${cdDersEtiketi(detay)} · ${detay.baslik}`}>{detay.baslik}</h1>
         </div>
         <div className="cd-ders-arac">
@@ -523,6 +533,36 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
               </button>
             );
           })()}
+          {!tamEkran && (
+            <button
+              type="button"
+              className="cd-btn is-ince"
+              onClick={() => setGunlukAcik(true)}
+              title="Sesli ders güncelleme günlüğü"
+            >
+              <FileText aria-hidden /> <span>Günlük</span>
+            </button>
+          )}
+          {!tamEkran && detay.desteId && (
+            <button
+              type="button"
+              className="cd-btn is-ince"
+              onClick={() => navigateTo(`/dersler/interaktif/${detay.desteId}`)}
+              title="Etkileşimli Öğren destesini aç"
+            >
+              <BookOpen aria-hidden /> <span>Öğren</span>
+            </button>
+          )}
+          {!tamEkran && detay.medspakVar && (
+            <a
+              className="cd-btn is-ince"
+              href={cdMedspakUrl(detay.key)}
+              download={`${detay.key}.medspak`}
+              title=".medspak ders paketini indir (PDF + ses + deste + günlük)"
+            >
+              <Package aria-hidden /> <span>.medspak</span>
+            </a>
+          )}
           {!tamEkran && (
             <KonuDugmeleri kucuk className="cd-ders-takip" modul="sesli" konu={detay.key} ad={detay.baslik}
               onTekrar={() => { const v = cdTercihVaryant(detay.varyantlar); if (v) cdOynat(detay, v.id, { t: 0 }); }} />
@@ -600,7 +640,17 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
           )}
           {tamEkran ? (
             <>
-              {metinGoster && (
+              <button
+                type="button"
+                className={`cd-btn is-ikon cd-tam-arac${aracAcik ? ' is-on' : ''}`}
+                onClick={() => setAracAcik((x) => !x)}
+                aria-pressed={aracAcik}
+                aria-label={aracAcik ? 'Araçları gizle' : 'Araçları göster'}
+                title={aracAcik ? 'Araçları gizle' : 'Araçlar (yazı boyutu, çizim, yakınlaştırma)'}
+              >
+                <SlidersHorizontal aria-hidden />
+              </button>
+              {metinGoster && aracAcik && (
                 <span className="cd-yazi" role="group" aria-label="Yazı boyutu">
                   <button type="button" className="cd-btn is-ikon" onClick={() => setYazi(yazi - 2)} disabled={yazi <= YAZI_ENAZ} aria-label="Yazıyı küçült" title="Yazıyı küçült (−)">
                     <span aria-hidden className="cd-yazi-a is-kucuk">A</span>
@@ -633,6 +683,14 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
           )}
         </div>
       </header>
+      {(detay.arsiv || detay.donem === '2025-2026' || detay.key.startsWith('y25-')) && !tamEkran && (
+        <div className="cd-arsiv-uyari is-kompakt" role="note">
+          <AlertTriangle aria-hidden />
+          <span>
+            <b>2025-2026 Dönemi Arşiv Dersi:</b> Bu içerik geçen yılın (2025-2026) slaytlarından hazırlanmıştır; <b>2026-2027 güncel dönem dersleriyle karışmaz.</b>
+          </span>
+        </div>
+      )}
       {baglanti === 'baska' && !buDers && (
         <div className="cd-uyari">
           <span>Şu an çalan: <b>{caliyorBaslik}</b></span>
@@ -676,6 +734,7 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
       </div>
       {tanitim.tur}
       <CanliDersKimlikHedef detay={detay} kok={rootRef} />
+      {gunlukAcik && <GunlukDiyalog dersKey={detay.key} onKapat={() => setGunlukAcik(false)} />}
       {yildizModalAcik && (
         <YildizliParagraflarModal
           onClose={() => setYildizModalAcik(false)}
@@ -870,18 +929,19 @@ export function kampAsamalari(d: CdDetay): KampAsama[] {
   return out;
 }
 
-function GeriBag() {
+function GeriBag({ arsiv = false }: { arsiv?: boolean }) {
+  const hedef = arsiv ? `${pathFor('canli_ders')}?donem=2025-2026` : pathFor('canli_ders');
   return (
     <a
       className="cd-geri"
-      href={pathFor('canli_ders')}
+      href={hedef}
       onClick={(e) => {
         if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
         e.preventDefault();
-        navigateTo(pathFor('canli_ders'));
+        navigateTo(hedef);
       }}
     >
-      <ChevronLeft aria-hidden /> <span>Sesli dersler</span>
+      <ChevronLeft aria-hidden /> <span>{arsiv ? '2025-2026 Arşivi' : 'Sesli dersler'}</span>
     </a>
   );
 }

@@ -34,10 +34,16 @@ export interface CdVaryant {
 }
 export interface CdListeDers {
   key: string;
+  donem?: '2025-2026' | '2026-2027';
+  arsiv?: boolean;
+  desteId?: string;
+  gunlukVar?: boolean;
+  medspakVar?: boolean;
   /** Branş içi numara (Tıbbi Patoloji 16); eski sunucu/çevrimdışı kayıtta kurul sırası olabilir */
   no: string | number;
   /** Ders (branş) adı: "Tıbbi Patoloji"; kurulNo: kurul genelindeki sıra */
   brans?: string;
+  hoca?: string;
   /** Aynı PDF iki derste anlatıldıysa 1/2 ("Part 1") */
   parca?: number;
   /** Listede sıralama numarası no'dan farklıysa (no çözücü numarasıdır; Meme Kanseri 35 ama listede 34,5) */
@@ -50,6 +56,33 @@ export interface CdListeDers {
   varyantlar: CdVaryant[];
   pdf: boolean;
 }
+export interface CdGunlukKayit {
+  surum: number;
+  tarih: string;
+  neden: string;
+  hatali_bilgiler: string[];
+  degisiklikler: string[];
+  metrikler?: {
+    sureSn?: number;
+    sureDk?: number;
+    sayfaSayisi?: number;
+    atlananSayfa?: number;
+    bolumSayisi?: number;
+    paragrafSayisi?: number;
+    cumleSayisi?: number;
+    slaytAdimSayisi?: number;
+    cizimSayisi?: number;
+    cikmisEslesme?: number;
+  };
+}
+export interface CdGunluk {
+  key: string;
+  donem: string;
+  kurul: number;
+  brans: string;
+  baslik: string;
+  kayitlar: CdGunlukKayit[];
+}
 export interface CdParagraf { i: number; metin: string }
 export interface CdBolum { baslik: string; paragraflar: CdParagraf[] }
 export interface CdPdfDosya { path: string; name: string; fileId?: string; pages?: number }
@@ -61,8 +94,14 @@ export interface CdPdf {
 }
 export interface CdDetay {
   key: string;
+  donem?: '2025-2026' | '2026-2027';
+  arsiv?: boolean;
+  desteId?: string;
+  gunlukVar?: boolean;
+  medspakVar?: boolean;
   no: string | number;
   brans?: string;
+  hoca?: string;
   parca?: number;
   kurul?: number;
   kurulNo?: number;
@@ -133,17 +172,17 @@ export const cdSesKisa = (v: Pick<CdVaryant, 'etiket' | 'ses' | 'saglayici' | 'i
 export const fmtMb = (b: number) => (b > 0 ? `${(b / 1048576).toFixed(b < 10485760 ? 1 : 0)} MB` : '');
 
 /* ---------------- veri ---------------- */
-let listeP: Promise<CdListeDers[]> | null = null;
-export function cdListeGetir(yenile = false): Promise<CdListeDers[]> {
-  if (!listeP || yenile) {
-    // Boş liste (sunucu yeniden başlarken/kayıt yazılırken) önbellekten gelip oturum boyu takılmasın: önbelleksiz bir kez daha sor
-    const getir = (taze: boolean) => safeJsonFetch<{ dersler: CdListeDers[] }>('/api/canli-ders', taze ? ({ cache: 'no-store' } as RequestInit) : undefined);
-    listeP = getir(yenile).then((r) => (r.ok && Array.isArray(r.data?.dersler) && !r.data!.dersler.length ? getir(true) : r)).then((r) => {
-      if (r.ok && Array.isArray(r.data?.dersler) && !r.data!.dersler.length) listeP = null;
+const listeCache = new Map<string, Promise<CdListeDers[]>>();
+export function cdListeGetir(yenile = false, donem: '2026-2027' | '2025-2026' = '2026-2027'): Promise<CdListeDers[]> {
+  if (!listeCache.has(donem) || yenile) {
+    const url = donem === '2025-2026' ? '/api/canli-ders?donem=2025-2026' : '/api/canli-ders';
+    const getir = (taze: boolean) => safeJsonFetch<{ dersler: CdListeDers[] }>(url, taze ? ({ cache: 'no-store' } as RequestInit) : undefined);
+    const p = getir(yenile).then((r) => (r.ok && Array.isArray(r.data?.dersler) && !r.data!.dersler.length ? getir(true) : r)).then((r) => {
+      if (r.ok && Array.isArray(r.data?.dersler) && !r.data!.dersler.length) listeCache.delete(donem);
       if (!r.ok || !Array.isArray(r.data?.dersler)) {
-        listeP = null;
+        listeCache.delete(donem);
         // İnternet yok: cihaza indirilmiş dersler (canliDersCevrimdisi)
-        if (Object.keys(cdCevrimdisiKayitlari()).length) {
+        if (donem === '2026-2027' && Object.keys(cdCevrimdisiKayitlari()).length) {
           return import('./canliDersCevrimdisi').then((m) => m.cdYerelListe()).then((ds) => {
             if (!ds.length) throw new Error(r.error || `Liste alınamadı (${r.status})`);
             return ds.sort((a, b) => (a.sira ?? 0) - (b.sira ?? 0));
@@ -152,11 +191,23 @@ export function cdListeGetir(yenile = false): Promise<CdListeDers[]> {
         throw new Error(r.error || `Liste alınamadı (${r.status})`);
       }
       r.data!.dersler.forEach((d) => surumKaydet(d.key, d.varyantlar as any));
-      return r.data!.dersler.slice().sort((a, b) => (a.sira ?? 0) - (b.sira ?? 0));
+      return r.data!.dersler.slice().sort((a, b) => (a.kurul || 1) - (b.kurul || 1) || (a.sira ?? 0) - (b.sira ?? 0));
     });
+    listeCache.set(donem, p);
   }
-  return listeP;
+  return listeCache.get(donem)!;
 }
+
+export async function cdGunlukGetir(key: string): Promise<CdGunluk> {
+  const r = await safeJsonFetch<CdGunluk>(`/api/canli-ders/${encodeURIComponent(key)}/gunluk`, { cache: 'no-store' } as RequestInit);
+  if (!r.ok || !r.data) throw new Error(r.error || 'Güncelleme günlüğü alınamadı.');
+  return r.data;
+}
+
+export const cdMedspakUrl = (key: string) => {
+  const p = `/api/canli-ders/${encodeURIComponent(key)}/medspak`;
+  return `${(getCustomApiUrl(p) || '').replace(/\/$/, '')}${p}`;
+};
 // Ders ayrıntısı (metin + zamanlama + PDF eşlemesi) 3 dk önbellekte: ses yeniden üretilir/onarılırsa zamanlama da tazelenir
 const DETAY_OMUR_MS = 3 * 60 * 1000;
 /** Okunuşla yazılmış sayı, sıra sayısı, kısaltma ve açılımları ekranda yazılı biçimiyle gösterir (ekranYazim.ts); önemli cümle /

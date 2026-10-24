@@ -104,9 +104,9 @@ const birlestir = (yol: string, sp: URLSearchParams, hash: string) => {
 const enc = (s: string) => encodeURIComponent(s);
 const parcala = (yol: string) => yol.split('/').filter(Boolean).map((s) => { try { return decodeURIComponent(s); } catch { return s; } });
 
-/** Sesli ders anahtarından kurul (k2-07… → 2; önek yoksa 1) */
+/** Sesli ders anahtarından kurul (k2-07… veya y25-k2-07… → 2; önek yoksa 1) */
 const anahtarKurul = (key: string) => {
-  const m = /^k(\d)/.exec(key);
+  const m = /^(?:y25-)?k(\d)/.exec(key);
   return m ? Number(m[1]) : 1;
 };
 
@@ -295,7 +295,7 @@ export function icYol(adres: string): string {
       if (!k) return birlestir(`/canliders${s[2] ? `/${enc(s[2])}` : ''}`, sp, hash);
       const sonraki = s[3];
       // kurulN/<branş>[/<key>] ya da kurulN/<key>
-      if (sonraki && bransKimligi(k, sonraki) && !s[4] && !/^k\d-/.test(sonraki)) {
+      if (sonraki && bransKimligi(k, sonraki) && !s[4] && !/^(?:y25-)?k\d-/.test(sonraki)) {
         koy('kurul', k); koy('brans', sonraki);
         return birlestir('/canliders', sp, hash);
       }

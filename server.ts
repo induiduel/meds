@@ -7262,6 +7262,12 @@ function loadDeckFromItemFiles(deckId: string): any {
         return JSON.parse(fs.readFileSync(p, 'utf-8'));
       } catch (_) {}
     }
+    const pArsiv = path.resolve(process.cwd(), 'data', 'arsiv_25_26', 'decks', cand);
+    if (fs.existsSync(pArsiv)) {
+      try {
+        return JSON.parse(fs.readFileSync(pArsiv, 'utf-8'));
+      } catch (_) {}
+    }
   }
   return null;
 }
@@ -7270,7 +7276,7 @@ app.get(['/api/decks/:id', '/api/ogren/:id', '/api/interactive-decks/:id'], (req
   try {
     const deckId = req.params.id;
     // Panelde değiştirilen deste katmandadır; derlenmiş parça dosyaları eski kalır
-    let deck = resolveContent(INTERACTIVE_DECKS_FILE) === INTERACTIVE_DECKS_FILE ? loadDeckFromItemFiles(deckId) : null;
+    let deck = (resolveContent(INTERACTIVE_DECKS_FILE) === INTERACTIVE_DECKS_FILE || deckId.includes('y25-')) ? loadDeckFromItemFiles(deckId) : null;
     if (!deck) {
       const list = getDecksDb();
       deck = list.find((d) => d.id === deckId || d.id === `k1p-${deckId}` || d.id.includes(deckId));

@@ -27,9 +27,9 @@ export function useKurulParam(): number | null {
   return k;
 }
 
-/** Kimlikten kurul: "k2-07…", "k2noroloji" → 2; önek yoksa (eski Kurul 1 adları: patoloji, enfeksiyon…) 1. */
+/** Kimlikten kurul: "k2-07…", "y25-k2-07…", "k2noroloji" → 2; önek yoksa (eski Kurul 1 adları: patoloji, enfeksiyon…) 1. */
 export function kurulKimlikten(id: string | undefined | null): number {
-  const m = /^k(\d)(?![\d])/.exec(String(id || '').trim().toLowerCase());
+  const m = /^(?:y25-)?k(\d)(?![\d])/.exec(String(id || '').trim().toLowerCase());
   return m ? Number(m[1]) : 1;
 }
 
