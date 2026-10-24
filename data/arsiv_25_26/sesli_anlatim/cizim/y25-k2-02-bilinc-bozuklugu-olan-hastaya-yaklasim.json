@@ -1,0 +1,977 @@
+{
+ "surum": 1,
+ "metinHash": "db8b637bee146c124f16ba6acc882220a94988c9",
+ "p": {
+  "0": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Yüzde seksen beş metabolik ve sistemik neden",
+      "Yüzde on beş santral sinir sistemine ait neden"
+     ],
+     "baslik": "Bilinç değişikliği nedenleri",
+     "s": 2,
+     "k": [
+      0,
+      149
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.77
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0426,
+     "ek_renk": "#ffffe1"
+    }
+   ]
+  },
+  "1": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Sentral tegmental fasikül",
+      "Raphe nükleusu",
+      "Lokus seruleus",
+      "Parabrakiyal nükleus"
+     ],
+     "baslik": "Asendan retiküler aktive edici sistem",
+     "s": 4,
+     "k": [
+      0,
+      188
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.74
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1234,
+     "ek_renk": "#ffffe1"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Rostral pons ve mezensefalon santral gri cevher",
+      "Talamus intralaminar ve sentromedyan nükleuslar",
+      "Bazal ön beyin ve hipotalamus",
+      "Serebral korteks bağlantı bütünlüğü"
+     ],
+     "s": 5,
+     "k": [
+      0,
+      198
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.9
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.45,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3697,
+     "ek_renk": "#ffffe1"
+    }
+   ]
+  },
+  "2": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "Uyanık ve farkında",
+       "Bilinç açık"
+      ],
+      [
+       "Sözel uyaranla çabuk uyandırılabilir ve farkında",
+       "Somnolan hasta"
+      ]
+     ],
+     "s": 6,
+     "k": [
+      34,
+      233
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.293,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2726,
+     "ek_renk": "#ffffe1"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Uyandırılabilirlik",
+       "Uyandırılamaz",
+       "Uyandırılabilir ve gözleri açık"
+      ],
+      [
+       "Farkındalık",
+       "Farkında değildir",
+       "Farkında değildir"
+      ]
+     ],
+     "kutuplar": [
+      "Komada hasta",
+      "Vejetatif durumda"
+     ],
+     "s": 6,
+     "k": [
+      0,
+      179
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.293,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2726,
+     "ek_renk": "#ffffe1"
+    }
+   ]
+  },
+  "3": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Konfüzyon ve deliryum",
+      "Letarji ya da somnolans",
+      "Stupor ve koma",
+      "Demans ve beyin ölümü"
+     ],
+     "baslik": "Bilinç bozuklukları tanımları",
+     "s": 7,
+     "k": [
+      17,
+      237
+     ],
+     "tip": "liste",
+     "konum": [
+      0.25,
+      0.58
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "4": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "karar",
+     "sablon_ad": "Karar dalı",
+     "duzen": "dal",
+     "soru": "İlk aşamada fokal bulgu mu simetrik bulgu mu?",
+     "dallar": [
+      [
+       "Fokal bulgu",
+       "Yapısal santral sinir sistemi lezyonu"
+      ],
+      [
+       "Simetrik bulgular",
+       "Global metabolik problem"
+      ]
+     ],
+     "s": 9,
+     "k": [
+      0,
+      184
+     ],
+     "tip": "dal",
+     "konum": [
+      0.03,
+      0.89
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.274,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1841,
+     "ek_renk": "#ffffe1"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "algoritma",
+     "sablon_ad": "Yaklaşım basamakları",
+     "duzen": "adimlar",
+     "ogeler": [
+      "Oksijen verilmesi",
+      "İki geniş damar yolu açılması",
+      "Elektrokardiyografi ve kardiyak monitörizasyon"
+     ],
+     "s": 9,
+     "k": [
+      0,
+      129
+     ],
+     "tip": "adimlar",
+     "konum": [
+      0.03,
+      0.89
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.259,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1687,
+     "ek_renk": "#ffffe1"
+    }
+   ]
+  },
+  "5": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "tani_tetkik",
+     "sablon_ad": "Durum → bakılacak tetkik",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum / şüphe",
+      "Bakılacak tetkik"
+     ],
+     "satirlar": [
+      [
+       "Hipoglisemi gerçek acil",
+       "Parmak ucundan stick kan şekeri"
+      ],
+      [
+       "Fokal nörolojik defisit",
+       "Hızlı nörolojik değerlendirme"
+      ]
+     ],
+     "s": 10,
+     "k": [
+      17,
+      220
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.51,
+      0.57
+     ],
+     "genislik": 0.42,
+     "doluluk": 0.0,
+     "kutu_h": 0.333,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "6": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "Hipoksi, hiperkapni ve glukoz bozukluğu",
+      "Hiponatremi ve Wernicke ensefalopatisi",
+      "Üremik, hepatik ve hipertansif ensefalopati"
+     ],
+     "sonuc": "Santral sinir sistemi difüz etkilenimi",
+     "s": 11,
+     "k": [
+      0,
+      188
+     ],
+     "tip": "grup",
+     "konum": [
+      0.03,
+      0.84
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.303,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1634,
+     "ek_renk": "#ffffe1"
+    }
+   ]
+  },
+  "7": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Düşük kardiyak debi ve yaygın hipoperfüzyon",
+      "Endokrin hipo ya da hiperfonksiyon",
+      "Toksik madde ve ilaç veya alkol geri çekilmesi",
+      "Serotonin sendromu ve nöroleptik malign sendrom"
+     ],
+     "baslik": "Dolaşım ve toksik sistemik nedenler",
+     "s": 12,
+     "k": [
+      0,
+      229
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.91
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2934,
+     "ek_renk": "#ffffe1"
+    }
+   ]
+  },
+  "8": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "tani_tetkik",
+     "sablon_ad": "Durum → bakılacak tetkik",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum / şüphe",
+      "Bakılacak tetkik"
+     ],
+     "satirlar": [
+      [
+       "Travma, intrakraniyal kanama ve inme",
+       "Acil beyin görüntülemesi"
+      ],
+      [
+       "Santral sinir sistemi enfeksiyonu",
+       "Beyin omurilik sıvısı"
+      ],
+      [
+       "Status epileptikus ya da postiktal dönem",
+       "Elektroensefalografi"
+      ]
+     ],
+     "s": 13,
+     "k": [
+      0,
+      205
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.86
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.31,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1895,
+     "ek_renk": "#ffffe1"
+    }
+   ]
+  },
+  "10": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "Ağır hipertansiyon",
+       "Hipertansif ensefalopati ve kafa içi basınç artışı"
+      ],
+      [
+       "Solunum ve kan gazı bozukluğu",
+       "Hipoksi ya da hiperkarbi"
+      ]
+     ],
+     "s": 16,
+     "k": [
+      0,
+      231
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.78
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.293,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0926,
+     "ek_renk": "#ffffe1"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "algoritma",
+     "sablon_ad": "Yaklaşım basamakları",
+     "duzen": "adimlar",
+     "ogeler": [
+      "Hastanın bilinç düzeyi ve pupilleri",
+      "Uyaranlara cevabı ve travma belirtileri",
+      "Glasgow koma skalasının belirlenmesi"
+     ],
+     "s": 17,
+     "k": [
+      0,
+      200
+     ],
+     "tip": "adimlar",
+     "konum": [
+      0.49,
+      0.73
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.259,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "11": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "maskeleyen",
+     "sablon_ad": "Görünen neden altta yatanı örter",
+     "duzen": "maske",
+     "basliklar": [
+      "İlk izlenim",
+      "Atlanmaması gereken"
+     ],
+     "bag": "maskeleyebilir",
+     "gorunen": "Koma nedeni alkol",
+     "altta": [
+      "Subaraknoid kanama",
+      "Subdural kanama"
+     ],
+     "s": 18,
+     "k": [
+      0,
+      194
+     ],
+     "tip": "maske",
+     "konum": [
+      0.03,
+      0.92
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.268,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.208,
+     "ek_renk": "#ffffe1"
+    }
+   ]
+  },
+  "12": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "İskelet kası motor yanıtları",
+      "Pupillerin çapı ve reaktivitesi",
+      "Göz hareketleri ve okülovestibüler yanıtlar",
+      "Solunum şekli"
+     ],
+     "baslik": "Lokalizan değeri olan klinik bulgular",
+     "s": 19,
+     "k": [
+      0,
+      217
+     ],
+     "tip": "liste",
+     "konum": [
+      0.42,
+      0.57
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "13": {
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "skor",
+     "sablon_ad": "Puanlama",
+     "duzen": "tablo",
+     "basliklar": [
+      "Yanıt",
+      "Puan"
+     ],
+     "satirlar": [
+      [
+       "Spontan açık göz",
+       "Dört puan"
+      ],
+      [
+       "Sözel uyaranla açma",
+       "Üç puan"
+      ],
+      [
+       "Ağrılı uyaranla açma",
+       "İki puan"
+      ],
+      [
+       "Hiç açmama",
+       "Bir puan"
+      ]
+     ],
+     "s": 22,
+     "k": [
+      0,
+      149
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.29,
+      0.25
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.367,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "15": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "skor",
+     "sablon_ad": "Puanlama",
+     "duzen": "tablo",
+     "basliklar": [
+      "Yanıt",
+      "Puan"
+     ],
+     "satirlar": [
+      [
+       "Göz açma bileşeni",
+       "Dört puan"
+      ],
+      [
+       "Motor yanıt bileşeni",
+       "Altı puan"
+      ],
+      [
+       "Sözel yanıt bileşeni",
+       "Beş puan"
+      ],
+      [
+       "En düşük ve en yüksek toplam",
+       "Üç ve on beş puan"
+      ]
+     ],
+     "s": 29,
+     "k": [
+      17,
+      231
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.6,
+      0.45
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.527,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "skor",
+     "sablon_ad": "Puanlama",
+     "duzen": "tablo",
+     "basliklar": [
+      "Yanıt",
+      "Puan"
+     ],
+     "satirlar": [
+      [
+       "Oryante hasta",
+       "Beş puan"
+      ],
+      [
+       "Dezoryante yani konfüze konuşan",
+       "Dört puan"
+      ],
+      [
+       "Uygunsuz cevap",
+       "Üç puan"
+      ],
+      [
+       "Homurtu ve yanıt yokluğu",
+       "İki ve bir puan"
+      ]
+     ],
+     "s": 30,
+     "k": [
+      9,
+      196
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.86
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.367,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2465,
+     "ek_renk": "#ffffe1"
+    }
+   ]
+  },
+  "18": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "Midriyatik ve ışığa yanıtsız pupil",
+       "Atropin, barbitürat, hipoksi, hipotermi"
+      ],
+      [
+       "İleri miyotik pupil",
+       "Opiat intoksikasyonu ve nalokson"
+      ]
+     ],
+     "s": 33,
+     "k": [
+      0,
+      93
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.57,
+      0.45
+     ],
+     "genislik": 0.42,
+     "doluluk": 0.0,
+     "kutu_h": 0.373,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "19": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Okülosefalik göz hareketi",
+       "Başın tersine hareket eder",
+       "Başla birlikte hareket eder"
+      ],
+      [
+       "Refleks durumu",
+       "Bebek gözü yanıtı var",
+       "Okülosefalik refleks kaybolur"
+      ]
+     ],
+     "kutuplar": [
+      "Beyin sapı sağlam",
+      "Beyin sapı hasarlı"
+     ],
+     "s": 35,
+     "k": [
+      0,
+      90
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.9
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.333,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2526,
+     "ek_renk": "#ffffe1"
+    }
+   ]
+  },
+  "20": {
+   "5": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Soğuk su kalorik yanıtı",
+       "Uyarılan kulak tarafına tonik deviasyon",
+       "Gözlerde hiçbir hareket olmaz"
+      ],
+      [
+       "Beyin sapı durumu",
+       "Beyin sapı işlevsel",
+       "Beyin ölümü değerlendirmesinde aranır"
+      ]
+     ],
+     "kutuplar": [
+      "Beyin sapı sağlam",
+      "Alt beyin sapı lezyonu"
+     ],
+     "s": 38,
+     "k": [
+      0,
+      78
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.85
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.333,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2026,
+     "ek_renk": "#ffffe1"
+    }
+   ]
+  },
+  "23": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "tani_tetkik",
+     "sablon_ad": "Durum → bakılacak tetkik",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum / şüphe",
+      "Bakılacak tetkik"
+     ],
+     "satirlar": [
+      [
+       "Salisilat ve metanol zehirlenmesinde asidoz",
+       "Arteriyel kan gazında pe ha değeri"
+      ],
+      [
+       "Karbonmonoksit ve duman zehirlenmesi",
+       "Karboksihemoglobin"
+      ]
+     ],
+     "s": 43,
+     "k": [
+      0,
+      168
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.89
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.293,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2026,
+     "ek_renk": "#ffffe1"
+    }
+   ]
+  },
+  "25": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "zehir_antidot",
+     "sablon_ad": "Zehirlenme → antidot / tedavi",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum",
+      "Antidot / tedavi"
+     ],
+     "satirlar": [
+      [
+       "Hipoglisemi",
+       "Damar içi glukoz"
+      ],
+      [
+       "Opioid zehirlenmesi",
+       "Nalokson"
+      ],
+      [
+       "Benzodiazepin zehirlenmesi",
+       "Flumazenil"
+      ]
+     ],
+     "s": 51,
+     "k": [
+      0,
+      138
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.29,
+      0.42
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.001,
+     "kutu_h": 0.35,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "26": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "karar",
+     "sablon_ad": "Karar dalı",
+     "duzen": "dal",
+     "soru": "Komada beyin sapı bulguları var mı?",
+     "dallar": [
+      [
+       "Yok (supratentoryal ve difüz)",
+       "Bilgisayarlı tomografi ve metabolik tarama"
+      ],
+      [
+       "Var (posterior fossa ve herniasyon)",
+       "Manyetik rezonans, glukoz, tiamin, toksik tarama"
+      ]
+     ],
+     "s": 59,
+     "k": [
+      0,
+      223
+     ],
+     "tip": "dal",
+     "konum": [
+      0.03,
+      0.98
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.274,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2741,
+     "ek_renk": "#ffffe1"
+    }
+   ]
+  }
+ },
+ "rapor": {
+  "aday": 25,
+  "gecti": 25,
+  "ret": {}
+ }
+}

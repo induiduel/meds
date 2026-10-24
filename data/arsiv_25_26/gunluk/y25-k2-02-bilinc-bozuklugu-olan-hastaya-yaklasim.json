@@ -1,0 +1,35 @@
+{
+  "key": "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+  "donem": "2025-2026",
+  "kurul": 2,
+  "brans": "Nöroloji",
+  "baslik": "Bilinç Bozukluğu Olan Hastaya Yaklaşım",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-10-25 00:04",
+      "neden": "Kurul 2 2025-2026 Arşivi İlk Üretim, Çıkmış Soru Vurgusu ve Canlı Çizim Katmanı Doğrulaması",
+      "hatali_bilgiler": [
+        "Mevcut taslakta yalnızca 1 çıkmış soru (d3-b-057, medüller ataksik solunum) bağlıydı ve sesli uyarısı eksikti; veritabanı taranarak somnolans/letarji, komada hipoglisemi, GKS (E-V-M puanlama, min 3 – maks 15) ve beyin sapı refleksleri dahil toplam 16 çıkmış soru bağlantısı eklendi.",
+        "konusma_v2.json içinde 16 çıkmış sorunun geçtiği 8 cümleye hem sesli ('bu bilgi çıkmışta soruldu / sınavda soruldu') hem ekran ('tur: cikmis') vurguları işlendi."
+      ],
+      "degisiklikler": [
+        "62 sayfalık PDF eksiksiz işlendi (15 bölüm, 29 paragraf, 106 cümle); 0 atlanan sayfa ve tüm şekil/tablolar sayfa_haritasi.json ile doğrulandı.",
+        "25 canlı çizim ve şema katmanı (ARAS-korteks, GKS skorlama, diensefalik/mezensefalik/pontin/bulber solunum ve pupil paternleri, dekortike-deserebre rijidite, kalorik test, beyin ölümü ve acil koma yönetimi) eklendi.",
+        "74 adımlı Öğren destesi (Checkpoint + Ders Sonu Oyunları), EMA GPU seslendirme, kelime zamanlaması ve PDF gömülü .medspak üretildi."
+      ],
+      "metrikler": {
+        "sureSn": 975,
+        "sureDk": 16.2,
+        "sayfaSayisi": 62,
+        "atlananSayfa": 0,
+        "bolumSayisi": 15,
+        "paragrafSayisi": 29,
+        "cumleSayisi": 106,
+        "slaytAdimSayisi": 74,
+        "cizimSayisi": 25,
+        "cikmisEslesme": 29
+      }
+    }
+  ]
+}
