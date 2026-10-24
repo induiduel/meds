@@ -32,18 +32,16 @@ pdfmetrics.registerFont(TTFont("DVI", FONT + "DejaVuSans-Oblique.ttf"))
 
 H = colors.HexColor
 MUREKKEP, GRI, SOLUK, CIZGI, ZEMIN = H("#1c1917"), H("#57534e"), H("#a8a29e"), H("#e7e5e4"), H("#fafaf9")
-# Ders renkleri: (koyu vurgu, açık zemin)
-RENK = {
-    "Tıbbi Genetik": (H("#6d28d9"), H("#f5f3ff")),
-    "Enfeksiyon Hastalıkları": (H("#b91c1c"), H("#fef2f2")),
-    "Patoloji": (H("#be185d"), H("#fdf2f8")),
-    "Halk Sağlığı": (H("#047857"), H("#ecfdf5")),
-    "Üroloji": (H("#0369a1"), H("#f0f9ff")),
-    "Kadın Hastalıkları ve Doğum": (H("#c2410c"), H("#fff7ed")),
-    "Farmakoloji": (H("#4d7c0f"), H("#f7fee7")),
+# Renk yalnız durumu gösterir; ders başlıkları ve sorular siyah-beyazdır.
+DURUM = {
+    "emin": (H("#15803d"), "CEVAP DOĞRULANDI"),
+    "tartisma": (H("#b91c1c"), "TARTIŞMALI"),
+    "eksik": (H("#b91c1c"), "ŞIK EKSİK"),
+    "eklendi": (H("#1d4ed8"), "SONRADAN EKLENDİ"),
+    "uretildi": (H("#1d4ed8"), "ŞIKLAR ÜRETİLDİ"),
+    "tahmini": (H("#b45309"), "YERİ TAHMİNİ"),
+    "kismi": (H("#78716c"), "HATIRLANMADI"),
 }
-ETIKET = {"tahmini": (H("#78716c"), "YERİ TAHMİNİ"), "kismi": (H("#b45309"), "KISMİ"), "uretildi": (H("#1d4ed8"), "ŞIKLAR ÜRETİLDİ"),
-          "tartisma": (H("#b91c1c"), "TARTIŞMALI")}
 URETILDI = "ders notundan üretildi"
 
 SAYFA_G, SAYFA_Y = A4
@@ -73,14 +71,32 @@ def p(metin, stil):
 
 
 def rozetler(turler):
-    return " ".join(f'<font name="DVB" size="6.3" color="{ETIKET[t][0].hexval()}">[{ETIKET[t][1]}]</font>' for t in turler)
+    return " ".join(f'<font name="DVB" size="6.3" color="{DURUM[t][0].hexval()}">[{DURUM[t][1]}]</font>' for t in turler)
+
+
+def durumlar(siklar, notu, kesin):
+    n = notu or ""
+    t = ([] if kesin else ["tahmini"]) + ([] if siklar else ["kismi"])
+    t += ["uretildi"] if URETILDI in n else (["eklendi"] if "24.10 eklendi" in n else [])
+    t += ["eksik"] if "Şık eksik" in n or "hatırlanmadı" in n.split(".")[0] else []
+    t += ["tartisma"] if "artışmalı" in n else []
+    if siklar and not {"tartisma", "eksik", "uretildi", "eklendi"} & set(t):
+        t.append("emin")
+    return t
+
+
+def ana_renk(t):
+    """Kart kenarı ve cevap rengi: en önemli durumun rengi."""
+    for k in ("tartisma", "eksik", "uretildi", "eklendi", "emin", "kismi"):
+        if k in t:
+            return DURUM[k][0]
+    return MUREKKEP
 
 
 def ders_basligi(ad, bas, son, n):
-    koyu, _ = RENK[ad]
     t = Table([[p(ad, st_ders), p(f"Soru {bas}–{son}\n{n}/{son - bas + 1} toplandı", st_ders_alt)]],
               colWidths=[SUTUN * 0.62, SUTUN * 0.38])
-    t.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, -1), koyu), ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+    t.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, -1), MUREKKEP), ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
                            ("ALIGN", (1, 0), (1, 0), "RIGHT"), ("LEFTPADDING", (0, 0), (-1, -1), 7),
                            ("RIGHTPADDING", (0, 0), (-1, -1), 7), ("TOPPADDING", (0, 0), (-1, -1), 5),
                            ("BOTTOMPADDING", (0, 0), (-1, -1), 5), ("ROUNDEDCORNERS", [3, 3, 3, 3])]))
@@ -88,38 +104,33 @@ def ders_basligi(ad, bas, son, n):
 
 
 def soru_karti(ders, no, kok, siklar, cevap, notu, kesin, konu=None):
-    koyu, acik = RENK[ders]
-    turler = ([] if kesin else ["tahmini"]) + ([] if siklar else ["kismi"]) + \
-             (["uretildi"] if notu and URETILDI in notu else []) + \
-             (["tartisma"] if notu and ("Tartışmalı" in notu or "tartışmalı" in notu) else [])
-    baslik = f'<font name="DVB" color="{koyu.hexval()}">{no}.</font> {escape(kok).replace(chr(10), "<br/>")}'
-    if turler:
-        baslik += "<br/>" + rozetler(turler)
+    turler = durumlar(siklar, notu, kesin)
+    renk = ana_renk(turler)
+    baslik = f'<font name="DVB">{no}.</font> {escape(kok).replace(chr(10), "<br/>")}' + "<br/>" + rozetler(turler)
     icerik = []
     if konu:
-        icerik.append(Paragraph(f'<font name="DVB" color="{koyu.hexval()}">KURUL 1</font>  ·  {escape(ders)}  ·  {escape(konu)}', st_konu))
+        icerik.append(Paragraph(f'<font name="DVB">KURUL 1</font>  ·  {escape(ders)}  ·  {escape(konu)}', st_konu))
     icerik += [Paragraph(baslik, st_kok), Spacer(1, 1.6 * mm)]
     if "NST trasesi" in kok and KTG.exists():
         en = SUTUN - 14
         icerik += [Image(str(KTG), width=en, height=en * 336 / 644), Spacer(1, 1.6 * mm)]
     if siklar:
-        icerik += [Paragraph(f'<font name="DVB" color="{koyu.hexval()}">{"ABCDE"[j]})</font> {escape(s)}', st_sik)
-                   for j, s in enumerate(siklar)]
+        icerik += [Paragraph(f'<font name="DVB">{"ABCDE"[j]})</font> {escape(s)}', st_sik) for j, s in enumerate(siklar)]
+        dogru = f'{cevap}) {siklar["ABCDE".index(cevap)]}' if cevap in "ABCDE" else cevap
     else:
-        metin = "Şıklar toplanmadı."
-        if cevap != "?":
-            metin += f' <font name="DVB">Hatırlanan cevap:</font> {escape(cevap)}'
-        icerik.append(Paragraph(metin, st_sik))
+        icerik.append(Paragraph("Şıklar toplanmadı.", st_sik))
+        dogru = cevap if cevap != "?" else "belirlenemedi"
+    icerik += [Spacer(1, 1.4 * mm), Paragraph(f'<font name="DVB" color="{renk.hexval()}">Tahmini cevap:</font> '
+                                              f'<font color="{renk.hexval()}">{escape(dogru)}</font>', st_sik)]
     satirlar = [[icerik]]
     if notu:
-        not_t = Table([[Paragraph(f'<font name="DVB" color="{koyu.hexval()}">Not</font>  {escape(notu)}', st_not)]],
-                      colWidths=[SUTUN - 14])
-        not_t.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, -1), acik), ("LEFTPADDING", (0, 0), (-1, -1), 5),
+        not_t = Table([[Paragraph(f'<font name="DVB">Not</font>  {escape(notu)}', st_not)]], colWidths=[SUTUN - 14])
+        not_t.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, -1), ZEMIN), ("LEFTPADDING", (0, 0), (-1, -1), 5),
                                    ("RIGHTPADDING", (0, 0), (-1, -1), 5), ("TOPPADDING", (0, 0), (-1, -1), 3),
                                    ("BOTTOMPADDING", (0, 0), (-1, -1), 3), ("ROUNDEDCORNERS", [2, 2, 2, 2])]))
         satirlar.append([not_t])
     t = Table(satirlar, colWidths=[SUTUN])
-    t.setStyle(TableStyle([("LINEBEFORE", (0, 0), (0, -1), 2, koyu), ("LEFTPADDING", (0, 0), (-1, -1), 7),
+    t.setStyle(TableStyle([("LINEBEFORE", (0, 0), (0, -1), 2, renk), ("LEFTPADDING", (0, 0), (-1, -1), 7),
                            ("RIGHTPADDING", (0, 0), (-1, -1), 4), ("TOPPADDING", (0, 0), (-1, -1), 2),
                            ("BOTTOMPADDING", (0, 0), (-1, -1), 2)]))
     return KeepTogether([t, Spacer(1, 3.2 * mm)])
@@ -127,7 +138,7 @@ def soru_karti(ders, no, kok, siklar, cevap, notu, kesin, konu=None):
 
 def eksik_satiri(nolar):
     aralik = f"{nolar[0]}–{nolar[-1]}" if len(nolar) > 1 else str(nolar[0])
-    t = Table([[p(f"{aralik}  ·  toplanmadı", st_eksik)]], colWidths=[SUTUN])
+    t = Table([[Paragraph(f"{aralik}  ·  toplanmadı  " + rozetler(["kismi"]), st_eksik)]], colWidths=[SUTUN])
     t.setStyle(TableStyle([("BOX", (0, 0), (-1, -1), 0.5, CIZGI, None, (2, 2)), ("LEFTPADDING", (0, 0), (-1, -1), 7),
                            ("TOPPADDING", (0, 0), (-1, -1), 3), ("BOTTOMPADDING", (0, 0), (-1, -1), 3)]))
     return [t, Spacer(1, 3.2 * mm)]
@@ -147,28 +158,29 @@ def yerlestir():
 
 
 def anahtar_tablosu(ad, kayitlar):
-    koyu, acik = RENK[ad]
     hucre = []
-    for no, q, _ in kayitlar:
+    for no, q, kesin in kayitlar:
         if q is None:
-            cv = "—"
-        elif q[2]:
-            cv = q[3] + ("*" if URETILDI in q[4] else "")
-        else:
-            cv = "kısmi"
-        hucre.append((str(no), cv))
+            hucre.append((str(no), "—", DURUM["kismi"][0]))
+            continue
+        _, _, siklar, cevap, notu = q
+        cv = cevap if siklar else ("kısmi" if cevap == "?" else "metin")
+        hucre.append((str(no), cv, ana_renk(durumlar(siklar, notu, kesin))))
     sutun = 10
-    satirlar = []
+    satirlar, renkler = [], []
     for i in range(0, len(hucre), sutun):
-        parca = hucre[i:i + sutun] + [("", "")] * (sutun - len(hucre[i:i + sutun]))
-        satirlar += [[a for a, _ in parca], [b for _, b in parca]]
+        parca = hucre[i:i + sutun] + [("", "", MUREKKEP)] * (sutun - len(hucre[i:i + sutun]))
+        satirlar += [[a for a, _, _ in parca], [b for _, b, _ in parca]]
+        renkler.append([c for _, _, c in parca])
     gen = (SAYFA_G - 2 * KENAR) / sutun
     t = Table(satirlar, colWidths=[gen] * sutun, rowHeights=[5.2 * mm, 6.2 * mm] * (len(satirlar) // 2))
     stil = [("FONTNAME", (0, 0), (-1, -1), "DV"), ("FONTSIZE", (0, 0), (-1, -1), 7.5), ("ALIGN", (0, 0), (-1, -1), "CENTER"),
             ("VALIGN", (0, 0), (-1, -1), "MIDDLE"), ("GRID", (0, 0), (-1, -1), 0.4, CIZGI)]
     for r in range(0, len(satirlar), 2):
-        stil += [("BACKGROUND", (0, r), (-1, r), acik), ("TEXTCOLOR", (0, r), (-1, r), koyu),
+        stil += [("BACKGROUND", (0, r), (-1, r), ZEMIN), ("TEXTCOLOR", (0, r), (-1, r), GRI),
                  ("FONTNAME", (0, r + 1), (-1, r + 1), "DVB"), ("FONTSIZE", (0, r + 1), (-1, r + 1), 8.5)]
+        for c, renk in enumerate(renkler[r // 2]):
+            stil.append(("TEXTCOLOR", (c, r + 1), (c, r + 1), renk))
     t.setStyle(TableStyle(stil))
     return t
 
@@ -182,10 +194,6 @@ def main():
     def ilk_sayfa(c, d):
         c.saveState()
         c.setFillColor(MUREKKEP); c.rect(0, SAYFA_Y - 52 * mm, SAYFA_G, 52 * mm, stroke=0, fill=1)
-        x = KENAR
-        for ad, _, _ in DERSLER:  # ders renk şeridi
-            w = (SAYFA_G - 2 * KENAR) / len(DERSLER)
-            c.setFillColor(RENK[ad][0]); c.rect(x, SAYFA_Y - 52 * mm, w, 1.6 * mm, stroke=0, fill=1); x += w
         c.setFillColor(SOLUK); c.setFont("DVB", 7.5)
         c.drawString(KENAR, SAYFA_Y - 13 * mm, "MeDSor  ·  DÖNEM 3  ·  KURUL 1  ·  ÖĞRENCİ DERLEMESİ")
         c.setFillColor(colors.white); c.setFont("DVB", 20)
@@ -197,7 +205,7 @@ def main():
         c.drawString(KENAR, SAYFA_Y - 45 * mm, "Sınav sırası:  Genetik 1–12 · Enfeksiyon 13–34 · Patoloji 35–68 · Halk Sağlığı 69–78 · "
                                                "Üroloji 79–90 · Kadın Doğum 91–96 · Farmakoloji 97–100")
         # sayılar
-        kutular = [(f"{toplanan}", "toplanan / 100"), (f"{100 - toplanan}", "toplanmadı"), (f"{kismi}", "kısmi / üretilmiş")]
+        kutular = [(f"{toplanan}", "toplanan / 100"), (f"{100 - toplanan}", "toplanmadı"), (f"{kismi}", "şıkları üretilen")]
         kx = SAYFA_G - KENAR - 3 * 21 * mm
         for deger, ad in kutular:
             c.setFillColor(colors.white); c.setFont("DVB", 19); c.drawCentredString(kx + 10.5 * mm, SAYFA_Y - 30 * mm, deger)
@@ -206,16 +214,19 @@ def main():
         # işaret açıklaması
         y = SAYFA_Y - 60 * mm
         c.setFillColor(ZEMIN); c.roundRect(KENAR, y - 14.5 * mm, SAYFA_G - 2 * KENAR, 16.5 * mm, 2 * mm, stroke=0, fill=1)
-        aciklama = [("tahmini", "Grupta numarası yazılmadı; dersin boş numarasına kondu."),
-                    ("kismi", "Yalnız konu ya da doğru cevap hatırlanıyor, şıklar yok."),
-                    ("uretildi", "Eksik şıklar ders notundan, hocanın soru üslubuyla üretildi."),
-                    ("tartisma", "Cevap öğrenciler arasında kesinleşmedi; nota bakın.")]
-        yy = y - 1.5 * mm
-        for tur, metin in aciklama:
-            renk, ad = ETIKET[tur]
-            c.setFillColor(renk); c.setFont("DVB", 6.5); c.drawString(KENAR + 4 * mm, yy - 1 * mm, f"[{ad}]")
-            c.setFillColor(GRI); c.setFont("DV", 7); c.drawString(KENAR + 30 * mm, yy - 1 * mm, metin)
-            yy -= 3.6 * mm
+        aciklama = [("emin", "Cevap ders notuyla uyumlu, tartışma yok."),
+                    ("tartisma", "Cevap öğrenciler arasında kesinleşmedi; nota bakın."),
+                    ("eksik", "Sorunun bazı şıkları hatırlanmadı."),
+                    ("eklendi", "Soru derleme PDF'inden sonra gruptan eklendi."),
+                    ("uretildi", "Eksik şıklar ders notundan üretildi."),
+                    ("tahmini", "Numara yazılmadı, boş numaraya kondu."),
+                    ("kismi", "Soru hatırlanmadı.")]
+        for i, (tur, metin) in enumerate(aciklama):
+            renk, ad = DURUM[tur]
+            xx = KENAR + 4 * mm + (i // 4) * (SAYFA_G - 2 * KENAR) / 2
+            yy = y - 2.5 * mm - (i % 4) * 3.4 * mm
+            c.setFillColor(renk); c.setFont("DVB", 6.3); c.drawString(xx, yy, f"[{ad}]")
+            c.setFillColor(GRI); c.setFont("DV", 6.6); c.drawString(xx + 30 * mm, yy, metin)
         alt_bilgi(c, d)
         c.restoreState()
 
@@ -261,11 +272,11 @@ def main():
         hikaye.append(Spacer(1, 2 * mm))
 
     hikaye += [NextPageTemplate("tek"), PageBreak(), p("Cevap anahtarı", st_h), Spacer(1, 1.5 * mm),
-               p("“*”: şıklar ders notundan üretildi. “kısmi”: şıklar toplanmadı. “—”: soru toplanmadı. "
-                 "Numaraları tahmini olan soruların yeri ders içinde değişebilir.", st_kucuk), Spacer(1, 5 * mm)]
+               p("Cevap rengi durumu gösterir: yeşil doğrulandı, kırmızı tartışmalı / şık eksik, mavi sonradan eklendi / "
+                 "şıklar üretildi, gri toplanmadı. “metin”: şık yok, cevap soru kartında. Numaraları tahmini olan "
+                 "soruların yeri ders içinde değişebilir.", st_kucuk), Spacer(1, 5 * mm)]
     for ad, bas, son in DERSLER:
-        koyu, _ = RENK[ad]
-        hikaye += [KeepTogether([Paragraph(f'<font color="{koyu.hexval()}">■</font>  <font name="DVB">{ad}</font>'
+        hikaye += [KeepTogether([Paragraph(f'<font name="DVB">{ad}</font>'
                                            f'  <font color="{GRI.hexval()}" size="7.5">{bas}–{son}</font>',
                                            st("ah", fontSize=9.5, leading=13)),
                                  Spacer(1, 1.5 * mm), anahtar_tablosu(ad, yer[ad]), Spacer(1, 5 * mm)])]

@@ -1,14 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 293,
-  "baslik": "Kurul 1 2026-2027 çıkmış sorular: abortus sorusu düzeltildi",
+  "onem": 294,
+  "baslik": "Kurul 1 2026-2027 çıkmış sorular: tahmini cevaplar",
   "maddeler": [
-    "Spontan düşük sorusunda radyasyon şıkkı asıl sınavdaki gibi \"2 rad\" olarak düzeltildi"
+    "Her sorunun altında tahmini cevap yazıyor",
+    "Renkler artık yalnız durumu gösteriyor: doğrulandı, tartışmalı, şık eksik, sonradan eklendi, şıklar üretildi, yeri tahmini, hatırlanmadı"
   ],
   "eklenen": [],
-  "degisen": [],
-  "duzeltilen": [
-    "/api/test/kurul1/2627 abortus sorusu A şıkkı"
+  "degisen": [
+    "/api/test/kurul1/2627 PDF görünümü"
   ],
+  "duzeltilen": [],
   "silinen": []
 }
