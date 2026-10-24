@@ -1,0 +1,1036 @@
+{
+ "surum": 1,
+ "metinHash": "6f84e99a6e13071edb48d8ff761241b339d13b78",
+ "p": {
+  "1": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Trombotik tıkanma",
+      "Embolik tıkanma",
+      "Damar yırtılması"
+     ],
+     "baslik": "Serebrovasküler hastalık mekanizmaları",
+     "s": 2,
+     "k": [
+      0,
+      120
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.83
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2608,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "2": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "Total perfüzyon kaybı",
+      "Ağır hipoksemi (hipovolemik şok)",
+      "Derin hipoglisemi"
+     ],
+     "sonuc": "Global iskemik hasar (bütün beyin)",
+     "s": 3,
+     "k": [
+      25,
+      121
+     ],
+     "tip": "grup",
+     "konum": [
+      0.03,
+      0.83
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.351,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2012,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "3": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "Beden ağırlığının yüzde ikisi",
+      "Kalp debisinin yüzde on beşi",
+      "Oksijen tüketiminin yüzde yirmisi"
+     ],
+     "sonuc": "Sürekli glukoz ve oksijen bağımlılığı",
+     "s": 4,
+     "k": [
+      0,
+      154
+     ],
+     "tip": "grup",
+     "konum": [
+      0.03,
+      0.78
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.351,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1512,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "4": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Düşük kısmi oksijen basıncı: yüksek rakım",
+      "Taşıma bozukluğu: ağır anemi, karbon monoksit",
+      "Oksijen kullanım inhibisyonu: siyanür"
+     ],
+     "baslik": "Fonksiyonel hipoksi nedenleri",
+     "s": 5,
+     "k": [
+      20,
+      198
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.87
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3008,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "6": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Hipokampus piramidal hücreleri",
+      "Neokorteks piramidal hücreleri",
+      "Serebellum Purkinje hücreleri"
+     ],
+     "baslik": "Hipoksiye en duyarlı nöronlar",
+     "s": 7,
+     "k": [
+      38,
+      149
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.63
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0608,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "7": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "İrreversibl yaygın kortikal ve beyin kökü hasarı",
+      "Mekanik solunumla bakımın sürdürülmesi",
+      "Beyinde yavaş otoliz: Respiratör beyin"
+     ],
+     "s": 8,
+     "k": [
+      26,
+      144
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.87
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.466,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3562,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "8": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "algoritma",
+     "sablon_ad": "Yaklaşım basamakları",
+     "duzen": "adimlar",
+     "ogeler": [
+      "Erken değişiklikler",
+      "Subakut değişiklikler",
+      "Onarım"
+     ],
+     "s": 9,
+     "k": [
+      56,
+      164
+     ],
+     "tip": "adimlar",
+     "konum": [
+      0.38,
+      0.63
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.001,
+     "kutu_h": 0.345,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "9": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Mikrovakuolizasyon",
+      "Sitoplazmik eozinofili",
+      "Nükleer piknoz ve karyoreksis",
+      "Kırmızı nöronlar"
+     ],
+     "s": 10,
+     "k": [
+      50,
+      207
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.66
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.6,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.2797,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "11": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "On iki – yirmi dört saat",
+       "Kırmızı nöronlar ve nötrofil infiltrasyonu"
+      ],
+      [
+       "Yirmi dört saat – iki gün",
+       "Doku nekrozu, makrofajlar, vasküler proliferasyon"
+      ],
+      [
+       "İki hafta sonra (onarım)",
+       "Astrositik gliyozis ve psödolaminar nekroz"
+      ]
+     ],
+     "s": 12,
+     "k": [
+      23,
+      152
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.7
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.573,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.293,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "12": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Hipotansif ataklar ve en uzak perfüzyon bölgesi",
+      "Kama şeklinde sınır bölgesi (watershed) infarktüsü"
+     ],
+     "s": 13,
+     "k": [
+      45,
+      164
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.78
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.378,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.1779,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "14": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Kollateral akım",
+       "Willis halkası, leptomeningial anastomoz",
+       "Çok az ya da hiç yok"
+      ],
+      [
+       "Tıkanma sonucu",
+       "Hasar sınırlandırılabilir",
+       "Doğrudan infarktüs"
+      ]
+     ],
+     "kutuplar": [
+      "Kortikal alanlar",
+      "Derin penetran alanlar"
+     ],
+     "s": 15,
+     "k": [
+      14,
+      162
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.59
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.39,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0002,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "15": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "Kalp disfonksiyonu",
+      "Kalp kapak hastalığı",
+      "Atriyal fibrilasyon"
+     ],
+     "sonuc": "Kardiyak mural trombüs (en sık emboli kaynağı)",
+     "s": 16,
+     "k": [
+      29,
+      122
+     ],
+     "tip": "grup",
+     "konum": [
+      0.03,
+      0.75
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.351,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1212,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "16": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Paradoks emboli (kardiyak defekt)",
+      "Derin bacak venlerindeki tromboemboliler",
+      "Yağ embolisi (kemik travması)"
+     ],
+     "baslik": "Diğer emboli kaynakları",
+     "s": 17,
+     "k": [
+      12,
+      125
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.59
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0208,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "18": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Karotis bifurkasyonu",
+      "Orta serebral arterin başlangıcı",
+      "Baziler arterin her iki ucu"
+     ],
+     "baslik": "Aterotrombotik tıkanmanın en sık yerleri",
+     "s": 19,
+     "k": [
+      26,
+      127
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.7
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1308,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "20": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Oluşum",
+       "Akut vasküler tıkanıklık",
+       "İskemik dokunun reperfüzyonu"
+      ],
+      [
+       "Trombolitik tedavi",
+       "Çok iyi yanıt verir",
+       "Kesin kontrendike"
+      ]
+     ],
+     "kutuplar": [
+      "Soluk infarktüs",
+      "Hemorajik infarktüs"
+     ],
+     "s": 21,
+     "k": [
+      13,
+      127
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.65
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.39,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0602,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "21": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "İlk altı saat",
+       "Değişiklik görülmez"
+      ],
+      [
+       "Kırk sekiz saat",
+       "Solgun, yumuşak ve şişkin doku"
+      ],
+      [
+       "İki ila on gün",
+       "Jelatinöz kıvam, sınır belirginleşir"
+      ],
+      [
+       "On gün ile üç hafta",
+       "Sıvılaşma ve sıvı dolu boşluk"
+      ]
+     ],
+     "s": 22,
+     "k": [
+      7,
+      109
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.91
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.489,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.4188,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "22": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "İlk on iki saat: kırmızı nöronlar ve ödem",
+      "Kırk sekiz saat: nötrofil ve makrofaj göçü",
+      "Kenar astrositlerin büyümesi ve sitoplazmik ağ"
+     ],
+     "s": 23,
+     "k": [
+      13,
+      135
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.9
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.466,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3862,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "25": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "lezyon_bulgu",
+     "sablon_ad": "Lezyon yeri → bulgu",
+     "duzen": "tablo",
+     "basliklar": [
+      "Lezyon düzeyi",
+      "Bulgu"
+     ],
+     "satirlar": [
+      [
+       "Beyin içi kanama",
+       "Hipertansiyon, malformasyon, tümör"
+      ],
+      [
+       "Subaraknoid kanama",
+       "Anevrizma rüptürü"
+      ],
+      [
+       "Subdural ya da epidural",
+       "Travma ile ilişkili"
+      ]
+     ],
+     "s": 26,
+     "k": [
+      0,
+      55
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.83
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.413,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2628,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "27": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Bazal ganglionlar (yüzde altmışı putamen)",
+      "Talamusta kanama",
+      "Ponsta ve serebellumda kanama"
+     ],
+     "baslik": "Hipertansif parenkim içi kanama yerleri",
+     "s": 28,
+     "k": [
+      21,
+      126
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.89
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3208,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "30": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Dağılım",
+       "Bazal ganglion, talamus, ponsta",
+       "Serebral korteks loblarında"
+      ],
+      [
+       "Sonuç",
+       "Derin parenkim içi kanama",
+       "Lober kanamalar"
+      ]
+     ],
+     "kutuplar": [
+      "Hipertansif kanama",
+      "Serebral amiloid anjiyopati"
+     ],
+     "s": 31,
+     "k": [
+      27,
+      163
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.84
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.39,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2502,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "32": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Sakküler berry anevrizmanın yırtılması",
+      "Kan subaraknoid boşluğa akar",
+      "Şimdiye kadar yaşadığım en kötü baş ağrısı",
+      "Bilinç hızla kaybolur"
+     ],
+     "s": 33,
+     "k": [
+      27,
+      158
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.85
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.6,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.4697,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "35": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Meningeal fibrozis ve skar dokusu",
+      "Beyin omurilik sıvısı akımını engeller",
+      "Hidrosefali"
+     ],
+     "s": 36,
+     "k": [
+      17,
+      111
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.76
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.466,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.2462,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "37": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Sık yerleşim",
+       "Anterior dolaşım",
+       "Baziler arter"
+      ],
+      [
+       "Biçim",
+       "İnce duvarlı kese",
+       "Fuziform şekilli"
+      ]
+     ],
+     "kutuplar": [
+      "Sakküler anevrizmalar",
+      "Aterosklerotik anevrizmalar"
+     ],
+     "s": 38,
+     "k": [
+      24,
+      189
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.51,
+      0.07
+     ],
+     "genislik": 0.42,
+     "doluluk": 0.0,
+     "kutu_h": 0.444,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "38": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Arteriyovenöz malformasyonlar",
+      "Kavernöz malformasyonlar",
+      "Kapiller telenjiektaziler",
+      "Venöz anjiyomlar"
+     ],
+     "baslik": "Beynin vasküler malformasyonları",
+     "s": 39,
+     "k": [
+      8,
+      104
+     ],
+     "tip": "liste",
+     "konum": [
+      0.58,
+      0.41
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.538,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "42": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Arteriyovenöz şant",
+       "Doğrudan arter-ven geçişi",
+       "Şant yoktur, düşük akım"
+      ],
+      [
+       "Parankim",
+       "Gliotik doku ile ayrılmış",
+       "Aralarında sinir dokusu yoktur"
+      ],
+      [
+       "Yerleşim",
+       "Subaraknoid ve beyin parenkimi",
+       "Serebellum, ponsta, subkortikal"
+      ]
+     ],
+     "kutuplar": [
+      "Arteriyovenöz malformasyon",
+      "Kavernöz malformasyon"
+     ],
+     "s": 43,
+     "k": [
+      7,
+      93
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.68
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.52,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2196,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "44": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Kronik hipertansiyon",
+      "Hiyalinize arteriyoler skleroz",
+      "Charcot Bouchard mikroanevrizmaları"
+     ],
+     "s": 45,
+     "k": [
+      21,
+      101
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.89
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.466,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3762,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "45": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Küçük çaplı penetran damarların yırtılması",
+      "Küçük kanamaların zamanla rezorbe olması",
+      "Slit hemoraji (kahverengi çevreli çatlak kavite)"
+     ],
+     "s": 46,
+     "k": [
+      35,
+      217
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.89
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.466,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3762,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "48": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Küçük ve orta çaplı parenkimal ve subaraknoid damarlar",
+      "Kronik inflamasyon ve multinükleer dev hücre oluşumu",
+      "Damar duvarı yıkımı ve yaygın ensefalopati"
+     ],
+     "baslik": "Primer santral sinir sistemi anjiiti",
+     "s": 49,
+     "k": [
+      15,
+      190
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.79
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2208,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  }
+ },
+ "rapor": {
+  "aday": 28,
+  "gecti": 28,
+  "ret": {}
+ }
+}
