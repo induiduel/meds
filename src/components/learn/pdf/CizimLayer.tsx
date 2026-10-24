@@ -18,6 +18,14 @@ export interface CizimKomut {
   dugum?: { id: string; metin: string }[];
   kenar?: { a: string; b: string; tur: string }[];
   etiket?: string;
+  /** yerleşim (cizim_uret.yerlesim, içeriğin önü kapanmasın): ok kavisinin denetim noktası, asıl hedef, etiketin ve
+   *  şema panelinin boş yerdeki konumu (sayfa oranı) */
+  c?: number[];
+  hedef?: number[];
+  etiket_konum?: number[];
+  etiket_genislik?: number;
+  konum?: number[];
+  genislik?: number;
 }
 
 const AZ_HAREKET = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
@@ -41,11 +49,12 @@ function egri(nk: number[][], kapali = false): string {
 
 const ilerleme = (z: CizimKomut, c: number) => (c < z.k[0] ? -1 : AZ_HAREKET ? 1 : Math.min(1, (c - z.k[0]) / Math.max(1, z.k[1] - z.k[0])));
 
-function Etiket({ at, metin }: { at: number[]; metin?: string }) {
-  if (!metin) return null;
+/** Etiket yalnız betiğin boş bulduğu yerde (etiket_konum); yoksa gösterilmez — yazının üstüne binmesin */
+function Etiket({ z }: { z: CizimKomut }) {
+  if (!z.etiket || !z.etiket_konum) return null;
   return (
-    <foreignObject x={Math.min(at[0] * V, V - 260)} y={Math.max(0, at[1] * V - 44)} width={260} height={40}>
-      <div className="pdv-cz-etiket">{metin}</div>
+    <foreignObject x={z.etiket_konum[0] * V} y={z.etiket_konum[1] * V} width={(z.etiket_genislik || 0.3) * V} height={34}>
+      <div className="pdv-cz-etiket">{z.etiket}</div>
     </foreignObject>
   );
 }
@@ -56,19 +65,22 @@ function Komut({ z, t }: { z: CizimKomut; t: number }) {
     return (
       <g className="pdv-cz-kontur">
         <path d={egri(z.nokta, true)} {...ciz} vectorEffect="non-scaling-stroke" />
-        {t >= 1 && <Etiket at={z.nokta[0]} metin={z.etiket} />}
+        {t >= 1 && <Etiket z={z} />}
       </g>
     );
   }
   if (z.tur === 'akis' && z.a && z.b) {
     const [a, b] = [z.a, z.b];
-    const m = [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t];
+    const c = z.c || [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2];
+    const q = (u: number) => [(1 - u) ** 2 * a[0] + 2 * (1 - u) * u * c[0] + u * u * b[0], (1 - u) ** 2 * a[1] + 2 * (1 - u) * u * c[1] + u * u * b[1]];
+    const m = q(t);
     const ui = z.iliski === 'inhibe';
     return (
       <g className={`pdv-cz-akis is-${z.iliski || 'aktive'}`}>
-        <path d={`M${P(a)} L${P(b)}`} {...ciz} markerEnd={t >= 1 ? `url(#pdv-cz-${ui ? 'dur' : 'ok'})` : undefined} vectorEffect="non-scaling-stroke" />
-        {t > 0 && t < 1 && <circle cx={m[0] * V} cy={m[1] * V} r={7} className="pdv-cz-parca" />}
-        {t >= 1 && <Etiket at={[(a[0] + b[0]) / 2, (a[1] + b[1]) / 2]} metin={z.etiket} />}
+        <path d={`M${P(a)} Q${P(c)} ${P(b)}`} {...ciz} markerEnd={t >= 1 ? `url(#pdv-cz-${ui ? 'dur' : 'ok'})` : undefined} vectorEffect="non-scaling-stroke" />
+        {t > 0 && t < 1 && <circle cx={m[0] * V} cy={m[1] * V} r={4} className="pdv-cz-parca" />}
+        {t >= 1 && z.hedef && <circle cx={z.hedef[0] * V} cy={z.hedef[1] * V} r={14} className="pdv-cz-hedef" vectorEffect="non-scaling-stroke" />}
+        {t >= 1 && <Etiket z={z} />}
       </g>
     );
   }
@@ -81,8 +93,8 @@ function Komut({ z, t }: { z: CizimKomut; t: number }) {
         {z.nokta.slice(0, ulasilan).map((p, i) => (
           <path key={i} className={`is-${fazOf(i)}`} d={`M${P(p)} L${P(z.nokta![i + 1])}`} vectorEffect="non-scaling-stroke" />
         ))}
-        <circle cx={z.nokta[ulasilan][0] * V} cy={z.nokta[ulasilan][1] * V} r={8} className="pdv-cz-parca" />
-        {t >= 1 && <Etiket at={z.nokta[0]} metin={z.etiket} />}
+        <circle cx={z.nokta[ulasilan][0] * V} cy={z.nokta[ulasilan][1] * V} r={4} className="pdv-cz-parca" />
+        {t >= 1 && <Etiket z={z} />}
       </g>
     );
   }
@@ -95,7 +107,8 @@ function Sema({ z, t }: { z: CizimKomut; t: number }) {
   const gorunen = Math.max(1, Math.ceil(t * dg.length));
   const sira = new Map(dg.map((d, i) => [d.id, i]));
   return (
-    <div className="pdv-cz-sema" role="img" aria-label={dg.map((d) => d.metin).join(', ')}>
+    <div className="pdv-cz-sema" role="img" aria-label={dg.map((d) => d.metin).join(', ')}
+         style={z.konum ? { left: `${z.konum[0] * 100}%`, top: `${z.konum[1] * 100}%`, right: 'auto', bottom: 'auto', maxWidth: `${(z.genislik || 0.6) * 100}%` } : undefined}>
       {dg.slice(0, gorunen).map((d, i) => {
         const gelen = (z.kenar || []).find((e) => sira.get(e.b) === i && (sira.get(e.a) ?? 99) < i);
         return (
@@ -112,16 +125,17 @@ function Sema({ z, t }: { z: CizimKomut; t: number }) {
 export const CizimLayer = memo(function CizimLayer({ z, useChar }: { z: CizimKomut[]; useChar: () => number }) {
   const c = useChar();
   const cizimler = z.filter((x) => x.tur !== 'sema');
-  const sema = z.find((x) => x.tur === 'sema');
+  // şema yalnız betiğin boş bulduğu yerde (konum); boş yer yoksa (konum null) sayfanın önü kapanmasın diye gösterilmez
+  const sema = z.find((x) => x.tur === 'sema' && (x.konum || x.konum === undefined));
   return (
     <>
       {cizimler.length > 0 && (
         <svg className="pdv-cz" viewBox={`0 0 ${V} ${V}`} preserveAspectRatio="none" aria-hidden>
           <defs>
-            <marker id="pdv-cz-ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <marker id="pdv-cz-ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse">
               <path d="M0 0 L10 5 L0 10 z" className="pdv-cz-uc" />
             </marker>
-            <marker id="pdv-cz-dur" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+            <marker id="pdv-cz-dur" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto">
               <path d="M5 0 L5 10" className="pdv-cz-uc-dur" />
             </marker>
           </defs>

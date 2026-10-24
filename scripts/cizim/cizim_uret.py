@@ -101,6 +101,73 @@ def adaylar(sayfa) -> tuple[list[dict], list[dict]]:
     return oklar_, egriler
 
 
+def _bez(a, c, b, t):
+    return [(1 - t) ** 2 * a[0] + 2 * (1 - t) * t * c[0] + t * t * b[0], (1 - t) ** 2 * a[1] + 2 * (1 - t) * t * c[1] + t * t * b[1]]
+
+
+def _kesisir(a, b, pay=0.008) -> bool:
+    return not (a[2] + pay <= b[0] or b[2] + pay <= a[0] or a[3] + pay <= b[1] or b[3] + pay <= a[1])
+
+
+def yerlesim(k: dict, r, dolu: list | None = None) -> dict:
+    """İçeriğin önünü kapatmayan yerleşim (kullanıcı geri bildirimi 2026-10-24): akış oku düz değil, kavislerden en az
+    yazı/resim üstünden geçeni; ok hedefin hemen önünde biter, hedef ince halkayla belirtilir; etiket boş bir yere
+    (yoksa hiç); şema paneli sayfanın en boş köşesine. r = SayfaRaster (yoksa yerleşim yapılmaz)."""
+    if r is None:
+        return k
+    if k["tur"] == "akis":
+        a, b = k["a"], k["b"]
+        dx, dy = b[0] - a[0], b[1] - a[1]
+        L = (dx * dx + dy * dy) ** 0.5 or 1
+        nx, ny = -dy / L, dx / L
+        m = [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2]
+        en = None
+        for d in (0, 0.08, -0.08, 0.16, -0.16, 0.26, -0.26, 0.38, -0.38):
+            c = [min(.99, max(.01, m[0] + nx * d * L)), min(.99, max(.01, m[1] + ny * d * L))]
+            orta = [_bez(a, c, b, t / 40) for t in range(5, 36)]          # uçlar (kaynak/hedef yazısı) sayılmaz
+            maliyet = r.yol_doluluk(orta) + abs(d) * 0.15                   # eşitlikte daha az kavis
+            if en is None or maliyet < en[0]:
+                en = (maliyet, c)
+        c = en[1]
+        k = {**k, "c": [round(c[0], 4), round(c[1], 4)], "hedef": b,
+             "a": [round(v, 4) for v in _bez(a, c, b, 0.05)], "b": [round(v, 4) for v in _bez(a, c, b, 0.93)]}
+    if k.get("etiket"):
+        g, h = min(0.3, 0.012 * len(k["etiket"]) + 0.04), 0.034
+        o = k.get("nokta", [k.get("c") or k.get("a") or [0.5, 0.5]])[0] if k["tur"] != "sema" else [0.5, 0.5]
+        aday = [(o[0] + ox, o[1] + oy) for ox in (-0.02, 0.04, -0.2, 0.1, -0.3) for oy in (-0.06, 0.03, -0.12, 0.09)]
+        iyi = [(r.kutu_doluluk(x - 0.012, y - 0.012, x + g + 0.012, y + h + 0.012), x, y) for x, y in aday
+               if 0 <= x and x + g <= 1 and 0 <= y and y + h <= 1]
+        iyi = [z for z in iyi if z[0] < 0.02 and not any(_kesisir((z[1], z[2], z[1] + g, z[2] + h), o) for o in (dolu or []))]
+        if iyi:
+            _, x, y = min(iyi)
+            k = {**k, "etiket_konum": [round(x, 4), round(y, 4)], "etiket_genislik": round(g, 3)}
+            if dolu is not None:
+                dolu.append((x, y, x + g, y + h))
+        else:
+            k = {**k}; k.pop("etiket", None)                               # boş yer yok: etiket gösterilmez
+    if k["tur"] == "sema":
+        n = len(k.get("dugum") or [])
+        en = None
+        for g, h in ((min(0.6, 0.12 * n + 0.08), 0.1), (min(0.45, 0.09 * n + 0.06), 0.13), (min(0.32, 0.07 * n + 0.05), 0.17)):
+            for xi in range(0, int((1 - g) * 50) + 1):           # bütün sayfa, %2 adım
+                for yi in range(0, int((1 - h) * 50) + 1):
+                    x, y = xi / 50, yi / 50
+                    if any(_kesisir((x, y, x + g, y + h), o) for o in (dolu or [])):
+                        continue
+                    dl = r.kutu_doluluk(x - 0.01, y - 0.01, x + g + 0.01, y + h + 0.01)
+                    if en is None or dl < en[0] - 1e-9:
+                        en = (dl, x, y, g)
+            if en and en[0] < 0.03:
+                break
+        if en and en[0] < 0.03:
+            k = {**k, "konum": [round(en[1], 4), round(en[2], 4)], "genislik": round(en[3], 3), "doluluk": round(en[0], 3)}
+            if dolu is not None:
+                dolu.append((en[1], en[2], en[1] + en[3], en[2] + 0.1))
+        else:
+            k = {**k, "konum": None, "doluluk": round(en[0], 3) if en else None}   # boş yer yok: sayfa üstünde gösterilmez
+    return k
+
+
 def claude(cwd: Path, istem: str, sure: int = 1800) -> str:
     b = json.loads((MEDS / "otomasyon" / "llm" / "butce.json").read_text())
     kom = ["claude", "-p", istem, "--permission-mode", "bypassPermissions", "--model", b["claude"].get("model", "claude-opus-5-5"),
@@ -190,6 +257,7 @@ def main() -> int:
     out: dict[str, dict[str, list]] = {}
     say = {"aday": 0, "gecti": 0, "ret": {}}
     sayfa_say: dict[int, int] = {}
+    sayfa_dolu: dict[int, list] = {}          # sayfada yerleşmiş etiket/şema kutuları (üst üste binmesin)
     for f in sorted(W.glob("parti*/cizim.json")):
         try:
             komutlar = json.loads(f.read_text()).get("komutlar") or []
@@ -223,7 +291,7 @@ def main() -> int:
             ka = kelime_araliklari(C[cid])
             komut = {x: k[x] for x in ("tur", "nokta", "a", "b", "iliski", "fazlar", "dugum", "kenar", "etiket") if x in k}
             komut.update(s=s, k=[ka[k["bas"]][0], ka[k["son"]][1]])
-            mevcut.append(komut)
+            mevcut.append(yerlesim(komut, raster.get(s), sayfa_dolu.setdefault(s, [])))
             sayfa_say[s] = sayfa_say.get(s, 0) + 1
             say["gecti"] += 1
     out = {p: {c: v for c, v in cs.items() if v} for p, cs in out.items()}

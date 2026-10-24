@@ -41,6 +41,24 @@ class SayfaRaster:
         arka = np.median(gri)
         murekkep = (np.abs(gri.astype(int) - int(arka)) > 40).astype(np.uint8)
         self.murekkep = cv2.dilate(murekkep, np.ones((31, 31), np.uint8)) > 0
+        # yerleşim için ince mürekkep haritası (yazı/resim pikselleri + 3 px pay): ok rotası, etiket ve şema paneli
+        # bunun üstünden en az geçecek şekilde seçilir (içeriğin önü kapanmasın)
+        self.ince = cv2.dilate(murekkep, np.ones((7, 7), np.uint8)) > 0
+        self.ii = cv2.integral(self.ince.astype(np.uint8))
+
+    def kutu_doluluk(self, x0, y0, x1, y1) -> float:
+        """[x0,y0,x1,y1] (0–1) kutusunun mürekkepli oranı (integral görüntü)."""
+        a, b = self._px(max(0, x0), max(0, y0))
+        c, d = self._px(min(1, x1), min(1, y1))
+        if c <= a or d <= b:
+            return 1.0
+        S = self.ii
+        dolu = S[d, c] - S[b, c] - S[d, a] + S[b, a]
+        return float(dolu) / ((c - a) * (d - b))
+
+    def yol_doluluk(self, nokta: list) -> float:
+        hit = sum(1 for x, y in nokta if self.ince[self._px(x, y)[1], self._px(x, y)[0]])
+        return hit / max(1, len(nokta))
 
     def _px(self, x, y):
         return min(self.w - 1, max(0, int(x * self.w))), min(self.h - 1, max(0, int(y * self.h)))

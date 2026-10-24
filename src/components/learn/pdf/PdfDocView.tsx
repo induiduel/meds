@@ -109,7 +109,7 @@ const Imlec = memo(function Imlec({ path, useChar }: { path: number[][]; useChar
         </svg>
       )}
       <span className="pdv-imlec-kap" style={{ left: `${x * 100}%`, top: `${y * 100}%` }}>
-        <svg key={`i${i}`} className="pdv-imlec" width="15" height="15" viewBox="0 0 24 24" aria-hidden>
+        <svg key={`i${i}`} className="pdv-imlec" width="11" height="11" viewBox="0 0 24 24" aria-hidden>
           <path d="M3 2l7.5 19 2.6-7.9L21 10.5z" />
         </svg>
       </span>

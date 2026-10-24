@@ -1,14 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 274,
-  "baslik": "Ders paketini dosyadan açın",
+  "onem": 275,
+  "baslik": "Sesli derste çizimler artık yazıların önünü kapatmıyor",
   "maddeler": [
-    "Çevrimdışı merkezinde '.medspak' ders paketini bu cihazda açıp sesli anlatımı ekran maddeleri ve vurgularla dinleyebilirsiniz; dosya sunucuya gönderilmez."
+    "Oklar boş alandan kavisle geçiyor ve hedefi ince bir halkayla gösteriyor; şema ve etiketler sayfanın boş yerine yerleşiyor, yazı ve resimlerin üstüne binmiyor.",
+    "Çizgiler inceldi, kırmızı işaretçi küçüldü."
   ],
-  "eklenen": [
-    "Çevrimdışı merkezinde '.medspak' ders paketini bu cihazda açıp sesli anlatımı ekran maddeleri ve vurgularla dinleyebilirsiniz; dosya sunucuya gönderilmez."
+  "eklenen": [],
+  "degisen": [
+    "Oklar boş alandan kavisle geçiyor ve hedefi ince bir halkayla gösteriyor; şema ve etiketler sayfanın boş yerine yerleşiyor, yazı ve resimlerin üstüne binmiyor.",
+    "Çizgiler inceldi, kırmızı işaretçi küçüldü."
   ],
-  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }
