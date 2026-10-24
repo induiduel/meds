@@ -149,8 +149,6 @@
 .cd-pdf-zoom { min-width: 38px; text-align: center; }
 .cd-pdf-bar .cd-ib { height: 30px; min-width: 30px; padding: 0; }
 .cd-pdf-bar .cd-ib > svg { width: 16px; height: 16px; }
-.cd-pdf-bar { flex-wrap: wrap; row-gap: 2px; }
-.cd-pdf-bar .cd-pdf-cizim { margin-left: auto; }
 .cd-pdf-govde { flex: 1; min-height: 0; display: flex; background: var(--color-canvas); }
 
 /* ---------- alt oynatıcı ---------- */
@@ -1019,7 +1017,6 @@
 .cd-cik-btn:focus-visible, .cd-cik-oge:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
 .cd-cik-gez { display: inline-flex; align-items: center; }
 .cd-cik-no { font-variant-numeric: tabular-nums; min-width: 34px; text-align: center; }
-.cd-cik-panel { position: absolute; z-index: 40; top: calc(100% + 6px); right: 0; width: min(420px, calc(100vw - 32px)); max-height: min(60vh, 460px); overflow: auto; overscroll-behavior: contain; padding: 6px; border-radius: 12px; border: 1px solid var(--color-line); background: var(--color-white); box-shadow: 0 10px 30px rgb(0 0 0 / .16); }
 .cd-cik-bas { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 4px 6px 8px; font-size: 11.5px; font-weight: 700; color: var(--color-ink-3); }
 .cd-cik-temizle { border: 0; background: none; color: var(--color-accent); font: inherit; cursor: pointer; }
 .cd-cik-oge { display: flex; align-items: flex-start; gap: 8px; width: 100%; padding: 8px; border: 0; border-radius: 8px; background: none; text-align: left; color: var(--color-ink); cursor: pointer; }
@@ -1034,7 +1031,6 @@
 .cd-cik-kutu { position: absolute; border-radius: 4px; background: rgb(239 68 68 / .14); box-shadow: 0 0 0 2px rgb(239 68 68 / .75); animation: cd-cik-nabiz 1.2s ease-out 2; }
 @keyframes cd-cik-nabiz { 0% { box-shadow: 0 0 0 2px rgb(239 68 68 / .75), 0 0 0 0 rgb(239 68 68 / .45); } 100% { box-shadow: 0 0 0 2px rgb(239 68 68 / .75), 0 0 0 12px rgb(239 68 68 / 0); } }
 @media (prefers-reduced-motion: reduce) { .cd-cik-kutu { animation: none; } }
-@media (max-width: 600px) { .cd-cik-panel { position: fixed; top: auto; left: 16px; right: 16px; bottom: calc(120px + env(safe-area-inset-bottom)); width: auto; } }
 
 /* Kurul 2+ sesli metin v2: ekran maddeleri, vurgu türleri, çıkmış rozeti, slayt adımı */
 .cd-v2 { list-style: none; margin: 6px 0 4px; padding: 8px 10px; border-left: 3px solid var(--color-accent-soft); border-radius: 0 8px 8px 0; background: var(--color-field); display: flex; flex-direction: column; gap: 4px; }
@@ -1055,3 +1051,15 @@
 .cd-v2-cik > svg { width: 11px; height: 11px; }
 .cd-v2-adim { background: var(--color-white); border: 1px solid var(--color-line); color: var(--color-accent); text-decoration: none; }
 .cd-v2-adim:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+
+.cd-cik-panel { width: 420px; }
+.cd-ciz-btn > svg { color: var(--color-ink-2); }
+.cd-ciz-btn.is-on > svg { color: var(--color-bad); }
+.cd-ciz-panel { width: 340px; display: flex; flex-direction: column; gap: 10px; padding: 10px; }
+.cd-ciz-panel .rx-tg { flex-wrap: wrap; }
+.cd-ciz-renk { display: flex; flex-wrap: wrap; gap: 8px; }
+.cd-ciz-renk > button { width: 28px; height: 28px; border-radius: 99px; border: 2px solid var(--color-white); box-shadow: 0 0 0 1px var(--color-line); cursor: pointer; }
+.cd-ciz-renk > button[aria-checked='true'] { box-shadow: 0 0 0 2px var(--color-accent); }
+.cd-ciz-renk > button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.cd-ciz-not { margin: 0; font-size: 11.5px; color: var(--color-ink-3); }
+@media (max-width: 600px) { .cd-pdf-bar .cd-cik-ad, .cd-pdf-bar .cd-pdf-zoom { display: none; } }

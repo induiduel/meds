@@ -33,8 +33,10 @@ import { toast } from '../ui/Toast';
 import { useYildizliMi, useYildizliSayisi, yildizToggle } from '../../services/yildizliParagrafStore';
 import { YildizliParagraflarModal } from '../study/YildizliParagraflarModal';
 import '../learn/pdf/pdfDoc.css';
-import { DrawingModeToolbarTrigger, SlideDrawingCanvas, getDrawingGlobalState, setDrawingGlobalState, undoLastDrawing, useCanUndoDrawing } from '../learn/SlideDrawingCanvas';
-import { Undo2 } from 'lucide-react';
+import { SlideDrawingCanvas, getDrawingGlobalState, penPalette, setDrawingGlobalState, undoLastDrawing, useCanUndoDrawing, useDrawingGlobalState } from '../learn/SlideDrawingCanvas';
+import { Popover, PopoverContent, PopoverTrigger, ToggleGroup, ToggleGroupItem } from '../ui/radix';
+import { useAppearance } from '../../utils/appearance';
+import { Eraser, MousePointer2, PenTool, Undo2 } from 'lucide-react';
 import type { CdCikmisKonum, CdV2Cumle } from './canliDersStore';
 
 /** iPhone/iPad'de tarayıcı sekmesinde adres çubuğu gizlenemez: gerçek tam ekran için PWA'yı öner. */
@@ -1509,7 +1511,7 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
         )}
         <span className="cd-grow" />
         {!!detay.cikmisKonum?.length && <CikmisKonumDugme liste={detay.cikmisKonum} secili={cikSec} onSec={cikmisSec} />}
-        <DrawingModeToolbarTrigger className="cd-pdf-cizim" />
+        <CizimDugme />
         <button type="button" className="cd-ib" onClick={undoLastDrawing} disabled={!geriAlinir} aria-label="Son çizimi geri al" title="Son çizimi geri al"><Undo2 /></button>
         <button type="button" className="cd-ib" onClick={() => setZoom((z) => Math.max(0.5, +(z - 0.25).toFixed(2)))} aria-label="Uzaklaştır"><Minus /></button>
         <span className="cd-pdf-zoom">{Math.round(zoom * 100)}%</span>
@@ -1559,22 +1561,35 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
 /** PDF çubuğunda "Çıkmış N": dersin çıkmış soruları; seçilen sorunun dayandığı yer PDF'te sayfa + bölge olarak vurgulanır */
 function CikmisKonumDugme({ liste, secili, onSec }: { liste: CdCikmisKonum[]; secili: CdCikmisKonum | null; onSec: (q: CdCikmisKonum | null) => void }) {
   const [acik, setAcik] = useState(false);
-  const kapRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    if (!acik) return;
-    const dis = (e: PointerEvent) => { if (!kapRef.current?.contains(e.target as Node)) setAcik(false); };
-    const esc = (e: KeyboardEvent) => { if (e.key === 'Escape') setAcik(false); };
-    document.addEventListener('pointerdown', dis);
-    document.addEventListener('keydown', esc);
-    return () => { document.removeEventListener('pointerdown', dis); document.removeEventListener('keydown', esc); };
-  }, [acik]);
   const i = secili ? liste.indexOf(secili) : -1;
   return (
-    <div className="cd-cik" ref={kapRef}>
-      <button type="button" className={`cd-cik-btn${secili ? ' is-on' : ''}`} aria-haspopup="listbox" aria-expanded={acik} onClick={() => setAcik((a) => !a)}
-        title="Bu dersin çıkmış soruları: dokun, sorunun dayandığı yer PDF'te işaretlensin">
-        <Star aria-hidden /> Çıkmış <b>{liste.length}</b>
-      </button>
+    <div className="cd-cik">
+      <Popover open={acik} onOpenChange={setAcik}>
+        <PopoverTrigger asChild>
+          <button type="button" className={`cd-cik-btn${secili ? ' is-on' : ''}`} title="Bu dersin çıkmış soruları: dokun, sorunun dayandığı yer PDF'te işaretlensin">
+            <Star aria-hidden /> <span className="cd-cik-ad">Çıkmış</span> <b>{liste.length}</b>
+          </button>
+        </PopoverTrigger>
+        <PopoverContent className="cd-cik-panel" aria-label="Çıkmış sorular">
+          <div className="cd-cik-bas">
+            <span>Çıkmış sorular · PDF'teki yeri</span>
+            {secili && <button type="button" className="cd-cik-temizle" onClick={() => { onSec(null); setAcik(false); }}>Vurguyu kaldır</button>}
+          </div>
+          <div role="listbox" aria-label="Çıkmış sorular">
+            {liste.map((q, k) => (
+              <button key={q.id} type="button" role="option" aria-selected={q === secili} className={`cd-cik-oge${q === secili ? ' is-on' : ''}`}
+                onClick={() => { onSec(q); setAcik(false); }}>
+                <span className="cd-cik-oge-no">{k + 1}</span>
+                <span className="cd-cik-oge-m">
+                  <span className="cd-cik-oge-kok">{q.kok}</span>
+                  {q.cevap && <span className="cd-cik-oge-cvp">Cevap: {q.cevap}</span>}
+                </span>
+                {q.yil && <span className="cd-cik-oge-yil">{q.yil}</span>}
+              </button>
+            ))}
+          </div>
+        </PopoverContent>
+      </Popover>
       {secili && (
         <span className="cd-cik-gez">
           <button type="button" className="cd-ib" aria-label="Önceki çıkmış soru" disabled={i <= 0} onClick={() => onSec(liste[i - 1])}><ChevronLeft /></button>
@@ -1582,26 +1597,39 @@ function CikmisKonumDugme({ liste, secili, onSec }: { liste: CdCikmisKonum[]; se
           <button type="button" className="cd-ib" aria-label="Sonraki çıkmış soru" disabled={i >= liste.length - 1} onClick={() => onSec(liste[i + 1])}><ChevronRight /></button>
         </span>
       )}
-      {acik && (
-        <div className="cd-cik-panel" role="listbox" aria-label="Çıkmış sorular">
-          <div className="cd-cik-bas">
-            <span>Çıkmış sorular · PDF'teki yeri</span>
-            {secili && <button type="button" className="cd-cik-temizle" onClick={() => { onSec(null); setAcik(false); }}>Vurguyu kaldır</button>}
-          </div>
-          {liste.map((q, k) => (
-            <button key={q.id} type="button" role="option" aria-selected={q === secili} className={`cd-cik-oge${q === secili ? ' is-on' : ''}`}
-              onClick={() => { onSec(q); setAcik(false); }}>
-              <span className="cd-cik-oge-no">{k + 1}</span>
-              <span className="cd-cik-oge-m">
-                <span className="cd-cik-oge-kok">{q.kok}</span>
-                {q.cevap && <span className="cd-cik-oge-cvp">Cevap: {q.cevap}</span>}
-              </span>
-              {q.yil && <span className="cd-cik-oge-yil">{q.yil}</span>}
-            </button>
+    </div>
+  );
+}
+
+/** PDF çubuğunda tek düğme: çizim aracı (kalem / fosforlu / silgi) ve renk açılır panelde; araç açıkken düğme vurgulu */
+function CizimDugme() {
+  const st = useDrawingGlobalState();
+  const appearance = useAppearance();
+  const acik = st.activeMode !== 'none';
+  return (
+    <Popover>
+      <PopoverTrigger asChild>
+        <button type="button" className={`cd-cik-btn cd-ciz-btn${acik ? ' is-on' : ''}`} aria-label="PDF'e yaz ve çiz" title="PDF'e yaz ve çiz">
+          <PenTool aria-hidden /> <span className="cd-cik-ad">{acik ? ({ pen: 'Kalem', highlighter: 'Fosforlu', eraser: 'Silgi' } as Record<string, string>)[st.activeMode] : 'Çiz'}</span>
+        </button>
+      </PopoverTrigger>
+      <PopoverContent className="cd-ciz-panel" aria-label="Çizim araçları">
+        <ToggleGroup type="single" value={st.activeMode} aria-label="Araç"
+          onValueChange={(v) => setDrawingGlobalState({ activeMode: (v || 'none') as typeof st.activeMode })}>
+          <ToggleGroupItem value="none" aria-label="Kapalı"><MousePointer2 aria-hidden /> Kapalı</ToggleGroupItem>
+          <ToggleGroupItem value="pen" aria-label="Kalem"><PenTool aria-hidden /> Kalem</ToggleGroupItem>
+          <ToggleGroupItem value="highlighter" aria-label="Fosforlu kalem"><Highlighter aria-hidden /> Fosforlu</ToggleGroupItem>
+          <ToggleGroupItem value="eraser" aria-label="Silgi"><Eraser aria-hidden /> Silgi</ToggleGroupItem>
+        </ToggleGroup>
+        <div className="cd-ciz-renk" role="radiogroup" aria-label="Renk">
+          {penPalette(appearance.mode).map((c) => (
+            <button key={c.id} type="button" role="radio" aria-checked={st.color === c.hex} aria-label={c.label} title={c.label}
+              style={{ background: c.hex }} onClick={() => setDrawingGlobalState({ color: c.hex, activeMode: st.activeMode === 'none' || st.activeMode === 'eraser' ? 'pen' : st.activeMode })} />
           ))}
         </div>
-      )}
-    </div>
+        <p className="cd-ciz-not">Çizimler bu cihazda, ders ve sayfa başına saklanır. Kalemli cihazda parmak sayfayı kaydırır.</p>
+      </PopoverContent>
+    </Popover>
   );
 }
 

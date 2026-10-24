@@ -1,15 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 284,
-  "baslik": "Kurul 1 2026-2027 çıkmış sorular PDF",
+  "onem": 285,
+  "baslik": "Sesli derste daha sade PDF araç çubuğu",
   "maddeler": [
-    "Kurul 1 2026-2027 sınavından toplanan 73 soru, ders aralıklarına yerleştirilmiş PDF olarak eklendi",
-    "Toplanamayan sorular ve tartışmalı cevaplar PDF içinde işaretli"
+    "Sesli derste PDF araçları sadeleşti: tek 'Çiz' düğmesinden kalem, fosforlu kalem, silgi ve renk seçilir; telefonda araç çubuğu tek satıra sığar.",
+    "Çıkmış soru listesi telefonda ekran dışına taşmaz; klavyeyle ve Esc ile kullanılabilir."
   ],
-  "eklenen": [
-    "/api/test/kurul1/2627 adresinden açılan çıkmış sorular PDF’i"
+  "eklenen": [],
+  "degisen": [
+    "Sesli derste PDF araçları sadeleşti: tek 'Çiz' düğmesinden kalem, fosforlu kalem, silgi ve renk seçilir; telefonda araç çubuğu tek satıra sığar.",
+    "Çıkmış soru listesi telefonda ekran dışına taşmaz; klavyeyle ve Esc ile kullanılabilir."
   ],
-  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }
