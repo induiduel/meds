@@ -1,14 +1,17 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 270,
-  "baslik": "Kurul 2 sesli derslerinde ekran maddeleri ve vurgular",
+  "onem": 271,
+  "baslik": "Sesli derste canlı çizim",
   "maddeler": [
-    "Kurul 2 sesli derslerinde metnin altında slayt gibi kısa ekran maddeleri görünür: terim, tanım, sayı, tuzak ve çıkmış vurguları renkli; çıkmışta sorulan cümlelerde 'Çıkmış' rozeti, bağlı slayt adımına tek dokunuşla geçiş."
+    "Sesli derste hoca anlatırken PDF'in üstünde çizim yapılıyor: yapıların sınırı kalemle dolanıyor, ilişkiler okla gösteriliyor, görselsiz slaytlarda küçük şemalar beliriyor (ilk ders: Bilinç Bozukluğu Olan Hastaya Yaklaşım).",
+    "Bilinç Bozukluğu dersinin sesli anlatımı yenilendi: her slayt ve her şekil anlatılıyor (yaklaşık 20 dakika)."
   ],
   "eklenen": [
-    "Kurul 2 sesli derslerinde metnin altında slayt gibi kısa ekran maddeleri görünür: terim, tanım, sayı, tuzak ve çıkmış vurguları renkli; çıkmışta sorulan cümlelerde 'Çıkmış' rozeti, bağlı slayt adımına tek dokunuşla geçiş."
+    "Sesli derste hoca anlatırken PDF'in üstünde çizim yapılıyor: yapıların sınırı kalemle dolanıyor, ilişkiler okla gösteriliyor, görselsiz slaytlarda küçük şemalar beliriyor (ilk ders: Bilinç Bozukluğu Olan Hastaya Yaklaşım)."
   ],
-  "degisen": [],
+  "degisen": [
+    "Bilinç Bozukluğu dersinin sesli anlatımı yenilendi: her slayt ve her şekil anlatılıyor (yaklaşık 20 dakika)."
+  ],
   "duzeltilen": [],
   "silinen": []
 }
