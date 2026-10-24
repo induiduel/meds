@@ -212,7 +212,7 @@ def istatistik_bolumu(yer):
               p("“Numarası kesin”: grupta sınavdaki numarasıyla yazılan sorular; bunların sınavda o numarada olduğu kesindir. "
                 "“Grup PDF'inde”: grubun son PDF'inde de yer alan sorular. “Tam”: kök ve şıklar hatırlandı, cevap "
                 "tartışmasız.", st_kucuk), Spacer(1, 3 * mm)]
-    basliklar = ["Ders", "Sınavda", "Topla-\nnan", "Numarası\nkesin", "Grup\nPDF'inde", "Yalnız\nbizde", "Tam",
+    basliklar = ["Ders", "Sınavda", "Topla-\nnan", "Numara\nkesin", "Grup\nPDF'inde", "Yalnız\nbizde", "Tam",
                  "Şıkları\nüretilen", "Tartış-\nmalı", "Toplan-\nmadı"]
     satirlar, toplam = [basliklar], [0] * 9
     for ad, bas, son in DERSLER:
