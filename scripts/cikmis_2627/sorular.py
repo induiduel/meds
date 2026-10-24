@@ -104,8 +104,6 @@ S['Patoloji'] = [
   ['Tübüluslarda ve interstisyel alanda nötrofil lökosit infiltrasyonu ile tübüler nekroz ve lökosit silendirleri', 'Glomerüllerde mezanjiyal amiloid birikimi', 'Bowman kapsülünde kresent oluşumu', 'Arteriyollerde hiyalin kalınlaşma', 'İnterstisyel alanda yoğun eozinofil birikimi'], 'A', ''),
  (None, 'Diyabetik nefropatinin patognomonik ve en karakterize histopatolojik nodüler glomerüler nodül bulgusu aşağıdakilerden hangisidir?',
   ['Kimmelstiel-Wilson nodülleri', 'Libman-Sacks lezyonları', 'Flea-bitten böbrek', 'Wire-loop lezyonu', 'Crescentic glomerülorefleks'], 'A', ''),
- (None, 'SLE nedeniyle uzun süreli hidroksiklorokin (Plaquenil) kullanan bir hastanın organ toksisitesi takibinde rutin olarak hangi muayenenin yapılması gereklidir?',
-  ['Oftalmolojik (göz dibi / retina) muayene', 'Odyolojik muayene', 'Açık akciğer biyopsisi', 'Kemik iliği aspirasyonu', 'Günlük troponin ölçümü'], 'A', 'Şıklar gruptaki öğrenci sürümüne göre düzeltildi (birkaçından emin değiller).'),
  (59, 'Renal hücreli karsinomun (RCC) en sık görülen 3 histolojik/moleküler alt tipi aşağıdakilerden hangisinde doğru olarak verilmiştir?',
   ['Onkositoma, Wilms, anjiyomiyolipom', 'Berrak hücreli (clear cell), papiller, kromofob', 'Papiller, Wilms, kromofob', 'Berrak hücreli, onkositoma, kromofob', 'Kromofob, anjiyomiyolipom, berrak hücreli'], 'B', ''),
  (60, 'Genital Herpes Simplex Virüs (HSV) enfeksiyonunun doku histopatolojisindeki en tipik sitopatolojik bulgusu aşağıdakilerden hangisidir?',
@@ -185,11 +183,11 @@ S['Üroloji'] = [
  (87, 'İdrar örneği alma yöntemleri değerlendirildiğinde aşağıdakilerden hangisi yanlıştır?',
   ['Orta akım idrarı rutin kültür için en sık kullanılan yöntemdir.', 'Suprapubik aspirasyon kontaminasyona en açık ve güvenilmez idrar alma yöntemidir.', 'Sondalı hastalarda idrar kateterin özel steril portundan alınmalıdır.', 'Bebeklerde idrar torbası örneklerinde üremede konfirmasyon gerekebilir.', 'Suprapubik aspirasyon invaziv bir yöntemdir.'], 'B', ''),
  (88, 'Üriner sistem enfeksiyonlarının tanımları ile ilgili aşağıda verilen ifadelerden hangisi yanlıştır?',
-  ['Rekürren enfeksiyonlar, iyi bir tedavinin ardından genellikle iki haftadan az sürede aynı patojenle gerçekleşen üriner sistem enfeksiyonlarıdır.', 'Re-enfeksiyon, geçirilmiş bir enfeksiyonun ardından farklı bir patojenle tekrar enfekte olmaktır.', 'Bakteriyel persistans, üriner sistemde yerleşmiş patojenlerin yaptığı rekürren enfeksiyonlardır.', 'Nozokomiyal (hastane kaynaklı) enfeksiyonlar tipik olarak Pseudomonas veya dirençli suşların yaptığı enfeksiyonlardır.', 'Anatomik ya da yapısal anomalisi bulunmayan hastalardaki üriner sistem enfeksiyonlarına komplike üriner sistem enfeksiyonu denir.'], 'E', "Beş şık gruptaki öğrenci sürümünden. E kesin yanlış (bu tanım komplike olmayan ÜSE'dir). Derleme PDF'i A'yı işaretlemişti; A aslında relapsın tanımıdır, tartışmalı. Grubun cevap anahtarlı PDF\'i de A diyor; o sürümde D ve E şıkları (“Tanılar standardize edilmiştir”, “Hiçbiri”) uydurulmuş."),
+  ['Rekürren enfeksiyonlar, iyi bir tedavinin ardından genellikle iki haftadan az sürede aynı patojenle gerçekleşen üriner sistem enfeksiyonlarıdır.', 'Re-enfeksiyon, geçirilmiş bir enfeksiyonun ardından farklı bir patojenle tekrar enfekte olmaktır.', 'Bakteriyel persistans, üriner sistemde yerleşmiş patojenlerin yaptığı rekürren enfeksiyonlardır.', 'Nozokomiyal (hastane kaynaklı) enfeksiyonlar tipik olarak Pseudomonas veya dirençli suşların yaptığı enfeksiyonlardır.', 'Anatomik ya da yapısal anomalisi bulunmayan hastalardaki üriner sistem enfeksiyonlarına komplike üriner sistem enfeksiyonu denir.'], 'E', "Beş şık gruptaki öğrenci sürümünden. E kesin yanlış (bu tanım komplike olmayan ÜSE'dir). Derleme PDF'i A'yı işaretlemişti; A aslında relapsın tanımıdır, tartışmalı. Grubun cevap anahtarlı PDF'i de A diyor; o sürümde D ve E şıkları (“Tanılar standardize edilmiştir”, “Hiçbiri”) uydurulmuş."),
  (89, 'Aşağıdakilerden hangisi alt üriner sistemin depolama (dolum) semptom veya fonksiyonlarından biri değildir?',
   ['Noktüri', 'Sıkışma', 'Aralıklı akım', 'Pollaküri', 'Sıkışma tipi idrar kaçırma'], 'C', ''),
  (None, 'Enürezis nokturna için aşağıdakilerden hangisi yanlıştır?',
-  ['3 yaşın üzerindeki çocuklar tedavi gerektirir.', "Yıllık spontan rezolüsyon oranı yaklaşık %15'tir.", 'Hastalığın patogenezinde genetik de yer alır.', 'Uyanma güçlüğü sıklıkla eşlik eder.', 'Enürezis sıklığı arttıkça spontan rezolüsyon oranı azalır.'], 'A', 'Grupta 24.10 tamamlandı ve grubun son PDF\'inde aynı şıklarla yer aldı; tedavi 5 yaşından sonra düşünülür.'),
+  ['3 yaşın üzerindeki çocuklar tedavi gerektirir.', "Yıllık spontan rezolüsyon oranı yaklaşık %15'tir.", 'Hastalığın patogenezinde genetik de yer alır.', 'Uyanma güçlüğü sıklıkla eşlik eder.', 'Enürezis sıklığı arttıkça spontan rezolüsyon oranı azalır.'], 'A', "Grupta 24.10 tamamlandı ve grubun son PDF'inde aynı şıklarla yer aldı; tedavi 5 yaşından sonra düşünülür."),
 ]
 
 S['Kadın Hastalıkları ve Doğum'] = [
@@ -214,6 +212,8 @@ S['Farmakoloji'] = [
   ['Talidomid', 'Penisilin', 'Parasetamol', 'Folik asit', 'İnsülin'], 'A', ''),
  (100, "Kemik rezorpsiyonunu engellemek amacıyla kullanılan, RANKL'a karşı geliştirilmiş monoklonal antikor ilaç aşağıdakilerden hangisidir?",
   ['Denosumab', 'Siklosporin', 'Metotreksat', 'İnfliksimab', 'Bevasizumab'], 'A', ''),
+ (99, 'SLE nedeniyle uzun süreli hidroksiklorokin (Plaquenil) kullanan bir hastanın organ toksisitesi takibinde rutin olarak hangi muayenenin yapılması gereklidir?',
+  ['Oftalmolojik (göz dibi / retina) muayene', 'Odyolojik muayene', 'Açık akciğer biyopsisi', 'Kemik iliği aspirasyonu', 'Günlük troponin ölçümü'], 'A', "Şıklar gruptaki öğrenci sürümüne göre düzeltildi (birkaçından emin değiller). Soru farmakolojiye aittir (sınavda 99. soru); derleme PDF'leri yanlışlıkla patolojiye koymuştu."),
 ]
 
 # Şık düzeyinde işaret: kökte geçen parça → {"uretildi": harfler, "supheli": harfler}

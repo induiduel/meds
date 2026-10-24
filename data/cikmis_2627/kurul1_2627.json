@@ -2462,59 +2462,6 @@
    "sinav_no": 52,
    "sinav_no_kesin": false,
    "ders": "Patoloji",
-   "konu": "İmmünofarmakoloji",
-   "ders_notu_id": "k1-59-immunofarmakoloji",
-   "ogretim_uyesi": "Prof. Dr. Mehmet Özdemir",
-   "durum": "tam",
-   "tartismali": false,
-   "kok": "SLE nedeniyle uzun süreli hidroksiklorokin (Plaquenil) kullanan bir hastanın organ toksisitesi takibinde rutin olarak hangi muayenenin yapılması gereklidir?",
-   "siklar": [
-    "Oftalmolojik (göz dibi / retina) muayene",
-    "Odyolojik muayene",
-    "Açık akciğer biyopsisi",
-    "Kemik iliği aspirasyonu",
-    "Günlük troponin ölçümü"
-   ],
-   "cevap": "A",
-   "not": "Şıklar gruptaki öğrenci sürümüne göre düzeltildi (birkaçından emin değiller).",
-   "grup_pdfinde": true,
-   "grup_pdf_disi_dayanak": null,
-   "sik_isaretleri": {
-    "uretildi": [],
-    "supheli": [
-     "B",
-     "D",
-     "E"
-    ]
-   },
-   "eslesme": {
-    "yontem": "elle",
-    "puan": 19.8,
-    "ikinci_aday": {
-     "id": "k1-02-patolojiye-giris",
-     "puan": 18.1
-    },
-    "kanit": [
-     {
-      "satir": 128,
-      "metin": "- Oftalmik solüsyon ciddi kuru göz sendromlarında ve oküler graft-versus-host hastalığında kullanılır; akciğer naklinde inhale kullanımı araştırılmaktadır.",
-      "puan": 6.3
-     },
-     {
-      "satir": 174,
-      "metin": "- ==Ana toksik etkisi lökopeni ile karakterize kemik iliği supresyonudur== (anemi ve trombositopeni de gelişebilir); cilt döküntüleri, ateş, bulantı, kusma ve bazen ishal görülür.",
-      "puan": 4.0
-     }
-    ]
-   },
-   "kaynak": "derleme PDF'i + Konu çalışma grubu (WhatsApp, 23.10 10:00 – 24.10 15:25)"
-  },
-  {
-   "kurul": 1,
-   "yil": "2026-2027",
-   "sinav_no": 53,
-   "sinav_no_kesin": false,
-   "ders": "Patoloji",
    "konu": "Hücre Hasarı ve Nekroz - II",
    "ders_notu_id": "k1-05-hucre-hasari-ve-nekroz-ii",
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
@@ -2553,6 +2500,55 @@
       "satir": 74,
       "metin": "- **Kromatin kondansasyonu:** kenarlara toplanır, yoğunlaşır (çekirdek çevresinde hilal şeklinde)",
       "puan": 6.1
+     }
+    ]
+   },
+   "kaynak": "derleme PDF'i + Konu çalışma grubu (WhatsApp, 23.10 10:00 – 24.10 15:25)"
+  },
+  {
+   "kurul": 1,
+   "yil": "2026-2027",
+   "sinav_no": 53,
+   "sinav_no_kesin": false,
+   "ders": "Patoloji",
+   "konu": "Glomerüler Hastalıklar: Nefritik Sendrom",
+   "ders_notu_id": "k1-38-glomeruler-hastaliklar-nefritik-sendrom",
+   "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+   "durum": "tam",
+   "tartismali": false,
+   "kok": "Aşağıdakilerden hangisi nefritik sendrom klinik tablosunun tipik bulgularından biridir?",
+   "siklar": [
+    "Masif proteinüri (>3,5 g/gün) ve belirgin lipidüri",
+    "İzole hiperlipidemi ve ksantomlar",
+    "İzole glukozüri ve ketonüri",
+    "Hematüri, oligüri, hipertansiyon ve eritrosit silendirleri",
+    "İzole hipokalsemi ve tetani"
+   ],
+   "cevap": "D",
+   "not": "",
+   "grup_pdfinde": true,
+   "grup_pdf_disi_dayanak": null,
+   "sik_isaretleri": {
+    "uretildi": [],
+    "supheli": []
+   },
+   "eslesme": {
+    "yontem": "otomatik",
+    "puan": 28.1,
+    "ikinci_aday": {
+     "id": "k1-37-glomeruler-hastaliklar-nefrotik-sendrom",
+     "puan": 19.0
+    },
+    "kanit": [
+     {
+      "satir": 200,
+      "metin": "- **Nefritik sendrom:** hematüri (eritrosit silendirleri), subnefrotik proteinüri, azotemi, oligüri, hipertansiyon",
+      "puan": 10.4
+     },
+     {
+      "satir": 133,
+      "metin": "- SLE klinik spektrumu çok geniş; böbrek bulguları genellikle ==karışık nefrotik-nefritik tablo==: hematüri, eritrosit silendirleri; çoğu zaman nefrotik düzeye varan proteinüri; hipertansiyon",
+      "puan": 9.3
      }
     ]
    },
@@ -2615,55 +2611,6 @@
    "sinav_no": 55,
    "sinav_no_kesin": false,
    "ders": "Patoloji",
-   "konu": "Glomerüler Hastalıklar: Nefritik Sendrom",
-   "ders_notu_id": "k1-38-glomeruler-hastaliklar-nefritik-sendrom",
-   "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
-   "durum": "tam",
-   "tartismali": false,
-   "kok": "Aşağıdakilerden hangisi nefritik sendrom klinik tablosunun tipik bulgularından biridir?",
-   "siklar": [
-    "Masif proteinüri (>3,5 g/gün) ve belirgin lipidüri",
-    "İzole hiperlipidemi ve ksantomlar",
-    "İzole glukozüri ve ketonüri",
-    "Hematüri, oligüri, hipertansiyon ve eritrosit silendirleri",
-    "İzole hipokalsemi ve tetani"
-   ],
-   "cevap": "D",
-   "not": "",
-   "grup_pdfinde": true,
-   "grup_pdf_disi_dayanak": null,
-   "sik_isaretleri": {
-    "uretildi": [],
-    "supheli": []
-   },
-   "eslesme": {
-    "yontem": "otomatik",
-    "puan": 28.1,
-    "ikinci_aday": {
-     "id": "k1-37-glomeruler-hastaliklar-nefrotik-sendrom",
-     "puan": 19.0
-    },
-    "kanit": [
-     {
-      "satir": 200,
-      "metin": "- **Nefritik sendrom:** hematüri (eritrosit silendirleri), subnefrotik proteinüri, azotemi, oligüri, hipertansiyon",
-      "puan": 10.4
-     },
-     {
-      "satir": 133,
-      "metin": "- SLE klinik spektrumu çok geniş; böbrek bulguları genellikle ==karışık nefrotik-nefritik tablo==: hematüri, eritrosit silendirleri; çoğu zaman nefrotik düzeye varan proteinüri; hipertansiyon",
-      "puan": 9.3
-     }
-    ]
-   },
-   "kaynak": "derleme PDF'i + Konu çalışma grubu (WhatsApp, 23.10 10:00 – 24.10 15:25)"
-  },
-  {
-   "kurul": 1,
-   "yil": "2026-2027",
-   "sinav_no": 56,
-   "sinav_no_kesin": false,
-   "ders": "Patoloji",
    "konu": "Hücre Hasarı ve Nekroz - II",
    "ders_notu_id": "k1-05-hucre-hasari-ve-nekroz-ii",
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
@@ -2702,6 +2649,55 @@
       "satir": 95,
       "metin": "| BH3-only | — | Hücre içi stres sensörleri; BAX/BAK'ı aktive eder, BCL-2'yi baskılar |",
       "puan": 9.9
+     }
+    ]
+   },
+   "kaynak": "derleme PDF'i + Konu çalışma grubu (WhatsApp, 23.10 10:00 – 24.10 15:25)"
+  },
+  {
+   "kurul": 1,
+   "yil": "2026-2027",
+   "sinav_no": 56,
+   "sinav_no_kesin": false,
+   "ders": "Patoloji",
+   "konu": "Over Tümörleri",
+   "ders_notu_id": "k1-55-over-tumorleri",
+   "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+   "durum": "tam",
+   "tartismali": false,
+   "kok": "Endokrin organ tümörlerinde hormon üretimi ve fonksiyonel aktivite ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+   "siklar": [
+    "Malign ve anaplastik tümörler her zaman en yüksek hormonu salgılar.",
+    "İyi diferansiye benign tümörlerde hormon üretimi ve salgılanması normal endokrin yapıya daha uygundur.",
+    "Tümörün diferansiyasyonu düştükçe hormon sentez kapasitesi artar.",
+    "Adenomlar hiçbir zaman hormon salgılayamaz.",
+    "Hormon üretimi sadece metastatik lezyonlarda gerçekleşir."
+   ],
+   "cevap": "B",
+   "not": "",
+   "grup_pdfinde": true,
+   "grup_pdf_disi_dayanak": null,
+   "sik_isaretleri": {
+    "uretildi": [],
+    "supheli": []
+   },
+   "eslesme": {
+    "yontem": "otomatik",
+    "puan": 28.8,
+    "ikinci_aday": {
+     "id": "k1-66-erkek-genital-sistem-ve-prostat-hastaliklari",
+     "puan": 26.9
+    },
+    "kanit": [
+     {
+      "satir": 220,
+      "metin": "**Klinik & Patofizyolojik Çözüm Notu:** Seröz tümörler overin en sık izlenen epitelyal tümörleridir; benign tümörlerde kistler berrak seröz sıvı ile dolu olup döşeyici hücreler genellikle silyalıdır ve papillaların uç kısmında psammom cisimcikleri görülür. Malign seröz tümörler periaortikler de dahil bölgesel lenf nodlarına yayılır ancak uzak lenfatik ve hematojen metastazlar sık değildir; bu nede",
+      "puan": 4.0
+     },
+     {
+      "satir": 32,
+      "metin": "- **Seröz tümörler:** benign (kistadenom, kistadenofibrom), borderline (seröz borderline tümör), malign (düşük ve yüksek dereceli seröz adenokarsinom)",
+      "puan": 3.9
      }
     ]
    },
@@ -2760,50 +2756,8 @@
    "kurul": 1,
    "yil": "2026-2027",
    "sinav_no": 58,
-   "sinav_no_kesin": false,
    "ders": "Patoloji",
-   "konu": "Tümör Biyolojisi ve Terminolojisi",
-   "ders_notu_id": "k1-28-tumor-biyolojisi-ve-terminolojisi",
-   "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
-   "durum": "tam",
-   "tartismali": false,
-   "kok": "Endokrin organ tümörlerinde hormon üretimi ve fonksiyonel aktivite ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
-   "siklar": [
-    "Malign ve anaplastik tümörler her zaman en yüksek hormonu salgılar.",
-    "İyi diferansiye benign tümörlerde hormon üretimi ve salgılanması normal endokrin yapıya daha uygundur.",
-    "Tümörün diferansiyasyonu düştükçe hormon sentez kapasitesi artar.",
-    "Adenomlar hiçbir zaman hormon salgılayamaz.",
-    "Hormon üretimi sadece metastatik lezyonlarda gerçekleşir."
-   ],
-   "cevap": "B",
-   "not": "",
-   "grup_pdfinde": true,
-   "grup_pdf_disi_dayanak": null,
-   "sik_isaretleri": {
-    "uretildi": [],
-    "supheli": []
-   },
-   "eslesme": {
-    "yontem": "elle",
-    "puan": 28.8,
-    "ikinci_aday": {
-     "id": "k1-66-erkek-genital-sistem-ve-prostat-hastaliklari",
-     "puan": 26.9
-    },
-    "kanit": [
-     {
-      "satir": 117,
-      "metin": "- İyi diferansiye malign tümörler fonksiyonu sürdürebilir: endokrin karsinom hormon, ==skuamöz hücreli karsinom keratin==, ==hepatoselüler karsinom safra== üretir",
-      "puan": 6.9
-     },
-     {
-      "satir": 285,
-      "metin": "**Klinik & Patofizyolojik Çözüm Notu:** Ders notuna göre karsinomlar tipik olarak lenfatik yolla yayılır; hematojen yayılım en sık ince duvarlı venlerle olur; iskelet kası nadir metastaz yeridir; diferansiyasyon arttıkça normal hücreye benzerlik artar. Bu nedenle diğer seçenekler yanlıştır; büyüme hızı her zaman benign-malign ayrımını belirlemez. (Sınav anahtarı mevcut değildir.)",
-      "puan": 6.7
-     }
-    ]
-   },
-   "kaynak": "derleme PDF'i + Konu çalışma grubu (WhatsApp, 23.10 10:00 – 24.10 15:25)"
+   "durum": "toplanmadi"
   },
   {
    "kurul": 1,
@@ -4613,8 +4567,54 @@
    "kurul": 1,
    "yil": "2026-2027",
    "sinav_no": 99,
+   "sinav_no_kesin": true,
    "ders": "Farmakoloji",
-   "durum": "toplanmadi"
+   "konu": "İmmünofarmakoloji",
+   "ders_notu_id": "k1-59-immunofarmakoloji",
+   "ogretim_uyesi": "Prof. Dr. Mehmet Özdemir",
+   "durum": "tam",
+   "tartismali": false,
+   "kok": "SLE nedeniyle uzun süreli hidroksiklorokin (Plaquenil) kullanan bir hastanın organ toksisitesi takibinde rutin olarak hangi muayenenin yapılması gereklidir?",
+   "siklar": [
+    "Oftalmolojik (göz dibi / retina) muayene",
+    "Odyolojik muayene",
+    "Açık akciğer biyopsisi",
+    "Kemik iliği aspirasyonu",
+    "Günlük troponin ölçümü"
+   ],
+   "cevap": "A",
+   "not": "Şıklar gruptaki öğrenci sürümüne göre düzeltildi (birkaçından emin değiller). Soru farmakolojiye aittir (sınavda 99. soru); derleme PDF'leri yanlışlıkla patolojiye koymuştu.",
+   "grup_pdfinde": true,
+   "grup_pdf_disi_dayanak": null,
+   "sik_isaretleri": {
+    "uretildi": [],
+    "supheli": [
+     "B",
+     "D",
+     "E"
+    ]
+   },
+   "eslesme": {
+    "yontem": "otomatik",
+    "puan": 25.7,
+    "ikinci_aday": {
+     "id": "k1-35-prenatal-tani-yontemleri",
+     "puan": 14.0
+    },
+    "kanit": [
+     {
+      "satir": 128,
+      "metin": "- Oftalmik solüsyon ciddi kuru göz sendromlarında ve oküler graft-versus-host hastalığında kullanılır; akciğer naklinde inhale kullanımı araştırılmaktadır.",
+      "puan": 6.3
+     },
+     {
+      "satir": 174,
+      "metin": "- ==Ana toksik etkisi lökopeni ile karakterize kemik iliği supresyonudur== (anemi ve trombositopeni de gelişebilir); cilt döküntüleri, ateş, bulantı, kusma ve bazen ishal görülür.",
+      "puan": 4.0
+     }
+    ]
+   },
+   "kaynak": "derleme PDF'i + Konu çalışma grubu (WhatsApp, 23.10 10:00 – 24.10 15:25)"
   },
   {
    "kurul": 1,

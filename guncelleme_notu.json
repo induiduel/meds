@@ -1,15 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 305,
-  "baslik": "Kurul 1 2026-2027 çıkmış sorular: üroloji anahtar farkları",
+  "onem": 306,
+  "baslik": "Kurul 1 2026-2027 çıkmış sorular: SLE sorusu farmakolojide",
   "maddeler": [
-    "Üroloji sorularına grubun cevap anahtarıyla farklar not edildi",
-    "Enürezis “yanlış” sorusu grubun son PDF'iyle doğrulandı"
+    "Hidroksiklorokin (SLE) sorusu farmakolojiye, 99. soru olarak taşındı; farmakoloji 4/4 tamamlandı"
   ],
   "eklenen": [],
   "degisen": [],
   "duzeltilen": [
-    "/api/test/kurul1/2627 üroloji notları"
+    "/api/test/kurul1/2627 soru 99"
   ],
   "silinen": []
 }

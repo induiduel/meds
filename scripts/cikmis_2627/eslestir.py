@@ -21,7 +21,7 @@ CIKTI = KOK / "data" / "cikmis_2627" / "kurul1_2627.json"
 # Sınavdaki ders adı → ders notu dizinindeki ders adı
 DERS_ESLE = {"Patoloji": "Tıbbi Patoloji", "Farmakoloji": "Tıbbi Farmakoloji"}
 # Otomatik eşleşmenin yanıldığı sorular: sınav no → ders notu sırası
-ELLE = {1: 1, 4: 35, 8: 31, 22: 21, 42: 13, 50: 41, 52: 59, 54: 37, 57: 42, 58: 28, 60: 46, 63: 53, 69: 22, 72: 23, 74: 22,
+ELLE = {1: 1, 4: 35, 8: 31, 22: 21, 42: 13, 50: 41, 54: 37, 57: 42, 58: 28, 60: 46, 63: 53, 69: 22, 72: 23, 74: 22,
         81: 51}
 
 DUR = set("ve ile bir bu için olan olarak aşağıdakilerden hangisi hangisidir değildir doğrudur yanlıştır en daha "
