@@ -11,6 +11,7 @@
  *  - Metin katmanı (seçme/kopyalama) yalnız görünür sayfalarda kurulur.
  */
 import React, { memo, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { CizimLayer, type CizimKomut } from './CizimLayer';
 import * as pdfjs from 'pdfjs-dist';
 import type { PDFDocumentProxy, PDFPageProxy, RenderTask } from 'pdfjs-dist';
 import workerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
@@ -65,6 +66,8 @@ export interface PdfMarks {
   /** hareketli imleç: [[cümle içi karakter, x, y]]; useChar o an konuşulan karakteri verir */
   path?: number[][];
   useChar?: () => number;
+  /** canlı çizim komutları (R6, CizimLayer): kontur / akış / eğri fazı / şema; ilerleme useChar'dan */
+  cizim?: CizimKomut[];
 }
 
 /** İmleç: konuşulan karakter iki yol noktası arasında ilerledikçe akıcı biçimde kayar (anlatan hocanın eli gibi);
@@ -138,6 +141,7 @@ const MarkLayer = memo(function MarkLayer({ m }: { m: PdfMarks }) {
       {m.lines.map((b, i) => <span key={i} className="pdv-mark-line" style={pct(b)} />)}
       {f && <span className="pdv-mark-word" style={pct(f)} />}
       {m.path && m.useChar && <Imlec path={m.path} useChar={m.useChar} />}
+      {m.cizim?.length && m.useChar ? <CizimLayer z={m.cizim} useChar={m.useChar} /> : null}
       {r && <span className="pdv-laser" style={{ left: `${((r[0] + r[2]) / 2) * 100}%`, top: `${((r[1] + r[3]) / 2) * 100}%` }} />}
     </div>
   );

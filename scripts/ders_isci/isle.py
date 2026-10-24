@@ -406,6 +406,44 @@ def v2_mi(d: Path) -> bool:
     return int(oku(d / "baglam.json", {}).get("kurul") or 0) >= 2
 
 
+def sesli_kapsam(d: Path) -> list[str]:
+    """Kurul 2+ sesli metin kapsamı (2026-10-24, kullanıcı: "ders süresi az"; k2-02'de 56 içerik sayfasının 12'si
+    anlatılmamış, şekiller boştu): sayfa_haritasi'ndaki her icerik/sekil/tablo sayfası en az bir cümlenin
+    slayt.sayfa'sında; görselli sayfada (sekil/tablo ya da sekiller[] dolu) en az bir cümlede slayt.sekil dolu.
+    Kelime/dakika hedefi değildir (H22): eksik SAYFA kapısıdır."""
+    h, v = oku(d / "sayfa_haritasi.json", {}) or {}, oku(d / "konusma_v2.json", {}) or {}
+    if not h.get("sayfalar") or not v.get("bolumler"):
+        return []
+    cum = [c for b in v["bolumler"] for p in b.get("paragraflar", []) for c in p.get("cumleler", [])]
+    anlatilan, sekilli, sayi = set(), set(), {}
+    for c in cum:
+        sl = c.get("slayt") or {}
+        if sl.get("sayfa"):
+            anlatilan.add(int(sl["sayfa"]))
+            sayi[int(sl["sayfa"])] = sayi.get(int(sl["sayfa"]), 0) + 1
+            if sl.get("sekil"):
+                sekilli.add(int(sl["sayfa"]))
+    e = []
+    for sp in h["sayfalar"]:
+        n, tur = int(sp.get("sayfa") or 0), sp.get("tur")
+        if tur not in ("icerik", "sekil", "tablo") or "tekrar" in str(sp.get("ne_anlatiliyor", "")).lower():
+            continue                      # slaytın tekrarı: içeriği asıl sayfasında anlatılır
+        sek = [x for x in sp.get("sekiller") or [] if "süs" not in x.lower()]
+        if n not in anlatilan:
+            e.append(f"s. {n} ({tur}) anlatılmamış — sayfada: {sp.get('ne_anlatiliyor', '')[:140]}"
+                     + (f"; şekil: {sek[0][:140]}" if sek else ""))
+        elif (tur in ("sekil", "tablo") or sek) and n not in sekilli:
+            e.append(f"s. {n}: görsel anlatılmamış (cümlede slayt.sekil boş) — {(sek or [sp.get('ne_anlatiliyor', '')])[0][:160]}")
+        # derinlik (kullanıcı 2026-10-24 "ders süresi az"): sayfadaki her bilgi maddesi kendi cümlesinde; görselli sayfada +1.
+        # Kelime/dakika hedefi değil — sayfanın taşıdığı bilgi kadar cümle (en çok 4)
+        gerek = min(4, max(1, len(sp.get("bilgi") or [])) + (1 if (tur in ("sekil", "tablo") or sek) else 0))
+        if n in anlatilan and sayi.get(n, 0) < gerek:
+            e.append(f"s. {n}: {sayi.get(n, 0)} cümle, sayfada {len(sp.get('bilgi') or [])} bilgi maddesi"
+                     f"{' + görsel' if (tur in ('sekil', 'tablo') or sek) else ''} var — her maddeyi (mekanizma/klinik sonuç) "
+                     f"kendi cümlesinde anlat (en az {gerek})")
+    return e
+
+
 def metin_denetle(d: Path) -> dict:
     """konusma_metni.md (+ konusma_sayfalari.json) → {"hata": n, "cikti": "..."}; dosya yoksa hata 999.
     Kurul 2+: önce konusma_v2.json kapısı, sonra eski biçim v2'den türetilip aynı denetimden geçer."""
@@ -425,7 +463,7 @@ def metin_denetle(d: Path) -> dict:
     r = subprocess.run([sys.executable, str(METIN_DENETLE), str(f)], capture_output=True, text=True)
     m = re.search(r"(\d+) HATA", r.stdout or "")
     hata = int(m.group(1)) if m else (0 if r.returncode == 0 else 999)
-    sh = sayfalar_denetle(d)
+    sh = sayfalar_denetle(d) + (sesli_kapsam(d) if v2_mi(d) else [])
     cikti = v2 + (r.stdout or r.stderr or "")[-3000:] + "".join(f"\n  HATA (sayfa) {x}" for x in sh)
     return {"hata": hata + len(sh), "cikti": cikti}
 

@@ -212,7 +212,7 @@
     "meds/src/data/k{N}<brans>_onem|_cozucu|_asistan/",
     "meds_temp/hat/dersler/<id>.json"
    ],
-   "not": "Yayımlanmış her Kurul 2+ dersi: hazirla → onem → cozucu → denetim (bağımsız) → birlestir → asistan → ses (EMA) → oracle. Her adım kapılı; gece başına en çok 3 ders. Son adım capa (2026-10-21): anlamsal slayt çapası — capa_dok.py → Claude TALIMAT_CAPA.md → kapı capa_dogrula.py (≥%70 madde/resim/kutu) → data/sesli_anlatim/capa/<key>.json cihaz + Oracle (Oracle pdf_isaret 30 dk)."
+   "not": "Yayımlanmış her Kurul 2+ dersi: hazirla → onem → cozucu → denetim (bağımsız) → birlestir → asistan → ses (EMA) → oracle. Her adım kapılı; gece başına en çok 3 ders. Son adım capa (2026-10-21): anlamsal slayt çapası — capa_dok.py → Claude TALIMAT_CAPA.md → kapı capa_dogrula.py (≥%70 madde/resim/kutu) → data/sesli_anlatim/capa/<key>.json cihaz + Oracle (Oracle pdf_isaret 30 dk). Ardından cizim (2026-10-24, R6): cizim_uret.py → cizim_dogrula.py → data/sesli_anlatim/cizim/<key>.json cihaz + Oracle (sesli derste PDF üstünde kontur/akış/eğri/şema)."
   },
   {
    "id": "bilgi_deposu",

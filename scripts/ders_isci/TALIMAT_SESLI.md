@@ -69,6 +69,13 @@ metin bloğu bir paragraftır), `kaynak.md`'deki `=== SAYFA n ===` numaralarıyl
 - Destedeki yüksek önemli sınav spotları için de kullanabilirsin; her paragrafa serpiştirme.
 - Soru yılı, soru numarası ya da şık harfi okuma.
 
+## Derinlik (kullanıcı kararı 2026-10-24: "ders süresi az")
+- Her içerik sayfasının `sayfa_haritasi.sayfalar[].bilgi` maddeleri (ders_paketi.bilgi_paketi) TEK TEK anlatılır: bilgi + neden
+  önemli (`anlam`) + klinik/sınav sonucu (`sonuc`). Slaytı okuyup geçmek yetmez; hoca derste nasıl açıklıyorsa öyle.
+- Görselli sayfada görsel ayrıca anlatılır (ne gösteriyor, neye bakılır, önemli bulgu) ve `slayt.sekil` doldurulur.
+- Kapı (`isle.sesli_kapsam`): sayfa başına en az bilgi maddesi sayısı kadar cümle (görselde +1, en çok 4). Dolgu, tekrar ve
+  meta cümle yasağı (H22) aynen geçerlidir: derinlik yeni bilgiyle sağlanır.
+
 ## Uzunluk
 - Hız ~112 kelime/dk. **En fazla 6.000 kelime; alt sınır ve süre hedefi YOKTUR.** Konu eksiksiz anlatıldıysa metin
   kısa kalabilir; kelime ya da dakikaya ulaşmak için cümle ekleme. 6.000'i asla aşma: tekrarları kıs, bilgiyi kısma.

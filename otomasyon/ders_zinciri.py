@@ -26,7 +26,7 @@ sys.path.insert(0, str(SC))
 import aday_hazirla as AH  # noqa: E402  gizli_silinen, aday, grupla, ornek_hedefi, norm
 
 BRANS_SLUG = {b["ad"]: b["slug"] for b in json.loads((MEDS / "src/data/dersler/branslar.json").read_text())["branslar"]}  # tek kaynak
-ADIMLAR = ["hazirla", "onem", "cozucu", "denetim", "birlestir", "asistan", "ses", "oracle", "capa"]
+ADIMLAR = ["hazirla", "onem", "cozucu", "denetim", "birlestir", "asistan", "ses", "oracle", "capa", "cizim"]
 IZIN = "Read,Write,Edit,Glob,Grep,Bash(python3 *),Bash(curl -s http://127.0.0.1:3000/*)"
 
 
@@ -494,8 +494,28 @@ def a_capa(d, pk, W, kuru):
     return calistir(f"rsync -az --rsync-path='flock /tmp/meds-deploy.lock sudo rsync' {S}/capa/{key}.json {uz}/capa/", kuru=kuru)
 
 
+def a_cizim(d, pk, W, kuru):
+    """Canlı çizim (R6, ICERIK_MOTORU_V3.md §4; 2026-10-24): çapa dökümü + işaret → scripts/cizim/cizim_uret.py (sayfa
+    partileri eşzamanlı Claude, kapı cizim_dogrula.py; geçmeyen komut atılır) → data/sesli_anlatim/cizim/<key>.json cihaz +
+    Oracle. İşaret, çapa geldikten sonra Oracle'da hemen yeniden üretilir ki metinHash aynı sürümden olsun."""
+    key, S = pk["ders_id"], MEDS / "data/sesli_anlatim"
+    uz = "medsor-oracle:/home/ubuntu/medsor/meds/data/sesli_anlatim"
+    C = W / "capa" / d["kod"]
+    if not kuru and not ((C / "dok" / "cumleler.md").exists() and (C / "capa.json").exists()):
+        print(f"   {key}: çapa dökümü yok (önce capa adımı)"); return 13
+    r = calistir("ssh medsor-oracle 'sudo systemctl start meds-cumle-zaman.service'", kuru=kuru)
+    (S / "isaret").mkdir(parents=True, exist_ok=True)
+    r = r or calistir(f"rsync -az {uz}/isaret/{key}.json {S}/isaret/", kuru=kuru)
+    py = MEDS / ".venv-ocr/bin/python"
+    r = r or calistir(f"{py} {MEDS}/scripts/cizim/cizim_uret.py {key} --dok {C}/dok --capa {C}/capa.json "
+                      f"--isaret {S}/isaret/{key}.json --is-dizini {W}/cizim/{d['kod']}", cwd=MEDS, kuru=kuru)
+    if r:
+        return r
+    return calistir(f"rsync -az --rsync-path='flock /tmp/meds-deploy.lock sudo rsync' {S}/cizim/{key}.json {uz}/cizim/", kuru=kuru)
+
+
 IS = {"hazirla": a_hazirla, "onem": a_onem, "cozucu": a_cozucu, "denetim": a_denetim, "birlestir": a_birlestir,
-      "asistan": a_asistan, "ses": a_ses, "oracle": a_oracle, "capa": a_capa}
+      "asistan": a_asistan, "ses": a_ses, "oracle": a_oracle, "capa": a_capa, "cizim": a_cizim}
 
 
 def main():
