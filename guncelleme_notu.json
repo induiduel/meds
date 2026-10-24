@@ -1,14 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 302,
-  "baslik": "Slayt takibi sayfa geçişlerinde de doğru",
+  "onem": 304,
+  "baslik": "Kurul 1 2026-2027 çıkmış sorular: üroloji anahtar farkları",
   "maddeler": [
-    "Sayfa değişirken de anlatılan satır oynatıcının altında kalmıyor"
+    "Üroloji sorularına grubun cevap anahtarıyla farklar not edildi",
+    "Enürezis “yanlış” sorusu grubun son PDF'iyle doğrulandı"
   ],
   "eklenen": [],
   "degisen": [],
   "duzeltilen": [
-    "/api/test/kurul1/2627 soru 97"
+    "/api/test/kurul1/2627 üroloji notları"
   ],
   "silinen": []
 }

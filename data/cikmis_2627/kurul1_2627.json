@@ -3706,7 +3706,7 @@
    "ders_notu_id": "k1-58-enurezis-nokturna",
    "ogretim_uyesi": "Dr. Öğr. Üyesi Salih Bürlükkara",
    "durum": "tam",
-   "tartismali": false,
+   "tartismali": true,
    "kok": "Enürezis nokturnası olan 7 yaşında erkek çocukta birinci basamak medikal tedavi aşağıdakilerden hangisidir?",
    "siklar": [
     "Bekle-gör yaklaşımı",
@@ -3716,7 +3716,7 @@
     "Antikolinerjik"
    ],
    "cevap": "C",
-   "not": "Kök ve şıklar gruptaki öğrenci sürümüne göre düzeltildi (\"davranışsal tedaviye yanıt yok\" ifadesi kökte yoktu).",
+   "not": "Kök ve şıklar gruptaki öğrenci sürümüne göre düzeltildi (\"davranışsal tedaviye yanıt yok\" ifadesi kökte yoktu). Tartışmalı: grubun cevap anahtarlı PDF'i B (üroterapi) diyor; soru “medikal tedavi” sorduğu için C (desmopressin) daha uygun.",
    "grup_pdfinde": true,
    "grup_pdf_disi_dayanak": null,
    "sik_isaretleri": {
@@ -3868,7 +3868,7 @@
     "10⁶"
    ],
    "cevap": "C",
-   "not": "Tartışmalı: ders slaytında suprapubik aspirasyonda \"herhangi bir sayıda gram(-) basil, ≥10³ gram(+) kok\" yazıyor; bir öğrenci \"bakteri bulunması anlamlıdır\" diye itiraz önerdi.",
+   "not": "Tartışmalı: ders slaytında suprapubik aspirasyonda \"herhangi bir sayıda gram(-) basil, ≥10³ gram(+) kok\" yazıyor; bir öğrenci \"bakteri bulunması anlamlıdır\" diye itiraz önerdi. Grubun cevap anahtarlı PDF'i A (10⁵) diyor; ders slaytına göre C korundu.",
    "grup_pdfinde": true,
    "grup_pdf_disi_dayanak": null,
    "sik_isaretleri": {
@@ -3917,17 +3917,12 @@
     "Enürezis sıklığı arttıkça spontan rezolüsyon oranı azalır."
    ],
    "cevap": "A",
-   "not": "Grupta 24.10 eklendi; tedavi 5 yaşından sonra düşünülür. Şıklardan emin değiller.",
+   "not": "Grupta 24.10 tamamlandı ve grubun son PDF'inde aynı şıklarla yer aldı; tedavi 5 yaşından sonra düşünülür.",
    "grup_pdfinde": true,
    "grup_pdf_disi_dayanak": null,
    "sik_isaretleri": {
     "uretildi": [],
-    "supheli": [
-     "B",
-     "C",
-     "D",
-     "E"
-    ]
+    "supheli": []
    },
    "eslesme": {
     "yontem": "otomatik",
@@ -4120,7 +4115,7 @@
     "Anatomik ya da yapısal anomalisi bulunmayan hastalardaki üriner sistem enfeksiyonlarına komplike üriner sistem enfeksiyonu denir."
    ],
    "cevap": "E",
-   "not": "Beş şık gruptaki öğrenci sürümünden. E kesin yanlış (bu tanım komplike olmayan ÜSE'dir). Derleme PDF'i A'yı işaretlemişti; A aslında relapsın tanımıdır, tartışmalı.",
+   "not": "Beş şık gruptaki öğrenci sürümünden. E kesin yanlış (bu tanım komplike olmayan ÜSE'dir). Derleme PDF'i A'yı işaretlemişti; A aslında relapsın tanımıdır, tartışmalı. Grubun cevap anahtarlı PDF'i de A diyor; o sürümde D ve E şıkları (“Tanılar standardize edilmiştir”, “Hiçbiri”) uydurulmuş.",
    "grup_pdfinde": true,
    "grup_pdf_disi_dayanak": null,
    "sik_isaretleri": {

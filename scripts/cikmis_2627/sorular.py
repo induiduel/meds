@@ -169,7 +169,7 @@ S['Halk Sağlığı'] = [
 
 S['Üroloji'] = [
  (80, 'Enürezis nokturnası olan 7 yaşında erkek çocukta birinci basamak medikal tedavi aşağıdakilerden hangisidir?',
-  ['Bekle-gör yaklaşımı', 'Üroterapi', 'Desmopressin', 'Antidepresan', 'Antikolinerjik'], 'C', 'Kök ve şıklar gruptaki öğrenci sürümüne göre düzeltildi ("davranışsal tedaviye yanıt yok" ifadesi kökte yoktu).'),
+  ['Bekle-gör yaklaşımı', 'Üroterapi', 'Desmopressin', 'Antidepresan', 'Antikolinerjik'], 'C', 'Kök ve şıklar gruptaki öğrenci sürümüne göre düzeltildi ("davranışsal tedaviye yanıt yok" ifadesi kökte yoktu). Tartışmalı: grubun cevap anahtarlı PDF\'i B (üroterapi) diyor; soru “medikal tedavi” sorduğu için C (desmopressin) daha uygun.'),
  (81, 'Aşağıdaki patolojik durumlardan hangisi prerenal proteinüri (overflow/taşma proteinürisi) nedenleri arasında yer alır?',
   ['Glomerülonefrit', 'Multipl miyelom (Bence-Jones proteinürisi)', 'Diyabetik nefropati', 'Polikistik böbrek hastalığı', 'Alt üriner sistem enfeksiyonu'], 'B', 'Grupta şıklar "gebelik, glomerülonefrit, nefritik sendrom…" diye de hatırlandı; şıklar kesin değil.'),
  (None, 'Akut komplike olmayan sistit vakalarında aşağıdaki klinik bulgulardan hangisinin görülmesi beklenmez?',
@@ -177,7 +177,7 @@ S['Üroloji'] = [
  (None, 'Aşağıdakilerden hangisi üriner sistem taş hastalığı (ürolitiyazis) gelişiminde bir risk faktörü değildir?',
   ['Yetersiz (az) sıvı alımı', 'Hiperkalsiüri', 'Yüksek oranda hayvansal protein ve tuz tüketimi', 'Yeterli su tüketimi', 'Sıcak iklimde yaşamak'], 'D', ''),
  (None, 'Suprapubik aspirasyon ile elde edilen idrar kültüründe anlamlı enfeksiyon tanısı için en az kaç CFU/mL bakteri yeterlidir?',
-  ['10⁵', '10⁴', '10³', '10⁷', '10⁶'], 'C', 'Tartışmalı: ders slaytında suprapubik aspirasyonda "herhangi bir sayıda gram(-) basil, ≥10³ gram(+) kok" yazıyor; bir öğrenci "bakteri bulunması anlamlıdır" diye itiraz önerdi.'),
+  ['10⁵', '10⁴', '10³', '10⁷', '10⁶'], 'C', 'Tartışmalı: ders slaytında suprapubik aspirasyonda "herhangi bir sayıda gram(-) basil, ≥10³ gram(+) kok" yazıyor; bir öğrenci "bakteri bulunması anlamlıdır" diye itiraz önerdi. Grubun cevap anahtarlı PDF\'i A (10⁵) diyor; ders slaytına göre C korundu.'),
  (85, 'Aşağıdaki obstrüktif üropati nedenlerinden hangisi infravezikal (mesane altı) obstrüksiyon nedenidir?',
   ['Renal kist', 'Posterior üretral valv (PUV)', 'Gebeliğe bağlı üretere bası', 'Nefrolitiyazis', 'Renal arter anevrizması'], 'B', 'Bir öğrenci D şıkkını "fimozis" olarak hatırladı; öyleyse o da infravezikaldir, şıklar kesin değil.'),
  (86, 'Alt üriner sistem obstrüksiyonlarında mesanenin kompansasyon evresi için aşağıdakilerden hangisi doğrudur?',
@@ -185,11 +185,11 @@ S['Üroloji'] = [
  (87, 'İdrar örneği alma yöntemleri değerlendirildiğinde aşağıdakilerden hangisi yanlıştır?',
   ['Orta akım idrarı rutin kültür için en sık kullanılan yöntemdir.', 'Suprapubik aspirasyon kontaminasyona en açık ve güvenilmez idrar alma yöntemidir.', 'Sondalı hastalarda idrar kateterin özel steril portundan alınmalıdır.', 'Bebeklerde idrar torbası örneklerinde üremede konfirmasyon gerekebilir.', 'Suprapubik aspirasyon invaziv bir yöntemdir.'], 'B', ''),
  (88, 'Üriner sistem enfeksiyonlarının tanımları ile ilgili aşağıda verilen ifadelerden hangisi yanlıştır?',
-  ['Rekürren enfeksiyonlar, iyi bir tedavinin ardından genellikle iki haftadan az sürede aynı patojenle gerçekleşen üriner sistem enfeksiyonlarıdır.', 'Re-enfeksiyon, geçirilmiş bir enfeksiyonun ardından farklı bir patojenle tekrar enfekte olmaktır.', 'Bakteriyel persistans, üriner sistemde yerleşmiş patojenlerin yaptığı rekürren enfeksiyonlardır.', 'Nozokomiyal (hastane kaynaklı) enfeksiyonlar tipik olarak Pseudomonas veya dirençli suşların yaptığı enfeksiyonlardır.', 'Anatomik ya da yapısal anomalisi bulunmayan hastalardaki üriner sistem enfeksiyonlarına komplike üriner sistem enfeksiyonu denir.'], 'E', "Beş şık gruptaki öğrenci sürümünden. E kesin yanlış (bu tanım komplike olmayan ÜSE'dir). Derleme PDF'i A'yı işaretlemişti; A aslında relapsın tanımıdır, tartışmalı."),
+  ['Rekürren enfeksiyonlar, iyi bir tedavinin ardından genellikle iki haftadan az sürede aynı patojenle gerçekleşen üriner sistem enfeksiyonlarıdır.', 'Re-enfeksiyon, geçirilmiş bir enfeksiyonun ardından farklı bir patojenle tekrar enfekte olmaktır.', 'Bakteriyel persistans, üriner sistemde yerleşmiş patojenlerin yaptığı rekürren enfeksiyonlardır.', 'Nozokomiyal (hastane kaynaklı) enfeksiyonlar tipik olarak Pseudomonas veya dirençli suşların yaptığı enfeksiyonlardır.', 'Anatomik ya da yapısal anomalisi bulunmayan hastalardaki üriner sistem enfeksiyonlarına komplike üriner sistem enfeksiyonu denir.'], 'E', "Beş şık gruptaki öğrenci sürümünden. E kesin yanlış (bu tanım komplike olmayan ÜSE'dir). Derleme PDF'i A'yı işaretlemişti; A aslında relapsın tanımıdır, tartışmalı. Grubun cevap anahtarlı PDF\'i de A diyor; o sürümde D ve E şıkları (“Tanılar standardize edilmiştir”, “Hiçbiri”) uydurulmuş."),
  (89, 'Aşağıdakilerden hangisi alt üriner sistemin depolama (dolum) semptom veya fonksiyonlarından biri değildir?',
   ['Noktüri', 'Sıkışma', 'Aralıklı akım', 'Pollaküri', 'Sıkışma tipi idrar kaçırma'], 'C', ''),
  (None, 'Enürezis nokturna için aşağıdakilerden hangisi yanlıştır?',
-  ['3 yaşın üzerindeki çocuklar tedavi gerektirir.', "Yıllık spontan rezolüsyon oranı yaklaşık %15'tir.", 'Hastalığın patogenezinde genetik de yer alır.', 'Uyanma güçlüğü sıklıkla eşlik eder.', 'Enürezis sıklığı arttıkça spontan rezolüsyon oranı azalır.'], 'A', 'Grupta 24.10 eklendi; tedavi 5 yaşından sonra düşünülür. Şıklardan emin değiller.'),
+  ['3 yaşın üzerindeki çocuklar tedavi gerektirir.', "Yıllık spontan rezolüsyon oranı yaklaşık %15'tir.", 'Hastalığın patogenezinde genetik de yer alır.', 'Uyanma güçlüğü sıklıkla eşlik eder.', 'Enürezis sıklığı arttıkça spontan rezolüsyon oranı azalır.'], 'A', 'Grupta 24.10 tamamlandı ve grubun son PDF\'inde aynı şıklarla yer aldı; tedavi 5 yaşından sonra düşünülür.'),
 ]
 
 S['Kadın Hastalıkları ve Doğum'] = [
@@ -242,7 +242,6 @@ SIK_ISARET = {
     "infravezikal": {"supheli": "D"},
     "çevreye yönelik": {"supheli": "A"},
     "fetal iyilik halinin": {"supheli": "ABCD"},
-    "Enürezis nokturna için": {"supheli": "BCDE"},
     "kesin tanısı amacıyla": {"supheli": "E"},
 }
 
