@@ -77,7 +77,10 @@ export interface CdDetay {
   isaret?: Record<string, (CdIsaret | null)[]> | null;
   /** öğrenci notunda işaretli yerler: dosya dizini → sayfa → kırmızı marker kutuları + yıldız */
   ogrenciNot?: Record<string, Record<string, PdfNot>> | null;
+  /** çıkmış sorular ve dayandıkları cümle (paragraf p, cümle c); PDF yeri isaret[p][c]'den */
+  cikmisKonum?: CdCikmisKonum[] | null;
 }
+export interface CdCikmisKonum { id: string; kok: string; cevap: string; yil?: number | string | null; p: number; c: number; skor: number }
 /** Kutular sayfa oranıdır (0–1). l: ≥%80'i okunan madde satırları (ya da resim); w: [kelimenin cümle içi baş, son, x0, y0, x1, y1] */
 /** y: hareketli imleç yolu [[cümle içi karakter, x, y]] — ses o karaktere gelince imleç (x, y)'ye kayar */
 export interface CdIsaret { d: number; s: number; t: 'metin' | 'tablo' | 'kelime' | 'resim' | 'sayfa'; l: number[][]; w: number[][]; y?: number[][] }

@@ -149,6 +149,8 @@
 .cd-pdf-zoom { min-width: 38px; text-align: center; }
 .cd-pdf-bar .cd-ib { height: 30px; min-width: 30px; padding: 0; }
 .cd-pdf-bar .cd-ib > svg { width: 16px; height: 16px; }
+.cd-pdf-bar { flex-wrap: wrap; row-gap: 2px; }
+.cd-pdf-bar .cd-pdf-cizim { margin-left: auto; }
 .cd-pdf-govde { flex: 1; min-height: 0; display: flex; background: var(--color-canvas); }
 
 /* ---------- alt oynatıcı ---------- */
@@ -1008,3 +1010,28 @@
 .cd-kat-bas:hover .cd-kat-eylem .cd-kat-ok { color: inherit; }
 .cd-kat + .cd-kat { margin-top: 8px; }
 @media (max-width: 560px) { .cd-kat-n { display: none; } .cd-kat-eylem { font-size: 12.5px; } }
+
+/* Çıkmış soru → PDF yeri (CikmisKonumDugme) */
+.cd-cik { position: relative; display: flex; align-items: center; gap: 2px; flex: none; }
+.cd-cik-btn { display: inline-flex; align-items: center; gap: 5px; height: 30px; padding: 0 10px; border-radius: 8px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink-2); font-size: 12.5px; font-weight: 600; cursor: pointer; }
+.cd-cik-btn > svg { width: 14px; height: 14px; color: var(--color-bad); }
+.cd-cik-btn.is-on { border-color: var(--color-bad); color: var(--color-bad); }
+.cd-cik-btn:focus-visible, .cd-cik-oge:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.cd-cik-gez { display: inline-flex; align-items: center; }
+.cd-cik-no { font-variant-numeric: tabular-nums; min-width: 34px; text-align: center; }
+.cd-cik-panel { position: absolute; z-index: 40; top: calc(100% + 6px); right: 0; width: min(420px, calc(100vw - 32px)); max-height: min(60vh, 460px); overflow: auto; overscroll-behavior: contain; padding: 6px; border-radius: 12px; border: 1px solid var(--color-line); background: var(--color-white); box-shadow: 0 10px 30px rgb(0 0 0 / .16); }
+.cd-cik-bas { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 4px 6px 8px; font-size: 11.5px; font-weight: 700; color: var(--color-ink-3); }
+.cd-cik-temizle { border: 0; background: none; color: var(--color-accent); font: inherit; cursor: pointer; }
+.cd-cik-oge { display: flex; align-items: flex-start; gap: 8px; width: 100%; padding: 8px; border: 0; border-radius: 8px; background: none; text-align: left; color: var(--color-ink); cursor: pointer; }
+.cd-cik-oge:hover { background: var(--color-field); }
+.cd-cik-oge.is-on { background: var(--color-accent-soft); }
+.cd-cik-oge-no { flex: none; width: 22px; height: 22px; border-radius: 6px; display: grid; place-items: center; background: var(--color-field); font-size: 11px; font-weight: 700; color: var(--color-ink-2); }
+.cd-cik-oge-m { display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1; }
+.cd-cik-oge-kok { font-size: 13px; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.cd-cik-oge-cvp { font-size: 12px; color: var(--color-ok); font-weight: 600; }
+.cd-cik-oge-yil { flex: none; font-size: 11px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.cd-cik-kat { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+.cd-cik-kutu { position: absolute; border-radius: 4px; background: rgb(239 68 68 / .14); box-shadow: 0 0 0 2px rgb(239 68 68 / .75); animation: cd-cik-nabiz 1.2s ease-out 2; }
+@keyframes cd-cik-nabiz { 0% { box-shadow: 0 0 0 2px rgb(239 68 68 / .75), 0 0 0 0 rgb(239 68 68 / .45); } 100% { box-shadow: 0 0 0 2px rgb(239 68 68 / .75), 0 0 0 12px rgb(239 68 68 / 0); } }
+@media (prefers-reduced-motion: reduce) { .cd-cik-kutu { animation: none; } }
+@media (max-width: 600px) { .cd-cik-panel { position: fixed; top: auto; left: 16px; right: 16px; bottom: calc(120px + env(safe-area-inset-bottom)); width: auto; } }

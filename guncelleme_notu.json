@@ -1,12 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 268,
-  "baslik": "Yeni ders: Bilinç Bozukluğu Olan Hastaya Yaklaşım (sınama)",
+  "onem": 269,
+  "baslik": "Sesli derste PDF'e yazıp çiz, çıkmış sorunun yerini bul",
   "maddeler": [
-    "Kurul 2 Nöroloji 'Bilinç Bozukluğu Olan Hastaya Yaklaşım' dersi Öğren'de ve sesli derste: 74 adım, oyun sayfası ve sesli anlatım. Geçen yılın slaytından hazırlanan sınama dersidir, 'Sınama' etiketiyle görünür."
+    "Sesli derste PDF'in üstüne kalem, fosforlu kalem ve silgiyle yazıp çizebilirsin; geri al düğmesi son çizimi siler. Çizimler cihazında saklanır.",
+    "Sesli derste PDF çubuğundaki 'Çıkmış' düğmesi dersin çıkmış sorularını listeler; bir soruya dokununca PDF o sorunun dayandığı sayfaya gider ve ilgili satırlar işaretlenir."
   ],
   "eklenen": [
-    "Kurul 2 Nöroloji 'Bilinç Bozukluğu Olan Hastaya Yaklaşım' dersi Öğren'de ve sesli derste: 74 adım, oyun sayfası ve sesli anlatım. Geçen yılın slaytından hazırlanan sınama dersidir, 'Sınama' etiketiyle görünür."
+    "Sesli derste PDF'in üstüne kalem, fosforlu kalem ve silgiyle yazıp çizebilirsin; geri al düğmesi son çizimi siler. Çizimler cihazında saklanır.",
+    "Sesli derste PDF çubuğundaki 'Çıkmış' düğmesi dersin çıkmış sorularını listeler; bir soruya dokununca PDF o sorunun dayandığı sayfaya gider ve ilgili satırlar işaretlenir."
   ],
   "degisen": [],
   "duzeltilen": [],

@@ -33,6 +33,9 @@ import { toast } from '../ui/Toast';
 import { useYildizliMi, useYildizliSayisi, yildizToggle } from '../../services/yildizliParagrafStore';
 import { YildizliParagraflarModal } from '../study/YildizliParagraflarModal';
 import '../learn/pdf/pdfDoc.css';
+import { DrawingModeToolbarTrigger, SlideDrawingCanvas, getDrawingGlobalState, setDrawingGlobalState, undoLastDrawing, useCanUndoDrawing } from '../learn/SlideDrawingCanvas';
+import { Undo2 } from 'lucide-react';
+import type { CdCikmisKonum } from './canliDersStore';
 
 /** iPhone/iPad'de tarayıcı sekmesinde adres çubuğu gizlenemez: gerçek tam ekran için PWA'yı öner. */
 let pwaIpucuGosterildi = false;
@@ -1316,8 +1319,21 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
     if (ilk && sonHedef.current.sayfa === 1 && sonHedef.current.dosya === 0) sonHedef.current = { dosya: ilk.dosya || 0, sayfa: Math.max(1, ilk.sayfa) };
   }
   const hedef = sonHedef.current;
-  // Takip sürerken hedef; durunca kullanıcının baktığı yer (sürdürünce yeniden hedefe kayar)
-  const gor = durdu && elle ? elle : hedef;
+  // Çıkmış soru seçildiyse dayandığı cümlenin PDF yeri (işaret yoksa paragrafın hizalama sayfası)
+  const [cikSec, setCikSec] = useState<CdCikmisKonum | null>(null);
+  const cikYer = useMemo(() => {
+    if (!cikSec) return null;
+    const x = detay.isaret?.[String(cikSec.p)]?.[cikSec.c];
+    if (x && x.t !== 'sayfa') return { dosya: x.d, sayfa: Math.max(1, x.s), l: x.l };
+    const e = pdf.paragraflar[cikSec.p];
+    if (!e) return null;
+    const sy = x?.s ?? e.sayfalar?.[cikSec.c] ?? e.sayfa;
+    const d = x?.d ?? e.dosyalar?.[cikSec.c] ?? e.dosya ?? 0;
+    return Number.isFinite(sy) ? { dosya: d, sayfa: Math.max(1, sy), l: [] as number[][] } : null;
+  }, [cikSec, detay.isaret, pdf]);
+  // Takip sürerken hedef; durunca kullanıcının baktığı yer (sürdürünce yeniden hedefe kayar).
+  // Ders çalmıyorken seçili çıkmış sorunun yeri kalıcıdır.
+  const gor = durdu && elle ? elle : cikYer && (!canli || durdu) ? cikYer : hedef;
   // Ön çizim: sıradaki 8 cümlenin slaytları (aynı dosyada) — canlı takip o sayfaya atladığında çizim hazır olur
   const preload = useMemo(() => {
     if (!canli || aktif < 0) return undefined;
@@ -1362,12 +1378,14 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
   useEffect(() => {
     const w = wrapRef.current;
     if (!w) return;
-    const on = () => durdur();
-    w.addEventListener('wheel', on, { passive: true });
+    // Çizim açıkken sayfaya dokunmak canlı takibi bırakmaz (kalemle çizilen sayfa anlatılan sayfa olabilir)
+    const on = () => { if (getDrawingGlobalState().activeMode === 'none') durdur(); };
+    const hep = () => durdur();
+    w.addEventListener('wheel', hep, { passive: true });
     w.addEventListener('touchmove', on, { passive: true });
     w.addEventListener('pointerdown', on);
     return () => {
-      w.removeEventListener('wheel', on);
+      w.removeEventListener('wheel', hep);
       w.removeEventListener('touchmove', on);
       w.removeEventListener('pointerdown', on);
     };
@@ -1376,6 +1394,25 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
   const onVisible = useCallback((p: number) => {
     if (durdu) setElle({ dosya: gor.dosya, sayfa: p });
   }, [durdu, gor.dosya]);
+
+  // Çizim kapsamı: ders + dosya + sayfa (tarayıcıda kalır); ekrandan çıkınca araç kapanır
+  const cizimKok = `cd:${detay.key}:${dosya?.fileId || dosya?.name || gor.dosya}`;
+  const pageOverlay = useCallback((n: number) => (
+    <React.Fragment key={n}>
+      {cikYer && cikSec && cikYer.dosya === gor.dosya && cikYer.sayfa === n && (
+        <div className="cd-cik-kat" aria-hidden>
+          {cikYer.l.map((b, i) => <span key={i} className="cd-cik-kutu" style={{ left: `${b[0] * 100}%`, top: `${b[1] * 100}%`, width: `${(b[2] - b[0]) * 100}%`, height: `${(b[3] - b[1]) * 100}%` }} />)}
+        </div>
+      )}
+      <SlideDrawingCanvas scope={`${cizimKok}:${n}`} controls={false} />
+    </React.Fragment>
+  ), [cizimKok, cikYer, cikSec, gor.dosya]);
+  const cikmisSec = useCallback((q: CdCikmisKonum | null) => {
+    setCikSec(q);
+    if (q) { setElle(null); durdur(); }
+  }, [durdur]);
+  const geriAlinir = useCanUndoDrawing();
+  useEffect(() => () => setDrawingGlobalState({ activeMode: 'none' }), []);
 
   return (
     <div className="cd-bolme cd-pdf-bolme">
@@ -1393,6 +1430,9 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
           <span className="cd-pdf-dosya">{(gor.dosya || 0) + 1}/{pdf.dosyalar.length}</span>
         )}
         <span className="cd-grow" />
+        {!!detay.cikmisKonum?.length && <CikmisKonumDugme liste={detay.cikmisKonum} secili={cikSec} onSec={cikmisSec} />}
+        <DrawingModeToolbarTrigger className="cd-pdf-cizim" />
+        <button type="button" className="cd-ib" onClick={undoLastDrawing} disabled={!geriAlinir} aria-label="Son çizimi geri al" title="Son çizimi geri al"><Undo2 /></button>
         <button type="button" className="cd-ib" onClick={() => setZoom((z) => Math.max(0.5, +(z - 0.25).toFixed(2)))} aria-label="Uzaklaştır"><Minus /></button>
         <span className="cd-pdf-zoom">{Math.round(zoom * 100)}%</span>
         <button type="button" className="cd-ib" onClick={() => setZoom((z) => Math.min(3, +(z + 0.25).toFixed(2)))} aria-label="Yakınlaştır"><Plus /></button>
@@ -1406,8 +1446,8 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
               key={src}
               src={src}
               page={gor.sayfa}
-              highlight={canli && !durdu && es ? [hedef.sayfa, hedef.sayfa] : undefined}
-              highlightLabel="Şu an anlatılan"
+              highlight={cikYer && gor === cikYer ? [cikYer.sayfa, cikYer.sayfa] : canli && !durdu && es ? [hedef.sayfa, hedef.sayfa] : undefined}
+              highlightLabel={cikYer && gor === cikYer ? `Çıkmış soru${cikSec?.yil ? ` · ${cikSec.yil}` : ''}` : 'Şu an anlatılan'}
               marks={marks}
               notes={detay.ogrenciNot?.[String(gor.dosya)] || null}
               preload={preload}
@@ -1416,6 +1456,7 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
               onVisiblePage={onVisible}
               onError={setHataMsj}
               fit="width"
+              pageOverlay={pageOverlay}
             />
           </Suspense>
         ) : (
@@ -1431,6 +1472,55 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
         <button type="button" className="cd-donus" onClick={surdur}>
           <Crosshair aria-hidden /> Canlı konuma dön
         </button>
+      )}
+    </div>
+  );
+}
+
+/** PDF çubuğunda "Çıkmış N": dersin çıkmış soruları; seçilen sorunun dayandığı yer PDF'te sayfa + bölge olarak vurgulanır */
+function CikmisKonumDugme({ liste, secili, onSec }: { liste: CdCikmisKonum[]; secili: CdCikmisKonum | null; onSec: (q: CdCikmisKonum | null) => void }) {
+  const [acik, setAcik] = useState(false);
+  const kapRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!acik) return;
+    const dis = (e: PointerEvent) => { if (!kapRef.current?.contains(e.target as Node)) setAcik(false); };
+    const esc = (e: KeyboardEvent) => { if (e.key === 'Escape') setAcik(false); };
+    document.addEventListener('pointerdown', dis);
+    document.addEventListener('keydown', esc);
+    return () => { document.removeEventListener('pointerdown', dis); document.removeEventListener('keydown', esc); };
+  }, [acik]);
+  const i = secili ? liste.indexOf(secili) : -1;
+  return (
+    <div className="cd-cik" ref={kapRef}>
+      <button type="button" className={`cd-cik-btn${secili ? ' is-on' : ''}`} aria-haspopup="listbox" aria-expanded={acik} onClick={() => setAcik((a) => !a)}
+        title="Bu dersin çıkmış soruları: dokun, sorunun dayandığı yer PDF'te işaretlensin">
+        <Star aria-hidden /> Çıkmış <b>{liste.length}</b>
+      </button>
+      {secili && (
+        <span className="cd-cik-gez">
+          <button type="button" className="cd-ib" aria-label="Önceki çıkmış soru" disabled={i <= 0} onClick={() => onSec(liste[i - 1])}><ChevronLeft /></button>
+          <span className="cd-cik-no">{i + 1}/{liste.length}</span>
+          <button type="button" className="cd-ib" aria-label="Sonraki çıkmış soru" disabled={i >= liste.length - 1} onClick={() => onSec(liste[i + 1])}><ChevronRight /></button>
+        </span>
+      )}
+      {acik && (
+        <div className="cd-cik-panel" role="listbox" aria-label="Çıkmış sorular">
+          <div className="cd-cik-bas">
+            <span>Çıkmış sorular · PDF'teki yeri</span>
+            {secili && <button type="button" className="cd-cik-temizle" onClick={() => { onSec(null); setAcik(false); }}>Vurguyu kaldır</button>}
+          </div>
+          {liste.map((q, k) => (
+            <button key={q.id} type="button" role="option" aria-selected={q === secili} className={`cd-cik-oge${q === secili ? ' is-on' : ''}`}
+              onClick={() => { onSec(q); setAcik(false); }}>
+              <span className="cd-cik-oge-no">{k + 1}</span>
+              <span className="cd-cik-oge-m">
+                <span className="cd-cik-oge-kok">{q.kok}</span>
+                {q.cevap && <span className="cd-cik-oge-cvp">Cevap: {q.cevap}</span>}
+              </span>
+              {q.yil && <span className="cd-cik-oge-yil">{q.yil}</span>}
+            </button>
+          ))}
+        </div>
       )}
     </div>
   );

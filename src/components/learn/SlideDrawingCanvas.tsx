@@ -73,6 +73,35 @@ export const setDrawingGlobalState = (patch: Partial<DrawingGlobalState>) => {
   drawingListeners.forEach((l) => l());
 };
 
+export const getDrawingGlobalState = () => globalDrawingState;
+
+// Çok tuvalli yüzeyler (PDF sayfaları) için ortak geri alma: son çizim hangi tuvaldeyse oradan geri alınır.
+const undoOrder: string[] = [];
+const undoHandlers = new Map<string, () => void>();
+const undoListeners = new Set<() => void>();
+const undoChanged = () => undoListeners.forEach((l) => l());
+export const undoLastDrawing = () => {
+  while (undoOrder.length) {
+    const sc = undoOrder.pop()!;
+    const h = undoHandlers.get(sc);
+    if (h) {
+      h();
+      undoChanged();
+      return;
+    }
+  }
+  undoChanged();
+};
+export const useCanUndoDrawing = () =>
+  useSyncExternalStore(
+    (cb) => {
+      undoListeners.add(cb);
+      return () => undoListeners.delete(cb);
+    },
+    () => undoOrder.length > 0,
+    () => false
+  );
+
 export const useDrawingGlobalState = () =>
   useSyncExternalStore(
     (cb) => {
@@ -114,13 +143,16 @@ export const penPalette = (mode: string) => (mode === 'dark' ? PALETTE_COLORS_DA
 export const SlideDrawingCanvas: React.FC<{
   scope: string;
   className?: string;
-}> = ({ scope, className = '' }) => {
+  /** false: alttaki geri al/temizle çubuğu gösterilmez (çok sayfalı yüzey kendi çubuğunu kullanır) */
+  controls?: boolean;
+}> = ({ scope, className = '', controls = true }) => {
   const { activeMode, color, penSize, highlighterSize } = useDrawingGlobalState();
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const dprRef = useRef(1);
 
   const [strokes, setStrokes] = useState<DrawingStroke[]>(() => readScopeDrawings(scope));
+  const prevLen = useRef(strokes.length);
   const currentStrokeRef = useRef<DrawingStroke | null>(null);
   const isDrawingRef = useRef(false);
   const activePointerRef = useRef<number | null>(null);
@@ -128,6 +160,7 @@ export const SlideDrawingCanvas: React.FC<{
   // Sync with scope changes (when changing slides)
   useEffect(() => {
     const loaded = readScopeDrawings(scope);
+    prevLen.current = loaded.length;
     setStrokes(loaded);
   }, [scope]);
 
@@ -350,6 +383,25 @@ export const SlideDrawingCanvas: React.FC<{
     commitStrokes(next);
   };
 
+  const strokesRef = useRef(strokes);
+  strokesRef.current = strokes;
+  useEffect(() => {
+    if (strokes.length > prevLen.current) {
+      undoOrder.push(scope);
+      undoChanged();
+    }
+    prevLen.current = strokes.length;
+  }, [strokes, scope]);
+  useEffect(() => {
+    undoHandlers.set(scope, () => {
+      const cur = strokesRef.current;
+      if (cur.length) commitStrokes(cur.slice(0, -1));
+    });
+    return () => {
+      undoHandlers.delete(scope);
+    };
+  }, [scope, commitStrokes]);
+
   const clearAll = () => {
     if (strokes.length === 0) return;
     commitStrokes([]);
@@ -377,7 +429,7 @@ export const SlideDrawingCanvas: React.FC<{
       />
 
       {/* Floating Canvas Action Controls when drawings exist */}
-      {isInteractive && (
+      {isInteractive && controls && (
         <div className="fixed left-1/2 -translate-x-1/2 bottom-[max(16px,env(safe-area-inset-bottom))] flex items-center gap-1.5 z-[66] pointer-events-auto bg-white/95 backdrop-blur-md p-1 rounded-xl border border-line shadow-lg animate-in fade-in duration-150">
           <button
             type="button"

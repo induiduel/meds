@@ -49,6 +49,8 @@ export interface PdfDocViewProps {
   /** Sayfa başına kalıcı vurgu (öğrenci notunda işaretli yerler): kırmızı marker kutuları + köşede tek yıldız */
   notes?: Record<string, { l: number[][]; y?: number[]; b?: number[][] }> | null;
   onSearch?: (r: { hits: PdfSearchHit[]; done: boolean } | null) => void;
+  /** Sayfa üstü katman (ör. çizim tuvali); yalnız görünen sayfa ±2 için kurulur */
+  pageOverlay?: (page: number) => React.ReactNode;
 }
 
 export interface PdfMarks {
@@ -167,7 +169,7 @@ interface Slot {
   textFor?: number; // metin katmanı kuruldu (döndürme)
 }
 
-export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu adımın kaynağı', zoom, onZoom, onVisiblePage, onLoaded, onError, fit = 'width', rotation = 0, thumbs = false, query = '', onSearch, marks = null, preload, notes = null }: PdfDocViewProps) {
+export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu adımın kaynağı', zoom, onZoom, onVisiblePage, onLoaded, onError, fit = 'width', rotation = 0, thumbs = false, query = '', onSearch, marks = null, preload, notes = null, pageOverlay }: PdfDocViewProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [doc, setDoc] = useState<PDFDocumentProxy | null>(null);
   const [sizes, setSizes] = useState<{ w: number; h: number }[]>([]);
@@ -574,6 +576,7 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
               {src && n === hs && <span className="pdv-src-tag">{highlightLabel}</span>}
               {notes?.[n] && !rot && <NotLayer n={notes[n]} />}
               {marks && marks.page === n && !rot && <MarkLayer m={marks} />}
+              {pageOverlay && !rot && Math.abs(n - current) <= 2 && pageOverlay(n)}
               <span className="pdv-no" aria-hidden>{n}</span>
             </div>
           );
