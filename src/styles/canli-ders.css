@@ -94,6 +94,7 @@
 .cd-geri:hover { background: var(--color-field); color: var(--color-ink); }
 .cd-ders-ad { flex: 1; min-width: 0; margin: 0; font-size: 17px; font-weight: 700; line-height: 1.25; letter-spacing: -.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .cd-ders-ad span { color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.cd-gorunum-dongu { display: none; }
 .cd-sekmeler { display: inline-flex; padding: 3px; border-radius: 10px; background: var(--color-field); flex: none; }
 .cd-sekmeler button { display: inline-flex; align-items: center; gap: 5px; height: 30px; padding: 0 10px; border: 0; border-radius: 8px; background: transparent; color: var(--color-ink-2); font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; }
 .cd-sekmeler button > svg { width: 15px; height: 15px; }
@@ -504,7 +505,14 @@
   .cd-ders-bas > .cd-ders-arac { grid-area: arac; flex-wrap: wrap; gap: 4px; }
   /* Adsız çocuklar (ör. kamp konum şeridi .tk-sb) ilk 34 px 'geri' hücresine düşüp harf harf diziliyordu: tam satır */
   .cd-ders-bas > :not(.cd-geri, .cd-ders-ad, .cd-ders-uc, .cd-ders-arac, .cd-ders-baslik) { grid-column: 1 / -1; }
-  .cd-ders-bas .cd-sekmeler { flex: 1; min-width: 140px; margin: 0; display: flex; }
+  /* görünüm seçici ayrı satır kaplamasın (kullanıcı 2026-10-24): başlık satırında tek döngü düğmesi; satır yalnız
+     başka araç (bölme düzeni vb.) varsa kalır. Bitti / Tekrar et simgeye iner ki başlığa yer kalsın. */
+  .cd-ders-bas .cd-sekmeler { display: none; }
+  .cd-ders-bas .cd-gorunum-dongu { display: inline-flex; width: 32px; height: 32px; padding: 0; justify-content: center; flex: none; }
+  .cd-ders-bas .cd-ders-uc .cd-ders-takip :is(button, a) > span { display: none; }
+  .cd-ders-bas .cd-ders-uc .cd-ders-takip :is(button, a) { width: 32px; min-width: 0; padding: 0; justify-content: center; }
+  .cd-ders-bas:not(:has(.cd-ders-arac > :not(.cd-sekmeler))) { grid-template-areas: 'geri ad uc'; }
+  .cd-ders-bas:not(:has(.cd-ders-arac > :not(.cd-sekmeler))) > .cd-ders-arac { display: none; }
   .cd-ders-bas .cd-sekmeler button { flex: 1; min-width: 0; justify-content: center; height: 30px; padding: 0 6px; font-size: 12px; }
   .cd-ders-bas .cd-sekmeler button > svg { display: none; }
   .cd-ders-bas .cd-duzen-arac { flex: 0 0 auto; }
@@ -1063,3 +1071,7 @@
 .cd-ciz-renk > button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
 .cd-ciz-not { margin: 0; font-size: 11.5px; color: var(--color-ink-3); }
 @media (max-width: 600px) { .cd-pdf-bar .cd-cik-ad, .cd-pdf-bar .cd-pdf-zoom { display: none; } }
+/* dar PDF bölmesi (geniş ekranda Metin + Slayt): ölçüt ekran değil bölme genişliği; "Çiz" harf harf kırılmasın */
+.cd-pdf-bar { container-type: inline-size; }
+.cd-pdf-bar .cd-cik-btn { white-space: nowrap; flex: none; }
+@container (max-width: 460px) { .cd-cik-ad, .cd-pdf-zoom { display: none; } }

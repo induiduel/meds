@@ -202,6 +202,17 @@ def _bilesenler(k: dict) -> list[tuple[list, list]]:
     return list(out.values())
 
 
+def yazi_kesisir(kutu, satirlar, pay: float = 0.01) -> bool:
+    """Panel kutusu PDF yazı satırının kutusuna (ascent/descent dahil) pay kadar yaklaşıyor mu? Mürekkep eşiği harf
+    gövdesini görür ama satır kutusunu görmez; panel satırın hemen altına yapışıp yazıya değiyor gibi duruyordu."""
+    x0, y0, x1, y1 = kutu
+    for s_ in satirlar or []:
+        a = s_["kutu"]
+        if not (x1 + pay <= a[0] or a[2] + pay <= x0 or y1 + pay <= a[1] or a[3] + pay <= y0):
+            return True
+    return False
+
+
 def panel_boyu(k: dict, g: float, oran: float) -> float:
     """Panelin sayfa yüksekliği oranı cinsinden yüksekliği; istemcideki dizilimin em ile kopyası (oran = genişlik/yükseklik).
     Ölçüm: tarayıcıda 567 ve 1100 px sayfada gerçek yükseklikle karşılaştırıldı."""
@@ -411,7 +422,8 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
         aday = [(o[0] + ox, o[1] + oy) for ox in (0.0, -0.02, 0.04, -0.1, -0.2, 0.1, -0.3) for oy in (-0.04, 0.0, -0.06, 0.03, -0.12, 0.09)]
         iyi = [(r.kutu_doluluk(x - 0.012, y - 0.012, x + g + 0.012, y + h + 0.012), x, y) for x, y in aday
                if 0 <= x and x + g <= 1 and 0 <= y and y + h <= 1]
-        iyi = [z for z in iyi if z[0] < 0.02 and not any(_kesisir((z[1], z[2], z[1] + g, z[2] + h), o) for o in (dolu or []))]
+        iyi = [z for z in iyi if z[0] < 0.02 and not any(_kesisir((z[1], z[2], z[1] + g, z[2] + h), o) for o in (dolu or []))
+               and not yazi_kesisir((z[1], z[2], z[1] + g, z[2] + h), satirlar, 0.004)]
         if iyi:
             # boş adaylardan bölgeye en yakını (etiket anlattığı yerin yanında dursun)
             _, x, y = min(iyi, key=lambda z: (z[1] - o[0]) ** 2 + (z[2] - o[1]) ** 2)
@@ -482,6 +494,8 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
                     dl = r.kutu_doluluk(x - 0.012, y - 0.012, x + g + 0.012, y + h + 0.012)
                     if dl >= 0.01:            # yazının kenarına bile binmesin (H46)
                         continue
+                    if yazi_kesisir((x, y, x + g, y + h), satirlar):   # PDF yazı satırı kutusuna da değmesin (H48)
+                        continue
                     puan = dl * 8 + ((x + g / 2 - mx) ** 2 + (y + h / 2 - my) ** 2) ** 0.5
                     if en is None or puan < en[0]:
                         en = (puan, x, y, g, h, dl)
@@ -508,6 +522,8 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
                         if y < 1.0:
                             ic_alt = min(1.0, y + h)
                             if r.kutu_doluluk(x - 0.012, y - 0.012, x + g + 0.012, min(1.0, ic_alt + 0.012)) >= 0.01:
+                                continue
+                            if yazi_kesisir((x, y, x + g, ic_alt), satirlar):
                                 continue
                         ek = max(0.0, y + h + 0.02 - 1.0)
                         puan = ek * 10 + abs(y - my) * 0.5

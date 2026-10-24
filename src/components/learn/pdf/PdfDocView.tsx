@@ -463,6 +463,30 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
     schedule();
   }, [schedule, width, height, zoom, sizes, fit, rot]);
 
+  // Anlatılan satırlar alttaki oynatıcının (kayan alanın scroll-padding-bottom'u) ya da görünür alanın altında kalmasın:
+  // gerekirse yalnız yetecek kadar kaydır (kullanıcı 2026-10-24: oynatıcı "monitörizasyon" satırını örtüyordu)
+  const isaretAnahtar = marks && !rot ? `${marks.page}|${marks.lines.map((b) => b.join(',')).join(';')}` : '';
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el || !marks || rot || !marks.lines.length) return;
+    const i = marks.page - 1;
+    const t = geo.current.tops[i];
+    const d = geo.current.sizes[i];
+    if (t == null || !d) return;
+    const h = d.h * geo.current.scaleOf(i);
+    const ust = t + Math.min(...marks.lines.map((b) => b[1])) * h;
+    const alt = t + Math.max(...marks.lines.map((b) => b[3])) * h;
+    const altPay = parseFloat(getComputedStyle(el).scrollPaddingBottom) || 0;
+    // sayfa geçişindeki yumuşak kaydırma (goTo, ≤900 ms) bitince ölç
+    const id = window.setTimeout(() => {
+      const gorAlt = el.scrollTop + el.clientHeight - altPay - 12;
+      if (alt > gorAlt) el.scrollTo({ top: Math.max(0, Math.min(ust - 24, el.scrollTop + (alt - gorAlt))), behavior: 'smooth' });
+      else if (ust < el.scrollTop + 8) el.scrollTo({ top: Math.max(0, ust - 24), behavior: 'smooth' });
+    }, 950);
+    return () => window.clearTimeout(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isaretAnahtar]);
+
   /* ---- hedef sayfaya git ---- */
   const goTo = useCallback((p: number, smooth: boolean) => {
     const el = scrollRef.current;

@@ -1,11 +1,12 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 291,
-  "baslik": "Kurul 1 2026-2027 çıkmış sorular: konu bilgisi ve KTG sorusu",
+  "onem": 292,
+  "baslik": "Sesli ders ekranında düzen düzeltmeleri",
   "maddeler": [
-    "Her sorunun başında kurul, ders ve konu (ders notu) bilgisi var",
-    "Kadın doğumdaki KTG/NST sorusu görseliyle eklendi",
-    "Sorular ders notlarıyla eşleştirildi"
+    "Oynatıcı artık anlatılan satırları örtmüyor; slayt kendiliğinden kayıyor",
+    "Telefonda görünüm seçici başlık satırında tek düğme; slayta daha çok yer kalıyor",
+    "Dar slayt bölmesinde “Çiz” düğmesi bozulmuyor",
+    "Çizim panelleri yazı satırlarına yapışmıyor"
   ],
   "eklenen": [],
   "degisen": [

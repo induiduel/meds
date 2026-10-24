@@ -507,6 +507,17 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
           )}
         </div>
         <div className="cd-ders-uc">
+          {pdfVar && (() => {
+            // telefonda görünüm seçici ayrı satır kaplamasın: tek düğme sırayla Metin → Metin + Slayt → Slayt
+            const i = GORUNUMLER.findIndex((g) => g.id === mod);
+            const sonraki = GORUNUMLER[(i + 1) % GORUNUMLER.length];
+            return (
+              <button type="button" className="cd-btn cd-gorunum-dongu" onClick={() => setGorunum(sonraki.id)}
+                      title={`Görünüm: ${GORUNUMLER[i]?.ad} (dokun: ${sonraki.ad})`} aria-label={`Görünüm: ${GORUNUMLER[i]?.ad}. ${sonraki.ad} görünümüne geç`}>
+                {GORUNUMLER[i]?.ikon}
+              </button>
+            );
+          })()}
           {!tamEkran && (
             <KonuDugmeleri kucuk className="cd-ders-takip" modul="sesli" konu={detay.key} ad={detay.baslik}
               onTekrar={() => { const v = cdTercihVaryant(detay.varyantlar); if (v) cdOynat(detay, v.id, { t: 0 }); }} />
