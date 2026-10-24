@@ -1,9 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 311,
-  "baslik": "Telefonda okunur paneller",
+  "onem": 312,
+  "baslik": "Çizim etiketi düzeltmesi",
   "maddeler": [
-    "Çizim panellerinin yazısı telefonda da okunur boyutta"
+    "Çizim etiketleri telefonda satıra inip sayfadan taşmıyor"
   ],
   "eklenen": [],
   "degisen": [
