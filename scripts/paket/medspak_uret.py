@@ -66,6 +66,7 @@ def ders_pdfleri(deste_id: str) -> list[tuple[str, bytes]]:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("key"); ap.add_argument("--ekler", action="store_true"); ap.add_argument("--cikti")
+    ap.add_argument("--desteler", help="deste kaynağı (varsayılan src/data/interactive_learning_decks.json)")
     ap.add_argument("--mp3", action="store_true", help="sesi Opus'a çevirme (ffmpeg yoksa da MP3 kalır)")
     a = ap.parse_args()
     key = a.key
@@ -81,7 +82,7 @@ def main() -> int:
     metin = dosya["metin"].read_text(encoding="utf-8")
     hz = json.loads(dosya["hizalama"].read_text()) if dosya["hizalama"] else {}
     deste_id = hz.get("deckId") or f"k2p-{key}"
-    desteler = json.loads((MEDS / "src/data/interactive_learning_decks.json").read_text())
+    desteler = json.loads(Path(a.desteler or MEDS / "src/data/interactive_learning_decks.json").read_text())
     deste = next((d for d in desteler if d.get("id") == deste_id), None)
     isr = json.loads(dosya["isaret"].read_text()) if dosya["isaret"] else {}
     cz = json.loads(dosya["cizim"].read_text()) if dosya["cizim"] else {}

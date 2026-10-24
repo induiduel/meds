@@ -1,22 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 328,
-  "baslik": "Güvenlik: yönetici ve sahiplik doğrulaması sıkılaştırıldı · Kurul 2 sesli derste çıkmış uyarıları",
+  "onem": 329,
+  "baslik": "Genel Anestezik İlaçlar: önem listesi, soru çözücü ve sınav asistanı",
   "maddeler": [
-    "Yönetici işlemleri yalnız doğrulanmış girişle yapılabilir",
-    "Ortak notlarını, mesajlarını ve yorumlarını yalnız sen (ya da yönetici) silebilirsin",
-    "Yönetici paneli açılışta oturumu bekleyip canlı akışa doğru yetkiyle bağlanır",
-    "Kurul 2 sesli derslerinde çıkmışta sorulan her bilgi artık açıkça söyleniyor"
+    "Kurul 2 Farmakoloji 'Genel Anestezik İlaçlar' (sınama): 36 maddelik önem listesi, 33 sesli soru çözücü sorusu, sınav asistanı",
+    "Sesli derste canlı çizimler ve PDF işaretleri"
   ],
-  "eklenen": [],
-  "degisen": [
-    "Yönetici yetkisi",
-    "Öğren ortak notları",
-    "Yorum/bildirim sahipliği"
+  "eklenen": [
+    "Kurul 2 Farmakoloji 'Genel Anestezik İlaçlar' (sınama): 36 maddelik önem listesi, 33 sesli soru çözücü sorusu, sınav asistanı",
+    "Sesli derste canlı çizimler ve PDF işaretleri"
   ],
-  "duzeltilen": [
-    "Başlık taklidiyle yönetici olunabilmesi",
-    "Kurul 2 sesli derslerinde çıkmış anışlarının kaybolması"
-  ],
+  "degisen": [],
+  "duzeltilen": [],
   "silinen": []
 }
