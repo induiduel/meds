@@ -209,7 +209,7 @@ S['Kadın Hastalıkları ve Doğum'] = [
 
 S['Farmakoloji'] = [
  (97, 'Takrolimusun temel etki mekanizması nedir?',
-  ['mTOR proteinini inhibe ederek IL-2 yanıtını engellemek', 'Dihidrofolat redüktazı inhibe ederek DNA sentezini bozmak', 'Kalsinörini inhibe ederek IL-2 gen transkripsiyonunu engellemek', 'IL-2 reseptörünün alfa alt birimini (CD25) bloke etmek', 'İnozin monofosfat dehidrojenaz enzimini inhibe etmek'], 'C', "Kök ve şıklar grubun cevap anahtarlı PDF'indeki (24.10 16:31) sürüme göre kısaltıldı; asıl sınava daha yakın."),
+  ['mTOR proteinini inhibe ederek IL-2 yanıtını engellemek', 'Dihidrofolat redüktazı inhibe ederek DNA sentezini bozmak', 'Kalsinörini inhibe ederek IL-2 gen transkripsiyonunu engellemek', 'IL-2 reseptörünün alfa alt birimini (CD25) bloke etmek', 'İnozin monofosfat dehidrojenaz enzimini inhibe etmek'], 'C', "Kök grubun cevap anahtarlı PDF'indeki (24.10 16:31) sürüme göre kısaltıldı (asıl sınava daha yakın); şıklar korundu."),
  (None, 'Gebelerde kullanımı sırasında ağır teratojenite (fokomeli / ekstremite yokluğu) yol açtığı için gebelikte kullanımı kesinlikle kontrendike olan tarihî ilaç hangisidir?',
   ['Talidomid', 'Penisilin', 'Parasetamol', 'Folik asit', 'İnsülin'], 'A', ''),
  (100, "Kemik rezorpsiyonunu engellemek amacıyla kullanılan, RANKL'a karşı geliştirilmiş monoklonal antikor ilaç aşağıdakilerden hangisidir?",
