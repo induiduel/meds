@@ -1,11 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 289,
-  "baslik": "Kurul 1 2026-2027 çıkmış sorular PDF’i yenilendi",
+  "onem": 290,
+  "baslik": "Kelime takibi ve slayt uzatma düzeltmeleri",
   "maddeler": [
-    "PDF yeni tasarımda: iki sütun, ders renkleri, soru kartları ve etiketler",
-    "Şıkları toplanamayan 13 sorunun şıkları ders notlarından üretildi ve işaretlendi",
-    "Cevap anahtarı derslere göre ayrıldı"
+    "Konuşulan kelimenin işareti artık yazıyı kapatmıyor",
+    "Slayt yalnız gerektiğinde ve gerektiği kadar uzatılıyor; panel önce slaytın kendi boşluğunu kullanıyor",
+    "Panel oklarındaki açıklamalar kesilmiyor"
   ],
   "eklenen": [],
   "degisen": [

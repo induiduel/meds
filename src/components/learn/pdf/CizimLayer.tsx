@@ -172,8 +172,10 @@ const D = ({ d, hedef, gecikme = 0 }: { d: Dugum; hedef?: boolean; gecikme?: num
 const Bag = ({ tur, etiket, dikey, gecikme = 0 }: { tur?: string; etiket?: string; dikey?: boolean; gecikme?: number }) => (
   <span className={`pdv-cz-bag is-${tur || 'aktive'}${dikey ? ' is-dikey' : ''}${etiket ? ' has-etiket' : ''}`} style={{ ['--g' as any]: `${gecikme}ms` }}>
     {etiket && <span className="pdv-cz-bag-etiket">{etiket}</span>}
-    <span className="pdv-cz-bag-cizgi" />
-    <span className="pdv-cz-bag-uc">{tur === 'inhibe' ? '⊣' : '▶'}</span>
+    <span className="pdv-cz-bag-ok">
+      <span className="pdv-cz-bag-cizgi" />
+      <span className="pdv-cz-bag-uc">{tur === 'inhibe' ? '⊣' : '▶'}</span>
+    </span>
   </span>
 );
 

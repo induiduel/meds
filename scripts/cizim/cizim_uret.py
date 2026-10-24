@@ -241,7 +241,9 @@ def panel_boyu(k: dict, g: float, oran: float) -> float:
             else:
                 satir, x = 1, 0.0
                 for i, d in enumerate(dg):
-                    w = gw(d["metin"]) + (0 if i == 0 else (6.4 if any(e.get("etiket") for e in kn) else 2.6))
+                    gelen = next((e for e in kn if e.get("b") == d.get("id")), None)
+                    bag = max(2.6, len((gelen or {}).get("etiket") or "") * 0.46 + 1.0)   # etiket okun üstünde, ok onun eni kadar
+                    w = gw(d["metin"]) + (0 if i == 0 else bag)
                     if x and x + w > W:
                         satir += 1; x = 0.0
                     x += w
@@ -494,13 +496,28 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
             # boş yer yok (genel kural 14, kullanıcı 2026-10-24): panel sayfanın ALTINA eklenen alana konur; görüntüleyici
             # o sayfayı ek_alt kadar uzatır, alanı sayfanın alt kenar rengiyle boyar (slaytın kendisi gibi görünür).
             # Koordinatlar sayfa oranı olarak kalır (y > 1), işaret/vurgu/imleç katmanları etkilenmez.
-            g = 0.9                                   # ek alan boş: panel tam genişlikte, en kısa boyda
-            h = panel_boyu(k, g, oran)
-            # her panel yalnız kendi cümlesinde görünür (istemci cümle başına tek şema): ek alandaki paneller aynı yeri
-            # paylaşır, üst üste dizilmez; ek alan sayfadaki en uzun panel kadardır (görüntüleyici sayfa başına en büyüğü alır)
-            x, y = 0.05, 1.015
-            k = {**k, "konum": [round(x, 4), round(y, 4)], "genislik": round(g, 3), "doluluk": 0.0,
-                 "ek_alt": round(y + h + 0.03 - 1.0, 4), "ek_renk": r.alt_renk, "kutu_h": round(h, 3)}
+            # Ek alan yalnız gerektiği kadar (kullanıcı 2026-10-24): panel önce slaytın alttaki boşluğuna oturur, yalnız
+            # sığmayan kısmı için sayfa uzatılır. Aday: genişlik × x × başlangıç y; slayt içindeki parçada mürekkep < %1.
+            # Seçim: en az ek alan, sonra anlatılan satırlara yakınlık.
+            en2 = None
+            for g in (0.9, 0.7, 0.5):
+                h = panel_boyu(k, g, oran)
+                for x in sorted({0.05, round(min(max(0.03, mx - g / 2), 0.97 - g), 2)}):
+                    for yi in range(30, 101):
+                        y = yi / 100
+                        if y < 1.0:
+                            ic_alt = min(1.0, y + h)
+                            if r.kutu_doluluk(x - 0.012, y - 0.012, x + g + 0.012, min(1.0, ic_alt + 0.012)) >= 0.01:
+                                continue
+                        ek = max(0.0, y + h + 0.02 - 1.0)
+                        puan = ek * 10 + abs(y - my) * 0.5
+                        if en2 is None or puan < en2[0]:
+                            en2 = (puan, x, y, g, h, ek)
+            _, x, y, g, h, ek = en2
+            y = max(y, 1.015) if ek and y > 0.985 else y
+            k = {**k, "konum": [round(x, 4), round(y, 4)], "genislik": round(g, 3), "doluluk": 0.0, "kutu_h": round(h, 3)}
+            if ek > 0:
+                k.update(ek_alt=round(max(ek, y + h + 0.02 - 1.0), 4), ek_renk=r.alt_renk)
     return k
 
 

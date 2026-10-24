@@ -77,3 +77,7 @@ zenginleştirmedir: yalnız cümle gerçekten o görseli/ilişkiyi anlatıyorsa 
     genişlikte durur ve sayfanın ek panelleri aynı yeri paylaşır (her panel yalnız kendi cümlesinde görünür).
 
 Yalnız `cizim.json`'u yaz; başka dosyaya dokunma. Bitince tek satır: `BİTTİ: <komut sayısı>`.
+16. **Sayfa yalnız gerektiğinde ve gerektiği kadar uzar:** panel önce slaytın kendi boşluğuna (alttaki boş bant dahil)
+    oturur; sığmazsa slaytın alt boşluğundan başlar ve sayfa yalnız taşan kısım kadar uzatılır (en az ek alan seçilir).
+17. **Kelime takipçisi yazıyı kapatmaz:** konuşulan kelime hafif zemin + harflerin altında ince çizgiyle gösterilir; harflerin
+    üstüne dolgu ya da kalın iç çizgi konmaz (küçük slayt yazısında okunmaz hale getiriyordu).
