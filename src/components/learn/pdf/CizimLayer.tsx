@@ -22,6 +22,10 @@ export interface CizimKomut {
    *  şema panelinin boş yerdeki konumu (sayfa oranı) */
   c?: number[];
   hedef?: number[];
+  /** ok rotası (cizim_uret.ok_yerlesimi): düz / dirsek / kavis noktaları; hedef yazının kutusu */
+  yol?: number[][];
+  rota?: 'duz' | 'dirsek' | 'kavis';
+  hedef_kutu?: number[];
   etiket_konum?: number[];
   etiket_genislik?: number;
   konum?: number[];
@@ -59,6 +63,32 @@ function Etiket({ z }: { z: CizimKomut }) {
   );
 }
 
+/** Yol → SVG: dirsekte köşe yuvarlatılır (yarıçap kısa kenarın en çok yarısı) */
+function yolD(y: number[][], rota?: string): string {
+  if (rota === 'dirsek' && y.length === 3) {
+    const [a, k, b] = y;
+    const r = Math.min(0.018, Math.hypot(k[0] - a[0], k[1] - a[1]) / 2, Math.hypot(b[0] - k[0], b[1] - k[1]) / 2);
+    const yon = (u: number[], v: number[]) => { const L = Math.hypot(v[0] - u[0], v[1] - u[1]) || 1; return [(v[0] - u[0]) / L, (v[1] - u[1]) / L]; };
+    const d1 = yon(a, k), d2 = yon(k, b);
+    return `M${P(a)} L${P([k[0] - d1[0] * r, k[1] - d1[1] * r])} Q${P(k)} ${P([k[0] + d2[0] * r, k[1] + d2[1] * r])} L${P(b)}`;
+  }
+  return `M${P(y[0])}` + y.slice(1).map((q) => ` L${P(q)}`).join('');
+}
+
+/** Yol boyunca u (0–1) oranındaki nokta (hareketli parçacık) */
+function yolNokta(y: number[][], u: number): number[] {
+  const seg = y.slice(1).map((q, i) => Math.hypot(q[0] - y[i][0], q[1] - y[i][1]));
+  let kalan = u * seg.reduce((a, b) => a + b, 0);
+  for (let i = 0; i < seg.length; i++) {
+    if (kalan <= seg[i] || i === seg.length - 1) {
+      const f = seg[i] ? Math.min(1, kalan / seg[i]) : 0;
+      return [y[i][0] + (y[i + 1][0] - y[i][0]) * f, y[i][1] + (y[i + 1][1] - y[i][1]) * f];
+    }
+    kalan -= seg[i];
+  }
+  return y[y.length - 1];
+}
+
 function Komut({ z, t }: { z: CizimKomut; t: number }) {
   const ciz = { pathLength: 1, strokeDasharray: 1, strokeDashoffset: 1 - t } as const;
   if (z.tur === 'kontur' && z.nokta) {
@@ -71,15 +101,20 @@ function Komut({ z, t }: { z: CizimKomut; t: number }) {
   }
   if (z.tur === 'akis' && z.a && z.b) {
     const [a, b] = [z.a, z.b];
-    const c = z.c || [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2];
-    const q = (u: number) => [(1 - u) ** 2 * a[0] + 2 * (1 - u) * u * c[0] + u * u * b[0], (1 - u) ** 2 * a[1] + 2 * (1 - u) * u * c[1] + u * u * b[1]];
-    const m = q(t);
+    const yol = z.yol?.length ? z.yol : z.c ? Array.from({ length: 17 }, (_, i) => {
+      const u = i / 16, c = z.c!;
+      return [(1 - u) ** 2 * a[0] + 2 * (1 - u) * u * c[0] + u * u * b[0], (1 - u) ** 2 * a[1] + 2 * (1 - u) * u * c[1] + u * u * b[1]];
+    }) : [a, b];
+    const m = yolNokta(yol, t);
     const ui = z.iliski === 'inhibe';
+    const hk = z.hedef_kutu;
     return (
       <g className={`pdv-cz-akis is-${z.iliski || 'aktive'}`}>
-        <path d={`M${P(a)} Q${P(c)} ${P(b)}`} {...ciz} markerEnd={t >= 1 ? `url(#pdv-cz-${ui ? 'dur' : 'ok'})` : undefined} vectorEffect="non-scaling-stroke" />
+        <path d={yolD(yol, z.rota)} {...ciz} markerEnd={t >= 1 ? `url(#pdv-cz-${ui ? 'dur' : 'ok'})` : undefined} vectorEffect="non-scaling-stroke" />
         {t > 0 && t < 1 && <circle cx={m[0] * V} cy={m[1] * V} r={4} className="pdv-cz-parca" />}
-        {t >= 1 && z.hedef && <circle cx={z.hedef[0] * V} cy={z.hedef[1] * V} r={14} className="pdv-cz-hedef" vectorEffect="non-scaling-stroke" />}
+        {t >= 1 && hk && (
+          <rect x={hk[0] * V} y={hk[1] * V} width={(hk[2] - hk[0]) * V} height={(hk[3] - hk[1]) * V} rx={6} className="pdv-cz-hedef" vectorEffect="non-scaling-stroke" />
+        )}
         {t >= 1 && <Etiket z={z} />}
       </g>
     );

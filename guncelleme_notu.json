@@ -1,10 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 275,
-  "baslik": "Sesli derste çizimler artık yazıların önünü kapatmıyor",
+  "onem": 276,
+  "baslik": "Canlı çizim okları daha net",
   "maddeler": [
-    "Oklar boş alandan kavisle geçiyor ve hedefi ince bir halkayla gösteriyor; şema ve etiketler sayfanın boş yerine yerleşiyor, yazı ve resimlerin üstüne binmiyor.",
-    "Çizgiler inceldi, kırmızı işaretçi küçüldü."
+    "Oklar sayfanın boşluğuna göre düz, dirsekli ya da kavisli çiziliyor",
+    "Okun gösterdiği yazı ya da kutu çerçeveyle belirtiliyor; anlamsız halka kaldırıldı",
+    "Çizgiler ve kırmızı işaretçi inceltildi"
   ],
   "eklenen": [],
   "degisen": [

@@ -36,6 +36,7 @@ class SayfaRaster:
         img = np.frombuffer(pix.samples, dtype=np.uint8).reshape(pix.h, pix.w, pix.n)
         gri = cv2.cvtColor(img[:, :, :3], cv2.COLOR_RGB2GRAY)
         self.h, self.w = gri.shape
+        self.gri = gri
         kenar = cv2.Canny(gri, 50, 150)
         self.kenar = cv2.dilate(kenar, np.ones((11, 11), np.uint8)) > 0
         arka = np.median(gri)

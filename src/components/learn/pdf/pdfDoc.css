@@ -181,7 +181,9 @@
 .pdv-cz-uc { fill: #2563eb; }
 .pdv-cz-uc-dur { stroke: #dc2626; stroke-width: 2; }
 .pdv-cz-parca { fill: #f59e0b; stroke: #fff; stroke-width: 1; }
-.pdv-cz-hedef { fill: none; stroke: rgb(37 99 235 / .7); stroke-width: 1.3; stroke-dasharray: none; }
+.pdv-cz-hedef { fill: rgb(37 99 235 / .06); stroke: rgb(37 99 235 / .75); stroke-width: 1.3; animation: pdv-cz-hedef-gel .3s ease-out both; }
+@keyframes pdv-cz-hedef-gel { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .pdv-cz-hedef { animation: none; } }
 .pdv-cz-egri path { stroke-width: 2; }
 .pdv-cz-egri path.is-yukselis { stroke: #ea580c; }
 .pdv-cz-egri path.is-inis { stroke: #0284c7; }

@@ -28,8 +28,11 @@ zenginleştirmedir: yalnız cümle gerçekten o görseli/ilişkiyi anlatıyorsa 
   Çizim bu kelimeler söylenirken çizilir; ilgili terimin söylendiği kelimeyi seç.
 - **kontur** (resimdeki bir yapının sınırı: anatomik bölge, lezyon, postür, histolojik alan): 5–20 nokta, yapının
   KENARI boyunca sırayla; mutlaka bir R# kutusunun içinde ve görüntüdeki gerçek çizginin/kenarın üstünde.
-- **akis** (A, B'ye yol açar / B'yi baskılar / A, B'ye dönüşür): `a` kaynak, `b` hedef noktası (ikisi de görüntüde o
-  terimlerin yazılı ya da çizili olduğu yerde), `iliski`: `aktive` | `inhibe` | `donusur`.
+- **akis** (A, B'ye yol açar / B'yi baskılar / A, B'ye dönüşür): `kaynak_metin` ve `hedef_metin` = slaytta YAZILI olan
+  kaynak ve hedef ifadesi (sayfalar.md'deki M# satırlarından, birebir; ör. "Osmolar açık", "Etilen glikol"); `a`/`b`
+  yaklaşık noktaları (aynı ifadenin üstünde), `iliski`: `aktive` | `inhibe` | `donusur`. Betik oku o yazıların gerçek
+  kutularına oturtur ve rotayı (düz / dirsek / kavis) içeriği kapatmayacak şekilde kendisi seçer; hedef yazı
+  çerçevelenir. Hedef bir resim bölgesiyse `hedef_metin` yazma.
 - **egri_faz** (grafik/eğri: EKG, kan gazı, skor seyri): `nokta` eğrinin ÜSTÜNDE soldan sağa sıralı 4–30 nokta; `fazlar`
   nokta dizini aralıkları (`yukselis` | `inis` | `plato`).
 - **sema** (görseli olmayan ya da metin ağırlıklı slaytta bir mekanizma/sınıflama): en çok 8 düğüm, her düğüm metni o

@@ -109,28 +109,147 @@ def _kesisir(a, b, pay=0.008) -> bool:
     return not (a[2] + pay <= b[0] or b[2] + pay <= a[0] or a[3] + pay <= b[1] or b[3] + pay <= a[1])
 
 
-def yerlesim(k: dict, r, dolu: list | None = None) -> dict:
+def sayfa_satirlari(sayfa) -> list[dict]:
+    """Sayfadaki yazı satırları: [{"kutu": [x0,y0,x1,y1] (0–1), "metin"}] — okun uçları bunlara oturur."""
+    W, H = sayfa.rect.width, sayfa.rect.height
+    out = []
+    for bl in sayfa.get_text("dict").get("blocks", []):
+        for ln in bl.get("lines", []):
+            t = "".join(sp.get("text", "") for sp in ln.get("spans", [])).strip()
+            if t:
+                x0, y0, x1, y1 = ln["bbox"]
+                out.append({"kutu": [x0 / W, y0 / H, x1 / W, y1 / H], "metin": t})
+    return out
+
+
+def _kutu_bul(nokta, metin, satirlar):
+    """Önce verilen kelime (slaytta geçen), yoksa noktayı içeren / en yakın (≤0,05) satır. → kutu ya da None."""
+    from cizim_dogrula import _kok
+    if metin:
+        kk = _kok(metin)
+        adaylar = [s_ for s_ in satirlar if kk and kk <= _kok(s_["metin"])] or \
+                  [s_ for s_ in satirlar if kk and len(kk & _kok(s_["metin"])) >= max(1, len(kk) - 1)]
+        if adaylar:
+            return min(adaylar, key=lambda s_: _uzak(nokta, s_["kutu"]) if nokta else 0)["kutu"]
+    if not nokta:
+        return None
+    en = min(satirlar, key=lambda s_: _uzak(nokta, s_["kutu"]), default=None)
+    return en["kutu"] if en and _uzak(nokta, en["kutu"]) <= 0.05 else None
+
+
+def _resim_kutusu(nokta, r):
+    """Resim sayfasında (yazı satırı yok) noktayı içeren en küçük çizili kutu (akış şeması kutusu): ince kenar
+    haritasındaki dış hatlardan, noktayı içeren, sayfanın %0,08–%15'i kadar ve dikdörtgene yakın (dolgu ≥%80) olan en
+    küçüğü. → kutu ya da None."""
+    if not nokta or r is None:
+        return None
+    import cv2
+    if not hasattr(r, "_kutular"):
+        kenar = cv2.Canny(r.gri, 50, 150) if hasattr(r, "gri") else (r.kenar.astype("uint8") * 255)
+        kn, _ = cv2.findContours(kenar, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+        r._kutular = []
+        for c in kn:
+            x, y, w, h = cv2.boundingRect(c)
+            oran = w * h / (r.w * r.h)
+            if 0.0008 <= oran <= 0.15 and cv2.contourArea(c) >= 0.8 * w * h:
+                r._kutular.append((w * h, [x / r.w, y / r.h, (x + w) / r.w, (y + h) / r.h]))
+        r._kutular.sort()
+    for _, K in r._kutular:
+        if K[0] <= nokta[0] <= K[2] and K[1] <= nokta[1] <= K[3]:
+            return K
+    return None
+
+
+def _uzak(p, k) -> float:
+    dx = max(k[0] - p[0], 0, p[0] - k[2])
+    dy = max(k[1] - p[1], 0, p[1] - k[3])
+    return (dx * dx + dy * dy) ** 0.5
+
+
+def ok_yerlesimi(k: dict, r, satirlar: list) -> dict:
+    """Akış okunun uçları gerçek yazı kutularına oturur; rota içeriğin önünü en az kapatan seçenekten: düz (yatay/dikey),
+    dirsek (dikey→yatay ya da yatay→dikey, köşe yuvarlak) ya da kavis (kullanıcı 2026-10-24: "her zaman kavis gerekmez;
+    okun ucu nereyi gösteriyor belli olmalı"). Hedef, halka yerine yazının kendi kutusuyla belirtilir."""
+    pa, pb = k.get("a"), k.get("b")
+    A = _kutu_bul(pa, k.get("kaynak_metin"), satirlar) or _resim_kutusu(pa, r) or ([pa[0], pa[1], pa[0], pa[1]] if pa else None)
+    B = _kutu_bul(pb, k.get("hedef_metin"), satirlar) or _resim_kutusu(pb, r)
+    hedef_yazi = B is not None
+    B = B or ([pb[0], pb[1], pb[0], pb[1]] if pb else None)
+    if not A or not B:
+        return k
+    pay = 0.006
+
+    def yanlar(K):
+        xm, ym = (K[0] + K[2]) / 2, (K[1] + K[3]) / 2
+        return {"sol": [K[0] - pay, ym], "sag": [K[2] + pay, ym], "ust": [xm, K[1] - pay], "alt": [xm, K[3] + pay]}
+    YA, YB = yanlar(A), yanlar(B)
+    adaylar = []
+    # düz: kutular x'te ya da y'de örtüşüyorsa ortak hizadan dikey/yatay tek çizgi
+    ox0, ox1 = max(A[0], B[0]), min(A[2], B[2])
+    if ox1 - ox0 > 0.005:
+        x = (ox0 + ox1) / 2
+        adaylar.append(("duz", [[x, A[3] + pay], [x, B[1] - pay]] if B[1] > A[3] else [[x, A[1] - pay], [x, B[3] + pay]]))
+    oy0, oy1 = max(A[1], B[1]), min(A[3], B[3])
+    if oy1 - oy0 > 0.003:
+        y = (oy0 + oy1) / 2
+        adaylar.append(("duz", [[A[2] + pay, y], [B[0] - pay, y]] if B[0] > A[2] else [[A[0] - pay, y], [B[2] + pay, y]]))
+    # dirsek: dikey→yatay (A üst/alt → B sol/sağ) ve yatay→dikey (A sol/sağ → B üst/alt)
+    for ay in ("ust", "alt"):
+        for by in ("sol", "sag"):
+            p0, p2 = YA[ay], YB[by]
+            if (ay == "alt") == (p2[1] > p0[1]) and (by == "sol") == (p2[0] > p0[0]):
+                adaylar.append(("dirsek", [p0, [p0[0], p2[1]], p2]))
+    for ay in ("sol", "sag"):
+        for by in ("ust", "alt"):
+            p0, p2 = YA[ay], YB[by]
+            if (ay == "sag") == (p2[0] > p0[0]) and (by == "ust") == (p2[1] > p0[1]):
+                adaylar.append(("dirsek", [p0, [p2[0], p0[1]], p2]))
+    # kavis: en yakın yanlar arasında
+    p0 = min(YA.values(), key=lambda q: _uzak(q, B)); p2 = min(YB.values(), key=lambda q: _uzak(q, A))
+    dx, dy = p2[0] - p0[0], p2[1] - p0[1]
+    L = (dx * dx + dy * dy) ** 0.5 or 1
+    for d in (0.15, -0.15, 0.3, -0.3):
+        c = [p0[0] + dx / 2 - dy / L * d * L, p0[1] + dy / 2 + dx / L * d * L]
+        adaylar.append(("kavis", [_bez(p0, c, p2, t / 16) for t in range(17)]))
+    adaylar.append(("kavis", [p0, p2]))
+
+    def ornek(yol):
+        out = []
+        for u, v in zip(yol, yol[1:]):
+            n = max(2, int(((v[0] - u[0]) ** 2 + (v[1] - u[1]) ** 2) ** 0.5 / 0.004))
+            out += [[u[0] + (v[0] - u[0]) * i / n, u[1] + (v[1] - u[1]) * i / n] for i in range(n)]
+        return out
+
+    def ic(q, K):
+        return K[0] - 0.008 <= q[0] <= K[2] + 0.008 and K[1] - 0.008 <= q[1] <= K[3] + 0.008
+
+    ceza = {"duz": 0.0, "dirsek": 0.015, "kavis": 0.04}
+    en = None
+    for tur, yol in adaylar:
+        if any(not (0 <= q[0] <= 1 and 0 <= q[1] <= 1) for q in yol):
+            continue
+        o = [q for q in ornek(yol) if not ic(q, A) and not ic(q, B)]
+        uzunluk = sum(((v[0] - u[0]) ** 2 + (v[1] - u[1]) ** 2) ** 0.5 for u, v in zip(yol, yol[1:]))
+        maliyet = (r.yol_doluluk(o) if o else 0) + 0.12 * uzunluk + ceza[tur]
+        if en is None or maliyet < en[0]:
+            en = (maliyet, tur, yol)
+    if not en:
+        return k
+    k = {kk: vv for kk, vv in k.items() if kk not in ("c", "hedef")}
+    k.update(yol=[[round(q[0], 4), round(q[1], 4)] for q in en[2]], rota=en[1], a=en[2][0], b=en[2][-1])
+    if hedef_yazi:
+        k["hedef_kutu"] = [round(B[0] - 0.004, 4), round(B[1] - 0.004, 4), round(B[2] + 0.004, 4), round(B[3] + 0.004, 4)]
+    return k
+
+
+def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None) -> dict:
     """İçeriğin önünü kapatmayan yerleşim (kullanıcı geri bildirimi 2026-10-24): akış oku düz değil, kavislerden en az
     yazı/resim üstünden geçeni; ok hedefin hemen önünde biter, hedef ince halkayla belirtilir; etiket boş bir yere
     (yoksa hiç); şema paneli sayfanın en boş köşesine. r = SayfaRaster (yoksa yerleşim yapılmaz)."""
     if r is None:
         return k
     if k["tur"] == "akis":
-        a, b = k["a"], k["b"]
-        dx, dy = b[0] - a[0], b[1] - a[1]
-        L = (dx * dx + dy * dy) ** 0.5 or 1
-        nx, ny = -dy / L, dx / L
-        m = [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2]
-        en = None
-        for d in (0, 0.08, -0.08, 0.16, -0.16, 0.26, -0.26, 0.38, -0.38):
-            c = [min(.99, max(.01, m[0] + nx * d * L)), min(.99, max(.01, m[1] + ny * d * L))]
-            orta = [_bez(a, c, b, t / 40) for t in range(5, 36)]          # uçlar (kaynak/hedef yazısı) sayılmaz
-            maliyet = r.yol_doluluk(orta) + abs(d) * 0.15                   # eşitlikte daha az kavis
-            if en is None or maliyet < en[0]:
-                en = (maliyet, c)
-        c = en[1]
-        k = {**k, "c": [round(c[0], 4), round(c[1], 4)], "hedef": b,
-             "a": [round(v, 4) for v in _bez(a, c, b, 0.05)], "b": [round(v, 4) for v in _bez(a, c, b, 0.93)]}
+        k = ok_yerlesimi(k, r, satirlar or [])
     if k.get("etiket"):
         g, h = min(0.3, 0.012 * len(k["etiket"]) + 0.04), 0.034
         o = k.get("nokta", [k.get("c") or k.get("a") or [0.5, 0.5]])[0] if k["tur"] != "sema" else [0.5, 0.5]
@@ -257,7 +376,8 @@ def main() -> int:
     out: dict[str, dict[str, list]] = {}
     say = {"aday": 0, "gecti": 0, "ret": {}}
     sayfa_say: dict[int, int] = {}
-    sayfa_dolu: dict[int, list] = {}          # sayfada yerleşmiş etiket/şema kutuları (üst üste binmesin)
+    sayfa_dolu: dict[int, list] = {}
+    satir_onbellek: dict[int, list] = {}          # sayfada yerleşmiş etiket/şema kutuları (üst üste binmesin)
     for f in sorted(W.glob("parti*/cizim.json")):
         try:
             komutlar = json.loads(f.read_text()).get("komutlar") or []
@@ -289,9 +409,12 @@ def main() -> int:
                 say["ret"][kisa] = say["ret"].get(kisa, 0) + 1
                 continue
             ka = kelime_araliklari(C[cid])
-            komut = {x: k[x] for x in ("tur", "nokta", "a", "b", "iliski", "fazlar", "dugum", "kenar", "etiket") if x in k}
+            komut = {x: k[x] for x in ("tur", "nokta", "a", "b", "iliski", "fazlar", "dugum", "kenar", "etiket",
+                                       "kaynak_metin", "hedef_metin") if x in k}
             komut.update(s=s, k=[ka[k["bas"]][0], ka[k["son"]][1]])
-            mevcut.append(yerlesim(komut, raster.get(s), sayfa_dolu.setdefault(s, [])))
+            if s not in satir_onbellek and belge is not None and 1 <= s <= belge.page_count:
+                satir_onbellek[s] = sayfa_satirlari(belge[s - 1])
+            mevcut.append(yerlesim(komut, raster.get(s), sayfa_dolu.setdefault(s, []), satir_onbellek.get(s)))
             sayfa_say[s] = sayfa_say.get(s, 0) + 1
             say["gecti"] += 1
     out = {p: {c: v for c, v in cs.items() if v} for p, cs in out.items()}
