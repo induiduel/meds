@@ -47,6 +47,7 @@
    "ders": "Tıbbi Genetik",
    "konu": "Dismorfolojide Genetik Terminoloji",
    "ders_notu_id": "k1-01-dismorfolojide-genetik-terminoloji",
+   "ders_notu_sira": 1,
    "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
    "durum": "tam",
    "tartismali": false,
@@ -96,6 +97,7 @@
    "ders": "Tıbbi Genetik",
    "konu": "Kromozomal Hastalıklar ve Genetik Danışma",
    "ders_notu_id": "k1-10-kromozomal-hastaliklar-ve-genetik-danisma",
+   "ders_notu_sira": 10,
    "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
    "durum": "tam",
    "tartismali": false,
@@ -143,21 +145,22 @@
    "sinav_no": 3,
    "sinav_no_kesin": false,
    "ders": "Tıbbi Genetik",
-   "konu": "Preimplantasyon Genetik Tanı (PGT)",
-   "ders_notu_id": "k1-60-preimplantasyon-genetik-tani-pgt",
+   "konu": "Dismorfolojide Genetik Terminoloji",
+   "ders_notu_id": "k1-01-dismorfolojide-genetik-terminoloji",
+   "ders_notu_sira": 1,
    "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
    "durum": "tam",
    "tartismali": false,
-   "kok": "Preimplantasyon Genetik Tanı (PGT) endikasyonları değerlendirildiğinde, aşağıdaki durumlardan hangisinde PGT yapılmasına gerek yoktur?",
+   "kok": "Başlangıçta normal gelişen bir yapının mekanik kuvvetlerin etkisiyle şeklinin veya konumunun değişmesine deformasyon denir. Aşağıdakilerden hangisi amniyotik bandın yaptığı mekanik basılardan kaynaklı oluşan deformasyona örnektir?",
    "siklar": [
-    "İleri anne yaşı",
-    "Tekrarlayan tüp bebek (IVF) başarısızlıkları",
-    "Çiftlerden birinde dengeli kromozomal translokasyon varlığı",
-    "Fetal Down sendromu taramasında ikili testin düşük riskli çıkması",
-    "Tek gen hastalığı taşıyıcısı çiftler"
+    "Yarık dudak ve damak",
+    "Amniyotik bantlara bağlı ekstremite kaybı",
+    "Akondroplazi",
+    "Rahim içi basıya bağlı kraniyofasiyal şekil bozukluğu",
+    "Nöral tüpün kapanmamasına bağlı spina bifida"
    ],
    "cevap": "D",
-   "not": "",
+   "not": "Grupta 24.10 eklendi (TBG). Kök birebir değil, şıklar öğrencilerce doğrulandı. A ve E malformasyon, B disrupsiyon, C displazi.",
    "grup_pdfinde": true,
    "grup_pdf_disi_dayanak": null,
    "sik_isaretleri": {
@@ -166,21 +169,21 @@
    },
    "eslesme": {
     "yontem": "otomatik",
-    "puan": 69.0,
+    "puan": 52.0,
     "ikinci_aday": {
      "id": "k1-35-prenatal-tani-yontemleri",
-     "puan": 63.1
+     "puan": 30.4
     },
     "kanit": [
      {
-      "satir": 23,
-      "metin": "- ==Preimplantasyon genetik tarama (PGS)==; tüp bebek tedavilerinde gebelik başarısının arttırılmasına yönelik uygulama alanıdır. Anneye transfer edilecek aday embriyoların ==anöploidi taraması yapılarak öploid embriyo/embriyoların endometriyuma transfer edilmesi== esasına dayanır; Down sendromu gibi risklerin arttığı ileri anne yaşı olgularında yaygın kullanılır.",
-      "puan": 17.4
+      "satir": 74,
+      "metin": "| Deformasyon | Fetüste normal gelişen yapının dış mekanik etkilere (kompresyon, konstrüksiyon, hareketsizlik) maruz kalması | Club foot (pes ekinovarus), kalça çıkığı, kraniyofasiyal şekil bozukluğu | Altta yatan nedene göre değişken |",
+      "puan": 13.2
      },
      {
-      "satir": 55,
-      "metin": "- Dengeli translokasyon taşıyıcılığı PGD uygulamalarında önemli bir endikasyon grubu oluşturur; kromozomal dengesiz segregasyon ürünlerine yol açması, hatta infertilite nedeni olması translokasyon/inversiyon taşıyan eşleri tüp bebek uygulamalarına yönlendirir.",
-      "puan": 9.1
+      "satir": 77,
+      "metin": "| Malformasyon | Organogenez döneminde lokalize hatadan kaynaklanan kalıcı, primer yapısal defekt | Konjenital kalp hastalıkları, yarık damak/dudak, spina bifida | — |",
+      "puan": 12.3
      }
     ]
    },
@@ -194,6 +197,7 @@
    "ders": "Tıbbi Genetik",
    "konu": "Prenatal Tanı Yöntemleri",
    "ders_notu_id": "k1-35-prenatal-tani-yontemleri",
+   "ders_notu_sira": 35,
    "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
    "durum": "tam",
    "tartismali": false,
@@ -243,6 +247,7 @@
    "ders": "Tıbbi Genetik",
    "konu": "Doğumsal Kadın/Erkek Genital Gelişim Anomalileri",
    "ders_notu_id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri",
+   "ders_notu_sira": 19,
    "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
    "durum": "tam",
    "tartismali": false,
@@ -292,6 +297,7 @@
    "ders": "Tıbbi Genetik",
    "konu": "Doğumsal Kadın/Erkek Genital Gelişim Anomalileri",
    "ders_notu_id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri",
+   "ders_notu_sira": 19,
    "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
    "durum": "tam",
    "tartismali": false,
@@ -341,6 +347,7 @@
    "ders": "Tıbbi Genetik",
    "konu": "Ürogenital Sistem Tümörlerinde Genetik Belirteçler ve Kliniğe Yansımaları",
    "ders_notu_id": "k1-31-urogenital-sistem-tumorlerinde-genetik-belirtecler",
+   "ders_notu_sira": 31,
    "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
    "durum": "tam",
    "tartismali": false,
@@ -390,6 +397,7 @@
    "ders": "Tıbbi Genetik",
    "konu": "Ürogenital Sistem Tümörlerinde Genetik Belirteçler ve Kliniğe Yansımaları",
    "ders_notu_id": "k1-31-urogenital-sistem-tumorlerinde-genetik-belirtecler",
+   "ders_notu_sira": 31,
    "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
    "durum": "tam",
    "tartismali": false,
@@ -439,6 +447,7 @@
    "ders": "Tıbbi Genetik",
    "konu": "Prenatal Tanı Yöntemleri",
    "ders_notu_id": "k1-35-prenatal-tani-yontemleri",
+   "ders_notu_sira": 35,
    "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
    "durum": "tam",
    "tartismali": false,
@@ -486,106 +495,9 @@
    "sinav_no": 10,
    "sinav_no_kesin": false,
    "ders": "Tıbbi Genetik",
-   "konu": "Preimplantasyon Genetik Tanı (PGT)",
-   "ders_notu_id": "k1-60-preimplantasyon-genetik-tani-pgt",
-   "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
-   "durum": "tam",
-   "tartismali": false,
-   "kok": "Preimplantasyon genetik tanıda embriyonun kendisine dokunulmadan uygulanabilen ancak sadece maternal mayoz bölünme hatalarını yansıtabilen; paternal genetik katkıyı ve fetal cinsiyeti göstermeyen biyopsi tekniği hangisidir?",
-   "siklar": [
-    "Polar Body (Kutup Cisimciği) Biyopsisi",
-    "Gün 3 Blastomer Biyopsisi",
-    "Gün 5-6 Trofektoderm Biyopsisi",
-    "İç Hücre Kitlesi (ICM) Biyopsisi",
-    "Koryon Villus Biyopsisi (CVS)"
-   ],
-   "cevap": "A",
-   "not": "Grupta paylaşılan ekran görüntüsünde bu soru \"Soru 3\" olarak görünüyor; numarası kesin değil.",
-   "grup_pdfinde": true,
-   "grup_pdf_disi_dayanak": null,
-   "sik_isaretleri": {
-    "uretildi": [],
-    "supheli": []
-   },
-   "eslesme": {
-    "yontem": "otomatik",
-    "puan": 57.3,
-    "ikinci_aday": {
-     "id": "k1-35-prenatal-tani-yontemleri",
-     "puan": 48.3
-    },
-    "kanit": [
-     {
-      "satir": 116,
-      "metin": "- Blastomer incelemesi embriyonun kendisi hakkında bilgi verir ve her iki ebeveynden kaynaklanan sorunlarda uygulanabilir; ==polar cisimcik incelemesi ise sadece anne kaynaklı genetik risklerde uygulanabilir.==",
-      "puan": 11.5
-     },
-     {
-      "satir": 114,
-      "metin": "- Polar cisimler yumurta hücresinin olgunlaşması ve döllenmesi ile mayoz bölünme esnasında atılan yan ürünlerdir; birinci ve ikinci polar hücre olmak üzere iki çeşittir. ==Eğer crossing-over yok ise birinci polar cisim yumurtanın genetik yapısının tam bir kopyasını taşır.== ==Birinci polar hücre, embriyolardaki sayısal kromozomal anomalilerin büyük bir kısmının meydana geldiği aşamadır.==",
-      "puan": 10.6
-     }
-    ]
-   },
-   "kaynak": "derleme PDF'i + Konu çalışma grubu (WhatsApp, 23.10 10:00 – 24.10 15:25)"
-  },
-  {
-   "kurul": 1,
-   "yil": "2026-2027",
-   "sinav_no": 11,
-   "sinav_no_kesin": false,
-   "ders": "Tıbbi Genetik",
-   "konu": "Dismorfolojide Genetik Terminoloji",
-   "ders_notu_id": "k1-01-dismorfolojide-genetik-terminoloji",
-   "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
-   "durum": "tam",
-   "tartismali": false,
-   "kok": "Başlangıçta normal gelişen bir yapının mekanik kuvvetlerin etkisiyle şeklinin veya konumunun değişmesine deformasyon denir. Aşağıdakilerden hangisi amniyotik bandın yaptığı mekanik basılardan kaynaklı oluşan deformasyona örnektir?",
-   "siklar": [
-    "Yarık dudak ve damak",
-    "Amniyotik bantlara bağlı ekstremite kaybı",
-    "Akondroplazi",
-    "Rahim içi basıya bağlı kraniyofasiyal şekil bozukluğu",
-    "Nöral tüpün kapanmamasına bağlı spina bifida"
-   ],
-   "cevap": "D",
-   "not": "Grupta 24.10 eklendi (TBG). Kök birebir değil, şıklar öğrencilerce doğrulandı. A ve E malformasyon, B disrupsiyon, C displazi.",
-   "grup_pdfinde": true,
-   "grup_pdf_disi_dayanak": null,
-   "sik_isaretleri": {
-    "uretildi": [],
-    "supheli": []
-   },
-   "eslesme": {
-    "yontem": "otomatik",
-    "puan": 52.0,
-    "ikinci_aday": {
-     "id": "k1-35-prenatal-tani-yontemleri",
-     "puan": 30.4
-    },
-    "kanit": [
-     {
-      "satir": 74,
-      "metin": "| Deformasyon | Fetüste normal gelişen yapının dış mekanik etkilere (kompresyon, konstrüksiyon, hareketsizlik) maruz kalması | Club foot (pes ekinovarus), kalça çıkığı, kraniyofasiyal şekil bozukluğu | Altta yatan nedene göre değişken |",
-      "puan": 13.2
-     },
-     {
-      "satir": 77,
-      "metin": "| Malformasyon | Organogenez döneminde lokalize hatadan kaynaklanan kalıcı, primer yapısal defekt | Konjenital kalp hastalıkları, yarık damak/dudak, spina bifida | — |",
-      "puan": 12.3
-     }
-    ]
-   },
-   "kaynak": "derleme PDF'i + Konu çalışma grubu (WhatsApp, 23.10 10:00 – 24.10 15:25)"
-  },
-  {
-   "kurul": 1,
-   "yil": "2026-2027",
-   "sinav_no": 12,
-   "sinav_no_kesin": false,
-   "ders": "Tıbbi Genetik",
    "konu": "Prenatal Tanı Yöntemleri",
    "ders_notu_id": "k1-35-prenatal-tani-yontemleri",
+   "ders_notu_sira": 35,
    "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
    "durum": "tam",
    "tartismali": false,
@@ -630,23 +542,24 @@
   {
    "kurul": 1,
    "yil": "2026-2027",
-   "sinav_no": 13,
+   "sinav_no": 11,
    "sinav_no_kesin": false,
-   "ders": "Enfeksiyon Hastalıkları",
-   "konu": "İntrauterin Enfeksiyonlar",
-   "ders_notu_id": "k1-57-intrauterin-enfeksiyonlar",
-   "ogretim_uyesi": "Dr. Öğr. Üyesi Rüveyda Korkmazer",
+   "ders": "Tıbbi Genetik",
+   "konu": "Preimplantasyon Genetik Tanı (PGT)",
+   "ders_notu_id": "k1-60-preimplantasyon-genetik-tani-pgt",
+   "ders_notu_sira": 60,
+   "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
    "durum": "tam",
    "tartismali": false,
-   "kok": "Toxoplasma gondii enfeksiyonu ve korunma yolları ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+   "kok": "Preimplantasyon Genetik Tanı (PGT) endikasyonları değerlendirildiğinde, aşağıdaki durumlardan hangisinde PGT yapılmasına gerek yoktur?",
    "siklar": [
-    "Seronegatif gebe kadınların ev kedisi ile temas etmemesi gerekir.",
-    "IgG avidite testi enfeksiyonun akut mu yoksa geçirilmiş mi olduğunu anlamada önemlidir.",
-    "Parazit insandan insana solunum yolu damlacıkları ile kolayca bulaşır.",
-    "Gebelikte geçirilen akut enfeksiyon fetüste hasar oluşturmaz.",
-    "Enfeksiyon kaynağı esas olarak kontamine süt ürünleridir."
+    "İleri anne yaşı",
+    "Tekrarlayan tüp bebek (IVF) başarısızlıkları",
+    "Çiftlerden birinde dengeli kromozomal translokasyon varlığı",
+    "Fetal Down sendromu taramasında ikili testin düşük riskli çıkması",
+    "Tek gen hastalığı taşıyıcısı çiftler"
    ],
-   "cevap": "B",
+   "cevap": "D",
    "not": "",
    "grup_pdfinde": true,
    "grup_pdf_disi_dayanak": null,
@@ -656,21 +569,121 @@
    },
    "eslesme": {
     "yontem": "otomatik",
-    "puan": 56.3,
+    "puan": 69.0,
     "ikinci_aday": {
-     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon",
-     "puan": 26.4
+     "id": "k1-35-prenatal-tani-yontemleri",
+     "puan": 63.1
     },
     "kanit": [
      {
-      "satir": 144,
-      "metin": "- **Tanı:** annede Toxoplasma IgG, IgM ve IgG avidite testi; konjenital toksoplazmoz açısından en iyi antenatal yöntem USG, amniyosentez ve kordosentezdir; 20-22. haftada fetüs kan örneğinde IgM aranır; PCR duyarlılığı %65",
-      "puan": 11.7
+      "satir": 23,
+      "metin": "- ==Preimplantasyon genetik tarama (PGS)==; tüp bebek tedavilerinde gebelik başarısının arttırılmasına yönelik uygulama alanıdır. Anneye transfer edilecek aday embriyoların ==anöploidi taraması yapılarak öploid embriyo/embriyoların endometriyuma transfer edilmesi== esasına dayanır; Down sendromu gibi risklerin arttığı ileri anne yaşı olgularında yaygın kullanılır.",
+      "puan": 17.4
      },
      {
-      "satir": 200,
-      "metin": "**Klinik & Patofizyolojik Çözüm Notu:** Toksoplazmada IgM'de çapraz pozitiflik sıktır ve IgM 2 yıla kadar pozitif kalabildiği için tek başına akut infeksiyonu göstermez. Enfeksiyonun yeni mi yoksa eski mi olduğunu ayırt etmek için IgG avidite testi yapılır (yüksek avidite eski antikorları, düşük avidite yeni antikorları gösterir); bu nedenle ilk aşamada IgG avidite testi istenir. (Cevap ders notun",
-      "puan": 10.0
+      "satir": 55,
+      "metin": "- Dengeli translokasyon taşıyıcılığı PGD uygulamalarında önemli bir endikasyon grubu oluşturur; kromozomal dengesiz segregasyon ürünlerine yol açması, hatta infertilite nedeni olması translokasyon/inversiyon taşıyan eşleri tüp bebek uygulamalarına yönlendirir.",
+      "puan": 9.1
+     }
+    ]
+   },
+   "kaynak": "derleme PDF'i + Konu çalışma grubu (WhatsApp, 23.10 10:00 – 24.10 15:25)"
+  },
+  {
+   "kurul": 1,
+   "yil": "2026-2027",
+   "sinav_no": 12,
+   "sinav_no_kesin": false,
+   "ders": "Tıbbi Genetik",
+   "konu": "Preimplantasyon Genetik Tanı (PGT)",
+   "ders_notu_id": "k1-60-preimplantasyon-genetik-tani-pgt",
+   "ders_notu_sira": 60,
+   "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
+   "durum": "tam",
+   "tartismali": false,
+   "kok": "Preimplantasyon genetik tanıda embriyonun kendisine dokunulmadan uygulanabilen ancak sadece maternal mayoz bölünme hatalarını yansıtabilen; paternal genetik katkıyı ve fetal cinsiyeti göstermeyen biyopsi tekniği hangisidir?",
+   "siklar": [
+    "Polar Body (Kutup Cisimciği) Biyopsisi",
+    "Gün 3 Blastomer Biyopsisi",
+    "Gün 5-6 Trofektoderm Biyopsisi",
+    "İç Hücre Kitlesi (ICM) Biyopsisi",
+    "Koryon Villus Biyopsisi (CVS)"
+   ],
+   "cevap": "A",
+   "not": "Grupta paylaşılan ekran görüntüsünde bu soru \"Soru 3\" olarak görünüyor; numarası kesin değil.",
+   "grup_pdfinde": true,
+   "grup_pdf_disi_dayanak": null,
+   "sik_isaretleri": {
+    "uretildi": [],
+    "supheli": []
+   },
+   "eslesme": {
+    "yontem": "otomatik",
+    "puan": 57.3,
+    "ikinci_aday": {
+     "id": "k1-35-prenatal-tani-yontemleri",
+     "puan": 48.3
+    },
+    "kanit": [
+     {
+      "satir": 116,
+      "metin": "- Blastomer incelemesi embriyonun kendisi hakkında bilgi verir ve her iki ebeveynden kaynaklanan sorunlarda uygulanabilir; ==polar cisimcik incelemesi ise sadece anne kaynaklı genetik risklerde uygulanabilir.==",
+      "puan": 11.5
+     },
+     {
+      "satir": 114,
+      "metin": "- Polar cisimler yumurta hücresinin olgunlaşması ve döllenmesi ile mayoz bölünme esnasında atılan yan ürünlerdir; birinci ve ikinci polar hücre olmak üzere iki çeşittir. ==Eğer crossing-over yok ise birinci polar cisim yumurtanın genetik yapısının tam bir kopyasını taşır.== ==Birinci polar hücre, embriyolardaki sayısal kromozomal anomalilerin büyük bir kısmının meydana geldiği aşamadır.==",
+      "puan": 10.6
+     }
+    ]
+   },
+   "kaynak": "derleme PDF'i + Konu çalışma grubu (WhatsApp, 23.10 10:00 – 24.10 15:25)"
+  },
+  {
+   "kurul": 1,
+   "yil": "2026-2027",
+   "sinav_no": 13,
+   "sinav_no_kesin": false,
+   "ders": "Enfeksiyon Hastalıkları",
+   "konu": "Enfeksiyon Hastalıklarında Genel Kavramlar ve Temel Özellikler",
+   "ders_notu_id": "k1-21-enfeksiyon-hastaliklarinda-genel-kavramlar-ve-teme",
+   "ders_notu_sira": 21,
+   "ogretim_uyesi": "Uz. Dr. Merve Kaçar",
+   "durum": "tam",
+   "tartismali": false,
+   "kok": "Sağlıklı insanlarda steril olan ve normal florada mikroorganizma bulunmayan vücut bölgesi/sıvısı aşağıdakilerden hangisidir?",
+   "siklar": [
+    "Cilt yüzeyi",
+    "Kolon",
+    "Beyin omurilik sıvısı (BOS)",
+    "Ağız boşluğu",
+    "Dış üretra"
+   ],
+   "cevap": "C",
+   "not": "Grupta \"Flora hangisinde bulunmaz? → BOS\" olarak doğrulandı.",
+   "grup_pdfinde": true,
+   "grup_pdf_disi_dayanak": null,
+   "sik_isaretleri": {
+    "uretildi": [],
+    "supheli": []
+   },
+   "eslesme": {
+    "yontem": "otomatik",
+    "puan": 30.9,
+    "ikinci_aday": {
+     "id": "k1-36-izolasyon-yontemleri",
+     "puan": 19.9
+    },
+    "kanit": [
+     {
+      "satir": 142,
+      "metin": "| Deri, ağız, burun, boğaz, konjonktiva, üst solunum yolu, sindirim kanalı, genital organlar, dış kulak yolu | SSS (BOS), alt solunum yolları, dolaşım sistemi, ==üst ürogenital bölgeler (mesane, üreter, böbrek, serviks)==, vücut boşlukları |",
+      "puan": 7.8
+     },
+     {
+      "satir": 198,
+      "metin": "- **Steril bölgeler:** BOS, alt solunum yolu, kan, mesane-üreter-böbrek, vücut boşlukları",
+      "puan": 7.3
      }
     ]
    },
@@ -684,6 +697,7 @@
    "ders": "Enfeksiyon Hastalıkları",
    "konu": "Genital Enfeksiyonlar",
    "ders_notu_id": "k1-34-genital-enfeksiyonlar",
+   "ders_notu_sira": 34,
    "ogretim_uyesi": "Dr. Öğr. Üyesi Rüveyda Korkmazer",
    "durum": "tam",
    "tartismali": false,
@@ -731,20 +745,21 @@
    "sinav_no": 15,
    "sinav_no_kesin": false,
    "ders": "Enfeksiyon Hastalıkları",
-   "konu": "Üriner Sistem Enfeksiyonları",
-   "ders_notu_id": "k1-52-uriner-sistem-enfeksiyonlari",
+   "konu": "Genital Enfeksiyonlar",
+   "ders_notu_id": "k1-34-genital-enfeksiyonlar",
+   "ders_notu_sira": 34,
    "ogretim_uyesi": "Dr. Öğr. Üyesi Rüveyda Korkmazer",
    "durum": "tam",
    "tartismali": false,
-   "kok": "Beta-laktam direnci ve antibiyotik tedavisi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+   "kok": "Akut prostatit tanısı ve yaklaşımı ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
    "siklar": [
-    "GSBL üreten suşlarda karbapenem grubu antibiyotikler tercih edilir.",
-    "MRSA enfeksiyonlarında vankomisin kullanılabilir.",
-    "GSBL üreten gram-negatif basiller 1. ve 2. kuşak sefalosporinlerle güvenle tedavi edilebilir.",
-    "Beta-laktamaz inhibitörleri (örn. klavulanik asit) enzimatik yıkımı engeller.",
-    "Pseudomonas enfeksiyonlarında antipseudomonal beta-laktamlar tercih edilmelidir."
+    "Şiddetli bakteriyemi/sepsis riski nedeniyle sert rektal muayene ve prostat masajından kaçınılmalıdır.",
+    "Tedavide penisilin V ilk seçenektir.",
+    "Hastalarda idrar yapma zorluğu ve ateş hiçbir zaman izlenmez.",
+    "Tanı için prostat biyopsisi rutin olarak uygulanmalıdır.",
+    "Yalnızca cerrahi olarak prostatın çıkarılmasıyla iyileşir."
    ],
-   "cevap": "C",
+   "cevap": "A",
    "not": "",
    "grup_pdfinde": true,
    "grup_pdf_disi_dayanak": null,
@@ -753,22 +768,22 @@
     "supheli": []
    },
    "eslesme": {
-    "yontem": "otomatik",
-    "puan": 60.8,
+    "yontem": "elle",
+    "puan": 26.0,
     "ikinci_aday": {
-     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon",
-     "puan": 42.1
+     "id": "k1-62-uretral-akinti",
+     "puan": 23.4
     },
     "kanit": [
      {
-      "satir": 78,
-      "metin": "- Beta-laktamaz inhibitörlü aminopenisilinler ve oral sefalosporinler ekolojik yan hasar nedeniyle ampirik tedavide önerilmez; bunların kullanımı ==Genişlemiş Spektrumlu Beta-Laktamaz (GSBL) üreten çoklu dirençli bakterilerin seçilmesine, Clostridioides difficile enfeksiyonlarına== ve gelecekteki enfeksiyonlar için daha dirençli mikroorganizmaların üremesine zemin hazırlar",
-      "puan": 12.9
+      "satir": 99,
+      "metin": "| Bulgular | Alt üriner sistem yakınmaları (pollaküri, dizüri, obstrüktif semptomlar), ==sistemik bulgular (ateş)==, rektal muayenede şiş ve hassas prostat | Granülomatöz enfeksiyon (==tüberküloz==) | Alt üriner sistem yakınmaları, ==skrotal ödem, ağrı, eritem==; granülomatözse ==tüberküloz, bruselloz== |",
+      "puan": 5.0
      },
      {
-      "satir": 104,
-      "metin": "- ==Siprofloksasin yalnızca yerel direnç <%10, 3. kuşak sefalosporin/aminoglikozid kontrendikasyonu veya beta-laktam aşırı duyarlılığı varsa== kullanılması önerilir",
-      "puan": 9.6
+      "satir": 25,
+      "metin": "| **Sifiliz** | T. pallidum | ==Ağrısız== | Bilateral, ağrısız | ==Kenarları düzgün, sert tabanlı ülser== (primer) | Penisilin, seftriakson, doksisiklin |",
+      "puan": 2.8
      }
     ]
    },
@@ -780,21 +795,22 @@
    "sinav_no": 16,
    "sinav_no_kesin": false,
    "ders": "Enfeksiyon Hastalıkları",
-   "konu": "Enfeksiyon Hastalıklarında Genel Kavramlar ve Temel Özellikler",
-   "ders_notu_id": "k1-21-enfeksiyon-hastaliklarinda-genel-kavramlar-ve-teme",
-   "ogretim_uyesi": "Uz. Dr. Merve Kaçar",
+   "konu": "Cinsel Yolla Bulaşan Hastalıklarda Profilaksi ve Korunma",
+   "ders_notu_id": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k",
+   "ders_notu_sira": 40,
+   "ogretim_uyesi": "Enfeksiyon Hastalıkları ABD",
    "durum": "tam",
    "tartismali": false,
-   "kok": "Sağlıklı insanlarda steril olan ve normal florada mikroorganizma bulunmayan vücut bölgesi/sıvısı aşağıdakilerden hangisidir?",
+   "kok": "Cinsel yolla bulaşan enfeksiyonlardan (CYBİ) korunmada bireysel ve toplumsal önlemler değerlendirildiğinde aşağıdakilerden hangisi doğrudan bir koruyucu önlem (birincil koruma) sayılmaz?",
    "siklar": [
-    "Cilt yüzeyi",
-    "Kolon",
-    "Beyin omurilik sıvısı (BOS)",
-    "Ağız boşluğu",
-    "Dış üretra"
+    "Bariyer yöntemlerinin (kondom) kullanımı",
+    "Güvenli cinsel davranış bilincinin geliştirilmesi",
+    "CYBİ olan kişinin tanı alıp derhal tedavi edilmesi",
+    "Risk altındaki grupta hepatit B ve HPV aşılamaları",
+    "Cinsel partner sayısının sınırlandırılması"
    ],
    "cevap": "C",
-   "not": "Grupta \"Flora hangisinde bulunmaz? → BOS\" olarak doğrulandı.",
+   "not": "",
    "grup_pdfinde": true,
    "grup_pdf_disi_dayanak": null,
    "sik_isaretleri": {
@@ -803,21 +819,21 @@
    },
    "eslesme": {
     "yontem": "otomatik",
-    "puan": 30.9,
+    "puan": 58.1,
     "ikinci_aday": {
-     "id": "k1-36-izolasyon-yontemleri",
-     "puan": 19.9
+     "id": "k1-62-uretral-akinti",
+     "puan": 27.7
     },
     "kanit": [
      {
-      "satir": 142,
-      "metin": "| Deri, ağız, burun, boğaz, konjonktiva, üst solunum yolu, sindirim kanalı, genital organlar, dış kulak yolu | SSS (BOS), alt solunum yolları, dolaşım sistemi, ==üst ürogenital bölgeler (mesane, üreter, böbrek, serviks)==, vücut boşlukları |",
-      "puan": 7.8
+      "satir": 11,
+      "metin": "- CYBİ'den korunma yöntemlerini ve kondomun koruma düzeyini açıklamak",
+      "puan": 10.8
      },
      {
-      "satir": 198,
-      "metin": "- **Steril bölgeler:** BOS, alt solunum yolu, kan, mesane-üreter-böbrek, vücut boşlukları",
-      "puan": 7.3
+      "satir": 184,
+      "metin": "**Klinik & Patofizyolojik Çözüm Notu:** Ders notunda CYBE'den korunma yöntemleri arasında kondom kullanımı, aşılama, cinsel eşin taranması ve bir CYBE saptandığında diğer CYBE'lerin de taranması sayılmıştır. Damlacık izolasyonu bu korunma yöntemleri arasında yer almaz. (Cevap ders notundan belirlenmiştir; sınav anahtarı mevcut değildir.)",
+      "puan": 9.6
      }
     ]
    },
@@ -831,6 +847,7 @@
    "ders": "Enfeksiyon Hastalıkları",
    "konu": "Cinsel Yolla Bulaşan Hastalıklarda Profilaksi ve Korunma",
    "ders_notu_id": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k",
+   "ders_notu_sira": 40,
    "ogretim_uyesi": "Enfeksiyon Hastalıkları ABD",
    "durum": "tam",
    "tartismali": false,
@@ -878,20 +895,21 @@
    "sinav_no": 18,
    "sinav_no_kesin": false,
    "ders": "Enfeksiyon Hastalıkları",
-   "konu": "Cinsel Yolla Bulaşan Hastalıklarda Profilaksi ve Korunma",
-   "ders_notu_id": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k",
-   "ogretim_uyesi": "Enfeksiyon Hastalıkları ABD",
+   "konu": "Bağışıklığı Baskılı Hastalarda Enfeksiyon",
+   "ders_notu_id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon",
+   "ders_notu_sira": 47,
+   "ogretim_uyesi": "Uz. Dr. Merve Kaçar",
    "durum": "tam",
    "tartismali": false,
-   "kok": "Cinsel yolla bulaşan enfeksiyonlardan (CYBİ) korunmada bireysel ve toplumsal önlemler değerlendirildiğinde aşağıdakilerden hangisi doğrudan bir koruyucu önlem (birincil koruma) sayılmaz?",
+   "kok": "Febril nötropenik bir hastada geniş spektrumlu antibiyotik tedavisine rağmen ateşin 72 saat boyunca düşmemesi ve odağın bulunamaması durumunda en uygun yaklaşım ne olmalıdır?",
    "siklar": [
-    "Bariyer yöntemlerinin (kondom) kullanımı",
-    "Güvenli cinsel davranış bilincinin geliştirilmesi",
-    "CYBİ olan kişinin tanı alıp derhal tedavi edilmesi",
-    "Risk altındaki grupta hepatit B ve HPV aşılamaları",
-    "Cinsel partner sayısının sınırlandırılması"
+    "Mevcut antibiyotik tedavisi kesilip hasta takibe alınmalıdır.",
+    "Empirik sistemik antifungal tedavi eklenmelidir.",
+    "Yalnızca ateş düşürücü verilerek 48 saat beklenmelidir.",
+    "Antibiyotik dozu yarıya indirilmelidir.",
+    "Oral antiviraller başlanıp taburcu edilmelidir."
    ],
-   "cevap": "C",
+   "cevap": "B",
    "not": "",
    "grup_pdfinde": true,
    "grup_pdf_disi_dayanak": null,
@@ -901,21 +919,21 @@
    },
    "eslesme": {
     "yontem": "otomatik",
-    "puan": 58.1,
+    "puan": 25.7,
     "ikinci_aday": {
-     "id": "k1-62-uretral-akinti",
-     "puan": 27.7
+     "id": "k1-52-uriner-sistem-enfeksiyonlari",
+     "puan": 23.9
     },
     "kanit": [
      {
-      "satir": 11,
-      "metin": "- CYBİ'den korunma yöntemlerini ve kondomun koruma düzeyini açıklamak",
-      "puan": 10.8
+      "satir": 255,
+      "metin": "**Klinik & Patofizyolojik Çözüm Notu:** Febril nötropeni, nötrofil sayısının <500/mm³ olması ve vücut sıcaklığının bir kez ≥38.3 °C ya da bir saat boyunca ≥38 °C olmasıyla tanımlanır; altta yatan bozukluk fagositik/hücresel yanıttır, izole hümoral immün yetmezlik değildir. Mukozit kandidemi riskini, uzamış nötropeni (>7 gün) ise küf enfeksiyonu riskini artırır. (Cevap ders notundan belirlenmiştir;",
+      "puan": 8.1
      },
      {
-      "satir": 184,
-      "metin": "**Klinik & Patofizyolojik Çözüm Notu:** Ders notunda CYBE'den korunma yöntemleri arasında kondom kullanımı, aşılama, cinsel eşin taranması ve bir CYBE saptandığında diğer CYBE'lerin de taranması sayılmıştır. Damlacık izolasyonu bu korunma yöntemleri arasında yer almaz. (Cevap ders notundan belirlenmiştir; sınav anahtarı mevcut değildir.)",
-      "puan": 9.6
+      "satir": 234,
+      "metin": "- **Febril nötropeni:** nötrofil <500/mm³ + ≥38.3 °C (bir kez) veya ≥38 °C (1 saat); ampirik antipsödomonal antibiyotik 1 saat içinde",
+      "puan": 7.7
      }
     ]
    },
@@ -929,6 +947,7 @@
    "ders": "Enfeksiyon Hastalıkları",
    "konu": "İzolasyon Yöntemleri",
    "ders_notu_id": "k1-36-izolasyon-yontemleri",
+   "ders_notu_sira": 36,
    "ogretim_uyesi": "Enfeksiyon Hastalıkları ABD",
    "durum": "tam",
    "tartismali": false,
@@ -978,6 +997,7 @@
    "ders": "Enfeksiyon Hastalıkları",
    "konu": "Sifilis",
    "ders_notu_id": "k1-50-sifilis",
+   "ders_notu_sira": 50,
    "ogretim_uyesi": "Dr. Öğr. Üyesi Rüveyda Korkmazer",
    "durum": "tam",
    "tartismali": false,
@@ -1027,6 +1047,7 @@
    "ders": "Enfeksiyon Hastalıkları",
    "konu": "Sifilis",
    "ders_notu_id": "k1-50-sifilis",
+   "ders_notu_sira": 50,
    "ogretim_uyesi": "Dr. Öğr. Üyesi Rüveyda Korkmazer",
    "durum": "tam",
    "tartismali": false,
@@ -1076,6 +1097,7 @@
    "ders": "Enfeksiyon Hastalıkları",
    "konu": "Enfeksiyon Hastalıklarında Genel Kavramlar ve Temel Özellikler",
    "ders_notu_id": "k1-21-enfeksiyon-hastaliklarinda-genel-kavramlar-ve-teme",
+   "ders_notu_sira": 21,
    "ogretim_uyesi": "Uz. Dr. Merve Kaçar",
    "durum": "tam",
    "tartismali": false,
@@ -1123,9 +1145,10 @@
    "sinav_no": 23,
    "sinav_no_kesin": true,
    "ders": "Enfeksiyon Hastalıkları",
-   "konu": "Cinsel Yolla Bulaşan Hastalıklarda Profilaksi ve Korunma",
-   "ders_notu_id": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k",
-   "ogretim_uyesi": "Enfeksiyon Hastalıkları ABD",
+   "konu": "İntrauterin Enfeksiyonlar",
+   "ders_notu_id": "k1-57-intrauterin-enfeksiyonlar",
+   "ders_notu_sira": 57,
+   "ogretim_uyesi": "Dr. Öğr. Üyesi Rüveyda Korkmazer",
    "durum": "tam",
    "tartismali": false,
    "kok": "HBsAg pozitif fakat aşı yapılmamış bir anneden doğan bebeğe doğumdan hemen sonra uygulanacak doğru yaklaşım aşağıdakilerden hangisidir?",
@@ -1145,7 +1168,7 @@
     "supheli": []
    },
    "eslesme": {
-    "yontem": "otomatik",
+    "yontem": "elle",
     "puan": 42.8,
     "ikinci_aday": {
      "id": "k1-57-intrauterin-enfeksiyonlar",
@@ -1153,14 +1176,14 @@
     },
     "kanit": [
      {
-      "satir": 87,
-      "metin": "| 3 doz aşı yapılmış ancak antikor cevabı gelişmemiş | ==1 doz HBIG verilir==, bir seri daha (3 doz) Hepatit B aşılaması yapılır; kaynak negatifse aşı ve HBIG gerekmez; kaynağın yüksek riskli olduğu biliniyorsa HBsAg pozitif gibi yaklaşılır |",
-      "puan": 13.0
+      "satir": 180,
+      "metin": "**Soru / Öncül:** Aşağıdakilerden hangisi HIV pozitif anneden bebeğe vertikal bulaş riskini artıran faktörlerden DEĞİLDİR?",
+      "puan": 6.0
      },
      {
-      "satir": 88,
-      "metin": "| 6 doz aşı yapılmış ancak antikor cevabı gelişmemiş | ==1 ay ara ile 2 kez HBIG verilir==; kaynak negatifse aşı ve HBIG gerekmez; kaynağın yüksek riskli olduğu biliniyorsa HBsAg pozitif gibi yaklaşılır |",
-      "puan": 12.1
+      "satir": 70,
+      "metin": "- HIV pozitif anneden bebeğe vertikal geçiş riskini artıran faktörler: ==AIDS varlığı, CD4 sayısının düşük olması, viral yükün yüksek olması, ikiz bebek, koryoamniyonit, erken membran rüptürü ve emzirme==",
+      "puan": 6.0
      }
     ]
    },
@@ -1172,20 +1195,21 @@
    "sinav_no": 24,
    "sinav_no_kesin": false,
    "ders": "Enfeksiyon Hastalıkları",
-   "konu": "Bağışıklığı Baskılı Hastalarda Enfeksiyon",
-   "ders_notu_id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon",
-   "ogretim_uyesi": "Uz. Dr. Merve Kaçar",
+   "konu": "Üriner Sistem Enfeksiyonları",
+   "ders_notu_id": "k1-52-uriner-sistem-enfeksiyonlari",
+   "ders_notu_sira": 52,
+   "ogretim_uyesi": "Dr. Öğr. Üyesi Rüveyda Korkmazer",
    "durum": "tam",
    "tartismali": false,
-   "kok": "Febril nötropenik bir hastada geniş spektrumlu antibiyotik tedavisine rağmen ateşin 72 saat boyunca düşmemesi ve odağın bulunamaması durumunda en uygun yaklaşım ne olmalıdır?",
+   "kok": "Beta-laktam direnci ve antibiyotik tedavisi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
    "siklar": [
-    "Mevcut antibiyotik tedavisi kesilip hasta takibe alınmalıdır.",
-    "Empirik sistemik antifungal tedavi eklenmelidir.",
-    "Yalnızca ateş düşürücü verilerek 48 saat beklenmelidir.",
-    "Antibiyotik dozu yarıya indirilmelidir.",
-    "Oral antiviraller başlanıp taburcu edilmelidir."
+    "GSBL üreten suşlarda karbapenem grubu antibiyotikler tercih edilir.",
+    "MRSA enfeksiyonlarında vankomisin kullanılabilir.",
+    "GSBL üreten gram-negatif basiller 1. ve 2. kuşak sefalosporinlerle güvenle tedavi edilebilir.",
+    "Beta-laktamaz inhibitörleri (örn. klavulanik asit) enzimatik yıkımı engeller.",
+    "Pseudomonas enfeksiyonlarında antipseudomonal beta-laktamlar tercih edilmelidir."
    ],
-   "cevap": "B",
+   "cevap": "C",
    "not": "",
    "grup_pdfinde": true,
    "grup_pdf_disi_dayanak": null,
@@ -1195,21 +1219,21 @@
    },
    "eslesme": {
     "yontem": "otomatik",
-    "puan": 25.7,
+    "puan": 60.8,
     "ikinci_aday": {
-     "id": "k1-52-uriner-sistem-enfeksiyonlari",
-     "puan": 23.9
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon",
+     "puan": 42.1
     },
     "kanit": [
      {
-      "satir": 255,
-      "metin": "**Klinik & Patofizyolojik Çözüm Notu:** Febril nötropeni, nötrofil sayısının <500/mm³ olması ve vücut sıcaklığının bir kez ≥38.3 °C ya da bir saat boyunca ≥38 °C olmasıyla tanımlanır; altta yatan bozukluk fagositik/hücresel yanıttır, izole hümoral immün yetmezlik değildir. Mukozit kandidemi riskini, uzamış nötropeni (>7 gün) ise küf enfeksiyonu riskini artırır. (Cevap ders notundan belirlenmiştir;",
-      "puan": 8.1
+      "satir": 78,
+      "metin": "- Beta-laktamaz inhibitörlü aminopenisilinler ve oral sefalosporinler ekolojik yan hasar nedeniyle ampirik tedavide önerilmez; bunların kullanımı ==Genişlemiş Spektrumlu Beta-Laktamaz (GSBL) üreten çoklu dirençli bakterilerin seçilmesine, Clostridioides difficile enfeksiyonlarına== ve gelecekteki enfeksiyonlar için daha dirençli mikroorganizmaların üremesine zemin hazırlar",
+      "puan": 12.9
      },
      {
-      "satir": 234,
-      "metin": "- **Febril nötropeni:** nötrofil <500/mm³ + ≥38.3 °C (bir kez) veya ≥38 °C (1 saat); ampirik antipsödomonal antibiyotik 1 saat içinde",
-      "puan": 7.7
+      "satir": 104,
+      "metin": "- ==Siprofloksasin yalnızca yerel direnç <%10, 3. kuşak sefalosporin/aminoglikozid kontrendikasyonu veya beta-laktam aşırı duyarlılığı varsa== kullanılması önerilir",
+      "puan": 9.6
      }
     ]
    },
@@ -1223,6 +1247,7 @@
    "ders": "Enfeksiyon Hastalıkları",
    "konu": "Üretral Akıntı",
    "ders_notu_id": "k1-62-uretral-akinti",
+   "ders_notu_sira": 62,
    "ogretim_uyesi": "Uz. Dr. Merve Kaçar",
    "durum": "tam",
    "tartismali": false,
@@ -1270,20 +1295,21 @@
    "sinav_no": 26,
    "sinav_no_kesin": false,
    "ders": "Enfeksiyon Hastalıkları",
-   "konu": "Üriner Sistem Enfeksiyonları",
-   "ders_notu_id": "k1-52-uriner-sistem-enfeksiyonlari",
+   "konu": "İntrauterin Enfeksiyonlar",
+   "ders_notu_id": "k1-57-intrauterin-enfeksiyonlar",
+   "ders_notu_sira": 57,
    "ogretim_uyesi": "Dr. Öğr. Üyesi Rüveyda Korkmazer",
    "durum": "tam",
    "tartismali": false,
-   "kok": "Akut prostatit tanısı ve yaklaşımı ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+   "kok": "Toxoplasma gondii enfeksiyonu ve korunma yolları ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
    "siklar": [
-    "Şiddetli bakteriyemi/sepsis riski nedeniyle sert rektal muayene ve prostat masajından kaçınılmalıdır.",
-    "Tedavide penisilin V ilk seçenektir.",
-    "Hastalarda idrar yapma zorluğu ve ateş hiçbir zaman izlenmez.",
-    "Tanı için prostat biyopsisi rutin olarak uygulanmalıdır.",
-    "Yalnızca cerrahi olarak prostatın çıkarılmasıyla iyileşir."
+    "Seronegatif gebe kadınların ev kedisi ile temas etmemesi gerekir.",
+    "IgG avidite testi enfeksiyonun akut mu yoksa geçirilmiş mi olduğunu anlamada önemlidir.",
+    "Parazit insandan insana solunum yolu damlacıkları ile kolayca bulaşır.",
+    "Gebelikte geçirilen akut enfeksiyon fetüste hasar oluşturmaz.",
+    "Enfeksiyon kaynağı esas olarak kontamine süt ürünleridir."
    ],
-   "cevap": "A",
+   "cevap": "B",
    "not": "",
    "grup_pdfinde": true,
    "grup_pdf_disi_dayanak": null,
@@ -1293,21 +1319,21 @@
    },
    "eslesme": {
     "yontem": "otomatik",
-    "puan": 26.0,
+    "puan": 56.3,
     "ikinci_aday": {
-     "id": "k1-62-uretral-akinti",
-     "puan": 23.4
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon",
+     "puan": 26.4
     },
     "kanit": [
      {
-      "satir": 66,
-      "metin": "- Erkekte prostat ilişkili hastalığı dışlamak adına dijital rektal muayene yapılmalıdır; genç erkekte nadirdir, saptanırsa kronik bakteriyel prostatit düşünülmelidir",
-      "puan": 4.4
+      "satir": 144,
+      "metin": "- **Tanı:** annede Toxoplasma IgG, IgM ve IgG avidite testi; konjenital toksoplazmoz açısından en iyi antenatal yöntem USG, amniyosentez ve kordosentezdir; 20-22. haftada fetüs kan örneğinde IgM aranır; PCR duyarlılığı %65",
+      "puan": 11.7
      },
      {
-      "satir": 58,
-      "metin": "- **Klinik:** yeni başlayan ateş, titreme, mental durum değişikliği, halsizlik/letarji (başka neden yoksa), yan ağrısı, KVA hassasiyeti, akut hematüri, pelvik rahatsızlık; kateter çıkarılmışsa dizüri, sıkışma, sıklık, suprapubik ağrı",
-      "puan": 2.6
+      "satir": 200,
+      "metin": "**Klinik & Patofizyolojik Çözüm Notu:** Toksoplazmada IgM'de çapraz pozitiflik sıktır ve IgM 2 yıla kadar pozitif kalabildiği için tek başına akut infeksiyonu göstermez. Enfeksiyonun yeni mi yoksa eski mi olduğunu ayırt etmek için IgG avidite testi yapılır (yüksek avidite eski antikorları, düşük avidite yeni antikorları gösterir); bu nedenle ilk aşamada IgG avidite testi istenir. (Cevap ders notun",
+      "puan": 10.0
      }
     ]
    },
@@ -1321,6 +1347,7 @@
    "ders": "Enfeksiyon Hastalıkları",
    "konu": "İntrauterin Enfeksiyonlar",
    "ders_notu_id": "k1-57-intrauterin-enfeksiyonlar",
+   "ders_notu_sira": 57,
    "ogretim_uyesi": "Dr. Öğr. Üyesi Rüveyda Korkmazer",
    "durum": "tam",
    "tartismali": false,
@@ -1377,6 +1404,7 @@
    "ders": "Enfeksiyon Hastalıkları",
    "konu": "Enfeksiyon Hastalıklarında Genel Kavramlar ve Temel Özellikler",
    "ders_notu_id": "k1-21-enfeksiyon-hastaliklarinda-genel-kavramlar-ve-teme",
+   "ders_notu_sira": 21,
    "ogretim_uyesi": "Uz. Dr. Merve Kaçar",
    "durum": "tam",
    "tartismali": false,
@@ -1433,6 +1461,7 @@
    "ders": "Enfeksiyon Hastalıkları",
    "konu": "Üriner Sistem Enfeksiyonları",
    "ders_notu_id": "k1-52-uriner-sistem-enfeksiyonlari",
+   "ders_notu_sira": 52,
    "ogretim_uyesi": "Dr. Öğr. Üyesi Rüveyda Korkmazer",
    "durum": "tam",
    "tartismali": false,
@@ -1482,6 +1511,7 @@
    "ders": "Enfeksiyon Hastalıkları",
    "konu": "Üriner Sistem Enfeksiyonları",
    "ders_notu_id": "k1-52-uriner-sistem-enfeksiyonlari",
+   "ders_notu_sira": 52,
    "ogretim_uyesi": "Dr. Öğr. Üyesi Rüveyda Korkmazer",
    "durum": "tam",
    "tartismali": false,
@@ -1533,6 +1563,7 @@
    "ders": "Enfeksiyon Hastalıkları",
    "konu": "Bağışıklığı Baskılı Hastalarda Enfeksiyon",
    "ders_notu_id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon",
+   "ders_notu_sira": 47,
    "ogretim_uyesi": "Uz. Dr. Merve Kaçar",
    "durum": "tam",
    "tartismali": false,
@@ -1589,6 +1620,7 @@
    "ders": "Patoloji",
    "konu": "Patolojiye Giriş",
    "ders_notu_id": "k1-02-patolojiye-giris",
+   "ders_notu_sira": 2,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "tam",
    "tartismali": false,
@@ -1641,6 +1673,7 @@
    "ders": "Patoloji",
    "konu": "Hücre Hasarı ve Nekroz - I",
    "ders_notu_id": "k1-04-hucre-hasari-ve-nekroz-i",
+   "ders_notu_sira": 4,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "tam",
    "tartismali": false,
@@ -1690,6 +1723,7 @@
    "ders": "Patoloji",
    "konu": "Hücresel Yaşlanma",
    "ders_notu_id": "k1-08-hucresel-yaslanma",
+   "ders_notu_sira": 8,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "siklar_uretildi",
    "tartismali": false,
@@ -1744,6 +1778,7 @@
    "ders": "Patoloji",
    "konu": "Hücresel Adaptasyonlar",
    "ders_notu_id": "k1-03-hucresel-adaptasyonlar",
+   "ders_notu_sira": 3,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "tam",
    "tartismali": false,
@@ -1793,6 +1828,7 @@
    "ders": "Patoloji",
    "konu": "Hücresel Yaşlanma",
    "ders_notu_id": "k1-08-hucresel-yaslanma",
+   "ders_notu_sira": 8,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "tam",
    "tartismali": false,
@@ -1842,6 +1878,7 @@
    "ders": "Patoloji",
    "konu": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
    "ders_notu_id": "k1-09-akut-enflamasyon-vaskuler-degisiklikler-ve-hucrese",
+   "ders_notu_sira": 9,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "siklar_uretildi",
    "tartismali": false,
@@ -1897,6 +1934,7 @@
    "ders": "Patoloji",
    "konu": "Enflamasyonun Kimyasal Mediyatörleri",
    "ders_notu_id": "k1-12-enflamasyonun-kimyasal-mediyatorleri",
+   "ders_notu_sira": 12,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "siklar_uretildi",
    "tartismali": false,
@@ -1952,6 +1990,7 @@
    "ders": "Patoloji",
    "konu": "Kronik ve Granülomatöz Enflamasyon",
    "ders_notu_id": "k1-13-kronik-ve-granulomatoz-enflamasyon",
+   "ders_notu_sira": 13,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "siklar_uretildi",
    "tartismali": false,
@@ -2006,6 +2045,7 @@
    "ders": "Patoloji",
    "konu": "Doku Onarımı ve Yara İyileşmesi",
    "ders_notu_id": "k1-15-doku-onarimi-ve-yara-iyilesmesi",
+   "ders_notu_sira": 15,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "siklar_uretildi",
    "tartismali": false,
@@ -2060,6 +2100,7 @@
    "ders": "Patoloji",
    "konu": "Ödem, Hiperemi, Konjesyon ve Kanama",
    "ders_notu_id": "k1-16-odem-hiperemi-konjesyon-ve-kanama",
+   "ders_notu_sira": 16,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "tam",
    "tartismali": false,
@@ -2109,6 +2150,7 @@
    "ders": "Patoloji",
    "konu": "Tromboz Patofizyolojisi",
    "ders_notu_id": "k1-20-tromboz-patofizyolojisi",
+   "ders_notu_sira": 20,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "siklar_uretildi",
    "tartismali": false,
@@ -2162,6 +2204,7 @@
    "ders": "Patoloji",
    "konu": "Emboli, Enfarktüs ve Şok",
    "ders_notu_id": "k1-24-emboli-enfarktus-ve-sok",
+   "ders_notu_sira": 24,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "tam",
    "tartismali": false,
@@ -2211,6 +2254,7 @@
    "ders": "Patoloji",
    "konu": "Aşırı Duyarlılık ve Otoimmünite",
    "ders_notu_id": "k1-25-asiri-duyarlilik-ve-otoimmunite",
+   "ders_notu_sira": 25,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "tam",
    "tartismali": false,
@@ -2262,6 +2306,7 @@
    "ders": "Patoloji",
    "konu": "Genetik, Pediatrik ve Çevresel Patoloji",
    "ders_notu_id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji",
+   "ders_notu_sira": 26,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "tam",
    "tartismali": false,
@@ -2311,6 +2356,7 @@
    "ders": "Patoloji",
    "konu": "Genetik, Pediatrik ve Çevresel Patoloji",
    "ders_notu_id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji",
+   "ders_notu_sira": 26,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "siklar_uretildi",
    "tartismali": false,
@@ -2364,20 +2410,21 @@
    "sinav_no": 50,
    "sinav_no_kesin": false,
    "ders": "Patoloji",
-   "konu": "Sistemik Hastalıklarda Böbrek Hasarı",
-   "ders_notu_id": "k1-41-sistemik-hastaliklarda-bobrek-hasari",
+   "konu": "Hücre Hasarı ve Nekroz - II",
+   "ders_notu_id": "k1-05-hucre-hasari-ve-nekroz-ii",
+   "ders_notu_sira": 5,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "tam",
    "tartismali": false,
-   "kok": "Diyabetik nefropatinin patognomonik ve en karakterize histopatolojik nodüler glomerüler nodül bulgusu aşağıdakilerden hangisidir?",
+   "kok": "Apoptoz (programlanmış hücre ölümü) mekanizması ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
    "siklar": [
-    "Kimmelstiel-Wilson nodülleri",
-    "Libman-Sacks lezyonları",
-    "Flea-bitten böbrek",
-    "Wire-loop lezyonu",
-    "Crescentic glomerülorefleks"
+    "Hücre büzülmesi ve kromatin kondansasyonu izlenir.",
+    "Hücre zarı bütünlüğü korunur, belirgin inflamasyon oluşturmaz.",
+    "Ana yürütücü (executioner) kaspaz kaspaz-3'tür; kaspaz-8 ve 9 ise başlatıcıdır.",
+    "DNA 180-200 bp oligonükleozomal fragmanlara bölünür.",
+    "BCL-2 ailesi proteinleri apoptoz regülasyonunda rol almaz."
    ],
-   "cevap": "A",
+   "cevap": "E",
    "not": "",
    "grup_pdfinde": true,
    "grup_pdf_disi_dayanak": null,
@@ -2386,22 +2433,22 @@
     "supheli": []
    },
    "eslesme": {
-    "yontem": "elle",
-    "puan": 29.7,
+    "yontem": "otomatik",
+    "puan": 44.6,
     "ikinci_aday": {
-     "id": "k1-41-sistemik-hastaliklarda-bobrek-hasari",
-     "puan": 24.4
+     "id": "k1-08-hucresel-yaslanma",
+     "puan": 27.8
     },
     "kanit": [
      {
-      "satir": 171,
-      "metin": "- **Diyabetik nefropati:** bazal membran kalınlaşması, difüz mezangial skleroz, ==Kimmelstiel-Wilson== nodüler glomeruloskleroz; mikroalbüminüri → makroalbüminüri; Tip 2 DM'de ABD'de KBH'nın en sık nedeni",
-      "puan": 11.9
+      "satir": 81,
+      "metin": "- Temel oyuncular: **kaspazlar** (aspartik asit sonrası proteinleri parçalar), **BCL-2 ailesi**, **ölüm reseptörleri** (Fas, TNF reseptörü)",
+      "puan": 7.9
      },
      {
-      "satir": 35,
-      "metin": "- Böbrek lezyonları: ==glomerüler bazal membran kalınlaşması, difüz mezangial skleroz ve nodüler (Kimmelstiel-Wilson) glomeruloskleroz==",
-      "puan": 11.0
+      "satir": 74,
+      "metin": "- **Kromatin kondansasyonu:** kenarlara toplanır, yoğunlaşır (çekirdek çevresinde hilal şeklinde)",
+      "puan": 6.1
      }
     ]
    },
@@ -2415,6 +2462,7 @@
    "ders": "Patoloji",
    "konu": "Tümör Biyolojisi ve Terminolojisi",
    "ders_notu_id": "k1-28-tumor-biyolojisi-ve-terminolojisi",
+   "ders_notu_sira": 28,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "tam",
    "tartismali": false,
@@ -2464,18 +2512,19 @@
    "ders": "Patoloji",
    "konu": "Hücre Hasarı ve Nekroz - II",
    "ders_notu_id": "k1-05-hucre-hasari-ve-nekroz-ii",
+   "ders_notu_sira": 5,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "tam",
    "tartismali": false,
-   "kok": "Apoptoz (programlanmış hücre ölümü) mekanizması ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+   "kok": "İntrasellüler ROS artışı ve DNA hasarında apoptozun mitokondriyal (intrinsik) yolağında gerçekleşen olayların doğru sırası hangisidir?",
    "siklar": [
-    "Hücre büzülmesi ve kromatin kondansasyonu izlenir.",
-    "Hücre zarı bütünlüğü korunur, belirgin inflamasyon oluşturmaz.",
-    "Ana yürütücü (executioner) kaspaz kaspaz-3'tür; kaspaz-8 ve 9 ise başlatıcıdır.",
-    "DNA 180-200 bp oligonükleozomal fragmanlara bölünür.",
-    "BCL-2 ailesi proteinleri apoptoz regülasyonunda rol almaz."
+    "Sitokrom-c salınımı → BAX/BAK aktivasyonu → Kaspaz-3",
+    "BAX/BAK oligomerizasyonu → zar geçirgenlik artışı → sitokrom-c'nin sitozole salınımı → kaspaz aktivasyonu",
+    "Kaspaz-3 aktivasyonu → sitokrom-c → DNA kırılması",
+    "TNF reseptör bağlanması → kaspaz-8 → BAX baskılanması",
+    "Bcl-2 artışı → mitokondri patlaması → nekroz"
    ],
-   "cevap": "E",
+   "cevap": "B",
    "not": "",
    "grup_pdfinde": true,
    "grup_pdf_disi_dayanak": null,
@@ -2485,21 +2534,21 @@
    },
    "eslesme": {
     "yontem": "otomatik",
-    "puan": 44.6,
+    "puan": 62.5,
     "ikinci_aday": {
      "id": "k1-08-hucresel-yaslanma",
-     "puan": 27.8
+     "puan": 54.5
     },
     "kanit": [
      {
-      "satir": 81,
-      "metin": "- Temel oyuncular: **kaspazlar** (aspartik asit sonrası proteinleri parçalar), **BCL-2 ailesi**, **ölüm reseptörleri** (Fas, TNF reseptörü)",
-      "puan": 7.9
+      "satir": 183,
+      "metin": "- **Anti-apoptotik:** BCL-2, BCL-XL; **pro-apoptotik:** BAX, BAK",
+      "puan": 10.4
      },
      {
-      "satir": 74,
-      "metin": "- **Kromatin kondansasyonu:** kenarlara toplanır, yoğunlaşır (çekirdek çevresinde hilal şeklinde)",
-      "puan": 6.1
+      "satir": 95,
+      "metin": "| BH3-only | — | Hücre içi stres sensörleri; BAX/BAK'ı aktive eder, BCL-2'yi baskılar |",
+      "puan": 9.9
      }
     ]
    },
@@ -2511,20 +2560,21 @@
    "sinav_no": 53,
    "sinav_no_kesin": false,
    "ders": "Patoloji",
-   "konu": "Glomerüler Hastalıklar: Nefritik Sendrom",
-   "ders_notu_id": "k1-38-glomeruler-hastaliklar-nefritik-sendrom",
+   "konu": "Tümör Biyolojisi ve Terminolojisi",
+   "ders_notu_id": "k1-28-tumor-biyolojisi-ve-terminolojisi",
+   "ders_notu_sira": 28,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "tam",
    "tartismali": false,
-   "kok": "Aşağıdakilerden hangisi nefritik sendrom klinik tablosunun tipik bulgularından biridir?",
+   "kok": "Endokrin organ tümörlerinde hormon üretimi ve fonksiyonel aktivite ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
    "siklar": [
-    "Masif proteinüri (>3,5 g/gün) ve belirgin lipidüri",
-    "İzole hiperlipidemi ve ksantomlar",
-    "İzole glukozüri ve ketonüri",
-    "Hematüri, oligüri, hipertansiyon ve eritrosit silendirleri",
-    "İzole hipokalsemi ve tetani"
+    "Malign ve anaplastik tümörler her zaman en yüksek hormonu salgılar.",
+    "İyi diferansiye benign tümörlerde hormon üretimi ve salgılanması normal endokrin yapıya daha uygundur.",
+    "Tümörün diferansiyasyonu düştükçe hormon sentez kapasitesi artar.",
+    "Adenomlar hiçbir zaman hormon salgılayamaz.",
+    "Hormon üretimi sadece metastatik lezyonlarda gerçekleşir."
    ],
-   "cevap": "D",
+   "cevap": "B",
    "not": "",
    "grup_pdfinde": true,
    "grup_pdf_disi_dayanak": null,
@@ -2533,22 +2583,22 @@
     "supheli": []
    },
    "eslesme": {
-    "yontem": "otomatik",
-    "puan": 28.1,
+    "yontem": "elle",
+    "puan": 28.8,
     "ikinci_aday": {
-     "id": "k1-37-glomeruler-hastaliklar-nefrotik-sendrom",
-     "puan": 19.0
+     "id": "k1-66-erkek-genital-sistem-ve-prostat-hastaliklari",
+     "puan": 26.9
     },
     "kanit": [
      {
-      "satir": 200,
-      "metin": "- **Nefritik sendrom:** hematüri (eritrosit silendirleri), subnefrotik proteinüri, azotemi, oligüri, hipertansiyon",
-      "puan": 10.4
+      "satir": 117,
+      "metin": "- İyi diferansiye malign tümörler fonksiyonu sürdürebilir: endokrin karsinom hormon, ==skuamöz hücreli karsinom keratin==, ==hepatoselüler karsinom safra== üretir",
+      "puan": 6.9
      },
      {
-      "satir": 133,
-      "metin": "- SLE klinik spektrumu çok geniş; böbrek bulguları genellikle ==karışık nefrotik-nefritik tablo==: hematüri, eritrosit silendirleri; çoğu zaman nefrotik düzeye varan proteinüri; hipertansiyon",
-      "puan": 9.3
+      "satir": 285,
+      "metin": "**Klinik & Patofizyolojik Çözüm Notu:** Ders notuna göre karsinomlar tipik olarak lenfatik yolla yayılır; hematojen yayılım en sık ince duvarlı venlerle olur; iskelet kası nadir metastaz yeridir; diferansiyasyon arttıkça normal hücreye benzerlik artar. Bu nedenle diğer seçenekler yanlıştır; büyüme hızı her zaman benign-malign ayrımını belirlemez. (Sınav anahtarı mevcut değildir.)",
+      "puan": 6.7
      }
     ]
    },
@@ -2562,6 +2612,7 @@
    "ders": "Patoloji",
    "konu": "Glomerüler Hastalıklar: Nefrotik Sendrom",
    "ders_notu_id": "k1-37-glomeruler-hastaliklar-nefrotik-sendrom",
+   "ders_notu_sira": 37,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "tam",
    "tartismali": false,
@@ -2611,20 +2662,21 @@
    "sinav_no": 55,
    "sinav_no_kesin": false,
    "ders": "Patoloji",
-   "konu": "Hücre Hasarı ve Nekroz - II",
-   "ders_notu_id": "k1-05-hucre-hasari-ve-nekroz-ii",
+   "konu": "Glomerüler Hastalıklar: Nefritik Sendrom",
+   "ders_notu_id": "k1-38-glomeruler-hastaliklar-nefritik-sendrom",
+   "ders_notu_sira": 38,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "tam",
    "tartismali": false,
-   "kok": "İntrasellüler ROS artışı ve DNA hasarında apoptozun mitokondriyal (intrinsik) yolağında gerçekleşen olayların doğru sırası hangisidir?",
+   "kok": "Aşağıdakilerden hangisi nefritik sendrom klinik tablosunun tipik bulgularından biridir?",
    "siklar": [
-    "Sitokrom-c salınımı → BAX/BAK aktivasyonu → Kaspaz-3",
-    "BAX/BAK oligomerizasyonu → zar geçirgenlik artışı → sitokrom-c'nin sitozole salınımı → kaspaz aktivasyonu",
-    "Kaspaz-3 aktivasyonu → sitokrom-c → DNA kırılması",
-    "TNF reseptör bağlanması → kaspaz-8 → BAX baskılanması",
-    "Bcl-2 artışı → mitokondri patlaması → nekroz"
+    "Masif proteinüri (>3,5 g/gün) ve belirgin lipidüri",
+    "İzole hiperlipidemi ve ksantomlar",
+    "İzole glukozüri ve ketonüri",
+    "Hematüri, oligüri, hipertansiyon ve eritrosit silendirleri",
+    "İzole hipokalsemi ve tetani"
    ],
-   "cevap": "B",
+   "cevap": "D",
    "not": "",
    "grup_pdfinde": true,
    "grup_pdf_disi_dayanak": null,
@@ -2634,21 +2686,21 @@
    },
    "eslesme": {
     "yontem": "otomatik",
-    "puan": 62.5,
+    "puan": 28.1,
     "ikinci_aday": {
-     "id": "k1-08-hucresel-yaslanma",
-     "puan": 54.5
+     "id": "k1-37-glomeruler-hastaliklar-nefrotik-sendrom",
+     "puan": 19.0
     },
     "kanit": [
      {
-      "satir": 183,
-      "metin": "- **Anti-apoptotik:** BCL-2, BCL-XL; **pro-apoptotik:** BAX, BAK",
+      "satir": 200,
+      "metin": "- **Nefritik sendrom:** hematüri (eritrosit silendirleri), subnefrotik proteinüri, azotemi, oligüri, hipertansiyon",
       "puan": 10.4
      },
      {
-      "satir": 95,
-      "metin": "| BH3-only | — | Hücre içi stres sensörleri; BAX/BAK'ı aktive eder, BCL-2'yi baskılar |",
-      "puan": 9.9
+      "satir": 133,
+      "metin": "- SLE klinik spektrumu çok geniş; böbrek bulguları genellikle ==karışık nefrotik-nefritik tablo==: hematüri, eritrosit silendirleri; çoğu zaman nefrotik düzeye varan proteinüri; hipertansiyon",
+      "puan": 9.3
      }
     ]
    },
@@ -2660,20 +2712,21 @@
    "sinav_no": 56,
    "sinav_no_kesin": false,
    "ders": "Patoloji",
-   "konu": "Over Tümörleri",
-   "ders_notu_id": "k1-55-over-tumorleri",
+   "konu": "Sistemik Hastalıklarda Böbrek Hasarı",
+   "ders_notu_id": "k1-41-sistemik-hastaliklarda-bobrek-hasari",
+   "ders_notu_sira": 41,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "tam",
    "tartismali": false,
-   "kok": "Endokrin organ tümörlerinde hormon üretimi ve fonksiyonel aktivite ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+   "kok": "Diyabetik nefropatinin patognomonik ve en karakterize histopatolojik nodüler glomerüler nodül bulgusu aşağıdakilerden hangisidir?",
    "siklar": [
-    "Malign ve anaplastik tümörler her zaman en yüksek hormonu salgılar.",
-    "İyi diferansiye benign tümörlerde hormon üretimi ve salgılanması normal endokrin yapıya daha uygundur.",
-    "Tümörün diferansiyasyonu düştükçe hormon sentez kapasitesi artar.",
-    "Adenomlar hiçbir zaman hormon salgılayamaz.",
-    "Hormon üretimi sadece metastatik lezyonlarda gerçekleşir."
+    "Kimmelstiel-Wilson nodülleri",
+    "Libman-Sacks lezyonları",
+    "Flea-bitten böbrek",
+    "Wire-loop lezyonu",
+    "Crescentic glomerülorefleks"
    ],
-   "cevap": "B",
+   "cevap": "A",
    "not": "",
    "grup_pdfinde": true,
    "grup_pdf_disi_dayanak": null,
@@ -2682,22 +2735,22 @@
     "supheli": []
    },
    "eslesme": {
-    "yontem": "otomatik",
-    "puan": 28.8,
+    "yontem": "elle",
+    "puan": 29.7,
     "ikinci_aday": {
-     "id": "k1-66-erkek-genital-sistem-ve-prostat-hastaliklari",
-     "puan": 26.9
+     "id": "k1-41-sistemik-hastaliklarda-bobrek-hasari",
+     "puan": 24.4
     },
     "kanit": [
      {
-      "satir": 220,
-      "metin": "**Klinik & Patofizyolojik Çözüm Notu:** Seröz tümörler overin en sık izlenen epitelyal tümörleridir; benign tümörlerde kistler berrak seröz sıvı ile dolu olup döşeyici hücreler genellikle silyalıdır ve papillaların uç kısmında psammom cisimcikleri görülür. Malign seröz tümörler periaortikler de dahil bölgesel lenf nodlarına yayılır ancak uzak lenfatik ve hematojen metastazlar sık değildir; bu nede",
-      "puan": 4.0
+      "satir": 171,
+      "metin": "- **Diyabetik nefropati:** bazal membran kalınlaşması, difüz mezangial skleroz, ==Kimmelstiel-Wilson== nodüler glomeruloskleroz; mikroalbüminüri → makroalbüminüri; Tip 2 DM'de ABD'de KBH'nın en sık nedeni",
+      "puan": 11.9
      },
      {
-      "satir": 32,
-      "metin": "- **Seröz tümörler:** benign (kistadenom, kistadenofibrom), borderline (seröz borderline tümör), malign (düşük ve yüksek dereceli seröz adenokarsinom)",
-      "puan": 3.9
+      "satir": 35,
+      "metin": "- Böbrek lezyonları: ==glomerüler bazal membran kalınlaşması, difüz mezangial skleroz ve nodüler (Kimmelstiel-Wilson) glomeruloskleroz==",
+      "puan": 11.0
      }
     ]
    },
@@ -2711,6 +2764,7 @@
    "ders": "Patoloji",
    "konu": "Tübülointerstisyel Hastalıklar",
    "ders_notu_id": "k1-42-tubulointerstisyel-hastaliklar",
+   "ders_notu_sira": 42,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "tam",
    "tartismali": false,
@@ -2767,6 +2821,7 @@
    "ders": "Patoloji",
    "konu": "Böbrek Tümörleri",
    "ders_notu_id": "k1-45-bobrek-tumorleri",
+   "ders_notu_sira": 45,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "tam",
    "tartismali": false,
@@ -2816,6 +2871,7 @@
    "ders": "Patoloji",
    "konu": "Mesane Hastalıkları ve Tümörleri",
    "ders_notu_id": "k1-46-mesane-hastaliklari-ve-tumorleri",
+   "ders_notu_sira": 46,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "tam",
    "tartismali": false,
@@ -2865,6 +2921,7 @@
    "ders": "Patoloji",
    "konu": "Vulva, Vajen ve Serviks Hastalıkları",
    "ders_notu_id": "k1-48-vulva-vajen-ve-serviks-hastaliklari",
+   "ders_notu_sira": 48,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "tam",
    "tartismali": false,
@@ -2921,6 +2978,7 @@
    "ders": "Patoloji",
    "konu": "Endometriyal Hiperplazi ve Kanserleri",
    "ders_notu_id": "k1-53-endometriyal-hiperplazi-ve-kanserleri",
+   "ders_notu_sira": 53,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "tam",
    "tartismali": false,
@@ -2970,6 +3028,7 @@
    "ders": "Patoloji",
    "konu": "Over Tümörleri",
    "ders_notu_id": "k1-55-over-tumorleri",
+   "ders_notu_sira": 55,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "siklar_uretildi",
    "tartismali": false,
@@ -3039,6 +3098,7 @@
    "ders": "Patoloji",
    "konu": "Meme Kanseri ve Moleküler Tipleri",
    "ders_notu_id": "k1-65-meme-kanseri-ve-molekuler-tipleri",
+   "ders_notu_sira": 65,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "siklar_uretildi",
    "tartismali": false,
@@ -3093,6 +3153,7 @@
    "ders": "Patoloji",
    "konu": "Erkek Genital Sistem ve Prostat Hastalıkları",
    "ders_notu_id": "k1-66-erkek-genital-sistem-ve-prostat-hastaliklari",
+   "ders_notu_sira": 66,
    "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
    "durum": "tam",
    "tartismali": false,
@@ -3142,6 +3203,7 @@
    "ders": "Halk Sağlığı",
    "konu": "Bebek Beslenmesi",
    "ders_notu_id": "k1-22-bebek-beslenmesi",
+   "ders_notu_sira": 22,
    "ogretim_uyesi": "Doç. Dr. Nergiz Sevinç",
    "durum": "siklar_uretildi",
    "tartismali": true,
@@ -3197,6 +3259,7 @@
    "ders": "Halk Sağlığı",
    "konu": "Halk Sağlığı Tarihçesi",
    "ders_notu_id": "k1-18-halk-sagligi-tarihcesi",
+   "ders_notu_sira": 18,
    "ogretim_uyesi": "Doç. Dr. Nergiz Sevinç",
    "durum": "tam",
    "tartismali": false,
@@ -3246,6 +3309,7 @@
    "ders": "Halk Sağlığı",
    "konu": "Halk Sağlığı Tarihçesi",
    "ders_notu_id": "k1-18-halk-sagligi-tarihcesi",
+   "ders_notu_sira": 18,
    "ogretim_uyesi": "Doç. Dr. Nergiz Sevinç",
    "durum": "tam",
    "tartismali": true,
@@ -3295,57 +3359,9 @@
    "sinav_no": 72,
    "sinav_no_kesin": false,
    "ders": "Halk Sağlığı",
-   "konu": "Ana-Çocuk Sağlığı Düzeyinin İzlenmesi",
-   "ders_notu_id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi",
-   "ogretim_uyesi": "Doç. Dr. Nergiz Sevinç",
-   "durum": "tam",
-   "tartismali": false,
-   "kok": "Gebelik takibinde tüm gebelere rutin önerilen ve gebelikte güvenle uygulanabilen aşı aşağıdakilerden hangisidir?",
-   "siklar": [
-    "Kızamıkçık (rubella) aşısı",
-    "Suçiçeği aşısı",
-    "Tetanoz (Td/Tdap) aşısı",
-    "Kızamık aşısı",
-    "BCG (verem) aşısı"
-   ],
-   "cevap": "C",
-   "not": "",
-   "grup_pdfinde": true,
-   "grup_pdf_disi_dayanak": null,
-   "sik_isaretleri": {
-    "uretildi": [],
-    "supheli": []
-   },
-   "eslesme": {
-    "yontem": "elle",
-    "puan": 16.6,
-    "ikinci_aday": {
-     "id": "k1-18-halk-sagligi-tarihcesi",
-     "puan": 15.8
-    },
-    "kanit": [
-     {
-      "satir": 66,
-      "metin": "| Gebelikte demir takviyesi ve tetanoz aşısı | %81 |",
-      "puan": 5.5
-     },
-     {
-      "satir": 94,
-      "metin": "| **1. izlem** (öykü ~30 dk) | Kişisel bilgiler (eğitim, ekonomik durum, akrabalık), tıbbi, obstetrik ve mevcut gebelik öyküsü; fizik muayene (boy, kilo, kan basıncı, uterus büyüklüğü, anemi, ödem); fetal kalp sesi (el doppleri ile 10-12. hafta, steteskopla 16-20. hafta); risk değerlendirme formu; laboratuvar: idrar (bakteriüri, proteinüri), Hb-Hct, kan grubu, ==HBsAg==; demir ve tetanoz; bilgilen",
-      "puan": 3.4
-     }
-    ]
-   },
-   "kaynak": "derleme PDF'i + Konu çalışma grubu (WhatsApp, 23.10 10:00 – 24.10 15:25)"
-  },
-  {
-   "kurul": 1,
-   "yil": "2026-2027",
-   "sinav_no": 73,
-   "sinav_no_kesin": false,
-   "ders": "Halk Sağlığı",
    "konu": "Halk Sağlığı Tarihçesi",
    "ders_notu_id": "k1-18-halk-sagligi-tarihcesi",
+   "ders_notu_sira": 18,
    "ogretim_uyesi": "Doç. Dr. Nergiz Sevinç",
    "durum": "tam",
    "tartismali": false,
@@ -3390,60 +3406,12 @@
   {
    "kurul": 1,
    "yil": "2026-2027",
-   "sinav_no": 74,
-   "sinav_no_kesin": true,
-   "ders": "Halk Sağlığı",
-   "konu": "Bebek Beslenmesi",
-   "ders_notu_id": "k1-22-bebek-beslenmesi",
-   "ogretim_uyesi": "Doç. Dr. Nergiz Sevinç",
-   "durum": "tam",
-   "tartismali": false,
-   "kok": "Terminde ve 2,5 kg doğan bebeğin 6. ay ve 1. yaştaki beklenen ortalama ağırlıkları hangisinde doğru verilmiştir?",
-   "siklar": [
-    "6. ay: 3,5 kg / 1. yaş: 5 kg",
-    "6. ay: 5 kg / 1. yaş: 7,5 kg",
-    "6. ay: 7,5 kg / 1. yaş: 10 kg",
-    "6. ay: 9 kg / 1. yaş: 12 kg",
-    "6. ay: 4 kg / 1. yaş: 6 kg"
-   ],
-   "cevap": "B",
-   "not": "Derleme PDF'inin anahtarı C diyor; grupta da paylaşılan ders notuna göre bebekler 4–6 ayda doğum ağırlığının 2, bir yaşında 3 katına ulaşır → B (5 / 7,5 kg).",
-   "grup_pdfinde": true,
-   "grup_pdf_disi_dayanak": null,
-   "sik_isaretleri": {
-    "uretildi": [],
-    "supheli": []
-   },
-   "eslesme": {
-    "yontem": "elle",
-    "puan": 12.4,
-    "ikinci_aday": {
-     "id": "k1-22-bebek-beslenmesi",
-     "puan": 11.3
-    },
-    "kanit": [
-     {
-      "satir": 68,
-      "metin": "- Yeterli beslenen annenin sütü term bebeğin ==D vitamini dışındaki== tüm vitamin ihtiyacını karşılar → anne sütü alan bebeğe ==D vitamini verilmeli== veya düzenli güneşlendirilmelidir",
-      "puan": 2.6
-     },
-     {
-      "satir": 146,
-      "metin": "- **Doğum ağırlığı:** 10-14. günde geri kazanılır; 4-6 ayda 2 kat, 1 yaşta 3 kat",
-      "puan": 2.2
-     }
-    ]
-   },
-   "kaynak": "derleme PDF'i + Konu çalışma grubu (WhatsApp, 23.10 10:00 – 24.10 15:25)"
-  },
-  {
-   "kurul": 1,
-   "yil": "2026-2027",
-   "sinav_no": 75,
+   "sinav_no": 73,
    "sinav_no_kesin": false,
    "ders": "Halk Sağlığı",
    "konu": "Halk Sağlığı Tarihçesi",
    "ders_notu_id": "k1-18-halk-sagligi-tarihcesi",
+   "ders_notu_sira": 18,
    "ogretim_uyesi": "Doç. Dr. Nergiz Sevinç",
    "durum": "siklar_uretildi",
    "tartismali": false,
@@ -3494,11 +3462,112 @@
   {
    "kurul": 1,
    "yil": "2026-2027",
+   "sinav_no": 74,
+   "sinav_no_kesin": true,
+   "ders": "Halk Sağlığı",
+   "konu": "Bebek Beslenmesi",
+   "ders_notu_id": "k1-22-bebek-beslenmesi",
+   "ders_notu_sira": 22,
+   "ogretim_uyesi": "Doç. Dr. Nergiz Sevinç",
+   "durum": "tam",
+   "tartismali": false,
+   "kok": "Terminde ve 2,5 kg doğan bebeğin 6. ay ve 1. yaştaki beklenen ortalama ağırlıkları hangisinde doğru verilmiştir?",
+   "siklar": [
+    "6. ay: 3,5 kg / 1. yaş: 5 kg",
+    "6. ay: 5 kg / 1. yaş: 7,5 kg",
+    "6. ay: 7,5 kg / 1. yaş: 10 kg",
+    "6. ay: 9 kg / 1. yaş: 12 kg",
+    "6. ay: 4 kg / 1. yaş: 6 kg"
+   ],
+   "cevap": "B",
+   "not": "Derleme PDF'inin anahtarı C diyor; grupta da paylaşılan ders notuna göre bebekler 4–6 ayda doğum ağırlığının 2, bir yaşında 3 katına ulaşır → B (5 / 7,5 kg).",
+   "grup_pdfinde": true,
+   "grup_pdf_disi_dayanak": null,
+   "sik_isaretleri": {
+    "uretildi": [],
+    "supheli": []
+   },
+   "eslesme": {
+    "yontem": "elle",
+    "puan": 12.4,
+    "ikinci_aday": {
+     "id": "k1-22-bebek-beslenmesi",
+     "puan": 11.3
+    },
+    "kanit": [
+     {
+      "satir": 68,
+      "metin": "- Yeterli beslenen annenin sütü term bebeğin ==D vitamini dışındaki== tüm vitamin ihtiyacını karşılar → anne sütü alan bebeğe ==D vitamini verilmeli== veya düzenli güneşlendirilmelidir",
+      "puan": 2.6
+     },
+     {
+      "satir": 146,
+      "metin": "- **Doğum ağırlığı:** 10-14. günde geri kazanılır; 4-6 ayda 2 kat, 1 yaşta 3 kat",
+      "puan": 2.2
+     }
+    ]
+   },
+   "kaynak": "derleme PDF'i + Konu çalışma grubu (WhatsApp, 23.10 10:00 – 24.10 15:25)"
+  },
+  {
+   "kurul": 1,
+   "yil": "2026-2027",
+   "sinav_no": 75,
+   "sinav_no_kesin": false,
+   "ders": "Halk Sağlığı",
+   "konu": "Ana-Çocuk Sağlığı Düzeyinin İzlenmesi",
+   "ders_notu_id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi",
+   "ders_notu_sira": 23,
+   "ogretim_uyesi": "Doç. Dr. Nergiz Sevinç",
+   "durum": "tam",
+   "tartismali": false,
+   "kok": "Gebelik takibinde tüm gebelere rutin önerilen ve gebelikte güvenle uygulanabilen aşı aşağıdakilerden hangisidir?",
+   "siklar": [
+    "Kızamıkçık (rubella) aşısı",
+    "Suçiçeği aşısı",
+    "Tetanoz (Td/Tdap) aşısı",
+    "Kızamık aşısı",
+    "BCG (verem) aşısı"
+   ],
+   "cevap": "C",
+   "not": "",
+   "grup_pdfinde": true,
+   "grup_pdf_disi_dayanak": null,
+   "sik_isaretleri": {
+    "uretildi": [],
+    "supheli": []
+   },
+   "eslesme": {
+    "yontem": "elle",
+    "puan": 16.6,
+    "ikinci_aday": {
+     "id": "k1-18-halk-sagligi-tarihcesi",
+     "puan": 15.8
+    },
+    "kanit": [
+     {
+      "satir": 66,
+      "metin": "| Gebelikte demir takviyesi ve tetanoz aşısı | %81 |",
+      "puan": 5.5
+     },
+     {
+      "satir": 94,
+      "metin": "| **1. izlem** (öykü ~30 dk) | Kişisel bilgiler (eğitim, ekonomik durum, akrabalık), tıbbi, obstetrik ve mevcut gebelik öyküsü; fizik muayene (boy, kilo, kan basıncı, uterus büyüklüğü, anemi, ödem); fetal kalp sesi (el doppleri ile 10-12. hafta, steteskopla 16-20. hafta); risk değerlendirme formu; laboratuvar: idrar (bakteriüri, proteinüri), Hb-Hct, kan grubu, ==HBsAg==; demir ve tetanoz; bilgilen",
+      "puan": 3.4
+     }
+    ]
+   },
+   "kaynak": "derleme PDF'i + Konu çalışma grubu (WhatsApp, 23.10 10:00 – 24.10 15:25)"
+  },
+  {
+   "kurul": 1,
+   "yil": "2026-2027",
    "sinav_no": 76,
    "sinav_no_kesin": false,
    "ders": "Halk Sağlığı",
    "konu": "Ana-Çocuk Sağlığı Düzeyinin İzlenmesi",
    "ders_notu_id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi",
+   "ders_notu_sira": 23,
    "ogretim_uyesi": "Doç. Dr. Nergiz Sevinç",
    "durum": "siklar_uretildi",
    "tartismali": false,
@@ -3560,6 +3629,7 @@
    "ders": "Halk Sağlığı",
    "konu": "Bebek Beslenmesi",
    "ders_notu_id": "k1-22-bebek-beslenmesi",
+   "ders_notu_sira": 22,
    "ogretim_uyesi": "Doç. Dr. Nergiz Sevinç",
    "durum": "tam",
    "tartismali": false,
@@ -3607,20 +3677,21 @@
    "sinav_no": 79,
    "sinav_no_kesin": false,
    "ders": "Üroloji",
-   "konu": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etiyoloji ve Semptomatolojisi",
-   "ders_notu_id": "k1-39-uriner-sistem-enfeksiyonlarinin-epidemiyoloji-etiy",
-   "ogretim_uyesi": "Üroloji ABD",
+   "konu": "Üriner Sistem Taş Hastalıkları Fizyopatolojisi",
+   "ders_notu_id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi",
+   "ders_notu_sira": 27,
+   "ogretim_uyesi": "Dr. Öğr. Üyesi Fahrettin Şamil Uysal",
    "durum": "tam",
    "tartismali": false,
-   "kok": "Akut komplike olmayan sistit vakalarında aşağıdaki klinik bulgulardan hangisinin görülmesi beklenmez?",
+   "kok": "Aşağıdakilerden hangisi üriner sistem taş hastalığı (ürolitiyazis) gelişiminde bir risk faktörü değildir?",
    "siklar": [
-    "Dizüri (idrar yaparken yanma)",
-    "Pollaküri (sık idrara çıkma)",
-    "Yüksek ateş ve titreme",
-    "Sıkışma (urgency) hissi",
-    "Suprapubik ağrı"
+    "Yetersiz (az) sıvı alımı",
+    "Hiperkalsiüri",
+    "Yüksek oranda hayvansal protein ve tuz tüketimi",
+    "Yeterli su tüketimi",
+    "Sıcak iklimde yaşamak"
    ],
-   "cevap": "C",
+   "cevap": "D",
    "not": "",
    "grup_pdfinde": true,
    "grup_pdf_disi_dayanak": null,
@@ -3630,21 +3701,21 @@
    },
    "eslesme": {
     "yontem": "otomatik",
-    "puan": 43.3,
+    "puan": 23.8,
     "ikinci_aday": {
-     "id": "k1-43-uriner-sistemin-spesifik-enfeksiyonlari",
-     "puan": 39.0
+     "id": "k1-39-uriner-sistem-enfeksiyonlarinin-epidemiyoloji-etiy",
+     "puan": 21.5
     },
     "kanit": [
      {
-      "satir": 288,
-      "metin": "- **Akut bakteriyel prostatit:** ani başlayan yüksek ateş, terleme, halsizlik, bulantı-kusma, irritatif üriner sistem semptomları ve ==perineal ya da suprapubik ağrı== en sık görülen şikayetlerdir; sık idrara gitme, idrar yaparken yanma, acil idrar yapma isteği de sık görülür; daha nadiren makroskopik hematüri, artralji, miyalji ve septisemik bulgular görülür; komplikasyon olarak ==akut üriner ret",
-      "puan": 12.0
+      "satir": 22,
+      "metin": "| **Çevresel** | ==Sıcak, kuru iklim==; aşırı sıcağa maruz meslekler; dehidratasyon |",
+      "puan": 5.1
      },
      {
-      "satir": 215,
-      "metin": "- Mesanenin inflamatuvar hastalıkları çoğu zaman suprapubik rahatsızlık hissi ile kendini gösterir; sistiti olan hastalar distal üretradaki irritasyona bağlı sık işeme ve dizüri tarif ederler",
-      "puan": 7.6
+      "satir": 8,
+      "metin": "- Ürolitiyazisin epidemiyolojisini, demografik, çevresel ve sistemik risk faktörlerini açıklamak",
+      "puan": 4.3
      }
     ]
    },
@@ -3658,6 +3729,7 @@
    "ders": "Üroloji",
    "konu": "Enürezis Nokturna",
    "ders_notu_id": "k1-58-enurezis-nokturna",
+   "ders_notu_sira": 58,
    "ogretim_uyesi": "Dr. Öğr. Üyesi Salih Bürlükkara",
    "durum": "tam",
    "tartismali": true,
@@ -3707,6 +3779,7 @@
    "ders": "Üroloji",
    "konu": "Üriner Sistem Enfeksiyonları: Laboratuvar Bulguları ve Tedavi",
    "ders_notu_id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari",
+   "ders_notu_sira": 51,
    "ogretim_uyesi": "Doç. Dr. Özer Baran",
    "durum": "tam",
    "tartismali": false,
@@ -3759,20 +3832,21 @@
    "sinav_no": 82,
    "sinav_no_kesin": false,
    "ders": "Üroloji",
-   "konu": "Üriner Sistem Taş Hastalıkları Fizyopatolojisi",
-   "ders_notu_id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi",
-   "ogretim_uyesi": "Dr. Öğr. Üyesi Fahrettin Şamil Uysal",
+   "konu": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etiyoloji ve Semptomatolojisi",
+   "ders_notu_id": "k1-39-uriner-sistem-enfeksiyonlarinin-epidemiyoloji-etiy",
+   "ders_notu_sira": 39,
+   "ogretim_uyesi": "Üroloji ABD",
    "durum": "tam",
    "tartismali": false,
-   "kok": "Aşağıdakilerden hangisi üriner sistem taş hastalığı (ürolitiyazis) gelişiminde bir risk faktörü değildir?",
+   "kok": "Akut komplike olmayan sistit vakalarında aşağıdaki klinik bulgulardan hangisinin görülmesi beklenmez?",
    "siklar": [
-    "Yetersiz (az) sıvı alımı",
-    "Hiperkalsiüri",
-    "Yüksek oranda hayvansal protein ve tuz tüketimi",
-    "Yeterli su tüketimi",
-    "Sıcak iklimde yaşamak"
+    "Dizüri (idrar yaparken yanma)",
+    "Pollaküri (sık idrara çıkma)",
+    "Yüksek ateş ve titreme",
+    "Sıkışma (urgency) hissi",
+    "Suprapubik ağrı"
    ],
-   "cevap": "D",
+   "cevap": "C",
    "not": "",
    "grup_pdfinde": true,
    "grup_pdf_disi_dayanak": null,
@@ -3782,21 +3856,21 @@
    },
    "eslesme": {
     "yontem": "otomatik",
-    "puan": 23.8,
+    "puan": 43.3,
     "ikinci_aday": {
-     "id": "k1-39-uriner-sistem-enfeksiyonlarinin-epidemiyoloji-etiy",
-     "puan": 21.5
+     "id": "k1-43-uriner-sistemin-spesifik-enfeksiyonlari",
+     "puan": 39.0
     },
     "kanit": [
      {
-      "satir": 22,
-      "metin": "| **Çevresel** | ==Sıcak, kuru iklim==; aşırı sıcağa maruz meslekler; dehidratasyon |",
-      "puan": 5.1
+      "satir": 288,
+      "metin": "- **Akut bakteriyel prostatit:** ani başlayan yüksek ateş, terleme, halsizlik, bulantı-kusma, irritatif üriner sistem semptomları ve ==perineal ya da suprapubik ağrı== en sık görülen şikayetlerdir; sık idrara gitme, idrar yaparken yanma, acil idrar yapma isteği de sık görülür; daha nadiren makroskopik hematüri, artralji, miyalji ve septisemik bulgular görülür; komplikasyon olarak ==akut üriner ret",
+      "puan": 12.0
      },
      {
-      "satir": 8,
-      "metin": "- Ürolitiyazisin epidemiyolojisini, demografik, çevresel ve sistemik risk faktörlerini açıklamak",
-      "puan": 4.3
+      "satir": 215,
+      "metin": "- Mesanenin inflamatuvar hastalıkları çoğu zaman suprapubik rahatsızlık hissi ile kendini gösterir; sistiti olan hastalar distal üretradaki irritasyona bağlı sık işeme ve dizüri tarif ederler",
+      "puan": 7.6
      }
     ]
    },
@@ -3810,6 +3884,7 @@
    "ders": "Üroloji",
    "konu": "Üriner Sistem Enfeksiyonları: Laboratuvar Bulguları ve Tedavi",
    "ders_notu_id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari",
+   "ders_notu_sira": 51,
    "ogretim_uyesi": "Doç. Dr. Özer Baran",
    "durum": "tam",
    "tartismali": true,
@@ -3859,6 +3934,7 @@
    "ders": "Üroloji",
    "konu": "Enürezis Nokturna",
    "ders_notu_id": "k1-58-enurezis-nokturna",
+   "ders_notu_sira": 58,
    "ogretim_uyesi": "Dr. Öğr. Üyesi Salih Bürlükkara",
    "durum": "tam",
    "tartismali": false,
@@ -3908,6 +3984,7 @@
    "ders": "Üroloji",
    "konu": "Üriner Obstrüksiyonun Fizyopatolojisi",
    "ders_notu_id": "k1-11-uriner-obstruksiyonun-fizyopatolojisi",
+   "ders_notu_sira": 11,
    "ogretim_uyesi": "Doç. Dr. Özer Baran",
    "durum": "tam",
    "tartismali": false,
@@ -3959,6 +4036,7 @@
    "ders": "Üroloji",
    "konu": "Üriner Obstrüksiyonun Fizyopatolojisi",
    "ders_notu_id": "k1-11-uriner-obstruksiyonun-fizyopatolojisi",
+   "ders_notu_sira": 11,
    "ogretim_uyesi": "Doç. Dr. Özer Baran",
    "durum": "tam",
    "tartismali": false,
@@ -4008,6 +4086,7 @@
    "ders": "Üroloji",
    "konu": "Üriner Sistem Enfeksiyonları: Laboratuvar Bulguları ve Tedavi",
    "ders_notu_id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari",
+   "ders_notu_sira": 51,
    "ogretim_uyesi": "Doç. Dr. Özer Baran",
    "durum": "tam",
    "tartismali": false,
@@ -4057,6 +4136,7 @@
    "ders": "Üroloji",
    "konu": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etiyoloji ve Semptomatolojisi",
    "ders_notu_id": "k1-39-uriner-sistem-enfeksiyonlarinin-epidemiyoloji-etiy",
+   "ders_notu_sira": 39,
    "ogretim_uyesi": "Üroloji ABD",
    "durum": "tam",
    "tartismali": true,
@@ -4106,6 +4186,7 @@
    "ders": "Üroloji",
    "konu": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etiyoloji ve Semptomatolojisi",
    "ders_notu_id": "k1-39-uriner-sistem-enfeksiyonlarinin-epidemiyoloji-etiy",
+   "ders_notu_sira": 39,
    "ogretim_uyesi": "Üroloji ABD",
    "durum": "tam",
    "tartismali": false,
@@ -4162,6 +4243,7 @@
    "ders": "Kadın Hastalıkları ve Doğum",
    "konu": "Abortus",
    "ders_notu_id": "k1-61-abortus",
+   "ders_notu_sira": 61,
    "ogretim_uyesi": "Dr. Öğr. Üyesi Hilal Ezgi Türkmen",
    "durum": "tam",
    "tartismali": false,
@@ -4209,46 +4291,51 @@
    "sinav_no": 92,
    "sinav_no_kesin": false,
    "ders": "Kadın Hastalıkları ve Doğum",
-   "konu": "Gebelik Terminolojisi ve Kavramları",
-   "ders_notu_id": "k1-64-gebelik-terminolojisi-ve-kavramlari",
+   "konu": "Abortus",
+   "ders_notu_id": "k1-61-abortus",
+   "ders_notu_sira": 61,
    "ogretim_uyesi": "Dr. Öğr. Üyesi Hilal Ezgi Türkmen",
-   "durum": "tam",
+   "durum": "siklar_uretildi",
    "tartismali": false,
-   "kok": "Aşağıdakilerden hangisi gebelikte fetal kromozom anomalilerinin kesin tanısı amacıyla uygulanan invaziv (girişimsel) testlerden biridir?",
+   "kok": "Spontan düşükler ile ilgili aşağıdakilerden hangisi yanlıştır?",
    "siklar": [
-    "İkili tarama testi",
-    "Üçlü tarama testi",
-    "Koryon villus biyopsisi (CVS)",
-    "Entegre tarama testi",
-    "Ultrasonografik ense kalınlığı (NT) ölçümü"
+    "2 rad radyasyon maruziyeti düşüğe neden olur.",
+    "Spontan düşüklerin %80'i ilk trimesterde görülür.",
+    "İlk trimester düşüklerinin yaklaşık %50'si kromozom anomalileri ile ilişkilidir.",
+    "Abort materyalinde trizomilerden en sık trizomi 16 görülür.",
+    "Anne yaşı arttıkça kromozomal anomali sıklığı artar."
    ],
-   "cevap": "C",
-   "not": "Grupta 24.10 eklendi. Kökün \"biridir\" olduğu hatırlandı; dörtlü test şıklarda yoktu, entegre test vardı, CVS ya da kordosentez şıklardaydı.",
+   "cevap": "A",
+   "not": "A şıkkı gruptan ve kullanıcıdan hatırlandı (\"2 birim radyasyon düşüğe neden olur\"); cevap A. Bir öğrenci şıklarda \"en sık trizomi 21\" ifadesinin geçtiğini hatırladı, D bu nedenle şüpheli. Diğer şıklar ders notundan üretildi (61 Abortus: radyasyon >5 rad düşüğe neden olur, düşüklerin %80'i ilk trimester ve %50'si kromozomal, trizomilerden en sık trizomi 16, anne yaşıyla kromozomal anomali artar); asıl sınav şıkları değildir.",
    "grup_pdfinde": false,
-   "grup_pdf_disi_dayanak": "Grupta birkaç öğrenci tartışıp tamamladı",
+   "grup_pdf_disi_dayanak": "Grupta iki öğrenci ifadelerini hatırladı",
    "sik_isaretleri": {
-    "uretildi": [],
-    "supheli": [
+    "uretildi": [
+     "B",
+     "C",
      "E"
+    ],
+    "supheli": [
+     "D"
     ]
    },
    "eslesme": {
     "yontem": "otomatik",
-    "puan": 40.9,
+    "puan": 33.8,
     "ikinci_aday": {
-     "id": "k1-35-prenatal-tani-yontemleri",
-     "puan": 33.3
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari",
+     "puan": 17.7
     },
     "kanit": [
      {
-      "satir": 166,
-      "metin": "- **Koryonik Villus Örneklemesi (CVS):** İlk trimesterde mevcut tek tanı testidir; FISH, karyotip, mikrodizi, moleküler test ve gen dizilimi yapılır. Transservikal veya transabdominal yaklaşımla, amniyotik keseye girmeden, ultrason rehberliğinde koryon villusları toplanır. ==Dezavantajı: yaklaşık %1-2'sinin sınırlı plasenta mozaisizmini yansıtabilmesidir==. ==Gebelik kaybı riski 455'te 1'dir==.",
-      "puan": 10.8
+      "satir": 134,
+      "metin": "- **Maternal nedenler:** Kronik hastalıklar (DM, SLE, fenilketonüri...), anatomik (Asherman, leiomiyom?, polip?, Müllerian?), enfeksiyonlar (etiyolojide tartışmalı), radyasyon (>5 rad), radyoterapi, kemoterapi",
+      "puan": 6.9
      },
      {
-      "satir": 167,
-      "metin": "- **Amniosentez:** ==İkinci veya üçüncü trimesterde mevcut tek tanı testi==; ==15. haftadan sonra== herhangi bir gebelik haftasında yapılabilir. Ultrason rehberliğinde steril enjektör ile amniyotik sıvı alınır. Genetik hastalıklara ek olarak kültür veya PCR ile amniyotik/fetal enfeksiyon, AFP ve asetilkolinesteraz ölçümü ile nöral tüp defektleri değerlendirilir. ==Gebelik kaybı riski 900'de 1'dir=",
-      "puan": 6.5
+      "satir": 133,
+      "metin": "- **Kromozomal oran:** İlk trimester %70, ikinci trimester %30; en sık anomali 45,X0; trizomilerden trizomi 16; 1, 3, 19 hiç görülmez",
+      "puan": 6.8
      }
     ]
    },
@@ -4262,6 +4349,7 @@
    "ders": "Kadın Hastalıkları ve Doğum",
    "konu": "Gebelik Terminolojisi ve Kavramları",
    "ders_notu_id": "k1-64-gebelik-terminolojisi-ve-kavramlari",
+   "ders_notu_sira": 64,
    "ogretim_uyesi": "Dr. Öğr. Üyesi Hilal Ezgi Türkmen",
    "durum": "tam",
    "tartismali": false,
@@ -4311,6 +4399,7 @@
    "ders": "Kadın Hastalıkları ve Doğum",
    "konu": "Gebelik Terminolojisi ve Kavramları",
    "ders_notu_id": "k1-64-gebelik-terminolojisi-ve-kavramlari",
+   "ders_notu_sira": 64,
    "ogretim_uyesi": "Dr. Öğr. Üyesi Hilal Ezgi Türkmen",
    "durum": "tam",
    "tartismali": false,
@@ -4363,48 +4452,47 @@
    "sinav_no": 95,
    "sinav_no_kesin": false,
    "ders": "Kadın Hastalıkları ve Doğum",
-   "konu": "Abortus",
-   "ders_notu_id": "k1-61-abortus",
+   "konu": "Gebelik Terminolojisi ve Kavramları",
+   "ders_notu_id": "k1-64-gebelik-terminolojisi-ve-kavramlari",
+   "ders_notu_sira": 64,
    "ogretim_uyesi": "Dr. Öğr. Üyesi Hilal Ezgi Türkmen",
-   "durum": "siklar_uretildi",
+   "durum": "tam",
    "tartismali": false,
-   "kok": "Spontan düşükler ile ilgili aşağıdakilerden hangisi doğrudur?",
+   "kok": "Aşağıdakilerden hangisi gebelikte fetal kromozom anomalilerinin kesin tanısı amacıyla uygulanan invaziv (girişimsel) testlerden biridir?",
    "siklar": [
-    "2 rad radyasyon maruziyeti düşüğe neden olur.",
-    "Abort materyalinde en sık görülen trizomi, trizomi 21'dir.",
-    "Spontan düşüklerin %80'i ilk trimesterde görülür.",
-    "Kromozomal anomali oranı ikinci trimesterde birinci trimesterden yüksektir.",
-    "Trizomi 1, 3 ve 19 abort materyallerinde en sık görülen trizomilerdir."
+    "İkili tarama testi",
+    "Üçlü tarama testi",
+    "Koryon villus biyopsisi (CVS)",
+    "Entegre tarama testi",
+    "Ultrasonografik ense kalınlığı (NT) ölçümü"
    ],
    "cevap": "C",
-   "not": "A ve B ifadeleri gruptan hatırlandı. Diğer şıklar ders notundan üretildi (61 Abortus: radyasyon >5 rad, trizomilerden en sık trizomi 16, düşüklerin %80'i ilk trimester, kromozomal oran 1. trimester %70 / 2. trimester %30); asıl sınav şıkları değildir.",
+   "not": "Grupta 24.10 eklendi. Kökün \"biridir\" olduğu hatırlandı; dörtlü test şıklarda yoktu, entegre test vardı, CVS ya da kordosentez şıklardaydı.",
    "grup_pdfinde": false,
-   "grup_pdf_disi_dayanak": "Grupta iki öğrenci ifadelerini hatırladı",
+   "grup_pdf_disi_dayanak": "Grupta birkaç öğrenci tartışıp tamamladı",
    "sik_isaretleri": {
-    "uretildi": [
-     "C",
-     "D",
+    "uretildi": [],
+    "supheli": [
      "E"
-    ],
-    "supheli": []
+    ]
    },
    "eslesme": {
     "yontem": "otomatik",
-    "puan": 33.4,
+    "puan": 40.9,
     "ikinci_aday": {
-     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari",
-     "puan": 18.4
+     "id": "k1-35-prenatal-tani-yontemleri",
+     "puan": 33.3
     },
     "kanit": [
      {
-      "satir": 133,
-      "metin": "- **Kromozomal oran:** İlk trimester %70, ikinci trimester %30; en sık anomali 45,X0; trizomilerden trizomi 16; 1, 3, 19 hiç görülmez",
-      "puan": 7.8
+      "satir": 166,
+      "metin": "- **Koryonik Villus Örneklemesi (CVS):** İlk trimesterde mevcut tek tanı testidir; FISH, karyotip, mikrodizi, moleküler test ve gen dizilimi yapılır. Transservikal veya transabdominal yaklaşımla, amniyotik keseye girmeden, ultrason rehberliğinde koryon villusları toplanır. ==Dezavantajı: yaklaşık %1-2'sinin sınırlı plasenta mozaisizmini yansıtabilmesidir==. ==Gebelik kaybı riski 455'te 1'dir==.",
+      "puan": 10.8
      },
      {
-      "satir": 134,
-      "metin": "- **Maternal nedenler:** Kronik hastalıklar (DM, SLE, fenilketonüri...), anatomik (Asherman, leiomiyom?, polip?, Müllerian?), enfeksiyonlar (etiyolojide tartışmalı), radyasyon (>5 rad), radyoterapi, kemoterapi",
-      "puan": 6.9
+      "satir": 167,
+      "metin": "- **Amniosentez:** ==İkinci veya üçüncü trimesterde mevcut tek tanı testi==; ==15. haftadan sonra== herhangi bir gebelik haftasında yapılabilir. Ultrason rehberliğinde steril enjektör ile amniyotik sıvı alınır. Genetik hastalıklara ek olarak kültür veya PCR ile amniyotik/fetal enfeksiyon, AFP ve asetilkolinesteraz ölçümü ile nöral tüp defektleri değerlendirilir. ==Gebelik kaybı riski 900'de 1'dir=",
+      "puan": 6.5
      }
     ]
    },
@@ -4418,6 +4506,7 @@
    "ders": "Kadın Hastalıkları ve Doğum",
    "konu": "Gebelik Terminolojisi ve Kavramları",
    "ders_notu_id": "k1-64-gebelik-terminolojisi-ve-kavramlari",
+   "ders_notu_sira": 64,
    "ogretim_uyesi": "Dr. Öğr. Üyesi Hilal Ezgi Türkmen",
    "durum": "siklar_uretildi",
    "tartismali": true,
@@ -4473,6 +4562,7 @@
    "ders": "Farmakoloji",
    "konu": "İmmünofarmakoloji",
    "ders_notu_id": "k1-59-immunofarmakoloji",
+   "ders_notu_sira": 59,
    "ogretim_uyesi": "Prof. Dr. Mehmet Özdemir",
    "durum": "tam",
    "tartismali": false,
@@ -4522,6 +4612,7 @@
    "ders": "Farmakoloji",
    "konu": "İmmünofarmakoloji",
    "ders_notu_id": "k1-59-immunofarmakoloji",
+   "ders_notu_sira": 59,
    "ogretim_uyesi": "Prof. Dr. Mehmet Özdemir",
    "durum": "tam",
    "tartismali": false,
@@ -4571,6 +4662,7 @@
    "ders": "Farmakoloji",
    "konu": "İmmünofarmakoloji",
    "ders_notu_id": "k1-59-immunofarmakoloji",
+   "ders_notu_sira": 59,
    "ogretim_uyesi": "Prof. Dr. Mehmet Özdemir",
    "durum": "tam",
    "tartismali": false,
@@ -4624,6 +4716,7 @@
    "ders": "Farmakoloji",
    "konu": "İmmünofarmakoloji",
    "ders_notu_id": "k1-59-immunofarmakoloji",
+   "ders_notu_sira": 59,
    "ogretim_uyesi": "Prof. Dr. Mehmet Özdemir",
    "durum": "tam",
    "tartismali": false,

@@ -1,14 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 306,
-  "baslik": "Kurul 1 2026-2027 çıkmış sorular: SLE sorusu farmakolojide",
+  "onem": 307,
+  "baslik": "Kurul 1 2026-2027 çıkmış sorular: yeni tasarım ve doğrulanmış yerleşim",
   "maddeler": [
-    "Hidroksiklorokin (SLE) sorusu farmakolojiye, 99. soru olarak taşındı; farmakoloji 4/4 tamamlandı"
+    "PDF yeniden tasarlandı: kapak ve içindekiler, tek sütun, ferah ve okunaklı sorular",
+    "Sorular ders notları ve geçmiş çıkmışlarla doğrulanıp ders ve konuya yerleştirildi; numarası bilinmeyenler ders sırasına göre kondu",
+    "Abortus sorusu “hangisi yanlıştır” olarak yeniden kuruldu, cevap A"
   ],
   "eklenen": [],
-  "degisen": [],
-  "duzeltilen": [
-    "/api/test/kurul1/2627 soru 99"
+  "degisen": [
+    "/api/test/kurul1/2627 PDF"
   ],
+  "duzeltilen": [],
   "silinen": []
 }
