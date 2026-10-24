@@ -160,4 +160,4 @@ def boyu(k: dict, g: float, oran: float, em: float, yon: str = "yatay", olcek: f
         toplam += satir(k.get("soru"), W) * 1.3 + 0.8 + sum(satir(x[1], W * 0.6) * 1.3 + 0.6 for x in dl)
     elif d == "maske":
         toplam += 2 * 1.2 + 1.85 + sum(satir(x, W) * 1.3 + 0.4 for x in k.get("altta") or [])
-    return toplam * em * olcek * oran * 1.25
+    return toplam * em * olcek * oran * 1.32

@@ -253,10 +253,10 @@
 .pdv-cz-bag.has-etiket .pdv-cz-bag-etiket { position: static; white-space: nowrap; text-align: center; line-height: 1.1; }
 .pdv-cz-sema.is-dar .pdv-cz-bag-ok { flex-direction: column; align-items: center; width: auto; }
 /* tablo: bağımsız A → B ilişkileri hizalı sütunlarda; uzun düğüm kendi hücresinde satıra iner */
-.pdv-cz-sema.is-tablo { display: grid; grid-template-columns: max-content max-content minmax(0, 1fr); row-gap: .55em; column-gap: .35em; align-items: center; }
+.pdv-cz-sema.is-tablo:not(.pdv-sb) { display: grid; grid-template-columns: max-content max-content minmax(0, 1fr); row-gap: .55em; column-gap: .35em; align-items: center; }
 .pdv-cz-tablo-satir { display: contents; }
 .pdv-cz-tablo-satir + .pdv-cz-tablo-satir > * { border-top: 0; }
-.pdv-cz-sema.is-tablo .pdv-cz-dugum { justify-self: start; }
+.pdv-cz-sema.is-tablo:not(.pdv-sb) .pdv-cz-dugum { justify-self: start; }
 /* baskılama ucu (⊣) görünür boyutta */
 .pdv-cz-bag.is-inhibe .pdv-cz-bag-uc { font-size: 1.15em; font-weight: 800; margin-left: -.15em; line-height: 1; }
 .pdv-cz-sema.is-kompakt { font-size: max(7.5px, calc(1.75cqw * .85)); padding: .5em .7em; }
@@ -264,7 +264,8 @@
 .pdv-cz-dal-satir { max-width: 100%; }
 .pdv-cz-grup-kaynak { min-width: 0; }
 /* ---- şablonlu panel (pdv-sb): genel düzenler ---- */
-.pdv-sb { display: flex; flex-direction: column; gap: .45em; }
+.pdv-sb { display: block; }   /* flex sütun + sabit düzenli tablo Chrome'da 1e6 px genişliğe çıkıyordu */
+.pdv-sb > * + * { margin-top: .45em; }
 .pdv-cz-sema { box-sizing: border-box; }   /* genişlik sınırı kenar boşluğu dahil (sayfadan taşmasın) */
 .pdv-sb-baslik { font-size: .82em; font-weight: 700; letter-spacing: .02em; color: #475569; }
 .pdv-sb-kutu { display: inline-block; padding: .2em .6em; border-radius: .5em; background: #eef2ff; border: 1px solid #c7d2fe; color: #1e1b4b; font-weight: 650; overflow-wrap: break-word; }
@@ -304,6 +305,20 @@
 .pdv-sb-dal-satir:first-child { border-top: 0; }
 .pdv-sb-kosul { font-size: .8em; font-weight: 800; color: #1d4ed8; white-space: nowrap; }
 .pdv-sb-ok-kisa { color: #1d4ed8; font-weight: 800; }
+/* ---- pekiştiren animasyonlar (2026-10-24) ---- */
+/* odak merceği: kontur dışı hafif kararır (resim okunur kalır) */
+.pdv-cz g path.pdv-cz-mercek { fill: rgb(15 23 42 / .22); stroke: none; transition: opacity .4s; pointer-events: none; }
+/* şu an anlatılan satır/öğe öne çıkar, öncekiler sakin */
+.pdv-sb-tablo tr.is-simdi td { background: rgb(250 204 21 / .28); }
+.pdv-sb-liste li.is-simdi { background: rgb(250 204 21 / .28); border-radius: .3em; }
+.pdv-sb-kutu.is-simdi { box-shadow: 0 0 0 .18em rgb(250 204 21 / .75); }
+/* neden-sonuç akışı: ok boyunca nedenden sonuca akan parçacık (yönü sezdirir) */
+.pdv-sb-ok-cizgi::before { content: ''; position: absolute; top: 50%; left: 0; width: .45em; height: .45em; margin-top: -.225em; border-radius: 50%;
+  background: #fff; box-shadow: 0 0 0 .1em currentColor; animation: pdv-sb-akis 1.6s .7s ease-in-out infinite; }
+.pdv-sb-ok.is-dikey .pdv-sb-ok-cizgi::before { left: 50%; top: 0; margin: 0 0 0 -.225em; animation-name: pdv-sb-akis-d; }
+@keyframes pdv-sb-akis { from { left: 0; opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } to { left: calc(100% - .45em); opacity: 0; } }
+@keyframes pdv-sb-akis-d { from { top: 0; opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } to { top: calc(100% - .45em); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .pdv-sb-ok-cizgi::before { animation: none; display: none; } .pdv-cz g path.pdv-cz-mercek { transition: none; } }
 @keyframes pdv-cz-uza-d { from { transform: scaleY(0); } to { transform: scaleY(1); } }
 @keyframes pdv-cz-uza { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 /* grup / dal: liste alt alta, "}" (dalda "{") ayracı */

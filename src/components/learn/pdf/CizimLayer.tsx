@@ -121,6 +121,8 @@ function Komut({ z, t }: { z: CizimKomut; t: number }) {
   if (z.tur === 'kontur' && z.nokta) {
     return (
       <g className="pdv-cz-kontur">
+        {/* odak merceği: anlatılan bölge dışı hafifçe kararır, göz yapıya gider (bölge boyunca açık kalır) */}
+        {t > 0 && <path d={`M0 0H${V}V${V}H0Z ${egri(z.nokta, true)}`} fillRule="evenodd" className="pdv-cz-mercek" style={{ opacity: Math.min(1, t * 2) }} />}
         {t > 0 && <path d={egri(z.nokta, true)} className="pdv-cz-boya" style={{ opacity: Math.min(1, t * 1.5) }} />}
         <path d={egri(z.nokta, true)} {...ciz} className="pdv-cz-hale" vectorEffect="non-scaling-stroke" />
         <path d={egri(z.nokta, true)} {...ciz} vectorEffect="non-scaling-stroke" />
@@ -296,7 +298,10 @@ const surumSinif = (z: CizimKomut) => ((z.yon === 'dikey' || (z.genislik || 1) <
  * numaralı, ayrı şeyler madde imli; konuşmayla satır satır belirir.
  */
 function SablonPanel({ z, t }: { z: CizimKomut; t: number }) {
-  const stil = z.konum ? { left: `${z.konum[0] * 100}%`, top: `${z.konum[1] * 100}%`, right: 'auto', bottom: 'auto', maxWidth: `${(z.genislik || 0.6) * 100}%` } : undefined;
+  // tablo/karşıt: ayrılan genişlik doğrudan verilir (içeriğe göre daralan kutuda sabit düzenli tablo taşıyordu)
+  const gen = `${(z.genislik || 0.6) * 100}%`;
+  const tabloMu = z.duzen === 'tablo' || z.duzen === 'karsit';
+  const stil = z.konum ? { left: `${z.konum[0] * 100}%`, top: `${z.konum[1] * 100}%`, right: 'auto', bottom: 'auto', maxWidth: gen, ...(tabloMu ? { width: gen } : null) } : undefined;
   const say = (n: number) => Math.max(1, Math.ceil(t * n));
   const sinif = `pdv-cz-sema pdv-sb is-${z.duzen}${surumSinif(z)}`;
   const kap = (ic: React.ReactNode) => (
@@ -319,7 +324,7 @@ function SablonPanel({ z, t }: { z: CizimKomut; t: number }) {
       return kap(
         <table className="pdv-sb-tablo">
           {bas.length > 0 && <thead><tr>{bas.map((b, i) => <th key={i}>{b}</th>)}</tr></thead>}
-          <tbody>{sat.slice(0, say(sat.length)).map((r, i) => <tr key={i}>{r.map((c, j) => <td key={j} className={j === r.length - 1 && z.duzen === 'tablo' ? 'is-sonuc' : ''}>{c}</td>)}</tr>)}</tbody>
+          <tbody>{sat.slice(0, say(sat.length)).map((r, i, dz) => <tr key={i} className={i === dz.length - 1 && t < 1 ? 'is-simdi' : ''}>{r.map((c, j) => <td key={j} className={j === r.length - 1 && z.duzen === 'tablo' ? 'is-sonuc' : ''}>{c}</td>)}</tr>)}</tbody>
         </table>,
       );
     }
@@ -330,7 +335,7 @@ function SablonPanel({ z, t }: { z: CizimKomut; t: number }) {
       return kap(
         <>
           {z.duzen === 'liste' && z.baslik && <div className="pdv-sb-baslik">{z.baslik}</div>}
-          <Liste className="pdv-sb-liste">{og.slice(0, say(og.length)).map((x, i) => <li key={i}>{x}</li>)}</Liste>
+          <Liste className="pdv-sb-liste">{og.slice(0, say(og.length)).map((x, i, dz) => <li key={i} className={i === dz.length - 1 && t < 1 ? 'is-simdi' : ''}>{x}</li>)}</Liste>
         </>,
       );
     }
@@ -339,8 +344,8 @@ function SablonPanel({ z, t }: { z: CizimKomut; t: number }) {
       const dikey = z.yon === 'dikey' || (z.genislik || 1) < 0.32;
       return kap(
         <div className={`pdv-sb-zincir${dikey ? ' is-dikey' : ''}`}>
-          {og.slice(0, say(og.length)).map((x, i) => (
-            <span key={i} className="pdv-sb-zincir-oge">{i > 0 && ok(dikey)}<span className={`pdv-sb-kutu${i === og.length - 1 ? ' is-sonuc' : ''}`}>{x}</span></span>
+          {og.slice(0, say(og.length)).map((x, i, dz) => (
+            <span key={i} className="pdv-sb-zincir-oge">{i > 0 && ok(dikey)}<span className={`pdv-sb-kutu${i === og.length - 1 ? ' is-sonuc' : ''}${i === dz.length - 1 && t < 1 ? ' is-simdi' : ''}`}>{x}</span></span>
           ))}
         </div>,
       );

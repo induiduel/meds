@@ -86,6 +86,16 @@ Betik her panel için sürümleri öncelik sırasıyla dener ve slaytın boşlu�
   yeniden dener; bu kaydırma kullanıcı gezinmesi sayılmaz, takip durmaz). Kelime takipçisi harfleri kapatmaz (hafif zemin +
   harflerin altında ince çizgi).
 
+## 7b. Pekiştiren animasyonlar (eğitsel; süs değil)
+
+- **Odak merceği:** resimde bölge (kontur) anlatılırken slaytın geri kalanı hafifçe kararır (%22), bölge açık ve boyalı kalır.
+- **Şu an anlatılan:** tablo satırı, liste öğesi ve zincir düğümü belirdiği anda sarı zeminle öne çıkar; panel tamamlanınca
+  vurgu kalkar (öncekiler sakin).
+- **Neden-sonuç akışı:** zincir/grup oklarında küçük parçacık nedenden sonuca akar (yönü sezdirir); tablo eşleşmelerinde
+  (yönsüz ilişki) parçacık yoktur.
+- Hareket azaltma tercihinde (prefers-reduced-motion) hepsi kapanır.
+- Sıradaki fikirler: karşıtlık tablosunda farklı hücre vurgusu, skor toplamında sayaç, ders sonunda panelleri "hatırla" kartı.
+
 ## 8. Ekran
 
 - **İzleme düzeni:** ders oynarken metinde yalnız anlatılan paragraf ve onun ekran maddeleri tam görünür, diğerleri

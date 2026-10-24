@@ -220,6 +220,7 @@ def yazi_kesisir(kutu, satirlar, pay: float = 0.01) -> bool:
 
 
 def panel_boyu(k: dict, g: float, oran: float, yon: str = "yatay", olcek: float = 1.0) -> float:
+    olcek = 1.0       # kompakt sürüm telefonda en küçük yazı sınırı (7,5 px) yüzünden küçülemiyor: boy tam ölçekle tahmin edilir
     if k.get("duzen"):                            # şablonlu panel (sablon.py)
         return SB.boyu(k, g, oran, EM, yon, olcek)
     """Panelin sayfa yüksekliği oranı cinsinden yüksekliği; istemcideki dizilimin em ile kopyası (oran = genişlik/yükseklik).
@@ -269,7 +270,7 @@ def panel_boyu(k: dict, g: float, oran: float, yon: str = "yatay", olcek: float 
                 if satir > 1:
                     return 9.0                    # yatay zincir kırılıyor: bu sürüm geçersiz (dikey denenecek)
                 toplam += satir * DH + (satir * 1.2 if any(e.get("etiket") for e in kn) else 0) + (satir - 1) * 0.4
-    return toplam * EM * olcek * oran * 1.25            # %25 pay: 366–1100 px sayfada ölçülen en büyük sapma %11
+    return toplam * EM * olcek * oran * 1.32            # %32 pay: telefonda en küçük yazı 7,5 px (dar sayfada %1,75 cqw'den büyük)
 
 
 def oku_panele(k: dict, satirlar: list) -> dict | None:
