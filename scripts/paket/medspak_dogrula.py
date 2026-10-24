@@ -6,7 +6,7 @@
   - cizim.cumle_id ve soru.bagli_cumle var olan cümleye
   - ses_parca.metin_hash == meta.metin_hash (sesli metin değişince eski ses pakete girmez); işaret ve çizim metin özeti
     birbirine eşit (aynı sürüm)
-  - öğrenci indirmesinde (ekler=0) ek tablosu boş; dosya ≤ 150 MB
+  - ders PDF'i (ek.tur=ders_pdf) var ve geçerli; öğrenci indirmesinde (ekler=0) öğrenci notu / hoca kaydı yok; dosya ≤ 150 MB
 Kullanım: python3 scripts/paket/medspak_dogrula.py <paket.medspak> …   → "N HATA"
 """
 from __future__ import annotations
@@ -47,8 +47,16 @@ def denetle(yol: Path) -> list[str]:
             e.append(f"ses {v}: metin özeti {h} ≠ paketin metni {meta.get('metin_hash')} (eski metnin sesi)")
     if db.execute("SELECT COUNT(*) FROM cizim").fetchone()[0] and meta.get("cizim_metin_hash") != meta.get("isaret_metin_hash"):
         e.append("çizim ve işaret farklı metin sürümünden")
-    if meta.get("ekler") in ("0", 0) and db.execute("SELECT COUNT(*) FROM ek").fetchone()[0]:
-        e.append("öğrenci paketinde ek (PDF/öğrenci notu/hoca kaydı) var")
+    if meta.get("ekler") in ("0", 0):
+        gizli = db.execute("SELECT COUNT(*) FROM ek WHERE tur != 'ders_pdf'").fetchone()[0]
+        if gizli:
+            e.append(f"öğrenci paketinde {gizli} gizli ek (öğrenci notu / hoca kaydı) var")
+    pdfler = db.execute("SELECT ad, veri FROM ek WHERE tur = 'ders_pdf'").fetchall()
+    if not pdfler:
+        e.append("ders PDF'i pakette yok (uygulamada eşlenmemiş olabilir; H56)")
+    for ad, veri in pdfler:
+        if not veri or bytes(veri[:5]) != b"%PDF-":
+            e.append(f"ders PDF'i bozuk: {ad}")
     mb = yol.stat().st_size / 1048576
     if mb > TAVAN_MB:
         e.append(f"paket {mb:.0f} MB (tavan {TAVAN_MB})")

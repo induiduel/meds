@@ -1,17 +1,18 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 324,
-  "baslik": "KMB videolarında altyazı görüntünün altında",
+  "onem": 325,
+  "baslik": "Yeni ders: Genel Anestezik İlaçlar (sınama) ve ders PDF'i düzeltmesi",
   "maddeler": [
-    "Tam ekranda altyazı artık görüntünün üstüne binmiyor; altında kendi bandında, en çok iki satır",
-    "Denetimler görüntüyü kapatmıyor"
+    "Kurul 2 Tıbbi Farmakoloji 'Genel Anestezik İlaçlar' dersi Öğren'de ve sesli derste. Geçen yılın slaytından hazırlanan sınama dersidir, 'Sınama' etiketiyle görünür.",
+    "Yeni yayınlanan derslerin PDF'i artık hemen açılıyor (Drive taramasını beklemiyor).",
+    "Ders paketi (.medspak) artık dersin PDF'ini de içeriyor; paketten 'Ders PDF'ini aç' ile açılır."
   ],
-  "eklenen": [],
-  "degisen": [
-    "/dersler/kmb videoları"
+  "eklenen": [
+    "Kurul 2 Tıbbi Farmakoloji 'Genel Anestezik İlaçlar' dersi Öğren'de ve sesli derste. Geçen yılın slaytından hazırlanan sınama dersidir, 'Sınama' etiketiyle görünür.",
+    "Yeni yayınlanan derslerin PDF'i artık hemen açılıyor (Drive taramasını beklemiyor).",
+    "Ders paketi (.medspak) artık dersin PDF'ini de içeriyor; paketten 'Ders PDF'ini aç' ile açılır."
   ],
-  "duzeltilen": [
-    "Tam ekran altyazı"
-  ],
+  "degisen": [],
+  "duzeltilen": [],
   "silinen": []
 }

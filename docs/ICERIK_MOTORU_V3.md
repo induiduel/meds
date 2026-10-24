@@ -264,14 +264,17 @@ varyant için hesaplanır (H12: türev veri metnin aynı sürümünden — `meti
 - **Biçim:** SQLite (tek dosya, parça düzeyinde güncellenebilir, `sqlite3`/`sql.js` ile okunur).
   Tablolar: `meta(anahtar, deger)` (`surum`, `ders_id`, `kurul`, `kaynak_sha`, `uretildi`), `sayfa` (L0), `yama` (L1),
   `cumle` (L2: kimlik, ekran, ses, vurgu, çapa), `cizim`, `soru` (çıkmış + parça + çözücü; kimlik, `bagli_cumle`),
-  `ses_parca` (varyant, paragraf, Opus blob, kelime zamanı), `ek` (isteğe bağlı: ham PDF, öğrenci PDF'i, hoca dökümü).
+  `ses_parca` (varyant, paragraf, Opus blob, kelime zamanı), `ek` (`ders_pdf`: hocanın ders PDF'i, **her pakette**;
+  `ogrenci_notu` / `hoca_kaydi`: yalnız `--ekler`).
 - **Ses biçimi:** paket içinde Opus (≈%40 küçük). Site bugünkü MP3'leri sunmayı sürdürür; Opus yalnız pakette, Safari
   uyumu sınandıktan sonra sitede de seçenek olur.
 - **Üretim:** `scripts/paket/medspak_uret.py <ders_id> [--ekler]` → `meds_export/medspak/<ders_id>.medspak`; kapı
   `medspak_dogrula.py` (her kimlik çözülür, ses/kelime zamanı `metinHash` tutarlı, boyut tavanı).
 - **Okuyucu:** önce web uygulamasının çevrimdışı motoruna uyarlayıcı (`paketMotoru.ts` yeni tür `medspak:<ders>`),
   sql.js tembel yüklenir. Bağımsız masaüstü/mobil okuyucu ancak web uyarlayıcısı oturduktan sonra değerlendirilir.
-- **Gizlilik:** öğrenci PDF'i ve hoca kaydı paket eklerine yalnız yönetici dışa aktarımında girer; öğrenci indirmesinde yok.
+- **Gizlilik:** öğrenci notu ve hoca kaydı paket eklerine yalnız yönetici dışa aktarımında girer; öğrenci indirmesinde yok.
+  Hocanın ders PDF'i sitede herkese açık olduğu için her pakette bulunur (kullanıcı kararı 2026-10-24); kaynak Oracle'daki
+  deste → PDF eşlemesi. Kapı: `ders_pdf` var ve `%PDF-` ile başlar; öğrenci paketinde başka tür ek yok. Okuyucu "Ders PDF'ini aç".
 
 ---
 

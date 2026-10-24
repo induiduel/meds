@@ -587,6 +587,19 @@ def _env(ad: str) -> str:
     return ""
 
 
+def _pdf_eslesme_yenile() -> str:
+    """H56 (2026-10-24, k2-07): deste → ders PDF eşlemesi yalnız işçinin Drive taramasında (50 dk) yenileniyordu; yeni
+    ders o arada uygulamada PDF'siz açılıyordu. Yayından hemen sonra aynı eşleyici işçi kapsayıcısında koşar
+    (PyMuPDF + indirme klasörüne yazma orada; çıktı DOWNLOADS/_deck_pdf_sources.json, sunucu yenisini okur)."""
+    try:
+        r = subprocess.run(["docker", "exec", "meds-ders-isci", "python3", "-c",
+                            "import sys; sys.path.insert(0, '/app/scripts/ders_isci'); import izle; izle.pdf_eslesme_guncelle()"],
+                           capture_output=True, text=True, timeout=1200)
+    except Exception as e:  # noqa: BLE001  (işçi taramasında yine yenilenir)
+        return f"çalışmadı ({e}); bir sonraki Drive taramasında yenilenecek"
+    return "yenilendi" if r.returncode == 0 else f"hata {r.returncode}: {(r.stderr or r.stdout)[-300:]}"
+
+
 def _canli_ders_ekle(y) -> str:
     """Yayınlanan dersi canlı derse ekler (sunucu: POST /api/sesli-anlatim/ders-ekle): konuşma metni, ders listesi,
     PDF hizalaması (konusma_sayfalari.json) ve iki ses işi — Emel (varsayılan) + EMA. Metin yoksa atlanır.
@@ -710,6 +723,8 @@ def sunucu() -> int:
     canli = [_canli_ders_ekle(y) for y in sonuc if y.d.parent == ONAYLANAN] if derlendi else []
     for c in canli:
         print("canlı ders:", c)
+    if yeni_adlar:
+        print("PDF eşleşmesi:", _pdf_eslesme_yenile())
     if yeni_adlar:
         _bildir("Ders yayınlandı" if derlendi else "Ders yayınlandı, site derlenemedi",
                 "Sitede: " + ", ".join(yeni_adlar) + ("" if derlendi else " — meds-app derlemesi başarısız, kayıtlara bakın.")

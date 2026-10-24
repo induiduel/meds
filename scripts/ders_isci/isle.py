@@ -178,7 +178,7 @@ def kazanimlar(kurul: int, konu: str) -> list[str]:
     return [x.get("metin") for x in best.get("kazanimlar") or [] if x.get("metin")]
 
 
-def cikmis_adaylari(metin: str, kurul: int | None, en_cok: int = 40) -> list[dict]:
+def cikmis_adaylari(metin: str, kurul: int | None, en_cok: int = 40, _yineleme: bool = False) -> list[dict]:
     """Ders metninin parçalarıyla sitenin benzer-soru aramasını (BM25 + bge-m3) sorgular; tekrar eden adaylar öne çıkar."""
     parcalar = [p.split("\n", 1)[-1].strip() for p in metin.split("=== SAYFA ")]
     parcalar = [" ".join(p.split())[:700] for p in parcalar if len(p) > 120]
@@ -204,6 +204,14 @@ def cikmis_adaylari(metin: str, kurul: int | None, en_cok: int = 40) -> list[dic
     if grup and not basarili:
         # sessiz başarısızlık yasak (GELECEK_PLANLAMASI E11): boş aday listesiyle paket üretilmez, iş sonra yeniden dener
         raise RuntimeError(f"benzer soru araması {len(grup)} sorguda da başarısız ({API})")
+    if grup and not toplam:
+        # H54 (2026-10-24, k2-07): arama 200 dönüp hiç sonuç vermedi (dizin hazır değildi) → ders çıkmışsız üretildi.
+        # Bütün sorgular boş geldiyse bir kez bekleyip yinele; yine boşsa durdur (iş sonra yeniden dener).
+        if not _yineleme:
+            log("benzer soru araması hiç sonuç vermedi; 60 sn sonra yineleniyor")
+            time.sleep(60)
+            return cikmis_adaylari(metin, kurul, en_cok, _yineleme=True)
+        raise RuntimeError(f"benzer soru araması {len(grup)} sorguda hiç sonuç vermedi ({API})")
     return sorted(toplam.values(), key=lambda e: (-e["kez"], -e["puan"]))[:en_cok]
 
 

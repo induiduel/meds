@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { FileUp, PenLine, X } from 'lucide-react';
+import { FileText, FileUp, PenLine, X } from 'lucide-react';
 import type { MedspakDers } from '../../services/medspakOku';
 
 /**
@@ -16,7 +16,10 @@ export default function MedspakOkuyucu() {
   const girdi = useRef<HTMLInputElement>(null);
   const ses = useRef<HTMLAudioElement>(null);
 
-  useEffect(() => () => { if (ders?.ses?.url) URL.revokeObjectURL(ders.ses.url); }, [ders]);
+  useEffect(() => () => {
+    if (ders?.ses?.url) URL.revokeObjectURL(ders.ses.url);
+    for (const p of ders?.pdfler || []) URL.revokeObjectURL(p.url);
+  }, [ders]);
 
   const ac = async (f: File | undefined) => {
     if (!f) return;
@@ -59,7 +62,7 @@ export default function MedspakOkuyucu() {
       {!ders ? (
         <>
           <p className="cv-aciklama">
-            Tek dosyalık ders paketini bu cihazda aç: sesli anlatım, ekran maddeleri ve vurgular. Dosya sunucuya gönderilmez.
+            Tek dosyalık ders paketini bu cihazda aç: sesli anlatım, ekran maddeleri, vurgular ve ders PDF'i. Dosya sunucuya gönderilmez.
           </p>
           <button type="button" className="cv-btn is-birincil" disabled={yukleniyor} onClick={() => girdi.current?.click()}>
             <FileUp /> {yukleniyor ? 'Açılıyor…' : 'Dosya seç'}
@@ -73,6 +76,11 @@ export default function MedspakOkuyucu() {
             <b>{ders.baslik}</b> · {ders.cumleler.length} cümle · {ders.paragrafSayisi} paragraf · {ders.slaytSayisi} slayt ·{' '}
             {ders.soruSayisi} soru{ders.ses ? ` · ${Math.round(ders.ses.sureSn / 60)} dk ses` : ''}
           </p>
+          {ders.pdfler.map((p) => (
+            <a key={p.url} className="cv-btn" href={p.url} target="_blank" rel="noreferrer" download={p.ad}>
+              <FileText /> Ders PDF'ini aç
+            </a>
+          ))}
           {ders.ses && (
             <audio ref={ses} className="mp-ses" controls preload="metadata" src={ders.ses.url}
                    onTimeUpdate={(e) => setAn((e.target as HTMLAudioElement).currentTime)} />

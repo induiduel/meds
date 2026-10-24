@@ -24,6 +24,8 @@ export interface MedspakDers {
   paragrafSayisi: number;
   soruSayisi: number;
   ses: { varyant: string; bicim: string; sureSn: number; url: string; zamanlama: number[][] } | null;
+  /** Hocanın ders PDF'i (ek.tur = ders_pdf); eski paketlerde yok */
+  pdfler: { ad: string; url: string }[];
 }
 
 export async function medspakAc(dosya: File): Promise<MedspakDers> {
@@ -61,8 +63,16 @@ export async function medspakAc(dosya: File): Promise<MedspakDers> {
       url: URL.createObjectURL(new Blob([new Uint8Array(s.veri as Uint8Array)], { type: s.bicim === 'opus' ? 'audio/ogg; codecs=opus' : 'audio/mpeg' })),
       zamanlama: js(s.zamanlama, []),
     } : null;
+    let pdfler: MedspakDers['pdfler'] = [];
+    try {
+      pdfler = satir("SELECT ad, veri FROM ek WHERE tur = 'ders_pdf'").map((r) => ({
+        ad: String(r.ad), url: URL.createObjectURL(new Blob([new Uint8Array(r.veri as Uint8Array)], { type: 'application/pdf' })),
+      }));
+    } catch {
+      /* ek tablosu olmayan paket */
+    }
     return {
-      meta, baslik: meta.baslik || meta.ders_id, desteBaslik: deste?.title || '', slaytSayisi: deste?.slides?.length || 0,
+      meta, pdfler, baslik: meta.baslik || meta.ders_id, desteBaslik: deste?.title || '', slaytSayisi: deste?.slides?.length || 0,
       cumleler, paragrafSayisi: new Set(cumleler.map((c) => c.paragraf)).size,
       soruSayisi: Number(satir('SELECT COUNT(*) AS n FROM soru')[0]?.n || 0), ses,
     };

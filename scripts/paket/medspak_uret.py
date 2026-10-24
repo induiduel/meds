@@ -9,8 +9,8 @@ Tablolar
   cizim(cumle_id, sira, json)   canlı çizim komutları (cizim/<key>.json)
   soru(id, tur, json, bagli_cumle)  örnek sorular (deste) + çıkmış bağları
   ses_parca(varyant, bicim, sure_sn, metin_hash, veri, zamanlama, kelime_zaman)
-  ek(ad, tur, veri)             yalnız --ekler (yönetici dışa aktarımı): ham PDF; öğrenci notu ve hoca kaydı öğrenci
-                                indirmesine GİRMEZ (§6 gizlilik)
+  ek(ad, tur, veri)             tur=ders_pdf: hocanın ders PDF'i, her pakette (2026-10-24); ogrenci_notu / hoca_kaydi
+                                yalnız --ekler (yönetici dışa aktarımı), öğrenci indirmesine GİRMEZ (§6 gizlilik)
 Kullanım: python3 scripts/paket/medspak_uret.py <ders anahtarı> [--ekler] [--cikti DİZİN]
           → meds_export/medspak/<anahtar>.medspak ; ardından medspak_dogrula.py
 """
@@ -44,6 +44,23 @@ def cek(goreli: str, hedef: Path) -> Path | None:
     hedef.parent.mkdir(parents=True, exist_ok=True)
     r = subprocess.run(["rsync", "-az", f"{UZ}/{goreli}", str(hedef)], capture_output=True, text=True)
     return hedef if r.returncode == 0 and hedef.exists() else None
+
+
+def ders_pdfleri(deste_id: str) -> list[tuple[str, bytes]]:
+    """Oracle'daki sunucunun deste → PDF eşlemesinden dosyalar (loopback; giriş gerekmez). Yoksa boş liste."""
+    r = subprocess.run(["ssh", "medsor-oracle", f"curl -sf http://localhost:3000/api/lecture-pdf/deck/{deste_id}"],
+                       capture_output=True, text=True, timeout=60)
+    try:
+        dosyalar = json.loads(r.stdout).get("files") or [] if r.returncode == 0 else []
+    except ValueError:
+        dosyalar = []
+    out = []
+    for i, f in enumerate(dosyalar):
+        b = subprocess.run(["ssh", "medsor-oracle", f"curl -sf http://localhost:3000/api/lecture-pdf/deck/{deste_id}/{i}"],
+                           capture_output=True, timeout=300)
+        if b.returncode == 0 and b.stdout[:5] == b"%PDF-":
+            out.append((f.get("name") or f"{deste_id}_{i}.pdf", b.stdout))
+    return out
 
 
 def main() -> int:
@@ -134,18 +151,26 @@ def main() -> int:
         db.execute("INSERT INTO ses_parca VALUES (?,?,?,?,?,?,?)", (v["id"], bicim, v.get("sureSn"), v.get("metinHash"),
                                                                      veri, json.dumps(v.get("zamanlama")),
                                                                      json.dumps(kz.get(v["id"]) if isinstance(kz, dict) and v["id"] in kz else kz)))
+    # Ders PDF'i (hocanın slaytı) her pakete girer: sitede zaten herkese açık, çevrimdışı pakette de açılmalı (kullanıcı
+    # kararı 2026-10-24, H56). Kaynak: Oracle sunucusunun deste → PDF eşlemesi (uygulamanın açtığı dosyanın aynısı).
+    pdf_sayisi = 0
+    for i, (ad, veri) in enumerate(ders_pdfleri(deste_id)):
+        db.execute("INSERT OR IGNORE INTO ek VALUES (?,?,?)", (ad, "ders_pdf", veri))
+        pdf_sayisi += 1
+    if not pdf_sayisi:
+        print(f"  UYARI {deste_id}: sunucuda ders PDF'i yok/eşlenmemiş → pakete PDF girmedi")
     if a.ekler:
-        for f in hz.get("dosyalar") or []:
-            pdf = MEDS / "data/sesli_anlatim/.pdf_onbellek"
-            aday = sorted(pdf.glob(f"{deste_id}_*.pdf"))
-            if aday:
-                db.execute("INSERT OR IGNORE INTO ek VALUES (?,?,?)", (f.get("name") or aday[-1].name, "pdf", aday[-1].read_bytes()))
+        # Öğrenci notu ve hoca kaydı yalnız yönetici dışa aktarımında (§6 gizlilik); öğrenci indirmesine GİRMEZ.
+        for alt, tur in (("ogrenci_not", "ogrenci_notu"), ("hoca_kaydi", "hoca_kaydi")):
+            for f in sorted((MEDS / "data/sesli_anlatim" / alt).glob(f"{key}*")) if (MEDS / "data/sesli_anlatim" / alt).is_dir() else []:
+                if f.is_file():
+                    db.execute("INSERT OR IGNORE INTO ek VALUES (?,?,?)", (f.name, tur, f.read_bytes()))
     meta = {"surum": SURUM, "ders_id": key, "deste_id": deste_id, "kurul": (deste or {}).get("committee") or "",
             "baslik": v2.get("baslik") or (deste or {}).get("title") or key,
             "metin_hash": mh, "isaret_metin_hash": isr.get("metinHash"),
             "cizim_metin_hash": cz.get("metinHash"), "kaynak_sha": hashlib.sha256(json.dumps(v2, sort_keys=True).encode()).hexdigest()[:16],
             "uretildi": dt.datetime.now().isoformat(timespec="seconds"),
-            "ses_bicim": (db.execute("SELECT bicim FROM ses_parca LIMIT 1").fetchone() or ["yok"])[0], "ekler": int(a.ekler)}
+            "ses_bicim": (db.execute("SELECT bicim FROM ses_parca LIMIT 1").fetchone() or ["yok"])[0], "ekler": int(a.ekler), "pdf_sayisi": pdf_sayisi}
     db.executemany("INSERT INTO meta VALUES (?,?)", [(k, json.dumps(v, ensure_ascii=False) if not isinstance(v, str) else v) for k, v in meta.items()])
     db.commit()
     say = {t: db.execute(f"SELECT COUNT(*) FROM {t}").fetchone()[0] for t in ("cumle", "cizim", "soru", "ses_parca", "ek")}
