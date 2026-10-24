@@ -518,18 +518,35 @@ def _isle_tek(j: dict) -> dict:
                   + j["duzeltme_notu"])
     if onceki:
         istem = "Kota/kesinti nedeniyle yarım kaldın. Klasördeki mevcut dosyalara bakıp kaldığın yerden devam et; " + istem
-    r = claude(d, istem, onceki)
-    if r["kota"]:
-        return {"durum": "kota", "mesaj": "abonelik kotası doldu; oturum saklandı, sonra sürecek"}
-    if r["hata"] and not (d / "deck.json").exists():
-        return {"durum": "hata", "mesaj": r["hata"]}
+    if ayar().get("paralel_uretim", True):
+        import paralel
+        ek = ""
+        if j.get("ekler"):
+            import ekler
+            ek += ekler.istem_eki(d)
+        if j.get("duzeltme_notu"):
+            ek += " ÖNEMLİ — yöneticinin önceki taslağa düzeltme notu (uy): " + j["duzeltme_notu"]
+        pr = paralel.uret(d, claude, konusma_metni, ek)
+        if pr.get("kota"):
+            return {"durum": "kota", "mesaj": "abonelik kotası doldu (paralel üretim); yazılan parçalar saklandı, sonra sürecek"}
+        if pr.get("hata") and not (d / "deck.json").exists():
+            return {"durum": "hata", "mesaj": pr["hata"]}
+        r = {"oturum": None}
+    else:
+        r = claude(d, istem, onceki)
+        if r["kota"]:
+            return {"durum": "kota", "mesaj": "abonelik kotası doldu; oturum saklandı, sonra sürecek"}
+        if r["hata"] and not (d / "deck.json").exists():
+            return {"durum": "hata", "mesaj": r["hata"]}
 
     den = denetle(d)
     for tur in range(2):  # en çok 2 düzeltme turu, aynı oturumda
         if not den.get("hata"):
             break
         hatalar = "\n".join(den.get("hatalar", [])[:60])
-        r = claude(d, f"Denetleyici {den['hata']} HATA buldu. Hepsini düzelt (alıntısı kaynakta olmayan kaydı ya kaynaktan "
+        on = "" if r.get("oturum") else (f"Talimat: {TALIMAT} (/app = {APP}). Bu klasördeki çıktılar paralel üretildi; ilgili "
+                                          "dosyaları oku. ")
+        r = claude(d, on + f"Denetleyici {den['hata']} HATA buldu. Hepsini düzelt (alıntısı kaynakta olmayan kaydı ya kaynaktan "
                       f"doğru alıntıyla düzelt ya da sil), sonra denetle.py'yi yeniden çalıştır:\n{hatalar}", r.get("oturum"))
         if r["kota"]:
             return {"durum": "kota", "mesaj": "düzeltme turunda kota doldu"}
