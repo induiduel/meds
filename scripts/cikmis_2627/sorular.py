@@ -215,3 +215,40 @@ S['Farmakoloji'] = [
  (100, "Kemik rezorpsiyonunu engellemek amacıyla kullanılan, RANKL'a karşı geliştirilmiş monoklonal antikor ilaç aşağıdakilerden hangisidir?",
   ['Denosumab', 'Siklosporin', 'Metotreksat', 'İnfliksimab', 'Bevasizumab'], 'A', ''),
 ]
+
+# Şık düzeyinde işaret: kökte geçen parça → {"uretildi": harfler, "supheli": harfler}
+# uretildi: sonradan eklenen / ders notundan üretilen şık; supheli: öğrencilerin emin olmadığı ya da değiştirdiği şık
+SIK_ISARET = {
+    "ROS artışı kronikleşirse": {"uretildi": "ABDE"},
+    "Fibrinöz perikarditte": {"uretildi": "ABCDE"},
+    "Komplement sisteminin": {"uretildi": "ABCDE"},
+    "Kronik enflamasyonun morfolojik": {"uretildi": "ACDE"},
+    "Sekonder yara": {"uretildi": "BCDE"},
+    "Virchow": {"uretildi": "CDE"},
+    "Kurşun maruziyeti": {"uretildi": "ABCDE"},
+    "Bilateral over tutulumu": {"uretildi": "ABCDE"},
+    "Paget": {"uretildi": "BCDE"},
+    "Anne sütü ve bebek beslenmesi": {"uretildi": "ABCDE"},
+    "Korunma düzeyleri ile ilgili": {"uretildi": "ABCDE"},
+    "en az kaç kez izlenmelidir": {"uretildi": "ACDE"},
+    "Spontan düşükler": {"uretildi": "CDE"},
+    "NST trasesi": {"uretildi": "ABCDE"},
+    "Oil Red O": {"supheli": "ACD"},
+    "Tip IV": {"supheli": "E"},
+    "Minimal Değişim": {"supheli": "E"},
+    "hidroksiklorokin": {"supheli": "BDE"},
+    "28 yaşında kadın": {"supheli": "E"},
+    "prerenal proteinüri": {"supheli": "ACDE"},
+    "infravezikal": {"supheli": "D"},
+    "çevreye yönelik": {"supheli": "A"},
+    "fetal iyilik halinin": {"supheli": "ABCD"},
+    "Enürezis nokturna için": {"supheli": "BCDE"},
+    "kesin tanısı amacıyla": {"supheli": "E"},
+}
+
+
+def sik_isareti(kok):
+    for parca, isaret in SIK_ISARET.items():
+        if parca in kok:
+            return isaret
+    return {}

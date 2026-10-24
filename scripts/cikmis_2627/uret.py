@@ -18,7 +18,7 @@ from reportlab.platypus import (BaseDocTemplate, CondPageBreak, Frame, Image, Ke
                                 PageTemplate, Paragraph, Spacer, Table, TableStyle)
 
 sys.path.insert(0, str(Path(__file__).parent))
-from sorular import DERSLER, S  # noqa: E402
+from sorular import DERSLER, S, sik_isareti  # noqa: E402
 
 KOK = Path(__file__).resolve().parents[2]
 CIKTI = KOK / "data" / "cikmis_2627" / "kurul1_2627.pdf"
@@ -115,7 +115,15 @@ def soru_karti(ders, no, kok, siklar, cevap, notu, kesin, konu=None):
         en = SUTUN - 14
         icerik += [Image(str(KTG), width=en, height=en * 336 / 644), Spacer(1, 1.6 * mm)]
     if siklar:
-        icerik += [Paragraph(f'<font name="DVB">{"ABCDE"[j]})</font> {escape(s)}', st_sik) for j, s in enumerate(siklar)]
+        isaret = sik_isareti(kok)
+        for j, s in enumerate(siklar):
+            harf, metin = "ABCDE"[j], escape(s)
+            for tur in ("supheli", "uretildi"):
+                if harf in isaret.get(tur, ""):
+                    r = DURUM["tartisma" if tur == "supheli" else "uretildi"][0].hexval()
+                    metin = f'<u><font color="{r}">{metin}</font></u>'
+                    break
+            icerik.append(Paragraph(f'<font name="DVB">{harf})</font> {metin}', st_sik))
         dogru = f'{cevap}) {siklar["ABCDE".index(cevap)]}' if cevap in "ABCDE" else cevap
     else:
         icerik.append(Paragraph("Şıklar toplanmadı.", st_sik))
@@ -227,6 +235,12 @@ def main():
             yy = y - 2.5 * mm - (i % 4) * 3.4 * mm
             c.setFillColor(renk); c.setFont("DVB", 6.3); c.drawString(xx, yy, f"[{ad}]")
             c.setFillColor(GRI); c.setFont("DV", 6.6); c.drawString(xx + 30 * mm, yy, metin)
+        xx, yy = KENAR + 4 * mm + (SAYFA_G - 2 * KENAR) / 2, y - 2.5 * mm - 3 * 3.4 * mm
+        for renk, ornek, metin in [(DURUM["uretildi"][0], "Şık", "eklenen şık"), (DURUM["tartisma"][0], "Şık", "şüpheli şık")]:
+            c.setFillColor(renk); c.setFont("DV", 6.6); c.drawString(xx, yy, ornek)
+            w = c.stringWidth(ornek, "DV", 6.6); c.setStrokeColor(renk); c.setLineWidth(0.5); c.line(xx, yy - 0.8, xx + w, yy - 0.8)
+            c.setFillColor(GRI); c.drawString(xx + w + 1.5 * mm, yy, metin)
+            xx += 30 * mm
         alt_bilgi(c, d)
         c.restoreState()
 

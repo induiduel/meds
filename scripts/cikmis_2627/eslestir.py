@@ -12,7 +12,7 @@ from collections import Counter
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from sorular import DERSLER, S  # noqa: E402
+from sorular import DERSLER, S, sik_isareti  # noqa: E402
 
 KOK = Path(__file__).resolve().parents[2]
 NOTLAR = KOK.parent / "meds_database_v2" / "ders_notlari_k1"
@@ -81,6 +81,8 @@ def main():
                 "durum": "kismi" if not siklar else ("siklar_uretildi" if uretildi else "tam"),
                 "tartismali": bool(notu and "artışmalı" in notu),
                 "kok": kok, "siklar": siklar, "cevap": cevap, "not": notu,
+                "sik_isaretleri": {"uretildi": list(sik_isareti(kok).get("uretildi", "")),
+                                   "supheli": list(sik_isareti(kok).get("supheli", ""))},
                 "eslesme": {
                     "yontem": "elle" if no in ELLE else "otomatik",
                     "puan": round(adaylar[0][0], 1),
