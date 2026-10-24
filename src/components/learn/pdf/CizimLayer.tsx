@@ -16,7 +16,9 @@ export interface CizimKomut {
   iliski?: 'aktive' | 'inhibe' | 'donusur';
   fazlar?: { aralik: [number, number]; faz: 'yukselis' | 'inis' | 'plato' }[];
   dugum?: { id: string; metin: string }[];
-  kenar?: { a: string; b: string; tur: string }[];
+  kenar?: { a: string; b: string; tur: string; etiket?: string }[];
+  /** şema panel türü (cizim_uret.panel_tipi) */
+  tip?: 'zincir' | 'grup' | 'dal' | 'maske' | 'karsit';
   etiket?: string;
   /** yerleşim (cizim_uret.yerlesim, içeriğin önü kapanmasın): ok kavisinin denetim noktası, asıl hedef, etiketin ve
    *  şema panelinin boş yerdeki konumu (sayfa oranı) */
@@ -26,6 +28,11 @@ export interface CizimKomut {
   yol?: number[][];
   rota?: 'duz' | 'dirsek' | 'kavis';
   hedef_kutu?: number[];
+  kaynak_kutu?: number[];
+  /** resimdeki mevcut ok/bölge: yeni ok yerine çerçeve + etiket */
+  odak?: number[];
+  /** dallı ok: aynı kaynaktan çıkan dalların grubu, sırası, sayısı */
+  dal?: { g: string; i: number; n: number };
   etiket_konum?: number[];
   etiket_genislik?: number;
   konum?: number[];
@@ -100,6 +107,18 @@ function Komut({ z, t }: { z: CizimKomut; t: number }) {
       </g>
     );
   }
+  if (z.tur === 'akis' && z.odak) {
+    const o = z.odak;
+    return (
+      <g className="pdv-cz-akis is-odak">
+        <rect x={o[0] * V} y={o[1] * V} width={(o[2] - o[0]) * V} height={(o[3] - o[1]) * V} rx={8} className="pdv-cz-hale" pathLength={1}
+              strokeDasharray={1} strokeDashoffset={1 - t} vectorEffect="non-scaling-stroke" />
+        <rect x={o[0] * V} y={o[1] * V} width={(o[2] - o[0]) * V} height={(o[3] - o[1]) * V} rx={8} className="pdv-cz-odak" pathLength={1}
+              strokeDasharray={1} strokeDashoffset={1 - t} vectorEffect="non-scaling-stroke" />
+        {t >= 1 && <Etiket z={z} />}
+      </g>
+    );
+  }
   if (z.tur === 'akis' && z.a && z.b) {
     const [a, b] = [z.a, z.b];
     const yol = z.yol?.length ? z.yol : z.c ? Array.from({ length: 17 }, (_, i) => {
@@ -109,8 +128,12 @@ function Komut({ z, t }: { z: CizimKomut; t: number }) {
     const m = yolNokta(yol, t);
     const ui = z.iliski === 'inhibe';
     const hk = z.hedef_kutu;
+    const kk = z.kaynak_kutu;
     return (
-      <g className={`pdv-cz-akis is-${z.iliski || 'aktive'}`}>
+      <g className={`pdv-cz-akis is-${z.iliski || 'aktive'}${z.dal ? ' is-dal' : ''}`}>
+        {z.dal && z.dal.i === 0 && kk && (
+          <rect x={kk[0] * V} y={kk[1] * V} width={(kk[2] - kk[0]) * V} height={(kk[3] - kk[1]) * V} rx={6} className="pdv-cz-kaynak" vectorEffect="non-scaling-stroke" />
+        )}
         <path d={yolD(yol, z.rota)} {...ciz} className="pdv-cz-hale" vectorEffect="non-scaling-stroke" />
         <path d={yolD(yol, z.rota)} {...ciz} markerEnd={t >= 1 ? `url(#pdv-cz-${ui ? 'dur' : 'ok'})` : undefined} vectorEffect="non-scaling-stroke" />
         {t > 0 && t < 1 && <circle cx={m[0] * V} cy={m[1] * V} r={4} className="pdv-cz-parca" />}
@@ -138,69 +161,107 @@ function Komut({ z, t }: { z: CizimKomut; t: number }) {
   return null;
 }
 
-const OK = (tur?: string) => (tur === 'inhibe' ? '⊣' : tur === 'donusur' ? '⇒' : '→');
+const OK = (tur?: string) => (tur === 'inhibe' ? '⊣' : tur === 'donusur' ? '⇒' : tur === 'karsit' ? '↔' : '→');
+type Dugum = { id: string; metin: string };
+
+/** Düğüm: belirince süzülür; vurgulu (hedef) mavi dolgu */
+const D = ({ d, hedef, gecikme = 0 }: { d: Dugum; hedef?: boolean; gecikme?: number }) => (
+  <span className={`pdv-cz-dugum${hedef ? ' is-hedef' : ''}`} style={{ animationDelay: `${gecikme}ms` }}>{d.metin}</span>
+);
+
+/** Bağ: çizgi soldan uzayarak çizilir, ucunda ilişki işareti; varsa üstünde kısa açıklama */
+const Bag = ({ tur, etiket, dikey, gecikme = 0 }: { tur?: string; etiket?: string; dikey?: boolean; gecikme?: number }) => (
+  <span className={`pdv-cz-bag is-${tur || 'aktive'}${dikey ? ' is-dikey' : ''}${etiket ? ' has-etiket' : ''}`} style={{ ['--g' as any]: `${gecikme}ms` }}>
+    {etiket && <span className="pdv-cz-bag-etiket">{etiket}</span>}
+    <span className="pdv-cz-bag-cizgi" />
+    <span className="pdv-cz-bag-uc">{tur === 'inhibe' ? '⊣' : '▶'}</span>
+  </span>
+);
 
 /**
- * Şema: betiğin boş bulduğu yerde (konum) panel, düğümler sırayla belirir. Birden çok düğüm aynı hedefe gidiyorsa
- * (ör. dört neden → acil beyin görüntülemesi) tek okla değil, alt alta dizilip "}" ile toplanarak hedefe bağlanır
- * (kullanıcı 2026-10-24: tek ok grubun tamamını kapsadığını anlatmıyor). Kalan kenarlar soldan sağa zincir.
+ * Şema paneli (R6; kullanıcı 2026-10-24): sayfadaki yazılar arasına ok çizmek okunmadığında ilişki betiğin boş bulduğu
+ * yerde (konum) bir panelde canlandırılır. Tür ilişki yapısından seçilir (cizim_uret.panel_tipi):
+ *  zincir A → B → C · grup (çok → bir, "}") · dal (bir → çok, karar) · maske (görünen neden, perde kalkınca altta
+ *  yatan) · karşıt (iki kutup yan yana). Düğümler konuşmayla (t) sırayla belirir.
  */
 function Sema({ z, t }: { z: CizimKomut; t: number }) {
   const dg = z.dugum || [];
   const kn = z.kenar || [];
   const gorunen = Math.max(1, Math.ceil(t * dg.length));
   const sira = new Map(dg.map((d, i) => [d.id, i]));
-  const gelen = new Map<string, typeof kn>();
-  for (const e of kn) gelen.set(e.b, [...(gelen.get(e.b) || []), e]);
-  const grupHedef = [...gelen.entries()].filter(([, es]) => es.length >= 2).sort((x, y) => y[1].length - x[1].length)[0];
-  const stil = z.konum ? { left: `${z.konum[0] * 100}%`, top: `${z.konum[1] * 100}%`, right: 'auto', bottom: 'auto', maxWidth: `${(z.genislik || 0.6) * 100}%` } : undefined;
-  const aria = dg.map((d) => d.metin).join(', ');
+  const bul = (id: string) => dg.find((d) => d.id === id);
   const gor = (id: string) => (sira.get(id) ?? 99) < gorunen;
+  const stil = z.konum ? { left: `${z.konum[0] * 100}%`, top: `${z.konum[1] * 100}%`, right: 'auto', bottom: 'auto', maxWidth: `${(z.genislik || 0.6) * 100}%` } : undefined;
+  const say = (k: 'a' | 'b') => { const m = new Map<string, typeof kn>(); for (const e of kn) m.set(e[k], [...(m.get(e[k]) || []), e]); return m; };
+  const tip = z.tip || ([...say('b').values()].some((v) => v.length >= 2) ? 'grup' : 'zincir');
+  const kap = (ic: React.ReactNode) => (
+    <div className={`pdv-cz-sema is-${tip}`} role="img" aria-label={dg.map((d) => d.metin).join(', ')} style={stil}>{ic}</div>
+  );
 
-  if (grupHedef) {
-    const [hid, es] = grupHedef;
-    const kaynak = es.map((e) => dg.find((d) => d.id === e.a)).filter(Boolean) as { id: string; metin: string }[];
-    const hedef = dg.find((d) => d.id === hid);
-    const tamam = kaynak.every((d) => gor(d.id));
-    const diger = dg.filter((d) => d.id !== hid && !kaynak.includes(d));
-    return (
-      <div className="pdv-cz-sema is-grup" role="img" aria-label={aria} style={stil}>
-        <div className="pdv-cz-grup">
-          <div className="pdv-cz-grup-kaynak">
-            {kaynak.filter((d) => gor(d.id)).map((d) => <span key={d.id} className="pdv-cz-dugum pdv-cz-dugum-kap">{d.metin}</span>)}
-          </div>
-          {tamam && <span className="pdv-cz-kume" aria-hidden />}
-          {tamam && hedef && gor(hid) && (
-            <span className="pdv-cz-dugum-kap">
-              <span className={`pdv-cz-sema-ok is-${es[0].tur}`}>{OK(es[0].tur)}</span>
-              <span className="pdv-cz-dugum is-hedef">{hedef.metin}</span>
-            </span>
-          )}
+  if (tip === 'maske' && kn[0]) {
+    const e = kn[0]; const ust = bul(e.a); const alt = kn.filter((x) => x.a === e.a).map((x) => bul(x.b)).filter(Boolean) as Dugum[];
+    const acik = t >= 0.5;
+    return kap(
+      <div className="pdv-cz-maske">
+        <span className="pdv-cz-maske-baslik">Görünen</span>
+        {ust && <D d={ust} />}
+        <span className="pdv-cz-maske-baslik">Altta aranacak</span>
+        <div className={`pdv-cz-maske-alt${acik ? ' is-acik' : ''}`}>
+          {alt.map((d, i) => <D key={d.id} d={d} hedef gecikme={i * 120} />)}
+          <span className="pdv-cz-perde" aria-hidden>{e.etiket || '?'}</span>
         </div>
-        {diger.filter((d) => gor(d.id)).map((d) => {
-          const g = kn.find((e) => e.b === d.id);
-          return (
-            <span key={d.id} className="pdv-cz-dugum-kap">
-              {g && <span className={`pdv-cz-sema-ok is-${g.tur}`}>{OK(g.tur)}</span>}
-              <span className="pdv-cz-dugum">{d.metin}</span>
-            </span>
-          );
-        })}
-      </div>
+      </div>,
     );
   }
-  return (
-    <div className="pdv-cz-sema" role="img" aria-label={aria} style={stil}>
+  if (tip === 'karsit' && kn[0]) {
+    const a = bul(kn[0].a), b = bul(kn[0].b);
+    return kap(
+      <div className="pdv-cz-karsit">
+        {a && <D d={a} />}
+        <span className="pdv-cz-karsit-vs">{kn[0].etiket || 'ayırt et'}</span>
+        {b && gor(b.id) && <D d={b} />}
+      </div>,
+    );
+  }
+  if (tip === 'grup' || tip === 'dal') {
+    const harita = say(tip === 'grup' ? 'b' : 'a');
+    const [mid, es] = [...harita.entries()].sort((x, y) => y[1].length - x[1].length)[0] || ['', []];
+    const merkez = bul(mid);
+    const uclar = es.map((e) => bul(tip === 'grup' ? e.a : e.b)).filter(Boolean) as Dugum[];
+    const goren = uclar.filter((d) => gor(d.id));
+    const tamam = goren.length === uclar.length;
+    const liste = (
+      <div className="pdv-cz-grup-kaynak">
+        {goren.map((d, i) => (
+          <span key={d.id} className="pdv-cz-dal-satir">
+            {tip === 'dal' && es[i]?.etiket && <span className="pdv-cz-dal-kosul">{es[i].etiket}</span>}
+            <D d={d} gecikme={i * 90} />
+          </span>
+        ))}
+      </div>
+    );
+    return kap(
+      <div className="pdv-cz-grup">
+        {tip === 'grup' ? (
+          <>{liste}{tamam && <span className="pdv-cz-kume" aria-hidden />}{tamam && merkez && <><Bag tur={es[0]?.tur} etiket={es[0]?.etiket} /><D d={merkez} hedef /></>}</>
+        ) : (
+          <>{merkez && <D d={merkez} />}<span className="pdv-cz-kume is-ters" aria-hidden />{liste}</>
+        )}
+      </div>,
+    );
+  }
+  return kap(
+    <div className="pdv-cz-zincir">
       {dg.slice(0, gorunen).map((d, i) => {
         const g = kn.find((e) => sira.get(e.b) === i && (sira.get(e.a) ?? 99) < i);
         return (
           <span key={d.id} className="pdv-cz-dugum-kap">
-            {g && <span className={`pdv-cz-sema-ok is-${g.tur}`}>{OK(g.tur)}</span>}
-            <span className="pdv-cz-dugum">{d.metin}</span>
+            {g && <Bag tur={g.tur} etiket={g.etiket} />}
+            <D d={d} hedef={i === dg.length - 1 && dg.length > 1} />
           </span>
         );
       })}
-    </div>
+    </div>,
   );
 }
 
@@ -222,7 +283,9 @@ export const CizimLayer = memo(function CizimLayer({ z, useChar }: { z: CizimKom
             </marker>
           </defs>
           {cizimler.map((x, i) => {
-            const t = ilerleme(x, c);
+            // dallı okta dallar konuşma aralığını paylaşır: i. dal kendi diliminde çizilir (kaynak → 1. hedef → 2. hedef …)
+            const t0 = ilerleme(x, c);
+            const t = x.dal && t0 >= 0 && x.dal.i > 0 ? (t0 * x.dal.n - x.dal.i < 0 ? -1 : Math.min(1, t0 * x.dal.n - x.dal.i)) : x.dal && t0 > 0 ? Math.min(1, t0 * x.dal.n) : t0;
             return t < 0 ? null : <Komut key={i} z={x} t={t} />;
           })}
         </svg>

@@ -1,11 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 278,
-  "baslik": "Canlı çizimler daha görünür ve anlaşılır",
+  "onem": 279,
+  "baslik": "Canlı çizimde yeni panel türleri",
   "maddeler": [
-    "Çizgiler beyaz kenarlıkla her zeminde okunuyor, daha belirgin",
-    "Her okun yanında ne anlattığını söyleyen etiket var",
-    "Aynı sonuca giden terimler } ayracıyla gruplanıyor"
+    "Yazılar arasındaki ilişki artık okla değil, boş alanda canlanan bir panelle gösteriliyor",
+    "Panel türleri: zincir, grup (}), dallanma, gizli neden (perde kalkar), karşıtlık",
+    "Resimdeki mevcut oklar çerçevelenip etiketleniyor; bir kaynaktan birden çok yere giden ilişki dallı okla çiziliyor"
   ],
   "eklenen": [],
   "degisen": [

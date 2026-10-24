@@ -183,6 +183,9 @@
 .pdv-cz-uc { fill: #2563eb; }
 .pdv-cz-uc-dur { stroke: #dc2626; stroke-width: 2; }
 .pdv-cz-parca { fill: #f59e0b; stroke: #fff; stroke-width: 1; }
+.pdv-cz g rect.pdv-cz-hale { fill: none; stroke: #fff; stroke-width: 5.5; opacity: .9; }
+.pdv-cz-odak { fill: rgb(29 78 216 / .07); stroke: #1d4ed8; stroke-width: 2.4; }
+.pdv-cz-kaynak { fill: rgb(245 158 11 / .1); stroke: #d97706; stroke-width: 2; stroke-dasharray: 5 3; animation: pdv-cz-hedef-gel .3s ease-out both; }
 .pdv-cz-hedef { fill: rgb(37 99 235 / .08); stroke: #1d4ed8; stroke-width: 2; animation: pdv-cz-hedef-gel .3s ease-out both; }
 @keyframes pdv-cz-hedef-gel { from { opacity: 0; } to { opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { .pdv-cz-hedef { animation: none; } }
@@ -192,21 +195,40 @@
 .pdv-cz-egri path.is-plato { stroke: #64748b; }
 .pdv-cz-etiket { display: inline-block; max-width: 100%; padding: 2px 8px; border-radius: 6px; background: rgba(15, 23, 42, .9);
   color: #fff; font: 600 15px/1.3 system-ui, sans-serif; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.pdv-cz-sema { position: absolute; right: 3%; bottom: 3%; max-width: 70%; display: flex; flex-wrap: wrap; align-items: center; gap: 5px 4px;
-  padding: 7px 10px; border-radius: 12px; background: rgba(255, 255, 255, .95); border: 1px solid rgba(37, 99, 235, .18);
-  border-left: 3px solid #2563eb; box-shadow: 0 6px 18px -6px rgba(15, 23, 42, .28);
-  pointer-events: none; font-size: clamp(9px, 1.3vw, 12.5px); line-height: 1.25; }
-.pdv-cz-dugum-kap { display: inline-flex; align-items: center; gap: 5px; animation: pdv-cz-gel .35s ease-out both; }
-.pdv-cz-dugum { padding: 2px 8px; border-radius: 6px; background: #f1f5ff; color: #1e1b4b; font-weight: 600; }
-.pdv-cz-dugum.is-hedef { background: #2563eb; color: #fff; }
-.pdv-cz-sema-ok { color: #2563eb; font-weight: 700; }
-.pdv-cz-sema-ok.is-inhibe { color: #dc2626; }
-.pdv-cz-sema-ok.is-donusur { color: #7c3aed; }
-/* grup: kaynaklar alt alta, sağda "}" ayracı, ok ve tek hedef */
+.pdv-cz-sema { position: absolute; right: 3%; bottom: 3%; max-width: 70%; padding: 9px 12px; border-radius: 14px;
+  background: rgba(255, 255, 255, .97); border: 1px solid rgba(29, 78, 216, .16); box-shadow: 0 10px 28px -10px rgba(15, 23, 42, .35);
+  pointer-events: none; font-size: clamp(11px, 1.5vw, 15px); line-height: 1.25; color: #0f172a; animation: pdv-cz-gel .3s ease-out both; }
+.pdv-cz-zincir { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 4px; }
+.pdv-cz-dugum-kap { display: inline-flex; align-items: center; gap: 4px; }
+.pdv-cz-dugum { display: inline-block; padding: 3px 9px; border-radius: 8px; background: #eef2ff; color: #1e1b4b; font-weight: 650;
+  border: 1px solid #c7d2fe; animation: pdv-cz-gel .35s ease-out both; }
+.pdv-cz-dugum.is-hedef { background: #1d4ed8; border-color: #1d4ed8; color: #fff; }
+/* bağ: çizgi uzayarak çizilir, etiketi üstünde */
+.pdv-cz-bag { position: relative; display: inline-flex; align-items: center; min-width: 30px; padding-top: 1px; color: #1d4ed8; }
+.pdv-cz-bag.is-inhibe { color: #dc2626; } .pdv-cz-bag.is-donusur { color: #7c3aed; } .pdv-cz-bag.is-maske { color: #b45309; }
+.pdv-cz-bag-cizgi { flex: 1; height: 2px; min-width: 22px; background: currentColor; transform-origin: left; animation: pdv-cz-uza .45s ease-out both; animation-delay: var(--g, 0ms); }
+.pdv-cz-bag-uc { font-size: .7em; margin-left: -2px; animation: pdv-cz-gel .2s ease-out both; animation-delay: calc(var(--g, 0ms) + .4s); }
+.pdv-cz-bag-etiket { position: absolute; left: 0; right: 0; bottom: 100%; text-align: center; font-size: .78em; font-weight: 600; white-space: nowrap; }
+.pdv-cz-bag.has-etiket { min-width: 80px; margin-top: 1.1em; }
+@keyframes pdv-cz-uza { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+/* grup / dal: liste alt alta, "}" (dalda "{") ayracı */
 .pdv-cz-grup { display: flex; align-items: center; gap: 6px; }
-.pdv-cz-grup-kaynak { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; }
-.pdv-cz-kume { align-self: stretch; width: 9px; border: 1.5px solid #2563eb; border-left: 0; border-radius: 0 9px 9px 0;
+.pdv-cz-grup-kaynak { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.pdv-cz-dal-satir { display: inline-flex; align-items: center; gap: 5px; }
+.pdv-cz-dal-kosul { font-size: .78em; font-weight: 700; color: #1d4ed8; }
+.pdv-cz-kume { align-self: stretch; width: 10px; border: 2px solid #1d4ed8; border-left: 0; border-radius: 0 10px 10px 0;
   position: relative; animation: pdv-cz-gel .35s ease-out both; }
-.pdv-cz-kume::after { content: ''; position: absolute; right: -6px; top: 50%; width: 6px; border-top: 1.5px solid #2563eb; }
+.pdv-cz-kume.is-ters { border: 2px solid #1d4ed8; border-right: 0; border-radius: 10px 0 0 10px; }
+/* maske: görünen neden, altında perde; konuşma ilerleyince perde kayar, altta yatan belirir */
+.pdv-cz-maske { display: grid; gap: 4px; justify-items: start; }
+.pdv-cz-maske-baslik { font-size: .72em; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #64748b; }
+.pdv-cz-maske-alt { position: relative; display: flex; flex-wrap: wrap; gap: 4px; padding: 2px; border-radius: 9px; overflow: hidden; }
+.pdv-cz-perde { position: absolute; inset: 0; display: grid; place-items: center; border-radius: 9px; background: #b45309; color: #fff;
+  font-weight: 700; font-size: .85em; transition: transform .6s cubic-bezier(.6, 0, .2, 1); }
+.pdv-cz-maske-alt.is-acik .pdv-cz-perde { transform: translateX(105%); }
+/* karşıt: iki kutup yan yana */
+.pdv-cz-karsit { display: flex; align-items: center; gap: 8px; }
+.pdv-cz-karsit-vs { font-size: .78em; font-weight: 700; color: #7c3aed; padding: 2px 6px; border: 1.5px dashed #a78bfa; border-radius: 999px; }
+@media (prefers-reduced-motion: reduce) { .pdv-cz-bag-cizgi, .pdv-cz-bag-uc, .pdv-cz-sema, .pdv-cz-dugum { animation: none; } .pdv-cz-perde { transition: none; } }
 @keyframes pdv-cz-gel { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .pdv-cz-dugum-kap { animation: none; } }

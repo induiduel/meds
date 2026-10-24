@@ -33,11 +33,18 @@ zenginleştirmedir: yalnız cümle gerçekten o görseli/ilişkiyi anlatıyorsa 
   yaklaşık noktaları (aynı ifadenin üstünde), `iliski`: `aktive` | `inhibe` | `donusur`. Betik oku o yazıların gerçek
   kutularına oturtur ve rotayı (düz / dirsek / kavis) içeriği kapatmayacak şekilde kendisi seçer; hedef yazı
   çerçevelenir. Hedef bir resim bölgesiyse `hedef_metin` yazma.
+  **Dallı ok:** bir kaynak resimde birden çok yere yol açıyorsa tek komutta `"dallar": [{"b": [x,y], "hedef_metin": "…",
+  "etiket": "…"}, …]` (2–4 dal) yaz; kaynak bir kez çerçevelenir, dallar konuşma boyunca sırayla çizilir. Her dalın etiketi zorunlu.
 - **egri_faz** (grafik/eğri: EKG, kan gazı, skor seyri): `nokta` eğrinin ÜSTÜNDE soldan sağa sıralı 4–30 nokta; `fazlar`
   nokta dizini aralıkları (`yukselis` | `inis` | `plato`).
 - **sema** (görseli olmayan ya da metin ağırlıklı slaytta bir mekanizma/sınıflama): en çok 8 düğüm, her düğüm metni o
-  cümlede ya da DAHA ÖNCEKİ cümlelerde geçen terim (ileri sızıntı yasak); kenar türü `aktive` | `inhibe` | `donusur`.
-  Koordinat yazma (yerleşim istemcide).
+  cümlede ya da DAHA ÖNCEKİ cümlelerde geçen terim (ileri sızıntı yasak); kenar türü `aktive` | `inhibe` | `donusur` |
+  `maske` (A görünür neden, B altta yatan / gözden kaçan: "alkol → SAK, subdural") | `karsit` (A ile B iki kutup:
+  "dekortike ↔ deserebre"); kenara en çok 5 kelimelik `etiket` yazılabilir. Panel türü yapıdan kendiliğinden seçilir:
+  zincir (A→B→C), grup (birden çok → bir, "}"), dal (bir → birden çok, karar), maske (perde kalkar), karşıt (yan yana).
+  Koordinat yazma (yerleşim betikte).
+- **Yazı slaytında iki satırı okla bağlama**: ok okunmuyor ve amacı anlaşılmıyor (H40). İki ucu da yazı olan ilişkiyi
+  `sema` olarak yaz; betik iki ucu yazıya düşen okları da panele çevirir. `akis` yalnız resim/şema üstünde.
 - **Aday varsa kullan:** sayfalar.md'de "Aday ok A#" (PDF'in kendi ok çiziminden) ve "Aday eğri E#" (grafikten çıkarılmış
   eğri) satırları kesin koordinattır. Cümle o oku/eğriyi anlatıyorsa komuta `"aday": "A2"` (ya da `"E1"`) yaz;
   koordinat ve faz alanlarını yazma, betik adaydan doldurur. Aday yoksa görüntüden oku.

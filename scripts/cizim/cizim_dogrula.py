@@ -134,7 +134,7 @@ def denetle(k: dict, kelime_sayisi: int, kutular: list, raster: SayfaRaster | No
         ids = {d.get("id") for d in dg}
         if not 2 <= len(dg) <= 8 or len(ids) != len(dg):
             return "düğüm sayısı 2–8 ve kimlikler tekil olmalı"
-        if not kn or any(e.get("a") not in ids or e.get("b") not in ids or e.get("tur") not in ("aktive", "inhibe", "donusur") for e in kn):
+        if not kn or any(e.get("a") not in ids or e.get("b") not in ids or e.get("tur") not in ("aktive", "inhibe", "donusur", "maske", "karsit") for e in kn):
             return "kenar geçersiz"
         bilinen = _kok(onceki_metin)
         for d in dg:

@@ -124,19 +124,82 @@ def sayfa_satirlari(sayfa) -> list[dict]:
     return out
 
 
-def _kutu_bul(nokta, metin, satirlar):
-    """Önce verilen kelime (slaytta geçen), yoksa noktayı içeren / en yakın (≤0,05) satır. → kutu ya da None."""
+def _satir_bul(nokta, metin, satirlar):
+    """Önce verilen kelime (slaytta geçen), yoksa noktayı içeren / en yakın (≤0,05) satır. → satır ({kutu, metin}) ya da None."""
     from cizim_dogrula import _kok
     if metin:
         kk = _kok(metin)
         adaylar = [s_ for s_ in satirlar if kk and kk <= _kok(s_["metin"])] or \
                   [s_ for s_ in satirlar if kk and len(kk & _kok(s_["metin"])) >= max(1, len(kk) - 1)]
         if adaylar:
-            return min(adaylar, key=lambda s_: _uzak(nokta, s_["kutu"]) if nokta else 0)["kutu"]
+            return min(adaylar, key=lambda s_: _uzak(nokta, s_["kutu"]) if nokta else 0)
     if not nokta:
         return None
     en = min(satirlar, key=lambda s_: _uzak(nokta, s_["kutu"]), default=None)
-    return en["kutu"] if en and _uzak(nokta, en["kutu"]) <= 0.05 else None
+    return en if en and _uzak(nokta, en["kutu"]) <= 0.05 else None
+
+
+def _kutu_bul(nokta, metin, satirlar):
+    sa = _satir_bul(nokta, metin, satirlar)
+    return sa["kutu"] if sa else None
+
+
+MASKE = re.compile(r"maskel|gizle|altta|görünse|örter|sakla", re.I)
+
+
+def _dugum_metni(t: str) -> str:
+    t = re.sub(r"[\ue000-\uf8ff]", "", t)                       # PDF simge yazı tipi madde imleri ()
+    yalin = re.sub(r"\([^)]*\)|^[^(]*\)", "", t).strip()            # parantezli ara söz düğüme girmez
+    if len(yalin) >= 3:
+        t = yalin
+    t = re.sub(r"^[\s\-–•■▪●◦*()]+|[\s?!.:;,()]+$", "", t).strip()
+    if len(t) > 42:
+        t = t[:42].rsplit(" ", 1)[0] + "…"
+    return t
+
+
+def panel_tipi(k: dict) -> str:
+    """Şema panelinin türü ilişki yapısından (kullanıcı 2026-10-24: "birden çok senaryo için birden çok panel türü"):
+    karsit (iki kutup yan yana) · maske (görünen neden altta yatanı örter; perde kalkar) · grup (çok → bir, "}") ·
+    dal (bir → çok, karar dalları) · zincir (A → B → C)."""
+    kn = k.get("kenar") or []
+    if any(e.get("tur") == "karsit" for e in kn):
+        return "karsit"
+    if any(e.get("tur") == "maske" for e in kn):
+        return "maske"
+    gir, cik = {}, {}
+    for e in kn:
+        gir[e.get("b")] = gir.get(e.get("b"), 0) + 1
+        cik[e.get("a")] = cik.get(e.get("a"), 0) + 1
+    if max(gir.values(), default=0) >= 2:
+        return "grup"
+    if max(cik.values(), default=0) >= 2:
+        return "dal"
+    return "zincir"
+
+
+def oku_panele(k: dict, satirlar: list) -> dict | None:
+    """Yazı slaytında iki satır arasındaki ok okunmuyor ve amacı anlaşılmıyor (H40, kullanıcı 2026-10-24 s.18): iki ucu da
+    yazı satırına düşen ok, sayfanın boşluğunda ilişkiyi kendi içinde canlandıran panele çevrilir. Ok yalnız resim/şema
+    üstünde kalır. Düğümler etiketteki "A → B"den, yoksa slayttaki iki satırdan; etiket kenarın açıklaması olur."""
+    sa = _satir_bul(k.get("a"), k.get("kaynak_metin"), satirlar)
+    sb = _satir_bul(k.get("b"), k.get("hedef_metin"), satirlar)
+    if not sa or not sb:
+        return None
+    et = str(k.get("etiket") or "").strip()
+    parca = [x.strip() for x in re.split(r"\s*(?:→|->|⇒)\s*", et) if x.strip()]
+    if len(parca) >= 2 and len(parca) <= 4:
+        dugum = [{"id": f"d{i}", "metin": _dugum_metni(x)} for i, x in enumerate(parca)]
+        kenar = [{"a": f"d{i}", "b": f"d{i + 1}", "tur": k.get("iliski") or "aktive"} for i in range(len(parca) - 1)]
+    else:
+        ma, mb = _dugum_metni(sa["metin"]), _dugum_metni(sb["metin"])
+        # akış şeması kutularındaki tek-iki kelimelik parçalar ("hasta", "evet") düğüm olmaz: ok şemada kalır
+        if not ma or not mb or ma == mb or min(len(ma.split()), len(mb.split())) < 3:
+            return None
+        dugum = [{"id": "d0", "metin": ma}, {"id": "d1", "metin": mb}]
+        kenar = [{"a": "d0", "b": "d1", "tur": "maske" if MASKE.search(et) else (k.get("iliski") or "aktive"),
+                  **({"etiket": et} if et else {})}]
+    return {"tur": "sema", "s": k["s"], "k": k["k"], "dugum": dugum, "kenar": kenar, "kaynak": "ok"}
 
 
 def _resim_kutusu(nokta, r):
@@ -238,7 +301,16 @@ def ok_yerlesimi(k: dict, r, satirlar: list) -> dict:
     if not en:
         return k
     k = {kk: vv for kk, vv in k.items() if kk not in ("c", "hedef")}
+    # resimdeki mevcut oku kopyalayan kısa ok (yol şeklin kendi çizgileri üstünde): yeni ok çizilmez, şekildeki ok
+    # çerçevelenip etiketlenir (kullanıcı 2026-10-24 s.14: ok amacı anlaşılmıyordu)
+    if not hedef_yazi and (pa and pb) and ((pa[0] - pb[0]) ** 2 + (pa[1] - pb[1]) ** 2) ** 0.5 < 0.14 \
+            and r.kenar_orani([pa, [(pa[0] + pb[0]) / 2, (pa[1] + pb[1]) / 2], pb]) >= 0.6:
+        x0, x1 = sorted((pa[0], pb[0])); y0, y1 = sorted((pa[1], pb[1]))
+        k["odak"] = [round(max(0, x0 - 0.02), 4), round(max(0, y0 - 0.02), 4), round(min(1, x1 + 0.02), 4), round(min(1, y1 + 0.02), 4)]
+        return k
     k.update(yol=[[round(q[0], 4), round(q[1], 4)] for q in en[2]], rota=en[1], a=en[2][0], b=en[2][-1])
+    if A[2] - A[0] > 0.01:
+        k["kaynak_kutu"] = [round(A[0] - 0.004, 4), round(A[1] - 0.004, 4), round(A[2] + 0.004, 4), round(A[3] + 0.004, 4)]
     if hedef_yazi:
         k["hedef_kutu"] = [round(B[0] - 0.004, 4), round(B[1] - 0.004, 4), round(B[2] + 0.004, 4), round(B[3] + 0.004, 4)]
     return k
@@ -251,10 +323,14 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
     if r is None:
         return k
     if k["tur"] == "akis":
-        k = ok_yerlesimi(k, r, satirlar or [])
+        k = oku_panele(k, satirlar or []) or ok_yerlesimi(k, r, satirlar or [])
+    if k["tur"] == "sema":
+        k = {**k, "tip": panel_tipi(k)}
     if k.get("etiket"):
         g, h = min(0.3, 0.012 * len(k["etiket"]) + 0.04), 0.034
         o = k.get("nokta", [k.get("c") or k.get("a") or [0.5, 0.5]])[0] if k["tur"] != "sema" else [0.5, 0.5]
+        if k.get("odak"):
+            o = [k["odak"][2], k["odak"][1]]
         aday = [(o[0] + ox, o[1] + oy) for ox in (-0.02, 0.04, -0.2, 0.1, -0.3) for oy in (-0.06, 0.03, -0.12, 0.09)]
         iyi = [(r.kutu_doluluk(x - 0.012, y - 0.012, x + g + 0.012, y + h + 0.012), x, y) for x, y in aday
                if 0 <= x and x + g <= 1 and 0 <= y and y + h <= 1]
@@ -264,6 +340,9 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
             k = {**k, "etiket_konum": [round(x, 4), round(y, 4)], "etiket_genislik": round(g, 3)}
             if dolu is not None:
                 dolu.append((x, y, x + g, y + h))
+        elif k["tur"] == "akis" and k.get("odak"):
+            x, yy = min(max(0.0, k["odak"][0]), 1 - g), max(0.0, k["odak"][1] - h - 0.006)
+            k = {**k, "etiket_konum": [round(x, 4), round(yy, 4)], "etiket_genislik": round(g, 3)}
         elif k["tur"] == "akis" and k.get("yol"):
             # ok etiketsiz kalmasın (H40): boş yer yoksa yolun ortasına, okunur koyu hap olarak
             y = k["yol"]; m = y[len(y) // 2]
@@ -279,8 +358,13 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
         hedefe = {}
         for e in k.get("kenar") or []:
             hedefe.setdefault(e.get("b"), set()).add(e.get("a"))
-        grup = max((len(v) for v in hedefe.values()), default=0)
-        boy = ([(0.42, 0.05 * grup + 0.04), (0.36, 0.05 * grup + 0.06)] if grup >= 2 else
+        cikan = {}
+        for e in k.get("kenar") or []:
+            cikan.setdefault(e.get("a"), set()).add(e.get("b"))
+        grup = max([len(v) for v in hedefe.values()] + [len(v) for v in cikan.values()] + [0])
+        if k["tip"] in ("maske", "karsit"):
+            grup = max(grup, 2)
+        boy = ([(0.42, 0.05 * grup + 0.05), (0.36, 0.05 * grup + 0.07)] if grup >= 2 else
                [(min(0.6, 0.12 * n + 0.08), 0.08), (min(0.45, 0.09 * n + 0.06), 0.12), (min(0.32, 0.07 * n + 0.05), 0.16)])
         # yazının ağırlık merkezi: panel içeriğe yakın, kenara yapışmadan (≥%3 pay) ve boş yerde durur
         ys, xs = np.nonzero(r.ince[::4, ::4])
@@ -405,7 +489,17 @@ def main() -> int:
             komutlar = json.loads(f.read_text()).get("komutlar") or []
         except Exception as e:  # noqa: BLE001
             print(f"  {f.parent.name}: cizim.json okunamadı ({e})"); continue
+        # dallı ok (kullanıcı 2026-10-24: resimde bir kaynaktan birden çok yere dallanan ilişki): "dallar" listesi her dal
+        # için ayrı akış komutuna açılır, aynı "dal" grubuyla; istemci kaynağı bir kez çerçeveler, dalları sırayla çizer
+        acik = []
         for k in komutlar:
+            if k.get("tur") == "akis" and isinstance(k.get("dallar"), list) and k["dallar"]:
+                n = min(4, len(k["dallar"])); g = f"{k.get('cumle')}-{len(acik)}"
+                for i, dl in enumerate(k["dallar"][:4]):
+                    acik.append({**{x: v for x, v in k.items() if x != "dallar"}, **dl, "dal": {"g": g, "i": i, "n": n}})
+            else:
+                acik.append(k)
+        for k in acik:
             say["aday"] += 1
             cid = str(k.get("cumle") or "")
             if cid not in C:
@@ -424,7 +518,8 @@ def main() -> int:
             mevcut = out.setdefault(p, {}).setdefault(c, [])
             if not neden and k.get("tur") == "akis" and not str(k.get("etiket") or "").strip():
                 neden = "etiketsiz ok (amacı anlaşılmıyor, H40)"
-            if not neden and len(mevcut) >= 2:
+            if not neden and len({(m.get("dal") or {}).get("g") or id(m) for m in mevcut}
+                                 - ({(k.get("dal") or {}).get("g")} if k.get("dal") else set())) >= 2:
                 neden = "cümlede 2'den çok çizim"
             if not neden and sayfa_say.get(s, 0) >= 8:
                 neden = "sayfada 8'den çok çizim"
@@ -434,13 +529,23 @@ def main() -> int:
                 continue
             ka = kelime_araliklari(C[cid])
             komut = {x: k[x] for x in ("tur", "nokta", "a", "b", "iliski", "fazlar", "dugum", "kenar", "etiket",
-                                       "kaynak_metin", "hedef_metin") if x in k}
+                                       "kaynak_metin", "hedef_metin", "dal") if x in k}
             komut.update(s=s, k=[ka[k["bas"]][0], ka[k["son"]][1]])
             if s not in satir_onbellek and belge is not None and 1 <= s <= belge.page_count:
                 satir_onbellek[s] = sayfa_satirlari(belge[s - 1])
             mevcut.append(yerlesim(komut, raster.get(s), sayfa_dolu.setdefault(s, []), satir_onbellek.get(s)))
             sayfa_say[s] = sayfa_say.get(s, 0) + 1
             say["gecti"] += 1
+    # aynı cümlede aynı kaynak kutusundan çıkan oklar dallı ok olur (kaynak bir kez, dallar sırayla)
+    for cs in out.values():
+        for c, v in cs.items():
+            gruplar: dict = {}
+            for m in v:
+                if m["tur"] == "akis" and m.get("kaynak_kutu") and not m.get("dal"):
+                    gruplar.setdefault(tuple(m["kaynak_kutu"]), []).append(m)
+            for j, ms in enumerate(x for x in gruplar.values() if len(x) >= 2):
+                for i, m in enumerate(ms):
+                    m["dal"] = {"g": f"{c}-o{j}", "i": i, "n": len(ms)}
     out = {p: {c: v for c, v in cs.items() if v} for p, cs in out.items()}
     out = {p: cs for p, cs in out.items() if cs}
     turler: dict[str, int] = {}
