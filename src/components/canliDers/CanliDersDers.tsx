@@ -157,7 +157,7 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
       const n = Number(localStorage.getItem(BOLME_ORAN_KEY));
       if (Number.isFinite(n) && n >= ORAN_MIN && n <= ORAN_MAX) return Math.round(n);
     } catch { /* yok */ }
-    return 50;
+    return 60;   // izleme düzeni: slayt geniş, metin yanında (kullanıcı 2026-10-24: ekran kalabalık)
   });
   const setBolmeOran = useCallback((n: number | ((prev: number) => number)) => {
     setBolmeOranDurum((prev) => {

@@ -1075,3 +1075,11 @@
 .cd-pdf-bar { container-type: inline-size; }
 .cd-pdf-bar .cd-cik-btn { white-space: nowrap; flex: none; }
 @container (max-width: 460px) { .cd-cik-ad, .cd-pdf-zoom { display: none; } }
+
+/* İzleme düzeni (kullanıcı 2026-10-24: "sayfa çok kalabalık, ekranı daha iyi izleyebilecek bir düzene sok"):
+ * ders oynarken metinde yalnız anlatılan paragraf ve onun ekran maddeleri tam görünür; diğer paragraflar soluk, onların
+ * madde kutuları kapalı (üstüne gelince ya da tıklayınca açılır). Elle okurken (oynatıcı kapalı) her şey eskisi gibi. */
+:root.cd-dock-acik .cd-metin .cd-p-sar:not(:has(> .cd-p.is-on)) .cd-p { opacity: .5; transition: opacity .25s; }
+:root.cd-dock-acik .cd-metin .cd-p-sar:not(:has(> .cd-p.is-on)) > .cd-v2 { display: none; }
+:root.cd-dock-acik .cd-metin .cd-p-sar:not(:has(> .cd-p.is-on)):hover .cd-p { opacity: .85; }
+:root.cd-dock-acik .cd-metin .cd-p-sar:has(> .cd-p.is-on) { margin: 6px 0; }

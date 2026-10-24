@@ -19,6 +19,23 @@ export interface CizimKomut {
   kenar?: { a: string; b: string; tur: string; etiket?: string }[];
   /** şema panel türü (cizim_uret.panel_tipi) */
   tip?: 'zincir' | 'grup' | 'dal' | 'maske' | 'karsit';
+  /** şablonlu panel (scripts/cizim/sablon.py, sablonlar.json): düzen + alanlar */
+  sablon?: string;
+  sablon_ad?: string;
+  duzen?: 'tablo' | 'zincir' | 'grup' | 'dal' | 'karsit' | 'maske' | 'liste' | 'adimlar';
+  basliklar?: string[];
+  bag?: string;
+  satirlar?: string[][];
+  ogeler?: string[];
+  kaynaklar?: string[];
+  sonuc?: string;
+  soru?: string;
+  dallar?: string[][];
+  gorunen?: string;
+  altta?: string[];
+  kutuplar?: string[];
+  baslik?: string;
+  numarali?: boolean;
   /** tasarım sürümü (cizim_uret.SURUMLER): dizilim ve yazı ölçeği */
   yon?: 'yatay' | 'dikey';
   olcek?: number;
@@ -272,6 +289,106 @@ function SemaParca({ z, t, ic }: { z: CizimKomut; t: number; ic?: boolean }) {
 /** sürüm sınıfı ve yazı ölçeği: dikey (alt alta, oklar aşağı) ve kompakt (olcek < 1) */
 const surumSinif = (z: CizimKomut) => ((z.yon === 'dikey' || (z.genislik || 1) < 0.32) ? ' is-dar' : '') + (z.olcek && z.olcek < 1 ? ' is-kompakt' : '');
 
+/**
+ * Şablonlu panel (kullanıcı 2026-10-24): anlam şablonunun düzeni genel çizilir; yeni şablon için kod değişmez.
+ * Kurallar (docs/CIZIM_KURALLARI.md §2b): ilişki yönü olmayan eşleşmeler (durum → tetkik, zehir → antidot, bulgu → tanı)
+ * ok değil başlıklı tablodur; satırlar/sütunlar kesikli çizgiyle ayrılır (karışmasın); aynı gruptaki sıralı öğeler
+ * numaralı, ayrı şeyler madde imli; konuşmayla satır satır belirir.
+ */
+function SablonPanel({ z, t }: { z: CizimKomut; t: number }) {
+  const stil = z.konum ? { left: `${z.konum[0] * 100}%`, top: `${z.konum[1] * 100}%`, right: 'auto', bottom: 'auto', maxWidth: `${(z.genislik || 0.6) * 100}%` } : undefined;
+  const say = (n: number) => Math.max(1, Math.ceil(t * n));
+  const sinif = `pdv-cz-sema pdv-sb is-${z.duzen}${surumSinif(z)}`;
+  const kap = (ic: React.ReactNode) => (
+    <div className={sinif} style={stil} role="img" aria-label={[z.baslik, ...(z.basliklar || [])].filter(Boolean).join(', ')}>
+      {z.baslik && z.duzen !== 'liste' && <div className="pdv-sb-baslik">{z.baslik}</div>}
+      {ic}
+    </div>
+  );
+  const ok = (dikey?: boolean) => (
+    <span className={`pdv-sb-ok${dikey ? ' is-dikey' : ''}`} aria-hidden>
+      {z.bag && <span className="pdv-sb-bag">{z.bag}</span>}
+      <span className="pdv-sb-ok-cizgi" />
+    </span>
+  );
+  switch (z.duzen) {
+    case 'tablo':
+    case 'karsit': {
+      const bas = z.duzen === 'karsit' ? [z.basliklar?.[0] || 'Özellik', ...(z.kutuplar || [])] : z.basliklar || [];
+      const sat = z.satirlar || [];
+      return kap(
+        <table className="pdv-sb-tablo">
+          {bas.length > 0 && <thead><tr>{bas.map((b, i) => <th key={i}>{b}</th>)}</tr></thead>}
+          <tbody>{sat.slice(0, say(sat.length)).map((r, i) => <tr key={i}>{r.map((c, j) => <td key={j} className={j === r.length - 1 && z.duzen === 'tablo' ? 'is-sonuc' : ''}>{c}</td>)}</tr>)}</tbody>
+        </table>,
+      );
+    }
+    case 'liste':
+    case 'adimlar': {
+      const og = z.ogeler || [];
+      const Liste = (z.duzen === 'adimlar' || z.numarali ? 'ol' : 'ul') as 'ol';
+      return kap(
+        <>
+          {z.duzen === 'liste' && z.baslik && <div className="pdv-sb-baslik">{z.baslik}</div>}
+          <Liste className="pdv-sb-liste">{og.slice(0, say(og.length)).map((x, i) => <li key={i}>{x}</li>)}</Liste>
+        </>,
+      );
+    }
+    case 'zincir': {
+      const og = z.ogeler || [];
+      const dikey = z.yon === 'dikey' || (z.genislik || 1) < 0.32;
+      return kap(
+        <div className={`pdv-sb-zincir${dikey ? ' is-dikey' : ''}`}>
+          {og.slice(0, say(og.length)).map((x, i) => (
+            <span key={i} className="pdv-sb-zincir-oge">{i > 0 && ok(dikey)}<span className={`pdv-sb-kutu${i === og.length - 1 ? ' is-sonuc' : ''}`}>{x}</span></span>
+          ))}
+        </div>,
+      );
+    }
+    case 'grup': {
+      const kn = z.kaynaklar || [];
+      const n = say(kn.length + 1);
+      return kap(
+        <div className="pdv-sb-grup">
+          <ol className="pdv-sb-liste is-kaynak">{kn.slice(0, Math.min(n, kn.length)).map((x, i) => <li key={i}>{x}</li>)}</ol>
+          {n > kn.length && <>
+            <span className="pdv-cz-kume" aria-hidden />{ok()}<span className="pdv-sb-kutu is-sonuc">{z.sonuc}</span>
+          </>}
+        </div>,
+      );
+    }
+    case 'dal': {
+      const dl = z.dallar || [];
+      return kap(
+        <div className="pdv-sb-dal">
+          <span className="pdv-sb-kutu">{z.soru}</span>
+          <div className="pdv-sb-dallar">
+            {dl.slice(0, say(dl.length)).map((d, i) => (
+              <div key={i} className="pdv-sb-dal-satir"><span className="pdv-sb-kosul">{d[0]}</span><span className="pdv-sb-ok-kisa" aria-hidden>→</span><span className="pdv-sb-kutu is-sonuc">{d[1]}</span></div>
+            ))}
+          </div>
+        </div>,
+      );
+    }
+    case 'maske': {
+      const acik = t >= 0.5;
+      return kap(
+        <div className="pdv-cz-maske">
+          <span className="pdv-cz-maske-baslik">Görünen</span>
+          <span className="pdv-sb-kutu">{z.gorunen}</span>
+          <span className="pdv-cz-maske-baslik">Altta aranacak</span>
+          <div className={`pdv-cz-maske-alt${acik ? ' is-acik' : ''}`}>
+            {(z.altta || []).map((x, i) => <span key={i} className="pdv-sb-kutu is-sonuc">{x}</span>)}
+            <span className="pdv-cz-perde" aria-hidden>{z.bag || '?'}</span>
+          </div>
+        </div>,
+      );
+    }
+    default:
+      return null;
+  }
+}
+
 /** panel türü (cizim_uret.panel_tipi ile aynı kural) */
 function tipBul(kn: NonNullable<CizimKomut['kenar']>): NonNullable<CizimKomut['tip']> {
   if (kn.some((e) => e.tur === 'karsit')) return 'karsit';
@@ -357,7 +474,7 @@ export const CizimLayer = memo(function CizimLayer({ z, useChar }: { z: CizimKom
       )}
       {/* etiketler HTML katmanında: SVG oransız ölçeklendiği için yazı orada bozulurdu; boyut sayfa genişliğiyle orantılı */}
       {cizimler.map((x, i) => (x.etiket && ilerleme(x, c) >= 1 ? <Etiket key={`e${i}`} z={x} /> : null))}
-      {sema && ilerleme(sema, c) >= 0 && <Sema z={sema} t={ilerleme(sema, c)} />}
+      {sema && ilerleme(sema, c) >= 0 && (sema.duzen ? <SablonPanel z={sema} t={ilerleme(sema, c)} /> : <Sema z={sema} t={ilerleme(sema, c)} />)}
     </>
   );
 });

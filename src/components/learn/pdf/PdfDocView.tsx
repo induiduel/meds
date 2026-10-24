@@ -158,6 +158,33 @@ export interface PdfSearchHit {
 const norm = (t: string) => t.toLocaleLowerCase('tr').replace(/\s+/g, ' ');
 
 const GAP = 12;
+
+/** Kayan alanı hedefe götürür. Yumuşak kaydırma kare kare (requestAnimationFrame) yapılır: tarayıcının
+ *  `behavior: 'smooth'`ı bu kapsayıcıda (tuval/metin katmanı çizilirken) sessizce durabiliyordu; sayfa takibi ve anlatılan
+ *  satırı görünür alana alma boşa gidiyordu (H50). Yeni bir kaydırma öncekini iptal eder. */
+const kaydirAnim = new WeakMap<HTMLElement, number>();
+function kaydir(el: HTMLElement, hedef: number, yumusak: boolean) {
+  const once = kaydirAnim.get(el);
+  if (once) cancelAnimationFrame(once);
+  const bas = el.scrollTop;
+  const fark = hedef - bas;
+  if (!yumusak || document.hidden || Math.abs(fark) < 2 || Math.abs(fark) > 4000 || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    el.scrollTop = hedef;
+    kaydirAnim.delete(el);
+    return;
+  }
+  const sure = Math.min(450, 180 + Math.abs(fark) * 0.25);
+  const t0 = performance.now();
+  // kare çizilmeyen ortamda (gizli bölme, kısılmış sekme) animasyon ilerlemez: süre dolunca hedefe doğrudan git
+  window.setTimeout(() => { if (kaydirAnim.get(el) && Math.abs(el.scrollTop - hedef) > 2) { cancelAnimationFrame(kaydirAnim.get(el)!); kaydirAnim.delete(el); el.scrollTop = hedef; } }, sure + 150);
+  const adim = (an: number) => {
+    const u = Math.min(1, (an - t0) / sure);
+    el.scrollTop = bas + fark * (1 - Math.pow(1 - u, 3));
+    if (u < 1) kaydirAnim.set(el, requestAnimationFrame(adim));
+    else kaydirAnim.delete(el);
+  };
+  kaydirAnim.set(el, requestAnimationFrame(adim));
+}
 const PAD = 12;
 // Telefon/az bellekli cihaz: her tuval GPU belleğinde piksel × 4 bayt tutar; yakınlaştırmada 12 MP × 10 tuval
 // (~500 MB) telefonda GPU sürecini düşürüp ekranı simsiyah bırakıyordu. Orada tuval tavanı ve tutulan sayfa az.
@@ -485,18 +512,26 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
       if (!el || !m) return;
       // sayfa geçişi kaydırması sürüyorsa bitince yeniden bak (atlayıp bırakınca satır 2-3 sn oynatıcı altında kalıyordu)
       if (seeking.current && Date.now() < seeking.current.until) { bak(seeking.current.until - Date.now() + 60); return; }
-      const i = m.page - 1;
-      const t = geo.current.tops[i];
-      const d = geo.current.sizes[i];
-      if (t == null || !d) return;
-      const h = d.h * geo.current.scaleOf(i);
-      const ust = t + Math.min(...m.lines.map((b) => b[1])) * h;
-      const alt = t + Math.max(...m.lines.map((b) => b[3])) * h;
-      const altPay = parseFloat(getComputedStyle(el).scrollPaddingBottom) || 0;
-      const gorAlt = el.scrollTop + el.clientHeight - altPay - 12;
-      progKaydirma.current = Date.now() + 1200;
-      if (alt > gorAlt) el.scrollTo({ top: Math.max(0, Math.min(ust - 24, el.scrollTop + (alt - gorAlt))), behavior: 'smooth' });
-      else if (ust < el.scrollTop + 8) el.scrollTo({ top: Math.max(0, ust - 24), behavior: 'smooth' });
+      // Ölçüm ekrandaki gerçek konumdan (işaret öğeleri): sayfa geometrisinden hesap, uygulamanın ölçek (zoom) katmanında
+      // ekranla uyuşmuyor, "görünüyor" sanıp kaydırmıyordu (H50). z: ekran pikseli / kaydırma pikseli.
+      const satirlar = [...el.querySelectorAll<HTMLElement>('.pdv-mark-line')].map((x) => x.getBoundingClientRect());
+      if (!satirlar.length) {
+        // işaret sayfası henüz çizilmediyse (sayfa görünür alanın dışında) önce o sayfaya git
+        const t = geo.current.tops[m.page - 1];
+        if (t != null) { progKaydirma.current = Date.now() + 1200; kaydir(el, Math.max(0, t - PAD), true); }
+        return;
+      }
+      const er = el.getBoundingClientRect();
+      const z = er.height / Math.max(1, el.clientHeight) || 1;
+      const altPay = (parseFloat(getComputedStyle(el).scrollPaddingBottom) || 0) * z;
+      const gorUst = er.top + 8 * z;
+      const gorAlt = er.top + el.clientHeight * z - altPay - 12 * z;
+      const ust = Math.min(...satirlar.map((r) => r.top));
+      const alt = Math.max(...satirlar.map((r) => r.bottom));
+      let fark = 0;
+      if (alt > gorAlt) fark = Math.min(alt - gorAlt, ust - (er.top + 24 * z));
+      else if (ust < gorUst) fark = ust - (er.top + 24 * z);
+      if (Math.abs(fark) > 2) { progKaydirma.current = Date.now() + 1200; kaydir(el, Math.max(0, el.scrollTop + fark / z), true); }
     }, gecikme); };
     bak(300);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -509,7 +544,7 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
     const t = geo.current.tops[p - 1];
     if (!el || t == null) return;
     seeking.current = { page: p, until: Date.now() + (smooth ? 900 : 250) };
-    el.scrollTo({ top: Math.max(0, t - PAD), behavior: smooth ? 'smooth' : 'auto' });
+    kaydir(el, Math.max(0, t - PAD), smooth);
   }, []);
 
   useEffect(() => {

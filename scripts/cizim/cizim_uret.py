@@ -33,6 +33,7 @@ sys.path.insert(0, str(HERE))
 import cizim_dogrula as CD  # noqa: E402
 
 TALIMAT = HERE / "TALIMAT_CIZIM.md"
+import sablon as SB  # noqa: E402  (panel şablon kütüphanesi)
 KOK = MEDS / "data" / "sesli_anlatim"
 
 
@@ -219,6 +220,8 @@ def yazi_kesisir(kutu, satirlar, pay: float = 0.01) -> bool:
 
 
 def panel_boyu(k: dict, g: float, oran: float, yon: str = "yatay", olcek: float = 1.0) -> float:
+    if k.get("duzen"):                            # şablonlu panel (sablon.py)
+        return SB.boyu(k, g, oran, EM, yon, olcek)
     """Panelin sayfa yüksekliği oranı cinsinden yüksekliği; istemcideki dizilimin em ile kopyası (oran = genişlik/yükseklik).
     Ölçüm: tarayıcıda 567 ve 1100 px sayfada gerçek yükseklikle karşılaştırıldı."""
     W = g / (EM * olcek)                         # panel iç genişliği (em)
@@ -416,7 +419,7 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
     if k["tur"] == "akis":
         k = oku_panele(k, satirlar or []) or ok_yerlesimi(k, r, satirlar or [])
     if k["tur"] == "sema":
-        k = {**k, "tip": panel_tipi(k)}
+        k = {**k, "tip": k.get("duzen") or panel_tipi(k)}
     if k.get("etiket"):
         # etiket yazısı sayfa genişliğinin %2,3ü (pdfDoc.css .pdv-cz-etiket 2.3cqw); karakter ≈0,58 em, satır 1,3 em + pay
         oran_e = r.w / r.h
@@ -577,6 +580,50 @@ def claude(cwd: Path, istem: str, sure: int = 1800) -> str:
         return "zaman aşımı"
 
 
+def anlam_denetimi(W: Path, key: str, C: dict, komutlar: list) -> dict:
+    """Bağımsız tıbbi anlam denetimi (kullanıcı 2026-10-24: "panel gerçekten anlatılmak isteneni doğru mu anlatmış?").
+    Her panel ve ok etiketi, öğrencinin okuyacağı biçimde (sablon.okunus) cümleyle yan yana bir Claude denetçisine verilir;
+    denetçi tamam / duzelt (yeni alanlar) / sil kararı yazar. Sonuç önbellekte (aynı girdi yeniden sorulmaz).
+    → {sıra: {"karar", "neden", "alanlar"}}"""
+    import hashlib
+    satir, idx = [], []
+    for i, k in enumerate(komutlar):
+        cid = str(k.get("cumle") or "")
+        if cid not in C or not (k.get("tur") == "sema" or (k.get("tur") == "akis" and k.get("etiket"))):
+            continue
+        ok = SB.okunus(k) if k.get("tur") == "sema" else f"ok etiketi: {k.get('etiket')}"
+        sab = f" [şablon: {k.get('sablon_ad') or k.get('sablon') or 'serbest şema'}]" if k.get("tur") == "sema" else ""
+        satir.append(f"### {i}\nCümle: {C[cid]}\nPanel{sab}: {ok}\n")
+        idx.append(i)
+    if not idx:
+        return {}
+    girdi = "\n".join(satir)
+    d = W / "anlam_denetimi"
+    d.mkdir(exist_ok=True)
+    h = hashlib.sha1(girdi.encode()).hexdigest()[:12]
+    cikti = d / f"denetim_{h}.json"
+    if not cikti.exists():
+        (d / "girdi.md").write_text(girdi, encoding="utf-8")
+        (d / "sablonlar.json").write_text(SB.YOL.read_text(encoding="utf-8"), encoding="utf-8")
+        claude(d, "Sen tıp eğitimi içeriği denetçisisin. girdi.md'deki her ### numaralı bölümde bir sesli ders cümlesi ve o "
+                  "cümle anlatılırken PDF üstünde gösterilecek panel/etiket var. Her biri için karar ver: panel cümlenin "
+                  "anlattığını tıbben DOĞRU ve öğrencinin YANLIŞ anlamayacağı biçimde mi gösteriyor? Özellikle: ok yönü ve ok "
+                  "üstündeki söz doğru ilişkiyi mi anlatıyor (ör. 'hastalık → istenir → test' yanlıştır: test hastalığa yol "
+                  "açmaz; doğrusu 'Durum | Bakılacak tetkik' tablosu), bağımsız ilişkiler birbirine bağlıymış gibi mi duruyor, "
+                  "şablon anlama uygun mu (sablonlar.json), terim cümlede/ders bağlamında doğru mu. Kararlar: "
+                  "tamam | duzelt | sil. duzelt ise 'alanlar' içinde panelin yeni alanlarını ver (sablonlar.json'daki uygun "
+                  "şablonun kimliği 'sablon' ve o düzenin alanları: tablo→satirlar, zincir/adimlar→ogeler, liste→baslik+ogeler, "
+                  "grup→kaynaklar+sonuc, dal→soru+dallar, maske→gorunen+altta, karsit→kutuplar+satirlar; ok etiketi için "
+                  "'etiket'). Yalnız cümlede geçen bilgiyi kullan. Çıktı: denetim.json = "
+                  '{"<numara>": {"karar": "...", "neden": "kısa", "alanlar": {...}}}. Bitince tek satır: BİTTİ.', sure=1500)
+        if (d / "denetim.json").exists():
+            (d / "denetim.json").rename(cikti)
+    try:
+        return {int(x): v for x, v in json.loads(cikti.read_text(encoding="utf-8")).items()}
+    except Exception:  # noqa: BLE001
+        return {}
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("key"); ap.add_argument("--dok", required=True); ap.add_argument("--capa", required=True)
@@ -635,6 +682,7 @@ def main() -> int:
                 satir.append(f"{cid}: " + " ".join(f"[{j}]{w}" for j, w in enumerate(ks)))
             satir.append("")
         (d / "sayfalar.md").write_text("\n".join(satir), encoding="utf-8")
+        (d / "sablonlar.json").write_text(SB.YOL.read_text(encoding="utf-8"), encoding="utf-8")
         if a.kuru:
             return i, "kuru"
         t = time.time()
@@ -656,11 +704,44 @@ def main() -> int:
     sayfa_say: dict[int, int] = {}
     sayfa_dolu: dict[int, list] = {}
     satir_onbellek: dict[int, list] = {}          # sayfada yerleşmiş etiket/şema kutuları (üst üste binmesin)
+    tum_komut = []
+    kut = SB.kutuphane()
     for f in sorted(W.glob("parti*/cizim.json")):
         try:
-            komutlar = json.loads(f.read_text()).get("komutlar") or []
+            tum_komut += json.loads(f.read_text()).get("komutlar") or []
         except Exception as e:  # noqa: BLE001
-            print(f"  {f.parent.name}: cizim.json okunamadı ({e})"); continue
+            print(f"  {f.parent.name}: cizim.json okunamadı ({e})")
+    # yeni şablon önerileri kütüphaneye (kapıdan geçerse; sonraki dersler de kullanır)
+    for k in tum_komut:
+        if isinstance(k.get("yeni_sablon"), dict):
+            sid = SB.yeni_ekle(k["yeni_sablon"], a.key)
+            if sid:
+                k["sablon"] = sid
+                say.setdefault("yeni_sablon", []).append(sid)
+    kut = SB.kutuphane()
+    for k in tum_komut:
+        if k.get("tur") == "sema" and k.get("sablon"):
+            k2, _ = SB.coz(k, kut)
+            k.update(k2)
+    # bağımsız tıbbi anlam denetimi (tamam / düzelt / sil)
+    kararlar = anlam_denetimi(W, a.key, C, tum_komut)
+    silinen = 0
+    for i, kr in kararlar.items():
+        if not (0 <= i < len(tum_komut)):
+            continue
+        if kr.get("karar") == "sil":
+            tum_komut[i]["_sil"] = kr.get("neden") or "anlam denetimi"; silinen += 1
+        elif kr.get("karar") == "duzelt" and isinstance(kr.get("alanlar"), dict):
+            k = tum_komut[i]
+            for x in ("dugum", "kenar", "satirlar", "ogeler", "kaynaklar", "sonuc", "soru", "dallar", "gorunen", "altta",
+                      "kutuplar", "baslik", "basliklar", "bag", "duzen", "sablon_ad"):
+                k.pop(x, None) if k.get("tur") == "sema" else None
+            k.update(kr["alanlar"])
+            if k.get("tur") == "sema" and k.get("sablon"):
+                k2, _ = SB.coz(k, kut); k.update(k2)
+    say["anlam_denetimi"] = {"bakilan": len(kararlar), "duzeltilen": sum(1 for v in kararlar.values() if v.get("karar") == "duzelt"),
+                             "silinen": silinen}
+    for komutlar in [tum_komut]:
         # dallı ok (kullanıcı 2026-10-24: resimde bir kaynaktan birden çok yere dallanan ilişki): "dallar" listesi her dal
         # için ayrı akış komutuna açılır, aynı "dal" grubuyla; istemci kaynağı bir kez çerçeveler, dalları sırayla çizer
         acik = []
@@ -685,6 +766,14 @@ def main() -> int:
             if s and s not in raster and belge is not None and 1 <= s <= belge.page_count:
                 raster[s] = CD.SayfaRaster(belge[s - 1])
             onceki = " ".join(C[x] for x in sira[:sira.index(cid) + 1])
+            if k.get("_sil"):
+                say["ret"]["anlam denetimi sildi"] = say["ret"].get("anlam denetimi sildi", 0) + 1
+                continue
+            if k.get("tur") == "sema" and k.get("sablon"):
+                k, neden_s = SB.coz(k, kut)
+                if neden_s:
+                    say["ret"][neden_s[:60]] = say["ret"].get(neden_s[:60], 0) + 1
+                    continue
             neden = CD.denetle(k, len(C[cid].split()), kutular(dok / f"s{s:02d}.txt"), raster.get(s), onceki)
             p, c = cid[1:].split(".C")
             mevcut = out.setdefault(p, {}).setdefault(c, [])
@@ -713,7 +802,9 @@ def main() -> int:
                 say["kaydirildi"] = say.get("kaydirildi", 0) + 1
             ka = kelime_araliklari(C[cid])
             komut = {x: k[x] for x in ("tur", "nokta", "a", "b", "iliski", "fazlar", "dugum", "kenar", "etiket",
-                                       "kaynak_metin", "hedef_metin", "dal") if x in k}
+                                       "kaynak_metin", "hedef_metin", "dal", "sablon", "sablon_ad", "duzen", "basliklar",
+                                       "bag", "satirlar", "ogeler", "kaynaklar", "sonuc", "soru", "dallar", "gorunen", "altta",
+                                       "kutuplar", "baslik", "numarali") if x in k}
             komut.update(s=s, k=[ka[k["bas"]][0], ka[k["son"]][1]])
             if s not in satir_onbellek and belge is not None and 1 <= s <= belge.page_count:
                 satir_onbellek[s] = sayfa_satirlari(belge[s - 1])

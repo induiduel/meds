@@ -43,6 +43,21 @@ zenginleştirmedir: yalnız cümle gerçekten o görseli/ilişkiyi anlatıyorsa 
   "dekortike ↔ deserebre"); kenara en çok 5 kelimelik `etiket` yazılabilir. Panel türü yapıdan kendiliğinden seçilir:
   zincir (A→B→C), grup (birden çok → bir, "}"), dal (bir → birden çok, karar), maske (perde kalkar), karşıt (yan yana).
   Koordinat yazma (yerleşim betikte).
+- **Panel = şablon (ZORUNLU, 2026-10-24):** yazıdan yazıya ilişki paneli `"tur": "sema"` + `"sablon": "<kimlik>"` ile yazılır;
+  şablonlar çalışma dizinindeki `sablonlar.json`'dadır (dersten bağımsız). Önce ANLAMI belirle, sonra şablonu seç:
+  - durum/şüphe → bakılacak tetkik: `tani_tetkik` (tablo; ok DEĞİL — test hastalığa yol açmaz)
+  - zehirlenme/durum → antidot/tedavi: `zehir_antidot` (tablo; "glukoz ⊣ hipoglisemi" gibi baskılama oku YANLIŞ)
+  - bulgu → düşündürdüğü: `bulgu_dusundurur` · lezyon yeri → bulgu: `lezyon_bulgu` · skor: `skor`
+  - gerçek neden → sonuç: `neden_sonuc` / `mekanizma_adimlari` (zincir) · birçok neden → tek sonuç: `cok_neden_tek_sonuc`
+  - karar: `karar` (dal) · sıralı yapılacaklar: `algoritma` (numaralı) · alt türler: `siniflama` (madde imli;
+    aynı grubun SIRALI öğeleriyse `"numarali": true`) · iki durumu ayırma: `karsilastirma` · gizleyen neden: `maskeleyen`
+  Alanlar düzene göre: tablo `satirlar` [[hücre, hücre]] · zincir/adimlar `ogeler` · liste `baslik`+`ogeler` ·
+  grup `kaynaklar`+`sonuc` · dal `soru`+`dallar` [[koşul, sonuç]] · maske `gorunen`+`altta` · karşıt `kutuplar`+`satirlar`
+  [[özellik, A, B]]. Hücre ≤60 karakter, yalnız cümlede/önceki cümlelerde geçen bilgi.
+  **Uygun şablon yoksa** komuta `"yeni_sablon": {"id": "kisa_ad", "ad": "...", "duzen": "tablo|zincir|grup|dal|karsit|maske|liste|adimlar",
+  "basliklar": [...], "ne_zaman": "hangi tıbbi ilişki", "ornek": "..."}` ekle ve aynı kimliği `sablon`'a yaz; betik kütüphaneye
+  ekler, sonraki derslerde de kullanılır. Bağımsız bir denetçi her paneli cümleyle karşılaştırıp tıbben yanlış ya da yanlış
+  anlaşılır olanı düzeltir ya da siler.
 - **Yazı slaytında iki satırı okla bağlama**: ok okunmuyor ve amacı anlaşılmıyor (H40). İki ucu da yazı olan ilişkiyi
   `sema` olarak yaz; betik iki ucu yazıya düşen okları da panele çevirir. `akis` yalnız resim/şema üstünde.
 - **Aday varsa kullan:** sayfalar.md'de "Aday ok A#" (PDF'in kendi ok çiziminden) ve "Aday eğri E#" (grafikten çıkarılmış

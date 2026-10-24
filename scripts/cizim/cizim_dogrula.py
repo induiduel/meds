@@ -132,6 +132,15 @@ def denetle(k: dict, kelime_sayisi: int, kutular: list, raster: SayfaRaster | No
         if raster is not None and not (raster.murekkepte(a) and raster.murekkepte(b)):
             return "ok uçlarından biri boş alanda (yazı/çizim yok)"
         return None
+    if tur == "sema" and k.get("sablon"):
+        # şablonlu panel (sablon.py coz() düzeni doğrular): görünen her metin o cümleye kadar anlatılanlardan
+        from sablon import hucreler
+        bilinen = _kok(onceki_metin)
+        for c in hucreler(k):
+            kk = _kok(c)
+            if kk and len(kk - bilinen) > (1 if len(kk) >= 3 else 0):
+                return f"panel metni '{c[:30]}' henüz anlatılmamış terim içeriyor (ileri sızıntı)"
+        return None
     if tur == "sema":
         dg, kn = k.get("dugum") or [], k.get("kenar") or []
         ids = {d.get("id") for d in dg}

@@ -1,0 +1,136 @@
+{
+  "surum": 1,
+  "aciklama": "Canlı çizim panel şablonları (docs/CIZIM_KURALLARI.md §2b). Dersten bağımsızdır; her şablon bir tıbbi anlam ilişkisini doğru okunan bir düzene bağlar. Model uygun şablon yoksa `yeni_sablon` önerir, kapıdan geçerse buraya eklenir ve sonraki derslerde de kullanılır. düzen: yalnız istemcinin bildiği genel düzenler (tablo, zincir, grup, dal, karsit, maske, liste, adimlar).",
+  "duzenler": [
+    "tablo",
+    "zincir",
+    "grup",
+    "dal",
+    "karsit",
+    "maske",
+    "liste",
+    "adimlar"
+  ],
+  "sablonlar": {
+    "neden_sonuc": {
+      "ad": "Neden → sonuç",
+      "duzen": "zincir",
+      "ne_zaman": "A, B'ye yol açar / B'yi oluşturur (mekanizma, patofizyoloji)",
+      "bag": "yol açar",
+      "ornek": "ARAS hasarı → bilinç kaybı"
+    },
+    "mekanizma_adimlari": {
+      "ad": "Mekanizma basamakları",
+      "duzen": "zincir",
+      "ne_zaman": "art arda gelen 3+ olay; her biri bir sonrakine yol açar",
+      "bag": "",
+      "ornek": "kitle → herniasyon → beyin sapı basısı → koma"
+    },
+    "cok_neden_tek_sonuc": {
+      "ad": "Birçok neden → tek sonuç",
+      "duzen": "grup",
+      "ne_zaman": "farklı nedenler aynı sonuca/duruma götürür",
+      "bag": "neden olur",
+      "ornek": "hipoksi, hipoglisemi, üremi → difüz ensefalopati"
+    },
+    "tani_tetkik": {
+      "ad": "Durum → bakılacak tetkik",
+      "duzen": "tablo",
+      "basliklar": [
+        "Durum / şüphe",
+        "Bakılacak tetkik"
+      ],
+      "ne_zaman": "bir hastalık ya da şüphe için hangi test istenir (TEST hastalığa yol açmaz; ok değil tablo)",
+      "ornek": "üremik ensefalopati | üre, kreatinin"
+    },
+    "bulgu_dusundurur": {
+      "ad": "Bulgu → düşündürdüğü tanı",
+      "duzen": "tablo",
+      "basliklar": [
+        "Bulgu",
+        "Düşündürdüğü"
+      ],
+      "ne_zaman": "klinik/lab bulgusu bir tanıyı ya da lezyon yerini düşündürür",
+      "ornek": "dilde ısırık | nöbet"
+    },
+    "lezyon_bulgu": {
+      "ad": "Lezyon yeri → bulgu",
+      "duzen": "tablo",
+      "basliklar": [
+        "Lezyon düzeyi",
+        "Bulgu"
+      ],
+      "ne_zaman": "anatomik düzey ile ortaya çıkan bulgu eşleşmesi",
+      "ornek": "orta beyin | orta hatta fikse pupil"
+    },
+    "zehir_antidot": {
+      "ad": "Zehirlenme → antidot / tedavi",
+      "duzen": "tablo",
+      "basliklar": [
+        "Durum",
+        "Antidot / tedavi"
+      ],
+      "ne_zaman": "bir zehirlenme ya da durum için verilen ilaç/tedavi",
+      "ornek": "opioid | nalokson"
+    },
+    "karar": {
+      "ad": "Karar dalı",
+      "duzen": "dal",
+      "ne_zaman": "bir soruya/bulguya göre yol ayrılır (evet/hayır, var/yok)",
+      "bag": "",
+      "ornek": "beyin sapı bulgusu? evet → posterior fossa; hayır → supratentoryal/difüz"
+    },
+    "algoritma": {
+      "ad": "Yaklaşım basamakları",
+      "duzen": "adimlar",
+      "ne_zaman": "sıralı yapılacaklar (önce ... sonra ...)",
+      "ornek": "1 ABC · 2 glukoz · 3 tiamin · 4 BT"
+    },
+    "siniflama": {
+      "ad": "Sınıflama",
+      "duzen": "liste",
+      "ne_zaman": "bir başlığın alt türleri / grupları",
+      "ornek": "Koma nedenleri: yapısal · metabolik · toksik"
+    },
+    "karsilastirma": {
+      "ad": "İki durumun karşılaştırması",
+      "duzen": "karsit",
+      "basliklar": [
+        "Özellik"
+      ],
+      "ne_zaman": "iki tablo/hastalık özelliklere göre ayrılır (ayırıcı tanı)",
+      "ornek": "dekortike | deserebre — kollar: fleksiyon | ekstansiyon"
+    },
+    "maskeleyen": {
+      "ad": "Görünen neden altta yatanı örter",
+      "duzen": "maske",
+      "ne_zaman": "bir neden (alkol vb.) asıl/ciddi nedeni gizleyebilir",
+      "bag": "maskeleyebilir",
+      "ornek": "alkol | subdural kanama"
+    },
+    "skor": {
+      "ad": "Puanlama",
+      "duzen": "tablo",
+      "basliklar": [
+        "Yanıt",
+        "Puan"
+      ],
+      "ne_zaman": "skor bileşenleri ve puanları (GKS vb.)",
+      "ornek": "ağrıyı lokalize etme | 5"
+    },
+    "refleks_duzey": {
+      "ad": "Refleks → test ettiği düzey",
+      "duzen": "tablo",
+      "basliklar": [
+        "Refleks",
+        "Beyin sapı düzeyi / sinir"
+      ],
+      "ne_zaman": "bir refleksin hangi beyin sapı düzeyini ve kraniyal siniri test ettiği",
+      "ornek": "pupil ışık refleksi | mezensefalon, III. sinir",
+      "eklenme": {
+        "kaynak": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+        "zaman": "2026-10-24"
+      }
+    }
+  }
+}

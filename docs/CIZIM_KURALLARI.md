@@ -24,6 +24,23 @@ Kural ders ya da PDF'e özgü yazılmaz; yeni geri bildirim buraya ve TALIMAT'a 
 - Birbirine bağlı olmayan ilişkiler **ayrı satır**; hepsi tek "A → B" ise **hizalı tablo** (kaynak | ok | hedef).
 - Kenar türleri: aktive (→), inhibe (⊣, kırmızı, belirgin uç), dönüşür (⇒), maske, karşıt; kenar etiketi ≤5 kelime.
 
+## 2b. Anlam şablonları (dersten bağımsız kütüphane: `scripts/cizim/sablonlar.json`)
+
+Panel, ilişkinin **tıbbi anlamına** göre bir şablona bağlanır; düzen anlamdan gelir, ders ya da PDF'ten değil.
+- Yönlü etki yoksa ok yoktur: **durum → bakılacak tetkik** (`tani_tetkik`), **zehirlenme → antidot/tedavi**
+  (`zehir_antidot`), **bulgu → düşündürdüğü** (`bulgu_dusundurur`), **lezyon yeri → bulgu** (`lezyon_bulgu`), **skor**
+  başlıklı tablodur. ("üremik ensefalopati → istenir → üre" ya da "glukoz ⊣ hipoglisemi" yanlış okunur.)
+- Gerçek neden-sonuç: `neden_sonuc` / `mekanizma_adimlari` (zincir); birçok neden → tek sonuç: `cok_neden_tek_sonuc`
+  (numaralı kaynaklar + "}"); karar: `karar` (dal); sıralı yapılacaklar: `algoritma` (numaralı); alt türler: `siniflama`
+  (madde imli; aynı grubun sıralı öğeleri numaralı); ayırıcı tanı: `karsilastirma`; gizleyen neden: `maskeleyen`.
+- **Numara / madde:** aynı grubun sıralı ya da sayılan öğeleri numaralı; birbirinden bağımsız şeyler madde imli.
+- **Kesikli ayraç:** bir panelde iki ayrı öğenin satırları ve sütunları kesikli çizgiyle ayrılır (karışmasın).
+- **Yeni şablon:** uygun şablon yoksa model `yeni_sablon` önerir (kimlik, ad, genel düzen, başlıklar, ne zaman, örnek);
+  kapıdan geçen öneri kütüphaneye eklenir (`eklenme.kaynak` = ders) ve sonraki derslerde kullanılır. Düzenler istemcide
+  geneldir (tablo, zincir, grup, dal, karşıt, maske, liste, adımlar); yeni şablon için kod değişmez.
+- **Bağımsız tıbbi anlam denetimi:** bütün paneller ve ok etiketleri, öğrencinin okuyacağı biçimde (`sablon.okunus`)
+  cümleyle yan yana ikinci bir Claude geçişine verilir: tamam / düzelt (yeni şablon alanları) / sil. Sonuç önbellekte.
+
 ## 3. Panel tasarım sürümleri (en uygun olan seçilir)
 
 Betik her panel için sürümleri öncelik sırasıyla dener ve slaytın boşluğuna **ek alan açmadan** sığan ilkini seçer:
@@ -70,6 +87,11 @@ Betik her panel için sürümleri öncelik sırasıyla dener ve slaytın boşlu�
   harflerin altında ince çizgi).
 
 ## 8. Ekran
+
+- **İzleme düzeni:** ders oynarken metinde yalnız anlatılan paragraf ve onun ekran maddeleri tam görünür, diğerleri
+  soluk ve madde kutuları kapalı; "Metin + Slayt"ta slayt varsayılan %60.
+- Görüntüleyici kaydırması kare kare yapılır (tarayıcının yumuşak kaydırması bu kapsayıcıda durabiliyordu); kare
+  çizilmeyen ortamda süre dolunca hedefe doğrudan gider. Anlatılan satırın görünürlüğü ekrandaki gerçek konumundan ölçülür.
 
 - Dar PDF bölmesinde araç çubuğu düğmeleri kırılmaz (ölçüt bölme genişliği, container query).
 - Telefonda görünüm seçici (Metin / Metin + Slayt / Slayt) başlık satırında tek döngü düğmesidir.
