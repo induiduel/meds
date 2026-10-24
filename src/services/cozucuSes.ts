@@ -8,7 +8,7 @@
 import path from 'path';
 import type { Express, Request, Response } from 'express';
 
-const BRANSLAR = new Set(['patoloji', 'enfeksiyon', 'uroloji', 'genetik', 'halksagligi', 'kadindogum', 'farmakoloji']);
+const BRANSLAR = new Set(['patoloji', 'enfeksiyon', 'uroloji', 'genetik', 'halksagligi', 'kadindogum', 'farmakoloji', 'kmb']);
 /** Kurul 2+ branş klasörleri kurul öneklidir (k2noroloji); kodlar 2n03 (src/data/dersler/branslar.json). */
 const bransGecerli = (b: string) => BRANSLAR.has(b) || /^k[2-6][a-z]{2,16}$/.test(b);
 const VARSAYILAN_SES = 'ema';

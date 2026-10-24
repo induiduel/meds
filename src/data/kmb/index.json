@@ -1,0 +1,19 @@
+{
+  "ders": "Klinik Mesleki Beceri (Dönem 3)",
+  "belgeler": ["TIS301 Klinik Mesleki Beceri IV (Güz)", "TIS302 Klinik Mesleki Beceri V (Bahar)"],
+  "takvim": [
+    { "tarih": "2026-11-19", "ad": "KMB Vize (Güz)" },
+    { "tarih": "2026-11-26", "ad": "KMB Final (Güz)" },
+    { "tarih": "2027-03-18", "ad": "KMB Vize (Bahar)" },
+    { "tarih": "2027-03-25", "ad": "KMB Final (Bahar)" }
+  ],
+  "degerlendirme": "Uygulama yüz yüze yaptırılarak ya da video kaydından puanlanır; finalde yaptırılan iki uygulamanın ortalaması final notudur.",
+  "beceriler": [
+    { "kod": "01", "slug": "nazogastrik-sonda", "ad": "Nazogastrik sonda takma", "belgeKodu": "TIS301.43.1", "hocalar": ["Dr. Büşra Bildik", "Dr. Şengül Metin Tarhan"], "durum": "kaynak-bekleniyor" },
+    { "kod": "02", "slug": "uretral-kateter", "ad": "Üretral kateter takma", "belgeKodu": "TIS301.43.2", "hocalar": ["Dr. Özer Baran", "Dr. Salih Bürlükara"], "durum": "hazir" },
+    { "kod": "03", "slug": "atel", "ad": "Atel uygulama", "belgeKodu": "TIS301.43.3", "hocalar": ["Dr. Selçuk Korkmazer", "Dr. Yılmaz Ergişi"], "durum": "kaynak-bekleniyor" },
+    { "kod": "04", "slug": "burun-kanamasi", "ad": "Burun kanaması yönetimi", "belgeKodu": "TIS301.43.4", "hocalar": [], "durum": "kaynak-bekleniyor" },
+    { "kod": "05", "slug": "hava-yolu", "ad": "Erişkinde hava yolu kontrolü (airway, LMA, entübasyon)", "belgeKodu": "TIS301.43.5", "hocalar": ["Dr. Mustafa Köksal", "Dr. Ayşe Akhan"], "durum": "kaynak-bekleniyor" },
+    { "kod": "06", "slug": "enjeksiyon", "ad": "İM, SC, İD enjeksiyon", "belgeKodu": "TIS301.43.6", "hocalar": [], "durum": "kaynak-bekleniyor" }
+  ]
+}

@@ -1,0 +1,3121 @@
+{
+  "kod": "02",
+  "slug": "uretral-kateter",
+  "ad": "Üretral kateter takma",
+  "belgeKodu": "TIS301.43.2",
+  "amac": "İdrar yapamayan ya da idrar miktarının takip edilmesi gereken, idrar kontrolü zayıf kişilere üretral kateter uygulamak.",
+  "kaynaklar": [
+    {
+      "tur": "ses",
+      "ad": "KMB Kateter dersi (amfi + maket uygulaması, 42 dk)",
+      "dosya": "meds_temp/kmb/kaynak/kateter.m4a"
+    },
+    {
+      "tur": "belge",
+      "ad": "TIS301/TIS302 ders bilgi paketi, TIS301.43.2 öğrenim hedefleri"
+    },
+    {
+      "tur": "kitap",
+      "ad": "Karabük Üniversitesi Tıp Fakültesi KMB Rehberi; Roberts & Hedges' Clinical Procedures in Emergency Medicine"
+    }
+  ],
+  "hedefler": [
+    {
+      "no": 1,
+      "metin": "Hastaya kendini tanıtır.",
+      "adimlar": [
+        "iletisim"
+      ]
+    },
+    {
+      "no": 2,
+      "metin": "Hastaya yapacağı işlemi anlatır.",
+      "adimlar": [
+        "iletisim"
+      ]
+    },
+    {
+      "no": 3,
+      "metin": "Malzemeleri hazırlar ve kontrol eder.",
+      "adimlar": [
+        "malzeme",
+        "kateter-yapisi"
+      ]
+    },
+    {
+      "no": 4,
+      "metin": "Ellerini yıkar, eldiven giyer.",
+      "adimlar": [
+        "kadin-temizlik",
+        "erkek-temizlik"
+      ]
+    },
+    {
+      "no": 5,
+      "metin": "Kateterin uygulanacağı bölgeyi antiseptik ile ovarak siler.",
+      "adimlar": [
+        "kadin-temizlik",
+        "erkek-temizlik"
+      ]
+    },
+    {
+      "no": 6,
+      "metin": "Steril alan hazırlar ve buraya steril malzemeleri yerleştirir.",
+      "adimlar": [
+        "malzeme",
+        "kadin-temizlik"
+      ]
+    },
+    {
+      "no": 7,
+      "metin": "Steril eldiven giyer.",
+      "adimlar": [
+        "kadin-temizlik"
+      ]
+    },
+    {
+      "no": 8,
+      "metin": "Delikli örtüyü kateter uygulanacak bölüme yerleştirir.",
+      "adimlar": [
+        "kadin-temizlik"
+      ]
+    },
+    {
+      "no": 9,
+      "metin": "Üretral kateteri üretra ağzından mesaneye kadar iter.",
+      "adimlar": [
+        "kadin-yerlestirme",
+        "erkek-yerlestirme"
+      ]
+    },
+    {
+      "no": 10,
+      "metin": "Mesaneden idrar gelişini kontrol eder.",
+      "adimlar": [
+        "kadin-yerlestirme",
+        "idrar-gelmezse"
+      ]
+    },
+    {
+      "no": 11,
+      "metin": "Kateterin mesanede olduğundan emin olunca kateter sabitleme balonunu şişirir.",
+      "adimlar": [
+        "idrar-gelmezse",
+        "sabitleme"
+      ]
+    },
+    {
+      "no": 12,
+      "metin": "İdrar biriktirme torbasını katetere bağlar.",
+      "adimlar": [
+        "kateter-yapisi",
+        "sabitleme"
+      ]
+    },
+    {
+      "no": 13,
+      "metin": "İdrar kültürü alabilir.",
+      "adimlar": [
+        "endikasyon-diger",
+        "sabitleme"
+      ]
+    },
+    {
+      "no": 14,
+      "metin": "Yaptığı işlemleri gerçekleşen komplikasyonlarla birlikte kaydeder.",
+      "adimlar": [
+        "sabitleme"
+      ]
+    },
+    {
+      "no": 15,
+      "metin": "Üretral kateterin ne kadar süre hastada takılı kalabileceğini açıklar.",
+      "adimlar": [
+        "kateter-yapisi"
+      ]
+    }
+  ],
+  "adimlar": [
+    {
+      "id": "giris",
+      "baslik": "Bu beceride hekimin asıl işi",
+      "sahne": "foley",
+      "ek": [
+        "foley-kesit"
+      ],
+      "cumleler": [
+        {
+          "metin": "Halk arasında sonda dediğimiz üretral kateter, üretra ağzından mesaneye uzanan ve idrarı dışarı alan esnek bir borudur.",
+          "eylem": [
+            {
+              "t": "ciz",
+              "id": "f-govde"
+            },
+            {
+              "t": "vurgula",
+              "id": "c-drenaj-lumen"
+            }
+          ]
+        },
+        {
+          "metin": "Takma tekniği birkaç küçük incelik dışında kolaydır; eğitim almış her sağlık çalışanı bunu yapabilir.",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "f-uc"
+            }
+          ]
+        },
+        {
+          "metin": "Hekimi ayıran şey, kime takılacağını, kime asla takılmayacağını ve hangi endikasyonla takıldığını bilmesidir.",
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "f-balon-sonuk",
+              "renk": "sari"
+            }
+          ]
+        },
+        {
+          "metin": "Bu yüzden önce endikasyon ve kontrendikasyonları, sonra malzemeyi, en son kadında ve erkekte uygulamayı adım adım göreceğiz.",
+          "eylem": [
+            {
+              "t": "etiket",
+              "id": "f-drenaj"
+            },
+            {
+              "t": "etiket",
+              "id": "f-balon-kanal"
+            },
+            {
+              "t": "etiket",
+              "id": "c-drenaj-lumen"
+            },
+            {
+              "t": "etiket",
+              "id": "c-balon-lumen"
+            }
+          ]
+        }
+      ],
+      "puf": [
+        "Sınavda hoca ilk olarak 'Bu hastaya neden kateter takıyorsun?' diye sorar; cevabın endikasyonla başlamalı."
+      ],
+      "dikkat": []
+    },
+    {
+      "id": "endikasyon-takip",
+      "baslik": "Endikasyon 1: idrar çıkışını izlemek",
+      "sahne": "mesane",
+      "ek": [
+        "lottie:idrar-akisi",
+        "foley"
+      ],
+      "cumleler": [
+        {
+          "metin": "Tansiyon, nabız, solunum sayısı, satürasyon ve ateş vital bulgulardır; saatlik ve yirmi dört saatlik idrar miktarı da en az onlar kadar önemli bir göstergedir.",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "g-mesane-normal"
+            }
+          ]
+        },
+        {
+          "metin": "Yemek yiyemeyen, su içemeyen yoğun bakım hastasına ne kadar sıvı vereceğine idrar çıkışına bakarak karar verirsin.",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "g-torba"
+            },
+            {
+              "t": "ciz",
+              "id": "g-akis"
+            },
+            {
+              "t": "goster",
+              "id": "f-torba"
+            },
+            {
+              "t": "ciz",
+              "id": "f-torba-bag"
+            }
+          ]
+        },
+        {
+          "metin": "Hasta günde iki litre idrar çıkarırken ona bin mililitre verirsen hasta dehidrate kalır ve böbrek fonksiyonları bozulur.",
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "g-torba",
+              "renk": "sari"
+            },
+            {
+              "t": "etiket",
+              "id": "f-torba"
+            }
+          ]
+        },
+        {
+          "metin": "Bin mililitre çıkaran hastaya beş bin mililitre verirsen bu kez akciğer ödemi, periferik ödem ve konjestif kalp yetmezliği tablosu gelişir.",
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "g-torba",
+              "renk": "kirmizi"
+            }
+          ]
+        },
+        {
+          "metin": "Bu nedenle yoğun bakım hastaları, uzun ya da kanamalı ameliyatlar, septik, hipovolemik ve hemorajik şok, inme veya diyabetik ketoasidoz gibi bilinci kapalı hastalar idrar takibi için kateterlenir.",
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "g-torba",
+              "renk": "yesil"
+            },
+            {
+              "t": "vurgula",
+              "id": "f-musluk"
+            }
+          ]
+        }
+      ],
+      "puf": [
+        "İdrar çıkışı sıvı tedavisinin ölçüsüdür: az verirsen böbrek, çok verirsen akciğer ve kalp bozulur."
+      ],
+      "dikkat": []
+    },
+    {
+      "id": "endikasyon-retansiyon",
+      "baslik": "Endikasyon 2: idrar yapamayan hasta ve glob vezikale",
+      "sahne": "mesane",
+      "ek": [
+        "lottie:glob-sistit",
+        "yakin-mesane"
+      ],
+      "cumleler": [
+        {
+          "metin": "Kateterin acilde en sık takılma nedeni hastanın idrar yapamamasıdır; ilk söylemen gereken endikasyon budur.",
+          "eylem": [
+            {
+              "t": "gizle",
+              "id": "g-mesane-normal"
+            },
+            {
+              "t": "goster",
+              "id": "g-mesane-dolu"
+            }
+          ]
+        },
+        {
+          "metin": "Mesanenin idrarla dolu olduğu ama hastanın kendiliğinden idrarını yapamadığı akut ya da kronik üriner retansiyon tablosuna glob vezikale denir.",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "g-sisme"
+            },
+            {
+              "t": "etiket",
+              "id": "g-sisme"
+            },
+            {
+              "t": "etiket",
+              "id": "y-duvar"
+            },
+            {
+              "t": "renk",
+              "id": "y-duvar",
+              "renk": "sari"
+            }
+          ]
+        },
+        {
+          "metin": "Tedavisi üretral kateter takarak mesaneyi boşaltmak ve hastayı rahatlatmaktır.",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "g-torba"
+            },
+            {
+              "t": "ciz",
+              "id": "g-akis"
+            },
+            {
+              "t": "goster",
+              "id": "y-kateter"
+            },
+            {
+              "t": "goster",
+              "id": "y-idrar"
+            },
+            {
+              "t": "ciz",
+              "id": "y-idrar"
+            }
+          ]
+        },
+        {
+          "metin": "Kendi başına tuvalete gidemeyen yatağa bağımlı hastalar ve hareket ettirilemeyen travma hastaları da bu grupta kateterlenebilir.",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "g-mesane-dolu"
+            },
+            {
+              "t": "etiket",
+              "id": "y-idrar"
+            }
+          ]
+        }
+      ],
+      "puf": [
+        "'Kime takarız?' sorusunda sıralama: idrar yapamayan hasta, idrar çıkışı takip edilecek hasta, sonra diğerleri."
+      ],
+      "dikkat": []
+    },
+    {
+      "id": "endikasyon-diger",
+      "baslik": "Daha nadir endikasyonlar",
+      "sahne": "mesane",
+      "ek": [
+        "yakin-mesane",
+        "foley"
+      ],
+      "cumleler": [
+        {
+          "metin": "Kendiliğinden temiz idrar örneği veremeyen küçük çocuk ya da yaşlı hastada idrar kültürü almak için kateter takılabilir.",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "g-kultur"
+            },
+            {
+              "t": "etiket",
+              "id": "g-kultur"
+            },
+            {
+              "t": "goster",
+              "id": "y-kateter"
+            },
+            {
+              "t": "goster",
+              "id": "y-delik"
+            },
+            {
+              "t": "etiket",
+              "id": "y-delik"
+            }
+          ]
+        },
+        {
+          "metin": "Mesaneye kemoterapötik gibi bir ilaç vermek için de kateter kullanılır.",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "g-ilac"
+            },
+            {
+              "t": "ciz",
+              "id": "g-ilac"
+            },
+            {
+              "t": "etiket",
+              "id": "f-drenaj"
+            },
+            {
+              "t": "vurgula",
+              "id": "f-drenaj"
+            }
+          ]
+        },
+        {
+          "metin": "Travmada sistografi çekmek gerektiğinde mesaneye opak madde bu yolla verilir.",
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "g-mesane-normal",
+              "renk": "mavi"
+            },
+            {
+              "t": "etiket",
+              "id": "y-trigon"
+            }
+          ]
+        },
+        {
+          "metin": "Bunlar seyrek endikasyonlardır; sınavda önce idrar yapamama ve idrar takibini sayıp bunları sonra eklemelisin.",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "g-mesane-normal"
+            },
+            {
+              "t": "vurgula",
+              "id": "y-duvar"
+            }
+          ]
+        }
+      ],
+      "puf": [],
+      "dikkat": []
+    },
+    {
+      "id": "tuzak-sistit",
+      "baslik": "Acilin tuzağı: 'idrar yapamıyorum' diyen sistit",
+      "sahne": "mesane",
+      "ek": [
+        "lottie:glob-sistit",
+        "yakin-mesane"
+      ],
+      "cumleler": [
+        {
+          "metin": "Acilde en sık yapılan hata, 'idrar yapamıyorum' diyen her hastaya hemen sonda takmaktır.",
+          "eylem": [
+            {
+              "t": "gizle",
+              "id": "g-mesane-normal"
+            },
+            {
+              "t": "goster",
+              "id": "g-kucuk"
+            }
+          ]
+        },
+        {
+          "metin": "Sistitte hasta suprapubik ağrı, sık idrara çıkma ve idrar yaparken yanma anlatır; tuvalete gider ama mesanede yalnızca on beş yirmi mililitre idrar vardır.",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "g-kucuk"
+            },
+            {
+              "t": "etiket",
+              "id": "g-kucuk"
+            },
+            {
+              "t": "renk",
+              "id": "y-duvar",
+              "renk": "kirmizi"
+            },
+            {
+              "t": "etiket",
+              "id": "y-duvar"
+            }
+          ]
+        },
+        {
+          "metin": "Bu hastanın 'idrar yapamıyorum' sözü retansiyon değildir; önce gerçekten idrar yapamadığını sen değerlendirmelisin.",
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "g-kucuk",
+              "renk": "sari"
+            },
+            {
+              "t": "etiket",
+              "id": "y-trigon"
+            }
+          ]
+        },
+        {
+          "metin": "Hastayı yatırıp suprapubik bölgede şişlik ve dolgunluk ararsın; glob vezikalede alt karın altı aylık gebe karnı gibi kabarık olabilir.",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "g-el"
+            },
+            {
+              "t": "vurgula",
+              "id": "g-el"
+            }
+          ]
+        },
+        {
+          "metin": "Acilde ultrason varsa probu suprapubik koyarsın; mesane ağzına kadar doluysa kateter endikasyonu kesinleşir.",
+          "eylem": [
+            {
+              "t": "gizle",
+              "id": "g-el"
+            },
+            {
+              "t": "goster",
+              "id": "g-us"
+            },
+            {
+              "t": "ciz",
+              "id": "g-us-dalga"
+            }
+          ]
+        },
+        {
+          "metin": "Gereksiz kateter enfeksiyon riski taşır, çıkarıldıktan sonra günlerce süren ağrı bırakır ve endikasyonla, doğru teknikle takılsa bile tek bir kateter erkekte üretra darlığına yol açabilir.",
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "g-kucuk",
+              "renk": "kirmizi"
+            },
+            {
+              "t": "vurgula",
+              "id": "y-boyun"
+            },
+            {
+              "t": "etiket",
+              "id": "y-boyun"
+            }
+          ]
+        }
+      ],
+      "puf": [
+        "Kateterden önce muayene: suprapubik dolgunluk var mı, ultrasonda mesane dolu mu?"
+      ],
+      "dikkat": [
+        "Tek bir kateter bile erkekte üretra darlığı yapabilir; endikasyon dışında takılmaz."
+      ]
+    },
+    {
+      "id": "kontrendikasyon-enfeksiyon",
+      "baslik": "Kontrendikasyon 1: akut prostatit ve genital enfeksiyon",
+      "sahne": "erkek",
+      "ek": [
+        "yakin-mesane"
+      ],
+      "cumleler": [
+        {
+          "metin": "Kateterin kesinlikle takılmaması gereken durumlar vardır; bunları görüp sonda takmak yanlış uygulama, hatta malpraktistir.",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "e-uretra"
+            }
+          ]
+        },
+        {
+          "metin": "Akut prostatitte rektal tuşe dahil her türlü girişim ciddi bakteriyemi ve sepsis yapabilir; akut prostatit ya da prostat absesi düşünüyorsan kateter kontrendikedir.",
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "e-prostat",
+              "renk": "kirmizi"
+            },
+            {
+              "t": "etiket",
+              "id": "e-prostat"
+            },
+            {
+              "t": "renk",
+              "id": "y-prostat",
+              "renk": "kirmizi"
+            },
+            {
+              "t": "etiket",
+              "id": "y-prostat"
+            }
+          ]
+        },
+        {
+          "metin": "Orşit, epididimit, Fournier gangreni ya da genital abse gibi aktif genital enfeksiyonda da kateter takılmaz, çünkü enfeksiyonu yayma potansiyeli taşır.",
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "e-testis",
+              "renk": "kirmizi"
+            },
+            {
+              "t": "etiket",
+              "id": "e-testis"
+            }
+          ]
+        },
+        {
+          "metin": "Çok dolu mesaneyi hızla boşaltmak mukozadaki basıncı aniden düşürüp kanamaya yol açabilir; ama bu bir kontrendikasyon değildir, endikasyon varsa kateter yine takılır.",
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "e-mesane",
+              "renk": "sari"
+            },
+            {
+              "t": "vurgula",
+              "id": "y-duvar"
+            }
+          ]
+        }
+      ],
+      "puf": [
+        "Hızlı boşaltmada kanama bir komplikasyondur, kontrendikasyon cevabı değildir; hoca bu karışıklığı özellikle sorar."
+      ],
+      "dikkat": []
+    },
+    {
+      "id": "kontrendikasyon-travma",
+      "baslik": "Kontrendikasyon 2: üretra travması şüphesi",
+      "sahne": "travma",
+      "ek": [
+        "lottie:travma",
+        "yakin-uretra"
+      ],
+      "cumleler": [
+        {
+          "metin": "Üretra durduk yere yaralanmaz; o bölgeye künt ya da penetran bir darbe gelmiş olmalıdır.",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "t-pelvis"
+            },
+            {
+              "t": "etiket",
+              "id": "z-mukoza"
+            }
+          ]
+        },
+        {
+          "metin": "Bu yaralanma genellikle yüksekten düşme, trafik kazası ya da ata biner gibi düşmede pelvis kırıklarıyla birlikte görülür.",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "t-kirik"
+            },
+            {
+              "t": "ciz",
+              "id": "t-kirik"
+            }
+          ]
+        },
+        {
+          "metin": "Pubis kırığı, simfiz ayrılması ile birlikte erkekte eksternal meatusta taze kan görüyorsan üretra yaralanmış olabilir ve kateter kontrendikedir.",
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "t-simfiz",
+              "renk": "kirmizi"
+            },
+            {
+              "t": "goster",
+              "id": "t-kan"
+            },
+            {
+              "t": "etiket",
+              "id": "t-kan"
+            },
+            {
+              "t": "etiket",
+              "id": "z-spongiozum"
+            }
+          ]
+        },
+        {
+          "metin": "Öğrenciler sıklıkla yalnız pelvis kırığını kontrendikasyon sanır; pelvis kırığı olup meatusta kan yoksa kateter rahatlıkla takılabilir.",
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "t-kirik",
+              "renk": "sari"
+            }
+          ]
+        },
+        {
+          "metin": "Kısmi yırtıkta üretra tam kopmamıştır; kateteri zorla itersen yırtığı tamamlayıp üretrayı parçalarsın, bu hastaya başka yöntemlerle yaklaşılır.",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "t-yirtik"
+            },
+            {
+              "t": "renk",
+              "id": "t-uretra",
+              "renk": "kirmizi"
+            },
+            {
+              "t": "goster",
+              "id": "z-dogru"
+            },
+            {
+              "t": "goster",
+              "id": "z-yirtik"
+            },
+            {
+              "t": "goster",
+              "id": "z-kan"
+            },
+            {
+              "t": "ciz",
+              "id": "z-kan"
+            },
+            {
+              "t": "etiket",
+              "id": "z-yirtik"
+            }
+          ]
+        }
+      ],
+      "puf": [
+        "Kontrendikasyon için ikisi birlikte: pelvis kırığı + meatusta taze kan."
+      ],
+      "dikkat": [
+        "Kısmi üretra yırtığında kateteri zorlamak yırtığı tama çevirir."
+      ]
+    },
+    {
+      "id": "malzeme",
+      "baslik": "Malzemeler ve steril alan",
+      "sahne": "malzeme",
+      "ek": [
+        "lottie:malzeme-hazirlik",
+        "foley-kesit",
+        "yakin-el"
+      ],
+      "cumleler": [
+        {
+          "metin": "Önce malzemeyi hazırlayıp kontrol edersin: uygun boyda üretral kateter, steril olmayan ve steril eldiven.",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "m-lateks"
+            },
+            {
+              "t": "vurgula",
+              "id": "m-silikon"
+            },
+            {
+              "t": "vurgula",
+              "id": "m-nonsteril"
+            },
+            {
+              "t": "vurgula",
+              "id": "m-steril"
+            },
+            {
+              "t": "etiket",
+              "id": "c-olcek-eriskin"
+            }
+          ]
+        },
+        {
+          "metin": "Tek kullanımlık kayganlaştırıcı jel gerekir; erkekte kullanılan jel lidokain içerdiği için anestezi de sağlar.",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "m-jel"
+            },
+            {
+              "t": "etiket",
+              "id": "m-jel"
+            }
+          ]
+        },
+        {
+          "metin": "Balonu şişirmek için steril izotonik ve enjektör, idrar gelmezse yıkama için geniş uçlu kateter enjektörü hazırlanır.",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "m-izotonik"
+            },
+            {
+              "t": "vurgula",
+              "id": "m-enjektor"
+            },
+            {
+              "t": "vurgula",
+              "id": "m-genis"
+            },
+            {
+              "t": "etiket",
+              "id": "c-balon-lumen"
+            }
+          ]
+        },
+        {
+          "metin": "Antiseptik solüsyon ve gazlı bez, varsa steril delikli örtü ve idrar torbası da tepside olmalıdır.",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "m-antiseptik"
+            },
+            {
+              "t": "vurgula",
+              "id": "m-ortu"
+            },
+            {
+              "t": "vurgula",
+              "id": "m-torba"
+            }
+          ]
+        },
+        {
+          "metin": "Steril malzemeleri yardımcın paketi açarak sana uzatır; steril eldivenle yalnız steril alana ve steril malzemeye dokunursun.",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "m-steril-alan"
+            },
+            {
+              "t": "ciz",
+              "id": "m-steril-alan"
+            },
+            {
+              "t": "etiket",
+              "id": "h-el"
+            },
+            {
+              "t": "etiket",
+              "id": "h-halka"
+            }
+          ]
+        }
+      ],
+      "puf": [
+        "Malzemeyi saymaya kateterle başla, idrar torbasıyla bitir; geniş uçlu enjektörü unutma, idrar gelmezse onunla kontrol edeceksin."
+      ],
+      "dikkat": []
+    },
+    {
+      "id": "kateter-yapisi",
+      "baslik": "Kateterin yapısı, boyu ve kalış süresi",
+      "sahne": "foley",
+      "ek": [
+        "lottie:balon-sisme",
+        "foley-kesit",
+        "yakin-mesane"
+      ],
+      "cumleler": [
+        {
+          "metin": "Sarı kateter lateks, beyaz kateter silikondur; silikon daha uzun süre takılı kalabilir, lateks daha kısa süreli kullanım içindir.",
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "f-govde",
+              "renk": "sari"
+            },
+            {
+              "t": "etiket",
+              "id": "f-govde"
+            }
+          ]
+        },
+        {
+          "metin": "Kateterin ucunda idrarın girdiği delikler, hemen gerisinde sabitleme balonu vardır.",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "f-delik"
+            },
+            {
+              "t": "etiket",
+              "id": "f-delik"
+            },
+            {
+              "t": "vurgula",
+              "id": "f-balon-sonuk"
+            },
+            {
+              "t": "goster",
+              "id": "y-kateter"
+            },
+            {
+              "t": "goster",
+              "id": "y-delik"
+            },
+            {
+              "t": "etiket",
+              "id": "y-delik"
+            },
+            {
+              "t": "goster",
+              "id": "y-balon-sonuk"
+            },
+            {
+              "t": "etiket",
+              "id": "y-balon-sonuk"
+            }
+          ]
+        },
+        {
+          "metin": "Arka uçta iki kanal ayrılır: kalın olan drenaj kanalı idrar torbasına bağlanır, ince olan valfli kanal ise balonu şişirmek içindir.",
+          "eylem": [
+            {
+              "t": "etiket",
+              "id": "f-drenaj"
+            },
+            {
+              "t": "etiket",
+              "id": "f-balon-kanal"
+            },
+            {
+              "t": "renk",
+              "id": "f-drenaj",
+              "renk": "yesil"
+            },
+            {
+              "t": "renk",
+              "id": "f-balon-kanal",
+              "renk": "mavi"
+            },
+            {
+              "t": "etiket",
+              "id": "c-drenaj-lumen"
+            },
+            {
+              "t": "etiket",
+              "id": "c-balon-lumen"
+            },
+            {
+              "t": "renk",
+              "id": "c-drenaj-lumen",
+              "renk": "yesil"
+            },
+            {
+              "t": "renk",
+              "id": "c-balon-lumen",
+              "renk": "mavi"
+            }
+          ]
+        },
+        {
+          "metin": "Sınavda en sık hata torbayı balon kanalına takmaya çalışmaktır; torba her zaman drenaj kanalına takılır.",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "f-torba"
+            },
+            {
+              "t": "ciz",
+              "id": "f-torba-bag"
+            },
+            {
+              "t": "renk",
+              "id": "f-balon-kanal",
+              "renk": "kirmizi"
+            }
+          ]
+        },
+        {
+          "metin": "Balon kanalından enjektörle steril izotonik verildiğinde balon şişer ve kateter basit çekiştirmeyle çıkmaz.",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "f-enjektor"
+            },
+            {
+              "t": "gizle",
+              "id": "f-balon-sonuk"
+            },
+            {
+              "t": "goster",
+              "id": "f-balon"
+            },
+            {
+              "t": "gizle",
+              "id": "y-balon-sonuk"
+            },
+            {
+              "t": "goster",
+              "id": "y-balon"
+            },
+            {
+              "t": "etiket",
+              "id": "y-balon"
+            }
+          ]
+        },
+        {
+          "metin": "Torbanın altında musluk vardır; hemşire torbayı oradan boşaltır.",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "f-musluk"
+            },
+            {
+              "t": "etiket",
+              "id": "f-musluk"
+            }
+          ]
+        },
+        {
+          "metin": "Erişkin kateterleri 12 ile 24 French arasındadır ve hepsinin uzunluğu aynıdır; çocuk kateterleri 6, 8 ve 10 French olup daha kısadır.",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "f-uc"
+            },
+            {
+              "t": "etiket",
+              "id": "c-olcek-eriskin"
+            },
+            {
+              "t": "etiket",
+              "id": "c-olcek-cocuk"
+            }
+          ]
+        }
+      ],
+      "puf": [
+        "Torba kalın drenaj kanalına, enjektör ince valfli balon kanalına."
+      ],
+      "dikkat": [],
+      "dogrulanacak": [
+        "Lateks ve silikon kateterin gün/hafta olarak kalış süresi kayıttan net duyulamadı; KMB Rehberi ile doğrulanacak."
+      ]
+    },
+    {
+      "id": "iletisim",
+      "baslik": "Hasta ile iletişim, onam ve mahremiyet",
+      "sahne": "pozisyon",
+      "ek": [
+        "lottie:mahremiyet",
+        "maket"
+      ],
+      "cumleler": [
+        {
+          "metin": "Bilinci açık hastada önce kendini tanıtır, hastaya ya da yakınına anlayacağı dille neden kateter takılması gerektiğini anlatırsın.",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "p-hekim"
+            },
+            {
+              "t": "etiket",
+              "id": "mk-govde"
+            }
+          ]
+        },
+        {
+          "metin": "Hastayı 'yatın, sonda takacağım' diye geçiştirmezsin; güzelce anlatır ve sözlü onamını alırsın.",
+          "eylem": [
+            {
+              "t": "etiket",
+              "id": "p-hekim"
+            }
+          ]
+        },
+        {
+          "metin": "Kateter damar yolu açar gibi ortalık yerde takılmaz; acilde paravan arkasında, serviste perde çekilerek ya da uygun bir odada, mahremiyet korunarak takılır.",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "p-paravan"
+            },
+            {
+              "t": "ciz",
+              "id": "p-paravan"
+            },
+            {
+              "t": "etiket",
+              "id": "mk-kadin"
+            }
+          ]
+        },
+        {
+          "metin": "Yanında seni asiste edecek bir sağlık personeli mutlaka bulunur; karşı cinsten hastaya ya da çocuğa takarken yanında karşı cinsten bir personel, çocukta ebeveyn olmalıdır.",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "p-yardimci"
+            },
+            {
+              "t": "etiket",
+              "id": "p-yardimci"
+            },
+            {
+              "t": "vurgula",
+              "id": "mk-hazne"
+            }
+          ]
+        },
+        {
+          "metin": "Bu hem hastanın kendini rahat hissetmesi hem de seni olası medikolegal sorunlardan korumak içindir.",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "p-yardimci"
+            }
+          ]
+        }
+      ],
+      "puf": [
+        "Sınavda maket başında da ilk cümlen: kendini tanıt, işlemi anlat, onam al, mahremiyeti sağla."
+      ],
+      "dikkat": []
+    },
+    {
+      "id": "pozisyon",
+      "baslik": "Pozisyon: erkekte supin, kadında modifiye litotomi",
+      "sahne": "pozisyon",
+      "ek": [
+        "kadin"
+      ],
+      "cumleler": [
+        {
+          "metin": "Erkek hasta supin, yani sırtüstü yatar; iç çamaşırı işlem alanını açacak kadar indirilir.",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "p-paravan"
+            },
+            {
+              "t": "vurgula",
+              "id": "p-erkek"
+            },
+            {
+              "t": "etiket",
+              "id": "p-erkek"
+            }
+          ]
+        },
+        {
+          "metin": "Kadın hasta da sırtüstü yatar ama modifiye litotomi pozisyonu verilir.",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "p-kadin"
+            },
+            {
+              "t": "etiket",
+              "id": "p-kadin"
+            },
+            {
+              "t": "vurgula",
+              "id": "k-majus"
+            }
+          ]
+        },
+        {
+          "metin": "Dizler bükülür, topuklar yatağa basar ve bacaklar V şeklinde iki yana açılır.",
+          "eylem": [
+            {
+              "t": "ciz",
+              "id": "p-v"
+            },
+            {
+              "t": "renk",
+              "id": "p-kadin",
+              "renk": "mavi"
+            },
+            {
+              "t": "etiket",
+              "id": "k-majus"
+            }
+          ]
+        }
+      ],
+      "puf": [],
+      "dikkat": []
+    },
+    {
+      "id": "kadin-anatomi",
+      "baslik": "Kadında meatusu bulmak",
+      "sahne": "kadin",
+      "ek": [
+        "yakin-kadin"
+      ],
+      "cumleler": [
+        {
+          "metin": "Dışta labium majuslar, onların içinde labium minuslar vardır.",
+          "eylem": [
+            {
+              "t": "etiket",
+              "id": "k-majus"
+            },
+            {
+              "t": "etiket",
+              "id": "k-minus"
+            },
+            {
+              "t": "etiket",
+              "id": "v-minus"
+            }
+          ]
+        },
+        {
+          "metin": "Klitorisin yaklaşık bir santimetre altında, labium minusların arasında kalan üstteki açıklık eksternal üretra ağzıdır.",
+          "eylem": [
+            {
+              "t": "etiket",
+              "id": "k-klitoris"
+            },
+            {
+              "t": "vurgula",
+              "id": "k-meatus"
+            },
+            {
+              "t": "etiket",
+              "id": "k-meatus"
+            },
+            {
+              "t": "etiket",
+              "id": "v-klitoris"
+            },
+            {
+              "t": "vurgula",
+              "id": "v-meatus"
+            },
+            {
+              "t": "etiket",
+              "id": "v-meatus"
+            }
+          ]
+        },
+        {
+          "metin": "Alttaki daha geniş açıklık vajinadır.",
+          "eylem": [
+            {
+              "t": "etiket",
+              "id": "k-vajina"
+            },
+            {
+              "t": "renk",
+              "id": "k-vajina",
+              "renk": "sari"
+            },
+            {
+              "t": "etiket",
+              "id": "v-vajina"
+            },
+            {
+              "t": "renk",
+              "id": "v-vajina",
+              "renk": "sari"
+            }
+          ]
+        },
+        {
+          "metin": "Doğum yapmış kadında bu ayrım kolaydır; asıl kız bebekte, çocukta ve cinsel olarak aktif olmayan kadında bu anatomiyi kesin bilmelisin.",
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "k-meatus",
+              "renk": "yesil"
+            }
+          ]
+        },
+        {
+          "metin": "Gerçek dokuda labialar maketteki kadar sert değildir, daha yumuşak açılır.",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "k-minus"
+            },
+            {
+              "t": "goster",
+              "id": "v-parmak"
+            },
+            {
+              "t": "etiket",
+              "id": "v-parmak"
+            }
+          ]
+        }
+      ],
+      "puf": [
+        "Meatus: klitorisin 1 cm altı, labium minusların arası, üstteki açıklık."
+      ],
+      "dikkat": []
+    },
+    {
+      "id": "kadin-temizlik",
+      "baslik": "Kadında alan temizliği ve steril örtü",
+      "sahne": "kadin",
+      "ek": [
+        "lottie:kadin-temizlik",
+        "yakin-kadin",
+        "yakin-el"
+      ],
+      "cumleler": [
+        {
+          "metin": "Ellerini yıkar, steril olmayan eldivenle antiseptiğe batırılmış gazlı bezi tutarsın.",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "k-majus"
+            }
+          ]
+        },
+        {
+          "metin": "Labium minusları ve majusları merkezden dışa doğru dairesel hareketlerle silersin; dışa ulaşınca yeni bezle yeniden merkezden başlarsın.",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "k-temizlik"
+            },
+            {
+              "t": "ciz",
+              "id": "k-temizlik"
+            },
+            {
+              "t": "goster",
+              "id": "v-parmak"
+            }
+          ]
+        },
+        {
+          "metin": "Bu silme üç kez tekrarlanır ve alan temizlenmiş olur.",
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "k-temizlik",
+              "renk": "yesil"
+            }
+          ]
+        },
+        {
+          "metin": "Ardından steril eldiven giyer, varsa steril delikli örtüyü meatus açıkta kalacak şekilde yerleştirirsin.",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "k-ortu"
+            },
+            {
+              "t": "etiket",
+              "id": "k-ortu"
+            },
+            {
+              "t": "etiket",
+              "id": "h-el"
+            }
+          ]
+        },
+        {
+          "metin": "Bundan sonra steril eldivenle yalnız steril malzemeye dokunursun; yardımcın kateter ve jeli sana steril biçimde uzatır.",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "k-ortu"
+            },
+            {
+              "t": "vurgula",
+              "id": "h-halka"
+            },
+            {
+              "t": "etiket",
+              "id": "h-halka"
+            }
+          ]
+        }
+      ],
+      "puf": [
+        "Temizlik merkezden dışa, dairesel, üç kez; dıştan içe silmek kirli alanı meatusa taşır."
+      ],
+      "dikkat": []
+    },
+    {
+      "id": "kadin-yerlestirme",
+      "baslik": "Kadında kateteri ilerletmek",
+      "sahne": "kadin",
+      "ek": [
+        "lottie:kadin-ilerleyis",
+        "yakin-kadin",
+        "yakin-el",
+        "yakin-mesane"
+      ],
+      "cumleler": [
+        {
+          "metin": "Kadında kateterin ucuna yaklaşık iki mililitre jel sürmek yeterlidir.",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "k-ortu"
+            },
+            {
+              "t": "vurgula",
+              "id": "k-meatus"
+            },
+            {
+              "t": "goster",
+              "id": "h-jel"
+            },
+            {
+              "t": "etiket",
+              "id": "h-jel"
+            },
+            {
+              "t": "goster",
+              "id": "v-jel"
+            },
+            {
+              "t": "etiket",
+              "id": "v-jel"
+            }
+          ]
+        },
+        {
+          "metin": "Kateteri avucunun içinde halka gibi toplayarak tutarsın; sallanan uç hastanın uyluğuna ya da sana değerse steriliteyi bozar.",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "k-halka"
+            },
+            {
+              "t": "ciz",
+              "id": "k-halka"
+            },
+            {
+              "t": "etiket",
+              "id": "h-halka"
+            },
+            {
+              "t": "ciz",
+              "id": "h-halka"
+            },
+            {
+              "t": "goster",
+              "id": "h-yanlis"
+            },
+            {
+              "t": "etiket",
+              "id": "h-yanlis"
+            }
+          ]
+        },
+        {
+          "metin": "Bir elinle labiaları ayırır, diğeriyle kateteri meatustan içeri itersin.",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "k-kateter"
+            },
+            {
+              "t": "ciz",
+              "id": "k-kateter"
+            },
+            {
+              "t": "goster",
+              "id": "v-parmak"
+            },
+            {
+              "t": "goster",
+              "id": "v-kateter"
+            },
+            {
+              "t": "ciz",
+              "id": "v-kateter"
+            },
+            {
+              "t": "etiket",
+              "id": "v-meatus"
+            }
+          ]
+        },
+        {
+          "metin": "Kadın üretrası kısadır; birkaç santimetre içinde idrar gelir.",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "k-idrar"
+            },
+            {
+              "t": "ciz",
+              "id": "k-idrar"
+            },
+            {
+              "t": "goster",
+              "id": "v-idrar"
+            },
+            {
+              "t": "ciz",
+              "id": "v-idrar"
+            },
+            {
+              "t": "goster",
+              "id": "y-kateter"
+            },
+            {
+              "t": "goster",
+              "id": "y-delik"
+            },
+            {
+              "t": "goster",
+              "id": "y-idrar"
+            },
+            {
+              "t": "ciz",
+              "id": "y-idrar"
+            }
+          ]
+        },
+        {
+          "metin": "İdrar geldikten sonra balonun tamamen mesaneye girmesi için kateteri birkaç santimetre daha ilerletir, sonra balonu şişirirsin.",
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "k-kateter",
+              "renk": "yesil"
+            },
+            {
+              "t": "goster",
+              "id": "y-balon-sonuk"
+            },
+            {
+              "t": "etiket",
+              "id": "y-balon-sonuk"
+            }
+          ]
+        }
+      ],
+      "puf": [
+        "Kadında idrar gelince 'birkaç santim daha' — balon üretrada şişirilmez."
+      ],
+      "dikkat": []
+    },
+    {
+      "id": "erkek-temizlik",
+      "baslik": "Erkekte temizlik ve lidokainli jel",
+      "sahne": "erkek",
+      "ek": [
+        "lottie:erkek-jel",
+        "yakin-erkek-jel"
+      ],
+      "cumleler": [
+        {
+          "metin": "Sünnetsiz hastada önce prepisyumu geriye çekersin.",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "e-glans"
+            },
+            {
+              "t": "etiket",
+              "id": "e-glans"
+            },
+            {
+              "t": "etiket",
+              "id": "j-prepisyum"
+            },
+            {
+              "t": "vurgula",
+              "id": "j-prepisyum"
+            }
+          ]
+        },
+        {
+          "metin": "Temizliğe eksternal meatustan başlar, glans boyunca dışa doğru silersin ve bunu üç kez tekrarlarsın.",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "e-meatus"
+            },
+            {
+              "t": "etiket",
+              "id": "e-meatus"
+            },
+            {
+              "t": "goster",
+              "id": "j-temizlik"
+            },
+            {
+              "t": "ciz",
+              "id": "j-temizlik"
+            },
+            {
+              "t": "etiket",
+              "id": "j-temizlik"
+            },
+            {
+              "t": "etiket",
+              "id": "j-meatus"
+            }
+          ]
+        },
+        {
+          "metin": "Kadında ucuna sürmek yeterliydi; erkek üretrası uzun ve kateter takmak daha ağrılı olduğu için jelin tamamını kullanırsın.",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "e-uretra"
+            }
+          ]
+        },
+        {
+          "metin": "Jelin ucunu meatusa yerleştirir, çok sert basmadan tüpün tamamını üretraya verirsin.",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "e-jel"
+            },
+            {
+              "t": "ciz",
+              "id": "e-jel"
+            },
+            {
+              "t": "goster",
+              "id": "j-siringa"
+            },
+            {
+              "t": "etiket",
+              "id": "j-siringa"
+            },
+            {
+              "t": "goster",
+              "id": "j-dolum"
+            },
+            {
+              "t": "ciz",
+              "id": "j-dolum"
+            }
+          ]
+        },
+        {
+          "metin": "Penisin ucunu sıkıca tutarak ya da klempleyerek iki üç dakika beklersin; jeldeki lidokain etkisini gösterir ve anestezi sağlanır.",
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "e-jel",
+              "renk": "mavi"
+            },
+            {
+              "t": "etiket",
+              "id": "e-jel"
+            },
+            {
+              "t": "goster",
+              "id": "j-parmak"
+            },
+            {
+              "t": "etiket",
+              "id": "j-parmak"
+            },
+            {
+              "t": "etiket",
+              "id": "j-dolum"
+            }
+          ]
+        }
+      ],
+      "puf": [
+        "Erkekte jel kateterin üstüne değil üretranın içine, tüpün tamamı; 2–3 dakika bekle."
+      ],
+      "dikkat": []
+    },
+    {
+      "id": "erkek-yerlestirme",
+      "baslik": "Erkekte kateteri sonuna kadar ilerletmek",
+      "sahne": "erkek",
+      "ek": [
+        "lottie:erkek-ilerleyis",
+        "yakin-el",
+        "yakin-mesane",
+        "maket"
+      ],
+      "cumleler": [
+        {
+          "metin": "Erkekte silikon kateteri avucuna dolayarak alırsın; ucundan gevşek tutarsan uzun üretrada ilerletemezsin.",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "e-penil"
+            },
+            {
+              "t": "etiket",
+              "id": "h-halka"
+            },
+            {
+              "t": "etiket",
+              "id": "h-uc"
+            }
+          ]
+        },
+        {
+          "metin": "Penisi dik ve gergin tutarak kateteri meatustan içeri itersin.",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "e-kateter"
+            },
+            {
+              "t": "ciz",
+              "id": "e-kateter"
+            }
+          ]
+        },
+        {
+          "metin": "Kateter prostatik üretradan geçip mesaneye ulaşır; maketlerde takılabilir, gerçek hastada genellikle daha kolay ilerler.",
+          "eylem": [
+            {
+              "t": "etiket",
+              "id": "e-prostat"
+            },
+            {
+              "t": "etiket",
+              "id": "e-sfinkter"
+            },
+            {
+              "t": "goster",
+              "id": "y-kateter"
+            },
+            {
+              "t": "etiket",
+              "id": "y-prostat"
+            },
+            {
+              "t": "etiket",
+              "id": "y-boyun"
+            },
+            {
+              "t": "gizle",
+              "id": "mk-kadin"
+            },
+            {
+              "t": "goster",
+              "id": "mk-erkek"
+            },
+            {
+              "t": "etiket",
+              "id": "mk-erkek"
+            }
+          ]
+        },
+        {
+          "metin": "Erkekte en önemli kural: idrar erken gelse bile kateteri çatal kısmına kadar, sonuna kadar ilerletirsin.",
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "e-kateter",
+              "renk": "yesil"
+            },
+            {
+              "t": "goster",
+              "id": "e-balon-dogru"
+            },
+            {
+              "t": "etiket",
+              "id": "e-balon-dogru"
+            },
+            {
+              "t": "goster",
+              "id": "y-delik"
+            },
+            {
+              "t": "goster",
+              "id": "y-idrar"
+            },
+            {
+              "t": "ciz",
+              "id": "y-idrar"
+            },
+            {
+              "t": "goster",
+              "id": "mk-hazne-dolu"
+            },
+            {
+              "t": "etiket",
+              "id": "mk-hazne-dolu"
+            }
+          ]
+        },
+        {
+          "metin": "Böylece balon kesinlikle mesanede, mesane boynunun ötesinde olur.",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "e-balon-dogru"
+            },
+            {
+              "t": "goster",
+              "id": "y-balon-sonuk"
+            },
+            {
+              "t": "etiket",
+              "id": "y-balon-sonuk"
+            }
+          ]
+        }
+      ],
+      "puf": [
+        "Erkekte sonuna kadar it; balonun yeri mesane, üretra değil."
+      ],
+      "dikkat": []
+    },
+    {
+      "id": "idrar-gelmezse",
+      "baslik": "Sonuna kadar ittin ama idrar gelmiyor",
+      "sahne": "erkek",
+      "ek": [
+        "lottie:yikama-testi",
+        "lottie:yanlis-balon",
+        "yakin-uretra",
+        "yakin-mesane"
+      ],
+      "cumleler": [
+        {
+          "metin": "Acilde en büyük hatalardan biri, kateteri sonuna kadar itip idrar gelmediği halde balonu şişirmektir.",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "e-kateter"
+            },
+            {
+              "t": "renk",
+              "id": "e-kateter",
+              "renk": "sari"
+            }
+          ]
+        },
+        {
+          "metin": "İdrar gelmemesinin iki nedeni vardır: mesane gerçekten boştur ya da kateter üretrada bir yere takılıp kıvrılmıştır.",
+          "eylem": [
+            {
+              "t": "gizle",
+              "id": "e-kateter"
+            },
+            {
+              "t": "goster",
+              "id": "e-kivrim"
+            },
+            {
+              "t": "ciz",
+              "id": "e-kivrim"
+            },
+            {
+              "t": "goster",
+              "id": "z-kivrim"
+            },
+            {
+              "t": "ciz",
+              "id": "z-kivrim"
+            },
+            {
+              "t": "etiket",
+              "id": "z-kivrim"
+            },
+            {
+              "t": "etiket",
+              "id": "z-sfinkter"
+            }
+          ]
+        },
+        {
+          "metin": "Ayırt etmek için geniş uçlu kateter enjektörüyle otuz kırk mililitre steril izotonik verirsin.",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "e-enjektor"
+            },
+            {
+              "t": "vurgula",
+              "id": "e-enjektor"
+            },
+            {
+              "t": "goster",
+              "id": "z-sivi"
+            },
+            {
+              "t": "ciz",
+              "id": "z-sivi"
+            },
+            {
+              "t": "etiket",
+              "id": "z-sivi"
+            }
+          ]
+        },
+        {
+          "metin": "Sıvı rahatça gidiyor ve rahatça geri çekilebiliyorsa mesanedesin, balonu gönül rahatlığıyla şişirirsin.",
+          "eylem": [
+            {
+              "t": "gizle",
+              "id": "e-kivrim"
+            },
+            {
+              "t": "goster",
+              "id": "e-kateter"
+            },
+            {
+              "t": "renk",
+              "id": "e-kateter",
+              "renk": "yesil"
+            },
+            {
+              "t": "goster",
+              "id": "e-balon-dogru"
+            },
+            {
+              "t": "goster",
+              "id": "y-kateter"
+            },
+            {
+              "t": "goster",
+              "id": "y-delik"
+            },
+            {
+              "t": "goster",
+              "id": "y-balon"
+            },
+            {
+              "t": "etiket",
+              "id": "y-balon"
+            }
+          ]
+        },
+        {
+          "metin": "Sıvı zor gidiyor ve hiç geri gelmiyorsa kateter üretrada kıvrılmıştır; balonu şişirmeden geri çekersin.",
+          "eylem": [
+            {
+              "t": "gizle",
+              "id": "e-balon-dogru"
+            },
+            {
+              "t": "gizle",
+              "id": "e-kateter"
+            },
+            {
+              "t": "goster",
+              "id": "e-kivrim"
+            },
+            {
+              "t": "renk",
+              "id": "e-kivrim",
+              "renk": "kirmizi"
+            }
+          ]
+        },
+        {
+          "metin": "Mesane geniş bir organdır, balon orada fark edilmez; ama üretra yaklaşık bir santimetre çapındadır ve balonu orada şişirirsen üretrayı perfore edersin.",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "e-balon-yanlis"
+            },
+            {
+              "t": "etiket",
+              "id": "e-balon-yanlis"
+            },
+            {
+              "t": "goster",
+              "id": "z-balon"
+            },
+            {
+              "t": "etiket",
+              "id": "z-balon"
+            },
+            {
+              "t": "goster",
+              "id": "z-yirtik"
+            },
+            {
+              "t": "etiket",
+              "id": "z-yirtik"
+            }
+          ]
+        },
+        {
+          "metin": "Balon sfinkter düzeyinde şişirilirse hasta kalıcı inkontinans olur; ayrıca üretral kanama ve uzun dönemde üretra darlığı gelişir.",
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "e-sfinkter",
+              "renk": "kirmizi"
+            },
+            {
+              "t": "etiket",
+              "id": "e-sfinkter"
+            },
+            {
+              "t": "renk",
+              "id": "z-sfinkter",
+              "renk": "kirmizi"
+            },
+            {
+              "t": "goster",
+              "id": "z-kan"
+            },
+            {
+              "t": "ciz",
+              "id": "z-kan"
+            }
+          ]
+        }
+      ],
+      "puf": [
+        "İdrar yoksa şişirme yok: önce 30–40 mL izotonik ver, geri alabiliyorsan mesanedesin."
+      ],
+      "dikkat": [
+        "Üretrada şişirilen balon: perforasyon, kanama, darlık; sfinkterde kalıcı inkontinans."
+      ]
+    },
+    {
+      "id": "sabitleme",
+      "baslik": "Balonu şişirmek, torbayı bağlamak ve kayıt",
+      "sahne": "foley",
+      "ek": [
+        "lottie:balon-sisme",
+        "lottie:idrar-akisi",
+        "yakin-mesane",
+        "mesane"
+      ],
+      "cumleler": [
+        {
+          "metin": "Kateterin mesanede olduğundan emin olunca balon kanalından enjektörle steril izotonik vererek balonu şişirirsin.",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "f-enjektor"
+            },
+            {
+              "t": "gizle",
+              "id": "f-balon-sonuk"
+            },
+            {
+              "t": "goster",
+              "id": "f-balon"
+            },
+            {
+              "t": "etiket",
+              "id": "f-balon"
+            },
+            {
+              "t": "goster",
+              "id": "y-kateter"
+            },
+            {
+              "t": "goster",
+              "id": "y-delik"
+            },
+            {
+              "t": "goster",
+              "id": "y-balon"
+            },
+            {
+              "t": "etiket",
+              "id": "y-balon"
+            }
+          ]
+        },
+        {
+          "metin": "Kateteri hafifçe geri çektiğinde direnç hissedersin; balon mesane boynuna oturmuştur.",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "f-balon"
+            },
+            {
+              "t": "goster",
+              "id": "y-cekme"
+            },
+            {
+              "t": "ciz",
+              "id": "y-cekme"
+            },
+            {
+              "t": "etiket",
+              "id": "y-cekme"
+            },
+            {
+              "t": "etiket",
+              "id": "y-boyun"
+            }
+          ]
+        },
+        {
+          "metin": "İdrar torbasını kalın drenaj kanalına bağlarsın; gerekiyorsa bu sırada idrar kültürü için örnek alırsın.",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "f-torba"
+            },
+            {
+              "t": "ciz",
+              "id": "f-torba-bag"
+            },
+            {
+              "t": "renk",
+              "id": "f-drenaj",
+              "renk": "yesil"
+            },
+            {
+              "t": "goster",
+              "id": "g-torba"
+            },
+            {
+              "t": "goster",
+              "id": "g-akis"
+            },
+            {
+              "t": "ciz",
+              "id": "g-akis"
+            },
+            {
+              "t": "goster",
+              "id": "g-kultur"
+            },
+            {
+              "t": "etiket",
+              "id": "g-kultur"
+            }
+          ]
+        },
+        {
+          "metin": "Son olarak yaptığın işlemi, kullandığın kateteri ve gelişen komplikasyonları kaydedersin.",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "f-torba"
+            },
+            {
+              "t": "etiket",
+              "id": "g-torba"
+            }
+          ]
+        },
+        {
+          "metin": "İşlemden sonra hasta birkaç gün yanma ve ağrı hissedebilir; bunu önceden anlatmak hastanın uyumunu artırır.",
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "f-govde",
+              "renk": "mavi"
+            }
+          ]
+        }
+      ],
+      "puf": [
+        "Şişir, hafif çek, torbayı drenaj kanalına bağla, kaydet."
+      ],
+      "dikkat": []
+    }
+  ],
+  "sinav": {
+    "akislar": [
+      {
+        "id": "kadin",
+        "ad": "Kadın hasta",
+        "yonerge": "Kadın hastaya üretral kateter takma basamaklarını doğru sıraya koy.",
+        "basamaklar": [
+          {
+            "id": "tanit",
+            "metin": "Kendini tanıt, işlemi anlat, sözlü onam al",
+            "aciklama": "Bilinci açık hastaya önce adını ve görevini söylersin. Ardından neden kateter takılması gerektiğini hastanın anlayacağı dille anlatır, işlem sırasında ne hissedebileceğini açıklarsın. Sözlü onam alınmadan işleme başlanmaz; sınavda maket başında da bu cümleleri yüksek sesle söylemen beklenir."
+          },
+          {
+            "id": "malzeme",
+            "metin": "Malzemeleri hazırla ve kontrol et",
+            "aciklama": "Uygun boyda kateter, steril ve steril olmayan eldiven, jel, steril izotonik ve enjektör, geniş uçlu kateter enjektörü, antiseptik ve gazlı bez, delikli örtü ve idrar torbası tepsiye konur. Paketlerin son kullanma tarihine ve bütünlüğüne bakarsın. Geniş uçlu enjektör sık unutulur; idrar gelmediğinde kateterin yerini onunla anlayacaksın."
+          },
+          {
+            "id": "mahremiyet",
+            "metin": "Mahremiyeti sağla, yardımcı personeli yanına al",
+            "aciklama": "Kateter ortalık yerde takılmaz; acilde paravan, serviste perde ya da ayrı bir oda kullanılır. Yanında sana steril malzeme uzatacak bir sağlık personeli bulunur. Karşı cinsten hastada karşı cinsten bir personel, çocukta ebeveyn olması hem hastayı rahatlatır hem seni medikolegal sorunlardan korur."
+          },
+          {
+            "id": "pozisyon",
+            "metin": "Modifiye litotomi pozisyonu ver",
+            "aciklama": "Hasta sırtüstü yatar, dizlerini büker, topuklarını yatağa basar ve bacaklarını V şeklinde iki yana açar. Bu pozisyon labiaları ayırmayı ve meatusu görmeyi kolaylaştırır. Hasta rahat değilse işlem sırasında bacaklarını kapatabilir; bu yüzden pozisyonu baştan iyi ver."
+          },
+          {
+            "id": "eldiven1",
+            "metin": "Ellerini yıka, steril olmayan eldiven giy",
+            "aciklama": "Temizlik aşaması kirli alanla temastır; bu nedenle önce steril olmayan eldiven giyilir. Steril eldiven bu aşamada giyilirse temizlik sırasında kirlenir ve sonraki adımda değiştirmek gerekir."
+          },
+          {
+            "id": "temizlik",
+            "metin": "Labiaları merkezden dışa, dairesel olarak üç kez antiseptikle sil",
+            "aciklama": "Antiseptikli gazlı bezle labium minuslardan başlayıp majuslara doğru, merkezden dışa dairesel hareketle silersin. Dışa ulaşınca yeni bezle yeniden merkezden başlarsın ve bunu üç kez yaparsın. Dıştan içe silmek kirli bölgedeki mikroorganizmaları meatusa taşır."
+          },
+          {
+            "id": "steril",
+            "metin": "Steril eldiven giy, delikli örtüyü yerleştir",
+            "aciklama": "Temizlikten sonra steril eldiven giyersin; artık yalnız steril malzemeye ve steril alana dokunabilirsin. Delikli örtü meatus açıkta kalacak şekilde yerleştirilir. Yardımcın kateter ve jeli paketini açarak sana steril biçimde uzatır."
+          },
+          {
+            "id": "jel",
+            "metin": "Kateter ucuna jel sür, kateteri avucunda topla",
+            "aciklama": "Kadında kateterin ucuna yaklaşık iki mililitre jel sürmek yeterlidir. Kateteri avucunun içinde halka gibi toplarsın; sallanan uç uyluğa ya da sana değerse sterilite bozulur ve yeni kateter gerekir."
+          },
+          {
+            "id": "ilerlet",
+            "metin": "Labiaları ayır, kateteri meatustan mesaneye ilerlet",
+            "aciklama": "Bir elinle labiaları ayırır, meatusu görürsün: klitorisin yaklaşık bir santimetre altındaki üstteki açıklık. Diğer elinle kateteri nazikçe ilerletirsin. Kadın üretrası kısadır; birkaç santimetre içinde mesaneye ulaşılır."
+          },
+          {
+            "id": "kontrol",
+            "metin": "İdrar gelişini kontrol et",
+            "aciklama": "Kateterin mesaneye girdiği idrarın gelmesiyle anlaşılır. İdrar gelince kateteri birkaç santimetre daha ilerletirsin, çünkü balon uçtaki deliklerin hemen gerisindedir ve onun da mesaneye girmesi gerekir."
+          },
+          {
+            "id": "sisir",
+            "metin": "Balonu steril izotonikle şişir, hafifçe geri çek",
+            "aciklama": "Balon kanalından enjektörle steril izotonik verirsin. Kateteri hafifçe geri çektiğinde direnç hissedersin; balon mesane boynuna oturmuştur. Balonu şişirirken hasta ağrı tarif ederse durur, balonu indirip kateterin yerini yeniden değerlendirirsin."
+          },
+          {
+            "id": "torba",
+            "metin": "İdrar torbasını drenaj kanalına bağla",
+            "aciklama": "Torba kalın drenaj kanalına takılır; ince valfli kanal balon içindir. Sınavda en sık yapılan hata torbayı balon kanalına takmaya çalışmaktır. Gerekiyorsa bu aşamada steril kültür örneği alınır."
+          },
+          {
+            "id": "kayit",
+            "metin": "İşlemi ve komplikasyonları kaydet",
+            "aciklama": "Kullanılan kateterin türü ve boyu, balon hacmi, gelen idrarın miktarı ve görünümü, işlem sırasında gelişen komplikasyonlar kaydedilir. Hastaya birkaç gün yanma ve ağrı olabileceğini anlatırsın."
+          }
+        ]
+      },
+      {
+        "id": "erkek",
+        "ad": "Erkek hasta (dallanan)",
+        "yonerge": "Erkek hastaya kateter takarken basamakları sırala; karar noktasında duruma göre yol değişir.",
+        "basamaklar": [
+          {
+            "id": "tanit",
+            "metin": "Kendini tanıt, işlemi anlat, sözlü onam al",
+            "aciklama": "Bilinci açık hastaya önce adını ve görevini söylersin. Ardından neden kateter takılması gerektiğini hastanın anlayacağı dille anlatır, işlem sırasında ne hissedebileceğini açıklarsın. Sözlü onam alınmadan işleme başlanmaz; sınavda maket başında da bu cümleleri yüksek sesle söylemen beklenir."
+          },
+          {
+            "id": "malzeme",
+            "metin": "Malzemeleri hazırla ve kontrol et",
+            "aciklama": "Uygun boyda kateter, steril ve steril olmayan eldiven, jel, steril izotonik ve enjektör, geniş uçlu kateter enjektörü, antiseptik ve gazlı bez, delikli örtü ve idrar torbası tepsiye konur. Paketlerin son kullanma tarihine ve bütünlüğüne bakarsın. Geniş uçlu enjektör sık unutulur; idrar gelmediğinde kateterin yerini onunla anlayacaksın."
+          },
+          {
+            "id": "mahremiyet",
+            "metin": "Mahremiyeti sağla, yardımcı personeli yanına al",
+            "aciklama": "Kateter ortalık yerde takılmaz; acilde paravan, serviste perde ya da ayrı bir oda kullanılır. Yanında sana steril malzeme uzatacak bir sağlık personeli bulunur. Karşı cinsten hastada karşı cinsten bir personel, çocukta ebeveyn olması hem hastayı rahatlatır hem seni medikolegal sorunlardan korur."
+          },
+          {
+            "id": "pozisyon",
+            "metin": "Supin pozisyon ver, iç çamaşırını indir",
+            "aciklama": "Erkek hasta sırtüstü yatar; iç çamaşırı işlem alanını açacak kadar indirilir. Penis rahatça tutulup dik kaldırılabilmelidir."
+          },
+          {
+            "id": "eldiven1",
+            "metin": "Ellerini yıka, steril olmayan eldiven giy",
+            "aciklama": "Temizlik aşaması kirli alanla temastır; bu yüzden önce steril olmayan eldiven giyilir. Steril eldiven temizlikten sonraki aşamaya saklanır, yoksa temizlik sırasında kirlenir."
+          },
+          {
+            "id": "temizlik",
+            "metin": "Prepisyumu geri çek, meatustan dışa doğru üç kez temizle",
+            "aciklama": "Sünnetsiz hastada prepisyum geri çekilmeden meatus görülemez ve temizlenemez. Temizliğe meatustan başlayıp glans boyunca dışa doğru silersin ve üç kez tekrarlarsın. İşlem bitince prepisyumu yerine getirmek parafimozisi önler."
+          },
+          {
+            "id": "steril",
+            "metin": "Steril eldiven giy, delikli örtüyü yerleştir",
+            "aciklama": "Steril eldivenden sonra yalnız steril alana dokunursun. Delikli örtü penis açıkta kalacak biçimde yerleştirilir."
+          },
+          {
+            "id": "jel",
+            "metin": "Jelin tamamını üretraya ver, ucu tutarak 2–3 dakika bekle",
+            "aciklama": "Erkek üretrası uzundur ve işlem daha ağrılıdır; bu yüzden jelin tamamı meatustan üretraya verilir. Penisin ucu sıkıca tutularak ya da klemplenerek iki üç dakika beklenir. Jeldeki lidokain bu sürede etkisini gösterir; beklemeden ilerlemek ağrıyı artırır."
+          },
+          {
+            "id": "tut",
+            "metin": "Kateteri avucunda topla, penisi dik ve gergin tut",
+            "aciklama": "Silikon kateter avuca dolanarak tutulur; uçtan gevşek tutulursa uzun üretrada ilerletilemez. Penisi dik ve gergin tutmak üretranın kıvrımını düzleştirir ve kateterin ilerlemesini kolaylaştırır."
+          },
+          {
+            "id": "ilerlet",
+            "metin": "Kateteri çatal kısmına kadar ilerlet",
+            "aciklama": "Erkekte en önemli kural: idrar erken gelse bile kateter çatal kısmına kadar, sonuna kadar ilerletilir. Böylece balonun prostatik üretrada değil mesanede olduğundan emin olursun."
+          },
+          {
+            "id": "kontrol",
+            "metin": "İdrar gelişini kontrol et",
+            "aciklama": "Sonuna kadar ilerletilmiş kateterden idrar gelmesi mesanede olduğunu gösterir. İdrar gelmiyorsa balon kesinlikle şişirilmez; önce kateterin nerede olduğu anlaşılmalıdır.",
+            "dal": {
+              "soru": "İdrar geldi mi?",
+              "yollar": [
+                {
+                  "id": "geldi",
+                  "etiket": "İdrar geldi",
+                  "basamaklar": [
+                    {
+                      "id": "g-sisir",
+                      "metin": "Balonu steril izotonikle şişir, hafifçe geri çek",
+                      "aciklama": "Kateter mesanede olduğuna göre balon kanalından steril izotonik verirsin. Hafifçe geri çektiğinde balon mesane boynuna oturur ve direnç hissedilir."
+                    },
+                    {
+                      "id": "g-torba",
+                      "metin": "İdrar torbasını drenaj kanalına bağla",
+                      "aciklama": "Torba kalın drenaj kanalına takılır; ince valfli kanal balon içindir. Gerekiyorsa bu aşamada kültür örneği alınır."
+                    },
+                    {
+                      "id": "g-kayit",
+                      "metin": "İşlemi ve komplikasyonları kaydet",
+                      "aciklama": "Kateterin türü ve boyu, balon hacmi, gelen idrarın miktarı ve görünümü kaydedilir. İşlem sırasında yaşanan güçlük ve gelişen komplikasyonlar da aynı kayda yazılır."
+                    }
+                  ]
+                },
+                {
+                  "id": "gelmedi",
+                  "etiket": "İdrar gelmedi",
+                  "basamaklar": [
+                    {
+                      "id": "test",
+                      "metin": "Geniş uçlu enjektörle 30–40 mL steril izotonik ver, geri çek",
+                      "aciklama": "İdrar gelmemesinin iki nedeni vardır: mesane boştur ya da kateter üretrada kıvrılmıştır. Geniş uçlu kateter enjektörüyle otuz kırk mililitre steril izotonik verip geri çekersin. Sıvının nasıl gidip geldiği kateterin nerede olduğunu gösterir.",
+                      "dal": {
+                        "soru": "Sıvı rahat gidip geri geliyor mu?",
+                        "yollar": [
+                          {
+                            "id": "rahat",
+                            "etiket": "Rahat gidiyor, geri geliyor → mesanedesin",
+                            "basamaklar": [
+                              {
+                                "id": "r-sisir",
+                                "metin": "Balonu steril izotonikle şişir, hafifçe geri çek",
+                                "aciklama": "Kateter mesanede olduğuna göre balon kanalından steril izotonik verirsin. Hafifçe geri çektiğinde balon mesane boynuna oturur ve direnç hissedilir."
+                              },
+                              {
+                                "id": "r-torba",
+                                "metin": "İdrar torbasını drenaj kanalına bağla",
+                                "aciklama": "Torba kalın drenaj kanalına takılır; ince valfli kanal balon içindir. Gerekiyorsa bu aşamada kültür örneği alınır."
+                              },
+                              {
+                                "id": "r-kayit",
+                                "metin": "İşlemi ve komplikasyonları kaydet",
+                                "aciklama": "Kateterin türü ve boyu, balon hacmi, gelen idrarın miktarı ve görünümü kaydedilir. İşlem sırasında yaşanan güçlük ve gelişen komplikasyonlar da aynı kayda yazılır."
+                              }
+                            ]
+                          },
+                          {
+                            "id": "zor",
+                            "etiket": "Zor gidiyor, geri gelmiyor → üretrada kıvrıldı",
+                            "basamaklar": [
+                              {
+                                "id": "geri",
+                                "metin": "Balonu şişirmeden kateteri geri çek",
+                                "aciklama": "Kateter üretrada kıvrılmıştır; balon burada şişirilirse üretra perfore olur, sfinkter düzeyindeyse kalıcı inkontinans, ayrıca kanama ve uzun dönemde darlık gelişir. Balonu hiç şişirmeden kateteri nazikçe geri çekersin."
+                              },
+                              {
+                                "id": "yeniden",
+                                "metin": "Yeni steril kateterle, penisi gererek yeniden dene",
+                                "aciklama": "Çıkarılan kateter artık steril değildir; yeniden denemek için yeni steril kateter kullanılır. Penisi daha dik ve gergin tutmak kateterin takıldığı kıvrımı aşmasına yardım eder. Zorlayarak ilerletmek yeni bir yaralanma yaratır."
+                              },
+                              {
+                                "id": "z-kayit",
+                                "metin": "Güçlüğü ve komplikasyonu kaydet",
+                                "aciklama": "Kaç deneme yapıldığı, kateterin nerede takıldığı ve kanama gibi komplikasyonlar kaydedilir. Yeniden deneme de başarısız olursa hasta ileri değerlendirme için ilgili hekime danışılır."
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "senaryolar": [
+      {
+        "id": "s1",
+        "baslik": "İdrar gelmedi",
+        "sahne": "erkek",
+        "eylem": [
+          {
+            "t": "goster",
+            "id": "e-kateter"
+          },
+          {
+            "t": "renk",
+            "id": "e-kateter",
+            "renk": "sari"
+          }
+        ],
+        "soru": "Altmış beş yaşında erkek hastaya kateteri çatal kısmına kadar ilerlettin ama idrar gelmiyor. İlk ne yaparsın?",
+        "secenekler": [
+          {
+            "metin": "Geniş uçlu enjektörle 30–40 mL steril izotonik verip geri çekmeyi denerim",
+            "dogru": true,
+            "aciklama": "Bu yıkama testi kateterin mesanede mi yoksa üretrada kıvrılmış mı olduğunu ayırır. Sıvı rahat gidip geri geliyorsa uç mesanededir ve balon güvenle şişirilir; bu yüzden ilk yapılacak iştir."
+          },
+          {
+            "metin": "Balonu şişirip torbayı bağlar, idrarın gelmesini beklerim",
+            "dogru": false,
+            "aciklama": "Balon şişirme kateteri yerinde sabitlemek içindir ve yalnız uç mesanedeyken yapılır. İdrar gelmiyorsa kateter üretrada kıvrılmış olabilir; orada şişirilen balon perforasyon, kanama ve darlık yapar."
+          },
+          {
+            "metin": "Kateteri çekip hemen daha kalın bir kateterle yeniden denerim",
+            "dogru": false,
+            "aciklama": "Kalın kateter takılma ya da kıvrılma sorununu çözmez, üretrayı daha çok zorlar. Önce kateterin nerede olduğunu yıkama testiyle anlamak gerekir; kör yeniden deneme hasarı artırır."
+          },
+          {
+            "metin": "Mesane boştur diye kateteri yerinde bırakıp işlemi bitiririm",
+            "dogru": false,
+            "aciklama": "Mesanenin boş olması olasılıklardan yalnız biridir ve kanıtlanmadan kabul edilemez. Şişirilmemiş kateter sabit durmaz; kıvrılmış kateteri bırakmak da sorunu gizler."
+          }
+        ],
+        "puf": "İdrar yok → şişirme yok → önce izotonik ver, geri al."
+      },
+      {
+        "id": "s2",
+        "baslik": "Trafik kazası",
+        "sahne": "travma",
+        "eylem": [
+          {
+            "t": "goster",
+            "id": "t-kirik"
+          },
+          {
+            "t": "goster",
+            "id": "t-kan"
+          }
+        ],
+        "soru": "Trafik kazası geçiren erkek hastada pubis kırığı ve simfiz ayrılması var, eksternal meatusta taze kan görüyorsun. İdrar takibi gerekiyor. Ne yaparsın?",
+        "secenekler": [
+          {
+            "metin": "Üretral kateter takmam; üretra yaralanması düşünüp başka yöntemle yaklaşılmasını sağlarım",
+            "dogru": true,
+            "aciklama": "Pelvis kırığına meatusta taze kanın eşlik etmesi üretra yaralanmasını düşündürür ve bu durum kateter için kontrendikasyondur. Kısmi yırtıkta kateter yırtığı tama çevirebileceği için idrar başka bir yolla alınır."
+          },
+          {
+            "metin": "Bol jel kullanarak yavaşça kateter takarım",
+            "dogru": false,
+            "aciklama": "Jel kayganlık ve anestezi sağlar ama yırtılmış üretrayı korumaz. Kısmi yırtıkta kateterin ucu yırtıktan çıkarak üretrayı tamamen koparabilir."
+          },
+          {
+            "metin": "Pelvis kırığı olduğu için kateter takarım, kırık tek başına engel değildir",
+            "dogru": false,
+            "aciklama": "Pelvis kırığı tek başınayken kateter gerçekten takılabilir; ancak bu hastada meatusta taze kan da var. İkisi birlikte olduğunda üretra yaralanması düşünülür ve kateter kontrendike olur."
+          },
+          {
+            "metin": "Önce rektal tuşe yapıp sonra kateter takarım",
+            "dogru": false,
+            "aciklama": "Rektal tuşe prostatın konumu hakkında bilgi verebilir ama meatustaki kanın anlamını değiştirmez. Üretra yaralanması şüphesi sürdükçe kateter takılmaz."
+          }
+        ],
+        "puf": "Pelvis kırığı + meatusta kan = kateter yok."
+      },
+      {
+        "id": "s3",
+        "baslik": "İdrar yapamıyorum diyen genç kadın",
+        "sahne": "mesane",
+        "eylem": [
+          {
+            "t": "gizle",
+            "id": "g-mesane-normal"
+          },
+          {
+            "t": "goster",
+            "id": "g-kucuk"
+          }
+        ],
+        "soru": "Yirmi beş yaşında kadın suprapubik ağrı, sık idrara çıkma ve yanma ile geliyor; 'idrar yapamıyorum' diyor. Hemşire sonda hazırlıyor. Doğru yaklaşım hangisi?",
+        "secenekler": [
+          {
+            "metin": "Önce muayene ve ultrasonla mesanenin gerçekten dolu olup olmadığını değerlendiririm",
+            "dogru": true,
+            "aciklama": "Bu yakınmalar sistiti düşündürür; sistitte hasta sık tuvalete gider ama mesanede çok az idrar vardır. Suprapubik dolgunluk ya da ultrasonda dolu mesane yoksa kateter endikasyonu yoktur."
+          },
+          {
+            "metin": "Hemen kateter takarak mesaneyi boşaltırım",
+            "dogru": false,
+            "aciklama": "Kateter gerçek retansiyonda rahatlatır, ama sistitli hastanın mesanesi zaten neredeyse boştur. Gereksiz kateter enfeksiyon riskini artırır ve günlerce ağrı bırakır."
+          },
+          {
+            "metin": "Kültür almak için kateter takarım, sonra çıkarırım",
+            "dogru": false,
+            "aciklama": "Kateterle kültür, kendiliğinden temiz örnek veremeyen küçük çocuk ya da yaşlı hasta içindir. Genç, bilinci açık kadın orta akım idrar verebilir; kateter gereksizdir."
+          },
+          {
+            "metin": "Glob vezikale kabul edip kalıcı kateter takarım",
+            "dogru": false,
+            "aciklama": "Glob vezikale tanısı, mesanenin idrarla dolu olduğunun muayene ya da ultrasonla gösterilmesini gerektirir. Bu hastada dolgunluk kanıtı yoktur ve yakınmaları sistitle açıklanır."
+          }
+        ],
+        "puf": "'İdrar yapamıyorum' ≠ retansiyon; önce muayene et."
+      },
+      {
+        "id": "s4",
+        "baslik": "Ateş ve perine ağrısı",
+        "sahne": "erkek",
+        "eylem": [
+          {
+            "t": "renk",
+            "id": "e-prostat",
+            "renk": "kirmizi"
+          }
+        ],
+        "soru": "Elli yaşında erkek hasta yüksek ateş, perine ağrısı ve idrar yaparken yanma ile geliyor; akut prostatit düşünüyorsun. Üretral kateter için ne söylersin?",
+        "secenekler": [
+          {
+            "metin": "Kontrendikedir; girişim bakteriyemi ve sepsise yol açabilir",
+            "dogru": true,
+            "aciklama": "Akut prostatitte üretradan geçen kateter ve hatta rektal tuşe, iltihaplı prostattan kana bakteri geçişine neden olabilir. Bu yüzden akut prostatit ve prostat absesi şüphesinde üretral kateter takılmaz."
+          },
+          {
+            "metin": "Takılabilir, yeter ki bol lidokainli jel kullanılsın",
+            "dogru": false,
+            "aciklama": "Lidokainli jel üretrayı kayganlaştırır ve ağrıyı azaltır, ama bakterinin kana geçme riskini ortadan kaldırmaz. Bu hastada sorun ağrı değil, girişimin yol açabileceği sepsistir."
+          },
+          {
+            "metin": "Silikon kateter takılırsa sorun olmaz",
+            "dogru": false,
+            "aciklama": "Silikon kateter, lateksten daha uzun süre takılı kalabilmesiyle ayrılır; enfeksiyonun yayılmasını önlemez. Akut prostatitteki kontrendikasyon kateterin malzemesine göre değişmez."
+          },
+          {
+            "metin": "Önce rektal tuşeyle prostatı değerlendirip sonra takarım",
+            "dogru": false,
+            "aciklama": "Akut prostatitte rektal tuşe de bakteriyemi yapabilecek bir girişimdir. Hem tuşe hem kateter bu hastada kaçınılması gereken işlemlerdir."
+          }
+        ],
+        "puf": "Akut prostatit: tuşe de kateter de yok."
+      },
+      {
+        "id": "s5",
+        "baslik": "Yoğun bakımdaki septik şok",
+        "sahne": "mesane",
+        "eylem": [
+          {
+            "t": "goster",
+            "id": "g-torba"
+          }
+        ],
+        "soru": "Septik şokla yoğun bakıma yatan, bilinci kapalı hastaya kateter takıyorsun. Hoca 'Neden takıyorsun?' diye soruyor. En doğru cevap hangisi?",
+        "secenekler": [
+          {
+            "metin": "Sıvı tedavisini yönlendirmek için saatlik idrar çıkışını izlemek",
+            "dogru": true,
+            "aciklama": "Şoktaki hastada idrar çıkışı böbrek perfüzyonunu ve sıvı yeterliliğini gösteren en önemli göstergelerden biridir. Az sıvı böbreği, fazla sıvı akciğer ve kalbi bozacağı için miktar idrara göre ayarlanır."
+          },
+          {
+            "metin": "Hasta tuvalete gidemediği için hijyen sağlamak",
+            "dogru": false,
+            "aciklama": "Yatağa bağımlılık bir endikasyon olabilir ama bu hastada asıl amaç bu değildir. Şokta kateterin kazandırdığı şey sıvı dengesinin ölçülebilmesidir."
+          },
+          {
+            "metin": "Mesaneye antibiyotik vermek",
+            "dogru": false,
+            "aciklama": "Mesaneye ilaç verme, kemoterapötik uygulaması gibi özel durumlar için kateter kullanılmasıdır. Septik şokta antibiyotik damar yoluyla verilir; bu hastada kateterin görevi idrar ölçümüdür."
+          },
+          {
+            "metin": "Sistografi çekmek",
+            "dogru": false,
+            "aciklama": "Sistografi travmada mesane yaralanmasını göstermek için opak madde verilen bir incelemedir. Bu hastada travma yoktur; endikasyon idrar takibidir."
+          }
+        ],
+        "puf": "Şok, yoğun bakım, uzun ameliyat → idrar çıkışı takibi."
+      },
+      {
+        "id": "s6",
+        "baslik": "Torba nereye?",
+        "sahne": "foley",
+        "eylem": [
+          {
+            "t": "etiket",
+            "id": "f-drenaj"
+          },
+          {
+            "t": "etiket",
+            "id": "f-balon-kanal"
+          }
+        ],
+        "soru": "Balonu şişirdin, idrar torbasını bağlayacaksın. Torbanın ucunu nereye takarsın?",
+        "secenekler": [
+          {
+            "metin": "Kalın drenaj kanalına",
+            "dogru": true,
+            "aciklama": "Drenaj kanalı kateterin ucundaki deliklerden gelen idrarı dışarı taşır ve torbaya bağlanmak için yapılmıştır. İdrarın torbaya akması için tek doğru bağlantı budur."
+          },
+          {
+            "metin": "İnce valfli balon kanalına",
+            "dogru": false,
+            "aciklama": "Balon kanalı enjektörle sıvı verip balonu şişirmek ve indirmek içindir, idrar taşımaz. Sınavda en sık yapılan hata torbayı buraya takmaya çalışmaktır."
+          },
+          {
+            "metin": "Hangisine takıldığı fark etmez",
+            "dogru": false,
+            "aciklama": "İki kanalın işlevi farklıdır: biri idrarı taşır, diğeri balonu şişirir. Yanlış kanala takılan torbaya idrar gelmez ve balon sistemi bozulur."
+          }
+        ],
+        "puf": "Torba → drenaj kanalı; enjektör → balon kanalı."
+      },
+      {
+        "id": "s7",
+        "baslik": "Kadında idrar geldi",
+        "sahne": "kadin",
+        "eylem": [
+          {
+            "t": "goster",
+            "id": "k-kateter"
+          },
+          {
+            "t": "goster",
+            "id": "k-idrar"
+          }
+        ],
+        "soru": "Kadın hastada kateteri meatustan ilerlettin ve idrar geldi. Sıradaki adım hangisi?",
+        "secenekler": [
+          {
+            "metin": "Kateteri birkaç santimetre daha ilerletip sonra balonu şişiririm",
+            "dogru": true,
+            "aciklama": "İdrar, kateterin ucundaki delikler mesaneye girince gelir; balon bu deliklerin hemen gerisindedir. Birkaç santim daha ilerletmek balonun da tamamen mesaneye girmesini sağlar."
+          },
+          {
+            "metin": "Hemen balonu şişiririm",
+            "dogru": false,
+            "aciklama": "İdrarın gelmesi yalnız uçtaki deliklerin mesanede olduğunu gösterir. Balon henüz kısa kadın üretrasında olabilir; orada şişirmek üretrayı yaralar."
+          },
+          {
+            "metin": "Kateteri biraz geri çekip öyle şişiririm",
+            "dogru": false,
+            "aciklama": "Geri çekmek balonu üretraya daha da yaklaştırır. Geri çekme ancak balon şişirildikten sonra, mesane boynuna oturtmak için yapılır."
+          }
+        ],
+        "puf": "İdrar geldi → birkaç santim daha → şişir → hafif çek."
+      },
+      {
+        "id": "s8",
+        "baslik": "Erkekte jel",
+        "sahne": "erkek",
+        "eylem": [
+          {
+            "t": "vurgula",
+            "id": "e-uretra"
+          }
+        ],
+        "soru": "Erkek hastaya kateter takacaksın. Jeli nasıl kullanırsın?",
+        "secenekler": [
+          {
+            "metin": "Tüpün tamamını meatustan üretraya verir, penisin ucunu tutarak 2–3 dakika beklerim",
+            "dogru": true,
+            "aciklama": "Erkek üretrası uzundur ve işlem daha ağrılıdır; jel hem kayganlaştırır hem lidokain sayesinde anestezi yapar. Lidokainin etki göstermesi için jel üretranın içinde birkaç dakika tutulur."
+          },
+          {
+            "metin": "Kadındaki gibi yalnız kateterin ucuna iki mililitre sürerim",
+            "dogru": false,
+            "aciklama": "Kateter ucuna az miktar jel kadının kısa üretrası için yeterlidir. Erkeğin uzun üretrasında bu miktar ne kayganlık ne de anestezi sağlar."
+          },
+          {
+            "metin": "Jeli kateter yerleştikten sonra meatusa sürerim",
+            "dogru": false,
+            "aciklama": "Jelin amacı, kateter ilerlerken üretrayı kayganlaştırmak ve lidokainle uyuşturmaktır. İşlem bittikten sonra meatusa sürülen jel bu işlevlerin hiçbirini yerine getirmez."
+          }
+        ],
+        "puf": "Erkek: jel üretraya, tamamı, 2–3 dk bekle."
+      }
+    ],
+    "bul": [
+      {
+        "id": "b1",
+        "sahne": "kadin",
+        "yonerge": "Kateteri sokacağın açıklığı göster.",
+        "hedef": "k-meatus",
+        "aciklama": "Eksternal üretra ağzı klitorisin yaklaşık 1 cm altında, labium minusların arasındaki üstteki açıklıktır; alttaki açıklık vajinadır."
+      },
+      {
+        "id": "b2",
+        "sahne": "foley",
+        "yonerge": "İdrar torbasını takacağın kanalı göster.",
+        "hedef": "f-drenaj",
+        "aciklama": "Torba kalın drenaj kanalına takılır; ince valfli kanal balonu şişirmek içindir."
+      },
+      {
+        "id": "b3",
+        "sahne": "foley",
+        "yonerge": "Balonu şişirmek için enjektörü takacağın yeri göster.",
+        "hedef": "f-balon-kanal",
+        "aciklama": "Balon kanalı ince ve valflidir; buradan steril izotonik verilerek balon şişirilir."
+      },
+      {
+        "id": "b4",
+        "sahne": "erkek",
+        "yonerge": "Balonun şişirilmesi gereken yeri göster.",
+        "hedef": "e-mesane",
+        "aciklama": "Balon yalnız mesanede şişirilir; üretrada ya da sfinkter düzeyinde şişirmek perforasyon ve kalıcı inkontinans yapar."
+      },
+      {
+        "id": "b5",
+        "sahne": "erkek",
+        "yonerge": "Akut enfeksiyonunda kateterin kontrendike olduğu organı göster.",
+        "hedef": "e-prostat",
+        "aciklama": "Akut prostatitte kateter ve rektal tuşe bakteriyemi ve sepsise yol açabilir."
+      }
+    ]
+  },
+  "hedefCalisma": [
+    {
+      "no": 1,
+      "sahne": "pozisyon",
+      "eylem": [
+        {
+          "t": "etiket",
+          "id": "p-hekim"
+        },
+        {
+          "t": "vurgula",
+          "id": "p-hekim"
+        }
+      ],
+      "ne": "Hastaya adını ve görevini söyleyerek kendini tanıtırsın.",
+      "nasil": [
+        "İşleme başlamadan önce hastanın yüzüne bakar, kim olduğunu ve neden yanında olduğunu açıkça söylersin.",
+        "Sınavda maket başında da bu cümleyi yüksek sesle kurarsın; hoca bu adımı puanlar."
+      ],
+      "neden": "Hasta kendisine kimin işlem yaptığını bilirse güvenir ve uyum gösterir.",
+      "hata": "Doğrudan malzemeye uzanıp hastayla hiç konuşmadan işleme başlamak.",
+      "hoca": "Hastaya ilk ne söylersin?"
+    },
+    {
+      "no": 2,
+      "sahne": "pozisyon",
+      "eylem": [
+        {
+          "t": "etiket",
+          "id": "p-hekim"
+        },
+        {
+          "t": "goster",
+          "id": "p-paravan"
+        },
+        {
+          "t": "goster",
+          "id": "p-yardimci"
+        },
+        {
+          "t": "etiket",
+          "id": "p-yardimci"
+        }
+      ],
+      "lottie": "mahremiyet",
+      "ne": "Hastaya ya da yakınına kateterin neden gerektiğini anlatır, sözlü onamını alırsın.",
+      "nasil": [
+        "\"Yatın, sonda takacağım\" diye geçiştirmezsin; idrarın neden alınması gerektiğini anlayacağı dille anlatırsın.",
+        "Mahremiyeti paravan ya da perdeyle sağlar, yanına yardımcı personel alırsın; karşı cinsten hastada karşı cinsten personel, çocukta ebeveyn bulunur."
+      ],
+      "neden": "Onam hukuki bir zorunluluktur; refakatçi hem hastayı rahatlatır hem seni medikolegal sorunlardan korur.",
+      "hata": "İşlemi anlatmadan başlamak ya da ortalık yerde, perde çekmeden kateter takmak.",
+      "hoca": "Bu hastaya kateter takarken yanında kim olmalı?"
+    },
+    {
+      "no": 3,
+      "sahne": "malzeme",
+      "eylem": [
+        {
+          "t": "vurgula",
+          "id": "m-lateks"
+        },
+        {
+          "t": "vurgula",
+          "id": "m-silikon"
+        },
+        {
+          "t": "vurgula",
+          "id": "m-genis"
+        },
+        {
+          "t": "etiket",
+          "id": "m-jel"
+        }
+      ],
+      "lottie": "malzeme-hazirlik",
+      "ne": "Malzemeleri tepside hazırlar ve kontrol edersin.",
+      "nasil": [
+        "Uygun boyda kateter, steril olmayan ve steril eldiven, jel, steril izotonik ve enjektör, geniş uçlu kateter enjektörü, antiseptik ve gazlı bez, delikli örtü ve idrar torbası hazırlanır.",
+        "Erişkin kateteri 12 ile 24 French arasındadır; çocuk kateterleri 6, 8 ve 10 French olup daha kısadır."
+      ],
+      "neden": "Eksik malzeme işlemi steril alanın ortasında durdurur.",
+      "hata": "Geniş uçlu kateter enjektörünü unutmak; idrar gelmezse kateterin yerini onunla anlarsın.",
+      "hoca": "Malzemeleri say; hangisi idrar gelmediğinde işe yarar?"
+    },
+    {
+      "no": 4,
+      "sahne": "yakin-el",
+      "eylem": [
+        {
+          "t": "etiket",
+          "id": "h-el"
+        }
+      ],
+      "ne": "Ellerini yıkar, önce steril olmayan eldiven giyersin.",
+      "nasil": [
+        "Temizlik aşaması kirli alanla temastır; bu yüzden ilk eldiven steril olmayan eldivendir.",
+        "Steril eldiven temizlikten sonraki aşamaya saklanır."
+      ],
+      "neden": "Steril eldiveni temizlikte kullanırsan kirlenir ve yerleştirme aşamasında steril kalmaz.",
+      "hata": "Temizliği steril eldivenle yapıp aynı eldivenle kateteri tutmak.",
+      "hoca": "Hangi aşamada hangi eldiveni giyersin?"
+    },
+    {
+      "no": 5,
+      "sahne": "kadin",
+      "eylem": [
+        {
+          "t": "goster",
+          "id": "k-temizlik"
+        },
+        {
+          "t": "ciz",
+          "id": "k-temizlik"
+        },
+        {
+          "t": "etiket",
+          "id": "k-minus"
+        }
+      ],
+      "lottie": "kadin-temizlik",
+      "ne": "Kateterin uygulanacağı bölgeyi antiseptikle ovarak silersin.",
+      "nasil": [
+        "Kadında labium minuslardan majuslara, merkezden dışa doğru dairesel silersin; dışa ulaşınca yeni bezle yeniden merkezden başlarsın.",
+        "Erkekte prepisyumu geri çekip meatustan glans boyunca dışa doğru silersin; iki cinsiyette de bu üç kez tekrarlanır."
+      ],
+      "neden": "Merkezden dışa silmek mikroorganizmaları meatustan uzaklaştırır.",
+      "hata": "Dıştan içe silmek ya da aynı bezle tekrar tekrar silmek.",
+      "hoca": "Temizliği hangi yönde, kaç kez yaparsın?"
+    },
+    {
+      "no": 6,
+      "sahne": "malzeme",
+      "eylem": [
+        {
+          "t": "goster",
+          "id": "m-steril-alan"
+        },
+        {
+          "t": "ciz",
+          "id": "m-steril-alan"
+        }
+      ],
+      "ne": "Steril alan hazırlar, steril malzemeleri buraya yerleştirirsin.",
+      "nasil": [
+        "Yardımcın steril paketleri açarak malzemeyi steril alana bırakır ya da sana uzatır.",
+        "Steril alana yalnız steril malzeme konur; steril olmayan bir şey değerse alan bozulmuş sayılır."
+      ],
+      "neden": "Kateter mesaneye steril bir yoldan girmezse enfeksiyon riski artar.",
+      "hata": "Steril paketi kendi steril olmayan eldiveninle açıp içindekine dokunmak.",
+      "hoca": "Steril malzemeyi sana kim, nasıl verir?"
+    },
+    {
+      "no": 7,
+      "sahne": "yakin-el",
+      "eylem": [
+        {
+          "t": "etiket",
+          "id": "h-el"
+        },
+        {
+          "t": "etiket",
+          "id": "h-halka"
+        }
+      ],
+      "ne": "Steril eldiven giyersin.",
+      "nasil": [
+        "Temizlik bittikten sonra steril eldiveni giyersin; bundan sonra yalnız steril malzemeye ve steril alana dokunursun.",
+        "Kateteri avucunda halka gibi toplayarak tutar, ucunun etrafa değmesine izin vermezsin."
+      ],
+      "neden": "Steril eldiven kateterin mesaneye kirlenmeden ulaşmasını sağlar.",
+      "hata": "Steril eldivenle hastanın uyluğuna, örtünün dışına ya da kendi önlüğüne dokunmak.",
+      "hoca": "Kateteri neden avucunda toplayarak tutarsın?"
+    },
+    {
+      "no": 8,
+      "sahne": "kadin",
+      "eylem": [
+        {
+          "t": "goster",
+          "id": "k-ortu"
+        },
+        {
+          "t": "etiket",
+          "id": "k-ortu"
+        }
+      ],
+      "ne": "Delikli örtüyü kateter uygulanacak bölgeye yerleştirirsin.",
+      "nasil": [
+        "Örtünün deliği meatus açıkta kalacak şekilde ortalanır; çevredeki deri örtüyle kapanır.",
+        "Böylece kateter ve elin yalnız steril bir pencere içinde çalışır."
+      ],
+      "neden": "Örtü, kateterin çevredeki temizlenmemiş deriye değmesini önler.",
+      "hata": "Örtüyü meatus görünmeyecek biçimde yerleştirip sonra elle kaydırmak.",
+      "hoca": "Delikli örtü neyi korur?"
+    },
+    {
+      "no": 9,
+      "sahne": "erkek",
+      "eylem": [
+        {
+          "t": "goster",
+          "id": "e-kateter"
+        },
+        {
+          "t": "ciz",
+          "id": "e-kateter"
+        },
+        {
+          "t": "etiket",
+          "id": "e-prostat"
+        },
+        {
+          "t": "etiket",
+          "id": "e-sfinkter"
+        }
+      ],
+      "lottie": "erkek-ilerleyis",
+      "ne": "Üretral kateteri üretra ağzından mesaneye kadar itersin.",
+      "nasil": [
+        "Kadında ucuna jel sürülmüş kateteri meatustan ilerletirsin; idrar gelince birkaç santimetre daha itersin.",
+        "Erkekte jelin tamamını üretraya verip iki üç dakika bekler, penisi dik ve gergin tutarak kateteri çatal kısmına kadar itersin."
+      ],
+      "neden": "Balonun mesanede şişirilebilmesi için kateterin ucu ve balonu mesaneye tam girmelidir.",
+      "hata": "Erkekte idrar erken geldi diye kateteri sonuna kadar itmemek.",
+      "hoca": "Erkekte kateteri nereye kadar itersin, neden?"
+    },
+    {
+      "no": 10,
+      "sahne": "yakin-mesane",
+      "eylem": [
+        {
+          "t": "goster",
+          "id": "y-kateter"
+        },
+        {
+          "t": "goster",
+          "id": "y-delik"
+        },
+        {
+          "t": "goster",
+          "id": "y-idrar"
+        },
+        {
+          "t": "ciz",
+          "id": "y-idrar"
+        },
+        {
+          "t": "etiket",
+          "id": "y-delik"
+        }
+      ],
+      "lottie": "yikama-testi",
+      "ne": "Mesaneden idrar gelişini kontrol edersin.",
+      "nasil": [
+        "İdrar, kateterin ucundaki delikler mesaneye girince gelir.",
+        "İdrar gelmiyorsa balonu şişirmeden geniş uçlu enjektörle otuz kırk mililitre steril izotonik verirsin; rahatça gidip geri geliyorsa mesanedesin."
+      ],
+      "neden": "İdrarın gelmesi kateterin mesanede olduğunun en güvenilir işaretidir.",
+      "hata": "İdrar gelmediği halde balonu şişirmek.",
+      "hoca": "İdrar gelmedi; ilk ne yaparsın?"
+    },
+    {
+      "no": 11,
+      "sahne": "yakin-mesane",
+      "eylem": [
+        {
+          "t": "goster",
+          "id": "y-kateter"
+        },
+        {
+          "t": "goster",
+          "id": "y-balon"
+        },
+        {
+          "t": "etiket",
+          "id": "y-balon"
+        },
+        {
+          "t": "goster",
+          "id": "y-cekme"
+        },
+        {
+          "t": "ciz",
+          "id": "y-cekme"
+        }
+      ],
+      "lottie": "balon-sisme",
+      "ne": "Kateterin mesanede olduğundan emin olunca sabitleme balonunu şişirirsin.",
+      "nasil": [
+        "Balon kanalından enjektörle steril izotonik verirsin; hasta ağrı tarif ederse durur, balonu indirip kateterin yerini yeniden değerlendirirsin.",
+        "Sonra kateteri hafifçe geri çekersin; balon mesane boynuna oturur."
+      ],
+      "neden": "Üretrada şişen balon perforasyon, kanama ve darlık yapar; sfinkter düzeyindeyse kalıcı inkontinans gelişir.",
+      "hata": "Balonu idrar gelmeden ya da kadında idrar gelir gelmez, birkaç santimetre daha itmeden şişirmek.",
+      "hoca": "Balonu ne zaman ve neyle şişirirsin?"
+    },
+    {
+      "no": 12,
+      "sahne": "foley",
+      "eylem": [
+        {
+          "t": "goster",
+          "id": "f-torba"
+        },
+        {
+          "t": "ciz",
+          "id": "f-torba-bag"
+        },
+        {
+          "t": "etiket",
+          "id": "f-drenaj"
+        },
+        {
+          "t": "renk",
+          "id": "f-drenaj",
+          "renk": "yesil"
+        }
+      ],
+      "lottie": "idrar-akisi",
+      "ne": "İdrar biriktirme torbasını katetere bağlarsın.",
+      "nasil": [
+        "Torba kalın drenaj kanalına takılır; ince valfli kanal balon içindir.",
+        "Torbanın üzerindeki çizgilerden idrar miktarı izlenir, altındaki musluktan boşaltılır."
+      ],
+      "neden": "Doğru kanala bağlanmayan torbaya idrar gelmez.",
+      "hata": "Torbayı balon kanalına takmaya çalışmak; sınavda en sık yapılan hata budur.",
+      "hoca": "Torbayı hangi kanala takarsın?"
+    },
+    {
+      "no": 13,
+      "sahne": "mesane",
+      "eylem": [
+        {
+          "t": "goster",
+          "id": "g-kultur"
+        },
+        {
+          "t": "etiket",
+          "id": "g-kultur"
+        },
+        {
+          "t": "goster",
+          "id": "g-torba"
+        }
+      ],
+      "ne": "Gerekiyorsa idrar kültürü alırsın.",
+      "nasil": [
+        "Kateter takıldıktan sonra gelen idrardan steril kaba örnek alınabilir.",
+        "Kendiliğinden temiz idrar veremeyen küçük çocuk ya da yaşlı hastada kültür için kateter takılabilir."
+      ],
+      "neden": "Steril yoldan alınan örnek kültür sonucunu güvenilir kılar.",
+      "hata": "Genç, bilinci açık ve orta akım idrar verebilen hastaya yalnız kültür için kateter takmak.",
+      "hoca": "Kimde kültür için kateter takılabilir?"
+    },
+    {
+      "no": 14,
+      "sahne": "foley",
+      "eylem": [
+        {
+          "t": "etiket",
+          "id": "f-govde"
+        },
+        {
+          "t": "vurgula",
+          "id": "f-balon-kanal"
+        }
+      ],
+      "ne": "Yaptığın işlemi gelişen komplikasyonlarla birlikte kaydedersin.",
+      "nasil": [
+        "Kullanılan kateterin türü ve boyu, balona verilen hacim, gelen idrarın miktarı ve görünümü yazılır.",
+        "Yaşanan güçlük, kanama ya da başarısız denemeler de kayda geçer."
+      ],
+      "neden": "Kayıt, sonraki ekibin kateteri ve olası sorunları bilmesini sağlar.",
+      "hata": "Komplikasyon gelişmediyse kayda gerek olmadığını düşünmek.",
+      "hoca": "Kayda neleri yazarsın?"
+    },
+    {
+      "no": 15,
+      "sahne": "foley-kesit",
+      "eylem": [
+        {
+          "t": "etiket",
+          "id": "c-olcek-eriskin"
+        }
+      ],
+      "ne": "Üretral kateterin hastada ne kadar süre takılı kalabileceğini açıklarsın.",
+      "nasil": [
+        "Sarı lateks kateter kısa süreli kullanım içindir; beyaz silikon kateter daha uzun süre takılı kalabilir.",
+        "Hastaya kateter çıkarıldıktan sonra birkaç gün yanma ve ağrı olabileceğini de anlatırsın."
+      ],
+      "neden": "Kalış süresi kateterin malzemesine göre seçilir; uzun süre kalacaksa silikon tercih edilir.",
+      "hata": "Bütün kateterlerin aynı süre kalabileceğini söylemek.",
+      "hoca": "Lateks ve silikon kateteri kalış süresine göre karşılaştır.",
+      "dogrulanacak": "Lateks ve silikon kateterin gün/hafta olarak kalış süresi KMB Rehberi ile doğrulanacak."
+    }
+  ]
+}

@@ -130,6 +130,7 @@ const SaglikView = React.lazy(() => wrapLazy(import('./components/saglik/SaglikV
 const CanliDersView = React.lazy(() => wrapLazy(import('./components/canliDers/CanliDersView')));
 const PatolojiCheckUp = React.lazy(() => wrapLazy(import('./components/checkup/PatolojiCheckUp')));
 const GenetikCheckUp = React.lazy(() => wrapLazy(import('./components/checkup/GenetikCheckUp')));
+const KmbAsistan = React.lazy(() => wrapLazy(import('./components/kmb/KmbAsistan')));
 const SonProvaView = React.lazy(() => wrapLazy(import('./components/sonProva/SonProvaView')));
 const CikmisCozucuView = React.lazy(() => wrapLazy(import('./components/cikmisCozucu/CikmisCozucuView')));
 const BasarimView = React.lazy(() => wrapLazy(import('./components/basarim/BasarimView')));
@@ -1956,6 +1957,13 @@ export default function App() {
         {activeTab === 'genetik_checkup' && (
           <Suspense fallback={<ViewFallback />}>
             <GenetikCheckUp />
+          </Suspense>
+        )}
+
+        {/* TAB: /kmb (görünen /kamplar/kmb/…) — KMB görsel sesli asistan: önce öğret, sonra vaka sınavı */}
+        {activeTab === 'kmb_asistan' && (
+          <Suspense fallback={<ViewFallback />}>
+            <KmbAsistan />
           </Suspense>
         )}
 

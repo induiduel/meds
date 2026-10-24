@@ -32,6 +32,7 @@ export const MERKEZ_ARACLARI: Record<KategoriId, MerkezArac[]> = {
   kamplar: [
     { id: 'sinav_plani', ne: 'En az 60 için nereye ne kadar çalışacağını gün gün görmek istiyorsan' },
     { id: 'son_prova', ne: 'Sınavdan önceki son günlerde kurulun tamamını sesli özetle bitirmek istiyorsan', oner: true },
+    { id: 'kmb_asistan', ne: 'KMB pratik sınavı için beceriyi sesli, videolu ve aşama aşama öğrenip vaka sorularıyla sınanmak istiyorsan' },
     { id: 'cikmis_cozucu', ne: 'Sınavdaki soru sayısı kadar çıkmış paketini sesli asistanla birlikte çözmek istiyorsan' },
     { id: 'kamp', ne: 'Hocanın derste verdiği ipuçlarından hızlı tekrar yapmak istiyorsan' },
     { id: 'en_onemliler', ne: 'Konu başına en önemli bilgileri puan sırasıyla görmek istiyorsan' },

@@ -74,6 +74,7 @@ export type AppRoute =
   | 'en_onemliler'
   | 'patoloji_checkup'
   | 'genetik_checkup'
+  | 'kmb_asistan'
   | 'bitirdiklerim'
   | 'basarimlar'
   | 'cevrimdisi'
@@ -126,6 +127,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   en_onemliler: '/en-onemliler',
   patoloji_checkup: '/patoloji-check-up',
   genetik_checkup: '/genetik-check-up',
+  kmb_asistan: '/kmb',
   son_prova: '/son-prova',
   cikmis_cozucu: '/cikmis-cozucu',
   bitirdiklerim: '/bitirdiklerim',
@@ -182,6 +184,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   en_onemliler: 'En önemliler',
   patoloji_checkup: 'Patoloji Hızlı Check Up',
   genetik_checkup: 'TBG Sınav Kampı',
+  kmb_asistan: 'KMB görsel asistan',
   son_prova: 'Son Prova',
   cikmis_cozucu: 'Çıkmış çözücü',
   bitirdiklerim: 'Bitirdiklerim',
@@ -308,6 +311,8 @@ const ALIASES: Record<string, AppRoute> = {
   genetik: 'genetik_checkup',
   tbg: 'genetik_checkup',
   'genetik-kampi': 'genetik_checkup',
+  kmb: 'kmb_asistan',
+  kmb_asistan: 'kmb_asistan',
   bitirdiklerim: 'bitirdiklerim',
   basarimlar: 'basarimlar',
   basarim: 'basarimlar',
