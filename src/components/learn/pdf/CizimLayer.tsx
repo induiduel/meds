@@ -292,6 +292,26 @@ function Sema({ z, t }: { z: CizimKomut; t: number }) {
   if (gruplar.size <= 1) return <SemaParca z={z} t={t} />;
   const gorunen = new Set(dg.slice(0, Math.max(1, Math.ceil(t * dg.length))).map((d) => d.id));
   const stil = z.konum ? { left: `${z.konum[0] * 100}%`, top: `${z.konum[1] * 100}%`, right: 'auto', bottom: 'auto', maxWidth: `${(z.genislik || 0.6) * 100}%` } : undefined;
+  // Her parça tek "A → B" ise hizalı tablo: kaynak | ok | hedef sütunları (kullanıcı 2026-10-24: satırlar farklı kırılıp
+  // biri tek satır, öteki iki satır görünüyordu)
+  const parcalar = [...gruplar.values()];
+  if (parcalar.every((ids) => ids.length === 2 && kn.filter((e) => ids.includes(e.a)).length === 1)) {
+    return (
+      <div className="pdv-cz-sema is-tablo" role="img" aria-label={dg.map((d) => d.metin).join(', ')} style={stil}>
+        {parcalar.map((ids, i) => {
+          const e = kn.find((x) => ids.includes(x.a))!;
+          const a = dg.find((d) => d.id === e.a), b = dg.find((d) => d.id === e.b);
+          if (!a || !gorunen.has(a.id)) return null;
+          return (
+            <div key={i} className="pdv-cz-tablo-satir">
+              <D d={a} />
+              {b && gorunen.has(b.id) ? <><Bag tur={e.tur} etiket={e.etiket} /><D d={b} hedef /></> : <><span /><span /></>}
+            </div>
+          );
+        })}
+      </div>
+    );
+  }
   return (
     <div className={`pdv-cz-sema is-coklu${(z.genislik || 1) < 0.32 ? ' is-dar' : ''}`} role="img" aria-label={dg.map((d) => d.metin).join(', ')} style={stil}>
       {[...gruplar.values()].map((ids, i) => {

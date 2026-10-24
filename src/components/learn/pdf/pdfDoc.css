@@ -252,6 +252,13 @@
 .pdv-cz-bag.has-etiket { flex-direction: column; align-items: stretch; min-width: 0; margin-top: 0; }
 .pdv-cz-bag.has-etiket .pdv-cz-bag-etiket { position: static; white-space: nowrap; text-align: center; line-height: 1.1; }
 .pdv-cz-sema.is-dar .pdv-cz-bag-ok { flex-direction: column; align-items: center; width: auto; }
+/* tablo: bağımsız A → B ilişkileri hizalı sütunlarda; uzun düğüm kendi hücresinde satıra iner */
+.pdv-cz-sema.is-tablo { display: grid; grid-template-columns: max-content max-content minmax(0, 1fr); row-gap: .55em; column-gap: .35em; align-items: center; }
+.pdv-cz-tablo-satir { display: contents; }
+.pdv-cz-tablo-satir + .pdv-cz-tablo-satir > * { border-top: 0; }
+.pdv-cz-sema.is-tablo .pdv-cz-dugum { justify-self: start; }
+/* baskılama ucu (⊣) görünür boyutta */
+.pdv-cz-bag.is-inhibe .pdv-cz-bag-uc { font-size: 1.15em; font-weight: 800; margin-left: -.15em; line-height: 1; }
 @keyframes pdv-cz-uza-d { from { transform: scaleY(0); } to { transform: scaleY(1); } }
 @keyframes pdv-cz-uza { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 /* grup / dal: liste alt alta, "}" (dalda "{") ayracı */

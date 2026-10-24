@@ -1,10 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 297,
-  "baslik": "Slayt takibi ve etiket düzeltmesi",
+  "onem": 298,
+  "baslik": "Çizim panellerinde hizalı ilişkiler",
   "maddeler": [
-    "Hızlı dinlemede de anlatılan satır oynatıcının altında kalmıyor",
-    "Uzun çizim etiketleri kesilmiyor, iki satıra iniyor"
+    "Aynı paneldeki ayrı ilişkiler hizalı sütunlarda (kaynak, ok, sonuç)",
+    "Baskılama oku daha belirgin"
   ],
   "eklenen": [],
   "degisen": [
