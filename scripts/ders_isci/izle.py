@@ -364,9 +364,18 @@ def main():
         log(f"iç API başlatılamadı: {e}")
     son_tarama = 0.0
     son_eslesme = time.time()
+    son_bakis = 0.0
     while True:
         try:
             a = ayar()
+            hb = int(a.get("hizli_bakis_dk", 5) or 0)
+            if hb and a["otomatik_tarama"] and time.time() - son_bakis >= hb * 60 and time.time() - son_tarama >= 120:
+                son_bakis = time.time()
+                try:
+                    import hizli_bakis  # noqa: E402  (değişiklikte tara_iste.json yazar → aşağıda tam tarama)
+                    hizli_bakis.bak()
+                except Exception as e:  # noqa: BLE001
+                    log(f"Drive hızlı bakış hatası: {e!r}")
             iste = oku(TARA_ISTE, None)
             if iste is not None or (a["otomatik_tarama"] and time.time() - son_tarama >= a["tarama_dk"] * 60):
                 TARA_ISTE.unlink(missing_ok=True)

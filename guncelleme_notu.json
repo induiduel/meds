@@ -1,14 +1,17 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 272,
-  "baslik": "Sesli derste slayt adımı bağlantısı düzeldi",
+  "onem": 273,
+  "baslik": "Yeni dersler daha hızlı yakalanıyor; çizimler daha isabetli",
   "maddeler": [
-    "Kurul 2 sesli derslerinde anlatılan cümlenin Öğren'deki adımı artık doğru gösteriliyor."
+    "Drive'a eklenen yeni ders PDF'i artık birkaç dakika içinde fark ediliyor.",
+    "Sesli derste canlı çizimler slaytın kendi oklarını ve şekillerini daha doğru izliyor."
   ],
-  "eklenen": [],
-  "degisen": [],
-  "duzeltilen": [
-    "Kurul 2 sesli derslerinde anlatılan cümlenin Öğren'deki adımı artık doğru gösteriliyor."
+  "eklenen": [
+    "Drive'a eklenen yeni ders PDF'i artık birkaç dakika içinde fark ediliyor."
   ],
+  "degisen": [
+    "Sesli derste canlı çizimler slaytın kendi oklarını ve şekillerini daha doğru izliyor."
+  ],
+  "duzeltilen": [],
   "silinen": []
 }

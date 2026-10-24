@@ -18,6 +18,7 @@ export type IsciAyar = {
   saat_bas: number;
   saat_bit: number;
   tarama_dk: number;
+  hizli_bakis_dk?: number;
   model: string;
   effort: string;
   sadakat_esigi: number;
@@ -186,6 +187,7 @@ export const IsciKontrol: React.FC<{
               {sayi('saat_bas', 'İşleme başlangıç saati', 'TR saati, 0–23.', [0, 23])}
               {sayi('saat_bit', 'İşleme bitiş saati', '1–24 (24 = gece yarısı). Başlangıçtan küçükse gece boyunca.', [1, 24])}
               {sayi('tarama_dk', 'Drive tarama aralığı (dk)', 'Drive yeni PDF için bu sıklıkla taranır.', [10, 1440])}
+              {sayi('hizli_bakis_dk', 'Hızlı bakış (dk, 0 kapalı)', 'Kök ve aktif kurul klasörüne bu sıklıkla hafifçe bakılır; değişiklik görülürse tam tarama hemen başlar.', [0, 60])}
               {sayi('sadakat_esigi', 'Yayın sadakat eşiği', 'Ders notunun PDF metnine sadakati bunun altındaysa yayın durur (0–1).', [0, 1], 0.01)}
               <Field label="Model" hint="Ders üreten Claude modeli; bir sonraki dersten geçerli.">
                 <select className="ms-input" value={taslak.model} onChange={(e) => set({ model: e.target.value })}>

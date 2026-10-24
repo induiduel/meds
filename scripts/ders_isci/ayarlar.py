@@ -96,6 +96,7 @@ AYAR_TANIM: dict[str, tuple] = {  # anahtar → (tür, varsayılan, alt, üst)
     "saat_bas": (int, 0, 0, 23),                         # işleme penceresi başlangıç saati (TR)
     "saat_bit": (int, 24, 1, 24),                        # bitiş saati (24 = gece yarısı); bas>bit gece aşırı pencere
     "tarama_dk": (int, 60, 10, 1440),                    # Drive tarama aralığı
+    "hizli_bakis_dk": (int, 5, 0, 60),                   # 2026-10-24: kök + aktif kurul klasörü hafif yoklaması (0 = kapalı)
     "model": (str, CLAUDE_MODEL, None, None),
     "effort": (str, CLAUDE_EFFORT, None, None),          # low | medium | high | "" (CLI varsayılanı)
     "sadakat_esigi": (float, 0.80, 0.0, 1.0),            # yayın denetimi: ders notu sadakat alt sınırı
