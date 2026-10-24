@@ -527,6 +527,18 @@ def main() -> int:
                 kisa = re.sub(r"\d+", "N", neden)[:60]
                 say["ret"][kisa] = say["ret"].get(kisa, 0) + 1
                 continue
+            # eş zamanlılık (genel kural 9): çizim, etiketteki / hedefteki terim konuşulurken başlar. Aralık o terimin
+            # cümledeki ilk geçtiği kelimeye kaydırılır; terim cümlede hiç geçmiyorsa yazarın aralığı kalır.
+            terim = " ".join(str(k.get(x) or "") for x in ("hedef_metin", "etiket", "kaynak_metin"))
+            if k.get("tur") == "sema":
+                terim = " ".join(d.get("metin", "") for d in k.get("dugum") or [])
+            kk = CD._kok(terim)
+            kel = C[cid].split()
+            ilk = next((i for i, w in enumerate(kel) if CD._kok(w) & kk), None)
+            if ilk is not None and not (k["bas"] <= ilk <= k["son"]):
+                uz = max(2, min(8, k["son"] - k["bas"]))
+                k = {**k, "bas": ilk, "son": min(len(kel) - 1, ilk + uz)}
+                say["kaydirildi"] = say.get("kaydirildi", 0) + 1
             ka = kelime_araliklari(C[cid])
             komut = {x: k[x] for x in ("tur", "nokta", "a", "b", "iliski", "fazlar", "dugum", "kenar", "etiket",
                                        "kaynak_metin", "hedef_metin", "dal") if x in k}

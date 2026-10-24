@@ -185,6 +185,10 @@
 .pdv-cz-parca { fill: #f59e0b; stroke: #fff; stroke-width: 1; }
 .pdv-cz g rect.pdv-cz-hale { fill: none; stroke: #fff; stroke-width: 5.5; opacity: .9; }
 .pdv-cz-odak { fill: rgb(29 78 216 / .07); stroke: #1d4ed8; stroke-width: 2.4; }
+/* kural: resimde vurgulanan bölge fosforlu kalemle boyanır (hat + yarı saydam dolgu, alttaki şekil görünür) */
+.pdv-cz g path.pdv-cz-boya { fill: rgb(250 204 21 / .38); stroke: none; mix-blend-mode: multiply; transition: opacity .3s; }
+/* kural: okun başlangıcı her zaman belli — kaynak kutusu kesik turuncu çerçeve, kutu yoksa halkalı nokta */
+.pdv-cz-baslangic { fill: #d97706; stroke: #fff; stroke-width: 2.5; }
 .pdv-cz-kaynak { fill: rgb(245 158 11 / .1); stroke: #d97706; stroke-width: 2; stroke-dasharray: 5 3; animation: pdv-cz-hedef-gel .3s ease-out both; }
 .pdv-cz-hedef { fill: rgb(37 99 235 / .08); stroke: #1d4ed8; stroke-width: 2; animation: pdv-cz-hedef-gel .3s ease-out both; }
 @keyframes pdv-cz-hedef-gel { from { opacity: 0; } to { opacity: 1; } }

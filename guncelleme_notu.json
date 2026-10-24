@@ -1,11 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 279,
-  "baslik": "Canlı çizimde yeni panel türleri",
+  "onem": 280,
+  "baslik": "Canlı çizim: genel kurallar",
   "maddeler": [
-    "Yazılar arasındaki ilişki artık okla değil, boş alanda canlanan bir panelle gösteriliyor",
-    "Panel türleri: zincir, grup (}), dallanma, gizli neden (perde kalkar), karşıtlık",
-    "Resimdeki mevcut oklar çerçevelenip etiketleniyor; bir kaynaktan birden çok yere giden ilişki dallı okla çiziliyor"
+    "Okun başladığı yer her zaman çerçeveyle ya da noktayla belli",
+    "Resimde anlatılan bölge fosforlu kalemle boyanıyor",
+    "Çizimler, anlatılan terim seslendirilirken başlıyor"
   ],
   "eklenen": [],
   "degisen": [

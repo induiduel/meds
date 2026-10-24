@@ -51,4 +51,16 @@ zenginleştirmedir: yalnız cümle gerçekten o görseli/ilişkiyi anlatıyorsa 
 - Bir cümlede en çok 2 çizim; sayfa başına en çok 8. Etiket en çok 6 kelime, Türkçe.
 - Görseli zaten imleçle yeterince gösterilen basit bir cümleyi çizme; çizim anlamı açmalı (sınır, yön, faz, ilişki).
 
+## Genel çizim kuralları (her ders için; kullanıcı geri bildirimi 2026-10-24, H40–H42)
+1. **Görünürlük:** her çizgi beyaz hale üstünde 2,4 px tam opak; ince/saydam çizgi yok.
+2. **Amaç:** her okun etiketi zorunlu (≤6 kelime); etiketsiz ok reddedilir.
+3. **Başlangıç ve hedef belli:** okun çıktığı yer çerçevelenir (kutu yoksa halkalı nokta), hedef yazı/kutu çerçevelenir.
+4. **Resimde bölge:** bir alan anlatılıyorsa (herni alanı, lezyon, kanama) `kontur` ile çiz; fosforlu kalemle boyanır.
+5. **Resimdeki mevcut ok:** kopyası çizilmez; şekildeki ok çerçevelenip etiketlenir (betik kendisi yapar).
+6. **Yazı ↔ yazı ilişkisi:** ok değil `sema` paneli (zincir / grup / dal / maske / karşıt).
+7. **Bir → çok:** dallı ok (`dallar`), kaynak bir kez gösterilir.
+8. **Kapatma yok:** etiket ve panel boş alana; yer yoksa panel gösterilmez.
+9. **Eş zamanlı:** `bas`–`son`, çizilen şeyin ADI konuşulurken olmalı (terim cümlede geçtiği kelimede başlar; betik kaymayı
+   düzeltir). Çizim, tarif edilen bölgenin kendisine oturur; yakınına ya da benzer bir yere değil.
+
 Yalnız `cizim.json`'u yaz; başka dosyaya dokunma. Bitince tek satır: `BİTTİ: <komut sayısı>`.

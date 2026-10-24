@@ -101,6 +101,7 @@ function Komut({ z, t }: { z: CizimKomut; t: number }) {
   if (z.tur === 'kontur' && z.nokta) {
     return (
       <g className="pdv-cz-kontur">
+        {t > 0 && <path d={egri(z.nokta, true)} className="pdv-cz-boya" style={{ opacity: Math.min(1, t * 1.5) }} />}
         <path d={egri(z.nokta, true)} {...ciz} className="pdv-cz-hale" vectorEffect="non-scaling-stroke" />
         <path d={egri(z.nokta, true)} {...ciz} vectorEffect="non-scaling-stroke" />
         {t >= 1 && <Etiket z={z} />}
@@ -131,9 +132,11 @@ function Komut({ z, t }: { z: CizimKomut; t: number }) {
     const kk = z.kaynak_kutu;
     return (
       <g className={`pdv-cz-akis is-${z.iliski || 'aktive'}${z.dal ? ' is-dal' : ''}`}>
-        {z.dal && z.dal.i === 0 && kk && (
+        {(!z.dal || z.dal.i === 0) && (kk ? (
           <rect x={kk[0] * V} y={kk[1] * V} width={(kk[2] - kk[0]) * V} height={(kk[3] - kk[1]) * V} rx={6} className="pdv-cz-kaynak" vectorEffect="non-scaling-stroke" />
-        )}
+        ) : (
+          <circle cx={yol[0][0] * V} cy={yol[0][1] * V} r={6} className="pdv-cz-baslangic" />
+        ))}
         <path d={yolD(yol, z.rota)} {...ciz} className="pdv-cz-hale" vectorEffect="non-scaling-stroke" />
         <path d={yolD(yol, z.rota)} {...ciz} markerEnd={t >= 1 ? `url(#pdv-cz-${ui ? 'dur' : 'ok'})` : undefined} vectorEffect="non-scaling-stroke" />
         {t > 0 && t < 1 && <circle cx={m[0] * V} cy={m[1] * V} r={4} className="pdv-cz-parca" />}
