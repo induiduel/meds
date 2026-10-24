@@ -75,7 +75,7 @@ const I: Record<string, NavItem> = {
   alternatif_cozucu: { id: 'alternatif_cozucu', label: 'Alternatif çözücü', short: 'Alternatif', hint: 'Her soru baştan sona sesli anlatılır, otomatik geçer', icon: Headphones, tint: '#6366F1' },
   en_onemliler: { id: 'en_onemliler', label: 'En önemliler', short: 'Önemli', hint: 'Konu başına en önemli bilgiler, 100 puan', icon: Star, tint: '#F59E0B' },
   patoloji_checkup: { id: 'patoloji_checkup', label: 'Patoloji Check Up', short: 'Check Up', tile: 'Patoloji Check Up', hint: 'Mediyatör, sitokin, hücre ve hastalık tabloları; kendini sına', icon: Table2, tint: '#14B8A6' },
-  kmb_asistan: { id: 'kmb_asistan', label: 'KMB görsel asistan', short: 'KMB', tile: 'KMB asistanı', hint: 'Klinik mesleki beceri: sesli ve videolu öğren, hedeflerle çalış, OSCE ve vaka sınavı', icon: Stethoscope, tint: '#0E7490' },
+  kmb_asistan: { id: 'kmb_asistan', label: 'KMB sesli dersler', short: 'KMB', tile: 'KMB dersleri', hint: 'Klinik mesleki beceri: sesli ve videolu öğren, hedeflerle çalış, OSCE ve vaka sınavı', icon: Stethoscope, tint: '#0E7490' },
   son_prova: { id: 'son_prova', label: 'Son Prova', short: 'Prova', tile: 'Son Prova', hint: 'Kurulun tüm dersleri sesli özetle, aşama soruları, check-up ve 100 soruluk 3 deneme', icon: Flag, tint: '#E11D48' },
   genetik_checkup: { id: 'genetik_checkup', label: 'TBG Check Up', short: 'TBG', tile: 'TBG Check Up', hint: 'TBG Sınav Kampı v1: sesli ders, soru çözerek tekrar, kalıp kartları, deneme — her biri ayrı sayfa', icon: Dna, tint: '#10B981' },
   cikmis_cozucu: { id: 'cikmis_cozucu', label: 'Çıkmış çözücü', short: 'Çıkmış', tile: 'Çıkmış çözücü', hint: 'Sınav soru sayısı kadar çıkmış paketleri, sesli asistanla birlikte çöz', icon: History, tint: '#7C3AED' },
@@ -121,7 +121,7 @@ export const NAV_ITEMS = I;
  */
 export const NAV_TREE: NavGroup[] = [
   { label: null, items: [I.today] },
-  { label: 'Ders çalış', items: [I.canli_ders, I.learn, I.summaries, I.flashcards] },
+  { label: 'Ders çalış', items: [I.canli_ders, I.kmb_asistan, I.learn, I.summaries, I.flashcards] },
   { label: 'Soru çöz', items: [I.soru_cozucu, I.past_exams, I.practice, I.questions, I.ornek_sorular, I.olasi_sorular] },
   { label: 'Sınava hazırlan', items: [I.sinav_plani, I.son_prova, I.cikmis_cozucu, I.kamp, I.en_onemliler, I.spots] },
   { label: 'Check Up', items: [I.genetik_checkup, I.patoloji_checkup] },
@@ -143,7 +143,7 @@ export const MORE_TREE: NavGroup[] = NAV_TREE.map((g) => ({ ...g, items: g.items
  */
 const V12_RAIL_IDS = new Set<AppRoute>([
   'today',
-  'canli_ders', 'learn', 'summaries', 'flashcards',
+  'canli_ders', 'kmb_asistan', 'learn', 'summaries', 'flashcards',
   'soru_cozucu', 'past_exams', 'practice', 'questions', 'olasi_sorular',
   'sinav_plani', 'son_prova', 'cikmis_cozucu', 'kamp', 'en_onemliler', 'spots',
   'genetik_checkup', 'patoloji_checkup',

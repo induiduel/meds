@@ -1,14 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 320,
-  "baslik": "KMB videolarında daha gerçekçi figürler",
+  "onem": 321,
+  "baslik": "KMB sesli dersler: Sesli ders sayfasında ve ana sayfada",
   "maddeler": [
-    "Hekim (beyaz önlük, steteskop) ve hemşire figürleri yeniden çizildi",
-    "Pensli gazlı bezi tutan eller büyütüldü"
+    "KMB dersleri Ders çalış › Sesli ders sayfasında ve ana sayfa hızlı erişimde",
+    "Kenar menüsünde Ders çalış altında: KMB sesli dersler",
+    "Videolarda yatan hasta, hekim ve hemşire çizimleri yenilendi"
   ],
   "eklenen": [],
   "degisen": [
-    "/dersler/kmb videoları"
+    "/dersler/canliders",
+    "/bugun"
   ],
   "duzeltilen": [],
   "silinen": []

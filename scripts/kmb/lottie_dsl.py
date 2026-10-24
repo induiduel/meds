@@ -464,3 +464,30 @@ def kisi(x, y, renk='#8fc1c9', olcek=1.0, beyaz=False, sac='#3b2a1e'):
         G(yol(f'M{P(-23, -2)} C{P(-26, -30)} {P(26, -30)} {P(23, -2)} C{P(18, -14)} {P(6, -18)} {P(-4, -16)} C{P(-12, -14)} {P(-18, -10)} {P(-23, -2)} Z'), fl(sac)),
     ]
     return parca
+
+
+def yatan_hasta(x, y, s=1.0, battaniye='#8fc1c9', sac='#3b2a1e', torba=False):
+    """Yandan yatan hasta (baş solda): başlıklı ve ayaklı yatak, şilte, yastık, baş + saç, kıvrımlı battaniye, battaniye
+    üstünde kol; torba=True: yatak kenarında idrar torbası. (x, y) şiltenin sol üst köşesi; genişlik 420·s."""
+    P = lambda dx, dy: f'{x + dx * s:.1f} {y + dy * s:.1f}'  # noqa: E731
+    W = 420
+    p = [
+        G(yol(f'M{P(-14, -60)} L{P(-14, 120)}'), st('#7d8aa0', 7 * s)), G(yol(f'M{P(W + 14, -10)} L{P(W + 14, 120)}'), st('#7d8aa0', 7 * s)),
+        G(yol(f'M{P(-14, -60)} C{P(-14, -76)} {P(10, -76)} {P(10, -60)} L{P(10, 30)}'), st('#9aa6b4', 6 * s)),
+        G(rc(x + W / 2 * s, y + 52 * s, (W + 20) * s, 12 * s, 3), fl('#9aa6b4')),
+        G(rc(x + W / 2 * s, y + 22 * s, W * s, 44 * s, 10 * s), gf([(0, '#f7f9fb'), (1, '#d6dee7')], (x, y), (x, y + 44 * s)), st('#b9c4d0', 1.5)),
+        G(yol(f'M{P(8, 2)} C{P(8, -16)} {P(80, -18)} {P(84, 0)} Z'), fl('#ffffff'), st('#c9d3de', 1.5)),
+        G(el(x + 52 * s, y - 16 * s, 46 * s, 42 * s), gf([(0, '#f6d6bd'), (.7, '#e9b896'), (1, '#d49a76')], (x + 44 * s, y - 24 * s), (x + 60 * s, y - 4 * s), radyal=True), st('#b9805a', 1)),
+        G(yol(f'M{P(30, -16)} C{P(30, -40)} {P(70, -44)} {P(76, -22)} C{P(64, -30)} {P(44, -30)} {P(30, -16)} Z'), fl(sac)),
+        G(el(x + 66 * s, y - 18 * s, 4 * s, 3 * s), fl('#3b2a1e')),
+        G(yol(f'M{P(78, -8)} C{P(140, -34)} {P(260, -36)} {P(330, -22)} C{P(370, -16)} {P(400, -10)} {P(410, 6)} L{P(410, 20)} L{P(78, 20)} Z'),
+          gf([(0, battaniye), (1, battaniye)], (x, y - 30 * s), (x, y + 20 * s)), st('#4c8590', 1.5)),
+        *[G(yol(f'M{P(120 + i * 70, -18)} C{P(130 + i * 70, -6)} {P(126 + i * 70, 6)} {P(134 + i * 70, 16)}'), st('#4c8590', 1.2, o=60)) for i in range(4)],
+        G(yol(f'M{P(100, -14)} C{P(140, -20)} {P(190, -18)} {P(214, -12)}'), st('#e2a983', 9 * s)),
+        G(el(x + 218 * s, y - 12 * s, 14 * s, 12 * s), fl('#e2a983')),
+    ]
+    if torba:
+        p += [G(yol(f'M{P(300, 20)} C{P(320, 60)} {P(340, 70)} {P(350, 76)}'), st('#cfd8e2', 5 * s)),
+              G(rc(x + 362 * s, y + 100 * s, 50 * s, 64 * s, 8 * s), fl('#f4f7fa', o=94), st('#9aa6b4', 1.5)),
+              G(rc(x + 362 * s, y + 116 * s, 42 * s, 28 * s, 6 * s), fl('#f2cf55'))]
+    return p

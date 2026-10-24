@@ -11,7 +11,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import lottie_uret as LU  # noqa: E402
-from lottie_dsl import FR, Anim, G, K, KD, S, el, fl, fl_cift, gf, ic_ekle, kisi, parmak_ucu, rc, st, tm, yol, yol_morph, yumruk  # noqa: E402
+from lottie_dsl import FR, Anim, G, K, KD, S, el, fl, fl_cift, gf, ic_ekle, kisi, yatan_hasta, parmak_ucu, rc, st, tm, yol, yol_morph, yumruk  # noqa: E402
 
 MEDS = Path(__file__).resolve().parents[2]
 VERI = MEDS / 'src/data/kmb'
@@ -188,7 +188,8 @@ def kavram_ikonlar(A, b, ogeler, nm='kavram'):
         f = 0.08 + 0.75 * i / max(1, n)
         A.ekle(f'{nm}{i}', *sh, o=belir(A, b, f, b), s=K((0, [70, 70, 100]), (A.T(b, f), [70, 70, 100]), (A.T(b, f) + 10, [100, 100, 100])), a=(x, y), p=S([x, y, 0]))
         if et:
-            A.etiketler.append({'bas': round(A.T(b, f) / FR, 2), 'son': round(A.T(b, 1) / FR, 2), 'x': x, 'y': y + 95, 'metin': et, 'tur': tur})
+            dy = 95 + (28 if n >= 4 and i % 2 else 0)  # dörtlü sırada etiketler iki satıra dağılır, çakışmaz
+            A.etiketler.append({'bas': round(A.T(b, f) / FR, 2), 'son': round(A.T(b, 1) / FR, 2), 'x': x, 'y': y + dy, 'metin': et, 'tur': tur})
 
 
 def ikon_kutu(x, y, renk, ic):
@@ -248,15 +249,11 @@ def a_takip(A):
     et(A, 0, 640, 410, 'Saatlik / 24 saatlik idrar: vital bulgu kadar önemli', 'dogru', .5)
     # s1: yatakta, ağızdan beslenemeyen hasta: serum kola, kateter torbaya
     o1 = gorun(A, 1, 1)
-    A.ekle('yatak', G(rc(400, 330, 560, 50, 12), gf([(0, '#f4f7fa'), (1, '#d6dee7')], (400, 300), (400, 360)), st('#9aa6b4', 2)), G(rc(150, 296, 80, 24, 10), fl('#ffffff')), o=o1)
-    A.ekle('hasta', G(el(150, 270, 56, 52), gf(DERI, (140, 260), (160, 282), radyal=True)), G(yol('M178 280 L600 280 L600 306 L178 306 Z'), fl('#8fc1c9'), st('#4c8590', 1.5)),
-           G(yol('M138 278 C144 284 156 284 162 278'), st('#3b2a1e', 2)), o=o1)
+    A.ekle('hasta', *yatan_hasta(180, 300, 1.0, torba=True), o=o1)
     A.ekle('serum', G(yol('M120 40 L120 320'), st('#9aa6b4', 5)), G(rc(120, 90, 70, 100, 12), fl('#e9f3fb', o=95), st('#6b7a90', 2)), G(rc(120, 110, 58, 60, 8), fl('#9fc4ef')),
-           G(yol('M120 140 L120 170 C120 230 200 250 250 284'), st('#cfd8e2', 5)), G(el(120, 160, 10, 14), fl('#5b8fc9')), o=o1)
+           G(yol('M120 140 L120 170 C120 230 260 250 392 290'), st('#cfd8e2', 5)), G(el(120, 160, 10, 14), fl('#5b8fc9')), o=o1)
     A.ekle('serum-damla', damla(120, 150, .5, '#5b8fc9'), p=KD(*[(T(1) + k * 12, [0, (k % 2) * 12, 0]) for k in range(max(1, int((T(1, 1) - T(1)) / 12)))]), o=o1)
-    A.ekle('kateter-torba', G(yol('M480 300 C500 340 520 380 600 400'), st('#cfd8e2', 6)), G(rc(640, 410, 90, 110, 10), fl('#f4f7fa', o=92), st('#9aa6b4', 2)),
-           G(rc(640, 440, 80, 50, 8), fl('#f2cf55')), o=o1)
-    et(A, 1, 140, 30, 'Ağızdan alamıyor: giren sıvı', 'bilgi'); et(A, 1, 640, 480, 'Çıkan idrar → ne kadar sıvı?', 'dogru', .4)
+    et(A, 1, 140, 30, 'Ağızdan alamıyor: giren sıvı', 'bilgi'); et(A, 1, 560, 470, 'Çıkan idrar → ne kadar sıvı?', 'dogru', .4)
     # s2–s3: kavanozlar + organlar
     zemin_kat(A, 2, 3, 'zemin-denge')
     for b, cik, gir, organ in ((2, 2000, 1000, 'bobrek'), (3, 1000, 5000, 'akciger')):
@@ -289,9 +286,6 @@ def a_takip(A):
                           (300, 190, ikon_kutu(300, 190, '#2f6fd6', [G(yol('M262 222 L320 166 L332 176 L276 232 Z'), fl('#c9d3de'), st('#6b7a90', 2)), damla(318, 212, 1.1, '#c0392b')]), 'Uzun / kanamalı ameliyat', 'bilgi'),
                           (490, 190, ikon_kutu(490, 190, '#d23b3b', [G(yol('M450 160 L490 210 L530 240'), st('#d23b3b', 7)), G(yol('M516 232 L532 242 L522 224'), st('#d23b3b', 6))]), 'Şok (septik · hipovolemik · hemorajik)', 'uyari'),
                           (680, 190, ikon_kutu(680, 190, '#2f6fd6', [G(el(680, 190, 64, 64), gf(DERI, (670, 180), (690, 205), radyal=True)), G(yol('M660 186 C666 192 674 192 680 186 M680 186 C686 192 694 192 700 186'), st('#3b2a1e', 3))]), 'Bilinci kapalı (inme, DKA)', 'bilgi')], 'grup')
-    for e in A.etiketler[-4:]:
-        if e['x'] in (300, 680):
-            e['y'] += 28
 
 
 def bosalma(_z):
@@ -318,8 +312,10 @@ def a_retansiyon(A):
     ic_ekle(A, bosalma, [2], [(2, 2)], 'bosalma')
     A.kamera_sabit(2, 2, 420, 300, 100)
     et(A, 2, 250, 440, 'Mesane boşalır, hasta rahatlar', 'dogru', .6)
-    kavram_ikonlar(A, 3, [(250, 210, ikon_kutu(250, 210, '#2f6fd6', [G(rc(250, 220, 120, 40, 8), fl('#9aa6b4')), G(el(210, 200, 30, 30), fl('#e9b896')), G(rc(290, 250, 26, 34, 5), fl('#f2cf55'))]), 'Yatağa bağımlı hasta', 'bilgi'),
-                          (550, 210, ikon_kutu(550, 210, '#d23b3b', [G(rc(550, 220, 120, 40, 8), fl('#9aa6b4')), G(el(510, 200, 30, 30), fl('#e9b896')), G(yol('M570 180 L600 180 M585 165 L585 195'), st('#d23b3b', 7))]), 'Hareket ettirilemeyen travma hastası', 'uyari')], 'yatak')
+    zemin_kat(A, 3, 3, 'zemin-yatak')
+    A.ekle('yatak-hasta', *yatan_hasta(40, 200, .8, torba=True), o=belir(A, 3, .05, 3))
+    A.ekle('travma-hasta', *yatan_hasta(430, 200, .8, battaniye='#c9a8a3', torba=True), G(yol('M560 150 L600 150 M580 130 L580 170'), st('#d23b3b', 8)), o=belir(A, 3, .45, 3))
+    et(A, 3, 210, 330, 'Kendi başına tuvalete gidemeyen, yatağa bağımlı', 'bilgi', .1); et(A, 3, 600, 330, 'Hareket ettirilemeyen travma hastası', 'uyari', .5)
 
 
 def a_diger(A):

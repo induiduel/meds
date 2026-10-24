@@ -415,3 +415,4 @@
 .kmb-dv.kmb-kok { max-width: none; margin: 0; padding: 0; width: 100vw; }
 .kmb-lv.tam .kmb-lv-altyazi span, .kmb-lv.doldur .kmb-lv-altyazi span { font-size: clamp(13px, min(2.4vw, 4.4vh), 32px); }
 @media (max-height: 520px) { .kmb-lv.tam .kmb-lv-altyazi, .kmb-lv.doldur .kmb-lv-altyazi { padding-bottom: 64px; } .kmb-lv.tam .kmb-lv-cubuk, .kmb-lv.doldur .kmb-lv-cubuk { padding-top: 16px; } }
+

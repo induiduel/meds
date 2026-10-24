@@ -28,6 +28,7 @@ import '../../styles/canli-ders.css';
 import CihazdaIsaret from '../cevrimdisi/CihazdaIsaret';
 import { KurulBos, kurulKimlikten, useKurulParam } from '../kurul/KurulSuzgec';
 import { KurulSecici } from '../kurul/KurulSecici';
+import KMB_INDEX from '../../data/kmb/index.json';
 
 const fold = (s: string) =>
   s.toLocaleLowerCase('tr').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ı/g, 'i').replace(/\s+/g, ' ').trim();
@@ -165,6 +166,7 @@ function CanliDersListe() {
         </div>
         <KurulSecici secili={kurul} yol={(k) => `/dersler/canliders/kurul${k}`} tumuYol="/dersler/canliders" />
         {son && gorunum === 'tum' && !q && suzgec === 'tum' && <DevamKarti d={son.d} k={son.k} />}
+        {gorunum === 'tum' && !q && suzgec === 'tum' && <KmbKarti />}
         <div className="cd-serit">
           <div className="cd-liste-sira">
             <div className="cd-sekmeler cd-gorunum" role="tablist" aria-label="Görünüm">
@@ -548,3 +550,27 @@ const DersSatiri = React.memo(function DersSatiri({ d, k }: { d: CdListeDers; k?
     </li>
   );
 });
+
+
+/** KMB (Klinik Mesleki Beceri) sesli video dersleri: sesli dersler arasında, Ders çalış altında (/dersler/kmb/<beceri>) */
+function KmbKarti() {
+  const hazir = KMB_INDEX.beceriler.filter((b) => b.durum === 'hazir');
+  if (!hazir.length) return null;
+  return (
+    <section className="cd-kmb" aria-labelledby="cd-kmb-h">
+      <div className="cd-kmb-bas">
+        <span className="cd-kmb-rozet">KMB</span>
+        <h2 id="cd-kmb-h">Klinik Mesleki Beceri · sesli video dersler</h2>
+        <a href="/dersler/kmb" onClick={(e) => { e.preventDefault(); navigateTo('/kmb'); }}>Tümü ›</a>
+      </div>
+      <div className="cd-kmb-liste">
+        {hazir.map((b) => (
+          <a key={b.slug} href={`/dersler/kmb/${b.slug}`} className="cd-kmb-kart" onClick={(e) => { e.preventDefault(); navigateTo(`/kmb?beceri=${b.slug}`); }}>
+            <b>{b.ad}</b><span>{b.belgeKodu} · izle, öğren, sınan</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  );
+}
+

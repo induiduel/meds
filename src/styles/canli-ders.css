@@ -1083,3 +1083,14 @@
 :root.cd-dock-acik .cd-metin .cd-p-sar:not(:has(> .cd-p.is-on)) > .cd-v2 { display: none; }
 :root.cd-dock-acik .cd-metin .cd-p-sar:not(:has(> .cd-p.is-on)):hover .cd-p { opacity: .85; }
 :root.cd-dock-acik .cd-metin .cd-p-sar:has(> .cd-p.is-on) { margin: 6px 0; }
+
+/* Sesli dersler listesindeki KMB kartı (CanliDersView) */
+.cd-kmb { margin: 12px 0; padding: 14px; border-radius: 16px; background: color-mix(in srgb, #0e7490 10%, var(--color-white, #fff)); border: 1px solid color-mix(in srgb, #0e7490 30%, transparent); }
+.cd-kmb-bas { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.cd-kmb-bas h2 { margin: 0; font-size: 16px; flex: 1; min-width: 200px; }
+.cd-kmb-bas a { font-size: 14px; color: #0e7490; font-weight: 600; text-decoration: none; }
+.cd-kmb-rozet { padding: 2px 9px; border-radius: 999px; background: #0e7490; color: #fff; font-size: 12px; font-weight: 700; }
+.cd-kmb-liste { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); gap: 8px; margin-top: 10px; }
+.cd-kmb-kart { display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; border-radius: 12px; background: var(--color-white, #fff); border: 1px solid var(--color-line, #dde3ea); color: inherit; text-decoration: none; }
+.cd-kmb-kart:hover { border-color: #0e7490; }
+.cd-kmb-kart span { font-size: 12px; color: var(--color-ink-3, #6b7686); }
