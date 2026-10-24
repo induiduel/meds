@@ -139,6 +139,11 @@ def tr(p=(0, 0), a=(0, 0), s=(100, 100), r=0, o=100):
             'r': r if isinstance(r, dict) else S(r), 'o': o if isinstance(o, dict) else S(o), 'sk': S(0), 'sa': S(0)}
 
 
+def fl_cift(h, o=100):
+    """Çift-tek dolgu: aynı gruptaki ikinci yol delik açar (delikli örtü gibi)."""
+    return {'ty': 'fl', 'c': S(renk(h)), 'o': S(o), 'r': 2}
+
+
 def fl(h, a=1.0, o=100):
     # Lottie dolguda rengin alfası yok sayılır; saydamlık opaklık (o) ile verilir
     if not isinstance(o, dict):
@@ -182,6 +187,10 @@ def G(*it, p=(0, 0), a=(0, 0), s=(100, 100), r=0, o=100):
 def kamera_ekle(k, t0, sure, cx, cy, z):
     """Kamera karesi ekle: t0'dan önceki en son konumdan (zamanca) sure sn'de yeni konuma; sonraki karelerle çakışan
     eski kareler korunur (sıralama json'da)."""
+    # kadraj sahne dışına taşmasın: yakınlaşmada merkez sınırlanır
+    if z >= 100:
+        rx, ry = 400 * 100 / z, 250 * 100 / z
+        cx, cy = min(800 - rx, max(rx, cx)), min(500 - ry, max(ry, cy))
     once = max((x for x in k if x[0] <= t0), key=lambda x: x[0], default=(0.0, 400, 250, 100))
     k[:] = [x for x in k if not (t0 < x[0] <= t0 + sure)]
     if t0 > once[0]:
@@ -219,7 +228,7 @@ class Anim:
     def ekle(self, nm, *shapes, p=None, s=None, o=None, r=None, a=(0, 0)):
         self.katmanlar.append({'ddd': 0, 'ind': len(self.katmanlar) + 1, 'ty': 4, 'nm': nm, 'sr': 1, 'ip': 0, 'op': self.op, 'st': 0, 'bm': 0, 'ao': 0,
                                'ks': {'o': o or S(100), 'r': r or S(0), 'p': p or S([0, 0, 0]), 'a': S([a[0], a[1], 0]), 's': s or S([100, 100, 100])},
-                               'shapes': list(shapes)})
+                               'shapes': list(reversed(shapes))})  # Lottie'de önce gelen grup üstte: çağrı sırası alttan üste
 
     def gor(self, bas, son=None, f=8, deger=100):
         """Görünürlük: bas karesinde belirir, son karesinde kaybolur."""
@@ -246,10 +255,27 @@ class Anim:
         t0 = self.T(b, f) / FR
         kamera_ekle(self.kamera_k, t0, sure, cx, cy, z)
 
+    def kamera_temiz(self):
+        """Kamera kareleri: zamana göre sırala, aynı ana (≤1 kare) düşenlerden sonuncusunu tut (sıçramayı önler)."""
+        out = []
+        for x in sorted(self.kamera_k, key=lambda x: x[0]):
+            if out and x[0] - out[-1][0] < 1 / FR:
+                out[-1] = x
+            else:
+                out.append(x)
+        return out
+
+    def kamera_sabit(self, b1, b2, cx=400, cy=250, z=100):
+        """b1..b2 cümleleri boyunca kamerayı sabitle (alt kompozisyonların yakınlaşmasını ezer)."""
+        t1, t2 = self.T(b1) / FR, self.T(b2, 1) / FR
+        self.kamera_k[:] = [x for x in self.kamera_k if not (t1 - .01 <= x[0] <= t2 + .01)]
+        kamera_ekle(self.kamera_k, t1, 0.5, cx, cy, z)
+        self.kamera_k.append((round(t2, 3), *self.kamera_k[-1][1:]))
+
     def json(self):
         L = list(reversed(self.katmanlar))
         if len(self.kamera_k) > 1:
-            k = sorted(self.kamera_k)
+            k = self.kamera_temiz()
             for x in L:
                 x['parent'] = 999  # precomp katmanları da kameraya bağlı
             L.append({'ddd': 0, 'ind': 999, 'ty': 3, 'nm': 'kamera', 'sr': 1, 'ip': 0, 'op': self.op, 'st': 0, 'bm': 0, 'ao': 0,
@@ -263,7 +289,7 @@ class Anim:
                 'bolumler': [{'baslik': b['baslik'], 'metin': b['metin'], 'bas': round(a, 2), 'son': round(c, 2),
                               **({'ses_bas': round(self.ses_sinir[i][0], 3)} if self.ses_sinir else {})}
                              for i, (b, (a, c)) in enumerate(zip(self.bolumler, self.sinir))],
-                'kamera': [[round(t, 3), cx, cy, z] for t, cx, cy, z in sorted(self.kamera_k)] if len(self.kamera_k) > 1 else [],
+                'kamera': [[round(t, 3), cx, cy, z] for t, cx, cy, z in self.kamera_temiz()] if len(self.kamera_k) > 1 else [],
                 'etiketler': self.etiketler, 'sayaclar': self.sayaclar}
 
 
@@ -297,7 +323,7 @@ class Ic:
     def ekle(self, nm, *shapes, p=None, s=None, o=None, r=None, a=(0, 0)):
         self.katmanlar.append({'ddd': 0, 'ind': len(self.katmanlar) + 1, 'ty': 4, 'nm': nm, 'sr': 1, 'ip': 0, 'op': self.ust.op, 'st': 0, 'bm': 0, 'ao': 0,
                                'ks': {'o': o or S(100), 'r': r or S(0), 'p': p or S([0, 0, 0]), 'a': S([a[0], a[1], 0]), 's': s or S([100, 100, 100])},
-                               'shapes': list(shapes)})
+                               'shapes': list(reversed(shapes))})  # Lottie'de önce gelen grup üstte: çağrı sırası alttan üste
 
     gor = Anim.gor
     boyunca = Anim.boyunca
@@ -337,3 +363,33 @@ def ic_ekle(ust: 'Anim', uretici, harita, gorunur, nm='ic'):
     ust.katmanlar.append({'ddd': 0, 'ind': len(ust.katmanlar) + 1, 'ty': 0, 'nm': nm, 'refId': rid, 'sr': 1, 'ao': 0, 'w': 800, 'h': 500,
                           'ip': 0, 'op': ust.op, 'st': 0, 'bm': 0,
                           'ks': {'o': K(*ks), 'r': S(0), 'p': S([0, 0, 0]), 'a': S([0, 0, 0]), 's': S([100, 100, 100])}})
+
+
+# ———————————————————————— ortak eller (eldivenli). Yerel eksen: nesne yumruğun içinden soldan sağa (y=0) geçer.
+
+ELDIVEN_STERIL = [(0, '#fdf6ea'), (1, '#e3cda9')]
+ELDIVEN_MAVI = [(0, '#e4eefb'), (1, '#a9c3e6')]
+
+
+def yumruk(cx, cy, s=1.0, r=0, steril=True):
+    """Yandan görülen, bir şeyi kavrayan eldivenli el: bilek sağda, dört parmak boğumu solda, başparmak üstte kapanır."""
+    g = ELDIVEN_STERIL if steril else ELDIVEN_MAVI
+    k = '#b59c72' if steril else '#6f8bb3'
+    parcalar = [
+        G(yol('M20 -42 C70 -50 130 -44 180 -34 L180 36 C130 46 70 50 20 44 Z'), gf(g, (20, -40), (180, 40)), st(k, 2)),
+        G(yol('M-54 -40 C-54 -52 30 -54 34 -40 L36 40 C32 54 -52 54 -54 40 Z'), gf(g, (-50, -50), (30, 50)), st(k, 2)),
+        *[G(el(-46, y, 34, 24), gf(g, (-60, y - 10), (-30, y + 12)), st(k, 1.6)) for y in (-30, -10, 10, 30)],
+        *[G(yol(f'M-30 {y - 9} C-24 {y - 4} -24 {y + 4} -30 {y + 9}'), st(k, 1.2, o=70)) for y in (-30, -10, 10, 30)],
+        G(yol('M24 -40 C0 -62 -40 -58 -60 -30 C-66 -20 -56 -12 -46 -18 C-30 -34 -6 -38 14 -24 Z'), gf(g, (-50, -60), (20, -20)), st(k, 2)),
+        G(yol('M-20 -50 C-8 -54 6 -52 14 -46'), st('#ffffff', 2.5, o=60)),
+    ]
+    return G(*parcalar, p=(cx, cy), s=(100 * s, 100 * s), r=r)
+
+
+def parmak_ucu(cx, cy, r=0, s=1.0, steril=True):
+    """Tek parmak (uç solda): sıkıştırma, ayırma gibi işlerde. Uç (cx, cy)'dedir."""
+    g = ELDIVEN_STERIL if steril else ELDIVEN_MAVI
+    k = '#b59c72' if steril else '#6f8bb3'
+    return G(G(yol('M0 -17 C-14 -17 -20 -8 -20 0 C-20 8 -14 17 0 17 L150 20 L150 -20 Z'), gf(g, (0, -20), (0, 20)), st(k, 2)),
+             G(yol('M34 -15 C38 -6 38 6 34 15'), st(k, 1.3, o=70)), G(yol('M84 -17 C88 -6 88 6 84 17'), st(k, 1.3, o=70)),
+             G(yol('M-8 -10 C0 -14 16 -14 28 -12'), st('#ffffff', 2.5, o=60)), p=(cx, cy), s=(100 * s, 100 * s), r=r)

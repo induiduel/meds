@@ -1,5 +1,5 @@
 /**
- * /kmb — KMB görsel sesli asistan (görünen /kamplar/kmb[/<beceri>[/ogren|sinav]], siteHaritasi).
+ * /kmb — KMB görsel sesli asistan (görünen /dersler/kmb[/<beceri>[/ogren|hedef|video|sinav]], siteHaritasi).
  * Önce öğretir (adım adım sahne + EMA sesi, cümle cümle görsel eylem), sonra sınava sokar (OSCE sıralama,
  * vaka senaryoları, sahnede bul). İçerik src/data/kmb/<kod>.json, ses zamanlaması src/data/kmb/ses_<kod>.json,
  * klipler /api/cozucu-ses/kmb/ema/<kod>/<klip>.mp3. Ayrıntı: docs/KMB_GORSEL_ASISTAN.md
@@ -10,7 +10,7 @@ import { navigateTo } from '../../router';
 import { icKonum } from '../../siteHaritasi';
 import { SAHNELER, SahneCiz, type SahneDurum } from './sahneler';
 import { uygula, type Eylem } from './eylem';
-import LottieVideo, { KMB_DURDUR, LOTTILER } from './LottieVideo';
+import LottieVideo, { KMB_DURDUR, LOTTILER, bolumAn, sn } from './LottieVideo';
 import DersVideo from './DersVideo';
 import INDEX from '../../data/kmb/index.json';
 import '../../styles/kmb.css';
@@ -109,85 +109,95 @@ function useOynatici(kod: string, ses: SesKayit | null) {
   return { aktif, setAktif, caliyor, oynat, durdur };
 }
 
-// ———————————————————————————————— Öğret
+// ———————————————————————————————— İlerleme (yerel; öğrenci her seferinde yerini aramasın)
 
-function Ogret({ ders, ses }: { ders: Ders; ses: SesKayit | null }) {
-  const [ai, setAi] = useState(0);
+const IL = 'kmb-ilerleme';
+function ilOku<T>(k: string, varsayilan: T): T { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : varsayilan; } catch { return varsayilan; } }
+function ilYaz(k: string, v: unknown) { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* özel pencere: yalnız oturumda */ } window.dispatchEvent(new Event(IL)); }
+const anahtar = (kod: string, ne: string) => `medsoru_kmb_${ne}_${kod}`;
+function listeyeEkle(kod: string, ne: string, id: string | number) {
+  const l = ilOku<(string | number)[]>(anahtar(kod, ne), []);
+  if (!l.includes(id)) ilYaz(anahtar(kod, ne), [...l, id]);
+}
+function useIlerleme(kod: string) {
+  const oku = useCallback(() => ({
+    izlenen: ilOku<string[]>(anahtar(kod, 'izlenen'), []),
+    ogrenilen: ilOku<string[]>(anahtar(kod, 'ogren'), []),
+    hedef: ilOku<number[]>(anahtar(kod, 'hedef'), []),
+    vaka: ilOku<string[]>(anahtar(kod, 'vaka'), []),
+    sonAdim: ilOku<number>(anahtar(kod, 'son'), 0),
+  }), [kod]);
+  const [d, setD] = useState(oku);
+  useEffect(() => { const f = () => setD(oku()); window.addEventListener(IL, f); return () => window.removeEventListener(IL, f); }, [oku]);
+  return d;
+}
+
+// ———————————————————————————————— Öğret: adım videosu + eşzamanlı metin, bitince sonraki adım
+
+function Ogret({ ders, ses, onBitir }: { ders: Ders; ses: SesKayit | null; onBitir: () => void }) {
+  const il = useIlerleme(ders.kod);
+  const [ai, setAi] = useState(() => Math.min(il.sonAdim, ders.adimlar.length - 1));
   const [otomatik, setOtomatik] = useState(true);
+  const [oynat, setOynat] = useState(false);
+  const [t, setT] = useState(0);
+  const [gorsel, setGorsel] = useState(false);
   const [video, setVideo] = useState(false);
   const adim = ders.adimlar[ai];
-  const cumleler = adim.cumleler.map((c) => c.metin);
-  const { aktif, setAktif, caliyor, oynat, durdur } = useOynatici(ders.kod, ses);
+  const v = LOTTILER.find((x) => x.adim === adim.id);
+  const bi = v ? bolumAn(v, t) : -1;
+  const liste = useRef<HTMLElement>(null);
+  useEffect(() => { ilYaz(anahtar(ders.kod, 'son'), ai); setT(0); setGorsel(false); liste.current?.querySelector('.etkin')?.scrollIntoView({ block: 'nearest', inline: 'nearest' }); }, [ai, ders.kod]);
+  const sonraki = ders.adimlar[ai + 1];
   const durum = useMemo(() => {
     let d: SahneDurum = {};
-    adim.cumleler.slice(0, Math.max(0, aktif) + 1).forEach((c) => { d = uygula(d, c.eylem); });
+    adim.cumleler.forEach((c) => { d = uygula(d, c.eylem); });
     return d;
-  }, [adim, aktif]);
-
-  const sonraki = useCallback(() => setAi((i) => Math.min(i + 1, ders.adimlar.length - 1)), [ders.adimlar.length]);
-  const baslat = useCallback((bas = 0) => oynat(`o-${adim.id}`, cumleler, () => { if (otomatik && ai < ders.adimlar.length - 1) window.setTimeout(sonraki, 900); }, bas),
-    [adim.id, cumleler, oynat, otomatik, ai, ders.adimlar.length, sonraki]);
-  const ilk = useRef(true);
-  useEffect(() => {
-    if (ilk.current) { ilk.current = false; setAktif(-1); return; }
-    baslat(0);
-    // adım değişince yeni klip
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ai]);
-
+  }, [adim]);
+  const bitti = () => {
+    listeyeEkle(ders.kod, 'ogren', adim.id);
+    if (otomatik && sonraki) window.setTimeout(() => { setOynat(true); setAi((i) => i + 1); }, 1200);
+  };
+  const git = (i: number) => { setOynat(true); setAi(i); };
   return (
     <div className="kmb-ogret">
-      <aside className="kmb-adimlar" aria-label="Adımlar">
+      <aside className="kmb-adimlar" aria-label="Adımlar" ref={liste}>
         {ders.adimlar.map((a, i) => (
-          <button key={a.id} className={`kmb-adim-dugme${i === ai ? ' etkin' : ''}${i < ai ? ' gecti' : ''}`} onClick={() => setAi(i)}>
-            <span className="no">{i + 1}</span><span>{a.baslik}</span>
+          <button key={a.id} className={`kmb-adim-dugme${i === ai ? ' etkin' : ''}${il.ogrenilen.includes(a.id) ? ' gecti' : ''}`} onClick={() => git(i)}>
+            <span className="no">{il.ogrenilen.includes(a.id) ? '✓' : i + 1}</span><span>{a.baslik}</span>
           </button>
         ))}
       </aside>
       <section className="kmb-sahne-alan">
-        <div className="kmb-sahne-kap"><SahneCiz sahne={adim.sahne} durum={durum} /></div>
-        {LOTTILER.some((x) => x.adim === adim.id) && (
-          <div className="kmb-videolar"><LottieVideo key={adim.id} ad={`adim-${adim.id}`} kod={ders.kod} ses={ses} kompakt /></div>
-        )}
-        {!!adim.ek?.some((e) => e.startsWith('lottie:')) && (
-          <div className="kmb-videolar">
-            {adim.ek.filter((e) => e.startsWith('lottie:')).map((e) => <LottieVideo key={e} ad={e.slice(7)} kod={ders.kod} ses={ses} kompakt />)}
-          </div>
-        )}
-        {!!adim.ek?.some((e) => !e.startsWith('lottie:')) && (
-          <div className="kmb-ekler">
-            {adim.ek.filter((e) => !e.startsWith('lottie:')).map((e) => (
-              <figure key={e} className="kmb-ek">
-                <div className="kmb-sahne-kap"><SahneCiz sahne={e} durum={durum} /></div>
-                <figcaption>{SAHNELER[e]?.ad}</figcaption>
-              </figure>
-            ))}
-          </div>
-        )}
+        {v ? (
+          <LottieVideo key={adim.id} ad={`adim-${adim.id}`} kod={ders.kod} ses={ses} otomatik={oynat} onZaman={setT} onBitti={bitti}
+            sonraki={sonraki ? { ad: `adim-${sonraki.id}`, baslik: sonraki.baslik, git: () => git(ai + 1) } : undefined} />
+        ) : <div className="kmb-sahne-kap"><SahneCiz sahne={adim.sahne} durum={durum} /></div>}
         <div className="kmb-denetim">
-          <button onClick={() => setAi((i) => Math.max(0, i - 1))} disabled={ai === 0}>‹ Önceki</button>
-          {caliyor
-            ? <button className="ana" onClick={durdur}>❚❚ Durdur</button>
-            : <button className="ana" onClick={() => baslat(aktif > 0 && aktif < cumleler.length - 1 ? aktif : 0)}>▶ {aktif >= 0 ? 'Sürdür' : 'Anlat'}</button>}
-          <button onClick={sonraki} disabled={ai === ders.adimlar.length - 1}>Sonraki ›</button>
-          <label className="kmb-oto"><input type="checkbox" checked={otomatik} onChange={(e) => setOtomatik(e.target.checked)} /> Otomatik ilerle</label>
-          <button onClick={() => { durdur(); setVideo(true); }}>🎬 Ders videosu</button>
+          <button onClick={() => git(Math.max(0, ai - 1))} disabled={ai === 0}>‹ Önceki adım</button>
+          <button onClick={() => (sonraki ? git(ai + 1) : onBitir())} className="ana">{sonraki ? 'Sonraki adım ›' : 'Hedeflerle çalışmaya geç ›'}</button>
+          <label className="kmb-oto"><input type="checkbox" checked={otomatik} onChange={(e) => setOtomatik(e.target.checked)} /> Bitince sonraki adıma geç</label>
+          <button onClick={() => setVideo(true)}>🎬 Tüm dersi tam ekran izle</button>
           <span className="kmb-sayac">{ai + 1} / {ders.adimlar.length}</span>
         </div>
-        {video && <DersVideo ders={ders} ses={ses} bas={ai} onKapat={() => setVideo(false)} />}
+        {video && <DersVideo ders={ders} ses={ses} bas={ai} onKapat={() => setVideo(false)} izlendi={(id) => listeyeEkle(ders.kod, 'izlenen', id)} />}
       </section>
       <section className="kmb-anlatim">
-        <h2>{adim.baslik}</h2>
+        <h2><span className="kmb-adim-no">Adım {ai + 1}</span>{adim.baslik}</h2>
         <ol className="kmb-cumleler">
-          {adim.cumleler.map((c, i) => (
-            <li key={i} className={i === aktif ? 'aktif' : i < aktif ? 'okundu' : ''}>
-              <button onClick={() => baslat(i)}>{c.metin}</button>
-            </li>
-          ))}
+          {adim.cumleler.map((c, i) => <li key={i} className={i === bi ? 'aktif' : i < bi ? 'okundu' : ''}><span>{c.metin}</span></li>)}
         </ol>
         {!!adim.puf?.length && <div className="kmb-kutu puf"><b>Püf noktası</b>{adim.puf.map((p) => <p key={p}>{p}</p>)}</div>}
         {!!adim.dikkat?.length && <div className="kmb-kutu dikkat"><b>Dikkat</b>{adim.dikkat.map((p) => <p key={p}>{p}</p>)}</div>}
-        {ai === ders.adimlar.length - 1 && <p className="kmb-son">Bu beceriyi bitirdin. Sınav sekmesinde OSCE sıralaması, vakalar ve sahnede bul görevleri seni bekliyor.</p>}
+        <details className="kmb-gorseller" open={gorsel} onToggle={(e) => setGorsel((e.target as HTMLDetailsElement).open)}>
+          <summary>Bu adımın görsellerini incele</summary>
+          {gorsel && (
+            <div className="kmb-ekler">
+              {[adim.sahne, ...(adim.ek || []).filter((e) => !e.startsWith('lottie:'))].map((e) => (
+                <figure key={e} className="kmb-ek"><div className="kmb-sahne-kap"><SahneCiz sahne={e} durum={durum} /></div><figcaption>{SAHNELER[e]?.ad}</figcaption></figure>
+              ))}
+            </div>
+          )}
+        </details>
       </section>
     </div>
   );
@@ -354,6 +364,7 @@ function Senaryolar({ ders, ses, oynatici }: { ders: Ders; ses: SesKayit | null;
                 className={sec === undefined ? '' : c.dogru ? 'dogru' : sec === i ? 'yanlis' : 'soluk'}
                 onClick={() => {
                   setSecim((m) => ({ ...m, [s.id]: i }));
+                  if (c.dogru) listeyeEkle(ders.kod, 'vaka', s.id);
                   oynat(`s-${s.id}-${i}`, [(c.dogru ? 'Doğru. ' : 'Yanlış. ') + c.aciklama]);
                 }}>
                 <b>{'ABCDE'[i]}</b> {c.metin}
@@ -421,9 +432,9 @@ function Sinav({ ders, ses }: { ders: Ders; ses: SesKayit | null }) {
 
 /** KMB belgesindeki öğrenim hedefleriyle çalışma: her hedef bir kart — belge metni, görsel, ses, ne/nasıl/neden/sık hata,
  *  "önce kendin anlat" kipi (hocanın sorusu sesli sorulur, öğrenci anlatır, sonra cevabı açar), isteğe bağlı Lottie gösterimi. */
-function Hedefler({ ders, ses }: { ders: Ders; ses: SesKayit | null }) {
+function Hedefler({ ders, ses, onBitir }: { ders: Ders; ses: SesKayit | null; onBitir: () => void }) {
   const K = ders.hedefCalisma || [];
-  const anahtar = `medsoru_kmb_hedef_${ders.kod}`;
+  const anahtar = `medsoru_kmb_hedef_${ders.kod}`; // useIlerleme ile aynı anahtar
   const [hi, setHi] = useState(0);
   const [kendin, setKendin] = useState(false);
   const [acik, setAcik] = useState(true);
@@ -438,7 +449,12 @@ function Hedefler({ ders, ses }: { ders: Ders; ses: SesKayit | null }) {
   const isaretle = () => {
     const y = bitti.includes(k.no) ? bitti.filter((x) => x !== k.no) : [...bitti, k.no];
     setBitti(y);
-    try { localStorage.setItem(anahtar, JSON.stringify(y)); } catch { /* yerel kayıt yoksa yalnız bu oturumda */ }
+    ilYaz(anahtar, y);
+    // öğrenildiyse kendiliğinden sıradaki öğrenilmemiş karta geç
+    if (!bitti.includes(k.no)) {
+      const sira = K.findIndex((x, j) => j > hi && !y.includes(x.no));
+      if (sira >= 0) window.setTimeout(() => setHi(sira), 500);
+    }
   };
   if (!k) return <p className="kmb-yukleniyor">Bu derste hedef kartı yok.</p>;
   const vurgu = (i: number) => (caliyor && aktif === i ? ' aktif' : '');
@@ -487,34 +503,88 @@ function Hedefler({ ders, ses }: { ders: Ders; ses: SesKayit | null }) {
           <button onClick={() => setHi((i) => Math.max(0, i - 1))} disabled={hi === 0}>‹</button>
           <button onClick={() => setHi((i) => Math.min(K.length - 1, i + 1))} disabled={hi === K.length - 1}>›</button>
         </div>
+        {bitti.length === K.length && <button className="kmb-devam" onClick={onBitir}>Tüm hedefler tamam · Sınava geç ›</button>}
       </section>
     </div>
   );
 }
 
 function Videolar({ ders, ses }: { ders: Ders; ses: SesKayit | null }) {
+  const il = useIlerleme(ders.kod);
+  const liste = useMemo(() => [
+    ...ders.adimlar.filter((a) => LOTTILER.some((x) => x.adim === a.id)).map((a, i) => ({ ad: `adim-${a.id}`, baslik: `${i + 1}. ${a.baslik}`, grup: 'Adım adım ders', id: a.id })),
+    ...[...new Set(ders.adimlar.flatMap((a) => (a.ek || []).filter((e) => e.startsWith('lottie:')).map((e) => e.slice(7))))]
+      .map((ad) => ({ ad, baslik: LOTTILER.find((x) => x.ad === ad)?.baslik || ad, grup: 'Konu videoları', id: ad })),
+  ], [ders]);
+  const ilk = Math.max(0, liste.findIndex((x) => !il.izlenen.includes(x.id)));
+  const [vi, setVi] = useState(ilk);
+  const [oto, setOto] = useState(false);
   const [tum, setTum] = useState(false);
-  const adlar = useMemo(() => [...new Set(ders.adimlar.flatMap((a) => (a.ek || []).filter((e) => e.startsWith('lottie:')).map((e) => e.slice(7))))], [ders]);
+  const v = liste[vi];
+  const sonraki = liste[vi + 1];
+  const sec = (i: number) => { setOto(true); setVi(i); window.scrollTo({ top: 0, behavior: 'smooth' }); };
   return (
     <div className="kmb-video-sayfa">
-      <div className="kmb-video-ust">
-        <p>Her video hocanın anlattığı bir aşamayı sesli ve altyazılı gösterir. Tam ekran için ⤢, klavyede boşluk oynatır, ←/→ 5 sn sarar.</p>
-        <button className="kmb-dv-ac" onClick={() => setTum(true)}>🎬 Bütün dersi video olarak izle</button>
+      <div className="kmb-video-oynatici">
+        <LottieVideo key={v.ad} ad={v.ad} kod={ders.kod} ses={ses} otomatik={oto}
+          onBitti={() => { listeyeEkle(ders.kod, 'izlenen', v.id); if (sonraki) window.setTimeout(() => sec(vi + 1), 1200); }}
+          sonraki={sonraki ? { ad: sonraki.ad, baslik: sonraki.baslik, git: () => sec(vi + 1) } : undefined} />
+        <div className="kmb-video-ust">
+          <h2>{v.baslik}</h2>
+          <button className="kmb-dv-ac" onClick={() => setTum(true)}>🎬 Bütün dersi tam ekran izle</button>
+        </div>
       </div>
-      <h3 className="kmb-video-bas">Adım adım ders videoları</h3>
-      <div className="kmb-video-izgara">
-        {ders.adimlar.filter((a) => LOTTILER.some((x) => x.adim === a.id)).map((a) => <LottieVideo key={a.id} ad={`adim-${a.id}`} kod={ders.kod} ses={ses} />)}
-      </div>
-      <h3 className="kmb-video-bas">Konu videoları</h3>
-      <div className="kmb-video-izgara">
-        {adlar.map((a) => <LottieVideo key={a} ad={a} kod={ders.kod} ses={ses} />)}
-      </div>
-      {tum && <DersVideo ders={ders} ses={ses} onKapat={() => setTum(false)} />}
+      <nav className="kmb-video-liste" aria-label="Videolar">
+        {['Adım adım ders', 'Konu videoları'].map((g) => (
+          <div key={g}>
+            <h3 className="kmb-video-bas">{g}</h3>
+            <ol>
+              {liste.map((x, i) => x.grup === g && (
+                <li key={x.ad}><button className={`${i === vi ? 'etkin' : ''}${il.izlenen.includes(x.id) ? ' izlendi' : ''}`} onClick={() => sec(i)}>
+                  <span className="ik">{i === vi ? '▶' : il.izlenen.includes(x.id) ? '✓' : ''}</span><span>{x.baslik}</span>
+                  <span className="sure">{sn(LOTTILER.find((y) => y.ad === x.ad)?.sure || 0)}</span>
+                </button></li>
+              ))}
+            </ol>
+          </div>
+        ))}
+      </nav>
+      {tum && <DersVideo ders={ders} ses={ses} onKapat={() => setTum(false)} izlendi={(id) => listeyeEkle(ders.kod, 'izlenen', id)} />}
     </div>
   );
 }
 
-// ———————————————————————————————— Kabuk
+// ———————————————————————————————— Kabuk: öğrenme yolu (İzle → Öğren → Hedefler → Sınav), kaldığın yerden devam
+
+function Yol({ ders, b, git, izle }: { ders: Ders; b: string; git: (b: string) => void; izle: () => void }) {
+  const il = useIlerleme(ders.kod);
+  const n = ders.adimlar.length;
+  const asamalar = [
+    { b: 'video', ad: 'İzle', alt: 'Ders videosu', yap: il.izlenen.filter((x) => ders.adimlar.some((a) => a.id === x)).length, top: n },
+    { b: 'ogren', ad: 'Öğren', alt: 'Adım adım', yap: il.ogrenilen.length, top: n },
+    { b: 'hedef', ad: 'Hedefler', alt: 'KMB belgesi', yap: il.hedef.length, top: ders.hedefCalisma?.length || 0 },
+    { b: 'sinav', ad: 'Sınav', alt: 'Vaka · OSCE', yap: il.vaka.length, top: ders.sinav.senaryolar.length },
+  ];
+  const siradaki = asamalar.find((a) => a.yap < a.top) || asamalar[3];
+  return (
+    <div className="kmb-yol">
+      <ol className="kmb-yol-adimlar">
+        {asamalar.map((a, i) => (
+          <li key={a.b} className={`${b === a.b ? 'etkin' : ''}${a.top && a.yap >= a.top ? ' tamam' : ''}`}>
+            <button onClick={() => git(a.b)}>
+              <span className="no">{a.top && a.yap >= a.top ? '✓' : i + 1}</span>
+              <span className="ad"><b>{a.ad}</b><small>{a.alt} · {a.yap}/{a.top}</small></span>
+              <span className="cubuk"><i style={{ width: `${a.top ? (a.yap / a.top) * 100 : 0}%` }} /></span>
+            </button>
+          </li>
+        ))}
+      </ol>
+      <button className="kmb-devam" onClick={() => (siradaki.b === 'video' ? izle() : git(siradaki.b))}>
+        Kaldığın yerden devam et: <b>{siradaki.ad}</b> ›
+      </button>
+    </div>
+  );
+}
 
 export default function KmbAsistan() {
   const { beceri, b, git } = useYol();
@@ -522,6 +592,7 @@ export default function KmbAsistan() {
   const [ders, setDers] = useState<Ders | null>(null);
   const [ses, setSes] = useState<SesKayit | null>(null);
   const [kapsam, setKapsam] = useState(false);
+  const [izle, setIzle] = useState(false);
   useEffect(() => {
     setDers(null); setSes(null);
     if (!kayit || kayit.durum !== 'hazir') return;
@@ -535,9 +606,9 @@ export default function KmbAsistan() {
     return (
       <div className="kmb-kok">
         <header className="kmb-baslik">
-          <p className="ust">Sınava hazırlan · {INDEX.ders}</p>
+          <p className="ust">Ders çalış · {INDEX.ders}</p>
           <h1>KMB görsel asistan</h1>
-          <p>Hocanın anlattığı her aşamayı önce sesli ve görsel olarak öğren, sonra vaka sorularıyla pratik sınava hazırlan.</p>
+          <p>Hocanın anlattığı her aşamayı videoyla izle, adım adım öğren, KMB hedefleriyle pekiştir ve vaka sorularıyla pratik sınava hazırlan.</p>
           <p className="kmb-not">{INDEX.degerlendirme}</p>
         </header>
         <div className="kmb-kartlar">
@@ -545,7 +616,7 @@ export default function KmbAsistan() {
             <button key={x.slug} className={`kmb-kart${x.durum === 'hazir' ? '' : ' bekliyor'}`} disabled={x.durum !== 'hazir'} onClick={() => git(x.slug)}>
               <span className="kod">{x.belgeKodu}</span>
               <b>{x.ad}</b>
-              <span className="durum">{x.durum === 'hazir' ? 'Hazır · öğren ve sınan' : 'Ders kaydı bekleniyor'}</span>
+              <span className="durum">{x.durum === 'hazir' ? 'Hazır · başla' : 'Ders kaydı bekleniyor'}</span>
               {!!x.hocalar.length && <span className="hoca">{x.hocalar.join(' · ')}</span>}
             </button>
           ))}
@@ -555,28 +626,28 @@ export default function KmbAsistan() {
     );
   }
 
+  const sekme = (x: string) => git(kayit.slug, x);
   return (
     <div className="kmb-kok">
-      <header className="kmb-baslik satir">
-        <div>
-          <button className="kmb-geri" onClick={() => git('')}>‹ KMB becerileri</button>
+      <header className="kmb-baslik">
+        <button className="kmb-geri" onClick={() => git('')}>‹ KMB becerileri</button>
+        <div className="kmb-baslik-satir">
           <h1>{kayit.ad}</h1>
-          {ders && <p>{ders.amac}</p>}
+          <button className={`kmb-kazanim-dugme${kapsam ? ' etkin' : ''}`} onClick={() => setKapsam((k) => !k)}>Kazanımlar</button>
         </div>
-        <div className="kmb-sekmeler" role="tablist">
-          <button role="tab" aria-selected={b === 'ogren'} className={b === 'ogren' ? 'etkin' : ''} onClick={() => git(kayit.slug, 'ogren')}>Öğren</button>
-          <button role="tab" aria-selected={b === 'hedef'} className={b === 'hedef' ? 'etkin' : ''} onClick={() => git(kayit.slug, 'hedef')}>Hedeflerle çalış</button>
-          <button role="tab" aria-selected={b === 'video'} className={b === 'video' ? 'etkin' : ''} onClick={() => git(kayit.slug, 'video')}>Videolar</button>
-          <button role="tab" aria-selected={b === 'sinav'} className={b === 'sinav' ? 'etkin' : ''} onClick={() => git(kayit.slug, 'sinav')}>Sınav</button>
-          <button className={kapsam ? 'etkin' : ''} onClick={() => setKapsam((k) => !k)}>Kazanımlar</button>
-        </div>
+        {ders && <Yol ders={ders} b={b} git={sekme} izle={() => setIzle(true)} />}
       </header>
       {kapsam && ders && (
         <ol className="kmb-kazanim">
           {ders.hedefler.map((h) => <li key={h.no}>{h.metin} <small>{h.adimlar.map((a) => ders.adimlar.findIndex((x) => x.id === a) + 1).filter((n) => n > 0).map((n) => `Adım ${n}`).join(', ')}</small></li>)}
         </ol>
       )}
-      {!ders ? <p className="kmb-yukleniyor">Yükleniyor…</p> : b === 'sinav' ? <Sinav ders={ders} ses={ses} /> : b === 'video' ? <Videolar ders={ders} ses={ses} /> : b === 'hedef' ? <Hedefler ders={ders} ses={ses} /> : <Ogret ders={ders} ses={ses} />}
+      {!ders ? <p className="kmb-yukleniyor">Yükleniyor…</p>
+        : b === 'sinav' ? <Sinav ders={ders} ses={ses} />
+          : b === 'video' ? <Videolar ders={ders} ses={ses} />
+            : b === 'hedef' ? <Hedefler ders={ders} ses={ses} onBitir={() => sekme('sinav')} />
+              : <Ogret ders={ders} ses={ses} onBitir={() => sekme('hedef')} />}
+      {izle && ders && <DersVideo ders={ders} ses={ses} bas={0} onKapat={() => setIzle(false)} izlendi={(id) => listeyeEkle(ders.kod, 'izlenen', id)} />}
     </div>
   );
 }

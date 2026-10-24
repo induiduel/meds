@@ -20,6 +20,7 @@ export const MERKEZ_ARACLARI: Record<KategoriId, MerkezArac[]> = {
     { id: 'learn', ne: 'Konuyu adım adım, mini sorularla öğrenmek istiyorsan' },
     { id: 'summaries', ne: 'Kısa sürede konunun özetini okumak istiyorsan' },
     { id: 'flashcards', ne: 'Öğrendiklerini aralıklı tekrarla ezberlemek istiyorsan' },
+    { id: 'kmb_asistan', ne: 'Klinik mesleki beceriyi (KMB) sesli videolarla aşama aşama öğrenip pratik sınava hazırlanmak istiyorsan' },
   ],
   sorular: [
     { id: 'soru_cozucu', ne: 'Konu konu soru çözüp her şıkkın nedenini dinlemek istiyorsan', oner: true },
@@ -32,7 +33,6 @@ export const MERKEZ_ARACLARI: Record<KategoriId, MerkezArac[]> = {
   kamplar: [
     { id: 'sinav_plani', ne: 'En az 60 için nereye ne kadar çalışacağını gün gün görmek istiyorsan' },
     { id: 'son_prova', ne: 'Sınavdan önceki son günlerde kurulun tamamını sesli özetle bitirmek istiyorsan', oner: true },
-    { id: 'kmb_asistan', ne: 'KMB pratik sınavı için beceriyi sesli, videolu ve aşama aşama öğrenip vaka sorularıyla sınanmak istiyorsan' },
     { id: 'cikmis_cozucu', ne: 'Sınavdaki soru sayısı kadar çıkmış paketini sesli asistanla birlikte çözmek istiyorsan' },
     { id: 'kamp', ne: 'Hocanın derste verdiği ipuçlarından hızlı tekrar yapmak istiyorsan' },
     { id: 'en_onemliler', ne: 'Konu başına en önemli bilgileri puan sırasıyla görmek istiyorsan' },

@@ -11,7 +11,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import lottie_uret as LU  # noqa: E402
-from lottie_dsl import FR, Anim, G, K, KD, S, el, fl, gf, ic_ekle, rc, st, tm, yol, yol_morph  # noqa: E402
+from lottie_dsl import FR, Anim, G, K, KD, S, el, fl, fl_cift, gf, ic_ekle, parmak_ucu, rc, st, tm, yol, yol_morph, yumruk  # noqa: E402
 
 MEDS = Path(__file__).resolve().parents[2]
 VERI = MEDS / 'src/data/kmb'
@@ -210,25 +210,40 @@ def adim(ad, cumleler, zaman):
     return Anim(f'adim-{ad}', ad, [{'baslik': ' '.join(c.split()[:4]).rstrip(',;:'), 'metin': c, 'sure': max(3, len(c) / 14)} for i, c in enumerate(cumleler)], zaman, bekle=0.9)
 
 
+def et(A, b, x, y, metin, tur='bilgi', f1=0.0, f2=1.0):
+    A.etiketler.append({'bas': round(A.T(b, f1) / FR, 2), 'son': round(A.T(b, f2) / FR, 2), 'x': x, 'y': y, 'metin': metin, 'tur': tur})
+
+
+def panel(A, b, f1, f2, x, y, w, h, nm, *shapes, kenar='#2f6fd6'):
+    """Ana sahnenin üstünde iç pencere (cümlenin bir kısmını göstermek için)."""
+    A.ekle(nm, G(rc(x, y, w, h, 14), fl('#f7f9fb'), st(kenar, 3)), *shapes,
+           o=K((0, 0), (A.T(b, f1), 0), (A.T(b, f1) + 8, 100), (A.T(b, f2), 100), (A.T(b, f2) + 8, 0)))
+
+
+def damla(x, y, s=1.0, renk='#e1b300'):
+    return G(yol(f'M{x} {y - 14 * s} C{x - 4 * s} {y - 6 * s} {x - 9 * s} {y} {x - 9 * s} {y + 5 * s} C{x - 9 * s} {y + 11 * s} {x - 4 * s} {y + 14 * s} {x} {y + 14 * s} C{x + 4 * s} {y + 14 * s} {x + 9 * s} {y + 11 * s} {x + 9 * s} {y + 5 * s} C{x + 9 * s} {y} {x + 4 * s} {y - 6 * s} {x} {y - 14 * s} Z'), fl(renk))
+
+
 def a_giris(A):
-    ic_ekle(A, LU.idrar_akisi, [0, 0, None, None, None], [(0, 0)])
+    ic_ekle(A, LU.erkek_ilerleyis, [0] * 8, [(0, 0)])
+    A.kamera_sabit(0, 0, 420, 250, 100)
+    et(A, 0, 400, 440, 'Üretral kateter: meatustan mesaneye, idrarı dışarı alır', 'dogru', .3)
     kavram_ikonlar(A, 1, [(180, 180, kisi(180, 140, '#ffffff', 1, True), 'Hekim', 'bilgi'), (400, 180, kisi(400, 140, '#8fc1c9'), 'Hemşire', 'bilgi'),
                           (620, 180, kisi(620, 140, '#a3b9d9'), 'Sağlık çalışanı', 'bilgi')], 'ekip')
+    et(A, 1, 400, 420, 'Teknik kolay: birkaç küçük incelik', 'bilgi', .5)
     kavram_ikonlar(A, 2, [(220, 200, ikon_kutu(220, 200, '#2e9e5b', [G(yol('M190 200 L212 222 L252 178'), st('#2e9e5b', 12))]), 'Kime takılır?', 'dogru'),
                           (400, 200, ikon_kutu(400, 200, '#d23b3b', [G(yol('M372 172 L428 228 M428 172 L372 228'), st('#d23b3b', 12))]), 'Kime asla?', 'uyari'),
                           (580, 200, ikon_kutu(580, 200, '#2f6fd6', [G(el(580, 200, 70, 70), st('#2f6fd6', 6)), G(yol('M580 200 L580 172'), st('#2f6fd6', 6))]), 'Hangi endikasyon?', 'bilgi')], 'karar')
-    yolh = [(130, 'Endikasyon'), (300, 'Kontrendikasyon'), (470, 'Malzeme'), (640, 'Uygulama')]
-    kavram_ikonlar(A, 3, [(x, 220, ikon_kutu(x, 220, '#2f6fd6', [G(el(x, 220, 54, 54), fl('#2f6fd6')), ]), m, 'bilgi') for x, m in yolh], 'yol')
+    yolh = [(130, 'Endikasyon'), (300, 'Kontrendikasyon'), (470, 'Malzeme'), (640, 'Kadında / erkekte uygulama')]
     A.ekle('yol-ok', G(yol('M130 220 L640 220'), st('#2f6fd6', 4, kesik=(10, 8)), tm(K((0, 0), (A.T(3, .1), 0), (A.T(3, .9), 100)))), o=gorun(A, 3, 3))
-    A.kamera(0, 260, 220, 140)
-    A.kamera(1, 400, 250, 100)
+    kavram_ikonlar(A, 3, [(x, 220, ikon_kutu(x, 220, '#2f6fd6', [G(el(x, 220, 54, 54), fl('#2f6fd6'))]), f'{i + 1} · {m}', 'bilgi') for i, (x, m) in enumerate(yolh)], 'yol')
 
 
 def monitor(A, b1, b2):
     o = gorun(A, b1, b2)
-    A.ekle('monitor', G(rc(250, 190, 360, 240, 16), fl('#11161d'), st('#5b6676', 4)), G(rc(250, 330, 80, 30, 4), fl('#5b6676')),
-           G(yol('M90 160 L150 160 L162 120 L176 200 L190 140 L200 160 L260 160 L272 120 L286 200 L300 140 L310 160 L400 160'), st('#3ad17a', 3, kesik=(18, 8), kesik_kayma=KD((0, 0), (A.op, -A.op * 3)))),
-           G(yol('M90 250 C120 230 150 270 180 250 C210 230 240 270 270 250 C300 230 330 270 360 250'), st('#5ab6ff', 3, kesik=(14, 6), kesik_kayma=KD((0, 0), (A.op, -A.op * 2)))), o=o)
+    A.ekle('monitor', G(rc(250, 330, 80, 30, 4), fl('#5b6676')), G(rc(250, 190, 360, 240, 16), fl('#11161d'), st('#5b6676', 4)),
+           G(yol('M90 150 L150 150 L162 110 L176 190 L190 130 L200 150 L260 150 L272 110 L286 190 L300 130 L310 150 L400 150'), st('#3ad17a', 3, kesik=(18, 8), kesik_kayma=KD((0, 0), (A.op, -A.op * 3)))),
+           G(yol('M90 230 C120 210 150 250 180 230 C210 210 240 250 270 230 C300 210 330 250 360 230'), st('#5ab6ff', 3, kesik=(14, 6), kesik_kayma=KD((0, 0), (A.op, -A.op * 2)))), o=o)
     A.ekle('torba', G(rc(640, 260, 150, 220, 14), fl('#f4f7fa', o=90), st('#9aa6b4', 3)), G(rc(640, 330, 134, 80, 10), gf([(0, '#f8dd6c'), (1, '#e7b82e')], (640, 290), (640, 370))),
            *[G(yol(f'M690 {180 + i * 30} L712 {180 + i * 30}'), st('#5b6676', 2)) for i in range(6)], o=o)
 
@@ -236,14 +251,21 @@ def monitor(A, b1, b2):
 def a_takip(A):
     T = A.T
     zemin_kat(A, 0, 4)
-    monitor(A, 0, 1)
-    for i, (x, m) in enumerate([(150, 'Tansiyon'), (250, 'Nabız'), (350, 'Solunum'), (150, 'Satürasyon'), (250, 'Ateş')]):
-        A.etiketler.append({'bas': round(T(0, .1 + i * .12) / FR, 2), 'son': round(T(0, 1) / FR, 2), 'x': x, 'y': 100 + (i // 3) * 220 + 0, 'metin': m, 'tur': 'bilgi'})
-    A.etiket(0, 0, 640, 410, 'Saatlik / 24 saatlik idrar', 'dogru')
-    # s1: serum (giren) ↔ idrar (çıkan)
-    A.ekle('serum', G(rc(150, 300, 90, 130, 14), fl('#e9f3fb', o=95), st('#6b7a90', 2)), G(rc(150, 320, 76, 80, 8), fl('#9fc4ef')),
-           G(yol('M150 365 L150 420 C150 450 250 450 300 430'), st('#cfd8e2', 6)), G(el(150, 380, 10, 14), fl('#5b8fc9')), o=belir(A, 1, .1, 1))
-    A.etiket(1, 1, 150, 210, 'Giren sıvı', 'bilgi'); A.etiket(1, 1, 640, 410, 'Çıkan idrar', 'bilgi')
+    monitor(A, 0, 0)
+    for i, (x, y, m) in enumerate([(130, 100, 'TA 120/80'), (250, 100, 'Nabız 84'), (370, 100, 'SS 16'), (170, 280, 'SpO₂ %98'), (330, 280, 'Ateş 36,8 °C')]):
+        et(A, 0, x, y, m, 'bilgi', .05 + i * .08)
+    et(A, 0, 640, 410, 'Saatlik / 24 saatlik idrar: vital bulgu kadar önemli', 'dogru', .5)
+    # s1: yatakta, ağızdan beslenemeyen hasta: serum kola, kateter torbaya
+    o1 = gorun(A, 1, 1)
+    A.ekle('yatak', G(rc(400, 330, 560, 50, 12), gf([(0, '#f4f7fa'), (1, '#d6dee7')], (400, 300), (400, 360)), st('#9aa6b4', 2)), G(rc(150, 296, 80, 24, 10), fl('#ffffff')), o=o1)
+    A.ekle('hasta', G(el(150, 270, 56, 52), gf(DERI, (140, 260), (160, 282), radyal=True)), G(yol('M178 280 L600 280 L600 306 L178 306 Z'), fl('#8fc1c9'), st('#4c8590', 1.5)),
+           G(yol('M138 278 C144 284 156 284 162 278'), st('#3b2a1e', 2)), o=o1)
+    A.ekle('serum', G(yol('M120 40 L120 320'), st('#9aa6b4', 5)), G(rc(120, 90, 70, 100, 12), fl('#e9f3fb', o=95), st('#6b7a90', 2)), G(rc(120, 110, 58, 60, 8), fl('#9fc4ef')),
+           G(yol('M120 140 L120 170 C120 230 200 250 250 284'), st('#cfd8e2', 5)), G(el(120, 160, 10, 14), fl('#5b8fc9')), o=o1)
+    A.ekle('serum-damla', damla(120, 150, .5, '#5b8fc9'), p=KD(*[(T(1) + k * 12, [0, (k % 2) * 12, 0]) for k in range(max(1, int((T(1, 1) - T(1)) / 12)))]), o=o1)
+    A.ekle('kateter-torba', G(yol('M480 300 C500 340 520 380 600 400'), st('#cfd8e2', 6)), G(rc(640, 410, 90, 110, 10), fl('#f4f7fa', o=92), st('#9aa6b4', 2)),
+           G(rc(640, 440, 80, 50, 8), fl('#f2cf55')), o=o1)
+    et(A, 1, 140, 30, 'Ağızdan alamıyor: giren sıvı', 'bilgi'); et(A, 1, 640, 480, 'Çıkan idrar → ne kadar sıvı?', 'dogru', .4)
     # s2–s3: kavanozlar + organlar
     zemin_kat(A, 2, 3, 'zemin-denge')
     for b, cik, gir, organ in ((2, 2000, 1000, 'bobrek'), (3, 1000, 5000, 'akciger')):
@@ -252,32 +274,59 @@ def a_takip(A):
             h = v / 5000 * 260
             A.ekle(f'kavanoz{b}{nm}', G(rc(x, 270, 120, 280, 12), fl('#f4f7fa'), st('#9aa6b4', 3)), o=o)
             A.ekle(f'sivi{b}{nm}', G(rc(x, 0, 104, h, 6), fl(r)), p=K((0, [0, 404, 0]), (T(b, .1), [0, 404, 0]), (T(b, .5), [0, 404 - h / 2, 0])),
-                   s=K((0, [100, 1, 100]), (T(b, .1), [100, 1, 100]), (T(b, .5), [100, 100, 100])), a=(0, 0), o=o)
-            A.etiketler.append({'bas': round(T(b, .5) / FR, 2), 'son': round(T(b, 1) / FR, 2), 'x': x, 'y': 110, 'metin': f'{nm} {v} mL', 'tur': 'bilgi'})
+                   s=K((0, [100, 1, 100]), (T(b, .1), [100, 1, 100]), (T(b, .5), [100, 100, 100])), o=o)
+            et(A, b, x, 110, f'{nm} {v} mL', 'bilgi', .5)
         if organ == 'bobrek':
             for x in (560, 680):
-                A.ekle(f'bobrek{x}', G(yol(f'M{x} 180 C{x - 60} 180 {x - 60} 340 {x} 340 C{x + 40} 340 {x + 50} 300 {x + 20} 260 C{x + 50} 220 {x + 40} 180 {x} 180 Z'),
-                                        fl('#b5524a'), st('#7d2f2a', 2)), o=o)
-                A.ekle(f'bobrek-k{x}', G(yol(f'M{x} 180 C{x - 60} 180 {x - 60} 340 {x} 340 C{x + 40} 340 {x + 50} 300 {x + 20} 260 C{x + 50} 220 {x + 40} 180 {x} 180 Z'),
-                                          fl('#5c1f1d')), o=K((0, 0), (T(b, .55), 0), (T(b, .85), 70), (T(b, 1) + 8, 70), (T(b, 1) + 16, 0)))
-            A.etiket(b, b, 620, 380, 'Dehidratasyon · böbrek bozulur', 'uyari')
+                d = f'M{x} 180 C{x - 60} 180 {x - 60} 340 {x} 340 C{x + 40} 340 {x + 50} 300 {x + 20} 260 C{x + 50} 220 {x + 40} 180 {x} 180 Z'
+                A.ekle(f'bobrek{x}', G(yol(d), gf([(0, '#c9605a'), (1, '#8f3c3a')], (x - 30, 190), (x + 20, 330)), st('#7d2f2a', 2)), o=o)
+                A.ekle(f'bobrek-k{x}', G(yol(d), fl('#4a1715')), o=K((0, 0), (T(b, .55), 0), (T(b, .85), 70), (T(b, 1) + 8, 70), (T(b, 1) + 16, 0)))
+            A.ekle('kuru', damla(620, 120, 1.6, '#5b8fc9'), G(yol('M600 100 L640 140 M640 100 L600 140'), st('#d23b3b', 6)), o=belir(A, 2, .55, 2))
+            et(A, 2, 620, 380, 'Dehidratasyon · böbrek fonksiyonu bozulur', 'uyari', .55)
         else:
-            for x in (560, 680):
-                A.ekle(f'akc{x}', G(yol(f'M{x} 160 C{x - 50} 170 {x - 60} 300 {x - 40} 350 C{x - 10} 360 {x + 20} 350 {x + 24} 330 L{x + 24} 170 Z' if x == 560 else f'M{x} 160 C{x + 50} 170 {x + 60} 300 {x + 40} 350 C{x + 10} 360 {x - 20} 350 {x - 24} 330 L{x - 24} 170 Z'),
-                                     fl('#f2b8b2'), st('#a8554e', 2)), o=o)
-            A.ekle('odem', G(rc(620, 0, 230, 190, 30), fl('#5b8fc9', o=70)), p=K((0, [0, 350, 0]), (T(b, .5), [0, 350, 0]), (T(b, .9), [0, 280, 0])),
-                   s=K((0, [100, 1, 100]), (T(b, .5), [100, 1, 100]), (T(b, .9), [100, 100, 100])), o=o)
-            A.etiket(b, b, 620, 400, 'Akciğer ödemi · periferik ödem · KKY', 'uyari')
-    kavram_ikonlar(A, 4, [(130, 200, ikon_kutu(130, 200, '#2f6fd6', [G(rc(130, 210, 100, 40, 8), fl('#9aa6b4')), G(el(100, 190, 26, 26), fl('#e9b896'))]), 'Yoğun bakım', 'bilgi'),
-                          (300, 200, ikon_kutu(300, 200, '#2f6fd6', [G(yol('M260 230 L340 170'), st('#6b7a90', 8)), G(el(300, 200, 40, 40), st('#d23b3b', 5))]), 'Uzun / kanamalı ameliyat', 'bilgi'),
-                          (470, 200, ikon_kutu(470, 200, '#d23b3b', [G(yol('M440 230 L470 170 L500 230 Z'), fl('#d23b3b'))]), 'Septik · hipovolemik · hemorajik şok', 'uyari'),
-                          (640, 200, ikon_kutu(640, 200, '#2f6fd6', [G(el(640, 200, 60, 60), gf(DERI, (630, 190), (650, 215), radyal=True)), G(yol('M622 196 L636 196 M644 196 L658 196'), st('#3b2a1e', 3))]), 'Bilinci kapalı (inme, DKA)', 'bilgi')], 'grup')
+            for x, sag in ((560, False), (680, True)):
+                d = (f'M{x} 160 C{x + 50} 170 {x + 60} 300 {x + 40} 350 C{x + 10} 360 {x - 20} 350 {x - 24} 330 L{x - 24} 170 Z' if sag else
+                     f'M{x} 160 C{x - 50} 170 {x - 60} 300 {x - 40} 350 C{x - 10} 360 {x + 20} 350 {x + 24} 330 L{x + 24} 170 Z')
+                A.ekle(f'akc{x}', G(yol(d), fl('#f2b8b2'), st('#a8554e', 2)), o=o)
+                A.ekle(f'odem{x}', G(yol(d), fl('#5b8fc9', o=75)), a=(x, 356), p=S([x, 356, 0]),
+                       s=K((0, [100, 0, 100]), (T(b, .5), [100, 0, 100]), (T(b, .9), [100, 60, 100])), o=o)
+            A.ekle('kalp', G(yol('M620 300 C600 280 590 300 606 318 L620 334 L634 318 C650 300 640 280 620 300 Z'), fl('#c0392b')), o=belir(A, 3, .7, 3))
+            A.ekle('bacak', G(yol('M720 400 L716 470 L740 470 L742 400 Z'), fl('#e9b896'), st('#b9805a', 1.5)), G(yol('M760 400 L752 470 L792 470 L786 400 Z'), fl('#e9b896'), st('#d23b3b', 2)),
+                   o=belir(A, 3, .8, 3))
+            et(A, 3, 560, 440, 'Akciğer ödemi · periferik ödem · KKY', 'uyari', .6)
+    kavram_ikonlar(A, 4, [(110, 190, ikon_kutu(110, 190, '#2f6fd6', [G(rc(110, 205, 110, 30, 8), fl('#9aa6b4')), G(el(80, 185, 28, 28), fl('#e9b896')), G(rc(150, 230, 18, 24, 4), fl('#f2cf55'))]), 'Yoğun bakım', 'bilgi'),
+                          (300, 190, ikon_kutu(300, 190, '#2f6fd6', [G(yol('M262 222 L320 166 L332 176 L276 232 Z'), fl('#c9d3de'), st('#6b7a90', 2)), damla(318, 212, 1.1, '#c0392b')]), 'Uzun / kanamalı ameliyat', 'bilgi'),
+                          (490, 190, ikon_kutu(490, 190, '#d23b3b', [G(yol('M450 160 L490 210 L530 240'), st('#d23b3b', 7)), G(yol('M516 232 L532 242 L522 224'), st('#d23b3b', 6))]), 'Şok (septik · hipovolemik · hemorajik)', 'uyari'),
+                          (680, 190, ikon_kutu(680, 190, '#2f6fd6', [G(el(680, 190, 64, 64), gf(DERI, (670, 180), (690, 205), radyal=True)), G(yol('M660 186 C666 192 674 192 680 186 M680 186 C686 192 694 192 700 186'), st('#3b2a1e', 3))]), 'Bilinci kapalı (inme, DKA)', 'bilgi')], 'grup')
+    for e in A.etiketler[-4:]:
+        if e['x'] in (300, 680):
+            e['y'] += 28
+
+
+def bosalma(_z):
+    """Retansiyonda kateter: üretradan mesaneye girer, idrar torbaya akar, mesane küçülür."""
+    I = LU._IC
+    T = I.T
+    LU.pelvis_zemin(I)
+    LU.simfiz(I, 420, 300, -18)
+    I.ekle('uretra', G(yol('M330 268 C340 300 352 330 360 360 L368 440'), st('#d68c86', 9)))
+    I.ekle('mesane', G(el(0, 0, 190, 220), gf(MESANE, (-40, -60), (40, 70), radyal=True), st('#a8554e', 5)), G(el(0, 0, 166, 196), gf(IDRAR, (-30, -40), (30, 60), radyal=True)),
+           a=(0, 90), p=K((0, [340, 270, 0]), (T(0, .4), [340, 270, 0]), (T(0, 1), [334, 276, 0])), s=K((0, [100, 100, 100]), (T(0, .4), [100, 100, 100]), (T(0, 1), [62, 52, 100])))
+    kd = 'M380 520 L368 440 L360 360 C352 330 340 300 330 268 L326 240'
+    I.ekle('kateter', G(yol(kd), st('#8a96a6', 9)), G(yol(kd), st('#eef2f6', 7)), G(el(326, 240, 9, 9), fl('#eef2f6'), st('#5b6676', 1)), tm(K((0, 0), (T(0, .05), 0), (T(0, .35), 100))))
+    I.ekle('akis', G(yol('M326 240 C330 268 340 300 352 330 L368 440 L380 520'), st('#e1b300', 4, kesik=(8, 10), kesik_kayma=KD((T(0, .35), 0), (I.ust.op, -(I.ust.op - T(0, .35)) * 3)))),
+           o=K((0, 0), (T(0, .35), 0), (T(0, .4), 100)))
+    I.ekle('torba', G(rc(620, 420, 140, 130, 12), fl('#f4f7fa', o=92), st('#9aa6b4', 2)), G(yol('M380 520 C420 520 520 470 560 440'), st('#cfd8e2', 6)))
+    I.ekle('torba-dolu', G(rc(620, 0, 124, 110, 8), fl('#f2cf55')), a=(0, 55), p=S([0, 480, 0]),
+           s=K((0, [100, 5, 100]), (T(0, .4), [100, 5, 100]), (T(0, 1), [100, 90, 100])))
 
 
 def a_retansiyon(A):
     ic_ekle(A, LU.glob, [0, 1, None, None, None], [(0, 1)])
-    ic_ekle(A, LU.idrar_akisi, [2, 2, None, None, None], [(2, 2)], 'bosalt')
-    A.etiket(2, 2, 250, 440, 'Mesane boşalır, hasta rahatlar', 'dogru')
+    et(A, 0, 600, 420, 'Hasta idrar yapamıyor', 'uyari', .2)
+    ic_ekle(A, bosalma, [2], [(2, 2)], 'bosalma')
+    A.kamera_sabit(2, 2, 420, 300, 100)
+    et(A, 2, 250, 440, 'Mesane boşalır, hasta rahatlar', 'dogru', .6)
     kavram_ikonlar(A, 3, [(250, 210, ikon_kutu(250, 210, '#2f6fd6', [G(rc(250, 220, 120, 40, 8), fl('#9aa6b4')), G(el(210, 200, 30, 30), fl('#e9b896')), G(rc(290, 250, 26, 34, 5), fl('#f2cf55'))]), 'Yatağa bağımlı hasta', 'bilgi'),
                           (550, 210, ikon_kutu(550, 210, '#d23b3b', [G(rc(550, 220, 120, 40, 8), fl('#9aa6b4')), G(el(510, 200, 30, 30), fl('#e9b896')), G(yol('M570 180 L600 180 M585 165 L585 195'), st('#d23b3b', 7))]), 'Hareket ettirilemeyen travma hastası', 'uyari')], 'yatak')
 
@@ -285,27 +334,30 @@ def a_retansiyon(A):
 def a_diger(A):
     T = A.T
     zemin_kat(A, 0, 2)
+    A.ekle('rontgen', G(rc(330, 250, 440, 340, 12), fl('#1a1f26')), G(yol('M180 140 C220 100 300 100 330 140 M480 140 C440 100 360 100 330 140'), st('#e9eef5', 4, o=60)),
+           G(yol('M200 320 C240 300 300 300 330 330 C360 300 420 300 460 320'), st('#e9eef5', 6, o=70)), o=gorun(A, 2, 2))
     A.ekle('mesane', G(el(320, 230, 260, 200), gf(MESANE, (280, 180), (340, 300), radyal=True), st('#a8554e', 6)), G(el(320, 230, 222, 166), gf(IDRAR, (300, 200), (330, 280), radyal=True)), o=gorun(A, 0, 2))
-    A.ekle('opak', G(el(320, 230, 222, 166), fl('#ffffff', o=90)), o=K((0, 0), (T(2, .2), 0), (T(2, .6), 100), (T(2, 1) + 8, 100), (T(2, 1) + 16, 0)))
+    A.ekle('opak', G(el(320, 230, 230, 174), fl('#ffffff', o=95)), o=K((0, 0), (T(2, .2), 0), (T(2, .6), 100), (T(2, 1) + 8, 100), (T(2, 1) + 16, 0)))
     A.ekle('kateter', G(yol('M320 250 L320 420 C320 460 400 470 470 450'), st('#8a96a6', 11)), G(yol('M320 250 L320 420 C320 460 400 470 470 450'), st('#eef2f6', 8)), o=gorun(A, 0, 2))
     A.ekle('kultur', G(rc(560, 400, 70, 90, 10), fl('#eef3f8', o=95), st('#7d8aa0', 2)), G(rc(560, 420, 60, 50, 6), fl('#f2cf55')), G(rc(560, 350, 84, 18, 4), fl('#c0392b')),
            G(yol('M470 450 C520 440 540 400 556 380'), st('#e1b300', 4, kesik=(8, 8), kesik_kayma=KD((0, 0), (A.op, -A.op * 2)))), o=gorun(A, 0, 0))
-    A.etiket(0, 0, 560, 300, 'Steril kültür örneği', 'bilgi'); A.etiket(0, 0, 160, 80, 'Küçük çocuk / yaşlı', 'bilgi')
-    A.ekle('enjektor', G(rc(620, 440, 150, 40, 5), fl('#eef3f8', o=95), st('#6b7a90', 2)), G(rc(600, 440, 90, 30), fl('#b48ae0')),
-           o=gorun(A, 1, 1), p=K((0, [80, 0, 0]), (T(1, .1), [80, 0, 0]), (T(1, .4), [0, 0, 0])))
-    A.ekle('ilac', G(yol('M545 445 L470 450 C400 470 320 460 320 420 L320 250'), st('#8e44ad', 5, kesik=(10, 10), kesik_kayma=KD((T(1, .3), 0), (T(1, 1), -300)))), o=gorun(A, 1, 1))
+    A.ekle('cocuk', *kisi(640, 120, '#f2b8d0', .7), o=belir(A, 0, .1, 0))
+    A.ekle('yasli', *kisi(730, 110, '#c9d3de', .85), G(yol('M760 160 L770 240'), st('#7a5a3a', 4)), o=belir(A, 0, .2, 0))
+    et(A, 0, 690, 260, 'Küçük çocuk · yaşlı: temiz örnek veremiyor', 'bilgi', .25); et(A, 0, 560, 300, 'Steril kültür örneği', 'dogru', .5)
+    A.ekle('enjektor', G(rc(560, 450, 150, 40, 5), fl('#eef3f8', o=95), st('#6b7a90', 2)), G(rc(540, 450, 90, 30), fl('#b48ae0')), G(rc(478, 450, 20, 12, 2), fl('#9aa6b4')),
+           G(rc(642, 450, 10, 50, 3), fl('#6b7a90')), o=gorun(A, 1, 1), p=K((0, [80, 0, 0]), (T(1, .1), [80, 0, 0]), (T(1, .35), [0, 0, 0])))
+    A.ekle('ilac', G(yol('M470 450 C400 470 320 460 320 420 L320 250'), st('#8e44ad', 5, kesik=(10, 10), kesik_kayma=KD((T(1, .35), 0), (T(1, 1), -300)))), o=gorun(A, 1, 1))
     A.ekle('ilac-mesane', G(el(320, 230, 222, 166), fl('#b48ae0', o=55)), o=K((0, 0), (T(1, .5), 0), (T(1, .9), 100), (T(1, 1) + 8, 100), (T(1, 1) + 16, 0)))
-    A.etiket(1, 1, 620, 380, 'Kemoterapötik ilaç', 'bilgi')
-    A.ekle('rontgen', G(rc(320, 230, 360, 300, 10), st('#2f6fd6', 4, kesik=(14, 8))), o=gorun(A, 2, 2))
-    A.etiket(2, 2, 600, 220, 'Sistografi: opak madde', 'bilgi')
-    kavram_ikonlar(A, 3, [(150, 220, ikon_kutu(150, 220, '#2e9e5b', [G(el(150, 220, 70, 70), fl('#2e9e5b'))]), '1 · İdrar yapamama', 'dogru'),
-                          (400, 220, ikon_kutu(400, 220, '#2e9e5b', [G(el(400, 220, 60, 60), fl('#5aa874'))]), '2 · İdrar takibi', 'dogru'),
-                          (650, 220, ikon_kutu(650, 220, '#9aa6b4', [G(el(650, 220, 46, 46), fl('#9aa6b4'))]), '3 · Kültür, ilaç, sistografi', 'bilgi')], 'sira')
+    et(A, 1, 600, 390, 'Kemoterapötik ilaç', 'bilgi', .2)
+    et(A, 2, 600, 220, 'Travma · sistografi: opak madde', 'bilgi', .2)
+    kavram_ikonlar(A, 3, [(150, 210, ikon_kutu(150, 210, '#2e9e5b', [G(el(150, 205, 80, 80), gf(MESANE, (130, 185), (170, 230), radyal=True)), G(el(150, 205, 62, 62), fl('#f2cf55'))]), '1 · İdrar yapamama', 'dogru'),
+                          (400, 210, ikon_kutu(400, 210, '#2e9e5b', [G(rc(400, 210, 70, 84, 10), fl('#f4f7fa'), st('#9aa6b4', 2)), G(rc(400, 228, 60, 40, 6), fl('#f2cf55'))]), '2 · İdrar takibi', 'dogru'),
+                          (650, 210, ikon_kutu(650, 210, '#9aa6b4', [G(rc(650, 216, 44, 56, 8), fl('#eef3f8'), st('#7d8aa0', 2)), G(rc(650, 184, 54, 12, 3), fl('#c0392b'))]), '3 · Kültür, ilaç, sistografi', 'bilgi')], 'sira')
 
 
-def konusma(A, b, metin_x, x=520, y=120, renk='#d23b3b'):
+def konusma(A, b, metin_x, x=520, y=120, renk='#d23b3b', f1=.05, f2=None):
     A.ekle('balon', G(yol(f'M{x - 150} {y - 40} L{x + 150} {y - 40} C{x + 166} {y - 40} {x + 166} {y + 40} {x + 150} {y + 40} L{x - 90} {y + 40} L{x - 130} {y + 70} L{x - 120} {y + 40} L{x - 150} {y + 40} C{x - 166} {y + 40} {x - 166} {y - 40} {x - 150} {y - 40} Z'),
-                       fl('#ffffff'), st(renk, 3)), o=belir(A, b, .05, b))
+                       fl('#ffffff'), st(renk, 3)), o=belir(A, b, f1, b) if f2 is None else K((0, 0), (A.T(b, f1), 0), (A.T(b, f1) + 6, 100), (A.T(b, f2), 100), (A.T(b, f2) + 6, 0)))
 
 
 def a_sistit(A):
@@ -313,71 +365,138 @@ def a_sistit(A):
     zemin_kat(A, 0, 0)
     A.ekle('hasta0', *kisi(240, 200, '#8fc1c9', 1.3), o=gorun(A, 0, 0))
     konusma(A, 0, 0, 520, 140)
-    A.etiket(0, 0, 520, 140, '"İdrar yapamıyorum"', 'uyari')
+    et(A, 0, 520, 140, '"İdrar yapamıyorum"', 'uyari')
     A.ekle('tepsi', G(rc(560, 380, 220, 80, 10), fl('#c7d1da'), st('#8b96a3', 2)), G(yol('M480 380 C520 350 580 410 640 370'), st('#e3b544', 8)), o=belir(A, 0, .4, 0))
     carpi(A, 560, 380, 0, .6)
-    A.etiket(0, 0, 560, 460, 'Hemen sonda takma!', 'uyari')
+    et(A, 0, 560, 460, 'Hemen sonda takma!', 'uyari', .6)
     ic_ekle(A, LU.glob, [None, None, None, None, 1], [(1, 2)], 'sistit')
-    A.etiket(1, 1, 640, 80, 'Suprapubik ağrı · sık idrar · yanma', 'bilgi')
-    A.etiket(2, 2, 640, 80, 'Retansiyon değil → değerlendir', 'uyari')
+    A.kamera_sabit(1, 2, 400, 260, 112)
+    A.ekle('agri', G(yol('M470 230 L452 268 L470 268 L456 306 L494 256 L474 256 L488 230 Z'), fl('#e1a92e'), st('#a8741a', 1.5)), o=belir(A, 1, .1, 2))
+    A.ekle('az-idrar', damla(370, 470, .8), p=KD(*[(T(1, .4) + k * 18, [0, (k % 2) * 16, 0]) for k in range(max(1, int((T(1, 1) - T(1, .4)) / 18)))]), o=belir(A, 1, .4, 1))
+    et(A, 1, 560, 200, 'Suprapubik ağrı · sık idrar · yanma', 'uyari', .1)
+    A.ekle('soru', G(el(600, 200, 100, 100), fl('#ffffff'), st('#e1a92e', 5)), G(yol('M584 186 C584 166 616 166 616 186 C616 200 600 200 600 216'), st('#e1a92e', 8)), G(el(600, 232, 9, 9), fl('#e1a92e')),
+           o=belir(A, 2, .1, 2))
+    et(A, 2, 600, 300, 'Retansiyon değil · önce değerlendir', 'uyari', .2)
     ic_ekle(A, LU.glob, [3, 3, 3, 4, None], [(3, 4)], 'glob')
-    A.etiket(3, 3, 640, 420, 'Altı aylık gebe karnı gibi kabarık', 'bilgi')
+    et(A, 3, 600, 440, 'Altı aylık gebe karnı gibi kabarık', 'bilgi', .5)
     kavram_ikonlar(A, 5, [(160, 210, ikon_kutu(160, 210, '#d23b3b', [*[G(el(130 + i * 22, 200 + (i % 2) * 22, 18, 12), fl('#5aa874'), st('#2e6e46', 1)) for i in range(4)]]), 'Enfeksiyon riski', 'uyari'),
                           (400, 210, ikon_kutu(400, 210, '#d23b3b', [G(yol('M390 160 L370 215 L400 215 L380 260 L430 195 L400 195 L420 160 Z'), fl('#e1a92e'))]), 'Günlerce ağrı', 'uyari'),
-                          (640, 210, ikon_kutu(640, 210, '#d23b3b', [G(yol('M580 210 L620 210 C630 210 630 205 640 205 C650 205 650 210 660 210 L700 210'), st('#f0b8b2', 14)), G(yol('M632 196 L648 196 M632 224 L648 224'), st('#d23b3b', 4))]), 'Erkekte üretra darlığı', 'uyari')], 'sonuc')
+                          (640, 210, ikon_kutu(640, 210, '#d23b3b', [G(yol('M580 196 L620 196 C632 196 632 204 640 204 C648 204 648 196 660 196 L700 196 L700 224 L660 224 C648 224 648 216 640 216 C632 216 632 224 620 224 L580 224 Z'), fl('#f0b8b2'), st('#a8554e', 1.5))]), 'Tek kateter bile: erkekte darlık', 'uyari')], 'sonuc')
 
 
 def a_enf(A):
     T = A.T
     zemin_kat(A, 0, 0)
     A.ekle('dur', G(yol('M400 90 L470 120 L500 190 L470 260 L400 290 L330 260 L300 190 L330 120 Z'), fl('#d23b3b'), st('#8d1f1f', 4)), G(rc(400, 190, 140, 30, 6), fl('#ffffff')), o=belir(A, 0, .1, 0))
-    A.etiket(0, 0, 400, 350, 'Kesin kontrendikasyon: takarsan malpraktis', 'uyari')
+    et(A, 0, 400, 350, 'Kesin kontrendikasyon: takarsan malpraktis', 'uyari', .3)
 
     def anatomi(_z):
-        I = LU._IC
-        LU.erkek_anatomi(I)
-        return I
+        LU.erkek_anatomi(LU._IC)
     ic_ekle(A, anatomi, [1], [(1, 3)], 'anatomi')
     A.ekle('prostat-ilt', G(el(300, 262, 92, 72), fl('#d23b3b', o=55), st('#8d1f1f', 3)), o=K((0, 0), (T(1, .2), 0), (T(1, .35), 100), (T(1, 1) + 8, 100), (T(1, 1) + 16, 0)),
-           s=KD(*[(T(1, .2) + k * 10, [100 + (k % 2) * 8, 100 + (k % 2) * 8, 100]) for k in range(int((T(1, 1) - T(1, .2)) / 10))]), a=(300, 262), p=S([300, 262, 0]))
+           s=KD(*[(T(1, .2) + k * 10, [100 + (k % 2) * 8, 100 + (k % 2) * 8, 100]) for k in range(max(1, int((T(1, 1) - T(1, .2)) / 10)))]), a=(300, 262), p=S([300, 262, 0]))
     A.ekle('bakteri', *[G(el(300 + dx, 262 + dy, 9, 6), fl('#2e6e46')) for dx, dy in [(-50, -20), (40, -30), (60, 10), (-60, 30), (0, -60), (20, 50)]],
            s=K((0, [40, 40, 100]), (T(1, .4), [40, 40, 100]), (T(1, .9), [260, 260, 100])), a=(300, 262), p=S([300, 262, 0]), o=gorun(A, 1, 1))
-    A.etiket(1, 1, 200, 400, 'Akut prostatit / abse: bakteriyemi, sepsis', 'uyari')
-    A.ekle('testis-ilt', G(el(505, 395, 90, 72), fl('#d23b3b', o=55), st('#8d1f1f', 3)), o=gorun(A, 2, 2))
-    A.etiket(2, 2, 600, 470, 'Orşit · epididimit · Fournier · abse', 'uyari')
-    A.ekle('mesane-kanama', *[G(el(300 + dx, 150 + dy, 8, 8), fl('#b3201f')) for dx, dy in [(-30, -10), (20, -30), (40, 20), (-40, 30), (0, 40)]], o=gorun(A, 3, 3))
-    A.etiket(3, 3, 380, 40, 'Hızlı boşaltma → mukozal kanama', 'bilgi')
-    tik(A, 600, 120, 3, .5)
-    A.etiket(3, 3, 600, 190, 'Kontrendikasyon değil', 'dogru')
-    A.kamera(1, 300, 262, 200)
-    A.kamera(2, 505, 395, 190)
-    A.kamera(3, 320, 170, 150)
+    # rektal tuşe: eldivenli parmak anüsten rektuma (prostata) uzanır → çarpı
+    A.ekle('tuse', parmak_ucu(232, 404, 140, 1.0, steril=False), o=K((0, 0), (T(1, .05), 0), (T(1, .1), 100), (T(1, .5), 100), (T(1, .55), 0)),
+           p=K((0, [-40, 34, 0]), (T(1, .05), [-40, 34, 0]), (T(1, .2), [0, 0, 0])))
+    A.ekle('tuse-x', G(yol('M200 360 L260 420 M260 360 L200 420'), st('#d23b3b', 9)), o=K((0, 0), (T(1, .22), 0), (T(1, .26), 100), (T(1, .5), 100), (T(1, .55), 0)))
+    et(A, 1, 150, 460, 'Rektal tuşe de yapılmaz', 'uyari', .2, .55)
+    et(A, 1, 200, 60, 'Akut prostatit / abse: bakteriyemi, sepsis', 'uyari', .4)
+    A.kamera_sabit(1, 1, 300, 280, 140)
+    A.ekle('testis-ilt', G(el(505, 395, 90, 72), fl('#d23b3b', o=55), st('#8d1f1f', 3)), G(el(540, 396, 26, 50), fl('#d23b3b', o=55)), o=gorun(A, 2, 2))
+    et(A, 2, 600, 470, 'Orşit · epididimit · Fournier · abse', 'uyari', .2)
+    A.ekle('hizli-kateter', G(yol(LU.KATETER_Y), st('#5b6676', 9, o=35)), G(yol(LU.KATETER_Y), st('#eef2f6', 7)), o=gorun(A, 3, 3))
+    A.ekle('hizli-akis', G(yol('M300 150 L300 305 C300 345 330 362 372 352 L470 320 L700 302 L760 302'), st('#e1b300', 5, kesik=(14, 8), kesik_kayma=KD((T(3), 0), (A.op, -(A.op - T(3)) * 8)))), o=gorun(A, 3, 3))
+    for i, (dx, dy) in enumerate([(-30, -10), (20, -30), (40, 20), (-40, 30), (0, 40)]):
+        A.ekle(f'kanama{i}', G(el(300 + dx, 150 + dy, 9, 9), fl('#b3201f')), o=belir(A, 3, .3 + i * .08, 3))
+    et(A, 3, 380, 40, 'Hızlı boşaltma → mukozal kanama', 'bilgi', .3)
+    tik(A, 600, 140, 3, .6)
+    et(A, 3, 600, 210, 'Yine de kontrendikasyon değil', 'dogru', .6)
+    A.kamera_sabit(2, 2, 505, 380, 170)
+    A.kamera_sabit(3, 3, 400, 220, 105)
 
 
 def a_travma(A):
+    T = A.T
     ic_ekle(A, LU.travma, [0, 1, 2, 4], [(0, 2), (4, 4)])
+    for i, (x, sh, m) in enumerate([(160, [G(yol('M130 60 L130 160 M150 60 L150 160'), st('#7a5a3a', 4)), *[G(yol(f'M130 {70 + j * 22} L150 {70 + j * 22}'), st('#7a5a3a', 3)) for j in range(5)], G(yol('M190 70 L190 150'), st('#d23b3b', 5)), G(yol('M180 136 L190 154 L200 136'), st('#d23b3b', 5))], 'Yüksekten düşme'),
+                                    (400, [G(rc(400, 110, 120, 40, 14), fl('#2f6fd6')), G(rc(390, 86, 70, 26, 8), fl('#9cc6ff')), G(el(365, 132, 26, 26), fl('#2b2f36')), G(el(435, 132, 26, 26), fl('#2b2f36'))], 'Trafik kazası'),
+                                    (640, [G(yol('M590 110 L690 110'), st('#7a5a3a', 8)), G(yol('M640 60 L640 104 M640 104 L616 150 M640 104 L664 150'), st('#3e4a58', 6)), G(el(640, 50, 20, 20), fl('#e9b896'))], 'Ata biner gibi düşme')]):
+        A.ekle(f'neden{i}', G(rc(x, 110, 170, 130, 16), fl('#ffffff', o=92), st('#d23b3b', 2)), *sh, o=belir(A, 1, .1 + i * .15, 1))
+        et(A, 1, x, 190, m, 'uyari', .1 + i * .15)
+    A.kamera_sabit(1, 1, 400, 250, 100)
     ic_ekle(A, LU.travma, [3, 3, None, None], [(3, 3)], 'yalniz-kirik')
+    A.kamera_sabit(3, 3, 400, 280, 100)
+    A.ekle('kan-yok', G(el(400, 470, 50, 40), st('#2e9e5b', 4)), o=belir(A, 3, .3, 3))
     tik(A, 620, 400, 3, .5)
-    A.etiket(3, 3, 600, 470, 'Meatusta kan yok → kateter takılabilir', 'dogru')
-    A.etiket(4, 4, 250, 440, 'Kısmi yırtık: zorlama yırtığı tamamlar', 'uyari')
+    et(A, 3, 600, 460, 'Pelvis kırığı var, meatusta kan yok → takılabilir', 'dogru', .5)
+    # kısmi yırtık: kateter itilince yırtık tamamlanır
+    A.ekle('yirtik', G(yol('M392 354 L408 350'), st('#b3201f', 6)), s=K((0, [100, 100, 100]), (T(4, .3), [100, 100, 100]), (T(4, .6), [300, 260, 100])), a=(400, 352), p=S([400, 352, 0]), o=gorun(A, 4, 4))
+    A.ekle('itilen', G(yol('M400 640 L400 520'), st('#8a96a6', 10)), G(yol('M400 640 L400 520'), st('#eef2f6', 8)), p=K((0, [0, 120, 0]), (T(4, .1), [0, 120, 0]), (T(4, .55), [0, -150, 0])), o=gorun(A, 4, 4))
+    et(A, 4, 250, 440, 'Kısmi yırtık: zorlama yırtığı tamamlar', 'uyari', .3); et(A, 4, 600, 300, 'Başka yöntemle yaklaşılır', 'bilgi', .7)
+
+
+def paket(x, y, lateks):
+    r, k = ('#e3b544', '#8a6a1e') if lateks else ('#f4f7fa', '#8a96a6')
+    return [G(yol(f'M{x - 82} {y - 46} L{x + 74} {y - 46} L{x + 86} {y - 34} L{x + 86} {y + 46} L{x - 82} {y + 46} Z'), fl('#f4f1ea'), st('#b9b1a0', 1.2)),
+            G(yol(f'M{x - 60} {y + 26} C{x - 30} {y + 26} {x - 20} {y - 30} {x + 20} {y - 30} C{x + 50} {y - 30} {x + 60} {y - 6} {x + 40} {y + 6}'), st(k, 10, o=35)),
+            G(yol(f'M{x - 60} {y + 26} C{x - 30} {y + 26} {x - 20} {y - 30} {x + 20} {y - 30} C{x + 50} {y - 30} {x + 60} {y - 6} {x + 40} {y + 6}'), st(r, 8)),
+            G(rc(x - 76, y + 10, 10, 9, 2), fl('#ef7d22')), G(rc(x + 56, y + 30, 50, 20, 3), fl('#ffffff'), st('#c9d3de', 1)), G(rc(x + 34, y + 30, 6, 20), fl('#ef7d22'))]
+
+
+def enjektor(x, y, L, H, sivi='#e9f3fb', genis=False):
+    sh = [G(rc(x, y, L, H, 3), fl('#eef3f8', o=95), st('#6b7a90', 1.5)), G(rc(x - 4, y, L - 20, H - 6), fl(sivi, o=90)),
+          *[G(yol(f'M{x - L / 2 + 8 + i * (L - 16) / 9} {y - H / 2} L{x - L / 2 + 8 + i * (L - 16) / 9} {y - H / 2 + (5 if i % 2 else 8)}'), st('#3e4a58', 1)) for i in range(10)],
+          G(rc(x - L / 2 - 20, y, 40, H * .35), fl('#cfd8e2')), G(rc(x - L / 2 - 42, y, 8, H + 10, 2), fl('#6b7a90')), G(rc(x - L / 2 + 6, y, 8, H - 4, 1.5), fl('#2b2f36'))]
+    sh.append(G(yol(f'M{x + L / 2} {y - 9} L{x + L / 2 + 34} {y - 3} L{x + L / 2 + 34} {y + 3} L{x + L / 2} {y + 9} Z' if genis else f'M{x + L / 2} {y - 4} L{x + L / 2 + 12} {y - 3} L{x + L / 2 + 12} {y + 3} L{x + L / 2} {y + 4} Z'), fl('#dfe6ee'), st('#6b7a90', 1.2)))
+    return sh
 
 
 def a_malzeme(A):
-    ic_ekle(A, LU.malzeme, [0, 0, 1, 2, 3, 4], [(0, 4)])
-    A.ekle('uzatan-el', G(yol('M800 330 C720 320 660 300 620 280 L600 300 C640 340 720 370 800 380 Z'), fl(ELDIVEN), st('#7d8aa0', 2)),
-           G(rc(600, 280, 60, 40, 6), fl('#fbfaf6'), st('#c9b48a', 1.5)), p=K((0, [200, 0, 0]), (A.T(4, .2), [200, 0, 0]), (A.T(4, .5), [0, 0, 0])), o=belir(A, 4, .2, 4))
+    """Tepsiye malzemeler cümle sırasıyla iner (ürün fotoğraflarına göre çizim)."""
+    T = A.T
+    zemin_kat(A, 0, 4)
+    A.ekle('tepsi', G(rc(400, 250, 780, 470, 24), gf([(0, '#8b96a3'), (.4, '#eef2f6'), (1, '#6d7884')], (400, 10), (400, 490))),
+           G(rc(400, 250, 756, 446, 18), gf([(0, '#dfe6ec'), (1, '#c7d1da')], (400, 30), (400, 470))), o=gorun(A, 0, 4))
+    O = [
+        (0, .05, [*paket(120, 100, True)], (120, 160, 'Lateks Foley · 16 Fr')),
+        (0, .15, [*paket(320, 100, False)], (320, 160, 'Silikon Foley')),
+        (0, .45, [G(rc(510, 110, 140, 60, 4), fl('#eaf1f8'), st('#8a9bb0', 1.2)), G(rc(510, 76, 140, 12, 2), fl('#f6f9fc'), st('#8a9bb0', 1)), G(rc(480, 118, 70, 14, 3), fl('#2f6fd6')),
+                  G(yol('M520 76 C516 50 530 36 540 40 L548 74'), fl('#cfe0f5'), st('#6f8bb3', 1.2))], (510, 160, 'Steril olmayan eldiven')),
+        (0, .65, [G(rc(690, 100, 160, 90, 4), fl('#fbfaf6'), st('#c9b48a', 1.2)), G(yol('M690 56 L690 144'), st('#e5dcc8', 1.5)),
+                  yumruk(650, 100, .32, 90), yumruk(730, 100, .32, 90)], (690, 160, 'Steril eldiven')),
+        (1, .1, [G(rc(150, 260, 130, 26, 6), fl('#eef3f8'), st('#6b7a90', 1.2)), G(rc(140, 260, 90, 16), fl('#cfe6ff')), G(yol('M215 252 L250 257 L250 263 L215 268 Z'), fl('#dfe6ee'), st('#6b7a90', 1)),
+                  G(rc(80, 260, 12, 36, 3), fl('#6b7a90'))], (150, 310, 'Jel (lidokainli)')),
+        (2, .05, [*[G(rc(320 + dx, 262, 22, 64, 6), fl('#eef3f8', o=95), st('#6b7a90', 1.2)) for dx in (-26, 0, 26)], *[G(rc(320 + dx, 226, 14, 10, 2), fl('#e9eef3'), st('#6b7a90', 1)) for dx in (-26, 0, 26)]], (320, 310, 'Steril izotonik')),
+        (2, .25, enjektor(500, 262, 92, 20), (500, 310, '10 mL enjektör · balon')),
+        (2, .6, enjektor(680, 262, 120, 34, genis=True), (680, 310, 'Geniş uçlu 50 mL enjektör')),
+        (3, .05, [G(rc(110, 410, 40, 74, 9), gf([(0, '#7a3410'), (.5, '#b5551d'), (1, '#6d2c0c')], (90, 0), (130, 0))), G(rc(110, 366, 22, 12, 2), fl('#e9eef3')),
+                  G(yol('M150 420 C150 396 250 396 250 420 C250 450 222 460 200 446 C178 460 150 450 150 420 Z'), gf([(0, '#8b96a3'), (.4, '#eef2f6'), (1, '#6d7884')], (0, 400), (0, 460))),
+                  *[G(el(x, 418, 18, 18), fl('#ffffff'), st('#d6dde5', 1)) for x in (176, 198, 220)]], (170, 470, 'Antiseptik · gazlı bez')),
+        (3, .4, [G(rc(400, 410, 170, 100), yol('M400 392 C390 392 384 400 384 410 C384 420 390 428 400 428 C410 428 416 420 416 410 C416 400 410 392 400 392 Z'), fl_cift('#3b7bb8'))], (400, 470, 'Steril delikli örtü')),
+        (3, .7, [G(rc(600, 410, 110, 110, 10), fl('#f4f7fa', o=92), st('#9aa6b4', 2)), G(rc(600, 440, 96, 40, 6), fl('#f2cf55')), G(yol('M600 356 C600 330 650 326 680 334'), st('#cfd8e2', 6)),
+                  G(rc(600, 470, 20, 10, 2), fl('#6b7a90'))], (600, 470, 'İdrar torbası')),
+    ]
+    for j, (b, f, sh, (lx, ly, m)) in enumerate(O):
+        k = T(b, f)
+        A.ekle(f'oge{j}', *sh, p=K((0, [0, -560, 0]), (k, [0, -560, 0]), (k + 16, [0, 0, 0])), o=K((0, 0), (k, 0), (k + 4, 100), (T(4, 1) + 8, 100), (T(4, 1) + 16, 0)))
+        et(A, b, lx, ly, m, 'bilgi', f + .05)
+    et(A, 1, 300, 330, 'Lidokain: kayganlaştırır + anestezi', 'dogru', .5)
+    A.ekle('steril-alan', G(rc(400, 180, 760, 330, 14), fl('#cfe7d8', o=30), st('#2e9e5b', 4, kesik=(14, 8))), o=belir(A, 4, .05, 4))
+    A.ekle('yardimci', yumruk(760, 220, .7, 180, steril=False), p=K((0, [120, 0, 0]), (T(4, .1), [120, 0, 0]), (T(4, .35), [0, 0, 0])), o=belir(A, 4, .1, 4))
+    A.ekle('alan-el', yumruk(560, 240, .7, 0, steril=True), p=K((0, [-60, 120, 0]), (T(4, .4), [-60, 120, 0]), (T(4, .65), [0, 0, 0])), o=belir(A, 4, .4, 4))
+    et(A, 4, 660, 330, 'Yardımcı açar, uzatır', 'bilgi', .2); et(A, 4, 520, 330, 'Steril el yalnız steril alana', 'dogru', .6)
 
 
 def foley_detay(A):
     """Kateter yapısı: 7 cümlenin her biri ayrı eylem."""
     T = A.T
     zemin_kat(A, 0, 6)
-    # s0: lateks ve silikon yan yana
     for y, r, k, ad in ((170, '#e3b544', '#8a6a1e', 'Lateks · kısa süreli'), (300, '#f2f5f8', '#8a96a6', 'Silikon · uzun süreli')):
         A.ekle(f'kat{y}', G(yol(f'M80 {y} L640 {y}'), st(k, 22, o=40)), G(yol(f'M80 {y} L640 {y}'), st(r, 18)), G(yol(f'M80 {y - 5} L640 {y - 5}'), st('#ffffff', 4, o=60)),
                G(el(78, y, 20, 18), fl(r), st(k, 1.5)), o=gorun(A, 0, 0), p=K((0, [-700, 0, 0]), (T(0, .05 if y == 170 else .3), [-700, 0, 0]), (T(0, .05 if y == 170 else .3) + 16, [0, 0, 0])))
-        A.etiketler.append({'bas': round(T(0, .2 if y == 170 else .45) / FR, 2), 'son': round(T(0, 1) / FR, 2), 'x': 360, 'y': y - 40, 'metin': ad, 'tur': 'bilgi'})
-    # s1–s5: tek kateter büyük
+        et(A, 0, 360, y - 40, ad, 'bilgi', .2 if y == 170 else .45)
     gov = 'M60 250 L560 250'
     A.ekle('govde', G(yol(gov), st('#8a6a1e', 26, o=40)), G(yol(gov), st('#e3b544', 22)), G(yol('M60 244 L560 244'), st('#fff6d6', 5)),
            G(yol('M60 238 C34 238 28 246 28 250 C28 254 34 262 60 262 Z'), fl('#e3b544'), st('#8a6a1e', 1.5)), o=gorun(A, 1, 5))
@@ -392,48 +511,51 @@ def foley_detay(A):
            G(rc(648, 126, 40, 30, 6), fl('#ef7d22'), st('#9a4a0e', 1.5)), o=gorun(A, 1, 5))
     A.ekle('vurgu-drenaj', G(el(670, 251, 120, 100), st('#2e9e5b', 5)), o=belir(A, 2, .3, 2))
     A.ekle('vurgu-balon-k', G(el(650, 140, 80, 60), st('#2f6fd6', 5)), o=belir(A, 2, .6, 2))
-    A.etiket(1, 1, 90, 190, 'Uçtaki delikler', 'bilgi'); A.etiket(1, 1, 150, 310, 'Sabitleme balonu', 'bilgi')
-    A.etiket(2, 2, 670, 330, 'Kalın drenaj kanalı → torba', 'dogru'); A.etiket(2, 2, 650, 90, 'İnce valfli balon kanalı', 'bilgi')
-    # s3: torba hortumu önce balon kanalına → kırmızı çarpı, sonra drenaja
+    et(A, 1, 90, 190, 'Uçtaki delikler', 'bilgi'); et(A, 1, 150, 310, 'Sabitleme balonu', 'bilgi', .4)
+    et(A, 2, 670, 330, 'Kalın drenaj kanalı → torba', 'dogru', .3); et(A, 2, 650, 90, 'İnce valfli balon kanalı', 'bilgi', .6)
     A.ekle('hortum', G(yol('M800 420 C760 420 740 400 730 380'), st('#cfd8e2', 14)), G(rc(730, 372, 26, 30, 6), fl('#9aa6b4')),
            p=K((0, [0, 0, 0]), (T(3), [0, 0, 0]), (T(3, .25), [-60, -240, 0]), (T(3, .5), [-60, -240, 0]), (T(3, .8), [16, -120, 0])), o=gorun(A, 3, 3))
     carpi(A, 650, 140, 3, .25)
     tik(A, 760, 250, 3, .8)
-    A.etiket(3, 3, 400, 420, 'Torba her zaman drenaj kanalına', 'dogru')
-    # s4: enjektör balon kanalına, balon şişer, çekme oku
+    et(A, 3, 400, 420, 'Torba her zaman drenaj kanalına', 'dogru', .7)
     A.ekle('enjektor', G(rc(0, 0, 130, 34, 4), fl('#eef3f8', o=95), st('#6b7a90', 2)), G(rc(-10, 0, 90, 26), fl('#9fc4ef')),
            p=K((0, [780, 60, 0]), (T(4, .05), [780, 60, 0]), (T(4, .25), [700, 100, 0])), r=S(-40), o=gorun(A, 4, 4))
     A.ekle('cek', G(yol('M400 330 L240 330'), st('#2f6fd6', 6)), G(yol('M262 314 L236 330 L262 346'), st('#2f6fd6', 6)), o=belir(A, 4, .75, 4))
-    A.etiket(4, 4, 330, 380, 'Basit çekiştirmeyle çıkmaz', 'bilgi')
-    # s5: torba + musluk
-    A.ekle('torba', G(rc(560, 360, 200, 200, 14), fl('#f4f7fa', o=92), st('#9aa6b4', 3)), G(rc(560, 410, 184, 90, 10), gf([(0, '#f8dd6c'), (1, '#e7b82e')], (560, 370), (560, 450))),
-           G(rc(560, 466, 30, 16, 4), fl('#6b7a90')), G(yol('M560 474 L560 500'), st('#e1b300', 6, kesik=(8, 6), kesik_kayma=KD((T(5, .4), 0), (A.op, -80)))),
-           o=gorun(A, 5, 5), p=K((0, [0, 200, 0]), (T(5), [0, 200, 0]), (T(5, .2), [0, 0, 0])))
-    A.etiket(5, 5, 640, 480, 'Musluktan boşaltılır', 'bilgi')
-    # s6: boy ve çap
+    et(A, 4, 330, 380, 'Basit çekiştirmeyle çıkmaz', 'bilgi', .75)
+    # s5: torba sağ altta, hortumla drenaj kanalına bağlı; musluk açılır
+    A.ekle('torba-hortum', G(yol('M724 251 C790 260 790 330 700 350'), st('#cfd8e2', 10)), o=gorun(A, 5, 5))
+    A.ekle('torba', G(rc(640, 410, 170, 150, 14), fl('#f4f7fa', o=92), st('#9aa6b4', 3)), G(rc(640, 450, 154, 66, 10), gf([(0, '#f8dd6c'), (1, '#e7b82e')], (640, 420), (640, 480))),
+           G(rc(640, 490, 28, 14, 4), fl('#6b7a90')), G(rc(660, 490, 14, 8, 2), fl('#c0392b')),
+           o=gorun(A, 5, 5), p=K((0, [0, 160, 0]), (T(5), [0, 160, 0]), (T(5, .2), [0, 0, 0])))
+    A.ekle('bosalt', G(yol('M640 498 L640 540'), st('#e1b300', 6, kesik=(8, 6), kesik_kayma=KD((T(5, .5), 0), (A.op, -80)))), o=belir(A, 5, .5, 5))
+    et(A, 5, 520, 470, 'Musluktan boşaltılır', 'bilgi', .5)
     zemin_kat(A, 6, 6, 'zemin-boy')
     for i, f in enumerate([12, 16, 20, 24]):
         A.ekle(f'eriskin{f}', G(yol(f'M120 {100 + i * 50} L680 {100 + i * 50}'), st('#8a96a6', f * 0.9 + 2)), G(yol(f'M120 {100 + i * 50} L680 {100 + i * 50}'), st('#eef2f6', f * 0.9)), o=belir(A, 6, .05 + i * .06, 6))
     for i, f in enumerate([6, 8, 10]):
         A.ekle(f'cocuk{f}', G(yol(f'M120 {330 + i * 40} L480 {330 + i * 40}'), st('#8a96a6', f + 2)), G(yol(f'M120 {330 + i * 40} L480 {330 + i * 40}'), st('#dfeaf6', f)), o=belir(A, 6, .5 + i * .06, 6))
-    A.etiket(6, 6, 720, 170, 'Erişkin 12–24 Fr · boy aynı', 'bilgi'); A.etiket(6, 6, 600, 370, 'Çocuk 6–8–10 Fr · daha kısa', 'bilgi')
+    et(A, 6, 720, 170, 'Erişkin 12–24 Fr · boy aynı', 'bilgi', .2); et(A, 6, 600, 370, 'Çocuk 6–8–10 Fr · daha kısa', 'bilgi', .6)
     A.kamera(1, 140, 250, 190)
     A.kamera(2, 640, 220, 160)
     A.kamera(3, 620, 250, 120)
     A.kamera(4, 360, 220, 110)
-    A.kamera(5, 560, 330, 130)
+    A.kamera(5, 600, 350, 115)
     A.kamera(6, 400, 250, 100)
 
 
 def a_iletisim(A):
     ic_ekle(A, LU.mahremiyet, [0, 2, 3], [(0, 3)])
     zemin_kat(A, 1, 1, 'zemin-onam')
+    A.kamera_sabit(1, 1, 400, 250, 100)
     A.ekle('hekim1', *kisi(200, 170, '#ffffff', 1.3, True), o=gorun(A, 1, 1))
-    konusma(A, 1, 0, 520, 130)
-    A.etiketler.append({'bas': round(A.T(1, .05) / FR, 2), 'son': round(A.T(1, .5) / FR, 2), 'x': 520, 'y': 130, 'metin': '"Yatın, sonda takacağım"', 'tur': 'uyari'})
-    carpi(A, 520, 130, 1, .3)
-    A.etiketler.append({'bas': round(A.T(1, .55) / FR, 2), 'son': round(A.T(1, 1) / FR, 2), 'x': 520, 'y': 300, 'metin': 'Anlat + sözlü onam al', 'tur': 'dogru'})
-    tik(A, 520, 380, 1, .6)
+    konusma(A, 1, 0, 520, 130, f2=.5)
+    et(A, 1, 520, 130, '"Yatın, sonda takacağım"', 'uyari', .05, .5)
+    carpi(A, 520, 130, 1, .25)
+    konusma(A, 1, 0, 520, 300, renk='#2e9e5b', f1=.55, f2=1)
+    et(A, 1, 520, 300, 'Neden gerektiğini anlatır, onam alır', 'dogru', .55)
+    A.ekle('cocuk-ebeveyn', G(rc(150, 110, 220, 150, 14), fl('#ffffff', o=95), st('#2f6fd6', 2)), *kisi(110, 80, '#a3b9d9', .65), *kisi(185, 100, '#f2b8d0', .45),
+           o=belir(A, 3, .5, 3))
+    et(A, 3, 150, 200, 'Çocukta ebeveyn · karşı cinste karşı cins personel', 'bilgi', .5)
     kavram_ikonlar(A, 4, [(260, 220, ikon_kutu(260, 220, '#2e9e5b', [G(el(260, 220, 70, 70), gf(DERI, (250, 210), (270, 230), radyal=True)), G(yol('M240 230 C250 244 270 244 280 230'), st('#3b2a1e', 4))]), 'Hasta rahat', 'dogru'),
                           (540, 220, ikon_kutu(540, 220, '#2f6fd6', [G(yol('M540 170 L590 190 L586 236 C580 262 560 274 540 282 C520 274 500 262 494 236 L490 190 Z'), fl('#2f6fd6'))]), 'Medikolegal koruma', 'bilgi')], 'koruma')
 
@@ -441,32 +563,36 @@ def a_iletisim(A):
 def a_pozisyon(A):
     T = A.T
     zemin_kat(A, 0, 2)
-    # s0: erkek, yandan sırtüstü; iç çamaşırı iner
     A.ekle('yatak0', G(rc(400, 330, 640, 60, 12), gf([(0, '#f4f7fa'), (1, '#d6dee7')], (400, 300), (400, 360)), st('#9aa6b4', 2)), G(rc(140, 290, 90, 30, 12), fl('#ffffff')), o=gorun(A, 0, 0))
     A.ekle('erkek', G(el(140, 260, 60, 56), gf(DERI, (130, 250), (150, 272), radyal=True)), G(yol('M170 270 L420 262 L640 280 L640 300 L170 300 Z'), fl('#8fc1c9'), st('#4c8590', 1.5)),
            G(yol('M420 262 L640 280 L640 300 L420 300 Z'), gf(DERI, (500, 270), (500, 300))), o=gorun(A, 0, 0))
     A.ekle('camasir', G(rc(0, 0, 70, 40, 6), fl('#5b6676')), p=K((0, [430, 282, 0]), (T(0, .4), [430, 282, 0]), (T(0, .8), [520, 288, 0])), o=gorun(A, 0, 0))
-    A.etiket(0, 0, 400, 200, 'Supin: sırtüstü', 'bilgi')
-    # s1–s2: kadın, üstten; dizler bükülür, topuklar yatakta, bacaklar V
+    et(A, 0, 400, 200, 'Supin: sırtüstü · iç çamaşırı indirilir', 'bilgi', .2)
     A.ekle('yatak1', G(rc(400, 260, 620, 300, 16), gf([(0, '#f4f7fa'), (1, '#d6dee7')], (400, 120), (400, 400)), st('#9aa6b4', 2)), o=gorun(A, 1, 2))
     A.ekle('kadin', G(el(160, 260, 60, 56), gf(DERI, (150, 250), (170, 270), radyal=True)), G(yol('M190 220 L400 216 C412 216 416 304 400 304 L190 300 Z'), fl('#8fc1c9'), st('#4c8590', 1.5)), o=gorun(A, 1, 2))
     for s, (d1, d2) in enumerate([('M400 236 L520 236 L640 236', 'M400 236 L500 170 L620 150'), ('M400 284 L520 284 L640 284', 'M400 284 L500 350 L620 370')]):
         A.ekle(f'bacak{s}', G(yol_morph(d1, d2, T(2, .1), T(2, .6)), st('#b9805a', 30)), G(yol_morph(d1, d2, T(2, .1), T(2, .6)), st('#e9b896', 26)), o=gorun(A, 1, 2))
-    A.ekle('diz', G(el(0, 0, 30, 30), fl('#d9a07c')), p=K((0, [520, 236, 0]), (T(2, .1), [520, 236, 0]), (T(2, .6), [500, 170, 0])), o=belir(A, 2, .3, 2))
-    A.ekle('diz2', G(el(0, 0, 30, 30), fl('#d9a07c')), p=K((0, [520, 284, 0]), (T(2, .1), [520, 284, 0]), (T(2, .6), [500, 350, 0])), o=belir(A, 2, .3, 2))
     A.ekle('V', G(yol('M640 150 L420 260 L640 370'), st('#2f6fd6', 4, kesik=(12, 8))), o=belir(A, 2, .65, 2))
-    A.etiket(1, 1, 400, 80, 'Modifiye litotomi', 'bilgi'); A.etiket(2, 2, 680, 260, 'Dizler bükük · topuklar yatakta · V', 'dogru')
+    # yandan görünüm: dizler bükük, topuklar yatakta
+    panel(A, 2, .05, 1, 640, 90, 300, 150, 'yan', G(yol('M500 140 L780 140'), st('#9aa6b4', 6)), G(yol('M510 128 L640 128'), st('#8fc1c9', 22)),
+          G(yol_morph('M640 128 L700 128 L760 128', 'M640 128 L690 70 L740 132', T(2, .1), T(2, .6)), st('#e9b896', 18)), G(el(510, 120, 22, 22), fl('#e9b896')),
+          kenar='#2f6fd6')
+    et(A, 2, 640, 30, 'Yandan: diz bükük, topuk yatakta', 'bilgi', .1)
+    et(A, 1, 400, 80, 'Modifiye litotomi', 'bilgi'); et(A, 2, 680, 300, 'Bacaklar V şeklinde açılır', 'dogru', .65)
 
 
 def a_kadin_anatomi(A):
     T = A.T
     vulva(A, 0, 4, ayir=(T(1, 0), T(1, .5)), parmak=(T(4, .1), T(4, .6)))
-    A.etiket(0, 0, 160, 130, 'Labium majus', 'bilgi'); A.etiket(0, 0, 230, 240, 'Labium minus', 'bilgi')
-    A.etiket(1, 1, 520, 118, 'Klitoris', 'bilgi'); A.etiket(1, 1, 560, 205, 'Meatus (≈1 cm altında)', 'dogru')
-    A.etiket(2, 2, 560, 310, 'Vajina', 'bilgi')
-    A.etiket(3, 3, 400, 470, 'Kız bebek, çocuk: anatomiyi kesin bil', 'uyari')
-    A.etiket(4, 4, 400, 470, 'Gerçek dokuda yumuşak açılır', 'bilgi')
+    et(A, 0, 250, 150, 'Labium majus', 'bilgi', .1); et(A, 0, 330, 260, 'Labium minus', 'bilgi', .4)
+    et(A, 1, 520, 118, 'Klitoris', 'bilgi'); et(A, 1, 560, 205, 'Meatus (≈1 cm altında)', 'dogru', .4)
+    et(A, 2, 560, 310, 'Vajina', 'bilgi')
     A.ekle('meatus-vurgu', G(el(400, 208, 46, 38), st('#2e9e5b', 4)), o=belir(A, 1, .4, 1))
+    A.ekle('vajina-vurgu', G(el(400, 312, 80, 136), st('#e1a92e', 4)), o=belir(A, 2, .2, 2))
+    panel(A, 3, .05, 1, 160, 110, 260, 170, 'fark', *kisi(100, 80, '#f2b8d0', .6), *kisi(210, 70, '#8fc1c9', .7), kenar='#d23b3b')
+    et(A, 3, 100, 190, 'Kız çocuk ⚠', 'uyari', .1); et(A, 3, 210, 190, 'Doğum yapmış ✓', 'dogru', .1)
+    et(A, 3, 400, 470, 'Kız bebek, çocuk, cinsel aktif olmayan: anatomiyi kesin bil', 'uyari', .3)
+    et(A, 4, 400, 470, 'Gerçek dokuda yumuşak açılır', 'bilgi', .3)
     A.kamera(1, 400, 200, 170)
     A.kamera(2, 400, 280, 150)
     A.kamera(3, 400, 250, 100)
@@ -475,23 +601,34 @@ def a_kadin_anatomi(A):
 def a_kadin_temizlik(A):
     ic_ekle(A, LU.kadin_temizlik, [0, 1, 1, 2, 3], [(0, 3)])
     zemin_kat(A, 4, 4, 'zemin-uzat')
+    T = A.T
     A.ekle('ortu4', G(rc(400, 380, 800, 240), fl('#3b7bb8', o=75)), o=gorun(A, 4, 4))
-    A.ekle('paket', G(rc(0, 0, 160, 110, 8), fl('#fbfaf6'), st('#c9b48a', 2)), G(yol('M-70 -10 C-30 -40 30 20 70 -10'), st('#e3b544', 7)),
-           p=K((0, [760, 200, 0]), (A.T(4, .1), [760, 200, 0]), (A.T(4, .45), [420, 300, 0])), o=gorun(A, 4, 4))
-    A.ekle('yardimci-eli', G(yol('M800 160 C700 170 620 180 560 200 L560 230 C640 240 720 250 800 250 Z'), fl(ELDIVEN), st('#7d8aa0', 2)),
-           p=K((0, [260, 0, 0]), (A.T(4, .1), [260, 0, 0]), (A.T(4, .45), [-60, 100, 0])), o=gorun(A, 4, 4))
-    A.etiket(4, 4, 420, 420, 'Yardımcı steril paketi uzatır', 'bilgi')
+    # yardımcı (mavi eldiven) steril paketi soyar; steril el kateteri ve jeli alır
+    A.ekle('paket', G(rc(0, 0, 170, 110, 8), fl('#fbfaf6'), st('#c9b48a', 2)), G(yol('M-70 -10 C-30 -40 30 20 70 -10'), st('#e3b544', 7)),
+           G(yol_morph('M-85 -55 L85 -55 L85 -50 L-85 -50 Z', 'M-85 -55 L85 -55 L60 -120 L-60 -120 Z', T(4, .1), T(4, .35)), fl('#e8e0cc'), st('#c9b48a', 1.5)),
+           p=K((0, [720, 220, 0]), (T(4, .05), [720, 220, 0]), (T(4, .4), [470, 300, 0])), o=gorun(A, 4, 4))
+    A.ekle('yardimci-sol', yumruk(0, 0, .6, 200, steril=False), p=K((0, [800, 180, 0]), (T(4, .05), [800, 180, 0]), (T(4, .4), [560, 250, 0])), o=gorun(A, 4, 4))
+    A.ekle('yardimci-sag', yumruk(0, 0, .6, 160, steril=False), p=K((0, [800, 300, 0]), (T(4, .05), [800, 300, 0]), (T(4, .4), [560, 350, 0])), o=gorun(A, 4, 4))
+    A.ekle('steril-el', yumruk(0, 0, .65, 0, steril=True), p=K((0, [0, 300, 0]), (T(4, .45), [0, 300, 0]), (T(4, .75), [380, 300, 0])), o=belir(A, 4, .45, 4))
+    et(A, 4, 560, 120, 'Yardımcı paketi açar, steril uzatır', 'bilgi', .1); et(A, 4, 300, 430, 'Steril el yalnız steril malzemeye', 'dogru', .6)
 
 
 def a_kadin_yerlestirme(A):
     T = A.T
     jel_ucuna(A, 0)
+    A.kamera_sabit(0, 0, 560, 300, 150)
     avuc_kateter(A, 1)
-    A.etiket(1, 1, 400, 460, 'Avuçta halka: uç hiçbir yere değmez', 'dogru')
+    et(A, 1, 400, 460, 'Avuçta halka: uç hiçbir yere değmez', 'dogru', .5)
+    panel(A, 1, .72, 1, 640, 380, 280, 170, 'sarkan', G(yol('M500 460 C540 380 620 360 780 380 L780 465 L500 465 Z'), gf(DERI, (640, 380), (640, 460))),
+          G(yol('M560 300 C560 340 600 380 640 400'), st('#e3b544', 6)), G(el(640, 400, 40, 40), st('#d23b3b', 4)),
+          G(yol('M610 320 L670 380 M670 320 L610 380'), st('#d23b3b', 7)), kenar='#d23b3b')
+    et(A, 1, 640, 310, 'Sallanan uç uyluğa değdi → steril değil', 'uyari', .72)
     vulva(A, 2, 2, ayir=(T(2, .05), T(2, .35)), parmak=(T(2, .05), T(2, .35)))
-    A.ekle('giren-kateter', G(yol('M640 520 C560 400 460 270 404 212'), st('#8a6a1e', 12, o=45), tm(K((0, 0), (T(2, .45), 0), (T(2, .9), 100)))),
-           G(yol('M640 520 C560 400 460 270 404 212'), st('#e3b544', 9), tm(K((0, 0), (T(2, .45), 0), (T(2, .9), 100)))), o=gorun(A, 2, 2))
-    A.etiket(2, 2, 600, 160, 'Sol el ayırır · sağ el iter', 'bilgi')
+    kd = 'M640 520 C560 400 460 270 404 212'
+    A.ekle('giren-kateter', G(yol(kd), st('#8a6a1e', 12, o=45), tm(K((0, 0), (T(2, .45), 0), (T(2, .9), 100)))),
+           G(yol(kd), st('#e3b544', 9), tm(K((0, 0), (T(2, .45), 0), (T(2, .9), 100)))), o=gorun(A, 2, 2))
+    A.ekle('sag-el', yumruk(0, 0, .6, -125, steril=True), p=K((0, [640, 520, 0]), (T(2, .45), [640, 520, 0]), (T(2, .9), [560, 410, 0])), o=belir(A, 2, .4, 2))
+    et(A, 2, 600, 160, 'Sol el ayırır · sağ el iter', 'bilgi', .3)
     ic_ekle(A, LU.kadin_ilerleyis, [3, 3, 3, 3, 4, 4], [(3, 4)], 'ilerle')
 
 
@@ -501,39 +638,63 @@ def a_erkek_temizlik(A):
     T = A.T
     A.ekle('kadin-u', G(yol('M140 160 L300 160'), st('#f0b8b2', 16)), G(el(300, 160, 26, 26), fl('#e3b544')), G(el(300, 160, 40, 26), fl('#cfe9ff', o=70)), o=gorun(A, 2, 2))
     A.ekle('erkek-u', G(yol('M140 330 L700 330'), st('#f0b8b2', 16)), G(yol('M140 330 L700 330'), st('#8fc7ff', 14, o=70), tm(K((0, 0), (T(2, .4), 0), (T(2, .9), 100)))), o=gorun(A, 2, 2))
-    A.etiket(2, 2, 220, 110, 'Kadın: kısa üretra · uca jel', 'bilgi'); A.etiket(2, 2, 420, 400, 'Erkek: uzun üretra · jelin tamamı', 'dogru')
+    A.ekle('agri2', G(yol('M720 290 L706 320 L720 320 L708 350 L740 310 L724 310 L736 290 Z'), fl('#e1a92e')), o=belir(A, 2, .3, 2))
+    et(A, 2, 220, 110, 'Kadın: kısa üretra · uca jel', 'bilgi'); et(A, 2, 420, 400, 'Erkek: uzun üretra, daha ağrılı · jelin tamamı', 'dogru', .4)
 
 
 def a_erkek_yerlestirme(A):
+    T = A.T
     avuc_kateter(A, 0, renk='#f2f5f8', kenar='#8a96a6', steril=True)
-    A.etiket(0, 0, 400, 460, 'Avuca dola · uçtan gevşek tutma', 'uyari')
+    et(A, 0, 400, 460, 'Avuca dola', 'dogru', .4)
+    panel(A, 0, .7, 1, 640, 360, 280, 200, 'gevsek', G(el(560, 300, 50, 40), fl('#fdf6ea'), st('#b59c72', 2)),
+          G(yol_morph('M580 300 C620 330 640 380 650 440', 'M580 300 C630 300 680 330 740 370', T(0, .72), T(0, .9)), st('#f2f5f8', 7)),
+          G(yol('M610 330 L670 390 M670 330 L610 390'), st('#d23b3b', 7)), kenar='#d23b3b')
+    et(A, 0, 640, 280, 'Uçtan gevşek tutarsan ilerletemezsin', 'uyari', .7)
     ic_ekle(A, LU.erkek_ilerleyis, [1, 1, 1, 2, 2, 2, 3, 4], [(1, 4)])
-    A.etiket(2, 2, 400, 470, 'Makette takılabilir · gerçek hastada daha kolay', 'bilgi')
+    # penisi dik ve gergin tutan sol el + çekme oku
+    A.ekle('tutan-el', yumruk(560, 300, .55, 180, steril=True), o=gorun(A, 1, 1))
+    A.ekle('gergin', G(yol('M620 240 L720 240'), st('#2f6fd6', 5)), G(yol('M700 226 L722 240 L700 254'), st('#2f6fd6', 5)), o=belir(A, 1, .1, 1))
+    et(A, 1, 620, 200, 'Penis dik ve gergin', 'bilgi', .1)
+    et(A, 2, 400, 470, 'Makette takılabilir · gerçek hastada daha kolay', 'bilgi', .5)
 
 
 def a_idrar_gelmezse(A):
+    T = A.T
     ic_ekle(A, LU.yikama, [0, 2, 2, 3, 4, 4], [(0, 0), (2, 4)])
+    A.ekle('yanlis-sisirme', *enjektor(640, 120, 110, 30), G(yol('M590 70 L690 170 M690 70 L590 170'), st('#d23b3b', 9)), o=belir(A, 0, .45, 0))
+    et(A, 0, 640, 200, 'İdrar yok → balonu şişirme', 'uyari', .45)
     ic_ekle(A, LU.yanlis_balon, [1, None, None, None, None], [(1, 1)], 'kivrim')
-    A.etiket(1, 1, 200, 60, '1) Mesane boş  ·  2) Kateter kıvrıldı', 'bilgi')
+    panel(A, 1, .02, .5, 200, 250, 300, 260, 'bos', G(el(200, 230, 120, 60), gf(MESANE, (180, 210), (220, 250), radyal=True), st('#a8554e', 4)),
+          G(yol('M200 260 L200 360'), st('#eef2f6', 7)), G(el(200, 236, 10, 10), fl('#eef2f6'), st('#5b6676', 1)), kenar='#2f6fd6')
+    et(A, 1, 200, 140, '1) Mesane gerçekten boş', 'bilgi', .02, .5); et(A, 1, 600, 60, '2) Kateter takıldı, kıvrıldı', 'uyari', .5)
     ic_ekle(A, LU.yanlis_balon, [None, 5, 5, 6, 6], [(5, 6)], 'yanlis')
+    panel(A, 5, .02, .45, 200, 130, 300, 200, 'genis', G(el(200, 130, 220, 140), gf(MESANE, (170, 100), (230, 170), radyal=True), st('#a8554e', 4)),
+          G(el(200, 150, 30, 22), fl('#ffffff', o=80), st('#2e9e5b', 2)), kenar='#2e9e5b')
+    et(A, 5, 200, 250, 'Mesanede balon fark edilmez', 'dogru', .02, .45); et(A, 5, 600, 470, 'Üretra ≈ 1 cm: şişirirsen perfore', 'uyari', .45)
+    A.ekle('inkontinans', damla(720, 300, .9), p=KD(*[(T(6, .2) + k * 14, [0, (k % 3) * 14, 0]) for k in range(max(1, int((T(6, 1) - T(6, .2)) / 14)))]), o=belir(A, 6, .2, 6))
+    et(A, 6, 600, 60, 'Sfinkterde şişirme → kalıcı inkontinans', 'uyari', .1)
 
 
 def a_sabitleme(A):
+    T = A.T
     ic_ekle(A, LU.balon, [0, 0, 0, 0, 1, 1], [(0, 1)])
     ic_ekle(A, LU.idrar_akisi, [2, 2, 2, None, None], [(2, 2)], 'torba')
     A.ekle('kultur', G(rc(470, 300, 60, 80, 8), fl('#eef3f8', o=95), st('#7d8aa0', 2)), G(rc(470, 320, 50, 40, 6), fl('#f2cf55')), G(rc(470, 256, 70, 16, 4), fl('#c0392b')),
-           o=belir(A, 2, .6, 2))
-    A.etiket(2, 2, 470, 380, 'Gerekirse kültür örneği', 'bilgi')
+           G(yol('M420 390 C440 370 460 350 470 340'), st('#e1b300', 4, kesik=(6, 6), kesik_kayma=KD((T(2, .6), 0), (A.op, -A.op)))), o=belir(A, 2, .6, 2))
+    et(A, 2, 470, 220, 'Gerekirse kültür örneği', 'bilgi', .6)
     zemin_kat(A, 3, 4, 'zemin-kayit')
-    T = A.T
     A.ekle('form', G(rc(330, 250, 300, 380, 12), fl('#ffffff'), st('#9aa6b4', 2)), G(rc(330, 70, 120, 24, 6), fl('#9aa6b4')),
            *[G(yol(f'M210 {130 + i * 50} L450 {130 + i * 50}'), st('#2f6fd6', 4), tm(K((0, 0), (T(3, .1 + i * .18), 0), (T(3, .25 + i * .18), 100)))) for i in range(5)], o=gorun(A, 3, 3))
+    A.ekle('kalem', G(yol('M0 0 L-60 40'), st('#2b2f36', 8)), G(yol('M-60 40 L-68 46'), st('#e1a92e', 6)),
+           p=KD(*[(T(3, .1 + i * .18 + j * .15 / 6), [210 + 240 * j / 6 + 60, 130 + i * 50 - 40, 0]) for i in range(5) for j in range(7)]), o=gorun(A, 3, 3))
     for i, m in enumerate(['Kateter türü · boyu', 'Balon hacmi', 'İdrar miktarı · görünümü', 'Güçlük', 'Komplikasyon']):
-        A.etiketler.append({'bas': round(T(3, .1 + i * .18) / FR, 2), 'son': round(T(3, 1) / FR, 2), 'x': 600, 'y': 130 + i * 50, 'metin': m, 'tur': 'bilgi'})
+        et(A, 3, 600, 130 + i * 50, m, 'bilgi', .1 + i * .18)
     A.ekle('hasta', *kisi(260, 200, '#8fc1c9', 1.3), o=gorun(A, 4, 4))
     A.ekle('yanma', G(yol('M300 360 C290 340 300 320 310 300 C320 320 334 330 330 350 C326 366 306 372 300 360 Z'), fl('#e1a92e')), o=belir(A, 4, .2, 4))
     A.ekle('hekim', *kisi(560, 200, '#ffffff', 1.3, True), o=gorun(A, 4, 4))
-    A.etiket(4, 4, 420, 120, 'Birkaç gün yanma olabilir — önceden anlat', 'bilgi')
+    konusma(A, 4, 0, 460, 110, renk='#2f6fd6', f1=.3, f2=1)
+    et(A, 4, 460, 110, 'Birkaç gün yanma olabilir', 'bilgi', .3)
+    et(A, 4, 400, 470, 'Önceden anlatmak uyumu artırır', 'dogru', .6)
 
 
 ADIMLAR = {'giris': a_giris, 'endikasyon-takip': a_takip, 'endikasyon-retansiyon': a_retansiyon, 'endikasyon-diger': a_diger, 'tuzak-sistit': a_sistit,

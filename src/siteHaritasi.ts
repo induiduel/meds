@@ -22,7 +22,7 @@
  *   /kamplar/kurul1/checkup/tbg/v1/{sesli-ders,soru-coz,kaliplar,deneme}   TBG Sınav Kampı (her bölüm ayrı sayfa)
  *   /kamplar[/kurulN]/en-onemliler[/<branş>] · /kamplar[/kurulN]/spotlar · /kamplar/sinav-plani
  *   Check-up'u olmayan kurulun check-up adresi (/kamplar/kurul2/checkup/patoloji) o kurulun Check Up sekmesine düşer.
- *   /kamplar/kmb[/<beceri>[/sinav]]          KMB görsel sesli asistan (iç /kmb?beceri=&b=)
+ *   /dersler/kmb[/<beceri>[/<bölüm>]]        KMB görsel sesli asistan (iç /kmb?beceri=&b=; eski /kamplar/kmb/… yönlenir)
  *   /kaynaklar                               Başvuru merkezi (sözlük, hastalıklar … kendi düz adreslerinde kalır)
  *
  * Ekranlar ve eski bağlantılar hâlâ "iç adres" biçimini konuşur (/canliders/<key>, /soru-cozucu?brans=…,
@@ -230,7 +230,7 @@ export function disYol(adres: string): string {
       const b = sp.get('beceri') || '';
       const bl = sp.get('b') || '';
       sp.delete('beceri'); sp.delete('b');
-      return birlestir(`/kamplar/kmb${b ? `/${enc(b)}${bl && bl !== 'ogren' ? `/${enc(bl)}` : ''}` : ''}`, sp, hash);
+      return birlestir(`/dersler/kmb${b ? `/${enc(b)}${bl && bl !== 'ogren' ? `/${enc(bl)}` : ''}` : ''}`, sp, hash);
     }
     case 'patoloji-check-up': {
       const k = sorguKurul(sp) ?? 1;
@@ -285,6 +285,11 @@ export function icYol(adres: string): string {
     if (arac === 'interaktif') return birlestir(`/ogren${s[2] && !kurulSeg(s[2]) ? `/${enc(s[2])}` : s[3] ? `/${enc(s[3])}` : ''}`, sp, hash);
     if (arac === 'ozetler') return birlestir(`/ozetler${s[2] ? `/${enc(s[2])}` : ''}`, sp, hash);
     if (arac === 'kartlar') return birlestir(`/kartlar${s[2] ? `/${enc(s[2])}` : ''}`, sp, hash);
+    if (arac === 'kmb') {
+      if (s[2]) koy('beceri', s[2]);
+      if (s[3]) koy('b', s[3]);
+      return birlestir('/kmb', sp, hash);
+    }
     if (arac === 'canliders' || arac === 'sesli-ders') {
       const k = kurulSeg(s[2]);
       if (!k) return birlestir(`/canliders${s[2] ? `/${enc(s[2])}` : ''}`, sp, hash);
