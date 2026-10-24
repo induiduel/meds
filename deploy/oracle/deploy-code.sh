@@ -118,6 +118,25 @@ for k in metin hizalama vurgu capa cizim ogrenci_not cikmis_konum; do
     "$MEDS_DIR/$SA/$k/" "$ORACLE_USER@$ORACLE_HOST:$ORACLE_DIR/$SA/$k/" | grep -c '^>f' || true)
   echo "  $k: $n dosya"
 done
+# 2025-2026 Geçen Yıl Arşivi (data/arsiv_25_26 + meds_database_25_26/pdf + meds_database_25_26/medspak)
+ANA_MEDS="${MEDS_ANA_DIR:-/home/indu/medsor/meds}"
+ANA_DB25="${MEDS_DB25_DIR:-/home/indu/medsor/meds_database_25_26}"
+if [[ -d "$ANA_MEDS/data/arsiv_25_26" ]]; then
+  $SSH "$ORACLE_USER@$ORACLE_HOST" "sudo mkdir -p $ORACLE_DIR/data/arsiv_25_26 /home/ubuntu/medsor/meds_database_25_26/pdf /home/ubuntu/medsor/meds_database_25_26/medspak && sudo chown -R ubuntu:ubuntu $ORACLE_DIR/data/arsiv_25_26 /home/ubuntu/medsor/meds_database_25_26"
+  n=$(rsync -az --checksum --rsync-path='sudo rsync' --chown=ubuntu:ubuntu --out-format='%i %n' -e "$SSH" \
+    "$ANA_MEDS/data/arsiv_25_26/" "$ORACLE_USER@$ORACLE_HOST:$ORACLE_DIR/data/arsiv_25_26/" | grep -c '^>f' || true)
+  echo "  arsiv_25_26: $n dosya"
+fi
+if [[ -d "$ANA_DB25/pdf" ]]; then
+  n=$(rsync -az --checksum --rsync-path='sudo rsync' --chown=ubuntu:ubuntu --out-format='%i %n' -e "$SSH" \
+    "$ANA_DB25/pdf/" "$ORACLE_USER@$ORACLE_HOST:/home/ubuntu/medsor/meds_database_25_26/pdf/" | grep -c '^>f' || true)
+  echo "  meds_database_25_26/pdf: $n dosya"
+fi
+if [[ -d "$ANA_DB25/medspak" ]]; then
+  n=$(rsync -az --checksum --rsync-path='sudo rsync' --chown=ubuntu:ubuntu --out-format='%i %n' -e "$SSH" \
+    "$ANA_DB25/medspak/" "$ORACLE_USER@$ORACLE_HOST:/home/ubuntu/medsor/meds_database_25_26/medspak/" | grep -c '^>f' || true)
+  echo "  meds_database_25_26/medspak: $n dosya"
+fi
 # Son Prova kırpılmış özet PDF'leri (git dışı; scripts/son_prova/pdf_kirp.mjs üretir, hizalama sayfa numaraları bunlara bağlı)
 if [[ -d "$MEDS_DIR/data/son_prova/pdf" ]]; then
   $SSH "$ORACLE_USER@$ORACLE_HOST" "sudo mkdir -p $ORACLE_DIR/data/son_prova/pdf"

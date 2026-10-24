@@ -1,0 +1,35 @@
+{
+  "key": "y25-k2-03-sss-hasar-bicimleri-odem-hidrosefali-herniasyon",
+  "donem": "2025-2026",
+  "kurul": 2,
+  "brans": "Tıbbi Patoloji",
+  "baslik": "SSS Hasar Biçimleri, Ödem, Hidrosefali, Herniasyon",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-10-25 01:42",
+      "neden": "Kurul 2 2025-2026 Arşivi İlk Üretim, Görsel/Histopatolojik Doğrulama ve Çıkmış Soru Vurgusu",
+      "hatali_bilgiler": [
+        "PDF'teki 8 mikroskobik/makroskobik/şematik şekil sayfasında (sayfa 4 kırmızı nöron/sferoid/kromatolizis, sayfa 7 gemistositik astrosit, sayfa 9 Rosenthal lifleri, sayfa 18-19 BOS dolaşımı ve araknoid granülasyon, sayfa 23 hidrosefali koronal kesit, sayfa 26 ve 30 herniasyon şemaları) OCR gürültüsü temizlendi; tüm şekiller görsel inceleme ile sayfa_haritasi.json ve konusma_v2.json içinde açıklandı.",
+        "Veritabanındaki 13 çıkmış soru (kırmızı nöron, gliyozis/astrosit, Rosenthal lifleri, mikroglia/nöronofaji/çomak hücre, vazojenik ve sitotoksik ödem, komünikan/non-komünikan hidrosefali, subfalsiyan/transtentoriyal/tonsiller herniasyon, CN III basısı, Kernohan çentiği, Duret kanaması) hem sesli ('bu bilgi çıkmışta soruldu / sınavda soruldu') hem ekran ('tur: cikmis') vurgularıyla işlendi."
+      ],
+      "degisiklikler": [
+        "30 sayfalık PDF eksiksiz işlendi (13 bölüm, 30 paragraf, 107 cümle, 2838 kelime); 0 atlanan sayfa ile tüm nöropatolojik mekanizmalar açıklandı.",
+        "22 canlı çizim komutu (H51 kuralına uygun olarak yalnızca metin sayfalarında) ve 16 adımlı Öğren destesi (64 etkileşim + 2 Checkpoint + Ders Sonu Oyunları) oluşturuldu.",
+        "EMA Lightning GPU seslendirme, cümle/kelime zamanlaması ve PDF gömülü .medspak paketi (meta.ekler=1) üretildi."
+      ],
+      "metrikler": {
+        "sureSn": 1249,
+        "sureDk": 20.8,
+        "sayfaSayisi": 30,
+        "atlananSayfa": 0,
+        "bolumSayisi": 13,
+        "paragrafSayisi": 30,
+        "cumleSayisi": 107,
+        "slaytAdimSayisi": 16,
+        "cizimSayisi": 22,
+        "cikmisEslesme": 26
+      }
+    }
+  ]
+}
