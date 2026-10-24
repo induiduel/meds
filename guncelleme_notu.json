@@ -1,11 +1,12 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 327,
-  "baslik": "Güvenlik: yönetici ve sahiplik doğrulaması sıkılaştırıldı",
+  "onem": 328,
+  "baslik": "Güvenlik: yönetici ve sahiplik doğrulaması sıkılaştırıldı · Kurul 2 sesli derste çıkmış uyarıları",
   "maddeler": [
     "Yönetici işlemleri yalnız doğrulanmış girişle yapılabilir",
     "Ortak notlarını, mesajlarını ve yorumlarını yalnız sen (ya da yönetici) silebilirsin",
-    "Yönetici paneli açılışta oturumu bekleyip canlı akışa doğru yetkiyle bağlanır"
+    "Yönetici paneli açılışta oturumu bekleyip canlı akışa doğru yetkiyle bağlanır",
+    "Kurul 2 sesli derslerinde çıkmışta sorulan her bilgi artık açıkça söyleniyor"
   ],
   "eklenen": [],
   "degisen": [
@@ -14,7 +15,8 @@
     "Yorum/bildirim sahipliği"
   ],
   "duzeltilen": [
-    "Başlık taklidiyle yönetici olunabilmesi"
+    "Başlık taklidiyle yönetici olunabilmesi",
+    "Kurul 2 sesli derslerinde çıkmış anışlarının kaybolması"
   ],
   "silinen": []
 }

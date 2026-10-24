@@ -72,7 +72,7 @@ Elle çalıştırma: `python3 meds/otomasyon/hat.py --calistir <aşama>`; durum 
 5. **Denetleyici** (`denetle.py`): alıntılar kaynakta, görsel kanıt yalnız görüntüsü olan sayfada, deste
    `validate_learning_decks.py --oyun-zorunlu` + **Kurul 2+: `--kurul2`** (Türkçe üslup + şık açıklama HATA). En çok 2 düzeltme turu.
 6. **Sesli metin** (`TALIMAT_SESLI.md §v2`): Kurul 2+ **yalnız `konusma_v2.json`** (her cümle: kimlik, `ses` = doktorun
-   anlatımı, `ekran` = madde, `duzey`, `vurgu` [terim/sayı/tuzak/çıkmış/tanım], `sayfa`, `slayt_adim`, `cikmis`, `spot`).
+   anlatımı, `ekran` = madde, `duzey`, `vurgu` [terim/sayı/tuzak/çıkmış/tanım], `sayfa`, `slayt_adim`, `cikmis`, `spot`). Her ilgili çıkmış ilk geçtiği cümlede sesli anılır ("çıkmışta soruldu"; kapı `isle.cikmis_ses_kapsam`, H57).
    Kapı `konusma_v2.py --dogrula`; eski biçim (`konusma_metni.md` + `konusma_sayfalari.json`) **türetilir**.
 7. **Otomatik onay** (`otomatik_onay_uygun`): Kurul 2+ · yeni ders · eşleşme yüksek · uyarı yok · denetim 0 HATA · sesli
    metin tamam → `karar.json` = onayla (panel ayarı `otomatik_onay`, kapatılabilir). Aksi hâlde yöneticiye bildirim + neden.

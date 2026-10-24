@@ -64,8 +64,10 @@ metin bloğu bir paragraftır), `kaynak.md`'deki `=== SAYFA n ===` numaralarıyl
 ## "Burası önemli" (zorunlu)
 - `cikmis_baglantilari.json`'da `ilgili: true` olan **her** çıkmış sorunun ölçtüğü bilgi (doğru şık + kökün test ettiği
   kavram) anlatımda geçmeli; v2'de o cümlenin `cikmis` listesine soru kimliği ve `vurgu`suna `tur: "cikmis"` yazılır.
-  **"Burası önemli"** derste en çok `max(3, bölüm sayısı / 2)` kez, en çok sorulan çıkmışların noktasında denir
-  (`metin_denetle.py` H22 sınırı; 2026-10-23 — eski "her çıkmışta" kuralı bu sınırla çelişiyordu).
+  **Çıkmış uyarısı (H57, 2026-10-24):** her ilgili çıkmışın ilk geçtiği cümlede `ses` içinde kısa ve doğal biçimde söyle
+  ("bu bilgi çıkmışta soruldu", "bu nokta sınavda sorulmuş"). Bu dayanaklı vurgudur, dolgu sayılmaz ve tavana girmez;
+  `cikmis` alanı boş cümlede çıkmış anışı yasak. Kapı: `isle.cikmis_ses_kapsam`.
+  **"Burası önemli"** ise derste en çok `max(3, bölüm sayısı / 2)` kez denir (`metin_denetle.py` H22 sınırı).
 - Destedeki yüksek önemli sınav spotları için de kullanabilirsin; her paragrafa serpiştirme.
 - Soru yılı, soru numarası ya da şık harfi okuma.
 
@@ -95,7 +97,7 @@ metin bloğu bir paragraftır), `kaynak.md`'deki `=== SAYFA n ===` numaralarıyl
 
 ## Bitirmeden önce (zorunlu)
 1. `kaynak.md` ve `deck.json`'u baştan sona gez; her sayfa/adım için anlatımda karşılık var mı; eksikleri ekle.
-2. Her `ilgili` çıkmış soru için bilginin ve "Burası önemli"nin bulunduğunu kontrol et.
+2. Her `ilgili` çıkmış soru için bilginin ve sesli çıkmış uyarısının bulunduğunu kontrol et.
 3. Uydurma/çelişen sayı var mı kontrol et.
 4. `python3 /app/scripts/sesli_anlatim/metin_denetle.py konusma_metni.md` → **0 HATA** olana kadar düzelt.
    Metni her değiştirdiğinde `konusma_sayfalari.json`'u da güncelle (uzunluk = paragraf sayısı).

@@ -212,6 +212,12 @@ def cikmis_adaylari(metin: str, kurul: int | None, en_cok: int = 40, _yineleme: 
             time.sleep(60)
             return cikmis_adaylari(metin, kurul, en_cok, _yineleme=True)
         raise RuntimeError(f"benzer soru araması {len(grup)} sorguda hiç sonuç vermedi ({API})")
+    if kurul and len(toplam) < 10:
+        # 2026-10-24 (k2-02 tek aday): kurul filtresinde dizine girmiş çıkmış az → filtresiz yedek arama;
+        # konu dışı adayları yazarın `ilgili` kararı eler. Filtreli adaylar önde kalır.
+        for e in cikmis_adaylari(metin, None, en_cok, _yineleme=True):
+            if e["id"] not in toplam:
+                toplam[e["id"]] = {**e, "kez": 0, "kurul_disi": True}
     return sorted(toplam.values(), key=lambda e: (-e["kez"], -e["puan"]))[:en_cok]
 
 
@@ -449,6 +455,30 @@ def sesli_kapsam(d: Path) -> list[str]:
             e.append(f"s. {n}: {sayi.get(n, 0)} cümle, sayfada {len(sp.get('bilgi') or [])} bilgi maddesi"
                      f"{' + görsel' if (tur in ('sekil', 'tablo') or sek) else ''} var — her maddeyi (mekanizma/klinik sonuç) "
                      f"kendi cümlesinde anlat (en az {gerek})")
+    return e + cikmis_ses_kapsam(d, cum)
+
+
+# Kullanıcı 2026-10-24: Kurul 2 derslerinde çıkmışlar neredeyse hiç duyulmuyordu (H22 dolgu yasağı çıkmış uyarısını da
+# sildi). Çıkmış uyarısı dayanaklıdır, dolgu değildir: her ilgili çıkmış anlatılır ve en az bir cümlesinde sesli söylenir.
+CIKMIS_SES = re.compile(r"çıkmış|sınavda (soruldu|sorulmuş|sorulan|çıktı|çıkmış|sorulur)", re.I)
+
+
+def cikmis_ses_kapsam(d: Path, cum: list) -> list[str]:
+    bag = oku(d / "cikmis_baglantilari.json", []) or []
+    ilgili = [c["soru_id"] for c in bag if isinstance(c, dict) and c.get("ilgili") and c.get("soru_id")]
+    e, sesli = [], set()
+    for c in cum:
+        ids = c.get("cikmis") or []
+        if CIKMIS_SES.search(c.get("ses") or ""):
+            if not ids:
+                e.append(f"{c.get('id')}: çıkmış uyarısı var ama cümleye çıkmış soru bağlanmamış (dayanaksız)")
+            sesli.update(ids)
+    anlatilan = {i for c in cum for i in c.get("cikmis") or []}
+    for i in ilgili:
+        if i not in anlatilan:
+            e.append(f"çıkmış {i}: bilgisi anlatılmamış (cümlenin cikmis listesine bağla)")
+        elif i not in sesli:
+            e.append(f"çıkmış {i}: anlatılmış ama sesli uyarı yok — ilk geçtiği cümlede \"bu bilgi çıkmışta soruldu\" gibi söyle")
     return e
 
 
