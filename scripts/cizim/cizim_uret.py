@@ -424,8 +424,21 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
         aday = [(o[0] + ox, o[1] + oy) for ox in (0.0, -0.02, 0.04, -0.1, -0.2, 0.1, -0.3) for oy in (-0.04, 0.0, -0.06, 0.03, -0.12, 0.09)]
         iyi = [(r.kutu_doluluk(x - 0.012, y - 0.012, x + g + 0.012, y + h + 0.012), x, y) for x, y in aday
                if 0 <= x and x + g <= 1 and 0 <= y and y + h <= 1]
-        iyi = [z for z in iyi if z[0] < 0.02 and not any(_kesisir((z[1], z[2], z[1] + g, z[2] + h), o) for o in (dolu or []))
-               and not yazi_kesisir((z[1], z[2], z[1] + g, z[2] + h), satirlar, 0.004)]
+        uygun = lambda z: z[0] < 0.02 and not any(_kesisir((z[1], z[2], z[1] + g, z[2] + h), o) for o in (dolu or [])) \
+            and not yazi_kesisir((z[1], z[2], z[1] + g, z[2] + h), satirlar, 0.004)
+        iyi = [z for z in iyi if uygun(z)]
+        if not iyi:
+            # yakında boş yer yoksa: yine yakında, yazı satırına değmeyen ama resmin küçük bir kısmını (≤%25) örtebilen yer
+            # (etiket anlattığı okun yanında kalsın; koyu hap resmin üstünde okunur)
+            iyi = [z for z in [(r.kutu_doluluk(x - 0.006, y - 0.006, x + g + 0.006, y + h + 0.006), x, y) for x, y in aday
+                               if 0 <= x and x + g <= 1 and 0 <= y and y + h <= 1]
+                   if z[0] < 0.25 and not any(_kesisir((z[1], z[2], z[1] + g, z[2] + h), o) for o in (dolu or []))
+                   and not yazi_kesisir((z[1], z[2], z[1] + g, z[2] + h), satirlar, 0.004)]
+        if not iyi:
+            # o da yoksa bütün sayfada (%2 adım) boş yer; en yakını seçilir — yazının üstüne konmaz (H48)
+            tum = [(r.kutu_doluluk(xi / 50 - 0.012, yi / 50 - 0.012, xi / 50 + g + 0.012, yi / 50 + h + 0.012), xi / 50, yi / 50)
+                   for xi in range(0, int((1 - g) * 50) + 1) for yi in range(0, int((1 - h) * 50) + 1)]
+            iyi = [z for z in tum if uygun(z) and ((z[1] - o[0]) ** 2 + (z[2] - o[1]) ** 2) ** 0.5 < 0.35]
         if iyi:
             # boş adaylardan bölgeye en yakını (etiket anlattığı yerin yanında dursun)
             _, x, y = min(iyi, key=lambda z: (z[1] - o[0]) ** 2 + (z[2] - o[1]) ** 2)
