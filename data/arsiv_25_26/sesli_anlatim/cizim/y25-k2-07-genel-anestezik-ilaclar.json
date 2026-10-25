@@ -1,0 +1,1036 @@
+{
+ "surum": 1,
+ "metinHash": "5f30f3d2135d0a549da37846957bed7430efd9b2",
+ "p": {
+  "2": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Bilinç ve duyu kaybı",
+      "Amnezi ve analjezi",
+      "Hareketsizlik ve refleks baskılanması"
+     ],
+     "baslik": "Genel anestezinin ögeleri",
+     "s": 3,
+     "k": [
+      0,
+      82
+     ],
+     "tip": "liste",
+     "konum": [
+      0.35,
+      0.38
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "3": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Analjezi ve amnezi evresi",
+      "Eksitasyon ve deliryum evresi",
+      "Cerrahi anestezi evresi",
+      "Bulber paralizi evresi"
+     ],
+     "numarali": true,
+     "s": 4,
+     "k": [
+      0,
+      186
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.94
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.45,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.4097,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "4": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Total intravenöz anestezi",
+      "Nörolept anestezi",
+      "Disosiyatif anestezi"
+     ],
+     "baslik": "İntravenöz anestezi alt türleri",
+     "s": 5,
+     "k": [
+      0,
+      187
+     ],
+     "tip": "liste",
+     "konum": [
+      0.46,
+      0.22
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "5": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Halojenli uçucu ajanlar",
+       "En zayıf olarak işaretlenir",
+       "En güçlü olarak işaretlenir"
+      ]
+     ],
+     "kutuplar": [
+      "Desfluran",
+      "Metoksifluran"
+     ],
+     "s": 6,
+     "k": [
+      0,
+      116
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.26,
+      0.39
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "9": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Kalp ve kan basıncı",
+       "Bradikardi ve hipotansiyon",
+       "Taşikardi ve hipertansiyon"
+      ],
+      [
+       "Solunum ve baş ağrısı",
+       "Boğaz spazmı ve öksürük",
+       "Somnolans ve baş dönmesi"
+      ]
+     ],
+     "kutuplar": [
+      "Çok yaygın yan etki",
+      "Yaygın yan etki"
+     ],
+     "s": 10,
+     "k": [
+      0,
+      90
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.33,
+      0.47
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.333,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "10": {
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Vücut ısısı ve yaş",
+       "Yaş, gebelik, hipotermi",
+       "Hipertermi"
+      ],
+      [
+       "Alkol ve ilaçlar",
+       "Akut alkol ve opioid",
+       "Kronik alkolizm ve mao inhibitörü"
+      ]
+     ],
+     "kutuplar": [
+      "Makı azaltanlar",
+      "Makı artıranlar"
+     ],
+     "s": 11,
+     "k": [
+      0,
+      185
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.293,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2726,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "11": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Kanda çözünürlük",
+       "Kanda çok çözünen ajan",
+       "Desfluran ve azot protoksit"
+      ],
+      [
+       "İndüksiyon hızı",
+       "Yavaş indüksiyon",
+       "Hızlı indüksiyon"
+      ]
+     ],
+     "kutuplar": [
+      "Büyük kan gaz katsayısı",
+      "Düşük kan gaz katsayısı"
+     ],
+     "s": 12,
+     "k": [
+      0,
+      213
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.26,
+      0.64
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.001,
+     "kutu_h": 0.333,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "13": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Barbitüratlar: tiyopental, metoheksital",
+      "Benzodiazepinler: midazolam, diazepam",
+      "Opioidler: fentanil, remifentanil",
+      "Diğerleri: propofol ve etomidat"
+     ],
+     "baslik": "İntravenöz genel anestezikler",
+     "s": 14,
+     "k": [
+      0,
+      283
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.56
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "14": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "İnhaler ve intravenöz anestezik kombinasyonu",
+      "Advers etkilerin ve risklerin azalması"
+     ],
+     "s": 15,
+     "k": [
+      0,
+      158
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.9
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.283,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.2034,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "15": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Reseptör ve kanal",
+       "Gaba a ve glisin reseptörleri",
+       "Asetilkolin reseptörleri"
+      ],
+      [
+       "Diğer hedefler",
+       "Potasyum kanalları",
+       "Glutamat en em de a reseptörleri"
+      ]
+     ],
+     "kutuplar": [
+      "İnhibitör hedefler",
+      "Eksitatör hedefler"
+     ],
+     "s": 16,
+     "k": [
+      0,
+      240
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.86
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.333,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2126,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "16": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Örnek ajanlar",
+       "Halotan, izofluran, sevofluran, desfluran",
+       "Nitröz oksit ve ksenon"
+      ],
+      [
+       "Oda sıcaklığında durum",
+       "Buhar basıncı düşük, sıvı",
+       "Buhar basıncı yüksek, gaz"
+      ]
+     ],
+     "kutuplar": [
+      "Uçucu anestezikler",
+      "Gaz anestezikler"
+     ],
+     "s": 17,
+     "k": [
+      0,
+      125
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.3,
+      0.24
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.373,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "17": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Kanda az çözünen inhalasyon ajanı",
+      "Alveolar konsantrasyonun hızla yükselmesi",
+      "Hızlı anestezi indüksiyonu"
+     ],
+     "s": 18,
+     "k": [
+      0,
+      122
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.9
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.2696,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "18": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Serebral korteks",
+      "Talamus",
+      "Retiküler formasyon"
+     ],
+     "baslik": "Bilince katkıda bulunan yapılar",
+     "s": 19,
+     "k": [
+      0,
+      103
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.89
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.218,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "19": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Uçucu anestezikle beyin kan akımı artışı",
+      "Kafa içi basıncında yükselme",
+      "Hiperventilasyonla artışın düşürülmesi"
+     ],
+     "s": 20,
+     "k": [
+      0,
+      125
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.84
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.2096,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "21": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "ilac_etki",
+     "sablon_ad": "İlaç → mekanizma → sonuç",
+     "duzen": "tablo",
+     "basliklar": [
+      "İlaç",
+      "Mekanizma",
+      "Sonuç"
+     ],
+     "satirlar": [
+      [
+       "İzofluran, desfluran, sevofluran",
+       "Vazodilatasyon ile ön ve art yük azalması",
+       "Kalp debisinin korunması"
+      ]
+     ],
+     "s": 22,
+     "k": [
+      0,
+      205
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.92
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1756,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "22": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Kardiyovasküler etki",
+       "Kalp hızı ve kan basıncında artış",
+       "Katekolaminlere duyarlılık ve aritmi riski"
+      ]
+     ],
+     "kutuplar": [
+      "Desfluran",
+      "Halotan"
+     ],
+     "s": 23,
+     "k": [
+      0,
+      216
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2156,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "23": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "etki_yarar_risk",
+     "sablon_ad": "Etki → yararı ve riski",
+     "duzen": "tablo",
+     "basliklar": [
+      "Etki",
+      "Yararı",
+      "Riski"
+     ],
+     "satirlar": [
+      [
+       "Halojenli anesteziklerle uterus gevşemesi",
+       "Plasenta retansiyonunda manuel müdahale",
+       "Uterusta kanama"
+      ]
+     ],
+     "s": 24,
+     "k": [
+      0,
+      170
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.95
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2056,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "24": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "zehir_antidot",
+     "sablon_ad": "Zehirlenme → antidot / tedavi",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum",
+      "Antidot / tedavi"
+     ],
+     "satirlar": [
+      [
+       "Uçucu anestezik ve süksinilkolin ile malign hipertermi",
+       "Dantrolen (sarkoplazmik kalsiyum çıkışını azaltır)"
+      ]
+     ],
+     "s": 25,
+     "k": [
+      0,
+      242
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.88
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1356,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "27": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "ilac_etki",
+     "sablon_ad": "İlaç → mekanizma → sonuç",
+     "duzen": "tablo",
+     "basliklar": [
+      "İlaç",
+      "Mekanizma",
+      "Sonuç"
+     ],
+     "satirlar": [
+      [
+       "Propofol (süt beyazı emülsiyon)",
+       "Gaba a aracılı klorür akımı artışı",
+       "Hızlı sedasyon ve anestezi idamesi"
+      ]
+     ],
+     "s": 28,
+     "k": [
+      0,
+      212
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.92
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1756,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "30": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "etki_yarar_risk",
+     "sablon_ad": "Etki → yararı ve riski",
+     "duzen": "tablo",
+     "basliklar": [
+      "Etki",
+      "Yararı",
+      "Riski"
+     ],
+     "satirlar": [
+      [
+       "Propofol uygulaması",
+       "Antiemetik aktivite ve refleks baskılanması",
+       "Uzun infüzyonda metabolik asidoz"
+      ]
+     ],
+     "s": 31,
+     "k": [
+      0,
+      138
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2156,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "33": {
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Tiyopental ile hızlı indüksiyon",
+      "Beyinden kas ve yağ dokusuna redistribüsyon",
+      "Etkinin beş on dakikada sonlanması"
+     ],
+     "s": 34,
+     "k": [
+      0,
+      260
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.8
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.1696,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "35": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Elektriksel aktivite",
+       "Elektriksel aktiviteyi azaltır",
+       "Epileptik odakları aktive eder"
+      ],
+      [
+       "Nöbet etkisi",
+       "Antikonvülsan etki",
+       "Elektrokonvülsif terapide faydalıdır"
+      ]
+     ],
+     "kutuplar": [
+      "Diğer barbitüratlar",
+      "Metoheksital"
+     ],
+     "s": 36,
+     "k": [
+      0,
+      277
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.9
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.333,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2526,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "38": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "zehir_antidot",
+     "sablon_ad": "Zehirlenme → antidot / tedavi",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum",
+      "Antidot / tedavi"
+     ],
+     "satirlar": [
+      [
+       "Benzodiazepinler (midazolam, lorazepam, diazepam)",
+       "Flumazenil (spesifik antagonist)"
+      ]
+     ],
+     "s": 39,
+     "k": [
+      0,
+      329
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.19,
+      0.9
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.276,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1957,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "44": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "etki_yarar_risk",
+     "sablon_ad": "Etki → yararı ve riski",
+     "duzen": "tablo",
+     "basliklar": [
+      "Etki",
+      "Yararı",
+      "Riski"
+     ],
+     "satirlar": [
+      [
+       "Etomidat ile anestezi indüksiyonu",
+       "Minimal hemodinamik etki ve kafa içi basınç düşüşü",
+       "Adrenokortikal supresyon ve spontan miyoklonus"
+      ]
+     ],
+     "s": 45,
+     "k": [
+      0,
+      149
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.75
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0056,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "46": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "ilac_etki",
+     "sablon_ad": "İlaç → mekanizma → sonuç",
+     "duzen": "tablo",
+     "basliklar": [
+      "İlaç",
+      "Mekanizma",
+      "Sonuç"
+     ],
+     "satirlar": [
+      [
+       "Ketamin (fensiklidin türevi)",
+       "En em de a reseptör kompleksi inhibisyonu",
+       "Disosiyatif anestezi ve analjezik etkinlik"
+      ]
+     ],
+     "s": 47,
+     "k": [
+      0,
+      207
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.98
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2356,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "50": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "ilac_etki",
+     "sablon_ad": "İlaç → mekanizma → sonuç",
+     "duzen": "tablo",
+     "basliklar": [
+      "İlaç",
+      "Mekanizma",
+      "Sonuç"
+     ],
+     "satirlar": [
+      [
+       "Deksmedetomidin",
+       "Selektif alfa iki adrenerjik agonist",
+       "Fizyolojik uyku sedasyonu ve analjezi"
+      ]
+     ],
+     "s": 51,
+     "k": [
+      0,
+      191
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.84
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0956,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "53": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "etki_yarar_risk",
+     "sablon_ad": "Etki → yararı ve riski",
+     "duzen": "tablo",
+     "basliklar": [
+      "Etki",
+      "Yararı",
+      "Riski"
+     ],
+     "satirlar": [
+      [
+       "Sentetik opioidler (fentanil)",
+       "İntraoperatif ve postoperatif analjezi",
+       "Göğüs duvarı rijiditesi ve tolerans"
+      ]
+     ],
+     "s": 54,
+     "k": [
+      0,
+      256
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.47,
+      0.71
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.002,
+     "kutu_h": 0.276,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  }
+ },
+ "rapor": {
+  "aday": 28,
+  "gecti": 27,
+  "ret": {
+   "panel metni 'Sevofluran kontrendike' henüz anlatılmamış teri": 1
+  }
+ }
+}
