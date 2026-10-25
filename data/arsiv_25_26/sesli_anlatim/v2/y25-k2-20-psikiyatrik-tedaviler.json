@@ -3493,11 +3493,11 @@
          "FIGURE 27-1. Transcranial magnetic stimulation (TMS)."
         ],
         "sekil": "Tel bobin geometrisi ve manyetik alan derinliği ile aktive olan nöronları gösteren şema",
-        "resim": 0,
         "madde": [
          6,
          15
-        ]
+        ],
+        "resim": 0
        }
       },
       {
@@ -3520,10 +3520,10 @@
          "Activated"
         ],
         "sekil": "Sol dorsolateral prefrontal kortekste manyetik alan ve aktive nöron popülasyonunu gösteren şema",
-        "resim": 0,
         "madde": [
          4
-        ]
+        ],
+        "resim": 0
        }
       }
      ]
@@ -4757,11 +4757,11 @@
          "Araştırılan üç nöromodülasyon tekniğini gösteren diyagramlar:"
         ],
         "sekil": "rTMS sekiz bobini tDCS pedleri ve DBS jeneratörünü karşılaştıran nöromodülasyon şeması",
-        "resim": 0,
         "madde": [
          5,
          10
-        ]
+        ],
+        "resim": 0
        }
       },
       {
@@ -4784,11 +4784,11 @@
          "Araştırılan üç nöromodülasyon tekniğini gösteren diyagramlar:"
         ],
         "sekil": "rTMS tDCS ve DBS cerrahi donanımlarını gösteren karşılaştırmalı diyagram",
-        "resim": 0,
         "madde": [
          5,
          10
-        ]
+        ],
+        "resim": 0
        }
       }
      ]
@@ -5599,7 +5599,27 @@
        }
       },
       {
-       "id": "k2-20-c0201",
+       "ses": "Tedaviye dirençli psikiyatrik tablolarda doğru endikasyon, multidisipliner değerlendirme ve etik kurallara tam sadakat biyolojik tedavilerin klinik başarısını ve hasta güvenliğini belirleyen temel unsurlardır.",
+       "ekran": "**Klinik ve Etik İlkeler:** Dirençli olgularda doğru endikasyon, multidisipliner yaklaşım ve hasta güvenliği",
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Kaynaklar"
+        ],
+        "sekil": null,
+        "madde": [
+         0,
+         4
+        ]
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "duzey": 2,
+       "id": "k2-20-c0201"
+      },
+      {
+       "id": "k2-20-c0202",
        "ses": "Stereotaksik ablasyondan elektriksel uyarım protokollerine kadar her biyolojik yöntem, psikofarmakolojiye dirençli vakalarda hastaya yeniden umut ve klinik şifa kapısı aralamaktadır.",
        "ekran": "Tüm biyolojik yöntemler **dirençli psikiyatrik tablolarda** kritik tedavi seçenekleridir.",
        "duzey": 0,

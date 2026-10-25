@@ -665,11 +665,11 @@
          "Karakter tipi"
         ],
         "sekil": "Galen antik mizaç sınıflaması ve dört vücut sıvısı tablosu",
-        "resim": 0,
         "madde": [
          0,
          1
-        ]
+        ],
+        "resim": 0
        }
       },
       {
@@ -700,11 +700,11 @@
          "Bipolar mani"
         ],
         "sekil": "Galen antik mizaç sınıflaması tablosu",
-        "resim": 0,
         "madde": [
          14,
          3
-        ]
+        ],
+        "resim": 0
        }
       },
       {
@@ -736,11 +736,11 @@
          "depresyon"
         ],
         "sekil": "Galen antik mizaç sınıflaması tablosu",
-        "resim": 0,
         "madde": [
          16,
          2
-        ]
+        ],
+        "resim": 0
        }
       },
       {
@@ -770,11 +770,11 @@
          "Balgam"
         ],
         "sekil": "Galen antik mizaç sınıflaması tablosu",
-        "resim": 0,
         "madde": [
          2,
          1
-        ]
+        ],
+        "resim": 0
        }
       },
       {
@@ -807,11 +807,11 @@
          "Bipolar mani"
         ],
         "sekil": "Galen antik mizaç sınıflaması tablosu",
-        "resim": 0,
         "madde": [
          14,
          3
-        ]
+        ],
+        "resim": 0
        },
        "id": "k2-19-c0026"
       },
@@ -845,11 +845,11 @@
          "Karizmatik"
         ],
         "sekil": "Galen antik mizaç sınıflaması tablosu",
-        "resim": 0,
         "madde": [
          15,
          5
-        ]
+        ],
+        "resim": 0
        },
        "id": "k2-19-c0027"
       },
@@ -885,11 +885,11 @@
          "depresyon"
         ],
         "sekil": "Galen antik mizaç sınıflaması tablosu",
-        "resim": 0,
         "madde": [
          16,
          7
-        ]
+        ],
+        "resim": 0
        },
        "id": "k2-19-c0028"
       },
@@ -926,11 +926,11 @@
          "Müşfik"
         ],
         "sekil": "Galen antik mizaç sınıflaması tablosu",
-        "resim": 0,
         "madde": [
          17,
          9
-        ]
+        ],
+        "resim": 0
        },
        "id": "k2-19-c0029"
       }
@@ -6378,6 +6378,22 @@
          4
         ]
        }
+      },
+      {
+       "ses": "Bipolar bozukluk tedavisinde lityum ve valproat gibi duygudurum dengeleyicilerinin terapötik kan düzeylerinin yakından izlenmesi, psikoeğitim ve tedaviye hasta uyumunun güçlendirilmesi mani ve depresyon ataklarının nüksünü önlemede hayati role sahiptir.",
+       "ekran": "**Tedavi Uyumu ve Profilaksi:** Duygudurum dengeleyicileri, terapötik kan düzeyi ve nüks önleme",
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "Kaynaklar"
+        ],
+        "sekil": null
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "duzey": 2,
+       "id": "k2-19-c0197"
       }
      ]
     },
@@ -6386,7 +6402,7 @@
      "sayfa": 44,
      "cumleler": [
       {
-       "id": "k2-19-c0197",
+       "id": "k2-19-c0198",
        "ses": "Bipolar bozukluk dersimizi burada tamamlıyoruz; klinik stajlarınızda ve kurul sınavlarınızda hepinize üstün başarılar dilerim.",
        "ekran": "Bipolar bozukluk konusu tamamlanmıştır; **kurul sınavlarınızda başarılar dileriz**.",
        "duzey": 0,
@@ -6410,6 +6426,22 @@
         ],
         "resim": 0
        }
+      },
+      {
+       "ses": "Duygudurum ataklarının erken tanınması, intihar riskinin dikkatle yönetilmesi, hasta ve aile eğitiminin sürdürülmesi ile koruyucu profilaksi ilkelerinin titizlikle uygulanması psikiyatri pratiğinin ve hekimlik sanatının en kritik başarı basamaklarıdır.",
+       "ekran": "**Klinik Başarı İlkeleri:** Erken tanı, intihar riski yönetimi, aile eğitimi ve koruyucu profilaksi",
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "Teşekkürler…"
+        ],
+        "sekil": null
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "duzey": 2,
+       "id": "k2-19-c0199"
       }
      ]
     }

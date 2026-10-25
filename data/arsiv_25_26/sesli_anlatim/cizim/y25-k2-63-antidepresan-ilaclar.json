@@ -1,9 +1,9 @@
 {
  "surum": 1,
- "metinHash": "b59fe9e0a1fa0053222434d36d2bd47b03b6c493",
+ "metinHash": "c6094a657558bfea6cf5ce63c97dec9e5be717a4",
  "p": {
   "2": {
-   "1": [
+   "3": [
     {
      "tur": "sema",
      "sablon": "siniflama",
@@ -11,14 +11,14 @@
      "duzen": "liste",
      "ogeler": [
       "Çökkün mizaç ve anhedoni",
-      "Uyku ve iştah değişiklikleri",
-      "Enerji kaybı ve intihar riski"
+      "Uyku ve iştah bozulması",
+      "Enerji kaybı ve intihar eğilimi"
      ],
-     "baslik": "Depresif Belirtiler",
+     "baslik": "Depresif Bozukluk Belirtileri",
      "s": 3,
      "k": [
       0,
-      38
+      48
      ],
      "tip": "liste",
      "konum": [
@@ -28,6 +28,37 @@
      "genislik": 0.5,
      "doluluk": 0.0,
      "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "3": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Panik ve anksiyete bozuklukları",
+      "Nöropatik ağrı ve fibromiyalji",
+      "Vazomotor semptomlar ve inkontinans"
+     ],
+     "baslik": "Klinik Spektrum",
+     "s": 4,
+     "k": [
+      0,
+      52
+     ],
+     "tip": "liste",
+     "konum": [
+      0.63,
+      0.17
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.428,
      "yon": "yatay",
      "olcek": 1.0
     }
@@ -50,7 +81,7 @@
      "s": 6,
      "k": [
       0,
-      33
+      32
      ],
      "tip": "zincir",
      "konum": [
@@ -67,6 +98,105 @@
     }
    ]
   },
+  "6": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Eksiklikte mikroanatomik değişim",
+      "Depresyonda hipokampus hacim kaybı",
+      "Kronik tedavide artmış nörojenez"
+     ],
+     "baslik": "Nörotrofik Faktör ve Hipokampus",
+     "s": 7,
+     "k": [
+      0,
+      47
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.74
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.068,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "8": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Rezerpin ile veziküler boşalma",
+      "Triptofansız diyette nüksetme",
+      "Noradrenalin sentez inhibisyonu"
+     ],
+     "baslik": "Rezerpin ve Triptofan Deneyleri",
+     "s": 9,
+     "k": [
+      0,
+      44
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.2,
+      0.7
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.0696,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "13": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Yüksek kortizol ve aks disregülasyonu",
+      "Tiroit fonksiyonlarında anormallik",
+      "Östrojen ve testosteron yetersizliği"
+     ],
+     "baslik": "Nöroendokrin Faktörler",
+     "s": 14,
+     "k": [
+      0,
+      52
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.8
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.128,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
   "15": {
    "3": [
     {
@@ -76,14 +206,14 @@
      "duzen": "liste",
      "ogeler": [
       "Fluoksetin ve sertralin",
-      "Fluvoksamin",
-      "Sitalopram ve essitalopram"
+      "Fluvoksamin ve sitalopram",
+      "Essitalopram"
      ],
-     "baslik": "Temel İlaçlar",
+     "baslik": "Seçici Serotonin Ajanları",
      "s": 16,
      "k": [
       0,
-      38
+      16
      ],
      "tip": "liste",
      "konum": [
@@ -92,6 +222,37 @@
      ],
      "genislik": 0.5,
      "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "18": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Venlafaksin ve duloksetin",
+      "İmipramin ve amitriptilin",
+      "Klomipramin ve desipramin"
+     ],
+     "baslik": "Dual ve Trisiklik Ajanlar",
+     "s": 19,
+     "k": [
+      0,
+      24
+     ],
+     "tip": "liste",
+     "konum": [
+      0.3,
+      0.35
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.001,
      "kutu_h": 0.308,
      "yon": "yatay",
      "olcek": 1.0
@@ -110,11 +271,11 @@
       "Duloksetin",
       "Milnasipran ve levomilnasipran"
      ],
-     "baslik": "İlaçlar",
+     "baslik": "Serotonin Noradrenalin Ajanları",
      "s": 21,
      "k": [
       0,
-      46
+      45
      ],
      "tip": "liste",
      "konum": [
@@ -138,15 +299,15 @@
      "duzen": "zincir",
      "bag": "yol açar",
      "ogeler": [
-      "Muskarinik reseptör blokajı",
+      "Trisiklik muskarinik blokaj",
       "Antikolinerjik yan etki yükü",
-      "Santral ve periferik etkiler"
+      "Aşırı dozda ölümcül kardiyotoksisite"
      ],
-     "baslik": "Muskarinik Reseptör Blokajı",
+     "baslik": "Trisiklik Antikolinerjik Yük",
      "s": 23,
      "k": [
       0,
-      50
+      38
      ],
      "tip": "zincir",
      "konum": [
@@ -163,23 +324,116 @@
     }
    ]
   },
-  "38": {
+  "23": {
    "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Trazodon belirgin sedatif etki yapar",
+      "Düşük dozda hipnotik tercih edilir",
+      "Nefazodon güçlü enzim inhibitörüdür"
+     ],
+     "baslik": "İki A Reseptör Antagonistleri",
+     "s": 24,
+     "k": [
+      0,
+      32
+     ],
+     "tip": "liste",
+     "konum": [
+      0.38,
+      0.08
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "24": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Bupropion amfetamin benzeri uyarıcıdır",
+      "Mirtazapin sedatif ve iştah artırıcıdır",
+      "Cinsel yan etki oluşturmayan ajanlar"
+     ],
+     "baslik": "Tetrasiklik ve Unisiklik İlaçlar",
+     "s": 25,
+     "k": [
+      0,
+      46
+     ],
+     "tip": "liste",
+     "konum": [
+      0.38,
+      0.68
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "25": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Fenelzin ve tranilsipromin irreversibldir",
+      "Moklobemid reversibl selektif ajan",
+      "Geri dönüşsüzlerde peynir etkisi riski"
+     ],
+     "baslik": "Monoamin Oksidaz İnhibitörleri",
+     "s": 26,
+     "k": [
+      0,
+      37
+     ],
+     "tip": "liste",
+     "konum": [
+      0.35,
+      0.47
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "27": {
+   "3": [
     {
      "tur": "sema",
      "sablon": "mekanizma_adimlari",
      "sablon_ad": "Mekanizma basamakları",
      "duzen": "zincir",
      "ogeler": [
-      "Taşıyıcıya allosterik bağlanma",
-      "Kotransportun durdurulması",
-      "Sinaptik serotonin artışı"
+      "Fluoksetin karaciğerde metabolize olur",
+      "Norfluoksetin yarılanma ömrü üç kat uzundur",
+      "Enzim inhibisyonu ilaç etkileşimi yapar"
      ],
-     "baslik": "Taşıyıcı Blokajı",
-     "s": 39,
+     "baslik": "Fluoksetin Metabolizma Basamakları",
+     "s": 28,
      "k": [
       0,
-      16
+      46
      ],
      "tip": "zincir",
      "konum": [
@@ -195,13 +449,146 @@
      "ek_renk": "#ffffff"
     }
    ]
+  },
+  "30": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Yüksek emilim ve uzun yarı ömür",
+      "Akşam saatlerinde tek doz uygulama",
+      "Dar terapötik pencere ve düzey takibi"
+     ],
+     "baslik": "Trisiklik Antidepresan Kinetiği",
+     "s": 31,
+     "k": [
+      0,
+      40
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.88
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.208,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "38": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Serotonin sodyum ve klorla bağlanır",
+      "Seçici ajanlar taşınmayı durdurur",
+      "Sinaptik aralıkta transmitter birikir"
+     ],
+     "baslik": "Serotonin Taşıyıcı İyon Kotransportu",
+     "s": 39,
+     "k": [
+      0,
+      20
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.81
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.1796,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "42": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Monoamin oksidaz a serotonini yıkar",
+      "Monoamin oksidaz be feniletilamini yıkar",
+      "Dopamin ve tiramin metabolize edilir"
+     ],
+     "baslik": "Oksidaz İzoenzim Dağılımı",
+     "s": 43,
+     "k": [
+      0,
+      33
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.288,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "49": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Yıllanmış gıdalarla tiramin alınması",
+      "Bağırsakta tiramin yıkılamaması",
+      "Masif salıverilme ile hipertansif kriz"
+     ],
+     "baslik": "Peynir Reaksiyonu Mekanizması",
+     "s": 50,
+     "k": [
+      0,
+      37
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.88
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.417,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3173,
+     "ek_renk": "#ffffff"
+    }
+   ]
   }
  },
  "rapor": {
-  "aday": 7,
-  "gecti": 6,
+  "aday": 21,
+  "gecti": 18,
   "ret": {
-   "resim sayfasında panel (H51)": 1
+   "resim sayfasında panel (H51)": 3
   }
  }
 }

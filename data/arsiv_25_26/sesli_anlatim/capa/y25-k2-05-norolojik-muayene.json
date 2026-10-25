@@ -1,15 +1,63 @@
 {
- "mdSha1": "5dc019be70fbde319b81661e85c8c27d9a91aa45",
+ "mdSha1": "0dd6578f2c2146e946f3d27ac92b8ffa012c5c30",
  "p": [
   [
    {
-    "ses": "Nörolojik muayeneye anatomiyle başlıyoruz: merkezi sinir sistemi supratentoriyal bölüm, infratentoriyal bölüm ve medulla spinalis olarak üçe ayrılır; bir lezyonun yerini düşünürken yaptığımız ilk ayrım budur.",
+    "ses": "Nörolojik muayene dersimize hoş geldiniz sevgili meslektaşlarım.",
+    "sayfa": 1,
+    "satir": [
+     "NÖROLOJİK MUAYENE"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     2
+    ]
+   },
+   {
+    "ses": "Nörolojide doğru teşhis koymanın ve lezyonu anatomik olarak lokalize etmenin vazgeçilmez temeli ayrıntılı bir anamnez ile eksiksiz bir fizik muayenedir.",
+    "sayfa": 1,
+    "satir": [
+     "Dr. Dursun CEYLAN"
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     0
+    ]
+   },
+   {
+    "ses": "Bu derste mental durumdan başlayarak kraniyal sinirleri, motor ve duyu sistemlerini, refleksleri ve serebellar koordinasyonu adım adım inceleyeceğiz.",
+    "sayfa": 1,
+    "satir": [
+     "KBÜEAH Nöroloji"
+    ],
+    "sekil": null,
+    "madde": [
+     2,
+     0
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Sinir sistemini anatomik olarak iki ana kompartmanda inceleriz: merkezi sinir sistemi ve periferik sinir sistemi.",
     "sayfa": 2,
     "satir": [
-     "Merkezi Sinir Sistemi:",
-     "Supratentorital",
-     "İnfratentoriyal",
-     "Medulla Spinalis"
+     "Sinir Sistemi: Anatomi"
+    ],
+    "sekil": "Sinir sisteminin anatomik bölümleri: MSS (supratentoriyal, infratentoriyal, medulla spinalis), periferik sinir, kas-sinir bileşkesi ve kas",
+    "madde": [
+     0,
+     1
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Merkezi sinir sistemi supratentoryal hemisferler, infratentoryal beyin sapı ve beyincik ile omurilikten meydana gelir.",
+    "sayfa": 2,
+    "satir": [
+     "Supratentorital"
     ],
     "sekil": null,
     "madde": [
@@ -18,157 +66,246 @@
     ]
    },
    {
-    "ses": "Merkezi sistemin ötesinde periferik sinir sistemi, kas-sinir bileşkesi ve kas yer alır; yani kuvvetsizlik beyinden kasa kadar bu basamakların herhangi birinden kaynaklanabilir.",
+    "ses": "Periferik sinir sistemi ise kraniyal sinirler, spinal sinir kökleri, pleksuslar ve periferik sinir ağından oluşarak kas ve duyu organlarına ulaşır.",
     "sayfa": 2,
     "satir": [
-     "Periferik Sinir Sistemi",
-     "Kas-Sinir Bileşkesi",
-     "Kas"
+     "Periferik Sinir Sistemi:"
     ],
     "sekil": null,
-    "madde": [
-     3,
-     4
-    ]
-   },
-   {
-    "ses": "Slayttaki çizim periferik sinirlerin vücuttaki seyrini gösteriyor: kolda brakiyal pleksustan çıkan radial, median ve ulnar sinirler, bacakta siyatik, femoral, peroneal ve tibial sinirler izlenir.",
-    "sayfa": 2,
-    "satir": [],
-    "sekil": "periferik sinirlerin vücuttaki seyrini gösteren anatomik çizim",
-    "resim": 0,
     "madde": [
      3,
      0
     ]
-   },
+   }
+  ],
+  [
    {
-    "ses": "Fonksiyonel açıdan nörolojik muayene beş basamakta yapılır: mental durum, kraniyal sinirler, motor sistem, duyu sistemi ve serebellar sistem; bu sistematik sıra bulgu atlamayı önler ve dersin geri kalanı da bu sırayla ilerler.",
+    "ses": "Nörolojik muayeneyi yürütürken sinir sisteminin fonksiyonel haritasını belirli bir hiyerarşik sıra dahilinde gözden geçiririz.",
     "sayfa": 3,
     "satir": [
-     "Mental Durum",
-     "Kraniyal Sinirler",
-     "Motor Sistem",
-     "Duyu Sistemi",
-     "Serebellar Sistem"
+     "Sinir Sistemi: Fonksiyon"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     2
+    ]
+   },
+   {
+    "ses": "Bu fonksiyonel sıra sırasıyla mental durum, kraniyal sinirler, motor sistem, duyu sistemi ve serebellar sistem olarak ilerler.",
+    "sayfa": 3,
+    "satir": [
+     "Mental Durum"
     ],
     "sekil": null,
     "madde": [
      1,
-     2
+     0
+    ]
+   },
+   {
+    "ses": "Bu sistematik sıra hekimin hiçbir anatomik alanı atlamadan lezyonun düzeyini tespit etmesini güvenceye alır.",
+    "sayfa": 3,
+    "satir": [
+     "Kraniyal Sinirler"
+    ],
+    "sekil": null,
+    "madde": [
+     2,
+     0
     ]
    }
   ],
   [
    {
-    "ses": "Mental durumda önce uyanıklık düzeyine bakarız: hasta uyanık, uykuya meyilli, uykulu ya da komada olabilir; bilinç düzeyi muayenenin ilk ve en temel parametresidir.",
-    "sayfa": 5,
+    "ses": "Muayenenin ilk basamağı olan mental durum incelemesi hastanın hekimle iletişim kurduğu ilk andan itibaren başlar.",
+    "sayfa": 4,
     "satir": [
-     "Uyanıklık Düzeyi: Uyanık, uykuya meyilli, uykulu, koma"
+     "Sinir Sistemi: Fonksiyon"
     ],
     "sekil": null,
     "madde": [
-     1,
+     0,
      2
     ]
    },
    {
-    "ses": "Bilinç bozukluğu derinleştikçe sırasıyla somnolans ya da letarji, stupor ve koma terimlerini kullanırız; terim, bilinç kaybının ne kadar derin olduğunu anlatır.",
-    "sayfa": 5,
+    "ses": "Mental durum hastanın serebral korteks işlevlerini, farkındalığını, oryantasyonunu ve bilişsel kapasitesini doğrudan yansıtır.",
+    "sayfa": 4,
     "satir": [
-     "Somnolans- Letarji",
-     "Stupor",
-     "Koma"
-    ],
-    "sekil": null,
-    "madde": [
-     5,
-     6
-    ]
-   },
-   {
-    "ses": "Bellek anlık, kısa dönem ve uzun dönem olarak ayrı ayrı test edilir, çünkü bu bellek türleri birbirinden bağımsız bozulabilir; bellek kaybına amnezi deriz.",
-    "sayfa": 5,
-    "satir": [
-     "Bellek: Anlık, kısa dönem, uzun dönem",
-     "Amnezi"
-    ],
-    "sekil": null,
-    "madde": [
-     3,
-     8
-    ]
-   },
-   {
-    "ses": "Bilinç düzeyinden ayrı olarak bilincin içeriğindeki bozukluklar da not edilir; konfüzyon ve deliryum akut mental durum değişikliği olarak kaydedilir.",
-    "sayfa": 5,
-    "satir": [
-     "Konfüzyon",
-     "Deliriyum"
-    ],
-    "sekil": null,
-    "madde": [
-     4,
-     9
-    ]
-   }
-  ],
-  [
-   {
-    "ses": "Konuşma muayenesinde akıcılık, anlama, tekrarlama, isimlendirme, okuma ve yazma tek tek değerlendirilir; afazinin tipini ayırmak için her bileşenin ayrı test edilmesi gerekir.",
-    "sayfa": 6,
-    "satir": [
-     "Konuşma: Akıcılık, anlama, tekrarlama, isimlendirme, okuma, yazma"
+     "Mental Durum"
     ],
     "sekil": null,
     "madde": [
      1,
-     2
-    ]
-   },
-   {
-    "ses": "Dil bozukluğu disfazi ya da afazi olarak adlandırılır; kısmi bozukluğa disfazi, tam kayba afazi deriz.",
-    "sayfa": 6,
-    "satir": [
-     "Disfazi, afazi"
-    ],
-    "sekil": null,
-    "madde": [
-     3,
-     4
-    ]
-   },
-   {
-    "ses": "Motor disfazi Broca, sensoriyal afazi Wernicke afazisi olarak bilinir: Broca afazisinde ifade bozulur ve konuşma akıcı değildir, Wernicke afazisinde ise anlama bozukluğu öne çıkar. Broca ve Wernicke afazisinin ayrımı çıkmışta soruldu.",
-    "sayfa": 6,
-    "satir": [
-     "Motor disfazi (Broca)",
-     "Sensoriyal afazi (Wernicke)"
-    ],
-    "sekil": null,
-    "madde": [
-     4,
      5
     ]
+   },
+   {
+    "ses": "Bilinç düzeyi netleştirilmeden motor veya duyu sistemlerinin güvenilir bir şekilde test edilmesi mümkün değildir.",
+    "sayfa": 4,
+    "satir": [
+     "Kraniyal Sinirler"
+    ],
+    "sekil": null,
+    "madde": [
+     2,
+     0
+    ]
+   },
+   {
+    "ses": "Hekim hastanın uyanıklık seviyesini, zaman, yer ve kişi yönelimini, konuşma akıcılığını ve anlama yeteneğini gözlemleyerek kooperasyon düzeyini belirler.",
+    "sayfa": 4,
+    "satir": [
+     "Mental Durum"
+    ],
+    "sekil": null,
+    "madde": [
+     1
+    ]
    }
   ],
   [
    {
-    "ses": "Muayenenin ikinci basamağı kraniyal sinirlerdir ve on iki siniri numara sırasıyla sınarız: olfaktor, optik, okülomotor, troklear, trigeminal, abdusens, fasiyal, vestibülokoklear, glossofaringeal, vagus, aksesuar ve hipoglossus.",
+    "ses": "Mental durum muayenesinde öncelikle uyanıklık düzeyi belirlenir; hasta uyanık, uykuya meyilli yani somnolan, stuporda ya da komada olabilir.",
+    "sayfa": 5,
+    "satir": [
+     "Uyanıklık Düzeyi: Uyanık, uykuya meyilli,"
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     0
+    ]
+   },
+   {
+    "ses": "Ardından bellek fonksiyonları anlık kayıt, yakın bellek ve uzak bellek basamakları üzerinden sorularla sınanır.",
+    "sayfa": 5,
+    "satir": [
+     "Bellek: Anlık,"
+    ],
+    "sekil": null,
+    "madde": [
+     3
+    ]
+   },
+   {
+    "ses": "Duygulanım, mizaç ve hastanın içinde bulunduğu ortama uygun düşünce içeriği geliştirmesi de mental durumun ayrılmaz bir parçasıdır.",
+    "sayfa": 5,
+    "satir": [
+     "Uyanıklık Düzeyi: Uyanık, uykuya meyilli"
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     0
+    ]
+   },
+   {
+    "ses": "Hastanın bellek fonksiyonları değerlendirilirken anlık bellek için sayı dizisi tekrarlatma, yakın bellek için yakın geçmiş olayları ve uzak bellek için kişisel geçmiş bilgileri sorgulanır.",
+    "sayfa": 5,
+    "satir": [
+     "Bellek: Anlık, kısa dönem, uzun dönem"
+    ],
+    "sekil": null,
+    "madde": [
+     3
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Konuşma ve dil fonksiyonlarının değerlendirilmesi dominant hemisfer kortikal işlevlerinin en hassas göstergesidir.",
+    "sayfa": 6,
+    "satir": [
+     "Konuşma: Akıcılık, anlama, tekrarlama,"
+    ],
+    "sekil": null,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Hekim hastanın konuşma akıcılığını, anlama yetisini, cümleleri tekrarlamasını, nesneleri isimlendirmesini, okuma ve yazma becerilerini inceler.",
+    "sayfa": 6,
+    "satir": [
+     "isimlendirme, okuma, yazma"
+    ],
+    "sekil": null,
+    "madde": [
+     2,
+     1
+    ]
+   },
+   {
+    "ses": "Ayrıca apraksi yani motor kusur olmaksızın öğrenilmiş becerileri yapamama ve agnozi yani duyu kusuru olmaksızın nesneleri tanıyamama araştırılır.",
+    "sayfa": 6,
+    "satir": [
+     "Konuşma: Akıcılık, anlama, tekrarlama"
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     4
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Nörolojik muayenemizin ikinci ana durağı beyin sapı ve kafa tabanı fonksiyonlarını doğrudan yansıtan kraniyal sinirlerdir.",
+    "sayfa": 7,
+    "satir": [
+     "Sinir Sistemi: Fonksiyon"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     2
+    ]
+   },
+   {
+    "ses": "Toplam on iki çift kraniyal sinir kafa içi yapılardan çıkarak baş, boyun ve iç organların duyusal ve motor yönetimini üstlenir.",
+    "sayfa": 7,
+    "satir": [
+     "Kraniyal Sinirler"
+    ],
+    "sekil": null,
+    "madde": [
+     2,
+     0
+    ]
+   },
+   {
+    "ses": "Kraniyal sinir muayenesinde saptanan fokal bir defisit, lezyonun mezensefalon, pons veya bulbusta milimetrik olarak lokalize edilmesini sağlar.",
+    "sayfa": 7,
+    "satir": [
+     "Mental Durum"
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     2
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Kraniyal sinirler birinci olfaktor sinirden on ikinci hipoglossus sinirine kadar anatomik numaralarıyla anılır.",
     "sayfa": 8,
     "satir": [
-     "Olfaktor Sinir",
-     "Optik Sinir",
-     "Okülomotor Sinir",
-     "Troklear Sinir",
-     "Trigeminal Sinir",
-     "Abdusens Siniri",
-     "Fasiyal Sinir",
-     "Vestibülokoklear Sinir",
-     "Glossofaringeal Sinir",
-     "Vagus Siniri",
-     "Aksesuar Sinir",
-     "Hipoglossus Siniri"
+     "Nörolojik Muayene: Kraniyal Sinirler"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     1
+    ]
+   },
+   {
+    "ses": "İlk iki kraniyal sinir olan olfaktor ve optik sinirler doğrudan ön beyin uzantısıdır ve miyelin kılıfları oligodendrositlerce yapılır.",
+    "sayfa": 8,
+    "satir": [
+     "Olfaktor Sinir"
     ],
     "sekil": null,
     "madde": [
@@ -177,7 +314,33 @@
     ]
    },
    {
-    "ses": "Kraniyal sinirler beyin sapından çıkarak göz, yüz, kulak, farenks, boyun ve dil gibi hedef yapılara dağılır; her sinirin işlevini ulaştığı hedef organ belirler.",
+    "ses": "Üçüncüden on ikinciye kadar olan kraniyal sinirler ise gerçek beyin sapı nükleuslarından köken alır.",
+    "sayfa": 8,
+    "satir": [
+     "Optik Sinir"
+    ],
+    "sekil": null,
+    "madde": [
+     2,
+     1
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Beyin tabanına baktığımızda kraniyal sinirlerin rostralden kaudale doğru çok düzenli bir anatomik sırayla çıktığını görürüz.",
+    "sayfa": 9,
+    "satir": [
+     "Kraniyal Sinirler"
+    ],
+    "sekil": "Kraniyal sinirlerin beyin sapından çıkıp hedef organlara dağılımını gösteren şema",
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Mezensefalondan okülomotor ve troklear sinirler, ponstan trigeminal, abdusens, fasiyal ve vestibulokoklear sinirler ayrılır.",
     "sayfa": 9,
     "satir": [
      "Kraniyal Sinirler"
@@ -189,118 +352,186 @@
     "resim": 0
    },
    {
-    "ses": "Bu şemada birden on ikiye kadar numaralanmış sinirlerin beyin sapından çıkışı ile göze, yüze, kulağa, farenkse, iç organlara, boyun kaslarına ve dile ulaşan dalları bir arada görülüyor.",
+    "ses": "Bulbustan ise glossofaringeal, vagus, aksesuar ve hipoglossus sinirleri çıkarak kafa tabanı deliklerine yönelir.",
     "sayfa": 9,
-    "satir": [],
-    "sekil": "kraniyal sinirlerin beyin sapından çıkıp hedef organlara dağılımını gösteren şema",
-    "resim": 0,
-    "madde": [
-     0
-    ]
-   },
-   {
-    "ses": "Beyin tabanı görünümünde olfaktor bulbus ve trakt frontal lobun altında, optik kiazma ve optik trakt da onun gerisinde yer alır; bu yüzden frontal taban lezyonları koku ve görme yollarını birlikte etkileyebilir.",
-    "sayfa": 10,
     "satir": [
-     "Frontal lobe",
-     "Olfactory bulb",
-     "Optic chiasma",
-     "Optic tract"
+     "Kraniyal Sinirler"
     ],
     "sekil": null,
     "madde": [
-     2,
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Bu anatomik çıkış sıralamasının bilinmesi, beyin sapı enfarktları veya tümörlerinde gelişen çapraz felç tablolarında lezyon seviyesini milimetrik olarak lokalize etmeyi sağlar.",
+    "sayfa": 9,
+    "satir": [
+     "Kraniyal Sinirler"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ],
+    "resim": 0
+   }
+  ],
+  [
+   {
+    "ses": "Kafa tabanının kemik foramenleri kraniyal sinirlerin kafatasını terk ettiği anatomik kapılardır.",
+    "sayfa": 10,
+    "satir": [
+     "Frontal lobe"
+    ],
+    "sekil": "Beyin tabanı görünümünde kraniyal sinirlerin çıkış yerleri",
+    "madde": [
+     0,
+     9
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Olfaktor sinir lamina kribrozadan, optik sinir optik kanaldan, göz kaslarını innerve eden sinirler ise fissura orbitalis superiordan geçer.",
+    "sayfa": 10,
+    "satir": [
+     "Optic chiasma"
+    ],
+    "sekil": null,
+    "madde": [
+     3,
      4
     ]
    },
    {
-    "ses": "Çizimde olfaktor ve optik yapıların ardından okülomotordan hipoglossusa kadar diğer sinirlerin beyin tabanındaki çıkış yerleri sırayla işaretlenmiştir.",
+    "ses": "Alt kraniyal sinirler ise foramen jugulare ve hipoglossal kanalı kullanarak kafa dışına ulaşır.",
     "sayfa": 10,
     "satir": [
      "Medulla oblongata"
     ],
-    "sekil": "beyin tabanında kraniyal sinirlerin çıkış yerleri çizimi",
-    "resim": 0,
+    "sekil": null,
     "madde": [
      16
+    ]
+   },
+   {
+    "ses": "Kafa tabanı kırıklarında veya menenjiom gibi kitle lezyonlarında ilgili foramenlerden geçen sinirlerin topluca tutulmasıyla karakteristik foramen sendromları tablosu gelişir.",
+    "sayfa": 10,
+    "satir": [
+     "Olfactory bulb"
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     2
     ]
    }
   ],
   [
    {
-    "ses": "Numara sırası sinirlerin beyin sapından yukarıdan aşağıya çıkış sırasını yansıtır; birinci olfaktor sinirden on ikinci hipoglossus sinirine kadar muayene de bu sırayı izler.",
+    "ses": "Klinik muayenede kraniyal sinirleri daima birden başlayarak on ikiye kadar adım adım sırayla test etmek gerekir.",
     "sayfa": 11,
     "satir": [
-     "KRANİAL SİNİRLER"
+     "•Olfaktor Sinir"
     ],
     "sekil": null,
     "madde": [
-     14,
+     0,
      8
     ]
    },
    {
-    "ses": "Her muayene bileşeni belirli bir sinire aittir: koku birinci kraniyal sinirle, görme alanı, görme keskinliği ve fundoskopik muayene ikinci kraniyal sinirle değerlendirilir.",
-    "sayfa": 12,
+    "ses": "Her sinirin duyusal, motor veya otonomik işlevleri kendine özgü klinik manevralarla açığa çıkarılır.",
+    "sayfa": 11,
     "satir": [
-     "Koku: KS I",
-     "Görme: Görme alanı, görme keskinliği, fundoskopik muayene: KS II"
+     "•Optik Sinir"
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     8
+    ]
+   },
+   {
+    "ses": "Şimdi bu sinirlerin muayene yöntemlerini ve klinikte karşılaştığımız patolojik bulgularını tek tek ele alalım.",
+    "sayfa": 11,
+    "satir": [
+     "•Okülomotor Sinir"
     ],
     "sekil": null,
     "madde": [
      2,
-     3
-    ]
-   },
-   {
-    "ses": "Pupillar ışık refleksi iki sinirli bir yaydır, ikinci ve üçüncü kraniyal sinirlerle sınanır; göz küresi hareketleri ise üçüncü, dördüncü ve altıncı sinirlerle değerlendirilir.",
-    "sayfa": 12,
-    "satir": [
-     "Pupillar ışık refleksi: KS II, KS III",
-     "Göz küresi hareketleri: KS III, KS IV, KS VI"
-    ],
-    "sekil": null,
-    "madde": [
-     4,
-     5
-    ]
-   },
-   {
-    "ses": "Yüz duyusu beşinci sinire aittir; yüz kaslarının kuvvetinde ise çiğneme kasları beşinci, mimik kaslar yedinci sinirle sınanır, dolayısıyla yüzdeki zaafın çiğneme mi mimik mi olduğu siniri belirler.",
-    "sayfa": 12,
-    "satir": [
-     "Yüz duyusu: KS V",
-     "Yüz kaslarının kuvveti: Çiğneme kasları KS V, mimik kaslar KS VII"
-    ],
-    "sekil": null,
-    "madde": [
-     7,
      8
-    ]
-   },
-   {
-    "ses": "Duyma sekizinci, palatal hareketler dokuzuncu ve onuncu, baş rotasyonu ile omuz elevasyonu on birinci, dil hareketleri on ikinci kraniyal sinirle değerlendirilir.",
-    "sayfa": 12,
-    "satir": [
-     "Duyma: KS VIII",
-     "Palatal hareketler: KS IX, KS X",
-     "Baş rotasyonu, omuz elevasyonu: KS XI",
-     "Dil hareketleri: KS XII"
-    ],
-    "sekil": null,
-    "madde": [
-     11,
-     12
     ]
    }
   ],
   [
    {
-    "ses": "Birinci kraniyal sinir muayenesinde her burun deliği ayrı ayrı test edilir, çünkü tek taraflı koku kaybı ancak böyle saptanır.",
+    "ses": "Kraniyal sinir muayenesinin temel fonksiyon alanları koku, görme, göz hareketleri, yüz duyusu ve mimik hareketleridir.",
+    "sayfa": 12,
+    "satir": [
+     "Koku: KS I"
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     0
+    ]
+   },
+   {
+    "ses": "Bunun yanında işitme, yutma, fonasyon, omuz silkme ve dil hareketleri alt kraniyal sinirlerle kontrol edilir.",
+    "sayfa": 12,
+    "satir": [
+     "Görme: Görme alanı, görme keskinliği,"
+    ],
+    "sekil": null,
+    "madde": [
+     2,
+     0
+    ]
+   },
+   {
+    "ses": "Bu fonksiyonların dikkatle değerlendirilmesi santral sinir sistemi patolojilerini periferik tuzak nöropatilerinden ayırır.",
+    "sayfa": 12,
+    "satir": [
+     "fundoskopik"
+    ],
+    "sekil": null,
+    "madde": [
+     3,
+     0
+    ]
+   },
+   {
+    "ses": "Her kraniyal sinir kendine özgü duysal, motor veya parasempatik çekirdek işlevini taşır; bu nedenle basamak basamak ve iki taraf karşılaştırılarak test edilmelidir.",
+    "sayfa": 12,
+    "satir": [
+     "Kraniyal Sinirler"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Birinci kraniyal sinir olan nervus olfaktorius koku duyusundan sorumlu özel visseral afferent bir sinirdir.",
     "sayfa": 13,
     "satir": [
      "I. Kraniyal Sinir Muayenesi"
     ],
+    "sekil": "I. kraniyal sinir muayenesi uygulama fotoğrafı: koku testi",
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Muayeneye başlamadan önce hastanın burun deliklerinde deviasyon, rinit veya mekanik tıkanıklık olmadığı kontrol edilir.",
+    "sayfa": 13,
+    "satir": [
+     ">"
+    ],
     "sekil": null,
     "madde": [
      0
@@ -308,85 +539,95 @@
     "resim": 0
    },
    {
-    "ses": "Fotoğrafta hekim hastanın bir burun deliğini kapatıp diğerine koku kaynağını tutuyor; hasta gözleri kapalıyken kokuyu tanımlamaya çalışır.",
+    "ses": "Hastanın gözleri kapatılarak her iki burun deliği sırayla kapatılıp ayrı ayrı test edilmelidir.",
     "sayfa": 13,
-    "satir": [],
-    "sekil": "birinci kraniyal sinir muayenesi fotoğrafı: bir burun deliği kapatılıp diğerine koku kaynağı tutuluyor",
-    "resim": 0,
+    "satir": [
+     ">—"
+    ],
+    "sekil": null,
     "madde": [
      0
-    ]
+    ],
+    "resim": 0
    },
    {
-    "ses": "Nervus olfaktorius, olfaktor mukozadaki bipolar nöronların santral aksonlarından oluşur ve koku duyusunu taşır; koku yolunun ilk nöronu burun mukozasında olduğu için mukoza hastalıkları da koku kaybı yapar.",
+    "ses": "Test sırasında amonyak gibi trigeminal siniri uyaran tahriş edici maddelerden kaçınılmalı, kahve veya sabun gibi aşina olunan aromatik kokular tercih edilmelidir.",
+    "sayfa": 13,
+    "satir": [
+     "I. Kraniyal Sinir"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ],
+    "resim": 0
+   }
+  ],
+  [
+   {
+    "ses": "Olfaktor mukozadaki bipolar nöronların aksonları lamina kribrozadan geçerek bulbus olfaktoriusta sinaps yapar.",
     "sayfa": 14,
     "satir": [
-     "Olfaktor mukozadaki bipolar nöronların santral aksonlarından oluşur",
-     "Koku duyusunu taşır"
+     "Olfaktor mukozadaki bipolar nöronların santral"
     ],
     "sekil": null,
     "madde": [
      1,
-     3
+     0
     ]
    },
    {
-    "ses": "Koku uyarısı bulbus, traktus ve stria olfaktorius aracılığıyla temporal lobdaki primer koku alanına ulaşır.",
+    "ses": "Testte kahve, sabun, tütün veya nane gibi tahriş etmeyen aşina kokular kullanılmalı; trigeminal siniri uyaran amonyak gibi keskin maddelerden kaçınılmalıdır.",
     "sayfa": 14,
     "satir": [
-     "Bulbus tractus ve stria olfaktorius aracılığıyla temporal lobdaki primer koku alanına ulaşır"
+     "aksonlarından oluşur"
     ],
     "sekil": null,
     "madde": [
-     4,
+     2,
+     6
+    ]
+   },
+   {
+    "ses": "Kafa travmalarında lamina kribroza kırıkları, subfrontal menenjiyomlar ve erken evre Parkinson hastalığında anozmi önemli bir erken bulgudur.",
+    "sayfa": 14,
+    "satir": [
+     "Koku duyusunu taşır"
+    ],
+    "sekil": null,
+    "madde": [
+     3,
      5
     ]
    },
    {
-    "ses": "Muayenede burun mukozasını tahriş etmeyen nane, limon gibi kokular kullanılır; tahriş edici maddeler trigeminal uçları uyarıp sonucu yanıltır.",
+    "ses": "Kafa tabanı travmalarında lamina kribroza kırığına bağlı bilateral kalıcı anosmi, koku oluğu menenjiomlarında ise tek taraflı kayıp gelişebilir.",
     "sayfa": 14,
     "satir": [
-     "Burun mukozasına tahriş etmeyen kokular (nane, limon vb)"
-    ],
-    "sekil": null,
-    "madde": [
-     6,
-     9
-    ]
-   },
-   {
-    "ses": "Lezyonunda anosmi, yani koku yokluğu olur; hiposmi, kakosmi ve parosmi de görülebilir.",
-    "sayfa": 14,
-    "satir": [
-     "Lezyonunda anosmi olur (hiposmi, kokosmi, parosmi)"
-    ],
-    "sekil": null,
-    "madde": [
-     8,
-     10
-    ]
-   },
-   {
-    "ses": "Nedenler arasında burun mukoza enfeksiyonları, iki taraflı anosmi yapan kafa travması, olfaktor oluk menenjiomu, menenjit, kokain alışkanlığı ve nevroz sayılır.",
-    "sayfa": 14,
-    "satir": [
-     "Burun mukoza enfeksiyonları",
-     "Kafa travması (bilateral anosmi)",
-     "Olfaktor oluk menenjiomu",
-     "Menenjit",
-     "Kokain alışkanlığı",
-     "Nevroz"
+     "Kafa travması (bilateral anosmi)"
     ],
     "sekil": null,
     "madde": [
      10,
-     9
+     8
     ]
    }
   ],
   [
    {
-    "ses": "İkinci kraniyal sinir muayenesinde görme keskinliği kartla, görme alanı konfrontasyon yöntemiyle, ışık refleksi de kalem ışığıyla test edilir; her bileşen görme yolunun farklı bir işlevini sınar.",
+    "ses": "İkinci kraniyal sinir olan nervus optikus retinanın gangliyon hücre aksonlarından oluşan kritik bir görme yoludur.",
+    "sayfa": 15,
+    "satir": [
+     "II. Kraniyal Sinir Muayenesi"
+    ],
+    "sekil": "II. kraniyal sinir muayenesi: görme keskinliği, konfrontasyon ve ışık refleksi",
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Optik sinir muayenesi görme keskinliği, görme alanı, renkli görme ve oftalmoskopik fundus muayenesini kapsar.",
     "sayfa": 15,
     "satir": [
      "II. Kraniyal Sinir Muayenesi"
@@ -398,17 +639,33 @@
     "resim": 0
    },
    {
-    "ses": "Fotoğraflarda el kartıyla yakın görme, hekimle hastanın karşılıklı birer gözünü kapattığı konfrontasyon muayenesi ve kalem ışığıyla pupilla refleksi görülüyor.",
+    "ses": "Bu dört basamaklı inceleme optik sinir patolojilerini kiazma ve retrokiazmatik lezyonlardan kusursuz biçimde ayırır.",
     "sayfa": 15,
-    "satir": [],
-    "sekil": "ikinci kraniyal sinir muayene fotoğrafları: görme kartı, konfrontasyon görme alanı ve kalem ışığıyla ışık refleksi",
-    "resim": 0,
+    "satir": [
+     "II. Kraniyal Sinir Muayenesi"
+    ],
+    "sekil": null,
     "madde": [
      0
-    ]
+    ],
+    "resim": 0
+   }
+  ],
+  [
+   {
+    "ses": "Görme keskinliği yatak başında el eşeli veya uzaktan Snellen tablosu kullanılarak her göz için tek tek ölçülür.",
+    "sayfa": 16,
+    "satir": [
+     "II. Kraniyal Sinir Muayenesi"
+    ],
+    "sekil": "Oftalmoskopla göz dibi muayenesi ve normal ile ödemli optik disk görüntüleri",
+    "madde": [
+     0
+    ],
+    "resim": 0
    },
    {
-    "ses": "Göz dibi oftalmoskopla incelenir; optik disk, arter, ven ve makula değerlendirilir ve fundoskopi optik sinir başını doğrudan gösterdiği için papil ödemi bu muayeneyle saptanır.",
+    "ses": "Görme alanı değerlendirmesinde klinisyen ile hastanın karşı karşıya oturduğu konfrontasyon testi uygulanır.",
     "sayfa": 16,
     "satir": [
      "II. Kraniyal Sinir Muayenesi"
@@ -420,106 +677,153 @@
     "resim": 0
    },
    {
-    "ses": "Görüntülerde etiketli normal göz dibi ile sınırları silikleşmiş ödemli bir optik disk yan yana duruyor; farkı disk kenarlarına bakarak görürüz.",
+    "ses": "Oftalmoskop ile optik disk sınırları, rengi, çukurluğu, retina damarları ve makula özenle incelenir.",
     "sayfa": 16,
-    "satir": [],
-    "sekil": "normal göz dibi ile sınırları silik ödemli optik disk görüntüsü",
-    "resim": 0,
+    "satir": [
+     "II. Kraniyal Sinir Muayenesi"
+    ],
+    "sekil": null,
     "madde": [
      0
-    ]
+    ],
+    "resim": 0
    },
    {
-    "ses": "Nervus optikus görme uyarılarını iletir ve ışık refleksinin afferentidir; bu yüzden optik sinir hasarında ışık refleksi getirici koldan bozulur.",
+    "ses": "Özellikle kafa içi basınç artışı sendromunda erken dönemde optik disk sınırlarında silinme ve venöz pulsasyon kaybı ile karakterize papilödem tablosu tespit edilir.",
+    "sayfa": 16,
+    "satir": [
+     "II. Kraniyal Sinir"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ],
+    "resim": 0
+   }
+  ],
+  [
+   {
+    "ses": "Nervus optikus görme uyarılarını oksipital kortekse taşırken aynı zamanda pupiller ışık refleksinin afferent bacağını oluşturur göze ışık tutulduğunda her iki pupilin birden daralması optik sinirin sağlam olduğunu gösterir.",
     "sayfa": 17,
     "satir": [
-     "Görme uyarılarının iletilmesi",
-     "Işık refleksinin afferentidir"
+     "Işık refleksinin afferentidir"
+    ],
+    "sekil": null,
+    "madde": [
+     2,
+     1
+    ]
+   },
+   {
+    "ses": "Optik sinirin tek taraflı parsiyel hasarlarında sallanan fener testi ile Marcus Gunn pupili yani rölatif afferent pupil defekti saptanır.",
+    "sayfa": 17,
+    "satir": [
+     "Görme keskinliği"
+    ],
+    "sekil": null,
+    "madde": [
+     4,
+     1
+    ]
+   },
+   {
+    "ses": "Bu durum ışığın hasta göze yöneltildiğinde her iki pupilin daralmak yerine paradoksal olarak genişlemesi şeklinde klinik bulgu verir.",
+    "sayfa": 17,
+    "satir": [
+     "Görme uyarılarının iletilmesi"
     ],
     "sekil": null,
     "madde": [
      1,
-     2
-    ]
-   },
-   {
-    "ses": "Muayenede görme keskinliği Snellen ve Jaeger kartlarıyla, görme alanı dört kadranda bakılır, ardından göz dibi muayenesi yapılır; Snellen uzak, Jaeger yakın görme kartıdır.",
-    "sayfa": 17,
-    "satir": [
-     "Görme keskinliği; Snellen ve Jaeger kartları",
-     "Görme alanı; dört kadran",
-     "Göz dibi muayene"
-    ],
-    "sekil": null,
-    "madde": [
-     4,
-     5
-    ]
-   }
-  ],
-  [
-   {
-    "ses": "Görme yolunun optik sinir, kiazma, trakt, radyasyo optika ve kalkarin korteks düzeyindeki lezyonları farklı görme alanı defektleri oluşturur, yani defektin şekli lezyonun yerini gösterir.",
-    "sayfa": 18,
-    "satir": [],
-    "sekil": "görme yolu ve görme alanı defektleri şeması",
-    "resim": 0,
-    "madde": [
-     0
-    ]
-   },
-   {
-    "ses": "Şemada a'dan ef'e kadar işaretli lezyon noktaları var; kiazma lezyonu bitemporal, kiazmanın gerisindeki lezyonlar ise homonim defekt yapar.",
-    "sayfa": 18,
-    "satir": [],
-    "sekil": "görme yolu üzerinde A'dan F'ye lezyon noktaları ve karşılık gelen görme alanı defektleri",
-    "resim": 0,
-    "madde": [
-     0
-    ]
-   },
-   {
-    "ses": "Amorozis fugaks tek gözde ani, geçici görme kaybıdır ve genellikle karotid arterden kopan embolinin retinal arterleri tıkamasına bağlıdır; bu nedenle bu hastada baş-boyun oskültasyonu yapılmalıdır.",
-    "sayfa": 19,
-    "satir": [
-     "Amorozis fugax",
-     "Tek gözde ani, geçici görme kaybı",
-     "Genelde karotid arterden kopan embolinin retinal arterleri tıkamasına bağlı (baş-boyun oskültasyonu!)"
-    ],
-    "sekil": null,
-    "madde": [
-     4,
-     2
-    ]
-   },
-   {
-    "ses": "Papil ödeminde papilla kenarları ve damarlar silikleşir, optik çukur kaybolur, retinal venler kalınlaşır ve venöz pulsasyonlar kaybolur.",
-    "sayfa": 19,
-    "satir": [
-     "Papilla kenarlarının ve damarın silikleşmesi, optik çukurun kaybolması, retinal venlerin kalınlaşması ve pulsasyonların kaybolması"
-    ],
-    "sekil": null,
-    "madde": [
-     6,
-     5
-    ]
-   },
-   {
-    "ses": "Papil ödeminin en sık nedeni kafa içi basınç artışıdır; papil ödemi gördüğümüz hastada mutlaka kafa içi basınç artışını araştırırız.",
-    "sayfa": 19,
-    "satir": [
-     "KİBAS en sık rastlanan nedenidir"
-    ],
-    "sekil": null,
-    "madde": [
-     7,
      4
     ]
    }
   ],
   [
    {
-    "ses": "Göz hareketleri muayenesinde hasta, hekimin parmağını ya da kalemini başını oynatmadan yalnızca gözleriyle izler, çünkü baş hareketi göz kası zaafını gizleyebilir.",
+    "ses": "Görme yolu üzerindeki lezyon seviyesi görme alanı defektinin tipini belirleyen en temel anatomik unsurdur.",
+    "sayfa": 18,
+    "satir": [],
+    "sekil": "Görme yolunun düzeylerine göre lezyon yerleri ve oluşan görme alanı defektleri",
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Optik kiazmada nazal liflerin basıya uğraması hipofiz adenomlarında tipik olan bitemporal heteronim hemanopsiye yol açar.",
+    "sayfa": 18,
+    "satir": [],
+    "sekil": "Görme yolunun düzeylerine göre lezyon yerleri ve oluşan görme alanı defektleri",
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Kiazma arkasındaki traktus optikus veya radyasyo optika lezyonlarında ise karşı tarafı görememe yani homonim hemanopsi gelişir.",
+    "sayfa": 18,
+    "satir": [],
+    "sekil": "Görme yolunun düzeylerine göre lezyon yerleri ve oluşan görme alanı defektleri",
+    "madde": [
+     0
+    ],
+    "resim": 0
+   }
+  ],
+  [
+   {
+    "ses": "Optik sinirin en sık görülen vasküler patolojilerinden biri olan amorozis fugaks tek gözde aniden gelişen ve dakikalar içinde düzelen geçici görme kaybıdır.",
+    "sayfa": 19,
+    "satir": [
+     "Amorozis fugax"
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "Bu klinik tablo sıklıkla aynı taraf internal karotid arter stenozundan kaynaklanan mikroembolilere bağlı retinal iskemiyi yansıtır.",
+    "sayfa": 19,
+    "satir": [
+     "–Genelde karotid arterden kopan embolinin"
+    ],
+    "sekil": null,
+    "madde": [
+     3,
+     4
+    ]
+   },
+   {
+    "ses": "Ayrıca genç kadınlarda göz hareketleriyle artan ağrılı görme kaybı optik nöriti düşündürür ve Multipl Skleroz açısından araştırma gerektirir.",
+    "sayfa": 19,
+    "satir": [
+     "–Tek gözde ani, geçici görme kaybı"
+    ],
+    "sekil": null,
+    "madde": [
+     2,
+     0
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Üçüncü, dördüncü ve altıncı kraniyal sinirler göz küresinin hareketlerini ve kapak fonksiyonlarını koordine eden okülomotor üçlüdür.",
+    "sayfa": 20,
+    "satir": [
+     "III-IV-VI. Kraniyal Sinir"
+    ],
+    "sekil": "III-IV-VI. kraniyal sinir muayenesi: hastanın hekimin kalemini gözleriyle izlemesi",
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Bu üç sinir beyin sapından çıkarak kavernöz sinüs ve fissura orbitalis superior yoluyla göz çukurundaki kaslara ulaşır.",
     "sayfa": 20,
     "satir": [
      "III-IV-VI. Kraniyal Sinir"
@@ -531,87 +835,24 @@
     "resim": 0
    },
    {
-    "ses": "Fotoğrafta hekim kalemi yukarı tutarken hasta çenesini sabit tutup yalnız gözleriyle hedefi izliyor.",
+    "ses": "Bu sinirlerin lezyonlarında hasta çift görme yani diplopi ve göz küresinde kayma şaşılık yakınması ile başvurur.",
     "sayfa": 20,
-    "satir": [],
-    "sekil": "göz hareketleri muayene fotoğrafı: hasta çenesi sabitken kalemi gözleriyle izliyor",
-    "resim": 0,
+    "satir": [
+     "III-IV-VI. Kraniyal Sinir"
+    ],
+    "sekil": null,
     "madde": [
      0
-    ]
-   },
-   {
-    "ses": "Hastanın başını sabit tutması istenir ve gözlerin tüm kadranlardaki hareketine bakılır; tüm kadranlar sınanmazsa tek bir kasın felci atlanabilir.",
-    "sayfa": 21,
-    "satir": [
-     "Hastanın başını sabit tutması istenir",
-     "Gözlerin tüm kadranlardaki hareketine bakılır"
     ],
-    "sekil": null,
-    "madde": [
-     2,
-     5
-    ]
-   },
-   {
-    "ses": "Troklear sinir felcinde hasta çift görmeye engel olmak için başını karşı tarafa doğru eğer; şikâyet en çok kitap okurken ve merdivenden aşağı inerken belirginleşir.",
-    "sayfa": 21,
-    "satir": [
-     "Troklear sinir felcinde çift görmeye engel olmak için başını karşı tarafa doğru eğer",
-     "En çok kitap okurken ve merdivenden aşağı inerken (+)"
-    ],
-    "sekil": null,
-    "madde": [
-     7,
-     8
-    ]
-   },
-   {
-    "ses": "Okülomotor sinirler muayenesinde yalnız göz küresi hareketleri değil, göz kapağı ve pupilla da değerlendirilir, varsa nistagmus not edilir.",
-    "sayfa": 22,
-    "satir": [
-     "Göz küresi hareketleri, göz kapağı, pupilla değerlendirilir, varsa nistagmus not edilir"
-    ],
-    "sekil": null,
-    "madde": [
-     2,
-     1
-    ]
-   },
-   {
-    "ses": "Nervus abdusens lateral rektus kasıyla göze lateral deviasyon yaptırır; lezyonunda göz dışa bakamaz.",
-    "sayfa": 22,
-    "satir": [
-     "Göze lateral deviasyon yaptırır ( m. rectus lateralis)",
-     "Lezyonunda göz dışa bakamaz"
-    ],
-    "sekil": null,
-    "madde": [
-     4,
-     5
-    ]
-   },
-   {
-    "ses": "Nervus troklearis, medial deviasyondaki gözü aşağı çeken superior oblik kası innerve eder; lezyonunda göz aşağı ve içe bakamaz, hasta merdiven inemez.",
-    "sayfa": 22,
-    "satir": [
-     "Medial deviasyondaki gözü aşağı çeken m. Obliqus süperioru inn eder",
-     "Lezyonunda göz aşağı ve içe bakamaz (merdiven inemez)"
-    ],
-    "sekil": null,
-    "madde": [
-     9,
-     7
-    ]
+    "resim": 0
    }
   ],
   [
    {
-    "ses": "Nervus okülomotorius geri kalan oküler kasları ve üst göz kapağını kaldıran levator palpebra kasını innerve eder; bu yüzden lezyonunda ptozis görülür.",
-    "sayfa": 23,
+    "ses": "Göz hareketleri muayenesinde hastanın başı sabit tutulurken hekimin parmağını veya bir kalemi başını çevirmeden gözleriyle takip etmesi istenir.",
+    "sayfa": 21,
     "satir": [
-     "Geri kalan oküler kasları innerve eder",
-     "Üst göz kapağını kaldıran m. levator palpebra"
+     "• Hastanın başını sabit tutması istenir"
     ],
     "sekil": null,
     "madde": [
@@ -620,36 +861,121 @@
     ]
    },
    {
-    "ses": "Pupili daraltan konstriktör pupilla kasına parasempatik innervasyonu da bu sinir verir, yani ışık refleksinin efferenti üçüncü kraniyal sinirdir.",
-    "sayfa": 23,
+    "ses": "Hedef nesne hastanın görüş alanında büyük bir h harfi çizecek şekilde yukarı, aşağı, sağa, sola ve çapraz bakış yönlerinde gezdirilir.",
+    "sayfa": 21,
     "satir": [
-     "Pupili daraltan m. constrictor pupillaya parasempatikinnervasyon verir (IR efferenti)"
+     "3-4-6. kranial sinirler"
     ],
     "sekil": null,
     "madde": [
-     5,
-     4
+     0,
+     6
     ]
    },
    {
-    "ses": "Okülomotor sinir lezyonunda göz aşağı, yukarı ve içe bakamaz, ptozis görülür, ışık refleksi alınamaz ve göz midriatiktir; ptozis, midriyazis ve göz hareket kısıtlılığı birlikteyse üçüncü sinir felcini düşünürüz.",
-    "sayfa": 23,
+    "ses": "Bu esnada göz kürelerinin simetrik hareket edip etmediği, kısıtlılık, nistagmus varlığı ve hastanın çift görme tarif edip etmediği not edilir.",
+    "sayfa": 21,
     "satir": [
-     "Göz aşağı, yukarı ve içe bakamaz",
-     "Ptozis görülür",
-     "IR alınamaz",
-     "Gözler midriatiktir"
+     "(okülomotor, troklear, abdusens)"
     ],
     "sekil": null,
     "madde": [
-     7,
-     8
+     1,
+     6
     ]
    }
   ],
   [
    {
-    "ses": "Trigeminal muayenede hasta dişlerini sıkarken çiğneme kasları palpe edilir, yüz duyusu test edilir ve kornea refleksi pamuk ucuyla korneaya dokunularak alınır; böylece sinirin motor ve duyu bileşeni birlikte sınanır.",
+    "ses": "Okülomotor sinir grubu göz küresi hareketlerinin yanı sıra üst göz kapağının açıklığını ve pupilla fonksiyonlarını da denetler.",
+    "sayfa": 22,
+    "satir": [
+     "Göz küresi hareketleri, göz kapağı, pupilla"
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     5
+    ]
+   },
+   {
+    "ses": "Dördüncü sinir olan troklear sinir superior oblik kası uyararak gözün içe ve aşağıya bakmasını sağlar hasarında hasta merdiven inerken çift görmeden yakınır.",
+    "sayfa": 22,
+    "satir": [
+     "Okülo-motor Sinirler (CN III, IV,"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     9
+    ]
+   },
+   {
+    "ses": "Altıncı sinir olan abdusens siniri ise lateral rektus kasını innerve ederek gözün dışa bakışını sağlar lezyonunda göz dışa dönemez.",
+    "sayfa": 22,
+    "satir": [
+     "VI)"
+    ],
+    "sekil": null,
+    "madde": [
+     5,
+     9
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Nervus okülomotorius medial, superior ve inferior rektus ile inferior oblik kaslarını innerve eden ana motor sinirdir.",
+    "sayfa": 23,
+    "satir": [
+     "–Geri kalan oküler kasları innerve eder"
+    ],
+    "sekil": null,
+    "madde": [
+     2,
+     0
+    ]
+   },
+   {
+    "ses": "Ayrıca levator palpebrae kasını çalıştırarak göz kapağını kaldırır ve taşıdığı parasempatik liflerle pupillayı daraltır yani miyozis yapar.",
+    "sayfa": 23,
+    "satir": [
+     "–Üst göz kapağını kaldıran m. levator palpebra"
+    ],
+    "sekil": null,
+    "madde": [
+     3,
+     7
+    ]
+   },
+   {
+    "ses": "Tam bir üçüncü sinir felcinde hastada belirgin pitozis, gözün dışa ve aşağıya kayması ile ışığa yanıtsız genişlemiş midriyatik pupil görülür.",
+    "sayfa": 23,
+    "satir": [
+     "N. Oculomotorius"
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     0
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Beşinci kraniyal sinir olan nervus trigeminus yüzün temel duyu siniri ve çiğneme kaslarının motor kontrolörüdür.",
+    "sayfa": 24,
+    "satir": [
+     "V. Kraniyal Sinir Muayenesi"
+    ],
+    "sekil": "V. kraniyal sinir muayenesi: masseter palpasyonu, yüz duyusu ve kornea refleksi",
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Trigeminus oftalmik, maksiller ve mandibüler olmak üzere üç büyük duyu dalına ayrılarak yüzün anatomik bölgelerini paylaşır.",
     "sayfa": 24,
     "satir": [
      "V. Kraniyal Sinir Muayenesi"
@@ -661,71 +987,109 @@
     "resim": 0
    },
    {
-    "ses": "Fotoğraflarda dişler sıkılıyken masseterlerin palpasyonu, gözler kapalıyken yüz duyusunun testi ve pamukla kornea refleksi görülüyor.",
+    "ses": "Muayenede pamuk ve iğne yardımıyla her üç dalın temsil ettiği alın, yanak ve çene derisindeki duyu simetrik olarak karşılaştırılır.",
     "sayfa": 24,
-    "satir": [],
-    "sekil": "beşinci kraniyal sinir muayene fotoğrafları: masseter palpasyonu, yüz duyusu ve pamukla kornea refleksi",
-    "resim": 0,
+    "satir": [
+     "V. Kraniyal Sinir Muayenesi"
+    ],
+    "sekil": null,
     "madde": [
      0
-    ]
-   },
+    ],
+    "resim": 0
+   }
+  ],
+  [
    {
-    "ses": "Trigeminal sinir hem duyu hem motor sinirdir: yüzün dokunma, ağrı ve ısı duyusundan sorumludur, masseter ve temporal kasları da innerve eder.",
+    "ses": "Trigeminal sinir yüzün dokunma, ağrı ve ısı duyusunun yanı sıra kornea yüzeyinin ve ağız içinin duyusal uyarımını taşır.",
     "sayfa": 25,
     "satir": [
-     "Yüzün Duyusundan sorumlu (dokunma, ağrı, ısı)",
-     "Motor-masseter ve temporal kasları innerve eder"
+     "sorumlu (dokunma, ağrı,"
     ],
     "sekil": null,
     "madde": [
      2,
-     4
+     0
     ]
    },
    {
-    "ses": "Kornea refleksinin getirici kolu beşinci, götürücü kolu yedinci sinirdir; bu nedenle kornea refleksi kaybı beşinci ya da yedinci sinir lezyonunda görülür.",
+    "ses": "Motor lifleri ise mandibüler dal içerisinde seyrederek masseter ve temporal çiğneme kaslarını innerve eder.",
     "sayfa": 25,
     "satir": [
-     "kornea refleksi (getirici (aff) 5. sinir, götürücü (eff) 7. sinir)"
-    ],
-    "sekil": null,
-    "madde": [
-     6,
-     9
-    ]
-   },
-   {
-    "ses": "Çene refleksinin ise hem getirici hem götürücü kolu beşinci sinirdir; kornea refleksinden bu yönüyle ayrılır ve yalnız trigeminali sınar.",
-    "sayfa": 25,
-    "satir": [
-     "çene refleksi (getirici (aff) ve götürücü (eff) 5. sinirdir)"
-    ],
-    "sekil": null,
-    "madde": [
-     6,
-     9
-    ]
-   },
-   {
-    "ses": "Trigeminal patolojide yüzde hipoestezi, kornea refleksi kaybı, trigeminal motor bozukluk ve trigeminal nevralji görülür.",
-    "sayfa": 26,
-    "satir": [
-     "Yüzde hipoestezi",
-     "Kornea refleksi kaybı",
-     "Trigeminal motor bozukluk",
-     "Trigeminal nevralji"
+     "2-Motor-masseter ve temporal kasları"
     ],
     "sekil": null,
     "madde": [
      3,
      4
     ]
+   },
+   {
+    "ses": "Hekim hastaya dişlerini sıkıca sıktırarak masseter ve temporal kasların sertleşmesini iki taraflı palpe ederek kuvvetini değerlendirir.",
+    "sayfa": 25,
+    "satir": [
+     "Trigeminal sinir"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     10
+    ]
    }
   ],
   [
    {
-    "ses": "Fasiyal muayenede hastadan gülümsemesi, dişlerini göstermesi ve yanaklarını şişirmesi istenir; mimik kas kuvveti iki yüz yarısı karşılaştırılarak değerlendirilir ve asimetri fasiyal paraliziyi gösterir.",
+    "ses": "Trigeminal sinir lezyonlarında yüzde hipoestezi, çiğneme güçlüğü ve çenenin ağız açıldığında zayıf tarafa doğru sapması görülür.",
+    "sayfa": 26,
+    "satir": [
+     "Patolojik belirti ve bulgular"
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "Kornea refleksinde pamuk ucu korneaya dokundurulduğunda her iki gözün kırpılması beklenir; afferent bacak trigeminal sinirin oftalmik dalı olan ve-bir, efferent bacak yedinci sinirdir.",
+    "sayfa": 26,
+    "satir": [
+     "–Kornea refleksi kaybı"
+    ],
+    "sekil": null,
+    "madde": [
+     3,
+     0
+    ]
+   },
+   {
+    "ses": "Trigeminal nevraljide ise trigeminal dallardan biri boyunca şimşek çakar gibi paroksismal şiddetli nöropatik ağrı krizleri yaşanır.",
+    "sayfa": 26,
+    "satir": [
+     "–Trigeminal nevralji"
+    ],
+    "sekil": null,
+    "madde": [
+     5,
+     0
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Yedinci kraniyal sinir olan nervus fasiyalis mimik kaslarımızın baş yöneticisi ve yüz ifadesinin mimarıdır.",
+    "sayfa": 27,
+    "satir": [
+     "VII. Kraniyal Sinir"
+    ],
+    "sekil": "VII. kraniyal sinir muayenesi: gülümseme ve yanak şişirme",
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Motor liflerinin yanı sıra dilin ön üçte ikisinden tat duyusunu alır ve gözyaşı ile tükrük salgısını uyarır.",
     "sayfa": 27,
     "satir": [
      "VII. Kraniyal Sinir"
@@ -737,87 +1101,24 @@
     "resim": 0
    },
    {
-    "ses": "Fotoğraflarda hasta dişlerini göstererek gülümsüyor ve yanaklarını şişiriyor; hekim iki tarafın simetrisine bakıyor.",
+    "ses": "Fasiyal sinir muayenesinde hekim hastanın yüz simetrisini, alın kırıştırmasını, göz kapatmasını ve gülümsemesini dikkatle izler.",
     "sayfa": 27,
-    "satir": [],
-    "sekil": "yedinci kraniyal sinir muayene fotoğrafları: gülümseme ve yanak şişirme",
-    "resim": 0,
+    "satir": [
+     "VII. Kraniyal Sinir"
+    ],
+    "sekil": null,
     "madde": [
      0
-    ]
-   },
-   {
-    "ses": "Nervus fasialis yüzün mimik kaslarını innerve eder ve kornea refleksinin efferentidir.",
-    "sayfa": 28,
-    "satir": [
-     "Yüzün mimik kaslarının innervasyonu",
-     "Kornea refleksinin efferent"
     ],
-    "sekil": null,
-    "madde": [
-     1,
-     5
-    ]
-   },
-   {
-    "ses": "Parotis dışındaki tükürük bezlerine, yani sublingual ve submandibuler bezlere, lakrimal beze ve ağız-burun mukozasındaki bezlere parasempatik innervasyonu da fasiyal sinir verir; parotisi ise fasiyal değil glossofaringeal sinir innerve eder.",
-    "sayfa": 28,
-    "satir": [
-     "Parotis dışındaki tükrük bezlerine (sublingual ve submandibuler), gl. lakrimalise ve ağız-burun mukozasındaki bezlerin parasempatik innervasyonu"
-    ],
-    "sekil": null,
-    "madde": [
-     3,
-     2
-    ]
-   },
-   {
-    "ses": "Fasiyal sinir dilin ön üçte iki tat duyusunu da taşır; bu yüzden periferik fasiyal paralizide tat kaybı görülebilir.",
-    "sayfa": 28,
-    "satir": [
-     "Dil 2/3 ön tat duyusu"
-    ],
-    "sekil": null,
-    "madde": [
-     4
-    ]
+    "resim": 0
    }
   ],
   [
    {
-    "ses": "Santral fasiyal paralizide yüzün bir yarısının yalnız alt kısmında kuvvet azlığı vardır; aynı taraf nazolabial oluk siliktir ve ağız sağlam tarafa kaymıştır.",
-    "sayfa": 29,
+    "ses": "Nervus fasiyalis temporal, zigomatik, bukkal, mandibüler ve servikal motor dallarıyla tüm yüz mimik kaslarını yönetir.",
+    "sayfa": 28,
     "satir": [
-     "Yüzün bir yarısını alt kısmında kuvvet azlığı",
-     "Aynı taraf nazolabial oluk silik, ağız sağlam tarafa kaymıştır"
-    ],
-    "sekil": null,
-    "madde": [
-     4,
-     1
-    ]
-   },
-   {
-    "ses": "Üst yüz iki taraflı kortikal innervasyonla korunduğu için hasta gözünü kapatır ve sıkar; tablo her zaman aynı tarafta hemiparezi ile birliktedir. Tek taraflı nükleus üstü lezyonda motor işlevi bozulan kraniyal sinirlerin fasiyal ve hipoglossus olduğu çıkmışta soruldu.",
-    "sayfa": 29,
-    "satir": [
-     "Gözünü kapatır, sıkar",
-     "Her zaman aynı tarafta hemiparezi ile birliktedir"
-    ],
-    "sekil": null,
-    "madde": [
-     6,
-     5
-    ]
-   },
-   {
-    "ses": "Periferik fasiyal paralizide ise yüzün bir yarısının tamamında kuvvet azlığı vardır: hasta kaş kaldıramaz, alın çizgileri silinmiştir ve göz kapatılamaz; alın tutulumu periferik tipi santralden ayırır.",
-    "sayfa": 30,
-    "satir": [
-     "Yüzün bir yarısının tamamında kuvvet azlığı",
-     "Kaş kaldıramaz",
-     "Alın çizgileri silinmiş",
-     "Göz kapatılamaz"
+     "Yüzün mimik kaslarının innervasyonu"
     ],
     "sekil": null,
     "madde": [
@@ -826,27 +1127,123 @@
     ]
    },
    {
-    "ses": "Nazolabial oluk siliktir, ağız sağlam tarafa kaymıştır ve hasta ıslık çalamaz; parasempatik ve tat lifleri de etkilendiği için paralitik tarafta gözyaşı salgısı ve dilin tat duyusu azalabilir.",
-    "sayfa": 30,
+    "ses": "Korda timpani dalı dilin ön üçte iki bölümünün tat duyusunu taşırken, parasempatik lifleri sublingual ve submandibüler bezleri uyarır.",
+    "sayfa": 28,
     "satir": [
-     "Nazolabial oluk silik",
-     "Ağız sağlam tarafa kaymış",
-     "Islık çalamaz",
-     "Paralitik taraf gözyaşı salgısı ve dilin tad duyusu azalabilir"
+     "Parotis dışındaki tükrük bezlerine (sublingual,"
     ],
     "sekil": null,
     "madde": [
-     8,
-     6
+     2,
+     3
+    ]
+   },
+   {
+    "ses": "Ayrıca orta kulaktaki muskulus stapedius kasını innerve ederek şiddetli seslere karşı koruyucu akustik refleksi sağlar.",
+    "sayfa": 28,
+    "satir": [
+     "N. Fasialis (CN VII)"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     1
     ]
    }
   ],
   [
    {
-    "ses": "Sekizinci sinir muayenesinde kulağın yanında parmak sürtülerek kaba işitme, diyapazonla da Weber testi yapılır; diyapazon testleri iletim tipi ile sensörinöral işitme kaybını ayırır.",
+    "ses": "Santral fasiyal paralizi kortikobulber yolların nükleus öncesinde, yani supranükleer düzeyde hasarlanması sonucu ortaya çıkar.",
+    "sayfa": 29,
+    "satir": [
+     "Santral fasial paralizi"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Bu bilgi çıkmış sınavda sorulmuştur: yüzün üst yarısındaki alın ve kaş kasları her iki hemisferden bilateral inervasyon aldığı için santral felçte alın çizgileri korunur ve hasta kaşını kaldırabilir.",
+    "sayfa": 29,
+    "satir": [
+     "Yüzün bir yarısını alt"
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     0
+    ]
+   },
+   {
+    "ses": "Kuvvetsizlik yalnızca karşı taraf alt yüz yarısında belirgindir; nazolabial oluk silinir ve ağız köşesi aşağı sarkar.",
+    "sayfa": 29,
+    "satir": [
+     "Aynı taraf nazolabial oluk silik, ağız sağlam tarafa kaymıştır"
+    ],
+    "sekil": null,
+    "madde": [
+     4,
+     3
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Periferik fasiyal paralizide yani Bell felcinde hasar fasiyal nükleusta veya sinirin periferik gövdesindedir.",
+    "sayfa": 30,
+    "satir": [
+     "Periferik fasial paralizi"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     8
+    ]
+   },
+   {
+    "ses": "Bu durumda aynı taraf yüz yarısının tamamında hem üst hem de alt kadranda tam bir motor kuvvetsizlik gelişir.",
+    "sayfa": 30,
+    "satir": [
+     "Yüzün bir yarısının tamamında kuvvet azlığı"
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     6
+    ]
+   },
+   {
+    "ses": "Hasta lezyon tarafındaki kaşını kaldıramaz, alnını kırıştıramaz, gözünü kapatamaz ve göz küresi yukarı kayar yani Bell fenomeni izlenir.",
+    "sayfa": 30,
+    "satir": [
+     "Kaş kaldıramaz"
+    ],
+    "sekil": null,
+    "madde": [
+     2,
+     4
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Sekizinci kraniyal sinir olan nervus vestibulokoklearis iç kulaktan kaynaklanan işitme ve denge uyarılarını taşır.",
     "sayfa": 31,
     "satir": [
-     "VIII. Kraniyal Sinir Muayenesi"
+     "VIII. Kraniyal Sinir"
+    ],
+    "sekil": "VIII. kraniyal sinir muayenesi: parmak sürtme ve diyapazon testleri",
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Koklear bileşen kokleadaki tüy hücrelerinden gelen ses titreşimlerini, vestibüler bileşen ise semisirküler kanallardan gelen pozisyon duyusunu iletir.",
+    "sayfa": 31,
+    "satir": [
+     "Muayenesi"
     ],
     "sekil": null,
     "madde": [
@@ -855,72 +1252,120 @@
     "resim": 0
    },
    {
-    "ses": "Fotoğrafta hekim hastanın kulaklarının yanında parmaklarını sürtüyor, ardından diyapazonu başın tepesine koyuyor.",
+    "ses": "Muayenede yatak başında fısıltı testi, parmak sürtme testi ve diyapazon testleri ile işitme keskinliği taranır.",
     "sayfa": 31,
-    "satir": [],
-    "sekil": "sekizinci kraniyal sinir muayene fotoğrafları: parmak sürtme ve başın tepesinde diyapazon",
-    "resim": 0,
+    "satir": [
+     "VIII. Kraniyal Sinir"
+    ],
+    "sekil": null,
     "madde": [
      0
-    ]
-   },
+    ],
+    "resim": 0
+   }
+  ],
+  [
    {
-    "ses": "Nervus vestibulokoklearis işitme ve dengeden sorumludur; işitme Rinne, Weber ve Schwabach testleriyle muayene edilir.",
+    "ses": "İşitme muayenesinde iletim tipi işitme kaybı ile sensörinöral işitme kaybını ayırt etmek amacıyla beş yüz on iki Hertz diyapazon kullanılır.",
     "sayfa": 32,
     "satir": [
-     "İşitme ve dengeden sorumlu",
-     "Muayene işitme için rinne ve weber testi",
-     "Rinne",
-     "Weber",
-     "Scwabach"
+     "İşitme ve dengeden sorumlu"
     ],
     "sekil": null,
     "madde": [
-     2,
-     1
-    ]
-   },
-   {
-    "ses": "Vestibüler fonksiyonlar serebellar testler, duruş, yürüyüş, nistagmus, denge testleri ve kalorik testlerle değerlendirilir; bu bulgular santral ve periferik vertigoyu ayırmada kullanılır.",
-    "sayfa": 32,
-    "satir": [
-     "Vestibular fonksiyonlar için serebellar testler",
-     "Duruş, yürüyüş, nistagmus ve denge testleri, kalorik testler",
-     "Santral ve periferik vertigo"
-    ],
-    "sekil": null,
-    "madde": [
-     7,
-     6
-    ]
-   },
-   {
-    "ses": "Akustik sinir işitme ve dengeden sorumludur; Rinne testinde diyapazon önce mastoid kemiğe, sonra kulak önüne konur.",
-    "sayfa": 33,
-    "satir": [
-     "Akustik sinir (vestibulokoklear)",
-     "İşitme ve dengeden sorumludur."
-    ],
-    "sekil": null,
-    "madde": [
-     2,
-     0
-    ]
-   },
-   {
-    "ses": "Weber testinde diyapazon başın ortasına konur; ses normalde iki kulakta eşit duyulur, işitme kaybında ise bir tarafa lateralize olur.",
-    "sayfa": 33,
-    "satir": [],
-    "sekil": "Rinne ve Weber testlerinin uygulanışını gösteren çizimler",
-    "resim": 0,
-    "madde": [
+     1,
      2
+    ]
+   },
+   {
+    "ses": "Rinne testinde titreşen diyapazon önce mastoid kemik çıkıntısına konur, hasta sesi duyamaz hale gelince dış kulak yolunun iki santimetre önüne getirilir.",
+    "sayfa": 32,
+    "satir": [
+     "Muayene işitme için rinne ve weber testi"
+    ],
+    "sekil": null,
+    "madde": [
+     2,
+     3
+    ]
+   },
+   {
+    "ses": "Weber testinde ise titreşen diyapazon başın tam tepe noktasına orta hatta yerleştirilerek sesin her iki kulağa eşit dağılıp dağılmadığı sorgulanır.",
+    "sayfa": 32,
+    "satir": [
+     "N. Vestibulocohleraris (CN VIII)"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     6
     ]
    }
   ],
   [
    {
-    "ses": "Dokuzuncu ve onuncu sinir muayenesinde hastanın ağzı açtırılır ve dil basacağıyla yumuşak damak ile farenks gözlenir; öğürme refleksi de dil basacağıyla alınır.",
+    "ses": "Normal sağlıklı bir bireyde hava yolu iletimi kemik yolundan daima daha uzundur ve bu durum Rinne pozitif olarak adlandırılır.",
+    "sayfa": 33,
+    "satir": [
+     "İşitme ve dengeden sorumludur."
+    ],
+    "sekil": "Rinne ve Weber testlerinin uygulanışını gösteren çizimler",
+    "madde": [
+     2
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Dış kulak yolu buşonu veya orta kulak iltihabı gibi iletim tipi kayıplarda kemik yolu uzar ve Rinne testi negatifleşir; Weber ise hasta kulağa lateralize olur.",
+    "sayfa": 33,
+    "satir": [
+     "Akustik sinir"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Koklea veya sekizinci sinir hasarı olan sensörinöral kayıplarda ise Rinne pozitiftir ancak Weber testi sağlam kulağa doğru lateralize olur.",
+    "sayfa": 33,
+    "satir": [
+     "(vestibulokoklear)"
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     0
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Dokuzuncu glossofaringeal ve onuncu vagus sinirleri medulla oblangatadan köken alarak foramen jugulareden birlikte çıkan kardeş sinirlerdir.",
+    "sayfa": 34,
+    "satir": [
+     "IX. Kraniyal Sinir"
+    ],
+    "sekil": "IX. kraniyal sinir muayenesi: dil basacağıyla farenks ve damak incelemesi",
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Bu iki sinir yutma, öğürme refleksi, ses telleri ve orofarenks kaslarının motor ve duyusal kontrolünü ortaklaşa yürütür.",
+    "sayfa": 34,
+    "satir": [
+     "> — >"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Klinik pratikte bu iki sinirin fonksiyonları birbirine çok sıkı bağlı olduğu için her zaman birlikte muayene edilir.",
     "sayfa": 34,
     "satir": [
      "IX. Kraniyal Sinir"
@@ -930,50 +1375,14 @@
      0
     ],
     "resim": 0
-   },
+   }
+  ],
+  [
    {
-    "ses": "Fotoğrafta hasta ağzını açıp dilini çıkarırken hekim dil basacağıyla yumuşak damağı ve farenksi inceliyor.",
-    "sayfa": 34,
-    "satir": [],
-    "sekil": "dokuzuncu kraniyal sinir muayene fotoğrafı: dil basacağıyla yumuşak damak ve farenks incelemesi",
-    "resim": 0,
-    "madde": [
-     0
-    ]
-   },
-   {
-    "ses": "Glossofaringeal sinir ağırlıklı duyusal bir sinirdir: farenks, tonsilla ve yumuşak damağın duyusunu sağlar, dilin arka üçte bir duyusundan da sorumludur ve öğürme refleksinin duyusal kolunda yer alır.",
+    "ses": "Glossofarengial sinir farenks, tonsilla ve yumuşak damağın genel duyusunu taşır ve öğürme refleksinin afferent bacağını oluşturur.",
     "sayfa": 35,
     "satir": [
-     "Farenks, tonsilla, yumuşak damağın duyusunu sağlar",
-     "Dilin arka 1/3 duyusundan sorumludur"
-    ],
-    "sekil": null,
-    "madde": [
-     4,
-     2
-    ]
-   },
-   {
-    "ses": "Stilofaringeal kasla farenksi yukarı kaldırır ve parotisin parasempatik innervasyonunu yapar; parotisi fasiyal sinirle karıştırmak klasik bir çeldiricidir.",
-    "sayfa": 35,
-    "satir": [
-     "Stilofarengial kas ile farenks yukarı kalkar",
-     "Parotisin parasempatik innervasyonunu yapar"
-    ],
-    "sekil": null,
-    "madde": [
-     5,
-     6
-    ]
-   },
-   {
-    "ses": "Vagus siniri dış kulak yolunda küçük bir alanın duyusunu sağlar, farenksin diğer kaslarının ve ses tellerinin motor siniridir, göğüs ve abdomenin de parasempatik innervasyonunu yapar; ses kısıklığı ve yutma güçlüğü vagus lezyonunu düşündürür.",
-    "sayfa": 36,
-    "satir": [
-     "Dış kulak yolunda küçük bir alanının duyusu sağlar.",
-     "Farenksin diğer ve ses tellerinin motor siniridir",
-     "Göğüs ve abdomenin parasempatik innervasyonunu yapar"
+     "Farenks, tonsilla, yumuşak damağın duyusunu"
     ],
     "sekil": null,
     "madde": [
@@ -982,25 +1391,82 @@
     ]
    },
    {
-    "ses": "Muayenede hastanın konuşmasına dikkat edilir, burundan konuşma yani nazone konuşma damak kuvvetsizliğini gösterir; hastaya aaa dedirtilir, katı ve sıvı gıdaları yutma işlevine ve öğürme refleksine bakılır.",
-    "sayfa": 36,
+    "ses": "Ayrıca dilin arka üçte bir bölümünün tat duyusunu taşır ve parotis tükrük bezinin parasempatik salgısını yönetir.",
+    "sayfa": 35,
     "satir": [
-     "Konuşmasına dikkat edilir",
-     "(nazone, burundan konuşma)",
-     "Aaaa demesi istenir",
-     "Yutma(katı sıvı gidalar) fonksiyonuna bakılır",
-     "Öğürmerefleksine bakılır"
+     "Glossofarengial sinir"
     ],
     "sekil": null,
     "madde": [
-     9,
-     7
+     1,
+     0
+    ]
+   },
+   {
+    "ses": "Tek taraflı lezyonlarında aynı taraf tonsil ve yumuşak damak duyusu kaybolur ve hafif yutma güçlüğü izlenir.",
+    "sayfa": 35,
+    "satir": [
+     "Glossofarengial (IX) ve"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     1
     ]
    }
   ],
   [
    {
-    "ses": "Aksesuar sinir muayenesinde hasta çenesiyle hekimin eline karşı başını çevirir ve hekim omuzlara bastırırken omuzlarını kaldırır; sternokleidomastoid ve trapezius kuvveti böylece dirence karşı test edilir.",
+    "ses": "Vagus siniri yumuşak damak, farenks ve larenks kaslarının motor innervasyonunu üstlenerek yutma ve konuşmayı sağlar.",
+    "sayfa": 36,
+    "satir": [
+     "Vagus siniri"
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     0
+    ]
+   },
+   {
+    "ses": "Hasta ağzını açıp a dedirttiğinde yumuşak damak simetrik yükselmeli ve uvula yani küçük dil orta hatta kalmalıdır.",
+    "sayfa": 36,
+    "satir": [
+     "Glossofarengial (IX) ve"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Tek taraflı vagus felcinde hasarlı taraftaki damak kalkamaz ve uvula sağlam tarafa doğru çekilir; hastada boğuk ses ve nazone konuşma gelişir.",
+    "sayfa": 36,
+    "satir": [
+     "Vagus (X)"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     1
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "On birinci kraniyal sinir olan nervus aksesorius üst servikal omurilik segmentlerinden köken alan saf motor bir sinirdir.",
+    "sayfa": 37,
+    "satir": [
+     "XI. Kraniyal Sinir Muayenesi"
+    ],
+    "sekil": "XI. kraniyal sinir muayenesi: dirence karşı baş çevirme ve omuz kaldırma",
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Kafatasına foramen magnumdan girip foramen jugulareden çıkarak boyun kaslarına ulaşır.",
     "sayfa": 37,
     "satir": [
      "XI. Kraniyal Sinir Muayenesi"
@@ -1012,45 +1478,83 @@
     "resim": 0
    },
    {
-    "ses": "Fotoğraflarda hasta çenesini hekimin avucuna doğru itiyor, ardından omuzlarını hekimin baskısına karşı yukarı kaldırıyor.",
+    "ses": "Bu sinir boyun rotasyonunu ve omuz kuşağının elevasyonunu sağlayan iki kritik kası innerve eder.",
     "sayfa": 37,
-    "satir": [],
-    "sekil": "on birinci kraniyal sinir muayene fotoğrafları: dirence karşı baş çevirme ve omuz kaldırma",
-    "resim": 0,
+    "satir": [
+     "XI. Kraniyal Sinir Muayenesi"
+    ],
+    "sekil": null,
     "madde": [
      0
-    ]
+    ],
+    "resim": 0
    },
    {
-    "ses": "Nervus aksesorius sternokleidomastoid kası ile trapezius kasının üst kısmını innerve eder.",
+    "ses": "Sternokleidomastoid kası başı karşı tarafa çevirirken, trapezius kası omzu yukarı kaldırır; muayenede hekim bu hareketlere karşı direnç uygulayarak kuvveti ölçer.",
+    "sayfa": 37,
+    "satir": [
+     "XI. Kraniyal Sinir"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ],
+    "resim": 0
+   }
+  ],
+  [
+   {
+    "ses": "Nervus aksesorius sternokleidomastoid kası ile trapezius kasının üst liflerini innerve eder.",
     "sayfa": 38,
     "satir": [
-     "M. SCM ve trapezius kasının üst kısmını innerve eder"
+     "M. SCM ve trapezius kasının üst kısmını innerve"
     ],
     "sekil": null,
     "madde": [
      1,
-     2
+     6
     ]
    },
    {
-    "ses": "Sternokleidomastoid kası başa aynı tarafa lateral fleksiyon ve karşı tarafa lateral rotasyon yaptırır, iki kas birlikte çalıştığında başa fleksiyon yaptırır; trapezius ise omuz elevasyonunu sağlar. Bu yüzden başı sağa çevirmede zaaf sol sternokleidomastoid zaafını gösterir.",
+    "ses": "Muayenede hekim hastanın çenesine karşı direnç uygularken hastadan başını karşı tarafa çevirmesini ister; sağ es-ce-me kası başı sola çevirir.",
     "sayfa": 38,
     "satir": [
-     "SCM kası boyun üzerinde başa aynı tarafa doğru lateral fleksiyon ve karşı tarafa lateral rotasyon yaptırır",
-     "Birlikte çalıştıklarında başa fleksiyon yaptırır",
-     "M. trapezius omuz elevasyonunu sağlar"
+     "SCM kası boyun üzerinde"
     ],
     "sekil": null,
     "madde": [
      3,
-     4
+     1
+    ]
+   },
+   {
+    "ses": "Trapezius kası için hastadan omuzlarını hekimin bastıran ellerine karşı yukarı doğru silkmesi istenir; lezyon tarafında omuz düşüklüğü görülür.",
+    "sayfa": 38,
+    "satir": [
+     "N. Accessorius (CN XI)"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     3
     ]
    }
   ],
   [
    {
-    "ses": "Hipoglossus muayenesinde hastadan dilini dışarı çıkarması istenir ve dilin orta hatta olup olmadığı, sapma ve atrofi varlığı gözlenir; sapmanın yönü lezyon tarafını gösterir.",
+    "ses": "On ikinci kraniyal sinir olan nervus hipoglossus dilin intrensek ve ekstrensek tüm kaslarını hareket ettiren motor sinirdir.",
+    "sayfa": 39,
+    "satir": [
+     "XII. Kraniyal Sinir"
+    ],
+    "sekil": "XII. kraniyal sinir muayenesi: dilin dışarı çıkarılması ve muayenesi",
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Medulla oblangatadaki hipoglossal nükleustan köken alarak canalis hypoglossi yoluyla kafatasını terk eder.",
     "sayfa": 39,
     "satir": [
      "XII. Kraniyal Sinir"
@@ -1062,60 +1566,156 @@
     "resim": 0
    },
    {
-    "ses": "Fotoğrafta hasta dilini dışarı çıkarmış, hekim dilin orta hatta durup durmadığına ve kas kitlesine bakıyor.",
+    "ses": "Dil muayenesi hem ağız tabanında istirahat halindeyken hem de dışarı uzatıldığında dikkatle incelenir.",
     "sayfa": 39,
-    "satir": [],
-    "sekil": "on ikinci kraniyal sinir muayene fotoğrafı: dışarı çıkarılmış dil",
-    "resim": 0,
+    "satir": [
+     "XII. Kraniyal Sinir"
+    ],
+    "sekil": null,
     "madde": [
      0
-    ]
+    ],
+    "resim": 0
    },
    {
-    "ses": "Nervus hipoglossus dil kaslarını hareket ettiren motor sinirdir; tek taraflı lezyonlarda dilde atrofi olur ve sağlam taraftaki kaslar dili zayıf tarafa ittiği için dil lezyon tarafına kayar. Dilin sağa saptığı hastada lezyonun sağ hipoglossus sinirinde olduğu çıkmışta soruldu.",
+    "ses": "Dil hareketleri dizartri ve yutma fonksiyonu açısından hayati önem taşır; sinir hasarında dilde atrofi, fasikülasyon ve güç kaybı gelişir.",
+    "sayfa": 39,
+    "satir": [
+     "XII. Kraniyal Sinir"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ],
+    "resim": 0
+   }
+  ],
+  [
+   {
+    "ses": "Ağız tabanında istirahat halindeki dilde atrofi yani erime ve fasikülasyon yani kas seyirmesi varlığı aranır.",
     "sayfa": 40,
     "satir": [
-     "Dil kaslarını hareket ettiren motor sinirdir",
-     "Tek taraflı lezyonlarda dilde atrofi",
-     "Dil lezyon tarafına kayar"
+     "Dil kaslarını hareket ettiren motor sinirdir"
     ],
     "sekil": null,
     "madde": [
      1,
-     2
+     4
     ]
    },
    {
-    "ses": "İki taraflı lezyonda ise sapma olmaz; dilde atrofi ve her yöne hareket azlığı vardır, bu da konuşma ve yutmayı bozar. Dil sapmasında dilde atrofi olup olmadığına bakmak da çıkmışta soruldu.",
+    "ses": "Bu bilgi çıkmış sınavda sorulmuştur: hasta dilini dışarı uzattığında tek taraflı periferik hipoglossus lezyonunda dil hasarlı yani lezyon tarafına doğru sapar.",
     "sayfa": 40,
     "satir": [
-     "Bilateral lezyonlarda atrofi ve her yöne hareket azlığı vardır"
+     "Tek taraflı lezyonlarda dilde atr"
     ],
     "sekil": null,
     "madde": [
-     4,
-     5
+     2,
+     3
+    ]
+   },
+   {
+    "ses": "Bu sapmanın mekanizması sağlam taraf genioglossus kasının dili iterek felçli tarafa doğru saptırmasıdır.",
+    "sayfa": 40,
+    "satir": [
+     "N. Hypoglossus (CN XII)"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     2
     ]
    }
   ],
   [
    {
-    "ses": "Üçüncü basamak motor sistemdir ve dört bileşeni vardır: yürüyüş, sıfırdan beşe kadar derecelendirilen kas kuvveti, tonus ve trofik kusur.",
-    "sayfa": 42,
+    "ses": "Nörolojik muayenemizin üçüncü büyük bölümü iskelet kaslarımızın ve motor yolların incelendiği motor sistem muayenesidir.",
+    "sayfa": 41,
     "satir": [
-     "Yürüyüş",
-     "Kas kuvveti (0-5 arasında değerlendirilir)",
-     "Tonus",
-     "Trofik kusur"
+     "Sinir Sistemi: Fonksiyon"
     ],
     "sekil": null,
     "madde": [
-     2,
+     0,
+     3
+    ]
+   },
+   {
+    "ses": "Motor sistem muayenesi yürüyüş analizi, kas kuvveti derecelendirmesi, tonus muayenesi ve trofik değişikliklerin taranmasını kapsar.",
+    "sayfa": 41,
+    "satir": [
+     "Motor Sistem"
+    ],
+    "sekil": null,
+    "madde": [
+     3,
      4
     ]
    },
    {
-    "ses": "Yürüme muayenesinde hasta parmak ucunda ve topuk üzerinde yürütülür; topuk yürüyüşü ayak bileği dorsifleksörlerinin, parmak ucu yürüyüşü plantar fleksörlerin kuvvetini tarar.",
+    "ses": "Bu basamaklar kortikospinal traktustan kas liflerine kadar uzanan nöromüsküler zincirin hangi halkasında hasar olduğunu gösterir.",
+    "sayfa": 41,
+    "satir": [
+     "Mental Durum"
+    ],
+    "sekil": null,
+    "madde": [
+     1
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Motor muayene hasta muayene odasına adım attığı andan itibaren yürüyüşün ve vücut postürünün gözlemlenmesiyle başlar.",
+    "sayfa": 42,
+    "satir": [
+     "Motor Sistem Muayenesi"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     1
+    ]
+   },
+   {
+    "ses": "Ardından kas grupları tek tek palpe edilerek istirahat tonusu, spastisite veya rijidite varlığı kontrol edilir.",
+    "sayfa": 42,
+    "satir": [
+     "Tonus"
+    ],
+    "sekil": null,
+    "madde": [
+     3
+    ]
+   },
+   {
+    "ses": "Kas kuvveti ise sıfır ile beş arasında puanlanan evrensel medikal derecelendirme skalasına göre değerlendirilir.",
+    "sayfa": 42,
+    "satir": [
+     "Kas kuvveti (0-5 arasında değerlendirilir)"
+    ],
+    "sekil": null,
+    "madde": [
+     2
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Yürüyüş analizi hastanın normal yürüyüşü, parmak ucunda yürüyüşü ve topuklar üzerinde yürüyüşü test edilerek yapılır.",
+    "sayfa": 43,
+    "satir": [
+     "Motor Sistem Muayenesi: Yürüme"
+    ],
+    "sekil": "Parmak ucu ve topuk yürüyüşü fotoğrafları",
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "İnme hastalarında felçli bacağın dışa savrularak atıldığı hemiplejik oraklama yürüyüşü izlenir.",
     "sayfa": 43,
     "satir": [
      "Motor Sistem Muayenesi: Yürüme"
@@ -1127,47 +1727,71 @@
     "resim": 0
    },
    {
-    "ses": "Fotoğraflarda hasta önce parmak uçlarında, sonra topukları üzerinde yürüyor.",
+    "ses": "Düşük ayakta ayağın yere vurularak basıldığı stepaj yürüyüşü, beyincik hasarında ise sarhoşvari geniş tabanlı ataksik yürüyüş görülür.",
     "sayfa": 43,
-    "satir": [],
-    "sekil": "parmak ucu ve topuk yürüyüşü fotoğrafları",
-    "resim": 0,
+    "satir": [
+     "Motor Sistem Muayenesi: Yürüme"
+    ],
+    "sekil": null,
     "madde": [
      0
-    ]
-   },
+    ],
+    "resim": 0
+   }
+  ],
+  [
    {
-    "ses": "Kas kuvvetinde beşte beş uygulanan kuvvete maksimum direnç, beşte dört direnç gösterebilme, beşte üç ise uygulanan kuvvete direnç gösteremeyip yalnız yer çekimine direnç gösterme demektir.",
+    "ses": "Kas kuvveti muayenesinde uluslararası geçerliliği olan sıfır ila beş arası kas gücü skalası kullanılır.",
     "sayfa": 44,
     "satir": [
-     "5/5: Uygulanan kuvvete maksimum direnç gösterilir.",
-     "4/5: Uygulanan kuvvete direnç gösterebilir.",
-     "3/5: Uygulanan kuvvete direnç gösterilemez ancak yer çekimine direnç gösterilir."
+     "Kas Kuvveti Muayenesi"
     ],
     "sekil": null,
     "madde": [
-     3,
-     4
+     0,
+     1
     ]
    },
    {
-    "ses": "Beşte ikide yer çekimine direnç gösterilemez; beşte birde kasta gözle görülür hareket olmaz ama dokunmayla kasılma hissedilir, beşte sıfırda ise gözle de dokunmayla da hiç hareket yoktur.",
+    "ses": "Beşte beş puan kasın hekimin uyguladığı maksimum dirence karşı tam güç gösterdiği normal kuvvet düzeyidir.",
     "sayfa": 44,
     "satir": [
-     "2/5: Yer çekimine direnç gösterilemez.",
-     "1/5: Kasda gözle görülür bir hareket olmaz, dokunmayla kasılma hissedilebilir.",
-     "0/5: Kasda gözle ve dokunma ile hiç hareket gözlenmez."
+     "5/5: Uygulanan kuvvete maksimum direnç"
     ],
     "sekil": null,
     "madde": [
-     7,
-     9
+     1,
+     3
+    ]
+   },
+   {
+    "ses": "Dörte beş puan ise kasın yerçekimini aştığı ve orta derecedeki dirence karşı koyabildiği ancak tam kuvvet oluşturamadığı düzeydir.",
+    "sayfa": 44,
+    "satir": [
+     "gösterilir."
+    ],
+    "sekil": null,
+    "madde": [
+     2,
+     3
     ]
    }
   ],
   [
    {
-    "ses": "Üst ekstremitede kollar öne uzatılarak tutulur, bu hafif zaafı ortaya çıkarır; ardından omuz abdüksiyonu ve dirsek fleksiyonu dirence karşı test edilir.",
+    "ses": "Üçte beş kas kuvveti düzeyinde kas yerçekimine karşı ekstremiteyi kaldırabilir ancak hekimin uyguladığı en küçük dirence dahi karşı koyamaz.",
+    "sayfa": 45,
+    "satir": [
+     "Motor Sistem Muayenesi: Kas Kuvveti"
+    ],
+    "sekil": "Üst ekstremite proksimal kas kuvveti muayenesi",
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "İkide beş düzeyinde ise kas yerçekimini dahi yenemez; ancak yatak üzerinde yerçekimi elimine edildiğinde eklem hareketi yaptırabilir.",
     "sayfa": 45,
     "satir": [
      "Motor Sistem Muayenesi: Kas Kuvveti"
@@ -1179,17 +1803,33 @@
     "resim": 0
    },
    {
-    "ses": "Fotoğraflarda kolların öne uzatılması ile hekimin direncine karşı omuz abdüksiyonu ve dirsek fleksiyonu görülüyor.",
+    "ses": "Birde beş düzeyinde hiçbir eklem hareketi yoktur, sadece kas liflerinde elle hissedilen veya gözle görülen hafif bir seğirme vardır; sıfır ise tam felçtir.",
     "sayfa": 45,
-    "satir": [],
-    "sekil": "üst ekstremite proksimal kas kuvveti muayene fotoğrafları",
-    "resim": 0,
+    "satir": [
+     "Motor Sistem Muayenesi: Kas Kuvveti"
+    ],
+    "sekil": null,
     "madde": [
      0
-    ]
+    ],
+    "resim": 0
+   }
+  ],
+  [
+   {
+    "ses": "Kas kuvveti muayenesi hem proksimal hem de distal kas grupları için simetrik olarak ayrı ayrı gerçekleştirilir.",
+    "sayfa": 46,
+    "satir": [
+     "Motor Sistem Muayenesi: Kas Kuvveti"
+    ],
+    "sekil": "Üst ekstremite distal el bileği ve parmak kas kuvveti muayenesi",
+    "madde": [
+     0
+    ],
+    "resim": 0
    },
    {
-    "ses": "Distal üst ekstremitede el bileği ekstansiyonu, parmak fleksiyonu ve parmak abdüksiyonu dirence karşı test edilir; el kası zaafı periferik sinir lezyonlarında önem taşır.",
+    "ses": "Üst ekstremitede proksimal kas gücü için deltoid kası omuz abdüksiyonu ile, biseps ve triseps kasları dirsek hareketleriyle sınanır.",
     "sayfa": 46,
     "satir": [
      "Motor Sistem Muayenesi: Kas Kuvveti"
@@ -1201,17 +1841,33 @@
     "resim": 0
    },
    {
-    "ses": "Fotoğrafta hekim el bileği ve parmak hareketlerine karşı direnç uyguluyor.",
+    "ses": "Kuvvetin proksimal kaslarda belirgin azalması miyopatiyi, distal kaslarda belirgin azalması ise polinöropatiyi akla getirir.",
     "sayfa": 46,
-    "satir": [],
-    "sekil": "distal üst ekstremite kuvvet fotoğrafları: el bileği ekstansiyonu, parmak fleksiyonu ve abdüksiyonu",
-    "resim": 0,
+    "satir": [
+     "Motor Sistem Muayenesi: Kas Kuvveti"
+    ],
+    "sekil": null,
     "madde": [
      0
-    ]
+    ],
+    "resim": 0
+   }
+  ],
+  [
+   {
+    "ses": "Distal üst ekstremite muayenesinde el bilek ekstansörleri, parmak ekstansörleri ve elin kavrama kuvveti değerlendirilir.",
+    "sayfa": 47,
+    "satir": [
+     "Motor Sistem Muayenesi: Kas Kuvveti"
+    ],
+    "sekil": "Alt ekstremite proksimal kas kuvveti muayenesi",
+    "madde": [
+     0
+    ],
+    "resim": 0
    },
    {
-    "ses": "Alt ekstremitede yatan hastada kalça fleksiyonu, kalça abdüksiyonu ve addüksiyonu ile diz ekstansiyonu dirence karşı test edilir.",
+    "ses": "Hastanın hekimin parmaklarını var gücüyle sıkması istenir ve her iki elin sıkma kuvveti birbiriyle karşılaştırılır.",
     "sayfa": 47,
     "satir": [
      "Motor Sistem Muayenesi: Kas Kuvveti"
@@ -1223,17 +1879,45 @@
     "resim": 0
    },
    {
-    "ses": "Fotoğraflar bu proksimal bacak kaslarının yatar pozisyonda nasıl sınandığını gösteriyor.",
+    "ses": "Radial sinir lezyonlarında el bilek ekstansiyon zaafına bağlı tipik düşük el tablosu ortaya çıkar.",
     "sayfa": 47,
-    "satir": [],
-    "sekil": "alt ekstremite proksimal kas kuvveti fotoğrafları",
-    "resim": 0,
+    "satir": [
+     "Motor Sistem Muayenesi: Kas Kuvveti"
+    ],
+    "sekil": null,
     "madde": [
      0
-    ]
+    ],
+    "resim": 0
+   }
+  ],
+  [
+   {
+    "ses": "Alt ekstremite kas kuvveti muayenesinde kalça fleksörleri olan iliopsoas, diz ekstansörleri olan kuadriseps ve diz fleksörleri test edilir.",
+    "sayfa": 48,
+    "satir": [
+     "Motor Sistem Muayenesi: Kas Kuwveti"
+    ],
+    "sekil": "Alt ekstremite distal diz, ayak bileği ve ayak parmakları kuvvet muayenesi",
+    "madde": [
+     0
+    ],
+    "resim": 0
    },
    {
-    "ses": "Distal bacakta diz fleksiyonu, ayak dorsifleksiyonu, plantar fleksiyonu ve ayak başparmağı ekstansiyonu dirence karşı test edilir; başparmak ekstansiyon zaafı distal tutulumu gösterir.",
+    "ses": "Distal alt ekstremitede tibialis anterior kası ile ayağın yukarı kaldırılması yani dorsifleksiyon kuvveti ölçülür.",
+    "sayfa": 48,
+    "satir": [
+     "J"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Peroneal sinir veya beşinci lomber kök basısında ayak dorsifleksiyon yapamaz ve hasta topuğu üzerinde yürüyemeyip düşük ayak geliştirir.",
     "sayfa": 48,
     "satir": [
      "Motor Sistem Muayenesi: Kas Kuwveti"
@@ -1243,21 +1927,23 @@
      0
     ],
     "resim": 0
-   },
-   {
-    "ses": "Fotoğraflarda hekim ayak ve başparmak hareketlerine karşı direnç uyguluyor.",
-    "sayfa": 48,
-    "satir": [],
-    "sekil": "distal alt ekstremite kuvvet fotoğrafları",
-    "resim": 0,
-    "madde": [
-     0
-    ]
    }
   ],
   [
    {
-    "ses": "Trofik kusur olarak elde intrinsik kaslarda atrofi görülür; atrofi alt motor nöron ve kas hastalığını düşündürür.",
+    "ses": "Trofik kusur muayenesinde kas kitlesinin hacmi, kas erimesi yani atrofi ve istirahat seyirmeleri incelenir.",
+    "sayfa": 49,
+    "satir": [
+     "Trofik Kusur: Atrofi"
+    ],
+    "sekil": "El kaslarında atrofi örnekleri: interosseöz, tenar ve hipotenar kaslar",
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Elin interosseöz kasları ve tenar-hipotenar kabarıklıkları özellikle denervasyon atrofisine karşı dikkatle palpe edilir.",
     "sayfa": 49,
     "satir": [
      "Trofik Kusur: Atrofi"
@@ -1269,25 +1955,175 @@
     "resim": 0
    },
    {
-    "ses": "Fotoğraflarda el sırtında interosseöz kaslarda ve avuç içinde tenar ile hipotenar bölgede belirgin erime görülüyor.",
+    "ses": "Kas atrofisiyle birlikte istirahat halinde solucan gibi kıpırdayan fasikülasyonların görülmesi ön boynuz motor nöron harabiyetinin kesin işaretidir.",
     "sayfa": 49,
-    "satir": [],
-    "sekil": "el kaslarında atrofi fotoğrafları: interosseöz, tenar ve hipotenar bölge",
-    "resim": 0,
+    "satir": [
+     "Trofik Kusur: Atrofi"
+    ],
+    "sekil": null,
     "madde": [
      0
+    ],
+    "resim": 0
+   }
+  ],
+  [
+   {
+    "ses": "Motor kuvvetsizlik terminolojisinde kısmi kuvvet kaybına parezi, tam kuvvet kaybına ise pleji adı verilir.",
+    "sayfa": 50,
+    "satir": [
+     "Motor Sistem Muayenesi Bulguları"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     2
     ]
    },
    {
-    "ses": "Motor muayene bulguları parezi ve pleji olarak adlandırılır; parezi kısmi, pleji tam kuvvet kaybıdır ve dağılıma göre monoparezi, hemiparezi, paraparezi ve kuadriparezi ayrılır.",
+    "ses": "Tek bir ekstremitenin tutulumu monoparezi, vücudun aynı taraf üst ve alt ekstremitesinin tutulumu hemiparezidir.",
     "sayfa": 50,
     "satir": [
-     "Parazi",
-     "Pleji",
-     "Monoparazi",
-     "Hemiparazi",
-     "Paraparazi",
-     "Kuadriparazi"
+     "Parazi"
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     3
+    ]
+   },
+   {
+    "ses": "Her iki bacağın birden tutulması paraparezi, dört uzvun birden tutulması ise kuadriparezi veya tetrapleji olarak tanımlanır.",
+    "sayfa": 50,
+    "satir": [
+     "Pleji"
+    ],
+    "sekil": null,
+    "madde": [
+     2,
+     5
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Kas zaafı ile başvuran bir hastada lezyonun nöroanatomik seviyesini belirlemek ayırıcı tanının en temel basamağıdır.",
+    "sayfa": 51,
+    "satir": [
+     "Kas Zaafı"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     4
+    ]
+   },
+   {
+    "ses": "Kuvvetsizlik birinci motor nöron, ikinci motor nöron, sinir-kas kavşağı veya doğrudan kas lifi kaynaklı olabilir.",
+    "sayfa": 51,
+    "satir": [
+     "1-Birinci motor nöron"
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "Myastenia graviste sinir-kas kavşağı tutulurken, miyopatilerde doğrudan kas hücresi membran ve enzimleri hasarlanır.",
+    "sayfa": 51,
+    "satir": [
+     "2-İkinci motor nöron"
+    ],
+    "sekil": null,
+    "madde": [
+     2,
+     1
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Birinci motor nöron hasarında spastik tonus artışı, sustalı çakı rijiditesi, canlı refleksler ve Babinski pozitifliği görülürken kas atrofisi gelişmez.",
+    "sayfa": 52,
+    "satir": [
+     "1. motor nöron"
+    ],
+    "sekil": "Birinci motor nöron, ikinci motor nöron, nöromusküler kavşak ve kas lezyonlarının karşılaştırma tablosu",
+    "madde": [
+     0,
+     15
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Bu bilgi çıkmış sınavda sorulmuştur: kas zaafı ve derin tendon reflekslerinde artış saptanan bir hastada lezyon piramidal yani birinci motor nöron yollarındadır.",
+    "sayfa": 52,
+    "satir": [
+     "Refleksler canlı"
+    ],
+    "sekil": null,
+    "madde": [
+     2,
+     8
+    ]
+   },
+   {
+    "ses": "İkinci motor nöron hasarında ise flask hipotoni, refleks kaybı, belirgin kas atrofisi ve istirahat fasikülasyonları tabloya hakimdir.",
+    "sayfa": 52,
+    "satir": [
+     "Tonus artar"
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     7
+    ]
+   },
+   {
+    "ses": "Nöromusküler kavşak hastalıklarında refleksler ve tonus normal kalıp eforla artan yorulabilirlik görülürken, primer miyopatilerde refleks kaybı olmaksızın proksimal kas güçsüzlüğü ve atrofi ön plandadır.",
+    "sayfa": 52,
+    "satir": [
+     "•Tonus değişmez"
+    ],
+    "sekil": null,
+    "madde": [
+     7,
+     27
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Refleks muayenesi sinir sisteminin segmentel düzeydeki işlevsel bütünlüğünü ölçen en objektif yöntemdir.",
+    "sayfa": 53,
+    "satir": [
+     "Refleks Muayenesi"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     3
+    ]
+   },
+   {
+    "ses": "Refleksler temelde derin tendon refleksleri yani miyotatik germe refleksleri ve yüzeysel kutanöz refleksler olarak ikiye ayrılır.",
+    "sayfa": 53,
+    "satir": [
+     "Derin Tendon Refleksleri"
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     3
+    ]
+   },
+   {
+    "ses": "Yüzeysel refleksler arasında karın cildi refleksi, kremaster refleksi ve anal refleks klinik önem taşır.",
+    "sayfa": 53,
+    "satir": [
+     "Yüzeysel Refleksler: Karın cildi refleksi, kremaster"
     ],
     "sekil": null,
     "madde": [
@@ -1296,146 +2132,71 @@
     ]
    },
    {
-    "ses": "Diğer motor bulgular spastisite, rijidite ve atrofidir; tonus değişiklikleri ve trofik bozukluk ayrı not edilir ve spastisite üst motor nöron bulgusudur. Rijidite bir tonus bulgusu olarak çıkmışta soruldu.",
-    "sayfa": 50,
-    "satir": [
-     "Spastisite",
-     "Rijidite",
-     "Atrofi"
-    ],
-    "sekil": null,
-    "madde": [
-     7,
-     8
-    ]
-   }
-  ],
-  [
-   {
-    "ses": "Kas zaafı dört düzeyden kaynaklanabilir: birinci motor nöron, ikinci motor nöron, sinir-kas bileşkesi yani nöromusküler kavşak ve doğrudan çizgili kas; her düzeyin kendine özgü bulgu tablosu vardır.",
-    "sayfa": 51,
-    "satir": [
-     "1-Birinci motor nöron",
-     "2-İkinci motor nöron",
-     "3-Sinir kas bileşkesi (Nöromusküler kavşak)",
-     "4-Doğrudan çizgili kas"
-    ],
-    "sekil": null,
-    "madde": [
-     3,
-     4
-    ]
-   },
-   {
-    "ses": "Birinci motor nöron lezyonunda tonus artar, refleksler canlıdır ve patolojik refleks pozitiftir; atrofi ve duyu kusuru yoktur. Vücut yarımında güçsüzlük ve derin tendon reflekslerinde artış olan hastada lezyonun dorsal spinal kordda olamayacağı çıkmışta soruldu.",
-    "sayfa": 52,
-    "satir": [
-     "1. motor nöron",
-     "Tonus artar",
-     "Refleksler canlı",
-     "Patolojik refleks (+)",
-     "Atrofi yok",
-     "Duyu kusuru yok"
-    ],
-    "sekil": null,
-    "madde": [
-     0,
-     5
-    ]
-   },
-   {
-    "ses": "İkinci motor nöron lezyonunda tonus azalır, refleksler kaybolur ve atrofi gelişir; duyu kusuru olabilir de olmayabilir de, patolojik refleks ise yoktur.",
-    "sayfa": 52,
-    "satir": [
-     "2. motor nöron",
-     "Tonus azalır",
-     "Refleksler kaybolur",
-     "Atrofi gelişir",
-     "Duyu kusuru +/-"
-    ],
-    "sekil": null,
-    "madde": [
-     15,
-     17
-    ]
-   },
-   {
-    "ses": "Nöromusküler kavşak hastalığında tonus ve refleksler değişmez, patolojik refleks, atrofi ve duyu kusuru yoktur; yani normal refleksli saf bir zaaf bileşkeyi düşündürür.",
-    "sayfa": 52,
-    "satir": [
-     "Nöromusküler Kavşak",
-     "Tonus değişmez",
-     "Refleksler değişmez",
-     "Patolojik refleks yok"
-    ],
-    "sekil": null,
-    "madde": [
-     3,
-     6
-    ]
-   },
-   {
-    "ses": "Çizgili kas hastalığında tonus değişmez ya da azalır, refleksler değişmez ama atrofi vardır; patolojik refleks ve duyu kusuru yoktur.",
-    "sayfa": 52,
-    "satir": [
-     "Çizgili Kas",
-     "Tonus değişmez, az",
-     "Refleksler değişmez",
-     "Atrofi VAR"
-    ],
-    "sekil": null,
-    "madde": [
-     7,
-     26
-    ]
-   },
-   {
-    "ses": "Bu karşılaştırma tablosunda dört sütunun ortak satırları yan yana okunduğunda, atrofiyi hem ikinci motor nöron hem kas hastalığının yaptığı, ayrımı ise reflekslerin sağladığı görülür.",
-    "sayfa": 52,
-    "satir": [],
-    "sekil": "birinci motor nöron, ikinci motor nöron, nöromusküler kavşak ve çizgili kas karşılaştırma tablosu",
-    "resim": 0,
-    "madde": [
-     0,
-     15
-    ]
-   }
-  ],
-  [
-   {
-    "ses": "Refleks muayenesi dört gruptan oluşur: derin tendon refleksleri, karın cildi ve kremaster gibi yüzeysel refleksler, taban cildi refleksi yani Babinski ile Hoffman gibi patolojik refleksler ve primitif refleksler.",
+    "ses": "Derin tendon refleksleri kas iğciğinden başlayan monosinaptik refleks arkını yansıtırken, yüzeysel refleksler polisinaptik ve kortikal kontrole bağımlı yanıtlardır.",
     "sayfa": 53,
     "satir": [
-     "Derin Tendon Refleksleri",
-     "Yüzeysel Refleksler: Karın cildi refleksi, kremaster refleksi",
-     "Patolojik Refleksler: Taban cildi refleksi (Babinski), Hoffman refleksi",
-     "Primitif ( ilkel) Refleksler"
+     "Refleks Muayenesi"
     ],
     "sekil": null,
     "madde": [
-     2,
-     4
+     0,
+     3
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Derin tendon refleksleri refleks çekici yardımıyla vurularak sıfır ile dört arasında puanlanır.",
+    "sayfa": 54,
+    "satir": [
+     "Refleks Muayenesi"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     1
     ]
    },
    {
-    "ses": "Refleksler sıfır yok, bir azalmış, iki normal, üç artmış, dört aşırı artmış ve beş klonus olarak derecelendirilir; klonus en üst derecedir ve üst motor nöronu düşündürür.",
+    "ses": "Sıfır refleksin tamamen kaybolduğunu, bir azalmış yanıtı, iki tamamen normal fizyolojik yanıtı, üç ise artmış hiperaktif yanıtı gösterir.",
     "sayfa": 54,
     "satir": [
-     "O: yok",
-     "1: azalmış (hipoaktif)",
-     "2: normal",
-     "3: artmış (hiperaktif)",
-     "4: aşırı artmış",
-     "5: klonus"
+     "Refleks:"
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     0
+    ]
+   },
+   {
+    "ses": "Dört puan ise refleks yayının aşırı uyarılmasıyla ortaya çıkan ve klonusun eşlik ettiği ağır patolojik hiperrefleksidir.",
+    "sayfa": 54,
+    "satir": [
+     "O: yok"
     ],
     "sekil": null,
     "madde": [
      2,
      0
     ]
+   }
+  ],
+  [
+   {
+    "ses": "Üst ekstremitede başlıca biseps, brakioradialis ve triseps derin tendon refleksleri muayene edilir.",
+    "sayfa": 55,
+    "satir": [
+     "Refleks Muayenesi: Üst Ekstremite"
+    ],
+    "sekil": "Üst ekstremite derin tendon refleksleri: biseps ve triseps refleksleri",
+    "madde": [
+     0
+    ],
+    "resim": 0
    },
    {
-    "ses": "Üst ekstremitede biseps ve triseps refleksleri refleks çekiciyle alınır ve iki taraf karşılaştırılarak derecelendirilir.",
+    "ses": "Biseps refleksi beşinci ve altıncı servikal segmentlerini ve muskulokutaneus siniri, brakioradialis refleksi ise yine beşinci ve altıncı servikal ve radial siniri test eder.",
     "sayfa": 55,
     "satir": [
      "Refleks Muayenesi: Üst Ekstremite"
@@ -1447,17 +2208,33 @@
     "resim": 0
    },
    {
-    "ses": "Fotoğraflarda çekiçle biseps ve triseps tendonlarına vuruluyor.",
+    "ses": "Triseps tendonu vurulduğunda ise dirsek ekstansiyona gelir ve bu refleks yedinci ve sekizinci servikal spinal segmentlerini yansıtır.",
     "sayfa": 55,
-    "satir": [],
-    "sekil": "üst ekstremite derin tendon refleksi fotoğrafları: biseps ve triseps",
-    "resim": 0,
+    "satir": [
+     "Refleks Muayenesi: Üst Ekstremite"
+    ],
+    "sekil": null,
     "madde": [
      0
-    ]
+    ],
+    "resim": 0
+   }
+  ],
+  [
+   {
+    "ses": "Alt ekstremite refleks muayenesinde patella tendon refleksi ve aşil tendon refleksi değerlendirilir.",
+    "sayfa": 56,
+    "satir": [
+     "Refleks Muayenesi: Alt Ekstremite"
+    ],
+    "sekil": "Alt ekstremite derin tendon refleksleri: patella ve aşil refleksleri",
+    "madde": [
+     0
+    ],
+    "resim": 0
    },
    {
-    "ses": "Alt ekstremitede patella ve Aşil refleksleri refleks çekiciyle alınır; refleks kaybı ikinci motor nöron lezyonunu düşündürür. Aşil refleksi çıkmışta soruldu.",
+    "ses": "Patella refleksi üçüncü ve dördüncü lomber spinal segmentlerini ve femoral siniri test ederek bacakta ekstansiyon oluşturur.",
     "sayfa": 56,
     "satir": [
      "Refleks Muayenesi: Alt Ekstremite"
@@ -1469,17 +2246,45 @@
     "resim": 0
    },
    {
-    "ses": "Fotoğrafta oturan hastada patella refleksi, ayak dorsifleksiyondayken de Aşil refleksi alınıyor.",
+    "ses": "Aşil refleksi ise birinci ve ikinci sakral segmentlerini ve tibialis siniri test eder; tendona vurulduğunda ayakta plantar fleksiyon gelişir.",
     "sayfa": 56,
-    "satir": [],
-    "sekil": "alt ekstremite refleks fotoğrafları: patella ve Aşil",
-    "resim": 0,
+    "satir": [
+     "Refleks Muayenesi: Alt Ekstremite"
+    ],
+    "sekil": null,
     "madde": [
      0
-    ]
+    ],
+    "resim": 0
    },
    {
-    "ses": "Patolojik reflekslerde taban cildi künt uçla uyarılarak Babinski, orta parmağa fiske vurularak Hoffman refleksi test edilir; bu refleksler normalde yoktur ve pozitifliği birinci motor nöron lezyonunu gösterir.",
+    "ses": "Muayene sırasında refleks alınamazsa Jendrassik manevrası yaptırılarak hastanın ellerini kenetleyip çekmesi istenir ve spinal uyarılabilirlik artırılır.",
+    "sayfa": 56,
+    "satir": [
+     "Refleks Muayenesi"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ],
+    "resim": 0
+   }
+  ],
+  [
+   {
+    "ses": "Patolojik refleksler normal erişkinde kortikal inhibisyon nedeniyle baskılanmış olan ilkel reflekslerin üst motor nöron lezyonunda açığa çıkmasıdır.",
+    "sayfa": 57,
+    "satir": [
+     "Patolojik Refleksler"
+    ],
+    "sekil": "Babinski ve Hoffman patolojik refleks muayenesi fotoğrafları",
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "En değerli patolojik refleks Babinski refleksidir; ayak tabanı dış kenarı künt bir uçla çizildiğinde başparmakta ekstansiyon ve diğer parmaklarda yelpaze açılması izlenir.",
     "sayfa": 57,
     "satir": [
      "Patolojik Refleksler"
@@ -1491,58 +2296,24 @@
     "resim": 0
    },
    {
-    "ses": "Fotoğrafta Babinski yanıtı olarak ayak başparmağının dorsifleksiyonu ve parmağa fiskeyle Hoffman değerlendirmesi görülüyor.",
+    "ses": "Ayrıca ayak bileğinin hızla dorsifleksiyona getirilmesiyle ortaya çıkan ritmik kontraksiyonlar yani klonus da üst motor nöron lezyonunun kesin kanıtıdır.",
     "sayfa": 57,
-    "satir": [],
-    "sekil": "Babinski ve Hoffman patolojik refleks fotoğrafları",
-    "resim": 0,
+    "satir": [
+     "Patolojik Refleksler"
+    ],
+    "sekil": null,
     "madde": [
      0
-    ]
+    ],
+    "resim": 0
    }
   ],
   [
    {
-    "ses": "Dördüncü basamak duyu sistemidir ve önce terimleri doğru kullanmak gerekir: parestezi görünür bir dış uyarım olmadan hissedilen uyuşma, keçeleşme, karıncalanma ve sızlamadır; dizestezi ise ağrısız bir uyaranın hoş olmayan ağrılı duyum olarak algılanmasıdır.",
-    "sayfa": 59,
+    "ses": "Nörolojik muayenemizin dördüncü temel sütunu hastanın periferden merkeze gelen duyusal uyarıları algılama kapasitesini ölçen duyu muayenesidir.",
+    "sayfa": 58,
     "satir": [
-     "Parestezi: Uyuşma, keçeleşme, karıncalanma, sızlama gibi görünür dış uyarım olmadan hissettiği duyum",
-     "Dizestezi: Ağrısız bir uyarıyla hoş olmayan ağrılı duyum algılanması"
-    ],
-    "sekil": null,
-    "madde": [
-     3,
-     2
-    ]
-   },
-   {
-    "ses": "Hiperestezi uyarının normalden şiddetli hissedilmesi, hipoestezi duyu azlığı, anestezi duyu yokluğu, allodini ise ağrı oluşturmayacak bir uyaranla ağrı hissedilmesidir; allodini ile dizestezi sık karıştırılır.",
-    "sayfa": 59,
-    "satir": [
-     "Hiperestezi: Uyarının normalden daha şiddetliymiş gibi hissedilmesi",
-     "Hipoestezi: Duyu azlığı",
-     "Anestezi: Duyu yokluğu",
-     "Allodini: Ağrı oluşturmayacak bir uyaran ile ağrı hissedilmesi"
-    ],
-    "sekil": null,
-    "madde": [
-     9,
-     5
-    ]
-   },
-   {
-    "ses": "Yüzeyel duyu muayenesi dokunma, ağrı ve sıcaklığı; derin duyu muayenesi pozisyon, pasif hareket, vibrasyon ve Romberg testini kapsar, yani Romberg bir derin duyu testidir.",
-    "sayfa": 60,
-    "satir": [
-     "Yüzeyel duyu muayenesi",
-     "Dokunma",
-     "Ağrı",
-     "Sıcaklık",
-     "Derin duyu muayenesi",
-     "Pozisyon",
-     "Pasif hareket",
-     "Vibrasyon",
-     "Romberg"
+     "Sinir Sistemi: Fonksiyon"
     ],
     "sekil": null,
     "madde": [
@@ -1551,49 +2322,157 @@
     ]
    },
    {
-    "ses": "Kortikal duyular stereognozi, iki nokta ayrımı, grafestezi ve taktil lokalizasyonla muayene edilir; primer duyu sağlamken bunların bozulması kortikal lezyonu düşündürür.",
-    "sayfa": 60,
+    "ses": "Duyu muayenesi hastanın dikkatinin ve kooperasyonunun en üst düzeyde olmasını gerektiren son derece sübjektif bir değerlendirmedir.",
+    "sayfa": 58,
     "satir": [
-     "Kortikal duyular muayenesi",
-     "Sterognazi",
-     "İki nokta ayrımı",
-     "Grafestezi",
-     "Taktil lokalizasyon"
+     "Duyu Sistemi"
     ],
     "sekil": null,
     "madde": [
-     9,
-     11
+     4,
+     3
+    ]
+   },
+   {
+    "ses": "Sistematik olarak yüzeyel duyular, derin duyular ve kortikal duyular olmak üzere üç ana başlık altında yürütülür.",
+    "sayfa": 58,
+    "satir": [
+     "Mental Durum"
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     0
     ]
    }
   ],
   [
    {
-    "ses": "Dorsal kolon ve medial lemniskus yolu ayırt edici duyuyu, spinotalamik yol ise ağrı ve sıcaklığı taşır; iki yol da talamus üzerinden postsantral girusa ulaşır.",
-    "sayfa": 61,
+    "ses": "Duyu bozukluklarını tarif ederken klinik terminolojiyi doğru kullanmak ayırıcı tanıda büyük kolaylık sağlar.",
+    "sayfa": 59,
     "satir": [
-     "discriminative",
-     "pain & temperature"
+     "Duyu Muayenesinde"
     ],
     "sekil": null,
     "madde": [
-     8,
-     3
+     0,
+     7
     ]
    },
    {
-    "ses": "Şemada yeşil renkli dorsal kolon yolu ile kırmızı renkli spinotalamik yol medulla, pons ve mezensefalondan geçip talamusa çıkıyor; derin duyu kaybı dorsal kolonu, ağrı ve ısı kaybı spinotalamik yolu gösterir.",
-    "sayfa": 61,
-    "satir": [],
-    "sekil": "dorsal kolon-medial lemniskus ve spinotalamik yol şeması",
-    "resim": 0,
+    "ses": "Parestezi dışarıdan belirgin bir uyaran olmaksızın hastanın hissettiği uyuşma, keçeleşme, karıncalanma veya iğnelenme hissidir.",
+    "sayfa": 59,
+    "satir": [
+     "Parestezi: Uyuşma, keçeleşme, karıncalanma, sızlama"
+    ],
+    "sekil": null,
     "madde": [
-     3,
+     1,
+     9
+    ]
+   },
+   {
+    "ses": "Dizestezi ise dokunma gibi normal bir uyarının yanıcı ve rahatsız edici ağrılı bir his olarak algılanması durumudur.",
+    "sayfa": 59,
+    "satir": [
+     "Terminoloji"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     3
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Yüzeyel duyu muayenesinde hafif dokunma, ağrı ve ısı duyuları incelenir; bu duyular periferden spinotalamik traktus ile taşınır.",
+    "sayfa": 60,
+    "satir": [
+     "Yüzeyel duyu"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     4
+    ]
+   },
+   {
+    "ses": "Derin duyu muayenesinde ise eklem pozisyon duyusu, pasif hareket algısı ve vibrasyon duyusu test edilir.",
+    "sayfa": 60,
+    "satir": [
+     "–Dokunma"
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     4
+    ]
+   },
+   {
+    "ses": "Derin duyular arka kordon yani fasikülüs grasilis ve kuneatus üzerinden medial lemniskus yoluyla beyne ulaştırılır.",
+    "sayfa": 60,
+    "satir": [
+     "muayenesi"
+    ],
+    "sekil": null,
+    "madde": [
+     4,
+     9
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Duyusal yolakların anatomik çaprazlaşma seviyeleri lezyon lokalizasyonunun en kritik anahtarıdır.",
+    "sayfa": 61,
+    "satir": [
+     "medial lemnsiscus:"
+    ],
+    "sekil": "Duyu yolakları: dorsal kolon-medial lemniskus ve spinotalamik yol",
+    "madde": [
+     4
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Ağrı ve ısı duyusunu taşıyan spinotalamik lifler medulla spinalise girdikten hemen bir iki segment yukarıda ön beyaz komissürde çapraz yapar.",
+    "sayfa": 61,
+    "satir": [
+     "discriminative"
+    ],
+    "sekil": null,
+    "madde": [
      6
     ]
    },
    {
-    "ses": "Yüzeyel duyu muayenesinde dokunma pamukla, ağrı iğneyle, sıcaklık soğuk ya da sıcak bir nesneyle test edilir ve iki taraf karşılaştırılır.",
+    "ses": "Buna karşılık derin duyuyu taşıyan arka kordon lifleri omurilikte aynı tarafta yükselir ve çaprazını bulbustaki nükleuslarda yapar.",
+    "sayfa": 61,
+    "satir": [
+     "sonsation."
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Yüzeyel duyu muayenesinde hafif dokunma bir parça pamuk ucuyla, ağrı duyusu ise steril tek kullanımlık bir iğne ucuyla test edilir.",
+    "sayfa": 62,
+    "satir": [
+     "Yüzeyel Duyu Muayenesi"
+    ],
+    "sekil": "Yüzeyel duyu muayenesi: pamuk, iğne ve soğuk nesneyle test",
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Hastanın gözleri kapatılarak vücudun sağ ve sol simetrik dermatom alanlarına dokunulur ve hastadan eşit hissedip hissetmediği sorulur.",
     "sayfa": 62,
     "satir": [
      "Yüzeyel Duyu Muayenesi"
@@ -1605,39 +2484,71 @@
     "resim": 0
    },
    {
-    "ses": "Fotoğraflarda parmakta pamukla, bacakta iğneyle ve metal uçla yapılan testler görülüyor.",
+    "ses": "Omurilik basılarında duyusal kaybın başladığı seviye hekime lezyonun segmentel düzeyini kesin olarak gösterir.",
     "sayfa": 62,
-    "satir": [],
-    "sekil": "yüzeyel duyu muayenesi fotoğrafları: pamuk, iğne ve metal uç",
-    "resim": 0,
+    "satir": [
+     "Yüzeyel Duyu Muayenesi"
+    ],
+    "sekil": null,
     "madde": [
      0
-    ]
+    ],
+    "resim": 0
+   }
+  ],
+  [
+   {
+    "ses": "Derin duyu muayenesinde vibrasyon duyusu için yüz yirmi sekiz Hertz frekansındaki diyapazon kullanılır.",
+    "sayfa": 63,
+    "satir": [
+     "Derin Duyu Muayenesi"
+    ],
+    "sekil": "Derin duyu muayenesi: diyapazonla vibrasyon ve pozisyon duyusu",
+    "madde": [
+     0
+    ],
+    "resim": 0
    },
    {
-    "ses": "Derin duyu muayenesinde diyapazonla vibrasyon, parmakların yanlarından tutulup yukarı aşağı hareket ettirilmesiyle de pozisyon duyusu test edilir; dorsal kolon işlevi sınanır ve distalden başlanır.",
+    "ses": "Titreşen diyapazon başparmak, iç malleol ve tuberositas tibia gibi kemik çıkıntılarına yerleştirilerek titreşim süresi kontrol edilir.",
     "sayfa": 63,
     "satir": [
      "Derin Duyu Muayenesi"
     ],
     "sekil": null,
-    "resim": 0,
     "madde": [
      0
-    ]
+    ],
+    "resim": 0
    },
    {
-    "ses": "Fotoğrafta diyapazon ayak başparmağına konmuş, el ve ayak parmakları yanlarından tutularak hareket ettiriliyor.",
+    "ses": "Pozisyon duyusu için ise ayak başparmağı yan kenarlarından tutularak hafifçe yukarı veya aşağı hareket ettirilir ve hastadan yönü bilmesi istenir.",
     "sayfa": 63,
-    "satir": [],
-    "sekil": "derin duyu muayenesi fotoğrafları: diyapazon ve pozisyon duyusu",
-    "resim": 0,
+    "satir": [
+     "Derin Duyu Muayenesi"
+    ],
+    "sekil": null,
     "madde": [
      0
-    ]
+    ],
+    "resim": 0
+   }
+  ],
+  [
+   {
+    "ses": "Kortikal duyu muayenesi parietal lobun primer ve assosiyasyon alanlarının fonksiyonlarını yansıtan üst düzey bir testtir.",
+    "sayfa": 64,
+    "satir": [
+     "Kortikal Duyu Muayenesi"
+    ],
+    "sekil": "Kortikal duyu muayenesi: grafestezi, stereognozi ve iki nokta ayrımı",
+    "madde": [
+     0
+    ],
+    "resim": 0
    },
    {
-    "ses": "Kortikal duyu muayenesinde avuca rakam çizilerek grafestezi, gözler kapalıyken ele nesne verilerek stereognozi test edilir; bunların bozukluğuna agrafestezi ve astereognozi deriz.",
+    "ses": "Stereognozi hastanın gözleri kapalıyken avucuna konulan anahtar, madeni para veya kalemi dokunarak tanımasıdır.",
     "sayfa": 64,
     "satir": [
      "Kortikal Duyu Muayenesi"
@@ -1649,50 +2560,169 @@
     "resim": 0
    },
    {
-    "ses": "Fotoğraflarda avuç içine rakam çiziliyor, gözleri kapalı hasta elindeki kalemi tanımaya çalışıyor ve avuçta iki nokta ayrımı yapılıyor.",
+    "ses": "Grafestezi avuç içine künt bir uçla çizilen rakamların okunması, iki nokta diskriminasyonu ise iki temas noktasının birbirinden ayırt edilmesidir.",
     "sayfa": 64,
-    "satir": [],
-    "sekil": "kortikal duyu muayenesi fotoğrafları: grafestezi, stereognozi ve iki nokta ayrımı",
-    "resim": 0,
+    "satir": [
+     "Kortikal Duyu Muayenesi"
+    ],
+    "sekil": null,
     "madde": [
      0
+    ],
+    "resim": 0
+   }
+  ],
+  [
+   {
+    "ses": "Duyu muayenesinde duyusal azalmaya hipoestezi, tam kayba ise anestezi adı verilir.",
+    "sayfa": 65,
+    "satir": [
+     "Duyu Muayenesi Bulguları"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     1
     ]
    },
    {
-    "ses": "Duyu muayenesi bulguları hipoestezi, anestezi, parestezi, dizestezi, agrafestezi ve astereognozidir; son ikisi kortikal duyu kaybını gösterir.",
+    "ses": "Siringomiyeli gibi omurilik santral kanal lezyonlarında ağrı ve ısı duyusu kaybolurken dokunma ve derin duyunun korunması dissosiye duyu kusuru olarak tanımlanır.",
     "sayfa": 65,
     "satir": [
-     "Hipoestezi",
-     "Anestezi",
-     "Parestezi",
-     "Dizestezi",
-     "Agrafestezi",
-     "Astereognozi"
+     "Hipoestezi"
     ],
     "sekil": null,
     "madde": [
      1,
-     2
+     0
+    ]
+   },
+   {
+    "ses": "Parietal lob lezyonlarında ise periferik duyu sağlam olduğu halde nesneleri tanıyamama astereognozi ve sayıları okuyamama agrafestezi gelişir.",
+    "sayfa": 65,
+    "satir": [
+     "Anestezi"
+    ],
+    "sekil": null,
+    "madde": [
+     2,
+     0
     ]
    }
   ],
   [
    {
-    "ses": "Son basamak serebellar sistemdir: denge, tonus ve koordinasyon değerlendirilir; koordinasyon parmak-burun ve diz-topuk testlerinden oluşan metrik muayene ile ardışık hareketlerle sınanır.",
-    "sayfa": 67,
+    "ses": "Nörolojik muayenemizin son büyük halkası hareketlerin dengesini ve uyumunu sağlayan serebellar sistem muayenesidir.",
+    "sayfa": 66,
     "satir": [
-     "Denge",
-     "Tonus",
-     "Koordinasyon: Metrik muayene (parmak-burun, diz-topuk testi), ardısıra hareketler"
+     "Sinir Sistemi: Fonksiyon"
     ],
     "sekil": null,
     "madde": [
-     4,
+     0,
+     5
+    ]
+   },
+   {
+    "ses": "Serebellum yani beyincik kas kasılmalarının zamanlamasını, agonist ve antagonist kasların dengesini mükemmel bir hassasiyetle ayarlar.",
+    "sayfa": 66,
+    "satir": [
+     "Serebellar Si"
+    ],
+    "sekil": null,
+    "madde": [
+     5
+    ]
+   },
+   {
+    "ses": "Serebellar lezyonlarda kuvvetsizlik olmamasına rağmen hareketler kaba, beceriksiz, düzensiz ve dengesiz bir hal alır.",
+    "sayfa": 66,
+    "satir": [
+     "Mental Durum"
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     5
+    ]
+   },
+   {
+    "ses": "Serebellar sistem korteksten gelen hareket planı ile kas ve eklemlerden gelen proprioseptif duyuyu anlık olarak karşılaştırıp hatayı düzelten ana kontrol merkezidir.",
+    "sayfa": 66,
+    "satir": [
+     "Serebellar Sistem"
+    ],
+    "sekil": null,
+    "madde": [
+     5,
+     3
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Serebellar muayene denge değerlendirmesi, kas tonusu muayenesi, metrik koordinasyon testleri ve ardısıra hareketlerin incelenmesini kapsar.",
+    "sayfa": 67,
+    "satir": [
+     "Serebellar Sistem"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
      3
     ]
    },
    {
-    "ses": "Denge muayenesinde hasta ayakları bitişik ayakta durur ve topuk-parmak ucu şeklinde tandem yürür; düşme riski olduğu için hekim hastanın arkasında güvence sağlar.",
+    "ses": "Serebellar hemisfer lezyonlarında aynı taraf ekstremitelerde belirgin kas gevşekliği yani hipotoni saptanır.",
+    "sayfa": 67,
+    "satir": [
+     "Muayenesi"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     3
+    ]
+   },
+   {
+    "ses": "Ayrıca hastanın konuşması sarhoşvari kesik, heceleri patlayıcı tarzda vurgulayan skande dizartri özelliği kazanır.",
+    "sayfa": 67,
+    "satir": [
+     "Denge"
+    ],
+    "sekil": null,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Rebound yani geri tepme fenomeninde, hastanın dirence karşı büktüğü kolu hekim aniden bıraktığında antagonist kaslar zamanında durduramaz ve kol kontrolsüzce savrulur.",
+    "sayfa": 67,
+    "satir": [
+     "Serebellar Sistem Muayenesi"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     3
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Serebellar denge muayenesinde hastanın ayakta duruşu, tandem yani çizgi yürüyüşü ve Romberg testi incelenir.",
+    "sayfa": 68,
+    "satir": [
+     "Serebellar Sistem Muayenesi: Denge"
+    ],
+    "sekil": "Denge muayenesi: tandem yürüyüş ve ayaklar bitişik duruş",
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Serebellar ataksisi olan hasta geniş bir taban üzerinde sendeleyerek durur; hem gözleri açıkken hem de kapalıyken dengesini sağlayamaz.",
     "sayfa": 68,
     "satir": [
      "Serebellar Sistem Muayenesi: Denge"
@@ -1704,20 +2734,36 @@
     "resim": 0
    },
    {
-    "ses": "Fotoğrafta hekim kollarını açmış, ayakları bitişik duran hastanın arkasında düşmeye karşı bekliyor.",
+    "ses": "Duyusal ataksili hastalar ise gözleri açıkken dengeliyken yalnız gözlerini kapattıklarında düşer yani Romberg testi pozitifleşir.",
     "sayfa": 68,
-    "satir": [],
-    "sekil": "denge muayenesi fotoğrafları: tandem yürüyüş ve ayaklar bitişik duruş",
-    "resim": 0,
+    "satir": [
+     "Serebellar Sistem Muayenesi: Denge"
+    ],
+    "sekil": null,
     "madde": [
      0
-    ]
-   },
+    ],
+    "resim": 0
+   }
+  ],
+  [
    {
-    "ses": "Metrik muayenede parmak-burun ve diz-topuk testleri yapılır; serebellar lezyonda hedef aşılır ya da hedefe erişilemez, bu sapmaya dismetri deriz.",
+    "ses": "Metrik muayenede üst ekstremitede parmak-burun testi, alt ekstremitede ise diz-topuk testi uygulanır.",
     "sayfa": 69,
     "satir": [
-     "Serebellar Sistem: Metrik Muayene"
+     "Serebellar Sistem: Metrik"
+    ],
+    "sekil": "Metrik koordinasyon muayenesi: parmak-burun ve diz-topuk testleri",
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Parmak-burun testinde hastadan kolunu yana açıp işaret parmağını hekimin parmağına ve kendi burnuna sırayla dokundurması istenir.",
+    "sayfa": 69,
+    "satir": [
+     "Muayene"
     ],
     "sekil": null,
     "madde": [
@@ -1726,20 +2772,36 @@
     "resim": 0
    },
    {
-    "ses": "Fotoğraflarda hasta hekimin parmağı ile kendi burnu arasında gidip geliyor ve topuğunu karşı dizin üzerinden aşağı kaydırıyor.",
+    "ses": "Serebellar hasarda parmak burnu aşar ya da hedefe ulaşamaz yani dismetri gelişir; hedefe yaklaşırken amplitüdü artan intansiyonel tremor belirir.",
     "sayfa": 69,
-    "satir": [],
-    "sekil": "metrik muayene fotoğrafları: parmak-burun ve diz-topuk testi",
-    "resim": 0,
+    "satir": [
+     "Serebellar Sistem: Metrik"
+    ],
+    "sekil": null,
     "madde": [
      0
-    ]
-   },
+    ],
+    "resim": 0
+   }
+  ],
+  [
    {
-    "ses": "Ardışık hareketler yani diadokinezi, elin dizin üzerinde hızla pronasyon ve supinasyon yaptırılmasıyla test edilir; bu hızlı alternatif hareketin bozukluğuna disdiadokinezi denir.",
+    "ses": "Ardısıra hareketlerin koordinasyonu yani diadokinezi hastanın ellerini hızla dizlerine vurup ters yüz etmesiyle test edilir.",
     "sayfa": 70,
     "satir": [
-     "Serebellar Sistem: Ardısıra Hareketler (Diadokinezi)"
+     "Serebellar Sistem: Ardısıra"
+    ],
+    "sekil": "Diadokinezi testi: el pronasyon-supinasyon ardısıra hareketleri",
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Serebellar lezyon tarafındaki el hızlı pronasyon ve supinasyon hareketlerini koordine edemez, ritim bozulur ve bu duruma disdiadokinezi denir.",
+    "sayfa": 70,
+    "satir": [
+     "Hareketler (Diadokinezi)"
     ],
     "sekil": null,
     "madde": [
@@ -1748,30 +2810,114 @@
     "resim": 0
    },
    {
-    "ses": "Fotoğrafta oturan hasta el ayasını ve el sırtını dizlerine hızla sırayla vuruyor.",
+    "ses": "Ayrıca hastanın kolu fleksiyonda çekilirken aniden bırakıldığında kolunu durduramayarak göğsüne çarpması yani rebound fenomeni izlenir.",
     "sayfa": 70,
-    "satir": [],
-    "sekil": "diadokinezi fotoğrafları: el pronasyon-supinasyon",
-    "resim": 0,
+    "satir": [
+     "Serebellar Sistem: Ardısıra"
+    ],
+    "sekil": null,
     "madde": [
      0
-    ]
-   },
+    ],
+    "resim": 0
+   }
+  ],
+  [
    {
-    "ses": "Serebellar sistem muayene bulguları ataksi, disartri, hipotoni, dismetri ve disdiadokinezidir; serebellar lezyonun tonus bulgusu hipotonidir, artmış tonus değil.",
+    "ses": "Serebellar muayene bulgularının özeti ataksi, dismetri, disdiadokinezi, intansiyonel tremor, nistagmus ve skande dizartridir.",
     "sayfa": 71,
     "satir": [
-     "Ataksi",
-     "Disartri",
-     "Hipotoni",
-     "Dismetri",
-     "Disdiadokinezi"
+     "Serebellar Sistem Muayenesi"
     ],
     "sekil": null,
     "madde": [
-     1,
-     2
+     0,
+     1
     ]
+   },
+   {
+    "ses": "Serebellar lezyonlar vücutta daima aynı tarafta yani ipsilateral klinik belirti verirler.",
+    "sayfa": 71,
+    "satir": [
+     "Bulguları"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Vermis hasarlarında gövde ataksisi ve denge bozukluğu ön plandayken, hemisfer hasarlarında ekstremite ataksisi hakimdir.",
+    "sayfa": 71,
+    "satir": [
+     "Ataksi"
+    ],
+    "sekil": null,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Ayrıca serebellar patolojilerde kas tonusunda gevşeme yani hipotoni ve hedefi tutturamama olan dismetri ile hedefe yaklaşırken artan intansiyonel tremor klinik tabloyu belirler.",
+    "sayfa": 71,
+    "satir": [
+     "Serebellar Sistem Muayenesi"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     3
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Nörolojik muayene dersimizin sonuna gelmiş bulunuyoruz sevgili meslektaşlarım.",
+    "sayfa": 72,
+    "satir": [
+     "> — >"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Mental durumdan başlayarak kraniyal sinirleri, motor ve duyu sistemlerini, refleksleri ve serebellar koordinasyonu eksiksiz inceledik.",
+    "sayfa": 72,
+    "satir": [
+     "TEŞEKKÜRLER..."
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Klinik stajlarınızda hastalarınıza şifa dağıtırken bu muayene basamaklarının en büyük yardımcınız olmasını diler, dikkatiniz için teşekkür ederim.",
+    "sayfa": 72,
+    "satir": [
+     "TEŞEKKÜRLER..."
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Unutmayınız ki modern nörogörüntüleme yöntemleri ne kadar gelişirse gelişsin, doğru tanıya giden yol daima iyi alınmış bir anamnez ve kusursuz bir fizik muayeneden geçer.",
+    "sayfa": 72,
+    "satir": [
+     "TEŞEKKÜRLER..."
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ],
+    "resim": 0
    }
   ]
  ]

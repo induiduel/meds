@@ -1,7 +1,9 @@
 {
+ "versiyon": "2.0",
  "surum": 2,
  "ders_id": "k2-02",
- "anahtar": "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+ "dersKodu": "k2-02",
+ "dersAdi": "Bilinç Bozukluğu Olan Hastaya Yaklaşım",
  "bolumler": [
   {
    "id": "k2-02-b01",
@@ -10,13 +12,75 @@
    "paragraflar": [
     {
      "id": "k2-02-p001",
-     "sayfa": 2,
-     "slayt": {
-      "sayfa": 2
-     },
+     "paragrafIndex": 1,
+     "sayfa": 1,
+     "baslik": "Bilinç Değişikliğinin Önemi ve Acil Konsültasyonlar",
      "cumleler": [
       {
        "id": "k2-02-c0001",
+       "ses": "Bilinç bozukluklarına klinik yaklaşım dersimize hoş geldiniz sevgili meslektaşlarım.",
+       "ekran": "**Bilinç Bozuklukları:** Acil tıp ve nörolojide zamanla yarışılan hayati klinik tablolar.",
+       "slayt": {
+        "sayfa": 1,
+        "satir": "Dr. Dursun CEYLAN",
+        "madde": [
+         0,
+         2
+        ]
+       },
+       "etiketler": [
+        "bilinç bozuklukları",
+        "acil yaklaşım"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0002",
+       "ses": "Nörolojik aciller içerisinde bilinç değişiklikleri, hem acil servislerde hem de yoğun bakım ünitelerinde hekimin en sık karşılaştığı ve en hızlı karar vermesini gerektiren tablolardır.",
+       "ekran": "**En Sık Acil:** Yoğun bakım ve acil servislerde en sık konsültasyon nedeni bilinç kaybıdır.",
+       "slayt": {
+        "sayfa": 1,
+        "satir": "BİLİNÇ",
+        "madde": [
+         2,
+         1
+        ]
+       },
+       "etiketler": [
+        "acil servis",
+        "yoğun bakım",
+        "konsültasyon"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0003",
+       "ses": "Bu derste bilincin nöroanatomik temellerinden başlayarak, koma skorlamasını, beyin sapı reflekslerini ve komalı bir hastada hayat kurtaran basamaklı algoritmayı tüm ayrıntılarıyla inceleyeceğiz.",
+       "ekran": "**Ders Akışı:** ARAS nöroanatomisi, Glasgow skalası, beyin sapı refleksleri ve basamaklı algoritma.",
+       "slayt": {
+        "sayfa": 1,
+        "satir": "BOZUKLUKLARINAYAKLAŞIM",
+        "madde": [
+         2
+        ]
+       },
+       "etiketler": [
+        "Glasgow koma skalası",
+        "beyin sapı refleksleri",
+        "algoritma"
+       ],
+       "cikmis": []
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p002",
+     "paragrafIndex": 2,
+     "sayfa": 2,
+     "baslik": "Bilinç Değişikliğinin Önemi ve Acil Konsültasyonlar",
+     "cumleler": [
+      {
+       "id": "k2-02-c0004",
        "ses": "Bilinç değişiklikleri ve koma tablosu acil servislerde ve yoğun bakım ünitelerinde nöroloji hekimlerine yapılan konsültasyonların en sık nedenidir.",
        "ekran": "**En Sık Konsültasyon:** Acil servis ve yoğun bakımlarda nöroloji konsültasyonlarının birincil nedeni bilinç değişikliğidir.",
        "slayt": {
@@ -43,7 +107,7 @@
        ]
       },
       {
-       "id": "k2-02-c0002",
+       "id": "k2-02-c0005",
        "ses": "Uyanıklık kusuru veya bilinç kaybı ile getirilen bir hastada hekimin zamanla yarışarak ivedi müdahale etmesi hayati bir zorunluluktur.",
        "ekran": "**Zamanla Yarış:** Hipoksi ve iskemiye karşı beyin dokusunu korumak için ivedi klinik müdahale.",
        "slayt": {
@@ -62,7 +126,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0003",
+       "id": "k2-02-c0006",
        "ses": "Hastanın ilk değerlendirmesinde nörolojik yaklaşımın temel hedefi lezyonun anatomik lokalizasyonunu ve etiyolojik mekanizmasını aydınlatmaktır.",
        "ekran": "**Temel Hedef:** Lezyonun anatomik koordinatını ve altta yatan etiyolojik mekanizmayı belirleme.",
        "slayt": {
@@ -80,7 +144,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0004",
+       "id": "k2-02-c0007",
        "ses": "Bilinç değişikliği kavramı uyanıklık ve farkındalık süreçlerinin akut subakut ya da dalgalı biçimde bozulmasını kapsar.",
        "ekran": "**Kavram Tanımı:** Uyanıklık ve farkındalık süreçlerindeki akut veya subakut bozulmalar spektrumu.",
        "slayt": {
@@ -99,7 +163,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0005",
+       "id": "k2-02-c0008",
        "ses": "Acile başvuran komalı bir hastada klinisyen tablonun primer beyin hasarından mı yoksa sistemik metabolik bir iflastan mı kaynaklandığını hızla ayırmalıdır.",
        "ekran": "**Temel Karşılaştırma:** Primer yapısal beyin hasarı ile beyni ikincil etkileyen sistemik metabolik tablo karşılaştırılır.",
        "slayt": {
@@ -117,7 +181,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0006",
+       "id": "k2-02-c0009",
        "ses": "Hızlı ve doğru bir ayrım hastaya gereksiz cerrahi veya radyolojik işlemler yapılmasını önlerken hayat kurtarıcı tedavileri başlatır.",
        "ekran": "**Tedavi Önceliği:** Doğru klinik ayrım ile gereksiz girişimleri engelleme ve hayat kurtarıcı tedavi.",
        "slayt": {
@@ -135,7 +199,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0007",
+       "id": "k2-02-c0010",
        "ses": "Bu nedenle hekimin bilinç bozukluğu olan hastaya sistematik soğukkanlı ve algoritma temelli bir yaklaşımla müdahale etmesi beklenir.",
        "ekran": "**Algoritmik Yaklaşım:** Soğukkanlı ve adım adım yapılandırılmış algoritma temelli klinik yöntem.",
        "slayt": {
@@ -153,7 +217,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0008",
+       "id": "k2-02-c0011",
        "ses": "Doktor Dursun Ceylan tarafından hazırlanan bu derste bilinç bozukluklarının nöroanatomik temeli tanısal basamakları ve acil yönetimi incelenecektir.",
        "ekran": "**Ders Kapsamı:** Dr. Dursun Ceylan rehberliğinde bilinç bozuklukları mekanizmaları ve tedavi yönetimi.",
        "slayt": {
@@ -172,161 +236,6 @@
        "cikmis": []
       }
      ]
-    },
-    {
-     "id": "k2-02-p002",
-     "sayfa": 2,
-     "slayt": {
-      "sayfa": 2
-     },
-     "cumleler": [
-      {
-       "id": "k2-02-c0009",
-       "ses": "Bilinç değişikliği ile acil servise başvuran hastaların etiyolojik dağılımı incelendiğinde vakaların yüzde seksen beşinin metabolik ve sistemik nedenlere bağlı olduğu görülür.",
-       "ekran": "**Etiyolojik Dağılım:** Vakaların yüzde seksen beşi metabolik ve sistemik nedenlerden kaynaklanır.",
-       "slayt": {
-        "sayfa": 2,
-        "satir": "% 85 metabolik ve sistemik neden",
-        "madde": [
-         4,
-         3
-        ]
-       },
-       "etiketler": [
-        "yüzde seksen beş",
-        "metabolik neden",
-        "sistemik neden"
-       ],
-       "cikmis": []
-      },
-      {
-       "id": "k2-02-c0010",
-       "ses": "Buna karşılık primer olarak santral sinir sistemine ait yapısal patolojiler olguların yalnızca yüzde on beşini oluşturmaktadır.",
-       "ekran": "**Santral Neden Payı:** Primer santral sinir sistemi patolojileri olguların yalnızca yüzde on beşidir.",
-       "slayt": {
-        "sayfa": 2,
-        "satir": "% 15 SSS ait neden",
-        "madde": [
-         5,
-         3
-        ]
-       },
-       "etiketler": [
-        "santral sinir sistemi",
-        "yüzde on beş"
-       ],
-       "cikmis": []
-      },
-      {
-       "id": "k2-02-c0011",
-       "ses": "Bu epidemiyolojik gerçeklik acil hekiminin diagnostik stratejisini ve reflekslerini belirleyen en temel klinik kılavuzdur.",
-       "ekran": "**Diagnostik Strateji:** Acil hekiminin tanısal yaklaşımını belirleyen en temel epidemiyolojik oran.",
-       "slayt": {
-        "sayfa": 2,
-        "satir": "% 85 metabolik ve sistemik neden",
-        "madde": [
-         4,
-         3
-        ]
-       },
-       "etiketler": [
-        "epidemiyolojik gerçeklik",
-        "diagnostik strateji"
-       ],
-       "cikmis": []
-      },
-      {
-       "id": "k2-02-c0012",
-       "ses": "Çünkü bilinci kapalı bir hasta görüldüğünde akla ilk olarak masif bir kafa travması gelse de altta yatan neden ezici çoğunlukla sistemik bir metabolizma bozukluğudur.",
-       "ekran": "**Metabolik Ağırlık:** Koma tablosunda primer travmadan ziyade altta yatan metabolik bozulmanın baskınlığı.",
-       "slayt": {
-        "sayfa": 2,
-        "satir": "% 85 metabolik ve sistemik neden",
-        "madde": [
-         4,
-         3
-        ]
-       },
-       "etiketler": [
-        "metabolizma bozukluğu",
-        "koma tablosu"
-       ],
-       "cikmis": []
-      },
-      {
-       "id": "k2-02-c0013",
-       "ses": "Ağır hipoglisemi septik şok elektrolit dengesizliği üremi ya da akut karaciğer yetmezliği serebral hemisferleri yaygın baskılayarak derin koma yaratabilir.",
-       "ekran": "**Yaygın Baskılanma:** Hipoglisemi, üremi ve septik şokun serebral korteksi bilateral baskılaması.",
-       "slayt": {
-        "sayfa": 2,
-        "satir": "% 85 metabolik ve sistemik neden",
-        "madde": [
-         4,
-         3
-        ]
-       },
-       "etiketler": [
-        "hipoglisemi",
-        "üremi",
-        "septik şok"
-       ],
-       "cikmis": []
-      },
-      {
-       "id": "k2-02-c0014",
-       "ses": "Bu nedenle hastayı kabul eder etmez hemen bilgisayarlı tomografiye göndermek yerine önce yatak başı vital stabilizasyon sağlanmalıdır.",
-       "ekran": "**Önce Stabilizasyon:** Radyolojiye gitmeden önce yatak başı yaşamsal fonksiyonları güvenceye alma.",
-       "slayt": {
-        "sayfa": 2,
-        "satir": "% 15 SSS ait neden",
-        "madde": [
-         5,
-         3
-        ]
-       },
-       "etiketler": [
-        "bilgisayarlı tomografi",
-        "vital stabilizasyon"
-       ],
-       "cikmis": []
-      },
-      {
-       "id": "k2-02-c0015",
-       "ses": "Yüzde seksen beşlik metabolik nedenlerin büyük kısmı erken müdahale ve doğru replasman tedavileri ile tamamen geri döndürülebilir niteliktedir.",
-       "ekran": "**Geri Döndürülebilirlik:** Erken müdahale ile metabolik nedenlerin tamamen tedavi edilebilirliği.",
-       "slayt": {
-        "sayfa": 2,
-        "satir": "% 85 metabolik ve sistemik neden",
-        "madde": [
-         4,
-         3
-        ]
-       },
-       "etiketler": [
-        "metabolik nedenler",
-        "geri döndürülebilir"
-       ],
-       "cikmis": []
-      },
-      {
-       "id": "k2-02-c0016",
-       "ses": "Buna karşın tanıda gecikilen ya da atlanan bir metabolik bozukluk beynin dakikalar içinde geri dönüşsüz hipoksik iskemik hasara uğramasına yol açacaktır.",
-       "ekran": "**Geri Dönüşsüz Hasar:** Atlanan metabolik tablonun nöronlarda kalıcı iskemik hasar oluşturma riski.",
-       "slayt": {
-        "sayfa": 2,
-        "satir": "% 15 SSS ait neden",
-        "madde": [
-         5,
-         3
-        ]
-       },
-       "etiketler": [
-        "gecikilen tanı",
-        "hipoksik hasar"
-       ],
-       "cikmis": []
-      }
-     ]
     }
    ]
   },
@@ -337,13 +246,72 @@
    "paragraflar": [
     {
      "id": "k2-02-p003",
-     "sayfa": 4,
-     "slayt": {
-      "sayfa": 4
-     },
+     "paragrafIndex": 1,
+     "sayfa": 3,
+     "baslik": "Bilincin Anatomik Temeli ve ARAS Ağı",
      "cumleler": [
       {
-       "id": "k2-02-c0017",
+       "id": "k2-02-c0012",
+       "ses": "Bilinç kavramını fizyolojik ve klinik olarak iki temel bileşen üzerinden ele almamız gerekir: uyanıklık ve farkındalık.",
+       "ekran": "**İki Bileşen:** Bilinç, uyanıklık düzeyi ile içerik ve farkındalık bileşenlerinden oluşur.",
+       "slayt": {
+        "sayfa": 3,
+        "satir": "Bilinç Mekanizmaları",
+        "madde": [
+         0
+        ]
+       },
+       "etiketler": [
+        "uyanıklık",
+        "farkındalık",
+        "bilinç mekanizması"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0013",
+       "ses": "Uyanıklık durumu beyin sapı retiküler ağının uyarılabilirliğini yansıtırken, bilincin içeriği ve farkındalık ise serebral korteksin yaygın fonksiyonel bütünlüğüne bağlıdır.",
+       "ekran": "**Anatomik Temel:** Uyanıklık beyin sapı retiküler yapısına, farkındalık ise serebral kortekse dayanır.",
+       "slayt": {
+        "sayfa": 3,
+        "satir": "Bilinç Mekanizmaları",
+        "madde": [
+         0
+        ]
+       },
+       "etiketler": [
+        "retiküler formasyon",
+        "serebral korteks"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0014",
+       "ses": "Bir hastada koma tablosunun gelişebilmesi için ya beyin sapındaki uyanıklık merkezlerinin ya da her iki serebral hemisferin birden işlevini kaybetmesi şarttır.",
+       "ekran": "**Koma Koşulu:** Beyin sapı uyanıklık merkezleri veya her iki serebral hemisfer birlikte hasarlanmalıdır.",
+       "slayt": {
+        "sayfa": 3,
+        "satir": "ve",
+        "madde": [
+         0
+        ]
+       },
+       "etiketler": [
+        "koma patofizyolojisi",
+        "bilateral hemisfer hasarı"
+       ],
+       "cikmis": []
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p004",
+     "paragrafIndex": 2,
+     "sayfa": 4,
+     "baslik": "Bilincin Anatomik Temeli ve ARAS Ağı",
+     "cumleler": [
+      {
+       "id": "k2-02-c0015",
        "ses": "Bilincin nöroanatomik ve fizyolojik mekanizmalarını anlayabilmek için uyanıklığı sağlayan subkortikal ağları kavramak şarttır.",
        "ekran": "**Nöroanatomik Temel:** Uyanıklığı sağlayan subkortikal ağların ve beyin sapı formasyonunun yapısı.",
        "slayt": {
@@ -361,7 +329,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0018",
+       "id": "k2-02-c0016",
        "ses": "Uyanıklık durumunu ve uyarılabilirliği başlatan ve kesintisiz sürdüren en temel nöral ağ asendan retiküler aktive edici sistemdir.",
        "ekran": "**ARAS Ağı:** Uyanıklık ve uyarılabilirliği sağlayan asendan retiküler aktive edici sistem.",
        "slayt": {
@@ -379,7 +347,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0019",
+       "id": "k2-02-c0017",
        "ses": "Bu karmaşık retiküler formasyon ağı rostral ponstan başlayarak mezensefalonun santral tegmental bölgesine kadar uzanır.",
        "ekran": "**Anatomik Boyut:** Rostral ponstan mezensefalon santral tegmentumuna uzanan formasyon.",
        "slayt": {
@@ -397,7 +365,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0020",
+       "id": "k2-02-c0018",
        "ses": "Retiküler nöronlardan kaynaklanan eksitatör uyarılar santral tegmental fasikül aracılığıyla yukarı doğru iletilir.",
        "ekran": "**İletim Yolu:** Santral tegmental fasikül üzerinden üst merkezlere eksitatör sinyal iletimi.",
        "slayt": {
@@ -415,7 +383,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0021",
+       "id": "k2-02-c0019",
        "ses": "Bu sisteme paralel olarak beyin sapından kortekse doğrudan uzanan kritik monoaminerjik afferent projeksiyonlar bulunur.",
        "ekran": "**Monoaminerjik Yollar:** Beyin sapından kortekse doğrudan uzanan monoaminerjik afferent projeksiyonlar.",
        "slayt": {
@@ -433,7 +401,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0022",
+       "id": "k2-02-c0020",
        "ses": "Bu direkt afferent sistemlerin başında serotonerjik innervasyonu sağlayan raphe nükleusları gelir.",
        "ekran": "**Serotonerjik Girdi:** Raphe nükleusundan kaynaklanan yaygın serotonerjik projeksiyonlar.",
        "slayt": {
@@ -451,7 +419,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0023",
+       "id": "k2-02-c0021",
        "ses": "Bir diğer hayati merkez ise tüm santral sinir sistemine yaygın noradrenerjik lifler gönderen lokus seruleus nükleusudur.",
        "ekran": "**Noradrenerjik Merkez:** Lokus seruleustan kaynaklanan yaygın noradrenerjik projeksiyonlar.",
        "slayt": {
@@ -469,7 +437,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0024",
+       "id": "k2-02-c0022",
        "ses": "Ayrıca uyanıklık ve otonomik entegrasyonda rol oynayan parabrakialis nükleusu da bu afferent aktivasyon ağının vazgeçilmez bir parçasıdır.",
        "ekran": "**Parabrakialis Rolü:** Parabrakialis nükleusunun uyanıklık ve aktivasyon entegrasyonundaki görevi.",
        "slayt": {
@@ -489,14 +457,13 @@
      ]
     },
     {
-     "id": "k2-02-p004",
+     "id": "k2-02-p005",
+     "paragrafIndex": 3,
      "sayfa": 5,
-     "slayt": {
-      "sayfa": 5
-     },
+     "baslik": "Bilincin Anatomik Temeli ve ARAS Ağı",
      "cumleler": [
       {
-       "id": "k2-02-c0025",
+       "id": "k2-02-c0023",
        "ses": "Normal uyku uyanıklık döngüsü ve çevresel uyarılabilirlik rostral pons ve mezensefalondaki santral gri cevherden doğan eksitatör aktivitenin üst merkezlere eksiksiz ulaşmasına bağlıdır.",
        "ekran": "**Eksitatör İletim:** Santral gri cevherden doğan aktivitenin üst beyin merkezlerine eksiksiz ulaşımı.",
        "slayt": {
@@ -514,7 +481,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0026",
+       "id": "k2-02-c0024",
        "ses": "Asendan retiküler aktive edici sistemden çıkan bu eksitatör lifler ilk olarak talamusun intralaminar ve sentromedyan nükleuslarına projekte olur.",
        "ekran": "**Talamik Nükleuslar:** ARAS liflerinin talamusun intralaminar ve sentromedyan nükleuslarına projeksiyonu.",
        "slayt": {
@@ -533,7 +500,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0027",
+       "id": "k2-02-c0025",
        "ses": "Talamus gelen bu uyanıklık sinyallerini filtreleyip organize ederek serebral korteksin tüm alanlarına yaygın biçimde dağıtan ana nöral santraldir.",
        "ekran": "**Talamo-Kortikal Dağıtım:** Uyanıklık sinyallerini organize ederek tüm serebral kortekse diffüz dağıtma.",
        "slayt": {
@@ -551,7 +518,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0028",
+       "id": "k2-02-c0026",
        "ses": "Uyarılabilirlik ağı aynı zamanda bazal ön beyin hipotalamus ve korteks ile karşılıklı güçlü bağlantılar kurar.",
        "ekran": "**Karşılıklı Ağ:** Bazal ön beyin, hipotalamus ve serebral korteks arasındaki kesintisiz bağlantı bütünlüğü.",
        "slayt": {
@@ -569,7 +536,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0029",
+       "id": "k2-02-c0027",
        "ses": "Bu nedenle tam bir bilinç durumunun korunabilmesi için hem beyin sapındaki retiküler sistemin hem de her iki serebral korteksin işlevsel bütünlüğü zorunludur.",
        "ekran": "**İşlevsel Bütünlük:** Retiküler sistem ile bilateral korteksin eş zamanlı işlevsel bütünlük şartı.",
        "slayt": {
@@ -587,7 +554,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0030",
+       "id": "k2-02-c0028",
        "ses": "Tek taraflı serebral hemisferde gelişen küçük ve sınırlı bir lezyon karşı hemisfer ve beyin sapı sağlamsa hastada koma oluşturmaz.",
        "ekran": "**Tek Taraflı Lezyon:** Tek taraflı kortikal lezyonun karşı hemisfer sağlamsa komaya yol açmaması.",
        "slayt": {
@@ -605,7 +572,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0031",
+       "id": "k2-02-c0029",
        "ses": "Bir hastada koma gelişebilmesi için ya beyin sapındaki retiküler sistemin doğrudan hasarlanması ya da her iki serebral hemisferin yaygın biçimde baskılanması gerekir.",
        "ekran": "**Koma Mekanizması:** Komaya gidiş için ya doğrudan retiküler hasar ya da her iki hemisferin yaygın depresyonu.",
        "slayt": {
@@ -623,7 +590,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0032",
+       "id": "k2-02-c0030",
        "ses": "Transtentoryal herniasyonlar ise tek taraflı bir kitlenin beyin sapına bası yapması sonucu retiküler sistemi ezerek komaya yol açarlar.",
        "ekran": "**Herniasyon Basısı:** Transtentoryal herniasyonun beyin sapını ezerek retiküler sistemi devre dışı bırakması.",
        "slayt": {
@@ -650,14 +617,13 @@
    "baslik": "Bilinç Düzeyleri ve Terminoloji",
    "paragraflar": [
     {
-     "id": "k2-02-p005",
+     "id": "k2-02-p006",
+     "paragrafIndex": 1,
      "sayfa": 6,
-     "slayt": {
-      "sayfa": 6
-     },
+     "baslik": "Bilinç Düzeyleri ve Terminoloji",
      "cumleler": [
       {
-       "id": "k2-02-c0033",
+       "id": "k2-02-c0031",
        "ses": "Bilinç kavramı iki temel bileşenin toplamından oluşur; bunlardan ilki uyanıklık hali ikincisi ise kişinin kendisinin ve çevresinin farkında olmasıdır.",
        "ekran": "**Bilinç Bileşenleri:** Uyanıklık hali ile kendisinin ve çevresinin farkında olma süreçlerinin toplamı.",
        "slayt": {
@@ -675,7 +641,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0034",
+       "id": "k2-02-c0032",
        "ses": "Bilinci tamamen açık olan bir hasta spontan olarak uyanıktır gözleri açıktır ve çevresinde olup bitenlerin tam anlamıyla farkındadır.",
        "ekran": "**Bilinç Açık:** Spontan uyanık ve çevresinin tam farkında olan normal bilinç düzeyi.",
        "slayt": {
@@ -693,7 +659,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0035",
+       "id": "k2-02-c0033",
        "ses": "Uyanıklık ve farkındalığın derecesine göre bilinç bozuklukları klinik olarak basamak basamak sınıflandırılır.",
        "ekran": "**Klinik Derecelendirme:** Uyanıklık ve farkındalık kaybının derecesine göre basamaklı sınıflama.",
        "slayt": {
@@ -711,7 +677,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0036",
+       "id": "k2-02-c0034",
        "ses": "Bu basamakların başında gelen durum somnolans ya da diğer adıyla letarji tablosudur.",
        "ekran": "**Somnolans Giriş:** Bilinç depresyonunun erken evresi olan somnolans ve letarji tablosu.",
        "slayt": {
@@ -729,7 +695,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0037",
+       "id": "k2-02-c0035",
        "ses": "Somnolan bir hasta kendi haline bırakıldığında sürekli uykuya meyleder ancak sözel bir seslenme veya hafif bir dokunmayla çabucak uyandırılabilir.",
        "ekran": "**Somnolans Özellikleri:** Kendi haline bırakılınca uyuyan, sözel uyaranla çabuk uyandırılabilen hasta.",
        "slayt": {
@@ -747,7 +713,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0038",
+       "id": "k2-02-c0036",
        "ses": "Uyandırıldığında hastanın farkındalığı korunmuştur sorulara doğru yanıtlar verir ancak uyaran kesildiği anda tekrar derin bir uykuya dalar.",
        "ekran": "**Uyaran Kesilmesi:** Uyaran varken farkında ve yanıt veren, uyaran kesilince tekrar uykuya dönen durum.",
        "slayt": {
@@ -765,7 +731,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0039",
+       "id": "k2-02-c0037",
        "ses": "Bu bilgi çıkmış sınavda defalarca sorulmuştur: kendi haline bırakıldığında uyuyan, sözel veya sesli uyaranla çabuk uyandırılabilen, sorulara yanıt verip uyaran sonlandığında yeniden uyku haline geçen bilinç düzeyi somnolans veya letarjidir.",
        "ekran": "**Sınav Spotu (Çıkmış Soru):** Bu bilgi çıkmış sınavda sorulmuştur: Sözel uyaranla uyanıp uyaran kesilince uykuya geçen tablo letarji-somnolanstır.",
        "slayt": {
@@ -783,16 +749,11 @@
        ],
        "cikmis": [
         "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-5",
-        "past-1790877044163-968531",
-        "past-q-2025-2026_DO_NEM_3_FI_NAL_SINAVI-64",
-        "q-22_final_230619_145249-64",
-        "d3-f-206",
-        "d3-f-016",
-        "d3-f-069"
+        "past-1790877044163-968531"
        ]
       },
       {
-       "id": "k2-02-c0040",
+       "id": "k2-02-c0038",
        "ses": "Bu klinik tablo derinleşen serebral depresyonun ya da erken dönem metabolik ensefalopatilerin en tipik başlangıç göstergesidir.",
        "ekran": "**Metabolik Başlangıç:** Erken dönem metabolik ensefalopatilerin tipik başlangıç klinik tablosu.",
        "slayt": {
@@ -820,176 +781,37 @@
      ]
     },
     {
-     "id": "k2-02-p006",
-     "sayfa": 6,
-     "slayt": {
-      "sayfa": 6
-     },
-     "cumleler": [
-      {
-       "id": "k2-02-c0041",
-       "ses": "Bilinç depresyonu daha da ilerlediğinde hasta stupor evresine girer.",
-       "ekran": "**Stupor Evresi:** Bilinç baskılanmasının derinleşmesiyle ortaya çıkan stupor dönemi.",
-       "slayt": {
-        "sayfa": 6,
-        "satir": "Stupor: zorlukla uyandırılabiliyor ve farkındalık",
-        "madde": [
-         4,
-         3
-        ]
-       },
-       "etiketler": [
-        "stupor evresi",
-        "derin baskılanma"
-       ],
-       "cikmis": []
-      },
-      {
-       "id": "k2-02-c0042",
-       "ses": "Stupordaki hasta sesli uyaranlara yanıt vermez ancak kuvvetli ve tekrarlayan ağrılı uyaranlarla zorlukla uyandırılabilir.",
-       "ekran": "**Zorlukla Uyandırılma:** Sesli uyarana yanıtsız, ancak şiddetli ağrılı uyaranla zorlukla uyandırılabilme.",
-       "slayt": {
-        "sayfa": 6,
-        "satir": "Stupor: zorlukla uyandırılabiliyor ve farkındalık",
-        "madde": [
-         4,
-         3
-        ]
-       },
-       "etiketler": [
-        "ağrılı uyaran",
-        "zorlukla uyandırma"
-       ],
-       "cikmis": []
-      },
-      {
-       "id": "k2-02-c0043",
-       "ses": "Uyandırıldığında hastanın farkındalığı belirgin olarak azalmıştır anlamsız birkaç kelime mırıldanabilir ya da ağrıdan kaçınma hareketi yapar.",
-       "ekran": "**Azalmış Farkındalık:** Farkındalığın ileri derecede kısıtlanması ve amaca yönelik olmayan yanıtlar.",
-       "slayt": {
-        "sayfa": 6,
-        "satir": "azalmış",
-        "madde": [
-         5,
-         3
-        ]
-       },
-       "etiketler": [
-        "azalmış farkındalık",
-        "kaçınma hareketi"
-       ],
-       "cikmis": []
-      },
-      {
-       "id": "k2-02-c0044",
-       "ses": "Ağrılı uyaran sonlandırıldığı anda hasta derhal yeniden yanıtsızlık ve derin uyku durumuna geri döner.",
-       "ekran": "**Yanıtsızlığa Dönüş:** Ağrılı uyaran biter bitmez derhal derin yanıtsızlık durumuna geri çekilme.",
-       "slayt": {
-        "sayfa": 6,
-        "satir": "Stupor: zorlukla uyandırılabiliyor ve farkındalık",
-        "madde": [
-         4,
-         7
-        ]
-       },
-       "etiketler": [
-        "uyaran sonlandırılması",
-        "derin yanıtsızlık"
-       ],
-       "cikmis": []
-      },
-      {
-       "id": "k2-02-c0045",
-       "ses": "Koma ise bilinç depresyonunun en ileri basamağıdır komadaki hasta hiçbir sözel fiziksel ya da şiddetli ağrılı uyaranla uyandırılamaz.",
-       "ekran": "**Koma Tanımı:** Hiçbir sözel veya şiddetli ağrılı uyaranla uyandırılamayan derin bilinçsizlik hali.",
-       "slayt": {
-        "sayfa": 6,
-        "satir": "Koma: uyandırılamıyor ve farkında değil",
-        "madde": [
-         6,
-         3
-        ]
-       },
-       "etiketler": [
-        "koma tanımı",
-        "uyandırılamaz"
-       ],
-       "cikmis": []
-      },
-      {
-       "id": "k2-02-c0046",
-       "ses": "Komada hasta gözlerini açmaz anlamlı hiçbir sözel veya motor yanıt vermez ve çevresiyle olan tüm farkındalık bağı kopmuştur.",
-       "ekran": "**Göz Açmama:** Gözlerin açılmadığı ve farkındalığın tamamen kaybolduğu mutlak yanıtsızlık.",
-       "slayt": {
-        "sayfa": 6,
-        "satir": "Koma: uyandırılamıyor ve farkında değil",
-        "madde": [
-         6,
-         3
-        ]
-       },
-       "etiketler": [
-        "göz açmaz",
-        "farkındalık bağı kopmuş"
-       ],
-       "cikmis": []
-      },
-      {
-       "id": "k2-02-c0047",
-       "ses": "Stupor ile koma arasındaki bu net sınır hastanın ağrılı uyaranla dahi olsa gözünü açıp açamaması ve çevreyle minimal temas kurabilmesi üzerinden ayırt edilir.",
-       "ekran": "**Stupor-Koma Sınırı:** Ağrılı uyaranla minimal göz açma ve temas kurabilme yeteneği üzerinden ayırıcı tanı.",
-       "slayt": {
-        "sayfa": 6,
-        "satir": "Koma: uyandırılamıyor ve farkında değil",
-        "madde": [
-         6,
-         4
-        ]
-       },
-       "etiketler": [
-        "ayırıcı sınır",
-        "minimal temas"
-       ],
-       "cikmis": []
-      }
-     ]
-    },
-    {
      "id": "k2-02-p007",
+     "paragrafIndex": 2,
      "sayfa": 7,
-     "slayt": {
-      "sayfa": 7
-     },
+     "baslik": "Bilinç Düzeyleri ve Terminoloji",
      "cumleler": [
       {
-       "id": "k2-02-c0048",
-       "ses": "Bilinç bozukluklarının ayırıcı tanısında yer alan diğer klinik tablolar ve terminoloji de doğru bir muayene için eksiksiz bilinmelidir.",
-       "ekran": "**Klinik Terminoloji:** Bilinç bozukluklarında ayırıcı tanıya giren diğer kavramlar ve doğru terminoloji.",
+       "id": "k2-02-c0039",
+       "ses": "Bu bilgi çıkmış sınavda defalarca sorulmuştur: hastanın sözel uyaranla uyandırılıp uyaran kesildiğinde tekrar uyku haline geçtiği tablo letarji yani somnolanstır.",
+       "ekran": "**Letarji:** Sözel uyaranla uyanıp uyaran kesilince uykuya geçen tablo letarji yani somnolanstır.",
        "slayt": {
         "sayfa": 7,
-        "satir": "Konfüzyon",
+        "satir": "Letarji- Somnolans",
         "madde": [
-         1,
-         0
+         2
         ]
        },
        "etiketler": [
-        "klinik terminoloji",
-        "doğru muayene"
+        "çıkmış",
+        "letarji",
+        "somnolans"
        ],
        "cikmis": [
-        "4ba07c308e35",
-        "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-76"
-       ],
-       "vurgu": [
-        {
-         "metin": "Klinik Terminoloji:",
-         "tur": "cikmis"
-        }
+        "past-q-2025-2026_DO_NEM_3_FI_NAL_SINAVI-64",
+        "q-22_final_230619_145249-64",
+        "d3-f-206",
+        "d3-f-016",
+        "d3-f-069"
        ]
       },
       {
-       "id": "k2-02-c0049",
+       "id": "k2-02-c0040",
        "ses": "Konfüzyon hastanın dikkatini toplama sürdürme ve mantıklı düşünme yeteneğinin bozulduğu zaman ve yer oryantasyonunun kaybolduğu bir şaşkınlık durumudur.",
        "ekran": "**Konfüzyon:** Dikkat, mantık yürütme ve oryantasyonun bozulduğu bilişsel şaşkınlık tablosu.",
        "slayt": {
@@ -1006,7 +828,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0050",
+       "id": "k2-02-c0041",
        "ses": "Deliryum ise konfüzyona ek olarak halüsinasyonlar motor ajitasyon korku ve otonomik sistem hiperaktivitesi ile giden dalgalı akut organik beyin sendromudur.",
        "ekran": "**Deliryum:** Halüsinasyon, ajitasyon ve otonomik fırtınayla seyreden dalgalı akut organik sendrom.",
        "slayt": {
@@ -1033,7 +855,7 @@
        ]
       },
       {
-       "id": "k2-02-c0051",
+       "id": "k2-02-c0042",
        "ses": "Demans bilincin uyanıklık düzeyi korunurken bellek soyutlama ve lisan gibi kognitif işlevlerin aylar ve yıllar içinde ilerleyici kaybıdır.",
        "ekran": "**Demans:** Uyanıklık korunurken bilişsel ve entelektüel yetilerin kronik ilerleyici yıkımı.",
        "slayt": {
@@ -1051,7 +873,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0052",
+       "id": "k2-02-c0043",
        "ses": "Vejetatif durum komayı atlatan hastalarda ortaya çıkan uyku uyanıklık döngüsünün geri döndüğü fakat bilişsel farkındalığın hiç bulunmadığı tablodur.",
        "ekran": "**Vejetatif Durum:** Uyku-uyanıklık döngüsünün korunduğu ancak farkındalığın tamamen bulunmadığı tablo.",
        "slayt": {
@@ -1068,7 +890,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0053",
+       "id": "k2-02-c0044",
        "ses": "Vejetatif durumdaki hasta spontan olarak gözlerini açar uykudan uyanır gibi görünür ancak istemli hiçbir motor aktivite veya anlamlı iletişim sergileyemez.",
        "ekran": "**Spontan Göz Açma:** Gözleri açık uyanır gibi görünen fakat bilişsel iletişim kuramayan hasta.",
        "slayt": {
@@ -1085,7 +907,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0054",
+       "id": "k2-02-c0045",
        "ses": "Beyin ölümü ise beyin hemisferleri ile beyin sapının tüm işlevlerinin geri dönüşsüz olarak tamamen sonlandığı yasal ve tıbbi ölüm halidir.",
        "ekran": "**Beyin Ölümü:** Hemisferlerin ve beyin sapının tüm işlevlerinin geri dönüşsüz kaybı.",
        "slayt": {
@@ -1102,7 +924,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0055",
+       "id": "k2-02-c0046",
        "ses": "Koma taklitçilerini ve bu farklı klinik evreleri doğru adlandırmak hastaya uygulanacak tedavinin şeklini ve aciliyetini doğrudan belirler.",
        "ekran": "**Doğru Adlandırma:** Farklı klinik evrelerin doğru tanınması ile acil tedavi yönetiminin belirlenmesi.",
        "slayt": {
@@ -1130,13 +952,81 @@
    "paragraflar": [
     {
      "id": "k2-02-p008",
-     "sayfa": 9,
-     "slayt": {
-      "sayfa": 9
-     },
+     "paragrafIndex": 1,
+     "sayfa": 8,
+     "baslik": "İlk Aşamada Yaklaşım ve Acil Yönetim",
      "cumleler": [
       {
-       "id": "k2-02-c0056",
+       "id": "k2-02-c0047",
+       "ses": "Bilinç değişikliğiyle acil servise getirilen bir hastada etiyolojik nedenleri hızla iki ana grupta sınıflandırarak düşünmeliyiz.",
+       "ekran": "**Etiyolojik İki Grup:** Sistemik-metabolik difüz nedenler ile primer yapısal santral sinir sistemi lezyonları.",
+       "slayt": {
+        "sayfa": 8,
+        "satir": "Etyolojide neler",
+        "madde": [
+         0,
+         1
+        ]
+       },
+       "etiketler": [
+        "etiyolojik ayrım",
+        "sistemik nedenler",
+        "yapısal lezyonlar"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0048",
+       "ses": "İlk grup, tüm vücudu ve beyni difüz olarak etkileyen sistemik ve metabolik bozukluklardır; bunlar vakaların yaklaşık yüzde seksen beşini oluşturur.",
+       "ekran": "**Yüzde Seksen Beş:** Bilinç bozukluklarının ezici çoğunluğu metabolik ve sistemik kökenlidir.",
+       "slayt": {
+        "sayfa": 8,
+        "satir": "düşünmeliyiz?",
+        "madde": [
+         1
+        ]
+       },
+       "etiketler": [
+        "metabolik koma",
+        "toksik ensefalopati"
+       ],
+       "cikmis": [
+        "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-76"
+       ],
+       "vurgu": [
+        {
+         "metin": "Yüzde Seksen Beş:",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k2-02-c0049",
+       "ses": "İkinci grup ise kitle, kanama veya herniasyon gibi doğrudan beyin dokusunu tehdit eden primer santral sinir sistemi patolojileridir.",
+       "ekran": "**Yapısal Lezyonlar:** Kafa içi kanama, kitle ve iskemik inme acil cerrahi ve nörolojik müdahale gerektirir.",
+       "slayt": {
+        "sayfa": 8,
+        "satir": "Etyolojide neler",
+        "madde": [
+         0
+        ]
+       },
+       "etiketler": [
+        "intrakranial kanama",
+        "serebral herniasyon"
+       ],
+       "cikmis": []
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p009",
+     "paragrafIndex": 2,
+     "sayfa": 9,
+     "baslik": "İlk Aşamada Yaklaşım ve Acil Yönetim",
+     "cumleler": [
+      {
+       "id": "k2-02-c0050",
        "ses": "Acil servise bilinci kapalı bir hasta getirildiğinde hekimin ilk aşamadaki birincil amacı fokal yapısal lezyonları global metabolik problemlerden hızla ayırmaktır.",
        "ekran": "**Birincil Amaç:** Fokal yapısal SSS lezyonları ile global metabolik problemlerin hızla ayrılması.",
        "slayt": {
@@ -1154,7 +1044,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0057",
+       "id": "k2-02-c0051",
        "ses": "Çünkü fokal yapısal bir kitle veya kanama acil cerrahi dekompresyon gerektirebilirken global metabolik problemler medikal resüsitasyon ile tedavi edilir.",
        "ekran": "**Yol Ayrımı:** Fokal lezyonlarda cerrahi müdahale, metabolik olgularda ise medikal resüsitasyon önceliği.",
        "slayt": {
@@ -1172,7 +1062,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0058",
+       "id": "k2-02-c0052",
        "ses": "Bilinci kapalı hastada zaman kaybı kalıcı nöron ölümü anlamına geldiği için muayene stabilizasyon laboratuvar ve tedavi eş zamanlı yürütülmelidir.",
        "ekran": "**Eş Zamanlı Yönetim:** Muayene, stabilizasyon, laboratuvar ve tedavinin eş zamanlı yürütülmesi zorunluluğu.",
        "slayt": {
@@ -1190,7 +1080,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0059",
+       "id": "k2-02-c0053",
        "ses": "İlk saniyelerde derhal hava yolu açıklığı güvenceye alınmalı ve yeterli doku oksijenasyonu sağlamak için yüksek akımlı oksijen başlanmalıdır.",
        "ekran": "**Oksijen Desteği:** Hava yolu açıklığı ve yeterli doku oksijenasyonu için yüksek akımlı oksijen.",
        "slayt": {
@@ -1208,7 +1098,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0060",
+       "id": "k2-02-c0054",
        "ses": "Hastaya derhal iki adet geniş çaplı damar yolu açılmalı ve acil medikal infüzyonlar için güvenli venöz erişim sağlanmalıdır.",
        "ekran": "**Geniş Damar Yolu:** İki geniş periferik damar yolu açarak acil resüsitasyon hattı kurma.",
        "slayt": {
@@ -1225,7 +1115,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0061",
+       "id": "k2-02-c0055",
        "ses": "Eş zamanlı olarak elektrokardiyografi çekilmeli ve hasta kardiyak monitörizasyona bağlanarak ritim ve tansiyon kesintisiz izlenmelidir.",
        "ekran": "**Kardiyak Monitörizasyon:** Elektrokardiyografi çekimi ve kesintisiz kardiyak monitörizasyon ile ritim takibi.",
        "slayt": {
@@ -1243,7 +1133,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0062",
+       "id": "k2-02-c0056",
        "ses": "Solunum depresyonu veya yetmezliği saptanan olgularda gecikmeden endotrakeal entübasyon planlanmalı ve beyin hipoksiden korunmalıdır.",
        "ekran": "**Entübasyon Kararı:** Solunum depresyonunda gecikmeden endotrakeal entübasyonla beyni koruma.",
        "slayt": {
@@ -1261,7 +1151,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0063",
+       "id": "k2-02-c0057",
        "ses": "Bu temel kardiyorespiratuvar stabilizasyon sağlanmadan hastayı bilgisayarlı tomografi ünitesine taşımak ölümcül komplikasyonlara davetiye çıkarır.",
        "ekran": "**Radyoloji Öncesi:** Temel stabilizasyon tamamlanmadan hastayı tomografiye göndermenin ölümcül riskleri.",
        "slayt": {
@@ -1281,14 +1171,13 @@
      ]
     },
     {
-     "id": "k2-02-p009",
+     "id": "k2-02-p010",
+     "paragrafIndex": 3,
      "sayfa": 10,
-     "slayt": {
-      "sayfa": 10
-     },
+     "baslik": "İlk Aşamada Yaklaşım ve Acil Yönetim",
      "cumleler": [
       {
-       "id": "k2-02-c0064",
+       "id": "k2-02-c0058",
        "ses": "Yaşamsal fonksiyonlar desteklenirken hızlı bir nörolojik değerlendirme yapılır ve fokal bir nörolojik defisitin varlığı araştırılır.",
        "ekran": "**Hızlı Değerlendirme:** Vital destek sürerken fokal nörolojik defisit varlığının ivedilikle araştırılması.",
        "slayt": {
@@ -1306,7 +1195,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0065",
+       "id": "k2-02-c0059",
        "ses": "Tek taraflı pupiller anizokori asimetrik motor yanıtlar ya da hemisferik lateralizasyon bulguları acil cerrahi patolojiyi akla getirir.",
        "ekran": "**Lateralizasyon:** Tek taraflı anizokori ve motor asimetrinin cerrahi kitle lezyonunu düşündürmesi.",
        "slayt": {
@@ -1325,7 +1214,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0066",
+       "id": "k2-02-c0060",
        "ses": "Bu hızlı muayene sırasında yatak başında saniyeler içinde yapılması zorunlu olan en kritik laboratuvar testi stik kan şekeri ölçümüdür.",
        "ekran": "**Stik Kan Şekeri:** Yatak başında saniyeler içinde kan glukoz düzeyinin ölçülmesi gerekliliği.",
        "slayt": {
@@ -1343,7 +1232,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0067",
+       "id": "k2-02-c0061",
        "ses": "Bu bilgi çıkmış sınavda sorulmuştur: bilinç bozukluğu olan her hastanın ayırıcı tanısında ilk aşamada değerlendirilmesi gereken ve gerçek bir acil olan tetkik stik kan şekeridir; çünkü hipoglisemi hızla tedavi edilmezse beyinde dakikalar içinde kalıcı hasar ve ölüm oluşturur.",
        "ekran": "**Sınav Spotu (Çıkmış Soru):** Bu bilgi çıkmış sınavda sorulmuştur: Bilinç bozukluğunda ilk aşamada değerlendirilen gerçek acil stik kan şekeridir.",
        "slayt": {
@@ -1360,11 +1249,18 @@
         "stik glukoz"
        ],
        "cikmis": [
-        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-19"
+        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-19",
+        "3807e9b207c5"
+       ],
+       "vurgu": [
+        {
+         "metin": "Sınav Spotu (Çıkmış Soru):",
+         "tur": "cikmis"
+        }
        ]
       },
       {
-       "id": "k2-02-c0068",
+       "id": "k2-02-c0062",
        "ses": "Kan şekeri düşük saptanan hastaya damar yolu açılır açılmaz damar içi konsantre dekstroz solüsyonu ivedilikle puşe edilmelidir.",
        "ekran": "**Dekstroz Tedavisi:** Hipoglisemi saptandığında damar içi konsantre dekstrozun ivedi puşesi.",
        "slayt": {
@@ -1382,7 +1278,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0069",
+       "id": "k2-02-c0063",
        "ses": "Kronik alkolizm veya malnütrisyon öyküsü olan bireylerde ise glukoz verilmeden hemen önce damar içi yüz miligram tiamin uygulanmalıdır.",
        "ekran": "**Tiamin Önceliği:** Kronik alkolizm ve malnütrisyonda glukozdan önce yüz miligram tiamin uygulaması.",
        "slayt": {
@@ -1399,7 +1295,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0070",
+       "id": "k2-02-c0064",
        "ses": "Tiamin verilmeden glukoz yüklenmesi beynin laktik asidoza sürüklenmesine ve akut Wernicke ensefalopatisinin alevlenmesine neden olabilir.",
        "ekran": "**Wernicke Riski:** Tiaminsiz glukoz yüklemesinin akut Wernicke ensefalopatisini tetikleme mekanizması.",
        "slayt": {
@@ -1416,7 +1312,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0071",
+       "id": "k2-02-c0065",
        "ses": "Ayrıca komadaki hastada solunum depresyonu ve iğne ucu pupiller görülüyorsa opioid intoksikasyonu düşünülmeli ve tanısal amaçla damar içi nalokson uygulanmalıdır.",
        "ekran": "**Opioid Triadı ve Nalokson:** Solunum depresyonu ve iğne ucu pupilde opioid intoksikasyonu şüphesi ve nalokson.",
        "slayt": {
@@ -1443,14 +1339,13 @@
    "baslik": "Sistemik Nedenler ve Diffüz SSS Etkilenimi",
    "paragraflar": [
     {
-     "id": "k2-02-p010",
+     "id": "k2-02-p011",
+     "paragrafIndex": 1,
      "sayfa": 11,
-     "slayt": {
-      "sayfa": 11
-     },
+     "baslik": "Sistemik Nedenler ve Diffüz SSS Etkilenimi",
      "cumleler": [
       {
-       "id": "k2-02-c0072",
+       "id": "k2-02-c0066",
        "ses": "Santral sinir sistemini difüz olarak etkileyerek koma tablosu oluşturan sistemik nedenlerin başında kanda gaz ve substrat dengesizlikleri gelir.",
        "ekran": "**Sistemik Spektrum:** Beyin dokusunu diffüz etkileyen sistemik nedenler ve gaz-substrat bozuklukları.",
        "slayt": {
@@ -1467,7 +1362,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0073",
+       "id": "k2-02-c0067",
        "ses": "Derin hipoksi ve karbondioksit retansiyonu yani hiperkapni beyin dokusunda yaygın hücresel metabolizma yetmezliğine ve serebral ödeme yol açar.",
        "ekran": "**Hipoksi ve Hiperkapni:** Derin hipoksi ve hiperkapninin yaygın hücresel yetmezlik ve ödem oluşturması.",
        "slayt": {
@@ -1486,7 +1381,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0074",
+       "id": "k2-02-c0068",
        "ses": "Kan şekerindeki aşırı oynamalar hipoglisemi kadar kontrolsüz diyabet hastalarında hiperglisemi ve diyabetik ketoasidoz ile karşımıza çıkar.",
        "ekran": "**Glukoz Uçları:** Hipoglisemi kadar hiperglisemi ve diyabetik ketoasidozun da komaya yol açması.",
        "slayt": {
@@ -1504,7 +1399,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0075",
+       "id": "k2-02-c0069",
        "ses": "Elektrolit anormallikleri içinde özellikle akut gelişen hiponatremi serebral hücre içine su geçişini artırarak beyin ödemi ve status epileptikusa neden olur.",
        "ekran": "**Hiponatremi Tehlikesi:** Akut hiponatreminin hücre içine su çekerek beyin ödemi ve status epileptikus yapması.",
        "slayt": {
@@ -1522,7 +1417,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0076",
+       "id": "k2-02-c0070",
        "ses": "Kronik alkolizmde ve beslenme yetersizliğinde tiamin eksikliğine bağlı gelişen Wernicke ensefalopatisi konfüzyon ataksi ve oftalmopleji triadı ile karakterizedir.",
        "ekran": "**Wernicke Triadı:** Tiamin eksikliğine bağlı gelişen konfüzyon, ataksi ve oftalmopleji klasik triadı.",
        "slayt": {
@@ -1541,7 +1436,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0077",
+       "id": "k2-02-c0071",
        "ses": "Böbrek yetmezliğinde kanda biriken toksik nitrojen ürünleri üremik ensefalopatiye ve multifokal miyoklonuslara zemin hazırlar.",
        "ekran": "**Üremik Tablo:** Kanda biriken üre ve toksik nitrojen ürünlerinin üremik ensefalopati oluşturması.",
        "slayt": {
@@ -1559,7 +1454,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0078",
+       "id": "k2-02-c0072",
        "ses": "Şiddetli enfeksiyon ve sepsis tablolarında salınan proinflamatuvar sitokinler kan beyin bariyerini bozarak sepsis ilişkili ensefalopati tablosu oluşturur.",
        "ekran": "**Sepsis Ensefalopatisi:** Sistemik enfeksiyon ve sitokin fırtınasının kan-beyin bariyerini bozarak ensefalopati yapması.",
        "slayt": {
@@ -1578,7 +1473,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0079",
+       "id": "k2-02-c0073",
        "ses": "Ağır karaciğer yetmezliğinde kanda artan amonyak hepatik ensefalopatiye kontrolsüz kan basıncı yükselmeleri ise serebral otoregülasyon kaybıyla hipertansif ensefalopatiye yol açar.",
        "ekran": "**Organ Yetmezlikleri:** Karaciğer yetmezliğinde amonyak artışı ve hipertansif krizde serebral otoregülasyon çöküşü.",
        "slayt": {
@@ -1599,14 +1494,13 @@
      ]
     },
     {
-     "id": "k2-02-p011",
+     "id": "k2-02-p012",
+     "paragrafIndex": 2,
      "sayfa": 12,
-     "slayt": {
-      "sayfa": 12
-     },
+     "baslik": "Sistemik Nedenler ve Diffüz SSS Etkilenimi",
      "cumleler": [
       {
-       "id": "k2-02-c0080",
+       "id": "k2-02-c0074",
        "ses": "Sistemik nedenler spektrumunda endokrin bezlerin hipo ya da hiperfonksiyonu da önemli bir yer tutar.",
        "ekran": "**Endokrin Bozukluklar:** Tiroid ve adrenal bezlerin hipo veya hiperfonksiyonu kaynaklı bilinç bozuklukları.",
        "slayt": {
@@ -1624,7 +1518,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0081",
+       "id": "k2-02-c0075",
        "ses": "Ağır hipotiroidiye bağlı miksödem koması veya aşırı tiroid hormonu salınımı ile giden tiroid fırtınası komaya kadar ilerleyen bilinç değişiklikleri yapabilir.",
        "ekran": "**Tiroid Uçları:** Miksödem koması ve tiroid fırtınasının derin bilinç depresyonuna yol açması.",
        "slayt": {
@@ -1641,7 +1535,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0082",
+       "id": "k2-02-c0076",
        "ses": "Benzer biçimde adrenal yetmezlik yani Addisonian krizde gelişen şiddetli hipotansiyon ve hiponatremi hastayı hızla komaya sokabilir.",
        "ekran": "**Adrenal Kriz:** Addisonian krizde gelişen derin hipotansiyon ve hiponatreminin koma yaratması.",
        "slayt": {
@@ -1658,7 +1552,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0083",
+       "id": "k2-02-c0077",
        "ses": "Kardiyovasküler sistem yetmezliklerinde düşük kardiyak debi kardiyojenik şok yaygın hipoperfüzyon hipovolemi ve derin anemi beyin perfüzyonunu çökertir.",
        "ekran": "**Kardiyovasküler Çöküş:** Düşük kardiyak debi, kardiyojenik şok, hipoperfüzyon ve aneminin serebral iskemi yapması.",
        "slayt": {
@@ -1676,7 +1570,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0084",
+       "id": "k2-02-c0078",
        "ses": "Toksik madde maruziyetleri endüstriyel çözücüler karbonmonoksit inhalasyonu ve zehirlenmeler nörolojik aciller arasında mutlaka akla getirilmelidir.",
        "ekran": "**Toksik Maddeler:** Çözücüler, karbonmonoksit ve çevresel toksinlerin komadaki rolü.",
        "slayt": {
@@ -1694,7 +1588,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0085",
+       "id": "k2-02-c0079",
        "ses": "Kronik ilaç veya alkol kullanımının aniden kesilmesi deliryum tremens gibi ajitasyon ve otonomik fırtınayla seyreden tablolar doğurur.",
        "ekran": "**Yoksunluk Krizleri:** Alkol ve sedatif kesilmesinin deliryum tremens ve otonomik hiperaktivite yaratması.",
        "slayt": {
@@ -1709,18 +1603,10 @@
         "deliryum tremens",
         "yoksunluk krizi"
        ],
-       "cikmis": [
-        "d3-k2-ftr-005"
-       ],
-       "vurgu": [
-        {
-         "metin": "Yoksunluk Krizleri:",
-         "tur": "cikmis"
-        }
-       ]
+       "cikmis": []
       },
       {
-       "id": "k2-02-c0086",
+       "id": "k2-02-c0080",
        "ses": "Psikiyatrik ilaç etkileşimleri sonucunda gelişen serotonin sendromu klonus hipertermi ve konfüzyonla yaşamı tehdit eden bir metabolik acildir.",
        "ekran": "**Serotonin Sendromu:** Klonus, hipertermi ve konfüzyonla giden yaşamı tehdit edici ilaç reaksiyonu.",
        "slayt": {
@@ -1739,7 +1625,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0087",
+       "id": "k2-02-c0081",
        "ses": "Antipsikotik ilaçların tetiklediği nöroleptik malign sendrom ise yaygın kurşun boru rijiditesi hipertermi ve bilinç bulanıklığı ile seyreder.",
        "ekran": "**Nöroleptik Malign Sendrom:** Kurşun boru rijiditesi, hipertermi ve bilinç bulanıklığı tablosu.",
        "slayt": {
@@ -1766,14 +1652,13 @@
    "baslik": "Santral Sinir Sistemi Nedenleri ve Herniasyon Tipleri",
    "paragraflar": [
     {
-     "id": "k2-02-p012",
+     "id": "k2-02-p013",
+     "paragrafIndex": 1,
      "sayfa": 13,
-     "slayt": {
-      "sayfa": 13
-     },
+     "baslik": "Santral Sinir Sistemi Nedenleri ve Herniasyon Tipleri",
      "cumleler": [
       {
-       "id": "k2-02-c0088",
+       "id": "k2-02-c0082",
        "ses": "Bilinç bozukluklarının yüzde on beşini oluşturan primer santral sinir sistemi patolojileri yapısal ve yapısal olmayan nedenler olarak iki grupta incelenir.",
        "ekran": "**SSS Nedenleri:** Bilinç bozukluklarının yüzde on beşini oluşturan yapısal ve fonksiyonel primer beyin nedenleri.",
        "slayt": {
@@ -1791,7 +1676,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0089",
+       "id": "k2-02-c0083",
        "ses": "Yapısal santral sinir sistemi nedenlerinin başında kafa travmaları epidural hematomlar subdural kanamalar ve serebral kontüzyonlar gelir.",
        "ekran": "**Travmatik Kanamalar:** Kafa travmasına bağlı epidural hematom, subdural kanama ve serebral kontüzyonlar.",
        "slayt": {
@@ -1810,7 +1695,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0090",
+       "id": "k2-02-c0084",
        "ses": "Spontan intrakraniyal kanamalar ve anevrizma rüptürüne bağlı subaraknoid kanama ani bilinç kaybının en dramatik yapısal nedenleridir.",
        "ekran": "**Subaraknoid Kanama:** Anevrizma rüptürüne bağlı subaraknoid kanama ve spontan parankimal hematomlar.",
        "slayt": {
@@ -1828,7 +1713,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0091",
+       "id": "k2-02-c0085",
        "ses": "Büyük hemisferik iskemik inmeler ya da beyin sapını doğrudan besleyen baziler arterin akut oklüzyonu dakikalar içinde koma tablosu oluşturur.",
        "ekran": "**İskemik İnme:** Masif hemisferik enfarkt ve baziler arter tıkanıklığının hızla koma yaratması.",
        "slayt": {
@@ -1845,7 +1730,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0092",
+       "id": "k2-02-c0086",
        "ses": "İntrakraniyal yer kaplayan primer beyin tümörleri veya sistemik kanserlerin beyin metastazları kitle etkisiyle bilinci bozar.",
        "ekran": "**Yer Kaplayan Kitleler:** Primer beyin tümörleri ve metastazların oluşturduğu kitle etkisi ve ödem.",
        "slayt": {
@@ -1864,7 +1749,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0093",
+       "id": "k2-02-c0087",
        "ses": "Yapısal olmayan primer santral nedenler arasında akut bakteriyel menenjit ve viral ensefalit gibi santral sinir sistemi enfeksiyonları yer alır.",
        "ekran": "**SSS Enfeksiyonları:** Akut bakteriyel menenjit ve viral ensefalitlerin oluşturduğu yaygın inflamatuvar hasar.",
        "slayt": {
@@ -1882,7 +1767,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0094",
+       "id": "k2-02-c0088",
        "ses": "Ayrıca non konvülzif status epileptikus ya da jeneralize nöbet sonrası uzamış postiktal stupor dönemi bilinci kapalı tutabilir.",
        "ekran": "**Status Epileptikus:** Non-konvülzif status epileptikus ve uzun süren postiktal stuporun bilinci kapatması.",
        "slayt": {
@@ -1899,7 +1784,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0095",
+       "id": "k2-02-c0089",
        "ses": "İleri evre demans hastalarında araya giren basit bir enfeksiyon bile kırılgan nöronal rezervi tüketerek ani bir koma tablosu yaratabilir.",
        "ekran": "**Demans Rezervi:** İleri evre demanslı hastada araya giren sistemik enfeksiyonun ani koma oluşturabilmesi.",
        "slayt": {
@@ -1919,14 +1804,13 @@
      ]
     },
     {
-     "id": "k2-02-p013",
+     "id": "k2-02-p014",
+     "paragrafIndex": 2,
      "sayfa": 14,
-     "slayt": {
-      "sayfa": 14
-     },
+     "baslik": "Santral Sinir Sistemi Nedenleri ve Herniasyon Tipleri",
      "cumleler": [
       {
-       "id": "k2-02-c0096",
+       "id": "k2-02-c0090",
        "ses": "İntrakraniyal kitle lezyonlarında kafa kemiklerinin rijit yapısı ve falks ile tentoryum gibi dural bölmeler nedeniyle serebral herniasyon sendromları gelişir.",
        "ekran": "**Herniasyon Mekanizması:** İntrakraniyal kitle etkisi ve kafa içi rijit kompartmanlar nedeniyle doku fıtıklaşması.",
        "slayt": {
@@ -1945,7 +1829,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0097",
+       "id": "k2-02-c0091",
        "ses": "Herniasyon şemasında birinci sırada temporal lobun medialinde yer alan unkusun tentoryal çentikten aşağı fıtıklaştığı unkal herniasyon bulunur.",
        "ekran": "**Unkal Herniasyon:** Medial temporal unkusun tentoryal çentikten aşağı fıtıklaşarak beyin sapına basması.",
        "slayt": {
@@ -1962,7 +1846,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0098",
+       "id": "k2-02-c0092",
        "ses": "Unkal herniasyonda fıtıklaşan doku aynı taraftaki üçüncü kraniyal siniri ve mezensefalon pedinkülünü basarak ipsilateral midriyazis ve karşı tarafta hemipleji yapar.",
        "ekran": "**Unkal Triad:** İpsilateral dilate fikse pupil ve karşı tarafta hemipleji ile karakterize klinik tablo.",
        "slayt": {
@@ -1980,7 +1864,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0099",
+       "id": "k2-02-c0093",
        "ses": "İkinci sırada diensefalonun ve her iki serebral hemisferin tentoryal yarıktan aşağı doğru simetrik olarak yer değiştirdiği santral tentoryal herniasyon yer alır.",
        "ekran": "**Santral Herniasyon:** Diensefalon ve bilateral hemisferlerin tentoryal yarıktan simetrik kaudal yer değiştirmesi.",
        "slayt": {
@@ -1998,7 +1882,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0100",
+       "id": "k2-02-c0094",
        "ses": "Üçüncü tip singulat girusun falks serebrinin serbest kenarının altından karşı serebral hemisfer tarafına doğru kaydığı singulat ya da subfalsin herniasyondur.",
        "ekran": "**Subfalsin Herniasyon:** Singulat girusun falks serebri altından karşı tarafa itildiği subfalsin herniasyon.",
        "slayt": {
@@ -2016,7 +1900,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0101",
+       "id": "k2-02-c0095",
        "ses": "Dördüncü herniasyon tipi kafa kemiğindeki cerrahi veya travmatik bir defektten beyin dokusunun dışarı fıtıklaşması yani transkalvaryal herniasyondur.",
        "ekran": "**Transkalvaryal Tip:** Kafa kemiğindeki defektten beyin parankiminin dışarı taşması.",
        "slayt": {
@@ -2033,7 +1917,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0102",
+       "id": "k2-02-c0096",
        "ses": "Beşinci sırada arka çukurdaki kitle etkisi nedeniyle serebellumun tentoryal yarıktan yukarı mezensefalona doğru fıtıklaştığı yukarı serebellar herniasyon bulunur.",
        "ekran": "**Yukarı Herniasyon:** Arka çukur kitlesiyle serebellumun tentoryumdan yukarı mezensefalona itilmesi.",
        "slayt": {
@@ -2051,7 +1935,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0103",
+       "id": "k2-02-c0097",
        "ses": "Altıncı ve en ölümcül tip ise serebellar tonsillerin foramen magnumdan aşağı omurilik kanalına fıtıklaşarak bulbusu ve solunum merkezini ezdiği tonsiller herniasyondur.",
        "ekran": "**Tonsiller Herniasyon:** Serebellar tonsillerin foramen magnumdan aşağı kayarak bulbus ve solunum merkezini ezmesi.",
        "slayt": {
@@ -2079,14 +1963,82 @@
    "baslik": "Fizik Muayene ve Anahtar Bulgular",
    "paragraflar": [
     {
-     "id": "k2-02-p014",
-     "sayfa": 16,
-     "slayt": {
-      "sayfa": 16
-     },
+     "id": "k2-02-p015",
+     "paragrafIndex": 1,
+     "sayfa": 15,
+     "baslik": "Fizik Muayene ve Anahtar Bulgular",
      "cumleler": [
       {
-       "id": "k2-02-c0104",
+       "id": "k2-02-c0098",
+       "ses": "Bilinç bozukluğu olan hastada fizik muayene, genel tıbbi muayene ile nörolojik değerlendirmenin eş zamanlı yürütüldüğü çok dinamik bir süreçtir.",
+       "ekran": "**Muayene Stratejisi:** Genel sistemik stabilizasyon ile nörolojik muayene eş zamanlı yürütülür.",
+       "slayt": {
+        "sayfa": 15,
+        "satir": "Muayene",
+        "madde": [
+         0
+        ]
+       },
+       "etiketler": [
+        "fizik muayene",
+        "nörolojik değerlendirme"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0099",
+       "ses": "Genel muayenede vital bulgular, kafa travması izleri, cilt döküntüleri ve nefes kokusu ilk ipuçlarını sağlar.",
+       "ekran": "**İlk İpuçları:** Vital bulgular, cilt bulguları, kafa travması belirtileri ve nefes kokusu.",
+       "slayt": {
+        "sayfa": 15,
+        "satir": "Muayene",
+        "madde": [
+         0
+        ]
+       },
+       "etiketler": [
+        "vital bulgular",
+        "kafa travması",
+        "sistemik ipuçları"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0100",
+       "ses": "Nörolojik muayenede ise bilinç derinliği, beyin sapı refleksleri, pupiller ve motor yanıtlar sistematik bir sırayla kaydedilmelidir.",
+       "ekran": "**Dört Anahtar Öğe:** Bilinç düzeyi, pupiller, beyin sapı refleksleri ve motor postür.",
+       "slayt": {
+        "sayfa": 15,
+        "satir": "Muayene",
+        "madde": [
+         0
+        ]
+       },
+       "etiketler": [
+        "bilinç düzeyi",
+        "pupiller",
+        "motor yanıtlar"
+       ],
+       "cikmis": [
+        "d3-k2-nor-008"
+       ],
+       "vurgu": [
+        {
+         "metin": "Dört Anahtar Öğe:",
+         "tur": "cikmis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p016",
+     "paragrafIndex": 2,
+     "sayfa": 16,
+     "baslik": "Fizik Muayene ve Anahtar Bulgular",
+     "cumleler": [
+      {
+       "id": "k2-02-c0101",
        "ses": "Komadaki bir hastada nörolojik muayeneden önce vital bulguların titizlikle ölçülmesi tanıya giden en hızlı ipuçlarını sağlar.",
        "ekran": "**Vital Bulgular:** Nörolojik muayeneden önce vital bulguların titizlikle değerlendirilmesi kuralı.",
        "slayt": {
@@ -2104,7 +2056,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0105",
+       "id": "k2-02-c0102",
        "ses": "Solunum frekansı ve ritmi değerlendirilmeli; derin ve hızlı hiperventilasyon asidozu yüzeyel yavaş hipoventilasyon ise sedatif intoksikasyonunu düşündürmelidir.",
        "ekran": "**Solunum Frekansı:** Hızlı hiperventilasyonun asidozu, yavaş hipoventilasyonun sedatifleri düşündürmesi.",
        "slayt": {
@@ -2123,7 +2075,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0106",
+       "id": "k2-02-c0103",
        "ses": "Kan basıncında belirgin artış hipertansif ensefalopatiyi ya da kafa içi basınç artışı sendromunun bir parçası olan Cushing fenomenini gösterir.",
        "ekran": "**Hipertansiyon ve KİBAS:** Kan basıncı artışının hipertansif krizi veya Cushing refleksini işaret etmesi.",
        "slayt": {
@@ -2150,7 +2102,7 @@
        ]
       },
       {
-       "id": "k2-02-c0107",
+       "id": "k2-02-c0104",
        "ses": "Buna karşılık derin hipotansiyon varlığında kardiyojenik şok septik şok ya da adrenal kriz akla gelmelidir.",
        "ekran": "**Hipotansiyon Tablosu:** Derin hipotansiyonun kardiyojenik, septik şok veya adrenal kriz kaynaklı olması.",
        "slayt": {
@@ -2168,7 +2120,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0108",
+       "id": "k2-02-c0105",
        "ses": "Arteriyel kan gazında hipoksi ve hiperkapni varlığı doku oksijenasyonunun yetersizliğini somut olarak belgeler.",
        "ekran": "**Kan Gazı İpuçları:** Hipoksi ve karbondioksit birikiminin arteriyel kan gazıyla objektif belgelenmesi.",
        "slayt": {
@@ -2187,7 +2139,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0109",
+       "id": "k2-02-c0106",
        "ses": "Hastada yüksek ateş saptanması menenjit viral ensefalit beyin apsesi sepsis veya pnömoni gibi ciddi bir enfeksiyonu işaret eder.",
        "ekran": "**Ateşli Koma:** Yüksek ateşin menenjit, ensefalit veya sistemik sepsisi kuvvetle düşündürmesi.",
        "slayt": {
@@ -2205,14 +2157,15 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0110",
+       "id": "k2-02-c0107",
        "ses": "Hipotermi mevcudiyeti ise uzun süre soğukta kalma miksödem koması etanol veya barbitürat zehirlenmesi ve septik şokta karşımıza çıkar.",
        "ekran": "**Hipotermi Nedenleri:** Soğuğa maruziyet, miksödem, alkol-barbitürat intoksikasyonu ve septik şok.",
        "slayt": {
-        "sayfa": 17,
-        "satir": "Hastanın bilinç düzeyi ?",
+        "sayfa": 16,
+        "satir": "Vital bulgular:",
         "madde": [
-         1
+         1,
+         3
         ]
        },
        "etiketler": [
@@ -2223,15 +2176,15 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0111",
+       "id": "k2-02-c0108",
        "ses": "Muayenenin başında hastanın koma derecesi pupillerin durumu uyaranlara yanıtı ve skalpte travma izleri aranmalıdır.",
        "ekran": "**İlk Gözlem:** Koma derecesi, pupil durumu ve kafa travması bulgularının ilk anda taranması.",
        "slayt": {
-        "sayfa": 17,
-        "satir": "Fizik Muayene",
+        "sayfa": 16,
+        "satir": "Vital bulgular:",
         "madde": [
-         0,
-         1
+         1,
+         0
         ]
        },
        "etiketler": [
@@ -2244,11 +2197,74 @@
      ]
     },
     {
-     "id": "k2-02-p015",
+     "id": "k2-02-p017",
+     "paragrafIndex": 3,
+     "sayfa": 17,
+     "baslik": "Fizik Muayene ve Anahtar Bulgular",
+     "cumleler": [
+      {
+       "id": "k2-02-c0109",
+       "ses": "Fizik muayenede hekimin hızla yanıt araması gereken dört kritik soru vardır: hastanın bilinç düzeyi nedir, pupilleri ne durumdadır, uyaranlara nasıl yanıt vermektedir ve travma belirtisi var mıdır?",
+       "ekran": "**Dört Temel Soru:** Bilinç düzeyi, pupiller reaktivite, uyaran yanıtı ve kafa travması bulgusu.",
+       "slayt": {
+        "sayfa": 17,
+        "satir": "Hastanın bilinç düzeyi ?",
+        "madde": [
+         1,
+         4
+        ]
+       },
+       "etiketler": [
+        "bilinç düzeyi",
+        "pupiller reaktivite",
+        "travma bulgusu"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0110",
+       "ses": "Göz kapaklarının aralanması, pupillerin ışığa yanıtı ve simetrisi, beyin sapı basısının ilk ve en duyarlı işaretleridir.",
+       "ekran": "**Pupil İncelemesi:** Işık refleksi ve asimetri, üçüncü kraniyal sinir basısı ve herniasyon habercisidir.",
+       "slayt": {
+        "sayfa": 17,
+        "satir": "Pupilleri ?",
+        "madde": [
+         2
+        ]
+       },
+       "etiketler": [
+        "pupil reaktivitesi",
+        "okülomotor sinir",
+        "unkal herniasyon"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0111",
+       "ses": "Ağrılı uyarana verilen motor yanıt, lezyonun kortikal mi yoksa beyin sapı düzeyinde mi olduğunu dakikalar içinde ortaya koyar.",
+       "ekran": "**Motor Yanıt Düzeyi:** Kortikal lokalizasyon ile beyin sapı rijiditesinin hızlı ayırımı.",
+       "slayt": {
+        "sayfa": 17,
+        "satir": "Uyaranlara cevabı ?",
+        "madde": [
+         3,
+         1
+        ]
+       },
+       "etiketler": [
+        "ağrılı uyaran",
+        "motor yanıt",
+        "lokalizasyon"
+       ],
+       "cikmis": []
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p018",
+     "paragrafIndex": 4,
      "sayfa": 18,
-     "slayt": {
-      "sayfa": 18
-     },
+     "baslik": "Fizik Muayene ve Anahtar Bulgular",
      "cumleler": [
       {
        "id": "k2-02-c0112",
@@ -2379,11 +2395,10 @@
      ]
     },
     {
-     "id": "k2-02-p016",
+     "id": "k2-02-p019",
+     "paragrafIndex": 5,
      "sayfa": 19,
-     "slayt": {
-      "sayfa": 19
-     },
+     "baslik": "Fizik Muayene ve Anahtar Bulgular",
      "cumleler": [
       {
        "id": "k2-02-c0119",
@@ -2520,11 +2535,10 @@
    "baslik": "Koma Skorları ve Glasgow Koma Skalası",
    "paragraflar": [
     {
-     "id": "k2-02-p017",
+     "id": "k2-02-p020",
+     "paragrafIndex": 1,
      "sayfa": 20,
-     "slayt": {
-      "sayfa": 20
-     },
+     "baslik": "Koma Skorları ve Glasgow Koma Skalası",
      "cumleler": [
       {
        "id": "k2-02-c0126",
@@ -2568,9 +2582,9 @@
        "ekran": "**Diğer Skorlar:** Yoğun bakımlarda tercih edilen dörtlü test skoru ve metabolik tablolarda hepatik koma skalası.",
        "slayt": {
         "sayfa": 20,
-        "satir": "Glasgow koma skoru",
+        "satir": "Dörtlü test",
         "madde": [
-         1,
+         2,
          3
         ]
        },
@@ -2604,10 +2618,10 @@
        "ses": "Bu üç bileşen göz açma yanıtı motor yanıt ve sözel yanıttır.",
        "ekran": "**Bileşen İsimleri:** Göz açma, motor yanıt ve sözel yanıt kategorileri.",
        "slayt": {
-        "sayfa": 21,
-        "satir": "GLASGOW KOMA SKALASI",
-        "sekil": "Glasgow koma skalası giriş slaytı: göz bileşeni ve en yüksek 4 puan gösteriliyor",
+        "sayfa": 20,
+        "satir": "Glasgow koma skoru",
         "madde": [
+         1,
          0
         ]
        },
@@ -2623,9 +2637,10 @@
        "ses": "Her bir kategoride hastanın verebildiği en iyi yanıt puanlanır ve elde edilen puanlar toplanarak genel bilinç skoru oluşturulur.",
        "ekran": "**En İyi Yanıt İlkesi:** Her kategoride hastanın sergilediği en iyi cevabın puanlanması kuralı.",
        "slayt": {
-        "sayfa": 21,
-        "satir": "GLASGOW KOMA SKALASI",
+        "sayfa": 20,
+        "satir": "Glasgow koma skoru",
         "madde": [
+         1,
          0
         ]
        },
@@ -2640,9 +2655,10 @@
        "ses": "Skalanın seri olarak tekrarlanması hastanın tablosunun cerrahi bir herniasyona doğru kötüleşip kötüleşmediğini ya da tedaviye yanıt verip vermediğini gösterir.",
        "ekran": "**Seri Takip Değeri:** Skalanın tekrarlanmasıyla herniasyona gidişin veya iyileşmenin objektif izlenmesi.",
        "slayt": {
-        "sayfa": 21,
-        "satir": "GLASGOW KOMA SKALASI",
+        "sayfa": 20,
+        "satir": "Glasgow koma skoru",
         "madde": [
+         1,
          0
         ]
        },
@@ -2657,9 +2673,10 @@
        "ses": "Glasgow Koma Skalasında puanlama yapılırken her parametre ayrı ayrı kaydedilmeli ve tek bir toplam sayıya indirgenmeden önce bileşenler belirtilmelidir.",
        "ekran": "**Bileşenleri Kaydetme:** Toplam skorun yanında E, M ve V alt puanlarının açıkça belirtilmesi kuralı.",
        "slayt": {
-        "sayfa": 21,
-        "satir": "GLASGOW KOMA SKALASI",
+        "sayfa": 20,
+        "satir": "Glasgow koma skoru",
         "madde": [
+         1,
          0
         ]
        },
@@ -2672,21 +2689,82 @@
      ]
     },
     {
-     "id": "k2-02-p018",
-     "sayfa": 22,
-     "slayt": {
-      "sayfa": 22
-     },
+     "id": "k2-02-p021",
+     "paragrafIndex": 2,
+     "sayfa": 21,
+     "baslik": "Koma Skorları ve Glasgow Koma Skalası",
      "cumleler": [
       {
        "id": "k2-02-c0134",
+       "ses": "Glasgow Koma Skalası, bilincin derinliğini objektif olarak ölçmek ve klinisyenler arasında ortak bir dil oluşturmak amacıyla geliştirilmiş evrensel bir skorlama sistemidir.",
+       "ekran": "**Glasgow Skalası:** Bilinç bozukluklarının şiddetini ve prognozunu belirleyen evrensel standart.",
+       "slayt": {
+        "sayfa": 21,
+        "satir": "GLASGOW KOMA SKALASI",
+        "sekil": "Glasgow koma skalası giriş slaytı: göz bileşeni ve en yüksek 4 puan gösteriliyor",
+        "madde": [
+         0
+        ]
+       },
+       "etiketler": [
+        "Glasgow koma skalası",
+        "bilinç derinliği",
+        "prognostik skor"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0135",
+       "ses": "Skala üç temel kategoriden oluşur: göz açma yanıtı en fazla dört puan, sözel yanıt en fazla beş puan ve motor yanıt en fazla altı puan olarak puanlanır.",
+       "ekran": "**Üç Kategori:** Göz açma en fazla dört, sözel yanıt en fazla beş, motor yanıt en fazla altı puan.",
+       "slayt": {
+        "sayfa": 21,
+        "satir": "GLASGOW KOMA SKALASI",
+        "madde": [
+         0
+        ]
+       },
+       "etiketler": [
+        "göz yanıtı",
+        "sözel yanıt",
+        "motor yanıt"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0136",
+       "ses": "Alınabilecek en düşük toplam puan üç, tamamen normal ve uyanık bir hastanın alacağı en yüksek puan ise on beştir.",
+       "ekran": "**Puan Aralığı:** En düşük skor üç, tam sağlıklı uyanıklık skoru on beştir.",
+       "slayt": {
+        "sayfa": 21,
+        "satir": "GLASGOW KOMA SKALASI",
+        "madde": [
+         0
+        ]
+       },
+       "etiketler": [
+        "minimum skor üç",
+        "maksimum skor on beş"
+       ],
+       "cikmis": []
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p022",
+     "paragrafIndex": 3,
+     "sayfa": 22,
+     "baslik": "Koma Skorları ve Glasgow Koma Skalası",
+     "cumleler": [
+      {
+       "id": "k2-02-c0137",
        "ses": "Glasgow Koma Skalasının ilk bileşeni göz açma yanıtıdır ve en fazla dört puanla derecelendirilir.",
        "ekran": "**Göz Açma Bileşeni:** Skalanın ilk basamağı olan ve maksimum dört puan alan göz açma yanıtı.",
        "slayt": {
         "sayfa": 22,
-        "satir": "Eye",
+        "satir": "Spontan açık",
         "madde": [
-         1,
+         3,
          0
         ]
        },
@@ -2697,14 +2775,14 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0135",
+       "id": "k2-02-c0138",
        "ses": "Hastanın gözleri ortamda kendiliğinden açık ise ve çevreyi izliyorsa dört puan verilir.",
        "ekran": "**Spontan Göz Açma:** Gözlerin kendiliğinden açık olması ve çevreyi izlemesi dört puandır.",
        "slayt": {
         "sayfa": 22,
-        "satir": "Eye",
+        "satir": "Spontan açık",
         "madde": [
-         1
+         3
         ]
        },
        "etiketler": [
@@ -2714,14 +2792,14 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0136",
+       "id": "k2-02-c0139",
        "ses": "Hasta seslenildiğinde ya da sözel uyaran verildiğinde gözlerini açıyorsa üç puan alır.",
        "ekran": "**Sözel Uyaranla Açma:** Sözel seslenmeyle göz açma yanıtı üç puanla değerlendirilir.",
        "slayt": {
         "sayfa": 22,
-        "satir": "Eye",
+        "satir": "Verbal uyaranla",
         "madde": [
-         1
+         3
         ]
        },
        "etiketler": [
@@ -2731,14 +2809,13 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0137",
+       "id": "k2-02-c0140",
        "ses": "Hasta yalnızca tırnak yatağına ya da supraorbital bölgeye uygulanan ağrılı uyaranla gözlerini açıyorsa iki puanla değerlendirilir.",
        "ekran": "**Ağrılı Uyaranla Açma:** Yalnızca ağrılı uyaran verildiğinde göz açabilme iki puandır.",
        "slayt": {
         "sayfa": 22,
-        "satir": "Eye",
+        "satir": "Ağrılı uyaranla",
         "madde": [
-         1,
          3
         ]
        },
@@ -2749,14 +2826,13 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0138",
+       "id": "k2-02-c0141",
        "ses": "Şiddetli ağrılı uyaranlara rağmen hiçbir şekilde göz açma yanıtı alınamıyorsa bir puan verilir.",
        "ekran": "**Göz Açmama:** Hiçbir uyarana göz açılmaması durumunda verilen taban bir puan.",
        "slayt": {
-        "sayfa": 23,
-        "satir": "Movement",
+        "sayfa": 22,
+        "satir": "Açmıyor",
         "madde": [
-         1,
          3
         ]
        },
@@ -2767,14 +2843,14 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0139",
+       "id": "k2-02-c0142",
        "ses": "Skalanın sözel yanıt bileşeni ise en fazla beş puandır; hasta zaman yer ve kişi oryantasyonuna sahip akıcı konuşuyorsa beş puan alır.",
        "ekran": "**Sözel Oryantasyon:** Zaman, yer ve kişi oryantasyonunun tam olması beş tam puandır.",
        "slayt": {
-        "sayfa": 23,
-        "satir": "Movement",
+        "sayfa": 22,
+        "satir": "Spontan açık",
         "madde": [
-         1,
+         3,
          0
         ]
        },
@@ -2785,14 +2861,14 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0140",
+       "id": "k2-02-c0143",
        "ses": "Sorulara mantıklı ancak dezoryante ve konfüze yanıtlar veriyorsa dört puan bağlamsız uygunsuz kelimeler kullanıyorsa üç puan verilir.",
        "ekran": "**Dezoryante ve Uygunsuz:** Dezoryante konuşma dört puan, anlamsız kelimeler çıkarma üç puandır.",
        "slayt": {
-        "sayfa": 23,
-        "satir": "Movement",
+        "sayfa": 22,
+        "satir": "Verbal uyaranla",
         "madde": [
-         1
+         3
         ]
        },
        "etiketler": [
@@ -2802,14 +2878,14 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0141",
+       "id": "k2-02-c0144",
        "ses": "Anlaşılır hiçbir kelime çıkarmayıp yalnızca inilti ve homurtu sesleri sergiliyorsa iki puan hiçbir sözel ses çıkaramıyorsa bir puan olarak kaydedilir.",
        "ekran": "**Homurtu ve Yanıtsızlık:** Anlamsız homurtu sesleri iki puan, tam sözel yanıtsızlık bir puandır.",
        "slayt": {
-        "sayfa": 23,
-        "satir": "Movement",
+        "sayfa": 22,
+        "satir": "Açmıyor",
         "madde": [
-         1
+         3
         ]
        },
        "etiketler": [
@@ -2821,14 +2897,74 @@
      ]
     },
     {
-     "id": "k2-02-p019",
-     "sayfa": 24,
-     "slayt": {
-      "sayfa": 24
-     },
+     "id": "k2-02-p023",
+     "paragrafIndex": 4,
+     "sayfa": 23,
+     "baslik": "Koma Skorları ve Glasgow Koma Skalası",
      "cumleler": [
       {
-       "id": "k2-02-c0142",
+       "id": "k2-02-c0145",
+       "ses": "Glasgow skalasında motor yanıt altı puan üzerinden değerlendirilir ve hastanın santral sinir sistemi fonksiyonu hakkında en güvenilir prognostik bilgiyi sunar.",
+       "ekran": "**Motor Skorlama:** Altı basamaklı motor yanıt en güçlü nörolojik prognostik göstergedir.",
+       "slayt": {
+        "sayfa": 23,
+        "satir": "Movement",
+        "madde": [
+         1,
+         0
+        ]
+       },
+       "etiketler": [
+        "motor yanıt",
+        "Glasgow skalası"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0146",
+       "ses": "Hasta basit sözlü emirlere eksiksiz uyabiliyorsa, örneğin elini sıkıp bırakabiliyorsa motor yanıta tam puan olan altı puan verilir.",
+       "ekran": "**Emirlere Uyma:** Basit sözlü komutları yerine getirme tam puan olan altı puandır.",
+       "slayt": {
+        "sayfa": 23,
+        "satir": "Movement",
+        "madde": [
+         1
+        ]
+       },
+       "etiketler": [
+        "emirlere uyma",
+        "motor skor altı"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0147",
+       "ses": "Emirlere uymayan ancak supraorbital çentik veya tırnak yatağına uygulanan ağrılı uyaranı eliyle çene hizasının üzerine çıkarak uzaklaştıran hastada yanıt ağrıyı lokalize etmedir ve beş puan olarak kaydedilir.",
+       "ekran": "**Ağrıyı Lokalize Etme:** Ağrılı uyarana karşı eli çene üzerine kaldırıp uzaklaştırma beş puandır.",
+       "slayt": {
+        "sayfa": 23,
+        "satir": "Movement",
+        "madde": [
+         1,
+         3
+        ]
+       },
+       "etiketler": [
+        "ağrıyı lokalize etme",
+        "motor skor beş"
+       ],
+       "cikmis": []
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p024",
+     "paragrafIndex": 5,
+     "sayfa": 24,
+     "baslik": "Koma Skorları ve Glasgow Koma Skalası",
+     "cumleler": [
+      {
+       "id": "k2-02-c0148",
        "ses": "Skalanın üçüncü ve prognoz açısından en belirleyici bileşeni motor yanıttır ve en fazla altı puanla değerlendirilir.",
        "ekran": "**Motor Bileşen:** Prognozu en güçlü yansıtan ve maksimum altı puan alan motor yanıt skalası.",
        "slayt": {
@@ -2848,13 +2984,12 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0143",
+       "id": "k2-02-c0149",
        "ses": "Hasta hekimin sözel emrine uyarak elini kaldırıyor veya parmaklarını sıkıyorsa tam puan olan altı puan alır.",
        "ekran": "**Emre Uyma:** Sözel komutlara eksiksiz uyulması motor tam puan olan altı puandır.",
        "slayt": {
         "sayfa": 24,
         "satir": "Dekortike",
-        "resim": 0,
         "madde": [
          4
         ]
@@ -2866,7 +3001,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0144",
+       "id": "k2-02-c0150",
        "ses": "Ağrılı uyarana karşı elini köprücük kemiğinin üzerine çıkararak ağrı kaynağını uzaklaştırmaya çalışıyorsa ağrıyı lokalize etme olarak beş puan verilir.",
        "ekran": "**Ağrıyı Lokalize Etme:** Ağrı kaynağını saptayıp uzaklaştırma hareketi beş puandır.",
        "slayt": {
@@ -2884,7 +3019,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0145",
+       "id": "k2-02-c0151",
        "ses": "Ağrı verilen ekstremiteyi hızla geri çekerek kaçınma refleksi gösteriyorsa normal fleksör yanıt olarak dört puan alır.",
        "ekran": "**Fleksör Kaçınma:** Ağrılı ekstremiteyi hızla geri çekme kaçınma hareketi dört puandır.",
        "slayt": {
@@ -2901,17 +3036,15 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0146",
+       "id": "k2-02-c0152",
        "ses": "Anormal fleksör postür sergileyen yani dirsekte fleksiyon addüksiyon ve yumrukları göğse çekme hareketi yapan hastaya dekortike rijidite olarak üç puan verilir.",
        "ekran": "**Dekortike Rijidite:** Üst ekstremitede fleksiyon ve addüksiyon gösteren dekortike postür üç puandır.",
        "slayt": {
-        "sayfa": 26,
+        "sayfa": 24,
         "satir": "Dekortike",
-        "sekil": "Glasgow motor yanıt maddeleri yanında dekortike ve deserebre postür çizimi; postür farkı motor puanı belirler",
         "madde": [
          4
-        ],
-        "resim": 0
+        ]
        },
        "etiketler": [
         "anormal fleksör postür",
@@ -2920,11 +3053,11 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0147",
+       "id": "k2-02-c0153",
        "ses": "Anormal ekstansör postür sergileyen yani kollar ve bacaklarda ekstansiyon içe pronasyon ve rijidite gösteren hastaya deserebre yanıt olarak iki puan verilir.",
        "ekran": "**Deserebre Rijidite:** Ekstansiyon ve içe pronasyon gösteren deserebre postür iki puandır.",
        "slayt": {
-        "sayfa": 26,
+        "sayfa": 24,
         "satir": "Dekortike",
         "madde": [
          4
@@ -2937,11 +3070,11 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0148",
+       "id": "k2-02-c0154",
        "ses": "Şiddetli ağrılı uyaranlara karşı hiçbir motor hareket veya kas tonusu gösteremeyen flask hastaya bir puan verilir.",
        "ekran": "**Flask Yanıtsızlık:** Hiçbir motor hareket gösteremeyen flask kas tablosu bir puandır.",
        "slayt": {
-        "sayfa": 26,
+        "sayfa": 24,
         "satir": "Dekortike",
         "madde": [
          4,
@@ -2955,11 +3088,11 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0149",
+       "id": "k2-02-c0155",
        "ses": "Bu bilgi çıkmış sınavda sorulmuştur: ağrılı uyaranla gözlerini açıp iki puan alan, üst ekstremitede dirsek fleksiyonuyla dekortike yanıt sergileyip üç puan alan ve anlamsız sesler çıkarıp iki puan alan bir hastanın Glasgow Koma Skalası skoru yedidir.",
        "ekran": "**Sınav Spotu (Çıkmış Soru):** Bu bilgi çıkmış sınavda sorulmuştur: E2, M3 dekortike ve V2 sesler çıkaran hastanın toplam Glasgow skoru yedidir.",
        "slayt": {
-        "sayfa": 26,
+        "sayfa": 24,
         "satir": "Dekortike",
         "madde": [
          4,
@@ -2978,23 +3111,210 @@
      ]
     },
     {
-     "id": "k2-02-p020",
-     "sayfa": 28,
-     "slayt": {
-      "sayfa": 28
-     },
+     "id": "k2-02-p025",
+     "paragrafIndex": 6,
+     "sayfa": 25,
+     "baslik": "Koma Skorları ve Glasgow Koma Skalası",
      "cumleler": [
       {
-       "id": "k2-02-c0150",
+       "id": "k2-02-c0156",
+       "ses": "Motor değerlendirmede ağrılı uyarana karşı anormal ekstansiyon yanıtı alınması deserebre postür olarak adlandırılır ve skalada iki puanla derecelendirilir.",
+       "ekran": "**Deserebre Yanıt:** Ağrılı uyarana karşı ekstremitelerde anormal ekstansiyon iki puandır.",
+       "slayt": {
+        "sayfa": 25,
+        "satir": "Movement",
+        "madde": [
+         1,
+         3
+        ]
+       },
+       "etiketler": [
+        "deserebre postür",
+        "anormal ekstansiyon",
+        "motor skor iki"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0157",
+       "ses": "Deserebre yanıtta hasta kollarını adduksiyona getirir, dirseklerini ekstansiyona zorlar, ön kolu içe doğru pronasyona çevirir ve bacaklarını sertçe ekstansiyonda tutar.",
+       "ekran": "**Deserebre Postür:** Kollar içe rotasyon ve ekstansiyonda, bacaklar rijit ekstansiyondadır.",
+       "slayt": {
+        "sayfa": 25,
+        "satir": "Movement",
+        "madde": [
+         1,
+         4
+        ]
+       },
+       "etiketler": [
+        "ekstansiyon rijiditesi",
+        "pronasyon"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0158",
+       "ses": "Bu klinik tablo, lezyonun mezensefalonda kırmızı çekirdeğin alt seviyesine veya üst ponsa indiğini ve kortikospinal ile rubrospinal inhibisyonun tamamen kalktığını gösterir.",
+       "ekran": "**Lezyon Seviyesi:** Kırmızı çekirdeğin altı, mezensefalon-pons bileşkesi hasarını gösterir.",
+       "slayt": {
+        "sayfa": 25,
+        "satir": "Movement",
+        "madde": [
+         1
+        ]
+       },
+       "etiketler": [
+        "nükleus ruber",
+        "mezensefalon hasarı",
+        "rubrospinal yol"
+       ],
+       "cikmis": []
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p026",
+     "paragrafIndex": 7,
+     "sayfa": 26,
+     "baslik": "Koma Skorları ve Glasgow Koma Skalası",
+     "cumleler": [
+      {
+       "id": "k2-02-c0159",
+       "ses": "Dekortike postür ile deserebre postür arasındaki temel anatomik sınır mezensefalondaki nükleus ruber yani kırmızı çekirdektir.",
+       "ekran": "**Anatomik Eşik:** Nükleus ruber seviyesi dekortike ve deserebre postür arasındaki anatomik sınırdır.",
+       "slayt": {
+        "sayfa": 26,
+        "satir": "Movement",
+        "sekil": "Glasgow motor yanıt maddeleri yanında dekortike ve deserebre postür çizimi; postür farkı motor puanı belirler",
+        "madde": [
+         1,
+         4
+        ],
+        "resim": 0
+       },
+       "etiketler": [
+        "nükleus ruber",
+        "dekortike deserebre ayrımı"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0160",
+       "ses": "Kırmızı çekirdeğin üzerindeki hemisferik veya talamik hasarlarda kollar fleksiyonda kalırken, kırmızı çekirdeğin altına inen beyin sapı hasarlarında kollar ekstansiyona döner.",
+       "ekran": "**Fleksiyondan Ekstansiyona:** Kırmızı çekirdek üstü fleksör, kırmızı çekirdek altı ekstansör yanıt verir.",
+       "slayt": {
+        "sayfa": 26,
+        "satir": "Movement",
+        "madde": [
+         1
+        ]
+       },
+       "etiketler": [
+        "fleksör postür",
+        "ekstansör postür"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0161",
+       "ses": "Klinik takip sırasında dekortike fleksör yanıttan deserebre ekstansör yanıta geçiş, herniasyonun aşağı doğru ilerlediğinin en somut kanıtıdır.",
+       "ekran": "**Herniasyon Progresyonu:** Fleksiyondan ekstansiyona geçiş rostrokaudal herniasyonun kesin işaretidir.",
+       "slayt": {
+        "sayfa": 26,
+        "satir": "Movement",
+        "madde": [
+         1,
+         4
+        ]
+       },
+       "etiketler": [
+        "rostrokaudal herniasyon",
+        "klinik kötüleşme"
+       ],
+       "cikmis": []
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p027",
+     "paragrafIndex": 8,
+     "sayfa": 27,
+     "baslik": "Koma Skorları ve Glasgow Koma Skalası",
+     "cumleler": [
+      {
+       "id": "k2-02-c0162",
+       "ses": "Motor değerlendirmede ağrılı uyarana karşı hiçbir kas hareketi veya çekilme görülmemesi, skalada motor yanıtın bir puan olarak kaydedilmesine yol açar.",
+       "ekran": "**Flaks Yanıtsızlık:** Ağrılı uyarana hiçbir motor yanıt alınamaması bir puan olarak skorlanır.",
+       "slayt": {
+        "sayfa": 27,
+        "satir": "Movement",
+        "madde": [
+         1,
+         3
+        ]
+       },
+       "etiketler": [
+        "flaks yanıtsızlık",
+        "motor skor bir"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0163",
+       "ses": "Flaks veya yanıtsız postür, lezyonun alt pons ve bulbus seviyesine ulaştığını ya da yaygın beyin sapı iskemisinin geliştiğini gösterir.",
+       "ekran": "**Bulber Düzey:** Alt pons ve medulla hasarı veya yaygın beyin sapı iskemisini yansıtır.",
+       "slayt": {
+        "sayfa": 27,
+        "satir": "Movement",
+        "madde": [
+         1
+        ]
+       },
+       "etiketler": [
+        "alt pons hasarı",
+        "medulla oblangata",
+        "beyin sapı iskemisi"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0164",
+       "ses": "Ayrıca derin hipotermi, sedatif ilaç intoksikasyonları ve nöromüsküler blokör ajanların varlığında da yalancı bir motor yanıtsızlık tablosu görülebilir.",
+       "ekran": "**Yalancı Yanıtsızlık:** Hipotermi, sedatif intoksikasyon ve nöromüsküler blokörler tablosu taklit edebilir.",
+       "slayt": {
+        "sayfa": 27,
+        "satir": "Movement",
+        "madde": [
+         1
+        ]
+       },
+       "etiketler": [
+        "hipotermi",
+        "sedatif intoksikasyonu",
+        "kas gevşeticiler"
+       ],
+       "cikmis": []
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p028",
+     "paragrafIndex": 9,
+     "sayfa": 28,
+     "baslik": "Koma Skorları ve Glasgow Koma Skalası",
+     "cumleler": [
+      {
+       "id": "k2-02-c0165",
        "ses": "Motor yanıtlar aynı zamanda komadaki lezyonun anatomik seviyesini doğrudan gösteren nörolojik belirteçlerdir.",
        "ekran": "**Anatomik Düzey:** Motor yanıt paternlerinin hasarın nöroanatomik seviyesini belirlemesi.",
        "slayt": {
         "sayfa": 28,
-        "satir": "Hemisferik Lezyon",
+        "satir": "Motor yanıtlar: Lezyon Lokalizasyonu",
         "sekil": "Motor yanıtlar ve lezyon lokalizasyonu: hemisferik lezyon, üst mezensefalon ve üst pontin hasarda hasta postürleri kesitlerle eşleştirilmiş",
         "madde": [
-         2,
-         1
+         1,
+         2
         ],
         "resim": 0
        },
@@ -3005,7 +3325,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0151",
+       "id": "k2-02-c0166",
        "ses": "Ağrıyı amaca yönelik lokalize edebilen motor yanıtlar serebral korteksin ve hemisferik yolların işlevsel bütünlüğünü koruduğunu gösterir.",
        "ekran": "**Hemisferik Bütünlük:** Ağrıyı lokalize edebilmenin serebral korteks işlevinin korunduğunu kanıtlaması.",
        "slayt": {
@@ -3023,15 +3343,15 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0152",
+       "id": "k2-02-c0167",
        "ses": "Dekortike rijidite kırmızı çekirdeğin yani nükleus ruberin üzerinde diensefalon veya serebral hemisfer düzeyindeki yaygın kortikospinal hasarı işaret eder.",
        "ekran": "**Dekortike Seviyesi:** Kırmızı çekirdeğin üstünde, hemisfer veya diensefalon düzeyindeki kortikospinal hasar.",
        "slayt": {
         "sayfa": 28,
-        "satir": "Hemisferik Lezyon",
+        "satir": "Üst Mezensefalon Hasarı",
         "madde": [
-         2,
-         1
+         3,
+         4
         ]
        },
        "etiketler": [
@@ -3042,15 +3362,15 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0153",
+       "id": "k2-02-c0168",
        "ses": "Deserebre rijidite ise kırmızı çekirdek ile vestibüler çekirdekler arasında mezensefalon veya üst pons düzeyindeki derin beyin sapı hasarını yansıtır ve klinik gidişatın çok daha kötü olduğunu gösterir.",
        "ekran": "**Deserebre Seviyesi:** Kırmızı çekirdek altı mezensefalon veya üst pons hasarı ve derin koma tablosu.",
        "slayt": {
         "sayfa": 28,
-        "satir": "Hemisferik Lezyon",
+        "satir": "Üst Pontin Hasar",
         "madde": [
-         2,
-         1
+         4,
+         3
         ]
        },
        "etiketler": [
@@ -3061,15 +3381,15 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0154",
+       "id": "k2-02-c0169",
        "ses": "Bu bilgi çıkmış sınavda sorulmuştur: gözleri ağrılı uyaranla açılan hasta iki puan, dezoryante konuşan hasta dört puan ve ağrıyı lokalize eden hasta beş puan alarak toplam on bir puanla hesaplanır.",
        "ekran": "**Sınav Spotu (Çıkmış Soru):** Bu bilgi çıkmış sınavda sorulmuştur: E2, V4 dezoryante ve M5 lokalize eden hastanın Glasgow koma skoru on birdir.",
        "slayt": {
-        "sayfa": 29,
-        "satir": "Verbal",
+        "sayfa": 28,
+        "satir": "Motor yanıtlar: Lezyon Lokalizasyonu",
         "madde": [
-         3,
-         1
+         1,
+         2
         ]
        },
        "etiketler": [
@@ -3082,15 +3402,15 @@
        ]
       },
       {
-       "id": "k2-02-c0155",
+       "id": "k2-02-c0170",
        "ses": "Bu bilgi çıkmış sınavda sorulmuştur: Glasgow Koma Skalası ile değerlendirilen bir hastada alınabilecek en düşük puan üç, alınabilecek en yüksek normal puan ise on beştir.",
        "ekran": "**Sınav Spotu (Çıkmış Soru):** Bu bilgi çıkmış sınavda sorulmiştir: Glasgow Koma Skalasında taban puan üç, tavan tam puan ise on beştir.",
        "slayt": {
-        "sayfa": 29,
-        "satir": "Verbal",
+        "sayfa": 28,
+        "satir": "Motor yanıtlar: Lezyon Lokalizasyonu",
         "madde": [
          1,
-         0
+         2
         ]
        },
        "etiketler": [
@@ -3104,14 +3424,14 @@
        ]
       },
       {
-       "id": "k2-02-c0156",
+       "id": "k2-02-c0171",
        "ses": "Sekiz ve altındaki Glasgow koma skoru koma durumunu tanımlar ve hava yolunu koruyamayan bu hastalarda acil endotrakeal entübasyon endikasyonudur.",
        "ekran": "**Koma Sınırı Sekiz:** Sekiz ve altı skorun koma sayılması ve endotrakeal entübasyon endikasyonu oluşturması.",
        "slayt": {
-        "sayfa": 30,
-        "satir": "5-Orien",
+        "sayfa": 28,
+        "satir": "Motor yanıtlar: Lezyon Lokalizasyonu",
         "madde": [
-         5,
+         1,
          2
         ]
        },
@@ -3122,20 +3442,149 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0157",
+       "id": "k2-02-c0172",
        "ses": "Skorun on beşten aşağıya doğru her düşüşü intrakraniyal tablonun kötüleştiğini ve ivedi görüntüleme gerektiğini klinisyene hatırlatır.",
        "ekran": "**Skor Düşüşü Uyarısı:** Skordaki her düşüşün intrakraniyal kötüleşmeyi ve acil görüntülemeyi işaret etmesi.",
        "slayt": {
-        "sayfa": 30,
-        "satir": "5-Orien",
+        "sayfa": 28,
+        "satir": "Motor yanıtlar: Lezyon Lokalizasyonu",
         "madde": [
-         5,
+         1,
          2
         ]
        },
        "etiketler": [
         "skor düşüşü",
         "ivedi görüntüleme"
+       ],
+       "cikmis": []
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p029",
+     "paragrafIndex": 10,
+     "sayfa": 29,
+     "baslik": "Koma Skorları ve Glasgow Koma Skalası",
+     "cumleler": [
+      {
+       "id": "k2-02-c0173",
+       "ses": "Glasgow skalasının sözel yanıt kategorisi beş puan üzerinden değerlendirilir ve kortikal farkındalığın en hassas göstergesidir.",
+       "ekran": "**Sözel Skorlama:** Beş basamaklı sözel yanıt kortikal farkındalığın en duyarlı ölçütüdür.",
+       "slayt": {
+        "sayfa": 29,
+        "satir": "Verbal",
+        "madde": [
+         1,
+         3
+        ]
+       },
+       "etiketler": [
+        "sözel yanıt",
+        "kortikal farkındalık"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0174",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: Glasgow Koma Skalasında alınabilecek en düşük puan üç, en yüksek uyanıklık puanı ise on beştir.",
+       "ekran": "**Skor Sınırları:** Glasgow skalasında en düşük puan üç, en yüksek uyanıklık puanı on beştir.",
+       "slayt": {
+        "sayfa": 29,
+        "satir": "Verbal",
+        "madde": [
+         1,
+         0
+        ]
+       },
+       "etiketler": [
+        "çıkmış",
+        "Glasgow Koma Skalası"
+       ],
+       "cikmis": [
+        "04c8b92b1242",
+        "0adcc53186e5"
+       ]
+      },
+      {
+       "id": "k2-02-c0175",
+       "ses": "Hasta uyanık ve konuşuyor olmasına rağmen sorulara kafası karışık, zaman veya mekânı şaşırmış yanıtlar veriyorsa yanıt konfüze olarak kabul edilir ve dört puan alır.",
+       "ekran": "**Konfüze Konuşma:** Zaman ve mekân oryantasyonu bozuk kafası karışık yanıtlar dört puandır.",
+       "slayt": {
+        "sayfa": 29,
+        "satir": "Verbal",
+        "madde": [
+         1,
+         3
+        ]
+       },
+       "etiketler": [
+        "konfüzyon",
+        "sözel skor dört"
+       ],
+       "cikmis": []
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p030",
+     "paragrafIndex": 11,
+     "sayfa": 30,
+     "baslik": "Koma Skorları ve Glasgow Koma Skalası",
+     "cumleler": [
+      {
+       "id": "k2-02-c0176",
+       "ses": "Sözel değerlendirmede hastanın ardışık ve anlamlı bir cümle kuramayıp yalnızca tek tük rastgele sözcükler söylemesi uygunsuz kelimeler olarak üç puanla skorlanır.",
+       "ekran": "**Uygunsuz Kelimeler:** Anlamlı cümle kuramayıp rastgele tek sözcükler söyleme üç puandır.",
+       "slayt": {
+        "sayfa": 30,
+        "satir": "Verbal",
+        "madde": [
+         1,
+         3
+        ]
+       },
+       "etiketler": [
+        "uygunsuz kelimeler",
+        "sözel skor üç"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0177",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: gözleri ağrılı uyaranla açılan, konfüze konuşan ve emirlere uyan hastanın Glasgow koma skoru toplam on ikidir.",
+       "ekran": "**Vaka Skoru:** Göz iki, sözel dört, motor altı puanla hastanın toplam Glasgow skoru on ikidir.",
+       "slayt": {
+        "sayfa": 30,
+        "satir": "Verbal",
+        "madde": [
+         3,
+         1
+        ]
+       },
+       "etiketler": [
+        "çıkmış",
+        "Glasgow vaka skoru"
+       ],
+       "cikmis": [
+        "260b60a805e9"
+       ]
+      },
+      {
+       "id": "k2-02-c0178",
+       "ses": "Hem sözlü hem de ağrılı uyarana karşı hiçbir ses çıkaramayan hasta ise sözel kategoriden en düşük skor olan bir puanı alır.",
+       "ekran": "**Sözel Yanıtsızlık:** Hiçbir sesli yanıt verememe durumu bir puanla derecelendirilir.",
+       "slayt": {
+        "sayfa": 30,
+        "satir": "Verbal",
+        "madde": [
+         3,
+         1
+        ]
+       },
+       "etiketler": [
+        "sözel yanıtsızlık",
+        "sözel skor bir"
        ],
        "cikmis": []
       }
@@ -3149,14 +3598,13 @@
    "baslik": "Beyin Sapı Refleksleri ve Pupiller",
    "paragraflar": [
     {
-     "id": "k2-02-p021",
+     "id": "k2-02-p031",
+     "paragrafIndex": 1,
      "sayfa": 31,
-     "slayt": {
-      "sayfa": 31
-     },
+     "baslik": "Beyin Sapı Refleksleri ve Pupiller",
      "cumleler": [
       {
-       "id": "k2-02-c0158",
+       "id": "k2-02-c0179",
        "ses": "Komadaki hastada nörolojik lezyonun yerini ve beyin sapının canlılığını değerlendirmek için özel refleksler kullanılır.",
        "ekran": "**Beyin Sapı Refleksleri:** Beyin sapının fonksiyonel canlılığını ve lokalizasyonunu test eden refleksler.",
        "slayt": {
@@ -3175,7 +3623,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0159",
+       "id": "k2-02-c0180",
        "ses": "Bu bilgi çıkmış sınavda defalarca sorulmuştur: komada anatomik lokalizasyon amacıyla kullanılan başlıca beyin sapı refleksleri ışık refleksi, kornea refleksi, okülosefalik refleks ve okülovestibüler reflekslerdir; yüzeyel bir spinal refleks olan kremaster refleksi beyin sapı refleksleri arasında yer almaz.",
        "ekran": "**Sınav Spotu (Çıkmış Soru):** Bu bilgi çıkmış sınavda sorulmuştur: Işık, kornea, okülosefalik ve kalorik test beyin sapı refleksidir; kremaster refleksi beyin sapı refleksi değildir.",
        "slayt": {
@@ -3198,16 +3646,16 @@
        ]
       },
       {
-       "id": "k2-02-c0160",
+       "id": "k2-02-c0181",
        "ses": "Işık refleksi afferentini optik sinir efferentini üçüncü kraniyal sinir aracılığıyla mezensefalon tektumunda tamamlar.",
        "ekran": "**Işık Refleksi Yolu:** İkinci kraniyal sinir afferenti ve üçüncü kraniyal sinir efferentiyle mezensefalik ark.",
        "slayt": {
         "sayfa": 31,
         "satir": "Komada Kullanılan Başlıca Beyin sapı",
-        "resim": 0,
         "madde": [
          0
-        ]
+        ],
+        "resim": 0
        },
        "etiketler": [
         "ışık refleksi",
@@ -3217,16 +3665,16 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0161",
+       "id": "k2-02-c0182",
        "ses": "Kornea refleksi trigeminal sinirin oftalmik dalı ile duyuyu alır ve fasiyal sinir aracılığıyla ponsta bilateral göz kırpma yanıtı oluşturur.",
        "ekran": "**Kornea Refleksi Yolu:** Beşinci sinir oftalmik dalı duyusu ve yedinci sinir motoruyla pontin refleks arkı.",
        "slayt": {
         "sayfa": 31,
         "satir": "Refleksleri",
-        "resim": 0,
         "madde": [
          0
-        ]
+        ],
+        "resim": 0
        },
        "etiketler": [
         "kornea refleksi",
@@ -3236,7 +3684,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0162",
+       "id": "k2-02-c0183",
        "ses": "Okülosefalik ve okülovestibüler refleksler ise vestibüler çekirdekler ile göz kası nükleusları arasındaki beyin sapı bağlantılarını test eder.",
        "ekran": "**Vestibüler Refleksler:** Sekizinci sinir vestibüler çekirdekleri ile ekstraoküler motor nükleuslar arası entegrasyon.",
        "slayt": {
@@ -3255,7 +3703,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0163",
+       "id": "k2-02-c0184",
        "ses": "Yutkunma ve öğürme refleksleri dokuzuncu ve onuncu kraniyal sinirlerle alt beyin sapı yani bulbus fonksiyonlarını denetler.",
        "ekran": "**Bulber Refleksler:** Dokuzuncu ve onuncu kraniyal sinirler aracılığıyla medüller fonksiyonların denetimi.",
        "slayt": {
@@ -3274,7 +3722,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0164",
+       "id": "k2-02-c0185",
        "ses": "Bu reflekslerin basamak basamak kaybolması intrakraniyal herniasyonun rostrokaudal yönde beyin sapını ezerek aşağı indiğini belgeler.",
        "ekran": "**Rostrokaudal Kayıp:** Reflekslerin yukarıdan aşağıya sırayla kaybının herniasyon ilerleyişini belgelemesi.",
        "slayt": {
@@ -3292,7 +3740,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0165",
+       "id": "k2-02-c0186",
        "ses": "Reflekslerin tamamının iki taraflı ve kalıcı olarak kaybolması ise beyin ölümü tablosunun en kesin klinik kanıtlarından biridir.",
        "ekran": "**Beyin Ölümü Kanıtı:** Beyin sapı reflekslerinin iki taraflı ve kalıcı kaybının beyin ölümünü doğrulaması.",
        "slayt": {
@@ -3312,14 +3760,13 @@
      ]
     },
     {
-     "id": "k2-02-p022",
+     "id": "k2-02-p032",
+     "paragrafIndex": 2,
      "sayfa": 32,
-     "slayt": {
-      "sayfa": 32
-     },
+     "baslik": "Beyin Sapı Refleksleri ve Pupiller",
      "cumleler": [
       {
-       "id": "k2-02-c0166",
+       "id": "k2-02-c0187",
        "ses": "Pupillerin çapı ışığa reaktivitesi ve simetrisi komadaki hastada anatomik lokalizasyon sağlayan en hassas pencerelerdir.",
        "ekran": "**Pupil Penceresi:** Pupillerin çapı, ışık yanıtı ve simetrisinin anatomik lezyon düzeyini saptamadaki hassasiyeti.",
        "slayt": {
@@ -3340,7 +3787,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0167",
+       "id": "k2-02-c0188",
        "ses": "Metabolik ensefalopatilerde ve erken diensefalik lezyonlarda pupiller genellikle küçük boyutlu yani miyotiktir ancak ışık refleksi bilateral korunmuştur.",
        "ekran": "**Metabolik ve Diensefalik:** Pupiller küçük ve reaktiftir; ışık yanıtının korunması metabolik tabloyu gösterir.",
        "slayt": {
@@ -3358,7 +3805,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0168",
+       "id": "k2-02-c0189",
        "ses": "Pretektal mezensefalon lezyonlarında pupiller geniş ışığa yanıtsız fikse kalır ve zaman zaman hippus adı verilen dalgalanmalar gösterir.",
        "ekran": "**Pretektal Pupil:** Pretektal hasarda pupiller geniş, fikse ve hippus dalgalanmaları sergiler.",
        "slayt": {
@@ -3377,7 +3824,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0169",
+       "id": "k2-02-c0190",
        "ses": "Mezensefalon tektumunun derin hasarlarında sempatik ve parasempatik innervasyon aynı anda kesildiği için pupiller orta genişlikte ve tamamen ışıksız fikse hale gelir.",
        "ekran": "**Mezensefalik Fikse:** Hem sempatik hem parasempatik liflerin kesilmesiyle orta genişlikte yanıtsız pupil.",
        "slayt": {
@@ -3395,7 +3842,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0170",
+       "id": "k2-02-c0191",
        "ses": "Pons lezyonlarında özellikle masif pons kanamalarında inen sempatik yolların iki taraflı harabiyeti sonucu iğne ucu yani pinpoint pupiller gelişir.",
        "ekran": "**Pons ve Pinpoint:** İnen sempatik liflerin iki taraflı harabiyeti sonucu ileri derecede daralmış pinpoint pupiller.",
        "slayt": {
@@ -3414,7 +3861,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0171",
+       "id": "k2-02-c0192",
        "ses": "Pinpoint pupiller ileri derecede miyotiktir ve güçlü bir ışık kaynağı ve büyüteçle incelendiğinde minimal bir ışık refleksi seçilebilir.",
        "ekran": "**Pinpoint Işık Yanıtı:** İğne ucu pupillerde büyüteç altında minimal ışık refleksinin korunabilmesi.",
        "slayt": {
@@ -3432,7 +3879,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0172",
+       "id": "k2-02-c0193",
        "ses": "Tek taraflı unkal herniasyonda ipsilateral temporal lob unkusunun üçüncü kraniyal siniri sıkıştırması sonucu o tarafta geniş ve ışıksız fikse pupil ortaya çıkar.",
        "ekran": "**Unkal Pupil (3. Sinir):** Temporal lob unkusunun üçüncü sinire basısıyla tek taraflı dilate ve fikse pupil.",
        "slayt": {
@@ -3451,13 +3898,12 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0173",
+       "id": "k2-02-c0194",
        "ses": "Anizokori ile birlikte bilinç bozukluğu saptanan bir hastada bu bulgu derhal cerrahi dekompresyon gerektiren acil bir kitle etkisi işaretidir.",
        "ekran": "**Acil Cerrahi Dekompresyon:** Anizokori ve bilinç bozukluğu birlikteliğinin acil cerrahi kitle alarmı olması.",
        "slayt": {
         "sayfa": 32,
         "satir": "III KS(unkal):",
-        "resim": 0,
         "madde": [
          8
         ]
@@ -3472,14 +3918,13 @@
      ]
     },
     {
-     "id": "k2-02-p023",
+     "id": "k2-02-p033",
+     "paragrafIndex": 3,
      "sayfa": 33,
-     "slayt": {
-      "sayfa": 33
-     },
+     "baslik": "Beyin Sapı Refleksleri ve Pupiller",
      "cumleler": [
       {
-       "id": "k2-02-c0174",
+       "id": "k2-02-c0195",
        "ses": "Pupillerin ışık yanıtı toksik maddelerden ve sistemik metabolik uç durumlardan da derinden etkilenir.",
        "ekran": "**Toksik Pupiller:** Toksik maddeler ve metabolik uç bozuklukların pupil reaktivitesini değiştirmesi.",
        "slayt": {
@@ -3497,7 +3942,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0175",
+       "id": "k2-02-c0196",
        "ses": "İki taraflı midriyatik dilate ve ışığa tamamen yanıtsız pupiller atropin skopolamin gibi antikolinerjik ilaç alımlarında izlenir.",
        "ekran": "**Antikolinerjik Midriyazis:** Atropin ve skopolamin alımında iki taraflı geniş, ışığa yanıtsız midriyatik pupiller.",
        "slayt": {
@@ -3516,7 +3961,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0176",
+       "id": "k2-02-c0197",
        "ses": "Benzer şekilde glutetimid ve yüksek doz barbitürat intoksikasyonlarında da midriyatik ve ışıksız pupiller tabloya eşlik eder.",
        "ekran": "**Barbitürat ve Glutetimid:** Glutetimid ve derin barbitürat zehirlenmesinde ışığa yanıtsız midriyazis tablosu.",
        "slayt": {
@@ -3534,7 +3979,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0177",
+       "id": "k2-02-c0198",
        "ses": "Ağır sistemik hipoksi kardiyak arrest sonrası anoksik beyin hasarı ve derin hipotermi de pupillerin paralitik dilatasyonuna yol açar.",
        "ekran": "**Anoksi ve Hipotermi:** Ağır anoksi ve derin hipoterminin iki taraflı paralitik midriyazis oluşturması.",
        "slayt": {
@@ -3553,7 +3998,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0178",
+       "id": "k2-02-c0199",
        "ses": "Buna karşılık ileri derecede miyotik ve ışıksız pupiller opiat intoksikasyonunun en patognomonik fizik muayene bulgusudur.",
        "ekran": "**Opiat Miyozisi:** İleri derecede miyotik pinpoint pupillerin opiat intoksikasyonu için tanısal değeri.",
        "slayt": {
@@ -3571,7 +4016,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0179",
+       "id": "k2-02-c0200",
        "ses": "Koma ileri derecede solunum depresyonu ve iğne ucu miyotik pupillerden oluşan bu klasik triad görüldüğünde hekim derhal damar içi nalokson hazırlamalıdır.",
        "ekran": "**Klasik Opioid Triadı:** Koma, solunum depresyonu ve miyozis triadında damar içi ivedi nalokson hazırlığı.",
        "slayt": {
@@ -3589,7 +4034,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0180",
+       "id": "k2-02-c0201",
        "ses": "Toksik pupillerin bilinmesi gereksiz acil cerrahi girişimleri engellerken spesifik farmakolojik antidotların saniyeler içinde uygulanmasını sağlar.",
        "ekran": "**Gereksiz Cerrahiden Korunma:** Toksik nedenleri doğru tanıyarak hastayı boş cerrahiden koruma ve antidot uygulama.",
        "slayt": {
@@ -3616,23 +4061,22 @@
    "baslik": "Göz Hareketleri: Okülosefalik ve Kalorik Test",
    "paragraflar": [
     {
-     "id": "k2-02-p024",
+     "id": "k2-02-p034",
+     "paragrafIndex": 1,
      "sayfa": 34,
-     "slayt": {
-      "sayfa": 34
-     },
+     "baslik": "Göz Hareketleri: Okülosefalik ve Kalorik Test",
      "cumleler": [
       {
-       "id": "k2-02-c0181",
+       "id": "k2-02-c0202",
        "ses": "Göz hareketlerinin ve okülosefalik refleksin değerlendirilmesi beyin sapı tegmentumunun işlevsel bütünlüğünü yansıtır.",
        "ekran": "**Okülosefalik Refleks:** Beyin sapı tegmentumunun ve kranial sinir entegrasyonunun okülosefalik refleksle ölçümü.",
        "slayt": {
         "sayfa": 34,
-        "satir": "Beyin sapı sağlam",
+        "satir": "Göz Hareketleri: Okülosefalik R",
         "sekil": "Okülosefalik refleks çizimi: beyin sapı sağlamken gözler başın tersine hareket ediyor",
         "madde": [
-         3,
-         0
+         0,
+         1
         ],
         "resim": 0
        },
@@ -3643,15 +4087,14 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0182",
+       "id": "k2-02-c0203",
        "ses": "Bu muayeneye başlamadan önce hastada servikal omurga travması veya kemik kırığı şüphesi mutlaka ekarte edilmelidir.",
        "ekran": "**Servikal Güvenlik:** Boyun hareketlerine başlamadan önce servikal travma şüphesinin ekarte edilmesi zorunluluğu.",
        "slayt": {
         "sayfa": 34,
-        "satir": "Beyin sapı sağlam",
-        "resim": 0,
+        "satir": "Baş 30 derecede: her iki tarafa çevrilir ve",
         "madde": [
-         3
+         1
         ]
        },
        "etiketler": [
@@ -3661,15 +4104,15 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0183",
+       "id": "k2-02-c0204",
        "ses": "Boyun güvenliği sağlandıktan sonra hastanın başı otuz derece yükseltilir göz kapakları açık tutularak baş hızla sağa ve sola çevrilir.",
        "ekran": "**Testin Uygulanışı:** Baş otuz derece fleksiyonda hızla sağa ve sola çevrilerek göz yanıtlarının izlenmesi.",
        "slayt": {
         "sayfa": 34,
-        "satir": "Beyin sapı sağlam",
+        "satir": "göz hareketleri gözlenir",
         "madde": [
-         3,
-         1
+         1,
+         0
         ]
        },
        "etiketler": [
@@ -3679,15 +4122,15 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0184",
+       "id": "k2-02-c0205",
        "ses": "Bilinci kapalı fakat beyin sapı sağlam olan bir hastada gözler başın çevrildiği yönün tam tersine doğru tonik olarak kayar ve orta hatta sabit kalır.",
        "ekran": "**Pozitif Oyuncak Bebek Gözü:** Beyin sapı sağlamsa gözlerin başın çevrildiği yönün aksine tonik kayması.",
        "slayt": {
         "sayfa": 34,
-        "satir": "Beyin sapı sağlam",
+        "satir": "Bilinç kapalı",
         "madde": [
-         3,
-         1
+         2,
+         3
         ]
        },
        "etiketler": [
@@ -3698,18 +4141,16 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0185",
+       "id": "k2-02-c0206",
        "ses": "Bu tablo oyuncak bebek gözü hareketinin pozitif olduğunu yani mezensefalon pons ve sekizinci sinir çekirdeklerinin sağlam çalıştığını gösterir.",
        "ekran": "**Sağlam Beyin Sapı:** Pozitif refleksin mezensefalon, pons ve vestibüler çekirdeklerin sağlamlığını kanıtlaması.",
        "slayt": {
-        "sayfa": 35,
-        "satir": "Beyin sapı HASARLI",
-        "sekil": "Okülosefalik refleks çizimi: beyin sapı hasarlıyken gözler başla birlikte hareket ediyor",
+        "sayfa": 34,
+        "satir": "Beyin sapı sağlam",
         "madde": [
          3,
          0
-        ],
-        "resim": 0
+        ]
        },
        "etiketler": [
         "sağlam beyin sapı",
@@ -3718,15 +4159,15 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0186",
+       "id": "k2-02-c0207",
        "ses": "Eğer beyin sapında özellikle pons tegmentumunda yapısal bir lezyon varsa okülosefalik refleks kaybolur.",
        "ekran": "**Refleks Kaybı:** Pons tegmentumu hasarında okülosefalik refleks arkının kopması ve kaybı.",
        "slayt": {
-        "sayfa": 35,
-        "satir": "Beyin sapı HASARLI",
+        "sayfa": 34,
+        "satir": "Göz Hareketleri: Okülosefalik R",
         "madde": [
-         3,
-         0
+         0,
+         1
         ]
        },
        "etiketler": [
@@ -3736,15 +4177,15 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0187",
+       "id": "k2-02-c0208",
        "ses": "Refleks kaybolduğunda gözler başın döndürüldüğü yöne doğru hareketsizce birlikte döner ve başla aynı hizada sabit kalır.",
        "ekran": "**Gözlerin Birlikte Dönmesi:** Refleks yokluğunda gözlerin başla aynı yöne sabit biçimde sürüklenmesi.",
        "slayt": {
-        "sayfa": 35,
-        "satir": "Beyin sapı HASARLI",
+        "sayfa": 34,
+        "satir": "göz hareketleri gözlenir",
         "madde": [
-         3,
-         1
+         1,
+         0
         ]
        },
        "etiketler": [
@@ -3754,12 +4195,12 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0188",
+       "id": "k2-02-c0209",
        "ses": "Okülosefalik yanıtın bilateral yokluğu komadaki hastada beyin sapı hasarının veya ileri evre rostrokaudal herniasyonun objektif bir kanıtıdır.",
        "ekran": "**Herniasyon Kanıtı:** Okülosefalik yanıt yokluğunun derin beyin sapı hasarını ve herniasyonu belgelemesi.",
        "slayt": {
-        "sayfa": 35,
-        "satir": "Beyin sapı HASARLI",
+        "sayfa": 34,
+        "satir": "Beyin sapı sağlam",
         "madde": [
          3,
          0
@@ -3774,16 +4215,78 @@
      ]
     },
     {
-     "id": "k2-02-p025",
-     "sayfa": 37,
-     "slayt": {
-      "sayfa": 37
-     },
+     "id": "k2-02-p035",
+     "paragrafIndex": 2,
+     "sayfa": 35,
+     "baslik": "Göz Hareketleri: Okülosefalik ve Kalorik Test",
      "cumleler": [
       {
-       "id": "k2-02-c0189",
-       "ses": "Okülosefalik refleksin şüpheli olduğu ya da servikal travma nedeniyle boynun hareket ettirilemediği olgularda kalorik test yani vestibülo-oküler refleks uygulanır.",
-       "ekran": "**Kalorik Test Endikasyonu:** Servikal travmalı veya şüpheli olgularda okülovestibüler kalorik testin devreye girmesi.",
+       "id": "k2-02-c0210",
+       "ses": "Komalı bir hastada başı hızla sağa veya sola çevirdiğimizde gözlerin başın dönüş yönüyle birlikte hareket etmesi, yani orta hatta sabit kalması okülosefalik refleksin kaybolduğunu gösterir.",
+       "ekran": "**Negatif Okülosefalik:** Gözlerin başla birlikte dönmesi beyin sapı hasarının kanıtıdır.",
+       "slayt": {
+        "sayfa": 35,
+        "satir": "Beyin sapı HASARLI",
+        "sekil": "Okülosefalik refleks çizimi: beyin sapı hasarlıyken gözler başla birlikte hareket ediyor",
+        "madde": [
+         3,
+         0
+        ],
+        "resim": 0
+       },
+       "etiketler": [
+        "okülosefalik refleks",
+        "bebek gözü fenomeni"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0211",
+       "ses": "Bebek gözü refleksinin negatif olması, pons ve mezensefalondaki vestibüler ve okülomotor bağlantıların hasar gördüğünün kesin bir kanıtıdır.",
+       "ekran": "**Pons ve Mezensefalon:** Vestibüler çekirdekler ve medial longitudinal fasikül hasarını belgeler.",
+       "slayt": {
+        "sayfa": 35,
+        "satir": "Beyin sapı HASARLI",
+        "madde": [
+         3,
+         0
+        ]
+       },
+       "etiketler": [
+        "medial longitudinal fasikül",
+        "pons hasarı"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0212",
+       "ses": "Bununla birlikte derin barbitürat koması, fenitoin intoksikasyonu ve bazı kas gevşeticiler de yapısal bir hasar olmadan bu refleksi geçici olarak baskılayabilir.",
+       "ekran": "**Toksik Baskılanma:** Barbitürat ve sedatif intoksikasyonları refleksi yalancı olarak yok edebilir.",
+       "slayt": {
+        "sayfa": 35,
+        "satir": "Beyin sapı HASARLI",
+        "madde": [
+         3
+        ]
+       },
+       "etiketler": [
+        "barbitürat koması",
+        "fenitoin toksisitesi"
+       ],
+       "cikmis": []
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p036",
+     "paragrafIndex": 3,
+     "sayfa": 36,
+     "baslik": "Göz Hareketleri: Okülosefalik ve Kalorik Test",
+     "cumleler": [
+      {
+       "id": "k2-02-c0213",
+       "ses": "Kalorik test veya vestibülo-oküler refleks muayenesi, özellikle servikal travma şüphesi nedeniyle başın çevrilemediği komalı hastalarda en güvenilir tanı aracıdır.",
+       "ekran": "**Vestibülo-Oküler Test:** Servikal travmada güvenle uygulanan en duyarlı beyin sapı refleks testidir.",
        "slayt": {
         "sayfa": 36,
         "satir": "Kalorik testler",
@@ -3800,9 +4303,9 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0190",
-       "ses": "Kalorik test için hastanın başı otuz derece yükseltilerek lateral semisirküler kanal vertikal pozisyona getirilir ve timpanik membran otoskopla kontrol edilir.",
-       "ekran": "**Test Hazırlığı:** Başın otuz derece yükseltilip semisirküler kanalın dikey konuma alınması ve zar kontrolü.",
+       "id": "k2-02-c0214",
+       "ses": "Test uygulanmadan önce otoskop ile dış kulak yolu mutlaka incelenmeli, buşon veya kulak zarı perforasyonu olmadığı teyit edilmelidir.",
+       "ekran": "**Otoskopik Muayene:** Zar perforasyonu ve buşon varlığı test öncesinde mutlaka dışlanmalıdır.",
        "slayt": {
         "sayfa": 36,
         "satir": "Kalorik testler",
@@ -3812,21 +4315,83 @@
         "resim": 0
        },
        "etiketler": [
+        "otoskopik muayene",
+        "timpanik membran"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0215",
+       "ses": "Hastanın başı otuz derece yukarı kaldırıldıktan sonra dış kulak yoluna yavaşça yirmi ila elli mililitre buzlu soğuk su enjekte edilir.",
+       "ekran": "**Test Protokolü:** Baş otuz derece fleksiyonda iken dış kulak yoluna buzlu soğuk su verilir.",
+       "slayt": {
+        "sayfa": 36,
+        "satir": "Kalorik testler",
+        "madde": [
+         0
+        ],
+        "resim": 0
+       },
+       "etiketler": [
+        "otuz derece fleksiyon",
+        "buzlu su"
+       ],
+       "cikmis": []
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p037",
+     "paragrafIndex": 4,
+     "sayfa": 37,
+     "baslik": "Göz Hareketleri: Okülosefalik ve Kalorik Test",
+     "cumleler": [
+      {
+       "id": "k2-02-c0216",
+       "ses": "Okülosefalik refleksin şüpheli olduğu ya da servikal travma nedeniyle boynun hareket ettirilemediği olgularda kalorik test yani vestibülo-oküler refleks uygulanır.",
+       "ekran": "**Kalorik Test Endikasyonu:** Servikal travmalı veya şüpheli olgularda okülovestibüler kalorik testin devreye girmesi.",
+       "slayt": {
+        "sayfa": 37,
+        "satir": "Vestibülo-oküler refleksler",
+        "sekil": "Vestibülo-oküler refleks çizimi: soğuk su ile gözler uyarılan kulağa doğru tonik deviasyon yapıyor",
+        "madde": [
+         0
+        ],
+        "resim": 0
+       },
+       "etiketler": [
+        "kalorik test",
+        "vestibülo-oküler refleks"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0217",
+       "ses": "Kalorik test için hastanın başı otuz derece yükseltilerek lateral semisirküler kanal vertikal pozisyona getirilir ve timpanik membran otoskopla kontrol edilir.",
+       "ekran": "**Test Hazırlığı:** Başın otuz derece yükseltilip semisirküler kanalın dikey konuma alınması ve zar kontrolü.",
+       "slayt": {
+        "sayfa": 37,
+        "satir": "Bilinç kapalı",
+        "madde": [
+         1
+        ]
+       },
+       "etiketler": [
         "lateral semisirküler kanal",
         "timpanik membran"
        ],
        "cikmis": []
       },
       {
-       "id": "k2-02-c0191",
+       "id": "k2-02-c0218",
        "ses": "Kulak zarı sağlam olan hastada dış kulak yoluna yavaşça yirmi ila elli mililitre buzlu soğuk su enjekte edilir.",
        "ekran": "**Soğuk Su İrrigasyonu:** Dış kulak yoluna yirmi-elli mililitre buzlu soğuk suyun yavaş infüzyonu.",
        "slayt": {
-        "sayfa": 36,
-        "satir": "Kalorik testler",
-        "resim": 0,
+        "sayfa": 37,
+        "satir": "Soğuk Su",
         "madde": [
-         0
+         3,
+         2
         ]
        },
        "etiketler": [
@@ -3836,18 +4401,16 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0192",
+       "id": "k2-02-c0219",
        "ses": "Bilinci kapalı fakat beyin sapı fonksiyonları sağlam bir hastada kortikal fiksasyon mekanizmaları devre dışı kaldığı için hızlı faz görülmez.",
        "ekran": "**Kortikal Hızlı Faz Yokluğu:** Komadaki hastada korteks baskılandığı için nistagmusun düzeltici hızlı fazının oluşmaması.",
        "slayt": {
         "sayfa": 37,
         "satir": "Beyin sapı sağlam",
-        "sekil": "Vestibülo-oküler refleks çizimi: soğuk su ile gözler uyarılan kulağa doğru tonik deviasyon yapıyor",
         "madde": [
          2,
          1
-        ],
-        "resim": 0
+        ]
        },
        "etiketler": [
         "kortikal fiksasyon",
@@ -3856,14 +4419,13 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0193",
+       "id": "k2-02-c0220",
        "ses": "Eksitatör endolenf akımının uyarılmasıyla her iki göz küresi yavaşça soğuk su verilen kulağın tarafına doğru tonik olarak sapar.",
        "ekran": "**Tonik Deviasyon:** Sağlam beyin sapında gözlerin soğuk su verilen kulağa doğru tonik konjuge sapması.",
        "slayt": {
         "sayfa": 37,
-        "satir": "Beyin sapı sağlam",
+        "satir": "Soğuk Su",
         "madde": [
-         2,
          3
         ]
        },
@@ -3874,7 +4436,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0194",
+       "id": "k2-02-c0221",
        "ses": "Bu tonik konjuge deviasyonun izlenmesi sekizinci sinir pontin vestibüler çekirdekler mediyal longitudinal fasikül ve okülomotor çekirdeklerin sağlamlığını kanıtlar.",
        "ekran": "**Yolun Sağlamlığı:** Sekizinci sinir, pontin nükleuslar, MLF ve motor çekirdeklerin kesintisiz sağlamlığı.",
        "slayt": {
@@ -3892,18 +4454,16 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0195",
+       "id": "k2-02-c0222",
        "ses": "Eğer alt beyin sapında veya ponsta ağır bir harabiyet varsa soğuk su irrigasyonuna rağmen gözlerde hiçbir deviasyon hareketi oluşmaz.",
        "ekran": "**Yanıtsız Kalorik:** Pons ve alt beyin sapı harabiyetinde hiçbir göz deviasyonunun ortaya çıkmaması.",
        "slayt": {
-        "sayfa": 38,
-        "satir": "Beyin sapı HASARLI",
-        "sekil": "Alt beyin sapı lezyonu çizimi: soğuk suya rağmen gözlerde hiçbir hareket görülmüyor",
+        "sayfa": 37,
+        "satir": "Bilinç kapalı",
         "madde": [
-         2,
-         3
-        ],
-        "resim": 0
+         1,
+         2
+        ]
        },
        "etiketler": [
         "yanıtsız kalorik",
@@ -3912,12 +4472,12 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0196",
+       "id": "k2-02-c0223",
        "ses": "Kalorik teste yanıtın iki taraflı olarak tamamen alınamaması beyin ölümü tanısı konulurken aranan en zorunlu klinik kriterlerden biridir.",
        "ekran": "**Beyin Ölümü Şartı:** Kalorik yanıtın bilateral tam yokluğunun beyin ölümü protokolündeki zorunlu yeri.",
        "slayt": {
-        "sayfa": 38,
-        "satir": "Beyin sapı HASARLI",
+        "sayfa": 37,
+        "satir": "Beyin sapı sağlam",
         "madde": [
          2
         ]
@@ -3929,6 +4489,76 @@
        "cikmis": []
       }
      ]
+    },
+    {
+     "id": "k2-02-p038",
+     "paragrafIndex": 5,
+     "sayfa": 38,
+     "baslik": "Göz Hareketleri: Okülosefalik ve Kalorik Test",
+     "cumleler": [
+      {
+       "id": "k2-02-c0224",
+       "ses": "Dış kulak yoluna buzlu su verilmesine rağmen göz kürelerinde hiçbir tonik deviasyon veya hareket görülmemesi kalorik yanıtın negatif olduğunu gösterir.",
+       "ekran": "**Yanıtsız Kalorik Test:** Soğuk su irrigasyonuna rağmen gözlerin hareketsiz kalması negatif yanıttır.",
+       "slayt": {
+        "sayfa": 38,
+        "satir": "Beyin sapı HASARLI",
+        "sekil": "Alt beyin sapı lezyonu çizimi: soğuk suya rağmen gözlerde hiçbir hareket görülmüyor",
+        "madde": [
+         2
+        ],
+        "resim": 0
+       },
+       "etiketler": [
+        "negatif kalorik yanıt",
+        "arefleksi"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0225",
+       "ses": "Bu yanıtsızlık tablosu, sekizinci kraniyal sinirden başlayarak vestibüler nükleuslar, medial longitudinal fasikül ve okülomotor çekirdekleri kapsayan refleks arkının koptuğunu kanıtlar.",
+       "ekran": "**Refleks Arkı Hasarı:** Sekizinci kraniyal sinir, pons ve mezensefalon bağlantılarının koptuğunu gösterir.",
+       "slayt": {
+        "sayfa": 38,
+        "satir": "Beyin sapı HASARLI",
+        "madde": [
+         2,
+         0
+        ]
+       },
+       "etiketler": [
+        "vestibulokoklear sinir",
+        "medial longitudinal fasikül"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0226",
+       "ses": "Klinik olarak alt beyin sapının, yani pons ve mezensefalon bileşkesinin ağır yapısal hasara veya herniasyon basısına uğradığını belgeler.",
+       "ekran": "**Ağır Yapısal Hasar:** Pons ve mezensefalonun geri dönüşsüz iskemik veya mekanik harabiyetidir.",
+       "slayt": {
+        "sayfa": 38,
+        "satir": "Beyin sapı HASARLI",
+        "madde": [
+         2
+        ]
+       },
+       "etiketler": [
+        "beyin sapı harabiyeti",
+        "herniasyon basısı"
+       ],
+       "cikmis": [
+        "d3-k2-ftr-005"
+       ],
+       "vurgu": [
+        {
+         "metin": "Ağır Yapısal Hasar:",
+         "tur": "cikmis"
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -3938,16 +4568,15 @@
    "baslik": "Komada Solunum Paternleri ve Rostrokaudal Düzeyler",
    "paragraflar": [
     {
-     "id": "k2-02-p026",
-     "sayfa": 40,
-     "slayt": {
-      "sayfa": 40
-     },
+     "id": "k2-02-p039",
+     "paragrafIndex": 1,
+     "sayfa": 39,
+     "baslik": "Komada Solunum Paternleri ve Rostrokaudal Düzeyler",
      "cumleler": [
       {
-       "id": "k2-02-c0197",
-       "ses": "Solunumun ritmik kontrolü serebral korteksten başlayarak diensefalon mezensefalon pons ve medullaya uzanan hiyerarşik bir ağ tarafından yürütülür.",
-       "ekran": "**Solunum Ağı:** Korteksten medullaya uzanan solunum merkezlerinin hiyerarşik organizasyonu.",
+       "id": "k2-02-c0227",
+       "ses": "Solunumun kontrolü beyin sapında yer alan özelleşmiş nöronal gruplar tarafından yürütülür ve komada solunum paterninin değişmesi lezyon seviyesini ele verir.",
+       "ekran": "**Solunum Paternleri:** Solunum merkezlerinin tutulumu lezyon seviyesini gösteren kritik göstergedir.",
        "slayt": {
         "sayfa": 39,
         "satir": "Komada solunum",
@@ -3959,14 +4588,14 @@
        },
        "etiketler": [
         "solunum kontrolü",
-        "hiyerarşik ağ"
+        "solunum paternleri"
        ],
        "cikmis": []
       },
       {
-       "id": "k2-02-c0198",
-       "ses": "Bu nedenle komadaki bir hastanın solunum paterni beyin sapı hasarının hangi anatomik seviyede bulunduğunu açıkça ortaya koyar.",
-       "ekran": "**Lokalizan Solunum:** Solunum paterninin beyin sapındaki hasar düzeyini açıkça yansıtması.",
+       "id": "k2-02-c0228",
+       "ses": "Diensefalon hasarında kortikal inhibisyon kalktığı için periyodik solunum başlarken, mezensefalon hasarında taşipne, ponsta apne nöbetleri ve bulbusta ise düzensiz solunum gelişir.",
+       "ekran": "**Rostrokaudal Hiyerarşi:** Diensefalonda periyodik, mezensefalonda taşipne, ponsta apne, bulbusta ataksi görülür.",
        "slayt": {
         "sayfa": 39,
         "satir": "Komada solunum",
@@ -3976,15 +4605,16 @@
         "resim": 0
        },
        "etiketler": [
-        "solunum paterni",
-        "anatomik seviye"
+        "Cheyne Stokes",
+        "santral nörojenik hiperventilasyon",
+        "apnöktik solunum"
        ],
        "cikmis": []
       },
       {
-       "id": "k2-02-c0199",
-       "ses": "Cheyne-Stokes solunumu periyodik olarak kreşendo tarzında derinleşip hızlanan ardından dekreşendo azalarak kısa bir apne dönemine giren solunumdur.",
-       "ekran": "**Cheyne-Stokes Solunumu:** Kreşendo tarzı derinleşip dekreşendo azalan ve apneye giren periyodik solunum.",
+       "id": "k2-02-c0229",
+       "ses": "Bu patolojik solunum şekilleri klinisyene görüntüleme cihazına ulaşmadan önce bile lezyonun anatomik koordinatını fısıldar.",
+       "ekran": "**Yatak Başı Lokalizasyon:** Solunum paterni nörogörüntüleme öncesi anatomik lezyon seviyesini belirler.",
        "slayt": {
         "sayfa": 39,
         "satir": "Komada solunum",
@@ -3994,16 +4624,23 @@
         "resim": 0
        },
        "etiketler": [
-        "Cheyne-Stokes solunumu",
-        "kreşendo dekreşendo",
-        "apne"
+        "yatak başı muayene",
+        "anatomik lokalizasyon"
        ],
        "cikmis": []
-      },
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p040",
+     "paragrafIndex": 2,
+     "sayfa": 40,
+     "baslik": "Komada Solunum Paternleri ve Rostrokaudal Düzeyler",
+     "cumleler": [
       {
-       "id": "k2-02-c0200",
-       "ses": "Bu solunum şekli bilateral derin serebral hemisfer lezyonlarında ya da diensefalik düzeydeki baskılanmalarda ve metabolik komalarda sıkça izlenir.",
-       "ekran": "**Diensefalik Lezyon:** Bilateral derin hemisfer veya diensefalon lezyonlarında Cheyne-Stokes görülmesi.",
+       "id": "k2-02-c0230",
+       "ses": "Solunumun ritmik kontrolü serebral korteksten başlayarak diensefalon mezensefalon pons ve medullaya uzanan hiyerarşik bir ağ tarafından yürütülür.",
+       "ekran": "**Solunum Ağı:** Korteksten medullaya uzanan solunum merkezlerinin hiyerarşik organizasyonu.",
        "slayt": {
         "sayfa": 40,
         "satir": "Cheyne-Stokes solunumu",
@@ -4015,20 +4652,75 @@
         "resim": 0
        },
        "etiketler": [
+        "solunum kontrolü",
+        "hiyerarşik ağ"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0231",
+       "ses": "Bu nedenle komadaki bir hastanın solunum paterni beyin sapı hasarının hangi anatomik seviyede bulunduğunu açıkça ortaya koyar.",
+       "ekran": "**Lokalizan Solunum:** Solunum paterninin beyin sapındaki hasar düzeyini açıkça yansıtması.",
+       "slayt": {
+        "sayfa": 40,
+        "satir": "Cheyne-Stokes solunumu",
+        "madde": [
+         1,
+         0
+        ]
+       },
+       "etiketler": [
+        "solunum paterni",
+        "anatomik seviye"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0232",
+       "ses": "Cheyne-Stokes solunumu periyodik olarak kreşendo tarzında derinleşip hızlanan ardından dekreşendo azalarak kısa bir apne dönemine giren solunumdur.",
+       "ekran": "**Cheyne-Stokes Solunumu:** Kreşendo tarzı derinleşip dekreşendo azalan ve apneye giren periyodik solunum.",
+       "slayt": {
+        "sayfa": 40,
+        "satir": "Cheyne-Stokes solunumu",
+        "madde": [
+         1,
+         0
+        ]
+       },
+       "etiketler": [
+        "Cheyne-Stokes solunumu",
+        "kreşendo dekreşendo",
+        "apne"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0233",
+       "ses": "Bu solunum şekli bilateral derin serebral hemisfer lezyonlarında ya da diensefalik düzeydeki baskılanmalarda ve metabolik komalarda sıkça izlenir.",
+       "ekran": "**Diensefalik Lezyon:** Bilateral derin hemisfer veya diensefalon lezyonlarında Cheyne-Stokes görülmesi.",
+       "slayt": {
+        "sayfa": 40,
+        "satir": "Cheyne-Stokes solunumu",
+        "madde": [
+         1,
+         0
+        ]
+       },
+       "etiketler": [
         "bilateral hemisfer",
         "diensefalik baskılanma"
        ],
        "cikmis": []
       },
       {
-       "id": "k2-02-c0201",
+       "id": "k2-02-c0234",
        "ses": "Santral nörojenik hiperventilasyon son derece düzenli derin ve dakikada kırkın üzerinde çok hızlı solunumla karakterizedir.",
        "ekran": "**Santral Hiperventilasyon:** Düzenli, derin ve dakikada kırkın üzerinde hızlı solunum paterni.",
        "slayt": {
         "sayfa": 40,
-        "satir": "Cheyne-Stokes solunumu",
+        "satir": "Santral nörojenik hiperventilasyon",
         "madde": [
-         1,
+         2,
          0
         ]
        },
@@ -4039,16 +4731,14 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0202",
+       "id": "k2-02-c0235",
        "ses": "Bu tablo mezensefalon ile üst pons arasındaki tegmental bölge lezyonlarında ortaya çıkar ve kanda belirgin respiratuvar alkaloz oluşturur.",
        "ekran": "**Mezensefalik Hasar:** Mezensefalon-üst pons tegmentum hasarı ve kanda gelişen respiratuvar alkaloz.",
        "slayt": {
         "sayfa": 40,
-        "satir": "Cheyne-Stokes solunumu",
-        "resim": 0,
+        "satir": "Santral nörojenik hiperventilasyon",
         "madde": [
-         1,
-         0
+         2
         ]
        },
        "etiketler": [
@@ -4058,14 +4748,14 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0203",
+       "id": "k2-02-c0236",
        "ses": "Apnestik solunum inspiryumun en zirve noktasında iki ila üç saniye süren kramp benzeri duraklamalarla kendini gösteren patolojik bir solunumdur.",
        "ekran": "**Apnestik Solunum:** İnspiryum zirvesinde iki-üç saniye süren kramp benzeri duraklamalı solunum.",
        "slayt": {
         "sayfa": 40,
-        "satir": "Cheyne-Stokes solunumu",
+        "satir": "Apnestik solunum",
         "madde": [
-         1,
+         3,
          0
         ]
        },
@@ -4076,14 +4766,14 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0204",
+       "id": "k2-02-c0237",
        "ses": "Bu apnestik duraklamalar ponsun orta veya alt tegmentumundaki solunum merkezlerinin hasar gördüğünü gösterir.",
        "ekran": "**Pontin Solunum:** Ponsun orta veya alt tegmentumundaki solunum merkezlerinin hasarlanması.",
        "slayt": {
         "sayfa": 40,
-        "satir": "Cheyne-Stokes solunumu",
+        "satir": "Apnestik solunum",
         "madde": [
-         1,
+         3,
          0
         ]
        },
@@ -4096,24 +4786,23 @@
      ]
     },
     {
-     "id": "k2-02-p027",
+     "id": "k2-02-p041",
+     "paragrafIndex": 3,
      "sayfa": 41,
-     "slayt": {
-      "sayfa": 41
-     },
+     "baslik": "Komada Solunum Paternleri ve Rostrokaudal Düzeyler",
      "cumleler": [
       {
-       "id": "k2-02-c0205",
+       "id": "k2-02-c0238",
        "ses": "Alt pons ve üst medulla bileşkesine ulaşıldığında apneik duraklamalarla ayrılan düzensiz solunum gruplarından oluşan küme solunumu izlenir.",
        "ekran": "**Küme Solunumu:** Alt pons ve üst medulla bileşkesinde düzensiz solunum grupları ve apne aralıkları.",
        "slayt": {
         "sayfa": 41,
         "satir": "Beyin Sapı Bulgularının Özeti",
         "sekil": "Beyin sapı bulgularının özeti tablosu: erken-geç diensefalik, orta beyin ve pons evrelerinde pupil, refleks göz hareketi ve ağrıya motor yanıt",
-        "resim": 0,
         "madde": [
          0
-        ]
+        ],
+        "resim": 0
        },
        "etiketler": [
         "küme solunumu",
@@ -4122,16 +4811,16 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0206",
+       "id": "k2-02-c0239",
        "ses": "Bu bilgi çıkmış sınavda sorulmuştur: medulla oblangata yani bulbus lezyonlarında solunum ritmi ve derinliği tamamen kaotik hale gelir; inspiratuvar nöronların hasarıyla ortaya çıkan bu düzensiz ve yetersiz solunum paternine ataksik solunum veya Biot solunumu denir.",
        "ekran": "**Sınav Spotu (Çıkmış Soru):** Bu bilgi çıkmış sınavda sorulmuştur: Medulla bulbus lezyonunda görülen kaotik düzensiz solunum ataksik solunumdur.",
        "slayt": {
         "sayfa": 41,
         "satir": "Beyin Sapı Bulgularının Özeti",
-        "resim": 0,
         "madde": [
          0
-        ]
+        ],
+        "resim": 0
        },
        "etiketler": [
         "çıkmış sınav sorusu",
@@ -4144,16 +4833,16 @@
        ]
       },
       {
-       "id": "k2-02-c0207",
+       "id": "k2-02-c0240",
        "ses": "Ataksik solunum hastanın dakikalar içinde agonal solunuma ve tam solunum arrestine gireceğini haber veren preterminal bir bulgudur.",
        "ekran": "**Preterminal Aşama:** Ataksik solunumun dakikalar içinde tam apne ve arrest habercisi olması.",
        "slayt": {
         "sayfa": 41,
         "satir": "Beyin Sapı Bulgularının Özeti",
-        "resim": 0,
         "madde": [
          0
-        ]
+        ],
+        "resim": 0
        },
        "etiketler": [
         "ataksik solunum",
@@ -4163,16 +4852,16 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0208",
+       "id": "k2-02-c0241",
        "ses": "Beyin sapı bulguları tablosu incelendiğinde lezyonun yukarıdan aşağıya yani rostrokaudal ilerleyişi adım adım izlenebilir.",
        "ekran": "**Rostrokaudal İlerleme:** Tabloda lezyonun diensefalondan medullaya doğru rostrokaudal iniş basamakları.",
        "slayt": {
         "sayfa": 41,
         "satir": "Beyin Sapı Bulgularının Özeti",
-        "resim": 0,
         "madde": [
          0
-        ]
+        ],
+        "resim": 0
        },
        "etiketler": [
         "rostrokaudal iniş",
@@ -4181,7 +4870,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0209",
+       "id": "k2-02-c0242",
        "ses": "Erken diensefalik evrede küçük reaktif pupiller ve Cheyne-Stokes solunumu varken mezensefalik evrede pupiller orta genişlikte fikse hale gelir ve hiperventilasyon başlar.",
        "ekran": "**Diensefalikten Mezensefale:** Küçük reaktif pupil ve Cheyne-Stokes'tan orta genişlikte fikse pupil ve hiperventilasyona geçiş.",
        "slayt": {
@@ -4199,7 +4888,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0210",
+       "id": "k2-02-c0243",
        "ses": "Pontin evrede iğne ucu pupiller okülosefalik refleks kaybı ve apnestik solunum tabloya hakim olur.",
        "ekran": "**Pontin Evre Bulguları:** İğne ucu pupiller, okülosefalik refleks kaybı ve apnestik solunum tablosu.",
        "slayt": {
@@ -4218,7 +4907,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0211",
+       "id": "k2-02-c0244",
        "ses": "Medüller evreye gelindiğinde ise dilate ışıksız pupiller ataksik solunum ve tam arefleksi ile hasta ölüme sürüklenir.",
        "ekran": "**Medüller Terminal Evre:** Dilate yanıtsız pupiller, ataksik solunum ve tam arefleksiyle ölüm tablosu.",
        "slayt": {
@@ -4237,16 +4926,16 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0212",
+       "id": "k2-02-c0245",
        "ses": "Bu rostrokaudal kötüleşme basamaklarının iyi bilinmesi herniasyonun hangi aşamada olduğunu tespit edip acil cerrahi müdahale zamanlamasını belirler.",
        "ekran": "**Cerrahi Zamanlama:** Herniasyon basamağını erken tanıyarak geri dönüşsüz aşamadan önce acil cerrahiye geçiş.",
        "slayt": {
         "sayfa": 41,
         "satir": "Beyin Sapı Bulgularının Özeti",
-        "resim": 0,
         "madde": [
          0
-        ]
+        ],
+        "resim": 0
        },
        "etiketler": [
         "herniasyon aşaması",
@@ -4264,14 +4953,13 @@
    "baslik": "Koma Tanısında Laboratuvar Testleri",
    "paragraflar": [
     {
-     "id": "k2-02-p028",
+     "id": "k2-02-p042",
+     "paragrafIndex": 1,
      "sayfa": 42,
-     "slayt": {
-      "sayfa": 42
-     },
+     "baslik": "Koma Tanısında Laboratuvar Testleri",
      "cumleler": [
       {
-       "id": "k2-02-c0213",
+       "id": "k2-02-c0246",
        "ses": "Koma tanısında laboratuvar testleri hastayı gereksiz invaziv girişimlerden kurtaran ve doğrudan geri döndürülebilir etiyolojiyi aydınlatan en güçlü araçtır.",
        "ekran": "**Laboratuvarın Gücü:** Geri döndürülebilir etiyolojiyi saptayan ve gereksiz cerrahiyi önleyen laboratuvar paneli.",
        "slayt": {
@@ -4289,7 +4977,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0214",
+       "id": "k2-02-c0247",
        "ses": "Testlerin başında her zaman kan şekeri gelir ve hipoglisemi koması acil serviste asla atlanmaması gereken bir numaralı hedeftir.",
        "ekran": "**Bir Numaralı Hedef:** Hipoglisemi komasının laboratuvarda asla atlanmaması gereken birincil hedef olması.",
        "slayt": {
@@ -4307,7 +4995,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0215",
+       "id": "k2-02-c0248",
        "ses": "Özellikle diyabetes mellitus tanısıyla insülin kullanan hastalarda ve kronik alkolizm olgularında bilinç kapalılığının en sık nedeni derin hipoglisemidir.",
        "ekran": "**Diyabet ve Alkolizm:** Diyabetli ve alkolik hastalarda derin hipogliseminin en sık koma sebebi olması.",
        "slayt": {
@@ -4326,7 +5014,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0216",
+       "id": "k2-02-c0249",
        "ses": "Rutin biyokimyada elektrolitler ivedilikle taranmalı ve en sık elektrolit bozukluğu olan sodyum seviyesine bakılmalıdır.",
        "ekran": "**Sodyum Önceliği:** Biyokimyada en sık elektrolit bozukluğu olan sodyum seviyesinin ivedilikle taranması.",
        "slayt": {
@@ -4344,7 +5032,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0217",
+       "id": "k2-02-c0250",
        "ses": "Akut hiponatremi serebral ödem ve koma yaparken hipernatremi ise hücresel dehidratasyon ve beyin kanaması riski oluşturur.",
        "ekran": "**Sodyum Uçları:** Hiponatreminin beyin ödemi, hipernatreminin ise hücresel dehidratasyon oluşturması.",
        "slayt": {
@@ -4363,7 +5051,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0218",
+       "id": "k2-02-c0251",
        "ses": "Malignitesi veya kemik metastazı olan komalı hastalarda hiperkalsemi ve kalsiyum metabolizma bozuklukları mutlaka dışlanmalıdır.",
        "ekran": "**Hiperkalsemi Riski:** Kanserli ve metastazlı hastalarda kalsiyum yüksekliği ve metabolizma bozuklukları.",
        "slayt": {
@@ -4382,7 +5070,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0219",
+       "id": "k2-02-c0252",
        "ses": "Karaciğer enzimlerinin ve kanda amonyak düzeyinin ölçülmesi karaciğer komasını üre ve kreatinin değerleri ise üremik ensefalopatiyi aydınlatır.",
        "ekran": "**Organ Testleri:** Amonyak ile hepatik koma, üre ve kreatinin ile üremik ensefalopati teşhisi.",
        "slayt": {
@@ -4401,7 +5089,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0220",
+       "id": "k2-02-c0253",
        "ses": "Basit bir biyokimyasal dengesizliğin düzeltilmesi hastanın dakikalar içinde komadan tam uyanıklık haline geçmesini sağlayabilir.",
        "ekran": "**Hızlı Düzelme:** Biyokimyasal dengesizliğin replasmanı ile hastanın hızla komadan uyanması.",
        "slayt": {
@@ -4420,14 +5108,13 @@
      ]
     },
     {
-     "id": "k2-02-p029",
+     "id": "k2-02-p043",
+     "paragrafIndex": 2,
      "sayfa": 43,
-     "slayt": {
-      "sayfa": 43
-     },
+     "baslik": "Koma Tanısında Laboratuvar Testleri",
      "cumleler": [
       {
-       "id": "k2-02-c0221",
+       "id": "k2-02-c0254",
        "ses": "Laboratuvar değerlendirmesinde arteriyel kan gazı analizi komanın metabolik ve solunumsal derinliğini ortaya koyan en hayati parametredir.",
        "ekran": "**Arteriyel Kan Gazı:** Komanın metabolik ve solunumsal derinliğini ortaya koyan arteriyel kan gazı analizi.",
        "slayt": {
@@ -4445,7 +5132,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0222",
+       "id": "k2-02-c0255",
        "ses": "Kan gazında belirgin asidoz mevcudiyeti klinisyene metabolik bir intoksikasyon ya da derin hipoperfüzyon olduğunu haber verir.",
        "ekran": "**Asidoz Alarmı:** Belirgin asidozun metabolik intoksikasyon veya derin doku hipoperfüzyonunu göstermesi.",
        "slayt": {
@@ -4463,7 +5150,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0223",
+       "id": "k2-02-c0256",
        "ses": "Kanda pe ha değerinin düşmesi salisilat zehirlenmesi metanol alımı veya diyabetik ketoasidoz şüphesini en üst basamağa taşır.",
        "ekran": "**Düşük pH Nedenleri:** Düşük pH değerinin salisilat, metanol veya diyabetik ketoasidozu işaret etmesi.",
        "slayt": {
@@ -4482,7 +5169,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0224",
+       "id": "k2-02-c0257",
        "ses": "Yangından kurtarılan ya da kapalı alanda baygın bulunan olgularda karboksihemoglobin düzeyi ölçülerek karbonmonoksit ve duman zehirlenmesi aranmalıdır.",
        "ekran": "**Karboksihemoglobin Düzeyi:** Duman ve yangın olgularında karboksihemoglobin ile karbonmonoksit tespiti.",
        "slayt": {
@@ -4500,7 +5187,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0225",
+       "id": "k2-02-c0258",
        "ses": "Tam kan sayımında lökositoz sepsis ve menenjiti derin anemi ise beyin oksijen sunumunun çökmesini belgeler.",
        "ekran": "**Hemogram İpuçları:** Lökositoz ile sepsis-menenjit, derin anemi ile hipoksik perfüzyon çöküşü kanıtı.",
        "slayt": {
@@ -4519,7 +5206,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0226",
+       "id": "k2-02-c0259",
        "ses": "Trombositopeni ve uzamış koagülasyon testleri spontan intrakraniyal kanama riskini ve dissemine intravasküler koagülasyonu gösterir.",
        "ekran": "**Koagülasyon Bozukluğu:** Trombositopeni ve uzamış pıhtılaşma testlerinin spontan beyin kanaması alarmı vermesi.",
        "slayt": {
@@ -4538,7 +5225,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0227",
+       "id": "k2-02-c0260",
        "ses": "Şüpheli olgularda geniş toksikolojik idrar ve serum taramaları yapılarak aşırı doz sedatif veya stimulan maddeler saptanmalıdır.",
        "ekran": "**Toksikolojik Tarama:** Geniş idrar ve serum taraması ile sedatif veya uyarıcı toksinlerin belirlenmesi.",
        "slayt": {
@@ -4556,7 +5243,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0228",
+       "id": "k2-02-c0261",
        "ses": "Bu laboratuvar sonuçları nörogörüntüleme öncesinde hastanın fizyolojik parametrelerini dengelemek için klinisyene kesin bir yol haritası sunar.",
        "ekran": "**Görüntüleme Öncesi:** Tomografiye gitmeden önce fizyolojik dengeleri kurmak için kesin laboratuvar yol haritası.",
        "slayt": {
@@ -4583,16 +5270,74 @@
    "baslik": "Bilinci Kapalı Hastaya Algoritmik Yaklaşım",
    "paragraflar": [
     {
-     "id": "k2-02-p030",
-     "sayfa": 45,
-     "slayt": {
-      "sayfa": 45
-     },
+     "id": "k2-02-p044",
+     "paragrafIndex": 1,
+     "sayfa": 44,
+     "baslik": "Bilinci Kapalı Hastaya Algoritmik Yaklaşım",
      "cumleler": [
       {
-       "id": "k2-02-c0229",
-       "ses": "Bilinci kapalı hastaya yaklaşım algoritmasında ilk basamak temel yaşam desteği ilkeleri uyarınca hava yolu solunum ve dolaşımın güvenceye alınmasıdır.",
-       "ekran": "**Temel Yaşam Desteği:** Hava yolu, solunum ve dolaşımın güvenceye alınması ile algoritmanın başlaması.",
+       "id": "k2-02-c0262",
+       "ses": "Acil servise getirilen bilinci kapalı bir hastada panik yapmadan, hayat kurtarıcı basamakları adım adım takip eden sistematik bir algoritmaya ihtiyacımız vardır.",
+       "ekran": "**Sistematik Algoritma:** Bilinci kapalı hastada hata payını sıfıra indiren adım adım karar protokolü.",
+       "slayt": {
+        "sayfa": 44,
+        "satir": "Algoritma",
+        "madde": [
+         0
+        ]
+       },
+       "etiketler": [
+        "acil algoritma",
+        "klinik protokol"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0263",
+       "ses": "Bu algoritma, önce hastanın vital fonksiyonlarını emniyete alır, ardından bilincin gerçekten kapalı olup olmadığını sınar.",
+       "ekran": "**İlk Adımlar:** Önce hava yolu ve vital stabilizasyon, ardından yalancı koma taklitçilerinin elenmesi.",
+       "slayt": {
+        "sayfa": 44,
+        "satir": "Algoritma",
+        "madde": [
+         0
+        ]
+       },
+       "etiketler": [
+        "vital stabilizasyon",
+        "yalancı koma ayrımı"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0264",
+       "ses": "Daha sonra metabolik düzeltmeleri yapar ve hastayı beyin sapı bulguları üzerinden cerrahi ya da medikal tedavi yoluna yönlendirir.",
+       "ekran": "**Karar Kavşağı:** Metabolik resüsitasyon ve beyin sapı refleksleri üzerinden cerrahi-medikal yönlendirme.",
+       "slayt": {
+        "sayfa": 44,
+        "satir": "Algoritma",
+        "madde": [
+         0
+        ]
+       },
+       "etiketler": [
+        "metabolik resüsitasyon",
+        "cerrahi yönlendirme"
+       ],
+       "cikmis": []
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p045",
+     "paragrafIndex": 2,
+     "sayfa": 45,
+     "baslik": "Bilinci Kapalı Hastaya Algoritmik Yaklaşım",
+     "cumleler": [
+      {
+       "id": "k2-02-c0265",
+       "ses": "Algoritmamızın ilk ve en kritik basamağı hava yolu, solunum ve dolaşımın, yani a-be-ce ilkelerinin derhal sağlanmasıdır.",
+       "ekran": "**ABC Basamağı:** Hava yolu açıklığı, yeterli solunum ve hemodinamik dolaşımın güvenceye alınması.",
        "slayt": {
         "sayfa": 45,
         "satir": "Bilinci Kapalı Hastaya Yaklaşım",
@@ -4602,15 +5347,61 @@
         ]
        },
        "etiketler": [
-        "temel yaşam desteği",
-        "hava yolu solunum dolaşım"
+        "hava yolu",
+        "solunum",
+        "dolaşım",
+        "ABC"
        ],
        "cikmis": []
       },
       {
-       "id": "k2-02-c0230",
-       "ses": "Yeterli oksijenasyon sağlandıktan sonra yanıt alınamayan hastada son derece kritik bir soru sorulur.",
-       "ekran": "**Kritik Soru:** Oksijenasyon sonrası yanıtsız hastada algoritmayı yönlendiren temel soru.",
+       "id": "k2-02-c0266",
+       "ses": "Yanıt alınamayan bir hastada ilk saniyelerde hava yolu açıklığı güvenceye alınmalı, aspire materyal varsa temizlenmeli ve yüksek akımlı oksijen başlanmalıdır.",
+       "ekran": "**Oksijenasyon:** Yüksek akımlı oksijen desteği ve aspirasyon riskine karşı hava yolu kontrolü.",
+       "slayt": {
+        "sayfa": 45,
+        "satir": "Yanıt",
+        "madde": [
+         1,
+         0
+        ]
+       },
+       "etiketler": [
+        "yüksek akımlı oksijen",
+        "aspirasyon önlemi"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0267",
+       "ses": "Gerekirse hasta derhal entübe edilmeli, hipotansiyon veya şok tablosu varsa intravenöz kristaloid sıvılarla kan basıncı yükseltilmelidir.",
+       "ekran": "**Erken Entübasyon:** Hipoventilasyon veya şokta erken entübasyon ve damar içi sıvı resüsitasyonu.",
+       "slayt": {
+        "sayfa": 45,
+        "satir": "ABC ve",
+        "madde": [
+         0,
+         1
+        ]
+       },
+       "etiketler": [
+        "entübasyon",
+        "sıvı resüsitasyonu"
+       ],
+       "cikmis": []
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p046",
+     "paragrafIndex": 3,
+     "sayfa": 46,
+     "baslik": "Bilinci Kapalı Hastaya Algoritmik Yaklaşım",
+     "cumleler": [
+      {
+       "id": "k2-02-c0268",
+       "ses": "Vital bulgular emniyete alındıktan sonraki ikinci karar basamağımız: hastanın bilinci gerçekten kapalı mıdır sorusudur.",
+       "ekran": "**Bilinç Kapalı mı:** Vital stabilizasyon sonrası hastanın uyanıklık ve farkındalık durumunun teyidi.",
        "slayt": {
         "sayfa": 46,
         "satir": "Bilinç kapalı",
@@ -4620,51 +5411,121 @@
         ]
        },
        "etiketler": [
-        "oksijenasyon",
-        "yanıt alınamayan hasta"
+        "bilinç durumu",
+        "uyanıklık teyidi"
        ],
        "cikmis": []
       },
       {
-       "id": "k2-02-c0231",
-       "ses": "Bu soru hastanın bilincinin gerçekten kapalı olup olmadığıdır ve algoritmayı iki temel dala ayırır.",
-       "ekran": "**Gerçek Koma mı?:** Bilincin gerçekten kapalı olup olmadığını sorgulayarak iki ana kola ayrılma.",
+       "id": "k2-02-c0269",
+       "ses": "Hekim hastaya yüksek sesle hitap etmeli, omuzlarından sarsarak ve ardından tırnak yatağına ya da supraorbital çentiğe ağrılı uyaran uygulayarak uyanıklığı test etmelidir.",
+       "ekran": "**Sözel ve Ağrılı Uyaran:** Sesli hitap, omuz sarsma ve supraorbital ağrılı uyaranla tepki aranması.",
        "slayt": {
         "sayfa": 46,
-        "satir": "Bilinç kapalı",
+        "satir": "Yanıt",
         "madde": [
-         2,
+         1,
          3
         ]
        },
        "etiketler": [
-        "gerçek koma mı",
-        "iki ana kol"
+        "ağrılı uyaran",
+        "supraorbital çentik"
        ],
        "cikmis": []
       },
       {
-       "id": "k2-02-c0232",
-       "ses": "Eğer bu soruya verilen yanıt hayır ise hasta gerçek bir komada değildir ve koma taklitçisi tablolardan birine sahiptir.",
-       "ekran": "**Koma Taklitçileri Kolu:** Bilinç kapalı değil yanıtında koma taklitçisi tabloların araştırılması.",
+       "id": "k2-02-c0270",
+       "ses": "Eğer hasta hiçbir sözel ve ağrılı uyarıya amaca yönelik bir yanıt veremiyorsa bilinç kapalı kararına varılır.",
+       "ekran": "**Yanıtsızlık Teyidi:** Amaca yönelik hiçbir sözel veya motor tepkinin alınamaması durumu.",
+       "slayt": {
+        "sayfa": 46,
+        "satir": "Bilinci Kapalı Hastaya Yaklaşım",
+        "madde": [
+         3,
+         2
+        ]
+       },
+       "etiketler": [
+        "yanıtsızlık teyidi",
+        "gerçek koma"
+       ],
+       "cikmis": []
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p047",
+     "paragrafIndex": 4,
+     "sayfa": 47,
+     "baslik": "Bilinci Kapalı Hastaya Algoritmik Yaklaşım",
+     "cumleler": [
+      {
+       "id": "k2-02-c0271",
+       "ses": "Eğer muayene sonucunda hastanın bilincinin aslında kapalı olmadığı anlaşılırsa algoritmada hayır koluna geçilir.",
+       "ekran": "**Hayır Kolu:** Bilinci kapalı olmayan ancak yanıtsız görünen hastalarda alternatif tanı yolu.",
        "slayt": {
         "sayfa": 47,
         "satir": "hayır",
         "madde": [
          4,
-         1
+         3
         ]
        },
        "etiketler": [
-        "koma taklitçileri",
-        "yanıt hayır"
+        "hayır kolu",
+        "alternatif tanı"
        ],
        "cikmis": []
       },
       {
-       "id": "k2-02-c0233",
-       "ses": "Koma taklitçilerinin başında locked-in sendromu gelir; baziler arter oklüzyonuna bağlı ventral pons enfarktında hasta tamamen uyanık ve farkındadır ancak vertikal göz hareketleri dışında tüm vücudu felçtir.",
-       "ekran": "**Locked-in Sendromu:** Ventral pons enfarktında hastanın uyanık ve farkında olup vertikal göz hariç tam felçli olması.",
+       "id": "k2-02-c0272",
+       "ses": "Burada hekim, komayı taklit eden veya hastanın dış dünya ile iletişim kurmasını engelleyen özel tabloları hızla düşünmelidir.",
+       "ekran": "**Koma Taklitçileri:** Dış dünya ile teması kesen periferik veya psikiyatrik durumlar araştırılır.",
+       "slayt": {
+        "sayfa": 47,
+        "satir": "Bilinci Kapalı Hastaya Yaklaşım",
+        "madde": [
+         3,
+         2
+        ]
+       },
+       "etiketler": [
+        "koma taklitçileri",
+        "iletişim engeli"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0273",
+       "ses": "Bu durumlar koma taklitçileri olarak adlandırılır ve yanlışlıkla koma tedavisi uygulanması hastaya ciddi zararlar verebilir.",
+       "ekran": "**Yanlış Tedavi Riski:** Yalancı koma hastasına gereksiz invaziv girişim ve sedasyon uygulanmamalıdır.",
+       "slayt": {
+        "sayfa": 47,
+        "satir": "Bilinç kapalı",
+        "madde": [
+         2,
+         3
+        ]
+       },
+       "etiketler": [
+        "yanlış tedavi riski",
+        "invaziv girişimler"
+       ],
+       "cikmis": []
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p048",
+     "paragrafIndex": 5,
+     "sayfa": 48,
+     "baslik": "Bilinci Kapalı Hastaya Algoritmik Yaklaşım",
+     "cumleler": [
+      {
+       "id": "k2-02-c0274",
+       "ses": "Koma taklitçilerinin başında gelen locked-in sendromunda hasta tamamen uyanık ve farkındadır ancak ventral pons lezyonu nedeniyle tüm istemli kasları felç olmuştur.",
+       "ekran": "**Locked-in Sendromu:** Ventral pons enfarktında tam bilinç açıklığına rağmen quadripleji ve anartri tablosu.",
        "slayt": {
         "sayfa": 48,
         "satir": "locked-in synd,",
@@ -4675,15 +5536,58 @@
        },
        "etiketler": [
         "locked-in sendromu",
-        "ventral pons enfarktı",
-        "vertikal göz hareketi"
+        "ventral pons enfarktı"
        ],
        "cikmis": []
       },
       {
-       "id": "k2-02-c0234",
-       "ses": "İkinci taklitçi psikojenik yanıtsızlık ve katatoni durumlarıdır bu hastalarda göz kapağı direnci ve normal elektroensefalografi mevcuttur.",
-       "ekran": "**Psikojenik Yanıtsızlık:** Psikojen yanıtsızlık ve katatonide göz kapağı direnci ve normal elektroensefalografi.",
+       "id": "k2-02-c0275",
+       "ses": "Bu hastalarda dikey göz hareketleri ve göz kırpma refleksleri sağlamdır; hastayla yukarı ve aşağı bakış hareketleriyle iletişim kurulabilir.",
+       "ekran": "**Dikey Göz Bakışı:** Mezensefalik dikey bakış merkezi korunduğundan hasta göz hareketleriyle iletişim kurar.",
+       "slayt": {
+        "sayfa": 48,
+        "satir": "Psikojen,",
+        "madde": [
+         5,
+         1
+        ]
+       },
+       "etiketler": [
+        "dikey göz hareketleri",
+        "göz kırpma"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0276",
+       "ses": "Bir diğer taklitçi olan ağır nöromüsküler paralizilerde, örneğin myastenia gravis krizinde veya Guillain-Barre sendromunda kaslar hareket edemez fakat bilinç açıktır.",
+       "ekran": "**Nöromüsküler Paralizi:** Myastenia gravis veya Guillain-Barre krizinde kas paralizisine rağmen bilinç açıktır.",
+       "slayt": {
+        "sayfa": 48,
+        "satir": "N-M paralizi,",
+        "madde": [
+         5,
+         2
+        ]
+       },
+       "etiketler": [
+        "myastenia gravis",
+        "Guillain Barre sendromu"
+       ],
+       "cikmis": []
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p049",
+     "paragrafIndex": 6,
+     "sayfa": 49,
+     "baslik": "Bilinci Kapalı Hastaya Algoritmik Yaklaşım",
+     "cumleler": [
+      {
+       "id": "k2-02-c0277",
+       "ses": "Psikojenik yanıtsızlık veya konversiyon tablolarında hasta dış uyarılara tamamen yanıtsız gibi görünür ancak organik bir beyin lezyonu yoktur.",
+       "ekran": "**Psikojenik Yanıtsızlık:** Organik beyin hasarı olmaksızın psişik mekanizmalarla gelişen yalancı yanıtsızlık.",
        "slayt": {
         "sayfa": 49,
         "satir": "Uygun",
@@ -4694,59 +5598,120 @@
        },
        "etiketler": [
         "psikojenik yanıtsızlık",
-        "katatoni",
-        "elektroensefalografi"
+        "konversiyon bozukluğu"
        ],
        "cikmis": []
       },
       {
-       "id": "k2-02-c0235",
-       "ses": "Üçüncü taklitçi grup ağır periferik nöromüsküler paraliziler ve rijiditelerdir bu durumlarda hastaya uygun spesifik klinik yaklaşım uygulanır.",
-       "ekran": "**Nöromüsküler Paralizi:** Ağır periferik paraliziler ve rijiditelerde özgül destek tedavisi uygulanması.",
+       "id": "k2-02-c0278",
+       "ses": "Göz kapakları hekim tarafından açılmak istendiğinde hastanın aktif direnç göstermesi psikojenik kökenin en güçlü klinik kanıtıdır.",
+       "ekran": "**Göz Kapağı Direnci:** Kapaklar açılırken hastanın aktif direnç göstermesi psikojenik kökeni kanıtlar.",
        "slayt": {
         "sayfa": 49,
-        "satir": "Uygun",
+        "satir": "yaklaşım",
         "madde": [
          6,
          3
         ]
        },
        "etiketler": [
-        "nöromüsküler paralizi",
-        "rijidite"
+        "göz kapağı direnci",
+        "aktif kontraksiyon"
        ],
        "cikmis": []
       },
       {
-       "id": "k2-02-c0236",
-       "ses": "Koma taklitçileri dışlandıktan sonra algoritmanın gerçek koma dalı açılarak ileri diagnostik basamaklara geçilir.",
-       "ekran": "**Gerçek Koma Dalı:** Taklitçiler dışlandıktan sonra algoritmanın gerçek koma koluna geçişi.",
+       "id": "k2-02-c0279",
+       "ses": "Ayrıca hastanın elini yüzünün üzerine bıraktığınızda elin yüze çarpmadan yana düşmesi ve kalorik testte nistagmus görülmesi bilincin açık olduğunu kanıtlar.",
+       "ekran": "**El Bırakma Testi:** Yüzün üzerine bırakılan elin yüze çarpmaması ve kalorik nistagmus uyanıklığı belgeler.",
        "slayt": {
-        "sayfa": 50,
-        "satir": "evet",
+        "sayfa": 49,
+        "satir": "Psikojen,",
         "madde": [
-         7
+         5,
+         3
         ]
        },
        "etiketler": [
-        "gerçek koma kolu",
-        "ileri basamaklar"
+        "el bırakma testi",
+        "kalorik nistagmus"
        ],
        "cikmis": []
       }
      ]
     },
     {
-     "id": "k2-02-p031",
-     "sayfa": 51,
-     "slayt": {
-      "sayfa": 51
-     },
+     "id": "k2-02-p050",
+     "paragrafIndex": 7,
+     "sayfa": 50,
+     "baslik": "Bilinci Kapalı Hastaya Algoritmik Yaklaşım",
      "cumleler": [
       {
-       "id": "k2-02-c0237",
-       "ses": "Bilincin gerçekten kapalı olduğu doğrulandığında algoritmanın evet dalı devreye girer ve geniş bir metabolik panel başlatılır.",
-       "ekran": "**Geniş Metabolik Panel:** Bilinç gerçekten kapalı dalında derhal geniş biyokimya ve toksikoloji paneli başlatılması.",
+       "id": "k2-02-c0280",
+       "ses": "Eğer hasta gerçekten hiçbir uyarıya yanıt vermiyor ve yalancı koma durumları dışlanmışsa, algoritmada evet koluna ilerlenir.",
+       "ekran": "**Evet Kolu:** Gerçek koma tablosu kesinleştiğinde acil medikal protokol devreye girer.",
+       "slayt": {
+        "sayfa": 50,
+        "satir": "evet",
+        "madde": [
+         7,
+         1
+        ]
+       },
+       "etiketler": [
+        "evet kolu",
+        "gerçek koma protokolü"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0281",
+       "ses": "Bu aşamada karşımızda gerçek bir koma tablosu vardır ve hasta acil resüsitasyon protokolüne alınır.",
+       "ekran": "**Acil Resüsitasyon:** Vital stabilizasyonla eş zamanlı etiyolojik tanı ve tedavi süreci başlatılır.",
+       "slayt": {
+        "sayfa": 50,
+        "satir": "Bilinç kapalı",
+        "madde": [
+         2,
+         3
+        ]
+       },
+       "etiketler": [
+        "acil resüsitasyon",
+        "etiyolojik tedavi"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0282",
+       "ses": "Zaman kaybetmeden hastadan kan örnekleri alınmalı ve geri döndürülebilir metabolik veya toksik nedenler hemen araştırılmalıdır.",
+       "ekran": "**Hızlı Kan Örnekleri:** Geri döndürülebilir hipoglisemi, hipoksi ve zehirlenmeler saniyeler içinde araştırılır.",
+       "slayt": {
+        "sayfa": 50,
+        "satir": "Bilinci Kapalı Hastaya Yaklaşım",
+        "madde": [
+         3,
+         2
+        ]
+       },
+       "etiketler": [
+        "metabolik tarama",
+        "toksik nedenler"
+       ],
+       "cikmis": []
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p051",
+     "paragrafIndex": 8,
+     "sayfa": 51,
+     "baslik": "Bilinci Kapalı Hastaya Algoritmik Yaklaşım",
+     "cumleler": [
+      {
+       "id": "k2-02-c0283",
+       "ses": "Bilinç kapalı evet kolunda ilk iş olarak stik kan şekeri, arter kan gazı, elektrolitler, kalsiyum, magnezyum, üre, kreatinin, amonyak ve karaciğer enzimleri gönderilir.",
+       "ekran": "**Acil Panel:** Stik kan şekeri, kan gazı, elektrolitler, kalsiyum, üre, amonyak ve enzim paneli.",
        "slayt": {
         "sayfa": 51,
         "satir": "Kan gazları, glu,",
@@ -4756,34 +5721,78 @@
         ]
        },
        "etiketler": [
-        "gerçek koma evet",
-        "geniş metabolik panel"
+        "kan gazı",
+        "glukoz",
+        "elektrolitler",
+        "amonyak"
        ],
        "cikmis": []
       },
       {
-       "id": "k2-02-c0238",
-       "ses": "Kan gazları glukoz elektrolitler kalsiyum magnezyum üre kreatinin amonyak karaciğer enzimleri ve toksikolojik tarama için kan örnekleri alınır.",
-       "ekran": "**Gereken Kan Testleri:** Kan gazı, glukoz, elektrolitler, amonyak, kalsiyum ve toksikoloji örnekleri.",
+       "id": "k2-02-c0284",
+       "ses": "Ayrıca toksikolojik tarama için idrar ve kan örnekleri ayrılmalıdır.",
+       "ekran": "**Toksik Tarama:** Olası intoksikasyonlar için kan ve idrar toksikolojik tarama örnekleri alınır.",
        "slayt": {
         "sayfa": 51,
-        "satir": "elektrolitler, Ca,",
+        "satir": "tox",
         "madde": [
          8
         ]
        },
        "etiketler": [
-        "glukoz",
-        "elektrolitler",
-        "amonyak",
-        "toksikoloji"
+        "toksikolojik tarama",
+        "idrar toksik"
        ],
        "cikmis": []
       },
       {
-       "id": "k2-02-c0239",
-       "ses": "Laboratuvar sonuçları beklenirken eş zamanlı olarak ampirik antidot tedavileri uygulanır.",
-       "ekran": "**Ampirik Tedavi:** Sonuçlar beklenirken gecikmeden ampirik farmakolojik kokteylin uygulanması.",
+       "id": "k2-02-c0285",
+       "ses": "Hipoglisemi şüphesinde damar içi dekstroz verilmeden hemen önce, olası bir Wernicke ensefalopatisini önlemek için mutlaka intravenöz tiamin uygulanmalıdır.",
+       "ekran": "**Tiamin Kuralı:** Glukoz infüzyonundan hemen önce Wernicke'yi önlemek için mutlaka intravenöz tiamin verilir.",
+       "slayt": {
+        "sayfa": 51,
+        "satir": "ıv glu,",
+        "madde": [
+         8
+        ]
+       },
+       "etiketler": [
+        "intravenöz glukoz",
+        "tiamin desteği",
+        "Wernicke ensefalopatisi"
+       ],
+       "cikmis": []
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p052",
+     "paragrafIndex": 9,
+     "sayfa": 52,
+     "baslik": "Bilinci Kapalı Hastaya Algoritmik Yaklaşım",
+     "cumleler": [
+      {
+       "id": "k2-02-c0286",
+       "ses": "Metabolik örnekler alınıp ampirik tedaviler başlandıktan sonra algoritmanın en can alıcı yol ayrımına gelinir: hastada beyin sapı bulgusu var mıdır?",
+       "ekran": "**Beyin Sapı Bulguları:** Algoritmanın en kritik yol ayrımı beyin sapı reflekslerinin varlığıdır.",
+       "slayt": {
+        "sayfa": 52,
+        "satir": "Beyinsapı",
+        "madde": [
+         9,
+         1
+        ]
+       },
+       "etiketler": [
+        "beyin sapı bulguları",
+        "karar kavşağı"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0287",
+       "ses": "Burada hekim ışık refleksini, kornea refleksini, okülosefalik refleksi ve solunum paternini dikkatle muayene eder.",
+       "ekran": "**Muayene Bileşenleri:** Pupiller ışık yanıtı, kornea refleksi, bebek gözü hareketi ve solunum paterni.",
        "slayt": {
         "sayfa": 52,
         "satir": "bulguları?",
@@ -4792,114 +5801,227 @@
         ]
        },
        "etiketler": [
-        "ampirik tedavi",
-        "antidot kokteyli"
+        "ışık refleksi",
+        "kornea refleksi",
+        "okülosefalik refleks"
        ],
        "cikmis": []
       },
       {
-       "id": "k2-02-c0240",
-       "ses": "Damar içi glukoz puşe edilirken Wernicke ensefalopatisini tetiklememek için öncesinde mutlaka damar içi tiamin verilmelidir.",
-       "ekran": "**Glukoz ve Tiamin:** Dekstroz öncesinde mutlaka tiamin verilerek Wernicke tablosunun önlenmesi.",
+       "id": "k2-02-c0288",
+       "ses": "Beyin sapı bulgularının varlığı veya yokluğu, lezyonun yapısal mı yoksa diffüz metabolik mi olduğunu belirleyen temel kavşaktır.",
+       "ekran": "**Yapısal vs Metabolik:** Beyin sapı refleksleri korunmuşsa metabolik, kayıpsa yapısal süreç ön plandadır.",
        "slayt": {
-        "sayfa": 53,
-        "satir": "hayır",
+        "sayfa": 52,
+        "satir": "Beyinsapı",
         "madde": [
-         4,
-         10
-        ]
-       },
-       "etiketler": [
-        "damar içi glukoz",
-        "tiamin önceliği"
-       ],
-       "cikmis": []
-      },
-      {
-       "id": "k2-02-c0241",
-       "ses": "Solunum depresyonu ve miyozis varlığında opioid aşırı dozu için damar içi nalokson enjekte edilir.",
-       "ekran": "**Nalokson Enjeksiyonu:** Solunum depresyonu ve miyoziste damar içi naloksonun tanısal ve terapötik enjeksiyonu.",
-       "slayt": {
-        "sayfa": 53,
-        "satir": "hayır",
-        "madde": [
-         4,
-         10
-        ]
-       },
-       "etiketler": [
-        "damar içi nalokson",
-        "opioid antidotu"
-       ],
-       "cikmis": []
-      },
-      {
-       "id": "k2-02-c0242",
-       "ses": "Bilinen benzodiazepin aşırı alımlarında ise solunumu izlenerek kontrollü biçimde damar içi flumazenil verilebilir.",
-       "ekran": "**Flumazenil Uygulaması:** Kanıtlanmış benzodiazepin zehirlenmesinde kontrollü flumazenil kullanımı.",
-       "slayt": {
-        "sayfa": 54,
-        "satir": "Lateral şift",
-        "madde": [
-         11,
-         2
-        ]
-       },
-       "etiketler": [
-        "benzodiazepin",
-        "flumazenil"
-       ],
-       "cikmis": []
-      },
-      {
-       "id": "k2-02-c0243",
-       "ses": "Bu ampirik müdahalelerin ardından algoritmadaki ikinci anahtar soru sorulur; hastada fokal beyin sapı bulguları var mıdır?",
-       "ekran": "**İkinci Anahtar Soru:** Beyin sapı refleksleri ve fokal beyin sapı bulguları var mı sorusu.",
-       "slayt": {
-        "sayfa": 55,
-        "satir": "Acil",
-        "madde": [
-         12,
          9
         ]
        },
        "etiketler": [
-        "beyin sapı bulguları",
-        "anahtar soru"
-       ],
-       "cikmis": []
-      },
-      {
-       "id": "k2-02-c0244",
-       "ses": "Beyin sapı bulgusunun varlığı veya yokluğu hastanın supratentoryal mi yoksa infratentoryal bir patolojiye mi sahip olduğunu netleştirir.",
-       "ekran": "**Tentoryal Seviye Belirleme:** Beyin sapı bulgusuyla supratentoryal ve infratentoryal düzey kesinleşir.",
-       "slayt": {
-        "sayfa": 55,
-        "satir": "Acil",
-        "madde": [
-         12,
-         9
-        ]
-       },
-       "etiketler": [
-        "supratentoryal",
-        "infratentoryal ayrım"
+        "yapısal hasar",
+        "metabolik ensefalopati"
        ],
        "cikmis": []
       }
      ]
     },
     {
-     "id": "k2-02-p032",
-     "sayfa": 54,
-     "slayt": {
-      "sayfa": 54
-     },
+     "id": "k2-02-p053",
+     "paragrafIndex": 10,
+     "sayfa": 53,
+     "baslik": "Bilinci Kapalı Hastaya Algoritmik Yaklaşım",
      "cumleler": [
       {
-       "id": "k2-02-c0245",
-       "ses": "Muayenede beyin sapı refleksleri normalse ve beyin sapı bulgusu yoksa algoritmanın supratentoryal ve diffüz nedenler dalı açılır.",
-       "ekran": "**Beyin Sapı Bulgusu Yok Dalı:** Refleksler normalse supratentoryal ve diffüz metabolik nedenler koluna geçiş.",
+       "id": "k2-02-c0289",
+       "ses": "Eğer pupiller ışığa yanıt veriyor, kornea ve göz hareket refleksleri korunmuşsa beyin sapı bulguları hayır koluna girilir.",
+       "ekran": "**Refleksler Korunmuş:** Işık, kornea ve göz hareketleri sağlamsa beyin sapı anatomik olarak sağlamdır.",
+       "slayt": {
+        "sayfa": 53,
+        "satir": "hayır",
+        "madde": [
+         4,
+         10
+        ]
+       },
+       "etiketler": [
+        "korunmuş refleksler",
+        "sağlam beyin sapı"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0290",
+       "ses": "Bu durum beyin sapının sağlam olduğunu ve komaya yol açan nedenin ya diffüz bir süreç ya da supratentoryal bir patoloji olduğunu düşündürür.",
+       "ekran": "**Supratentoryal Süreç:** Diffüz metabolik-toksik olaylar veya erken evre supratentoryal lezyonlar akla gelir.",
+       "slayt": {
+        "sayfa": 53,
+        "satir": "Beyinsapı",
+        "madde": [
+         9
+        ]
+       },
+       "etiketler": [
+        "diffüz süreç",
+        "supratentoryal patoloji"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0291",
+       "ses": "Ancak beyin sapı sağlam olsa bile yukarıdaki serebral hemisferlerde kitle etkisi yapan lezyonlar henüz beyin sapına bası yapmamış olabilir.",
+       "ekran": "**Gizli Kitle Etkisi:** Supratentoryal kitleler henüz herniye olmadan da koma tablosu başlatabilir.",
+       "slayt": {
+        "sayfa": 53,
+        "satir": "hayır",
+        "madde": [
+         4,
+         10
+        ]
+       },
+       "etiketler": [
+        "kitle etkisi",
+        "erken herniasyon"
+       ],
+       "cikmis": []
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p054",
+     "paragrafIndex": 11,
+     "sayfa": 54,
+     "baslik": "Bilinci Kapalı Hastaya Algoritmik Yaklaşım",
+     "cumleler": [
+      {
+       "id": "k2-02-c0292",
+       "ses": "Beyin sapı bulgusu olmayan bu grupta ayırıcı tanıda lateral şift yapan tek taraflı serebral lezyonlar, biserebral yapısal hasarlar, talamik enfarktlar, metabolik, toksik ve enfeksiyöz nedenler yer alır.",
+       "ekran": "**Geniş Ayırıcı Tanı:** Lateral şift yapan lezyonlar, bilateral hemisfer hasarı, toksik ve metabolik komalar.",
+       "slayt": {
+        "sayfa": 54,
+        "satir": "Lateral şift",
+        "madde": [
+         11,
+         9
+        ]
+       },
+       "etiketler": [
+        "lateral şift",
+        "biserebral hasar",
+        "talamik enfarkt"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0293",
+       "ses": "Örneğin geniş bir orta serebral arter enfarktında veya subdural hematomda orta hat şifti başlayabilir ancak henüz unkus herniye olmamış olabilir.",
+       "ekran": "**Erken Herniasyon:** Geniş iskemik inme veya subdural hematom erken dönemde pupil bulgusu vermeyebilir.",
+       "slayt": {
+        "sayfa": 54,
+        "satir": "yapan tek",
+        "madde": [
+         11
+        ]
+       },
+       "etiketler": [
+        "orta serebral arter enfarktı",
+        "subdural hematom"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0294",
+       "ses": "Diğer taraftan derin hipoglisemi, hepatik koma veya menenjit gibi difüz süreçler de beyin sapı reflekslerini koruyarak koma yapabilir.",
+       "ekran": "**Difüz Nedenler:** Hepatik koma, derin hipoglisemi ve menenjit beyin sapı reflekslerini korur.",
+       "slayt": {
+        "sayfa": 54,
+        "satir": "metabolik,",
+        "madde": [
+         11,
+         9
+        ]
+       },
+       "etiketler": [
+        "hepatik koma",
+        "menenjit",
+        "hipoglisemi"
+       ],
+       "cikmis": []
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p055",
+     "paragrafIndex": 12,
+     "sayfa": 55,
+     "baslik": "Bilinci Kapalı Hastaya Algoritmik Yaklaşım",
+     "cumleler": [
+      {
+       "id": "k2-02-c0295",
+       "ses": "Hem fokal kitle lezyonlarını hem de enfeksiyon veya intoksikasyonları ekarte etmek amacıyla hasta ivedilikle acil incelemeler sürecine sevk edilir.",
+       "ekran": "**Acil İnceleme Sevk:** Fokal cerrahi acilleri ve santral sinir sistemi enfeksiyonlarını ekarte etme süreci.",
+       "slayt": {
+        "sayfa": 55,
+        "satir": "Acil",
+        "madde": [
+         12,
+         11
+        ]
+       },
+       "etiketler": [
+        "acil inceleme",
+        "cerrahi ekarte etme"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0296",
+       "ses": "Zaman kaybedilmeden hasta monitörize bir şekilde radyolojiye transfer edilirken eş zamanlı olarak laboratuvar sonuçları takip edilir.",
+       "ekran": "**Monitörize Transfer:** Hasta vital desteği sürdürülerek acil radyolojik görüntülemeye ulaştırılır.",
+       "slayt": {
+        "sayfa": 55,
+        "satir": "incelemeler",
+        "madde": [
+         12,
+         1
+        ]
+       },
+       "etiketler": [
+        "monitörize transfer",
+        "radyolojik görüntüleme"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0297",
+       "ses": "Hekim, fokal nörolojik defisit olmasa bile intrakraniyal kanama veya ensefaliti dışlamadan hastayı yalnız metabolik kabul edemez.",
+       "ekran": "**Yapısalı Dışlama:** Görüntüleme olmadan hiçbir hasta yalnız metabolik kabul edilip cerrahi dışlanamaz.",
+       "slayt": {
+        "sayfa": 55,
+        "satir": "Acil",
+        "madde": [
+         12,
+         1
+        ]
+       },
+       "etiketler": [
+        "yapısalı dışlama",
+        "intrakraniyal kanama"
+       ],
+       "cikmis": []
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p056",
+     "paragrafIndex": 13,
+     "sayfa": 56,
+     "baslik": "Bilinci Kapalı Hastaya Algoritmik Yaklaşım",
+     "cumleler": [
+      {
+       "id": "k2-02-c0298",
+       "ses": "Acil inceleme basamağında çekilen kontrastsız beyin bilgisayarlı tomografisi, akut kanama, kitle, yaygın ödem ve orta hat şiftini anında ortaya koyar.",
+       "ekran": "**Kontrastsız BBT:** Akut intrakraniyal kanama, kitle, yaygın ödem ve orta hat şiftini dakikalar içinde gösterir.",
        "slayt": {
         "sayfa": 56,
         "satir": "BBT, metabolik ve",
@@ -4909,34 +6031,62 @@
         ]
        },
        "etiketler": [
-        "beyin sapı bulgusu yok",
-        "supratentoryal dal"
+        "beyin tomografisi",
+        "BBT",
+        "intrakraniyal kanama"
        ],
        "cikmis": []
       },
       {
-       "id": "k2-02-c0246",
-       "ses": "Bu dalda lateral şift yapan tek taraflı serebral lezyonlar iki taraflı yaygın hemisferik hasarlar talamik enfarktlar ve enfeksiyöz süreçler düşünülür.",
-       "ekran": "**Supratentoryal Nedenler:** Lateral şift yapan tek lezyon, biserebral yapısal hasar, talamik veya enfeksiyöz patolojiler.",
+       "id": "k2-02-c0299",
+       "ses": "Eğer tomografi tamamen normal gelirse ve hastada ateş, ense sertliği şüphesi varsa derhal lomber ponksiyon yapılarak beyin omurilik sıvısı incelenir.",
+       "ekran": "**Lomber Ponksiyon:** Normal tomografide ateş ve meningeal irritasyon varsa acil BOS analizi yapılır.",
        "slayt": {
-        "sayfa": 57,
-        "satir": "evet",
+        "sayfa": 56,
+        "satir": "BOS",
         "madde": [
-         11,
-         7
+         13,
+         1
         ]
        },
        "etiketler": [
-        "lateral şift",
-        "biserebral hasar",
-        "talamik lezyon"
+        "lomber ponksiyon",
+        "meningismus",
+        "BOS analizi"
        ],
        "cikmis": []
       },
       {
-       "id": "k2-02-c0247",
-       "ses": "Bu nedenlerin aydınlatılması için acil incelemeler planlanır ve hasta derhal kontrastsız beyin bilgisayarlı tomografisine yönlendirilir.",
-       "ekran": "**Acil Tomografi:** Supratentoryal hasarı saptamak için acil kontrastsız bilgisayarlı tomografi çekimi.",
+       "id": "k2-02-c0300",
+       "ses": "Beyin omurilik sıvısı incelemesiyle bakteriyel menenjit, herpes ensefaliti veya tomografide görülmeyen subaraknoid kanama kesinleştirilir.",
+       "ekran": "**Menenjit ve SAK:** Beyin omurilik sıvısı incelemesi menenjit, ensefalit ve gizli kanamaları aydınlatır.",
+       "slayt": {
+        "sayfa": 56,
+        "satir": "inceleme,",
+        "madde": [
+         12,
+         13
+        ]
+       },
+       "etiketler": [
+        "bakteriyel menenjit",
+        "herpes ensefaliti",
+        "subaraknoid kanama"
+       ],
+       "cikmis": []
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p057",
+     "paragrafIndex": 14,
+     "sayfa": 57,
+     "baslik": "Bilinci Kapalı Hastaya Algoritmik Yaklaşım",
+     "cumleler": [
+      {
+       "id": "k2-02-c0301",
+       "ses": "Şimdi algoritmada geri dönüp beyin sapı bulguları var mıdır sorusuna evet yanıtı verilen kritik kola odaklanalım.",
+       "ekran": "**Beyin Sapı Pozitif:** Beyin sapı bulgularının varlığı hayatı tehdit eden acil anatomik lezyonu gösterir.",
        "slayt": {
         "sayfa": 57,
         "satir": "evet",
@@ -4946,41 +6096,123 @@
         ]
        },
        "etiketler": [
-        "kontrastsız tomografi",
-        "acil incelemeler"
+        "beyin sapı bulgusu",
+        "evet kolu"
        ],
-       "cikmis": [
-        "3807e9b207c5"
-       ],
-       "vurgu": [
-        {
-         "metin": "Acil Tomografi:",
-         "tur": "cikmis"
-        }
-       ]
+       "cikmis": []
       },
       {
-       "id": "k2-02-c0248",
-       "ses": "Bilgisayarlı tomografide akut kanama kitle ya da orta hat şifti saptanmazsa enfeksiyon şüphesiyle acil lomber ponksiyon yapılarak beyin omurilik sıvısı incelenir.",
-       "ekran": "**Lomber Ponksiyon:** Tomografi normal çıktığında menenjit şüphesiyle beyin omurilik sıvısı incelemesi.",
+       "id": "k2-02-c0302",
+       "ses": "Hastada anizokori, ışığa yanıtsız fikse pupil, okülosefalik veya kalorik refleks kaybı, patolojik solunum ya da deserebre postür saptanması beyin sapı tutulumunu kanıtlar.",
+       "ekran": "**Kritik Bulgular:** Anizokori, fikse pupil, okülosefalik kayıp, deserebre rijidite beyin sapı lezyonunu belgeler.",
+       "slayt": {
+        "sayfa": 57,
+        "satir": "Beyinsapı",
+        "madde": [
+         9,
+         1
+        ]
+       },
+       "etiketler": [
+        "anizokori",
+        "fikse pupil",
+        "deserebre rijidite"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0303",
+       "ses": "Bu bulgular, hastanın dakikalar içinde hayatını kaybedebileceğini gösteren en üst düzeyde acil nörolojik alarmlardır.",
+       "ekran": "**Acil Alarm:** Dakikalar içinde mortalite riski taşıyan en yüksek dereceli cerrahi-nörolojik acildir.",
+       "slayt": {
+        "sayfa": 57,
+        "satir": "bulguları?",
+        "madde": [
+         9,
+         1
+        ]
+       },
+       "etiketler": [
+        "mortalite riski",
+        "nörolojik acil"
+       ],
+       "cikmis": []
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p058",
+     "paragrafIndex": 15,
+     "sayfa": 58,
+     "baslik": "Bilinci Kapalı Hastaya Algoritmik Yaklaşım",
+     "cumleler": [
+      {
+       "id": "k2-02-c0304",
+       "ses": "Beyin sapı bulgusu veren bu grupta serebellar hematom, baziler arter oklüzyonu veya beyin sapı kanaması gibi primer posterior fossa lezyonları ilk sırada yer alır.",
+       "ekran": "**Posterior Fossa Lezyonları:** Serebellar kanama, baziler arter oklüzyonu ve pontin kanama primer nedenlerdir.",
        "slayt": {
         "sayfa": 58,
-        "satir": "herniasyon,",
+        "satir": "Posterior",
         "madde": [
          15,
-         12
+         9
         ]
        },
        "etiketler": [
-        "lomber ponksiyon",
-        "beyin omurilik sıvısı"
+        "serebellar hematom",
+        "baziler arter oklüzyonu",
+        "pontin kanama"
        ],
        "cikmis": []
       },
       {
-       "id": "k2-02-c0249",
-       "ses": "Eğer hastada belirgin beyin sapı bulguları mevcutsa algoritmanın arka çukur ve herniasyon dalı devreye girer.",
-       "ekran": "**Beyin Sapı Bulgusu Var Dalı:** Beyin sapı bulgusu varlığında arka çukur lezyonu ve herniasyon koluna geçiş.",
+       "id": "k2-02-c0305",
+       "ses": "İkinci büyük neden ise supratentoryal bir hematom veya tümörün temporal lob unkusunu aşağı itmesiyle oluşan unkal ve santral transtentoryal herniasyondur.",
+       "ekran": "**Transtentoryal Herniasyon:** Unkal ve santral herniasyon mezensefalonu tentoryum kenarına sıkıştırır.",
+       "slayt": {
+        "sayfa": 58,
+        "satir": "transtentional",
+        "madde": [
+         15
+        ]
+       },
+       "etiketler": [
+        "unkal herniasyon",
+        "santral herniasyon",
+        "tentoryum"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0306",
+       "ses": "Ayrıca derin barbitürat zehirlenmesi ve aşırı doz trisiklik antidepresanlar da beyin sapını metabolik olarak felç edebilir.",
+       "ekran": "**Toksik Felç:** Yüksek doz barbitürat ve trisiklik antidepresanlar beyin sapı reflekslerini söndürebilir.",
+       "slayt": {
+        "sayfa": 58,
+        "satir": "toksik ve",
+        "madde": [
+         15,
+         11
+        ]
+       },
+       "etiketler": [
+        "barbitürat zehirlenmesi",
+        "trisiklik antidepresan"
+       ],
+       "cikmis": []
+      }
+     ]
+    },
+    {
+     "id": "k2-02-p059",
+     "paragrafIndex": 16,
+     "sayfa": 59,
+     "baslik": "Bilinci Kapalı Hastaya Algoritmik Yaklaşım",
+     "cumleler": [
+      {
+       "id": "k2-02-c0307",
+       "ses": "Beyin sapı bulgusu olan hastada acil beyin tomografisi ve uygun merkezlerde manyetik rezonans görüntüleme saniyeler içinde çekilmelidir.",
+       "ekran": "**Acil BBT ve MR:** Posterior fossa ve herniasyonu netleştirmek için saniyeler içinde nörogörüntüleme yapılır.",
        "slayt": {
         "sayfa": 59,
         "satir": "BBT/MRI, glu,",
@@ -4990,63 +6222,46 @@
         ]
        },
        "etiketler": [
-        "beyin sapı bulgusu var",
-        "arka çukur lezyonu"
-       ],
-       "cikmis": []
-      },
-      {
-       "id": "k2-02-c0250",
-       "ses": "Bu dalda posterior fossada yer kaplayan kitle lezyonları serebellar kanama baziler arter trombozu ve transtentoryal herniasyonlar ön plandadır.",
-       "ekran": "**Arka Çukur Patolojileri:** Posterior fossa kitlesi, serebellar kanama, baziler tromboz ve transtentoryal herniasyon.",
-       "slayt": {
-        "sayfa": 59,
-        "satir": "BBT/MRI, glu,",
-        "madde": [
-         15,
-         14
-        ]
-       },
-       "etiketler": [
-        "posterior fossa kitlesi",
-        "serebellar kanama",
-        "baziler tromboz"
-       ],
-       "cikmis": []
-      },
-      {
-       "id": "k2-02-c0251",
-       "ses": "Arka çukur patolojilerinde dakikalar içinde tonsiller herniasyon ve solunum arresti gelişebileceği için acil beyin cerrahisi konsültasyonu zorunludur.",
-       "ekran": "**Cerrahi Alarm:** Tonsiller herniasyon ve solunum durması riskine karşı acil beyin cerrahisi müdahalesi.",
-       "slayt": {
-        "sayfa": 59,
-        "satir": "BBT/MRI, glu,",
-        "madde": [
-         15,
-         14
-        ]
-       },
-       "etiketler": [
-        "tonsiller herniasyon",
-        "beyin cerrahisi konsültasyonu"
-       ],
-       "cikmis": []
-      },
-      {
-       "id": "k2-02-c0252",
-       "ses": "Bilgisayarlı tomografi ve manyetik rezonans görüntüleme ile lezyon doğrulanarak ivedi cerrahi dekompresyon uygulanır.",
-       "ekran": "**İvedi Dekompresyon:** Tomografi ve manyetik rezonans ile kanıtlanan lezyonda ivedi cerrahi dekompresyon.",
-       "slayt": {
-        "sayfa": 59,
-        "satir": "BBT/MRI, glu,",
-        "madde": [
-         15,
-         14
-        ]
-       },
-       "etiketler": [
+        "acil BBT",
         "manyetik rezonans",
-        "cerrahi dekompresyon"
+        "posterior fossa"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0308",
+       "ses": "Eş zamanlı olarak kan şekeri kontrolü ve tiamin desteği aksatılmadan sürdürülmeli, toksik nedenler taranmalıdır.",
+       "ekran": "**Metabolik Destek:** Glukoz, tiamin ve toksikolojik tarama radyoloji sürecinde de kesintisiz sürdürülür.",
+       "slayt": {
+        "sayfa": 59,
+        "satir": "tiamin, metobolik",
+        "madde": [
+         15
+        ]
+       },
+       "etiketler": [
+        "kan şekeri",
+        "tiamin desteği",
+        "toksik tarama"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0309",
+       "ses": "Eğer tomografide bası yapan bir serebellar kanama, epidural hematom veya unkal herniasyon saptanırsa beyin cerrahisi tarafından acil kraniektomi ile cerrahi dekompresyon uygulanır.",
+       "ekran": "**Cerrahi Dekompresyon:** Serebellar kanama veya epidural hematomda acil kraniektomi hayat kurtarır.",
+       "slayt": {
+        "sayfa": 59,
+        "satir": "ve toksik tarama",
+        "madde": [
+         15,
+         11
+        ]
+       },
+       "etiketler": [
+        "cerrahi dekompresyon",
+        "kraniektomi",
+        "serebellar kanama"
        ],
        "cikmis": []
       }
@@ -5060,14 +6275,13 @@
    "baslik": "Komalı Hastada Kan Gazı ve Osmolar Açık",
    "paragraflar": [
     {
-     "id": "k2-02-p033",
+     "id": "k2-02-p060",
+     "paragrafIndex": 1,
      "sayfa": 60,
-     "slayt": {
-      "sayfa": 60
-     },
+     "baslik": "Komalı Hastada Kan Gazı ve Osmolar Açık",
      "cumleler": [
       {
-       "id": "k2-02-c0253",
+       "id": "k2-02-c0310",
        "ses": "Nörogörüntülemesinde fokal yapısal lezyon saptanmayan komalı hastada tanı akış şeması metabolik ve toksik incelemelerle devam eder.",
        "ekran": "**Metabolik Akış Şeması:** Görüntülemesi normal çıkan komada metabolik ve toksikolojik akış şemasına geçiş.",
        "slayt": {
@@ -5087,7 +6301,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0254",
+       "id": "k2-02-c0311",
        "ses": "Kanda laktat artışı metanol etilen glikol ve salisilat intoksikasyonu gibi anyon açığı yüksek metabolik asidoz nedenleri sistematik olarak taranır.",
        "ekran": "**Anyon Açığı Asidozu:** Laktat, metanol, etilen glikol ve salisilat kaynaklı yüksek anyon açıklı metabolik asidoz.",
        "slayt": {
@@ -5106,7 +6320,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0255",
+       "id": "k2-02-c0312",
        "ses": "Diyabetik ketoasidoz ve üremi elendikten sonra hastanın serum ozmolalitesi ölçülür ve formülle hesaplanan ozmolalite ile karşılaştırılır.",
        "ekran": "**Osmolar Açık Hesabı:** Ölçülen serum ozmolalitesi ile hesaplanan ozmolalitenin karşılaştırılması.",
        "slayt": {
@@ -5124,13 +6338,12 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0256",
+       "id": "k2-02-c0313",
        "ses": "Ölçülen ve hesaplanan ozmolalite arasındaki farkın on miliosmolün üzerinde olması pozitif bir osmolar açık bulunduğunu kanıtlar.",
        "ekran": "**Pozitif Osmolar Açık:** Farkın on miliosmolün üzerinde çıkmasının pozitif osmolar açık kabul edilmesi.",
        "slayt": {
         "sayfa": 60,
         "satir": "Etilen glikol",
-        "resim": 0,
         "madde": [
          5
         ]
@@ -5142,7 +6355,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0257",
+       "id": "k2-02-c0314",
        "ses": "Pozitif osmolar açık mevcudiyeti kanda metanol etilen glikol veya izopropil alkol gibi düşük molekül ağırlıklı toksinlerin varlığını kesinleştirir.",
        "ekran": "**Uçucu Toksinler:** Pozitif açığın metanol, etilen glikol ve izopropil alkol gibi maddeleri kanıtlaması.",
        "slayt": {
@@ -5159,7 +6372,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0258",
+       "id": "k2-02-c0315",
        "ses": "Toksikolojik panellerde barbitürat amfetamin klonidin trisiklik antidepresan organofosfat benzodiazepin ve opioid düzeyleri taranır.",
        "ekran": "**Geniş Toksik Panel:** Barbitürat, trisiklik antidepresan, organofosfat ve opioid paneli taraması.",
        "slayt": {
@@ -5178,7 +6391,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0259",
+       "id": "k2-02-c0316",
        "ses": "Toksin kaynağı tespit edildiğinde hemodiyaliz sodyum bikarbonat infüzyonu veya spesifik antidot tedavileri hızla devreye sokulur.",
        "ekran": "**Hedefe Yönelik Tedavi:** Toksin tespitinde hemodiyaliz, bikarbonat ve spesifik antidotların hızla başlanması.",
        "slayt": {
@@ -5196,13 +6409,12 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0260",
+       "id": "k2-02-c0317",
        "ses": "Doğru bir toksikolojik analiz tanı konulamayan derin koma olgularında hayat kurtarıcı nihai basamaktır.",
        "ekran": "**Hayat Kurtarıcı Toksikoloji:** Tanısı belirsiz komada toksikolojik analizin nihai hayat kurtarıcı gücü.",
        "slayt": {
         "sayfa": 60,
         "satir": "Komalı Hasta",
-        "resim": 0,
         "madde": [
          0
         ]
@@ -5223,14 +6435,13 @@
    "baslik": "Sonuç ve Klinik Özet",
    "paragraflar": [
     {
-     "id": "k2-02-p034",
+     "id": "k2-02-p061",
+     "paragrafIndex": 1,
      "sayfa": 61,
-     "slayt": {
-      "sayfa": 61
-     },
+     "baslik": "Sonuç ve Klinik Özet",
      "cumleler": [
       {
-       "id": "k2-02-c0261",
+       "id": "k2-02-c0318",
        "ses": "Sonuç olarak bilinç bozuklukları ve koma tablolarında doğru ve hızlı ayırıcı tanı koyabilmek klinik hekimliğin en hayati sınavıdır.",
        "ekran": "**Hayati Sınav:** Bilinç bozukluğunda hızlı ve doğru ayırıcı tanının hekimlikteki hayati önemi.",
        "slayt": {
@@ -5249,7 +6460,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0262",
+       "id": "k2-02-c0319",
        "ses": "Acil serviste ve yoğun bakımda yürütülecek hızlı koordineli ve disiplinler arası bir ekip yaklaşımı hasta sağkalımının temel taşıdır.",
        "ekran": "**Ekip Yaklaşımı:** Acil ve yoğun bakımda koordineli ve hızlı ekip yaklaşımının yaşamsal rolü.",
        "slayt": {
@@ -5267,7 +6478,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0263",
+       "id": "k2-02-c0320",
        "ses": "Vital parametrelerin stabilizasyonu hipogliseminin yatak başında saptanması ve beyin sapı reflekslerinin değerlendirilmesi ilk basamakta tamamlanmalıdır.",
        "ekran": "**İlk Basamak Tamamlama:** Vital stabilizasyon, glukoz kontrolü ve beyin sapı muayenesinin ilk anda yapılması.",
        "slayt": {
@@ -5286,7 +6497,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0264",
+       "id": "k2-02-c0321",
        "ses": "Fokal yapısal nedenler ile diffüz metabolik problemleri birbirinden ayıran algoritmik düşünce sistemi hekime rehberlik etmelidir.",
        "ekran": "**Rehber Algoritma:** Fokal lezyon ile metabolik problemi ayıran algoritmik yaklaşımın rehberliği.",
        "slayt": {
@@ -5304,7 +6515,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0265",
+       "id": "k2-02-c0322",
        "ses": "Etiyolojiye yönelik doğru tetkiklerin zamanında seçilmesi ve hedefe yönelik erken tedavinin gecikmeden başlanması prognozu son derece olumlu etkiler.",
        "ekran": "**Erken Tedavi ve Prognoz:** Doğru tetkik seçimi ve erken etiyolojik tedavinin prognozu olumlu etkilemesi.",
        "slayt": {
@@ -5322,7 +6533,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0266",
+       "id": "k2-02-c0323",
        "ses": "Geri dönüşsüz nöron hasarı gelişmeden önce atılacak her bilinçli adım hastayı hayata bağlar.",
        "ekran": "**Nöronal Koruma:** İskemik nöron hasarı oluşmadan atılan bilinçli adımların hastayı yaşatması.",
        "slayt": {
@@ -5340,7 +6551,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0267",
+       "id": "k2-02-c0324",
        "ses": "Katılımınız ve sabrınız için teşekkür eder klinik stajlarınızda ve hekimlik pratiğinizde başarılar dileriz.",
        "ekran": "**Dilekler ve Teşekkür:** Katılım için teşekkür ve klinik hekimlik stajlarında başarı temennileri.",
        "slayt": {
@@ -5358,7 +6569,7 @@
        "cikmis": []
       },
       {
-       "id": "k2-02-c0268",
+       "id": "k2-02-c0325",
        "ses": "Bilinç bozukluklarına yaklaşım dersimiz burada sona ermiştir.",
        "ekran": "**Ders Sonu:** Bilinç bozukluklarına yaklaşım sunumunun tamamlanması.",
        "slayt": {
@@ -5376,9 +6587,73 @@
        "cikmis": []
       }
      ]
+    },
+    {
+     "id": "k2-02-p062",
+     "paragrafIndex": 2,
+     "sayfa": 62,
+     "baslik": "Sonuç ve Klinik Özet",
+     "cumleler": [
+      {
+       "id": "k2-02-c0326",
+       "ses": "Bilinç bozukluğu olan hastaya yaklaşım dersimizin sonuna gelmiş bulunuyoruz değerli arkadaşlarım.",
+       "ekran": "**Ders Sonu:** Bilinç bozukluklarına klinik ve algoritmik yaklaşımın tamamlanması.",
+       "slayt": {
+        "sayfa": 62,
+        "satir": "TEŞEKKÜRLER...",
+        "madde": [
+         0
+        ]
+       },
+       "etiketler": [
+        "bilinç bozuklukları",
+        "ders sonu"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0327",
+       "ses": "Özetle, bilinci kapalı bir hastada telaşa kapılmadan önce a-be-ce basamaklarını tamamlamak, stik glukozu ölçmek ve pupiller ile motor yanıtları doğru değerlendirmek hayat kurtarır.",
+       "ekran": "**Temel İlkeler:** ABC stabilizasyonu, stik glukoz, pupil muayenesi ve Glasgow motor skoru hayat kurtarır.",
+       "slayt": {
+        "sayfa": 62,
+        "satir": "TEŞEKKÜRLER...",
+        "madde": [
+         0
+        ]
+       },
+       "etiketler": [
+        "ABC basamakları",
+        "stik glukoz",
+        "Glasgow motor skoru"
+       ],
+       "cikmis": []
+      },
+      {
+       "id": "k2-02-c0328",
+       "ses": "Yapısal lezyonları metabolik tablolardan ayırmak ve algoritmayı adım adım işletmek klinik pratiğinizin en güçlü rehberi olacaktır.",
+       "ekran": "**Klinik Rehber:** Fokal yapısal ile metabolik tablonun algoritmik ayrımı hekimin temel dayanağıdır.",
+       "slayt": {
+        "sayfa": 62,
+        "satir": "TEŞEKKÜRLER...",
+        "madde": [
+         0
+        ]
+       },
+       "etiketler": [
+        "yapısal lezyon",
+        "metabolik koma",
+        "klinik rehber"
+       ],
+       "cikmis": []
+      }
+     ]
     }
    ]
   }
  ],
+ "toplam_kelime": 5822,
+ "toplam_sure_tahmini_dakika": 46.6,
+ "anahtar": "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
  "donem": "2025-2026"
 }

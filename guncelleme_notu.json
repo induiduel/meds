@@ -1,27 +1,28 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 353,
-  "baslik": "Kurul 2 Tam Amfi Derinliği: Bilinç Bozukluğu (Ders 02) ve %100 Lazer Metin Takibi Yayında",
+  "onem": 354,
+  "baslik": "Kurul 2 Tam Amfi Kapsamı: Nörolojik Muayene (Ders 05) 72 Sayfa ve 25 Canlı Çizimle Yayında",
   "maddeler": [
-    "Ders 02 (Bilinç Bozukluğu Olan Hastaya Yaklaşım - Prof. Dr. Dursun Ceylan): 62 sayfanın tamamı eksiksiz kapsandı; 15 bölüm, 34 paragraf, 268 cümle, 4.638 kelime (33.6 dk EMA GPU sesli anlatım) ile tam amfi derinliğine ulaştırıldı.",
-    "0 Atlanan Sayfa ve Sıfır İleriye Sızıntı: 54 içerik sayfasının tamamı kendi özgün kazanım ve cümleleriyle işlendi; 17 görsel sayfanın tüm şekil ve tabloları anlatıldı; 22 canlı semantik çizim sıfır ileriye sızıntı kuralıyla doğrulandı.",
-    "16 Çıkmış Sınav Sorusu: Komite çıkmış sınav sorularının tamamı ders anlatımında sözlü olarak duyuruldu ve slayt satırlarıyla doğrudan ilişkilendirildi.",
-    "Lazer Metin Takibi Sistemi %100 Standardına Yükseltildi: Metin takibi motorundaki dize ayrıştırma düzeltildi; Kurul 2'deki 33 dersin 30'unda %100.0, kalan 3 derste %95.8–%99.5 olmak üzere tüm derslerde kusursuz satır ve kelime vurgusu sağlandı."
+    "Ders 05 (Nörolojik Muayene - Dr. Dursun Ceylan): 72 sayfanın tamamı eksiksiz kapsandı; 18 klinik bölüm, 72 paragraf, 228 cümle, 3.799 kelime (27.7 dk EMA GPU sesli anlatım) ile tam amfi derinliğine ulaştırıldı.",
+    "0 Atlanan Sayfa ve Sıfır Seyrek Sayfa Standardı: Tüm 72 slayt tek tek incelenerek 40 kelimenin altındaki tüm sayfalar zenginleştirildi; her resim, test, refleks ve muayene basamağı tane tane açıklandı.",
+    "25 Canlı Semantik Çizim: Kraniyal sinir nükleuslarından motor-duyu çaprazlarına, görme yolu defektlerinden patolojik reflekslere kadar 25 canlı çizim sıfır ileriye sızıntı kuralıyla onaylandı.",
+    "4 Çıkmış Sınav Sorusu: Komite sınavlarında sorulan santral fasiyal paralizi, hipoglossus felcinde dil sapması ve birinci motor nöron refleks bulguları sesli anlatımda duyuruldu ve slaytlarla ilişkilendirildi.",
+    "Kurul 2 Tam Otomasyon ve Paket Eşitlemesi: Ders 02 (62 sayfa, 42.0 dk ses, 19 çizim) ve Ders 05 (72 sayfa, 27.7 dk ses, 25 çizim) .medspak paketleri Oracle üretim sunucusuna (92.5.55.109) aktarıldı."
   ],
   "eklenen": [
-    "Kurul 2 Nöroloji 'Bilinç Bozukluğu Olan Hastaya Yaklaşım' (62 sayfa tam amfi kapsamı, 22 canlı çizim, 16 çıkmış soru, 10.68 MB .medspak)"
+    "Kurul 2 Nöroloji 'Nörolojik Muayene' (72 sayfa tam amfi kapsamı, 0 seyrek sayfa, 25 canlı çizim, 4 çıkmış soru, 17.41 MB .medspak)"
   ],
   "degisen": [
     "meds/data/arsiv_25_26/sesli_anlatim/dersler.json",
     "meds/data/arsiv_25_26/sesli_anlatim/kayit.json",
-    "meds/scripts/arsiv_25_26/uygula_lazer_takip.py",
-    "meds/scripts/arsiv_25_26/generate_deep_k2_02.py",
+    "meds/scripts/arsiv_25_26/generate_deep_k2_05.py",
+    "meds/scripts/arsiv_25_26/data_k2_05_paragraphs.py",
     "meds/guncelleme_notu.json"
   ],
   "duzeltilen": [
-    "Lazer metin takibi motorunda tekil satır dizelerinin harf harf bölünmesi hatası giderilerek tüm derslerde satır eşleme oranı %100'e çıkarıldı",
-    "Ders 02'deki 33 sayfalık eksik içerik ve boş şekil çapaları tamamen giderilerek 54 içerik sayfasının tamamı konuşma metnine dahil edildi",
-    "Canlı çizim komutlarındaki 4 ileri sızıntı kelimesi pedagojik sıra kuralına tam uygun hale getirildi"
+    "Ders 05'teki 7 eksik sayfa ve 34 seyrek slayt (<40 kelime) tamamen giderilerek 72/72 sayfa eksiksiz anlatıma kavuşturuldu",
+    "Ders 05 ve 02 için tüm kalite kapıları (KV.dogrula, denetle, validate_learning_decks, metin_denetle, sesli_kapsam, cizim_dogrula) 0 HATA ile doğrulandı",
+    "Canlı çizimlerdeki ileri sızıntı ve karakter sınırı hataları pedagojik sıra kuralına uygun olarak giderildi"
   ],
   "silinen": []
 }

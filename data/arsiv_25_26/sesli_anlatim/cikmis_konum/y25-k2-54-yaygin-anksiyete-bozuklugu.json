@@ -1,32 +1,68 @@
 {
  "surum": 1,
- "metinHash": "fb43e9fe5439c674dc1619dcc300b8a29b5abab3",
+ "metinHash": "85aa800ab3a20b23aa780445be14d058b0a13457",
  "q": [
+  {
+   "id": "d3-k2-psi-008",
+   "kok": "DSM-5 tanı ölçütlerine göre yaygın anksiyete bozukluğu tanısı koyabilmek için aşırı kaygı ve kuruntunun (beklenti anksiyetesi) en az ne kadar süre boyunca günlerin çoğunda mevcut olması gerekir?",
+   "cevap": "6 ay",
+   "yil": "2021-2026",
+   "p": 2,
+   "c": 1,
+   "skor": 0.92
+  },
   {
    "id": "q-25-26_d_nem_3_kurul_2-82-cs3",
    "kok": "Yaygın anksiyete bozukluğu ile ilgili aşağıdakilerden hangisi yanlıştır?",
    "cevap": "Tanı için belirtilerin en az 1 ay sürmesi yeterlidir",
    "yil": "2025-2026",
    "p": 2,
-   "c": 1,
+   "c": 2,
    "skor": 0.92
   },
   {
-   "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-78",
-   "kok": "Aşağıdakilerden hangisi yaygın anksiyete bozukluğu risk etmenlerinden biri değildir?",
-   "cevap": "Madde kullanımının olması",
-   "yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
+   "id": "q-25-26_d_nem_3_kurul_2-82-cs5",
+   "kok": "Hipervijilans en çok aşağıdakilerden hangisinde görülür?",
+   "cevap": "Travma sonrası stres bozukluğu",
+   "yil": "2025-2026",
    "p": 3,
    "c": 0,
    "skor": 0.92
   },
   {
-   "id": "d3-k2-psi-008",
-   "kok": "DSM-5 tanı ölçütlerine göre yaygın anksiyete bozukluğu tanısı koyabilmek için aşırı kaygı ve kuruntunun (beklenti anksiyetesi) en az ne kadar süre boyunca günlerin çoğunda mevcut olması gerekir?",
-   "cevap": "6 ay",
-   "yil": "2021-2026",
-   "p": 9,
+   "id": "past-1790877044849-897865",
+   "kok": "Aşağıdakilerden hangisi somatizasyon bozukluğu için yanlıştır?",
+   "cevap": "Hastalar yakınmalarının psikolojik kökenli olduğunu kolaylıkla kabul eder ve tıbbi tetkik istemezler.",
+   "yil": "2021-2022",
+   "p": 12,
    "c": 0,
+   "skor": 0.92
+  },
+  {
+   "id": "q-25-26_d_nem_3_kurul_2-82-cs7",
+   "kok": "Özgül fobi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+   "cevap": "Diğer anksiyete bozukluklarına benzer şekilde dalgalı bir gidiş izler",
+   "yil": "2025-2026",
+   "p": 14,
+   "c": 0,
+   "skor": 0.92
+  },
+  {
+   "id": "past-1790877036007-758785",
+   "kok": "Antidepresan ilaçlarla ilgili aşağıdakilerden hangisi yanlıştır?",
+   "cevap": "SSRI'lar iyi tolere edilir ve maliyetleri düşüktür ancak kullanım spektrumları dardır",
+   "yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
+   "p": 16,
+   "c": 0,
+   "skor": 0.92
+  },
+  {
+   "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-39",
+   "kok": "İnsomnia tedavisinde kullanılmayan ilaç hangisidir?",
+   "cevap": "Modafinil",
+   "yil": "2023",
+   "p": 16,
+   "c": 4,
    "skor": 0.92
   },
   {
@@ -35,98 +71,125 @@
    "cevap": "Agorafobili Panik Bozukluk",
    "yil": "2021-2026",
    "p": 13,
-   "c": 1,
-   "skor": 0.718
+   "c": 0,
+   "skor": 0.698
   },
   {
    "id": "967684a10028",
    "kok": "Uyum bozukluğu konusunda aşağıda verilen bilgilerden hangisi yanlıştır?",
    "cevap": "Anksiyete belirtilerinin olduğu alt tipte; saldırganlık, topluma aykırı davranışlar, kavga etme gibi belirtiler vardır.",
    "yil": "2020-2021",
-   "p": 3,
-   "c": 3,
-   "skor": 0.664
+   "p": 13,
+   "c": 0,
+   "skor": 0.652
   },
   {
    "id": "1e5ac6eef6a7",
    "kok": "Aşağıdakilerden hangisi uyum bozukluğu ile ilgili yanlış bir bilgidir?",
    "cevap": "Anksiyete belirtilerinin olduğu alt tipte saldırganlık, topluma aykırı davranışlar, kavga etme gibi belirtiler vardır.",
    "yil": "2020-2021",
+   "p": 13,
+   "c": 0,
+   "skor": 0.656
+  },
+  {
+   "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-78",
+   "kok": "Aşağıdakilerden hangisi yaygın anksiyete bozukluğu risk etmenlerinden biri değildir?",
+   "cevap": "Madde kullanımının olması",
+   "yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
    "p": 3,
-   "c": 3,
-   "skor": 0.681
+   "c": 0,
+   "skor": 0.613
   },
   {
    "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-76",
    "kok": "Geleneksel tıbbi veya psikiyatrik anlayışı aşan, belirtilerin olağan dışı ve dramatik sunumu, alışılmış tedavi ve ilaçlara uygun cevap vermeyen belirtiler, diğer belirtiler çözülürken yeni olağan dışı belirtilerin ortaya çıkması, işlemlere ve testlere girmeye ve belirtileri tekrar anlatmaya istek duyma, olağan dışı belirtilerin gelişimi şeklinde ortaya çıkan bir tabloda aşağıdakilerden hangisi düşünülmelidir?",
    "cevap": "Yapay bozukluk",
    "yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
-   "p": 3,
-   "c": 5,
-   "skor": 0.612
+   "p": 13,
+   "c": 4,
+   "skor": 0.619
   },
   {
    "id": "dd00370e9106",
    "kok": "Psikiyatri Psikiyatri Psikosomatik Hastalıklar Psikiyatri polikliniğine başvuran, tıbbi bir sorunu ve şikayeti olmadığını, ancak kanser olmaktan aşırı korktuğunu, bununla ilgili internet okumaları yaptığını, bunu düşünmekten kendisini işlerine veremediğini ifade eden hastada öntanısı ne olabilir?",
    "cevap": "Hastalık Kaygısı Bozukluğu",
    "yil": "2020-2021",
-   "p": 8,
-   "c": 5,
-   "skor": 0.652
+   "p": 15,
+   "c": 7,
+   "skor": 0.64
   },
   {
    "id": "6630634703c0",
    "kok": "Psikiyatri Psikiyatri Psikosomatik Hastalıklar Psikiyatri polikliniğine başvuran, tıbbi bir sorunu ve şikayeti olmadığını, ancak kanser olmaktan aşırı korktuğunu, bununla ilgili internet okumaları yaptığını, bunu düşünmekten kendisini işlerine veremediğini ifade eden hastada öntanısı ne olabilir?",
    "cevap": "Hastalık Kaygısı Bozukluğu",
    "yil": "2020-2021",
-   "p": 8,
-   "c": 5,
-   "skor": 0.652
+   "p": 15,
+   "c": 7,
+   "skor": 0.64
   },
   {
    "id": "41dfe004f570",
    "kok": "Psikiyatri Psikiyatri Psikosomatik Hastalıklar Psikiyatri polikliniğine başvuran, tıbbi bir sorunu ve şikayeti olmadığını, ancak kanser olmaktan aşırı korktuğunu, bununla ilgili internet okumaları yaptığını, bunu düşünmekten kendisini işlerine veremediğini ifade eden hastada öntanısı ne olabilir?",
    "cevap": "Hastalık Kaygısı Bozukluğu",
    "yil": "2020-2021",
-   "p": 8,
-   "c": 5,
-   "skor": 0.652
+   "p": 15,
+   "c": 7,
+   "skor": 0.64
   },
   {
    "id": "q-25-26_d_nem_3_kurul_2-75",
    "kok": "Bir kadın, çevresindekilerin kendisiyle ilgilenmediğinden ve ona yardım etmediklerinden yakınmaktadır. Bunu anlatırken bazı yerlerde ağlamaklı olduğu, bazı yerlerde ise yersiz kahkahalar attığı görülmektedir. Bu hasta için en olası tanı aşağıdakilerden hangisidir?",
    "cevap": "Histriyonik kişilik bozukluğu",
    "yil": "2025-2026",
-   "p": 2,
-   "c": 4,
-   "skor": 0.639
+   "p": 6,
+   "c": 6,
+   "skor": 0.622
   },
   {
    "id": "past-1790877044869-84754",
    "kok": "\"Devamlı kendisinden bahsedilmesini ister, başkalarının duygularını anlamaz, empati yapamaz.\" Yukarıda tanımlanan hasta için aşağıdakilerden hangisi en olası tanıdır?",
    "cevap": "Narsistik kişilik bozukluğu",
    "yil": "2021-2022",
-   "p": 10,
-   "c": 0,
-   "skor": 0.611
+   "p": 14,
+   "c": 4,
+   "skor": 0.632
+  },
+  {
+   "id": "bea2e4416c65",
+   "kok": "Karmaşık ilişkiler, yineleyen özkıyımla ilgili davranışlar ve girişimler olan, duygudurumda belirgin tepkiselliğe bağlı instabilite gözlenen kişilik bozukluğu hangisidir?",
+   "cevap": "Borderline kişilik bozukluğu",
+   "yil": "2020-2021",
+   "p": 13,
+   "c": 3,
+   "skor": 0.604
+  },
+  {
+   "id": "past-1790877044855-217832",
+   "kok": "Aşağıdakilerden hangisi panik bozukluğun bilişsel (kognitif) belirtileri arasında yer almaz?",
+   "cevap": "Beklenti anksiyetesi",
+   "yil": "2021-2022",
+   "p": 6,
+   "c": 9,
+   "skor": 0.614
   },
   {
    "id": "630ec96d2e21",
    "kok": "Uyum bozukluğu hakkında verilen bilgilerden hangisi yanlıştır?",
    "cevap": "Uyum bozukluğu olan hastalarda intihar eğilimi artmamaktadır.",
    "yil": "2020-2021",
-   "p": 3,
-   "c": 5,
-   "skor": 0.602
+   "p": 13,
+   "c": 7,
+   "skor": 0.611
   },
   {
    "id": "d3-k2-psi-005",
    "kok": "Sürekli ilgi odağı olma arzusu taşıyan, giyiminde dikkat çekici ve baştan çıkarıcı tarzı benimseyen, duygularını teatral ve abartılı yaşayan, ancak duygusal derinliği sığ ve çabuk değişen kişilik bozukluğu aşağıdakilerden hangisidir?",
    "cevap": "Histriyonik Kişilik Bozukluğu",
    "yil": "2021-2026",
-   "p": 13,
-   "c": 0,
-   "skor": 0.623
+   "p": 2,
+   "c": 5,
+   "skor": 0.621
   },
   {
    "id": "365430593b97",
@@ -134,26 +197,35 @@
    "cevap": "Şizofreniform bozukluk",
    "yil": "2020-2021",
    "p": 15,
-   "c": 3,
-   "skor": 0.602
+   "c": 7,
+   "skor": 0.624
   },
   {
    "id": "d3-k2-psi-002",
    "kok": "Kısa psikotik bozukluğun tanısı ve klinik gidişi ile ilgili aşağıdakilerden hangisi doğrudur?",
    "cevap": "Belirtiler 1 günden uzun, 1 aydan kısa sürer ve hasta hastalık öncesi işlevsellik düzeyine tam döner.",
    "yil": "2021-2026",
-   "p": 19,
-   "c": 0,
-   "skor": 0.621
+   "p": 9,
+   "c": 9,
+   "skor": 0.685
+  },
+  {
+   "id": "q-KURUL_2_C_IKMIS__3-46",
+   "kok": "Aşağıdakilerden hangisi panik atağın bilişsel belirtileri arasında yer almaz?",
+   "cevap": "Beklenti anksiyetesi",
+   "yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
+   "p": 6,
+   "c": 9,
+   "skor": 0.601
   },
   {
    "id": "past-1790877035999-122905",
    "kok": "Aşağıdakilerden hangisi Yaygın Gelişimsel Bozukluklar (YGB) ile ilgili doğru bir bilgi değildir?",
    "cevap": "Nörofeedback, YGB tedavisinde yaygın ve kanıtlanmış bir yöntemdir.",
    "yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
-   "p": 16,
+   "p": 18,
    "c": 0,
-   "skor": 0.607
+   "skor": 0.62
   },
   {
    "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-74",
@@ -161,8 +233,8 @@
    "cevap": "Bipolar bozukluk kadınlarda yaklaşık üç kat daha fazla görülmektedir.",
    "yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
    "p": 2,
-   "c": 4,
-   "skor": 0.717
+   "c": 6,
+   "skor": 0.659
   },
   {
    "id": "d3-k2-psi-016",
@@ -170,17 +242,17 @@
    "cevap": "Konversiyon Bozukluğu (Fonksiyonel Nörolojik Belirti Bozukluğu)",
    "yil": "2021-2026",
    "p": 0,
-   "c": 3,
-   "skor": 0.613
+   "c": 2,
+   "skor": 0.618
   },
   {
    "id": "d3-k2-psi-007",
    "kok": "Ağır bir ekonomik kayıp ve iflas sonrasında yaklaşık 20 gündür yoğun huzursuzluk, bunaltı, uykusuzluk ve stres yakınmalarıyla başvuran bir hastada, belirtilerin henüz 1 ayı doldurmamış olması göz önüne alındığında en olası tanı hangisidir?",
    "cevap": "Akut Stres Bozukluğu",
    "yil": "2021-2026",
-   "p": 10,
-   "c": 2,
-   "skor": 0.612
+   "p": 2,
+   "c": 5,
+   "skor": 0.605
   }
  ]
 }

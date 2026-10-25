@@ -1,9 +1,9 @@
 {
- "mdSha1": "697f496ca1f0a505b7c07c20abd73cf34db6fb1c",
+ "mdSha1": "4f88b811666c0cacc8cafd369e7338b9846f0747",
  "p": [
   [
    {
-    "ses": "Yaygın anksiyete bozukluğu dersimize hoş geldiniz, bu dersimizde psikiyatrik pratikte en sık karşılaşılan anksiyete bozukluklarından biri olan yaygın anksiyete bozukluğunu, klinik semiyolojisini, tanı ölçütlerini ve tedavi ilkelerini ayrıntılı şekilde inceleyeceğiz.",
+    "ses": "Ruh sağlığı ve hastalıkları klinik stajımızda psikiyatrik poliklinik pratiğinde en sık karşılaştığımız tablolardan biri olan yaygın anksiyete bozukluğunu tüm klinik boyutlarıyla ele alacağız.",
     "sayfa": 1,
     "satir": [
      "YAYGIN"
@@ -15,7 +15,7 @@
     ]
    },
    {
-    "ses": "Ders sunumumuz psikiyatri anabilim dalından Doktor Öğretim Üyesi Zuhal Koç Apaydın tarafından hazırlanmıştır.",
+    "ses": "Ders sunumumuz psikiyatri anabilim dalından Doktor Öğretim Üyesi Zuhal Koç Apaydın tarafından hazırlanmış olup güncel klinik kılavuzlar ve amfi ders notlarımız temel alınmıştır.",
     "sayfa": 1,
     "satir": [
      "DR. ÖĞRETİM ÜYESİ ZUHAL"
@@ -27,10 +27,22 @@
     ]
    },
    {
-    "ses": "Anksiyete normalde insanı tehlikelere karşı koruyan fizyolojik bir uyarı mekanizması iken, kontrol edilemez ve sürekli bir hale geldiğinde patolojik bir bozukluğa dönüşür.",
+    "ses": "Dersimiz kapsamında bozukluğun nörobiyolojik ve psikososyal etiyolojisini, klinik semiyolojisini, ayrıntılı ayırıcı tanısını ve güncel tedavi ilkelerini adım adım inceleyeceğiz.",
     "sayfa": 1,
     "satir": [
-     "BOZUKLUĞU"
+     "PSİKİYATRİ A.B.D."
+    ],
+    "sekil": null,
+    "madde": [
+     2,
+     0
+    ]
+   },
+   {
+    "ses": "Temel amacımız kurul sınavlarında sıkça karşımıza çıkan tanı ölçütlerini, süre kriterlerini, organik taklitçileri ve farmakoterapi ayrıntılarını eksiksiz şekilde kavramaktır.",
+    "sayfa": 1,
+    "satir": [
+     "YAYGIN"
     ],
     "sekil": null,
     "madde": [
@@ -38,10 +50,10 @@
     ]
    },
    {
-    "ses": "Dersimiz boyunca bozukluğun nörobiyolojik etiyolojisini, klinik belirtilerini, kardiyak ve endokrin taklitçilerle ayırıcı tanısını ve farmakoterapi ile psikoterapi basamaklarını adım adım ele alacağız.",
+    "ses": "Yaygın kaygının altta yatan hücresel ve nörobiyolojik mekanizmalarını doğru kavramak birinci basamak hekimlik pratiğinde doğru klinik kararlar almamızı sağlayacaktır.",
     "sayfa": 1,
     "satir": [
-     "ANKSİYETE"
+     "YAYGIN"
     ],
     "sekil": null,
     "madde": [
@@ -51,31 +63,19 @@
   ],
   [
    {
-    "ses": "Normal anksiyete genellikle yaygın, hoş olmayan ve belirsiz bir endişe hissi ile karakterize, insan gelişiminde uyum sağlayıcı fizyolojik bir deneyimdir.",
+    "ses": "Normal anksiyete organizmanın bilinmeyen, iç odaklı, belirsiz ya da çatışmalı bir tehdide karşı sergilediği doğal ve uyum sağlayıcı fizyolojik bir alarm tepkisidir.",
     "sayfa": 2,
     "satir": [
-     "ANKSİYETE (KAYGI)"
+     "Normal anksiyete;"
     ],
     "sekil": null,
     "madde": [
-     4,
-     0
+     2,
+     8
     ]
    },
    {
-    "ses": "Kaygı bilinmeyen, iç odaklı, belirsiz ya da bilinçdışı çatışmalı bir tehdide karşı organizmanın verdiği hazırlık yanıtıdır.",
-    "sayfa": 2,
-    "satir": [
-     "Bilinmeyen, iç odaklı, belirsiz ya da"
-    ],
-    "sekil": null,
-    "madde": [
-     4,
-     6
-    ]
-   },
-   {
-    "ses": "Korku ise bilinen, dış odaklı, belirli ve çatışmasız somut bir tehdide karşı organizmanın kaç ya da savaş yanıtını tetikleyen bir reaksiyondur.",
+    "ses": "Kaygı ile korku arasındaki temel ayrım klinik açıdan son derece kritiktir; kaygı belirsiz ve içsel tehditlere yönelikken, korku bilinen, dış odaklı ve somut bir tehlikeye karşı gelişir.",
     "sayfa": 2,
     "satir": [
      "Korku bilinen, dış odaklı, belirli ya da çatışmasız tehdide karşı bir yanıttır."
@@ -87,19 +87,31 @@
     ]
    },
    {
-    "ses": "Fizyolojik koşullarda sempatik ve parasempatik sinir sistemlerinin karşılıklı etkileşimi birey için uyum sağlayıcı bir alarm ve eylem hazırlığı durumu sağlar.",
+    "ses": "Fizyolojik düzeyde sempatik ve parasempatik sinir sistemlerinin karşılıklı dengeli etkileşimi bireyi tehlikelere karşı koruyarak uygun bir eylem hazırlığı durumu sağlar.",
     "sayfa": 2,
     "satir": [
-     "sempatik ve parasempatik sinir sistemlerinin karşılıklı"
+     "Kaygı normalde kişiye karşı gelişen bir tehdide karşı sempatik ve parasempatik sinir sistemlerinin karşılıklı"
     ],
     "sekil": null,
     "madde": [
      8,
-     6
+     4
     ]
    },
    {
-    "ses": "Kişinin olayları kronik stres etkeni olarak algılayıp ego savunma düzeneklerinin ve başa çıkma mekanizmalarının yetersiz kalması durumunda bu durum sürekli ve yıpratıcı bir kronik kaygı haline dönüşür.",
+    "ses": "Uyumsal düzeydeki bir kaygı hissi organizmanın hayatta kalma reflekslerini güçlendirir, sınav ve tehlike anlarında dikkati keskinleştirerek eyleme geçişi kolaylaştırır.",
+    "sayfa": 2,
+    "satir": [
+     "etkileşimleri ile kişi için uyum sağlayıcı bir durumu sağlarken; kişinin olayları bir stres etkeni olarak algılayıp"
+    ],
+    "sekil": null,
+    "madde": [
+     8,
+     4
+    ]
+   },
+   {
+    "ses": "Ancak kişi çevresel uyaranları sürekli ve ağır bir stres etkeni olarak algıladığında psikolojik savunma mekanizmaları ve başa çıkma stratejileri yetersiz kalabilir.",
     "sayfa": 2,
     "satir": [
      "psikolojik savunmaları ve başa çıkma mekanizmaları ile çatışmasına bağlı olarak ego uygun şekilde işlev görmezse"
@@ -109,11 +121,59 @@
      8,
      4
     ]
+   },
+   {
+    "ses": "Ego bütünlüğü uygun şekilde işlev göremediğinde fizyolojik alarm durumu yerini bireyin tüm yaşamını esir alan kronik ve yıpratıcı bir anksiyete tablosuna bırakır.",
+    "sayfa": 2,
+    "satir": [
+     "bu kronik bir kaygı halini yaratır."
+    ],
+    "sekil": null,
+    "madde": [
+     8,
+     4
+    ]
+   },
+   {
+    "ses": "Böylece bireyin günlük yaşamını, mesleki verimliliğini ve kişilerarası ilişkilerini bozan patolojik kaygı tablosu şekillenmiş olur.",
+    "sayfa": 2,
+    "satir": [
+     "ANKSİYETE (KAYGI)"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     2
+    ]
+   },
+   {
+    "ses": "Patolojik anksiyetede algılanan tehdidin şiddeti ve süresi gerçek duruma göre tamamen orantısızdır ve hasta bu içsel yangını sakinleştirmekte yetersiz kalır.",
+    "sayfa": 2,
+    "satir": [
+     "çatışmalı tehdide karşı bir yanıt iken;"
+    ],
+    "sekil": null,
+    "madde": [
+     4,
+     6
+    ]
+   },
+   {
+    "ses": "Hekimin temel klinik sorumluluğu fizyolojik koruyucu kaygı ile tedavi gerektiren patolojik anksiyete arasındaki bu hassas sınırı doğru belirlemektir.",
+    "sayfa": 2,
+    "satir": [
+     "ANKSİYETE (KAYGI)"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     2
+    ]
    }
   ],
   [
    {
-    "ses": "Yaygın anksiyete bozukluğu belli bir nesneye, yere, organa, saplantılı düşüncelere ya da zorlantılara odaklanmamış, serbest yüzen yaygın ruhsal ve fizyolojik bunaltı belirtileri ile karakterizedir.",
+    "ses": "Yaygın anksiyete bozukluğu belirli bir nesneye, mekana, organa ya da saplantılı düşünceye odaklanmamış, yani serbest dalgalanan ve serbest yüzen yaygın ruhsal bunaltı tablosudur.",
     "sayfa": 3,
     "satir": [
      "Yaygın Anksiyete Bozukluğu (YAB); belli bir nesneye,yere,organa, saplantılı düşüncelere ya da zorlantıya"
@@ -125,19 +185,7 @@
     ]
    },
    {
-    "ses": "Fobik veya obsesif tablolardan farklı olarak sınavda sorulan serbest dalgalanan kaygı yapısı yaygın anksiyete bozukluğu için en temel patognomonik tanısal ipucudur.",
-    "sayfa": 3,
-    "satir": [
-     "odaklanmamış, yani belli bir düşünsel ya da devinimsel içeriği olmayan, organizmada yaygın ruhsal ve fizyolojik"
-    ],
-    "sekil": null,
-    "madde": [
-     2,
-     0
-    ]
-   },
-   {
-    "ses": "Tanı koyabilmek için en az altı aylık bir dönem boyunca hemen her gün birçok farklı olay veya günlük etkinlik hakkında orantısız ve aşırı kaygı duyulması gerekmektedir.",
+    "ses": "Bu bilgi çıkmış sınavda sorulmuştur: Yaygın anksiyete bozukluğu tanısı koyabilmek için en az altı aylık bir dönem boyunca hemen her gün birçok olay hakkında aşırı kaygı ve endişe duyulması şarttır.",
     "sayfa": 3,
     "satir": [
      "En az 6 aylık bir dönem boyunca hemen her gün bir çok olay veya etkinlik hakkında aşırı kaygı ve endişe duyma"
@@ -149,7 +197,31 @@
     ]
    },
    {
-    "ses": "Genel toplumda yaygın anksiyete bozukluğunun yaşam boyu yaygınlık oranı yüzde üç ila altı arasında bildirilmektedir.",
+    "ses": "Bu bilgi çıkmış sınavda sorulmuştur: Sınavlarda sıklıkla çeldirici olarak verilen bir aylık veya iki aylık süre yaygın anksiyete bozukluğu tanısı için kesinlikle yetersizdir; süre en az altı ay olmalıdır.",
+    "sayfa": 3,
+    "satir": [
+     "En az 6 aylık bir dönem boyunca hemen her gün bir çok olay veya etkinlik hakkında aşırı kaygı ve endişe duyma"
+    ],
+    "sekil": null,
+    "madde": [
+     4,
+     2
+    ]
+   },
+   {
+    "ses": "Hasta sabah aile sağlığı hakkında endişelenirken öğleden sonra finansal duruma veya işteki en küçük aksaklıklara takılarak kaygısını konu değiştire değiştire sürdürür.",
+    "sayfa": 3,
+    "satir": [
+     "En az 6 aylık bir dönem boyunca hemen her gün bir çok olay veya etkinlik hakkında aşırı kaygı ve endişe duyma"
+    ],
+    "sekil": null,
+    "madde": [
+     4,
+     6
+    ]
+   },
+   {
+    "ses": "Epidemiyolojik çalışmalara göre genel toplumda yaygın anksiyete bozukluğunun yaşam boyu yaygınlık oranı yüzde üç ila altı arasında bildirilmektedir.",
     "sayfa": 3,
     "satir": [
      "Yaşam boyu yaygınlık oranı %3-6."
@@ -161,7 +233,19 @@
     ]
    },
    {
-    "ses": "Kadınlarda erkeklere göre iki kat daha sık görülen bu rahatsızlık, temel sağlık hizmetlerine başvuran poliklinik hastalarında en sık rastlanan anksiyete bozukluğu türüdür.",
+    "ses": "Birinci basamak sağlık kuruluşlarına ve aile hekimliği polikliniklerine başvuran olgular arasında en sık saptanan anksiyete bozukluğu türü yaygın anksiyete bozukluğudur.",
+    "sayfa": 3,
+    "satir": [
+     "Temel sağlık hizmetlerine başvuran hastalarda en sık görülen anksiyete bozukluğu YAB’dir."
+    ],
+    "sekil": null,
+    "madde": [
+     8,
+     0
+    ]
+   },
+   {
+    "ses": "Cinsiyet dağılımına bakıldığında kadınlarda erkeklere oranla iki kat daha sık görüldüğü saptanmıştır.",
     "sayfa": 3,
     "satir": [
      "Kadınlarda erkeklere göre 2 kat daha fazladır."
@@ -171,11 +255,47 @@
      10,
      8
     ]
+   },
+   {
+    "ses": "Hastalık sıklıkla yirmili yaşlarda veya erken erişkinlik evresinde başlar ancak olguların çoğu çocukluktan beri endişeli mizaçta olduklarını ifade ederler.",
+    "sayfa": 3,
+    "satir": [
+     "Yaşam boyu yaygınlık oranı %3-6."
+    ],
+    "sekil": null,
+    "madde": [
+     6,
+     0
+    ]
+   },
+   {
+    "ses": "Hastalar psikiyatriden önce kronik yorgunluk, boyun ağrısı, çarpıntı ve gaz şikayetleri ile dahiliye ve nöroloji kliniklerini dolaşmaktadır.",
+    "sayfa": 3,
+    "satir": [
+     "YAYGIN ANKSİYETE BOZUKLUĞU"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     2
+    ]
+   },
+   {
+    "ses": "Somatik yakınmaların ön planda olması nedeniyle doğru psikiyatrik tanının konulması ve uygun tedavinin başlanması yıllarca gecikebilmektedir.",
+    "sayfa": 3,
+    "satir": [
+     "Temel sağlık hizmetlerine başvuran hastalarda en sık görülen anksiyete bozukluğu YAB’dir."
+    ],
+    "sekil": null,
+    "madde": [
+     8,
+     0
+    ]
    }
   ],
   [
    {
-    "ses": "Çıkmış sınav sorularında vurgulanan çocukluk çağı kötü muamele öyküsü, fiziksel veya duygusal istismar ve ihmal erişkin dönemde yaygın anksiyete bozukluğu gelişiminde en güçlü psikososyal risk etmenidir.",
+    "ses": "Bu bilgi çıkmış sınavda sorulmuştur: Çocukluk çağında kötü muamele, fiziksel ya da duygusal ihmal ve istismar öyküsü erişkin dönemde yaygın anksiyete bozukluğu gelişimi için en güçlü risk etmenidir.",
     "sayfa": 4,
     "satir": [
      "Çocukluk çağında kötü muamele görmüş olma"
@@ -187,7 +307,7 @@
     ]
    },
    {
-    "ses": "Düşük sosyoekonomik düzey, kronik finansal güvensizlik ve çevresel destek mekanizmalarının yetersizliği hastalığın gelişiminde önemli zemin hazırlar.",
+    "ses": "Düşük sosyoekonomik düzey, finansal güvensizlik ve olumsuz yaşam koşulları kaygının süreğenleşmesinde önemli rol oynar.",
     "sayfa": 4,
     "satir": [
      "Düşük sosyo-ekonomik durum"
@@ -198,7 +318,7 @@
     ]
    },
    {
-    "ses": "Bireyin sorunlarını dışa vurmak yerine içe atma eğilimi göstermesi ve duygusal ifade güçlüğü yaşaması kaygının somatizasyonuna yol açar.",
+    "ses": "Bireyin duygularını dışa vurmak yerine içine atma eğilimi göstermesi ruhsal gerginliğin bedensel yakınmalara dönüşmesine zemin hazırlar.",
     "sayfa": 4,
     "satir": [
      "Sorunları içe atma eğilimi"
@@ -209,7 +329,7 @@
     ]
    },
    {
-    "ses": "Çocukluk çağındaki davranım bozuklukları ve uyum problemleri erişkin yaş grubundaki anksiyete bozukluklarının önemli birer öncülü olabilmektedir.",
+    "ses": "Erken çocukluk evresindeki mizaç özellikleri, çekingenlik ve davranım problemleri ilerleyen yıllarda yaygın kaygı gelişimine yatkınlık yaratır.",
     "sayfa": 4,
     "satir": [
      "Çocukluktaki davranım bozuklukları"
@@ -221,7 +341,7 @@
     ]
    },
    {
-    "ses": "Yaygın anksiyete bozukluğu olan hastaların yüzde altmış iki ila altmış yedisinde eşlik eden majör depresyon ek tanısı mevcuttur.",
+    "ses": "Klinik pratikte hastaların yüzde altmış iki ila altmış yedisinde tabloya eşlik eden bir majör depresyon ek tanısı bulunmaktadır.",
     "sayfa": 4,
     "satir": [
      "%62-67 sinde depresyon ek tanısı mevcuttur."
@@ -233,7 +353,18 @@
     ]
    },
    {
-    "ses": "Hastaların yaklaşık yüzde yirmi beşinde panik bozukluk eşlik ederken, distimik bozukluk ve anksiyeteyi yatıştırma amaçlı madde kullanım bozukluğu da sıkça tabloya eklenir.",
+    "ses": "Yaygın anksiyete ile depresyonun birlikteliği klinik seyri ağırlaştırır, tedaviye yanıtı geciktirir ve hastanın mesleki işlevselliğini derinden bozar.",
+    "sayfa": 4,
+    "satir": [
+     "%62-67 sinde depresyon ek tanısı mevcuttur."
+    ],
+    "sekil": null,
+    "madde": [
+     11
+    ]
+   },
+   {
+    "ses": "Olguların yaklaşık dörtte birinde panik bozukluk görülürken, distimik bozukluk ve anksiyeteyi bastırmaya yönelik alkol ya da madde kullanımı da sıktır.",
     "sayfa": 4,
     "satir": [
      "%25 kadarında panik bozukluk görülür."
@@ -243,11 +374,71 @@
      13,
      15
     ]
+   },
+   {
+    "ses": "Hastalar yaşadıkları dayanılmaz gerginliği ve uykusuzluğu dindirebilmek için alkol ve reçetesiz sakinleştiricilere sığınarak bağımlılık kısır döngüsüne girebilirler.",
+    "sayfa": 4,
+    "satir": [
+     "Distimik bozukluk ve madde kullanım bozukluğu da"
+    ],
+    "sekil": null,
+    "madde": [
+     15,
+     8
+    ]
+   },
+   {
+    "ses": "Bu nedenle poliklinikte yaygın anksiyete bozukluğu saptadığımız her hastada eşlik eden depresif belirtileri ve madde kullanımını mutlaka sorgulamalıyız.",
+    "sayfa": 4,
+    "satir": [
+     "Eşlik eden diğer psikiyatrik rahatsızlıklar"
+    ],
+    "sekil": null,
+    "madde": [
+     9,
+     15
+    ]
+   },
+   {
+    "ses": "Bu yüksek birliktelik oranları kaygı ve duygudurum bozukluklarının ortak genetik ve nörokimyasal mekanizmaları paylaştığını göstermektedir.",
+    "sayfa": 4,
+    "satir": [
+     "Eşlik eden diğer psikiyatrik rahatsızlıklar"
+    ],
+    "sekil": null,
+    "madde": [
+     9,
+     8
+    ]
    }
   ],
   [
    {
-    "ses": "Biyolojik etkenler arasında gama aminobütirik asit benzodiazepin reseptör kompleksindeki duyarlılık bozuklukları, serotonin, noradrenalin ve glutamat yolak anomalileri yer alır.",
+    "ses": "Biyolojik etkenlerin başında gama aminobütirik asit ve benzodiazepin reseptör kompleksindeki duyarlılık ve bağlanma kusurları gelir.",
+    "sayfa": 5,
+    "satir": [
+     "Biyolojik etkenler (BDZ resp, 5-HT, NA, Glutamat, oksipital lob, bazal ggl, limbik sistem ve frontal korteks, α2-"
+    ],
+    "sekil": null,
+    "madde": [
+     2,
+     6
+    ]
+   },
+   {
+    "ses": "Beyindeki ana inhibitör nörotransmitter olan gama aminobütirik asit sisteminin yetersiz frenleme yapması nöronal devrelerde aşırı uyarılmaya ve kaygı tırmanışına yol açar.",
+    "sayfa": 5,
+    "satir": [
+     "Biyolojik etkenler (BDZ resp, 5-HT, NA, Glutamat, oksipital lob, bazal ggl, limbik sistem ve frontal korteks, α2-"
+    ],
+    "sekil": null,
+    "madde": [
+     2,
+     6
+    ]
+   },
+   {
+    "ses": "Serotonerjik yolaklar, lokus seruleustan kaynaklanan noradrenerjik hiperaktivite ve glutamaterjik eksitatör ileti anomalileri merkezi rol oynar.",
     "sayfa": 5,
     "satir": [
      "Biyolojik etkenler (BDZ resp, 5-HT, NA, Glutamat, oksipital lob, bazal ggl, limbik sistem ve frontal korteks, α2-"
@@ -259,18 +450,43 @@
     ]
    },
    {
-    "ses": "Beyinde oksipital lob, bazal gangliyonlar, limbik sistem ve prefrontal korteksi içeren korku ağında hiperaktivite ve presinaptik alfa iki adrenerjik reseptör duyarlılığında azalma saptanır.",
+    "ses": "Fonksiyonel nörogörüntüleme çalışmalarında oksipital lob, bazal gangliyonlar, amigdala ve prefrontal korteksi içeren nöral ağlarda aktivite farklılıkları gösterilmiştir.",
     "sayfa": 5,
     "satir": [
-     "adrenerjik resp duyarlılığında azalma)"
+     "Biyolojik etkenler (BDZ resp, 5-HT, NA, Glutamat, oksipital lob, bazal ggl, limbik sistem ve frontal korteks, α2-"
     ],
     "sekil": null,
     "madde": [
+     2,
+     4
+    ]
+   },
+   {
+    "ses": "Prefrontal korteksin amigdala üzerindeki yukarıdan aşağıya inhibisyon yeteneğinin zayıflaması tehdit uyaranlarının gereksiz yere büyümesine neden olur.",
+    "sayfa": 5,
+    "satir": [
+     "Biyolojik etkenler (BDZ resp, 5-HT, NA, Glutamat, oksipital lob, bazal ggl, limbik sistem ve frontal korteks, α2-"
+    ],
+    "sekil": null,
+    "madde": [
+     2,
+     6
+    ]
+   },
+   {
+    "ses": "Presinaptik alfa iki adrenerjik otoreseptör duyarlılığındaki azalma noradrenalin salınımını frenleyemeyerek sempatik tonusu yüksek tutar.",
+    "sayfa": 5,
+    "satir": [
+     "ETİYOLOJİ"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
      2
     ]
    },
    {
-    "ses": "Genetik çalışmalarda yaygın anksiyete bozukluğu olan bireylerin birinci derece akrabalarında yüzde yirmi beş oranında anksiyete bozukluğu riski gösterilmiştir.",
+    "ses": "Genetik araştırmalarda yaygın anksiyete bozukluğu olan bireylerin birinci derece akrabalarında yaklaşık yüzde yirmi beş oranında anksiyete bozukluğu riski bildirilmiştir.",
     "sayfa": 5,
     "satir": [
      "Genetik etkenler (YAB olan hastaların birinci derece akrabalarında %25 oranında etkilenme)"
@@ -282,43 +498,45 @@
     ]
    },
    {
-    "ses": "Bilişsel davranışçı kurama göre hastalar çevrelerindeki belirsiz veya nötr uyaranları orantısız bir tehdit ve felaket olarak algılayıp hatalı başa çıkma tepkileri verirler.",
+    "ses": "İkiz ve aile çalışmaları yaygın anksiyete bozukluğunda kalıtılabilirliğin orta düzeyde olduğunu ve çevresel stresörlerle etkileştiğini ortaya koymaktadır.",
     "sayfa": 5,
     "satir": [
-     "Bilişsel- Davranışçı kurama göre algılanan tehdide yanlış ve kusurlu tepki verme,"
+     "Genetik etkenler (YAB olan hastaların birinci derece akrabalarında %25 oranında etkilenme)"
     ],
     "sekil": null,
     "madde": [
+     4,
      6
     ]
    },
    {
-    "ses": "Psikanalitik kuramda ise kronik anksiyetenin çözümlenmemiş içsel dürtüler ve bilinçdışı çatışmalar karşısında ego savunmalarının zayıflamasından doğan bir sinyal olduğu kabul edilir.",
+    "ses": "Bilişsel davranışçı kuram tehditlerin felaketleştirilmesini ve abartılmasını vurgularken, psikanalitik kuram kaygıyı bilinçdışı çatışmaların bir dışavurumu sayar.",
     "sayfa": 5,
     "satir": [
-     "Psikoanalitik"
+     "Psikososyal etkenler (Bilişsel- Davranışçı kurama göre algılanan tehdide yanlış ve kusurlu tepki verme, Psikoanalitik"
     ],
     "sekil": null,
     "madde": [
-     6
+     6,
+     4
     ]
    },
    {
-    "ses": "Tüm bu nörobiyolojik, genetik ve bilişsel dinamikler bir araya gelerek hastanın stres karşısındaki tolerans eşiğini belirgin şekilde düşürür.",
+    "ses": "Biyolojik yatkınlık, genetik zemin ve bilişsel çarpıtmalar birleştiğinde bireyin günlük belirsizliklere tahammül gücü tamamen çöker.",
     "sayfa": 5,
     "satir": [
-     "ETİYOLOJİ"
+     "adrenerjik resp duyarlılığında azalma)"
     ],
     "sekil": null,
     "madde": [
-     0,
+     2,
      6
     ]
    }
   ],
   [
    {
-    "ses": "Hastalarda ya kimse beni sevmezse veya ya her şey ters giderse gibi katastrofik felaketleştirici düşünce kalıpları zihni sürekli meşgul eder.",
+    "ses": "Bilişsel modelde hastanın zihnini ya kimse beni sevmezse veya ya her şey ters giderse gibi katastrofik felaket senaryoları aralıksız işgal eder.",
     "sayfa": 6,
     "satir": [
      "Ya kimse"
@@ -330,7 +548,7 @@
     ]
    },
    {
-    "ses": "Birey geleceğe yönelik olası olumsuz senaryoların gerçekleşme ihtimalini aşırı derecede abartırken kendi kişisel başa çıkma gücünü küçümser.",
+    "ses": "Birey geleceğe dair olası olumsuz durumların gerçekleşme ihtimalini aşırı derecede abartırken kendi başa çıkma becerilerini küçümser.",
     "sayfa": 6,
     "satir": [
      "beni"
@@ -341,7 +559,63 @@
     ]
    },
    {
-    "ses": "Sürekli endişe duymanın felaketleri önceden fark edip engelleyeceği yönündeki hatalı inanç, kaygı döngüsünün kronikleşerek pekişmesine neden olur.",
+    "ses": "Yaygın anksiyetesi olan kişi için belirsizliğe tahammül etmek imkansızdır; net olmayan her durum mutlak bir yıkım olarak yorumlanır.",
+    "sayfa": 6,
+    "satir": [
+     "sevmezse?"
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "Sürekli tetikte olmanın ve kuruntu yapmanın felaketleri önceden fark edip engelleyeceği yönündeki hatalı inanç kaygı döngüsünü pekiştirir.",
+    "sayfa": 6,
+    "satir": [
+     "ANKSTYETE"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Kişi endişelenerek daha derin duygusal yüzleşmelerden ve travmatik deneyimlerin getirdiği bedensel uyarılmadan kaçınmaya çalışır.",
+    "sayfa": 6,
+    "satir": [
+     "ANKSTYETE"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Bu bitmek bilmeyen zihinsel alarm hali hastanın ruhsal enerjisini tüketerek gün boyu süren yoğun bir içsel gerginlik yaratır.",
+    "sayfa": 6,
+    "satir": [
+     "ANKSTYETE"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Bilişsel davranışçı terapide bu felaketleştirici çarpıtmalar adım adım kanıt sorgulamalarıyla yeniden yapılandırılır.",
+    "sayfa": 6,
+    "satir": [
+     "Ya kimse"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Terapötik süreç hastanın geleceğe yönelik gerçekçi olasılıkları değerlendirmesini ve başa çıkma güvenini yeniden kazanmasını sağlar.",
     "sayfa": 6,
     "satir": [
      "sevmezse?"
@@ -350,23 +624,11 @@
     "madde": [
      1
     ]
-   },
-   {
-    "ses": "Bu bitmek bilmeyen zihinsel alarm durumu hastanın enerjisini tüketerek gün boyu kronik tükenmişlik ve yoğun gerginlik hissetmesine yol açar.",
-    "sayfa": 6,
-    "satir": [
-     "ANKSTYETE"
-    ],
-    "sekil": null,
-    "resim": 0,
-    "madde": [
-     0
-    ]
    }
   ],
   [
    {
-    "ses": "Hastanın genel muayenesinde belirgin bir motor huzursuzluk, endişeli yüz ifadesi, kaslarda gergin duruş, hafif sesle dahi çabuk irkilme ve kolay kızma gözlenir.",
+    "ses": "Genel muayenede hastada belirgin bir motor huzursuzluk, alında kırışma, endişeli yüz ifadesi, gergin duruş ve hafif sesle bile irkilme gözlenir.",
     "sayfa": 7,
     "satir": [
      "Genel Görünüm ve davranış: genel bir huzursuzluk, endişeli yüz, gergin duruş, çabuk irkilme, çabuk kızma"
@@ -378,7 +640,31 @@
     ]
    },
    {
-    "ses": "İletişim sırasında seste heyecanlı bir titreklik ve konuşurken zorlanma hissedilir, ancak düşünce yapısı mantıklıdır ve konuşması düzgündür.",
+    "ses": "Hasta muayene koltuğunda otururken ellerini sıkar, bacaklarını sallar, yerinde duramaz ve sürekli kıpırdanarak motor gerginliğini dışa vurur.",
+    "sayfa": 7,
+    "satir": [
+     "Genel Görünüm ve davranış: genel bir huzursuzluk, endişeli yüz, gergin duruş, çabuk irkilme, çabuk kızma"
+    ],
+    "sekil": null,
+    "madde": [
+     2,
+     4
+    ]
+   },
+   {
+    "ses": "Çevresel uyaranlara karşı duyarlılık artmıştır; hasta kapı çarpmasında irkilir, tahammülsüzdür ve küçük aksiliklere çabuk öfkelenir.",
+    "sayfa": 7,
+    "satir": [
+     "Genel Görünüm ve davranış: genel bir huzursuzluk, endişeli yüz, gergin duruş, çabuk irkilme, çabuk kızma"
+    ],
+    "sekil": null,
+    "madde": [
+     2,
+     8
+    ]
+   },
+   {
+    "ses": "Konuşma muayenesinde seste heyecanlı bir titreklik ve konuşurken zorlanma sezilebilir, ancak konuşmanın mantıksal akışı ve hedefe yönelimi düzgündür.",
     "sayfa": 7,
     "satir": [
      "Konuşma ve ilişki kurma: sesde heyecanlı bir titreklik, zor konuşma, fakat konuşması düzgündür."
@@ -390,10 +676,22 @@
     ]
    },
    {
-    "ses": "Duygulanım muayenesinde hasta içsel yaşantısını bun, bungunluk ve göğsüne çöken ağır bir bunaltı olarak ifade eder.",
+    "ses": "Hekimle iletişim kurarken göz teması sürdürülebilir ancak bakışlardaki sürekli tetikte olma ve tedirginlik açıkça göze çarpar.",
     "sayfa": 7,
     "satir": [
-     "Duygulanım: bun, bungunluk, bunaltı şeklinde tarif edebilirler."
+     "Konuşma ve ilişki kurma: sesde heyecanlı bir titreklik, zor konuşma, fakat konuşması düzgündür."
+    ],
+    "sekil": null,
+    "madde": [
+     4,
+     2
+    ]
+   },
+   {
+    "ses": "Duygulanım muayenesinde hasta iç dünyasını bun, bungunluk ve göğsüne çöken ağır bir bunaltı hissi olarak tanımlar; sıklıkla depresif çökkünlük eşlik eder.",
+    "sayfa": 7,
+    "satir": [
+     "Duygulanım: bun, bungunluk, bunaltı şeklinde tarif edebilirler. Beraberinde sıklıkla ruhsal çökkünlük olabilir."
     ],
     "sekil": null,
     "madde": [
@@ -401,10 +699,10 @@
     ]
    },
    {
-    "ses": "Süregiden kontrolsüz kaygı tablosuna zamanla sıklıkla depresif duygulanım, umutsuzluk ve ruhsal çökkünlük belirtileri eklenir.",
+    "ses": "Hastanın afektif ifadesi kaygılı ve kısıtlıdır; neşeli veya rahatlatıcı uyaranlara tepki vermekte belirgin güçlük çeker.",
     "sayfa": 7,
     "satir": [
-     "Beraberinde sıklıkla ruhsal çökkünlük olabilir."
+     "Duygulanım: bun, bungunluk, bunaltı şeklinde tarif edebilirler. Beraberinde sıklıkla ruhsal çökkünlük olabilir."
     ],
     "sekil": null,
     "madde": [
@@ -412,7 +710,7 @@
     ]
    },
    {
-    "ses": "Zihni meşgul eden yorucu endişeler nedeniyle hastanın dikkati çabuk dağılır, konsantrasyonu bozulur ve günlük işlerde geçici unutkanlıklar ortaya çıkar.",
+    "ses": "Bilişsel yetiler değerlendirildiğinde zihni meşgul eden kuruntular nedeniyle dikkat çabuk dağılır, odaklanma güçleşir ve geçici unutkanlıklar görülebilir.",
     "sayfa": 7,
     "satir": [
      "Bilişsel yetiler: yorucu olan sıkıntı nedeni ile dikkati çabuk dağılır, geçici unutkanlıklar olabilir."
@@ -422,53 +720,26 @@
      8,
      2
     ]
-   }
-  ],
-  [
+   },
    {
-    "ses": "Hastaların düşünce içeriğinde yoksa anneme kötü bir şey mi oldu ya da çocuğum kaza mı geçirdi gibi sevdiklerinin sağlığına dair felaket tasaları baskındır.",
-    "sayfa": 8,
+    "ses": "Hastanın yer, zaman ve kişi yönelimi tamdır, belleği korunmuştur; yaşanan unutkanlıklar dikkat odaklanma yetersizliğine bağlıdır.",
+    "sayfa": 7,
     "satir": [
-     "YOKSA ANNEME"
+     "Bilişsel yetiler: yorucu olan sıkıntı nedeni ile dikkati çabuk dağılır, geçici unutkanlıklar olabilir."
     ],
     "sekil": null,
-    "resim": 0,
     "madde": [
-     0
+     8,
+     2
     ]
    },
    {
-    "ses": "Beklenmedik bir telefon çalışında veya kapı zili sesinde anında en kötü haberin geldiği sanılarak şiddetli bir panik ve dehşet hissi yaşanır.",
-    "sayfa": 8,
+    "ses": "Bu muayenede düşünce içeriğinde hezeyan veya persepsiyonda halüsinasyon saptanmaması primer anksiyete tanısını destekler.",
+    "sayfa": 7,
     "satir": [
-     "BİŞEY Mİ OLDU?"
+     "KLİNİK ÖZELLİKLER"
     ],
     "sekil": null,
-    "resim": 0,
-    "madde": [
-     0
-    ]
-   },
-   {
-    "ses": "Geleceğe yönelik sağlık sorunları, iflas, iş kaybı veya günlük rutinlerdeki en küçük aksilikler bile zihinde devasa felaketler olarak kurgulanır.",
-    "sayfa": 8,
-    "satir": [
-     "YOKSA ANNEME"
-    ],
-    "sekil": null,
-    "resim": 0,
-    "madde": [
-     0
-    ]
-   },
-   {
-    "ses": "Hasta endişelerinin abartılı olduğunu mantıksal olarak bilse dahi bu düşünce akışını denetim altına almakta ve zihnini sakinleştirmekte tamamen yetersiz kalır.",
-    "sayfa": 8,
-    "satir": [
-     "BİŞEY Mİ OLDU?"
-    ],
-    "sekil": null,
-    "resim": 0,
     "madde": [
      0
     ]
@@ -476,7 +747,105 @@
   ],
   [
    {
-    "ses": "Düşünce sürecinde hasta yakınmalarını büyük bir heyecan ve sabırsızlıkla hekime aktarmak istediğinden düşünce akışı hızlanmış izlenimi verebilir.",
+    "ses": "Hastaların düşünce içeriğinde yoksa anneme kötü bir şey mi oldu, çocuğum kaza mı geçirdi gibi sevdiklerinin sağlığına dair felaket tasaları baskındır.",
+    "sayfa": 8,
+    "satir": [
+     "YOKSA ANNEME"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Beklenmedik bir telefon çalışı veya kapı zili sesinde anında en korkunç haberin geldiği zannedilerek yoğun bir dehşet hissi yaşanır.",
+    "sayfa": 8,
+    "satir": [
+     "BİŞEY Mİ OLDU?"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Ev halkından biri eve on dakika geç kalsa hasta derhal trafik kazası geçirdiğini düşünerek acil servisleri aramaya başlar.",
+    "sayfa": 8,
+    "satir": [
+     "YOKSA ANNEME"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Sağlık sorunları, maddi kayıplar veya gündelik rutin aksaklıklar zihinde orantısız büyüklükte felaketler olarak canlandırılır.",
+    "sayfa": 8,
+    "satir": [
+     "BİŞEY Mİ OLDU?"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Kaygının serbest yüzen doğası gereği bir sorun çözülse bile rahatlama sağlanamaz; zihin derhal başka bir kaygı başlığı üretir.",
+    "sayfa": 8,
+    "satir": [
+     "YOKSA ANNEME"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Hasta endişelerinin abartılı olduğunu mantıken kabul etse bile bu düşünce akışını denetim altına almakta tamamen çaresiz hisseder.",
+    "sayfa": 8,
+    "satir": [
+     "BİŞEY Mİ OLDU?"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Sürekli yakınlarından her şeyin yolunda olduğuna dair onay istemek hasta yakınlarında da tükenmişliğe yol açabilir.",
+    "sayfa": 8,
+    "satir": [
+     "YOKSA ANNEME"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Terapötik görüşmelerde bu felaketleştirici senaryoların gerçeklik payı ve alternatif açıklamaları incelenir.",
+    "sayfa": 8,
+    "satir": [
+     "BİŞEY Mİ OLDU?"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ],
+    "resim": 0
+   }
+  ],
+  [
+   {
+    "ses": "Düşünce sürecinde hasta yakınmalarını büyük bir sabırsızlık ve heyecanla hekime aktarmak istediğinden düşünce akışı hızlanmış izlenimi verebilir.",
     "sayfa": 9,
     "satir": [
      "Düşünce süreci ve İçeriği: yakınmalarını heyecan ve sabırsızlıkla anlatmak istediği için düşünce hızlanmış gibi"
@@ -487,10 +856,10 @@
     ]
    },
    {
-    "ses": "Düşünce içeriği incelendiğinde hezeyan veya sanrı yoktur, ancak zihnin tüm kompartmanlarını kaplayan yaygın ve orantısız tasalar hakimdir.",
+    "ses": "Düşünce içeriğinde psikotik bir hezeyan veya sanrı bulunmaz; zihnin tamamını kaplayan orantısız kuruntular ve endişeler hakimdir.",
     "sayfa": 9,
     "satir": [
-     "Düşünce içeriğinde tasaları baskındır."
+     "labilir. Düşünce içeriğinde tasaları baskındır."
     ],
     "sekil": null,
     "madde": [
@@ -498,10 +867,10 @@
     ]
    },
    {
-    "ses": "Otonomik hiperaktiviteye bağlı olarak kan basıncında dalgalı yükselmeler, taşikardi ve çarpıntı hissi, boyun kaslarında gerginlik ve ağız kuruluğu saptanır.",
+    "ses": "Otonomik hiperaktiviteye bağlı olarak kan basıncında dalgalı yükselmeler, nabız artışı ve şiddetli çarpıntı hissi ortaya çıkar.",
     "sayfa": 9,
     "satir": [
-     "Kan basıncında yükselme, çarpıntı, kaslarda gerginlik, ağız kuruması, yüzde"
+     "Bedensel ve Fizyolojik belirtiler: Kan basıncında yükselme, çarpıntı, kaslarda gerginlik, ağız kuruması, yüzde"
     ],
     "sekil": null,
     "madde": [
@@ -509,7 +878,40 @@
     ]
    },
    {
-    "ses": "Vazomotor labilite ile yüzde solukluk veya kızarma, terleme, sık idrara çıkma, diyare, bulantı ve boğazda globus hissi yani düğümlenme duygusu belirir.",
+    "ses": "Motor gerginliğin sonucu olarak boyun, omuz ve sırt kaslarında kronik sertleşme, ağrılı spazmlar ve gerilim tipi baş ağrısı belirir.",
+    "sayfa": 9,
+    "satir": [
+     "Bedensel ve Fizyolojik belirtiler: Kan basıncında yükselme, çarpıntı, kaslarda gerginlik, ağız kuruması, yüzde"
+    ],
+    "sekil": null,
+    "madde": [
+     3
+    ]
+   },
+   {
+    "ses": "Hastalarda omurga boyunca ve trapezius kaslarında tetik noktalar oluşarak kronik kas yorgunluğu tablosu yerleşir.",
+    "sayfa": 9,
+    "satir": [
+     "Bedensel ve Fizyolojik belirtiler: Kan basıncında yükselme, çarpıntı, kaslarda gerginlik, ağız kuruması, yüzde"
+    ],
+    "sekil": null,
+    "madde": [
+     3
+    ]
+   },
+   {
+    "ses": "Sindirim sisteminde ağız kuruluğu, boğazda kuruluk hissi, bulantı, kusma, sık idrara çıkma ve dışkılama sıklığında artış gözlenir.",
+    "sayfa": 9,
+    "satir": [
+     "Bedensel ve Fizyolojik belirtiler: Kan basıncında yükselme, çarpıntı, kaslarda gerginlik, ağız kuruması, yüzde"
+    ],
+    "sekil": null,
+    "madde": [
+     3
+    ]
+   },
+   {
+    "ses": "Vazomotor labiliteye bağlı olarak yüzde ani solukluk veya basan kızarmalar ile ellerde ve gövdede terleme nöbetleri tabloya eklenir.",
     "sayfa": 9,
     "satir": [
      "solukluk, kızarma, terleme, sık idrar ve gaita çıkışı, kusma, boğazda düğümlenme hissi, nefes almakta güçlük, hava"
@@ -520,7 +922,29 @@
     ]
    },
    {
-    "ses": "Hiperventilasyona bağlı hava açlığı hissi, derin nefes alma ihtiyacı ve periferik vazokonstriksiyona bağlı ellerde ve ayaklarda uyuşma ve karıncalanma gelişir.",
+    "ses": "Boğazda globus hissi yani düğümlenme duygusu belirir ve hasta nefes alamayacakmış hissine kapılarak telaşlanır.",
+    "sayfa": 9,
+    "satir": [
+     "solukluk, kızarma, terleme, sık idrar ve gaita çıkışı, kusma, boğazda düğümlenme hissi, nefes almakta güçlük, hava"
+    ],
+    "sekil": null,
+    "madde": [
+     3
+    ]
+   },
+   {
+    "ses": "Solunum yollarında nefes darlığı, hava açlığı, derin iç çekmeler ve göğüste daralma hissi tipiktir.",
+    "sayfa": 9,
+    "satir": [
+     "solukluk, kızarma, terleme, sık idrar ve gaita çıkışı, kusma, boğazda düğümlenme hissi, nefes almakta güçlük, hava"
+    ],
+    "sekil": null,
+    "madde": [
+     3
+    ]
+   },
+   {
+    "ses": "Hiperventilasyona ve periferik vazokonstriksiyona sekonder olarak ellerde ve ayaklarda uyuşma ve karıncalanma hissi oluşur.",
     "sayfa": 9,
     "satir": [
      "açlığı, ellerde ayaklarda uyuşma, karıncalanma"
@@ -531,20 +955,32 @@
     ]
    },
    {
-    "ses": "Bedensel ve fizyolojik belirtilerin yoğunluğu nedeniyle hastalar psikiyatriden önce acil servis, kardiyoloji veya dahiliye kliniklerine başvurarak organik tetkik arayışına girerler.",
+    "ses": "Hızlı ve yüzeyel nefes alma kandaki karbondioksiti düşürerek serbest kalsiyumu azaltır ve kas seğirmelerine yol açar.",
     "sayfa": 9,
     "satir": [
-     "Bedensel ve Fizyolojik belirtiler:"
+     "labilir. Düşünce içeriğinde tasaları baskındır."
     ],
     "sekil": null,
     "madde": [
-     3
+     1
+    ]
+   },
+   {
+    "ses": "Fiziksel yakınmalar o denli baskındır ki hasta yaşadığı tablonun psikiyatrik bir rahatsızlık olduğuna inanmakta zorlanır.",
+    "sayfa": 9,
+    "satir": [
+     "Bedensel ve Fizyolojik belirtiler: Kan basıncında yükselme, çarpıntı, kaslarda gerginlik, ağız kuruması, yüzde"
+    ],
+    "sekil": null,
+    "madde": [
+     3,
+     1
     ]
    }
   ],
   [
    {
-    "ses": "De te me beş tanı ölçütlerine göre çıkmış sınav sorusu olarak sorulan en az altı aylık süre kuralı uyarınca günlerin çoğunda aşırı bir kaygı ve endişe bulunmalıdır.",
+    "ses": "De se me beş tanı ölçütlerine göre A kriteri, en az altı aylık bir sürenin çoğu gününde bir dizi olay veya etkinlik hakkında aşırı kaygı ve endişenin bulunmasını zorunlu kılar.",
     "sayfa": 10,
     "satir": [
      "A- En az 6 aylık bir sürenin çoğu gününde birtakım olaylar ya da etkinliklerle ilgili olarak aşırı bir kaygı ve endişe"
@@ -556,7 +992,19 @@
     ]
    },
    {
-    "ses": "Tanının ikinci temel ayağı olan be kriterinde kişi endişelerini ve kuruntularını denetim altına almakta ve durdurmakta açık bir güçlük çeker.",
+    "ses": "Endişe tek bir konuya hapsolmamalı, hastanın gündelik yaşamındaki çok sayıda farklı sorumluluk ve olayla ilişkili olmalıdır.",
+    "sayfa": 10,
+    "satir": [
+     "A- En az 6 aylık bir sürenin çoğu gününde birtakım olaylar ya da etkinliklerle ilgili olarak aşırı bir kaygı ve endişe"
+    ],
+    "sekil": null,
+    "madde": [
+     2,
+     6
+    ]
+   },
+   {
+    "ses": "B kriteri uyarınca kişi zihnini saran bu aşırı endişeleri ve kuruntuları kontrol altına almakta, durdurmakta veya yatıştırmakta açık bir güçlük çeker.",
     "sayfa": 10,
     "satir": [
      "B- Kişi endişelerini denetim altına almakta güçlük çeker."
@@ -568,7 +1016,19 @@
     ]
    },
    {
-    "ses": "Ce ölçütünde ise tanımlanan altı temel klinik belirtiden en az üçünün son altı ay boyunca kaygı tablosuna eşlik etmesi zorunlu tutulmuştur.",
+    "ses": "Kişi endişelenmemesi gerektiğini bilse ve kendini telkin etmeye çalışsa bile kaygı verici düşünce akışını kesemez.",
+    "sayfa": 10,
+    "satir": [
+     "B- Kişi endişelerini denetim altına almakta güçlük çeker."
+    ],
+    "sekil": null,
+    "madde": [
+     4,
+     6
+    ]
+   },
+   {
+    "ses": "Bu bilgi çıkmış sınavda sorulmuştur: De se me beş tanı kriterlerine göre C ölçütünde yer alan altı temel klinik belirtiden en az üçünün son altı ay boyunca kaygıya eşlik etmesi gerekir.",
     "sayfa": 10,
     "satir": [
      "C- Bu kaygı ve endişeye aşağıdaki 6 belirtiden 3 (ya da daha fazlası) eşlik eder."
@@ -580,7 +1040,7 @@
     ]
    },
    {
-    "ses": "Önemli bir klinik ayrıntı olarak çocuklarda tanı koyabilmek için altı belirtiden yalnızca bir tanesinin bulunması yeterli kabul edilir.",
+    "ses": "Bu bilgi çıkmış sınavda sorulmuştur: Önemli bir sınav ayrıntısı olarak erişkinlerde en az üç belirti aranırken çocuklarda tanı koyabilmek için bu altı belirtiden yalnızca bir tanesinin bulunması yeterlidir.",
     "sayfa": 10,
     "satir": [
      "Not: Çocuklarda yalnızca bir maddenin olması yeterlidir."
@@ -592,7 +1052,7 @@
     ]
    },
    {
-    "ses": "Birinci belirti hastanın kendini sürekli gergin, huzursuz ve diken üstünde hissetmesi yani motor ve zihinsel ajitasyon halidir.",
+    "ses": "Birinci kardinal belirti hastanın kendini sürekli gergin, tedirgin, huzursuz veya diken üstünde hissetmesidir.",
     "sayfa": 10,
     "satir": [
      "1- Huzursuzluk ya da gergin ya da sürekli diken üzerinde olma"
@@ -603,7 +1063,18 @@
     ]
    },
    {
-    "ses": "İkinci belirti kolay yorulma, üçüncü belirti ise dikkatini toplamakta belirgin güçlük çekme veya zihnin tamamen boşalmış gibi duraklamasıdır.",
+    "ses": "İkinci kardinal belirti zihinsel ve bedensel tükenmişliğe bağlı olarak gün içinde çok çabuk ve kolay yorulmadır.",
+    "sayfa": 10,
+    "satir": [
+     "2- Kolay yorulma"
+    ],
+    "sekil": null,
+    "madde": [
+     12
+    ]
+   },
+   {
+    "ses": "Üçüncü kardinal belirti dikkatini toplamakta belirgin zorluk yaşama ya da zihnin aniden bomboş kalmış gibi duraklamasıdır.",
     "sayfa": 10,
     "satir": [
      "3- Odaklanmakta güçlük çekme ya da zihnin boşalması"
@@ -611,13 +1082,25 @@
     "sekil": null,
     "madde": [
      14,
-     4
+     6
+    ]
+   },
+   {
+    "ses": "Semptomların geçici birkaç gün değil, son altı aylık sürenin yarıdan fazlasında hastaya eşlik etmesi tanısal doğruluk için gereklidir.",
+    "sayfa": 10,
+    "satir": [
+     "TANI- DSM-5 YAB TANI KRİTERLERİ"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     2
     ]
    }
   ],
   [
    {
-    "ses": "Dördüncü belirti irritabilite yani küçük uyarılara karşı bile aşırı tahammülsüzlük, çabuk sinirlenme ve tepkiselliktir.",
+    "ses": "Dördüncü kardinal belirti irritabilite yani küçük uyarılara karşı aşırı tahammülsüzlük, çabuk parlama ve alınganlıktır.",
     "sayfa": 11,
     "satir": [
      "4- İrritabilite"
@@ -628,7 +1111,18 @@
     ]
    },
    {
-    "ses": "Beşinci belirti özellikle ense, omuz ve sırt bölgelerinde yoğunlaşan kronik ve ağrılı kas gerginliğidir.",
+    "ses": "Aile bireyleri hastanın en ufak gürültüye veya soruya ters tepkiler verdiğini ve tahammül sınırının çok daraldığını sıklıkla ifade eder.",
+    "sayfa": 11,
+    "satir": [
+     "4- İrritabilite"
+    ],
+    "sekil": null,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Beşinci kardinal belirti özellikle kafa tabanı, ense ve sırt kaslarında belirginleşen ağrılı kas sertliği ve gerginliğidir.",
     "sayfa": 11,
     "satir": [
      "5- Kas gerginliği"
@@ -639,7 +1133,7 @@
     ]
    },
    {
-    "ses": "Altıncı belirti ise zihinsel kaygılar nedeniyle uykuya dalmakta güçlük çekme, gece sık uyanma ya da sabah dinlenmemiş uyanma şeklinde beliren uyku bozukluğudur.",
+    "ses": "Altıncı kardinal belirti zihinsel tasalar nedeniyle uykuya dalmakta güçlük, gece sık bölünmeler veya sabah dinlenmemiş uyanmadır.",
     "sayfa": 11,
     "satir": [
      "6- Uyku bozukluğu (uykuya dalmakta ya da sürdürmekte zorluk çekme, ya da dinlendirici olmayan uyku)"
@@ -651,7 +1145,19 @@
     ]
    },
    {
-    "ses": "De ölçütüne göre kaygı ve bedensel yakınmalar hastanın iş, aile ve sosyal ilişkilerinde belirgin bir işlevsellik kaybına ve yoğun sıkıntıya yol açmalıdır.",
+    "ses": "Hasta yatağa yattığında günün veya geleceğin endişeleri zihninde dönüp durur ve saatlerce uykuya dalış gerçekleşemez.",
+    "sayfa": 11,
+    "satir": [
+     "6- Uyku bozukluğu (uykuya dalmakta ya da sürdürmekte zorluk çekme, ya da dinlendirici olmayan uyku)"
+    ],
+    "sekil": null,
+    "madde": [
+     5,
+     9
+    ]
+   },
+   {
+    "ses": "D kriterine göre anksiyete ve somatik yakınmalar toplumsal, mesleki ya da diğer önemli işlevsellik alanlarında belirgin bozulmaya ve yoğun sıkıntıya yol açmalıdır.",
     "sayfa": 11,
     "satir": [
      "D- Kaygı, endişe ya da bedensel belirtiler klinik açıdan belirgin bir sıkıntıya ya da toplumsal, işle ilgili alanlarda ya da"
@@ -663,7 +1169,7 @@
     ]
    },
    {
-    "ses": "E ve fe ölçütleri ise bu tablonun herhangi bir ilaç, madde kötüye kullanımı, tiroid veya kardiyak hastalık gibi genel tıbbi durumlarla ya da başka bir psikiyatrik bozuklukla açıklanamayacağını kurala bağlar.",
+    "ses": "E kriteri uyarınca klinik tablo herhangi bir ilacın, madde kötüye kullanımının ya da hipertiroidi gibi genel tıbbi durumların doğrudan fizyolojik etkisine bağlanamamalıdır.",
     "sayfa": 11,
     "satir": [
      "E- Bu bozukluk bir maddenin ya da başka bir tıbbi durumun fizyolojisiyle ilgili etkilerine bağlanamaz."
@@ -673,11 +1179,45 @@
      9,
      11
     ]
+   },
+   {
+    "ses": "F kriteri ise bu anksiyete tablosunun panik bozukluk, obsesif kompulsif bozukluk veya sosyal anksiyete gibi başka bir ruhsal hastalıkla daha iyi açıklanamayacağını kurala bağlar.",
+    "sayfa": 11,
+    "satir": [
+     "F- Bu bozukluk başka bir ruhsal bozukluk ile daha iyi açıklanamaz."
+    ],
+    "sekil": null,
+    "madde": [
+     11,
+     9
+    ]
+   },
+   {
+    "ses": "Altı aylık süre, kontrol güçlüğü, en az üç kardinal belirti ve organik dışlama sağlandığında tanı kesinleşmiş olur.",
+    "sayfa": 11,
+    "satir": [
+     "önemli diğer işlevsellik alanlarında işlevsellikte düşmeye neden olur."
+    ],
+    "sekil": null,
+    "madde": [
+     7
+    ]
+   },
+   {
+    "ses": "Doğru tanı hastanın gereksiz tetkik sarmalından kurtulmasını ve hedefe yönelik etkin tedaviye kavuşmasını sağlar.",
+    "sayfa": 11,
+    "satir": [
+     "önemli diğer işlevsellik alanlarında işlevsellikte düşmeye neden olur."
+    ],
+    "sekil": null,
+    "madde": [
+     7
+    ]
    }
   ],
   [
    {
-    "ses": "Kardiyovasküler alanda anemi, anjina pektoris, konjestif kalp yetmezliği, hipertansiyon ve mitral kapak prolapsusu gibi hastalıklar anksiyeteyi taklit edebilir.",
+    "ses": "Kardiyovasküler sistemde doku hipoksisi yapan anemi, anjina pektoris, konjestif kalp yetmezliği ve hipertansiyon anksiyeteyi taklit edebilir.",
     "sayfa": 12,
     "satir": [
      "Kardiovasküler hastalıklar: Anemi, anjina,konjestif kalp yetmezliği, hipertansiyon, mitral kapak prolapsusus,"
@@ -689,10 +1229,22 @@
     ]
    },
    {
-    "ses": "Akut miyokard enfarktüsü ve paroksismal atriyal taşikardi gibi ritim bozuklukları yoğun ölüm korkusu ve çarpıntıyla anksiyete tablosuyla karışabilir.",
+    "ses": "Mitral kapak prolapsusu, akut koroner sendromlar ve paroksismal atriyal taşikardi gibi aritmiler şiddetli çarpıntı ve ölüm korkusuyla başvurabilir.",
     "sayfa": 12,
     "satir": [
-     "miyokard enfaktüsü, paroksismal atrial taşikardi,"
+     "Kardiovasküler hastalıklar: Anemi, anjina,konjestif kalp yetmezliği, hipertansiyon, mitral kapak prolapsusus,"
+    ],
+    "sekil": null,
+    "madde": [
+     4,
+     6
+    ]
+   },
+   {
+    "ses": "Özellikle genç kadın olgularda sistolik klik ve üfürümle giden mitral kapak prolapsusu anksiyete benzeri otonomik semptomlar üretebilir.",
+    "sayfa": 12,
+    "satir": [
+     "Kardiovasküler hastalıklar: Anemi, anjina,konjestif kalp yetmezliği, hipertansiyon, mitral kapak prolapsusus,"
     ],
     "sekil": null,
     "madde": [
@@ -701,7 +1253,7 @@
     ]
    },
    {
-    "ses": "Solunum sisteminde bronşiyal astım atakları ve hayatı tehdit eden pulmoner emboli akut hava açlığı ve bunaltı hissiyle yaygın anksiyete tablosunu taklit edebilir.",
+    "ses": "Solunum sisteminde bronşiyal astım atakları ve akut nefes darlığı yapan hayatı tehdit edici pulmoner emboli mutlaka ekarte edilmelidir.",
     "sayfa": 12,
     "satir": [
      "Akciğer hastalıkları: Astım, pulmoner emboli,"
@@ -713,7 +1265,19 @@
     ]
    },
    {
-    "ses": "Nörolojide serebrovasküler olaylar, kompleks parsiyel epilepsi, Huntington hastalığı, santral sinir sistemi enfeksiyonları ve Meniere hastalığı ayırıcı tanıda mutlaka sorgulanmalıdır.",
+    "ses": "Ani başlayan nefes darlığı ve göğüs ağrısı varlığında anksiyete tanısına atlamadan önce pulmoner emboli ihtimali kan gazı ve d-dimer ile değerlendirilmelidir.",
+    "sayfa": 12,
+    "satir": [
+     "Akciğer hastalıkları: Astım, pulmoner emboli,"
+    ],
+    "sekil": null,
+    "madde": [
+     6,
+     2
+    ]
+   },
+   {
+    "ses": "Serebrovasküler hastalıklar, geçici iskemik ataklar ve intrakraniyal kitleler otonomik dengesizlik ve kaygı üretebilir.",
     "sayfa": 12,
     "satir": [
      "Nörolojik hastalıklar: Serabrovasküler hastalıklar, epilepsi, Huntington hast., enfeksiyonlar, Meniere hast., migren,"
@@ -725,7 +1289,31 @@
     ]
    },
    {
-    "ses": "Multipl skleroz, geçici iskemik ataklar, intrakraniyal kitleler ve Wilson hastalığı da organik anksiyete semptomlarına yol açabilmektedir.",
+    "ses": "Özellikle temporal lob tutulumlu kompleks parsiyel nöbetler, Huntington hastalığı, menenjit, ensefalit ve periferik vestibüler tutulum yapan Meniere hastalığı incelenmelidir.",
+    "sayfa": 12,
+    "satir": [
+     "Nörolojik hastalıklar: Serabrovasküler hastalıklar, epilepsi, Huntington hast., enfeksiyonlar, Meniere hast., migren,"
+    ],
+    "sekil": null,
+    "madde": [
+     8,
+     6
+    ]
+   },
+   {
+    "ses": "Epileptik odak deşarjları sırasında hastada ani ve nedensiz bir dehşet hissi veya epigastrik yükselme duyumu ortaya çıkabilir.",
+    "sayfa": 12,
+    "satir": [
+     "Nörolojik hastalıklar: Serabrovasküler hastalıklar, epilepsi, Huntington hast., enfeksiyonlar, Meniere hast., migren,"
+    ],
+    "sekil": null,
+    "madde": [
+     8,
+     6
+    ]
+   },
+   {
+    "ses": "Multipl skleroz lezyonları ve hepatolentiküler dejenerasyon yani Wilson hastalığı da psikiyatrik semptomlarla başlayabilmektedir.",
     "sayfa": 12,
     "satir": [
      "multıpl skleroz, gecici iskemik atak, tümörler, Wilson hastalığı,"
@@ -733,25 +1321,25 @@
     "sekil": null,
     "madde": [
      8,
-     2
+     6
     ]
    },
    {
-    "ses": "Bu nedenle her yeni yaygın anksiyete bozukluğu şüpheli hastada ayrıntılı sistemik muayene, elektrokardiyografi ve tam kan sayımı yapılmadan doğrudan psikiyatrik tanı konmamalıdır.",
+    "ses": "Organik bir hastalığı atlamamak adına ayrıntılı fizik muayene ve elektrokardiyografi incelemesi yapılmadan tanı kesinleştirilmemelidir.",
     "sayfa": 12,
     "satir": [
-     "AYIRICI TANI"
+     "Genel Anksiyete Bozukluğu ile karışabilecek bedensel hastalıklar şunlardır."
     ],
     "sekil": null,
     "madde": [
-     0,
-     2
+     2,
+     6
     ]
    }
   ],
   [
    {
-    "ses": "Endokrin sistemde özellikle ani terleme ve titreme yapan hipoglisemi, Addison hastalığı, karsinoid sendrom, Cushing sendromu ve tirotoksikoz mutlaka dışlanmalıdır.",
+    "ses": "Bu bilgi çıkmış sınavda sorulmuştur: Endokrin hastalıklardan sempatik fırtınaya yol açan hipertiroidizm, katekolamin üreten feokromositoma ve akut nörogilkopeneik hipoglisemi organik ayırıcı tanıda öncelikle taranmalıdır.",
     "sayfa": 13,
     "satir": [
      "Endokrin hastalıkları: Hipoglisemi, Addison hast., karsinoid sendrom, Cushing sendromu, diabet, hipertroidizm,"
@@ -762,7 +1350,18 @@
     ]
    },
    {
-    "ses": "Katekolamin deşarjıyla seyreden feokromositoma, kalsiyum düşüklüğüne bağlı hipoparatiroidizm, menopozal vazomotor dalgalanmalar ve premenstrüel disforik durumlar taranmalıdır.",
+    "ses": "Tiroid bezinin aşırı hormon salgılaması ellerde titreme, çarpıntı, sıcağa tahammülsüzlük ve huzursuzluk yaparak tabloyu taklit eder; serum tiroit stimülan hormon düzeyi mutlaka bakılmalıdır.",
+    "sayfa": 13,
+    "satir": [
+     "Endokrin hastalıkları: Hipoglisemi, Addison hast., karsinoid sendrom, Cushing sendromu, diabet, hipertroidizm,"
+    ],
+    "sekil": null,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Böbrek üstü bezi medullasından salgılanan yüksek katekolaminler ani terleme, çarpıntı ve kan basıncı fırlamaları ile seyreder.",
     "sayfa": 13,
     "satir": [
      "hipoparatroidizm, menapozal bozukluklar, feokromastoma, premenstruel sendrom,"
@@ -773,7 +1372,29 @@
     ]
    },
    {
-    "ses": "Madde kullanımında sempatomimetik stimülanlar olan amfetamin ve kokain, esrar, aşırı nikotin, bronkodilatör teofilin ve antikolinerjik ilaçlar şiddetli anksiyete üretir.",
+    "ses": "Adrenal yetmezlik yapan Addison hastalığı, vazomotor kızarma yapan karsinoid sendrom, hiperkortizolemiyle seyreden Cushing sendromu ve hipokalsemi yapan hipoparatiroidizm elenmelidir.",
+    "sayfa": 13,
+    "satir": [
+     "Endokrin hastalıkları: Hipoglisemi, Addison hast., karsinoid sendrom, Cushing sendromu, diabet, hipertroidizm,"
+    ],
+    "sekil": null,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Menopozdaki östrojen çekilmesine bağlı sıcak basmaları ve premenstrüel disforik tablolardaki hormonal dalgalanmalar benzer bedensel yakınmalar doğurur.",
+    "sayfa": 13,
+    "satir": [
+     "hipoparatroidizm, menapozal bozukluklar, feokromastoma, premenstruel sendrom,"
+    ],
+    "sekil": null,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Sempatomimetik uyarıcılar olan amfetamin, kokain, aşırı nikotin, esrar, bronkodilatör teofilin ve antikolinerjik ilaçlar şiddetli taşikardi ve huzursuzluk yaratır.",
     "sayfa": 13,
     "satir": [
      "İlaç/madde intoksikasyonları: Amfetamin, kokain, esrar, nikotin, teofilin, amil nitrit, antikolinerjikler,"
@@ -785,7 +1406,19 @@
     ]
    },
    {
-    "ses": "Yoksunluk sendromlarında alkol çekilmesi, opioid ve sedatif hipnotik kesilmesi veya santral etkili antihipertansiflerin aniden bırakılması ağır anksiyete tablosu doğurur.",
+    "ses": "Aşırı kahve ve enerji içeceği tüketimi adenozin reseptör blokajı yaparak taşikardi, kas seğirmeleri ve yaygın kaygı doğurur.",
+    "sayfa": 13,
+    "satir": [
+     "İlaç/madde intoksikasyonları: Amfetamin, kokain, esrar, nikotin, teofilin, amil nitrit, antikolinerjikler,"
+    ],
+    "sekil": null,
+    "madde": [
+     3,
+     5
+    ]
+   },
+   {
+    "ses": "Yoksunluk tablolarında alkolün kesilmesi, sedatif hipnotiklerin veya benzodiazepinlerin aniden bırakılması ve klonidin gibi antihipertansiflerin kesilme sendromu ağır anksiyete doğurur.",
     "sayfa": 13,
     "satir": [
      "İlaç çekilmesi: Alkol, opiat ve opioidler, antihipertansifler, sedatif hipnotikler,"
@@ -797,7 +1430,7 @@
     ]
    },
    {
-    "ses": "Sistemik lupus eritematozus, hiponatremi veya hiperkalsemi gibi elektrolit bozuklukları, ağır metal intoksikasyonları, üremi ve vitamin be on iki eksikliği de organik listededir.",
+    "ses": "Otoimmün hastalıklardan sistemik lupus eritematozus, hiponatremi gibi elektrolit bozuklukları, üremi, ağır metal zehirlenmeleri ve vitamin be on iki eksikliği unutulmamalıdır.",
     "sayfa": 13,
     "satir": [
      "Diğer durumlar: Sistemik lupus eritematozus, elektrolit düzensizlikleri, ağır metal zehirlenmeleri, üremi, B12"
@@ -809,21 +1442,20 @@
     ]
    },
    {
-    "ses": "Hastanın öyküsünde ilaç kullanımı, madde teması ve beslenme durumu derinlemesine sorgulanmalı ve tiroid hormonları kontrol edilmelidir.",
+    "ses": "Tam kan sayımı, biyokimya, tiroid fonksiyon testleri ve toksikolojik tarama ayırıcı tanının temel laboratuvar basamaklarıdır.",
     "sayfa": 13,
     "satir": [
-     "eksikliği"
+     "Diğer durumlar: Sistemik lupus eritematozus, elektrolit düzensizlikleri, ağır metal zehirlenmeleri, üremi, B12"
     ],
     "sekil": null,
     "madde": [
-     7,
-     3
+     7
     ]
    }
   ],
   [
    {
-    "ses": "Panik bozuklukta aniden tepe noktasına ulaşan epizodik ve yıkıcı panik atakları varken, yaygın anksiyete bozukluğunda kaygı dalgalı ama sürekli ve süreğendir.",
+    "ses": "Panik bozuklukta dakikalar içinde tepe noktasına ulaşıp sonlanan ani panik nöbetleri görülürken, yaygın anksiyete bozukluğunda kaygı dalgalı fakat aralıksız ve süreğendir.",
     "sayfa": 14,
     "satir": [
      "Panik bozukluk,"
@@ -835,7 +1467,19 @@
     ]
    },
    {
-    "ses": "Agorafobi veya sosyal fobi gibi tablolarda kaygı belirli bir nesne veya sosyal ortama özgüyken, yaygın anksiyete hastasında endişenin sabit bir hedefi bulunmaz.",
+    "ses": "Panik hastası o an kalp krizi geçirdiğini ve öleceğini düşünürken, yaygın anksiyete hastası sevdiklerinin başına kötü bir şey geleceğinden veya parasız kalmaktan endişe eder.",
+    "sayfa": 14,
+    "satir": [
+     "Panik bozukluk,"
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     3
+    ]
+   },
+   {
+    "ses": "Fobik bozukluklarda kaygı yalnızca özgül bir nesneye veya sosyal ortama maruz kalındığında tetiklenir; yaygın anksiyetede ise nesnesiz ve serbest dalgalanan bir endişe vardır.",
     "sayfa": 14,
     "satir": [
      "Fobik bozukluk,"
@@ -847,7 +1491,7 @@
     ]
    },
    {
-    "ses": "Obsesif kompulsif bozuklukta saçma bulunan egodistonik takıntılar ve bunları rahatlatıcı kompulsif eylemler varken, bu hastalıktaki endişeler gerçek yaşam sorunlarının abartılmasıdır.",
+    "ses": "Obsesif kompulsif bozuklukta mantık dışı kabul edilen yineleyici saplantılar ve rahatlatıcı zorlantılar bulunurken, yaygın anksiyetedeki endişeler gerçek yaşam sorunlarının felaketleştirilmesidir.",
     "sayfa": 14,
     "satir": [
      "Obsesif kompulsif bozukluk,"
@@ -859,7 +1503,7 @@
     ]
    },
    {
-    "ses": "Travma sonrası stres bozukluğunda travmatik bir olayın yeniden yaşantılanması, uyum bozukluğunda ise belirli bir yaşam stresörüne bağlı geçici tepki söz konusudur.",
+    "ses": "Travma sonrası stres bozukluğunda travmatik bir olayın istemsizce yeniden yaşantılanması, flashbackler ve kaçınma davranışları tanısal çekirdeği oluşturur.",
     "sayfa": 14,
     "satir": [
      "Posttravmatik stres bozukluğu,"
@@ -871,7 +1515,18 @@
     ]
    },
    {
-    "ses": "Majör depresyonda zevk alamama ve geçmişe dönük suçluluk duyguları ön plandayken, yaygın anksiyetede temel odak gelecekte olabilecek olumsuzluklara dair beklenti anksiyetesidir.",
+    "ses": "Şizofreninin başlangıç evresinde de yoğun bir içsel bunaltı görülebilir ancak zamanla hezeyanlar ve düşünce içeriğinde tuhaflıklar tabloya eklenir.",
+    "sayfa": 14,
+    "satir": [
+     "Şizofreni,"
+    ],
+    "sekil": null,
+    "madde": [
+     9
+    ]
+   },
+   {
+    "ses": "Majör depresyonda zevk alamama ve çökkün duygudurum esasken, anksiyete ile giden uyum bozukluğunda son üç ay içinde ortaya çıkan somut bir yaşam stresörü mevcuttur.",
     "sayfa": 14,
     "satir": [
      "Depresif bozukluk,"
@@ -879,25 +1534,49 @@
     "sekil": null,
     "madde": [
      11,
+     13
+    ]
+   },
+   {
+    "ses": "Uyum bozukluğunun seyri stres faktörüyle sınırlıdır, oysa yaygın anksiyete bozukluğu stresör kalksa dahi yıllarca kronik olarak devam eder.",
+    "sayfa": 14,
+    "satir": [
+     "Anksiyete ile giden uyum bozukluğu,"
+    ],
+    "sekil": null,
+    "madde": [
+     13,
      1
+    ]
+   },
+   {
+    "ses": "Her bir anksiyete bozukluğunun bilişsel dinamikleri ve farmakolojik yanıt profili farklılık gösterdiğinden klinik ayrım esastır.",
+    "sayfa": 14,
+    "satir": [
+     "Panik bozukluk,"
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     3
     ]
    }
   ],
   [
    {
-    "ses": "Yaygın anksiyete bozukluğu klinik gidiş açısından kronik seyirli olup alevlenmeler ve geçici kısmi remisyon dönemleriyle seyreder.",
+    "ses": "Bu bilgi çıkmış sınavda sorulmuştur: Yaygın anksiyete bozukluğunun klinik seyri semptom şiddetinde zaman içinde iniş çıkışların izlendiği dalgalı ve kronik bir gidiş gösterir.",
     "sayfa": 15,
     "satir": [
-     "GİDİŞ VE SONLANIŞ"
+     "Yaygın anksiyete bozukluğu, semptomların şiddetinde zaman içinde değişimlerin gözlendiği kronik seyreden bir"
     ],
     "sekil": null,
     "madde": [
-     0,
-     2
+     2,
+     0
     ]
    },
    {
-    "ses": "Hastaların büyük bölümünde semptom şiddeti tamamen sıfırlanmaz, yaşamın stresli dönemlerinde belirgin şekilde tırmanışa geçer.",
+    "ses": "Tedavi edilmeyen olgularda kendiliğinden tam düzelme oranı oldukça düşüktür; hastalık çoğunlukla yaşam boyu dalgalanmalarla devam eder.",
     "sayfa": 15,
     "satir": [
      "Yaygın anksiyete bozukluğu, semptomların şiddetinde zaman içinde değişimlerin gözlendiği kronik seyreden bir"
@@ -909,7 +1588,7 @@
     ]
    },
    {
-    "ses": "Kayıplar, iş stresi, ailevi çatışmalar ve bedensel hastalıklar gibi zorlayıcı yaşam olayları alevlenmelerde en önemli tetikleyici faktörlerdir.",
+    "ses": "Bireyin karşılaştığı olumsuz yaşam olayları, kayıplar, iş stresi ve ailevi çatışmalar hastalığın başlamasında ve alevlenme ataklarında birincil tetikleyicidir.",
     "sayfa": 15,
     "satir": [
      "Yaşam olayları hastalığın başlamasında ve seyrinde etkilidir."
@@ -921,7 +1600,7 @@
     ]
    },
    {
-    "ses": "Hastalığın erken yaşta başlaması, kadın cinsiyet, kişilik patolojilerinin varlığı ve başlangıç tedavisine zayıf yanıt verilmesi kötü prognoz göstergeleridir.",
+    "ses": "Başlangıç tedavisine direnç gösteren olgularda, kadın cinsiyette ve erken yaşta başlayan tablolarda hastalığın kronikleşme ve işlev kaybı yaratma riski daha yüksektir.",
     "sayfa": 15,
     "satir": [
      "Tedaviye yanıtı iyi olmayan hastalarda, kadınlarda ve erken başlangıçlı olanlarda kötü gidiş daha fazla."
@@ -933,32 +1612,69 @@
     ]
    },
    {
-    "ses": "Özellikle depresyon komorbiditesi gelişen veya kronik çaresizlik yaşayan olgularda özkıyım riski belirgin derecede yükseldiğinden dikkatli takip gerekir.",
+    "ses": "Özellikle çekingen, bağımlı ya da sınırda kişilik özellikleri sergileyen bireylerde terapötik işbirliği kurmak ve semptomları yatıştırmak daha güçtür.",
+    "sayfa": 15,
+    "satir": [
+     "Tedaviye yanıtı iyi olmayan hastalarda, kadınlarda ve erken başlangıçlı olanlarda kötü gidiş daha fazla."
+    ],
+    "sekil": null,
+    "madde": [
+     6,
+     4
+    ]
+   },
+   {
+    "ses": "Özellikle majör depresyon komorbiditesi geliştiğinde veya hasta yoğun bir çaresizlik yaşadığında özkıyım riski belirgin derecede yükselir ve yakın psikiyatrik izlem gerekir.",
     "sayfa": 15,
     "satir": [
      "Özkıyım riski yüksek."
     ],
     "sekil": null,
     "madde": [
-     8
+     8,
+     2
+    ]
+   },
+   {
+    "ses": "Süregiden yüksek sempatik tonus ve kortizol salınımı uzun vadede hipertansiyon, ateroskleroz ve metabolik sendrom riskini yükseltir.",
+    "sayfa": 15,
+    "satir": [
+     "GİDİŞ VE SONLANIŞ"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     6
+    ]
+   },
+   {
+    "ses": "Zamanında konulan doğru tanı ve farmakoterapi ile psikoterapinin birlikte uygulanması hastanın yaşam kalitesini korur ve kronik yeti yitimini önler.",
+    "sayfa": 15,
+    "satir": [
+     "GİDİŞ VE SONLANIŞ"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     6
+    ]
+   },
+   {
+    "ses": "Klinik sağaltımda hedefimiz hastanın yalnızca kaygısını hafifletmek değil, mesleki ve ailevi işlevselliğini eksiksiz olarak yeniden kazandırmaktır.",
+    "sayfa": 15,
+    "satir": [
+     "Tedaviye yanıtı iyi olmayan hastalarda, kadınlarda ve erken başlangıçlı olanlarda kötü gidiş daha fazla."
+    ],
+    "sekil": null,
+    "madde": [
+     6,
+     4
     ]
    }
   ],
   [
    {
-    "ses": "Yaygın anksiyete bozukluğunda psikoterapi en az farmakoterapi kadar güçlü ve nüksleri önleyici temel bir tedavi bileşenidir.",
-    "sayfa": 16,
-    "satir": [
-     "Psikoterapi:"
-    ],
-    "sekil": null,
-    "madde": [
-     1,
-     5
-    ]
-   },
-   {
-    "ses": "Bilişsel davranışçı terapide felaket senaryoları sorgulanır, bilişsel yeniden yapılandırma yapılır ve kanıta dayalı alternatif düşünce yolları geliştirilir.",
+    "ses": "Yaygın anksiyete bozukluğunun sağaltımında bilişsel davranışçı terapi etkinliği en güçlü kanıtlarla ortaya konmuş temel psikoterapi yaklaşımıdır.",
     "sayfa": 16,
     "satir": [
      "Bilişsel-davranışçı psikoterapide; bilişsel yeniden yapılandırma, gevşeme teknikleri ve nefes egsersizleri gibi"
@@ -970,18 +1686,79 @@
     ]
    },
    {
-    "ses": "Bedensel belirtileri yatıştırmak amacıyla progresif kas gevşeme egzersizleri ve diyafragmatik nefes teknikleri hastaya seanslarda öğretilir.",
+    "ses": "İlaç tedavisi kesildikten sonra nüks oranlarını düşürmede bilişsel davranışçı terapi tekniklerinin kazandırdığı başa çıkma becerileri kritik rol oynar.",
     "sayfa": 16,
     "satir": [
-     "teknikler kullanılır."
+     "Bilişsel-davranışçı psikoterapide; bilişsel yeniden yapılandırma, gevşeme teknikleri ve nefes egsersizleri gibi"
     ],
     "sekil": null,
     "madde": [
-     3
+     3,
+     1
     ]
    },
    {
-    "ses": "İçgörü yönelimli psikoterapide anksiyete bastırılmış bir duygunun ya da bilinçdışı çözümlenmemiş bir çatışmanın habercisi olarak ele alınır.",
+    "ses": "Bilişsel yeniden yapılandırma tekniği ile hastanın felaketleştirici bilişsel çarpıtmaları ele alınır, tehlike olasılıkları gerçekçi temellere oturtulur.",
+    "sayfa": 16,
+    "satir": [
+     "Bilişsel-davranışçı psikoterapide; bilişsel yeniden yapılandırma, gevşeme teknikleri ve nefes egsersizleri gibi"
+    ],
+    "sekil": null,
+    "madde": [
+     3,
+     1
+    ]
+   },
+   {
+    "ses": "Danışana kuruntularının gerçekçi kanıtları sorgulatılır ve en kötü ihtimal gerçekleşse bile nasıl başa çıkabileceği uygulamalı olarak çalışılır.",
+    "sayfa": 16,
+    "satir": [
+     "Bilişsel-davranışçı psikoterapide; bilişsel yeniden yapılandırma, gevşeme teknikleri ve nefes egsersizleri gibi"
+    ],
+    "sekil": null,
+    "madde": [
+     3,
+     1
+    ]
+   },
+   {
+    "ses": "Otonomik gerginliği ve kas ağrılarını kontrol altına almak amacıyla hastaya progresif kas gevşeme egzersizleri öğretilerek bedensel rahatlama sağlanır.",
+    "sayfa": 16,
+    "satir": [
+     "Bilişsel-davranışçı psikoterapide; bilişsel yeniden yapılandırma, gevşeme teknikleri ve nefes egsersizleri gibi"
+    ],
+    "sekil": null,
+    "madde": [
+     3,
+     1
+    ]
+   },
+   {
+    "ses": "Diyafragmatik derin nefes egzersizleri hastanın akut hava açlığı ve taşikardi yakınmalarını kontrol etmesinde önemli bir başa çıkma aracıdır.",
+    "sayfa": 16,
+    "satir": [
+     "Bilişsel-davranışçı psikoterapide; bilişsel yeniden yapılandırma, gevşeme teknikleri ve nefes egsersizleri gibi"
+    ],
+    "sekil": null,
+    "madde": [
+     3,
+     1
+    ]
+   },
+   {
+    "ses": "Hastaya gün boyu sürekli endişelenmek yerine günün belirli bir yirmi dakikalık endişe saatinde kuruntularını yazıp incelemesi ödevi verilir.",
+    "sayfa": 16,
+    "satir": [
+     "Bilişsel-davranışçı psikoterapide; bilişsel yeniden yapılandırma, gevşeme teknikleri ve nefes egsersizleri gibi"
+    ],
+    "sekil": null,
+    "madde": [
+     3,
+     1
+    ]
+   },
+   {
+    "ses": "İçgörü yönelimli psikoterapide anksiyete bireyin yüzleşmekten kaçındığı bilinçdışı içsel çatışmaların ve çözümlenmemiş duyguların bir sinyali sayılır.",
     "sayfa": 16,
     "satir": [
      "İçgörü yönelimli psikoterapide anksiyete, araştırılması gereken bilinçdışı bir çatışmanın işareti olarak görülür."
@@ -993,7 +1770,7 @@
     ]
    },
    {
-    "ses": "Bu yaklaşım psikolojik zihinliliği yüksek olan, kendi iç dünyasını ve çatışmalarının kaynağını keşfetmek isteyen hastalarda oldukça başarılı sonuçlar verir.",
+    "ses": "Bu yöntem psikolojik zihinliliği yüksek, kendi duygu dünyasını sorgulama isteği ve kapasitesi olan entelektüel hastalarda oldukça verimli sonuçlar verir.",
     "sayfa": 16,
     "satir": [
      "Psikolojik zihinliliği olan ve anksiyetelerinin kaynaklarını anlamaya çalışan kişilerde tercih edilir."
@@ -1005,31 +1782,21 @@
     ]
    },
    {
-    "ses": "Terapide ayrıca endişe erteleme teknikleri ve belirsizliğe tahammül geliştirme uygulamalarıyla zihinsel direnç artırılır.",
+    "ses": "Klinik çalışmalarda farmakoterapi ile yapılandırılmış psikoterapinin kombine edildiği olgularda tedavi başarısının belirgin şekilde arttığı gösterilmiştir.",
     "sayfa": 16,
     "satir": [
      "YAB- TEDAVİ"
     ],
     "sekil": null,
     "madde": [
-     0
+     0,
+     3
     ]
    }
   ],
   [
    {
-    "ses": "Yaygın anksiyete bozukluğunda farmakoterapi beyindeki nörotransmitter dengesini yeniden kurarak somatik ve ruhsal belirtileri yatıştırmayı amaçlar.",
-    "sayfa": 17,
-    "satir": [
-     "Farmakoterapi"
-    ],
-    "sekil": null,
-    "madde": [
-     0
-    ]
-   },
-   {
-    "ses": "Tedavide birinci basamak seçenek seçici serotonin geri alım inhibitörleridir; etkinlikleri geniş klinik çalışmalarla kanıtlanmıştır.",
+    "ses": "Bu bilgi çıkmış sınavda sorulmuştur: Yaygın anksiyete bozukluğunun idame tedavisinde birinci basamak seçenek seçici serotonin geri alım inhibitörleridir.",
     "sayfa": 17,
     "satir": [
      "seçici serotonin gerialım inhibitörleri"
@@ -1041,7 +1808,31 @@
     ]
    },
    {
-    "ses": "Serotonin noradrenalin geri alım inhibitörlerinden venlafaksin ve duloksetin özellikle inatçı kas ağrıları ve somatik yakınmaları olan hastalarda birinci basamakta tercih edilir.",
+    "ses": "Antidepresanların anksiyolitik etkinliği anında başlamaz; reseptör duyarsızlaşması ve nöroplastisite için en az iki ila dört haftalık süre gereklidir.",
+    "sayfa": 17,
+    "satir": [
+     "seçici serotonin gerialım inhibitörleri"
+    ],
+    "sekil": null,
+    "madde": [
+     2,
+     4
+    ]
+   },
+   {
+    "ses": "İlacın başlangıç evresinde görülebilen hafif ajitasyon veya bulantı hastaya açıklanmalı ve düşük dozla başlanıp yavaş titrasyon yapılmalıdır.",
+    "sayfa": 17,
+    "satir": [
+     "seçici serotonin gerialım inhibitörleri"
+    ],
+    "sekil": null,
+    "madde": [
+     2,
+     4
+    ]
+   },
+   {
+    "ses": "Serotonin noradrenalin geri alım inhibitörlerinden venlafaksin ve duloksetin gerek anksiyete gerekse eşlik eden nöropatik ve kas iskelet ağrılarında ilk basamak tercihtir.",
     "sayfa": 17,
     "satir": [
      "Seratonin-noradrenalin gerialım inh.-SNGİ (Venlafaksin, duloksetin)"
@@ -1053,18 +1844,19 @@
     ]
    },
    {
-    "ses": "Benzodiazepinler anında anksiyolitik etki sağlarlar, ancak tolerans ve bağımlılık riskleri nedeniyle yalnızca antidepresanların etkisi oturana kadar ilk iki ila dört haftalık sürede köprü olarak verilmelidir.",
+    "ses": "Bu bilgi çıkmış sınavda sorulmuştur: Buspiron serotonin beş haş te bir a reseptör parsiyel agonisti olup sedasyon, kas gevşemesi veya bağımlılık yapmayan özgül bir anksiyolitiktir.",
     "sayfa": 17,
     "satir": [
-     "benzodiazepinler,"
+     "Buspiron (5-HT1A parsiyel agonist),"
     ],
     "sekil": null,
     "madde": [
-     6
+     8,
+     2
     ]
    },
    {
-    "ses": "Buspiron beş haş te bir a parsiyel agonisti olup sedasyon, kas gevşemesi veya bağımlılık yapmayan, güvenilir bir anksiyolitik moleküldür.",
+    "ses": "Buspiron kriz anında alınan bir sakinleştirici değildir; düzenli günlük kullanımda haftalar içinde anksiyolitik etki oluşturan koruyucu bir ajandır.",
     "sayfa": 17,
     "satir": [
      "Buspiron (5-HT1A parsiyel agonist),"
@@ -1075,7 +1867,30 @@
     ]
    },
    {
-    "ses": "Kalsiyum kanal modülatörü pregabalin ve ikinci basamakta atipik antipsikotik güçlendirmeleri tedaviye dirençli olgularda gündeme gelir.",
+    "ses": "Benzodiazepin grubu ilaçlar anksiyeteyi dakikalar içinde yatıştırır ancak tolerans ve bağımlılık riski nedeniyle sadece antidepresanların etkisi oturana kadar iki ila dört hafta kullanılır.",
+    "sayfa": 17,
+    "satir": [
+     "benzodiazepinler,"
+    ],
+    "sekil": null,
+    "madde": [
+     6,
+     12
+    ]
+   },
+   {
+    "ses": "Kronik benzodiazepin kullanımı bellek kusurları, dikkat dağınıklığı, sedasyon ve kesilme anında şiddetli rebound anksiyete ile sonuçlanabilir.",
+    "sayfa": 17,
+    "satir": [
+     "benzodiazepinler,"
+    ],
+    "sekil": null,
+    "madde": [
+     6
+    ]
+   },
+   {
+    "ses": "Voltaj kapılı kalsiyum kanallarının alfa iki delta ligandı olan pregabalin hızlı başlangıçlı etkisiyle yaygın anksiyete tedavisinde onaylı ve güçlü bir seçenektir.",
     "sayfa": 17,
     "satir": [
      "pregabalin"
@@ -1084,14 +1899,25 @@
     "madde": [
      10
     ]
+   },
+   {
+    "ses": "Dirençli tablolarda birinci basamak ilaçların yanına ketiapin gibi düşük doz atipik antipsikotikler veya duygudurum dengeleyicileri eklenerek güçlendirme yapılır.",
+    "sayfa": 17,
+    "satir": [
+     "diğer ilaçlar"
+    ],
+    "sekil": null,
+    "madde": [
+     12
+    ]
    }
   ],
   [
    {
-    "ses": "Seçici serotonin geri alım inhibitörlerinden sitalopram yirmi ila kırk miligram, essitalopram on ila yirmi miligram, sertralin ise elli ila iki yüz miligram terapötik doz aralığında kullanılır.",
+    "ses": "Seçici serotonin geri alım inhibitörlerinden sitalopram yirmi ila kırk miligram, essitalopram on ila yirmi miligram ve fluoksetin yirmi ila kırk miligram hedef dozlarında titre edilir.",
     "sayfa": 18,
     "satir": [
-     "SSRI"
+     "Sitalopram"
     ],
     "sekil": null,
     "madde": [
@@ -1099,10 +1925,10 @@
     ]
    },
    {
-    "ses": "Fluoksetin yirmi ila kırk miligram, fluvoksamin iki yüz ila üç yüz miligram ve paroksetin yirmi ila kırk miligram hedef dozlarında titre edilir.",
+    "ses": "Essitalopram saf serotonin geri alım inhibisyonu sağlaması ve sitokrom enzimleriyle minimal etkileşimi nedeniyle ilk seçenek olarak öne çıkar.",
     "sayfa": 18,
     "satir": [
-     "Fluoksetin"
+     "Essitalopram"
     ],
     "sekil": null,
     "madde": [
@@ -1110,7 +1936,40 @@
     ]
    },
    {
-    "ses": "Buspiron tedavisine günlük on beş miligram ile başlanarak hastanın yanıtına göre günde otuz ila altmış miligram hedef idame dozuna yükseltilir.",
+    "ses": "Fluvoksamin iki yüz ila üç yüz miligram, paroksetin yirmi ila kırk miligram ve sertralin elli ila iki yüz miligram günlük terapötik dozlarda reçete edilir.",
+    "sayfa": 18,
+    "satir": [
+     "Fluvoksamin"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Kardiyovasküler komorbiditesi olan yaygın anksiyete hastalarında sertralin güvenilir yan etki profiliyle birinci basamakta güvenle kullanılır.",
+    "sayfa": 18,
+    "satir": [
+     "Sertralin"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Paroksetinin yarı ömrü kısa ve antikolinerjik etkisi belirgin olduğundan ani kesilmelerde baş dönmesi, elektrik çarpması hissi ve huzursuzluk görülebilir.",
+    "sayfa": 18,
+    "satir": [
+     "Paroksetin"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Buspiron tedavisine günlük on beş miligram ile başlanır ve klinik cevaba göre günde iki ya da üç doza bölünerek otuz ila altmış miligram idame dozuna yükseltilir.",
     "sayfa": 18,
     "satir": [
      "Buspiron"
@@ -1121,7 +1980,7 @@
     ]
    },
    {
-    "ses": "Serotonin noradrenalin geri alım inhibitörlerinden venlafaksin uzatılmış salınımlı formu yetmiş beş ila iki yüz yirmi beş miligram, duloksetin ise altmış ila yüz yirmi miligram günlük dozlarda verilir.",
+    "ses": "Serotonin noradrenalin geri alım inhibitörlerinden venlafaksin uzatılmış salınımlı formu yüz elli ila üç yüz miligram, duloksetin ise altmış ila yüz yirmi miligram idame dozunda kullanılır.",
     "sayfa": 18,
     "satir": [
      "Wenlafaxine XR"
@@ -1132,53 +1991,109 @@
     ]
    },
    {
-    "ses": "Benzodiazepin grubundan diazepam yirmi ila kırk miligram, alprazolam ise iki ila dört miligram dozlarında kullanılabilir, ancak hekim bağımlılık riskini daima göz önünde bulundurmalıdır.",
+    "ses": "Yüz elli miligramın üzerindeki venlafaksin dozlarında noradrenerjik geri alım blokajı belirginleştiğinden diastolik kan basıncı düzenli izlenmelidir.",
+    "sayfa": 18,
+    "satir": [
+     "Wenlafaxine XR"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Akut köprülemede diazepam yirmi ila kırk miligram, alprazolam ise iki ila dört miligram aralığında verilebilir ancak doz kademeli azaltılarak kesilmelidir.",
     "sayfa": 18,
     "satir": [
      "Diazepam"
     ],
     "sekil": null,
     "madde": [
-     6,
-     5
+     6
     ]
    },
    {
-    "ses": "Antidepresan tedavisi akut yanıt alındıktan sonra nüksleri önlemek adına tam remisyon sağlansa dahi en az bir yıl süreyle kesilmeden idame ettirilmelidir.",
+    "ses": "Tam klinik remisyona ulaşıldıktan sonra hastalığın yüksek nüks eğilimi nedeniyle farmakoterapi en az bir yıl boyunca kesilmeden sürdürülmelidir.",
     "sayfa": 18,
     "satir": [
-     "SNGI"
+     "SSRI"
     ],
     "sekil": null,
     "madde": [
-     2
+     0
+    ]
+   },
+   {
+    "ses": "İlacın aniden kesilmesi nüksü ve çekilme belirtilerini tetikleyebileceğinden doz basamak basamak azaltılarak sonlandırılmalıdır.",
+    "sayfa": 18,
+    "satir": [
+     "SSRI"
+    ],
+    "sekil": null,
+    "madde": [
+     0
     ]
    }
   ],
   [
    {
-    "ses": "Yaygın anksiyete bozukluğu klinik basamaklı tedavi algoritmasında birinci basamakta es es er ı veya se ne er ı başlanarak eşzamanlı bilişsel davranışçı terapi planlanır.",
+    "ses": "Yaygın anksiyete bozukluğu tedavi algoritmasında ilk basamak kapsamlı hasta psiko-eğitimi, bilişsel davranışçı terapi ve birinci basamak bir antidepresanın başlanmasıdır.",
     "sayfa": 19,
     "satir": [],
     "sekil": "Yaygın anksiyete bozukluğu klinik takip ve basamaklı tedavi algoritması görsel şeması",
     "resim": 0
    },
    {
-    "ses": "Dört ila altı haftalık yeterli doz ve süreye rağmen klinik yanıt alınamazsa doz artırımı veya başka bir birinci basamak antidepresana geçiş uygulanır.",
+    "ses": "Hastalığın biyolojik temelleri, ilaçların etki başlama süresi ve geçici yan etkiler ilk görüşmede detaylıca anlatılmalıdır.",
     "sayfa": 19,
     "satir": [],
     "sekil": "Yaygın anksiyete bozukluğu klinik takip ve basamaklı tedavi algoritması görsel şeması",
     "resim": 0
    },
    {
-    "ses": "Tedaviye dirençli vakalarda antidepresanın yanına buspiron, pregabalin veya düşük doz atipik antipsikotik güçlendirmesi eklenerek sinerjistik yanıt aranır.",
+    "ses": "Tedaviye başlandıktan dört ila altı hafta sonra hasta kontrole çağrılarak ilacın etkinliği, yan etkileri ve semptomlardaki gerileme düzeyi objektif ölçeklerle değerlendirilir.",
     "sayfa": 19,
     "satir": [],
     "sekil": "Yaygın anksiyete bozukluğu klinik takip ve basamaklı tedavi algoritması görsel şeması",
     "resim": 0
    },
    {
-    "ses": "Tedavinin nihai hedefi semptomları yalnızca kısmen yatıştırmak değil, tam remisyona ulaşarak hastanın mesleki ve sosyal işlevselliğini eksiksiz geri kazandırmaktır.",
+    "ses": "Eğer semptomlarda belirgin bir gerileme varsa ancak tam remisyon sağlanamamışsa mevcut ilacın dozu hedef aralığın üst sınırına kadar yükseltilir.",
+    "sayfa": 19,
+    "satir": [],
+    "sekil": "Yaygın anksiyete bozukluğu klinik takip ve basamaklı tedavi algoritması görsel şeması",
+    "resim": 0
+   },
+   {
+    "ses": "Yeterli doz ve süreye rağmen klinik yanıt alınamayan olgularda başka bir birinci basamak ilaca geçilir ya da pregabalin veya buspiron eklenir.",
+    "sayfa": 19,
+    "satir": [],
+    "sekil": "Yaygın anksiyete bozukluğu klinik takip ve basamaklı tedavi algoritması görsel şeması",
+    "resim": 0
+   },
+   {
+    "ses": "İki ayrı antidepresan denemesine rağmen düzelmeyen hastalarda ketiapin yirmi beş ila yüz elli miligram dozunda tedaviye eklenerek güçlendirme sağlanır.",
+    "sayfa": 19,
+    "satir": [],
+    "sekil": "Yaygın anksiyete bozukluğu klinik takip ve basamaklı tedavi algoritması görsel şeması",
+    "resim": 0
+   },
+   {
+    "ses": "Tam iyileşme sağlanan hastalarda en az bir yıllık idame sonrasında ilaç dozu aylar içinde çok yavaş azaltılarak kesilir ve stres yönetim stratejileri pekiştirilir.",
+    "sayfa": 19,
+    "satir": [],
+    "sekil": "Yaygın anksiyete bozukluğu klinik takip ve basamaklı tedavi algoritması görsel şeması",
+    "resim": 0
+   },
+   {
+    "ses": "İlaç azaltımı sırasında kaygı belirtileri yeniden tırmanırsa doz bir önceki etkili seviyeye yükseltilerek remisyon korunur.",
+    "sayfa": 19,
+    "satir": [],
+    "sekil": "Yaygın anksiyete bozukluğu klinik takip ve basamaklı tedavi algoritması görsel şeması",
+    "resim": 0
+   },
+   {
+    "ses": "Kanıta dayalı tedavi adımlarının basamak basamak titizlikle uygulanması yaygın anksiyete hastalarında yaşam kalitesini eksiksiz düzeltmektedir.",
     "sayfa": 19,
     "satir": [],
     "sekil": "Yaygın anksiyete bozukluğu klinik takip ve basamaklı tedavi algoritması görsel şeması",
@@ -1187,7 +2102,7 @@
   ],
   [
    {
-    "ses": "Özetleyecek olursak yaygın anksiyete bozukluğu en az altı ay süren, belirli bir nesneye bağlı olmayan serbest dalgalanan kaygı ve yoğun somatik gerginlikle seyreden kronik bir tablodur.",
+    "ses": "Dersimizi özetleyecek olursak yaygın anksiyete bozukluğu en az altı aylık süre ölçütü, kuruntuları denetleyememe ve motor otonomik gerginlikle giden kronik bir tablodur.",
     "sayfa": 20,
     "satir": [
      "TEŞEKKÜRLER……."
@@ -1198,7 +2113,7 @@
     ]
    },
    {
-    "ses": "Tanıda organik taklitçilerin dikkatle elenmesi, tedavide ise bilişsel davranışçı terapi ile birinci basamak antidepresanların kombine edilmesi en yüksek başarıyı sağlar.",
+    "ses": "Sınavlar için en kritik spotlar en az altı aylık süre kuralı, altı belirtiden en az üçünün aranması, çocuklarda tek belirtinin yeterli olması ve buspironun bağımlılık yapmayan yapısıdır.",
     "sayfa": 20,
     "satir": [
      "TEŞEKKÜRLER……."
@@ -1209,7 +2124,29 @@
     ]
    },
    {
-    "ses": "Dersimizin ardından pekiştirme kartları ve ders sonu oyunlarıyla çalışmanızı tamamlayabilirsiniz.",
+    "ses": "Tıbbi ayırıcı tanıda hipertiroidizm, feokromositoma, aritmi ve hipogliseminin dışlanması gereken birincil organik patolojiler olduğu unutulmamalıdır.",
+    "sayfa": 20,
+    "satir": [
+     "TEŞEKKÜRLER……."
+    ],
+    "sekil": null,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Tedavide ilk basamağın es es er ı ve se ne er ı antidepresanlar ile bilişsel davranışçı terapi olduğu, benzodiazepinlerin bağımlılık riski nedeniyle sadece kısa süreli köprüleme olarak verileceği hatırda tutulmalıdır.",
+    "sayfa": 20,
+    "satir": [
+     "TEŞEKKÜRLER……."
+    ],
+    "sekil": null,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Yaygın anksiyete bozukluğu dersimizi burada noktalıyoruz; klinik stajlarınızda ve tıp fakültesi kurul sınavlarınızda hepinize üstün başarılar dilerim.",
     "sayfa": 20,
     "satir": [
      "TEŞEKKÜRLER……."

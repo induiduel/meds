@@ -10,11 +10,81 @@
    "paragraflar": [
     {
      "id": "k2-06-p001",
-     "sayfa": 2,
+     "sayfa": 1,
      "slayt_adim": 1,
      "cumleler": [
       {
        "id": "k2-06-c0001",
+       "ses": "Ağrı yolları ve mekanizmaları dersimize başlarken; nosisepsiyonun hücresel temellerini, ağrının sınıflandırılmasını ve santral modülasyon yolaklarını kapsamlı bir şekilde inceleyeceğiz.",
+       "ekran": "Ağrı Yolları ve Mekanizmaları: **Algolojiye giriş ve ders hedefleri**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "AĞRI"
+        ],
+        "sekil": null,
+        "madde": [
+         0
+        ],
+        "resim": 0
+       }
+      },
+      {
+       "id": "k2-06-c0002",
+       "ses": "Dersimiz boyunca ağrı duyusunun periferik reseptörlerden primer duyusal kortekse iletimindeki dört temel aşamayı ve analjezik ilaçların bu aşamalardaki moleküler etki noktalarını öğreneceğiz.",
+       "ekran": "Klinik ve farmakolojik hedefler: **Nosiseptif iletimin basamakları**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "AĞRI"
+        ],
+        "sekil": null,
+        "madde": [
+         0
+        ],
+        "resim": 0
+       }
+      },
+      {
+       "id": "k2-06-c0003",
+       "ses": "Ayrıca akut ağrının kronikleşme süreçlerini, arka boynuzdaki kapı kontrol mekanizmasını ve inen inhibitör sistemlerin analjezik etkilerini basamak basamak ele alacağız.",
+       "ekran": "Santral duyarlılaşma ve kapı kontrol teorisi: **Kronik ağrının fizyopatolojisi**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-06-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "AĞRI"
+        ],
+        "sekil": null,
+        "madde": [
+         0
+        ],
+        "resim": 0
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-06-p002",
+     "sayfa": 2,
+     "slayt_adim": 1,
+     "cumleler": [
+      {
+       "id": "k2-06-c0004",
        "ses": "Uluslararası Ağrı Araştırmaları Teşkilatının kabul gören tanımına göre ağrı; vücudun herhangi bir yerinden kaynaklanan, gerçek ya da olası bir doku hasarı ile birlikte bulunan veya bu hasarla açıklanan, hastanın geçmiş deneyimleriyle ilişkili, hoş olmayan duyusal ve emosyonel bir deneyimdir.",
        "ekran": "IASP Ağrı Tanımı: **Duyusal, afektif ve hoş olmayan deneyim**",
        "duzey": 0,
@@ -35,7 +105,7 @@
        }
       },
       {
-       "id": "k2-06-c0002",
+       "id": "k2-06-c0005",
        "ses": "Ağrı yalnızca dokudan gelen basit bir fiziksel duyu sinyali olmayıp; kişinin ruhsal durumunu, bilişsel değerlendirmesini ve afektif tepkilerini içine alan çok boyutlu bir yaşantıdır.",
        "ekran": "Fiziksel ve emosyonel birliktelik: **Yalnızca duyu değil, karmaşık yaşantı**",
        "duzey": 1,
@@ -55,7 +125,7 @@
        }
       },
       {
-       "id": "k2-06-c0003",
+       "id": "k2-06-c0006",
        "ses": "Modern algolojide doku hasarının somut olarak gösterilmesi tanı için mutlak bir şart değildir; doku hasarı kanıtlanamasa dahi hastanın ağrı bildirimi gerçek bir deneyim olarak kabul edilir ve tedaviye alınır.",
        "ekran": "Objektif doku hasarı zorunluluğunun kalkması: **Hasar kanıtlanamasa da ağrı gerçektir**",
        "duzey": 1,
@@ -75,7 +145,7 @@
        }
       },
       {
-       "id": "k2-06-c0004",
+       "id": "k2-06-c0007",
        "ses": "Uluslararası Ağrı Araştırmaları Teşkilatının iki bin yirmi yılındaki son güncellemesinde ağrının öznel niteliği ön plana çıkarılmış, her bireyin ağrıyı yaşamı boyunca edindiği kişisel deneyimlerle öğrendiği açıkça vurgulanmıştır.",
        "ekran": "İki bin yirmi güncellemesi: **Öznellik vurgusu ve kişisel bildirim önceliği**",
        "duzey": 1,
@@ -98,12 +168,12 @@
      ]
     },
     {
-     "id": "k2-06-p002",
+     "id": "k2-06-p003",
      "sayfa": 3,
      "slayt_adim": 2,
      "cumleler": [
       {
-       "id": "k2-06-c0005",
+       "id": "k2-06-c0008",
        "ses": "Ağrı tanımının en kritik ilkelerinden biri olası doku hasarı kavramıdır; zira migren, gerilim tipi baş ağrısı veya trigeminal nevralji gibi birçok şiddetli kronik ağrı tablosunda laboratuvar veya görüntüleme ile objektif bir doku hasarı saptanamaz.",
        "ekran": "Objektif bulgu yokluğu: **Migren ve nevraljide somut lezyon aranmaz**",
        "duzey": 0,
@@ -131,7 +201,7 @@
        }
       },
       {
-       "id": "k2-06-c0006",
+       "id": "k2-06-c0009",
        "ses": "Klinisyenin fizik muayenede veya radyolojik tetkiklerde somut bir patoloji bulamaması, hastanın yakınmasının psikolojik veya uydurma olduğu anlamına kesinlikle gelmez.",
        "ekran": "Psikolojik yanılgısının önlenmesi: **Bulgu olmaması ağrıyı hayali kılmaz**",
        "duzey": 1,
@@ -151,7 +221,7 @@
        }
       },
       {
-       "id": "k2-06-c0007",
+       "id": "k2-06-c0010",
        "ses": "Hastanın ağrım var ifadesi tıp pratiğinde aksi kanıtlanana kadar doğru kabul edilmeli; nöropatik ve nosiplastik mekanizmaların varlığı göz önünde tutularak empatik bir tedavi protokolü başlatılmalıdır.",
        "ekran": "Klinik güven ve yaklaşım: **Hastanın ağrı ifadesi temel tanı ölçütüdür**",
        "duzey": 1,
@@ -173,12 +243,12 @@
      ]
     },
     {
-     "id": "k2-06-p003",
+     "id": "k2-06-p004",
      "sayfa": 4,
      "slayt_adim": 3,
      "cumleler": [
       {
-       "id": "k2-06-c0008",
+       "id": "k2-06-c0011",
        "ses": "Ağrının birinci temel bileşeni duyusal komponenttir; bu bileşen periferik sinir lifleri ile taşınan, lezyonun yerini, süresini, şiddetini ve niteliğini belirleyen objektif nörofizyolojik duyu iletimini kapsar.",
        "ekran": "Duyusal komponent: **Nosiseptörlerden kortekse objektif duyu iletimi**",
        "duzey": 0,
@@ -200,7 +270,7 @@
        }
       },
       {
-       "id": "k2-06-c0009",
+       "id": "k2-06-c0012",
        "ses": "Ağrının ikinci ayrılmaz bileşeni ise emosyonel yani duygusal komponenttir; ağrının kişide oluşturduğu ıstırap, kaygı, korku ve hoşnutsuzluk gibi afektif durumları temsil eder.",
        "ekran": "Emosyonel komponent: **Kişinin acıya verdiği affektif ve ruhsal tepki**",
        "duzey": 1,
@@ -222,7 +292,7 @@
        }
       },
       {
-       "id": "k2-06-c0010",
+       "id": "k2-06-c0013",
        "ses": "Aynı şiddetteki bir nosiseptif uyaran iki farklı bireyde emosyonel filtrenin ve geçmiş yaşantıların farklılığı nedeniyle tamamen zıt şiddet ve tepkilerle algılanabilir.",
        "ekran": "Bütüncül değerlendirme ilkesi: **Duyusal uyarı emosyonel filtrede işlenir**",
        "duzey": 1,
@@ -245,12 +315,12 @@
      ]
     },
     {
-     "id": "k2-06-p004",
+     "id": "k2-06-p005",
      "sayfa": 5,
      "slayt_adim": 4,
      "cumleler": [
       {
-       "id": "k2-06-c0011",
+       "id": "k2-06-c0014",
        "ses": "Ağrı her zaman ve her koşulda kişiye özneldir; bu bağlamda dokudan gelen duyusal nosiseptif uyarı ile bilinç düzeyinde hissedilen ağrı aynı anlama gelmez.",
        "ekran": "Ağrının mutlak öznelliği: **Bireysel algı ve nosisepsiyon farkı**",
        "duzey": 0,
@@ -271,7 +341,7 @@
        }
       },
       {
-       "id": "k2-06-c0012",
+       "id": "k2-06-c0015",
        "ses": "Nosisepsiyon periferik reseptörlerin zararlı uyaranı algılayıp omuriliğe iletmesi şeklindeki nörofizyolojik bir süreçken; ağrı bu sinyalin serebral korteks ve limbik sistemde yorumlanmasıyla ortaya çıkan subjektif bir algıdır.",
        "ekran": "Nosisepsiyon ve ağrı ayrımı: **Fizyolojik sinyal bilince ulaşınca ağrı olur**",
        "duzey": 1,
@@ -292,7 +362,7 @@
        }
       },
       {
-       "id": "k2-06-c0013",
+       "id": "k2-06-c0016",
        "ses": "Bireyin yaşı ilerledikçe edindiği deneyimler ağrı kavramını değiştirir; kontrol altına alınamayan kronik ağrı hastanın psikolojik dengesini, aile yaşantısını ve tüm sosyal üretkenliğini derinden sarsar.",
        "ekran": "Yaşam kalitesi ve sosyal etki: **Kişilik, tecrübe ve sosyal çevre rolü**",
        "duzey": 1,
@@ -315,12 +385,12 @@
      ]
     },
     {
-     "id": "k2-06-p005",
+     "id": "k2-06-p006",
      "sayfa": 6,
      "slayt_adim": 5,
      "cumleler": [
       {
-       "id": "k2-06-c0014",
+       "id": "k2-06-c0017",
        "ses": "İnsanoğlu doğduğu andan itibaren çevresiyle etkileşime girer; bireyin inançları, konuştuğu dil, cinsiyeti ve içinde büyüdüğü kültürel yapı onun emosyonel yanıt mekanizmasını ve ağrıya karşı tutumunu belirler.",
        "ekran": "Ağrı eşiğini şekillendiren etmenler: **Kültür, inanç ve cinsiyet değişkenleri**",
        "duzey": 0,
@@ -341,7 +411,7 @@
        }
       },
       {
-       "id": "k2-06-c0015",
+       "id": "k2-06-c0018",
        "ses": "Objektif nosiseptif uyaranların yanı sıra bu sübjektif faktörler, kişinin uyarandan ilk ağrı hissettiği eşiği ve ağrıya ne kadar süre katlanabileceğini belirleyen tolerans seviyesini doğrudan etkiler.",
        "ekran": "Ağrı eşiği ve tolerans ayrımı: **Fizyolojik alt sınırdan psikolojik sınıra**",
        "duzey": 1,
@@ -362,7 +432,7 @@
        }
       },
       {
-       "id": "k2-06-c0016",
+       "id": "k2-06-c0019",
        "ses": "Klinisyen farklı sosyokültürel arka plana sahip hastaları değerlendirirken tek bir kalıp yargıya kapılmamalı, hastanın bildirdiği ağrı skorunu kendi bireysel gerçekliği içinde ele almalıdır.",
        "ekran": "Klinik algoloji kuralı: **Her hastanın ağrı skalası kendine özgüdür**",
        "duzey": 1,
@@ -391,12 +461,12 @@
    "baslik": "Ağrının Periferik (Fizyolojik) ve Santral (Psikolojik) Komponentleri",
    "paragraflar": [
     {
-     "id": "k2-06-p006",
+     "id": "k2-06-p007",
      "sayfa": 7,
      "slayt_adim": 6,
      "cumleler": [
       {
-       "id": "k2-06-c0017",
+       "id": "k2-06-c0020",
        "ses": "Ağrının tanımlanmasında birinci temel öğe fizyolojik yani periferik komponenttir; bu komponent dokudaki nosiseptörler vasıtasıyla santral sinir sistemine uzanan anatomik duyusal iletim yollarını kapsar.",
        "ekran": "Fizyolojik periferik komponent: **Nosiseptörler ve anatomik duyu yolları**",
        "duzey": 0,
@@ -417,7 +487,7 @@
        }
       },
       {
-       "id": "k2-06-c0018",
+       "id": "k2-06-c0021",
        "ses": "Doku düzeyinde oluşan zararlı fiziksel uyaran periferik sinir liflerinin iletim özelliklerine bağlı olarak omuriliğe ve oradan yüksek merkezlere doğru taşınır.",
        "ekran": "Duyusal uyarı iletimi: **Periferden omurilik arka boynuzuna geçiş**",
        "duzey": 1,
@@ -438,7 +508,7 @@
        }
       },
       {
-       "id": "k2-06-c0019",
+       "id": "k2-06-c0022",
        "ses": "Bu periferik duyusal iletim aşamasında henüz kortikal bir algı veya bilinçli ıstırap oluşmamıştır; yalnızca elektrofizyolojik sinyal transferi gerçekleşmektedir.",
        "ekran": "Bilinç öncesi süreç: **Korteks öncesi objektif sinyal akışı**",
        "duzey": 1,
@@ -461,12 +531,12 @@
      ]
     },
     {
-     "id": "k2-06-p007",
+     "id": "k2-06-p008",
      "sayfa": 8,
      "slayt_adim": 7,
      "cumleler": [
       {
-       "id": "k2-06-c0020",
+       "id": "k2-06-c0023",
        "ses": "Ağrının ikinci öğesi psikolojik yani santral komponenttir ve kendi içinde duyusal diskriminatif boyut, affektif motivasyonel boyut ve kognitif değerlendirici boyut olmak üzere üç büyük boyutu barındırır.",
        "ekran": "Psikolojik santral komponent: **Üç büyük boyut ve beyin merkezleri**",
        "duzey": 0,
@@ -487,7 +557,7 @@
        }
       },
       {
-       "id": "k2-06-c0021",
+       "id": "k2-06-c0024",
        "ses": "Duyusal diskriminatif boyut ağrının tam anatomik yerini, süresini, keskinliğini ve şiddetini belirler; bu ayrım primer somatosensoryal korteks ve talamusun ventroposterolateral çekirdeğinde gerçekleşir.",
        "ekran": "Duyusal-diskriminatif boyut: **Somatosensoriyel korteks ve talamik lokalizasyon**",
        "duzey": 1,
@@ -508,7 +578,7 @@
        }
       },
       {
-       "id": "k2-06-c0022",
+       "id": "k2-06-c0025",
        "ses": "Affektif motivasyonel boyut limbik sistem ve singulat kortekste ağrının yarattığı korku ve kaçınma davranışını; kognitif boyut ise frontal lobda ağrının anlamlandırılmasını ve baş etme stratejilerini yönetir.",
        "ekran": "Affektif ve kognitif boyut: **Limbik sistem, frontal lob ve acı yaşantısı**",
        "duzey": 1,
@@ -537,12 +607,12 @@
    "baslik": "Ağrı Terminolojisi ve Duyusal Bozukluklar",
    "paragraflar": [
     {
-     "id": "k2-06-p008",
+     "id": "k2-06-p009",
      "sayfa": 9,
      "slayt_adim": 9,
      "cumleler": [
       {
-       "id": "k2-06-c0023",
+       "id": "k2-06-c0026",
        "ses": "Allodini, normal koşullarda hiçbir şekilde ağrı oluşturmayan pamuk dokunması, giysi teması veya ılık su gibi zararsız bir stimulusun şiddetli ağrıya yol açması tablosudur.",
        "ekran": "Allodini tanımı: **Normalde ağrısız uyarana ağrı yanıtı**",
        "duzey": 0,
@@ -563,7 +633,7 @@
        }
       },
       {
-       "id": "k2-06-c0024",
+       "id": "k2-06-c0027",
        "ses": "Anestezi dolorosa, duyu muayenesinde tamamen hissiz ve anestezik bulunan bir alanda hastanın inatçı ve ızdırap verici bir ağrı hissetmesi durumudur.",
        "ekran": "Anestezi dolorosa: **Duyusuz bölgede hissedilen çelişkili ağrı**",
        "duzey": 1,
@@ -584,7 +654,7 @@
        }
       },
       {
-       "id": "k2-06-c0025",
+       "id": "k2-06-c0028",
        "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Travmatik bir periferik sinir lezyonundan sonra ortaya çıkan, özellikle median veya siyatik sinir hasarlarında görülen ve sempatik hiperaktiviteyle şiddetlenen inatçı yanıcı ağrı tablosuna kozalji adı verilir.",
        "ekran": "Çıkmış Sınav Sorusu: **Kozalji ve travmatik sinir lezyonu ilişkisi**",
        "duzey": 1,
@@ -612,7 +682,7 @@
        }
       },
       {
-       "id": "k2-06-c0026",
+       "id": "k2-06-c0029",
        "ses": "Santral ağrı ise talamik enfarktüs, omurilik travması veya multipl skleroz gibi doğrudan santral sinir sistemindeki duyusal yolakların hasarlanması sonucu ortaya çıkan yaygın nöropatik tablodur.",
        "ekran": "Santral ağrı kavramı: **Santral sinir sistemi lezyonuna bağlı ağrı**",
        "duzey": 1,
@@ -643,12 +713,12 @@
      ]
     },
     {
-     "id": "k2-06-p009",
+     "id": "k2-06-p010",
      "sayfa": 10,
      "slayt_adim": 11,
      "cumleler": [
       {
-       "id": "k2-06-c0027",
+       "id": "k2-06-c0030",
        "ses": "Disestezi hastayı belirgin derecede rahatsız eden ve acı veren nahoş anormal duyuyken; parestezi uyuşma, karıncalanma veya keçeleşme gibi rahatsız edici olmayan spontan duyusal hisleri tanımlar.",
        "ekran": "Disestezi ve parestezi: **Hoş olmayan anormal duyu ile uyuşma ayrımı**",
        "duzey": 0,
@@ -669,7 +739,7 @@
        }
       },
       {
-       "id": "k2-06-c0028",
+       "id": "k2-06-c0031",
        "ses": "Hiperaljezi, normalde hafif ağrı oluşturan zararlı bir uyarana karşı duyarlılığın ve verilen ağrı cevabının belirgin biçimde artmasıdır.",
        "ekran": "Hiperaljezi mekanizması: **Ağrılı uyarana karşı abartılı yanıt**",
        "duzey": 1,
@@ -690,7 +760,7 @@
        }
       },
       {
-       "id": "k2-06-c0029",
+       "id": "k2-06-c0032",
        "ses": "Hiperestezi dokunma ve termal gibi tüm stimülasyonlara karşı duyarlılığın artmasıyken; hiperpati yüksek eşikli uyarana karşı gecikmeli fakat patlayıcı ve aşırı şiddetli reaksiyonla karakterize özel bir ağrılı sendromdur.",
        "ekran": "Hiperestezi ve hiperpati: **Artmış stimulus duyarlılığı ve patlayıcı yanıt**",
        "duzey": 1,
@@ -711,7 +781,7 @@
        }
       },
       {
-       "id": "k2-06-c0030",
+       "id": "k2-06-c0033",
        "ses": "Hipoaljezi ise tam tersine ağrılı bir uyarana karşı hissedilen acının ve nöronal yanıtın fizyolojik sınırların altına inmesidir.",
        "ekran": "Hipoaljezi: **Zararlı uyarana verilen ağrı yanıtının azalması**",
        "duzey": 1,
@@ -734,12 +804,12 @@
      ]
     },
     {
-     "id": "k2-06-p010",
+     "id": "k2-06-p011",
      "sayfa": 11,
      "slayt_adim": 13,
      "cumleler": [
       {
-       "id": "k2-06-c0031",
+       "id": "k2-06-c0034",
        "ses": "Hipoestezi herhangi bir uyarana karşı dokunma ve duyu algısının azalmasıyken; nöralji belirli bir periferik veya kraniyal sinirin anatomik dağılım alanı boyunca şimşek çakar tarzda yayılan ağrıdır.",
        "ekran": "Hipoestezi ve nöralji: **Duyusal küntleşme ve sinir trasesinde ağrı**",
        "duzey": 0,
@@ -760,7 +830,7 @@
        }
       },
       {
-       "id": "k2-06-c0032",
+       "id": "k2-06-c0035",
        "ses": "Nöropati bir sinirde meydana gelen patolojik yapısal hasar veya fonksiyon bozukluğudur; nosiseptör ise zararlı ya da potansiyel olarak doku hasarı yapabilecek uyaranlara duyarlı çıplak sinir uçlarıdır.",
        "ekran": "Nöropati ve nosiseptör: **Sinir hasarı ve özelleşmiş ağrı sensörleri**",
        "duzey": 1,
@@ -781,7 +851,7 @@
        }
       },
       {
-       "id": "k2-06-c0033",
+       "id": "k2-06-c0036",
        "ses": "Noxious terimi ise doğrudan doku bütünlüğünü tehdit eden, hücre yıkımına yol açabilecek mekanik, termal veya kimyasal zararlı uyarıcıları ifade eder.",
        "ekran": "Noxious kavramı: **Doku hasarı tehdidi oluşturan zararlı uyaran**",
        "duzey": 1,
@@ -804,12 +874,12 @@
      ]
     },
     {
-     "id": "k2-06-p011",
+     "id": "k2-06-p012",
      "sayfa": 12,
      "slayt_adim": 14,
      "cumleler": [
       {
-       "id": "k2-06-c0034",
+       "id": "k2-06-c0037",
        "ses": "Ağrı eşiği, bir bireyde ilk kez ağrı hissinin ortaya çıkmasına neden olan en küçük fiziksel uyarının şiddetidir ve fizyolojik olarak kişiler arasında nispeten sabit kabul edilir.",
        "ekran": "Ağrı eşiği tanımı: **Kişide ağrıyı başlatan minimum uyaran şiddeti**",
        "duzey": 0,
@@ -830,7 +900,7 @@
        }
       },
       {
-       "id": "k2-06-c0035",
+       "id": "k2-06-c0038",
        "ses": "Ağrı tolerans seviyesi ise kişinin tolere etmeye ve dayanmaya hazır olduğu, ağrıya yol açan en büyük uyaran şiddetini temsil eder.",
        "ekran": "Ağrı tolerans seviyesi: **Bireyin katlanabildiği maksimum ağrı sınırı**",
        "duzey": 1,
@@ -851,7 +921,7 @@
        }
       },
       {
-       "id": "k2-06-c0036",
+       "id": "k2-06-c0039",
        "ses": "Eşik dokudaki nosiseptörlerin duyarlılığıyla belirlenen biyolojik bir alt sınırlıyken; tolerans düzeyi inanç, motivasyon, anksiyete ve yorgunluk gibi psikososyal faktörlerle her bireyde geniş dalgalanmalar gösterir.",
        "ekran": "Eşik ile tolerans farkı: **Fizyolojik alt sınır ve psikososyal üst tavan**",
        "duzey": 1,
@@ -880,12 +950,12 @@
    "baslik": "Başlama Süresine Göre Ağrı: Akut, Subakut ve Kronik Ağrı",
    "paragraflar": [
     {
-     "id": "k2-06-p012",
+     "id": "k2-06-p013",
      "sayfa": 13,
      "slayt_adim": 16,
      "cumleler": [
       {
-       "id": "k2-06-c0037",
+       "id": "k2-06-c0040",
        "ses": "Ağrının sınıflandırılmasında klinisyenin başvurduğu ilk ve en pratik ölçüt ağrının başlama zamanı ve devam etme süresidir.",
        "ekran": "Süreye göre sınıflama: **Akut, subakut ve kronik ayrımının klinik önemi**",
        "duzey": 0,
@@ -905,7 +975,7 @@
        }
       },
       {
-       "id": "k2-06-c0038",
+       "id": "k2-06-c0041",
        "ses": "Süre uzadıkça ağrının altında yatan moleküler mekanizma koruyucu bir nosiseptif uyrıdan, sinir sisteminde kalıcı plastisite ve duyarlılaşmayla giden bir hastalığa evrilir.",
        "ekran": "Zaman ekseninde patofizyoloji: **Biyolojik uyarıdan bağımsız hastalığa**",
        "duzey": 1,
@@ -925,7 +995,7 @@
        }
       },
       {
-       "id": "k2-06-c0039",
+       "id": "k2-06-c0042",
        "ses": "Bu sınıflama hastaya uygulanacak farmakolojik ajanların seçiminde, cerrahi kararlarında ve fizik tedavi planlamasında temel kılavuzdur.",
        "ekran": "Klinik evreleme çerçevesi: **Tedavi stratejisini belirleyen temel basamak**",
        "duzey": 1,
@@ -948,12 +1018,12 @@
      ]
     },
     {
-     "id": "k2-06-p013",
+     "id": "k2-06-p014",
      "sayfa": 14,
      "slayt_adim": 16,
      "cumleler": [
       {
-       "id": "k2-06-c0040",
+       "id": "k2-06-c0043",
        "ses": "Akut ağrı daima nosiseptif nitelikte olup vücuda zarar veren akut bir olayın, travmanın, enfeksiyonun veya doku hipoksisinin varlığını haber veren biyolojik bir alarm sistemidir.",
        "ekran": "Akut ağrı özellikleri: **Koruyucu, daima nosiseptif ve lokalize**",
        "duzey": 0,
@@ -974,7 +1044,7 @@
        }
       },
       {
-       "id": "k2-06-c0041",
+       "id": "k2-06-c0044",
        "ses": "Akut ağrıda nedensel lezyon ile hissedilen ağrı arasında yer, şiddet ve zaman bakımından çok yakın ve doğrusal bir ilişki bulunur.",
        "ekran": "Lezyon ve ağrı korelasyonu: **Yer, şiddet ve zaman bakımından tam uyum**",
        "duzey": 1,
@@ -995,7 +1065,7 @@
        }
       },
       {
-       "id": "k2-06-c0042",
+       "id": "k2-06-c0045",
        "ses": "Doku onarımı tamamlandığında ve inflamatuar süreç yatıştığında akut nosiseptif ağrı kendiliğinden tamamen ortadan kaybolur.",
        "ekran": "Tedavi yanıtı ve prognoz: **Doku iyileşmesi ile ağrının sonlanması**",
        "duzey": 1,
@@ -1018,12 +1088,12 @@
      ]
     },
     {
-     "id": "k2-06-p014",
+     "id": "k2-06-p015",
      "sayfa": 15,
      "slayt_adim": 17,
      "cumleler": [
       {
-       "id": "k2-06-c0043",
+       "id": "k2-06-c0046",
        "ses": "Üç ila altı aydan daha uzun süreli devam eden ya da beklenen normal doku iyileşme süresini aşan ağrılara kronik ağrı adı verilir.",
        "ekran": "Kronik ağrı tanımı: **Üç ila altı aydan uzun süren patolojik tablo**",
        "duzey": 0,
@@ -1044,7 +1114,7 @@
        }
       },
       {
-       "id": "k2-06-c0044",
+       "id": "k2-06-c0047",
        "ses": "Kronik ağrıda biyolojik koruyucu alarm fonksiyonu tamamen yitirilmiştir; ağrı bir semptom olmaktan çıkıp santral sinir sisteminin kalıcı bir hastalığı haline gelmiştir.",
        "ekran": "Uyarıcı işlevin kaybı: **Artık koruyucu değil, bizzat bir hastalıktır**",
        "duzey": 1,
@@ -1065,7 +1135,7 @@
        }
       },
       {
-       "id": "k2-06-c0045",
+       "id": "k2-06-c0048",
        "ses": "Kişinin hayat kalitesini bozan, uyku düzenini yıkan, bireyi anormal ağrı davranışlarına ve içe kapanmaya yönelten kompleks psikososyal etkenler tabloya eklenir.",
        "ekran": "Psikososyal çöküş: **Depresyon, anksiyete ve davranış değişiklikleri**",
        "duzey": 1,
@@ -1095,12 +1165,12 @@
      ]
     },
     {
-     "id": "k2-06-p015",
+     "id": "k2-06-p016",
      "sayfa": 16,
      "slayt_adim": 18,
      "cumleler": [
       {
-       "id": "k2-06-c0046",
+       "id": "k2-06-c0049",
        "ses": "Altı haftadan başlayıp üç aya kadar uzanan ağrılara subakut ağrı denir ve bu evre akut nosiseptif ağrıdan kalıcı kronik ağrıya geçişin yaşandığı kritik penceredir.",
        "ekran": "Subakut ağrı tanımı: **Altı hafta ile üç ay arası kritik geçiş dönemi**",
        "duzey": 0,
@@ -1122,7 +1192,7 @@
        }
       },
       {
-       "id": "k2-06-c0047",
+       "id": "k2-06-c0050",
        "ses": "Miyofasyal ağrı sendromları, tedavi edilmemiş bel spazmları ve postoperatif uzamış ağrılar subakut dönemin en tipik klinik örnekleridir.",
        "ekran": "Klinik örnek: **Miyofasyal ağrı sendromu ve kronikleşme riski**",
        "duzey": 1,
@@ -1144,7 +1214,7 @@
        }
       },
       {
-       "id": "k2-06-c0048",
+       "id": "k2-06-c0051",
        "ses": "Subakut evrede uygulanacak agresif medikal tedavi, tetik nokta enjeksiyonları ve erken mobilizasyon ağrının kronikleşmesini ve nöroplastik hasarın yerleşmesini engeller.",
        "ekran": "Terapötik pencere önemi: **Santral duyarlılaşma yerleşmeden müdahale**",
        "duzey": 1,
@@ -1174,12 +1244,12 @@
    "baslik": "Mekanizmaya Göre Ağrı: Nosiseptif ve Nöropatik Ağrı",
    "paragraflar": [
     {
-     "id": "k2-06-p016",
+     "id": "k2-06-p017",
      "sayfa": 17,
      "slayt_adim": 19,
      "cumleler": [
       {
-       "id": "k2-06-c0049",
+       "id": "k2-06-c0052",
        "ses": "Ağrının etiyopatogenetik mekanizmalarına göre yapılan ikinci sınıflamada nosiseptif ağrı, nöropatik ağrı, psikojenik ağrı ve nosiplastik ağrı olmak üzere temel kategoriler incelenir.",
        "ekran": "Mekanizmaya göre sınıflama: **Etiyopatogenetik dört temel kategori**",
        "duzey": 0,
@@ -1200,7 +1270,7 @@
        }
       },
       {
-       "id": "k2-06-c0050",
+       "id": "k2-06-c0053",
        "ses": "Bu ayrım ağrının sağlam bir sinir boyunca iletilen doku hasarı sinyali mi yoksa sinir liflerinin kendi patolojisi mi olduğunu ortaya koyar.",
        "ekran": "Hücresel mekanizma ayrımı: **Reseptör aktivasyonu ve nöronal lezyon**",
        "duzey": 1,
@@ -1221,7 +1291,7 @@
        }
       },
       {
-       "id": "k2-06-c0051",
+       "id": "k2-06-c0054",
        "ses": "Nosiseptif ağrıda antienflamatuarlar ve opioidler etkiliyken, nöropatik ağrıda antiepileptik ve antidepresan ajanların seçilmesi mekanizma odaklı yaklaşımın sonucudur.",
        "ekran": "Tedavi protokolüne rehberlik: **Doğru mekanizmaya doğru farmakoterapi**",
        "duzey": 1,
@@ -1244,12 +1314,12 @@
      ]
     },
     {
-     "id": "k2-06-p017",
+     "id": "k2-06-p018",
      "sayfa": 18,
      "slayt_adim": 19,
      "cumleler": [
       {
-       "id": "k2-06-c0052",
+       "id": "k2-06-c0055",
        "ses": "Nosiseptif ağrı, periferik dokularda yer alan ve nosiseptör adı verilen özelleşmiş ağrı algılayıcılarının mekanik, termal ya da kimyasal süreçlerle uyarılması sonucu meydana gelir.",
        "ekran": "Nosiseptif ağrı mekanizması: **Periferik nosiseptörlerin fizyopatolojik uyarımı**",
        "duzey": 0,
@@ -1270,7 +1340,7 @@
        }
       },
       {
-       "id": "k2-06-c0053",
+       "id": "k2-06-c0056",
        "ses": "Deri, kas, kemik, eklem gibi somatik dokularda veya iç organlarda doku yıkımı ya da iskemi geliştiğinde salınan algopatojen maddeler nosiseptörleri aktive eder.",
        "ekran": "Doku orijini ve yaygınlığı: **Somatik dokular ve visseral organlar**",
        "duzey": 1,
@@ -1291,7 +1361,7 @@
        }
       },
       {
-       "id": "k2-06-c0054",
+       "id": "k2-06-c0057",
        "ses": "Nosiseptif ağrıda periferik sinirler, omurilik ve talamokortikal yollar yapısal olarak tamamen sağlamdır; yalnızca hasarlı dokudan gelen sinyalleri iletirler.",
        "ekran": "Sinir bütünlüğü özelliği: **İletim yolları sağlam ve fizyolojiktir**",
        "duzey": 1,
@@ -1314,12 +1384,12 @@
      ]
     },
     {
-     "id": "k2-06-p018",
+     "id": "k2-06-p019",
      "sayfa": 19,
      "slayt_adim": 20,
      "cumleler": [
       {
-       "id": "k2-06-c0055",
+       "id": "k2-06-c0058",
        "ses": "Nöropatik ağrı; periferik ya da santral somatosensoriyel sinir sistemini etkileyen mekanik bir travma, kompresyon veya metabolik bir hastalık sonucunda doğrudan sinirin hasarlanmasıyla ortaya çıkar.",
        "ekran": "Nöropatik ağrı tanımı: **Somatosensoriyel sinir sisteminin primer lezyonu**",
        "duzey": 0,
@@ -1340,7 +1410,7 @@
        }
       },
       {
-       "id": "k2-06-c0056",
+       "id": "k2-06-c0059",
        "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Bel fıtığı veya disk hernisinde spinal sinir kökünün mekanik kompresyona ve iskemiye uğraması sonucu bacağa yayılan radikülopati ağrısı, sinir dokusunun doğrudan hasarlandığı klasik nöropatik ağrı örneğidir.",
        "ekran": "Çıkmış Sınav Sorusu: **Bel fıtığı ve disk hernisinde nöropatik radikülopati**",
        "duzey": 1,
@@ -1368,7 +1438,7 @@
        }
       },
       {
-       "id": "k2-06-c0057",
+       "id": "k2-06-c0060",
        "ses": "Mekanik kök basılarının yanı sıra uzun süreli kontrolsüz diyabete bağlı diyabetik nöropati veya alkol ve kemoterapiye bağlı toksik sinir hasarları da periferik nöropatik ağrının başlıca nedenleridir.",
        "ekran": "Etiyolojik çeşitlilik: **Metabolik diyabetik polinöropati ve toksik nedenler**",
        "duzey": 1,
@@ -1391,12 +1461,12 @@
      ]
     },
     {
-     "id": "k2-06-p019",
+     "id": "k2-06-p020",
      "sayfa": 20,
      "slayt_adim": 21,
      "cumleler": [
       {
-       "id": "k2-06-c0058",
+       "id": "k2-06-c0061",
        "ses": "Nöropatik ağrı hastalar tarafından sıklıkla aralıklı, kısa süreli, batıcı, saplanıcı, yanıcı veya elektrik şoku çarpar tarzda tanımlanır ve duysal innervasyon bozukluğunun bulunduğu alanda algılanır.",
        "ekran": "Nöropatik ağrının semiyolojisi: **Batıcı, saplanıcı ve elektrik çarpar tarzda**",
        "duzey": 0,
@@ -1417,7 +1487,7 @@
        }
       },
       {
-       "id": "k2-06-c0059",
+       "id": "k2-06-c0062",
        "ses": "Hastanın muayenesinde bir yandan hipoestezi yani duyu kaybı izlenirken, diğer yandan etkilenen sahada hafif dokunmayla şiddetli acı duyulması yani allodini ve hiperaljezi birlikteliği saptanır.",
        "ekran": "Pozitif ve negatif bulgular: **Duyu kaybı zemininde hiperaljezi ve allodini**",
        "duzey": 1,
@@ -1437,7 +1507,7 @@
        }
       },
       {
-       "id": "k2-06-c0060",
+       "id": "k2-06-c0063",
        "ses": "Periferik nöropatik ağrıya trigeminal nevralji, postherpetik nevralji ve karpal tünel sendromu; santral nöropatik ağrıya ise talamik enfarktüs sonrası gelişen Dejerine-Roussy sendromu prototip örnektir.",
        "ekran": "Periferik ve santral örnekler: **Trigeminal nevraljiden talamik inmeye**",
        "duzey": 1,
@@ -1466,12 +1536,12 @@
    "baslik": "Deafferentasyon Ağrıları ve Sempatik Ağrılar",
    "paragraflar": [
     {
-     "id": "k2-06-p020",
+     "id": "k2-06-p021",
      "sayfa": 21,
      "slayt_adim": 23,
      "cumleler": [
       {
-       "id": "k2-06-c0061",
+       "id": "k2-06-c0064",
        "ses": "Deafferentasyon ağrısı, periferden omuriliğe ya da beyne giden duyusal iletim yollarının cerrahi, travmatik veya vasküler nedenlerle tamamen kesilmesi sonucu ortaya çıkan ilginç bir nöropatik ağrı türüdür.",
        "ekran": "Deafferentasyon ağrısı kavramı: **Duyusal afferent girdinin kopması**",
        "duzey": 0,
@@ -1492,7 +1562,7 @@
        }
       },
       {
-       "id": "k2-06-c0062",
+       "id": "k2-06-c0065",
        "ses": "Normalde arka boynuza sürekli gelen periferik dokunma ve duyu sinyalleri kesildiğinde, omurilikteki ikinci sıra nöronlar kontrolsüzce spontan aksiyon potansiyelleri üreterek üst merkezlere yalancı ağrı mesajları gönderir.",
        "ekran": "Santral deşarj mekanizması: **İnhibisyonsuz kalan spinal nöronların aktivasyonu**",
        "duzey": 1,
@@ -1513,7 +1583,7 @@
        }
       },
       {
-       "id": "k2-06-c0063",
+       "id": "k2-06-c0066",
        "ses": "Bu durum periferde herhangi bir hasar veya nosiseptör uyarımı olmamasına rağmen, santral düzeyde son derece şiddetli, sürekli ve klasik analjeziklere yanıtsız bir yanma hissi oluşturur.",
        "ekran": "Klinik tablo ve direnç: **Klasik analjeziklere dirençli yanıcı ağrı**",
        "duzey": 1,
@@ -1535,12 +1605,12 @@
      ]
     },
     {
-     "id": "k2-06-p021",
+     "id": "k2-06-p022",
      "sayfa": 22,
      "slayt_adim": 24,
      "cumleler": [
       {
-       "id": "k2-06-c0064",
+       "id": "k2-06-c0067",
        "ses": "Deafferentasyon ağrısına en çarpıcı klinik örnekler; cerrahi amputasyon sonrası var olmayan kolda veya bacakta hissedilen fantom ekstremite ağrısı ve brakiyal pleksus kök avülsiyonlarıdır.",
        "ekran": "Deafferentasyon örnekleri: **Fantom ekstremite ve brakiyal avülsiyon**",
        "duzey": 0,
@@ -1561,7 +1631,7 @@
        }
       },
       {
-       "id": "k2-06-c0065",
+       "id": "k2-06-c0068",
        "ses": "Ayrıca tam omurilik kesisi geçiren paraplejik hastaların hissiz kalan alt ekstremitelerinde duydukları şiddetli nöropatik ağrılar ve talamik enfarktüs sonrası santral ağrılar bu mekanizmayla gelişir.",
        "ekran": "Spinal kord hasarı ve inme: **Paraplejik ağrılar ve talamik sendrom**",
        "duzey": 1,
@@ -1582,7 +1652,7 @@
        }
       },
       {
-       "id": "k2-06-c0066",
+       "id": "k2-06-c0069",
        "ses": "Duyu girdisi kesilen kortikal alanların komşu vücut bölgeleri tarafından istila edilmesi yani maladaptif nöroplastisite fantom ağrısının kronikleşmesinde kilit rol oynar.",
        "ekran": "Kortikal reorganizasyon: **Somatosensoriyel haritanın yeniden çizilmesi**",
        "duzey": 1,
@@ -1605,12 +1675,12 @@
      ]
     },
     {
-     "id": "k2-06-p022",
+     "id": "k2-06-p023",
      "sayfa": 23,
      "slayt_adim": 25,
      "cumleler": [
       {
-       "id": "k2-06-c0067",
+       "id": "k2-06-c0070",
        "ses": "Sempatik ağrılar, periferik bir travma sonrasında otonom sinir sisteminin anormal aktivasyonu ve nosiseptif liflerle sempatik lifler arasında gelişen patolojik etkileşim sonucu ortaya çıkar.",
        "ekran": "Sempatik kökenli ağrılar: **Otonom sinir sistemiyle ilişkili tablolar**",
        "duzey": 0,
@@ -1631,7 +1701,7 @@
        }
       },
       {
-       "id": "k2-06-c0068",
+       "id": "k2-06-c0071",
        "ses": "Klinik pratikte refleks sempatik distrofi olarak bilinen Kompleks Bölgesel Ağrı Sendromu Tip bir belirgin sinir lezyonu olmaksızın gelişirken; majör sinir hasarına eşlik eden formuna Tip iki yani kozalji denir.",
        "ekran": "Kompleks bölgesel ağrı sendromu: **Tip bir ve Tip iki ayrımı**",
        "duzey": 1,
@@ -1652,7 +1722,7 @@
        }
       },
       {
-       "id": "k2-06-c0069",
+       "id": "k2-06-c0072",
        "ses": "Hasarlanan primer afferent liflerin zarlarında anormal alfa-adrenerjik reseptörler sentezlenir; böylece dolaşımdaki adrenalin ve sempatik tonus artışı doğrudan ağrıyı tetikler.",
        "ekran": "Alfa adrenerjik duyarlılık: **Nosiseptörlerde katekolamin yanıtı**",
        "duzey": 1,
@@ -1675,12 +1745,12 @@
      ]
     },
     {
-     "id": "k2-06-p023",
+     "id": "k2-06-p024",
      "sayfa": 24,
      "slayt_adim": 25,
      "cumleler": [
       {
-       "id": "k2-06-c0070",
+       "id": "k2-06-c0073",
        "ses": "Sempatik ağrılar özellikle geceleri şiddetlenir; ağrının yanı sıra ekstremitede hiperhidroz yani aşırı terleme, soğukluk, ödem ve cilt renginde solukluk veya morarma gibi belirgin vazomotor instabilite izlenir.",
        "ekran": "Klinik bulgular: **Gece artan yanıcı ağrı, ödem ve vazomotor bozukluk**",
        "duzey": 0,
@@ -1702,7 +1772,7 @@
        }
       },
       {
-       "id": "k2-06-c0071",
+       "id": "k2-06-c0074",
        "ses": "Zamanla etkilenen uzuvda tırnaklarda kırılma, kıllanmada dökülme, cilt atrofisi ve radyolojide Sudeck atrofisi adı verilen benekli osteoporoz gibi ileri trofik bozukluklar açığa çıkar.",
        "ekran": "Trofik değişiklikler: **Tırnak, kıl ve kemik demineralizasyonu**",
        "duzey": 1,
@@ -1723,7 +1793,7 @@
        }
       },
       {
-       "id": "k2-06-c0072",
+       "id": "k2-06-c0075",
        "ses": "Sempatik ganglion blokajı yapıldığında hastanın ağrısının dakikalar içinde dramatik olarak gerilemesi, tablonun sempatik aracılı olduğunun altın standart kanıtıdır.",
        "ekran": "Sempatik blok yanıtı: **Tanısal ve terapötik sempatektomi başarısı**",
        "duzey": 1,
@@ -1752,12 +1822,12 @@
    "baslik": "Psikojenik Ağrı ve Nosiplastik Ağrı Kavramı",
    "paragraflar": [
     {
-     "id": "k2-06-p024",
+     "id": "k2-06-p025",
      "sayfa": 25,
      "slayt_adim": 26,
      "cumleler": [
       {
-       "id": "k2-06-c0073",
+       "id": "k2-06-c0076",
        "ses": "Psikojenik ya da fonksiyonel ağrı, altta yatan hiçbir organik doku hasarı veya sinir lezyonu gösterilemeyen, doğrudan psikolojik çatışmalar, ağır anksiyete veya somatizasyon bozukluğuna bağlı gelişen ağrılı tablodur.",
        "ekran": "Psikojenik ve fonksiyonel ağrı: **Kronik ağrıda psişik faktörlerin rolü**",
        "duzey": 0,
@@ -1778,7 +1848,7 @@
        }
       },
       {
-       "id": "k2-06-c0074",
+       "id": "k2-06-c0077",
        "ses": "Kronik ağrılı olguların hemen tamamında ağrının uzamasına sekonder olarak reaktif depresyon, panik ve çaresizlik semptomları eklenerek ağrı algısı daha da pekiştirilir.",
        "ekran": "İkincil psikolojik reaksiyonlar: **Ağrının depresyon ve çaresizlik doğurması**",
        "duzey": 1,
@@ -1806,7 +1876,7 @@
        }
       },
       {
-       "id": "k2-06-c0075",
+       "id": "k2-06-c0078",
        "ses": "Bir hastaya psikojenik ağrı tanısı koyabilmek için tüm radyolojik, nörolojik ve biyokimyasal tetkiklerle organik nosiseptif ve nöropatik süreçlerin eksiksiz dışlanmış olması şarttır.",
        "ekran": "Ayırıcı tanı sorumluluğu: **Organik patolojiler dışlanmadan psikolojik denmez**",
        "duzey": 1,
@@ -1829,12 +1899,12 @@
      ]
     },
     {
-     "id": "k2-06-p025",
+     "id": "k2-06-p026",
      "sayfa": 26,
      "slayt_adim": 26,
      "cumleler": [
       {
-       "id": "k2-06-c0076",
+       "id": "k2-06-c0079",
        "ses": "Psikojenik ağrılı hastalar sıklıkla hiçbir anatomik dermatom veya periferik sinir trasesine uymayan, vücudun tamamına yayılan, dramatik ve abartılı ifadelerle ağrılarını tasvir ederler.",
        "ekran": "Klinik görünüm: **Dramatik anlatım ve anatomik uyuşmazlık**",
        "duzey": 0,
@@ -1855,7 +1925,7 @@
        }
       },
       {
-       "id": "k2-06-c0077",
+       "id": "k2-06-c0080",
        "ses": "Bireyin yüzleşmekten kaçındığı derin emosyonel travmalar ve bilinçdışı sıkıntılar konversiyon mekanizmasıyla bedensel kronik kas spazmları ve dirençli ağrılar şeklinde açığa çıkar.",
        "ekran": "Konversiyon ve somatizasyon: **Ruhsal acının bedensel ağrıya dönüşümü**",
        "duzey": 1,
@@ -1875,7 +1945,7 @@
        }
       },
       {
-       "id": "k2-06-c0078",
+       "id": "k2-06-c0081",
        "ses": "Bu hastalarda geleneksel analjezikler ve opioidler genellikle tamamen etkisiz kalır; bilişsel davranışçı terapi ve antidepresan tedaviler küratif yaklaşımın esasını oluşturur.",
        "ekran": "Multidisipliner sağaltım: **Analjezik yerine psikoterapi ve psikiyatri desteği**",
        "duzey": 1,
@@ -1898,12 +1968,12 @@
      ]
     },
     {
-     "id": "k2-06-p026",
+     "id": "k2-06-p027",
      "sayfa": 27,
      "slayt_adim": 27,
      "cumleler": [
       {
-       "id": "k2-06-c0079",
+       "id": "k2-06-c0082",
        "ses": "Nosiplastik ağrı; belirgin bir doku hasarı, nosiseptör aktivasyonu veya somatosensoriyel sinir lezyonu olmamasına rağmen, santral ağrı iletim yollarındaki nöral devrelerin değişmesi ve aşırı hassaslaşması sonucu gelişen ağrıdır.",
        "ekran": "Nosiplastik ağrı tanımı: **Doku hasarı olmaksızın değişen nosisepsiyon**",
        "duzey": 0,
@@ -1924,7 +1994,7 @@
        }
       },
       {
-       "id": "k2-06-c0080",
+       "id": "k2-06-c0083",
        "ses": "Fibromiyalji sendromu, irritabl bağırsak hastalığı ve nonspesifik kronik bel ağrısı nosiplastik ağrının en tipik örnekleridir ve bu tablolarda beyin ağrı sinyallerinin sesini aşırı yükseltmiştir.",
        "ekran": "Prototip hastalık: **Fibromiyalji ve santral amplifikasyon mekanizması**",
        "duzey": 1,
@@ -1945,7 +2015,7 @@
        }
       },
       {
-       "id": "k2-06-c0081",
+       "id": "k2-06-c0084",
        "ses": "Nosiplastik kavramı eskiden psikolojik sanılan fibromiyalji gibi tabloların fonsiyonel manyetik rezonansla kanıtlanmış nörobiyolojik bir santral işlemleme bozukluğu olduğunu tıp literatürüne kazandırmıştır.",
        "ekran": "Terminolojik devrim: **Psikolojik yaftasını kaldıran nörobiyolojik kanıt**",
        "duzey": 1,
@@ -1974,12 +2044,12 @@
    "baslik": "Kaynaklandığı Bölgeye Göre Ağrı: Somatik ve Visseral Ağrı",
    "paragraflar": [
     {
-     "id": "k2-06-p027",
+     "id": "k2-06-p028",
      "sayfa": 28,
      "slayt_adim": 29,
      "cumleler": [
       {
-       "id": "k2-06-c0082",
+       "id": "k2-06-c0085",
        "ses": "Ağrının kaynaklandığı anatomik bölgeye göre yapılan üçüncü sınıflamada somatik ağrı ve visseral ağrı olmak üzere iki ana grup ele alınır.",
        "ekran": "Bölgeye göre sınıflama: **Somatik ve visseral anatomik kökenler**",
        "duzey": 0,
@@ -2000,7 +2070,7 @@
        }
       },
       {
-       "id": "k2-06-c0083",
+       "id": "k2-06-c0086",
        "ses": "Somatik yapılar spinal miyelinli somatik sinir lifleriyle uyarılırken, iç organlar otonomik sempatik ve parasempatik lifler eşliğinde seyreden C lifleriyle inerve edilir.",
        "ekran": "İnnervasyon farkı: **Somatosensoriyel lifler ve otonomik pleksuslar**",
        "duzey": 1,
@@ -2021,7 +2091,7 @@
        }
       },
       {
-       "id": "k2-06-c0084",
+       "id": "k2-06-c0087",
        "ses": "Bu anatomik innervasyon ayrımı, ağrının keskin ve noktasal mı yoksa künt, yaygın ve bulantılı mı hissedileceğini doğrudan tayin eder.",
        "ekran": "Klinik tablonun karakteri: **Keskin lokalizasyondan yaygın sızlamaya**",
        "duzey": 1,
@@ -2044,12 +2114,12 @@
      ]
     },
     {
-     "id": "k2-06-p028",
+     "id": "k2-06-p029",
      "sayfa": 29,
      "slayt_adim": 29,
      "cumleler": [
       {
-       "id": "k2-06-c0085",
+       "id": "k2-06-c0088",
        "ses": "Somatik ağrı; kas-iskelet sistemi, deri, fasya ve periost gibi somatik dokulardan kaynaklanan ve omuriliğe miyelinli A-delta ile miyelinsiz C lifleriyle taşınan nosiseptif ağrıdır.",
        "ekran": "Somatik ağrı özellikleri: **Deri, kas, eklem ve kemik kaynaklı iletim**",
        "duzey": 0,
@@ -2070,7 +2140,7 @@
        }
       },
       {
-       "id": "k2-06-c0086",
+       "id": "k2-06-c0089",
        "ses": "Somatik ağrı kendi içinde deri ve mukozayı ilgilendiren yüzeyel somatik ağrı ile kas, eklem ve periostu tutan derin somatik ağrı olarak ikiye ayrılır.",
        "ekran": "Ayırıcı alt gruplar: **Yüzeyel kutanöz ağrı ve derin doku ağrıları**",
        "duzey": 1,
@@ -2091,7 +2161,7 @@
        }
       },
       {
-       "id": "k2-06-c0087",
+       "id": "k2-06-c0090",
        "ses": "Özellikle yüzeyel somatik ağrıda reseptör yoğunluğunun yüksek olması sayesinde hasta ağrılı odağın sınırlarını çok net biçimde lokalize edebilir.",
        "ekran": "Klinik lokalizasyon netliği: **Hasta ağrının yerini parmağıyla gösterebilir**",
        "duzey": 1,
@@ -2114,12 +2184,12 @@
      ]
     },
     {
-     "id": "k2-06-p029",
+     "id": "k2-06-p030",
      "sayfa": 30,
      "slayt_adim": 30,
      "cumleler": [
       {
-       "id": "k2-06-c0088",
+       "id": "k2-06-c0091",
        "ses": "Somatik yüzeyel ağrı deri ve müköz membranlardan kaynaklanır; iğne batması, kesik veya termal yanık ağrısı gibi keskin karakterdedir ve santral kortekste milimetrik olarak lokalize edilir.",
        "ekran": "Somatik yüzeyel ağrı: **Deri ve mukozal kaynaklı keskin ve yanık ağrısı**",
        "duzey": 0,
@@ -2141,7 +2211,7 @@
        }
       },
       {
-       "id": "k2-06-c0089",
+       "id": "k2-06-c0092",
        "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Somatik ağrı deri, kas ve eklemlerden kaynaklanan, iyi lokalize edilen ve sıklıkla batıcı veya sızlayıcı vasıfta hissedilen ağrıdır; otonomik bulantı ve yaygın yansıma yapmamasıyla visseral ağrıdan kesin olarak ayrılır.",
        "ekran": "Çıkmış Sınav Sorusu: **Somatik ağrının özellikleri ve otonomik semptom yokluğu**",
        "duzey": 1,
@@ -2165,7 +2235,7 @@
        }
       },
       {
-       "id": "k2-06-c0090",
+       "id": "k2-06-c0093",
        "ses": "Buna karşılık kemik kırıkları, periostit veya artritlerde görülen derin somatik ağrı daha künt, sızlayıcı, yaygın ve yorucu bir nitelik sergiler.",
        "ekran": "Somatik derin ağrı: **Künt, sızlayıcı ve periost-eklem kökenli**",
        "duzey": 1,
@@ -2189,12 +2259,12 @@
      ]
     },
     {
-     "id": "k2-06-p030",
+     "id": "k2-06-p031",
      "sayfa": 31,
      "slayt_adim": 31,
      "cumleler": [
       {
-       "id": "k2-06-c0091",
+       "id": "k2-06-c0094",
        "ses": "Visseral ağrı; toraks, batın ve pelvisteki iç organların patolojilerinden kaynaklanan, derin, künt, baskı veya kramp tarzında hissedilen ve sınırları net çizilemeyen bir ağrı türüdür.",
        "ekran": "Visseral ağrı tanımı: **İç organlardan kaynaklanan künt ve yaygın acı**",
        "duzey": 0,
@@ -2215,7 +2285,7 @@
        }
       },
       {
-       "id": "k2-06-c0092",
+       "id": "k2-06-c0095",
        "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Bağırsak, safra kesesi ve üreter gibi içi boş organların gerilmesi, spazmı veya iskemisi sonucu gelişen visseral ağrı; kötü lokalize edilen, dermatomlar boyunca yansıyan ve bradikardi, terleme, bulantı gibi yoğun otonomik semptomların eşlik ettiği ağrı tipidir.",
        "ekran": "Çıkmış Sınav Sorusu: **Bağırsak patolojilerinde visseral ağrı ve otonomik yanıt**",
        "duzey": 1,
@@ -2245,7 +2315,7 @@
        }
       },
       {
-       "id": "k2-06-c0093",
+       "id": "k2-06-c0096",
        "ses": "İç organlardan gelen visseral afferentler ile deriden gelen somatik afferentler omurilik arka boynuzunda aynı ikinci sıra nöronlara konverjans gösterir; bu nedenle kalp iskemisi ağrısı sol omuza ve kola yansıyan ağrı olarak algılanır.",
        "ekran": "Yansıyan ağrı mekanizması: **Dorsal boynuzda konverjans ve miyokard enfarktüsü**",
        "duzey": 1,
@@ -2266,7 +2336,7 @@
        }
       },
       {
-       "id": "k2-06-c0094",
+       "id": "k2-06-c0097",
        "ses": "İç organların parankimi cerrahi olarak kesildiğinde veya yakıldığında ağrı oluşmazken; organ kapsülünün gerilmesi, düz kas spazmı, asidoz ve iskemi şiddetli visseral ağrıyı tetikleyen temel uyaranlardır.",
        "ekran": "Organ duyarsızlığı kuralı: **Kesme ve yakmaya değil, gerilmeye duyarlı**",
        "duzey": 1,
@@ -2289,12 +2359,12 @@
      ]
     },
     {
-     "id": "k2-06-p031",
+     "id": "k2-06-p032",
      "sayfa": 32,
      "slayt_adim": 33,
      "cumleler": [
       {
-       "id": "k2-06-c0095",
+       "id": "k2-06-c0098",
        "ses": "Bölgesel sınıflamada sempatik ağrılar özellikle geceleri şiddetlenen yanıcı ağrı, paroksismal vazomotor krizler ve ödem tablosu ile ayırt edilir.",
        "ekran": "Sempatik ağrının klinik tablosu: **Vazomotor krizler ve gece alevlenmesi**",
        "duzey": 0,
@@ -2316,7 +2386,7 @@
        }
       },
       {
-       "id": "k2-06-c0096",
+       "id": "k2-06-c0099",
        "ses": "Özellikle median ve siyatik sinir gövdesinin kurşunlanma veya ezilme gibi travmatik hasarları sonrasında gelişen kozalji tablosunda hasta uzvunu ıslak havluyla sararak korumaya çalışır.",
        "ekran": "Kozalji sendromu: **Periferik sinir hasarı zemininde kalıcı yanma**",
        "duzey": 1,
@@ -2337,7 +2407,7 @@
        }
       },
       {
-       "id": "k2-06-c0097",
+       "id": "k2-06-c0100",
        "ses": "Erken evrede sempatik blokaj yapılmazsa eklemlerde ankiloz, ciltte atrofi ve ekstremitede tam fonksiyon kaybı ile sonuçlanan geri dönüşsüz distrofik evreye geçilir.",
        "ekran": "Distrofik evre: **Ekstremite fonksiyonunun kaybı ve sertlik**",
        "duzey": 1,
@@ -2366,12 +2436,12 @@
    "baslik": "Patogenezine ve Tedaviye Yanıtına Göre Ağrı",
    "paragraflar": [
     {
-     "id": "k2-06-p032",
+     "id": "k2-06-p033",
      "sayfa": 33,
      "slayt_adim": 34,
      "cumleler": [
       {
-       "id": "k2-06-c0098",
+       "id": "k2-06-c0101",
        "ses": "Patogenezine göre ağrılar; doku hasarındaki mediyatörlerle tetiklenen inflamatuar ağrı, doku perfüzyonunun bozulmasıyla gelişen iskemik ağrı, sinir iletim kaybına bağlı deafferentasyon ağrısı ve nedeni saptanamayan idiyopatik ağrı olarak ayrılır.",
        "ekran": "Patogeneze göre sınıflama: **İnflamatuar, iskemik ve deafferentasyon ağrısı**",
        "duzey": 0,
@@ -2392,7 +2462,7 @@
        }
       },
       {
-       "id": "k2-06-c0099",
+       "id": "k2-06-c0102",
        "ses": "İnflamatuar ağrıda mast hücreleri ve lökositlerden bol miktarda prostaglandin, bradikinin, serotonin ve histamin salınarak nosiseptör uyarılma eşiği dramatik biçimde düşürülür.",
        "ekran": "İnflamatuar patogenez: **Prostaglandin, bradikinin ve histamin fırtınası**",
        "duzey": 1,
@@ -2413,7 +2483,7 @@
        }
       },
       {
-       "id": "k2-06-c0100",
+       "id": "k2-06-c0103",
        "ses": "İskemik ağrıda doku hipoksisi sonucu hücre içi potasyum açığa çıkar, laktik asidoz gelişir ve hidrojen iyonları asit duyarlı iyon kanallarını uyararak anjina pektoris veya bacakta kramp ağrısı oluşturur.",
        "ekran": "İskemik patogenez: **Laktik asit, asidoz ve klaudikasyo intermittens**",
        "duzey": 1,
@@ -2434,7 +2504,7 @@
        }
       },
       {
-       "id": "k2-06-c0101",
+       "id": "k2-06-c0104",
        "ses": "Tüm ileri görüntüleme ve laboratuvar yöntemlerine rağmen patolojik veya biyokimyasal kaynağı gösterilemeyen inatçı tablolara ise idiyopatik ağrı denir.",
        "ekran": "İdiyopatik ağrı: **Organik dayanağı bulunamayan klinik tablolar**",
        "duzey": 1,
@@ -2457,12 +2527,12 @@
      ]
     },
     {
-     "id": "k2-06-p033",
+     "id": "k2-06-p034",
      "sayfa": 34,
      "slayt_adim": 36,
      "cumleler": [
       {
-       "id": "k2-06-c0102",
+       "id": "k2-06-c0105",
        "ses": "Tedaviye cevabına göre ağrılar; klasik narkotik analjeziklerle hızla kontrol altına alınabilen opioid-duyarlı ağrılar ile morfine zayıf yanıt veren veya tamamen dirençli olan opioid-duyarsız ağrılar olarak ikiye ayrılır.",
        "ekran": "Tedavi yanıtına göre sınıflama: **Opioid-duyarlı ve duyarsız ağrılar**",
        "duzey": 0,
@@ -2483,7 +2553,7 @@
        }
       },
       {
-       "id": "k2-06-c0103",
+       "id": "k2-06-c0106",
        "ses": "Nosiseptör kaynaklı somatik ve visseral akut ağrılar morfine ve diğer güçlü opioidlere fevkalade duyarlıyken; sinir hasarına bağlı deafferentasyon ve nöropatik ağrılar klasik opioid tedavisine büyük ölçüde dirençlidir.",
        "ekran": "Opioid duyarlılığı kuralı: **Nosiseptif ağrı duyarlı, nöropatik ağrı dirençli**",
        "duzey": 1,
@@ -2504,7 +2574,7 @@
        }
       },
       {
-       "id": "k2-06-c0104",
+       "id": "k2-06-c0107",
        "ses": "Nöropatik ve deafferentasyon ağrılarında opioid dozunu kontrolsüzce artırmak ağrıyı kesmediği gibi solunum depresyonu ve bağımlılık riskini katlar; bu tablolarda gabapentinoid ve trisiklik ajanlara geçilmelidir.",
        "ekran": "Rasyonel farmakoterapi ilkesi: **Dirençli ağrıda opioid dozunu artırmayın**",
        "duzey": 1,
@@ -2533,12 +2603,12 @@
    "baslik": "Ağrı Algılamasının Dört Temel Aşaması",
    "paragraflar": [
     {
-     "id": "k2-06-p034",
+     "id": "k2-06-p035",
      "sayfa": 35,
      "slayt_adim": 38,
      "cumleler": [
       {
-       "id": "k2-06-c0105",
+       "id": "k2-06-c0108",
        "ses": "Dersimizin bu kritik bölümünde ağrının periferik dokudan başlayarak serebral kortekste bilinç düzeyine ulaşana kadar katettiği dört temel nörofizyolojik aşamayı ayrıntılarıyla inceleyeceğiz.",
        "ekran": "Ağrı mekanizmalarına giriş: **Periferik algıdan serebral bilince yolculuk**",
        "duzey": 0,
@@ -2559,7 +2629,7 @@
        }
       },
       {
-       "id": "k2-06-c0106",
+       "id": "k2-06-c0109",
        "ses": "Zararlı uyarının hissedilmesi; enerjinin aksiyon potansiyeline dönüştüğü transdüksiyon, sinyalin taşındığı transmisyon, omurilikte filtrelendiği modülasyon ve beyinde algılandığı persepsiyon kaskadından oluşur.",
        "ekran": "Dört basamaklı zincir: **Transdüksiyon, transmisyon, modülasyon ve persepsiyon**",
        "duzey": 1,
@@ -2580,7 +2650,7 @@
        }
       },
       {
-       "id": "k2-06-c0107",
+       "id": "k2-06-c0110",
        "ses": "Modern anestezide uygulanan multimodal analjezi stratejisi, ağrı kaskadının bu dört ayrı basamağını farklı analjezik ajanlarla eşzamanlı bloke etme prensibine dayanır.",
        "ekran": "Multimodal analjezi temeli: **Her aşamaya farklı farmakolojik blokaj**",
        "duzey": 1,
@@ -2603,12 +2673,12 @@
      ]
     },
     {
-     "id": "k2-06-p035",
+     "id": "k2-06-p036",
      "sayfa": 36,
      "slayt_adim": 38,
      "cumleler": [
       {
-       "id": "k2-06-c0108",
+       "id": "k2-06-c0111",
        "ses": "Ağrının algılanma süreci periferik dokularda yerleşmiş çıplak sinir uçları olan nosiseptörlerin mekanik bası, aşırı sıcak-soğuk veya kimyasal maddelerle depolarize olmasıyla başlar.",
        "ekran": "Periferik reseptör uyarımı: **Noxious stimulusun aksiyon potansiyeli başlatması**",
        "duzey": 0,
@@ -2630,7 +2700,7 @@
        }
       },
       {
-       "id": "k2-06-c0109",
+       "id": "k2-06-c0112",
        "ses": "Doku hasarıyla aktive olan iyon kanalları sinir ucundan içeri sodyum ve kalsiyum girişini sağlayarak lokal bir jeneratör potansiyeli oluşturur ve bu potansiyel eşik değeri aştığında aksiyon potansiyeline dönüşür.",
        "ekran": "İyon kanalı aktivasyonu: **Sodyum ve kalsiyum akımıyla jeneratör potansiyeli**",
        "duzey": 1,
@@ -2652,7 +2722,7 @@
        }
       },
       {
-       "id": "k2-06-c0110",
+       "id": "k2-06-c0113",
        "ses": "Oluşan bu elektrofizyolojik sinyal duyu nöronunun aksonu boyunca kesintisiz şekilde ilerleyerek medulla spinalis dorsal boynuzundaki sinapslara doğru taşınır.",
        "ekran": "İletim yönü: **Spinal arka boynuza doğru afferent akış**",
        "duzey": 1,
@@ -2676,12 +2746,12 @@
      ]
     },
     {
-     "id": "k2-06-p036",
+     "id": "k2-06-p037",
      "sayfa": 37,
      "slayt_adim": 39,
      "cumleler": [
       {
-       "id": "k2-06-c0111",
+       "id": "k2-06-c0114",
        "ses": "Transdüksiyon, periferik nosiseptörlerde zararlı mekanik, termal ya da kimyasal bir enerji türünün sinir liflerinde yayılabilecek elektriksel aksiyon potansiyeline dönüştürülmesi olayıdır.",
        "ekran": "Transdüksiyon tanımı: **Fiziksel enerjinin elektriksel potansiyele dönüşümü**",
        "duzey": 0,
@@ -2702,7 +2772,7 @@
        }
       },
       {
-       "id": "k2-06-c0112",
+       "id": "k2-06-c0115",
        "ses": "Örneğin ılık ya da sıcak bir temas yalnızca ısı duyusu oluştururken; doku hasarı riskinin başladığı kırk üç ila kırk beş santigrat derecenin üzerine çıkıldığında termal nosiseptörler ateşlenir ve transdüksiyon başlar.",
        "ekran": "Eşik değeri kuralı: **Her sıcak uyaran ağrılı değildir**",
        "duzey": 1,
@@ -2723,7 +2793,7 @@
        }
       },
       {
-       "id": "k2-06-c0113",
+       "id": "k2-06-c0116",
        "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Ağrı algılanması yani nosisepsiyon transdüksiyon, transmisyon, modülasyon ve persepsiyon olmak üzere dört temel aşamada gerçekleşir; mekanik, termal veya kimyasal zararlı uyaran enerjisinin periferik nosiseptör reseptörlerinde elektriksel aksiyon potansiyeline dönüştürülmesi transdüksiyon olarak adlandırılır.",
        "ekran": "Çıkmış Sınav Sorusu: **Nosisepsiyonun dört aşaması ve transdüksiyon kavramı**",
        "duzey": 1,
@@ -2753,7 +2823,7 @@
        }
       },
       {
-       "id": "k2-06-c0114",
+       "id": "k2-06-c0117",
        "ses": "İnflamatuar mediyatörlerin sentezini engelleyen nonsteroid antiinflamatuarlar ve yara yerine uygulanan lokal anestezik enjeksiyonları ağrıyı tam bu transdüksiyon aşamasında durdururlar.",
        "ekran": "Transdüksiyonu bloke eden ajanlar: **NSAİİ ve periferik lokal anestezikler**",
        "duzey": 1,
@@ -2776,12 +2846,12 @@
      ]
     },
     {
-     "id": "k2-06-p037",
+     "id": "k2-06-p038",
      "sayfa": 38,
      "slayt_adim": 40,
      "cumleler": [
       {
-       "id": "k2-06-c0115",
+       "id": "k2-06-c0118",
        "ses": "Transmisyon, transdüksiyonla oluşan ağrı sinyalinin periferik primer afferent aksonlar boyunca omurilik arka boynuzuna, oradan çıkan yollarla talamusa ve serebral kortekse doğru iletilmesidir.",
        "ekran": "Transmisyon basamağı: **Aksiyon potansiyelinin santral aks boyunca iletimi**",
        "duzey": 0,
@@ -2802,7 +2872,7 @@
        }
       },
       {
-       "id": "k2-06-c0116",
+       "id": "k2-06-c0119",
        "ses": "Miyelinli A-delta lifleri saniyede beş ila otuz metre gibi yüksek bir hızla iletim yaparak mekanik ve termal hasarı anında taşır; doku travmasında ilk hissedilen keskin, batıcı ve tam lokalize ağrıdan sorumludur.",
        "ekran": "A-delta lifleri iletimi: **Hızlı, miyelinli, batıcı ve keskin ilk ağrı**",
        "duzey": 1,
@@ -2823,7 +2893,7 @@
        }
       },
       {
-       "id": "k2-06-c0117",
+       "id": "k2-06-c0120",
        "ses": "Miyelinsiz ince C lifleri ise saniyede yarım ila iki metre gibi çok yavaş bir hızla iletim yapar; ilk keskin acının ardından başlayan, uzun süren, yaygın, künt ve sızlayıcı ikinci ağrıyı iletir.",
        "ekran": "C lifleri iletimi: **Yavaş, miyelinsiz, künt ve sızlayıcı ikinci ağrı**",
        "duzey": 1,
@@ -2846,12 +2916,12 @@
      ]
     },
     {
-     "id": "k2-06-p038",
+     "id": "k2-06-p039",
      "sayfa": 39,
      "slayt_adim": 42,
      "cumleler": [
       {
-       "id": "k2-06-c0118",
+       "id": "k2-06-c0121",
        "ses": "Modülasyon, periferden gelen nosiseptif uyarının omurilik arka boynuzundaki nöronal ağlarda, internöronlar ve inen analjezik yollar aracılığıyla filtrelenmesi, şiddetinin azaltılması ya da artırılması sürecidir.",
        "ekran": "Modülasyon basamağı: **Medulla spinalis arka boynuzunda sinyal amplifikasyonu ve inhibisyonu**",
        "duzey": 0,
@@ -2871,7 +2941,7 @@
        }
       },
       {
-       "id": "k2-06-c0119",
+       "id": "k2-06-c0122",
        "ses": "Spinal dorsal boynuzda yer alan substantia gelatinosa bölgesi bir kapı gibi çalışarak; salınan endojen opioidler, gaba ve glisin ile ağrının beyne iletimini baskılayabilir.",
        "ekran": "Kapı kontrolü ve nöropeptidler: **Ağrı sinyalinin yukarı geçiş kararı**",
        "duzey": 1,
@@ -2892,7 +2962,7 @@
        }
       },
       {
-       "id": "k2-06-c0120",
+       "id": "k2-06-c0123",
        "ses": "Epidural veya intratekal uygulanan morfin, fentanil ve klonidin gibi ajanlar doğrudan dorsal boynuzdaki modülasyon kapısını kapatarak çok güçlü segmental analjezi sağlarlar.",
        "ekran": "Modülasyon farmakoterapisi: **Epidural opioidler ve alfa-iki agonistler**",
        "duzey": 1,
@@ -2915,12 +2985,12 @@
      ]
     },
     {
-     "id": "k2-06-p039",
+     "id": "k2-06-p040",
      "sayfa": 40,
      "slayt_adim": 43,
      "cumleler": [
       {
-       "id": "k2-06-c0121",
+       "id": "k2-06-c0124",
        "ses": "Persepsiyon, medulla spinalisten spinotalamik yolakla yükselen uyaranların talamus, somatosensoriyel korteks, insula ve anterior singulat kortekse ulaşarak bilinç düzeyinde ağrı ve acı olarak algılanmasıdır.",
        "ekran": "Persepsiyon aşaması: **Kortikal alanda ağrının bilinçli algısı ve acı deneyimi**",
        "duzey": 0,
@@ -2942,7 +3012,7 @@
        }
       },
       {
-       "id": "k2-06-c0122",
+       "id": "k2-06-c0125",
        "ses": "Primer duyusal korteks ağrının tam yerini ve şiddetini belirlerken, singulat korteks ve amigdala ağrının oluşturduğu psikolojik ıstırabı ve acil kaçınma reflekslerini tetikler.",
        "ekran": "Algının üç boyutu: **Lokalizasyon, duygu ve motor kaçınma tepkisi**",
        "duzey": 1,
@@ -2963,7 +3033,7 @@
        }
       },
       {
-       "id": "k2-06-c0123",
+       "id": "k2-06-c0126",
        "ses": "Genel anestezikler ve hipnotik ajanlar serebral korteksi baskılayarak algıyı yani persepsiyonu ortadan kaldırır; ameliyat sırasında nosisepsiyon devam etse bile hasta hiçbir ağrı hissetmez.",
        "ekran": "Genel anesteziklerin etkisi: **Bilinç kapanınca persepsiyon tamamen silinir**",
        "duzey": 1,
@@ -2987,12 +3057,12 @@
      ]
     },
     {
-     "id": "k2-06-p040",
+     "id": "k2-06-p041",
      "sayfa": 41,
      "slayt_adim": 44,
      "cumleler": [
       {
-       "id": "k2-06-c0124",
+       "id": "k2-06-c0127",
        "ses": "Bu slaytımızdaki anatomik şema noxious zararlı uyarandan başlayarak primer afferent nosiseptör, spinal kord arka boynuzu, spinotalamik traktus, talamus ve serebral korteks eksenindeki eksiksiz iletim yolunu özetlemektedir.",
        "ekran": "Şema analizi: **Dört basamaklı ağrı yolu ve anatomik duraklar**",
        "duzey": 0,
@@ -3011,7 +3081,7 @@
        }
       },
       {
-       "id": "k2-06-c0125",
+       "id": "k2-06-c0128",
        "ses": "Şemada transdüksiyon periferik insizyonel, intraplevral ve intraperitoneal lokal anestezik infiltrasyonuyla; transmisyon ise periferik sinir blokları, çölyak pleksus blokajı, epidural ve subaraknoid lokal anesteziklerle tam olarak hedeflenir.",
        "ekran": "Lokal anestezik etki yerleri: **Transdüksiyon ve transmisyon basamaklarının kilitlenmesi**",
        "duzey": 1,
@@ -3030,7 +3100,7 @@
        }
       },
       {
-       "id": "k2-06-c0126",
+       "id": "k2-06-c0129",
        "ses": "Şemanın üst ve orta kısımlarında görüldüğü üzere modülasyon aşaması epidural ve intratekal opioidlerle dorsal boynuzda durdurulurken; sistemik opioidler hem omurilikte hem de talamus ve korteksteki supraspinal reseptörlerde etki gösterir.",
        "ekran": "Opioid etki mekanizması: **Modülasyonda spinal, persepsiyonda supraspinal blokaj**",
        "duzey": 1,
@@ -3057,12 +3127,12 @@
    "baslik": "Moleküler Mekanizmalar: Periferik Sensitizasyon ve İnflamasyon",
    "paragraflar": [
     {
-     "id": "k2-06-p041",
+     "id": "k2-06-p042",
      "sayfa": 42,
      "slayt_adim": 46,
      "cumleler": [
       {
-       "id": "k2-06-c0127",
+       "id": "k2-06-c0130",
        "ses": "Dersimizin bu bölümünde periferik sensitizasyon, santral sensitizasyon, disinhibisyon ve yapısal reorganizasyon olmak üzere kronik ağrının temel moleküler basamaklarını ele alacağız.",
        "ekran": "Moleküler ve santral mekanizmalar: **Ağrının kronikleşme biyolojisi**",
        "duzey": 0,
@@ -3083,7 +3153,7 @@
        }
       },
       {
-       "id": "k2-06-c0128",
+       "id": "k2-06-c0131",
        "ses": "Doku zedelenmesini takiben salınan kimyasal mediyatörler nosiseptör zarındaki iyon kanallarını fosforilasyona uğratarak uyarılma eşiğini dramatik şekilde düşürür.",
        "ekran": "Hassaslaşma kaskadı: **Normal dokunun hiperaljezik dokuya dönüşümü**",
        "duzey": 1,
@@ -3104,7 +3174,7 @@
        }
       },
       {
-       "id": "k2-06-c0129",
+       "id": "k2-06-c0132",
        "ses": "Bu moleküler mekanizmalar, ameliyat sonrasında kesi çevresindeki sağlam cildin bile hafif dokunmayla şiddetle ağrımasına yol açan fizyopatolojik sürecin özüdür.",
        "ekran": "Klinik tablonun temeli: **Dokunmayla sızlayan cerrahi yaralar**",
        "duzey": 1,
@@ -3127,12 +3197,12 @@
      ]
     },
     {
-     "id": "k2-06-p042",
+     "id": "k2-06-p043",
      "sayfa": 43,
      "slayt_adim": 46,
      "cumleler": [
       {
-       "id": "k2-06-c0130",
+       "id": "k2-06-c0133",
        "ses": "Periferik sensitizasyon; doku hasarını takiben yaralanma bölgesine makrofaj, mast hücresi, lenfosit ve trombositlerin göç etmesi ve buradan ortama yoğun kimyasal mediyatörler salınmasıyla başlar.",
        "ekran": "Periferik sensitizasyon: **İnflamatuar hücre göçü ve nörojenik inflamasyon**",
        "duzey": 0,
@@ -3153,7 +3223,7 @@
        }
       },
       {
-       "id": "k2-06-c0131",
+       "id": "k2-06-c0134",
        "ses": "Nosiseptif uyarının kendisi de akson refleksi aracılığıyla antidromik olarak periferik sinir uçlarından çevre dokuya nöropeptidlerin salınmasına yani nörojenik inflamasyona yol açar.",
        "ekran": "Akson refleksi: **Nosiseptör ucundan geriye doğru peptid salınımı**",
        "duzey": 1,
@@ -3174,7 +3244,7 @@
        }
       },
       {
-       "id": "k2-06-c0132",
+       "id": "k2-06-c0135",
        "ses": "Doku alanında biriken bu zengin kimyasal karışıma algolojide inflamatuar çorba adı verilir ve nosiseptörleri sürekli uyarılmış halde tutar.",
        "ekran": "İnflamatuar çorba oluşumu: **Kimyasal mediyatörlerin sinerjistik patlaması**",
        "duzey": 1,
@@ -3197,12 +3267,12 @@
      ]
     },
     {
-     "id": "k2-06-p043",
+     "id": "k2-06-p044",
      "sayfa": 44,
      "slayt_adim": 47,
      "cumleler": [
       {
-       "id": "k2-06-c0133",
+       "id": "k2-06-c0136",
        "ses": "Nosiseptif sinir uçlarından salınan madde P ve kalsitonin geni ilişkili peptid yani ce ge re pe; çevre damarlarda şiddetli vazodilatasyona ve plazma proteinlerinin damar dışına sızmasına yani ekstravazasyona yol açar.",
        "ekran": "Nörojenik peptidler: **Madde P ve CGRP'nin vasküler etkileri**",
        "duzey": 0,
@@ -3223,7 +3293,7 @@
        }
       },
       {
-       "id": "k2-06-c0134",
+       "id": "k2-06-c0137",
        "ses": "Mast hücrelerinden salınan histamin, trombosit kaynaklı serotonin, plazma kininojeninden üretilen bradikinin ve hasarlı hücre zarlarından sentezlenen prostaglandinler birleşerek nosiseptörleri adeta bombardımana tutar.",
        "ekran": "Mediyatör fırtınası: **Serotonin, histamin, bradikinin ve prostaglandin E2**",
        "duzey": 1,
@@ -3244,7 +3314,7 @@
        }
       },
       {
-       "id": "k2-06-c0135",
+       "id": "k2-06-c0138",
        "ses": "Normal koşullarda hiçbir uyarana yanıt vermeyen yüksek eşikli mekanik ve termal sessiz nosiseptörler bu kimyasal fırtına ile duyarlılaşarak spontan ağrı sinyalleri üretmeye başlarlar.",
        "ekran": "Sessiz nosiseptörlerin uyanışı: **Uyuyan yüksek eşikli liflerin devreye girmesi**",
        "duzey": 1,
@@ -3267,12 +3337,12 @@
      ]
     },
     {
-     "id": "k2-06-p044",
+     "id": "k2-06-p045",
      "sayfa": 45,
      "slayt_adim": 49,
      "cumleler": [
       {
-       "id": "k2-06-c0136",
+       "id": "k2-06-c0139",
        "ses": "Periferik sensitizasyon geliştikten sonra, normalde hiçbir acı oluşturmayacak hafif şiddetteki mekanik dokunmalar ve ılık temaslar dahi şiddetli ağrılı olarak algılanmaya başlar.",
        "ekran": "Sensitizasyonun klinik sonucu: **Düşük mekanik ve termal eşik değeri**",
        "duzey": 0,
@@ -3293,7 +3363,7 @@
        }
       },
       {
-       "id": "k2-06-c0137",
+       "id": "k2-06-c0140",
        "ses": "Doku harabiyeti bölgesindeki bu aşırı duyarlılık artışına primer hiperaljezi adı verilir ve hem mekanik hem de termal uyaranlara karşı belirgin yanıt artışıyla kendini gösterir.",
        "ekran": "Primer hiperaljezi sahası: **Hasarlı doku sınırları içinde artmış duyarlılık**",
        "duzey": 1,
@@ -3315,7 +3385,7 @@
        }
       },
       {
-       "id": "k2-06-c0138",
+       "id": "k2-06-c0141",
        "ses": "Fizyolojik açıdan bu aşırı hassaslaşma bireyin hasarlı organını temas ve yükten korumasını sağlayarak doku rejenerasyonuna olanak tanıyan koruyucu bir adaptasyondur.",
        "ekran": "Koruyucu refleks amilörizasyonu: **Hasarlı bölgenin dinlenmeye alınması**",
        "duzey": 1,
@@ -3339,12 +3409,12 @@
      ]
     },
     {
-     "id": "k2-06-p045",
+     "id": "k2-06-p046",
      "sayfa": 46,
      "slayt_adim": 50,
      "cumleler": [
       {
-       "id": "k2-06-c0139",
+       "id": "k2-06-c0142",
        "ses": "Primer hiperaljezi bölgesindeki periferik sensitizasyon değişiklikleri cerrahi girişimler, kırıklar ve yanıklardan sonra belirginleşir; erken dönemde durdurulması ağrının kronikleşmesini önler.",
        "ekran": "Periferik tedavi hedefleri: **Cerrahi sonrası primer hiperaljeziyi durdurmak**",
        "duzey": 0,
@@ -3364,7 +3434,7 @@
        }
       },
       {
-       "id": "k2-06-c0140",
+       "id": "k2-06-c0143",
        "ses": "İnflamatuar cevabı baskılamak amacıyla kullanılan aspirin, ibuprofen ve diğer nonsteroid antiinflamatuar ilaçlar, siklooksijenaz bir ve iki enzimlerini bloke ederek prostaglandin sentezini kökünden keserler.",
        "ekran": "Siklooksijenaz inhibisyonu: **Aspirin ve nonsteroid antiinflamatuarlar**",
        "duzey": 1,
@@ -3385,7 +3455,7 @@
        }
       },
       {
-       "id": "k2-06-c0141",
+       "id": "k2-06-c0144",
        "ses": "Yara çevresine uygulanan lokal anestezik enjeksiyonları sodyum kanallarını bloke ederken; kortikosteroidler fosfolipaz a iki enzimini ve proinflamatuar sitokin transkripsiyonunu durdurarak periferik duyarlılaşmayı engeller.",
        "ekran": "Lokal anestezikler ve kortikosteroidler: **Membran stabilizasyonu ve sitokin blokajı**",
        "duzey": 1,
@@ -3413,12 +3483,12 @@
    "baslik": "Santral Sensitizasyon, Disinhibisyon ve Reorganizasyon",
    "paragraflar": [
     {
-     "id": "k2-06-p046",
+     "id": "k2-06-p047",
      "sayfa": 47,
      "slayt_adim": 51,
      "cumleler": [
       {
-       "id": "k2-06-c0142",
+       "id": "k2-06-c0145",
        "ses": "Santral sensitizasyon; periferden gelen sürekli ve yoğun nosiseptif bombardıman sonucunda, medulla spinalis dorsal boynuzundaki nöronların uyarılma eşiğinin düşmesi ve sinaptik yanıtlarının aşırı büyümesidir.",
        "ekran": "Santral sensitizasyon tanımı: **Spinal dorsal boynuzda aşırı uyarılabilirlik**",
        "duzey": 0,
@@ -3439,7 +3509,7 @@
        }
       },
       {
-       "id": "k2-06-c0143",
+       "id": "k2-06-c0146",
        "ses": "C liflerinden salınan sürekli glutamat ve madde P dorsal boynuz nöron zarını depolarize eder; istirahat halindeki magnezyum bloğu yerinden çıkar ve en em de a reseptörleri açılarak hücre içine devasa kalsiyum girişi başlar.",
        "ekran": "NMDA reseptör aktivasyonu: **Magnezyum tıkacının kalkması ve kalsiyum akışı**",
        "duzey": 1,
@@ -3460,7 +3530,7 @@
        }
       },
       {
-       "id": "k2-06-c0144",
+       "id": "k2-06-c0147",
        "ses": "Bu süreçte aktive olan mikroglia ve astrositler ortama interlökin bir beta, interlökin altı ve tümör nekrozis faktör alfa salarak sinaptik iletimi daha da kuvvetlendirir; spontan ağrı, yaygın hiperaljezi ve allodini tablosu yerleşir.",
        "ekran": "Mikroglial sitokinler: **İnterlökin bir beta ve TNF alfa sinerjisi**",
        "duzey": 1,
@@ -3483,12 +3553,12 @@
      ]
     },
     {
-     "id": "k2-06-p047",
+     "id": "k2-06-p048",
      "sayfa": 48,
      "slayt_adim": 52,
      "cumleler": [
       {
-       "id": "k2-06-c0145",
+       "id": "k2-06-c0148",
        "ses": "Disinhibisyon; normal fizyolojide omurilik arka boynuzundaki ağrı iletimini sürekli baskılayan inhibitör ara nöronların ve inen yolların etkinliğinin azalması sonucu ağrı eşiğinin çökmesidir.",
        "ekran": "Disinhibisyon mekanizması: **İnhibitör baskı mekanizmalarının çökmesi**",
        "duzey": 0,
@@ -3509,7 +3579,7 @@
        }
       },
       {
-       "id": "k2-06-c0146",
+       "id": "k2-06-c0149",
        "ses": "İnhibitör kontrol kaybolduğunda, en ufak bir duyusal uyarı dahi arka boynuzda devasa bir sinaptik yankı oluşturarak kortekse kesintisiz bir ağrı akışı şeklinde fırlar.",
        "ekran": "İnhibisyon kaybının klinik sonucu: **Ağrı sinyallerinin kontrolsüz amplifikasyonu**",
        "duzey": 1,
@@ -3529,7 +3599,7 @@
        }
       },
       {
-       "id": "k2-06-c0147",
+       "id": "k2-06-c0150",
        "ses": "Özellikle postherpetik nevralji, diyabetik nöropati ve fantom ağrısı gibi kronik tablolarda disinhibisyon en temel idame mekanizması olarak karşımıza çıkar.",
        "ekran": "Kronik ağrı zeminindeki rolü: **Patolojik ağrı sendromlarının anahtarı**",
        "duzey": 1,
@@ -3552,12 +3622,12 @@
      ]
     },
     {
-     "id": "k2-06-p048",
+     "id": "k2-06-p049",
      "sayfa": 49,
      "slayt_adim": 52,
      "cumleler": [
       {
-       "id": "k2-06-c0148",
+       "id": "k2-06-c0151",
        "ses": "Disinhibisyon kaskadında; beyin sapından omuriliğe inen serotonerjik ve noradrenerjik inhibitör yolakların tükenmesi ilk sırada yer alır.",
        "ekran": "Disinhibisyonun moleküler nedenleri: **İnen monoaminerjik sistem zayıflaması**",
        "duzey": 0,
@@ -3578,7 +3648,7 @@
        }
       },
       {
-       "id": "k2-06-c0149",
+       "id": "k2-06-c0152",
        "ses": "Ayrıca dorsal boynuzdaki gabaerjik ve glisinerjik internöronların eksitotoksisite ile ölmesi veya klor iletim dengesinin tersine dönmesi nöronal membran hiperpolarizasyonunu ortadan kaldırır.",
        "ekran": "GABA ve glisin kaybı: **Dorsal boynuz internöron apoptosisi**",
        "duzey": 1,
@@ -3599,7 +3669,7 @@
        }
       },
       {
-       "id": "k2-06-c0150",
+       "id": "k2-06-c0153",
        "ses": "Astroglial glutamat geri alımının bozulmasıyla sinaptik aralıkta biriken glutamat en em de a reseptörlerini sürekli ateşler ve ağrı sinyalleri komşu sağlam dermatom segmentlerine kontrolsüzce taşar.",
        "ekran": "Glutamat birikimi ve amplifikasyon: **Ağrı sinyallerinin yayılması**",
        "duzey": 1,
@@ -3622,12 +3692,12 @@
      ]
     },
     {
-     "id": "k2-06-p049",
+     "id": "k2-06-p050",
      "sayfa": 50,
      "slayt_adim": 53,
      "cumleler": [
       {
-       "id": "k2-06-c0151",
+       "id": "k2-06-c0154",
        "ses": "Reorganizasyon; ağrı uyarımının aylarca devam etmesi durumunda somatosensoriyel sinir liflerinin, spinal arka boynuzun, talamusun ve serebral korteksin yapısal ve fonksiyonel olarak yeniden modellenmesidir.",
        "ekran": "Reorganizasyon kavramı: **Uzun süreli ağrıda yapısal ve anatomik yeniden şekillenme**",
        "duzey": 0,
@@ -3648,7 +3718,7 @@
        }
       },
       {
-       "id": "k2-06-c0152",
+       "id": "k2-06-c0155",
        "ses": "Normale göre kalın dokunma lifleri olan A-beta lifleri arka boynuzun derin tabakalarından yüzeyel tabaka olan substantia gelatinosaya doğru yeni akson filizleri uzatır; bu anatomik hata nedeniyle hafif dokunma doğrudan ağrı yoluna bağlanır.",
        "ekran": "Anatomik filizlenme: **A-beta liflerinin lamina ikiye hatalı sinaps yapması**",
        "duzey": 1,
@@ -3668,7 +3738,7 @@
        }
       },
       {
-       "id": "k2-06-c0153",
+       "id": "k2-06-c0156",
        "ses": "Santral sensitizasyon ve yapısal reorganizasyon tamamlandığında periferik neden ortadan kalksa dahi ağrı merkezi bir bellek olarak yaşamaya devam eder ve tedaviye son derece dirençli kronik ağrı sendromlarına yol açar.",
        "ekran": "Kalıcı nöral iz: **Ağrının beyinde silinmez bir bellek oluşturması**",
        "duzey": 1,
@@ -3697,12 +3767,12 @@
    "baslik": "Nosiseptör Tipleri, TRP Kanalları ve Farmakolojik Hedefler",
    "paragraflar": [
     {
-     "id": "k2-06-p050",
+     "id": "k2-06-p051",
      "sayfa": 51,
      "slayt_adim": 55,
      "cumleler": [
       {
-       "id": "k2-06-c0154",
+       "id": "k2-06-c0157",
        "ses": "Nosiseptörler; deri, kas, eklem, kemik zarı ve iç organ duvarlarında yaygın biçimde dağılmış olan, herhangi bir koruyucu bağ dokusu kapsülü içermeyen çıplak serbest sinir uçlarıdır.",
        "ekran": "Nosiseptörlerin yapısı ve yerleşimi: **Kapsülsüz serbest sinir uçları**",
        "duzey": 0,
@@ -3723,7 +3793,7 @@
        }
       },
       {
-       "id": "k2-06-c0155",
+       "id": "k2-06-c0158",
        "ses": "Dokunma reseptörlerinin aksine nosiseptörler son derece yüksek bir uyarılma eşiğine sahiptirler ve sürekli zararlı uyaran karşısında hemen hemen hiç adaptasyon göstermeyerek tehlike geçene kadar deşarjlarını sürdürürler.",
        "ekran": "Yüksek eşik ve adaptasyon direnci: **Kolay yorulmayan koruyucu sensörler**",
        "duzey": 1,
@@ -3744,7 +3814,7 @@
        }
       },
       {
-       "id": "k2-06-c0156",
+       "id": "k2-06-c0159",
        "ses": "Bu reseptörler periferik akson uzantıları bakımından ince miyelinli A-delta lifleri ve miyelinsiz C lifleri olmak üzere iki ana grup tarafından oluşturulur ve transdüksiyon bu noktalarda başlar.",
        "ekran": "Afferent lif bağlantıları: **Miyelinli A-delta ve miyelinsiz C lifleri**",
        "duzey": 1,
@@ -3767,12 +3837,12 @@
      ]
     },
     {
-     "id": "k2-06-p051",
+     "id": "k2-06-p052",
      "sayfa": 52,
      "slayt_adim": 57,
      "cumleler": [
       {
-       "id": "k2-06-c0157",
+       "id": "k2-06-c0160",
        "ses": "Nosiseptörler uyardıkları fiziksel uyaran tipine göre yalnız mekanik basıya yanıt veren mekanoreseptörler, aşırı sıcağa yanıt veren termal nosiseptörler ve tüm zararlı modaliteleri algılayan polimodal nosiseptörler olarak sınıflandırılır.",
        "ekran": "Nosiseptör tipleri: **Mekanik, termal, kimyasal ve polimodal reseptörler**",
        "duzey": 0,
@@ -3792,7 +3862,7 @@
        }
       },
       {
-       "id": "k2-06-c0158",
+       "id": "k2-06-c0161",
        "ses": "Nonsteroid antiinflamatuar ilaçlar dokuda prostaglandin sentezini inhibe ederek nosiseptör uyarılmasını engellerken; lokal anestezik ajanlar voltaj kapılı sodyum kanallarını tıkayarak aksiyon potansiyeli üretimini durdurur.",
        "ekran": "Analjezik mekanizmalar: **Prostaglandin sentezi ve sodyum kanal blokajı**",
        "duzey": 1,
@@ -3813,7 +3883,7 @@
        }
       },
       {
-       "id": "k2-06-c0159",
+       "id": "k2-06-c0162",
        "ses": "Acı biberin etken maddesi olan kapsaisin, nosiseptörlerdeki geçici reseptör potansiyeli kanallarını uyarır; tekrarlayan uygulamalarda sinir ucundaki madde P depolarını tamamen boşaltarak uzun süreli analjezi ve duyarsızlaşma sağlar.",
        "ekran": "Kapsaisin ve TRP kanalları: **Madde P tüketilmesiyle sağlanan duyarsızlaşma**",
        "duzey": 1,
@@ -3842,12 +3912,12 @@
    "baslik": "Nörotransmiterler, Modülasyon Reseptörleri ve Kapı Kontrol Sistemi",
    "paragraflar": [
     {
-     "id": "k2-06-p052",
+     "id": "k2-06-p053",
      "sayfa": 53,
      "slayt_adim": 59,
      "cumleler": [
       {
-       "id": "k2-06-c0160",
+       "id": "k2-06-c0163",
        "ses": "Medulla spinalis arka boynuzundaki birinci sıra ve ikinci sıra nöron sinapslarında primer afferent liflerden salınan temel eksitatör nörotransmiterler glutamat ve aspartattır.",
        "ekran": "Eksitatör aminoasitler: **Glutamat ve aspartatın hızlı sinaptik rolü**",
        "duzey": 0,
@@ -3868,7 +3938,7 @@
        }
       },
       {
-       "id": "k2-06-c0161",
+       "id": "k2-06-c0164",
        "ses": "Glutamat öncelikle ampa reseptörlerine bağlanarak hızlı bazal nosiseptif iletiyi sağlar; yoğun uyarımlarda ise en em de a reseptörlerini aktive ederek kalsiyum akışını ve santral duyarlılaşmayı başlatır.",
        "ekran": "Reseptör etkileşimi: **Hızlı AMPA depolarizasyonu ve yavaş NMDA sinyali**",
        "duzey": 1,
@@ -3889,7 +3959,7 @@
        }
       },
       {
-       "id": "k2-06-c0162",
+       "id": "k2-06-c0165",
        "ses": "Glutamat ile eşzamanlı salınan madde P ve ce ge re pe peptidleri nörokinin bir reseptörlerine bağlanarak nöron zarında dakikalarca süren yavaş depolarizasyon oluşturur ve glutamatın etkinliğini katlar.",
        "ekran": "Nöropeptidlerin eşliği: **Madde P, CGRP ve nörokinin bir reseptörleri**",
        "duzey": 1,
@@ -3912,12 +3982,12 @@
      ]
     },
     {
-     "id": "k2-06-p053",
+     "id": "k2-06-p054",
      "sayfa": 54,
      "slayt_adim": 60,
      "cumleler": [
       {
-       "id": "k2-06-c0163",
+       "id": "k2-06-c0166",
        "ses": "Arka boynuzdaki nosiseptif transmisyonu baskılamak üzere presinaptik ve postsinaptik yerleşimli opioid, gamaaminobütirik asit, alfa-iki adrenerjik, serotonin ve adenozin reseptörleri görev yapar.",
        "ekran": "İnhibitör ve modülatör reseptörler: **Opioid, GABA, alfa-iki ve serotonin**",
        "duzey": 0,
@@ -3938,7 +4008,7 @@
        }
       },
       {
-       "id": "k2-06-c0164",
+       "id": "k2-06-c0167",
        "ses": "Dorsal boynuzdaki internöronlardan salınan endojen enkefalin ve dinorfinler mü opioid reseptörlerini aktive ederek voltaj bağımlı kalsiyum kanallarını kapatır ve primer afferentten glutamat salınışını bloke eder.",
        "ekran": "Endojen opioid sistemi: **Mü, delta ve kappa reseptörleri ve enkefalinler**",
        "duzey": 1,
@@ -3959,7 +4029,7 @@
        }
       },
       {
-       "id": "k2-06-c0165",
+       "id": "k2-06-c0168",
        "ses": "Klasik reseptör agonistlerinin yanı sıra voltaj kapılı sodyum kanal blokeri en a ve bir nokta sekiz ve kalsiyum kanal alfa-iki-delta alt birimini bağlayan gabapentin türevleri güncel modülasyon tedavilerinin temelini oluşturur.",
        "ekran": "Yeni farmakolojik yaklaşımlar: **Nöronal iyon kanalı blokerleri ve hedefler**",
        "duzey": 1,
@@ -3982,12 +4052,12 @@
      ]
     },
     {
-     "id": "k2-06-p054",
+     "id": "k2-06-p055",
      "sayfa": 55,
      "slayt_adim": 61,
      "cumleler": [
       {
-       "id": "k2-06-c0166",
+       "id": "k2-06-c0169",
        "ses": "Melzack ve Wall tarafından tanımlanan Kapı Kontrol Sistemine göre; kalın miyelinli A-beta dokunma lifleri ile ince miyelinsiz C ağrı lifleri arka boynuz substantia gelatinosa nöronları üzerinde zıt etkiler oluşturur.",
        "ekran": "Kapı kontrol teorisi prensibi: **A-beta ve C liflerinin dorsal boynuz rekabeti**",
        "duzey": 0,
@@ -4006,7 +4076,7 @@
        }
       },
       {
-       "id": "k2-06-c0167",
+       "id": "k2-06-c0170",
        "ses": "Hasarlı bölge ovuşturulduğunda aktive olan A-beta lifleri substantia gelatinosadaki inhibitör internöronları uyarır; bu internöronlar C lifi terminallerinde presinaptik inhibisyon yaparak transmisyon T hücresine giden kapıyı kapatır ve ağrı kesilir.",
        "ekran": "Kapının kapatılması: **Mekanik ovuşturmanın ağrıyı dindirme mekanizması**",
        "duzey": 1,
@@ -4025,7 +4095,7 @@
        }
       },
       {
-       "id": "k2-06-c0168",
+       "id": "k2-06-c0171",
        "ses": "Transkutanöz elektriksel sinir stimülasyonu yani tens cihazları ve epidural omurilik pilleri, A-beta liflerini elektriksel olarak uyararak bu kapı kontrol mekanizması üzerinden ilaçsız analjezi sağlarlar.",
        "ekran": "Klinik uygulama: **TENS ve omurilik stimülasyonu elektrotları**",
        "duzey": 1,
@@ -4046,12 +4116,12 @@
      ]
     },
     {
-     "id": "k2-06-p055",
+     "id": "k2-06-p056",
      "sayfa": 56,
      "slayt_adim": 62,
      "cumleler": [
       {
-       "id": "k2-06-c0169",
+       "id": "k2-06-c0172",
        "ses": "Toplumun çok büyük bir kesimini etkileyen, bireyi işinden ve sosyal yaşamından koparan ağrı ile başarılı biçimde baş edebilmek için altta yatan hücresel ve sinaptik mekanizmaların çok iyi bilinmesi şarttır.",
        "ekran": "Fizyopatolojinin klinikteki gücü: **Ağrı mekanizmalarını bilmenin hayati değeri**",
        "duzey": 0,
@@ -4073,7 +4143,7 @@
        }
       },
       {
-       "id": "k2-06-c0170",
+       "id": "k2-06-c0173",
        "ses": "Son yıllarda nöroimmünoloji ve moleküler genetikte büyük yollar alınmasına karşın, ağrının santral plastisitesi ve kronikleşme süreçlerinde halen keşfedilmeyi bekleyen birçok mekanizma bulunmaktadır.",
        "ekran": "Bilinmeyenlerin keşfi: **Algolojide yeni moleküler ufuklar**",
        "duzey": 1,
@@ -4095,7 +4165,7 @@
        }
       },
       {
-       "id": "k2-06-c0171",
+       "id": "k2-06-c0174",
        "ses": "Ağrıyı yalnızca susturulacak bir semptom olarak değil, altında yatan fizyopatolojik mekanizmasıyla doğru analiz eden bir hekim; hastasına en etkili, güvenli ve multidisipliner analjezik yaklaşımı sunacaktır.",
        "ekran": "Bütüncül hekimlik vizyonu: **Mekanizmaya dayalı kişiselleştirilmiş analjezi**",
        "duzey": 1,
