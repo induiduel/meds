@@ -1,0 +1,408 @@
+{
+ "surum": 1,
+ "metinHash": "0889b62d44b97380ef11b2c3d622d2254362b757",
+ "p": {
+  "1": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Yedi boyun servikal omur",
+      "On iki sırt torakal omur",
+      "Beş bel lomber omur"
+     ],
+     "baslik": "Omurga Anatomik Bölümleri",
+     "s": 2,
+     "k": [
+      0,
+      78
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.95
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3808,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Gövde korpus parçası",
+      "Pedikül ve laminalar",
+      "Faset eklemleri",
+      "Spinöz ve transvers prosesler"
+     ],
+     "baslik": "Spinal Kanal ve Çıkıntılar",
+     "s": 2,
+     "k": [
+      0,
+      92
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.95
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.4547,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "2": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "algoritma",
+     "sablon_ad": "Yaklaşım basamakları",
+     "duzen": "adimlar",
+     "ogeler": [
+      "Servikal lordoz",
+      "Torakal kifoz",
+      "Lomber lordoz"
+     ],
+     "baslik": "Sagittal Omurga Eğrilikleri",
+     "s": 3,
+     "k": [
+      0,
+      64
+     ],
+     "tip": "adimlar",
+     "konum": [
+      0.05,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.345,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.38,
+     "ek_renk": "#fffeff"
+    }
+   ]
+  },
+  "13": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Oksipital kondil ve bileşke hasarı",
+      "Ce bir halka ve eklem hasarı",
+      "Ce iki halka ve eklem hasarı"
+     ],
+     "baslik": "Üst Servikal Travma Grupları",
+     "s": 15,
+     "k": [
+      0,
+      82
+     ],
+     "tip": "liste",
+     "konum": [
+      0.06,
+      0.46
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "15": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Tip A izole kondil kırığı",
+      "Tip B nondeplase ligamentöz hasar",
+      "Tip C deplase instabil hasar"
+     ],
+     "baslik": "Oksipital Kondil Kırık Tipleri",
+     "s": 16,
+     "k": [
+      0,
+      85
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.95
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3808,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "16": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Tip A izole kemik ark hasarı",
+      "Tip B transvers ligaman hasarı",
+      "Tip C instabilite veya kayma"
+     ],
+     "baslik": "Ce Bir Halka ve Eklem Hasarları",
+     "s": 17,
+     "k": [
+      0,
+      35
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.97
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.4008,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "17": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Tip A sadece kemik hasarı",
+      "Tip B ligamentöz ve disk hasarı",
+      "Tip C vertebral kayma hasarı"
+     ],
+     "baslik": "Ce İki Halka ve Eklem Hasarları",
+     "s": 18,
+     "k": [
+      0,
+      51
+     ],
+     "tip": "liste",
+     "konum": [
+      0.24,
+      0.97
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.4008,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "20": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Yüzde seksen konservatif kaynamaz",
+      "Psödoartroz gelişme riski",
+      "Transodontoid vida fiksasyonu"
+     ],
+     "baslik": "Odontoid Tip İki Tedavi Özellikleri",
+     "s": 21,
+     "k": [
+      0,
+      61
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.4458,
+     "ek_renk": "#252525"
+    }
+   ]
+  },
+  "35": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Üç kolon tutuluşu",
+      "İki komşu kolon tutuluşu",
+      "Orta kolon tutuluşu"
+     ],
+     "baslik": "Denis İnstabilite Kriterleri",
+     "s": 37,
+     "k": [
+      0,
+      80
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.94
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3708,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "40": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Kırık stabilitesi",
+      "Omurilik basısı varlığı",
+      "Komplet veya inkomplet hasar",
+      "Eşlik eden politravma şiddeti"
+     ],
+     "baslik": "Cerrahi Karar Belirleyicileri",
+     "s": 42,
+     "k": [
+      0,
+      85
+     ],
+     "tip": "liste",
+     "konum": [
+      0.68,
+      0.21
+     ],
+     "genislik": 0.3,
+     "doluluk": 0.0,
+     "kutu_h": 0.591,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "41": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Vertebra mekanik olarak stabil",
+      "Kanalda nörolojik bası yok",
+      "Yüzde elli altı çökme"
+     ],
+     "baslik": "Kama Kompresyon Konservatif Takip",
+     "s": 43,
+     "k": [
+      0,
+      84
+     ],
+     "tip": "liste",
+     "konum": [
+      0.2,
+      0.49
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "42": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Yüzde elliden fazla korpus çökmesi",
+      "İnstabil patlama burst kırığı",
+      "Fraktür dislokasyon tablosu",
+      "İlerleyici inkomplet nörolojik defisit"
+     ],
+     "baslik": "Mutlak Cerrahi Endikasyonlar",
+     "s": 44,
+     "k": [
+      0,
+      86
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.85
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3547,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  }
+ },
+ "rapor": {
+  "aday": 31,
+  "gecti": 12,
+  "ret": {
+   "resim sayfasında panel (H51)": 15,
+   "panel metni 'Cerrahi tespit gerektirir' henüz anlatılmamış t": 1,
+   "panel metni 'Yedi milimetreden fazla taşma' henüz anlatılmam": 1,
+   "panel metni 'Ekstansiyon teardrop ve ALL yı' henüz anlatılma": 1,
+   "panel metni 'Denis Dört Temel Kırık Tipi' henüz anlatılmamış": 1
+  }
+ }
+}

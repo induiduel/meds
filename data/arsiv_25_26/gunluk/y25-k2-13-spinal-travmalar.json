@@ -1,0 +1,34 @@
+{
+  "key": "y25-k2-13-spinal-travmalar",
+  "donem": "2025-2026",
+  "kurul": 2,
+  "brans": "Beyin ve Sinir Cerrahisi",
+  "baslik": "Medulla Spinalis Lezyonları ve Spinal Travmalar",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-10-25 14:02",
+      "neden": "2025-2026 geçmiş yıl arşiv dersi ilk üretimi ve Kurul 2 tam otomatik hat kapı doğrulaması",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi spinal travmalar.pdf (57 sayfa) kaynağından 0 atlanan sayfa ile 57 paragraf / 173 cümlelik sesli anlatım üretildi.",
+        "16 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 12 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 24.7 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 1482,
+        "sureDk": 24.7,
+        "sayfaSayisi": 57,
+        "atlananSayfa": 0,
+        "bolumSayisi": 13,
+        "paragrafSayisi": 57,
+        "cumleSayisi": 173,
+        "slaytAdimSayisi": 16,
+        "cizimSayisi": 12,
+        "cikmisEslesme": 14
+      }
+    }
+  ]
+}
