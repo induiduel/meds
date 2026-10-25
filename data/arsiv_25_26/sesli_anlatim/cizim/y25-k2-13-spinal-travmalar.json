@@ -2,6 +2,476 @@
  "surum": 1,
  "metinHash": "0889b62d44b97380ef11b2c3d622d2254362b757",
  "p": {
+  "33": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.26,
+      0.42
+     ],
+     "b": [
+      0.15,
+      0.42
+     ],
+     "iliski": "aktive",
+     "etiket": "Travmatik ekstrüde disk ve kord basısı",
+     "odak": [
+      0.13,
+      0.4,
+      0.28,
+      0.44
+     ],
+     "etiket_konum": [
+      0.28,
+      0.36
+     ],
+     "etiket_genislik": 0.42,
+     "s": 34,
+     "k": [
+      0,
+      34
+     ]
+    }
+   ]
+  },
+  "32": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.28,
+      0.47
+     ],
+     "b": [
+      0.17,
+      0.47
+     ],
+     "iliski": "aktive",
+     "etiket": "İntramedüller parlak T2 sinyali (Miyelomalazi)",
+     "odak": [
+      0.15,
+      0.45,
+      0.3,
+      0.49
+     ],
+     "etiket_konum": [
+      0.34,
+      0.41
+     ],
+     "etiket_genislik": 0.42,
+     "s": 33,
+     "k": [
+      0,
+      26
+     ],
+     "etiket_hedef": [
+      0.3,
+      0.4615
+     ],
+     "etiket_boy": 0.103
+    }
+   ]
+  },
+  "30": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.274,
+      0.43
+     ],
+     "b": [
+      0.166,
+      0.43
+     ],
+     "iliski": "aktive",
+     "etiket": "C4 patlama kırığı ve spinal kanala retropülsiyon",
+     "odak": [
+      0.1,
+      0.34,
+      0.24,
+      0.52
+     ],
+     "etiket_konum": [
+      0.34,
+      0.5
+     ],
+     "etiket_genislik": 0.42,
+     "s": 31,
+     "k": [
+      0,
+      28
+     ],
+     "yol": [
+      [
+       0.274,
+       0.43
+      ],
+      [
+       0.166,
+       0.43
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_hedef": [
+      0.24,
+      0.52
+     ],
+     "etiket_boy": 0.103,
+     "yakin": [
+      0.04,
+      0.28,
+      0.82,
+      0.663
+     ]
+    }
+   ]
+  },
+  "29": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.314,
+      0.39
+     ],
+     "b": [
+      0.20600000000000002,
+      0.39
+     ],
+     "iliski": "aktive",
+     "etiket": "Anteroinferior damla (Teardrop) kemik fragmanı",
+     "odak": [
+      0.12,
+      0.3,
+      0.26,
+      0.48
+     ],
+     "etiket_konum": [
+      0.3,
+      0.26
+     ],
+     "etiket_genislik": 0.42,
+     "s": 30,
+     "k": [
+      0,
+      33
+     ],
+     "yol": [
+      [
+       0.314,
+       0.39
+      ],
+      [
+       0.206,
+       0.39
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_hedef": [
+      0.26,
+      0.3115
+     ],
+     "etiket_boy": 0.103,
+     "yakin": [
+      0.06,
+      0.2,
+      0.78,
+      0.54
+     ]
+    }
+   ]
+  },
+  "24": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.246,
+      0.49
+     ],
+     "b": [
+      0.384,
+      0.49
+     ],
+     "iliski": "aktive",
+     "etiket": "Tip 2 odontoid bazis ayrışma hattı (İnstabil)",
+     "odak": [
+      0.34,
+      0.38,
+      0.54,
+      0.6
+     ],
+     "etiket_konum": [
+      0.54,
+      0.34
+     ],
+     "etiket_genislik": 0.42,
+     "s": 25,
+     "k": [
+      0,
+      24
+     ],
+     "yol": [
+      [
+       0.246,
+       0.49
+      ],
+      [
+       0.384,
+       0.49
+      ]
+     ],
+     "rota": "kavis",
+     "yakin": [
+      0.186,
+      0.28,
+      1,
+      0.66
+     ]
+    }
+   ]
+  },
+  "23": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.486,
+      0.54
+     ],
+     "b": [
+      0.634,
+      0.54
+     ],
+     "iliski": "aktive",
+     "etiket": "C2 pars interartikülaris fraktürü (Hangman)",
+     "odak": [
+      0.6,
+      0.44,
+      0.76,
+      0.64
+     ],
+     "etiket_konum": [
+      0.56,
+      0.4
+     ],
+     "etiket_genislik": 0.42,
+     "s": 24,
+     "k": [
+      0,
+      29
+     ],
+     "yol": [
+      [
+       0.486,
+       0.54
+      ],
+      [
+       0.4952,
+       0.5374
+      ],
+      [
+       0.5045,
+       0.5351
+      ],
+      [
+       0.5138,
+       0.5332
+      ],
+      [
+       0.523,
+       0.5317
+      ],
+      [
+       0.5323,
+       0.5305
+      ],
+      [
+       0.5415,
+       0.5296
+      ],
+      [
+       0.5507,
+       0.5291
+      ],
+      [
+       0.56,
+       0.5289
+      ],
+      [
+       0.5693,
+       0.5291
+      ],
+      [
+       0.5785,
+       0.5296
+      ],
+      [
+       0.5877,
+       0.5305
+      ],
+      [
+       0.597,
+       0.5317
+      ],
+      [
+       0.6063,
+       0.5332
+      ],
+      [
+       0.6155,
+       0.5351
+      ],
+      [
+       0.6248,
+       0.5374
+      ],
+      [
+       0.634,
+       0.54
+      ]
+     ],
+     "rota": "kavis",
+     "yakin": [
+      0.426,
+      0.34,
+      1,
+      0.7
+     ]
+    }
+   ]
+  },
+  "16": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.04,
+      0.48
+     ],
+     "b": [
+      0.15,
+      0.48
+     ],
+     "iliski": "aktive",
+     "etiket": "C1 lateral kitle taşması (Jefferson kırığı)",
+     "odak": [
+      0.02,
+      0.46,
+      0.17,
+      0.5
+     ],
+     "etiket_konum": [
+      0.17,
+      0.42
+     ],
+     "etiket_genislik": 0.42,
+     "s": 17,
+     "k": [
+      0,
+      12
+     ]
+    },
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Tip A izole kemik ark hasarı",
+      "Tip B transvers ligaman hasarı",
+      "Tip C instabilite veya kayma"
+     ],
+     "baslik": "Ce Bir Halka ve Eklem Hasarları",
+     "s": 17,
+     "k": [
+      0,
+      35
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.97
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.4008,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "15": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.04,
+      0.38
+     ],
+     "b": [
+      0.16,
+      0.38
+     ],
+     "iliski": "aktive",
+     "etiket": "Oksipitoservikal bileşke ayrışması",
+     "odak": [
+      0.02,
+      0.36,
+      0.18,
+      0.4
+     ],
+     "etiket_konum": [
+      0.0,
+      0.64
+     ],
+     "etiket_genislik": 0.42,
+     "s": 16,
+     "k": [
+      0,
+      19
+     ],
+     "etiket_hedef": [
+      0.18,
+      0.4
+     ],
+     "etiket_boy": 0.0591
+    },
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Tip A izole kondil kırığı",
+      "Tip B nondeplase ligamentöz hasar",
+      "Tip C deplase instabil hasar"
+     ],
+     "baslik": "Oksipital Kondil Kırık Tipleri",
+     "s": 16,
+     "k": [
+      0,
+      85
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.95
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3808,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
   "50": {
    "0": [
     {
@@ -80,30 +550,6 @@
     }
    ]
   },
-  "32": {
-   "0": [
-    {
-     "tur": "akis",
-     "etiket": "Sagital T2 MRG: Omurilik basısı ve miyelomalazi",
-     "odak": [
-      0.069,
-      0.099,
-      0.32,
-      0.842
-     ],
-     "etiket_konum": [
-      0.32,
-      0.039
-     ],
-     "etiket_genislik": 0.42,
-     "s": 33,
-     "k": [
-      0,
-      140
-     ]
-    }
-   ]
-  },
   "31": {
    "0": [
     {
@@ -128,54 +574,6 @@
     }
    ]
   },
-  "30": {
-   "0": [
-    {
-     "tur": "akis",
-     "etiket": "C4 burst patlama kırığı ve spinal kanal retropulsiyonu",
-     "odak": [
-      0.027,
-      0.053,
-      0.322,
-      0.858
-     ],
-     "etiket_konum": [
-      0.334,
-      0.755
-     ],
-     "etiket_genislik": 0.42,
-     "s": 31,
-     "k": [
-      0,
-      120
-     ]
-    }
-   ]
-  },
-  "29": {
-   "0": [
-    {
-     "tur": "akis",
-     "etiket": "C2 anteroinferior teardrop (gözyaşı) kırığı",
-     "odak": [
-      0.03,
-      0.031,
-      0.401,
-      0.846
-     ],
-     "etiket_konum": [
-      0.413,
-      0.031
-     ],
-     "etiket_genislik": 0.42,
-     "s": 30,
-     "k": [
-      0,
-      140
-     ]
-    }
-   ]
-  },
   "28": {
    "0": [
     {
@@ -196,30 +594,6 @@
      "k": [
       0,
       133
-     ]
-    }
-   ]
-  },
-  "23": {
-   "0": [
-    {
-     "tur": "akis",
-     "etiket": "Asılan adam kırığı evrelemesi ve C2-C3 açılanması",
-     "odak": [
-      0.438,
-      0.183,
-      0.899,
-      1.0
-     ],
-     "etiket_konum": [
-      0.02,
-      0.72
-     ],
-     "etiket_genislik": 0.42,
-     "s": 24,
-     "k": [
-      0,
-      113
      ]
     }
    ]
@@ -445,72 +819,6 @@
     }
    ]
   },
-  "15": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Tip A izole kondil kırığı",
-      "Tip B nondeplase ligamentöz hasar",
-      "Tip C deplase instabil hasar"
-     ],
-     "baslik": "Oksipital Kondil Kırık Tipleri",
-     "s": 16,
-     "k": [
-      0,
-      85
-     ],
-     "tip": "liste",
-     "konum": [
-      0.03,
-      0.95
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.411,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.3808,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "16": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Tip A izole kemik ark hasarı",
-      "Tip B transvers ligaman hasarı",
-      "Tip C instabilite veya kayma"
-     ],
-     "baslik": "Ce Bir Halka ve Eklem Hasarları",
-     "s": 17,
-     "k": [
-      0,
-      35
-     ],
-     "tip": "liste",
-     "konum": [
-      0.05,
-      0.97
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.411,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.4008,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
   "17": {
    "0": [
     {
@@ -643,8 +951,8 @@
   }
  },
  "rapor": {
-  "aday": 44,
-  "gecti": 23,
+  "aday": 48,
+  "gecti": 27,
   "ret": {
    "resim sayfasında panel (H51)": 18,
    "panel metni 'Cerrahi tespit gerektirir' henüz anlatılmamış t": 1,

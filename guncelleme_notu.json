@@ -1,31 +1,29 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 356,
-  "baslik": "Radyoloji ve Görüntüleme Hat Belirginleştirme, Odak Çerçeveleri ve Kesintisiz Çizim Görünürlüğü",
+  "onem": 357,
+  "baslik": "Radyolojide Lezyon Odaklı Hedefleyici İşaretleme ve Hassas Ok Kılavuzu",
   "maddeler": [
-    "Radyoloji Hat ve Sınır Belirginleştirme (Kontur & Odak): BT, MRG ve Röntgen görüntülerinde lezyon sınırları canlı mercan konturları (pdv-cz-kontur), yüksek kontrastlı odak çerçeveleri (pdv-cz-odak) ve Türkçe klinik tanı rozetleriyle (pdv-cz-etiket) kristal netliğinde belirginleştirildi.",
-    "Karanlık Zemin Kontrastı Çözümü: Röntgen, BT ve MRG görüntülerinin siyah/koyu arka planlarında vurgu ve çizimlerin kararıp kaybolmasına yol açan blend-mode multiply sorunu giderildi; parlak aydınlık ışıltı (luminous glow) ve çift katmanlı beyaz hale ile en karanlık kesitte dahi anında fark edilir hale getirildi.",
-    "Duraklatma ve İnceleme Modunda Çizim Kalıcılığı: Canlı ders duraklatıldığında veya öğrenci slaytı büyütüp incelediğinde çizimlerin ekrandan silinmesi engellendi; slayt içindeki tüm çizimler (sayfaCizimleri) sayfa boyunca ekranda kalıcı kılındı.",
-    "Klinik Görüntü Tanı Anlatımı: Kafa Travmaları, Spinal Travmalar, Omurga Tümörleri, Beyin Tümörleri ve SSS Hasar Biçimleri derslerinde öğrencinin ne görmesi gerektiği, patolojinin ayırt edici kriteri ve tam anatomik odağı hem anlatımda hem de görsel çizimlerle 1:1 eşleştirildi."
+    "Lezyon Odaklı Hassas Çerçeveleme: BT, MRG ve Röntgen görüntülerinde tüm resim çerçevesi yerine doğrudan patolojinin kendisi (bikonveks EDH lensi, hilal SDH, C1 Jefferson kırığı, Hangman fraktürü, Winking Owl pedikül erozyonu, GBM halkasal kontrastı) dar ve odaklanmış çerçeveyle (odak) sınırlandı.",
+    "Hedefleyici Kılavuz Oklar (a -> b): Radyoloji kesitinde net doku alanından başlayıp doğrudan lezyon merkezine yönelen canlı hedefleyici oklar eklendi; öğrencinin dikkati tam tanı noktasına odaklandı.",
+    "Kelime Aralığı ve Çizim Senkronizasyonu: Çizim motorundaki kelime aralığı sınırları (son parametresi) optimize edilerek tüm odak ve hedefleyici okların kesintisiz biçimde PDF ve .medspak paketine işlenmesi sağlandı.",
+    "5 Kritik Radyoloji Dersinde Tam Kapsam: Kafa Travmaları (18 lezyon), Spinal Travmalar (8 lezyon), Omurga Tümörleri (3 lezyon), Beyin Tümörleri (4 lezyon) ve SSS Hasar Biçimleri (2 lezyon) olmak üzere tüm radyoloji paketleri 0 hata ile güncellendi."
   ],
   "eklenen": [
-    "Radyoloji lezyon odak kutuları (odak), sınır konturları (kontur), yönlendirme okları (akis) ve Türkçe klinik tanı rozetleri (etiket)",
-    "Kafa Travmaları, Spinal Travmalar, Omurga Tümörleri, Beyin Tümörleri ve SSS Hasar Biçimleri derslerinde detaylı BT/MRG/Röntgen okuma ve tanı anlatımları"
+    "Doğrudan lezyon merkezine yönelen hedefleyici oklar (a -> b)",
+    "Radyolojik patolojileri dar alanda saran hassas odak çerçeveleri (odak)"
   ],
   "degisen": [
-    "meds/src/components/learn/pdf/CizimLayer.tsx",
-    "meds/src/components/canliDers/CanliDersDers.tsx",
-    "meds/src/components/learn/pdf/pdfDoc.css",
-    "meds/scripts/cizim/cizim_dogrula.py",
-    "meds/scripts/arsiv_25_26/arsiv_yayinla.py",
     "meds/scripts/arsiv_25_26/zenginlestir_tum_radyoloji.py",
+    "meds/data/arsiv_25_26/sesli_anlatim/cizim/y25-k2-12-kafa-travmalari.json",
+    "meds/data/arsiv_25_26/sesli_anlatim/cizim/y25-k2-13-spinal-travmalar.json",
+    "meds/data/arsiv_25_26/sesli_anlatim/cizim/y25-k2-64-omurga-tumorleri.json",
+    "meds/data/arsiv_25_26/sesli_anlatim/cizim/y25-k2-14-beyin-tumorleri.json",
+    "meds/data/arsiv_25_26/sesli_anlatim/cizim/y25-k2-03-sss-hasar-bicimleri-odem-hidrosefali-herniasyon.json",
     "meds/guncelleme_notu.json"
   ],
   "duzeltilen": [
-    "Ders duraklatıldığında (c < 0) çizimlerin görünmez olması hatası (ilerleme = 1) düzeltildi",
-    "Kullanıcı slayta dokunduğunda veya inceleme yaptığında durdu bayrağının çizimleri sıfırlaması engellendi",
-    "Karanlık radyoloji arka planlarında mix-blend-mode multiply kaynaklı çizim kararması kaldırıldı",
-    "Radyoloji görüntülerinde gerçek kontur ve odak kutusu yerine sadece metin şeması gösterilmesi sorunu kökten çözüldü"
+    "Radyoloji slaytlarında tüm resim alanını çevreleyen geniş kutuların yerine lezyonun kendisini saran dar odak kutusu getirildi",
+    "Kelime aralığı parametresi kaynaklı çizim budanması giderilerek okların ve odakların çizim katmanına tam geçmesi sağlandı"
   ],
   "silinen": []
 }

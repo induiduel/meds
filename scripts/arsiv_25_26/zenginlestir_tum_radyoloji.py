@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Kurul 2 Radyolojik ve Tanısal Görüntü Zenginleştirme Motoru
+Kurul 2 Radyolojik ve Tanısal Görüntü Zenginleştirme Motoru (Lezyon Odaklı & Hassas İşaretleme)
+Resmin tamamını değil; lezyonun, kırık hattının, hematomun veya kitlenin kendisini doğrudan işaretler.
 Uygulanan Dersler:
 1. y25-k2-12-kafa-travmalari
 2. y25-k2-13-spinal-travmalar
@@ -46,317 +47,307 @@ def sha1_text(md: str) -> str:
     return hashlib.sha1('\n'.join(paragraflar).encode('utf-8')).hexdigest()
 
 # ==============================================================================
-# RADYOLOJİK ÇİZİM VE ANLATIM REÇETELERİ
+# LEZYON ODAKLI RADYOLOJİK ÇİZİM VE ANLATIM REÇETELERİ
+# odak: Resmin tümünü değil, doğrudan lezyonu saran dar çerçeve
+# a -> b: Boş alandan lezyon merkezine yönelen hedefleyici ok
 # ==============================================================================
 
 RADYOLOJI_TANIMLARI = {
     "y25-k2-12-kafa-travmalari": [
         {
             "slide": 16, "pi": "15", "ci": 0,
-            "odak": [0.575, 0.20, 0.995, 0.875],
+            "odak": [0.78, 0.38, 0.92, 0.66],
+            "a": [0.66, 0.52], "b": [0.82, 0.52],
             "etiket": "Bikonveks lens hiperdansitesi (Epidural hematom)",
-            "etiket_konum": [0.08, 0.82],
-            "narration_insert": " Slaytın sağındaki aksiyel beyin tomografisinde sol temporoparietal alanda dura ile kafatası iç tabulası arasında sınırları belirgin, bikonveks hiperdens lens şeklindeki epidural hematom alanını izliyoruz. Sütür hatlarını geçmediğine ve ventriküle bası yaparak orta hat şifti oluşturduğuna dikkat edin."
+            "etiket_konum": [0.52, 0.32], "etiket_genislik": 0.42,
+            "narration_insert": " Aksiyel beyin tomografisinde sol temporoparietal kalvaryum altında dura ile kafatası iç tabulası arasında sınırları belirgin, bikonveks hiperdens lens şeklindeki epidural hematom alanını izliyoruz. Sütür hatlarını geçmediğine ve ventriküle bası yaparak orta hat şifti oluşturduğuna dikkat edin."
         },
         {
             "slide": 18, "pi": "17", "ci": 0,
-            "odak": [0.697, 0.05, 0.99, 0.479],
-            "etiket": "Temporal kemik kırığı ve epidural hematom",
-            "etiket_konum": [0.08, 0.82],
+            "odak": [0.76, 0.16, 0.90, 0.36],
+            "a": [0.68, 0.26], "b": [0.80, 0.26],
+            "etiket": "Temporal kemik kırık hattı ve arteriyel EDH",
+            "etiket_konum": [0.52, 0.10], "etiket_genislik": 0.42,
             "narration_insert": " Bilgisayarlı tomografi kemik penceresinde temporal kemik skuamöz kırık hattı ve hemen altında gelişen arteriyel hematom net olarak ayırt edilir."
         },
         {
             "slide": 20, "pi": "19", "ci": 0,
-            "odak": [0.634, 0.468, 0.995, 0.932],
-            "etiket": "Karakteristik bikonveks hiperdens kitle etkisi",
-            "etiket_konum": [0.08, 0.82],
+            "odak": [0.72, 0.52, 0.86, 0.74],
+            "a": [0.62, 0.63], "b": [0.76, 0.63],
+            "etiket": "Dışbükey lens kitle etkisi ve ventrikül basısı",
+            "etiket_konum": [0.52, 0.44], "etiket_genislik": 0.42,
             "narration_insert": " Aksiyel tomografide hematomun iki taraflı dışbükey lens formasyonu ve orta hat yapılarını karşı tarafa iten belirgin kitle etkisi açıkça izlenmektedir."
         },
         {
             "slide": 21, "pi": "20", "ci": 0,
-            "odak": [0.61, 0.081, 0.954, 0.647],
-            "etiket": "Venöz sinüs yırtığı epidural hematomu",
-            "etiket_konum": [0.08, 0.82],
+            "odak": [0.68, 0.26, 0.88, 0.48],
+            "a": [0.62, 0.37], "b": [0.75, 0.37],
+            "etiket": "Transvers-sigmoid sinüs komşuluğu venöz EDH",
+            "etiket_konum": [0.52, 0.18], "etiket_genislik": 0.42,
             "narration_insert": " Tomografi kesitinde transvers ve sigmoid sinüs komşuluğunda arka çukurda yerleşen venöz kaynaklı epidural hematom alanı görülmektedir."
         },
         {
             "slide": 22, "pi": "21", "ci": 0,
-            "odak": [0.051, 0.258, 0.5, 0.857],
-            "etiket": "İç tabula - dura arası hiperdens kitle etkisi",
-            "etiket_konum": [0.52, 0.86],
+            "odak": [0.22, 0.42, 0.38, 0.68],
+            "a": [0.10, 0.55], "b": [0.26, 0.55],
+            "etiket": "İç tabula - dura arası hiperdens EDH",
+            "etiket_konum": [0.06, 0.32], "etiket_genislik": 0.40,
             "narration_insert": " Tomografi kesitinde temporal iç tabula ile dura arasında genişleyen hematomun lateral ventrikül frontal boynuzunu basılayarak orta hat şiftine yol açtığı izlenir."
         },
         {
+            "slide": 23, "pi": "22", "ci": 0,
+            "odak": [0.72, 0.54, 0.88, 0.78],
+            "a": [0.64, 0.66], "b": [0.78, 0.66],
+            "etiket": "Verteks düzeyinde hiperdens EDH",
+            "etiket_konum": [0.52, 0.44], "etiket_genislik": 0.42,
+            "narration_insert": " Tomografi kesitlerinde verteks düzeyinde superior sagital sinüse bası yapan epidural hematom koleksiyonu izlenmektedir."
+        },
+        {
             "slide": 26, "pi": "25", "ci": 0,
-            "odak": [0.099, 0.122, 0.909, 0.794],
-            "etiket": "Sağ frontal ve verteks epidural hematomu",
-            "etiket_konum": [0.10, 0.82],
-            "narration_insert": " Tomografi kesitlerinde sağ frontal bölgede ve verteks düzeyinde superior sagital sinüse bası yapan epidural hematom koleksiyonu izlenmektedir."
+            "odak": [0.22, 0.24, 0.42, 0.52],
+            "a": [0.12, 0.38], "b": [0.28, 0.38],
+            "etiket": "Sağ frontal kalvaryal bikonveks EDH",
+            "etiket_konum": [0.08, 0.16], "etiket_genislik": 0.40,
+            "narration_insert": " Tomografi kesitlerinde sağ frontal bölgede iç tabuladan ayrışan bikonveks epidural hematom koleksiyonu izlenmektedir."
         },
         {
             "slide": 30, "pi": "29", "ci": 0,
-            "odak": [0.54, 0.258, 0.98, 0.792],
-            "etiket": "Hilal biçimli kresentik kanama (Subdural hematom)",
-            "etiket_konum": [0.08, 0.82],
+            "odak": [0.58, 0.34, 0.72, 0.68],
+            "a": [0.78, 0.51], "b": [0.65, 0.51],
+            "etiket": "Hilal biçimli kresentik kanama (Akut SDH)",
+            "etiket_konum": [0.52, 0.26], "etiket_genislik": 0.42,
             "narration_insert": " Aksiyel BT kesitinde hemisfer konveksitesi boyunca hilal şeklinde uzanan, sütür hatlarını rahatça aşarak tüm hemisferi kaplayan akut hiperdens subdural hematomu görüyoruz. Kitle etkisine bağlı ipsilateral ventrikül basılanmış ve orta hat sola doğru itilmiştir."
         },
         {
             "slide": 32, "pi": "31", "ci": 0,
-            "odak": [0.106, 0.206, 0.918, 0.932],
-            "etiket": "Epidural (bikonveks lens) vs Subdural (hilal) ayrımı",
-            "etiket_konum": [0.15, 0.12],
+            "odak": [0.20, 0.40, 0.34, 0.64],
+            "a": [0.10, 0.52], "b": [0.24, 0.52],
+            "etiket": "Epidural: Bikonveks lens (sutürü geçmez)",
+            "etiket_konum": [0.08, 0.30], "etiket_genislik": 0.42,
             "narration_insert": " Yan yana sunulan tomografi kesitlerinde soldaki epidural hematomun sütür aşmayan bikonveks lens şekli ile sağdaki subdural hematomun tüm hemisferi saran kresentik hilal formu arasındaki temel radyolojik fark net olarak karşılaştırılmaktadır."
         },
         {
             "slide": 33, "pi": "32", "ci": 0,
-            "odak": [0.575, 0.237, 1.0, 0.772],
-            "etiket": "Yaşlı hastada kitle etkisi ve ventrikül basısı",
-            "etiket_konum": [0.08, 0.82],
+            "odak": [0.62, 0.32, 0.76, 0.66],
+            "a": [0.82, 0.49], "b": [0.68, 0.49],
+            "etiket": "Tüm hemisferi saran kresentik SDH",
+            "etiket_konum": [0.52, 0.24], "etiket_genislik": 0.42,
             "narration_insert": " Tomografi kesitinde serebral atrofi zemininde gelişen geniş subdural hematomun ventrikül basısı ve sulkus silinmesiyle oluşturduğu bası etkisi izlenmektedir."
         },
         {
             "slide": 35, "pi": "34", "ci": 0,
-            "odak": [0.067, 0.249, 0.905, 0.871],
-            "etiket": "Kronik hematomda hematokrit seviyelenmesi",
-            "etiket_konum": [0.10, 0.16],
+            "odak": [0.36, 0.45, 0.64, 0.68],
+            "a": [0.50, 0.36], "b": [0.50, 0.52],
+            "etiket": "Hematokrit seviyelenmesi (Akut/Kronik faz)",
+            "etiket_konum": [0.26, 0.28], "etiket_genislik": 0.44,
             "narration_insert": " Kronik subdural hematom tomografisinde çöken hücresel elemanların yerçekimi etkisiyle altta hiperdens, üstte ise plazmanın hipodens seviyelenme oluşturduğu tipik hematokrit etkisi görülmektedir."
         },
         {
             "slide": 36, "pi": "35", "ci": 0,
-            "odak": [0.626, 0.269, 1.0, 0.832],
-            "etiket": "Parankimle aynı dansitede izodens subdural hematom",
-            "etiket_konum": [0.08, 0.85],
+            "odak": [0.68, 0.38, 0.84, 0.68],
+            "a": [0.60, 0.53], "b": [0.72, 0.53],
+            "etiket": "Sulkus silinmesi ve izodens kitle etkisi",
+            "etiket_konum": [0.52, 0.28], "etiket_genislik": 0.42,
             "narration_insert": " Subakut evredeki izodens subdural hematomda kan beyin dokusuyla aynı gri tonda olduğundan doğrudan görünmez; ancak sulkusların içe itilmesi ve ventrikül kompresyonuyla varlığı saptanır."
         },
         {
             "slide": 41, "pi": "40", "ci": 0,
-            "odak": [0.531, 0.468, 0.903, 0.975],
-            "etiket": "Sulkus ve sisternlerde hiperdens kan göllenmesi (SAK)",
-            "etiket_konum": [0.08, 0.82],
+            "odak": [0.64, 0.62, 0.80, 0.82],
+            "a": [0.56, 0.72], "b": [0.68, 0.72],
+            "etiket": "Silviyan ve sulkal hiperdansite (SAH)",
+            "etiket_konum": [0.50, 0.52], "etiket_genislik": 0.42,
             "narration_insert": " Aksiyel beyin tomografisinde subaraknoid kanamanın tipik görünümü izlenmektedir: Kan sulkusların arasına ve bazal sisternalara yayılarak karakteristik hiperdens yıldızsı patern oluşturmuştur."
         },
         {
-            "slide": 43, "pi": "42", "ci": 0,
-            "odak": [0.066, 0.247, 0.931, 0.91],
-            "etiket": "Verteks sulkuslarında yaygın subaraknoid kanama",
-            "etiket_konum": [0.10, 0.16],
-            "narration_insert": " Aksiyel kesitlerde konveksite sulkusları boyunca lineer hiperdens çizgilenmeler şeklinde dağılan travmatik subaraknoid kanama alanları net olarak ayırt edilir."
-        },
-        {
             "slide": 47, "pi": "46", "ci": 0,
-            "odak": [0.642, 0.417, 1.0, 1.0],
-            "etiket": "Frontal ve temporal tabanda tuz-biber kontüzyon",
-            "etiket_konum": [0.08, 0.82],
+            "odak": [0.72, 0.58, 0.88, 0.78],
+            "a": [0.64, 0.68], "b": [0.76, 0.68],
+            "etiket": "Kortikal mikrokanamalar (Tuz-biber paterni)",
+            "etiket_konum": [0.52, 0.48], "etiket_genislik": 0.42,
             "narration_insert": " Hemorajik kontüzyon tomografisinde frontal ve temporal lob bazallerinde gri-beyaz cevher bileşkesinde 'tuz-biber' görünümündeki alacalı peteşiyal hiperdens odaklar açıkça izlenmektedir."
         },
         {
-            "slide": 50, "pi": "49", "ci": 0,
-            "odak": [0.208, 0.217, 0.783, 0.899],
-            "etiket": "Kup (darbe tarafı) ve kontrkup (karşı lezyon)",
-            "etiket_konum": [0.10, 0.14],
+            "slide": 48, "pi": "47", "ci": 0,
+            "odak": [0.15, 0.56, 0.35, 0.78],
+            "a": [0.06, 0.67], "b": [0.20, 0.67],
+            "etiket": "Kup lezyonu: Darbe altı kontüzyon",
+            "etiket_konum": [0.05, 0.46], "etiket_genislik": 0.40,
             "narration_insert": " Tomografi incelemesinde darbe tarafındaki lineer kafatası çatlağı altında kup lezyonu, deselerasyonla karşı kutupta gelişen masif hemorajik kontrkup lezyonu ile birlikte görülür."
         },
         {
-            "slide": 58, "pi": "57", "ci": 0,
-            "odak": [0.662, 0.269, 1.0, 0.857],
-            "etiket": "Korpus kallozumda mikrogiriş DAH odakları",
-            "etiket_konum": [0.08, 0.82],
-            "narration_insert": " Diffüz aksonal yaralanmada tomografi ve MRG kesitlerinde korpus kallozum ve gri-beyaz cevher sınırında mikrogiriş peteşiyal hiperdansiteler izlenir."
-        },
-        {
             "slide": 67, "pi": "66", "ci": 0,
-            "odak": [0.626, 0.417, 0.975, 0.894],
-            "etiket": "Singulat girusun faks altından karşıya şifti",
-            "etiket_konum": [0.08, 0.82],
+            "odak": [0.74, 0.54, 0.86, 0.72],
+            "a": [0.65, 0.63], "b": [0.77, 0.63],
+            "etiket": "Septum pellusidum orta hat şifti (Subfalsin)",
+            "etiket_konum": [0.52, 0.45], "etiket_genislik": 0.42,
             "narration_insert": " Subfalsin herniasyon aksiyel tomografisinde singulat girusun faks serebri altından karşı tarafa itildiği ve foramen Monro basısına yol açtığı izlenir."
         },
         {
             "slide": 71, "pi": "70", "ci": 0,
-            "odak": [0.115, 0.61, 0.905, 1.0],
-            "etiket": "Unkus herniasyonu ve mezensefalon basısı",
-            "etiket_konum": [0.10, 0.52],
+            "odak": [0.44, 0.70, 0.60, 0.88],
+            "a": [0.34, 0.79], "b": [0.48, 0.79],
+            "etiket": "Mezensefalon pedinkül basısı (Unkal herniasyon)",
+            "etiket_konum": [0.15, 0.64], "etiket_genislik": 0.44,
             "narration_insert": " Transtentoryal herniasyon kesitinde medial temporal lob unkusunun tentoryum kenarından aşağı kayarak mezensefalonu basıladığı ve ambiyens sisterni sildiği görülmektedir."
         },
         {
             "slide": 75, "pi": "74", "ci": 0,
-            "odak": [0.57, 0.311, 1.0, 1.0],
-            "etiket": "Tonsiller herniasyon (foramen magnum)",
-            "etiket_konum": [0.08, 0.82],
+            "odak": [0.70, 0.58, 0.86, 0.80],
+            "a": [0.60, 0.69], "b": [0.74, 0.69],
+            "etiket": "Foramen magnum altına tonsil herniasyonu",
+            "etiket_konum": [0.52, 0.35], "etiket_genislik": 0.42,
             "narration_insert": " Sagital MRG kesitinde serebellar tonsillerin foramen magnum çizgisinin beş milimetreden fazla altına sarkarak medulla oblangatayı sıkıştırdığı açıkça izlenmektedir."
         }
     ],
 
     "y25-k2-13-spinal-travmalar": [
         {
-            "slide": 19, "pi": "18", "ci": 0,
-            "odak": [0.016, 0.551, 0.628, 0.979],
-            "etiket": "Atlas (C1) Jefferson patlama kırığı ve lateral kitle taşması",
-            "etiket_konum": [0.05, 0.46],
-            "narration_insert": " Açık ağız grafisi ve aksiyel tomografide birinci boyun omuru olan atlasın hem ön hem arka arkının parçalandığı ve lateral kitlelerin odontoid üzerinden dışarı taştığı görülür."
+            "slide": 16, "pi": "15", "ci": 0,
+            "odak": [0.10, 0.28, 0.26, 0.48],
+            "a": [0.04, 0.38], "b": [0.16, 0.38],
+            "etiket": "Oksipitoservikal bileşke ayrışması",
+            "etiket_konum": [0.04, 0.18], "etiket_genislik": 0.38,
+            "narration_insert": " Radyografide oksipital kondil ve kraniyoservikal bileşke anatomik hatlarının yer değiştirdiği izlenmektedir."
         },
         {
-            "slide": 20, "pi": "19", "ci": 0,
-            "odak": [0.487, 0.028, 0.959, 0.969],
-            "etiket": "Tip II odontoid kırık hattı (boyun bileşkesi)",
-            "etiket_konum": [0.05, 0.85],
-            "narration_insert": " Lateral radyografi ve tomografide odontoid çıkıntının gövde ile birleştiği zayıf boyun bölgesinden ayrıldığı tip iki fraktür hattı net olarak izlenmektedir."
-        },
-        {
-            "slide": 21, "pi": "20", "ci": 0,
-            "odak": [0.366, 0.078, 0.975, 0.89],
-            "etiket": "Odontoid kırık tipleri (Tip I apeks, Tip II boyun, Tip III korpus)",
-            "etiket_konum": [0.05, 0.88],
-            "narration_insert": " Tomografi rekonstrüksiyonlarında odontoid fraktürlerinin apeks, korpus-dens bileşkesi ve korpus içine uzanan anatomik hatları karşılaştırmalı olarak gösterilmektedir."
-        },
-        {
-            "slide": 23, "pi": "22", "ci": 0,
-            "odak": [0.0, 0.525, 0.99, 0.992],
-            "etiket": "Hangman kırığı (C2 pars interartikülaris iki taraflı kırığı)",
-            "etiket_konum": [0.05, 0.44],
-            "narration_insert": " Lateral grafide hiperekstansiyon ve distraksiyon travmasıyla ikinci servikal omurun pars interartikülarislerinde oluşan iki taraflı kırık ve aksis korpusunun öne kayması izlenir."
+            "slide": 17, "pi": "16", "ci": 0,
+            "odak": [0.10, 0.38, 0.26, 0.58],
+            "a": [0.04, 0.48], "b": [0.15, 0.48],
+            "etiket": "C1 lateral kitle taşması (Jefferson kırığı)",
+            "etiket_konum": [0.04, 0.24], "etiket_genislik": 0.40,
+            "narration_insert": " Açık ağız grafisinde C1 lateral kitlelerinin odontoid prosesin iki yanına doğru taştığı Jefferson patlama kırığı izlenir."
         },
         {
             "slide": 24, "pi": "23", "ci": 0,
-            "odak": [0.438, 0.183, 0.899, 1.0],
-            "etiket": "Asılan adam kırığı evrelemesi ve C2-C3 açılanması",
-            "etiket_konum": [0.05, 0.88],
-            "narration_insert": " Radyografide kırık parçaları arasındaki ayrılma miktarı, angülasyon derecesi ve faset eklem kilitlenmesiyle Hangman kırığının cerrahi evresi saptanır."
+            "odak": [0.60, 0.44, 0.76, 0.64],
+            "a": [0.48, 0.54], "b": [0.64, 0.54],
+            "etiket": "C2 pars interartikülaris fraktürü (Hangman)",
+            "etiket_konum": [0.46, 0.32], "etiket_genislik": 0.42,
+            "narration_insert": " Lateral grafide hiperekstansiyon travmasıyla aksisin pars interartikülarislerinde oluşan iki taraflı kırık ve anterior listezis izlenir."
         },
         {
-            "slide": 29, "pi": "28", "ci": 0,
-            "odak": [0.0, 0.0, 0.415, 1.0],
-            "etiket": "C5-C6 anterior dislokasyon ve faset kilitlenmesi",
-            "etiket_konum": [0.45, 0.82],
-            "narration_insert": " Lateral servikal radyografide beşinci ve altıncı boyun omurları arasındaki faset eklemlerin kayarak kilitlendiği ve omurga diziliminin ileri derecede bozulduğu izlenmektedir."
+            "slide": 25, "pi": "24", "ci": 0,
+            "odak": [0.34, 0.38, 0.54, 0.60],
+            "a": [0.24, 0.49], "b": [0.39, 0.49],
+            "etiket": "Tip 2 odontoid bazis ayrışma hattı (İnstabil)",
+            "etiket_konum": [0.18, 0.28], "etiket_genislik": 0.42,
+            "narration_insert": " Tomografide odontoid çıkıntının gövde ile birleştiği zayıf bazis boyun bölgesinden ayrıldığı instabil tip iki fraktür hattı net olarak görülür."
         },
         {
             "slide": 30, "pi": "29", "ci": 0,
-            "odak": [0.03, 0.031, 0.401, 0.846],
-            "etiket": "C2 anteroinferior teardrop (gözyaşı) kırığı",
-            "etiket_konum": [0.45, 0.82],
-            "narration_insert": " Grafide hiperekstansiyon travması sonucu ön boyuna bağın gerilerek aksis gövdesinin ön-alt köşesinden kopardığı karakteristik üçgen gözyaşı kemik fragmanı izlenir."
+            "odak": [0.12, 0.30, 0.26, 0.48],
+            "a": [0.32, 0.39], "b": [0.20, 0.39],
+            "etiket": "Anteroinferior damla (Teardrop) kemik fragmanı",
+            "etiket_konum": [0.12, 0.18], "etiket_genislik": 0.42,
+            "narration_insert": " Grafide hiperekstansiyon travması sonucu ön-alt köşeden kopan karakteristik üçgen damla kemik fragmanı izlenir."
         },
         {
             "slide": 31, "pi": "30", "ci": 0,
-            "odak": [0.027, 0.053, 0.322, 0.858],
-            "etiket": "C4 burst patlama kırığı ve spinal kanal retropulsiyonu",
-            "etiket_konum": [0.40, 0.82],
-            "narration_insert": " Bilgisayarlı tomografide dördüncü servikal omur korpusunun aksiyel yüklenmeyle parçalandığı ve arka duvar parçasının omurilik kanalına doğru retropulse olduğu görülür."
-        },
-        {
-            "slide": 32, "pi": "31", "ci": 0,
-            "odak": [0.045, 0.039, 0.346, 0.901],
-            "etiket": "Postoperatif anterior plak-vida ve kafes füzyonu",
-            "etiket_konum": [0.40, 0.82],
-            "narration_insert": " Postoperatif lateral kontrolde parçalanan korpusun cerrahi korpektomiyle boşaltılıp yerine kafes ve anterior titanyum plak-vida yerleştirilerek kanalın açıldığı görülmektedir."
+            "odak": [0.10, 0.34, 0.24, 0.52],
+            "a": [0.28, 0.43], "b": [0.16, 0.43],
+            "etiket": "C4 patlama kırığı ve spinal kanala retropülsiyon",
+            "etiket_konum": [0.10, 0.22], "etiket_genislik": 0.42,
+            "narration_insert": " Bilgisayarlı tomografide servikal omur korpusunun parçalandığı ve arka duvar parçasının omurilik kanalına doğru retropulse olduğu görülür."
         },
         {
             "slide": 33, "pi": "32", "ci": 0,
-            "odak": [0.069, 0.099, 0.32, 0.842],
-            "etiket": "Sagital T2 MRG: Omurilik basısı ve miyelomalazi",
-            "etiket_konum": [0.38, 0.82],
+            "odak": [0.13, 0.38, 0.24, 0.56],
+            "a": [0.28, 0.47], "b": [0.17, 0.47],
+            "etiket": "İntramedüller parlak T2 sinyali (Miyelomalazi)",
+            "etiket_konum": [0.08, 0.26], "etiket_genislik": 0.42,
             "narration_insert": " Manyetik rezonans görüntülemede disloke omurların omuriliği sıkıştırdığı seviyede kord içinde parlak beyaz T2 sinyali şeklinde travmatik miyelomalazi ve ödem alanı izlenir."
         },
         {
-            "slide": 39, "pi": "38", "ci": 0,
-            "odak": [0.0, 0.0, 0.669, 1.0],
-            "etiket": "Alt torakal kama (wedge) kompresyon kırığı",
-            "etiket_konum": [0.68, 0.82],
-            "narration_insert": " Lateral torakal grafide omurga gövdesinin ön yüksekliğinin ezilerek çöktüğü, arka yüksekliğin korunduğu tipik anterior kama kompresyon kırığı izlenmektedir."
-        },
-        {
-            "slide": 45, "pi": "44", "ci": 0,
-            "odak": [0.402, 0.157, 1.0, 0.921],
-            "etiket": "Aksiyel BT: Burst fraktürü arka kolon kemik fragmanı",
-            "etiket_konum": [0.05, 0.82],
-            "narration_insert": " Aksiyel tomografi kesitinde patlayan vertebra korpus arka duvar kemik fragmanının spinal kanalı yüzde elliden fazla daraltarak omuriliği sıkıştırdığı görülmektedir."
-        },
-        {
-            "slide": 51, "pi": "50", "ci": 0,
-            "odak": [0.0, 0.0, 0.458, 0.6],
-            "etiket": "3B BT: Deplase Tip II odontoid kırığı",
-            "etiket_konum": [0.50, 0.82],
-            "narration_insert": " Üç boyutlu rekonstrüksiyon kesitinde odontoid çıkıntının gövdeden tamamen ayrılıp arkaya doğru deplase olduğu cerrahi kırık hattı açıkça izlenmektedir."
+            "slide": 34, "pi": "33", "ci": 0,
+            "odak": [0.10, 0.34, 0.22, 0.50],
+            "a": [0.26, 0.42], "b": [0.15, 0.42],
+            "etiket": "Travmatik ekstrüde disk ve kord basısı",
+            "etiket_konum": [0.06, 0.22], "etiket_genislik": 0.40,
+            "narration_insert": " Sagittal MRG'de yırtılan posterior longitudinal ligaman arasından spinal kanala fıtıklaşan travmatik disk dokusu korda bası yapmaktadır."
         }
     ],
 
     "y25-k2-64-omurga-tumorleri": [
         {
             "slide": 6, "pi": "5", "ci": 0,
-            "odak": [0.10, 0.20, 0.90, 0.90],
-            "etiket": "Pedikül erozyonu: Göz Kırpan Baykuş (Winking Owl) belirtisi",
-            "etiket_konum": [0.10, 0.12],
-            "narration_insert": " Ön-arka omurga radyografisinde metastatik tümörün vertebra pedikülünü eritmesi sonucu normalde iki göz gibi görünen pediküllerden birinin kaybolduğu 'Göz Kırpan Baykuş' belirtisi izlenmektedir."
+            "odak": [0.46, 0.36, 0.58, 0.52],
+            "a": [0.64, 0.44], "b": [0.52, 0.44],
+            "etiket": "Arka eleman nidus ve sklerotik rim (Osteoblastom)",
+            "etiket_konum": [0.40, 0.24], "etiket_genislik": 0.44,
+            "narration_insert": " Aksiyel BT kesitinde omurganın arka elemanlarına yerleşen, çevresi yoğun sklerotik kemikle sarılı osteoblastom nidusu net olarak seçilmektedir."
         },
         {
             "slide": 8, "pi": "7", "ci": 0,
-            "odak": [0.10, 0.20, 0.90, 0.90],
-            "etiket": "Vertebra korpus patolojik çökmesi ve epidural bası",
-            "etiket_konum": [0.10, 0.12],
-            "narration_insert": " Sagital MRG kesitinde metastazla zayıflayan vertebra gövdesinin patolojik olarak çöktüğü ve epidural alana taşan tümör dokusunun spinal kordu sıkıştırdığı görülmektedir."
+            "odak": [0.68, 0.54, 0.90, 0.80],
+            "a": [0.58, 0.67], "b": [0.74, 0.67],
+            "etiket": "Vertebra korpus ekspansil litik destrüksiyonu",
+            "etiket_konum": [0.50, 0.42], "etiket_genislik": 0.44,
+            "narration_insert": " Radyografide vertebra korpusunu tutan, kemik korteksini inceltip dışarı doğru genişleten sabun köpüğü manzaralı dev hücreli tümör lezyonu izlenir."
         },
         {
-            "slide": 10, "pi": "9", "ci": 0,
-            "odak": [0.10, 0.20, 0.90, 0.90],
-            "etiket": "Sklerotik/blastik metastaz (fildişi vertebra) ve litik lezyon",
-            "etiket_konum": [0.10, 0.12],
-            "narration_insert": " Radyolojik incelemede prostat kanseri metastazında bembeyaz sklerotik 'fildişi vertebra', meme ve akciğer metastazında ise kemiği eriten koyu litik lezyonlar ayırt edilir."
+            "slide": 16, "pi": "15", "ci": 0,
+            "odak": [0.68, 0.46, 0.86, 0.68],
+            "a": [0.58, 0.57], "b": [0.72, 0.57],
+            "etiket": "Pedikül erozyonu: Göz Kırpan Baykuş (Winking Owl)",
+            "etiket_konum": [0.50, 0.36], "etiket_genislik": 0.44,
+            "narration_insert": " Ön-arka omurga grafisinde metastazın tek taraflı pedikülü destrükte etmesiyle oluşan 'Göz Kırpan Baykuş' belirtisi açıkça izlenmektedir."
         }
     ],
 
     "y25-k2-14-beyin-tumorleri": [
         {
-            "slide": 10, "pi": "9", "ci": 0,
-            "odak": [0.10, 0.15, 0.90, 0.90],
-            "etiket": "Glioblastom: Halka kontrastlanması, santral nekroz ve ödem",
-            "etiket_konum": [0.10, 0.10],
-            "narration_insert": " T1 kontrastlı kranial MRG'de glioblastoma multiformenin kalın ve düzensiz halkasal kontrast tutulumu, ortasındaki santral nekroz ve çevresindeki yaygın parankim ödemi izlenmektedir."
+            "slide": 17, "pi": "16", "ci": 0,
+            "odak": [0.36, 0.42, 0.64, 0.70],
+            "a": [0.24, 0.56], "b": [0.44, 0.56],
+            "etiket": "Santral nekroz ve kalın halkasal kontrastlanma (GBM)",
+            "etiket_konum": [0.18, 0.30], "etiket_genislik": 0.46,
+            "narration_insert": " Kontrastlı T1 MRG kesitinde glioblastomun kalın ve düzensiz halkasal kontrast tutulumu, santral hipointens nekrozu ve geniş çevre ödemi izlenmektedir."
         },
         {
-            "slide": 20, "pi": "19", "ci": 0,
-            "odak": [0.10, 0.15, 0.90, 0.90],
-            "etiket": "Menenjiom: Homojen parlak kontrastlanma ve dural kuyruk",
-            "etiket_konum": [0.10, 0.10],
-            "narration_insert": " Kontrastlı MRG incelemesinde menenjiomun ekstra-aksiyel, homojen ve yoğun parlak boyandığı, komşu dura boyunca uzanan patognomonik 'dural kuyruk' belirtisi açıkça görülmektedir."
+            "slide": 43, "pi": "42", "ci": 0,
+            "odak": [0.34, 0.32, 0.62, 0.60],
+            "a": [0.22, 0.46], "b": [0.42, 0.46],
+            "etiket": "Homojen kontrastlanma ve Dural Kuyruk (Dural Tail)",
+            "etiket_konum": [0.16, 0.20], "etiket_genislik": 0.46,
+            "narration_insert": " Menenjiom MRG kesitinde homojen parlak boyanan ekstra-aksiyel kitle ve komşu durada kalınlaşma şeklinde uzanan dural kuyruk işareti görülür."
         },
         {
-            "slide": 30, "pi": "29", "ci": 0,
-            "odak": [0.10, 0.15, 0.90, 0.90],
-            "etiket": "Vestibüler Schwannom: Serebellopontin köşe ve İAM genişlemesi",
-            "etiket_konum": [0.10, 0.10],
-            "narration_insert": " Kranial MRG aksiyel kesitinde serebellopontin köşeyi dolduran ve iç kulak kanalını genişleterek dondurma külahı görünümü oluşturan vestibüler schwannom kitlesi izlenir."
+            "slide": 46, "pi": "45", "ci": 0,
+            "odak": [0.38, 0.46, 0.60, 0.68],
+            "a": [0.26, 0.57], "b": [0.44, 0.57],
+            "etiket": "Serebellopontin köşe kitlesi (Akustik nörinom)",
+            "etiket_konum": [0.18, 0.34], "etiket_genislik": 0.44,
+            "narration_insert": " Aksiyel MRG'de pontoserebellar köşeyi dolduran ve iç kulak yoluna uzanarak genişleten vestibüler schwannom kitlesi izlenmektedir."
         },
         {
-            "slide": 40, "pi": "39", "ci": 0,
-            "odak": [0.10, 0.15, 0.90, 0.90],
-            "etiket": "Hipofiz Adenomu: Sellar genişleme ve optik kiyazma basısı",
-            "etiket_konum": [0.10, 0.10],
-            "narration_insert": " Koronal ve sagital T1 kontrastlı MRG'de sella tursikayı genişletip yukarıya suprasellar alana doğru taşan ve kiyazma optikumu yukarı iten hipofiz makroadenomu izlenmektedir."
+            "slide": 55, "pi": "54", "ci": 0,
+            "odak": [0.36, 0.38, 0.58, 0.62],
+            "a": [0.24, 0.50], "b": [0.42, 0.50],
+            "etiket": "Sellar genişleme ve kiazma optikum süperior basısı",
+            "etiket_konum": [0.18, 0.26], "etiket_genislik": 0.46,
+            "narration_insert": " Koronal MRG'de sella tursikayı genişletip yukarıya suprasellar alana taşan ve optik kiazmayı yukarı iten hipofiz makroadenomu izlenir."
         }
     ],
 
     "y25-k2-03-sss-hasar-bicimleri-odem-hidrosefali-herniasyon": [
         {
-            "slide": 14, "pi": "13", "ci": 0,
-            "odak": [0.10, 0.20, 0.90, 0.90],
-            "etiket": "Unkal ve subfalsin herniasyon (orta hat şifti)",
-            "etiket_konum": [0.10, 0.12],
-            "narration_insert": " Aksiyel BT kesitinde masif ödem ve kitle etkisine bağlı singulat girusun faks altına, unkusun ise tentoryum kenarından aşağıya fıtıklaştığı herniasyon hatları görülür."
+            "slide": 18, "pi": "17", "ci": 0,
+            "odak": [0.38, 0.34, 0.62, 0.62],
+            "a": [0.26, 0.48], "b": [0.44, 0.48],
+            "etiket": "Ventrikülomegali ve transependimal BOS sızıntısı",
+            "etiket_konum": [0.18, 0.22], "etiket_genislik": 0.44,
+            "narration_insert": " Aksiyel tomografide lateral ventriküllerin ileri derecede genişlediği ve periventriküler beyaz cevherde transependimal BOS sızıntısı hipodansitesi izlenir."
         },
         {
-            "slide": 18, "pi": "17", "ci": 0,
-            "odak": [0.10, 0.20, 0.90, 0.90],
-            "etiket": "Hidrosefali: Ventrikülomegali ve transependimal sızıntı",
-            "etiket_konum": [0.10, 0.12],
-            "narration_insert": " Tomografi incelemesinde BOS dolaşımının tıkanmasıyla lateral ventriküllerin ileri derecede genişlediği ve periventriküler beyaz cevherde transependimal hipodansite oluştuğu izlenir."
+            "slide": 26, "pi": "25", "ci": 0,
+            "odak": [0.42, 0.32, 0.60, 0.56],
+            "a": [0.28, 0.44], "b": [0.46, 0.44],
+            "etiket": "Fals altına singulat girus herniasyonu ve şift",
+            "etiket_konum": [0.20, 0.20], "etiket_genislik": 0.44,
+            "narration_insert": " Herniasyon kesitinde kitle etkisiyle singulat girusun falks altından karşıya itildiği subfalsin herniasyon hattı görülmektedir."
         }
     ]
 }
-
-def is_valid_drawing(z, n_words):
-    # validate z dict
-    res = CD.denetle(z, n_words, [z.get('odak') or [0,0,1,1]], None, "tıbbi terminoloji ve anatomi")
-    return res is None
 
 def zenginlestir_ders(key: str):
     print(f"\n=======================================================")
@@ -378,8 +369,6 @@ def zenginlestir_ders(key: str):
         return
 
     text = metin_file.read_text(encoding='utf-8')
-    pars = [p.strip() for p in re.split(r'\n\s*\n', text) if p.strip() and not p.strip().startswith('#')]
-    # also preserve titles / headers
     raw_blocks = [b.strip() for b in re.split(r'\n\s*\n', text) if b.strip()]
 
     # Load existing cizim
@@ -395,14 +384,10 @@ def zenginlestir_ders(key: str):
     # Load existing isaret
     is_data = json.loads(isaret_file.read_text(encoding='utf-8')) if isaret_file.exists() else {"surum": 1, "metinHash": "", "c": {}}
 
-    # Load existing v2
-    v2_data = json.loads(v2_file.read_text(encoding='utf-8')) if v2_file.exists() else {}
-
     # Apply narration additions and cizim additions
     modified_pars = False
     added_drawings = 0
 
-    # Map par index to raw block index
     p_to_raw = {}
     p_counter = 0
     for bi, blk in enumerate(raw_blocks):
@@ -415,6 +400,8 @@ def zenginlestir_ders(key: str):
         ci = int(rec["ci"])
         slide = rec["slide"]
         odak = rec["odak"]
+        a_nokta = rec["a"]
+        b_nokta = rec["b"]
         etiket = rec["etiket"]
         etiket_konum = rec.get("etiket_konum", [0.10, 0.85])
         narr_ins = rec.get("narration_insert", "")
@@ -423,26 +410,25 @@ def zenginlestir_ders(key: str):
         if pi in p_to_raw and narr_ins:
             raw_idx = p_to_raw[pi]
             cur_text = raw_blocks[raw_idx]
-            # Don't duplicate if already added
             if narr_ins.strip()[:30] not in cur_text:
                 raw_blocks[raw_idx] = cur_text.strip() + narr_ins
                 modified_pars = True
 
-        # Now construct the Drawing Command
-        # Calculate character range k for the sentence
+        # Construct Drawing Command with TIGHT ODAK + ARROW directly pointing to lesion
         k_range = [0, 80]
-
-        # Draw odak + akis
         new_z = {
             "tur": "akis",
             "s": slide,
             "k": k_range,
             "odak": odak,
+            "a": a_nokta,
+            "b": b_nokta,
+            "iliski": "aktive",
             "etiket": etiket,
             "etiket_konum": etiket_konum,
-            "etiket_genislik": 0.45,
+            "etiket_genislik": rec.get("etiket_genislik", 0.42),
             "bas": 0,
-            "son": 15
+            "son": 2
         }
 
         pi_str = str(pi)
@@ -453,7 +439,6 @@ def zenginlestir_ders(key: str):
             cz_data["p"][pi_str][ci_str] = []
 
         # Replace or prepend the new drawing command
-        # remove old sema if it was duplicate or keep
         cz_data["p"][pi_str][ci_str] = [new_z] + [z for z in cz_data["p"][pi_str][ci_str] if z.get("tur") != "akis"]
         added_drawings += 1
 
@@ -477,7 +462,6 @@ def zenginlestir_ders(key: str):
                 c_idx = int(ci_str)
                 if c_idx < len(cs_list) and cs_list[c_idx]:
                     cs_list[c_idx]["z"] = zlist
-                    # if t was sayfa and no l, ensure it has proper structure
                     if cs_list[c_idx].get("t") == "sayfa" and not cs_list[c_idx].get("l"):
                         cs_list[c_idx]["l"] = [zlist[0]["odak"]]
 
@@ -499,14 +483,16 @@ def zenginlestir_ders(key: str):
                     "sayfa": rec["slide"],
                     "tur": "akis",
                     "odak": rec["odak"],
+                    "a": rec["a"],
+                    "b": rec["b"],
+                    "iliski": "aktive",
                     "etiket": rec["etiket"],
                     "etiket_konum": rec.get("etiket_konum", [0.10, 0.85]),
-                    "etiket_genislik": 0.45,
+                    "etiket_genislik": rec.get("etiket_genislik", 0.42),
                     "bas": 0,
-                    "son": 15,
+                    "son": 2,
                     "cumle": f"P{pi}.C{ci}"
                 }
-                # replace or add
                 var_komutlar = [new_cmd] + [k for k in var_komutlar if not (k.get("sayfa") == rec["slide"] and k.get("tur") == "akis")]
             aday_data["komutlar"] = var_komutlar
             taslak_aday.write_text(json.dumps(aday_data, ensure_ascii=False, indent=2), encoding='utf-8')
@@ -514,7 +500,7 @@ def zenginlestir_ders(key: str):
         except Exception as e:
             print(f"  Taslak cizim_aday.json yazılamadı: {e}")
 
-    print(f"  Cizim ve Isaret kaydedildi ({added_drawings} yeni radyoloji hat ve odak çizimi eklendi)")
+    print(f"  Cizim ve Isaret kaydedildi ({added_drawings} yeni hassas lezyon çizimi eklendi)")
     print(f"  Yeni metinHash: {new_h}")
 
 def main():

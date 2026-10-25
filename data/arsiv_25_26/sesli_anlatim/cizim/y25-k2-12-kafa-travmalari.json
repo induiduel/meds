@@ -6,22 +6,53 @@
    "0": [
     {
      "tur": "akis",
-     "etiket": "Tonsiller herniasyon (foramen magnum)",
+     "a": [
+      0.606,
+      0.69
+     ],
+     "b": [
+      0.734,
+      0.69
+     ],
+     "iliski": "aktive",
+     "etiket": "Foramen magnum altına tonsil herniasyonu",
      "odak": [
-      0.57,
-      0.311,
-      1.0,
-      1.0
+      0.7,
+      0.58,
+      0.86,
+      0.8
      ],
      "etiket_konum": [
-      0.138,
-      0.311
+      0.14,
+      0.6
      ],
      "etiket_genislik": 0.42,
      "s": 75,
      "k": [
       0,
-      137
+      19
+     ],
+     "yol": [
+      [
+       0.606,
+       0.69
+      ],
+      [
+       0.734,
+       0.69
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_hedef": [
+      0.7,
+      0.6386
+     ],
+     "etiket_boy": 0.0773,
+     "yakin": [
+      0.08,
+      0.52,
+      0.92,
+      0.86
      ]
     }
    ]
@@ -30,22 +61,37 @@
    "0": [
     {
      "tur": "akis",
-     "etiket": "Unkus herniasyonu ve mezensefalon basısı",
+     "a": [
+      0.34,
+      0.79
+     ],
+     "b": [
+      0.48,
+      0.79
+     ],
+     "iliski": "aktive",
+     "etiket": "Mezensefalon pedinkül basısı (Unkal herniasyon)",
      "odak": [
-      0.115,
-      0.61,
-      0.905,
-      1.0
+      0.32,
+      0.77,
+      0.5,
+      0.81
      ],
      "etiket_konum": [
-      0.115,
-      0.5267
+      0.32,
+      0.6867
      ],
      "etiket_genislik": 0.42,
      "s": 71,
      "k": [
       0,
-      114
+      19
+     ],
+     "yakin": [
+      0.26,
+      0.6267,
+      0.8,
+      0.87
      ]
     }
    ],
@@ -85,23 +131,43 @@
    "0": [
     {
      "tur": "akis",
-     "etiket": "Singulat girusun faks altından karşıya şifti",
+     "a": [
+      0.656,
+      0.63
+     ],
+     "b": [
+      0.764,
+      0.63
+     ],
+     "iliski": "aktive",
+     "etiket": "Septum pellusidum orta hat şifti (Subfalsin)",
      "odak": [
-      0.626,
-      0.417,
-      0.975,
-      0.894
+      0.74,
+      0.54,
+      0.86,
+      0.72
      ],
      "etiket_konum": [
-      0.194,
-      0.6169
+      0.308,
+      0.6427
      ],
      "etiket_genislik": 0.42,
      "s": 67,
      "k": [
       0,
-      122
-     ]
+      19
+     ],
+     "yol": [
+      [
+       0.656,
+       0.63
+      ],
+      [
+       0.764,
+       0.63
+      ]
+     ],
+     "rota": "kavis"
     },
     {
      "tur": "sema",
@@ -126,6 +192,1179 @@
      ],
      "genislik": 0.5,
      "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "47": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.066,
+      0.67
+     ],
+     "b": [
+      0.194,
+      0.67
+     ],
+     "iliski": "aktive",
+     "etiket": "Kup lezyonu: Darbe altı kontüzyon",
+     "odak": [
+      0.15,
+      0.56,
+      0.35,
+      0.78
+     ],
+     "etiket_konum": [
+      0.56,
+      0.34
+     ],
+     "etiket_genislik": 0.42,
+     "s": 48,
+     "k": [
+      0,
+      21
+     ],
+     "yol": [
+      [
+       0.066,
+       0.67
+      ],
+      [
+       0.194,
+       0.67
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_hedef": [
+      0.35,
+      0.56
+     ],
+     "etiket_boy": 0.0443
+    }
+   ]
+  },
+  "46": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.646,
+      0.68
+     ],
+     "b": [
+      0.754,
+      0.68
+     ],
+     "iliski": "aktive",
+     "etiket": "Kortikal mikrokanamalar (Tuz-biber paterni)",
+     "odak": [
+      0.72,
+      0.58,
+      0.88,
+      0.78
+     ],
+     "etiket_konum": [
+      0.288,
+      0.7027
+     ],
+     "etiket_genislik": 0.42,
+     "s": 47,
+     "k": [
+      0,
+      26
+     ],
+     "yol": [
+      [
+       0.646,
+       0.68
+      ],
+      [
+       0.754,
+       0.68
+      ]
+     ],
+     "rota": "kavis"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "İnferior anterior frontal lob",
+      "Anterior temporal kutup",
+      "Orbita tavanı kemik çıkıntıları"
+     ],
+     "baslik": "Kontüzyon Predileksiyon Alanları",
+     "s": 47,
+     "k": [
+      0,
+      82
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.68
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.008,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "40": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.56,
+      0.72
+     ],
+     "b": [
+      0.68,
+      0.72
+     ],
+     "iliski": "aktive",
+     "etiket": "Silviyan ve sulkal hiperdansite (SAH)",
+     "odak": [
+      0.54,
+      0.7,
+      0.7,
+      0.74
+     ],
+     "etiket_konum": [
+      0.4,
+      0.79
+     ],
+     "etiket_genislik": 0.42,
+     "s": 41,
+     "k": [
+      0,
+      28
+     ],
+     "etiket_hedef": [
+      0.61,
+      0.74
+     ],
+     "etiket_boy": 0.0773
+    }
+   ]
+  },
+  "35": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.606,
+      0.53
+     ],
+     "b": [
+      0.714,
+      0.53
+     ],
+     "iliski": "aktive",
+     "etiket": "Sulkus silinmesi ve izodens kitle etkisi",
+     "odak": [
+      0.68,
+      0.38,
+      0.84,
+      0.68
+     ],
+     "etiket_konum": [
+      0.18,
+      0.62
+     ],
+     "etiket_genislik": 0.42,
+     "s": 36,
+     "k": [
+      0,
+      19
+     ],
+     "yol": [
+      [
+       0.606,
+       0.53
+      ],
+      [
+       0.714,
+       0.53
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_hedef": [
+      0.68,
+      0.6586
+     ],
+     "etiket_boy": 0.0773
+    }
+   ]
+  },
+  "34": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.5,
+      0.366
+     ],
+     "b": [
+      0.5,
+      0.514
+     ],
+     "iliski": "aktive",
+     "etiket": "Hematokrit seviyelenmesi (Akut/Kronik faz)",
+     "odak": [
+      0.36,
+      0.45,
+      0.64,
+      0.68
+     ],
+     "etiket_konum": [
+      0.36,
+      0.3667
+     ],
+     "etiket_genislik": 0.42,
+     "s": 35,
+     "k": [
+      0,
+      31
+     ],
+     "yol": [
+      [
+       0.5,
+       0.366
+      ],
+      [
+       0.5052,
+       0.3752
+      ],
+      [
+       0.5097,
+       0.3845
+      ],
+      [
+       0.5135,
+       0.3938
+      ],
+      [
+       0.5167,
+       0.403
+      ],
+      [
+       0.5191,
+       0.4123
+      ],
+      [
+       0.5208,
+       0.4215
+      ],
+      [
+       0.5219,
+       0.4307
+      ],
+      [
+       0.5222,
+       0.44
+      ],
+      [
+       0.5219,
+       0.4492
+      ],
+      [
+       0.5208,
+       0.4585
+      ],
+      [
+       0.5191,
+       0.4677
+      ],
+      [
+       0.5167,
+       0.477
+      ],
+      [
+       0.5135,
+       0.4862
+      ],
+      [
+       0.5097,
+       0.4955
+      ],
+      [
+       0.5052,
+       0.5048
+      ],
+      [
+       0.5,
+       0.514
+      ]
+     ],
+     "rota": "kavis",
+     "yakin": [
+      0.3,
+      0.306,
+      0.84,
+      0.74
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Subakut dönemde izodens görünüm",
+      "Kortikal sulkusların silinmesi",
+      "Ventriküllerde bası etkisi",
+      "İki taraflı olgular"
+     ],
+     "baslik": "İzodens Subdural Hematom İpuçları",
+     "s": 36,
+     "k": [
+      0,
+      94
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.76
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1434,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "32": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.814,
+      0.49
+     ],
+     "b": [
+      0.686,
+      0.49
+     ],
+     "iliski": "aktive",
+     "etiket": "Tüm hemisferi saran kresentik SDH",
+     "odak": [
+      0.62,
+      0.32,
+      0.76,
+      0.66
+     ],
+     "etiket_konum": [
+      0.14,
+      0.66
+     ],
+     "etiket_genislik": 0.42,
+     "s": 33,
+     "k": [
+      0,
+      25
+     ],
+     "yol": [
+      [
+       0.814,
+       0.49
+      ],
+      [
+       0.686,
+       0.49
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_hedef": [
+      0.62,
+      0.66
+     ],
+     "etiket_boy": 0.0443
+    },
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Senil serebral atrofi",
+      "Subdural boşluğun genişlemesi",
+      "Köprü venlerinin gerilmesi",
+      "Minör travmayla kronik kanama"
+     ],
+     "s": 33,
+     "k": [
+      0,
+      81
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.66
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.45,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.1297,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "31": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.10600000000000001,
+      0.52
+     ],
+     "b": [
+      0.23399999999999999,
+      0.52
+     ],
+     "iliski": "aktive",
+     "etiket": "Epidural: Bikonveks lens (sutürü geçmez)",
+     "odak": [
+      0.2,
+      0.4,
+      0.34,
+      0.64
+     ],
+     "etiket_konum": [
+      0.04,
+      0.28
+     ],
+     "etiket_genislik": 0.42,
+     "s": 32,
+     "k": [
+      0,
+      19
+     ],
+     "yol": [
+      [
+       0.106,
+       0.52
+      ],
+      [
+       0.234,
+       0.52
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_hedef": [
+      0.25,
+      0.4
+     ],
+     "etiket_boy": 0.0773,
+     "yakin": [
+      0,
+      0.22,
+      0.52,
+      0.7
+     ]
+    }
+   ]
+  },
+  "29": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.78,
+      0.51
+     ],
+     "b": [
+      0.65,
+      0.51
+     ],
+     "iliski": "aktive",
+     "etiket": "Hilal biçimli kresentik kanama (Akut SDH)",
+     "odak": [
+      0.63,
+      0.49,
+      0.8,
+      0.53
+     ],
+     "etiket_konum": [
+      0.198,
+      0.49
+     ],
+     "etiket_genislik": 0.42,
+     "s": 30,
+     "k": [
+      0,
+      22
+     ]
+    }
+   ]
+  },
+  "25": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.126,
+      0.38
+     ],
+     "b": [
+      0.274,
+      0.38
+     ],
+     "iliski": "aktive",
+     "etiket": "Sağ frontal kalvaryal bikonveks EDH",
+     "odak": [
+      0.22,
+      0.24,
+      0.42,
+      0.52
+     ],
+     "etiket_konum": [
+      0.52,
+      0.12
+     ],
+     "etiket_genislik": 0.42,
+     "s": 26,
+     "k": [
+      0,
+      30
+     ],
+     "yol": [
+      [
+       0.126,
+       0.38
+      ],
+      [
+       0.1353,
+       0.3774
+      ],
+      [
+       0.1445,
+       0.3751
+      ],
+      [
+       0.1538,
+       0.3732
+      ],
+      [
+       0.163,
+       0.3717
+      ],
+      [
+       0.1723,
+       0.3705
+      ],
+      [
+       0.1815,
+       0.3696
+      ],
+      [
+       0.1908,
+       0.3691
+      ],
+      [
+       0.2,
+       0.3689
+      ],
+      [
+       0.2093,
+       0.3691
+      ],
+      [
+       0.2185,
+       0.3696
+      ],
+      [
+       0.2278,
+       0.3705
+      ],
+      [
+       0.237,
+       0.3717
+      ],
+      [
+       0.2463,
+       0.3732
+      ],
+      [
+       0.2555,
+       0.3751
+      ],
+      [
+       0.2648,
+       0.3774
+      ],
+      [
+       0.274,
+       0.38
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_hedef": [
+      0.42,
+      0.24
+     ],
+     "etiket_boy": 0.0443
+    }
+   ]
+  },
+  "22": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.646,
+      0.66
+     ],
+     "b": [
+      0.774,
+      0.66
+     ],
+     "iliski": "aktive",
+     "etiket": "Verteks düzeyinde hiperdens EDH",
+     "odak": [
+      0.72,
+      0.54,
+      0.88,
+      0.78
+     ],
+     "etiket_konum": [
+      0.18,
+      0.66
+     ],
+     "etiket_genislik": 0.42,
+     "s": 23,
+     "k": [
+      0,
+      23
+     ],
+     "yol": [
+      [
+       0.646,
+       0.66
+      ],
+      [
+       0.774,
+       0.66
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_hedef": [
+      0.72,
+      0.6822
+     ],
+     "etiket_boy": 0.0443
+    }
+   ]
+  },
+  "21": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.10600000000000001,
+      0.55
+     ],
+     "b": [
+      0.254,
+      0.55
+     ],
+     "iliski": "aktive",
+     "etiket": "İç tabula - dura arası hiperdens EDH",
+     "odak": [
+      0.22,
+      0.42,
+      0.38,
+      0.68
+     ],
+     "etiket_konum": [
+      0.22,
+      0.3697
+     ],
+     "etiket_genislik": 0.42,
+     "s": 22,
+     "k": [
+      0,
+      28
+     ],
+     "yol": [
+      [
+       0.106,
+       0.55
+      ],
+      [
+       0.254,
+       0.55
+      ]
+     ],
+     "rota": "kavis",
+     "yakin": [
+      0.046,
+      0.3097,
+      0.7,
+      0.74
+     ]
+    }
+   ]
+  },
+  "20": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.626,
+      0.37
+     ],
+     "b": [
+      0.6185454545454545,
+      0.4484848484848485
+     ],
+     "iliski": "aktive",
+     "etiket": "Transvers-sigmoid sinüs komşuluğu venöz EDH",
+     "odak": [
+      0.68,
+      0.26,
+      0.88,
+      0.48
+     ],
+     "etiket_konum": [
+      0.18,
+      0.04
+     ],
+     "etiket_genislik": 0.42,
+     "s": 21,
+     "k": [
+      0,
+      30
+     ],
+     "yol": [
+      [
+       0.626,
+       0.37
+      ],
+      [
+       0.6185,
+       0.4485
+      ]
+     ],
+     "rota": "kavis",
+     "hedef_kutu": [
+      0.6205,
+      0.3342,
+      0.7695,
+      0.5628
+     ],
+     "etiket_hedef": [
+      0.68,
+      0.26
+     ],
+     "etiket_boy": 0.0773
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Venöz sinüs yırtıkları sonucu",
+      "Çocuklarda sık görülür",
+      "Kırık eşlik etmeyebilir"
+     ],
+     "baslik": "Venöz Epidural Hematom",
+     "s": 21,
+     "k": [
+      0,
+      80
+     ],
+     "tip": "liste",
+     "konum": [
+      0.64,
+      0.64
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.008,
+     "kutu_h": 0.348,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "19": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.5849981842041015,
+      0.6794696101435909
+     ],
+     "b": [
+      0.6930909090909091,
+      0.6794696101435909
+     ],
+     "iliski": "aktive",
+     "etiket": "Dışbükey lens kitle etkisi ve ventrikül basısı",
+     "odak": [
+      0.72,
+      0.52,
+      0.86,
+      0.74
+     ],
+     "etiket_konum": [
+      0.288,
+      0.52
+     ],
+     "etiket_genislik": 0.42,
+     "s": 20,
+     "k": [
+      0,
+      19
+     ],
+     "yol": [
+      [
+       0.585,
+       0.6795
+      ],
+      [
+       0.6931,
+       0.6795
+      ]
+     ],
+     "rota": "duz",
+     "kaynak_kutu": [
+      0.031,
+      0.652,
+      0.583,
+      0.707
+     ],
+     "hedef_kutu": [
+      0.6951,
+      0.4748,
+      0.9376,
+      0.9167
+     ]
+    },
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Hiperdens beyaz dansite",
+      "Bikonveks lentiform mercek şekli",
+      "Sütür hatlarını aşamaz",
+      "Düzgün sınırlı kitle"
+     ],
+     "baslik": "Epidural Hematom Radyolojik Kriterleri",
+     "s": 20,
+     "k": [
+      0,
+      102
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.97
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3534,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "17": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.686,
+      0.26
+     ],
+     "b": [
+      0.794,
+      0.26
+     ],
+     "iliski": "aktive",
+     "etiket": "Temporal kemik kırık hattı ve arteriyel EDH",
+     "odak": [
+      0.76,
+      0.16,
+      0.9,
+      0.36
+     ],
+     "etiket_konum": [
+      0.26,
+      0.0
+     ],
+     "etiket_genislik": 0.42,
+     "s": 18,
+     "k": [
+      0,
+      19
+     ],
+     "yol": [
+      [
+       0.686,
+       0.26
+      ],
+      [
+       0.6928,
+       0.2619
+      ],
+      [
+       0.6995,
+       0.2635
+      ],
+      [
+       0.7063,
+       0.2649
+      ],
+      [
+       0.713,
+       0.2661
+      ],
+      [
+       0.7198,
+       0.267
+      ],
+      [
+       0.7265,
+       0.2676
+      ],
+      [
+       0.7332,
+       0.268
+      ],
+      [
+       0.74,
+       0.2681
+      ],
+      [
+       0.7468,
+       0.268
+      ],
+      [
+       0.7535,
+       0.2676
+      ],
+      [
+       0.7603,
+       0.267
+      ],
+      [
+       0.767,
+       0.2661
+      ],
+      [
+       0.7738,
+       0.2649
+      ],
+      [
+       0.7805,
+       0.2635
+      ],
+      [
+       0.7873,
+       0.2619
+      ],
+      [
+       0.794,
+       0.26
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_hedef": [
+      0.76,
+      0.16
+     ],
+     "etiket_boy": 0.0773
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Travma anında bilinç kaybı",
+      "Lucid interval geçici iyilik hali",
+      "Hematom büyümesi ve kitle etkisi",
+      "Hızlı bilinç kaybı ve koma"
+     ],
+     "s": 18,
+     "k": [
+      0,
+      85
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.9
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.45,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3697,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "15": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.666,
+      0.52
+     ],
+     "b": [
+      0.814,
+      0.52
+     ],
+     "iliski": "aktive",
+     "etiket": "Bikonveks lens hiperdansitesi (Epidural hematom)",
+     "odak": [
+      0.78,
+      0.38,
+      0.92,
+      0.66
+     ],
+     "etiket_konum": [
+      0.18,
+      0.38
+     ],
+     "etiket_genislik": 0.42,
+     "s": 16,
+     "k": [
+      0,
+      26
+     ],
+     "yol": [
+      [
+       0.666,
+       0.52
+      ],
+      [
+       0.6752,
+       0.5148
+      ],
+      [
+       0.6845,
+       0.5103
+      ],
+      [
+       0.6937,
+       0.5065
+      ],
+      [
+       0.703,
+       0.5033
+      ],
+      [
+       0.7122,
+       0.5009
+      ],
+      [
+       0.7215,
+       0.4992
+      ],
+      [
+       0.7308,
+       0.4981
+      ],
+      [
+       0.74,
+       0.4978
+      ],
+      [
+       0.7492,
+       0.4981
+      ],
+      [
+       0.7585,
+       0.4992
+      ],
+      [
+       0.7678,
+       0.5009
+      ],
+      [
+       0.777,
+       0.5033
+      ],
+      [
+       0.7863,
+       0.5065
+      ],
+      [
+       0.7955,
+       0.5103
+      ],
+      [
+       0.8047,
+       0.5148
+      ],
+      [
+       0.814,
+       0.52
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_hedef": [
+      0.78,
+      0.4186
+     ],
+     "etiket_boy": 0.0773
+    },
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Kafatası iç tabulası",
+      "Potansiyel epidural aralık",
+      "Dura mater yaprağı"
+     ],
+     "baslik": "Epidural Hematom Anatomisi",
+     "s": 16,
+     "k": [
+      0,
+      85
+     ],
+     "tip": "liste",
+     "konum": [
+      0.07,
+      0.47
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.001,
      "kutu_h": 0.308,
      "yon": "yatay",
      "olcek": 1.0
@@ -207,61 +1446,6 @@
     }
    ]
   },
-  "46": {
-   "0": [
-    {
-     "tur": "akis",
-     "etiket": "Frontal ve temporal tabanda tuz-biber kontüzyon",
-     "odak": [
-      0.642,
-      0.417,
-      1.0,
-      1.0
-     ],
-     "etiket_konum": [
-      0.21,
-      0.6699
-     ],
-     "etiket_genislik": 0.42,
-     "s": 47,
-     "k": [
-      0,
-      159
-     ]
-    }
-   ],
-   "2": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "İnferior anterior frontal lob",
-      "Anterior temporal kutup",
-      "Orbita tavanı kemik çıkıntıları"
-     ],
-     "baslik": "Kontüzyon Predileksiyon Alanları",
-     "s": 47,
-     "k": [
-      0,
-      82
-     ],
-     "tip": "liste",
-     "konum": [
-      0.05,
-      0.68
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.308,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.008,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
   "42": {
    "0": [
     {
@@ -288,370 +1472,6 @@
       0.247
      ],
      "etiket_boy": 0.0773
-    }
-   ]
-  },
-  "35": {
-   "0": [
-    {
-     "tur": "akis",
-     "etiket": "Parankimle aynı dansitede izodens subdural hematom",
-     "odak": [
-      0.626,
-      0.269,
-      1.0,
-      0.832
-     ],
-     "etiket_konum": [
-      0.194,
-      0.7547
-     ],
-     "etiket_genislik": 0.42,
-     "s": 36,
-     "k": [
-      0,
-      133
-     ]
-    }
-   ]
-  },
-  "34": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Subakut dönemde izodens görünüm",
-      "Kortikal sulkusların silinmesi",
-      "Ventriküllerde bası etkisi",
-      "İki taraflı olgular"
-     ],
-     "baslik": "İzodens Subdural Hematom İpuçları",
-     "s": 36,
-     "k": [
-      0,
-      94
-     ],
-     "tip": "liste",
-     "konum": [
-      0.05,
-      0.76
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.363,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.1434,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "32": {
-   "0": [
-    {
-     "tur": "akis",
-     "etiket": "Yaşlı hastada kitle etkisi ve ventrikül basısı",
-     "odak": [
-      0.575,
-      0.237,
-      1.0,
-      0.772
-     ],
-     "etiket_konum": [
-      0.143,
-      0.6947
-     ],
-     "etiket_genislik": 0.42,
-     "s": 33,
-     "k": [
-      0,
-      120
-     ]
-    },
-    {
-     "tur": "sema",
-     "sablon": "mekanizma_adimlari",
-     "sablon_ad": "Mekanizma basamakları",
-     "duzen": "zincir",
-     "ogeler": [
-      "Senil serebral atrofi",
-      "Subdural boşluğun genişlemesi",
-      "Köprü venlerinin gerilmesi",
-      "Minör travmayla kronik kanama"
-     ],
-     "s": 33,
-     "k": [
-      0,
-      81
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.05,
-      0.66
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.45,
-     "yon": "dikey",
-     "olcek": 1.0,
-     "ek_alt": 0.1297,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "31": {
-   "0": [
-    {
-     "tur": "akis",
-     "etiket": "Epidural (bikonveks lens) vs Subdural (hilal) ayrımı",
-     "odak": [
-      0.106,
-      0.206,
-      0.918,
-      0.932
-     ],
-     "etiket_konum": [
-      0.0,
-      0.02
-     ],
-     "etiket_genislik": 0.42,
-     "s": 32,
-     "k": [
-      0,
-      138
-     ],
-     "etiket_hedef": [
-      0.21,
-      0.206
-     ],
-     "etiket_boy": 0.0773
-    }
-   ]
-  },
-  "25": {
-   "0": [
-    {
-     "tur": "akis",
-     "etiket": "Sağ frontal ve verteks epidural hematomu",
-     "odak": [
-      0.099,
-      0.122,
-      0.909,
-      0.794
-     ],
-     "etiket_konum": [
-      0.099,
-      0.0327
-     ],
-     "etiket_genislik": 0.42,
-     "s": 26,
-     "k": [
-      0,
-      125
-     ]
-    }
-   ]
-  },
-  "21": {
-   "0": [
-    {
-     "tur": "akis",
-     "etiket": "İç tabula - dura arası hiperdens kitle etkisi",
-     "odak": [
-      0.051,
-      0.258,
-      0.5,
-      0.857
-     ],
-     "etiket_konum": [
-      0.051,
-      0.1747
-     ],
-     "etiket_genislik": 0.42,
-     "s": 22,
-     "k": [
-      0,
-      127
-     ]
-    }
-   ]
-  },
-  "20": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Venöz sinüs yırtıkları sonucu",
-      "Çocuklarda sık görülür",
-      "Kırık eşlik etmeyebilir"
-     ],
-     "baslik": "Venöz Epidural Hematom",
-     "s": 21,
-     "k": [
-      0,
-      80
-     ],
-     "tip": "liste",
-     "konum": [
-      0.64,
-      0.64
-     ],
-     "genislik": 0.34,
-     "doluluk": 0.008,
-     "kutu_h": 0.348,
-     "yon": "yatay",
-     "olcek": 1.0
-    }
-   ]
-  },
-  "19": {
-   "0": [
-    {
-     "tur": "akis",
-     "etiket": "Karakteristik bikonveks hiperdens kitle etkisi",
-     "odak": [
-      0.634,
-      0.468,
-      0.995,
-      0.932
-     ],
-     "etiket_konum": [
-      0.36,
-      0.26
-     ],
-     "etiket_genislik": 0.42,
-     "s": 20,
-     "k": [
-      0,
-      139
-     ],
-     "etiket_hedef": [
-      0.634,
-      0.468
-     ],
-     "etiket_boy": 0.0773
-    },
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Hiperdens beyaz dansite",
-      "Bikonveks lentiform mercek şekli",
-      "Sütür hatlarını aşamaz",
-      "Düzgün sınırlı kitle"
-     ],
-     "baslik": "Epidural Hematom Radyolojik Kriterleri",
-     "s": 20,
-     "k": [
-      0,
-      102
-     ],
-     "tip": "liste",
-     "konum": [
-      0.05,
-      0.97
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.363,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.3534,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "17": {
-   "0": [
-    {
-     "tur": "akis",
-     "etiket": "Temporal kemik kırığı ve epidural hematom",
-     "odak": [
-      0.697,
-      0.05,
-      0.99,
-      0.479
-     ],
-     "etiket_konum": [
-      0.26,
-      0.0
-     ],
-     "etiket_genislik": 0.42,
-     "s": 18,
-     "k": [
-      0,
-      118
-     ]
-    }
-   ],
-   "2": [
-    {
-     "tur": "sema",
-     "sablon": "mekanizma_adimlari",
-     "sablon_ad": "Mekanizma basamakları",
-     "duzen": "zincir",
-     "ogeler": [
-      "Travma anında bilinç kaybı",
-      "Lucid interval geçici iyilik hali",
-      "Hematom büyümesi ve kitle etkisi",
-      "Hızlı bilinç kaybı ve koma"
-     ],
-     "s": 18,
-     "k": [
-      0,
-      85
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.05,
-      0.9
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.45,
-     "yon": "dikey",
-     "olcek": 1.0,
-     "ek_alt": 0.3697,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "15": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Kafatası iç tabulası",
-      "Potansiyel epidural aralık",
-      "Dura mater yaprağı"
-     ],
-     "baslik": "Epidural Hematom Anatomisi",
-     "s": 16,
-     "k": [
-      0,
-      85
-     ],
-     "tip": "liste",
-     "konum": [
-      0.08,
-      0.39
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.001,
-     "kutu_h": 0.308,
-     "yon": "yatay",
-     "olcek": 1.0
     }
    ]
   },
@@ -1313,12 +2133,9 @@
   }
  },
  "rapor": {
-  "aday": 54,
-  "gecti": 43,
+  "aday": 56,
+  "gecti": 50,
   "ret": {
-   "kelime aralığı geçersiz (0–15, cümle 14 kelime)": 2,
-   "kelime aralığı geçersiz (0–15, cümle 15 kelime)": 2,
-   "kelime aralığı geçersiz (0–15, cümle 13 kelime)": 1,
    "panel metni 'Duranın kemikten sıyrılması' henüz anlatılmamış": 1,
    "resim sayfasında panel (H51)": 5
   }

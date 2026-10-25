@@ -79,6 +79,31 @@
         "cizimSayisi": 23,
         "cikmisEslesme": 14
       }
+    },
+    {
+      "surum": 4,
+      "tarih": "2026-10-25 22:25",
+      "neden": "lezyon odakli dar cerceve ve oklar",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi spinal travmalar.pdf (57 sayfa) kaynağından 0 atlanan sayfa ile 57 paragraf / 173 cümlelik sesli anlatım üretildi.",
+        "16 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 27 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 24.7 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 1482,
+        "sureDk": 24.7,
+        "sayfaSayisi": 57,
+        "atlananSayfa": 0,
+        "bolumSayisi": 13,
+        "paragrafSayisi": 57,
+        "cumleSayisi": 173,
+        "slaytAdimSayisi": 16,
+        "cizimSayisi": 27,
+        "cikmisEslesme": 14
+      }
     }
   ]
 }

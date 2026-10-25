@@ -2,27 +2,136 @@
  "surum": 1,
  "metinHash": "d548eb3b8662b42b6992fff32c593153cb6d54cc",
  "p": {
+  "15": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.586,
+      0.57
+     ],
+     "b": [
+      0.714,
+      0.57
+     ],
+     "iliski": "aktive",
+     "etiket": "Pedikül erozyonu: Göz Kırpan Baykuş (Winking Owl)",
+     "odak": [
+      0.68,
+      0.46,
+      0.86,
+      0.68
+     ],
+     "etiket_konum": [
+      0.58,
+      0.351
+     ],
+     "etiket_genislik": 0.42,
+     "s": 16,
+     "k": [
+      0,
+      28
+     ],
+     "yol": [
+      [
+       0.586,
+       0.57
+      ],
+      [
+       0.714,
+       0.57
+      ]
+     ],
+     "rota": "kavis",
+     "yakin": [
+      0.52,
+      0.291,
+      1,
+      0.74
+     ]
+    }
+   ],
+   "7": [
+    {
+     "tur": "sema",
+     "sablon": "maskeleyen",
+     "sablon_ad": "Görünen neden altta yatanı örter",
+     "duzen": "maske",
+     "basliklar": [
+      "İlk izlenim",
+      "Atlanmaması gereken"
+     ],
+     "bag": "maskeleyebilir",
+     "gorunen": "Osteomiyelit",
+     "altta": [
+      "Ewing sarkomu"
+     ],
+     "s": 17,
+     "k": [
+      0,
+      63
+     ],
+     "tip": "maske",
+     "konum": [
+      0.05,
+      0.84
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.357,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2174,
+     "ek_renk": "#0d0d0d"
+    }
+   ]
+  },
   "7": {
    "0": [
     {
      "tur": "akis",
-     "etiket": "Vertebra korpus patolojik çökmesi ve epidural bası",
+     "a": [
+      0.586,
+      0.67
+     ],
+     "b": [
+      0.734,
+      0.67
+     ],
+     "iliski": "aktive",
+     "etiket": "Vertebra korpus ekspansil litik destrüksiyonu",
      "odak": [
-      0.1,
-      0.2,
+      0.68,
+      0.54,
       0.9,
-      0.9
+      0.8
      ],
      "etiket_konum": [
-      0.0,
+      0.06,
       0.8
      ],
      "etiket_genislik": 0.42,
      "s": 8,
      "k": [
       0,
-      110
-     ]
+      17
+     ],
+     "yol": [
+      [
+       0.586,
+       0.67
+      ],
+      [
+       0.734,
+       0.67
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_hedef": [
+      0.68,
+      0.8
+     ],
+     "etiket_boy": 0.103
     }
    ],
    "7": [
@@ -61,23 +170,103 @@
    "0": [
     {
      "tur": "akis",
-     "etiket": "Pedikül erozyonu: Göz Kırpan Baykuş (Winking Owl) belirtisi",
+     "a": [
+      0.634,
+      0.44
+     ],
+     "b": [
+      0.526,
+      0.44
+     ],
+     "iliski": "aktive",
+     "etiket": "Arka eleman nidus ve sklerotik rim (Osteoblastom)",
      "odak": [
-      0.1,
-      0.2,
-      0.9,
-      0.9
+      0.46,
+      0.36,
+      0.58,
+      0.52
      ],
      "etiket_konum": [
-      0.1,
-      0.091
+      0.46,
+      0.251
      ],
      "etiket_genislik": 0.42,
      "s": 6,
      "k": [
       0,
-      126
-     ]
+      31
+     ],
+     "yol": [
+      [
+       0.634,
+       0.44
+      ],
+      [
+       0.6273,
+       0.4362
+      ],
+      [
+       0.6205,
+       0.4329
+      ],
+      [
+       0.6138,
+       0.4301
+      ],
+      [
+       0.607,
+       0.4279
+      ],
+      [
+       0.6003,
+       0.4261
+      ],
+      [
+       0.5935,
+       0.4248
+      ],
+      [
+       0.5868,
+       0.4241
+      ],
+      [
+       0.58,
+       0.4238
+      ],
+      [
+       0.5733,
+       0.4241
+      ],
+      [
+       0.5665,
+       0.4248
+      ],
+      [
+       0.5597,
+       0.4261
+      ],
+      [
+       0.553,
+       0.4279
+      ],
+      [
+       0.5463,
+       0.4301
+      ],
+      [
+       0.5395,
+       0.4329
+      ],
+      [
+       0.5328,
+       0.4362
+      ],
+      [
+       0.526,
+       0.44
+      ]
+     ],
+     "rota": "kavis"
     }
    ],
    "6": [
@@ -323,42 +512,6 @@
     }
    ]
   },
-  "15": {
-   "7": [
-    {
-     "tur": "sema",
-     "sablon": "maskeleyen",
-     "sablon_ad": "Görünen neden altta yatanı örter",
-     "duzen": "maske",
-     "basliklar": [
-      "İlk izlenim",
-      "Atlanmaması gereken"
-     ],
-     "bag": "maskeleyebilir",
-     "gorunen": "Osteomiyelit",
-     "altta": [
-      "Ewing sarkomu"
-     ],
-     "s": 17,
-     "k": [
-      0,
-      63
-     ],
-     "tip": "maske",
-     "konum": [
-      0.05,
-      0.84
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.357,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.2174,
-     "ek_renk": "#0d0d0d"
-    }
-   ]
-  },
   "16": {
    "7": [
     {
@@ -427,8 +580,8 @@
   }
  },
  "rapor": {
-  "aday": 14,
-  "gecti": 13,
+  "aday": 15,
+  "gecti": 14,
   "ret": {
    "kelime aralığı geçersiz (0–15, cümle 15 kelime)": 1
   }
