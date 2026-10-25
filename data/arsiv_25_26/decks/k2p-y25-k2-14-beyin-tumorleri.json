@@ -1,0 +1,2037 @@
+{
+ "id": "k2p-y25-k2-14-beyin-tumorleri",
+ "deckId": "k2p-y25-k2-14-beyin-tumorleri",
+ "courseCode": "k2-14",
+ "title": "İntrakraniyal Kitlelerde Belirti ve Bulgular (Beyin Tümörleri)",
+ "shortTitle": "Beyin Tümörleri",
+ "department": "Beyin ve Sinir Cerrahisi",
+ "discipline": "Beyin ve Sinir Cerrahisi",
+ "subject": "Beyin ve Sinir Cerrahisi",
+ "committee": "donem3-kurul2",
+ "sourcePdf": "y25-k2-14-beyin-tumorleri.pdf",
+ "sayfaHaritasi": "teyitli",
+ "totalSlides": 16,
+ "slides": [
+  {
+   "slideNumber": 1,
+   "title": "İntrakraniyal Kitlelere Giriş, DSÖ Sınıflaması ve Biyolojik Davranış",
+   "bolum": "1",
+   "section": "1",
+   "pdfSayfalari": [
+    1,
+    5
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 1,
+    "endPage": 5
+   },
+   "content": "İntrakraniyal kitleler, kafatasının rijit ve genişleyemez kemik yapısı nedeniyle sistemik neoplazilerden çok farklı bir biyolojik davranış sergiler. Dünya Sağlık Örgütü bu kitleleri nöroepitelyal doku, meninks, kraniyal ve spinal sinir, germ hücreli, sellar ve metastatik tümörler olarak sınıflandırır.\n\n- **Benign ve Malign Ayrımı:** Kraniyal kavite içinde histolojik olarak selim bir tümör bile yerleşimi gereği medullaya bası yaparak kardiyorespiratuar arrest geliştirebilir; bu nedenle anatomik lokalizasyon hayati önem taşır.\n- **Metastaz ve Yayılım Özelliği:** Malign intrakraniyal tümörler merkezi sinir sistemi dışına neredeyse hiç metastaz yapmaz; buna karşın beyin omurilik sıvısı yoluyla kraniyospinal aks boyunca yayılım gösterebilir.\n- **Cerrahi Sınırlar:** Çevreleyen nöral parankimin fonksiyonel önemi nedeniyle cerrahi rezeksiyon sınırları çoğu zaman anatomik olarak kısıtlıdır.\n\n> [!IMPORTANT]\n> İntrakraniyal alanda tümörün histopatolojik derecesi kadar anatomik yerleşimi ve hayati beyin sapı merkezlerine bası potansiyeli klinik gidişi belirler.",
+   "synthesisNarrative": "İntrakraniyal kitleler, kafatasının rijit ve genişleyemez kemik yapısı nedeniyle sistemik neoplazilerden çok farklı bir biyolojik davranış sergiler. Dünya Sağlık Örgütü bu kitleleri nöroepitelyal doku, meninks, kraniyal ve spinal sinir, germ hücreli, sellar ve metastatik tümörler olarak sınıflandırır.\n\n- **Benign ve Malign Ayrımı:** Kraniyal kavite içinde histolojik olarak selim bir tümör bile yerleşimi gereği medullaya bası yaparak kardiyorespiratuar arrest geliştirebilir; bu nedenle anatomik lokalizasyon hayati önem taşır.\n- **Metastaz ve Yayılım Özelliği:** Malign intrakraniyal tümörler merkezi sinir sistemi dışına neredeyse hiç metastaz yapmaz; buna karşın beyin omurilik sıvısı yoluyla kraniyospinal aks boyunca yayılım gösterebilir.\n- **Cerrahi Sınırlar:** Çevreleyen nöral parankimin fonksiyonel önemi nedeniyle cerrahi rezeksiyon sınırları çoğu zaman anatomik olarak kısıtlıdır.\n\n> [!IMPORTANT]\n> İntrakraniyal alanda tümörün histopatolojik derecesi kadar anatomik yerleşimi ve hayati beyin sapı merkezlerine bası potansiyeli klinik gidişi belirler.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "İntrakraniyal kitlelerin biyolojik davranışını sistemik organ neoplazilerinden ayıran temel özellik hangisidir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Malign beyin tümörleri merkezi sinir sistemi dışına nadiren yayılır, yayılım genellikle beyin omurilik sıvısı yoluyla gerçekleşir.",
+       "isCorrect": true,
+       "explanation": "Merkezi sinir sistemi neoplazileri subaraknoid mesafede beyin omurilik sıvısı akımı boyunca kraniyospinal aksa yayılarak ilerler. Kan-beyin bariyeri ve lenfatik drenaj kısıtlılığı ise uzak visseral organ metastazlarını engeller."
+      },
+      {
+       "key": "B",
+       "text": "İntrakraniyal selim tümörler çevre nöral dokularda hiçbir zaman kitle etkisi veya bası oluşturmaz.",
+       "isCorrect": false,
+       "explanation": "Selim intrakraniyal kitleler histolojik olarak diferansiye yapıda olsalar bile genişleyen kitle etkisi gösterirler. Kafatasının rijit kemik anatomisi nedeniyle bu genişleme medullayı sıkıştırarak ölümcül bası tablosu doğurur."
+      },
+      {
+       "key": "C",
+       "text": "Benign intrakraniyal lezyonların tamamı cerrahi olarak sınırsız geniş güvenlik marjıyla rezeke edilir.",
+       "isCorrect": false,
+       "explanation": "Nöroşirürjikal rezeksiyonlarda motor ve duyusal kortikal alanların anatomik bütünlüğünün korunması temel esastır. Bu fonksiyonel zorunluluk cerrahi sınırlarda agresif doku rezeksiyonunu kısıtlar."
+      },
+      {
+       "key": "D",
+       "text": "İntrakraniyal kitlelerde histolojik derece iyi huylu olduğunda hiçbir zaman solunum durması gelişmez.",
+       "isCorrect": false,
+       "explanation": "Beyin sapındaki medulla oblangata dolaşım ve solunumun primer otonom merkezlerini barındırır. Histolojisi benign olan yer kaplayıcı kitleler bu merkeze doğrudan bası yaparak ölümcül kardiyorespiratuar arreste yol açar."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kraniyal kavite içinde histolojik olarak selim bir tümör bile yerleşimi gereği medullaya bası yaparak kardiyorespiratuar arrest geliştirebilir.",
+     "maskedTerm": "kardiyorespiratuar arrest",
+     "hint": "Dolaşım ve solunumun hayati kontrol merkezlerinin tamamen durması tablosu"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "İntrakraniyal Kitlelerin Biyolojik Davranış Özellikleri",
+     "items": [
+      {
+       "text": "Malign intrakraniyal tümörler merkezi sinir sistemi dışındaki organlara çok nadiren metastaz yapar.",
+       "isLie": false,
+       "explanation": "Kan-beyin bariyeri ve lenfatik kanalların kısıtlılığı nedeniyle intrakraniyal malignitelerin sistemik metastazı son derece nadirdir."
+      },
+      {
+       "text": "İntrakraniyal malignitelerin yayılımı sıklıkla subaraknoid aralıkta beyin omurilik sıvısı dolaşımı yoluyla gerçekleşir.",
+       "isLie": false,
+       "explanation": "Tümör hücreleri ventrikül veya subaraknoid mesafeye dökülerek BOS akımı boyunca kraniyospinal eksene yayılım gösterebilir."
+      },
+      {
+       "text": "Kafatasının rijit yapısı sayesinde intrakraniyal kitleler çevre parankime bası yapmadan sınırsızca büyüyebilir.",
+       "isLie": true,
+       "explanation": "Kafatası kapalı ve rijit bir kemik kutu olduğundan kitle büyüdükçe intrakraniyal basınç artar ve nöral dokular hızla bası altında kalır."
+      },
+      {
+       "text": "Kritik nöral merkezlerin komşuluğu nedeniyle beyin kitlelerinde cerrahi rezeksiyon sınırları çoğu zaman kısıtlı kalır.",
+       "isLie": false,
+       "explanation": "Fonksiyonel korteks ve derin nükleusların korunması zorunluluğu geniş güvenlik sınırlarıyla cerrahi yapılmasını engeller."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "İntrakraniyal kitlelerde histopatolojik olarak selim (benign) lezyonların bile kardiyorespiratuar arreste yol açabilmesinin anatomik gerekçesi nedir?",
+     "answer": "Kafatasının rijit ve genişleyemez bir kemik boşluk olması nedeniyle kitlenin yerleşimine bağlı olarak medulladaki hayati solunum ve dolaşım merkezlerini doğrudan bası altına almasıdır."
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "İntrakraniyal Kitle Özelliği",
+     "rightCategory": "Sistemik Karsinom Özelliği",
+     "cards": [
+      {
+       "text": "Merkezi sinir sistemi dışına metastaz yapma olasılığı son derece nadirdir",
+       "category": "left"
+      },
+      {
+       "text": "Hematojen ve lenfatik yolla uzak organlara yaygın metastaz gösterir",
+       "category": "right"
+      },
+      {
+       "text": "Hücre dökülmesi ile beyin omurilik sıvısı boyunca yayılım sergiler",
+       "category": "left"
+      },
+      {
+       "text": "Geniş cerrahi güvenlik sınırlarıyla çevre sağlıklı dokudan radikal çıkarılabilir",
+       "category": "right"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 2,
+   "title": "KİBAS Belirti ve Bulguları ile Lob Sendromları",
+   "bolum": "1",
+   "section": "1",
+   "pdfSayfalari": [
+    6,
+    10
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 6,
+    "endPage": 10
+   },
+   "content": "İntrakraniyal kitlelerin klinik tablosu doğrudan kitle etkisi, perifokal ödem veya hidrosefaliye bağlı artmış kafa içi basıncı ve lokalizasyona özgü fokal nörolojik defisitlerle şekillenir.\n\n- **Başvuru Bulguları:** En sık başvuru nedeni progresif motor güçsüzlük gibi fokal nörolojik defisitlerdir; bunu sabahları artan baş ağrısı ve epileptik nöbetler izler.\n- **Klasik KİBAS Triadı:** Kafa içi basınç artışı belirginleştiğinde baş ağrısı, fışkırır tarzda bulantı-kusma ve optik disk kabarmasını temsil eden papilödem triadı gelişir. Eşlik eden yürüyüş ataksisi, vertigo, diplopi ve nistagmus görülebilir.\n- **Lob Sendromları:**\n  * **Frontal Lob:** Abuli, apati, kişilik ve mizaç değişiklikleri, demans, motor afazi ve karşı tarafta hemiparezi.\n  * **Temporal Lob:** Hafıza bozuklukları, görme alanı kayıpları ve koku ya da işitme halüsinasyonları.\n  * **Parietal Lob:** Kortikal duyu ve motor bozuklukları, apraksi.\n  * **Oksipital Lob:** Karşı tarafı tutan homonim hemianopsi görme defektleri.\n\n> [!IMPORTANT]\n> İntrakraniyal kitle kuşkusu olan her hastada göz dibi muayenesinde papilödem aranması ve lob lokalizasyonuna özgü kognitif değişikliklerin sorgulanması şarttır.",
+   "synthesisNarrative": "İntrakraniyal kitlelerin klinik tablosu doğrudan kitle etkisi, perifokal ödem veya hidrosefaliye bağlı artmış kafa içi basıncı ve lokalizasyona özgü fokal nörolojik defisitlerle şekillenir.\n\n- **Başvuru Bulguları:** En sık başvuru nedeni progresif motor güçsüzlük gibi fokal nörolojik defisitlerdir; bunu sabahları artan baş ağrısı ve epileptik nöbetler izler.\n- **Klasik KİBAS Triadı:** Kafa içi basınç artışı belirginleştiğinde baş ağrısı, fışkırır tarzda bulantı-kusma ve optik disk kabarmasını temsil eden papilödem triadı gelişir. Eşlik eden yürüyüş ataksisi, vertigo, diplopi ve nistagmus görülebilir.\n- **Lob Sendromları:**\n  * **Frontal Lob:** Abuli, apati, kişilik ve mizaç değişiklikleri, demans, motor afazi ve karşı tarafta hemiparezi.\n  * **Temporal Lob:** Hafıza bozuklukları, görme alanı kayıpları ve koku ya da işitme halüsinasyonları.\n  * **Parietal Lob:** Kortikal duyu ve motor bozuklukları, apraksi.\n  * **Oksipital Lob:** Karşı tarafı tutan homonim hemianopsi görme defektleri.\n\n> [!IMPORTANT]\n> İntrakraniyal kitle kuşkusu olan her hastada göz dibi muayenesinde papilödem aranması ve lob lokalizasyonuna özgü kognitif değişikliklerin sorgulanması şarttır.",
+   "interactiveElements": [
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. İntrakraniyal yer kaplayan kitlenin hacmi ve perifokal vazojenik ödem artar.",
+      "2. Monro-Kellie doktrini uyarınca intrakraniyal basınç kompanzasyon sınırını aşar.",
+      "3. Artan basınç optik sinir kılıfındaki subaraknoid mesafeye ve santral retinal vene iletilir.",
+      "4. Optik sinir aksonal transportu ve venöz drenajı durarak papilödem tablosu gelişir."
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Frontal lob yerleşimli bir intrakraniyal kitlede gelişmesi en karakteristik klinik tablo hangisidir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Abuli, kişilik değişiklikleri, demansiyel bulgular ve motor afazi tablosu.",
+       "isCorrect": true,
+       "explanation": "Frontal lob prefrontal korteks ve motor alanları içerdiğinden kitle basısı yürütücü işlev kaybına, kişilik değişimine ve Broca motor afazisine yol açar."
+      },
+      {
+       "key": "B",
+       "text": "Yalnızca işitme halüsinasyonları ve Wernicke tipi duyusal algılama afazisi.",
+       "isCorrect": false,
+       "explanation": "İşitme fonksiyonları ve duyusal konuşma algısı primer olarak temporal lob parankiminde temsil edilir. Bu nedenle lisan algılama defektleri temporal lob kitlelerinde izlenir."
+      },
+      {
+       "key": "C",
+       "text": "İzole homonim hemianopsi tarzında tek taraflı görme alanı defekti.",
+       "isCorrect": false,
+       "explanation": "Primer görsel korteks oksipital lobun kalkarin fissür çevresinde yerleşmiştir. Görme alanı yarımlarının kaybı bu posterior oksipital liflerin zedelenmesiyle ortaya çıkar."
+      },
+      {
+       "key": "D",
+       "text": "Serebellar vermis disfonksiyonuna bağlı şiddetli gövde ataksisi ve vertigo.",
+       "isCorrect": false,
+       "explanation": "Vücut dengesi ve aksiyel motor koordinasyon posterior fossadaki serebellar yapılarca düzenlenir. Trunkal ataksi ve şiddetli vertigo serebellar lezyonların göstergesidir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kafa içi basınç artışı belirginleştiğinde baş ağrısı, fışkırır tarzda bulantı-kusma ve optik disk kabarmasını temsil eden papilödem triadı gelişir.",
+     "maskedTerm": "papilödem",
+     "hint": "Göz dibi muayenesinde optik diskin kabararak silinmesi tablosu"
+    },
+    {
+     "type": "feature_bidding",
+     "optionA": "Frontal Lob Tutulumu",
+     "optionB": "Temporal Lob Tutulumu",
+     "rounds": [
+      {
+       "feature": "Abuli, apati ve belirgin kişilik değişiklikleri tablosu",
+       "correct": "A"
+      },
+      {
+       "feature": "Hafıza bozukluğu ve koku veya işitme halüsinasyonları",
+       "correct": "B"
+      },
+      {
+       "feature": "Motor afazi ve karşı tarafta hemiparezi gelişimi",
+       "correct": "A"
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Serebral Lob",
+      "Karakteristik Klinik Bulgular",
+      "Temel Nörolojik Defisit"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        "Frontal Lob",
+        "Abuli, apati, demans, mizaç ve kişilik değişiklikleri",
+        {
+         "text": "Motor afazi ve hemiparezi",
+         "isMasked": true,
+         "hint": "Konuşma üretimi kaybı ve tek taraflı kuvvet azalması"
+        }
+       ]
+      },
+      {
+       "cells": [
+        "Temporal Lob",
+        "Hafıza bozukluğu ve duyusal halüsinasyonlar",
+        {
+         "text": "Görme alanı defektleri",
+         "isMasked": true,
+         "hint": "Kadrantik optik saha kaybı patolojisi"
+        }
+       ]
+      },
+      {
+       "cells": [
+        "Oksipital Lob",
+        "Primer görsel korteks irritasyonu ve basısı",
+        {
+         "text": "Homonim hemianopsi",
+         "isMasked": true,
+         "hint": "Karşı yarım görme sahasının bütünüyle kaybı"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 3,
+   "title": "Gliomlar ve Astrositomlar: Derecelendirme ve Histopatoloji",
+   "bolum": "2",
+   "section": "2",
+   "pdfSayfalari": [
+    11,
+    16
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 11,
+    "endPage": 16
+   },
+   "content": "Gliomlar intraaksiyal primer beyin tümörlerinin en sık görülen grubudur. Bunlar arasında astrositlerden kaynaklanan astrositomlar, erkeklerde iki kat sık ve çoğunlukla 40-60 yaş grubunda saptanır. Serebral hemisferlerin frontal, temporal, parietal ve talamik bölgelerine yerleşir.\n\n- **Fokal ve Diffüz Ayrımı:** Pilositik astrositom fokal, iyi sınırlı ve cerrahiye yanıtı mükemmel lezyonlardır. Diffüz astrositomlar ise infiltratif sınırları ve anaplastik dönüşüm potansiyelleriyle bilinir.\n- **Daumas-Duport Derecelemesi:** Dört histopatolojik kritere dayanır: hücresel atipi, mitoz, vasküler endotelyal proliferasyon ve nekroz. Kriter yoksa Grade I, tek kriterde Grade II, iki kriterde Grade III, üç kriter veya nekroz varlığında doğrudan Grade IV kabul edilir.\n- **Radyoloji:** Düşük dereceli astrositomlar BT'de hipodens ve kontrast tutmazken, yüksek dereceli tümörler periferik halkasal kontrastlanan santral hipodens lezyonlar olarak izlenir.\n\n> [!NOTE]\n> Astrositik tümörlerde histopatolojik incelemede nekroz saptanması diğer kriterlere bakılmaksızın tümörü doğrudan Grade IV kategorisine taşır.",
+   "synthesisNarrative": "Gliomlar intraaksiyal primer beyin tümörlerinin en sık görülen grubudur. Bunlar arasında astrositlerden kaynaklanan astrositomlar, erkeklerde iki kat sık ve çoğunlukla 40-60 yaş grubunda saptanır. Serebral hemisferlerin frontal, temporal, parietal ve talamik bölgelerine yerleşir.\n\n- **Fokal ve Diffüz Ayrımı:** Pilositik astrositom fokal, iyi sınırlı ve cerrahiye yanıtı mükemmel lezyonlardır. Diffüz astrositomlar ise infiltratif sınırları ve anaplastik dönüşüm potansiyelleriyle bilinir.\n- **Daumas-Duport Derecelemesi:** Dört histopatolojik kritere dayanır: hücresel atipi, mitoz, vasküler endotelyal proliferasyon ve nekroz. Kriter yoksa Grade I, tek kriterde Grade II, iki kriterde Grade III, üç kriter veya nekroz varlığında doğrudan Grade IV kabul edilir.\n- **Radyoloji:** Düşük dereceli astrositomlar BT'de hipodens ve kontrast tutmazken, yüksek dereceli tümörler periferik halkasal kontrastlanan santral hipodens lezyonlar olarak izlenir.\n\n> [!NOTE]\n> Astrositik tümörlerde histopatolojik incelemede nekroz saptanması diğer kriterlere bakılmaksızın tümörü doğrudan Grade IV kategorisine taşır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Daumas-Duport kriterlerine göre bir astrositom biyopsisinde nekroz saptanması tümörün derecesini nasıl belirler?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Nekroz varlığı diğer kriterlerin sayısına bakılmaksızın lezyonu doğrudan Grade IV olarak sınıflandırır.",
+       "isCorrect": true,
+       "explanation": "Daumas-Duport sisteminde doku nekrozu biyolojik agresifliğin kesin kanıtı sayıldığından tek başına Grade IV glioblastoma tanısı koydurur."
+      },
+      {
+       "key": "B",
+       "text": "Yalnızca tek bir kriter varlığı olarak değerlendirilir ve tümör Grade II olarak evrelenir.",
+       "isCorrect": false,
+       "explanation": "Grade II astrositomlar düşük hücresel atipi içeren selim seyirli gliomlardır. Doku nekrozu ise yalnızca en ileri evre olan Grade IV glioblastoma multiforme olgularında ortaya çıkar."
+      },
+      {
+       "key": "C",
+       "text": "İki kriter birlikteliği şartıyla lezyonun anaplastik Grade III kabul edilmesini sağlar.",
+       "isCorrect": false,
+       "explanation": "Grade III anaplastik astrositomda atipi ve belirgin mitoz görülür, ancak nekroz geliştiğinde lezyon en üst dereceye evrilir."
+      },
+      {
+       "key": "D",
+       "text": "Sınırları belirgin ve benign seyirli fokal Grade I pilositik astrositom tanısını destekler.",
+       "isCorrect": false,
+       "explanation": "Pilositik astrositomlar çocuklarda iyi sınırlı ve yavaş büyüyen selim neoplazilerdir. Bu lezyonların mikroskopisinde nekroz veya mikrovasküler endotel tomurcuklanması gibi malignite bulguları aranmaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kriter yoksa Grade I, tek kriterde Grade II, iki kriterde Grade III, üç kriter veya nekroz varlığında doğrudan Grade IV kabul edilir.",
+     "maskedTerm": "Grade IV",
+     "hint": "Malign astrositik neoplazilerin en üst evresi"
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Fokal Astrositomlar (Grade I)",
+     "rightTitle": "Diffüz Astrositomlar (Grade II-IV)",
+     "leftPoints": [
+      "Sınırları çevre beyin dokusundan belirgin hatlarla ayrılır",
+      "Anaplastik malign dönüşüm gösterme eğilimi oldukça düşüktür",
+      "Pilositik astrositom gibi tiplerle temsil edilir ve cerrahi prognozu iyidir"
+     ],
+     "rightPoints": [
+      "Sınırları çevre beyin parankimine diffüz olarak infiltre olur",
+      "Zaman içinde yüksek dereceli lezyonlara anaplastik dönüşüm eğilimi yüksektir",
+      "Fibriller ve anaplastik tiplerle temsil edilir ve prognozları kötüdür"
+     ]
+    },
+    {
+     "type": "venn_grid",
+     "labelA": "Pilositik Astrositom (Grade I)",
+     "labelB": "Diffüz Astrositom (Grade II-IV)",
+     "items": [
+      {
+       "criterion": "Astrositik seri kökenli primer beyin tümörü olması",
+       "correct": "both"
+      },
+      {
+       "criterion": "Sınırlarının infiltratif olması ve yüksek anaplastik dönüşüm riski taşıması",
+       "correct": "B"
+      },
+      {
+       "criterion": "Fokal iyi sınırlı lezyon olup cerrahi kür şansının yüksek olması",
+       "correct": "A"
+      },
+      {
+       "criterion": "Merkezi sinir sistemi dışı organlara sık hematojen metastaz yapması",
+       "correct": "neither"
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Daumas-Duport astrositom histopatolojik evreleme sınıflamasında değerlendirilen 4 temel kriter hangileridir?",
+     "answer": "Hücresel atipi (polimorfizm), mitoz (hiperselülerite), vasküler endotelyal proliferasyon ve doku nekrozudur."
+    }
+   ]
+  },
+  {
+   "slideNumber": 4,
+   "title": "Glioblastoma Multiforme: Biyoloji, Tedavi ve Prognoz",
+   "bolum": "2",
+   "section": "2",
+   "pdfSayfalari": [
+    17,
+    21
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 17,
+    "endPage": 21
+   },
+   "content": "Glioblastoma multiforme, tüm gliomların %50'sini ve tüm primer beyin neoplazilerinin en az %30'unu oluşturan en sık ve en agresif primer beyin tümörüdür. En sık 6. ve 7. dekatlarda görülür. Serebral hemisferlerde yerleşir; korpus kallozumu aşarak bilateral yayılım gösterdiğinde kelebek gliom adını alır.\n\n- **Cerrahi ve Radyoterapi:** Standart yaklaşım cerrahi rezeksiyon, radyoterapi ve kemoterapidir. Kelebek tarzı tutulum, dominant lobda yaygın yayılım ve düşük Karnofsky performans skoru cerrahi kontrendikasyonlarıdır. Cerrahi ve radyoterapi ile ortalama yaşam süresi dokuz aydır.\n- **Perifokal İnfiltrasyon:** Radyolojik sınırların iki santimetre ötesindeki normal görünen dokuda bile tümör hücrelerinin bulunduğu kanıtlanmıştır; radyoterapi alanı buna göre geniş planlanır.\n- **MGMT Metilasyonu:** DNA onarım geninin promotor metilasyonu, tamir mekanizmasını baskılar. Bu durum alkilleyici kemoterapiye duyarlılığı artırarak hücreyi apoptoza sürükler ve prognozu belirgin iyileştirir.\n\n> [!IMPORTANT]\n> Glioblastomada promotor metilasyonu saptanması, alkilleyici kemoterapötik ajanların etkinliğini artırarak sağkalımı uzatan en önemli moleküler göstergedir.",
+   "synthesisNarrative": "Glioblastoma multiforme, tüm gliomların %50'sini ve tüm primer beyin neoplazilerinin en az %30'unu oluşturan en sık ve en agresif primer beyin tümörüdür. En sık 6. ve 7. dekatlarda görülür. Serebral hemisferlerde yerleşir; korpus kallozumu aşarak bilateral yayılım gösterdiğinde kelebek gliom adını alır.\n\n- **Cerrahi ve Radyoterapi:** Standart yaklaşım cerrahi rezeksiyon, radyoterapi ve kemoterapidir. Kelebek tarzı tutulum, dominant lobda yaygın yayılım ve düşük Karnofsky performans skoru cerrahi kontrendikasyonlarıdır. Cerrahi ve radyoterapi ile ortalama yaşam süresi dokuz aydır.\n- **Perifokal İnfiltrasyon:** Radyolojik sınırların iki santimetre ötesindeki normal görünen dokuda bile tümör hücrelerinin bulunduğu kanıtlanmıştır; radyoterapi alanı buna göre geniş planlanır.\n- **MGMT Metilasyonu:** DNA onarım geninin promotor metilasyonu, tamir mekanizmasını baskılar. Bu durum alkilleyici kemoterapiye duyarlılığı artırarak hücreyi apoptoza sürükler ve prognozu belirgin iyileştirir.\n\n> [!IMPORTANT]\n> Glioblastomada promotor metilasyonu saptanması, alkilleyici kemoterapötik ajanların etkinliğini artırarak sağkalımı uzatan en önemli moleküler göstergedir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Glioblastoma multiforme olgularında MGMT gen promotor metilasyonunun klinik ve biyolojik önemi nedir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "DNA tamir enzimini inaktive ederek alkilleyici kemoterapi duyarlılığını artırır ve prognozu olumlu etkiler.",
+       "isCorrect": true,
+       "explanation": "MGMT enzimi metillendiğinde sentezi durur, kemoterapinin oluşturduğu DNA kırıkları tamir edilemez ve tümör hücresi apoptoza giderek sağkalım uzar."
+      },
+      {
+       "key": "B",
+       "text": "Tümörün korpus kallozumu aşarak kelebek gliom oluşturma hızını doğrudan artırır.",
+       "isCorrect": false,
+       "explanation": "Kelebek benzeri tutulum anatomik beyaz cevher traktuslarının infiltrasyonuyla ilişkilidir. MGMT gen susturulması ise hücre düzeyinde epigenetik bir DNA onarım regülatörüdür."
+      },
+      {
+       "key": "C",
+       "text": "Radyoterapi alanının normal sınırlardan iki santimetre daha dar tutulmasına olanak tanır.",
+       "isCorrect": false,
+       "explanation": "Radyasyon sahası tümörün mikroskobik infiltratif sınırlarına göre geniş tutulur. Metilasyon durumu nöral dokudaki mikroskobik yayılımı daraltan bir etki oluşturmaz."
+      },
+      {
+       "key": "D",
+       "text": "Cerrahi rezeksiyonun olanaksız hale gelmesine yol açan primer direnç mekanizmasıdır.",
+       "isCorrect": false,
+       "explanation": "Cerrahi uygulanabilirliği tümörün lokalizasyonu ve hastanın genel performans skoru belirler. Epigenetik metilasyon varlığı cerrahi rezeksiyon kararına engel teşkil etmez."
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Glioblastoma hücrelerinde MGMT geninin promotor bölgesi epigenetik hipermetilasyona uğrar.",
+      "2. Metiltransferaz enziminin transkripsiyonu ve hücre içi proteini sentezi baskılanır.",
+      "3. Alkilleyici kemoterapi ajanlarının DNA üzerinde oluşturduğu alkil hasarları tamir edilemez.",
+      "4. Biriken ölümcül DNA hasarı hücre içi apoptoz kaskadını tetikleyerek tümör hücresini öldürür."
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "DNA onarım geninin promotor metilasyonu, tamir mekanizmasını baskılar.",
+     "maskedTerm": "promotor metilasyonu",
+     "hint": "Gen ifadesini epigenetik olarak susturan nükleotid modifikasyonu"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Glioblastoma Multiforme Biyolojisi ve Tedavi İlkeleri",
+     "items": [
+      {
+       "text": "Korpus kallozumu bilateral geçen glioblastoma lezyonları kelebek gliom olarak adlandırılır.",
+       "isLie": false,
+       "explanation": "İki hemisferi bağlayan korpus kallozum lifleri boyunca simetrik yayılım kelebek gliom görünümünü oluşturur."
+      },
+      {
+       "text": "Cerrahi ve radyoterapi uygulanan glioblastoma hastalarında ortalama yaşam süresi dokuz aydır.",
+       "isLie": false,
+       "explanation": "Glioblastoma son derece agresif bir biyolojiye sahip olup multimodal tedaviye karşın medyan yaşam süresi dokuz ay civarındadır."
+      },
+      {
+       "text": "Radyolojik sınırın iki santimetre dışındaki beyin dokusunda tümör hücre infiltrasyonu bulunmaz.",
+       "isLie": true,
+       "explanation": "Perfüzyon ve spektroskopi çalışmaları radyolojik lezyon sınırının iki santimetre ötesindeki normal alanda bile mikroskobik infiltrasyon olduğunu kanıtlamıştır."
+      },
+      {
+       "text": "Düşük Karnofsky performans skoru ve dominant hemisfer yayılımı cerrahiyi kısıtlayan faktörlerdir.",
+       "isLie": false,
+       "explanation": "Genel durumu düşkün ve kritik konuşma merkezleri yaygın tutulmuş hastalarda agresif cerrahi rezeksiyon morbiditeyi artırır."
+      }
+     ]
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "Altmış beş yaşında erkek hastada MR görüntülemede korpus kallozumu bilateral infiltre eden, santral nekrozlu ve perifokal ödemli kelebek gliom görünümü saptanıyor. Karnofsky performans skoru düşüktür.",
+     "choices": [
+      {
+       "text": "Agresif radikal rezeksiyon yerine stereotaktik biyopsi, palyatif radyoterapi ve tıbbi destek planlanmalıdır.",
+       "correct": true,
+       "explanation": "Bilateral korpus kallozum tutulumu ve düşük performans skoru agresif rezeksiyon için kontrendikasyon oluşturur, biyopsi ve palyasyon uygundur."
+      },
+      {
+       "text": "Her iki hemisferi de içerecek şekilde acil bilateral gross total radikal rezeksiyon yapılmalıdır.",
+       "correct": false,
+       "explanation": "İki yanlı korpus kallozum infiltrasyonunda gross total rezeksiyon imkansızdır ve hastada derin kalıcı nörolojik kayba yol açar."
+      },
+      {
+       "text": "Tümör histolojisi beklenmeden cerrahi ve radyoterapi bütünüyle dışlanarak hasta tedavisiz bırakılmalıdır.",
+       "correct": false,
+       "explanation": "Kitle etkisini ve nörolojik semptomları hafifletmek için ödem tedavisi, stereotaktik tanı ve palyatif radyasyon düşünülmelidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 5,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] KİBAS Bulguları ve Gliomlar",
+   "isCheckpoint": true,
+   "bolum": "2",
+   "section": "2",
+   "pdfSayfalari": [
+    1,
+    21
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 1,
+    "endPage": 21
+   },
+   "content": "Bu tekrar sayfasında intrakraniyal kitlelerin genel biyolojik davranışlarını, kafa içi basınç artışı sendromunu ve astrositik gliom serisini pekiştiriyoruz.\n\n- **KİBAS ve Belirtiler:** Rijit kafatası içindeki yer kaplayan oluşumlar baş ağrısı, fışkırır tarzda kusma ve papilödem triadı yaratır; en sık başvuru semptomu progresif motor güçsüzlüktür.\n- **Daumas-Duport Derecelemesi:** Astrositomlarda hücresel atipi, mitoz, endotel proliferasyonu ve nekroz kriterleri değerlendirilir. Nekrozun varlığı doğrudan Grade IV glioblastoma multiforme tanısını koydurur.\n- **Glioblastoma Özellikleri:** En sık görülen primer beyin neoplazisidir. Radyolojik sınırın iki santimetre ötesine dek mikroskobik parankimal infiltrasyon izlenir. Promotor metilasyonu ise kemoterapi duyarlılığını artırarak sağkalıma katkı sağlar.\n\n> [!IMPORTANT]\n> Checkpoint 1: KİBAS mekanizmaları, lob sendromları ve astrositom evrelemesi konularındaki temel kazanımlarınızı test edin.",
+   "synthesisNarrative": "Bu tekrar sayfasında intrakraniyal kitlelerin genel biyolojik davranışlarını, kafa içi basınç artışı sendromunu ve astrositik gliom serisini pekiştiriyoruz.\n\n- **KİBAS ve Belirtiler:** Rijit kafatası içindeki yer kaplayan oluşumlar baş ağrısı, fışkırır tarzda kusma ve papilödem triadı yaratır; en sık başvuru semptomu progresif motor güçsüzlüktür.\n- **Daumas-Duport Derecelemesi:** Astrositomlarda hücresel atipi, mitoz, endotel proliferasyonu ve nekroz kriterleri değerlendirilir. Nekrozun varlığı doğrudan Grade IV glioblastoma multiforme tanısını koydurur.\n- **Glioblastoma Özellikleri:** En sık görülen primer beyin neoplazisidir. Radyolojik sınırın iki santimetre ötesine dek mikroskobik parankimal infiltrasyon izlenir. Promotor metilasyonu ise kemoterapi duyarlılığını artırarak sağkalıma katkı sağlar.\n\n> [!IMPORTANT]\n> Checkpoint 1: KİBAS mekanizmaları, lob sendromları ve astrositom evrelemesi konularındaki temel kazanımlarınızı test edin.",
+   "interactiveElements": [
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Tümör Evresi",
+      "Tipik Histopatolojik Kriterler",
+      "Karakteristik Klinik Özellik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        "Grade I (Pilositik)",
+        "Kriterlerin hiçbiri bulunmaz",
+        {
+         "text": "Fokal ve iyi sınırlı",
+         "isMasked": true,
+         "hint": "Çevre parankimden net hatlarla ayrılan selim lezyon"
+        }
+       ]
+      },
+      {
+       "cells": [
+        "Grade II (Diffüz)",
+        "Tek kriter (hücresel atipi)",
+        {
+         "text": "İnfiltratif sınır",
+         "isMasked": true,
+         "hint": "Beyin dokusu içerisine mikroskobik yayılma eğilimi"
+        }
+       ]
+      },
+      {
+       "cells": [
+        "Grade III (Anaplastik)",
+        "İki kriter (atipi ve belirgin mitoz)",
+        {
+         "text": "Yüksek anaplazi riski",
+         "isMasked": true,
+         "hint": "Hızlı hücresel çoğalma ve kötüleşme eğilimi"
+        }
+       ]
+      },
+      {
+       "cells": [
+        "Grade IV (Glioblastoma)",
+        "Nekroz ve endotel proliferasyonu",
+        {
+         "text": "Kelebek gliom yayılımı",
+         "isMasked": true,
+         "hint": "Korpus kallozumu aşarak bilateral hemisfer tutulumu"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Daumas-Duport derecelemesinde Grade II ile Grade III astrositom arasındaki temel histopatolojik ayrım kriteri nedir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Grade III lezyonlarda hücresel atipiye ek olarak belirgin mitoz varlığı bulunmasıdır.",
+       "isCorrect": true,
+       "explanation": "Daumas-Duport sisteminde Grade II için tek kriter (atipi) yeterliyken Grade III evresinde iki kriter (atipi ve mitoz) saptanır."
+      },
+      {
+       "key": "B",
+       "text": "Grade II lezyonlarda santral kazeifikasyon nekrozu ve endotel tomurcuklanması izlenmesidir.",
+       "isCorrect": false,
+       "explanation": "Grade II gliomlar infiltratif ancak mitozu seyrek astrositik lezyonlardır. Nekroz ve vasküler tomurcuklanma ise Grade IV glioblastoma multiforme tablosuna aittir."
+      },
+      {
+       "key": "C",
+       "text": "Grade III astrositomların fokal sınırlı olup pilositik morfoloji sergilemesidir.",
+       "isCorrect": false,
+       "explanation": "Fokal sınırlı ve pilositik yapıda olan lezyonlar Grade I kategorisindedir, Grade III tümörler diffüz ve infiltratiftir."
+      },
+      {
+       "key": "D",
+       "text": "Grade II lezyonların korpus kallozumu aşarak kelebek tutulumu göstermesidir.",
+       "isCorrect": false,
+       "explanation": "Korpus kallozumu aşan kelebek yayılımı Grade IV glioblastomanın agresif beyaz cevher yoluyla hemisferik invazyonuna özgüdür."
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Düşük Dereceli Astrositom (Grade I-II)",
+     "rightCategory": "Yüksek Dereceli Astrositom (Grade III-IV)",
+     "cards": [
+      {
+       "text": "Histopatolojik kesitlerde santral nekroz ve vasküler endotel proliferasyonu",
+       "category": "right"
+      },
+      {
+       "text": "Daumas-Duport kriterlerinden hiçbirinin bulunmadığı fokal iyi sınırlı lezyon",
+       "category": "left"
+      },
+      {
+       "text": "Korpus kallozum yoluyla kelebek gliom formasyonu oluşturma potansiyeli",
+       "category": "right"
+      },
+      {
+       "text": "Tek kriter olarak yalnız hücresel atipinin saptandığı diffüz lezyon",
+       "category": "left"
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "KİBAS ve Gliom Kliniğinde Temel İlkeler",
+     "items": [
+      {
+       "text": "KİBAS gelişen olgularda fışkırır tarzda kusma, baş ağrısı ve papilödem klasik triaddır.",
+       "isLie": false,
+       "explanation": "Bu üçlü artmış kafa içi basıncının kompanse edilemediği evrelerde ortaya çıkan temel bulgulardır."
+      },
+      {
+       "text": "Glioblastomada MGMT metilasyonu kemoterapi direncine ve sağkalımın kısalmasına yol açar.",
+       "isLie": true,
+       "explanation": "MGMT gen promotor metilasyonu DNA onarımını engelleyerek kemoterapiye duyarlılığı artırır ve sağkalımı belirgin uzatır."
+      },
+      {
+       "text": "Frontal lob tümörlerinde abuli, kişilik değişiklikleri ve motor afazi izlenebilir.",
+       "isLie": false,
+       "explanation": "Prefrontal alanların ve motor konuşma merkezinin frontal lobda bulunması bu belirtileri ortaya çıkarır."
+      },
+      {
+       "text": "İntrakraniyal kitlelerde en sık karşılaşılan başvuru bulgusu progresif motor güçsüzlüktür.",
+       "isLie": false,
+       "explanation": "Kitlelerin kortikospinal yollara basısı hastalarda en sık hastaneye başvuru nedeni olan motor kuvvetsizliği doğurur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Glioblastoma multiforme cerrahisinde tümörün radyolojik sınırının 2 santimetre periferindeki normal dokunun da hedeflenme nedeni nedir?",
+     "answer": "Radyolojik olarak normal görünen 2 cm çevre nöral parankim içerisinde bile mikroskobik tümör hücresi infiltrasyonunun kanıtlanmış olmasıdır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 6,
+   "title": "Oligodendrogliom, Ependimom ve Çocukluk Çağı Malign Tümörleri",
+   "bolum": "3",
+   "section": "3",
+   "pdfSayfalari": [
+    22,
+    26
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 22,
+    "endPage": 26
+   },
+   "content": "Gliyal kökenli diğer önemli primer kitleler oligodendrogliom ve ependimomlardır; çocukluk çağında ise medulloblastom ön plana çıkar.\n\n- **Oligodendrogliom:** Primer beyin tümörlerinin %4'üdür. Ortalama yaş 40'tır. Sıklıkla frontal lobda yerleşir ve en yaygın başvuru bulgusu epileptik nöbettir. BT'de %90, direkt grafide %28-60 kalsifikasyon görülür. 1p/19q ko-delesyonu kemoradyoterapiye yüksek duyarlılık sağlar; frontal yerleşim ve kalsifikasyon iyi prognoz işaretidir. 10 yıllık yaşam %10-30'dur.\n- **Ependimom:** Ventrikül epandim yüzeyinden veya kalıntılardan köken alır; gliomların %5-6'sıdır ve %69'u çocuklarda görülür. Spinal kord gliomlarının %60'ını, filum terminale tümörlerinin %96'sını oluşturur. Dördüncü ventrikül tabanında komplet rezeksiyon zorken, intraspinal yerleşimde keskin sınır sayesinde total eksizyon mümkündür.\n- **Medulloblastom:** Çocuklarda en sık görülen malign beyin tümörüdür. Dördüncü ventrikül tavanında inferior medüller velumdaki Obersteiner tabakasından köken alır. En sık serebellar vermis yerleşir ve BOS dolaşımına katılarak kraniyospinal yayılım yapar.\n\n> [!IMPORTANT]\n> Oligodendrogliomda 1p/19q ko-delesyonu kemoterapiye belirgin duyarlılık sağlarken; medulloblastomda 4. ventrikül tavanından BOS yoluyla spinal korda dökülme tipiktir.",
+   "synthesisNarrative": "Gliyal kökenli diğer önemli primer kitleler oligodendrogliom ve ependimomlardır; çocukluk çağında ise medulloblastom ön plana çıkar.\n\n- **Oligodendrogliom:** Primer beyin tümörlerinin %4'üdür. Ortalama yaş 40'tır. Sıklıkla frontal lobda yerleşir ve en yaygın başvuru bulgusu epileptik nöbettir. BT'de %90, direkt grafide %28-60 kalsifikasyon görülür. 1p/19q ko-delesyonu kemoradyoterapiye yüksek duyarlılık sağlar; frontal yerleşim ve kalsifikasyon iyi prognoz işaretidir. 10 yıllık yaşam %10-30'dur.\n- **Ependimom:** Ventrikül epandim yüzeyinden veya kalıntılardan köken alır; gliomların %5-6'sıdır ve %69'u çocuklarda görülür. Spinal kord gliomlarının %60'ını, filum terminale tümörlerinin %96'sını oluşturur. Dördüncü ventrikül tabanında komplet rezeksiyon zorken, intraspinal yerleşimde keskin sınır sayesinde total eksizyon mümkündür.\n- **Medulloblastom:** Çocuklarda en sık görülen malign beyin tümörüdür. Dördüncü ventrikül tavanında inferior medüller velumdaki Obersteiner tabakasından köken alır. En sık serebellar vermis yerleşir ve BOS dolaşımına katılarak kraniyospinal yayılım yapar.\n\n> [!IMPORTANT]\n> Oligodendrogliomda 1p/19q ko-delesyonu kemoterapiye belirgin duyarlılık sağlarken; medulloblastomda 4. ventrikül tavanından BOS yoluyla spinal korda dökülme tipiktir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Oligodendrogliom tanısı alan bir hastada kemoterapiye yüksek duyarlılık ve olumlu prognoz gösteren moleküler genetik değişiklik hangisidir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "1p ve 19q kromozomal kollarının birlikte kaybı (ko-delesyonu).",
+       "isCorrect": true,
+       "explanation": "1p19q ko-delesyonu oligodendrogliomların ayırt edici genetik belirteci olup alkilleyici kemoterapiye belirgin duyarlılık ve uzun sağkalım sağlar."
+      },
+      {
+       "key": "B",
+       "text": "Dördüncü ventrikül tavanında Obersteiner tabakasının aşırı çoğalması.",
+       "isCorrect": false,
+       "explanation": "Obersteiner tabakası dördüncü ventrikül tavanında yer alan embriyonik bir nöroektodermal yapıdır. Bu alandaki ilkel hücre proliferasyonu çocukluk çağı medulloblastomuna öncülük eder."
+      },
+      {
+       "key": "C",
+       "text": "Filum terminale glial hücrelerinde epandimal kist formasyonu.",
+       "isCorrect": false,
+       "explanation": "Filum terminale yerleşimi erişkin ependimomlarının karakteristik lokalizasyonudur. Bu anatomik bölgedeki tümörler glial ependim serisinden kaynaklanır ve oligodendrogliomdan farklıdır."
+      },
+      {
+       "key": "D",
+       "text": "Serebellar vermiste yaygın mikrokalsifikasyon odaklarının gelişmesi.",
+       "isCorrect": false,
+       "explanation": "Serebellar vermis tutulumu medulloblastom gibi embriyonel kitlelerde izlenen posterior fossa patolojisidir. Kalsifikasyon içeren oligodendrogliomlar ise serebral hemisferlerin kortikal alanlarına oturur."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Dördüncü ventrikül tavanında inferior medüller velumdaki Obersteiner tabakasından köken alır.",
+     "maskedTerm": "Obersteiner tabakasından",
+     "hint": "Dördüncü karıncık çatısındaki ilkel embriyonik katmandan"
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Tümör Tipi",
+      "Tipik Anatomik Yerleşim",
+      "Karakteristik Klinik / Moleküler Özellik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        "Oligodendrogliom",
+        "Frontal lob parankimi",
+        {
+         "text": "1p19q ko-delesyonu",
+         "isMasked": true,
+         "hint": "Kemoterapiye yüksek duyarlılık sağlayan kromozom kaybı"
+        }
+       ]
+      },
+      {
+       "cells": [
+        "Ependimom",
+        "Ventrikül tabanı ve filum terminale",
+        {
+         "text": "Spinal formda total eksizyon",
+         "isMasked": true,
+         "hint": "Kord içinde keskin hatları sayesinde tam cerrahi çıkarılabilirlik"
+        }
+       ]
+      },
+      {
+       "cells": [
+        "Medulloblastom",
+        "Serebellar vermis ve 4. ventrikül tavanı",
+        {
+         "text": "BOS ile kraniyospinal yayılım",
+         "isMasked": true,
+         "hint": "Tümör hücrelerinin subaraknoid mesafeye dökülmesi"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Ependimom ve Medulloblastom Klinik Patolojisi",
+     "items": [
+      {
+       "text": "Medulloblastom çocukluk çağının en sık görülen primer malign beyin tümörüdür.",
+       "isLie": false,
+       "explanation": "Medulloblastom pediatrik yaş grubunda en yaygın rastlanan embriyonik malign intrakraniyal neoplazidir."
+      },
+      {
+       "text": "Ependimomlar intraspinal yerleşimde keskin sınırları sayesinde cerrahi olarak total çıkarılabilir.",
+       "isLie": false,
+       "explanation": "Spinal kord ependimomları iyi sınırlı lezyonlar olduğundan cerrahi rezeksiyonları komplet olarak başarılabilir."
+      },
+      {
+       "text": "Oligodendrogliomlar en sık oksipital lobda yerleşir ve radyolojik kalsifikasyon göstermezler.",
+       "isLie": true,
+       "explanation": "Oligodendrogliomlar çoğunlukla frontal lobda yerleşir ve bilgisayarlı tomografide yüzde doksan oranında belirgin kalsifikasyon sergiler."
+      },
+      {
+       "text": "Medulloblastom hücreleri BOS dolaşımına katılarak spinal ve kraniyal alanlara dökülme yapabilir.",
+       "isLie": false,
+       "explanation": "Subaraknoid boşluğa dökülen tümör hücreleri BOS akımıyla nöroaksis boyunca metastatik odaklar oluşturur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Oligodendrogliomların bilgisayarlı tomografideki en tipik radyolojik bulgusu ve en sık yerleşim gösterdiği serebral lob hangisidir?",
+     "answer": "Yüzde doksan oranında saptanan belirgin tümöral kalsifikasyon ve en sık frontal lob yerleşimidir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 7,
+   "title": "Sellüler ve Suprasellar Kitleler: Kraniyofarenjiom ve Dermoid/Epidermoid Kistler",
+   "bolum": "3",
+   "section": "3",
+   "pdfSayfalari": [
+    27,
+    30
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 27,
+    "endPage": 30
+   },
+   "content": "Sellüler ve suprasellar bölgenin benign karakterli kitleleri kiazma optikum ve hipotalamik yapılara bası yaparak belirgin klinik tablolara yol açar.\n\n- **Kraniyofarenjiom:** Rathke poşu ektoblastik epitel artıklarından köken alır. İki temel tipi vardır:\n  * **Adamantinomatöz:** Keratin nodülleri, kolesterol kristalleri ve yoğun kalsifikasyon içerir. Çevre nörovasküler yapılara aşırı yapışıklık nedeniyle cerrahisi zordur.\n  * **Skuamöz-papiller:** Erişkinde sıktır; kalsifikasyon ve kist nadirdir.\n  * **Klinik ve Prognoz:** Optik kiazma basısına bağlı progresif görme kaybı, stalk basısına bağlı boy kısalığı ve puberte gecikmesi görülür. Tümör boyutu beş santimetreden küçükse nüks %20, beş santimetreden büyükse %83'tür.\n- **Konjenital Kistler:**\n  * **Dermoid Kist:** Ektodermal kökenlidir; sıklıkla dermal sinüs traktı eşlik eder. Tekrarlayan menenjit öyküsü ve hidrosefali ile prezente olur.\n  * **Epidermoid Kist:** Deskuame keratin birikimiyle büyür; BT ve MR'da BOS dansitesini taklit eder.\n\n> [!IMPORTANT]\n> Adamantinomatöz kraniyofarenjiomda kolesterol kristalleri, kalsifikasyon ve nörovasküler yapışıklık tipikken; dermoid kistlerde dermal sinüs traktı ve tekrarlayan menenjit atakları ön plandadır.",
+   "synthesisNarrative": "Sellüler ve suprasellar bölgenin benign karakterli kitleleri kiazma optikum ve hipotalamik yapılara bası yaparak belirgin klinik tablolara yol açar.\n\n- **Kraniyofarenjiom:** Rathke poşu ektoblastik epitel artıklarından köken alır. İki temel tipi vardır:\n  * **Adamantinomatöz:** Keratin nodülleri, kolesterol kristalleri ve yoğun kalsifikasyon içerir. Çevre nörovasküler yapılara aşırı yapışıklık nedeniyle cerrahisi zordur.\n  * **Skuamöz-papiller:** Erişkinde sıktır; kalsifikasyon ve kist nadirdir.\n  * **Klinik ve Prognoz:** Optik kiazma basısına bağlı progresif görme kaybı, stalk basısına bağlı boy kısalığı ve puberte gecikmesi görülür. Tümör boyutu beş santimetreden küçükse nüks %20, beş santimetreden büyükse %83'tür.\n- **Konjenital Kistler:**\n  * **Dermoid Kist:** Ektodermal kökenlidir; sıklıkla dermal sinüs traktı eşlik eder. Tekrarlayan menenjit öyküsü ve hidrosefali ile prezente olur.\n  * **Epidermoid Kist:** Deskuame keratin birikimiyle büyür; BT ve MR'da BOS dansitesini taklit eder.\n\n> [!IMPORTANT]\n> Adamantinomatöz kraniyofarenjiomda kolesterol kristalleri, kalsifikasyon ve nörovasküler yapışıklık tipikken; dermoid kistlerde dermal sinüs traktı ve tekrarlayan menenjit atakları ön plandadır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Adamantinomatöz kraniyofarenjiomun skuamöz-papiller tipten ve diğer sellar lezyonlardan ayrılmasını sağlayan en tipik histopatolojik ve cerrahi özellik nedir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Kolesterol kristalleri içeren kistik sıvı, yoğun kalsifikasyon ve çevre nörovasküler yapılara yüksek yapışıklık göstermesi.",
+       "isCorrect": true,
+       "explanation": "Adamantinomatöz tip makine yağı kıvamında kolesterollü sıvı, belirgin kalsiyum çökeltileri ve cerrahi diseksiyonu zorlaştıran yoğun yapışıklık barındırır."
+      },
+      {
+       "key": "B",
+       "text": "Yalnızca erişkinlerde görülmesi ve kalsifikasyon veya kistik komponenti hiçbir zaman içermemesi.",
+       "isCorrect": false,
+       "explanation": "Skuamöz-papiller kraniyofarenjiom erişkin yaş grubunda saptanan histolojik formdur. Bu varyantta kalsifikasyon ve kist oluşumu son derece nadirdir."
+      },
+      {
+       "key": "C",
+       "text": "Dördüncü ventrikül tabanından köken alarak doğrudan serebellar hemisferleri infiltre etmesi.",
+       "isCorrect": false,
+       "explanation": "Kraniyofarenjiomlar kafa tabanında sellar ve suprasellar aralıkta Rathke poşu epitel artıklarından ürer. Posterior fossa ventrikül boşlukları bu tümörün anatomik yerleşim alanı dışındadır."
+      },
+      {
+       "key": "D",
+       "text": "Bilgisayarlı tomografide BOS dansitesini birebir taklit ederek kalsifikasyon oluşturmaması.",
+       "isCorrect": false,
+       "explanation": "BOS dansitesini taklit eden lezyon epidermoid kisttir, adamantinomatöz kraniyofarenjiom ise yüksek kalsifikasyon ve heterojenite gösterir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Adamantinomatöz tip keratin nodülleri, kolesterol kristalleri ve yoğun kalsifikasyon içerir.",
+     "maskedTerm": "kolesterol kristalleri",
+     "hint": "Makine yağı kıvamındaki lipidik kist içeriği partikülleri"
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Adamantinomatöz Kraniyofarenjiom",
+     "rightTitle": "Skuamöz-Papiller Kraniyofarenjiom",
+     "leftPoints": [
+      "Rathke poşundaki ektoblastik hücre kalıntılarından gelişir",
+      "Keratin nodülleri, kolesterol kristalleri ve kalsifikasyon içerir",
+      "Çevre nörovasküler dokulara ileri derecede yapışık seyreder"
+     ],
+     "rightPoints": [
+      "Adenohipofiz veya infundibulumdaki skuamöz metaplaziden köken alır",
+      "Kistik komponent ve doku kalsifikasyonu oldukça nadirdir",
+      "Sıklıkla erişkin yaş grubunda saptanır ve diseksiyonu daha rahattır"
+     ]
+    },
+    {
+     "type": "venn_grid",
+     "labelA": "Dermoid Kist",
+     "labelB": "Epidermoid Kist",
+     "items": [
+      {
+       "criterion": "Konjenital kökenli intrakraniyal kistik lezyon olması",
+       "correct": "both"
+      },
+      {
+       "criterion": "Eşlik eden dermal sinüs traktı ve tekrarlayan menenjit atakları ile prezente olması",
+       "correct": "A"
+      },
+      {
+       "criterion": "Radyolojik incelemelerde BOS dansitesini taklit eden deskuame keratin birikimi göstermesi",
+       "correct": "B"
+      },
+      {
+       "criterion": "Akciğer kanserinin hematojen yayılımı sonucu gelişmesi",
+       "correct": "neither"
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Sellüler ve Suprasellar Kitlelerin Klinik Özellikleri",
+     "items": [
+      {
+       "text": "Kraniyofarenjiomda kiazma optikum basısına bağlı progresif görme alanı kaybı gelişir.",
+       "isLie": false,
+       "explanation": "Suprasellar uzanım gösteren tümör kiazma optikumu alttan basıya uğratarak bitemporal hemianopsi ve görme kaybı yapar."
+      },
+      {
+       "text": "Tümör çapı 5 cm üzerinde olan kraniyofarenjiomlarda cerrahi sonrası nüks oranı yüzde seksen üçtür.",
+       "isLie": false,
+       "explanation": "Beş santimetreden büyük dev kraniyofarenjiomlarda çevre doku invazyonu nedeniyle nüks riski dramatik olarak artmaktadır."
+      },
+      {
+       "text": "Dermoid kistler BOS dansitesini taklit ederken epidermoid kistler daima dermal sinüsle birliktedir.",
+       "isLie": true,
+       "explanation": "Dermal sinüs traktı ve tekrarlayan menenjit dermoid kiste özgüyken; BOS dansitesini taklit eden lezyon epidermoid kisttir."
+      },
+      {
+       "text": "Kraniyofarenjiomda hipofiz sapı basısına bağlı puberte gecikmesi ve boy kısalığı görülebilir.",
+       "isLie": false,
+       "explanation": "Hipotalamo-hipofizer aksın basıya uğraması büyüme hormonu ve gonadotropin eksikliklerine yol açar."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 8,
+   "title": "Hemanjiyoblastom, Primer SSS Lenfoması ve Germ Hücreli Tümörler",
+   "bolum": "3",
+   "section": "3",
+   "pdfSayfalari": [
+    31,
+    36
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 31,
+    "endPage": 36
+   },
+   "content": "Bu grupta posterior fossa vasküler tümörleri, immün yetmezlikle ilişkili lenfomalar ve orta hat germ hücreli neoplazileri yer alır.\n\n- **Hemanjiyoblastom:** Posterior fossada anormal vasküler besleyicileri bulunan mural nodüllü kistik lezyondur. von Hippel-Lindau sendromu ile birliktelik gösterebilir. Tümörden salgılanan eritropoetin nedeniyle polistemi gelişebilir. von Hippel-Lindau olgularında her iki yılda bir yeni intrakraniyal lezyon çıkabileceğinden periyodik takip şarttır.\n- **Primer SSS Lenfoması:** Ekstranodal lenfomaların %2'sini, intrakraniyal tümörlerin %1'ini oluşturur. İmmün yetmezlik ve özellikle AIDS hastalarında sıktır. 60 yaş üzerinde parankimde multipl B hücreli kitleler şeklinde izlenir; prognozu kötüdür ve BOS tutulumu yapabilir.\n- **Germ Hücreli Tümörler:** Orta hatta, pineal ve suprasellar bölgede yerleşir. Testis germ hücreli tümörlerine benzer. Avrupa'da %0.2-1 iken Japonya'da %10 oranında görülür. Primer BOS yayılımı gösterebilir.\n\n> [!NOTE]\n> Serebellar kistik bir kitlede mural nodül ve polistemi birlikteliği hemanjiyoblastomu; immün yetmezlik zemininde periventriküler multipl kitleler primer SSS lenfomasını düşündürmelidir.",
+   "synthesisNarrative": "Bu grupta posterior fossa vasküler tümörleri, immün yetmezlikle ilişkili lenfomalar ve orta hat germ hücreli neoplazileri yer alır.\n\n- **Hemanjiyoblastom:** Posterior fossada anormal vasküler besleyicileri bulunan mural nodüllü kistik lezyondur. von Hippel-Lindau sendromu ile birliktelik gösterebilir. Tümörden salgılanan eritropoetin nedeniyle polistemi gelişebilir. von Hippel-Lindau olgularında her iki yılda bir yeni intrakraniyal lezyon çıkabileceğinden periyodik takip şarttır.\n- **Primer SSS Lenfoması:** Ekstranodal lenfomaların %2'sini, intrakraniyal tümörlerin %1'ini oluşturur. İmmün yetmezlik ve özellikle AIDS hastalarında sıktır. 60 yaş üzerinde parankimde multipl B hücreli kitleler şeklinde izlenir; prognozu kötüdür ve BOS tutulumu yapabilir.\n- **Germ Hücreli Tümörler:** Orta hatta, pineal ve suprasellar bölgede yerleşir. Testis germ hücreli tümörlerine benzer. Avrupa'da %0.2-1 iken Japonya'da %10 oranında görülür. Primer BOS yayılımı gösterebilir.\n\n> [!NOTE]\n> Serebellar kistik bir kitlede mural nodül ve polistemi birlikteliği hemanjiyoblastomu; immün yetmezlik zemininde periventriküler multipl kitleler primer SSS lenfomasını düşündürmelidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Serebellar hemanjiyoblastomlu bir hastada polistemi gelişmesinin temel patofizyolojik mekanizması nedir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Tümör dokusu tarafından ektopik olarak eritropoetin hormonu salgılanması.",
+       "isCorrect": true,
+       "explanation": "Hemanjiyoblastom hücreleri eritropoetin salgılayarak kemik iliğinde eritrosit üretimini uyarır ve sekonder polistemi tablosuna yol açar."
+      },
+      {
+       "key": "B",
+       "text": "Kiazma optikuma bası yaparak ön hipofiz hormonlarının aşırı salınmasını uyarması.",
+       "isCorrect": false,
+       "explanation": "Kiazma optikum kompresyonu sellar kitlelerde temporal görme sahalarının kaybını doğurur. Ön hipofiz basısı polistemi yerine gonadotropin ve tiroid hormon eksikliklerine yol açar."
+      },
+      {
+       "key": "C",
+       "text": "İmmün yetmezlik zemininde B lenfositlerin klonal olarak aşırı çoğalması.",
+       "isCorrect": false,
+       "explanation": "B lenfositlerin kontrolsüz monoklonal ekspansiyonu primer santral sinir sistemi lenfomasının patogenezidir. Hemanjiyoblastom ise stromal ve endotelyal vasküler elemanlardan meydana gelir."
+      },
+      {
+       "key": "D",
+       "text": "Dermal sinüs traktı yoluyla tekrarlayan bakteriyel menenjit ataklarının tetiklenmesi.",
+       "isCorrect": false,
+       "explanation": "Dermal sinüs traktı konjenital ektodermal kapanma kusurlarında dermoid kistlere eşlik eder. Bu trakt enfeksiyon giriş kapısı oluşturur ancak eritrositoz tablosuyla bağlantı kurmaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Tümörden salgılanan eritropoetin nedeniyle polistemi gelişebilir.",
+     "maskedTerm": "eritropoetin",
+     "hint": "Kemik iliğinde alyuvar yapımını artıran humoral faktör"
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Serebellar hemanjiyoblastom mural nodülü ektopik eritropoetin salgılar.",
+      "2. Dolaşıma katılan eritropoetin kemik iliğindeki eritroid prekürsörleri uyarır.",
+      "3. Eritrosit üretimi kontrolsüz artarak dolaşımdaki kırmızı küre kitlesini yükseltir.",
+      "4. Hastada hematokrit artışıyla karakterize sekonder polistemi tablosu gelişir."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Primer SSS Lenfoması ve Germ Hücreli Tümörler",
+     "items": [
+      {
+       "text": "Primer SSS lenfoması immün yetmezlik ve özellikle AIDS olgularında belirgin sıklıkta izlenir.",
+       "isLie": false,
+       "explanation": "Hücresel immün yetmezlik durumlarında merkezi sinir sistemi parankiminde agresif B hücreli lenfoma gelişme riski katbekat artar."
+      },
+      {
+       "text": "İntrakraniyal germ hücreli tümörler Avrupa'da yüzde on iken Japonya'da binde bir sıklıkta görülür.",
+       "isLie": true,
+       "explanation": "Germ hücreli tümörler Batı ülkelerinde yüzde birin altındayken Japonya ve Uzak Doğu toplumlarında yüzde on oranına ulaşır."
+      },
+      {
+       "text": "Hemanjiyoblastom von Hippel-Lindau sendromu kapsamında retinal anjiyom ve feokromositoma ile birliktedir.",
+       "isLie": false,
+       "explanation": "VHL sendromlu hastalarda posterior fossa hemanjiyoblastomuna retinal ve visseral tümörler eşlik eder."
+      },
+      {
+       "text": "Germ hücreli tümörler orta hat yerleşimli olup en sık pineal ve suprasellar bölgelere oturur.",
+       "isLie": false,
+       "explanation": "Germ hücre kökenli intrakraniyal neoplaziler kural olarak üçüncü ventrikül çevresi orta hat anatomik yapılardan kaynaklanır."
+      }
+     ]
+    },
+    {
+     "type": "feature_bidding",
+     "optionA": "Hemanjiyoblastom (vHL Sendromu)",
+     "optionB": "Primer SSS Lenfoması",
+     "rounds": [
+      {
+       "feature": "Posterior fossada kist içinde mural nodül ve paraneoplastik polistemi",
+       "correct": "A"
+      },
+      {
+       "feature": "İmmün yetmezlik ve AIDS zemininde parankimal multipl B hücreli odak",
+       "correct": "B"
+      },
+      {
+       "feature": "Retinal anjiyom, feokromositoma ve böbrek kistleri ile birliktelik",
+       "correct": "A"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 9,
+   "title": "Menenjiomlar: Etyopatogenez, Histoloji, Genetik ve Derecelendirme",
+   "bolum": "4",
+   "section": "4",
+   "pdfSayfalari": [
+    37,
+    42
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 37,
+    "endPage": 42
+   },
+   "content": "Menenjiomlar araknoid granülasyonların dış tabakasındaki kap hücrelerinden köken alan, yavaş büyüyen, ekstraaksiyel tümörlerdir. İntraventriküler olanlar tela koroidea'dan gelişir. Primer intrakraniyal tümörlerin %32'sini oluşturur; %39'u asemptomatiktir. Sıklıkla falks, konveksite ve sfenoid kanatta yerleşir.\n\n- **Risk Faktörleri:** Kadınlarda belirgin sıktır. Gebelikte progesteron reseptörleri nedeniyle hızlı büyür; meme kanseri ile birliktelik sıktır. Kafa travması öyküsü ve kraniyal radyoterapi maruziyeti etyolojidedir.\n- **Genetik:** Kromozom 22 delesyonu tipik menenjioma yol açar; 1p delesyonu atipik menenjioma, 17q mutasyonu ise malign menenjioma ilerlemeyi tetikler.\n- **DSÖ Derecelemesi:**\n  * **Grade I (Tipik - %90):** Mitoz dörtten azdır.\n  * **Grade II (Atipik - %8):** 4-20 mitoz arasıdır. Alt tipleri berrak hücreli ve kordoid menenjiomdur.\n  * **Grade III (Anaplastik - %2):** Yirmiden fazla mitozdur. Alt tipleri rabdoid ve papiller menenjiomdur.\n\n> [!IMPORTANT]\n> Menenjiomlarda mitoz sayısı 4-20 arası olduğunda veya berrak hücreli/kordoid histoloji saptandığında tümör DSÖ Grade II olarak sınıflandırılır.",
+   "synthesisNarrative": "Menenjiomlar araknoid granülasyonların dış tabakasındaki kap hücrelerinden köken alan, yavaş büyüyen, ekstraaksiyel tümörlerdir. İntraventriküler olanlar tela koroidea'dan gelişir. Primer intrakraniyal tümörlerin %32'sini oluşturur; %39'u asemptomatiktir. Sıklıkla falks, konveksite ve sfenoid kanatta yerleşir.\n\n- **Risk Faktörleri:** Kadınlarda belirgin sıktır. Gebelikte progesteron reseptörleri nedeniyle hızlı büyür; meme kanseri ile birliktelik sıktır. Kafa travması öyküsü ve kraniyal radyoterapi maruziyeti etyolojidedir.\n- **Genetik:** Kromozom 22 delesyonu tipik menenjioma yol açar; 1p delesyonu atipik menenjioma, 17q mutasyonu ise malign menenjioma ilerlemeyi tetikler.\n- **DSÖ Derecelemesi:**\n  * **Grade I (Tipik - %90):** Mitoz dörtten azdır.\n  * **Grade II (Atipik - %8):** 4-20 mitoz arasıdır. Alt tipleri berrak hücreli ve kordoid menenjiomdur.\n  * **Grade III (Anaplastik - %2):** Yirmiden fazla mitozdur. Alt tipleri rabdoid ve papiller menenjiomdur.\n\n> [!IMPORTANT]\n> Menenjiomlarda mitoz sayısı 4-20 arası olduğunda veya berrak hücreli/kordoid histoloji saptandığında tümör DSÖ Grade II olarak sınıflandırılır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Dünya Sağlık Örgütü derecelemesine göre atipik (Grade II) menenjiom tanısı için gereken mitoz sayısı ve karakteristik alt tipler hangisidir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "4-20 arası mitoz ve berrak hücreli ya da kordoid histopatolojik alt tip.",
+       "isCorrect": true,
+       "explanation": "DSÖ sınıflamasında 10 büyük büyütme alanında 4-20 mitoz saptanması veya kordoid/berrak hücreli morfoloji Grade II kabul edilir."
+      },
+      {
+       "key": "B",
+       "text": "Dörtten az mitoz ve kalsifiye psammom cisimcikleri içeren tipik histoloji.",
+       "isCorrect": false,
+       "explanation": "Dörtten az mitoz ve psammom kalsifikasyonları Grade I selim menenjiomların klasik histopatolojik bulgusudur. Bu lezyonlar atipik grupta yer alan kordoid varyantlardan tamamen ayrılır."
+      },
+      {
+       "key": "C",
+       "text": "Yirmiden fazla mitoz ve rabdoid ya da papiller morfolojik varyant.",
+       "isCorrect": false,
+       "explanation": "Yirmiden fazla mitoz saptanması anaplastik agresif karakteri belgeler. Rabdoid ve papiller tipler doğrudan Grade III anaplastik malign menenjiom olarak değerlendirilir."
+      },
+      {
+       "key": "D",
+       "text": "Yalnızca tela koroidea kaynaklı olup ventrikül içinde yerleşmesi.",
+       "isCorrect": false,
+       "explanation": "Tela koroidea anatomik olarak intraventriküler menenjiomların çıkış kaynağını oluşturur. Tümörün histopatolojik derecesi ise yerleşimden bağımsız olarak hücresel mitoz sayısıyla belirlenir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Menenjiomlar araknoid granülasyonların dış tabakasındaki kap hücrelerinden köken alan, yavaş büyüyen, ekstraaksiyel tümörlerdir.",
+     "maskedTerm": "kap hücrelerinden",
+     "hint": "Kasket biçimli özel araknoidal örtü tabakasından"
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "DSÖ Derecesi",
+      "Mitoz Sayısı (10 BBA)",
+      "Özgül Morfolojik Alt Tipler"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        "Grade I (Tipik - %90)",
+        "4'ten az mitoz",
+        {
+         "text": "Benign meningotelyal tipler",
+         "isMasked": true,
+         "hint": "Selim gidişli klasik histopatolojik varyantlar"
+        }
+       ]
+      },
+      {
+       "cells": [
+        "Grade II (Atipik - %8)",
+        "4 - 20 arası mitoz",
+        {
+         "text": "Berrak hücreli ve kordoid",
+         "isMasked": true,
+         "hint": "Agresif seyirli iki özel ara evre histolojik tipi"
+        }
+       ]
+      },
+      {
+       "cells": [
+        "Grade III (Anaplastik - %2)",
+        "20'den fazla mitoz",
+        {
+         "text": "Rabdoid ve papiller",
+         "isMasked": true,
+         "hint": "En habis seyirli iki malign menenjiom varyantı"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Menenjiom Etyopatogenezi ve Risk Faktörleri",
+     "items": [
+      {
+       "text": "Menenjiomlar kadınlarda erkeklere oranla üç ila yedi kat daha sık izlenir.",
+       "isLie": false,
+       "explanation": "Hormonal duyarlılık nedeniyle kadın cinsiyette belirgin sıklık artışı saptanan tipik bir ekstraaksiyel neoplazidir."
+      },
+      {
+       "text": "Progesteron reseptörleri taşıdıklarından gebelik sürecinde tümör büyümesi hızlanabilir.",
+       "isLie": false,
+       "explanation": "Hormon reseptörü pozitifliği gebelikteki fizyolojik hormon artışıyla tümör hacminde hızlı artışa neden olur."
+      },
+      {
+       "text": "Çocukluk çağında kraniyal radyoterapi alan bireylerde menenjiom insidansı dört kat artar.",
+       "isLie": false,
+       "explanation": "Kraniyal ışınlamaya maruz kalan kohortlarda radyasyon ilişkili menenjiom gelişme riski dört kat yüksek bulunmuştur."
+      },
+      {
+       "text": "Malign menenjioma ilerleyişte temel genetik bozukluk 1p delesyonu değil 22. kromozom kazanımıdır.",
+       "isLie": true,
+       "explanation": "Menenjiomda 22q kaybı başlangıçta rol oynar, malign anaplastik transformasyona gidişte ise 17q mutasyonu devreye girer."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Menenjiomların köken aldığı temel araknoidal hücre tipi ve intraventriküler menenjiomların orijin yeri nedir?",
+     "answer": "Araknoid granülasyonların dış tabakasındaki kap (kasket) hücreleridir; intraventriküler olanlar ise tela koroidea yapısından köken alır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 10,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Nöroepitelyal Tümörler ve Menenjiomlar",
+   "isCheckpoint": true,
+   "bolum": "4",
+   "section": "4",
+   "pdfSayfalari": [
+    22,
+    42
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 22,
+    "endPage": 42
+   },
+   "content": "Bu kontrol noktasında oligodendrogliom, ependimom, medulloblastom, kistik suprasellar lezyonlar, hemanjiyoblastom, primer lenfoma ve menenjiom kazanımlarını pekiştiriyoruz.\n\n- **Nöroepitelyal ve Embriyonel Ayırıcı Tanı:** Oligodendrogliomda frontal kalsifikasyon ve 1p/19q ko-delesyonu iyi prognoz göstergesidir. Medulloblastom dördüncü ventrikül tavanından çıkarak BOS ile yayılırken; ependimom kordda total çıkarılabilir.\n- **Kistik ve Vasküler Kitleler:** Adamantinomatöz kraniyofarenjiomda kolesterol kristalleri ve kalsifikasyon; dermoid kistte dermal sinüs traktı; hemanjiyoblastomda mural nodül ve polistemi tipiktir.\n- **Menenjiom Biyolojisi:** Kap hücrelerinden gelişir, kadınlarda ve gebelikte sıktır. Derecelemede 4-20 mitoz Grade II, 20'den fazla mitoz Grade III kabul edilir.\n\n> [!IMPORTANT]\n> Checkpoint 2: Bölüm 3 ve Bölüm 4 boyunca öğrendiğiniz histopatolojik ve klinik ayırt edici noktaları test edin.",
+   "synthesisNarrative": "Bu kontrol noktasında oligodendrogliom, ependimom, medulloblastom, kistik suprasellar lezyonlar, hemanjiyoblastom, primer lenfoma ve menenjiom kazanımlarını pekiştiriyoruz.\n\n- **Nöroepitelyal ve Embriyonel Ayırıcı Tanı:** Oligodendrogliomda frontal kalsifikasyon ve 1p/19q ko-delesyonu iyi prognoz göstergesidir. Medulloblastom dördüncü ventrikül tavanından çıkarak BOS ile yayılırken; ependimom kordda total çıkarılabilir.\n- **Kistik ve Vasküler Kitleler:** Adamantinomatöz kraniyofarenjiomda kolesterol kristalleri ve kalsifikasyon; dermoid kistte dermal sinüs traktı; hemanjiyoblastomda mural nodül ve polistemi tipiktir.\n- **Menenjiom Biyolojisi:** Kap hücrelerinden gelişir, kadınlarda ve gebelikte sıktır. Derecelemede 4-20 mitoz Grade II, 20'den fazla mitoz Grade III kabul edilir.\n\n> [!IMPORTANT]\n> Checkpoint 2: Bölüm 3 ve Bölüm 4 boyunca öğrendiğiniz histopatolojik ve klinik ayırt edici noktaları test edin.",
+   "interactiveElements": [
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Tümör Adı",
+      "Köken / Hücre Kaynağı",
+      "Karakteristik Tanısal Belirteç"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        "Oligodendrogliom",
+        "Oligodendrosit kalıntıları",
+        {
+         "text": "1p19q ko-delesyonu",
+         "isMasked": true,
+         "hint": "Kemoradyoterapiye üstün yanıt sağlayan kromozomal kayıp"
+        }
+       ]
+      },
+      {
+       "cells": [
+        "Medulloblastom",
+        "Obersteiner tabakası",
+        {
+         "text": "BOS yoluyla seeding",
+         "isMasked": true,
+         "hint": "Hücrelerin subaraknoid mesafeye dökülerek yayılması"
+        }
+       ]
+      },
+      {
+       "cells": [
+        "Hemanjiyoblastom",
+        "Vasküler stromal hücreler",
+        {
+         "text": "Eritropoetin ve polistemi",
+         "isMasked": true,
+         "hint": "Kırmızı kan hücrelerinin artışına yol açan hormonal salgı"
+        }
+       ]
+      },
+      {
+       "cells": [
+        "Menenjiom",
+        "Araknoid kap hücreleri",
+        {
+         "text": "Kromozom 22 delesyonu",
+         "isMasked": true,
+         "hint": "Karakteristik sitogenetik anomali"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Klinik öyküsünde kafa travması, kadın cinsiyet ve gebelikte büyüme saptanan; radyolojisinde dural tabanlı ekstraaksiyel kitle izlenen neoplazi hangisidir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Araknoid granülasyonların kap hücrelerinden kaynaklanan menenjiom.",
+       "isCorrect": true,
+       "explanation": "Menenjiomlar belirgin kadın predominansı, progesteron reseptör bağımlı gebelik büyümesi ve kafa travması ilişkisi sergileyen ekstraaksiyel tümörlerdir."
+      },
+      {
+       "key": "B",
+       "text": "Serebellar vermisten kaynaklanıp BOS ile yayılan medulloblastom.",
+       "isCorrect": false,
+       "explanation": "Medulloblastom çocukluk çağında posterior fossada dördüncü ventrikül tavanından köken alan intraaksiyel malign bir neoplazidir. Sıklıkla vermis serebellide oturur ve BOS ile nöraksise yayılır."
+      },
+      {
+       "key": "C",
+       "text": "Frontal lob korteksinde yüzde doksan kalsifikasyon veren oligodendrogliom.",
+       "isCorrect": false,
+       "explanation": "Oligodendrogliom intraaksiyel gliyal bir neoplazi olup epileptik nöbetler ve 1p19q ko-delesyonu sergiler. Dural tabanlı ekstraaksiyel büyüme paterni göstermez."
+      },
+      {
+       "key": "D",
+       "text": "Rathke poşundan gelişen kolesterol kristalleri zengini kraniyofarenjiom.",
+       "isCorrect": false,
+       "explanation": "Kraniyofarenjiom sellar bölgede yerleşerek görme kaybı ve hipofizer hormon yetmezliği tablosu oluşturan epitelyal bir kitledir."
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Menenjiom Özellikleri",
+     "rightCategory": "Oligodendrogliom Özellikleri",
+     "cards": [
+      {
+       "text": "Araknoid granülasyonların dış tabakasındaki kap hücrelerinden köken alma",
+       "category": "left"
+      },
+      {
+       "text": "1p ve 19q kromozomal kollarında ko-delesyon varlığı ve kemo-duyarlılık",
+       "category": "right"
+      },
+      {
+       "text": "Kadınlarda belirgin sıklık artışı ve progesteron reseptörü pozitifliği",
+       "category": "left"
+      },
+      {
+       "text": "Bilgisayarlı tomografide yüzde doksan oranında kalsifikasyon sergileme",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Posterior Fossa ve Suprasellar Kitlelerin Ayrımı",
+     "items": [
+      {
+       "text": "Adamantinomatöz kraniyofarenjiom kolesterol kristalleri ve kalsifikasyon içerir.",
+       "isLie": false,
+       "explanation": "Rathke poşu kökenli bu lezyon makine yağı kıvamında kolesterol sıvısı ve kireçlenme odakları barındırır."
+      },
+      {
+       "text": "Hemanjiyoblastomda eritropoetin salgısına bağlı olarak sekonder polistemi gelişebilir.",
+       "isLie": false,
+       "explanation": "Tümör dokusunun paraneoplastik hormon üretimi kemik iliğini uyararak alyuvar sayısını artırır."
+      },
+      {
+       "text": "Ependimomlar intraspinal kord yerleşiminde keskin sınırları olmadığı için asla rezeke edilemez.",
+       "isLie": true,
+       "explanation": "Ependimomlar intraspinal yerleşimde keskin sınırlara sahip olduklarından cerrahi olarak total eksizyonları başarıyla uygulanır."
+      },
+      {
+       "text": "Primer SSS lenfoması immün yetmezlik zemininde B hücreli agresif kitleler oluşturur.",
+       "isLie": false,
+       "explanation": "Özellikle hücresel bağışıklığı baskılanmış AIDS olgularında santral sinir sistemi lenfoması insidansı yüksektir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "von Hippel-Lindau sendromu kapsamında serebellumda görülen, paraneoplastik polistemiye yol açabilen vasküler kistik tümör hangisidir?",
+     "answer": "Mural nodül içeren ve anormal vasküler besleyicileri bulunan serebellar hemanjiyoblastomdur."
+    }
+   ]
+  },
+  {
+   "slideNumber": 11,
+   "title": "Menenjiomlarda Cerrahi Rezeksiyon (Simpson Derecelemesi) ve Radyoloji",
+   "bolum": "4",
+   "section": "4",
+   "pdfSayfalari": [
+    43,
+    45
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 43,
+    "endPage": 45
+   },
+   "content": "Menenjiomların cerrahi tedavisinde temel amaç nörolojik fonksiyonları koruyarak küratif tam rezeksiyondur. Benign menenjiomlarda beş yıllık yaşam süresi %91.3'tür; radyoterapinin rekürrensleri önlediği kanıtlanmamıştır.\n\n- **BT ve MR'da Malignite Bulguları:** Heterojen kontrastlanma, kavitasyon, belirgin çevre ödemi ve nöral doku içerisine mantar tarzı uzanım malignite lehinedir.\n- **Simpson Rezeksiyon Derecelendirmesi ve 10 Yıllık Nüks:**\n  * **Grade 0:** Tümör rezeksiyonu ile birlikte orijin aldığı duranın bir santimetre çevreyle rezeksiyonu (%0 nüks).\n  * **Grade 1:** Tümör rezeksiyonu ile birlikte orijin aldığı duranın çıkartılması (%9 nüks).\n  * **Grade 2:** Tümör rezeksiyonu ve dural tabanın koagülasyonu (%19 nüks).\n  * **Grade 3:** Tümör rezeksiyonu, dural tabanın koagüle edilememesi (%29 nüks).\n  * **Grade 4:** Subtotal rezeksiyon (%40 nüks).\n  * **Grade 5:** Yalnızca dekompresyon ve biyopsi (%100 nüks).\n\n> [!IMPORTANT]\n> Simpson sınıflamasında dural tabanın tamamen çıkarılması (Grade 1) nüksü %9'a düşürürken; dural tabanın yalnız koagüle edilmesi (Grade 2) nüks oranını %19'a çıkarır.",
+   "synthesisNarrative": "Menenjiomların cerrahi tedavisinde temel amaç nörolojik fonksiyonları koruyarak küratif tam rezeksiyondur. Benign menenjiomlarda beş yıllık yaşam süresi %91.3'tür; radyoterapinin rekürrensleri önlediği kanıtlanmamıştır.\n\n- **BT ve MR'da Malignite Bulguları:** Heterojen kontrastlanma, kavitasyon, belirgin çevre ödemi ve nöral doku içerisine mantar tarzı uzanım malignite lehinedir.\n- **Simpson Rezeksiyon Derecelendirmesi ve 10 Yıllık Nüks:**\n  * **Grade 0:** Tümör rezeksiyonu ile birlikte orijin aldığı duranın bir santimetre çevreyle rezeksiyonu (%0 nüks).\n  * **Grade 1:** Tümör rezeksiyonu ile birlikte orijin aldığı duranın çıkartılması (%9 nüks).\n  * **Grade 2:** Tümör rezeksiyonu ve dural tabanın koagülasyonu (%19 nüks).\n  * **Grade 3:** Tümör rezeksiyonu, dural tabanın koagüle edilememesi (%29 nüks).\n  * **Grade 4:** Subtotal rezeksiyon (%40 nüks).\n  * **Grade 5:** Yalnızca dekompresyon ve biyopsi (%100 nüks).\n\n> [!IMPORTANT]\n> Simpson sınıflamasında dural tabanın tamamen çıkarılması (Grade 1) nüksü %9'a düşürürken; dural tabanın yalnız koagüle edilmesi (Grade 2) nüks oranını %19'a çıkarır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Menenjiom cerrahisinde tümörün tamamen çıkarıldığı ancak orijin aldığı dural tabanın rezeke edilmeyip koagüle edildiği durum hangi Simpson derecesidir ve beklenen 10 yıllık nüks oranı nedir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Simpson Grade 2 rezeksiyon olup 10 yıllık nüks oranı yüzde on dokuzdur.",
+       "isCorrect": true,
+       "explanation": "Simpson sisteminde dural tabanın eksizyonu yerine koagülasyonu Grade 2 olarak tanımlanır ve 10 yılda yüzde 19 nüks riski taşır."
+      },
+      {
+       "key": "B",
+       "text": "Simpson Grade 1 rezeksiyon olup 10 yıllık nüks oranı yüzde sıfırdır.",
+       "isCorrect": false,
+       "explanation": "Grade 1 rezeksiyonda cerrah tümörle birlikte orijin aldığı dura yaprağını bütünüyle rezeke eder. Bu radikal eksizyon sonrası on yıllık takipte nüks oranı yüzde dokuzdur."
+      },
+      {
+       "key": "C",
+       "text": "Simpson Grade 3 rezeksiyon olup dural tabanın koagüle edilemediğini gösterir.",
+       "isCorrect": false,
+       "explanation": "Grade 3 rezeksiyonda dural taban koagüle dahi edilemez ve nüks oranı yüzde yirmi dokuza yükselir."
+      },
+      {
+       "key": "D",
+       "text": "Simpson Grade 4 rezeksiyon olup tümör dokusunun yüzde ondan fazlası yerinde bırakılmıştır.",
+       "isCorrect": false,
+       "explanation": "Simpson Grade 4 kategorisi subtotal tümör rezeksiyonunu tanımlar. Bu cerrahi sınıfta geride bırakılan rezidü tümör dokusu yüzde ondan azdır ve nüks oranı yüzde kırktır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Simpson Grade 1 rezeksiyon tümör rezeksiyonu ile birlikte orijin aldığı duranın çıkartılması işlemidir.",
+     "maskedTerm": "duranın çıkartılması",
+     "hint": "Tümörün yapıştığı tabakanın cerrahi olarak kesilip alınması"
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Simpson Derecesi",
+      "Cerrahi Rezeksiyonun Genişliği",
+      "10 Yıllık Rekürrens Oranı"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        "Grade 0",
+        "Tümör eksizyonu + 1 cm dural marj rezeksiyonu",
+        {
+         "text": "Yüzde 0 nüks",
+         "isMasked": true,
+         "hint": "Sıfır rekürrens ile tam şifa"
+        }
+       ]
+      },
+      {
+       "cells": [
+        "Grade 1",
+        "Tümör eksizyonu + dural orijinin çıkartılması",
+        {
+         "text": "Yüzde 9 nüks",
+         "isMasked": true,
+         "hint": "Dura tabanı çıkarıldığındaki tek haneli rekürrens oranı"
+        }
+       ]
+      },
+      {
+       "cells": [
+        "Grade 2",
+        "Tümör eksizyonu + dural tabanın koagülasyonu",
+        {
+         "text": "Yüzde 19 nüks",
+         "isMasked": true,
+         "hint": "Koagülasyon yapıldığındaki yaklaşık beşte bir oran"
+        }
+       ]
+      },
+      {
+       "cells": [
+        "Grade 3",
+        "Tümör eksizyonu, dural taban koagüle edilemez",
+        {
+         "text": "Yüzde 29 nüks",
+         "isMasked": true,
+         "hint": "Dural tabana müdahale edilemediğindeki rekürrens"
+        }
+       ]
+      },
+      {
+       "cells": [
+        "Grade 4",
+        "Subtotal rezeksiyon (rezidü <%10)",
+        {
+         "text": "Yüzde 40 nüks",
+         "isMasked": true,
+         "hint": "Subtotal rezeksiyon sonrasındaki rekürrens olasılığı"
+        }
+       ]
+      },
+      {
+       "cells": [
+        "Grade 5",
+        "Basit dekompresyon veya biyopsi (rezidü >%10)",
+        {
+         "text": "Yüzde 100 nüks",
+         "isMasked": true,
+         "hint": "On yılda kaçınılmaz tümöral progresyon"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Menenjiom Radyolojisi ve Simpson Cerrahi Sınıflaması",
+     "items": [
+      {
+       "text": "Bilgisayarlı tomografide nöral doku içine mantar tarzı uzanım menenjiomda malignite bulgusudur.",
+       "isLie": false,
+       "explanation": "Beyin parankimi içine mantar tarzında infiltratif nodüler uzanım yüksek histopatolojik evre işaretidir."
+      },
+      {
+       "text": "Simpson Grade 0 rezeksiyonda dural orijin 1 cm çevreyle çıkarılır ve 10 yıllık nüks sıfırdır.",
+       "isLie": false,
+       "explanation": "Geniş dural güvenlik marjıyla yapılan Grade 0 cerrahilerde on yıllık takipte rekürrens izlenmez."
+      },
+      {
+       "text": "Benign menenjiomların cerrahi rezeksiyonu sonrasında rutin radyoterapi nüksü kesinlikle önler.",
+       "isLie": true,
+       "explanation": "Benign menenjiomlarda cerrahi sonrası radyoterapinin rekürrensleri önlediğine dair kanıtlanmış bir veri bulunmamaktadır."
+      },
+      {
+       "text": "Simpson Grade 5 rezeksiyonda yalnızca biyopsi yapılır ve 10 yıllık nüks oranı yüzde yüzdür.",
+       "isLie": false,
+       "explanation": "Tümör kitlesinin yüzde ondan fazlasının bırakıldığı biyopsi olgularında on yılda lezyonun büyümesi kaçınılmazdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Simpson cerrahi sınıflamasına göre Grade 1 ile Grade 2 rezeksiyon arasındaki teknik dural fark ve nüks oranları nedir?",
+     "answer": "Grade 1'de dural taban tamamen çıkartılır ve nüks %9'dur; Grade 2'de ise dural taban çıkarılmayıp yalnız koagüle edilir ve nüks %19'a yükselir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 12,
+   "title": "Vestibüler Schwannom (Akustik Nörinom): Pontoserebellar Köşe Cerrahisi",
+   "bolum": "5",
+   "section": "5",
+   "pdfSayfalari": [
+    46,
+    46
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 46,
+    "endPage": 46
+   },
+   "content": "Vestibüler schwannom, serebellopontin açının (pontoserebellar köşe) en sık görülen tümörüdür. Sekizinci kraniyal sinirin vestibüler dalını saran Schwann hücrelerinden kaynaklanır.\n\n- **Klinik Belirti ve Bulgular:**\n  * **8. Sinir Tutulumu:** En sık ve erken bulgu tek taraflı sensörinöral işitme kaybı ve kulak çınlamasıdır. Eşlik eden vestibüler fonksiyon bozukluğuna bağlı dengesizlik ve vertigo izlenir.\n  * **7. Sinir Tutulumu:** Tümör büyüdükçe komşu fasiyal siniri gererek periferik fasiyal paraliziye (yüz felci) yol açar.\n  * **5. Sinir Tutulumu:** Trigeminal sinir basısıyla kornea refleksi kaybı, yüz yarısında hissizlik ve trigeminal nevralji tarzı ağrı gelişir.\n- **İleri Evre Bası:** Kitle beyin sapı ve serebelluma bası yaparak yürüme ataksisi ve dördüncü ventrikül obstrüksiyonuyla hidrosefaliye neden olabilir.\n\n> [!IMPORTANT]\n> Tek taraflı ilerleyici işitme kaybı ve kulak çınlaması ile başvuran bir hastada pontoserebellar köşe yerleşimli vestibüler schwannom mutlaka ekarte edilmelidir.",
+   "synthesisNarrative": "Vestibüler schwannom, serebellopontin açının (pontoserebellar köşe) en sık görülen tümörüdür. Sekizinci kraniyal sinirin vestibüler dalını saran Schwann hücrelerinden kaynaklanır.\n\n- **Klinik Belirti ve Bulgular:**\n  * **8. Sinir Tutulumu:** En sık ve erken bulgu tek taraflı sensörinöral işitme kaybı ve kulak çınlamasıdır. Eşlik eden vestibüler fonksiyon bozukluğuna bağlı dengesizlik ve vertigo izlenir.\n  * **7. Sinir Tutulumu:** Tümör büyüdükçe komşu fasiyal siniri gererek periferik fasiyal paraliziye (yüz felci) yol açar.\n  * **5. Sinir Tutulumu:** Trigeminal sinir basısıyla kornea refleksi kaybı, yüz yarısında hissizlik ve trigeminal nevralji tarzı ağrı gelişir.\n- **İleri Evre Bası:** Kitle beyin sapı ve serebelluma bası yaparak yürüme ataksisi ve dördüncü ventrikül obstrüksiyonuyla hidrosefaliye neden olabilir.\n\n> [!IMPORTANT]\n> Tek taraflı ilerleyici işitme kaybı ve kulak çınlaması ile başvuran bir hastada pontoserebellar köşe yerleşimli vestibüler schwannom mutlaka ekarte edilmelidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Pontoserebellar köşede büyüyen bir vestibüler schwannomda trigeminal sinir (5. kraniyal sinir) basısını gösteren en erken ve duyarlı klinik muayene bulgusu nedir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Kornea refleksinin tek taraflı olarak zayıflaması veya tamamen kaybolması.",
+       "isCorrect": true,
+       "explanation": "Trigeminal sinirin afferent dalı kornea refleksini oluşturduğundan kitle basısında kornea duyusunun kaybı en erken saptanan bulgudur."
+      },
+      {
+       "key": "B",
+       "text": "Karşı tarafta homonim hemianopsi şeklinde görme alanı kaybı ortaya çıkması.",
+       "isCorrect": false,
+       "explanation": "Homonim hemianopsi optik traktus veya oksipital vizüel korteksin hasarlarında şekillenir. Pontoserebellar açı kitleleri trigeminal bası yaparken primer görsel sahaları korur."
+      },
+      {
+       "key": "C",
+       "text": "Çiğneme kaslarında izole istemsiz fasikülasyonların başlaması.",
+       "isCorrect": false,
+       "explanation": "Trigeminal sinir basısında motor liflerden ziyade sensoryal lifler ve kornea refleksi arkı çok daha erken etkilenir."
+      },
+      {
+       "key": "D",
+       "text": "Dördüncü ventrikül tavanından kaynaklanan paraneoplastik polistemi gelişimi.",
+       "isCorrect": false,
+       "explanation": "Paraneoplastik polistemi serebellar hemanjiyoblastomun mural nodülünden eritropoetin üretilmesiyle ortaya çıkar. Akustik nörinomlar ise schwann hücre kaynaklı olup hematolojik etki yaratmaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sekizinci kraniyal sinirin vestibüler dalını saran Schwann hücrelerinden kaynaklanır.",
+     "maskedTerm": "Schwann hücrelerinden",
+     "hint": "Periferik akson liflerini miyelinleyen kılıf yapısından"
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. İnternal akustik kanal içinde 8. sinirin vestibüler dalından köken alan tümör büyür.",
+      "2. Koklear sinir lifleri basıya uğrayarak tek taraflı işitme kaybı ve tinnitus gelişir.",
+      "3. Pontoserebellar köşeye taşan kitle komşuluktaki 7. sinire basarak fasiyal güçsüzlük yapar.",
+      "4. Yukarı doğru genişleyen tümör 5. sinire basarak kornea refleksi kaybı ve yüz ağrısı yaratır.",
+      "5. Beyin sapı ve 4. ventrikül basısıyla serebellar ataksi ve hidrosefali tablosu eklenir."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Vestibüler Schwannom Klinik Bulguları",
+     "items": [
+      {
+       "text": "Tümör vestibüler sinirin schwann kılıfı hücrelerinden köken alır.",
+       "isLie": false,
+       "explanation": "Neoplazi sekizinci kraniyal sinirin vestibüler bölümündeki miyelin kılıfı yapan hücrelerden gelişir."
+      },
+      {
+       "text": "Erken dönemde en sık görülen semptom tek taraflı sensörinöral işitme kaybı ve tinnitustur.",
+       "isLie": false,
+       "explanation": "İnternal akustik kanal içindeki yerleşim koklear lifleri erken dönemde sıkıştırarak tek taraflı işitme kaybı yaratır."
+      },
+      {
+       "text": "Tümör internal akustik kanaldan kaynaklandığı için periferik fasiyal paralizi asla gelişmez.",
+       "isLie": true,
+       "explanation": "Fasiyal sinir internal akustik kanalda ve pontoserebellar köşede akustik sinirle yan yana seyrettiğinden kitle basısıyla fasiyal paralizi gelişir."
+      },
+      {
+       "text": "Trigeminal sinir basısına bağlı olarak yüz yarısında hissizlik ve trigeminal nevralji görülebilir.",
+       "isLie": false,
+       "explanation": "Genişleyen lezyon beşinci kraniyal sinirin duyu kökünü irrite ederek kornea his kaybı ve nevraljik ağrı yapar."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Pontoserebellar köşe tümörlerinde 8., 7. ve 5. kraniyal sinir tutulumlarının klinik muayene karşılıkları nelerdir?",
+     "answer": "8. sinir için işitme kaybı, tinnitus ve vertigo; 7. sinir için periferik fasiyal paralizi; 5. sinir için kornea refleksi kaybı ve yüzde uyuşma veya ağrıdır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 13,
+   "title": "Beyin Metastazları: Epidemiyoloji, Primer Odaklar ve Tanı",
+   "bolum": "5",
+   "section": "5",
+   "pdfSayfalari": [
+    47,
+    50
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 47,
+    "endPage": 50
+   },
+   "content": "Metastatik tümörler, intrakraniyal kitleyle hastaneye yatan hastaların yarısını oluşturan ve klinik pratikte erişkinde en yaygın görülen beyin tümörleridir. Tüm metastazların %80'i karsinom kaynaklıdır; bazen beyin metastazı kanserin ilk klinik bulgusu olabilir.\n\n- **Primer Odaklar:**\n  * **Akciğer Kanseri:** %44 (en sık primer kaynak)\n  * **Meme Kanseri:** %10\n  * **Diğerleri:** Malign melanom, böbrek ve gastrointestinal sistem kanserleri.\n- **Anatomik Lokalizasyon:** Kan akımıyla doğru orantılıdır. Beyin hemisferlerinde %80, serebellumda %15, beyin sapında %5 oranında yerleşir. Temporal, parietal ve oksipital lobların birleşim yerinde, sylvian fissürün posteriorunda ve gri-beyaz cevher sınırında kümelenir. Erişkinde en yaygın posterior fossa tümörüdür.\n- **Prognoz:** En uygun tedaviyle ortalama yaşam süresi 32 haftadır.\n\n> [!NOTE]\n> Erişkin bir hastada posterior fossada kitle saptandığında ilk akla gelmesi gereken patoloji metastazdır (%15 serebellum yerleşimi).",
+   "synthesisNarrative": "Metastatik tümörler, intrakraniyal kitleyle hastaneye yatan hastaların yarısını oluşturan ve klinik pratikte erişkinde en yaygın görülen beyin tümörleridir. Tüm metastazların %80'i karsinom kaynaklıdır; bazen beyin metastazı kanserin ilk klinik bulgusu olabilir.\n\n- **Primer Odaklar:**\n  * **Akciğer Kanseri:** %44 (en sık primer kaynak)\n  * **Meme Kanseri:** %10\n  * **Diğerleri:** Malign melanom, böbrek ve gastrointestinal sistem kanserleri.\n- **Anatomik Lokalizasyon:** Kan akımıyla doğru orantılıdır. Beyin hemisferlerinde %80, serebellumda %15, beyin sapında %5 oranında yerleşir. Temporal, parietal ve oksipital lobların birleşim yerinde, sylvian fissürün posteriorunda ve gri-beyaz cevher sınırında kümelenir. Erişkinde en yaygın posterior fossa tümörüdür.\n- **Prognoz:** En uygun tedaviyle ortalama yaşam süresi 32 haftadır.\n\n> [!NOTE]\n> Erişkin bir hastada posterior fossada kitle saptandığında ilk akla gelmesi gereken patoloji metastazdır (%15 serebellum yerleşimi).",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Erişkinlerde beyne en sık metastaz yapan primer organ kanseri hangisidir ve tüm metastazların yaklaşık yüzde kaçını oluşturur?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Akciğer kanseri olup tüm beyin metastazlarının yaklaşık yüzde kırk dördünü oluşturur.",
+       "isCorrect": true,
+       "explanation": "Akciğer karsinomları zengin vasküler yayılım potansiyelleri nedeniyle beyne en sık metastaz yapan primer odaktır (%44)."
+      },
+      {
+       "key": "B",
+       "text": "Meme kanseri olup tüm metastazların yüzde yetmişini tek başına kapsar.",
+       "isCorrect": false,
+       "explanation": "Meme kanseri kadınlarda en sık rastlanan metastatik odaktır. Ancak genel beyin metastazları popülasyonunda akciğerin ardından yüzde onluk bir sıklık payına sahiptir."
+      },
+      {
+       "key": "C",
+       "text": "Malign melanom olup hastaların tamamında soliter tek odak şeklinde yerleşir.",
+       "isCorrect": false,
+       "explanation": "Malign melanom intrakraniyal metastaz yapma eğilimi yüksek kutanöz bir tümördür. Serebral parankimde sıklıkla multipl hemorajik odaklar oluşturur ve akciğerden sonra gelir."
+      },
+      {
+       "key": "D",
+       "text": "Gastrointestinal sistem karsinomları olup beyin sapına izole yerleşim gösterir.",
+       "isCorrect": false,
+       "explanation": "Gastrointestinal sistem tümörleri intrakraniyal alana nadiren yayılım sergiler. Gelişen metastazlar ise kan akımının yüksek olduğu serebral kortikal sahalara oturur."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Temporal, parietal ve oksipital lobların birleşim yerinde, sylvian fissürün posteriorunda ve gri-beyaz cevher sınırında kümelenir.",
+     "maskedTerm": "gri-beyaz cevher sınırında",
+     "hint": "Kortikal nöronlar ile subkortikal aksonların kesiştiği vasküler yavaşlama zonunda"
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Anatomik Bölge",
+      "Kan Akımı Oranı",
+      "Klinik ve Radyolojik Özellik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        "Serebral Hemisferler",
+        "%80 sıklık",
+        {
+         "text": "Gri-beyaz cevher bileşkesi",
+         "isMasked": true,
+         "hint": "Watershed zonundaki mikrovasküler tutulum"
+        }
+       ]
+      },
+      {
+       "cells": [
+        "Serebellum (Posterior Fossa)",
+        "%15 sıklık",
+        {
+         "text": "Erişkinde en sık kitle",
+         "isMasked": true,
+         "hint": "İnfratentoryal kompartmanda ileri yaşta en yaygın neoplazi"
+        }
+       ]
+      },
+      {
+       "cells": [
+        "Beyin Sapı",
+        "%5 sıklık",
+        {
+         "text": "Düşük kan akımı payı",
+         "isMasked": true,
+         "hint": "En az metastatik tutulum gösteren infratentoryal segment"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Beyin Metastazlarının Epidemiyolojisi ve Dağılımı",
+     "items": [
+      {
+       "text": "Beyin metastazları hastanede yatan intrakraniyal tümörlü olguların yarısını oluşturur.",
+       "isLie": false,
+       "explanation": "Metastatik lezyonlar klinik pratikte erişkinde en sık karşılaşılan intrakraniyal neoplazi grubudur."
+      },
+      {
+       "text": "Beyin metastazlarının yüzde seksenlik büyük çoğunluğu serebellum ve beyin sapına yerleşir.",
+       "isLie": true,
+       "explanation": "Metastazların yüzde sekseni serebral hemisferlerde yerleşir; serebellum yüzde 15, beyin sapı ise yüzde 5 oranında tutulur."
+      },
+      {
+       "text": "Primer malignensi öyküsü bilinmeyen hastalarda beyin metastazı ilk başvuru bulgusu olabilir.",
+       "isLie": false,
+       "explanation": "Akciğer gibi sessiz seyredebilen karsinomlarda intrakraniyal kitle etkisi primer hastalığın ilk belirtisi olarak hekime gelebilir."
+      },
+      {
+       "text": "Metastaz olgularında en uygun onkolojik tedaviyle ortalama yaşam süresi 32 haftadır.",
+       "isLie": false,
+       "explanation": "Kombine cerrahi, radyoterapi ve medikal yaklaşımlarla elde edilen medyan yaşam süresi otuz iki hafta civarındadır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Beyin metastazlarının anatomik dağılımında serebral hemisferler, serebellum ve beyin sapının tutulum oranları nelerdir?",
+     "answer": "Kan akımıyla orantılı olarak serebral hemisferler %80, serebellum %15 ve beyin sapı %5 oranında tutulur."
+    }
+   ]
+  },
+  {
+   "slideNumber": 14,
+   "title": "Beyin Metastazlarında Cerrahi Endikasyonlar ve Yönetim",
+   "bolum": "5",
+   "section": "5",
+   "pdfSayfalari": [
+    51,
+    54
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 51,
+    "endPage": 54
+   },
+   "content": "Beyin metastazlarında cerrahi tedavinin temel amaçları histolojik tanının kesinleştirilmesi, kitle etkisinin hızla giderilerek semptomların düzeltilmesi ve total rezeksiyonla lokal kontrol elde edilmesidir.\n\n- **Soliter Metastazlarda Cerrahi Endikasyonlar:**\n  1. Primer odak sessiz veya kontrol altındaysa,\n  2. Lezyon cerrahi olarak kolaylıkla çıkartılabilir lokalizasyondaysa,\n  3. Lezyon semptomatik ve hayatı tehdit edici kitle etkisi yapıyorsa,\n  4. Tanı ile ilgili kuşku mevcutsa cerrahi uygulanır.\n- **Multipl Metastazlarda Cerrahi:** Hayatı tehdit eden lezyonun çıkarılabilir olması veya tüm lezyonların kombine bir cerrahiyle rezeke edilebilir olması durumunda cerrahi düşünülür. Multipl metastazlarda gross total rezeksiyon başarılabilirse, soliter metastazlar ile aynı sağkalım oranına ulaşmak mümkündür.\n- **Konservatif Yönetim:** Yaygın sistemik kanser varlığında cerrahi yerine radyoterapi ve sistemik tıbbi tedavi önerilir.\n- **Prognostik Faktörler:** Lezyon sayısı, kitle etkisi, sistemik kanserin evresi, hastanın Karnofsky performans puanı ve yaşıdır.\n\n> [!IMPORTANT]\n> Soliter metastazlarda primer odağın kontrol altında olması ve lezyonun cerrahiye uygunluğu cerrahi endikasyonun temelini oluşturur; yaygın sistemik hastalıkta cerrahi dışlanır.",
+   "synthesisNarrative": "Beyin metastazlarında cerrahi tedavinin temel amaçları histolojik tanının kesinleştirilmesi, kitle etkisinin hızla giderilerek semptomların düzeltilmesi ve total rezeksiyonla lokal kontrol elde edilmesidir.\n\n- **Soliter Metastazlarda Cerrahi Endikasyonlar:**\n  1. Primer odak sessiz veya kontrol altındaysa,\n  2. Lezyon cerrahi olarak kolaylıkla çıkartılabilir lokalizasyondaysa,\n  3. Lezyon semptomatik ve hayatı tehdit edici kitle etkisi yapıyorsa,\n  4. Tanı ile ilgili kuşku mevcutsa cerrahi uygulanır.\n- **Multipl Metastazlarda Cerrahi:** Hayatı tehdit eden lezyonun çıkarılabilir olması veya tüm lezyonların kombine bir cerrahiyle rezeke edilebilir olması durumunda cerrahi düşünülür. Multipl metastazlarda gross total rezeksiyon başarılabilirse, soliter metastazlar ile aynı sağkalım oranına ulaşmak mümkündür.\n- **Konservatif Yönetim:** Yaygın sistemik kanser varlığında cerrahi yerine radyoterapi ve sistemik tıbbi tedavi önerilir.\n- **Prognostik Faktörler:** Lezyon sayısı, kitle etkisi, sistemik kanserin evresi, hastanın Karnofsky performans puanı ve yaşıdır.\n\n> [!IMPORTANT]\n> Soliter metastazlarda primer odağın kontrol altında olması ve lezyonun cerrahiye uygunluğu cerrahi endikasyonun temelini oluşturur; yaygın sistemik hastalıkta cerrahi dışlanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Soliter beyin metastazı olan bir hastada cerrahi rezeksiyon kararı verilebilmesi için gereken temel onkolojik şart hangisidir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Primer tümör odağının kontrol altında (sessiz) olması ve lezyonun cerrahiye uygun lokalizasyonda bulunması.",
+       "isCorrect": true,
+       "explanation": "Primer sistemik hastalığı kontrol altında olan ve intrakraniyal lezyonu çıkarılabilir konumdaki olgularda cerrahi belirgin sağkalım avantajı sağlar."
+      },
+      {
+       "key": "B",
+       "text": "Sistemik kanserin tüm organlara yaygın metastaz yapmış olması ve performansın çok düşük olması.",
+       "isCorrect": false,
+       "explanation": "Yaygın sistemik metastaz ve düşük performans skorunda cerrahi morbiditeyi artıracağından radyoterapi ve medikal onkoloji tercih edilir."
+      },
+      {
+       "key": "C",
+       "text": "Lezyonun dördüncü ventrikül tavanında Obersteiner tabakasından kaynaklanması.",
+       "isCorrect": false,
+       "explanation": "Obersteiner tabakası pediatrik medulloblastomların orijin aldığı embriyonel hücre tabakasıdır. Metastaz cerrahisinde ise primer tümör kontrolü ve lezyonun teknik rezekabilitesi değerlendirilir."
+      },
+      {
+       "key": "D",
+       "text": "Hastada aynı anda 1p19q ko-delesyonunun saptanmış olması.",
+       "isCorrect": false,
+       "explanation": "1p19q delesyonu primer nöroepitelyal bir neoplazi olan oligodendrogliomun kemoterapi duyarlılığını gösterir. Metastatik karsinomların cerrahi rezeksiyon protokollerinde bu belirteç aranmaz."
+      }
+     ]
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "Altmış yaşında bilinen akciğer kanseri remisyonda olan hastada serebellar hemisferde bası yapan, hayatı tehdit edici kitle etkisine sahip tek bir soliter lezyon saptanıyor. Karnofsky skoru 80'dir.",
+     "choices": [
+      {
+       "text": "Kitle etkisi hayatı tehdit ettiğinden ve primer odak sessiz olduğundan cerrahi gross total rezeksiyon uygulanmalıdır.",
+       "correct": true,
+       "explanation": "Sessiz primer odak, iyi performans ve semptomatik soliter metastaz varlığı cerrahi total eksizyon için kesin endikasyondur."
+      },
+      {
+       "text": "Cerrahi bütünüyle dışlanarak yalnızca palyatif steroid tedavisiyle hasta izlenmelidir.",
+       "correct": false,
+       "explanation": "Kitle etkisi belirgin ve cerrahiye uygun soliter metastazlarda cerrahi dekompresyon uygulanmalıdır. Yalnız medikal takip herniasyon riskini artırır."
+      },
+      {
+       "text": "Sistemik hastalığın durumuna bakılmaksızın tüm beyin dokusuna acil kemoterapi portu yerleştirilmelidir.",
+       "correct": false,
+       "explanation": "Soliter kitlelerde öncelikli hedef kitle etkisinin cerrahi olarak ortadan kaldırılmasıdır. Port yerleştirilmesi akut mekanik basıyı rahatlatmaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Multipl metastazlarda gross total rezeksiyon başarılabilirse, soliter metastazlar ile aynı sağkalım oranına ulaşmak mümkündür.",
+     "maskedTerm": "gross total rezeksiyon",
+     "hint": "Tümör dokusunun makroskobik olarak bütünüyle cerrahi çıkarılması"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Beyin Metastazlarında Cerrahi ve Onkolojik Yönetim",
+     "items": [
+      {
+       "text": "Multipl metastazlarda tüm lezyonlar çıkarılabilirse soliter metastazlarla aynı sağkalım elde edilir.",
+       "isLie": false,
+       "explanation": "Erişilebilir multipl metastazların hepsinde gross total rezeksiyon sağlandığında prognoz tekli metastazlara benzer seyreder."
+      },
+      {
+       "text": "Yaygın sistemik kanser varlığında cerrahi uygulamaksızın radyoterapi ve tıbbi tedavi önerilir.",
+       "isLie": false,
+       "explanation": "Sistemik hastalığı kontrolsüz olgularda kraniotomi yaşam süresini uzatmadığından cerrahi dışı tedaviler ön plana çıkar."
+      },
+      {
+       "text": "Tanı ile ilgili kuşku bulunması metastaz olgularında cerrahi eksizyon için kesin bir kontrendikasyondur.",
+       "isLie": true,
+       "explanation": "Primeri bilinmeyen veya abse/primer gliom kuşkusu olan lezyonlarda doku tanısı koymak cerrahi rezeksiyonun temel endikasyonlarındandır."
+      },
+      {
+       "text": "Hastanın yaşı ve Karnofsky performans skoru cerrahi sonuçları etkileyen kritik prognostik faktörlerdir.",
+       "isLie": false,
+       "explanation": "Performansı yüksek ve genç hastalar cerrahi dekompresyon ve ardından gelen onkolojik tedavileri çok daha iyi tolere eder."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Soliter beyin metastazında cerrahi kararı verirken değerlendirilen 4 temel endikasyon nedir?",
+     "answer": "Primer odağın sessiz/kontrol altında olması, lezyonun cerrahiye uygunluğu, hayatı tehdit eden kitle etkisi ve tanıda kuşku bulunmasıdır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 15,
+   "title": "Hipofiz Adenomları ve İntrakraniyal Kitlelerin Radyolojik Atlası",
+   "bolum": "6",
+   "section": "6",
+   "pdfSayfalari": [
+    55,
+    68
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 55,
+    "endPage": 68
+   },
+   "content": "Hipofiz adenomları sellar bölgenin en sık kitlesi olup tüm intrakraniyal neoplazilerin yaklaşık %10'unu oluşturur. Çapı bir santimetreden küçük olanlar mikroadenom, bir santimetreden büyük olanlar makroadenom olarak adlandırılır.\n\n- **Klinik Tablo:** Baş ağrısı, kiazma optikum basısına bağlı bitemporal hemianopsi ve sellar taban erozyonuna bağlı BOS rinore izlenebilir. Endokrin disfonksiyonlar prolaktinoma, akromegali, Cushing sendromu, sekonder hipotiroidizm ve diabetes insipidustur.\n- **Radyolojik Ayırıcı Tanı Atlası:**\n  * **Glioblastoma:** Çevresinde belirgin vazojenik ödem, kalın düzensiz halkasal kontrastlanma ve santral nekroz.\n  * **Menenjiom:** Ekstraaksiyel, iyi sınırlı, homojen yoğun kontrastlanan, dural kuyruk işareti veren lezyon.\n  * **Vestibüler Schwannom:** İnternal akustik kanalı genişleten ve serebellopontin açıyı dolduran kontrastlı kitle.\n  * **Metastaz:** Gri-beyaz cevher sınırında, lezyon boyutuna oranla devasa vazojenik çevre ödemi barındıran halkasal nodüller.\n\n> [!IMPORTANT]\n> Sellar bölgede 1 cm sınırı adenomun mikro/makro ayrımını belirler; radyolojide lezyon boyutuna kıyasla orantısız çevre ödemi metastaz için, dural kuyruk ise menenjiom için tipiktir.",
+   "synthesisNarrative": "Hipofiz adenomları sellar bölgenin en sık kitlesi olup tüm intrakraniyal neoplazilerin yaklaşık %10'unu oluşturur. Çapı bir santimetreden küçük olanlar mikroadenom, bir santimetreden büyük olanlar makroadenom olarak adlandırılır.\n\n- **Klinik Tablo:** Baş ağrısı, kiazma optikum basısına bağlı bitemporal hemianopsi ve sellar taban erozyonuna bağlı BOS rinore izlenebilir. Endokrin disfonksiyonlar prolaktinoma, akromegali, Cushing sendromu, sekonder hipotiroidizm ve diabetes insipidustur.\n- **Radyolojik Ayırıcı Tanı Atlası:**\n  * **Glioblastoma:** Çevresinde belirgin vazojenik ödem, kalın düzensiz halkasal kontrastlanma ve santral nekroz.\n  * **Menenjiom:** Ekstraaksiyel, iyi sınırlı, homojen yoğun kontrastlanan, dural kuyruk işareti veren lezyon.\n  * **Vestibüler Schwannom:** İnternal akustik kanalı genişleten ve serebellopontin açıyı dolduran kontrastlı kitle.\n  * **Metastaz:** Gri-beyaz cevher sınırında, lezyon boyutuna oranla devasa vazojenik çevre ödemi barındıran halkasal nodüller.\n\n> [!IMPORTANT]\n> Sellar bölgede 1 cm sınırı adenomun mikro/makro ayrımını belirler; radyolojide lezyon boyutuna kıyasla orantısız çevre ödemi metastaz için, dural kuyruk ise menenjiom için tipiktir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Hipofiz adenomlarının boyut sınıflandırması ve optik kiazma basısı sonucu oluşturduğu karakteristik görme alanı defekti nedir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Bir santimetreden büyük olanlar makroadenomdur ve kiazma basısıyla bitemporal hemianopsi yaparlar.",
+       "isCorrect": true,
+       "explanation": "Çapı 1 cm üzerindeki makroadenomlar suprasellar uzanımla optik kiazmanın çaprazlaşan nazal liflerini basarak bitemporal hemianopsi oluşturur."
+      },
+      {
+       "key": "B",
+       "text": "Beş santimetreden küçük olanlar mikroadenomdur ve homonim kadrananopsi yaratırlar.",
+       "isCorrect": false,
+       "explanation": "Sellar adenomlarda uluslararası mikroadenom sınırı tam olarak bir santimetredir. Kiazma optikum liflerinin basısı ise kadrananopsi yerine bitemporal görme alanı kaybı doğurur."
+      },
+      {
+       "key": "C",
+       "text": "İki santimetre altındaki lezyonlar kordoid adenom olarak adlandırılıp nistagmus yaparlar.",
+       "isCorrect": false,
+       "explanation": "Kordoid diferansiyasyon Grade II meningotelyal tümörlerin histopatolojik bir varyantıdır. Hipofizer adenomlar glandüler epitel kökenli olup bu histolojik sınıfa girmez."
+      },
+      {
+       "key": "D",
+       "text": "Tüm boyutlardaki lezyonlar doğrudan dördüncü ventriküle açılarak hidrosefali tablosu doğururlar.",
+       "isCorrect": false,
+       "explanation": "Hipofiz adenomları orta kafa tabanında sella tursika çukuruna oturur. Arka çukurdaki dördüncü ventrikül boşluğu sellar bölgeye oldukça uzak bir kompartmandır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Çapı bir santimetreden küçük olanlar mikroadenom, bir santimetreden büyük olanlar makroadenom olarak adlandırılır.",
+     "maskedTerm": "mikroadenom",
+     "hint": "Bir santimetrenin altındaki küçük çaplı hipofiz tümörü"
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Kitle Tipi",
+      "Temel Radyolojik Karakter",
+      "Tipik Çevre Doku Reaksiyonu"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        "Glioblastoma",
+        "Santral nekroz ve periferik kalın halkasal tutulum",
+        {
+         "text": "Geniş parankimal ödem",
+         "isMasked": true,
+         "hint": "Tümör çevresinde yaygın parmak tarzı sıvı artışı"
+        }
+       ]
+      },
+      {
+       "cells": [
+        "Menenjiom",
+        "Homojen yoğun kontrastlanma ve dural taban",
+        {
+         "text": "Dural kuyruk işareti",
+         "isMasked": true,
+         "hint": "Komşu dura yaprağında lineer kontrastlanma uzantısı"
+        }
+       ]
+      },
+      {
+       "cells": [
+        "Vestibüler Schwannom",
+        "İnternal akustik kanalda huni tarzı genişleme",
+        {
+         "text": "Köşe sisternini doldurma",
+         "isMasked": true,
+         "hint": "Serebellopontin açıya doğru dondurma külahı tarzı uzanım"
+        }
+       ]
+      },
+      {
+       "cells": [
+        "Beyin Metastazı",
+        "Gri-beyaz cevherde çoklu halkasal nodüller",
+        {
+         "text": "Orantısız aşırı ödem",
+         "isMasked": true,
+         "hint": "Küçük tümör odağına kıyasla devasa vazojenik sıvı birikimi"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "venn_grid",
+     "labelA": "Hipofiz Makroadenomu",
+     "labelB": "Kraniyofarenjiom",
+     "items": [
+      {
+       "criterion": "Sellar ve suprasellar bölgede yerleşerek optik kiazmaya bası yapabilme",
+       "correct": "both"
+      },
+      {
+       "criterion": "Adenohipofiz kaynaklı olup akromegali veya prolaktinoma gibi endokrin sendromlar oluşturma",
+       "correct": "A"
+      },
+      {
+       "criterion": "Rathke poşu kalıntısından gelişip kolesterol kristalleri ve kalsifikasyon içerme",
+       "correct": "B"
+      },
+      {
+       "criterion": "Sekizinci kraniyal sinirin Schwann hücrelerinden kaynaklanma",
+       "correct": "neither"
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Hipofiz Adenomları ve Radyolojik Özellikler",
+     "items": [
+      {
+       "text": "Hipofiz adenomları tüm intrakraniyal tümörlerin yaklaşık yüzde onunu oluşturur.",
+       "isLie": false,
+       "explanation": "Sellar bölgenin en yaygın neoplazisi olan hipofiz adenomları intrakraniyal kitlelerin onda birini temsil eder."
+      },
+      {
+       "text": "Glioblastomada santral nekroz çevresinde kalın heterojen kontrast tutulumu tipiktir.",
+       "isLie": false,
+       "explanation": "Yüksek dereceli gliomlarda santral doku ölümü ve periferik tümöral anjiyogenez halkasal kontrast görünümü verir."
+      },
+      {
+       "text": "Hipofiz adenomlarında tümör boyutu iki santimetrenin altına indiğinde lezyon makroadenom sayılır.",
+       "isLie": true,
+       "explanation": "Hipofiz adenomlarında mikroadenom ve makroadenom ayrımı için kabul edilen uluslararası boyut eşiği bir santimetredir."
+      },
+      {
+       "text": "Metastatik beyin lezyonlarında nodül çapına oranla çok belirgin vazojenik çevre ödemi saptanır.",
+       "isLie": false,
+       "explanation": "Metastatik tümörlerin salgıladığı vasküler endotelyal büyüme faktörleri yoğun perifokal parankimal vazojenik ödem doğurur."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 16,
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: İntrakraniyal Kitleler ve Beyin Tümörleri",
+   "isGameFinale": true,
+   "badge": "Ders Sonu Oyunları",
+   "bolum": "6",
+   "section": "6",
+   "pdfSayfalari": [
+    1,
+    68
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 1,
+    "endPage": 68
+   },
+   "content": "Tebrikler! İntrakraniyal Kitlelerde Belirti ve Bulgular ile Beyin Tümörleri dersini başarıyla tamamladınız.\n\n- **Sınıflama ve Gliomlar:** KİBAS tablosu, Daumas-Duport derecelemesi, GBM biyolojisi, MGMT metilasyonu ve oligodendrogliomda 1p19q ko-delesyonu temel konularımızdı.\n- **Sellar ve Ekstraaksiyel:** Kraniyofarenjiom, menenjiomların Simpson cerrahi derecelemesi ve vestibüler schwannomun pontoserebellar köşe semiyolojisi incelendi.\n- **Metastazlar:** En sık primer kaynak akciğer kanseri olup cerrahi ve onkolojik yönetim ilkeleri pekiştirildi.\n\n> [!IMPORTANT]\n> Şimdi ders sonu pekiştirme oyunlarında öğrendiğiniz kritik parametreleri, cerrahi dereceleri ve mekanizmaları sınayın.",
+   "synthesisNarrative": "Tebrikler! İntrakraniyal Kitlelerde Belirti ve Bulgular ile Beyin Tümörleri dersini başarıyla tamamladınız.\n\n- **Sınıflama ve Gliomlar:** KİBAS tablosu, Daumas-Duport derecelemesi, GBM biyolojisi, MGMT metilasyonu ve oligodendrogliomda 1p19q ko-delesyonu temel konularımızdı.\n- **Sellar ve Ekstraaksiyel:** Kraniyofarenjiom, menenjiomların Simpson cerrahi derecelemesi ve vestibüler schwannomun pontoserebellar köşe semiyolojisi incelendi.\n- **Metastazlar:** En sık primer kaynak akciğer kanseri olup cerrahi ve onkolojik yönetim ilkeleri pekiştirildi.\n\n> [!IMPORTANT]\n> Şimdi ders sonu pekiştirme oyunlarında öğrendiğiniz kritik parametreleri, cerrahi dereceleri ve mekanizmaları sınayın.",
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "prompt": "Menenjiom cerrahisinde Simpson rezeksiyon derecelerini 10 yıllık nüks oranlarına göre en düşükten (%0) en yükseğe (%100) doğru sıralayın.",
+     "steps": [
+      "1. Simpson Grade 0: Tümör rezeksiyonu ve dural orijinin 1 cm marjla çıkarılması (%0 nüks)",
+      "2. Simpson Grade 1: Tümör rezeksiyonu ve orijin aldığı duranın çıkartılması (%9 nüks)",
+      "3. Simpson Grade 2: Tümör rezeksiyonu ve orijin aldığı dural tabanın koagülasyonu (%19 nüks)",
+      "4. Simpson Grade 3: Tümör rezeksiyonu, dural tabanın koagüle edilememesi (%29 nüks)",
+      "5. Simpson Grade 4: Tümörün subtotal rezeksiyonu ve rezidü bırakılması (%40 nüks)",
+      "6. Simpson Grade 5: Yalnızca basit dekompresyon ve biyopsi yapılması (%100 nüks)"
+     ],
+     "explanation": "Simpson cerrahi sınıflamasında dural tabanın eksizyon genişliği arttıkça on yıllık rekürrens riski sıfıra yaklaşırken, rezidü doku bırakıldığında nüks yüzde yüze ulaşır."
+    },
+    {
+     "type": "estimate_slider",
+     "items": [
+      {
+       "prompt": "Beyin metastazlarında en sık primer kaynak olan akciğer kanserinin tüm metastazlar içindeki oranı yüzde kaçtır?",
+       "unit": "%",
+       "min": 10,
+       "max": 80,
+       "step": 1,
+       "answer": 44,
+       "tolerance": 3,
+       "explanation": "Beyin metastazlarının yüzde kırk dördü akciğer karsinomlarından kaynaklanarak en büyük primer grubu oluşturur."
+      },
+      {
+       "prompt": "Oligodendrogliom olgularında bilgisayarlı tomografide kalsifikasyon saptanma oranı yüzde kaçtır?",
+       "unit": "%",
+       "min": 50,
+       "max": 100,
+       "step": 1,
+       "answer": 90,
+       "tolerance": 3,
+       "explanation": "Oligodendrogliomlar yüksek kalsifikasyon eğilimine sahip olup bilgisayarlı tomografide yüzde doksan oranında kireçlenme gösterir."
+      },
+      {
+       "prompt": "Benign menenjiomların tam cerrahi rezeksiyonu sonrasında bildirilen 5 yıllık yaşam süresi oranı yüzde kaçtır?",
+       "unit": "%",
+       "min": 60,
+       "max": 100,
+       "step": 1,
+       "answer": 91,
+       "tolerance": 3,
+       "explanation": "Tam rezeke edilen benign menenjiom olgularında beş yıllık sağkalım oranı yüzde doksan bir virgül üçtür."
+      }
+     ]
+    },
+    {
+     "type": "perturbation",
+     "scenario": "Glioblastoma multiforme tanılı bir hastanın tümör dokusunda MGMT gen promotor metilasyonu saptanıyor.",
+     "question": "Bu moleküler değişiklik sonrasında aşağıdaki klinik ve hücresel parametreler nasıl değişir?",
+     "parameters": [
+      {
+       "name": "Tümör hücrelerinin alkilleyici kemoterapiye duyarlılığı",
+       "correct": "up",
+       "explanation": "Promotor metilasyonu DNA tamir enzimini baskılayarak kemoterapötik ajanların öldürücü etkinliğini belirgin şekilde artırır."
+      },
+      {
+       "name": "Hücre içi DNA onarım kapasitesi ve direnç mekanizmaları",
+       "correct": "down",
+       "explanation": "Metiltransferaz enzim ifadesinin azalması kemoterapinin yarattığı DNA hasarlarının düzeltilmesini engeller."
+      },
+      {
+       "name": "Radyolojik tümör sınırının 2 cm periferindeki mikroskobik hücre infiltrasyonu varlığı",
+       "correct": "same",
+       "explanation": "Tümörün diffüz mikroskobik infiltrasyon paterni glioblastomanın yapısal özelliği olup metilasyon durumundan bağımsızdır."
+      }
+     ]
+    },
+    {
+     "type": "fix_the_text",
+     "text": "Oligodendrogliomlar en sık oksipital lobda yerleşir ve 1p19q ko-delesyonu varlığında kemoterapiye dirençli kötü bir prognoz sergiler.",
+     "errors": [
+      {
+       "wrong": "oksipital lobda",
+       "correct": "frontal lobda",
+       "options": [
+        "temporal lobda",
+        "beyin sapında"
+       ],
+       "explanation": "Oligodendrogliomlar sıklıkla frontal lob korteksinde yerleşerek epileptik nöbetlerle prezente olurlar."
+      },
+      {
+       "wrong": "kemoterapiye dirençli kötü",
+       "correct": "kemoterapiye duyarlı iyi",
+       "options": [
+        "tedaviye yanıtsız agresif",
+        "hızlı nüks eden letal"
+       ],
+       "explanation": "1p ve 19q kromozomal ko-delesyonu oligodendrogliomlarda kemoradyoterapiye üstün yanıt ve uzun sağkalım göstergesidir."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "matchedPastQuestionsCount": 25,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}
