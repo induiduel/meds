@@ -1,0 +1,2251 @@
+{
+ "id": "k2p-y25-k2-63-antidepresan-ilaclar",
+ "title": "Antidepresan İlaçlar",
+ "subject": "Antidepresan İlaçlar",
+ "committee": "donem3-kurul2",
+ "sourcePdf": "kurul2/y25-k2-63-antidepresan-ilaclar.pdf",
+ "sayfaHaritasi": "teyitli",
+ "totalSlides": 21,
+ "discipline": "Tıbbi Farmakoloji",
+ "slides": [
+  {
+   "slideNumber": 1,
+   "title": "Giriş ve Majör Depresif Bozukluk Tanı Kriterleri",
+   "bolum": "1.1",
+   "discipline": "Tıbbi Farmakoloji",
+   "pdfSayfalari": [
+    1,
+    3
+   ],
+   "sourcePdf": {
+    "startPage": 1,
+    "endPage": 3,
+    "pdfPath": "kurul2/y25-k2-63-antidepresan-ilaclar.pdf"
+   },
+   "content": "Majör depresif bozukluk (MDB), kişinin günlük işlevselliğini bozan ve en az iki hafta kesintisiz süren çökkün duygudurum tablosudur.\n\n- **Temel Belirtiler:** En az iki hafta boyunca hemen her gün süren depresif mizaç ve önceden zevk alınan aktivitelere karşı tam ilgi kaybı (anhedoni).\n- **Fizyolojik Bozukluklar:** İştah değişiklikleri, uykusuzluk veya aşırı uyku hali, belirgin psikomotor yavaşlama veya ajitasyon.\n- **Bilişsel Belirtiler:** Yoğun değersizlik hissi, uygunsuz suçluluk duyguları, konsantrasyon güçlüğü ve tekrarlayan intihar düşünceleri.\n\n> [!IMPORTANT]\n> Klinik depresyon tanısı konulabilmesi için depresif mizaç veya anhedoni temel belirtilerinden en az birinin iki hafta kesintisiz sürmesi zorunludur.",
+   "synthesisNarrative": "Majör depresif bozukluk (MDB), kişinin günlük işlevselliğini bozan ve en az iki hafta kesintisiz süren çökkün duygudurum tablosudur.\n\n- **Temel Belirtiler:** En az iki hafta boyunca hemen her gün süren depresif mizaç ve önceden zevk alınan aktivitelere karşı tam ilgi kaybı (anhedoni).\n- **Fizyolojik Bozukluklar:** İştah değişiklikleri, uykusuzluk veya aşırı uyku hali, belirgin psikomotor yavaşlama veya ajitasyon.\n- **Bilişsel Belirtiler:** Yoğun değersizlik hissi, uygunsuz suçluluk duyguları, konsantrasyon güçlüğü ve tekrarlayan intihar düşünceleri.\n\n> [!IMPORTANT]\n> Klinik depresyon tanısı konulabilmesi için depresif mizaç veya anhedoni temel belirtilerinden en az birinin iki hafta kesintisiz sürmesi zorunludur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Majör depresif bozukluk klinik tanısı için belirtilerin en az ne kadar süre kesintisiz devam etmesi gerekir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "2 hafta",
+       "isCorrect": true,
+       "explanation": "Majör depresif bozukluk tanısında DSM kılavuzuna göre temel semptomların iki hafta sürmesi gerekir. Bu asgari süre klinik tanı koyabilmek için zorunlu eşiktir."
+      },
+      {
+       "key": "B",
+       "text": "3 gün",
+       "isCorrect": false,
+       "explanation": "Üç günlük çökkünlük süresi geçici durumsal duygu dalgalanmalarını ifade eder. Majör depresyon tanısı için bu süre oldukça yetersiz kalır."
+      },
+      {
+       "key": "C",
+       "text": "6 ay",
+       "isCorrect": false,
+       "explanation": "Altı aylık süre distimi gibi kronik mizaç bozukluklarının izleminde incelenir. Akut depresif epizodun tanısal eşiği için bu kadar beklenmez."
+      },
+      {
+       "key": "D",
+       "text": "1 yıl",
+       "isCorrect": false,
+       "explanation": "Bir yıllık süre tedavisiz kalan kronik vakaların klinik seyrini gösterir. Yeni başlayan bir epizotta tanı için iki hafta yeterlidir."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "2 hafta",
+       "isCorrect": true,
+       "explanation": "Majör depresif bozukluk tanısında DSM kılavuzuna göre temel semptomların iki hafta sürmesi gerekir. Bu asgari süre klinik tanı koyabilmek için zorunlu eşiktir."
+      },
+      {
+       "key": "B",
+       "text": "3 gün",
+       "isCorrect": false,
+       "explanation": "Üç günlük çökkünlük süresi geçici durumsal duygu dalgalanmalarını ifade eder. Majör depresyon tanısı için bu süre oldukça yetersiz kalır."
+      },
+      {
+       "key": "C",
+       "text": "6 ay",
+       "isCorrect": false,
+       "explanation": "Altı aylık süre distimi gibi kronik mizaç bozukluklarının izleminde incelenir. Akut depresif epizodun tanısal eşiği için bu kadar beklenmez."
+      },
+      {
+       "key": "D",
+       "text": "1 yıl",
+       "isCorrect": false,
+       "explanation": "Bir yıllık süre tedavisiz kalan kronik vakaların klinik seyrini gösterir. Yeni başlayan bir epizotta tanı için iki hafta yeterlidir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Majör depresif bozukluk (MDB), kişinin günlük işlevselliğini bozan ve en az iki hafta kesintisiz süren çökkün duygudurum tablosudur.",
+     "maskedTerm": "en az iki hafta",
+     "hint": "Majör depresyon tanısı için aranan asgari semptom süresi"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Majör Depresif Bozukluk Belirtileri",
+     "items": [
+      {
+       "text": "MDB tanısında iki temel belirtiden biri anhedonidir.",
+       "isLie": false,
+       "explanation": "Zevk alamama (anhedoni) depresif mizaçla birlikte en kritik tanı ölçütüdür."
+      },
+      {
+       "text": "MDB tanısı koyabilmek için belirtilerin en az 6 ay sürmesi şarttır.",
+       "isLie": true,
+       "explanation": "Tuzaktır; tanı için belirtilerin en az 2 hafta kesintisiz sürmesi yeterlidir."
+      },
+      {
+       "text": "Tekrarlayan intihar düşünceleri majör depresyonun tanı kriterleri arasındadır.",
+       "isLie": false,
+       "explanation": "İntihar düşünceleri ve suçluluk bilişsel tanı kriterlerinin ana unsurlarıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Majör depresif bozukluğun iki temel çekirdek semptomu nelerdir?",
+     "answer": "Çökkün duygudurum (depresif mizaç) ve önceden zevk alınan aktivitelere karşı belirgin ilgi kaybı veya bunlardan zevk alamama (anhedoni)."
+    }
+   ]
+  },
+  {
+   "slideNumber": 2,
+   "title": "Antidepresanların Geniş Spektrumlu Klinik Kullanımı",
+   "bolum": "1.2",
+   "discipline": "Tıbbi Farmakoloji",
+   "pdfSayfalari": [
+    4,
+    4
+   ],
+   "sourcePdf": {
+    "startPage": 4,
+    "endPage": 4,
+    "pdfPath": "kurul2/y25-k2-63-antidepresan-ilaclar.pdf"
+   },
+   "content": "Antidepresan ilaçlar yalnızca majör depresyon tedavisinde değil, psikiyatrik ve nörolojik bozuklukları içeren geniş bir spektrumda kullanılır.\n\n- **Anksiyete ve Panik Bozukluklar:** Yaygın anksiyete bozukluğu, panik ataklar, agorafobi ve sosyal fobi tedavisinde ilk basamak ajanlardır.\n- **Obsesif Kompulsif ve Travma Bozuklukları:** OKB ve travma sonrası stres bozukluğunda (PTSD) serotoninerjik iletimi artırarak obsesyonları yatıştırırlar.\n- **Kronik Ağrı Sendromları:** Diyabetik periferik nöropati, kronik nöropatik ağrı ve fibromiyaljide inen ağrı yolaklarını aktive ederek belirgin analjezi sağlarlar.\n\n> [!NOTE]\n> Antidepresanlar monoaminerjik yolakları modüle ederek hem duygulanımı düzenler hem de medulla spinalisteki ağrı iletim kapısını kapatırlar.",
+   "synthesisNarrative": "Antidepresan ilaçlar yalnızca majör depresyon tedavisinde değil, psikiyatrik ve nörolojik bozuklukları içeren geniş bir spektrumda kullanılır.\n\n- **Anksiyete ve Panik Bozukluklar:** Yaygın anksiyete bozukluğu, panik ataklar, agorafobi ve sosyal fobi tedavisinde ilk basamak ajanlardır.\n- **Obsesif Kompulsif ve Travma Bozuklukları:** OKB ve travma sonrası stres bozukluğunda (PTSD) serotoninerjik iletimi artırarak obsesyonları yatıştırırlar.\n- **Kronik Ağrı Sendromları:** Diyabetik periferik nöropati, kronik nöropatik ağrı ve fibromiyaljide inen ağrı yolaklarını aktive ederek belirgin analjezi sağlarlar.\n\n> [!NOTE]\n> Antidepresanlar monoaminerjik yolakları modüle ederek hem duygulanımı düzenler hem de medulla spinalisteki ağrı iletim kapısını kapatırlar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdaki hastalıklardan hangisi antidepresanların psikiyatri dışı yaygın kullanım endikasyonlarından biridir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Kronik nöropatik ağrı",
+       "isCorrect": true,
+       "explanation": "Kronik nöropatik ağrı periferik veya santral sinir hasarıyla seyreden ağrılı bir tablodur. Antidepresanlar inen inhibitör yolakları güçlendirerek bu tabloda güçlü analjezi sağlarlar."
+      },
+      {
+       "key": "B",
+       "text": "Akut bakteriyel menenjit",
+       "isCorrect": false,
+       "explanation": "Akut bakteriyel menenjit acil intravenöz bakterisidal antibiyotik tedavisi gerektiren enfeksiyöz bir tablodur. Monoaminerjik yolak modülatörleri bu enfeksiyonun tedavisinde yer almaz."
+      },
+      {
+       "key": "C",
+       "text": "Peptik ülser perforasyonu",
+       "isCorrect": false,
+       "explanation": "Peptik ülser perforasyonu acil cerrahi onarım gerektiren akut batın tablosudur. Antidepresan ilaçların cerrahi perforasyon onarımında bir etkisi bulunmaz."
+      },
+      {
+       "key": "D",
+       "text": "Akut hipokalsemik tetani",
+       "isCorrect": false,
+       "explanation": "Akut tetani kanda iyonize kalsiyum düşüklüğüne bağlı gelişen nöromusküler uyarılma tablosudur. Tedavide acil intravenöz kalsiyum verilir, antidepresanlar endike değildir."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Kronik nöropatik ağrı",
+       "isCorrect": true,
+       "explanation": "Kronik nöropatik ağrı periferik veya santral sinir hasarıyla seyreden ağrılı bir tablodur. Antidepresanlar inen inhibitör yolakları güçlendirerek bu tabloda güçlü analjezi sağlarlar."
+      },
+      {
+       "key": "B",
+       "text": "Akut bakteriyel menenjit",
+       "isCorrect": false,
+       "explanation": "Akut bakteriyel menenjit acil intravenöz bakterisidal antibiyotik tedavisi gerektiren enfeksiyöz bir tablodur. Monoaminerjik yolak modülatörleri bu enfeksiyonun tedavisinde yer almaz."
+      },
+      {
+       "key": "C",
+       "text": "Peptik ülser perforasyonu",
+       "isCorrect": false,
+       "explanation": "Peptik ülser perforasyonu acil cerrahi onarım gerektiren akut batın tablosudur. Antidepresan ilaçların cerrahi perforasyon onarımında bir etkisi bulunmaz."
+      },
+      {
+       "key": "D",
+       "text": "Akut hipokalsemik tetani",
+       "isCorrect": false,
+       "explanation": "Akut tetani kanda iyonize kalsiyum düşüklüğüne bağlı gelişen nöromusküler uyarılma tablosudur. Tedavide acil intravenöz kalsiyum verilir, antidepresanlar endike değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "OKB ve travma sonrası stres bozukluğunda (PTSD) serotoninerjik iletimi artırarak obsesyonları yatıştırırlar.",
+     "maskedTerm": "serotoninerjik",
+     "hint": "Obsesyon ve anksiyete kontrolünde rol oynayan temel monoamin sistemi"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Antidepresanların Klinik Endikasyonları",
+     "items": [
+      {
+       "text": "Antidepresanlar fibromiyalji ve nöropatik ağrıda belirgin fayda sağlarlar.",
+       "isLie": false,
+       "explanation": "İnen inhibitör yolakları aktive ederek santral analjezik etki oluştururlar."
+      },
+      {
+       "text": "Antidepresanlar yalnızca çökkün mizaç varlığında etkili olup anksiyetede kullanılmazlar.",
+       "isLie": true,
+       "explanation": "Tuzaktır; anksiyete, panik bozukluk ve OKB'de birinci basamak tedaviyi oluştururlar."
+      },
+      {
+       "text": "Panik atak ve sosyal fobi antidepresanların psikiyatrik endikasyonları arasındadır.",
+       "isLie": false,
+       "explanation": "SSRI ve SNRI grubu ilaçlar panik bozukluk ve sosyal fobide temel tedavidir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Antidepresanların kronik nöropatik ağrıyı dindirmedeki nörofizyolojik etki mekanizması nedir?",
+     "answer": "Medulla spinalisteki inen serotoninerjik ve noradrenerjik inhibitör ağrı yolaklarını aktive ederek primer afferent nosiseptif uyarı iletimini presinaptik düzeyde baskılarlar."
+    }
+   ]
+  },
+  {
+   "slideNumber": 3,
+   "title": "Monoamin Hipotezi, Transporter Polimorfizmi ve Sınırları",
+   "bolum": "1.3",
+   "discipline": "Tıbbi Farmakoloji",
+   "pdfSayfalari": [
+    5,
+    13
+   ],
+   "sourcePdf": {
+    "startPage": 5,
+    "endPage": 13,
+    "pdfPath": "kurul2/y25-k2-63-antidepresan-ilaclar.pdf"
+   },
+   "content": "Monoamin hipotezi, depresyonun santral sinir sisteminde serotonin, noradrenalin ve dopamin eksikliğinden kaynaklandığını öne sürer.\n\n- **Rezerpin Kanıtı:** Veziküler monoamin taşıyıcısını (VMAT) bloke ederek vezikülleri boşaltan rezerpinin derin depresyon tablosu oluşturması hipotezin ilk dayanağıdır.\n- **SERT Gen Polimorfizmi:** Serotonin transporter (SERT) genindeki kısa 's' aleli, taşıyıcı ekspresyonunu ve serotonin klirensini değiştirerek strese duyarlılığı artırır.\n- **Klinik Paradoks (Gecikme):** Antidepresanlar sinapstaki monoamin düzeyini saatler içinde artırırken, antidepresan klinik yanıtın 2-4 hafta sonra ortaya çıkması hipotezin tek başına yetersizliğini gösterir.\n\n> [!NOTE]\n> Klinik yanıtın haftalar süren gecikmesi, terapötik etkinin reseptör duyarsızlaşması ve gen ekspresyonu değişikliklerine bağlı olduğunu kanıtlar.",
+   "synthesisNarrative": "Monoamin hipotezi, depresyonun santral sinir sisteminde serotonin, noradrenalin ve dopamin eksikliğinden kaynaklandığını öne sürer.\n\n- **Rezerpin Kanıtı:** Veziküler monoamin taşıyıcısını (VMAT) bloke ederek vezikülleri boşaltan rezerpinin derin depresyon tablosu oluşturması hipotezin ilk dayanağıdır.\n- **SERT Gen Polimorfizmi:** Serotonin transporter (SERT) genindeki kısa 's' aleli, taşıyıcı ekspresyonunu ve serotonin klirensini değiştirerek strese duyarlılığı artırır.\n- **Klinik Paradoks (Gecikme):** Antidepresanlar sinapstaki monoamin düzeyini saatler içinde artırırken, antidepresan klinik yanıtın 2-4 hafta sonra ortaya çıkması hipotezin tek başına yetersizliğini gösterir.\n\n> [!NOTE]\n> Klinik yanıtın haftalar süren gecikmesi, terapötik etkinin reseptör duyarsızlaşması ve gen ekspresyonu değişikliklerine bağlı olduğunu kanıtlar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Monoamin hipotezinin depresyonu açıklamakta tek başına yetersiz kaldığını gösteren en temel farmakolojik çelişki nedir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Klinik etkinin ortaya çıkışının 2-4 hafta gecikmesi",
+       "isCorrect": true,
+       "explanation": "Antidepresan ilaçlar sinaptik aralıkta monoamin konsantrasyonunu hemen artırırlar. Buna rağmen klinik düzelmenin haftalar sonra ortaya çıkması hipotezin temel sınırlılığıdır."
+      },
+      {
+       "key": "B",
+       "text": "İlaçların karaciğerde metabolize olması",
+       "isCorrect": false,
+       "explanation": "Karaciğer sitokrom sistemi ksenobiyotiklerin fizyolojik temizlenme yoludur. Bu eliminasyon süreci santral monoamin hipotezinin klinik etki paradoksunu doğrudan açıklamaz."
+      },
+      {
+       "key": "C",
+       "text": "Oral yoldan tam emilememeleri",
+       "isCorrect": false,
+       "explanation": "Oral biyoyararlanım ilacın plazma konsantrasyon eğrisini belirleyen bir parametredir. Sinaptik düzeyin ilk saatte yükselip yanıtın haftalarca gecikmesini açıklayamaz."
+      },
+      {
+       "key": "D",
+       "text": "Kan beyin bariyerini aşamamaları",
+       "isCorrect": false,
+       "explanation": "Antidepresan moleküller santral hedeflere ulaşabilen yüksek lipofilik yapılardır. Kan beyin bariyerini kolaylıkla aşarak santral sinir sisteminde aktif konsantrasyona ulaşırlar."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Klinik etkinin ortaya çıkışının 2-4 hafta gecikmesi",
+       "isCorrect": true,
+       "explanation": "Antidepresan ilaçlar sinaptik aralıkta monoamin konsantrasyonunu hemen artırırlar. Buna rağmen klinik düzelmenin haftalar sonra ortaya çıkması hipotezin temel sınırlılığıdır."
+      },
+      {
+       "key": "B",
+       "text": "İlaçların karaciğerde metabolize olması",
+       "isCorrect": false,
+       "explanation": "Karaciğer sitokrom sistemi ksenobiyotiklerin fizyolojik temizlenme yoludur. Bu eliminasyon süreci santral monoamin hipotezinin klinik etki paradoksunu doğrudan açıklamaz."
+      },
+      {
+       "key": "C",
+       "text": "Oral yoldan tam emilememeleri",
+       "isCorrect": false,
+       "explanation": "Oral biyoyararlanım ilacın plazma konsantrasyon eğrisini belirleyen bir parametredir. Sinaptik düzeyin ilk saatte yükselip yanıtın haftalarca gecikmesini açıklayamaz."
+      },
+      {
+       "key": "D",
+       "text": "Kan beyin bariyerini aşamamaları",
+       "isCorrect": false,
+       "explanation": "Antidepresan moleküller santral hedeflere ulaşabilen yüksek lipofilik yapılardır. Kan beyin bariyerini kolaylıkla aşarak santral sinir sisteminde aktif konsantrasyona ulaşırlar."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Veziküler monoamin taşıyıcısını (VMAT) bloke ederek vezikülleri boşaltan rezerpinin derin depresyon tablosu oluşturması hipotezin ilk dayanağıdır.",
+     "maskedTerm": "rezerpinin",
+     "hint": "Veziküler monoamin depolarını boşaltarak depresyona yol açan antihipertansif ajan"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Monoamin Hipotezi ve Sınırları",
+     "items": [
+      {
+       "text": "Rezerpin monoamin depolarını boşaltarak derin depresif tabloya yol açabilir.",
+       "isLie": false,
+       "explanation": "Rezerpinin bu etkisi monoamin hipotezinin en eski deneysel dayanağıdır."
+      },
+      {
+       "text": "Antidepresanlar sinapstaki monoamin düzeyini 2-4 hafta sonra artırmaya başlar.",
+       "isLie": true,
+       "explanation": "Tuzaktır; monoamin artışı ilk saatlerde gerçekleşir, 2-4 hafta geciken klinik yanıttır."
+      },
+      {
+       "text": "SERT genindeki polimorfizmler bireyin depresyona yatkınlığını etkiler.",
+       "isLie": false,
+       "explanation": "Kısa alel taşıyıcılarında serotonin klirensi ve stres yanıtı farklılaşır."
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "topic": "Monoamin Hipotezi ve Gecikmeli Klinik Yanıt Mekanizması",
+     "steps": [
+      "1. İlaç Alımı: Antidepresan ilaç SERT ve NET taşıyıcılarına hızla bağlanır.",
+      "2. Sinaptik Yükselme: Dakikalar ve saatler içinde sinaptik yarıkta monoamin konsantrasyonu artar.",
+      "3. Reseptör Desensitizasyonu: Günler içinde presinaptik otoreseptörler duyarsızlaşır ve negatif geri bildirim kalkar.",
+      "4. Nörotrofik Transkripsiyon: Haftalar içinde CREB ve BDNF transkripsiyonu artarak nörojenez uyarılır ve klinik yanıt başlar."
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 4,
+   "title": "Nörotrofik Hipotez, BDNF ve Hipokampal Plastisite",
+   "bolum": "1.4",
+   "discipline": "Tıbbi Farmakoloji",
+   "pdfSayfalari": [
+    6,
+    8
+   ],
+   "sourcePdf": {
+    "startPage": 6,
+    "endPage": 8,
+    "pdfPath": "kurul2/y25-k2-63-antidepresan-ilaclar.pdf"
+   },
+   "content": "Nörotrofik hipotez, depresyonun hipokampal plastisite kaybı ve nörotrofik faktör yetersizliğine bağlı geliştiğini savunur.\n\n- **BDNF ve Sinaptik Bağlantı:** Beyin kaynaklı nörotrofik faktör (BDNF), nöronların hayatta kalmasını, dendritik dallanmayı ve sinaptogenezi düzenler.\n- **Stres ve Hipokampal Hasar:** Kronik psikososyal stres ve glukokortikoid fazlalığı BDNF ekspresyonunu baskılayarak hipokampusta hacim kaybı ve nörodejenerasyon yapar.\n- **Antidepresanların Nörojenik Etkisi:** Kronik antidepresan tedavisi hipokampusta BDNF düzeyini artırır ve subgranüler zonda yeni nöron doğumunu (nörogenez) tetikler.\n\n> [!IMPORTANT]\n> Antidepresanların klinik etkinliğinin haftalar alması, yeni nöronların oluşumu ve sinaptik ağlara entegrasyonu için gereken zamana tam uyum gösterir.",
+   "synthesisNarrative": "Nörotrofik hipotez, depresyonun hipokampal plastisite kaybı ve nörotrofik faktör yetersizliğine bağlı geliştiğini savunur.\n\n- **BDNF ve Sinaptik Bağlantı:** Beyin kaynaklı nörotrofik faktör (BDNF), nöronların hayatta kalmasını, dendritik dallanmayı ve sinaptogenezi düzenler.\n- **Stres ve Hipokampal Hasar:** Kronik psikososyal stres ve glukokortikoid fazlalığı BDNF ekspresyonunu baskılayarak hipokampusta hacim kaybı ve nörodejenerasyon yapar.\n- **Antidepresanların Nörojenik Etkisi:** Kronik antidepresan tedavisi hipokampusta BDNF düzeyini artırır ve subgranüler zonda yeni nöron doğumunu (nörogenez) tetikler.\n\n> [!IMPORTANT]\n> Antidepresanların klinik etkinliğinin haftalar alması, yeni nöronların oluşumu ve sinaptik ağlara entegrasyonu için gereken zamana tam uyum gösterir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Nörotrofik hipoteze göre kronik antidepresan tedavisinin hipokampusta uyardığı temel koruyucu faktör hangisidir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Beyin kaynaklı nörotrofik faktör (BDNF)",
+       "isCorrect": true,
+       "explanation": "Beyin kaynaklı nörotrofik faktör nöronal yaşamı ve sinaptik plastisiteyi destekler. Kronik antidepresan tedavisi bu faktörün sentezini artırarak nörogenezi indükler."
+      },
+      {
+       "key": "B",
+       "text": "Kalsitonin gen ilişkili peptid (CGRP)",
+       "isCorrect": false,
+       "explanation": "Kalsitonin gen ilişkili peptid serebral damarlarda güçlü vazodilatasyon yapan bir nöropeptiddir. Primer olarak migren patogenezinde rol oynar, hipokampal plastisitede incelenmez."
+      },
+      {
+       "key": "C",
+       "text": "Vasküler endotelyal büyüme faktörü D",
+       "isCorrect": false,
+       "explanation": "Vasküler endotelyal büyüme faktörü D lenf damarlarının endotel proliferasyonunu yöneten bir büyüme faktörüdür. Santral nöroplastisite regülasyonunda birincil hedef molekül olarak yer almaz."
+      },
+      {
+       "key": "D",
+       "text": "Paratiroid hormon ilişkili peptid (PTHrP)",
+       "isCorrect": false,
+       "explanation": "Paratiroid hormon ilişkili peptid maligniteye bağlı hiperkalsemilerde kemik rezorpsiyonunu artıran humoral bir proteindir. Santral sinir sistemi plastisitesiyle bir bağı bulunmaz."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Beyin kaynaklı nörotrofik faktör (BDNF)",
+       "isCorrect": true,
+       "explanation": "Beyin kaynaklı nörotrofik faktör nöronal yaşamı ve sinaptik plastisiteyi destekler. Kronik antidepresan tedavisi bu faktörün sentezini artırarak nörogenezi indükler."
+      },
+      {
+       "key": "B",
+       "text": "Kalsitonin gen ilişkili peptid (CGRP)",
+       "isCorrect": false,
+       "explanation": "Kalsitonin gen ilişkili peptid serebral damarlarda güçlü vazodilatasyon yapan bir nöropeptiddir. Primer olarak migren patogenezinde rol oynar, hipokampal plastisitede incelenmez."
+      },
+      {
+       "key": "C",
+       "text": "Vasküler endotelyal büyüme faktörü D",
+       "isCorrect": false,
+       "explanation": "Vasküler endotelyal büyüme faktörü D lenf damarlarının endotel proliferasyonunu yöneten bir büyüme faktörüdür. Santral nöroplastisite regülasyonunda birincil hedef molekül olarak yer almaz."
+      },
+      {
+       "key": "D",
+       "text": "Paratiroid hormon ilişkili peptid (PTHrP)",
+       "isCorrect": false,
+       "explanation": "Paratiroid hormon ilişkili peptid maligniteye bağlı hiperkalsemilerde kemik rezorpsiyonunu artıran humoral bir proteindir. Santral sinir sistemi plastisitesiyle bir bağı bulunmaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Beyin kaynaklı nörotrofik faktör (BDNF), nöronların hayatta kalmasını, dendritik dallanmayı ve sinaptogenezi düzenler.",
+     "maskedTerm": "BDNF",
+     "hint": "Beyin kaynaklı temel nörotrofik büyüme faktörü kısaltması"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Depresyonda Nörotrofik Mekanizmalar",
+     "items": [
+      {
+       "text": "Kronik stres hipokampal BDNF sentezini belirgin derecede azaltır.",
+       "isLie": false,
+       "explanation": "Yüksek glukokortikoidler BDNF gen ekspresyonunu baskılar."
+      },
+      {
+       "text": "Antidepresan tedavisi hipokampustaki nöronal doğum oranını düşürür.",
+       "isLie": true,
+       "explanation": "Tuzaktır; antidepresanlar hipokampusta nörojenezi artırarak hacim kaybını geri döndürür."
+      },
+      {
+       "text": "Depresyon hastalarında hipokampal hacimde küçülme saptanabilir.",
+       "isLie": false,
+       "explanation": "Nörotrofik kayıp ve dendritik atrofi hipokampus hacmini azaltır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Kronik stres ve aşırı glukokortikoid salınımının hipokampus üzerindeki morfolojik etkileri nelerdir?",
+     "answer": "BDNF sentezini baskılar, dendritik dallanmaları köreltir (atrofi), sinaptik bağlantıları azaltır ve subgranüler zonda yeni nöron oluşumunu durdurarak hacim kaybına yol açar."
+    }
+   ]
+  },
+  {
+   "slideNumber": 5,
+   "title": "Nöroendokrin Faktörler ve HPA Aksı Hiperaktivitesi",
+   "bolum": "1.5",
+   "discipline": "Tıbbi Farmakoloji",
+   "pdfSayfalari": [
+    14,
+    15
+   ],
+   "sourcePdf": {
+    "startPage": 14,
+    "endPage": 15,
+    "pdfPath": "kurul2/y25-k2-63-antidepresan-ilaclar.pdf"
+   },
+   "content": "Depresyon patogenezinde hipotalamo-hipofizer-adrenal (HPA) aks disfonksiyonu ve hiperkortizolemi kritik rol oynar.\n\n- **HPA Aksı Hiperaktivitesi:** Depresif bireylerde hipotalamustan CRH salınımı artmış ve plazma kortizol seviyeleri kronik olarak yükselmiştir.\n- **Negatif Geri Bildirim Bozukluğu:** Deksametazon baskılama testinde kortizol düzeylerinin yeterince baskılanamaması, santral glukokortikoid reseptör direncini gösterir.\n- **Tiroid ve Cinsiyet Hormonları:** Hipotiroidizm depresyonu taklit eder veya ağırlaştırır; tiroid hormon takviyesi bazı dirençli depresyon vakalarında antidepresan yanıtı güçlendirir.\n\n> [!NOTE]\n> Başarılı antidepresan tedavisi HPA aks hiperaktivitesini normale döndürerek kortizol düzeylerini düşürür ve deksametazon baskılanmasını yeniden sağlar.",
+   "synthesisNarrative": "Depresyon patogenezinde hipotalamo-hipofizer-adrenal (HPA) aks disfonksiyonu ve hiperkortizolemi kritik rol oynar.\n\n- **HPA Aksı Hiperaktivitesi:** Depresif bireylerde hipotalamustan CRH salınımı artmış ve plazma kortizol seviyeleri kronik olarak yükselmiştir.\n- **Negatif Geri Bildirim Bozukluğu:** Deksametazon baskılama testinde kortizol düzeylerinin yeterince baskılanamaması, santral glukokortikoid reseptör direncini gösterir.\n- **Tiroid ve Cinsiyet Hormonları:** Hipotiroidizm depresyonu taklit eder veya ağırlaştırır; tiroid hormon takviyesi bazı dirençli depresyon vakalarında antidepresan yanıtı güçlendirir.\n\n> [!NOTE]\n> Başarılı antidepresan tedavisi HPA aks hiperaktivitesini normale döndürerek kortizol düzeylerini düşürür ve deksametazon baskılanmasını yeniden sağlar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Depresyondaki nöroendokrin disfonksiyonu ve bozulmuş negatif geri bildirimi göstermek için kullanılan klasik klinik test hangisidir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Deksametazon baskılama testi",
+       "isCorrect": true,
+       "explanation": "Deksametazon testi hipofizer negatif geri bildirimi inceler. Depresyonda reseptör duyarsızlığı sebebiyle kortizol baskılanamaz ve aks hiperaktivitesi kanıtlanır."
+      },
+      {
+       "key": "B",
+       "text": "Glukoz tolerans testi",
+       "isCorrect": false,
+       "explanation": "Oral glukoz tolerans testi pankreatik insülin sekresyonunu ve periferik glukoz kullanımını ölçer. Depresyondaki glukokortikoid negatif geri bildirim defektini değerlendirmez."
+      },
+      {
+       "key": "C",
+       "text": "Metakolin provokasyon testi",
+       "isCorrect": false,
+       "explanation": "Metakolin provokasyon testi bronşiyal düz kas aşırı duyarlılığını ölçen pulmoner bir testtir. Nöroendokrin aks regülasyonunun incelenmesinde bir rolü yoktur."
+      },
+      {
+       "key": "D",
+       "text": "Schilling testi",
+       "isCorrect": false,
+       "explanation": "Schilling testi gastrointestinal sistemde B12 vitamini emilim kapasitesini ölçen nükleer tıp yöntemidir. Hipotalamo-hipofizer-adrenal aks hormonlarını test etmez."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Deksametazon baskılama testi",
+       "isCorrect": true,
+       "explanation": "Deksametazon testi hipofizer negatif geri bildirimi inceler. Depresyonda reseptör duyarsızlığı sebebiyle kortizol baskılanamaz ve aks hiperaktivitesi kanıtlanır."
+      },
+      {
+       "key": "B",
+       "text": "Glukoz tolerans testi",
+       "isCorrect": false,
+       "explanation": "Oral glukoz tolerans testi pankreatik insülin sekresyonunu ve periferik glukoz kullanımını ölçer. Depresyondaki glukokortikoid negatif geri bildirim defektini değerlendirmez."
+      },
+      {
+       "key": "C",
+       "text": "Metakolin provokasyon testi",
+       "isCorrect": false,
+       "explanation": "Metakolin provokasyon testi bronşiyal düz kas aşırı duyarlılığını ölçen pulmoner bir testtir. Nöroendokrin aks regülasyonunun incelenmesinde bir rolü yoktur."
+      },
+      {
+       "key": "D",
+       "text": "Schilling testi",
+       "isCorrect": false,
+       "explanation": "Schilling testi gastrointestinal sistemde B12 vitamini emilim kapasitesini ölçen nükleer tıp yöntemidir. Hipotalamo-hipofizer-adrenal aks hormonlarını test etmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Depresif bireylerde hipotalamustan CRH salınımı artmış ve plazma kortizol seviyeleri kronik olarak yükselmiştir.",
+     "maskedTerm": "kortizol",
+     "hint": "HPA aksı uyarısıyla adrenal korteksten salınan temel stres hormonu"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "HPA Aksı ve Nöroendokrin Faktörler",
+     "items": [
+      {
+       "text": "Depresyonda kortizol seviyeleri genellikle kronik olarak yüksek seyreder.",
+       "isLie": false,
+       "explanation": "HPA aksı hiperaktivitesi plazma kortizol konsantrasyonunu artırır."
+      },
+      {
+       "text": "Deksametazon testi depresyon hastalarında kortizolü tamamen sıfırlar.",
+       "isLie": true,
+       "explanation": "Tuzaktır; depresyonda negatif geri bildirim bozulduğu için kortizol baskılanamaz (nonsüpresyon)."
+      },
+      {
+       "text": "Hipotiroidizm tablosu klinik olarak depresyonu taklit edebilir.",
+       "isLie": false,
+       "explanation": "Tiroid hormon yetersizliği mizaç düşüklüğü, yavaşlama ve halsizlik yaparak depresyon tablosunu taklit eder."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Depresyon hastalarında deksametazon baskılama testinde görülen patolojik yanıt nedir ve neyi ifade eder?",
+     "answer": "Deksametazon uygulamasına rağmen plazma kortizol düzeyleri baskılanamaz (nonsüpresyon); bu durum hipotalamus ve hipofizde glukokortikoid reseptör duyarsızlığını ve HPA aksındaki negatif geri bildirim yetersizliğini gösterir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 6,
+   "title": "Seçici Serotonin Gerialım İnhibitörleri (SSRI)",
+   "bolum": "2.1",
+   "discipline": "Tıbbi Farmakoloji",
+   "pdfSayfalari": [
+    16,
+    18
+   ],
+   "sourcePdf": {
+    "startPage": 16,
+    "endPage": 18,
+    "pdfPath": "kurul2/y25-k2-63-antidepresan-ilaclar.pdf"
+   },
+   "content": "Seçici Serotonin Gerialım İnhibitörleri (SSRI), modern depresyon ve anksiyete tedavisinde birinci basamak ilaç sınıfıdır.\n\n- **Temsilcileri:** Fluoksetin, sertralin, sitalopram, essitalopram, paroksetin ve fluvoksamin bu sınıfa dahildir.\n- **Etki Mekanizması:** Presinaptik nörondaki serotonin taşıyıcısını (SERT) yüksek selektiviteyle bloke ederler; NET veya diğer reseptörlere afiniteleri düşüktür.\n- **Klinik Üstünlükleri:** Trisiklik antidepresanlara kıyasla antikolinerjik, antihistaminik ve alfa-blokör yan etkileri son derece düşüktür; aşırı dozda kardiyotoksik değillerdir.\n\n> [!IMPORTANT]\n> SSRI grubu ilaçlar yüksek terapötik indeksleri, aşırı dozda güvenli oluşları ve tolerabilite profilleri nedeniyle depresyonda ilk seçenek haline gelmiştir.",
+   "synthesisNarrative": "Seçici Serotonin Gerialım İnhibitörleri (SSRI), modern depresyon ve anksiyete tedavisinde birinci basamak ilaç sınıfıdır.\n\n- **Temsilcileri:** Fluoksetin, sertralin, sitalopram, essitalopram, paroksetin ve fluvoksamin bu sınıfa dahildir.\n- **Etki Mekanizması:** Presinaptik nörondaki serotonin taşıyıcısını (SERT) yüksek selektiviteyle bloke ederler; NET veya diğer reseptörlere afiniteleri düşüktür.\n- **Klinik Üstünlükleri:** Trisiklik antidepresanlara kıyasla antikolinerjik, antihistaminik ve alfa-blokör yan etkileri son derece düşüktür; aşırı dozda kardiyotoksik değillerdir.\n\n> [!IMPORTANT]\n> SSRI grubu ilaçlar yüksek terapötik indeksleri, aşırı dozda güvenli oluşları ve tolerabilite profilleri nedeniyle depresyonda ilk seçenek haline gelmiştir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdaki ilaçlardan hangisi presinaptik SERT taşıyıcısını selektif bloke eden birinci basamak SSRI sınıfı antidepresandır?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Fluoksetin",
+       "isCorrect": true,
+       "explanation": "Fluoksetin presinaptik SERT taşıyıcısını yüksek seçicilikle bloke eden prototip SSRI ajanıdır. Depresyon tedavisinde birinci basamakta güvenle tercih edilir."
+      },
+      {
+       "key": "B",
+       "text": "Amitriptilin",
+       "isCorrect": false,
+       "explanation": "Amitriptilin birinci nesil trisiklik antidepresan olup muskarinik reseptörleri de bloke eden seçici bir molekül değildir. Geniş reseptör profili nedeniyle antikolinerjik ve kardiyak yan etkilere yol açar."
+      },
+      {
+       "key": "C",
+       "text": "Tranilsipromin",
+       "isCorrect": false,
+       "explanation": "Tranilsipromin mitokondriyal monoamin oksidaz enzimini kovalent bağlarla inhibe eden klasik bir MAOI bileşiğidir. Taşıyıcı geri alım blokajı yoluyla etki göstermez."
+      },
+      {
+       "key": "D",
+       "text": "Bupropion",
+       "isCorrect": false,
+       "explanation": "Bupropion dopamin ve noradrenalin geri alımını hedef alan atipik yapıda bir moleküldür. Serotonin taşıyıcısı üzerinde primer selektif bir blokaj oluşturmaz."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Fluoksetin",
+       "isCorrect": true,
+       "explanation": "Fluoksetin presinaptik SERT taşıyıcısını yüksek seçicilikle bloke eden prototip SSRI ajanıdır. Depresyon tedavisinde birinci basamakta güvenle tercih edilir."
+      },
+      {
+       "key": "B",
+       "text": "Amitriptilin",
+       "isCorrect": false,
+       "explanation": "Amitriptilin birinci nesil trisiklik antidepresan olup muskarinik reseptörleri de bloke eden seçici bir molekül değildir. Geniş reseptör profili nedeniyle antikolinerjik ve kardiyak yan etkilere yol açar."
+      },
+      {
+       "key": "C",
+       "text": "Tranilsipromin",
+       "isCorrect": false,
+       "explanation": "Tranilsipromin mitokondriyal monoamin oksidaz enzimini kovalent bağlarla inhibe eden klasik bir MAOI bileşiğidir. Taşıyıcı geri alım blokajı yoluyla etki göstermez."
+      },
+      {
+       "key": "D",
+       "text": "Bupropion",
+       "isCorrect": false,
+       "explanation": "Bupropion dopamin ve noradrenalin geri alımını hedef alan atipik yapıda bir moleküldür. Serotonin taşıyıcısı üzerinde primer selektif bir blokaj oluşturmaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Presinaptik nörondaki serotonin taşıyıcısını (SERT) yüksek selektiviteyle bloke ederler; NET veya diğer reseptörlere afiniteleri düşüktür.",
+     "maskedTerm": "SERT",
+     "hint": "Serotonin gerialımını yürüten transmembran taşıyıcı protein kısaltması"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "SSRI Sınıfının Özellikleri",
+     "items": [
+      {
+       "text": "Fluoksetin ve sitalopram SSRI sınıfının yaygın kullanılan üyeleridir.",
+       "isLie": false,
+       "explanation": "Her iki ilaç da SERT selektif blokörüdür."
+      },
+      {
+       "text": "SSRI ilaçlar trisiklik antidepresanlara kıyasla aşırı dozda çok daha kardiyotoksiktir.",
+       "isLie": true,
+       "explanation": "Tuzaktır; SSRI'lar aşırı dozda oldukça güvenlidir, kardiyotoksisite TCA'ların temel tehlikesidir."
+      },
+      {
+       "text": "SSRI'lar muskarinik ve histaminerjik reseptörlere belirgin afinite göstermezler.",
+       "isLie": false,
+       "explanation": "Reseptör seçicilikleri yüksek olduğundan otonomik yan etkileri düşüktür."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "SSRI grubu ilaçların trisiklik antidepresanlara (TCA) kıyasla klinik pratikte birinci seçenek olmasını sağlayan temel avantajlar nelerdir?",
+     "answer": "Muskarinik, histaminerjik ve alfa-adrenerjik reseptörleri bloke etmemeleri (otonom yan etkilerin azlığı), kardiyotoksik etki oluşturmamaları ve aşırı dozda yüksek güvenlilik indeksine sahip olmalarıdır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 7,
+   "title": "Serotonin ve Noradrenalin Gerialım İnhibitörleri (SNRI)",
+   "bolum": "2.2",
+   "discipline": "Tıbbi Farmakoloji",
+   "pdfSayfalari": [
+    19,
+    22
+   ],
+   "sourcePdf": {
+    "startPage": 19,
+    "endPage": 22,
+    "pdfPath": "kurul2/y25-k2-63-antidepresan-ilaclar.pdf"
+   },
+   "content": "Serotonin ve Noradrenalin Gerialım İnhibitörleri (SNRI), hem SERT hem NET taşıyıcılarını inhibe eden ikili etkili antidepresanlardır.\n\n- **Sınıf Üyeleri:** Venlafaksin, desvenlafaksin, duloksetin, milnasipran ve levomilnasipran bu gruptadır.\n- **Doz Bağımlı Etki (Venlafaksin):** Düşük dozlarda neredeyse yalnızca SERT'i inhibe ederken; yüksek dozlara çıkıldığında NET blokajı eklenir ve kan basıncında artış yapabilir.\n- **Klinik Alanları:** Depresyonun yanı sıra diyabetik nöropati, fibromiyalji ve kronik kas-iskelet ağrılarında yüksek etkinlik gösterirler.\n\n> [!NOTE]\n> SNRI'lar trisiklik antidepresanların ikili gerialım blokajı gücüne sahipken, onların alfa, muskarinik ve histamin reseptör toksisitesini taşımazlar.",
+   "synthesisNarrative": "Serotonin ve Noradrenalin Gerialım İnhibitörleri (SNRI), hem SERT hem NET taşıyıcılarını inhibe eden ikili etkili antidepresanlardır.\n\n- **Sınıf Üyeleri:** Venlafaksin, desvenlafaksin, duloksetin, milnasipran ve levomilnasipran bu gruptadır.\n- **Doz Bağımlı Etki (Venlafaksin):** Düşük dozlarda neredeyse yalnızca SERT'i inhibe ederken; yüksek dozlara çıkıldığında NET blokajı eklenir ve kan basıncında artış yapabilir.\n- **Klinik Alanları:** Depresyonun yanı sıra diyabetik nöropati, fibromiyalji ve kronik kas-iskelet ağrılarında yüksek etkinlik gösterirler.\n\n> [!NOTE]\n> SNRI'lar trisiklik antidepresanların ikili gerialım blokajı gücüne sahipken, onların alfa, muskarinik ve histamin reseptör toksisitesini taşımazlar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Venlafaksinin farmakodinamik profilinde yüksek dozlara çıkıldığında ortaya çıkan temel mekanizma değişikliği nedir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Noradrenalin gerialım blokajının (NET) eklenmesi",
+       "isCorrect": true,
+       "explanation": "Venlafaksin doza bağımlı taşıyıcı afinitesi sergileyen ikili bir ajandır. Yüksek dozlarda noradrenalin taşıyıcısını da bloke ederek adrenerjik tonusu artırır."
+      },
+      {
+       "key": "B",
+       "text": "GABA-A reseptörlerinin uyarılması",
+       "isCorrect": false,
+       "explanation": "GABA-A klorür kanalı aktivasyonu sedatif benzodiazepinlerin temel etki yoludur. Venlafaksinin GABAerjik nörotransmisyon üzerinde doğrudan bir agonist etkisi bulunmaz."
+      },
+      {
+       "key": "C",
+       "text": "Muskarinik kolinerjik reseptörlerin bloke edilmesi",
+       "isCorrect": false,
+       "explanation": "Muskarinik kolinerjik blokaj klasik trisiklik antidepresanların ayırt edici otonom özelliğidir. Venlafaksin molekülü parasempatik muskarinik reseptörleri hedef almaz."
+      },
+      {
+       "key": "D",
+       "text": "MAO enziminin geri dönüşümsüz inaktivasyonu",
+       "isCorrect": false,
+       "explanation": "Mitokondriyal MAO inaktivasyonu fenelzin ve tranilsipromin gibi MAOI bileşiklerinin mekanizmasıdır. Venlafaksin bir hücre membranı taşıyıcı inhibitörüdür."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Noradrenalin gerialım blokajının (NET) eklenmesi",
+       "isCorrect": true,
+       "explanation": "Venlafaksin doza bağımlı taşıyıcı afinitesi sergileyen ikili bir ajandır. Yüksek dozlarda noradrenalin taşıyıcısını da bloke ederek adrenerjik tonusu artırır."
+      },
+      {
+       "key": "B",
+       "text": "GABA-A reseptörlerinin uyarılması",
+       "isCorrect": false,
+       "explanation": "GABA-A klorür kanalı aktivasyonu sedatif benzodiazepinlerin temel etki yoludur. Venlafaksinin GABAerjik nörotransmisyon üzerinde doğrudan bir agonist etkisi bulunmaz."
+      },
+      {
+       "key": "C",
+       "text": "Muskarinik kolinerjik reseptörlerin bloke edilmesi",
+       "isCorrect": false,
+       "explanation": "Muskarinik kolinerjik blokaj klasik trisiklik antidepresanların ayırt edici otonom özelliğidir. Venlafaksin molekülü parasempatik muskarinik reseptörleri hedef almaz."
+      },
+      {
+       "key": "D",
+       "text": "MAO enziminin geri dönüşümsüz inaktivasyonu",
+       "isCorrect": false,
+       "explanation": "Mitokondriyal MAO inaktivasyonu fenelzin ve tranilsipromin gibi MAOI bileşiklerinin mekanizmasıdır. Venlafaksin bir hücre membranı taşıyıcı inhibitörüdür."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Venlafaksin, desvenlafaksin, duloksetin, milnasipran ve levomilnasipran bu gruptadır.",
+     "maskedTerm": "duloksetin",
+     "hint": "Diyabetik nöropatide de yaygın kullanılan ikili gerialım blokörü etken madde"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "SNRI Grubu İlaçlar",
+     "items": [
+      {
+       "text": "Duloksetin hem depresyonda hem diyabetik periferik nöropatide onaylıdır.",
+       "isLie": false,
+       "explanation": "İnen ağrı yolaklarını uyararak analjezi oluşturur."
+      },
+      {
+       "text": "Venlafaksin yüksek dozlarda kan basıncını yükseltebilir.",
+       "isLie": false,
+       "explanation": "Noradrenerjik tonusu artırarak doza bağımlı hipertansiyona yol açabilir."
+      },
+      {
+       "text": "SNRI sınıfı ilaçlar dopamin taşıyıcısını (DAT) en güçlü bloke eden ilaçlardır.",
+       "isLie": true,
+       "explanation": "Tuzaktır; SNRI'lar SERT ve NET'i hedefler, DAT üzerinde etkileri yok denecek kadar azdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Venlafaksinin düşük doz ve yüksek doz arasındaki etki profili farkı nedir?",
+     "answer": "Düşük dozlarda selektif olarak SERT'i inhibe edip SSRI benzeri etki gösterirken; yüksek dozlara çıkıldığında NET inhibisyonu da eklenir ve artan noradrenalin nedeniyle kan basıncında yükselme görülebilir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 8,
+   "title": "Trisiklik Antidepresanlar (TCA)",
+   "bolum": "2.3",
+   "discipline": "Tıbbi Farmakoloji",
+   "pdfSayfalari": [
+    23,
+    23
+   ],
+   "sourcePdf": {
+    "startPage": 23,
+    "endPage": 23,
+    "pdfPath": "kurul2/y25-k2-63-antidepresan-ilaclar.pdf"
+   },
+   "content": "Trisiklik antidepresanlar (TCA), güçlü antidepresan etkinliklerine rağmen geniş reseptör blokajı ve toksisiteleriyle karakterize klasik ajanlardır.\n\n- **Temsilcileri:** İmipramin, desipramin, amitriptilin, nortriptilin ve klomipramin bu sınıftadır.\n- **Etki Mekanizması:** Presinaptik membranda hem SERT hem NET taşıyıcılarını güçlü şekilde inhibe ederler.\n- **Reseptör Yan Etki Profili:** Muskarinik reseptörleri bloke ederek ağız kuruluğu, konstipasyon, bulanık görme ve idrar retansiyonu; alfa-1 reseptör blokajıyla ortostatik hipotansiyon; H1 blokajıyla sedasyon ve kilo alımı yaparlar.\n\n> [!IMPORTANT]\n> TCA'lar dar terapötik indekse sahiptir; kardiyak sodyum kanallarını bloke ederek ölümcül iletim bozuklukları ve ventriküler aritmilere yol açabilirler.",
+   "synthesisNarrative": "Trisiklik antidepresanlar (TCA), güçlü antidepresan etkinliklerine rağmen geniş reseptör blokajı ve toksisiteleriyle karakterize klasik ajanlardır.\n\n- **Temsilcileri:** İmipramin, desipramin, amitriptilin, nortriptilin ve klomipramin bu sınıftadır.\n- **Etki Mekanizması:** Presinaptik membranda hem SERT hem NET taşıyıcılarını güçlü şekilde inhibe ederler.\n- **Reseptör Yan Etki Profili:** Muskarinik reseptörleri bloke ederek ağız kuruluğu, konstipasyon, bulanık görme ve idrar retansiyonu; alfa-1 reseptör blokajıyla ortostatik hipotansiyon; H1 blokajıyla sedasyon ve kilo alımı yaparlar.\n\n> [!IMPORTANT]\n> TCA'lar dar terapötik indekse sahiptir; kardiyak sodyum kanallarını bloke ederek ölümcül iletim bozuklukları ve ventriküler aritmilere yol açabilirler.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Trisiklik antidepresanların kullanımında görülen ortostatik hipotansiyon hangi reseptörün bloke edilmesinden kaynaklanır?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Alfa-1 adrenerjik reseptörler",
+       "isCorrect": true,
+       "explanation": "Alfa-1 adrenerjik reseptörler periferik arteriyollerin vazomotor tonusunu sağlar. Bu reseptörlerin TCA ile antagonize edilmesi vazodilatasyona ve ortostatik kan basıncı düşüşüne yol açar."
+      },
+      {
+       "key": "B",
+       "text": "Muskarinik kolinerjik reseptörler",
+       "isCorrect": false,
+       "explanation": "Muskarinik kolinerjik reseptör blokajı tükürük salgısını ve bağırsak hareketlerini yavaşlatır. Bu mekanizma ağız kuruluğu ve idrar retansiyonu oluşturur, hipotansiyon yapmaz."
+      },
+      {
+       "key": "C",
+       "text": "Histamin H1 reseptörleri",
+       "isCorrect": false,
+       "explanation": "Histamin H1 reseptör antagonizması santral sinir sisteminde uyuşukluk ve iştah artışına neden olur. Hastada sedasyon ve kilo alımı tablosunu açıklar."
+      },
+      {
+       "key": "D",
+       "text": "Dopamin D2 reseptörleri",
+       "isCorrect": false,
+       "explanation": "Dopamin D2 reseptörleri klasik antipsikotiklerin temel hedefidir. Trisiklik antidepresanların vazomotor damar tonusu regülasyonunda D2 blokajı rol oynamaz."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Alfa-1 adrenerjik reseptörler",
+       "isCorrect": true,
+       "explanation": "Alfa-1 adrenerjik reseptörler periferik arteriyollerin vazomotor tonusunu sağlar. Bu reseptörlerin TCA ile antagonize edilmesi vazodilatasyona ve ortostatik kan basıncı düşüşüne yol açar."
+      },
+      {
+       "key": "B",
+       "text": "Muskarinik kolinerjik reseptörler",
+       "isCorrect": false,
+       "explanation": "Muskarinik kolinerjik reseptör blokajı tükürük salgısını ve bağırsak hareketlerini yavaşlatır. Bu mekanizma ağız kuruluğu ve idrar retansiyonu oluşturur, hipotansiyon yapmaz."
+      },
+      {
+       "key": "C",
+       "text": "Histamin H1 reseptörleri",
+       "isCorrect": false,
+       "explanation": "Histamin H1 reseptör antagonizması santral sinir sisteminde uyuşukluk ve iştah artışına neden olur. Hastada sedasyon ve kilo alımı tablosunu açıklar."
+      },
+      {
+       "key": "D",
+       "text": "Dopamin D2 reseptörleri",
+       "isCorrect": false,
+       "explanation": "Dopamin D2 reseptörleri klasik antipsikotiklerin temel hedefidir. Trisiklik antidepresanların vazomotor damar tonusu regülasyonunda D2 blokajı rol oynamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "İmipramin, desipramin, amitriptilin, nortriptilin ve klomipramin bu sınıftadır.",
+     "maskedTerm": "amitriptilin",
+     "hint": "En yaygın kullanılan prototipik trisiklik antidepresan etken madde"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Trisiklik Antidepresan Toksisitesi",
+     "items": [
+      {
+       "text": "TCA'lar muskarinik reseptörleri bloke ederek ağız kuruluğu ve idrar retansiyonu yaparlar.",
+       "isLie": false,
+       "explanation": "Antikolinerjik etkiler TCA'ların en belirgin otonomik yan etkisidir."
+      },
+      {
+       "text": "TCA grubu ilaçlar geniş terapötik indekse sahiptir ve aşırı dozda kalbe zarar vermez.",
+       "isLie": true,
+       "explanation": "Tuzaktır; TCA'lar dar terapötik indekse sahiptir ve aşırı dozda kardiyotoksik aritmi riski taşır."
+      },
+      {
+       "text": "Alfa-1 blokajı trisiklik antidepresanlarda ortostatik hipotansiyona neden olur.",
+       "isLie": false,
+       "explanation": "Periferik vasküler alfa-1 antagonizması ortostatik kan basıncı düşüşü yapar."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Trisiklik antidepresanların muskarinik, alfa-1 ve H1 reseptör blokajına bağlı en belirgin yan etkileri nelerdir?",
+     "answer": "Muskarinik blokaj ile ağız kuruluğu, konstipasyon, idrar retansiyonu ve bulanık görme; alfa-1 blokajı ile ortostatik hipotansiyon; H1 blokajı ile belirgin sedasyon ve kilo alımıdır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 9,
+   "title": "5-HT2 Reseptör Antagonistleri (Trazodon, Nefazodon)",
+   "bolum": "2.4",
+   "discipline": "Tıbbi Farmakoloji",
+   "pdfSayfalari": [
+    24,
+    34
+   ],
+   "sourcePdf": {
+    "startPage": 24,
+    "endPage": 34,
+    "pdfPath": "kurul2/y25-k2-63-antidepresan-ilaclar.pdf"
+   },
+   "content": "5-HT2 reseptör antagonistleri, postsinaptik 5-HT2A reseptörlerini bloke ederek antidepresan ve anksiyolitik etki sergileyen ajanlardır.\n\n- **Temsilcileri:** Trazodon ve nefazodon bu sınıfa aittir.\n- **Etki Mekanizması:** 5-HT2A reseptör antagonizmasının yanı sıra zayıf SERT blokajı da yaparlar. Postsinaptik 5-HT2 uyarılmasını engelledikleri için cinsel işlev bozukluğu yapma riskleri düşüktür.\n- **Sedatif Profil:** Trazodon belirgin H1 ve alfa-1 reseptör antagonizması sergilediği için güçlü sedasyon yapar; depresyona eşlik eden uykusuzlukta sıkça tercih edilir.\n- **Nefazodon Toksisitesi:** Nefazodon ciddi hepatotoksisite ve karaciğer yetmezliği riski nedeniyle pek çok ülkede kullanımdan kaldırılmıştır.\n\n> [!NOTE]\n> Trazodonun nadir fakat ciddi bir yan etkisi priapizmdir (uzamış ağrılı ereksiyon); acil ürolojik müdahale gerektirir.",
+   "synthesisNarrative": "5-HT2 reseptör antagonistleri, postsinaptik 5-HT2A reseptörlerini bloke ederek antidepresan ve anksiyolitik etki sergileyen ajanlardır.\n\n- **Temsilcileri:** Trazodon ve nefazodon bu sınıfa aittir.\n- **Etki Mekanizması:** 5-HT2A reseptör antagonizmasının yanı sıra zayıf SERT blokajı da yaparlar. Postsinaptik 5-HT2 uyarılmasını engelledikleri için cinsel işlev bozukluğu yapma riskleri düşüktür.\n- **Sedatif Profil:** Trazodon belirgin H1 ve alfa-1 reseptör antagonizması sergilediği için güçlü sedasyon yapar; depresyona eşlik eden uykusuzlukta sıkça tercih edilir.\n- **Nefazodon Toksisitesi:** Nefazodon ciddi hepatotoksisite ve karaciğer yetmezliği riski nedeniyle pek çok ülkede kullanımdan kaldırılmıştır.\n\n> [!NOTE]\n> Trazodonun nadir fakat ciddi bir yan etkisi priapizmdir (uzamış ağrılı ereksiyon); acil ürolojik müdahale gerektirir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Güçlü sedatif etkisi nedeniyle depresyona eşlik eden uykusuzluk tedavisinde gece dozu olarak sıkça reçete edilen 5-HT2 antagonisti hangisidir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Trazodon",
+       "isCorrect": true,
+       "explanation": "Trazodon güçlü histamin H1 ve 5-HT2 reseptör antagonizması sergileyen atipik bir ajandır. Bu özellikleri sayesinde belirgin sedasyon oluşturur ve uykusuzlukta yaygın kullanılır."
+      },
+      {
+       "key": "B",
+       "text": "Essitalopram",
+       "isCorrect": false,
+       "explanation": "Essitalopram yüksek seçicilikte bir SERT blokörüdür. Histaminerjik reseptörleri etkilemediğinden primer bir sedatif hipnotik ajan şeklinde reçete edilmez."
+      },
+      {
+       "key": "C",
+       "text": "Reboksetin",
+       "isCorrect": false,
+       "explanation": "Reboksetin santral noradrenalin geri alımını seçici biçimde durduran bir NET inhibitörüdür. Uyku getirici değil uyanıklığı artırıcı bir farmakolojik profile sahiptir."
+      },
+      {
+       "key": "D",
+       "text": "Venlafaksin",
+       "isCorrect": false,
+       "explanation": "Venlafaksin serotonin ve noradrenalin geri alımını engelleyen ikili bir antidepresandır. Gece uykusuzluğunu tedavi etmek için birincil sedatif ajan olarak verilmez."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Trazodon",
+       "isCorrect": true,
+       "explanation": "Trazodon güçlü histamin H1 ve 5-HT2 reseptör antagonizması sergileyen atipik bir ajandır. Bu özellikleri sayesinde belirgin sedasyon oluşturur ve uykusuzlukta yaygın kullanılır."
+      },
+      {
+       "key": "B",
+       "text": "Essitalopram",
+       "isCorrect": false,
+       "explanation": "Essitalopram yüksek seçicilikte bir SERT blokörüdür. Histaminerjik reseptörleri etkilemediğinden primer bir sedatif hipnotik ajan şeklinde reçete edilmez."
+      },
+      {
+       "key": "C",
+       "text": "Reboksetin",
+       "isCorrect": false,
+       "explanation": "Reboksetin santral noradrenalin geri alımını seçici biçimde durduran bir NET inhibitörüdür. Uyku getirici değil uyanıklığı artırıcı bir farmakolojik profile sahiptir."
+      },
+      {
+       "key": "D",
+       "text": "Venlafaksin",
+       "isCorrect": false,
+       "explanation": "Venlafaksin serotonin ve noradrenalin geri alımını engelleyen ikili bir antidepresandır. Gece uykusuzluğunu tedavi etmek için birincil sedatif ajan olarak verilmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Trazodon belirgin H1 ve alfa-1 reseptör antagonizması sergilediği için güçlü sedasyon yapar; depresyona eşlik eden uykusuzlukta sıkça tercih edilir.",
+     "maskedTerm": "Trazodon",
+     "hint": "Uykusuzlukta düşük dozda kullanılan sedatif etkili 5-HT2 antagonisti"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "5-HT2 Reseptör Antagonistleri",
+     "items": [
+      {
+       "text": "Trazodonun nadir fakat acil cerrahi gerektirebilen bir yan etkisi priapizmdir.",
+       "isLie": false,
+       "explanation": "Alfa-1 blokajına bağlı gelişen uzamış ağrılı ereksiyon acildir."
+      },
+      {
+       "text": "Nefazodon son derece güvenli olup hiçbir karaciğer yan etkisi göstermez.",
+       "isLie": true,
+       "explanation": "Tuzaktır; nefazodon ciddi ölümcül hepatotoksisite riski taşır."
+      },
+      {
+       "text": "5-HT2A blokajı SSRI'lara kıyasla cinsel disfonksiyon riskini belirgin azaltır.",
+       "isLie": false,
+       "explanation": "5-HT2 reseptör blokajı cinsel işlevleri koruyucu etki gösterir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Trazodonun klinik pratikte depresyona eşlik eden uykusuzlukta tercih edilmesinin reseptör temeli ve erkeklerdeki kritik ürolojik riski nedir?",
+     "answer": "Reseptör temeli güçlü H1 ve alfa-1 reseptör antagonizmasına bağlı sedasyondur; erkeklerdeki kritik riski ise alfa-1 blokajına bağlı gelişebilen uzamış ağrılı ereksiyon olan priapizmdir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 10,
+   "title": "Heterosiklik ve Atipik Antidepresanlar (Bupropion, Mirtazapin)",
+   "bolum": "2.5",
+   "discipline": "Tıbbi Farmakoloji",
+   "pdfSayfalari": [
+    25,
+    36
+   ],
+   "sourcePdf": {
+    "startPage": 25,
+    "endPage": 36,
+    "pdfPath": "kurul2/y25-k2-63-antidepresan-ilaclar.pdf"
+   },
+   "content": "Atipik antidepresanlar, klasik monoamin gerialım inhibitörlerinden farklı reseptöryel ve taşıyıcı mekanizmalarla etki ederler.\n\n- **Bupropion:** Dopamin ve noradrenalin gerialımını zayıfça inhibe eder (NDRI). Serotonerjik sisteme dokunmadığı için cinsel disfonksiyon yapmaz. Nikotin çekilme semptomlarını azaltarak sigara bırakma tedavisinde kullanılır.\n- **Mirtazapin:** Presinaptik alfa-2 otoreseptör ve heteroreseptörleri bloke ederek hem noradrenalin hem serotonin salınımını artırır (NASSA). Ayrıca postsinaptik 5-HT2 ve 5-HT3 reseptörlerini bloke eder.\n- **Mirtazapin Yan Etkileri:** Güçlü H1 reseptör blokajı nedeniyle belirgin sedasyon, iştah açılması ve kilo alımı yapar.\n\n> [!IMPORTANT]\n> Bupropion yüksek dozlarda konvülsiyon (nöbet) eşiğini düşürür; bu nedenle epilepsi ve yeme bozukluğu (bulimia/anoreksiya) olan hastalarda kontrendikedir.",
+   "synthesisNarrative": "Atipik antidepresanlar, klasik monoamin gerialım inhibitörlerinden farklı reseptöryel ve taşıyıcı mekanizmalarla etki ederler.\n\n- **Bupropion:** Dopamin ve noradrenalin gerialımını zayıfça inhibe eder (NDRI). Serotonerjik sisteme dokunmadığı için cinsel disfonksiyon yapmaz. Nikotin çekilme semptomlarını azaltarak sigara bırakma tedavisinde kullanılır.\n- **Mirtazapin:** Presinaptik alfa-2 otoreseptör ve heteroreseptörleri bloke ederek hem noradrenalin hem serotonin salınımını artırır (NASSA). Ayrıca postsinaptik 5-HT2 ve 5-HT3 reseptörlerini bloke eder.\n- **Mirtazapin Yan Etkileri:** Güçlü H1 reseptör blokajı nedeniyle belirgin sedasyon, iştah açılması ve kilo alımı yapar.\n\n> [!IMPORTANT]\n> Bupropion yüksek dozlarda konvülsiyon (nöbet) eşiğini düşürür; bu nedenle epilepsi ve yeme bozukluğu (bulimia/anoreksiya) olan hastalarda kontrendikedir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Presinaptik alfa-2 otoreseptörleri bloke ederek noradrenalin ve serotonin salınımını artıran, belirgin sedasyon ve kilo alımı yapan atipik antidepresan hangisidir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Mirtazapin",
+       "isCorrect": true,
+       "explanation": "Mirtazapin presinaptik alfa-2 adrenerjik otoreseptörleri antagonize ederek monoamin salınımını disinhibe eder. Güçlü H1 blokajıyla sedasyon ve iştah artışı oluşturur."
+      },
+      {
+       "key": "B",
+       "text": "Sertralin",
+       "isCorrect": false,
+       "explanation": "Sertralin presinaptik membranda yer alan SERT taşıyıcısını selektif bloke eden bir SSRI ajanıdır. Alfa-2 otoreseptör antagonizması sergilemez."
+      },
+      {
+       "key": "C",
+       "text": "Duloksetin",
+       "isCorrect": false,
+       "explanation": "Duloksetin hem serotonin hem noradrenalin taşıyıcılarını hedef alan dengeli bir SNRI ajanıdır. Presinaptik otoreseptör blokajı mekanizmasıyla çalışmaz."
+      },
+      {
+       "key": "D",
+       "text": "Moklobemid",
+       "isCorrect": false,
+       "explanation": "Moklobemid MAO-A izoenzimini geri dönüşümlü olarak inhibe eden bir moleküldür. Reseptör antagonizması değil enzim inhibisyonu yoluyla monoaminleri artırır."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Mirtazapin",
+       "isCorrect": true,
+       "explanation": "Mirtazapin presinaptik alfa-2 adrenerjik otoreseptörleri antagonize ederek monoamin salınımını disinhibe eder. Güçlü H1 blokajıyla sedasyon ve iştah artışı oluşturur."
+      },
+      {
+       "key": "B",
+       "text": "Sertralin",
+       "isCorrect": false,
+       "explanation": "Sertralin presinaptik membranda yer alan SERT taşıyıcısını selektif bloke eden bir SSRI ajanıdır. Alfa-2 otoreseptör antagonizması sergilemez."
+      },
+      {
+       "key": "C",
+       "text": "Duloksetin",
+       "isCorrect": false,
+       "explanation": "Duloksetin hem serotonin hem noradrenalin taşıyıcılarını hedef alan dengeli bir SNRI ajanıdır. Presinaptik otoreseptör blokajı mekanizmasıyla çalışmaz."
+      },
+      {
+       "key": "D",
+       "text": "Moklobemid",
+       "isCorrect": false,
+       "explanation": "Moklobemid MAO-A izoenzimini geri dönüşümlü olarak inhibe eden bir moleküldür. Reseptör antagonizması değil enzim inhibisyonu yoluyla monoaminleri artırır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Serotonerjik sisteme dokunmadığı için cinsel disfonksiyon yapmaz. Nikotin çekilme semptomlarını azaltarak sigara bırakma tedavisinde kullanılır.",
+     "maskedTerm": "cinsel disfonksiyon",
+     "hint": "SSRI kullanımında sık görülen fakat bupropionda izlenmeyen istenmeyen yan etki"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Atipik Antidepresanlar",
+     "items": [
+      {
+       "text": "Bupropion sigara bırakma tedavisinde nikotin aşermesini azaltmak için kullanılır.",
+       "isLie": false,
+       "explanation": "Santral dopamin ve noradrenalin aktivitesiyle nikotin yoksunluğunu dindirir."
+      },
+      {
+       "text": "Bupropion epilepsi hastalarında güvenle yüksek dozlarda verilebilir.",
+       "isLie": true,
+       "explanation": "Tuzaktır; nöbet eşiğini düşürdüğü için epilepside kesinlikle kontrendikedir."
+      },
+      {
+       "text": "Mirtazapin antihistaminik etkisi nedeniyle sedasyon ve kilo artışı yapar.",
+       "isLie": false,
+       "explanation": "H1 blokajı mirtazapinin iştah açıcı ve uyutucu etkisinden sorumludur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Bupropionun nöbet eşiği üzerindeki etkisi ve bu nedenle kesinlikle kontrendike olduğu iki klinik durum nedir?",
+     "answer": "Nöbet (konvülsiyon) eşiğini doza bağımlı olarak düşürür; bu nedenle epilepsi öyküsü olan bireylerde ve elektrolit dengesizliğine bağlı nöbet riski taşıyan yeme bozukluklarında (bulimia ve anoreksiya nervoza) kesin kontrendikedir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 11,
+   "title": "Monoamin Oksidaz İnhibitörleri (MAOI)",
+   "bolum": "2.6",
+   "discipline": "Tıbbi Farmakoloji",
+   "pdfSayfalari": [
+    26,
+    26
+   ],
+   "sourcePdf": {
+    "startPage": 26,
+    "endPage": 26,
+    "pdfPath": "kurul2/y25-k2-63-antidepresan-ilaclar.pdf"
+   },
+   "content": "Monoamin oksidaz inhibitörleri (MAOI), mitokondriyal MAO enzimini baskılayarak monoaminlerin intraselüler yıkımını durduran klasik ajanlardır.\n\n- **İzoenzim Dağılımı:** MAO-A başlıca serotonin, noradrenalin ve tiramini; MAO-B ise dopamin ve tiramini yıkar. Bağırsak ve karaciğerde MAO-A baskındır.\n- **Geri Dönüşümsüz Ajanlar:** Fenelzin, iproniazid ve tranilsipromin hem MAO-A hem MAO-B'yi kovalent olarak inaktive eder; etkileri 2-3 hafta sürer.\n- **Geri Dönüşümlü Ajan (RIMA):** Moklobemid MAO-A'yı selektif ve reversibl inhibe eder; tiramin reaksiyonu riski düşüktür.\n- **Peynir Reaksiyonu:** MAO-A inhibe edildiğinde fermente gıdalardaki (eski peynir, şarap) tiramin yıkılamaz; sistemik dolaşıma geçerek sempatik sinir uçlarından masif noradrenalin boşaltır ve ölümcül hipertansif krize yol açar.\n\n> [!IMPORTANT]\n> Serotonin sendromu riskini önlemek için MAOI ile SSRI/SNRI ilaçlar arasında en az 2 haftalık (fluoksetin için 5-6 hafta) arınma (wash-out) süresi bırakılmalıdır.",
+   "synthesisNarrative": "Monoamin oksidaz inhibitörleri (MAOI), mitokondriyal MAO enzimini baskılayarak monoaminlerin intraselüler yıkımını durduran klasik ajanlardır.\n\n- **İzoenzim Dağılımı:** MAO-A başlıca serotonin, noradrenalin ve tiramini; MAO-B ise dopamin ve tiramini yıkar. Bağırsak ve karaciğerde MAO-A baskındır.\n- **Geri Dönüşümsüz Ajanlar:** Fenelzin, iproniazid ve tranilsipromin hem MAO-A hem MAO-B'yi kovalent olarak inaktive eder; etkileri 2-3 hafta sürer.\n- **Geri Dönüşümlü Ajan (RIMA):** Moklobemid MAO-A'yı selektif ve reversibl inhibe eder; tiramin reaksiyonu riski düşüktür.\n- **Peynir Reaksiyonu:** MAO-A inhibe edildiğinde fermente gıdalardaki (eski peynir, şarap) tiramin yıkılamaz; sistemik dolaşıma geçerek sempatik sinir uçlarından masif noradrenalin boşaltır ve ölümcül hipertansif krize yol açar.\n\n> [!IMPORTANT]\n> Serotonin sendromu riskini önlemek için MAOI ile SSRI/SNRI ilaçlar arasında en az 2 haftalık (fluoksetin için 5-6 hafta) arınma (wash-out) süresi bırakılmalıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Klasik non-selektif MAO inhibitörü kullanan bir hastada fermente gıdaların (ör. eski kaşar peyniri) tüketilmesiyle tetiklenen tehlikeli klinik tablo hangisidir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Tiramin hipertansif krizi (peynir reaksiyonu)",
+       "isCorrect": true,
+       "explanation": "Fermente besinlerde bol miktarda tiramin bulunur. MAO enzimi bloke edildiğinde yıkılamayan tiramin dolaşıma girerek sempatik uçlardan masif noradrenalin boşaltır ve krizi tetikler."
+      },
+      {
+       "key": "B",
+       "text": "Akut hipoglisemik koma",
+       "isCorrect": false,
+       "explanation": "Akut hipoglisemi plazma şeker seviyesinin kritik düzeyde düşmesiyle oluşan endokrin tablodur. MAOI ve gıda etkileşimi sempatomimetik fırtına yaratır, glukoz düşüklüğü oluşturmaz."
+      },
+      {
+       "key": "C",
+       "text": "Hepatik ensefalopati",
+       "isCorrect": false,
+       "explanation": "Hepatik ensefalopati son dönem karaciğer yetmezliğinde kanda amonyak birikmesi sonucu gelişen nörolojik bir tablodur. Tiramin aracılı sempatik hipertansiyonla ilişkili değildir."
+      },
+      {
+       "key": "D",
+       "text": "Malign hipertermi",
+       "isCorrect": false,
+       "explanation": "Malign hipertermi inhalasyon anestezikleri maruziyetinde çizgili kas ryanodin reseptör mutasyonu zemininde gelişir. MAO enzim inaktivasyonu ve tiraminle tetiklenmez."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Tiramin hipertansif krizi (peynir reaksiyonu)",
+       "isCorrect": true,
+       "explanation": "Fermente besinlerde bol miktarda tiramin bulunur. MAO enzimi bloke edildiğinde yıkılamayan tiramin dolaşıma girerek sempatik uçlardan masif noradrenalin boşaltır ve krizi tetikler."
+      },
+      {
+       "key": "B",
+       "text": "Akut hipoglisemik koma",
+       "isCorrect": false,
+       "explanation": "Akut hipoglisemi plazma şeker seviyesinin kritik düzeyde düşmesiyle oluşan endokrin tablodur. MAOI ve gıda etkileşimi sempatomimetik fırtına yaratır, glukoz düşüklüğü oluşturmaz."
+      },
+      {
+       "key": "C",
+       "text": "Hepatik ensefalopati",
+       "isCorrect": false,
+       "explanation": "Hepatik ensefalopati son dönem karaciğer yetmezliğinde kanda amonyak birikmesi sonucu gelişen nörolojik bir tablodur. Tiramin aracılı sempatik hipertansiyonla ilişkili değildir."
+      },
+      {
+       "key": "D",
+       "text": "Malign hipertermi",
+       "isCorrect": false,
+       "explanation": "Malign hipertermi inhalasyon anestezikleri maruziyetinde çizgili kas ryanodin reseptör mutasyonu zemininde gelişir. MAO enzim inaktivasyonu ve tiraminle tetiklenmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Moklobemid MAO-A'yı selektif ve reversibl inhibe eder; tiramin reaksiyonu riski düşüktür.",
+     "maskedTerm": "Moklobemid",
+     "hint": "Geri dönüşümlü MAO-A inhibitörü (RIMA) grubu antidepresan molekül"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "MAO İnhibitörleri ve Etkileşimler",
+     "items": [
+      {
+       "text": "Tranilsipromin kovalent bağlarla MAO enzimini inaktive eder.",
+       "isLie": false,
+       "explanation": "Geri dönüşümsüz klasik bir MAOI bileşiğidir."
+      },
+      {
+       "text": "SSRI ile MAOI grubu ilaçlar aynı gün hiçbir bekleme süresi olmadan birbiriyle kombine edilebilir.",
+       "isLie": true,
+       "explanation": "Tuzaktır; ölümcül serotonin sendromuna yol açar, en az 2-5 haftalık arınma süresi şarttır."
+      },
+      {
+       "text": "Moklobemid geri dönüşümlü bir MAO-A inhibitörüdür.",
+       "isLie": false,
+       "explanation": "RIMA sınıfında olup tiramin etkileşimi riski klasik ajanlara kıyasla çok daha düşüktür."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Klasik MAOI tedavisi gören bir hastada peynir reaksiyonunun patofizyolojisi nedir?",
+     "answer": "Bağırsak ve karaciğerdeki MAO-A inhibe edildiği için fermente gıdalardaki tiramin yıkılamaz, sistemik dolaşıma geçerek sempatik sinir uçlarındaki VMAT üzerinden veziküllere girer ve masif noradrenalin salınımına yol açarak ölümcül hipertansif krizi tetikler."
+    }
+   ]
+  },
+  {
+   "slideNumber": 12,
+   "title": "Farmakokinetik Özellikler ve Karaciğer Metabolizması",
+   "bolum": "2.7",
+   "discipline": "Tıbbi Farmakoloji",
+   "pdfSayfalari": [
+    27,
+    37
+   ],
+   "sourcePdf": {
+    "startPage": 27,
+    "endPage": 37,
+    "pdfPath": "kurul2/y25-k2-63-antidepresan-ilaclar.pdf"
+   },
+   "content": "Antidepresan ilaçlar, santral sinir sistemine geçebilmek için yüksek lipofiliklik ve belirgin doku dağılımı sergilerler.\n\n- **Emilim ve Biyoyararlanım:** Oral yoldan iyi emilirler; ancak karaciğerden ilk geçiş eliminasyonuna (first-pass) yoğun biçimde uğrarlar.\n- **Plazma Proteinine Bağlanma:** Plazma albümin ve alfa-1 asit glikoproteinine yüksek oranda (%80-95) bağlanırlar ve geniş dağılım hacmine (Vd) sahiptirler.\n- **Hepatik Metabolizma:** Sitokrom P450 enzimleri (başlıca CYP2D6, CYP3A4, CYP2C19) tarafından oksitlenirler. Genetik polimorfizm plazma düzeylerinde büyük farklar yaratır.\n- **Fluoksetin ve Norfluoksetin:** Fluoksetin karaciğerde demetillenerek aktif metaboliti norfluoksetine dönüşür. Norfluoksetinin yarılanma ömrü 1-2 haftadır; bu nedenle ilacın vücuttan temizlenmesi haftalar sürer.\n\n> [!IMPORTANT]\n> Fluoksetin ve paroksetin güçlü CYP2D6 inhibitörüdür; bu enzimle metabolize olan diğer ilaçların (ör. trisiklikler, beta blokörler) plazma düzeylerini toksik sınırlara yükseltebilirler.",
+   "synthesisNarrative": "Antidepresan ilaçlar, santral sinir sistemine geçebilmek için yüksek lipofiliklik ve belirgin doku dağılımı sergilerler.\n\n- **Emilim ve Biyoyararlanım:** Oral yoldan iyi emilirler; ancak karaciğerden ilk geçiş eliminasyonuna (first-pass) yoğun biçimde uğrarlar.\n- **Plazma Proteinine Bağlanma:** Plazma albümin ve alfa-1 asit glikoproteinine yüksek oranda (%80-95) bağlanırlar ve geniş dağılım hacmine (Vd) sahiptirler.\n- **Hepatik Metabolizma:** Sitokrom P450 enzimleri (başlıca CYP2D6, CYP3A4, CYP2C19) tarafından oksitlenirler. Genetik polimorfizm plazma düzeylerinde büyük farklar yaratır.\n- **Fluoksetin ve Norfluoksetin:** Fluoksetin karaciğerde demetillenerek aktif metaboliti norfluoksetine dönüşür. Norfluoksetinin yarılanma ömrü 1-2 haftadır; bu nedenle ilacın vücuttan temizlenmesi haftalar sürer.\n\n> [!IMPORTANT]\n> Fluoksetin ve paroksetin güçlü CYP2D6 inhibitörüdür; bu enzimle metabolize olan diğer ilaçların (ör. trisiklikler, beta blokörler) plazma düzeylerini toksik sınırlara yükseltebilirler.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Fluoksetinin karaciğer metabolizması sonucu oluşan ve yaklaşık 1-2 haftalık son derece uzun yarılanma ömrüne sahip aktif metaboliti hangisidir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Norfluoksetin",
+       "isCorrect": true,
+       "explanation": "Norfluoksetin fluoksetinin aktif demetilasyon ürünüdür. Yedi ile on beş gün süren yarı ömrüyle vücuttan en geç temizlenen aktif metabolittir."
+      },
+      {
+       "key": "B",
+       "text": "Desipramin",
+       "isCorrect": false,
+       "explanation": "Desipramin klasik trisiklik antidepresan imipraminin demetillenmiş aktif metabolitidir. Fluoksetin molekülünün hepatik dönüşüm zincirinde yer almaz."
+      },
+      {
+       "key": "C",
+       "text": "Nortriptilin",
+       "isCorrect": false,
+       "explanation": "Nortriptilin amitriptilinin karaciğerdeki birincil aktif metabolitidir. Kendisi de bağımsız bir trisiklik antidepresan olarak klinik kullanımda yer alır."
+      },
+      {
+       "key": "D",
+       "text": "Desvenlafaksin",
+       "isCorrect": false,
+       "explanation": "Desvenlafaksin venlafaksinin CYP2D6 aracılı O-demetilasyonu ile sentezlenen aktif metabolittir. SNRI grubunun bağımsız onaylı bir üyesidir."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Norfluoksetin",
+       "isCorrect": true,
+       "explanation": "Norfluoksetin fluoksetinin aktif demetilasyon ürünüdür. Yedi ile on beş gün süren yarı ömrüyle vücuttan en geç temizlenen aktif metabolittir."
+      },
+      {
+       "key": "B",
+       "text": "Desipramin",
+       "isCorrect": false,
+       "explanation": "Desipramin klasik trisiklik antidepresan imipraminin demetillenmiş aktif metabolitidir. Fluoksetin molekülünün hepatik dönüşüm zincirinde yer almaz."
+      },
+      {
+       "key": "C",
+       "text": "Nortriptilin",
+       "isCorrect": false,
+       "explanation": "Nortriptilin amitriptilinin karaciğerdeki birincil aktif metabolitidir. Kendisi de bağımsız bir trisiklik antidepresan olarak klinik kullanımda yer alır."
+      },
+      {
+       "key": "D",
+       "text": "Desvenlafaksin",
+       "isCorrect": false,
+       "explanation": "Desvenlafaksin venlafaksinin CYP2D6 aracılı O-demetilasyonu ile sentezlenen aktif metabolittir. SNRI grubunun bağımsız onaylı bir üyesidir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Fluoksetin karaciğerde demetillenerek aktif metaboliti norfluoksetine dönüşür.",
+     "maskedTerm": "norfluoksetine",
+     "hint": "Fluoksetinin 1-2 hafta yarı ömürlü güçlü aktif metaboliti"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Antidepresanların Farmakokinetiği",
+     "items": [
+      {
+       "text": "Antidepresanlar yüksek oranda plazma proteinlerine bağlanırlar.",
+       "isLie": false,
+       "explanation": "Protein bağlanma oranları genellikle %80-95 aralığındadır."
+      },
+      {
+       "text": "Fluoksetin kesildikten sonra vücuttan birkaç saat içinde tamamen atılır.",
+       "isLie": true,
+       "explanation": "Tuzaktır; aktif metaboliti norfluoksetin nedeniyle eliminasyon haftalar (1-2 ay) sürer."
+      },
+      {
+       "text": "Paroksetin ve fluoksetin karaciğer CYP2D6 enzimini güçlü biçimde inhibe eder.",
+       "isLie": false,
+       "explanation": "CYP2D6 inhibisyonu nedeniyle önemli ilaç etkileşimlerine neden olurlar."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Fluoksetin tedavisinden başka bir antidepresana (özellikle MAOI) geçerken neden en az 5-6 hafta beklenmesi (wash-out) gerekir?",
+     "answer": "Fluoksetinin aktif metaboliti norfluoksetinin 1-2 haftalık çok uzun bir yarılanma ömrüne sahip olması ve vücuttan tamamen temizlenmesinin 5 yarı ömür (yaklaşık 5-6 hafta) sürmesidir; aksi halde ölümcül serotonin sendromu riski doğar."
+    }
+   ]
+  },
+  {
+   "slideNumber": 13,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Antidepresan Hipotezleri ve Temel İlaç Sınıfları",
+   "bolum": "2",
+   "discipline": "Tıbbi Farmakoloji",
+   "isCheckpoint": true,
+   "pdfSayfalari": [
+    16,
+    37
+   ],
+   "sourcePdf": {
+    "startPage": 16,
+    "endPage": 37,
+    "pdfPath": "kurul2/y25-k2-63-antidepresan-ilaclar.pdf"
+   },
+   "content": "Bu bölüme kadar majör depresyon patofizyolojisini, monoamin ve nörotrofik hipotezleri ve başlıca antidepresan sınıflarını inceledik.\n\n- **Patofizyoloji Özeti:** Sinaptik monoamin eksikliği, hipokampal BDNF yetersizliği ve HPA aksındaki hiperkortizolemi temel patolojiyi oluşturur.\n- **Birinci Basamak (SSRI):** SERT seçici inhibisyonu, güvenli aşırı doz profili ve minimal otonom yan etki.\n- **İkili İnhibitörler (SNRI & TCA):** Hem SERT hem NET blokajı; SNRI'lar nöropatik ağrıda etkin ve güvenli iken, TCA'lar muskarinik, histaminik ve alfa blokajı nedeniyle belirgin toksisite riski taşır.\n- **Atipik ve MAOI Ajanlar:** Bupropion (NDRI, cinsel yan etki yok), mirtazapin (alfa-2 blokörü, kilo/sedasyon), MAOI (peynir hipertansif krizi ve arınma süresi zorunluluğu).\n\n> [!NOTE]\n> Bütün antidepresanların klinik etki başlangıcı için en az 2-4 hafta süre gereklidir; ilk günlerdeki sinaptik artış tek başına remisyon sağlamaz.",
+   "synthesisNarrative": "Bu bölüme kadar majör depresyon patofizyolojisini, monoamin ve nörotrofik hipotezleri ve başlıca antidepresan sınıflarını inceledik.\n\n- **Patofizyoloji Özeti:** Sinaptik monoamin eksikliği, hipokampal BDNF yetersizliği ve HPA aksındaki hiperkortizolemi temel patolojiyi oluşturur.\n- **Birinci Basamak (SSRI):** SERT seçici inhibisyonu, güvenli aşırı doz profili ve minimal otonom yan etki.\n- **İkili İnhibitörler (SNRI & TCA):** Hem SERT hem NET blokajı; SNRI'lar nöropatik ağrıda etkin ve güvenli iken, TCA'lar muskarinik, histaminik ve alfa blokajı nedeniyle belirgin toksisite riski taşır.\n- **Atipik ve MAOI Ajanlar:** Bupropion (NDRI, cinsel yan etki yok), mirtazapin (alfa-2 blokörü, kilo/sedasyon), MAOI (peynir hipertansif krizi ve arınma süresi zorunluluğu).\n\n> [!NOTE]\n> Bütün antidepresanların klinik etki başlangıcı için en az 2-4 hafta süre gereklidir; ilk günlerdeki sinaptik artış tek başına remisyon sağlamaz.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdaki ilaç-mekanizma eşleştirmelerinden hangisi tamamen doğrudur?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Mirtazapin - Presinaptik alfa-2 otoreseptör blokajı",
+       "isCorrect": true,
+       "explanation": "Mirtazapin presinaptik alfa-2 otoreseptörlerini antagonize ederek monoamin salınımını artıran atipik bir ajandır. Bu mekanizmayla antidepresan yanıt oluşturur."
+      },
+      {
+       "key": "B",
+       "text": "Fluoksetin - Selektif noradrenalin gerialım blokajı",
+       "isCorrect": false,
+       "explanation": "Fluoksetin presinaptik membranda yer alan SERT taşıyıcısını seçici bloke eden prototip SSRI ajanıdır. NET üzerinde selektif blokaj yapmaz."
+      },
+      {
+       "key": "C",
+       "text": "Venlafaksin - Yalnızca MAO-A enzim inaktivasyonu",
+       "isCorrect": false,
+       "explanation": "Venlafaksin mitokondriyal MAO enzimini etkilemez. Plazma membranındaki SERT ve NET taşıyıcılarını inhibe ederek sinaptik monoaminleri yükseltir."
+      },
+      {
+       "key": "D",
+       "text": "Bupropion - Güçlü serotonin 5-HT2 agonizması",
+       "isCorrect": false,
+       "explanation": "Bupropion santral dopamin ve noradrenalin geri alımını hafifçe inhibe eden bir moleküldür. Serotonerjik reseptörler üzerinde agonist bir etki göstermez."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Mirtazapin - Presinaptik alfa-2 otoreseptör blokajı",
+       "isCorrect": true,
+       "explanation": "Mirtazapin presinaptik alfa-2 otoreseptörlerini antagonize ederek monoamin salınımını artıran atipik bir ajandır. Bu mekanizmayla antidepresan yanıt oluşturur."
+      },
+      {
+       "key": "B",
+       "text": "Fluoksetin - Selektif noradrenalin gerialım blokajı",
+       "isCorrect": false,
+       "explanation": "Fluoksetin presinaptik membranda yer alan SERT taşıyıcısını seçici bloke eden prototip SSRI ajanıdır. NET üzerinde selektif blokaj yapmaz."
+      },
+      {
+       "key": "C",
+       "text": "Venlafaksin - Yalnızca MAO-A enzim inaktivasyonu",
+       "isCorrect": false,
+       "explanation": "Venlafaksin mitokondriyal MAO enzimini etkilemez. Plazma membranındaki SERT ve NET taşıyıcılarını inhibe ederek sinaptik monoaminleri yükseltir."
+      },
+      {
+       "key": "D",
+       "text": "Bupropion - Güçlü serotonin 5-HT2 agonizması",
+       "isCorrect": false,
+       "explanation": "Bupropion santral dopamin ve noradrenalin geri alımını hafifçe inhibe eden bir moleküldür. Serotonerjik reseptörler üzerinde agonist bir etki göstermez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Bupropion (NDRI, cinsel yan etki yok), mirtazapin (alfa-2 blokörü, kilo/sedasyon), MAOI (peynir hipertansif krizi ve arınma süresi zorunluluğu).",
+     "maskedTerm": "cinsel yan etki yok",
+     "hint": "Bupropionun serotonerjik sisteme dokunmaması nedeniyle hastalarda korunan işlev"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Antidepresan Sınıflarının Ayırıcı Özellikleri",
+     "items": [
+      {
+       "text": "TCA'lar antikolinerjik yan etkileri ve kardiyotoksisiteleri nedeniyle birinci basamakta tercih edilmezler.",
+       "isLie": false,
+       "explanation": "Dar terapötik indeks ve otonom yan etkiler TCA kullanımını sınırlar."
+      },
+      {
+       "text": "SSRI grubu ilaçlar aşırı dozda sodyum kanallarını bloke ederek ölümcül geniş QRS taşikardisi yaparlar.",
+       "isLie": true,
+       "explanation": "Tuzaktır; kardiyak sodyum kanal blokajı ve geniş QRS trisiklik antidepresanların (TCA) ölümcül toksisitesidir."
+      },
+      {
+       "text": "Mirtazapin H1 blokajı sayesinde sedasyon ve kilo alımı oluşturur.",
+       "isLie": false,
+       "explanation": "Antihistaminik etki sedasyon ve iştah artışının temel nedenidir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Depresyon tedavisinde kullanılan 4 ana ilaç sınıfının (SSRI, SNRI, TCA, MAOI) temel moleküler hedeflerini özetleyiniz.",
+     "answer": "SSRI: Yalnızca SERT blokajı; SNRI: Hem SERT hem NET blokajı; TCA: SERT ve NET blokajı yanında muskarinik, alfa-1 ve H1 reseptör antagonizması; MAOI: Mitokondriyal MAO-A ve MAO-B enzimlerinin inaktivasyonu."
+    }
+   ]
+  },
+  {
+   "slideNumber": 14,
+   "title": "Transporter ve Reseptör Blokaj Mekanizmaları",
+   "bolum": "3.1",
+   "discipline": "Tıbbi Farmakoloji",
+   "pdfSayfalari": [
+    38,
+    43
+   ],
+   "sourcePdf": {
+    "startPage": 38,
+    "endPage": 43,
+    "pdfPath": "kurul2/y25-k2-63-antidepresan-ilaclar.pdf"
+   },
+   "content": "Antidepresanların primer hedefi, sinaptik kavşaktaki monoamin geri alım taşıyıcıları ve membran reseptörleridir.\n\n- **SERT Moleküler Yapısı:** 12 transmembran heliks içeren glikoproteindir; serotonin ile birlikte sodyum ve klor iyonlarını kotransport eder. SSRI'lar allosterik veya primer bağlanma cebini bloke eder.\n- **NET Taşıyıcısı:** Noradrenalinin presinaptik reuptake'ini yürütür. TCA'lar (özellikle desipramin ve nortriptilin) ile SNRI'lar NET üzerinde güçlü afinite gösterir.\n- **Reseptör Desensitizasyonu:** Kronik monoamin artışı, presinaptik 5-HT1A ve alfa-2 otoreseptörlerini duyarsızlaştırır. Negatif geri bildirimin kalkmasıyla monoamin salınımı katlanarak artar.\n\n> [!NOTE]\n> Reseptör desensitizasyonu ve ardışık hücre içi kaskadların devreye girmesi, tedavideki haftalar süren gecikmenin moleküler açıklamasını sunar.",
+   "synthesisNarrative": "Antidepresanların primer hedefi, sinaptik kavşaktaki monoamin geri alım taşıyıcıları ve membran reseptörleridir.\n\n- **SERT Moleküler Yapısı:** 12 transmembran heliks içeren glikoproteindir; serotonin ile birlikte sodyum ve klor iyonlarını kotransport eder. SSRI'lar allosterik veya primer bağlanma cebini bloke eder.\n- **NET Taşıyıcısı:** Noradrenalinin presinaptik reuptake'ini yürütür. TCA'lar (özellikle desipramin ve nortriptilin) ile SNRI'lar NET üzerinde güçlü afinite gösterir.\n- **Reseptör Desensitizasyonu:** Kronik monoamin artışı, presinaptik 5-HT1A ve alfa-2 otoreseptörlerini duyarsızlaştırır. Negatif geri bildirimin kalkmasıyla monoamin salınımı katlanarak artar.\n\n> [!NOTE]\n> Reseptör desensitizasyonu ve ardışık hücre içi kaskadların devreye girmesi, tedavideki haftalar süren gecikmenin moleküler açıklamasını sunar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kronik antidepresan kullanımında sinaptik monoamin salınımının katlanarak artmasını sağlayan presinaptik adaptasyon hangisidir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Presinaptik inhibitör otoreseptörlerin duyarsızlaşması (desensitizasyon)",
+       "isCorrect": true,
+       "explanation": "Presinaptik otoreseptörler normalde salınımı negatif geri bildirimle sınırlar. Kronik ilaç maruziyetiyle bu reseptörler duyarsızlaşarak monoamin salınımını serbest bırakır."
+      },
+      {
+       "key": "B",
+       "text": "Veziküler monoamin taşıyıcısının parçalanması",
+       "isCorrect": false,
+       "explanation": "Veziküler monoamin taşıyıcısının harabiyeti sitoplazmada amin tükenmesine yol açar. Bu tablo rezerpin benzeri depresif duruma sebep olur."
+      },
+      {
+       "key": "C",
+       "text": "Tirozin hidroksilaz enziminin geri dönüşümsüz inhibisyonu",
+       "isCorrect": false,
+       "explanation": "Tirozin hidroksilaz katekolamin biyosentezinin hız kısıtlayıcı basamağını katalizler. Enzimin baskılanması noradrenalin sentezini düşürür, adaptif artış sağlamaz."
+      },
+      {
+       "key": "D",
+       "text": "Postsinaptik membran sodyum kanallarının kovalent inaktivasyonu",
+       "isCorrect": false,
+       "explanation": "Voltaj duyarlı sodyum kanallarının inaktivasyonu aksiyon potansiyeli yayılımını durdurur. Bu durum toksik bir süreçtir, terapötik adaptasyonla ilgisi yoktur."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Presinaptik inhibitör otoreseptörlerin duyarsızlaşması (desensitizasyon)",
+       "isCorrect": true,
+       "explanation": "Presinaptik otoreseptörler normalde salınımı negatif geri bildirimle sınırlar. Kronik ilaç maruziyetiyle bu reseptörler duyarsızlaşarak monoamin salınımını serbest bırakır."
+      },
+      {
+       "key": "B",
+       "text": "Veziküler monoamin taşıyıcısının parçalanması",
+       "isCorrect": false,
+       "explanation": "Veziküler monoamin taşıyıcısının harabiyeti sitoplazmada amin tükenmesine yol açar. Bu tablo rezerpin benzeri depresif duruma sebep olur."
+      },
+      {
+       "key": "C",
+       "text": "Tirozin hidroksilaz enziminin geri dönüşümsüz inhibisyonu",
+       "isCorrect": false,
+       "explanation": "Tirozin hidroksilaz katekolamin biyosentezinin hız kısıtlayıcı basamağını katalizler. Enzimin baskılanması noradrenalin sentezini düşürür, adaptif artış sağlamaz."
+      },
+      {
+       "key": "D",
+       "text": "Postsinaptik membran sodyum kanallarının kovalent inaktivasyonu",
+       "isCorrect": false,
+       "explanation": "Voltaj duyarlı sodyum kanallarının inaktivasyonu aksiyon potansiyeli yayılımını durdurur. Bu durum toksik bir süreçtir, terapötik adaptasyonla ilgisi yoktur."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "SERT Moleküler Yapısı: 12 transmembran heliks içeren glikoproteindir; serotonin ile birlikte sodyum ve klor iyonlarını kotransport eder.",
+     "maskedTerm": "sodyum ve klor",
+     "hint": "SERT taşıyıcısının serotoninle birlikte hücre içine aldığı ko-transport iyonları"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Taşıyıcı ve Reseptör Mekanizmaları",
+     "items": [
+      {
+       "text": "SERT glikoproteini serotonini sodyum ve klor gradyenti yardımıyla taşır.",
+       "isLie": false,
+       "explanation": "İkincil aktif taşıma mekanizmasıyla sodyum bağımlı kotransport yürütülür."
+      },
+      {
+       "text": "Antidepresanlar presinaptik otoreseptörleri hemen ilk saatte tamamen duyarsızlaştırır.",
+       "isLie": true,
+       "explanation": "Tuzaktır; otoreseptör desensitizasyonu için kronik maruziyet (2-3 hafta) gereklidir."
+      },
+      {
+       "text": "Desipramin NET taşıyıcısı üzerinde son derece seçici afiniteye sahip bir trisiklik türevidir.",
+       "isLie": false,
+       "explanation": "Desipramin en güçlü selektif NET blokörlerinden biridir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Presinaptik otoreseptör desensitizasyonu neden antidepresan etkinin başlamasında kritik bir dönüm noktasıdır?",
+     "answer": "Normalde sinapsta artan serotonin ve noradrenalin presinaptik otoreseptörleri uyararak kendi salınımını negatif geri bildirimle baskılar; kronik ilaç maruziyetiyle bu reseptörler duyarsızlaşıp baskılayıcı etki ortadan kalktığında sinapsa masif ve kesintisiz monoamin salınımı mümkün olur."
+    }
+   ]
+  },
+  {
+   "slideNumber": 15,
+   "title": "Majör Depresyon ve Bipolar Bozuklukta Klinik Kullanım",
+   "bolum": "3.2",
+   "discipline": "Tıbbi Farmakoloji",
+   "pdfSayfalari": [
+    44,
+    45
+   ],
+   "sourcePdf": {
+    "startPage": 44,
+    "endPage": 45,
+    "pdfPath": "kurul2/y25-k2-63-antidepresan-ilaclar.pdf"
+   },
+   "content": "Antidepresan tedavi majör depresif epizodun akut yönetiminde, remisyonun sağlanmasında ve nükslerin önlenmesinde uygulanır.\n\n- **Tedavi Fazları:** Akut fazda amaç semptomların tamamen gerilemesi (remisyon); idame fazında (en az 6-12 ay) ise nükslerin önlenmesidir.\n- **İlaç Değişimi:** İlk seçilen ajana 4-6 hafta içinde yeterli yanıt alınamazsa doz artırılır, başka bir sınıfa geçilir veya güçlendirme (lityum, atipik antipsikotik) stratejisi uygulanır.\n- **Bipolar Bozukluk Riski:** Bipolar depresyon atağında antidepresan monoterapisi kesinlikle önerilmez; hastayı aniden hipomani veya mani atağına (mizaç kayması / switch) sokabilir veya hızlı döngülü paterne dönüştürebilir.\n\n> [!IMPORTANT]\n> Bipolar bozukluğu olan bireylerde antidepresanlar mutlaka lityum veya valproat gibi bir duygudurum dengeleyici (mizaç stabilizatörü) eşliğinde dikkatle verilmelidir.",
+   "synthesisNarrative": "Antidepresan tedavi majör depresif epizodun akut yönetiminde, remisyonun sağlanmasında ve nükslerin önlenmesinde uygulanır.\n\n- **Tedavi Fazları:** Akut fazda amaç semptomların tamamen gerilemesi (remisyon); idame fazında (en az 6-12 ay) ise nükslerin önlenmesidir.\n- **İlaç Değişimi:** İlk seçilen ajana 4-6 hafta içinde yeterli yanıt alınamazsa doz artırılır, başka bir sınıfa geçilir veya güçlendirme (lityum, atipik antipsikotik) stratejisi uygulanır.\n- **Bipolar Bozukluk Riski:** Bipolar depresyon atağında antidepresan monoterapisi kesinlikle önerilmez; hastayı aniden hipomani veya mani atağına (mizaç kayması / switch) sokabilir veya hızlı döngülü paterne dönüştürebilir.\n\n> [!IMPORTANT]\n> Bipolar bozukluğu olan bireylerde antidepresanlar mutlaka lityum veya valproat gibi bir duygudurum dengeleyici (mizaç stabilizatörü) eşliğinde dikkatle verilmelidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Bipolar bozukluk tanılı bir hastada depresif dönemde tek başına (monoterapi olarak) antidepresan verilmesi durumunda ortaya çıkabilecek en tehlikeli klinik risk nedir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Hipomani veya mani atağının tetiklenmesi (mizaç kayması)",
+       "isCorrect": true,
+       "explanation": "Bipolar bozukluk epizotlarında mizaç dengesi oldukça kırılgandır. Tek başına antidepresan kullanımı duygu durumunu aniden aşırı coşkulu manik döneme kaydırabilir."
+      },
+      {
+       "key": "B",
+       "text": "Akut böbrek yetmezliği gelişmesi",
+       "isCorrect": false,
+       "explanation": "Akut böbrek yetmezliği nefrotoksik ajanlara veya prerenal iskemiye bağlı bir nefrolojik hasardır. Antidepresan monoterapisinin tetiklediği primer psikiyatrik tehlike değildir."
+      },
+      {
+       "key": "C",
+       "text": "Kalıcı pansitopeni oluşması",
+       "isCorrect": false,
+       "explanation": "Pansitopeni hematopoetik kemik iliği baskılanmasıyla tüm kan serilerinin azalmasıdır. Sitostatik ilaçlarda görülür, antidepresan mizaç kaymasıyla ilişkisizdir."
+      },
+      {
+       "key": "D",
+       "text": "Akut respiratuvar distres sendromu (ARDS)",
+       "isCorrect": false,
+       "explanation": "Akut respiratuvar distres sendromu yaygın alveolar kapiller membran geçirgenliğinin bozulması tablosudur. Ağır sepsis veya travmada izlenir, mizaç kaymasıyla bağı yoktur."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Hipomani veya mani atağının tetiklenmesi (mizaç kayması)",
+       "isCorrect": true,
+       "explanation": "Bipolar bozukluk epizotlarında mizaç dengesi oldukça kırılgandır. Tek başına antidepresan kullanımı duygu durumunu aniden aşırı coşkulu manik döneme kaydırabilir."
+      },
+      {
+       "key": "B",
+       "text": "Akut böbrek yetmezliği gelişmesi",
+       "isCorrect": false,
+       "explanation": "Akut böbrek yetmezliği nefrotoksik ajanlara veya prerenal iskemiye bağlı bir nefrolojik hasardır. Antidepresan monoterapisinin tetiklediği primer psikiyatrik tehlike değildir."
+      },
+      {
+       "key": "C",
+       "text": "Kalıcı pansitopeni oluşması",
+       "isCorrect": false,
+       "explanation": "Pansitopeni hematopoetik kemik iliği baskılanmasıyla tüm kan serilerinin azalmasıdır. Sitostatik ilaçlarda görülür, antidepresan mizaç kaymasıyla ilişkisizdir."
+      },
+      {
+       "key": "D",
+       "text": "Akut respiratuvar distres sendromu (ARDS)",
+       "isCorrect": false,
+       "explanation": "Akut respiratuvar distres sendromu yaygın alveolar kapiller membran geçirgenliğinin bozulması tablosudur. Ağır sepsis veya travmada izlenir, mizaç kaymasıyla bağı yoktur."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Bipolar depresyon atağında antidepresan monoterapisi kesinlikle önerilmez; hastayı aniden hipomani veya mani atağına (mizaç kayması / switch) sokabilir veya hızlı döngülü paterne dönüştürebilir.",
+     "maskedTerm": "hipomani veya mani",
+     "hint": "Bipolar bozuklukta antidepresan verilince tetiklenebilen aşırı coşkulu mizaç dönemleri"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Depresyon ve Bipolar Bozuklukta Tedavi",
+     "items": [
+      {
+       "text": "Majör depresyon tedavisinde tam remisyon sağlandıktan sonra nüksü önlemek için idame tedavi sürdürülür.",
+       "isLie": false,
+       "explanation": "En az 6-12 aylık idame tedavi nüks riskini anlamlı ölçüde azaltır."
+      },
+      {
+       "text": "Bipolar depresyonda antidepresanlar hiçbir dengeleyici olmadan tek başına güvenle verilir.",
+       "isLie": true,
+       "explanation": "Tuzaktır; manik kaymaya yol açtığı için lityum veya antikonvülzan olmadan monoterapi verilmez."
+      },
+      {
+       "text": "Yetersiz yanıtta atipik antipsikotikler veya lityum güçlendirme amacıyla eklenebilir.",
+       "isLie": false,
+       "explanation": "Dirençli depresyonda güçlendirme (augmentation) kanıta dayalı bir stratejidir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Bipolar bozukluğu olan bir hastada depresif epizot yönetilirken uyulması gereken temel farmakolojik kural nedir?",
+     "answer": "Antidepresanlar asla tek başına (monoterapi) verilmemelidir; manik veya hipomanik kaymayı (switch) ve hızlı döngüyü önlemek için mutlaka lityum veya valproat gibi bir duygudurum dengeleyici ile kombine edilmelidir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 16,
+   "title": "Kronik Ağrı ve Nöropatik Ağrıda Antidepresanlar",
+   "bolum": "3.3",
+   "discipline": "Tıbbi Farmakoloji",
+   "pdfSayfalari": [
+    46,
+    46
+   ],
+   "sourcePdf": {
+    "startPage": 46,
+    "endPage": 46,
+    "pdfPath": "kurul2/y25-k2-63-antidepresan-ilaclar.pdf"
+   },
+   "content": "Antidepresan ilaçlar, depresyondan bağımsız olarak kronik nosiseptif ve nöropatik ağrı durumlarında güçlü analjezik etki oluştururlar.\n\n- **İnen Ağrı Yolakları:** Beyin sapından (periakuaduktal gri cevher ve lokus seruleus) medulla spinalis arka boynuzuna inen serotoninerjik ve noradrenerjik lifler ağrı iletimini presinaptik inhibe eder.\n- **Noradrenalinin Önemi:** Nöropatik ağrıda NET blokajı yapan ajanlar (TCA ve SNRI) selektif SSRI'lara kıyasla çok daha üstün analjezi sağlar; saf serotonin artışı ağrıda yetersiz kalır.\n- **Klinik Endikasyonlar:** Diyabetik periferik nöropatik ağrı, postherpetik nevralji, kronik bel ağrısı ve fibromiyalji sendromunda duloksetin ve amitriptilin kılavuzlarda ilk basamaktadır.\n\n> [!NOTE]\n> Antidepresanların analjezik etkileri mizaç üzerindeki etkilerinden daha erken (birkaç gün-1 hafta içinde) ve genellikle daha düşük dozlarda ortaya çıkar.",
+   "synthesisNarrative": "Antidepresan ilaçlar, depresyondan bağımsız olarak kronik nosiseptif ve nöropatik ağrı durumlarında güçlü analjezik etki oluştururlar.\n\n- **İnen Ağrı Yolakları:** Beyin sapından (periakuaduktal gri cevher ve lokus seruleus) medulla spinalis arka boynuzuna inen serotoninerjik ve noradrenerjik lifler ağrı iletimini presinaptik inhibe eder.\n- **Noradrenalinin Önemi:** Nöropatik ağrıda NET blokajı yapan ajanlar (TCA ve SNRI) selektif SSRI'lara kıyasla çok daha üstün analjezi sağlar; saf serotonin artışı ağrıda yetersiz kalır.\n- **Klinik Endikasyonlar:** Diyabetik periferik nöropatik ağrı, postherpetik nevralji, kronik bel ağrısı ve fibromiyalji sendromunda duloksetin ve amitriptilin kılavuzlarda ilk basamaktadır.\n\n> [!NOTE]\n> Antidepresanların analjezik etkileri mizaç üzerindeki etkilerinden daha erken (birkaç gün-1 hafta içinde) ve genellikle daha düşük dozlarda ortaya çıkar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kronik nöropatik ağrıda TCA ve SNRI sınıfı ilaçların selektif SSRI'lara göre çok daha belirgin analjezik etkinlik göstermesinin temel nedeni nedir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "İnen inhibitör yolaklarda noradrenalin düzeyini (NET blokajıyla) artırmaları",
+       "isCorrect": true,
+       "explanation": "Spinal arka boynuza inen analjezik yolaklarda noradrenalin primer nosiseptif iletimi baskılar. Bu nedenle NET blokörleri nöropatik ağrıda çok üstün analjezi sağlar."
+      },
+      {
+       "key": "B",
+       "text": "Dopamin D2 reseptörlerini bloke ederek sedasyon yapmaları",
+       "isCorrect": false,
+       "explanation": "Dopamin D2 blokajı tipik antipsikotik ilaçların ekstrapiramidal etkilerini izah eder. Medulla spinalisteki inen nosiseptif inhibitör yolak modülasyonuyla ilgisi yoktur."
+      },
+      {
+       "key": "C",
+       "text": "GABA yıkımını geri dönüşümsüz olarak durdurmaları",
+       "isCorrect": false,
+       "explanation": "GABA transaminaz enziminin geri dönüşümsüz inhibisyonu antiepileptik vigabatrinin etki yoludur. Antidepresanların spinal analjezik etkisiyle bu mekanizma örtüşmez."
+      },
+      {
+       "key": "D",
+       "text": "Prostaglandin sentezini siklooksijenaz üzerinden baskılamaları",
+       "isCorrect": false,
+       "explanation": "Siklooksijenaz inhibisyonu periferik nonsteroid antiinflamatuvar ilaçların klasik mekanizmasıdır. Antidepresan moleküller prostaglandin sentezi yerine inen noradrenerjik yolakları aktive ederek analjezi oluştururlar."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "İnen inhibitör yolaklarda noradrenalin düzeyini (NET blokajıyla) artırmaları",
+       "isCorrect": true,
+       "explanation": "Spinal arka boynuza inen analjezik yolaklarda noradrenalin primer nosiseptif iletimi baskılar. Bu nedenle NET blokörleri nöropatik ağrıda çok üstün analjezi sağlar."
+      },
+      {
+       "key": "B",
+       "text": "Dopamin D2 reseptörlerini bloke ederek sedasyon yapmaları",
+       "isCorrect": false,
+       "explanation": "Dopamin D2 blokajı tipik antipsikotik ilaçların ekstrapiramidal etkilerini izah eder. Medulla spinalisteki inen nosiseptif inhibitör yolak modülasyonuyla ilgisi yoktur."
+      },
+      {
+       "key": "C",
+       "text": "GABA yıkımını geri dönüşümsüz olarak durdurmaları",
+       "isCorrect": false,
+       "explanation": "GABA transaminaz enziminin geri dönüşümsüz inhibisyonu antiepileptik vigabatrinin etki yoludur. Antidepresanların spinal analjezik etkisiyle bu mekanizma örtüşmez."
+      },
+      {
+       "key": "D",
+       "text": "Prostaglandin sentezini siklooksijenaz üzerinden baskılamaları",
+       "isCorrect": false,
+       "explanation": "Siklooksijenaz inhibisyonu periferik nonsteroid antiinflamatuvar ilaçların klasik mekanizmasıdır. Antidepresan moleküller prostaglandin sentezi yerine inen noradrenerjik yolakları aktive ederek analjezi oluştururlar."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Diyabetik periferik nöropatik ağrı, postherpetik nevralji, kronik bel ağrısı ve fibromiyalji sendromunda duloksetin ve amitriptilin kılavuzlarda ilk basamaktadır.",
+     "maskedTerm": "fibromiyalji",
+     "hint": "Yaygın kas-iskelet ağrısı ve yorgunlukla karakterize kronik santral duyarlılaşma sendromu"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Antidepresanlar ve Kronik Ağrı",
+     "items": [
+      {
+       "text": "Amitriptilin ve duloksetin nöropatik ağrı tedavisinde etkin ajanlardır.",
+       "isLie": false,
+       "explanation": "İnen inhibitör yolakları noradrenalin üzerinden güçlendirirler."
+      },
+      {
+       "text": "Saf SSRI ilaçlar nöropatik ağrıda SNRI'lardan belirgin derecede daha üstün analjezi sağlar.",
+       "isLie": true,
+       "explanation": "Tuzaktır; nöropatik ağrıda noradrenerjik komponent şarttır, saf SSRI'lar zayıf kalır."
+      },
+      {
+       "text": "Antidepresanların analjezik etkisi genellikle antidepresan etkiye göre daha düşük dozlarda başlar.",
+       "isLie": false,
+       "explanation": "Analjezik doz eşiği mizaç dozuna kıyasla daha düşüktür."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Antidepresanların kronik ağrıdaki analjezik etki hızı ve dozajı ile depresyondaki klinik yanıtı arasındaki iki temel fark nedir?",
+     "answer": "Analjezik etki mizaç etkisine göre çok daha erken (günler içinde) başlar ve genellikle depresyon tedavisinde gereken terapötik dozların daha altındaki düşük dozlarda elde edilir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 17,
+   "title": "Özel Klinik Endikasyonlar (Enürezis, Bulimia, Sigara)",
+   "bolum": "3.4",
+   "discipline": "Tıbbi Farmakoloji",
+   "pdfSayfalari": [
+    47,
+    47
+   ],
+   "sourcePdf": {
+    "startPage": 47,
+    "endPage": 47,
+    "pdfPath": "kurul2/y25-k2-63-antidepresan-ilaclar.pdf"
+   },
+   "content": "Bazı antidepresan ajanlar, sahip oldukları özgün farmakodinamik nitelikler sayesinde psikiyatri dışı veya özgül tablolarda tercih edilir.\n\n- **Çocukluk Çağı Enürezis Nokturna:** İmipramin, mesane detrüsör kasını gevşeten antikolinerjik etkisi ve uykunun derin evrelerini hafifletici etkisiyle gece idrar kaçırmada kullanılır.\n- **Stres Üriner İnkontinans:** Duloksetin, sakral omurilikte Onuf çekirdeğini noradrenerjik ve serotoninerjik yolla uyararak eksternal üretral sfinkter tonusunu artırır ve kadınlarda stres inkontinansta endikedir.\n- **Bulimia Nervoza:** Fluoksetin, tıkınırcasına yeme ve kusma ataklarını azaltmada yüksek dozda FDA onaylı tek antidepresandır.\n- **Sigara Bırakma:** Bupropion, dopamin ve noradrenalin iletimini artırarak yoksunluk aşermesini engeller.\n\n> [!IMPORTANT]\n> İmipramin enürezis nokturnada aşırı doz kardiyotoksisite riski nedeniyle son derece dikkatli ve kilitli kutularda saklanarak reçete edilmelidir.",
+   "synthesisNarrative": "Bazı antidepresan ajanlar, sahip oldukları özgün farmakodinamik nitelikler sayesinde psikiyatri dışı veya özgül tablolarda tercih edilir.\n\n- **Çocukluk Çağı Enürezis Nokturna:** İmipramin, mesane detrüsör kasını gevşeten antikolinerjik etkisi ve uykunun derin evrelerini hafifletici etkisiyle gece idrar kaçırmada kullanılır.\n- **Stres Üriner İnkontinans:** Duloksetin, sakral omurilikte Onuf çekirdeğini noradrenerjik ve serotoninerjik yolla uyararak eksternal üretral sfinkter tonusunu artırır ve kadınlarda stres inkontinansta endikedir.\n- **Bulimia Nervoza:** Fluoksetin, tıkınırcasına yeme ve kusma ataklarını azaltmada yüksek dozda FDA onaylı tek antidepresandır.\n- **Sigara Bırakma:** Bupropion, dopamin ve noradrenalin iletimini artırarak yoksunluk aşermesini engeller.\n\n> [!IMPORTANT]\n> İmipramin enürezis nokturnada aşırı doz kardiyotoksisite riski nedeniyle son derece dikkatli ve kilitli kutularda saklanarak reçete edilmelidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Çocukluk çağında gece yatak ıslatma (enürezis nokturna) tedavisinde mesane detrüsörünü gevşetici etkisiyle kullanılan klasik trisiklik antidepresan hangisidir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "İmipramin",
+       "isCorrect": true,
+       "explanation": "İmipramin muskarinik reseptörleri bloke ederek mesane detrüsör kasını gevşetir. Ek olarak uyku uyanma eşiğini düzenleyerek gece yatak ıslatmayı belirgin şekilde azaltır."
+      },
+      {
+       "key": "B",
+       "text": "Paroksetin",
+       "isCorrect": false,
+       "explanation": "Paroksetin serotonin taşıyıcısını selektif bloke eden bir SSRI türevidir. Mesane düz kas tonusunu gevşetici belirgin antikolinerjik pediatrik endikasyonu bulunmaz."
+      },
+      {
+       "key": "C",
+       "text": "Bupropion",
+       "isCorrect": false,
+       "explanation": "Bupropion dopamin ve noradrenalin geri alımını hafifçe inhibe eden bir moleküldür. Mesane detrüsör kası üzerinde gevşetici parasempatolitik etki sergilemez."
+      },
+      {
+       "key": "D",
+       "text": "Trazodon",
+       "isCorrect": false,
+       "explanation": "Trazodon 5-HT2 reseptör blokajı ve sedatif profili olan bir antidepresandır. Çocuklarda gece idrar kaçırma tedavisinde rutin olarak tercih edilmez."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "İmipramin",
+       "isCorrect": true,
+       "explanation": "İmipramin muskarinik reseptörleri bloke ederek mesane detrüsör kasını gevşetir. Ek olarak uyku uyanma eşiğini düzenleyerek gece yatak ıslatmayı belirgin şekilde azaltır."
+      },
+      {
+       "key": "B",
+       "text": "Paroksetin",
+       "isCorrect": false,
+       "explanation": "Paroksetin serotonin taşıyıcısını selektif bloke eden bir SSRI türevidir. Mesane düz kas tonusunu gevşetici belirgin antikolinerjik pediatrik endikasyonu bulunmaz."
+      },
+      {
+       "key": "C",
+       "text": "Bupropion",
+       "isCorrect": false,
+       "explanation": "Bupropion dopamin ve noradrenalin geri alımını hafifçe inhibe eden bir moleküldür. Mesane detrüsör kası üzerinde gevşetici parasempatolitik etki sergilemez."
+      },
+      {
+       "key": "D",
+       "text": "Trazodon",
+       "isCorrect": false,
+       "explanation": "Trazodon 5-HT2 reseptör blokajı ve sedatif profili olan bir antidepresandır. Çocuklarda gece idrar kaçırma tedavisinde rutin olarak tercih edilmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Duloksetin, sakral omurilikte Onuf çekirdeğini noradrenerjik ve serotoninerjik yolla uyararak eksternal üretral sfinkter tonusunu artırır ve kadınlarda stres inkontinansta endikedir.",
+     "maskedTerm": "stres inkontinansta",
+     "hint": "Öksürme veya hapşırma gibi karın içi basınç artışıyla idrar kaçırma durumu"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Özel Antidepresan Endikasyonları",
+     "items": [
+      {
+       "text": "Duloksetin stres üriner inkontinans tedavisinde sfinkter tonusunu artırmak için kullanılır.",
+       "isLie": false,
+       "explanation": "Onuf çekirdeği uyarımıyla eksternal sfinkteri kasar."
+      },
+      {
+       "text": "Fluoksetin bulimia nervoza yeme bozukluğunda FDA onaylıdır.",
+       "isLie": false,
+       "explanation": "Tıkınırcasına yeme ve kusma epizotlarını anlamlı azaltır."
+      },
+      {
+       "text": "Bupropion mesane sfinkterini felç ederek anüri tedavisinde kullanılır.",
+       "isLie": true,
+       "explanation": "Tuzaktır; bupropion mesane ilacı değildir, sigara bırakmada kullanılır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "İmipraminin enürezis nokturnada ve duloksetinin stres üriner inkontinanstaki ürolojik etki mekanizmaları nelerdir?",
+     "answer": "İmipramin antikolinerjik etkisiyle mesane detrüsör kasını gevşetir ve uyanma eşiğini düzenler; duloksetin ise sakral Onuf çekirdeğindeki motor nöronları uyararak eksternal üretral sfinkter tonusunu artırır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 18,
+   "title": "Dozlama İlkeleri, Merdiven Kuralı ve İntihar Riski",
+   "bolum": "3.5",
+   "discipline": "Tıbbi Farmakoloji",
+   "pdfSayfalari": [
+    48,
+    49
+   ],
+   "sourcePdf": {
+    "startPage": 48,
+    "endPage": 49,
+    "pdfPath": "kurul2/y25-k2-63-antidepresan-ilaclar.pdf"
+   },
+   "content": "Antidepresan ilaçların reçetelenmesi ve kesilmesi sıkı farmakoterapötik kurallara tabidir.\n\n- **15 Gün Kuralı:** Antidepresan tedavinin etkinliği ilaca başlandıktan en az 15 gün (2-4 hafta) sonra değerlendirilebilir; erken dönemde ilaç etkisiz diye kesilmemelidir.\n- **Merdiven Kuralı (Titrasyon):** İlaçlar başlangıçta düşük dozla başlanır ve basamak basamak artırılır. Tedavi sonlandırılırken de yoksunluk sendromunu (baş dönmesi, elektrik çarpması hissi, ajitasyon) önlemek için haftalar içinde merdiven usulü azaltılarak kesilir.\n- **25 Yaş Altı Kara Kutu Uyarısı:** Bütün antidepresanlar, çocuklarda, ergenlerde ve 25 yaş altındaki genç erişkinlerde tedavinin ilk haftalarında paradoksal olarak intihar düşünce ve eğilimini artırabilir.\n\n> [!IMPORTANT]\n> İlacın enerjiyi mizaçtan daha önce düzeltmesi intihar eylemine geçişi kolaylaştırabilir; bu nedenle genç hastalar tedavinin ilk ayında haftalık yakın izleme alınmalıdır.",
+   "synthesisNarrative": "Antidepresan ilaçların reçetelenmesi ve kesilmesi sıkı farmakoterapötik kurallara tabidir.\n\n- **15 Gün Kuralı:** Antidepresan tedavinin etkinliği ilaca başlandıktan en az 15 gün (2-4 hafta) sonra değerlendirilebilir; erken dönemde ilaç etkisiz diye kesilmemelidir.\n- **Merdiven Kuralı (Titrasyon):** İlaçlar başlangıçta düşük dozla başlanır ve basamak basamak artırılır. Tedavi sonlandırılırken de yoksunluk sendromunu (baş dönmesi, elektrik çarpması hissi, ajitasyon) önlemek için haftalar içinde merdiven usulü azaltılarak kesilir.\n- **25 Yaş Altı Kara Kutu Uyarısı:** Bütün antidepresanlar, çocuklarda, ergenlerde ve 25 yaş altındaki genç erişkinlerde tedavinin ilk haftalarında paradoksal olarak intihar düşünce ve eğilimini artırabilir.\n\n> [!IMPORTANT]\n> İlacın enerjiyi mizaçtan daha önce düzeltmesi intihar eylemine geçişi kolaylaştırabilir; bu nedenle genç hastalar tedavinin ilk ayında haftalık yakın izleme alınmalıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Bütün antidepresan sınıflarının prospektüsünde yer alan ve özellikle 25 yaş altı gençlerde tedavinin ilk haftalarında yakın izlem gerektiren kritik kara kutu uyarısı hangisidir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Paradoksal intihar düşünce ve eğiliminde artış riski",
+       "isCorrect": true,
+       "explanation": "Antidepresanlar psikomotor enerjiyi çökkün mizaçtan daha erken düzeltirler. Bu uyumsuzluk genç bireylerde erken dönemde intihar eylemine geçiş riskini artırır."
+      },
+      {
+       "key": "B",
+       "text": "Akut fulminan pankreatit gelişme riski",
+       "isCorrect": false,
+       "explanation": "Pankreatit safra yolu taşları veya aşırı alkol alımı zemininde gelişen akut abdominal inflamasyondur. Antidepresanların resmi sınıf kara kutu uyarısı değildir."
+      },
+      {
+       "key": "C",
+       "text": "Geri dönüşümsüz optik nöropati riski",
+       "isCorrect": false,
+       "explanation": "Optik sinir hasarı tüberküloz ilacı etambutol veya metanol zehirlenmesinde karakteristik bir bulgudur. Antidepresanların gençlerdeki majör uyarısını oluşturmaz."
+      },
+      {
+       "key": "D",
+       "text": "Aplastik kemik iliği nekrozu riski",
+       "isCorrect": false,
+       "explanation": "Aplastik anemi kloramfenikol ve sitotoksik kemoterapi protokollerinde korkulan miyelotoksik bir tablodur. Antidepresan sınıf uyarısı içinde yer almaz."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Paradoksal intihar düşünce ve eğiliminde artış riski",
+       "isCorrect": true,
+       "explanation": "Antidepresanlar psikomotor enerjiyi çökkün mizaçtan daha erken düzeltirler. Bu uyumsuzluk genç bireylerde erken dönemde intihar eylemine geçiş riskini artırır."
+      },
+      {
+       "key": "B",
+       "text": "Akut fulminan pankreatit gelişme riski",
+       "isCorrect": false,
+       "explanation": "Pankreatit safra yolu taşları veya aşırı alkol alımı zemininde gelişen akut abdominal inflamasyondur. Antidepresanların resmi sınıf kara kutu uyarısı değildir."
+      },
+      {
+       "key": "C",
+       "text": "Geri dönüşümsüz optik nöropati riski",
+       "isCorrect": false,
+       "explanation": "Optik sinir hasarı tüberküloz ilacı etambutol veya metanol zehirlenmesinde karakteristik bir bulgudur. Antidepresanların gençlerdeki majör uyarısını oluşturmaz."
+      },
+      {
+       "key": "D",
+       "text": "Aplastik kemik iliği nekrozu riski",
+       "isCorrect": false,
+       "explanation": "Aplastik anemi kloramfenikol ve sitotoksik kemoterapi protokollerinde korkulan miyelotoksik bir tablodur. Antidepresan sınıf uyarısı içinde yer almaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Antidepresan tedavinin etkinliği ilaca başlandıktan en az 15 gün (2-4 hafta) sonra değerlendirilebilir; erken dönemde ilaç etkisiz diye kesilmemelidir.",
+     "maskedTerm": "en az 15 gün",
+     "hint": "Bir antidepresanın klinik yanıtını değerlendirmek için gereken asgari süre"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Dozlama ve Güvenlik İlkeleri",
+     "items": [
+      {
+       "text": "Antidepresan etkinliğini değerlendirmek için tedaviye en az 15 gün şans tanınmalıdır.",
+       "isLie": false,
+       "explanation": "Klinik remisyon yanıtı 2-4 haftadan önce değerlendirilemez."
+      },
+      {
+       "text": "Antidepresan ilaçlar hiçbir titrasyon yapılmadan birdenbire aniden kesilmelidir.",
+       "isLie": true,
+       "explanation": "Tuzaktır; ani kesilme şiddetli yoksunluk semptomları yapar, merdiven usulü azaltılarak kesilmelidir."
+      },
+      {
+       "text": "25 yaş altındaki bireylerde ilk haftalarda intihar eğilimi yakından izlenmelidir.",
+       "isLie": false,
+       "explanation": "FDA kara kutu uyarısı gereği haftalık yakın klinik takip şarttır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Antidepresan tedavisinde merdiven kuralı (doz titrasyonu) neden hem başlarken hem keserken uygulanır?",
+     "answer": "Başlarken otonomik ve gastrointestinal akut yan etkileri tolere edebilmek için basamaklı artırılır; sonlandırırken ise santral adaptasyonun bozulmasına bağlı elektrik çarpması hissi, baş dönmesi, anksiyete ve ajitasyonla seyreden yoksunluk sendromunu önlemek için basamaklı azaltılır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 19,
+   "title": "Antikolinerjik Yan Etkiler ve İlaç Toksisitesi",
+   "bolum": "3.6",
+   "discipline": "Tıbbi Farmakoloji",
+   "pdfSayfalari": [
+    50,
+    51
+   ],
+   "sourcePdf": {
+    "startPage": 50,
+    "endPage": 51,
+    "pdfPath": "kurul2/y25-k2-63-antidepresan-ilaclar.pdf"
+   },
+   "content": "Antidepresan zehirlenmelerinde klinik tablo ilacın sınıfına ve reseptör profilinin toksisitesine göre değişir.\n\n- **TCA Zehirlenmesi (3C Tablosu):** Trisiklik aşırı dozunda ölüm üç temel patolojiden kaynaklanır: Koma (santral depresyon), Konvülsiyon (nöbet eşiğinin düşmesi) ve Kardiyotoksisite (geniş QRS aritmileri).\n- **Kardiyotoksisite Mekanizması:** Miyokartta voltaj bağımlı hızlı sodyum kanallarını bloke ederek QRS süresini uzatırlar; torsades de pointes ve ventriküler fibrilasyon yaparlar. Tedavide intravenöz sodyum bikarbonat hayat kurtarıcıdır.\n- **Antikolinerjik Kriz:** Midriyazis, hipertermi, kuru ve kırmızı cilt, bağırsak seslerinde durma ve idrar retansiyonu ile seyreder; dar açılı glokomu olanlarda akut krizi tetikler.\n- **Serotonin Sendromu:** SSRI veya MAOI kombinasyonlarında aşırı serotonin uyarımı sonucu gelişen hipertermi, miyoklonus, kas rijidesi, hiperrefleksi ve otonomik instabilite tablosudur.\n\n> [!IMPORTANT]\n> TCA aşırı dozunda kardiyak arresti önlemek için QRS genişlemesi saptandığı anda acilen intravenöz sodyum bikarbonat infüzyonuna başlanmalıdır.",
+   "synthesisNarrative": "Antidepresan zehirlenmelerinde klinik tablo ilacın sınıfına ve reseptör profilinin toksisitesine göre değişir.\n\n- **TCA Zehirlenmesi (3C Tablosu):** Trisiklik aşırı dozunda ölüm üç temel patolojiden kaynaklanır: Koma (santral depresyon), Konvülsiyon (nöbet eşiğinin düşmesi) ve Kardiyotoksisite (geniş QRS aritmileri).\n- **Kardiyotoksisite Mekanizması:** Miyokartta voltaj bağımlı hızlı sodyum kanallarını bloke ederek QRS süresini uzatırlar; torsades de pointes ve ventriküler fibrilasyon yaparlar. Tedavide intravenöz sodyum bikarbonat hayat kurtarıcıdır.\n- **Antikolinerjik Kriz:** Midriyazis, hipertermi, kuru ve kırmızı cilt, bağırsak seslerinde durma ve idrar retansiyonu ile seyreder; dar açılı glokomu olanlarda akut krizi tetikler.\n- **Serotonin Sendromu:** SSRI veya MAOI kombinasyonlarında aşırı serotonin uyarımı sonucu gelişen hipertermi, miyoklonus, kas rijidesi, hiperrefleksi ve otonomik instabilite tablosudur.\n\n> [!IMPORTANT]\n> TCA aşırı dozunda kardiyak arresti önlemek için QRS genişlemesi saptandığı anda acilen intravenöz sodyum bikarbonat infüzyonuna başlanmalıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Trisiklik antidepresan (TCA) zehirlenmesinde sodyum kanallarının bloke edilmesine bağlı gelişen geniş QRS aritmilerinin tedavisinde hayat kurtarıcı acil antidot hangisidir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "İntravenöz sodyum bikarbonat",
+       "isCorrect": true,
+       "explanation": "Sodyum bikarbonat kan pH değerini yükselterek ilacın reseptöre afinitesini azaltır. Yüksek sodyum yükü kardiyak kanallardan trisiklik molekülü yarışmalı ayrıştırır."
+      },
+      {
+       "key": "B",
+       "text": "Flumazenil infüzyonu",
+       "isCorrect": false,
+       "explanation": "Flumazenil santral benzodiazepin reseptörlerinin spesifik kompetitif antagonistidir. Trisiklik zehirlenmesinde nöbet eşiğini düşürerek status epileptikusa yol açabilir."
+      },
+      {
+       "key": "C",
+       "text": "Nalokson hidroklorür",
+       "isCorrect": false,
+       "explanation": "Nalokson saf bir opioid reseptör blokörüdür. Morfin benzeri narkotik intoksikasyonlarda solunumu düzeltir, trisiklik kardiyotoksisitesinde etkisi bulunmaz."
+      },
+      {
+       "key": "D",
+       "text": "Atropin sülfat",
+       "isCorrect": false,
+       "explanation": "Atropin postgangliyonik muskarinik reseptörleri bloke eden parasempatolitik bir ajandır. Zaten antikolinerjik krizdeki hastaya verilmesi taşikardi ve hipertermiyi ağırlaştırır."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "İntravenöz sodyum bikarbonat",
+       "isCorrect": true,
+       "explanation": "Sodyum bikarbonat kan pH değerini yükselterek ilacın reseptöre afinitesini azaltır. Yüksek sodyum yükü kardiyak kanallardan trisiklik molekülü yarışmalı ayrıştırır."
+      },
+      {
+       "key": "B",
+       "text": "Flumazenil infüzyonu",
+       "isCorrect": false,
+       "explanation": "Flumazenil santral benzodiazepin reseptörlerinin spesifik kompetitif antagonistidir. Trisiklik zehirlenmesinde nöbet eşiğini düşürerek status epileptikusa yol açabilir."
+      },
+      {
+       "key": "C",
+       "text": "Nalokson hidroklorür",
+       "isCorrect": false,
+       "explanation": "Nalokson saf bir opioid reseptör blokörüdür. Morfin benzeri narkotik intoksikasyonlarda solunumu düzeltir, trisiklik kardiyotoksisitesinde etkisi bulunmaz."
+      },
+      {
+       "key": "D",
+       "text": "Atropin sülfat",
+       "isCorrect": false,
+       "explanation": "Atropin postgangliyonik muskarinik reseptörleri bloke eden parasempatolitik bir ajandır. Zaten antikolinerjik krizdeki hastaya verilmesi taşikardi ve hipertermiyi ağırlaştırır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Miyokartta voltaj bağımlı hızlı sodyum kanallarını bloke ederek QRS süresini uzatırlar; torsades de pointes ve ventriküler fibrilasyon yaparlar.",
+     "maskedTerm": "hızlı sodyum kanallarını",
+     "hint": "Miyokartta faz sıfır depolarizasyonunu yürüten voltaj kapılı iyon yapıları"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Antidepresan Toksisitesi ve Zehirlenme",
+     "items": [
+      {
+       "text": "TCA zehirlenmesinde EKG'de QRS kompleksinde genişleme kardiyotoksisitenin en önemli göstergesidir.",
+       "isLie": false,
+       "explanation": "Miyokardiyal sodyum kanal blokajı QRS genişlemesi yapar."
+      },
+      {
+       "text": "TCA zehirlenmesinde geniş QRS varlığında ilk tercih edilecek antidot atropindir.",
+       "isLie": true,
+       "explanation": "Tuzaktır; antidot intravenöz sodyum bikarbonattır, atropin antikolinerjik tabloyu daha da ölümcül yapar."
+      },
+      {
+       "text": "Serotonin sendromunda klonus, hiperrefleksi ve otonomik instabilite görülür.",
+       "isLie": false,
+       "explanation": "Aşırı serotonerjik aktivitenin patognomonik nöromusküler bulgularıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Trisiklik antidepresan zehirlenmesindeki '3C kuralı' nedir ve intravenöz sodyum bikarbonatın kardiyoprotektif etki mekanizması nasıldır?",
+     "answer": "3C kuralı: Koma (santral sinir sistemi depresyonu), Konvülsiyon (nöbetler) ve Kardiyotoksisite (geniş QRS aritmileri). İntravenöz sodyum bikarbonat kan pH'sını alkalileştirerek ilacın sodyum kanalına afinitesini azaltır ve yüksek sodyum konsantrasyonuyla kanal blokajını yarışmalı olarak kırar."
+    }
+   ]
+  },
+  {
+   "slideNumber": 20,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Moleküler Mekanizmalar, Klinik Endikasyonlar ve Toksisite",
+   "bolum": "3",
+   "discipline": "Tıbbi Farmakoloji",
+   "isCheckpoint": true,
+   "pdfSayfalari": [
+    38,
+    51
+   ],
+   "sourcePdf": {
+    "startPage": 38,
+    "endPage": 51,
+    "pdfPath": "kurul2/y25-k2-63-antidepresan-ilaclar.pdf"
+   },
+   "content": "Bu bölümde antidepresanların transporter düzeyindeki etki mekanizmalarını, özel klinik endikasyonlarını, dozlama kurallarını ve toksisitelerini ele aldık.\n\n- **Reseptör Desensitizasyonu:** Presinaptik 5-HT1A ve alfa-2 otoreseptörlerin haftalar içinde duyarsızlaşması, klinik etkinin gecikmesini açıklar.\n- **Klinik Endikasyon Çeşitliliği:** Nöropatik ağrıda duloksetin ve amitriptilin; çocukluk çağı enürezisinde imipramin; stres inkontinansta duloksetin; bulimiada fluoksetin; sigara bırakmada bupropion.\n- **Dozlama ve İntihar:** 15 gün geçmeden ilaç değiştirilmez; kesilirken merdiven usulü azaltılır; 25 yaş altında paradoksal intihar riski yakından izlenir.\n- **Toksisite Yönetimi:** TCA zehirlenmesinde 3C tablosu (Koma, Konvülsiyon, Kardiyotoksisite); geniş QRS tedavisinde intravenöz sodyum bikarbonat esastır.\n\n> [!IMPORTANT]\n> Bipolar depresyonda antidepresan monoterapisinin tetiklediği mani atağı riski ve MAOI kombinasyonlarındaki serotonin sendromu acil klinik durumlardır.",
+   "synthesisNarrative": "Bu bölümde antidepresanların transporter düzeyindeki etki mekanizmalarını, özel klinik endikasyonlarını, dozlama kurallarını ve toksisitelerini ele aldık.\n\n- **Reseptör Desensitizasyonu:** Presinaptik 5-HT1A ve alfa-2 otoreseptörlerin haftalar içinde duyarsızlaşması, klinik etkinin gecikmesini açıklar.\n- **Klinik Endikasyon Çeşitliliği:** Nöropatik ağrıda duloksetin ve amitriptilin; çocukluk çağı enürezisinde imipramin; stres inkontinansta duloksetin; bulimiada fluoksetin; sigara bırakmada bupropion.\n- **Dozlama ve İntihar:** 15 gün geçmeden ilaç değiştirilmez; kesilirken merdiven usulü azaltılır; 25 yaş altında paradoksal intihar riski yakından izlenir.\n- **Toksisite Yönetimi:** TCA zehirlenmesinde 3C tablosu (Koma, Konvülsiyon, Kardiyotoksisite); geniş QRS tedavisinde intravenöz sodyum bikarbonat esastır.\n\n> [!IMPORTANT]\n> Bipolar depresyonda antidepresan monoterapisinin tetiklediği mani atağı riski ve MAOI kombinasyonlarındaki serotonin sendromu acil klinik durumlardır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdaki klinik tablolardan hangisinde karşısındaki antidepresan ajanın kullanımı en uygun ve kanıta dayalı seçenektir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Bulimia nervoza - Yüksek doz fluoksetin",
+       "isCorrect": true,
+       "explanation": "Fluoksetin tıkınırcasına yeme ve kusma epizotlarını anlamlı şekilde baskılar. Bu farmakolojik etkisiyle bulimia nervoza tedavisinde resmi endikasyon alan tek antidepresandır."
+      },
+      {
+       "key": "B",
+       "text": "Bipolar akut mani - Monoterapi sertralin",
+       "isCorrect": false,
+       "explanation": "Akut mani döneminde mizaç aktivasyonu tehlikeli boyutlardadır. Antidepresan ilaç verilmesi psikomotor taşkınlığı ve ajitasyonu daha da alevlendirir."
+      },
+      {
+       "key": "C",
+       "text": "Epilepsi hastasında depresyon - Yüksek doz bupropion",
+       "isCorrect": false,
+       "explanation": "Bupropion konvülsiyon eşiğini doza bağımlı olarak düşüren bir moleküldür. Epilepsi tanılı hastalarda epileptik nöbetleri tetikler ve mutlak kontrendikedir."
+      },
+      {
+       "key": "D",
+       "text": "TCA zehirlenmesi geniş QRS - İntravenöz flumazenil",
+       "isCorrect": false,
+       "explanation": "Flumazenil benzodiazepin zehirlenmesinde kullanılan spesifik bir reseptör antagonistidir. Trisiklik kardiyotoksisitesindeki geniş QRS aritmisinde sodyum bikarbonat verilir."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Bulimia nervoza - Yüksek doz fluoksetin",
+       "isCorrect": true,
+       "explanation": "Fluoksetin tıkınırcasına yeme ve kusma epizotlarını anlamlı şekilde baskılar. Bu farmakolojik etkisiyle bulimia nervoza tedavisinde resmi endikasyon alan tek antidepresandır."
+      },
+      {
+       "key": "B",
+       "text": "Bipolar akut mani - Monoterapi sertralin",
+       "isCorrect": false,
+       "explanation": "Akut mani döneminde mizaç aktivasyonu tehlikeli boyutlardadır. Antidepresan ilaç verilmesi psikomotor taşkınlığı ve ajitasyonu daha da alevlendirir."
+      },
+      {
+       "key": "C",
+       "text": "Epilepsi hastasında depresyon - Yüksek doz bupropion",
+       "isCorrect": false,
+       "explanation": "Bupropion konvülsiyon eşiğini doza bağımlı olarak düşüren bir moleküldür. Epilepsi tanılı hastalarda epileptik nöbetleri tetikler ve mutlak kontrendikedir."
+      },
+      {
+       "key": "D",
+       "text": "TCA zehirlenmesi geniş QRS - İntravenöz flumazenil",
+       "isCorrect": false,
+       "explanation": "Flumazenil benzodiazepin zehirlenmesinde kullanılan spesifik bir reseptör antagonistidir. Trisiklik kardiyotoksisitesindeki geniş QRS aritmisinde sodyum bikarbonat verilir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Nöropatik ağrıda duloksetin ve amitriptilin; çocukluk çağı enürezisinde imipramin; stres inkontinansta duloksetin; bulimiada fluoksetin; sigara bırakmada bupropion.",
+     "maskedTerm": "bupropion",
+     "hint": "Nikotin yoksunluk belirtilerini dindirerek sigara bıraktırmada kullanılan atipik antidepresan"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Klinik Farmakoloji ve Toksisite Özeti",
+     "items": [
+      {
+       "text": "İmipramin çocuklarda enürezis nokturna tedavisinde mesane tonusunu düzenlemek için kullanılır.",
+       "isLie": false,
+       "explanation": "Antikolinerjik etkisiyle detrüsörü gevşetir."
+      },
+      {
+       "text": "TCA zehirlenmesinde sodyum bikarbonat QRS süresini kısaltarak aritmileri düzeltir.",
+       "isLie": false,
+       "explanation": "Miyokardiyal sodyum kanallarını korur."
+      },
+      {
+       "text": "Antidepresan etkinliğini test etmek için 3 gün içinde ilaç dozu maksimuma çıkarılmalı ve yanıt yoksa kesilmelidir.",
+       "isLie": true,
+       "explanation": "Tuzaktır; antidepresan değerlendirme süresi en az 15 gün (2-4 hafta) olmalıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Antidepresanların 5 özel klinik endikasyonunu ve bu endikasyonlardaki birinci seçenek ajanları sıralayınız.",
+     "answer": "1. Bulimia nervoza: Fluoksetin; 2. Sigara bırakma: Bupropion; 3. Diyabetik nöropatik ağrı ve fibromiyalji: Duloksetin / Amitriptilin; 4. Pediatrik enürezis nokturna: İmipramin; 5. Stres üriner inkontinans: Duloksetin."
+    }
+   ]
+  },
+  {
+   "slideNumber": 21,
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Antidepresan İlaçlar",
+   "bolum": "3",
+   "discipline": "Tıbbi Farmakoloji",
+   "isGameFinale": true,
+   "pdfSayfalari": [
+    1,
+    51
+   ],
+   "sourcePdf": {
+    "startPage": 1,
+    "endPage": 51,
+    "pdfPath": "kurul2/y25-k2-63-antidepresan-ilaclar.pdf"
+   },
+   "content": "Tebrikler! Antidepresan İlaçlar dersini başarıyla tamamladınız. Şimdi patofizyolojik mekanizmaları, ilaç sınıflarını ve klinik ilkeleri son oyunlarla pekiştirelim.\n\n- **Oyun Modelleri:** Kronolojik mekanizma sıralama, sayısal kestirim, dinamik pertürbasyon senaryosu ve metin içi farmakolojik hata düzeltme.\n- **Hedef:** Teorik bilginin klinik vaka ve toksisite yönetiminde refleks haline gelmesini sağlamak.",
+   "synthesisNarrative": "Tebrikler! Antidepresan İlaçlar dersini başarıyla tamamladınız. Şimdi patofizyolojik mekanizmaları, ilaç sınıflarını ve klinik ilkeleri son oyunlarla pekiştirelim.\n\n- **Oyun Modelleri:** Kronolojik mekanizma sıralama, sayısal kestirim, dinamik pertürbasyon senaryosu ve metin içi farmakolojik hata düzeltme.\n- **Hedef:** Teorik bilginin klinik vaka ve toksisite yönetiminde refleks haline gelmesini sağlamak.",
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "prompt": "Antidepresan tedavinin başlangıcından klinik remisyonun oturmasına kadar gerçekleşen olayları kronolojik sıraya diziniz.",
+     "steps": [
+      "1. İlaç alımını takiben saatler içinde sinaptik aralıkta monoamin geri alımının bloke edilmesi",
+      "2. Günler içinde presinaptik inhibitör otoreseptörlerin sürekli uyarıma bağlı duyarsızlaşması",
+      "3. 2-4 hafta içinde hipokampusta cAMP-CREB yolunun uyarılması ve BDNF ekspresyonunun artması",
+      "4. Hipokampusta yeni nöron doğumunun ve sinaptik plastisitenin düzelmesiyle klinik remisyonun sağlanması"
+     ],
+     "explanation": "İlk saatlerde monoamin gerialımı durdurulur; günler içinde otoreseptörler duyarsızlaşır; haftalar içinde BDNF sentezi artar ve nörogenez ile klinik iyileşme tamamlanır."
+    },
+    {
+     "type": "estimate_slider",
+     "items": [
+      {
+       "prompt": "Yeni başlanan bir antidepresan tedavinin klinik etkinliğini değerlendirebilmek için ilaca tanınması gereken asgari süre en az kaç gündür?",
+       "unit": "gün",
+       "min": 1,
+       "max": 60,
+       "answer": 15,
+       "tolerance": 3,
+       "explanation": "Ders notunda ve klinik kılavuzlarda belirtildiği üzere antidepresanlar en az 15 gün (2-4 hafta) kullanılmadan etkisiz kabul edilip kesilemez."
+      }
+     ]
+    },
+    {
+     "type": "perturbation",
+     "scenario": "Trisiklik antidepresan (amitriptilin) yüksek dozda zehirlenme ile acil servise getirilen ve EKG'sinde geniş QRS aritmileri saptanan hastaya intravenöz sodyum bikarbonat infüzyonu başlandığında fizyolojik parametreler nasıl değişir?",
+     "question": "Aşağıdaki biyokimyasal ve elektrofizyolojik parametrelerin yönünü belirleyin:",
+     "parameters": [
+      {
+       "name": "Serum arteriyel kan pH değeri",
+       "correct": "artar",
+       "explanation": "Bikarbonat infüzyonu metabolik alkaloz oluşturarak kan pH değerini artırır."
+      },
+      {
+       "name": "EKG'deki patolojik QRS kompleks süresi",
+       "correct": "azalır",
+       "explanation": "Sodyum bikarbonat sodyum kanallarını serbestleştirerek genişlemiş QRS süresini normale doğru daraltır (azaltır)."
+      },
+      {
+       "name": "Ventriküler ölümcül aritmi ve kardiyak arrest riski",
+       "correct": "azalır",
+       "explanation": "Kardiyak iletimin düzelmesiyle ölümcül ventriküler aritmi ve arrest gelişme ihtimali azalır."
+      }
+     ]
+    },
+    {
+     "type": "fix_the_text",
+     "text": "Bipolar depresyon geçiren bir hastaya manik kaymayı önlemek için tek başına yüksek doz SSRI monoterapisi başlanmalıdır.",
+     "errors": [
+      {
+       "wrong": "tek başına yüksek doz SSRI monoterapisi",
+       "correct": "duygudurum dengeleyici eşliğinde kontrollü tedavi",
+       "options": [
+        "duygudurum dengeleyici eşliğinde kontrollü tedavi",
+        "yüksek doz trisiklik antidepresan infüzyonu",
+        "geri dönüşümsüz MAO inhibitörü monoterapisi"
+       ],
+       "explanation": "Bipolar bozuklukta antidepresan monoterapi mani atağını tetikleyebileceğinden mutlaka lityum veya valproat gibi duygudurum dengeleyicilerle birlikte verilmelidir."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "deckId": "k2p-y25-k2-63-antidepresan-ilaclar",
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "matchedPastQuestionsCount": 0,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

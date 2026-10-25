@@ -1,0 +1,98 @@
+{
+ "surum": 1,
+ "metinHash": "3b942c0c72f9718991f5d95e77064af1e840e184",
+ "p": {
+  "41": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Antianksiyete ve anksiyolitik klinik yanıt",
+      "Antidepresan etkinin desteklenmesi",
+      "Cinsel işlev bozukluğunun engellenmesi"
+     ],
+     "baslik": "Postsinaptik 5-HT2 Blokajının Etkileri",
+     "s": 42,
+     "k": [
+      0,
+      57
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.93
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.258,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "49": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "zehir_antidot",
+     "sablon_ad": "Zehirlenme → antidot / tedavi",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum",
+      "Antidot / tedavi"
+     ],
+     "satirlar": [
+      [
+       "TCA aşırı dozu ve geniş QRS aritmisi",
+       "İntravenöz sodyum bikarbonat infüzyonu"
+      ]
+     ],
+     "baslik": "Trisiklik Toksisitesi ve Antidotu",
+     "s": 50,
+     "k": [
+      0,
+      38
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.88
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.196,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0956,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  }
+ },
+ "rapor": {
+  "aday": 22,
+  "gecti": 2,
+  "ret": {
+   "panel metni 'SSRI: Seçici serotonin geri al' henüz anlatılma": 1,
+   "panel metni 'Majör Depresif Bozukluk Temel ' henüz anlatılma": 1,
+   "panel metni 'Kronik nöropatik ağrı ve fibro' henüz anlatılma": 1,
+   "panel metni 'Sinaptik nörotransmisyonun zay' henüz anlatılma": 1,
+   "panel metni 'Stres zemininde BDNF sentezini' henüz anlatılma": 1,
+   "panel metni 'SERT promotor bölgesi polimorf' henüz anlatılma": 1,
+   "resim sayfasında panel (H51)": 2,
+   "panel metni 'HPA Aksı Hiperaktivitesi' henüz anlatılmamış te": 1,
+   "panel metni 'Seçici Serotonin Gerialım İnhi' henüz anlatılma": 1,
+   "panel metni 'Serotonin-Noradrenalin Gerialı' henüz anlatılma": 1,
+   "hücre 60 karakterden uzun": 5,
+   "panel metni 'Trazodon: Güçlü sedasyon, uyku' henüz anlatılma": 1,
+   "panel metni 'Fluoksetinin hepatik N-demetil' henüz anlatılma": 1,
+   "panel metni 'Venlafaksin Biyotransformasyon' henüz anlatılma": 1,
+   "panel metni '25 Yaş Altı Kara Kutu Uyarısı' henüz anlatılmam": 1
+  }
+ }
+}

@@ -1,0 +1,1906 @@
+{
+ "id": "k2p-y25-k2-61-nikotin-bagimliligi-ve-tedavisi",
+ "title": "Nikotin Bağımlılığı ve Tedavisi",
+ "discipline": "Aile Hekimliği",
+ "description": "Tütün epidemiyolojisi, ödül yolağı nörobiyolojisi, tütün kontrolü stratejileri, Fagerström testi, 5A/5R modelleri ve birinci/ikinci basamak farmakoterapiler.",
+ "sayfaHaritasi": "teyitli",
+ "slides": [
+  {
+   "slideNumber": 1,
+   "bolum": "1.1",
+   "title": "Tütün Epidemiyolojisi ve Sigara Dumanındaki Toksik Maddeler",
+   "pdfSayfalari": [
+    1,
+    3
+   ],
+   "sourcePdf": {
+    "startPage": 1,
+    "endPage": 3
+   },
+   "synthesisNarrative": "Tütün kullanımı tüm dünyada önlenebilir ölüm ve morbidite nedenlerinin başında gelen en büyük küresel halk sağlığı salgınlarından biridir.\n\n- **Epidemiyolojik Boyut:** Her yıl milyonlarca insan doğrudan veya pasif tütün maruziyeti nedeniyle erken yaşta yaşamını yitirmektedir.\n- **Dumanın Toksik Yapısı:** Sigara dumanında katran, karbonmonoksit, siyanür ve polisiklik aromatik hidrokarbonlar dahil binlerce kimyasal bileşen yer alır.\n- **Karsinojen Etki:** Duman içerisinde en az yetmiş tanesi kanıtlanmış kanserojen olan zehirli kimyasallar hücresel DNA mutasyonlarını tetikler.\n\n> [!IMPORTANT]\n> Sigara dumanı yalnızca akciğerleri değil, tüm damar endotelini ve organ sistemlerini etkileyen sistemik bir toksik karışımdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sigara dumanında bulunan toksik bileşenlerin sistemik etkileri ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Karbonmonoksit hemoglobine bağlanarak dokularda hücresel hipoksiye neden olur",
+       "isCorrect": true,
+       "explanation": "Karbonmonoksit hemoglobine oksijenden iki yüz kat yüksek ilgiyle bağlanarak karboksihemoglobin oluşturur. Bu biyokimyasal mekanizma dokulara oksijen iletimini belirgin şekilde engelleyerek yaygın hücresel hipoksiye yol açar."
+      },
+      {
+       "text": "Katran solunum yolu epitelindeki siliyer temizliği güçlendirerek koruyucu rol oynar",
+       "isCorrect": false,
+       "explanation": "Katran partikülleri bronş mukozasındaki siliyer epiteli felç ederek mukus birikimine neden olur. Bu nedenle solunum yollarını korumak yerine kronik inflamasyon ve enfeksiyon riskini artırır."
+      },
+      {
+       "text": "Sigara dumanında hücresel DNA hasarı yapabilen hiçbir karsinojen kimyasal bulunmaz",
+       "isCorrect": false,
+       "explanation": "Tütün dumanında nitrozaminler ve aromatik hidrokarbonlar dahil en az yetmiş adet kanıtlanmış karsinojen bileşik yer alır. Bu maddeler hücresel DNA hasarı ve malign transformasyon oluşturur."
+      },
+      {
+       "text": "Tütün kullanımı günümüzde önlenebilir mortalite nedenleri arasında son sırada kalmaktadır",
+       "isCorrect": false,
+       "explanation": "Dünya Sağlık Örgütü verilerine göre tütün kullanımı küresel düzeyde birinci sıradaki önlenebilir ölüm nedenidir. Bu nedenle halk sağlığı sıralamasında sonlarda değil en başta yer almaktadır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Tütün kullanımı tüm dünyada önlenebilir ölüm ve morbidite nedenlerinin başında gelen en büyük küresel halk sağlığı salgınlarından biridir.",
+     "maskedTerm": "önlenebilir ölüm",
+     "hint": ""
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Tütün Dumanının Toksik Özellikleri",
+     "items": [
+      {
+       "text": "Sigara dumanında hücresel mutasyon oluşturan en az yetmiş kanıtlanmış kanserojen bulunur.",
+       "isLie": false,
+       "explanation": "Tütün dumanı polisiklik aromatik hidrokarbonlar ve nitrozaminler gibi güçlü DNA hasarı yapan karsinojenler içerir."
+      },
+      {
+       "text": "Tütün kullanımı tüm dünyada birinci sıradaki önlenebilir erken mortalite sebebidir.",
+       "isLie": false,
+       "explanation": "Küresel epidemiyoloji kılavuzlarında tütün önlenebilir ölümlerin en başında listelenmektedir."
+      },
+      {
+       "text": "Karbonmonoksit hemoglobinin dokulara oksijen bırakmasını kolaylaştırarak doku beslenmesini artırır.",
+       "isLie": true,
+       "explanation": "Karbonmonoksit hemoglobine bağlanarak dokulara oksijen iletilmesini engeller ve belirgin doku hipoksisine yol açar."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sigara dumanındaki karbonmonoksitin hemoglobine bağlanma affinitesi oksijene göre nasıldır?",
+     "answer": "Karbonmonoksit hemoglobine oksijene kıyasla yaklaşık iki yüz kat daha yüksek ilgiyle bağlanarak karboksihemoglobin oluşturur."
+    }
+   ]
+  },
+  {
+   "slideNumber": 2,
+   "bolum": "1.2",
+   "title": "Nikotin Bağımlılığı Tanımı ve Dopaminerjik Ödül Yolağı",
+   "pdfSayfalari": [
+    4,
+    5
+   ],
+   "sourcePdf": {
+    "startPage": 4,
+    "endPage": 5
+   },
+   "synthesisNarrative": "Nikotin bağımlılığı farmakolojik, davranışsal ve psikolojik faktörlerin birleştiği kronik ve tekrarlayıcı bir nörobiyolojik tablodur.\n\n- **Bağımlılık Kriterleri:** Dünya Sağlık Örgütü bağımlılığı maddenin bireyin değer verdiği diğer tüm uğraşların önüne geçmesi olarak tanımlar.\n- **Nörobiyolojik Mekanizma:** Solunan nikotin saniyeler içinde beyne ulaşarak ventral tegmental alandaki nikotinik reseptörleri uyarır.\n- **Ödül Döngüsü:** Uyarım sonucu nükleus akkumbenste dopamin deşarjı gerçekleşir ve güçlü bir pozitif pekiştirme sağlanır.\n\n> [!NOTE]\n> Zamanla nikotinik reseptör sayısında artış ve desensitizasyon gelişerek tolerans ve yoksunluk tablosu yerleşir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Nikotinin santral sinir sistemindeki pekiştirici ve bağımlılık yapıcı etkisi hangi nöronal yolak üzerinden gerçekleşir?",
+     "options": [
+      {
+       "text": "Mezolimbik ödül yolağı ve nükleus akkumbens dopamin salınımı",
+       "isCorrect": true,
+       "explanation": "Ventral tegmental alandan nükleus akkumbense uzanan mezolimbik yolak nikotinin temel haz devresidir. Bu nöronal yolak dopamin salgılatarak bağımlılığın temel pekiştirme mekanizmasını oluşturur."
+      },
+      {
+       "text": "Nigrostriatal dopaminerjik ekstrapiramidal motor kontrol devresi",
+       "isCorrect": false,
+       "explanation": "Nigrostriatal yolak bazal ganglionların istemli motor hareketleri koordine etmesinden sorumludur. Bağımlılığın haz ve kompülsif ödül döngüsüyle doğrudan bir ilişkisi bulunmamaktadır."
+      },
+      {
+       "text": "Tuberoinfundibuler prolaktin inhibisyonunu sağlayan hipotalamik yolak",
+       "isCorrect": false,
+       "explanation": "Tuberoinfundibuler yolak ön hipofizden prolaktin salgılanmasını tonik olarak baskılayan endokrin bir devredir. Tütün bağımlılığının pekiştirici mekanizmasıyla doğrudan bağlantılı değildir."
+      },
+      {
+       "text": "Serebellar dentatorubral denge ve ince motor koordinasyon yolağı",
+       "isCorrect": false,
+       "explanation": "Bu yolak serebellumun derin çekirdekleri ile motor nükleuslar arasındaki denge koordinasyonunu sağlar. Kimyasal bağımlılık pekiştirmesi ve dopaminerjik haz döngüsüyle ilgisi yoktur."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Nikotinin santral sinir sistemindeki pekiştirici etkisi nükleus akkumbenste dopamin deşarjı gerçekleşmesiyle sağlanır.",
+     "maskedTerm": "dopamin deşarjı",
+     "hint": ""
+    },
+    {
+     "type": "causal_chain",
+     "title": "Nikotinin Bağımlılık Geliştirme Döngüsü",
+     "steps": [
+      "1. Adım: İnhale edilen nikotinin saniyeler içinde kan-beyin bariyerini aşması",
+      "2. Adım: Ventral tegmental alandaki nikotinik reseptörlerin uyarılması",
+      "3. Adım: Nükleus akkumbenste hızlı ve yüksek miktarda dopamin salınımı",
+      "4. Adım: Beyinde pozitif pekiştirme, tolerans gelişimi ve kompülsif sigara arama davranışı"
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "İnhale edilen nikotin kan dolaşımıyla beyne ortalama kaç saniyede ulaşır?",
+     "answer": "Sigara dumanıyla solunan nikotin alveollerden emildikten sonra yaklaşık yedi ila on saniye içinde beyne ulaşır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 3,
+   "bolum": "1.3",
+   "title": "Uluslararası Tütün Kontrolü ve DSÖ M-POWER Stratejileri",
+   "pdfSayfalari": [
+    6,
+    7
+   ],
+   "sourcePdf": {
+    "startPage": 6,
+    "endPage": 7
+   },
+   "synthesisNarrative": "Tütün salgınıyla küresel düzeyde mücadele etmek amacıyla Dünya Sağlık Örgütü Tütün Kontrolü Çerçeve Sözleşmesini hayata geçirmiştir.\n\n- **Küresel Standart:** Bu sözleşme halk sağlığı alanındaki ilk uluslararası yasal anlaşma olma özelliğini taşır.\n- **M-POWER Paketi:** Salgını tersine çevirmek için altı kanıta dayalı politika başlığı tanımlanmıştır.\n- **Politika İlkeleri:** Tütün kullanımını izlemek, toplumu dumandan korumak, bırakma yardımı sunmak, zararları konusunda uyarmak, reklamları yasaklamak ve vergileri artırmak hedeflenir.\n\n> [!IMPORTANT]\n> Tütün üzerindeki vergilerin artırılması, özellikle gençlerin ve dar gelirli bireylerin tütüne erişimini engelleyen en maliyet-etkin stratejidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Dünya Sağlık Örgütü M-POWER paketindeki 'R' harfi hangi stratejik müdahaleyi ifade eder?",
+     "options": [
+      {
+       "text": "Tütün ürünleri üzerindeki vergileri sistematik olarak artırmak",
+       "isCorrect": true,
+       "explanation": "Bu strateji İngilizce 'Raise taxes on tobacco' başlığını temsil eder. Tütün ürünlerinin fiyatını vergi yoluyla yükseltmek tüketimi azaltmada kanıtlanmış en güçlü yöntemdir."
+      },
+      {
+       "text": "Tütün tarımı yapan çiftçilere maddi sübvansiyon dağıtmak",
+       "isCorrect": false,
+       "explanation": "Bu ifade tütün kontrolü felsefesine tamamen aykırı bir üretim desteğidir. M-POWER stratejileri tütün talebini ve tüketimini kısmayı amaçlamaktadır."
+      },
+      {
+       "text": "Sigara bırakmak isteyen hastaları poliklinikten reddetmek",
+       "isCorrect": false,
+       "explanation": "Sağlık hizmetlerinde hastalara profesyonel yardım teklif edilmesi temel şarttır. Hastayı reddetmek hekimlik ilkeleri ve DSÖ yönergeleri ile bağdaşmaz."
+      },
+      {
+       "text": "Paketlerin üzerindeki resimli sağlık uyarılarını tamamen kaldırmak",
+       "isCorrect": false,
+       "explanation": "M-POWER paketindeki 'Warn' ilkesi resimli uyarıların artırılmasını savunur. Uyarıları kaldırmak toplumsal farkındalığı yok eden hatalı bir tutumdur."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "title": "DSÖ M-POWER Stratejik İlkeleri",
+     "tableHeaders": [
+      "Kısaltma Harfi",
+      "İngilizce Başlık",
+      "Türkçe Klinik ve Toplumsal Karşılığı"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "M",
+        "isMasked": false
+       },
+       {
+        "text": "Monitor",
+        "isMasked": false
+       },
+       {
+        "text": "Tütün kullanımını ve koruma politikalarını düzenli izlemek",
+        "isMasked": false
+       }
+      ],
+      [
+       {
+        "text": "P",
+        "isMasked": false
+       },
+       {
+        "text": "Protect",
+        "isMasked": false
+       },
+       {
+        "text": "İnsanları kamusal alanlarda tütün dumanından korumak",
+        "isMasked": false
+       }
+      ],
+      [
+       {
+        "text": "R",
+        "isMasked": false
+       },
+       {
+        "text": "Raise taxes",
+        "isMasked": false
+       },
+       {
+        "text": "Tütün ürünleri üzerindeki vergileri artırmak",
+        "isMasked": true,
+        "hint": ""
+       }
+      ]
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Tütün salgınıyla küresel düzeyde mücadele etmek amacıyla Dünya Sağlık Örgütü Tütün Kontrolü Çerçeve Sözleşmesini hayata geçirmiştir.",
+     "maskedTerm": "Çerçeve Sözleşmesini",
+     "hint": ""
+    },
+    {
+     "type": "active_recall",
+     "question": "DSÖ M-POWER paketinde tütün tüketimini azaltmada en maliyet-etkin bulunan müdahale hangisidir?",
+     "answer": "Tütün ürünleri üzerindeki vergilerin artırılması (Raise taxes) özellikle gençlerde tüketimi düşüren en etkili stratejidir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 4,
+   "bolum": "1.4",
+   "title": "Türkiye'de Tütün Kontrolü Mevzuatı ve Dumansız Hava Sahası",
+   "pdfSayfalari": [
+    8,
+    8
+   ],
+   "sourcePdf": {
+    "startPage": 8,
+    "endPage": 8
+   },
+   "synthesisNarrative": "Türkiye tütün kontrolü mevzuatını başarıyla hayata geçiren ve Dünya Sağlık Örgütü kriterlerini tam karşılayan öncü ülkeler arasındadır.\n\n- **4207 Sayılı Kanun:** Kamusal kapalı alanlarda, toplu taşıma araçlarında ve iş yerlerinde tütün kullanımını kesin olarak yasaklamıştır.\n- **Dumansız Hava Sahası:** Bu uygulama pasif tütün maruziyetini dramatik şekilde azaltarak hava kalitesini korumuştur.\n- **Klinik Yansımalar:** Yasanın yürürlüğe girmesinin ardından acil servislere akut koroner sendrom ve astım alevlenmesi başvurularında belirgin düşüş gözlenmiştir.\n\n> [!NOTE]\n> Tütün kontrolü yasaları yalnızca sigara içmeyenleri korumakla kalmaz, bağımlı bireylerin bırakma kararı almasını da kolaylaştırır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Türkiye'de Dumansız Hava Sahası mevzuatının yürürlüğe girmesinin ardından saptanan en temel klinik sonuç nedir?",
+     "options": [
+      {
+       "text": "Kapalı alanlarda pasif içiciliğin önlenmesi ve akut koroner olayların azalması",
+       "isCorrect": true,
+       "explanation": "Dumansız hava sahası uygulaması pasif tütün dumanı maruziyetini dramatik biçimde azaltmıştır. Bu sayede acil servislere akut miyokard enfarktüsü ve astım alevlenmesi başvurularında belirgin düşüş kaydedilmiştir."
+      },
+      {
+       "text": "Genç nüfusta sigara içme oranlarının iki katına fırlaması",
+       "isCorrect": false,
+       "explanation": "Mevzuat tütün kullanımını zorlaştırarak tüketimi azaltmayı amaçlayan bir düzenlemedir. Gençlerde sigaraya başlama oranlarında artış değil azalma hedeflenmektedir."
+      },
+      {
+       "text": "Kapalı ortamlarda pasif tütün maruziyetinin tamamen serbest bırakılması",
+       "isCorrect": false,
+       "explanation": "4207 sayılı yasa kapalı ortamlarda tütün tüketimini kesin olarak yasaklamaktadır. Bu nedenle maruziyetin serbest bırakılması söz konusu değildir."
+      },
+      {
+       "text": "Hastanelerdeki tütün bırakma polikliniklerinin kapatılması",
+       "isCorrect": false,
+       "explanation": "Mevzuatla birlikte bırakma poliklinikleri ülke genelinde yaygınlaştırılmış ve desteklenmiştir. Polikliniklerin kapatılması mevzuat hedeflerine tamamen zıttır."
+      }
+     ]
+    },
+    {
+     "type": "before_after_slider",
+     "title": "Dumansız Hava Sahası Öncesi ve Sonrası Karşılaştırması",
+     "leftTitle": "Mevzuat Öncesi Dönem",
+     "rightTitle": "Mevzuat Sonrası Dönem",
+     "leftPoints": [
+      "Kamusal kapalı alanlarda yoğun pasif tütün dumanı maruziyeti mevcuttu",
+      "Acil servislerde yüksek oranda akut koroner sendrom başvurusu izleniyordu"
+     ],
+     "rightPoints": [
+      "Kapalı alanlarda yüzde yüz dumansız hava sahası güvencesi sağlandı",
+      "Akut koroner olaylar ve astım alevlenmelerinde anlamlı gerileme saptandı"
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Türkiye'de yürürlüğe giren yasa gereği kamusal kapalı alanlarda tütün kullanımını yasaklayan düzenleme Dumansız Hava Sahası olarak adlandırılır.",
+     "maskedTerm": "Dumansız Hava Sahası",
+     "hint": ""
+    },
+    {
+     "type": "active_recall",
+     "question": "Kapalı alanlarda sigara yasağının getirilmesi acil servis başvurularında en çok hangi patolojileri azaltmıştır?",
+     "answer": "Pasif dumanın kesilmesiyle akut koroner sendrom ve astım alevlenmesi başvurularında belirgin düşüş kaydedilmiştir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 5,
+   "bolum": "1.5",
+   "title": "Hekimlerin Tütün Kontrolündeki Rolü ve Sorumlulukları",
+   "pdfSayfalari": [
+    9,
+    9
+   ],
+   "sourcePdf": {
+    "startPage": 9,
+    "endPage": 9
+   },
+   "synthesisNarrative": "Hekimler toplum sağlığının korunmasında ve tütün salgınıyla mücadelede en kilit aktörler arasında yer almaktadır.\n\n- **Rol Modelliği:** Hekimin tütün ürünü kullanmaması toplum ve hastalar üzerinde en güçlü inandırıcılık kaynağıdır.\n- **Rutin Sorgulama:** Polikliniğe hangi nedenle başvurursa başvursun her hastada tütün kullanım öyküsü titizlikle sorgulanmalıdır.\n- **Kısa Müdahale:** Hekimin hastasına doğrudan sigarayı bırakmasını tavsiye etmesi dahi tek başına bırakma oranlarını istatistiksel olarak artırır.\n\n> [!IMPORTANT]\n> Hekimin tütün kullanımını görmezden gelmesi, hastanın zihninde bu durumun sağlık açısından önemsiz olduğu yanılgısını pekiştirir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Birinci basamak hekiminin tütün kontrolündeki sorumlulukları ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "options": [
+      {
+       "text": "Hasta başka şikayetle geldiyse sigara konusunu asla açmamak ve görmezden gelmek gerekir",
+       "isCorrect": true,
+       "explanation": "Bu tutum yanlıştır çünkü fırsatçı müdahale gereği her klinik temas tütün bırakma tavsiyesi için değerlendirilmelidir. Tütünü görmezden gelmek hastada durumun önemsiz olduğu yanılgısını yaratır."
+      },
+      {
+       "text": "Polikliniğe başvuran her hastada tütün kullanım durumu mutlaka sorgulanmalıdır",
+       "isCorrect": false,
+       "explanation": "Bu doğru bir klinik tutumdur çünkü tütün sorgulaması rutin hekimlik anamnezinin ayrılmaz bir parçasıdır. Her hastada kullanımın kayıt altına alınması gerekir."
+      },
+      {
+       "text": "Hekimin kendisinin tütün kullanmaması toplumda güçlü bir rol modelliği oluşturur",
+       "isCorrect": false,
+       "explanation": "Bu doğru bir ilkedir çünkü sağlık çalışanının kişisel davranışı verilen tıbbi tavsiyelerin inandırıcılığını belirler. Hekimin rol modelliği bırakma motivasyonunu artırır."
+      },
+      {
+       "text": "Hekimin vereceği birkaç dakikalık kısa bırakma tavsiyesi dahi başarı oranını artırır",
+       "isCorrect": false,
+       "explanation": "Bu bilimsel olarak kanıtlanmış bir gerçektir. Kısa hekim tavsiyesinin plaseboya kıyasla bırakma oranlarını istatistiksel olarak yükselttiği gösterilmiştir."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Hekimin Tütün Kontrolündeki Tutumu",
+     "items": [
+      {
+       "text": "Hekimlerin tütün kullanmayan bir tutum sergilemesi toplum sağlığı açısından kritik bir rol modelliğidir.",
+       "isLie": false,
+       "explanation": "Sağlık çalışanlarının davranışları toplumsal alışkanlıklar ve inandırıcılık üzerinde belirleyicidir."
+      },
+      {
+       "text": "Klinik görüşmede hekimin sigarayı bırakmayı önermesi hastanın bırakma kararını belirgin biçimde artırır.",
+       "isLie": false,
+       "explanation": "Kısa hekim tavsiyesi kanıta dayalı olarak bırakma oranlarını yükselten bir klinik araçtır."
+      },
+      {
+       "text": "Tütün bağımlılığı yalnızca psikiyatri uzmanlarını ilgilendiren, aile hekimlerinin karışmaması gereken bir alandır.",
+       "isLie": true,
+       "explanation": "Birinci basamak hekimleri tütün bağımlılığı tedavisinin ve toplum sağlığı mücadelesinin ana omurgasını oluşturur."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Hekimlerin polikliniğe başvuran her hastada başvuru nedeninden bağımsız olarak tütün kullanım öyküsü sorgulaması esastır.",
+     "maskedTerm": "tütün kullanım öyküsü",
+     "hint": ""
+    },
+    {
+     "type": "active_recall",
+     "question": "Hekimin hastasına doğrudan sigarayı bırakmasını tavsiye etmesinin (kısa tavsiye) klinik önemi nedir?",
+     "answer": "Yalnızca birkaç dakikalık net hekim tavsiyesi dahi hastanın sigarayı bırakma olasılığını anlamlı derecede artırır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 6,
+   "bolum": "1.6",
+   "title": "Sigarayı Bırakmanın Sistemik ve Kardiyovasküler Faydaları",
+   "pdfSayfalari": [
+    10,
+    10
+   ],
+   "sourcePdf": {
+    "startPage": 10,
+    "endPage": 10
+   },
+   "synthesisNarrative": "Sigara bırakıldığı andan itibaren vücutta hemen başlayan ve yıllarca artarak süren çok yönlü fizyolojik iyileşmeler ortaya çıkar.\n\n- **Erken Dönem (20 Dk - 48 Saat):** Sempatik tonus azalarak nabız ve tansiyon düşer, kanda karbonmonoksit seviyesi normale döner ve tat/koku duyusu keskinleşir.\n- **Orta Dönem (2 Hafta - 1 Yıl):** Dolaşım düzelir, akciğer fonksiyonları artar ve birinci yılın sonunda koroner kalp hastalığı riski yarı yarıya azalır.\n- **Geç Dönem (5 - 15 Yıl):** İnme riski hiç sigara içmemiş bireylerin düzeyine geriler, akciğer kanseri riski ise yarıya iner.\n\n> [!NOTE]\n> Sigarayı bırakmak hangi yaşta ve hangi hastalık zemininde olursa olsun beklenen yaşam süresini ve yaşam kalitesini doğrudan artırır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sigarayı bırakan bir bireyde koroner kalp hastalığı riskinin içenlere kıyasla tam yarıya indiği zaman eşiği nedir?",
+     "options": [
+      {
+       "text": "Bırakıldıktan sonraki birinci yılın tamamlanması",
+       "isCorrect": true,
+       "explanation": "Dünya Sağlık Örgütü verilerine göre birinci yılın sonunda koroner arter hastalığı riski tam yüzde elli oranında azalır. Bu süre endotel fonksiyonlarının toparlanması ve trombojenik riskin gerilemesi için gereklidir."
+      },
+      {
+       "text": "Bırakıldıktan hemen sonraki ilk kırk sekiz saat",
+       "isCorrect": false,
+       "explanation": "İlk kırk sekiz saatte sinir uçları yenilenir ve tat koku duyusu düzelmeye başlar. Koroner kalp hastalığı riskinin yarıya inmesi için bir yıl geçmesi şarttır."
+      },
+      {
+       "text": "Bırakıldıktan sonraki yirminci yılın bitimi",
+       "isCorrect": false,
+       "explanation": "Yirminci yılda kardiyovasküler riskler tamamen hiç içmemişlerin düzeyine yaklaşır. Riskin yarıya inmesi çok daha erken olarak birinci yılın sonunda gerçekleşir."
+      },
+      {
+       "text": "Sigara bırakıldıktan hemen sonraki yirminci dakika",
+       "isCorrect": false,
+       "explanation": "Yirminci dakikada yalnızca otonomik sempatik deşarj yatışarak kalp hızı ve tansiyon geriler. Aterosklerotik plak stabilitesi ve risk azalması zaman gerektirir."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "title": "Sigarayı Bırakmanın Zaman Çizelgesi",
+     "tableHeaders": [
+      "Geçen Süre",
+      "Fizyolojik Değişim",
+      "Klinik Kazanım ve Risk Azalması"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "20 Dakika",
+        "isMasked": false
+       },
+       {
+        "text": "Sempatik deşarjın yatışması",
+        "isMasked": false
+       },
+       {
+        "text": "Kan basıncı ve kalp hızı normale geriler",
+        "isMasked": false
+       }
+      ],
+      [
+       {
+        "text": "1 Yıl",
+        "isMasked": false
+       },
+       {
+        "text": "Endotelyal fonksiyonların toparlanması",
+        "isMasked": false
+       },
+       {
+        "text": "Koroner kalp hastalığı riski içenlere göre yarıya iner",
+        "isMasked": true,
+        "hint": ""
+       }
+      ]
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sigarayı bırakan bireylerde birinci yılın sonunda koroner kalp hastalığı riski sigara içenlere kıyasla yarıya iner.",
+     "maskedTerm": "koroner kalp hastalığı",
+     "hint": ""
+    },
+    {
+     "type": "active_recall",
+     "question": "Sigara bırakıldıktan sonra koku ve tat alma duyularındaki belirgin iyileşme ne zaman başlar?",
+     "answer": "Bırakıldıktan sonraki ilk kırk sekiz saat içinde sinir uçlarının rejenerasyonu ile tat ve koku duyusu belirgin şekilde keskinleşir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 7,
+   "bolum": "1.R",
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Tütün Kontrolü, Toksisite ve Epidemiyoloji",
+   "pdfSayfalari": [
+    1,
+    10
+   ],
+   "sourcePdf": {
+    "startPage": 1,
+    "endPage": 10
+   },
+   "synthesisNarrative": "Bu bölümde tütün epidemiyolojisi, dumanın toksik kimyası, ödül yolağı nörobiyolojisi, uluslararası tütün kontrol politikaları ve bırakmanın sağlık faydalarını inceledik.\n\n- **Epidemiyoloji ve Toksisite:** Tütün önlenebilir ölüm nedenidir; karbonmonoksit oksijen taşınmasını engeller, katran siliyer hareketi felç eder.\n- **Bağımlılık Yolağı:** Ventral tegmental alandan nükleus akkumbense uzanan mezolimbik dopaminerjik devre bağımlılığın temelidir.\n- **M-POWER ve Mevzuat:** DSÖ M-POWER ilkeleri ve Türkiye'deki 4207 sayılı Dumansız Hava Sahası yasası pasif içiciliği önleyerek kardiyovasküler acilleri azaltmıştır.\n- **Hekim Rolü ve Faydalar:** Hekimin rol modelliği ve kısa tavsiyesi bırakma şansını artırır; 20 dakikada nabız düşer, 1 yılda koroner risk yarıya iner.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "İlk altı adımda işlenen epidemiyolojik ve toksikolojik kavramlar dikkate alındığında aşağıdaki ifadelerden hangisi yanlıştır?",
+     "options": [
+      {
+       "text": "Sigarayı bırakan bireylerde koroner kalp hastalığı riski ancak yirminci yılda azalmaya başlar",
+       "isCorrect": true,
+       "explanation": "Bu ifade yanlıştır çünkü koroner kalp hastalığı riski yirminci yılda değil, bırakmanın birinci yılında yarıya iner. Erken kardiyovasküler kazanım ilk yıldan itibaren belirgindir."
+      },
+      {
+       "text": "Karbonmonoksit hemoglobine bağlanarak dokularda hücresel hipoksiye neden olur",
+       "isCorrect": false,
+       "explanation": "Bu doğru bir bilgidir çünkü karbonmonoksit oksijen taşıma kapasitesini bozarak karboksihemoglobin oluşturur. Doku hipoksisinin temel mekanizmasıdır."
+      },
+      {
+       "text": "M-POWER stratejilerindeki 'R' harfi tütün vergilerinin artırılmasını temsil eder",
+       "isCorrect": false,
+       "explanation": "Bu doğru bir bilgidir çünkü 'Raise taxes on tobacco' tüketimi düşürmede en etkili mali yoldur. Fiyat artışı tütüne erişimi kısıtlar."
+      },
+      {
+       "text": "Nikotinin bağımlılık yapıcı etkisi mezolimbik ödül yolağında dopamin salınımıyla gerçekleşir",
+       "isCorrect": false,
+       "explanation": "Bu doğru bir bilgidir çünkü nükleus akkumbens dopamin deşarjı bağımlılığın temelidir. Pozitif pekiştirme bu yolakla sağlanır."
+      }
+     ]
+    },
+    {
+     "type": "venn_grid",
+     "title": "Tütün Dumanındaki Toksik Bileşenlerin Karşılaştırması",
+     "labelA": "Karbonmonoksit (CO)",
+     "labelB": "Katran (Tar)",
+     "items": [
+      {
+       "criterion": "Hemoglobine bağlanarak karboksihemoglobin oluşturur ve oksijenlenmeyi bozar",
+       "correct": "A"
+      },
+      {
+       "criterion": "Solunum yolu epiteline yapışarak siliyer temizliği felç eder",
+       "correct": "B"
+      },
+      {
+       "criterion": "Sigara dumanında yer alan ve doğrudan doku hasarı yapan toksik bileşendir",
+       "correct": "both"
+      },
+      {
+       "criterion": "İnhale edildiğinde akciğer alveollerinde sürfaktan sentezini artıran koruyucu ajandır",
+       "correct": "neither"
+      }
+     ]
+    },
+    {
+     "type": "branching_logic",
+     "title": "Klinik Karar: Poliklinikte Tütün Sorgulaması",
+     "scenario": "Hipertansiyon kontrolü için başvuran 45 yaşındaki hastanın dosyasında sigara öyküsü yazmıyor.",
+     "options": [
+      {
+       "text": "Hastaya tütün kullanıp kullanmadığını sormak, içiyorsa bırakmasını tavsiye edip kardiyovasküler faydaları açıklamak",
+       "isCorrect": true,
+       "explanation": "Bu yaklaşım doğru klinik tutumdur çünkü her hastada tütün sorgulanmalıdır. Hekimin vereceği kısa tavsiye hastanın bırakma kararını doğrudan tetikleyebilir."
+      },
+      {
+       "text": "Hastanın tansiyon ilaçlarını reçete edip sigara konusuna hiç girmeden viziti tamamlamak",
+       "isCorrect": false,
+       "explanation": "Bu yaklaşım hatalı klinik tutumdur çünkü tütün sorgulaması fırsatçı müdahaledir. Sigarayı sormamak hastada durumun önemsiz olduğu yanılgısını pekiştirir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Tütün bağımlılığında dopamin salınımına aracılık eden santral nükleus hangisidir?",
+     "answer": "Ventral tegmental alandan köken alan dopaminerjik nöronların sonlandığı nükleus akkumbenstir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 8,
+   "bolum": "2.1",
+   "title": "Birinci Basamakta Nikotin Bağımlılığına Klinik Yaklaşım",
+   "pdfSayfalari": [
+    11,
+    11
+   ],
+   "sourcePdf": {
+    "startPage": 11,
+    "endPage": 11
+   },
+   "synthesisNarrative": "Birinci basamak sağlık hizmetlerinde tütün bağımlılığı basit bir alışkanlık değil, kronik ve tekrarlayıcı bir tıbbi hastalık olarak ele alınmalıdır.\n\n- **Kronik Hastalık Modeli:** Diyabet veya hipertansiyon gibi remisyon ve alevlenmelerle seyreder; hastanın her nüksünde yargılayıcı olmadan destek sürdürülmelidir.\n- **Bütüncül Değerlendirme:** Yalnızca fiziksel bağımlılık değil, tütünün sosyal, psikolojik ve davranışsal tetikleyicileri de birlikte incelenmelidir.\n- **Klinik Yaklaşım:** Hekim hastanın motivasyonunu değerlendirmeli, kanıta dayalı farmakoterapiyi davranışsal danışmanlıkla birleştirmelidir.\n\n> [!NOTE]\n> Bağımlılığın tedavisinde tek başına farmakoterapi veya tek başına danışmanlık yerine ikisinin kombinasyonu başarı şansını en üst düzeye çıkarır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Birinci basamakta tütün bağımlılığına klinik yaklaşım ilkeleri ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Tütün bağımlılığı kronik ve tekrarlayan bir hastalık olarak kabul edilmelidir",
+       "isCorrect": true,
+       "explanation": "Tütün bağımlılığı nörobiyolojik temeli olan, alevlenme ve remisyonlarla seyreden kronik bir tablodur. Bu nedenle birinci basamakta diyabet gibi uzun süreli takip ve destek gerektirir."
+      },
+      {
+       "text": "Bir kez nüks yaşayan hastaya bir daha asla bırakma tedavisi sunulmamalıdır",
+       "isCorrect": false,
+       "explanation": "Nüks kronik bağımlılık hastalığının doğal ve beklenen klinik süreçlerinden biridir. Hastayı dışlamak yerine her denemede motivasyonu artırarak tedavi desteği sürdürülmelidir."
+      },
+      {
+       "text": "Tütün bağımlılığında davranışsal destek tamamen gereksiz olup sadece ilaç yeterlidir",
+       "isCorrect": false,
+       "explanation": "Davranışsal danışmanlık tütün bağımlılığının psikososyal boyutunu ele alan zorunlu bir bileşendir. İlaç tedavisiyle kombine edildiğinde en yüksek başarı oranlarına ulaşılır."
+      },
+      {
+       "text": "Hasta istemese dahi zorla ilaç yazılıp evine gönderilmesi temel hekimlik kuralıdır",
+       "isCorrect": false,
+       "explanation": "Tütün bırakma sürecinde hastanın özerkliği ve içsel bırakma motivasyonu birincil öneme sahiptir. Zorlayıcı tutum tedaviye uyumu bozar ve hekim hasta ilişkisini zedeler."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Birinci basamak sağlık hizmetlerinde tütün bağımlılığı basit bir alışkanlık değil, kronik ve tekrarlayıcı bir tıbbi hastalık olarak ele alınmalıdır.",
+     "maskedTerm": "kronik ve tekrarlayıcı",
+     "hint": ""
+    },
+    {
+     "type": "branching_logic",
+     "title": "Klinik Karar: Sigara Bırakmada Hasta Yaklaşımı",
+     "scenario": "Daha önce üç kez sigarayı bırakmayı deneyip her seferinde nüks yaşamış bir hasta polikliniğe başvuruyor.",
+     "options": [
+      {
+       "text": "Önceki denemelerdeki başarıları takdir etmek, nüks tetikleyicilerini analiz ederek kombine tedavi planlamak",
+       "isCorrect": true,
+       "explanation": "Bu yaklaşım kronik hastalık modeline uygun en doğru hekimlik tutumudur. Geçmiş denemeler hastanın bırakma arzusunu gösterir ve yeni tedavi için değerli deneyim sağlar."
+      },
+      {
+       "text": "Üç kez başarısız olduğu için hastaya artık tütün bırakma tedavisi verilemeyeceğini söylemek",
+       "isCorrect": false,
+       "explanation": "Bu tutum hastayı umutsuzluğa sürükleyen ve tedaviden uzaklaştıran hatalı bir yaklaşımdır. Tütün bağımlılığında nüksler tedavi desteğinin kesilmesini gerektirmez."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Tütün bağımlılığı tedavisinde en yüksek başarı oranını sağlayan temel klinik strateji nedir?",
+     "answer": "Kanıta dayalı farmakolojik tedavi ile bilişsel-davranışçı danışmanlığın eş zamanlı olarak kombine edilmesidir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 9,
+   "bolum": "2.2",
+   "title": "Transteoretik Değişim Modeli ve Davranışsal Basamaklar",
+   "pdfSayfalari": [
+    12,
+    12
+   ],
+   "sourcePdf": {
+    "startPage": 12,
+    "endPage": 12
+   },
+   "synthesisNarrative": "Prochaska ve DiClemente tarafından geliştirilen Transteoretik Değişim Modeli, bireyin bağımlılık davranışını değiştirme sürecini aşamalar halinde açıklar.\n\n- **Farkındalık Öncesi (Precontemplation):** Birey önündeki altı ay içinde sigarayı bırakmayı kesinlikle düşünmez ve değişime direnç gösterir.\n- **Farkındalık / Niyet (Contemplation):** Gelecek altı ay içinde bırakmayı düşünür ancak kararsızlık yaşar; somut bir tarih belirlememiştir.\n- **Hazırlık (Preparation):** Önündeki bir ay içinde bırakmayı planlar ve sigara sayısını azaltma gibi küçük adımlar atmaya başlar.\n- **Eylem ve Sürdürme (Action & Maintenance):** Eylem evresi ilk altı aylık bırakma sürecidir; sürdürme ise altı aydan uzun süreli dumansız yaşamı kapsar.\n\n> [!IMPORTANT]\n> Hekimin görevi hastanın hangi evrede olduğunu tespit etmek ve o evreye özgü iletişim modeliyle bir üst basamağa geçişini kolaylaştırmaktır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Transteoretik Değişim Modeline göre, gelecek bir ay içinde sigarayı bırakmayı planlayan ve bırakma günü belirleyen birey hangi evrededir?",
+     "options": [
+      {
+       "text": "Hazırlık (Preparation) evresi",
+       "isCorrect": true,
+       "explanation": "Hazırlık evresi hastanın önündeki otuz gün içinde somut bırakma adımı atmayı planladığı basamaktır. Bu evredeki bireyler sigara sayısını azaltma ve gün belirleme gibi hazırlıklar yapar."
+      },
+      {
+       "text": "Farkındalık öncesi (Precontemplation) evresi",
+       "isCorrect": false,
+       "explanation": "Farkındalık öncesindeki birey gelecek altı ay içinde kesinlikle bırakmayı düşünmez. Tütünün zararlarını reddeder ve değişime karşı yoğun direnç sergiler."
+      },
+      {
+       "text": "Farkındalık / Niyet (Contemplation) evresi",
+       "isCorrect": false,
+       "explanation": "Niyet evresindeki hasta altı ay içinde bırakmayı düşünür ancak belirgin kararsızlık yaşar. Önündeki bir ay için henüz kesin bir bırakma tarihi kararlaştırmamıştır."
+      },
+      {
+       "text": "Sürdürme (Maintenance) evresi",
+       "isCorrect": false,
+       "explanation": "Sürdürme evresi sigaranın fiilen bırakılmasının ardından en az altı ay temiz kalınan dönemi kapsar. Henüz sigara içmeye devam eden bir birey bu evrede kabul edilemez."
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "title": "Transteoretik Modelde Davranış Değişim Sıralaması",
+     "steps": [
+      "1. Adım: Farkındalık öncesi evre (gelecek 6 ay içinde bırakma düşüncesi ve niyeti yoktur)",
+      "2. Adım: Farkındalık / niyet evresi (6 ay içinde bırakmayı düşünür ancak kararsızlık yaşar)",
+      "3. Adım: Hazırlık evresi (önündeki 1 ay içinde bırakma günü belirler ve küçük adımlar atar)",
+      "4. Adım: Eylem evresi (belirlenen günde sigarayı tamamen bırakır ve ilk 6 ayı tamamlar)"
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Transteoretik modele göre bireyin gelecek altı ay içinde bırakmayı düşündüğü ancak kararsızlık yaşadığı evre niyet evresi olarak adlandırılır.",
+     "maskedTerm": "niyet evresi",
+     "hint": ""
+    },
+    {
+     "type": "active_recall",
+     "question": "Transteoretik modele göre 'Eylem' evresi ile 'Sürdürme' evresini birbirinden ayıran zaman eşiği nedir?",
+     "answer": "Eylem evresi sigaranın bırakıldığı ilk altı aylık süreci kapsarken, altı aydan uzun süre temiz kalınan dönem sürdürme evresidir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 10,
+   "bolum": "2.3",
+   "title": "Fagerström Nikotin Bağımlılık Testi (FTND) ve Bağımlılık Şiddeti",
+   "pdfSayfalari": [
+    13,
+    13
+   ],
+   "sourcePdf": {
+    "startPage": 13,
+    "endPage": 13
+   },
+   "synthesisNarrative": "Fagerström Nikotin Bağımlılık Testi (FTND), bireydeki fiziksel nikotin bağımlılığının biyolojik şiddetini ölçen altı soruluk standart bir klinik araçtır.\n\n- **Skorlama Aralığı:** Testten sıfır ile on arasında puan alınır; yedi ve üzeri puan yüksek bağımlılık düzeyini gösterir.\n- **En Kritik Soru:** 'Sabah uyandıktan sonra ilk sigaranızı ne zaman içersiniz?' sorusudur; ilk beş dakika içinde içmek en yüksek bağımlılık göstergesidir.\n- **Diğer Sorular:** Sigara içmenin yasak olduğu yerlerde zorlanma, günün hangi sigarasından vazgeçilemediği ve günde kaç sigara içildiği sorgulanır.\n\n> [!IMPORTANT]\n> Yüksek Fagerström skoru saptanan bireylerde fiziksel yoksunluk semptomları çok şiddetli olacağından farmakoterapi desteği zorunludur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Fagerström Nikotin Bağımlılık Testinde fiziksel bağımlılığın şiddetini en güçlü öngören soru nedir?",
+     "options": [
+      {
+       "text": "Sabah uyandıktan sonra ilk sigaranın ne kadar süre içinde içildiği",
+       "isCorrect": true,
+       "explanation": "Bu soru gece boyunca düşen nikotin seviyesine karşı gelişen biyolojik açlığı ölçer. İlk beş dakika içinde sigara içmek en yüksek puanı alan ve bağımlılığı en iyi gösteren parametredir."
+      },
+      {
+       "text": "Hastanın sigaraya yaşamında ilk olarak hangi yaşta başladığı",
+       "isCorrect": false,
+       "explanation": "Sigaraya başlama yaşı hastanın tütün anamnezinde genel risk faktörüdür. Ancak Fagerström testinin puanlanan altı sorusu arasında yer almamaktadır."
+      },
+      {
+       "text": "Hastanın en çok hangi marka veya aromalı sigarayı tercih ettiği",
+       "isCorrect": false,
+       "explanation": "Tercih edilen marka veya aroma tütünün fiziksel bağımlılık derecesini ölçmez. Bu nedenle standart bağımlılık ölçeklerinde sorgulanmaz."
+      },
+      {
+       "text": "Sigara içerken hastanın ne tür içecekler tükettiği",
+       "isCorrect": false,
+       "explanation": "İçecek eşliği davranışsal bir şartlanma özelliğidir. Nikotinin santral fiziksel bağımlılık skorlamasında puanlanan bir değişken değildir."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "title": "Fagerström Testi Puanlama ve Bağımlılık Derecesi",
+     "tableHeaders": [
+      "Toplam Puan",
+      "Bağımlılık Düzeyi",
+      "Klinik Öneri ve Tedavi İhtiyacı"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "0 - 2 Puan",
+        "isMasked": false
+       },
+       {
+        "text": "Çok Düşük Bağımlılık",
+        "isMasked": false
+       },
+       {
+        "text": "Yalnızca davranışsal danışmanlık ve motivasyon desteği",
+        "isMasked": false
+       }
+      ],
+      [
+       {
+        "text": "7 - 10 Puan",
+        "isMasked": false
+       },
+       {
+        "text": "Yüksek / Çok Yüksek",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Kombine farmakoterapi ve yoğun izlem desteği zorunludur",
+        "isMasked": false
+       }
+      ]
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Fagerström Nikotin Bağımlılık Testinde yedi ve üzeri puan alınması yüksek bağımlılık düzeyini gösterir.",
+     "maskedTerm": "yüksek bağımlılık",
+     "hint": ""
+    },
+    {
+     "type": "active_recall",
+     "question": "Fagerström testinde sabah uyandıktan sonra ilk beş dakika içinde sigara içen hastaya kaç puan verilir?",
+     "answer": "Bu soruya en yüksek puan olan üç puan verilir ve şiddetli fiziksel nikotin bağımlılığını gösterir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 11,
+   "bolum": "2.4",
+   "title": "5A ve 5R Klinik Müdahale Modelleri",
+   "pdfSayfalari": [
+    14,
+    14
+   ],
+   "sourcePdf": {
+    "startPage": 14,
+    "endPage": 14
+   },
+   "synthesisNarrative": "Birinci basamak hekimleri poliklinik şartlarında zamanı verimli kullanmak amacıyla kanıta dayalı iki temel müdahale modelinden yararlanır.\n\n- **5A Modeli (Hazır Olan Hasta):** Sigarayı bırakmaya istekli bireylerde Ask (Sor), Advise (Öner), Assess (Değerlendir), Assist (Destekle) ve Arrange (İzle) basamakları uygulanır.\n- **5R Modeli (Dirençli Hasta):** Bırakmaya henüz hazır olmayan bireylerde motivasyon oluşturmak amacıyla Relevance (Uygunluk), Risks (Riskler), Rewards (Ödüller), Roadblocks (Engeller) ve Repetition (Tekrar) basamakları kullanılır.\n- **Hedef Odaklılık:** 5A ile somut bırakma planı kurulurken, 5R ile hastanın kararsızlığı çözülerek bırakma aşamasına getirilmesi hedeflenir.\n\n> [!IMPORTANT]\n> Bırakmak istemeyen bir hastayı zorlamak yerine 5R yaklaşımıyla içsel çelişkilerini keşfetmesini sağlamak en etkili hekimlik tutumudur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sigarayı bırakmaya henüz hazır olmayan veya direnç gösteren bireylerde kullanılan 5R basamakları arasında hangisi bulunmaz?",
+     "options": [
+      {
+       "text": "Rejection (hastayı suçlayarak tedavi listesinden çıkarmak)",
+       "isCorrect": true,
+       "explanation": "Bu seçenek yanlıştır çünkü 5R modelinde hastayı dışlamak veya reddetmek asla yer almaz. Son 'R' harfi Repetition yani motivasyonel mesajların her vizitte tekrarlanmasını ifade eder."
+      },
+      {
+       "text": "Relevance (tütün konusunu hastanın kişisel durumuyla ilişkilendirme)",
+       "isCorrect": false,
+       "explanation": "Bu doğru bir 5R basamağıdır. Tütünün hastanın mevcut hastalıkları, aile yapısı veya sosyal rolü üzerindeki özel etkilerini kişiselleştirmeyi hedefler."
+      },
+      {
+       "text": "Risks (tütünün yol açtığı akut ve kronik sağlık risklerini belirleme)",
+       "isCorrect": false,
+       "explanation": "Bu doğru bir 5R basamağıdır. Sigara kullanımının hasta üzerindeki akut nefes darlığı veya kronik damar hasarı gibi risklerini tartışır."
+      },
+      {
+       "text": "Rewards (sigarayı bırakmanın sağlayacağı sağlık ve ekonomik ödülleri vurgulama)",
+       "isCorrect": false,
+       "explanation": "Bu doğru bir 5R basamağıdır. Sigarayı bırakmanın getireceği tat, koku, enerji artışı ve maddi tasarruf gibi kazanımları ortaya koyar."
+      }
+     ]
+    },
+    {
+     "type": "venn_grid",
+     "title": "5A ve 5R Klinik Müdahale Modellerinin Karşılaştırması",
+     "labelA": "5A Modeli",
+     "labelB": "5R Modeli",
+     "items": [
+      {
+       "criterion": "Sigarayı bırakmaya hazır ve istekli olan hastalarda uygulanır",
+       "correct": "A"
+      },
+      {
+       "criterion": "Sigarayı bırakmaya henüz hazır olmayan veya dirençli hastalarda motivasyon artırmak için uygulanır",
+       "correct": "B"
+      },
+      {
+       "criterion": "Birinci basamakta hekimin tütün kontrolünde kullandığı kanıta dayalı klinik rehberdir",
+       "correct": "both"
+      },
+      {
+       "criterion": "Hastaya tütün içmeye devam etmesi için reçete yazılmasını savunan bir yaklaşımdır",
+       "correct": "neither"
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sigarayı bırakmaya istekli bireylerde hekimin uyguladığı beş basamaklı klinik yaklaşım 5A modeli olarak adlandırılır.",
+     "maskedTerm": "5A modeli",
+     "hint": ""
+    },
+    {
+     "type": "active_recall",
+     "question": "5A modelindeki son 'A' harfi olan 'Arrange' klinik olarak neyi ifade eder?",
+     "answer": "Bırakma gününün ardından ilk hafta içinde ve sonraki aylarda kontrol izlem vizitlerinin planlanmasını ifade eder."
+    }
+   ]
+  },
+  {
+   "slideNumber": 12,
+   "bolum": "2.5",
+   "title": "Birinci Basamak Tedavi Algoritması",
+   "pdfSayfalari": [
+    15,
+    16
+   ],
+   "sourcePdf": {
+    "startPage": 15,
+    "endPage": 16
+   },
+   "synthesisNarrative": "Birinci basamak sigara bırakma algoritması, her hastaya özel klinik durumun analiz edilerek en uygun tedavi yolunun seçilmesini sağlar.\n\n- **Adım Adım Değerlendirme:** Tütün kullanım durumu sorgulanır, bağımlılık düzeyi Fagerström testi ile ölçülür ve bırakma kararlılığı belirlenir.\n- **Bırakma Tarihi (Quit Date):** Bırakmaya hazır hastayla birlikte önündeki iki ila üç hafta içinde net bir bırakma günü kararlaştırılır.\n- **Tedavi Planı:** Bağımlılık derecesine göre birinci basamak farmakoterapilerden biri (NRT, Bupropion veya Vareniklin) seçilir ve davranışsal önerilerle desteklenir.\n\n> [!NOTE]\n> Bırakma gününden önceki günlerde hastanın evdeki kül tablalarını atması ve çevresindeki içicilere kararını bildirmesi başarıyı artırır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Birinci basamak sigara bırakma algoritmasında farmakoterapi seçiminden önce belirlenmesi gereken en temel klinik basamak nedir?",
+     "options": [
+      {
+       "text": "Hastanın bırakmaya hazır oluşunun ve bağımlılık şiddetinin saptanması",
+       "isCorrect": true,
+       "explanation": "Bu basamak algoritmanın temel taşını oluşturur. Hastanın motivasyon evresi ve Fagerström bağımlılık skoru belirlenmeden doğru farmakoterapi seçilemez."
+      },
+      {
+       "text": "Hastaya hemen en pahalı ilacın yazılıp kontrol planlanmadan gönderilmesi",
+       "isCorrect": false,
+       "explanation": "Bu tutum algoritmaya ve tıbbi deontolojiye tamamen aykırıdır. Değerlendirme yapılmadan ve takip planlanmadan ilaç yazmak başarısızlıkla sonuçlanır."
+      },
+      {
+       "text": "Hastanın tüm akrabalarının sigara içip içmediğinin zorunlu araştırılması",
+       "isCorrect": false,
+       "explanation": "Akrabaların tütün kullanım durumu hastanın aile öyküsünde sorgulanan genel bir risk faktörüdür. Ancak hastanın kendi bırakma planının kurulmasında birincil karar basamağı değildir."
+      },
+      {
+       "text": "Hastaya sigarayı bırakmaması yönünde telkinde bulunulması",
+       "isCorrect": false,
+       "explanation": "Bu yaklaşım koruyucu hekimlik ilkelerine ve tedavi hedeflerine tamamen zıttır. Hekim her zaman bırakmayı teşvik etmelidir."
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "title": "Birinci Basamak Tedavi Algoritması Akış Basamakları",
+     "steps": [
+      "1. Adım: Tütün kullanım durumunun ve Fagerström bağımlılık şiddetinin saptanması",
+      "2. Adım: Hastanın Transteoretik modele göre bırakmaya hazır oluşunun doğrulanması",
+      "3. Adım: Hasta ile birlikte iki ila üç hafta içinde net bir bırakma günü belirlenmesi",
+      "4. Adım: Uygun farmakoterapinin seçilmesi ve ilk kontrol vizitinin ayarlanması"
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Birinci basamak algoritmasında bırakmaya hazır hasta ile birlikte önündeki iki ila üç hafta içinde net bir bırakma günü kararlaştırılır.",
+     "maskedTerm": "bırakma günü",
+     "hint": ""
+    },
+    {
+     "type": "active_recall",
+     "question": "Tedavi algoritmasında bırakma günü belirlemenin hastanın psikolojik hazırlığına katkısı nedir?",
+     "answer": "Net bir hedef tarih belirlemek hastanın erteleme davranışını kırar, çevresini dumansız ortama hazırlamasını ve ilaç tedavisine zamanında başlamasını sağlar."
+    }
+   ]
+  },
+  {
+   "slideNumber": 13,
+   "bolum": "2.6",
+   "title": "Motivasyonel Görüşme İlkeleri ve Direnç Yönetimi",
+   "pdfSayfalari": [
+    17,
+    19
+   ],
+   "sourcePdf": {
+    "startPage": 17,
+    "endPage": 19
+   },
+   "synthesisNarrative": "Motivasyonel görüşme, hastanın bağımlılığıyla ilgili yaşadığı içsel kararsızlığı (ambivalans) keşfetmesini ve çözmesini sağlayan hasta merkezli rehberlik yöntemidir.\n\n- **Temel İlkeler:** Empati göstermek, mevcut durum ile gelecekteki hedefler arasındaki çelişkiyi ortaya koymak, dirençle tartışmamak ve özyeterliliği desteklemek esastır.\n- **Açık Uçlu İletişim:** Hekim yargılayıcı 'Neden içiyorsun?' soruları yerine 'Sigarayı bırakmak hayatınızda neleri değiştirir?' gibi açık uçlu sorular sorar.\n- **Yansıtmalı Dinleme:** Hastanın dirençli ifadeleri hekim tarafından sabırla dinlenir ve dirençle doğrudan yüzleşmek yerine esnek bir dille yönlendirilir.\n\n> [!IMPORTANT]\n> Motivasyonel görüşmede hekim hastayı ikna etmeye çalışan bir tartışmacı değil, hastanın kendi bırakma gerekçelerini keşfetmesine eşlik eden bir rehberdir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Motivasyonel görüşme ilkeleri çerçevesinde hekimin sergilemesi gereken en uygun klinik tutum nedir?",
+     "options": [
+      {
+       "text": "Empati göstererek hastanın içsel kararsızlığını keşfetmesini ve kendi bırakma nedenlerini bulmasını sağlamak",
+       "isCorrect": true,
+       "explanation": "Motivasyonel görüşme hasta merkezli ve empatik bir danışmanlıktır. Hekim hastanın ambivalansını anlamasına ve kendi içsel değişim gerekçelerini keşfetmesine rehberlik eder."
+      },
+      {
+       "text": "Hasta direnç gösterdiğinde onunla tartışarak sigaranın zararlarını zorla kabul ettirmek",
+       "isCorrect": false,
+       "explanation": "Dirençle tartışmak hastanın savunma mekanizmalarını kemikleştirir ve motivasyonu kırar. Hekimin görevi dirençle tartışmak değil, direnci esnek bir dille yönlendirerek ambivalansı çözmektir."
+      },
+      {
+       "text": "Görüşme boyunca hastaya hiç söz hakkı tanımadan yalnızca hekimin konuşması",
+       "isCorrect": false,
+       "explanation": "Motivasyonel görüşmede hasta aktif konuşmacıdır ve açık uçlu sorularla yönlendirilir. Tek taraflı hekim monoloğu bu yönteme tamamen aykırıdır."
+      },
+      {
+       "text": "Sigarayı bırakmakta zorlanan hastayı derhal poliklinikten kovmak",
+       "isCorrect": false,
+       "explanation": "Hastayı reddetmek tıp etiğine ve birinci basamak hekimlik sorumluluklarına tamamen zıttır. Hekim her zaman destekleyici olmalıdır."
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Empati ve Rehberlik",
+     "rightCategory": "Direnç ve Tartışma",
+     "cards": [
+      {
+       "text": "Hastanın duygularını ve bağımlılık zorluğunu yargılamadan anlamaya çalışmak",
+       "category": "left"
+      },
+      {
+       "text": "Hastanın itirazlarına karşı sert tartışmaya girerek zorla ikna etmeye çalışmak",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Motivasyonel görüşmede hastanın bağımlılığıyla ilgili yaşadığı içsel kararsızlığı çözmek amacıyla ambivalans kavramı ele alınır.",
+     "maskedTerm": "ambivalans",
+     "hint": ""
+    },
+    {
+     "type": "active_recall",
+     "question": "Motivasyonel görüşmede hekim ile hasta arasındaki ilişki nasıl tanımlanır?",
+     "answer": "Hekim otoriter bir karar verici değil, hastanın kendi değişim motivasyonunu keşfetmesine eşlik eden empatik bir rehberdir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 14,
+   "bolum": "2.R",
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Bağımlılık Değerlendirmesi ve Davranışsal Müdahaleler",
+   "pdfSayfalari": [
+    11,
+    19
+   ],
+   "sourcePdf": {
+    "startPage": 11,
+    "endPage": 19
+   },
+   "synthesisNarrative": "Bu bölümde birinci basamak klinik yaklaşımı, Transteoretik Değişim Modeli, Fagerström testi, 5A/5R yöntemleri, tedavi algoritması ve motivasyonel görüşme ilkelerini işledik.\n\n- **Kronik Model ve Evreler:** Bağımlılık nükslerle seyreden kronik bir hastalıktır; Transteoretik modelde niyet öncesi, niyet, hazırlık, eylem ve sürdürme evreleri yer alır.\n- **Fagerström Testi (FTND):** Fiziksel bağımlılığı ölçer; sabah uyandıktan sonraki ilk beş dakika içinde sigara içmek yüksek bağımlılığı gösterir.\n- **5A ve 5R Modelleri:** Bırakmaya hazır hastada 5A, dirençli hastada ise Uygunluk, Riskler, Ödüller, Engeller ve Tekrarı içeren 5R modeli kullanılır.\n- **Motivasyonel Görüşme:** Empatik dinleme, ambivalansı çözme ve dirençle tartışmama ilkeleri üzerine kuruludur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "İkinci bölümde işlenen değerlendirme ve davranışsal modeller dikkate alındığında aşağıdaki ifadelerden hangisi yanlıştır?",
+     "options": [
+      {
+       "text": "5R modeli yalnızca sigarayı çoktan bırakmış ve sürdürme evresinde olan bireylerde uygulanır",
+       "isCorrect": true,
+       "explanation": "Bu ifade yanlıştır çünkü 5R modeli sigarayı bırakmaya henüz hazır olmayan ve direnç gösteren bireylerde motivasyon artırmak için uygulanır. Sürdürme evresinde nüks önleme takibi yapılır."
+      },
+      {
+       "text": "Transteoretik modele göre hazırlık evresindeki birey önündeki bir ay içinde bırakmayı planlar",
+       "isCorrect": false,
+       "explanation": "Bu doğru bir bilgidir çünkü hazırlık evresi otuz gün içinde somut adım atmayı ve bırakma günü belirlemeyi içerir."
+      },
+      {
+       "text": "Fagerström testinde yedi ve üzeri puan almak yüksek düzeyde fiziksel bağımlılığı gösterir",
+       "isCorrect": false,
+       "explanation": "Bu doğru bir bilgidir çünkü yedi ila on puan aralığı şiddetli biyolojik bağımlılığı gösterir ve farmakoterapi gerektirir."
+      },
+      {
+       "text": "Motivasyonel görüşmede hekimin dirençle tartışmaması ve empatik yansıtma yapması esastır",
+       "isCorrect": false,
+       "explanation": "Bu doğru bir klinik ilkedir çünkü motivasyonel görüşme empatik yansıtma üzerine kuruludur. Hekimin dirençle tartışmaması hastanın içsel değişim gerekçelerini keşfetmesini sağlar."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "title": "Bölüm Özeti: Davranışsal ve Klinik Araçlar",
+     "tableHeaders": [
+      "Model / Test",
+      "Hedef Kitle",
+      "Temel Klinik Çıktı"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "Transteoretik Model",
+        "isMasked": false
+       },
+       {
+        "text": "Tüm sigara içenler",
+        "isMasked": false
+       },
+       {
+        "text": "Değişime hazır oluş evresinin saptanması",
+        "isMasked": false
+       }
+      ],
+      [
+       {
+        "text": "Fagerström (FTND)",
+        "isMasked": false
+       },
+       {
+        "text": "Fiziksel bağımlılar",
+        "isMasked": false
+       },
+       {
+        "text": "Biyolojik bağımlılık şiddetinin ve ilaç ihtiyacının belirlenmesi",
+        "isMasked": false
+       }
+      ],
+      [
+       {
+        "text": "5R Modeli",
+        "isMasked": false
+       },
+       {
+        "text": "Bırakmaya dirençli olanlar",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "İçsel motivasyonun ve farkındalığın artırılması",
+        "isMasked": false
+       }
+      ]
+     ]
+    },
+    {
+     "type": "branching_logic",
+     "title": "Klinik Karar: Hangi Model Seçilmeli?",
+     "scenario": "Hasta: 'Doktor bey, torunum doğdu ve artık sigarayı tamamen bırakmak istiyorum, bana yardımcı olun' diyor.",
+     "options": [
+      {
+       "text": "Hasta hazır olduğu için derhal 5A modelini başlatıp Fagerström skorunu ölçmek ve bırakma günü belirlemek",
+       "isCorrect": true,
+       "explanation": "Bu doğru klinik yaklaşımdır çünkü hasta eyleme geçmeye istekli ve motive durumdadır. 5A algoritmasıyla somut tedavi planına geçilmelidir."
+      },
+      {
+       "text": "Hastaya dirençli hasta muamelesi yaparak 5R risk anlatımı uygulamak",
+       "isCorrect": false,
+       "explanation": "Bu tutum hatalıdır çünkü 5R henüz bırakmayı düşünmeyen dirençli hastalar içindir. İstekli hastada 5R uygulamak gereksiz zaman kaybı yaratır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Fagerström Nikotin Bağımlılık Testinde en kritik soru nedir?",
+     "answer": "Sabah uyandıktan sonra ilk sigaranın ne zaman içildiğidir; ilk beş dakika içinde içmek yüksek bağımlılığı gösterir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 15,
+   "bolum": "3.1",
+   "title": "Nikotin Replasman Tedavisi (NRT) İlkeleri",
+   "pdfSayfalari": [
+    20,
+    22
+   ],
+   "sourcePdf": {
+    "startPage": 20,
+    "endPage": 22
+   },
+   "synthesisNarrative": "Nikotin Replasman Tedavisi (NRT), tütündeki zararlı katran ve karbonmonoksit toksinleri olmaksızın vücuda kontrollü nikotin verme prensibine dayanır.\n\n- **Tedavinin İki Amacı:** Nikotinik asetilkolin reseptörlerini uyararak fiziksel aşermeyi ve çekilme semptomlarını hafifletmek, böylece hastanın davranışsal değişime odaklanmasını sağlamaktır.\n- **Transdermal Bant:** Yavaş ve kararlı bir nikotin salınımı yaparak gün boyu taban plazma konsantrasyonunu korur.\n- **Akut Formlar (Sakız ve Pastil):** Mukoza yoluyla hızlı emilerek gün içinde aniden gelen şiddetli sigara aşerme krizlerini baskılar.\n\n> [!NOTE]\n> NRT bağımlılığı devam ettirmez; aksine sigaranın yarattığı ani dopamin piklerini engelleyerek nikotin ihtiyacını basamaklı olarak sonlandırır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Nikotin replasman tedavisinin (NRT) temel farmakolojik çalışma prensibi ve klinik hedefi nedir?",
+     "options": [
+      {
+       "text": "Vücuda tütün toksinleri olmadan kontrollü nikotin vererek yoksunluk belirtilerini ve aşermeyi hafifletmek",
+       "isCorrect": true,
+       "explanation": "NRT tedavisi tütün dumanındaki katran ve karbonmonoksit gibi zehirli gazlar olmaksızın temiz nikotin sağlar. Reseptörleri doyurarak yoksunluk belirtilerini ve aşermeyi hafifletir."
+      },
+      {
+       "text": "Beyindeki tüm asetilkolin reseptörlerini geri dönüşümsüz olarak tahrip etmek",
+       "isCorrect": false,
+       "explanation": "Bu farmakolojik olarak hatalıdır çünkü NRT fizyolojik nikotinik reseptörleri tahrip etmez. Yalnızca geçici olarak uyararak yoksunluk krizini engeller."
+      },
+      {
+       "text": "Hastanın sigara içme sıklığını günde beş pakete çıkaracak şekilde hızlandırmak",
+       "isCorrect": false,
+       "explanation": "Bu ifade tütün kontrolünün temel ilkelerine ve hasta sağlığına tamamen aykırıdır. NRT tütün kullanımını sonlandırmayı amaçlar."
+      },
+      {
+       "text": "Mide asiditesini nötralize ederek peptik ülser tedavisinde birinci basamak olmak",
+       "isCorrect": false,
+       "explanation": "NRT bir antiasit veya gastrointestinal ilaç değildir. Tütün bağımlılığında yerine koyma tedavisi olarak kullanılan spesifik bir yöntemdir."
+      }
+     ]
+    },
+    {
+     "type": "before_after_slider",
+     "title": "Sigara İçimi ile NRT Farmakokinetiğinin Karşılaştırması",
+     "leftTitle": "Sigara Dumanı",
+     "rightTitle": "Nikotin Replasman Tedavisi (NRT)",
+     "leftPoints": [
+      "Saniyeler içinde kanda çok yüksek ve ani nikotin pikleri oluşturur",
+      "Beraberinde katran, karbonmonoksit ve yetmiş karsinojen madde vücuda girer"
+     ],
+     "rightPoints": [
+      "Kanda yavaş, kontrollü ve kararlı plazma nikotin düzeyi sağlar",
+      "Hiçbir kanserojen gaz veya katran partikülü içermez, temiz nikotindir"
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Nikotin Replasman Tedavisinin iki temel amacı nikotin reseptörlerini uyararak aşerme ve çekilme semptomlarını önlemektir.",
+     "maskedTerm": "aşerme ve çekilme",
+     "hint": ""
+    },
+    {
+     "type": "active_recall",
+     "question": "NRT formlarından transdermal bant ile nikotin sakızının klinik kullanım farkı nedir?",
+     "answer": "Transdermal bant gün boyu kararlı bazal nikotin seviyesi sağlarken, sakız aniden gelen akut aşerme krizlerinde çiğnenir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 16,
+   "bolum": "3.2",
+   "title": "NRT Uygulama Kuralları, Dozlama ve Yan Etkiler",
+   "pdfSayfalari": [
+    23,
+    25
+   ],
+   "sourcePdf": {
+    "startPage": 23,
+    "endPage": 25
+   },
+   "synthesisNarrative": "NRT tedavisinin başarısı, doğru doz seçimi ve hastanın uygulama kurallarına tam uyumu ile doğrudan ilişkilidir.\n\n- **Doz Belirleme:** Günde yirmi veya daha fazla sigara içen ya da Fagerström skoru yüksek bireylerde 21 mg'lık yüksek doz bantlarla başlanır.\n- **Uygulama Kuralları:** Transdermal bant her sabah tüysüz, kuru ve temiz bir cilt bölgesine yapıştırılmalı ve lokal tahrişi önlemek için her gün yapıştırma yeri değiştirilmelidir.\n- **Kombinasyon Tedavisi:** Şiddetli bağımlılarda transdermal bant ile sakız veya pastil kombinasyonu tekli kullanıma göre daha yüksek bırakma oranları sağlar.\n\n> [!IMPORTANT]\n> NRT uygulanırken sigara içilmeye devam edilmemelidir; eş zamanlı sigara içimi toksik nikotin düzeylerine ve kardiyovasküler yan etkilere yol açabilir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Transdermal nikotin bandı kullanan bir hastada lokal cilt irritasyonunu en aza indirmek için önerilen en temel kural nedir?",
+     "options": [
+      {
+       "text": "Bandı her gün vücudun farklı bir tüysüz cilt bölgesine yapıştırmak",
+       "isCorrect": true,
+       "explanation": "Bu kural lokal kontakt dermatiti ve cilt tahrişini önleyen temel klinik ilkedir. Bandın her gün farklı bir anatomik bölgeye yapıştırılması cildin dinlenmesini sağlar."
+      },
+      {
+       "text": "Bandı çıkarmadan üst üste beş adet yeni bant yapıştırmak",
+       "isCorrect": false,
+       "explanation": "Bu uygulama son derece tehlikelidir ve aşırı nikotin yüklenmesine yol açabilir. Her gün eski bant çıkarılarak tek bir yeni bant takılmalıdır."
+      },
+      {
+       "text": "Bandı yalnızca ıslak ve sabunlu cilde yapıştırmaya özen göstermek",
+       "isCorrect": false,
+       "explanation": "Transdermal bantların yapışması ve emilimi için cildin temiz ve kuru olması gerekir. Islak cilde yapıştırmak bandın düşmesine neden olur."
+      },
+      {
+       "text": "Bandı günde on kez alkolle yıkayıp tekrar yapıştırmak",
+       "isCorrect": false,
+       "explanation": "Transdermal bantlar yıkanarak tekrar kullanılabilen tıbbi ürünler değildir. Yirmi dört saatlik kararlı salınımın ardından çıkarılarak her sabah yenisiyle değiştirilmelidir."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "title": "Nikotin Replasman Tedavisi Doz Kılavuzu",
+     "tableHeaders": [
+      "Bağımlılık Düzeyi",
+      "Başlangıç Bant Dozu",
+      "Akut Destek Seçeneği"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "Günde 20 ve üzeri sigara",
+        "isMasked": false
+       },
+       {
+        "text": "21 mg / 24 saat bant",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Gerektikçe 2-4 mg nikotin sakızı",
+        "isMasked": false
+       }
+      ],
+      [
+       {
+        "text": "Günde 10-19 sigara",
+        "isMasked": false
+       },
+       {
+        "text": "14 mg / 24 saat bant",
+        "isMasked": false
+       },
+       {
+        "text": "Gerektikçe 2 mg nikotin sakızı veya pastil",
+        "isMasked": false
+       }
+      ]
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Transdermal bant kullanılırken lokal cilt tahrişini önlemek için bandın yapıştırıldığı bölge her gün değiştirilmelidir.",
+     "maskedTerm": "her gün değiştirilmelidir",
+     "hint": ""
+    },
+    {
+     "type": "active_recall",
+     "question": "Transdermal nikotin bandı kullanan bir hasta geceleri canlı rüyalar ve uykusuzluk yaşarsa ne önerilir?",
+     "answer": "Bandın gece yatarken çıkarılması ve sabah yenisinin takılması (on altı saatlik gündüz protokolü) önerilir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 17,
+   "bolum": "3.3",
+   "title": "Bupropion Hidroklorür Farmakoterapisi",
+   "pdfSayfalari": [
+    26,
+    28
+   ],
+   "sourcePdf": {
+    "startPage": 26,
+    "endPage": 28
+   },
+   "synthesisNarrative": "Bupropion hidroklorür, nikotin içermeyen ve tütün bırakma tedavisinde birinci basamakta onaylanmış bir atipik antidepresandır.\n\n- **Etki Mekanizması:** Noradrenalin ve dopamin gerialım inhibitörüdür (NDRI); nükleus akkumbenste dopamin düzeyini yükselterek aşermeyi ve çekilme semptomlarını hafifletir.\n- **Kullanım Protokolü:** Kararlı plazma konsantrasyonuna ulaşması için sigara bırakma gününden bir ila iki hafta önce ilaca başlanmalıdır.\n- **Doz Şeması:** İlk üç gün günde bir kez 150 mg alınır; dördüncü günden itibaren günde iki kez 150 mg (günde toplam 300 mg) dozuna çıkılır.\n\n> [!IMPORTANT]\n> Bupropion nöbet eşiğini düşürdüğü için epilepsi, kafa travması, santral sinir sistemi tümörü veya yeme bozukluğu öyküsü olan bireylerde kesinlikle kontrendikedir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sigara bırakma tedavisinde kullanılan Bupropion hidroklorür ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "options": [
+      {
+       "text": "Epilepsi veya nöbet öyküsü olan hastalarda en güvenli birinci basamak ilaçtır",
+       "isCorrect": true,
+       "explanation": "Bu ifade yanlıştır çünkü bupropion nöbet eşiğini doza bağımlı olarak düşürür. Bu nedenle konvülsiyon veya kafa travması öyküsünde kesinlikle kontrendikedir."
+      },
+      {
+       "text": "Dopamin ve noradrenalin geri alımını bloke ederek aşermeyi azaltır",
+       "isCorrect": false,
+       "explanation": "Bu doğru bir mekanizmadır çünkü bupropion bir NDRI ajanıdır. Nükleus akkumbenste dopamin tonusunu koruyarak aşermeyi yatıştırır."
+      },
+      {
+       "text": "Tedaviye hastanın belirlediği sigara bırakma gününden bir ila iki hafta önce başlanır",
+       "isCorrect": false,
+       "explanation": "Bu doğru bir klinik kuraldır çünkü ilacın kararlı kan düzeyine ulaşması zaman alır. Bırakma gününe kadar hasta hedef doza ulaşır."
+      },
+      {
+       "text": "Günde iki kez yüz elli miligramlık dozlar arasında en az sekiz saat aralık bırakılmalıdır",
+       "isCorrect": false,
+       "explanation": "Bu doğru bir güvenlik protokolüdür çünkü doz aralığının korunması pik plazma konsantrasyonunu ve nöbet riskini sınırlar."
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "title": "Bupropionun Terapötik Etki Mekanizması",
+     "steps": [
+      "1. Adım: Sigara bırakma gününden bir ila iki hafta önce ilacın başlatılması",
+      "2. Adım: Santral sinir sisteminde dopamin ve noradrenalin geri alımının bloke edilmesi",
+      "3. Adım: Nükleus akkumbenste dopamin tonusunun korunması ve yoksunluk aşermesinin önlenmesi",
+      "4. Adım: Belirlenen bırakma gününde hastanın sigarayı rahatça bırakabilmesi"
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Bupropion hidroklorür tedavisine kararlı kan düzeyine ulaşabilmesi için bırakma tarihinden bir ila iki hafta önce başlanmalıdır.",
+     "maskedTerm": "bir ila iki hafta önce",
+     "hint": ""
+    },
+    {
+     "type": "active_recall",
+     "question": "Bupropion tedavisinde iki doz arasında en az kaç saatlik zaman aralığı bırakılmalıdır?",
+     "answer": "Nöbet (konvülsiyon) riskini en aza indirmek amacıyla iki doz arasında en az sekiz saat aralık bırakılmalıdır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 18,
+   "bolum": "3.4",
+   "title": "Vareniklin: Alfa-4 Beta-2 Parsiyel Agonist Mekanizması",
+   "pdfSayfalari": [
+    29,
+    32
+   ],
+   "sourcePdf": {
+    "startPage": 29,
+    "endPage": 32
+   },
+   "synthesisNarrative": "Vareniklin, santral sinir sistemindeki alfa-4 beta-2 nikotinik asetilkolin reseptörlerine yüksek seçicilikle bağlanan bir parsiyel agonisttir.\n\n- **İkili Etki Mekanizması:** Parsiyel agonizma sayesinde bazal dopamin salgılatarak yoksunluk belirtilerini ve aşermeyi hafifletir.\n- **Nikotin Blokajı:** Reseptöre tam nikotinden çok daha güçlü bağlandığı için hasta sigara içse dahi nikotinin haz verici pekiştirmesini tamamen bloke eder.\n- **Doz Titrasyonu:** Bulantı yan etkisini önlemek için ilk üç gün 0.5 mg tek doz, 4-7. günlerde 0.5 mg günde iki kez, sekizinci günden itibaren 1 mg günde iki kez şeklinde titre edilir.\n\n> [!NOTE]\n> En sık bildirilen yan etki bulantıdır; ilacın tok karnına ve bol suyla alınması bulantıyı büyük ölçüde hafifletir. Gebelerde kullanımı uygun değildir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Vareniklinin sigara bırakma tedavisindeki temel moleküler etki mekanizması nedir?",
+     "options": [
+      {
+       "text": "Alfa-4 beta-2 nikotinik asetilkolin reseptörlerinin parsiyel agonizmi",
+       "isCorrect": true,
+       "explanation": "Vareniklin alfa-4 beta-2 nikotinik reseptörlere parsiyel agonist olarak bağlanır. Düşük düzey dopamin salgılatarak aşermeyi önlerken nikotinin tam agonist bağlanmasını bloke eder."
+      },
+      {
+       "text": "Santral muskarinik reseptörlerin geri dönüşümsüz blokajı",
+       "isCorrect": false,
+       "explanation": "Bu mekanizma atropin benzeri antikolinerjik ajanlara aittir. Vareniklin muskarinik değil nikotinik asetilkolin reseptörleri üzerinden etki gösterir."
+      },
+      {
+       "text": "GABA-A klor kanallarının allosterik aktivasyonu",
+       "isCorrect": false,
+       "explanation": "Bu etki sedatif hipnotik benzodiazepinlerin çalışma prensibidir. Tütün bağımlılığında vareniklinin spesifik nikotinik reseptör mekanizmasıyla örtüşmez."
+      },
+      {
+       "text": "Karaciğerde nikotin metabolizmasını hızlandıran enzim indüksiyonu",
+       "isCorrect": false,
+       "explanation": "Vareniklin karaciğerde enzim indüksiyonu veya inhibisyonu yapmaz. Doğrudan santral sinir sistemindeki nöronal reseptörler üzerinde çalışır."
+      }
+     ]
+    },
+    {
+     "type": "before_after_slider",
+     "title": "Vareniklin Varken ve Yokken Sigara İçiminin Reseptör Etkisi",
+     "leftTitle": "Vareniklin Tedavisi Yokken",
+     "rightTitle": "Vareniklin Tedavisi Altındayken",
+     "leftPoints": [
+      "Nikotin alfa-4 beta-2 reseptörlerine hızla tam agonist olarak bağlanır",
+      "Nükleus akkumbenste masif dopamin deşarjı ve güçlü haz oluşur"
+     ],
+     "rightPoints": [
+      "Vareniklin reseptörü parsiyel işgal ederek nikotinin bağlanmasını bloke eder",
+      "Nikotin gelse bile dopamin sıçraması gerçekleşmez ve beklenen zevk alınamaz"
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Vareniklin santral sinir sistemindeki alfa-4 beta-2 nikotinik reseptörlerin parsiyel agonisti olarak görev yapar.",
+     "maskedTerm": "parsiyel agonisti",
+     "hint": ""
+    },
+    {
+     "type": "active_recall",
+     "question": "Vareniklin kullanımında en sık bildirilen yan etki nedir ve nasıl hafifletilir?",
+     "answer": "En sık görülen yan etki bulantıdır; ilacın tok karnına, yemeklerden sonra ve bol suyla alınmasıyla belirgin şekilde hafifletilir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 19,
+   "bolum": "3.5",
+   "title": "Sitizin Tedavi Protokolü",
+   "pdfSayfalari": [
+    33,
+    35
+   ],
+   "sourcePdf": {
+    "startPage": 33,
+    "endPage": 35
+   },
+   "synthesisNarrative": "Sitizin, altın yağmuru bitkisinden elde edilen ve vareniklinin moleküler öncülü olan doğal bir nikotinik parsiyel agonisttir.\n\n- **Farmakolojik Profil:** Alfa-4 beta-2 nikotinik reseptörlere yüksek afiniteyle bağlanarak nikotinin etkilerini taklit eder ve aşermeyi bastırır.\n- **Tedavi Süresi:** Standart tedavi protokolü yirmi beş gün sürer ve basamaklı doz azaltımına dayanır.\n- **Doz Şeması:** İlk üç gün iki saatte bir toplam altı tablet ile başlanır; sonraki günlerde doz sıklığı azaltılarak yirmi beşinci günde tamamlanır.\n\n> [!NOTE]\n> Sitizin kullanan hastaların tedavinin en geç beşinci gününde sigarayı tamamen bırakmış olması hedeflenir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Doğal bitkisel nikotinik parsiyel agonist olan Sitizin tedavisinde standart protokol süresi toplam kaç gündür?",
+     "options": [
+      {
+       "text": "Yirmi beş gün",
+       "isCorrect": true,
+       "explanation": "Sitizin tedavi protokolü yirmi beş günlük basamaklı doz azaltım şemasına dayanır. İlk günlerde sık aralıkla başlanıp giderek seyreltilerek tedavi tamamlanır."
+      },
+      {
+       "text": "On iki ay",
+       "isCorrect": false,
+       "explanation": "Bu süre sitizin için gereksiz ve aşırı uzundur. İlacın klinik onaylı protokolü yirmi beş günlük kürle sınırlıdır."
+      },
+      {
+       "text": "Yalnızca üç gün",
+       "isCorrect": false,
+       "explanation": "İlk üç gün ilaca başlangıç ve doz yükleme evresidir. Bırakma ve çekilmenin önlenmesi için yirmi beş güne yayılması şarttır."
+      },
+      {
+       "text": "Beş yıl",
+       "isCorrect": false,
+       "explanation": "Sitizin kronik ömür boyu sürdürülen bir idame tedavisi ajanı değildir. İlacın klinik onaylı protokolü yirmi beş günlük basamaklı doz azaltım kürüyle sınırlıdır."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "title": "Sitizin Doz Azaltım Protokolü",
+     "tableHeaders": [
+      "Tedavi Günleri",
+      "Günlük Doz ve Sıklık",
+      "Klinik Amaç ve Talimat"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "1 - 3. Gün",
+        "isMasked": false
+       },
+       {
+        "text": "2 saatte bir 1 tablet (Günde 6 tablet)",
+        "isMasked": false
+       },
+       {
+        "text": "Başlangıç dozu, sigara azaltılır",
+        "isMasked": false
+       }
+      ],
+      [
+       {
+        "text": "4 - 12. Gün",
+        "isMasked": false
+       },
+       {
+        "text": "2.5 saatte bir 1 tablet (Günde 5 tablet)",
+        "isMasked": false
+       },
+       {
+        "text": "En geç 5. günde sigara tamamen bırakılır",
+        "isMasked": true,
+        "hint": ""
+       }
+      ]
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sitizin tedavisinde standart protokol yirmi beş gün sürer ve hastanın en geç beşinci günde sigarayı bırakması beklenir.",
+     "maskedTerm": "yirmi beş gün",
+     "hint": ""
+    },
+    {
+     "type": "active_recall",
+     "question": "Sitizin tedavisi gören bir hasta en geç kaçıncı günde sigarayı tamamen bırakmış olmalıdır?",
+     "answer": "Tedavi protokolüne göre hasta en geç beşinci günün sonunda sigarayı tamamen kesmiş olmalıdır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 20,
+   "bolum": "3.6",
+   "title": "İkinci Basamak ve Yeni Tedavi Seçenekleri",
+   "pdfSayfalari": [
+    36,
+    40
+   ],
+   "sourcePdf": {
+    "startPage": 36,
+    "endPage": 40
+   },
+   "synthesisNarrative": "Birinci basamak tedavilere yanıt vermeyen veya kontrendikasyonu bulunan hastalarda ikinci basamak ajanlar değerlendirilebilir.\n\n- **Klonidin:** Santral presinaptik alfa-2 adrenerjik agonisttir; sempatik tonusu baskılayarak yoksunluk belirtilerini azaltır ancak sedasyon ve hipotansiyon yan etkileri sıktır.\n- **Nortriptilin:** Noradrenalin geri alımını bloke eden bir trisiklik antidepresandır; plaseboya üstünlüğü kanıtlanmıştır ancak antikolinerjik yan etki riski taşır.\n- **Rimonabant:** Kannabinoid CB1 reseptör antagonisti olarak dopaminerjik aşermeyi ve kilo alımını azaltmak amacıyla araştırılmış ancak depresyon riski nedeniyle kullanımdan çekilmiştir.\n\n> [!IMPORTANT]\n> İkinci basamak tedaviler yan etki profilleri nedeniyle yalnızca birinci basamak ajanların uygulanamadığı özel klinik durumlarda düşünülmelidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sigara bırakma tedavisinde ikinci basamakta yer alan ve sempatik aktiviteyi santral alfa-2 agonizma ile baskılayan ajan nedir?",
+     "options": [
+      {
+       "text": "Klonidin",
+       "isCorrect": true,
+       "explanation": "Klonidin santral presinaptik alfa-2 adrenerjik reseptörleri uyararak sempatik çıkışı azaltır. Bu sayede nikotin yoksunluğuna bağlı taşikardi, anksiyete ve titreme belirtilerini hafifletir."
+      },
+      {
+       "text": "Vareniklin",
+       "isCorrect": false,
+       "explanation": "Vareniklin alfa-4 beta-2 nikotinik reseptör parsiyel agonistidir. Birinci basamakta en yüksek etkinliğe sahip temel tedavi ajanıdır."
+      },
+      {
+       "text": "Bupropion",
+       "isCorrect": false,
+       "explanation": "Bupropion dopamin ve noradrenalin geri alım inhibitörü olan birinci basamak bir ajandır. Tütün bırakma tedavisinde ikinci basamak değil temel seçenekler arasında yer alır."
+      },
+      {
+       "text": "Nikotin sakızı",
+       "isCorrect": false,
+       "explanation": "Nikotin sakızı yerine koyma tedavisinde ani aşerme krizlerini önlemek için kullanılan birinci basamak bir preparattır. İkinci basamak ajanlar sınıfına dahil edilemez."
+      }
+     ]
+    },
+    {
+     "type": "venn_grid",
+     "title": "İkinci Basamak Ajanların Karşılaştırması",
+     "labelA": "Klonidin",
+     "labelB": "Nortriptilin",
+     "items": [
+      {
+       "criterion": "Santral presinaptik alfa-2 adrenerjik agonist etki gösterir",
+       "correct": "A"
+      },
+      {
+       "criterion": "Trisiklik antidepresan sınıfında yer alır ve noradrenalin geri alımını bloke eder",
+       "correct": "B"
+      },
+      {
+       "criterion": "Sigara bırakma tedavisinde ikinci basamak alternatif seçenek olarak kabul edilir",
+       "correct": "both"
+      },
+      {
+       "criterion": "Alfa-4 beta-2 nikotinik reseptör parsiyel agonisti olan birinci basamak ajandır",
+       "correct": "neither"
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sigara bırakma tedavisinde ikinci basamakta yer alan santral alfa-2 adrenerjik agonist ajan Klonidin olarak bilinir.",
+     "maskedTerm": "Klonidin",
+     "hint": ""
+    },
+    {
+     "type": "active_recall",
+     "question": "Kannabinoid CB1 reseptör antagonisti olan Rimonabant neden klinik kullanımdan kaldırılmıştır?",
+     "answer": "Şiddetli depresif duygudurum, anksiyete ve intihar eğilimini artırıcı psikiyatrik yan etkileri nedeniyle kullanımdan çekilmiştir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 21,
+   "bolum": "4.1",
+   "title": "Bırakma Günü, Yoksunluk ve İzlem Vizitleri",
+   "pdfSayfalari": [
+    41,
+    44
+   ],
+   "sourcePdf": {
+    "startPage": 41,
+    "endPage": 44
+   },
+   "synthesisNarrative": "Sigara bırakma sürecinde hekimin izlem takvimi, hastanın dumansız yaşama uyum sağlamasındaki en belirleyici klinik faktördür.\n\n- **Bırakma Günü Hazırlığı:** Evdeki, arabadaki ve iş yerindeki tüm sigara, çakmak ve kül tablaları atılmalı; sosyal çevreye bırakma kararı ilan edilmelidir.\n- **İlk Hafta Kritikliği:** Nikotin çekilme semptomları ilk 48-72 saatte zirve yapar ve 2-4 haftada azalır.\n- **İzlem Vizitleri:** İlk kontrol viziti bırakma gününden sonraki birinci hafta içinde yapılmalıdır; başarılar takdir edilmeli ve yan etkiler gözden geçirilmelidir.\n\n> [!IMPORTANT]\n> İlk vizitte hastanın bırakma çabasının hekim tarafından samimiyetle takdir edilmesi, hastanın tedaviye bağlılığını ve özgüvenini katlayarak artırır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sigara bırakma tedavisinde hastanın ilk kontrol viziti bırakma gününden sonra ne zaman planlanmalıdır?",
+     "options": [
+      {
+       "text": "Bırakma gününden sonraki ilk hafta içinde",
+       "isCorrect": true,
+       "explanation": "Nikotin çekilme semptomlarının en şiddetli yaşandığı dönem ilk haftadır. Bu kritik süreçte yapılacak kontrol viziti hastanın motivasyonunu pekiştirir ve nüksü önler."
+      },
+      {
+       "text": "Bırakma gününden tam iki yıl sonra",
+       "isCorrect": false,
+       "explanation": "İki yıl sonraki vizit akut çekilme krizlerine hiçbir katkı sunmaz. Bırakma tedavisinde yakın takip esastır."
+      },
+      {
+       "text": "Hasta nüks yaşayana kadar asla kontrole çağrılmamalıdır",
+       "isCorrect": false,
+       "explanation": "Pasif bekleyiş nüks riskini artıran hatalı bir yaklaşımdır. Planlı kontrol vizitleri hastanın tedaviye uyumunu korur."
+      },
+      {
+       "text": "Sadece hasta ağır depresyona girerse hastaneye yatırılmalıdır",
+       "isCorrect": false,
+       "explanation": "Birinci basamak tütün bırakma hizmetleri ayaktan, planlı ve düzenli kontrol vizitleriyle yürütülür. Hastaneye yatış gerektiren bir psikiyatrik acil durum tablosu değildir."
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "title": "Bırakma Günü ve İlk Hafta Yönetim Basamakları",
+     "steps": [
+      "1. Adım: Bırakma gününde tüm tütün ürünlerinin ve kül tablalarının ortadan kaldırılması",
+      "2. Adım: İlk 48-72 saatte tepe yapan yoksunluk semptomlarının farmakoterapiyle yatıştırılması",
+      "3. Adım: Birinci haftanın sonunda ilk kontrol vizitinde hastanın çabasının takdir edilmesi",
+      "4. Adım: İlaç yan etkilerinin sorgulanması ve birinci ay kontrolünün planlanması"
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sigara bırakma sürecinde ilk kontrol viziti bırakma gününden sonraki ilk hafta içinde gerçekleştirilmelidir.",
+     "maskedTerm": "ilk hafta içinde",
+     "hint": ""
+    },
+    {
+     "type": "active_recall",
+     "question": "Nikotin yoksunluk semptomları sigara bırakıldıktan sonra ne zaman tepe yapar ve ne kadar sürede geriler?",
+     "answer": "İlk 48 ila 72 saat içinde en yüksek şiddete ulaşır; düzenli bırakma sürecinde genellikle iki ila dört hafta içinde kendiliğinden azalır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 22,
+   "bolum": "4.2",
+   "title": "Nüks Önleme ve Birinci Basamak Klinik Sentezi",
+   "pdfSayfalari": [
+    45,
+    46
+   ],
+   "sourcePdf": {
+    "startPage": 45,
+    "endPage": 46
+   },
+   "synthesisNarrative": "Tütün bağımlılığı tedavisinde nihai amaç, hastanın kalıcı dumansız yaşam tarzını benimsemesi ve nükslerden korunmasıdır.\n\n- **Kayma ve Nüks Ayrımı:** Tek bir sigara içilmesi (kayma) tam bir başarısızlık değildir; hekim hastayı yargılamadan dinlemeli ve bu hatanın tam nükse dönüşmesini engellemelidir.\n- **Kilo Alma Kaygısı:** Sigara bırakıldığında bazal metabolizma hafif yavaşlayabilir; ancak birkaç kilo almanın sağlık yükü, sigara içmeye devam etmenin ölümcül riskleri yanında ihmal edilebilir düzeydedir.\n- **Klinik Sentez:** Birinci basamak hekimi tütünü rutin sorgulamalı, uygun farmakoterapiyi seçmeli ve uzun süreli empatik takiple hastayı desteklemelidir.\n\n> [!NOTE]\n> Başarılı bir tütün bırakma tedavisi, bir hekimin bir hastaya sunabileceği en yüksek mortalite kazancını sağlayan koruyucu hekimlik müdahalesidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sigarayı bırakan bir hastanın kontrol vizitinde tek bir adet sigara içtiğini belirtmesi durumunda hekimin en doğru klinik yaklaşımı ne olmalıdır?",
+     "options": [
+      {
+       "text": "Bunun bir başarısızlık olmadığını anlatıp tetikleyiciyi incelemek ve tedaviye kararlılıkla devam etmek",
+       "isCorrect": true,
+       "explanation": "Bu tutum doğru hekimlik yaklaşımıdır. Tek bir kayma (lapse) tam relaps demek değildir; hasta yargılanmadan desteklenirse tam nüks başarıyla önlenir."
+      },
+      {
+       "text": "Hastayı suçlayarak tüm tedaviyi sonlandırmak",
+       "isCorrect": false,
+       "explanation": "Yargılayıcı tutum hastada suçluluk ve utanç hissi yaratarak tedaviden tamamen kopmasına yol açar. Hekim yargılayıcı olmak yerine destekleyici tutumla kaymanın nedenlerini araştırmalıdır."
+      },
+      {
+       "text": "Hastaya artık ömür boyu sigara içmek zorunda olduğunu söylemek",
+       "isCorrect": false,
+       "explanation": "Bu yaklaşım tıbbi deontolojiye ve tütün bırakma ilkelerine tamamen aykırıdır. Hekim her zaman dumansız yaşamı teşvik eder."
+      },
+      {
+       "text": "Hastayı derhal cezalandırmak için yüksek doz nöroleptik başlamak",
+       "isCorrect": false,
+       "explanation": "Tıbbi tedaviler ve farmakolojik ajanlar cezalandırma amacıyla asla kullanılamaz. Bu yaklaşım tıp etiğine, deontolojiye ve hasta haklarına tamamen aykırıdır."
+      }
+     ]
+    },
+    {
+     "type": "before_after_slider",
+     "title": "Kayma ile Tam Nüks Durumlarının Karşılaştırması",
+     "leftTitle": "Kayma (Lapse)",
+     "rightTitle": "Tam Nüks (Relapse)",
+     "leftPoints": [
+      "Bırakma sürecinde bir anlık zaafla tek bir nefes veya tek bir sigara içilmesi",
+      "Hasta hemen pişmanlık duyar ve tedaviyi sürdürme arzusunu korur"
+     ],
+     "rightPoints": [
+      "Bireyin eski düzenli günlük tütün tüketim alışkanlığına tamamen geri dönmesi",
+      "Tedavinin ve bırakma motivasyonunun tümden terk edilmesi tablosudur"
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sigarayı bırakan bireyin tek bir kez sigara içmesi durumuna kayma adı verilir ve hemen müdahaleyle tam nüks önlenebilir.",
+     "maskedTerm": "kayma",
+     "hint": ""
+    },
+    {
+     "type": "active_recall",
+     "question": "Sigarayı bırakan hastalarda kilo alma kaygısı karşısında hekimin vermesi gereken temel mesaj nedir?",
+     "answer": "Kilo alımının geçici ve yönetilebilir olduğu, sigara içmeye devam etmenin getirdiği ölümcül risklerin birkaç kilonun riskinden kıyaslanamaz ölçüde yüksek olduğu anlatılmalıdır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 23,
+   "bolum": "4.R",
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Farmakoterapi, İzlem ve Nüks Önleme",
+   "pdfSayfalari": [
+    20,
+    46
+   ],
+   "sourcePdf": {
+    "startPage": 20,
+    "endPage": 46
+   },
+   "synthesisNarrative": "Bu bölümde birinci basamak farmakoterapiler (NRT, Bupropion, Vareniklin, Sitizin), ikinci basamak seçenekler, izlem vizitleri ve nüks önleme ilkelerini özetledik.\n\n- **NRT:** Temiz nikotin verir; bant taban konsantrasyonu sağlar, sakız akut aşermeyi keser; bant varken sigara içilmez.\n- **Bupropion:** NDRI mekanizmasıyla dopamini artırır; bırakma gününden 1-2 hafta önce başlanır; nöbet öyküsünde kontrendikedir.\n- **Vareniklin:** Alfa-4 beta-2 parsiyel agonistidir; aşermeyi azaltırken sigara hazzını bloke eder; tok karnına alınır.\n- **Sitizin ve İkinci Basamak:** Sitizin 25 günlük doğal agonisttir; klonidin ve nortriptilin dirençli vakalarda düşünülür.\n- **İzlem ve Nüks:** İlk vizit 1. haftada yapılır; tek bir kayma (lapse) relaps değildir, hasta yargılanmadan desteklenir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Üçüncü ve dördüncü bölümlerde işlenen farmakolojik ve klinik izlem ilkeleri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "options": [
+      {
+       "text": "Transdermal nikotin bandı kullanılırken hastanın normal şekilde sigara içmeye devam etmesi şarttır",
+       "isCorrect": true,
+       "explanation": "Bu ifade yanlıştır çünkü bant vücuttayken sigara içmek toksik nikotin düzeylerine ve kardiyak yan etkilere yol açar. NRT tam bırakma hedefiyle kullanılır."
+      },
+      {
+       "text": "Vareniklin alfa-4 beta-2 nikotinik reseptör parsiyel agonistidir",
+       "isCorrect": false,
+       "explanation": "Bu doğru bir bilgidir çünkü vareniklin bu reseptöre yüksek afiniteyle bağlanır. Aşermeyi azaltırken sigaranın pekiştirici hazzını söndürür."
+      },
+      {
+       "text": "Bupropion hidroklorür tedavisine hastanın sigarayı bıraktığı gün değil, 1-2 hafta öncesinde başlanır",
+       "isCorrect": false,
+       "explanation": "Bu doğru bir bilgidir çünkü kararlı plazma konsantrasyonuna ulaşması zaman alır. Bırakma gününe kadar hasta hedef doza çıkar."
+      },
+      {
+       "text": "İlk izlem viziti bırakma gününden sonraki ilk hafta içinde planlanmalıdır",
+       "isCorrect": false,
+       "explanation": "Bu doğru bir bilgidir çünkü çekilme semptomlarının en yoğun olduğu ilk haftada destek esastır. Hekim takdiri motivasyonu güçlendirir."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "title": "Farmakoterapi Seçenekleri Genel Sentez Tablosu",
+     "tableHeaders": [
+      "İlaç / Yöntem",
+      "Temel Moleküler Mekanizma",
+      "En Kritik Klinik Özellik"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "NRT (Bant/Sakız)",
+        "isMasked": false
+       },
+       {
+        "text": "Tütünsüz kontrollü nikotin replasmanı",
+        "isMasked": false
+       },
+       {
+        "text": "Bant varken kesinlikle sigara içilmemelidir",
+        "isMasked": false
+       }
+      ],
+      [
+       {
+        "text": "Bupropion",
+        "isMasked": false
+       },
+       {
+        "text": "Dopamin ve noradrenalin geri alım blokajı",
+        "isMasked": false
+       },
+       {
+        "text": "Nöbet öyküsünde kesinlikle kontrendikedir",
+        "isMasked": true,
+        "hint": ""
+       }
+      ]
+     ]
+    },
+    {
+     "type": "branching_logic",
+     "title": "Klinik Karar: İlaç Seçimi ve Güvenlik",
+     "scenario": "Günde 2 paket sigara içen ve geçmişte geçirilmiş kafa travmasına bağlı epilepsi nöbeti öyküsü olan bir hasta sigarayı bırakmak istiyor.",
+     "options": [
+      {
+       "text": "Bupropiondan kesinlikle kaçınarak hastaya Vareniklin veya kombine NRT (bant + sakız) tedavisi başlamak",
+       "isCorrect": true,
+       "explanation": "Bu doğru klinik yaklaşımdır çünkü epilepsi nöbeti öyküsünde bupropion kontrendikedir. Vareniklin veya NRT güvenli ve etkili birinci basamak seçeneklerdir."
+      },
+      {
+       "text": "Hastaya yüksek doz Bupropion reçete etmek",
+       "isCorrect": false,
+       "explanation": "Bu uygulama vahim bir klinik hatadır çünkü bupropion nöbet eşiğini belirgin şekilde düşürür. Geçirilmiş kafa travması veya epilepsi öyküsü olan bireylerde kesinlikle kontrendikedir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sigarayı bırakan bir hastada ilk hafta vizitinde en sık karşılaşılan çekilme semptomları nelerdir?",
+     "answer": "Huzursuzluk, irritabilite, konsantrasyon güçlüğü, uyku bozukluğu, iştah artışı ve yoğun sigara aşermesidir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 24,
+   "bolum": "4.G",
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Nikotin Bağımlılığı ve Tedavisi",
+   "pdfSayfalari": [
+    1,
+    46
+   ],
+   "sourcePdf": {
+    "startPage": 1,
+    "endPage": 46
+   },
+   "isGameFinale": true,
+   "synthesisNarrative": "Tebrikler! Nikotin Bağımlılığı ve Tedavisi dersini başarıyla tamamladınız. Şimdi öğrendiğiniz tüm epidemiyolojik, nörobiyolojik, davranışsal ve farmakolojik kazanımları ders sonu oyunlarıyla pekiştirme zamanı!\n\n- **Oyun 1 (Sıralama):** Transteoretik Değişim Modeli evrelerini mantıksal akışına göre diziniz.\n- **Oyun 2 (Sayısal Tahmin):** Sigarayı bıraktıktan sonra koroner arter hastalığı riskinin yarıya indiği zaman eşiğini tahmin ediniz.\n- **Oyun 3 (Mekanizma Bozumu):** Vareniklin tedavisi altındayken sigara yakıldığında reseptör düzeyinde ne gerçekleştiğini çözünüz.\n- **Oyun 4 (Metin Düzeltme):** Bupropion ve nöbet kontrendikasyonu hakkındaki hatalı bilgiyi düzeltiniz.\n\n> [!IMPORTANT]\n> Dört oyunu da başarıyla tamamlayarak tütün kontrolü konusundaki klinik yetkinliğinizi tescilleyiniz!",
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "prompt": "Bir bağımlının sigarayı bırakma sürecindeki Transteoretik değişim evrelerini kronolojik sıraya diziniz.",
+     "steps": [
+      "1. Farkındalık Öncesi (Gelecek 6 ayda bırakma niyeti yoktur)",
+      "2. Farkındalık / Niyet (Gelecek 6 ayda bırakmayı düşünür ama kararsızdır)",
+      "3. Hazırlık (Önündeki 1 ay içinde bırakma günü belirler)",
+      "4. Eylem (Sigaranın fiilen bırakıldığı ilk 6 aylık dönem)",
+      "5. Sürdürme (6 aydan daha uzun süreli dumansız yaşam dönemi)"
+     ],
+     "explanation": "Transteoretik modelde değişim farkındalık öncesinden başlayıp niyet, hazırlık, eylem ve sürdürme adımlarıyla ilerler."
+    },
+    {
+     "type": "estimate_slider",
+     "prompt": "Sigarayı bırakan bir bireyde koroner kalp hastalığı riski sigara içenlere kıyasla kaçıncı yılın sonunda tam yarı yarıya azalır?",
+     "min": 0,
+     "max": 10,
+     "answer": 1,
+     "tolerance": 1,
+     "step": 1,
+     "explanation": "Dünya Sağlık Örgütü verilerine göre sigara bırakıldıktan sonraki birinci yılın sonunda koroner arter hastalığı riski tam yüzde elli oranında azalır."
+    },
+    {
+     "type": "perturbation",
+     "scenario": "Vareniklin tedavisi altındayken hasta kaçamak yaparak bir adet sigara içer.",
+     "parameters": [
+      {
+       "name": "Nikotinin reseptöre bağlanması",
+       "correct": "down",
+       "explanation": "Vareniklin reseptörü önceden yüksek afiniteyle işgal ettiği için nikotinin bağlanması azalır."
+      },
+      {
+       "name": "Sigara içiminin yarattığı haz",
+       "correct": "down",
+       "explanation": "Reseptör blokajı nedeniyle nikotinin tetiklediği dopaminerjik zevk azalır."
+      },
+      {
+       "name": "Alfa-4 beta-2 reseptör doluluğu",
+       "correct": "up",
+       "explanation": "Vareniklin parsiyel agonist olarak reseptörleri doldurarak doluluk oranını artırır."
+      }
+     ]
+    },
+    {
+     "type": "fix_the_text",
+     "text": "Bupropion hidroklorür nöbet eşiğini belirgin biçimde yükselterek epilepsi ve konvülsiyon öyküsü olan tüm hastalarda en güvenli birinci basamak ilaç olarak tercih edilir.",
+     "errors": [
+      {
+       "wrong": "yükselterek",
+       "correct": "düşürerek",
+       "options": [
+        "bloke ederek"
+       ],
+       "explanation": "Bupropion nöbet eşiğini düşürür ve konvülsiyon riski yaratır; bu nedenle epilepsi öyküsü olanlarda kesin kontrendikedir."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "deckId": "k2p-y25-k2-61-nikotin-bagimliligi-ve-tedavisi",
+ "donem": "2025-2026",
+ "arsiv": true,
+ "committee": "donem3-kurul2",
+ "confidence": "high",
+ "totalSlides": 24,
+ "matchedPastQuestionsCount": 2,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

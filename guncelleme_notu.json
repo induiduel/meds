@@ -1,17 +1,17 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 341,
-  "baslik": "Kurul 2 Arşiv Dersleri 64-66: Omurga Tümörleri, Malformasyonlar ve Miyelin Hastalıkları (2025-2026)",
+  "onem": 342,
+  "baslik": "Kurul 2 Arşiv Dersleri 61-63: Nikotin Bağımlılığı, Kraniyal Sinir Muayenesi ve Antidepresanlar (2025-2026)",
   "maddeler": [
-    "Ders 66 (Patoloji - Primer Miyelin ve Metabolik-Toksik Hastalıklar): 112 cümle, 15,2 dk EMA GPU sesli anlatım, 17 slayt Öğren destesi, 35 canlı çizim, %91 satır vurgusu ve gömülü .medspak (5,89 MB)",
-    "Ders 65 (Patoloji - Konjenital Malformasyonlar ve Perinatal Beyin Hasarı): 84 cümle, 13,7 dk EMA GPU sesli anlatım, 18 slayt Öğren destesi, 19 canlı çizim, %92 satır vurgusu ve gömülü .medspak (3,93 MB)",
-    "Ders 64 (Beyin ve Sinir Cerrahisi - Omurga Tümörleri): 51 cümle, 4,6 dk EMA GPU sesli anlatım, 17 slayt Öğren destesi, 20 canlı çizim, %94 satır vurgusu, %98 kelime kutusu ve gömülü .medspak (2,18 MB)",
-    "PDF metin takip motoru v7 devrede: konuşmacı sesine birebir senkron mavi satır ve kelime kutusu takibi (%94–98 kapsama, 0 boş sayfa işareti)"
+    "Ders 63 (Farmakoloji - Antidepresan İlaçlar): 22 slayt Öğren destesi, EMA GPU sesli anlatım, 15 canlı çizim ve gömülü .medspak (4,44 MB)",
+    "Ders 62 (Nöroloji - Kraniyal Sinir Muayenesi): 24 slayt Öğren destesi, 56 cümle, 7,7 dk EMA GPU sesli anlatım, 15 canlı çizim, %93 satır vurgusu ve gömülü .medspak (54,92 MB)",
+    "Ders 61 (Aile Hekimliği - Nikotin Bağımlılığı ve Tedavisi): 24 slayt Öğren destesi, 61 cümle, 7,3 dk EMA GPU sesli anlatım, 15 canlı çizim, %95 satır vurgusu ve gömülü .medspak (14,86 MB)",
+    "PDF metin takip motoru devrede: konuşmacı sesine birebir senkron mavi satır ve kelime kutusu takibi (0 boş sayfa işareti, yüksek sadakat)"
   ],
   "eklenen": [
-    "Kurul 2 Patoloji 'Primer Miyelin ve Metabolik-Toksik Hastalıklar' (2025-2026 Arşivi)",
-    "Kurul 2 Patoloji 'Konjenital Malformasyonlar ve Perinatal Beyin Hasarı' (2025-2026 Arşivi)",
-    "Kurul 2 Beyin ve Sinir Cerrahisi 'Omurga Tümörleri' (2025-2026 Arşivi)"
+    "Kurul 2 Farmakoloji 'Antidepresan İlaçlar' (2025-2026 Arşivi)",
+    "Kurul 2 Nöroloji 'Kraniyal Sinir Muayenesi' (2025-2026 Arşivi)",
+    "Kurul 2 Aile Hekimliği 'Nikotin Bağımlılığı ve Tedavisi' (2025-2026 Arşivi)"
   ],
   "degisen": [
     "meds/data/arsiv_25_26/sesli_anlatim/dersler.json",

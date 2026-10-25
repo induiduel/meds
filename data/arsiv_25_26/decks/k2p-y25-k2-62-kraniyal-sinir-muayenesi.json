@@ -1,0 +1,1996 @@
+{
+ "id": "k2p-y25-k2-62-kraniyal-sinir-muayenesi",
+ "title": "Kraniyal Sinir Muayenesi",
+ "committee": "donem3-kurul2",
+ "discipline": "Nöroloji",
+ "sayfaHaritasi": "teyitli",
+ "slides": [
+  {
+   "slideNumber": 1,
+   "title": "Kraniyal Sinirler: Genel Sınıflama ve Beyin Sapı Çıkışları",
+   "bolum": "1.1",
+   "discipline": "Nöroloji",
+   "pdfSayfalari": [
+    1,
+    2
+   ],
+   "sourcePdf": {
+    "startPage": 1,
+    "endPage": 2,
+    "pdfPath": "kurul2/y25-k2-62-kraniyal-sinir-muayenesi.pdf"
+   },
+   "content": "Kraniyal sinirler kafa tabanındaki foraminalardan çıkarak baş, boyun ve iç organların motor, duyusal ve parasempatik inervasyonunu sağlar.\n\n- **Mezensefalon Çıkışlı Sinirler:** Üçüncü kraniyal sinir olan nervus oculomotorius ve dördüncü sinir olan nervus trochlearis orta beyinden köken alır.\n- **Pons Çıkışlı Sinirler:** Beşinci sinir trigeminus, altıncı sinir abducens, yedinci sinir facialis ve sekizinci sinir vestibulocochlearis ponstan çıkar.\n- **Medulla Oblangata Çıkışlı Sinirler:** Dokuzuncu sinir glossopharyngeus, onuncu sinir vagus, on birinci sinir accessorius ve on ikinci sinir hypoglossus bulbus seviyesinden köken alır.\n\n> [!IMPORTANT]\n> Kraniyal sinir felçlerinin klinik dağılımı, beyin sapı lezyonunun mezensefalon, pons veya medulla seviyesinde olduğunu kesin olarak gösterir.",
+   "synthesisNarrative": "Kraniyal sinirler kafa tabanındaki foraminalardan çıkarak baş, boyun ve iç organların motor, duyusal ve parasempatik inervasyonunu sağlar.\n\n- **Mezensefalon Çıkışlı Sinirler:** Üçüncü kraniyal sinir olan nervus oculomotorius ve dördüncü sinir olan nervus trochlearis orta beyinden köken alır.\n- **Pons Çıkışlı Sinirler:** Beşinci sinir trigeminus, altıncı sinir abducens, yedinci sinir facialis ve sekizinci sinir vestibulocochlearis ponstan çıkar.\n- **Medulla Oblangata Çıkışlı Sinirler:** Dokuzuncu sinir glossopharyngeus, onuncu sinir vagus, on birinci sinir accessorius ve on ikinci sinir hypoglossus bulbus seviyesinden köken alır.\n\n> [!IMPORTANT]\n> Kraniyal sinir felçlerinin klinik dağılımı, beyin sapı lezyonunun mezensefalon, pons veya medulla seviyesinde olduğunu kesin olarak gösterir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdaki kraniyal sinirlerden hangisi beyin sapının mezensefalon seviyesinden köken alır?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Nervus trochlearis (CN IV)",
+       "isCorrect": true,
+       "explanation": "Nervus trochlearis mezensefalondaki inferior kollikulus seviyesinden köken alarak süperior oblik kası uyarır. Bu nedenle orta beyin hasarlarında gelişen vertikal diplopinin temel anatomik kaynağını oluşturur."
+      },
+      {
+       "key": "B",
+       "text": "Nervus trigeminus (CN V)",
+       "isCorrect": false,
+       "explanation": "Nervus trigeminus ponsun orta lateral yüzünden çıkarak geniş duyusal ve çiğneme motor liflerini dağıtır. Orta beyin kökenli bir kraniyal sinir grubuna dahil edilmesi anatomik olarak yanlıştır."
+      },
+      {
+       "key": "C",
+       "text": "Nervus abducens (CN VI)",
+       "isCorrect": false,
+       "explanation": "Nervus abducens pontin tegmentumdaki çekirdeğinden lif alarak pontomedüller oluktan beyin sapını terk eder. Bu anatomik konumu nedeniyle mezensefalon düzeyinden çıkan sinirler arasında kabul edilemez."
+      },
+      {
+       "key": "D",
+       "text": "Nervus hypoglossus (CN XII)",
+       "isCorrect": false,
+       "explanation": "Nervus hypoglossus medulla oblangatadaki motor çekirdeğinden çıkarak dil kaslarının hareketini yönetir. Mezensefalon seviyesi yerine en kaudaldeki bulber seviyeden kaynaklanan bir yapıdır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Dokuzuncu sinir glossopharyngeus, onuncu sinir vagus, on birinci sinir accessorius ve on ikinci sinir hypoglossus {{c1::medulla oblangata}} seviyesinden köken alır.",
+     "maskedTerm": "medulla oblangata",
+     "hint": "Beyin sapının en kaudalinde foramen magnuma komşu bulber bölüm."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Kraniyal Sinirlerin Beyin Sapı Çıkış Seviyeleri",
+     "items": [
+      {
+       "text": "Nervus oculomotorius ve nervus trochlearis mezensefalondan köken alır.",
+       "isLie": false,
+       "explanation": "Bu iki sinir orta beyin tegmentumundaki nükleuslarından kaynaklanır."
+      },
+      {
+       "text": "Nervus abducens ve nervus facialis pons seviyesinden çıkış gösterir.",
+       "isLie": false,
+       "explanation": "Her iki sinir pontin tegmentumda yerleşik çekirdeklerinden köken alır."
+      },
+      {
+       "text": "Nervus hypoglossus doğrudan mezensefalon pedinküllerinden çıkar.",
+       "isLie": true,
+       "explanation": "Nervus hypoglossus mezensefalondan değil medulla oblangatadaki sulkustan çıkar."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Kraniyal sinirlerin beyin sapı kraniokaudal çıkış seviyelerini (mezensefalon, pons, medulla) eşleştiriniz.",
+     "answer": "Mezensefalondan CN III ve IV; ponstan CN V, VI, VII ve VIII; medulla oblangatadan ise CN IX, X, XI ve XII köken alır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 2,
+   "title": "Nervus Olfactorius (CN I): Koku Yolları ve Anosmi",
+   "bolum": "1.2",
+   "discipline": "Nöroloji",
+   "pdfSayfalari": [
+    3,
+    3
+   ],
+   "sourcePdf": {
+    "startPage": 3,
+    "endPage": 3
+   },
+   "content": "Nervus olfactorius koku duyusunu primer koku korteksine taşıyan birinci kraniyal sinirdir.\n\n- **Muayene İlkeleri:** Burun delikleri sırayla kapatılarak kahve, vanilya veya sabun gibi mukozayı tahriş etmeyen kokular koklatılır.\n- **Tahriş Edici Maddeler:** Amonyak veya mentol gibi keskin maddeler trigeminal sinirin (CN V) serbest ağrı uçlarını uyarır ve saf koku testi için kullanılamaz.\n- **Klinik Patolojiler:** Ön kafa tabanı kırıklarında kribriform laminanın zedelenmesi veya subfrontal olfaktör oluk menenjiomlarında tek ya da iki taraflı anosmi gelişir.\n\n> [!NOTE]\n> Koku muayenesinde hastaya koku ayrımı, koku eşiği ve kokuyu doğru adlandırma basamakları sırayla uygulanır.",
+   "synthesisNarrative": "Nervus olfactorius koku duyusunu primer koku korteksine taşıyan birinci kraniyal sinirdir.\n\n- **Muayene İlkeleri:** Burun delikleri sırayla kapatılarak kahve, vanilya veya sabun gibi mukozayı tahriş etmeyen kokular koklatılır.\n- **Tahriş Edici Maddeler:** Amonyak veya mentol gibi keskin maddeler trigeminal sinirin (CN V) serbest ağrı uçlarını uyarır ve saf koku testi için kullanılamaz.\n- **Klinik Patolojiler:** Ön kafa tabanı kırıklarında kribriform laminanın zedelenmesi veya subfrontal olfaktör oluk menenjiomlarında tek ya da iki taraflı anosmi gelişir.\n\n> [!NOTE]\n> Koku muayenesinde hastaya koku ayrımı, koku eşiği ve kokuyu doğru adlandırma basamakları sırayla uygulanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Koku muayenesinde amonyak veya mentol gibi keskin maddelerin tercih edilmeme gerekçesi nedir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Trigeminal ağrı liflerini uyarması",
+       "isCorrect": true,
+       "explanation": "Amonyak ve mentol gibi tahriş edici maddeler nervus trigeminusun serbest duyusal sinir sonlanmalarını uyarır. Bu uyarı birinci sinir olfactoriusun saf koku iletimi hakkında yanıltıcı değerlendirmeye yol açar."
+      },
+      {
+       "key": "B",
+       "text": "Olfaktör soğancığı felç etmesi",
+       "isCorrect": false,
+       "explanation": "Olfaktör soğancık kribriform kemik üzerinde korunan ve nöronal sinaps içeren bir merkezdir. Keskin gazlar bu merkezi doğrudan anatomik olarak felç etme kapasitesine sahip değildir."
+      },
+      {
+       "key": "C",
+       "text": "Optik kiyazmaya bası yapması",
+       "isCorrect": false,
+       "explanation": "Optik kiyazma sella tursika üzerinde yer alarak görme siniri liflerini çaprazlaştıran yapıdır. Nazal yolla verilen tahriş edici koku maddelerinin kiyazmaya mekanik bası yapması söz konusu olamaz."
+      },
+      {
+       "key": "D",
+       "text": "Fasiyal motor çekirdeği baskılaması",
+       "isCorrect": false,
+       "explanation": "Fasiyal motor çekirdek ponsta yerleşik olup yüz mimik kaslarının hareketini kontrol eder. Koku testindeki kimyasal maddelerin fasiyal motor nükleusu doğrudan etkilemesi beklenemez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Ön kafa tabanı kırıklarında kribriform laminanın zedelenmesi sonucu tek ya da iki taraflı {{c1::anosmi}} gelişir.",
+     "maskedTerm": "anosmi",
+     "hint": "Koku alma yetisinin patolojik olarak tamamen kaybolması tablosu."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Nervus Olfactorius Muayene İlkeleri",
+     "items": [
+      {
+       "text": "Her burun deliği karşı delik kapatılarak ayrı ayrı değerlendirilir.",
+       "isLie": false,
+       "explanation": "Her iki nazal pasajın bağımsız test edilmesi tek taraflı koku kaybını yakalamak için gereklidir."
+      },
+      {
+       "text": "Koku maddesi olarak kahve veya vanilya gibi tahrişsiz aromalar kullanılır.",
+       "isLie": false,
+       "explanation": "Kahve ve vanilya doğrudan nervus olfactorius reseptörlerini uyararak saf sonuç verir."
+      },
+      {
+       "text": "Koku kaybı geliştiğinde hastanın görme alanı refleks olarak genişler.",
+       "isLie": true,
+       "explanation": "Koku kaybı optik yolları etkilemez ve görme alanında herhangi bir genişleme oluşturmaz."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Koku muayenesinde amonyak gibi keskin maddelerin kullanılmamasının sebebi nedir?",
+     "answer": "Amonyak birinci sinir olan olfactorius yerine beşinci kraniyal sinir olan trigeminusun serbest ağrı uçlarını uyardığı için saf koku kaybını maskeler."
+    }
+   ]
+  },
+  {
+   "slideNumber": 3,
+   "title": "Nervus Opticus (CN II): Görme Yolları ve Alan Defektleri",
+   "bolum": "1.3",
+   "discipline": "Nöroloji",
+   "pdfSayfalari": [
+    4,
+    4
+   ],
+   "sourcePdf": {
+    "startPage": 4,
+    "endPage": 4
+   },
+   "content": "Nervus opticus retinadan aldığı görsel uyarıları primer görme korteksine (Brodmann 17) ulaştıran özel duyusal sinirdir.\n\n- **Kiyazma Öncesi Lezyon:** Tek taraflı optik sinir hasarında o gözde tam monooküler körlük (görme kaybı) izlenir.\n- **Kiyazma Optikum Lezyonu:** Hipofiz adenomlarında nazal retinadan gelen çaprazlaşan liflerin basısıyla iki taraflı bitemporal hemianopsi tablosu ortaya çıkar.\n- **Retrokiyazmatik Lezyon:** Optik traktus veya optik radyasyon hasarlarında lezyonun karşı tarafında homonim hemianopsi gelişir.\n\n> [!IMPORTANT]\n> Optik sinirin kiyazma ile birleşim yerindeki hasarlarda (junctional scotoma) ipsilateral santral skotom ve kontralateral süperotemporal kadranopsi görülür.",
+   "synthesisNarrative": "Nervus opticus retinadan aldığı görsel uyarıları primer görme korteksine (Brodmann 17) ulaştıran özel duyusal sinirdir.\n\n- **Kiyazma Öncesi Lezyon:** Tek taraflı optik sinir hasarında o gözde tam monooküler körlük (görme kaybı) izlenir.\n- **Kiyazma Optikum Lezyonu:** Hipofiz adenomlarında nazal retinadan gelen çaprazlaşan liflerin basısıyla iki taraflı bitemporal hemianopsi tablosu ortaya çıkar.\n- **Retrokiyazmatik Lezyon:** Optik traktus veya optik radyasyon hasarlarında lezyonun karşı tarafında homonim hemianopsi gelişir.\n\n> [!IMPORTANT]\n> Optik sinirin kiyazma ile birleşim yerindeki hasarlarda (junctional scotoma) ipsilateral santral skotom ve kontralateral süperotemporal kadranopsi görülür.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Hipofiz bezi adenomunun kiyazma optikuma alttan bası yapması durumunda hangi tipik görme alanı defekti ortaya çıkar?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Bitemporal hemianopsi",
+       "isCorrect": true,
+       "explanation": "Bitemporal hemianopsi kiyazmadaki nazal retina liflerinin hipofiz kitlelerince basıya uğraması sonucu gelişir. Bu anatomik çaprazlaşma hasarı her iki gözün dış görme alanlarının simetrik kaybıyla sonuçlanır."
+      },
+      {
+       "key": "B",
+       "text": "Sol homonim hemianopsi",
+       "isCorrect": false,
+       "explanation": "Sol homonim hemianopsi sağ optik traktus veya sağ optik radyasyon lezyonlarında ortaya çıkan bir tablodur. Kiyazma optikumun orta hat basısında görülen primer görme alanı defekti bu şekilde adlandırılamaz."
+      },
+      {
+       "key": "C",
+       "text": "Tek gözde tam amavrozis",
+       "isCorrect": false,
+       "explanation": "Tek gözde tam körlük kiyazmadan önceki tek taraflı optik sinir gövdesinin tam kesilmesinde gözlenir. Kiyazma basısında her iki gözün belirli görsel alanları eş zamanlı olarak etkilenir."
+      },
+      {
+       "key": "D",
+       "text": "Binazal hemianopsi",
+       "isCorrect": false,
+       "explanation": "Binazal hemianopsi kiyazmanın lateral kenarlarından geçen liflerin bilateral karotid basısıyla oluşur. Hipofiz adenomunun alttan orta hat basısı nazal lifleri etkileyerek temporal kayıp yapar."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Optik traktus veya optik radyasyon hasarlarında lezyonun karşı tarafında {{c1::homonim hemianopsi}} gelişir.",
+     "maskedTerm": "homonim hemianopsi",
+     "hint": "Her iki gözde lezyonun zıt tarafındaki yarım alanların simetrik kaybı."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Görme Yolları ve Görme Alanı Defektleri",
+     "items": [
+      {
+       "text": "Kiyazmada temporal görme alanına ait nazal retina lifleri çaprazlaşır.",
+       "isLie": false,
+       "explanation": "Nazal retina periferik temporal alandan gelen ışığı toplar ve lifleri kiyazmada karşıya geçer."
+      },
+      {
+       "text": "Retrokiyazmatik lezyonlar lezyonun karşı tarafında homonim defekt yapar.",
+       "isLie": false,
+       "explanation": "Kiyazma sonrasında her hemisfer karşı görsel hemialanı temsil ettiği için defekt kontralateraldir."
+      },
+      {
+       "text": "Tek taraflı optik sinir kesisi her iki gözün de görmesini tamamen bitirir.",
+       "isLie": true,
+       "explanation": "Tek taraflı optik sinir hasarı sadece lezyonlu gözde görme kaybı yapar; karşı göz sağlam kalır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Optik kiyazma lezyonlarında neden bitemporal hemianopsi gelişir?",
+     "answer": "Kiyazmada her iki gözün temporal görme alanını gören nazal retina lifleri çaprazlaştığı için orta hat basısında bilateral temporal alanlar kaybolur."
+    }
+   ]
+  },
+  {
+   "slideNumber": 4,
+   "title": "Görme Muayenesi: Snellen Keskinliği ve Konfrontasyon",
+   "bolum": "1.4",
+   "discipline": "Nöroloji",
+   "pdfSayfalari": [
+    5,
+    6
+   ],
+   "sourcePdf": {
+    "startPage": 5,
+    "endPage": 6,
+    "pdfPath": "kurul2/y25-k2-62-kraniyal-sinir-muayenesi.pdf"
+   },
+   "content": "Görme fonksiyonunun klinik muayenesinde santral görme keskinliği ve periferik görme alanı ardışık olarak değerlendirilir.\n\n- **Snellen Eşeli:** Hasta 6 metre (20 feet) mesafeye oturtulur; bir göz kapatılarak harfler en küçük satıra kadar okutulur (normal değer 20/20).\n- **Yatak Başı Keskinlik:** Ağır görme kayıplarında sırasıyla parmak sayma, el hareketi algılama ve ışık hissi (ışık persepsiyonu) derecelendirilir.\n- **Konfrontasyon Testi:** Hekim ve hasta aynı göz seviyesinde bir metre mesafede oturur; karşılıklı gözler kapatılarak dört kadranda parmak hareketi test edilir.\n\n> [!NOTE]\n> Konfrontasyon testinde hastanın görme alanı, hekimin kendi normal kabul edilen görme alanı sınırlarıyla birebir kıyaslanır.",
+   "synthesisNarrative": "Görme fonksiyonunun klinik muayenesinde santral görme keskinliği ve periferik görme alanı ardışık olarak değerlendirilir.\n\n- **Snellen Eşeli:** Hasta 6 metre (20 feet) mesafeye oturtulur; bir göz kapatılarak harfler en küçük satıra kadar okutulur (normal değer 20/20).\n- **Yatak Başı Keskinlik:** Ağır görme kayıplarında sırasıyla parmak sayma, el hareketi algılama ve ışık hissi (ışık persepsiyonu) derecelendirilir.\n- **Konfrontasyon Testi:** Hekim ve hasta aynı göz seviyesinde bir metre mesafede oturur; karşılıklı gözler kapatılarak dört kadranda parmak hareketi test edilir.\n\n> [!NOTE]\n> Konfrontasyon testinde hastanın görme alanı, hekimin kendi normal kabul edilen görme alanı sınırlarıyla birebir kıyaslanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Snellen kartındaki en büyük harfi dahi okuyamayan bir hastada görme keskinliği değerlendirmesinde bir sonraki adım nedir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Parmak sayma mesafesini belirlemek",
+       "isCorrect": true,
+       "explanation": "Parmak sayma testi Snellen eşelini okuyamayan ileri görme kayıplı hastalarda uygulanan ilk basamak yöntemdir. Bu yöntemle santral görme keskinliğinin kantitatif derecesi yatak başında belirlenir."
+      },
+      {
+       "key": "B",
+       "text": "Oftalmoskopi ile damarları saymak",
+       "isCorrect": false,
+       "explanation": "Oftalmoskopi retinadaki vasküler ve optik disk yapılarını doğrudan görselleştiren anatomik bir incelemedir. Santral görme fonksiyonunun derecelendirilmesinde eşel testi yerine kullanılması uygun değildir."
+      },
+      {
+       "key": "C",
+       "text": "Doğrudan kornea refleksine geçmek",
+       "isCorrect": false,
+       "explanation": "Kornea refleksi beşinci ve yedinci kraniyal sinir arkını test eden koruyucu bir mekanizmadır. Görme keskinliği hiyerarşisinde basamak olarak yer alması klinik mantığa uymaz."
+      },
+      {
+       "key": "D",
+       "text": "Bielschowsky baş tilti uygulamak",
+       "isCorrect": false,
+       "explanation": "Bielschowsky baş tilt testi dördüncü sinir felcinde vertikal diplopiyi inceleyen bir testtir. Santral görme keskinliğinin ölçüm basamakları arasında kabul edilmesi mümkün değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Hekim ve hasta aynı göz seviyesinde bir metre mesafede oturur; karşılıklı gözler kapatılarak dört kadranda parmak hareketi {{c1::konfrontasyon}} testiyle incelenir.",
+     "maskedTerm": "konfrontasyon",
+     "hint": "Hekim ile hastanın periferik sınırlarını karşılıklı kıyaslayan klinik alan yöntemi."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Görme Keskinliği ve Alanı Muayenesi",
+     "items": [
+      {
+       "text": "Snellen testi 6 metre mesafeden her iki göz ayrı ayrı kapatılarak yapılır.",
+       "isLie": false,
+       "explanation": "Optik sonsuz kabul edilen 6 metreden monooküler test standart protokoldür."
+      },
+      {
+       "text": "Konfrontasyon testinde dört görsel kadranın sınırları hekiminkiyle kıyaslanır.",
+       "isLie": false,
+       "explanation": "Hekimin görme alanı referans kabul edilerek hastanın periferik sınırları test edilir."
+      },
+      {
+       "text": "Görme keskinliği testi tamamen zifiri karanlık ortamda uygulanır.",
+       "isLie": true,
+       "explanation": "Snellen kartı standart aydınlatmalı ortamda okunur; karanlık ortam fotoreseptörleri yanıltır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Snellen tablosunu okuyamayan bir hastada görme keskinliği basamakları hangi sırayla test edilir?",
+     "answer": "Sırasıyla parmak sayma mesafesi, el hareketi algılama kabiliyeti ve en son ışık hissi (persepsiyonu) test edilir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 5,
+   "title": "Optik Değerlendirme: Oftalmoskopi ve Renkli Görme",
+   "bolum": "1.5",
+   "discipline": "Nöroloji",
+   "pdfSayfalari": [
+    7,
+    8
+   ],
+   "sourcePdf": {
+    "startPage": 7,
+    "endPage": 8,
+    "pdfPath": "kurul2/y25-k2-62-kraniyal-sinir-muayenesi.pdf"
+   },
+   "content": "Gözdibi muayenesi ve renk algısı optik sinirin patolojilerini doğrudan ve erken evrede gösteren kritik testlerdir.\n\n- **Oftalmoskopi Bulguları:** Optik disk sınırları netliği, rengi (solukluk/hiperemi), fizyolojik çukurluk ve retinal venöz pulsasyon incelenir.\n- **Papilödem Tablosu:** Kafa içi basınç artışında (KİBA) optik disk sınırları silinir, venöz pulsasyon kaybolur ve disk kabarıklığı izlenir.\n- **Ishihara Kartları:** Psödoizokromatik renk levhaları konjenital kırmızı-yeşil körlüğünün yanı sıra optik nörit gibi edinsel nöropatileri saptar.\n\n> [!IMPORTANT]\n> Optik diskte venöz pulsasyonun varlığı, kafa içi basıncının o an için normal olduğunu gösteren en güvenilir oftalmoskopik bulgudur.",
+   "synthesisNarrative": "Gözdibi muayenesi ve renk algısı optik sinirin patolojilerini doğrudan ve erken evrede gösteren kritik testlerdir.\n\n- **Oftalmoskopi Bulguları:** Optik disk sınırları netliği, rengi (solukluk/hiperemi), fizyolojik çukurluk ve retinal venöz pulsasyon incelenir.\n- **Papilödem Tablosu:** Kafa içi basınç artışında (KİBA) optik disk sınırları silinir, venöz pulsasyon kaybolur ve disk kabarıklığı izlenir.\n- **Ishihara Kartları:** Psödoizokromatik renk levhaları konjenital kırmızı-yeşil körlüğünün yanı sıra optik nörit gibi edinsel nöropatileri saptar.\n\n> [!IMPORTANT]\n> Optik diskte venöz pulsasyonun varlığı, kafa içi basıncının o an için normal olduğunu gösteren en güvenilir oftalmoskopik bulgudur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Oftalmoskopik gözdibi muayenesinde spontan venöz pulsasyonun izlenmesi klinik olarak neyi düşündürür?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Kafa içi basıncının normal olduğunu",
+       "isCorrect": true,
+       "explanation": "Spontan retinal venöz pulsasyon kafa içi basıncının fizyolojik sınırlarda seyrettiğini doğrulayan güçlü bir kanıttır. Bu bulgunun varlığı intrakraniyal hipertansiyon olasılığını büyük ölçüde dışlar."
+      },
+      {
+       "key": "B",
+       "text": "İleri evre papilödem geliştiğini",
+       "isCorrect": false,
+       "explanation": "İleri evre papilödemde aksonal staz ve venöz konjesyon diskin kabarmasına yol açar. Bu patolojik tabloda spontan venöz pulsasyon tamamen silinmiş olarak bulunur."
+      },
+      {
+       "key": "C",
+       "text": "Optik kiyazmanın basıldığını",
+       "isCorrect": false,
+       "explanation": "Optik kiyazma basısı hipofiz tümörlerinde bitemporal görme alanı defekti oluşturan bir süreçtir. Retinal venlerdeki spontan pulsasyonun varlığı doğrudan kiyazma anatomisini yansıtmaz."
+      },
+      {
+       "key": "D",
+       "text": "Troklear sinirin felç olduğunu",
+       "isCorrect": false,
+       "explanation": "Troklear sinir dördüncü kraniyal sinir olup süperior oblik kasın motor hareketini yönetir. Gözdibi venöz dalgalanması ile troklear motor inervasyon arasında fizyolojik bağ kurulamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kafa içi basınç artışında optik disk sınırları silinir, venöz pulsasyon kaybolur ve disk kabarıklığıyla karakterize {{c1::papilödem}} izlenir.",
+     "maskedTerm": "papilödem",
+     "hint": "İntrakraniyal hipertansiyonda optik disk başında beliren ödemli şişlik tablosu."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Optik Disk ve Renkli Görme Bulguları",
+     "items": [
+      {
+       "text": "Ishihara kartları optik nöritteki erken renk duyusu bozulmasını saptar.",
+       "isLie": false,
+       "explanation": "Optik nörit demiyelinizasyonunda renk desatürasyonu keskinlikten önce bozulur."
+      },
+      {
+       "text": "Papilödem geliştiğinde optik disk kenarları belirginliğini kaybederek kabarır.",
+       "isLie": false,
+       "explanation": "Aksoplazmik staz nedeniyle disk ödemi gelişir ve sınırlar oftalmoskopide silinir."
+      },
+      {
+       "text": "Optik sinir atrofisinde disk rengi parlak kırmızı ve hiperemik izlenir.",
+       "isLie": true,
+       "explanation": "Optik atrofide kapiller yatak azaldığı için disk rengi soluk beyaz görünür."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Oftalmoskopide spontan retinal venöz pulsasyonun görülmesi klinik açıdan neyi gösterir?",
+     "answer": "Spontan venöz pulsasyonun izlenmesi o an için kafa içi basıncının normal sınırlarda olduğunu ve akut papilödem bulunmadığını gösterir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 6,
+   "title": "Oküler Motor Giriş: CN III, IV, VI ve Kas Vektörleri",
+   "bolum": "2.1",
+   "discipline": "Nöroloji",
+   "pdfSayfalari": [
+    9,
+    11
+   ],
+   "sourcePdf": {
+    "startPage": 9,
+    "endPage": 11
+   },
+   "content": "Ekstraoküler hareketler okülomotor (CN III), troklear (CN IV) ve abdusens (CN VI) sinirleri tarafından yönetilir.\n\n- **CN VI (N. Abducens):** Yalnızca m. rectus lateralis kasını innerve eder; gözün dışa bakışını (abdüksiyon) sağlar.\n- **CN IV (N. Trochlearis):** Yalnızca m. obliquus superior kasını innerve eder; göze intorsiyon ve addüksiyonda depresyon yaptırır.\n- **CN III (N. Oculomotorius):** M. rectus superior (elevasyon), m. rectus inferior (depresyon), m. rectus medialis (addüksiyon), m. obliquus inferior (ekstorsiyon ve elevasyon) kaslarını innerve eder.\n\n> [!IMPORTANT]\n> M. levator palpebrae superioris ve pupilla sfinkterinin parasempatik lifleri de nervus oculomotorius (CN III) tarafından uyarılır.",
+   "synthesisNarrative": "Ekstraoküler hareketler okülomotor (CN III), troklear (CN IV) ve abdusens (CN VI) sinirleri tarafından yönetilir.\n\n- **CN VI (N. Abducens):** Yalnızca m. rectus lateralis kasını innerve eder; gözün dışa bakışını (abdüksiyon) sağlar.\n- **CN IV (N. Trochlearis):** Yalnızca m. obliquus superior kasını innerve eder; göze intorsiyon ve addüksiyonda depresyon yaptırır.\n- **CN III (N. Oculomotorius):** M. rectus superior (elevasyon), m. rectus inferior (depresyon), m. rectus medialis (addüksiyon), m. obliquus inferior (ekstorsiyon ve elevasyon) kaslarını innerve eder.\n\n> [!IMPORTANT]\n> M. levator palpebrae superioris ve pupilla sfinkterinin parasempatik lifleri de nervus oculomotorius (CN III) tarafından uyarılır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Ekstraoküler kaslardan hangisi nervus trochlearis (CN IV) tarafından innerve edilir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "M. obliquus superior",
+       "isCorrect": true,
+       "explanation": "Süperior oblik kası troklear sinirin tek hedef kası olup intorsiyon ve depresyon hareketlerini yürütür. Bu nedenle troklear felçte bu kasın işlevi aksayarak vertikal diplopi gelişir."
+      },
+      {
+       "key": "B",
+       "text": "M. rectus lateralis",
+       "isCorrect": false,
+       "explanation": "Lateral rektus kası altıncı kraniyal sinir olan nervus abducens tarafından innerve edilir. Göz küresinin abdüksiyonunu sağlayan bu kas troklear sinirle uyarılmaz."
+      },
+      {
+       "key": "C",
+       "text": "M. rectus medialis",
+       "isCorrect": false,
+       "explanation": "Mediyal rektus kası üçüncü kraniyal sinir olan okülomotor sinir tarafından innerve edilir. Gözün içe bakışını sağlayan bu kas troklear sinirin kontrol sahası dışındadır."
+      },
+      {
+       "key": "D",
+       "text": "M. levator palpebrae",
+       "isCorrect": false,
+       "explanation": "Levator palpebrae superioris üst göz kapağını kaldıran ve CN III ile uyarılan kastır. Troklear sinirin bu kapağı hareket ettiren liflerle hiçbir anatomik ilişkisi yoktur."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Nervus abducens yalnızca {{c1::m. rectus lateralis}} kasını innerve ederek gözün dışa bakışını sağlar.",
+     "maskedTerm": "m. rectus lateralis",
+     "hint": "Göz küresini dış yana doğru abdükte eden tek ekstraoküler düz kas."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Ekstraoküler Kaslar ve Sinir İnervasyonları",
+     "items": [
+      {
+       "text": "Lateral rektus kası altıncı kraniyal sinir tarafından uyarılır.",
+       "isLie": false,
+       "explanation": "Nervus abducens doğrudan lateral rektus kasına giderek abdüksiyonu sağlar."
+      },
+      {
+       "text": "Süperior oblik kası dördüncü kraniyal sinir tarafından uyarılır.",
+       "isLie": false,
+       "explanation": "Troklear sinir mezensefalondan çıkarak süperior oblik kası innerve eder."
+      },
+      {
+       "text": "Mediyal rektus kası nervus abducens tarafından uyarılır.",
+       "isLie": true,
+       "explanation": "Mediyal rektus kası abdusens değil nervus oculomotorius (CN III) tarafından innerve edilir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Ekstraoküler kaslardan hangileri CN III dışında farklı kraniyal sinirlerle innerve edilir?",
+     "answer": "M. rectus lateralis altıncı sinir (CN VI), m. obliquus superior ise dördüncü sinir (CN IV) tarafından innerve edilir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 7,
+   "title": "Göz Muayenesinin Amaçları ve Temel Basamakları",
+   "bolum": "2.2",
+   "discipline": "Nöroloji",
+   "pdfSayfalari": [
+    12,
+    12
+   ],
+   "sourcePdf": {
+    "startPage": 12,
+    "endPage": 12
+   },
+   "content": "Ekstraoküler motor muayene dört temel bileşenin sistematik olarak taranmasını amaçlar.\n\n- **Göz Hareketleri:** Dokuz bakış yönünde göz kürelerinin konjuge hareket kabiliyeti ve kısıtlılıklar incelenir.\n- **Göz Kapağı Pozisyonu:** Üst göz kapağının limbustan yüksekliği değerlendirilir; pitozis veya kapak retraksiyonu araştırılır.\n- **Pupilla İncelemesi:** Pupillaların çapı (izokori/anizokori), şekli ve ışık ile yakın uyarana yanıtı test edilir.\n- **Nistagmus Varlığı:** Primer bakışta ve uç bakış yönlerinde istemsiz, ritmik göz salınımları (pendüler veya jerk tipi) kontrol edilir.\n\n> [!NOTE]\n> Pitozis, pupil asimetrisi ve göz hareket kısıtlılığının bir arada bulunması genellikle üçüncü kraniyal sinir patolojisine işaret eder.",
+   "synthesisNarrative": "Ekstraoküler motor muayene dört temel bileşenin sistematik olarak taranmasını amaçlar.\n\n- **Göz Hareketleri:** Dokuz bakış yönünde göz kürelerinin konjuge hareket kabiliyeti ve kısıtlılıklar incelenir.\n- **Göz Kapağı Pozisyonu:** Üst göz kapağının limbustan yüksekliği değerlendirilir; pitozis veya kapak retraksiyonu araştırılır.\n- **Pupilla İncelemesi:** Pupillaların çapı (izokori/anizokori), şekli ve ışık ile yakın uyarana yanıtı test edilir.\n- **Nistagmus Varlığı:** Primer bakışta ve uç bakış yönlerinde istemsiz, ritmik göz salınımları (pendüler veya jerk tipi) kontrol edilir.\n\n> [!NOTE]\n> Pitozis, pupil asimetrisi ve göz hareket kısıtlılığının bir arada bulunması genellikle üçüncü kraniyal sinir patolojisine işaret eder.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Ekstraoküler motor muayenede üst göz kapağının anormal düşüklüğü aşağıdaki terimlerden hangisiyle tanımlanır?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Pitozis",
+       "isCorrect": true,
+       "explanation": "Pitozis levator palpebrae superioris zaafına bağlı olarak üst göz kapağının aşağı sarkması tablosudur. Bu klinik bulgu özellikle üçüncü kraniyal sinir hasarlarında karakteristik olarak belirir."
+      },
+      {
+       "key": "B",
+       "text": "Anizokori",
+       "isCorrect": false,
+       "explanation": "Anizokori sağ ve sol pupilla çapları arasındaki milimetrik asimetriyi ifade eden otonomik terimdir. Göz kapağının limbustan düşüklüğünü veya yüksekliğini tanımlamak amacıyla kullanılmaz."
+      },
+      {
+       "key": "C",
+       "text": "Nistagmus",
+       "isCorrect": false,
+       "explanation": "Nistagmus göz küresinin primer veya uç bakışlarda sergilediği ritmik istemsiz salınım hareketidir. Göz kapağının kas zaafına bağlı olarak aşağı sarkmasını gösteren bir ifade değildir."
+      },
+      {
+       "key": "D",
+       "text": "Amavrozis",
+       "isCorrect": false,
+       "explanation": "Amavrozis görme siniri veya retina kaynaklı tam görme kaybını ifade eden klinik terimdir. Kapak pozisyonundaki mekanik düşüklük tablosu ile kavramsal olarak örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Üst göz kapağının limbustan yüksekliği değerlendirilir; kapak düşüklüğü olan {{c1::pitozis}} veya kapak retraksiyonu araştırılır.",
+     "maskedTerm": "pitozis",
+     "hint": "Levator palpebrae zaafında üst göz kapağının pupil seviyesine sarkması."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Oküler Motor Muayenenin Dört Amacı",
+     "items": [
+      {
+       "text": "Göz kapağı muayenesinde pitozis varlığı dikkatle değerlendirilir.",
+       "isLie": false,
+       "explanation": "Pitozis üçüncü kraniyal sinir tutulumunun en önemli muayene ipuçlarındandır."
+      },
+      {
+       "text": "Pupilla muayenesinde izokori ve ışığa reaktivite kontrol edilir.",
+       "isLie": false,
+       "explanation": "Pupilla çap eşitliği ve ışık yanıtı otonom yolların intakt olduğunu gösterir."
+      },
+      {
+       "text": "Nistagmus değerlendirmesi koku ayrımı testiyle eş zamanlı yapılır.",
+       "isLie": true,
+       "explanation": "Nistagmus göz hareketleriyle değerlendirilir; koku siniri ile hiçbir bağı yoktur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Oküler motor muayenede sistematik olarak değerlendirilen dört temel bileşen nelerdir?",
+     "answer": "Göz hareketleri, göz kapağı pozisyonu (pitozis), pupilla çapı/reaktivitesi ve nistagmus varlığıdır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 8,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Duyu ve Görme Sinirleri",
+   "bolum": "1.R",
+   "discipline": "Nöroloji",
+   "pdfSayfalari": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "sourcePdf": {
+    "startPage": 1,
+    "endPage": 12,
+    "pdfPath": "kurul2/y25-k2-62-kraniyal-sinir-muayenesi.pdf"
+   },
+   "content": "Bu bölümde kraniyal sinirlerin beyin sapı düzeyleri, koku yolları ve görme fonksiyonlarının muayene ilkeleri pekiştirilmektedir.\n\n- **Kraniokaudal Seviyeler:** Mezensefalondan CN III-IV, ponstan CN V-VIII, medulla oblangatadan CN IX-XII sinirleri köken alır.\n- **CN I İlkeleri:** Tahriş edici maddeler trigeminal lifleri uyardığından koku testinde vanilya ve kahve gibi saf aromalar tercih edilir.\n- **CN II Görme Yolları:** Optik sinir kesisi monooküler körlük, kiyazma basısı bitemporal hemianopsi, optik traktus lezyonu ise homonim hemianopsi yapar.\n\n> [!NOTE]\n> Ekstraoküler kaslardan lateral rektus CN VI, süperior oblik CN IV, diğer kaslar ise CN III tarafından innerve edilir.",
+   "synthesisNarrative": "Bu bölümde kraniyal sinirlerin beyin sapı düzeyleri, koku yolları ve görme fonksiyonlarının muayene ilkeleri pekiştirilmektedir.\n\n- **Kraniokaudal Seviyeler:** Mezensefalondan CN III-IV, ponstan CN V-VIII, medulla oblangatadan CN IX-XII sinirleri köken alır.\n- **CN I İlkeleri:** Tahriş edici maddeler trigeminal lifleri uyardığından koku testinde vanilya ve kahve gibi saf aromalar tercih edilir.\n- **CN II Görme Yolları:** Optik sinir kesisi monooküler körlük, kiyazma basısı bitemporal hemianopsi, optik traktus lezyonu ise homonim hemianopsi yapar.\n\n> [!NOTE]\n> Ekstraoküler kaslardan lateral rektus CN VI, süperior oblik CN IV, diğer kaslar ise CN III tarafından innerve edilir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdaki eşleştirmelerden hangisi beyin sapı çıkış düzeyi ve sinir anatomisi açısından doğrudur?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Mezensefalon - Nervus trochlearis",
+       "isCorrect": true,
+       "explanation": "Mezensefalon dördüncü kraniyal sinir olan nervus trochlearisin çekirdeğine doğrudan ev sahipliği yapar. Bu anatomik yerleşim orta beyin hasarlarında troklear felç görülmesini açıklar."
+      },
+      {
+       "key": "B",
+       "text": "Pons - Nervus hypoglossus",
+       "isCorrect": false,
+       "explanation": "Nervus hypoglossus medulla oblangatadaki sulkustan çıkarak dil kaslarını innerve eden sinirdir. Pons tegmentumundan kaynaklanan yapılar arasında sayılması anatomik olarak hatalıdır."
+      },
+      {
+       "key": "C",
+       "text": "Medulla oblangata - Nervus abducens",
+       "isCorrect": false,
+       "explanation": "Nervus abducens pons tegmentumundaki nükleusundan çıkarak lateral rektusu uyarır. Bulber düzeyden çıkan alt kraniyal sinirler arasına dahil edilemez."
+      },
+      {
+       "key": "D",
+       "text": "Mezensefalon - Nervus facialis",
+       "isCorrect": false,
+       "explanation": "Nervus facialis pontomedüller bileşkeden çıkarak yüz mimik kaslarına giden motor sinirdir. Orta beyin seviyesinden köken alan bir kraniyal sinir olarak tanımlanamaz."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Görme ve Oküler Kas İnervasyon Özeti",
+     "items": [
+      {
+       "text": "Kiyazma optikumdaki hipofiz basısı bitemporal hemianopsi ile sonuçlanır.",
+       "isLie": false,
+       "explanation": "Kiyazmada çaprazlaşan nazal lifler basılınca her iki dış temporal alan silinir."
+      },
+      {
+       "text": "Lateral rektus kası altıncı kraniyal sinir olan abdusens tarafından uyarılır.",
+       "isLie": false,
+       "explanation": "Nervus abducens lateral rektus kasına giderek abdüksiyonu yönetir."
+      },
+      {
+       "text": "Süperior oblik kası nervus oculomotorius tarafından innerve edilir.",
+       "isLie": true,
+       "explanation": "Süperior oblik kası okülomotor değil dördüncü sinir nervus trochlearis ile uyarılır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Optik traktus lezyonu ile kiyazma optikum lezyonunun görme alanı defektlerini karşılaştırınız.",
+     "answer": "Kiyazma lezyonu bitemporal hemianopsi yaparken, optik traktus lezyonu lezyonun karşı tarafında homonim hemianopsi oluşturur."
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Optik traktus lezyonu hasarında lezyonun karşı tarafında {{c1::homonim hemianopsi}} tablosu izlenir.",
+     "maskedTerm": "homonim hemianopsi",
+     "hint": "Her iki gözde lezyonun zıt tarafındaki görsel yarım alanların simetrik kaybı."
+    }
+   ]
+  },
+  {
+   "slideNumber": 9,
+   "title": "Pupilla Işık Refleksi: Pretektal ve Parasempatik Yolak",
+   "bolum": "2.3",
+   "discipline": "Nöroloji",
+   "pdfSayfalari": [
+    13,
+    13
+   ],
+   "sourcePdf": {
+    "startPage": 13,
+    "endPage": 13
+   },
+   "content": "Pupilla ışık refleksi afferent görsel uyarının efferent parasempatik miyozise dönüştüğü bilateral bir refleks arktır.\n\n- **Afferent Yol:** Retinadan başlayan uyarılar optik sinir (CN II) ve optik traktus üzerinden mezensefalondaki pretektal nükleusa ulaşır.\n- **Bilateral Dağılım:** Her bir pretektal çekirdek hem ipsilateral hem de kontralateral Edinger-Westphal çekirdeklerine internöronal uyarı gönderir.\n- **Efferent Yol:** Edinger-Westphal çekirdeğinden çıkan pregangliyonik parasempatik lifler CN III içinde seyrederek silier gangliyona varır; postgangliyonik kısa silier sinirler m. sphincter pupillae kasını kasarak direkt ve konsensüel miyozis oluşturur.\n\n> [!IMPORTANT]\n> Bir göze ışık tutulduğunda her iki gözün aynı anda daralması, pretektal nükleusun bilateral Edinger-Westphal bağlantısından kaynaklanır.",
+   "synthesisNarrative": "Pupilla ışık refleksi afferent görsel uyarının efferent parasempatik miyozise dönüştüğü bilateral bir refleks arktır.\n\n- **Afferent Yol:** Retinadan başlayan uyarılar optik sinir (CN II) ve optik traktus üzerinden mezensefalondaki pretektal nükleusa ulaşır.\n- **Bilateral Dağılım:** Her bir pretektal çekirdek hem ipsilateral hem de kontralateral Edinger-Westphal çekirdeklerine internöronal uyarı gönderir.\n- **Efferent Yol:** Edinger-Westphal çekirdeğinden çıkan pregangliyonik parasempatik lifler CN III içinde seyrederek silier gangliyona varır; postgangliyonik kısa silier sinirler m. sphincter pupillae kasını kasarak direkt ve konsensüel miyozis oluşturur.\n\n> [!IMPORTANT]\n> Bir göze ışık tutulduğunda her iki gözün aynı anda daralması, pretektal nükleusun bilateral Edinger-Westphal bağlantısından kaynaklanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Pupilla ışık refleksinde uyarının tek taraflı ışıktan bilateral miyozise dönüşmesini sağlayan kritik anatomik yapı hangisidir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Pretektal nükleusun bilateral bağlantısı",
+       "isCorrect": true,
+       "explanation": "Pretektal nükleus her iki Edinger-Westphal çekirdeğine eş zamanlı internöronal uyarı gönderir. Bu anatomik dağılım tek göze verilen ışıkla konsensüel pupiller yanıtın oluşmasını temin eder."
+      },
+      {
+       "key": "B",
+       "text": "Silier gangliyonun çapraz yapması",
+       "isCorrect": false,
+       "explanation": "Silier gangliyon orbita içinde tek taraflı yerleşerek postgangliyonik pupil liflerini verir. Beyin sapı seviyesinde karşı tarafa lif çaprazlaması yapan bir merkez niteliği taşımaz."
+      },
+      {
+       "key": "C",
+       "text": "Lateral genikülat cisim sinapsı",
+       "isCorrect": false,
+       "explanation": "Lateral genikülat cisim primer görme korteksine giden bilinçli görsel yolda yer alır. Mezensefalik pupil ışık refleks arkının internöronal dağılımında sinaps oluşturmaz."
+      },
+      {
+       "key": "D",
+       "text": "M. obliquus superior kasılması",
+       "isCorrect": false,
+       "explanation": "Süperior oblik kası dördüncü kraniyal sinirle innerve edilen somatik bir göz kasıdır. İris sfinkterinin parasempatik miyozis refleksinde herhangi bir aktiviteye katılmaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Pregangliyonik parasempatik lifler CN III içinde seyrederek silier gangliyona varır; postgangliyonik lifler {{c1::m. sphincter pupillae}} kasını kasarak miyozis oluşturur.",
+     "maskedTerm": "m. sphincter pupillae",
+     "hint": "İris açıklığını çevreleyen ve uyarılınca dairesel daralma oluşturan kas dokusu."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Pupilla Işık Refleksi Arkı",
+     "items": [
+      {
+       "text": "Refleksin afferent bacağını nervus opticus (CN II) oluşturur.",
+       "isLie": false,
+       "explanation": "Işık fotoreseptörleri uyardıktan sonra optik sinirle pretektal alana iletilir."
+      },
+      {
+       "text": "Efferent parasempatik ileti Edinger-Westphal çekirdeğinden başlar.",
+       "isLie": false,
+       "explanation": "Okülomotor kompleksin parasempatik çekirdeği olan Edinger-Westphal efferenttir."
+      },
+      {
+       "text": "Işık refleksi efferent yolu doğrudan abdusens siniri ile yürütülür.",
+       "isLie": true,
+       "explanation": "Işık refleksi efferenti abdusens değil nervus oculomotorius (CN III) lifleridir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Pupilla ışık refleksinde afferent ve efferent nöronal yolakları belirtiniz.",
+     "answer": "Afferent yol nervus opticus (CN II) ile pretektal nükleusa varır; efferent yol bilateral Edinger-Westphal çekirdeklerinden CN III ile m. sphincter pupillaeye ulaşır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 10,
+   "title": "Akomodasyon Triadı: Konverjans ve Miyozis",
+   "bolum": "2.4",
+   "discipline": "Nöroloji",
+   "pdfSayfalari": [
+    14,
+    14
+   ],
+   "sourcePdf": {
+    "startPage": 14,
+    "endPage": 14
+   },
+   "content": "Yakındaki bir cisme bakıldığında görme netliğini ve derinliğini sağlamak üzere üç senkron fizyolojik yanıt ortaya çıkar.\n\n- **Bilateral Konverjans:** Her iki gözün m. rectus medialis kasları eş zamanlı kasılarak göz kürelerini burun köküne doğru içe çevirir.\n- **Lens Akomodasyonu:** Silier kas kasılarak zonüler liflerin gerginliği azalır; lens elastikiyetiyle kalınlaşarak kırma gücünü artırır.\n- **Pupiller Miyozis:** M. sphincter pupillae kasılarak pupilla çapı küçülür; bu durum küresel aberasyonu önler ve alan derinliğini artırır.\n\n> [!NOTE]\n> Yakın refleks arkı primer görme korteksi (Brodmann 17-19) üzerinden kortikal entegrasyonla yürütülür; ışık refleksinden farklı olarak korteks katılımı zorunludur.",
+   "synthesisNarrative": "Yakındaki bir cisme bakıldığında görme netliğini ve derinliğini sağlamak üzere üç senkron fizyolojik yanıt ortaya çıkar.\n\n- **Bilateral Konverjans:** Her iki gözün m. rectus medialis kasları eş zamanlı kasılarak göz kürelerini burun köküne doğru içe çevirir.\n- **Lens Akomodasyonu:** Silier kas kasılarak zonüler liflerin gerginliği azalır; lens elastikiyetiyle kalınlaşarak kırma gücünü artırır.\n- **Pupiller Miyozis:** M. sphincter pupillae kasılarak pupilla çapı küçülür; bu durum küresel aberasyonu önler ve alan derinliğini artırır.\n\n> [!NOTE]\n> Yakın refleks arkı primer görme korteksi (Brodmann 17-19) üzerinden kortikal entegrasyonla yürütülür; ışık refleksinden farklı olarak korteks katılımı zorunludur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Akomodasyon refleksi (yakın bakış triadı) sırasında gerçekleşen üç temel olaydan biri hangisidir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Bilateral konverjans",
+       "isCorrect": true,
+       "explanation": "Bilateral konverjans her iki gözün mediyal rektus kaslarının eş zamanlı kasılmasıyla gözleri içe odaklar. Bu eş zamanlı hareket yakın triadının en belirgin motor bileşenlerinden birini teşkil eder."
+      },
+      {
+       "key": "B",
+       "text": "Bilateral pupiller midriyazis",
+       "isCorrect": false,
+       "explanation": "Bilateral pupiller midriyazis karanlık ortamda sempatik uyarıyla pupillanın genişlemesi tablosudur. Yakına odaklanma sırasında aberasyonu azaltmak amacıyla pupilla daralarak miyozise gider."
+      },
+      {
+       "key": "C",
+       "text": "M. rectus lateralis kasılması",
+       "isCorrect": false,
+       "explanation": "Lateral rektus kası göz küresini dışa doğru abdükte eden tek ekstraoküler rektus kasıdır. Konverjans hareketinde antagonist olarak gevşemesi gereken bir kas niteliğindedir."
+      },
+      {
+       "key": "D",
+       "text": "Lens kırma gücünün düşmesi",
+       "isCorrect": false,
+       "explanation": "Lens kırma gücü uzağa bakış sırasında silier kasın gevşemesiyle asgari düzeye indirilir. Yakındaki bir hedefi foveaya odaklamak için kırıcılığın belirgin şekilde yükselmesi gerekir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Her iki gözün m. rectus medialis kasları eş zamanlı kasılarak göz kürelerini burun köküne çeviren duruma {{c1::bilateral konverjans}} denir.",
+     "maskedTerm": "bilateral konverjans",
+     "hint": "Göz kürelerinin görsel eksenlerini eş zamanlı içe yönlendirmesi eylemi."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Akomodasyon ve Yakın Bakış Triadı",
+     "items": [
+      {
+       "text": "Akomodasyon refleks arkı primer görsel korteksin katılımını gerektirir.",
+       "isLie": false,
+       "explanation": "Bulanık görüntünün analizi oksipital korteks üzerinden akomodasyonu tetikler."
+      },
+      {
+       "text": "Silier kas kasıldığında zonüler lifler gevşer ve lens kalınlaşır.",
+       "isLie": false,
+       "explanation": "Silier halka daralınca zonüller gevşer ve lens elastik kırıcılığını artırır."
+      },
+      {
+       "text": "Yakına bakış sırasında pupillalar genişleyerek midriyazis oluşturur.",
+       "isLie": true,
+       "explanation": "Yakına odaklanmada küresel aberasyonu önlemek için pupillalar daralarak miyozis yapar."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Akomodasyon refleksinde eş zamanlı gerçekleşen üç fizyolojik yanıtı sayınız.",
+     "answer": "Bilateral konverjans (mediyal rektuslar), lens kalınlaşmasıyla akomodasyon (silier kas) ve pupiller miyozistir (sfinkter pupillae)."
+    }
+   ]
+  },
+  {
+   "slideNumber": 11,
+   "title": "Nervus Oculomotorius (CN III): Felç Tablosu ve Down-and-Out",
+   "bolum": "2.5",
+   "discipline": "Nöroloji",
+   "pdfSayfalari": [
+    15,
+    16
+   ],
+   "sourcePdf": {
+    "startPage": 15,
+    "endPage": 16,
+    "pdfPath": "kurul2/y25-k2-62-kraniyal-sinir-muayenesi.pdf"
+   },
+   "content": "Nervus oculomotorius mezensefalonda süperior kollikulus hizasında yer alan motor ve parasempatik çekirdeklerden lif alır.\n\n- **Pitozis Gelişimi:** M. levator palpebrae superioris felci nedeniyle tam üst göz kapağı düşüklüğü ortaya çıkar.\n- **Down-and-Out Pozisyonu:** Felçli gözde mediyal, süperior ve inferior rektuslar çalışmaz; sağlam kalan CN VI (lateral rektus) ve CN IV (süperior oblik) gözü dışa ve aşağıya çeker.\n- **Fiks Dilate Pupil:** Parasempatik pupilomotor liflerin hasarında ışığa yanıtsız midriyatik pupilla gelişir.\n\n> [!IMPORTANT]\n> Acom posterior anevrizmalarında parasempatik lifler sinir dış yüzeyinde yer aldığından erken dönemde ağrılı midriyazis ile üçüncü sinir felci belirir.",
+   "synthesisNarrative": "Nervus oculomotorius mezensefalonda süperior kollikulus hizasında yer alan motor ve parasempatik çekirdeklerden lif alır.\n\n- **Pitozis Gelişimi:** M. levator palpebrae superioris felci nedeniyle tam üst göz kapağı düşüklüğü ortaya çıkar.\n- **Down-and-Out Pozisyonu:** Felçli gözde mediyal, süperior ve inferior rektuslar çalışmaz; sağlam kalan CN VI (lateral rektus) ve CN IV (süperior oblik) gözü dışa ve aşağıya çeker.\n- **Fiks Dilate Pupil:** Parasempatik pupilomotor liflerin hasarında ışığa yanıtsız midriyatik pupilla gelişir.\n\n> [!IMPORTANT]\n> Acom posterior anevrizmalarında parasempatik lifler sinir dış yüzeyinde yer aldığından erken dönemde ağrılı midriyazis ile üçüncü sinir felci belirir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Tam bir üçüncü kraniyal sinir felcinde göz küresinin dışa ve aşağıya (down-and-out) sabitlenmesini sağlayan sağlam kaslar hangileridir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "M. rectus lateralis ve m. obliquus superior",
+       "isCorrect": true,
+       "explanation": "Lateral rektus kası CN VI ile süperior oblik kası ise CN IV ile innerve edilen kaslardır. CN III felcinde bu iki kas antagonist dirençle karşılaşmadığı için gözü dışa ve aşağıya sabitler."
+      },
+      {
+       "key": "B",
+       "text": "M. rectus medialis ve m. rectus inferior",
+       "isCorrect": false,
+       "explanation": "Mediyal ve inferior rektus kasları okülomotor sinirin alt dalı tarafından uyarılan kaslardır. Üçüncü sinir felcinde tamamen hareketsiz kaldıklarından gözü bu pozisyona çekemezler."
+      },
+      {
+       "key": "C",
+       "text": "M. levator palpebrae ve m. ciliaris",
+       "isCorrect": false,
+       "explanation": "Levator palpebrae ve silier kas kapağı ve lensi yöneten okülomotor yapılardır. Göz küresinin eksternal şaşılık doğrultusunda mekanik olarak yönlenmesini sağlayamazlar."
+      },
+      {
+       "key": "D",
+       "text": "M. obliquus inferior ve m. rectus superior",
+       "isCorrect": false,
+       "explanation": "İnferior oblik ve süperior rektus kasları okülomotor sinirin somatik hedefleridir. Felç tablosunda inaktif olduklarından gözün pozisyonunu belirlemede rol oynayamazlar."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Parasempatik pupilomotor liflerin hasarında ışığa yanıtsız ve genişlemiş {{c1::fiks dilate pupil}} gelişir.",
+     "maskedTerm": "fiks dilate pupil",
+     "hint": "Işık uyarısına duyarsız kalarak maksimum açıklıkta sabitlenen iris deliği."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Okülomotor Sinir Felci Klinik Bulguları",
+     "items": [
+      {
+       "text": "Kapak düşüklüğü olan tam pitozis tablosu gelişir.",
+       "isLie": false,
+       "explanation": "M. levator palpebrae felç olduğu için üst göz kapağı tamamen düşer."
+      },
+      {
+       "text": "Anevrizmal basılarda pupil lifleri dışta kaldığı için erken tutulur.",
+       "isLie": false,
+       "explanation": "Parasempatik lifler sinir kılıfının dış yüzeyinde yer aldığından basıya çok hassastır."
+      },
+      {
+       "text": "Göz küresi felçli tarafta aşırı addüksiyona giderek buruna yapışır.",
+       "isLie": true,
+       "explanation": "Mediyal rektus felçli olduğundan göz addüksiyona gidemez, dışa kayar."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Okülomotor sinir felcinde görülen karakteristik göz küresi deviasyonunu ve nedenini açıklayınız.",
+     "answer": "Mediyal, süperior ve inferior rektuslar felç olduğundan, sağlam kalan lateral rektus (CN VI) ve süperior oblik (CN IV) gözü dışa ve aşağıya (down-and-out) çeker."
+    }
+   ]
+  },
+  {
+   "slideNumber": 12,
+   "title": "Nervus Trochlearis (CN IV): Obliquus Superior ve Bielschowsky Testi",
+   "bolum": "2.6",
+   "discipline": "Nöroloji",
+   "pdfSayfalari": [
+    17,
+    18
+   ],
+   "sourcePdf": {
+    "startPage": 17,
+    "endPage": 18,
+    "pdfPath": "kurul2/y25-k2-62-kraniyal-sinir-muayenesi.pdf"
+   },
+   "content": "Nervus trochlearis mezensefalon inferior kollikulus seviyesinde yer alan çekirdeğinden çıkar ve beyin sapını dorsalden terk eden tek kraniyal sinirdir.\n\n- **Çaprazlaşma Özelliği:** Çekirdeğinden çıkan lifler superior medüller velumda tamamen çaprazlaşarak karşı m. obliquus superior kasına gider.\n- **Klinik Belirtiler:** Hastalar özellikle merdiven inerken veya kitap okurken belirginleşen düşey (vertikal) ve torsiyonel diplopiden yakınır.\n- **Bielschowsky Baş Tilt Testi:** Hasta başını sağlam tarafa eğdiğinde diplopi hafifler; baş lezyonlu tarafa eğildiğinde vertikal şaşılık ve diplopi şiddetlenir.\n\n> [!NOTE]\n> Troklear sinir kafa travmalarında, özellikle karşı darbe (kontrku) mekanizmasıyla tentorium kenarında en sık zedelenen sinirlerdendir.",
+   "synthesisNarrative": "Nervus trochlearis mezensefalon inferior kollikulus seviyesinde yer alan çekirdeğinden çıkar ve beyin sapını dorsalden terk eden tek kraniyal sinirdir.\n\n- **Çaprazlaşma Özelliği:** Çekirdeğinden çıkan lifler superior medüller velumda tamamen çaprazlaşarak karşı m. obliquus superior kasına gider.\n- **Klinik Belirtiler:** Hastalar özellikle merdiven inerken veya kitap okurken belirginleşen düşey (vertikal) ve torsiyonel diplopiden yakınır.\n- **Bielschowsky Baş Tilt Testi:** Hasta başını sağlam tarafa eğdiğinde diplopi hafifler; baş lezyonlu tarafa eğildiğinde vertikal şaşılık ve diplopi şiddetlenir.\n\n> [!NOTE]\n> Troklear sinir kafa travmalarında, özellikle karşı darbe (kontrku) mekanizmasıyla tentorium kenarında en sık zedelenen sinirlerdendir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Beyin sapını dorsal yüzden terk eden ve çekirdeğinden çıktıktan sonra tamamen çaprazlaşan tek kraniyal sinir hangisidir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Nervus trochlearis (CN IV)",
+       "isCorrect": true,
+       "explanation": "Nervus trochlearis beyin sapının dorsal yüzünden çıkan ve velum medullarede çaprazlaşan tek kraniyal sinirdir. Bu morfolojik özelliği orta beyin arka kesim travmalarında lezyon lokalizasyonunu doğrular."
+      },
+      {
+       "key": "B",
+       "text": "Nervus oculomotorius (CN III)",
+       "isCorrect": false,
+       "explanation": "Nervus oculomotorius mezensefalonun ventral yüzündeki interpedinküler fossadan çıkar. Dorsal çıkışlı veya nükleustan hemen sonra tam çaprazlaşan bir sinir anatomisi göstermez."
+      },
+      {
+       "key": "C",
+       "text": "Nervus abducens (CN VI)",
+       "isCorrect": false,
+       "explanation": "Nervus abducens pons ventralindeki pontomedüller oluktan çıkarak klivusa uzanır. Dorsal yüz yerine ventral yüzü kullanarak beyin sapını terk eden bir yapı gösterir."
+      },
+      {
+       "key": "D",
+       "text": "Nervus opticus (CN II)",
+       "isCorrect": false,
+       "explanation": "Nervus opticus diensefalik seviyede kiyazma optikumda nazal lifleriyle çaprazlaşır. Beyin sapı dorsalinden köken alan bir sinir yapısı olarak sınıflandırılması imkansızdır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Hastalar özellikle merdiven inerken veya kitap okurken belirginleşen düşey ve torsiyonel {{c1::diplopi}} tablosundan yakınır.",
+     "maskedTerm": "diplopi",
+     "hint": "Bir cismin iki ayrı görüntü olarak algılandığı çift görme durumu."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Troklear Sinir ve Bielschowsky Testi",
+     "items": [
+      {
+       "text": "Hasta diplopiyi hafifletmek için başını sağlam omzuna doğru eğer.",
+       "isLie": false,
+       "explanation": "Baş sağlam tarafa eğilince sağlam göz intorsiyon yaparak diplopiyi kompanse eder."
+      },
+      {
+       "text": "Troklear felçte düşey diplopi aşağı ve içe bakışta en belirgindir.",
+       "isLie": false,
+       "explanation": "M. obliquus superior en güçlü depresyon etkisini addüksiyon pozisyonunda gösterir."
+      },
+      {
+       "text": "Nervus trochlearis beyin sapının ön yüzünden piramisler arasından çıkar.",
+       "isLie": true,
+       "explanation": "Nervus trochlearis beyin sapının arka (dorsal) yüzünden çıkan tek kraniyal sinirdir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Troklear sinir felcinde hastalar neden başlarını sağlam omuz tarafına eğerler?",
+     "answer": "Felçli süperior oblik kası intorsiyon yapamadığından, baş sağlam tarafa eğildiğinde sağlam göz intorsiyon yaparak diplopiyi kompanse eder."
+    }
+   ]
+  },
+  {
+   "slideNumber": 13,
+   "title": "Nervus Abducens (CN VI): Lateral Rektus ve KİBA Duyarlılığı",
+   "bolum": "2.7",
+   "discipline": "Nöroloji",
+   "pdfSayfalari": [
+    19,
+    19
+   ],
+   "sourcePdf": {
+    "startPage": 19,
+    "endPage": 19
+   },
+   "content": "Nervus abducens pons tegmentumunda dördüncü ventrikül tabanında yer alan çekirdeğinden çıkar.\n\n- **Motor İnervasyon:** Sadece m. rectus lateralis kasını innerve ederek göz küresinin dışa bakışını (abdüksiyon) yönetir.\n- **Klinik Belirti:** Tek taraflı abdusens felcinde göz dışa bakamaz; felçli yöne bakışta artan yatay (horizontal) diplopi oluşur.\n- **Yalancı Lokalizasyon:** Subaraknoid aralıkta ve Dorello kanalında klivus üzerinden geçerken uzun intrakraniyal hat katettiği için kafa içi basınç artışında (KİBA) en sık zedelenen sinirdir.\n\n> [!IMPORTANT]\n> KİBA varlığında gelişen izole altıncı sinir felci, lezyonun doğrudan ponsta olduğunu göstermez; klasik bir yalancı lokalizasyon bulgusudur.",
+   "synthesisNarrative": "Nervus abducens pons tegmentumunda dördüncü ventrikül tabanında yer alan çekirdeğinden çıkar.\n\n- **Motor İnervasyon:** Sadece m. rectus lateralis kasını innerve ederek göz küresinin dışa bakışını (abdüksiyon) yönetir.\n- **Klinik Belirti:** Tek taraflı abdusens felcinde göz dışa bakamaz; felçli yöne bakışta artan yatay (horizontal) diplopi oluşur.\n- **Yalancı Lokalizasyon:** Subaraknoid aralıkta ve Dorello kanalında klivus üzerinden geçerken uzun intrakraniyal hat katettiği için kafa içi basınç artışında (KİBA) en sık zedelenen sinirdir.\n\n> [!IMPORTANT]\n> KİBA varlığında gelişen izole altıncı sinir felci, lezyonun doğrudan ponsta olduğunu göstermez; klasik bir yalancı lokalizasyon bulgusudur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kafa içi basınç artışında nervus abducensin en sık etkilenerek yalancı lokalizasyon bulgusu vermesinin temel anatomik nedeni nedir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Uzun intrakraniyal seyir ve klivus açılanması",
+       "isCorrect": true,
+       "explanation": "Nervus abducens subaraknoid mesafede en uzun kemik temaslı hatta sahip sinirdir. Kafa içi basınç artışı durumunda klivus kenarında gerilmeye uğrayarak erkenden zedelenir."
+      },
+      {
+       "key": "B",
+       "text": "Edinger-Westphal nükleusundan çıkması",
+       "isCorrect": false,
+       "explanation": "Edinger-Westphal nükleusu okülomotor sinirin parasempatik pregangliyonik merkezidir. Abdusens sinirinin motor gövdesi ile bu nükleus arasında anatomik bir ilişki yoktur."
+      },
+      {
+       "key": "C",
+       "text": "Tamamen miyelinsiz liflerden oluşması",
+       "isCorrect": false,
+       "explanation": "Nervus abducens kalın miyelinli somatik motor lif demetlerinden meydana gelir. Bası duyarlılığının miyelinsizlik hipoteziyle açıklanması bilimsel olarak gerçeği yansıtmaz."
+      },
+      {
+       "key": "D",
+       "text": "Yalnızca koku duyusunu taşıması",
+       "isCorrect": false,
+       "explanation": "Koku duyusu birinci kraniyal sinir olan nervus olfactoriusun özel fonksiyonudur. Abdusens siniri gözün dışa bakışını sağlayan saf motor bir sinir yapısıdır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Tek taraflı abdusens felcinde göz dışa bakamaz; felçli yöne bakışta belirginleşen {{c1::yatay diplopi}} ortaya çıkar.",
+     "maskedTerm": "yatay diplopi",
+     "hint": "Objelerin horizontal planda iki farklı odak olarak algılanması tablosu."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Nervus Abducens Özellikleri",
+     "items": [
+      {
+       "text": "Tek hedef kası göz küresini dışa baktıran m. rectus lateralistir.",
+       "isLie": false,
+       "explanation": "Altıncı sinir anatomik olarak sadece lateral rektus kasını innerve eder."
+      },
+      {
+       "text": "KİBA gelişen olgularda lokalizasyon değeri taşımayan yalancı felç yapabilir.",
+       "isLie": false,
+       "explanation": "Kafa içi basınç artışında gerilmeye uğrayarak pontin odak olmaksızın felç olabilir."
+      },
+      {
+       "text": "Nervus abducens felcinde göz küresi sürekli dışa bakar halde kilitlenir.",
+       "isLie": true,
+       "explanation": "Lateral rektus felç olduğunda göz dışa bakamaz; sağlam mediyal rektusla içe kayar."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "KİBA tablosunda neden altıncı sinir felci yalancı lokalizasyon bulgusu olarak adlandırılır?",
+     "answer": "Sinir Dorello kanalında ve klivus üzerinde uzun bir intrakraniyal seyir izlediğinden, bası doğrudan ponsta olmasa bile gerilerek felç olur."
+    }
+   ]
+  },
+  {
+   "slideNumber": 14,
+   "title": "Konjuge Bakış: PPRF, MLF ve İntranükleer Oftalmopleji",
+   "bolum": "2.8",
+   "discipline": "Nöroloji",
+   "pdfSayfalari": [
+    20,
+    22
+   ],
+   "sourcePdf": {
+    "startPage": 20,
+    "endPage": 22
+   },
+   "content": "Yatay konjuge bakış frontal göz alanı (FEF), paramedian pontin retiküler formasyon (PPRF) ve medial longitudinal fasikül (MLF) entegrasyonuyla sağlanır.\n\n- **PPRF Merkezi:** İstemli yatay bakışta pons'taki PPRF uyarılır; ipsilateral CN VI çekirdeğini aktive ederek o gözün abdüksiyonunu başlatır.\n- **MLF İletisi:** CN VI çekirdeğindeki internükleer nöronlar MLF üzerinden karşı mezensefalondaki CN III mediyal rektus alt nükleusunu uyarır.\n- **İntranükleer Oftalmopleji (İNO):** MLF hasarında (özellikle multipl skleroz veya beyin sapı iskemisinde) lezyon tarafındaki göz yatay bakışta addüksiyon yapamaz; karşı abdükte olan gözde kaba monooküler nistagmus izlenir.\n\n> [!IMPORTANT]\n> İNO olgularında konverjans muayene edildiğinde her iki mediyal rektus kası normal kasılır; bozukluk supranükleer MLF yolundadır.",
+   "synthesisNarrative": "Yatay konjuge bakış frontal göz alanı (FEF), paramedian pontin retiküler formasyon (PPRF) ve medial longitudinal fasikül (MLF) entegrasyonuyla sağlanır.\n\n- **PPRF Merkezi:** İstemli yatay bakışta pons'taki PPRF uyarılır; ipsilateral CN VI çekirdeğini aktive ederek o gözün abdüksiyonunu başlatır.\n- **MLF İletisi:** CN VI çekirdeğindeki internükleer nöronlar MLF üzerinden karşı mezensefalondaki CN III mediyal rektus alt nükleusunu uyarır.\n- **İntranükleer Oftalmopleji (İNO):** MLF hasarında (özellikle multipl skleroz veya beyin sapı iskemisinde) lezyon tarafındaki göz yatay bakışta addüksiyon yapamaz; karşı abdükte olan gözde kaba monooküler nistagmus izlenir.\n\n> [!IMPORTANT]\n> İNO olgularında konverjans muayene edildiğinde her iki mediyal rektus kası normal kasılır; bozukluk supranükleer MLF yolundadır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Multipl sklerozlu genç bir hastada sol MLF lezyonuna bağlı sol internükleer oftalmopleji geliştiğinde hangi muayene bulgusu gözlenir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Sağa bakışta sol gözde addüksiyon kısıtlılığı ve sağ gözde nistagmus",
+       "isCorrect": true,
+       "explanation": "Sol MLF hasarı sağa bakışta sol mediyal rektusun uyarılmasını engeller. Bu sırada abdükte olan sağlam sağ gözde kompanzatuar monooküler nistagmus ortaya çıkar."
+      },
+      {
+       "key": "B",
+       "text": "Sola bakışta sol gözde abdüksiyon kısıtlılığı",
+       "isCorrect": false,
+       "explanation": "Sol abdüksiyon kısıtlılığı sol nervus abducens periferik felcine işaret eden bir tablodur. İntranükleer oftalmoplejide abdüksiyon hareketi normal sınırlar içinde korunur."
+      },
+      {
+       "key": "C",
+       "text": "Konverjans sırasında her iki gözün hareketsiz kalması",
+       "isCorrect": false,
+       "explanation": "Konverjans refleksi supranükleer kortikomezensefalik yolla doğrudan mediyal rektusları uyarır. İNO olgularında konverjans korunduğundan gözler yakına bakarken içe başarıyla gelir."
+      },
+      {
+       "key": "D",
+       "text": "Bilateral tam pitozis ve fiks dilate pupil",
+       "isCorrect": false,
+       "explanation": "Pitozis ve fiks pupil tam okülomotor gövde lezyonunu gösteren klinik işaretlerdir. Medial longitudinal fasikül hasarı kapak ve pupil reflekslerini etkilemez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Pons ile mezensefalon arasında yatay bakışı koordine eden yolun hasarına {{c1::intranükleer oftalmopleji}} adı verilir.",
+     "maskedTerm": "intranükleer oftalmopleji",
+     "hint": "MLF demiyelinizasyonunda yatay bakışta beliren addüksiyon zaafı ve nistagmus tablosu."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Konjuge Yatay Bakış ve MLF Yolağı",
+     "items": [
+      {
+       "text": "MLF pons abdusens çekirdeği ile karşı mezensefalon okülomotor çekirdeğini bağlar.",
+       "isLie": false,
+       "explanation": "Yatay bakışta abdusens ile karşı mediyal rektus nükleusunu bağlayan temel traktustur."
+      },
+      {
+       "text": "İNO hastalarında konverjans refleksi korunduğu için gözler içe gelebilir.",
+       "isLie": false,
+       "explanation": "Konverjans uyarısı MLF üzerinden değil direkt kortikal liflerle iletilir."
+      },
+      {
+       "text": "MLF lezyonunda hasta yukarı veya aşağı düşey bakış hareketini tamamen kaybeder.",
+       "isLie": true,
+       "explanation": "MLF temel olarak yatay bakışı koordine eder; izole lezyonunda vertikal bakış korunur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "İntranükleer oftalmoplejide (İNO) mediyal rektus zaafı olmasına rağmen konverjansın korunmasının sebebi nedir?",
+     "answer": "Yatay konjuge bakış pons-MLF yolağına bağımlıyken, konverjans uyarısı doğrudan korteksten mezensefalondaki okülomotor çekirdeğe ulaştığı için MLF hasarından etkilenmez."
+    }
+   ]
+  },
+  {
+   "slideNumber": 15,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Oküler Motor Sinirler ve Bakış Yolları",
+   "bolum": "2.R",
+   "discipline": "Nöroloji",
+   "pdfSayfalari": [
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22
+   ],
+   "sourcePdf": {
+    "startPage": 13,
+    "endPage": 22,
+    "pdfPath": "kurul2/y25-k2-62-kraniyal-sinir-muayenesi.pdf"
+   },
+   "content": "Bu kontrol noktasında ekstraoküler motor sinirlerin (CN III, IV, VI) felç tabloları, pupiller refleksler ve konjuge bakış yolları pekiştirilmektedir.\n\n- **CN III Felci:** Pitozis, fiks dilate midriyatik pupil ve göz küresinin dışa-aşağıda (down-and-out) sabitlenmesi.\n- **CN IV Felci:** Merdiven inerken artan düşey diplopi ve başın sağlam tarafa eğilmesiyle düzelen Bielschowsky tilt testi.\n- **CN VI Felci:** Abdüksiyon kısıtlılığı, yatay diplopi ve KİBA durumlarında en sık görülen yalancı lokalizasyon bulgusu.\n\n> [!NOTE]\n> MLF lezyonunda (İNO) lezyon tarafında yatay addüksiyon kısıtlılığı ve karşı abdükte gözde nistagmus görülürken konverjans korunur.",
+   "synthesisNarrative": "Bu kontrol noktasında ekstraoküler motor sinirlerin (CN III, IV, VI) felç tabloları, pupiller refleksler ve konjuge bakış yolları pekiştirilmektedir.\n\n- **CN III Felci:** Pitozis, fiks dilate midriyatik pupil ve göz küresinin dışa-aşağıda (down-and-out) sabitlenmesi.\n- **CN IV Felci:** Merdiven inerken artan düşey diplopi ve başın sağlam tarafa eğilmesiyle düzelen Bielschowsky tilt testi.\n- **CN VI Felci:** Abdüksiyon kısıtlılığı, yatay diplopi ve KİBA durumlarında en sık görülen yalancı lokalizasyon bulgusu.\n\n> [!NOTE]\n> MLF lezyonunda (İNO) lezyon tarafında yatay addüksiyon kısıtlılığı ve karşı abdükte gözde nistagmus görülürken konverjans korunur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdaki klinik tablolardan hangisi internükleer oftalmopleji (İNO) ile periferik okülomotor sinir felcini kesin olarak ayırt ettirir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Konverjans sırasında mediyal rektus kasılmasının korunması",
+       "isCorrect": true,
+       "explanation": "İNO olgularında konverjans mekanizması kortikal yolla korunduğundan mediyal rektuslar kasılır. Okülomotor sinir gövde felcinde ise nükleer/periferik hasar nedeniyle konverjanta da addüksiyon gerçekleşmez."
+      },
+      {
+       "key": "B",
+       "text": "Göz küresinin tam abdüksiyon yapabilmesi",
+       "isCorrect": false,
+       "explanation": "Tam abdüksiyon hareketi lateral rektus kasının ve altıncı sinirin sağlam olduğunu gösterir. Bu bulgu her iki patolojide de korunduğu için ayırt edici bir kriter niteliği taşımaz."
+      },
+      {
+       "key": "C",
+       "text": "Koku alma fonksiyonunun normal bulunması",
+       "isCorrect": false,
+       "explanation": "Koku duyusu birinci kraniyal sinir olan nervus olfactoriusun özel görevidir. Göz hareket bozukluklarının ayırıcı tanısında ayırt edici bir parametre oluşturamaz."
+      },
+      {
+       "key": "D",
+       "text": "Snellen kartında tam görme keskinliği",
+       "isCorrect": false,
+       "explanation": "Snellen görme keskinliği optik sinirin ve makulanın fonksiyonel durumunu yansıtır. Okülomotor motor felç ile İNO ayrımını belirlemede spesifik bir tanısal değer taşımaz."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Oküler Motor Felçler Özeti",
+     "items": [
+      {
+       "text": "Üçüncü sinir felcinde pitozis ve midriyazise eksternal şaşılık eşlik eder.",
+       "isLie": false,
+       "explanation": "M. levator palpebrae, sfinkter pupillae ve rektus kaslarının felci bu tabloyu doğurur."
+      },
+      {
+       "text": "Dördüncü sinir felcinde hasta başını sağlam omuz tarafına eğer.",
+       "isLie": false,
+       "explanation": "Bielschowsky baş tiltinde baş sağlam tarafa eğilince düşey diplopi kompanse edilir."
+      },
+      {
+       "text": "Altıncı sinir felcinde göz küresi içe bakamaz ve aşırı dışa kayar.",
+       "isLie": true,
+       "explanation": "Altıncı sinir lateral rektusu innerve eder; felcinde dışa bakış bozulur ve göz içe kayar."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Oküler motor sinirlerin (CN III, IV, VI) tek taraflı izole felçlerinde görülen tipik göz deviasyonlarını özetleyiniz.",
+     "answer": "CN III felcinde dışa-aşağıda (down-and-out), CN IV felcinde yukarıda (hipertropya), CN VI felcinde ise içe doğru (ezotropya) göz deviasyonu izlenir."
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Tek taraflı abdusens felcinde dışa bakış kısıtlanır ve gözün içe kaymasıyla karakterize {{c1::yatay diplopi}} gelişir.",
+     "maskedTerm": "yatay diplopi",
+     "hint": "Gözlerin horizontal planda koordine olamaması sonucu beliren çift algı."
+    }
+   ]
+  },
+  {
+   "slideNumber": 16,
+   "title": "Nervus Trigeminus (CN V): Duyu Dalları ve Kornea Refleksi",
+   "bolum": "3.1",
+   "discipline": "Nöroloji",
+   "pdfSayfalari": [
+    23,
+    24
+   ],
+   "sourcePdf": {
+    "startPage": 23,
+    "endPage": 24,
+    "pdfPath": "kurul2/y25-k2-62-kraniyal-sinir-muayenesi.pdf"
+   },
+   "content": "Nervus trigeminus yüzün primer duyusal siniri olup çiğneme kaslarının motor kontrolünü de üstlenir.\n\n- **Üç Duyusal Dal:** Oftalmik (V1 - alın ve kornea), maksiller (V2 - yanak ve üst çene) ve mandibuler (V3 - alt çene ve dil ön 2/3 genel dokunma/ağrı duyusu) dalları bulunur.\n- **Motor İnervasyon:** Mandibuler dal (V3) m. masseter, m. temporalis ve pterigoid kasları uyarır; lezyonunda çene açıldığında felçli tarafa sapar.\n- **Kornea Refleksi:** Pamuk ucuyla korneaya dokunulduğunda afferent uyarı CN V1 ile ponsa iletilir; efferent bilateral CN VII motor lifleri m. orbicularis oculi kaslarını kasarak her iki gözü aynı anda kapatır.\n\n> [!IMPORTANT]\n> Sağ korneaya dokunulduğunda her iki gözün kapanması sağ V1 ve bilateral fasiyal sinir efferentlerinin tam çalıştığını kanıtlar.",
+   "synthesisNarrative": "Nervus trigeminus yüzün primer duyusal siniri olup çiğneme kaslarının motor kontrolünü de üstlenir.\n\n- **Üç Duyusal Dal:** Oftalmik (V1 - alın ve kornea), maksiller (V2 - yanak ve üst çene) ve mandibuler (V3 - alt çene ve dil ön 2/3 genel dokunma/ağrı duyusu) dalları bulunur.\n- **Motor İnervasyon:** Mandibuler dal (V3) m. masseter, m. temporalis ve pterigoid kasları uyarır; lezyonunda çene açıldığında felçli tarafa sapar.\n- **Kornea Refleksi:** Pamuk ucuyla korneaya dokunulduğunda afferent uyarı CN V1 ile ponsa iletilir; efferent bilateral CN VII motor lifleri m. orbicularis oculi kaslarını kasarak her iki gözü aynı anda kapatır.\n\n> [!IMPORTANT]\n> Sağ korneaya dokunulduğunda her iki gözün kapanması sağ V1 ve bilateral fasiyal sinir efferentlerinin tam çalıştığını kanıtlar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kornea refleksinin afferent ve efferent nöronal kollarını oluşturan kraniyal sinirler hangi seçenekte doğru verilmiştir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Afferent CN V1 - Efferent CN VII",
+       "isCorrect": true,
+       "explanation": "Korneal mekanik uyarım nervus ophthalmicus (CN V1) ile pontin duyu nükleusuna taşınır. Motor göz kırpma yanıtı ise bilateral nervus facialis (CN VII) motor lifleriyle oluşturulur."
+      },
+      {
+       "key": "B",
+       "text": "Afferent CN II - Efferent CN III",
+       "isCorrect": false,
+       "explanation": "Optik sinir ve okülomotor sinir pupilla ışık refleksi arkını meydana getiren çifti oluşturur. Kornea mekanik temasının algılanması ve göz kapağının kapatılmasında görev almazlar."
+      },
+      {
+       "key": "C",
+       "text": "Afferent CN IX - Efferent CN X",
+       "isCorrect": false,
+       "explanation": "Dokuzuncu ve onuncu sinirler farenks arka duvarı kaynaklı öğürme refleksini yönetir. Korneal somatosensöriyel refleks arkı ile herhangi bir anatomik ilişkileri bulunmaz."
+      },
+      {
+       "key": "D",
+       "text": "Afferent CN V3 - Efferent CN XII",
+       "isCorrect": false,
+       "explanation": "CN V3 çiğneme kaslarını, CN XII ise dil kaslarını innerve eden motor sistemlerdir. Kornea yüzeyine temas refleksinde duyusal afferent veya efferent kol olarak görev yapmazlar."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Mandibuler dal m. masseter ve m. temporalis kaslarını uyarır; lezyonunda çene açıldığında felçli taraftaki {{c1::pterigoid}} kası zaafı nedeniyle lezyon yönüne sapar.",
+     "maskedTerm": "pterigoid",
+     "hint": "Mandibulayı öne ve karşı yöne iten derin çiğneme kası."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Trigeminal Sinir ve Kornea Refleksi",
+     "items": [
+      {
+       "text": "Korneanın dokunma ve ağrı duyusu oftalmik dal (V1) ile taşınır.",
+       "isLie": false,
+       "explanation": "Nervus ophthalmicus kornea ve sklera duyusunu ileten temel somatosensöriyel daldır."
+      },
+      {
+       "text": "Çiğneme kaslarının motor inervasyonu mandibuler dal (V3) tarafından yapılır.",
+       "isLie": false,
+       "explanation": "Foramen ovaleden geçen motor kök masseter ve temporalis kaslarını uyarır."
+      },
+      {
+       "text": "Kornea refleksinde efferent motor yanıt nervus oculomotorius tarafından verilir.",
+       "isLie": true,
+       "explanation": "Kornea refleksinde gözü kapatan m. orbicularis oculi kası CN VII (fasiyal) ile uyarılır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Kornea refleksinde afferent ve efferent kraniyal sinirleri belirtiniz.",
+     "answer": "Afferent kol nervus trigeminusun oftalmik dalı (CN V1), efferent motor kol ise bilateral nervus facialistir (CN VII)."
+    }
+   ]
+  },
+  {
+   "slideNumber": 17,
+   "title": "Nervus Facialis (CN VII): Mimik Fonksiyonları ve Tat",
+   "bolum": "3.2",
+   "discipline": "Nöroloji",
+   "pdfSayfalari": [
+    25,
+    26
+   ],
+   "sourcePdf": {
+    "startPage": 25,
+    "endPage": 26,
+    "pdfPath": "kurul2/y25-k2-62-kraniyal-sinir-muayenesi.pdf"
+   },
+   "content": "Nervus facialis motor, özel duyusal (tat) ve parasempatik lifleri bir arada barındıran mikst bir kraniyal sinirdir.\n\n- **Motor Mimik İnervasyon:** Alın kırıştırma, gözleri sıkıca kapatma (m. orbicularis oculi), gülümseme, ıslık çalma ve dudak büzme hareketlerini yönetir.\n- **Özel Duyu (Tat):** Korda timpani dalı aracılığıyla dilin ön 2/3 bölümünün tat duyusunu taşır.\n- **Parasempatik İşlevler:** Parotis dışındaki tükürük bezlerini (submandibuler ve sublingual) ile lakrimal bezi innerve eder.\n- **İşitme Koruması:** M. stapedius kasını innerve ederek yüksek ses şiddetine karşı kulak zarını ve kemikçikleri korur; felcinde hiperakuzi gelişir.\n\n> [!NOTE]\n> Fasiyal sinir felcinde hastanın yüksek sesten aşırı rahatsız olması (hiperakuzi), m. stapedius motor liflerinin tutulumunu doğrular.",
+   "synthesisNarrative": "Nervus facialis motor, özel duyusal (tat) ve parasempatik lifleri bir arada barındıran mikst bir kraniyal sinirdir.\n\n- **Motor Mimik İnervasyon:** Alın kırıştırma, gözleri sıkıca kapatma (m. orbicularis oculi), gülümseme, ıslık çalma ve dudak büzme hareketlerini yönetir.\n- **Özel Duyu (Tat):** Korda timpani dalı aracılığıyla dilin ön 2/3 bölümünün tat duyusunu taşır.\n- **Parasempatik İşlevler:** Parotis dışındaki tükürük bezlerini (submandibuler ve sublingual) ile lakrimal bezi innerve eder.\n- **İşitme Koruması:** M. stapedius kasını innerve ederek yüksek ses şiddetine karşı kulak zarını ve kemikçikleri korur; felcinde hiperakuzi gelişir.\n\n> [!NOTE]\n> Fasiyal sinir felcinde hastanın yüksek sesten aşırı rahatsız olması (hiperakuzi), m. stapedius motor liflerinin tutulumunu doğrular.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Nervus facialisin korda timpani dalı hangi özel duyusal işlevi yürütür?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Dilin ön 2/3 bölümünün tat duyusunu taşımak",
+       "isCorrect": true,
+       "explanation": "Korda timpani nervus lingualise katılarak dilin ön üçte iki kısmının tat duyusunu traktus solitariusa iletir. Bu özel visseral duyu yolu fasiyal sinirin en tipik duyusal bileşenini oluşturur."
+      },
+      {
+       "key": "B",
+       "text": "Dilin arka 1/3 bölümünün tat duyusunu taşımak",
+       "isCorrect": false,
+       "explanation": "Dilin arka üçte bir tat duyusu dokuzuncu kraniyal sinir nervus glossopharyngeus tarafından taşınır. Fasiyal sinirin korda timpani dalı bu arka anatomik bölgeye ulaşamaz."
+      },
+      {
+       "key": "C",
+       "text": "Parotis bezinin sekresyonunu uyarmak",
+       "isCorrect": false,
+       "explanation": "Parotis bezinin parasempatik uyarımı nervus glossopharyngeus ve otik gangliyon aracılığıyla yürütülür. Korda timpani submandibuler ve sublingual bezleri innerve eden bir daldır."
+      },
+      {
+       "key": "D",
+       "text": "M. masseter çiğneme kasını kasmak",
+       "isCorrect": false,
+       "explanation": "Masseter çiğneme kası nervus trigeminusun mandibuler dalı tarafından innerve edilir. Fasiyal sinirin korda timpani dalı somatik çiğneme kaslarına lif vermez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Orta kulaktaki m. stapedius kası felç olduğunda hastada seslerin aşırı gürültülü algılandığı {{c1::hiperakuzi}} gelişir.",
+     "maskedTerm": "hiperakuzi",
+     "hint": "Normal seviyedeki çevresel seslerin rahatsız edici biçimde aşırı şiddetli algılanması."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Fasiyal Sinir İnervasyon Alanları",
+     "items": [
+      {
+       "text": "Gözü kapatan m. orbicularis oculi kasını innerve eder.",
+       "isLie": false,
+       "explanation": "Göz kapağının aktif kapanması fasiyal sinirin motor lifleriyle sağlanır."
+      },
+      {
+       "text": "Submandibuler ve sublingual bezlere parasempatik uyarı gönderir.",
+       "isLie": false,
+       "explanation": "Korda timpani üzerinden bu iki majör tükürük bezini sekresyona sevk eder."
+      },
+      {
+       "text": "Parotis bezinin tükürük salgılatıcı parasempatik kontrolünü sağlar.",
+       "isLie": true,
+       "explanation": "Parotis bezi fasiyal sinir tarafından değil dokuzuncu sinir (CN IX) ile uyarılır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Fasiyal sinir hasarında neden hiperakuzi (seslere aşırı duyarlılık) gelişir?",
+     "answer": "Fasiyal sinir orta kulaktaki m. stapedius kasını innerve eder; bu kas felç olunca yüksek seslerde kulak zarı ve kemikçikler sönümlenemez."
+    }
+   ]
+  },
+  {
+   "slideNumber": 18,
+   "title": "Fasiyal Paralizi Ayırımı: Santral ve Periferik Tutulum",
+   "bolum": "3.3",
+   "discipline": "Nöroloji",
+   "pdfSayfalari": [
+    27,
+    27
+   ],
+   "sourcePdf": {
+    "startPage": 27,
+    "endPage": 27
+   },
+   "content": "Santral ve periferik fasiyal paralizi ayırımı nörolojik acillerde inme ile Bell paralizisini ayırt eden temel ilkedir.\n\n- **Kortikal Çift İnervasyon:** Fasiyal motor nükleusun üst yarısı (alın kaslarını innerve eden nöronlar) her iki serebral hemisferden bilateral kortikobulber lif alır.\n- **Santral Fasiyal Paralizi (Üst Motor Nöron):** Hemisferik inme lezyonunda sağlam kalan diğer hemisfer alnı uyarır; alın kırıştırma korunur, yalnız kontralateral alt yüz (ağız köşesi) felçlidir.\n- **Periferik Fasiyal Paralizi (Alt Motor Nöron / Bell):** Nükleus veya sinir gövdesi hasarında (foramen stylomastoideum öncesi) ipsilateral alın dahil tüm yüz yarısı felç olur; göz kapatılamaz (Bell fenomeni).\n\n> [!IMPORTANT]\n> Alın kaslarının simetrik kırışabilmesi lezyonun santral (üst motor nöron) olduğunu kanıtlar; acil beyin görüntülemesi gerektirir.",
+   "synthesisNarrative": "Santral ve periferik fasiyal paralizi ayırımı nörolojik acillerde inme ile Bell paralizisini ayırt eden temel ilkedir.\n\n- **Kortikal Çift İnervasyon:** Fasiyal motor nükleusun üst yarısı (alın kaslarını innerve eden nöronlar) her iki serebral hemisferden bilateral kortikobulber lif alır.\n- **Santral Fasiyal Paralizi (Üst Motor Nöron):** Hemisferik inme lezyonunda sağlam kalan diğer hemisfer alnı uyarır; alın kırıştırma korunur, yalnız kontralateral alt yüz (ağız köşesi) felçlidir.\n- **Periferik Fasiyal Paralizi (Alt Motor Nöron / Bell):** Nükleus veya sinir gövdesi hasarında (foramen stylomastoideum öncesi) ipsilateral alın dahil tüm yüz yarısı felç olur; göz kapatılamaz (Bell fenomeni).\n\n> [!IMPORTANT]\n> Alın kaslarının simetrik kırışabilmesi lezyonun santral (üst motor nöron) olduğunu kanıtlar; acil beyin görüntülemesi gerektirir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Santral tipte fasiyal paralizide alın çizgilerinin ve kaş kaldırma hareketinin korunmasının anatomik gerekçesi nedir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Alın motor çekirdeğinin bilateral kortikobulber girdi alması",
+       "isCorrect": true,
+       "explanation": "Fasiyal nükleusun üst bölümü her iki motor korteksten uyarıldığı için unilateral lezyonda korunur. Bu bilateral inervasyon sayesinde hemisferik inmede alın kasları motor zaafa uğramaz."
+      },
+      {
+       "key": "B",
+       "text": "Alın kaslarının nervus trigeminus tarafından uyarılması",
+       "isCorrect": false,
+       "explanation": "Nervus trigeminus alnın yalnızca dokunma ve ağrı duyusunu taşıyan duyusal bir yapıdır. Alın mimik kası olan frontalis kasını hareket ettirici motor yeteneğe sahip değildir."
+      },
+      {
+       "key": "C",
+       "text": "Alın bölgesinde hiç motor kas bulunmaması",
+       "isCorrect": false,
+       "explanation": "Alın bölgesinde kaşları kaldıran frontalis kası mimik hareketinde sürekli aktiftir. Bu bölgede kas dokusunun varlığı anatomik olarak kesin bir gerçektir."
+      },
+      {
+       "key": "D",
+       "text": "Korda timpaninin alnı doğrudan innerve etmesi",
+       "isCorrect": false,
+       "explanation": "Korda timpani dilin tat ve tükürük bezlerini innerve eden özel bir daldır. Alın motor mimik liflerinin uyarılmasında korda timpani rol oynamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Nükleus veya sinir gövdesi hasarında ipsilateral alın dahil tüm yüz yarısının felç olduğu tabloya {{c1::periferik fasiyal paralizi}} denir.",
+     "maskedTerm": "periferik fasiyal paralizi",
+     "hint": "Yedinci kraniyal sinirin çekirdek veya gövde tutulumunda gelişen yüz güçsüzlüğü."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Santral ve Periferik Yüz Felci Karşılaştırması",
+     "items": [
+      {
+       "text": "Santral fasiyal felçte lezyonun karşı tarafındaki alt yüz tutulur.",
+       "isLie": false,
+       "explanation": "Kortikobulber lifler alt yüz çekirdeğine varmadan önce beyin sapında çaprazlaşır."
+      },
+      {
+       "text": "Periferik Bell felcinde hasta lezyon tarafındaki gözünü tam kapatamaz.",
+       "isLie": false,
+       "explanation": "M. orbicularis oculi felç olduğu için lagoftalmi ve Bell fenomeni gelişir."
+      },
+      {
+       "text": "Periferik fasiyal felçte alın çizgileri tamamen sağlam ve simetrik kalır.",
+       "isLie": true,
+       "explanation": "Periferik felçte nükleus veya gövde hasarlı olduğu için alın çizgileri tamamen silinir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Santral fasiyal felç ile periferik Bell felci yatak başında en hızlı nasıl ayırt edilir?",
+     "answer": "Hastaya alnını kırıştırması ve kaşlarını kaldırması söylenir; alın kırışabiliyorsa santral (üst motor nöron), kırışmıyorsa periferik (alt motor nöron) felçtir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 19,
+   "title": "Nervus Vestibulocochlearis (CN VIII): Rinne ve Weber Testleri",
+   "bolum": "4.1",
+   "discipline": "Nöroloji",
+   "pdfSayfalari": [
+    28,
+    29
+   ],
+   "sourcePdf": {
+    "startPage": 28,
+    "endPage": 29,
+    "pdfPath": "kurul2/y25-k2-62-kraniyal-sinir-muayenesi.pdf"
+   },
+   "content": "Nervus vestibulocochlearis koklear dalıyla işitmeyi, vestibüler dalıyla semisirküler kanallar üzerinden dengeyi yürütür.\n\n- **Rinne Testi:** 512 Hz diyapazon önce mastoid kemiğe, ses kesilince dış kulak yoluna tutulur; normalde hava iletimi kemik iletiminden uzundur (Rinne pozitif).\n- **İletim Tipi Kayıp:** Dış veya orta kulak patolojilerinde kemik iletimi daha uzun duyulur (Rinne negatif); Weber testi lezyonlu patolojik kulağa lateralize olur.\n- **Sensörinöral Kayıp:** İç kulak veya kohlear sinir hasarında hava iletimi yine kemikten uzundur (Rinne pozitif kalır); ancak Weber testi sağlam karşı kulağa lateralize olur.\n\n> [!IMPORTANT]\n> Normal bir bireyde Rinne testi her iki kulakta pozitif olmalı, Weber testi ise orta hatta dengeli duyulmalıdır.",
+   "synthesisNarrative": "Nervus vestibulocochlearis koklear dalıyla işitmeyi, vestibüler dalıyla semisirküler kanallar üzerinden dengeyi yürütür.\n\n- **Rinne Testi:** 512 Hz diyapazon önce mastoid kemiğe, ses kesilince dış kulak yoluna tutulur; normalde hava iletimi kemik iletiminden uzundur (Rinne pozitif).\n- **İletim Tipi Kayıp:** Dış veya orta kulak patolojilerinde kemik iletimi daha uzun duyulur (Rinne negatif); Weber testi lezyonlu patolojik kulağa lateralize olur.\n- **Sensörinöral Kayıp:** İç kulak veya kohlear sinir hasarında hava iletimi yine kemikten uzundur (Rinne pozitif kalır); ancak Weber testi sağlam karşı kulağa lateralize olur.\n\n> [!IMPORTANT]\n> Normal bir bireyde Rinne testi her iki kulakta pozitif olmalı, Weber testi ise orta hatta dengeli duyulmalıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sağ kulağında işitme kaybı olan bir hastada Weber testinin sağ kulağa lateralize olması ve sağ kulakta Rinne testinin negatif bulunması hangi tanıyı kesinleştirir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Sağ kulakta iletim tipi işitme kaybı",
+       "isCorrect": true,
+       "explanation": "Rinne testinin negatif çıkması ve Weber'in hasta kulağa lateralize olması dış veya orta kulak iletim patolojisini gösterir. Bu bulgu bileşimi akustik impedans bozukluğunu doğrulamada altın standarttır."
+      },
+      {
+       "key": "B",
+       "text": "Sağ kulakta sensörinöral işitme kaybı",
+       "isCorrect": false,
+       "explanation": "Sensörinöral kayıpta kemik iletimi de azaldığı için Rinne testi pozitif kalmayı sürdürür. Weber testi ise hasta sağ kulak yerine sağlam olan sol kulağa doğru kayış gösterir."
+      },
+      {
+       "key": "C",
+       "text": "Sol kulakta iletim tipi işitme kaybı",
+       "isCorrect": false,
+       "explanation": "Sol kulakta iletim kaybı bulgusu olması durumunda Weber testi sol tarafa lateralize olurdu. Sağ kulakta Rinne negatifliği varken sol kulak iletim patolojisi tanısı konulamaz."
+      },
+      {
+       "key": "D",
+       "text": "Bilateral normal işitme fonksiyonu",
+       "isCorrect": false,
+       "explanation": "Bilateral normal işitme fizyolojisinde Rinne testi her iki kulakta pozitif olarak bulunur. Weber testi ise kafatasının tam orta hattında simetrik ve dengeli algılanır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "512 Hz diyapazon mastoid kemikten çekilip dış kulak yoluna getirildiğinde ses duyulamazsa {{c1::Rinne negatif}} olarak tanımlanır.",
+     "maskedTerm": "Rinne negatif",
+     "hint": "Kemik yolu iletiminin hava yolundan daha uzun sürdüğü patolojik test sonucu."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "İşitme Testleri ve Diyapazon Yorumu",
+     "items": [
+      {
+       "text": "Sağ sensörinöral işitme kaybında Weber testi sağlam sol kulağa lateralize olur.",
+       "isLie": false,
+       "explanation": "Sağ iç kulak hasarlı olduğundan titreşim sağlam kokleada daha iyi algılanır."
+      },
+      {
+       "text": "Normal bir kişide hava iletimi süresi kemik iletim süresinden daha uzundur.",
+       "isLie": false,
+       "explanation": "Kulak zarı ve kemikçik sistemi akustik impedansı optimize ettiği için hava iletimi üstündür."
+      },
+      {
+       "text": "İletim tipi kayıpta Weber testi daima sağlam kulağa doğru sapma gösterir.",
+       "isLie": true,
+       "explanation": "İletim tipi kayıpta maskeleme kalktığı için Weber hasta olan kulağa lateralize olur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "İletim tipi işitme kaybı ile sensörinöral işitme kaybını Rinne ve Weber sonuçlarına göre kıyaslayınız.",
+     "answer": "İletim tipi kayıpta Rinne negatiftir ve Weber lezyonlu kulağa kayar; sensörinöral kayıpta Rinne pozitiftir ve Weber sağlam kulağa kayar."
+    }
+   ]
+  },
+  {
+   "slideNumber": 20,
+   "title": "Alt Kraniyal Sinirler: Glossofaringeus ve Vagus (CN IX, X)",
+   "bolum": "4.2",
+   "discipline": "Nöroloji",
+   "pdfSayfalari": [
+    30,
+    31
+   ],
+   "sourcePdf": {
+    "startPage": 30,
+    "endPage": 31,
+    "pdfPath": "kurul2/y25-k2-62-kraniyal-sinir-muayenesi.pdf"
+   },
+   "content": "Nervus glossopharyngeus ve nervus vagus medulla oblangata çıkışlı olup yutma, farenks duyusu ve visseral otonomu yönetir.\n\n- **CN IX (N. Glossopharyngeus):** M. stylopharyngeus kasını innerve eder; dil arka 1/3 tat ve dokunma duyusunu taşır, parotis bezini uyarır.\n- **CN X (N. Vagus):** Yumuşak damak elevasyonunu (m. palatoglossus), farenks ve larenks kaslarını ile torakoabdominal organların parasempatik kontrolünü sağlar.\n- **Öğürme Refleksi (Gag):** Farenks arka duvarına dokunulduğunda afferent uyarı CN IX ile bulbusa ulaşır; efferent motor yanıt CN X ile yumuşak damak ve faringeal kasılma oluşturur.\n- **Uvula Sapması:** Tek taraflı vagus lezyonunda felçli taraftaki yumuşak damak düşer; hasta 'Aaa' dediğinde uvula sağlam tarafa çekilir.\n\n> [!IMPORTANT]\n> Yumuşak damak muayenesinde uvula daima felçli tarafın aksine sağlam tarafa doğru deviye olur.",
+   "synthesisNarrative": "Nervus glossopharyngeus ve nervus vagus medulla oblangata çıkışlı olup yutma, farenks duyusu ve visseral otonomu yönetir.\n\n- **CN IX (N. Glossopharyngeus):** M. stylopharyngeus kasını innerve eder; dil arka 1/3 tat ve dokunma duyusunu taşır, parotis bezini uyarır.\n- **CN X (N. Vagus):** Yumuşak damak elevasyonunu (m. palatoglossus), farenks ve larenks kaslarını ile torakoabdominal organların parasempatik kontrolünü sağlar.\n- **Öğürme Refleksi (Gag):** Farenks arka duvarına dokunulduğunda afferent uyarı CN IX ile bulbusa ulaşır; efferent motor yanıt CN X ile yumuşak damak ve faringeal kasılma oluşturur.\n- **Uvula Sapması:** Tek taraflı vagus lezyonunda felçli taraftaki yumuşak damak düşer; hasta 'Aaa' dediğinde uvula sağlam tarafa çekilir.\n\n> [!IMPORTANT]\n> Yumuşak damak muayenesinde uvula daima felçli tarafın aksine sağlam tarafa doğru deviye olur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Farenks arka duvarına dokunulduğunda tetiklenen öğürme (gag) refleksinin afferent ve efferent kraniyal sinir kolları hangileridir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Afferent CN IX - Efferent CN X",
+       "isCorrect": true,
+       "explanation": "Öğürme refleksinde arka farenks duyusunu nervus glossopharyngeus taşır ve motor yanıtı vagus yürütür. Bu bulber refleks arkı medulla oblangata seviyesindeki lezyonları değerlendirmede temel testtir."
+      },
+      {
+       "key": "B",
+       "text": "Afferent CN V - Efferent CN VII",
+       "isCorrect": false,
+       "explanation": "CN V ve VII kornea refleksi arkını meydana getiren pontin duyusal ve motor sinirlerdir. Faringeal mukoza uyarımıyla başlayan öğürme refleksi ile doğrudan bir ilgileri bulunmaz."
+      },
+      {
+       "key": "C",
+       "text": "Afferent CN X - Efferent CN XII",
+       "isCorrect": false,
+       "explanation": "CN XII yalnızca dilin intrensek ve ekstrensek kaslarını innerve eden saf motor bir sinirdir. Farenks ve yumuşak damak kasılmasını yöneten efferent kolda görev üstlenmez."
+      },
+      {
+       "key": "D",
+       "text": "Afferent CN II - Efferent CN III",
+       "isCorrect": false,
+       "explanation": "CN II ve III pupilla ışık refleksi arkını oluşturan mezensefalik görsel ve parasempatik sistemdir. Orofaringeal mekanik reflekslerin iletim mekanizmasıyla hiçbir bağlantısı yoktur."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Tek taraflı vagus lezyonunda felçli taraftaki yumuşak damak düşer; hasta 'Aaa' dediğinde uvula {{c1::sağlam tarafa}} çekilir.",
+     "maskedTerm": "sağlam tarafa",
+     "hint": "Felçli kasların zıddında yer alan fonksiyonel damak kaslarının çekim yönü."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Glossofaringeal ve Vagus Sinirleri",
+     "items": [
+      {
+       "text": "Nervus glossopharyngeus parotis bezine parasempatik sekretomotor lifler taşır.",
+       "isLie": false,
+       "explanation": "Nükleus salivatorius inferiordan çıkan lifler ganglion oticum ile parotise varır."
+      },
+      {
+       "text": "Nervus vagus felcinde larenks kaslarının zaafına bağlı ses kısıklığı görülür.",
+       "isLie": false,
+       "explanation": "Nervus laryngeus recurrens vokal kordları innerve ettiğinden disfoni sıktır."
+      },
+      {
+       "text": "Vagus felcinde yumuşak damak felçli tarafa doğru yukarı çekilir ve büzülür.",
+       "isLie": true,
+       "explanation": "Felçli taraftaki damak yükselemez ve sarkar; uvula sağlam taraftaki kaslarca çekilir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Tek taraflı nervus vagus felcinde yumuşak damak ve uvula muayenesinde ne görülür?",
+     "answer": "Felçli tarafta yumuşak damak kemeri sarkık kalır ve hasta 'Aaa' dediğinde uvula sağlam taraf kaslarınca sağlam tarafa doğru çekilir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 21,
+   "title": "Kraniyal Motor Sonlanma: Aksesuar ve Hipoglossus (CN XI, XII)",
+   "bolum": "4.3",
+   "discipline": "Nöroloji",
+   "pdfSayfalari": [
+    32,
+    34
+   ],
+   "sourcePdf": {
+    "startPage": 32,
+    "endPage": 34
+   },
+   "content": "On birinci ve on ikinci kraniyal sinirler baş-boyun rotasyonunu ve dilin karmaşık motor hareketlerini kontrol eden saf motor sinirlerdir.\n\n- **CN XI (N. Accessorius):** M. sternocleidomastoideus (SCM) ve m. trapezius kaslarını uyarır; tek taraflı SCM başı karşı tarafa çevirir, trapezius omuzu yukarı silkeler.\n- **CN XII (N. Hypoglossus):** M. palatoglossus hariç dilin tüm intrensek ve ekstrensek kaslarını innerve eder.\n- **Dil Deviasyonu Mekanizması:** Dil dışarı çıkarıldığında m. genioglossus dili iter; tek taraflı felçte sağlam genioglossus baskın çıkarak dili felçli lezyon tarafına saptırır.\n- **Alt vs Üst Motor Nöron:** Hipoglossal alt motor nöron lezyonunda dilde belirgin atrofi ve fasikülasyon izlenirken, kortikobulber üst motor nöron lezyonunda atrofi gelişmez.\n\n> [!IMPORTANT]\n> Ağız içinde dilin istirahat halindeki fasikülasyonları ve hemiatofisi, nükleer veya periferik nervus hypoglossus tutulumunun kesin kanıtıdır.",
+   "synthesisNarrative": "On birinci ve on ikinci kraniyal sinirler baş-boyun rotasyonunu ve dilin karmaşık motor hareketlerini kontrol eden saf motor sinirlerdir.\n\n- **CN XI (N. Accessorius):** M. sternocleidomastoideus (SCM) ve m. trapezius kaslarını uyarır; tek taraflı SCM başı karşı tarafa çevirir, trapezius omuzu yukarı silkeler.\n- **CN XII (N. Hypoglossus):** M. palatoglossus hariç dilin tüm intrensek ve ekstrensek kaslarını innerve eder.\n- **Dil Deviasyonu Mekanizması:** Dil dışarı çıkarıldığında m. genioglossus dili iter; tek taraflı felçte sağlam genioglossus baskın çıkarak dili felçli lezyon tarafına saptırır.\n- **Alt vs Üst Motor Nöron:** Hipoglossal alt motor nöron lezyonunda dilde belirgin atrofi ve fasikülasyon izlenirken, kortikobulber üst motor nöron lezyonunda atrofi gelişmez.\n\n> [!IMPORTANT]\n> Ağız içinde dilin istirahat halindeki fasikülasyonları ve hemiatofisi, nükleer veya periferik nervus hypoglossus tutulumunun kesin kanıtıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sağ nervus hypoglossus periferik sinir lezyonu olan bir hasta dilini dışarı çıkardığında dil hangi yöne deviye olur?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Sağ tarafa (lezyon yönüne)",
+       "isCorrect": true,
+       "explanation": "Sağ genioglossus kası felçli olduğundan sağlam sol genioglossus dili lezyonlu sağ tarafa iter. Bu itici mekanizma tek taraflı periferik hipoglossus felcinin en tipik muayene bulgusudur."
+      },
+      {
+       "key": "B",
+       "text": "Sol tarafa (sağlam yöne)",
+       "isCorrect": false,
+       "explanation": "Sol tarafa çekilme uvula lezyonlarında sağlam kasların çekimiyle görülen bir tablodur. Dil protrüzyonunda sağlam genioglossus itici kuvveti dili zıt sağlam yöne yönlendirmez."
+      },
+      {
+       "key": "C",
+       "text": "Tam orta hatta dengeli kalır",
+       "isCorrect": false,
+       "explanation": "Orta hatta kalma iki taraflı genioglossus kaslarının eşit güçle çalıştığını gösterir. Tek taraflı periferik motor lezyon varlığında orta hattın korunması mümkün değildir."
+      },
+      {
+       "key": "D",
+       "text": "Yukarı damağa doğru kıvrılır",
+       "isCorrect": false,
+       "explanation": "Damağa elevasyonu palatoglossus ve stiloglossus kasları koordine eder. Tek taraflı hipoglossus felcinde dilin damağa yapışması gibi bir hareket beklenmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Dilin intrensek ve ekstrensek kasları incelendiğinde sadece {{c1::m. palatoglossus}} kası CN XII tarafından değil CN X tarafından innerve edilir.",
+     "maskedTerm": "m. palatoglossus",
+     "hint": "Yumuşak damaktan dile inen ve vagus ile uyarılan tek dil kası."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Aksesuar ve Hipoglossus Sinirleri",
+     "items": [
+      {
+       "text": "Sağ m. sternocleidomastoideus kasıldığında başı sol tarafa çevirir.",
+       "isLie": false,
+       "explanation": "SCM kası anatomik seyri gereği başı karşı omuz yönüne rotasyona götürür."
+      },
+      {
+       "text": "Hipoglossus alt motor nöron lezyonunda dilde atrofi ve fasikülasyon görülür.",
+       "isLie": false,
+       "explanation": "Denervasyon nedeniyle dil kas liflerinde atrofi ve spontan deşarjlar gelişir."
+      },
+      {
+       "text": "Hipoglossus felcinde dil dışarı çıkarıldığında daima sağlam tarafa doğru yönelir.",
+       "isLie": true,
+       "explanation": "Genioglossus itici bir kas olduğundan dil daima felçli olan lezyon tarafına sapar."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sağ nervus accessorius (CN XI) lezyonunda baş ve omuz muayenesinde hangi zaaflar saptanır?",
+     "answer": "Sağ SCM felci nedeniyle başı sola çevirmede güçlük ve sağ trapezius felci nedeniyle sağ omuzda düşüklük ve silkme zaafı saptanır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 22,
+   "title": "Sendromik Lokalizasyon ve Klinik Sentez",
+   "bolum": "4.4",
+   "discipline": "Nöroloji",
+   "pdfSayfalari": [
+    35,
+    36
+   ],
+   "sourcePdf": {
+    "startPage": 35,
+    "endPage": 36,
+    "pdfPath": "kurul2/y25-k2-62-kraniyal-sinir-muayenesi.pdf"
+   },
+   "content": "Kraniyal sinirlerin kafa tabanındaki dar kemik geçişleri ve komşulukları karakteristik nörolojik sendromlar oluşturur.\n\n- **Sinüs Kavernozus Sendromu:** Kavernöz sinüs tromboflebiti veya tümörlerinde CN III, IV, VI ile trigeminal sinirin V1 ve V2 dalları birlikte tutulur; tam oftalmopleji ve üst yüz hipoestezisi gelişir.\n- **Serebellopontin Açı Sendromu:** Vestibüler schwannom veya menenjiomlarda CN VII ve CN VIII sinirleri tutularak ipsilateral işitme kaybı, tinnitüs ve periferik fasiyal felç ortaya çıkar.\n- **Foramen Jugulare Sendromu (Vernet):** Glomus jugulare tümörlerinde CN IX, X ve XI sinirleri basıya uğrar; disfaji, ses kısıklığı, uvula sapması ve trapezius zaafı görülür.\n\n> [!IMPORTANT]\n> Foramen jugulareden CN IX, X ve XI geçer; nervus hypoglossus (CN XII) ise kendi bağımsız kanalis nervi hypoglossi kemik kanalından çıkar.",
+   "synthesisNarrative": "Kraniyal sinirlerin kafa tabanındaki dar kemik geçişleri ve komşulukları karakteristik nörolojik sendromlar oluşturur.\n\n- **Sinüs Kavernozus Sendromu:** Kavernöz sinüs tromboflebiti veya tümörlerinde CN III, IV, VI ile trigeminal sinirin V1 ve V2 dalları birlikte tutulur; tam oftalmopleji ve üst yüz hipoestezisi gelişir.\n- **Serebellopontin Açı Sendromu:** Vestibüler schwannom veya menenjiomlarda CN VII ve CN VIII sinirleri tutularak ipsilateral işitme kaybı, tinnitüs ve periferik fasiyal felç ortaya çıkar.\n- **Foramen Jugulare Sendromu (Vernet):** Glomus jugulare tümörlerinde CN IX, X ve XI sinirleri basıya uğrar; disfaji, ses kısıklığı, uvula sapması ve trapezius zaafı görülür.\n\n> [!IMPORTANT]\n> Foramen jugulareden CN IX, X ve XI geçer; nervus hypoglossus (CN XII) ise kendi bağımsız kanalis nervi hypoglossi kemik kanalından çıkar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Foramen jugulare sendromunda aşağıdaki kraniyal sinir üçlüsünden hangisi eş zamanlı olarak zedelenir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "CN IX, CN X ve CN XI",
+       "isCorrect": true,
+       "explanation": "Foramen jugulareden dokuzuncu, onuncu ve on birinci kraniyal sinirler birlikte geçer. Bu foramenin kitle lezyonlarında yutma zaafı, ses kısıklığı ve omuz düşüklüğü triadı gelişir."
+      },
+      {
+       "key": "B",
+       "text": "CN III, CN IV ve CN VI",
+       "isCorrect": false,
+       "explanation": "Bu üç oküler motor sinir fissura orbitalis superior ve sinüs kavernozus içinde seyreder. Bu oküler motor sinirlerin anatomik geçiş hattı orbita apeksine doğru uzanır."
+      },
+      {
+       "key": "C",
+       "text": "CN VII, CN VIII ve CN IX",
+       "isCorrect": false,
+       "explanation": "CN VII ve VIII meatus acusticus internus ve serebellopontin açıda yer alır. Foramen jugulareden geçen sinir paketi grubuna yedinci ve sekizinci sinirler dahil değildir."
+      },
+      {
+       "key": "D",
+       "text": "CN V1, CN V2 ve CN V3",
+       "isCorrect": false,
+       "explanation": "Trigeminal dallar fissura orbitalis, foramen rotundum ve foramen ovaleden ayrı ayrı çıkar. Foramen jugulare kemik kanalından geçen alt kraniyal yapılarla anatomik birliktelik göstermezler."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Serebellopontin açı yerleşimli schwannomlarda tipik olarak {{c1::CN VII ve CN VIII}} kraniyal sinirleri basıya uğrar.",
+     "maskedTerm": "CN VII ve CN VIII",
+     "hint": "İç kulak yolu girişinde komşu olan fasiyal ve vestibulokohlear sinir çifti."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Kafa Tabanı Sendromları ve Foramenler",
+     "items": [
+      {
+       "text": "Kavernöz sinüs içinde CN III, IV, VI ve V1-V2 dalları yer alır.",
+       "isLie": false,
+       "explanation": "Orbita apeksine komşu kavernöz sinüs tüm oküler motor sinirleri barındırır."
+      },
+      {
+       "text": "Foramen jugulare sendromunda yutma bozukluğu ve vokal kord felci görülür.",
+       "isLie": false,
+       "explanation": "CN IX ve CN X sinirlerinin hasarı faringeal ve laringeal motor zaaf oluşturur."
+      },
+      {
+       "text": "Nervus hypoglossus foramen jugulare içinden geçerek boyuna iner.",
+       "isLie": true,
+       "explanation": "Nervus hypoglossus (CN XII) foramen jugulareden değil kendi özel kanalından çıkar."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sinüs kavernozus lezyonlarında tutulan kraniyal sinirleri sayınız.",
+     "answer": "CN III (Oculomotorius), CN IV (Trochlearis), CN VI (Abducens) ve CN V'in V1 (Oftalmik) ile V2 (Maksiller) dalları tutulur."
+    }
+   ]
+  },
+  {
+   "slideNumber": 23,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Trigeminal, Fasiyal ve Alt Kraniyal Sinirler",
+   "bolum": "4.R",
+   "discipline": "Nöroloji",
+   "pdfSayfalari": [
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36
+   ],
+   "sourcePdf": {
+    "startPage": 23,
+    "endPage": 36,
+    "pdfPath": "kurul2/y25-k2-62-kraniyal-sinir-muayenesi.pdf"
+   },
+   "content": "Bu son kontrol noktasında yüz duyusu, mimik kasları, işitme testleri ve alt kraniyal sinir muayene bulguları özetlenmektedir.\n\n- **Kornea Refleksi:** Afferent yol CN V1 (oftalmik), efferent yol bilateral CN VII (fasiyal) motor lifleridir.\n- **Fasiyal Paralizi:** Santral felçte alın kasları bilateral inervasyonla korunur; periferik Bell felcinde tüm yüz yarısı tutulur.\n- **İşitme Testleri:** İletim kaybında Rinne negatif ve Weber lezyon tarafına; sensörinöral kayıpta Rinne pozitif ve Weber sağlam tarafa lateralizedir.\n- **Deviasyonlar:** Uvula sağlam tarafa (CN X), dil ise felçli lezyon tarafına (CN XII) doğru sapma gösterir.\n\n> [!NOTE]\n> Kavernöz sinüste III-IV-V1-V2-VI, serebellopontin açıda VII-VIII, foramen jugularede ise IX-X-XI sinirleri tutulur.",
+   "synthesisNarrative": "Bu son kontrol noktasında yüz duyusu, mimik kasları, işitme testleri ve alt kraniyal sinir muayene bulguları özetlenmektedir.\n\n- **Kornea Refleksi:** Afferent yol CN V1 (oftalmik), efferent yol bilateral CN VII (fasiyal) motor lifleridir.\n- **Fasiyal Paralizi:** Santral felçte alın kasları bilateral inervasyonla korunur; periferik Bell felcinde tüm yüz yarısı tutulur.\n- **İşitme Testleri:** İletim kaybında Rinne negatif ve Weber lezyon tarafına; sensörinöral kayıpta Rinne pozitif ve Weber sağlam tarafa lateralizedir.\n- **Deviasyonlar:** Uvula sağlam tarafa (CN X), dil ise felçli lezyon tarafına (CN XII) doğru sapma gösterir.\n\n> [!NOTE]\n> Kavernöz sinüste III-IV-V1-V2-VI, serebellopontin açıda VII-VIII, foramen jugularede ise IX-X-XI sinirleri tutulur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdaki muayene bulgularından hangisi tek taraflı periferik nervus facialis (Bell) felcini santral inme tablosundan ayırt ettirir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "İpsilateral alın çizgilerinin silinmesi ve gözün kapanamaması",
+       "isCorrect": true,
+       "explanation": "Alın kaslarının tutulumu ve lagoftalmi periferik alt motor nöron tipi fasiyal sinir felcinin kesin kanıtıdır. Santral supranükleer lezyonlarda alın kasları bilateral kortikal girdi sayesinde motor gücünü korur."
+      },
+      {
+       "key": "B",
+       "text": "Ağız köşesinde düşüklük ve asimetri",
+       "isCorrect": false,
+       "explanation": "Ağız köşesinde düşüklük alt yüz kaslarının zaafı sonucu her iki fasiyal felç tipinde de ortak olarak saptanır. Santral ile periferik lezyonun ayrımında tek başına ayırt edici bir kriter niteliği taşımaz."
+      },
+      {
+       "key": "C",
+       "text": "Dilin orta hatta simetrik kalması",
+       "isCorrect": false,
+       "explanation": "Dilin orta hatta kalması on ikinci kraniyal sinir olan nervus hypoglossusun intakt olduğunu gösterir. Fasiyal sinir felcinin santral veya periferik ayrımını belirlemede tanısal bir parametre oluşturamaz."
+      },
+      {
+       "key": "D",
+       "text": "Rinne testinin pozitif bulunması",
+       "isCorrect": false,
+       "explanation": "Rinne testinin pozitif olması vestibulokohlear sinirin normal hava iletim fonksiyonunu doğrular. Yüz mimik kaslarındaki zaafın lokalizasyonunu tayin etmede herhangi bir katkı sağlamaz."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Kraniyal Sinir Deviasyon ve Lezyon Sentezi",
+     "items": [
+      {
+       "text": "Tek taraflı vagus lezyonunda uvula sağlam tarafa doğru deviye olur.",
+       "isLie": false,
+       "explanation": "Sağlam taraf damak kası uvulayı kendine çekerek asimetri oluşturur."
+      },
+      {
+       "text": "Tek taraflı hipoglossus felcinde dil dışarı çıkarıldığında lezyon yönüne sapar.",
+       "isLie": false,
+       "explanation": "Sağlam genioglossus kası dili felçli taraftaki zayıf kasın yönüne iter."
+      },
+      {
+       "text": "Foramen jugulare sendromunda birinci kraniyal sinir olfactorius felç olur.",
+       "isLie": true,
+       "explanation": "Foramen jugulareden CN IX, X ve XI geçer; olfactorius ön kafa tabanındadır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Vagus (CN X) felcindeki uvula deviasyonu ile hipoglossus (CN XII) felcindeki dil deviasyonunun yönlerini karşılaştırınız.",
+     "answer": "Vagus felcinde uvula sağlam tarafa doğru çekilir; hipoglossus felcinde ise dil protrüzyonda lezyonlu (felçli) tarafa doğru sapar."
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Tek taraflı vagus lezyonunda felçli taraftaki yumuşak damak düşer; hasta ses çıkardığında uvula {{c1::sağlam tarafa}} doğru sapar.",
+     "maskedTerm": "sağlam tarafa",
+     "hint": "İntakt kalan bölgenin çekici kas kuvvetinin yöneldiği istikamet."
+    }
+   ]
+  },
+  {
+   "slideNumber": 24,
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Kraniyal Sinir Muayenesi",
+   "bolum": "4.G",
+   "discipline": "Nöroloji",
+   "isGameFinale": true,
+   "pdfSayfalari": [
+    1,
+    36
+   ],
+   "sourcePdf": {
+    "startPage": 1,
+    "endPage": 36,
+    "pdfPath": "kurul2/y25-k2-62-kraniyal-sinir-muayenesi.pdf"
+   },
+   "content": "Bu ders sonu oyun alanında kraniyal sinir muayenesinin anatomik yolaklarını, refleks sıralamalarını ve klinik ayırıcı tanılarını dört etkileşimli oyunla test edin.\n\n- **Sıralama Oyunu:** Işık refleksinin fotoreseptörden miyozise uzanan iletim basamaklarını doğru sıraya dizin.\n- **Aralık Bahsi:** Kraniyal sinirlerin muayene parametrelerini ve standart test eşiklerini tahmin edin.\n- **Klinik Pertürbasyon:** Kafa tabanı foramen lezyonlarında gelişen zincirleme nörolojik defektleri analiz edin.\n- **Metin Düzeltme:** Klinik muayene raporundaki hatalı kraniyal sinir ve deviasyon bilgilerini tespit edip düzeltin.\n\n> [!IMPORTANT]\n> Tüm oyunları hatasız tamamlayarak kraniyal sinir muayenesi kazanımlarınızı kalıcı bilgiye dönüştürün!",
+   "synthesisNarrative": "Bu ders sonu oyun alanında kraniyal sinir muayenesinin anatomik yolaklarını, refleks sıralamalarını ve klinik ayırıcı tanılarını dört etkileşimli oyunla test edin.\n\n- **Sıralama Oyunu:** Işık refleksinin fotoreseptörden miyozise uzanan iletim basamaklarını doğru sıraya dizin.\n- **Aralık Bahsi:** Kraniyal sinirlerin muayene parametrelerini ve standart test eşiklerini tahmin edin.\n- **Klinik Pertürbasyon:** Kafa tabanı foramen lezyonlarında gelişen zincirleme nörolojik defektleri analiz edin.\n- **Metin Düzeltme:** Klinik muayene raporundaki hatalı kraniyal sinir ve deviasyon bilgilerini tespit edip düzeltin.\n\n> [!IMPORTANT]\n> Tüm oyunları hatasız tamamlayarak kraniyal sinir muayenesi kazanımlarınızı kalıcı bilgiye dönüştürün!",
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "prompt": "Pupilla ışık refleksi arkındaki nöronal iletim aşamalarını baştan sona doğru sıralayınız:",
+     "steps": [
+      "1. Işık uyarısının retina fotoreseptörlerinde aksiyon potansiyeli başlatması",
+      "2. Afferent uyarının nervus opticus ile pretektal nükleusa iletilmesi",
+      "3. Pretektal nükleusun bilateral Edinger-Westphal çekirdeklerini uyarması",
+      "4. Efferent CN III parasempatik liflerinin silier gangliyona varması",
+      "5. Postgangliyonik liflerin m. sphincter pupillae kasını kasarak bilateral miyozis yapması"
+     ],
+     "explanation": "Işık uyarısı önce CN II ile pretektal alana gelir; buradan bilateral Edinger-Westphal çekirdeklerine dağılır ve CN III parasempatikleriyle bilateral miyozis oluşturulur."
+    },
+    {
+     "type": "estimate_slider",
+     "items": [
+      {
+       "prompt": "Snellen kartı ile santral görme keskinliği muayenesinde standart test mesafesi kaç metredir?",
+       "unit": "metre",
+       "min": 1,
+       "max": 12,
+       "answer": 6,
+       "tolerance": 0,
+       "explanation": "Snellen eşelinde optik sonsuz kabul edilen ve akomodasyonun gevşediği standart muayene mesafesi 6 metredir (20 feet)."
+      }
+     ]
+    },
+    {
+     "type": "perturbation",
+     "scenario": "Sağ kafa tabanı travması geçiren bir hastada foramen jugulare içinden geçen sinirler (CN IX, X, XI) tamamen kesilmiştir.",
+     "question": "Aşağıdaki nörolojik parametrelerin ve klinik reflekslerin değişim yönünü belirleyin:",
+     "parameters": [
+      {
+       "name": "Sağ yumuşak damak elevasyonu ve kas gücü",
+       "correct": "azalır",
+       "explanation": "Nervus vagus motor liflerinin hasarlanması sonucu sağ yumuşak damak elevasyonu azalır ve damak sarkar."
+      },
+      {
+       "name": "Uvulanın sağlam sol tarafa doğru deviasyon derecesi",
+       "correct": "artar",
+       "explanation": "Sağ damak felç olunca sağlam sol kasların tek taraflı çekim etkisi artar ve uvula sola sapar."
+      },
+      {
+       "name": "Sağ farenks uyarısına verilen öğürme refleksi yanıtı",
+       "correct": "azalır",
+       "explanation": "Afferent CN IX ve efferent CN X lifleri kesildiği için farenks uyarısına öğürme yanıtı azalır veya kaybolur."
+      }
+     ]
+    },
+    {
+     "type": "fix_the_text",
+     "text": "Hastanın kraniyal sinir muayenesinde sağ korneaya dokunulduğunda afferent nervus facialis lifleri uyarılmış ve efferent nervus opticus ile göz kırpılmıştır. Hastaya ses çıkartıldığında uvulanın felçli sağ tarafa doğru çekildiği görülmüştür.",
+     "errors": [
+      {
+       "wrong": "afferent nervus facialis lifleri uyarılmış ve efferent nervus opticus ile göz kırpılmıştır",
+       "correct": "afferent nervus ophthalmicus lifleri uyarılmış ve efferent nervus facialis ile göz kırpılmıştır",
+       "options": [
+        "afferent nervus ophthalmicus lifleri uyarılmış ve efferent nervus facialis ile göz kırpılmıştır",
+        "afferent nervus vestibulocochlearis lifleri uyarılmış ve efferent nervus abducens ile göz kırpılmıştır",
+        "afferent nervus olfactorius lifleri uyarılmış ve efferent nervus trochlearis ile göz kırpılmıştır"
+       ],
+       "explanation": "Kornea refleksinde duyu afferenti trigeminal sinirin V1 dalı, motor göz kapama efferenti ise fasiyal sinirdir."
+      },
+      {
+       "wrong": "uvulanın felçli sağ tarafa doğru çekildiği",
+       "correct": "uvulanın sağlam sol tarafa doğru çekildiği",
+       "options": [
+        "uvulanın sağlam sol tarafa doğru çekildiği",
+        "uvulanın orta hatta kilitlendiği",
+        "uvulanın aşağıya sarktığı"
+       ],
+       "explanation": "Tek taraflı vagus felcinde uvula felçli tarafa değil sağlam taraftaki kasların çekimiyle sağlam yöne sapar."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "deckId": "k2p-y25-k2-62-kraniyal-sinir-muayenesi",
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "totalSlides": 24,
+ "matchedPastQuestionsCount": 4,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}
