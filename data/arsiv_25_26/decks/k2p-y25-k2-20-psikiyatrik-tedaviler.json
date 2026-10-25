@@ -1,0 +1,1634 @@
+{
+ "id": "k2p-y25-k2-20-psikiyatrik-tedaviler",
+ "deckId": "k2p-y25-k2-20-psikiyatrik-tedaviler",
+ "title": "Psikiyatrik Bozukluklarda Uygulanan Tedaviler",
+ "shortTitle": "Psikiyatrik Tedaviler",
+ "discipline": "Psikiyatri",
+ "committee": "donem3-kurul2",
+ "instructor": "Dr. Öğr. Üyesi Nefise Demir",
+ "matchedNoteId": "y25-k2-20-psikiyatrik-tedaviler",
+ "sayfaHaritasi": "teyitli",
+ "overview": "Bu etkileşimli öğrenme destesinde psikiyatride kullanılan biyolojik tedavi modaliteleri incelenmektedir. Elektrokonvülzif tedavi (EKT), transkraniyal manyetik stimülasyon (TMS ve Derin TMS), transkraniyal doğru akım stimülasyonu (tDCS), derin beyin uyarımı (DBS), fototerapi, uyku yoksunluğu ve psikoşirürji yöntemlerinin nörobiyolojik etki mekanizmaları, uygulama prensipleri, klinik endikasyonları, yan etkileri ve güvenlik sınırları adım adım öğretilmektedir.",
+ "highYieldPearls": [
+  "EKT için tıbbi literatürde tanımlanmış hiçbir mutlak kontrendikasyon yoktur; KİBAS ve taze miyokard infarktüsünde risk artar.",
+  "EKT hastalarının %85'inde tanı majör depresyondur; kronik şizofrenide etkisizdir ancak katatoni ve antipsikotik EPS belirtilerinde etkilidir.",
+  "Benzodiazepinler ve antiepileptikler nöbet eşiğini yükselttiğinden EKT öncesi kesilmeli, teofilin ise status epileptikus yapabileceği için uygulanmamalıdır.",
+  "TMS Faraday indüksiyonuyla depolarizasyon oluşturur; sol DLPFC uyarımı dirençli depresyonda FDA onaylıdır.",
+  "Derin TMS (dTMS) Hesed bobini ile 4 cm derinliğe ulaşıp bilateral etki sağlar; 2020'de sigara bırakmada FDA onayı almıştır.",
+  "tDCS saf nöromodülatördür (anodal depolarizasyon, katodal hiperpolarizasyon); henüz FDA onayı yoktur.",
+  "DBS dirençli OKB ve Parkinson'da FDA onaylıdır; fototerapi mevsimsel depresyonda melatonin baskılamasıyla 2-4 günde hızlı yanıt verir.",
+  "Uyku yoksunluğunda ertesi gün %40-60 düzelme görülür; ancak gündüz kısa bir kestirme bile tablonun nüksetmesine yol açar."
+ ],
+ "totalSlides": 14,
+ "totalInteractiveElements": 67,
+ "interactiveRatio": 4.78,
+ "slides": [
+  {
+   "slideNumber": 1,
+   "title": "Biyolojik Tedaviler ve Elektrokonvülzif Tedavi (EKT) Tarihçesi",
+   "bolum": "1",
+   "pdfSayfalari": [
+    2,
+    3
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatride Tedaviler-3.SINIF.pdf",
+    "primaryPage": 2,
+    "startPage": 2,
+    "endPage": 3
+   },
+   "synthesisNarrative": "Psikiyatride farmakoterapi dışındaki fiziksel ve nöromodülatör müdahaleler biyolojik tedaviler çatısı altında toplanır.\n\n- **Biyolojik Tedavi Yelpazesi:** Elektrokonvülzif tedavi (EKT), transkraniyal manyetik stimülasyon (TMS), transkraniyal doğru akım stimülasyonu (tDCS), derin beyin uyarımı (DBS), fototerapi, uyku yoksunluğu ve psikoşirürjiyi kapsar.\n- **EKT Tanımı:** Beyin dokusunun kontrollü elektrik akımıyla uyarılarak terapötik jeneralize konvülziyon oluşturulması esasına dayanır; iyileşmeyi sağlayan elektrik akımının kendisi değil, beynin geçirdiği jeneralize nöbettir.\n- **Tarihsel Gelişim:** Epileptik hastalarda psikozun daha az görüldüğü gözlemleri üzerine 1934'te kimyasal nöbet indüksiyonu (Meduna), ardından 1938'de Cerletti ve Bini tarafından ilk defa bir şizofreni hastasında elektriksel nöbet indüksiyonu başlatılmıştır.\n\n> [!NOTE]\n> EKT'de elektrik akımı yalnızca nöbeti başlatan fiziksel tetikleyicidir; klinik etki jeneralize epileptiform nöbet aktivitesiyle ortaya çıkar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Elektrik akımı kullanarak ilk defa bir şizofreni hastasında EKT uygulamasını 1938 yılında başlatan İtalyan araştırmacılar kimlerdir?",
+     "options": [
+      {
+       "text": "Ugo Cerletti ve Lucino Bini",
+       "isCorrect": true,
+       "explanation": "Ugo Cerletti ve Lucino Bini 1938 yılında Roma'da elektrik akımıyla jeneralize nöbet oluşturarak modern EKT'yi başlatan öncü hekimlerdir. Bu iki hekim ilk defa bir şizofreni hastasında elektrikle başarılı nöbet indüksiyonu gerçekleştirmiştir."
+      },
+      {
+       "text": "Ladislas von Meduna ve Manfred Sakel",
+       "isCorrect": false,
+       "explanation": "Ladislas von Meduna 1934 yılında kamfor ve metrazol kullanarak kimyasal yolla konvülsiyon oluşturan hekimdir. Manfred Sakel ise şizofrenide insülin komasını geliştirmiştir, elektrik akımıyla EKT uygulamasını Cerletti ve Bini başlatmıştır."
+      },
+      {
+       "text": "Egas Moniz ve Almeida Lima",
+       "isCorrect": false,
+       "explanation": "Egas Moniz ve Almeida Lima psikiyatride cerrahi psikoşirürjinin ve prefrontal lökotomi ameliyatlarının kurucularıdır. Bu araştırmacılar nöroşirürjikal ablasyon üzerinde çalışmış olup elektrik akımıyla konvülsiyon oluşturma tekniğini geliştirmemişlerdir."
+      },
+      {
+       "text": "Julius Wagner-Jauregg ve Emil Kraepelin",
+       "isCorrect": false,
+       "explanation": "Julius Wagner-Jauregg nörosifilizde sıtma inokülasyonu ile piroterapiyi bulmuş, Emil Kraepelin ise manik-depresif hastalığı nozolojik olarak tanımlamıştır. Bu hekimler biyolojik konvülsif elektrik tedavilerinin kurucusu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "EKT, beyin dokusunun elektrik akımıyla uyarılarak jeneralize konvülziyon oluşturma esasına dayalı psikiyatrik tedavidir.",
+     "maskedTerm": "jeneralize konvülziyon",
+     "hint": "Tüm beyni kapsayan epileptiform nöbet durumu"
+    },
+    {
+     "type": "causal_chain",
+     "title": "EKT'nin Tarihsel Doğuş Mekanizması",
+     "steps": [
+      "1. Klinik Gözlem: Menenjit ve kafa travması sonrası epilepsisi olanlarda nöbetin psikotik belirtileri yatıştırdığı fark edildi.",
+      "2. Biyolojik Antagonizma: Epilepsi ile psikoz arasında ters bir ilişki olabileceği hipotezi geliştirildi.",
+      "3. Kimyasal İndüksiyon: 1934'te kimyasal ajanlarla nöbet oluşturuldu fakat kontrolü son derece güç bulundu.",
+      "4. Elektriksel İndüksiyon: 1938'de Cerletti ve Bini elektrik akımının güvenli ve kontrol edilebilir nöbet sağladığını kanıtladı."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Biyolojik Tedavilere Giriş ve EKT Tarihçesi",
+     "items": [
+      {
+       "text": "EKT, beyin dokusuna elektrik akımı verilerek jeneralize konvülziyon oluşturulması esasına dayanır.",
+       "isLie": false,
+       "explanation": "Doğru ifadedir; EKT'nin temel tanımı kontrollü elektriksel uyarıyla jeneralize epileptiform nöbet oluşturulmasıdır."
+      },
+      {
+       "text": "EKT'de klinik iyileşmeyi sağlayan asıl unsur elektrik akımının beyne doğrudan geçişidir; nöbet tetiklenmesi gereksizdir.",
+       "isLie": true,
+       "explanation": "Bu önerme yanlıştır; elektrik akımı sadece bir araçtır, asıl terapötik etkiyi sağlayan beynin geçirdiği jeneralize nöbettir."
+      },
+      {
+       "text": "İlk kimyasal nöbet indüksiyonu 1934'te uygulanmış, Cerletti ve Bini ise 1938'de ilk elektriksel EKT'yi yapmıştır.",
+       "isLie": false,
+       "explanation": "Doğru ifadedir; 1934 Meduna kimyasal dönemi, 1938 Cerletti-Bini elektriksel EKT dönemini temsil eder."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "EKT'nin etki mekanizmasında elektrik akımı ile terapötik nöbet arasındaki nedensel ilişki nedir?",
+     "answer": "Elektrik akımı yalnızca bir araç olup beyni uyarır; terapötik düzelmeyi sağlayan biyokimyasal ve nöroplastik olaylar jeneralize epileptiform nöbetin bizzat kendisi tarafından başlatılır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 2,
+   "title": "EKT'nin Biyokimyasal ve Nörofizyolojik Etki Mekanizmaları",
+   "bolum": "1",
+   "pdfSayfalari": [
+    4,
+    4
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatride Tedaviler-3.SINIF.pdf",
+    "primaryPage": 4,
+    "startPage": 4,
+    "endPage": 4
+   },
+   "synthesisNarrative": "EKT'nin terapötik etkisi biyokimyasal, nörofizyolojik ve hücresel plastisite düzeyinde kapsamlı değişikliklerle gerçekleşir.\n\n- **Biyokimyasal Değişiklikler:** Antidepresan ilaçlara benzer şekilde postsinaptik beta-adrenerjik reseptörlerde down-regülasyon meydana gelir. Dopamin (DA) salınımı ve transmisyonu belirgin artar; serotonin (5HT) transmisyonu ve 5HT2A reseptör dansitesinde yükselme izlenir.\n- **Nöroendokrin ve Nörotrofik Yanıt:** Hipotalamo-hipofizer-adrenal (HPA) aks uyarılır ve beyin kaynaklı nörotrofik faktör (BDNF) ekspresyonu patlar.\n- **Nörofizyolojik ve Nöroplastisite:** Akut nöbet kan-beyin bariyeri geçirgenliğinde geçici artış yapar. Hipokampusta sinaptik plastisiteyi uyarır, nörogenezisi artırır ve apoptozisi baskılar.\n\n> [!IMPORTANT]\n> Dopaminerjik transmisyonun artışı EKT'nin motor yavaşlamayı ve Parkinson motor belirtilerini hızla düzeltmesini açıklar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "EKT sonrasında beyinde gerçekleşen nörobiyokimyasal değişikliklerle ilgili aşağıdakilerden hangisi DOĞRUDUR?",
+     "options": [
+      {
+       "text": "Beta-adrenerjik reseptörlerde down-regülasyon ve BDNF düzeyinde artış gerçekleşir.",
+       "isCorrect": true,
+       "explanation": "Beta-adrenerjik reseptörlerdeki down-regülasyon klasik antidepresan terapötik etkinin göstergesidir. Beyin kaynaklı nörotrofik faktör artışı ise sinaptik bağlantıları ve nörogenezisi güçlendirir."
+      },
+      {
+       "text": "Striatal dopamin salınımı ve transmisyonu belirgin düzeyde baskılanır.",
+       "isCorrect": false,
+       "explanation": "Dopaminerjik transmisyon EKT sonrasında azalmaz, tam tersine artış gösterir. Bu dopamin artışı psikomotor retardasyonun ve Parkinson bulgularının düzelmesini sağlar."
+      },
+      {
+       "text": "Serotonerjik transmisyon ve 5HT2A reseptör dansitesi sıfıra indirilir.",
+       "isCorrect": false,
+       "explanation": "Serotonin transmisyonu ve 5HT2A reseptör yoğunluğu EKT sonrasında artış gösterir. Nörotransmitter aktivitesi baskılanmaz, dengeli bir modülasyonla pekiştirilir."
+      },
+      {
+       "text": "Hipokampusta nörogenezis durdurulur ve nöronal apoptozis uyarılır.",
+       "isCorrect": false,
+       "explanation": "EKT hipokampal alanda nörogenezisi ve sinaptik plastisiteyi güçlü biçimde artırır. Programlı hücre ölümü olan apoptozis ise uyarılmaz, aksine baskılanarak nöronlar korunur."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "EKT, hipokampusta sinaptik plastisite ve nörogeneziste artış sağlarken apoptozisi baskılar.",
+     "maskedTerm": "nörogeneziste artış",
+     "hint": "Hipokampusta yeni sinir hücresi oluşumunu ifade eden süreç"
+    },
+    {
+     "type": "causal_chain",
+     "title": "EKT'nin Hücresel Nöroplastisite Basamakları",
+     "steps": [
+      "1. Nöbet Uyarımı: Jeneralize epileptiform deşarj HPA aksını ve nöroendokrin döngüleri uyarır.",
+      "2. Trofik Sentez: Hipokampal nöronlarda beyin kaynaklı nörotrofik faktör (BDNF) ekspresyonu artar.",
+      "3. Sinaptik Büyüme: Nöroplastik sinaptik tomurcuklanma ve nörogenezis indüklenir.",
+      "4. Hücresel Koruma: Programlı hücre ölümü (apoptozis) baskılanarak doku dayanıklılığı artırılır."
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Yolak / Molekül",
+      "EKT Sonrası Değişim",
+      "Klinik Yansıması"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "Beta-adrenerjik reseptör"
+       },
+       {
+        "text": "Down regülasyon",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Klasik antidepresan etki"
+       }
+      ],
+      [
+       {
+        "text": "Dopamin (DA) transmisyonu"
+       },
+       {
+        "text": "Belirgin artış",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Psikomotor yavaşlamada hızlı düzelme"
+       }
+      ],
+      [
+       {
+        "text": "Hipokampal BDNF"
+       },
+       {
+        "text": "Ekspresyon artışı",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Sinaptik plastisite ve nörogenezis"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "EKT'nin nörofizyolojik hipotezinde kan-beyin bariyeri ile ilgili ne gözlenir?",
+     "answer": "Akut nöbet sırasında serebral mikrovasküler geçirgenliğin artmasına bağlı olarak kan-beyin bariyerinde geçici bir geçirgenlik artışı şekillenir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 3,
+   "title": "EKT Öncesi Tıbbi Hazırlık ve Uygulama Güvenlik Protokolü",
+   "bolum": "1",
+   "pdfSayfalari": [
+    5,
+    5
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatride Tedaviler-3.SINIF.pdf",
+    "primaryPage": 5,
+    "startPage": 5,
+    "endPage": 5
+   },
+   "synthesisNarrative": "Modern EKT, anesteziyoloji ve psikiyatri ekiplerinin ortak yürüttüğü yüksek güvenlikli cerrahi benzeri bir prosedürdür.\n\n- **Uygulama Öncesi Tıbbi Değerlendirme:** Hastaya ayrıntılı fizik muayene yapılır. Bilgisayarlı tomografi (BT) veya MRG ile kafa içi lezyonlar taranır. Akciğer grafisi, elektrokardiyografi (EKG), rutin biyokimya ve kan sayımı istenir.\n- **EEG Şartı Kuralı:** EKT öncesinde rutin elektroensefalografi (EEG) çekilmesi **şart değildir**; nöbet morfolojisi uygulama esnasında izlenir.\n- **Hasta Güvenliği:** Tonik-klonik kasılmalara bağlı diş kırıklarını ve dil-dudak yaralanmalarını önlemek için ağza yumuşak tampon yerleştirilir.\n- **Elektrot Teması:** Elektrotlar gazlı bezle sarılır, tuzlu suyla ıslatılır veya iletken jel kullanılarak deri empedansı düşürülür ve kafa derisi yanıkları engellenir.\n\n> [!IMPORTANT]\n> İletken jel veya tuzlu su kullanımı deri-elektrot direncini düşürerek elektriksel termal yanık oluşumunu kesin olarak engeller.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "EKT hazırlık protokolünde yer alan tetkiklerle ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+     "options": [
+      {
+       "text": "Rutin EEG çekimi EKT uygulaması öncesinde zorunlu şart değildir.",
+       "isCorrect": true,
+       "explanation": "Elektroensefalografi nöbet aktivitesini değerlendiren bir yöntemdir ancak EKT öncesinde rutin olarak çekilmesi şart değildir. Hastanın nöbeti işlem sırasında anlık olarak takip edilir."
+      },
+      {
+       "text": "Beyin BT veya MRG çekimi tüm hastalarda kesinlikle gereksizdir.",
+       "isCorrect": false,
+       "explanation": "Kranial görüntüleme yöntemleri kafa içi yer kaplayan kitleleri ve KİBAS tablosunu ekarte etmek için gereklidir. Bu tetkiklerin tamamen gereksiz olduğu ifadesi yanlıştır."
+      },
+      {
+       "text": "EKG ve akciğer grafisi genel anestezi verilecek olsa bile istenmez.",
+       "isCorrect": false,
+       "explanation": "Genel anestezi güvenliği açısından EKG ve akciğer grafisi standart hazırlığın temel basamaklarıdır. Bu tetkiklerin istenmemesi anestezi güvenliğini tehlikeye atar."
+      },
+      {
+       "text": "Ağız içine hiçbir koruyucu tampon konulmadan akım verilmelidir.",
+       "isCorrect": false,
+       "explanation": "Masseter kasının şiddetli kasılması diş kırıklarına ve dil ısırıklarına yol açabilir. Bu nedenle ağza yumuşak koruyucu bir tampon yerleştirilmesi zorunludur."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "EKT öncesi tetkikler arasında fizik muayene, BT/MRG, akciğer grafisi, EKG ve rutin biyokimya yer alırken rutin EEG çekimi şart değildir.",
+     "maskedTerm": "rutin EEG",
+     "hint": "Beyin elektriksel aktivitesini kaydeden ve öncesinde şart koşulmayan inceleme"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "EKT Hazırlık ve Uygulama Basamakları",
+     "items": [
+      {
+       "text": "Elektrotlar tuzlu su veya jel ile uygulanarak kafa derisinde yanık oluşması engellenir.",
+       "isLie": false,
+       "explanation": "Doğru ifadedir; empedansı düşürmek ve elektrik yanığını önlemek için tuzlu su veya jel kullanılır."
+      },
+      {
+       "text": "Çene kasılmalarına bağlı diş kırıklarını engellemek için ağza yumuşak tampon yerleştirilir.",
+       "isLie": false,
+       "explanation": "Doğru ifadedir; yumuşak ısırma tamponu diş travmasını ve dil ısırmasını engeller."
+      },
+      {
+       "text": "EKT kararı verilen her hastada seans öncesinde rutin EEG çekilmesi kanunen zorunlu ve şarttır.",
+       "isLie": true,
+       "explanation": "Bu önerme yanlıştır; ders notlarında rutin EEG çekiminin şart olmadığı açıkça belirtilmiştir."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Uygulama Adımı",
+      "Standart Önlem",
+      "Hedeflenen Amaç"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "Ağız koruması"
+       },
+       {
+        "text": "Yumuşak tampon",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Diş kırığı ve dil yaralanmasını önleme"
+       }
+      ],
+      [
+       {
+        "text": "Elektrot hazırlığı"
+       },
+       {
+        "text": "Tuzlu su veya jel",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Empedansı düşürme ve yanığı engelleme"
+       }
+      ],
+      [
+       {
+        "text": "Nörofizyolojik tetkik"
+       },
+       {
+        "text": "Rutin EEG şart değil",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Nöbet anlık monitörizasyonla izlenir"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "EKT elektrotlarının gazlı bezle sarılması ve tuzlu suyla ıslatılmasının temel amacı nedir?",
+     "answer": "Deri temas direncini (empedansı) düşürerek elektrik akımının dokuya homojen dağılmasını sağlamak ve yüksek dirence bağlı kafa derisi termal yanıklarını önlemektir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 4,
+   "title": "EKT'nin Birincil Endikasyonu: Majör Depresif Bozukluk",
+   "bolum": "1",
+   "pdfSayfalari": [
+    6,
+    7
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatride Tedaviler-3.SINIF.pdf",
+    "primaryPage": 6,
+    "startPage": 6,
+    "endPage": 7
+   },
+   "synthesisNarrative": "Elektrokonvülzif tedavi, psikiyatrik acillerde ve ağır duygudurum tablolarında hayat kurtarıcı birincil seçenektir.\n\n- **Epidemiyolojik Dağılım:** Günümüzde EKT uygulanan psikiyatri hastalarının **%85'inde tanı majör depresyondur**.\n- **Ağır Klinik Tablolar:** Şiddetli depresif belirtileri olan, işlevselliği ileri derecede bozulmuş, katatonik stupor veya psikotik hezeyanlar sergileyen hastalarda ilk basamaktır.\n- **Acil Risk Durumları:** Hızla yanıt istenen, yüksek intihar (suisid) riski bulunan, yeme-içmeyi reddeden (oral alım reddi) ve ağır dehidratasyondaki hastalarda hayat kurtarır.\n- **Özel Popülasyonlar:** Antidepresan ilaçların fetüse zarar verme riski nedeniyle gebe hastalarda ve ilaca dirençli depresyon olgularında en güvenilir yöntemdir.\n\n> [!IMPORTANT]\n> EKT kesildikten sonra nüksün engellenmesi için idame ilaç tedavisine mutlaka devam edilmelidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Günümüzde psikiyatri pratiğinde EKT uygulanan hastaların yaklaşık yüzde kaçında tanı majör depresyondur?",
+     "options": [
+      {
+       "text": "Yüzde seksen beş (%85)",
+       "isCorrect": true,
+       "explanation": "Majör depresyon EKT'nin en sık uygulandığı klinik tablodur. Hastaların yüzde seksen beşinde bu endikasyonla tedavi planlanır ve intihar riskinde hayat kurtarıcıdır."
+      },
+      {
+       "text": "Yüzde elli (%50)",
+       "isCorrect": false,
+       "explanation": "Yüzde elli oranı gerçeğin çok altındadır. EKT uygulamalarında depresyon olguları ezici bir çoğunluk teşkil ederek yüzde seksen beşe kadar ulaşmaktadır."
+      },
+      {
+       "text": "Yüzde yirmi beş (%25)",
+       "isCorrect": false,
+       "explanation": "Bu oran EKT'deki depresyon ağırlığını yansıtmaz. Yüzde yirmi beşlik oran şizofreni ve manik olguların toplam payına daha yakın bir değerdir."
+      },
+      {
+       "text": "Yüzde on (%10)",
+       "isCorrect": false,
+       "explanation": "Yüzde onluk pay nadir endikasyonlar için geçerlidir. Majör depresyon EKT'de nadir görülen değil, en sık karşımıza çıkan tablodur."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Günümüzde EKT uygulanan psikiyatri hastalarının %85'inde tanı majör depresyondur ve intihar riski olanlarda hayat kurtarıcıdır.",
+     "maskedTerm": "majör depresyondur",
+     "hint": "EKT hastalarının ezici çoğunluğunun temel affektif teşhisi"
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "32 yaşında 14 haftalık gebe hasta, derin depresif hezeyanlar, tam oral alım reddi ve aktif intihar planı ile psikiyatri servisine yatırılıyor.",
+     "options": [
+      {
+       "text": "Hastaya teratojenik ilaç riskinden kaçınmak ve hızlı yanıt almak için acil EKT planlanmalıdır.",
+       "isCorrect": true,
+       "feedback": "EKT gebelikte fetüsü teratojen ilaçlardan koruyan en güvenilir yöntemdir. Bu yöntem hızlı klinik remisyon sağlayarak hem anneyi hem de fetüsü hayati tehlikeden korur."
+      },
+      {
+       "text": "Gebelikte EKT kontrendike olduğundan yüksek doz trisiklik antidepresan başlanıp 4 hafta beklenmelidir.",
+       "isCorrect": false,
+       "feedback": "Trisiklik antidepresanlar kardiyotoksik ve teratojenik riskler taşır. Ayrıca hastanın intihar riski nedeniyle haftalarca ilaç yanıtını bekleme lüksü bulunmamaktadır."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Majör Depresyonda EKT Endikasyonları",
+     "items": [
+      {
+       "text": "Katatonik ve psikotik belirtiler gösteren ağır depresif olgularda EKT ilk tercihlerdendir.",
+       "isLie": false,
+       "explanation": "Doğru ifadedir; katatoni ve psikoz EKT'ye en dramatik ve hızlı yanıt veren durumlardır."
+      },
+      {
+       "text": "EKT ile tam remisyon sağlanan dirençli depresyon hastalarında tedavi biter bitmez tüm ilaçlar ömür boyu kesilmelidir.",
+       "isLie": true,
+       "explanation": "Bu önerme yanlıştır; ders notunda EKT kesildikten sonra relapsı önlemek için idame ilaç tedavisine devam edilmesi gerektiği açıkça belirtilmiştir."
+      },
+      {
+       "text": "Oral alımı reddeden ve intihar riski yüksek hastalarda hızlı klinik yanıt için EKT uygulanır.",
+       "isLie": false,
+       "explanation": "Doğru ifadedir; hızlı terapötik düzelme hayati riskleri önlemek için şarttır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Gebelikte ağır depresyon geçiren ve intihar riski olan bir hastada EKT neden ilaçlara tercih edilir?",
+     "answer": "EKT fetüs üzerinde ilaçlar gibi teratojenik risk taşımaz, sistemik kimyasal maruziyet oluşturmaz ve günler içinde çok hızlı klinik düzelme sağlayarak anneyi ve bebeği korur."
+    }
+   ]
+  },
+  {
+   "slideNumber": 5,
+   "title": "EKT'nin Mani, Şizofreni, NMS ve Parkinson Endikasyonları",
+   "bolum": "1",
+   "pdfSayfalari": [
+    8,
+    9
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatride Tedaviler-3.SINIF.pdf",
+    "primaryPage": 8,
+    "startPage": 8,
+    "endPage": 9
+   },
+   "synthesisNarrative": "EKT majör depresyon dışında diğer ağır nöropsikiyatrik tablolarda da kritik rol oynar.\n\n- **Bipolar Mani:** İlaç tedavisine yanıt alınamayan, hasta için hayati risk oluşturan şiddetli eksitasyon ve fiziksel tükenme durumlarında ve gebelikte uygulanır.\n- **Şizofreni Sınırları:** **Kronik şizofrenide etkin değildir!** Belirgin pozitif alevlenmesi olan, katatonik bulgular sergileyen, ilaca dirençli ve homisid/suisid riski bulunan olgularda etkilidir.\n- **EPS Belirtileri:** Antipsikotik ilaçların neden olduğu ağır ekstrapiramidal yan etkilerde (EPS) EKT güvenle uygulanabilir ve belirtileri düzeltir.\n- **Nörolojik Endikasyonlar:** Parkinson hastalığında rijidite, bradikinezi ve on-off motor dalgalanmalarında; ayrıca ölümcül Nöroleptik Malign Sendromda (NMS) hayat kurtarıcıdır.\n\n> [!NOTE]\n> EKT antipsikotiklerin yol açtığı parkinsonizm ve rijidite gibi ekstrapiramidal yan etkileri artırmaz, aksine striatal dopamini uyararak düzeltir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "EKT'nin şizofrenideki etkinliği ve endikasyon kuralları ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+     "options": [
+      {
+       "text": "Kronik rezidüel şizofrenide etkin değildir; akut pozitif ve katatonik belirtilerde etkilidir.",
+       "isCorrect": true,
+       "explanation": "Kronik rezidüel şizofreni negatif belirtiler ve bilişsel hasarla seyreder ve EKT'den fayda görmez. EKT akut alevlenmelerde, katatonide ve belirgin hezeyanlarda başarı sağlar."
+      },
+      {
+       "text": "Kronik şizofrenide negatif semptomları ve bilişsel yıkımı tamamen geri çevirir.",
+       "isCorrect": false,
+       "explanation": "Negatif semptomlar ve bilişsel yıkım kronik şizofreninin yapısal komponentleridir. EKT bu kalıcı defisitleri geri çeviremez ve kronik formda etkisizdir."
+      },
+      {
+       "text": "Antipsikotiklerin neden olduğu EPS belirtilerinde uygulanması kesin kontrendikedir.",
+       "isCorrect": false,
+       "explanation": "Ekstrapiramidal belirtiler dopamin yetersizliğinden kaynaklanır ve EKT dopamin salınımını artırır. Bu nedenle EKT EPS belirtilerini düzeltmek için güvenle uygulanır."
+      },
+      {
+       "text": "Mani hastalarında eksitasyon varlığında uygulanması fiziksel hasarı artırır.",
+       "isCorrect": false,
+       "explanation": "Şiddetli manik eksitasyon kardiyovasküler tükenmeye ve fiziksel kollapsa yol açabilir. EKT bu eksitasyonu hızla yatıştırarak hastayı fiziksel tükenmeden korur."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "EKT, kronik şizofrenide etkin değildir; ancak belirgin pozitif bulguları ve katatonisi olanlarda etkilidir.",
+     "maskedTerm": "kronik şizofrenide",
+     "hint": "EKT'nin fayda sağlamadığı uzun süreli rezidüel evre"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "EKT'nin Şizofreni ve Parkinson Endikasyonları",
+     "items": [
+      {
+       "text": "Parkinson hastalığında özellikle rijidite, bradikinezi ve on-off motor dalgalanmalarında EKT fayda sağlar.",
+       "isLie": false,
+       "explanation": "Doğru ifadedir; EKT dopaminerjik transmisyonu uyararak Parkinson motor bulgularını düzeltir."
+      },
+      {
+       "text": "Antipsikotik kullanan şizofreni hastasında ekstrapiramidal yan etkiler (EPS) gelişirse EKT bu yan etkileri daha da şiddetlendirir.",
+       "isLie": true,
+       "explanation": "Bu önerme yanlıştır; EKT antipsikotik kaynaklı EPS belirtilerinde artmaya değil, düzelmeye neden olur ve endikedir."
+      },
+      {
+       "text": "Nöroleptik Malign Sendrom (NMS) ve inatçı katatoni tablolarında EKT hayat kurtarıcı bir seçenektir.",
+       "isLie": false,
+       "explanation": "Doğru ifadedir; NMS ve katatoni EKT'nin acil ve etkili endikasyonları arasındadır."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Klinik Tablo",
+      "EKT Etkinliği",
+      "Önemli Klinik Gerekçe"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "Kronik rezidüel şizofreni"
+       },
+       {
+        "text": "Etkin değildir",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Negatif semptomlar ve bilişsel yıkımda faydasız"
+       }
+      ],
+      [
+       {
+        "text": "Katatonik şizofreni"
+       },
+       {
+        "text": "Yüksek etkinlik",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Stupor ve katatonik eksitasyonu hızla çözer"
+       }
+      ],
+      [
+       {
+        "text": "Antipsikotik EPS belirtileri"
+       },
+       {
+        "text": "Düzelme sağlar",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Striatal dopaminerjik iletiyi güçlendirir"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "EKT'nin Parkinson hastalığındaki hangi spesifik motor bulgularda etkili olduğu belirtilmektedir?",
+     "answer": "Özellikle rijidite, bradikinezi ve ilaç yanıtındaki motor dalgalanmaları ifade eden on-off fenomeninde etkilidir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 6,
+   "title": "EKT Risk Faktörleri, Yan Etkileri ve İlaç Etkileşimleri",
+   "bolum": "1",
+   "pdfSayfalari": [
+    10,
+    14
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatride Tedaviler-3.SINIF.pdf",
+    "primaryPage": 10,
+    "startPage": 10,
+    "endPage": 14
+   },
+   "synthesisNarrative": "EKT genel anestezi altında yapılan en güvenli tıbbi girişimlerden biridir; ancak belirli klinik durumlarda risk artışı ve ilaç etkileşimleri mevcuttur.\n\n- **Riskin Arttığı Durumlar:** Kafa içi yer kaplayan serebral lezyonlar, artmış intrakraniyal basınç (KİBAS), yakın geçmişte geçirilmiş miyokard infarktüsü (MI), taze serebrovasküler hastalık (inme), anevrizma, retina dekolmanı ve feokromositomada risk artar.\n- **Kontrendikasyon Kuralı:** EKT için tıbbi literatürde tanımlanmış **hiçbir mutlak kontrendikasyon yoktur**.\n- **Mortalite ve Bilişsel Etki:** Mortalite seans başına %0.002, hasta başına %0.01'dir. Çalışmalar EKT'nin beyne kalıcı yapısal hasar vermediğini göstermiştir. Bilişsel bozukluklar dozaja bağlıdır ve teşhisten teşhise değişmez.\n- **İlaç Etkileşimleri:** Benzodiazepinler ve antiepileptikler nöbet eşiğini artırdığından kesilmelidir. Trisiklik antidepresanlar kardiyak riski artırır. Teofilin terapötik dozda bile **status epileptikusa** yol açabilir; kafein ise nöbeti uzatmak için önerilebilir.\n\n> [!IMPORTANT]\n> Teofilin kullanan hastada adenozin blokajı nedeniyle nöbet kendiliğinden sonlanamaz ve hayatı tehdit eden status epileptikus gelişebilir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "EKT uygulanacak bir hastanın kullandığı ilaçlar değerlendirildiğinde terapötik dozlarda dahi status epileptikusa yol açabilen ajan hangisidir?",
+     "options": [
+      {
+       "text": "Teofilin",
+       "isCorrect": true,
+       "explanation": "Teofilin bronkodilatör amaçla kullanılan bir ksantin türevidir. Adenozin reseptörlerini bloke ederek nöbetin sonlanmasını engeller ve terapötik dozda bile status epileptikusa neden olabilir."
+      },
+      {
+       "text": "Diazepam",
+       "isCorrect": false,
+       "explanation": "Diazepam GABA reseptörlerini aktive eden bir benzodiazepin türevidir. Nöbet eşiğini yükselterek nöbet oluşmasını engeller, bu nedenle status epileptikus oluşturmaz."
+      },
+      {
+       "text": "Kafein",
+       "isCorrect": false,
+       "explanation": "Kafein santral sinir sistemini hafif uyaran bir ksantindir. EKT pratiğinde nöbet süresi yetersiz kalan hastalarda nöbet süresini uzatmak amacıyla kontrollü kullanılır."
+      },
+      {
+       "text": "Valproat",
+       "isCorrect": false,
+       "explanation": "Sodyum valproat geniş spektrumlu bir antiepileptiktir. Beyinde nöbet eşiğini yükselterek konvülziyonu baskılar ve terapötik nöbetin başlamasını zorlaştırır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Benzodiazepinler ve antiepileptikler nöbet eşiğini arttırdığından uygulamaya başlamadan önce kesilmelidir.",
+     "maskedTerm": "nöbet eşiğini arttırdığından",
+     "hint": "GABA aktivasyonuyla konvülsiyon indüksiyonunu zorlaştıran elektriksel etki"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "EKT Güvenlik ve Kontrendikasyon İlkeleri",
+     "items": [
+      {
+       "text": "EKT için tıbbi literatürde tanımlanmış hiçbir mutlak kontrendikasyon yoktur.",
+       "isLie": false,
+       "explanation": "Doğru ifadedir; tüm durumlar rölatif risk artışı olarak kabul edilir, mutlak yasak yoktur."
+      },
+      {
+       "text": "Çalışmalar EKT'nin beyin dokusunda kalıcı nöronal nekroz ve geriye dönüşsüz yapısal harabiyet yaptığını göstermiştir.",
+       "isLie": true,
+       "explanation": "Bu önerme yanlıştır; bilimsel araştırmalar EKT'nin beyne kalıcı yapısal hasar vermediğini kanıtlamıştır."
+      },
+      {
+       "text": "Kafa içi yer kaplayan lezyon, taze miyokard infarktüsü ve anevrizma EKT'de riskin arttığı durumlardır.",
+       "isLie": false,
+       "explanation": "Doğru ifadedir; bu tablolarda otonomik hemodinamik dalgalanmalar nedeniyle risk artar."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "İlaç Grubu",
+      "EKT Sırasındaki Etkisi",
+      "Klinik Yaklaşım"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "Benzodiazepinler"
+       },
+       {
+        "text": "Nöbet eşiğini artırır",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "EKT öncesinde kesilmelidir"
+       }
+      ],
+      [
+       {
+        "text": "Teofilin"
+       },
+       {
+        "text": "Status epileptikus riski",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Terapötik dozda bile EKT'de verilmemelidir"
+       }
+      ],
+      [
+       {
+        "text": "Kafein"
+       },
+       {
+        "text": "Nöbet süresini uzatır",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Nöbet eşiği yüksek olgularda önerilebilir"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "EKT sonrasında oluşan bilişsel bozuklukların derecesi hangi faktörlere bağlıdır, hangisine bağlı DEĞİLDİR?",
+     "answer": "Bilişsel fonksiyonlardaki bozulma elektrik dozajına ve kişiden kişiye değişen faktörlere bağlıdır; ancak hastanın psikiyatrik teşhisine bağlı değildir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 7,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Elektrokonvülzif Tedavi Klinik İlkeleri",
+   "bolum": "1",
+   "isCheckpoint": true,
+   "pdfSayfalari": [
+    2,
+    14
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatride Tedaviler-3.SINIF.pdf",
+    "primaryPage": 2,
+    "startPage": 2,
+    "endPage": 14
+   },
+   "synthesisNarrative": "Bu tekrar sayfasında elektrokonvülzif tedavinin (EKT) tarihçesini, etki mekanizmalarını, klinik endikasyonlarını, risklerini ve ilaç etkileşimlerini pekiştiriyoruz.\n\n- **Temel İlkeler:** Cerletti ve Bini tarafından 1938'de başlatılan EKT, jeneralize nöbet oluşturma esasına dayanır. Beta-adrenerjik down-regülasyon, DA ve 5HT artışı, BDNF salınımı ve hipokampal nörogenezis sağlar.\n- **Klinik Profil:** Hastaların %85'inde tanı majör depresyondur. Kronik şizofrenide etkisizdir ancak katatoni, akut psikoz ve antipsikotik EPS belirtilerinde etkilidir.\n- **Güvenlik Sınırları:** Mutlak kontrendikasyonu yoktur. KİBAS ve taze infarktüste risk artar. Benzodiazepinler nöbeti baskıladığı için kesilmeli; teofilin status epileptikus riski nedeniyle önlenmelidir.\n\n> [!NOTE]\n> EKT beyne kalıcı yapısal hasar vermez; bilişsel bozulmanın derecesi dozaja bağlıdır ve psikiyatrik tanıdan bağımsızdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "EKT'nin endikasyonları, etki mekanizmaları ve güvenliği ile ilgili aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
+     "options": [
+      {
+       "text": "Kronik rezidüel şizofreni — EKT'nin en yüksek oranda başarılı olduğu primer endikasyondur.",
+       "isCorrect": true,
+       "explanation": "Kronik şizofreni kalıcı bilişsel hasarla seyreder ve EKT bu tabloda etkin değildir. EKT'nin en başarılı olduğu primer endikasyon majör depresyondur."
+      },
+      {
+       "text": "Majör depresyon — EKT uygulanan olguların yaklaşık %85'ini oluşturan ana endikasyondur.",
+       "isCorrect": false,
+       "explanation": "Majör depresyon EKT pratiğinde yüzde seksen beş gibi ezici bir oranla ilk sıradadır. Bu eşleştirme klinik literatürle tamamen uyumludur."
+      },
+      {
+       "text": "Dopaminerjik transmisyon — EKT sonrası artarak psikomotor yavaşlama ve Parkinson bulgularını düzeltir.",
+       "isCorrect": false,
+       "explanation": "Dopamin artışı EKT'nin kanıtlanmış nörobiyolojik etkilerindendir. Bu mekanizma ile bradikinezi ve motor donmalar başarıyla açılır."
+      },
+      {
+       "text": "Teofilin — EKT sırasında terapötik dozlarda bile status epileptikus tetikleyebilir.",
+       "isCorrect": false,
+       "explanation": "Teofilin santral adenozin reseptör antagonistidir ve nöbetin durmasını engeller. Bu eşleştirme klinik uyarı ilkeleriyle tam olarak örtüşür."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Checkpoint 1: EKT Genel Bilgileri",
+     "items": [
+      {
+       "text": "EKT öncesinde rutin EEG çekilmesi her hasta için zorunlu ve şarttır.",
+       "isLie": true,
+       "explanation": "Bu önerme yanlıştır; EKT öncesi rutin EEG çekimi şart değildir, nöbet anlık izlenir."
+      },
+      {
+       "text": "EKT için tıbbi literatürde mutlak bir kontrendikasyon bulunmamaktadır.",
+       "isLie": false,
+       "explanation": "Doğru ifadedir; tüm durumlar rölatif risk artışıdır, kesin yasak yoktur."
+      },
+      {
+       "text": "EKT uygulamasında seans başına mortalite %0.002, hasta başına %0.01'dir.",
+       "isLie": false,
+       "explanation": "Doğru ifadedir; spontan ev ölümünden bile daha düşük mortaliteye sahiptir."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Parametre",
+      "EKT'deki Durumu",
+      "Açıklama"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "En sık endikasyon"
+       },
+       {
+        "text": "Majör depresyon (%85)",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "İntihar riski ve oral alım reddinde hayat kurtarıcı"
+       }
+      ],
+      [
+       {
+        "text": "Etkisiz olduğu durum"
+       },
+       {
+        "text": "Kronik şizofreni",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Negatif belirtilerde ve yıkımda terapötik fayda yok"
+       }
+      ],
+      [
+       {
+        "text": "Tehlikeli ilaç etkileşimi"
+       },
+       {
+        "text": "Teofilin ile status",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Adenozin blokajıyla nöbet sonlanmasını bozar"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "EKT için mutlak kontrendikasyon yoktur; tüm risk faktörleri rölatiftir.",
+     "maskedTerm": "mutlak kontrendikasyon yoktur",
+     "hint": "EKT'nin hiçbir hastada kesin olarak yasaklanmadığını belirten kural"
+    },
+    {
+     "type": "active_recall",
+     "question": "EKT'nin etki mekanizmasında nöroplastisite düzeyinde gözlenen temel olaylar nelerdir?",
+     "answer": "Hipokampusta sinaptik plastisitede ve nörogeneziste artış meydana gelirken hücresel apoptozis baskılanır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 8,
+   "title": "Transkraniyal Manyetik Stimülasyon (TMS ve Derin TMS)",
+   "bolum": "2",
+   "pdfSayfalari": [
+    15,
+    19
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatride Tedaviler-3.SINIF.pdf",
+    "primaryPage": 15,
+    "startPage": 15,
+    "endPage": 19
+   },
+   "synthesisNarrative": "Transkraniyal Manyetik Stimülasyon (TMS), kafatası direncini manyetik alanla aşan non-invaziv bir nöromodülasyon yöntemidir.\n\n- **Fiziksel Mekanizma:** Faraday'ın elektromanyetik indüksiyon prensibiyle çalışır; kafa derisi üzerine yerleştirilen tel bobin hızla dalgalanan manyetik alan üreterek kortikal dokuda sekonder elektrik akımları indükler ve nöronal depolarizasyon oluşturur.\n- **Klinik Güvenlik:** Anestezi gerektirmez, ayaktan uygulanır ve EKT'ye kıyasla bilişsel bozulmaya neden olmaz.\n- **Klinik Onaylar:** Sol dorsolateral prefrontal kortekse (DLPFC) uygulanan rTMS, en az bir ilaç tedavisine yanıt vermemiş majör depresyonda FDA onaylıdır. Psikoz için etkisizdir. Yaşlılarda kortikal atrofiye bağlı mesafe artışı nedeniyle etki gücü sınırlıdır.\n- **Derin TMS (dTMS):** Standart rTMS sekiz bobiniyle tek taraflı 2 cm derinliğe ulaşırken; dTMS kask içindeki **Hesed bobini (H-bobin)** ile **4 cm derinliğe** ulaşır ve eş zamanlı bilateral uyarım sağlar; 2020'de sigara bırakmada FDA onayı almıştır.\n\n> [!IMPORTANT]\n> rTMS'nin en ciddi endişe verici riski epileptik nöbet tetikleme riskidir; kılavuz parametreleri uygulanarak bu risk en aza indirilir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Non-invaziv yolla nöronal depolarizasyon dalgası oluşturarak tedaviye dirençli majör depresyonda FDA onayı almış nöromodülasyon tekniği hangisidir?",
+     "options": [
+      {
+       "text": "Transkraniyal Manyetik Stimülasyon (TMS)",
+       "isCorrect": true,
+       "explanation": "Transkraniyal manyetik stimülasyon kafa derisinden geçen değişken manyetik alanla dokuda sekonder akım oluşturan bir yöntemdir. Sol dorsolateral prefrontal kortekse uygulanarak depresyonda FDA onayı almıştır."
+      },
+      {
+       "text": "Transkraniyal Doğru Akım Stimülasyonu (tDCS)",
+       "isCorrect": false,
+       "explanation": "Transkraniyal doğru akım stimülasyonu düşük amperli doğru akımla eşik altı membran modülasyonu yapar. Aksiyon potansiyeli tetiklemez ve depresyonda FDA onayı bulunmaz."
+      },
+      {
+       "text": "Derin Beyin Uyarımı (DBS)",
+       "isCorrect": false,
+       "explanation": "Derin beyin uyarımı kafatasına burr-hole deliği açılarak elektrot implante edilen cerrahi bir tekniktir. Non-invaziv değil, invaziv cerrahi girişim sınıfındadır."
+      },
+      {
+       "text": "Vagal Sinir Stimülasyonu (VNS)",
+       "isCorrect": false,
+       "explanation": "Vagus siniri stimülasyonu servikal bölgeye cerrahi elektrot ve batarya yerleştirilmesiyle uygulanır. Cerrahi kesi gerektirdiğinden non-invaziv bir yöntem değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Derin TMS kaskın içinde kafatasının yaklaşık 4 cm altına ulaşan Hesed bobini aracılığıyla darbeler iletir.",
+     "maskedTerm": "Hesed bobini",
+     "hint": "dTMS sisteminde kafatasının derinliklerine inen özel kask sargısı"
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Standart rTMS (Sekiz Bobini)",
+     "rightTitle": "Derin TMS (Hesed Bobini)",
+     "leftPoints": [
+      "Sekiz rakamı şeklinde yüzeyel bobin geometrisi",
+      "Yaklaşık 1.5 - 2 cm derinliğe kadar ulaşabilme",
+      "Yalnızca tek taraflı (ünilateral) kortikal uyarım",
+      "Subkortikal ve derin ödül devrelerine ulaşamaz"
+     ],
+     "rightPoints": [
+      "Kask içinde çoklu sargılı Hesed bobini (H-bobin)",
+      "Kafatasının yaklaşık 4 cm altına kadar penetrasyon",
+      "Eş zamanlı çift taraflı (bilateral) geniş modülasyon",
+      "2020'de kısa süreli sigara bırakmada FDA onayı"
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "TMS ve Derin TMS Klinik Özellikleri",
+     "items": [
+      {
+       "text": "TMS psikotik semptomların tedavisinde son derece etkilidir ve birinci basamak tedavidir.",
+       "isLie": true,
+       "explanation": "Bu önerme yanlıştır; ders notunda TMS'nin psikoz için etkisiz olduğu açıkça belirtilmiştir."
+      },
+      {
+       "text": "Yaşlı hastalarda kortikal atrofi nedeniyle beyin kafatasından uzaklaştığından TMS etki gücü sınırlıdır.",
+       "isLie": false,
+       "explanation": "Doğru ifadedir; mesafe arttıkça dokuya ulaşan manyetik alan şiddeti hızla zayıflar."
+      },
+      {
+       "text": "rTMS kafa derisi ağrısı ve geçici işitme yorgunluğuna yol açabilir; en ciddi riski nöbet tetiklemesidir.",
+       "isLie": false,
+       "explanation": "Doğru ifadedir; kafa derisi kasılmaları ağrı yaparken, akustik klik sesi işitme yorgunluğu yapar."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Standart rTMS'nin en önemli iki kısıtlılığı nedir ve dTMS bu kısıtlılıkları nasıl aşar?",
+     "answer": "Standart rTMS yalnızca tek taraflı uyarım yapabilir ve 2 cm derinlikle sınırlıdır; dTMS ise Hesed bobini (H-bobin) ile 4 cm derinliğe ulaşarak bilateral ve derin beyin bölgelerini eş zamanlı uyarabilir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 9,
+   "title": "Transkraniyal Doğru Akım Stimülasyonu (tDCS) İlkeleri",
+   "bolum": "2",
+   "pdfSayfalari": [
+    20,
+    22
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatride Tedaviler-3.SINIF.pdf",
+    "primaryPage": 20,
+    "startPage": 20,
+    "endPage": 22
+   },
+   "synthesisNarrative": "Transkraniyal Doğru Akım Stimülasyonu (tDCS), taşınabilir elektrotlarla uygulanan zayıf elektriksel nöromodülasyon yöntemidir.\n\n- **Teknik Özellikler:** Kafa derisine tuzlu suyla ıslatılmış bir çift elektrot pedi aracılığıyla 0.5–2 mA aralığında düşük genlikli doğru akım verilir.\n- **Elektrofizyolojik Mekanizma:** Akım aksiyon potansiyeli tetikleyecek güçte değildir; nöronal membran potansiyellerinin **eşik altı modülasyonunu** indükleyerek kortikal uyarılabilirliği değiştirir.\n- **Polarite Kuralı:**\n  - **Anodal tDCS:** Nöronları depolarize ederek kortikal uyarılabilirliği artırır.\n  - **Katodal tDCS:** Nöronları hiperpolarize ederek kortikal uyarılabilirliği azaltır.\n- **TMS ile Karşılaştırma:** tDCS tamamen nöromodülatör iken; TMS hem nörostimülatör (aksiyon potansiyeli tetikler) hem nöromodülatördür.\n- **Kısıtlılık ve Onay Durumu:** Düşük odaksallığa sahiptir ve akım yalnızca en yüzeysel kortekse ulaşabilir. tDCS şu anda herhangi bir psikiyatrik endikasyon için **FDA onayına sahip değildir**.\n\n> [!NOTE]\n> tDCS yan etkileri elektrot altındaki deride hafif tahriş ve geçici yanma hissiyle sınırlı olup son derece hafiftir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Transkraniyal doğru akım stimülasyonunda (tDCS) polariteye göre oluşan elektrofizyolojik etki aşağıdakilerden hangisinde DOĞRU verilmiştir?",
+     "options": [
+      {
+       "text": "Anodal tDCS depolarizasyonla uyarılabilirliği artırır; katodal tDCS hiperpolarizasyonla azaltır.",
+       "isCorrect": true,
+       "explanation": "Anodal elektrot istirahat zar potansiyelini depolarize ederek ateşleme eşiğine yaklaştırır ve uyarılabilirliği artırır. Katodal elektrot ise hiperpolarizasyon yaparak nöronları inhibe eder."
+      },
+      {
+       "text": "Katodal tDCS nöronları depolarize ederek aksiyon potansiyeli patlaması oluşturur.",
+       "isCorrect": false,
+       "explanation": "Katodal polarite nöron membranlarını hiperpolarize eder ve istirahat potansiyelini eşikten uzaklaştırır. Bu işlem uyarılabilirliği azaltır ve aksiyon potansiyeli oluşturmaz."
+      },
+      {
+       "text": "Anodal tDCS nöronları hiperpolarize ederek kortikal sessizlik sağlar.",
+       "isCorrect": false,
+       "explanation": "Anodal kutup nöron membranlarını depolarize eder ve hücresel eksitasyonu kolaylaştırır. Hiperpolarizasyon ve kortikal inhibisyon katodal polariteye aittir."
+      },
+      {
+       "text": "Hem anodal hem katodal akım derin subkortikal nükleuslarda güçlü aksiyon potansiyeli ateşler.",
+       "isCorrect": false,
+       "explanation": "tDCS zayıf bir doğru akım tekniğidir ve derin nükleuslara ulaşamaz. Ayrıca nöronlarda aksiyon potansiyeli ateşleyemez, sadece eşik altı modülasyon sağlar."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "tDCS tamamen nöromodülatör olup şu anda herhangi bir endikasyon için onaylanmamıştır.",
+     "maskedTerm": "onaylanmamıştır",
+     "hint": "tDCS'nin FDA tarafından henüz resmi izin almadığını bildiren durum"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "tDCS Yönteminin Özellikleri",
+     "items": [
+      {
+       "text": "tDCS 0.5–2 mA aralığında düşük doğru akımla eşik altı membran modülasyonu yapar.",
+       "isLie": false,
+       "explanation": "Doğru ifadedir; düşük amperli doğru akımla istirahat potansiyeli modüle edilir."
+      },
+      {
+       "text": "tDCS majör depresyonda birinci basamak tedavi olarak FDA tarafından resmen onaylanmıştır.",
+       "isLie": true,
+       "explanation": "Bu önerme yanlıştır; ders notunda tDCS'nin şu anda hiçbir endikasyon için onaylanmadığı açıkça vurgulanmıştır."
+      },
+      {
+       "text": "tDCS'nin dezavantajlarından biri düşük odaksallığıdır ve elektrik akımı yalnız en yüzeysel kortekse ulaşabilir.",
+       "isLie": false,
+       "explanation": "Doğru ifadedir; akım kafatasında dağılarak derin yapılara odaklanamaz."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Özellik",
+      "TMS (rTMS)",
+      "tDCS"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "Uyarım prensibi"
+       },
+       {
+        "text": "Elektromanyetik indüksiyon"
+       },
+       {
+        "text": "Düşük doğru akım (0.5-2 mA)",
+        "isMasked": true,
+        "hint": ""
+       }
+      ],
+      [
+       {
+        "text": "Elektrofizyolojik etki"
+       },
+       {
+        "text": "Nörostimülatör + nöromodülatör"
+       },
+       {
+        "text": "Tamamen nöromodülatör",
+        "isMasked": true,
+        "hint": ""
+       }
+      ],
+      [
+       {
+        "text": "Depresyonda FDA onayı"
+       },
+       {
+        "text": "Onaylı (Sol DLPFC)"
+       },
+       {
+        "text": "Onaysız (Henüz onay yok)",
+        "isMasked": true,
+        "hint": ""
+       }
+      ]
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "tDCS'nin nöromodülasyon dışında doğrudan aksiyon potansiyeli tetikleyememesinin elektrofizyolojik nedeni nedir?",
+     "answer": "Uygulanan 0.5-2 mA genlikli doğru akımın nöronal membran potansiyellerinde yalnızca eşik altı (subthreshold) kaymalar oluşturması ve voltaj bağımlı sodyum kanallarını ateşleyecek eşik üstü depolarizasyon yaratamamasıdır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 10,
+   "title": "Derin Beyin Uyarımı (DBS) ve Nöromodülasyon Karşılaştırması",
+   "bolum": "2",
+   "pdfSayfalari": [
+    23,
+    26
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatride Tedaviler-3.SINIF.pdf",
+    "primaryPage": 23,
+    "startPage": 23,
+    "endPage": 26
+   },
+   "synthesisNarrative": "Derin Beyin Uyarımı (DBS), fonksiyonel nöroşirürji ve psikiyatrinin kesişimindeki invaziv elektriksel tedavi yöntemidir.\n\n- **Uygulama Tekniği:** Kafatasında açılan burr-hole deliğinden hedeflenen derin beyin çekirdeğine çok ince bir elektrot yerleştirilir; bu kablo göğüs duvarında cilt altına implante edilen bir pacemakera (pile) bağlanır.\n- **Çalışma İlkesi:** İstenmeyen patolojik hiperaktif bölgeyi işlevsel anlamda, doku yıkımı yapmadan elektriksel inhibisyonla cerrahiye benzer şekilde çıkarmaktır (geri dönüşlü cerrahi).\n- **FDA Onayları:** 1997 Parkinson tremoru, 2002 ileri Parkinson motor semptomları, 2003 distoni, **2009 tedaviye dirençli OKB**, 2018 epilepsi.\n- **Dirençli Depresyonda Araştırmalar:** En az 5 yıldır hasta, en az 3 farklı antidepresana yanıtsız ve psikoterapiden fayda görmemiş olgularda subgenual anterior singulat korteks (Brodmann 25) hedeflenmektedir.\n- **Cerrahi Risk:** Kalıcı morbidite oranı düşüktür (yaklaşık %1).\n\n> [!IMPORTANT]\n> DBS dokuyu kalıcı tahrip eden psikoşirürjiden farklı olarak pil kapatıldığında veya çıkarıldığında tamamen geri dönüşlüdür.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Derin Beyin Uyarımı (DBS), FDA tarafından psikiyatrik bozukluklar kapsamında ilk olarak hangi hastalık için resmen onaylanmıştır?",
+     "options": [
+      {
+       "text": "Tedaviye dirençli Obsesif Kompulsif Bozukluk (OKB)",
+       "isCorrect": true,
+       "explanation": "Obsesif kompulsif bozukluk tekrarlayıcı obsesyon ve kompulsiyonlarla giden ağır bir tablodur. DBS 2009 yılında dirençli OKB olguları için FDA tarafından onaylanmıştır."
+      },
+      {
+       "text": "Akut manik eksitasyon atağı",
+       "isCorrect": false,
+       "explanation": "Bipolar mani epizotları akut psikomotor taşkınlıkla seyreder ve ilaçla veya EKT ile yatıştırılır. DBS invaziv bir cerrahidir ve akut manide endikasyonu yoktur."
+      },
+      {
+       "text": "Kronik rezidüel şizofreni",
+       "isCorrect": false,
+       "explanation": "Şizofrenide negatif semptomlar ve bilişsel yetersizlikler ön plandadır. DBS şizofreni için resmi FDA onayına sahip bir tedavi modalitesi değildir."
+      },
+      {
+       "text": "Mevsimsel affektif bozukluk",
+       "isCorrect": false,
+       "explanation": "Mevsimsel affektif bozukluk sirkadiyen faz kayması ve kış aylarında ışık azalmasıyla ilişkilidir. Bu tabloda fototerapi uygulanır, invaziv DBS uygulanmaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "DBS kablosu genellikle göğüs duvarına subdermal olarak yerleştirilen bir pacemakera bağlıdır.",
+     "maskedTerm": "subdermal",
+     "hint": "Cilt altı dokuyu ifade eden anatomik yerleşim terimi"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Derin Beyin Uyarımı (DBS) Özellikleri",
+     "items": [
+      {
+       "text": "DBS yöntemi istenmeyen bölgeyi işlevsel anlamda, dokuyu tahrip etmeden elektriksel olarak inhibe etme esasına dayanır.",
+       "isLie": false,
+       "explanation": "Doğru ifadedir; fonksiyonel geri dönüşlü elektriksel blokaj oluşturur."
+      },
+      {
+       "text": "DBS cerrahisinde kalıcı cerrahi morbidite ve nörolojik hasar oranı yaklaşık %40 civarındadır.",
+       "isLie": true,
+       "explanation": "Bu önerme yanlıştır; ders notunda DBS cerrahisinin düşük riskli kabul edildiği ve morbidite oranının yaklaşık %1 olduğu belirtilmiştir."
+      },
+      {
+       "text": "Dirençli depresyonda DBS çalışmalarında anterior singulat bölge hedeflenmektedir.",
+       "isLie": false,
+       "explanation": "Doğru ifadedir; subgenual singulat korteks dirençli depresyon çalışmalarında birincil hedeftir."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Yöntem",
+      "İnvazivlik Düzeyi",
+      "Temel Etki Alanı",
+      "FDA Onay Durumu"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "rTMS"
+       },
+       {
+        "text": "Non-invaziv"
+       },
+       {
+        "text": "Kortikal derinlik ~2 cm"
+       },
+       {
+        "text": "Dirençli depresyon onaylı"
+       }
+      ],
+      [
+       {
+        "text": "tDCS"
+       },
+       {
+        "text": "Non-invaziv"
+       },
+       {
+        "text": "Yüzeysel korteks"
+       },
+       {
+        "text": "Henüz onayı yok",
+        "isMasked": true,
+        "hint": ""
+       }
+      ],
+      [
+       {
+        "text": "DBS"
+       },
+       {
+        "text": "İnvaziv cerrahi"
+       },
+       {
+        "text": "Derin nükleuslar",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "OKB ve Parkinson onaylı"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Dirençli depresyonda DBS denemelerine dahil edilecek hastalar için aranan temel klinik kriterler nelerdir?",
+     "answer": "Hastanın en az 5 yıldır hasta olması, en az 3 farklı antidepresanın etkisiz kalması ve yeterli düzey ve sürede alınan psikoterapinin sonuç vermemiş olması şartı aranır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 11,
+   "title": "Fototerapi (Işık Terapisi) ve Mevsimsel Depresyon",
+   "bolum": "3",
+   "pdfSayfalari": [
+    27,
+    27
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatride Tedaviler-3.SINIF.pdf",
+    "primaryPage": 27,
+    "startPage": 27,
+    "endPage": 27
+   },
+   "synthesisNarrative": "Fototerapi, çevresel ışık miktarındaki azalmaya bağlı gelişen sirkadiyen duygu durum bozukluklarının biyolojik tedavisidir.\n\n- **Tarihçe ve Endikasyon:** İlk olarak 1984 yılında Mevsimsel Affektif Bozukluk (SAD - kış depresyonu) tedavisinde uygulanmaya başlanmıştır.\n- **Klinik Fenomenoloji:** Mevsimsel depresyon günlerin kısaldığı kış başında başlar; çoğunlukla aşırı uyuma (hipersomni), karbonhidrat açlığı, kilo alımı ve kurşun boru ağırlığı gibi **atipik depresif özellikler** gösterir.\n- **Uygulama Parametreleri:** Hastalar sabah saatlerinde 2.500 ile 10.000 lüks parlak gündüz ışığı yayan fototerapi kutusunun karşısında 30 dakika ile 2 saat süreyle otururlar.\n- **Etki Mekanizması:** Işık retinohipotalamik traktus üzerinden suprakiazmatik çekirdeğe ulaşır; epifiz bezinden **melatonin salınımını azaltır** ve bozulmuş sirkadiyen fazı yeniden senkronize eder.\n- **Klinik Yanıt Hızı:** Standart antidepresan ilaçların haftalar süren etkisine kıyasla yanıt son derece hızlıdır; **2-4 gün içinde** belirgin düzelme izlenir.\n\n> [!IMPORTANT]\n> Fototerapinin 2-4 gün gibi çok kısa sürede klinik remisyon başlatması, sirkadiyen mekanizmanın duygudurum üzerindeki doğrudan etkisini kanıtlar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Mevsimsel affektif bozuklukta uygulanan fototerapinin etki mekanizması ve klinik yanıt süresi ile ilgili hangisi DOĞRUDUR?",
+     "options": [
+      {
+       "text": "Melatonin salınımını azaltarak sirkadiyen ritmi düzenler; klinik yanıt 2-4 gün içinde hızla başlar.",
+       "isCorrect": true,
+       "explanation": "Fototerapi parlak gündüz ışığı ile epifiz bezinden melatonin salınımını baskılar. Bu baskılama biyolojik saati düzenleyerek 2-4 gün gibi çok kısa bir sürede klinik düzelme sağlar."
+      },
+      {
+       "text": "Melatonin salınımını katbekat artırarak hastayı sedasyona sokar; yanıt 6 haftada alınır.",
+       "isCorrect": false,
+       "explanation": "Melatonin salınımının artması kış depresyonunu ve uyku eğilimini artırır. Fototerapinin amacı melatonini artırmak değil, sabah ışığıyla salınımını baskılamaktır."
+      },
+      {
+       "text": "Kortikal dopamin reseptörlerini bloke ederek antipsikotik etki oluşturur.",
+       "isCorrect": false,
+       "explanation": "Dopamin D2 reseptör blokajı klasik antipsikotik ilaçların mekanizmasıdır. Fototerapi kimyasal reseptör blokajı yapmaz, sirkadiyen fotik uyarım sağlar."
+      },
+      {
+       "text": "Yalnızca yaz aylarında görülen manik eksitasyonlarda tercih edilen cerrahi bir yöntemdir.",
+       "isCorrect": false,
+       "explanation": "Fototerapi cerrahi bir yöntem değildir ve manik eksitasyonlarda kullanılmaz. Kış aylarında ışığın azalmasıyla ortaya çıkan mevsimsel depresyonda tercih edilir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Işık tedavisinin melatonin salınımı azaltır sistemi üzerinden etkisi olabileceği bildirilmektedir.",
+     "maskedTerm": "melatonin",
+     "hint": "Epifiz bezinden salgılanan ve ışıkla baskılanan sirkadiyen hormon"
+    },
+    {
+     "type": "causal_chain",
+     "title": "Fototerapinin Sirkadiyen Antidepresan Yolu",
+     "steps": [
+      "1. Fotik Giriş: 2.500-10.000 lüks parlak ışık fotoreseptörler tarafından algılanır.",
+      "2. Santral İletim: Retinohipotalamik traktus üzerinden biyolojik saat merkezi suprakiazmatik nükleusa ulaşır.",
+      "3. Hormonal Baskılama: Epifiz bezinin gündüz uygunsuz melatonin salınımı hızla inhibe edilir.",
+      "4. Hızlı Remisyon: Sirkadiyen faz kayması düzeltilerek 2-4 günde atipik depresif belirtiler geriler."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Fototerapi ve Mevsimsel Depresyon",
+     "items": [
+      {
+       "text": "Mevsimsel depresyon kış aylarında başlar ve aşırı uyuma ile karbonhidrat açlığı gibi atipik özellikler gösterir.",
+       "isLie": false,
+       "explanation": "Doğru ifadedir; kış depresyonu hipersomni ve kilo alımı ile karakterize atipik özelliktedir."
+      },
+      {
+       "text": "Fototerapinin antidepresan etkisinin ortaya çıkabilmesi için en az 8-12 haftalık kesintisiz ışık seansı gereklidir.",
+       "isLie": true,
+       "explanation": "Bu önerme yanlıştır; ders notunda fototerapiye klinik yanıtın son derece hızlı olduğu (2-4 gün) açıkça vurgulanmıştır."
+      },
+      {
+       "text": "Fototerapide hastalar 2.500-10.000 lüks parlak gündüz ışığı veren cihazın karşısında 30 dk ile 2 saat otururlar.",
+       "isLie": false,
+       "explanation": "Doğru ifadedir; standart klinik fototerapi ışık kutusu protokolüdür."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Mevsimsel depresyonun başlangıç dönemi ve en tipik klinik özellikleri nelerdir?",
+     "answer": "Işığın azaldığı kış aylarının başında başlar; aşırı uyuma (hipersomni), karbonhidrat açlığı, kilo alımı ve halsizlik gibi atipik özelliklerle seyreder."
+    }
+   ]
+  },
+  {
+   "slideNumber": 12,
+   "title": "Uyku Yoksunluğu Terapisi ve Sirkadiyen Regülasyon",
+   "bolum": "3",
+   "pdfSayfalari": [
+    28,
+    29
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatride Tedaviler-3.SINIF.pdf",
+    "primaryPage": 28,
+    "startPage": 28,
+    "endPage": 29
+   },
+   "synthesisNarrative": "Uyku yoksunluğu, 1971'den bu yana bilinen en hızlı fakat en dayanıksız antidepresan müdahaledir.\n\n- **Klinik Yanıt Oranı:** Tam uyku yoksunluğu (hastanın bir gece boyunca uyanık tutulması), depresyon hastalarının **%40-60'ında ertesi gün** belirtilerin hızla düzelmesini sağlar.\n- **Gündüz Kestirmesi Tehlikesi:** Elde edilen antidepresan etkinlik bir sonraki gün %10-15'e düşer. **Gündüz yapılacak birkaç dakikalık kısa bir şekerleme (kestirme) bile iyileşmeyi sıfırlayarak tablonun şiddetle nüksetmesine yol açar!**\n- **Kalıcılığı Sağlama Stratejisi:** Uyku yoksunluğunun ardından antidepresan ilaçlar veya **lityum** kombinasyonu eklenmesi düzelmenin kalıcılığını artırır. Haftalar süren aralıklı protokoller (arada 1-2 gün normal uyku) uygulanır.\n- **Biyokimyasal Mekanizma:** Serotonin (5HT) turnover'ı artar; dopamin (DA) salınımı artarak psikostimülan etki oluşturur; T3-T4 tiroid hormonları yükselir; frontal ve limbik kan akımı yeniden düzenlenir.\n\n> [!IMPORTANT]\n> Uyku yoksunluğu uygulanan hastanın gündüz uyuması kesinlikle engellenmelidir; en ufak mikro-uyku bile relapsı tetikler.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Depresyon tedavisinde uygulanan tam uyku yoksunluğu protokolünde elde edilen klinik yanıtın en zayıf yönü aşağıdakilerden hangisidir?",
+     "options": [
+      {
+       "text": "Gündüz yapılacak kısa bir kestirme (şekerleme) ile bile elde edilen etkinliğin hızla kaybolması ve tablonun nüksetmesi",
+       "isCorrect": true,
+       "explanation": "Uyku yoksunluğu çok hızlı düzelme sağlasa da en ufak bir uyku fazı ile etki bozulabilir. Gündüz yapılan birkaç dakikalık kestirme bile depresif tabloyu hızla nüksettirir."
+      },
+      {
+       "text": "Etkinin ortaya çıkması için en az 6 ay boyunca her gece uykusuz kalınmasının zorunlu olması",
+       "isCorrect": false,
+       "explanation": "Uyku yoksunluğu aylar süren gecikmeli bir müdahale değildir. Tek bir uykusuz gecenin hemen ertesi sabahında hastaların yarıya yakınında belirgin düzelme görülür."
+      },
+      {
+       "text": "Hastada kalıcı ve geriye dönüşsüz ağır demans tablosuna yol açması",
+       "isCorrect": false,
+       "explanation": "Uyku yoksunluğu geçici bir sirkadiyen modülasyon tekniğidir. Beyin parankiminde yapısal hasar veya kalıcı nörodejeneratif demans tablosu oluşturmaz."
+      },
+      {
+       "text": "Lityum ve antidepresan ilaçlarla kesinlikle kombine edilememesi",
+       "isCorrect": false,
+       "explanation": "Lityum ve antidepresan ilaçlar uyku yoksunluğunun ardından sıkça tercih edilir. Bu farmakolojik kombinasyon elde edilen hızlı etkinliğin kalıcı olmasını sağlar."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Elde edilen etkinlik kısa bir kestirme ile bile şiddetli tekrarlamaya neden olur.",
+     "maskedTerm": "kestirme",
+     "hint": "Gündüz yapılan ve antidepresan etkiyi bozan kısa süreli uyku hali"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Uyku Yoksunluğu Mekanizma ve İlkeleri",
+     "items": [
+      {
+       "text": "Tam uyku yoksunluğu depresyon hastalarının %40-60'ında ertesi gün belirtilerin düzelmesini sağlar.",
+       "isLie": false,
+       "explanation": "Doğru ifadedir; hastaların yarısından fazlasında ertesi sabah dramatik toparlanma görülür."
+      },
+      {
+       "text": "Uyku yoksunluğu beyinde serotonin dönüşümünü ve dopamini azaltarak hastayı sedasyona sokar.",
+       "isLie": true,
+       "explanation": "Bu önerme yanlıştır; uyku yoksunluğu serotonin dönüşümünü ve dopamini artırarak psikostimülan canlılık oluşturur."
+      },
+      {
+       "text": "Uyku yoksunluğu ile antidepresan ve lityum kullanımı düzelmenin kalıcılığını sağlar.",
+       "isLie": false,
+       "explanation": "Doğru ifadedir; nüksü engellemek için lityum veya AD kombinasyonu esastır."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Biyolojik Belirteç",
+      "Uyku Yoksunluğu Yanıtı",
+      "Klinik Önemi"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "Dopamin (DA)"
+       },
+       {
+        "text": "Artış gösterir",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Psikostimülan ve canlandırıcı etki"
+       }
+      ],
+      [
+       {
+        "text": "Serotonin (5HT)"
+       },
+       {
+        "text": "Dönüşümü artar",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Duygudurumda akut düzelme"
+       }
+      ],
+      [
+       {
+        "text": "Tiroid hormonları (T3, T4)"
+       },
+       {
+        "text": "Kanda artar",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Metabolik hızlanma ve aktivasyon"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Uyku yoksunluğu tedavisinin devamlılığını sağlamak için uygulama takvimi nasıl planlanır?",
+     "answer": "Haftalar süren aralıklı uygulama yapılır; hasta haftada belirli geceler uykusuz bırakılırken arada 1-2 gün süren normal uyku dönemleri verilir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 13,
+   "title": "Psikoşirürji ve Stereotaksik Lezyonel Yöntemler",
+   "bolum": "3",
+   "pdfSayfalari": [
+    30,
+    31
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatride Tedaviler-3.SINIF.pdf",
+    "primaryPage": 30,
+    "startPage": 30,
+    "endPage": 31
+   },
+   "synthesisNarrative": "Psikoşirürji, psikiyatrinin en uç ve geri dönüşsüz tedavi modalitesidir.\n\n- **Tanım ve Teknik:** Spesifik beyin alanlarında stereotaksik yöntemlerle lezyon oluşturma (singulotomi) ya da patolojik bağlantı yollarını kesme (traktotomi, lökotomi) operasyonları şeklinde uygulanır.\n- **Katı Uygulama Kuralı:** Hastaya **en az 5 yıl süreyle** uygulanan tüm konservatif tedavilerin (ilaç kombinasyonları, yüksek doz farmakoterapi, psikoterapi, EKT) etkisiz kaldığı resmi olarak belgelenmelidir.\n- **Hedef Popülasyon:** Kronik tedaviye dirençli ağır majör depresif bozukluk ve tedaviye dirençli obsesif kompulsif bozukluk (OKB) olguları bu cerrahiden en çok yarar gören gruptur.\n- **Spesifik Cerrahi Tipleri ve Hedefleri:**\n  - **Anterior Singulotomi:** Tedaviye dirençli OKB.\n  - **Anterior Kapsülotomi:** Tedaviye dirençli OKB.\n  - **Subkaudat Traktotomi:** Tedaviye dirençli majör depresyon.\n  - **Limbik Lökotomi:** Hem OKB hem dirençli majör depresyon.\n\n> [!NOTE]\n> Anterior singulotomi ve kapsülotomi kortikostriatal döngüyü keserek obsesif ritüelleri hafifletir; subkaudat traktotomi ise affektif devreleri hedefler.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Psikoşirürji yöntemleri ve klinik hedef hastalık eşleştirmeleri değerlendirildiğinde aşağıdakilerden hangisi DOĞRUDUR?",
+     "options": [
+      {
+       "text": "Subkaudat traktotomi dirençli depresyonda; anterior singulotomi ve kapsülotomi dirençli OKB'de uygulanır.",
+       "isCorrect": true,
+       "explanation": "Subkaudat traktotomi orbitofrontal lifleri keserek dirençli depresyonda kullanılır. Anterior singulotomi ve kapsülotomi ise kortikostriatal döngüyü hedefleyerek dirençli OKB'de uygulanır."
+      },
+      {
+       "text": "Anterior singulotomi akut manik eksitasyon atağında birinci basamak ameliyattır.",
+       "isCorrect": false,
+       "explanation": "Manik ataklar psikomotor taşkınlık durumlarıdır ve farmakoterapiyle veya EKT ile kontrol edilir. Bipolar manide lezyonel psikoşirürji uygulanmaz."
+      },
+      {
+       "text": "Subkaudat traktotomi hafif anksiyete bozukluğunda 3 aylık ilaç denemesinden sonra yapılır.",
+       "isCorrect": false,
+       "explanation": "Psikoşirürji girişimleri geri dönüşsüz beyin lezyonları oluşturur. Hafif tablolarda kullanılmaz; en az beş yıllık tedavi direnci aranır."
+      },
+      {
+       "text": "Limbik lökotomi yalnızca mevsimsel kış depresyonunda melatonin yolunu açmak için yapılır.",
+       "isCorrect": false,
+       "explanation": "Limbik lökotomi singulotomi ve traktotominin birleşimidir. Kış depresyonunda değil, ağır dirençli OKB ve dirençli majör depresyonda tercih edilir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Bu yöntemin uygulanabilmesi için hastaya beş yıl süreyle uygulanan tüm tedavi yöntemlerinin etkisiz olduğu belgelenmelidir.",
+     "maskedTerm": "beş yıl",
+     "hint": "Cerrahi onay öncesinde aranan asgari tıbbi direnç süresi"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Psikoşirürji Uygulama Standartları",
+     "items": [
+      {
+       "text": "Kronik tedaviye dirençli ağır majör depresyon ve OKB hastaları psikoşirürjiden en çok yarar gören gruptur.",
+       "isLie": false,
+       "explanation": "Doğru ifadedir; dirençli depresyon ve OKB psikoşirürjinin temel endikasyonlarıdır."
+      },
+      {
+       "text": "Psikoşirürji ameliyatı hastanın isteğine bağlı olarak ilk 6 ay içinde herhangi bir ilaç denenmeden uygulanabilir.",
+       "isLie": true,
+       "explanation": "Bu önerme yanlıştır; en az 5 yıl boyunca uygulanan tüm tedavilerin etkisiz kaldığının belgelenmesi yasal ve tıbbi zorunluluktur."
+      },
+      {
+       "text": "Limbik lökotomi hem dirençli OKB hem de dirençli depresyon olgularında uygulanan bir cerrahidir.",
+       "isLie": false,
+       "explanation": "Doğru ifadedir; limbik lökotomi her iki hastalık grubunda da uygulanabilir."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Cerrahi Yöntem",
+      "Oluşturulan Lezyon Tipi",
+      "Hedef Klinik Bozukluk"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "Anterior singulotomi"
+       },
+       {
+        "text": "Singulat korteks lezyonu"
+       },
+       {
+        "text": "Dirençli OKB",
+        "isMasked": true,
+        "hint": ""
+       }
+      ],
+      [
+       {
+        "text": "Anterior kapsülotomi"
+       },
+       {
+        "text": "Kapsula interna ön bacak lezyonu"
+       },
+       {
+        "text": "Dirençli OKB",
+        "isMasked": true,
+        "hint": ""
+       }
+      ],
+      [
+       {
+        "text": "Subkaudat traktotomi"
+       },
+       {
+        "text": "Subkaudat yolak kesilmesi"
+       },
+       {
+        "text": "Dirençli Depresyon",
+        "isMasked": true,
+        "hint": ""
+       }
+      ],
+      [
+       {
+        "text": "Limbik lökotomi"
+       },
+       {
+        "text": "Singulotomi + traktotomi"
+       },
+       {
+        "text": "OKB ve Depresyon",
+        "isMasked": true,
+        "hint": ""
+       }
+      ]
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Psikoşirürjide uygulanan operasyonların genel anatomik prensibi nedir?",
+     "answer": "Spesifik beyin alanlarında lokal lezyon oluşturma (singulotomi) ya da patolojik devreleri bağlayan nöral yolları kesme (traktotomi, lökotomi) prensibine dayanır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 14,
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Psikiyatrik Bozukluklarda Uygulanan Tedaviler",
+   "bolum": "3",
+   "isGameFinale": true,
+   "pdfSayfalari": [
+    2,
+    31
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatride Tedaviler-3.SINIF.pdf",
+    "primaryPage": 2,
+    "startPage": 2,
+    "endPage": 31
+   },
+   "synthesisNarrative": "Tebrikler! Psikiyatrik bozukluklarda uygulanan biyolojik tedaviler dersini başarıyla tamamladınız.\n\n- **Nöromodülasyon İlkeleri:** EKT'nin jeneralize nöbet mekanizmasını, endikasyonlarını ve güvenlik kurallarını öğrendiniz.\n- **Teknolojik Karşılaştırma:** TMS'nin manyetik indüksiyonunu, dTMS'nin H-bobinini, tDCS'nin eşik altı kutuplarını ve DBS'nin cerrahi hedeflerini ayırt ettiniz.\n- **Kronobiyoloji ve Cerrahi:** Fototerapinin hızlı melatonin yanıtını, uyku yoksunluğunun kestirme tehlikesini ve psikoşirürjinin 5 yıllık katı direnç şartını kavradınız.\n\nŞimdi aşağıdaki dört farklı oyun modelinde bilgilerinizi pekiştirerek dersi tamamlayınız!",
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "prompt": "Biyolojik psikiyatri tedavilerinin klinik kullanıma giriş ve keşif tarihlerini en eskiden en yeniye doğru sıralayınız.",
+     "explanation": "İlk kimyasal nöbet 1934'te, elektriksel EKT 1938'de başladı; uyku yoksunluğu 1971'de, fototerapi 1984'te, OKB için DBS 2009'da ve sigara için Derin TMS 2020'de onay aldı.",
+     "steps": [
+      "1934: Kimyasal konvülsif tedavi dönemi (Ladislas von Meduna)",
+      "1938: Elektrik akımıyla ilk EKT uygulaması (Cerletti ve Bini)",
+      "1971: Depresyonda uyku yoksunluğu terapisinin uygulanması",
+      "1984: Mevsimsel depresyonda fototerapi uygulaması",
+      "2009: Dirençli OKB tedavisinde DBS'nin FDA onayı alması",
+      "2020: Kısa süreli sigara bırakmada Derin TMS'nin FDA onayı alması"
+     ]
+    },
+    {
+     "type": "estimate_slider",
+     "items": [
+      {
+       "prompt": "Günümüzde psikiyatri kliniklerinde EKT uygulanan hastaların yüzde kaçında tanı majör depresyondur?",
+       "unit": "%",
+       "min": 0,
+       "max": 100,
+       "step": 1,
+       "answer": 85,
+       "tolerance": 5,
+       "explanation": "Ders notunda günümüzde EKT yapılan hastaların yüzde seksen beşinde tanının majör depresyon olduğu bildirilmiştir."
+      },
+      {
+       "type": "estimate_slider",
+       "prompt": "Tam uyku yoksunluğu uygulanan depresyon hastalarında ertesi gün klinik düzelme görülen ortalama oran yüzde kaçtır?",
+       "unit": "%",
+       "min": 0,
+       "max": 100,
+       "step": 1,
+       "answer": 50,
+       "tolerance": 10,
+       "explanation": "Ders notunda tam uyku yoksunluğunun hastaların yüzde kırk ile altmışında ertesi gün belirtileri düzelttiği ifade edilmiştir."
+      }
+     ]
+    },
+    {
+     "type": "perturbation",
+     "scenario": "Ağır depresyon nedeniyle bir gece tam uyku yoksunluğu uygulanan ve ertesi sabah belirgin klinik düzelme gösteren bir hastanın öğleden sonra 15 dakikalık kısa bir şekerleme yapmasına izin verilmiştir.",
+     "question": "Bu müdahale sonrasında hastanın klinik parametrelerinde ve biyolojik belirteçlerinde ne tür değişimler beklenir?",
+     "parameters": [
+      {
+       "name": "Kısa kestirme sonrası depresif belirtilerin nüksetme şiddeti",
+       "correct": "up",
+       "explanation": "Kısa bir şekerleme bile elde edilen antidepresan yanıtı anında kırarak semptomların hızla nüksetmesine neden olur."
+      },
+      {
+       "name": "Ertesi gün devam eden kalıcı antidepresan etkinlik düzeyi",
+       "correct": "down",
+       "explanation": "Kestirme ile birlikte kazanılan terapötik etkinlik çöker ve ertesi güne taşınamaz."
+      },
+      {
+       "name": "Duygudurumun kararlılığı ve stabilite süresi",
+       "correct": "down",
+       "explanation": "Mikro-uykular sirkadiyen fazı yeniden bozarak duygudurum dengesini olumsuz etkiler."
+      }
+     ]
+    },
+    {
+     "type": "fix_the_text",
+     "text": "EKT kronik şizofrenide ilk basamak tedavidir ve beyne kalıcı yapısal hasar verir. EKT öncesi rutin EEG çekimi zorunlu bir şarttır. Teofilin EKT sırasında nöbeti kısaltır.",
+     "errors": [
+      {
+       "wrong": "kronik şizofrenide ilk basamak tedavidir",
+       "correct": "kronik şizofrenide etkin değildir",
+       "options": [
+        "kronik şizofrenide etkin değildir",
+        "kronik şizofrenide tek tedavi seçeneğidir",
+        "kronik şizofrenide zorunlu cerrahidir"
+       ],
+       "explanation": "EKT kronik şizofrenide etkisizdir; yalnızca akut pozitif ve katatonik belirtilerde fayda sağlar."
+      },
+      {
+       "wrong": "rutin EEG çekimi zorunlu bir şarttır",
+       "correct": "rutin EEG çekimi şart değildir",
+       "options": [
+        "rutin EEG çekimi şart değildir",
+        "rutin EEG çekimi her gün tekrarlanmalıdır",
+        "rutin EEG çekimi genel anestezi yerine geçer"
+       ],
+       "explanation": "Ders notlarında EKT hazırlık protokolünde rutin EEG çekiminin şart olmadığı açıkça belirtilmiştir."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "matchedPastQuestionsCount": 3,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

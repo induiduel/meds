@@ -1,0 +1,4850 @@
+{
+ "surum": 2,
+ "ders_id": "k2-20",
+ "anahtar": "y25-k2-20-psikiyatrik-tedaviler",
+ "baslik": "Psikiyatrik Bozukluklarda Uygulanan Tedaviler",
+ "kaynak": "Psikiyatride Tedaviler-3.SINIF.pdf",
+ "bolumler": [
+  {
+   "id": "k2-20-b01",
+   "baslik": "Biyolojik Tedavilere Genel Giriş ve Sınıflandırma",
+   "paragraflar": [
+    {
+     "id": "k2-20-p001",
+     "sayfa": 1,
+     "cumleler": [
+      {
+       "id": "k2-20-c0001",
+       "ses": "Ruh sağlığı ve hastalıkları klinik pratiğinde psikofarmakoloji dışındaki en güçlü ve etkili sağaltım araçlarımızı oluşturan biyolojik tedavileri tüm bilimsel ve nörobiyolojik yönleriyle ele alacağız.",
+       "ekran": "Psikiyatrik bozukluklarda ilaç dışı uygulanan araçlara **biyolojik tedaviler** denir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "biyolojik tedaviler",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Psikiyatrik Bozukluklarda"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0002",
+       "ses": "Psikiyatrik bozuklukların tedavisinde farmakoterapinin yetersiz kaldığı dirençli durumlarda ya da dakikalar veya saatler içinde yanıt alınması gereken hayati acillerde fiziksel ve nöromodülatör müdahaleler devreye girer.",
+       "ekran": "İlaç direncinde ve acil tablolarda **fiziksel ve nöromodülatör müdahaleler** devreye girer.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "fiziksel ve nöromodülatör müdahaleler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Uygulanan Tedaviler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0003",
+       "ses": "Karabük Üniversitesi Psikiyatri Anabilim Dalı ders notları kapsamında elektrokonvülzif tedavi, manyetik uyarım, doğru akım stimülasyonu, derin beyin uyarımı, fototerapi, uyku yoksunluğu ve cerrahi psikoşirürjiyi inceleyeceğiz.",
+       "ekran": "Biyolojik tedaviler **EKT, TMS, tDCS, DBS, fototerapi, uyku yoksunluğu ve psikoşirürjiyi** kapsar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "EKT, TMS, tDCS, DBS, fototerapi, uyku yoksunluğu ve psikoşirürjiyi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Karabük Üniversitesi Psikiyatri A.D."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0004",
+       "ses": "Biyolojik tedaviler, reseptör düzeyinde haftalarca beklenen farmakolojik etkilerin ötesine geçerek serebral nöral devreleri doğrudan senkronize eder ya da uyarılabilirlik eşiklerini modüle eder.",
+       "ekran": "Biyolojik tedaviler **serebral nöral devreleri** elektriksel ve manyetik olarak modüle eder.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "serebral nöral devreleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Biyolojik Tedaviler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0005",
+       "ses": "Özellikle farmakolojik ajanların kan-beyin bariyerini geçemediği ya da kronik nöroplastik atrofi nedeniyle reseptör yanıtının çöktüğü vakalarda biyofiziksel uyarım yeni bir terapötik pencere açar.",
+       "ekran": "İlaç yanıtının çöktüğü vakalarda **biyofiziksel uyarım** yeni bir iyileşme penceresi açar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "biyofiziksel uyarım",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Biyolojik Tedaviler"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-20-p002",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k2-20-c0006",
+       "ses": "Biyolojik tedavi yelpazesinin ilk sırasında en köklü ve klinik etkinliği en yüksek yöntem olan elektrokonvülzif tedavi yani E ka te yer almaktadır.",
+       "ekran": "Biyolojik tedavilerin başında en köklü yöntem olan **elektrokonvülzif tedavi (EKT)** gelir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "elektrokonvülzif tedavi (EKT)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "EKT(elektrokonvülzif ) tedavi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0007",
+       "ses": "İkinci ana grubu elektromanyetik indüksiyon prensibiyle kafa derisinden geçen manyetik alanlar oluşturan transkraniyal manyetik stimülasyon yani Te me se oluşturur.",
+       "ekran": "Manyetik alanla kortikal depolarizasyon sağlayan yöntem **transkraniyal manyetik stimülasyondur (TMS)**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "transkraniyal manyetik stimülasyondur (TMS)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Transkraniyal magnetik stimülasyon(TMS)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0008",
+       "ses": "Üçüncü yöntem zayıf pillerle kafa derisine doğru akım vererek istirahat zar potansiyelini modüle eden transkraniyal doğru akım stimülasyonu yani te de ce sedir.",
+       "ekran": "Düşük doğru akımla eşik altı modülasyon yapan yöntem **transkraniyal doğru akım stimülasyonudur (tDCS)**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "transkraniyal doğru akım stimülasyonudur (tDCS)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Transkraniyal doğru akım stimülasyonu"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0009",
+       "ses": "Dördüncü ve en invaziv nöromodülasyon yöntemi ise stereotaksik cerrahiyle derin beyin çekirdeklerine elektrot yerleştirilen derin beyin uyarımı yani De be sedir.",
+       "ekran": "Derin çekirdeklere elektrot yerleştirilen cerrahi yöntem **derin beyin uyarımıdır (DBS)**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "derin beyin uyarımıdır (DBS)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Derin beyin uyarımı"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-20-p003",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k2-20-c0010",
+       "ses": "Beşinci biyolojik yöntemimiz kış depresyonunda melatonin salınımını baskılamak amacıyla uygulanan parlak ışık tedavisi yani fototerapidir.",
+       "ekran": "Mevsimsel depresyonda melatonin baskılayan yöntem **fototerapidir (ışık terapisi)**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "fototerapidir (ışık terapisi)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Fototerapi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0011",
+       "ses": "Altıncı biyolojik yöntemimiz ise hastanın bir gece uykusuz bırakılmasıyla monoamin iletimini hızlandıran ve sirkadiyen fazı sıfırlayan uyku yoksunluğu terapisidir.",
+       "ekran": "Sirkadiyen fazı hızla değiştiren kronobiyolojik yöntem **uyku yoksunluğudur**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "uyku yoksunluğudur",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Uyku Yoksunluğu"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0012",
+       "ses": "Listenin son basamağında ise en az beş yıl boyunca tüm tedavilere dirençli kalmış ağır olgularda spesifik nöral yolların cerrahi olarak kesildiği psikoşirürji ameliyatları bulunur.",
+       "ekran": "Tüm tedavilere dirençli uç vakalarda uygulanan cerrahi yöntem **psikoşirürjidir**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "psikoşirürjidir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Psikoşirürji"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-20-b02",
+   "baslik": "EKT'nin Tanımı, Tarihsel Gelişimi ve Jeneralize Nöbet İlkesi",
+   "paragraflar": [
+    {
+     "id": "k2-20-p004",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k2-20-c0013",
+       "ses": "Elektrokonvülzif tedavi yani E ka te, beyin dokusunun kontrollü bir elektrik akımıyla uyarılarak jeneralize epileptiform konvülziyon oluşturulması esasına dayalı bir psikiyatrik tedavidir.",
+       "ekran": "**EKT**, beyin dokusuna elektrik akımı verilerek jeneralize konvülziyon oluşturulmasıdır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "EKT",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Beyin dokusunun elektrik akımıyla"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0014",
+       "ses": "Bu noktada amfi dersinde daima altı çizilen en temel nörofizyolojik ilkeyi kavramalıyız: elektrik akımı sadece bir araçtır, asıl terapötik etkiyi sağlayan beynin geçirdiği jeneralize nöbettir.",
+       "ekran": "Terapötik iyileşmeyi sağlayan unsur elektrik değil, **jeneralize nöbet aktivitesidir**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "jeneralize nöbet aktivitesidir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "uyarılarak jeneralize konvulziyon"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0015",
+       "ses": "Eğer elektrik akımı verilir ancak beyinde epileptik nöbet deşarjı tetiklenemezse hiçbir klinik iyileşme sağlanamaz; bu duruma yetersiz stimülasyon denir.",
+       "ekran": "Nöbet tetiklenemezse iyileşme oluşmaz; klinik başarı **nöbet deşarjına** bağlıdır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "nöbet deşarjına",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "tedavidir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-20-p005",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k2-20-c0016",
+       "ses": "E ka tenin tarihsel doğuşuna baktığımızda, psikiyatri kliniklerinde epilepsisi bulunan hastalarda psikozun çok daha az oranda görüldüğüne dair eski ampirik gözlemler yer alır.",
+       "ekran": "Epileptik hastalarda **psikozun daha az görüldüğü** gözlemleri EKT'ye temel oluşturmuştur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "psikozun daha az görüldüğü",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Epileptik hastalarda psikozun daha az"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0017",
+       "ses": "Yirminci yüzyılın başlarında kafa travması ya da menenjit sekeli nedeniyle epilepsi nöbeti geçiren psikotik hastaların, nöbetin ardından psikoz belirtilerinin belirgin düzeldiği bildirilmiştir.",
+       "ekran": "Kafa travması ve menenjit sonrası nöbet geçirenlerde **psikotik belirtilerin düzeldiği** görülmüştür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "psikotik belirtilerin düzeldiği",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Kafa travması, menenjit nedeni ile"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0018",
+       "ses": "Bu klinik olgu, epilepsi ile şizofreni arasında biyolojik bir antagonizma olduğu ve yapay olarak tetiklenen nöbetlerin psikiyatrik iyileşme sağlayabileceği hipotezini doğurmuştur.",
+       "ekran": "Epilepsi ile psikoz arasındaki **biyolojik antagonizma hipotezi** konvülsif tedaviyi doğurmuştur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "biyolojik antagonizma hipotezi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "düzelmesi…"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-20-p006",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k2-20-c0019",
+       "ses": "Bu doğrultuda ilk konvülsif tedavi denemeleri bin dokuz yüz otuz dört yılında Macar hekim Ladislas von Meduna tarafından kamfor ve metrazol enjeksiyonlarıyla başlatılmıştır.",
+       "ekran": "İlk konvülsif tedavi **1934 yılında kimyasal ajanlarla** Meduna tarafından başlatılmıştır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "1934 yılında kimyasal ajanlarla",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "EKT ilk olarak 1934 yılında nöbet"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0020",
+       "ses": "Fakat kimyasal yöntemlerle nöbet oluşturmanın kontrolü son derece zordu, nöbetin ne zaman başlayacağı kestirilemiyor ve hastalarda derin bir ölüm korkusu yaratıyordu.",
+       "ekran": "Kimyasal yöntemlerin **kontrolünün çok güç olması** yeni arayışları hızlandırmıştır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kontrolünün çok güç olması",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "indükleyen yöntemlerle uygulanmıştır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0021",
+       "ses": "İtalyan nöropsikiyatristler Ugo Cerletti ve Lucino Bini, mezbahalarda hayvanların elektrikle bayıltılmasından esinlenerek elektrik akımının güvenli ve kontrol edilebilir bir nöbet aracı olduğunu keşfetmiştir.",
+       "ekran": "Cerletti ve Bini **elektrik akımıyla nöbet indüksiyonunu** Roma'da geliştirmiştir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "elektrik akımıyla nöbet indüksiyonunu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Cerletti ve Luciano 1938 yılında ilk defa"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0022",
+       "ses": "Cerletti ve Bini bin dokuz yüz otuz sekiz yılında Roma'da ilk defa bir şizofreni hastasına elektrik akımı uygulayarak modern elektriksel E ka te dönemini resmen başlatmıştır.",
+       "ekran": "**1938 yılında Cerletti ve Bini** ilk kez bir şizofreni hastasında EKT uygulamıştır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "1938 yılında Cerletti ve Bini",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Cerletti ve Luciano 1938 yılında ilk defa bir sch hastasına EKT uyguladı."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-20-b03",
+   "baslik": "EKT'nin Biyokimyasal ve Nöroplastisite Mekanizmaları",
+   "paragraflar": [
+    {
+     "id": "k2-20-p007",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k2-20-c0023",
+       "ses": "E ka tenin klinik başarısı sadece elektriğin geçişine değil, nöbetin beyin biyokimyası, nöroendokrin akslar ve hücresel plastisite üzerinde başlattığı devasa biyolojik dalgalanmaya dayanır.",
+       "ekran": "EKT beyinde **biyokimyasal, nörofizyolojik ve nöroplastik** kaskadlar başlatır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "biyokimyasal, nörofizyolojik ve nöroplastik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "EKT(elektrokonvülzif ) tedavi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0024",
+       "ses": "Biyokimyasal hipotezlerin başında postsinaptik beta-adrenerjik reseptörlerde meydana gelen down regülasyon yer almaktadır.",
+       "ekran": "Postsinaptik **beta-adrenerjik reseptör down regülasyonu** antidepresan etkinin temelidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "beta-adrenerjik reseptör down regülasyonu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "adrenerjik reseptör down regülasyonu"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0025",
+       "ses": "Kronik antidepresan ilaç kullanımında olduğu gibi beta-adrenerjik reseptör duyarlılığının azalması ve sayısının düşmesi, E ka tenin güçlü antidepresan yanıtının göstergesidir.",
+       "ekran": "Beta-adrenerjik reseptör azalması **antidepresan yanıtın** biyokimyasal göstergesidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "antidepresan yanıtın",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Biyokimyasal hipotezler:"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0026",
+       "ses": "İkinci kritik biyokimyasal değişim beyinde dopamin salınımının ve striatal dopaminerjik transmisyonun belirgin şekilde artış göstermesidir.",
+       "ekran": "Beyinde **dopamin transmisyonunda artış** motor yavaşlamayı ve apatiyi hızla çözer.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dopamin transmisyonunda artış",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "DA artışı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0027",
+       "ses": "Dopamin artışı sayesinde E ka te, depresyondaki psikomotor retardasyonu, katatonik stuporu ve Parkinson hastalığındaki motor donmaları günler içinde çözebilmektedir.",
+       "ekran": "Dopamin artışı **psikomotor retardasyon ve katatoniyi** hızla geriletir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "psikomotor retardasyon ve katatoniyi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "DA artışı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0028",
+       "ses": "Hücresel düzeyde siklik ade pe ve protein kinaz yolları aktive olarak gen ekspresyonunu uyarır ve nöronal sağkalım sinyallerini tetikler.",
+       "ekran": "Hücresel sinyal yolakları aktive olarak **nöronal sağkalım genlerini** uyarır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "nöronal sağkalım genlerini",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Biyokimyasal hipotezler:"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-20-p008",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k2-20-c0029",
+       "ses": "Serotonerjik sistemde ise beş hidroksitriptamin transmisyonu güçlenirken, özellikle frontal kortekste beş ha te iki a reseptör dansitesinde artış meydana gelir.",
+       "ekran": "Serotonin iletimi güçlenir ve **5HT2A reseptör dansitesinde artış** şekillenir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "5HT2A reseptör dansitesinde artış",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "5HT tranmisyonu ve 5HT2A reseptör dansitesinde"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0030",
+       "ses": "Nöroendokrin boyutta hipotalamo-hipofizer-adrenal aks geçici olarak stimüle edilir ve nörotrofik faktörlerin sentezi patlama gösterir.",
+       "ekran": "HPA aksı uyarılır ve nörotrofik faktör **BDNF düzeyinde belirgin artış** sağlanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "BDNF düzeyinde belirgin artış",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Nöroendokrin (HPA aksının stimülasyonu)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0031",
+       "ses": "Beyin kaynaklı nörotrofik faktör yani Be de ne fe artışı, depresyonun yol açtığı hipokampal atrofi ve nöronal küçülmeyi tersine çeviren anahtar moleküldür.",
+       "ekran": "BDNF artışı depresyondaki **hipokampal nöronal hasarı** ve atrofik süreci onarır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hipokampal nöronal hasarı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "BDNF artışı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0032",
+       "ses": "Hipokampusun girus dentatus bölgesinde subgranüler zonda yeni granül hücrelerinin doğuşu E ka tenin getirdiği Be de ne fe artışıyla doğrudan ilişkilidir.",
+       "ekran": "Girus dentatusta **yeni granül nöron üretimi** BDNF artışıyla doğrudan tetiklenir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yeni granül nöron üretimi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "BDNF artışı"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-20-p009",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k2-20-c0033",
+       "ses": "Nörofizyolojik hipotezlere göre akut konvülsiyon sırasında serebral kan akımı ve mikrovasküler geçirgenlik artarak kan-beyin bariyerinde geçici bir geçirgenlik artışı şekillenir.",
+       "ekran": "Nöbet esnasında **kan-beyin bariyeri geçirgenliğinde artış** meydana gelir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kan-beyin bariyeri geçirgenliğinde artış",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Nörofizyolojik hipotezler: Kan –beyin bariyerinin"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0034",
+       "ses": "Nöroplastisite hipotezi ise E ka tenin hücresel düzeyde hipokampusta sinaptik plastisiteyi artırdığını, nörogenezisi tetiklediğini ve nöronal apoptozisi güçlü biçimde baskıladığını gösterir.",
+       "ekran": "Hipokampusta **sinaptik plastisite ve nörogenezis artışı** sağlanırken apoptozis baskılanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sinaptik plastisite ve nörogenezis artışı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "hipokampusta sinaptik plastisite, nörogeneziste artış, apopitozisin"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0035",
+       "ses": "Böylece E ka te yalnızca nörotransmitter düzeyinde değil, sinir hücrelerinin yaşaması, yeni sinapsların kurulması ve hücresel tamir boyutunda da köklü bir yenilenme sağlar.",
+       "ekran": "EKT hücresel boyutta **nöroplastik tamir ve sinaptogenez** uyarımı oluşturur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "nöroplastik tamir ve sinaptogenez",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "apopitozisin baskılanması gibi)"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-20-b04",
+   "baslik": "EKT Öncesi Tıbbi Değerlendirme ve Güvenli Uygulama Basamakları",
+   "paragraflar": [
+    {
+     "id": "k2-20-p010",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k2-20-c0036",
+       "ses": "Günümüzde E ka te eski korkutucu filmlerdeki gibi çıplak veya kontrolsüz değil, ameliyathanede kısa etkili genel anestezi ve kas gevşetici altında modifiye şekilde uygulanır.",
+       "ekran": "Modern EKT ameliyathanede **genel anestezi ve kas gevşetici** eşliğinde uygulanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "genel anestezi ve kas gevşetici",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "EKT"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0037",
+       "ses": "Uygulama öncesinde hastanın tıbbi durumunu netleştirmek amacıyla kapsamlı bir fizik muayene yapılır ve kafa içi lezyonları taramak için bilgisayarlı tomografi veya Me re ge istenir.",
+       "ekran": "Hastaya tam fizik muayene ile birlikte **kranial BT veya MRG görüntülemesi** yapılır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kranial BT veya MRG görüntülemesi",
+         "tur": "terim"
+        },
+        {
+         "metin": "kranial BT veya MRG görüntülemesi",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "3807e9b207c5",
+        "d3-k2-bey-003"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Uygulama öncesi: Fizik muayene, Bilgisayarlı tomografi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0038",
+       "ses": "Akciğer görüntülemesi, elektrokardiyografi yani E ka ge ve tam kan sayımı ile rutin biyokimya paneli genel anestezi ve kardiyak risklerin belirlenmesi için zorunludur.",
+       "ekran": "Anestezi güvenliği için **akciğer grafisi, EKG ve rutin biyokimya** testleri yapılır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "akciğer grafisi, EKG ve rutin biyokimya",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Akciğer görüntülemesi, rutin BK, EKG,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0039",
+       "ses": "Sınavlarda ve klinik pratikte çok sık sorulan önemli bir ayrıntı şudur: seans öncesinde rutin elektroensefalografi yani E e ge çekilmesi kesinlikle şart ve zorunlu değildir.",
+       "ekran": "EKT öncesinde **rutin EEG çekimi şart değildir**; nöbet morfolojisi seans anında izlenir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "rutin EEG çekimi şart değildir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "EEG (Şart değil)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0040",
+       "ses": "Genel anestezi indüksiyonunda genellikle kısa etkili metoheksital, propofol ya da hemodinamisi kırılgan olanlarda etomidat tercih edilmektedir.",
+       "ekran": "Anestezi indüksiyonunda **kısa etkili intravenöz anestezikler** tercih edilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kısa etkili intravenöz anestezikler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Uygulama öncesi: Fizik muayene,"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-20-p011",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k2-20-c0041",
+       "ses": "Uygulama aşamasına geçildiğinde hastaya kısa etkili anestezik verildikten hemen sonra süksinilkolin gibi kısa etkili bir nöromüsküler bloker uygulanarak kas gevşemesi sağlanır.",
+       "ekran": "Anestezinin ardından **kas gevşetici (süksinilkolin)** verilerek iskelet kasları gevşetilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kas gevşetici (süksinilkolin)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Uygulama: Hastanın ağzına"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0042",
+       "ses": "Tonik fazda masseter kasının şiddetli kasılmasına bağlı olarak dişlerin kırılmasını ve dil ile dudak yaralanmalarını önlemek için hastanın ağzına yumuşak bir ısırma tamponu yerleştirilir.",
+       "ekran": "Çene kasılmalarına bağlı diş travmasını önlemek için **ağza yumuşak tampon** koyulur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ağza yumuşak tampon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "dişlerinin kırılmasını önlemek için yumuşak bir tampon koyulur."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0043",
+       "ses": "Elektrotlar gazlı bezle sarılır, tuzlu suyla ıslatılır veya özel iletken jel kullanılarak deri ile elektrot arasındaki elektriksel empedans minimuma indirilir.",
+       "ekran": "Deri temas direncini düşürmek için elektrotlar **tuzlu su veya jel** ile uygulanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tuzlu su veya jel",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Elektrotlar gazlı bezle sarılır, tuzlu suyla ıslatılır, veya jel"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0044",
+       "ses": "İletkenliğin kusursuz sağlanması sayesinde akım homojen dağılır, elektrik arkı engellenir ve kafa derisinde termal yanık oluşmasının önüne geçilerek güvenli akım verilir.",
+       "ekran": "Uygun temas sağlanarak kafa derisinde **yanık oluşması engellenir** ve akım verilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yanık oluşması engellenir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "kullanılarak yanıkların oluşması engellenir. Akım verilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0045",
+       "ses": "Cihaz empedans ölçümü yaparak iki bin ohm altındaki güvenli temas direncini teyit ettikten sonra akım verilerek seans başlatılır.",
+       "ekran": "Elektrot empedansı **güvenli direnç sınırında teyit edilerek** akım verilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "güvenli direnç sınırında teyit edilerek",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Akım verilir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-20-b05",
+   "baslik": "EKT'nin Majör Depresyondaki Birincil Endikasyonları ve İntihar Riski",
+   "paragraflar": [
+    {
+     "id": "k2-20-p012",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k2-20-c0046",
+       "ses": "Elektrokonvülzif tedavinin genel endikasyonları incelendiğinde majör depresyon, mani, şizofreni, şizoaffektif bozukluk, Parkinson hastalığı ve Nöroleptik Malign Sendrom yer alır.",
+       "ekran": "EKT endikasyonları **majör depresyon, mani, şizofreni, Parkinson ve NMS'yi** kapsar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "majör depresyon, mani, şizofreni, Parkinson ve NMS'yi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "EKT(elektrokonvülzif ) tedavi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0047",
+       "ses": "Hem unipolar hem bipolar depresyonda intihar ve yememe içmeme gibi acil durumlarda E ka te birinci basamak hayat kurtarıcı müdahale olarak devreye girer.",
+       "ekran": "Unipolar ve bipolar depresyonda **EKT birinci basamak hayat kurtarıcıdır**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "EKT birinci basamak hayat kurtarıcıdır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Major depresyon(unipolar-bipolar depresyon)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0048",
+       "ses": "Psikiyatrik tanıların yanı sıra Parkinson hastalığındaki motor rijidite dalgalanmalarında ve Nöroleptik Malign Sendromda da güçlü klinik endikasyona sahiptir.",
+       "ekran": "EKT **Parkinson rijiditesinde ve Nöroleptik Malign Sendromda** da güçlü endikasyona sahiptir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Parkinson rijiditesinde ve Nöroleptik Malign Sendromda",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Diğer: Parkinson hast., Nöroleptik malign sendrom"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0049",
+       "ses": "Bu geniş hastalık grubu içinde modern psikiyatri pratiğinde E ka te uygulanan hastaların yaklaşık yüzde seksen beşinde primer tanı majör depresyondur.",
+       "ekran": "Günümüzde EKT yapılan olguların **yüzde 85'inde tanı majör depresyondur**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüzde 85'inde tanı majör depresyondur",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Günümüzde EKT uygulanan hastaların %85’inde tanı MD’dur."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0050",
+       "ses": "Şiddetli depresif belirtileri olan, genel işlevselliği ileri derecede çökmüş, yemeyi içmeyi reddeden ve katatonik veya psikotik hezeyanlar sergileyen tablolarda ilk tercihtir.",
+       "ekran": "**Katatonik ve psikotik depresyonda** EKT dramatik ve hayat kurtarıcı iyileşme sağlar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Katatonik ve psikotik depresyonda",
+         "tur": "terim"
+        },
+        {
+         "metin": "Katatonik ve psikotik depresyonda",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3-k2-nor-014"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Şiddetli belirtileri olan, işlevselliği ileri derecede bozulmuş,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0051",
+       "ses": "Hastanın aktif intihar planı ve girişimi olduğunda ilaçların dört ila altı haftalık etki süresini bekleme lüksümüz yoktur; E ka te birkaç gün içinde intihar düşüncesini yatıştırır.",
+       "ekran": "**Yüksek intihar riski ve oral alım reddinde** EKT derhal hayat kurtarıcıdır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yüksek intihar riski ve oral alım reddinde",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Hızla yanıt istenen, intihar riski yüksek, oral alım reddi olan,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0052",
+       "ses": "Özellikle organlarının çürüdüğünü veya öldüğünü iddia eden nihilistik hezeyanlı Kotard sendromu tablolarında E ka te yüzde seksen beşin üzerinde dramatik remisyon sağlar.",
+       "ekran": "Nihilistik hezeyanlarla giden **ağır psikotik depresyonda** EKT ilk basamak tedavidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ağır psikotik depresyonda",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "katatonik ve psikotik belirtiler gösteren hastalar,"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-20-p013",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k2-20-c0053",
+       "ses": "Oral alımı tamamen reddeden, ileri derecede dehidrate kalan ve parenteral beslenmeye rağmen tükenmeye giden depresif olgularda E ka te metabolik çöküşü durdurur.",
+       "ekran": "Oral alım reddinde EKT dakikalar ve günler içinde **metabolik çöküşü durdurur**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "metabolik çöküşü durdurur",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "oral alım reddi olan,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0054",
+       "ses": "Gebelikte fetüsü antidepresan ilaçların organogenez dönemindeki teratojenik etkilerinden korumak gerektiğinde E ka te en güvenilir tedavi seçeneğidir.",
+       "ekran": "Gebelikte fetüsü korumak için **antidepresan yerine EKT** güvenle tercih edilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "antidepresan yerine EKT",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "antidepresan kullanamayan (gebe, GTD),"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0055",
+       "ses": "Ağır psikomotor ajitasyon ya da stupor tablosundaki depresiflerde ve başkasını öldürme yani homisid riski bulunan hastalarda E ka te derhal uygulanmalıdır.",
+       "ekran": "**Homisid riski, ajitasyon ve stupor** varlığında acil EKT endikasyonu doğar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Homisid riski, ajitasyon ve stupor",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Başkasını öldürme riski yüksek, ajitasyonda ya da"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0056",
+       "ses": "Tedaviye dirençli majör depresyonda E ka te kürünün ardından hastanın iyilik halini korumak için koruyucu idame farmakoterapiye mutlaka devam edilmelidir.",
+       "ekran": "EKT kesildikten sonra nüksü önlemek için **idame ilaç tedavisine devam edilmelidir**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "idame ilaç tedavisine devam edilmelidir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "İlaca yanıt vermeyen depresyon"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0057",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: Elektrokonvülzif tedavi uygulanan olguların yüzde seksen beşinde tanı majör depresyondur, kronik şizofrenide etkisizdir ancak antipsikotiklerin yol açtığı ekstrapiramidal yan etkilerde ve gebelikte güvenle tercih edilir.",
+       "ekran": "EKT **%85 depresyonda uygulanır**, gebelikte güvenlidir ve EPS belirtilerinde etkilidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "%85 depresyonda uygulanır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3-b-072"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "EKT kesildikten sonra ilaç tedavisine devam edilmeli"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-20-b06",
+   "baslik": "EKT'nin Mani ve Şizofrenideki Yeri, EPS ve Katatoni",
+   "paragraflar": [
+    {
+     "id": "k2-20-p014",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k2-20-c0058",
+       "ses": "Bipolar bozukluğun manik ataklarında ilaç tedavisine yanıt alınamadığında ve hasta için hayati risk oluşturan aşırı psikomotor taşkınlık geliştiğinde E ka te endikedir.",
+       "ekran": "Tedaviye yanıtsız **şiddetli manik eksitasyonda** EKT fiziksel tükenmeyi önler.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "şiddetli manik eksitasyonda",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Mani: Tedaviye yanıt alınamaması, Hasta için risk"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0059",
+       "ses": "Hastanın günlerce uyumadan ve beslenmeden sergilediği taşkınlık fiziksel olarak kardiyovasküler kollaps veya rabdomiyoliz tehdidi doğuruyorsa E ka te acil uygulanır.",
+       "ekran": "Fiziksel ağırlaşma ve **gebelikte manik dönem** varlığında EKT uygulanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "gebelikte manik dönem",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "oluşturabilecek şiddette eksitasyonun varlığı ve"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0060",
+       "ses": "Gebelikte manik dönem geçiren bir kadında lityum ve valproat gibi teratojenik duygudurum düzenleyicileri verilemeyeceğinden E ka te en güvenilir kalkanı oluşturur.",
+       "ekran": "Gebelikte teratojenik ilaçlardan kaçınırken **manik atağı sonlandırmak** için EKT kullanılır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "manik atağı sonlandırmak",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "tablonun fiziksel olarak da ağırlaşan bir seyir izliyor"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0061",
+       "ses": "Manik eksitasyonun yol açtığı kontrolsüz motor hiperaktivite sıvı kaybı ve elektrolit dengesizliğini tetikleyerek hastayı saatler içinde kardiyovasküler tükenmeye sürükleyebilir.",
+       "ekran": "Manik eksitasyonda EKT **kardiyovasküler kollaps ve tükenmeyi** önleyen acil girişimdir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kardiyovasküler kollaps ve tükenmeyi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "oluşturabilecek şiddette eksitasyonun varlığı ve"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-20-p015",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k2-20-c0062",
+       "ses": "Şizofreni hastalığında E ka tenin yerini değerlendirirken klinisyenin bilmesi gereken en katı kural şudur: E ka te kronik şizofrenide etkin değildir.",
+       "ekran": "EKT **kronik şizofrenide etkin değildir**; negatif semptomları ve yıkımı düzeltmez.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kronik şizofrenide etkin değildir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Şizofreni: Kronik şizofrenide etkin değildir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0063",
+       "ses": "Yıllardır süren, duygusal küntlük, içe kapanma ve bilişsel yıkımla karakterize kronik rezidüel şizofreni vakalarında E ka te uygulamak hastaya hiçbir klinik fayda sağlamaz.",
+       "ekran": "Kronik negatif belirtilerde ve **bilişsel yıkımda EKT etkisizdir**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bilişsel yıkımda EKT etkisizdir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Kronik şizofrenide etkin değildir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0064",
+       "ses": "Buna karşılık belirgin pozitif alevlenmesi olan, yoğun halüsinasyon ve hezeyan sergileyen, katatonik stupor veya katatonik eksitasyon yaşayan şizofrenlerde son derece etkilidir.",
+       "ekran": "**Akut pozitif bulgular ve katatonik belirtiler** varlığında EKT son derece etkilidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Akut pozitif bulgular ve katatonik belirtiler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Belirgin pozitif bulguları olan, katatonik veya duygudurum"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0065",
+       "ses": "Standart antipsikotiklere dirençli hastalarda, homisid ve suisid riski bulunan olgularda ve antipsikotiklerin neden olduğu ağır ekstrapiramidal sistem belirtilerinde E ka te endikedir.",
+       "ekran": "İlaca dirençli olgularda ve **antipsikotiklerin neden olduğu EPS** belirtilerinde EKT uygulanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "antipsikotiklerin neden olduğu EPS",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Antipsikotiklerin neden olduğu EPS belirtilerinde, gebelik"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0066",
+       "ses": "Antipsikotik ilaçlara bağlı akut distoni, parkinsonizm ve rijidite gibi ekstrapiramidal yan etkilerde E ka te striatal dopamin salınımını artırarak bu semptomları hızla geriletir.",
+       "ekran": "EKT striatal dopamini artırarak antipsikotik kaynaklı **ekstrapiramidal belirtileri düzeltir**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ekstrapiramidal belirtileri düzeltir",
+         "tur": "terim"
+        },
+        {
+         "metin": "ekstrapiramidal belirtileri düzeltir",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-1790877044403-707646",
+        "past-1790877044441-624411",
+        "past-1790877044385-678651"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Tedaviye dirençli hastalar,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0067",
+       "ses": "Katatonik şizofrenide balmumu esnekliği, negativizm ve mutizm tablosundaki prefrontal kortikal motor blokaj E ka te ile günler içinde çözülür.",
+       "ekran": "Katatonik şizofrenideki **balmumu esnekliği ve mutizm** EKT ile hızla açılır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "balmumu esnekliği ve mutizm",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "katatonik veya duygudurum"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0068",
+       "ses": "Antipsikotik ilaçlara direnç gösteren ve alevlenen pozitif psikotik belirtiler E ka tenin getirdiği yaygın nöronal senkronizasyonla hızla baskılanır.",
+       "ekran": "İlaca dirençli pozitif belirtiler **nöronal senkronizasyonla** hızla kontrol altına alınır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "nöronal senkronizasyonla",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Belirgin pozitif bulguları olan, katatonik veya duygudurum"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-20-b07",
+   "baslik": "EKT'nin Parkinson, NMS ve Diğer Klinik Endikasyonları",
+   "paragraflar": [
+    {
+     "id": "k2-20-p016",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k2-20-c0069",
+       "ses": "E ka te yöntemi saf psikiyatrik tabloların ötesine geçerek nörolojik hareket bozukluklarında ve ölümcül toksisite tablolarında da hayat kurtarıcı bir rol üstlenir.",
+       "ekran": "EKT nörolojik tablolarda ve **nöropsikiyatrik acillerde** kritik bir seçenektir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "nöropsikiyatrik acillerde",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "EKT Endikasyonları"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0070",
+       "ses": "Parkinson hastalığında özellikle kurşun boru rijiditesi, bradikinezi gibi ağır motor belirtilerde ve ilaç cevabındaki on-off dalgalanmalarında E ka te güçlü düzelme sağlar.",
+       "ekran": "Parkinson hastalığında **rijidite, bradikinezi ve on-off fenomeninde** EKT etkilidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "rijidite, bradikinezi ve on-off fenomeninde",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Parkinson Hast.: Özellikle rijidite ve bradikinezi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0071",
+       "ses": "Levodopa tedavisine bağlı gelişen motor donmaları ve dalgalanmaları açarak hastanın mobilize olmasını ve yürümesini kolaylaştırır.",
+       "ekran": "EKT dopaminerjik iletimi artırarak Parkinsondaki **motor donmaları ve rijiditeyi** çözer.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "motor donmaları ve rijiditeyi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "gibi motor belirtiler, on-off fenomeni"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0072",
+       "ses": "Antipsikotik ilaçların en ölümcül komplikasyonu olan hipertermi, rijidite ve otonomik instabiliteyle seyreden Nöroleptik Malign Sendromda E ka te hayat kurtarır.",
+       "ekran": "**Nöroleptik Malign Sendromda (NMS)** EKT hayat kurtarıcı birincil müdahaledir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Nöroleptik Malign Sendromda (NMS)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "NMS"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0073",
+       "ses": "Nöroleptik Malign Sendromdaki santral dopamin De iki reseptör blokajı krizini sonlandırmak için E ka te en etkili biyolojik antidoftur.",
+       "ekran": "Santral dopamin blokajı krizini çözmek için **EKT biyolojik antidot rolü** oynar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "EKT biyolojik antidot rolü",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "NMS"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0074",
+       "ses": "Parkinson hastalarında E ka te kürü sonrasında çizgili cisimcik düzeyinde post-sinaptik dopamin reseptör duyarlılığı artarak günlük levodopa ihtiyacı belirgin ölçüde azalır.",
+       "ekran": "Parkinson hastalığında EKT sonrası **günlük levodopa gereksinimi** anlamlı şekilde düşer.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "günlük levodopa gereksinimi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Parkinson Hast.: Özellikle rijidite ve bradikinezi"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-20-p017",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k2-20-c0075",
+       "ses": "Başka türlü adlandırılamayan psikozlarda ve standart farmakoterapiye dirençli obsesif kompulsif bozukluk yani O ke be tablolarında E ka te alternatif bir seçenektir.",
+       "ekran": "Dirençli **OKB ve BTA psikoz** vakalarında alternatif biyolojik tedavi olarak kullanılır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "OKB ve BTA psikoz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "BTA psikoz"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0076",
+       "ses": "Ağır somatizasyon ve hastalık kaygısıyla seyreden dirençli hipokondriazis olgularında ve hipofiz yetmezliğine bağlı hipopituitarizm tablolarında E ka te uygulanabilmektedir.",
+       "ekran": "Dirençli **hipokondriazis ve hipopituitarizm** zeminindeki tablolarda EKT uygulanabilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hipokondriazis ve hipopituitarizm",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Hipokondriazis"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0077",
+       "ses": "Medikal tedaviye yanıt vermeyen inatçı epilepsi nöbetlerinde ve ağır intihar riski taşıyan depresif çocuk ve ergenlerde E ka te endikasyonu bulunmaktadır.",
+       "ekran": "**İnatçı epilepsi ve depresif ergenlerde** dirençli tablolarda EKT uygulanabilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İnatçı epilepsi ve depresif ergenlerde",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "İnatçı epilepsi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0078",
+       "ses": "İnatçı status epileptikus tablosundaki hastalarda kontrollü jeneralize nöbet indüklenerek postiktal derin gaba erjik inhibisyon devreye sokulur ve nöbet döngüsü kırılır.",
+       "ekran": "EKT derin postiktal inhibisyon oluşturarak **inatçı nöbet döngüsünü sonlandırır**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "inatçı nöbet döngüsünü sonlandırır",
+         "tur": "terim"
+        },
+        {
+         "metin": "inatçı nöbet döngüsünü sonlandırır",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3-k2-psi-004",
+        "past-1790877035988-839316"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Depresif çocuk ve ergenler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0079",
+       "ses": "Tedaviye dirençli obsesif kompulsif bozuklukta intruzif obsesyonlar ve ritüeller hastanın günlük işlevselliğini felç ettiğinde E ka te limbik hiperaktiviteyi modüle eder.",
+       "ekran": "Dirençli OKB olgularında EKT **limbik hiperaktiviteyi modüle ederek** döngüyü gevşetir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "limbik hiperaktiviteyi modüle ederek",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "OKB"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-20-b08",
+   "baslik": "EKT'de Riskin Arttığı Klinik Tablolar ve Kontrendikasyon Kuralı",
+   "paragraflar": [
+    {
+     "id": "k2-20-p018",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k2-20-c0080",
+       "ses": "E ka te uygulamasına karar verirken hastanın organik komorbiditeleri ve kardiyovasküler durumu çok dikkatli taranmalıdır.",
+       "ekran": "EKT öncesinde **hemodinamik ve serebral risk faktörleri** titizlikle değerlendirilmelidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hemodinamik ve serebral risk faktörleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "EKT(elektrokonvülzif ) tedavi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0081",
+       "ses": "Kafa içi yer kaplayan serebral lezyonlar ve intrakraniyal basınç artışı yani Ki bas tablosu E ka te sırasında riskin en belirgin arttığı klinik durumlardır.",
+       "ekran": "**Yer kaplayan beyin lezyonları ve KİBAS** herniasyon riski nedeniyle tehlikelidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yer kaplayan beyin lezyonları ve KİBAS",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Yer kaplayan serebral lezyon"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0082",
+       "ses": "Jeneralize nöbet anında serebral kan akımı ve doku perfüzyonu geçici olarak fırladığından, kitle etkisi bulunan beyinlerde tentoryal veya tonsiller herniasyon riski doğar.",
+       "ekran": "Nöbet esnasındaki serebral kan akımı artışı **intrakraniyal basınç sıçraması** yapabilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "intrakraniyal basınç sıçraması",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "İntrakraniyal basınç artışı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0083",
+       "ses": "Bu nedenle E ka te öncesinde kranial görüntüleme yapılarak kitle etkisi ve kafa içi basınç artışı ekarte edilmelidir.",
+       "ekran": "Herniasyon riskini dışlamak için **kranial görüntüleme** ile kitle etkisi taranır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kranial görüntüleme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "EKT’de riskin arttığı durumlar:"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0084",
+       "ses": "Kranial yer kaplayan lezyon şüphesi olan her olguda nöroşirürji konsültasyonu istenerek kitle etkisi hassasiyetle kontrol altına alınır.",
+       "ekran": "Kitle lezyonu şüphesinde **nöroşirürji konsültasyonu** ile risk değerlendirmesi yapılır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "nöroşirürji konsültasyonu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Yer kaplayan serebral lezyon"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0085",
+       "ses": "Kafa içi basınç artışı olan olgularda elektriksel nöbet sırasında beyin ödeminin şiddetlenmesini önlemek amacıyla deksametazon veya mannitol premedikasyonu planlanabilir.",
+       "ekran": "KİBAS şüphesinde serebral ödemi yatıştırmak için **özel medikal premedikasyon** uygulanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "özel medikal premedikasyon",
+         "tur": "terim"
+        },
+        {
+         "metin": "özel medikal premedikasyon",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-97"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "İntrakraniyal basınç artışı"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-20-p019",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k2-20-c0086",
+       "ses": "Yakın geçmişte miyokard infarktüsü ya da yakın geçmişte serebrovasküler inme geçirmiş hastalarda kardiyak iskemi ve yeniden kanama riski artış gösterir.",
+       "ekran": "**Yakın geçmişte MI ve inme** geçirenlerde otonom deşarjlar nedeniyle risk artar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yakın geçmişte MI ve inme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Yakın geçmişte miyokard infaktüsü"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0087",
+       "ses": "Serebral veya aortik anevrizması bulunanlarda, retina dekolmanı olanlarda ve feokromositomalı hastalarda nöbetin oluşturduğu sempatik tansiyon sıçraması rüptür riski yaratır.",
+       "ekran": "**Anevrizma, retina dekolmanı ve feokromositomada** hipertansif dalgalanma riski artırır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Anevrizma, retina dekolmanı ve feokromositomada",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Anevrizma"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0088",
+       "ses": "Feokromositomada kontrolsüz katekolamin salınımı ölümcül hipertansif krize yol açabileceğinden hemodinamik stabilizasyon şarttır.",
+       "ekran": "Feokromositomalı olgularda katekolamin deşarjı **hipertansif kriz riski** doğurur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hipertansif kriz riski",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Feokromastoma"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0089",
+       "ses": "Fakat tüm bu yüksek risk faktörlerine rağmen tıbbi kılavuzlarda E ka te için tanımlanmış hiçbir mutlak kontrendikasyon bulunmamaktadır.",
+       "ekran": "EKT için tıbbi literatürde **mutlak kontrendikasyon yoktur**; tüm riskler rölatiftir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "mutlak kontrendikasyon yoktur",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Retina dekolmanı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0090",
+       "ses": "Hayati tehlike söz konusu olduğunda Ki bas veya kardiyak risk taşıyan hastalarda dahi anestezi uzmanı ve ilgili branş hekimlerinin gözetiminde E ka te güvenle yürütülebilir.",
+       "ekran": "Tüm riskli klinik durumlar **multidisipliner yönetimle** güvenli şekilde kontrol edilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "multidisipliner yönetimle",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Yakın geçmişte serebrovasküler hastalık"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0091",
+       "ses": "Yakın dönemde infarktüs geçiren kardiyak hastalarda sempatik taşikardiyi sınırlandırmak amacıyla esmolol gibi kısa etkili beta blokerler kullanılarak güvenli anestezi sağlanır.",
+       "ekran": "Kardiyak riskli hastalarda **kısa etkili beta blokerler** ile hemodinamik kontrol sağlanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kısa etkili beta blokerler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Yakın geçmişte miyokard infaktüsü"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-20-b09",
+   "baslik": "EKT'nin Mortalitesi, Sistemik Yan Etkileri ve Bilişsel Güvenliği",
+   "paragraflar": [
+    {
+     "id": "k2-20-p020",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k2-20-c0092",
+       "ses": "Epidemiyolojik araştırmalar E ka tenin genel anestezi altında uygulanan tıbbi işlemler arasında en düşük mortalite oranlarına sahip olduğunu kanıtlamıştır.",
+       "ekran": "EKT genel anestezi altındaki **en güvenli girişimler** arasında yer alır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "en güvenli girişimler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "EKT-Yan etkiler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0093",
+       "ses": "E ka te uygulamasında ölüm oranı seans başına yalnızca yüzde sıfır virgül sıfır sıfır iki, hasta başına ise yüzde sıfır virgül sıfır bir gibi son derece düşük bir değerdir.",
+       "ekran": "EKT mortalitesi **seans başına yüzde 0.002**, hasta başına yüzde 0.01 düzeyindedir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "seans başına yüzde 0.002",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Mortalite"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0094",
+       "ses": "Bu istatistiksel mortalite düzeyi, herhangi bir bireyin evinde otururken karşılaşabileceği spontan ölüm riskinden bile daha azdır.",
+       "ekran": "Mortalite riski **evde spontan ölüm riskinden** bile daha düşüktür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "evde spontan ölüm riskinden",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Hasta başına : %0.01 (evinde spontan ölüm"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0095",
+       "ses": "Santral sinir sistemi yan etkileri arasında nöbetin hemen ardından gelişen geçici konfüzyon, sersemlik hissi, gerilim tipi baş ağrısı ve ajitasyon yer alır.",
+       "ekran": "Santral yan etkiler **konfüzyon, sersemlik, baş ağrısı ve amnezidir**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "konfüzyon, sersemlik, baş ağrısı ve amnezidir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Santral Sinir Sistemi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0096",
+       "ses": "Postiktal konfüzyon genellikle dakikalar ve saatler içinde hastanın uyanması ve oryante olmasıyla kendiliğinden geriler.",
+       "ekran": "Postiktal konfüzyon hastanın uyanmasıyla birlikte **dakikalar içinde geriler**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dakikalar içinde geriler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Konfüzyon"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-20-p021",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k2-20-c0097",
+       "ses": "Hafıza bozuklukları hem işlem öncesi yakın döneme ait anıların silindiği retrograd amnezi hem de yeni bilgi kaydının zorlaştığı anterograd amnezi şeklinde ortaya çıkabilir.",
+       "ekran": "EKT sonrasında **anterograd ve retrograd amnezi** görülebilir ancak zamanla geriler.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "anterograd ve retrograd amnezi",
+         "tur": "terim"
+        },
+        {
+         "metin": "anterograd ve retrograd amnezi",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3-k2-psi-016"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Amnezi (Anterograd/Retrograd Amnezi)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0098",
+       "ses": "Bellek kusurları tedavi kürü tamamlandıktan sonra haftalar ve aylar içinde tama yakın toparlar; yeni öğrenme kapasitesi eski seviyesine döner.",
+       "ekran": "Tedavi kürü tamamlandıktan sonra **bellek fonksiyonları eski düzeyine** toparlar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bellek fonksiyonları eski düzeyine",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Konfüzyon"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0099",
+       "ses": "Kardiyovasküler sistemde nöbet başlangıcındaki vagal stimülasyon geçici bradikardiye, hemen ardından gelen sempatik deşarj ise taşikardi ve hipertansif sıçramaya yol açar.",
+       "ekran": "Kardiyovaskülerde **bradikardi, taşikardi ve hipertansiyon** dalgalanmaları görülebilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bradikardi, taşikardi ve hipertansiyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Kardiyovasküler Sistem"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0100",
+       "ses": "Kas ve iskelet sisteminde tonik-klonik kasılmalar kas ve eklem ağrılarına neden olabilir; kas gevşetici uygulaması sayesinde kırık ve çıkık riski tamamen ortadan kaldırılmıştır.",
+       "ekran": "Kas gevşetici kullanımıyla kasılmalara bağlı **kırık ve çıkıklar engellenir**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kırık ve çıkıklar engellenir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Kırık ve çıkıklar"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-20-p022",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k2-20-c0101",
+       "ses": "Tıbbi ve bilimsel araştırmalar E ka tenin beyin dokusunda hiçbir şekilde nöronal kayıp veya kalıcı yapısal hasar bırakmadığını kesin olarak ortaya koymuştur.",
+       "ekran": "Bilimsel çalışmalar EKT'nin **beyne kalıcı zarar vermediğini** açıkça göstermiştir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "beyne kalıcı zarar vermediğini",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Çalışmalar EKT’nin beyine zarar vermediğini"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0102",
+       "ses": "E ka te sonrasında gözlenen bilişsel fonksiyonlardaki yavaşlamanın derecesi kişiden kişiye değişmekle birlikte doğrudan uygulanan elektrik dozajına bağlıdır.",
+       "ekran": "Bilişsel fonksiyonlardaki bozulma **uygulanan elektrik dozajına** doğrudan bağımlıdır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "uygulanan elektrik dozajına",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Bilişsel fonksiyonların derecesi kişiden kişiye"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0103",
+       "ses": "Elektrik dozu gereğinden yüksek tutulmadığı ve ultra kısa darbe dalga formu kullanıldığı sürece bilişsel yan etkiler asgari düzeyde tutulabilir.",
+       "ekran": "Kısa darbe dalga formu ve uygun dozla **bilişsel yan etkiler asgariye** indirilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bilişsel yan etkiler asgariye",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "değişmekle birlikte dozaja da bağlıdır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0104",
+       "ses": "E ka tenin bilişsel fonksiyonlar üzerindeki etkisi hastanın psikiyatrik teşhisinden bağımsızdır; depresyon, mani ya da şizofrenide aynı biyolojik süreç işler.",
+       "ekran": "Bilişsel etkilenme derecesi **hastanın psikiyatrik teşhisine göre değişmez**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hastanın psikiyatrik teşhisine göre değişmez",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "teşhisten teşhise değişmemektedir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0105",
+       "ses": "Ders notlarında ve uluslararası kılavuzlarda altı çizildiği üzere E ka te için tanımlanmış hiçbir mutlak kontrendikasyon bulunmamaktadır.",
+       "ekran": "EKT için tıbbi literatürde **mutlak kontrendikasyon yoktur**; tüm durumlar rölatiftir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "mutlak kontrendikasyon yoktur",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "EKT için mutlak kontrendikasyon yoktur."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-20-b10",
+   "baslik": "EKT ve Eşzamanlı İlaç Etkileşimleri (TSA, Benzodiazepin, Teofilin, Kafein)",
+   "paragraflar": [
+    {
+     "id": "k2-20-p023",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k2-20-c0106",
+       "ses": "E ka te uygulanacak bir hastanın kullandığı medikal ve psikiyatrik ilaçlar seans güvenliğini ve nöbet eşiğini doğrudan etkiler.",
+       "ekran": "Eşzamanlı ilaç kullanımı **EKT nöbet eşiğini ve kardiyak riski** doğrudan modüle eder.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "EKT nöbet eşiğini ve kardiyak riski",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "İlaç ve EKT"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0107",
+       "ses": "Trisiklik antidepresanlar yani Te se a grubu ilaçlar sempatomimetik ve kardiyotoksik potansiyelleri nedeniyle E ka te ile birlikte uygulandığında kardiyak aritmi riskini artırır.",
+       "ekran": "**Trisiklik antidepresanlar (TSA)** EKT ile birlikte kardiyak aritmi riskini artırır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Trisiklik antidepresanlar (TSA)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "TSA ile birlikte EKT uygulaması kardiak riski"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0108",
+       "ses": "Benzodiazepin grubu anksiyolitikler ve antiepileptik ilaçlar beyinde nöbet eşiğini yükselterek terapötik nöbetin başlamasını engellediğinden E ka teye başlamadan önce kesilmelidir.",
+       "ekran": "**Benzodiazepinler ve antiepileptikler** nöbet eşiğini yükselttiğinden kesilmelidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Benzodiazepinler ve antiepileptikler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Benzodiazepinler ve antiepileptikler nöbet"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0109",
+       "ses": "Eğer benzodiazepinler kesilmezse verilen elektrik akımı jeneralize nöbet oluşturamaz ve işlem terapötik başarısızlıkla sonuçlanır.",
+       "ekran": "Benzodiazepinler kesilmezse nöbet oluşamaz ve **terapötik başarısızlık gelişir**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "terapötik başarısızlık gelişir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "eşiğini arttırdığından uygulamaya"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0110",
+       "ses": "Aynı şekilde antiepileptik ilaç kullanan bipolar hastalarda valproat ve karbamazepin dozları E ka te küründen önce kademeli düşürülmelidir.",
+       "ekran": "Antiepileptik ilaç kullanan hastalarda **ilaç dozları kademeli düşürülerek** nöbet sağlanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ilaç dozları kademeli düşürülerek",
+         "tur": "terim"
+        },
+        {
+         "metin": "ilaç dozları kademeli düşürülerek",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-1790877044656-470097"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "başlamadan önce kesilmelidir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0111",
+       "ses": "Lityum kullanan hastalarda E ka te öncesinde lityum kan düzeyinin sıfırlanması uzamış konfüzyon ve nörotoksik deliryum tablosunun önlenmesi açısından kritik önem taşır.",
+       "ekran": "EKT öncesinde **lityumun kesilmesi nörotoksisite** ve deliryum riskini önler.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "lityumun kesilmesi nörotoksisite",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "İlaç ve EKT"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-20-p024",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k2-20-c0112",
+       "ses": "Astım ve bronkospazm tedavisinde kullanılan teofilin, santral sinir sisteminde adenozin reseptörlerini bloke ederek nöbetin kendiliğinden sonlanmasını engeller.",
+       "ekran": "**Teofilin** santral adenozin blokajı yaparak nöbetin sonlanmasını bozar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Teofilin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Teofilin terapötik dozlarda bile EKT"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0113",
+       "ses": "Teofilin alan bir hastaya E ka te uygulandığında ilaç terapötik kan düzeyinde bile olsa hasta durdurulamayan uzamış status epileptikusa girebilir.",
+       "ekran": "Teofilin terapötik dozda bile hastanın **status epileptikusa girmesine** neden olabilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "status epileptikusa girmesine",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "hastanın statusa girmesine"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0114",
+       "ses": "Status epileptikus hayatı tehdit eden acil bir tablo olduğundan teofilin kullanan olgularda E ka te kesinlikle ertelenmeli ya da alternatif ilaçlara geçilmelidir.",
+       "ekran": "Status riski nedeniyle teofilin kullanan olgularda **EKT güvenliği tehlikeye girer**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "EKT güvenliği tehlikeye girer",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "neden olabilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0115",
+       "ses": "Buna karşılık nöbet eşiği çok yüksek olan veya nöbet süresi terapötik sınır olan yirmi beş saniyenin altında kalan hastalarda nöbet uzunluğunu artırmak için kafein önerilebilir.",
+       "ekran": "Nöbet süresi yetersiz hastalarda **nöbet uzunluğunu artırmak için kafein** önerilebilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "nöbet uzunluğunu artırmak için kafein",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "nöbet uzunluğunu arttırmak için kafein kullanılmasını"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0116",
+       "ses": "Kafein sodyum benzoat infüzyonu veya intravenöz teofilin türevleri kısıtlı endikasyonla da olsa inatçı yüksek eşikli olgularda nöbet süresini uzatmada kılavuzlarda tartışılmaktadır.",
+       "ekran": "Nöbet süresi kısa kalan olgularda **nöbet uzatıcı ajanlar** dikkatle değerlendirilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "nöbet uzatıcı ajanlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "nöbet uzunluğunu arttırmak için kafein kullanılmasını"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-20-b11",
+   "baslik": "Transkraniyal Manyetik Stimülasyon (TMS) Fiziksel ve Biyolojik İlkeleri",
+   "paragraflar": [
+    {
+     "id": "k2-20-p025",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k2-20-c0117",
+       "ses": "Transkraniyal manyetik stimülasyon yani Te me se, kafatası ve saçlı deriyi hiçbir dirençle karşılaşmadan geçen manyetik alanlar kullanan modern bir nöromodülasyon yöntemidir.",
+       "ekran": "**TMS**, elektromanyetik indüksiyon prensibine dayalı non-invaziv bir yöntemdir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "TMS",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Transkraniyal magnetik"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0118",
+       "ses": "Non-invaziv olan bu yöntemde kafa derisi üzerine yerleştirilen tel bobin hızla dalgalanan manyetik alanlar üretir ve bu alanlar dokuda sekonder elektrik akımları indükler.",
+       "ekran": "Manyetik bobin kafatasından geçen **hızla dalgalanan manyetik alan** oluşturur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hızla dalgalanan manyetik alan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Non-invazif olan bu yöntemde magnetik"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0119",
+       "ses": "İndüklenen bu mikro akımlar hedef kortikal bölgedeki piramidal nöronların membranlarını depolarize ederek aksiyon potansiyeli dalgaları tetikler.",
+       "ekran": "Manyetik uyaran dokuda elektrik akımı ve **nöronal depolarizasyon dalgası** oluşturur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "nöronal depolarizasyon dalgası",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "uygulandığı bölgede  depolarizasyon"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0120",
+       "ses": "Güçlü ve hızla dalgalanan mıknatıs bobini, anesteziye veya kas gevşeticiye gerek kalmadan ayaktan uyanık hastada kortikal uyarılabilirlik oluşturur.",
+       "ekran": "TMS ayaktan uygulanır ve dokuda **sekonder elektrik akımları** meydana getirir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sekonder elektrik akımları",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Güçlü ve hızla dalgalanan mıknatıs elektrik"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0121",
+       "ses": "Manyetik alan dokulardan ve kemik bariyerinden direnç görmeden geçtiğinden hastada elektroşok gibi yaygın bir jeneralize nöbet veya bilinç kaybı meydana gelmez.",
+       "ekran": "Manyetik alan kafatasından geçerken **yaygın epileptik nöbet oluşturmaz**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yaygın epileptik nöbet oluşturmaz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Non-invazif olan bu yöntemde magnetik"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-20-p026",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k2-20-c0122",
+       "ses": "Tekrarlayıcı Te me se yani re te me se protokollerinin dirençli majör depresyonda antidepresan etkinlik sağladığı kapsamlı klinik çalışmalarla kanıtlanmıştır.",
+       "ekran": "**Tekrarlı TMS (rTMS)** uygulamalarının depresyon tedavisinde etkili olduğu kanıtlanmıştır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tekrarlı TMS (rTMS)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Tekrarlı TMS uygulaması depresyonda etkili"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0123",
+       "ses": "Yan etki profili açısından Te me se genel anestezi ve nöbet indüksiyonu içermediğinden E ka teye kıyasla çok daha az bilişsel bozulmaya neden olur.",
+       "ekran": "TMS ayaktan uygulanır ve **EKT'den daha az bilişsel bozulma** yapar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "EKT'den daha az bilişsel bozulma",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Yan etki olarak EKT’den daha az bilişsel"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0124",
+       "ses": "Hastalar seansın hemen ardından araba kullanabilir, işlerine dönebilir ve günlük bilişsel aktivitelerini kesintisiz sürdürebilirler.",
+       "ekran": "Seansın hemen ardından hasta günlük **bilişsel aktivitelerine dönebilir**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bilişsel aktivitelerine dönebilir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "bozulmaya neden olur."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0125",
+       "ses": "Şemada incelendiği üzere tel bobin geometrisi manyetik alanın penetrasyon derinliğini belirler ve derinlikteki hedef nöronları selektif olarak uyarır.",
+       "ekran": "Tel bobin geometrisi **manyetik alan derinliğini** ve aktive olan nöronları belirler.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "manyetik alan derinliğini",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "FIGURE 27-1. Transcranial magnetic stimulation (TMS)."
+        ],
+        "sekil": "Tel bobin geometrisi ve manyetik alan derinliği ile aktive olan nöronları gösteren şema"
+       }
+      },
+      {
+       "id": "k2-20-c0126",
+       "ses": "Klinik uygulamada motor korteks üzerinde başparmak seyirmesi kaydedilerek motor eşik bulunur ve ardından bobin beş santimetre öne kaydırılarak sol dorsolateral prefrontal korteks uyarılır.",
+       "ekran": "Motor eşik belirlendikten sonra **sol dorsolateral prefrontal korteks** uyarılır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sol dorsolateral prefrontal korteks",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Activated"
+        ],
+        "sekil": "Sol dorsolateral prefrontal kortekste manyetik alan ve aktive nöron popülasyonunu gösteren şema"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-20-b12",
+   "baslik": "TMS Klinik Etkinliği, FDA Depresyon ve Sigara Bırakma Onayları",
+   "paragraflar": [
+    {
+     "id": "k2-20-p027",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k2-20-c0127",
+       "ses": "Te me se tekniğinin psikiyatrik hastalıklardaki etkinlik sınırlarına baktığımızda depresyonda anlamlı bir güce sahip olduğu, Parkinson hastalığında ise orta düzeyde etkili olduğu bildirilmektedir.",
+       "ekran": "TMS **depresyonda etkili**, Parkinson hastalığında ise orta düzeyde faydalıdır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "depresyonda etkili",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Depresyonda sınırlı bir etkiye sahip olduğu, PH’da"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0128",
+       "ses": "Sınavlarda sıklıkla çeldirici olarak sorulan negatif kuralı unutmamalıyız: Te me se yöntemi psikotik belirtilerin ve şizofreninin tedavisinde tamamen etkisizdir.",
+       "ekran": "TMS yöntemi **psikoz için tamamen etkisizdir** ve şizofrenide endike değildir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "psikoz için tamamen etkisizdir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Psikoz için etkisiz"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0129",
+       "ses": "Yaşlı hastalarda yaşlanmayla birlikte kortikal atrofi geliştiğinden beyin dokusu kafatasından uzaklaşır; mesafe arttıkça manyetik alan hızla zayıfladığından yaşlılarda etki gücü daha sınırlıdır.",
+       "ekran": "Yaşlılarda kortikal atrofi nedeniyle **beyin dokusu kafatasından uzaklaşır** ve etki azalır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "beyin dokusu kafatasından uzaklaşır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Yaşlı hastalarda beyin dokusu kafatasından daha"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-20-p028",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k2-20-c0130",
+       "ses": "Amerika Gıda ve İlaç Dairesi yani Fe de a, en az bir antidepresan ilaç tedavisinden fayda görmemiş tedaviye dirençli majör depresyon için Te me seye resmi onay vermiştir.",
+       "ekran": "TMS, en az bir ilaca dirençli depresyonda **FDA onayı almış** non-invaziv yöntemdir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "FDA onayı almış",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "FDA tarafından en az bir ilaç tedavisinden fayda"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0131",
+       "ses": "İki bin yirmi yılında ise Derin Transkraniyal Manyetik Stimülasyon kısa süreli sigarayı bırakma tedavisinde Fe de a onayı almış ve minimal yan etkiyle yüksek etkinlik sergilemiştir.",
+       "ekran": "Derin TMS **2020 yılında sigara bırakmada** FDA onayı almıştır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "2020 yılında sigara bırakmada",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "2020 yılında Derin Transkraniyal Manyetik"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0132",
+       "ses": "re te me se uygulamasında kafa derisi kaslarının uyarılmasına bağlı lokal ağrı, gerilim baş ağrısı ve bobin klik sesine bağlı geçici işitme yorgunluğu izlenebilir.",
+       "ekran": "rTMS sonrasında **kafa derisi ağrısı ve geçici işitme kaybı** gelişebilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kafa derisi ağrısı ve geçici işitme kaybı",
+         "tur": "terim"
+        },
+        {
+         "metin": "kafa derisi ağrısı ve geçici işitme kaybı",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "q-25-26_d_nem_3_kurul_2-86"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "rTMS, kafa derisi ağrısı, baş ağrısı ve"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0133",
+       "ses": "Yöntemin en ciddi ve endişe verici riski epileptik nöbet tetikleme olasılığıdır; kılavuzlardaki güvenlik protokollerine uyularak bu nöbet riski binde birin altına indirilir.",
+       "ekran": "rTMS'nin en ciddi endişesi **epileptik nöbet tetikleme riskidir**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "epileptik nöbet tetikleme riskidir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "En ciddi endişe, epileptik nöbetleri tetikleme"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0134",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: Non-invaziv yolla nöronal depolarizasyon dalgası oluşturarak depresyon tedavisinde Fe de a onayı almış nöromodülasyon yöntemi transkraniyal manyetik stimülasyondur.",
+       "ekran": "Depresyonda FDA onaylı **non-invaziv nörostimülasyon yöntemi TMS'dir**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "non-invaziv nörostimülasyon yöntemi TMS'dir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "q-25-26_d_nem_3_kurul_2-78"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "görmemiş depresyon için izin alabilmiş durumda"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0135",
+       "ses": "Sınavda sorulan önemli bir ayrıntı şudur ki: Tedaviye dirençli majör depresif bozuklukta kafa derisi üzerine yerleştirilen manyetik bobin ile fokal manyetik alan oluşturarak sol dorsolateral prefrontal kortekste depolarizasyon sağlayan Fe de a onaylı yöntem tekrarlayıcı transkraniyal manyetik stimülasyondur.",
+       "ekran": "Dirençli depresyonda sol DLPFC'yi uyaran **FDA onaylı yöntem rTMS'dir**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "FDA onaylı yöntem rTMS'dir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3-k2-psi-011"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "depresyonda etkili olduğunu gösteren çalışmalar vardır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-20-b13",
+   "baslik": "Derin TMS (dTMS), Hesed Bobini ve İki Taraflı Uyarım",
+   "paragraflar": [
+    {
+     "id": "k2-20-p029",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k2-20-c0136",
+       "ses": "Derin transkraniyal manyetik stimülasyon yani de te me se, standart re te me senin derinlik ve alan kısıtlılıklarını aşmak amacıyla geliştirilmiş ileri bir teknolojidir.",
+       "ekran": "**Derin TMS (dTMS)**, derin ve bilateral beyin bölgelerini uyaran ileri tekniktir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Derin TMS (dTMS)",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Derin transkraniyal manyetik stimülasyon (dTMS), derin ve"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0137",
+       "ses": "Standart sekiz rakamı şeklindeki bobinler manyetik alanı sadece tek taraflı odaklar ve kafatasının yaklaşık bir buçuk ila iki santimetre altına kadar penetre olabilir.",
+       "ekran": "Standart sekiz bobini yalnızca **2 cm derinliğe tek taraflı** ulaşabilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "2 cm derinliğe tek taraflı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "sekiz rakamı şeklindeki bobinlerin yalnızca yüzeysel"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0138",
+       "ses": "Bu yüzeysel sınır, bağımlılık hastalıklarında ve derin duygu durum devrelerinde kilit rol oynayan nükleus akkumbens ve ventral tegmental alan gibi subkortikal yapılara ulaşmayı engeller.",
+       "ekran": "Sekiz bobini bağımlılıkta kritik **derin subkortikal yapılara** ulaşamaz.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "derin subkortikal yapılara",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "bağımlılık bozukluklarında kritik rol oynayan daha"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0139",
+       "ses": "Prefrontal korteksin derin katmanları ile anterior singulat alan arasındaki nöronal iletişim aksadığında standart manyetik uyarım yetersiz kalmaktadır.",
+       "ekran": "Yüzeysel bobinler **derin anterior singulat liflere** yeterince ulaşamamaktadır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "derin anterior singulat liflere",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Derin transkraniyal manyetik stimülasyon (dTMS), derin ve"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-20-p030",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k2-20-c0140",
+       "ses": "Bu anatomik kısıtlamayı çözmek için geliştirilen de te me se, kask içine yerleştirilen çoklu sargılı Hesed bobini yani Haş bobini aracılığıyla darbeler iletir.",
+       "ekran": "Derin TMS kask içindeki **Hesed bobini (H-bobin)** ile darbeleri iletir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hesed bobini (H-bobin)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "kafatasının yaklaşık 4 cm altına ulaşan Hesed"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0141",
+       "ses": "Haş bobini geometrisi manyetik alanın kafatasının yaklaşık dört santimetre altına kadar sönümlenmeden inmesini sağlar.",
+       "ekran": "H-bobin kafatasının **yaklaşık 4 cm altına kadar** penetrasyon sağlar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yaklaşık 4 cm altına kadar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "yaklaşık 4 cm altına ulaşan"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0142",
+       "ses": "Haş bobinlerinin en ayırt edici özelliği eş zamanlı çift taraflı yani bilateral uyarım sağlayarak her iki serebral hemisferi aynı anda modüle edebilmesidir.",
+       "ekran": "H-bobininin en belirgin özelliği **eş zamanlı bilateral uyarım** sağlayabilmesidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "eş zamanlı bilateral uyarım",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "ayırt edici bir özelliği, eş zamanlı çift taraflı uyarım"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0143",
+       "ses": "Her iki yarımküredeki prefrontal ve ödül ağlarının aynı anda regüle edilmesi, sigara ve madde bağımlılığı ile dirençli depresyon tedavisinde de te me seye benzersiz üstünlük kazandırır.",
+       "ekran": "Bilateral uyarım **ödül devrelerini ve bağımlılık ağlarını** modüle eder.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ödül devrelerini ve bağımlılık ağlarını",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "her iki yarımküreyi aynı anda modüle etme"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0144",
+       "ses": "Bilateral mezolimbik uyarım nikotin aşermesini ve kompulsif madde arama davranışını baskılayarak kalıcı remisyon sağlar.",
+       "ekran": "Bilateral dTMS uyarımı **nikotin aşermesini ve kompulsif davranışı** baskılar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "nikotin aşermesini ve kompulsif davranışı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "bağımlılık bozukluklarında kritik rol oynayan daha"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-20-b14",
+   "baslik": "Transkraniyal Doğru Akım Stimülasyonu (tDCS) ve Membran Kutupları",
+   "paragraflar": [
+    {
+     "id": "k2-20-p031",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k2-20-c0145",
+       "ses": "Transkraniyal doğru akım stimülasyonu yani te de ce se, pil benzeri taşınabilir bir jeneratör ve tuzlu suyla ıslatılmış elektrot pedleri aracılığıyla kafa derisine uygulanır.",
+       "ekran": "**tDCS**, kafa derisine tuzlu su elektrot pedleriyle doğru akım uygular.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tDCS",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "TDCS, 0,5–2 mA aralığında, pil benzeri bir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0146",
+       "ses": "Kafa derisine sıfır virgül beş ila iki miliamper aralığında çok düşük genlikli sabit doğru akımlar iletilir.",
+       "ekran": "Uygulanan akım **0.5–2 mA aralığında düşük doğru akımdır**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "0.5–2 mA aralığında düşük doğru akımdır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "0,5–2 mA aralığında, pil benzeri bir cihaza bağlı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0147",
+       "ses": "Bu zayıf elektriksel akım aksiyon potansiyeli tetikleyecek güçte değildir; nöronal membran potansiyellerinde eşik altı modülasyon oluşturarak kortikal uyarılabilirliği değiştirir.",
+       "ekran": "tDCS nöron zarlarında **eşik altı membran modülasyonu** yaparak uyarılabilirliği değiştirir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "eşik altı membran modülasyonu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "nöronal membran potansiyellerinin eşik altı modülasyonunu indükleyerek"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0148",
+       "ses": "Uygulanan doğru akım nöronlarda en metil de aspartat reseptör aracılı sinaptik plastisiteyi uyararak uzun süreli potansiyalizasyon benzeri değişimler meydana getirir.",
+       "ekran": "tDCS nöronal sinapslarda **uzun süreli potansiyalizasyon benzeri** plastisite başlatır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "uzun süreli potansiyalizasyon benzeri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "nöronal membran potansiyellerinin eşik altı modülasyonunu indükleyerek"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-20-p032",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k2-20-c0149",
+       "ses": "Kortikal uyarılabilirliğin yönü elektrodun polaritesine bağlıdır: anodal te de ce se nöronları depolarize ederek uyarılabilirliği artırır.",
+       "ekran": "**Anodal tDCS depolarizasyon** oluşturarak kortikal uyarılabilirliği artırır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Anodal tDCS depolarizasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "anodal tDCS nöronları depolarize ederek"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0150",
+       "ses": "Katodal te de ce se ise nöron membranlarını hiperpolarize ederek istirahat potansiyelini ateşleme eşiğinden uzaklaştırır ve kortikal uyarılabilirliği azaltır.",
+       "ekran": "**Katodal tDCS hiperpolarizasyon** oluşturarak kortikal uyarılabilirliği azaltır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Katodal tDCS hiperpolarizasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "katodal tDCS nöronları hiperpolarize ederek"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0151",
+       "ses": "Te me se ile te de ce se arasındaki elektrofizyolojik ayrım şudur: te de ce se tamamen nöromodülatör iken, Te me se hem nörostimülatör hem de nöromodülatördür.",
+       "ekran": "tDCS **tamamen nöromodülatördür**; TMS ise hem nörostimülatör hem nöromodülatördür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tamamen nöromodülatördür",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "tDCS tamamen nöromodülatör iken, TMS hem"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0152",
+       "ses": "Klinik onay durumuna baktığımızda te de ce se yöntemi şu anda psikiyatride herhangi bir endikasyon için Fe de a onayına sahip değildir.",
+       "ekran": "tDCS şu anda psikiyatride **hiçbir endikasyon için onaylanmamıştır**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hiçbir endikasyon için onaylanmamıştır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "tDCS şu anda herhangi bir endikasyon için onaylanmamıştır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-20-p033",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k2-20-c0153",
+       "ses": "te de ce se tekniğinin en büyük dezavantajı düşük odaksallığıdır; elektrik kafatasından geçerken diffüz olarak dağılır ve yalnızca en yüzeysel kortikal tabakaya ulaşabilir.",
+       "ekran": "tDCS **düşük odaksallığa sahiptir** ve yalnızca yüzeysel kortekse ulaşabilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "düşük odaksallığa sahiptir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Bu tekniğin dezavantajlarından biri düşük"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0154",
+       "ses": "Güvenlik açısından ise sistemik risk taşımaz; yan etkiler elektrot altındaki deride hafif kaşıntı, kızarıklık ve geçici yanma hissi ile sınırlıdır.",
+       "ekran": "Yan etkileri elektrot altında **hafif cilt tahrişi ve yanma hissi** ile sınırlıdır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hafif cilt tahrişi ve yanma hissi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "yan etkilerin (cilt tahrişi ve yanma hissi)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0155",
+       "ses": "Cihazın hafifliği, pille çalışan taşınabilir yapısı ve düşük maliyeti ev ortamında tele-tıp gözetiminde uygulanabilme potansiyelini gündeme getirmektedir.",
+       "ekran": "tDCS'nin **taşınabilir ve düşük maliyetli olması** klinik araştırmalarda büyük avantajdır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "taşınabilir ve düşük maliyetli olması",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Bu tekniğin dezavantajlarından biri düşük"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-20-b15",
+   "baslik": "Derin Beyin Uyarımı (DBS), Cerrahi Teknik ve FDA Onay Takvimi",
+   "paragraflar": [
+    {
+     "id": "k2-20-p034",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k2-20-c0156",
+       "ses": "Derin Beyin Uyarımı yani De be se, stereotaksik beyin cerrahisiyle hedeflenen subkortikal çekirdeklere elektrot yerleştirilen invaziv bir nöromodülasyon yöntemidir.",
+       "ekran": "**DBS (Derin Beyin Uyarımı)**, implante elektrotlarla uygulanan cerrahi yöntemdir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "DBS (Derin Beyin Uyarımı)",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Derin Beyin Uyarımı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0157",
+       "ses": "İlk olarak bin dokuz yüz yetmiş üç yılında inatçı ağrı tedavisinde kullanılan bu yöntem, daha sonra Parkinson hastalığındaki medikal tedaviye dirençli tremorda uygulanmıştır.",
+       "ekran": "İlk olarak 1973'te **ağrıda ve Parkinson tremorunda** kullanılmaya başlanmıştır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ağrıda ve Parkinson tremorunda",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "İlk olarak ağrı tedavisinde (1973) kullanılan"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0158",
+       "ses": "Depresif hastalarda De be se etkinliği araştırılırken hastanın en az beş yıldır hasta olması, en az üç farklı antidepresanın etkisiz kalması ve yeterli psikoterapinin sonuç vermemiş olması şartı aranır.",
+       "ekran": "Depresyonda **en az 5 yıl hastalık ve 3 antidepresana direnç** kriteri aranır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "en az 5 yıl hastalık ve 3 antidepresana direnç",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "En az 5 yıldır hasta, en az 3 değişik"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0159",
+       "ses": "Dirençli depresyonda yapılan açık uçlu klinik araştırmalarda subgenual anterior singulat korteks yani Brodmann yirmi beş bölgesi elektriksel olarak uyarılmaktadır.",
+       "ekran": "Dirençli depresyonda **anterior singulat bölge (Brodmann 25)** hedeflenmektedir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "anterior singulat bölge (Brodmann 25)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "anterior singulat bölgenin uyarıldığı açık"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-20-p035",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k2-20-c0160",
+       "ses": "De be se cerrahisinde kafatasından burr-hole deliği açılır ve mikrometre hassasiyetinde çok ince bir kablo elektrot ilgili beyin bölgesine yerleştirilir.",
+       "ekran": "Kafatasına delik açılarak hedef çekirdeğe **ince kablo elektrot yerleştirilir**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ince kablo elektrot yerleştirilir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "kafatasından ufak bir delik açıp çok"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0161",
+       "ses": "Bu kablo cilt altından tünellenerek göğüs duvarına subdermal olarak yerleştirilen bir jeneratöre yani pacemakera bağlanır.",
+       "ekran": "Elektrot kablosu göğüs duvarındaki **subdermal pacemakera bağlanır**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "subdermal pacemakera bağlanır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "göğüs duvarına subdermal olarak yerleştirilen bir pacemakera"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0162",
+       "ses": "De be se yöntemi patolojik hiperaktif bölgeyi dokuyu tahrip etmeden yüksek frekanslı akımla elektriksel olarak susturarak geri dönüşlü bir fonksiyonel inhibisyon sağlar.",
+       "ekran": "DBS patolojik bölgeyi **fonksiyonel inhibisyonla elektriksel susturma** yöntemidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "fonksiyonel inhibisyonla elektriksel susturma",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "istenmeyen bölgeyi işlevsel anlamda, cerrahiye"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0163",
+       "ses": "Pil kapatıldığında veya çıkarıldığında doku eski haline döner; bu geri dönüşlülük De be seyi kalıcı doku tahribatı yapan psikoşirürjiden ayıran en büyük üstünlüktür.",
+       "ekran": "Pil kapatıldığında etki biter; DBS **tamamen geri dönüşlü bir cerrahidir**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tamamen geri dönüşlü bir cerrahidir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "benzer bir şekilde, çıkarmaktır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0164",
+       "ses": "De be se, Fe de a tarafından tedaviye dirençli obsesif kompulsif bozukluk yani O ke be tedavisinde resmi olarak onaylanmış cerrahi bir seçenektir.",
+       "ekran": "DBS, FDA tarafından **dirençli OKB tedavisinde onay almıştır**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dirençli OKB tedavisinde onay almıştır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "FDA tarafından dirençli OKB tedavisinde onay"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0165",
+       "ses": "Deneyimli merkezlerde uygulandığında De be se cerrahisi genellikle düşük riskli kabul edilir ve kalıcı cerrahi morbidite oranı yaklaşık yüzde birdir.",
+       "ekran": "DBS cerrahisinde **kalıcı cerrahi morbidite oranı yaklaşık %1'dir**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kalıcı cerrahi morbidite oranı yaklaşık %1'dir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "DBS cerrahisi genellikle düşük riskli kabul"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-20-p036",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k2-20-c0166",
+       "ses": "Fe de a onay kronolojisine baktığımızda bin dokuz yüz doksan yedide Parkinson tremoru, iki bin ikide Parkinson motor semptomları ve iki bin üçte distoni için onay verilmiştir.",
+       "ekran": "FDA; 1997'de tremoru, 2002'de motor semptomları, **2003'te distoniyi** onaylamıştır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "2003'te distoniyi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Gıda ve İlaç Dairesi (FDA), bugüne kadar"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0167",
+       "ses": "İki bin dokuzda dirençli O ke be onayı alınmış, iki bin on sekizde ise dirençli epilepsi nöbetlerinin kontrolü için De be se resmi onay almıştır.",
+       "ekran": "FDA; **2009'da OKB ve 2018'de epilepsi** için DBS kullanımını onaylamıştır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "2009'da OKB ve 2018'de epilepsi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "2009'da obsesif kompulsif bozukluğun (OKB),"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0168",
+       "ses": "Resmi onay almamış olsa da Tourette sendromu, kronik ağrı, majör depresyon, anoreksiya nervoza ve obezitede deneysel De be se uygulamaları araştırılmaktadır.",
+       "ekran": "DBS **Tourette, majör depresyon ve anoreksiyada** deneysel olarak araştırılmaktadır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tourette, majör depresyon ve anoreksiyada",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Tourette sendromu, kronik ağrı, majör depresif"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0169",
+       "ses": "Alzheimer hastalığında ise kolinerjik iletimi canlandırmak amacıyla Meynert'in bazal çekirdeğini De be se ile hedefleme olasılığı incelenmektedir.",
+       "ekran": "Alzheimer hastalığında **Meynert'in bazal çekirdeği** DBS hedefi olarak incelenmektedir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Meynert'in bazal çekirdeği",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Alzheimer Hastalığını tedavi etmek için Meynert'in"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0170",
+       "ses": "Diyagramda özetlendiği üzere re te me se manyetik sekiz bobiniyle, te de ce se deri pedleriyle, De be se ise derin beyin elektrotu ve subdermal puls jeneratörüyle uygulanır.",
+       "ekran": "Diyagramda **rTMS, tDCS ve DBS donanımları** karşılaştırmalı olarak özetlenmiştir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "rTMS, tDCS ve DBS donanımları",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Araştırılan üç nöromodülasyon tekniğini gösteren diyagramlar:"
+        ],
+        "sekil": "rTMS sekiz bobini tDCS pedleri ve DBS jeneratörünü karşılaştıran nöromodülasyon şeması"
+       }
+      },
+      {
+       "id": "k2-20-c0171",
+       "ses": "Üç nöromodülasyon tekniğinin karşılaştırmalı şeması non-invaziv manyetik ve elektriksel yöntemler ile cerrahi mikroelektrot implantasyonunun yapısal farklarını net olarak ortaya koymaktadır.",
+       "ekran": "Şemada **non-invaziv ve cerrahi nöromodülasyon yöntemleri** karşılaştırılmaktadır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "non-invaziv ve cerrahi nöromodülasyon yöntemleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Araştırılan üç nöromodülasyon tekniğini gösteren diyagramlar:"
+        ],
+        "sekil": "rTMS tDCS ve DBS cerrahi donanımlarını gösteren karşılaştırmalı diyagram"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-20-b16",
+   "baslik": "Fototerapi (Işık Terapisi), Mevsimsel Depresyon ve Melatonin Yolu",
+   "paragraflar": [
+    {
+     "id": "k2-20-p037",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k2-20-c0172",
+       "ses": "Fototerapi yani parlak ışık terapisi, ilk olarak bin dokuz yüz seksen dört yılında mevsimsel affektif bozukluk tedavisinde klinik kullanıma girmiştir.",
+       "ekran": "**Fototerapi (ışık terapisi)**, 1984'te mevsimsel depresyon tedavisinde başlatılmıştır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Fototerapi (ışık terapisi)",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Fototerapi (Işık terapisi)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0173",
+       "ses": "Mevsimsel depresyon tipik olarak sonbahar sonu ve çevresel gün ışığının belirgin azaldığı kış aylarının başında ortaya çıkar.",
+       "ekran": "Mevsimsel affektif bozukluk **kış aylarının başında** ortaya çıkmaktadır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kış aylarının başında",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Mevsimsel depresyon, çoğunlukla atipik özellikler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0174",
+       "ses": "Bu klinik tablo klasik depresyondaki uykusuzluk ve iştahsızlığın aksine aşırı uyuma, karbonhidrat açlığı ve kilo alımı gibi atipik özellikler gösterir.",
+       "ekran": "Mevsimsel depresyon hipersomni ve kilo alımı gibi **atipik özellikler gösterir**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "atipik özellikler gösterir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "gösterir. Tipik olarak ışığın azaldığı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0175",
+       "ses": "Kış depresyonunda hastalar sabah uyanmakta zorlanır, enerjisizlik çeker ve gün boyu yoğun unlu ve şekerli gıdalar tüketme dürtüsü yaşarlar.",
+       "ekran": "Kış depresyonunda **sabah uyanma güçlüğü ve karbonhidrat aşermesi** belirgindir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sabah uyanma güçlüğü ve karbonhidrat aşermesi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Fototerapi (Işık terapisi)"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-20-p038",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k2-20-c0176",
+       "ses": "Uygulama protokolünde hastalar sabah uyandıktan sonra iki bin beş yüz ile on bin lüks parlak gündüz ışığı yayan fototerapi kutusunun karşısında otuz dakika ile iki saat otururlar.",
+       "ekran": "Hastalar **2.500-10.000 lüks parlak ışık** karşısında 30 dakika ile 2 saat otururlar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "2.500-10.000 lüks parlak ışık",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Hastalar 2.500-10.000 lüks parlak gündüz"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0177",
+       "ses": "Gözdeki melanopsin içeren retinal ganglion hücrelerinden çıkan retinohipotalamik traktus, suprakiazmatik çekirdeğe ulaşarak epifiz bezinden gündüz melatonin salınımını baskılar.",
+       "ekran": "Işık tedavisi **melatonin salınımını azaltarak** ve sirkadiyen ritmi düzenleyerek etki eder.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "melatonin salınımını azaltarak",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Işık tedavisinin melatonin (salınımı azaltır)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0178",
+       "ses": "Melatonin düzeyinin düşürülmesi ve sirkadiyen faz kaymasının düzeltilmesi sayesinde antidepresan ilaçların haftalar süren etkisine kıyasla iki ila dört gün içinde çok hızlı klinik yanıt alınır.",
+       "ekran": "Fototerapiye klinik yanıt çok hızlıdır ve **2-4 gün içinde düzelme** başlar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "2-4 gün içinde düzelme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Tedaviye yanıt hızlıdır (2-4 gün)."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0179",
+       "ses": "On bin lüks ışık kaynağında otuz dakika yeterli olurken, iki bin beş yüz lüks kaynaklarda tedavi süresi iki saate kadar uzatılmalıdır.",
+       "ekran": "Işık yoğunluğuna göre **seans süresi 30 dakika ile 2 saat** arasında planlanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "seans süresi 30 dakika ile 2 saat",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Hastalar 2.500-10.000 lüks parlak gündüz"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-20-b17",
+   "baslik": "Uyku Yoksunluğu Protokolü, Gündüz Kestirmesi ve Biyolojik Yanıtlar",
+   "paragraflar": [
+    {
+     "id": "k2-20-p039",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k2-20-c0180",
+       "ses": "Uyku yoksunluğu terapisi bin dokuz yüz yetmiş bir yılından bu yana bilinen en hızlı fakat en dayanıksız antidepresan müdahaledir.",
+       "ekran": "**Uyku yoksunluğu terapisi**, 1971 yılından bu yana uygulanan biyolojik yöntemdir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Uyku yoksunluğu terapisi",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Uyku yoksunluğu"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0181",
+       "ses": "Hastanın bir gece boyunca tamamen uyanık tutulduğu tam uyku yoksunluğu, depresyon hastalarının yüzde kırk ila altmışında ertesi sabah dramatik bir klinik düzelme sağlar.",
+       "ekran": "Tam uyku yoksunluğu hastaların **%40-60'ında ertesi gün düzelme** sağlar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "%40-60'ında ertesi gün düzelme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Tam uyku yoksunluğu depresyon hastalarının %40-"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0182",
+       "ses": "Depresyondaki sirkadiyen uyku yapısı bozuklukları biyolojik bir toparlanma çabası olarak değerlendirilebilir.",
+       "ekran": "Depresyonda uykudaki ritim değişiklikleri **düzelmenin biyolojik çabası** sayılabilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "düzelmenin biyolojik çabası",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Depresyonda uykudaki değişiklikler düzelmenin bir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0183",
+       "ses": "Ancak yöntemin en büyük kısıtlılığı elde edilen antidepresan etkinliğin dayanıksız olmasıdır; ertesi gün kazanılan yanıt bir sonraki gün yüzde on ila on beşe kadar geriler.",
+       "ekran": "Ertesi gün kazanılan etkinlik bir sonraki gün **yüzde 10-15'e düşer**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüzde 10-15'e düşer",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Ertesi gün elde edilen etkinlik bir sonraki gün %10-15’e"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0184",
+       "ses": "Parsiyel uyku yoksunluğu protokollerinde ise hasta gecenin ikinci yarısında sabah saat ikide uyandırılarak özellikle rem uykusu hedeflenir.",
+       "ekran": "Parsiyel protokolde hasta **gecenin ikinci yarısında uyandırılarak** REM uykusu baskılanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "gecenin ikinci yarısında uyandırılarak",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Tam uyku yoksunluğu depresyon hastalarının %40-"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-20-p040",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k2-20-c0185",
+       "ses": "Daha da kritik olanı, gün içinde hastanın yapacağı birkaç dakikalık kısa bir kestirme ya da şekerleme bile elde edilen tüm iyileşmeyi sıfırlayarak tablonun şiddetle nüksetmesine neden olur.",
+       "ekran": "Gündüz **kısa bir kestirme bile** depresif tablonun şiddetle tekrarlamasına neden olur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kısa bir kestirme bile",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Elde etkinlik kısa bir kestirme ile bile"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0186",
+       "ses": "Bu nedenle uyku yoksunluğu uygulanan hastanın gündüz uyuması kesin olarak önlenmeli ve etkinin kalıcı olabilmesi için tedaviye antidepresan ya da lityum eklenmelidir.",
+       "ekran": "Etkinliğin kalıcı olması için **antidepresan ve lityum kombinasyonu** uygulanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "antidepresan ve lityum kombinasyonu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Uyku yoksunluğu ile AD ve lityum kullanımı düzelmenin"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0187",
+       "ses": "Klinik pratikte etkinin devamlı olabilmesi için haftalar süren aralıklı protokoller uygulanır; arada bir iki gün süren normal uyku dönemleri verilir.",
+       "ekran": "Etkinliğin sürdürülmesi için **aralıklı uygulama protokolleri** tercih edilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "aralıklı uygulama protokolleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Etkinin devamlı olabilmesi için haftalar süren"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0188",
+       "ses": "Biyolojik mekanizmada serotonin dönüşümü hızlanır, dopamin salınımı artarak psikostimülan etki oluşturur ve tiroid hormonları Te üç ile Te dört kanda yükselir.",
+       "ekran": "Uyku yoksunluğu **5HT dönüşümünü, dopamini ve tiroid hormonlarını** artırır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "5HT dönüşümünü, dopamini ve tiroid hormonlarını",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "5HT dönüşümü artar"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0189",
+       "ses": "Eşzamanlı olarak frontal ve limbik alanlardaki serebral kan akımı değişir ve duygu durum döngüleri biyolojik olarak yeniden dengelenir.",
+       "ekran": "Serebral mekanizmada **frontal ve limbik kan akımı değişir** ve regüle edilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "frontal ve limbik kan akımı değişir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Frontal ve limbik kan akımı değişir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0190",
+       "ses": "Dopamin artışının tetiklediği psikostimülan canlılık sayesinde anhedoni ve psikomotor yavaşlama saatler içinde kırılır.",
+       "ekran": "Dopamin artışının sağladığı canlılık **anhedoni ve psikomotor yavaşlamayı** kırar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "anhedoni ve psikomotor yavaşlamayı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Frontal ve limbik kan akımı değişir"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-20-b18",
+   "baslik": "Psikoşirürji Standartları, 5 Yıllık Direnç Kuralı ve Cerrahi Tipleri",
+   "paragraflar": [
+    {
+     "id": "k2-20-p041",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k2-20-c0191",
+       "ses": "Psikoşirürji, psikiyatride farmakolojik ve diğer tüm biyolojik tedavilerin tükendiği uç vakalarda uygulanan stereotaksik beyin cerrahisi operasyonlarıdır.",
+       "ekran": "**Psikoşirürji**, dirençli psikiyatrik tablolarda uygulanan stereotaksik beyin cerrahisidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Psikoşirürji",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Psikoşirürji"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0192",
+       "ses": "Bu cerrahi müdahaleler spesifik beyin alanlarında stereotaksik lezyon oluşturma yani singulotomi ya da patolojik bağlantı yollarını kesme şeklinde uygulanır.",
+       "ekran": "Operasyonlar **lezyon oluşturma (singulotomi) veya traktotomi** şeklinde yapılır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "lezyon oluşturma (singulotomi) veya traktotomi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Spesifik beyin alanlarında lezyon oluşturma"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0193",
+       "ses": "Psikoşirürji operasyonunun uygulanabilmesi için hastaya en az beş yıl süreyle uygulanan tüm tedavi yöntemlerinin etkisiz kaldığı resmi tıbbi kurullarca belgelenmelidir.",
+       "ekran": "Cerrahi için **en az 5 yıl tüm tedavilerin etkisiz kaldığı** belgelenmelidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "en az 5 yıl tüm tedavilerin etkisiz kaldığı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "hastaya 5 yıl süreyle uygulanan tüm tedavi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0194",
+       "ses": "Kronik tedaviye dirençli ağır majör depresif bozukluğu olan hastalar ile dirençli obsesif kompulsif bozukluğu bulunan hastalar psikoşirürjiden en çok fayda gören gruptur.",
+       "ekran": "**Dirençli ağır depresyon ve OKB hastaları** psikoşirürjiden en çok fayda gören gruptur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Dirençli ağır depresyon ve OKB hastaları",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Kronik tedaviye dirençli ağır major depresif"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0195",
+       "ses": "Cerrahi kararı bağımsız psikiyatri uzmanları, beyin cerrahisi ve etik kurulun ortak oybirliği ile onaylanmalıdır.",
+       "ekran": "Cerrahi müdahale için **multidisipliner kurul ve etik onayı** zorunludur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "multidisipliner kurul ve etik onayı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "hastaya 5 yıl süreyle uygulanan tüm tedavi"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-20-p042",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k2-20-c0196",
+       "ses": "Cerrahi tiplerine baktığımızda anterior singulotomi ve anterior kapsülotomi operasyonları öncelikle tedaviye dirençli O ke be olgularında tercih edilir.",
+       "ekran": "**Anterior singulotomi ve kapsülotomi** öncelikle dirençli OKB'de uygulanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Anterior singulotomi ve kapsülotomi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Anterior singulotomi: OKB"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0197",
+       "ses": "Anterior kapsülotomide kapsula interna ön bacağı, anterior singulotomide ise singulat girus lifleri lezyone edilerek kortikostriatal obsesif döngü cerrahi olarak kesilir.",
+       "ekran": "Kapsülotomi ve singulotomi ile **kortikostriatal obsesif döngü** cerrahi olarak kesilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kortikostriatal obsesif döngü",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Anterior kapsülotomi: OKB"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0198",
+       "ses": "Subkaudat traktotomi ameliyatı orbitofrontal korteks liflerini keserek öncelikle tedaviye dirençli majör depresyon hastalarında uygulanır.",
+       "ekran": "**Subkaudat traktotomi** tedaviye dirençli majör depresyonda tercih edilen cerrahidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Subkaudat traktotomi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Subkaudat traktotomi: Depresyon"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0199",
+       "ses": "Limbik lökotomi ise singulotomi ile traktotominin birleşimidir ve hem dirençli O ke be hem de dirençli depresyon gösteren ağır vakalarda başvurulan cerrahi ablasyondur.",
+       "ekran": "**Limbik lökotomi** hem dirençli OKB hem dirençli depresyonda uygulanan birleşik ameliyattır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Limbik lökotomi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Limbik lökotomi: OKB ve depresyon"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0200",
+       "ses": "Böylece elektrokonvülzif tedavi, manyetik stimülasyon, doğru akım, derin beyin uyarımı, fototerapi, uyku yoksunluğu ve psikoşirürjiyi kapsayan biyolojik tedaviler dersimizi tamamlamış bulunuyoruz.",
+       "ekran": "Biyolojik tedaviler **EKT'den psikoşirürjiye uzanan** geniş bir klinik yelpaze sunar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "EKT'den psikoşirürjiye uzanan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Sadock BJ, Sadock VA, Comprehensive Textbook of Psychiatry,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-20-c0201",
+       "ses": "Stereotaksik ablasyondan elektriksel uyarım protokollerine kadar her biyolojik yöntem, psikofarmakolojiye dirençli vakalarda hastaya yeniden umut ve klinik şifa kapısı aralamaktadır.",
+       "ekran": "Tüm biyolojik yöntemler **dirençli psikiyatrik tablolarda** kritik tedavi seçenekleridir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dirençli psikiyatrik tablolarda",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Limbik lökotomi: OKB ve depresyon"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "donem": "2025-2026"
+}
