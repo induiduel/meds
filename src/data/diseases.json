@@ -189745,6 +189745,29 @@
      "refs": [
       0
      ]
+    },
+    {
+     "text": "Diyabet hastalarında ve kronik alkolizmde komanın nedeni sıklıkla ==hipoglisemidir==.",
+     "label": "Koma nedeni",
+     "key": true,
+     "entities": [
+      {
+       "name": "diabetes mellitus",
+       "type": "hastalik"
+      },
+      {
+       "name": "kronik alkolizm",
+       "type": "risk_faktoru"
+      },
+      {
+       "name": "koma",
+       "type": "bulgu"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 42",
+     "refs": [
+      0
+     ]
     }
    ],
    "physiology": [
@@ -190072,6 +190095,25 @@
      "refs": [
       0
      ]
+    },
+    {
+     "text": "Bilinci kapalı her hastada ilk aşamada ==parmak ucu kan şekeri== bakılır; hipoglisemi gerçek bir acildir.",
+     "label": "Bilinci kapalı hasta",
+     "key": true,
+     "entities": [
+      {
+       "name": "parmak ucu kan şekeri",
+       "type": "test"
+      },
+      {
+       "name": "koma",
+       "type": "bulgu"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 10",
+     "refs": [
+      0
+     ]
     }
    ],
    "imaging": [
@@ -190231,6 +190273,25 @@
       1
      ]
     }
+   ],
+   "lecture": [
+    {
+     "text": "Ders hipoglisemiyi bilinç bozukluğunun santral sinir sistemini yaygın etkileyen sistemik nedenleri arasında sayar; bilinci kapalı hastaya ampirik IV glukoz verilir.",
+     "entities": [
+      {
+       "name": "koma",
+       "type": "bulgu"
+      },
+      {
+       "name": "glukoz",
+       "type": "ilac"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 11, 51",
+     "refs": [
+      0
+     ]
+    }
    ]
   },
   "references": [
@@ -190260,16 +190321,24 @@
    "removed": 14
   },
   "relatedLectures": [
-   "Kurul 6"
+   "Kurul 6",
+   "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim"
   ],
   "schemaVersion": 2,
   "curation": {
-   "method": "ders notu + ders kitabı (Robbins/Harrison/Katzung) + resmi kılavuz doğrulaması; madde/varlık modeli",
-   "at": "2026-10-12T05:17:37Z"
+   "yontem": "ders işçisi önerisi → şema 2 (otomatik)",
+   "zaman": "2026-10-25T00:36:13Z",
+   "method": "ders işçisi önerisi → şema 2 (otomatik)",
+   "at": "2026-10-25T00:36:13Z",
+   "kaynak": "ders işçisi is_id 20261024-b2a02c0f11 · ders k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+   "onceki": {
+    "method": "ders notu + ders kitabı (Robbins/Harrison/Katzung) + resmi kılavuz doğrulaması; madde/varlık modeli",
+    "at": "2026-10-12T05:17:37Z"
+   }
   },
   "isCustom": false,
   "createdAt": "2026-10-11T02:40:43Z",
-  "updatedAt": "2026-10-12T05:17:37Z"
+  "updatedAt": "2026-10-25T00:39:26Z"
  },
  {
   "id": "s13-hipokalemi",
@@ -270449,6 +270518,30 @@
       0,
       3
      ]
+    },
+    {
+     "text": "Koma alkole bağlı gibi görünse bile küçük ve gözden kaçan travmalar atlanmamalıdır; altta SAK ya da subdural kanama olabilir.",
+     "label": "Alkollü görünen koma",
+     "key": true,
+     "entities": [
+      {
+       "name": "kafa travması",
+       "type": "hastalik"
+      },
+      {
+       "name": "subdural hematom",
+       "type": "hastalik"
+      },
+      {
+       "name": "alkol",
+       "type": "risk_faktoru"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 18",
+     "refs": [
+      0,
+      3
+     ]
     }
    ],
    "diagnosis": [
@@ -270716,6 +270809,25 @@
       1
      ]
     }
+   ],
+   "lecture": [
+    {
+     "text": "Ders SAK'ı bilinç bozukluğunun santral sinir sistemi kaynaklı nedenleri arasında, intrakraniyal kanama başlığında sayar.",
+     "entities": [
+      {
+       "name": "koma",
+       "type": "bulgu"
+      },
+      {
+       "name": "intrakraniyal kanama",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 13",
+     "refs": [
+      0
+     ]
+    }
    ]
   },
   "references": [
@@ -270746,16 +270858,24 @@
    "removed": 17
   },
   "relatedLectures": [
-   "Kurul 2"
+   "Kurul 2",
+   "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim"
   ],
   "schemaVersion": 2,
   "curation": {
-   "method": "ders notu + ders kitabı (Robbins/Harrison/Katzung) + resmi kılavuz doğrulaması; madde/varlık modeli",
-   "at": "2026-10-12T05:17:37Z"
+   "yontem": "ders işçisi önerisi → şema 2 (otomatik)",
+   "zaman": "2026-10-25T00:36:13Z",
+   "method": "ders işçisi önerisi → şema 2 (otomatik)",
+   "at": "2026-10-25T00:36:13Z",
+   "kaynak": "ders işçisi is_id 20261024-b2a02c0f11 · ders k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+   "onceki": {
+    "method": "ders notu + ders kitabı (Robbins/Harrison/Katzung) + resmi kılavuz doğrulaması; madde/varlık modeli",
+    "at": "2026-10-12T05:17:37Z"
+   }
   },
   "isCustom": false,
   "createdAt": "2026-10-11T02:40:43Z",
-  "updatedAt": "2026-10-12T05:17:37Z"
+  "updatedAt": "2026-10-25T00:39:26Z"
  },
  {
   "id": "s13-subdural-hematom",
@@ -288980,6 +289100,30 @@
       3
      ]
     }
+   ],
+   "lecture": [
+    {
+     "text": "Ders Wernicke ensefalopatisini bilinç bozukluğunun sistemik nedenleri arasında sayar; bilinci kapalı hastaya glukozla birlikte ==tiamin== verilir.",
+     "entities": [
+      {
+       "name": "koma",
+       "type": "bulgu"
+      },
+      {
+       "name": "tiamin",
+       "type": "ilac"
+      },
+      {
+       "name": "glukoz",
+       "type": "ilac"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 11, 59",
+     "refs": [
+      0,
+      2
+     ]
+    }
    ]
   },
   "references": [
@@ -289018,16 +289162,24 @@
    "removed": 9
   },
   "relatedLectures": [
-   "Kurul 2"
+   "Kurul 2",
+   "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim"
   ],
   "schemaVersion": 2,
   "curation": {
-   "method": "ders notu + ders kitabı (Robbins/Harrison/Katzung) + resmi kılavuz doğrulaması; madde/varlık modeli",
-   "at": "2026-10-12T05:17:37Z"
+   "yontem": "ders işçisi önerisi → şema 2 (otomatik)",
+   "zaman": "2026-10-25T00:36:13Z",
+   "method": "ders işçisi önerisi → şema 2 (otomatik)",
+   "at": "2026-10-25T00:36:13Z",
+   "kaynak": "ders işçisi is_id 20261024-b2a02c0f11 · ders k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+   "onceki": {
+    "method": "ders notu + ders kitabı (Robbins/Harrison/Katzung) + resmi kılavuz doğrulaması; madde/varlık modeli",
+    "at": "2026-10-12T05:17:37Z"
+   }
   },
   "isCustom": false,
   "createdAt": "2026-10-11T02:40:43Z",
-  "updatedAt": "2026-10-12T05:17:37Z"
+  "updatedAt": "2026-10-25T00:39:26Z"
  },
  {
   "id": "s13-yaygin-anksiyete-bozuklugu",
@@ -294105,5 +294257,1012 @@
   "altNames": [],
   "createdAt": "2026-10-20T01:33:43Z",
   "updatedAt": "2026-10-20T01:33:43Z"
+ },
+ {
+  "id": "halotan-hepatiti",
+  "name": "Halotan hepatiti (fulminan hepatit)",
+  "latinName": "Hepatitis halothanica",
+  "kind": "patolojik_surec",
+  "category": "Farmakoloji ve Toksikoloji",
+  "hallmarks": [
+   {
+    "text": "Halotana bağlı ==fulminan hepatit==; sıklığı yaklaşık 1/30.000",
+    "entities": [
+     {
+      "name": "halotan",
+      "type": "ilac"
+     },
+     {
+      "name": "fulminan hepatit",
+      "type": "hastalik"
+     }
+    ]
+   },
+   {
+    "text": "Uçucu anestezikler içinde ciddi karaciğer etkisi ==yalnız halotanda== vardır",
+    "entities": [
+     {
+      "name": "inhalasyon anestezikleri",
+      "type": "ilac",
+      "qualifier": "uçucu"
+     }
+    ]
+   },
+   {
+    "text": "Halotan ==12 yaşından küçüklerde== hepatotoksik değildir",
+    "entities": [
+     {
+      "name": "halotan",
+      "type": "ilac"
+     }
+    ]
+   }
+  ],
+  "sections": {
+   "definition": [
+    {
+     "text": "Halotan hepatiti, halotana maruz kalan bireylerde görülen ==fulminan hepatit== ve karaciğer yetmezliğidir.",
+     "key": true,
+     "entities": [
+      {
+       "name": "fulminan hepatit",
+       "type": "hastalik"
+      },
+      {
+       "name": "karaciğer yetmezliği",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k2-07-genel-anestezik-ilaclar · s. 26"
+    }
+   ],
+   "etiology": [
+    {
+     "text": "Nedeni uçucu inhalasyon anesteziği ==halotana maruziyettir==.",
+     "label": "Etken ilaç",
+     "key": true,
+     "entities": [
+      {
+       "name": "halotan",
+       "type": "ilac"
+      }
+     ],
+     "source": "k2-07-genel-anestezik-ilaclar · s. 26"
+    }
+   ],
+   "physiology": [
+    {
+     "text": "Genel anesteziklerin halotan dışında ==karaciğer üzerine ciddi bir etkisi yoktur==; ağır karaciğer hasarı halotana özgüdür.",
+     "label": "Halotana özgü",
+     "key": true,
+     "entities": [
+      {
+       "name": "karaciğer",
+       "type": "anatomi"
+      }
+     ],
+     "source": "k2-07-genel-anestezik-ilaclar · s. 24"
+    }
+   ],
+   "symptoms": [
+    {
+     "text": "Halojenli anesteziklerle ilişkili ==sarılık, ateş ve/veya eozinofiliyle== birlikte açıklanamayan orta–şiddetli karaciğer fonksiyon bozukluğu görülür.",
+     "key": true,
+     "entities": [
+      {
+       "name": "sarılık",
+       "type": "bulgu"
+      },
+      {
+       "name": "ateş",
+       "type": "belirti"
+      },
+      {
+       "name": "eozinofili",
+       "type": "laboratuvar"
+      }
+     ],
+     "source": "k2-07-genel-anestezik-ilaclar · s. 9"
+    }
+   ],
+   "pathognomonic": [
+    {
+     "text": "Halotan ==12 yaşından küçüklerde== hepatotoksik değildir; ders bunun nedenini soru olarak bırakır.",
+     "label": "Yaş",
+     "key": true,
+     "entities": [
+      {
+       "name": "halotan",
+       "type": "ilac"
+      }
+     ],
+     "source": "k2-07-genel-anestezik-ilaclar · s. 24"
+    }
+   ],
+   "treatment": [
+    {
+     "text": "Daha önce halojenli anesteziklerle ilişkili açıklanamayan karaciğer bozukluğu geçirmiş hastada ==sevofluran kullanılmaz==.",
+     "label": "Korunma",
+     "entities": [
+      {
+       "name": "sevofluran",
+       "type": "ilac",
+       "qualifier": "kontrendike"
+      }
+     ],
+     "source": "k2-07-genel-anestezik-ilaclar · s. 9"
+    }
+   ],
+   "epidemiology": [
+    {
+     "text": "Halotana maruz kalanlarda fulminan hepatit yaklaşık ==1/30.000== sıklıkta görülür.",
+     "key": true,
+     "source": "k2-07-genel-anestezik-ilaclar · s. 26"
+    }
+   ],
+   "lecture": [
+    {
+     "text": "Ders halotanın hepatotoksisitesini uçucu anesteziklerin karaciğer etkileri ve toksisitesi içinde anlatır: ==1/30.000== sıklıkta fulminan hepatit, 12 yaş altında hepatotoksisite yok.",
+     "entities": [
+      {
+       "name": "halotan",
+       "type": "ilac"
+      }
+     ],
+     "source": "k2-07-genel-anestezik-ilaclar · s. 24–26"
+    }
+   ]
+  },
+  "references": [
+   {
+    "label": "Ders: Genel Anestezik İlaçlar (Kurul 2) — ders işçisi 20261024-9c0a71cde3"
+   }
+  ],
+  "relatedLectures": [
+   "Kurul 2",
+   "k2-07-genel-anestezik-ilaclar"
+  ],
+  "schemaVersion": 2,
+  "curation": {
+   "yontem": "ders işçisi önerisi → şema 2 (otomatik)",
+   "zaman": "2026-10-25T00:00:00Z",
+   "method": "ders işçisi önerisi → şema 2 (otomatik)",
+   "at": "2026-10-25T00:00:00Z",
+   "kaynak": "ders işçisi is_id 20261024-9c0a71cde3 · ders k2-07-genel-anestezik-ilaclar"
+  },
+  "isCustom": false,
+  "createdAt": "2026-10-25T00:39:26Z",
+  "updatedAt": "2026-10-25T00:39:26Z",
+  "aliases": [],
+  "altNames": []
+ },
+ {
+  "id": "koma",
+  "name": "Koma",
+  "latinName": "Coma",
+  "kind": "bulgu",
+  "category": "Nöroloji ve Nöroşirürji",
+  "hallmarks": [
+   {
+    "text": "Uyandırılamama ve ==farkındalığın olmaması==",
+    "entities": [
+     {
+      "name": "koma",
+      "type": "bulgu"
+     }
+    ]
+   },
+   {
+    "text": "Olguların ~%85'i metabolik-sistemik, ~%15'i SSS kaynaklı",
+    "entities": [
+     {
+      "name": "ensefalopati",
+      "type": "hastalik",
+      "qualifier": "metabolik"
+     }
+    ]
+   },
+   {
+    "text": "Pupil: metabolik ensefalopatide küçük-reaktif, unkal herniasyonda dilate-fikse, ponsta iğne ucu",
+    "entities": [
+     {
+      "name": "beyin herniasyonu",
+      "type": "hastalik",
+      "qualifier": "unkal"
+     },
+     {
+      "name": "okülomotor sinir felci",
+      "type": "bulgu"
+     }
+    ]
+   },
+   {
+    "text": "Ampirik tedavi: IV glukoz + tiamin, naloksan, flumazenil",
+    "entities": [
+     {
+      "name": "glukoz",
+      "type": "ilac"
+     },
+     {
+      "name": "tiamin",
+      "type": "ilac"
+     },
+     {
+      "name": "nalokson",
+      "type": "ilac"
+     },
+     {
+      "name": "flumazenil",
+      "type": "ilac"
+     }
+    ]
+   }
+  ],
+  "sections": {
+   "definition": [
+    {
+     "text": "Koma, hastanın ==uyandırılamadığı== ve çevresinin farkında olmadığı bilinç bozukluğu düzeyidir.",
+     "key": true,
+     "entities": [
+      {
+       "name": "koma",
+       "type": "bulgu"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 6"
+    }
+   ],
+   "etiology": [
+    {
+     "text": "Olguların yaklaşık ==%85'i metabolik ve sistemik==, %15'i santral sinir sistemi kaynaklı nedenlere bağlıdır.",
+     "label": "Dağılım",
+     "key": true,
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 2"
+    },
+    {
+     "text": "SSS'yi yaygın etkileyen sistemik nedenler:",
+     "items": [
+      "Hipoksi",
+      "Hiperkapni",
+      "Hipoglisemi ve hiperglisemi",
+      "Hiponatremi",
+      "Wernicke ensefalopatisi",
+      "Üremik ensefalopati",
+      "Hepatik ensefalopati",
+      "Hipertansif ensefalopati",
+      "Sepsis"
+     ],
+     "label": "Sistemik nedenler",
+     "key": true,
+     "entities": [
+      {
+       "name": "hipoksi",
+       "type": "bulgu"
+      },
+      {
+       "name": "hiperkapni",
+       "type": "laboratuvar"
+      },
+      {
+       "name": "hipoglisemi",
+       "type": "laboratuvar"
+      },
+      {
+       "name": "hiponatremi",
+       "type": "laboratuvar"
+      },
+      {
+       "name": "Wernicke ensefalopatisi",
+       "type": "hastalik"
+      },
+      {
+       "name": "üremik ensefalopati",
+       "type": "hastalik"
+      },
+      {
+       "name": "hepatik ensefalopati",
+       "type": "hastalik"
+      },
+      {
+       "name": "hipertansif ensefalopati",
+       "type": "hastalik"
+      },
+      {
+       "name": "sepsis",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 11"
+    },
+    {
+     "text": "Toksik ve ilaca bağlı nedenler:",
+     "items": [
+      "Toksik madde maruziyeti",
+      "İlaç veya alkol çekilmesi",
+      "İlaç etkileşimi"
+     ],
+     "label": "Toksik nedenler",
+     "entities": [
+      {
+       "name": "alkol yoksunluğu",
+       "type": "hastalik"
+      },
+      {
+       "name": "ilaç etkileşimi",
+       "type": "risk_faktoru"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 12"
+    },
+    {
+     "text": "SSS kaynaklı nedenler:",
+     "items": [
+      "Kafa travması",
+      "SAK dahil intrakraniyal kanama",
+      "İskemik inme",
+      "Yer kaplayan oluşum",
+      "SSS enfeksiyonu",
+      "Nöbetler (status epileptikus, postiktal dönem)",
+      "Demans"
+     ],
+     "label": "SSS nedenleri",
+     "key": true,
+     "entities": [
+      {
+       "name": "kafa travması",
+       "type": "hastalik"
+      },
+      {
+       "name": "intrakraniyal kanama",
+       "type": "hastalik"
+      },
+      {
+       "name": "subaraknoid kanama",
+       "type": "hastalik"
+      },
+      {
+       "name": "iskemik inme",
+       "type": "hastalik"
+      },
+      {
+       "name": "status epileptikus",
+       "type": "hastalik"
+      },
+      {
+       "name": "demans",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 13"
+    }
+   ],
+   "physiology": [
+    {
+     "text": "Uyanıklık, rostral pons ve mezensefalondaki santral gri cevherden çıkan ==ARAS== (yükselen retiküler aktive edici sistem) uyarısının talamus, hipotalamus, bazal ön beyin ve kortekse ulaşmasına bağlıdır; bu yol ya da hedefleri yaygın etkilenince koma gelişir.",
+     "label": "ARAS",
+     "key": true,
+     "entities": [
+      {
+       "name": "retiküler aktive edici sistem",
+       "type": "anatomi"
+      },
+      {
+       "name": "pons",
+       "type": "anatomi"
+      },
+      {
+       "name": "mezensefalon",
+       "type": "anatomi"
+      },
+      {
+       "name": "talamus",
+       "type": "anatomi"
+      },
+      {
+       "name": "hipotalamus",
+       "type": "anatomi"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 5"
+    },
+    {
+     "text": "Derste gösterilen serebral herniasyon tipleri:",
+     "items": [
+      "Unkal",
+      "Santral",
+      "Singulat",
+      "Transkalvarial",
+      "Tonsiller"
+     ],
+     "label": "Herniasyon tipleri",
+     "entities": [
+      {
+       "name": "beyin herniasyonu",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 14"
+    }
+   ],
+   "symptoms": [
+    {
+     "text": "Lokalizasyon değeri taşıyan muayene bulguları:",
+     "items": [
+      "İskelet kası motor yanıtları",
+      "Pupillerin çapı ve ışığa yanıtı",
+      "Göz hareketleri ve okülovestibüler yanıtlar",
+      "Solunum şekli"
+     ],
+     "label": "Lokalizan bulgular",
+     "key": true,
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 19"
+    },
+    {
+     "text": "Pupil bulguları lezyonun yerini gösterir:",
+     "items": [
+      "Metabolik ensefalopati ve diensefalik lezyon: küçük, ışığa yanıtlı",
+      "Pretektal lezyon: büyük, fikse, hippus",
+      "Unkal herniasyonda III. kraniyal sinir basısı: ==dilate, fikse==",
+      "Pons lezyonu: iğne ucu (pinpoint)"
+     ],
+     "label": "Pupiller",
+     "key": true,
+     "entities": [
+      {
+       "name": "okülomotor sinir felci",
+       "type": "bulgu"
+      },
+      {
+       "name": "miyozis",
+       "type": "bulgu",
+       "qualifier": "iğne ucu"
+      },
+      {
+       "name": "midriyazis",
+       "type": "bulgu",
+       "qualifier": "fikse"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 32"
+    },
+    {
+     "text": "Komadaki hastada görülebilen solunum örüntüleri:",
+     "items": [
+      "Cheyne-Stokes solunumu",
+      "Santral nörojenik hiperventilasyon",
+      "Apnestik solunum",
+      "Küme solunumu",
+      "Ataksik solunum"
+     ],
+     "label": "Solunum",
+     "entities": [
+      {
+       "name": "Cheyne-Stokes solunumu",
+       "type": "bulgu"
+      },
+      {
+       "name": "düzensiz solunum",
+       "type": "bulgu"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 40"
+    }
+   ],
+   "pathognomonic": [
+    {
+     "text": "Yanıt alınamayan ancak bilinci açık hastada ayırıcı tanıda psikojen yanıtsızlık, ==locked-in sendromu==, nöromüsküler paralizi ve rijidite düşünülür.",
+     "label": "Bilinci açık yanıtsız hasta",
+     "key": true,
+     "entities": [
+      {
+       "name": "locked-in sendromu",
+       "type": "hastalik"
+      },
+      {
+       "name": "psikojen yanıtsızlık",
+       "type": "hastalik"
+      },
+      {
+       "name": "nöromüsküler kavşak hastalığı",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 48"
+    },
+    {
+     "text": "Beyin sapı bulgusu olan komada posterior fossadaki yapısal lezyon ve ==transtentoryal herniasyon==, toksik ve metabolik nedenlerle birlikte düşünülür.",
+     "label": "Beyin sapı bulgulu koma",
+     "entities": [
+      {
+       "name": "beyin herniasyonu",
+       "type": "hastalik",
+       "qualifier": "transtentoryal"
+      },
+      {
+       "name": "posterior fossa",
+       "type": "anatomi"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 58"
+    },
+    {
+     "text": "Koma alkole bağlı gibi görünse bile küçük ve gözden kaçan travmalar atlanmamalıdır; altta SAK ya da subdural kanama olabilir.",
+     "label": "Alkollü görünen hasta",
+     "key": true,
+     "entities": [
+      {
+       "name": "kafa travması",
+       "type": "hastalik"
+      },
+      {
+       "name": "subaraknoid kanama",
+       "type": "hastalik"
+      },
+      {
+       "name": "subdural hematom",
+       "type": "hastalik"
+      },
+      {
+       "name": "alkol",
+       "type": "risk_faktoru"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 18"
+    }
+   ],
+   "diagnosis": [
+    {
+     "text": "Bilinç düzeyi ==Glasgow koma skalası== (göz 4, motor 6, sözel 5 puan), dörtlü test (FOUR) ve hepatik koma skalasıyla puanlanır.",
+     "label": "Koma ölçekleri",
+     "key": true,
+     "entities": [
+      {
+       "name": "Glasgow koma skalası",
+       "type": "test"
+      },
+      {
+       "name": "FOUR skoru",
+       "type": "test"
+      },
+      {
+       "name": "hepatik koma skalası",
+       "type": "test"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 20"
+    },
+    {
+     "text": "Okülosefalik refleks ve soğuk suyla ==kalorik test== beyin sapının sağlam olup olmadığını gösterir.",
+     "label": "Beyin sapı refleksleri",
+     "key": true,
+     "entities": [
+      {
+       "name": "okülosefalik refleks",
+       "type": "test"
+      },
+      {
+       "name": "kalorik test",
+       "type": "test",
+       "qualifier": "soğuk su"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 37"
+    },
+    {
+     "text": "Bilinci kapalı her hastada ilk aşamada ==parmak ucu kan şekeri== bakılır; hipoglisemi gerçek bir acildir. Özellikle diyabet ve kronik alkolizmde neden sıklıkla hipoglisemidir.",
+     "label": "İlk tetkik",
+     "key": true,
+     "entities": [
+      {
+       "name": "parmak ucu kan şekeri",
+       "type": "test"
+      },
+      {
+       "name": "hipoglisemi",
+       "type": "laboratuvar"
+      },
+      {
+       "name": "diabetes mellitus",
+       "type": "risk_faktoru"
+      },
+      {
+       "name": "kronik alkolizm",
+       "type": "risk_faktoru"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 10, 42"
+    },
+    {
+     "text": "Elektrolit bozukluklarında en sık ==sodyum== bozulur ve hiponatremi sık bir nedendir; tümörü olan hastalarda kalsiyum metabolizması bozukluğu sıktır.",
+     "label": "Elektrolitler",
+     "entities": [
+      {
+       "name": "hiponatremi",
+       "type": "laboratuvar"
+      },
+      {
+       "name": "kalsiyum metabolizması bozukluğu",
+       "type": "laboratuvar"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 42"
+    },
+    {
+     "text": "İstenen laboratuvar tetkikleri:",
+     "items": [
+      "Arteriyel kan gazı ve karboksihemoglobin",
+      "Glukoz",
+      "Elektrolitler, kalsiyum, magnezyum",
+      "Üre ve kreatinin",
+      "Amonyak ve AST",
+      "Tam kan sayımı ve kanama profili",
+      "Toksikoloji taraması"
+     ],
+     "label": "Laboratuvar",
+     "entities": [
+      {
+       "name": "arteriyel kan gazı",
+       "type": "test"
+      },
+      {
+       "name": "karboksihemoglobin",
+       "type": "laboratuvar"
+      },
+      {
+       "name": "amonyak",
+       "type": "laboratuvar"
+      },
+      {
+       "name": "üre",
+       "type": "laboratuvar"
+      },
+      {
+       "name": "kreatinin",
+       "type": "laboratuvar"
+      },
+      {
+       "name": "toksikoloji taraması",
+       "type": "test"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 42, 51"
+    },
+    {
+     "text": "Amonyak ve AST hepatik ensefalopatiye, üre ve kreatinin üremik ensefalopatiye yönelik bakılır.",
+     "label": "Organ yetmezliği",
+     "entities": [
+      {
+       "name": "hepatik ensefalopati",
+       "type": "hastalik"
+      },
+      {
+       "name": "üremik ensefalopati",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 51"
+    }
+   ],
+   "imaging": [
+    {
+     "text": "Acil incelemede beyin BT çekilir; posterior fossa lezyonundan şüphelenilirse BT ya da MR ile değerlendirilir.",
+     "label": "BT / MR",
+     "key": true,
+     "entities": [
+      {
+       "name": "BT",
+       "type": "test",
+       "qualifier": "beyin"
+      },
+      {
+       "name": "MR",
+       "type": "test"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 59"
+    }
+   ],
+   "treatment": [
+    {
+     "text": "Önce stabilizasyon: oksijen, iki geniş damar yolu, EKG ve kardiyak monitörizasyon; muayene, laboratuvar ve tedavi eş zamanlı yürütülür.",
+     "label": "Stabilizasyon",
+     "key": true,
+     "entities": [
+      {
+       "name": "oksijen tedavisi",
+       "type": "tedavi"
+      },
+      {
+       "name": "EKG",
+       "type": "test"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 9"
+    },
+    {
+     "text": "Ampirik olarak IV ==glukoz==, nalokson ve flumazenil verilir.",
+     "label": "Ampirik ilaçlar",
+     "key": true,
+     "entities": [
+      {
+       "name": "glukoz",
+       "type": "ilac"
+      },
+      {
+       "name": "nalokson",
+       "type": "ilac"
+      },
+      {
+       "name": "flumazenil",
+       "type": "ilac"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 51"
+    },
+    {
+     "text": "Glukozla birlikte ==tiamin== verilir.",
+     "label": "Tiamin",
+     "key": true,
+     "entities": [
+      {
+       "name": "tiamin",
+       "type": "ilac"
+      },
+      {
+       "name": "Wernicke ensefalopatisi",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 59"
+    }
+   ],
+   "epidemiology": [
+    {
+     "text": "Acil servis ve yoğun bakımda en sık nöroloji konsültasyonu nedeni bilinç değişikliğidir.",
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 2"
+    }
+   ],
+   "lecture": [
+    {
+     "text": "Ders bilinci kapalı hastaya yaklaşımı, nedenlerin çoğunun metabolik-sistemik olduğu ve stabilizasyon, muayene, laboratuvar ve ampirik tedavinin eş zamanlı yürütüldüğü bir akış olarak işler.",
+     "entities": [
+      {
+       "name": "koma",
+       "type": "bulgu"
+      }
+     ],
+     "source": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim · s. 2, 9, 51"
+    }
+   ]
+  },
+  "references": [
+   {
+    "label": "Ders: Bilinç Bozukluğu Olan Hastaya Yaklaşım (Kurul 2) — ders işçisi 20261024-b2a02c0f11"
+   }
+  ],
+  "relatedLectures": [
+   "Kurul 2",
+   "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim"
+  ],
+  "schemaVersion": 2,
+  "curation": {
+   "yontem": "ders işçisi önerisi → şema 2 (otomatik)",
+   "zaman": "2026-10-25T00:36:13Z",
+   "method": "ders işçisi önerisi → şema 2 (otomatik)",
+   "at": "2026-10-25T00:36:13Z",
+   "kaynak": "ders işçisi is_id 20261024-b2a02c0f11 · ders k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim"
+  },
+  "isCustom": false,
+  "aliases": [],
+  "altNames": [],
+  "createdAt": "2026-10-25T00:39:26Z",
+  "updatedAt": "2026-10-25T00:39:26Z"
+ },
+ {
+  "id": "malign-hipertermi",
+  "name": "Malign hipertermi",
+  "latinName": "Hyperthermia maligna",
+  "kind": "hastalik",
+  "category": "Farmakoloji ve Toksikoloji",
+  "hallmarks": [
+   {
+    "text": "==Ryanodin reseptörü (RyR1)== aracılı, kalıtsal anestezik duyarlılığı",
+    "entities": [
+     {
+      "name": "RyR1",
+      "type": "gen_protein"
+     }
+    ]
+   },
+   {
+    "text": "Uçucu inhalasyon anestezikleri ve ==süksinilkolin== tetikler",
+    "entities": [
+     {
+      "name": "inhalasyon anestezikleri",
+      "type": "ilac",
+      "qualifier": "uçucu"
+     },
+     {
+      "name": "süksinilkolin",
+      "type": "ilac"
+     }
+    ]
+   },
+   {
+    "text": "Tedavide ==dantrolen== verilir",
+    "entities": [
+     {
+      "name": "dantrolen",
+      "type": "ilac"
+     }
+    ]
+   }
+  ],
+  "sections": {
+   "definition": [
+    {
+     "text": "Malign hipertermi, uçucu anesteziklerin duyarlı bireylerde oluşturduğu, temelde ==kalıtsal genetik bozukluğa== bağlı bir hassasiyettir.",
+     "key": true,
+     "entities": [
+      {
+       "name": "genetik yatkınlık",
+       "type": "risk_faktoru"
+      },
+      {
+       "name": "inhalasyon anestezikleri",
+       "type": "ilac",
+       "qualifier": "uçucu"
+      }
+     ],
+     "source": "k2-07-genel-anestezik-ilaclar · s. 25"
+    }
+   ],
+   "etiology": [
+    {
+     "text": "Genetik olarak yatkın bireylerde ==uçucu inhalasyon anestezikleri== tabloyu tetikler.",
+     "label": "Tetikleyici",
+     "key": true,
+     "entities": [
+      {
+       "name": "inhalasyon anestezikleri",
+       "type": "ilac",
+       "qualifier": "uçucu"
+      },
+      {
+       "name": "genetik yatkınlık",
+       "type": "risk_faktoru"
+      }
+     ],
+     "source": "k2-07-genel-anestezik-ilaclar · s. 25"
+    },
+    {
+     "text": "Depolarizan kas gevşetici ==süksinilkolin== de malign hipertermiyi tetikler.",
+     "label": "Kas gevşetici",
+     "key": true,
+     "entities": [
+      {
+       "name": "süksinilkolin",
+       "type": "ilac",
+       "qualifier": "depolarizan kas gevşetici"
+      }
+     ],
+     "source": "k2-07-genel-anestezik-ilaclar · s. 25"
+    }
+   ],
+   "physiology": [
+    {
+     "text": "Tabloya genetik olarak ==ryanodin reseptörü (RyR1)== aracılık eder; sarkoplazmik retikulumdan kontrolsüz Ca²⁺ çıkışı olur.",
+     "label": "RyR1",
+     "key": true,
+     "entities": [
+      {
+       "name": "RyR1",
+       "type": "gen_protein"
+      },
+      {
+       "name": "sarkoplazmik retikulumdan kalsiyum salınımı",
+       "type": "mekanizma",
+       "qualifier": "kontrolsüz"
+      }
+     ],
+     "source": "k2-07-genel-anestezik-ilaclar · s. 25"
+    }
+   ],
+   "symptoms": [
+    {
+     "text": "Ameliyat sırasında ==vücut sıcaklığında hızlı artış== görülür.",
+     "key": true,
+     "entities": [
+      {
+       "name": "hipertermi",
+       "type": "bulgu",
+       "qualifier": "hızlı yükselen"
+      }
+     ],
+     "source": "k2-07-genel-anestezik-ilaclar · s. 9"
+    }
+   ],
+   "treatment": [
+    {
+     "text": "Sarkoplazmik retikulumdan Ca²⁺ çıkışını azaltmak için ==dantrolen== verilir.",
+     "label": "İlaç",
+     "key": true,
+     "entities": [
+      {
+       "name": "dantrolen",
+       "type": "ilac"
+      }
+     ],
+     "source": "k2-07-genel-anestezik-ilaclar · s. 25"
+    },
+    {
+     "text": "Hastada ya da ailesinde ameliyat sırasında malign hipertermi öyküsü varsa ==sevofluran kullanılmaz==.",
+     "label": "Korunma",
+     "key": true,
+     "entities": [
+      {
+       "name": "sevofluran",
+       "type": "ilac",
+       "qualifier": "kontrendike"
+      },
+      {
+       "name": "aile öyküsü",
+       "type": "risk_faktoru"
+      }
+     ],
+     "source": "k2-07-genel-anestezik-ilaclar · s. 9"
+    }
+   ],
+   "epidemiology": [
+    {
+     "text": "Malign hipertermi ==nadir== görülür.",
+     "source": "k2-07-genel-anestezik-ilaclar · s. 25"
+    }
+   ],
+   "lecture": [
+    {
+     "text": "Ders malign hipertermiyi uçucu anesteziklerin toksisitesi içinde anlatır: kalıtsal ve RyR1 aracılıdır, süksinilkolin de tetikler, tedavisi ==dantrolendir==.",
+     "entities": [
+      {
+       "name": "malign hipertermi",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k2-07-genel-anestezik-ilaclar · s. 25"
+    },
+    {
+     "text": "Sevofluranın kullanma talimatında hastada ya da ailede malign hipertermi öyküsü ==kontrendikasyon== olarak sayılır.",
+     "entities": [
+      {
+       "name": "sevofluran",
+       "type": "ilac"
+      }
+     ],
+     "source": "k2-07-genel-anestezik-ilaclar · s. 9"
+    }
+   ]
+  },
+  "references": [
+   {
+    "label": "Ders: Genel Anestezik İlaçlar (Kurul 2) — ders işçisi 20261024-9c0a71cde3"
+   }
+  ],
+  "relatedLectures": [
+   "Kurul 2",
+   "k2-07-genel-anestezik-ilaclar"
+  ],
+  "schemaVersion": 2,
+  "curation": {
+   "yontem": "ders işçisi önerisi → şema 2 (otomatik)",
+   "zaman": "2026-10-25T00:00:00Z",
+   "method": "ders işçisi önerisi → şema 2 (otomatik)",
+   "at": "2026-10-25T00:00:00Z",
+   "kaynak": "ders işçisi is_id 20261024-9c0a71cde3 · ders k2-07-genel-anestezik-ilaclar"
+  },
+  "isCustom": false,
+  "createdAt": "2026-10-25T00:39:26Z",
+  "updatedAt": "2026-10-25T00:39:26Z",
+  "aliases": [],
+  "altNames": []
  }
 ]
