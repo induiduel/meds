@@ -1,17 +1,17 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 343,
-  "baslik": "Kurul 2 Arşiv Dersleri 58-60: Alkoller, Psikiyatrik Genetik ve Miyorelaksanlar (2025-2026)",
+  "onem": 344,
+  "baslik": "Kurul 2 Arşiv Dersleri 13-15: Spinal Travmalar, Beyin Tümörleri ve Şizofrenik Bozukluklar (2025-2026)",
   "maddeler": [
-    "Ders 60 (Farmakoloji - Miyorelaksan İlaçlar): 24 slayt Öğren destesi, 58 cümle, EMA GPU sesli anlatım, 15 canlı çizim ve gömülü .medspak (2.57 MB)",
-    "Ders 59 (Tıbbi Genetik - Psikiyatrik Hastalıklar ve Genetik Analizi): 24 slayt Öğren destesi, 82 sayfa tam sesli kapsam, 97 cümle, 11,6 dk EMA GPU sesli anlatım, 15 canlı çizim ve gömülü .medspak (5.23 MB)",
-    "Ders 58 (Farmakoloji - Alkoller): 24 slayt Öğren destesi, 53 sayfa tam sesli kapsam, 58 cümle, 7,4 dk EMA GPU sesli anlatım, 15 canlı çizim ve gömülü .medspak (2.37 MB)",
-    "PDF metin takip motoru ve satır işaretleme: konuşmacı sesine birebir senkron satır ve kelime kutusu takibi (%100 sayfa kapsamı, sıfır boşluk)"
+    "Ders 15 (Psikiyatri - Şizofrenik Bozukluklar): 16 slayt Öğren destesi, 49 sayfa derinlemesine amfi dersi kapsamı (181 cümle, 4.325 kelime, 31,4 dk EMA GPU sesli anlatım), 36 canlı tuval çizimi, 16 çıkmış soru eşleşmesi ve gömülü .medspak (8.21 MB)",
+    "Ders 14 (Beyin ve Sinir Cerrahisi - İntrakraniyal Kitleler ve Beyin Tümörleri): 16 slayt Öğren destesi, 68 sayfa tam sesli kapsam, 114 cümle, 23,7 dk EMA GPU sesli anlatım, 33 canlı çizim, 25 çıkmış soru eşleşmesi ve gömülü .medspak (7.60 MB)",
+    "Ders 13 (Beyin ve Sinir Cerrahisi - Medulla Spinalis Lezyonları ve Spinal Travmalar): 16 slayt Öğren destesi, 57 sayfa tam sesli kapsam, 126 cümle, 24,7 dk EMA GPU sesli anlatım, 31 canlı çizim, 13 çıkmış soru eşleşmesi ve gömülü .medspak (8.96 MB)",
+    "Metin takip ve lazer vurgu sistemi: slayttaki tüm maddeler, tanı kriterleri, prognoz tabloları ve epidemiyolojik oranlar konuşmacı sesine birebir senkron biçimde PDF üzerinde satır satır aydınlatıldı"
   ],
   "eklenen": [
-    "Kurul 2 Farmakoloji 'Miyorelaksan İlaçlar' (2025-2026 Arşivi)",
-    "Kurul 2 Tıbbi Genetik 'Psikiyatrik Hastalıklar ve Genetik Analizi' (2025-2026 Arşivi)",
-    "Kurul 2 Farmakoloji 'Alkoller' (2025-2026 Arşivi)"
+    "Kurul 2 Psikiyatri 'Şizofrenik Bozukluklar' (2025-2026 Arşivi)",
+    "Kurul 2 Beyin ve Sinir Cerrahisi 'İntrakraniyal Kitleler ve Beyin Tümörleri' (2025-2026 Arşivi)",
+    "Kurul 2 Beyin ve Sinir Cerrahisi 'Medulla Spinalis Lezyonları ve Spinal Travmalar' (2025-2026 Arşivi)"
   ],
   "degisen": [
     "meds/data/arsiv_25_26/sesli_anlatim/dersler.json",
@@ -19,8 +19,8 @@
     "meds/guncelleme_notu.json"
   ],
   "duzeltilen": [
-    "PDF metin takip motorunda madde ve yüzde işaretleri temizliği ile harita eslestir geri dönüşü eklendi",
-    "Öğren destesi mini-soru şık açıklamaları, tuzak avı ve aktif hatırlama şemaları tam standartlaştırıldı"
+    "Şizofrenik Bozukluklar dersinde 49 sayfanın tamamı atlanmadan tüm detaylarıyla (prognoz matrisleri, katatoni, ayırıcı tanı) 4.325 kelimede tam amfi süresine çıkarıldı",
+    "PDF metin takip motoru konuşmacı sesine ve satırlara %100 uyumlu hale getirildi"
   ],
   "silinen": []
 }
