@@ -155,3 +155,72 @@ def denetle(k: dict, kelime_sayisi: int, kutular: list, raster: SayfaRaster | No
                 return f"düğüm '{d.get('metin')}' henüz anlatılmamış terim içeriyor (ileri sızıntı)"
         return None
     return f"tür '{tur}' tanımsız"
+
+
+if __name__ == "__main__":
+    import argparse
+    import json
+    import sys
+    from pathlib import Path
+
+    ap = argparse.ArgumentParser(description="Canlı çizim komutlarını ve adaylarını denetler")
+    ap.add_argument("yol", nargs="?", default=".", help="Taslak dizini ya da cizim_aday.json yolu")
+    args = ap.parse_args()
+
+    p = Path(args.yol)
+    if p.is_dir():
+        aday_yol = p / "cizim_aday.json"
+        v2_yol = p / "konusma_v2.json"
+    else:
+        aday_yol = p
+        v2_yol = p.parent / "konusma_v2.json"
+
+    if not aday_yol.exists():
+        print(f"HATA: {aday_yol} bulunamadı")
+        sys.exit(1)
+
+    data = json.loads(aday_yol.read_text(encoding="utf-8"))
+    komutlar = data.get("komutlar", [])
+    cizimler = data.get("cizimler", [])
+
+    # load transcript if exists
+    sentences = []
+    if v2_yol.exists():
+        v2 = json.loads(v2_yol.read_text(encoding="utf-8"))
+        for b in v2.get("bolumler", []):
+            for pr in b.get("paragraflar", []):
+                for c in pr.get("cumleler", []):
+                    sentences.append(c)
+    sent_map = {c["id"]: c for c in sentences}
+
+    def _cum_text(cid):
+        txt = []
+        for c in sentences:
+            txt.append(c.get("ses", ""))
+            if c.get("id") == cid:
+                break
+        return " ".join(txt)
+
+    from sablon import coz as sb_coz, kutuphane as sb_kut
+    kut = sb_kut()
+    hatalar = []
+
+    for i, k in enumerate(komutlar):
+        cid = k.get("cumle")
+        c_obj = sent_map.get(cid, {})
+        s_words = len(c_obj.get("ses", "").split()) if c_obj else 20
+        k_coz, err_s = sb_coz(k, kut) if k.get("sablon") else (k, None)
+        if err_s:
+            hatalar.append(f"Komut {i} ({cid}): şablon hatası - {err_s}")
+            continue
+        onceki = _cum_text(cid) if cid in sent_map else ""
+        err_d = denetle(k_coz, s_words, [], None, onceki)
+        if err_d:
+            hatalar.append(f"Komut {i} ({cid}): denetim hatası - {err_d}")
+
+    for h in hatalar[:30]:
+        print("HATA:", h)
+
+    print(f"{len(komutlar)} komut · {len(cizimler)} çizim · {len(hatalar)} HATA")
+    sys.exit(1 if hatalar else 0)
+
