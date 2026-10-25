@@ -6,7 +6,7 @@
  "bolumler": [
   {
    "id": "k2-61-b01",
-   "baslik": "Genel İlkeler, Tütün Epidemiyolojisi ve Toksisite",
+   "baslik": "Tütün Epidemiyolojisi ve Toksik Maddeler",
    "paragraflar": [
     {
      "id": "k2-61-p001",
@@ -14,8 +14,8 @@
      "cumleler": [
       {
        "id": "k2-61-c0001",
-       "ses": "Nikotin bağımlılığı ve tedavisi dersimize başlarken tütünün halk sağlığı boyutunu ve klinik yaklaşım ilkelerini ele alacağız.",
-       "ekran": "**Nikotin Bağımlılığı:** Giriş, epidemiyolojik boyut ve klinik hedefler.",
+       "ses": "Nikotin bağımlılığı ve tedavisi dersimize başlarken tütün salgınının boyutlarını ve farmakolojik tedavi ilkelerini kapsamlı şekilde ele alacağız.",
+       "ekran": "**Nikotin Bağımlılığı ve Tedavisi:** Giriş, hedefler ve klinik yaklaşım.",
        "duzey": 0,
        "slayt": {
         "sayfa": 1,
@@ -27,15 +27,46 @@
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Nikotin Bağımlılığı"
-        },
-        {
-         "metin": "Nikotin Bağımlılığı:",
-         "tur": "cikmis"
+         "metin": "Nikotin Bağımlılığı ve Tedavisi:"
         }
-       ],
-       "cikmis": [
-        "q-KURUL_2_C_IKMIS__3-97"
+       ]
+      },
+      {
+       "id": "k2-61-c0002",
+       "ses": "Tütün kullanımı modern tıbbın karşılaştığı en büyük önlenebilir halk sağlığı tehditlerinin başında gelir.",
+       "ekran": "**Halk Sağlığı:** Dünya çapında en yaygın bağımlılık ve önlenebilir morbidite nedeni.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "ve Tedavisi"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Halk Sağlığı:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0003",
+       "ses": "Birinci basamak hekimlerinin sigara bırakma sürecindeki proaktif rolü tedavi başarısını katbekat artırmaktadır.",
+       "ekran": "**Hekim Rolü:** Bırakma oranlarını artıran hekim müdahalesi.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Nikotin Bağımlılığı"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Hekim Rolü:"
+        }
        ]
       }
      ]
@@ -45,9 +76,9 @@
      "sayfa": 2,
      "cumleler": [
       {
-       "id": "k2-61-c0002",
-       "ses": "Tütün kullanımı tüm dünyada önlenebilir ölüm ve morbidite nedenlerinin başında gelen en büyük küresel salgın olarak kabul edilmektedir.",
-       "ekran": "**Küresel Salgın:** Dünyada önlenebilir ölüm nedenlerinin başında tütün yer alır.",
+       "id": "k2-61-c0004",
+       "ses": "Sigara kullanımı günümüzde önlenebilir ölüm nedeni ve en büyük küresel salgın olarak kabul edilmektedir.",
+       "ekran": "**Küresel Salgın:** Önlenebilir mortalite ve morbiditenin bir numaralı sebebi.",
        "duzey": 0,
        "slayt": {
         "sayfa": 2,
@@ -59,7 +90,45 @@
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Küresel Salgın"
+         "metin": "Küresel Salgın:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0005",
+       "ses": "Dünyada yılda yedi milyon, ülkemizde ise yüz on bin kişi doğrudan sigaraya bağlı kronik hastalıklar nedeniyle hayatını kaybetmektedir.",
+       "ekran": "**Mortalite Verileri:** Dünyada 7 milyon, Türkiye'de 110 bin yıllık ölüm.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Dünyada yılda 7 milyon, ülkemizde ise"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Mortalite Verileri:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0006",
+       "ses": "Ülkemizdeki tüm ölümlerin yüzde kırk bir virgül altısının nedeni sigaraya bağlı hastalıklardır; kanserlerin üçte birinin ve akciğer kanseri ölümlerinin yüzde doksanının temel sebebi sigaradır.",
+       "ekran": "**Kanser İlişkisi:** Akciğer kanseri ölümlerinin %90'ı sigaraya bağlıdır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Ülkemizdeki ölümlerin %41,6’sinin nedeni"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Kanser İlişkisi:"
         }
        ]
       }
@@ -70,53 +139,78 @@
      "sayfa": 3,
      "cumleler": [
       {
-       "id": "k2-61-c0003",
-       "ses": "Sigara dumanında vücut için zehirli, tahriş edici ve kanser yapıcı dört binden fazla kimyasal madde bulunmaktadır.",
-       "ekran": "**Dumanın Toksisitesi:** Katran, karbonmonoksit ve yetmişten fazla kanıtlanmış karsinojen.",
+       "id": "k2-61-c0007",
+       "ses": "Görselimizde her bir sigarada vücut için zehirli, tahriş edici ve kanser yapıcı dört binden fazla kimyasal maddenin bulunduğu gösterilmektedir.",
+       "ekran": "**Toksik Bileşikler:** Sigara dumanında 4000'den fazla zararlı kimyasal madde.",
        "duzey": 0,
        "slayt": {
         "sayfa": 3,
         "satir": [
          "Her bir sigarada vücut için zehirli, tahriş edici, kanser yapıcı ya da kanserin"
         ],
-        "sekil": null
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "Dumanın Toksisitesi"
-        }
-       ]
-      },
-      {
-       "id": "k2-61-c0004",
-       "ses": "Duman içerisindeki karbonmonoksit oksijen taşınmasını engellerken katran partikülleri siliyer temizliği felç eder.",
-       "ekran": "**Doku Hipoksisi ve Hasar:** Karboksihemoglobin oluşumu ve siliyer epitel felci.",
-       "duzey": 1,
-       "slayt": {
-        "sayfa": 3,
-        "satir": [
-         "ortaya çıkmasını kolaylaştırıcı 4000'den fazla kimyasal madde bulunmaktadır."
-        ],
         "sekil": "Sigara dumanındaki toksik maddeler ve kanserojen kimyasalların listesi şeması."
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Doku Hipoksisi ve Hasar"
+         "metin": "Toksik Bileşikler:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0008",
+       "ses": "Bu kimyasallardan en az elli tanesinin doğrudan karsinojenik olduğu bilimsel olarak kesin şekilde kanıtlanmıştır.",
+       "ekran": "**Kanıtlanmış Karsinojenler:** En az 50 kimyasal doğrudan kanserojendir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Bunlardan 50 tanesinin doğrudan kansere sebep olduğu ispatlanmıştır"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Kanıtlanmış Karsinojenler:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0009",
+       "ses": "Duman içeriğinde pillerde bulunan kadmiyum, çakmak gazı bütan, böcek ilacı nikotin, endüstriyel çözücü toluen ve roket yakıtı metanol gibi ölümcül zehirler yer alır.",
+       "ekran": "**Spesifik Zehirler:** Kadmiyum, bütan, toluen, asetik asit ve metanol.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Acido acético"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Spesifik Zehirler:"
         }
        ]
       }
      ]
-    },
+    }
+   ]
+  },
+  {
+   "id": "k2-61-b02",
+   "baslik": "Madde Bağımlılığı Tanımı ve Dopaminerjik Ödül Yolağı",
+   "paragraflar": [
     {
      "id": "k2-61-p004",
      "sayfa": 4,
      "cumleler": [
       {
-       "id": "k2-61-c0005",
-       "ses": "Dünya Sağlık Örgütü madde bağımlılığını psikoaktif bir maddeye verilen değerin diğer tüm uğraşların belirgin önüne geçmesi olarak tanımlar.",
-       "ekran": "**Bağımlılık Tanımı:** DSÖ kriterlerine göre psikoaktif maddeye kompülsif yönelim.",
+       "id": "k2-61-c0010",
+       "ses": "Dünya Sağlık Örgütü madde bağımlılığını, kullanılan bir psikoaktif maddeye kişinin önceden değer verdiği diğer uğraşlardan belirgin olarak daha yüksek öncelik tanıma davranışı olarak tanımlar.",
+       "ekran": "**Bağımlılık Tanımı:** DSÖ'ye göre psikoaktif maddeye diğer uğraşlardan öncelik verme davranışı.",
        "duzey": 0,
        "slayt": {
         "sayfa": 4,
@@ -128,7 +222,45 @@
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Bağımlılık Tanımı"
+         "metin": "Bağımlılık Tanımı:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0011",
+       "ses": "Epidemiyolojik çalışmalarda her gün sigara içenler, her günden az içen ara sıra kullanıcılar ve eskiden içip bırakan eski içiciler olmak üzere üç temel kategori belirlenmiştir.",
+       "ekran": "**Kullanıcı Kategorileri:** Düzenli içici, ara sıra içici ve bırakan (ex-smoker).",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "an (ex-smoker): Önceden sigara içmiş olup halen içmeyen kişiler"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Kullanıcı Kategorileri:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0012",
+       "ses": "Bu davranışsal sınıflandırma hekimin hastaya uygulayacağı müdahale şiddetini ve farmakoterapi gereksinimini doğrudan şekillendirir.",
+       "ekran": "**Klinik Değerlendirme:** Kullanım sıklığı farmakoterapi ihtiyacını belirler.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "her günden «"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Klinik Değerlendirme:"
         }
        ]
       }
@@ -139,9 +271,9 @@
      "sayfa": 5,
      "cumleler": [
       {
-       "id": "k2-61-c0006",
-       "ses": "İnsanların sigara içme nedenleri çok yönlü olup mezolimbik dopamin yolağındaki pozitif pekiştirme temel biyolojik gücü oluşturur.",
-       "ekran": "**Ödül Yolağı:** Nükleus akkumbenste dopamin deşarjı ve pozitif pekiştirme döngüsü.",
+       "id": "k2-61-c0013",
+       "ses": "İnsanların neden sigara içtiğini araştıran çalışmalar sigara içme davranışının genetik ve psikososyal faktörlerle sürdürülen çok yönlü bir süreç olduğunu göstermiştir.",
+       "ekran": "**Çok Boyutlu Bağımlılık:** Genetik yatkınlık, psikososyal faktörler ve nörobiyoloji.",
        "duzey": 0,
        "slayt": {
         "sayfa": 5,
@@ -153,32 +285,114 @@
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Ödül Yolağı"
+         "metin": "Çok Boyutlu Bağımlılık:"
         }
        ]
-      }
-     ]
-    },
-    {
-     "id": "k2-61-p006",
-     "sayfa": 6,
-     "cumleler": [
+      },
       {
-       "id": "k2-61-c0007",
-       "ses": "Tütünle küresel mücadelede ilk uluslararası yasal anlaşma olan Tütün Kontrolü Çerçeve Sözleşmesi tarihi bir dönüm noktasıdır.",
-       "ekran": "**Uluslararası Sözleşme:** Dünya Sağlık Örgütü Tütün Kontrolü Çerçeve Sözleşmesi.",
+       "id": "k2-61-c0014",
+       "ses": "Nikotin nörofizyolojik etkisini esas olarak beynin ventral tegmental alan ve nükleus akkumbens ödül merkezi aracılığıyla gerçekleştirir; dopamin salınımı haz duygusunu tetikler.",
+       "ekran": "**Ödül Merkezi:** Nükleus akkumbenste dopamin salınımı ve haz pekiştirmesi.",
        "duzey": 0,
        "slayt": {
-        "sayfa": 6,
+        "sayfa": 5,
         "satir": [
-         "Tütünle mücadelede ilk uluslararası anlaşma olan “Tütün"
+         "Nikotin nörofizyolojik etkisini esas olarak beynin ödül merkezi"
         ],
         "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Uluslararası Sözleşme"
+         "metin": "Ödül Merkezi:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0015",
+       "ses": "Ayrıca nikotin monoamin oksidaz enzim aktivitesindeki azalma ile katekolaminlerin yıkımını yavaşlatır ve kortikosteroidler ile endorfin salgılanmasına yol açarak öfori oluşturur.",
+       "ekran": "**Katekolamin Modülasyonu:** MAO enzim inhibisyonu, endorfin salınımı ve öfori.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Nikotin monoamin oksidaz inhibitör enzimindeki azalma ile dopamin de"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Katekolamin Modülasyonu:"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-61-b03",
+   "baslik": "Tütünle Mücadele ve M-POWER Stratejileri",
+   "paragraflar": [
+    {
+     "id": "k2-61-p006",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k2-61-c0016",
+       "ses": "Tütünle mücadelede ilk uluslararası anlaşma olan Dünya Sağlık Örgütü Tütün Kontrolü Çerçeve Sözleşmesi yirmi bir Mayıs iki bin üç tarihinde kabul edilmiştir.",
+       "ekran": "**TKÇS:** 21 Mayıs 2003 tarihli DSÖ Tütün Kontrolü Çerçeve Sözleşmesi.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Kontrolü Çerçeve Sözleşmesi (TKÇS)” 21 Mayıs 2003 tarihinde"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "TKÇS:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0017",
+       "ses": "Ülkemiz bu sözleşmeyi iki bin dört yılında imzalamış ve Türkiye Büyük Millet Meclisi onayıyla hızla yürürlüğe koymuştur.",
+       "ekran": "**Türkiye'nin Katılımı:** 2004 yılında TBMM onayı ile yürürlüğe girdi.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Ülkemiz sözleşmeyi 28 Nisan 2004 tarihinde imzalamış, 25"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Türkiye'nin Katılımı:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0018",
+       "ses": "Ardından Sağlık Bakanlığı önderliğinde hazırlanan Ulusal Tütün Kontrol Programı ile toplumda sigara içmeyen oranının yüzde seksenin üzerine çıkarılması hedeflenmiştir.",
+       "ekran": "**Ulusal Program:** Toplumda tütünsüz yaşam oranını %80 üzerine çıkarma hedefi.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "2010 yıllarını kapsayacak şekilde bir “Ulusal Tütün Kontrol"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Ulusal Program:"
         }
        ]
       }
@@ -189,84 +403,128 @@
      "sayfa": 7,
      "cumleler": [
       {
-       "id": "k2-61-c0008",
-       "ses": "Dünya Sağlık Örgütü tütün salgınını durdurmak için kanıta dayalı altı temel stratejiden oluşan altı temel strateji paketini uygulamaya koymuştur.",
-       "ekran": "**M-POWER Stratejileri:** Tütün salgınıyla mücadelede altı temel küresel politika paketi.",
+       "id": "k2-61-c0019",
+       "ses": "Görselimizde Dünya Sağlık Örgütü Tütün Kontrolü Çerçeve Sözleşmesinin altı temel ayağını oluşturan empover stratejileri özetlenmektedir.",
+       "ekran": "**M-POWER Modeli:** DSÖ tütün kontrolünün 6 temel küresel stratejisi.",
        "duzey": 0,
        "slayt": {
         "sayfa": 7,
         "satir": [
          "WHO-Tütün Kontrollü Çerçeve Sözleşmesi"
         ],
-        "sekil": null
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "M-POWER Stratejileri"
-        }
-       ]
-      },
-      {
-       "id": "k2-61-c0009",
-       "ses": "Bu stratejiler tütünü izlemek, insanları korumak, bırakma yardımı sunmak, tehlikeleri duyurmak, reklamları yasaklamak ve vergileri artırmaktır.",
-       "ekran": "**Politika Bileşenleri:** İzleme, koruma, yardım, uyarı, reklam yasağı ve vergi artırımı.",
-       "duzey": 1,
-       "slayt": {
-        "sayfa": 7,
-        "satir": [
-         "M-POWER Stratejileri"
-        ],
         "sekil": "DSÖ M-POWER tütün kontrolü stratejileri ve uygulama ilkeleri tablosu."
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Politika Bileşenleri"
+         "metin": "M-POWER Modeli:"
         }
        ]
-      }
-     ]
-    },
-    {
-     "id": "k2-61-p008",
-     "sayfa": 8,
-     "cumleler": [
+      },
       {
-       "id": "k2-61-c0010",
-       "ses": "Türkiye tütün kontrolü mevzuatını başarıyla uygulayarak kapalı alanlarda tütün kullanımını yasaklamış ve dumansız hava sahası oluşturmuştur.",
-       "ekran": "**Dumansız Hava Sahası:** Kamusal kapalı alanlarda yüzde yüz tütünsüz çevre güvencesi.",
+       "id": "k2-61-c0020",
+       "ses": "Modelin ilk basamakları tütün kullanımını izlemeyi yani Monitor adımını ve toplumu tütün dumanından korumayı yani Protect adımını içerir.",
+       "ekran": "**Monitor ve Protect:** Tütün salgınını izleme ve pasif dumandan toplumu koruma.",
        "duzey": 0,
        "slayt": {
-        "sayfa": 8,
+        "sayfa": 7,
         "satir": [
-         "96)"
+         "Monitor:Tütün kullanımını ve koruyucu uygulamaları izle"
         ],
         "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Dumansız Hava Sahası"
+         "metin": "Monitor ve Protect:"
         }
        ]
       },
       {
-       "id": "k2-61-c0011",
-       "ses": "Mevzuatın hayata geçmesiyle birlikte acil servislere akut miyokard enfarktüsü ve astım alevlenmesi başvurularında anlamlı düşüş saptanmıştır.",
-       "ekran": "**Klinik Başarı:** Pasif maruziyetin kesilmesiyle kardiyovasküler acillerde hızlı azalma.",
-       "duzey": 1,
+       "id": "k2-61-c0021",
+       "ses": "Diğer basamaklar ise sigarayı bırakmaya yardım etme yani Offer, zararları konusunda uyarma yani Warn, reklamları yasaklama yani Enforce ve tütün vergilerini artırma yani Raise adımlarıdır.",
+       "ekran": "**Offer, Warn, Enforce, Raise:** Bırakma desteği, uyarılar, reklam yasağı ve vergi artışı.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Enforce:Tütün reklam ve tanıtımını yasaklamayı destekle."
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Offer, Warn, Enforce, Raise:"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-61-b04",
+   "baslik": "Türkiye'de Tütün Kontrolü ve Hekim Rolü",
+   "paragraflar": [
+    {
+     "id": "k2-61-p008",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k2-61-c0022",
+       "ses": "Görsel grafiğimizde Türkiye'de yıllar içinde uygulanan kararlı tütün kontrol politikaları ve dumansız hava sahası istatistikleri sunulmaktadır.",
+       "ekran": "**Epidemiyolojik Eğilimler:** Türkiye'de yıllara göre sigara kullanım oranları.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 8,
         "satir": [
-         "100"
+         "2010 2012 2014 2016 2019"
         ],
         "sekil": "Türkiye'de tütün kontrolü mevzuatı ve dumansız hava sahası istatistikleri grafiği."
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Klinik Başarı"
+         "metin": "Epidemiyolojik Eğilimler:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0023",
+       "ses": "Erkek nüfusta sigara içme oranları yüzde kırk civarında seyrederken kadınlarda yüzde on üç ila on beş seviyelerinde kalmaktadır.",
+       "ekran": "**Cinsiyet Farklılıkları:** Erkeklerde %40, kadınlarda %13-15 tütün kullanım prevalansı.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Toplam sErkek mKadin"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Cinsiyet Farklılıkları:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0024",
+       "ses": "Yasal düzenlemeler ve poliklinik ağının yaygınlaşması ile her gün düzenli içenlerin oranında kademeli düşüşler hedeflenmektedir.",
+       "ekran": "**Dumansız Hava Sahası:** Kamusal alan yasakları ile tüketimde azalma eğilimi.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "m Her gün kullanan Arasıra kullanan OmDahaöncekullanan == Hic kullanmayan"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Dumansız Hava Sahası:"
         }
        ]
       }
@@ -277,54 +535,79 @@
      "sayfa": 9,
      "cumleler": [
       {
-       "id": "k2-61-c0012",
-       "ses": "Hekimlerin tütün kontrolündeki temel sorumluluğu tütün kullanmayarak rol model olmak ve her hastada tütün öyküsünü titizlikle sorgulamaktır.",
-       "ekran": "**Hekim Sorumlulukları:** Rol modelliği, rutin tütün taraması ve fırsatçı bırakma tavsiyesi.",
+       "id": "k2-61-c0025",
+       "ses": "Hekimlerin tütün kontrolündeki birinci ve en temel sorumluluğu bizzat tütün ürünü kullanmayarak topluma olumlu bir rol model oluşturmaktır.",
+       "ekran": "**Rol Model:** Hekimin sigara içmeyerek olumlu örnek oluşturması.",
        "duzey": 0,
        "slayt": {
         "sayfa": 9,
         "satir": [
-         "Hekimlerin tütün kontrolünde sorumlulukları"
+         "1. Tütün ürünü kullanmayan tutum sergileyerek"
         ],
         "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Hekim Sorumlulukları"
+         "metin": "Rol Model:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0026",
+       "ses": "İkinci olarak başvuran her hastaya tütün bağımlılığı hakkında bilgi verilmeli ve bırakma tedavisi konusunda profesyonel destek sunulmalıdır.",
+       "ekran": "**Klinik Bilgilendirme:** Hastaya tütün bağımlılığı ve tedavi olanaklarını açıklama.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "2. Hastalarına tütün bağımlılığı hakkında bilgi ve"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Klinik Bilgilendirme:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0027",
+       "ses": "Üçüncü ve dördüncü sorumluluklar ise kanıta dayalı tütün bağımlılığı tedavisini bizzat uygulamak ve ulusal kontrol çalışmalarına aktif katkı sağlamaktır.",
+       "ekran": "**Tedavi ve Katılım:** Bağımlılık tedavisini yürütme ve kontrol çalışmalarına katılım.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "3. Tütün bağımlılığı tedavisi uygulamak."
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Tedavi ve Katılım:"
         }
        ]
       }
      ]
-    },
+    }
+   ]
+  },
+  {
+   "id": "k2-61-b05",
+   "baslik": "Sigarayı Bırakmanın Zamana Bağlı Sağlık Faydaları",
+   "paragraflar": [
     {
      "id": "k2-61-p010",
      "sayfa": 10,
      "cumleler": [
       {
-       "id": "k2-61-c0013",
-       "ses": "Sigarayı bırakmanın sağlık üzerindeki olumlu etkileri ilk yirmi dakikada nabız ve tansiyonun normale dönmesiyle hemen başlar.",
-       "ekran": "**Erken İyileşme:** Yirmi dakikada nabız düşüşü, sekiz saatte oksijenlenme artışı.",
+       "id": "k2-61-c0028",
+       "ses": "Görselimizde Dünya Sağlık Örgütü verilerine göre sigarayı bırakmanın ilk yirmi dakikadan itibaren başlayan sistemik sağlık kazanımları gösterilmektedir.",
+       "ekran": "**Zamana Bağlı Faydalar:** Bırakmanın dakikalar içinde başlayan kardiyovasküler iyileşmesi.",
        "duzey": 0,
-       "slayt": {
-        "sayfa": 10,
-        "satir": [
-         "Sigarayı Bırakmanın Faydaları"
-        ],
-        "sekil": null
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "Erken İyileşme"
-        }
-       ]
-      },
-      {
-       "id": "k2-61-c0014",
-       "ses": "Bırakıldıktan sonraki birinci yılın sonunda koroner kalp hastalığı riski sigara içenlere kıyasla tam yarı yarıya azalır.",
-       "ekran": "**Birinci Yıl Kazanımı:** Koroner arter hastalığı riskinin tam yüzde elli gerilemesi.",
-       "duzey": 1,
        "slayt": {
         "sayfa": 10,
         "satir": [
@@ -335,7 +618,64 @@
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Birinci Yıl Kazanımı"
+         "metin": "Zamana Bağlı Faydalar:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0029",
+       "ses": "Sigara bırakıldıktan yirmi dakika içinde kalp atış hızı ve kan basıncı düşer; on iki saat sonra ise kandaki toksik karbonmonoksit seviyesi normale döner.",
+       "ekran": "**Erken Dönem (20 Dk - 12 Saat):** Nabız ve tansiyon düşüşü, karbonmonoksit normalleşmesi.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "120 dakika içinde kalp atış hızı ve kan basıncı düşer."
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Erken Dönem (20 Dk - 12 Saat):"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0030",
+       "ses": "İki ila on iki hafta içinde dolaşım ve akciğer fonksiyonları düzelirken bir yıl sonra koroner kalp hastalığı riski sigara içenlerin yarısına iner.",
+       "ekran": "**Orta Dönem (Haftalar - 1 Yıl):** Dolaşım düzelmesi ve koroner kalp hastalığı riskinde %50 azalma.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "01 yıl sonra koroner kalp hastalığı riski sigara içen birininkinin yaklaşık yarısı kadardır."
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Orta Dönem (Haftalar - 1 Yıl):"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0031",
+       "ses": "On yıl sonra akciğer kanseri riski yarıya inerken on beş yıl sonra koroner kalp hastalığı riski hiç sigara içmemiş bireylerin seviyesine tamamen eşitlenir.",
+       "ekran": "**Uzun Dönem (10 - 15 Yıl):** Kanser riskinde yarı yarıya düşüş ve kardiyovasküler riskin sıfırlanması.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "110 yıl sonra akciğer kanseri riski sigara içen birininkinin yaklaşık yarısına düşer ve"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Uzun Dönem (10 - 15 Yıl):"
         }
        ]
       }
@@ -344,62 +684,87 @@
    ]
   },
   {
-   "id": "k2-61-b02",
-   "baslik": "Klinik Değerlendirme ve Davranışsal Yaklaşımlar",
+   "id": "k2-61-b06",
+   "baslik": "Nikotin Bağımlılığına Klinik Yaklaşım",
    "paragraflar": [
     {
      "id": "k2-61-p011",
      "sayfa": 11,
      "cumleler": [
       {
-       "id": "k2-61-c0015",
-       "ses": "Birinci basamakta nikotin bağımlılığına yaklaşırken tütün kullanımının kronik ve tedavi edilebilir bir tıbbi sorun olduğu unutulmamalıdır.",
-       "ekran": "**Klinik Yaklaşım İlkeleri:** Tütünün kronik tekrarlayıcı hastalık modeli olarak ele alınması.",
+       "id": "k2-61-c0032",
+       "ses": "Tütün kullanımı dünya çapında en büyük potansiyel olarak tedavi edilebilir kronik bağımlılık hastalığıdır.",
+       "ekran": "**Kronik Bağımlılık:** Tedavi edilebilir en büyük önlenebilir hastalık.",
        "duzey": 0,
        "slayt": {
         "sayfa": 11,
         "satir": [
-         "Nikotin Bağımlılığına Yaklaşım"
+         "Tütün kullanımı, dünya çapında en büyük potansiyel olarak tedavi edilebilir sorundur ve gelişmiş"
         ],
         "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Klinik Yaklaşım İlkeleri"
+         "metin": "Kronik Bağımlılık:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0033",
+       "ses": "Tütün bağımlılarının en az yüzde yetmişi her yıl bir hekim tarafından muayene edilmekte ve bunların yüzde yetmişi sigarayı bırakmayı içtenlikle istemektedir.",
+       "ekran": "**Hasta Motivasyonu:** Bağımlıların %70'i bırakmak istemekte ve hekime başvurmaktadır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Tütün bağımlılarının en az %70’i bir hekim tarafından görülmekte, %70’i bırakmayı istemekte, önceki"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Hasta Motivasyonu:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0034",
+       "ses": "Hekimin poliklinikte yapacağı birkaç dakikalık net ve kararlı bir bırakma önerisi hastanın motivasyonunu iki katına çıkararak en güçlü güdülenmeyi sağlar.",
+       "ekran": "**Hekim Tavsiyesinin Gücü:** Kısa hekim önerisi bırakma oranlarını ikiye katlar.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Hekim önerisi tütün bağımlıları için bırakmaya yönelik güçlü bir olumlu güdülenme sağlamaktadır. Bu"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Hekim Tavsiyesinin Gücü:"
         }
        ]
       }
      ]
-    },
+    }
+   ]
+  },
+  {
+   "id": "k2-61-b07",
+   "baslik": "Transteoretik Değişim Modeli",
+   "paragraflar": [
     {
      "id": "k2-61-p012",
      "sayfa": 12,
      "cumleler": [
       {
-       "id": "k2-61-c0016",
-       "ses": "Transteoretik Değişim Modeli bireyin sigarayı bırakma sürecindeki motivasyonel hazırlık evrelerini sistematik biçimde tanımlar.",
-       "ekran": "**Transteoretik Model:** Farkındalık öncesi, niyet, hazırlık, eylem ve sürdürme evreleri.",
+       "id": "k2-61-c0035",
+       "ses": "Görsel şemamızda bireyin sigarayı bırakma tedavisine uyum sağlamaya hazır olup olmadığını değerlendiren Transteoretik Değişim Modeli yer almaktadır.",
+       "ekran": "**Transteoretik Model:** Prochaska ve DiClemente'nin 5 basamaklı davranışsal değişim döngüsü.",
        "duzey": 0,
-       "slayt": {
-        "sayfa": 12,
-        "satir": [
-         "y aul"
-        ],
-        "sekil": null
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "Transteoretik Model"
-        }
-       ]
-      },
-      {
-       "id": "k2-61-c0017",
-       "ses": "Önündeki bir ay içinde bırakma tarihi belirleyen ve hazırlık yapan hasta eylem evresine geçmeye hazır kabul edilir.",
-       "ekran": "**Hazırlık Evresi:** Önündeki otuz günde somut bırakma günü belirleyen hasta profili.",
-       "duzey": 1,
        "slayt": {
         "sayfa": 12,
         "satir": [
@@ -410,87 +775,134 @@
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Hazırlık Evresi"
+         "metin": "Transteoretik Model:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0036",
+       "ses": "Bu modele göre hastalar bırakmanın henüz düşünülmediği niyet öncesi evre yani precontemplation ile bırakmanın düşünüldüğü contemplation evrelerinden geçer.",
+       "ekran": "**Düşünmeme ve Düşünme Evreleri:** Precontemplation ve contemplation dönemleri.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "1) Bırakmanın düşünülmediği evre (precontemplation) (5R)"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Düşünmeme ve Düşünme Evreleri:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0037",
+       "ses": "Ardından bırakma hazırlığının yapıldığı preparation, denemenin başladığı action ve davranışın kalıcılaştığı maintenance evreleri döngüyü tamamlar.",
+       "ekran": "**Hazırlık, Eylem ve Sürdürüm:** Preparation, action ve maintenance basamakları.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "3) Bırakma hazırlığının yapılması (preparation)"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Hazırlık, Eylem ve Sürdürüm:"
         }
        ]
       }
      ]
-    },
+    }
+   ]
+  },
+  {
+   "id": "k2-61-b08",
+   "baslik": "Fagerström Bağımlılık Testi",
+   "paragraflar": [
     {
      "id": "k2-61-p013",
      "sayfa": 13,
      "cumleler": [
       {
-       "id": "k2-61-c0018",
-       "ses": "Fagerström Nikotin Bağımlılık Testi hastadaki fiziksel bağımlılığın biyolojik şiddetini altı soruyla niceliksel olarak derecelendirir.",
-       "ekran": "**Fagerström Testi (FTND):** Fiziksel bağımlılık şiddetini ölçen standart anket aracı.",
+       "id": "k2-61-c0038",
+       "ses": "Tablomuzda nikotin bağımlılığının fiziksel şiddetini klinik olarak ölçmede altın standart kabul edilen Fagerström Nikotin Bağımlılık Testi soruları görülmektedir.",
+       "ekran": "**Fagerström Testi:** Nikotin bağımlılık şiddetini puanlayan 6 soruluk altın standart ölçek.",
        "duzey": 0,
        "slayt": {
         "sayfa": 13,
         "satir": [
          "Nikotin bağımlılığını ve özellikle Fagerström Testi (FTND)"
         ],
-        "sekil": null
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "Fagerström Testi"
-        }
-       ]
-      },
-      {
-       "id": "k2-61-c0019",
-       "ses": "Sabah uyandıktan sonra ilk sigarayı ilk beş dakika içinde içmek yedi puan ve üzeri şiddetli fiziksel bağımlılığın en temel göstergesidir.",
-       "ekran": "**Sabah İlk Sigara:** İlk beş dakikada içmek şiddetli bağımlılığın göstergesidir.",
-       "duzey": 1,
-       "slayt": {
-        "sayfa": 13,
-        "satir": [
-         "şiddetini değe rlendirme Her gün genellikle kaç sigara içiyorsunuz? oe az ’"
-        ],
         "sekil": "Fagerström Nikotin Bağımlılık Testi soru ve puanlama tablosu."
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Sabah İlk Sigara"
+         "metin": "Fagerström Testi:"
         }
        ]
-      }
-     ]
-    },
-    {
-     "id": "k2-61-p014",
-     "sayfa": 14,
-     "cumleler": [
+      },
       {
-       "id": "k2-61-c0020",
-       "ses": "Bırakmaya istekli hastalarda beş A modeli uygulanırken, henüz hazır olmayan veya kararsız bireylerde beş R motivasyon modeli tercih edilir.",
-       "ekran": "**Klinik Müdahale Modelleri:** Hazır hastada 5A, dirençli hastada 5R yaklaşımı.",
+       "id": "k2-61-c0039",
+       "ses": "Testin en belirleyici soruları sabah uyandıktan sonra ilk sigaranın ne kadar süre içinde içildiği ve günde kaç adet sigara tüketildiğidir.",
+       "ekran": "**Kritik Sorular:** Sabah ilk 5 dakika içinde içme ve günlük tüketim adedi.",
        "duzey": 0,
        "slayt": {
-        "sayfa": 14,
+        "sayfa": 13,
         "satir": [
-         "SA 5R"
+         "İlk sigaranızı uyandıktan ne kadar sonra içiyorsunuz? 5 dakika içinde"
         ],
         "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Klinik Müdahale Modelleri"
+         "metin": "Kritik Sorular:"
         }
        ]
       },
       {
-       "id": "k2-61-c0021",
-       "ses": "Sigarayı bırakmaya hazır olmayan veya direnç gösteren bireylerde motivasyonu artırmak amacıyla kullanılan beş R stratejisi basamakları çıkmış sınavda sorulmuştur.",
-       "ekran": "**5R Basamakları:** Relevance, Risks, Rewards, Roadblocks ve Repetition ilkeleri.",
-       "duzey": 1,
-       "cikmis": [
-        "d3-k2-ah-003"
-       ],
+       "id": "k2-61-c0040",
+       "ses": "Uyandıktan sonraki ilk beş dakika içinde sigara yakan ve günde otuz bir adetten fazla içen bireyler çok yüksek derecede fiziksel nikotin bağımlısı olarak sınıflandırılır.",
+       "ekran": "**Puanlama:** 0-2 çok az, 3-4 az, 5 orta, 6-7 yüksek, 8-10 çok yüksek bağımlılık.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "SONUCLARIN DEGERLENDIRILMESI"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Puanlama:"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-61-b09",
+   "baslik": "5A ve 5R Klinik Müdahale Modelleri",
+   "paragraflar": [
+    {
+     "id": "k2-61-p014",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k2-61-c0041",
+       "ses": "Klinik pratikte sigara bırakmaya istekli olan hastalara beş A kuralı yani Ask, Advise, Assess, Assist ve Arrange basamakları eksiksiz uygulanır.",
+       "ekran": "**5A Stratejisi:** Ask (Sor), Advise (Öner), Assess (Değerlendir), Assist (Yardım et), Arrange (Düzenle).",
+       "duzey": 0,
        "slayt": {
         "sayfa": 14,
         "satir": [
@@ -500,33 +912,145 @@
        },
        "vurgu": [
         {
-         "tur": "cikmis",
-         "metin": "5R Basamakları"
+         "tur": "terim",
+         "metin": "5A Stratejisi:"
+        },
+        {
+         "metin": "5A Stratejisi:",
+         "tur": "cikmis"
         }
+       ],
+       "cikmis": [
+        "4025335a1a6b",
+        "abcd04e07c9e"
        ]
-      }
-     ]
-    },
-    {
-     "id": "k2-61-p015",
-     "sayfa": 15,
-     "cumleler": [
+      },
       {
-       "id": "k2-61-c0022",
-       "ses": "Nikotin bağımlılığı tedavisinde nöropatolojinin anlaşılması etkili ve bireyselleştirilmiş tedavi stratejileri geliştirmemizi sağlar.",
-       "ekran": "**Tedavi Hedefleri:** Reseptör biyolojisine ve bağımlılık şiddetine dayalı planlama.",
+       "id": "k2-61-c0042",
+       "ses": "Bırakmaya henüz hazır olmayan veya motivasyonu zayıf hastalarda ise beş R stratejisi uygulanarak bırakma kararlılığı geliştirilir.",
+       "ekran": "**5R Stratejisi:** Bırakmaya dirençli olgular için motivasyonel girişim basamakları.",
        "duzey": 0,
        "slayt": {
-        "sayfa": 15,
+        "sayfa": 14,
         "satir": [
-         "Nikotin Bağımlılığı Tedavisi"
+         "Advise Öner Risks Riskler"
         ],
         "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Tedavi Hedefleri"
+         "metin": "5R Stratejisi:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0043",
+       "ses": "Nitekim tıp fakültesi amfi sınavlarında çıkmış sınav sorusu olarak beş R modelinin basamakları olan İlişkilendir yani Relevance, Riskler yani Risks, Ödüller yani Rewards, Engeller yani Roadblocks ve Tekrar yani Repetition sorgulanmıştır.",
+       "ekran": "**Sınav Spotu (Çıkmış Soru):** Bu bilgi çıkmış sınavda sorulmuştur: 5R modelinin basamakları Relevance, Risks, Rewards, Roadblocks ve Repetition'dır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Relevance İlişkilendir"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Sınav Spotu (Çıkmış Soru):"
+        }
+       ],
+       "cikmis": [
+        "d3-k2-ah-003"
+       ]
+      },
+      {
+       "id": "k2-61-c0044",
+       "ses": "Hekim hastanın kişisel sağlığıyla riskleri ilişkilendirir, bırakmanın ödüllerini vurgular, önündeki engelleri çözümler ve her vizitte bu mesajı sabırla tekrarlar.",
+       "ekran": "**Uygulama Esasları:** Bireyselleştirilmiş riskler, ödüller ve engellerin analizi.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Arrange Düzenle Repetition Tekrar"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Uygulama Esasları:"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-61-b10",
+   "baslik": "Birinci Basamak Algoritması ve Tedavi İlkeleri",
+   "paragraflar": [
+    {
+     "id": "k2-61-p015",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k2-61-c0045",
+       "ses": "Nikotin bağımlılığının nörobiyolojisinin aydınlatılması farmakoterapide nikotin yerine koyma tedavileri ve oral reseptör hedefli ilaçların geliştirilmesini sağlamıştır.",
+       "ekran": "**Nörobiyolojik Hedefler:** Reseptör mekanizmaları ve kanıta dayalı farmakoterapi.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Nikotin bağımlılığının nöropatolojisinin"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Nörobiyolojik Hedefler:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0046",
+       "ses": "Etkili nikotin replasmanı ve oral tedaviler sayesinde günümüzde yoksunluk krizleri ve şiddetli aşerme tabloları başarıyla kontrol altına alınabilmektedir.",
+       "ekran": "**Aşerme Kontrolü:** Replasman ve oral tedavilerle yoksunluğun baskılanması.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "replasman tedavisi (NRT) ve oral terapi"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Aşerme Kontrolü:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0047",
+       "ses": "Modern tütün polikliniklerinde farmakoterapi ile davranışsal bilişsel danışmanlığın birleştirilmesi kalıcı başarıyı en üst seviyeye taşır.",
+       "ekran": "**Kombine Başarı:** Farmakolojik ve davranışsal tedavinin entegrasyonu.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Önümüzdeki yıllarda daha büyük"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Kombine Başarı:"
         }
        ]
       }
@@ -537,50 +1061,59 @@
      "sayfa": 16,
      "cumleler": [
       {
-       "id": "k2-61-c0023",
-       "ses": "Birinci basamak sigara bırakma algoritmasında her hastanın bağımlılık derecesine göre ilaç seçimi ve danışmanlık adımları belirlenir.",
-       "ekran": "**Tedavi Algoritması:** Bağımlılık derecesine göre farmakoterapi ve danışmanlık eşleşmesi.",
+       "id": "k2-61-c0048",
+       "ses": "Görsel şemamızda birinci basamak sağlık kuruluşlarında her hastaya uygulanması gereken sigara bırakma tedavi algoritması adım adım gösterilmektedir.",
+       "ekran": "**Klinik Algoritma:** Birinci basamakta başvuran her bireye tütün durumunu sorma şeması.",
        "duzey": 0,
        "slayt": {
         "sayfa": 16,
         "satir": [
          "BİRİNCİ BASAMAK YAKLAŞIMDA SİGARA BIRAKMA TEDAVİ ALGORİTMASI"
         ],
-        "sekil": null
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "Tedavi Algoritması"
-        },
-        {
-         "metin": "Tedavi Algoritması:",
-         "tur": "cikmis"
-        }
-       ],
-       "cikmis": [
-        "0c3a65aaa8bc",
-        "4025335a1a6b",
-        "82d36bec5d0e",
-        "abcd04e07c9e"
-       ]
-      },
-      {
-       "id": "k2-61-c0024",
-       "ses": "Bırakmaya hazır hastayla birlikte önündeki iki ila üç hafta içinde net bir bırakma günü kararlaştırılarak hazırlıklar tamamlanır.",
-       "ekran": "**Bırakma Günü (Quit Date):** İki ila üç hafta içinde net hedef tarihin saptanması.",
-       "duzey": 1,
-       "slayt": {
-        "sayfa": 16,
-        "satir": [
-         "Herhangi bir nedenle başvuran"
-        ],
         "sekil": "Birinci basamak yaklaşımda sigara bırakma tedavi algoritması akış şeması."
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Bırakma Günü"
+         "metin": "Klinik Algoritma:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0049",
+       "ses": "Herhangi bir nedenle başvuran her bireye sigara içip içmediği açıkça sorulmalı; hiç içmeyen ve bırakmış olanlar tebrik edilerek pasif maruziyet konusunda uyarılmalıdır.",
+       "ekran": "**İçmeyen ve Bırakan Hasta:** Tebrik etme, içmeme davranışını pekiştirme ve pasif maruziyeti sorgulama.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Herhangi bir nedenle başvuran"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "İçmeyen ve Bırakan Hasta:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0050",
+       "ses": "Sigara içen hastada bırakma isteği varsa bağımlılık şiddeti ölçülür, tedavi planlanarak yardımcı olunur ve takip vizitleri düzenlenir; istek yoksa bırakma tavsiye edilerek güvence verilir.",
+       "ekran": "**Bırakma İsteği Yönetimi:** İstekli olguda 5A ile tedavi başlama, isteksiz olguda 5R ile güvence verme.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "bireye sigara içip içmediğini SOR"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Bırakma İsteği Yönetimi:"
         }
        ]
       }
@@ -591,9 +1124,9 @@
      "sayfa": 17,
      "cumleler": [
       {
-       "id": "k2-61-c0025",
-       "ses": "Motivasyonel görüşme hastanın değişime karşı direncini kırmada en etkili iletişim tekniğidir.",
-       "ekran": "**Motivasyonel Görüşme:** Davranışsal değişimi tetikleyen hasta merkezli iletişim.",
+       "id": "k2-61-c0051",
+       "ses": "Sigara bırakma tedavisinin birbirinden ayrılamaz iki temel sacayağı motivasyonel görüşme ile farmakolojik tedavidir.",
+       "ekran": "**Tedavinin İki Ayağı:** Motivasyonel görüşme ve farmakolojik tedavi.",
        "duzey": 0,
        "slayt": {
         "sayfa": 17,
@@ -605,32 +1138,123 @@
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Motivasyonel Görüşme"
+         "metin": "Tedavinin İki Ayağı:"
         }
        ]
-      }
-     ]
-    },
-    {
-     "id": "k2-61-p018",
-     "sayfa": 18,
-     "cumleler": [
+      },
       {
-       "id": "k2-61-c0026",
-       "ses": "Motivasyonel görüşmede empati gösterilerek hastanın içsel kararsızlığı çözülür ve dirençle doğrudan tartışmaktan kaçınılır.",
-       "ekran": "**Görüşme İlkeleri:** Empati, ambivalansı açığa çıkarma ve dirençle tartışmama.",
+       "id": "k2-61-c0052",
+       "ses": "Yalnızca ilaç vermek psikolojik ve davranışsal koşullanmayı çözmeye yetmezken, yalnızca konuşmak da şiddetli nikotin yoksunluğunu bastırmada yetersiz kalabilir.",
+       "ekran": "**Bütüncül Yaklaşım:** Fiziksel bağımlılık ilaçla, psikolojik bağımlılık görüşmeyle çözülür.",
        "duzey": 0,
        "slayt": {
-        "sayfa": 18,
+        "sayfa": 17,
         "satir": [
-         "Motivasyonel Görüşme"
+         "Farmakolojik"
         ],
         "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Görüşme İlkeleri"
+         "metin": "Bütüncül Yaklaşım:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0053",
+       "ses": "Bu iki yöntemin birlikte uygulanması klinik çalışmalarda sigarayı kalıcı bırakma oranlarını en az üç ila dört katına çıkarmaktadır.",
+       "ekran": "**Yüksek Başarı:** İki yöntemin sinerjisi ile kalıcı bırakma oranlarında dramatik artış.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Tedavi"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Yüksek Başarı:"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-61-b11",
+   "baslik": "Motivasyonel Görüşme Teknikleri",
+   "paragraflar": [
+    {
+     "id": "k2-61-p018",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k2-61-c0054",
+       "ses": "Nikotin bağımlılığının davranışsal ve psikolojik boyutlarına müdahale ederken motivasyonel görüşme ilkeleri titizlikle uygulanmalıdır.",
+       "ekran": "**Motivasyonel İlkeler:** Bilişsel-davranışçı yöntemlerle psikolojik bağımlılığın çözümlenmesi.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Nikotin bağımlılığının davranış ve psikolojik boyutlarına davranışcı"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Motivasyonel İlkeler:"
+        },
+        {
+         "metin": "Motivasyonel İlkeler:",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "q-KURUL_2_C_IKMIS__3-97",
+        "0c3a65aaa8bc",
+        "82d36bec5d0e"
+       ]
+      },
+      {
+       "id": "k2-61-c0055",
+       "ses": "Hekim mutlaka empati yapmalı, hastanın en çok önemsediği sağlık, çocukları veya bütçesi gibi değerlerle sigara arasındaki çelişkiyi net biçimde ortaya koymalıdır.",
+       "ekran": "**Empati ve Çelişki:** Hastanın değerleriyle sigara arasındaki uyumsuzluğu gösterme.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "hastanın önemsediği şeyle (sağlık, ekonomi, çocukları vb) sigaranın"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Empati ve Çelişki:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0056",
+       "ses": "Paternalistik ve suçlayıcı tutumlardan kesinlikle kaçınılmalı; sigara bırakmanın bir süreç olduğu ve arada gidiş gelişlerin normal karşılanması gerektiği anlatılmalıdır.",
+       "ekran": "**Yargılayıcı Olmayan Tutum:** Suçlayıcı dilden kaçınma ve sürecin doğallığını kabul etme.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "paternalistik yaklaşımdan kaçınılmalı,"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Yargılayıcı Olmayan Tutum:"
         }
        ]
       }
@@ -641,21 +1265,59 @@
      "sayfa": 19,
      "cumleler": [
       {
-       "id": "k2-61-c0027",
-       "ses": "Hekim açık uçlu sorularla hastanın kendi bırakma gerekçelerini keşfetmesini sağlayarak içsel motivasyonunu güçlendirir.",
-       "ekran": "**Özyeterlilik Desteği:** Açık uçlu sorularla hastanın içsel değişim gücünü ortaya çıkarma.",
+       "id": "k2-61-c0057",
+       "ses": "Bilişsel davranışçı motivasyonel teknikler hastanın kendi içsel bırakma nedenlerini keşfetmesini ve öz-yeterlilik duygusunun güçlenmesini sağlar.",
+       "ekran": "**Öz-Yeterlilik:** Hastanın bırakabileceğine dair inancını pekiştirme.",
        "duzey": 0,
        "slayt": {
         "sayfa": 19,
         "satir": [
-         "görüşme"
+         "Motivasyonel"
         ],
         "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Özyeterlilik Desteği"
+         "metin": "Öz-Yeterlilik:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0058",
+       "ses": "Farmakolojik tedavi ile fiziksel çekilme semptomları yatıştırılırken motivasyonel görüşmeler nüks risklerini önceden tanımaya odaklanır.",
+       "ekran": "**Nüks Önleme Odağı:** Çekilme semptomlarını kontrol edip riskli tetikleyicileri yönetme.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Farmakolojik"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Nüks Önleme Odağı:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0059",
+       "ses": "Böylece hasta hem biyolojik olarak rahatlar hem de günlük hayatın stres anlarında sigarasız başa çıkma stratejilerini kazanır.",
+       "ekran": "**Başa Çıkma Becerileri:** Sigarasız yaşam becerileri ve stres yönetimi.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Tedavi"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Başa Çıkma Becerileri:"
         }
        ]
       }
@@ -664,17 +1326,17 @@
    ]
   },
   {
-   "id": "k2-61-b03",
-   "baslik": "Farmakolojik Tedaviler: Birinci ve İkinci Basamak",
+   "id": "k2-61-b12",
+   "baslik": "Nikotin Yerine Koyma Tedavileri (NRT)",
    "paragraflar": [
     {
      "id": "k2-61-p020",
      "sayfa": 20,
      "cumleler": [
       {
-       "id": "k2-61-c0028",
-       "ses": "Birinci basamak farmakoterapiler arasında Nikotin Replasman Tedavisi, Bupropion ve Vareniklin yer almaktadır.",
-       "ekran": "**Birinci Basamak Ajanlar:** NRT formülasyonları, Bupropion ve Vareniklin.",
+       "id": "k2-61-c0060",
+       "ses": "Sigara bırakma farmakoterapisinde birinci basamak kanıta dayalı tedaviler Nikotin Yerine Koyma Tedavileri, Bupropion ve Vareniklin olarak sınıflandırılır.",
+       "ekran": "**Birinci Basamak İlaçlar:** NRT formülasyonları, oral Bupropion ve Vareniklin.",
        "duzey": 0,
        "slayt": {
         "sayfa": 20,
@@ -686,7 +1348,45 @@
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Birinci Basamak Ajanlar"
+         "metin": "Birinci Basamak İlaçlar:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0061",
+       "ses": "Bupropion atipik bir antidepresan olup dopamin ve noradrenalin geri alımını inhibe ederken, vareniklin nikotinik reseptör parsiyel agonistidir.",
+       "ekran": "**Farklı Mekanizmalar:** Nöronal reuptake inhibisyonu ve reseptör parsiyel agonizması.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "2.Bupropion"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Farklı Mekanizmalar:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0062",
+       "ses": "Ayrıca sitizin ile ikinci ve üçüncü seçenek ajanlar da dirençli olgularda tedavi cephanesinde yer alır.",
+       "ekran": "**Alternatifler:** Sitizin ve ikinci seçenek ilaçların rolü.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "4.Sitizin"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Alternatifler:"
         }
        ]
       }
@@ -697,40 +1397,59 @@
      "sayfa": 21,
      "cumleler": [
       {
-       "id": "k2-61-c0029",
-       "ses": "Nikotin replasman tedavisi transdermal bant, nikotin sakızı, pastil ve inhaler gibi çeşitli farmasötik formlara sahiptir.",
-       "ekran": "**NRT Formları:** Transdermal bant, sakız, pastil ve oral inhaler preparatları.",
+       "id": "k2-61-c0063",
+       "ses": "Görselimizde Nikotin Yerine Koyma Tedavisinin klinik pratikte kullanılan farklı uygulama formları şematize edilmiştir.",
+       "ekran": "**NRT Formülasyonları:** Transdermal bant, sakız, pastil, ağız spreyi ve inhaler.",
        "duzey": 0,
        "slayt": {
         "sayfa": 21,
         "satir": [
-         "* Transdermal Nikotin Bandı"
-        ],
-        "sekil": null
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "NRT Formları"
-        }
-       ]
-      },
-      {
-       "id": "k2-61-c0030",
-       "ses": "Transdermal bant yavaş salınımla gün boyu bazal nikotin seviyesi sağlarken sakız ani aşerme krizlerinde çiğnenir.",
-       "ekran": "**Bant ve Sakız Kombinasyonu:** Bazal koruma ile ani aşerme kontrolünün birleşimi.",
-       "duzey": 1,
-       "slayt": {
-        "sayfa": 21,
-        "satir": [
-         "' Nikotin Sakızı"
+         "Transdermal Nikotin Bandı"
         ],
         "sekil": "Transdermal nikotin bandı ve sakız uygulama biçimleri şeması."
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Bant ve Sakız Kombinasyonu"
+         "metin": "NRT Formülasyonları:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0064",
+       "ses": "Transdermal nikotin bandı yavaş ve sabit bir plazma nikotin düzeyi sağlarken nikotin sakızı ve ağız spreyi ani gelişen aşermeleri hızla baskılar.",
+       "ekran": "**Sabit ve Hızlı Salınım:** Bant kararlı düzey, sakız ve sprey anlık kriz kontrolü sağlar.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Nikotin Sakızı"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Sabit ve Hızlı Salınım:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0065",
+       "ses": "Sublingual tablet, nazal sprey ve nikotin inhaler gibi alternatif formülasyonlar da hastanın kullanım tercihlerine göre seçilebilir.",
+       "ekran": "**Alternatif Formlar:** Sublingual tablet ve nazal formülasyonlar.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Nikotin Ağız Spreyi"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Alternatif Formlar:"
         }
        ]
       }
@@ -741,9 +1460,9 @@
      "sayfa": 22,
      "cumleler": [
       {
-       "id": "k2-61-c0031",
-       "ses": "Nikotin replasman tedavisinin iki temel amacı reseptörleri doyurarak aşermeyi ve çekilme bulgularını hafifletmektir.",
-       "ekran": "**NRT Amaçları:** Fiziksel aşermeyi yatıştırmak ve yoksunluk semptomlarını önlemek.",
+       "id": "k2-61-c0066",
+       "ses": "Nikotin Yerine Koyma Tedavisinin iki temel farmakolojik amacı bulunmaktadır.",
+       "ekran": "**İki Temel Amaç:** Akut yoksunluğu giderme ve uzun dönemde reseptör down-regülasyonu.",
        "duzey": 0,
        "slayt": {
         "sayfa": 22,
@@ -755,7 +1474,45 @@
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "NRT Amaçları"
+         "metin": "İki Temel Amaç:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0067",
+       "ses": "İlk amaç nikotinik reseptörleri temiz nikotinle uyararak hastada ortaya çıkan şiddetli aşerme ve yoksunluk bulgularını hızla yatıştırmaktır.",
+       "ekran": "**Akut Aşerme Giderimi:** Temiz nikotinle reseptör uyarımı ve yoksunluğun baskılanması.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Nikotin reseptörlerini stimüle ederek aşerme ve"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Akut Aşerme Giderimi:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0068",
+       "ses": "İkinci amaç ise haftalar süren stabil nikotin salınımıyla beyindeki aşırı artmış nikotinik reseptör sayısını kademeli olarak azaltmak ve bağımlılığı geriletmektir.",
+       "ekran": "**Reseptör Down-Regülasyonu:** Reseptör yoğunluğunun zamanla normale dönmesi.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Haftalarca devam eden nikotin bağımlılığını azaltan"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Reseptör Down-Regülasyonu:"
         }
        ]
       }
@@ -766,9 +1523,9 @@
      "sayfa": 23,
      "cumleler": [
       {
-       "id": "k2-61-c0032",
-       "ses": "Kişide yüksek veya orta derecede nikotin bağımlılığı saptandığında başlangıç dozu günlük sigara tüketimine göre ayarlanır.",
-       "ekran": "**Doz Ayarlaması:** Günde bir paket ve üzeri içenlerde 21 miligramlık yüksek doz bant.",
+       "id": "k2-61-c0069",
+       "ses": "Kişide Fagerström testine göre orta veya yüksek derecede nikotin bağımlılığı saptanırsa ya da günde on beş adetten fazla sigara içiyorsa nikotin yerine koyma tedavisi endikedir.",
+       "ekran": "**NRT Endikasyonu:** Günde 15 sigaradan fazla içen orta ve yüksek bağımlılar.",
        "duzey": 0,
        "slayt": {
         "sayfa": 23,
@@ -780,7 +1537,45 @@
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Doz Ayarlaması"
+         "metin": "NRT Endikasyonu:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0070",
+       "ses": "Hafif derecede bağımlı olmasına rağmen davranışsal yöntemlerle sigarayı bırakamamış bireylerde de replasman tedavisi başarıyla uygulanır.",
+       "ekran": "**Dirençli Olgular:** Davranışsal yöntemlerle bırakamayan hafif bağımlılarda kullanım.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "günde 15 adetten fazla sigara içiyorsa"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Dirençli Olgular:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0071",
+       "ses": "Klinik pratikte transdermal bant ile sakız veya spreyin kombine edilmesi tek başına bant kullanımına göre çok daha yüksek bırakma başarısı sunar.",
+       "ekran": "**Kombine NRT:** Bant ile sakız veya sprey kombinasyonunun üstünlüğü.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "diğer yöntemlerden fayda görmemişse nikotin replasman tedavisi uygulanır."
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Kombine NRT:"
         }
        ]
       }
@@ -791,9 +1586,9 @@
      "sayfa": 24,
      "cumleler": [
       {
-       "id": "k2-61-c0033",
-       "ses": "Nikotin replasman tedavisinin gerçek anlamda mutlak bir kontrendikasyonu bulunmamakla birlikte sigarayla eş zamanlı içilmemelidir.",
-       "ekran": "**Kullanım Güvenliği:** NRT uygulanırken sigara içimi kesinlikle kesilmelidir.",
+       "id": "k2-61-c0072",
+       "ses": "Nikotin Yerine Koyma Tedavisinin tütün dumanındaki toksinleri içermemesi nedeniyle gerçek anlamda mutlak bir kontrendikasyonu bulunmamaktadır.",
+       "ekran": "**Güvenlik Profili:** Kanserojen ve karbonmonoksit içermez, mutlak kontrendikasyonu yoktur.",
        "duzey": 0,
        "slayt": {
         "sayfa": 24,
@@ -805,7 +1600,45 @@
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Kullanım Güvenliği"
+         "metin": "Güvenlik Profili:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0073",
+       "ses": "Yan etkiler genellikle sigara içimi tamamen kesilmeden nikotin yerine koyma tedavisi kullanılması sonucu gelişen aşırı nikotin yüklenmesi ile ortaya çıkar.",
+       "ekran": "**Aşırı Doz Riski:** Sigara bırakılmadan NRT kullanılırsa toksisite bulguları oluşur.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "an etkiler genelde sigara içiminin kesilmeden NRT kullanımı ile ortaya çıkmaktadır."
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Aşırı Doz Riski:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0074",
+       "ses": "Akut miyokard infarktüsü geçiren kişilerde ilk haftalarda ve ciddi aritmisi olanlarda dikkatli olunmalı, gebe ve emzirenlerde hekim kararıyla yönetilmelidir.",
+       "ekran": "**Kardiyovasküler Dikkat:** Akut MI ilk 2 haftasında ve instabil aritmilerde yakın izlem.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "gebelerde, emziren kadınlarda, akut miyokard infarktüsü geçiren kişilerde ilk haftalarda ve"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Kardiyovasküler Dikkat:"
         }
        ]
       }
@@ -816,53 +1649,97 @@
      "sayfa": 25,
      "cumleler": [
       {
-       "id": "k2-61-c0034",
-       "ses": "Transdermal bant her sabah tüysüz ve kuru cilde yapıştırılmalı, cilt tahrişini önlemek için uygulama yeri her gün değiştirilmelidir.",
-       "ekran": "**Bant Uygulama Kuralları:** Tüysüz cilt seçimi ve günlük yapıştırma yeri rotasyonu.",
+       "id": "k2-61-c0075",
+       "ses": "Tablomuzda transdermal nikotin yaması, sakız, pastil, inhaler ve spreylerin dozajları, yan etkileri ve klinik avantajları karşılaştırılmaktadır.",
+       "ekran": "**NRT Karşılaştırma Tablosu:** Tüm formülasyonların doz, yan etki ve kullanım özellikleri.",
        "duzey": 0,
        "slayt": {
         "sayfa": 25,
         "satir": [
-         "TABLO 1: Nikotin yerine koyma tedavileri ve formları.!8-9"
-        ],
-        "sekil": null
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "Bant Uygulama Kuralları"
-        }
-       ]
-      },
-      {
-       "id": "k2-61-c0035",
-       "ses": "Gece canlı rüyalar ve uykusuzluk yaşayan hastalarda bant yatarken çıkarılarak on altı saatlik gündüz protokolüne geçilebilir.",
-       "ekran": "**Uyku Yan Etkisi Yönetimi:** Gece bandın çıkarılmasıyla canlı rüyaların önlenmesi.",
-       "duzey": 1,
-       "slayt": {
-        "sayfa": 25,
-        "satir": [
-         "Nikotin yama"
+         "TABLO 1: Nikotin yerine koyma tedavileri ve formları"
         ],
         "sekil": "Nikotin yerine koyma tedavileri formülasyonları ve kullanım özellikleri tablosu."
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Uyku Yan Etkisi Yönetimi"
+         "metin": "NRT Karşılaştırma Tablosu:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0076",
+       "ses": "Günde on adetten fazla sigara içenlerde yirmi bir miligramlık yüksek doz bantla başlanırken on adetten az içenlerde on dört miligramlık bant tercih edilir.",
+       "ekran": "**Bant Dozlaması:** Günde ≥10 sigara için 21 mg/gün, <10 sigara için 14 mg/gün.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "2 10 sigaralgün için 21 mg"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Bant Dozlaması:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0077",
+       "ses": "Nikotin sakızı ve pastilinde ise ilk sigara uyandıktan sonraki ilk otuz dakikada içiliyorsa dört miligramlık, sonrasında içiliyorsa iki miligramlık form kullanılır.",
+       "ekran": "**Sakız ve Pastil Dozu:** İlk 30 dakikada içenlere 4 mg, sonrasına 2 mg form.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "İlk 30 dakikada ise: 4 mg"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Sakız ve Pastil Dozu:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0078",
+       "ses": "Sakız ve pastil kullanımından önceki ve sırasındaki on beş dakika boyunca nikotinin bukkal emilimini bozmamak için asidik yiyecek ve içecekler tüketilmemelidir.",
+       "ekran": "**15 Dakika Kuralı:** Bukkal emilimi korumak için asidik içecek tüketilmeme kuralı.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Kullanımdan 15 dakika önce ve"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "15 Dakika Kuralı:"
         }
        ]
       }
      ]
-    },
+    }
+   ]
+  },
+  {
+   "id": "k2-61-b13",
+   "baslik": "Bupropion Farmakolojisi ve Dozlama",
+   "paragraflar": [
     {
      "id": "k2-61-p026",
      "sayfa": 26,
      "cumleler": [
       {
-       "id": "k2-61-c0036",
-       "ses": "Birinci basamak oral farmakoterapilerden ilki nikotin içermeyen Bupropion hidroklorür tedavisidir.",
-       "ekran": "**Bupropion Farmakoterapisi:** Nikotin içermeyen oral birinci basamak antidepresan.",
+       "id": "k2-61-c0079",
+       "ses": "Sigara bırakma tedavisinde ikinci önemli birinci basamak farmakoterapi seçeneği oral bupropion hidroklorürdür.",
+       "ekran": "**Bupropion Giriş:** Oral atipik antidepresan, birinci basamak tütün bağımlılık ilacı.",
        "duzey": 0,
        "slayt": {
         "sayfa": 26,
@@ -874,7 +1751,52 @@
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Bupropion Farmakoterapisi"
+         "metin": "Bupropion Giriş:"
+        },
+        {
+         "metin": "Bupropion Giriş:",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "past-1790877044820-166663"
+       ]
+      },
+      {
+       "id": "k2-61-c0080",
+       "ses": "Esasen bir antidepresan olarak geliştirilen bupropion, sigara bırakan hastalarda bağımsız olarak aşermeyi belirgin derecede azaltmıştır.",
+       "ekran": "**Klinik Keşif:** Antidepresan tedavide sigara içme isteğini tesadüfen azaltmasıyla keşfedildi.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "1.Nikotin Yerine Koyma Tedavileri (NRT)"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Klinik Keşif:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0081",
+       "ses": "Nikotin içermeyen oral bir tablet olması nedeniyle nikotin replasmanı istemeyen veya tolere edemeyen hastalarda mükemmel bir tercihtir.",
+       "ekran": "**Nikotinsiz Tedavi:** Nikotin içermeyen oral farmakoterapi alternatifi.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "3Vareniklin"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Nikotinsiz Tedavi:"
         }
        ]
       }
@@ -885,40 +1807,78 @@
      "sayfa": 27,
      "cumleler": [
       {
-       "id": "k2-61-c0037",
-       "ses": "Bupropion dopaminin ve daha az oranda noradrenalinin nöronal geri alımını bloke ederek santral ödül yolağını destekler.",
-       "ekran": "**NDRI Mekanizması:** Dopamin ve noradrenalin geri alım blokajıyla aşermenin kesilmesi.",
+       "id": "k2-61-c0082",
+       "ses": "Görsel şemamızda bupropionun presinaptik nöronlarda dopamin ve daha az oranda norepinefrin geri alımını bloke etme mekanizması gösterilmektedir.",
+       "ekran": "**Etki Mekanizması:** Nöronal dopamin ve noradrenalin reuptake inhibisyonu (NDRI).",
        "duzey": 0,
        "slayt": {
         "sayfa": 27,
         "satir": [
          "Dopaminin ve daha az"
         ],
-        "sekil": null
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "NDRI Mekanizması"
-        }
-       ]
-      },
-      {
-       "id": "k2-61-c0038",
-       "ses": "Nükleus akkumbenste dopamin tonusunun korunması sayesinde hasta sigarayı bıraktığında yoğun yoksunluk hissetmez.",
-       "ekran": "**Santral Etki:** Dopaminerjik pekiştirmenin sürdürülmesi ve çekilmenin önlenmesi.",
-       "duzey": 1,
-       "slayt": {
-        "sayfa": 27,
-        "satir": [
-         "norepinefrinin nöronal"
-        ],
         "sekil": "Bupropion etki mekanizması: dopamin ve noradrenalin geri alım inhibisyonu şeması."
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Santral Etki"
+         "metin": "Etki Mekanizması:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0083",
+       "ses": "Nükleus akkumbenste dopamin düzeyini yükselterek nikotinin merkezi sinir sistemi üzerindeki ödüllendirici etkilerini taklit eder ve yoksunluk krizlerini dindirir.",
+       "ekran": "**Yoksunluk Yatışması:** Sinapsta dopamin artışı ve yoksunluk belirtilerinde gerileme.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "norepinefrinin nöronal"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Yoksunluk Yatışması:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0084",
+       "ses": "Hasta aynı zamanda depresyondaysa ya da sigarayı bıraktıktan sonra kilo almaktan aşırı çekiniyorsa bupropion ilk tercih edilecek ajandır.",
+       "ekran": "**Özel Endikasyonlar:** Depresif semptomları olan ve kilo alımından korkan hastalar.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Hasta aynı zamanda Den e rdnerde"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Özel Endikasyonlar:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0085",
+       "ses": "Ayrıca transdermal nikotin bandı ile bupropionun birlikte kullanılması tek başına kullanıma kıyasla çok daha yüksek bırakma başarı oranları sağlar.",
+       "ekran": "**NRT ile Kombinasyon:** Bupropion ve nikotin bandı kombinasyonunun yüksek etkinliği.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "NRT ile birlikte kullanildiginda (sons"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "NRT ile Kombinasyon:"
         }
        ]
       }
@@ -929,41 +1889,116 @@
      "sayfa": 28,
      "cumleler": [
       {
-       "id": "k2-61-c0039",
-       "ses": "Bupropion tedavisine kararlı kan düzeyine ulaşması için sigara bırakma tarihinden bir ila iki hafta önce ilaca başlanması gerekir.",
-       "ekran": "**Kullanım Protokolü:** Bırakma gününden bir iki hafta önce başlama ve doz titrasyonu.",
+       "id": "k2-61-c0086",
+       "ses": "Bupropion tedavisine hastanın belirlediği sigara bırakma tarihinden bir ila iki hafta önce başlanmalıdır.",
+       "ekran": "**Başlama Zamanı:** Sigara bırakma hedef gününden 1-2 hafta önce başlanır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 28,
         "satir": [
-         "* Bırakma tarihinden 1-2 hafta önce ilaca başlamak"
+         "Bırakma tarihinden 1-2 hafta önce ilaca başlamak"
         ],
         "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Kullanım Protokolü"
-        },
-        {
-         "metin": "Kullanım Protokolü:",
-         "tur": "cikmis"
+         "metin": "Başlama Zamanı:"
         }
-       ],
-       "cikmis": [
-        "past-1790877044820-166663"
+       ]
+      },
+      {
+       "id": "k2-61-c0087",
+       "ses": "İlk üç gün günde tek doz yüz elli miligram verilir, ardından günde iki kez yüz elli miligrama çıkılarak tedavi üç ila altı ay sürdürülür.",
+       "ekran": "**Doz Şeması:** İlk 3 gün 150 mg/gün, ardından 2x150 mg/gün (aralarında ≥8 saat).",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "3 gün süreyle 150 mg/gün, ardından günde iki"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Doz Şeması:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0088",
+       "ses": "En sık görülen yan etkiler ağız kuruluğu ve uykusuzluktur; eşik altı dozlarda bile nöbet riski taşıdığından nöbet öyküsü olanlarda kesinlikle kontrendikedir.",
+       "ekran": "**Nöbet Riski:** Nöbet eşiğini düşürür; epilepsi öyküsünde kontrendikedir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Ağız kuruluğu ve uykusuzluk, kullanımla ilişkili en"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Nöbet Riski:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0089",
+       "ses": "Ayrıca bulimiya nervoza, anoreksiya nervoza tanısı olanlarda ve kontrolsüz hipertansiyon hastalarında bupropion kullanılmamalıdır.",
+       "ekran": "**Diğer Kontrendikasyonlar:** Yeme bozuklukları (bulimiya/anoreksiya) ve kontrolsüz hipertansiyon.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "bulimia veya anoreksiya nervoza tanısı, gebelik,"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Diğer Kontrendikasyonlar:"
+        }
        ]
       }
      ]
-    },
+    }
+   ]
+  },
+  {
+   "id": "k2-61-b14",
+   "baslik": "Vareniklin Farmakolojisi ve Klinik Kullanım",
+   "paragraflar": [
     {
      "id": "k2-61-p029",
      "sayfa": 29,
      "cumleler": [
       {
-       "id": "k2-61-c0040",
-       "ses": "Tütün bırakma tedavisinde en yüksek başarı oranlarına sahip olan bir diğer temel birinci basamak ajan Vareniklindir.",
-       "ekran": "**Vareniklin Tedavisi:** Alfa dört beta iki reseptör parsiyel agonisti olan güçlü oral ajan.",
+       "id": "k2-61-c0090",
+       "ses": "Sigara bırakma tedavisinde günümüzün en güçlü etkinliğe sahip üçüncü birinci basamak ajanı vareniklin tartrattır.",
+       "ekran": "**Vareniklin:** En yüksek bırakma başarısına sahip alfa-4 beta-2 nikotinik parsiyel agonist.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "3Vareniklin"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Vareniklin:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0091",
+       "ses": "Vareniklin doğrudan nikotinin beyindeki primer bağımlılık reseptörünü hedef alarak tasarlanmış sentetik bir moleküldür.",
+       "ekran": "**Moleküler Hedef:** Santral alfa-4 beta-2 nikotinik asetilkolin reseptörleri.",
        "duzey": 0,
        "slayt": {
         "sayfa": 29,
@@ -975,7 +2010,26 @@
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Vareniklin Tedavisi"
+         "metin": "Moleküler Hedef:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0092",
+       "ses": "Klinik çalışmalarda hem tek başına nikotin bandından hem de bupropiona kıyasla belirgin şekilde daha üstün sigara bırakma oranları sağlamıştır.",
+       "ekran": "**Karşılaştırmalı Üstünlük:** NRT ve Bupropiona kıyasla üstün klinik başarı oranları.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "2.Bupropion"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Karşılaştırmalı Üstünlük:"
         }
        ]
       }
@@ -986,43 +2040,81 @@
      "sayfa": 30,
      "cumleler": [
       {
-       "id": "k2-61-c0041",
-       "ses": "Vareniklin alfa dört beta iki nikotinik asetilkolin reseptörleri için seçici olan parsiyel bir agonisttir.",
-       "ekran": "**Parsiyel Agonizma:** Hem aşermeyi hafifletir hem de nikotinin bağlanmasını bloke eder.",
+       "id": "k2-61-c0093",
+       "ses": "Görselimizde vareniklinin alfa dört beta iki nikotinik asetilkolin reseptörleri için seçici olan parsiyel agonist etki mekanizması gösterilmektedir.",
+       "ekran": "**Parsiyel Agonizma Şeması:** Alfa-4 beta-2 reseptöründe ikili agonist ve antagonist etki.",
        "duzey": 0,
        "slayt": {
         "sayfa": 30,
         "satir": [
-         ". Vareniklin, alfa-4, beta-2 nikotinik asetilkolin"
+         "Vareniklin, alfa-4, beta-2 nikotinik asetilkolin"
+        ],
+        "sekil": "Vareniklin alfa-4 beta-2 nikotinik asetilkolin reseptör parsiyel agonizma şeması."
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Parsiyel Agonizma Şeması:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0094",
+       "ses": "Nitekim tıp fakültesi sınavlarında çıkmış sınav sorusu olarak sigara bırakma tedavisinde alfa dört beta iki nikotinik asetilkolin reseptörlerinin parsiyel agonisti olan vareniklin sorgulanmıştır.",
+       "ekran": "**Sınav Spotu (Çıkmış Soru):** Bu bilgi çıkmış sınavda sorulmuştur: Vareniklin alfa-4 beta-2 nikotinik reseptörlerin parsiyel agonistidir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "reseptörleri (NAChR'ler) için seçici olan parsiyel bir"
         ],
         "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Parsiyel Agonizma"
+         "metin": "Sınav Spotu (Çıkmış Soru):"
+        }
+       ],
+       "cikmis": [
+        "7ba263dd73d1"
+       ]
+      },
+      {
+       "id": "k2-61-c0095",
+       "ses": "Vareniklin bir yandan orta düzeyde dopamin salarak yoksunluk krizlerini önlerken diğer yandan nikotinin reseptöre bağlanmasını engelleyerek sigaradan alınan hazzı tamamen yok eder.",
+       "ekran": "**İkili Etki:** Agonist etkiyle yoksunluğu önler, antagonist etkiyle sigara hazzını bloke eder.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "anda bu reseptörlere nikotin bağlanmasını da"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "İkili Etki:"
         }
        ]
       },
       {
-       "id": "k2-61-c0042",
-       "ses": "Alfa dört beta iki nikotinik asetilkolin reseptörlerinin parsiyel agonisti olan vareniklinin bu moleküler etki mekanizması çıkmış sınavda sorulmuştur.",
-       "ekran": "**Moleküler Hedef:** Alfa dört beta iki reseptörlerine yüksek afiniteyle bağlanma.",
-       "duzey": 1,
-       "cikmis": [
-        "7ba263dd73d1"
-       ],
+       "id": "k2-61-c0096",
+       "ses": "Böylece hasta ilacı kullandığı dönemde bir kaçak yapıp sigara içse bile tütündeki nikotin reseptöre bağlanamaz ve hiçbir pekiştirici ödül hissi oluşmaz.",
+       "ekran": "**Pekiştirme Blokajı:** Kaçak sigara içiminde bile ödül mekanizması devreye giremez.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 30,
         "satir": [
-         "reseptörleri (NAChR'ler) için seçici olan parsiyel bir"
+         "dönemde sigara içse bile sigaradan gelen nikotin"
         ],
-        "sekil": "Vareniklin alfa dört beta iki nikotinik asetilkolin reseptör parsiyel agonizma şeması."
+        "sekil": null
        },
        "vurgu": [
         {
-         "tur": "cikmis",
-         "metin": "Moleküler Hedef"
+         "tur": "terim",
+         "metin": "Pekiştirme Blokajı:"
         }
        ]
       }
@@ -1033,9 +2125,9 @@
      "sayfa": 31,
      "cumleler": [
       {
-       "id": "k2-61-c0043",
-       "ses": "Vareniklin tedavisi sıfır nokta beş miligram ve bir miligramlık oral tabletlerle kademeli olarak titre edilir.",
-       "ekran": "**Doz Titrasyonu:** Bulantıyı önlemek için düşük dozdan başlanarak hedef doza çıkılır.",
+       "id": "k2-61-c0097",
+       "ses": "Vareniklin sıfır virgül beş miligram ve bir miligramlık oral tablet formlarında kullanıma sunulmuştur.",
+       "ekran": "**Dozaj Formları:** 0.5 mg ve 1.0 mg oral tabletler.",
        "duzey": 0,
        "slayt": {
         "sayfa": 31,
@@ -1047,7 +2139,45 @@
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Doz Titrasyonu"
+         "metin": "Dozaj Formları:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0098",
+       "ses": "Tedaviye hastanın sigarayı bırakmayı hedeflediği tarihten bir ila iki hafta önce başlanması şarttır.",
+       "ekran": "**Başlama Zamanı:** Bırakma hedefinden 1-2 hafta önce başlanmalıdır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Bırakma tarihinden 1-2 hafta önce ilaca başlanır."
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Başlama Zamanı:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0099",
+       "ses": "İlk üç gün günde tek doz sıfır virgül beş miligram, dört ila yedinci günlerde günde iki kez sıfır virgül beş miligram, sekizinci günden itibaren günde iki kez bir miligram şeklinde üç ila altı ay sürdürülür.",
+       "ekran": "**Doz Titrasyon Protokolü:** 1-3. gün 0.5 mg, 4-7. gün 2x0.5 mg, 8+. gün 2x1.0 mg/gün.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "8. günden sonra: Günde iki kez 1 mg şeklinde artırılır ve 3-6"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Doz Titrasyon Protokolü:"
         }
        ]
       }
@@ -1058,9 +2188,28 @@
      "sayfa": 32,
      "cumleler": [
       {
-       "id": "k2-61-c0044",
-       "ses": "Vareniklinin gebelerde kullanımı uygun değildir ve en sık bildirilen yan etki olan bulantı ilacın tok karnına alınmasıyla önlenir.",
-       "ekran": "**Yan Etki Yönetimi:** Tok karnına ve bol suyla alarak bulantıyı hafifletme.",
+       "id": "k2-61-c0100",
+       "ses": "Vareniklin kullanımında en sık bildirilen yan etki yaklaşık yüzde otuz hastada görülen bulantıdır; ilacın yemek sonrası bol su ile alınması bu etkiyi belirgin azaltır.",
+       "ekran": "**Bulantı Yönetimi:** En sık yan etki bulantıdır (%30); tok karnına bol su ile alınmalıdır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "etkisi bulantıdır. Diğer yan etkiler uykusuzluk, anormal"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Bulantı Yönetimi:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0101",
+       "ses": "Diğer yaygın yan etkiler uykusuzluk, anormal canlı rüyalar ve baş ağrısıdır; gebelerde ve süt veren annelerde kullanımı uygun değildir.",
+       "ekran": "**Yan Etkiler ve Kontrendikasyon:** Uykusuzluk, canlı rüyalar; gebelik ve emzirmede kontrendikedir.",
        "duzey": 0,
        "slayt": {
         "sayfa": 32,
@@ -1072,32 +2221,95 @@
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Yan Etki Yönetimi"
+         "metin": "Yan Etkiler ve Kontrendikasyon:"
         }
        ]
-      }
-     ]
-    },
-    {
-     "id": "k2-61-p033",
-     "sayfa": 33,
-     "cumleler": [
+      },
       {
-       "id": "k2-61-c0045",
-       "ses": "Bitkisel kökenli doğal bir parsiyel nikotinik agonist olan Sitizin tütün bırakma tedavisinde etkili bir diğer seçenektir.",
-       "ekran": "**Sitizin:** Doğal alkaloid kökenli nikotinik parsiyel agonist.",
+       "id": "k2-61-c0102",
+       "ses": "Geçmiş yıllarda bazı serilerde üretim sürecine bağlı nitrozamin kirliliği saptandığından geçici toplatılma süreçleri yaşanmış ve denetimler sıkılaştırılmıştır.",
+       "ekran": "**Kalite ve Güvenlik:** Nitrozamin safsızlığı denetimleri ve güvenlik izlemi.",
        "duzey": 0,
        "slayt": {
-        "sayfa": 33,
+        "sayfa": 32,
         "satir": [
-         "1.Nikotin Yerine Koyma Tedavileri (NRT)"
+         "yapabilecek kadar yüksek oranda olması nedenyile"
         ],
         "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Sitizin"
+         "metin": "Kalite ve Güvenlik:"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-61-b15",
+   "baslik": "Sitizin, İkinci Seçenek Ajanlar ve Rimonabant",
+   "paragraflar": [
+    {
+     "id": "k2-61-p033",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k2-61-c0103",
+       "ses": "Farmakoterapide varenikline alternatif oluşturan doğal bitkisel kökenli parsiyel nikotinik agonist sitizindir.",
+       "ekran": "**Sitizin Giriş:** Bitkisel kaynaklı nikotinik parsiyel agonist alternatif.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "4.Sitizin"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Sitizin Giriş:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0104",
+       "ses": "Doğu Avrupa ülkelerinde onlarca yıldır yaygın olarak kullanılan sitizin son yıllarda küresel kılavuzlarda da yerini almıştır.",
+       "ekran": "**Tarihsel Kullanım:** Doğu Avrupa kökenli, maliyet etkin sigara bırakma ajanı.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Sitizin"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Tarihsel Kullanım:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0105",
+       "ses": "Düşük maliyeti ve varenikline benzer moleküler etki mekanizması ile tütün kontrolünde önemli bir potansiyele sahiptir.",
+       "ekran": "**Ekonomik Potansiyel:** Düşük maliyetli parsiyel agonist seçeneği.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "İkinci"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Ekonomik Potansiyel:"
         }
        ]
       }
@@ -1108,9 +2320,9 @@
      "sayfa": 34,
      "cumleler": [
       {
-       "id": "k2-61-c0046",
-       "ses": "Sitizinin kimyasal yapısı nikotine oldukça benzerdir ve alfa dört beta iki reseptörlerine yüksek afiniteyle bağlanır.",
-       "ekran": "**Kimyasal Benzerlik:** Nikotinik reseptörlere yüksek seçicilikle bağlanma profili.",
+       "id": "k2-61-c0106",
+       "ses": "Sitizinin kimyasal yapısı nikotine oldukça benzerdir ve nikotinik reseptörlere eşit düzeyde afinite ile bağlanır.",
+       "ekran": "**Yapısal Benzerlik:** Nikotin benzeri yapı ve yüksek reseptör afinitesi.",
        "duzey": 0,
        "slayt": {
         "sayfa": 34,
@@ -1122,7 +2334,45 @@
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Kimyasal Benzerlik"
+         "metin": "Yapısal Benzerlik:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0107",
+       "ses": "Moleküler olarak alfa dört beta iki nikotinik reseptörlerin kısmi agonistidir ve vareniklin gibi ikili etki gösterir.",
+       "ekran": "**Alfa-4 Beta-2 Agonizması:** Kısmi agonist mekanizma ile dopamin modülasyonu.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "reseptörlerine eşit düzeyde bağlandığı bulunmuştur. Sitizin, a4b2"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Alfa-4 Beta-2 Agonizması:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0108",
+       "ses": "Kontrolsüz arteriyel hipertansiyon, ileri ateroskleroz, gebelik ve emzirmede kontrendikedir; en sık yan etkileri hazımsızlık ve ağız kuruluğudur.",
+       "ekran": "**Kontrendikasyon ve Yan Etkiler:** Ağır kardiyovasküler hastalık kontrendikasyonu; dispepsi ve ağız kuruluğu.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Sitizin tedavisi kontrendikasyonları; kontrolsüz arteriyel"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Kontrendikasyon ve Yan Etkiler:"
         }
        ]
       }
@@ -1133,40 +2383,59 @@
      "sayfa": 35,
      "cumleler": [
       {
-       "id": "k2-61-c0047",
-       "ses": "Sitizin tedavisi ilk üç gün iki saatte bir toplam altı tabletle başlar ve yirmi beş günlük basamaklı şemayla tamamlanır.",
-       "ekran": "**Yirmi Beş Günlük Kür:** Basamaklı doz azaltımı ile sigaranın beşinci günde bırakılması.",
+       "id": "k2-61-c0109",
+       "ses": "Tablomuzda sitizinin yirmi beş günlük basamaklı ve titiz doz azaltım protokolü özetlenmektedir.",
+       "ekran": "**25 Günlük Protokol:** Sitizinin kademeli doz azaltım tedavi şeması.",
        "duzey": 0,
        "slayt": {
         "sayfa": 35,
         "satir": [
          "1,5 mg'lık tabletlerin oral yolla ilk 3 gün 2 saatte"
         ],
-        "sekil": null
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "Yirmi Beş Günlük Kür"
-        }
-       ]
-      },
-      {
-       "id": "k2-61-c0048",
-       "ses": "Tedavi protokolüne göre hastanın en geç beşinci günün sonunda sigarayı tamamen bırakmış olması hedeflenir.",
-       "ekran": "**Bırakma Hedefi:** Sitizin kürünün en geç beşinci gününde tam dumansızlık.",
-       "duzey": 1,
-       "slayt": {
-        "sayfa": 35,
-        "satir": [
-         "bir toplam 6 adet (9 mg/gün), ardından tedavinin"
-        ],
         "sekil": "Sitizin yirmi beş günlük basamaklı doz azaltım tedavi protokolü tablosu."
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Bırakma Hedefi"
+         "metin": "25 Günlük Protokol:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0110",
+       "ses": "Bir virgül beş miligramlık tabletlerden ilk üç gün iki saatte bir günde toplam altı adet yani dokuz miligram alınır.",
+       "ekran": "**Başlangıç Rejimi:** İlk 3 gün her 2 saatte bir 1 tablet (toplam 6 tablet/gün).",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "bir toplam 6 adet (9 mg/gün), ardından tedavinin"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Başlangıç Rejimi:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0111",
+       "ses": "Tedavinin beşinci gününde sigara kullanımı tamamen ve kesin olarak sona erdirilmelidir; aksi takdirde nikotin zehirlenmesi gelişebilir.",
+       "ekran": "**5. Gün Bırakma Şartı:** 5. günde sigara tamamen bırakılmalıdır, nikotin toksisitesi riski önlenir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Tedavinin beşinci gününde sigara kullanımı tamamen sona ermelidir."
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "5. Gün Bırakma Şartı:"
         }
        ]
       }
@@ -1177,21 +2446,59 @@
      "sayfa": 36,
      "cumleler": [
       {
-       "id": "k2-61-c0049",
-       "ses": "Birinci basamak tedavilere dirençli veya kontrendikasyonu bulunan olgularda ikinci basamak ajanlar gündeme gelir.",
-       "ekran": "**İkinci Basamak Ajanlar:** Birinci basamağa yanıt vermeyen özel klinik durumlar.",
+       "id": "k2-61-c0112",
+       "ses": "Birinci basamak tedavilere yanıt vermeyen veya kontrendikasyonu olan hastalarda ikinci ve üçüncü seçenek ilaçlar devreye girer.",
+       "ekran": "**İkinci Seçenek Tedaviler:** Dirençli veya kontrendike olgularda alternatif ajanlar.",
        "duzey": 0,
        "slayt": {
         "sayfa": 36,
         "satir": [
-         "1.Nikotin Yerine Koyma Tedavileri (NRT)"
+         "5.İkinci ve Üçüncü Seçenek Tedaviler"
         ],
         "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "İkinci Basamak Ajanlar"
+         "metin": "İkinci Seçenek Tedaviler:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0113",
+       "ses": "Bu grupta klonidin, nortriptilin, rimonabant ve geliştirilmekte olan nikotin aşıları klinik çalışmalarda incelenmiştir.",
+       "ekran": "**Aday İlaçlar:** Klonidin, nortriptilin, CB1 blokörleri ve aşı stratejileri.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "Seçenek"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Aday İlaçlar:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0114",
+       "ses": "Ancak yan etki profilleri veya etkinlik kısıtlılıkları nedeniyle birinci basamak ajanlar kadar yaygın kullanılmazlar.",
+       "ekran": "**Kullanım Kısıtlılığı:** Yan etki yükü nedeniyle ikinci basamakta kalırlar.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "Tedaviler"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Kullanım Kısıtlılığı:"
         }
        ]
       }
@@ -1202,9 +2509,9 @@
      "sayfa": 37,
      "cumleler": [
       {
-       "id": "k2-61-c0050",
-       "ses": "İkinci basamak farmakoterapiler arasında alfa iki agonisti Klonidin ve trisiklik antidepresan Nortriptilin yer alır.",
-       "ekran": "**Klonidin ve Nortriptilin:** İkinci basamak alternatif farmakoterapi seçenekleri.",
+       "id": "k2-61-c0115",
+       "ses": "İkinci seçenek farmakoterapide santral etkili antihipertansif klonidin ile trisiklik antidepresan nortriptilin yer alır.",
+       "ekran": "**Klonidin ve Nortriptilin:** İkinci basamak farmakoterapi alternatifleri.",
        "duzey": 0,
        "slayt": {
         "sayfa": 37,
@@ -1216,7 +2523,45 @@
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Klonidin ve Nortriptilin"
+         "metin": "Klonidin ve Nortriptilin:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0116",
+       "ses": "Ayrıca endokanabinoid sistem blokörü rimonabant ve nikotini kanda bağlayan aşı stratejileri de araştırılmıştır.",
+       "ekran": "**Rimonabant ve Aşı:** CB1 reseptör antagonisti ve immünolojik nikotin aşıları.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Rimonobant"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Rimonabant ve Aşı:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0117",
+       "ses": "Bu alternatiflerin etki mekanizmaları ve klinik sınırlılıkları bağımlılık tedavisinde önemli dersler sunmaktadır.",
+       "ekran": "**Klinik Dersler:** Yeni moleküllerin etki mekanizmaları ve güvenlik sınırları.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Notriptilin"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Klinik Dersler:"
         }
        ]
       }
@@ -1227,9 +2572,9 @@
      "sayfa": 38,
      "cumleler": [
       {
-       "id": "k2-61-c0051",
-       "ses": "Klonidin santral sempatik tonusu baskılarken nortriptilin noradrenalin geri alımını engelleyerek yoksunluk belirtilerini azaltır.",
-       "ekran": "**Sempatolitik ve Trisiklik Etki:** Yoksunluk belirtilerinin ikinci basamak kontrolü.",
+       "id": "k2-61-c0118",
+       "ses": "Klonidin santral alfa iki adrenerjik agonist olup sempatik deşarjı ve nikotin yoksunluğuna bağlı ajitasyonu azaltır.",
+       "ekran": "**Klonidin Mekanizması:** Alfa-2 adrenerjik agonizma ile sempatolitik etki ve yoksunluk kontrolü.",
        "duzey": 0,
        "slayt": {
         "sayfa": 38,
@@ -1241,7 +2586,45 @@
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Sempatolitik ve Trisiklik Etki"
+         "metin": "Klonidin Mekanizması:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0119",
+       "ses": "Nortriptilin ise bir trisiklik antidepresan olup plaseboya üstün bulunsa da belirgin antikolinerjik yan etkileri vardır.",
+       "ekran": "**Nortriptilin:** Trisiklik antidepresan, plaseboya üstün ancak antikolinerjik yan etkili.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "plaseboya göre üstün görülmüş ama etkinliği belirgin değil."
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Nortriptilin:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0120",
+       "ses": "Her iki ilaçta da sedasyon, şiddetli ağız kuruluğu ve ortostatik hipotansiyon en sık bildirilen doz kısıtlayıcı yan etkilerdir.",
+       "ekran": "**Yan Etkiler:** Sedasyon, ağız kuruluğu ve kan basıncı düşüşü.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Sedasyon ve ağız kuruluğu sık bildirilen yan etkiler."
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Yan Etkiler:"
         }
        ]
       }
@@ -1252,40 +2635,59 @@
      "sayfa": 39,
      "cumleler": [
       {
-       "id": "k2-61-c0052",
-       "ses": "Kannabinoid kannabinoid reseptör antagonisti Rimonabant dopamin salınımını ve aşermeyi modüle etmek amacıyla incelenmiştir.",
-       "ekran": "**CB1 Antagonizması:** Rimonabant ve kannabinoid yolağı üzerinden aşerme modülasyonu.",
+       "id": "k2-61-c0121",
+       "ses": "Görselimizde kannabinoid ce be bir reseptör antagonisti rimonabant ile nikotin aşısının moleküler konseptleri gösterilmektedir.",
+       "ekran": "**Rimonabant ve Aşı Şeması:** CB1 reseptör blokajı ve antikor temelli aşı mekanizması.",
        "duzey": 0,
        "slayt": {
         "sayfa": 39,
         "satir": [
          "Rimonabant: Merkezi sinir sisteminde, dopamin salınımını modüle edebilen GABA ile"
         ],
-        "sekil": null
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "CB1 Antagonizması"
-        }
-       ]
-      },
-      {
-       "id": "k2-61-c0053",
-       "ses": "Ciddi depresif ve psikiyatrik yan etkileri nedeniyle Rimonabant klinik kullanımdan tamamen geri çekilmiştir.",
-       "ekran": "**Klinikten Çekilme:** Depresyon ve intihar riski nedeniyle kullanım kısıtlılığı.",
-       "duzey": 1,
-       "slayt": {
-        "sayfa": 39,
-        "satir": [
-         "ilgili nöronlarda CB1 reseptörleri bulunur. Bu nöronlarının aktivasyonu, dopamin"
-        ],
         "sekil": "Rimonabant kannabinoid CB1 reseptör antagonizması ve dopamin modülasyonu şeması."
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Klinikten Çekilme"
+         "metin": "Rimonabant ve Aşı Şeması:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0122",
+       "ses": "Rimonabant beyinde ce be bir reseptörlerini bloke ederek dopamin salınımını modüle eder ve hem sigara isteğini hem de iştahı baskılar; ancak şiddetli depresyon ve intihar riski nedeniyle ruhsatı iptal edilmiştir.",
+       "ekran": "**Rimonabant Toksisitesi:** İştah ve sigara isteğini azaltır ancak depresyon ve intihar riski nedeniyle yasaklandı.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "salınımının azalmasına neden olur. CB-1 reseptörünün antagonizması, nikotin ödül"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Rimonabant Toksisitesi:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0123",
+       "ses": "Nikotin aşısı ise kanda nikotine bağlanan antikorlar üreterek molekülün kan-beyin bariyerini geçmesini engellemeyi hedefler fakat klinik çalışmalarda yeterli etkinlik gösterememiştir.",
+       "ekran": "**Nikotin Aşısı:** Antikorla nikotini bağlayıp beyne geçişi engelleme teorisi.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Nikotin aşısı: Solunan sigara dumanından kan dolaşımına ulaşan nikotin, antikor"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Nikotin Aşısı:"
         }
        ]
       }
@@ -1296,9 +2698,9 @@
      "sayfa": 40,
      "cumleler": [
       {
-       "id": "k2-61-c0054",
-       "ses": "Klinik pratikte güvenlik ve yüksek etkinlik nedeniyle birinci basamakta her zaman nikotin replasmanı, Vareniklin veya Bupropion tercih edilir.",
-       "ekran": "**Birinci Basamak Önceliği:** Kanıt düzeyi en yüksek temel tedavilerin üstünlüğü.",
+       "id": "k2-61-c0124",
+       "ses": "Özetle birinci basamak farmakoterapide etkinlik sırası en başta vareniklin ve kombine nikotin replasmanı, ardından tekli nikotin bandı ve bupropion şeklindedir.",
+       "ekran": "**Etkinlik Sıralaması:** Vareniklin ve kombine NRT > Tekli NRT ve Bupropion.",
        "duzey": 0,
        "slayt": {
         "sayfa": 40,
@@ -1310,7 +2712,45 @@
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Birinci Basamak Önceliği"
+         "metin": "Etkinlik Sıralaması:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0125",
+       "ses": "Hastanın komorbiditeleri, kardiyovasküler durumu, depresyon varlığı ve daha önceki denemeleri ilaç seçiminde temel belirleyicidir.",
+       "ekran": "**Kişiselleştirilmiş Seçim:** Komorbidite ve klinik özelliklere göre rasyonel ilaç seçimi.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "2.Bupropion"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Kişiselleştirilmiş Seçim:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0126",
+       "ses": "İkinci basamak ajanlar ise ancak birinci basamak seçeneklerin tükendiği veya kontrendike olduğu özel durumlarda düşünülmelidir.",
+       "ekran": "**İkinci Basamak Yeri:** Ancak birinci seçenekler uygulanamadığında devreye girer.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "3Vareniklin"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "İkinci Basamak Yeri:"
         }
        ]
       }
@@ -1319,17 +2759,17 @@
    ]
   },
   {
-   "id": "k2-61-b04",
-   "baslik": "İzlem, Nüks Önleme ve Klinik Sentez",
+   "id": "k2-61-b16",
+   "baslik": "Tedavi Kombinasyonları ve İzlem",
    "paragraflar": [
     {
      "id": "k2-61-p041",
      "sayfa": 41,
      "cumleler": [
       {
-       "id": "k2-61-c0055",
-       "ses": "Sigara bırakma sürecinde motivasyonel desteğin düzenli sürdürülmesi uzun dönemli başarının temel anahtarıdır.",
-       "ekran": "**Motivasyonun Korunması:** Bırakma sürecinde sürekli hasta merkezli destek.",
+       "id": "k2-61-c0127",
+       "ses": "Tütün bağımlılığında en yüksek uzun dönemli bırakma başarısı motivasyonel görüşme ile farmakoterapinin sinerjik birlikteliğiyle elde edilir.",
+       "ekran": "**Sinerjik Başarı:** Motivasyonel danışmanlık ve farmakoterapinin eşzamanlı yürütülmesi.",
        "duzey": 0,
        "slayt": {
         "sayfa": 41,
@@ -1341,7 +2781,45 @@
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Motivasyonun Korunması"
+         "metin": "Sinerjik Başarı:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0128",
+       "ses": "İlaç hastanın fiziksel yoksunluk semptomlarını ve dayanılmaz sigara aşermesini kontrol altına alırken görüşmeler psikolojik başa çıkma reflekslerini geliştirir.",
+       "ekran": "**Çift Yönlü Rahatlama:** Fiziksel aşermenin ilaçla, psikolojik yoksunluğun görüşmeyle çözülmesi.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Farmakolojik"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Çift Yönlü Rahatlama:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0129",
+       "ses": "Bu çok disiplinli klinik yaklaşım hastanın tütünsüz yeni bir yaşam tarzını kalıcı olarak benimsemesini sağlar.",
+       "ekran": "**Yaşam Tarzı Değişimi:** Tütünsüz yaşam alışkanlığının kalıcı hale getirilmesi.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Tedavi"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Yaşam Tarzı Değişimi:"
         }
        ]
       }
@@ -1352,9 +2830,9 @@
      "sayfa": 42,
      "cumleler": [
       {
-       "id": "k2-61-c0056",
-       "ses": "Bırakma gününün önceden planlanması hastanın evdeki ve iş yerindeki tetikleyicileri temizlemesine olanak tanır.",
-       "ekran": "**Çevresel Temizlik:** Kül tablalarının atılması ve dumansız çevre hazırlanması.",
+       "id": "k2-61-c0130",
+       "ses": "Görselimizde nikotin bağımlılığına klinik yaklaşımın tüm basamaklarını içeren genişletilmiş poliklinik akışı özetlenmektedir.",
+       "ekran": "**Genişletilmiş Poliklinik Akışı:** Tanı, Fagerström testi, evreleme ve tedavi seçimi.",
        "duzey": 0,
        "slayt": {
         "sayfa": 42,
@@ -1366,7 +2844,45 @@
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Çevresel Temizlik"
+         "metin": "Genişletilmiş Poliklinik Akışı:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0131",
+       "ses": "Hekim her görüşmede hastanın tütün kullanım geçmişini, günlük içtiği sigara sayısını ve Fagerström skorunu kayıt altına almalıdır.",
+       "ekran": "**Kayıt ve Skorlama:** Tütün hikayesi ve bağımlılık şiddetinin düzenli dokümantasyonu.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "Ülkemizdeki ölümlerin %4616'sinn nedeni"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Kayıt ve Skorlama:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0132",
+       "ses": "Hastanın değişim modelindeki evresi saptanarak motivasyonel destek verilmeli ve uygun farmakoterapi gecikmeden başlanmalıdır.",
+       "ekran": "**Evreye Özel Tedavi:** Transteoretik evreye göre yapılandırılmış ilaç ve danışmanlık.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "Tedavisi"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Evreye Özel Tedavi:"
         }
        ]
       }
@@ -1377,21 +2893,59 @@
      "sayfa": 43,
      "cumleler": [
       {
-       "id": "k2-61-c0057",
-       "ses": "Sigarayı başarıyla bırakan kişilerde nüksetme riski özellikle ilk bir ila iki haftalık akut dönemde en yüksek seviyededir.",
-       "ekran": "**Kritik Nüks Riski:** İlk bir iki haftada en üst düzeye çıkan relaps kırılganlığı.",
+       "id": "k2-61-c0133",
+       "ses": "Sigarayı başarıyla bırakan kişilerde nüksetme riski özellikle ilk aylarda oldukça yüksektir.",
+       "ekran": "**Nüks Riski:** Sigarayı bırakan olgularda erken dönemde yüksek relaps olasılığı.",
        "duzey": 0,
        "slayt": {
         "sayfa": 43,
         "satir": [
-         "Sigarayı başarıyla bırakan kişilerde nüksetme riski"
+         "Birakma"
         ],
         "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Kritik Nüks Riski"
+         "metin": "Nüks Riski:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0134",
+       "ses": "Sigarayı bıraktıktan sonraki ilk yıl içinde nüksetme, uygulanan tedavi rejiminden bağımsız olarak hastaların yaklaşık yüzde ellisinde görülür.",
+       "ekran": "**İlk Yıl İstatistiği:** İlk 1 yıl içinde hastaların yaklaşık %50'sinde nüks gelişir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "hastaların yaklaşık %50'sinde görülür. Sigara içmenin"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "İlk Yıl İstatistiği:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0135",
+       "ses": "Sigara içmenin neden olduğu merkezi sinir sistemindeki kalıcı nöronal reseptör ve hücre değişiklikleri farmakolojik tedavi ile hemen tersine çevrilemez.",
+       "ekran": "**Kalıcı Nöronal Değişiklik:** Nöroplastik değişikliklerin hemen geri dönmemesi nüks zeminini oluşturur.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "farmakolojik tedavi ile tersine çevrilmez."
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Kalıcı Nöronal Değişiklik:"
         }
        ]
       }
@@ -1402,40 +2956,59 @@
      "sayfa": 44,
      "cumleler": [
       {
-       "id": "k2-61-c0058",
-       "ses": "İzlem vizitlerinin ilkinde hastanın bırakma girişiminin samimiyetle takdir edilmesi motivasyonu katlayarak artırır.",
-       "ekran": "**Girişimin Takdiri:** Hekimin hastanın dumansız başarısını kutlaması ve onaylaması.",
+       "id": "k2-61-c0136",
+       "ses": "Tablomuzda sigara bırakma sonrası izlem vizitlerinde hekim tarafından sorgulanması gereken beş kritik başlık listelenmektedir.",
+       "ekran": "**İzlem Viziti Tablosu:** Takipte sorgulanacak 5 temel klinik değerlendirme maddesi.",
        "duzey": 0,
        "slayt": {
         "sayfa": 44,
         "satir": [
          "1. Bırakma girişiminin takdir edilmesi"
         ],
-        "sekil": null
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "Girişimin Takdiri"
-        }
-       ]
-      },
-      {
-       "id": "k2-61-c0059",
-       "ses": "İlk hafta vizitinde nikotin çekilme semptomları ve ilaç yan etkileri sorgulanarak hastaya baş etme yolları anlatılır.",
-       "ekran": "**Yoksunluk Takibi:** İlk hafta vizitinde çekilme semptomlarının klinik yönetimi.",
-       "duzey": 1,
-       "slayt": {
-        "sayfa": 44,
-        "satir": [
-         "2. Nikotin çekilme semptomlarının sorgulanması"
-        ],
         "sekil": "İzlem vizitlerinde sorgulanacak başlıklar ve çekilme semptomları takip tablosu."
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Yoksunluk Takibi"
+         "metin": "İzlem Viziti Tablosu:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0137",
+       "ses": "İlk olarak hastanın bırakma girişimi takdir edilmeli, ardından nikotin çekilme semptomları ve kullanılan farmakoterapinin yan etki ve etkinliği titizlikle sorgulanmalıdır.",
+       "ekran": "**Takdir ve Çekilme Sorgusu:** Başarının pekiştirilmesi, çekilme bulguları ve ilaç yan etkilerinin değerlendirilmesi.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "2. Nikotin çekilme semptomlarının sorgulanması"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Takdir ve Çekilme Sorgusu:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0138",
+       "ses": "İlk iki hafta yoğun çekilme dönemi olduğundan ilk ayda en az iki görüşme yapılmalı; takipler ilk üç ay aylık, sonrasında üçer aylık aralarla en az bir yıla tamamlanmalıdır.",
+       "ekran": "**İzlem Takvimi:** 1. ayda 2 vizit, 3. aya kadar aylık, ardından 3 ayda bir olmak üzere 1 yıl takip.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "görülmesinden dolayı, bırakma sonrası 1. ayda iki hasta görüşmesi önerilmektedir. Eğer hasta"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "İzlem Takvimi:"
         }
        ]
       }
@@ -1446,9 +3019,9 @@
      "sayfa": 45,
      "cumleler": [
       {
-       "id": "k2-61-c0060",
-       "ses": "Tek bir sigara içilmesi durumu kayma olarak adlandırılır ve hastayı yargılamadan destekleyerek tam nüks önlenmelidir.",
-       "ekran": "**Kayma Yönetimi:** Tek bir hatanın tam nükse dönüşmesini engelleyen empatik tutum.",
+       "id": "k2-61-c0139",
+       "ses": "Sigara bırakma sürecinde bir tek nefesten ibaret olan kayma yani lapse durumu ile düzenli içiciliğe dönüş anlamına gelen nüks yani relapse birbirinden ayırt edilmelidir.",
+       "ekran": "**Kayma ve Nüks Ayrımı:** Lapse (tek nefeslik kaçak) ile relapse (tam nüks) ayrımı ve yönetimi.",
        "duzey": 0,
        "slayt": {
         "sayfa": 45,
@@ -1460,7 +3033,45 @@
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Kayma Yönetimi"
+         "metin": "Kayma ve Nüks Ayrımı:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0140",
+       "ses": "Hasta bir kaçak yaptığında suçluluk duymak yerine hekim tarafından desteklenmeli, kaymanın tam bir nükse dönüşmesi önlenmelidir.",
+       "ekran": "**Kaçak Yönetimi:** Suçluluk hissini kırıp bırakma kararlılığını hızla yeniden tesis etme.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Tedavisi"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Kaçak Yönetimi:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0141",
+       "ses": "Her tökezleme bırakma yolculuğunda bir öğrenme fırsatı olarak değerlendirilmeli ve hastanın sigarasız yaşam hedefi kararlılıkla korunmalıdır.",
+       "ekran": "**Kararlılık:** Bırakma sürecinin sürdürülmesi ve hedefe bağlılık.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Birakma"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Kararlılık:"
         }
        ]
       }
@@ -1471,9 +3082,9 @@
      "sayfa": 46,
      "cumleler": [
       {
-       "id": "k2-61-c0061",
-       "ses": "Birinci basamak hekiminin tütün kontrolünde sergilediği kararlı tutum toplum sağlığına en yüksek katkıyı sağlayan koruyucu hekimlik görevidir.",
-       "ekran": "**Klinik Sentez:** Birinci basamakta tütün kontrolü ve dumansız yaşamın güvencesi.",
+       "id": "k2-61-c0142",
+       "ses": "Birinci basamak hekimliği tütün kontrolü ve nikotin bağımlılığı tedavisinde toplum sağlığını koruyan en stratejik siperdir.",
+       "ekran": "**Birinci Basamak Gücü:** Toplum sağlığını koruyan en temel klinik basamak.",
        "duzey": 0,
        "slayt": {
         "sayfa": 46,
@@ -1485,7 +3096,45 @@
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Klinik Sentez"
+         "metin": "Birinci Basamak Gücü:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0143",
+       "ses": "Hekimin her hastaya sigara durumunu sorması, bırakmayı önermesi ve kanıta dayalı tedaviyi başlatması binlerce insanın hayatını kurtarır.",
+       "ekran": "**Hayat Kurtaran Yaklaşım:** Ask, Advise ve kanıta dayalı tedavi ile önlenen ölümler.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "sews,"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Hayat Kurtaran Yaklaşım:"
+        }
+       ]
+      },
+      {
+       "id": "k2-61-c0144",
+       "ses": "Böylece nikotin bağımlılığının nörobiyolojisinden birinci basamak farmakoterapisine kadar tüm ders kazanımlarımızı eksiksiz tamamlamış olduk.",
+       "ekran": "**Ders Özeti:** Tütün epidemiyolojisi, nörobiyoloji, NRT, Bupropion, Vareniklin ve izlem tamamlandı.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "Take this with you."
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Ders Özeti:"
         }
        ]
       }

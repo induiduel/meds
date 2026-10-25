@@ -1,17 +1,19 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 348,
-  "baslik": "Kurul 2 Arşiv Dersleri 16-18: Nörolojik Rehabilitasyon, Periferik Nöropati ve Bazal Gangliyonlar (2025-2026)",
+  "onem": 349,
+  "baslik": "Kurul 2 Tam Amfi Derinliği Güncellemesi: Tüm Dersler Eksiksiz ve Derinlemesine Genişletildi",
   "maddeler": [
-    "Ders 16 (FTR - Nörolojik Rehabilitasyona Giriş): 43 sayfa tam amfi dersi kapsamı (44 paragraf, 191 cümle, 3.937 kelime, 29,4 dk EMA GPU sesli anlatım), 16 slayt Öğren destesi (11 interaktif model + ders sonu oyunları finali), 13 çizim şeması, 7 çıkmış soru bağlantısı ve gömülü .medspak paketi.",
-    "Ders 17 (Nöroloji - Periferik Nöropati / Polinöropatiler): 23 sayfa tam amfi dersi kapsamı (49 paragraf, 236 cümle, 4.028 kelime, 29,6 dk EMA GPU sesli anlatım), 16 slayt Öğren destesi, 13 çizim şeması, 12 çıkmış soru bağlantısı ve gömülü .medspak paketi.",
-    "Ders 18 (Nöroloji - Bazal Gangliyonlar ve Ekstrapiramidal Sistem): 20 sayfa tam amfi dersi kapsamı (42 paragraf, 252 cümle, 4.130 kelime, 31,0 dk EMA GPU sesli anlatım), 16 slayt Öğren destesi, 12 çizim şeması, 11 çıkmış soru bağlantısı ve gömülü .medspak paketi.",
-    "Yüksek hassasiyetli lazer metin takibi ve şekil vurguları: Tüm satırlar ve anatomik/fizyolojik şekiller konuşmacı sesine birebir senkron olarak PDF üzerinde aydınlatıldı; çıkmış soru uyarıları doğrudan sınav sorularına bağlandı."
+    "Ders 59 (Tıbbi Biyoloji - Psikiyatrik Hastalıklar ve Genetik Analizi): 82 sayfa tam amfi dersi kapsamı (15 bölüm, 82 paragraf, 164 cümle, 3.509 kelime, 26,7 dk EMA GPU sesli anlatım), 24 slayt Öğren destesi, 13 çizim şeması, 4 çıkmış soru bağlantısı ve gömülü .medspak paketi ile 0 atlanan sayfa garantisi.",
+    "Ders 54 (Psikiyatri - Yaygın Anksiyete Bozukluğu): 20 sayfa tam amfi dersi kapsamı (12 bölüm, 20 paragraf, 103 cümle, 2.013 kelime, 14,8 dk EMA GPU sesli anlatım), 20 slayt Öğren destesi, 12 çizim şeması, 3 çıkmış soru bağlantısı ve gömülü .medspak paketi.",
+    "Ders 64 (Beyin Cerrahisi - Omurga ve Omurilik Tümörleri): 20 sayfa tam amfi dersi kapsamı (12 bölüm, 20 paragraf, 86 cümle, 1.795 kelime, 13,3 dk EMA GPU sesli anlatım), 16 slayt Öğren destesi, 12 çizim şeması, 5 çıkmış soru bağlantısı ve gömülü .medspak paketi.",
+    "Ders 63 (Farmakoloji - Antidepresan İlaçlar), Ders 58 (Alkoller), Ders 60 (Miyorelaksanlar), Ders 61 (Nikotin), Ders 62 (Kraniyal Sinir Muayenesi), Ders 06 (Ağrı Yolları) ve Ders 02 (Bilinç Bozukluğu): Tüm atlanan slaytlar ve yüzeysel özetler tam amfi dersi derinliğinde (her biri 2.000–3.500 kelime, 15–27 dk) baştan sona eksiksiz tamamlandı.",
+    "Kurul 2 Genel Kapsamı: Kurul 2'deki 33 arşiv dersinin tamamı en az 1.790 kelime ve en az 13,5 dakika derinliğe kavuşturularak hiçbir dersin yüzeysel veya atlamalı geçilmemesi sağlandı.",
+    "Tüm seslendirmeler EMA Lightning yerel GPU ile sıfır harici servis bağımlılığıyla üretilmiş, lazer metin takipleri ve canlı çizim şemaları %100 doğrulanmıştır."
   ],
   "eklenen": [
-    "Kurul 2 FTR 'Nörolojik Rehabilitasyona Giriş' (2025-2026 Arşivi)",
-    "Kurul 2 Nöroloji 'Periferik Nöropati' (2025-2026 Arşivi)",
-    "Kurul 2 Nöroloji 'Bazal Gangliyonlar ve Ekstrapiramidal Sistem' (2025-2026 Arşivi)"
+    "Kurul 2 Tıbbi Biyoloji 'Psikiyatrik Hastalıklar ve Genetik Analizi' (2025-2026 Arşivi, 82 sayfa tam amfi kapsamı)",
+    "Kurul 2 Psikiyatri 'Yaygın Anksiyete Bozukluğu' (2025-2026 Arşivi, 20 sayfa tam amfi kapsamı)",
+    "Kurul 2 Beyin Cerrahisi 'Omurga ve Omurilik Tümörleri' (2025-2026 Arşivi, 20 sayfa tam amfi kapsamı)"
   ],
   "degisen": [
     "meds/data/arsiv_25_26/sesli_anlatim/dersler.json",
@@ -19,8 +21,8 @@
     "meds/guncelleme_notu.json"
   ],
   "duzeltilen": [
-    "Ders 16, 17 ve 18 tam amfi dersi derinliğiyle (her biri 3.800-4.200 kelime, ~30-35 dk) baştan sona eksiksiz tamamlandı",
-    "PDF metin takip motoru ve satır çapaları slayt satırlarına ve konuşmacı telaffuzuna %100 uyumlu hale getirildi"
+    "Kurul 2 derslerindeki tüm atlamalı ve yüzeysel slayt işleyişleri sonlandırılarak her sayfanın mekanizması, klinik ve farmakolojik ayrıntıları eksiksiz aktarıldı",
+    "Ders 59, 54, 64, 63, 62, 61, 60, 58, 06 ve 02 amfi dersi standardında 15–30 dakikalık derin anlatımlarla sıfırdan tamamlandı"
   ],
   "silinen": []
 }

@@ -55,6 +55,31 @@
         "cizimSayisi": 66,
         "cikmisEslesme": 29
       }
+    },
+    {
+      "surum": 3,
+      "tarih": "2026-10-25 16:35",
+      "neden": "Sayfa 25 ve 27 GKS motor yanıt ve postür kapsamı eklendi",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım.pdf (62 sayfa) kaynağından 0 atlanan sayfa ile 29 paragraf / 108 cümlelik sesli anlatım üretildi.",
+        "74 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 72 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 16.4 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 987,
+        "sureDk": 16.4,
+        "sayfaSayisi": 62,
+        "atlananSayfa": 0,
+        "bolumSayisi": 15,
+        "paragrafSayisi": 29,
+        "cumleSayisi": 108,
+        "slaytAdimSayisi": 74,
+        "cizimSayisi": 72,
+        "cikmisEslesme": 29
+      }
     }
   ]
 }

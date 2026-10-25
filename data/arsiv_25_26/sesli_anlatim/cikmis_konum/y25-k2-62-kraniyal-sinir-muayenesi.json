@@ -1,6 +1,6 @@
 {
  "surum": 1,
- "metinHash": "1c1773da0dd133e64e5cd3d66b3a4195cec03a8b",
+ "metinHash": "5afa54d3cd0309fe6537439cd8a47c3333d3aadf",
  "q": [
   {
    "id": "7a901e64695e",
@@ -8,7 +8,7 @@
    "cevap": "IV. Kranyal sinir (N. trochlearis)",
    "yil": "2020-2021",
    "p": 17,
-   "c": 0,
+   "c": 1,
    "skor": 0.92
   },
   {
@@ -17,7 +17,7 @@
    "cevap": "II ve IV",
    "yil": "2020-2021",
    "p": 26,
-   "c": 0,
+   "c": 1,
    "skor": 0.92
   },
   {
@@ -35,7 +35,7 @@
    "cevap": "Sinüs kavernozus",
    "yil": "2021-2026",
    "p": 34,
-   "c": 0,
+   "c": 1,
    "skor": 0.92
   },
   {
@@ -43,27 +43,36 @@
    "kok": "Evet\nNöroloji\nNöroloji\nKranyal Sinir\nMuayenesi\nKranial sinir\nmuayenesi\nesnasında hasta,\ndilini dışarı\nçıkarıldığında sağ\ntarafa sapma olduğu\ngörülmektedir. Dil\natrofisi olmayan bu\nhastada lezyon\nnerede olabilir?",
    "cevap": "Sağ nervus hypoglossus",
    "yil": "2020-2021",
-   "p": 32,
-   "c": 1,
-   "skor": 0.759
+   "p": 33,
+   "c": 0,
+   "skor": 0.755
+  },
+  {
+   "id": "4c4eb178b88b",
+   "kok": "Nörolojik öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği, zamanla düzelen ve tekrarlayan epizodlar geçirdiği anlaşılan bir hastada en olası tanı aşağıdakilerden hangisidir?",
+   "cevap": "Multipl skleroz (MS)",
+   "yil": "2020-2021",
+   "p": 26,
+   "c": 0,
+   "skor": 0.613
   },
   {
    "id": "1ab3d959d0ec",
    "kok": "Dilini dışarı çıkardığında sağ tarafa sapma olduğu görülen, dilde atrofisi olmayan bu hastada lezyon nerede olabilir?",
    "cevap": "Sol kortikobulber yol (supranükleer lezyon)",
    "yil": "2020-2021",
-   "p": 32,
-   "c": 1,
-   "skor": 0.66
+   "p": 33,
+   "c": 0,
+   "skor": 0.685
   },
   {
    "id": "past-1790877494321-845620",
    "kok": "Trafik kazası geçiren bir kişide gözün laterale bakışı bozuk ise hangi sinirde lezyon vardır?",
    "cevap": "N. abducens",
    "yil": "2020-2021",
-   "p": 10,
+   "p": 18,
    "c": 1,
-   "skor": 0.609
+   "skor": 0.61
   }
  ]
 }

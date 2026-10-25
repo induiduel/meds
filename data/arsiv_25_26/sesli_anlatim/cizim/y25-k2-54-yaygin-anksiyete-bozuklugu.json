@@ -1,14 +1,396 @@
 {
  "surum": 1,
- "metinHash": "436ff6b615fa2b5e4f16516063c771b890debf01",
- "p": {},
+ "metinHash": "fb43e9fe5439c674dc1619dcc300b8a29b5abab3",
+ "p": {
+  "1": {
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Tehdit",
+       "Dış somut tehdit",
+       "İç belirsiz tehdit"
+      ],
+      [
+       "Reaksiyon",
+       "Kaç ya da savaş reaksiyonu",
+       "Hazırlık yanıtı"
+      ]
+     ],
+     "kutuplar": [
+      "Korku",
+      "Kaygı"
+     ],
+     "s": 2,
+     "k": [
+      0,
+      65
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.78
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1368,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "2": {
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Serbest dalgalanan kaygı",
+      "En az altı aylık süre",
+      "Kadınlarda iki kat sık"
+     ],
+     "baslik": "Yaygın anksiyete özellikleri",
+     "s": 3,
+     "k": [
+      0,
+      53
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.82
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2508,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "3": {
+   "5": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Çocukluk çağı kötü muamele öyküsü",
+      "Düşük sosyoekonomik durum",
+      "Sorunları içe atma eğilimi"
+     ],
+     "baslik": "Risk etmenleri",
+     "s": 4,
+     "k": [
+      0,
+      69
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.74
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1708,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "4": {
+   "5": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Benzodiazepin reseptör duyarlılık bozukluğu",
+      "Serotonin ve noradrenalin yolakları",
+      "Prefrontal korteks ve limbik sistem"
+     ],
+     "baslik": "Nörobiyolojik etkenler",
+     "s": 5,
+     "k": [
+      0,
+      62
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.71
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1408,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "6": {
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Motor huzursuzluk ve endişeli yüz",
+      "Kaslarda gergin duruş",
+      "Çabuk irkilme ve dikkat dağınıklığı"
+     ],
+     "baslik": "Klinik belirtiler",
+     "s": 7,
+     "k": [
+      0,
+      67
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.7
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1308,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "8": {
+   "5": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Kan basıncında yükselme ve taşikardi",
+      "Ağız kuruluğu ve terleme",
+      "Hava açlığı ve paresteziler"
+     ],
+     "baslik": "Otonomik sempatik belirtiler",
+     "s": 9,
+     "k": [
+      0,
+      83
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.7
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1308,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "9": {
+   "5": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "En az altı aylık süre",
+      "Endişeyi denetim altına alma güçlüğü",
+      "Erişkinde en az üç belirti"
+     ],
+     "baslik": "Tanı kriterleri",
+     "s": 10,
+     "k": [
+      0,
+      69
+     ],
+     "tip": "liste",
+     "konum": [
+      0.68,
+      0.44
+     ],
+     "genislik": 0.3,
+     "doluluk": 0.0,
+     "kutu_h": 0.518,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "10": {
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "İrritabilite ve tahammülsüzlük",
+      "Kronik kas gerginliği",
+      "Dinlendirici olmayan uyku"
+     ],
+     "baslik": "Klinik belirtiler",
+     "s": 11,
+     "k": [
+      0,
+      46
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.78
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2108,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "11": {
+   "5": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Kardiyovasküler hastalıklar ve aritmiler",
+      "Bronşiyal astım ve pulmoner emboli",
+      "Serebrovasküler olaylar ve epilepsi"
+     ],
+     "baslik": "Tıbbi ayırıcı tanı",
+     "s": 12,
+     "k": [
+      0,
+      62
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.74
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1708,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "13": {
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Kaygı durumu",
+       "Epizodik panik atakları",
+       "Sürekli dalgalı kaygı"
+      ],
+      [
+       "Odak",
+       "Panik atakları",
+       "Serbest dalgalanan endişe"
+      ]
+     ],
+     "kutuplar": [
+      "Panik bozukluk",
+      "Yaygın anksiyete"
+     ],
+     "s": 14,
+     "k": [
+      0,
+      66
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.31,
+      0.1
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.444,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "16": {
+   "5": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "SSRI grubu antidepresanlar",
+      "SNRI grubu venlafaksin ve duloksetin",
+      "Buspiron parsiyel agonisti"
+     ],
+     "baslik": "Birinci basamak farmakoterapi",
+     "s": 17,
+     "k": [
+      0,
+      76
+     ],
+     "tip": "liste",
+     "konum": [
+      0.37,
+      0.1
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  }
+ },
  "rapor": {
-  "aday": 15,
-  "gecti": 0,
+  "aday": 12,
+  "gecti": 11,
   "ret": {
-   "karşıt: 2 kutup, 1–6 satır [özellik, A, B]": 3,
-   "hücre 60 karakterden uzun": 9,
-   "resim sayfasında panel (H51)": 3
+   "resim sayfasında panel (H51)": 1
   }
  }
 }

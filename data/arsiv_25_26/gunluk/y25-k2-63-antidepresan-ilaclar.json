@@ -29,6 +29,31 @@
         "cizimSayisi": 2,
         "cikmisEslesme": 23
       }
+    },
+    {
+      "surum": 2,
+      "tarih": "2026-10-25 16:29",
+      "neden": "51 slaytlık dersin amfi derinliğine genişletilmesi ve eksiksiz anlatımı",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi 14. Antidepresanlar.pdf (51 sayfa) kaynağından 0 atlanan sayfa ile 51 paragraf / 196 cümlelik sesli anlatım üretildi.",
+        "21 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 6 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 22.1 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 1324,
+        "sureDk": 22.1,
+        "sayfaSayisi": 51,
+        "atlananSayfa": 0,
+        "bolumSayisi": 18,
+        "paragrafSayisi": 51,
+        "cumleSayisi": 196,
+        "slaytAdimSayisi": 21,
+        "cizimSayisi": 6,
+        "cikmisEslesme": 28
+      }
     }
   ]
 }

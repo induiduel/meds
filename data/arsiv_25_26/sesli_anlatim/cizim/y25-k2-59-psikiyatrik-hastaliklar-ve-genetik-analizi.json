@@ -1,13 +1,419 @@
 {
  "surum": 1,
- "metinHash": "41626a0eab8faaa91d0adacbecffb340d03394a9",
- "p": {},
- "rapor": {
-  "aday": 15,
-  "gecti": 0,
-  "ret": {
-   "hücre 60 karakterden uzun": 11,
-   "karşıt: 2 kutup, 1–6 satır [özellik, A, B]": 4
+ "metinHash": "7adb127a356ca61dbfd8bc7e6d26fcbbf3a657ab",
+ "p": {
+  "7": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Monozigot İkizler: Genetik özdeşlik",
+      "Dizigot İkizler: Genetik benzerlik"
+     ],
+     "baslik": "İkiz Çalışmaları",
+     "s": 8,
+     "k": [
+      0,
+      34
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.87
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2268,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "9": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Biyolojik Ebeveyn: Genetik miras",
+      "Evlat Edinen Aile: Yetiştirilme çevresi"
+     ],
+     "baslik": "Evlat Edinme Modeli",
+     "s": 10,
+     "k": [
+      0,
+      54
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.81
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1668,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "15": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Restriksiyon Belirteci: Parça uzunluk polimorfizmi",
+      "Minisatellitler: Değişken sayıda tandem tekrarlar"
+     ],
+     "baslik": "Moleküler Belirteç Tipleri",
+     "s": 16,
+     "k": [
+      0,
+      53
+     ],
+     "tip": "liste",
+     "konum": [
+      0.04,
+      0.83
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1868,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "22": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Pozitif Üç Değeri: Kesin genetik bağlantı",
+      "Negatif İki Değeri: Bağlantı dışlanması"
+     ],
+     "baslik": "LOD Skoru Değerleri",
+     "s": 23,
+     "k": [
+      0,
+      24
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.98
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3368,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "29": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Kısa Es Aleli: Dürtüsel agresyon ve stres",
+      "Amigdala Hiperaktivitesi: Duygusal stresör yanıtı"
+     ],
+     "baslik": "Serotonin Taşıyıcı ve Agresyon",
+     "s": 30,
+     "k": [
+      0,
+      40
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.93
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2868,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "33": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Bipolar Bozukluk: Yüksek konkordans",
+      "Unipolar Depresyon: Orta konkordans"
+     ],
+     "baslik": "Duygudurum Bozuklukları İkiz Uyumu",
+     "s": 34,
+     "k": [
+      0,
+      48
+     ],
+     "tip": "liste",
+     "konum": [
+      0.07,
+      0.57
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "39": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Triptofan Hidroksilaz: Serotonin sentezi",
+      "Beş Haş İ A A Düzeyi: Metabolit konsantrasyonu"
+     ],
+     "baslik": "Serotonerjik Sistem ve İntihar",
+     "s": 40,
+     "k": [
+      0,
+      42
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.89
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2468,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "48": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Monozigot İkizler: Yüzde elli üç konkordans",
+      "Dizigot İkizler: Yüzde on beş konkordans"
+     ],
+     "baslik": "Şizofrenide İkiz Konkordansı",
+     "s": 49,
+     "k": [
+      0,
+      43
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.49
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "53": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Kopya Sayısı Kaybı: Submikroskobik delesyon",
+      "Erişkin Dönem: Yüksek psikoz riski"
+     ],
+     "baslik": "Kromozom Yirmi İki Mikrodelesyonu",
+     "s": 54,
+     "k": [
+      0,
+      62
+     ],
+     "tip": "liste",
+     "konum": [
+      0.13,
+      0.49
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.001,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "61": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Alkol Dehidrogenaz: Asetaldehit oluşumu",
+      "Aldehit Dehidrogenaz: Asetat oksidasyonu"
+     ],
+     "baslik": "Alkol Metabolizma Enzimleri",
+     "s": 62,
+     "k": [
+      0,
+      34
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.68
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0368,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "63": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Valin Aleli: Hızlı enzim ve düşük dopamin",
+      "Metiyonin Aleli: Az aktif enzim ve yüksek dopamin"
+     ],
+     "baslik": "Katekol O Metiltransferaz Varyantları",
+     "s": 64,
+     "k": [
+      0,
+      47
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.85
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2068,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "67": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Monozigot Çiftler: Yüzde yetmiş beş eş hastalanma",
+      "Dizigot Çiftler: Yüzde kırk yedi eş hastalanma"
+     ],
+     "baslik": "Obsesif Kompulsif Bozukluk İkiz Verileri",
+     "s": 68,
+     "k": [
+      0,
+      45
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3168,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "74": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Multifaktöriyel Yapı: Poligenik risk havuzu",
+      "Çevresel Tetikleyiciler: Yaşam olayları ve stres"
+     ],
+     "baslik": "Psikiyatrik Kalıtım Modeli",
+     "s": 75,
+     "k": [
+      0,
+      49
+     ],
+     "tip": "liste",
+     "konum": [
+      0.55,
+      0.49
+     ],
+     "genislik": 0.42,
+     "doluluk": 0.001,
+     "kutu_h": 0.444,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
   }
+ },
+ "rapor": {
+  "aday": 13,
+  "gecti": 13,
+  "ret": {}
  }
 }

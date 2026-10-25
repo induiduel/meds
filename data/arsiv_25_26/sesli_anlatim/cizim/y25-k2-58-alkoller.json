@@ -1,14 +1,247 @@
 {
  "surum": 1,
- "metinHash": "d8ec3c430315b6ec94bdb918f1d41ff264951925",
- "p": {},
+ "metinHash": "2923387cb6e24481c2c5f44c849d3ad73e7a0707",
+ "p": {
+  "2": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Hızlı absorbsiyon",
+      "Total vücut suyuna dağılım",
+      "Kadınlarda yüksek doruk düzey"
+     ],
+     "baslik": "Etanol Kinetiği",
+     "s": 3,
+     "k": [
+      0,
+      45
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "5": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Aşırı NADH birikimi",
+      "Glukoneogenez baskılanması",
+      "Laktik asidoz ve hipoglisemi"
+     ],
+     "baslik": "Aşırı NADH Sonuçları",
+     "s": 6,
+     "k": [
+      0,
+      35
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.417,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3773,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "7": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Etanolden asetaldehit oluşumu",
+      "Mitokondriyal ALDH aktivasyonu",
+      "Asetatın sitrik asit döngüsüne girmesi"
+     ],
+     "baslik": "Etanol Oksidasyonu",
+     "s": 8,
+     "k": [
+      0,
+      32
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3096,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "14": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Karaciğer yağlanması",
+      "Alkolik hepatit",
+      "Siroz ve karaciğer yetmezliği"
+     ],
+     "baslik": "Karaciğer Hasarı",
+     "s": 15,
+     "k": [
+      0,
+      39
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.149,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1294,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "19": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Oftalmopleji",
+      "Serebellar ataksi",
+      "Akut konfüzyon"
+     ],
+     "baslik": "Wernicke Triadı",
+     "s": 20,
+     "k": [
+      0,
+      51
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "46": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Toksik format birikimi",
+      "Metabolik asidoz",
+      "Retinal hasar ve görme kaybı"
+     ],
+     "baslik": "Metanol Toksisitesi",
+     "s": 47,
+     "k": [
+      0,
+      33
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.417,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3773,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "50": {
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Okzalik asit oluşumu",
+      "Böbrek tübüllerinde kristalleşme",
+      "Akut böbrek yetmezliği"
+     ],
+     "baslik": "Etilen Glikol Zehirlenmesi",
+     "s": 51,
+     "k": [
+      0,
+      43
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.417,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3773,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  }
+ },
  "rapor": {
-  "aday": 15,
-  "gecti": 0,
+  "aday": 8,
+  "gecti": 7,
   "ret": {
-   "hücre 60 karakterden uzun": 11,
-   "panel metni 'Etanol molekülünün sitozolde A' henüz anlatılma": 1,
-   "karşıt: 2 kutup, 1–6 satır [özellik, A, B]": 3
+   "resim sayfasında panel (H51)": 1
   }
  }
 }

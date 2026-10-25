@@ -75,6 +75,31 @@
         "cizimSayisi": 64,
         "cikmisEslesme": 14
       }
+    },
+    {
+      "surum": 4,
+      "tarih": "2026-10-25 16:32",
+      "neden": "Sayfa 32 sempatik ağrı ve kozalji kapsamı eklendi",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi AĞRI 3.SINIF.pdf (56 sayfa) kaynağından 0 atlanan sayfa ile 55 paragraf / 140 cümlelik sesli anlatım üretildi.",
+        "63 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 38 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 18.8 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 1127,
+        "sureDk": 18.8,
+        "sayfaSayisi": 56,
+        "atlananSayfa": 0,
+        "bolumSayisi": 14,
+        "paragrafSayisi": 55,
+        "cumleSayisi": 140,
+        "slaytAdimSayisi": 63,
+        "cizimSayisi": 38,
+        "cikmisEslesme": 14
+      }
     }
   ]
 }

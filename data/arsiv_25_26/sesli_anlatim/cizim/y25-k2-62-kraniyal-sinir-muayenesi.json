@@ -1,13 +1,77 @@
 {
  "surum": 1,
- "metinHash": "1c1773da0dd133e64e5cd3d66b3a4195cec03a8b",
- "p": {},
+ "metinHash": "5afa54d3cd0309fe6537439cd8a47c3333d3aadf",
+ "p": {
+  "17": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Dördüncü kraniyal sinir nükleusu",
+      "Beyin sapını dorsalden terk eden",
+      "Tamamı çaprazlaşan tek sinir"
+     ],
+     "baslik": "Troklear Sinir Seyri",
+     "s": 18,
+     "k": [
+      0,
+      40
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.58,
+      0.01
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.002,
+     "kutu_h": 0.497,
+     "yon": "dikey",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "32": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Nervus hypoglossus lezyonu gelişmesi",
+      "Aynı taraf genioglossus kas zaafı",
+      "Dilin lezyon tarafına sapması"
+     ],
+     "baslik": "Hipoglossus Felci Bulgusu",
+     "s": 33,
+     "k": [
+      0,
+      36
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.51,
+      0.26
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.497,
+     "yon": "dikey",
+     "olcek": 1.0
+    }
+   ]
+  }
+ },
  "rapor": {
-  "aday": 15,
-  "gecti": 0,
+  "aday": 8,
+  "gecti": 2,
   "ret": {
-   "resim sayfasında panel (H51)": 13,
-   "hücre 60 karakterden uzun": 2
+   "resim sayfasında panel (H51)": 6
   }
  }
 }

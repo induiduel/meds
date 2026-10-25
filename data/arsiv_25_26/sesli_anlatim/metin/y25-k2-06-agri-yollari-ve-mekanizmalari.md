@@ -68,6 +68,8 @@ Somatik yüzeyel ağrı deri ve mukozal kaynaklıdır, iyi lokalize edilir ve ya
 
 Visseral ağrı iç organlardan kaynaklanan ağrıdır ve bağırsak patolojilerine bağlı ağrının visseral ağrı olduğu çıkmışta soruldu. İç organların tümü ağrıya karşı her zaman hassas değildir; örneğin bağırsaklarda meydana gelen gerilme, organların çeperinde bulunan sinir liflerini uyararak ağrıya yol açar. Visseral ağrı genellikle künttür, yavaş yavaş artar, kolay lokalize edilemez ve başka bölgelere yayılır; batma, sızlama, zonklama visseral değil somatik ağrının özelliğidir ve bu ayrım çıkmışta soruldu. Pankreas ağrısı sağ omuza, apandisit ağrısı göbeğe, miyokarddan kaynaklanan ağrılar sol kola yayılır; aynı biçimde her organa özgü deri bölgelerinde hipersensitivite vardır.
 
+Sempatik kökenli ağrılar özellikle geceleri belirginleşir ve şiddeti artar. Ağrının yanı sıra tutulan ekstremitelerde dolaşım bozukluklarına bağlı trofik bozukluklar, ödem ve deri değişiklikleri ortaya çıkar. Damarlardan kaynaklanan vazomotor ağrılar ile kozalji adı verilen yanma tarzındaki şiddetli ağrılar sempatik ağrılara tipik örnektir.
+
 @@ Patogeneze ve tedaviye yanıta göre ağrı
 Patogeneze göre ilk tip inflamatuar ağrıdır; prostaglandin, bradikinin ve histamin aracılığıyla duyarlılık artışına bağlı ortaya çıkar ve artrit ile enfeksiyona bağlı ağrılar örnektir. İskemik ağrı, dokularda oksijen yetersizliği ve laktik asit birikimine bağlı ortaya çıkar; angina pektoris ve periferik arter hastalığına bağlı ağrı örnektir. Deafferentasyon ağrısı sinir kesisi veya spinal lezyon sonrası spontan oluşan ağrılardır ve amputasyon sonrası fantom ağrısı örnektir. İdiyopatik ağrıda tanımlanabilir bir neden yoktur ve kronik pelvik ağrı örnek verilebilir.
 

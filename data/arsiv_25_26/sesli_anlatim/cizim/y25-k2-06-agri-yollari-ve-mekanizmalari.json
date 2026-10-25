@@ -1,6 +1,6 @@
 {
  "surum": 1,
- "metinHash": "155fe0ea89fbabde7335989c4752be7e0b51dd22",
+ "metinHash": "3f82929c4b91b60f7f002cfd610ebe772c9af85e",
  "p": {
   "4": {
    "2": [
@@ -1074,66 +1074,6 @@
    ]
   },
   "30": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "mekanizma_adimlari",
-     "sablon_ad": "Mekanizma basamakları",
-     "duzen": "zincir",
-     "ogeler": [
-      "prostaglandin, bradikinin, histamin",
-      "duyarlılık artışı",
-      "inflamatuar ağrı"
-     ],
-     "s": 33,
-     "k": [
-      45,
-      134
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.13,
-      0.75
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.35,
-     "yon": "dikey",
-     "olcek": 1.0,
-     "ek_alt": 0.1196,
-     "ek_renk": "#ffffff"
-    }
-   ],
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "mekanizma_adimlari",
-     "sablon_ad": "Mekanizma basamakları",
-     "duzen": "zincir",
-     "ogeler": [
-      "dokularda oksijen yetersizliği",
-      "laktik asit birikimi",
-      "iskemik ağrı"
-     ],
-     "s": 33,
-     "k": [
-      0,
-      90
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.13,
-      0.75
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.35,
-     "yon": "dikey",
-     "olcek": 1.0,
-     "ek_alt": 0.1196,
-     "ek_renk": "#ffffff"
-    }
-   ],
    "2": [
     {
      "tur": "sema",
@@ -1148,7 +1088,7 @@
      "s": 33,
      "k": [
       0,
-      88
+      91
      ],
      "tip": "zincir",
      "konum": [
@@ -1162,250 +1102,6 @@
      "olcek": 1.0,
      "ek_alt": 0.0534,
      "ek_renk": "#ffffff"
-    }
-   ],
-   "3": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "inflamatuar ağrı",
-      "iskemik ağrı",
-      "deafferentasyon ağrısı",
-      "idiyopatik ağrı (neden yok)"
-     ],
-     "baslik": "Patogeneze göre ağrı",
-     "s": 33,
-     "k": [
-      0,
-      71
-     ],
-     "tip": "liste",
-     "konum": [
-      0.13,
-      0.75
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.363,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.1334,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "31": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "karsilastirma",
-     "sablon_ad": "İki durumun karşılaştırması",
-     "duzen": "karsit",
-     "basliklar": [
-      "Özellik"
-     ],
-     "satirlar": [
-      [
-       "Kaynak",
-       "nosiseptör",
-       "nöropatik veya santral"
-      ],
-      [
-       "Tedavi",
-       "morfin gibi narkotik analjezik",
-       "adjuvan tedavi"
-      ],
-      [
-       "Örnek",
-       "postoperatif ağrı",
-       "diyabetik nöropati, fibromiyalji"
-      ]
-     ],
-     "kutuplar": [
-      "Opioide duyarlı",
-      "Opioide duyarsız"
-     ],
-     "s": 34,
-     "k": [
-      0,
-      137
-     ],
-     "tip": "karsit",
-     "konum": [
-      0.13,
-      0.79
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.43,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.2397,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "33": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "mekanizma_adimlari",
-     "sablon_ad": "Mekanizma basamakları",
-     "duzen": "zincir",
-     "ogeler": [
-      "nosiseptör aktivasyonu / doku mediyatörleri",
-      "medulla spinalise afferent transmisyon",
-      "dorsal boynuz",
-      "yüksek merkezler"
-     ],
-     "s": 36,
-     "k": [
-      21,
-      240
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.15,
-      0.81
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.45,
-     "yon": "dikey",
-     "olcek": 1.0,
-     "ek_alt": 0.2797,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "34": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "transdüksiyon",
-      "transmisyon",
-      "modülasyon",
-      "persepsiyon"
-     ],
-     "baslik": "Ağrı algılamasının 4 aşaması",
-     "numarali": true,
-     "s": 37,
-     "k": [
-      0,
-      89
-     ],
-     "tip": "liste",
-     "konum": [
-      0.13,
-      0.87
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.363,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.2534,
-     "ek_renk": "#ffffff"
-    }
-   ],
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "neden_sonuc",
-     "sablon_ad": "Neden → sonuç",
-     "duzen": "zincir",
-     "bag": "yol açar",
-     "ogeler": [
-      "zararlı termal, mekanik, kimyasal enerji",
-      "elektriksel sinyal"
-     ],
-     "s": 37,
-     "k": [
-      76,
-      155
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.13,
-      0.87
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.283,
-     "yon": "dikey",
-     "olcek": 1.0,
-     "ek_alt": 0.1734,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "36": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "mekanizma_adimlari",
-     "sablon_ad": "Mekanizma basamakları",
-     "duzen": "zincir",
-     "ogeler": [
-      "Ağrılı uyaran",
-      "Spinal kord düzeyinde değişime uğrar",
-      "Daha üst merkezlere iletilir"
-     ],
-     "s": 39,
-     "k": [
-      0,
-      108
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.21,
-      0.75
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.35,
-     "yon": "dikey",
-     "olcek": 1.0,
-     "ek_alt": 0.1196,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "37": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "mekanizma_adimlari",
-     "sablon_ad": "Mekanizma basamakları",
-     "duzen": "zincir",
-     "ogeler": [
-      "Medulla spinalisten geçen uyaran",
-      "Çeşitli çıkan yollar",
-      "Üst merkezlere iletilir",
-      "Ağrı algılanır"
-     ],
-     "s": 40,
-     "k": [
-      31,
-      146
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.22,
-      0.53
-     ],
-     "genislik": 0.42,
-     "doluluk": 0.0,
-     "kutu_h": 0.45,
-     "yon": "dikey",
-     "olcek": 1.0
     }
    ]
   },
@@ -1425,8 +1121,8 @@
      "etiket": "nosiseptörden spinal korda",
      "s": 41,
      "k": [
-      30,
-      107
+      51,
+      127
      ],
      "yol": [
       [
@@ -1448,436 +1144,6 @@
       0.66
      ],
      "etiket_genislik": 0.366
-    },
-    {
-     "tur": "akis",
-     "a": [
-      0.38,
-      0.484
-     ],
-     "b": [
-      0.37,
-      0.306
-     ],
-     "iliski": "aktive",
-     "etiket": "talamustan kortekse algı",
-     "s": 41,
-     "k": [
-      108,
-      178
-     ],
-     "yol": [
-      [
-       0.38,
-       0.484
-      ],
-      [
-       0.3856,
-       0.4725
-      ],
-      [
-       0.3904,
-       0.4611
-      ],
-      [
-       0.3944,
-       0.4497
-      ],
-      [
-       0.3975,
-       0.4384
-      ],
-      [
-       0.3998,
-       0.4271
-      ],
-      [
-       0.4013,
-       0.4158
-      ],
-      [
-       0.4019,
-       0.4046
-      ],
-      [
-       0.4017,
-       0.3935
-      ],
-      [
-       0.4007,
-       0.3824
-      ],
-      [
-       0.3988,
-       0.3713
-      ],
-      [
-       0.3961,
-       0.3603
-      ],
-      [
-       0.3925,
-       0.3494
-      ],
-      [
-       0.3881,
-       0.3385
-      ],
-      [
-       0.3829,
-       0.3276
-      ],
-      [
-       0.3769,
-       0.3168
-      ],
-      [
-       0.37,
-       0.306
-      ]
-     ],
-     "rota": "kavis",
-     "etiket_konum": [
-      0.36,
-      0.2397
-     ],
-     "etiket_genislik": 0.34
-    }
-   ],
-   "1": [
-    {
-     "tur": "akis",
-     "a": [
-      0.834,
-      0.62
-     ],
-     "b": [
-      0.7,
-      0.704
-     ],
-     "iliski": "inhibe",
-     "etiket": "lokal anestezik: transdüksiyon",
-     "s": 41,
-     "k": [
-      7,
-      98
-     ],
-     "yol": [
-      [
-       0.834,
-       0.62
-      ],
-      [
-       0.7,
-       0.62
-      ],
-      [
-       0.7,
-       0.704
-      ]
-     ],
-     "rota": "dirsek",
-     "etiket_konum": [
-      0.28,
-      0.92
-     ],
-     "etiket_genislik": 0.416,
-     "etiket_hedef": [
-      0.69,
-      0.714
-     ],
-     "etiket_boy": 0.0443
-    },
-    {
-     "tur": "akis",
-     "a": [
-      0.7,
-      0.5
-     ],
-     "b": [
-      0.62,
-      0.58
-     ],
-     "iliski": "inhibe",
-     "etiket": "lokal anestezik: transmisyon",
-     "s": 41,
-     "k": [
-      99,
-      187
-     ],
-     "odak": [
-      0.6,
-      0.48,
-      0.72,
-      0.6
-     ],
-     "etiket_konum": [
-      0.1969,
-      0.5178
-     ],
-     "etiket_genislik": 0.391
-    }
-   ],
-   "2": [
-    {
-     "tur": "akis",
-     "a": [
-      0.5686363636363636,
-      0.39993939393939393
-     ],
-     "b": [
-      0.49,
-      0.454
-     ],
-     "iliski": "inhibe",
-     "etiket": "spinal opioid: modülasyon",
-     "s": 41,
-     "k": [
-      0,
-      58
-     ],
-     "yol": [
-      [
-       0.5686,
-       0.3999
-      ],
-      [
-       0.5628,
-       0.4019
-      ],
-      [
-       0.557,
-       0.4041
-      ],
-      [
-       0.5514,
-       0.4065
-      ],
-      [
-       0.5459,
-       0.409
-      ],
-      [
-       0.5406,
-       0.4118
-      ],
-      [
-       0.5353,
-       0.4147
-      ],
-      [
-       0.5302,
-       0.4178
-      ],
-      [
-       0.5253,
-       0.4211
-      ],
-      [
-       0.5204,
-       0.4245
-      ],
-      [
-       0.5157,
-       0.4282
-      ],
-      [
-       0.5111,
-       0.432
-      ],
-      [
-       0.5066,
-       0.4361
-      ],
-      [
-       0.5023,
-       0.4403
-      ],
-      [
-       0.4981,
-       0.4447
-      ],
-      [
-       0.494,
-       0.4492
-      ],
-      [
-       0.49,
-       0.454
-      ]
-     ],
-     "rota": "kavis",
-     "kaynak_kutu": [
-      0.4896,
-      0.3124,
-      0.6476,
-      0.3979
-     ],
-     "etiket_konum": [
-      0.3686,
-      0.3999
-     ],
-     "etiket_genislik": 0.353
-    }
-   ]
-  },
-  "39": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Periferik sensitizasyon",
-      "Santral sensitizasyon",
-      "Disinhibisyon",
-      "Reorganizasyon"
-     ],
-     "baslik": "Moleküler ve santral mekanizmalar",
-     "s": 42,
-     "k": [
-      0,
-      138
-     ],
-     "tip": "liste",
-     "konum": [
-      0.13,
-      0.3
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.363,
-     "yon": "yatay",
-     "olcek": 1.0
-    }
-   ]
-  },
-  "40": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "cok_neden_tek_sonuc",
-     "sablon_ad": "Birçok neden → tek sonuç",
-     "duzen": "grup",
-     "bag": "neden olur",
-     "kaynaklar": [
-      "Makrofaj",
-      "Lenfosit",
-      "Mast hücreleri"
-     ],
-     "sonuc": "Tahrip olan bölgeye göç",
-     "s": 43,
-     "k": [
-      27,
-      170
-     ],
-     "tip": "grup",
-     "konum": [
-      0.16,
-      0.8
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.263,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.0833,
-     "ek_renk": "#ffffff"
-    }
-   ],
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "mekanizma_adimlari",
-     "sablon_ad": "Mekanizma basamakları",
-     "duzen": "zincir",
-     "ogeler": [
-      "Nosiseptif uyaran",
-      "Nörojenik inflamasyon",
-      "P maddesi, nörokinin A, kalsitonin geniyle ilişkili peptid"
-     ],
-     "s": 43,
-     "k": [
-      0,
-      161
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.16,
-      0.8
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.35,
-     "yon": "dikey",
-     "olcek": 1.0,
-     "ek_alt": 0.1696,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "41": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Sensoryal ve sempatik liflerde uyarılmada değişiklik",
-      "Vazodilatasyon",
-      "Plazma proteinlerinin ekstravazasyonu",
-      "İnflamatuar hücrelerden kimyasal mediatör salgılanması"
-     ],
-     "baslik": "Peptidlerin salgılanması yol açar",
-     "s": 44,
-     "k": [
-      0,
-      226
-     ],
-     "tip": "liste",
-     "konum": [
-      0.18,
-      0.77
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.363,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.1534,
-     "ek_renk": "#ffffff"
-    }
-   ],
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "mekanizma_adimlari",
-     "sablon_ad": "Mekanizma basamakları",
-     "duzen": "zincir",
-     "ogeler": [
-      "Serotonin ve P maddesi",
-      "Nitrik oksit ve COX/LOX",
-      "Periferik sensitizasyon"
-     ],
-     "s": 44,
-     "k": [
-      11,
-      216
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.18,
-      0.77
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.35,
-     "yon": "dikey",
-     "olcek": 1.0,
-     "ek_alt": 0.1396,
-     "ek_renk": "#ffffff"
     }
    ]
   },
@@ -1896,7 +1162,7 @@
      "s": 45,
      "k": [
       0,
-      125
+      147
      ],
      "tip": "zincir",
      "konum": [
@@ -1923,8 +1189,8 @@
      ],
      "s": 45,
      "k": [
-      13,
-      83
+      11,
+      91
      ],
      "tip": "zincir",
      "konum": [
@@ -1936,152 +1202,6 @@
      "kutu_h": 0.186,
      "yon": "yatay",
      "olcek": 1.0
-    }
-   ]
-  },
-  "43": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "zehir_antidot",
-     "sablon_ad": "Zehirlenme → antidot / tedavi",
-     "duzen": "tablo",
-     "basliklar": [
-      "Durum",
-      "Antidot / tedavi"
-     ],
-     "satirlar": [
-      [
-       "İnflamatuar cevap (cerrahi, travma sonrası)",
-       "Aspirin, parasetamol, nonsteroid antiinflamatuarlar"
-      ]
-     ],
-     "s": 46,
-     "k": [
-      136,
-      252
-     ],
-     "tip": "tablo",
-     "konum": [
-      0.19,
-      0.87
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.236,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.1256,
-     "ek_renk": "#ffffff"
-    }
-   ],
-   "2": [
-    {
-     "tur": "sema",
-     "sablon": "karsilastirma",
-     "sablon_ad": "İki durumun karşılaştırması",
-     "duzen": "karsit",
-     "basliklar": [
-      "Özellik"
-     ],
-     "satirlar": [
-      [
-       "Bulunduğu yer",
-       "Dokular ve gastrointestinal mukoza",
-       "İnflamasyon bölgesi"
-      ],
-      [
-       "Varlığı",
-       "Sürekli",
-       "Sadece inflamasyon sırasında"
-      ]
-     ],
-     "kutuplar": [
-      "Siklooksijenaz bir (COX-1)",
-      "Siklooksijenaz iki (COX-2)"
-     ],
-     "s": 46,
-     "k": [
-      0,
-      140
-     ],
-     "tip": "karsit",
-     "konum": [
-      0.19,
-      0.87
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.333,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.2226,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "44": {
-   "2": [
-    {
-     "tur": "sema",
-     "sablon": "mekanizma_adimlari",
-     "sablon_ad": "Mekanizma basamakları",
-     "duzen": "zincir",
-     "ogeler": [
-      "Santral sensitizasyon",
-      "Dorsal boynuz nöronları aşırı uyarılabilir",
-      "NMDA reseptör aktivasyonu, mikroglial sitokinler",
-      "Hiperaljezi, allodini, spontan ağrı"
-     ],
-     "s": 47,
-     "k": [
-      0,
-      73
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.2,
-      0.84
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.49,
-     "yon": "dikey",
-     "olcek": 1.0,
-     "ek_alt": 0.3497,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "45": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "mekanizma_adimlari",
-     "sablon_ad": "Mekanizma basamakları",
-     "duzen": "zincir",
-     "ogeler": [
-      "Ağrıyı inhibe eden sistemlerin etkinliği azalır",
-      "Ağrı eşiği düşer",
-      "Ağrı kolaylaşır"
-     ],
-     "s": 48,
-     "k": [
-      0,
-      147
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.18,
-      0.75
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.39,
-     "yon": "dikey",
-     "olcek": 1.0,
-     "ek_alt": 0.1596,
-     "ek_renk": "#ffffff"
     }
    ]
   },
@@ -2100,8 +1220,8 @@
      "baslik": "Reorganizasyonun olduğu düzeyler",
      "s": 50,
      "k": [
-      100,
-      141
+      98,
+      139
      ],
      "tip": "liste",
      "konum": [
@@ -2114,66 +1234,6 @@
      "yon": "yatay",
      "olcek": 1.0,
      "ek_alt": 0.168,
-     "ek_renk": "#ffffff"
-    },
-    {
-     "tur": "sema",
-     "sablon": "neden_sonuc",
-     "sablon_ad": "Neden → sonuç",
-     "duzen": "zincir",
-     "bag": "yol açar",
-     "ogeler": [
-      "Santral sensitizasyon devam eder",
-      "Kronik ağrı sendromları"
-     ],
-     "s": 50,
-     "k": [
-      148,
-      219
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.18,
-      0.84
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.283,
-     "yon": "dikey",
-     "olcek": 1.0,
-     "ek_alt": 0.1434,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "48": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "mekanizma_adimlari",
-     "sablon_ad": "Mekanizma basamakları",
-     "duzen": "zincir",
-     "ogeler": [
-      "Doku hasarı yapabilecek uyaran",
-      "Nosiseptör (serbest sinir ucu)",
-      "Transdüksiyon başlar"
-     ],
-     "s": 51,
-     "k": [
-      0,
-      247
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.13,
-      0.82
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.35,
-     "yon": "dikey",
-     "olcek": 1.0,
-     "ek_alt": 0.1896,
      "ek_renk": "#ffffff"
     }
    ]
@@ -2195,7 +1255,7 @@
      "s": 52,
      "k": [
       0,
-      90
+      66
      ],
      "tip": "liste",
      "konum": [
@@ -2225,7 +1285,7 @@
      "s": 52,
      "k": [
       0,
-      110
+      109
      ],
      "tip": "zincir",
      "konum": [
@@ -2238,74 +1298,6 @@
      "yon": "yatay",
      "olcek": 1.0,
      "ek_alt": 0.1844,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "50": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "P maddesi (nörokinin reseptörlerine etki)",
-      "Nörokinin A",
-      "Kalsitonin geniyle ilişkili peptid (CGRP)"
-     ],
-     "baslik": "Primer afferent peptidleri",
-     "s": 53,
-     "k": [
-      0,
-      170
-     ],
-     "tip": "liste",
-     "konum": [
-      0.16,
-      0.84
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.308,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.168,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "51": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Opioid",
-      "Gama aminobütirik asit (GABA)",
-      "Alfa adrenerjik",
-      "Serotonin (5-HT)",
-      "Adenozin"
-     ],
-     "baslik": "Modülasyondaki diğer reseptörler",
-     "s": 54,
-     "k": [
-      51,
-      164
-     ],
-     "tip": "liste",
-     "konum": [
-      0.17,
-      0.74
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.419,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.1789,
      "ek_renk": "#ffffff"
     }
    ]
@@ -2327,7 +1319,7 @@
      "s": 55,
      "k": [
       0,
-      61
+      69
      ],
      "yol": [
       [
@@ -2361,7 +1353,7 @@
  },
  "rapor": {
   "aday": 84,
-  "gecti": 64,
+  "gecti": 38,
   "ret": {
    "panel metni 'Ağrının iki boyutu' henüz anlatılmamış terim iç": 1,
    "maske: görünen + 1–4 altta": 1,
@@ -2370,17 +1362,33 @@
    "panel metni 'Duyarlılık ve cevap artar' henüz anlatılmamış t": 1,
    "panel metni 'Artar' henüz anlatılmamış terim içeriyor (ileri": 1,
    "panel metni 'sağ omuz' henüz anlatılmamış terim içeriyor (il": 1,
-   "panel metni 'Uyaranın ısısı?' henüz anlatılmamış terim içeri": 1,
+   "kelime aralığı geçersiz (6–15, cümle 9 kelime)": 1,
+   "panel metni 'dokularda oksijen yetersizliği' henüz anlatılma": 1,
+   "bilinmeyen cümle": 11,
+   "panel metni 'Opioide duyarlı' henüz anlatılmamış terim içeri": 1,
+   "kelime aralığı geçersiz (2–26, cümle 10 kelime)": 1,
+   "panel metni 'persepsiyon' henüz anlatılmamış terim içeriyor ": 1,
    "panel metni 'A delta lifi' henüz anlatılmamış terim içeriyor": 1,
-   "a/b noktası geçersiz": 1,
-   "panel metni 'NMDA aktivasyonu' henüz anlatılmamış terim içer": 1,
-   "panel metni 'İletim hızı' henüz anlatılmamış terim içeriyor ": 1,
-   "panel metni 'NSAİİ' henüz anlatılmamış terim içeriyor (ileri": 1,
-   "panel metni 'TRPV1 uyarımı' henüz anlatılmamış terim içeriyo": 1,
-   "panel metni 'NMDA reseptörleri' henüz anlatılmamış terim içe": 1,
-   "panel metni 'Dayanak' henüz anlatılmamış terim içeriyor (ile": 1,
+   "kelime aralığı geçersiz (0–15, cümle 14 kelime)": 1,
+   "kelime aralığı geçersiz (3–17, cümle 10 kelime)": 1,
+   "kelime aralığı geçersiz (15–22, cümle 18 kelime)": 1,
+   "panel metni 'Disinhibisyon' henüz anlatılmamış terim içeriyo": 1,
+   "kelime aralığı geçersiz (2–21, cümle 13 kelime)": 1,
+   "kelime aralığı geçersiz (0–22, cümle 22 kelime)": 1,
+   "kelime aralığı geçersiz (2–22, cümle 21 kelime)": 1,
+   "kelime aralığı geçersiz (15–26, cümle 14 kelime)": 1,
+   "panel metni 'NMDA reseptör aktivasyonu, mik' henüz anlatılma": 1,
+   "kelime aralığı geçersiz (0–16, cümle 10 kelime)": 1,
+   "kelime aralığı geçersiz (18–27, cümle 21 kelime)": 1,
+   "kelime aralığı geçersiz (0–29, cümle 28 kelime)": 1,
+   "kelime aralığı geçersiz (0–19, cümle 12 kelime)": 1,
+   "panel metni 'Kapsaisin' henüz anlatılmamış terim içeriyor (i": 1,
+   "kelime aralığı geçersiz (10–37, cümle 9 kelime)": 1,
+   "kelime aralığı geçersiz (0–21, cümle 20 kelime)": 1,
+   "panel metni 'Alfa adrenerjik' henüz anlatılmamış terim içeri": 1,
+   "kelime aralığı geçersiz (0–26, cümle 22 kelime)": 1,
    "noktaların %70'i çizgi üstünde (en az %70)": 1,
-   "noktaların %53'i çizgi üstünde (en az %70)": 1,
+   "kelime aralığı geçersiz (18–22, cümle 21 kelime)": 1,
    "ok uçlarından biri boş alanda (yazı/çizim yok)": 1
   }
  }

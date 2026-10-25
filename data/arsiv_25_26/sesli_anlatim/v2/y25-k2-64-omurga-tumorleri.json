@@ -6,197 +6,68 @@
  "bolumler": [
   {
    "id": "k2-64-b01",
-   "baslik": "Omurga Tümörlerine Genel Bakış ve Benign Lezyonlar Spektrumu",
-   "sayfa_araligi": [
-    1,
-    4
-   ],
+   "baslik": "Omurga Tümörlerine Giriş ve Genel Yaklaşım",
    "paragraflar": [
     {
      "id": "k2-64-p001",
      "sayfa": 1,
-     "slayt_adim": "y25-k2-64-s01",
      "cumleler": [
       {
        "id": "k2-64-c0001",
-       "ses": "Omurga tümörleri dersimize hoş geldiniz, bu derste omurganın primer selim ve habis tümörlerini ve sık görülen metastatik lezyonlarını ele alacağız.",
-       "ekran": "**Omurga Tümörleri:** Giriş ve genel neoplazi sınıflandırması.",
+       "ses": "Omurga tümörleri dersimize hoş geldiniz, bu dersimizde omurganın primer selim ve primer habis tümörlerini ve klinik pratikte çok sık karşılaşılan metastatik omurga lezyonlarını ayrıntılı şekilde inceleyeceğiz.",
+       "ekran": "**Omurga tümörleri:** Giriş ve genel neoplazi sınıflandırması.",
        "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Omurga tümörleri",
+         "tur": "terim"
+        }
+       ],
        "slayt": {
+        "sayfa": 1,
         "satir": [
          "Omurga Tümörleri"
         ],
-        "sekil": null,
-        "sayfa": 1
-       },
-       "vurgu": [
-        {
-         "tur": "tanim",
-         "metin": "Omurga Tümörleri"
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "id": "k2-64-p002",
-     "sayfa": 2,
-     "slayt_adim": "y25-k2-64-s01",
-     "cumleler": [
+        "sekil": null
+       }
+      },
       {
        "id": "k2-64-c0002",
-       "ses": "Omurgada saptanan tüm kitlelerin yalnızca yüzde onu primer kemik tümörlerinden kaynaklanmaktadır.",
-       "ekran": "Omurga tümörlerinin **%10'u primer kemik tümörüdür**.",
+       "ses": "Omurgaya yerleşen kitleler hem spinal kolonun mekanik stabilitesini bozarak ağrı ve patolojik kırıklara yol açabilir, hem de medulla spinalis veya sinir köklerine bası yaparak kalıcı nörolojik defisitler oluşturabilir.",
+       "ekran": "**Klinik yaklaşım:** Omurga neoplazilerinde erken tanı ve anatomik lokalizasyon büyük önem taşır.",
        "duzey": 0,
-       "slayt": {
-        "satir": [
-         "Omurga tümörlerinin %10'u primer",
-         "kemik tümörüdür."
-        ],
-        "sekil": null,
-        "sayfa": 2
-       },
        "vurgu": [
         {
-         "tur": "sayi",
-         "metin": "%10'u"
+         "metin": "Klinik yaklaşım",
+         "tur": "terim"
         }
-       ]
+       ],
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Dr. Aydın Sinan APAYDIN"
+        ],
+        "sekil": null
+       }
       },
       {
        "id": "k2-64-c0003",
-       "ses": "Bu oran omurga neoplazilerinde sistemik metastazların çok daha büyük bir yer tuttuğunu göstermektedir.",
-       "ekran": "Geriye kalan **%90'lık büyük çoğunluğu** sistemik metastazlar oluşturur.",
-       "duzey": 1,
+       "ses": "Bu nedenle her bir lezyonun tuttuğu omurga kompartmanı, hastanın yaş grubu, tipik radyolojik bulguları ve doğru tedavi protokolleri dikkatle değerlendirilmelidir.",
+       "ekran": "**Ders hedefleri:** Benign lezyonlar, malign tümörler ve metastaz paternleri sistematik olarak işlenecektir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Ders hedefleri",
+         "tur": "terim"
+        }
+       ],
        "slayt": {
-        "sayfa": 2,
+        "sayfa": 1,
         "satir": [
-         "Omurga tümörlerinin %10'u primer"
+         "Omurga Tümörleri"
         ],
         "sekil": null
-       },
-       "vurgu": [
-        {
-         "tur": "sayi",
-         "metin": "%90'lık"
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "id": "k2-64-p003",
-     "sayfa": 3,
-     "slayt_adim": "y25-k2-64-s02",
-     "cumleler": [
-      {
-       "id": "k2-64-c0004",
-       "ses": "Primer benign omurga tümörleri osteoid osteom, osteoblastom ve osteokondromu içerir.",
-       "ekran": "Primer selim lezyonlar: **Osteoid osteom**, **osteoblastom** ve **osteokondrom**.",
-       "duzey": 0,
-       "slayt": {
-        "satir": [
-         "Osteoid osteom",
-         "Osteoblastom",
-         "Osteokondrom"
-        ],
-        "sekil": null,
-        "sayfa": 3
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "Osteoid osteom"
-        },
-        {
-         "tur": "terim",
-         "metin": "osteoblastom"
-        }
-       ]
-      },
-      {
-       "id": "k2-64-c0005",
-       "ses": "Ayrıca dev hücreli tümör, anevrizmal kemik kisti, eozinofilik granülom ve hemanjiom da selim spektrumdadır.",
-       "ekran": "**Dev hücreli tümör**, **anevrizmal kemik kisti**, **eozinofilik granülom** ve **hemanjiom**.",
-       "duzey": 1,
-       "slayt": {
-        "satir": [
-         "Dev hücreli Tümör",
-         "Anevrizmal Kemik kisti",
-         "Eozinofilik granulom",
-         "Hemanjiom"
-        ],
-        "sekil": null,
-        "sayfa": 3
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "Dev hücreli tümör"
-        },
-        {
-         "tur": "terim",
-         "metin": "hemanjiom"
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "id": "k2-64-p004",
-     "sayfa": 4,
-     "slayt_adim": "y25-k2-64-s02",
-     "cumleler": [
-      {
-       "id": "k2-64-c0006",
-       "ses": "Primer malign omurga tümörleri arasında osteosarkom, kondrosarkom ve Ewing sarkomu sayılır.",
-       "ekran": "Primer habis lezyonlar: **Osteosarkom**, **kondrosarkom** ve **Ewing sarkomu**.",
-       "duzey": 0,
-       "slayt": {
-        "satir": [
-         "Osteosarkom",
-         "Kondrosarkom",
-         "Ewing’s sarkomu"
-        ],
-        "sekil": null,
-        "sayfa": 4
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "Osteosarkom"
-        },
-        {
-         "tur": "terim",
-         "metin": "Kondrosarkom"
-        }
-       ]
-      },
-      {
-       "id": "k2-64-c0007",
-       "ses": "Multipl myelom, lenfoma, kordoma ve nöroblastom da primer habis omurga lezyonları grubundadır.",
-       "ekran": "**Multipl myelom**, **lenfoma**, **kordoma** ve **nöroblastom** habis spektrumdadır.",
-       "duzey": 1,
-       "slayt": {
-        "satir": [
-         "Multipl Myelom",
-         "Lenfoma",
-         "Kordoma",
-         "Nöroblastom"
-        ],
-        "sekil": null,
-        "sayfa": 4
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "Multipl myelom"
-        },
-        {
-         "tur": "terim",
-         "metin": "kordoma"
-        }
-       ]
+       }
       }
      ]
     }
@@ -204,251 +75,87 @@
   },
   {
    "id": "k2-64-b02",
-   "baslik": "Osteoid Osteom, Osteoblastom ve Osteokondrom",
-   "sayfa_araligi": [
-    5,
-    7
-   ],
+   "baslik": "Primer Kemik Tümörü Oranı ve Metastatik Görünüm",
    "paragraflar": [
     {
-     "id": "k2-64-p005",
-     "sayfa": 5,
-     "slayt_adim": "y25-k2-64-s03",
+     "id": "k2-64-p002",
+     "sayfa": 2,
      "cumleler": [
       {
-       "id": "k2-64-c0008",
-       "ses": "Osteoid osteom genellikle on ila yirmi beş yaş arasındaki çocuk ve genç erişkinlerde görülür.",
-       "ekran": "**Osteoid osteom:** 10-25 yaş çocuk ve genç erişkinlerde izlenir.",
+       "id": "k2-64-c0004",
+       "ses": "Omurgada saptanan tüm kitlelerin yalnızca yüzde onu primer kemik tümörlerinden kaynaklanmaktadır.",
+       "ekran": "Omurga tümörlerinin **%10'u primer kemik tümörüdür**.",
        "duzey": 0,
-       "slayt": {
-        "satir": [
-         "Çocuk ve genç erişkin : 10-25 yaş"
-        ],
-        "sekil": null,
-        "sayfa": 5
-       },
        "vurgu": [
         {
-         "tur": "sayi",
-         "metin": "10-25 yaş"
+         "metin": "primer kemik tümörü",
+         "tur": "terim"
         }
-       ]
+       ],
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "• Omurga tümörlerinin %10'u primer"
+        ],
+        "sekil": null
+       }
       },
       {
-       "id": "k2-64-c0009",
-       "ses": "Omurgada lamina ve pedikül gibi arka kolon elemanları daha sık tutulur ve en sık lomber bölge etkilenir.",
-       "ekran": "**Lamina ve pedikül** arka kolon tutulumu; en sık **lomber** bölgede.",
-       "duzey": 1,
-       "slayt": {
-        "satir": [
-         "Lamina ve pedikül gibi arka kolon",
-         "Lomber- en sık"
-        ],
-        "sekil": null,
-        "sayfa": 5
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "Lamina ve pedikül"
-        }
-       ]
-      },
-      {
-       "id": "k2-64-c0010",
-       "ses": "Dinlenmekle azalmayan, gece şiddetlenen ve aspirin ile azalan ağrı osteoid osteomun en tipik özelliğidir.",
-       "ekran": "Dinlenmekle geçmeyen, **gece artan ve aspirin ile azalan** karakteristik ağrı.",
-       "duzey": 1,
-       "slayt": {
-        "satir": [
-         "Dinlenmekle azalmayan, gece",
-         "şiddetlenen ve Asprin ile azalan"
-        ],
-        "sekil": null,
-        "sayfa": 5
-       },
-       "vurgu": [
-        {
-         "tur": "tuzak",
-         "metin": "aspirin ile azalan"
-        }
-       ]
-      },
-      {
-       "id": "k2-64-c0011",
-       "ses": "Osteoid osteom erişkinde ağrılı skolyozun en sık nedenidir ve sıklıkla geç teşhis konur.",
-       "ekran": "Erişkinde **ağrılı skolyozun en sık nedeni**; sıklıkla geç tanı alır.",
-       "duzey": 1,
-       "slayt": {
-        "satir": [
-         "Erişkinde ağrılı skolyozun en sık nedeni",
-         "Geç teşhis konur"
-        ],
-        "sekil": null,
-        "sayfa": 5
-       },
-       "vurgu": [
-        {
-         "tur": "cikmis",
-         "metin": "ağrılı skolyozun en sık nedeni"
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "id": "k2-64-p006",
-     "sayfa": 6,
-     "slayt_adim": "y25-k2-64-s04",
-     "cumleler": [
-      {
-       "id": "k2-64-c0012",
-       "ses": "Osteoblastom agresif selim tümörlerdendir ve omurgada sıkça karşımıza çıkar.",
-       "ekran": "**Osteoblastom:** Agresif selim tümör; omurgada sık yerleşir.",
+       "id": "k2-64-c0005",
+       "ses": "Bu epidemiyolojik oran, omurgada bir kitle lezyonu görüldüğünde öncelikle vücudun başka bir odağından kaynaklanan metastatik bir yayılımın akla gelmesi gerektiğini açıkça ortaya koyar.",
+       "ekran": "Geriye kalan **%90'lık büyük çoğunluğu** sistemik metastazlar oluşturur.",
        "duzey": 0,
-       "slayt": {
-        "satir": [
-         "Agressif selim tümörlerdir",
-         "Omurgada sık görülür"
-        ],
-        "sekil": null,
-        "sayfa": 6
-       },
        "vurgu": [
         {
-         "tur": "tanim",
-         "metin": "Agresif selim tümör"
+         "metin": "sistemik metastazlar",
+         "tur": "terim"
         }
-       ]
+       ],
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "kemik tümörüdür."
+        ],
+        "sekil": null
+       }
       },
       {
-       "id": "k2-64-c0013",
-       "ses": "Hastaların yüzde sekseninden fazlası otuz yaşın altındadır ve olguların yüzde ellisinden fazlasında skolyoz eşlik eder.",
-       "ekran": "**%80'i 30 yaş altında**; hastaların **>%50'sinde skolyoz** eşlik eder.",
-       "duzey": 1,
-       "slayt": {
-        "satir": [
-         ">  % 50 skolyozla beraberdir",
-         "% 80 30 yaş altında"
-        ],
-        "sekil": null,
-        "sayfa": 6
-       },
-       "vurgu": [
-        {
-         "tur": "sayi",
-         "metin": "%80'i 30 yaş altında"
-        }
-       ]
-      },
-      {
-       "id": "k2-64-c0014",
-       "ses": "Omurga arka elemanlarını tutan osteoblastomda büyük boyut nedeniyle nörolojik defisit sıktır.",
-       "ekran": "**Arka eleman tutulumu**; büyük boyut nedeniyle **nörolojik defisit sıktır**.",
-       "duzey": 1,
-       "slayt": {
-        "satir": [
-         "Omurga arka elemanları tutulumu",
-         "Büyük boyut nedeniyle defisit sıktır"
-        ],
-        "sekil": null,
-        "sayfa": 6
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "nörolojik defisit sıktır"
-        }
-       ]
-      },
-      {
-       "id": "k2-64-c0015",
-       "ses": "Ağrılı skolyoz yapan bu tümör, osteoid osteoma göre belirgin şekilde daha çok nükseder.",
-       "ekran": "**Ağrılı skolyoz** oluşturur; osteoid osteoma kıyasla **daha çok nükseder**.",
-       "duzey": 1,
-       "slayt": {
-        "satir": [
-         "Ağrılı skolyoz",
-         "Osteoid osteoma göre daha çok",
-         "nükseder"
-        ],
-        "sekil": null,
-        "sayfa": 6
-       },
-       "vurgu": [
-        {
-         "tur": "tuzak",
-         "metin": "daha çok nükseder"
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "id": "k2-64-p007",
-     "sayfa": 7,
-     "slayt_adim": "y25-k2-64-s05",
-     "cumleler": [
-      {
-       "id": "k2-64-c0016",
-       "ses": "Osteokondrom en sık görülen kemik tümörüdür ve kıkırdak kaynaklı selim bir lezyondur.",
-       "ekran": "**Osteokondrom:** En sık kemik tümörüdür; kıkırdak kaynaklı ve selimdir.",
+       "id": "k2-64-c0006",
+       "ses": "Primer omurga tümörleri omurganın kendi kemik iliği, trabeküler kemik yapısı, kıkırdak dokusu veya endotelyal vasküler elemanlarından köken alarak benign veya malign seyir gösterebilir.",
+       "ekran": "**Primer tümörler:** Kemik, kıkırdak, vasküler ve fibröz doku elemanlarından köken alabilir.",
        "duzey": 0,
-       "slayt": {
-        "satir": [
-         "En sık kemik tümörleridir",
-         "Selimdirler",
-         "Kıkırdak kaynaklıdır"
-        ],
-        "sekil": null,
-        "sayfa": 7
-       },
        "vurgu": [
         {
-         "tur": "terim",
-         "metin": "En sık kemik tümörüdür"
+         "metin": "Primer tümörler",
+         "tur": "terim"
         }
-       ]
+       ],
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Primer omurga"
+        ],
+        "sekil": null
+       }
       },
       {
-       "id": "k2-64-c0017",
-       "ses": "Tek veya çok sayıda olabilir, düşük bir oranda da olsa habis dejenerasyon riski taşır.",
-       "ekran": "Tek veya multipl olabilir; **düşük oranda habis dejenerasyon** görülebilir.",
-       "duzey": 1,
-       "slayt": {
-        "satir": [
-         "Tek veya çok sayıda",
-         "Habis dejenerasyon görülebilir(düşük oran)"
-        ],
-        "sekil": null,
-        "sayfa": 7
-       },
+       "id": "k2-64-c0007",
+       "ses": "Metastatik tümörler ise özellikle kapaksız Batson venöz pleksusu ve zengin arteriyel kanlanma sayesinde omurgayı tüm iskelet sistemi içinde en sık hedef alan ikincil neoplazilerdir.",
+       "ekran": "**Metastatik yayılım:** Venöz Batson pleksusu ve arteriyel dolaşım ile omurga en sık tutulan iskelet bölgesidir.",
+       "duzey": 0,
        "vurgu": [
         {
-         "tur": "tuzak",
-         "metin": "habis dejenerasyon"
+         "metin": "Metastatik yayılım",
+         "tur": "terim"
         }
-       ]
-      },
-      {
-       "id": "k2-64-c0018",
-       "ses": "Omurgada arka elemanlar ve özellikle spinoz proçes tutulur; lezyonlar nadiren ağrılıdır.",
-       "ekran": "Arka elemanlar ve özellikle **spinoz proçes** tutulur; nadiren ağrılıdır.",
-       "duzey": 1,
+       ],
        "slayt": {
+        "sayfa": 2,
         "satir": [
-         "Arka elemanlar ve özellikle spinoz proces tutulur",
-         "Nadiren ağrılıdır"
+         "tümörleri"
         ],
-        "sekil": null,
-        "sayfa": 7
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "spinoz proçes"
-        }
-       ]
+        "sekil": null
+       }
       }
      ]
     }
@@ -456,335 +163,183 @@
   },
   {
    "id": "k2-64-b03",
-   "baslik": "Dev Hücreli Tümör, Anevrizmal Kemik Kisti, Eozinofilik Granülom ve Hemanjiom",
-   "sayfa_araligi": [
-    8,
-    12
-   ],
+   "baslik": "Primer Benign ve Malign Omurga Tümörleri Sınıflaması",
    "paragraflar": [
     {
-     "id": "k2-64-p008",
-     "sayfa": 8,
-     "slayt_adim": "y25-k2-64-s06",
+     "id": "k2-64-p003",
+     "sayfa": 3,
      "cumleler": [
       {
-       "id": "k2-64-c0019",
-       "ses": "Dev hücreli tümör selim karakterde olup genç erişkinlerde metafiz ve epifiz tutulumu yapar.",
-       "ekran": "**Dev Hücreli Tümör:** Selim karakterde; genç erişkinde metafiz-epifiz tutulumu.",
+       "id": "k2-64-c0008",
+       "ses": "Primer selim omurga tümörleri arasında kemik dokusundan kaynaklanan osteoid osteom ve osteoblastom ile kıkırdak kökenli osteokondrom ilk sırada yer alır.",
+       "ekran": "Primer selim lezyonlar: **Osteoid osteom**, **osteoblastom** ve **osteokondrom** kemik ve kıkırdak kökenli benign tümörlerdir.",
        "duzey": 0,
-       "slayt": {
-        "satir": [
-         "Selim",
-         "Genç erişkinde metafiz ve epifiz"
-        ],
-        "sekil": null,
-        "sayfa": 8
-       },
        "vurgu": [
         {
-         "tur": "terim",
-         "metin": "Dev Hücreli Tümör"
+         "metin": "Osteoid osteom",
+         "tur": "terim"
         }
-       ]
+       ],
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "• Osteoid osteom"
+        ],
+        "sekil": null
+       }
       },
       {
-       "id": "k2-64-c0020",
-       "ses": "Omurgada diğer selim tümörlerin aksine korpus tutulur ve en sık torasik omurgada izlenir.",
-       "ekran": "Omurgada **korpus tutulur**; en sık **torasik omurga** bölgesindedir.",
-       "duzey": 1,
-       "slayt": {
-        "satir": [
-         "Omurgada korpus tutulur",
-         "En sık torasik omurga"
-        ],
-        "sekil": null,
-        "sayfa": 8
-       },
+       "id": "k2-64-c0009",
+       "ses": "Histopatolojik olarak benign kabul edilen dev hücreli tümör ve anevrizmal kemik kisti ise lokal olarak agresif davranabilen ve çevre omurga dokusunu hızla tahrip edebilen lezyonlardır.",
+       "ekran": "Lokal agresif selim lezyonlar: **Dev hücreli tümör** ve **anevrizmal kemik kisti** kemik destrüksiyonu yapabilir.",
+       "duzey": 0,
        "vurgu": [
         {
-         "tur": "cikmis",
-         "metin": "korpus tutulur"
+         "metin": "Dev hücreli tümör",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "• Dev hücreli Tümör"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0010",
+       "ses": "Langerhans hücreli histiyositoz yelpazesinde değerlendirilen eozinofilik granülom ve en sık rastlanan vasküler lezyon olan vertebra hemanjiomu da primer benign grup içinde incelenir.",
+       "ekran": "İnflamatuar ve vasküler lezyonlar: **Eozinofilik granülom** ve **hemanjiom** benign spektrumun diğer önemli üyeleridir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Eozinofilik granülom",
+         "tur": "terim"
         },
         {
-         "tur": "terim",
-         "metin": "torasik omurga"
+         "metin": "Eozinofilik granülom",
+         "tur": "cikmis"
         }
-       ]
-      }
-     ]
-    },
-    {
-     "id": "k2-64-p009",
-     "sayfa": 9,
-     "slayt_adim": "y25-k2-64-s07",
-     "cumleler": [
-      {
-       "id": "k2-64-c0021",
-       "ses": "Anevrizmal kemik kisti yirmi ila otuz yaş arasında genç erişkinlerde görülür.",
-       "ekran": "**Anevrizmal Kemik Kisti:** 20-30 yaş grubunda ve selim kistik lezyondur.",
-       "duzey": 0,
+       ],
        "slayt": {
+        "sayfa": 3,
         "satir": [
-         "20 - 30 yaş"
-        ],
-        "sekil": null,
-        "sayfa": 9
-       },
-       "vurgu": [
-        {
-         "tur": "sayi",
-         "metin": "20-30 yaş"
-        }
-       ]
-      },
-      {
-       "id": "k2-64-c0022",
-       "ses": "Olguların yüzde altmışında arka elemanlar tutulur ve en sık lomber bölge etkilenir.",
-       "ekran": "**Arka elemanlar (%60)** tutulur; en sık **lomber bölgede** yerleşir.",
-       "duzey": 1,
-       "slayt": {
-        "satir": [
-         "Arka elemanlar (% 60)",
-         "Lomber bölgede sık"
-        ],
-        "sekil": null,
-        "sayfa": 9
-       },
-       "vurgu": [
-        {
-         "tur": "sayi",
-         "metin": "%60"
-        }
-       ]
-      },
-      {
-       "id": "k2-64-c0023",
-       "ses": "Ana semptom bel ağrısıdır ve hastaların yüzde elli beşinde nörolojik defisit gelişir.",
-       "ekran": "**Bel ağrısı** ana semptomdur; hastaların **%55'inde defisit** izlenir.",
-       "duzey": 1,
-       "slayt": {
-        "satir": [
-         "Bel ağrısı : ana semptom",
-         "Defisit sıktır (% 55)"
-        ],
-        "sekil": null,
-        "sayfa": 9
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "Bel ağrısı"
-        }
-       ]
-      },
-      {
-       "id": "k2-64-c0024",
-       "ses": "Osteoblastom ve osteoid osteom gibi ağrılı skolyoz yapar; cerrahi tedaviye ek olarak radyoterapi verilebilir.",
-       "ekran": "**Ağrılı skolyoz** yapar; tedavisi **cerrahidir**, radyoterapi adjuvan verilebilir.",
-       "duzey": 1,
-       "slayt": {
-        "satir": [
-         "Osteoblastom ve osteoid osteom gibi ağrılı skolyoz yapar",
-         "Cerrahi",
-         "Radyoterapi adjuvan olarak verilebilir."
-        ],
-        "sekil": null,
-        "sayfa": 9
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "cerrahidir"
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "id": "k2-64-p010",
-     "sayfa": 10,
-     "slayt_adim": "y25-k2-64-s08",
-     "cumleler": [
-      {
-       "id": "k2-64-c0025",
-       "ses": "Eozinofilik granülom en sık ikinci dekadda görülür ve tekil ya da sistemik hastalıkla beraber olabilir.",
-       "ekran": "**Eozinofilik Granülom:** En sık 2. dekadda tekil veya sistemik formda izlenir.",
-       "duzey": 0,
-       "slayt": {
-        "satir": [
-         "En sık 2. dekadda görülür",
-         "Tekil veya sistemik hastalık ile beraber olabilir"
-        ],
-        "sekil": null,
-        "sayfa": 10
-       },
-       "vurgu": [
-        {
-         "tur": "sayi",
-         "metin": "2. dekadda"
-        }
-       ]
-      },
-      {
-       "id": "k2-64-c0026",
-       "ses": "Lezyon beş ve on yaşlarında pik yapar, akut sırt ağrısı oluşturur ve en sık torasik omurgayı tutar.",
-       "ekran": "**5 ve 10 yaşta pik yapar**; akut sırt ağrısı ve **torasik omurga** tutulumu.",
-       "duzey": 1,
-       "slayt": {
-        "satir": [
-         "5 ve 10 yaşta pik yapar",
-         "Akut sırt ağrısı",
-         "Torasik omurga tutulumu"
-        ],
-        "sekil": null,
-        "sayfa": 10
-       },
-       "vurgu": [
-        {
-         "tur": "sayi",
-         "metin": "5 ve 10 yaşta pik yapar"
-        }
-       ]
-      },
-      {
-       "id": "k2-64-c0027",
-       "ses": "Sistemik tutulum varsa kemoterapi uygulanır, diğer türlü cerrahi tedavi tercih edilir.",
-       "ekran": "Sistemik tutulumda **kemoterapi**, izole lezyonlarda **cerrahi tedavi** uygulanır.",
-       "duzey": 1,
-       "slayt": {
-        "satir": [
-         "Sistemik ise kemoterapi diğer türlü Cerrahi",
-         "tedavi"
-        ],
-        "sekil": null,
-        "sayfa": 10
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "kemoterapi"
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "id": "k2-64-p011",
-     "sayfa": 11,
-     "slayt_adim": "y25-k2-64-s08",
-     "cumleler": [
-      {
-       "id": "k2-64-c0028",
-       "ses": "Hand-Schüller-Christian triadı kemik lezyonları, diabetes insipidus ve ekzoftalmus üçlüsüyle karakterizedir.",
-       "ekran": "**Hand-Schüller-Christian Triadı:** Kemik lezyonları, **diabetes insipidus** ve **ekzoftalmus**.",
-       "duzey": 0,
-       "slayt": {
-        "satir": [
-         "kemik lezyonları,",
-         "diabetes insipidus",
-         "ekzoftalmus üçlüsüyle karakterize kronik bir multisistem formudur"
-        ],
-        "sekil": null,
-        "sayfa": 11
-       },
-       "vurgu": [
-        {
-         "tur": "cikmis",
-         "metin": "diabetes insipidus"
-        },
-        {
-         "tur": "terim",
-         "metin": "ekzoftalmus"
-        }
-       ]
-      },
-      {
-       "id": "k2-64-c0029",
-       "ses": "Bu klinik tablo Langerhans hücreli histiyositozun kronik multisistem formunu temsil eder.",
-       "ekran": "Langerhans hücreli histiyositozun **kronik multisistem formudur**.",
-       "duzey": 1,
-       "slayt": {
-        "sayfa": 11,
-        "satir": [
-         "ekzoftalmus üçlüsüyle karakterize kronik bir multisistem formudur,"
+         "• Eozinofilik granulom"
         ],
         "sekil": null
        },
+       "cikmis": [
+        "past-q-KURUL_2_C_IKMIS__3-78"
+       ]
+      },
+      {
+       "id": "k2-64-c0011",
+       "ses": "Benign omurga tümörleri sistemik metastaz yapmasalar bile lamina veya pedikül gibi posterior elemanlara yerleşerek ağrılı skolyoz veya spinal korda bası gibi ciddi klinik tablolara neden olabilirler.",
+       "ekran": "**Benign tümörlerin seyri:** Çoğunluğu yavaş büyür ancak posterior eleman tutulumuyla mekanik ağrı ve defisit oluşturabilir.",
+       "duzey": 0,
        "vurgu": [
         {
-         "tur": "tanim",
-         "metin": "kronik multisistem formudur"
+         "metin": "Benign tümörlerin seyri",
+         "tur": "terim"
         }
-       ]
+       ],
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Primer benign omurga"
+        ],
+        "sekil": null
+       }
       }
      ]
     },
     {
-     "id": "k2-64-p012",
-     "sayfa": 12,
-     "slayt_adim": "y25-k2-64-s09",
+     "id": "k2-64-p004",
+     "sayfa": 4,
      "cumleler": [
       {
-       "id": "k2-64-c0030",
-       "ses": "Hemanjiom vasküler kökenli selim bir lezyondur ve sıklıkla rastlantısal olarak tespit edilir.",
-       "ekran": "**Vertebra Hemanjiomu:** Selim vasküler lezyondur; sıklıkla insidentaldir.",
+       "id": "k2-64-c0012",
+       "ses": "Primer malign omurga tümörleri arasında kemiğin osteojenik sarkomu olan osteosarkom, habis kıkırdak tümörü kondrosarkom ve küçük yuvarlak hücreli Ewing sarkomu önemli yer tutar.",
+       "ekran": "Primer habis mezenkimal lezyonlar: **Osteosarkom**, **kondrosarkom** ve **Ewing sarkomu** agresif kemik sarkomlarıdır.",
        "duzey": 0,
-       "slayt": {
-        "satir": [
-         "Selim",
-         "Vasküler kökenli",
-         "Sıklıkla insidentaldir"
-        ],
-        "sekil": null,
-        "sayfa": 12
-       },
        "vurgu": [
         {
-         "tur": "terim",
-         "metin": "Vertebra Hemanjiomu"
+         "metin": "Osteosarkom",
+         "tur": "terim"
         }
+       ],
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "• Osteosarkom"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0013",
+       "ses": "Hematolojik maligniteler grubundan multipl myelom ve primer ya da sekonder omurga lenfoması erişkin hastalarda vertebra gövdesinde yaygın litik hasar oluşturan habis tablolardır.",
+       "ekran": "Hematolojik habis lezyonlar: **Multipl myelom** ve **omurga lenfoması** erişkinde yaygın omurga tutulumu yapar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Multipl myelom",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "• Multipl Myelom"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0014",
+       "ses": "Embriyonik notokord kalıntılarından köken alan kordoma ile özellikle çocukluk çağında paravertebral sempatik zincirden kaynaklanan nöroblastom da primer malign spektrumda sınıflandırılır.",
+       "ekran": "Noto kord artıklarından kaynaklanan **kordoma** ve sempatik zincir kökenli **nöroblastom** malign listededir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kordoma",
+         "tur": "terim"
+        },
+        {
+         "metin": "kordoma",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "• Kordoma"
+        ],
+        "sekil": null
+       },
+       "cikmis": [
+        "past-1790877037605-566383"
        ]
       },
       {
-       "id": "k2-64-c0031",
-       "ses": "Olguların yüzde ellisinden fazlası omurga ve kafatasında torakolomber veya lomber bölgede görülür.",
-       "ekran": "**>%50 omurga ve kafatasında**; torakolomber veya lomber yerleşimlidir.",
-       "duzey": 1,
-       "slayt": {
-        "satir": [
-         "> % 50 omurga ve kafatasında görülür",
-         "Torakolomber veya lomber"
-        ],
-        "sekil": null,
-        "sayfa": 12
-       },
+       "id": "k2-64-c0015",
+       "ses": "Primer malign omurga tümörleri kemik korteksini ve korpusu hızla destrükte ederek vertebra çökme kırıklarına ve akut epidural spinal kord basılarına yol açtıklarından acil onkolojik ve cerrahi yaklaşım gerektirirler.",
+       "ekran": "**Malign lezyonların klinik davranışı:** Hızlı kemik destrüksiyonu, patolojik kırık ve erken nörolojik defisit riski yüksektir.",
+       "duzey": 0,
        "vurgu": [
         {
-         "tur": "sayi",
-         "metin": ">%50 omurga"
+         "metin": "Malign lezyonların klinik davranışı",
+         "tur": "terim"
         }
-       ]
-      },
-      {
-       "id": "k2-64-c0032",
-       "ses": "Direkt grafide vertikal çizgilenmeler tipiktir; patolojik kırık ve korda bası durumunda cerrahi gerekir.",
-       "ekran": "Direkt grafide **vertikal çizgilenmeler** tipiktir; bası halinde cerrahi yapılır.",
-       "duzey": 1,
+       ],
        "slayt": {
+        "sayfa": 4,
         "satir": [
-         "Direkt grafide : vertikal çizgilenmeler",
-         "Patolojik kırıklar",
-         "Bası durumunda cerrahi"
+         "Primer malign"
         ],
-        "sekil": null,
-        "sayfa": 12
-       },
-       "vurgu": [
-        {
-         "tur": "cikmis",
-         "metin": "vertikal çizgilenmeler"
-        }
-       ]
+        "sekil": null
+       }
       }
      ]
     }
@@ -792,230 +347,106 @@
   },
   {
    "id": "k2-64-b04",
-   "baslik": "Primer Malign Omurga Tümörleri ve Sarkomlar",
-   "sayfa_araligi": [
-    13,
-    16
-   ],
+   "baslik": "Osteoid Osteom: Arka Kolon Tutulumu ve Aspirin Yanıtı",
    "paragraflar": [
     {
-     "id": "k2-64-p013",
-     "sayfa": 13,
-     "slayt_adim": "y25-k2-64-s11",
+     "id": "k2-64-p005",
+     "sayfa": 5,
      "cumleler": [
       {
-       "id": "k2-64-c0033",
-       "ses": "Primer malign omurga tümörleri osteosarkom, kondrosarkom, Ewing sarkomu, multipl myelom ve lenfomayı kapsar.",
-       "ekran": "Primer malign neoplaziler: **Osteosarkom**, **kondrosarkom**, **Ewing**, **myelom** ve **lenfoma**.",
+       "id": "k2-64-c0016",
+       "ses": "Osteoid osteom sıklıkla on ila yirmi beş yaş arasındaki çocuklarda ve genç erişkin popülasyonda ortaya çıkan selim kemik oluşturan bir neoplazidir.",
+       "ekran": "**Osteoid osteom:** Genellikle 10-25 yaş arasındaki çocuk ve genç erişkinlerde görülür.",
        "duzey": 0,
-       "slayt": {
-        "satir": [
-         "Osteosarkom",
-         "Kondrosarkom",
-         "Ewing’s sarkomu",
-         "Multipl Myelom",
-         "Lenfoma"
-        ],
-        "sekil": null,
-        "sayfa": 13
-       },
        "vurgu": [
         {
-         "tur": "terim",
-         "metin": "Osteosarkom"
-        },
-        {
-         "tur": "terim",
-         "metin": "Ewing"
+         "metin": "Osteoid osteom",
+         "tur": "terim"
         }
-       ]
-      }
-     ]
-    },
-    {
-     "id": "k2-64-p014",
-     "sayfa": 14,
-     "slayt_adim": "y25-k2-64-s11",
-     "cumleler": [
+       ],
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "• Çocuk ve genç erişkin : 10-25 yaş"
+        ],
+        "sekil": null
+       }
+      },
       {
-       "id": "k2-64-c0034",
-       "ses": "Omurga osteosarkomu nadir görülen ve ileri yaşta ortaya çıkan agresif habis bir kemik tümörüdür.",
-       "ekran": "**Omurga Osteosarkomu:** Nadirdir, ileri yaşta görülür ve habis seyirlidir.",
+       "id": "k2-64-c0017",
+       "ses": "Omurgada vertebra korpusundan ziyade lamina, pedikül ve faset eklem gibi arka kolon elemanları belirgin olarak daha sık tutulmaktadır.",
+       "ekran": "**Arka kolon tutulumu:** Lamina ve pedikül gibi posterior elemanlar belirgin şekilde daha sık tutulur.",
        "duzey": 0,
-       "slayt": {
-        "satir": [
-         "Nadir",
-         "İleri yaş"
-        ],
-        "sekil": null,
-        "sayfa": 14
-       },
        "vurgu": [
         {
-         "tur": "terim",
-         "metin": "Omurga Osteosarkomu"
+         "metin": "Arka kolon tutulumu",
+         "tur": "terim"
         }
-       ]
+       ],
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "• Lamina ve pedikül gibi arka kolon"
+        ],
+        "sekil": null
+       }
       },
       {
-       "id": "k2-64-c0035",
-       "ses": "Arka elemanların ve korpusun litik veya destrüktif lezyonuna yol açar; tedavisi cerrahi ve radyoterapidir.",
-       "ekran": "**Arka eleman ve korpusta destrüksiyon**; tedavisi cerrahi ve radyoterapidir.",
-       "duzey": 1,
-       "slayt": {
-        "satir": [
-         "Arka elemanların ve korpusun litik veya",
-         "destrüktif lezyonu",
-         "Cerrahi + radyoterapi"
-        ],
-        "sekil": null,
-        "sayfa": 14
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "destrüksiyon"
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "id": "k2-64-p015",
-     "sayfa": 15,
-     "slayt_adim": "y25-k2-64-s12",
-     "cumleler": [
-      {
-       "id": "k2-64-c0036",
-       "ses": "Kondrosarkom uzun kemiklerde, pelviste ve omurgada sık yerleşen habis kıkırdak tümörüdür.",
-       "ekran": "**Kondrosarkom:** Uzun kemikler, pelvis ve omurgada sık kıkırdak sarkomudur.",
+       "id": "k2-64-c0018",
+       "ses": "Spinal kolonda en sık lomber omurga segmenti etkilenirken, onu torasik ve servikal omurga lokalizasyonları takip eder.",
+       "ekran": "**Lomber bölge:** Omurga osteoid osteomlarının en sık yerleştiği anatomik segmenttir.",
        "duzey": 0,
-       "slayt": {
-        "satir": [
-         "Uzun kemiklerde ve pelviste sıktır. Omurga  tutulumu  da",
-         "sıktır"
-        ],
-        "sekil": null,
-        "sayfa": 15
-       },
        "vurgu": [
         {
-         "tur": "terim",
-         "metin": "Kondrosarkom"
+         "metin": "Lomber bölge",
+         "tur": "terim"
         }
-       ]
+       ],
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "• Lomber- en sık"
+        ],
+        "sekil": null
+       }
       },
       {
-       "id": "k2-64-c0037",
-       "ses": "Genellikle kırk ila yetmiş yaş arasında görülür ve izole lezyonlarda temel yaklaşım cerrahi tedavidir.",
-       "ekran": "**40–70 yaş** aralığında görülür; izole kitlelerde temel yaklaşım **cerrahidir**.",
-       "duzey": 1,
-       "slayt": {
-        "satir": [
-         "40 – 70 yaş",
-         "İzole ise cerrahi tedavi"
-        ],
-        "sekil": null,
-        "sayfa": 15
-       },
-       "vurgu": [
-        {
-         "tur": "sayi",
-         "metin": "40–70 yaş"
-        },
-        {
-         "tur": "terim",
-         "metin": "cerrahidir"
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "id": "k2-64-p016",
-     "sayfa": 16,
-     "slayt_adim": "y25-k2-64-s13",
-     "cumleler": [
-      {
-       "id": "k2-64-c0038",
-       "ses": "Ewing sarkomu kemiğin habis küçük hücreli tümörüdür ve prognozu kötüdür.",
-       "ekran": "**Ewing Sarkomu:** Kemiğin habis küçük hücreli tümörüdür; prognozu kötüdür.",
+       "id": "k2-64-c0019",
+       "ses": "Hastanın ağrısı mekanik istirahatle gerilemez, gece uykudan uyandıracak şiddete ulaşır ve yüksek lokal prostaglandin üretimine bağlı olduğundan aspirine ve nonsteroid antiinflamatuvar ilaçlara dakikalar içinde dramatik yanıt verir.",
+       "ekran": "**Karakteristik ağrı:** Dinlenmekle azalmayan, gece şiddetlenen ve aspirin ile dramatik azalan ağrı tipiktir.",
        "duzey": 0,
-       "slayt": {
-        "satir": [
-         "Kemiğin habis küçük hücreli tümörü",
-         "Prognoz kötü"
-        ],
-        "sekil": null,
-        "sayfa": 16
-       },
        "vurgu": [
         {
-         "tur": "tanim",
-         "metin": "küçük hücreli tümörüdür"
+         "metin": "Karakteristik ağrı",
+         "tur": "terim"
         }
-       ]
+       ],
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "• Dinlenmekle azalmayan, gece"
+        ],
+        "sekil": null
+       }
       },
       {
-       "id": "k2-64-c0039",
-       "ses": "En sık çocukluk ve ergenlik çağında yani ilk iki dekadda karşımıza çıkar.",
-       "ekran": "**Çocukluk ve ergenlik çağı**; en sık **ilk 2 dekadda** görülür.",
-       "duzey": 1,
-       "slayt": {
-        "satir": [
-         "Çocukluk ve ergenlik çağı",
-         "En sık ilk 2 dekadda"
-        ],
-        "sekil": null,
-        "sayfa": 16
-       },
+       "id": "k2-64-c0020",
+       "ses": "Tümör komşuluğundaki asimetrik paravertebral kas spazmı nedeniyle erişkinde ağrılı skolyozun en sık nedeni osteoid osteomdur; tanı sıklıkla aylar süren gecikmeyle bilgisayarlı tomografide nidus saptanarak konur.",
+       "ekran": "**Ağrılı skolyoz:** Erişkinde ağrılı skolyozun en sık nedenidir ve sıklıkla geç teşhis konur.",
+       "duzey": 0,
        "vurgu": [
         {
-         "tur": "sayi",
-         "metin": "ilk 2 dekadda"
+         "metin": "Ağrılı skolyoz",
+         "tur": "terim"
         }
-       ]
-      },
-      {
-       "id": "k2-64-c0040",
-       "ses": "Subfebril ateş, anemi, lökositoz ve yüksek sedimentasyon nedeniyle osteomyelit ile karıştırılır.",
-       "ekran": "Ateş, lökositoz ve yüksek sedim tablosuyla **osteomyelit ile karıştırılır**.",
-       "duzey": 1,
+       ],
        "slayt": {
+        "sayfa": 5,
         "satir": [
-         "Subfebril ateş, anemi, lökositoz ve",
-         "yüksek sedimentasyon",
-         "Osteomyelit ile karıştırılır"
+         "• Erişkinde ağrılı skolyozun en sık nedeni"
         ],
-        "sekil": null,
-        "sayfa": 16
-       },
-       "vurgu": [
-        {
-         "tur": "cikmis",
-         "metin": "osteomyelit ile karıştırılır"
-        }
-       ]
-      },
-      {
-       "id": "k2-64-c0041",
-       "ses": "Bu lezyonda cerrahinin yeri sınırlı olup kemoterapi ve radyoterapi kombinasyonu önerilir.",
-       "ekran": "Cerrahinin yeri sınırlıdır; **kemoterapi ve radyoterapi** kombinasyonu önerilir.",
-       "duzey": 1,
-       "slayt": {
-        "satir": [
-         "Cerrahinin yeri sınırlı",
-         "Kemoterapi + radyoterapi önerilir"
-        ],
-        "sekil": null,
-        "sayfa": 16
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "kemoterapi ve radyoterapi"
-        }
-       ]
+        "sekil": null
+       }
       }
      ]
     }
@@ -1023,244 +454,1413 @@
   },
   {
    "id": "k2-64-b05",
-   "baslik": "Multipl Myelom, Omurga Lenfoması ve Spinal Metastazlar",
-   "sayfa_araligi": [
-    17,
-    20
-   ],
+   "baslik": "Osteoblastom: Agresif Selim Doğası ve Nörolojik Defisit Riski",
    "paragraflar": [
     {
-     "id": "k2-64-p017",
-     "sayfa": 17,
-     "slayt_adim": "y25-k2-64-s14",
+     "id": "k2-64-p006",
+     "sayfa": 6,
      "cumleler": [
       {
-       "id": "k2-64-c0042",
-       "ses": "Multiple myelom erişkin çağın en sık görülen habis kemik tümörüdür.",
-       "ekran": "**Multipl Myelom:** Erişkin çağın en sık habis kemik tümörüdür.",
+       "id": "k2-64-c0021",
+       "ses": "Osteoblastom biyolojik olarak selim kabul edilmekle birlikte lokal olarak agresif davranış sergileyen ve osteoid osteoma kıyasla iki santimetreden büyük çaplara ulaşan bir kemik neoplazisidir.",
+       "ekran": "**Osteoblastom:** Agresif selim tümörlerdir ve osteoid osteoma kıyasla daha büyük boyutlara ulaşır.",
        "duzey": 0,
-       "slayt": {
-        "satir": [
-         "Erişkin çağın en sık habis kemik tümörü"
-        ],
-        "sekil": null,
-        "sayfa": 17
-       },
        "vurgu": [
         {
-         "tur": "cikmis",
-         "metin": "en sık habis kemik tümörüdür"
+         "metin": "Osteoblastom",
+         "tur": "terim"
         }
        ],
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "• Agressif selim tümörlerdir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0022",
+       "ses": "Tüm osteoblastom olgularının yüzde sekseni otuz yaş altındaki genç bireylerde ortaya çıkar ve tümörün omurgaya belirgin bir yerleşim yatkınlığı bulunur.",
+       "ekran": "**Genç yaş predileksiyonu:** Hastaların %80'i 30 yaşın altındadır ve omurgada sık görülür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Genç yaş predileksiyonu",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "• % 80 30 yaş altında"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0023",
+       "ses": "Omurganın lamina ve pedikül gibi arka elemanlarını tutan osteoblastomda servikal, torasik ve lomber segmentler yaklaşık olarak eşit sıklıkta etkilenmektedir.",
+       "ekran": "**Segment dağılımı ve arka elemanlar:** Servikal, torakal ve lomber bölgeleri eşit oranda tutar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Segment dağılımı",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "• Omurga arka elemanları tutulumu"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0024",
+       "ses": "Osteoblastomun ulaştığı geniş kitle boyutu spinal kanal içine doğru ekspansiyon yaparak sinir köklerine ve medulla spinalise bası uygular, bu nedenle nörolojik defisit gelişimi sıktır.",
+       "ekran": "**Nörolojik defisit:** Büyük boyut ve spinal kanala uzanım nedeniyle nörolojik defisit sıktır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Nörolojik defisit",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "• Büyük boyut nedeniyle defisit sıktır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0025",
+       "ses": "Hastaların yüzde ellisinden fazlasında ağrılı skolyoz eşlik eder ve cerrahi küretaj sonrası osteoid osteoma kıyasla belirgin derecede daha yüksek oranda lokal nüks gösterir.",
+       "ekran": "**Skolyoz ve nüks:** Olguların >%50'sinde skolyoz görülür ve osteoid osteoma göre daha çok nükseder.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Skolyoz ve nüks",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "• Osteoid osteoma göre daha çok"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-64-b06",
+   "baslik": "Osteokondrom: Kıkırdak Kaynağı ve Spinoz Proçes Tutulumu",
+   "paragraflar": [
+    {
+     "id": "k2-64-p007",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k2-64-c0026",
+       "ses": "Osteokondrom veya diğer adıyla osteokartilajinöz ekzostoz, tüm iskelet sisteminde en sık rastlanan selim kemik tümörüdür.",
+       "ekran": "**Osteokondrom:** Tüm iskelet sisteminin en sık görülen selim kemik tümörüdür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Osteokondrom",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "• En sık kemik tümörleridir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0027",
+       "ses": "Lezyon kıkırdak kaynaklıdır ve tabanında kemiğin korteks ve medulla yapısıyla doğrudan devamlılık gösteren kemik doku, yüzeyinde ise tipik bir kıkırdak takkesi barındırır.",
+       "ekran": "**Kıkırdak takkesi:** Kıkırdak kaynaklı olup kemik korteksi ve medullası ile devamlılık gösterir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kıkırdak takkesi",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "• Kıkırdak kaynaklıdır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0028",
+       "ses": "Omurgaya yerleştiğinde lamina ve özellikle spinoz proçes gibi arka elemanlardan dışarıya doğru büyüyen palpe edilebilir sert kitleler şeklinde karşımıza çıkar.",
+       "ekran": "**Spinoz proçes tutulumu:** Omurgada arka elemanlar ve özellikle spinoz proçes yerleşimi tipiktir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Spinoz proçes tutulumu",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "• Arka elemanlar ve özellikle spinoz proces tutulur"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0029",
+       "ses": "Genellikle ağrısız ve yavaş büyüyen bir lezyondur, ancak kıkırdak takkesinin kalınlaşması durumunda düşük oranda sekonder kondrosarkoma doğru habis dejenerasyon gösterebilir.",
+       "ekran": "**Habis dejenerasyon riski:** Nadiren ağrılıdır ancak düşük oranda kondrosarkoma dönüşüm görülebilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Habis dejenerasyon riski",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "• Habis dejenerasyon görülebilir(düşük oran)"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-64-b07",
+   "baslik": "Dev Hücreli Tümör ve Korpus Tutulumu",
+   "paragraflar": [
+    {
+     "id": "k2-64-p008",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k2-64-c0030",
+       "ses": "Dev hücreli tümör diğer adıyla osteoklastom, histolojik olarak selim kabul edilmekle beraber kemikte geniş lizis ve doku harabiyeti yapan lokal agresif bir neoplazidir.",
+       "ekran": "**Dev Hücreli Tümör:** Osteoklastom olarak da bilinen selim ancak lokal destrüktif neoplazidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Dev Hücreli Tümör",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Dev Hücreli Tümör"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0031",
+       "ses": "Hastalık yirmi ila kırk yaş arasındaki genç erişkinlerde pik yapar ve apofizyel kıkırdak kapanmasından sonra eklem komşuluğundaki epifiz ve metafiz bölgelerinde ortaya çıkar.",
+       "ekran": "**Yaş ve anatomik yapı:** Genç erişkinlerde uzun kemiklerde metafiz ve epifiz tutulumu karakteristiktir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yaş ve anatomik yapı",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "• Genç erişkinde metafiz ve epifiz"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0032",
+       "ses": "Posterior elemanları tutan osteoid osteom ve osteoblastomun aksine, dev hücreli tümör omurgada karakteristik olarak doğrudan vertebra korpusuna yerleşir.",
+       "ekran": "**Vertebra korpusu:** Çoğu benign lezyonun aksine omurgada doğrudan korpus tutulur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Vertebra korpusu",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "• Omurgada korpus tutulur"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0033",
+       "ses": "Omurgada en sık torasik segment etkilenir ve korpustaki litik genişleme vertebral çökme kırıklarına ve kord basısına zemin hazırlayabilir.",
+       "ekran": "**Torasik segment:** Omurgada en sık torasik omurga bölgesinde lokalize olur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Torasik segment",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "• En sık torasik omurga"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-64-b08",
+   "baslik": "Anevrizmal Kemik Kisti ve Genç Yaş Lomber Tutulumu",
+   "paragraflar": [
+    {
+     "id": "k2-64-p009",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k2-64-c0034",
+       "ses": "Anevrizmal kemik kisti, fibröz septalarla birbirinden ayrılmış geniş kan dolu kavernöz boşluklardan oluşan ve kemiği balon gibi şişiren selim bir lezyondur.",
+       "ekran": "**Anevrizmal Kemik Kisti:** İçi kan dolu kistik kavitelerle karakterize selim ekspansil lezyondur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Anevrizmal Kemik Kisti",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Anevrizma Kemik Kisti"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0035",
+       "ses": "Hastaların büyük bölümü yirmi ila otuz yaş arasındaki genç erişkinlerden oluşur ve lezyon hızla büyüme potansiyeline sahiptir.",
+       "ekran": "**Genç erişkin çağı:** Olguların büyük kısmı 20-30 yaş grubunda saptanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Genç erişkin çağı",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "• 20 - 30 yaş"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0036",
+       "ses": "Anevrizmal kemik kistlerinin yaklaşık yüzde altmışı pedikül, lamina ve faset eklemleri içeren arka elemanlara yerleşir ve en sık lomber omurgada görülür.",
+       "ekran": "**Arka eleman tutulumu (%60):** En sık lomber bölgede arka kolon elemanlarını tutar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Arka eleman tutulumu",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "• Arka elemanlar (% 60)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0037",
+       "ses": "Klinik başvuruda inatçı bel ağrısı ana semptomdur; kistin spinal kanala doğru balonlaşarak büyümesi sonucu hastaların yüzde elli beşinde belirgin nörolojik defisit izlenir.",
+       "ekran": "**Bel ağrısı ve defisit:** Bel ağrısı ana semptomdur ve hastaların %55'inde nörolojik defisit gelişir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Bel ağrısı ve defisit",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "• Bel ağrısı : ana semptom"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0038",
+       "ses": "Osteoblastom gibi ağrılı skolyoz oluşturabilen anevrizmal kemik kistinde temel tedavi cerrahi küretaj ve rezeksiyondur; ulaşılamayan veya nüks eden vakalarda radyoterapi adjuvan olarak planlanabilir.",
+       "ekran": "**Cerrahi ve radyoterapi:** Ağrılı skolyoz yapabilir; tedavisi cerrahidir ve radyoterapi adjuvan verilebilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Cerrahi ve radyoterapi",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "• Cerrahi"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-64-b09",
+   "baslik": "Eozinofilik Granülom ve Hand-Schüller-Christian Triadı",
+   "paragraflar": [
+    {
+     "id": "k2-64-p010",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k2-64-c0039",
+       "ses": "Eozinofilik granülom, klonal dendritik hücrelerin ve eozinofil lökositlerin proliferasyonuyla karakterize Langerhans hücreli histiyositoz yelpazesinin iskelet tutulumu gösteren tablosudur.",
+       "ekran": "**Eozinofilik Granülom:** Langerhans hücreli histiyositozun kemik tutulumuyla seyreden selim formudur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Eozinofilik Granülom",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Eozinofilik Granulom"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0040",
+       "ses": "En sık ikinci dekadda saptanan hastalık özellikle beş ve on yaşlarında iki belirgin pik yaparak pediatrik yaş grubunda karşımıza çıkar.",
+       "ekran": "**Çocukluk çağı pikleri:** En sık 2. dekadda görülür; 5 ve 10 yaşta iki ayrı pik yapar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Çocukluk çağı pikleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "• 5 ve 10 yaşta pik yapar"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0041",
+       "ses": "Klinik tabloda tipik olarak akut başlangıçlı sırt ağrısı görülür ve lezyon omurga boyunca en sık torasik omurga segmentini tutar.",
+       "ekran": "**Akut sırt ağrısı:** Torasik omurgada vertebra korpus çökmesine bağlı ani ağrıyla başlar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Akut sırt ağrısı",
+         "tur": "terim"
+        },
+        {
+         "metin": "Akut sırt ağrısı:",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "• Akut sırt ağrısı"
+        ],
+        "sekil": null
+       },
        "cikmis": [
+        "d3-k2-nor-011"
+       ]
+      },
+      {
+       "id": "k2-64-c0042",
+       "ses": "Vertebra gövdesindeki litik erime nedeniyle korpus adeta madeni para gibi yassılaşarak vertebra plana tablosuna yol açar.",
+       "ekran": "**Vertebra plana:** Korpusun homojen çökmesiyle direkt grafide madeni para görünümü oluşabilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Vertebra plana",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "• Torasik omurga tutulumu"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0043",
+       "ses": "İskelet dışı organ tutulumu olan sistemik formlarda kemoterapi tercih edilirken, izole tekil vertebra lezyonlarında immobilizasyon, biyopsi veya cerrahi küretaj yeterli olmaktadır.",
+       "ekran": "**Tedavi stratejisi:** Sistemik tutulumda kemoterapi, tekil izole lezyonlarda cerrahi tedavi uygulanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tedavi stratejisi",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "• Sistemik ise kemoterapi diğer türlü Cerrahi"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-64-p011",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k2-64-c0044",
+       "ses": "Hand-Schüller-Christian triadı, Langerhans hücreli histiyositozun çocukluk ve gençlik çağında kronik ilerleyici seyir gösteren multisistemik formunun klasik klinik tablosudur.",
+       "ekran": "**Hand-Schüller-Christian Triadı:** Langerhans hücreli histiyositozun kronik multisistem formudur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hand-Schüller-Christian",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Hand-Schüller-Christian triadı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0045",
+       "ses": "Triadın ilk bileşeni kafatasında zımba deliği şeklinde sınırları net litik lezyonlar ve vertebral kolonda görülen litik kemik tutulumlarıdır.",
+       "ekran": "**Kemik lezyonları:** Kafatası ve vertebrada zımba deliği tarzında litik kemik defektleri izlenir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kemik lezyonları",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "• kemik lezyonları,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0046",
+       "ses": "İkinci bileşen hipotalamus ve hipofiz sapının histiyositik infiltrasyonuna bağlı antidiüretik hormon eksikliği sonucu ortaya çıkan diabetes insipidus tablosudur.",
+       "ekran": "**Diabetes insipidus:** Hipotalamo-hipofizer aks tutulumuna bağlı polidipsi ve poliüri gelişir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Diabetes insipidus",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "• diabetes insipidus"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0047",
+       "ses": "Üçüncü bileşen ise orbita arkasındaki granulomatöz doku birikimi nedeniyle göz küresinin öne doğru belirginleştiği ekzoftalmustur; bu klasik üçlü kronik multisistem histiyositozun temel bulgusudur.",
+       "ekran": "**Ekzoftalmus:** Retroorbital granülomatöz kitle nedeniyle tek veya çift taraflı göz öne fırlar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Ekzoftalmus",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "• ekzoftalmus üçlüsüyle karakterize kronik bir multisistem formudur,"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-64-b10",
+   "baslik": "Vertebra Hemanjiomu ve Vertikal Çizgilenmeler",
+   "paragraflar": [
+    {
+     "id": "k2-64-p012",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k2-64-c0048",
+       "ses": "Vertebra hemanjiomu endotelyal damar proliferasyonundan kaynaklanan selim vasküler bir lezyondur ve tüm omurganın en sık rastlanan primer benign tümörüdür.",
+       "ekran": "**Vertebra Hemanjiomu:** Selim vasküler kökenli olup erişkinde en sık rastlanan omurga tümörüdür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Vertebra Hemanjiomu",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Hemanjiom"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0049",
+       "ses": "Olguların büyük çoğunluğu tamamen asemptomatiktir ve çekilen radyolojik incelemelerde insidental yani rastlantısal olarak tespit edilir.",
+       "ekran": "**İnsidental tanı:** Çoğunlukla asemptomatiktir ve başka nedenlerle çekilen grafilerde rastlantısal saptanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İnsidental tanı",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "• Sıklıkla insidentaldir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0050",
+       "ses": "Tüm kemik hemanjiomlarının yüzde ellisinden fazlası omurga ve kafatasında yerleşir ve omurga içinde en sık alt torasik ve lomber segmentleri tutar.",
+       "ekran": "**Anatomik dağılım:** >%50 oranında omurga ve kafatasında, özellikle torakolomber bölgede yerleşir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Anatomik dağılım",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "• > % 50 omurga ve kafatasında görülür"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0051",
+       "ses": "Radyografide yatay trabeküller rezorbe olurken dikey trabeküllerin kompansatuar kalınlaşması sonucu kadife kumaş veya tel kafes görünümünü andıran vertikal çizgilenmeler izlenir.",
+       "ekran": "**Vertikal çizgilenmeler:** Direkt grafide trabeküler kalınlaşmaya bağlı dikey çizgilenmeler tipiktir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Vertikal çizgilenmeler",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "• Direkt grafide : vertikal çizgilenmeler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0052",
+       "ses": "Lezyon nadiren patolojik kırığa veya epidural alana genişleyerek medulla spinalis basısına yol açabilir; nörolojik defisit varlığında dekompresyon cerrahisi ve embolizasyon gerekir.",
+       "ekran": "**Kırık ve cerrahi endikasyon:** Patolojik kırık veya spinal kord basısı geliştiğinde cerrahi uygulanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "cerrahi endikasyon",
+         "tur": "terim"
+        },
+        {
+         "metin": "Kırık ve cerrahi endikasyon:",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "• Bası durumunda cerrahi"
+        ],
+        "sekil": null
+       },
+       "cikmis": [
+        "e1454640ed84"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-64-b11",
+   "baslik": "Primer Malign Omurga Tümörleri ve Sarkomlar",
+   "paragraflar": [
+    {
+     "id": "k2-64-p013",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k2-64-c0053",
+       "ses": "Primer malign omurga tümörleri histogenetik kökenlerine göre osteosarkom, kondrosarkom ve Ewing sarkomu gibi mezenkimal kemik sarkomlarından oluşur.",
+       "ekran": "Primer habis spektrum: **Osteosarkom**, **kondrosarkom** ve **Ewing sarkomu** primer kemik kökenli sarkomlardır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Osteosarkom",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "• Osteosarkom"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0054",
+       "ses": "Kemik iliğindeki plazma hücreleri veya lenfositlerden köken alan multipl myelom ve primer spinal lenfoma malign listenin en sık görülen diğer elemanlarıdır.",
+       "ekran": "Hematolojik köken: **Multipl myelom** ve **lenfoma** omurga kemik iliğinde yaygın tutulum yapar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Multipl myelom",
+         "tur": "terim"
+        },
+        {
+         "metin": "Multipl myelom",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "• Multipl Myelom"
+        ],
+        "sekil": null
+       },
+       "cikmis": [
+        "d3-k2-pat-003",
         "q-2__kurul_-9"
        ]
       },
       {
-       "id": "k2-64-c0043",
-       "ses": "Elli yaşın üstünde sıktır ve plazma hücre tümörü olması nedeniyle yaygın tutulum yapar.",
-       "ekran": "**>50 yaş** grubundadır; plazma hücre neoplazisi olarak **yaygın tutulum** yapar.",
-       "duzey": 1,
-       "slayt": {
-        "satir": [
-         "> 50 yaş",
-         "Plazma hücre tümörü olması nedeniyle yaygın",
-         "tutulum yapar"
-        ],
-        "sekil": null,
-        "sayfa": 17
-       },
+       "id": "k2-64-c0055",
+       "ses": "Embriyolojik aksiyel iskelet kalıntısı olan kordoma sakrokoksigeal ve klival bölgede, nöroblastom ise paravertebral ganglion zinciri boyunca habis gelişim gösterir.",
+       "ekran": "Özel doku kökenleri: **Kordoma** notokord artıklarından, **nöroblastom** sempatik ganglionlardan gelişir.",
+       "duzey": 0,
        "vurgu": [
         {
-         "tur": "sayi",
-         "metin": ">50 yaş"
+         "metin": "Kordoma",
+         "tur": "terim"
         }
-       ]
+       ],
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "• Kordoma"
+        ],
+        "sekil": null
+       }
       },
       {
-       "id": "k2-64-c0044",
-       "ses": "Normositik normokromik anemi, yüksek sedimentasyon ve litik güve yeniği görünümü eşlik eder.",
-       "ekran": "**Normositik-normokromik anemi**, **yüksek sedim** ve **litik güve yeniği** görünümü.",
-       "duzey": 1,
-       "slayt": {
-        "satir": [
-         "Normositik-normokromik anemi",
-         "Yüksek sedimentasyon",
-         "Litik-güve yeniği görünümü"
-        ],
-        "sekil": null,
-        "sayfa": 17
-       },
+       "id": "k2-64-c0056",
+       "ses": "Bu habis tümörlerin ortak klinik özelliği spinal kemik matriksini destrükte ederek şiddetli istirahat ağrısı, mekanik instabilite ve hızla ilerleyen felç tabloları yaratabilmeleridir.",
+       "ekran": "**Prognoz ve klinik yaklaşım:** Malign tümörler hızlı lokal invazyon ve erken bası bulgusu verir.",
+       "duzey": 0,
        "vurgu": [
         {
-         "tur": "cikmis",
-         "metin": "litik güve yeniği"
+         "metin": "Prognoz ve klinik yaklaşım",
+         "tur": "terim"
         }
-       ]
+       ],
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Primer malign"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-64-p014",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k2-64-c0057",
+       "ses": "Omurga osteosarkomu habis mezenkimal hücrelerin olgunlaşmamış tümöral osteoid kemik matriksi ürettiği son derece agresif ve nadir bir primer kemik tümörüdür.",
+       "ekran": "**Omurga Osteosarkomu:** Nadir görülen, agresif osteoid matriks üreten habis kemik tümörüdür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Omurga Osteosarkomu",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Osteosarkom"
+        ],
+        "sekil": null
+       }
       },
       {
-       "id": "k2-64-c0045",
-       "ses": "Multiple myelomda birincil tedavi yaklaşımı sistemik kemoterapidir.",
-       "ekran": "Multipl myelomda **birincil tedavi kemoterapidir**.",
-       "duzey": 1,
-       "slayt": {
-        "satir": [
-         "Birincil tedavi: Kemoterapi"
-        ],
-        "sekil": null,
-        "sayfa": 17
-       },
+       "id": "k2-64-c0058",
+       "ses": "Ekstremite yerleşimli osteosarkomlar ergenlik çağında pik yaparken, omurgaya yerleşen osteosarkomlar belirgin biçimde ileri yaş popülasyonunda veya Paget hastalığı zemininde ortaya çıkar.",
+       "ekran": "**İleri yaş insidansı:** Uzun kemik osteosarkomlarının aksine omurgada ileri yaş grubunda sıktır.",
+       "duzey": 0,
        "vurgu": [
         {
-         "tur": "terim",
-         "metin": "kemoterapidir"
+         "metin": "İleri yaş insidansı",
+         "tur": "terim"
         }
-       ]
+       ],
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "• İleri yaş"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0059",
+       "ses": "Tümör omurganın hem korpusunu hem de pedikül ve lamina gibi arka elemanlarını invaze ederek permeatif litik ve destrüktif kemik harabiyetine neden olur.",
+       "ekran": "**Litik ve destrüktif lezyon:** Hem arka elemanlarda hem vertebra korpusunda destrüksiyon yapar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Litik ve destrüktif lezyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "• Arka elemanların ve korpusun litik veya"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0060",
+       "ses": "Tedavide omurganın stabilitesini koruyarak tümörün geniş sınırlarla cerrahi rezeksiyonu ve cerrahiye eklenen radyoterapi ile sistemik kemoterapi protokolleri uygulanır.",
+       "ekran": "**Tedavi protokolü:** Tedavide geniş cerrahi rezeksiyon ve adjuvan radyoterapi kombine edilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tedavi protokolü",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "• Cerrahi + radyoterapi"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-64-p015",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k2-64-c0061",
+       "ses": "Kondrosarkom neoplastik kondrositlerin habis kıkırdak matriksi ürettiği ve klasik kemoterapi ile radyoterapiye oldukça dirençli olan primer malign kemik tümörüdür.",
+       "ekran": "**Kondrosarkom:** Habis kıkırdak matriksi üreten ve kemoradyoterapiye dirençli neoplazidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kondrosarkom",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Kondrosarkom"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0062",
+       "ses": "Hastalık çoğunlukla kırk ila yetmiş yaş arasındaki orta ve ileri yaş grubundaki erişkinlerde karşımıza çıkmaktadır.",
+       "ekran": "**40-70 yaş grubu:** Tipik olarak 40 ila 70 yaş arasındaki erişkin ve yaşlı grupta ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "40-70 yaş grubu:",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "• 40 – 70 yaş"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0063",
+       "ses": "İskelet sisteminde en sık pelvis ve femur gibi uzun kemiklerde görülmekle birlikte omurga kolonunda da sıkça saptanır ve geniş kıkırdak kitleleri oluşturur.",
+       "ekran": "**İskelet lokalizasyonu:** Uzun kemikler ve pelviste sıktır; omurga tutulumu da önemli yer tutar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İskelet lokalizasyonu",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "• Uzun kemiklerde ve pelviste sıktır. Omurga  tutulumu  da"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0064",
+       "ses": "Düşük dereceli yavaş seyirli formlardan yüksek dereceli agresif formlara kadar değişkenlik gösterebilir; kemoradyoterapiye yanıtsızlığı nedeniyle izole omurga kondrosarkomlarında tek küratif yaklaşım geniş cerrahi rezeksiyondur.",
+       "ekran": "**Cerrahi tedavi:** Yavaş veya agresif seyirli olabilir; izole kitlelerde temel tedavi cerrahidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Cerrahi tedavi",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "• İzole ise cerrahi tedavi"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-64-p016",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k2-64-c0065",
+       "ses": "Ewing sarkomu nöroektodermal kökenli, indiferansiye küçük yuvarlak mavi hücrelerden oluşan ve son derece kötü prognoz taşıyan habis bir kemik neoplazisidir.",
+       "ekran": "**Ewing Sarkomu:** Kemiğin yüksek dereceli habis küçük yuvarlak mavi hücreli tümörüdür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Ewing Sarkomu",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Ewing’s Sarkomu"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0066",
+       "ses": "Tümör en sık ilk iki dekadda yani on ila yirmi yaş arasındaki çocukluk ve adölesan dönemde saptanır ve iskeletin her bölgesine yerleşebilir.",
+       "ekran": "**Çocukluk ve ergenlik çağı:** En sık ilk 2 dekadda, çocukluk ve ergenlik döneminde görülür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Çocukluk ve ergenlik",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "• En sık ilk 2 dekadda"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0067",
+       "ses": "Hastada subfebril ateş, halsizlik, normositer anemi, beyaz küre artışı yani lökositoz ve belirgin şekilde yükselmiş eritrosit sedimentasyon hızı izlenir.",
+       "ekran": "**Sistemik bulgular:** Subfebril ateş, anemi, belirgin lökositoz ve yüksek sedimentasyon izlenir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Sistemik bulgular",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "• Subfebril ateş, anemi, lökositoz ve"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0068",
+       "ses": "Ateş, lökositoz, lokal ısı artışı ve sedimentasyon yüksekliği gibi sistemik inflamatuar bulguları nedeniyle sıklıkla bakteriyel bir kemik enfeksiyonu olan osteomiyelit ile karıştırılır.",
+       "ekran": "**Osteomiyelit taklidi:** Klinik ve laboratuvar bulguları kemik enfeksiyonu osteomiyeliti taklit eder.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Osteomiyelit taklidi",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "• Osteomyelit ile karıştırılır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0069",
+       "ses": "Geniş lokal yayılım ve yüksek mikrometastaz riski nedeniyle cerrahinin tek başına yeri son derece sınırlıdır; primer yaklaşım yoğun sistemik kemoterapi ve radyoterapi kombinasyonudur.",
+       "ekran": "**Kemoradyoterapi:** Cerrahinin yeri sınırlıdır; kemoterapi ve radyoterapi kombinasyonu önerilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kemoradyoterapi",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "• Kemoterapi + radyoterapi önerilir"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-64-b12",
+   "baslik": "Multipl Myelom, Omurga Lenfoması ve Spinal Metastazlar",
+   "paragraflar": [
+    {
+     "id": "k2-64-p017",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k2-64-c0070",
+       "ses": "Multipl myelom kemik iliğinde monoklonal habis plazma hücrelerinin kontrolsüz çoğalmasıyla karakterize olup erişkin çağın en sık primer habis kemik tümörüdür.",
+       "ekran": "**Multipl Myelom:** Erişkin çağın en sık görülen primer habis kemik tümörüdür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Multipl Myelom",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Multiple Myelom"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0071",
+       "ses": "Hastaların büyük çoğunluğu elli yaşın üzerindedir ve plazma hücresi neoplazisi olması nedeniyle vertebral kolonda multifokal ve yaygın tutulum gösterir.",
+       "ekran": "**>50 yaş popülasyonu:** Tipik olarak 50 yaşın üzerindeki erişkinlerde yaygın tutulum yapar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yaygın tutulum",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "• > 50 yaş"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0072",
+       "ses": "Kemik iliği infiltrasyonuna bağlı normositik normokromik anemi, kanda monoklonal immünglobulin artışına bağlı son derece yüksek eritrosit sedimentasyon hızı ve hiperkalsemi görülür.",
+       "ekran": "**Laboratuvar bulguları:** Normositik-normokromik anemi ve belirgin yüksek sedimentasyon eşlik eder.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Laboratuvar bulguları",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "• Normositik-normokromik anemi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0073",
+       "ses": "Kemik rezorpsiyonunu uyaran osteoklastik faktörler nedeniyle vertebra korpuslarında ve kraniumda zımba deliği şeklinde, sklerotik reaksiyon içermeyen litik güve yeniği manzarası oluşur.",
+       "ekran": "**Litik güve yeniği:** Direkt grafide zımba deliği tarzında litik-güve yeniği görünümü izlenir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Litik güve yeniği",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "• Litik-güve yeniği görünümü"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0074",
+       "ses": "Hastalık sistemik bir hematolojik proliferasyon olduğundan birincil tedavi kemoterapi, immünmodülatör ilaçlar ve otolog kök hücre naklidir; cerrahi ancak stabilizasyon için düşünülür.",
+       "ekran": "**Sistemik tedavi:** Multipl myelomda birincil tedavi kemoterapi ve hedefe yönelik ajanlardır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Sistemik tedavi",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "• Birincil tedavi: Kemoterapi"
+        ],
+        "sekil": null
+       }
       }
      ]
     },
     {
      "id": "k2-64-p018",
      "sayfa": 18,
-     "slayt_adim": "y25-k2-64-s14",
      "cumleler": [
       {
-       "id": "k2-64-c0046",
-       "ses": "Erişkin çağda omurgada vertebra korpusunda litik lezyonlar oluşturan diğer bir malignite lenfomadır.",
-       "ekran": "**Omurga Lenfoması:** Erişkin çağda vertebra korpusunda litik lezyonlar yapar.",
+       "id": "k2-64-c0075",
+       "ses": "Omurga lenfoması sistemik bir lenfomanın spinal kolon tutulumu veya nadiren primer kemik lenfoması şeklinde beliren habis lenfoid neoplazisidir.",
+       "ekran": "**Omurga Lenfoması:** Erişkin çağda vertebra korpusunu tutan habis lenfoid proliferasyondur.",
        "duzey": 0,
-       "slayt": {
-        "satir": [
-         "Erişkin çağ",
-         "Omurgada vertebra korpusunda litik",
-         "lezyonlar"
-        ],
-        "sekil": null,
-        "sayfa": 18
-       },
        "vurgu": [
         {
-         "tur": "terim",
-         "metin": "Omurga Lenfoması"
+         "metin": "Omurga Lenfoması",
+         "tur": "terim"
         }
-       ]
+       ],
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Lenfoma"
+        ],
+        "sekil": null
+       }
       },
       {
-       "id": "k2-64-c0047",
-       "ses": "Teşhis biyopsi ile konur, birincil tedavi radyoterapidir ve kemoterapi eklenmesi sağkalımı artırır.",
-       "ekran": "Teşhis **biyopsi** ile konur; **birincil tedavi radyoterapidir**, kemoterapi eklenir.",
-       "duzey": 1,
-       "slayt": {
-        "satir": [
-         "Teşhis: Biyopsi",
-         "Birincil Tedavi: radyoterapi",
-         "Kemo + Radyotx: Surveyi arttırmaktadır"
-        ],
-        "sekil": null,
-        "sayfa": 18
-       },
+       "id": "k2-64-c0076",
+       "ses": "Tümör omurga boyunca sıklıkla vertebra korpusunda destrüksiyon yaparak litik kemik lezyonlarına ve spinal epidural alana uzanarak radikülopati veya miyelopatiye yol açar.",
+       "ekran": "**Korpus litik lezyonları:** Vertebra korpusunda litik lezyonlar ve patolojik çökme kırıkları yapar.",
+       "duzey": 0,
        "vurgu": [
         {
-         "tur": "terim",
-         "metin": "radyoterapidir"
+         "metin": "Korpus litik lezyonları",
+         "tur": "terim"
         }
-       ]
+       ],
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "• Omurgada vertebra korpusunda litik"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0077",
+       "ses": "Multipl myelom ve metastatik karsinomlarla benzer radyolojik bulgular verebildiğinden kesin teşhis mutlaka floroskopi veya bilgisayarlı tomografi eşliğinde iğne biyopsisi ile konmalıdır.",
+       "ekran": "**Biyopsi ile kesin tanı:** Radyolojik ayırıcı tanı güçlüğü nedeniyle tanı biyopsi ile konur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Biyopsi ile kesin tanı:",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "• Teşhis: Biyopsi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0078",
+       "ses": "Lenfoma hücreleri radyasyona aşırı duyarlı olduğundan lokal kontrolde birincil tedavi radyoterapidir; kombine kemoterapi eklenmesi hastaların genel sağkalım ve survey sürelerini belirgin şekilde artırır.",
+       "ekran": "**Radyoterapi ve kemoterapi:** Birincil tedavi radyoterapidir; kemoterapi eklenmesi surveyi artırır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Radyoterapi ve kemoterapi",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "• Kemo + Radyotx: Surveyi arttırmaktadır"
+        ],
+        "sekil": null
+       }
       }
      ]
     },
     {
      "id": "k2-64-p019",
      "sayfa": 19,
-     "slayt_adim": "y25-k2-64-s15",
      "cumleler": [
       {
-       "id": "k2-64-c0048",
-       "ses": "Omurga tümörlerinin yüzde doksanı diğer organ kanserlerinin metastazıdır.",
-       "ekran": "**Omurga tümörlerinin %90'ı metastazdır**.",
+       "id": "k2-64-c0079",
+       "ses": "Klinik pratikte omurgada tespit edilen neoplastik lezyonların yüzde doksanı vücudun diğer primer kanserlerinden kaynaklanan metastatik tümörlerdir.",
+       "ekran": "**Spinal metastaz oranı:** Omurga tümörlerinin %90'ı metastazdır ve en sık tümöral lezyondur.",
        "duzey": 0,
-       "slayt": {
-        "satir": [
-         "Omurga tümörlerinin %90 ı metastazdır"
-        ],
-        "sekil": null,
-        "sayfa": 19
-       },
        "vurgu": [
         {
-         "tur": "sayi",
-         "metin": "%90'ı"
+         "metin": "Spinal metastaz oranı",
+         "tur": "terim"
         }
-       ]
+       ],
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "• Omurga tümörlerinin %90 ı metastazdır"
+        ],
+        "sekil": null
+       }
       },
       {
-       "id": "k2-64-c0049",
-       "ses": "Tüm iskelet sisteminde metastazların en sık yerleştiği anatomik yapı omurgadır.",
-       "ekran": "**İskelet sistemi metastazları** en sık omurgaya yerleşir.",
-       "duzey": 1,
-       "slayt": {
-        "satir": [
-         "İskelet sistemi metastazları en sık omurgaya olur."
-        ],
-        "sekil": null,
-        "sayfa": 19
-       },
+       "id": "k2-64-c0080",
+       "ses": "İskelet sistemine yayılan tüm karsinomatöz metastazlar arasında vertebra kolonu en sık tutulan anatomik bölgedir.",
+       "ekran": "**En sık iskelet metastazı:** Tüm iskelet sistemi metastazları en sık omurgaya yerleşir.",
+       "duzey": 0,
        "vurgu": [
         {
-         "tur": "cikmis",
-         "metin": "en sık omurgaya"
+         "metin": "En sık iskelet metastazı",
+         "tur": "terim"
         }
-       ]
+       ],
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "• İskelet sistemi metastazları en sık omurgaya olur."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0081",
+       "ses": "Pelvik ve abdominal venöz basınç artışlarında kanı geriye doğru omurga venlerine taşıyan kapaksız Batson venöz pleksusu ve zengin vertebral arter dolaşımı bu sık tutulumun temel mekanizmasıdır.",
+       "ekran": "**Yayılım mekanizmaları:** Kapaksız Batson venöz pleksusu ve arteriyel embolizasyon ile yayılır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yayılım mekanizmaları",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Metastatik"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0082",
+       "ses": "Metastatik omurga lezyonları vertebra korpusunu tahrip ederek ani patolojik kırıklara ve epidural mesafeye taşarak paraplejiye yol açabilecek spinal kord basılarına neden olabilir.",
+       "ekran": "**Klinik risk:** Epidural spinal kord basısı ve patolojik instabilite acil müdahale gerektirir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Klinik risk",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Omurga"
+        ],
+        "sekil": null
+       }
       }
      ]
     },
     {
      "id": "k2-64-p020",
      "sayfa": 20,
-     "slayt_adim": "y25-k2-64-s15",
      "cumleler": [
       {
-       "id": "k2-64-c0050",
-       "ses": "Spinal metastazların yüzde ellisi akciğer, meme veya prostat kanserinden kaynaklanır.",
-       "ekran": "**Spinal metastazların %50'si** akciğer, meme veya prostat kanseri kaynaklıdır.",
+       "id": "k2-64-c0083",
+       "ses": "Spinal metastazların yüzde ellisinden fazlası akciğer karsinomu, meme kanseri veya prostat kanseri olmak üzere bu üç büyük primer odaktan kaynaklanmaktadır.",
+       "ekran": "**En sık primerler:** Spinal metastazların %50'si akciğer, meme veya prostat kanserinden kaynaklanır.",
        "duzey": 0,
-       "slayt": {
-        "satir": [
-         "Spinal metastazların %50’si",
-         "akciğer,meme veya prostat",
-         "kanserinden kaynaklanır."
-        ],
-        "sekil": null,
-        "sayfa": 20
-       },
        "vurgu": [
         {
-         "tur": "sayi",
-         "metin": "%50'si"
-        },
-        {
-         "tur": "cikmis",
-         "metin": "akciğer, meme veya prostat"
+         "metin": "En sık primerler",
+         "tur": "terim"
         }
-       ]
-      },
-      {
-       "id": "k2-64-c0051",
-       "ses": "Böylece omurga tümörleri dersimizi tamamlamış bulunuyoruz, özet bilgileri ve akıl kartlarını inceleyebilirsiniz.",
-       "ekran": "Ders özeti ve pekiştirme kartlarıyla çalışma tamamlanır.",
-       "duzey": 1,
+       ],
        "slayt": {
         "sayfa": 20,
         "satir": [
-         "Spinal metastazların %50’si"
+         "• Spinal metastazların %50’si"
         ],
         "sekil": null
-       },
+       }
+      },
+      {
+       "id": "k2-64-c0084",
+       "ses": "Akciğer ve meme metastazları tipik olarak kemikte destrüksiyon yapan osteolitik lezyonlar oluştururken, prostat kanseri metastazları direkt grafilerde beyaz yoğun odaklarla beliren osteoblastik yani sklerotik lezyonlar yapar.",
+       "ekran": "**Litik ve blastik lezyonlar:** Akciğer ve meme litik, prostat ise karakteristik osteoblastik lezyon yapar.",
+       "duzey": 0,
        "vurgu": [
         {
-         "tur": "tanim",
-         "metin": "Ders özeti"
+         "metin": "Litik ve blastik",
+         "tur": "terim"
         }
-       ]
+       ],
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "akciğer,meme veya prostat"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0085",
+       "ses": "Bu üç organın yanı sıra hipervasküler metastaz yapan böbrek ve tiroid karsinomları ile gastrointestinal sistem tümörleri de omurga metastazlarında akılda tutulmalıdır.",
+       "ekran": "**Diğer primer kaynaklar:** Böbrek, tiroid ve gastrointestinal tümörler de omurgaya metastaz yapabilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Diğer primer kaynaklar",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "kanserinden kaynaklanır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-64-c0086",
+       "ses": "Tedavi yaklaşımında acil spinal kord ödemini geriletmek için yüksek doz deksametazon, ağrı kontrolü ve lokal tümör baskılaması için radyoterapi, mekanik instabilite veya kord basısı durumunda ise cerrahi dekompresyon ve enstrümentasyon uygulanır.",
+       "ekran": "**Tedavi ve stabilizasyon:** Palyatif radyoterapi, kortikosteroidler ve cerrahi dekompresyon uygulanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tedavi ve stabilizasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Metastatik"
+        ],
+        "sekil": null
+       }
       }
      ]
     }

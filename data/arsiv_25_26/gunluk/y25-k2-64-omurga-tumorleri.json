@@ -29,6 +29,31 @@
         "cizimSayisi": 12,
         "cikmisEslesme": 1
       }
+    },
+    {
+      "surum": 2,
+      "tarih": "2026-10-25 17:10",
+      "neden": "20 slaytlık dersin amfi derinliğine genişletilmesi ve eksiksiz anlatımı",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi omurga tümörleri.pdf (20 sayfa) kaynağından 0 atlanan sayfa ile 20 paragraf / 86 cümlelik sesli anlatım üretildi.",
+        "17 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 7 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 13.3 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 800,
+        "sureDk": 13.3,
+        "sayfaSayisi": 20,
+        "atlananSayfa": 0,
+        "bolumSayisi": 12,
+        "paragrafSayisi": 20,
+        "cumleSayisi": 86,
+        "slaytAdimSayisi": 17,
+        "cizimSayisi": 7,
+        "cikmisEslesme": 6
+      }
     }
   ]
 }

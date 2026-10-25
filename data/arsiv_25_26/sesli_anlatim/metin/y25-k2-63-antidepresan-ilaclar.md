@@ -1,111 +1,121 @@
 # Antidepresan İlaçlar
 
-@@ Majör Depresyon Tanısı ve Klinik Özellikler
-Antidepresan ilaçlar dersimize başlarken tababet sanatı ilkeleri doğrultusunda akılcı farmakoterapiyi ele alacağız.
+@@ Giriş ve Tababet Sanatı İlkeleri
+Tababet sanatının üç temel unsuru el mahareti, ilaç ve hekimlik ahlakıdır. Gerçek erdem şifayı maharetle, ilacı ise hastaya büyük bir rikkat ve özenle sunmaktır. Akılcı ilaç kullanımı ilkeleri doğrultusunda farmakoterapötik yaklaşımlar titizlikle yürütülmelidir.
 
-Ders boyunca antidepresan ilaç sınıflarını, etki mekanizmalarını ve klinik toksisitelerini inceleyeceğiz.
+Antidepresan ilaçlar dersi boyunca duygudurum bozukluklarının farmakoterapisini kapsamlı biçimde ele alacağız. Farklı kimyasal sınıflardaki antidepresanların etki mekanizmaları ve reseptör profilleri karşılaştırmalı olarak incelenecektir. Bu gruptaki ilaçların farmakokinetik süreçleri, klinik endikasyonları ve toksisite profilleri klinik pratiğin temelini oluşturur.
 
-Majör depresif bozukluk, en az iki hafta süren depresif mizaç ve hiçbir aktiviteden zevk alamama tablosudur. Hastalarda enerji azlığı, uyku ve iştah bozukluğu, değersizlik hissi ve intihar eğilimi sıkça izlenir.
+@@ Majör Depresif Bozukluk Tanısı ve Spektrumu
+Majör depresif bozukluk en az iki hafta kesintisiz süren çökkün mizaç ve hiçbir aktiviteden zevk alamama yani anhedoni ile karakterizedir. Hastalarda belirgin enerji kaybı, uyku ve iştah değişiklikleri, değersizlik hissi, konsantrasyon güçlüğü ve intihar eğilimi sıkça izlenir. Majör depresif epizotların farmakoterapisi bu ilaç grubunun en birincil ve temel kullanım endikasyonudur. Depresyon tablosu sadece psikiyatrik semptomlarla sınırlı kalmayıp kronik ağrıdan koroner arter hastalığına kadar geniş bir somatik serpinti gösterir.
 
-Antidepresanlar panik bozukluk, yaygın anksiyete, obsesif kompulsif bozukluk ve travma sonrası stres bozukluğunda kullanılır. Ayrıca nöropatik ağrı, fibromiyalji ve stres üriner inkontinansta yaygın klinik etkinliğe sahiptirler.
+Antidepresanlar panik bozukluk ve jeneralize anksiyete bozukluğunda ilk seçenek tedavi olarak yaygın biçimde reçete edilir. Obsesif kompulsif bozukluk ve travma sonrası stres bozukluğunda serotonerjik iletimi artıran antidepresanlar ana tedavi basamağıdır. Bu ilaçlar nöropatik ağrı ve fibromiyalji gibi kronik ağrı sendromlarında inen inhibitör yolları güçlendirerek analjezi sağlarlar. Premenstrüel disforik bozuklukta, menopozal vazomotor semptomların hafifletilmesinde ve stres üriner inkontinansında da etkinliği kanıtlanmıştır.
 
-@@ Patofizyolojik Hipotezler ve Nöroendokrin Faktörler
-Klasik monoamin hipotezine göre depresyon santral sinir sisteminde serotonin ve noradrenalin eksikliğine bağlı gelişir.
+@@ Depresyon Patofizyolojisi ve Nörotrofik Hipotez
+Klasik monoamin hipotezine göre depresyon santral sinir sisteminde serotonin, noradrenalin ve dopamin iletimindeki azalmaya bağlı gelişir. Nörotrofik hipotez ise sinir büyüme faktörlerinin ve hipokampal nörojenezin bozulmasını temel patoloji olarak öne sürer. Patofizyolojide ayrıca hipotalamo hipofizer adrenal aks disfonksiyonu gibi nöroendokrin mekanizmalar da kritik rol oynar.
 
-Nörotrofik hipotezde beyin kaynaklı nörotrofik faktör be de ne fe, hipokampusta sinaptik bağlantıların korunmasını sağlar.
+Beyin kaynaklı nörotrofik faktör yani be de ne fe, sinir büyüme faktörleri ailesinin en kritik üyelerinden biridir. Nöral plastisite, sinaptik esneklik ve erişkin beyinde nörojenezin devamlılığı büyük ölçüde nörotrofik faktörlerle düzenlenir. Be de ne fe hipokampus ve kortikal alanlarda sinaptik bağlanabilirliği ve yeni nöron oluşumunu doğrudan destekler. Kronik psikolojik stres ve inatçı kronik ağrı santral nörotrofik faktör sentezinde belirgin azalmaya yol açar.
 
-Kronik stres durumunda azalan be de ne fe düzeyi frontal korteks ve hipokampusta hacim kaybı ve atrofiye yol açar.
+Be de ne fe eksikliği frontal korteks, hipokampus ve anterior singulat kortekste mikroanatomik değişikliklere ve dendritik kayba neden olur. Kronik majör depresyon tablosunda hipokampal nöron kaybına bağlı olarak belirgin hacim kaybı ve atrofi gelişir. Deney hayvanlarında hipokampusa doğrudan nörotrofik faktör verilmesi antidepresan yanıt oluşturur ve nörojenezi artırır. Depresyonlu insanlarda beyin omurilik sıvısındaki nörotrofik faktör seviyesi düşer ve tirozin kinaz be reseptör aktivitesi azalır.
 
-Antidepresan tedavisi subgranüler zonda yeni nöron doğumunu uyararak hipokampal plastisiteyi yeniden inşa eder.
+Nörotrofik hipotez depresyon araştırmalarında çok güçlü bir biyolojik model sunmasına rağmen bazı kısıtlılıklar içerir. Be de ne fe geninde görülen polimorfizmler bireyler arasındaki değişkenliği ve antidepresan yanıttaki farklılıkları açıklar. Bazı hayvan çalışmalarında sosyal yenilgi stresi sonrasında nörotrofik faktör düzeyinin paradoksal olarak depresif davranışları artırdığı gösterilmiştir.
 
-Monoamin hipotezinin tek başına yetersiz kaldığını gösteren en temel kanıt klinik yanıtın haftalarca gecikmesidir.
+@@ Monoamin Hipotezi, Taşıyıcılar ve Sınırları
+Veziküler monoamin pompasını bloke eden rezerpinin derin depresyon tablosu oluşturması monoamin hipotezinin en eski kanıtıdır. Fluoksetin ile remisyona giren hastalara triptofansız diyet verildiğinde serotonerjik sentez durduğu için depresyon hızla nükseder. Noradrenalin gerialımını seçici durduran desipramin tedavisinde ise triptofansız diyet nükse yol açmaz çünkü etki noradrenalin üzerinden yürür. Hastalara noradrenalin sentez inhibitörü verildiğinde remisyondaki depresif semptomların hızla geri dönmesi noradrenalinin kritik rolünü kanıtlar.
 
-Serotonin taşıyıcı genindeki polimorfizmler bireyin çevresel stres faktörlerine duyarlılığını etkiler.
+Serotonin taşıyıcı geninin promotor bölgesinde gözlenen polimorfizmler santral serotonerjik iletim kapasitesini belirler. Kısa alel yönünden homozigot olan bireylerin çevresel strese karşı kırılganlığı artar ve intihar davranışı ile majör depresyona daha yatkındırlar. Ancak bazı deney hayvanı modellerinde belirgin depresif davranışa rağmen monoamin seviyelerinde hiçbir değişiklik bulunamamıştır. Tamamlanmış intihar olgularında yapılan postmortem çalışmalarda serotonin ve noradrenalin reseptör yoğunluğunda kompanzatuar değişiklikler saptanmıştır.
 
-Veziküler amin kapısını kapatan rezerpinin derin depresyon tablosu yapması bu hipotezin temel dayanaklarındandır.
+Veziküler amin kapısı sitoplazmadaki monoaminlerin vezikül içerisine depolanmasını sağlar ve rezerpin tarafından bloke edilir. Sitoplazmik amin kapısı ise sinaptik aralıktaki nörotransmitterleri nöron içine geri alan taşıyıcı pompalardan oluşur. Trisiklik antidepresanlar ve kokain sitoplazmik amin kapısını bloke ederek nörotransmitterlerin sinaptik aralıkta birikmesine yol açar.
 
-Veziküler amin kapısı nörotransmitterlerin vezikül içine depolanmasını ve kontrollü salınımını yürütür.
+Veziküler amin kapısının bloke edilmesi monoaminlerin sitoplazmada kalarak mitokondriyal enzimlerle yıkılmasına neden olur. Bu mekanizma sonucunda presinaptik nöron terminallerinde salınmaya hazır nörotransmitter depoları hızla tükenir.
 
-Monoamin teorisinin sınırları, depresyon tedavisinde hücresel kaskadların ve gen ekspresyonunun önemini ortaya koymuştur.
+Monoamin teorisinin en büyük sınırlılığı moleküler etki ile klinik yanıt arasındaki belirgin zaman uyumsuzluğudur. Depresyon santral serotonerjik ve noradrenerjik iletimdeki azalmadan kaynaklanabilir. Ancak seçici serotonin geri alım inhibitörleri hücresel düzeyde taşıyıcıyı ilk dozda hemen bloke ederler. Buna rağmen klinik antidepresan yanıtın ortaya çıkması için en az iki ila dört haftalık bir sürenin geçmesi gerekir.
 
-Depresyon patofizyolojisinde hipotalamo-hipofizer-adrenal aks hiperaktivitesi ve kortizol artışı belirgindir.
+@@ Nöroendokrin Faktörler ve HPA Aksı
+Majör depresyon patofizyolojisinde nöroendokrin akslar ve özellikle hipotalamo hipofizer adrenal sistem büyük önem taşır. Depresif hastaların çoğunda hipotalamo hipofizer adrenal eksende kronik hiperaktivite ve geri bildirim kusuru vardır. Majör depresyonda sürekli yüksek kalan kortizol düzeyi adreno kortikotrop hormon salınımını yeterince baskılayamaz. Depresif hastalarda tiroid aksı disregülasyonu ve subklinik tiroid fonksiyon anormallikleri sıkça karşımıza çıkar. Postmenopozal dönemde östrojen eksikliği ve erkeklerde şiddetli testosteron düşüklüğü depresif duyguduruma yatkınlık oluşturur.
 
-Nöroendokrin dengesizlikler santral glukokortikoid reseptör direncini artırarak negatif geri bildirimi bozar. Hipotalamo hipofizer adrenal akstaki bu aşırı uyarılma, kortizol düzeyini yükseltip hipokampal hacmi azaltır.
+Hipotalamo hipofizer adrenal eksendeki bu aşırı uyarılma, santral glukokortikoid reseptör direncine ve hipokampal hasara yol açar. Nöroendokrin aksın kronik uyarılması nörojenezi baskılayarak be de ne fe eksikliğini daha da derinleştirir. Şimdi antidepresan ilaçların kimyasal sınıflarını ve moleküler farmakolojilerini ayrıntılı olarak inceleyelim.
 
-@@ Seçici Serotonin ve Noradrenalin İnhibitörleri
-Seçici serotonin geri alım inhibitörleri yani se se re i sınıfı, birinci basamakta en sık reçete edilen gruptur.
+@@ Seçici Serotonin Gerialım İnhibitörleri
+Seçici serotonin geri alım inhibitörleri yani se se re i grubu günümüzde depresyon tedavisinde birinci basamak seçenektir. Prototip ilaç olan fluoksetin monoamin taşıyıcısına bağlanırken asetilkolin ve alfa adrenoreseptörlere afinite göstermez. Bu grup panik bozukluk, obsesif kompulsif bozukluk ve bulimiya nervoza gibi çok geniş bir endikasyon yelpazesine sahiptir. Sınıfın diğer temel üyeleri sertralin, fluvoksamin, sitalopram ve sitalopramın saf enantiyomeri olan essitalopramdır. Se se re i grubu iyi tolere edilir, geniş terapötik indekse sahiptir ve toksisite açısından oldukça güvenilirdir.
 
-Bin dokuz yüz elli yedi yılında iproniazid ve imipramin ile başlayan süreç, günümüzde modern moleküllerle zenginleşmiştir.
+Antidepresan farmakolojisi bin dokuz yüz elli yedi yılında iproniazid ve imipraminin keşfiyle başlamıştır. Fluoksetin ile başlayan selektif inhibitör dönemi psikiyatri pratiğinde büyük bir dönüşüm sağlamıştır. Bin dokuz yüz doksan dörtte venlafaksin ile ikili geri alım inhibitörleri, ardından reboksetin gibi seçici ajanlar geliştirilmiştir. Aynı dönemde nefazodon ve mirtazapin gibi reseptör antagonisti atipik moleküller tedaviye girmiştir.
 
-Seçici serotonin inhibitörleri majör depresyon ve anksiyete bozukluklarında geniş bir onay yelpazesine sahiptir.
+Amerikan gıda ve ilaç dairesi tarafından onaylanan endikasyonlar duygudurum ve anksiyete bozukluklarını kapsar. Majör depresif bozukluk epizotlarının akut tedavisi ve idamesi onaylı temel kullanım alanıdır. Panik bozukluk, obsesif kompulsif bozukluk, bulimiya nervoza ve premenstrüel disforik bozuklukta onaylıdırlar. Bipolar depresyonda ise olanzapin fluoksetin sabit kombinasyonu şeklinde kullanım onayı mevcuttur.
 
-Serotonin ve noradrenalin geri alım inhibitörleri yani se ne re i sınıfı, venlafaksin ve duloksetini içerir.
+@@ Serotonin ve Noradrenalin İnhibitörleri
+Serotonin ve noradrenalin geri alım inhibitörleri yani se ne re i grubu ikili taşıyıcı blokajı yapar. Venlafaksin, desvenlafaksin ve duloksetin bu grubun en sık kullanılan güçlü temsilcileridir. Trisiklik antidepresanlar amitriptilin, desipramin, doksepin ve amoksapin gibi tersiyer ve sekonder amin türevlerini içerir. İmipramin, nortriptilin, protriptilin, trimipramin ve güçlü serotonerjik etkili klomipramin bu geniş ailenin diğer üyeleridir.
 
-İkili taşıyıcı blokörleri sinaptik aralıkta hem serotonin hem noradrenalin seviyelerini belirgin biçimde artırırlar.
+Nöronal geri alımın inhibe edilmesi sinaptik aralıkta serotonin ve noradrenalin konsantrasyonunu hızla yükseltir. Monoamin oksidaz enziminin inhibisyonu nörotransmitterlerin presinaptik veziküler depolarını belirgin biçimde artırır. Presinaptik alfa iki otoreseptörlerin bloke edilmesi noradrenalin salınımı üzerindeki otoregülatuvar baskılayıcı etkiyi ortadan kaldırır.
 
-Venlafaksin düşük dozda selektif serotonin, yüksek dozlarda ise noradrenalin geri alımını durduran bir ajandır.
+Seçici serotonin ve noradrenalin geri alım inhibitörleri modern farmakoterapide geniş yer tutar. Venlafaksin uzatılmış salınımlı formuyla ve ana aktif metaboliti olan desvenlafaksin ile klinikte kullanılır. Duloksetin, milnasipran ve levomilnasipran hem depresyonda hem kronik ağrı sendromlarında tercih edilir.
 
-Bütün ikili inhibitörler trisiklikler gibi taşıyıcıları bloke ederken otonom yan etki yükü taşımamalarıyla ayrılırlar.
+Bütün se ne re i molekülleri trisiklik antidepresanlar gibi hem serotonin hem noradrenalin taşıyıcısını bloke ederler. Ancak trisikliklerden farklı olarak histamin, asetilkolin ve alfa bir adrenerjik reseptörlere afinite göstermezler. Bu sayede otonomik yan etkiler olmaksızın majör depresyon, fibromiyalji, nöropatik ağrı ve anksiyetede kullanılırlar. Duloksetin üriner stres inkontinansında, desvenlafaksin ise menopozal vazomotor semptomlarda terapötik üstünlüğe sahiptir.
 
-@@ Trisiklik ve Reseptör Antagonisti Antidepresanlar
-Trisiklik antidepresanlar güçlü etkinliklerine karşın muskarinik ve kardiyak yan etkileri sebebiyle dar terapötik indekse sahiptir.
+@@ Trisiklik Antidepresanlar
+Trisiklik antidepresanlar modern ilaçlara yanıt vermeyen dirençli majör depresyon olgularında tercih edilir. Bu geniş kimyasal ailenin tarihsel ve farmakolojik prototipi imipramindir. Trisiklik moleküller muskarinik reseptörleri güçlü bloke ettikleri için yüksek düzeyde antikolinerjik yan etki taşırlar. İmipraminin aktif metaboliti olan desipramin noradrenalin seçicidir ve ana bileşiğe göre daha düşük antikolinerjik etki gösterir.
 
-Trazodon ve nefazodon serotonin iki reseptörlerini güçlü şekilde antagonize ederek sedatif etki oluştururlar.
+@@ 5-HT2 Antagonistleri ve Atipik Ajanlar
+Trazodon ve nefazodon beş ha te iki antagonistleri ve geri alım inhibitörleri sınıfını oluşturur. Bu ilaçlar ve aktif metabolitleri postsinaptik beş ha te iki a reseptörlerini güçlü biçimde bloke ederler. Beş ha te iki a blokajı anksiyolitik etki sağlarken cinsel işlev bozukluğu riskini ortadan kaldırır. Güçlü histamin bir antagonizması nedeniyle trazodon günümüzde daha çok hipnotik ve sedatif amaçla reçete edilir.
 
-@@ Atipik İlaçlar ve MAO İnhibitörleri
-Atipik grupta amoksapin, bupropion ve mirtazapin kendine özgü reseptör mekanizmalarıyla etki gösterirler.
+Tetrasiklik ve ünisiklik antidepresanlar kimyasal yapıları ve reseptör hedefleri açısından heterojen bir gruptur. Bupropion amfetamin benzeri kimyasal yapıya sahiptir ve santral sinir sistemi stimülan etkisi sergiler. Mirtazapin presinaptik alfa iki blokajı yapar ve bupropion gibi cinsel yan etki oluşturmayan nadir ajanlardandır. Amoksapin antipsikotik loksapin türevidir; bu grup klasik antidepresanlara göre daha özel durumlarda reçete edilir.
 
-Monoamin oksidaz inhibitörleri dirençli depresyonda kullanılır; tiramin içeren gıdalarla hipertansif kriz riski taşırlar.
+@@ Monoamin Oksidaz İnhibitörleri
+Monoamin oksidaz inhibitörleri ciddi toksisite ve etkileşim riskleri nedeniyle klinik uygulamada nadiren kullanılırlar. Başta atipik özellikli veya diğer antidepresan sınıflarına yanıt vermeyen tedaviye dirençli depresyonda endikedirler. Klasik ajanlar enzimdeki flavin grubuna kovalan bağlanarak geri dönüşümsüz ve seçici olmayan inhibisyon yaparlar. Fenelzin, izokarboksazid, tranilsipromin klasik inhibitörlerdir; moklobemid geri dönüşümlü seçici mao a inhibitörüdür. Tranilsipromin gibi moleküller amfetamin benzeri yapıları sayesinde belirgin santral sinir sistemi stimülasyonu yaparlar.
 
-@@ Farmakokinetik Özellikler ve Karaciğer Metabolizması
-Antidepresan ilaç sınıfları arasında emilim, dağılım hacmi ve yarılanma ömrü açısından önemli farmakokinetik farklar bulunur.
+@@ Genel Farmakokinetik ve SSRI Kinetiği
+Antidepresan ilaçların aynı kimyasal grup içinde bile belirgin farmakokinetik farklılıkları bulunur. Genel özellikleri itibarıyla oral yoldan alındıklarında gastrointestinal sistemden hızla absorbe edilirler. Yüksek lipofilik özellikleri nedeniyle plazma proteinlerine ve özellikle albümine yüksek oranda bağlanırlar. Karaciğerde sitokrom pe dört yüz elli enzimleri ile metabolize edilirler ve metabolitleri böbrek yoluyla atılır.
 
-Fluoksetin aktif metaboliti norfluoksetine dönüşür; norfluoksetinin yarı ömrü bir iki haftayı bularak uzun etki sağlar.
+Fluoksetin karaciğerde aktif metaboliti olan norfluoksetine metabolize edilir. Norfluoksetinin eliminasyon yarı ömrü yaklaşık bir ila iki hafta olup ana ilaçtan üç kat daha uzundur. Bu özellik fluoksetini bütün se se re i grubu içinde en uzun yarılanma ömrüne sahip molekül yapar. Fluoksetin ve paroksetin karaciğerde sitokrom pe iki de altı izoenziminin çok güçlü inhibitörleridir. Fluvoksamin sitokrom üç a dördü inhibe ederken, sitalopram ve sertralin enzim etkileşimi açısından oldukça ılımlıdır.
 
-Venlafaksin sitokrom iki de altı enzimi üzerinden desvenlafaksine dönüştürülerek aktif moleküler formunu korur.
+@@ SNRI ve TCA Farmakokinetik Karşılaştırması
+Venlafaksin sitokrom pe iki de altı aracılığıyla ana aktif metaboliti olan desvenlafaksine dönüştürülür. Her iki molekülün de eliminasyon yarılanma ömrü yaklaşık on bir saattir ve kontrollü salınımlı formda tek doz verilir. Venlafaksin ve desvenlafaksin plazma proteinlerine sadece yüzde yirmi beş ila otuz oranında bağlanarak en düşük bağlanmayı gösterirler. Duloksetin karaciğerde yoğun metabolize edilirken milnasipran Amerika Birleşik Devletlerinde majör depresyon yerine fibromiyaljide onaylıdır.
 
-Antidepresan ilaç molekülleri presinaptik nörondaki gerialım pompasını bloke ederek sinaptik kavşaktaki monoamin düzeyini yükseltir.
+Antidepresan ilaçlar presinaptik terminalde bulunan nörotransmitter geri alım pompalarını bloke ederek etki gösterirler. Pompanın kilitlenmesiyle nörotransmitterin vezikül içine geri alınması engellenir ve sinaptik yarıkta kalış süresi uzar. Sinaptik aralıkta artan monoaminler postsinaptik reseptörleri uyararak hücre içi sinyal kaskadlarını tetikler.
 
-Trisiklik moleküllerin gastrointestinal emilimleri yüksektir, dağılım hacimleri geniştir ve dokulara yoğun şekilde bağlanırlar.
+Trisiklik antidepresanların oral emilimleri yüksektir, yarılanma ömürleri uzundur ve sedatif etkileri nedeniyle akşam tek doz verilirler. Karaciğerde bifazik metabolizmaya uğrarlar ve dozun sadece yüzde beşi idrarla değişmeden atılır. Sitokrom pe iki de altı substratı olduklarından fluoksetin gibi güçlü inhibitörlerle birlikte verildiklerinde düzeyleri tehlikeli biçimde yükselir. Desipramin ve nortriptilin gibi sekonder aminlerin kinetiği doğrusaldır ve aktif metabolit oluşturmazlar. Terapötik pencereleri dar olduğundan serum ilaç düzeyi takibi toksisiteyi önlemede son derece güvenilir bir rehberdir.
 
-Antidepresan moleküllerin serotonin ve noradrenalin taşıyıcılarına olan seçicilik oranları klinik yan etkilerini belirler.
+Şemada sinir terminalinde bulunan serotonin ve noradrenalin geri alım taşıyıcılarının yerleşimi gösterilmektedir. Trisiklik antidepresanlar bu taşıyıcıları bloke ederken aynı anda muskarinik, histaminik ve adrenerjik reseptörleri de antagonize ederler. Mitokondriyal monoamin oksidaz ve sinaptik aralıktaki asetilkolinesteraz enzimleri nörotransmitter dengesini birlikte denetler.
 
-Trazodon ve nefazodon oral yoldan hızla emilir ve karaciğerde geniş kapsamlı mikrozomal metabolizmaya uğrar. Sinaptik kavşaktaki taşıyıcı etkileşimleri incelendiğinde, bu ajanlar serotonin iki a reseptörlerini bloke ederek etki gösterir.
+Trisikliklerin geniş reseptör afinite profili onların güçlü terapötik etkisinin yanında çoklu yan etki yükünü de açıklar. Bu çoklu reseptör blokajı özellikle kardiyak ileti bozuklukları ve antikolinerjik kriz riskini beraberinde getirir. Şimdi beş ha te iki antagonistleri ve atipik antidepresanların farmakokinetik ayrıntılarını değerlendirelim.
 
-Nefazodon güçlü bir sitokrom üç a dört inhibitörüdür; fakat karaciğer toksisitesi nedeniyle klinik kullanımı sınırlandırılmıştır.
+@@ Atipik Ajanların ve MAOI Kinetiği
+Trazodon ve nefazodon gastrointestinal kanaldan hızla ve yüksek oranda emilir, karaciğerde kapsamlı metabolizmaya uğrarlar. Plazma proteinlerine yüksek oranda bağlanırlar, biyoyararlanımları sınırlıdır ve eliminasyon yarı ömürleri kısadır. Antidepresan amaçla doz gün içine bölünerek verilir; trazodon düşük dozlarda belirgin hipnotik etki sergiler. Nefazodon sitokrom pe üç a dört izoenziminin çok güçlü bir inhibitörüdür ve ciddi ilaç etkileşimlerine neden olur.
 
-Bupropion hızlı emilen ve yüksek oranda proteinlere bağlanan bir atipik moleküldür; karaciğerde ilk geçiş eliminasyonuna uğrar.
+Bupropion hızla emilir, proteinlere yüksek oranda bağlanır ve yoğun karaciğer ilk geçiş eliminasyonuna uğrar. Karaciğerde oluşan hidroksibupropion dahil üç temel metaboliti de biyolojik olarak aktiftir. Bupropion bifazik eliminasyon gösterir ve ikinci fazın süresi ilk fazdan yaklaşık on dört kat daha uzundur. Amoksapinin aktif metaboliti olan yedi hidroksi amoksapin güçlü bir dopamin de iki blokörü olup antipsikotik etki kazandırır.
 
-Maprotilin ve mirtazapin kendilerine özgü eliminasyon yarılanma ömürleriyle diğer grup üyelerinden ayrılırlar.
+Maprotilin farmakokinetik özellikleri bakımından bupropiona benzerlik gösteren sekonder bir amindir. Mirtazapin yirmi ila kırk saatlik uzun eliminasyon yarılanma ömrüyle diğer grup üyelerinden belirgin biçimde ayrılır. Sitokrom pe iki de altı, bir a iki ve üç a dört enzimleri üzerinden çoklu metabolik yollardan geçer. Güçlü histamin bir reseptör blokajı nedeniyle belirgin sedatif etki gösterir ve akşam saatlerinde tek doz kullanılır.
 
-Antidepresanların metabolizması sitokrom pe dört yüz elli enzimleri üzerinden yürütülür ve ilk geçiş etkisi biyoyararlanımı belirler.
+Monoamin oksidaz inhibitörleri karaciğerde yoğun ilk geçiş eliminasyonuna uğrarlar ve oral biyoyararlanımları düşer. Tranilsipromin ve fenelzinin barsak mao enzimini baskılaması nedeniyle alternatif farmasötik şekiller tasarlanmıştır. Selejilinin transdermal yama ve sublingual formları gastrointestinal ilk geçiş metabolizmasını baypas eder. Barsak ve karaciğerdeki mao a enziminin bloke edilmesi gıdalarla alınan tiraminin sistemik dolaşıma geçmesine yol açar.
 
-@@ Moleküler Taşıyıcı ve Reseptör Mekanizmaları
-Antidepresanların majör fonksiyonu sinaptik kavşakta monoamin nörotransmisyonunu artırarak iletiyi güçlendirmektir.
+@@ Transporter ve Reseptör Moleküler Farmakolojisi
+Bütün antidepresan sınıflarının ortak temel hedefi sinaptik aralıkta monoaminerjik nörotransmisyonu artırmaktır. Çoğu antidepresan bu hedefi presinaptik monoamin geri alım pompalarının aktivitesini bloke ederek gerçekleştirir. Sinaptik monoamin miktarını artırmanın diğer temel yolu mitokondriyal mao enzimatik yıkımını durdurmaktır. Mirtazapin gibi ilaçlar ise presinaptik alfa iki otoreseptörleri bloke ederek nörotransmitter salınımını tetiklerler.
 
-Serotonin taşıyıcısı, akson terminallerinde ve hücre gövdesinde serotonini hücre içine geri alan glikoproteindir.
+Serotonin taşıyıcısı sert, serotonerjik nöronların akson terminalleri ve gövde membranında yer alan on iki transmembranlı bir glikoproteindir. Serotonin bu taşıyıcıya bağlandığında bir sodyum ve bir klor iyonu ile birlikte sitoplazma içine kotransport edilir. Se se re i grubu ilaçlar taşıyıcı üzerindeki allosterik bağlanma bölgesine oturarak geri alım mekanizmasını kilitlerler. Seçici serotonin inhibitörlerinin noradrenalin taşıyıcısı veya beta adrenoreseptörler üzerinde anlamlı bir bloke edici etkisi yoktur.
 
-İkili geri alım inhibitörleri hem serotonin hem noradrenalin taşıyıcılarına bağlanarak her iki monoamini sinapsta yükseltir.
+İkili geri alım inhibitörleri sinaptik aralıkta hem sert hem net taşıyıcı moleküllerine bağlanırlar. Venlafaksin düşük dozlarda sert seçici davranırken, ancak yüksek dozlara çıkıldığında noradrenalin taşıyıcısını bloke eder. Desvenlafaksin, duloksetin ve milnasipran ise hem sert hem net üzerinde dengeli ve güçlü bir inhibisyon sergilerler. Bu nedenle majör depresyon ve kronik ağrı sendromlarında trisikliklerin yan etkilerinden kaçınmak için se ne re i grubu tercih edilir.
 
-Trisiklik antidepresanlar içinde desipramin noradrenalin pompasına yüksek afinite gösterirken, klomipramin serotonin üzerinde çok güçlüdür.
+Trisiklik antidepresanlar arasında taşıyıcı afinitesi açısından belirgin farmakodinamik farklılıklar bulunur. Muskarinik reseptör blokajı ağız kuruluğu, konstipasyon, idrar retansiyonu ve bulanık görme gibi güçlü antimuskarinik tablolara yol açar. Histamin bir reseptör blokajı ise santral sedasyon, uyku hali ve belirgin kilo artışının temel nedenidir. Doksepin güçlü antihistaminik etkisiyle hipnotik ve antiprüritik olarak kullanılırken alfa bir blokajıyla yaşlılarda ortostatik hipotansiyon yapar.
 
-Postsinaptik serotonin iki reseptör blokajı antianksiyete ve antidepresan etki sağlarken cinsel işlevleri korur.
+@@ 5-HT2 Blokajı ve MAO İzoenzim Farmakolojisi
+Beş ha te iki reseptörlerinin bloke edilmesi anksiyolitik, antipsikotik ve antidepresan etki profili sağlar. Tam aksine liserjik asit dietilamid ve meskalin gibi beş ha te iki a agonistleri güçlü halüsinojen ve anksiyojenik maddelerdir. Trazodon ve nefazodon bu reseptörü seçici bloke ederken zayıf geri alım inhibisyonu yaparlar; trazodon sert için daha seçicidir. Amoksapin ve maprotilin desipramin gibi noradrenalin taşıyıcısını çok güçlü, serotonin taşıyıcısını ise zayıf inhibe ederler.
 
-Monoamin oksidaz inhibitörleri mitokondriyal deaminasyon enzimini durdurarak nöron içi monoamin depolarını zenginleştirir.
+Mao a izoenzimi dopaminerjik ve noradrenerjik nöronlarda bulunur; birincil substratları noradrenalin, adrenalin ve serotonindir. Mao be serotonerjik ve histaminerjik nöronlarda yer alır; öncelikli substratları tiramin, feniletilamin ve benzilamindir. Dopamin ve triptamin her iki mao izoenzimi tarafından ortak biçimde enzimatik yıkıma uğratılır. Fenelzin ve tranilsipromin geri dönüşümsüz nonselektif inhibitörlerdir; moklobemid ise geri dönüşümlü seçici mao a inhibitörüdür.
 
-@@ Klinik Endikasyonlar, Dozlama ve Toksisite Yönetimi
-Antidepresanların birinci majör klinik alanı majör depresif bozukluk epizotlarının tedavisidir.
+@@ Klinik Tedavi İlkeleri ve Psikiyatrik Endikasyonlar
+Antidepresanların birincil kullanım alanı majör depresyon epizotları olup tedavideki nihai amaç tam semptomatik remisyondur. Monoterapi ile yeterli klinik yanıt alınamazsa doz artırımı, ilaç değişimi veya farklı etki mekanizmalı ajanlarla augmentasyon düşünülür. Depresyon doğası gereği yineleyici bir hastalıktır ve hastaların önemli bir kısmında tekrarlayan agresif epizotlar izlenir. Nüksleri engellemek için se se re i, se ne re i veya trisiklik antidepresanların en az altı ila dokuz ay kronik sürdürülmesi gerekir.
 
-Bipolar depresyonda antidepresan verilmesi mizaç kayması yaparak hastayı maniye sokabileceğinden dikkatle yönetilmelidir.
+Bipolar depresyon tedavisinde antidepresan monoterapisi etkisizdir ve mizaç dengeleyici olmadan asla kullanılmamalıdır. Bipolar bozuklukta tek başına antidepresan kullanımı manik kaymayı tetikleyebilir ve hızlı döngülülüğe yol açabilir. Anksiyete bozukluklarının uzun dönem idamesinde se se re i grubu ilk seçenektir; akut kriz yönetiminde benzodiazepinler geçici fayda sağlar. Obsesif kompulsif bozuklukta klomipramin ve yüksek doz se se re i onaylıdır; tam başarı için bilişsel davranışçı terapiyle kombine edilmelidir.
 
-Antidepresanların analjezik etkileri bulunur; trisiklikler ve duloksetin nöropatik ağrı ve fibromiyaljide ilk basamaktadır.
+@@ Kronik Ağrı ve Özel Klinik Endikasyonlar
+Antidepresanlar inen ağrı yolaklarını aktive ederek belirgin analjezik etki oluştururlar ve amitriptilin nöropatik ağrıda kullanılır. Premenstrüel disforik bozuklukta gelişen duygudurum dalgalanmaları ve irritabilite luteal fazda uygulanan se se re i tedavisine hızla yanıt verir. Bupropion dopamin ve noradrenalin geri alımını durdurarak sigara bırakma tedavisinde aşermeyi azaltmada onaylı ve etkilidir. Fluoksetin bulimiya nervozada tıkınırcasına yeme ve kusma epizotlarını belirgin azaltır ancak anoreksiyada klinik yararı sınırlıdır. Bupropion iştah baskılayıcı etkisiyle obezite tedavisinde yardımcıdır fakat yaşam tarzı değişikliği olmaksızın yeterli değildir.
 
-Pediatrik enürezis nokturnada imipramin; kadınlarda stres inkontinansta duloksetin; bulimiada ise fluoksetin kullanılır.
+Çocuklarda enürezis nokturna tedavisinde imipramin sfinkter tonusunu artırıcı ve uyanma eşiğini düzenleyici etkisiyle kullanılır. Kadınlarda üriner stres inkontinansında üretral sfinkter tonusunu artıran duloksetin etkinliği kanıtlanmış bir ajandır. Perimenopozal dönemdeki sıcak basması gibi vazomotor semptomların kontrolünde desvenlafaksin güvenle tercih edilebilir. Çoğu serotonerjik antidepresan libido azalması ve orgazm gecikmesi gibi cinsel işlev bozukluklarına yol açar.
 
-Bütün antidepresanlar tedaviye başlandıktan en az on beş gün sonra klinik olarak değerlendirilebilir; erken kesilmemelidir.
+@@ Dozlama, İntihar Riski ve Toksisite
+Bu bilgi sınavda soruldu: Antidepresan başlanan bir hastada klinik yanıtın ortaya çıkması ve terapötik değerlendirme yapılabilmesi için en az iki ila dört hafta yani on beş gün beklenmelidir. Tedavinin ilk günlerinde görülen sinaptik monoamin artışına rağmen klinik iyileşme postsinaptik reseptör desensitizasyonu ve hücresel adaptasyon sonrasında gelişir. Bu gecikme süreci nedeniyle hastaların ilacı erken dönemde etkisiz zannedip bırakmalarını önlemek için hasta uyumu yakından izlenmelidir.
 
-Bütün antidepresanlar yirmi beş yaşın altındaki bireylerde intihar eğilimini paradoksal olarak artırabilir; doz basamaklı artırılır.
+Bütün antidepresan sınıfları yirmi beş yaşın altındaki çocuk ve genç erişkinlerde tedavinin başında paradoksal intihar eğilimini artırabilir. İlaç dozunun artırılması ve tedavinin sonlandırılması kesilme sendromunu önlemek için merdiven kuralına göre basamaklı yapılmalıdır. Tedavinin ilk haftalarında bulantı ve gastrointestinal yakınmalar yaygındır; nefazodon ve trazodon alfa blokajıyla ortostatik hipotansiyon yapar. Amoksapin dopamin de iki reseptör blokajı nedeniyle parkinsonizm yapabilir; mirtazapin ise histamin blokajıyla güçlü sedasyon oluşturur. Venlafaksin yüksek dozlarda noradrenalin geri alımını artırdığı için doza bağımlı kan basıncı yükselmesi ve taşikardi yapabilir.
 
-Trisiklik aşırı dozunda koma, nöbet ve geniş ku re se aritmileriyle seyreden kardiyotoksisitede acil intravenöz sodyum bikarbonat verilir.
+Trisiklik antidepresanlarda muskarinik reseptör blokajına bağlı ağız kuruluğu, konstipasyon, idrar retansiyonu ve bulanık görme belirgindir. Bu bilgi çıkmışta soruldu: Trisiklik antidepresanlar serotonin ve noradrenalin taşıyıcılarını güçlü bloke ederken aşırı dozda sodyum kanallarını da kapatarak ölümcül kardiyotoksisite ve ventriküler aritmi yaparlar. Monoamin oksidaz inhibitörleri ortostatik hipotansiyon, kilo alımı, aşırı santral uyarılma, uykusuzluk ve cinsel işlev bozukluğuna yol açarlar. Bu grupta tiramin içeren olgunlaşmış peynir ve şarapla ölümcül hipertansif kriz, se se re i kombinasyonunda ise deliryum ve hipertermiyle seyreden serotonin sendromu gelişir.
 
-Antidepresan ilaçlar dersimizin sonuna geldik, akılcı ilaç kullanımı ve klinik takip ilkelerini gözetmenizi dilerim.
+Antidepresan ilaçlar dersimizin sunumunu burada tamamlarken kaynaklarımızı ve ders özetimizi dikkatinize sunuyoruz. Rasyonel farmakoterapi ilkeleri doğrultusunda doğru tanı, doğru ilaç seçimi ve düzenli hasta takibi klinik başarının anahtarıdır. Katılımınız ve sabrınız için teşekkür eder, klinik çalışmalarınızda ve sınavlarınızda başarılar dileriz.
