@@ -1,0 +1,2050 @@
+{
+ "id": "k2p-y25-k2-18-bazal-gangliyonlar",
+ "deckId": "k2p-y25-k2-18-bazal-gangliyonlar",
+ "title": "Bazal Gangliyonlar ve Ekstrapiramidal Sistem",
+ "shortTitle": "Bazal Gangliyonlar",
+ "discipline": "Nöroloji",
+ "committee": "donem3-kurul2",
+ "instructor": "Prof. Dr. Şerefnur Öztürk",
+ "matchedNoteId": "y25-k2-18-bazal-gangliyonlar",
+ "overview": "Bu derste ekstrapiramidal sistemin anatomik organizasyonu, inen ve geri dönen modülatör motor döngüler ile kortikal kaynak alanlar incelenir. Bazal gangliyonları oluşturan striatum, globus pallidus, substantia nigra ve subtalamik nükleus yapıları; GABA, glutamat, dopamin ve asetilkolin nörotransmiter sistemleri ele alınır. Hareketin başlatılmasını sağlayan direkt yol ile hareketin baskılanmasını sağlayan indirekt yol mekanizmaları, odaklama ve ölçekleme ilkeleri açıklanır. Ayrıca tremor, kore, atetoz, hemiballismus, distoni gibi istemsiz hareketler ve nöroleptiklere bağlı gelişen akut distoni, okulojirik kriz ile tardif diskinezi sendromları klinik ve patofizyolojik yönleriyle sistematik olarak işlenir.",
+ "highYieldPearls": [
+  "Ekstrapiramidal sistem kortikospinal ve kortikobulber inen yolların dışında kalan; kortiko-bazal ganglia ve kortiko-serebellar geri dönen modülatör döngülerle motor programları düzenleyen yapıdır.",
+  "Striatum dorsalde nükleus kaudatus ve putamenden, ventralde nükleus akkumbensten oluşur; putamen ile globus pallidus birlikte nükleus lentiformisi meydana getirir.",
+  "Bazal gangliyonlarda ana eksitatör nörotransmiter glutamat (korteks ve subtalamik nükleus), ana inhibitör nörotransmiter ise GABA'dır (striatum ve GPi/SNr).",
+  "Substantia nigra pars kompaktadan salınan dopamin, D1 reseptörleri aracılığıyla direkt yolu uyarırken, D2 reseptörleri aracılığıyla indirekt yolu baskılar; her iki etki de hareketi kolaylaştırır.",
+  "Direkt yolda striatum GPi ve SNr'yi GABA ile inhibe eder; böylece talamus üzerindeki tonik baskı kalkar (disinhibisyon) ve kortekse eksitatör uyarı artarak hareket başlatılır.",
+  "İndirekt yolda striatum GPe'yi inhibe eder, serbest kalan subtalamik nükleus (STN) glutamat ile GPi/SNr'yi uyarır; artan GABA çıktısı talamusu baskılayarak istenmeyen hareketleri durdurur.",
+  "Ölçekleme mekanizması, kortikal motor kopyanın parietal proprioseptif geribildirimle kıyaslanarak hareket hız ve genliğinin ayarlanmasıdır; odaklama ise hedef hareketin direkt yolla güçlendirilip çevre kasların indirekt yolla baskılanmasıdır.",
+  "Parkinson hastalığında görülen istirahat tremoru tipik olarak 4-7 Hz frekansında olup ellerde para sayma veya hap yapma niteliğindedir; istemli hareketle baskılanır.",
+  "Hemiballismus, kontralateral subtalamik nükleus (Korpus Luysii) lezyonlarında ortaya çıkan, ekstremitelerin proksimalinden başlayan ani, savurucu ve geniş amplitüdlü istemsiz fırlatma hareketleridir.",
+  "Sydenham koresi akut romatizmal ateşin majör kriteri olup çocuklarda görülür; Huntington koresi ise otozomal dominant kalıtılan, kaudat atrofisi ve ilerleyici demansla seyreden tablodur.",
+  "Uzun süreli nöroleptik kullanımına bağlı gelişen tardif diskinezi orofasiyal alanda istemsiz çiğneme ve yalanma hareketleriyle karakterizedir; antiparkinson antikolinerjik ilaçlarla şiddetlenebilir."
+ ],
+ "slides": [
+  {
+   "slideNumber": 1,
+   "bolum": "1.1",
+   "pdfSayfalari": [
+    2,
+    3
+   ],
+   "sourcePdf": {
+    "fileName": "Bazal ganglionlar.pdf",
+    "primaryPage": 2,
+    "startPage": 2,
+    "endPage": 3
+   },
+   "title": "Ekstrapiramidal Sistem ve Motor Yollar: İnen ve Modülatör Döngüler",
+   "subtitle": "Piramidal sistem dışı motor kontrol, inen traktuslar ve geri dönen döngüler",
+   "badge": "Sistem Tanımı",
+   "synthesisNarrative": "Ekstrapiramidal sistem, motor işlevlerin yürütülmesinde piramidal sistem (kortikospinal ve kortikobulber yollar) dışında kalan anatomik yapıların tamamını kapsar. İskelet kası hareketlerinin planlanması, sıralanması ve düzgün icra edilmesi bu sistemin modülasyonuyla gerçekleşir.\n\n- **İnen Motor Yollar:** Kortikospinal, kortikobulber ve kortikopontin yollar korteksten alt motor merkezlere ve beyin sapına emirleri doğrudan iletir.\n- **Geri Dönen Modülatör Yollar:** Kortiko-bazal ganglia-talamo-kortikal döngü ile kortiko-serebellar-talamo-kortikal döngü olmak üzere iki temel geri bildirim yolu bulunur. Bu iki yol birbirine paralel ve birbirinden bağımsız çalışarak motor programları sürekli düzenler.\n- **Kortikal Kaynak Alanlar:** Lateral premotor alan, suplementer motor alan ve singulat motor alan motor programların duysal bilgilerle entegre edildiği başlıca merkezlerdir.\n\n> [!NOTE]\n> Geri dönen modülatör yollar doğrudan medulla spinalise inmez; talamus aracılığıyla yeniden kortekse dönerek hareket komutlarını biçimlendirir.",
+   "content": "Ekstrapiramidal sistem, inen piramidal yolların dışında kalarak bazal gangliyon ve serebellum üzerinden geri dönen paralel modülatör döngülerle motor hareketleri düzenler.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Motor kontrol sisteminde korteksten başlayıp bazal gangliyonlar ve talamus üzerinden tekrar kortekse dönen modülatör döngünün temel fonksiyonel özelliği hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Kortiko-serebellar döngüye paralel ve ondan bağımsız çalışarak motor programları düzenler",
+       "isCorrect": true,
+       "explanation": "Kortiko-bazal ganglia-talamo-kortikal döngü, serebellar döngüye paralel ve bağımsız çalışan temel modülatör geri bildirim yoludur. Bu yol hareketin sıralanmasını ve motor programların hazırlanmasını düzenler."
+      },
+      {
+       "key": "B",
+       "text": "Primer motor korteksten başlayarak medulla spinalis ön boynuzuna doğrudan inen efferent traktustur",
+       "isCorrect": false,
+       "explanation": "Kortikospinal traktus, motor korteksten başlayarak medulla spinalise inen ana piramidal iletim yoludur. Modülatör geri dönen döngülerden biri olmayıp doğrudan inen efferent yürütücü sistemi kurar."
+      },
+      {
+       "key": "C",
+       "text": "Beyin sapındaki kraniyal sinir motor çekirdeklerine doğrudan uyarı taşıyan inen yoldur",
+       "isCorrect": false,
+       "explanation": "Kortikobulber traktus, korteksten beyin sapındaki kraniyal motor çekirdeklere inen doğrudan bir piramidal yoldur. Talamus üzerinden kortekse geri dönen modülatör bir döngü niteliği taşımaz."
+      },
+      {
+       "key": "D",
+       "text": "Korteksten pons çekirdeklerine projekte olan saf inen motor yoldur",
+       "isCorrect": false,
+       "explanation": "Kortikopontin projeksiyonlar, serebellar bağlantı için ponstaki nükleuslara inen bir efferent yoldur. Bazal gangliyonların kortekse geri dönen modülatör kontrol döngüsünü oluşturmaz."
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "İnen Motor Yollar",
+     "rightCategory": "Geri Dönen Modülatör Döngüler",
+     "cards": [
+      {
+       "text": "Kortikospinal traktus",
+       "category": "left"
+      },
+      {
+       "text": "Kortiko-bazal ganglia-talamo-kortikal yol",
+       "category": "right"
+      },
+      {
+       "text": "Kortikobulber traktus",
+       "category": "left"
+      },
+      {
+       "text": "Kortiko-serebellar-talamo-kortikal yol",
+       "category": "right"
+      },
+      {
+       "text": "Kortikopontin projeksiyon yolu",
+       "category": "left"
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kortiko-bazal ganglia ve kortiko-serebellar geri dönen yollar birbirine paralel ve birbirinden bağımsız çalışır.",
+     "maskedTerm": "birbirinden bağımsız",
+     "hint": "Ayrı yapılarla eş zamanlı işleyiş biçimi"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Ekstrapiramidal motor sistem ve modülatör yollar",
+     "items": [
+      {
+       "text": "Lateral premotor, suplementer motor ve singulat alanlar motor programların hazırlandığı kortikal kaynaklardır.",
+       "isLie": false,
+       "explanation": "Bu kortikal motor alanlar hareketin sıralanması, planlanması ve duyusal bilgilerle entegrasyonunda temel kaynak alanlardır."
+      },
+      {
+       "text": "Kortiko-bazal ganglia döngüsü talamus üzerinden kortekse dönerek modülatör kontrol sağlar.",
+       "isLie": false,
+       "explanation": "Geri dönen modülatör yollar bazal gangliyonlardan sonra talamusa ve oradan tekrar kortikal motor sahalara ulaşır."
+      },
+      {
+       "text": "Kortikospinal ve kortikobulber traktuslar bazal gangliyonlara geri dönen kontrol döngülerini oluşturur.",
+       "isLie": true,
+       "explanation": "Kortikospinal ve kortikobulber traktuslar geri dönen döngü değil; korteksten alt motor merkezlere inen doğrudan efferent piramidal yollardır."
+      },
+      {
+       "text": "Ekstrapiramidal sistem piramidal sistem dışında kalarak istemli hareketin uyumunu düzenler.",
+       "isLie": false,
+       "explanation": "Ekstrapiramidal yapılar piramidal liflerin dışında yer alır ve hareketin akıcılığı ile postür modülasyonundan sorumludur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Ekstrapiramidal sistemde yer alan iki temel geri dönen modülatör yol hangileridir ve aralarındaki fonksiyonel ilişki nasıldır?",
+     "answer": "Kortiko-bazal ganglia-talamo-kortikal yol ve kortiko-serebellar-talamo-kortikal yoldur. Bu iki döngü birbirine paralel ve birbirinden bağımsız olarak çalışır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 2,
+   "bolum": "1.2",
+   "pdfSayfalari": [
+    4,
+    6
+   ],
+   "sourcePdf": {
+    "fileName": "Bazal ganglionlar.pdf",
+    "primaryPage": 5,
+    "startPage": 4,
+    "endPage": 6
+   },
+   "title": "Bazal Ganglionların Anatomik Yapısı: Striatum, Pallidum, Substantia Nigra ve STN",
+   "subtitle": "Korpus striatum, nükleus lentiformis ve ilişkili subkortikal çekirdekler",
+   "badge": "Temel Anatomi",
+   "synthesisNarrative": "Bazal gangliyonlar, telensefalon, diensefalon ve mezensefalona dağılmış subkortikal gri cevher çekirdekleridir.\n\n- **Striatum (Korpus Striatum):** Dorsal striatum; nükleus kaudatus ve putamenden meydana gelir. Bu iki çekirdek embriyolojik olarak aynı kökene sahip olup aralarından kapsüla interna lifleri geçer. Ventral striatumu ise nükleus akkumbens oluşturur.\n- **Globus Pallidus:** Putamenin medialinde yer alır; globus pallidus eksternus (GPe) ve globus pallidus internus (GPi) olmak üzere iki tabakadan oluşur. Putamen ve globus pallidus birlikte nükleus lentiformis adını alır.\n- **Substantia Nigra:** Mezensefalonda konumlanmıştır; nöromelanin içeren pars kompakta (SNc) ve talamusa projekte olan pars retikulata (SNr) kısımlarına ayrılır.\n- **Subtalamik Nükleus (Korpus Luysii):** Diensefalonun subtalamus bölgesinde bulunan küçük merceksi bir çekirdektir.\n\n> [!NOTE]\n> Kapsüla interna, nükleus kaudatus ile putamen arasına girerek hücresel köprüler dışında bu iki yapıyı birbirinden ayırır.",
+   "content": "Bazal gangliyonlar striatum (kaudatus, putamen), globus pallidus (GPe, GPi), subtalamik nükleus ve substantia nigra çekirdeklerinden meydana gelir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Bazal gangliyonların anatomik organizasyonunda nükleus lentiformis olarak adlandırılan yapıyı oluşturan çekirdekler hangileridir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Putamen ve Globus pallidus",
+       "isCorrect": true,
+       "explanation": "Putamen ve globus pallidus anatomik olarak yan yana bulunarak merceksi biçimli nükleus lentiformisi oluşturur. Bu iki yapı bazal gangliyonların temel subkortikal bileşenleridir."
+      },
+      {
+       "key": "B",
+       "text": "Nükleus kaudatus ve Putamen",
+       "isCorrect": false,
+       "explanation": "Nükleus kaudatus ve putamen birlikte striatumu (neostriatum) meydana getirir. Nükleus lentiformis ise putamen ile globus pallidusun bir araya gelmesiyle oluşur."
+      },
+      {
+       "key": "C",
+       "text": "Substantia nigra ve Subtalamik nükleus",
+       "isCorrect": false,
+       "explanation": "Substantia nigra mezensefalonda, subtalamik nükleus ise diensefalonda yer alan fonksiyonel bazal gangliyon merkezleridir. Nükleus lentiformisi oluşturan putamen ve globus pallidus anatomik bloğunun dışında yer alan ayrı subkortikal çekirdeklerdir."
+      },
+      {
+       "key": "D",
+       "text": "Globus pallidus internus ve Subtalamik nükleus",
+       "isCorrect": false,
+       "explanation": "Globus pallidus internus pallidumun iç tabakasıdır, subtalamik nükleus ise ayrı bir subkortikal merkezdir. Lentiform çekirdeği putamen ile globus pallidusun birlikteliği kurar."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Anatomik Yapı",
+      "Alt Bölümleri",
+      "Beyin Bölgesi"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "Striatum"
+       },
+       {
+        "text": "Nükleus kaudatus ve Putamen",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Telensefalon"
+       }
+      ],
+      [
+       {
+        "text": "Globus pallidus"
+       },
+       {
+        "text": "GPe ve GPi",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Telensefalon"
+       }
+      ],
+      [
+       {
+        "text": "Substantia nigra"
+       },
+       {
+        "text": "Pars kompakta ve Pars retikulata",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Mezensefalon"
+       }
+      ],
+      [
+       {
+        "text": "Subtalamik nükleus"
+       },
+       {
+        "text": "Korpus Luysii",
+        "isMasked": false
+       },
+       {
+        "text": "Diensefalon",
+        "isMasked": true,
+        "hint": ""
+       }
+      ]
+     ]
+    },
+    {
+     "type": "feature_bidding",
+     "optionA": "Striatum",
+     "optionB": "Globus Pallidus",
+     "rounds": [
+      {
+       "feature": "Nükleus kaudatus ve putamenden meydana gelen bazal gangliyon yapısıdır",
+       "correct": "A",
+       "explanation": "Striatum dorsalde kaudatus ve putamen çekirdeklerinin birleşimidir."
+      },
+      {
+       "feature": "Putamen ile bir araya gelerek nükleus lentiformisi oluşturur",
+       "correct": "B",
+       "explanation": "Globus pallidus putamen ile birleşerek merceksi nükleus lentiformisi kurar."
+      },
+      {
+       "feature": "Eksternus ve internus olmak üzere iki belirgin tabakaya ayrılır",
+       "correct": "B",
+       "explanation": "Globus pallidus GPe ve GPi olmak üzere iki alt tabakadan oluşur."
+      },
+      {
+       "feature": "İçinden kapsüla interna lifleri geçerek kaudatus ve putameni ayırır",
+       "correct": "A",
+       "explanation": "Kapsüla interna striatum kütlesi içinden geçerek kaudatus ve putameni anatomik olarak böler."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Nükleus kaudatus ile putamen anatomik olarak kapsüla interna lifleri aracılığıyla birbirlerinden ayrılır.",
+     "maskedTerm": "kapsüla interna",
+     "hint": "İnen motor liflerin geçtiği kalın akson demeti"
+    },
+    {
+     "type": "active_recall",
+     "question": "Mezensefalonda yer alan substantia nigra hangi iki anatomik alt bölüme ayrılır?",
+     "answer": "Pars kompakta (SNc) ve pars retikulata (SNr) olmak üzere iki alt bölüme ayrılır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 3,
+   "bolum": "1.3",
+   "pdfSayfalari": [
+    7,
+    7
+   ],
+   "sourcePdf": {
+    "fileName": "Bazal ganglionlar.pdf",
+    "primaryPage": 7,
+    "startPage": 7,
+    "endPage": 7
+   },
+   "title": "Bazal Gangliyon Nörotransmiterleri ve Fonksiyonel İlkeler",
+   "subtitle": "GABA, Glutamat, Dopamin reseptörleri ve temel motor kontrol işlevleri",
+   "badge": "Nörokimya ve Fonksiyon",
+   "synthesisNarrative": "Bazal gangliyon devreleri karmaşık bir nörotransmiter dengesi üzerinden çalışır.\n\n- **GABA (Gama-Aminobütirik Asit):** Sistemin ana inhibitör (baskılayıcı) ileticisidir. Striatum ve globus pallidus nöronları tarafından yoğun biçimde salınır.\n- **Glutamat:** Sistemin ana eksitatör (uyarıcı) ileticisidir. Serebral korteks projeksiyonları ve subtalamik nükleustan salınarak hedef yapıları aktive eder.\n- **Dopamin:** Substantia nigra pars kompaktadan (SNc) kaynaklanır. D1 reseptörleri üzerinden uyarıcı, D2 reseptörleri üzerinden ise baskılayıcı etki gösterir.\n- **Asetilkolin ve Nöropeptitler:** Striatal internöronlardan salınan asetilkolin modülatör rol oynar; ayrıca Substans P ve enkefalin devrelerin ince ayarını sağlar.\n- **Temel Motor İşlevler:** Hareketin başlatılması ve planlanması, hareket hız ve genliğinin ayarlanması, bisiklete binme gibi öğrenilmiş motor programların otomatik yürütülmesi ve kas tonusunun düzenlenmesidir.\n\n> [!IMPORTANT]\n> Dopamin D1 reseptörlerini uyarırken D2 reseptörlerini baskılar; bu ikili mekanizma motor devrelerin yönünü belirler.",
+   "content": "Bazal gangliyonlarda GABA inhibitör, glutamat eksitatör, dopamin ise D1 ile uyarıcı ve D2 ile baskılayıcı rol üstlenir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Substantia nigra pars kompaktadan salınan dopaminin striatumdaki D1 ve D2 reseptörleri üzerindeki temel etkileri nasıldır?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "D1 reseptörleri üzerinden uyarıcı, D2 reseptörleri üzerinden baskılayıcı etki oluşturur",
+       "isCorrect": true,
+       "explanation": "Dopamin D1 reseptörlerini uyararak hücre içi sinyal iletimini aktive ederken, D2 reseptörleri üzerinden inhibitör G proteini yoluyla baskılayıcı etki oluşturur."
+      },
+      {
+       "key": "B",
+       "text": "Her iki reseptör grubu üzerinden de yalnızca güçlü eksitatör glutamaterjik uyarı iletir",
+       "isCorrect": false,
+       "explanation": "Dopamin monoamin yapıda bir nörotransmiter olup glutamaterjik değildir. Reseptör etkileri tek tip eksitatör olmayıp D1 ve D2 üzerinden zıt yönlü düzenleme sağlar."
+      },
+      {
+       "key": "C",
+       "text": "D1 reseptörleri üzerinden baskılayıcı, D2 reseptörleri üzerinden uyarıcı etki gösterir",
+       "isCorrect": false,
+       "explanation": "D1 reseptörleri Gs proteini ile kenetli olup uyarıcıdır; D2 reseptörleri ise Gi proteini ile kenetli olup baskılayıcıdır. Seçenekteki roller ters verilmiştir."
+      },
+      {
+       "key": "D",
+       "text": "Striatum nöronları üzerinde herhangi bir elektriksel etki oluşturmadan sadece asetilkolini yıkar",
+       "isCorrect": false,
+       "explanation": "Dopamin, striatum nöronlarında membran polarizasyonunu ve hücre içi sinyal yollarını doğrudan değiştiren temel bir nörotransmiterdir. Kolinerjik iletimi yıkan bir enzim olmayıp sinaptik membran potansiyelini aktif olarak düzenler."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Nörotransmiter",
+      "Sinaptik Etki",
+      "Temel Salınım Kaynağı"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "GABA"
+       },
+       {
+        "text": "İnhibitör (Baskılayıcı)",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Striatum ve Globus pallidus"
+       }
+      ],
+      [
+       {
+        "text": "Glutamat"
+       },
+       {
+        "text": "Eksitatör (Uyarıcı)",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Serebral korteks ve Subtalamik nükleus"
+       }
+      ],
+      [
+       {
+        "text": "Dopamin"
+       },
+       {
+        "text": "D1 ile uyarıcı, D2 ile baskılayıcı",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Substantia nigra pars kompakta"
+       }
+      ],
+      [
+       {
+        "text": "Asetilkolin"
+       },
+       {
+        "text": "Modülatör",
+        "isMasked": false
+       },
+       {
+        "text": "Striatal internöronlar",
+        "isMasked": true,
+        "hint": ""
+       }
+      ]
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Bazal gangliyon nörotransmiterleri ve fonksiyonel ilkeleri",
+     "items": [
+      {
+       "text": "GABA bazal gangliyonların temel inhibitör nörotransmiteridir.",
+       "isLie": false,
+       "explanation": "Striatum ve pallidum çıkış nöronları GABA salarak hedef çekirdekleri inhibe eder."
+      },
+      {
+       "text": "Glutamat serebral korteks ve subtalamik nükleustan salınan temel eksitatör ileticidir.",
+       "isLie": false,
+       "explanation": "Kortikostriatal ve subtalamopallidal projeksiyonlar glutamaterjik eksitatör liflerdir."
+      },
+      {
+       "text": "Dopamin striatumdaki D1 ve D2 reseptörlerinin ikisinde de aynı yönde uyarıcı etki gösterir.",
+       "isLie": true,
+       "explanation": "Dopamin D1 reseptörleri aracılığıyla uyarıcı, D2 reseptörleri aracılığıyla ise baskılayıcı etki meydana getirir."
+      },
+      {
+       "text": "Bisiklete binme gibi öğrenilmiş motor hareketlerin otomatik yürütülmesi bazal gangliyonların görevidir.",
+       "isLie": false,
+       "explanation": "Öğrenilmiş motor kalıpların otomatik koordinasyonu bazal gangliyonların başlıca fonksiyonlarındandır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Substantia nigra pars kompaktadan salınan dopamin D1 reseptörleri üzerinden uyarıcı etki gösterir.",
+     "maskedTerm": "D1 reseptörleri",
+     "hint": "Hücre içi sinyal iletiminde cAMP artışına yol açan mekanizma"
+    },
+    {
+     "type": "active_recall",
+     "question": "Bazal gangliyon devrelerinde serebral korteks ve subtalamik nükleustan salınan temel uyarıcı nörotransmiter hangisidir?",
+     "answer": "Temel uyarıcı nörotransmiter glutamattır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 4,
+   "bolum": "1.4",
+   "pdfSayfalari": [
+    8,
+    8
+   ],
+   "sourcePdf": {
+    "fileName": "Bazal ganglionlar.pdf",
+    "primaryPage": 8,
+    "startPage": 8,
+    "endPage": 8
+   },
+   "title": "Bazal Ganglion Motor Devreleri: Direkt Yol Mekanizması ve Hareketi Başlatma",
+   "subtitle": "Striatopallidal projeksiyon, disinhibisyon ve talamokortikal eksitasyon",
+   "badge": "Motor Devreler",
+   "synthesisNarrative": "Direkt yol, serebral kortekste tasarlanan istemli hareketlerin başlatılmasını ve kolaylaştırılmasını sağlayan temel bazal gangliyon devresidir.\n\n- **Devre Akışı:** Serebral korteks (frontal ve parietal alanlar) → Striatum (Putamen) → Globus Pallidus İnternus (GPi) / Substantia Nigra pars Retikulata (SNr) → Talamus → Serebral Korteks.\n- **Kortikal Aktivasyon:** Korteks, striatuma glutamat salarak D1 reseptörü ve Substans P taşıyan striatal GABA'erjik nöronları uyarır.\n- **Disinhibisyon Mekanizması:** Normal koşullarda GPi ve SNr çekirdekleri talamus üzerinde sürekli (tonik) bir GABA'erjik baskılama uygular. Direkt yol aktive olduğunda striatum, GPi ve SNr'yi güçlü biçimde inhibe eder. Bu durum GPi/SNr'nin talamus üzerindeki tonik baskısını kaldırır; yani talamus disinhibe olur.\n- **Hareketi Başlatma:** Serbest kalan talamus, kortekse eksitatör (glutamaterjik) uyarılar göndererek istenen motor hareketin başlamasını sağlar. Substantia nigra pars kompaktadan gelen dopamin, D1 reseptörleri üzerinden bu yolu daha da güçlendirir.\n\n> [!IMPORTANT]\n> Direkt yolun özü 'inhibisyonun inhibe edilmesi' yani talamusun disinhibisyonudur; bu sayede talamus korteksi uyararak hareketi başlatır.",
+   "content": "Direkt yolda korteks striatumu uyarır, striatum GPi/SNr'yi inhibe eder; talamus disinhibe olarak korteksi uyarır ve hareket başlar.",
+   "interactiveElements": [
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Kortikal Uyarı: Frontal ve parietal korteks glutamat salarak striatumu (putamen) aktive eder.",
+      "2. Striatal Yanıt: D1 reseptörü taşıyan striatal GABA'erjik nöronlar uyarılır.",
+      "3. Çıkış Çekirdeği İnhibisyonu: Striatum GPi ve SNr üzerine GABA salarak bu merkezleri güçlü biçimde baskılar.",
+      "4. Talamik Disinhibisyon: GPi ve SNr çekirdeklerinin talamus üzerindeki tonik baskısı kalkar ve talamus serbest kalır.",
+      "5. Hareketi Başlatma: Talamus motor kortekse eksitatör uyarılar ileterek hedeflenen hareketi başlatır."
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Direkt yol devresinde striatumdan gelen GABA'erjik sinyaller GPi ve SNr çekirdeklerini inhibe ettiğinde talamusta ortaya çıkan fonksiyonel süreç hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Tonik inhibisyon kalkar, talamus disinhibe olarak kortekse eksitatör uyarı gönderir",
+       "isCorrect": true,
+       "explanation": "GPi ve SNr inhibe edildiğinde talamus üzerindeki sürekli GABA baskısı kalkar. Talamus disinhibe kalarak kortekse eksitatör uyarı iletir ve hareket başlar."
+      },
+      {
+       "key": "B",
+       "text": "Talamus üzerindeki GABA'erjik baskı iki katına çıkarak motor korteksi tamamen durdurur",
+       "isCorrect": false,
+       "explanation": "GPi ve SNr çekirdekleri inhibe edildiği için talamusa giden inhibitör sinyaller azalır. Bu nedenle talamus üzerindeki baskı iki katına çıkmayıp tamamen ortadan kalkar."
+      },
+      {
+       "key": "C",
+       "text": "Talamus medulla spinalis ön boynuzuna doğrudan inen eksitatör traktusları uyarır",
+       "isCorrect": false,
+       "explanation": "Talamus efferent liflerini medulla spinalise doğrudan göndermez; çıktısını serebral kortekse projekte ederek kortikospinal sistemi aktive eder."
+      },
+      {
+       "key": "D",
+       "text": "Substantia nigra pars kompakta nöronları dejenere olarak dopamin salınımını keser",
+       "isCorrect": false,
+       "explanation": "Pars kompakta nöronlarının dejenerasyonu Parkinson hastalığında izlenen patolojik bir süreçtir. Direkt yolun sağlıklı fizyolojik iletim basamaklarında dopaminerjik girdi kesilmeyip hareketin başlatılmasını kolaylaştırıcı yönde sürdürülür."
+      }
+     ]
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "İstemli bir parmak hareketi başlatılmak istendiğinde serebral korteksten striatuma yoğun eksitatör glutamat deşarjı ulaşıyor.",
+     "question": "Bu aşamada direkt yol devresinin fizyolojik olarak hareketi başlatabilmesi için hangi sinaptik olaylar dizisi gerçekleşmelidir?",
+     "options": [
+      {
+       "text": "D1 reseptörlü striatum nöronları uyarılmalı, GPi inhibe edilmeli ve talamus disinhibe olmalıdır",
+       "isCorrect": true,
+       "feedback": "Bu seçenek fizyolojik disinhibisyon basamaklarını eksiksiz açıklar. D1 uyarımı GPi'yi baskılar, serbest kalan talamus kortekse pozitif geribildirim yaparak hareketi başlatır."
+      },
+      {
+       "text": "Striatum GPi çekirdeğini eksite etmeli ve talamus daha güçlü bir baskı altına alınmalıdır",
+       "isCorrect": false,
+       "feedback": "Striatum GPi'yi eksite etmez, GABA ile inhibe eder. Talamusun daha güçlü baskılanması hareketi başlatmak yerine tamamen engeller."
+      },
+      {
+       "text": "Talamus doğrudan striatumu baskılayarak kortikal motor alanların uyarılmasını engellemelidir",
+       "isCorrect": false,
+       "feedback": "Talamus bazal gangliyon döngüsünde serebral kortekse eksitatör uyarılar ileterek hareketi kolaylaştıran bir merkezdir. Striatumu baskılayarak kortikal alanların aktivasyonunu durdurması fizyolojik disinhibisyon süreciyle bağdaşmamaktadır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Direkt yol aktivasyonu GPi ve SNr üzerindeki tonik baskıyı kaldırarak talamusun disinhibisyon ile uyarılmasını sağlar.",
+     "maskedTerm": "disinhibisyon",
+     "hint": "Baskılayıcı etkinin ortadan kalkmasıyla serbest kalma süreci"
+    },
+    {
+     "type": "active_recall",
+     "question": "Direkt motor yolda striatumdan GPi ve SNr'ye uzanan aksonlarda GABA ile birlikte hangi nöropeptit salınır?",
+     "answer": "GABA ile birlikte P maddesi (Substans P) salınır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 5,
+   "bolum": "1.5",
+   "pdfSayfalari": [
+    1,
+    8
+   ],
+   "sourcePdf": {
+    "fileName": "Bazal ganglionlar.pdf",
+    "primaryPage": 8,
+    "startPage": 1,
+    "endPage": 8
+   },
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Anatomi, Nörotransmiterler ve Direkt Yol",
+   "subtitle": "Ekstrapiramidal giriş, nükleuslar, nörokimyasal denge ve hareketi başlatma",
+   "badge": "Bölüm Tekrarı",
+   "isCheckpoint": true,
+   "checkpointNumber": 1,
+   "synthesisNarrative": "Bu tekrar sayfasında ekstrapiramidal sistemin genel yapısını, bazal gangliyon nükleuslarını, temel nörotransmiterleri ve direkt yol mekanizmasını pekiştireceksiniz.\n\n- **Sistem Ayrımı:** İnen kortikospinal ve kortikobulber yollar piramidal sistemi kurarken; kortiko-bazal ganglia ve serebellar modülatör döngüler ekstrapiramidal sistemi meydana getirir.\n- **Anatomik Yapılar:** Striatum (kaudatus ve putamen), globus pallidus (GPe ve GPi), substantia nigra (SNc ve SNr) ile subtalamik nükleus temel bileşenlerdir. Putamen ve globus pallidus nükleus lentiformisi oluşturur.\n- **Nörotransmiter Dengesi:** GABA ana inhibitör, glutamat ana eksitatördür. Dopamin ise D1 reseptörleri üzerinden eksitatör, D2 reseptörleri üzerinden inhibitör modülasyon sağlar.\n- **Direkt Yol:** Korteks → Striatum → GPi/SNr (-) → Talamus (+) → Korteks zincirinde talamusun disinhibisyonu ile hareket başlatılır.\n\n> [!NOTE]\n> Checkpoint 1 kapsamındaki bu temel ilkeler, ileride göreceğimiz indirekt yol ve hareket bozukluklarının anlaşılmasında zemin oluşturur.",
+   "content": "İlk dört slaytın tekrarı: ekstrapiramidal sistem, nükleuslar, nörotransmiterler ve direkt yolun disinhibisyonla hareketi başlatması.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Bazal gangliyon devrelerinde istirahat halinde talamus üzerinde sürekli tonik inhibisyon uygulayan temel çıkış çekirdekleri hangileridir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Globus pallidus internus (GPi) ve Substantia nigra pars retikulata (SNr)",
+       "isCorrect": true,
+       "explanation": "GPi ve SNr bazal gangliyonların temel efferent çıkış çekirdekleridir. Talamus üzerine sürekli GABA salarak kortekse giden uyarıları bazal düzeyde baskı altında tutarlar."
+      },
+      {
+       "key": "B",
+       "text": "Nükleus kaudatus ve Putamen",
+       "isCorrect": false,
+       "explanation": "Kaudatus ve putamen striatumu oluşturan afferent giriş merkezleridir. Talamusa doğrudan tonik inhibitör çıkış veren yapılar olmayıp kortikal girdileri karşılarlar."
+      },
+      {
+       "key": "C",
+       "text": "Substantia nigra pars kompakta ve Ventral tegmental alan",
+       "isCorrect": false,
+       "explanation": "Pars kompakta striatuma dopaminerjik projeksiyon gönderen modülatör çekirdektir. Talamusu GABA ile tonik olarak baskılayan efferent çıkış kapısı değildir."
+      },
+      {
+       "key": "D",
+       "text": "Lateral premotor korteks ve Suplementer motor alan",
+       "isCorrect": false,
+       "explanation": "Bu yapılar serebral kortekste yer alan motor planlama alanlarıdır. Bazal gangliyonların subkortikal çıkış çekirdekleri arasında bulunmazlar."
+      }
+     ]
+    },
+    {
+     "type": "venn_grid",
+     "labelA": "Direkt Motor Yol",
+     "labelB": "İnen Kortikospinal Yol",
+     "items": [
+      {
+       "criterion": "Talamus üzerinden kortekse geri dönen modülatör bir döngü şeklinde çalışır",
+       "correct": "A",
+       "explanation": "Direkt yol kortiko-bazal ganglia-talamo-kortikal geri bildirim döngüsünün parçasıdır."
+      },
+      {
+       "criterion": "Korteksten çıkarak doğrudan medulla spinalis ön boynuzuna iner",
+       "correct": "B",
+       "explanation": "Kortikospinal traktus alt motor nöronlara doğrudan inen piramidal iletim yoludur."
+      },
+      {
+       "criterion": "İskelet kası hareketlerinin planlanması veya icrasında görev alır",
+       "correct": "both",
+       "explanation": "Her iki motor sistem de iskelet kası hareketlerinin sağlıklı biçimde yürütülmesinde iş birliği yapar."
+      },
+      {
+       "criterion": "Temel mekanizması talamusun disinhibisyonu ile korteksin uyarılmasıdır",
+       "correct": "A",
+       "explanation": "Talamik disinhibisyon bazal gangliyon direkt yolunun ayırt edici sinaptik mekanizmasıdır."
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Eksitatör (Uyarıcı) Etki",
+     "rightCategory": "İnhibitör (Baskılayıcı) Etki",
+     "cards": [
+      {
+       "text": "Kortikostriatal glutamaterjik projeksiyon",
+       "category": "left"
+      },
+      {
+       "text": "Striatopallidal GABA'erjik direkt projeksiyon",
+       "category": "right"
+      },
+      {
+       "text": "GPi'nin talamus üzerindeki tonik GABA bazal çıktısı",
+       "category": "right"
+      },
+      {
+       "text": "Talamokortikal glutamaterjik projeksiyon",
+       "category": "left"
+      },
+      {
+       "text": "Dopaminin striatal D1 reseptörleri üzerindeki etkisi",
+       "category": "left"
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Anatomi, nörotransmiterler ve direkt yol ilkeleri",
+     "items": [
+      {
+       "text": "Striatum dorsalde nükleus kaudatus ve putamenden oluşur.",
+       "isLie": false,
+       "explanation": "Dorsal striatum kaudatus ve putamen çekirdeklerinin anatomik bütünüdür."
+      },
+      {
+       "text": "Dopamin D1 reseptörlerini uyararak direkt yolu aktive eder.",
+       "isLie": false,
+       "explanation": "Dopamin D1 reseptörleri aracılığıyla striatal direkt yol nöronlarını aktive eder."
+      },
+      {
+       "text": "Direkt yol aktive olduğunda GPi uyarılır ve talamus üzerindeki baskı artar.",
+       "isLie": true,
+       "explanation": "Direkt yol aktive olduğunda striatum GPi'yi inhibe eder; talamus üzerindeki baskı artmaz, aksine kalkar (disinhibisyon)."
+      },
+      {
+       "text": "Glutamat korteks projeksiyonlarının kullandığı temel eksitatör nörotransmiterdir.",
+       "isLie": false,
+       "explanation": "Kortikostriatal ve talamokortikal lifler eksitatör glutamat salarak çalışır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Direkt yol devresinde striatumdan GPi ve SNr'ye iletilen temel inhibitör nörotransmiter nedir?",
+     "answer": "Temel inhibitör nörotransmiter GABA'dır (P maddesi ile birlikte salınır)."
+    }
+   ]
+  },
+  {
+   "slideNumber": 6,
+   "bolum": "2.1",
+   "pdfSayfalari": [
+    8,
+    8
+   ],
+   "sourcePdf": {
+    "fileName": "Bazal ganglionlar.pdf",
+    "primaryPage": 8,
+    "startPage": 8,
+    "endPage": 8
+   },
+   "title": "Bazal Ganglion Motor Devreleri: İndirekt Yol Mekanizması ve Hareketi Baskılama",
+   "subtitle": "GPe, subtalamik nükleus eksitasyonu ve istenmeyen hareketlerin durdurulması",
+   "badge": "Motor Devreler",
+   "synthesisNarrative": "İndirekt yol, istenmeyen veya hedeflenen eylemle yarışan uygunsuz motor hareketlerin baskılanmasını ve durdurulmasını sağlayan kritik devredir.\n\n- **Devre Akışı:** Korteks → Putamen → Globus Pallidus Eksternus (GPe) → Subtalamik Nükleus (STN) → GPi / SNr → Talamus → Korteks.\n- **Striatal Aktivasyon:** Korteks striatumu uyarır; striatumdaki D2 reseptörü ve enkefalin taşıyan GABA'erjik nöronlar aktive olur.\n- **STN Disinhibisyonu:** Striatum, GPe'yi GABA salarak inhibe eder. Normalde GPe, subtalamik nükleus (STN) üzerinde tonik bir baskı uygulamaktadır. GPe inhibe olunca STN üzerindeki baskı kalkar ve STN disinhibe olarak aşırı uyarılır.\n- **GPi Uyarımı ve Hareketin Baskılanması:** Disinhibe olan STN, GPi ve SNr çekirdeklerine eksitatör (glutamat) sinyaller gönderir. Uyarılan GPi/SNr, talamusa bol miktarda GABA salar. Talamus güçlü biçimde baskılandığı için motor korteksi uyaramaz ve istenmeyen hareketler engellenir.\n- **Dopamin Etkisi:** Dopamin D2 reseptörleri aracılığıyla bu yolu baskılar; indirekt yolun durdurucu gücü azaldığı için hareket dolaylı olarak kolaylaşır.\n\n> [!IMPORTANT]\n> Subtalamik nükleus bazal gangliyonlar içindeki tek saf eksitatör (glutamaterjik) iç çekirdektir; GPi'yi uyararak talamusu susturur.",
+   "content": "İndirekt yolda striatum GPe'yi inhibe eder, serbest kalan STN glutamatla GPi'yi uyarır; GPi talamusu baskılayarak hareketi durdurur.",
+   "interactiveElements": [
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Kortikal Giriş: Serebral korteks glutamat ile striatumdaki D2 reseptörlü nöronları uyarır.",
+      "2. GPe İnhibisyonu: Striatum GABA ve enkefalin salarak globus pallidus eksternusu (GPe) baskılar.",
+      "3. STN Disinhibisyonu: GPe baskılanınca subtalamik nükleus (STN) üzerindeki tonik inhibisyon kalkar.",
+      "4. GPi Eksitasyonu: Disinhibe olan STN glutamat salarak GPi ve SNr çıkış çekirdeklerini aktive eder.",
+      "5. Talamusun Baskılanması: GPi talamusa yoğun GABA salarak talamokortikal motor çıktıyı durdurur."
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "İndirekt yol devresinde subtalamik nükleusun (STN) bazal gangliyon çıkış çekirdekleri olan GPi ve SNr üzerindeki sinaptik etkisi nasıldır?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Glutamat salarak bu çekirdekleri eksite eder ve talamusun daha fazla baskılanmasını sağlar",
+       "isCorrect": true,
+       "explanation": "Subtalamik nükleus glutamaterjik eksitatör nöronlara sahiptir. GPi ve SNr'yi uyararak talamus üzerindeki inhibitör tonusu artırır ve hareketi baskılar."
+      },
+      {
+       "key": "B",
+       "text": "GABA salarak bu çekirdekleri inhibe eder ve talamusu serbest bırakır",
+       "isCorrect": false,
+       "explanation": "Subtalamik nükleus GABA'erjik değil glutamaterjiktir. GPi çekirdeğini inhibe etmeyip güçlü biçimde uyararak talamusun baskılanmasını sağlar."
+      },
+      {
+       "key": "C",
+       "text": "Dopamin salarak striatumdaki D2 reseptörlerini doğrudan bloke eder",
+       "isCorrect": false,
+       "explanation": "Dopamin, mezensefalondaki substantia nigra pars kompakta nöronları tarafından sentezlenen ve salınan bir monoamindir. Subtalamik nükleus dopaminerjik bir yapı olmayıp glutamaterjik eksitatör nöronlarıyla GPi çekirdeğini aktive eder."
+      },
+      {
+       "key": "D",
+       "text": "Asetilkolin salarak talamokortikal eksitatör aksonları doğrudan dejenere eder",
+       "isCorrect": false,
+       "explanation": "Asetilkolin, striatum içindeki internöronlar tarafından salınarak devrelerin ince ayarını modüle eden bir transmiterdir. Subtalamik nükleus ise glutamat salarak GPi çekirdeğini eksite eden fizyolojik bir subkortikal istasyondur."
+      }
+     ]
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Direkt Motor Yol",
+     "rightTitle": "İndirekt Motor Yol",
+     "leftPoints": [
+      "Striatumda D1 reseptörleri yer alır",
+      "Arada GPe ve STN durakları bulunmaz",
+      "GPi ve SNr çekirdekleri inhibe edilir",
+      "Talamus disinhibe olur ve hareket başlar"
+     ],
+     "rightPoints": [
+      "Striatumda D2 reseptörleri yer alır",
+      "Devrede GPe ve Subtalamik Nükleus bulunur",
+      "STN tarafından GPi ve SNr uyarılır",
+      "Talamus baskılanır ve hareket durdurulur"
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "İndirekt yolda GPe inhibe edildiğinde subtalamik nükleus üzerindeki baskı kalkarak STN disinhibe olur.",
+     "maskedTerm": "subtalamik nükleus",
+     "hint": "Korpus Luysii olarak bilinen eksitatör çekirdek"
+    },
+    {
+     "type": "active_recall",
+     "question": "Substantia nigradan salınan dopamin indirekt yoldaki striatal D2 reseptörlerine bağlandığında bu yolun fonksiyonu nasıl etkilenir?",
+     "answer": "Dopamin D2 reseptörleri üzerinden indirekt yolu baskılar; yolun hareketi durdurucu etkisi azaldığı için istemli hareket kolaylaşır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 7,
+   "bolum": "2.2",
+   "pdfSayfalari": [
+    9,
+    9
+   ],
+   "sourcePdf": {
+    "fileName": "Bazal ganglionlar.pdf",
+    "primaryPage": 9,
+    "startPage": 9,
+    "endPage": 9
+   },
+   "title": "Paralel Devreler: İskeletomotor, Okülomotor, Asosiyatif ve Limbik Döngüler",
+   "subtitle": "Bazal gangliyonların motor dışı kortikal işlevleri ve paralel döngü mimarisi",
+   "badge": "Fonksiyonel Devreler",
+   "synthesisNarrative": "Bazal gangliyonlar yalnızca iskelet kaslarının hareketini kontrol etmez; serebral korteksin farklı alanlarıyla dört ana paralel ve işlevsel döngü kurar.\n\n- **İskeletomotor Devre:** Premotor alan ve suplementer motor alandan başlar, putamene projekte olur, GPi/SNr ve talamus (VA/VL) üzerinden motor kortekse döner. İstemli gövde ve ekstremite hareketlerini yürütür.\n- **Okülomotor Devre:** Frontal göz alanından (FEF) kaynaklanır, nükleus kaudatusta işlenir ve talamus üzerinden geri dönerek sakkadik göz hareketlerini yönetir.\n- **Asosiyatif Devre:** Dorsolateral prefrontal korteksten başlar, kaudatus başına ulaşır ve talamus üzerinden geri döner. Bilişsel işlevler, yönetici fonksiyonlar, motor planlama ve çalışma belleğini modüle eder.\n- **Limbik Devre:** Singulat ve orbitofrontal korteksten kaynaklanır, ventral striatuma (nükleus akkumbens) projekte olur. Duygusal davranışlar, motivasyon, dürtü kontrolü ve ödül mekanizmasını düzenler.\n\n> [!NOTE]\n> Putamen temel olarak motor devrenin giriş kapısı iken, nükleus kaudatus bilişsel ve okülomotor döngülerin giriş merkezidir.",
+   "content": "Bazal gangliyonlarda dört paralel devre vardır: iskeletomotor (putamen), okülomotor (kaudatus), asosiyatif (kaudatus başı) ve limbik (nükleus akkumbens).",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sakkadik göz hareketlerinin kontrolünden sorumlu olan okülomotor bazal gangliyon devresinde kortikal girdiyi alan temel striatal yapı hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Nükleus kaudatus",
+       "isCorrect": true,
+       "explanation": "Okülomotor devre frontal göz alanından gelen aksonları nükleus kaudatus üzerinde toplar. Sakkadik göz hareketlerinin planlanması kaudatus üzerinden modüle edilir."
+      },
+      {
+       "key": "B",
+       "text": "Putamen",
+       "isCorrect": false,
+       "explanation": "Putamen iskeletomotor devrenin temel giriş kapısıdır. Ekstremite ve gövde hareketlerinin kontrolünde rol oynar, okülomotor devrenin primer striatal istasyonu değildir."
+      },
+      {
+       "key": "C",
+       "text": "Ventral striatum (Nükleus akkumbens)",
+       "isCorrect": false,
+       "explanation": "Ventral striatum limbik devrenin giriş merkezidir. Motivasyon ve duygusal süreçleri modüle eder, sakkadik göz hareketlerinin yürütücüsü değildir."
+      },
+      {
+       "key": "D",
+       "text": "Subtalamik nükleus",
+       "isCorrect": false,
+       "explanation": "Subtalamik nükleus indirekt motor devrenin ara istasyonudur. Frontal göz alanından doğrudan primer striatal girdi alan çekirdek değildir."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Paralel Devre",
+      "Striatal Giriş Çekirdeği",
+      "Temel Fonksiyonu"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "İskeletomotor"
+       },
+       {
+        "text": "Putamen",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "İstemli ekstremite hareketleri"
+       }
+      ],
+      [
+       {
+        "text": "Okülomotor"
+       },
+       {
+        "text": "Nükleus kaudatus",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Sakkadik göz hareketleri"
+       }
+      ],
+      [
+       {
+        "text": "Asosiyatif"
+       },
+       {
+        "text": "Nükleus kaudatus başı",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Bilişsel planlama ve çalışma belleği"
+       }
+      ],
+      [
+       {
+        "text": "Limbik"
+       },
+       {
+        "text": "Ventral striatum (Nükleus akkumbens)",
+        "isMasked": false
+       },
+       {
+        "text": "Motivasyon, duygu ve ödül",
+        "isMasked": true,
+        "hint": ""
+       }
+      ]
+     ]
+    },
+    {
+     "type": "feature_bidding",
+     "optionA": "İskeletomotor Devre",
+     "optionB": "Limbik Devre",
+     "rounds": [
+      {
+       "feature": "Primer giriş kapısı olarak putamen çekirdeğini kullanır",
+       "correct": "A",
+       "explanation": "İskeletomotor devrede kortikal motor lifler putamene ulaşır."
+      },
+      {
+       "feature": "Ventral striatumdaki nükleus akkumbens üzerinden işlenir",
+       "correct": "B",
+       "explanation": "Limbik devrenin ana subkortikal istasyonu nükleus akkumbenstir."
+      },
+      {
+       "feature": "Duygusal davranışları, motivasyonu ve ödül sistemini modüle eder",
+       "correct": "B",
+       "explanation": "Limbik devre motivasyon ve duygu durum kontrolünden sorumludur."
+      },
+      {
+       "feature": "İstemli kas hareketlerinin planlanması ve yürütülmesini sağlar",
+       "correct": "A",
+       "explanation": "İskeletomotor döngü iskelet kaslarının koordinasyonunu organize eder."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Limbik devrede duygusal davranışlar ve motivasyonel süreçler ventral striatum olarak bilinen nükleus akkumbens üzerinden modüle edilir.",
+     "maskedTerm": "nükleus akkumbens",
+     "hint": "Ödül ve motivasyon döngüsünün kilit çekirdeği"
+    },
+    {
+     "type": "active_recall",
+     "question": "Dorsolateral prefrontal korteksten kaynaklanarak bilişsel süreçleri, strateji geliştirmeyi ve çalışma belleğini yöneten bazal gangliyon devresi hangisidir?",
+     "answer": "Asosiyatif (bilişsel) devredir; girdisini nükleus kaudatus başı aracılığıyla alır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 8,
+   "bolum": "2.3",
+   "pdfSayfalari": [
+    10,
+    11
+   ],
+   "sourcePdf": {
+    "fileName": "Bazal ganglionlar.pdf",
+    "primaryPage": 10,
+    "startPage": 10,
+    "endPage": 11
+   },
+   "title": "Motor Kontrol İlkeleri: 'Odaklama' ve 'Ölçekleme' Mekanizmaları",
+   "subtitle": "Efferent kopya, proprioseptif kıyaslama ve çevreleyen baskılama",
+   "badge": "Fizyolojik İlkeler",
+   "synthesisNarrative": "Bazal gangliyonlar, motor hareketlerin hedefe tam uygun hızda, açıda ve kuvvette icra edilmesi için iki temel kontrol prensibi kullanır:\n\n- **İstirahat Tonusu:** Dinlenim halindeyken bazal gangliyonlar (GPi/SNr) talamus üzerinde tonik bir baskı kurarak korteksin kendiliğinden ve kontrolsüz uyarılmasını engeller.\n- **Ölçekleme (Scaling):** Bir hareket başladığında, korteksten omuriliğe inen motor komutların bir kopyası (efferent kopya) bazal gangliyonlara gönderilir. Bazal gangliyonlar bu kopyayı parietal korteksten gelen proprioseptif ve bilinçsiz derin duyu geribildirimleriyle kıyaslar. Hareketteki hata payını hesaplar ve talamus üzerinden kortekse düzeltme sinyalleri ileterek hareketin hızını, genliğini ve kuvvetini ayarlar.\n- **Odaklama (Focus / Çevreleyen Baskılama):** Başlatılan hareketin doğru icra edilmesi için istenen motor bileşenler direkt yol ile güçlendirilirken; onunla yarışan veya komşu istenmeyen kas kasılmaları indirekt yol ile baskılanır. Böylece hedeflenen hareket netleşir.\n\n> [!NOTE]\n> Ölçekleme hareketin boyut ve hızını ayarlar; odaklama ise istenen hareketi seçip gereksiz kasılmaları baskılar.",
+   "content": "Ölçekleme proprioseptif geribildirimle hareket hız ve genliğini ayarlar; odaklama ise direkt yolla hedef hareketi seçip indirekt yolla çevreyi baskılar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Bazal gangliyonların kortikal motor komut kopyasını parietal korteksten gelen proprioseptif geribildirimle kıyaslayarak hareket hız ve genliğini ayarlaması hangi kavramla tanımlanır?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Ölçekleme (Scaling)",
+       "isCorrect": true,
+       "explanation": "Ölçekleme mekanizması, efferent kopyanın derin duyu verileriyle kıyaslanarak hareketin hız, genlik ve kuvvetinin milisaniyeler içinde kalibre edilmesini tanımlar."
+      },
+      {
+       "key": "B",
+       "text": "Odaklama (Focus)",
+       "isCorrect": false,
+       "explanation": "Odaklama, seçilen hedefe yönelik hareketin direkt yolla kuvvetlendirilmesi ve çevreleyen gereksiz kas gruplarının indirekt yolla susturulması sürecidir. Bu mekanizma hareketin netleşmesini sağlarken, duyu kıyaslamasıyla hız ve genlik ayarlanması ölçekleme ilkesine aittir."
+      },
+      {
+       "key": "C",
+       "text": "Tonik disinhibisyon",
+       "isCorrect": false,
+       "explanation": "Disinhibisyon, talamus üzerindeki inhibitör baskının kalkması sürecidir. Hız ve büyüklük hesaplamasını yapan geri bildirimli kıyaslama mekanizmasını ifade etmez."
+      },
+      {
+       "key": "D",
+       "text": "Resiprokal innervasyon",
+       "isCorrect": false,
+       "explanation": "Resiprokal innervasyon, omurilik refleks arklarında agonist kas kasılırken antagonist kasın gevşemesini koordine eden spinal bir mekanizmadır. Bazal gangliyonların kortikal komut kopyasını derin duyuyla kıyasladığı serebral ölçekleme işlevinden farklı bir yapıdadır."
+      }
+     ]
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Odaklama (Focus)",
+     "rightTitle": "Ölçekleme (Scaling)",
+     "leftPoints": [
+      "Direkt yol ile hedeflenen hareketi güçlendirir",
+      "İndirekt yol ile yarışan kas kasılmalarını durdurur",
+      "Hareketin netleşmesini ve saflaşmasını sağlar",
+      "Çevreleyen baskılama prensibiyle çalışır"
+     ],
+     "rightPoints": [
+      "Kortikal motor komutun bir kopyasını değerlendirir",
+      "Parietal proprioseptif derin duyu ile kıyaslama yapar",
+      "Hareketin hızını, genliğini ve kuvvetini ayarlar",
+      "Talamus üzerinden kortekse düzeltme bildirir"
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Motor kontrol ilkeleri: odaklama ve ölçekleme",
+     "items": [
+      {
+       "text": "İstirahat halinde bazal gangliyonlar talamusu tonik olarak inhibe ederek korteksi kontrol altında tutar.",
+       "isLie": false,
+       "explanation": "Dinlenim halindeki GPi/SNr tonik GABA deşarjı ile talamokortikal aktiviteyi baskılar."
+      },
+      {
+       "text": "Ölçekleme mekanizmasında parietal korteksten gelen proprioseptif duyu verileri kullanılır.",
+       "isLie": false,
+       "explanation": "Efferent komut kopyası parietal derin duyu geribildirimleriyle sürekli karşılaştırılır."
+      },
+      {
+       "text": "Odaklama mekanizmasında istenmeyen hareket bileşenleri direkt yol aracılığıyla kuvvetlendirilir.",
+       "isLie": true,
+       "explanation": "İstenmeyen hareket bileşenleri direkt yolla kuvvetlendirilmez; indirekt yol aracılığıyla inhibe edilerek baskılanır."
+      },
+      {
+       "text": "Öğrenilmiş motor programların otomatik yürütülmesi bazal gangliyonların temel işlevlerindendir.",
+       "isLie": false,
+       "explanation": "Bisiklete binme, yürüme gibi otomatikleşmiş kalıplar bazal gangliyonlarca organize edilir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Bazal gangliyonlar kortikal motor komut kopyasını parietal korteksten gelen proprioseptif verilerle kıyaslayarak ölçekleme işlevini gerçekleştirir.",
+     "maskedTerm": "ölçekleme",
+     "hint": "Hareketin hız ve büyüklüğünü ayarlama mekanizması"
+    },
+    {
+     "type": "active_recall",
+     "question": "Hedeflenen motor hareketin direkt yolla güçlendirilirken, çevreleyen istenmeyen hareketlerin indirekt yolla baskılanmasına ne ad verilir?",
+     "answer": "Odaklama (çevreleyen baskılama / focus) mekanizması adı verilir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 9,
+   "bolum": "2.4",
+   "pdfSayfalari": [
+    12,
+    13
+   ],
+   "sourcePdf": {
+    "fileName": "Bazal ganglionlar.pdf",
+    "primaryPage": 12,
+    "startPage": 12,
+    "endPage": 13
+   },
+   "title": "Bazal Ganglion Hastalıkları Etiyolojisi ve İstemsiz Hareketler Spektrumu",
+   "subtitle": "Nörodejeneratif, vasküler, kalıtsal nedenler ve hiperkinetik-hipokinetik ayrımı",
+   "badge": "Hastalık Spektrumu",
+   "synthesisNarrative": "Bazal gangliyon patolojileri, direkt ve indirekt yollar arasındaki hassas dengenin bozulması sonucu ortaya çıkar.\n\n- **Etiyolojik Nedenler:**\n  * Dejeneratif: Parkinson hastalığı gibi nöron kaybıyla seyreden süreçler.\n  * Kalıtsal: Huntington hastalığı ve Wilson hastalığı gibi genetik geçişli tablolar.\n  * Vasküler: İskemik enfarktlar veya intraserebral kanamalar.\n  * Enfeksiyon: Ensefalitler ve post-enfeksiyöz otoimmün tablolar.\n  * Doğum Travması ve Perinatal Hasar: Kernikterus veya serebral palsi.\n  * İlaçlar: Dopamin reseptör blokörleri ve nöroleptik ajanlar.\n- **Klinik Spektrum:**\n  * Hipokinetik Bulgular: Hareketin başlatılmasında güçlük (akinezi), hareketlerin yavaşlaması (bradikinezi) ve kas sertliği (rijidite).\n  * Hiperkinetik Bulgular (İstemsiz Hareketler): Tremor, kore, atetoz, distoni ve hemiballismus gibi aşırı motor aktiviteler.\n\n> [!IMPORTANT]\n> Direkt yol yetersizliği hipokinetik tablolara (Parkinsonizm), indirekt yol yetersizliği ise hiperkinetik istemsiz hareketlere yol açar.",
+   "content": "Bazal gangliyon hastalıkları dejeneratif, kalıtsal, vasküler ve toksik nedenlerle ortaya çıkarak hipokinetik ve hiperkinetik tablolara yol açar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Bazal gangliyon hastalıklarının klinik spektrumunda hareketin yavaşlaması ve başlatılmasında güçlükle tanımlanan temel hipokinetik bulgu hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Bradikinezi",
+       "isCorrect": true,
+       "explanation": "Bradikinezi, istemli hareketlerin belirgin biçimde yavaşlaması ve ardışık motor eylemlerin genliğinin küçülmesidir. Hipokinetik bazal gangliyon bozukluklarının ana bulgusudur."
+      },
+      {
+       "key": "B",
+       "text": "Hemiballismus",
+       "isCorrect": false,
+       "explanation": "Hemiballismus, vücudun kontralateral yarısında omuz ve kalça eklemlerinden başlayan ani, savurucu ve fırlatıcı hareketlerle karakterize hiperkinetik bir tablodur. İstemli motor eylemlerin yavaşlamasıyla seyreden hipokinetik bozukluk grubunun aksine aşırı istemsiz hareketler sınıfına girer."
+      },
+      {
+       "key": "C",
+       "text": "Kore",
+       "isCorrect": false,
+       "explanation": "Kore amaçsız, düzensiz, hızlı ve sıçrayıcı istemsiz hareketlerle karakterize hiperkinetik bir patolojidir. Hareketin yavaşlamasını değil aşırı istemsiz hareketleri ifade eder."
+      },
+      {
+       "key": "D",
+       "text": "Atetoz",
+       "isCorrect": false,
+       "explanation": "Atetoz ekstremitelerin distalinde görülen yavaş ve kıvrılma tarzındaki istemsiz hiperkinetik hareketlerdir. İstemli motor eylemin yavaşlaması tablosu değildir."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Etiyolojik Kategori",
+      "Örnek Klinik Durum",
+      "Motor Belirti Tipi"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "Dejeneratif"
+       },
+       {
+        "text": "Parkinson hastalığı",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Bradikinezi, rijidite, istirahat tremoru"
+       }
+      ],
+      [
+       {
+        "text": "Kalıtsal"
+       },
+       {
+        "text": "Huntington hastalığı",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Koreik istemsiz hareketler"
+       }
+      ],
+      [
+       {
+        "text": "Vasküler"
+       },
+       {
+        "text": "Subtalamik nükleus enfarktı",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Hemiballismus fırlatma hareketleri"
+       }
+      ],
+      [
+       {
+        "text": "Doğum travması / Sarılık"
+       },
+       {
+        "text": "Kernikterus",
+        "isMasked": false
+       },
+       {
+        "text": "Atetoz ve koreatetoz",
+        "isMasked": true,
+        "hint": ""
+       }
+      ]
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Hipokinetik Bulgular",
+     "rightCategory": "Hiperkinetik Bulgular",
+     "cards": [
+      {
+       "text": "Bradikinezi (hareketlerde yavaşlama)",
+       "category": "left"
+      },
+      {
+       "text": "Akinezi (hareketi başlatamama)",
+       "category": "left"
+      },
+      {
+       "text": "Kore (hızlı sıçrayıcı hareketler)",
+       "category": "right"
+      },
+      {
+       "text": "Hemiballismus (şiddetli fırlatıcı hareketler)",
+       "category": "right"
+      },
+      {
+       "text": "Kas rijiditesi (kurşun boru sertliği)",
+       "category": "left"
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Bazal gangliyon hastalıklarında hareketin başlatılmasında güçlük ve yavaşlama tablosu bradikinezi olarak adlandırılır.",
+     "maskedTerm": "bradikinezi",
+     "hint": "İstemli motor eylemlerin hız ve genliğindeki belirgin azalma"
+    },
+    {
+     "type": "active_recall",
+     "question": "Bazal gangliyon hastalıklarına yol açabilen temel etiyolojik sınıflardan dördünü belirtiniz.",
+     "answer": "Dejeneratif, kalıtsal, vasküler, enfeksiyöz, perinatal hasarlar (doğum travması/kernikterus) ve ilaçlara bağlı nedenlerdir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 10,
+   "bolum": "2.5",
+   "pdfSayfalari": [
+    8,
+    13
+   ],
+   "sourcePdf": {
+    "fileName": "Bazal ganglionlar.pdf",
+    "primaryPage": 12,
+    "startPage": 8,
+    "endPage": 13
+   },
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] İndirekt Yol, Fonksiyonel Devreler ve Hareket Bozuklukları",
+   "subtitle": "İndirekt yol baskılaması, paralel döngüler, odaklama-ölçekleme ve etiyoloji",
+   "badge": "Bölüm Tekrarı",
+   "isCheckpoint": true,
+   "checkpointNumber": 2,
+   "synthesisNarrative": "Bu tekrar sayfasında indirekt yol mekanizmasını, bazal gangliyonların dört paralel döngüsünü, motor kontrol prensiplerini ve hastalık etiyolojisini pekiştireceksiniz.\n\n- **İndirekt Yol Mekanizması:** Striatum → GPe (-) → STN (+) → GPi (+) → Talamus (-) zinciriyle istenmeyen hareketler baskılanır. STN glutamaterjik çıktısıyla GPi'yi uyararak talamusu durdurur.\n- **Paralel Döngüler:** İskeletomotor devre putamen üzerinden gövde ve ekstremiteleri; okülomotor devre kaudatus üzerinden göz hareketlerini; asosiyatif devre kaudatus başı üzerinden bilişsel planlamayı; limbik devre ise nükleus akkumbens üzerinden duygu ve motivasyonu yönetir.\n- **Odaklama ve Ölçekleme:** Odaklama istenen hareketi seçip çevreyi baskılarken; ölçekleme parietal derin duyu ile komut kopyasını kıyaslayarak hız ve genliği ayarlar.\n- **Hastalık Spektrumu:** Dejeneratif, vasküler, kalıtsal ve perinatal hasarlar bradikinezi gibi hipokinetik veya tremor, kore, atetoz, hemiballismus gibi hiperkinetik tablolara yol açar.\n\n> [!NOTE]\n> Checkpoint 2 sonrasında bu istemsiz hareketlerin klinik ayrıntılarına ve spesifik sendromlara geçilecektir.",
+   "content": "İndirekt yol, paralel devreler, odaklama-ölçekleme ve hareket bozuklukları etiyolojisinin tekrarı.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "İndirekt motor yolun fonksiyonel mimarisinde yer alan subtalamik nükleusun temel nörotransmiteri ve GPi üzerindeki etkisi hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Glutamat salarak GPi'yi uyarır ve talamusun inhibe edilmesini sağlar",
+       "isCorrect": true,
+       "explanation": "Subtalamik nükleus glutamaterjik eksitatör nöronlara sahiptir. GPi'yi uyararak talamusa giden inhibitör GABA akışını artırır ve hareketi baskılar."
+      },
+      {
+       "key": "B",
+       "text": "GABA salarak GPi'yi inhibe eder ve talamusu disinhibe eder",
+       "isCorrect": false,
+       "explanation": "GABA salarak GPi'yi inhibe eden yapı striatumun direkt yoludur. Subtalamik nükleus GABA salmaz ve talamusu disinhibe etmez."
+      },
+      {
+       "key": "C",
+       "text": "Dopamin salarak D2 reseptörlerini uyarır ve hareketi hızlandırır",
+       "isCorrect": false,
+       "explanation": "Dopamin, substantia nigra pars kompaktadan salınarak striatal reseptörleri modüle eden ana katekolamindir. Subtalamik nükleus ise glutamat salarak GPi çekirdeğini eksite eden eksitatör bir merkezdir."
+      },
+      {
+       "key": "D",
+       "text": "Asetilkolin salarak putamen nöronlarını doğrudan felç eder",
+       "isCorrect": false,
+       "explanation": "Subtalamik nükleus, bazal gangliyonların indirekt yolunda GPi ve SNr çekirdeklerine yoğun glutamaterjik eksitatör projeksiyonlar gönderen bir yapıdır. Putamen nöronlarına yönelik asetilkolin salınımı ve felç edici bir etkisi bulunmamaktadır."
+      }
+     ]
+    },
+    {
+     "type": "venn_grid",
+     "labelA": "İskeletomotor Devre",
+     "labelB": "Okülomotor Devre",
+     "items": [
+      {
+       "criterion": "Kortikal girdisini putamen çekirdeği üzerinden alır",
+       "correct": "A",
+       "explanation": "İskeletomotor devrenin temel striatal giriş kapısı putamendir."
+      },
+      {
+       "criterion": "Kortikal girdisini nükleus kaudatus üzerinden alır",
+       "correct": "B",
+       "explanation": "Okülomotor devre frontal göz alanından kaudatusa projekte olur."
+      },
+      {
+       "criterion": "Talamus üzerinden kortekse dönen paralel bir bazal gangliyon döngüsüdür",
+       "correct": "both",
+       "explanation": "Her iki devre de bazal gangliyonların paralel kortiko-subkortikal döngülerindendir."
+      },
+      {
+       "criterion": "Ventral striatum ve nükleus akkumbens üzerinden motivasyonu işler",
+       "correct": "neither",
+       "explanation": "Nükleus akkumbens üzerinden motivasyon ve duygusal süreçleri işleyen döngü limbik devredir."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "İndirekt yol, paralel devreler ve etiyoloji ilkeleri",
+     "items": [
+      {
+       "text": "İndirekt yolun temel görevi istenmeyen hareket bileşenlerini baskılamaktır.",
+       "isLie": false,
+       "explanation": "İndirekt yol talamusu inhibe ederek gereksiz kas aktivitelerini durdurur."
+      },
+      {
+       "text": "Asosiyatif devre kaudatus başı üzerinden bilişsel planlama ve çalışma belleğini modüle eder.",
+       "isLie": false,
+       "explanation": "Dorsolateral prefrontal korteks ile kaudatus başı arasındaki devre bilişsel işlevleri yürütür."
+      },
+      {
+       "text": "Subtalamik nükleus lezyonunda GPi aşırı uyarılır ve tüm istemli hareketler felç olur.",
+       "isLie": true,
+       "explanation": "STN lezyonunda GPi uyarılamaz, talamus aşırı serbest kalarak hemiballismus adı verilen şiddetli istemsiz hareketler doğar."
+      },
+      {
+       "text": "Bradikinezi istemli hareketlerin hız ve genliğindeki azalmayı tanımlayan hipokinetik bulgudur.",
+       "isLie": false,
+       "explanation": "Bradikinezi bazal gangliyonların en karakteristik hipokinetik hareket bozukluğu belirtisidir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "İndirekt yolun temel ara istasyonu olan subtalamik nükleus GPi üzerine eksitatör glutamat salarak talamusu baskılar.",
+     "maskedTerm": "subtalamik nükleus",
+     "hint": "GPe inhibe olunca disinhibe olan eksitatör çekirdek"
+    },
+    {
+     "type": "active_recall",
+     "question": "Bazal gangliyonların duygusal davranışlar, motivasyon ve ödül mekanizmasını düzenleyen paralel devresi hangisidir?",
+     "answer": "Limbik devredir; ventral striatumdaki nükleus akkumbens üzerinden işlenir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 11,
+   "bolum": "3.1",
+   "pdfSayfalari": [
+    14,
+    14
+   ],
+   "sourcePdf": {
+    "fileName": "Bazal ganglionlar.pdf",
+    "primaryPage": 14,
+    "startPage": 14,
+    "endPage": 14
+   },
+   "title": "Tremor Sınıflaması ve Parkinson İstirahat Tremoru",
+   "subtitle": "Statik, postural ve intansiyonel tremor ayrımı ile 4-7 Hz frekans özelliği",
+   "badge": "Hareket Bozuklukları",
+   "synthesisNarrative": "Tremor, birbirine antagonist kas gruplarının istemsiz ve ardışık kasılması sonucu ortaya çıkan az ya da çok ritmik salınım hareketleridir.\n\n- **Statik (İstirahat) Tremoru:** Ekstremite tamamen dinlenimde ve yerçekimine karşı desteklenmiş durumdayken belirir. Tipik örneği Parkinson hastalığı tremorudur.\n  * Frekansı 4-7 Hz (saniyede 4-7 salınım) arasındadır.\n  * Ellerde tipik olarak 'hap yapma' (pill-rolling) veya 'para sayma' niteliğindedir.\n  * Ayakta pedal çevirme hareketi şeklinde görülebilir; dudak, çene ve dilde de ortaya çıkabilir.\n  * İstemli bir hareket başlatıldığında tremor geçici olarak baskılanır veya kaybolur.\n- **Postural Tremor:** Yerçekimine karşı bir postür sürdürülürken (örneğin kollar öne uzatıldığında) belirginleşir; en sık esansiyel tremorda görülür.\n- **İntansiyonel (Kinetik) Tremor:** Hedefe yaklaşırken amplitüdü artan tremor olup klasik olarak serebellar patolojilerde izlenir.\n\n> [!IMPORTANT]\n> Parkinson istirahat tremoru dinlenimde belirginleşirken istemli hareketle baskılanır; bu özellik onu aksiyon ve intansiyonel tremorlardan ayırır.",
+   "content": "Parkinson tremoru 4-7 Hz frekansında, istirahatte para sayma niteliğinde olup istemli hareketle baskılanan bir statik tremordur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Parkinson hastalığında görülen istirahat tremorunun frekansı ve klinik karakteri hakkında hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "4-7 Hz frekansında olup ellerde para sayma veya hap yapma tarzında ritmik salınımlardır",
+       "isCorrect": true,
+       "explanation": "Parkinson istirahat tremoru tipik olarak saniyede 4-7 Hz frekansta seyreder. Ellerde başparmak ile işaret parmağı arasında para sayma veya hap yapma hareketini andırır."
+      },
+      {
+       "key": "B",
+       "text": "12-15 Hz frekansında olup hedefe parmakla yaklaşırken şiddeti katlanarak artar",
+       "isCorrect": false,
+       "explanation": "12-15 Hz yüksek frekanslı bir değerdir ve hedefe yaklaşırken artan tremor intansiyonel serebellar tremordur. Parkinson istirahat tremoru hedefe uzanırken baskılanır."
+      },
+      {
+       "key": "C",
+       "text": "Yalnızca kollar öne doğru uzatılıp yerçekimine direnç gösterildiğinde ortaya çıkar",
+       "isCorrect": false,
+       "explanation": "Kollar öne uzatıldığında beliren tremor postural tremordur (esansiyel tremor). Parkinson tremoru ise tam istirahat ve gevşeme anında en belirgindir."
+      },
+      {
+       "key": "D",
+       "text": "Antagonist kasların değil yalnızca agonist kasın tek taraflı kalıcı spazmıdır",
+       "isCorrect": false,
+       "explanation": "Tremor agonist ve antagonist kasların ardışık ve ritmik kasılmasıyla oluşan bir salınımdır. Tek kasın kalıcı spazmı distoni veya kramptır."
+      }
+     ]
+    },
+    {
+     "type": "feature_bidding",
+     "optionA": "İstirahat (Parkinson) Tremoru",
+     "optionB": "İntansiyonel (Serebellar) Tremor",
+     "rounds": [
+      {
+       "feature": "Ekstremite tam dinlenim ve destekteyken en belirgin haldedir",
+       "correct": "A",
+       "explanation": "İstirahat tremoru istirahat halinde ortaya çıkar ve istemli hareketle baskılanır."
+      },
+      {
+       "feature": "Hedefe yaklaşırken parmak ucunda genliği giderek artar",
+       "correct": "B",
+       "explanation": "İntansiyonel tremor hedefe varış anında maksimum genliğe ulaşır."
+      },
+      {
+       "feature": "4-7 Hz frekansında olup ellerde para sayma niteliğindedir",
+       "correct": "A",
+       "explanation": "Parkinson tremoru 4-7 Hz frekans ve para sayma ritmiyle karakterizedir."
+      },
+      {
+       "feature": "Serebellar sistem lezyonlarında ortaya çıkan aksiyon tremoru formudur",
+       "correct": "B",
+       "explanation": "İntansiyonel tremor serebellum bağlantılarının hasarında izlenir."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Tremor sınıflaması ve klinik özellikleri",
+     "items": [
+      {
+       "text": "Tremor agonist ve antagonist kasların ardışık kasılmasıyla oluşan ritmik salınımdır.",
+       "isLie": false,
+       "explanation": "Tremorun fizyopatolojik temeli zıt kas gruplarının ardışık kasılmasıdır."
+      },
+      {
+       "text": "Parkinson istirahat tremoru ayakta pedal çevirme hareketi şeklinde de görülebilir.",
+       "isLie": false,
+       "explanation": "Alt ekstremitede pedal basma veya çevirme hareketi şeklinde izlenebilir."
+      },
+      {
+       "text": "Parkinson tremoru hasta bir bardağa uzanıp su içmeye çalıştığında giderek şiddetlenir.",
+       "isLie": true,
+       "explanation": "Parkinson istirahat tremoru istemli hareket başlatıldığında şiddetlenmez; tam aksine geçici olarak baskılanır veya kaybolur."
+      },
+      {
+       "text": "Postural tremor yerçekimine karşı bir duruş sürdürülürken belirginleşir.",
+       "isLie": false,
+       "explanation": "Kolları öne uzatma gibi postür koruma durumlarında beliren form postural tremordur."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Parkinson hastalığında görülen istirahat tremoru tipik olarak saniyede 4-7 Hz frekansında ve ellerde para sayma niteliğindedir.",
+     "maskedTerm": "4-7 Hz",
+     "hint": "İstirahat tremorunun saniyedeki salınım sayısı aralığı"
+    },
+    {
+     "type": "active_recall",
+     "question": "Parkinson hastalığı istirahat tremorunun tipik frekans aralığı nedir ve ellerde hangi benzetmeyle tanımlanır?",
+     "answer": "4-7 Hz frekansındadır; ellerde 'hap yapma' veya 'para sayma' niteliğindedir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 12,
+   "bolum": "3.2",
+   "pdfSayfalari": [
+    15,
+    16
+   ],
+   "sourcePdf": {
+    "fileName": "Bazal ganglionlar.pdf",
+    "primaryPage": 15,
+    "startPage": 15,
+    "endPage": 16
+   },
+   "title": "Kore ve Atetoz: Klinik Özellikler, Sydenham ve Huntington Koresi",
+   "subtitle": "Amaçsız hızlı sıçrayıcı hareketler ve distal yavaş akıcı kıvrılmalar",
+   "badge": "Hiperkinetik Bozukluklar",
+   "synthesisNarrative": "Kore ve atetoz, bazal gangliyon patolojilerinde görülen iki önemli istemsiz hiperkinetik hareket bozukluğudur.\n\n- **Kore:** Amaçsız, düzensiz, ani, hızlı, sıçrayıcı ve aritmik istemsiz hareketlerdir.\n  * Ellerde ayaklara oranla daha sıktır; ayrıca yüz, dil, dudak ve omuz kaslarında da izlenebilir. Ağır formlarında yazı yazma ve yemek yeme gibi günlük yaşam aktivitelerini engeller.\n  * Sydenham Koresi: Akut romatizmal ateşin (AER) majör klinik bulgusudur. Çocukluk çağında ve özellikle kız çocuklarında daha sık görülür.\n  * Huntington Koresi: Otozomal dominant kalıtılan, 20-50 yaşlarında başlayan nörodejeneratif bir hastalıktır. Striatumda (özellikle nükleus kaudatus) atrofiye yol açar; koreik hareketlere ilerleyici demans ve kişilik bozukluğu eşlik eder.\n- **Atetoz:** Özellikle ellerde ve parmaklarda görülen, birbirini izleyen yavaş, akıcı ve kıvrılma (torsiyon) tarzındaki istemsiz hareketlerdir. Dansöz kol ve el hareketlerine benzer. Koreden temel farkı ani ve hızlı olmamasıdır.\n  * Kore ve atetoz sıklıkla birleşerek 'koreatetoz' tablosunu oluşturur. Kernikterus (yenidoğan sarılığı) ve serebral palside sık izlenir.\n\n> [!IMPORTANT]\n> Kore hızlı ve sıçrayıcı iken; atetoz yavaş, akıcı ve parmaklarda kıvrılma tarzındadır.",
+   "content": "Kore ani, hızlı ve sıçrayıcı hareketlerdir (Sydenham, Huntington); atetoz ise el parmaklarında yavaş kıvrılma hareketleridir (kernikterus).",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Akut eklem romatizmasının majör tanı kriterlerinden biri olan, çocukluk çağında ve özellikle kız çocuklarında ani istemsiz hareketlerle beliren tablo hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Sydenham koresi",
+       "isCorrect": true,
+       "explanation": "Sydenham koresi, A grubu streptokok enfeksiyonu sonrası gelişen akut romatizmal ateşin majör kriteridir. Çocuklarda ve özellikle kızlarda hızlı sıçrayıcı istemsiz hareketlerle karakterizedir."
+      },
+      {
+       "key": "B",
+       "text": "Huntington koresi",
+       "isCorrect": false,
+       "explanation": "Huntington koresi otozomal dominant kalıtılan ve 20-50 yaşlarında demansla başlayan erişkin nörodejeneratif hastalığıdır. Akut romatizmal ateşle ilişkili çocukluk çağı tablosu değildir."
+      },
+      {
+       "key": "C",
+       "text": "Parkinson istirahat tremoru",
+       "isCorrect": false,
+       "explanation": "Parkinson tremoru istirahatte 4-7 Hz frekansında para sayma tarzı ritmik salınımdır. Romatizmal ateş kriteri olmayıp dopaminerjik nöron kaybına bağlı hipokinetik sendrom bulgusudur."
+      },
+      {
+       "key": "D",
+       "text": "Spazmotik tortikolis",
+       "isCorrect": false,
+       "explanation": "Spazmotik tortikolis sternokleidomastoid kasının spazmıyla başın yana dönmesine yol açan fokal distonidir. Romatizmal ateş zemininde gelişen koreik hareket değildir."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Hareket Bozukluğu",
+      "Hız ve Karakter",
+      "Tipik Etyoloji / Klinik Örnek"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "Kore"
+       },
+       {
+        "text": "Ani, hızlı, düzensiz ve sıçrayıcı",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Sydenham koresi, Huntington hastalığı"
+       }
+      ],
+      [
+       {
+        "text": "Atetoz"
+       },
+       {
+        "text": "Yavaş, sürekli akıcı kıvrılma",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Kernikterus, perinatal hasar"
+       }
+      ],
+      [
+       {
+        "text": "Koreatetoz"
+       },
+       {
+        "text": "Hızlı sıçramalarla yavaş kıvrılmaların birlikteliği",
+        "isMasked": false
+       },
+       {
+        "text": "Doğuştan beyin hasarı, dejeneratif hastalıklar",
+        "isMasked": true,
+        "hint": ""
+       }
+      ]
+     ]
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Koreik Hareketler",
+     "rightTitle": "Atetoid Hareketler",
+     "leftPoints": [
+      "Ani, hızlı ve sıçrayıcı niteliktedir",
+      "Amaçsız, düzensiz ve aritmik seyreder",
+      "Yüz, omuz, kol ve ellerde belirgindir",
+      "Sydenham ve Huntington koresinde görülür"
+     ],
+     "rightPoints": [
+      "Yavaş ve sürekli akıcı kıvrılmalar şeklindedir",
+      "Dansöz eli hareketlerine benzer",
+      "Özellikle el ve parmakların distalini tutar",
+      "Kernikterus ve serebral palside sık izlenir"
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Akut romatizmal ateş tablosunda majör bir klinik kriter olarak kız çocuklarında sık görülen hareket bozukluğu Sydenham koresi olarak bilinir.",
+     "maskedTerm": "Sydenham koresi",
+     "hint": "Streptokok enfeksiyonu sonrası romatizmal kore"
+    },
+    {
+     "type": "active_recall",
+     "question": "Yenidoğan döneminde şiddetli sarılık (kernikterus) veya perinatal beyin hasarı sonrasında el parmaklarında görülen yavaş kıvrılma hareketlerine ne ad verilir?",
+     "answer": "Atetoz (veya kore ile birleştiğinde koreatetoz) adı verilir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 13,
+   "bolum": "3.3",
+   "pdfSayfalari": [
+    17,
+    17
+   ],
+   "sourcePdf": {
+    "fileName": "Bazal ganglionlar.pdf",
+    "primaryPage": 17,
+    "startPage": 17,
+    "endPage": 17
+   },
+   "title": "Hemiballismus ve Subtalamik Nükleus (Korpus Luysii) Patolojisi",
+   "subtitle": "Şiddetli savurucu fırlatma hareketleri ve talamik aşırı disinhibisyon",
+   "badge": "Hiperkinetik Bozukluklar",
+   "synthesisNarrative": "Hemiballismus, bazal gangliyon patolojileri içinde en dramatik ve şiddetli seyreden hiperkinetik hareket bozukluğudur.\n\n- **Klinik Özellikler:** Vücudun bir yarısını (kontralateral tarafı) tutar; kol ve bacakta proksimal eklemlerden (omuz ve kalça) başlayan, ani, şiddetli, fırlatıcı, savurucu ve geniş amplitüdlü istemsiz hareketlerdir.\n- **Klinik Tablonun Ağırlığı:** Hasta istemsiz fırlatmalar nedeniyle kolunu ve bacağını duvara veya yatak kenarına çarparak travmatize edebilir. Yatak çarşaflarına sürekli sürtünmekten derisi soyulabilir; şiddetli kas yorgunluğu ve bitkinlik gelişir.\n- **Anatomik Lokalizasyon:** Kontralateral subtalamik nükleus (Korpus Luysii) lezyonlarında ortaya çıkar. En sık neden subtalamik nükleusu besleyen damarların tıkanması (akut iskemik enfarkt) veya kanamasıdır.\n- **Mekanizma:** STN hasar gördüğünde GPi'ye glutamaterjik eksitasyon gönderemez. GPi'nin talamus üzerindeki baskısı tamamen kalkar (aşırı disinhibisyon). Serbest kalan talamus kortekse kontrolsüz uyarılar göndererek şiddetli fırlatma hareketlerini doğurur.\n\n> [!IMPORTANT]\n> Hemiballismus proksimal fırlatıcı hareketlerle seyreder ve kontralateral subtalamik nükleus (Korpus Luysii) lezyonuna işaret eder.",
+   "content": "Hemiballismus kontralateral subtalamik nükleus (Korpus Luysii) lezyonlarında gelişen proksimal, geniş amplitüdlü, şiddetli fırlatıcı istemsiz hareketlerdir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Vücudun tek yarısında proksimalden başlayan ani, şiddetli, fırlatıcı ve geniş amplitüdlü istemsiz hareketlerle (hemiballismus) başvuran hastada lezyon nerededir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Kontralateral subtalamik nükleus (Korpus Luysii)",
+       "isCorrect": true,
+       "explanation": "Hemiballismus kontralateral subtalamik nükleus lezyonuna bağlı gelişir. STN hasarlandığında talamus üzerindeki baskı kalkarak şiddetli proksimal fırlatma hareketleri doğar."
+      },
+      {
+       "key": "B",
+       "text": "İpsilateral substantia nigra pars kompakta",
+       "isCorrect": false,
+       "explanation": "Substantia nigra pars kompakta lezyonları dopamin eksikliğine ve Parkinsonizm tablosuna yol açar. Proksimal fırlatıcı hemiballismus hareketlerini oluşturmaz."
+      },
+      {
+       "key": "C",
+       "text": "Medulla spinalis arka kordonu",
+       "isCorrect": false,
+       "explanation": "Arka kordon lezyonları derin duyu ve propriosepsiyon kaybına (duyusal ataksi) yol açar. Bazal gangliyon kaynaklı hemiballismus ile ilişkili değildir."
+      },
+      {
+       "key": "D",
+       "text": "Kortikospinal traktusun çaprazlaşma bölgesi",
+       "isCorrect": false,
+       "explanation": "Piramidal çapraz lezyonları spastik parezi veya plejiye yol açar. Subkortikal istemsiz fırlatma hareketleri tablosunu meydana getirmez."
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Vasküler Olay: Subtalamik nükleusu (Korpus Luysii) besleyen damarda enfarkt veya kanama gelişir.",
+      "2. STN Çıktı Kaybı: Subtalamik nükleusun GPi ve SNr üzerindeki glutamaterjik eksitatör etkisi kesilir.",
+      "3. Çıkış Çekirdeği İnhibisyon Kaybı: GPi ve SNr talamus üzerine gönderdiği tonik GABA salınımını sürdüremez.",
+      "4. Talamik Aşırı Disinhibisyon: Talamus üzerindeki tüm baskı kalkarak motor korteks aşırı derecede deşarj olur.",
+      "5. Hemiballismus Gelişimi: Kontralateral kol ve bacakta proksimal eklemlerden başlayan şiddetli fırlatıcı hareketler ortaya çıkar."
+     ]
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "68 yaşında hipertansif bir hasta, sol kol ve bacağında aniden başlayan, omuz ve kalçadan savurucu tarzda şiddetli fırlatma hareketleriyle acil servise getiriliyor. Kolunu duvara çarptığı için derisinde abrazyonlar izleniyor.",
+     "question": "Hastanın acil kraniyal görüntülemesinde öncelikle hangi anatomik odakta vasküler lezyon aranmalıdır?",
+     "options": [
+      {
+       "text": "Sağ subtalamik nükleus (Korpus Luysii) bölgesinde iskemik veya hemorajik enfarkt",
+       "isCorrect": true,
+       "feedback": "Sol vücut yarısındaki proksimal fırlatıcı hareketler (hemiballismus) kontralateral yani sağ subtalamik nükleus lezyonuna işaret eden klasik acil nörolojik tablodur."
+      },
+      {
+       "text": "Sol serebellar hemisferde intrakraniyal kitle veya demiyelinizan plak",
+       "isCorrect": false,
+       "feedback": "Serebellar hemisfer lezyonları vücudun aynı tarafında dismetri, ataksi ve intansiyonel tremor ile karakterize koordinasyon bozukluklarına neden olur. Bu tablodaki proksimal savurucu ve geniş açılı fırlatma hareketleri serebellar patolojilerden farklı olarak subtalamik odaklıdır."
+      },
+      {
+       "text": "Bilateral frontal lob korteksinde yaygın atrofi ve dejenerasyon",
+       "isCorrect": false,
+       "feedback": "Frontal atrofi bilişsel bozulma ve apraksi yapabilir; dakikalar içinde akut tek taraflı proksimal fırlatma tablosu meydana getirmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Hemiballismus tablosu anatomik olarak kontralateral subtalamik nükleus yani Korpus Luysii lezyonlarında ortaya çıkar.",
+     "maskedTerm": "subtalamik nükleus",
+     "hint": "Korpus Luysii adıyla bilinen diensefalik çekirdek"
+    },
+    {
+     "type": "active_recall",
+     "question": "Hemiballismus hareketlerinin ekstremitelerin hangi bölgesinden (proksimal mi distal mi) başladığını ve klinik görünümünü açıklayınız.",
+     "answer": "Proksimal eklemlerden (omuz ve kalça) başlar; ani, şiddetli, geniş amplitüdlü, savurucu ve fırlatıcı niteliktedir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 14,
+   "bolum": "3.4",
+   "pdfSayfalari": [
+    18,
+    18
+   ],
+   "sourcePdf": {
+    "fileName": "Bazal ganglionlar.pdf",
+    "primaryPage": 18,
+    "startPage": 18,
+    "endPage": 18
+   },
+   "title": "Distoni Çeşitleri, Torsiyon Spazmı ve Spazmotik Tortikolis",
+   "subtitle": "Sürekli kas kasılmaları, aksiyel burgu hareketleri ve SCM hipertrofisi",
+   "badge": "Hiperkinetik Bozukluklar",
+   "synthesisNarrative": "Distoni; agonist ve antagonist kasların eş zamanlı kasılmasıyla ekstremiteler, boyun ve gövdenin uzun aksı boyunca anormal postürlere ve tekrarlayıcı kıvrılma hareketlerine yol açan bir hareket bozukluğudur.\n\n- **Torsiyon Distonisi / Torsiyon Spazmı (Distonia Musculorum Deformans):** Ekstremiteler, gövde ve boynun uzun aksları üzerinde geniş amplitüdlü yavaş kıvrılma hareketleriyle seyreder. Baş bir tarafa döner, gövde torsiyonel burgu hareketleriyle tuhaf ve anormal postürler alır. Bu torsiyon hareketlerine katılan kas grupları sürekli kasılmaya bağlı olarak zamanla belirgin biçimde hipertrofik hale gelir.\n- **Fokal Distoniler - Spazmotik Tortikolis:** Distoninin boyun kaslarında lokalize formudur. Sternokleidomastoid (SCM) kasındaki spazmotik kasılmalar sonucu başın karşı tarafa, yana veya geriye dönmesiyle anormal bir duruş ortaya çıkar.\n- **Retrokolis:** Boyun ve başın istemsiz olarak arkaya ve geriye doğru büküldüğü distonik postür tablosudur.\n\n> [!NOTE]\n> Torsiyon spazmında sürekli çalışan kaslar zamanla hipertrofiye uğrar; boyunda en sık tutulan kas sternokleidomastoiddir.",
+   "content": "Distoni uzun aks etrafında anormal postür ve burgu hareketleridir; boyunda tortikolis (SCM hipertrofisi) ve retrokolis izlenir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Spazmotik tortikolis tablosunda spazmotik kasılmalar sonucu başın karşı tarafa ve yana dönmesine yol açan ve zamanla hipertrofiye uğrayan primer kas hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Sternokleidomastoid kası",
+       "isCorrect": true,
+       "explanation": "Sternokleidomastoid (SCM) kası spazmotik tortikoliste primer tutulan kastır. Sürekli kasılması başı karşı tarafa çevirir ve kasta belirgin hipertrofi gelişir."
+      },
+      {
+       "key": "B",
+       "text": "Pektoralis majör kası",
+       "isCorrect": false,
+       "explanation": "Pektoralis majör göğüs ön duvarında yer alan ve kola adduksiyon yaptıran kastır. Boyun distonisi ve tortikolis patolojisinde primer rol oynamaz."
+      },
+      {
+       "key": "C",
+       "text": "Gastroknemius kası",
+       "isCorrect": false,
+       "explanation": "Gastroknemius baldırda yer alan ve ayak bileğine fleksiyon yaptıran alt ekstremite kasıdır. Baş ve boyun torsiyonel postürleri ile ilgisi yoktur."
+      },
+      {
+       "key": "D",
+       "text": "Deltoid kası",
+       "isCorrect": false,
+       "explanation": "Deltoid omuz abduksiyonunu sağlayan üst ekstremite kasıdır. Boynun yana dönmesi ve spazmotik tortikolis kliniğinde sorumlu primer kas değildir."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Distoni Tipi",
+      "Tutulan Anatomik Bölge",
+      "Karakteristik Klinik Görünüm"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "Torsiyon spazmı"
+       },
+       {
+        "text": "Gövde, boyun ve ekstremiteler",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Uzun aks etrafında burgu ve kas hipertrofisi"
+       }
+      ],
+      [
+       {
+        "text": "Spazmotik tortikolis"
+       },
+       {
+        "text": "Boyun (SCM kası)",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Başın karşı tarafa ve yana dönmesi"
+       }
+      ],
+      [
+       {
+        "text": "Retrokolis"
+       },
+       {
+        "text": "Posterior servikal kaslar",
+        "isMasked": false
+       },
+       {
+        "text": "Baş ve boynun geriye doğru bükülmesi",
+        "isMasked": true,
+        "hint": ""
+       }
+      ]
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Distoni, torsiyon spazmı ve tortikolis",
+     "items": [
+      {
+       "text": "Torsiyon spazmına katılan kas grupları sürekli kasılma nedeniyle zamanla hipertrofik hale gelir.",
+       "isLie": false,
+       "explanation": "İstemsiz kronik kasılmalar kas liflerinde belirgin hipertrofiye yol açar."
+      },
+      {
+       "text": "Spazmotik tortikolis boyun kaslarında sınırlı fokal bir distoni formudur.",
+       "isLie": false,
+       "explanation": "Tortikolis SCM kasının spazmıyla seyreden fokal bir servikal distonidir."
+      },
+      {
+       "text": "Retrokolis tablosunda baş ve boyun istemsiz olarak öne ve göğse doğru katlanır.",
+       "isLie": true,
+       "explanation": "Retrokolis baş ve boynun öne değil; istemsiz olarak arkaya ve geriye doğru büküldüğü tablodur."
+      },
+      {
+       "text": "Distoniler agonist ve antagonist kasların eş zamanlı kasılmasıyla anormal postür oluşturur.",
+       "isLie": false,
+       "explanation": "Ko-kontraksiyon (eş zamanlı kasılma) distonik anormal postürün patofizyolojik temelidir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Boyunda spazmotik tortikolis tablosunda kasılmaya katılan sternokleidomastoid kasında zamanla belirgin hipertrofi gelişir.",
+     "maskedTerm": "sternokleidomastoid",
+     "hint": "Boynun ön-yanında yer alan kalın kas"
+    },
+    {
+     "type": "active_recall",
+     "question": "Distonide baş ve boynun istemsiz olarak geriye doğru büküldüğü anormal postür tablosuna ne ad verilir?",
+     "answer": "Retrokolis adı verilir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 15,
+   "bolum": "3.5",
+   "pdfSayfalari": [
+    19,
+    20
+   ],
+   "sourcePdf": {
+    "fileName": "Bazal ganglionlar.pdf",
+    "primaryPage": 19,
+    "startPage": 19,
+    "endPage": 20
+   },
+   "title": "İlaçlara Bağlı Ekstrapiramidal Sendromlar",
+   "subtitle": "Akut distoni, okulojirik kriz, ilaca bağlı parkinsonizm ve tardif diskinezi",
+   "badge": "İyatrojenik Sendromlar",
+   "synthesisNarrative": "Dopaminerjik iletiyi bozan ilaçlar (özellikle nöroleptikler: fenotiyazinler, butirofenonlar ve antiemetikler) çeşitli ekstrapiramidal sendromlara yol açar.\n\n- **Akut Distoni:** Tek bir doz ilaç alımından saatler sonra dahi gelişebilir. Yüz, boyun, dil ve çenede ağrılı spazmlar, tortikolis görülür.\n- **Akut Okulojirik Distonik Kriz:** Göz kürelerinin zorunlu olarak yukarı ve bir tarafa doğru kilitlenip kalması tablosudur. Hastada belirgin panik, ajitasyon ve yoğun huzursuzluk eşlik eder. Antikolinerjik tedaviyle hızla düzelir.\n- **İlaca Bağlı Parkinsonizm:** Tipik antipsikotikler veya lityum kullanımı sonrası dopamin D2 reseptör blokajına bağlı bradikinezi, rijidite ve tremor tablosudur.\n- **Tardif Diskinezi:** Aylarca veya yıllarca uzun süreli nöroleptik kullanımı sonrasında gelişir. Ağız, dudak ve dili tutan çiğneme, yalanma ve dudak şapırdatma hareketleriyle karakterizedir. Antiparkinson (antikolinerjik) ilaçlar verilirse tablo daha da şiddetlenir; genellikle kalıcıdır (irreversibl).\n- **L-dopa Diskinezileri:** Parkinson hastalarında uzun süreli L-dopa tedavisinde görülen istemsiz motor dalgalanmalardır.\n\n> [!IMPORTANT]\n> Tardif diskinezi uzun süreli nöroleptik kullanımıyla gelişir, orofasiyal alanı tutar ve antiparkinson ilaçlarla kötüleşir.",
+   "content": "Nöroleptikler akut distoni ve okulojirik krize; uzun dönemde ise kalıcı ve antikolinerjiklerle kötüleşen tardif diskineziye yol açar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Uzun süreli nöroleptik kullanımı sonrasında gelişen, ağız ve dilde çiğneme-yalanma hareketleriyle seyreden ve antiparkinson ilaçlarla şiddetlenebilen tablo hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Tardif diskinezi",
+       "isCorrect": true,
+       "explanation": "Tardif diskinezi uzun süreli antipsikotik maruziyetiyle gelişen kalıcı bir tablodur. Orofasiyal istemsiz hareketlerle seyreder ve antikolinerjik ilaçlarla daha da şiddetlenir."
+      },
+      {
+       "key": "B",
+       "text": "Akut okulojirik kriz",
+       "isCorrect": false,
+       "explanation": "Akut okulojirik kriz tek doz ilaç sonrasında saatler içinde gözlerin yukarı kilitlenmesi tablosudur. Uzun süreli kullanıma bağlı orofasiyal kalıcı diskinezi değildir."
+      },
+      {
+       "key": "C",
+       "text": "Sydenham koresi",
+       "isCorrect": false,
+       "explanation": "Sydenham koresi romatizmal ateş zemininde çocuklarda görülen otoimmün tablodur. Nöroleptik ilaçların kronik kullanımına bağlı iyatrojenik bir tablo değildir."
+      },
+      {
+       "key": "D",
+       "text": "Hemiballismus",
+       "isCorrect": false,
+       "explanation": "Hemiballismus kontralateral subtalamik nükleusun vasküler hasarında gelişen fırlatıcı hareketlerdir. Uzun dönem antipsikotiklerin yol açtığı orofasiyal çiğneme hareketi değildir."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "İyatrojenik Sendrom",
+      "Ortaya Çıkış Süresi",
+      "Karakteristik Klinik Belirti"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "Akut distoni"
+       },
+       {
+        "text": "Saatler - günler (tek doz)",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Boyun, çene ve dilde ağrılı spazmlar"
+       }
+      ],
+      [
+       {
+        "text": "Okulojirik kriz"
+       },
+       {
+        "text": "Akut başlangıçlı",
+        "isMasked": false
+       },
+       {
+        "text": "Göz kürelerinin yukarı kilitlenmesi ve panik",
+        "isMasked": true,
+        "hint": ""
+       }
+      ],
+      [
+       {
+        "text": "İlaca bağlı parkinsonizm"
+       },
+       {
+        "text": "Haftalar - aylar",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Bradikinezi, rijidite ve istirahat tremoru"
+       }
+      ],
+      [
+       {
+        "text": "Tardif diskinezi"
+       },
+       {
+        "text": "Aylar - yıllar (uzun süreli)",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Orofasiyal çiğneme-yalanma, kalıcı tablo"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "Psikotik atak nedeniyle ilk kez intramüsküler haloperidol enjekte edilen 24 yaşındaki bir hasta, enjeksiyondan 4 saat sonra boynunun aniden yana kasılması, gözlerinin istemsiz olarak yukarı tavana kilitlenmesi ve şiddetli panik tablosuyla acile başvuruyor.",
+     "question": "Bu hastadaki acil klinik tablo ve altta yatan mekanizma hangisidir?",
+     "options": [
+      {
+       "text": "Akut distoni ve okulojirik kriz; akut dopamin D2 reseptör blokajına bağlı gelişmiştir",
+       "isCorrect": true,
+       "feedback": "Tek doz antipsikotik sonrası saatler içinde beliren boyun spazmı ve gözlerin yukarı kilitlenmesi akut distoni ve okulojirik krizdir; D2 blokajına bağlıdır."
+      },
+      {
+       "text": "Tardif diskinezi; aylar süren nöroleptik tedavisine bağlı kalıcı orofasiyal hasardır",
+       "isCorrect": false,
+       "feedback": "Tardif diskinezi aylar ve yıllar süren kronik kullanım sonrası gelişir. İlk dozdan 4 saat sonra ortaya çıkan göz kilitlenmesi tardif diskinezi değildir."
+      },
+      {
+       "text": "Huntington hastalığı; otozomal dominant genetik mutasyonun ani tetiklenmesidir",
+       "isCorrect": false,
+       "feedback": "Huntington hastalığı, striatumda kaudatus atrofisiyle giden ve 20-50 yaşlarında yavaş ilerleyici kore ve demans tablosu oluşturan genetik bir hastalıktır. İlaç alımından saatler sonra aniden gelişen boyun kasılması ve okulojirik kriz tablosu antipsikotik yan etkisini gösterir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Uzun süreli nöroleptik kullanımına bağlı gelişen tardif diskinezi orofasiyal alanda çiğneme ve yalanma hareketleriyle karakterizedir.",
+     "maskedTerm": "tardif diskinezi",
+     "hint": "Kronik antipsikotik kullanımında ortaya çıkan kalıcı bozukluk"
+    },
+    {
+     "type": "active_recall",
+     "question": "Nöroleptik kullanımı sonrasında göz kürelerinin zorunlu olarak yukarı ve bir tarafa doğru kilitlenmesiyle gelişen akut acil tabloya ne ad verilir?",
+     "answer": "Akut okulojirik distonik kriz adı verilir; hastada yoğun panik ve huzursuzluk eşlik eder."
+    }
+   ]
+  },
+  {
+   "slideNumber": 16,
+   "bolum": "4.1",
+   "pdfSayfalari": [
+    1,
+    20
+   ],
+   "sourcePdf": {
+    "fileName": "Bazal ganglionlar.pdf",
+    "primaryPage": 20,
+    "startPage": 1,
+    "endPage": 20
+   },
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Bazal Gangliyonlar ve Ekstrapiramidal Sistem",
+   "subtitle": "Dört oyunla motor devreleri, klinik sendromları ve patolojileri pekiştir",
+   "badge": "Ders Sonu Oyunları",
+   "isGameFinale": true,
+   "synthesisNarrative": "Bu final sayfasında bazal gangliyonlar ve ekstrapiramidal sistem konusunun tamamını dört farklı oyun formatıyla gözden geçireceksiniz. Yeni bir konu eklenmemiştir; derste öğrendiğiniz bilgileri pekiştireceksiniz.\n\n- **Sırala:** Direkt motor yolda sinirsel iletim ve talamik disinhibisyon basamaklarını doğru fizyolojik sıraya dizin.\n- **Değeri Tahmin Et:** Parkinson istirahat tremoru frekansını, Huntington başlangıç yaşını ve paralel devre sayısını tahmin edin.\n- **Ne Değişir?:** Subtalamik nükleus hasarında parametrelerin değişim yönlerini belirleyin.\n- **Hatayı Düzelt:** Hareket bozuklukları ve nörotransmiter mekanizmalarına ilişkin hatalı ifadeleri düzeltin.\n\n> [!TIP]\n> Oyunlarda zorlandığınız noktaları önceki bölümlerin tekrar sayfalarından yeniden gözden geçirebilirsiniz.",
+   "content": "Dört oyunla bazal gangliyonları gözden geçir: direkt yol sırası, sayısal tahminler, STN lezyonunda değişimler ve hatalı metin düzeltme.",
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "prompt": "Direkt motor devrede kortikal tasarımdan hareketin başlatılmasına kadar gerçekleşen sinaptik iletim basamaklarını doğru fizyolojik sıraya diziniz.",
+     "steps": [
+      "Korteks striatuma glutamat salarak D1 reseptörlü nöronları uyarır",
+      "Striatum GABA ve Substans P salarak GPi ve SNr çekirdeklerini inhibe eder",
+      "GPi ve SNr çekirdeklerinin talamus üzerindeki tonik GABA baskısı kalkar",
+      "Talamus disinhibe olarak kortekse eksitatör glutamaterjik uyarılar gönderir",
+      "Motor korteks uyarılır ve hedeflenen istemli hareket başlatılır"
+     ],
+     "explanation": "Direkt yol kortikal eksitasyonla başlar, striatumun GPi'yi inhibe etmesiyle talamus üzerindeki tonik baskı kalkar (disinhibisyon) ve serbest kalan talamus korteksi uyararak hareketi başlatır."
+    },
+    {
+     "type": "estimate_slider",
+     "items": [
+      {
+       "prompt": "Parkinson hastalığında görülen tipik istirahat tremorunun saniyedeki salınım frekansı (Hz) ortalama kaç değerindedir?",
+       "unit": "Hz",
+       "min": 2,
+       "max": 10,
+       "step": 1,
+       "answer": 5,
+       "tolerance": 1,
+       "explanation": "Parkinson istirahat tremoru saniyede 4-7 Hz frekansında seyreder; ortalama 5 Hz tipik frekans değeridir."
+      },
+      {
+       "prompt": "Huntington koresinin tipik başlangıç yaş aralığının alt sınırı kaç yaştır?",
+       "unit": "yaş",
+       "min": 10,
+       "max": 40,
+       "step": 1,
+       "answer": 20,
+       "tolerance": 2,
+       "explanation": "Huntington koresi tipik olarak 20-50 yaşları arasında klinik bulgu vermeye başlar."
+      },
+      {
+       "prompt": "Bazal gangliyonların serebral korteks ile kurduğu ana fonksiyonel paralel döngü sayısı kaçtır?",
+       "unit": "adet",
+       "min": 1,
+       "max": 8,
+       "step": 1,
+       "answer": 4,
+       "tolerance": 0,
+       "explanation": "Bazal gangliyonlar iskeletomotor, okülomotor, asosiyatif ve limbik olmak üzere 4 temel paralel devre kurar."
+      }
+     ]
+    },
+    {
+     "type": "perturbation",
+     "scenario": "Bir hastada kontralateral subtalamik nükleus (Korpus Luysii) akut iskemik enfarkt sonucu harabiyete uğruyor.",
+     "question": "Bu akut lezyon sonrasında hastanın bazal gangliyon döngüsünde ve motor çıktısında belirtilen parametreler nasıl değişir?",
+     "parameters": [
+      {
+       "name": "Subtalamik nükleustan GPi'ye giden eksitatör glutamat çıktısı",
+       "correct": "down",
+       "explanation": "STN dokusu hasarlandığı için GPi üzerine giden glutamaterjik eksitatör sinyaller belirgin biçimde azalır."
+      },
+      {
+       "name": "GPi'nin talamus üzerine uyguladığı tonik GABA'erjik baskılama",
+       "correct": "down",
+       "explanation": "STN tarafından uyarılamayan GPi'nin talamusa gönderdiği inhibitör GABA deşarjı azalır ve talamus serbest kalır."
+      },
+      {
+       "name": "Talamokortikal eksitasyon ve kontralateral fırlatıcı motor hareketler (hemiballismus)",
+       "correct": "up",
+       "explanation": "Talamus üzerindeki tonik baskı kalktığı için kortekse giden uyarılar aşırı artar ve şiddetli hemiballismus fırlatmaları gelişir."
+      }
+     ]
+    },
+    {
+     "type": "fix_the_text",
+     "text": "Subtalamik nükleus lezyonunda kontralateral ekstremitelerde Parkinson istirahat tremoru gelişir. Striatumdaki D1 reseptörleri indirekt yolu uyarırken D2 reseptörleri direkt yolu aktive eder. Akut okulojirik kriz uzun süreli nöroleptik kullanımında kalıcı olarak ortaya çıkar.",
+     "errors": [
+      {
+       "wrong": "Parkinson istirahat tremoru",
+       "correct": "hemiballismus fırlatıcı hareketleri",
+       "options": [
+        "intansiyonel serebellar tremor",
+        "saf duyusal ataksi"
+       ],
+       "explanation": "Subtalamik nükleus (Korpus Luysii) lezyonlarında istirahat tremoru değil, ani ve savurucu hemiballismus hareketleri gelişir."
+      },
+      {
+       "wrong": "D1 reseptörleri indirekt yolu uyarırken D2 reseptörleri direkt yolu aktive eder",
+       "correct": "D1 reseptörleri direkt yolu uyarırken D2 reseptörleri indirekt yola katılır",
+       "options": [
+        "D1 ve D2 reseptörleri yalnızca talamusu doğrudan bloke eder",
+        "D1 ve D2 reseptörleri sadece medulla spinalise akson gönderir"
+       ],
+       "explanation": "Dopamin D1 reseptörleri aracılığıyla direkt yolu uyarır; D2 reseptörleri ise indirekt yolda yer alır ve dopamin tarafından baskılanır."
+      },
+      {
+       "wrong": "uzun süreli nöroleptik kullanımında kalıcı",
+       "correct": "tek doz nöroleptik alımı sonrasında dahi akut",
+       "options": [
+        "yıllar sonra yavaşça",
+        "yalnızca lityum kesildiğinde"
+       ],
+       "explanation": "Okulojirik kriz tek bir doz nöroleptik alımından saatler sonra dahi belirebilen akut bir distonidir; uzun süreli kullanımda kalıcı gelişen tablo tardif diskinezidir."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "totalSlides": 16,
+ "totalInteractiveElements": 79,
+ "interactiveRatio": 4.94,
+ "sayfaHaritasi": "teyitli",
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "matchedPastQuestionsCount": 11,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

@@ -1,0 +1,6185 @@
+{
+ "surum": 2,
+ "ders_id": "k2-18",
+ "anahtar": "y25-k2-18-bazal-gangliyonlar",
+ "baslik": "Bazal Gangliyonlar ve İstem Dışı Hareket Bozuklukları",
+ "kaynak": "k2-18-y25",
+ "bolumler": [
+  {
+   "id": "k2-18-b01",
+   "baslik": "Giriş ve Motor Kontrol Mimarisi",
+   "paragraflar": [
+    {
+     "id": "k2-18-p001",
+     "sayfa": 1,
+     "cumleler": [
+      {
+       "id": "k2-18-c0001",
+       "ses": "Nörolojide motor sistem organizasyonunu incelerken hareketin planlanması ve pürüzsüz icrası için piramidal yolakların ötesinde yer alan devasa kontrol ağlarını kavramak zorundayız.",
+       "ekran": "**Ekstrapiramidal sistem**, piramidal yolakların ötesinde motor kontrolü sağlayan subkortikal yapılardır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Ekstrapiramidal sistem",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Dr. İrfan YAVAŞ"
+        ],
+        "sekil": "Ders giriş başlığı ve öğretim üyesi künyesi"
+       }
+      },
+      {
+       "id": "k2-18-c0002",
+       "ses": "Ekstrapiramidal sistem motor işlevlerin yürütülmesinde piramidal sistem dışında kalan anatomik yapıların tamamını ifade eden geniş bir düzenleyici şebekedir.",
+       "ekran": "**Ekstrapiramidal sistem**, motor işlevlerin yürütülmesinde piramidal sistem dışındaki anatomik yapılardır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Ekstrapiramidal sistem",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Ekstrapiramidal sist. motor işlevlerin yürütülmesinde",
+         "piramidal sis. dışında kalan anatomik yapı olarak"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0003",
+       "ses": "Piramidal sistem doğrudan istemli kas kasılmalarını başlatan ana eksen iken ekstrapiramidal sistem bu hareketlerin şiddetini hızını postüral zeminini ve kas tonusunu ince ayarlarla düzenler.",
+       "ekran": "Piramidal sistem **istemli hareketi başlatırken**, ekstrapiramidal sistem **hız, tonus ve postürü** düzenler.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "istemli hareketi başlatırken",
+         "tur": "terim"
+        },
+        {
+         "metin": "hız, tonus ve postürü",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Ekstrapiramidal sist. motor işlevlerin yürütülmesinde",
+         "piramidal sis. dışında kalan anatomik yapı olarak"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0004",
+       "ses": "Bu düzenleyici şebekenin hasarlanması felç tablosu yerine istemsiz hareketler rijidite bradikinezi veya tremor gibi hareket bozukluklarına yol açar.",
+       "ekran": "Ekstrapiramidal hasarlar **felç yerine** tremor, rijidite, bradikinezi ve **istemsiz hareketler** oluşturur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "istemsiz hareketler",
+         "tur": "terim"
+        },
+        {
+         "metin": "felç yerine",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Ekstrapiramidal sist. motor işlevlerin yürütülmesinde",
+         "piramidal sis. dışında kalan anatomik yapı olarak"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0005",
+       "ses": "Klinisyen açısından piramidal lezyon belirgin kuvvet kaybı ve spastisite üretirken ekstrapiramidal patolojiler istem dışı hiperkineziler ya da hareket fakirliği ile karakterizedir.",
+       "ekran": "Piramidal patolojiler **kuvvet kaybı ve spastisite**, ekstrapiramidal patolojiler **hareket bozukluğu** üretir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kuvvet kaybı ve spastisite",
+         "tur": "terim"
+        },
+        {
+         "metin": "hareket bozukluğu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Ekstrapiramidal sist. motor işlevlerin yürütülmesinde",
+         "piramidal sis. dışında kalan anatomik yapı olarak"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0006",
+       "ses": "Filogenetik açıdan ekstrapiramidal çekirdekler ilkel canlılardan miras kalan eski motor merkezler olup neomemeli korteksinin istemli komutlarını terbiye eder.",
+       "ekran": "Ekstrapiramidal yapılar **eski motor merkezler** olup kortikal istemli komutları düzenler.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "eski motor merkezler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Ekstrapiramidal sist. motor işlevlerin yürütülmesinde",
+         "piramidal sis. dışında kalan anatomik yapı olarak"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p002",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k2-18-c0007",
+       "ses": "Merkezi sinir sisteminde motor yollar temel olarak iki ana grupta ele alınır; bunlar inen motor yollar ve geri dönen modülatör yollardır.",
+       "ekran": "Motor yollar **inen yollar** ve **geri dönen yollar** olmak üzere iki ana grupta incelenir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "inen yollar",
+         "tur": "terim"
+        },
+        {
+         "metin": "geri dönen yollar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Motor yollar: inen ve geri dönen yollar"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0008",
+       "ses": "Kortikospinal kortikobulber ve kortikopontin yollar korteksten omuriliğe beyin sapı kraniyal çekirdeklerine ve ponsa doğrudan inen yürütücü yollardır.",
+       "ekran": "**Kortikospinal, kortikobulber ve kortikopontin** yollar korteksten aşağıya inen yürütücü eksendir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kortikospinal, kortikobulber ve kortikopontin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Kortikospinal, kortikobulber, kortikopontin yollar inen yol"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0009",
+       "ses": "Bu inen traktuslar primer motor korteksin beşinci tabakasındaki dev piramidal hücrelerden doğarak spinal ön boynuz motor nöronlarına kadar kesintisiz emir taşır.",
+       "ekran": "İnen yollar **primer motor korteksten** doğup **spinal ön boynuza** doğrudan emir taşır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "primer motor korteksten",
+         "tur": "terim"
+        },
+        {
+         "metin": "spinal ön boynuza",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Kortikospinal, kortikobulber, kortikopontin yollar inen yol"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0010",
+       "ses": "Buna karşılık geri dönen yollar periferik kasa doğrudan gitmez; motor korteksin aktivitesini denetleyen kontrol edici ve modülatör kapalı devrelerdir.",
+       "ekran": "**Geri dönen yollar**, motor korteksi denetleyen **kontrol edici ve modülatör** döngülerdir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Geri dönen yollar",
+         "tur": "tanim"
+        },
+        {
+         "metin": "kontrol edici ve modülatör",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Geri dönen yollar kontrol edici, modülatör"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0011",
+       "ses": "Geri dönen devreler korteksin ürettiği ham motor projeleri henüz kasa gönderilmeden önce süzer ayıklar ve mükemmel bir akışa kavuşturur.",
+       "ekran": "Geri dönen döngüler motor projeleri **henüz kasa gönderilmeden süzer** ve pürüzsüzleştirir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "henüz kasa gönderilmeden süzer",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Geri dönen yollar kontrol edici, modülatör"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0012",
+       "ses": "Kortikospinal liflerin yüzde seksen beşi medullanın alt ucunda çaprazlaşarak lateral kortikospinal yolu oluştururken kalan lifler ventral yoldan iner.",
+       "ekran": "Kortikospinal liflerin çoğu **medullada çaprazlaşarak** lateral traktusu oluşturur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "medullada çaprazlaşarak",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Geri dönen yollar kontrol edici, modülatör"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p003",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k2-18-c0013",
+       "ses": "Geri dönen kontrol sistemlerinin temelini kortiko-bazal ganglia-talamo-kortikal döngü ile kortiko-serebellar-talamo-kortikal döngü oluşturur.",
+       "ekran": "Modülatör döngüler **kortiko-bazal ganglia-talamo-kortikal** ve **kortiko-serebellar-talamo-kortikal** yollardır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kortiko-bazal ganglia-talamo-kortikal",
+         "tur": "terim"
+        },
+        {
+         "metin": "kortiko-serebellar-talamo-kortikal",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "a) Kortiko-bazal ganglia-talamo-kortikal",
+         "b) Kortiko-serebellar-talamo-kortikal"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0014",
+       "ses": "Bu iki döngü birbirinden tamamen bağımsız anatomik yollar üzerinden yürütülür ve eşzamanlı olarak birbirine paralel çalışır.",
+       "ekran": "Bazal gangliyon ve serebellum döngüleri **birbirine paralel ve bağımsız** çalışır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "birbirine paralel ve bağımsız",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Bu iki yol birbirine paralel ve birbirinden bağımsız çalışır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0015",
+       "ses": "Lateral premotor alan suplementer motor alan ve singulat motor alan korteksteki temel kaynak alanlardır.",
+       "ekran": "**Lateral premotor, suplementer motor ve singulat motor** alanlar korteksteki kaynak bölgelerdir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Lateral premotor, suplementer motor ve singulat motor",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Lateral premotor , suplementer , singulat motor alan",
+         "korteksteki kaynak alanlar"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0016",
+       "ses": "Bu döngülerin ortak gayesi hareketin motor programlarının hazırlanması sıralanması ve çevreden gelen duysal bilgilerle kusursuz entegrasyonunun sağlanmasıdır.",
+       "ekran": "Döngüler **motor programların hazırlanması**, sıralanması ve **duysal entegrasyonunu** sağlar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "motor programların hazırlanması",
+         "tur": "terim"
+        },
+        {
+         "metin": "duysal entegrasyonunu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Hareketin motor programların hazırlanması, sıralanması,",
+         "duysal  bilgilerle entegrasyonu"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0017",
+       "ses": "Lateral premotor alan duyusal tetikleyicilerle yönlenen hareketleri düzenlerken suplementer motor alan içsel niyetle planlanan ardışık hareket basamaklarını koordine eder.",
+       "ekran": "**Premotor alan** duyusal yönlendirmeyi, **suplementer motor alan** içsel ardışık planlamayı yönetir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Premotor alan",
+         "tur": "terim"
+        },
+        {
+         "metin": "suplementer motor alan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Hareketin motor programların hazırlanması, sıralanması,",
+         "duysal  bilgilerle entegrasyonu"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0018",
+       "ses": "Serebellum hareketin icrası sırasında anlık duysal geri bildirimle sapmaları düzeltirken bazal gangliyonlar hareket öncesinde doğru planın seçilmesini temin eder.",
+       "ekran": "Serebellum **hareket anında düzeltme**, bazal gangliyonlar **hareket öncesi seçim** yapar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hareket anında düzeltme",
+         "tur": "terim"
+        },
+        {
+         "metin": "hareket öncesi seçim",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Hareketin motor programların hazırlanması, sıralanması,",
+         "duysal  bilgilerle entegrasyonu"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-18-b02",
+   "baslik": "Motor Yolların Entegrasyonu ve Subkortikal Yapılar",
+   "paragraflar": [
+    {
+     "id": "k2-18-p004",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k2-18-c0019",
+       "ses": "Motor sistemin hiyerarşik organizasyonunda kortikal motor alanlar hareket kararının alındığı en üst stratejik merkezdir.",
+       "ekran": "**Kortikal motor alanlar**, hareket kararının üretildiği ve başlatıldığı en üst merkezdir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kortikal motor alanlar",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "KORTİKAL MOTOR ALANLAR"
+        ],
+        "sekil": "Motor sistemler hiyerarşisi blok diyagramı"
+       }
+      },
+      {
+       "id": "k2-18-c0020",
+       "ses": "Kortikal alanlardan çıkan komutlar talamus üzerinden bazal gangliyonlar ve serebelluma ulaşarak iki büyük geri bildirim çemberinde işlenir.",
+       "ekran": "Kortikal komutlar **talamus aracılığıyla** bazal gangliyon ve **serebellum** döngülerine akar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "talamus aracılığıyla",
+         "tur": "terim"
+        },
+        {
+         "metin": "serebellum",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "TALAMUS",
+         "BAZAL GANGLION",
+         "SEREBELLUM"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0021",
+       "ses": "İşlenen ve modüle edilen motor taslaklar beyin sapı motor çekirdeklerine ve oradan medulla spinalise aktarılır.",
+       "ekran": "Modüle edilen motor emirler **beyin sapı** ve **medulla spinalise** aktarılır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "beyin sapı",
+         "tur": "terim"
+        },
+        {
+         "metin": "medulla spinalise",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "BEYIN SAPI",
+         "MEDULLA SPİNALİS"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0022",
+       "ses": "Böylece medulla spinalis ön boynuzundaki alfa motor nöronlar periferik kasları uyarırken karmaşık bir merkezi denetimin nihai ürünü olarak kasılma gerçekleşir.",
+       "ekran": "Medulla spinalis ön boynuzundaki **alfa motor nöronlar** kas kasılmasını nihai olarak yönetir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "alfa motor nöronlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "BEYIN SAPI",
+         "MEDULLA SPİNALİS"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0023",
+       "ses": "Serebellum hareketin zamanlamasını ve koordinasyonunu denetlerken bazal gangliyonlar hangi hareket parçalarının seçilip hangilerinin bastırılacağını belirler.",
+       "ekran": "Serebellum **zamanlama ve koordinasyonu**, bazal gangliyonlar **hareket seçimini** yönetir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "zamanlama ve koordinasyonu",
+         "tur": "terim"
+        },
+        {
+         "metin": "hareket seçimini",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "BEYIN SAPI",
+         "MEDULLA SPİNALİS"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0024",
+       "ses": "Talamus bu şebekede pasif bir aktarma istasyonu olmayıp yalnızca onaylanan motor taslakların kortekse dönmesine izin veren kapı görevi görür.",
+       "ekran": "Talamus, **onaylanan motor taslakların kortekse dönmesini** sağlayan filtre kapısıdır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "onaylanan motor taslakların kortekse dönmesini",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "BEYIN SAPI",
+         "MEDULLA SPİNALİS"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p005",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k2-18-c0025",
+       "ses": "Şekil bir üzerinde motor sistemin belli başlı yapıları arasındaki ana ilişkileri geri dönen ve desendan yolların şematik görünüşünü incelemekteyiz.",
+       "ekran": "**Şekil bir**, motor sistem yapıları arasındaki ana ilişkileri ve desendan yolları gösterir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Şekil bir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Şekil 1. Motor sistemin belli başlı yapıları arasındaki ana ilişkilerin, geri-dönen ve desendan yolların şematik görünüşü."
+        ],
+        "sekil": "Motor sistemin belli başlı yapıları arasındaki ana ilişkilerin koronal kesitte şematik görünüşü"
+       }
+      },
+      {
+       "id": "k2-18-c0026",
+       "ses": "Ön beyin koronal kesitinde lateral ventrikülün tabanında nükleus kaudatus başı yer alırken üstte korpus kallozum lif demetleri uzanır.",
+       "ekran": "**Lateral ventrikül** tabanında nükleus kaudatus başı, üstte **korpus kallozum** yer alır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Lateral ventrikül",
+         "tur": "terim"
+        },
+        {
+         "metin": "korpus kallozum",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "lateral ventrikül korpus kallosum"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0027",
+       "ses": "Kapsüla interna nükleus kaudatus ile putamen arasından geçerek inen ve çıkan devasa projeksiyon liflerini taşır.",
+       "ekran": "**Kapsüla interna**, nükleus kaudatus ile putamen arasından geçen devasa lif demetidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kapsüla interna",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "kapsüla",
+         "interna re"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0028",
+       "ses": "Kapsüla internanın arka bacağındaki lezyonlar karşı vücut yarısında saf motor felç oluştururken bazal çekirdek hasarları hareket bozukluğu yapar.",
+       "ekran": "Kapsüla interna hasarı **karşı vücutta motor felç**, bazal çekirdek hasarı **hareket bozukluğu** yapar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "karşı vücutta motor felç",
+         "tur": "terim"
+        },
+        {
+         "metin": "hareket bozukluğu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "kapsüla",
+         "interna re"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0029",
+       "ses": "Bu dar subkortikal geçitte kapsüla internayı besleyen ince delici damarların tıkanması anatomik yakınlık nedeniyle bazal çekirdekleri de doğrudan etkiler.",
+       "ekran": "Kapsüla interna ve bazal çekirdekler **delici damar tıkanıklıklarından** ortak etkilenir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "delici damar tıkanıklıklarından",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "kapsüla",
+         "interna re"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0030",
+       "ses": "Kapsüla internanın ön bacağı kaudatus ile putamen arasını ayırırken arka bacağı talamus ile globus pallidus arasına yerleşir.",
+       "ekran": "Kapsüla internanın **ön bacağı kaudatus-putamen**, arka bacağı **talamus-pallidum** arasındadır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ön bacağı kaudatus-putamen",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "kapsüla",
+         "interna re"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p006",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k2-18-c0031",
+       "ses": "Nükleus kaudatus ventrikül komşuluğunda yay çizerken lateral tarafta putamen ve insula korteksi konumlanır.",
+       "ekran": "**Nükleus kaudatus** ventrikül komşuluğunda, lateralde **putamen ve insula** yer alır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Nükleus kaudatus",
+         "tur": "terim"
+        },
+        {
+         "metin": "putamen ve insula",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "nükleus",
+         "kaudatus",
+         "insula putamen"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0032",
+       "ses": "Putamenin hemen medialinde globus pallidus yer alır ve birlikte nükleus lentiformisi meydana getirirler.",
+       "ekran": "**Putamen ve globus pallidus** birlikte koni biçimli **nükleus lentiformisi** oluşturur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Putamen ve globus pallidus",
+         "tur": "terim"
+        },
+        {
+         "metin": "nükleus lentiformisi",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "nükleus",
+         "kaudatus",
+         "insula putamen"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0033",
+       "ses": "Bu derin subkortikal bölgenin tabanında iki hemisferi birbirine bağlayan anterior komissür lifleri geçer.",
+       "ekran": "Subkortikal bölgenin tabanında hemisferleri bağlayan **anterior komissür** uzanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "anterior komissür",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "anterior komissür"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0034",
+       "ses": "Bu çekirdeklerin vasküler beslenmesi arteria serebri medianın derin lentikülostriat dallarıyla sağlanır ve hipertansif laküner kanamalara son derece yatkındır.",
+       "ekran": "Bazal çekirdekler **lentikülostriat arterlerle** beslenir ve **laküner lezyonlara** hassastır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "lentikülostriat arterlerle",
+         "tur": "terim"
+        },
+        {
+         "metin": "laküner lezyonlara",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "anterior komissür"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0035",
+       "ses": "Charcot kanama arteri olarak bilinen bu lentikülostriat dalların mikroanevrizma rüptürleri putaminal parankim içi hematomların en sık nedenidir.",
+       "ekran": "**Lentikülostriat arter rüptürleri**, hipertansif putaminal hematomların en sık kaynağıdır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Lentikülostriat arter rüptürleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "anterior komissür"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0036",
+       "ses": "Kaudatus ile putamen arasında uzanan ince hücresel gri cevher köprüleri bu yapıların embriyolojik ortaklığını gösterir ve çizgili görünümü verir.",
+       "ekran": "Kaudatus ve putamen arasındaki **gri cevher köprüleri**, çizgili görünümü sağlar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "gri cevher köprüleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "anterior komissür"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-18-b03",
+   "baslik": "Bazal Gangliyonların Anatomik Çekirdekleri ve Çıkış Kapıları",
+   "paragraflar": [
+    {
+     "id": "k2-18-p007",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k2-18-c0037",
+       "ses": "Üç boyutlu anatomik modeli gösteren şekilde bazal gangliyonların serebral hemisferlerin derinliklerindeki uzanımı net biçimde görülmektedir.",
+       "ekran": "Üç boyutlu anatomik şemada **bazal gangliyonların** hemisfer içi derin yerleşimi görülür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bazal gangliyonların",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Figure AB-18: Basal Ganglia"
+        ],
+        "sekil": "Bazal gangliyonların üç boyutlu anatomik organizasyonu"
+       }
+      },
+      {
+       "id": "k2-18-c0038",
+       "ses": "Mezensefalon düzeyinde yer alan substantia nigra koyu renkli nöromelanin pigmenti içeren dopaminerjik nöronlarıyla döngünün kilit parçasıdır.",
+       "ekran": "**Substantia nigra**, mezensefalonda yer alan ve **dopaminerjik nöronlar** içeren çekirdektir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Substantia nigra",
+         "tur": "tanim"
+        },
+        {
+         "metin": "dopaminerjik nöronlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "ubstantia",
+         "Nigra"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0039",
+       "ses": "Striatum ve pallidum telensefalon kökenli iken subtalamik nükleus diensefalon ve substantia nigra mezensefalon kökenlidir.",
+       "ekran": "Striatum **telensefalon**, subtalamik nükleus **diensefalon**, substantia nigra **mezensefalon** kökenlidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "telensefalon",
+         "tur": "terim"
+        },
+        {
+         "metin": "diensefalon",
+         "tur": "terim"
+        },
+        {
+         "metin": "mezensefalon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "ubstantia",
+         "Nigra"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0040",
+       "ses": "Farklı embriyolojik kökenlerine rağmen bu çekirdekler birbirine sıkıca bağlanarak fonksiyonel bir bütünlük oluşturur.",
+       "ekran": "Farklı embriyolojik kökenli çekirdekler **tek bir fonksiyonel sistem** olarak çalışır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tek bir fonksiyonel sistem",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Diagram colors are consistent with Figure AB-19."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0041",
+       "ses": "Nükleus kaudatusun C harfi biçimindeki kıvrımı lateral ventrikül boyunca ilerleyerek amigdala çekirdeğine kadar uzanır.",
+       "ekran": "Nükleus kaudatus **lateral ventrikülü izleyerek** amigdalaya kadar kıvrılır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "lateral ventrikülü izleyerek",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Diagram colors are consistent with Figure AB-19."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0042",
+       "ses": "Substantia nigra pars kompakta nöronları tirozin hidroksilaz enzimiyle dopamin üretip striatuma sevk eden ana kaynaktır.",
+       "ekran": "**SNc nöronları**, tirozin hidroksilaz ile dopamin sentezleyip striatuma gönderir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "SNc nöronları",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Diagram colors are consistent with Figure AB-19."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p008",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k2-18-c0043",
+       "ses": "Striatum bazal gangliyonların ana giriş yani afferent kapısıdır ve üç ana bölümden meydana gelir.",
+       "ekran": "**Striatum**, bazal gangliyonların ana **afferent giriş kapısıdır**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Striatum",
+         "tur": "tanim"
+        },
+        {
+         "metin": "afferent giriş kapısıdır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "e Striatum"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0044",
+       "ses": "Striatumu oluşturan bu yapılar putamen nükleus kaudatus ve ventral striatum olarak sıralanır.",
+       "ekran": "Striatum; **putamen, nükleus kaudatus ve ventral striatum** yapılarından oluşur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "putamen, nükleus kaudatus ve ventral striatum",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "-Putamen",
+         "-Nukleus kaudatus",
+         "-Ventral striatum"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0045",
+       "ses": "Putamen özellikle motor korteksten yoğun lif alarak iskeletomotor işlevlere hizmet ederken nükleus kaudatus daha çok prefrontal asosiasyon korteksiyle bağlantılıdır.",
+       "ekran": "**Putamen motor işlevlerle**, nükleus kaudatus ise **kognitif ve asosiyatif** süreçlerle ilişkilidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Putamen motor işlevlerle",
+         "tur": "terim"
+        },
+        {
+         "metin": "kognitif ve asosiyatif",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "-Putamen",
+         "-Nukleus kaudatus",
+         "-Ventral striatum"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0046",
+       "ses": "Ventral striatum ise nükleus akkumbensi kapsayarak limbik sistemden gelen motivasyon ve emosyonel girdileri işler.",
+       "ekran": "**Ventral striatum**, nükleus akkumbensi içerir ve **limbik motivasyon** girdilerini işler.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Ventral striatum",
+         "tur": "tanim"
+        },
+        {
+         "metin": "limbik motivasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "-Putamen",
+         "-Nukleus kaudatus",
+         "-Ventral striatum"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0047",
+       "ses": "Striatum nöronlarının yüzde doksan beşini orta boylu dikenli nöronlar oluşturur ve bu hücreler gaba salgılayan temel projeksiyon elemanlarıdır.",
+       "ekran": "Striatumun ana hücreleri **GABA salgılayan orta boylu dikenli nöronlardır**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "GABA salgılayan orta boylu dikenli nöronlardır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "-Putamen",
+         "-Nukleus kaudatus",
+         "-Ventral striatum"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0048",
+       "ses": "Striatum içinde ayrıca matriks ve striyozom adı verilen kimyasal alt kompartmanlar bulunur ve farklı kortikal alanlardan gelen girdileri ayrı kanallarda işler.",
+       "ekran": "Striatum **matriks ve striyozom** kompartmanlarıyla farklı kortikal girdileri ayırır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "matriks ve striyozom",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "-Putamen",
+         "-Nukleus kaudatus",
+         "-Ventral striatum"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p009",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k2-18-c0049",
+       "ses": "Globus pallidus eksternus ve internus olmak üzere iki belirgin tabakaya ayrılır; substantia nigra ise pars kompakta ve pars retikulata kısımlarından oluşur.",
+       "ekran": "**Globus pallidus** eksternus ve internus; **substantia nigra** ise pars kompakta ve retikulata olarak ayrılır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Globus pallidus",
+         "tur": "terim"
+        },
+        {
+         "metin": "substantia nigra",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "» Globus pallidus (eksternus ve internus)",
+         "Substantia nigra (pars kompakta ve pars",
+         "retikulata)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0050",
+       "ses": "Subtalamik nükleus diğer adıyla Korpus Luysii diensefalonda yer alan eksitatör ara istasyondur.",
+       "ekran": "**Subtalamik nükleus (Korpus Luysii)**, diensefalonda yer alan glutamaterjik eksitatör çekirdektir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Subtalamik nükleus (Korpus Luysii)",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "» Subtalamik nukleus (Korpus Luysii)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0051",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: Bazal gangliyonların temel efferent yani çıkış çekirdekleri globus pallidus internus ve substantia nigra pars reticulata çekirdekleridir.",
+       "ekran": "**Çıkmış soru:** Bazal gangliyonların temel çıkış (efferent) çekirdekleri **GPi ve SNr** yapılarıdır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "GPi ve SNr",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Çıkmış soru:",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3-k2-nor-003",
+        "3b0feecd9a0d",
+        "q-2__kurul_-13"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "» Subtalamik nukleus (Korpus Luysii)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0052",
+       "ses": "Striatumdan işlenen bütün motor bilgiler bu iki çıkış çekirdeği üzerinden talamusun motor çekirdeklerine iletilerek sonuca bağlanır.",
+       "ekran": "İşlenen tüm bilgiler **GPi ve SNr çıkış kapılarından** talamusa aktarılır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "GPi ve SNr çıkış kapılarından",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "» Subtalamik nukleus (Korpus Luysii)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0053",
+       "ses": "Globus pallidus internus özellikle ansa lentikülaris ve fasikülüs lentikülaris lif demetleri aracılığıyla talamusun ventral anterior ve ventral lateral çekirdeklerine bağlanır.",
+       "ekran": "**GPi çıkış lifleri**, ansa ve fasikülüs lentikülaris ile **talamus VA ve VL** çekirdeklerine ulaşır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "talamus VA ve VL",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "» Subtalamik nukleus (Korpus Luysii)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0054",
+       "ses": "Substantia nigra pars retikulata ise özellikle baş ve boyun hareketleriyle ilişkili okülomotor sinyalleri talamus ve süperior kollikulusa aktarır.",
+       "ekran": "**SNr çıkışları**, baş ve göz hareketlerini kontrol eden **süperior kollikulusa** yönelir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "süperior kollikulusa",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "» Subtalamik nukleus (Korpus Luysii)"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-18-b04",
+   "baslik": "Nörotransmiter Sistemleri ve Biyokimyasal Denge",
+   "paragraflar": [
+    {
+     "id": "k2-18-p010",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k2-18-c0055",
+       "ses": "Bazal gangliyonların karmaşık devrelerini anlayabilmek için çekirdekler arasında haberleşmeyi sağlayan nörotransmiterleri çok iyi tanımalıyız.",
+       "ekran": "Bazal gangliyon fonksiyonları **özgül nörotransmiterlerin** hassas dengesiyle yürütülür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "özgül nörotransmiterlerin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "BG nörotransmiterler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0056",
+       "ses": "Devredeki ana inhibitör iletici gabadır; striatum globus pallidus ve substantia nigra pars retikulatadaki projeksiyon nöronlarının çoğu gabaerjiktir.",
+       "ekran": "Sistemdeki **ana inhibitör nörotransmiter GABA** olup hücreleri hiperpolarize eder.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ana inhibitör nörotransmiter GABA",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "GABA (inh)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0057",
+       "ses": "Buna karşılık ana uyarıcı eksitatör iletici glutamattır; hem serebral korteksten striatuma gelen lifler hem de subtalamik nükleustan çıkan projeksiyonlar glutamaterjiktir.",
+       "ekran": "**Glutamat ana eksitatör** ileticidir; kortikostriatal ve subtalamik liflerde salgılanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Glutamat ana eksitatör",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Glutamat ( uyarıcı, eksitatör)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0058",
+       "ses": "Eksitatör glutamat ile inhibitör gaba arasındaki bu sürekli gerilim bazal gangliyonların kapılama işlevinin temel mekanizmasını teşkil eder.",
+       "ekran": "**Glutamat eksitasyonu ile GABA inhibisyonu** motor kapılamanın temelini oluşturur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Glutamat eksitasyonu ile GABA inhibisyonu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Glutamat ( uyarıcı, eksitatör)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0059",
+       "ses": "Gaba nöronları klor kanallarını açarak dinlenim zar potansiyelini eksi yetmiş milivolttan daha negatif değerlere çekip ateşlemeyi baskılar.",
+       "ekran": "GABA **klor kanallarını açarak** nöron membranını hiperpolarize eder.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "klor kanallarını açarak",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Glutamat ( uyarıcı, eksitatör)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0060",
+       "ses": "Glutamat ise postsinaptik nörondaki sodyum ve kalsiyum geçirgen kanalları aktive ederek aksiyon potansiyeli üretilmesini tetikler.",
+       "ekran": "Glutamat, **sodyum ve kalsiyum akımıyla** depolarizasyon ve aksiyon potansiyeli üretir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "depolarizasyon ve aksiyon potansiyeli",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Glutamat ( uyarıcı, eksitatör)"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p011",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k2-18-c0061",
+       "ses": "Substantia nigra pars kompaktadan salgılanan dopamin hedef nörondaki reseptör tipine bağlı olarak zıt etkilere aracılık eder.",
+       "ekran": "**Dopamin**, bağlandığı reseptör tipine göre eksitatör veya inhibitör etki gösterir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Dopamin",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Dopamin D1 (uyarıcı) D2 (bastırıcı)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0062",
+       "ses": "Dopamin de bir reseptörlerine bağlandığında hücre içi siklik adenozin monofosfatı artırarak uyarıcı etki oluşturur.",
+       "ekran": "**D1 reseptörleri**, hücre içi cAMP düzeyini artırarak **uyarıcı (eksitatör)** etki yapar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "D1 reseptörleri",
+         "tur": "terim"
+        },
+        {
+         "metin": "uyarıcı (eksitatör)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Dopamin D1 (uyarıcı) D2 (bastırıcı)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0063",
+       "ses": "Dopamin de iki reseptörlerine bağlandığında ise siklik adenozin monofosfat sentezini baskılayarak bastırıcı ve inhibitör sonuç doğurur.",
+       "ekran": "**D2 reseptörleri**, cAMP sentezini azaltarak **bastırıcı (inhibitör)** etki oluşturur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "D2 reseptörleri",
+         "tur": "terim"
+        },
+        {
+         "metin": "bastırıcı (inhibitör)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Dopamin D1 (uyarıcı) D2 (bastırıcı)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0064",
+       "ses": "Böylece dopamin hem direkt yolu uyararak hem de indirekt yolu baskılayarak neticede motor hareketi kuvvetle kolaylaştırır.",
+       "ekran": "Dopamin **direkt yolu uyarır, indirekt yolu baskılar**; net etkisi hareketi kolaylaştırmaktır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "direkt yolu uyarır, indirekt yolu baskılar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Dopamin D1 (uyarıcı) D2 (bastırıcı)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0065",
+       "ses": "Nigrostriatal dopaminerjik nöron kaybı direkt yolun zayıflamasına ve indirekt yolun aşırı baskın hale gelmesine yol açarak bradikinezi doğurur.",
+       "ekran": "Dopamin eksikliği **direkt yolu zayıflatır**, indirekt yolu aşırı artırıp **bradikinezi** yapar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "direkt yolu zayıflatır",
+         "tur": "terim"
+        },
+        {
+         "metin": "bradikinezi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Dopamin D1 (uyarıcı) D2 (bastırıcı)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0066",
+       "ses": "Dopaminin bu ikili etkisi sayesinde tek bir kimyasal iletici iki ayrı yolak üzerinden aynı amaca yani hareketin fasilitasyonuna hizmet eder.",
+       "ekran": "Dopamin, iki farklı yol üzerinden **hareketin fasilitasyonunu** sinerjik olarak sağlar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hareketin fasilitasyonunu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Dopamin D1 (uyarıcı) D2 (bastırıcı)"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p012",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k2-18-c0067",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: Bazal gangliyonlarda temel nörotransmiterler arasında modülatör olarak görev yapan ana kimyasal iletici asetilkolindir.",
+       "ekran": "**Çıkmış soru:** Bazal gangliyonlarda **modülatör nörotransmiter asetilkolindir**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "modülatör nörotransmiter asetilkolindir",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Çıkmış soru:",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-1790877043386-198521",
+        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-22",
+        "q-2__kurul_-13-cs2"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Asetilkolin ( modulatör)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0068",
+       "ses": "Striatum içindeki dev kolinerjik internöronlar dopaminin aksine indirekt yolu uyararak dopamin ile hassas bir denge terazisi kurar.",
+       "ekran": "Striatal **kolinerjik internöronlar**, dopamin ile karşıt bir denge terazisi oluşturur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kolinerjik internöronlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Asetilkolin ( modulatör)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0069",
+       "ses": "Nöropeptitlerden substans p direkt yol nöronlarında gaba ile birlikte bulunurken enkefalin indirekt yol nöronlarında eş salgılanır.",
+       "ekran": "**Substans P direkt yolda**, **enkefalin indirekt yolda** GABA ile eş zamanlı salgılanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Substans P direkt yolda",
+         "tur": "terim"
+        },
+        {
+         "metin": "enkefalin indirekt yolda",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "nöropeptitler ( sunstance p, enkefalin)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0070",
+       "ses": "Bu kimyasal dengeler hareketin başlatılması hız ve büyüklüğünün ayarlanması öğrenilmiş motor programların otomatik yürütülmesi ve kas tonusunun düzenlenmesini sağlar.",
+       "ekran": "Nörotransmiter dengesi **hareket planlaması, hız ayarı, otomatiklik ve tonusu** sağlar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hareket planlaması, hız ayarı, otomatiklik ve tonusu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "BG motor işlevi, hareketin başlatılması, planlanması,",
+         "hareket hız ve büyüklüğünün ayarlanması, öğrenilmiş",
+         "motor programların otomatik yürütülmesi( bisiklete",
+         "binme), kas tonusunun ayarlanması"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0071",
+       "ses": "Dopamin azaldığında kolinerjik baskınlık artarak tremor ve rijiditeyi şiddetlendirirken antikolinerjik ilaçlar bu teraziyi dengeleyerek semptomları yatıştırır.",
+       "ekran": "Dopamin azlığı **kolinerjik tonusu artırır**; antikolinerjikler bu dengeyi sağlar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kolinerjik tonusu artırır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "BG motor işlevi, hareketin başlatılması, planlanması,",
+         "hareket hız ve büyüklüğünün ayarlanması, öğrenilmiş",
+         "motor programların otomatik yürütülmesi( bisiklete",
+         "binme), kas tonusunun ayarlanması"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0072",
+       "ses": "Substans p nörokinin reseptörleri üzerinden eksitasyonu artırırken enkefalin opioid reseptörleri aracılığıyla gaba salınımını ince ayarla modüle eder.",
+       "ekran": "Substans P ve enkefalin, **peptiderjik reseptörlerle** gaba salınımını modüle eder.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "peptiderjik reseptörlerle",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "BG motor işlevi, hareketin başlatılması, planlanması,",
+         "hareket hız ve büyüklüğünün ayarlanması, öğrenilmiş",
+         "motor programların otomatik yürütülmesi( bisiklete",
+         "binme), kas tonusunun ayarlanması"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-18-b05",
+   "baslik": "Temel Devreler: Direkt Yol ve Hareketi Kolaylaştırma",
+   "paragraflar": [
+    {
+     "id": "k2-18-p013",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k2-18-c0073",
+       "ses": "Bazal gangliyonları oluşturan bu yapılar arasında iki temel devre organize olmuştur; bunlar direkt ve indirekt yollardır.",
+       "ekran": "Bazal gangliyonlarda motor kontrolü sağlayan **direkt ve indirekt yollar** bulunur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "direkt ve indirekt yollar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "BG’ı oluşturan bu yapılar arasında oluşmuş devreler"
+        ],
+        "sekil": "Direkt ve indirekt yol devre şeması"
+       }
+      },
+      {
+       "id": "k2-18-c0074",
+       "ses": "Direkt yol frontal ve parietal serebral korteksten doğan glutamaterjik eksitatör liflerin striatuma ulaşmasıyla başlar.",
+       "ekran": "**Direkt yol**, frontal ve parietal korteksten striatuma glutamat iletimiyle başlar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Direkt yol",
+         "tur": "tanim"
+        },
+        {
+         "metin": "striatuma glutamat iletimiyle",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "a1   direk yol :      korteks( frontal, parietal)",
+         "striatum"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0075",
+       "ses": "Striatumdaki orta boylu dikenli nöronlar üzerinde yer alan dopamin de bir reseptörleri bu glutamaterjik uyarıyla birlikte kuvvetle uyarılır.",
+       "ekran": "Striatumdaki **D1 reseptörleri**, kortikal glutamat ve dopamin ile güçlü biçimde uyarılır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "D1 reseptörleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "a1   direk yol :      korteks( frontal, parietal)",
+         "striatum"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0076",
+       "ses": "Uyarılmış olan bu striatal nöronlar gaba ve substans p salgılayarak doğrudan bazal gangliyonların çıkış çekirdeklerine uzanır.",
+       "ekran": "Uyarılmış striatal nöronlar **GABA ve Substans P** ile çıkış çekirdeklerine uzanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "GABA ve Substans P",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "a1   direk yol :      korteks( frontal, parietal)",
+         "striatum"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0077",
+       "ses": "Bu doğrudan uzanan lif demetine striatopallidal ve striatonigral doğrudan projeksiyon yolu adı verilir ve hareketi ateşleyen ana kanaldır.",
+       "ekran": "Bu doğrudan yola **striatopallidal ve striatonigral** direkt projeksiyon denir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "striatopallidal ve striatonigral",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "a1   direk yol :      korteks( frontal, parietal)",
+         "striatum"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0078",
+       "ses": "Kortikostriatal lifler striatumda hem hızlı iyonotropik reseptörleri uyarır hem de hücre içi siklik adenozin monofosfat yolunu aktive ederek güçlü bir ateşleme sağlar.",
+       "ekran": "Kortikostriatal lifler **hızlı iyon kanallarını ve cAMP yolunu** aktive ederek ateşlemeyi başlatır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hızlı iyon kanallarını ve cAMP yolunu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "a1   direk yol :      korteks( frontal, parietal)",
+         "striatum"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p014",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k2-18-c0079",
+       "ses": "Striatumdan gelen inhibitör gabaerjik lifler globus pallidus internus ve substantia nigra pars reticulata çekirdeklerine sinaps yapar.",
+       "ekran": "Striatumdan çıkan GABAerjik lifler **GPi ve SNr** çekirdeklerini inhibe eder.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "GPi ve SNr",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Gpi/ SNr"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0080",
+       "ses": "Normal koşullarda istirahat halindeyken bu çıkış çekirdekleri saniyede altmış ile seksen hertzlik yüksek frekansta tonik gaba deşarjı üretir.",
+       "ekran": "İstirahat halinde GPi ve SNr, **yüksek frekanslı tonik GABA deşarjı** üretir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüksek frekanslı tonik GABA deşarjı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Gpi/ SNr"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0081",
+       "ses": "Striatum aktive olup gaba salgıladığında globus pallidus internus ve substantia nigra pars reticulata nöronları geçici olarak susturulur.",
+       "ekran": "Striatal aktivasyon, **GPi ve SNr çıkış nöronlarını susturur**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "GPi ve SNr çıkış nöronlarını susturur",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Gpi/ SNr"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0082",
+       "ses": "İnhibitör bir merkezin bir başka inhibitör girdi ile susturulması fizyolojide disinhibisyon yani baskının kaldırılması olarak adlandırılır.",
+       "ekran": "İnhibitör merkezin susturulması olayına **disinhibisyon (baskının kalkması)** denir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "disinhibisyon (baskının kalkması)",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Gpi/ SNr"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0083",
+       "ses": "Böylece globus pallidus internusun talamus üzerindeki sürekli baskılayıcı tonusu ortadan kaldırılarak talamus serbest bırakılır.",
+       "ekran": "GPi baskısının kalkmasıyla **talamus disinhibe olur** ve serbest kalır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "talamus disinhibe olur",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Gpi/ SNr"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0084",
+       "ses": "Talamik nöronlar üzerindeki hiperpolarizasyon kalktığı anda hücre membranında patlama tarzında ritmik eksitatör aksiyon potansiyelleri tetiklenir.",
+       "ekran": "Hiperpolarizasyon kalkınca talamusta **patlama tarzında eksitatör deşarjlar** tetiklenir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "patlama tarzında eksitatör deşarjlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Gpi/ SNr"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p015",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k2-18-c0085",
+       "ses": "Baskıdan kurtulan talamusun ventral anterior ve ventral lateral çekirdek nöronları kendiliğinden uyarılabilir hale gelir.",
+       "ekran": "Baskıdan kurtulan **talamus VA ve VL nöronları** yüksek frekansta uyarılır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "talamus VA ve VL nöronları",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "⟸Talamus"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0086",
+       "ses": "Talamustan yukarıya çıkan talamokortikal aksonlar motor ve premotor kortekse yoğun glutamat salgılayarak kortikal nöronları ateşler.",
+       "ekran": "**Talamokortikal aksonlar**, motor kortekse glutamat salgılayarak korteksi ateşler.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Talamokortikal aksonlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "⟸Talamus"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0087",
+       "ses": "Uyarılmış olan korteks kortikospinal ve kortikobulber yollar üzerinden hedeflenen istemli kas grubunu kasılmaya sevk eder.",
+       "ekran": "Uyarılmış korteks, **kortikospinal yol ile** hedeflenen istemli kası kasar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kortikospinal yol ile",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "⟸Talamus"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0088",
+       "ses": "Sonuç olarak direkt yolun net fizyolojik etkisi talamusu serbest bırakarak korteksi uyarmak ve hareketi başlatıp kolaylaştırmaktır.",
+       "ekran": "**Direkt yolun net etkisi:** Talamusu serbest bırakarak **hareketi başlatıp kolaylaştırmaktır**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Direkt yolun net etkisi:",
+         "tur": "terim"
+        },
+        {
+         "metin": "hareketi başlatıp kolaylaştırmaktır",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "⟸Talamus"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0089",
+       "ses": "Bu yolun aşırı çalışması tikler kore veya distoni gibi istemsiz hiperkinetik tabloların klinik zeminini hazırlar.",
+       "ekran": "Direkt yolun aşırı etkinliği **istemsiz hiperkinetik tablolara** zemin hazırlar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "istemsiz hiperkinetik tablolara",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "⟸Talamus"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0090",
+       "ses": "Direkt yolun fasilitatör etkisi sayesinde istemli hareket tam istenen anda gecikmeksizin ve akıcı bir güçle başlatılabilir.",
+       "ekran": "Direkt yol, **istemli hareketin gecikmesiz ve akıcı** başlamasını temin eder.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "istemli hareketin gecikmesiz ve akıcı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "⟸Talamus"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-18-b06",
+   "baslik": "Temel Devreler: İndirekt Yol ve İstenmeyen Hareketleri Baskılama",
+   "paragraflar": [
+    {
+     "id": "k2-18-p016",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k2-18-c0091",
+       "ses": "İkinci ana devre olan indirekt yol korteksin putamene gönderdiği glutamaterjik eksitatör projeksiyonlarla başlar.",
+       "ekran": "**İndirekt yol**, korteksten putamene gelen glutamaterjik uyarıyla başlar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İndirekt yol",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "a2 indirek yol : korteks →",
+         "putamen→"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0092",
+       "ses": "Burada görev alan striatal nöronlar de iki dopamin reseptörleri taşır ve nöropeptit olarak enkefalin içerir.",
+       "ekran": "İndirekt yol striatal nöronları **D2 reseptörleri ve enkefalin** taşır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "D2 reseptörleri ve enkefalin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "a2 indirek yol : korteks →",
+         "putamen→"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0093",
+       "ses": "Bu nöronların aksonları doğrudan çıkış çekirdeklerine gitmez; önce globus pallidus eksternusa uzanarak gaba salgılar.",
+       "ekran": "Striatal aksonlar **önce globus pallidus eksternusa (GPe)** giderek GABA salgılar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "önce globus pallidus eksternusa (GPe)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Gpe→STN"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0094",
+       "ses": "Putamenden gelen yoğun inhibitör girdi nedeniyle globus pallidus eksternus nöronlarının aktivitesi güçlü biçimde baskılanır.",
+       "ekran": "Putamenden gelen GABA salgısı **GPe nöronlarını baskılar**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "GPe nöronlarını baskılar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Gpe→STN"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0095",
+       "ses": "Globus pallidus eksternusun baskılanması indirekt yolun kritik ara istasyonu olan subtalamik nükleus üzerinde zincirleme bir etki yaratır.",
+       "ekran": "GPe inhibisyonu, **subtalamik nükleus üzerinde** kilit bir zincirleme etki yaratır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "subtalamik nükleus üzerinde",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Gpe→STN"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0096",
+       "ses": "Dopamin de iki reseptörlerine bağlandığında inhibitör G-proteini üzerinden adenilat siklazı baskıladığı için dopamin varlığı indirekt yolu susturur.",
+       "ekran": "Dopamin D2 reseptörüyle **adenilat siklazı baskılayarak** indirekt yolu gevşetir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "adenilat siklazı baskılayarak",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Gpe→STN"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p017",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k2-18-c0097",
+       "ses": "İstirahat halinde globus pallidus eksternus subtalamik nükleus üzerinde sürekli bir gabaerjik baskı uygulamaktadır.",
+       "ekran": "İstirahat halinde GPe, **subtalamik nükleus (STN)** üzerinde tonik GABA baskısı kurar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "subtalamik nükleus (STN)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "←Gpi/SNr"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0098",
+       "ses": "Globus pallidus eksternus susturulduğunda subtalamik nükleus üzerindeki bu baskı ortadan kalkar ve subtalamik nükleus güçlü şekilde disinhibe olur.",
+       "ekran": "GPe susunca **subtalamik nükleus disinhibe olur** ve aşırı uyarılır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "subtalamik nükleus disinhibe olur",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "←Gpi/SNr"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0099",
+       "ses": "Aşırı uyarılan subtalamik nükleus nöronları glutamaterjik eksitatör aksonlarıyla globus pallidus internus ve substantia nigra pars retikulatayı bombardımana tutar.",
+       "ekran": "Ateşlenen STN, **GPi ve SNr'ye yoğun glutamat** salgılayarak onları uyarır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "GPi ve SNr'ye yoğun glutamat",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "←Gpi/SNr"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0100",
+       "ses": "Böylece doğrudan yolun aksine çıkış çekirdekleri susturulmak yerine tam tersine kuvvetle aktive edilmiş olur.",
+       "ekran": "İndirekt yol sayesinde **GPi ve SNr çıkış çekirdekleri kuvvetle aktive edilir**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "GPi ve SNr çıkış çekirdekleri kuvvetle aktive edilir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "←Gpi/SNr"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0101",
+       "ses": "Ayrıca korteksten doğrudan subtalamik nükleusa inen hiperdirekt yol acil durumlarda hareketi anında durduran süper hızlı bir eksitasyon sağlar.",
+       "ekran": "**Hiperdirekt yol**, korteksten STN'ye doğrudan inerek hareketi hızla durdurur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hiperdirekt yol",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "←Gpi/SNr"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0102",
+       "ses": "Subtalamik nükleustan çıkan bu güçlü eksitatör projeksiyonlar hareketin sınırlandırılmasında vazgeçilmez bir düzenleyici merkezdir.",
+       "ekran": "STN projeksiyonları, **hareketin dizginlenmesinde** vazgeçilmez bir kontrol merkezidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hareketin dizginlenmesinde",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "←Gpi/SNr"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p018",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k2-18-c0103",
+       "ses": "Subtalamik nükleus tarafından aşırı uyarılan globus pallidus internus ve substantia nigra pars retikulata talamusa yoğun gaba akıtır.",
+       "ekran": "Uyarılmış GPi ve SNr, **talamusa yoğun GABA salgılayarak** talamusu baskılar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "talamusa yoğun GABA salgılayarak",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "korteks    ←Talamus"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0104",
+       "ses": "Ağır bir gabaerjik inhibisyon altına giren talamus susturulur ve motor kortekse gönderdiği eksitatör uyarılar kesilir.",
+       "ekran": "Baskılanan talamus, **motor kortekse giden eksitatör uyarıları keser**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "motor kortekse giden eksitatör uyarıları keser",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "korteks    ←Talamus"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0105",
+       "ses": "Korteksin uyarılabilirliği bastırılınca gereksiz ya da hedeflenmeyen kas gruplarının istemsiz kasılması engellenmiş olur.",
+       "ekran": "Kortikal baskılama ile **istenmeyen ve hedeflenmeyen kas hareketleri engellenir**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "istenmeyen ve hedeflenmeyen kas hareketleri engellenir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "korteks    ←Talamus"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0106",
+       "ses": "Sonuç olarak indirekt yolun net fizyolojik etkisi talamusu baskılayarak korteksi susturmak ve hareketi durdurup engellemektir.",
+       "ekran": "**İndirekt yolun net etkisi:** Talamusu baskılayarak **istenmeyen hareketleri engellemektir**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İndirekt yolun net etkisi:",
+         "tur": "terim"
+        },
+        {
+         "metin": "istenmeyen hareketleri engellemektir",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "korteks    ←Talamus"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0107",
+       "ses": "Direkt ve indirekt yolların bu muazzam dengesi sayesinde başlatmak istediğimiz hareket akarken çevreleyen tüm parazit hareketler kusursuzca susturulur.",
+       "ekran": "İki yolun dengesiyle **istenen hareket başlatılırken**, parazit hareketler susturulur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "istenen hareket başlatılırken",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "korteks    ←Talamus"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0108",
+       "ses": "Bu iki yolun karşılıklı çekişmesi dengelendiğinde hedeflenen eylem pürüzsüz icra edilirken dengenin bozulması rijidite ya da kore doğurur.",
+       "ekran": "Denge bozulduğunda **hipokinetik rijidite ya da hiperkinetik kore** ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hipokinetik rijidite ya da hiperkinetik kore",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "korteks    ←Talamus"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-18-b07",
+   "baslik": "Dört Fonksiyonel Devre ve Paralel İşleme",
+   "paragraflar": [
+    {
+     "id": "k2-18-p019",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k2-18-c0109",
+       "ses": "Bazal gangliyonlarda klasik iskeletomotor devre dışında üç kritik devre daha bulunur; bunlar okülomotor asosiyatif ve limbik devrelerdir.",
+       "ekran": "Bazal gangliyonlarda motor devre dışında **okülomotor, asosiyatif ve limbik** devreler bulunur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "okülomotor, asosiyatif ve limbik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "bazal ganliada iskeletomotor devre dışında",
+         "✓Oculomotor",
+         "✓Asosiyatif",
+         "✓Limbik devreler de var."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0110",
+       "ses": "İskeletomotor devre putamen merkezli olup somatik kasların istemli planlamasını yürütürken okülomotor devre göz hareketlerini idare eder.",
+       "ekran": "**İskeletomotor devre** ekstremite kaslarını, **okülomotor devre** göz hareketlerini yönetir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İskeletomotor devre",
+         "tur": "tanim"
+        },
+        {
+         "metin": "okülomotor devre",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "oculomotor hareket kontrolünde görevli"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0111",
+       "ses": "Okülomotor devre frontal göz alanından ve suplementer göz alanından kaynaklanarak nükleus kaudatus gövdesine projeksiyon yapar.",
+       "ekran": "Okülomotor döngü **frontal göz alanından nükleus kaudatus gövdesine** uzanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "frontal göz alanından nükleus kaudatus gövdesine",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "oculomotor hareket kontrolünde görevli"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0112",
+       "ses": "Buradan substantia nigra pars retikulataya ve talamus üzerinden süperior kollikulusa bağlanan yol hızlı sakkadik göz hareketlerini yönlendirir.",
+       "ekran": "Kaudatus ve SNr üzerinden **süperior kollikulusa** ulaşan lifler **sakkadları** yönetir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "süperior kollikulusa",
+         "tur": "terim"
+        },
+        {
+         "metin": "sakkadları",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "oculomotor hareket kontrolünde görevli"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0113",
+       "ses": "Progresif supranükleer felç gibi hastalıklarda bu devrenin tutulumu dikey bakış kısıtlılığı ve istemli sakkad kaybı doğurur.",
+       "ekran": "Okülomotor devre hasarı **dikey bakış kısıtlılığı** ve sakkad kaybı oluşturur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dikey bakış kısıtlılığı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "oculomotor hareket kontrolünde görevli"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0114",
+       "ses": "Sekizinci Brodmann alanındaki frontal göz alanı hedef nesneye hızla odaklanmak için es-en-re baskısını kaldırarak kollikuler disinhibisyon üretir.",
+       "ekran": "Frontal göz alanı **kollikuler disinhibisyonla** hedef nesneye hızlı sakkad yaptırır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kollikuler disinhibisyonla",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "oculomotor hareket kontrolünde görevli"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p020",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k2-18-c0115",
+       "ses": "Asosiyatif devre dorsolateral prefrontal korteks ile nükleus kaudatus başı arasında çift yönlü iletişim kurar.",
+       "ekran": "**Asosiyatif devre**, dorsolateral prefrontal korteks ile **nükleus kaudatus başı** arasındadır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Asosiyatif devre",
+         "tur": "tanim"
+        },
+        {
+         "metin": "nükleus kaudatus başı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "asosiyatif işlerin modülasyonu,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0116",
+       "ses": "Bu devre çalışma belleği zihinsel esneklik stratejik planlama ve karmaşık davranış basamaklarının sıralanmasında kilit rol oynar.",
+       "ekran": "Asosiyatif yol **çalışma belleği, planlama ve zihinsel esneklik** süreçlerini yönetir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "çalışma belleği, planlama ve zihinsel esneklik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "asosiyatif işlerin modülasyonu,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0117",
+       "ses": "Kaudatus başının dejenerasyonunda hastalar yalnızca motor güçlük çekmez; aynı zamanda soyut düşünme ve problem çözme becerilerini de kaybeder.",
+       "ekran": "Kaudatus başı hasarında **soyut düşünme ve yürütücü işlevler** bozulur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "soyut düşünme ve yürütücü işlevler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "asosiyatif işlerin modülasyonu,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0118",
+       "ses": "Bu kognitif şebeke talamusun ventral anterior ve dorsomedial çekirdekleri aracılığıyla prefrontal kortekse geri bağlanır.",
+       "ekran": "Asosiyatif döngü **talamus VA ve dorsomedial çekirdeklerle** kortekse geri döner.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "talamus VA ve dorsomedial çekirdeklerle",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "asosiyatif işlerin modülasyonu,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0119",
+       "ses": "Huntington hastalığındaki erken dönem bilişsel çöküş nükleus kaudatus başındaki bu asosiyatif devre hasarından kaynaklanır.",
+       "ekran": "Huntington demansı, **kaudatus başındaki asosiyatif devre hasarına** bağlıdır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kaudatus başındaki asosiyatif devre hasarına",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "asosiyatif işlerin modülasyonu,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0120",
+       "ses": "Kaudatus disfonksiyonu olan hastalar değişen koşullara uyum sağlamakta zorlanır ve perseverasyon adı verilen anlamsız takılmalar gösterir.",
+       "ekran": "Kaudatus hasarında hastalar **kuralları değiştiremez ve perseverasyon** gösterir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kuralları değiştiremez ve perseverasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "asosiyatif işlerin modülasyonu,"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p021",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k2-18-c0121",
+       "ses": "Limbik devre ise anterior singulat korteks orbitofrontal korteks ve amigdaladan köken alarak ventral striatuma bağlanır.",
+       "ekran": "**Limbik devre**, singulat ve orbitofrontal korteksten **ventral striatuma** uzanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Limbik devre",
+         "tur": "tanim"
+        },
+        {
+         "metin": "ventral striatuma",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Limbik sis. modulasyonu ,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0122",
+       "ses": "Ventral striatumun merkezinde yer alan nükleus akkumbens ödül beklentisi haz ve motivasyonel güdünün ana merkezidir.",
+       "ekran": "**Nükleus akkumbens**, ödül beklentisi, haz ve **motivasyonel güdünün** merkezidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Nükleus akkumbens",
+         "tur": "tanim"
+        },
+        {
+         "metin": "motivasyonel güdünün",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Limbik sis. modulasyonu ,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0123",
+       "ses": "Buradan çıkan lifler ventral pallidum üzerinden talamusun mediodorsal çekirdeğine ve ardından singulat kortekse ulaşır.",
+       "ekran": "Limbik lifler **ventral pallidum ve mediodorsal talamusla** singulat kortekse döner.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ventral pallidum ve mediodorsal talamusla",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Limbik sis. modulasyonu ,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0124",
+       "ses": "Bu devre duygusal durumun motor hareketlere yansımasını sağlar ve amaca yönelik eylemler için gereken içsel itici gücü üretir.",
+       "ekran": "Limbik devre **duyguların motora yansımasını** ve amaca yönelik motivasyonu sağlar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "duyguların motora yansımasını",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Limbik sis. modulasyonu ,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0125",
+       "ses": "Parkinson hastalarında sık görülen apati ve depresyon dopamin eksikliğinin mezolimbik yoldaki bu limbik devreyi felce uğratmasıyla açıklanır.",
+       "ekran": "Parkinsondaki apati ve depresyon, **limbik devredeki dopamin yetersizliğine** bağlıdır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "limbik devredeki dopamin yetersizliğine",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Limbik sis. modulasyonu ,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0126",
+       "ses": "Ventral tegmental alandan akkumbense uzanan mezolimbik dopamin projeksiyonları ödül tahmin hatalarını kodlayarak hareketi ödülle pekiştirir.",
+       "ekran": "Mezolimbik dopamin, **ödül tahmin hatalarını kodlayarak** motor motivasyonu güçlendirir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ödül tahmin hatalarını kodlayarak",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Limbik sis. modulasyonu ,"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-18-b08",
+   "baslik": "Motor İşlevler, Odaklama ve Ölçekleme İlkeleri",
+   "paragraflar": [
+    {
+     "id": "k2-18-p022",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k2-18-c0127",
+       "ses": "Bazal gangliyonların motor işlevleri hareketin planlanması başlatılması hız ve büyüklüğünün ayarlanmasıyla doğrudan ilgilidir.",
+       "ekran": "Bazal gangliyonlar **hareketin planlanması, başlatılması, hız ve büyüklüğünü** ayarlar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hareketin planlanması, başlatılması, hız ve büyüklüğünü",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Motor işlevi:",
+         "➢Hareketin başlatılması, planlanması",
+         "➢Hareket hız ve büyüklüğünün ayarlanması"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0128",
+       "ses": "Öğrenilmiş motor hareketlerin örneğin bisiklete binme veya yazı yazma gibi otomatikleşmiş becerilerin yürütülmesi bu çekirdeklerin kontrolündedir.",
+       "ekran": "**Öğrenilmiş otomatik hareketler (bisiklete binme)** bazal gangliyonlarla yürütülür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Öğrenilmiş otomatik hareketler (bisiklete binme)",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "➢Öğrenilmiş motor hareketlerin otomatik yapılması (bisiklet",
+         "binme)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0129",
+       "ses": "Ardısıra gelen ve eşzamanlı olarak icra edilen motor hareketlerin kusursuz koordinasyonu ve kas tonusunun ayarlanması temel görevlerdendir.",
+       "ekran": "**Ardısıra ve eşzamanlı hareketler** ile **kas tonusunun ayarlanması** sağlanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Ardısıra ve eşzamanlı hareketler",
+         "tur": "terim"
+        },
+        {
+         "metin": "kas tonusunun ayarlanması",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "➢Ardısıra ve eş zamanlı hareketlerin uygulanması",
+         "➢kas tonusunun ayarlanması"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0130",
+       "ses": "Bu bütüncül işlevler dizisi klinik literatürde odaklama ve ölçekleme olarak formüle edilen iki ana ilkeye dayanır.",
+       "ekran": "Tüm bu motor fonksiyonlar **odaklama ve ölçekleme** ilkeleri üzerinden yürütülür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "odaklama ve ölçekleme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "«odaklama» ve «ölçekleme»"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0131",
+       "ses": "Odaklama hangi kasın çalışacağını belirlerken ölçekleme o kasın ne kadar kuvvetle ve ne kadar süreyle kasılacağını tayin eder.",
+       "ekran": "**Odaklama** doğru kası seçer, **ölçekleme** hareketin genlik ve kuvvetini ayarlar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Odaklama",
+         "tur": "tanim"
+        },
+        {
+         "metin": "ölçekleme",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "«odaklama» ve «ölçekleme»"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0132",
+       "ses": "Otomatikleşmiş hareketler bazal gangliyonlarda motor parçacıklar halinde saklanır; bu sayede yürürken veya bisiklet sürerken düşünmek gerekmez.",
+       "ekran": "Otomatik hareketler **motor parçacıklar (bloklar)** halinde depolanarak bilinçten bağımsızlaşır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "motor parçacıklar (bloklar)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "«odaklama» ve «ölçekleme»"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p023",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k2-18-c0133",
+       "ses": "Bazal gangliyonlar istirahat halindeyken talamus üzerinde sürekli inhibitör baskı kurarak korteksin uyarılabilirliğini kontrol altında tutar.",
+       "ekran": "İstirahat halinde bazal gangliyonlar **talamusu baskılayarak** kortikal uyarılabilirliği sınırlar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "talamusu baskılayarak",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "bazal ganglia istirahat halinde talamus üzerinde inh.",
+         "korteksin uyarılabilirliğini kontrol altında tutuyor."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0134",
+       "ses": "Bir hareket başladığında motor korteksten medulla spinalise giden uyarıların eşzamanlı bir kopyası striatuma iletilir.",
+       "ekran": "Hareket başladığında **korteksten inen emrin bir kopyası** striatuma ulaşır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "korteksten inen emrin bir kopyası",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "bir hareket başladığında korteksten m.spinalise giden",
+         "uyarıların bir kopyasını alıyor"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0135",
+       "ses": "Bazal gangliyonlar kendisine parietal korteksten ulaşan proprioseptif ve bilinçsiz derin duyu verilerini bu motor plan kopyası ile kıyaslar.",
+       "ekran": "Striatum, **parietal proprioseptif ve derin duyu** ile inen motor planı kıyaslar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "parietal proprioseptif ve derin duyu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "kendisine  parietal korteksten ulaşan proprioseptif ve",
+         "bilinçsiz derin duyu ile kıyaslar"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0136",
+       "ses": "Planlanan hareket ile gerçekleşen hareket arasında fark varsa gerekli düzeltmeleri talamus üzerinden kortekse bildirir.",
+       "ekran": "Gerekli motor düzeltmeler **talamus aracılığıyla kortekse** geri bildirilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "talamus aracılığıyla kortekse",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "gerekli düzeltmeleri talamus üzerinden kortekse bildiriyor"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0137",
+       "ses": "Hareketin hedefine tam uygun büyüklük ve hızda icra edilmesini sağlayan ölçekleme mekanizması bu dinamik geri bildirimle gerçekleşir.",
+       "ekran": "**Ölçekleme mekanizması**, derin duyu kıyaslaması ve dinamik düzeltmeyle sağlanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Ölçekleme mekanizması",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "«ölçekleme» bu şekilde oluyor"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0138",
+       "ses": "Literatürde efferentin kopyası olarak bilinen bu mekanizma kas iğciklerinden gelen duyu ile birleşerek mikro hareket hatalarını anında siler.",
+       "ekran": "**Efferentin kopyası**, kas iğciği verileriyle birleşerek mikro hataları dinamik düzeltir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Efferentin kopyası",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "«ölçekleme» bu şekilde oluyor"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p024",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k2-18-c0139",
+       "ses": "Odaklama ilkesinde başlatılan hareketlerin motor komponentleri direkt yol aracılığıyla kuvvetlendirilir.",
+       "ekran": "**Odaklamada**, hedeflenen motor komponentler **direkt yol ile kuvvetlendirilir**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "direkt yol ile kuvvetlendirilir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "başlatılan hareketlerin motor komponentlerini direk yolla",
+         "kuvvetlendirip, istenmeyen komponentlerini indirek yolla"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0140",
+       "ses": "Aynı esnada çevredeki istenmeyen antagonist ve parazit komponentler indirekt yolla inhibe edilerek hareket hedefe odaklanır.",
+       "ekran": "İstenmeyen komponentler **indirekt yolla inhibe edilerek** hareket odaklanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "indirekt yolla inhibe edilerek",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "inh ederek «odaklar»"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0141",
+       "ses": "Bu durum duyusal sistemlerdeki lateral inhibisyona benzer şekilde bir merkez çevre inhibisyonu oluşturur.",
+       "ekran": "Sistem **merkez-çevre inhibisyonu** kurarak hedeflenen eylemi parazitlerden ayıklar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "merkez-çevre inhibisyonu",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "inh ederek «odaklar»"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0142",
+       "ses": "Merkezdeki agonist kas direkt yolla kuvvetle uyarılırken periferdeki istenmeyen sinerjistler indirekt yolla baskılanır.",
+       "ekran": "**Agonist kas direkt yolla uyarılırken**, komşu kaslar indirekt yolla susturulur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Agonist kas direkt yolla uyarılırken",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "inh ederek «odaklar»"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0143",
+       "ses": "Odaklama bozulduğunda istem dışı hareketler araya sızarken ölçekleme bozulduğunda mikrografi veya bradikinezi ortaya çıkar.",
+       "ekran": "Odaklama kaybı **istemsiz hareket**, ölçekleme kaybı **bradikinezi ve mikrografi** yapar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "istemsiz hareket",
+         "tur": "terim"
+        },
+        {
+         "metin": "bradikinezi ve mikrografi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "inh ederek «odaklar»"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0144",
+       "ses": "Parkinson hastalarında yazı yazarken harflerin giderek küçülmesi ölçekleme kusurunun tipik klinik yansımasıdır.",
+       "ekran": "Parkinsonda harflerin küçülmesi **(mikrografi)** ölçekleme bozukluğunun sonucudur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "(mikrografi)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "inh ederek «odaklar»"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-18-b09",
+   "baslik": "Bazal Gangliyon Hastalıklarının Etyolojisi",
+   "paragraflar": [
+    {
+     "id": "k2-18-p025",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k2-18-c0145",
+       "ses": "Bazal gangliyonların hastalıkları incelenirken altta yatan etyolojik nedenler geniş bir klinik yelpazede ele alınır.",
+       "ekran": "**Bazal gangliyon hastalıkları**, çok çeşitli etyolojik nedenlerle ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Bazal gangliyon hastalıkları",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Bazal ganglionların hastalıkları",
+         "Etyoloji: "
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0146",
+       "ses": "Etyolojide en sık karşılaşılan grup dejeneratif hastalıklardır; Parkinson hastalığı multisistem atrofi ve progresif supranükleer felç bu gruptadır.",
+       "ekran": "**Dejeneratif hastalıklar** grubunda Parkinson, MSA ve PSP yer alır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Dejeneratif hastalıklar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Dejeneratif"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0147",
+       "ses": "Kalıtsal nedenler arasında otozomal dominant geçişli Huntington koresi ve otozomal resesif bakır metabolizma bozukluğu olan Wilson hastalığı öne çıkar.",
+       "ekran": "**Kalıtsal etyolojide** Huntington koresi ve Wilson hastalığı temel örneklerdir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kalıtsal etyolojide",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Kalıtsal"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0148",
+       "ses": "Vasküler nedenler ise derin delici arterlerin tıkanmasıyla oluşan laküner infarktlar ve özellikle subtalamik nükleus kanamalarını kapsar.",
+       "ekran": "**Vasküler etyoloji**, laküner infarktlar ve subtalamik nükleus lezyonlarını kapsar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Vasküler etyoloji",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Vaskuler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0149",
+       "ses": "Vasküler hasarlar ani başlangıçlı ve çoğunlukla vücudun tek yarısını tutan akut ekstrapiramidal tablolarla kendini gösterir.",
+       "ekran": "Vasküler hasarlar **akut başlangıçlı tek taraflı tablolar** oluşturur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "akut başlangıçlı tek taraflı tablolar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Vaskuler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0150",
+       "ses": "Wilson hastalığında serbest bakırın birikmesiyle bazal gangliyonlarda kavitasyon ve korneada Kayser Fleischer halkası ile kanat çırpma tremoru oluşur.",
+       "ekran": "Wilson hastalığında **Kayser-Fleischer halkası** ve kanat çırpma tremoru izlenir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kayser-Fleischer halkası",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Vaskuler"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p026",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k2-18-c0151",
+       "ses": "Enfeksiyonlar ve enfeksiyon sonrası otoimmün süreçler bazal çekirdeklerde immün aracılı iltihabi yıkıma yol açabilir.",
+       "ekran": "**Enfeksiyonlar ve otoimmün süreçler**, bazal çekirdeklerde immün hasar yapar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Enfeksiyonlar ve otoimmün süreçler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Enfeksiyon"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0152",
+       "ses": "Streptokok enfeksiyonu sonrası gelişen Sydenham koresi ile ensefalit sonrası ortaya çıkan parkinsonizm bu tablonun tipik klinik örnekleridir.",
+       "ekran": "**Sydenham koresi** ve postensefalitik parkinsonizm enfeksiyöz kökenlidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Sydenham koresi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Enfeksiyon"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0153",
+       "ses": "Doğum travması ve perinatal hipoksik asfiksi özellikle prematüre yenidoğanlarda bazal gangliyonları hedef alarak diskinetik serebral palsi doğurur.",
+       "ekran": "**Doğum travması ve hipoksi**, yenidoğanda diskinetik serebral palsi oluşturur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Doğum travması ve hipoksi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Doğum travması"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0154",
+       "ses": "İlaçlar grubunda ise dopamin reseptörlerini bloke eden antipsikotikler ve antiemetikler iyatrojenik hareket bozukluklarının en yaygın sebebidir.",
+       "ekran": "**İlaçlar**, özellikle dopamin blokerleri en sık iyatrojenik hareket bozukluğu nedenidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İlaçlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "İlaçlar"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0155",
+       "ses": "Bu etyolojik çeşitlilik nedeniyle klinisyen hareket bozukluğu ile başvuran hastada ayrıntılı bir ilaç öyküsü ve aile ağacı çıkarmak zorundadır.",
+       "ekran": "Hareket bozukluklarında **ayrıntılı ilaç öyküsü ve aile öyküsü** esastır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ayrıntılı ilaç öyküsü ve aile öyküsü",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "İlaçlar"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0156",
+       "ses": "Manganez ve karbonmonoksit intoksikasyonu özellikle globus pallidusu seçici olarak nekroza uğratarak rijidite ve parkinsonizm geliştirebilir.",
+       "ekran": "**Karbonmonoksit ve manganez zehirlenmesi**, globus pallidus nekrozu yapar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "globus pallidus nekrozu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "İlaçlar"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p027",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k2-18-c0157",
+       "ses": "Bazal gangliyon hastalıklarının klinik tablosunda istemsiz hareketler olarak tanımlanan zengin bir hiperkinezi semiyolojisi karşımıza çıkar.",
+       "ekran": "Bazal gangliyon hastalıklarında **istemsiz hiperkinetik hareketler** kliniğe egemendir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "istemsiz hiperkinetik hareketler",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "KLİNİK"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0158",
+       "ses": "Klinikte en sık rastlanan ekstrapiramidal bulguların başında ritmik kasılmalarla seyreden tremor gelir.",
+       "ekran": "**Tremor**, agonist ve antagonist kasların ritmik salınımıyla giden en sık bulgudur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tremor",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Tremor"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0159",
+       "ses": "Ani hızlı ve sıçrayıcı istemsiz hareketler kore başlığı altında toplanırken sürekli kıvrılma hareketleri atetoz olarak adlandırılır.",
+       "ekran": "Hızlı sıçrayıcı hareketler **kore**, yavaş kıvrılmalar **atetoz** olarak tanımlanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kore",
+         "tur": "terim"
+        },
+        {
+         "metin": "atetoz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Kore",
+         "Atetoz"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0160",
+       "ses": "Kasların sürekli ve bükücü spazmıyla anormal postürlerin oluşması distoni olarak adlandırılır.",
+       "ekran": "**Distoni**, sürekli kas spazmlarıyla anormal postürlerin gelişmesidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Distoni",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Distoni"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0161",
+       "ses": "Vücudun tek yarısında proksimal eklemlerden fırlatıcı tarzda ortaya çıkan şiddetli savurucu hareketler ise hemiballismus tablosunu oluşturur.",
+       "ekran": "**Hemiballismus**, ekstremitelerde proksimal kaynaklı fırlatıcı şiddetli hareketlerdir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hemiballismus",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Hemiballismus"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0162",
+       "ses": "Klinik semiyolojide bu hiperkinetik istemsiz hareketlerin yanında Parkinson hastalığındaki gibi bradikinezi ve rijiditeyle seyreden hipokinetik tablolar da bulunur.",
+       "ekran": "Klinikte hiperkinetik hareketler yanında **bradikinezi ve rijiditeyle seyreden** hipokinetik tablolar vardır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bradikinezi ve rijiditeyle seyreden",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Hemiballismus"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-18-b10",
+   "baslik": "Tremor Patofizyolojisi ve Ayırıcı Tanısı",
+   "paragraflar": [
+    {
+     "id": "k2-18-p028",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k2-18-c0163",
+       "ses": "Tremor bir eklem çevresindeki birbirine antagonist kas gruplarının ardışık ve resiprokal kasılmasıyla meydana gelir.",
+       "ekran": "**Tremor**, antagonist kas gruplarının ardışık kasılmasıyla oluşan istemsiz harekettir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tremor",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Tremor",
+         "Birbirine antagonist kasların kasılması ile"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0164",
+       "ses": "Bu kasılmalar vücut parçalarında az ya da çok düzenli ve ritmik salınımlı hareketler şeklinde dışarıya yansır.",
+       "ekran": "Tremor klinik olarak **az ya da çok ritmik salınımlı hareketler** biçimindedir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "az ya da çok ritmik salınımlı hareketler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Az ya da çok ritmik hareketler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0165",
+       "ses": "Klinik pratikte tremorlar ortaya çıktıkları koşullara göre statik postural intansiyonel ve esansiyel olarak sınıflandırılır.",
+       "ekran": "Tremorlar **statik, postural, intansiyonel ve esansiyel** olarak sınıflandırılır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "statik, postural, intansiyonel ve esansiyel",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Statik, postural, intensiyonel, esansiyel"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0166",
+       "ses": "Statik tremor kas istirahat halindeyken belirginleşirken postural tremor yer çekimine karşı bir duruşu korurken ortaya çıkar.",
+       "ekran": "**Statik tremor istirahatte**, postural tremor **yer çekimine karşı duruşta** belirir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Statik tremor istirahatte",
+         "tur": "terim"
+        },
+        {
+         "metin": "yer çekimine karşı duruşta",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Statik, postural, intensiyonel, esansiyel"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0167",
+       "ses": "Esansiyel tremor ise sıklıkla ailesel geçiş gösteren ve eller öne uzatıldığında belirginleşen en yaygın postural tremor türüdür.",
+       "ekran": "**Esansiyel tremor**, kollar öne uzatıldığında artan en sık ailesel postural tremordur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Esansiyel tremor",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Statik, postural, intensiyonel, esansiyel"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0168",
+       "ses": "Elektrofizyolojik olarak tremor frekansı saniyedeki döngü sayısına göre dört hertz altı yavaş, dört ile yedi hertz arası orta ve sekiz hertz üstü hızlı olarak sınıflandırılır.",
+       "ekran": "Tremor frekansı **yavaş, orta ve hızlı** olmak üzere elektrofizyolojik olarak ayrılır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yavaş, orta ve hızlı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Statik, postural, intensiyonel, esansiyel"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p029",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k2-18-c0169",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: Parkinson hastalığında görülen tipik tremor istirahat yani statik tremoru olup dört ile yedi hertz frekansında para sayma veya hap yapma niteliğindedir.",
+       "ekran": "**Çıkmış soru:** Parkinson tremoru **istirahat (statik) tremoru** olup 4-7 Hz frekansındadır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "istirahat (statik) tremoru",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Çıkmış soru:",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3-k2-nor-012",
+        "past-1790877039271-371364"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Statik tremor, istirahat tremoru ya da parkinson tremoru",
+         "4-7 Hz frekansında"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0170",
+       "ses": "Bu tremor ekstremite tamamen desteklenmiş ve istirahat halindeyken ortaya çıkar ve istemli bir hareket başlatıldığında geçici olarak kaybolur.",
+       "ekran": "İstirahat tremoru **destekli pozisyonda belirir**, istemli hareketle geçici kaybolur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "destekli pozisyonda belirir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Statik tremor, istirahat tremoru ya da parkinson tremoru",
+         "4-7 Hz frekansında"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0171",
+       "ses": "Ellerde başparmak ile diğer parmakların ritmik teması hap yapma ya da para sayma görünümünü andırır.",
+       "ekran": "Parkinsonda ellerde **hap yapma ya da para sayma** şeklinde tremor izlenir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hap yapma ya da para sayma",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Ellerde hap yapma ya da para sayma şeklinde"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0172",
+       "ses": "Ayakta olduğunda ise pedal basma hareketi tarzında ritmik bir ayak bileği salınımı gözlenebilir.",
+       "ekran": "Ayakta alt ekstremitede **pedal çevirme hareketi** tarzında tremor görülebilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "pedal çevirme hareketi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Ayakta olduğunda pedal hareketi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0173",
+       "ses": "Hastalığın ilerleyen evrelerinde tremor dudak çene ve dilde de ritmik titremeler şeklinde muayenede saptanabilir.",
+       "ekran": "Parkinson tremoru **dudak, çene ve dilde** de belirginleşebilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dudak, çene ve dilde",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Dudak, çene, dilde de olabilir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0174",
+       "ses": "Parkinson tremoru çoğunlukla asimetrik başlar; hasta yürürken o taraftaki kol sallanması azalır ve elde istirahat tremoru belirginleşir.",
+       "ekran": "Parkinson tremoru **asimetrik başlar** ve yürürken kol sallanması azalır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "asimetrik başlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Dudak, çene, dilde de olabilir"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p030",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k2-18-c0175",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: Nörolojik muayenede hareket sırasında hedefe yaklaştıkça belirginleşen tremor intansiyonel tremordur.",
+       "ekran": "**Çıkmış soru:** Hedefe yaklaştıkça şiddeti artan tremor **intansiyonel tremordur**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "intansiyonel tremordur",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Çıkmış soru:",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-4"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [],
+        "sekil": "Slayt 14 genel"
+       }
+      },
+      {
+       "id": "k2-18-c0176",
+       "ses": "İntansiyonel tremor bazal gangliyon değil serebellar hemisfer ve süperior serebellar pedinkül lezyonlarının kardinal patolojisidir.",
+       "ekran": "İntansiyonel tremor **serebellar sistem hasarının** tipik göstergesidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "serebellar sistem hasarının",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [],
+        "sekil": "Slayt 14 genel"
+       }
+      },
+      {
+       "id": "k2-18-c0177",
+       "ses": "Parmak burun testinde hasta parmağını burnuna yaklaştırdıkça genlik dramatik biçimde büyür ve hedefi şaşırır.",
+       "ekran": "Parmak burun testinde **hedefe yaklaştıkça genlik dramatik artar**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hedefe yaklaştıkça genlik dramatik artar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [],
+        "sekil": "Slayt 14 genel"
+       }
+      },
+      {
+       "id": "k2-18-c0178",
+       "ses": "Parkinsondaki istirahat tremoru dinlenirken var olup hareketle azalırken intansiyonel tremor dinlenirken yoktur ve hedefe varırken coşar.",
+       "ekran": "Parkinson tremoru **istirahatle artar**, serebellar tremor **hedefe yaklaşırken coşar**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "istirahatle artar",
+         "tur": "terim"
+        },
+        {
+         "metin": "hedefe yaklaşırken coşar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [],
+        "sekil": "Slayt 14 genel"
+       }
+      },
+      {
+       "id": "k2-18-c0179",
+       "ses": "Bu ayrım nörolojik muayenede bazal gangliyon ile serebellum lezyonlarını ayırt eden en güvenilir klinik ölçüttür.",
+       "ekran": "Tremor karakteri, **bazal gangliyon ile serebellumu** ayıran temel klinik ölçüttür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bazal gangliyon ile serebellumu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [],
+        "sekil": "Slayt 14 genel"
+       }
+      },
+      {
+       "id": "k2-18-c0180",
+       "ses": "Esansiyel tremor düşük doz alkol alımıyla belirgin azalma gösterip beta blokerlere yanıt verirken Parkinson tremoru L-dopaya yanıt verir.",
+       "ekran": "Esansiyel tremor **alkol ve beta blokere**, Parkinson tremoru **L-dopaya** yanıt verir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "alkol ve beta blokere",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [],
+        "sekil": "Slayt 14 genel"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-18-b11",
+   "baslik": "Kore ve Atetoz Klinik Tabloları",
+   "paragraflar": [
+    {
+     "id": "k2-18-p031",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k2-18-c0181",
+       "ses": "Kore amaçsız düzensiz aritmik ani ve hızlı istemsiz hareketlerle karakterize hiperkinetik bir hareket bozukluğudur.",
+       "ekran": "**Kore**, amaçsız, düzensiz, ani ve hızlı istemsiz hareketler bütünüdür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kore",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Kore",
+         "Amaçsız, düzensiz ani ve hızlı hareketler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0182",
+       "ses": "Bu sıçrayıcı hareketler vücudun bir bölgesinden diğerine rastgele sıçrar ve ellerde ayaklara oranla çok daha sık görülür.",
+       "ekran": "Koreik hareketler **ellerde ayaklara oranla daha sık** izlenir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ellerde ayaklara oranla daha sık",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Ellerde ayaklara oranla daha sık"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0183",
+       "ses": "Ekstremiteler dışında bazen dil dudak yüz mimikleri ve omuz silkme hareketi şeklinde klinik tabloya yansır.",
+       "ekran": "Kore bazen **dil, dudak, yüz ve omuz silkme** hareketleri şeklinde belirir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dil, dudak, yüz ve omuz silkme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Bazen dil, dudak, yüz omuz hareketi şeklindedir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0184",
+       "ses": "Korenin ağır formlarında hastanın yazı yazması yemek yemesi ve temel günlük yaşam aktiviteleri tamamen engellenir.",
+       "ekran": "Ağır kore formları **yazı yazma, beslenme ve günlük aktiviteleri engeller**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yazı yazma, beslenme ve günlük aktiviteleri engeller",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Ağır formu, yazı yazma, yemek yeme, günlük akt. Engeller"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0185",
+       "ses": "Hasta bu istemsiz hareketleri gizleyebilmek için hareketin devamında saçını düzeltir veya üstünü silker gibi yarı istemli jestler ekler.",
+       "ekran": "Hastalar koreyi gizlemek için **yarı istemli paraterzi hareketleri** ekler.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yarı istemli paraterzi hareketleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Ağır formu, yazı yazma, yemek yeme, günlük akt. Engeller"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0186",
+       "ses": "Muayenede hasta hekimin elini sıkarken kavrama gücünü sürekli tutamaz; gevşeyip sıkma döngüsü sütanne eli belirtisi olarak adlandırılır.",
+       "ekran": "Korede kavrama gücünün korunamamasına **sütanne eli (milkmaid grip)** denir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sütanne eli (milkmaid grip)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Ağır formu, yazı yazma, yemek yeme, günlük akt. Engeller"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p032",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k2-18-c0187",
+       "ses": "Sydenham koresi akut eklem romatizmasının majör tanı kriterlerinden biri olup streptokok antijenlerinin bazal çekirdeklerle çapraz reaksiyonu sonucu doğar.",
+       "ekran": "**Sydenham koresi**, akut eklem romatizmasının majör tanı kriteridir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Sydenham koresi",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Sydenham kore, akut eklem romatizmasının majör belirtisi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0188",
+       "ses": "Sydenham koresi özellikle kız çocuklarında ve çocuk yaş grubunda sık görülür ve çoğunlukla aylar içinde kendiliğinden düzelir.",
+       "ekran": "Sydenham koresi **kız çocuklarında ve erken yaşlarda** belirgin sıktır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kız çocuklarında ve erken yaşlarda",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Kızlarda ve çocuk yaş gurubunda sık"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0189",
+       "ses": "Buna karşılık Huntington koresi otozomal dominant kalıtılan ve dördüncü kromozomdaki trinükleotid tekrar artışına bağlı ölümcül bir hastalıktır.",
+       "ekran": "**Huntington koresi**, otozomal dominant trinükleotid tekrar hastalığıdır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Huntington koresi",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Huntington koresi: O.D, 20-50 yaş arası başlar"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0190",
+       "ses": "Tipik olarak yirmi ile elli yaşları arasında sinsice başlar ve nükleus kaudatus başındaki nöronların ağır atrofisiyle karakterizedir.",
+       "ekran": "Huntington, **20-50 yaşta başlar** ve nükleus kaudatusta ağır atrofi yapar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "20-50 yaşta başlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Huntington koresi: O.D, 20-50 yaş arası başlar"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0191",
+       "ses": "Huntington koresinde istemsiz koreik hareketlere zamanla ilerleyici demans ve ağır kişilik bozuklukları eşlik eder.",
+       "ekran": "Huntington triadında **kore, ilerleyici demans ve kişilik bozukluğu** bulunur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kore, ilerleyici demans ve kişilik bozukluğu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Koreik hareketlerle ilerleyici demans, kişilik boz"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0192",
+       "ses": "Genetik antisisipasyon nedeniyle babadan aktarılan mutant gende se-a-ge tekrar sayısı artar ve sonraki kuşaklarda hastalık daha erken yaşta patlak verir.",
+       "ekran": "**Antisisipasyon** nedeniyle CAG tekrarı artarak sonraki nesilde hastalık daha erken başlar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Antisisipasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Koreik hareketlerle ilerleyici demans, kişilik boz"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p033",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k2-18-c0193",
+       "ses": "Atetoz ellerde ve distal ekstremitelerde ortaya çıkan birbirini kesintisiz takip eden yavaş kıvrılma hareketidir.",
+       "ekran": "**Atetoz**, ellerde birbirini takip eden yavaş kıvrılma hareketleridir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Atetoz",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "atetoz",
+         "Ellerde ortaya çıkan birbirini takip eden kıvrılma hareketi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0194",
+       "ses": "Klinik görünümü dansöz kol ve el hareketlerine benzer; parmaklar sürekli bir ekstansiyon ve fleksiyon rotasyonu içindedir.",
+       "ekran": "Atetozis klinik olarak **dansöz kol ve el hareketlerine** benzetilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dansöz kol ve el hareketlerine",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Dansöz kol ve el hareketlerine benzer"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0195",
+       "ses": "Kore hareketlerinden en temel farkı ani ve hızlı olmaması; aksine yavaş sürekli ve yılankavi akmasıdır.",
+       "ekran": "Koreden farkı **ani ve hızlı olmaması**, yavaş ve sürekli kıvrılmasıdır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ani ve hızlı olmaması",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Kore hareketlerinden farkı ani ve hızlı değil"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0196",
+       "ses": "Bazen bu iki hareket tipi iç içe geçer ve birbirinden ayırmak çok güçleştiğinde koreatetoz terimi kullanılır.",
+       "ekran": "İki tablo birleştiğinde klinik olarak **koreatetoz** terimi kullanılır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "koreatetoz",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Bazen iki hareket birleşir, ayırmak zor olur",
+         "Koreatetoz"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0197",
+       "ses": "Atetoz yenidoğanda kernikterus serbest bilirubinin bazal çekirdeklere çökmesi doğuştan beyin hasarlı çocuklar ve dejeneratif hastalıklarda görülür.",
+       "ekran": "Atetoz **kernikterus, konjenital beyin hasarı** ve dejeneratif hastalıklarda görülür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kernikterus, konjenital beyin hasarı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Kernikterus, doğuştan beyin hasarlı çocuklar, dejeneratif",
+         "bazal ganglion hastalıklarında"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0198",
+       "ses": "Kernikterusta indirekt serbest bilirubin kan beyin bariyerini aşarak özellikle globus pallidus nöronlarını nekroza uğratır ve sensorinöral sağırlıkla koreatetoz oluşturur.",
+       "ekran": "Kernikterusta **serbest bilirubin globus pallidusa çökerek** koreatetoz ve sağırlık yapar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "serbest bilirubin globus pallidusa çökerek",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Kernikterus, doğuştan beyin hasarlı çocuklar, dejeneratif",
+         "bazal ganglion hastalıklarında"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-18-b12",
+   "baslik": "Hemiballismus ve Distoni Spektrumu",
+   "paragraflar": [
+    {
+     "id": "k2-18-p034",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k2-18-c0199",
+       "ses": "Hemiballismus vücudun bir yarısını tutan kol ve bacakta proksimal eklemlerden başlayan ani fırlatıcı geniş amplitüdlü istemsiz hareketlerdir.",
+       "ekran": "**Hemiballismus**, tek taraflı ekstremitelerde proksimal kaynaklı, ani ve fırlatıcı hareketlerdir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hemiballismus",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "hemiballismus",
+         "Vücudun bir yarısını tutan, kol ve bacakta,",
+         "proksimalden başlayan ani, fırlatıcı, geniş",
+         "amplitüdlü,istemsiz hareket"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0200",
+       "ses": "Bu şiddetli hareketler omuz ve kalça gibi proksimal eklemlerden savurma tarzında doğarak periferik uzuvları kontrolsüzce savurur.",
+       "ekran": "Hareketler **omuz ve kalça gibi proksimal eklemlerden** şiddetle savrulur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "omuz ve kalça gibi proksimal eklemlerden",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "hemiballismus",
+         "Vücudun bir yarısını tutan, kol ve bacakta,",
+         "proksimalden başlayan ani, fırlatıcı, geniş",
+         "amplitüdlü,istemsiz hareket"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0201",
+       "ses": "Hasta kontrolsüz savrulan kolunu ve bacağını duvara çarparak ciddi travmalara maruz kalabilir ve ağır yaralanabilir.",
+       "ekran": "Hasta **kol ve bacağını duvara çarparak** ağır travmalara maruz kalabilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kol ve bacağını duvara çarparak",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Kolunu bacağını duvara çarpıp yaralanabilir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0202",
+       "ses": "Sürekli hareket halinde olan uzuvların yatak yüzeyine sürtünmesinden dolayı derisi soyulabilir ve açık yaralar açılabilir.",
+       "ekran": "Yatak yüzeyine sürtünmekten **ciltte soyulma ve ülserasyonlar** gelişebilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ciltte soyulma ve ülserasyonlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Yatak yüzeyine sürtünmekten derisi soyulabilir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0203",
+       "ses": "Hemiballismusun altta yatan anatomik nedeni karşı taraf subtalamik nükleus yani Korpus Luysiin laküner enfarktı veya kanamasıdır.",
+       "ekran": "Temel patoloji, **karşı taraf subtalamik nükleus (Korpus Luysii)** vasküler hasarıdır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "karşı taraf subtalamik nükleus (Korpus Luysii)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Yatak yüzeyine sürtünmekten derisi soyulabilir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0204",
+       "ses": "Subtalamik nükleusun eksitatör uyarısı çökünce çıkış çekirdekleri talamusu baskılayamaz ve talamus motor korteksi dizginsizce bombardımana tutar.",
+       "ekran": "STN hasarında talamik baskı kalkar ve **motor korteks dizginsizce uyarılır**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "motor korteks dizginsizce uyarılır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Yatak yüzeyine sürtünmekten derisi soyulabilir"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p035",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k2-18-c0205",
+       "ses": "Distoni birbirine antagonist kasların eşzamanlı sürekli kasılmasıyla torsiyon spazmı ve kalıcı anormal postürlerin oluşması durumudur.",
+       "ekran": "**Distoni**, antagonist kasların eşzamanlı kasılmasıyla oluşan torsiyonel spazmlardır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Distoni",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "distoni",
+         "Torsiyon distoni, distonia musculorum deformans, torsiyon",
+         "spazm"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0206",
+       "ses": "Ekstremiteler gövde ve boynun uzun aksları üzerinde geniş genlikli yavaş kıvrılma hareketleri gelişir ve baş bir tarafa zorlu döner.",
+       "ekran": "Uzun akslar üzerinde **geniş genlikli kıvrılma hareketleri** ve baş rotasyonu gelişir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "geniş genlikli kıvrılma hareketleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Ekstremiteler, gövde ve boynun uzun aksları üzerinde geniş",
+         "amplitüdlü yavaş kıvrılma hareketleri, baş bir tarafa döner,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0207",
+       "ses": "Vücudun torsiyon hareketi ile anormal bir postür alması distonia muskulorum deformans tablosunda tüm eksenel kasları tutabilir.",
+       "ekran": "Vücut **torsiyon hareketi ile anormal bir postür** alır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "torsiyon hareketi ile anormal bir postür",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "vücudun torsiyon hareketi ile anormal bir postur alır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0208",
+       "ses": "Bu sürekli ve aşırı torsiyon hareketine karışan kaslar aylar ve yıllar içerisinde aşırı iş yükü sebebiyle belirgin biçimde hipertrofik olur.",
+       "ekran": "Torsiyona katılan kaslar sürekli kasılmayla **zamanla hipertrofik olur**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "zamanla hipertrofik olur",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Torsiyon hareketine karışan kaslar zamanla hipertrofik olur"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0209",
+       "ses": "Distonik spazmlar hastanın istemli hareket başlatma çabasıyla veya stres altında belirgin şekilde alevlenir.",
+       "ekran": "Distoni **istemli hareket çabası ve stresle** belirgin şekilde alevlenir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "istemli hareket çabası ve stresle",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Torsiyon hareketine karışan kaslar zamanla hipertrofik olur"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0210",
+       "ses": "Genelleşmiş distonilerde de-ye-te bir gen mutasyonu gibi genetik kusurlar saptanabilir ve bu spazmlar derin uykuda tamamen kaybolur.",
+       "ekran": "Distonik spazmlar **derin uyku sırasında tamamen kaybolur**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "derin uyku sırasında tamamen kaybolur",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Torsiyon hareketine karışan kaslar zamanla hipertrofik olur"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p036",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k2-18-c0211",
+       "ses": "Distoni boyunda lokalize kaldığında klinik pratikte en sık görülen fokal distoni olan spazmotik tortikolis tablosu ortaya çıkar.",
+       "ekran": "Boyunda lokalize distoniye **spazmotik tortikolis** adı verilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "spazmotik tortikolis",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Boyunda lokalize ise spazmotik tortikolis"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0212",
+       "ses": "Sternokleidomastoid kasında spazmotik kasılma ile başın karşı tarafa yana ya da geriye doğru anormal bir postür alması izlenir.",
+       "ekran": "**SCM kası kasılmasıyla** baş karşı tarafa ve yana rotasyona uğrar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "SCM kası kasılmasıyla",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "SCM kasında spazmotik kasılma ile başın karşı tarafa,yana",
+         "ya da geriye doğru anormal postur alması."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0213",
+       "ses": "Eğer boyun ekstansör kasları iki taraflı tutulursa retrokolis gelişir ve boyun geriye doğru bükülerek hastanın yukarıya bakmasına yol açar.",
+       "ekran": "**Retrokolis tablosunda**, boyun geriye doğru hiperekstansiyona bükülür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Retrokolis tablosunda",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Retrokolis boyun",
+         "geriye doğru bükülür"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0214",
+       "ses": "Hastalar sıklıkla çenelerine veya yanaklarına hafifçe dokunarak spazmı geçici durduran duysal hile manevrasından faydalanırlar.",
+       "ekran": "Hastalar çeneye dokunarak spazmı dindiren **duysal hile (geste antagoniste)** kullanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "duysal hile (geste antagoniste)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Retrokolis boyun",
+         "geriye doğru bükülür"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0215",
+       "ses": "Fokal distonilerin tedavisinde aşırı kasılan kas içine lokal botulinum toksini enjeksiyonu ilk basamak altın standart yaklaşımdır.",
+       "ekran": "Fokal distonide **lokal botulinum toksini enjeksiyonu** altın standart tedavidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "lokal botulinum toksini enjeksiyonu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Retrokolis boyun",
+         "geriye doğru bükülür"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0216",
+       "ses": "Sternokleidomastoid kasına ek olarak splenius kapitis ve trapezius kasları da spazma katılabilir ve hekim elektromiyografi eşliğinde enjeksiyon yapar.",
+       "ekran": "Spazma **splenius kapitis ve trapezius** katılabilir; EMG eşliğinde enjeksiyon yapılır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "splenius kapitis ve trapezius",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Retrokolis boyun",
+         "geriye doğru bükülür"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-18-b13",
+   "baslik": "İlaçlara Bağlı Ekstrapiramidal Sendromlar",
+   "paragraflar": [
+    {
+     "id": "k2-18-p037",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k2-18-c0217",
+       "ses": "İlaçlara bağlı ekstrapiramidal sendromlar klinikte çoğunlukla nöroleptikler fenotiazin ve butirifenon grubu antipsikotiklerle tetiklenen iyatrojenik tablolardır.",
+       "ekran": "**İlaçlara bağlı ekstrapiramidal sendromlar**, fenotiazin ve butirofenonlarla tetiklenir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İlaçlara bağlı ekstrapiramidal sendromlar",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "İlaçlara bağlı",
+         "Nöroleptikler, fenotiazin, butirifenon, yatrojenik"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0218",
+       "ses": "Akut distoni ilaca başlandıktan sonraki ilk saatlerde hatta bazen tek bir doz alımıyla bile aniden ortaya çıkabilen ağrılı kasılmalardır.",
+       "ekran": "**Akut distoni**, tek doz antipsikotik alımıyla bile aniden gelişebilen spazmdır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Akut distoni",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Akut distoni, tek doz yeterli, yüz, boyun, dil, çenede"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0219",
+       "ses": "Yüz boyun dil ve çenede ani kasılmalar tortikolis ve gözlerin istemsiz yukarıya kaydığı akut okulojir distonik kriz belirir.",
+       "ekran": "Yüz, boyun ve dilde kasılma ile gözlerde **akut okulojirik distonik kriz** gelişir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "akut okulojirik distonik kriz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "kasılma, tortikolis, gözlerin bir tarafa zorunlu kayması,",
+         "“Akut okulojir distonik kriz”, bunlarla beraber panik ve"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0220",
+       "ses": "Bu ağır kriz tablosu esnasında hasta nefes alamayacağı korkusuyla yoğun bir panik ve huzursuzluk içine sürüklenir.",
+       "ekran": "Okulojirik kriz sırasında hastada **yoğun panik ve huzursuzluk** gelişir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yoğun panik ve huzursuzluk",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "huzursuzluk olur"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0221",
+       "ses": "Akut distoninin acil tedavisinde parenteral antikolinerjik biperiden uygulaması dakikalar içinde mucizevi bir rahatlama sağlar.",
+       "ekran": "Akut distonide **parenteral antikolinerjik biperiden** dakikalar içinde spazmı çözer.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "parenteral antikolinerjik biperiden",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "huzursuzluk olur"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0222",
+       "ses": "Haloperidol gibi yüksek potensli birinci kuşak antipsikotik ilaçlar striatal de iki reseptörlerini aniden kapatarak bu tabloyu tetikleyen baş aktördür.",
+       "ekran": "**Yüksek potensli haloperidol**, D2 blokajıyla akut distoniyi en sık tetikleyen ajandır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yüksek potensli haloperidol",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "huzursuzluk olur"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p038",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k2-18-c0223",
+       "ses": "İlaca bağlı parkinsonizm tablosu tipik antipsikotikler ve lityum kullanımı esnasında striatal dopamin de iki reseptörlerinin bloke edilmesiyle gelişir.",
+       "ekran": "**İlaca bağlı parkinsonizm**, tipik antipsikotik ve lityum kullanımıyla gelişir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İlaca bağlı parkinsonizm",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "ilaca bağlı parkinson , Li, tipik antipsikotikler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0224",
+       "ses": "Hastada hareketlerde yavaşlama bradikinezi maske yüz ifadesi ve dişli çark rijiditesi gibi klasik bulgular ortaya çıkar.",
+       "ekran": "Klinikte **bradikinezi, maske yüz ve dişli çark rijiditesi** izlenir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bradikinezi, maske yüz ve dişli çark rijiditesi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "ilaca bağlı parkinson , Li, tipik antipsikotikler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0225",
+       "ses": "Ayrıca hastada yerinde duramama sürekli bacaklarını hareket ettirme ihtiyacı ve içsel bir motor huzursuzluk hissi olan akatizi sık görülür.",
+       "ekran": "**Akatizi**, motor huzursuzluk ve yerinde duramama hissidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Akatizi",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "ilaca bağlı parkinson , Li, tipik antipsikotikler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0226",
+       "ses": "Akatizi tablosu sıklıkla psikotik ajitasyonla karıştırılıp ilaç dozu artırıldığında tablo facia derecesinde ağırlaşabilir.",
+       "ekran": "Akatizi **psikotik anksiyete ile karıştırılmamalı**, ilaç dozu artırılmamalıdır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "psikotik anksiyete ile karıştırılmamalı",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "ilaca bağlı parkinson , Li, tipik antipsikotikler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0227",
+       "ses": "Tedavide doz azaltımı atipik antipsikotiklere geçiş ve beta bloker propranolol kullanımı akatizi semptomlarını kontrol altına alır.",
+       "ekran": "Akatizide **beta bloker propranolol** ve doz azaltımı tercih edilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "beta bloker propranolol",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "ilaca bağlı parkinson , Li, tipik antipsikotikler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0228",
+       "ses": "İlaca bağlı parkinsonizm idiyopatik Parkinsondan farklı olarak çoğunlukla iki taraflı ve simetrik başlar; ilaç kesildiğinde geriler.",
+       "ekran": "İlaca bağlı parkinsonizm **iki taraflı ve simetrik** başlar, ilacı kesince geriler.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "iki taraflı ve simetrik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "ilaca bağlı parkinson , Li, tipik antipsikotikler"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p039",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k2-18-c0229",
+       "ses": "Tardif diskinezi uzun süre nöroleptik kullanımı neticesinde striatal dopamin de iki reseptörlerinin aşırı duyarlılaşmasıyla ortaya çıkan geç komplikasyondur.",
+       "ekran": "**Tardif diskinezi**, uzun süreli nöroleptik kullanımıyla gelişen geç komplikasyondur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tardif diskinezi",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Tardif diskinezi, ağız ve dili tutan çiğneme, yalanma",
+         "hareketi, uzun süre nöroleptik kullanımı ile olur,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0230",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: Antipsikotik ilaçların dopamin de iki reseptörlerini bloke etmesi sonucu akut distoni akatizi parkinsonizm ve tardif diskinezi gibi ekstrapiramidal yan etkiler ortaya çıkar.",
+       "ekran": "**Çıkmış soru:** Antipsikotik D2 blokajı **akut distoni, akatizi, parkinsonizm ve tardif diskinezi** yapar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "akut distoni, akatizi, parkinsonizm ve tardif diskinezi",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Çıkmış soru:",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-1790877044403-707646",
+        "d3-k2-far-016",
+        "past-1790877044441-624411"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Tardif diskinezi, ağız ve dili tutan çiğneme, yalanma",
+         "hareketi, uzun süre nöroleptik kullanımı ile olur,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0231",
+       "ses": "Tardif diskinezi ağız dudak ve dili tutan çiğneme dudak şapırdatma ve yalanma hareketleri tarzında stereotipik orofasiyal diskinezilerle seyreder.",
+       "ekran": "Tardif diskinezi **çiğneme, yalanma ve dudak şapırdatma** gibi orofasiyal hareketlerdir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "çiğneme, yalanma ve dudak şapırdatma",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Tardif diskinezi, ağız ve dili tutan çiğneme, yalanma",
+         "hareketi, uzun süre nöroleptik kullanımı ile olur,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0232",
+       "ses": "Bu tablonun en kritik klinik tuzağı antiparkinson antikolinerjik ilaçlarla tedavi edilmeye kalkıldığında semptomların daha da şiddetlenmesidir.",
+       "ekran": "**Kritik tuzak:** Tardif diskinezi, **antiparkinson antikolinerjik ilaçlarla daha da şiddetlenir**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "antiparkinson antikolinerjik ilaçlarla daha da şiddetlenir",
+         "tur": "tuzak"
+        },
+        {
+         "metin": "Kritik tuzak:",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "antiparkinson ilaçlarla şiddetlenbilir. Genellikle kalıcı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0233",
+       "ses": "Tardif diskinezi antipsikotik ilaç kesilse dahi genellikle kalıcı olma eğilimindedir ve veziküler monoamin taşıyıcı inhibitörleri ile tedavi edilir.",
+       "ekran": "Tardif diskinezi **genellikle kalıcıdır** ve VMAT2 inhibitörleri ile tedavi edilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "genellikle kalıcıdır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "antiparkinson ilaçlarla şiddetlenbilir. Genellikle kalıcı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0234",
+       "ses": "Bu kalıcı tablodan kaçınmak için şizofreni tedavisinde ekstrapiramidal riski çok düşük olan klozapin veya ketiapin gibi atipik ajanlar tercih edilmelidir.",
+       "ekran": "Tardif riskini azaltmak için **klozapin veya ketiapin gibi atipik antipsikotikler** seçilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "klozapin veya ketiapin gibi atipik antipsikotikler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "antiparkinson ilaçlarla şiddetlenbilir. Genellikle kalıcı"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-18-b14",
+   "baslik": "Ekstrapiramidal Sendromların Sentezi ve Klinik Yaklaşım",
+   "paragraflar": [
+    {
+     "id": "k2-18-p040",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k2-18-c0235",
+       "ses": "Parkinson hastalarında uygulanan le-dopa tedavisinde de hastalığın ileri evrelerinde ilaca bağlı diskineziler klinik tabloya eklenir.",
+       "ekran": "**L-dopa tedavisinde**, ileri evrelerde tepe doz diskinezileri gelişir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "L-dopa tedavisinde",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "L dopa tedavisinde görülen diskineziler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0236",
+       "ses": "Kronik le-dopa kullanımında striatumdaki dopaminerjik reseptörler pulsatil stimülasyona maruz kalarak aşırı duyarlılık kazanır.",
+       "ekran": "Pulsatil stimülasyon, **striatal reseptörlerde aşırı duyarlılık** oluşturur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "striatal reseptörlerde aşırı duyarlılık",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "L dopa tedavisinde görülen diskineziler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0237",
+       "ses": "İlacın kan seviyesinin en yüksek olduğu dönemde tepe doz diskinezileri olarak adlandırılan koreik ve distonik hareketler patlak verir.",
+       "ekran": "Plazma pikinde **tepe doz koreik ve distonik diskinezileri** patlak verir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tepe doz koreik ve distonik diskinezileri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "L dopa tedavisinde görülen diskineziler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0238",
+       "ses": "Hasta ilaç etkilendiğinde istemsiz dans eder tarzda kıvranırken ilacın etkisi geçtiğinde ise donup kalarak şiddetli akineziye girer.",
+       "ekran": "Hasta açık dönemde **diskinezi**, kapalı dönemde **şiddetli akinezi** yaşar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "diskinezi",
+         "tur": "terim"
+        },
+        {
+         "metin": "şiddetli akinezi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "L dopa tedavisinde görülen diskineziler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0239",
+       "ses": "Bu açılma ve kapanma motor dalgalanmaları dopaminerjik tedavinin doz ayarlamasını ve fraksiyone edilmesini zorunlu kılar.",
+       "ekran": "Motor dalgalanmalar **fraksiyone doz ayarlaması** ve tedavi optimizasyonu gerektirir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "fraksiyone doz ayarlaması",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "L dopa tedavisinde görülen diskineziler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-18-c0240",
+       "ses": "Tedavi rejimine dopamin agonistleri ve enzim inhibitörleri eklenerek striatal dopamin uyarımının sürekli ve fizyolojik kalması hedeflenir.",
+       "ekran": "**Dopamin agonistleri ve enzim inhibitörleri**, dalgalanmaları azaltarak düzeyi dengeler.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Dopamin agonistleri ve enzim inhibitörleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "L dopa tedavisinde görülen diskineziler"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p041",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k2-18-c0241",
+       "ses": "Yirminci sayfadaki tarihi klinik illüstrasyon tıp tarihinde ekstrapiramidal istemsiz hareketlerin dramatik klinik tablosunu gözler önüne sermektedir.",
+       "ekran": "**Tarihi klinik çizim**, ekstrapiramidal istemsiz hareketlerin klinik tablosunu belgeler.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tarihi klinik çizim",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [],
+        "sekil": "Ekstrapiramidal istemsiz hareket klinik tablosunu gösteren klasik tarihi vaka illüstrasyonu"
+       }
+      },
+      {
+       "id": "k2-18-c0242",
+       "ses": "Nörolojik muayenede istemsiz bir hareketle karşılaşıldığında hareketin hızı ritmi genliği ve postürle ilişkisi adım adım analiz edilir.",
+       "ekran": "İstemsiz harekette **hız, ritim, genlik ve postür ilişkisi** adım adım analiz edilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hız, ritim, genlik ve postür ilişkisi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [],
+        "sekil": "Ekstrapiramidal istemsiz hareket klinik tablosunu gösteren klasik tarihi vaka illüstrasyonu"
+       }
+      },
+      {
+       "id": "k2-18-c0243",
+       "ses": "Ritmik ise tremor ani sıçrayıcı ise kore yavaş kıvrılma ise atetoz fırlatıcı ise hemiballismus sürekli kasılma ise distoni düşünülür.",
+       "ekran": "Ritmik salınım **tremor**, sıçrama **kore**, kıvrılma **atetoz**, savrulma **hemiballismus** düşündürür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tremor",
+         "tur": "terim"
+        },
+        {
+         "metin": "kore",
+         "tur": "terim"
+        },
+        {
+         "metin": "atetoz",
+         "tur": "terim"
+        },
+        {
+         "metin": "hemiballismus",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [],
+        "sekil": "Ekstrapiramidal istemsiz hareket klinik tablosunu gösteren klasik tarihi vaka illüstrasyonu"
+       }
+      },
+      {
+       "id": "k2-18-c0244",
+       "ses": "Bu klinik ayırıcı tanı algoritması hekimin görüntüleme öncesinde lezyonun anatomik odağını ve biyokimyasal temelini saptamasını sağlar.",
+       "ekran": "Klinik algoritma, **anatomik odak ve biyokimyasal temeli** hızla aydınlatır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "anatomik odak ve biyokimyasal temeli",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [],
+        "sekil": "Ekstrapiramidal istemsiz hareket klinik tablosunu gösteren klasik tarihi vaka illüstrasyonu"
+       }
+      },
+      {
+       "id": "k2-18-c0245",
+       "ses": "Örneğin subtalamik nükleus hasarı hemiballismus kaudatus atrofisi kore substantia nigra dejenerasyonu ise parkinsonizm ile örtüşür.",
+       "ekran": "**STN lezyonu hemiballismus**, kaudatus atrofisi **kore**, SNc dejenerasyonu **parkinsonizm** yapar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "STN lezyonu hemiballismus",
+         "tur": "terim"
+        },
+        {
+         "metin": "kore",
+         "tur": "terim"
+        },
+        {
+         "metin": "parkinsonizm",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [],
+        "sekil": "Ekstrapiramidal istemsiz hareket klinik tablosunu gösteren klasik tarihi vaka illüstrasyonu"
+       }
+      },
+      {
+       "id": "k2-18-c0246",
+       "ses": "Muayene sırasında istemsiz hareketlerin uyku ile kaybolması ve dikkat dağıtıcı bilişsel görevlerle değişmesi ekstrapiramidal kökeni destekler.",
+       "ekran": "İstemsiz hareketlerin **uykuda kaybolması** ekstrapiramidal patolojiyi destekler.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "uykuda kaybolması",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [],
+        "sekil": "Ekstrapiramidal istemsiz hareket klinik tablosunu gösteren klasik tarihi vaka illüstrasyonu"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-18-p042",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k2-18-c0247",
+       "ses": "Özetle bazal gangliyonlar korteksten aldığı motor planları süzüp işleyen talamokortikal eksen üzerinden hareketi kusursuzlaştıran muazzam merkezlerdir.",
+       "ekran": "Bazal gangliyonlar **talamokortikal döngü ile** hareketi mükemmelleştiren dev kontrol merkezidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "talamokortikal döngü ile",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [],
+        "sekil": "Bazal gangliyon ve ekstrapiramidal sistem klinik özet şeması"
+       }
+      },
+      {
+       "id": "k2-18-c0248",
+       "ses": "Direkt yol hareketi fasilite ederken indirekt yol gereksiz motor paternleri durdurarak hareketin hedefe odaklanmasını güvenceye alır.",
+       "ekran": "**Direkt yol hareketi kolaylaştırırken**, indirekt yol gereksiz paternleri durdurur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Direkt yol hareketi kolaylaştırırken",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [],
+        "sekil": "Bazal gangliyon ve ekstrapiramidal sistem klinik özet şeması"
+       }
+      },
+      {
+       "id": "k2-18-c0249",
+       "ses": "Bu sistemin nörokimyasal dengesinde gaba glutamat dopamin ve asetilkolin arasındaki uyum sağlıklı motor yaşamın temelidir.",
+       "ekran": "Sağlıklı motor yaşam **GABA, glutamat, dopamin ve asetilkolin** dengesine dayanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "GABA, glutamat, dopamin ve asetilkolin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [],
+        "sekil": "Bazal gangliyon ve ekstrapiramidal sistem klinik özet şeması"
+       }
+      },
+      {
+       "id": "k2-18-c0250",
+       "ses": "Ekstrapiramidal sistem hastalıklarının tanısı klinik semiyolojinin titizlikle değerlendirilmesi ve altta yatan devre kusurunun kavranmasıyla mümkündür.",
+       "ekran": "Doğru klinik tanı **semiyolojinin titizliği ve devre kusurunun kavranmasıyla** mümkündür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "semiyolojinin titizliği ve devre kusurunun kavranmasıyla",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [],
+        "sekil": "Bazal gangliyon ve ekstrapiramidal sistem klinik özet şeması"
+       }
+      },
+      {
+       "id": "k2-18-c0251",
+       "ses": "Böylece bazal gangliyonlar ve ekstrapiramidal sistem konusundaki bu amfi dersimizi temel patofizyolojik ve klinik prensipleriyle tamamlamış bulunuyoruz.",
+       "ekran": "Bazal gangliyonlar ve ekstrapiramidal sistem **patofizyolojik ve klinik temelleriyle** tamamlanmıştır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "patofizyolojik ve klinik temelleriyle",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [],
+        "sekil": "Bazal gangliyon ve ekstrapiramidal sistem klinik özet şeması"
+       }
+      },
+      {
+       "id": "k2-18-c0252",
+       "ses": "Bazal gangliyonların motor bilişsel ve duygusal döngüleri birleştiren merkezi rolü nörolojik klinik muhakemenizin en güçlü dayanağı olacaktır.",
+       "ekran": "Bazal gangliyonlar **motor, bilişsel ve duygusal döngüleri** bütünleştiren ana merkezdir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "motor, bilişsel ve duygusal döngüleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [],
+        "sekil": "Bazal gangliyon ve ekstrapiramidal sistem klinik özet şeması"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "donem": "2025-2026"
+}

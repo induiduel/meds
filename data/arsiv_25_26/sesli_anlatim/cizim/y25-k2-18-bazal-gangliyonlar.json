@@ -1,0 +1,793 @@
+{
+ "surum": 1,
+ "metinHash": "2cc798d777b2244caf31337cb3628959d395fc0d",
+ "p": {
+  "0": {
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Klinik tablo",
+       "Kuvvet kaybı ve spastisite",
+       "İstem dışı hareket bozukluğu"
+      ]
+     ],
+     "kutuplar": [
+      "Piramidal lezyon",
+      "Ekstrapiramidal patoloji"
+     ],
+     "s": 2,
+     "k": [
+      20,
+      61
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.9
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1556,
+     "ek_renk": "#fbfbfb"
+    }
+   ]
+  },
+  "1": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Kortikospinal yollar",
+      "Kortikobulber yollar",
+      "Kortikopontin yollar"
+     ],
+     "baslik": "İnen Motor Yollar",
+     "s": 2,
+     "k": [
+      0,
+      62
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.9
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.228,
+     "ek_renk": "#fbfbfb"
+    }
+   ]
+  },
+  "2": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Kortiko-bazal ganglia döngüsü",
+      "Kortiko-serebellar döngü"
+     ],
+     "baslik": "Geri Dönen Modülatör Döngüler",
+     "s": 2,
+     "k": [
+      0,
+      32
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.9
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1726,
+     "ek_renk": "#fbfbfb"
+    }
+   ]
+  },
+  "5": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Putamen",
+      "Globus pallidus"
+     ],
+     "baslik": "Nükleus Lentiformis",
+     "s": 6,
+     "k": [
+      0,
+      42
+     ],
+     "tip": "liste",
+     "konum": [
+      0.31,
+      0.12
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.01,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "8": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Globus pallidus internus",
+      "Substansiya nigra pars retikulata"
+     ],
+     "baslik": "Temel Çıkış Çekirdekleri",
+     "s": 6,
+     "k": [
+      58,
+      103
+     ],
+     "tip": "liste",
+     "konum": [
+      0.15,
+      0.7
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "10": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Dopamin D1 bağlanması",
+      "Siklik adenozin monofosfat artışı",
+      "Striatal nöron uyarılması"
+     ],
+     "s": 7,
+     "k": [
+      0,
+      49
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.79
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.417,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.2273,
+     "ek_renk": "#fbfbfb"
+    }
+   ]
+  },
+  "11": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Motor etki",
+       "Hareketi kolaylaştırıcı",
+       "Hareketi baskılayıcı"
+      ]
+     ],
+     "kutuplar": [
+      "Dopaminerjik girdi",
+      "Kolinerjik internöron"
+     ],
+     "s": 7,
+     "k": [
+      0,
+      56
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.51,
+      0.13
+     ],
+     "genislik": 0.42,
+     "doluluk": 0.001,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "12": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Kortikal glutamat deşarjı",
+      "Striatal D1 uyarımı",
+      "GPi inhibisyonu",
+      "Talamus inhibisyonunun kalkması"
+     ],
+     "s": 8,
+     "k": [
+      0,
+      49
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.63,
+      0.24
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.45,
+     "yon": "dikey",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "13": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "İnhibitör merkezin susturulması",
+      "Subtalamik nükleusun uyarılması",
+      "Talamik çıkışın baskılanması"
+     ],
+     "s": 8,
+     "k": [
+      0,
+      42
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.01,
+      0.24
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.003,
+     "kutu_h": 0.417,
+     "yon": "dikey",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "14": {
+   "5": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Temel fonksiyon",
+       "Hareketi kolaylaştırır",
+       "Hareketi baskılar"
+      ]
+     ],
+     "kutuplar": [
+      "Direkt yol",
+      "İndirekt yol"
+     ],
+     "s": 8,
+     "k": [
+      0,
+      41
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.93
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.196,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1456,
+     "ek_renk": "#fbfbfb"
+    }
+   ]
+  },
+  "16": {
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Kortikal hızlı projeksiyon",
+      "Subtalamik nükleus uyarımı",
+      "Hızlı motor frenleme"
+     ],
+     "s": 8,
+     "k": [
+      0,
+      51
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.93
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.417,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3673,
+     "ek_renk": "#fbfbfb"
+    }
+   ]
+  },
+  "21": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Bisiklete binme",
+      "Yazı yazma"
+     ],
+     "baslik": "Öğrenilmiş Motor Beceriler",
+     "s": 10,
+     "k": [
+      0,
+      53
+     ],
+     "tip": "liste",
+     "konum": [
+      0.18,
+      0.62
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "22": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Motor korteks emri",
+      "İstenen hareket seçimi",
+      "Uygunsuz hareketlerin baskılanması"
+     ],
+     "s": 11,
+     "k": [
+      0,
+      41
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.78
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.417,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.2173,
+     "ek_renk": "#fbfbfb"
+    }
+   ]
+  },
+  "24": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Huntington koresi ve genetik",
+      "Vasküler lezyonlar ve inme",
+      "Toksik ve metabolik nedenler"
+     ],
+     "baslik": "Bazal Gangliyon Hastalık Etyolojisi",
+     "s": 12,
+     "k": [
+      0,
+      52
+     ],
+     "tip": "liste",
+     "konum": [
+      0.27,
+      0.28
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "26": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Tremor",
+      "Kore",
+      "Atetoz",
+      "Distoni"
+     ],
+     "baslik": "İstemsiz Hareket Bozuklukları",
+     "s": 13,
+     "k": [
+      0,
+      44
+     ],
+     "tip": "liste",
+     "konum": [
+      0.21,
+      0.13
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "28": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "İstirahat tremoru",
+       "Parkinson hastalığı"
+      ]
+     ],
+     "s": 14,
+     "k": [
+      60,
+      102
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.52,
+      0.74
+     ],
+     "genislik": 0.42,
+     "doluluk": 0.001,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "29": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "İntansiyonel aksiyon tremoru",
+       "Serebellar patoloji"
+      ]
+     ],
+     "s": 14,
+     "k": [
+      57,
+      114
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.81
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.196,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0256,
+     "ek_renk": "#fbfbfb"
+    }
+   ]
+  },
+  "30": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "terim_tanim",
+     "sablon_ad": "Terim → tanım",
+     "duzen": "tablo",
+     "basliklar": [
+      "Terim",
+      "Tanım"
+     ],
+     "satirlar": [
+      [
+       "Kore",
+       "Amaçsız düzensiz ani hızlı sıçrayıcı hareketler"
+      ]
+     ],
+     "s": 15,
+     "k": [
+      0,
+      35
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.81
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0656,
+     "ek_renk": "#fbfbfb"
+    }
+   ]
+  },
+  "32": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "terim_tanim",
+     "sablon_ad": "Terim → tanım",
+     "duzen": "tablo",
+     "basliklar": [
+      "Terim",
+      "Tanım"
+     ],
+     "satirlar": [
+      [
+       "Atetoz",
+       "Parmaklarda yavaş kıvrılma bükülme hareketleri"
+      ]
+     ],
+     "s": 16,
+     "k": [
+      0,
+      29
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.54,
+      0.68
+     ],
+     "genislik": 0.42,
+     "doluluk": 0.0,
+     "kutu_h": 0.276,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "34": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "terim_tanim",
+     "sablon_ad": "Terim → tanım",
+     "duzen": "tablo",
+     "basliklar": [
+      "Terim",
+      "Tanım"
+     ],
+     "satirlar": [
+      [
+       "Distoni",
+       "Antagonist kasların sürekli kasılması ve postür bozukluğu"
+      ]
+     ],
+     "s": 18,
+     "k": [
+      0,
+      47
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.88
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1356,
+     "ek_renk": "#fbfbfb"
+    }
+   ]
+  },
+  "36": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Nöroleptik antipsikotikler",
+      "Fenotiazin grubu ilaçlar",
+      "Butirofenon grubu ilaçlar"
+     ],
+     "baslik": "Sorumlu İlaç Grupları",
+     "s": 19,
+     "k": [
+      0,
+      50
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.89
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.218,
+     "ek_renk": "#fbfbfb"
+    }
+   ]
+  },
+  "38": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Dopamin D2 reseptör blokajı",
+      "Kolinerjik aşırı etkinlik",
+      "Ekstrapiramidal yan etkiler"
+     ],
+     "s": 19,
+     "k": [
+      60,
+      102
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.89
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.417,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3273,
+     "ek_renk": "#fbfbfb"
+    }
+   ]
+  },
+  "40": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "İstirahat ve postür değerlendirmesi",
+      "Aksiyon ve hedef testi",
+      "İlaç öyküsünün sorgulanması"
+     ],
+     "baslik": "Hareket Bozukluğu Muayene Basamakları",
+     "s": 19,
+     "k": [
+      0,
+      42
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.89
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.218,
+     "ek_renk": "#fbfbfb"
+    }
+   ]
+  }
+ },
+ "rapor": {
+  "aday": 24,
+  "gecti": 23,
+  "ret": {
+   "resim sayfasında panel (H51)": 1
+  }
+ }
+}
