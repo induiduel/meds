@@ -1,0 +1,2152 @@
+{
+ "id": "k2p-y25-k2-10-bas-agrisina-yaklasim",
+ "deckId": "k2p-y25-k2-10-bas-agrisina-yaklasim",
+ "title": "Baş Ağrısına Yaklaşım: Primer ve Sekonder Baş Ağrıları, Kırmızı Bayraklar ve Tanısal Yöntemler",
+ "shortTitle": "Baş Ağrısına Yaklaşım",
+ "discipline": "Nöroloji",
+ "committee": "donem3-kurul2",
+ "instructor": "Dr. İrfan Yavaş",
+ "matchedNoteId": "y25-k2-10-bas-agrisina-yaklasim",
+ "overview": "Baş ağrısı, tıp pratiğinde hekime en sık başvuru nedeni olan temel semptomların başında gelir ve yaşam boyu en az bir kez baş ağrısı deneyimleme oranı erkeklerde %93, kadınlarda ise %99 düzeyindedir. Hastaların büyük çoğunluğu altta yatan ölümcül bir intrakraniyal hastalıktan korksa da olguların ezici çoğunluğu selim seyirlidir. Bu derste Uluslararası Baş Ağrısı Derneği (IHS) tarafından geliştirilen ICHD-3 sınıflaması temelinde primer baş ağrıları (migren, gerilim tipi, trigeminal otonomik ve diğer primer sendromlar), sekonder baş ağrıları (travma, vasküler, non-vasküler intrakraniyal, madde kullanımı, enfeksiyon, homeostaz ve kraniofasial patolojiler) ile kraniyal nöropatiler sistematik olarak ele alınmaktadır. Primer ve sekonder baş ağrılarının klinik ayrımında ayrıntılı anamnezin belirleyici rolü, hayatı tehdit eden sekonder nedenleri işaret eden kırmızı bayraklar (red flags), nörolojik muayenede saptanan alarm bulguları ve seçilmiş tanısal yöntemlerin (BBT, MRG, LP, sedimantasyon) akılcı kullanım ilkeleri adım adım incelenmektedir.",
+ "highYieldPearls": [
+  "📌 [SINAV SPOTU] Yaşam boyu en az bir kez baş ağrısı deneyimleme oranı erkeklerde %93, kadınlarda ise %99'dur; hastaların büyük endişesine rağmen olguların çoğu iyi seyirlidir.",
+  "📌 [SINAV SPOTU] ICHD-3 sınıflamasında primer baş ağrıları dört ana gruptur: Migren, Gerilim tipi baş ağrısı, Trigeminal otonomik baş ağrıları ve Diğer primer baş ağrısı sendromları.",
+  "📌 [SINAV SPOTU] Primer baş ağrıları bizzat kendisi bir hastalıktır, yaşamı tehdit etmez ve kural olarak ileri tetkik gerektirmeden klinik tedaviyle kontrol altına alınabilir.",
+  "📌 [SINAV SPOTU] Sekonder baş ağrıları altta yatan başka bir organik hastalığın semptomudur, yaşamı tehdit edebilir ve acil ileri inceleme gerektirir.",
+  "📌 [SINAV SPOTU] Baş ağrısında tanısal yaklaşımın temelini ayrıntılı anamnez oluşturur; primer baş ağrılarında fizik ve nörolojik muayene kural olarak tamamen normaldir.",
+  "📌 [SINAV SPOTU] Sekonder baş ağrısını düşündüren kırmızı bayraklar: Yeni başlayan akut çok şiddetli ağrı, 10 yaşından önce veya 50 yaşından sonra başlama, çocukta oksipital yerleşim, hastanın hayatındaki en şiddetli baş ağrısı tanımı, öksürme ve ıkınmayla tetiklenme.",
+  "📌 [SINAV SPOTU] Muayenede bilinç bozukluğu, epileptik nöbet, fokal defisit, papilödem, subhyaloid hemoraji, ateşle birlikte ense sertliği, 3. kranial sinir felci ve Horner sendromu sekonder alarm bulgularıdır.",
+  "📌 [SINAV SPOTU] Akut subaraknoid kanama, hidrosefali, inme şüphesi, KİBAS ve kafa travmasında (GKS: 9) ilk tercih BBT'dir; arka çukur lezyonları ve demiyelinizan plaklarda MRG, menenjit ve BT negatif SAK'ta LP uygulanır."
+ ],
+ "kazanimlar": [
+  "Öğrenci baş ağrısının toplumdaki epidemiyolojisini ve ICHD-3 temel sınıflama sistemini açıklar.",
+  "Öğrenci primer baş ağrısı alt gruplarını (migren, gerilim tipi, trigeminal otonomik) ve sekonder baş ağrısı etyolojik sınıflarını sayar.",
+  "Öğrenci primer ve sekonder baş ağrıları arasındaki temel klinik ve prognostik farkları karşılaştırır.",
+  "Öğrenci baş ağrılı hastada anamnezde sorgulanması gereken temel özellikleri ve muayenenin rolünü açıklar.",
+  "Öğrenci sekonder baş ağrısını düşündüren öyküsel kırmızı bayrakları ve fizik muayene alarm bulgularını tanımlar.",
+  "Öğrenci baş ağrısında BBT, MRG, lomber ponksiyon ve laboratuvar yöntemlerinin klinik endikasyonlarını ayırt eder."
+ ],
+ "matchedPastQuestionsCount": 18,
+ "sayfaHaritasi": "teyitli",
+ "slides": [
+  {
+   "slideNumber": 1,
+   "id": "y25-k2-10-s01",
+   "title": "Epidemiyoloji ve Sınıflama: Baş Ağrısının Toplumsal Yükü ve ICHD-3",
+   "subtitle": "Baş ağrısı hekimlik pratiğinde en sık karşılaşılan yakınmadır; ICHD-3 sistemi tanısal yaklaşımın uluslararası çerçevesini çizer.",
+   "badge": "Epidemiyoloji ve Sınıflama",
+   "bolum": "1",
+   "pdfSayfalari": [
+    2,
+    3
+   ],
+   "kaynakSayfa": [
+    2,
+    3
+   ],
+   "bilgi": [
+    1,
+    2
+   ],
+   "isCheckpoint": false,
+   "checkpointNumber": 0,
+   "synthesisNarrative": "Baş ağrısı, poliklinik ve acil servis başvurularında hekimlerin en sık karşılaştığı klinik semptomların başında yer alır. Yaşam boyu en az bir kez baş ağrısı deneyimleme oranı erkeklerde yüzde 93, kadınlarda ise yüzde 99 düzeyindedir.\n\n- **Epidemiyolojik Gerçeklik:** Baş ağrısı çeken hastaların büyük çoğunluğu altta yatan tümör veya beyin kanaması gibi ölümcül bir tablodan korkar. Buna karşın klinik olguların ezici çoğunluğu selim seyirlidir.\n- **IHS ve Tarihsel Gelişim:** Uluslararası Baş Ağrısı Derneği sınıflama sistemini 1988 yılında kurmuş; 2004 ve 2013 yıllarındaki revizyonlarla tanı kriterlerini geliştirmiştir.\n- **ICHD-3 Temel Çerçevesi:** Güncel sınıflama baş ağrılarını primer baş ağrıları, sekonder baş ağrıları ile kraniyal nöropatiler olmak üzere üç temel başlık altında gruplandırır.\n\n> [!NOTE]\n> Baş ağrısı toplumda neredeyse evrensel bir sıklık göstermesine rağmen, hastaların büyük korkusunun aksine klinik olguların çoğu iyi seyirlidir.",
+   "content": "Baş ağrısı, poliklinik ve acil servis başvurularında hekimlerin en sık karşılaştığı klinik semptomların başında yer alır. Yaşam boyu en az bir kez baş ağrısı deneyimleme oranı erkeklerde yüzde 93, kadınlarda ise yüzde 99 düzeyindedir.\n\n- **Epidemiyolojik Gerçeklik:** Baş ağrısı çeken hastaların büyük çoğunluğu altta yatan tümör veya beyin kanaması gibi ölümcül bir tablodan korkar. Buna karşın klinik olguların ezici çoğunluğu selim seyirlidir.\n- **IHS ve Tarihsel Gelişim:** Uluslararası Baş Ağrısı Derneği sınıflama sistemini 1988 yılında kurmuş; 2004 ve 2013 yıllarındaki revizyonlarla tanı kriterlerini geliştirmiştir.\n- **ICHD-3 Temel Çerçevesi:** Güncel sınıflama baş ağrılarını primer baş ağrıları, sekonder baş ağrıları ile kraniyal nöropatiler olmak üzere üç temel başlık altında gruplandırır.\n\n> [!NOTE]\n> Baş ağrısı toplumda neredeyse evrensel bir sıklık göstermesine rağmen, hastaların büyük korkusunun aksine klinik olguların çoğu iyi seyirlidir.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "En Sık Yakınma",
+      "desc": "Baş ağrısı hekimlik hayatında en sık karşılaşılan semptomdur; erkeklerde %93, kadınlarda %99 yaşam boyu sıklık gösterir.",
+      "isKey": true
+     },
+     {
+      "title": "Selim Seyir",
+      "desc": "Hastalar ciddi organik patolojilerden endişe etse de vakaların çok büyük kısmı selim doğalıdır.",
+      "isKey": true
+     },
+     {
+      "title": "ICHD-3 Sınıflaması",
+      "desc": "Uluslararası Baş Ağrısı Derneği (IHS) tarafından 1988, 2004 ve 2013 yıllarında geliştirilen standart sınıflamadır.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Yaşam boyu en az bir kez baş ağrısı yaşayan kişi oranı erkeklerde %93, kadınlarda %99'dur.",
+    "📌 [SINAV SPOTU] Uluslararası Baş Ağrısı Derneği sınıflama yılları 1988, 2004 ve 2013 olarak kronolojik olarak güncellenmiştir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "ICHD-3",
+     "explanation": "Uluslararası Baş Ağrısı Bozuklukları Sınıflaması'nın (International Classification of Headache Disorders) üçüncü sürümüdür."
+    },
+    {
+     "term": "Primer Baş Ağrısı",
+     "explanation": "Altta yatan yapısal bir lezyon veya başka bir hastalık olmaksızın bizzat tablonun kendisinin hastalık olduğu baş ağrısı grubudur."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-1-1",
+     "front": "Toplumda yaşam boyu en az bir kez baş ağrısı deneyimleme sıklığı kadın ve erkeklerde ne kadardır?",
+     "back": "Ders notundaki epidemiyolojik verilere göre bu oran erkeklerde %93, kadınlarda ise %99 düzeyindedir."
+    },
+    {
+     "id": "fc-1-2",
+     "front": "Baş ağrısı sınıflamasında uluslararası standart kabul edilen IHS kılavuzunun yayımlanma yılları hangileridir?",
+     "back": "Uluslararası Baş Ağrısı Derneği (IHS) sınıflaması 1988, 2004 ve 2013 yıllarında yayımlanmıştır."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "3.sınıf başağrısı yaklaşım.pdf",
+    "startPage": 2,
+    "endPage": 3,
+    "primaryPage": 2,
+    "citation": "Sayfa 2–3 · Kurul 2 Nöroloji · Baş Ağrısına Yaklaşım"
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Baş ağrısının toplumdaki epidemiyolojik sıklığı ve klinik gidişiyle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "text": "Olguların ezici çoğunluğu iyi seyirlidir ve yaşam boyu görülme sıklığı kadınlarda %99 düzeyindedir.",
+       "isCorrect": true,
+       "explanation": "Ders notuna göre baş ağrısı toplumda kadınlarda %99 oranında görülür ve hastaların korkusunun aksine olguların büyük kısmı iyi seyirlidir."
+      },
+      {
+       "text": "Baş ağrısı yaşayan hastaların çoğunda altta yatan neden ölümcül bir intrakraniyal kitle lezyonudur.",
+       "isCorrect": false,
+       "explanation": "Kitle lezyonları intrakraniyal basınca yol açan sekonder nedenlerdir. Hastalar bundan çok korksa da gerçekte klinik olguların büyük kısmı selim seyir gösterir."
+      },
+      {
+       "text": "Erkeklerde yaşam boyu baş ağrısı deneyimleme oranı kadınlara kıyasla anlamlı derecede daha yüksektir.",
+       "isCorrect": false,
+       "explanation": "Epidemiyolojik veriler yaşam boyu baş ağrısı sıklığının erkeklerde %93, kadınlarda ise %99 olduğunu ve kadınlarda daha yüksek seyrettiğini belirtir."
+      },
+      {
+       "text": "Uluslararası Baş Ağrısı Derneği ilk kapsamlı sınıflamasını 2013 yılında yayımlayarak sistemi kurmuştur.",
+       "isCorrect": false,
+       "explanation": "Dernek ilk temel sınıflamasını 1988 yılında yayımlamıştır. 2004 ve 2013 yılları ise sınıflamanın gözden geçirilip güncellendiği revizyon tarihleridir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Yaşam boyu en az bir kez baş ağrısı deneyimleme oranı erkeklerde yüzde 93, kadınlarda ise yüzde 99 düzeyindedir.",
+     "maskedTerm": "yüzde 99",
+     "hint": "Toplumda kadın cinsiyette bildirilen en yüksek yaşam boyu sıklık oranıdır."
+    },
+    {
+     "type": "interactive_table",
+     "title": "Baş Ağrısı Epidemiyolojisi ve Seyir Özellikleri",
+     "tableHeaders": [
+      "Parametre",
+      "Toplumsal Oran",
+      "Klinik Özellik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Kadınlarda Yaşam Boyu Sıklık",
+         "isMasked": false
+        },
+        {
+         "text": "%99",
+         "isMasked": true,
+         "hint": "Kadın cinsiyetteki yaşam boyu görülme sıklığı değeridir."
+        },
+        {
+         "text": "Toplumda neredeyse tüm bireylerde görülür",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Erkeklerde Yaşam Boyu Sıklık",
+         "isMasked": false
+        },
+        {
+         "text": "%93",
+         "isMasked": true,
+         "hint": "Erkek cinsiyetteki yaşam boyu görülme sıklığı değeridir."
+        },
+        {
+         "text": "Yüksek sıklıkla deneyimlenen semptomdur",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Genel Klinik Seyir",
+         "isMasked": false
+        },
+        {
+         "text": "İyi seyirli (selim)",
+         "isMasked": true,
+         "hint": "Hayati tehdit oluşturmayan genel gidişat biçimidir."
+        },
+        {
+         "text": "Ciddi hastalık korkusuna rağmen selimdir",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Baş Ağrısı Epidemiyolojisi ve IHS Sınıflaması",
+     "items": [
+      {
+       "text": "Baş ağrısı hekimlik hayatında en sık karşılaşılan klinik yakınmaların başında gelir.",
+       "isLie": false,
+       "explanation": "Poliklinik ve acil servis verileri baş ağrısının en yaygın hekime başvuru nedeni olduğunu doğrular."
+      },
+      {
+       "text": "Baş ağrısı çeken hastaların çoğunda altta yatan neden ölümcül bir beyin tümörüdür.",
+       "isLie": true,
+       "explanation": "Hastalar sıklıkla tümörden endişe etse de amfi ders notuna göre baş ağrısı olgularının çoğu selim seyirlidir."
+      },
+      {
+       "text": "ICHD sınıflaması Uluslararası Baş Ağrısı Derneği tarafından 1988, 2004 ve 2013 yıllarında yayımlanmıştır.",
+       "isLie": false,
+       "explanation": "IHS sınıflaması bu üç temel yılda geliştirilerek günümüzdeki ICHD-3 standartlarına ulaşmıştır."
+      },
+      {
+       "text": "Yaşam boyu baş ağrısı deneyimleme oranı kadınlarda yüzde 99 seviyesine kadar ulaşır.",
+       "isLie": false,
+       "explanation": "Epidemiyolojik çalışmalarda kadınların yüzde 99'unun yaşamında en az bir kez baş ağrısı yaşadığı saptanmıştır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Baş ağrısı çeken hastaların genel endişesi ile tablonun gerçek klinik seyri arasındaki temel tezat nedir?",
+     "answer": "Hastaların çoğu kafa içi kitle veya beyin kanaması gibi hayatı tehdit eden ciddi bir hastalıktan endişe eder; oysa olguların çok büyük bir kısmı selim seyirli iyi huylu tablolardır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 2,
+   "id": "y25-k2-10-s02",
+   "title": "Primer Baş Ağrıları: Migren, Gerilim Tipi ve Trigeminal Otonomik Sefaljiler",
+   "subtitle": "Primer baş ağrıları yapısal bir lezyon olmaksızın bizzat hastalığın kendisini temsil eden tablolardır.",
+   "badge": "Primer Baş Ağrıları",
+   "bolum": "1",
+   "pdfSayfalari": [
+    3,
+    3
+   ],
+   "kaynakSayfa": [
+    3
+   ],
+   "bilgi": [
+    3
+   ],
+   "isCheckpoint": false,
+   "checkpointNumber": 0,
+   "synthesisNarrative": "ICHD-3 sınıflamasında A grubu başlığı altında yer alan primer baş ağrıları, altta yatan başka bir organik hastalığa ikincil olmayan bağımsız tablolardır.\n\n- **Migren (Grup 1):** Tek taraflı, zonklayıcı özellikte, sıklıkla bulantı ve ışık-ses hassasiyetinin eşlik ettiği yaygın primer baş ağrısıdır.\n- **Gerilim Tipi Baş Ağrısı (Grup 2):** Toplumda en sık rastlanan, başı çember gibi saran, sıkıştırıcı veya künt vasıflı primer tablodur.\n- **Trigeminal Otonomik Sefaljiler (Grup 3):** Şiddetli tek taraflı baş ağrısına aynı tarafta göz yaşarması, burun tıkanıklığı veya akıntısı gibi kraniyal otonomik semptomların eşlik ettiği gruptur.\n- **Diğer Primer Sendromlar (Grup 4):** Egzersiz, öksürük veya soğuk gibi özgül tetikleyicilerle uyarılabilen diğer selim baş ağrısı sendromlarıdır.\n\n> [!NOTE]\n> Primer baş ağrılarında etyolojide intrakraniyal kitle, kanama veya enfeksiyon gibi yapısal sekonder bir lezyon saptanmaz.",
+   "content": "ICHD-3 sınıflamasında A grubu başlığı altında yer alan primer baş ağrıları, altta yatan başka bir organik hastalığa ikincil olmayan bağımsız tablolardır.\n\n- **Migren (Grup 1):** Tek taraflı, zonklayıcı özellikte, sıklıkla bulantı ve ışık-ses hassasiyetinin eşlik ettiği yaygın primer baş ağrısıdır.\n- **Gerilim Tipi Baş Ağrısı (Grup 2):** Toplumda en sık rastlanan, başı çember gibi saran, sıkıştırıcı veya künt vasıflı primer tablodur.\n- **Trigeminal Otonomik Sefaljiler (Grup 3):** Şiddetli tek taraflı baş ağrısına aynı tarafta göz yaşarması, burun tıkanıklığı veya akıntısı gibi kraniyal otonomik semptomların eşlik ettiği gruptur.\n- **Diğer Primer Sendromlar (Grup 4):** Egzersiz, öksürük veya soğuk gibi özgül tetikleyicilerle uyarılabilen diğer selim baş ağrısı sendromlarıdır.\n\n> [!NOTE]\n> Primer baş ağrılarında etyolojide intrakraniyal kitle, kanama veya enfeksiyon gibi yapısal sekonder bir lezyon saptanmaz.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Migren (Grup 1)",
+      "desc": "Zonklayıcı, sıklıkla tek taraflı ve eşlik eden fotofobi-bulantı ile seyreden primer tablodur.",
+      "isKey": true
+     },
+     {
+      "title": "Gerilim Tipi (Grup 2)",
+      "desc": "Toplumda en yüksek prevalansa sahip, başı çember gibi saran sıkıştırıcı baş ağrısıdır.",
+      "isKey": true
+     },
+     {
+      "title": "Trigeminal Otonomik (Grup 3)",
+      "desc": "Şiddetli tek taraflı ağrıya göz yaşarması ve burun tıkanıklığı gibi otonom bulguların eşlik ettiği tablodur.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] ICHD-3 Grup A primer baş ağrıları: 1. Migren, 2. Gerilim tipi, 3. Trigeminal otonomik, 4. Diğer primer sendromlardır.",
+    "📌 [SINAV SPOTU] Trigeminal otonomik baş ağrılarında tek taraflı şiddetli ağrıya aynı tarafta göz yaşarması ve burun akıntısı eşlik eder."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Trigeminal Otonomik Sefalji",
+     "explanation": "Trigeminal sinir dağılımında tek taraflı şiddetli baş ağrısı ile birlikte lakrimasyon ve nazal konjesyon gibi otonomik bulguların görüldüğü primer tablodur."
+    },
+    {
+     "term": "Gerilim Tipi Baş Ağrısı",
+     "explanation": "Genellikle bilateral yerleşimli, zonklayıcı olmayan, hafif-orta şiddette sıkıştırıcı karakterde en yaygın primer baş ağrısıdır."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-2-1",
+     "front": "Toplumda en sık görülen, başı çember gibi saran sıkıştırıcı vasıflı primer baş ağrısı türü hangisidir?",
+     "back": "ICHD-3 Grup 2'de sınıflandırılan gerilim tipi baş ağrısıdır."
+    },
+    {
+     "id": "fc-2-2",
+     "front": "Tek taraflı şiddetli baş ağrısına göz yaşarması ve burun tıkanıklığı gibi kraniyal otonom bulguların eşlik ettiği primer grup hangisidir?",
+     "back": "ICHD-3 Grup 3'te yer alan trigeminal otonomik baş ağrılarıdır."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "3.sınıf başağrısı yaklaşım.pdf",
+    "startPage": 3,
+    "endPage": 3,
+    "primaryPage": 3,
+    "citation": "Sayfa 3 · Kurul 2 Nöroloji · Baş Ağrısına Yaklaşım"
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "ICHD-3 sınıflamasına göre tek taraflı şiddetli baş ağrısına göz yaşarması ve burun tıkanıklığı gibi otonomik semptomların eşlik ettiği primer baş ağrısı grubu hangisidir?",
+     "microQuizOptions": [
+      {
+       "text": "Trigeminal otonomik baş ağrıları (Grup 3)",
+       "isCorrect": true,
+       "explanation": "Trigeminal otonomik sefaljiler, şiddetli tek taraflı ağrıyla birlikte lakrimasyon ve nazal konjesyon gibi kraniyal otonomik bulguların görüldüğü primer gruptur."
+      },
+      {
+       "text": "Gerilim tipi baş ağrısı (Grup 2)",
+       "isCorrect": false,
+       "explanation": "Gerilim tipi baş ağrısı toplumda en sık görülen primer tablodur; başı çember gibi saran çift taraflı sıkıştırıcı ağrı yapar ve otonomik semptom içermez."
+      },
+      {
+       "text": "Migren (Grup 1)",
+       "isCorrect": false,
+       "explanation": "Migren, tek taraflı zonklayıcı baş ağrısı atakları ve fotofobi ile seyreden yaygın bir primer baş ağrısıdır. Trigeminal otonomik sefaljilerde görülen belirgin göz yaşarması ve burun akıntısı gibi parasempatik bulgular migrenin temel tablosunda yer almaz."
+      },
+      {
+       "text": "Diğer primer baş ağrısı sendromları (Grup 4)",
+       "isCorrect": false,
+       "explanation": "Diğer primer baş ağrısı sendromları, egzersiz veya soğuk gibi özgül fiziksel tetikleyicilerle ortaya çıkan bağımsız tablolardır. Soru kökünde tanımlanan göz yaşarması ve burun tıkanıklığı ile giden otonomik sefalji tablosunu bu grup temsil etmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Toplumda en sık rastlanan, başı çember gibi saran, sıkıştırıcı veya künt vasıflı primer tablodur.",
+     "maskedTerm": "sıkıştırıcı",
+     "hint": "Ağrının zonklayıcı olmayan, çember benzeri baskı hissi yaratan karakteridir."
+    },
+    {
+     "type": "feature_bidding",
+     "optionA": "Migren (Grup 1)",
+     "optionB": "Trigeminal Otonomik Baş Ağrısı (Grup 3)",
+     "rounds": [
+      {
+       "feature": "Göz yaşarması ve burun tıkanıklığı gibi kraniyal otonomik bulguların belirgin eşlikçiliği",
+       "correct": "B"
+      },
+      {
+       "feature": "Tek taraflı zonklayıcı karakterde ve bulantı ile ses hassasiyetinin sık eşlik ettiği nörovasküler ataklar",
+       "correct": "A"
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Migren",
+     "rightCategory": "Gerilim Tipi Baş Ağrısı",
+     "cards": [
+      {
+       "text": "Zonklayıcı karakterde ve sıklıkla tek taraflı yerleşim gösteren ataklar",
+       "category": "left"
+      },
+      {
+       "text": "Başı çember gibi saran çift taraflı sıkıştırıcı vasıflı ağrı",
+       "category": "right"
+      },
+      {
+       "text": "Toplumda en sık rastlanan primer baş ağrısı formu",
+       "category": "right"
+      },
+      {
+       "text": "Orta ve şiddetli düzeyde seyrederken bulantının eşlik edebildiği tablo",
+       "category": "left"
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "ICHD-3 Primer Baş Ağrısı Grupları",
+     "items": [
+      {
+       "text": "Migren ve gerilim tipi baş ağrısı ICHD-3 sınıflamasında primer grupta yer alır.",
+       "isLie": false,
+       "explanation": "Her iki tablo da yapısal lezyon olmaksızın gelişen en sık primer baş ağrısı tipleridir."
+      },
+      {
+       "text": "Trigeminal otonomik baş ağrılarında ağrıya göz yaşarması ve burun tıkanıklığı eşlik eder.",
+       "isLie": false,
+       "explanation": "Kraniyal parasempatik otonomik aktivasyon bu grubun en karakteristik tanısal özelliğidir."
+      },
+      {
+       "text": "Primer baş ağrıları altta yatan kafa içi kitle veya kanama gibi yapısal bir patolojinin semptomudur.",
+       "isLie": true,
+       "explanation": "Primer baş ağrılarında yapısal bir patoloji bulunmaz; tablonun kendisi bağımsız bir hastalıktır."
+      },
+      {
+       "text": "Diğer primer baş ağrısı sendromları egzersiz veya öksürük gibi tetikleyicilerle ortaya çıkabilir.",
+       "isLie": false,
+       "explanation": "ICHD-3 Grup 4 içerisinde egzersiz ve öksürükle tetiklenen selim primer sendromlar tanımlanmıştır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "ICHD-3 sınıflamasında yer alan dört temel primer baş ağrısı grubu hangileridir?",
+     "answer": "1. Migren, 2. Gerilim tipi baş ağrısı, 3. Trigeminal otonomik baş ağrıları, 4. Diğer primer baş ağrısı sendromları."
+    }
+   ]
+  },
+  {
+   "slideNumber": 3,
+   "id": "y25-k2-10-s03",
+   "title": "Sekonder Baş Ağrıları 1: Travma, Damarsal ve İntrakraniyal Bozukluklar",
+   "subtitle": "Sekonder baş ağrıları yapısal veya sistemik bir hastalığın belirtisi olarak ortaya çıkan klinik tablolardır.",
+   "badge": "Sekonder Baş Ağrıları",
+   "bolum": "1",
+   "pdfSayfalari": [
+    4,
+    4
+   ],
+   "kaynakSayfa": [
+    4
+   ],
+   "bilgi": [
+    4
+   ],
+   "isCheckpoint": false,
+   "checkpointNumber": 0,
+   "synthesisNarrative": "ICHD-3 sınıflamasının B grubunu oluşturan sekonder baş ağrıları, intrakraniyal yapılarda veya çevre dokularda gelişen yapısal patolojilere ikincil ortaya çıkar.\n\n- **Travmaya Bağlı Ağrılar (Grup 5):** Baş veya boyun bölgesine yönelik mekanik darbenin ardından gelişen akut ya da sekel nitelikli baş ağrılarıdır.\n- **Damarsal Bozukluklara Bağlı Ağrılar (Grup 6):** İntrakraniyal anevrizma rüptürleri, iskemik veya hemorajik inmeler ve damar diseksiyonları gibi vasküler kaynaklı patolojilerden doğar.\n- **Damarsal Olmayan İntrakraniyal Bozukluklar (Grup 7):** Beyin tümörleri, hidrosefali veya kafa içi basınç dengesizliklerine bağlı gelişen kitle etkili organik tablolardır.\n\n> [!IMPORTANT]\n> Kraniyal damarsal lezyonlar ve kitle lezyonları, kafa içi basınç artışına yol açarak doğrudan hayati risk oluşturabilir.",
+   "content": "ICHD-3 sınıflamasının B grubunu oluşturan sekonder baş ağrıları, intrakraniyal yapılarda veya çevre dokularda gelişen yapısal patolojilere ikincil ortaya çıkar.\n\n- **Travmaya Bağlı Ağrılar (Grup 5):** Baş veya boyun bölgesine yönelik mekanik darbenin ardından gelişen akut ya da sekel nitelikli baş ağrılarıdır.\n- **Damarsal Bozukluklara Bağlı Ağrılar (Grup 6):** İntrakraniyal anevrizma rüptürleri, iskemik veya hemorajik inmeler ve damar diseksiyonları gibi vasküler kaynaklı patolojilerden doğar.\n- **Damarsal Olmayan İntrakraniyal Bozukluklar (Grup 7):** Beyin tümörleri, hidrosefali veya kafa içi basınç dengesizliklerine bağlı gelişen kitle etkili organik tablolardır.\n\n> [!IMPORTANT]\n> Kraniyal damarsal lezyonlar ve kitle lezyonları, kafa içi basınç artışına yol açarak doğrudan hayati risk oluşturabilir.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Travma (Grup 5)",
+      "desc": "Baş ve boyun travmalarına ikincil gelişen doku hasarı kaynaklı tablolardır.",
+      "isKey": true
+     },
+     {
+      "title": "Damarsal Nedenler (Grup 6)",
+      "desc": "Anevrizma kanaması, inme ve vasküler diseksiyonlara bağlı vasküler baş ağrılarıdır.",
+      "isKey": true
+     },
+     {
+      "title": "Damarsal Olmayan Kitleler (Grup 7)",
+      "desc": "Tümör ve hidrosefali gibi intrakraniyal basınç artıran organik lezyonlardır.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] ICHD-3 Grup 6 kraniyal ve servikal damarsal bozuklukları, Grup 7 ise damarsal olmayan intrakraniyal lezyonları (tümör, hidrosefali) kapsar.",
+    "📌 [SINAV SPOTU] Travmaya bağlı baş ağrıları ICHD-3 sınıflamasında Grup 5 sekonder baş ağrısı olarak yer alır."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Vasküler Baş Ağrısı",
+     "explanation": "Kraniyal veya servikal damarsal yapılardaki kanama, oklüzyon veya diseksiyona bağlı gelişen sekonder ağrıdır."
+    },
+    {
+     "term": "Hidrosefali",
+     "explanation": "Ventriküler sistemde beyin omurilik sıvısının aşırı birikmesi sonucu intrakraniyal basınç artışıyla giden tablodur."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-3-1",
+     "front": "Beyin tümörleri ve hidrosefali ICHD-3 sınıflamasında hangi sekonder grupta yer alır?",
+     "back": "Damarsal olmayan intrakraniyal bozukluklara bağlı baş ağrıları (Grup 7) başlığı altında yer alır."
+    },
+    {
+     "id": "fc-3-2",
+     "front": "İntrakraniyal anevrizma kanamaları ve inmeler hangi sekonder baş ağrısı sınıfında incelenir?",
+     "back": "Kraniyal veya servikal damarsal bozukluklara bağlı baş ağrıları (Grup 6) kapsamında incelenir."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "3.sınıf başağrısı yaklaşım.pdf",
+    "startPage": 4,
+    "endPage": 4,
+    "primaryPage": 4,
+    "citation": "Sayfa 4 · Kurul 2 Nöroloji · Baş Ağrısına Yaklaşım"
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "ICHD-3 sınıflamasına göre beyin tümörleri ve hidrosefali aşağıdaki sekonder baş ağrısı gruplarından hangisinde yer alır?",
+     "microQuizOptions": [
+      {
+       "text": "Damarsal olmayan intrakraniyal bozukluklara bağlı baş ağrıları (Grup 7)",
+       "isCorrect": true,
+       "explanation": "Beyin tümörleri ve hidrosefali intrakraniyal kitle etkisi ve basınç artışı yapan damarsal olmayan sekonder tablolardır."
+      },
+      {
+       "text": "Kraniyal veya servikal damarsal bozukluklara bağlı baş ağrıları (Grup 6)",
+       "isCorrect": false,
+       "explanation": "Kraniyal damarsal bozukluklar; anevrizma rüptürü, inme veya arter diseksiyonu gibi vasküler lezyonlara ikincil gelişen akut sekonder tablolardır. Soru kökündeki tümör ve hidrosefali ise vasküler değil, damarsal olmayan intrakraniyal kitle lezyonları grubunda incelenir."
+      },
+      {
+       "text": "Baş ve boyun travmasına bağlı baş ağrıları (Grup 5)",
+       "isCorrect": false,
+       "explanation": "Grup 5 baş ve boyun bölgesine gelen doğrudan fiziksel travmanın ardından gelişen mekanik doku zedelenmelerini temsil eder."
+      },
+      {
+       "text": "Trigeminal otonomik baş ağrıları (Grup 3)",
+       "isCorrect": false,
+       "explanation": "Trigeminal otonomik sefaljiler, şiddetli tek taraflı baş ağrısına lakrimasyon ve nazal konjesyonun eşlik ettiği selim primer tablolardır. Bu grupta intrakraniyal kitle veya hidrosefali gibi organik sekonder lezyonlar bulunmaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Baş veya boyun bölgesine yönelik mekanik darbenin ardından gelişen akut ya da sekel nitelikli baş ağrılarıdır.",
+     "maskedTerm": "mekanik darbenin",
+     "hint": "Fiziksel travma sırasında dokuda hasar oluşturan kinetik kuvvet sürecidir."
+    },
+    {
+     "type": "causal_chain",
+     "title": "İntrakraniyal Damarsal Patolojide Baş Ağrısı Gelişim Basamakları",
+     "steps": [
+      "1. Vasküler hasar: Serebral arter duvarında anevrizma rüptürü veya damar diseksiyonu gelişir.",
+      "2. Subaraknoid alana sızma: Kanın subaraknoid mesafeye yayılması ağrıya duyarlı meninksleri ve damarları uyarır.",
+      "3. Akut basınç artışı: Kafa içi basıncın hızla yükselmesiyle saniyeler içinde şiddetli baş ağrısı tablosu belirir."
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "title": "Sekonder Baş Ağrıları ve İntrakraniyal Patolojiler (Grup 5-7)",
+     "tableHeaders": [
+      "ICHD-3 Grubu",
+      "Temel Patoloji",
+      "Klinik Özellik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Grup 5",
+         "isMasked": false
+        },
+        {
+         "text": "Baş ve boyun travması",
+         "isMasked": true,
+         "hint": "Kafa bölgesine gelen fiziksel darbe kaynaklı durumdur."
+        },
+        {
+         "text": "Travma sonrası gelişen akut veya uzamış ağrı",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Grup 6",
+         "isMasked": false
+        },
+        {
+         "text": "Kraniyal/servikal damarsal bozukluk",
+         "isMasked": true,
+         "hint": "Anevrizma ve inme gibi vasküler kaynaklı patolojidir."
+        },
+        {
+         "text": "Anevrizma kanaması veya inmeye bağlı akut vasküler ağrı",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Grup 7",
+         "isMasked": false
+        },
+        {
+         "text": "Damarsal olmayan intrakraniyal bozukluk",
+         "isMasked": true,
+         "hint": "Tümör ve hidrosefali gibi non-vasküler kitle lezyonudur."
+        },
+        {
+         "text": "Tümör veya hidrosefaliye bağlı kitle etkisi",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Sekonder Baş Ağrıları (Travma, Damarsal ve Kitle)",
+     "items": [
+      {
+       "text": "Kraniyal damarsal bozukluklar ICHD-3 sınıflamasında sekonder baş ağrısı grubunda incelenir.",
+       "isLie": false,
+       "explanation": "Damarsal anevrizma ve inmeler vasküler sekonder baş ağrısı grubunun temel nedenleridir."
+      },
+      {
+       "text": "Beyin tümörleri ve hidrosefali damarsal olmayan intrakraniyal patolojilere bağlı sekonder grupta yer alır.",
+       "isLie": false,
+       "explanation": "Grup 7 damarsal olmayan yapısal kitle ve hidrosefali gibi organik basınç artıran patolojileri kapsar."
+      },
+      {
+       "text": "Travmaya bağlı baş ağrıları altta yatan organik bir lezyon içermediği için primer grupta kabul edilir.",
+       "isLie": true,
+       "explanation": "Travma mekanik doku hasarına bağlı organik bir neden olduğundan Grup 5 sekonder baş ağrısıdır."
+      },
+      {
+       "text": "İntrakraniyal vasküler anevrizma rüptürleri sekonder damarsal baş ağrısı etyolojisinde yer alır.",
+       "isLie": false,
+       "explanation": "Anevrizma rüptürü akut intrakraniyal kanamaya yol açan hayatı tehdit edici vasküler sekonder nedendir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 4,
+   "id": "y25-k2-10-s04",
+   "title": "Sekonder Baş Ağrıları 2: Enfeksiyon, Madde Kullanımı ve Sistemik Bozukluklar",
+   "subtitle": "Enfeksiyonlar, toksik maruziyetler, metabolik dengesizlikler ve lokal kraniofasial patolojiler sekonder baş ağrısı etyolojisinde yer alır.",
+   "badge": "Sekonder Baş Ağrıları",
+   "bolum": "1",
+   "pdfSayfalari": [
+    4,
+    5
+   ],
+   "kaynakSayfa": [
+    4,
+    5
+   ],
+   "bilgi": [
+    4,
+    5
+   ],
+   "isCheckpoint": false,
+   "checkpointNumber": 0,
+   "synthesisNarrative": "Sekonder baş ağrılarının diğer sınıfları metabolik, toksik, enfeksiyöz ve lokal anatomik patolojilere bağlı gelişen geniş bir hastalık yelpazesini kapsar.\n\n- **Madde Kullanımı veya Kesilmesi (Grup 8):** Analjezik aşırı kullanımı, toksik maruziyetler veya kronik madde kesilme durumlarında gelişir.\n- **Enfeksiyona Bağlı Ağrılar (Grup 9):** Menenjit, ensefalit gibi intrakraniyal enfeksiyonlar veya grip benzeri sistemik enfeksiyon tablolarında tetiklenir.\n- **Homeostaz Bozuklukları (Grup 10):** Hipoksi, hiperkapni, diyaliz veya arteriyel hipertansiyon gibi metabolik dengesizliklerin seyrinde görülür.\n- **Kraniofasial Yapı Bozuklukları (Grup 11):** Göz, kulak, burun, sinüs, diş veya boyun yapılarının hastalıklarına bağlı yansıyan ağrılardır.\n- **Psikiyatrik Nedenler ve Nöropatiler (Grup 12-14):** Psikiyatrik bozukluklar, ağrılı kraniyal nöropatiler ve sınıflandırılamayan baş ağrıları bu sınıflamayı tamamlar.\n\n> [!NOTE]\n> Enfeksiyon ve homeostaz bozukluğu kaynaklı sekonder ağrılarda, altta yatan sistemik patoloji tedavi edildiğinde baş ağrısı tablosu da geriler.",
+   "content": "Sekonder baş ağrılarının diğer sınıfları metabolik, toksik, enfeksiyöz ve lokal anatomik patolojilere bağlı gelişen geniş bir hastalık yelpazesini kapsar.\n\n- **Madde Kullanımı veya Kesilmesi (Grup 8):** Analjezik aşırı kullanımı, toksik maruziyetler veya kronik madde kesilme durumlarında gelişir.\n- **Enfeksiyona Bağlı Ağrılar (Grup 9):** Menenjit, ensefalit gibi intrakraniyal enfeksiyonlar veya grip benzeri sistemik enfeksiyon tablolarında tetiklenir.\n- **Homeostaz Bozuklukları (Grup 10):** Hipoksi, hiperkapni, diyaliz veya arteriyel hipertansiyon gibi metabolik dengesizliklerin seyrinde görülür.\n- **Kraniofasial Yapı Bozuklukları (Grup 11):** Göz, kulak, burun, sinüs, diş veya boyun yapılarının hastalıklarına bağlı yansıyan ağrılardır.\n- **Psikiyatrik Nedenler ve Nöropatiler (Grup 12-14):** Psikiyatrik bozukluklar, ağrılı kraniyal nöropatiler ve sınıflandırılamayan baş ağrıları bu sınıflamayı tamamlar.\n\n> [!NOTE]\n> Enfeksiyon ve homeostaz bozukluğu kaynaklı sekonder ağrılarda, altta yatan sistemik patoloji tedavi edildiğinde baş ağrısı tablosu da geriler.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Madde Kullanımı (Grup 8)",
+      "desc": "Aşırı analjezik kullanımı veya madde kesilmesine ikincil ortaya çıkan tablolardır.",
+      "isKey": true
+     },
+     {
+      "title": "Enfeksiyonlar (Grup 9)",
+      "desc": "Menenjit, ensefalit ve sistemik enfeksiyon seyrinde görülen sekonder ağrılardır.",
+      "isKey": true
+     },
+     {
+      "title": "Homeostaz Bozukluğu (Grup 10)",
+      "desc": "Hipoksi, hiperkapni ve hipertansiyon gibi metabolik dengesizliklerin yol açtığı tablolardır.",
+      "isKey": true
+     },
+     {
+      "title": "Kraniofasial Yapılar (Grup 11)",
+      "desc": "Sinüs, göz, kulak, diş ve boyun hastalıklarına bağlı yansıyan sekonder ağrılardır.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Menenjit ve ensefalit ICHD-3 Grup 9 (enfeksiyona bağlı), analjezik aşırı kullanımı ise Grup 8 kapsamında yer alır.",
+    "📌 [SINAV SPOTU] Göz, kulak, sinüs ve diş patolojileri ICHD-3 Grup 11 (kraniofasial yapı bozuklukları) sekonder baş ağrısıdır."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Analjezik Aşırı Kullanımı",
+     "explanation": "Ağrı kesici ilaçların kronik ve sık kullanımı sonucunda gelişen sekonder baş ağrısı tablosudur."
+    },
+    {
+     "term": "Kraniofasial Baş Ağrısı",
+     "explanation": "Sinüsler, orbita, diş veya temporomandibular eklem gibi yüz ve kafa yapılarının bozukluklarından kaynaklanan sekonder ağrıdır."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-4-1",
+     "front": "Menenjit ve grip benzeri enfeksiyonlara bağlı baş ağrıları ICHD-3'te hangi grupta yer alır?",
+     "back": "Enfeksiyona bağlı baş ağrıları (Grup 9) başlığı altında yer alır."
+    },
+    {
+     "id": "fc-4-2",
+     "front": "Sinüs, göz, kulak ve diş patolojilerine ikincil gelişen baş ağrıları hangi gruptadır?",
+     "back": "Kraniofasial ve boyun yapılarının bozukluklarına bağlı baş ağrıları (Grup 11) grubundadır."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "3.sınıf başağrısı yaklaşım.pdf",
+    "startPage": 4,
+    "endPage": 5,
+    "primaryPage": 4,
+    "citation": "Sayfa 4–5 · Kurul 2 Nöroloji · Baş Ağrısına Yaklaşım"
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "ICHD-3 sınıflamasında menenjit ve ensefalit gibi intrakraniyal enfeksiyon tabloları hangi sekonder baş ağrısı grubunda yer alır?",
+     "microQuizOptions": [
+      {
+       "text": "Enfeksiyona bağlı baş ağrısı (Grup 9)",
+       "isCorrect": true,
+       "explanation": "Menenjit ve ensefalit intrakraniyal meningeal irritasyon ve enfeksiyöz patolojiye bağlı gelişen Grup 9 sekonder tablolardır."
+      },
+      {
+       "text": "Homeostaz bozukluğuna bağlı baş ağrısı (Grup 10)",
+       "isCorrect": false,
+       "explanation": "Homeostaz bozuklukları; arteriyel hipertansiyon, hipoksi, hiperkapni ve diyaliz gibi sistemik metabolik dengesizliklerin yol açtığı sekonder tablolardır. Menenjit ise metabolik bir dengesizlik olmayıp doğrudan santral sinir sistemi enfeksiyonları grubunda incelenir."
+      },
+      {
+       "text": "Madde kullanımı veya kesilmesine bağlı baş ağrısı (Grup 8)",
+       "isCorrect": false,
+       "explanation": "Grup 8 baş ağrıları, kronik aşırı analjezik tüketimi veya toksik maddelerin kesilme sendromları seyrinde ortaya çıkan tablolardır. Menenjite bağlı baş ağrısı ise ekzojen kimyasal maddelere değil, doğrudan mikrobiyal enfeksiyonlara ikincil gelişir."
+      },
+      {
+       "text": "Ağrılı kraniyal nöropatiler ve diğer yüz ağrıları (Grup 13)",
+       "isCorrect": false,
+       "explanation": "Grup 13 trigeminal nevralji gibi kraniyal sinirlerin yapısal periferik lezyonlarını ve nöropatik yüz ağrılarını içerir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Göz, kulak, burun, sinüs, diş veya boyun yapılarının hastalıklarına bağlı yansıyan ağrılardır.",
+     "maskedTerm": "sinüs",
+     "hint": "Kraniofasial bölgedeki hava dolu anatomik boşlukların genel adıdır."
+    },
+    {
+     "type": "venn_grid",
+     "labelA": "Sistemik ve Metabolik Nedenler (Grup 8-10)",
+     "labelB": "Lokal Kraniofasial Yapılar (Grup 11)",
+     "items": [
+      {
+       "criterion": "Hipoksi veya hiperkapni gibi homeostaz dengesizlikleri",
+       "correct": "A"
+      },
+      {
+       "criterion": "Sinüs, göz veya diş patolojilerine bağlı gelişen ağrılar",
+       "correct": "B"
+      },
+      {
+       "criterion": "Analjezik aşırı kullanımı veya madde kesilmesine bağlı ağrılar",
+       "correct": "A"
+      },
+      {
+       "criterion": "Kulak ve boyun bölgesinin lokal yapısal bozuklukları",
+       "correct": "B"
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Sistemik / Metabolik Bozukluk",
+     "rightCategory": "Kraniofasial Yapı Bozukluğu",
+     "cards": [
+      {
+       "text": "Arteriyel hipertansiyon veya diyalize bağlı homeostaz bozukluğu",
+       "category": "left"
+      },
+      {
+       "text": "Sinüzit ve göz içi basınç artışına bağlı yansıyan ağrı",
+       "category": "right"
+      },
+      {
+       "text": "Menenjit veya sistemik enfeksiyon seyrinde gelişen baş ağrısı",
+       "category": "left"
+      },
+      {
+       "text": "Diş ve temporomandibular eklem patolojilerine ikincil ağrı",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "ICHD-3 Sistemik ve Kraniofasial Sekonder Nedenler",
+     "items": [
+      {
+       "text": "Aşırı analjezik kullanımı veya madde kesilmesi ICHD-3 sekonder baş ağrısı grupları arasındadır.",
+       "isLie": false,
+       "explanation": "Grup 8 maddelerin kronik aşırı kullanımı ve kesilmesine bağlı sekonder ağrıları kapsar."
+      },
+      {
+       "text": "Sinüs ve diş patolojileri kraniofasial yapı bozukluklarına bağlı sekonder baş ağrısı nedenidir.",
+       "isLie": false,
+       "explanation": "Grup 11 yüz, diş, sinüs ve kraniyal yapıların lokal organik hastalıklarını içerir."
+      },
+      {
+       "text": "Menenjite bağlı baş ağrısı enfeksiyona ikincil değil, primer baş ağrısı sendromu olarak kabul edilir.",
+       "isLie": true,
+       "explanation": "Menenjit enfeksiyöz patojene bağlı organik bir iltihap olduğundan sekonder baş ağrısıdır."
+      },
+      {
+       "text": "Homeostaz bozukluğuna bağlı baş ağrılarında altta yatan metabolik dengesizlik düzeltildiğinde ağrı rahatlar.",
+       "isLie": false,
+       "explanation": "Sistemik etken ortadan kalktığında sekonder semptomun da gerilemesi temel patofizyolojik kuraldır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Göz, kulak, burun ve sinüs patolojileri ICHD-3 sınıflamasında hangi ana grupta incelenir?",
+     "answer": "Kraniyum, boyun, gözler, kulaklar, burun, sinüsler ve diş gibi yüz veya kraniyal yapıların bozukluklarına bağlı sekonder baş ağrıları (Grup 11) kapsamında incelenir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 5,
+   "id": "y25-k2-10-s05",
+   "title": "Klinik Karşılaştırma: Primer ve Sekonder Baş Ağrılarının Temel İlkeleri",
+   "subtitle": "Primer baş ağrıları selim seyirli bağımsız hastalıklarken, sekonder baş ağrıları altta yatan ölümcül tabloların semptomudur.",
+   "badge": "Klinik Karşılaştırma",
+   "bolum": "1",
+   "pdfSayfalari": [
+    5,
+    5
+   ],
+   "kaynakSayfa": [
+    5
+   ],
+   "bilgi": [
+    5
+   ],
+   "isCheckpoint": false,
+   "checkpointNumber": 0,
+   "synthesisNarrative": "Klinik pratikte baş ağrılı hastaya yaklaşımın en temel kuralı primer ile sekonder baş ağrılarının kesin olarak ayrılmasıdır.\n\n- **Primer Baş Ağrısının Doğası:** Bizzat kendisi bağımsız bir hastalıktır. Yaşamı tehdit etmez. Tanı koymak için ileri tetkik gerekmez; çoğunlukla medikal tedavi ve yaşam tarzı önerileriyle kontrol altına alınır.\n- **Sekonder Baş Ağrısının Doğası:** Altta yatan başka bir organik hastalığın semptomudur. İntrakraniyal kitle veya kanama gibi nedenlerle doğrudan yaşamı tehdit edebilir.\n- **Zamanlama ve Yaklaşım:** Sekonder baş ağrısı şüphesinde ivedi davranılması zorunludur. Altta yatan ölümcül nedeni ortaya koymak için ileri incelemelerin vakit kaybetmeden planlanması şarttır.\n\n> [!IMPORTANT]\n> Sekonder baş ağrısı bir tanı değil, altta yatan tehlikeli bir hastalığın semptomudur; bu nedenle zaman kaybedilmeden ivedi inceleme gerektirir.",
+   "content": "Klinik pratikte baş ağrılı hastaya yaklaşımın en temel kuralı primer ile sekonder baş ağrılarının kesin olarak ayrılmasıdır.\n\n- **Primer Baş Ağrısının Doğası:** Bizzat kendisi bağımsız bir hastalıktır. Yaşamı tehdit etmez. Tanı koymak için ileri tetkik gerekmez; çoğunlukla medikal tedavi ve yaşam tarzı önerileriyle kontrol altına alınır.\n- **Sekonder Baş Ağrısının Doğası:** Altta yatan başka bir organik hastalığın semptomudur. İntrakraniyal kitle veya kanama gibi nedenlerle doğrudan yaşamı tehdit edebilir.\n- **Zamanlama ve Yaklaşım:** Sekonder baş ağrısı şüphesinde ivedi davranılması zorunludur. Altta yatan ölümcül nedeni ortaya koymak için ileri incelemelerin vakit kaybetmeden planlanması şarttır.\n\n> [!IMPORTANT]\n> Sekonder baş ağrısı bir tanı değil, altta yatan tehlikeli bir hastalığın semptomudur; bu nedenle zaman kaybedilmeden ivedi inceleme gerektirir.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Primer: Bağımsız Hastalık",
+      "desc": "Bizzat kendisi hastalıktır, yaşamı tehdit etmez ve rutin ileri tetkik gerektirmez.",
+      "isKey": true
+     },
+     {
+      "title": "Sekonder: Alarm Semptomu",
+      "desc": "Başka bir hastalığın semptomudur, yaşamı tehdit edebilir ve acil ileri tetkik gerektirir.",
+      "isKey": true
+     },
+     {
+      "title": "İvedi Davranma Zorunluluğu",
+      "desc": "Sekonder tablolarda mortalite ve morbiditeyi önlemek için hızlı müdahale şarttır.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Primer baş ağrısı bizzat kendisi bir hastalıktır, yaşamı tehdit etmez, ileri tetkik gerekmez.",
+    "📌 [SINAV SPOTU] Sekonder baş ağrısı altta yatan başka bir hastalığın semptomudur, yaşamı tehdit edebilir, ivedi inceleme gerektirir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Semptomatik Baş Ağrısı",
+     "explanation": "Altta yatan yapısal, vasküler, enfeksiyöz veya metabolik bir bozukluğun yansıması olan sekonder baş ağrısıdır."
+    },
+    {
+     "term": "İleri İnceleme",
+     "explanation": "Sekonder baş ağrısı şüphesinde altta yatan organik patolojiyi aydınlatmak için yapılan radyolojik ve laboratuvar tetkikleridir."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-5-1",
+     "front": "Primer ve sekonder baş ağrıları temel patolojik nitelikleri açısından nasıl tanımlanır?",
+     "back": "Primer baş ağrısı bizzat kendisi bağımsız bir hastalıktır; sekonder baş ağrısı ise altta yatan başka bir hastalığın semptomudur."
+    },
+    {
+     "id": "fc-5-2",
+     "front": "Primer ve sekonder baş ağrılarının tanı ve prognoz yaklaşımları arasındaki temel farklar nelerdir?",
+     "back": "Primer ağrılar yaşamı tehdit etmez ve ileri tetkik gerektirmez; sekonder ağrılar yaşamı tehdit edebilir, ivedi davranılmalı ve ileri inceleme yapılmalıdır."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "3.sınıf başağrısı yaklaşım.pdf",
+    "startPage": 5,
+    "endPage": 5,
+    "primaryPage": 5,
+    "citation": "Sayfa 5 · Kurul 2 Nöroloji · Baş Ağrısına Yaklaşım"
+   },
+   "interactiveElements": [
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Primer Baş Ağrıları",
+     "rightTitle": "Sekonder Baş Ağrıları",
+     "leftPoints": [
+      "Bizzat tablonun kendisi bağımsız bir hastalıktır",
+      "Yaşamı doğrudan tehdit etmeyen selim tablolardır",
+      "Kural olarak ileri tanısal tetkik gerektirmez",
+      "Medikal tedavi ve önerilerle kontrol altına alınabilir"
+     ],
+     "rightPoints": [
+      "Altta yatan başka bir organik hastalığın semptomudur",
+      "Altta yatan patoloji nedeniyle yaşamı tehdit edebilir",
+      "Tanı için ivedilikle ileri inceleme gerektirir",
+      "Altta yatan primer hastalığın acil tedavisi zorunludur"
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Primer ve sekonder baş ağrılarının klinik nitelikleri ve yönetim ilkeleriyle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "text": "Primer baş ağrısı bizzat bir hastalıktır ve yaşamı tehdit etmez; sekonder baş ağrısı ise altta yatan bir hastalığın yaşamı tehdit edebilen semptomudur.",
+       "isCorrect": true,
+       "explanation": "Ders notunda primer baş ağrısının bizzat hastalık olduğu ve ileri tetkik gerekmediği; sekonder baş ağrısının ise ölümcül olabilen bir semptom olduğu vurgulanır."
+      },
+      {
+       "text": "Primer baş ağrıları yaşamı doğrudan tehdit ettiğinden her hastada acil cerrahi inceleme şarttır.",
+       "isCorrect": false,
+       "explanation": "Primer baş ağrıları yaşamı tehdit etmeyen selim tablolardır; tanı için cerrahi müdahale veya rutin ileri inceleme gerekmez."
+      },
+      {
+       "text": "Sekonder baş ağrıları bağımsız bir hastalık olup çoğunlukla ileri inceleme gerektirmeden izlenir.",
+       "isCorrect": false,
+       "explanation": "Sekonder baş ağrıları başka bir hastalığın semptomudur ve altta yatan nedeni saptamak için acil ileri inceleme gerektirir."
+      },
+      {
+       "text": "Primer baş ağrıları altta yatan bir enfeksiyonun semptomuyken, sekonder baş ağrıları yalnızca migreni kapsar.",
+       "isCorrect": false,
+       "explanation": "Migren primer baş ağrılarının temel örneğidir; enfeksiyon kaynaklı ağrılar ise sekonder baş ağrısı grubu altında incelenir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Altta yatan başka bir organik hastalığın semptomudur.",
+     "maskedTerm": "semptomudur",
+     "hint": "Hastalığın kendisi olmayıp altta yatan organik sürecin dışa vuran belirtisidir."
+    },
+    {
+     "type": "feature_bidding",
+     "optionA": "Primer Baş Ağrısı",
+     "optionB": "Sekonder Baş Ağrısı",
+     "rounds": [
+      {
+       "feature": "Bizzat kendisinin bir hastalık olması ve yaşamı tehdit etmemesi",
+       "correct": "A"
+      },
+      {
+       "feature": "Altta yatan başka bir hastalığın semptomu olması ve acil ileri tetkik gerektirmesi",
+       "correct": "B"
+      },
+      {
+       "feature": "Genellikle tanı için ileri tetkik gerektirmemesi ve önerilerle kontrol edilebilmesi",
+       "correct": "A"
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Primer ve Sekonder Baş Ağrısı İlkeleri",
+     "items": [
+      {
+       "text": "Primer baş ağrıları bizzat bağımsız bir hastalıktır ve yaşamı tehdit etmez.",
+       "isLie": false,
+       "explanation": "Primer baş ağrıları selim doğalı olup altta yatan ölümcül bir organik lezyona dayanmaz."
+      },
+      {
+       "text": "Sekonder baş ağrılarında ivedi davranılması ve ileri inceleme yapılması gerekir.",
+       "isLie": false,
+       "explanation": "Altta yatan patoloji hayatı tehdit edebileceğinden sekonder tablolarda acil yönetim esastır."
+      },
+      {
+       "text": "Primer baş ağrılarının tanısı için her hastada rutin ileri radyolojik tetkik şarttır.",
+       "isLie": true,
+       "explanation": "Primer baş ağrılarında kural olarak ileri tetkik gerekmez; tanı klinik olarak konur."
+      },
+      {
+       "text": "Sekonder baş ağrısı altta yatan ölümcül bir intrakraniyal lezyonun semptomu olabilir.",
+       "isLie": false,
+       "explanation": "Beyin kanaması ve kitleler sekonder baş ağrısı oluşturan hayati lezyonlara örnektir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 6,
+   "id": "y25-k2-10-s06",
+   "title": "Tanısal Yaklaşım: Anamnezin Temel Rolü ve Sorgulanması Gereken Bileşenler",
+   "subtitle": "Ayrıntılı ve zaman ayrılarak alınan anamnez, primer ve sekonder baş ağrısı ayrımında en belirleyici tanı aracıdır.",
+   "badge": "Tanısal Yaklaşım",
+   "bolum": "2",
+   "pdfSayfalari": [
+    6,
+    7
+   ],
+   "kaynakSayfa": [
+    6,
+    7
+   ],
+   "bilgi": [
+    6,
+    7
+   ],
+   "isCheckpoint": false,
+   "checkpointNumber": 0,
+   "synthesisNarrative": "Baş ağrısıyla başvuran hastada tanısal sürecin temelini ayrıntılı ve zaman ayrılarak alınan klinik anamnez oluşturur.\n\n- **Anamnezin Gücü:** Hastaya yeterli zaman ayırıp iyi bir öykü almak, primer ile sekonder baş ağrısı ayrımını netleştirir ve hastayı gereksiz tetkiklerden korur.\n- **Ağrının Temel Parametreleri:** Ağrının tipi, karakteri, başlangıç biçimi, sıklığı, anatomik yeri ve şiddeti mutlaka sorgulanmalıdır.\n- **Eşlikçi ve Tetikleyici Bulgular:** Aura ve prodrom belirtileri, bulantı, kusma, fotofobi, fonofobi, presipite eden faktörler, uyku düzeni ve emosyonel faktörler detaylandırılmalıdır.\n- **Geçmiş ve Aile:** Aile öyküsü, daha önceki medikasyonlar ve tedavi yanıtları ayrıntılı kaydedilmelidir.\n- **Muayenenin Durumu:** Primer baş ağrılarında tıbbi ve nörolojik muayene çoğunlukla tamamen normal sınırlardadır.\n\n> [!NOTE]\n> Primer baş ağrılarının tanısı klinik anamneze dayanır; gereksiz ileri tetkiklerden kaçınmanın en güvenilir yolu hastaya yeterli zaman ayırmaktır.",
+   "content": "Baş ağrısıyla başvuran hastada tanısal sürecin temelini ayrıntılı ve zaman ayrılarak alınan klinik anamnez oluşturur.\n\n- **Anamnezin Gücü:** Hastaya yeterli zaman ayırıp iyi bir öykü almak, primer ile sekonder baş ağrısı ayrımını netleştirir ve hastayı gereksiz tetkiklerden korur.\n- **Ağrının Temel Parametreleri:** Ağrının tipi, karakteri, başlangıç biçimi, sıklığı, anatomik yeri ve şiddeti mutlaka sorgulanmalıdır.\n- **Eşlikçi ve Tetikleyici Bulgular:** Aura ve prodrom belirtileri, bulantı, kusma, fotofobi, fonofobi, presipite eden faktörler, uyku düzeni ve emosyonel faktörler detaylandırılmalıdır.\n- **Geçmiş ve Aile:** Aile öyküsü, daha önceki medikasyonlar ve tedavi yanıtları ayrıntılı kaydedilmelidir.\n- **Muayenenin Durumu:** Primer baş ağrılarında tıbbi ve nörolojik muayene çoğunlukla tamamen normal sınırlardadır.\n\n> [!NOTE]\n> Primer baş ağrılarının tanısı klinik anamneze dayanır; gereksiz ileri tetkiklerden kaçınmanın en güvenilir yolu hastaya yeterli zaman ayırmaktır.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Anamnez Tanının Temelidir",
+      "desc": "Hastaya zaman ayırmak primer-sekonder ayrımını sağlar ve gereksiz tetkikten kaçındırır.",
+      "isKey": true
+     },
+     {
+      "title": "Ağrı Profili Sorgusu",
+      "desc": "Tip, başlangıç, sıklık, yer ve şiddet mutlaka sorgulanmalıdır.",
+      "isKey": true
+     },
+     {
+      "title": "Eşlik Eden Belirtiler",
+      "desc": "Aura, prodrom, bulantı, kusma, fotofobi ve fonofobi ayrımda belirleyicidir.",
+      "isKey": true
+     },
+     {
+      "title": "Normal Muayene",
+      "desc": "Primer baş ağrılarında tıbbi ve nörolojik muayene çoğunlukla tamamen normaldir.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Baş ağrısında anamnez tanının temelini oluşturur; yeterli zaman ayırarak iyi bir anamnez almak gereksiz tetkiklerden kaçınmada faydalıdır.",
+    "📌 [SINAV SPOTU] Primer baş ağrılarında tıbbi ve nörolojik muayene çoğunlukla tamamen normal sınırlardadır."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Prodrom",
+     "explanation": "Baş ağrısı atağından saatler veya günler önce beliren yorgunluk, esneme veya duygu durum değişiklikleri gibi öncü belirtilerdir."
+    },
+    {
+     "term": "Fotofobi ve Fonofobi",
+     "explanation": "Işığa ve sese karşı gelişen aşırı rahatsızlık ve duyarlılık halidir; sıklıkla migren ataklarına eşlik eder."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-6-1",
+     "front": "Baş ağrısında tanısal yaklaşımın temelini hangi klinik basamak oluşturur?",
+     "back": "Anamnez tanının temelini oluşturur; hastaya yeterli zaman ayırıp iyi bir anamnez almak primer-sekonder ayrımında ve gereksiz tetkiklerden kaçınmada temeldir."
+    },
+    {
+     "id": "fc-6-2",
+     "front": "Primer baş ağrılarında tıbbi ve nörolojik muayene bulguları genellikle nasıldır?",
+     "back": "Primer baş ağrılarında tıbbi ve nörolojik muayene çoğunlukla tamamen normal sınırlardadır."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "3.sınıf başağrısı yaklaşım.pdf",
+    "startPage": 6,
+    "endPage": 7,
+    "primaryPage": 6,
+    "citation": "Sayfa 6–7 · Kurul 2 Nöroloji · Baş Ağrısına Yaklaşım"
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Baş ağrılı hastada tanısal yaklaşım ve anamnez süreciyle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "text": "Yeterli zaman ayrılarak alınan ayrıntılı anamnez, primer ve sekonder ayrımında temel rol oynar ve gereksiz tetkiklerden kaçınmayı sağlar.",
+       "isCorrect": true,
+       "explanation": "Ders notunda anamnezin tanının temelini oluşturduğu, primer-sekonder ayrımını sağladığı ve gereksiz tetkiklerden koruduğu vurgulanır."
+      },
+      {
+       "text": "Primer baş ağrılarında fizik ve nörolojik muayenede her zaman belirgin patolojik bulgular saptanır.",
+       "isCorrect": false,
+       "explanation": "Primer baş ağrılarında tıbbi ve nörolojik muayene çoğunlukla tamamen normal sınırlarda bulunur; patolojik bulgu sekonder süreci işaret eder."
+      },
+      {
+       "text": "Baş ağrısı tanısında anamnezin yeri kısıtlı olup her hastada ilk basamakta ileri laboratuvar tetkikleri istenir.",
+       "isCorrect": false,
+       "explanation": "Tanısal yaklaşımın temeli anamnezdir; öykü alınmadan rutin ileri tetkik istemek gereksiz maliyet ve zaman kaybına yol açar."
+      },
+      {
+       "text": "Aile öyküsü ve önceki medikasyonlar baş ağrısı sorgulamasında yeri olmayan önemsiz ayrıntılardır.",
+       "isCorrect": false,
+       "explanation": "Aile öyküsü ve önceki medikasyonlar migren genetiği ve analjezik aşırı kullanımı açısından mutlaka sorgulanması gereken parametrelerdir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Primer baş ağrılarında tıbbi ve nörolojik muayene çoğunlukla tamamen normal sınırlardadır.",
+     "maskedTerm": "tamamen normal",
+     "hint": "Herhangi bir patolojik sapma içermeyen olağan klinik bulgu durumudur."
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "32 yaşında bir hasta, 5 yıldır ayda 1-2 kez tekrarlayan, tek taraflı, zonklayıcı baş ağrısı yakınmasıyla başvuruyor. Ağrıya bulantı ve ışık hassasiyeti eşlik ediyor. Tıbbi ve nörolojik muayenesi tamamen normal saptanıyor.",
+     "options": [
+      {
+       "text": "Hastaya yeterli zaman ayırarak ağrının başlangıç, sıklık, tetikleyici ve aile öyküsünü derinleştirmek ve primer baş ağrısı klinik tanısına odaklanmak.",
+       "isCorrect": true,
+       "explanation": "Yıllardır tekrarlayan tipik ataklar ve normal nörolojik muayene primer baş ağrısını işaret eder; ayrıntılı anamnez gereksiz tetkiklerden kaçınmayı sağlar."
+      },
+      {
+       "text": "Muayene normal olsa bile her baş ağrısında kural olarak acil cerrahi konsültasyonu istemek.",
+       "isCorrect": false,
+       "explanation": "Acil cerrahi konsültasyon, akut intrakraniyal kanama veya kitle basısı saptanan sekonder patolojilerde hayat kurtarıcı bir yaklaşımdır. Yıllardır tekrarlayan tipik atakları olan ve muayenesi tamamen normal bulunan kronik olgularda cerrahi girişim endikasyonu bulunmaz."
+      },
+      {
+       "text": "Anamnez sorgulamasını sonlandırıp hastayı hiçbir açıklama yapmadan taburcu etmek.",
+       "isCorrect": false,
+       "explanation": "Ayrıntılı öykü alma ve hastayı bilgilendirme tanı sürecinin vazgeçilmez temelidir; anamnez derinleştirilmeden hasta takipsiz bırakılamaz."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "title": "Baş Ağrısı Anamnezinde Mutlaka Sorgulanması Gereken Bileşenler",
+     "tableHeaders": [
+      "Anamnez Bileşeni",
+      "Klinik Kapsam",
+      "Tanısal Amacı"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Ağrı Karakteri ve Yeri",
+         "isMasked": false
+        },
+        {
+         "text": "Zonklayıcı, sıkıştırıcı",
+         "isMasked": true,
+         "hint": "Ağrının vasküler veya kas gerilimi kaynaklı hissettirdiği temel vasıftır."
+        },
+        {
+         "text": "Primer baş ağrısı tipini belirleme",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Eşlik Eden Belirtiler",
+         "isMasked": false
+        },
+        {
+         "text": "fotofobi ve fonofobi",
+         "isMasked": true,
+         "hint": "Işık ve sese karşı gelişen aşırı duyarlılık semptomlarıdır."
+        },
+        {
+         "text": "Migren ve eşlikçi otonomik semptomları saptama",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Tetikleyiciler ve Düzen",
+         "isMasked": false
+        },
+        {
+         "text": "uyku ve emosyonel",
+         "isMasked": true,
+         "hint": "Dinlenme süreci ve psikolojik duygu durumu ile ilişkili etkenlerdir."
+        },
+        {
+         "text": "Atakları başlatan etkenleri aydınlatma",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Tanısal Yaklaşım ve Anamnez İlkeleri",
+     "items": [
+      {
+       "text": "Primer baş ağrılarında tıbbi ve nörolojik muayene çoğunlukla tamamen normal sınırlardadır.",
+       "isLie": false,
+       "explanation": "Fizik ve nörolojik muayenenin normal olması primer baş ağrılarının en temel klinik özelliğidir."
+      },
+      {
+       "text": "İyi bir anamnez almak hem primer-sekonder ayrımını sağlar hem de gereksiz tetkiklerden kaçınmaya yardımcı olur.",
+       "isLie": false,
+       "explanation": "Zaman ayrılarak alınan kapsamlı anamnez gereksiz radyolojik tetkiklerin önüne geçer."
+      },
+      {
+       "text": "Aura, prodrom belirtileri ve emosyonel faktörler baş ağrısı anamnezinde sorgulanması gerekmeyen ayrıntılardır.",
+       "isLie": true,
+       "explanation": "Aura, prodrom, emosyonel faktörler ve uyku düzeni anamnezde mutlaka sorgulanması gereken temel bileşenlerdir."
+      },
+      {
+       "text": "Hastanın önceki tedavileri ve kullandığı medikasyonlar öyküde mutlaka detaylandırılmalıdır.",
+       "isLie": false,
+       "explanation": "Daha önceki ilaç yanıtları ve aşırı analjezik kullanımı öyküde kritik tanısal değere sahiptir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Baş ağrısı anamnezinde ağrının özelliklerine ek olarak mutlaka sorgulanması gereken eşlikçi belirtiler hangileridir?",
+     "answer": "Bulantı, kusma, fotofobi (ışık hassasiyeti), fonofobi (ses hassasiyeti) ile ağrı öncesi aura ve prodrom belirtileridir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 7,
+   "id": "y25-k2-10-s07",
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Sınıflama ve Anamnez İlkeleri",
+   "subtitle": "Epidemiyoloji, ICHD-3 primer ve sekonder sınıfları ile tanısal anamnezin temel bileşenlerini pekiştirin.",
+   "badge": "Checkpoint 1",
+   "bolum": "2",
+   "pdfSayfalari": [
+    2,
+    7
+   ],
+   "kaynakSayfa": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "bilgi": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "isCheckpoint": true,
+   "checkpointNumber": 1,
+   "synthesisNarrative": "Bu aşamaya kadar baş ağrısının toplumdaki epidemiyolojik sıklığını, ICHD-3 sınıflama sistemini ve anamnezin tanıdaki belirleyici rolünü inceledik.\n\n- **Epidemiyoloji ve Selim Doğa:** Baş ağrısı hekimlikte en sık rastlanan semptomdur. Bireylerin korkusunun aksine olguların büyük bölümü selim seyirlidir.\n- **ICHD-3 Yapısı:** Sınıflama sistemi temel olarak primer baş ağrıları, sekonder baş ağrıları ve kraniyal nöropatiler olmak üzere üç ana kümeden oluşur.\n- **Primer ve Sekonder Farkı:** Primer baş ağrıları bizzat bağımsız bir hastalıktır ve yaşamı tehdit etmez. Sekonder baş ağrıları ise altta yatan başka bir organik hastalığın semptomudur, yaşamı tehdit edebilir ve ivedi inceleme gerektirir.\n- **Anamnez ile Tanı:** Primer baş ağrılarında tıbbi ve nörolojik muayene normaldir; tanı tamamen ağrının karakteri, süresi ve eşlikçi bulgularının özenle sorgulanmasına dayanır.\n\n> [!NOTE]\n> Checkpoint 1 ile primer-sekonder ayrımı ve anamnez temellerini pekiştirerek sekonder baş ağrısı alarm bulgularına hazır hale geldiniz.",
+   "content": "Bu aşamaya kadar baş ağrısının toplumdaki epidemiyolojik sıklığını, ICHD-3 sınıflama sistemini ve anamnezin tanıdaki belirleyici rolünü inceledik.\n\n- **Epidemiyoloji ve Selim Doğa:** Baş ağrısı hekimlikte en sık rastlanan semptomdur. Bireylerin korkusunun aksine olguların büyük bölümü selim seyirlidir.\n- **ICHD-3 Yapısı:** Sınıflama sistemi temel olarak primer baş ağrıları, sekonder baş ağrıları ve kraniyal nöropatiler olmak üzere üç ana kümeden oluşur.\n- **Primer ve Sekonder Farkı:** Primer baş ağrıları bizzat bağımsız bir hastalıktır ve yaşamı tehdit etmez. Sekonder baş ağrıları ise altta yatan başka bir organik hastalığın semptomudur, yaşamı tehdit edebilir ve ivedi inceleme gerektirir.\n- **Anamnez ile Tanı:** Primer baş ağrılarında tıbbi ve nörolojik muayene normaldir; tanı tamamen ağrının karakteri, süresi ve eşlikçi bulgularının özenle sorgulanmasına dayanır.\n\n> [!NOTE]\n> Checkpoint 1 ile primer-sekonder ayrımı ve anamnez temellerini pekiştirerek sekonder baş ağrısı alarm bulgularına hazır hale geldiniz.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Selim Prevalans",
+      "desc": "Kadınlarda %99, erkeklerde %93 sıklıkta görülen baş ağrılarının çoğu selim seyirlidir.",
+      "isKey": true
+     },
+     {
+      "title": "Primer vs Sekonder",
+      "desc": "Primer tablolar bizzat hastalıkken, sekonder tablolar altta yatan patolojinin semptomudur.",
+      "isKey": true
+     },
+     {
+      "title": "Anamnezin Gücü",
+      "desc": "Primer ağrılarda muayene normaldir; tanı ayrıntılı anamnezle konur ve gereksiz tetkik önlenir.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Primer baş ağrıları bizzat kendisi bir hastalıktır, yaşamı tehdit etmez; sekonder baş ağrıları ise başka bir hastalığın semptomudur ve acil inceleme gerektirir.",
+    "📌 [SINAV SPOTU] Baş ağrısında tanısal anamnezin eksiksiz alınması gereksiz ileri tetkiklerden kaçınmada temel basamaktır."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Anamnestik Tanı",
+     "explanation": "Laboratuvar veya görüntüleme bulgusu gerektirmeksizin yalnızca hastadan alınan ayrıntılı öyküyle konulan tanıdır."
+    },
+    {
+     "term": "ICHD-3 Grup A",
+     "explanation": "Migren, gerilim tipi baş ağrısı, trigeminal otonomik sefaljiler ve diğer primer baş ağrılarını içeren ana sınıftır."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-7-1",
+     "front": "Primer ve sekonder baş ağrısı ayrımında en güvenilir ve temel tanısal yöntem nedir?",
+     "back": "Hastaya yeterli zaman ayrılarak alınan ayrıntılı klinik anamnezdir."
+    },
+    {
+     "id": "fc-7-2",
+     "front": "Primer baş ağrısı olan bir hastanın nörolojik muayenesinde beklenen temel bulgu nedir?",
+     "back": "Primer baş ağrılarında tıbbi ve nörolojik muayene çoğunlukla tamamen normal sınırlardadır."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "3.sınıf başağrısı yaklaşım.pdf",
+    "startPage": 2,
+    "endPage": 7,
+    "primaryPage": 6,
+    "citation": "Sayfa 2–7 · Kurul 2 Nöroloji · Baş Ağrısına Yaklaşım"
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Primer baş ağrılarının tanısal ve klinik özellikleriyle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "text": "Primer baş ağrısı bizzat kendisi bir hastalıktır, yaşamı tehdit etmez ve muayenesi kural olarak tamamen normaldir.",
+       "isCorrect": true,
+       "explanation": "Ders notunda primer baş ağrısının bağımsız bir hastalık olduğu, yaşamı tehdit etmediği ve muayenenin normal olduğu belirtilir."
+      },
+      {
+       "text": "Primer baş ağrıları her zaman kafa içi bir kitlenin semptomu olarak ortaya çıkar ve yaşamı tehdit eder.",
+       "isCorrect": false,
+       "explanation": "Kafa içi kitle lezyonları ve hidrosefali, kafa içi basınç artışına yol açarak yaşamı tehdit edebilen organik sekonder nedenlerdir. Primer baş ağrılarında ise intrakraniyal kitle bulunmaz; tablonun kendisi bağımsız ve selim seyirli bir hastalıktır."
+      },
+      {
+       "text": "Primer baş ağrısı tanısı koymak için her hastada mutlaka cerrahi girişim uygulanmalıdır.",
+       "isCorrect": false,
+       "explanation": "Primer baş ağrılarında tanı süreci, hastaya yeterli zaman ayrılarak alınan ayrıntılı klinik öyküye dayanır. Yapısal lezyon içermeyen bu selim tablolarda invaziv cerrahi yöntemlerin veya biyopsilerin yeri yoktur."
+      },
+      {
+       "text": "Primer baş ağrılarında anamnez hiçbir bilgi vermez; tanı yalnızca kan testleriyle konabilir.",
+       "isCorrect": false,
+       "explanation": "Ayrıntılı klinik anamnez, baş ağrısının karakterini ve tetikleyicilerini aydınlatan en güçlü tanısal araçtır. Primer baş ağrılarında kanda özgül bir biyobelirteç bulunmadığından tanı laboratuvar testleriyle konulamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Primer baş ağrıları bizzat bağımsız bir hastalıktır ve yaşamı tehdit etmez.",
+     "maskedTerm": "bağımsız bir hastalıktır",
+     "hint": "Altta yatan organik lezyona dayanmayan tablonun özgün niteliğidir."
+    },
+    {
+     "type": "venn_grid",
+     "labelA": "Primer Baş Ağrıları",
+     "labelB": "Sekonder Baş Ağrıları",
+     "items": [
+      {
+       "criterion": "Bizzat kendisinin bir hastalık olması ve yaşamı doğrudan tehdit etmemesi",
+       "correct": "A"
+      },
+      {
+       "criterion": "Altta yatan başka bir organik patolojinin semptomu olması",
+       "correct": "B"
+      },
+      {
+       "criterion": "Tıbbi ve nörolojik muayenenin çoğunlukla tamamen normal sınırlarda bulunması",
+       "correct": "A"
+      },
+      {
+       "criterion": "Organik nedenler dolayısıyla ivedi tanısal inceleme gerektirmesi",
+       "correct": "B"
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "title": "Primer Baş Ağrılı Hastada Tanısal Yönetim Zinciri",
+     "steps": [
+      "1. Ayrıntılı anamnez alma: Ağrının tipi, sıklığı, şiddeti ve eşlik eden fotofobi gibi bulgular sorgulanır.",
+      "2. Muayene normalliğinin saptanması: Tıbbi ve nörolojik muayenenin tamamen normal sınırlarda olduğu görülür.",
+      "3. Klinik tanının netleştirilmesi: ICHD-3 kriterlerine göre primer baş ağrısı tanısı konur ve gereksiz tetkiklerden kaçınılır.",
+      "4. Tedavi ve yaşam önerileri: Yaşamı tehdit etmeyen bu tablo için uygun medikal tedavi ve takip planlanır."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Sınıflama ve Anamnez İlkeleri Özeti",
+     "items": [
+      {
+       "text": "Toplumda yaşam boyu baş ağrısı sıklığı erkeklerde yüzde 93, kadınlarda yüzde 99 oranındadır.",
+       "isLie": false,
+       "explanation": "Toplum çalışmalarında kadınların %99'unda, erkeklerin %93'ünde yaşam boyu en az bir atak bildirilmiştir."
+      },
+      {
+       "text": "Primer baş ağrılarında ayrıntılı klinik anamnez gereksiz tetkiklerden kaçınmayı sağlar.",
+       "isLie": false,
+       "explanation": "Zaman ayrılarak alınan özenli öykü hastayı gereksiz radyolojik ve laboratuvar işlemlerinden korur."
+      },
+      {
+       "text": "Sekonder baş ağrıları yaşamı tehdit etmeyen selim tablolardır ve acil inceleme gerektirmez.",
+       "isLie": true,
+       "explanation": "Sekonder baş ağrıları altta yatan patoloji nedeniyle yaşamı tehdit edebilir ve ivedi inceleme gerektirir."
+      },
+      {
+       "text": "ICHD-3 sınıflamasında migren ve gerilim tipi baş ağrısı primer kümede yer alır.",
+       "isLie": false,
+       "explanation": "Her iki tablo da ICHD-3 Grup A altındaki en yaygın primer baş ağrısı türleridir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 8,
+   "id": "y25-k2-10-s08",
+   "title": "Kırmızı Bayraklar: Sekonder Baş Ağrısı Düşündüren Anamnez Özellikleri",
+   "subtitle": "Anamnezde saptanan alarm özellikleri (kırmızı bayraklar), altta yatan hayatı tehdit edici sekonder patolojileri işaret eder.",
+   "badge": "Kırmızı Bayraklar",
+   "bolum": "3",
+   "pdfSayfalari": [
+    8,
+    8
+   ],
+   "kaynakSayfa": [
+    8
+   ],
+   "bilgi": [
+    8
+   ],
+   "isCheckpoint": false,
+   "checkpointNumber": 0,
+   "synthesisNarrative": "Baş ağrısı öyküsünde sekonder bir patolojiyi işaret eden alarm özellikleri kırmızı bayraklar olarak tanımlanır ve acil inceleme gerektirir.\n\n- **Başlangıç Yaşı ve Karakteri:** Baş ağrısının 10 yaşından önce veya 50 yaşından sonra başlaması sekonder nedenleri düşündürür. Yeni başlayan akut çok şiddetli ağrılar ve hastanın hayatındaki en şiddetli baş ağrısı olarak tanımladığı tablolar alarm vericidir.\n- **Yerleşim ve Direnç:** Çocuklarda oksipital yerleşimli baş ağrıları yapısal patolojileri düşündürür. Son 6 ay içinde başlayan, devamlılık gösteren ve tedaviye dirençli ağrılar dikkatle araştırılmalıdır.\n- **Tetikleyiciler ve Zemin:** Fiziksel aktivite, ıkınma veya öksürme sırasında ortaya çıkan ağrılar kafa içi basınç artışını düşündürür. Bilinen malignite veya sistemik hastalık varlığı, gebelik ve lohusalık dönemi, dirençli kusmalar, erkek cinsiyet ve belirli bir şekle uymayan ağrılar kırmızı bayraktır.\n\n> [!IMPORTANT]\n> Hastanın hayatının en şiddetli baş ağrısı ifadesi, aksi kanıtlanana kadar subaraknoid kanama gibi acil bir sekonder patoloji kabul edilmeli ve derhal incelenmelidir.",
+   "content": "Baş ağrısı öyküsünde sekonder bir patolojiyi işaret eden alarm özellikleri kırmızı bayraklar olarak tanımlanır ve acil inceleme gerektirir.\n\n- **Başlangıç Yaşı ve Karakteri:** Baş ağrısının 10 yaşından önce veya 50 yaşından sonra başlaması sekonder nedenleri düşündürür. Yeni başlayan akut çok şiddetli ağrılar ve hastanın hayatındaki en şiddetli baş ağrısı olarak tanımladığı tablolar alarm vericidir.\n- **Yerleşim ve Direnç:** Çocuklarda oksipital yerleşimli baş ağrıları yapısal patolojileri düşündürür. Son 6 ay içinde başlayan, devamlılık gösteren ve tedaviye dirençli ağrılar dikkatle araştırılmalıdır.\n- **Tetikleyiciler ve Zemin:** Fiziksel aktivite, ıkınma veya öksürme sırasında ortaya çıkan ağrılar kafa içi basınç artışını düşündürür. Bilinen malignite veya sistemik hastalık varlığı, gebelik ve lohusalık dönemi, dirençli kusmalar, erkek cinsiyet ve belirli bir şekle uymayan ağrılar kırmızı bayraktır.\n\n> [!IMPORTANT]\n> Hastanın hayatının en şiddetli baş ağrısı ifadesi, aksi kanıtlanana kadar subaraknoid kanama gibi acil bir sekonder patoloji kabul edilmeli ve derhal incelenmelidir.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Kritik Yaş Eşikleri",
+      "desc": "Baş ağrısının 10 yaşından önce veya 50 yaşından sonra başlaması sekonder alarmdır.",
+      "isKey": true
+     },
+     {
+      "title": "Hayatımın En Şiddetli Ağrısı",
+      "desc": "Akut çok şiddetli ağrı ve hayatın en şiddetli baş ağrısı öncelikle SAK düşündürür.",
+      "isKey": true
+     },
+     {
+      "title": "Tetikleyiciler ve Çocukta Oksipital",
+      "desc": "Ikınma/öksürmeyle tetiklenme ve çocukta oksipital yerleşim yapısal lezyonu işaret eder.",
+      "isKey": true
+     },
+     {
+      "title": "Zemin Hastalıkları",
+      "desc": "Malignite, sistemik hastalık, gebelik ve tedaviye dirençli kusmalar kırmızı bayraktır.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Baş ağrısının 10 yaşından önce veya 50 yaşından sonra başlaması sekonder baş ağrısı alarmıdır.",
+    "📌 [SINAV SPOTU] Hastanın hayatımdaki en şiddetli baş ağrısı tanımı, öksürme/ıkınma ile tetiklenme ve çocukta oksipital yerleşim kırmızı bayraktır."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Kırmızı Bayrak (Red Flag)",
+     "explanation": "Öykü veya muayenede hayatı tehdit edici sekonder bir patolojiyi düşündüren klinik alarm bulgusudur."
+    },
+    {
+     "term": "Gök Gürültüsü Baş Ağrısı",
+     "explanation": "Saniyeler içinde maksimum şiddete ulaşan, subaraknoid kanamanın tipik belirtisi olan akut şiddetli baş ağrısıdır."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-8-1",
+     "front": "Sekonder baş ağrısı düşündüren başlangıç yaşı sınırları nelerdir?",
+     "back": "Baş ağrısının 10 yaşından önce veya 50 yaşından sonra başlaması sekonder nedenleri düşündürür."
+    },
+    {
+     "id": "fc-8-2",
+     "front": "Hastanın hayatımın en şiddetli baş ağrısı olarak tanımladığı ani tabloda öncelikle hangi sekonder neden düşünülmelidir?",
+     "back": "Öncelikle subaraknoid kanama (SAK) gibi acil intrakraniyal damarsal patolojiler düşünülmelidir."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "3.sınıf başağrısı yaklaşım.pdf",
+    "startPage": 8,
+    "endPage": 8,
+    "primaryPage": 8,
+    "citation": "Sayfa 8 · Kurul 2 Nöroloji · Baş Ağrısına Yaklaşım"
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sekonder baş ağrısını düşündüren kırmızı bayraklar (alarm özellikleri) ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "text": "Baş ağrısının 50 yaşından sonra başlaması ve hastanın yaşamındaki en şiddetli ağrı olarak tanımlanması sekonder patolojileri düşündürür.",
+       "isCorrect": true,
+       "explanation": "Ders notuna göre 50 yaş sonrası başlama, akut şiddetli başlangıç ve hayatın en şiddetli ağrısı ifadesi sekonder kırmızı bayraklardır."
+      },
+      {
+       "text": "Çocuklarda baş ağrısının oksipital yerleşim göstermesi tamamen selim ve önemsiz bir bulgudur.",
+       "isCorrect": false,
+       "explanation": "Çocukluk çağında oksipital yerleşimli baş ağrıları arka çukur kitleleri veya yapısal patolojiler açısından önemli bir alarmdır."
+      },
+      {
+       "text": "Fiziksel aktivite, öksürme veya ıkınma ile tetiklenen baş ağrıları kural olarak tetkik gerektirmeyen selim tablolardır.",
+       "isCorrect": false,
+       "explanation": "Ikınma, öksürme ve eforla tetiklenen ağrılar kafa içi basınç dinamiklerini etkileyen yapısal patolojileri düşündürür. Bu tür tetikleyiciler intrakraniyal lezyon alarmı sayıldığından tetkiksiz selim kabul edilemez."
+      },
+      {
+       "text": "Bilinen malignite öyküsü olan bir hastada yeni başlayan baş ağrısı alarm bulgusu sayılmaz.",
+       "isCorrect": false,
+       "explanation": "Malignite öyküsü olan hastada yeni baş ağrısı beyin metastazı veya kitle lezyonunu dışlamak için acil inceleme gerektirir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Baş ağrısının 10 yaşından önce veya 50 yaşından sonra başlaması sekonder nedenleri düşündürür.",
+     "maskedTerm": "50 yaşından sonra",
+     "hint": "Sekonder etyoloji alarmı sayılan ileri yaş başlangıç eşiğidir."
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "54 yaşında bir hasta, hayatında ilk kez ortaya çıkan, öksürme ve ıkınma sırasında aniden şiddetlenen ve hayatımın en şiddetli baş ağrısı dediği bir tabloyla acile geliyor.",
+     "options": [
+      {
+       "text": "Bu tablonun acil ileri inceleme gerektiren kırmızı bayrak özellikleri taşıdığını bilerek hastayı derhal sekonder baş ağrısı protokolüne almak.",
+       "isCorrect": true,
+       "explanation": "İleri yaş başlangıcı, ıkınmayla tetiklenme ve hayatın en şiddetli ağrısı ifadesi subaraknoid kanama gibi acil sekonder nedenleri düşündürür."
+      },
+      {
+       "text": "Hastanın yakınmalarını basit bir gerilim baş ağrısı sayarak hiçbir ileri araştırma yapmadan evine göndermek.",
+       "isCorrect": false,
+       "explanation": "Gerilim tipi baş ağrısı, genç erişkinlerde bilateral sıkıştırıcı özellikte seyreden selim bir primer tablodur. İleri yaşta ıkınmayla başlayan ve hayatın en şiddetli ağrısı denilen bir tabloda organik patolojiler dışlanmadan hasta taburcu edilemez."
+      },
+      {
+       "text": "Hastaya yalnızca rutin uyku önerisinde bulunup 6 ay sonra kontrole çağırmak.",
+       "isCorrect": false,
+       "explanation": "Ani başlangıçlı çok şiddetli baş ağrıları hayatı tehdit edebileceğinden aylar sonrasına randevu verilemez; ivedi müdahale şarttır."
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Kırmızı Bayrak (Sekonder Alarm)",
+     "rightCategory": "Primer / Selim Öykü Özelliği",
+     "cards": [
+      {
+       "text": "Hastanın hayatındaki en şiddetli baş ağrısı olarak tanımlaması",
+       "category": "left"
+      },
+      {
+       "text": "Fiziksel aktivite, ıkınma veya öksürme ile aniden ortaya çıkması",
+       "category": "left"
+      },
+      {
+       "text": "Gençlikten beri benzer vasıfta devam eden ve muayenesi normal olan ataklar",
+       "category": "right"
+      },
+      {
+       "text": "Son 6 ay içinde başlayan, devamlılık gösteren ve tedaviye dirençli ağrı",
+       "category": "left"
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Anamnezde Kırmızı Bayraklar",
+     "items": [
+      {
+       "text": "Baş ağrısının 10 yaşından önce veya 50 yaşından sonra başlaması kırmızı bayrak kabul edilir.",
+       "isLie": false,
+       "explanation": "Bu yaş sınırları sekonder baş ağrısı olasılığının belirgin arttığı kritik dönemlerdir."
+      },
+      {
+       "text": "Çocuklarda oksipital yerleşimli baş ağrıları sekonder nedenleri düşündüren bir alarm bulgusudur.",
+       "isLie": false,
+       "explanation": "Çocuklarda arka kafa ağrıları kitle veya yapısal malformasyonlar açısından ileri inceleme gerektirir."
+      },
+      {
+       "text": "Malignite öyküsü olan hastada yeni başlayan baş ağrısı acil tetkik gerektirmeyen selim bir durumdur.",
+       "isLie": true,
+       "explanation": "Malignite öyküsü varlığında yeni başlayan baş ağrısı metastaz veya kitle açısından çok kritik bir kırmızı bayraktır."
+      },
+      {
+       "text": "Ikınma, öksürme ve fiziksel aktivite ile tetiklenen ağrılar intrakraniyal basınç artışını akla getirir.",
+       "isLie": false,
+       "explanation": "Valsalva manevrasıyla intrakraniyal venöz basıncın artması kitle lezyonlarında ağrıyı tetikler."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sekonder baş ağrısını düşündüren başlangıç yaşı kırmızı bayrakları hangi yaş sınırlarını kapsar?",
+     "answer": "Baş ağrısının 10 yaşından önce veya 50 yaşından sonra başlaması sekonder baş ağrısı açısından önemli kırmızı bayraklardır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 9,
+   "id": "y25-k2-10-s09",
+   "title": "Muayene Alarm Bulguları: Fizik ve Nörolojik Bakıda Sekonder Belirtiler",
+   "subtitle": "Primer baş ağrılarında muayene normaldir; saptanan nörolojik ve sistemik patolojik bulgular sekonder nedenleri işaret eder.",
+   "badge": "Muayene Alarm Bulguları",
+   "bolum": "3",
+   "pdfSayfalari": [
+    9,
+    9
+   ],
+   "kaynakSayfa": [
+    9
+   ],
+   "bilgi": [
+    9
+   ],
+   "isCheckpoint": false,
+   "checkpointNumber": 0,
+   "synthesisNarrative": "Primer baş ağrılarında fizik muayene bütünüyle normal iken, muayenede saptanan herhangi bir patolojik bulgu sekonder bir süreci kanıtlar.\n\n- **Bilinç ve Nörolojik Tablo:** Bilinç bozukluğu, senkop veya epileptik nöbet geçirilmesi intrakraniyal tutulumun en ciddi göstergeleridir. Hemiparez veya duyu kaybı gibi fokal nörolojik bulgular ivedi aydınlatılmalıdır.\n- **Kafa Çiftleri ve Pupiller:** Üçüncü kranial sinir tutulumu ve anizokori (anevrizma basısı), Horner sendromu (karotis diseksiyonu) ile beşinci ve yedinci kranial sinir tutulumları kritik alarm bulgularıdır.\n- **Göz Dibi ve Meninks İrritasyonu:** Fundus incelemesinde papilödem veya subhyaloid hemoraji saptanması kafa içi basınç artışını ve kanamayı gösterir. Ateşle birlikte ense sertliği ise menenjitin klasik alarmıdır.\n- **Sistemik Göstergeler:** Belirgin kilo kaybı ve halsizlik vaskülit veya maligniteyi düşündürür.\n\n> [!IMPORTANT]\n> Nörolojik muayenede papilödem, üçüncü sinir felci veya ense sertliği saptanan baş ağrılı hastada derhal acil sekonder etyoloji incelemesi başlatılmalıdır.",
+   "content": "Primer baş ağrılarında fizik muayene bütünüyle normal iken, muayenede saptanan herhangi bir patolojik bulgu sekonder bir süreci kanıtlar.\n\n- **Bilinç ve Nörolojik Tablo:** Bilinç bozukluğu, senkop veya epileptik nöbet geçirilmesi intrakraniyal tutulumun en ciddi göstergeleridir. Hemiparez veya duyu kaybı gibi fokal nörolojik bulgular ivedi aydınlatılmalıdır.\n- **Kafa Çiftleri ve Pupiller:** Üçüncü kranial sinir tutulumu ve anizokori (anevrizma basısı), Horner sendromu (karotis diseksiyonu) ile beşinci ve yedinci kranial sinir tutulumları kritik alarm bulgularıdır.\n- **Göz Dibi ve Meninks İrritasyonu:** Fundus incelemesinde papilödem veya subhyaloid hemoraji saptanması kafa içi basınç artışını ve kanamayı gösterir. Ateşle birlikte ense sertliği ise menenjitin klasik alarmıdır.\n- **Sistemik Göstergeler:** Belirgin kilo kaybı ve halsizlik vaskülit veya maligniteyi düşündürür.\n\n> [!IMPORTANT]\n> Nörolojik muayenede papilödem, üçüncü sinir felci veya ense sertliği saptanan baş ağrılı hastada derhal acil sekonder etyoloji incelemesi başlatılmalıdır.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Bilinç ve Nöbet Alarmı",
+      "desc": "Bilinç bozukluğu, senkop ve epileptik nöbet sekonder intrakraniyal tutulumu gösterir.",
+      "isKey": true
+     },
+     {
+      "title": "Kafa Çifti Tutulumları",
+      "desc": "3. sinir felci, anizokori, Horner sendromu ile 5. ve 7. sinir tutulumu alarmdır.",
+      "isKey": true
+     },
+     {
+      "title": "Göz Dibi ve Ense Sertliği",
+      "desc": "Papilödem, subhyaloid kanama ve ateşle seyreden ense sertliği acil organik bulgudur.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Muayenede papilödem, subhyaloid hemoraji, 3. kranial sinir tutulumu, anizokori ve Horner sendromu sekonder baş ağrısı alarm bulgularıdır.",
+    "📌 [SINAV SPOTU] Ateş ve ense sertliği meninks irritasyonunu ve menenjiti gösterir; fokal nörolojik bulgular acil görüntüleme gerektirir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Papilödem",
+     "explanation": "Kafa içi basınç artışının optik sinir kılıfı boyunca iletilmesi sonucu optik diskin ödemli ve kabarık izlenmesidir."
+    },
+    {
+     "term": "Horner Sendromu",
+     "explanation": "Sempatik liflerin hasarlanması sonucu aynı tarafta pitozis, miyozis ve anhidrozis ile seyreden klinik tablodur."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-9-1",
+     "front": "Fizik muayenede kafa içi basınç artışını gösteren en önemli oftalmolojik alarm bulgusu nedir?",
+     "back": "Göz dibi bakısında optik diskte papilödem veya subhyaloid hemoraji saptanmasıdır."
+    },
+    {
+     "id": "fc-9-2",
+     "front": "Ateş yüksekliği ile birlikte ense sertliği saptanan baş ağrılı hastada öncelikle hangi sekonder tablo düşünülmelidir?",
+     "back": "Menenjit veya meninks irritasyonuna yol açan akut intrakraniyal enfeksiyonlar düşünülmelidir."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "3.sınıf başağrısı yaklaşım.pdf",
+    "startPage": 9,
+    "endPage": 9,
+    "primaryPage": 9,
+    "citation": "Sayfa 9 · Kurul 2 Nöroloji · Baş Ağrısına Yaklaşım"
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Baş ağrısıyla başvuran bir hastanın fizik ve nörolojik muayenesinde aşağıdaki bulgulardan hangisinin saptanması sekonder bir etyolojiyi işaret eden alarm bulgusudur?",
+     "microQuizOptions": [
+      {
+       "text": "Papilödem, üçüncü kranial sinir tutulumu ve ateşle birlikte ense sertliği saptanması.",
+       "isCorrect": true,
+       "explanation": "Papilödem KİBAS'ı, 3. sinir felci anevrizma basısını, ense sertliği ise menenjiti kanıtlayan temel sekonder muayene alarmlarıdır."
+      },
+      {
+       "text": "Tıbbi ve nörolojik muayenenin tamamen normal sınırlarda bulunması.",
+       "isCorrect": false,
+       "explanation": "Fizik ve nörolojik muayenenin tamamen normal olması, migren ve gerilim tipi gibi selim primer baş ağrılarının tipik özelliğidir. Bu olağan muayene bulgusu sekonder bir alarmı temsil etmez."
+      },
+      {
+       "text": "Yalnızca hafif yorgunluk hissi dışında hiçbir objektif patoloji saptanmaması.",
+       "isCorrect": false,
+       "explanation": "Objektif patoloji saptanmaması selim gidişi gösterir; sekonder alarm için kranial sinir veya meninks irritasyonu gibi bulgular gerekir."
+      },
+      {
+       "text": "Göz dibi incelemesinde optik diskin tamamen normal sınırlarda izlenmesi.",
+       "isCorrect": false,
+       "explanation": "Optik diskin keskin sınırlı ve doğal izlenmesi, intrakraniyal basıncın normal sınırlarda olduğunu gösteren selim bir bulgudur. Sekonder baş ağrısı alarmı için fundus muayenesinde papilödem veya subhyaloid hemoraji gibi patolojiler aranır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Fundus incelemesinde papilödem veya subhyaloid hemoraji saptanması kafa içi basınç artışını ve kanamayı gösterir.",
+     "maskedTerm": "papilödem",
+     "hint": "Kafa içi basınç artışına bağlı gelişen optik disk ödemi tablosudur."
+    },
+    {
+     "type": "causal_chain",
+     "title": "İntrakraniyal Patolojide Muayene Alarm Bulgularının Gelişimi",
+     "steps": [
+      "1. İntrakraniyal lezyon oluşumu: Kitle, hidrosefali veya subaraknoid kanama meydana gelir.",
+      "2. Kafa içi basıncın yükselmesi: KİBAS optik sinir kılıfında basınca ve üçüncü kranial sinire mekanik basıya yol açar.",
+      "3. Objektif alarm bulgularının belirmesi: Muayenede fundusta papilödem, pupilde anizokori ve üçüncü sinir felci saptanır.",
+      "4. Acil tanısal müdahale: Saptanan objektif patolojiler doğrultusunda acil nörogörüntüleme planlanır."
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "title": "Muayenede Sekonder Baş Ağrısı Alarm Bulguları ve Klinik Anlamları",
+     "tableHeaders": [
+      "Muayene Alarm Bulgusu",
+      "Etkilenen Yapı",
+      "Düşündürdüğü Sekonder Neden"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Papilödem",
+         "isMasked": false
+        },
+        {
+         "text": "Optik sinir / disk",
+         "isMasked": true,
+         "hint": "Gözün arka kutbundan çıkan ve görüntüyü merkeze ileten anatomik yapıdır."
+        },
+        {
+         "text": "Kafa içi basınç artışı (KİBAS) veya kitle",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "3. Kranial Sinir Tutulumu",
+         "isMasked": false
+        },
+        {
+         "text": "Okülomotor sinir",
+         "isMasked": true,
+         "hint": "Göz küresini hareket ettiren ve göz bebeğini daraltan üçüncü kafa çiftidir."
+        },
+        {
+         "text": "Anevrizma basısı veya unkal herniasyon",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Ateş ve Ense Sertliği",
+         "isMasked": false
+        },
+        {
+         "text": "Meningeal zarlar",
+         "isMasked": true,
+         "hint": "Beyin ve omuriliği çevreleyen anatomik koruyucu katmanlardır."
+        },
+        {
+         "text": "Menenjit veya subaraknoid kanama",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Muayenede Sekonder Baş Ağrısı Alarmları",
+     "items": [
+      {
+       "text": "Primer baş ağrılarında fizik ve nörolojik muayene çoğunlukla tamamen normal sınırlardadır.",
+       "isLie": false,
+       "explanation": "Primer tablolarda yapısal hasar bulunmadığından muayene olağan sınırlardadır."
+      },
+      {
+       "text": "Üçüncü kranial sinir tutulumu ve anizokori sekonder baş ağrısı alarm bulgusudur.",
+       "isLie": false,
+       "explanation": "3. sinir felci arka komünikan arter anevrizması basısını düşündüren acil bir alarmdır."
+      },
+      {
+       "text": "Göz dibinde papilödem saptanması primer migrenin beklenen doğal bir muayene bulgusudur.",
+       "isLie": true,
+       "explanation": "Papilödem kafa içi basınç artışını kanıtlayan çok ciddi bir sekonder alarm bulgusudur; primer migrende görülmez."
+      },
+      {
+       "text": "Ateşle birlikte ense sertliği varlığı meninks irritasyonunu ve menenjiti işaret eder.",
+       "isLie": false,
+       "explanation": "Menenjitin klasik triadı olan ateş, baş ağrısı ve ense sertliği acil enfeksiyöz bulgudur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Nörolojik muayenede sekonder baş ağrısı düşündüren kranial sinir ve pupil tutulumu bulguları hangileridir?",
+     "answer": "Üçüncü kranial sinir tutulumu, anizokori, Horner sendromu ile 5. ve 7. kranial sinir felçleridir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 10,
+   "id": "y25-k2-10-s10",
+   "title": "Yardımcı Tanı Yöntemleri ve Klinik Endikasyonlar",
+   "subtitle": "Sekonder baş ağrısı şüphesinde BBT, MRG, LP ve laboratuvar tetkikleri seçilmiş klinik endikasyonlara göre uygulanır.",
+   "badge": "Yardımcı Tanı Yöntemleri",
+   "bolum": "4",
+   "pdfSayfalari": [
+    10,
+    10
+   ],
+   "kaynakSayfa": [
+    10
+   ],
+   "bilgi": [
+    10
+   ],
+   "isCheckpoint": false,
+   "checkpointNumber": 0,
+   "synthesisNarrative": "Sekonder baş ağrısı düşünülen veya kırmızı bayrak saptanan olgularda tanı yöntemleri klinik endikasyona göre seçilmelidir.\n\n- **Bilgisayarlı Beyin Tomografisi (BBT):** Akut intrakraniyal kanama, hidrosefali ve akut kitle basısında ilk tercihtir. İnme şüphesinde, KİBAS tablosunda, lomber ponksiyon öncesi herniasyon riskini dışlamada ve Glaskow Koma Skoru 9 olan kafa travmalarında ivedilikle çekilir.\n- **Manyetik Rezonans Görüntüleme (MRG):** Arka çukur tümörleri, iskemik inme ve multipl skleroz gibi demiyelinizan plakların gösterilmesinde BBT'ye göre çok daha duyarlıdır.\n- **Lomber Ponksiyon (LP):** Menenjit, BT'si normal olan subaraknoid kanama olguları ile HaNDL sendromunda (lenfositik pleositozlu baş ağrısı) tanı koydurucudur.\n- **Diğer İncelemeler:** Waters ve direkt grafiler sinüs patolojilerini; eritrosit sedimantasyon hızı (sedim) temporal arteriti aydınlatır. Başağrısı günlüğü ise atak sıklığını izlemede kullanılır.\n\n> [!IMPORTANT]\n> KİBAS veya yer kaplayan lezyon kuşkusu olan olgularda herniasyon riskini önlemek için lomber ponksiyon öncesinde mutlaka beyin tomografisi çekilmelidir.",
+   "content": "Sekonder baş ağrısı düşünülen veya kırmızı bayrak saptanan olgularda tanı yöntemleri klinik endikasyona göre seçilmelidir.\n\n- **Bilgisayarlı Beyin Tomografisi (BBT):** Akut intrakraniyal kanama, hidrosefali ve akut kitle basısında ilk tercihtir. İnme şüphesinde, KİBAS tablosunda, lomber ponksiyon öncesi herniasyon riskini dışlamada ve Glaskow Koma Skoru 9 olan kafa travmalarında ivedilikle çekilir.\n- **Manyetik Rezonans Görüntüleme (MRG):** Arka çukur tümörleri, iskemik inme ve multipl skleroz gibi demiyelinizan plakların gösterilmesinde BBT'ye göre çok daha duyarlıdır.\n- **Lomber Ponksiyon (LP):** Menenjit, BT'si normal olan subaraknoid kanama olguları ile HaNDL sendromunda (lenfositik pleositozlu baş ağrısı) tanı koydurucudur.\n- **Diğer İncelemeler:** Waters ve direkt grafiler sinüs patolojilerini; eritrosit sedimantasyon hızı (sedim) temporal arteriti aydınlatır. Başağrısı günlüğü ise atak sıklığını izlemede kullanılır.\n\n> [!IMPORTANT]\n> KİBAS veya yer kaplayan lezyon kuşkusu olan olgularda herniasyon riskini önlemek için lomber ponksiyon öncesinde mutlaka beyin tomografisi çekilmelidir.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "BBT Endikasyonları",
+      "desc": "Akut kanama, hidrosefali, tümör, inme, LP öncesi ve kafa travmasında (GKS: 9) ilk tercihtir.",
+      "isKey": true
+     },
+     {
+      "title": "MRG Endikasyonları",
+      "desc": "Arka çukur tümörleri, iskemik inme ve demiyelinizan plaklarda tomografiden üstündür.",
+      "isKey": true
+     },
+     {
+      "title": "LP Endikasyonları",
+      "desc": "Menenjit, BT normal SAK ve HaNDL sendromunda kesin tanı aracıdır.",
+      "isKey": true
+     },
+     {
+      "title": "Sedimantasyon ve Günlük",
+      "desc": "Temporal arteritte sedim; primer atak takibinde ise başağrısı günlüğü kullanılır.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Akut kanama, hidrosefali, inme şüphesi, KİBAS, LP öncesi herniasyon kontrolü ve travmada (GKS: 9) ilk tercih BBT'dir.",
+    "📌 [SINAV SPOTU] Arka çukur tümörleri ve demiyelinizan plaklarda MRG; menenjit, BT-negatif SAK ve HaNDL sendromunda LP endikedir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "HaNDL Sendromu",
+     "explanation": "BOS'ta lenfositik pleositoz ile birlikte geçici nörolojik defisitler ve baş ağrısıyla karakterize selim tablodur."
+    },
+    {
+     "term": "Waters Grafisi",
+     "explanation": "Maksiller sinüsleri ve fasiyal kemik yapıları incelemek amacıyla çekilen direkt radyolojik projeksiyondur."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-10-1",
+     "front": "Kafa travması geçiren hastada acil beyin tomografisi (BBT) çekilmesini gerektiren Glaskow Koma Skoru değeri kaçtır?",
+     "back": "Ders notuna göre kafa travmasında GKS: 9 olması acil BBT endikasyonudur."
+    },
+    {
+     "id": "fc-10-2",
+     "front": "KİBAS şüphesi olan hastada lomber ponksiyon öncesinde neden mutlaka beyin tomografisi çekilmelidir?",
+     "back": "Kitle etkisine bağlı unkal veya tonsiller beyin herniasyonu gelişme riskini önceden dışlamak için çekilmelidir."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "3.sınıf başağrısı yaklaşım.pdf",
+    "startPage": 10,
+    "endPage": 10,
+    "primaryPage": 10,
+    "citation": "Sayfa 10 · Kurul 2 Nöroloji · Baş Ağrısına Yaklaşım"
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Baş ağrılı hastada yardımcı tanı yöntemlerinin klinik endikasyonlarıyla ilgili aşağıdaki eşleştirmelerden hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "text": "Arka çukur tümörleri ve demiyelinizan plakların gösterilmesinde manyetik rezonans görüntüleme (MRG) tercih edilir.",
+       "isCorrect": true,
+       "explanation": "Manyetik rezonans görüntüleme, yüksek yumuşak doku kontrastı ve kemik artefaktı olmaması sayesinde arka çukur tümörleri ile multipl skleroz plaklarını göstermede BBT'ye göre çok daha duyarlıdır."
+      },
+      {
+       "text": "Akut intrakraniyal kanama şüphesinde kemik yapıları göstermek için yalnızca Waters grafisi çekilir.",
+       "isCorrect": false,
+       "explanation": "Waters grafisi, paranazal sinüs havalanmasını ve fasiyal kemik bütünlüğünü incelemek amacıyla kullanılan direkt radyolojik yöntemdir. Akut intrakraniyal kanama şüphesinde ise kemik grafileri yetersiz olup acil bilgisayarlı beyin tomografisi çekilmelidir."
+      },
+      {
+       "text": "Kafa içi basınç artışı şüphesinde beyin tomografisi çekilmeden derhal ilk basamakta lomber ponksiyon yapılmalıdır.",
+       "isCorrect": false,
+       "explanation": "Bilgisayarlı beyin tomografisi, yer kaplayan kitle lezyonlarını ve kafa içi basınç artışını saniyeler içinde gösteren temel radyolojik araçtır. KİBAS şüphesinde tomografi çekilmeden doğrudan lomber ponksiyon yapılması ölümcül beyin herniasyonlarına yol açabilir."
+      },
+      {
+       "text": "Primer gerilim baş ağrısı olan her hastada rutin olarak haftalık lomber ponksiyon uygulanır.",
+       "isCorrect": false,
+       "explanation": "Gerilim tipi baş ağrısı, klinik anamnez ve önerilerle ayaktan takip edilen selim seyirli primer bir tablodur. İnvaziv bir tanı yöntemi olan lomber ponksiyonun selim primer baş ağrılarının rutin takibinde yeri yoktur."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Arka çukur tümörleri, iskemik inme ve multipl skleroz gibi demiyelinizan plakların gösterilmesinde BBT'ye göre çok daha duyarlıdır.",
+     "maskedTerm": "demiyelinizan plakların",
+     "hint": "Multipl skleroz hastalığında sinir liflerinde gelişen miyelin kaybı lezyonlarıdır."
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Bilgisayarlı Tomografi (BBT)",
+     "rightTitle": "Manyetik Rezonans (MRG)",
+     "leftPoints": [
+      "Akut intrakraniyal kanamayı hızla ve güvenle gösterir",
+      "KİBAS varlığında ve LP öncesi herniasyonu dışlamada ilk tercihtir",
+      "Kafa travmasında Glaskow Koma Skoru 9 iken acil çekilir",
+      "Akut hidrosefali ve kemik fraktürlerini hızla aydınlatır"
+     ],
+     "rightPoints": [
+      "Arka çukur tümörlerinin ayrıntılı görüntülenmesinde üstündür",
+      "Erken dönem iskemik inmeyi tomografiye göre çok erken saptar",
+      "Multipl skleroz demiyelinizan plaklarının gösterilmesinde temeldir",
+      "Radyasyon içermez ve yumuşak doku çözünürlüğü çok daha yüksektir"
+     ]
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "Hastanın hayatımın en şiddetli baş ağrısı dediği akut başlangıçlı ağrısı ve ense sertliği var. Acil serviste ilk basamakta kontrastsız BBT çekiliyor ve kanama görülmüyor.",
+     "options": [
+      {
+       "text": "Klinik şüphe yüksek olduğundan ve BBT erken dönemde kanamayı atlayabileceğinden subaraknoid kanamayı dışlamak için lomber ponksiyon yapmak.",
+       "isCorrect": true,
+       "explanation": "BT'nin normal olduğu durumlarda subaraknoid kanama şüphesi devam ediyorsa BOS'ta eritrosit ve ksantokromi görmek için LP uygulanır."
+      },
+      {
+       "text": "Tomografi normal çıktığı için hastanın ağrısını primer baş ağrısı kabul edip hiçbir ileri tetkik yapmadan taburcu etmek.",
+       "isCorrect": false,
+       "explanation": "Gök gürültüsü baş ağrısında BT normal olsa bile SAK dışlanamaz; LP yapılmadan hasta taburcu edilemez."
+      },
+      {
+       "text": "Hastaya yalnızca sinüs grafisi çekerek evine göndermek.",
+       "isCorrect": false,
+       "explanation": "Sinüs grafisi akut kafa içi kanamayı değerlendiremez; hayatı tehdit eden SAK şüphesinde lomber ponksiyon basamağı şarttır."
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Bilgisayarlı Tomografi (BBT)",
+     "rightCategory": "Lomber Ponksiyon (LP)",
+     "cards": [
+      {
+       "text": "Akut intrakraniyal kanama ve hidrosefalinin acil gösterilmesi",
+       "category": "left"
+      },
+      {
+       "text": "Menenjit şüphesinde beyin omurilik sıvısı incelemesi",
+       "category": "right"
+      },
+      {
+       "text": "Kafa travmasında Glaskow Koma Skoru 9 olan hastanın değerlendirilmesi",
+       "category": "left"
+      },
+      {
+       "text": "HaNDL sendromunda lenfositik pleositozun kanıtlanması",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Yardımcı Tanı Yöntemleri ve Endikasyonlar",
+     "items": [
+      {
+       "text": "Arka çukur tümörleri ve demiyelinizan plaklarda MRG, BBT'ye göre çok daha duyarlıdır.",
+       "isLie": false,
+       "explanation": "MRG yumuşak doku çözünürlüğü ve kemik artefaktı olmamasıyla bu lezyonlarda üstündür."
+      },
+      {
+       "text": "Menenjit ve tomografisi normal saptanan SAK şüphesinde tanı için LP uygulanır.",
+       "isLie": false,
+       "explanation": "BOS basıncı, hücre sayımı ve ksantokromi değerlendirmesi LP ile kesinleştirilir."
+      },
+      {
+       "text": "KİBAS şüphesi olan hastada herniasyon riskine bakılmaksızın tomografiden önce LP yapılmalıdır.",
+       "isLie": true,
+       "explanation": "KİBAS şüphesinde unkal veya tonsiller herniasyon riskini dışlamak için LP öncesinde mutlaka BBT çekilmelidir."
+      },
+      {
+       "text": "Sedimantasyon hızı şüpheli olgularda vaskülit ve temporal arteriti araştırmada yararlıdır.",
+       "isLie": false,
+       "explanation": "Sedimantasyon yüksekliği 50 yaş üstü temporal arterit şüphesinde temel laboratuvar testidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 11,
+   "id": "y25-k2-10-s11",
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Baş Ağrısına Yaklaşım",
+   "subtitle": "Ders boyunca edindiğiniz baş ağrısı sınıflaması, alarm bulguları ve tanısal yaklaşım bilgilerini dört oyunla test edin.",
+   "badge": "Ders Sonu Oyunları",
+   "bolum": "4",
+   "pdfSayfalari": [
+    2,
+    10
+   ],
+   "kaynakSayfa": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "bilgi": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "isCheckpoint": false,
+   "checkpointNumber": 0,
+   "isGameFinale": true,
+   "synthesisNarrative": "Baş Ağrısına Yaklaşım dersini başarıyla tamamladınız. Bu oyun sayfasında dersin tüm temel kazanımlarını dört farklı oyun türüyle pekiştireceksiniz.\n\n- **Sıralama Oyunu:** Akut ve şiddetli baş ağrısıyla acil servise başvuran hastada tanısal yönetim basamaklarını doğru sıraya dizin.\n- **Tahmin Kaydırıcısı:** Derste geçen epidemiyolojik oranları, yaş sınırlarını ve klinik skor değerlerini kaydırıcı üzerinde tahmin edin.\n- **Ne Değişir:** Şüpheli bir hastada klinik tabloya sekonder alarm bulguları eklendiğinde klinik parametrelerin yönünü belirleyin.\n- **Metin Düzeltme:** Klinik vaka anlatımındaki yanıltıcı ifadeleri ve hatalı tıbbi yaklaşımları bularak doğrusuyla değiştirin.\n\n> [!NOTE]\n> Oyunları eksiksiz tamamlayarak primer-sekonder ayrımı, kırmızı bayraklar ve tetkik endikasyonları konusundaki klinik reflekslerinizi pekiştirin.",
+   "content": "Baş Ağrısına Yaklaşım dersini başarıyla tamamladınız. Bu oyun sayfasında dersin tüm temel kazanımlarını dört farklı oyun türüyle pekiştireceksiniz.\n\n- **Sıralama Oyunu:** Akut ve şiddetli baş ağrısıyla acil servise başvuran hastada tanısal yönetim basamaklarını doğru sıraya dizin.\n- **Tahmin Kaydırıcısı:** Derste geçen epidemiyolojik oranları, yaş sınırlarını ve klinik skor değerlerini kaydırıcı üzerinde tahmin edin.\n- **Ne Değişir:** Şüpheli bir hastada klinik tabloya sekonder alarm bulguları eklendiğinde klinik parametrelerin yönünü belirleyin.\n- **Metin Düzeltme:** Klinik vaka anlatımındaki yanıltıcı ifadeleri ve hatalı tıbbi yaklaşımları bularak doğrusuyla değiştirin.\n\n> [!NOTE]\n> Oyunları eksiksiz tamamlayarak primer-sekonder ayrımı, kırmızı bayraklar ve tetkik endikasyonları konusundaki klinik reflekslerinizi pekiştirin.",
+   "sourcePdf": {
+    "fileName": "3.sınıf başağrısı yaklaşım.pdf",
+    "startPage": 2,
+    "endPage": 10,
+    "primaryPage": 10,
+    "citation": "Sayfa 2–10 · Kurul 2 Nöroloji · Baş Ağrısına Yaklaşım"
+   },
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "prompt": "Akut başlangıçlı, hayatının en şiddetli baş ağrısı yakınmasıyla başvuran hastada tanısal yönetim basamaklarını doğru sıraya dizin.",
+     "steps": [
+      "1. Ayrıntılı öykü alma ve kırmızı bayrakların varlığını sorgulama",
+      "2. Bilinç, fokal defisit, ense sertliği ve göz dibini içeren nörolojik muayene",
+      "3. Akut subaraknoid kanama ve KİBAS varlığını dışlamak için acil kontrastsız BBT çekilmesi",
+      "4. BBT normalse ve klinik şüphe sürüyorsa ksantokromi incelemesi için lomber ponksiyon yapılması",
+      "5. Tanıya özgü hedefe yönelik acil medikal ve cerrahi tedavinin başlanması"
+     ],
+     "explanation": "Sekonder baş ağrısı şüphesinde ilk basamak ayrıntılı anamnez ve nörolojik muayenedir. Akut intrakraniyal kanama veya kitle şüphesinde lomber ponksiyon öncesi herniasyon riskini dışlamak için mutlaka BBT çekilir; BBT normal saptanırsa SAK'ı ekarte etmek için LP uygulanır."
+    },
+    {
+     "type": "estimate_slider",
+     "items": [
+      {
+       "prompt": "Toplumda yaşam boyu en az bir kez baş ağrısı yaşayan kadınların oranı yüzde kaçtır?",
+       "unit": "%",
+       "min": 80,
+       "max": 100,
+       "step": 1,
+       "answer": 99,
+       "tolerance": 1,
+       "explanation": "Ders notuna göre yaşam boyu en az bir kez baş ağrısı deneyimleyen kişi oranı kadınlarda %99, erkeklerde %93'tür."
+      },
+      {
+       "prompt": "Sekonder baş ağrısı alarmı (kırmızı bayrak) olarak kabul edilen ileri yaş başlangıç sınırı kaç yaştır?",
+       "unit": "yaş",
+       "min": 30,
+       "max": 80,
+       "step": 5,
+       "answer": 50,
+       "tolerance": 5,
+       "explanation": "Sekonder baş ağrısı düşündüren kırmızı bayraklardan biri baş ağrısının 10 yaşından önce veya 50 yaşından sonra başlamasıdır."
+      },
+      {
+       "prompt": "Kafa travması geçiren hastada acil beyin tomografisi (BBT) çekilmesini gerektiren Glaskow Koma Skoru değeri kaçtır?",
+       "unit": "puan",
+       "min": 3,
+       "max": 15,
+       "step": 1,
+       "answer": 9,
+       "tolerance": 1,
+       "explanation": "Ders notunda kafa travması sonrasında acil BBT endikasyonu olarak GKS değerinin 9 olması açıkça belirtilmiştir."
+      }
+     ]
+    },
+    {
+     "type": "perturbation",
+     "scenario": "Kronik baş ağrısı olan bir hastanın ağrı karakteri ani şiddetli hale geliyor ve muayenede papilödem saptanıyor.",
+     "question": "Aşağıdaki parametreler nasıl değişir?",
+     "parameters": [
+      {
+       "name": "Sekonder baş ağrısı olasılığı",
+       "correct": "up",
+       "explanation": "Yeni başlayan şiddetli karakter değişikliği ve papilödem intrakraniyal basınç artışına bağlı sekonder bir patolojiyi güçlü biçimde gösterir."
+      },
+      {
+       "name": "Rutin analjeziklerle ağrının kontrol altına alınabilme ihtimali",
+       "correct": "down",
+       "explanation": "Organik kitle veya basınç artışına bağlı sekonder ağrılar basit analjezik tedavilere dirençlidir."
+      },
+      {
+       "name": "Acil nörogörüntüleme (BBT/MRG) gereksinimi",
+       "correct": "up",
+       "explanation": "Papilödem ve karakter değişikliği gibi kırmızı bayrakların varlığında acil görüntüleme endikasyonu ortaya çıkar."
+      },
+      {
+       "name": "Ağrının iyi huylu primer baş ağrısı olma olasılığı",
+       "correct": "down",
+       "explanation": "Papilödem gibi objektif nörolojik alarm bulguları primer baş ağrısı tanısını dışlar."
+      }
+     ]
+    },
+    {
+     "type": "fix_the_text",
+     "text": "Primer baş ağrıları altta yatan başka bir hastalığın semptomudur ve kural olarak acil ileri inceleme gerektirir. Oysa sekonder baş ağrıları bizzat kendisi bir hastalıktır ve nörolojik muayenede bulgular her zaman normaldir.",
+     "errors": [
+      {
+       "wrong": "semptomudur",
+       "correct": "hastalığıdır",
+       "options": [
+        "belirtisidir",
+        "bulgusudur"
+       ],
+       "explanation": "Primer baş ağrıları başka bir hastalığın semptomu değil, bizzat kendisi bağımsız bir hastalıktır."
+      },
+      {
+       "wrong": "kendisi bir hastalıktır",
+       "correct": "başka bir hastalığın semptomudur",
+       "options": [
+        "iyi huylu bir tablodur",
+        "primer bir bozukluktur"
+       ],
+       "explanation": "Sekonder baş ağrıları bağımsız bir hastalık olmayıp altta yatan organik bir hastalığın belirtisidir."
+      },
+      {
+       "wrong": "her zaman normaldir",
+       "correct": "alarm bulguları içerebilir",
+       "options": [
+        "tamamen olağandır",
+        "daima kusursuzdur"
+       ],
+       "explanation": "Sekonder baş ağrılarında nörolojik muayenede papilödem, felç veya ense sertliği gibi patolojik alarm bulguları saptanabilir."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "totalSlides": 11,
+ "totalInteractiveElements": 60,
+ "interactiveRatio": 5.45,
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}
