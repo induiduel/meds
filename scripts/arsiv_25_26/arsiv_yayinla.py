@@ -38,7 +38,7 @@ sys.path.insert(0, str(MEDS / "scripts" / "paket"))
 def json_kilitli_guncelle(yol: Path, varsayilan, guncelle_fn):
     import fcntl
     yol.parent.mkdir(parents=True, exist_ok=True)
-    lock_yol = yol.with_suffix(yol.suffix + ".lock")
+    lock_yol = Path(f"/tmp/meds_arsiv_{yol.name}.lock")
     with open(lock_yol, "w", encoding="utf-8") as lf:
         fcntl.flock(lf, fcntl.LOCK_EX)
         try:
@@ -255,7 +255,7 @@ Path({repr(str(kz_yol))}).write_text(json.dumps(out, ensure_ascii=False, separat
     return json.loads(kz_yol.read_text(encoding="utf-8")) if kz_yol.exists() else {}
 
 
-def pdf_isaret_yerel(key: str, pars: list[dict], pdf_yol: Path, hz: dict, capa_p: list | None, metin_hash: str) -> dict:
+def pdf_isaret_yerel(key: str, pars: list[dict], pdf_yol: Path, hz: dict, capa_p: list | None, metin_hash: str, v2: dict | None = None) -> dict:
     import pdf_isaret as PI
     pdf = PI.Pdf(pdf_yol)
     c_out: dict[str, list] = {}
@@ -273,6 +273,14 @@ def pdf_isaret_yerel(key: str, pars: list[dict], pdf_yol: Path, hz: dict, capa_p
                     liste.append(isr)
                     continue
             s0 = (es.get("sayfalar") or [])[ci] if ci < len(es.get("sayfalar") or []) else es["sayfa"]
+            # Eğer v2 içindeki cümlede özel slayt.sayfa tanımlıysa öncelik ver
+            vp = [p_ for b_ in (v2 or {}).get("bolumler", []) for p_ in b_.get("paragraflar", [])]
+            if pn < len(vp):
+                v_cs = vp[pn].get("cumleler", [])
+                if ci < len(v_cs):
+                    sl_s = v_cs[ci].get("slayt", {}).get("sayfa")
+                    if sl_s and isinstance(sl_s, int) and 1 <= sl_s <= len(pdf.doc):
+                        s0 = sl_s
             en = (0, None, s0)
             for s in (s0, s0 - 1, s0 + 1, s0 + 2, s0 - 2):
                 sy = pdf.sayfa(s)
@@ -280,7 +288,7 @@ def pdf_isaret_yerel(key: str, pars: list[dict], pdf_yol: Path, hz: dict, capa_p
                     continue
                 n, r = PI.eslestir(cumle, sy)
                 uz = abs(s - s0)
-                esik = 0 if not uz else max(3 if uz == 1 else 4, en[0] * 1.5)
+                esik = 0 if not uz else max(2 if uz == 1 else 3, en[0] * 1.3)
                 if r and n >= max(1, esik) and (en[1] is None or n > en[0]):
                     en = (n, r, s)
             n, r, s = en
@@ -288,7 +296,8 @@ def pdf_isaret_yerel(key: str, pars: list[dict], pdf_yol: Path, hz: dict, capa_p
                 isr = {"d": 0, "s": s, **r}
             else:
                 sy = pdf.sayfa(s0)
-                if sy and sy.resimler and (PI.GORSEL.search(cumle) or (len(sy.kelimeler) < 15 and not sy.ocr)):
+                v_sl = v_cs[ci].get("slayt", {}) if pn < len(vp) and ci < len(vp[pn].get("cumleler", [])) else {}
+                if sy and sy.resimler and (PI.GORSEL.search(cumle) or v_sl.get("sekil") or (len(sy.kelimeler) < 15 and not sy.ocr)):
                     rb = max(sy.resimler, key=lambda b: (b[2] - b[0]) * (b[3] - b[1]))
                     isr = {"d": 0, "s": s0, "t": "resim", "l": [sy.n(rb)], "w": []}
                 else:
@@ -498,7 +507,8 @@ def cizim_dogrula_ve_yerlestir(taslak: Path, key: str, pdf_yol: Path, pars: list
                     continue
 
         onceki = " ".join(C[x] for x in sira[:sira.index(cid) + 1])
-        neden = CD.denetle(k, len(C[cid].split()), resim_kutulari[s], raster[s], onceki)
+        kutu_denetim = resim_kutulari[s] or ([[0.02, 0.02, 0.98, 0.98]] if len(satir_onbellek[s] or []) <= 10 else [])
+        neden = CD.denetle(k, len(C[cid].split()), kutu_denetim, raster[s], onceki)
         p_idx, c_idx = cid[1:].split(".C")
         mevcut = out.setdefault(p_idx, {}).setdefault(c_idx, [])
         if not neden and k.get("tur") == "akis" and not str(k.get("etiket") or "").strip():
@@ -778,7 +788,7 @@ def main() -> int:
         kz = kelime_zaman_yerel(a.key, pars, mp3_yol, varyant["zamanlama"], metin_sha1)
     finally:
         _gpu_lock.close()
-    isr = pdf_isaret_yerel(a.key, pars, pdf_yol, hz, capalar_list, metin_sha1)
+    isr = pdf_isaret_yerel(a.key, pars, pdf_yol, hz, capalar_list, metin_sha1, v2)
     ck = cikmis_konum_yerel(a.key, pars, v2, baglam, metin_sha1)
     cz = cizim_dogrula_ve_yerlestir(taslak, a.key, pdf_yol, pars, capalar_list, metin_sha1, v2)
 

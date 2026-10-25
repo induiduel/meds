@@ -1,14 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 337,
-  "baslik": "Kurul 2 Tıbbi Farmakoloji 1 'Genel Anestezik İlaçlar' (2025-2026 Arşivi)",
+  "onem": 338,
+  "baslik": "Kurul 2 Tıbbi Genetik 1 'Beyin ve İskelet Sistemi Gelişimi Genetiği' (2025-2026 Arşivi)",
   "maddeler": [
-    "Kurul 2 Tıbbi Farmakoloji 1 'Genel Anestezik İlaçlar' (2025-2026 Arşivi): 72 sayfa, 35,6 dk EMA GPU sesli ders, 27 canlı çizim, 86 çıkmış soru vurgusu ve 20 adımlı Öğren destesi",
+    "Kurul 2 Tıbbi Genetik 1 'Beyin ve İskelet Sistemi Gelişimi Genetiği' (2025-2026 Arşivi): 93 sayfa, 31,2 dk EMA GPU sesli ders, 28 canlı çizim, 20 adımlı Öğren destesi ve 12 çıkmış soru eşleşmesi",
+    "Geliştirilmiş PDF metin takip ve vurgulama motoru (v7) devreye alındı (%97,7 satır ve kelime odaklı takip başarımı)",
     "PDF gömülü .medspak paketi ve Güncelleme Günlüğü eklendi"
   ],
   "eklenen": [
-    "Ders 2–6 için PDF üzeri dinamik kontur, akış çizgileri ve otomatik yakınlaştırma (zoom) alanları",
-    "Görsel sayfalar için PyMuPDF doküman çözümleme ve çoklu parti çizim üretim altyapısı (cizim_aday_uret)"
+    "Kurul 2 Tıbbi Genetik 1 'Beyin ve İskelet Sistemi Gelişimi Genetiği' (2025-2026 Arşivi)"
   ],
   "degisen": [
     "meds/scripts/cizim/cizim_uret.py",

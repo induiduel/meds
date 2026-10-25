@@ -55,9 +55,10 @@ API = os.environ.get("MEDS_API", "http://127.0.0.1:3000")
 KELIME = re.compile(r"[\wçğıöşüâîû]+", re.I)
 MADDE_IMI = re.compile(r"^(?:[•●▪■◦○➢➤►▶✓✔\-–—*]|\d{1,2}[.)]|[a-zA-Z][.)])$")
 GORSEL = re.compile(r"\b(görsel|görüntü|şekil|resim|fotoğraf|grafik|şema|tablo|çizim|mikrograf|kesit|plak|görürsünüz|görüyoruz|görülüyor|görülen|bakın|bakalım)", re.I)
-SURUM = 6  # eşleme kuralı değişince artır: tüm dersler yeniden üretilir
+SURUM = 7  # eşleme kuralı değişince artır: tüm dersler yeniden üretilir
 MADDE_ORAN = 0.80  # slayt maddesinin en az bu kadarı okunan cümlede geçmeli (kullanıcı kuralı)
 CUMLE_RE = re.compile(r"[.!?…]+[\"'”’)\]]*(?:\s+|$)")
+BULLET_PREFIX = re.compile(r"^[^\wçğıöşüâîû]+", re.I)
 
 
 def cumle_sonlari(m: str) -> list[int]:
@@ -80,6 +81,7 @@ def cumle_sonlari(m: str) -> list[int]:
 
 
 def kok(w: str) -> str | None:
+    w = BULLET_PREFIX.sub("", w)
     k = katla(w)
     if not k:
         return None
@@ -164,7 +166,8 @@ class Sayfa:
         onceki_blok, acik = None, None
         for (b, l), ws in sorted(satirlar.items()):
             ilk = ws[0][0]
-            im = bool(MADDE_IMI.match(ilk))
+            clean_ilk = BULLET_PREFIX.sub("", ilk)
+            im = bool(MADDE_IMI.match(ilk)) or ilk != clean_ilk or bool(re.match(r"^[•●▪■◦○➢➤►▶✓✔\-–—*]\s*", ilk))
             if b != onceki_blok or im or acik is None or acik["bitti"]:
                 acik = {"satirlar": [], "kok": 0, "bitti": False, "metin": [], "koks": set()}
                 self.maddeler.append(acik)
@@ -179,7 +182,7 @@ class Sayfa:
                     self.kelimeler.append((k, mi, box))
                     acik["kok"] += 1
                     acik["koks"].add(k)
-            acik["bitti"] = bool(re.search(r"[.!?:]$", ws[-1][0]))
+            acik["bitti"] = bool(re.search(r"[.!?:]$", ws[-1][0])) or im
         self.tablolar = []
         try:
             for t in pg.find_tables().tables:
@@ -452,6 +455,10 @@ def capali_ic(cumle: str, capalar: list[dict], pdf: "Pdf | None") -> dict | None
     ms = capa_maddeleri(sy, satirlar) if satirlar else set()
     if ms:
         return {"s": int(sayfa), **eslestir_capa(cumle, sy, ms)}
+    # Çapalı satır eşleşemezse veya madde bulunamazsa doğrudan hedef sayfada tam metin/kelime eşlemesi yap (kurtarma)
+    n, r = eslestir(cumle, sy)
+    if r and n >= 1:
+        return {"s": int(sayfa), **r}
     if any(c.get("sekil") for c in capalar):
         rb = resim_kutusu(sy)
         if rb:
