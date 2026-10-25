@@ -1,0 +1,1959 @@
+{
+ "id": "k2p-y25-k2-15-sizofrenik-bozukluklar",
+ "courseCode": "k2-15",
+ "title": "Şizofrenik Bozukluklar",
+ "department": "Psikiyatri",
+ "discipline": "Psikiyatri",
+ "sayfaHaritasi": "teyitli",
+ "slides": [
+  {
+   "slideNumber": 1,
+   "bolum": "1",
+   "title": "Şizofreninin Tanımı, Tarihçesi ve Epidemiyolojik Özellikleri",
+   "pdfSayfalari": [
+    1,
+    5
+   ],
+   "sourcePdf": {
+    "startPage": 1,
+    "endPage": 5
+   },
+   "synthesisNarrative": "Şizofreni, genellikle 25 yaşından önce başlayan, düşünce, algı ve duygu alanlarında derin yıkıma yol açan kronik ve heterojen bir psikotik bozukluktur.\n\n- **Tarihsel Gelişim:** Emil Kraepelin tabloyu erken başlangıç ve yıkım özellikleriyle **dementia praecox** olarak adlandırmış; Eugen Bleuler ise zihin bölünmesini vurgulayarak **şizofreni** terimini tıp literatürüne kazandırmıştır. Kurt Schneider ise tanısal değeri yüksek birinci sıra belirtileri tanımlamıştır.\n- **Epidemiyoloji:** Yaşam boyu yaygınlığı yaklaşık yüzde bir düzeyindedir. Kadın ve erkeklerde eşit sıklıkta görülür; ancak hastalık erkeklerde daha erken (15-25 yaş), kadınlarda ise daha geç (25-35 yaş) zirve yapar.\n- **Mortalite ve Riskler:** Genel popülasyona kıyasla yaşam beklentisi 10-20 yıl daha kısadır. Hastaların yaklaşık üçte birinde intihar girişimi gözlenir.\n\n> [!NOTE]\n> Erkeklerde erken başlangıç ve düşük evlilik oranı daha belirgindir; kış ve ilkbahar aylarında doğanlarda görülme sıklığı görece daha yüksektir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Şizofreni tarihçesinde erken başlangıçlı zihinsel yıkımı dementia praecox olarak adlandıran psikiyatrist kimdir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Emil Kraepelin",
+       "isCorrect": true,
+       "explanation": "Doğru. Emil Kraepelin, genç yaşta başlayan ve kaçınılmaz bilişsel yıkımla seyreden klinik tabloyu ilk kez dementia praecox olarak adlandırmıştır."
+      },
+      {
+       "key": "B",
+       "text": "Eugen Bleuler",
+       "isCorrect": false,
+       "explanation": "Yanlış. Eugen Bleuler, zihin yarılması veya bölünmesi kavramından yola çıkarak şizofreni terimini ve temel dört A belirtisini psikiyatri literatürüne kazandırmıştır."
+      },
+      {
+       "key": "C",
+       "text": "Kurt Schneider",
+       "isCorrect": false,
+       "explanation": "Yanlış. Kurt Schneider, şizofreninin ayırıcı tanısında klinik tanı değeri yüksek olan birinci ve ikinci sıra semptomları ayrıntılı biçimde sınıflandıran klinisyendir."
+      },
+      {
+       "key": "D",
+       "text": "Sigmund Freud",
+       "isCorrect": false,
+       "explanation": "Yanlış. Sigmund Freud psikanalitik kuramın kurucusudur ve psikotik bozukluklardan ziyade nevrotik çatışmalar ile bilinçdışı savunma düzenekleri üzerine araştırmalar yürütmüştür."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Emil Kraepelin tabloyu erken başlangıç ve yıkım özellikleriyle dementia praecox olarak adlandırmıştır.",
+     "maskedTerm": "dementia praecox",
+     "hint": "Alman klinik hekiminin 19. yüzyıl sonunda kullandığı Latince erken bunama terimi."
+    },
+    {
+     "type": "active_recall",
+     "question": "Şizofrenide kadın ve erkeklerde pik başlangıç yaşları arasındaki temel fark nedir?",
+     "answer": "Hastalık erkeklerde 15-25 yaşları arasında daha erken pik yaparken kadınlarda zirve yaşı 25-35 aralığına kaymaktadır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Şizofreninin Epidemiyolojik Özellikleri",
+     "items": [
+      {
+       "text": "Şizofreninin toplumda yaşam boyu görülme yaygınlığı yaklaşık yüzde bir düzeyindedir.",
+       "isLie": false,
+       "explanation": "Tüm dünyada etnik kökenden bağımsız olarak prevalans yüzde 1 ile 1.5 arasında sabit kalır."
+      },
+      {
+       "text": "Hastalık kadınlarda erkeklere oranla yaklaşık iki kat daha sık teşhis edilir.",
+       "isLie": true,
+       "explanation": "Şizofreni kadın ve erkek cinsiyetlerde eşit sıklıkta görülür; cinsiyetler arası temel fark sıklık değil başlangıç yaşıdır."
+      },
+      {
+       "text": "Şizofreni hastalarında yaşam beklentisi genel popülasyona göre 10 ila 20 yıl daha kısadır.",
+       "isLie": false,
+       "explanation": "Metabolik sorunlar, kardiyovasküler hastalıklar ve yüksek intihar riski nedeniyle mortalite üç kat artmıştır."
+      },
+      {
+       "text": "Kış mevsiminde ve ilkbahar başında doğanlarda şizofreni riski görece daha yüksektir.",
+       "isLie": false,
+       "explanation": "Mevsimsel doğum döngüsü ve maternal kış enfeksiyonları bu artışta temel rol oynar."
+      }
+     ]
+    },
+    {
+     "type": "feature_bidding",
+     "optionA": "Erkek Cinsiyet",
+     "optionB": "Kadın Cinsiyet",
+     "rounds": [
+      {
+       "feature": "Hastalığın 15-25 yaşları arasında daha erken zirve yapması",
+       "correct": "A"
+      },
+      {
+       "feature": "Hastalığın 25-35 yaşları arasında daha geç zirve yapması",
+       "correct": "B"
+      },
+      {
+       "feature": "Düşük evlilik oranının ve erken sosyal yeti kaybının daha belirgin olması",
+       "correct": "A"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 2,
+   "bolum": "1",
+   "title": "Şizofreni Etyolojisi: Stres-Diyatez Modeli ve Psikososyal Risk Faktörleri",
+   "pdfSayfalari": [
+    6,
+    11
+   ],
+   "sourcePdf": {
+    "startPage": 6,
+    "endPage": 11
+   },
+   "synthesisNarrative": "Şizofreninin ortaya çıkışı, genetik biyolojik yatkınlık ile çevresel tetikleyicilerin etkileşimini açıklayan **stres-diyatez modeli** ile kavranmaktadır.\n\n- **Çoklu Vuruş Kuramı:** Yatkınlığı bulunan bireyde santral sinir sistemi gelişimini bozan ek çevresel darbeler olmadıkça klinik tablo gelişmeyebilir.\n- **Prenatal ve Perinatal Riskler:** Gebelik sırasında geçirilen enfeksiyonlar, hipoksi, fetal gelişme geriliği, preeklampsi ve erken doğum gibi komplikasyonlar nörogelişimsel zemin hazırlar. İkinci trimesterde geçirilen influenza enfeksiyonu ve kış doğumu riski artırır.\n- **Psikososyal ve Çevresel Etkenler:** İleri baba yaşı, çocukluk çağı travmatik yaşantıları, göç ve kentsel yaşam risk artışıyla ilişkilidir. Özellikle ergenlikte **esrar kullanımı**, psikoz riskini katlayarak hastalığın ortaya çıkışını belirgin şekilde öne çeker.\n\n> [!IMPORTANT]\n> Esrar kötüye kullanımı şizofreni gelişme riskini yaklaşık dört kat artırmakta olup savunmasız beyinde psikotik tetikleyici işlev görür.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Şizofrenide stres-diyatez modeli çerçevesinde tanımlanan çevresel risk faktörleri için hangisi doğrudur?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Ergenlik çağındaki esrar kullanımı psikotik bozukluk riskini belirgin biçimde katlar.",
+       "isCorrect": true,
+       "explanation": "Doğru. Ergenlik döneminde esrar kullanımı, genetik yatkınlığı bulunan savunmasız bireylerde dopaminerjik dengeyi bozarak psikoz ortaya çıkma riskini yaklaşık dört kat artırmaktadır."
+      },
+      {
+       "key": "B",
+       "text": "İleri ebeveyn yaşı özellikle genç anne yaşının doğrudan koruyucu etkisiyle nötralize edilir.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Epidemiyolojik araştırmalarda ileri anne yaşından ziyade özellikle ileri baba yaşının sperm hücrelerinde biriken yeni mutasyonlar aracılığıyla hastalık riskini artırdığı saptanmıştır."
+      },
+      {
+       "key": "C",
+       "text": "Kırsal yaşamda doğup büyümek kentsel yaşama kıyasla riski dört kat artıran bir etkendir.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Kırsal bölgede yaşamak değil, aksine yoğun kentsel alanlarda doğup büyümek artmış psikososyal stres nedeniyle şizofreni gelişme olasılığını iki ila dört kat yükseltmektedir."
+      },
+      {
+       "key": "D",
+       "text": "Perinatal dönemdeki hipoksi ve enfeksiyonların hastalık etyolojisinde hiçbir rolü bulunmamaktadır.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Fetal hipoksi, intrauterin iskemi ve maternal viral enfeksiyonlar erken dönemde santral sinir sisteminde nörogelişimsel hasar oluşturarak şizofreni yatkınlığını belirgin biçimde tetikler."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Şizofreninin ortaya çıkışı, genetik biyolojik yatkınlık ile çevresel tetikleyicilerin etkileşimini açıklayan stres-diyatez modeli ile kavranmaktadır.",
+     "maskedTerm": "stres-diyatez modeli",
+     "hint": "Biyolojik yatkınlık ile dışsal tetikleyicilerin etkileşimini temel alan açıklama."
+    },
+    {
+     "type": "causal_chain",
+     "topic": "Şizofrenide Çoklu Vuruş ve Psikoz Tetiklenme Basamakları",
+     "steps": [
+      "1. Genetik Yatkınlık: Nörogelişimsel süreçleri yöneten gen varyantlarının kalıtılması.",
+      "2. İntrauterin Hasar: Fetal hipoksi, maternal enfeksiyon veya kış doğumunun beyin gelişimini etkilemesi.",
+      "3. Sinaptik Budanma Kusuru: Ergenlik döneminde prefrontal kortekste hatalı sinaps eliminasyonu gerçekleşmesi.",
+      "4. Çevresel Darbe: Ağır psikososyal stres, göç travması veya esrar kullanımının eklenmesi.",
+      "5. Psikotik Kırılma: Nörobiyolojik dengenin bozulmasıyla aktif psikoz tablosunun patlak vermesi."
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Çevresel Risk Etkeni",
+      "Biyolojik Mekanizma",
+      "Klinik Risk Düzeyi"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "İleri Baba Yaşı"
+        },
+        {
+         "text": "Spermatogenezde biriken de novo mutasyonlar",
+         "isMasked": true,
+         "hint": "Yaşlanan erkek üreme hücrelerindeki yeni genetik sapmalar."
+        },
+        {
+         "text": "Genel popülasyona kıyasla artmış risk"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Kentsel Yaşam"
+        },
+        {
+         "text": "Sosyal stres ve yoğun çevresel uyaran yükü"
+        },
+        {
+         "text": "Kırsala kıyasla 2-4 kat risk artışı",
+         "isMasked": true,
+         "hint": "Büyük metropollerde doğup büyüyen nüfusta gözlenen olasılık çarpanı."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Ergenlikte Esrar Tüketimi"
+        },
+        {
+         "text": "Endokanabinoid sistem üzerinden dopamin dengesini bozma",
+         "isMasked": true,
+         "hint": "Ödül ve haberci molekül kararlılığını sarsan kimyasal süreç."
+        },
+        {
+         "text": "Psikoz riskinde yaklaşık 4 kat artış"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Yatkınlığı Artıran Çevresel Riskler",
+     "rightCategory": "Doğrudan Çevresel Risk Olmayan Faktörler",
+     "cards": [
+      {
+       "text": "Gebelikte ikinci trimesterde geçirilen viral enfeksiyonlar",
+       "category": "left"
+      },
+      {
+       "text": "Ergenlik çağında kronik esrar kötüye kullanımı",
+       "category": "left"
+      },
+      {
+       "text": "Yetişkinlikte sakin kırsal bölgede yaşamayı tercih etmek",
+       "category": "right"
+      },
+      {
+       "text": "Perinatal dönemde gelişen fetal hipoksi ve doğum komplikasyonları",
+       "category": "left"
+      },
+      {
+       "text": "Normal ebeveyn yaş aralığında zamanında gerçekleşen doğum",
+       "category": "right"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 3,
+   "bolum": "2",
+   "title": "Biyolojik Etkenler: Genetik Kalıtım, Nöroanatomi ve Ventrikülomegali",
+   "pdfSayfalari": [
+    12,
+    14
+   ],
+   "sourcePdf": {
+    "startPage": 12,
+    "endPage": 14
+   },
+   "synthesisNarrative": "Şizofrenide genetik yatkınlık en güçlü biyolojik risk bileşenidir ve ailesel yakınlık derecesi arttıkça risk katlanarak yükselir.\n\n- **Genetik Risk Oranları:** Genel toplumda risk yüzde bir iken, tek ebeveyni hasta olan çocukta risk yaklaşık yüzde 10-12, her iki ebeveyni hasta olanlarda ise yüzde 40-47 düzeyine ulaşır. Monozigot ikizlerde konkordans yüzde 46-50 iken dizigot ikizlerde yüzde 14 civarındadır. Kuşaklar ilerledikçe hastalığın daha erken ve ağır ortaya çıkması **antisipasyon** ile açıklanır.\n- **Nöroanatomik Değişiklikler:** En tutarlı yapısal bulgu lateral ve üçüncü **ventriküler genişleme** (ventrikülomegali) ile kortikal sulkuslarda genişlemedir.\n- **Fonksiyonel Devreler:** Prefrontal kortekste metabolik aktivitenin azalması anlamına gelen **hipofrontalite**, özellikle dorsolateral prefrontal korteks işlev bozukluğuna işaret eder.\n\n> [!NOTE]\n> Ventrikülomegali varlığı; hastalık öncesi zayıf uyum, baskın negatif belirtiler, belirgin bilişsel kayıplar ve antipsikotik tedaviye zayıf yanıt ile ilişkilidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Şizofreninin genetik kalıtım oranları ve nöroanatomik bulguları ile ilgili hangisi doğrudur?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Monozigot ikizlerde konkordans oranı yaklaşık yüzde 46-50 iken dizigot ikizlerde yüzde 14 civarındadır.",
+       "isCorrect": true,
+       "explanation": "Doğru. Tek yumurta ikizlerindeki yaklaşık yüzde ellilik yüksek eş hastalanma oranı, şizofreninin gelişiminde kalıtımsal ve genetik faktörlerin belirleyici gücünü açıkça kanıtlamaktadır."
+      },
+      {
+       "key": "B",
+       "text": "Her iki ebeveyni şizofreni olan bir çocuğun hastalanma riski genel toplumla aynı kalarak yüzde biri geçmez.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Anne ve babanın her ikisinin birden şizofreni hastası olduğu ailelerde, doğacak çocuğun yaşam boyu hastalanma riski yüzde kırk ila kırk yedi düzeyine kadar tırmanmaktadır."
+      },
+      {
+       "key": "C",
+       "text": "Ventriküler genişleme saptanan hastalarda tedaviye yanıt daima çok hızlı ve tam düzelme ile sonuçlanır.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Beyinde lateral ve üçüncü ventriküllerde genişleme saptanması, hastalığın klasik antipsikotik tedavilere zayıf yanıt vereceğini ve kötü klinik seyir izleyeceğini gösteren olumsuz bir bulgudur."
+      },
+      {
+       "key": "D",
+       "text": "Beyin görüntülemesinde frontal korteksteki aktivite artışı öfori ve manik ataklarla doğrudan birliktelik gösterir.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Şizofreni hastalarında frontal korteks aktivitesinde artış görülmez; aksine dorsolateral prefrontal alanda hipofrontalite adı verilen belirgin metabolik ve işlevsel yavaşlama izlenir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Prefrontal kortekste metabolik aktivitenin azalması anlamına gelen hipofrontalite, özellikle dorsolateral prefrontal korteks işlev bozukluğuna işaret eder.",
+     "maskedTerm": "hipofrontalite",
+     "hint": "Ön beyin korteksinde gözlenen metabolik yavaşlama durumu."
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Monozigot İkizler",
+     "rightTitle": "Dizigot İkizler",
+     "leftPoints": [
+      "Genetik materyalin yüzde 100'ü tamamen ortaktır.",
+      "Şizofreni için eş hastalanma oranı yüzde 46-50 arasındadır.",
+      "Yüksek konkordans hastalığın güçlü kalıtımsal temelini gösterir."
+     ],
+     "rightPoints": [
+      "Genetik materyalin ortalama yüzde 50'si paylaşılır.",
+      "Şizofreni için eş hastalanma oranı yaklaşık yüzde 14 düzeyindedir.",
+      "Düşük oran tek yumurta ikizlerine göre çevresel faktörlerin ayrımını sağlar."
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Şizofreni hastalarının beyin görüntülemesinde ventrikülomegali saptanması klinik gidiş açısından ne anlama gelir?",
+     "answer": "Hastalık öncesi kötü uyum, belirgin negatif belirtiler, nörokognitif kayıplar ve antipsikotik tedaviye zayıf yanıt ile ilişkilidir."
+    },
+    {
+     "type": "venn_grid",
+     "labelA": "Her İki Ebeveyni Hasta Çocuk",
+     "labelB": "Tek Ebeveyni Hasta Çocuk",
+     "items": [
+      {
+       "criterion": "Çocuktaki yaşam boyu şizofreni gelişme riski yüzde 40'ın üzerindedir.",
+       "correct": "A"
+      },
+      {
+       "criterion": "Çocuktaki yaşam boyu şizofreni riski ortalama yüzde 10-12 düzeyindedir.",
+       "correct": "B"
+      },
+      {
+       "criterion": "Genel toplumdaki yüzde 1'lik temel prevalans değerinden belirgin şekilde yüksektir.",
+       "correct": "both"
+      },
+      {
+       "criterion": "Ailesel genetik aktarım söz konusu olmadığından risk genel nüfusla tamamen aynıdır.",
+       "correct": "neither"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 4,
+   "bolum": "2",
+   "title": "Nörobiyokimya: Dopamin Hipotezi (Mezolimbik ve Mezokortikal Yolaklar)",
+   "pdfSayfalari": [
+    15,
+    16
+   ],
+   "sourcePdf": {
+    "startPage": 15,
+    "endPage": 16
+   },
+   "synthesisNarrative": "Şizofreninin nörobiyokimyasal temelinde en köklü açıklama klasik ve revize edilmiş **dopamin hipotezi** tarafından sunulmaktadır.\n\n- **Nöropatolojik Zemin:** Beyin dokusunda gliotik skar (gliozis) bulunmaması, tablonun dejeneratif değil erken nörogelişimsel bir kusur olduğunu doğrular.\n- **Mezolimbik Yolak:** Ventral tegmental alandan nükleus akkumbense uzanır. Bu yolaktaki dopaminerjik aşırı aktivite (hiperdopaminerjik durum) sanrı ve varsanı gibi **pozitif belirtiler** ile sonuçlanır; postsinaptik D2 reseptör blokajı bu belirtileri dindirir.\n- **Mezokortikal Yolak:** Ventral tegmental alandan prefrontal kortekse uzanır. Burada dopamin iletimindeki yetersizlik (hipodopaminerjik durum) ise duygusal küntleşme, aloji ve avolusyon gibi **negatif belirtiler** ile bilişsel kayıplara yol açar.\n- **Diğer Sistemler:** Glutamat NMDA reseptör blokeri fensiklidin (PCP) hem pozitif hem negatif belirtileri taklit eder.\n\n> [!IMPORTANT]\n> Şizofreni dopaminin basit bir fazlalığı değil; mezolimbik sistemde hiperaktivite, mezokortikal sistemde ise hipoaktivite ile seyreden bölgesel bir iletim dengesizliğidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Dopamin hipotezine göre pozitif ve negatif belirtilerin nöroanatomik yolak eşleşmesi hangisinde doğrudur?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Mezolimbik aşırı aktivite pozitif belirtilere, mezokortikal yetersizlik negatif belirtilere yol açar.",
+       "isCorrect": true,
+       "explanation": "Doğru. Mezolimbik dopaminerjik yolağın aşırı çalışması pozitif semptomları doğururken, prefrontal kortekse uzanan mezokortikal yolağın yetersiz aktivitesi negatif belirtilere ve bilişsel kayıplara yol açar."
+      },
+      {
+       "key": "B",
+       "text": "Nigrostriatal yolaktaki dopamin fazlalığı şizofrenideki formal düşünce bozukluklarının tek nedenidir.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Nigrostriatal yolak substantia nigradan bazal ganglionlara uzanarak istemli motor hareketleri düzenler ve antipsikotik tedavide ekstrapiramidal parkinsoniyen yan etkilerin ortaya çıkışından sorumludur."
+      },
+      {
+       "key": "C",
+       "text": "Tuberoinfundibuler yolak aşırı aktive olarak sanrıların ve büyüklük hezeyanlarının ortaya çıkmasını tetikler.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Tuberoinfundibuler yolak hipotalamustan hipofize uzanarak prolaktin salgılanmasını tonik biçimde baskılar; doğrudan sanrı ve hezeyan gibi psikotik semptomların üretiminde görev almaz."
+      },
+      {
+       "key": "D",
+       "text": "Mezokortikal yolaktaki aşırı dopamin deşarjı işitsel varsanıların birincil biyokimyasal kaynağıdır.",
+       "isCorrect": false,
+       "explanation": "Yanlış. İşitsel varsanılar mezokortikal yetersizlikten değil, mezolimbik alandaki postsinaptik D2 reseptörlerinin aşırı uyarılması sonucu oluşan hiperdopaminerjik durum neticesinde şekillenir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Bu yolaktaki dopaminerjik aşırı aktivite (hiperdopaminerjik durum) sanrı ve varsanı gibi pozitif belirtiler ile sonuçlanır.",
+     "maskedTerm": "pozitif belirtiler",
+     "hint": "Normal zihinsel işlevlerin taşkınlık ve sapmayla abartılı hale geldiği tablo."
+    },
+    {
+     "type": "causal_chain",
+     "topic": "Mezolimbik Dopaminerjik Aşırı Uyarım ve Antipsikotik Yanıt Basamakları",
+     "steps": [
+      "1. Nörotransmitter Salınımı: Ventral tegmental alandan mezolimbik alana aşırı dopamin salınması.",
+      "2. Reseptör Aktivasyonu: Nükleus akkumbensteki postsinaptik D2 reseptörlerinin aşırı uyarılması.",
+      "3. Semptom Gelişimi: Algı ve yargılama filtrelerinin çökmesiyle sanrı ve varsanıların belirmesi.",
+      "4. Farmakolojik Müdahale: Antipsikotik ilacın D2 reseptörlerine bağlanarak rekabetçi blokaj yapması.",
+      "5. Klinik Düzelme: Mezolimbik iletimin dengelenmesiyle aktif pozitif belirtilerin gerilemesi."
+     ]
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "Acil servise getirilen 22 yaşındaki bir hastada akut gelişen işitsel varsanılar ve kötülük görme sanrıları saptanıyor. Nörobiyokimyasal yolak mekanizması düşünüldüğünde hekimin tedavi rasyoneli ne olmalıdır?",
+     "options": [
+      {
+       "text": "Mezolimbik yolaktaki dopamin hiperaktivitesini baskılamak için D2 reseptör antagonisti bir antipsikotik başlamak.",
+       "isCorrect": true,
+       "feedback": "Doğru klinik karar. Akut alevlenmeyle gelen pozitif belirtiler mezolimbik sistemdeki aşırı dopamin aktivitesinden kaynaklandığı için acil D2 reseptör blokajı hedeflenerek semptomlar yatıştırılır."
+      },
+      {
+       "text": "Mezokortikal yolaktaki dopamini tamamen sıfırlamak amacıyla yüksek doz dopamin tüketen rezerpin vermek.",
+       "isCorrect": false,
+       "feedback": "Hatalı yaklaşım. Mezokortikal yolakta zaten dopamin yetersizliği bulunmaktadır ve dopamin tüketen ilaçlar verilirse hastanın negatif belirtileri ile bilişsel kayıpları daha da derinleşir."
+      },
+      {
+       "text": "NMDA reseptörlerini bloke ederek fensiklidin benzeri dissosiyatif anestezi sağlamak.",
+       "isCorrect": false,
+       "feedback": "Tehlikeli ve sakıncalı seçim. NMDA reseptör blokajı psikotik semptomları şiddetlendirir ve tıpkı fensiklidin zehirlenmesinde olduğu gibi şizofreni benzeri çok ağır bir klinik tablo oluşturur."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Şizofrenide Nöropatoloji ve Biyokimya Bulguları",
+     "items": [
+      {
+       "text": "Şizofreni hastalarının beyin kesitlerinde dejeneratif hastalıklara özgü gliozis tablosu bulunmaz.",
+       "isLie": false,
+       "explanation": "Gliozisin olmaması patolojinin nörodejeneratif değil erken nörogelişimsel nitelikte olduğunu kanıtlar."
+      },
+      {
+       "text": "Glutamat NMDA reseptör antagonisti olan fensiklidin şizofreni benzeri belirtileri tetikler.",
+       "isLie": false,
+       "explanation": "Fensiklidin ve ketamin sağlıklı bireylerde hem pozitif hem negatif psikotik belirtileri ortaya çıkarabilir."
+      },
+      {
+       "text": "Mezokortikal yolakta dopamin aşırı yükseldiği için hastalarda duygusal küntleşme ve içe kapanma gelişir.",
+       "isLie": true,
+       "explanation": "Mezokortikal yolakta dopamin fazlalığı değil yetersizliği (hipodopaminerjik durum) negatif belirtileri doğurur."
+      },
+      {
+       "text": "Kortikal nöronlarda küçülme ve dorsal talamustaki nöron sayısında azalma izlenebilir.",
+       "isLie": false,
+       "explanation": "Nöropatolojik incelemeler kortikal ve talamik nöronal yoğunlukta bölgesel kayıplar gösterir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 5,
+   "bolum": "2",
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Tanım, Epidemiyoloji, Etyoloji ve Dopaminerjik Yolaklar",
+   "isCheckpoint": true,
+   "synthesisNarrative": "Bu bölümde şizofreninin kavramsal temellerini, epidemiyolojik dağılımını, çoklu vuruş etyolojisini ve yolak temelli nörobiyokimyasını pekiştiriyoruz.\n\n- **Tarihsel Çerçeve:** Emil Kraepelin erken bunama vurgusuyla dementia praecox tanımını yaparken, Eugen Bleuler zihinsel yarılmayı esas alarak şizofreni terimini geliştirmiştir.\n- **Etyolojik Sentez:** Genetik yatkınlık (monozigot ikizlerde %46-50 konkordans) tek başına yetmeyebilir; fetal hipoksi, kış doğumu, kentsel yaşam ve özellikle ergenlikte esrar kullanımı gibi çevresel darbeler süreci tetikler.\n- **Nörobiyokimyasal Denge:** Beyinde gliozis izlenmez; ventrikülomegali ve hipofrontalite eşlik eder. Mezolimbik yolaktaki dopamin fazlalığı pozitif belirtileri beslerken, mezokortikal yolaktaki dopamin azlığı negatif belirtilerden sorumludur.\n\n> [!NOTE]\n> Bu aşamaya kadar işlenen tüm temel kavramları pekiştirmeden klinik tanı ölçütlerine geçmeyiniz.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "İlk dört derste öğrenilen kavramlar çerçevesinde, şizofrenideki biyolojik ve epidemiyolojik özelliklerle ilgili hangisi doğrudur?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Beyin patolojisinde gliozisin bulunmayışı tablonun nörogelişimsel bir kusura dayandığını gösterir.",
+       "isCorrect": true,
+       "explanation": "Doğru. Beyin kesitlerinde dejeneratif sürece bağlı reaktif gliozis saptanmaması, patolojinin sonradan gelişen doku yıkımından ziyade erken intrauterin nörogelişimsel bir kusura dayandığını gösterir."
+      },
+      {
+       "key": "B",
+       "text": "Şizofreni kadınlarda erkeklere oranla üç kat daha sık görülen otoimmün kökenli bir bozukluktur.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Epidemiyolojik toplum çalışmalarına göre şizofreninin yaşam boyu yaygınlığı kadın ve erkek cinsiyetler arasında tamamen eşit olup yaklaşık yüzde bir civarında sabit seyreder."
+      },
+      {
+       "key": "C",
+       "text": "Mezolimbik yolaktaki dopamin azalması hastalardaki işitsel varsanıların temel mekanizmasıdır.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Mezolimbik yolakta dopamin iletiminin azalması değil, aksine aşırı artarak nükleus akkumbensteki reseptörleri uyarması işitsel varsanıların ve sanrıların temel patofizyolojik mekanizmasıdır."
+      },
+      {
+       "key": "D",
+       "text": "Tek yumurta ikizlerinde konkordans oranı yüzde yüze ulaştığından çevresel faktörlerin hiçbir etkisi yoktur.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Monozigot ikizlerde eş hastalanma oranı yüzde yüz olmayıp yaklaşık yüzde elli düzeyinde kaldığı için çevresel faktörlerin ve stresörlerin de tetiklemede kritik rolü bulunur."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Dopaminerjik Yolak",
+      "İletim Durumu",
+      "Oluşan Klinik Tablo"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Mezolimbik Yolak"
+        },
+        {
+         "text": "Hiperdopaminerjik aktivite",
+         "isMasked": true,
+         "hint": "Ventral tegmental alandan nükleus akkumbense aşırı iletim hali."
+        },
+        {
+         "text": "Sanrılar ve varsanılar (pozitif belirtiler)"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Mezokortikal Yolak"
+        },
+        {
+         "text": "Hipodopaminerjik yetersizlik"
+        },
+        {
+         "text": "Duygusal küntlük ve bilişsel kayıp (negatif belirtiler)",
+         "isMasked": true,
+         "hint": "Prefrontal korteksteki nörokimyasal yetersizliğin semptomatik sonucu."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Glutamaterjik Sistem"
+        },
+        {
+         "text": "NMDA reseptör hipofonksiyonu",
+         "isMasked": true,
+         "hint": "PCP ve ketamin moleküllerinin yol açtığı sinaptik yetersizlik durumu."
+        },
+        {
+         "text": "Hem pozitif hem negatif benzeri klinik belirtiler"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Pozitif Belirtilerle Bağlantılı Durumlar",
+     "rightCategory": "Negatif Belirtilerle Bağlantılı Durumlar",
+     "cards": [
+      {
+       "text": "Mezolimbik yolakta dopamin iletiminin aşırı artması",
+       "category": "left"
+      },
+      {
+       "text": "Prefrontal kortekste gözlenen hipofrontalite ve metabolik yavaşlama",
+       "category": "right"
+      },
+      {
+       "text": "Postsinaptik D2 reseptör blokajı ile hafifletilen sanrılar",
+       "category": "left"
+      },
+      {
+       "text": "Mezokortikal yolakta dopaminerjik aktivitenin yetersiz kalması",
+       "category": "right"
+      },
+      {
+       "text": "Ventrikülomegali varlığı ile kötü gidiş gösteren zihinsel yavaşlama",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "type": "feature_bidding",
+     "optionA": "Emil Kraepelin",
+     "optionB": "Eugen Bleuler",
+     "rounds": [
+      {
+       "feature": "Hastalığı erken yaşta başlayıp bilişsel yıkımla seyreden dementia praecox olarak adlandırmak",
+       "correct": "A"
+      },
+      {
+       "feature": "Zihin yarılması veya bölünmesi anlamına gelen şizofreni terimini literatüre kazandırmak",
+       "correct": "B"
+      },
+      {
+       "feature": "Hastalığın seyrindeki kaçınılmaz zihinsel yıkımı temel klinik ölçüt saymak",
+       "correct": "A"
+      }
+     ]
+    },
+    {
+     "type": "venn_grid",
+     "labelA": "Genetik Faktörler",
+     "labelB": "Çevresel Faktörler",
+     "items": [
+      {
+       "criterion": "Monozigot ikizlerde yüzde 46-50 oranında eş hastalanma sağlamak.",
+       "correct": "A"
+      },
+      {
+       "criterion": "Fetal hipoksi, maternal influenza enfeksiyonu ve kış doğumunu kapsamak.",
+       "correct": "B"
+      },
+      {
+       "criterion": "Stres-diyatez modelinde hastalığın patlak vermesinde ortaklaşa rol oynamak.",
+       "correct": "both"
+      },
+      {
+       "criterion": "Yetişkinlikte ortaya çıkan dejeneratif gliozis oluşumuna zemin hazırlamak.",
+       "correct": "neither"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 6,
+   "bolum": "3",
+   "title": "DSM-5 Şizofreni Tanı Ölçütleri, Süre Kriteri ve Ayırıcı Tanı İlkeleri",
+   "pdfSayfalari": [
+    17,
+    20
+   ],
+   "sourcePdf": {
+    "startPage": 17,
+    "endPage": 20
+   },
+   "synthesisNarrative": "DSM-5 kılavuzuna göre şizofreni tanısı için belirti ve süre ölçütlerinin eksiksiz karşılanması zorunludur.\n\n- **Ölçüt A (Aktif Dönem):** Bir aylık sürenin önemli bir kesiminde şu beş belirtiden en az ikisi bulunmalıdır: Sanrılar, varsanılar, darmadağın konuşma, ileri derecede dağınık veya katatonik davranış ve negatif belirtiler. Bu iki belirtiden **en az biri mutlaka ilk üç maddeden biri** (sanrı, varsanı ya da dezorganize konuşma) olmak zorundadır.\n- **Ölçüt B ve C (Süre ve İşlevsellik):** İşlevsellik düzeyinde belirgin düşüş olmalı ve süregiden hastalık bulguları **en az altı ay** sürmelidir (bu sürenin en az bir ayı Ölçüt A dönemini içermelidir).\n- **Ayırıcı Tanı:** Genel tıbbi durumlar (temporal lob epilepsisi, otoimmün ensefalit, nörosifiliz, SLE, B12 eksikliği) ve madde kullanımı (amfetamin, kokain, fensiklidin) mutlaka dışlanmalıdır.\n\n> [!IMPORTANT]\n> Süre 6 aydan kısa ise şizofreni tanısı konulamaz; tanı için en az 6 aylık hastalık süreci ve en az bir aylık aktif dönem şarttır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "DSM-5 şizofreni tanı ölçütlerine göre Ölçüt A için aşağıdakilerden hangisi zorunlu bir kuraldır?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Belirlenen en az iki belirtiden en az biri sanrı, varsanı veya darmadağın konuşmadan biri olmalıdır.",
+       "isCorrect": true,
+       "explanation": "Doğru. DSM-5 tanı sisteminde keyfi kombinasyonları önlemek amacıyla, belirlenen en az iki belirtiden birinin mutlaka sanrı, varsanı veya darmadağın konuşmadan biri olması şart koşulmuştur."
+      },
+      {
+       "key": "B",
+       "text": "Tanı koyabilmek için hastada beş negatif belirtinin tamamının eksiksiz olarak bulunması gerekir.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Tanı koyabilmek için negatif belirtilerin tamamının bulunması zorunlu değildir; iki çekirdek belirtinin varlığı tanı ölçütünü karşılamak adına yeterli kabul edilir."
+      },
+      {
+       "key": "C",
+       "text": "Yalnızca katatonik davranış ve duygusal küntlük bulunması şizofreni A ölçütünü karşılamak için yeterlidir.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Yalnızca katatonik davranış ve duygusal küntlük olması tanı için yetersizdir; bu belirtilere sanrı, varsanı veya dezorganize konuşmadan en az birinin eşlik etmesi zorunludur."
+      },
+      {
+       "key": "D",
+       "text": "Hastalık belirtilerinin toplamda bir haftayı geçmesi şizofreni kesin tanısı koymak için yeterlidir.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Belirtilerin bir hafta sürmesi şizofreni tanısı için kesinlikle yeterli değildir; DSM-5 tanı ölçütlerine göre süregiden hastalık bulgularının en az altı ay devam etmesi şarttır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "İşlevsellik düzeyinde belirgin düşüş olmalı ve süregiden hastalık bulguları en az altı ay sürmelidir.",
+     "maskedTerm": "en az altı ay",
+     "hint": "Hastalık tanısı koyabilmek için gereken asgari yarım yıllık süre eşiği."
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "21 yaşındaki üniversite öğrencisi 2 aydır garip sesler duyma, takip edildiği sanrıları ve dersleri aksatma şikayetleriyle getiriliyor. Tıbbi ve toksikolojik tetkikleri normaldir. Bu hastada tanısal süre yaklaşımı ne olmalıdır?",
+     "options": [
+      {
+       "text": "Aktif psikotik belirtiler olsa da toplam süre 6 ayı doldurmadığı için kesin şizofreni tanısı henüz konulamaz.",
+       "isCorrect": true,
+       "feedback": "Doğru klinik değerlendirme. Hastada aktif A kriteri psikotik belirtiler bulunsa bile süregiden toplam hastalık süresi altı ayı doldurmadığı için kesin şizofreni tanısı henüz konulamaz."
+      },
+      {
+       "text": "Sanrı ve varsanısı olduğu için süreye bakılmaksızın ilk vizitte ömür boyu şizofreni tanısı kesinleştirilmelidir.",
+       "isCorrect": false,
+       "feedback": "Hatalı tanısal yaklaşım. DSM-5 kriterlerinde tanımlanan altı aylık hastalık süresi kuralı tamamlanmadan hastaya kalıcı şizofreni teşhisi koymak tanı kılavuzu kurallarına aykırıdır."
+      },
+      {
+       "text": "İki aylık süre dolduğu için hasta doğrudan şizofreniden çıkarılıp kişilik bozukluğu olarak etiketlenmelidir.",
+       "isCorrect": false,
+       "feedback": "Yanlış değerlendirme. Hastada aktif sanrı ve varsanı gibi psikotik bulgular mevcuttur; bu nedenle tablo kişilik bozukluğu olarak değerlendirilemez ve izlemde şizofreniform bozukluk düşünülür."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "DSM-5 Ölçüt A maddeleri arasında yer alan ve tanı için en az birinin bulunması şart koşulan ilk 3 çekirdek belirti hangileridir?",
+     "answer": "Sanrılar, varsanılar ve darmadağın konuşmadır (bu üç belirtiden en az biri mutlaka bulunmalıdır)."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "DSM-5 Şizofreni Tanı ve Ayırıcı Tanı Kuralları",
+     "items": [
+      {
+       "text": "Tanı koymak için süregiden hastalık belirtilerinin en az 6 ay boyunca devam etmesi şarttır.",
+       "isLie": false,
+       "explanation": "Altı aylık süre kuralı şizofreniyi daha kısa süreli psikotik tablolardan ayıran temel ölçüttür."
+      },
+      {
+       "text": "Temporal lob epilepsisi ve madde kullanımı gibi organik nedenler şizofreni tanısından önce dışlanmalıdır.",
+       "isLie": false,
+       "explanation": "Genel tıbbi durumlara ve maddeye bağlı psikozlar ayırıcı tanıda öncelikle elenmelidir."
+      },
+      {
+       "text": "Yalnızca dağınık davranış ve duygusal küntlük olması, sanrı veya varsanı bulunmasa dahi tanı için yeterlidir.",
+       "isLie": true,
+       "explanation": "DSM-5 kuralına göre ilk üç belirtiden (sanrı, varsanı, dezorganize konuşma) en az biri zorunludur."
+      },
+      {
+       "text": "Hastalık başlangıcından sonra iş, okul veya kişilerarası işlevsellikte belirgin düşüş gözlenir.",
+       "isLie": false,
+       "explanation": "İşlevsellik kaybı DSM-5 Ölçüt B gereği tanı için aranan temel unsurdur."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 7,
+   "bolum": "3",
+   "title": "Klinik Görünüm: Pozitif Belirtiler ve Formal Düşünce Bozuklukları",
+   "pdfSayfalari": [
+    21,
+    23
+   ],
+   "sourcePdf": {
+    "startPage": 21,
+    "endPage": 23
+   },
+   "synthesisNarrative": "Şizofrenide klinik tablo, normal zihinsel işlevlerin abartılı, çarpık ve taşkın yansımaları olan **pozitif belirtiler** ile belirginleşir.\n\n- **Sanrılar (Hezeyanlar):** Gerçeğe aykırı, mantıklı tartışmayla değiştirilemeyen sarsılmaz yanlış inanışlardır. Perseküsyon (kötülük görme), referans (alınma), grandiyöz (büyüklük) ve bizar sanrılar sık izlenir.\n- **Varsanılar (Halüsinasyonlar):** Dış uyaran olmaksızın ortaya çıkan algılardır. Şizofrenide en sık **işitsel varsanılar** (birbiriyle konuşan, emir veren veya yorum yapan sesler) görülür.\n- **Pozitif Formel Düşünce Bozuklukları:** Düşüncenin akış ve yapısındaki bozulmalardır. Fikirlerin mantıksal bağdan koparak bir konudan diğerine kayması **raydan çıkma** (derailment), konuşmanın tamamen anlaşılmaz hale gelmesi enkoherans (kelime salatası), hedefe ulaşamayıp sapması teğetsellik olarak adlandırılır.\n- **Dezorganize Davranış:** Sosyal normlara uymayan amaçsız, garip ve öngörülemeyen motor hareketleri kapsar.\n\n> [!NOTE]\n> Pozitif formel düşünce bozuklukları düşüncenin içeriğini değil, mantıksal kurgulanma biçimini ve akış formunu etkileyen patolojilerdir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Şizofrenide konuşmanın mantıksal bağını yitirerek amaçlanan hedeften kopup başka bir konuya kayması hangi kavramla tanımlanır?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Raydan çıkma",
+       "isCorrect": true,
+       "explanation": "Doğru. Fikirlerin mantıksal bağlantısını yitirerek amaçlanan hedeften bütünüyle sapması ve alakasız konulara atlaması psikopatolojide raydan çıkma veya derailment olarak adlandırılır."
+      },
+      {
+       "key": "B",
+       "text": "Enkoherans",
+       "isCorrect": false,
+       "explanation": "Yanlış. Enkoherans sözcüklerin ve cümle parçalarının dil bilgisi kurallarına tamamen aykırı biçimde rastgele dizildiği ileri derecede anlaşılmaz kelime salatası tablosunu tanımlar."
+      },
+      {
+       "key": "C",
+       "text": "Aloji",
+       "isCorrect": false,
+       "explanation": "Yanlış. Aloji konuşma miktarının veya düşünce içeriğinin ileri derecede fakirleşmesi olup düşünce biçim bozukluklarından ziyade klasik negatif belirtiler kümesinde incelenen bir tablodur."
+      },
+      {
+       "key": "D",
+       "text": "Mutizm",
+       "isCorrect": false,
+       "explanation": "Yanlış. Mutizm hastanın konuşma yeteneği bulunmasına rağmen organik ya da psikolojik engeller nedeniyle hiç sözel yanıt vermemesi ve sessiz kalması durumunu ifade eder."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Fikirlerin mantıksal bağdan koparak bir konudan diğerine kayması raydan çıkma (derailment), konuşmanın tamamen anlaşılmaz hale gelmesi enkoherans (kelime salatası), hedefe ulaşamayıp sapması teğetsellik olarak adlandırılır.",
+     "maskedTerm": "raydan çıkma",
+     "hint": "Fikir zincirinin ana konudan alakasız başka bir mecraya sapması."
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Sanrı (Hezeyan)",
+     "rightTitle": "Varsanı (Halüsinasyon)",
+     "leftPoints": [
+      "Düşünce içeriğinde ortaya çıkan patolojik bir bozulmadır.",
+      "Gerçek dışı, mantıkla değiştirilemeyen sarsılmaz yanlış inanıştır.",
+      "Örnek: Kendisine gizli servislerin tuzak kurduğuna inanma."
+     ],
+     "rightPoints": [
+      "Algı alanında ortaya çıkan patolojik bir bozulmadır.",
+      "Dışarıda hiçbir fiziksel uyaran yokken algı deneyimi yaşanmasıdır.",
+      "Örnek: Odada kimse yokken gaipten fısıldayan sesler işitme."
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Düşünce Bozukluğu Türü",
+      "Klinik Tanım",
+      "Semptom Grubu"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Raydan Çıkma"
+        },
+        {
+         "text": "Konudan konuya mantıksal bağ olmadan atlama",
+         "isMasked": true,
+         "hint": "Fikirlerin birbirini izlemeksizin başka mecralara yönelmesi."
+        },
+        {
+         "text": "Pozitif düşünce biçim bozukluğu"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Enkoherans (Kelime Salatası)"
+        },
+        {
+         "text": "Sözcüklerin gramer ve anlam bütünlüğünün tamamen kaybolması"
+        },
+        {
+         "text": "Ağır dezorganizasyon belirtisi",
+         "isMasked": true,
+         "hint": "Cümle yapısının çözüldüğü ileri zihinsel dağınıklık hali."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Perseküsyon Sanrısı"
+        },
+        {
+         "text": "Kişinin kendisine kötülük yapılacağına dair sarsılmaz inancı",
+         "isMasked": true,
+         "hint": "Zarar görme ve izlenme kuşkusu."
+        },
+        {
+         "text": "Pozitif düşünce içerik bozukluğu"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Düşünce İçerik Bozuklukları (Sanrılar)",
+     "rightCategory": "Düşünce Biçim Bozuklukları (Formel Kusurlar)",
+     "cards": [
+      {
+       "text": "Televizyon spikerinin kendisine özel gizli mesajlar verdiğine inanmak",
+       "category": "left"
+      },
+      {
+       "text": "Konuşurken mantıksal hedefi kaybedip ilgisiz konulara sürüklenmek",
+       "category": "right"
+      },
+      {
+       "text": "Kendisini dünyayı kurtaracak seçilmiş büyük bir elçi ilan etmek",
+       "category": "left"
+      },
+      {
+       "text": "Cümle içinde sözcükleri tamamen anlamsız bir kelime salatasıyla dizmek",
+       "category": "right"
+      },
+      {
+       "text": "Komşularının yemeğine zehir koyarak kendisini öldürmek istediğini savunmak",
+       "category": "left"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 8,
+   "bolum": "3",
+   "title": "Klinik Görünüm: Negatif Belirtiler, Nörokognitif Kayıplar ve Silik Bulgular",
+   "pdfSayfalari": [
+    24,
+    27
+   ],
+   "sourcePdf": {
+    "startPage": 24,
+    "endPage": 27
+   },
+   "synthesisNarrative": "Negatif belirtiler, normalde var olan zihinsel ve duygusal işlevlerin azalması, zayıflaması veya kaybı ile karakterizedir ve kronik yeti yitiminin asıl sorumlusudur.\n\n- **Temel Negatif Belirtiler:**\n  * **Aloji:** Konuşma miktarının veya düşünce içeriğinin ileri derecede fakirleşmesi.\n  * **Duygusal Küntleşme:** Mimik, jest ve ses tonundaki duygusal dışavurumun silinmesi.\n  * **Avolusyon:** İstenç ve irade kaybı; amaca yönelik eylemleri başlatamama ve sürdürememe.\n  * **Anhedoni ve Asosyallik:** Zevk alamama ve sosyal ilişkilerden geri çekilme.\n- **Nörokognitif Bozukluk:** Yürütücü işlevler, çalışan bellek, soyutlama ve planlama becerilerinde belirgin kayıplar izlenir.\n- **Nörolojik Silik Bulgular:** Stereognozi ve grafestezi kusurları, denge bozuklukları ile yumuşak göz takibi hareketlerindeki sapmalar sık görülür. Hastaların büyük çoğunluğunda **içgörü eksikliği** mevcuttur.\n\n> [!IMPORTANT]\n> Negatif belirtiler ve bilişsel yıkım, pozitif belirtilere kıyasla hastanın uzun dönemli bağımsız yaşam yetisini ve mesleki işlevselliğini çok daha ağır biçimde kısıtlar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Şizofrenide konuşma miktarının ve düşünce içeriğinin belirgin şekilde fakirleşmesi hangi negatif belirtidir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Aloji",
+       "isCorrect": true,
+       "explanation": "Doğru. Aloji, hastanın düşünce akışındaki ve sözel ifadelerindeki belirgin kısıtlanmayı, konuşmanın miktar ve içerik yönünden ileri derecede fakirleşmesini tanımlayan temel negatif belirtidir."
+      },
+      {
+       "key": "B",
+       "text": "Avolusyon",
+       "isCorrect": false,
+       "explanation": "Yanlış. Avolusyon hastanın bir eylemi başlatma ve sürdürme yönündeki irade gücünün, istencinin zayıflamasını veya tamamen ortadan kalkmasını ifade eden bir negatif semptomdur."
+      },
+      {
+       "key": "C",
+       "text": "Anhedoni",
+       "isCorrect": false,
+       "explanation": "Yanlış. Anhedoni hastanın geçmişte keyif aldığı sosyal veya fiziksel etkinliklerden haz alamaması, zevk duyumsama yeteneğini tamamen yitirmesi tablosunu tanımlar."
+      },
+      {
+       "key": "D",
+       "text": "Apati",
+       "isCorrect": false,
+       "explanation": "Yanlış. Apati hastanın çevresinde olup biten olaylara karşı derin bir ilgisizlik, duygusal kayıtsızlık ve genel tepkisizlik sergilemesi halini ifade eden klinik bulgudur."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Avolusyon: İstenç ve irade kaybı; amaca yönelik eylemleri başlatamama ve sürdürememe.",
+     "maskedTerm": "Avolusyon",
+     "hint": "Kişinin istek duyup bir işe girişme iradesinin sönmesini anlatan tıbbi kavram."
+    },
+    {
+     "type": "causal_chain",
+     "topic": "Prefrontal Dopamin Eksikliği ve Negatif Semptom Oluşum Basamakları",
+     "steps": [
+      "1. Yolak Hipofonksiyonu: Mezokortikal dopaminerjik projeksiyonların aktivitesinin azalması.",
+      "2. Kortikal Yavaşlama: Dorsolateral prefrontal korteks nöronal devrelerinde metabolik hipofrontalite gelişmesi.",
+      "3. Bilişsel Yavaşlama: Çalışan bellek ve yürütücü planlama işlevlerinin aksamaya başlaması.",
+      "4. İstenç Kaybı: Motivasyonel nöral ağların körelmesiyle avolusyon ve apati tablosunun yerleşmesi.",
+      "5. Sosyal Çekilme: Aloji ve duygusal küntleşmenin eklenmesiyle kalıcı yeti yitimi oluşması."
+     ]
+    },
+    {
+     "type": "feature_bidding",
+     "optionA": "Pozitif Belirti Boyutu",
+     "optionB": "Negatif Belirti Boyutu",
+     "rounds": [
+      {
+       "feature": "İşitsel varsanılar ve kötülük görme sanrıları sergilemek",
+       "correct": "A"
+      },
+      {
+       "feature": "Aloji, avolusyon ve mimiklerde donuklukla giden duygusal küntleşme",
+       "correct": "B"
+      },
+      {
+       "feature": "Normal zihinsel işlevlerin kaybı sonucu uzun vadeli yeti yitimine yol açmak",
+       "correct": "B"
+      }
+     ]
+    },
+    {
+     "type": "venn_grid",
+     "labelA": "Aloji",
+     "labelB": "Avolusyon",
+     "items": [
+      {
+       "criterion": "Sözel ifadenin ve konuşma miktarının ileri derecede fakirleşmesi.",
+       "correct": "A"
+      },
+      {
+       "criterion": "İrade ve istenç eksikliği nedeniyle bir eyleme başlayamamak.",
+       "correct": "B"
+      },
+      {
+       "criterion": "Şizofrenide uzun süreli sosyal yeti yitimine yol açan negatif belirti olmak.",
+       "correct": "both"
+      },
+      {
+       "criterion": "Mezolimbik sistemdeki dopamin fazlalığı sonucu akut alevlenmeyle belirmek.",
+       "correct": "neither"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 9,
+   "bolum": "4",
+   "title": "Şizofrenide Klinik Evreler ve Prognozu Belirleyen Faktörler",
+   "pdfSayfalari": [
+    28,
+    30
+   ],
+   "sourcePdf": {
+    "startPage": 28,
+    "endPage": 30
+   },
+   "synthesisNarrative": "Şizofreninin doğal seyri belirli klinik evrelerden oluşur ve hastalığın sonlanımı bireysel faktörlere göre büyük değişkenlik gösterir.\n\n- **Klinik Evreler:**\n  * **Prodromal Dönem:** Sosyal geri çekilme, işlevsellikte düşüş ve silik tuhaf düşüncelerle sinsi başlayan evre.\n  * **Aktif Dönem:** Sanrı, varsanı ve dağınık davranışların alevlendiği psikotik tablo.\n  * **Rezidüel Dönem:** Pozitif belirtilerin hafiflediği ancak negatif belirtiler ve bilişsel kayıpların sürdüğü kronik dönem.\n- **İyi Prognoz Göstergeleri:** Geç ve ileri başlangıç yaşı, kadın cinsiyet, akut ve belirgin bir tetikleyici stresle başlangıç, iyi hastalık öncesi (premorbid) uyum, evli olma, duygudurum belirtilerinin eşlik etmesi ve pozitif belirtilerin baskınlığı.\n- **Kötü Prognoz Göstergeleri:** Genç yaşta sinsi başlangıç, erkek cinsiyet, bekar olma, negatif belirtilerin baskınlığı, ailede şizofreni öyküsü ve beyinde ventrikülomegali varlığı.\n\n> [!NOTE]\n> Gelişmekte olan ülkelerde yaşayan hastalarda sosyal destek ağlarının güçlü olması nedeniyle prognoz gelişmiş ülkelere kıyasla daha yüz güldürücüdür.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Şizofrenide klinik gidiş ve prognozu belirleyen faktörler açısından aşağıdakilerden hangisi iyi prognoz göstergesidir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Belirgin bir tetikleyici stresör varlığında akut başlangıç ve kadın cinsiyet",
+       "isCorrect": true,
+       "explanation": "Doğru. Belirgin bir psikososyal stresör eşliğinde aniden patlak veren akut başlangıç ve kadın cinsiyet, antipsikotik tedaviye iyi yanıt ve olumlu klinik prognoz ile güçlü ilişki gösterir."
+      },
+      {
+       "key": "B",
+       "text": "Genç yaşta sinsice başlayan silik negatif belirtiler ve erkek cinsiyet",
+       "isCorrect": false,
+       "explanation": "Yanlış. Genç yaşta sinsi ve nedensiz biçimde başlayan, negatif semptomların belirgin olduğu seyir erkek hastalarda en olumsuz prognoz göstergeleri arasında yer alır."
+      },
+      {
+       "key": "C",
+       "text": "Beyin tomografisinde belirgin ventrikülomegali ve kortikal atrofi saptanması",
+       "isCorrect": false,
+       "explanation": "Yanlış. Beyin görüntülemesinde ventrikülomegali ve kortikal sulkuslarda genişleme saptanması, nöronal kayba ve antipsikotik tedaviye zayıf yanıta işaret eden kötü prognoz bulgusudur."
+      },
+      {
+       "key": "D",
+       "text": "Hastalık öncesinde antisosyal özellikler sergilemek ve hiç evlenmemiş olmak",
+       "isCorrect": false,
+       "explanation": "Yanlış. Hastalık öncesi sosyal uyumun zayıf olması ve izole yaşam tarzı, hastalığın kronikleşme riskini artıran ve tedaviden faydalanımı kısıtlayan olumsuz prognostik faktörlerdir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Prodromal Dönem: Sosyal geri çekilme, işlevsellikte düşüş ve silik tuhaf düşüncelerle sinsi başlayan evre.",
+     "maskedTerm": "Prodromal Dönem",
+     "hint": "Aktif alevlenmeden önce gelen sinsi öncül evre."
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "İyi Prognoz Özellikleri",
+     "rightTitle": "Kötü Prognoz Özellikleri",
+     "leftPoints": [
+      "Geç başlangıç yaşı ve kadın cinsiyet görülmesi.",
+      "Akut başlangıç ve tetikleyici bir stres faktörünün varlığı.",
+      "Duygudurum belirtilerinin ve pozitif semptomların baskın olması."
+     ],
+     "rightPoints": [
+      "Erken başlangıç yaşı ve erkek cinsiyet görülmesi.",
+      "Sinsi başlangıç ve belirgin bir tetikleyici etkenin bulunmaması.",
+      "Negatif belirtilerin baskınlığı ve ventrikülomegali saptanması."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Şizofrenide Seyir ve Prognoz Kriterleri",
+     "items": [
+      {
+       "text": "Hastalık tablosuna belirgin duygudurum belirtilerinin eşlik etmesi iyi prognoz işaretidir.",
+       "isLie": false,
+       "explanation": "Afektif belirtilerin varlığı daha dinamik ve tedaviye yanıt veren bir süreci yansıtır."
+      },
+      {
+       "text": "Erken yaşta sinsi başlangıç gösteren ve negatif belirtileri baskın olan erkeklerde prognoz daha iyidir.",
+       "isLie": true,
+       "explanation": "Genç yaş, sinsi başlangıç, erkek cinsiyet ve negatif semptomlar kötü prognoz göstergeleridir."
+      },
+      {
+       "text": "Gelişmekte olan ülkelerde şizofreninin gidişi gelişmiş ülkelere göre daha olumludur.",
+       "isLie": false,
+       "explanation": "Sosyal tolerans, aile desteği ve düşük damgalanma gelişmekte olan toplumlarda gidişi iyileştirir."
+      },
+      {
+       "text": "Prodromal dönem aktif psikotik alevlenme öncesindeki sinsi işlev kaybı evresidir.",
+       "isLie": false,
+       "explanation": "Prodrom evresi aylar sürebilen öncül silik belirtiler dönemini tanımlar."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Prognoz Parametresi",
+      "İyi Prognoz Özelliği",
+      "Kötü Prognoz Özelliği"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Başlangıç Şekli"
+        },
+        {
+         "text": "Akut ve stresle tetiklenen başlangıç",
+         "isMasked": true,
+         "hint": "Semptomların aniden ve dışsal bir baskıyla patlak vermesi."
+        },
+        {
+         "text": "Sinsi ve nedensiz başlangıç"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Semptom Profili"
+        },
+        {
+         "text": "Pozitif belirtilerin ön planda olması"
+        },
+        {
+         "text": "Negatif belirtilerin ve bilişsel kaybın baskınlığı",
+         "isMasked": true,
+         "hint": "Aloji, küntlük ve avolusyonun hâkim olduğu klinik profil."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Nöroanatomi"
+        },
+        {
+         "text": "Normal beyin yapısal görüntülemesi",
+         "isMasked": true,
+         "hint": "Radyolojide parankim kaybı saptanmaması durumu."
+        },
+        {
+         "text": "Genişlemiş ventriküller (ventrikülomegali)"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 10,
+   "bolum": "4",
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Tanı Kriterleri, Belirti Boyutları ve Prognoz",
+   "isCheckpoint": true,
+   "synthesisNarrative": "Bu kontrol noktasında DSM-5 şizofreni tanı kriterlerini, pozitif ve negatif belirti boyutlarını ve prognozu belirleyen faktörleri gözden geçiriyoruz.\n\n- **Tanı Kriterleri:** En az 6 aylık hastalık süresi ve bu sürenin en az bir ayında devam eden Ölçüt A belirtileri (sanrı, varsanı, dezorganize konuşma, dağınık davranış, negatif belirtiler) gereklidir. İlk üç belirtiden en az biri zorunludur.\n- **Belirti Kutupları:** Mezolimbik aşırılıktan kaynaklanan pozitif belirtiler (sanrılar, varsanılar, raydan çıkma) antipsikotiklere daha iyi yanıt verirken; prefrontal eksiklikten kaynaklanan negatif belirtiler (aloji, avolusyon, küntlük) kronik yıkımı belirler.\n- **Klinik Sonlanım:** Geç yaşta, akut stresle başlayan ve duygudurum belirtileri gösteren olgular iyi prognoza; erken yaşta, sinsi başlayan ve ventrikülomegali gösteren erkek hastalar kötü prognoza sahiptir.\n\n> [!NOTE]\n> Tanı koyarken sürenin en az 6 ay olması ve organik-toksik etkenlerin dışlanmış olması şarttır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Şizofrenide belirti boyutları ve prognostik özelliklerle ilgili hangisi doğrudur?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Pozitif belirtiler antipsikotik tedaviye daha hızlı yanıt verirken negatif belirtiler kalıcı yeti yitimini belirler.",
+       "isCorrect": true,
+       "explanation": "Doğru. Pozitif belirtiler mezolimbik D2 reseptör blokajı sağlayan ilaçlarla hızla gerilerken, negatif belirtiler prefrontal korteksteki yapısal hasarlar nedeniyle kronik yeti yitiminin temel belirleyicisidir."
+      },
+      {
+       "key": "B",
+       "text": "Tanı koyabilmek için hastanın en fazla 1 ay boyunca belirti göstermesi ve ardından tamamen iyileşmesi aranır.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Bir aylık süre yalnızca aktif dönemi tarifler; şizofreni tanısının kesinleşmesi için süregiden hastalık belirtilerinin en az altı ay boyunca devam etmesi şarttır."
+      },
+      {
+       "key": "C",
+       "text": "Kadınlarda erken yaşta başlayan sinsi seyirli hastalık tablosu en kötü prognozlu alt gruptur.",
+       "isCorrect": false,
+       "explanation": "Yanlış. En olumsuz prognoz kadınlarda değil, genç erkeklerde ergenlik döneminde sinsi başlayan ve negatif belirtilerle bilişsel yıkımın hâkim olduğu klinik olgularda izlenir."
+      },
+      {
+       "key": "D",
+       "text": "Sanrılar düşüncenin akış biçimini bozan, konuşmayı raydan çıkaran yapısal formel patolojilerdir.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Sanrılar düşüncenin mantıksal akış yapısını değil, doğrudan inanç ve düşünce içeriğini ilgilendiren gerçeğe aykırı sarsılmaz hezeyanlar olarak tanımlanır."
+      }
+     ]
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "28 yaşında evli bir kadın hasta, iş yerinde yaşadığı ağır bir iflasın ardından 7 aydır sesler duyma ve takip edilme sanrıları yaşamaktadır. Hastalık öncesi sosyal uyumu mükemmel olan bu olgunun prognozunu değerlendiriniz.",
+     "options": [
+      {
+       "text": "Kadın cinsiyet, evli olma, geç başlangıç ve tetikleyici stres varlığı nedeniyle prognozu olumludur.",
+       "isCorrect": true,
+       "feedback": "Doğru klinik sentez. İleri başlangıç yaşı, kadın cinsiyet, evli olma ve tetikleyici dışsal stres faktörünün varlığı şizofrenide olumlu gidiş ve tedavi başarısını destekleyen kritik etkenlerdir."
+      },
+      {
+       "text": "Süre 6 ayı geçtiği ve şizofreni tanısı aldığı için hiçbir zaman tedaviye yanıt vermez ve prognozu çok kötüdür.",
+       "isCorrect": false,
+       "feedback": "Hatalı bir çıkarım. Altı aylık süre şartı şizofreni tanı kriteridir; ancak prognostik özellikleri olumlu olan hastalarda antipsikotik tedaviyle yüksek oranda remisyon ve iyileşme sağlanabilir."
+      },
+      {
+       "text": "İşitsel varsanılar bulunduğu için hasta otomatik olarak en kötü prognoz grubuna dahil edilir.",
+       "isCorrect": false,
+       "feedback": "Yanlış klinik yaklaşım. Varsanı ve sanrı gibi pozitif belirtilerin bulunması tedaviye direnç anlamına gelmez; aksine pozitif belirtiler antipsikotik tedaviden en yüksek faydayı gören semptomlardır."
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "İyi Prognoz Göstergeleri",
+     "rightCategory": "Kötü Prognoz Göstergeleri",
+     "cards": [
+      {
+       "text": "Hastalığın ileri yaşta akut bir stresörle patlak vermesi",
+       "category": "left"
+      },
+      {
+       "text": "Ergenlikte sinsice başlayıp negatif belirtilerle ilerlemesi",
+       "category": "right"
+      },
+      {
+       "text": "Hastalık tablosuna belirgin duygudurum belirtilerinin eşlik etmesi",
+       "category": "left"
+      },
+      {
+       "text": "Nörogörüntülemede genişlemiş lateral ve üçüncü ventriküller saptanması",
+       "category": "right"
+      },
+      {
+       "text": "Hastalık öncesinde güçlü sosyal ilişkilere ve evliliğe sahip olunması",
+       "category": "left"
+      }
+     ]
+    },
+    {
+     "type": "feature_bidding",
+     "optionA": "Pozitif Formel Düşünce Bozukluğu",
+     "optionB": "Düşünce İçeriği Bozukluğu (Sanrı)",
+     "rounds": [
+      {
+       "feature": "Fikirlerin mantıksal bağlantısını yitirerek raydan çıkması (derailment)",
+       "correct": "A"
+      },
+      {
+       "feature": "Kişinin zehirleneceğine veya izlendiğine dair sarsılmaz yanlış inancı",
+       "correct": "B"
+      },
+      {
+       "feature": "Kelimelerin gramer bağımsız dizilerek kelime salatası oluşturması",
+       "correct": "A"
+      }
+     ]
+    },
+    {
+     "type": "venn_grid",
+     "labelA": "Şizofreni Ölçüt A",
+     "labelB": "Şizofreni Ölçüt C",
+     "items": [
+      {
+       "criterion": "Sanrı, varsanı ve darmadağın konuşma gibi en az iki belirtinin varlığı.",
+       "correct": "A"
+      },
+      {
+       "criterion": "Hastalığa ait süregiden belirtilerin en az altı ay boyunca devam etmesi.",
+       "correct": "B"
+      },
+      {
+       "criterion": "DSM-5 kılavuzunda şizofreni tanısı koyabilmek için eşzamanlı zorunlu olmak.",
+       "correct": "both"
+      },
+      {
+       "criterion": "Bir haftalık kısa süreli psikotik belirtilerin ardından tam iyileşmeyle sonlanmak.",
+       "correct": "neither"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 11,
+   "bolum": "4",
+   "title": "Şizofrenide Tedavi Yaklaşımları ve Katatoni Sendromu Ölçütleri",
+   "pdfSayfalari": [
+    31,
+    33
+   ],
+   "sourcePdf": {
+    "startPage": 31,
+    "endPage": 33
+   },
+   "synthesisNarrative": "Şizofreni tedavisinde biyolojik, psikolojik ve sosyal müdahaleler bir arada yürütülür; acil durumlarda hastaneye yatış gereklidir.\n\n- **Tedavi Bileşenleri:** Kendine veya çevreye zarar verme riski ile beslenme yetersizliğinde hastaneye yatış endikedir. Biyolojik tedavide antipsikotik ilaçlar temel taştır. İlaç direnci, ağır intihar riski ve katatoni varlığında **elektrokonvülsif terapi (EKT)** hayat kurtarıcıdır.\n- **Katatoni Sendromu:** Şizofreniye ya da başka bir tıbbi/psikiyatrik duruma eşlik edebilen psikomotor sendromdur. DSM-5'e göre şu 12 belirtiden **en az üçü** bulunmalıdır:\n  * **Stupor:** Çevreyle ilişki kurmama, hareketsizlik.\n  * **Katalepsi:** Yerçekimine karşı pasif pozisyon alma.\n  * **Balmumu Esnekliği:** Muayene edenin verdiği konuma hafif dirençle şekil alma.\n  * **Mutizm ve Negativizm:** Konuşmama ve yönergelere sebepsiz direnç gösterme.\n  * Postür alma, mannerizm (yapmacıklık), stereotipi, ajitasyon, grimas (yüz buruşturma), ekolali ve ekopraksi.\n\n> [!IMPORTANT]\n> Katatoni tablosunda antipsikotiklere bağlı nöroleptik malign sendrom riski artabileceğinden, benzodiazepinler ve elektrokonvülsif terapi (EKT) ilk seçenek hayat kurtarıcı tedavilerdir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Katatoni sendromu DSM-5 tanı ölçütlerine göre klinik tanı için aşağıdakilerden hangisi şarttır?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Tanımlanan 12 psikomotor belirtiden en az üçünün klinik görünümde baskın olması",
+       "isCorrect": true,
+       "explanation": "Doğru. DSM-5 kılavuzuna göre klinik tabloda katatoni sendromu tanısı koyabilmek için tanımlanan on iki karakteristik psikomotor belirtiden en az üçünün mevcudiyeti şarttır."
+      },
+      {
+       "key": "B",
+       "text": "Hastada sadece sözel tepkisizlik (mutizm) bulunması katatoni tanısı koymak için tek başına yeterlidir.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Tek başına mutizm bulunması tanı için yetersizdir; hastada katatoni teşhisi konulabilmesi için stupor, katalepsi gibi en az üç psikomotor belirtinin bir arada bulunması gerekir."
+      },
+      {
+       "key": "C",
+       "text": "Katatoni tanısı koyabilmek için hastanın mutlaka şizofreni dışında hiçbir hastalığının olmaması gerekir.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Katatoni sendromu yalnızca şizofreniye özgü bir tablo değildir; bipolar bozukluk, ağır depresyon ve sistemik enfeksiyonlar gibi pek çok tıbbi durumda da gelişebilir."
+      },
+      {
+       "key": "D",
+       "text": "Katatonide antipsikotik ilaç dozu en üst sınıra çıkarılmalı, EKT kesinlikle uygulanmamalıdır.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Katatonik hastalarda antipsikotikler nöroleptik malign sendrom riskini tetikleyebilir; bu olgularda elektrokonvülsif terapi ve benzodiazepinler birinci basamak hayat kurtarıcı tedavilerdir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Balmumu Esnekliği: Muayene edenin verdiği konuma hafif dirençle şekil alma.",
+     "maskedTerm": "Balmumu Esnekliği",
+     "hint": "Ekstremitelere verilen şeklin hafif plastik dirençle korunması durumu."
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "Katatoni tanısı alan ve 3 gündür yemeyen, içmeyen, balmumu esnekliği ve mutizm sergileyen 24 yaşındaki bir hastada acil serviste en uygun somatik tedavi yaklaşımı ne olmalıdır?",
+     "options": [
+      {
+       "text": "Hastayı stabilize etmek ve katatoniyi hızla çözmek için benzodiazepin veya EKT planlamak.",
+       "isCorrect": true,
+       "feedback": "Doğru acil karar. Yeme içmeyi kesen ve katatoniye giren hastada hızlı etki sağlayan parenteral benzodiazepin veya elektrokonvülsif terapi hayat kurtarıcı en etkin somatik tedavi seçenekleridir."
+      },
+      {
+       "text": "Klasik yüksek potensli tipik antipsikotik dozunu iki katına çıkararak intramüsküler enjekte etmek.",
+       "isCorrect": false,
+       "feedback": "Hatalı ve riskli girişim. Katatonik kriz tablosundaki hastaya yüksek doz tipik antipsikotik verilmesi ölümcül bir komplikasyon olan nöroleptik malign sendrom gelişme riskini ciddi oranda yükseltir."
+      },
+      {
+       "text": "Tıbbi müdahale yapmaksızın hastayı kendi haline bırakıp ayaktan psikoterapiye yönlendirmek.",
+       "isCorrect": false,
+       "feedback": "Tehlikeli ve kabul edilemez yaklaşım. Katatonik stupor ve mutizm yaşayan hasta beslenemediği için akut dehidratasyon ve venöz tromboemboli gibi ölümcül riskler taşır; acil medikal müdahale zorunludur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Katatoni sendromunda ekolali ve ekopraksi kavramları ne anlama gelir?",
+     "answer": "Ekolali başkasının söylediği sözleri aynen yankılama, ekopraksi ise başkasının yaptığı hareketleri istemsizce aynen taklit etmedir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Katatoni Sendromu ve Şizofrenide Tedavi",
+     "items": [
+      {
+       "text": "Katatoni sendromu tanısı için DSM-5 ölçütlerinden en az 3 belirtinin bulunması gereklidir.",
+       "isLie": false,
+       "explanation": "DSM-5 kılavuzunda 12 belirtiden en az 3 tanesinin mevcudiyeti tanı koşuludur."
+      },
+      {
+       "text": "Elektrokonvülsif terapi (EKT) katatonik durumlarda ve ilaca dirençli olgularda güvenle uygulanır.",
+       "isLie": false,
+       "explanation": "EKT katatoni ve dirençli psikozda mortaliteyi hızla düşüren bir yöntemdir."
+      },
+      {
+       "text": "Balmumu esnekliği gösteren hasta hekimin verdiği vücut pozisyonuna karşı aşırı şiddetli saldırgan direnç koyar.",
+       "isLie": true,
+       "explanation": "Balmumu esnekliğinde şiddetli direnç değil, mum gibi şekil almaya izin veren hafif bir plastik direnç vardır."
+      },
+      {
+       "text": "Negativizm hastanın dış uyaranlara ve yönergelere sebepsizce direnç göstermesi veya tersini yapmasıdır.",
+       "isLie": false,
+       "explanation": "Negativizm katatoninin temel negatif motor tepki paternlerinden biridir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 12,
+   "bolum": "5",
+   "title": "Diğer Psikotik Bozukluklar: Sanrılı Bozukluk ve Alt Tipleri",
+   "pdfSayfalari": [
+    34,
+    40
+   ],
+   "sourcePdf": {
+    "startPage": 34,
+    "endPage": 40
+   },
+   "synthesisNarrative": "Sanrılı Bozukluk, şizofreniden farklı olarak genel zihinsel işlevselliğin korunduğu ve sistematize sanrıların ön planda olduğu bir psikotik tablodur.\n\n- **Tanı Kriterleri:** En az **bir ay** süren bir veya daha fazla sanrı bulunmalıdır. Şizofreninin A ölçütü (varsanılar, dezorganize konuşma, negatif belirtiler) hiçbir zaman karşılanmamıştır. Sanrı dışındaki alanlarda hastanın davranışı acayip değildir ve belirgin yeti kaybı gelişmez.\n- **Alt Tipler:**\n  * **Erotomanik Tip (Clérambault Sendromu):** Üst statüdeki bir kişinin kendisine âşık olduğu sanrısı.\n  * **Büyüklük (Grandiyöz) Tipi:** Özel bir yetenek, güç veya keşfe sahip olma inancı.\n  * **Kıskançlık Tipi (Othello Sendromu):** Eşin aldattığına dair sarsılmaz hezeyan.\n  * **Paranoid / Persekütif Tip:** Kendisine kötülük yapılacağı, izlendiği sanrısı.\n  * **Somatik Tip:** Bedensel enfeksiyon, parazit veya şekil bozukluğu sanrısı.\n- **Savunma Mekanizmaları:** Yadsıma (inkâr), yansıtma ve karşıt tepki kurma baskındır.\n\n> [!NOTE]\n> Sanrılı bozuklukta varsanılar varsa bile belirgin değildir ve doğrudan sanrısal içerikle sınırlıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sanrılı bozuklukta yüksek statülü bir kişinin kendisine gizlice aşık olduğu hezeyanıyla seyreden alt tip hangisidir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Erotomanik tip (Clérambault sendromu)",
+       "isCorrect": true,
+       "explanation": "Doğru. Erotomanik tip sanrılı bozuklukta hasta, genellikle toplumda tanınan veya kendisinden üst mevkide bulunan bir şahsiyetin kendisine gizli bir tutkuyla aşık olduğuna sarsılmaz biçimde inanır."
+      },
+      {
+       "key": "B",
+       "text": "Kıskançlık tipi (Othello sendromu)",
+       "isCorrect": false,
+       "explanation": "Yanlış. Othello sendromu olarak bilinen kıskançlık tipinde hasta, hiçbir kanıtı olmamasına rağmen eşinin kendisini aldattığına dair sabit ve sistematize bir hezeyan taşır."
+      },
+      {
+       "key": "C",
+       "text": "Grandiyöz tip",
+       "isCorrect": false,
+       "explanation": "Yanlış. Grandiyöz tipte hasta üstün güçlere, büyük bir servete veya doğaüstü yeteneklere sahip olduğuna dair derin büyüklük sanrıları sergiler."
+      },
+      {
+       "key": "D",
+       "text": "Somatik tip",
+       "isCorrect": false,
+       "explanation": "Yanlış. Somatik tip sanrılı bozuklukta hasta bedeninde parazitler dolaştığı, organlarının koktuğu ya da şeklinin bozulduğu hezeyanlarına saplanmıştır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kıskançlık Tipi (Othello Sendromu): Eşin aldattığına dair sarsılmaz hezeyan.",
+     "maskedTerm": "Othello Sendromu",
+     "hint": "Shakespeare eserinden esinlenerek adlandırılan patolojik aldatılma hezeyanı."
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Şizofreni",
+     "rightTitle": "Sanrılı Bozukluk",
+     "leftPoints": [
+      "Genel işlevsellikte ve günlük yaşamda ağır yeti kaybı izlenir.",
+      "Sanrılar çoğu zaman bizar, yaygın ve dağınık niteliktedir.",
+      "Belirgin varsanılar, dezorganize konuşma ve negatif belirtiler eşlik eder."
+     ],
+     "rightPoints": [
+      "Genel işlevsellik korunmuştur, sanrı alanı dışında davranış olağandır.",
+      "Sanrılar genellikle bizar olmayan, tek konuya odaklı ve sistematizedir.",
+      "Şizofreni A ölçütü karşılanmaz; varsanılar ve negatif belirtiler görülmez."
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Sanrılı Bozukluk Alt Tipi",
+      "Temel Klinik İnanç",
+      "Eponim / Tanım"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Erotomanik Tip"
+        },
+        {
+         "text": "Yüksek statülü birinin kendisine âşık olduğu inancı",
+         "isMasked": true,
+         "hint": "Toplumda tanınan bir şahsiyetin gizli sevgi beslediği düşüncesi."
+        },
+        {
+         "text": "Clérambault sendromu"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Kıskançlık Tipi"
+        },
+        {
+         "text": "Eşinin kendisini aldattığına dair sarsılmaz sanrı"
+        },
+        {
+         "text": "Othello sendromu",
+         "isMasked": true,
+         "hint": "Sadakatsizlik hezeyanına verilen edebiyat kökenli özel ad."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Somatik Tip"
+        },
+        {
+         "text": "Bedeninde parazit, koku ya da ölümcül hastalık olduğu hezeyanı",
+         "isMasked": true,
+         "hint": "Organlarda böcek gezindiği veya çürüme bulunduğu inancı."
+        },
+        {
+         "text": "Fiziksel yakınma odaklı hezeyan"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Sanrılı Bozukluk Özellikleri",
+     "rightCategory": "Şizofreni Özellikleri",
+     "cards": [
+      {
+       "text": "Sanrı konusu haricinde genel işlevselliğin ve mesleki becerilerin korunması",
+       "category": "left"
+      },
+      {
+       "text": "Düşünce raydan çıkması, aloji ve küntlük gibi ağır dezorganizasyon",
+       "category": "right"
+      },
+      {
+       "text": "En az bir ay süren sistematize ve bizar olmayan tek bir sanrı odağı",
+       "category": "left"
+      },
+      {
+       "text": "Şizofreni A kriterlerini hiçbir zaman karşılamamış olmak",
+       "category": "left"
+      },
+      {
+       "text": "Erken yaşta başlayıp ventrikülomegali ile kronik yeti yitimine sürüklemek",
+       "category": "right"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 13,
+   "bolum": "5",
+   "title": "Paylaşılmış Psikotik Bozukluk (Folie à Deux) ve Klinik Özellikleri",
+   "pdfSayfalari": [
+    41,
+    42
+   ],
+   "sourcePdf": {
+    "startPage": 41,
+    "endPage": 42
+   },
+   "synthesisNarrative": "Paylaşılmış Psikotik Bozukluk (**folie à deux**), aralarında sıkı duygusal bağ bulunan ve dış dünyadan izole yaşayan iki veya daha fazla bireyin aynı sanrı sistemini paylaşmasıdır.\n\n- **Vaka Rolleri:** Tabloda genellikle bir **birincil (baskın/dominant)** vaka ve bir **ikincil (pasif/bağımlı)** vaka bulunur. Baskın birey asıl psikotik bozukluğa (genellikle şizofreni veya sanrılı bozukluk) sahip olup sanrıları üretir; pasif birey ise telkine yatkın, zekâ veya kişilik açısından bağımlı olup bu sanrıyı benimser.\n- **Sanrı İçeriği:** Sanrılar çoğunlukla persekütif (kötülük görme) ya da hipokondriak içeriklidir.\n- **Tedavi ve Yaklaşım:** Tedavideki **en kritik ve ilk basamak pasif bireyi baskın hastadan ayırmaktır**. Fiziksel ayrılma sağlandığında pasif bireyin sanrıları çoğu zaman ek ilaç gerektirmeksizin kendiliğinden kaybolur. Baskın hastaya ise antipsikotik tedavi başlanır.\n\n> [!IMPORTANT]\n> İkincil bireyde ayrılma sonrası sanrılar gerilemezse psikoterapi ve düşük doz antipsikotik tedavi gerekebilir; ancak ilk basamak daima fiziksel ayrılıktır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Paylaşılmış psikotik bozukluk (folie à deux) tablosunda ikincil (pasif) bireye yaklaşımda ilk ve en temel basamak nedir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Pasif bireyi baskın (dominant) bireyden derhal fiziksel olarak ayırmak",
+       "isCorrect": true,
+       "explanation": "Doğru. Folie à deux tablosunda ikincil birey bağımlı yapıda olduğu için, baskın vakanın telkin ortamından fiziksel olarak ayrıldığında sanrıları ek ilaç gerekmeksizin kendiliğinden kaybolur."
+      },
+      {
+       "key": "B",
+       "text": "Pasif bireye hemen yüksek doz antipsikotik enjeksiyonu ve acil EKT uygulamak",
+       "isCorrect": false,
+       "explanation": "Yanlış. İkincil konumdaki pasif bireye doğrudan yüksek doz ilaç vermek yerine, ilk aşamada sanrıyı üreten dominant kişiden fiziksel olarak uzaklaştırılması hedeflenmelidir."
+      },
+      {
+       "key": "C",
+       "text": "İki bireyi aynı hastane odasında birlikte yatırarak çift terapisi başlatmak",
+       "isCorrect": false,
+       "explanation": "Yanlış. İki hastayı aynı ortamda birlikte tutmak patolojik etkileşimi ve sanrısal pekiştirmeyi sürdüreceği için tedavi prensiplerine tamamen aykırıdır."
+      },
+      {
+       "key": "D",
+       "text": "Baskın bireyi taburcu edip pasif bireyi ömür boyu hastaneye kapatmak",
+       "isCorrect": false,
+       "explanation": "Yanlış. Asıl psikiyatrik hastalığı bulunan ve farmakoterapi gerektiren kişi dominant olan primer vakadır; bu nedenle baskın bireyin tedavisi kesinlikle ihmal edilemez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Paylaşılmış Psikotik Bozukluk (folie à deux), aralarında sıkı duygusal bağ bulunan ve dış dünyadan izole yaşayan iki veya daha fazla bireyin aynı sanrı sistemini paylaşmasıdır.",
+     "maskedTerm": "folie à deux",
+     "hint": "İki yakının aynı hezeyanı benimsemesini anlatan Fransızca kökenli tıp terimi."
+    },
+    {
+     "type": "causal_chain",
+     "topic": "Paylaşılmış Psikoz Gelişimi ve Ayrılma ile Tedavi Basamakları",
+     "steps": [
+      "1. İzole Ortam: İki yakının dış dünyadan ve toplumdan tamamen yalıtılmış bir yaşam kurması.",
+      "2. Sanrı Üretimi: Baskın (dominant) bireyde persekütif sanrıların şekillenmeye başlaması.",
+      "3. Telkin ve Kabul: Bağımlı ve pasif olan ikincil bireyin bu sanrı sistemini bütünüyle benimsemesi.",
+      "4. Fiziksel Ayrılma: Hekim müdahalesiyle pasif bireyin dominant kişiden uzaklaştırılması.",
+      "5. Kendiliğinden Düzelme: Etki kaynağından ayrılan pasif bireyde sanrıların sönmesi."
+     ]
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "Dış dünyadan kopuk yaşayan anne ve kızdan annenin uzaylıların kendilerini zehirleyeceğini söylediği, kızının da aynı hezeyana inandığı görülüyor. Muayenede annenin baskın ve şüpheci, kızın ise bağımlı olduğu anlaşılıyor. İlk yönetim adımı ne olmalıdır?",
+     "options": [
+      {
+       "text": "Kızı annesinden derhal ayırarak güvenli bir sosyal çevreye yerleştirmek ve anneyi psikiyatri servisine yatırmak.",
+       "isCorrect": true,
+       "feedback": "Doğru yönetim stratejisi. İkincil pasif bireyi baskın hastadan ayırmak sanrının kendiliğinden sönmesini sağlar; asıl hezeyanları üreten baskın anneye ise serviste antipsikotik tedavi başlanmalıdır."
+      },
+      {
+       "text": "Anne ve kızı ayırmadan aynı evde birlikte yaşamalarına izin verip sadece vitamin desteği önermek.",
+       "isCorrect": false,
+       "feedback": "Yetersiz ve hatalı tutum. Anne ve kızı aynı ortamda bırakmak sanrısal döngünün devam etmesine yol açar ve primer vakanın psikiyatrik tedavisini geciktirir."
+      },
+      {
+       "text": "Kıza yüksek doz depo antipsikotik başlayıp anneyi herhangi bir tedavi vermeksizin eve göndermek.",
+       "isCorrect": false,
+       "feedback": "Hatalı ve ters uygulama. Asıl primer psikotik bozukluğa sahip olan kişi annedir; dolayısıyla antipsikotik tedavi kıza değil öncelikle baskın anneye uygulanmalıdır."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Paylaşılmış Psikotik Bozukluk Klinik Özellikleri",
+     "items": [
+      {
+       "text": "Hastalar genellikle toplumdan izole ve birbirine bağımlı yaşayan akraba ya da eşlerdir.",
+       "isLie": false,
+       "explanation": "İzolasyon ve kapalı ilişki sistemi sanrının paylaşılmasını kolaylaştıran temel zemindir."
+      },
+      {
+       "text": "Pasif birey baskın şahıstan ayrıldığında sanrıları çoğu kez kendiliğinden geriler.",
+       "isLie": false,
+       "explanation": "Etki odağından uzaklaşan sekonder vakalarda hezeyanlar zamanla söner."
+      },
+      {
+       "text": "Hastalıkta sanrıları ilk üreten ve yayan kişi daima pasif ve bağımlı karakterdeki bireydir.",
+       "isLie": true,
+       "explanation": "Sanrıları üreten primer vaka dominant olandır; bağımlı kişi sadece bu sanrıyı telkinle kabul eder."
+      },
+      {
+       "text": "Sanrı içerikleri en sık kötülük görme (perseküsyon) veya bedensel hastalık temasını taşır.",
+       "isLie": false,
+       "explanation": "Persekütif ve hipokondriak temalar folie à deux olgularında en sık rastlanan içeriklerdir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 14,
+   "bolum": "6",
+   "title": "Şizoaffektif Bozukluk: Tanı Kriterleri ve 2 Hafta Kuralı",
+   "pdfSayfalari": [
+    43,
+    44
+   ],
+   "sourcePdf": {
+    "startPage": 43,
+    "endPage": 44
+   },
+   "synthesisNarrative": "Şizoaffektif bozukluk, klinik tablonun hem şizofreni hem de duygudurum bozukluğu (majör depresyon veya mani) ölçütlerini aynı anda taşıdığı karmaşık bir tablodur.\n\n- **Kritik Tanı Ölçütü (İki Hafta Kuralı):** Hastalığın ömür boyu süresi içinde, **belirgin duygudurum belirtileri olmaksızın en az iki hafta süren sanrı veya varsanıların** bulunması şarttır. Bu kural şizoaffektif bozukluğu psikotik özellikli duygudurum bozukluklarından kesin olarak ayırır.\n- **Ayırıcı Tanı:** Ataklar arasında tam iyilik hali olmamasıyla duygudurum bozukluklarından; psikotik belirtilerin üzerine ataklar halinde affektif dönemlerin eklenmesiyle şizofreniden ayrılır.\n- **Epidemiyoloji ve Seyir:** Toplumda yaygınlığı yaklaşık yüzde birdir ve kadınlarda daha sıktır. Genel prognozu şizofreniden daha iyi, ancak saf duygudurum bozukluklarından daha kötüdür.\n\n> [!IMPORTANT]\n> Psikotik belirtiler yalnızca mani veya depresyon atakları sırasında ortaya çıkıyorsa şizoaffektif bozukluk değil, psikotik özellikli duygudurum bozukluğu tanısı konur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Şizoaffektif bozukluğu psikotik özellikli duygudurum bozukluklarından ayıran en kritik DSM-5 kuralı hangisidir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Belirgin duygudurum belirtileri yokken en az iki hafta süren sanrı veya varsanıların bulunması",
+       "isCorrect": true,
+       "explanation": "Doğru. Şizoaffektif bozukluk tanısı koyabilmek için ömür boyu seyir içinde, duygudurum atağı bulunmaksızın en az iki hafta devam eden sanrı veya varsanıların varlığı zorunludur."
+      },
+      {
+       "key": "B",
+       "text": "Hastanın yaşam boyu yalnızca tek bir depresif dönem geçirmiş olması",
+       "isCorrect": false,
+       "explanation": "Yanlış. Hastanın yaşam boyu tek bir depresif atak geçirmesi tanı kriteri değildir; şizoaffektif bozukluk ataklar halinde tekrarlayan kronik bir klinik tablo sergiler."
+      },
+      {
+       "key": "C",
+       "text": "Sanrıların yalnızca manik coşku ve grandiyözite dönemlerinde ortaya çıkması",
+       "isCorrect": false,
+       "explanation": "Yanlış. Psikotik belirtiler yalnızca manik veya depresif atak sırasında görülüyorsa tanı şizoaffektif bozukluk değil, psikotik özellikli duygudurum bozukluğu olarak adlandırılır."
+      },
+      {
+       "key": "D",
+       "text": "Kadın cinsiyette erkeklere oranla on kat daha seyrek görülmesi",
+       "isCorrect": false,
+       "explanation": "Yanlış. Epidemiyolojik verilere göre şizoaffektif bozukluk erkeklere kıyasla kadın popülasyonunda daha sık saptanan bir psikiyatrik hastalıktır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Hastalığın ömür boyu süresi içinde, belirgin duygudurum belirtileri olmaksızın en az iki hafta süren sanrı veya varsanıların bulunması şarttır.",
+     "maskedTerm": "en az iki hafta",
+     "hint": "Duygudurum atağı olmaksızın hezeyanların sürmesi gereken asgari on dört günlük süre eşiği."
+    },
+    {
+     "type": "venn_grid",
+     "labelA": "Şizoaffektif Bozukluk",
+     "labelB": "Psikotik Özellikli Depresyon",
+     "items": [
+      {
+       "criterion": "Duygudurum belirtileri yokken en az 2 hafta tek başına süren sanrı veya varsanı bulunması.",
+       "correct": "A"
+      },
+      {
+       "criterion": "Psikotik belirtilerin yalnızca ağır çökkünlük dönemi sırasında ortaya çıkması.",
+       "correct": "B"
+      },
+      {
+       "criterion": "Klinik tabloda hem psikotik hem afektif semptom bileşenlerinin gözlenmesi.",
+       "correct": "both"
+      },
+      {
+       "criterion": "Hastalığın ömür boyu hiçbir medikal veya psikiyatrik tedavi gerektirmemesi.",
+       "correct": "neither"
+      }
+     ]
+    },
+    {
+     "type": "feature_bidding",
+     "optionA": "Şizofreni",
+     "optionB": "Şizoaffektif Bozukluk",
+     "rounds": [
+      {
+       "feature": "Klinik seyir boyunca belirgin mani veya majör depresyon dönemlerinin psikotik tabloya eşlik etmesi",
+       "correct": "B"
+      },
+      {
+       "feature": "Negatif belirtilerin ve bilişsel yıkımın daha derin, genel klinik prognozun daha kötü olması",
+       "correct": "A"
+      },
+      {
+       "feature": "Genel prognozunun saf duygudurum bozukluklarından kötü, şizofreniden ise daha iyi olması",
+       "correct": "B"
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Şizoaffektif bozukluk ile saf duygudurum bozuklukları ataklar arası dönem açısından nasıl ayırt edilir?",
+     "answer": "Duygudurum bozukluklarında ataklar arasında tam iyilik hali görülürken şizoaffektif bozuklukta ataklar arasında tam düzelme izlenmez."
+    }
+   ]
+  },
+  {
+   "slideNumber": 15,
+   "bolum": "6",
+   "title": "Süre Odaklı Psikotik Bozukluklar: Kısa Psikotik Bozukluk ve Şizofreniform Bozukluk",
+   "pdfSayfalari": [
+    45,
+    49
+   ],
+   "sourcePdf": {
+    "startPage": 45,
+    "endPage": 49
+   },
+   "synthesisNarrative": "Psikotik bozuklukların sınıflandırılmasında belirtilerin toplam süresi, klinik tablonun adlandırılmasında ve prognoz öngörüsünde temel belirleyicidir.\n\n- **Kısa Psikotik Bozukluk:** Belirtiler **en az bir gün, en çok bir ay (dört hafta)** sürer. Ani başlar ve çoğunlukla ağır bir psikososyal stresör tarafından tetiklenir. En belirgin özelliği, dönem sonlandığında hastanın hastalık öncesi işlevsellik düzeyine **tam olarak geri dönmesidir**. Tedavide gereğinde kısa süreli düşük doz antipsikotik verilir.\n- **Şizofreniform Bozukluk:** Belirtiler **en az bir ay sürer ancak altı aydan kısa sürede** sonlanır. Semptom profili şizofreni A ölçütüyle tamamen aynıdır; ancak işlevsellikteki bozulma şizofreni kadar derin olmayabilir.\n- **İzlem ve Dönüşüm:** Şizofreniform bozukluk tanısı alan hastaların yaklaşık üçte ikisi uzun süreli takipte altı ayı doldurarak şizofreniye dönüşür.\n\n> [!IMPORTANT]\n> Psikoz süresi 1 günden az ise tanı konmaz; 1 gün-1 ay arası Kısa Psikotik Bozukluk, 1-6 ay arası Şizofreniform Bozukluk, 6 ay ve üzeri ise Şizofreni adını alır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Psikotik belirtileri 2 aydır devam eden ve şizofreni A ölçütünü karşılayan bir hastada en olası tanı nedir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Şizofreniform bozukluk",
+       "isCorrect": true,
+       "explanation": "Doğru. Psikotik semptomların bir aydan uzun sürmesi ancak altı ayı doldurmamış olması tablonun şizofreniform bozukluk olarak adlandırılmasını sağlar."
+      },
+      {
+       "key": "B",
+       "text": "Kısa psikotik bozukluk",
+       "isCorrect": false,
+       "explanation": "Yanlış. Kısa psikotik bozuklukta hastalık tablosunun süresi en az bir gün ile en fazla bir ay arasında sınırlı kalmak zorundadır."
+      },
+      {
+       "key": "C",
+       "text": "Şizofreni",
+       "isCorrect": false,
+       "explanation": "Yanlış. Şizofreni tanısı koyabilmek için süregiden hastalık belirtilerinin ve işlev kaybının en az altı ay boyunca devam etmesi şarttır."
+      },
+      {
+       "key": "D",
+       "text": "Sanrılı bozukluk",
+       "isCorrect": false,
+       "explanation": "Yanlış. Sanrılı bozuklukta şizofreninin A tanı ölçütü karşılanmaz ve klinik tabloya varsanılar ile dezorganize konuşma kesinlikle eşlik etmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kısa Psikotik Bozukluk: Belirtiler en az bir gün, en çok bir ay (dört hafta) sürer.",
+     "maskedTerm": "Kısa Psikotik Bozukluk",
+     "hint": "Ani başlayıp dört haftayı aşmadan eski sağlıklı işlevselliğe tam dönülen akut tablo."
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Kısa Psikotik Bozukluk",
+     "rightTitle": "Şizofreniform Bozukluk",
+     "leftPoints": [
+      "Belirti süresi en az 1 gün ile en fazla 1 ay arasındadır.",
+      "Genellikle ağır ve ani bir psikososyal stresör tetikler.",
+      "Dönem sonunda hastalık öncesi işlevsellik düzeyine tam dönülür."
+     ],
+     "rightPoints": [
+      "Belirti süresi en az 1 ay ile 6 aydan kısa süre arasındadır.",
+      "Klinik tablo şizofreni A ölçütü belirtilerini tam karşılar.",
+      "Takipte hastaların yaklaşık üçte ikisi şizofreniye evrilir."
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Psikotik Bozukluk",
+      "Zorunlu Belirti Süresi",
+      "Hastalık Öncesi Düzeye Dönüş"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Kısa Psikotik Bozukluk"
+        },
+        {
+         "text": "1 gün ile 1 ay arasında",
+         "isMasked": true,
+         "hint": "Yirmi dört saatten başlayıp dört haftayı aşmayan zaman dilimi."
+        },
+        {
+         "text": "Tam düzelme ile tam geri dönüş var"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Şizofreniform Bozukluk"
+        },
+        {
+         "text": "1 ay ile 6 ay arasında"
+        },
+        {
+         "text": "Olguların üçte ikisinde şizofreniye dönüşüm",
+         "isMasked": true,
+         "hint": "Zamanla kronikleşip kalıcı tanıya evrilme eğilimi."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Şizofreni"
+        },
+        {
+         "text": "En az 6 ay ve üzeri süregiden belirti",
+         "isMasked": true,
+         "hint": "Kronik tanı koyabilmek için gereken asgari yarım yıllık süreç."
+        },
+        {
+         "text": "Çoğunlukla kalıcı yeti kaybı ve rezidüel seyir"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Kısa Psikotik Bozukluk Kriterleri",
+     "rightCategory": "Şizofreniform Bozukluk Kriterleri",
+     "cards": [
+      {
+       "text": "Belirtilerin 1 günden uzun sürüp en fazla 1 ay içinde tamamen sonlanması",
+       "category": "left"
+      },
+      {
+       "text": "Belirtilerin 1 aydan uzun sürüp 6 ayı doldurmadan devam etmesi",
+       "category": "right"
+      },
+      {
+       "text": "Dönem sona erdiğinde hastanın eski işlevselliğine eksiksiz geri dönmesi",
+       "category": "left"
+      },
+      {
+       "text": "İzlemde hastaların yaklaşık üçte ikisinin şizofreniye dönüşmesi",
+       "category": "right"
+      },
+      {
+       "text": "Genellikle akut bir travma veya ağır psikososyal stresörle patlak vermesi",
+       "category": "left"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 16,
+   "bolum": "6",
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Şizofrenik Bozukluklar",
+   "isGameFinale": true,
+   "synthesisNarrative": "Tebrikler! Şizofrenik Bozukluklar dersini başarıyla tamamladınız. Şimdi tüm etyolojik, nörobiyokimyasal, klinik ve tanısal kazanımları ders sonu oyunlarıyla pekiştirme zamanı!\n\n- **Oyun 1 (Kronolojik Sıralama):** Psikotik belirtilerin süresine dayalı tanı spektrumunu en kısadan en uzuna doğru diziniz.\n- **Oyun 2 (Sayısal Tahmin):** Her iki ebeveyni de şizofreni olan bir çocuğun yaşam boyu hastalanma risk yüzdesini tahmin ediniz.\n- **Oyun 3 (Mekanizma Bozumu):** Akut psikoz atağında güçlü bir postsinaptik D2 reseptör blokeri başlandığında sistemde ne değişeceğini belirleyiniz.\n- **Oyun 4 (Metin Düzeltme):** Şizoaffektif bozukluk ve folie à deux hakkındaki hatalı bilgileri tespit ederek düzeltiniz.\n\n> [!IMPORTANT]\n> Dört oyunu da eksiksiz tamamlayarak psikiyatri kliniğindeki tanısal ve tedavi yetkinliğinizi tescilleyiniz!",
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "prompt": "Psikoz spektrumundaki bozuklukları tanı için aranan hastalık süresine göre en kısadan en uzuna doğru sıralayınız.",
+     "steps": [
+      "1. Kısa Psikotik Bozukluk (1 gün ile 1 ay arasında süren tablo)",
+      "2. Sanrılı Bozukluk (En az 1 ay süren izole sanrılar)",
+      "3. Şizofreniform Bozukluk (1 ay ile 6 ay arasında süren psikotik belirtiler)",
+      "4. Şizofreni (Süregiden hastalık belirtilerinin en az 6 ay devam etmesi)"
+     ],
+     "explanation": "Psikotik tablolarda tanı süreye göre ayrılır: Kısa psikotik bozukluk 1 aya kadar, sanrılı bozukluk en az 1 ay, şizofreniform bozukluk 1-6 ay, şizofreni ise en az 6 aydır."
+    },
+    {
+     "type": "estimate_slider",
+     "prompt": "Hem annesi hem babası şizofreni tanısı almış bir bireyin yaşam boyu şizofreniye yakalanma riski yüzde kaçtır?",
+     "min": 0,
+     "max": 100,
+     "answer": 47,
+     "tolerance": 5,
+     "step": 1,
+     "explanation": "Genetik çalışmalara göre her iki ebeveyni şizofreni olan çocuklarda yaşam boyu hastalık riski yaklaşık yüzde 40-47 düzeyine ulaşır."
+    },
+    {
+     "type": "perturbation",
+     "scenario": "Akut pozitif psikotik belirtilerle başvuran şizofreni hastasına yüksek afiniteli D2 reseptör antagonisti antipsikotik başlanıyor.",
+     "parameters": [
+      {
+       "name": "Mezolimbik yolakta dopaminerjik nörotransmisyon aktivitesi",
+       "correct": "azalır",
+       "explanation": "Postsinaptik D2 reseptör blokajı ile mezolimbik aşırı aktivite engellenir ve sanrı-varsanılar yatışır."
+      },
+      {
+       "name": "Nigrostriatal yolakta ekstrapiramidal motor yan etki riski",
+       "correct": "artar",
+       "explanation": "Bazal ganglionlardaki D2 reseptörlerinin bloke edilmesi parkinsonizm ve distoni gibi ekstrapiramidal bulguları artırır."
+      },
+      {
+       "name": "Tuberoinfundibuler yolakta prolaktin salgılanma düzeyi",
+       "correct": "artar",
+       "explanation": "Dopamin prolaktin salgısını tonik olarak baskılar; D2 blokajı bu baskılayıcı etkiyi ortadan kaldırarak kanda prolaktin düzeyini yükseltir."
+      }
+     ]
+    },
+    {
+     "type": "fix_the_text",
+     "text": "Şizoaffektif bozukluk tanısı koyabilmek için belirgin duygudurum atağı olmaksızın en az iki gün süren psikotik belirti bulunmalıdır. Paylaşılmış psikozda ise ilk basamak pasif bireye yüksek doz antipsikotik başlamaktır.",
+     "errors": [
+      {
+       "wrong": "en az iki gün",
+       "correct": "en az iki hafta",
+       "options": [
+        "en az iki ay",
+        "en az altı ay",
+        "en az iki hafta"
+       ],
+       "explanation": "Şizoaffektif bozuklukta duygudurum belirtileri olmaksızın en az 2 hafta süren psikotik belirti olması şarttır."
+      },
+      {
+       "wrong": "yüksek doz antipsikotik başlamaktır",
+       "correct": "baskın bireyden ayırmaktır",
+       "options": [
+        "aynı odada tedavi etmektir",
+        "baskın bireyden ayırmaktır",
+        "hemen EKT uygulamaktır"
+       ],
+       "explanation": "Paylaşılmış psikozda ilk ve temel basamak pasif bireyi baskın kişiden fiziksel olarak ayırmaktır."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "deckId": "k2p-y25-k2-15-sizofrenik-bozukluklar",
+ "donem": "2025-2026",
+ "arsiv": true,
+ "committee": "donem3-kurul2",
+ "confidence": "high",
+ "totalSlides": 16,
+ "matchedPastQuestionsCount": 16,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}
