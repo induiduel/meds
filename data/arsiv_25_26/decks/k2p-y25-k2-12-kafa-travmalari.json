@@ -1,0 +1,2885 @@
+{
+ "id": "k2p-y25-k2-12-kafa-travmalari",
+ "deckId": "k2p-y25-k2-12-kafa-travmalari",
+ "title": "Kafa ve Omurilik Yaralanmaları",
+ "shortTitle": "Kafa Travmaları",
+ "courseCode": "k2-12",
+ "department": "Beyin ve Sinir Cerrahisi",
+ "discipline": "Beyin ve Sinir Cerrahisi",
+ "committee": "donem3-kurul2",
+ "instructor": "Doç. Dr. Aydın Sinan Apaydın",
+ "matchedNoteId": "y25-k2-12-kafa-travmalari",
+ "overview": "Kafa travmalarında epidemiyoloji, acil radyolojik değerlendirme endikasyonları, primer ve sekonder hasar mekanizmaları, epidural ve subdural hematomlar, kontüzyonlar, diffüz aksonal hasar ve kranial herniasyon sendromlarının patofizyolojik ve klinik yönetimi.",
+ "highYieldPearls": [
+  "📌 [SINAV SPOTU] Akut kanama bilgisayarlı tomografide hiperdens görülür; ancak şiddetli anemi (Hb < 8 g/dL) veya DIC tablosunda izodens veya hipodens kalabilir.",
+  "📌 [SINAV SPOTU] Epidural hematom en sık arteria meningea media yırtılmasına bağlıdır, bikonveks şekillidir ve kraniyal sütür hatlarını geçemez; swirl sign aktif kanamayı gösterir.",
+  "📌 [SINAV SPOTU] Subdural hematom köprü venlerinin yırtılmasıyla oluşur, kresentik şekillidir ve sütür hatlarını geçer; bir çocukta farklı evrelerde hematom saptanması çocuk istismarını düşündürür.",
+  "📌 [SINAV SPOTU] Diffüz aksonal hasar rotasyonel makaslama kuvvetleriyle oluşur; BT lezyonları göstermede yetersizdir, en duyarlı yöntem MRG'de T2 ve SWI sekanslarıdır.",
+  "📌 [SINAV SPOTU] Transtentorial (unkal) herniasyonda medial temporal lob tentorium çentiğine kayar; lezyon tarafında 3. sinir basısıyla midriyazis, PCA enfarktı ve mezensefalonda fatal Duret hemorajisi gelişir.",
+  "📌 [SINAV SPOTU] Serebellar tonsillerin foramen magnum hattından 5 mm'den fazla aşağıya uzanması tonsiller herniasyon tanısıdır ve medulla oblangata basısıyla solunum durmasına yol açar."
+ ],
+ "kazanimlar": [
+  "Kafa travmalarında acil bilgisayarlı tomografi endikasyonlarını ve kontrendikasyonlarını sayabilme",
+  "Primer ve sekonder kranioserebral hasar mekanizmalarını ayırt edebilme",
+  "Epidural ve subdural hematomların etyopatogenezini, anatomik sınırlarını ve radyolojik özelliklerini karşılaştırabilme",
+  "Diffüz aksonal hasarın biyomekanik mekanizmasını, predileksiyon alanlarını ve MRG bulgularını açıklayabilme",
+  "Supratentorial ve infratentorial herniasyon sendromlarının klinik, anatomik ve vasküler komplikasyonlarını tanımlayabilme"
+ ],
+ "matchedPastQuestionsCount": 13,
+ "sayfaHaritasi": "teyitli",
+ "slides": [
+  {
+   "slideNumber": 1,
+   "id": "k2p-y25-k2-12-kafa-travmalari-s01",
+   "title": "Kafa Travması: Epidemiyoloji ve Acil Radyolojik Değerlendirme",
+   "subtitle": "Epidemiyolojik dağılım, direkt grafilerin kısıtlılığı ve acil tomografi endikasyonları",
+   "badge": "İlk Değerlendirme",
+   "bolum": "1",
+   "pdfSayfalari": [
+    1,
+    11
+   ],
+   "kaynakSayfa": "Slayt 1-11",
+   "bilgi": "Kafa travmasında hızlı ve etkin radyolojik görüntüleme kranial hasarın hızla saptanması ve acil cerrahi kararı açısından hayatidir.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "synthesisNarrative": "Kafa travmaları otuz yaş altı popülasyonda ölüm ve kalıcı nörolojik sakatlığın en sık nedenidir; erkeklerde kadınlara göre iki ile üç kat daha fazla görülür.\n\n- **Etyolojik Nedenler:** Motorlu araç kazaları, yüksekten düşmeler ve ateşli silah yaralanmaları en sık karşılaşılan travma sebepleridir.\n- **Direkt Kafa Grafileri:** Travma hastalarında tanısal değeri oldukça sınırlıdır; kemik çatlağını gösterse dahi intrakraniyal hasarın derecesi hakkında bilgi veremez.\n- **Bilgisayarlı Tomografi (BT):** Hızlı çekim süresi ve kolay ulaşılabilirliği sayesinde akut kanama ve kemik kırıklarını saptamada acil serviste altın standarttır.\n- **Radyoopak Dansite:** Akut kanama tomografi kesitlerinde hiperdens olarak izlenir. Şiddetli anemi veya dissemine intravasküler koagülasyon varlığında akut kanama hiperdens görünmeyebilir.\n\n> [!IMPORTANT]\n> Bilinç kaybı, Glasgow Koma Skalası puanının on beşin altında olması, iki veya daha fazla kusma, nöbet, kafa tabanı kırığı bulguları, çökme kırıkları, kanama diyatezi ile iki yaş altı veya altmış yaş üstü hastalar acil bilgisayarlı tomografi endikasyonudur.",
+   "content": "Kafa travmaları otuz yaş altı popülasyonda ölüm ve kalıcı nörolojik sakatlığın en sık nedenidir; erkeklerde kadınlara göre iki ile üç kat daha fazla görülür.\n\n- **Etyolojik Nedenler:** Motorlu araç kazaları, yüksekten düşmeler ve ateşli silah yaralanmaları en sık karşılaşılan travma sebepleridir.\n- **Direkt Kafa Grafileri:** Travma hastalarında tanısal değeri oldukça sınırlıdır; kemik çatlağını gösterse dahi intrakraniyal hasarın derecesi hakkında bilgi veremez.\n- **Bilgisayarlı Tomografi (BT):** Hızlı çekim süresi ve kolay ulaşılabilirliği sayesinde akut kanama ve kemik kırıklarını saptamada acil serviste altın standarttır.\n- **Radyoopak Dansite:** Akut kanama tomografi kesitlerinde hiperdens olarak izlenir. Şiddetli anemi veya dissemine intravasküler koagülasyon varlığında akut kanama hiperdens görünmeyebilir.\n\n> [!IMPORTANT]\n> Bilinç kaybı, Glasgow Koma Skalası puanının on beşin altında olması, iki veya daha fazla kusma, nöbet, kafa tabanı kırığı bulguları, çökme kırıkları, kanama diyatezi ile iki yaş altı veya altmış yaş üstü hastalar acil bilgisayarlı tomografi endikasyonudur.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Epidemiyoloji",
+      "desc": "Otuz yaş altı genç popülasyonda ölüm ve kalıcı sakatlığın birincil nedenidir; erkeklerde 2-3 kat sıktır.",
+      "isKey": true
+     },
+     {
+      "title": "Görüntüleme Seçimi",
+      "desc": "Direkt grafiler intrakraniyal hasarı göstermede yetersizdir; acilde ilk basamak bilgisayarlı tomografidir.",
+      "isKey": true
+     },
+     {
+      "title": "Dansite İstisnası",
+      "desc": "Akut kanama hiperdenstir; fakat şiddetli anemi ve DIC varlığında izodens kalabilir.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Akut kanama bilgisayarlı tomografide hiperdens görülür; ancak şiddetli anemi (Hb < 8 g/dL) veya DIC tablosunda izodens veya hipodens kalabilir.",
+    "📌 [SINAV SPOTU] Kafa travmalı olgularda direkt grafilerin tanısal yeterliliği sınırlıdır; intrakraniyal hasarın derecesi hakkında bilgi vermez."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Hiperdens",
+     "explanation": "Bilgisayarlı tomografide dokuların veya taze kanamanın x-ışınlarını fazla soğurarak parlak beyaz görünmesi."
+    },
+    {
+     "term": "Hemotimpanum",
+     "explanation": "Kafa tabanı kırıklarında orta kulak boşluğunda kan toplanması ve kulak zarının mor-mavi renkte görülmesi."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-12-01-1",
+     "front": "Kafa travmalı hastada bilgisayarlı tomografide taze kanamanın hiperdens görünümünü maskeleyip izodens kalmasına yol açabilen iki hematolojik tablo nedir?",
+     "back": "Hemoglobin değerinin 8 g/dL altında olduğu şiddetli anemi ve dissemine intravasküler koagülasyon (DIC) tablosudur.",
+     "hint": "Kandaki oksijen taşıyıcı protein eksikliği ve yaygın pıhtılaşma bozukluğu.",
+     "category": "Radyoloji"
+    }
+   ],
+   "sourcePdf": {
+    "pdf": "meds_database_25_26/pdf/kurul2/y25-k2-12-kafa-travmalari.pdf",
+    "startPage": 1,
+    "endPage": 11
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Acil servise getirilen kafa travmalı bir hastada bilgisayarlı tomografide akut kanamanın hiperdens görünümünün silinmesine ve lezyonun parankimle benzer dansitede kalmasına yol açabilen klinik durum hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Hemoglobin düzeyinin sekiz gram bölü desilitrenin altına düştüğü şiddetli anemi varlığı",
+       "isCorrect": true,
+       "explanation": "Doğru. Bilgisayarlı tomografide akut kanamanın hiperdens görünmesi hemoglobin konsantrasyonuna bağlıdır; hemoglobin sekiz gramın altına düştüğünde veya yaygın pıhtılaşma bozukluğunda taze kan izodens görünebilir."
+      },
+      {
+       "key": "B",
+       "text": "Hastada eş zamanlı gelişen izole temporal kemik çatlağı ve lineer fraktür varlığı",
+       "isCorrect": false,
+       "explanation": "Kemik kırıkları tomografide kemik penceresinde doğrudan fraktür hattı olarak izlenir. Bu mekanik hasar taze kanamanın hemoglobin konsantrasyonunu ve x-ışını tutulumunu biyokimyasal olarak değiştirmez."
+      },
+      {
+       "key": "C",
+       "text": "Hastanın Glasgow Koma Skalası puanının on beş olarak tam ölçülmesi",
+       "isCorrect": false,
+       "explanation": "Bilinç durumunun açık olması klinik bir nörolojik muayene sonucudur. Bu klinik puanlama hematomun tomografi kesitlerindeki fiziksel radyoopak dansitesi üzerinde doğrudan bir etki oluşturmaz."
+      },
+      {
+       "key": "D",
+       "text": "Travmanın motorlu araç kazası yerine basit bir ev kazasıyla meydana gelmesi",
+       "isCorrect": false,
+       "explanation": "Travmanın mekanizması kraniyal dokuya aktarılan kinetik enerjiyi belirler. Pıhtı dansitesini ise travmanın tipi değil kan içerisindeki hemoglobin ve protein konsantrasyonu belirler."
+      },
+      {
+       "key": "E",
+       "text": "Hastada eşlik eden kafa tabanı kırığına bağlı kulaktan berrak sıvı gelmesi",
+       "isCorrect": false,
+       "explanation": "Kulaktan beyin omurilik sıvısı gelmesi otore olarak adlandırılan bir kafa tabanı kırığı bulgusudur. Bu akıntı intrakraniyal hematomun tomografideki parlak dansitesini düşürmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Şiddetli anemi veya dissemine intravasküler koagülasyon varlığında akut kanama hiperdens görünmeyebilir.",
+     "maskedTerm": "hiperdens",
+     "hint": "Normal koşullarda taze eritrositlerin tomografi kesitlerinde oluşturduğu parlak ve açık renkli radyoopak görünüm."
+    },
+    {
+     "type": "interactive_table",
+     "tableTitle": "Kafa Travmasında İlk Radyolojik Yöntemlerin Karşılaştırılması",
+     "tableHeaders": [
+      "Görüntüleme Yöntemi",
+      "Temel Avantajı",
+      "Başlıca Sınırlandırması"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Direkt Kafa Grafileri",
+         "isMasked": false
+        },
+        {
+         "text": "Kemik kırıklarını hızlı tarama",
+         "isMasked": false
+        },
+        {
+         "text": "İntrakraniyal hasarın derecesi hakkında bilgi vermez",
+         "isMasked": true,
+         "hint": "Kafatası boşluğundaki parankim lezyonlarını ve ödemi ayırt edememe kısıtlılığı."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Bilgisayarlı Tomografi (BT)",
+         "isMasked": false
+        },
+        {
+         "text": "Akut kanama ve kemik kırıklarını dakikalar içinde gösterme",
+         "isMasked": true,
+         "hint": "Taze hemoraji ve iskelet yaralanmalarını süratle aydınlatan tanısal güç."
+        },
+        {
+         "text": "Şiddetli anemi varlığında kanamanın izodens kalabilmesi",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Manyetik Rezonans (MRG)",
+         "isMasked": false
+        },
+        {
+         "text": "Parankimal mikroyaralanmaları ve aksonal hasarı gösterme",
+         "isMasked": false
+        },
+        {
+         "text": "Çekim süresinin uzunluğu ve acilde kısıtlı ulaşılabilirlik",
+         "isMasked": true,
+         "hint": "Zaman kaybına yol açan zahmetli protokol ve cihaz yokluğu."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Kafa Travmasında İlk Değerlendirme İlkeleri",
+     "items": [
+      {
+       "text": "Bilgisayarlı tomografide akut kanama kural olarak hiperdens izlenir; ancak derin anemide bu dansite düşebilir.",
+       "isLie": false,
+       "explanation": "Doğru. Taze hemoglobindeki demir ve protein yoğunluğu yüksek x-ışını tutulumu sağlayarak hiperdens görüntü oluşturur; ağır anemide ise dansite azalır."
+      },
+      {
+       "text": "Direkt kafa grafileri beyin parankim hasarının ve intrakraniyal kanamanın derecesini net biçimde ortaya koyar.",
+       "isLie": true,
+       "explanation": "Yalan. Direkt grafilerin intrakraniyal değerlendirmede yeterliliği oldukça sınırlıdır; parankimal zedelenme veya kanama derecesi hakkında bilgi veremez."
+      },
+      {
+       "text": "Bilinç kaybı, iki veya daha fazla kusma ve altmış yaş üstü olma acil bilgisayarlı tomografi endikasyonlarıdır.",
+       "isLie": false,
+       "explanation": "Doğru. Bu klinik kriterler kafa içi kanama veya kitle etkisi riskini belirgin şekilde artırdığı için acil tomografi çekilmesini zorunlu kılar."
+      },
+      {
+       "text": "Kafa travmaları otuz yaş altı genç popülasyonda ölüm ve kalıcı nörolojik sakatlığın en sık nedenidir.",
+       "isLie": false,
+       "explanation": "Doğru. Genç erişkinlerde motorlu araç kazaları ve travmalar mortalite ve morbiditenin ilk sırasında yer alır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Kafa travması geçiren bir hastada bilgisayarlı tomografide taze kanamanın hiperdens görünümünü maskeleyen iki hematolojik patoloji nedir?",
+     "answer": "Hemoglobin değerinin sekiz gramın altında kaldığı şiddetli anemi ve dissemine intravasküler koagülasyon tablosudur."
+    }
+   ]
+  },
+  {
+   "slideNumber": 2,
+   "id": "k2p-y25-k2-12-kafa-travmalari-s02",
+   "title": "Beyin Hasarı: Primer ve Sekonder Kranioserebral Hasar Mekanizmaları",
+   "subtitle": "Travma anındaki mekanik doku yıkımı ile sonradan gelişen fizyopatolojik süreçlerin ayrımı",
+   "badge": "Hasar Mekanizmaları",
+   "bolum": "1",
+   "pdfSayfalari": [
+    12,
+    14
+   ],
+   "kaynakSayfa": "Slayt 12-14",
+   "bilgi": "Primer hasar darbe anında gerçekleşir ve mekaniktir; sekonder hasar ise iskemi ve hücresel enerji kriziyle saatler içinde ilerler.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "synthesisNarrative": "Travmatik kranioserebral hasarlar travmanın kronolojisi ve patolojik mekanizmasına göre primer ve sekonder hasar olarak ikiye ayrılır.\n\n- **Primer Hasar:** Darbenin doğrudan mekanik kuvvetiyle travma anında aniden ortaya çıkan fiziksel hasarlardır. Skalp laserasyonları, kafatası kırıkları, ekstraserebral hemorajiler ve intraaksiyel parankim lezyonlarını kapsar.\n- **Ekstraserebral Kanamalar:** Epidural hematom, subdural hematom ve travmatik subaraknoid kanama primer ekstraaksiyal hasar örnekleridir.\n- **İntraaksiyel Primer Lezyonlar:** Kortikal kontüzyonlar, parankimal intraserebral hematomlar, beyin sapı hasarları ve koroid pleksus yaralanmaları travma anında oluşur.\n- **Sekonder Hasar:** Travma anından sonraki saatler ve günler içinde gelişen doku iskemisi, hücresel enerji tükenmesi, kafa içi basınç artışı ve serebral ödemdir.\n\n> [!NOTE]\n> Kraniyal travma yönetiminde tıbbi tedavinin ve yoğun bakım takibinin ana hedefi, mekanik primer hasarı onarmaktan ziyade gelişebilecek sekonder hücresel hasar zincirini ve doku iskemisini engellemektir.",
+   "content": "Travmatik kranioserebral hasarlar travmanın kronolojisi ve patolojik mekanizmasına göre primer ve sekonder hasar olarak ikiye ayrılır.\n\n- **Primer Hasar:** Darbenin doğrudan mekanik kuvvetiyle travma anında aniden ortaya çıkan fiziksel hasarlardır. Skalp laserasyonları, kafatası kırıkları, ekstraserebral hemorajiler ve intraaksiyel parankim lezyonlarını kapsar.\n- **Ekstraserebral Kanamalar:** Epidural hematom, subdural hematom ve travmatik subaraknoid kanama primer ekstraaksiyal hasar örnekleridir.\n- **İntraaksiyel Primer Lezyonlar:** Kortikal kontüzyonlar, parankimal intraserebral hematomlar, beyin sapı hasarları ve koroid pleksus yaralanmaları travma anında oluşur.\n- **Sekonder Hasar:** Travma anından sonraki saatler ve günler içinde gelişen doku iskemisi, hücresel enerji tükenmesi, kafa içi basınç artışı ve serebral ödemdir.\n\n> [!NOTE]\n> Kraniyal travma yönetiminde tıbbi tedavinin ve yoğun bakım takibinin ana hedefi, mekanik primer hasarı onarmaktan ziyade gelişebilecek sekonder hücresel hasar zincirini ve doku iskemisini engellemektir.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Primer Hasar Tanımı",
+      "desc": "Darbe anında doğrudan mekanik etkiyle oluşan kemik, zar ve parankim yaralanmalarıdır.",
+      "isKey": true
+     },
+     {
+      "title": "Hasar Spektrumu",
+      "desc": "Skalp lezyonları, kemik fraktürleri, epidural-subdural kanamalar ve kontüzyonlar primer hasarlardır.",
+      "isKey": true
+     },
+     {
+      "title": "Sekonder Hasar Hedefi",
+      "desc": "Saatler içinde gelişen iskemi, hücresel ödem ve KİBAS artışını engellemek yoğun bakımın temelidir.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Primer hasar travmanın direkt etkisiyle travma anında ortaya çıkar; skalp hematomu, kırıklar, ekstraserebral kanamalar ve kontüzyonları kapsar.",
+    "📌 [SINAV SPOTU] Sekonder hasar travmaya sekonder olarak travma sonrasında saatler ve günler içinde gelişen iskemi, ödem ve hücresel disfonksiyondur."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Primer Hasar",
+     "explanation": "Mekanik travma kuvvetinin kafatasına temas ettiği anda doğrudan oluşan yapısal doku yaralanması."
+    },
+    {
+     "term": "Sekonder Hasar",
+     "explanation": "Primer travmanın tetiklediği hipoperfüzyon, hücresel enerji krizi ve ödem sonucu sonradan gelişen hasar."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-12-02-1",
+     "front": "Travmatik kranioserebral yaralanmalarda primer hasar ile sekonder hasar arasındaki temel zamansal ve mekanistik fark nedir?",
+     "back": "Primer hasar travma anında doğrudan mekanik etkiyle oluşur; sekonder hasar ise travmadan sonra saatler içinde hücresel iskemi ve ödemle gelişir.",
+     "hint": "Darbe anında beliren doku yırtılması ile sonradan gelişen metabolik çöküş.",
+     "category": "Fizyopatoloji"
+    }
+   ],
+   "sourcePdf": {
+    "pdf": "meds_database_25_26/pdf/kurul2/y25-k2-12-kafa-travmalari.pdf",
+    "startPage": 12,
+    "endPage": 14
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kafa travması geçiren bir hastada kranioserebral hasar mekanizmaları değerlendirildiğinde, aşağıdakilerden hangisi doğrudan travma anında ortaya çıkan primer hasarlar arasında sınıflandırılır?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Mekanik darbe sonucu parankimde aniden gelişen kortikal kontüzyon",
+       "isCorrect": true,
+       "explanation": "Doğru. Kortikal kontüzyon darbenin doğrudan mekanik etkisiyle travma anında ortaya çıkan parankimal primer doku hasarı örneğidir."
+      },
+      {
+       "key": "B",
+       "text": "Travmadan saatler sonra gelişen hücresel adenozin trifosfat tükenmesi",
+       "isCorrect": false,
+       "explanation": "Hücresel enerji tükenmesi travma sonrası doku hipoperfüzyonuyla gelişen biyokimyasal bir süreçtir. Bu metabolik kriz darbe anında beliren primer hasar değil, sonradan ilerleyen sekonder hasardır."
+      },
+      {
+       "key": "C",
+       "text": "İskemik dokuda dakikalar içinde ilerleyen yaygın sitotoksik ödem tablosu",
+       "isCorrect": false,
+       "explanation": "Sitotoksik ödem hücresel membran pompalarının enerji yokluğunda bozulmasıyla suyun hücre içine dolmasıdır. Primer mekanik travmanın ardından gelişen bir sekonder hasar tablosudur."
+      },
+      {
+       "key": "D",
+       "text": "Doku perfüzyon basıncının düşmesiyle tetiklenen gecikmiş serebral iskemi",
+       "isCorrect": false,
+       "explanation": "Gecikmiş serebral iskemi mikrovasküler vazospazm ve kafa içi basınç artışı sonucu dokunun oksijensiz kalmasıdır. Travmayı izleyen saatler içinde beliren klasik bir sekonder hasardır."
+      },
+      {
+       "key": "E",
+       "text": "Kafa içi basıncının aşırı yükselmesine bağlı gelişen kompartman basısı",
+       "isCorrect": false,
+       "explanation": "Kafa içi basınç artışı ve kompartman basısı doku ödeminin ve yer kaplayan lezyonların zamanla büyümesiyle oluşur. Primer mekanik travmadan sonra gelişen bir sekonder süreçtir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Primer Hasar darbenin doğrudan mekanik kuvvetiyle travma anında aniden ortaya çıkan fiziksel hasarlardır.",
+     "maskedTerm": "travma anında",
+     "hint": "Mekanik darbenin kafatasına vurduğu ilk milisaniyelik zaman dilimi."
+    },
+    {
+     "type": "causal_chain",
+     "chainTitle": "Kafa Travmasında Sekonder Hasarın İlerleyiş Basamakları",
+     "steps": [
+      "1. Mekanik doku yaralanması: Kafatasına gelen primer darbe damarlarda ve parankimde mekanik zedelenme başlatır.",
+      "2. Mikrovasküler perfüzyon bozulması: Hasarlı damarlarda vazospazm ve mikrotrombüsler oluşarak bölgesel kan akımını düşürür.",
+      "3. Hücresel enerji krizi ve ödem: Oksijen azlığıyla iyon pompaları çöker, hücre içine su çekilerek ödem gelişir.",
+      "4. Sekonder hasarın derinleşmesi: Gelişen ödem doku basıncını artırır ve perfüzyonu daha da kısıtlayarak iskemiyi yaygınlaştırır."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Primer ve Sekonder Beyin Hasarı Özellikleri",
+     "items": [
+      {
+       "text": "Kafatasında oluşan kemik kırıkları ve epidural kanamalar doğrudan travma anında gelişen primer hasarlardır.",
+       "isLie": false,
+       "explanation": "Doğru. Kemik kırıkları ve ekstraserebral hematomlar mekanik darbenin anlık fiziksel sonucu olarak primer hasar grubundadır."
+      },
+      {
+       "text": "Travmadan saatler sonra gelişen hücresel enerji krizi ve doku iskemisi primer mekanik hasar kapsamında kabul edilir.",
+       "isLie": true,
+       "explanation": "Yalan. Travma sonrasında zaman içinde ortaya çıkan metabolik bozukluklar, iskemi ve ödem sekonder hasar sınıfına girer."
+      },
+      {
+       "text": "Kortikal kontüzyonlar ve intraserebral parankimal hematomlar intraaksiyel primer hasar örnekleridir.",
+       "isLie": false,
+       "explanation": "Doğru. Parankim içine veya yüzeyine doğrudan darbe anında olan kanamalı zedelenmeler intraaksiyel primer lezyonlardır."
+      },
+      {
+       "text": "Nöroşirürji yoğun bakım tedavisinin temel amacı sekonder hasar mekanizmalarını ve doku hipoperfüzyonunu önlemektir.",
+       "isLie": false,
+       "explanation": "Doğru. Primer hasar anlık mekanik olay olduğundan, medikal ve cerrahi tedavi sekonder iskemik hasarı durdurmaya odaklanır."
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "title": "Primer Hasar vs Sekonder Hasar Sınıflandırması",
+     "leftCategory": "Primer Hasar (Travma Anı)",
+     "rightCategory": "Sekonder Hasar (Sonradan Gelişen)",
+     "cards": [
+      {
+       "text": "Darbe anında oluşan skalp laserasyonu ve lineer kranyum kırığı",
+       "category": "left",
+       "explanation": "Mekanik darbenin etkisiyle travma anında oluşan kemik ve yumuşak doku hasarı primerdir."
+      },
+      {
+       "text": "Travmadan saatler sonra gelişen ilerleyici doku iskemisi ve enerji krizi",
+       "category": "right",
+       "explanation": "Primer hasarın ardından zamanla gelişen hücresel iskemi ve metabolik bozukluk sekonder hasardır."
+      },
+      {
+       "text": "Travma sırasında oluşan kortikal parankimal kontüzyon ve yırtılma",
+       "category": "left",
+       "explanation": "Doğrudan darbe anında beyin parankiminde beliren mekanik zedelenme primer hasardır."
+      },
+      {
+       "text": "Kafa içi basınç artışı sonucu doku perfüzyonunun kısıtlanması ve ödem",
+       "category": "right",
+       "explanation": "Basınç artışı ve hücresel ödem travmayı izleyen süreçte beliren sekonder hasardır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 3,
+   "id": "k2p-y25-k2-12-kafa-travmalari-s03",
+   "title": "Epidural Hematom: Etyopatogenez, Arteriyel Kanama ve Lucid Interval",
+   "subtitle": "İç tabula ile dura arasındaki yüksek basınçlı arter kanaması ve klasik bikonveks tomografi görünümü",
+   "badge": "Ekstraaksiyal Kanama",
+   "bolum": "2",
+   "pdfSayfalari": [
+    15,
+    24
+   ],
+   "kaynakSayfa": "Slayt 15-24",
+   "bilgi": "Epidural hematomda kanama iç tabula ile dura arasındadır; arteria meningea media yırtılmasına bağlı yüksek basınçlı bikonveks kanama oluşur.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "synthesisNarrative": "Epidural hematom kafatasının iç tabulası ile dura mater arasındaki potansiyel epidural mesafeye olan kanamadır.\n\n- **Etyoloji ve Damar:** Olguların yüzde doksanında neden temporal kemik skuamöz parçasındaki lineer kırıklardır. Kanamaların yüzde doksanı arteriyel kaynaklıdır ve en sık sorumlu damar foramen spinosumdan geçen arteria meningea mediadır.\n- **Radyolojik Görünüm:** Bilgisayarlı tomografide akut dönemde hiperdens, bikonveks veya mercek şekilli ekstraaksiyal bir koleksiyon olarak izlenir.\n- **Anatomik Sınırlar:** Dura mater kafatası iç yüzeyine sütür çizgilerinde periost olarak sıkıca yapışık olduğundan hematom kraniyal sütür hatlarını geçemez; falks serebrinin yapışma yerini ise geçebilir.\n- **Swirl Sign (Girdap Belirtisi):** Hiperdens hematom kitlesi içinde izlenen hipodens taze alanlar aktif kanamayı işaret eder.\n- **Klinik Seyir:** Hastaların bir kısmında darbe anındaki geçici bilinç kaybını, hematom genişleyene dek süren geçici bir iyilik dönemi yani lucid interval izler.\n\n> [!IMPORTANT]\n> Çocuklarda kafatası kemikleri oldukça elastiktir; bu nedenle çocuk yaş grubunda kemik kırığı oluşmadan da dural sıyrılmaya bağlı epidural hematom gelişebilir.",
+   "content": "Epidural hematom kafatasının iç tabulası ile dura mater arasındaki potansiyel epidural mesafeye olan kanamadır.\n\n- **Etyoloji ve Damar:** Olguların yüzde doksanında neden temporal kemik skuamöz parçasındaki lineer kırıklardır. Kanamaların yüzde doksanı arteriyel kaynaklıdır ve en sık sorumlu damar foramen spinosumdan geçen arteria meningea mediadır.\n- **Radyolojik Görünüm:** Bilgisayarlı tomografide akut dönemde hiperdens, bikonveks veya mercek şekilli ekstraaksiyal bir koleksiyon olarak izlenir.\n- **Anatomik Sınırlar:** Dura mater kafatası iç yüzeyine sütür çizgilerinde periost olarak sıkıca yapışık olduğundan hematom kraniyal sütür hatlarını geçemez; falks serebrinin yapışma yerini ise geçebilir.\n- **Swirl Sign (Girdap Belirtisi):** Hiperdens hematom kitlesi içinde izlenen hipodens taze alanlar aktif kanamayı işaret eder.\n- **Klinik Seyir:** Hastaların bir kısmında darbe anındaki geçici bilinç kaybını, hematom genişleyene dek süren geçici bir iyilik dönemi yani lucid interval izler.\n\n> [!IMPORTANT]\n> Çocuklarda kafatası kemikleri oldukça elastiktir; bu nedenle çocuk yaş grubunda kemik kırığı oluşmadan da dural sıyrılmaya bağlı epidural hematom gelişebilir.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Anatomik Boşluk",
+      "desc": "İç tabula ile dura mater arasındaki epidural potansiyel aralıkta gelişir.",
+      "isKey": true
+     },
+     {
+      "title": "Kanama Kaynağı",
+      "desc": "Temporal kırıklara bağlı arteria meningea media yırtılması en sık nedendir (%90).",
+      "isKey": true
+     },
+     {
+      "title": "Radyolojik Özellik",
+      "desc": "BT'de bikonveks görünür; sütür hatlarını geçemez, falks yapışma yerini geçebilir.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Epidural hematom en sık temporal kemik kırıklarında arteria meningea media yırtılması sonucu gelişir; BT'de hiperdens bikonveks şekillidir ve sütürleri geçmez.",
+    "📌 [SINAV SPOTU] Akut epidural hematom içinde izlenen düşük dansiteli alanlar (swirl sign) aktif ve devam eden kanamayı işaret eder.",
+    "📌 [SINAV SPOTU] Çocuklarda kafatası elastik yapıda olduğundan kemik kırığı eşlik etmeksizin de epidural hematom gelişebilir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Bikonveks",
+     "explanation": "Her iki yüzeyi dışa doğru bombeli, mercek şeklinde sınırlı koleksiyon görünümü."
+    },
+    {
+     "term": "Lucid Interval",
+     "explanation": "Kafa travması sonrası ilk baygınlığın ardından bilincin geçici olarak açıldığı aydınlık aralık dönemi."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-12-03-1",
+     "front": "Epidural hematomun bilgisayarlı tomografide kraniyal sütür çizgilerini geçememesinin anatomik nedeni nedir?",
+     "back": "Dura materin iç tabulaya kraniyal sütür hatları boyunca periost olarak sıkıca yapışık olmasıdır.",
+     "hint": "Duranın kemik çizgilerine sıkı fibröz tutunması.",
+     "category": "Anatomi"
+    }
+   ],
+   "sourcePdf": {
+    "pdf": "meds_database_25_26/pdf/kurul2/y25-k2-12-kafa-travmalari.pdf",
+    "startPage": 15,
+    "endPage": 24
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kafa travması sonrası çekilen kraniyal tomografide sağ temporal bölgede kraniyal sütür hatlarını aşmayan, iç tabulayı iterek mercek şeklinde hiperdens kitle oluşturan ve içinde hipodens odaklar (swirl sign) izlenen hastada en olası tanı ve kanama kaynağı hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Epidural hematom ve arteria meningea media yırtılması",
+       "isCorrect": true,
+       "explanation": "Doğru. Temporal kemik kırıkları arteria meningea mediayı yırtarak sütürleri geçmeyen bikonveks epidural hematom oluşturur; hipodens swirl sign aktif kanamayı kanıtlar."
+      },
+      {
+       "key": "B",
+       "text": "Primer beyin hasarı kapsamında gelişen derin parankimal kontüzyon",
+       "isCorrect": false,
+       "explanation": "Parankimal kontüzyonlar beyin parankim dokusu içinde oluşan peteşial doku hasarlarıdır. Kemik ile dura arasında mercek şeklinde sınırlı ekstraaksiyal kitle oluşturmaz."
+      },
+      {
+       "key": "C",
+       "text": "Kafatasının iç tabulası ile dural yaprak arasında yer alan vena kava süperior trombozu",
+       "isCorrect": false,
+       "explanation": "Vena kava süperior mediastende yer alan bir torasik ana damardır. Kraniyal boşlukta yer almaz ve kafatası içinde epidural hematom kaynağı olamaz."
+      },
+      {
+       "key": "D",
+       "text": "Serebral sulkusları dolduran yaygın travmatik pial kanama odağı",
+       "isCorrect": false,
+       "explanation": "Pial damarların kanaması subaraknoid mesafede yer alır ve sulkusları doldurur. Kemik iç tabulası altında bikonveks ekstraaksiyal koleksiyon şeklinde sınırlanmaz."
+      },
+      {
+       "key": "E",
+       "text": "İzole skalp hematomu ve galea aponevrotika altı sıvı birikimi",
+       "isCorrect": false,
+       "explanation": "Skalp hematomu kafatası kemiğinin dışındaki yumuşak doku katmanlarında gelişen bir lezyondur. Kraniyal kemiğin iç tabulası ile dura arasında kitle etkisi yapmaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Epidural hematom bilgisayarlı tomografide akut dönemde hiperdens bikonveks veya mercek şekilli ekstraaksiyal bir koleksiyon olarak izlenir.",
+     "maskedTerm": "bikonveks",
+     "hint": "İki yüzeyi de dışa doğru kavisli geometrik koleksiyon biçimi."
+    },
+    {
+     "type": "causal_chain",
+     "chainTitle": "Epidural Hematomda Patofizyolojik İlerleyiş",
+     "steps": [
+      "1. Temporal kemik kırığı: Temporal bölgeye gelen travma ince kemik dokuda lineer kırık oluşturur.",
+      "2. Arteria meningea media hasarı: Kırık hattı foramen spinosumdan gelen arteria meningea mediayı yırtar.",
+      "3. Dural sıyrılma ve hematom birikimi: Yüksek basınçlı arter kanı durayı iç tabuladan sıyırarak bikonveks koleksiyon yapar.",
+      "4. Lucid interval sonu ve kompresyon: Genişleyen hematom parankimi iterek kafa içi basıncını yükseltir ve ani koma tablosu başlatır."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Epidural Hematomun Temel Karakteristikleri",
+     "items": [
+      {
+       "text": "Epidural kanamaların yaklaşık yüzde doksanı arteriyel kaynaklıdır ve en sık temporal kemik kırıklarıyla birliktedir.",
+       "isLie": false,
+       "explanation": "Doğru. Arteria meningea media temporal kemik oluğunda ilerlediği için skuamöz kırıklarda kolayca yırtılır."
+      },
+      {
+       "text": "Dura mater kemiğe gevşek yapışık olduğu için epidural hematom kraniyal sütür hatlarını serbestçe aşarak tüm kubbeyi kaplar.",
+       "isLie": true,
+       "explanation": "Yalan. Dura mater sütür çizgilerinde periost olarak kemiğe sıkıca yapışıktır; bu nedenle epidural hematom sütür hatlarını geçemez."
+      },
+      {
+       "text": "Tomografide hematom içinde izlenen düşük dansiteli swirl sign alanları devam eden aktif kanamayı gösterir.",
+       "isLie": false,
+       "explanation": "Doğru. Pıhtılaşmamış taze kan hipodens görünür ve yüksek debili aktif kanamaya işaret eder."
+      },
+      {
+       "text": "Pediatrik hastalarda kafatasının elastik yapısı sayesinde kemik kırığı olmaksızın da dural sıyrılma ve hematom gelişebilir.",
+       "isLie": false,
+       "explanation": "Doğru. Çocuklarda kemik esnekliği darbeyi absorbe ederken duranın iç tabuladan ayrılmasına yol açabilir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Epidural hematomun bilgisayarlı tomografide dural refleksiyonlar açısından subdural hematomdan en önemli ayırt edici yapısal özelliği nedir?",
+     "answer": "Epidural hematomun kraniyal sütürleri geçememesine karşın falks serebrinin kemiğe yapışma yerini geçebilmesidir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 4,
+   "id": "k2p-y25-k2-12-kafa-travmalari-s04",
+   "title": "Epidural Hematomda Özel Tipler: Venöz EDH, Verteks Tutulumu ve Manyetik Rezonans",
+   "subtitle": "Dural venöz sinüs yırtıkları, posterior fossa yerleşimi ve manyetik rezonans intensite evreleri",
+   "badge": "Ekstraaksiyal Kanama",
+   "bolum": "2",
+   "pdfSayfalari": [
+    25,
+    29
+   ],
+   "kaynakSayfa": "Slayt 25-29",
+   "bilgi": "Venöz epidural hematomlar dural sinüs komşuluğunda ve posterior fossada daha yavaş gelişir; verteks lezyonları aksiyal BT'de kolay atlanabilir.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "synthesisNarrative": "Epidural hematomların yaklaşık yüzde onu venöz kaynaklıdır; bu durum dural venöz sinüslerin yapışma yerlerine yakın kırıklar veya vena meningea media yırtılması sonucu gelişir.\n\n- **Venöz EDH:** Düşük basınçlı venöz akım nedeniyle klinik tablo arteriyel kanamaya göre daha yavaş ve sinsi ilerler. Sıklıkla posterior fossa ve tentorium komşuluklarında yerleşir; çocuklarda daha sıktır ve kemik kırığı eşlik etmeyebilir.\n- **Verteks EDH:** Superior sagital sinüs yaralanması kaynaklıdır; tepe noktasında yerleştiği için rutin aksiyal tomografi kesitlerinde kolayca gözden kaçabilir ve koronal rekonstrüksiyon gerektirir.\n- **Pnömosefali:** Paranasal sinüs veya mastoid hücre kırıklarına sekonder olarak epidural koleksiyon içinde hava kabarcıkları izlenebilir.\n- **Manyetik Rezonans İntensitesi:** T1 ağırlıklı kesitlerde hematom akut dönemde izointens iken; subakut dönemde serbest methemoglobin nedeniyle en parlak sinyali verir.\n\n> [!NOTE]\n> Manyetik rezonans kesitlerinde parankim ile hematom arasında deplase olan hipointens dura mater yaprağının seçilmesi lezyonun ekstraaksiyal yerleşimini kesinleştirir.",
+   "content": "Epidural hematomların yaklaşık yüzde onu venöz kaynaklıdır; bu durum dural venöz sinüslerin yapışma yerlerine yakın kırıklar veya vena meningea media yırtılması sonucu gelişir.\n\n- **Venöz EDH:** Düşük basınçlı venöz akım nedeniyle klinik tablo arteriyel kanamaya göre daha yavaş ve sinsi ilerler. Sıklıkla posterior fossa ve tentorium komşuluklarında yerleşir; çocuklarda daha sıktır ve kemik kırığı eşlik etmeyebilir.\n- **Verteks EDH:** Superior sagital sinüs yaralanması kaynaklıdır; tepe noktasında yerleştiği için rutin aksiyal tomografi kesitlerinde kolayca gözden kaçabilir ve koronal rekonstrüksiyon gerektirir.\n- **Pnömosefali:** Paranasal sinüs veya mastoid hücre kırıklarına sekonder olarak epidural koleksiyon içinde hava kabarcıkları izlenebilir.\n- **Manyetik Rezonans İntensitesi:** T1 ağırlıklı kesitlerde hematom akut dönemde izointens iken; subakut dönemde serbest methemoglobin nedeniyle en parlak sinyali verir.\n\n> [!NOTE]\n> Manyetik rezonans kesitlerinde parankim ile hematom arasında deplase olan hipointens dura mater yaprağının seçilmesi lezyonun ekstraaksiyal yerleşimini kesinleştirir.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Venöz Kaynak",
+      "desc": "Dural sinüs veya ven yırtılmalarına bağlıdır (%10); sıklıkla posterior fossada yerleşir.",
+      "isKey": true
+     },
+     {
+      "title": "Verteks Tutulumu",
+      "desc": "Superior sagital sinüs kaynaklıdır; aksiyal BT'de atlanabilir, koronal kesit şarttır.",
+      "isKey": true
+     },
+     {
+      "title": "MRG Sinyali",
+      "desc": "Subakut evrede methemoglobin nedeniyle T1'de en parlak sinyal düzeyine ulaşır.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Venöz epidural hematomlar sıklıkla posterior fossada yerleşir; çocuklarda daha sıktır ve kırık eşlik etmeyebilir.",
+    "📌 [SINAV SPOTU] Verteks epidural hematomları aksiyal tomografi kesitlerinde tepe noktasında kaldığı için atlanabilir; tanıda koronal kesit veya MRG gereklidir.",
+    "📌 [SINAV SPOTU] Epidural hematom manyetik rezonans T1 ağırlıklı kesitlerde subakut dönemde en parlak sinyali verir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Pnömosefali",
+     "explanation": "Kafatası sinüs kırıklarına bağlı olarak kranial kavite içine hava girmesi ve birikmesi."
+    },
+    {
+     "term": "Methemoglobin",
+     "explanation": "Hematom içinde hemoglobinin oksitlenmesiyle oluşan ve subakut evrede T1 MRG kesitlerinde parlak hiperintens sinyal veren kan yıkım ürünü."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-12-04-1",
+     "front": "Manyetik rezonans görüntülemede epidural hematomun ekstraaksiyal yerleşimini kesinleştiren anatomik belirteç nedir?",
+     "back": "Kafatasının iç tabulasından ayrılarak parankime doğru itilen hipointens (siyah) dura mater çizgisidir.",
+     "hint": "Beyin ile hematom arasında yer değiştiren kalın fibröz dural kılıf.",
+     "category": "Radyoloji"
+    }
+   ],
+   "sourcePdf": {
+    "pdf": "meds_database_25_26/pdf/kurul2/y25-k2-12-kafa-travmalari.pdf",
+    "startPage": 25,
+    "endPage": 29
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kafa travması geçiren bir olguda posterior fossada yerleşen, dural sinüs yapışma yerindeki kırığa bağlı gelişen ve arteriyel tipe kıyasla klinik belirtileri çok daha sinsi ilerleyen venöz epidural hematom için aşağıdakilerden hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Venöz sinüs yırtığına bağlıdır ve çocuklarda kemik kırığı eşlik etmeksizin de gelişebilir",
+       "isCorrect": true,
+       "explanation": "Doğru. Venöz epidural hematomlar dural sinüs veya ven yırtılmasından kaynaklanır; pediatrik olgularda esnek kemik nedeniyle kırık olmadan da görülebilir."
+      },
+      {
+       "key": "B",
+       "text": "Aksiyal tomografi kesitlerinde en kolay saptanan ve koronal kesite ihtiyaç duymayan tek lezyondur",
+       "isCorrect": false,
+       "explanation": "Özellikle verteks ve posterior fossa yerleşimli lezyonlar aksiyal düzlemde kranyum tepe noktası ile tabanında gizlenebilir. Bu nedenle koronal ve sagital rekonstrüksiyon gerekir."
+      },
+      {
+       "key": "C",
+       "text": "Kanamaların yaklaşık yüzde doksanını oluşturur ve en sık arteria meningea mediadan köken alır",
+       "isCorrect": false,
+       "explanation": "Arteria meningea media yırtılması arteriyel tip epidural hematomların başlıca nedenidir. Venöz epidural kanamalar ise olguların yaklaşık yüzde onluk bölümünü oluşturur."
+      },
+      {
+       "key": "D",
+       "text": "Manyetik rezonans T1 ağırlıklı görüntülerde ilk günlerde en yüksek sinyal parlaklığına ulaşır",
+       "isCorrect": false,
+       "explanation": "Hematomlar T1 ağırlıklı kesitlerde ilk günlerde izointens sinyal sergiler. Methemoglobin birikimiyle en parlak sinyal düzeyine subakut dönemde ulaşılır."
+      },
+      {
+       "key": "E",
+       "text": "Duranın periost tabakasını hızla aşarak kraniyal sütür çizgilerini boylu boyunca geçer",
+       "isCorrect": false,
+       "explanation": "Epidural hematom ister arteriyel ister venöz olsun kemik ile dura arasında yer alır. Duranın periost olarak kemiğe tutunduğu kraniyal sütür sınırlarını aşamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "T1 ağırlıklı kesitlerde hematom akut dönemde izointens iken; subakut dönemde serbest methemoglobin nedeniyle en parlak sinyali verir.",
+     "maskedTerm": "subakut",
+     "hint": "Akut ilk günlerin ardından başlayan ve hematomun enzimatik olarak kimyasal dönüşüme uğradığı ara dönem."
+    },
+    {
+     "type": "before_after_slider",
+     "comparisonTitle": "Arteriyel Epidural Hematom vs Venöz Epidural Hematom",
+     "leftTitle": "Arteriyel EDH (%90)",
+     "rightTitle": "Venöz EDH (%10)",
+     "leftPoints": [
+      "En sık arteria meningea media yırtılmasına bağlı gelişir.",
+      "Genellikle temporal kemik kırıklarıyla birliktedir.",
+      "Yüksek basınçlı akım nedeniyle klinik tablo hızla kötüleşir."
+     ],
+     "rightPoints": [
+      "Dural venöz sinüslerin veya venlerin yırtılmasıyla oluşur.",
+      "Sıklıkla posterior fossa veya verteks düzeyinde yerleşir.",
+      "Düşük basınçlı akım nedeniyle klinik seyir daha sinsi ve yavaştır."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Venöz EDH ve Verteks Tutulumu İlkeleri",
+     "items": [
+      {
+       "text": "Venöz epidural hematomlar dural venöz sinüs yırtılması sonucu sıklıkla posterior fossada yerleşim gösterir.",
+       "isLie": false,
+       "explanation": "Doğru. Transvers veya sigmoid sinüs komşuluğundaki kırıklar posterior fossada venöz epidural kanamaya yol açar."
+      },
+      {
+       "text": "Verteks epidural hematomları rutin aksiyal tomografide kolayca atlanabildiği için koronal kesitler gerektirir.",
+       "isLie": false,
+       "explanation": "Doğru. Superior sagital sinüs kaynaklı verteks lezyonları kranyumun en tepe noktasında yer aldığından aksiyal planda atlanabilir."
+      },
+      {
+       "text": "Manyetik rezonans T1 ağırlıklı kesitlerde epidural hematom akut evrede en parlak hiperintens sinyalini sergiler.",
+       "isLie": true,
+       "explanation": "Yalan. Hematom akut evrede izointenstir; serbest methemoglobin birikimiyle T1'deki en parlak sinyalini subakut evrede verir."
+      },
+      {
+       "text": "Paranasal sinüs kırıkları epidural hematom içine hava sızmasına ve pnömosefaliye yol açabilir.",
+       "isLie": false,
+       "explanation": "Doğru. Sinüs bütünlüğünün bozulması hematom kitlesi içerisine hava kabarcıklarının girmesine neden olur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Verteks epidural hematomlarının en sık kaynaklandığı dural vasküler yapı nedir?",
+     "answer": "Kafatasının orta hat tepe noktasında seyreden superior sagital sinüstür."
+    }
+   ]
+  },
+  {
+   "slideNumber": 5,
+   "id": "k2p-y25-k2-12-kafa-travmalari-s05",
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Kafa Travması Değerlendirmesi ve Epidural Hematomlar",
+   "subtitle": "İlk değerlendirme, BT endikasyonları, hasar mekanizmaları ve epidural kanamaların sentezi",
+   "badge": "Bölüm Tekrarı",
+   "bolum": "2",
+   "pdfSayfalari": [
+    1,
+    2,
+    3,
+    4,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+   ],
+   "kaynakSayfa": "Slayt 1-29",
+   "bilgi": "Bölüm tekrarı: Kafa travmasında ilk tomografik değerlendirme, primer vs sekonder hasar ve epidural hematomun tüm varyantları sentezlenir.",
+   "isCheckpoint": true,
+   "checkpointNumber": 1,
+   "synthesisNarrative": "Bu aşamaya kadar kafa travmalarında ilk klinik yaklaşımı, acil radyolojik değerlendirme endikasyonlarını ve epidural hematomun tüm klinik tiplerini inceledik.\n\n- **Radyolojik Değerlendirme:** Direkt grafilerin intrakraniyal hasarı göstermede yetersiz kaldığını; bilgisayarlı tomografinin kemik kırıkları ve akut hiperdens kanamayı göstermede acil altın standart olduğunu öğrendik.\n- **Dansite İstisnası:** Şiddetli anemi ve dissemine intravasküler koagülasyon varlığında akut kanamanın izodens kalabileceğini vurguladık.\n- **Hasar Mekanizmaları:** Darbe anında oluşan mekanik primer hasarlar ile saatler sonra ilerleyen doku iskemisi ve hücresel ödem gibi sekonder hasarları birbirinden ayırdık.\n- **Epidural Hematom:** İç tabula ile dura arasındaki potansiyel boşluğa olan kanamayı, arteria meningea media hasarını, klasik bikonveks şekli, sütür hatlarını geçememesini ve aktif kanamayı simgeleyen swirl sign bulgusunu pekiştirdik.\n\n> [!IMPORTANT]\n> Çocuklarda kemik elastikiyeti nedeniyle kırık olmaksızın epidural kanama gelişebileceğini ve subakut evrede T1 manyetik rezonans görüntülerinde methemoglobine bağlı en parlak sinyalin alındığını unutmayınız.",
+   "content": "Bu aşamaya kadar kafa travmalarında ilk klinik yaklaşımı, acil radyolojik değerlendirme endikasyonlarını ve epidural hematomun tüm klinik tiplerini inceledik.\n\n- **Radyolojik Değerlendirme:** Direkt grafilerin intrakraniyal hasarı göstermede yetersiz kaldığını; bilgisayarlı tomografinin kemik kırıkları ve akut hiperdens kanamayı göstermede acil altın standart olduğunu öğrendik.\n- **Dansite İstisnası:** Şiddetli anemi ve dissemine intravasküler koagülasyon varlığında akut kanamanın izodens kalabileceğini vurguladık.\n- **Hasar Mekanizmaları:** Darbe anında oluşan mekanik primer hasarlar ile saatler sonra ilerleyen doku iskemisi ve hücresel ödem gibi sekonder hasarları birbirinden ayırdık.\n- **Epidural Hematom:** İç tabula ile dura arasındaki potansiyel boşluğa olan kanamayı, arteria meningea media hasarını, klasik bikonveks şekli, sütür hatlarını geçememesini ve aktif kanamayı simgeleyen swirl sign bulgusunu pekiştirdik.\n\n> [!IMPORTANT]\n> Çocuklarda kemik elastikiyeti nedeniyle kırık olmaksızın epidural kanama gelişebileceğini ve subakut evrede T1 manyetik rezonans görüntülerinde methemoglobine bağlı en parlak sinyalin alındığını unutmayınız.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Görüntüleme İlkeleri",
+      "desc": "Direkt grafi sınırlıdır; acil ilk basamak BT'dir, ağır anemide kanama izodens kalabilir.",
+      "isKey": true
+     },
+     {
+      "title": "Primer vs Sekonder",
+      "desc": "Darbe anındaki mekanik hasar primerdir; sonradan ilerleyen iskemi ve ödem sekonderdir.",
+      "isKey": true
+     },
+     {
+      "title": "Epidural Özellikler",
+      "desc": "Bikonveks şekillidir, sütürleri geçmez, falks yapışmasını aşabilir; swirl sign aktiftir.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Kafa travmasında BT endikasyonları: Bilinç kaybı, GKS < 15, >= 2 kusma, kafa tabanı kırığı bulgusu, < 2 veya > 60 yaş, antikoagülan kullanımı.",
+    "📌 [SINAV SPOTU] Epidural hematom: Arteria meningea media yırtılması, bikonveks şekil, sütürleri geçememe, falks yapışmasını geçebilme, aktif kanamada swirl sign.",
+    "📌 [SINAV SPOTU] Venöz EDH (%10): Posterior fossa ve dural sinüs komşuluğu, daha yavaş klinik gidişat ve çocuklarda kırık olmaksızın gelişebilme."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Swirl Sign",
+     "explanation": "Akut hematom içinde pıhtılaşmamış taze kan akımını gösteren hipodens girdap görünümü."
+    },
+    {
+     "term": "Ekstraaksiyal",
+     "explanation": "Beyin parankim dokusunun dışında, meningeal zarlar veya kemik ile zarlar arasında yer alan lezyon."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-12-05-1",
+     "front": "Epidural hematomun kafatası iç tabulasından durayı sıyırıp kraniyal sütür çizgilerinde durmasının nedeni nedir?",
+     "back": "Dura materin sütür çizgileri boyunca iç tabulaya periost olarak son derece sıkı yapışık olmasıdır.",
+     "hint": "Fibröz dural kılıfın kemik dikiş hatlarına periostal tutunması.",
+     "category": "Anatomi"
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "kafa travmaları .pdf",
+    "startPage": 1,
+    "endPage": 29,
+    "primaryPage": 20,
+    "citation": "Kafa Travmaları · Doç. Dr. Aydın Sinan Apaydın · Sayfa 1-29"
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Acil servise getirilen yirmi yaşında erkek hasta motosiklet kazası sonrası kısa süreli bayılmış, ardından bilinci tamamen açılmış ve bir saat sonra yeniden aniden derin komaya girmiştir. Çekilen tomografide sağ temporoparietalde bikonveks hiperdens kitle ve kitle içinde hipodens odaklar saptanmıştır. Bu klinik tablonun patofizyolojisi için hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Arteria meningea media yırtılmasına bağlı epidural hematom gelişmiştir ve hipodens odak aktif kanamayı gösterir",
+       "isCorrect": true,
+       "explanation": "Doğru. Genç hastada kaza sonrası aydınlık aralık (lucid interval), bikonveks hematom ve swirl sign aktif arteriyel epidural kanamayı kanıtlar."
+      },
+      {
+       "key": "B",
+       "text": "Serebral parankim içinde doğrudan travma anında gelişen ve sütürleri aşan diffüz doku iskemisidir",
+       "isCorrect": false,
+       "explanation": "İskemi serebral perfüzyonun bozulmasıyla gelişen parankimal bir sekonder süreçtir. Kemik iç tabulası ile dura arasında mercek şeklinde sınırlandırılmış akut kanamalı kitle görüntüsü oluşturmaz."
+      },
+      {
+       "key": "C",
+       "text": "Direkt grafilerde intrakraniyal hasarın derecesi tam olarak aydınlatıldığı için tomografi gereksizdir",
+       "isCorrect": false,
+       "explanation": "Direkt kafa grafileri kemik çatlaklarını gösterse bile intrakraniyal doku hasarı ve kanama derecesi hakkında bilgi veremez. Kafa travmalarında ilk basamak görüntüleme yöntemi bilgisayarlı tomografidir."
+      },
+      {
+       "key": "D",
+       "text": "Venöz sinüslerin yapışma yerlerinden bağımsız olarak gelişen ve sütür çizgilerini serbestçe aşan lezyondur",
+       "isCorrect": false,
+       "explanation": "Epidural hematom duranın kemiğe sıkıca yapışık olduğu kraniyal sütür hatlarını kesinlikle geçemez. Bu dural anatomik bariyer lezyonun bikonveks olarak sınırlı kalmasını sağlar."
+      },
+      {
+       "key": "E",
+       "text": "Ağır anemiye bağlı olarak hematom dansitesi tamamen düşmüş ve parankimle izodens hale gelmiştir",
+       "isCorrect": false,
+       "explanation": "Tomografi kesitinde hematom kitlesi belirgin şekilde hiperdens olarak tarif edilmiştir. Derin anemi tablosunda hemoglobin yoğunluğu yetersiz kalacağından kanama hiperdens görünmeyip izodens kalırdı."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableTitle": "Epidural Hematom Alt Tipleri ve Klinik Karakteristikleri",
+     "tableHeaders": [
+      "Hematom Tipi",
+      "Damarsal Kaynak",
+      "Klinik Seyir ve Radyoloji"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Tipik Arteriyel EDH",
+         "isMasked": false
+        },
+        {
+         "text": "Arteria meningea media yırtılması",
+         "isMasked": true,
+         "hint": "Foramen spinosumdan kraniuma giren temporal oluktaki vasküler kütük."
+        },
+        {
+         "text": "Hızlı ilerleyiş, lucid interval ve bikonveks hiperdens kitle",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Venöz EDH",
+         "isMasked": false
+        },
+        {
+         "text": "Dural venöz sinüsler veya venler",
+         "isMasked": false
+        },
+        {
+         "text": "Sıklıkla posterior fossa yerleşimi ve çocuklarda kırıksız gelişim",
+         "isMasked": true,
+         "hint": "Arka kraniyal çukurda sinsi klinik gidişat sergileyen tablo."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Verteks EDH",
+         "isMasked": false
+        },
+        {
+         "text": "Superior sagital sinüs zedelenmesi",
+         "isMasked": true,
+         "hint": "Kranyum tepe noktasında orta hatta kan toplayan büyük dural ven kütüğü."
+        },
+        {
+         "text": "Aksiyal kesitlerde kolay atlanabilme ve koronal rekonstrüksiyon gereksinimi",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "İlk Değerlendirme ve Epidural Hematom İlkeleri",
+     "items": [
+      {
+       "text": "Epidural hematomda biriken kan dura kemiğe yapışık olduğu için kraniyal sütür hatlarını kesinlikle geçemez.",
+       "isLie": false,
+       "explanation": "Doğru. Dura mater kraniyal sütür çizgilerinde iç tabulaya periost olarak yapışıktır ve hematomun yayılımını sınırlar."
+      },
+      {
+       "text": "Epidural hematom falks serebrinin kranyum kemiğine yapışma yerini hiçbir zaman geçemez.",
+       "isLie": true,
+       "explanation": "Yalan. Epidural hematom kraniyal kemik sütürlerini geçemez; ancak dural yapışma yeri olan falks serebri tabanını aşarak karşı tarafa geçebilir."
+      },
+      {
+       "text": "Manyetik rezonans T1 ağırlıklı kesitlerde hematom subakut evrede methemoglobin nedeniyle en parlak sinyali verir.",
+       "isLie": false,
+       "explanation": "Doğru. Methemoglobin birikimi subakut süreçte T1 ağırlıklı kesitlerde belirgin hiperintensite oluşturur."
+      },
+      {
+       "text": "Akut kafa travmasında iki veya daha fazla kusma ve nöbet varlığı acil bilgisayarlı tomografi endikasyonudur.",
+       "isLie": false,
+       "explanation": "Doğru. Bu klinik bulgular kafa içi hasar ve basınç artışının önemli göstergeleridir."
+      }
+     ]
+    },
+    {
+     "type": "feature_bidding",
+     "title": "Arteriyel Epidural Hematom vs Venöz Epidural Hematom Özellikleri",
+     "optionA": "Arteriyel Epidural Hematom",
+     "optionB": "Venöz Epidural Hematom",
+     "rounds": [
+      {
+       "feature": "Kanamaların yaklaşık yüzde doksanını oluşturması ve en sık arteria meningea media yırtılmasına bağlı olması",
+       "correct": "A",
+       "explanation": "Arteriyel epidural hematomlar tüm epidural kanamaların ezici çoğunluğunu oluşturur ve foramen spinosumdan çıkan arter yırtılır."
+      },
+      {
+       "feature": "Dural sinüs yapışma yerlerinde sıklıkla posterior fossada yerleşmesi ve çocuklarda kemik kırığı olmaksızın görülebilmesi",
+       "correct": "B",
+       "explanation": "Venöz epidural kanamalar posterior fossa sinüsleri komşuluğunda gelişir ve çocuklarda esnek kemik nedeniyle kırıksız olabilir."
+      },
+      {
+       "feature": "Akut dönemde hızla büyüyerek klasik aydınlık aralık ardından ani bilinç kaybı ve kitle etkisi yapması",
+       "correct": "A",
+       "explanation": "Yüksek basınçlı arter kanaması lucid interval sonrasında hızla dekompansasyona ve derin nörolojik bozulmaya yol açar."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Kafa travmasında bilgisayarlı tomografide akut kanamanın hiperdens görünmeyip izodens kalmasına yol açan iki hematolojik neden nedir?",
+     "answer": "Hemoglobin değerinin 8 g/dL altına düştüğü şiddetli anemi ve dissemine intravasküler koagülasyondur (DIC)."
+    }
+   ]
+  },
+  {
+   "slideNumber": 6,
+   "id": "k2p-y25-k2-12-kafa-travmalari-s06",
+   "title": "Subdural Hematom: Köprü Venleri, Kresentik Görünüm ve Evreleme",
+   "subtitle": "Dura ile araknoid arasındaki venöz kanama, sütürleri aşan hilal görünümü ve dansite değişimi",
+   "badge": "Subdural Kanama",
+   "bolum": "3",
+   "pdfSayfalari": [
+    30,
+    38
+   ],
+   "kaynakSayfa": "Slayt 30-38",
+   "bilgi": "Subdural hematom köprü venlerinin yırtılmasıyla oluşur; BT'de kresentik görünür, sütürleri geçer, zamanla izodens ve hipodens hale gelir.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "synthesisNarrative": "Subdural hematom dura mater ile araknoid membran arasındaki subdural potansiyel boşluğa olan kanamadır.\n\n- **Etyopatogenez:** Serebral korteks yüzeyinden dural venöz sinüslere uzanan köprü venlerinin ani akselerasyon ve deselerasyon kuvvetleriyle gerilip yırtılması sonucu gelişir.\n- **Yaşlı Popülasyon:** Senil beyin atrofisi nedeniyle subdural mesafe genişler ve köprü venleri aşırı gerilerek kırılganlaşır; bu durum minör kafa çarpmalarında dahi kanamaya yol açar.\n- **Radyolojik Görünüm:** Bilgisayarlı tomografide beyin parankimini çevreleyen kresentik veya hilal şeklinde ekstraaksiyal bir koleksiyon olarak izlenir.\n- **Anatomik Sınırlar:** Dura materin altında serbestçe yayıldığı için kraniyal sütür hatlarını geçer; ancak falks ve tentorium gibi dural katlantıları geçemez.\n- **Zamansal Evreleme:** Akut dönemde hiperdens, subakut dönemde parankimle benzer tonda izodens, kronik evrede ise hipodens ve seviyelenme gösteren sıvı olarak izlenir.\n\n> [!IMPORTANT]\n> İzodens evredeki subakut subdural hematomlar tomografide sulkusların silinmesi ve orta hat şifti ile tanınır; şüpheli olgularda tanıyı kesinleştirmek için manyetik rezonans görüntüleme yapılır.",
+   "content": "Subdural hematom dura mater ile araknoid membran arasındaki subdural potansiyel boşluğa olan kanamadır.\n\n- **Etyopatogenez:** Serebral korteks yüzeyinden dural venöz sinüslere uzanan köprü venlerinin ani akselerasyon ve deselerasyon kuvvetleriyle gerilip yırtılması sonucu gelişir.\n- **Yaşlı Popülasyon:** Senil beyin atrofisi nedeniyle subdural mesafe genişler ve köprü venleri aşırı gerilerek kırılganlaşır; bu durum minör kafa çarpmalarında dahi kanamaya yol açar.\n- **Radyolojik Görünüm:** Bilgisayarlı tomografide beyin parankimini çevreleyen kresentik veya hilal şeklinde ekstraaksiyal bir koleksiyon olarak izlenir.\n- **Anatomik Sınırlar:** Dura materin altında serbestçe yayıldığı için kraniyal sütür hatlarını geçer; ancak falks ve tentorium gibi dural katlantıları geçemez.\n- **Zamansal Evreleme:** Akut dönemde hiperdens, subakut dönemde parankimle benzer tonda izodens, kronik evrede ise hipodens ve seviyelenme gösteren sıvı olarak izlenir.\n\n> [!IMPORTANT]\n> İzodens evredeki subakut subdural hematomlar tomografide sulkusların silinmesi ve orta hat şifti ile tanınır; şüpheli olgularda tanıyı kesinleştirmek için manyetik rezonans görüntüleme yapılır.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Anatomik Boşluk",
+      "desc": "Dura mater ile araknoid membran arasındaki subdural aralıkta birikir.",
+      "isKey": true
+     },
+     {
+      "title": "Damarsal Kaynak",
+      "desc": "Korteksten dural sinüslere uzanan köprü venlerinin yırtılmasıdır.",
+      "isKey": true
+     },
+     {
+      "title": "Radyolojik Patern",
+      "desc": "Kresentik hilal şekillidir; kraniyal sütürleri geçer, falksı geçemez.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Subdural hematom kortikal köprü venlerinin yırtılması sonucu gelişir; BT'de kresentik (hilal) şekillidir ve sütür hatlarını serbestçe geçer.",
+    "📌 [SINAV SPOTU] Yaşlılarda beyin atrofisi köprü venlerini gerdiği için çok hafif kafa travmaları sonrasında bile subdural hematom gelişebilir.",
+    "📌 [SINAV SPOTU] Subdural hematom evreleri: Akut fazda hiperdens, subakut fazda izodens, kronik fazda hipodens ve seviyelenme gösteren koleksiyondur."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Köprü Venleri",
+     "explanation": "Serebral hemisferlerin venöz kanını dural venöz sinüslere taşıyan ve subdural boşluğu aşan kortikal damarlar."
+    },
+    {
+     "term": "Kresentik",
+     "explanation": "İçbükey dışbükey hatlara sahip hilal benzeri geometrik koleksiyon biçimi."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-12-06-1",
+     "front": "Subdural hematomun epidural hematomdan farklı olarak kraniyal sütür hatlarını serbestçe geçebilmesinin anatomik nedeni nedir?",
+     "back": "Kanamanın kemik altında değil, dura mater ile araknoid arasındaki potansiyel boşlukta serbestçe yayılmasıdır.",
+     "hint": "Hematomun dura mater yaprağının iç yüzeyinde seyretmesi.",
+     "category": "Anatomi"
+    }
+   ],
+   "sourcePdf": {
+    "pdf": "meds_database_25_26/pdf/kurul2/y25-k2-12-kafa-travmalari.pdf",
+    "startPage": 30,
+    "endPage": 38
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Yetmiş beş yaşında bir hastada hafif kafa çarpmasından iki hafta sonra ilerleyici baş ağrısı ve sol kolda hafif güçsüzlük gelişiyor. Tomografide sağ hemisferi boylu boyunca çevreleyen, kraniyal sütür çizgilerini aşan, beyin parankimi ile benzer dansitede (izodens) kresentik koleksiyon izleniyor. Bu hastadaki patolojik lezyon ve kanayan yapı hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Subakut subdural hematom ve kortikal köprü venlerinin yırtılması",
+       "isCorrect": true,
+       "explanation": "Doğru. Yaşlı hastada hafif travma sonrası gelişen, sütürleri aşan hilal şeklindeki izodens kitle köprü venlerinin yırtılmasıyla oluşan subakut subdural hematomdur."
+      },
+      {
+       "key": "B",
+       "text": "Akut epidural hematom ve temporal arteria meningea media yırtılması",
+       "isCorrect": false,
+       "explanation": "Arteria meningea media yırtılması epidural hematoma neden olan arteriyel bir kanamadır. Bu lezyon bikonveks şekillidir ve kraniyal sütür hatlarını geçemez."
+      },
+      {
+       "key": "C",
+       "text": "Serebral sulkusları ve sisternleri dolduran primer parankimal laserasyon",
+       "isCorrect": false,
+       "explanation": "Parankimal laserasyon beyin korteksinin yırtılmasıyla oluşan derin bir primer doku hasarıdır. Dura altında sütürleri aşan geniş hilal şeklinde koleksiyon oluşturmaz."
+      },
+      {
+       "key": "D",
+       "text": "Foramen spinosum düzeyinde arteriyel psödoanevrizma kanaması",
+       "isCorrect": false,
+       "explanation": "Foramen spinosumdan arteria meningea media geçer ve bu damarın hasarı epidural hematom yapar. Sütürleri serbestçe aşan subdural venöz koleksiyon oluşturmaz."
+      },
+      {
+       "key": "E",
+       "text": "Kemik kırığına sekonder hava kabarcıklarının oluşturduğu pnömosefali",
+       "isCorrect": false,
+       "explanation": "Pnömosefali kranial kavite içine hava girmesidir ve tomografide çok belirgin hipodens (siyah) hava dansitesi olarak görülür."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Bilgisayarlı tomografide beyin parankimini çevreleyen kresentik veya hilal şeklinde ekstraaksiyal bir koleksiyon olarak izlenir.",
+     "maskedTerm": "kresentik",
+     "hint": "İç yüzü beyin kıvrımlarına uyan hilal biçimindeki koleksiyon geometrisi."
+    },
+    {
+     "type": "before_after_slider",
+     "comparisonTitle": "Epidural Hematom vs Subdural Hematom Karşılaştırması",
+     "leftTitle": "Epidural Hematom",
+     "rightTitle": "Subdural Hematom",
+     "leftPoints": [
+      "İç tabula ile dura mater arasındaki boşluğa kanar.",
+      "En sık arteria meningea media yırtılmasına bağlıdır.",
+      "BT'de bikonveks görünür ve kraniyal sütür hatlarını geçemez."
+     ],
+     "rightPoints": [
+      "Dura mater ile araknoid membran arasındaki boşluğa kanar.",
+      "Kortikal köprü venlerinin yırtılması sonucu gelişir.",
+      "BT'de kresentik görünür ve kraniyal sütür hatlarını serbestçe geçer."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Subdural Hematomun Özellikleri ve Evrelemesi",
+     "items": [
+      {
+       "text": "Subdural hematom kortikal köprü venlerinin gerilip yırtılmasıyla gelişen venöz bir kanamadır.",
+       "isLie": false,
+       "explanation": "Doğru. Beyin yüzeyinden sinüslere uzanan köprü venleri akselerasyon kuvvetleriyle yırtılır."
+      },
+      {
+       "text": "Duranın iç yüzeyinde yer aldığı için subdural kanama kraniyal sütür hatlarını serbestçe geçer.",
+       "isLie": false,
+       "explanation": "Doğru. Subdural boşlukta sütür çizgilerinde dural bir yapışma engeli olmadığı için kanama hemisfer boyunca yayılır."
+      },
+      {
+       "text": "Subakut evredeki subdural hematomlar beyin parankimi ile aynı dansitede yani izodens görünür.",
+       "isLie": false,
+       "explanation": "Doğru. Eritrosit lizisi ve hemoglobin yıkımı nedeniyle hematom dansitesi düşerek beyin dokusuyla eşitlenir."
+      },
+      {
+       "text": "Subdural hematom falks serebri ve tentorium gibi majör dural katlantıları serbestçe aşarak karşıya geçer.",
+       "isLie": true,
+       "explanation": "Yalan. Subdural hematom sütürleri geçer ancak dura katlantıları olan falks ve tentoriumu kesinlikle aşamaz."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Subdural hematomun tomografik evrelemesinde üçüncü haftadan sonra kronikleşen koleksiyonun dansitesi nasıl izlenir?",
+     "answer": "Pıhtının tamamen erimesi ve sıvılaşması sonucu beyin omurilik sıvısına yakın hipodens (koyu) dansitede ve seviyelenmelerle izlenir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 7,
+   "id": "k2p-y25-k2-12-kafa-travmalari-s07",
+   "title": "Pediatrik Subdural Hematomlar, Çocuk İstismarı ve Subdural Higroma",
+   "subtitle": "Sarsılmış bebek sendromu bulguları, çoklu evreli kanamalar ve subdural mesafede berrak BOS toplanması",
+   "badge": "Pediatrik ve Sıvı Koleksiyonları",
+   "bolum": "3",
+   "pdfSayfalari": [
+    39,
+    46
+   ],
+   "kaynakSayfa": "Slayt 39-46",
+   "bilgi": "Bebekte çoklu evreli subdural kanama istismarı düşündürür; araknoid yırtılmasıyla subdural aralıkta BOS birikimi subdural higroma oluşturur.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "synthesisNarrative": "Bebek ve çocuklarda kafa travmaları değerlendirilirken subdural koleksiyonlar adli tıp ve cerrahi açıdan özel önem taşır.\n\n- **Çocuk İstismarı Belirtisi:** Bir bebek veya küçük çocukta farklı evrelerde (örneğin bir tarafta akut hiperdens, diğer tarafta subakut izodens veya kronik hipodens) subdural hematom saptanması sarsılmış bebek sendromu ve fiziksel çocuk istismarı açısından patognomoniktir.\n- **Eşlik Eden Bulgular:** Retinal kanamalar, açıklanamayan metafiz kırıkları ve çoklu dural hematomlar adli bildirim zorunluluğu doğurur.\n- **Subdural Higroma:** Subdural mesafede beyin omurilik sıvısı ile aynı dansite ve intensitede berrak sıvı birikimidir.\n- **Higroma Mekanizması:** Akut travmada araknoid membranın yırtılması sonucu tek yönlü bir çekvalf mekanizması oluşur; beyin omurilik sıvısı subdural mesafeye kaçar ancak subaraknoid aralığa geri dönemez.\n\n> [!NOTE]\n> Manyetik rezonans görüntülemede T2 ve FLAIR sekanslarında BOS ile tamamen eşdeğer sinyal veren higroma, protein içeriği ve hemosiderin barındırmamasıyla kronik hematomdan ayırt edilir.",
+   "content": "Bebek ve çocuklarda kafa travmaları değerlendirilirken subdural koleksiyonlar adli tıp ve cerrahi açıdan özel önem taşır.\n\n- **Çocuk İstismarı Belirtisi:** Bir bebek veya küçük çocukta farklı evrelerde (örneğin bir tarafta akut hiperdens, diğer tarafta subakut izodens veya kronik hipodens) subdural hematom saptanması sarsılmış bebek sendromu ve fiziksel çocuk istismarı açısından patognomoniktir.\n- **Eşlik Eden Bulgular:** Retinal kanamalar, açıklanamayan metafiz kırıkları ve çoklu dural hematomlar adli bildirim zorunluluğu doğurur.\n- **Subdural Higroma:** Subdural mesafede beyin omurilik sıvısı ile aynı dansite ve intensitede berrak sıvı birikimidir.\n- **Higroma Mekanizması:** Akut travmada araknoid membranın yırtılması sonucu tek yönlü bir çekvalf mekanizması oluşur; beyin omurilik sıvısı subdural mesafeye kaçar ancak subaraknoid aralığa geri dönemez.\n\n> [!NOTE]\n> Manyetik rezonans görüntülemede T2 ve FLAIR sekanslarında BOS ile tamamen eşdeğer sinyal veren higroma, protein içeriği ve hemosiderin barındırmamasıyla kronik hematomdan ayırt edilir.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "İstismar Göstergesi",
+      "desc": "Bebekte farklı zamanlara ait çoklu evreli subdural kanama sarsılmış bebek sendromudur.",
+      "isKey": true
+     },
+     {
+      "title": "Subdural Higroma",
+      "desc": "Araknoid membranın tek yönlü yırtılmasıyla subdural alanda berrak BOS birikmesidir.",
+      "isKey": true
+     },
+     {
+      "title": "Radyolojik Özellik",
+      "desc": "Higroma BT ve MRG'de BOS ile tamamen aynı dansite ve sinyal özellikleri gösterir.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Bir bebek veya çocukta değişik evrelerde (akut, subakut, kronik) subdural hematom varlığı dövülmüş çocuk veya çocuk istismarı açısından tipiktir.",
+    "📌 [SINAV SPOTU] Subdural higroma travmada araknoid membranın yırtılması ve çekvalf mekanizması sonucu subdural alanda BOS birikmesidir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Subdural Higroma",
+     "explanation": "Travmatik araknoid yırtığı sonucu subdural potansiyel aralıkta berrak beyin omurilik sıvısı toplanması."
+    },
+    {
+     "term": "Sarsılmış Bebek",
+     "explanation": "Şiddetli rotasyonel sallama sonucu köprü venlerinin yırtılması ve retinal kanamalarla seyreden istismar tablosu."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-12-07-1",
+     "front": "Bir süt çocuğunun kraniyal tomografisinde farklı evrelerde (akut ve kronik) subdural hematomlar görülmesi klinisyende hangi tabloyu öncelikle düşündürmelidir?",
+     "back": "Sarsılmış bebek sendromu ve fiziksel çocuk istismarı (dövülmüş çocuk) tablosunu düşündürmelidir.",
+     "hint": "Farklı zamanlarda tekrarlayan travmaları kanıtlayan adli patoloji.",
+     "category": "Klinik"
+    }
+   ],
+   "sourcePdf": {
+    "pdf": "meds_database_25_26/pdf/kurul2/y25-k2-12-kafa-travmalari.pdf",
+    "startPage": 39,
+    "endPage": 46
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kafa travması geçiren bir olguda bilgisayarlı tomografi ve manyetik rezonans görüntülerinde subdural mesafede beyin omurilik sıvısı ile tamamen eşdeğer dansitede berrak sıvı koleksiyonu saptanıyor. Bu lezyonun patofizyolojik oluşum mekanizması hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Araknoid membranın yırtılması ve çekvalf mekanizmasıyla subdural mesafeye BOS kaçışı",
+       "isCorrect": true,
+       "explanation": "Doğru. Subdural higroma araknoid yırtılması sonucu tek yönlü flap mekanizmasıyla BOS'un subdural aralıkta birikmesiyle oluşur."
+      },
+      {
+       "key": "B",
+       "text": "Arteria meningea media yırtılması sonucu yüksek basınçlı kanama gelişmesi",
+       "isCorrect": false,
+       "explanation": "Arteria meningea media temporal kemik oluğunda seyreden arteriyel bir damardır. Bu damarın yırtılması epidural hematoma yol açar; subdural alanda BOS biriktirmez."
+      },
+      {
+       "key": "C",
+       "text": "Serebral korteksteki pial arterlerin parçalanmasıyla subaraknoid aralıkta kan göllenmesi",
+       "isCorrect": false,
+       "explanation": "Pial damarlar beyin yüzeyinde subaraknoid mesafeyi besler ve hasarları subaraknoid kanama yapar. Subdural aralıkta serbest berrak higroma oluşturmaz."
+      },
+      {
+       "key": "D",
+       "text": "Dural venöz sinüslerin tromboze olmasıyla kafa kemiğinde kırık gelişmesi",
+       "isCorrect": false,
+       "explanation": "Dural sinüs trombozu intrakraniyal venöz hipertansiyona ve enfarkta neden olur; travmatik araknoid çekvalf mekanizmalı subdural higromayı doğurmaz."
+      },
+      {
+       "key": "E",
+       "text": "Temporal kemik skuamasının kırılarak orta kulak boşluğuna kan sızdırması",
+       "isCorrect": false,
+       "explanation": "Temporal kemik kırıkları hemotimpanum ve epidural kanama yapabilir; kraniyal subdural mesafede izole berrak higroma tablosu oluşturmaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Subdural higroma travmada araknoid membranın yırtılması sonucu tek yönlü bir çekvalf mekanizmasıyla subdural mesafede beyin omurilik sıvısı birikimidir.",
+     "maskedTerm": "beyin omurilik sıvısı",
+     "hint": "Higroma içeriğini oluşturan, ventriküllerde üretilen renksiz ve berrak fizyolojik akışkan."
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "Altı aylık bir bebek, annesi tarafından yataktan hafifçe düştüğü belirtilerek getiriliyor. Kraniyal tomografide sağda hiperdens akut subdural kanama, solda ise geniş hipodens kronik subdural koleksiyon saptanıyor. Göz dibi muayenesinde bilateral yaygın retinal hemorajiler izleniyor. Hekimin bu aşamada uygulaması gereken en doğru yaklaşım nedir?",
+     "choices": [
+      {
+       "key": "A",
+       "text": "Farklı evrelerdeki subdural hematom ve retinal kanamayı çocuk istismarı açısından değerlendirip adli bildirimde bulunarak bebeği koruma altına almak",
+       "isCorrect": true,
+       "feedback": "Doğru. Bir bebekte farklı zamanlara ait çoklu evreli subdural kanama ve retinal kanamalar çocuk istismarı ve sarsılmış bebek sendromunun adli kanıtıdır."
+      },
+      {
+       "key": "B",
+       "text": "Bulguların tamamını hafif yataktan düşme öyküsüne bağlayarak hastayı evine taburcu etmek",
+       "isCorrect": false,
+       "feedback": "Hafif bir düşme farklı zamanlara ait hematomları ve yaygın retinal kanamaları açıklayamaz; bebeğin hayatını riske atan ciddi bir hatadır."
+      },
+      {
+       "key": "C",
+       "text": "Koleksiyonun tamamını basit bir travmatik higroma kabul ederek adli süreci işletmemek",
+       "isCorrect": false,
+       "feedback": "Higroma kan değil BOS birikimidir. Burada akut hiperdens kanama ve retinal hemoraji mevcuttur; adli süreç derhal başlatılmalıdır."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Pediatrik Hematomlar ve Subdural Higroma",
+     "items": [
+      {
+       "text": "Bir çocukta farklı evrelerdeki subdural hematomların varlığı sarsılmış bebek sendromu açısından anlamlıdır.",
+       "isLie": false,
+       "explanation": "Doğru. Farklı zamanlarda tekrarlayan travmaları gösterir ve fiziksel istismarın en kritik tıbbi kanıtıdır."
+      },
+      {
+       "text": "Subdural higroma tomografi ve manyetik rezonansta beyin omurilik sıvısı ile tamamen aynı sinyali verir.",
+       "isLie": false,
+       "explanation": "Doğru. Higromanın içeriği yırtılan araknoidden sızan serbest beyin omurilik sıvısıdır."
+      },
+      {
+       "text": "Subdural higroma yüksek basınçlı arter kanaması sonucu kemik ile dura arasında sınırlı kitle oluşturur.",
+       "isLie": true,
+       "explanation": "Yalan. Yüksek basınçlı arter kanaması epidural hematomdur; higroma ise subdural mesafede araknoid yırtığıyla BOS toplanmasıdır."
+      },
+      {
+       "text": "Çocuk istismarı şüphesinde retinal kanamalar ve açıklanamayan kemik kırıkları araştırılmalıdır.",
+       "isLie": false,
+       "explanation": "Doğru. Sarsılmış bebek sendromunda vitreus ve retina kanamaları ile kemik metafiz kırıkları sıklıkla eşlik eder."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Subdural higroma gelişiminde araknoid membranın yırtılması sonrasında sıvının geri dönmesini engelleyen mekanizmaya ne ad verilir?",
+     "answer": "Sıvının geçişine izin verip geri dönüşünü engelleyen tek yönlü çekvalf (flap) mekanizması adı verilir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 8,
+   "id": "k2p-y25-k2-12-kafa-travmalari-s08",
+   "title": "Travmatik SAK ve Kortikal Kontüzyonlar: Parankimal Doku Hasarı",
+   "subtitle": "Sulkus ve sisternlerde kanama, parankimal peteşiler ve intraventriküler kanamanın prognostik önemi",
+   "badge": "Parankimal ve Subaraknoid Kanama",
+   "bolum": "4",
+   "pdfSayfalari": [
+    47,
+    49
+   ],
+   "kaynakSayfa": "Slayt 41-49",
+   "bilgi": "Travmatik SAK en sık görülen kanamadır ve hidrosefali yapabilir; kontüzyonlar frontal ve temporal tabanda peteşiler oluşturur.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "synthesisNarrative": "Kafa travmalarında meningeal boşluklar ile parankim dokusunun doğrudan etkilenmesi subaraknoid kanama ve kontüzyonlara yol açar.\n\n- **Travmatik Subaraknoid Kanama (tSAK):** Araknoid membran ile pia mater arasındaki mesafeye olan kanamadır; kafa travmalarında yüzde elli ile yetmiş oranında eşlik eden en sık kanama türüdür.\n- **Radyolojik Görünüm:** Bilgisayarlı tomografide serebral sulkuslarda, Sylvian fissürde ve sisternlerde hiperdens çizgilenmeler şeklinde izlenir. Manyetik rezonansta FLAIR sekansları tSAK saptamada en ideal yöntemdir.\n- **Komplikasyon:** Subaraknoid aralıktaki eritrositlerin araknoid villusları tıkaması sonucu BOS emilimi bozulabilir ve akut veya subakut hidrosefali tablosu gelişebilir.\n- **Hemorajik Kontüzyon:** Beyin parankiminin pürüzlü iç kraniyal kemik kabartılarına çarpmasıyla gelişen parankimal doku hasarı ve peteşial kanamalardır. Sıklıkla frontal lob tabanı ve temporal lob ön kutuplarında yerleşir.\n\n> [!IMPORTANT]\n> Hemorajik kontüzyonlar erken dönem tomografilerde belirgin olmayabilir; saatler içinde olgunlaşarak birkaç gün sonra netleşir. Posttravmatik intraventriküler hematom varlığı son derece kötü prognoz göstergesidir.",
+   "content": "Kafa travmalarında meningeal boşluklar ile parankim dokusunun doğrudan etkilenmesi subaraknoid kanama ve kontüzyonlara yol açar.\n\n- **Travmatik Subaraknoid Kanama (tSAK):** Araknoid membran ile pia mater arasındaki mesafeye olan kanamadır; kafa travmalarında yüzde elli ile yetmiş oranında eşlik eden en sık kanama türüdür.\n- **Radyolojik Görünüm:** Bilgisayarlı tomografide serebral sulkuslarda, Sylvian fissürde ve sisternlerde hiperdens çizgilenmeler şeklinde izlenir. Manyetik rezonansta FLAIR sekansları tSAK saptamada en ideal yöntemdir.\n- **Komplikasyon:** Subaraknoid aralıktaki eritrositlerin araknoid villusları tıkaması sonucu BOS emilimi bozulabilir ve akut veya subakut hidrosefali tablosu gelişebilir.\n- **Hemorajik Kontüzyon:** Beyin parankiminin pürüzlü iç kraniyal kemik kabartılarına çarpmasıyla gelişen parankimal doku hasarı ve peteşial kanamalardır. Sıklıkla frontal lob tabanı ve temporal lob ön kutuplarında yerleşir.\n\n> [!IMPORTANT]\n> Hemorajik kontüzyonlar erken dönem tomografilerde belirgin olmayabilir; saatler içinde olgunlaşarak birkaç gün sonra netleşir. Posttravmatik intraventriküler hematom varlığı son derece kötü prognoz göstergesidir.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "En Sık Kanama",
+      "desc": "Travmatik SAK kafa travmalarında %50-70 sıklıkla en sık eşlik eden kanama tipidir.",
+      "isKey": true
+     },
+     {
+      "title": "MRG FLAIR Üstünlüğü",
+      "desc": "Sulkuslardaki tSAK lezyonlarını saptamada MRG FLAIR sekansı en hassas yöntemdir.",
+      "isKey": true
+     },
+     {
+      "title": "Kontüzyon ve Prognoz",
+      "desc": "Kontüzyonlar ilk gün gizli kalabilir; intraventriküler hematom kötü prognoz işaretidir.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Travmatik subaraknoid kanama kafa travmalarında en sık görülen intrakraniyal kanama tipidir (%50-70); hidrosefaliye yol açabilir.",
+    "📌 [SINAV SPOTU] Manyetik rezonans görüntülemede FLAIR sekansları subaraknoid kanamayı göstermede ideal yöntemdir.",
+    "📌 [SINAV SPOTU] Hemorajik kontüzyonlar en sık frontal taban ve temporal kutuplarda görülür; erken dönemde gizli kalıp birkaç günde belirginleşebilir.",
+    "📌 [SINAV SPOTU] Posttravmatik intraventriküler hematom saptanması kafa travmalarında kötü prognoz göstergesidir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Hemorajik Kontüzyon",
+     "explanation": "Beyin parankiminin kemik çıkıntılarına çarpmasıyla oluşan mikrovasküler yırtılma ve peteşial doku kanaması."
+    },
+    {
+     "term": "FLAIR Sekansı",
+     "explanation": "Serbest su sinyalini baskılayarak sulkuslardaki protein ve kanama odaklarını parlak gösteren özel manyetik rezonans dizilimi."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-12-08-1",
+     "front": "Travmatik subaraknoid kanama geçiren bir hastada subaraknoid mesafedeki eritrositlerin villusları tıkaması hangi nörolojik komplikasyona yol açar?",
+     "back": "Beyin omurilik sıvısının venöz dolaşıma emiliminin bozulmasına ve sekonder hidrosefali gelişimine yol açar.",
+     "hint": "BOS dolaşım yolunun tıkanması sonucu ventriküllerin genişlemesi.",
+     "category": "Komplikasyon"
+    }
+   ],
+   "sourcePdf": {
+    "pdf": "meds_database_25_26/pdf/kurul2/y25-k2-12-kafa-travmalari.pdf",
+    "startPage": 47,
+    "endPage": 49
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kafa travmalı bir hastada bilgisayarlı tomografide frontal taban ve temporal kutupta milimetrik peteşial kanamalar saptanıyor; ayrıca ventrikül boşlukları içinde yoğun taze kanama (intraventriküler hematom) izleniyor. Bu hastanın lezyonları ve klinik seyri için hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Parankimde hemorajik kontüzyon mevcuttur ve intraventriküler hematom varlığı kötü prognoza işaret eder",
+       "isCorrect": true,
+       "explanation": "Doğru. Kemik kabartılarına çarpmayla frontal ve temporal kontüzyonlar oluşur; ventrikül içine kanama ağır hasar ve kötü prognoz kanıtıdır."
+      },
+      {
+       "key": "B",
+       "text": "Bu lezyonlar darbeden hemen sonra en büyük boyutuna ulaştığı için takip tomografisi çekilmesine gerek yoktur",
+       "isCorrect": false,
+       "explanation": "Kontüzyonlar ilk saatlerde silik olabilir ve genellikle sonraki günlerde genişleyip ödemle belirginleşir; yakın takip şarttır."
+      },
+      {
+       "key": "C",
+       "text": "Lezyonlar iç tabula ile dura arasında sınırlı bikonveks ekstraaksiyal kanamalar olarak değerlendirilir",
+       "isCorrect": false,
+       "explanation": "Kontüzyonlar beyin parankim dokusunun içinde gelişen intraaksiyel zedelenmelerdir. Kemik ile dura arasında sınırlanan bikonveks epidural kitleler değildir."
+      },
+      {
+       "key": "D",
+       "text": "Ventrikül içindeki hematom hastanın prognozunun mükemmel olduğunu ve cerrahiye ihtiyaç duymayacağını belgeler",
+       "isCorrect": false,
+       "explanation": "Posttravmatik intraventriküler hematom beyin dokusunda yaygın derin hasarı simgeleyen son derece kötü bir prognoz göstergesidir."
+      },
+      {
+       "key": "E",
+       "text": "Manyetik rezonans FLAIR sekansları parankimdeki ve sulkuslardaki kanamayı göstermede yetersiz kalır",
+       "isCorrect": false,
+       "explanation": "FLAIR sekansı beyin omurilik sıvısının parlak sinyalini baskılayan özel bir yöntemdir. Sulkuslardaki subaraknoid kanamayı ve parankim ödemini saptamada en üstün sekanslardan biridir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Manyetik rezonans görüntülemede FLAIR sekansları travmatik subaraknoid kanama tanısında en ideal yöntemdir.",
+     "maskedTerm": "FLAIR",
+     "hint": "Sıvı sinyalini baskılayarak sulkuslardaki patolojik protein ve eritrosit birikimini aydınlatan görüntüleme protokolü."
+    },
+    {
+     "type": "interactive_table",
+     "tableTitle": "Travmatik SAK ve Hemorajik Kontüzyon Karşılaştırması",
+     "tableHeaders": [
+      "Lezyon Türü",
+      "Anatomik Yerleşim",
+      "Radyolojik ve Klinik Önem"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Travmatik SAK",
+         "isMasked": false
+        },
+        {
+         "text": "Araknoid membran ile pia mater arası",
+         "isMasked": true,
+         "hint": "Sıvı dolaşımının gerçekleştiği iki yumuşak kılıf katmanı açıklığı."
+        },
+        {
+         "text": "Kafa travmasında en sık görülen kanamadır; hidrosefaliye yol açabilir",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Hemorajik Kontüzyon",
+         "isMasked": false
+        },
+        {
+         "text": "Frontal lob tabanı ve temporal kutuplar",
+         "isMasked": false
+        },
+        {
+         "text": "Erken dönemde silik kalıp birkaç günde belirginleşen peteşial parankim hasarı",
+         "isMasked": true,
+         "hint": "Kemik kabartılarına çarpmayla oluşan ve zamanla olgunlaşan zedelenme."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "İntraventriküler Hematom",
+         "isMasked": false
+        },
+        {
+         "text": "Serebral ventriküler boşluklar",
+         "isMasked": false
+        },
+        {
+         "text": "Kafa travmalarında son derece kötü prognoz göstergesidir",
+         "isMasked": true,
+         "hint": "Hayati tehlike ve sakatlık ihtimalinin zirveye ulaştığını bildiren durum."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Travmatik SAK ve Kontüzyon Bulguları",
+     "items": [
+      {
+       "text": "Travmatik subaraknoid kanama kafa travmalı hastalarda en sık eşlik eden intrakraniyal kanamadır.",
+       "isLie": false,
+       "explanation": "Doğru. Olguların yüzde elli ile yetmişinde sulkuslarda ve sisternlerde subaraknoid kanama izlenir."
+      },
+      {
+       "text": "Hemorajik kontüzyonlar darbeden hemen sonraki ilk dakikalarda tam olgunluğa erişir ve günlerce büyümez.",
+       "isLie": true,
+       "explanation": "Yalan. Kontüzyonlar ilk saatlerde silik kalabilir ve doku ödemiyle birlikte birkaç gün içinde genişleyip belirginleşir."
+      },
+      {
+       "text": "Posttravmatik intraventriküler hematom saptanması klinik prognozun kötü olduğunu gösterir.",
+       "isLie": false,
+       "explanation": "Doğru. Ventrikül içi kanama parankimal hasarın şiddetini ve yüksek mortalite riskini simgeler."
+      },
+      {
+       "text": "Manyetik rezonans FLAIR sekansı subaraknoid boşluktaki kanamayı göstermede oldukça duyarlıdır.",
+       "isLie": false,
+       "explanation": "Doğru. Serbest su sinyali baskılandığından sulkuslardaki protein ve eritrositler parlak görünür."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Hemorajik kontüzyonların kafatası kemik anatomisiyle ilişkili olarak en sık yerleştiği iki parankimal bölge neresidir?",
+     "answer": "Frontal lob tabanı (orbitofrontal korteks) ve temporal lob ön kutuplarıdır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 9,
+   "id": "k2p-y25-k2-12-kafa-travmalari-s09",
+   "title": "Travma Biyomekaniği: Kup - Kontrkup Lezyonları ve Penetran Yaralanmalar",
+   "subtitle": "Akselerasyon-deselerasyon hasarları, karşı taraf lezyonları ve ateşli silah yabancı cisim traktı",
+   "badge": "Biyomekanik ve Yaralanma",
+   "bolum": "4",
+   "pdfSayfalari": [
+    50,
+    56
+   ],
+   "kaynakSayfa": "Slayt 50-56",
+   "bilgi": "Kup hasarı darbe tarafında akselerasyonla, kontrkup hasarı karşı kutupta deselerasyonla oluşur; penetran travmada hemorajik trakt izlenir.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "synthesisNarrative": "Kafa travmalarında biyomekanik kuvvetler kafanın hareket durumuna ve darbenin yönüne göre özgül hasar paternleri oluşturur.\n\n- **Kup (Coup) Hasarı:** Sabit duran kafaya hareketli bir cismin çarpmasıyla darbenin doğrudan temas ettiği tarafta oluşan akselerasyon hasarıdır. Darbe yerinde lokal skalp hematomu, kafatası kırığı ve yüzeyel kortikal zedelenme ile karakterizedir.\n- **Kontrkup (Contrecoup) Hasarı:** Hareket halindeki kafanın aniden durması sonucu darbe noktasının tam zıt karşı kutbunda gelişen deselerasyon hasarıdır. Beyin parankiminin karşı iç tabulaya çarpmasıyla karşı tarafta yaygın hemorajik kontüzyonlar ve subdural hematom gelişir.\n- **Penetran Kafa Travmaları:** Ateşli silah mermileri, şarapnel parçaları veya intrakraniyal penetrasyon gösteren yabancı cisimlerle oluşan yüksek enerjili yaralanmalardır.\n- **Penetran BT Bulguları:** Kemik parçalanması, metalik hiperdens fragmanlar, kanama odakları, intrakraniyal hava ve merminin katettiği hemorajik trakt izlenir.\n\n> [!IMPORTANT]\n> Transorbital yoldan sfenoid kanadı delip temporal loba uzanan delici yaralanmalarda majör vasküler yırtılma ve anevrizma riski nedeniyle acil çok kesitli anjiyografik değerlendirme gerekir.",
+   "content": "Kafa travmalarında biyomekanik kuvvetler kafanın hareket durumuna ve darbenin yönüne göre özgül hasar paternleri oluşturur.\n\n- **Kup (Coup) Hasarı:** Sabit duran kafaya hareketli bir cismin çarpmasıyla darbenin doğrudan temas ettiği tarafta oluşan akselerasyon hasarıdır. Darbe yerinde lokal skalp hematomu, kafatası kırığı ve yüzeyel kortikal zedelenme ile karakterizedir.\n- **Kontrkup (Contrecoup) Hasarı:** Hareket halindeki kafanın aniden durması sonucu darbe noktasının tam zıt karşı kutbunda gelişen deselerasyon hasarıdır. Beyin parankiminin karşı iç tabulaya çarpmasıyla karşı tarafta yaygın hemorajik kontüzyonlar ve subdural hematom gelişir.\n- **Penetran Kafa Travmaları:** Ateşli silah mermileri, şarapnel parçaları veya intrakraniyal penetrasyon gösteren yabancı cisimlerle oluşan yüksek enerjili yaralanmalardır.\n- **Penetran BT Bulguları:** Kemik parçalanması, metalik hiperdens fragmanlar, kanama odakları, intrakraniyal hava ve merminin katettiği hemorajik trakt izlenir.\n\n> [!IMPORTANT]\n> Transorbital yoldan sfenoid kanadı delip temporal loba uzanan delici yaralanmalarda majör vasküler yırtılma ve anevrizma riski nedeniyle acil çok kesitli anjiyografik değerlendirme gerekir.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Kup Lezyonu",
+      "desc": "Darbe temas noktasında, aynı tarafta gelişen primer akselerasyon hasarıdır.",
+      "isKey": true
+     },
+     {
+      "title": "Kontrkup Lezyonu",
+      "desc": "Darbe noktasının zıt kutbunda, beynin iç tabulaya çarpmasıyla oluşan deselerasyon hasarıdır.",
+      "isKey": true
+     },
+     {
+      "title": "Penetran Travma",
+      "desc": "Ateşli silah yaralanmalarında metalik fragmanlar, hava ve hemorajik trakt görülür.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Kup lezyonu darbenin temas ettiği tarafta akselerasyon hasarıdır; kontrkup lezyonu ise karşı kutupta gelişen deselerasyon hasarıdır.",
+    "📌 [SINAV SPOTU] Kontrkup hasarında sıklıkla darbe yerinin zıt tarafında temporal-frontal hemorajik kontüzyonlar ve subdural hematom gelişir.",
+    "📌 [SINAV SPOTU] Penetran kafa travmalarında bilgisayarlı tomografide kemik hasarı, metalik cisim, serbest hava, kanama ve hemorajik trakt saptanır."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Kontrkup",
+     "explanation": "Kafaya darbe indiğinde beynin kafatası içinde savrulup zıt kemik duvara çarpmasıyla oluşan karşı kutup hasarı."
+    },
+    {
+     "term": "Hemorajik Trakt",
+     "explanation": "Mermi çekirdeği veya yabancı cismin beyin parankimi boyunca ilerlerken parçaladığı kanamalı kanal."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-12-09-1",
+     "front": "Trafik kazasında başını hızla araba camına vuran bir hastada darbenin vurduğu frontal bölgede kemik çatlağı oluşurken, oksipital bölgede geniş parankim kontüzyonu gelişmesini açıklayan biyomekanik mekanizma nedir?",
+     "back": "Frontal bölgedeki temas kup (akselerasyon) hasarı iken; oksipital kutupta beynin kafatasına çarpmasıyla oluşan kontrkup (deselerasyon) hasarıdır.",
+     "hint": "Darbe anındaki temas hasarı ile zıt kutuptaki yavaşlama hasarı.",
+     "category": "Biyomekanik"
+    }
+   ],
+   "sourcePdf": {
+    "pdf": "meds_database_25_26/pdf/kurul2/y25-k2-12-kafa-travmalari.pdf",
+    "startPage": 50,
+    "endPage": 56
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Yüksek hızla seyreden bir araçta ani yavaşlama ve çarpışma sonucu başını öne doğru sertçe çarpan bir sürücünün tomografisinde darbe alan frontal bölgede skalp hematomu izlenirken; zıt kutuptaki oksipital ve temporal loblarda yaygın hemorajik kontüzyonlar saptanıyor. Karşı kutuptaki bu hasarın patofizyolojik adı ve mekanizması hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Kontrkup hasarı ve beynin karşı iç tabulaya çarpmasıyla gelişen deselerasyon yaralanması",
+       "isCorrect": true,
+       "explanation": "Doğru. Darbe noktasının zıt kutbunda beynin kafatası iç tabulasına çarpması ve oluşan negatif basınç dalgasıyla kontrkup deselerasyon hasarı gelişir."
+      },
+      {
+       "key": "B",
+       "text": "Kup hasarı ve doğrudan temas noktasında meydana gelen lokal akselerasyon zedelenmesi",
+       "isCorrect": false,
+       "explanation": "Kup hasarı darbenin kafatasına çarptığı temas yerinde meydana gelen birincil lezyondur. Bu mekanik hasar darbe noktasının zıt kutbundaki deselerasyon zedelenmesini tanımlamaz."
+      },
+      {
+       "key": "C",
+       "text": "Foramen spinosumdan çıkan arterin kafatasını boylu boyunca katetmesi",
+       "isCorrect": false,
+       "explanation": "Arteria meningea media temporal kemik oluğunda seyreder ve kemik kırıklarında epidural hematom oluşturur. Karşı kutupta kontrkup parankim hasarı meydana getiren bir vasküler yapı değildir."
+      },
+      {
+       "key": "D",
+       "text": "Kafatasının iç tabulası ile dura yaprağının sütür çizgilerinde tamamen birbirinden kopması",
+       "isCorrect": false,
+       "explanation": "Dura mater kemiğe kraniyal sütür çizgilerinde periost olarak sıkıca yapışıktır. Kontrkup hasarı dural yaprağın kopması değil, beyin parankiminin zıt kemik duvara çarpmasıdır."
+      },
+      {
+       "key": "E",
+       "text": "Ateşli silah yaralanmasına bağlı parankimde uzanan hemorajik yabancı cisim traktı",
+       "isCorrect": false,
+       "explanation": "Hemorajik trakt ateşli silah veya delici aletlerin beyin parankiminde açtığı doku defektidir. Künt travmalardaki akselerasyon ve deselerasyon kontrkup hasarını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kontrkup Hasarı hareket halindeki kafanın aniden durması sonucu darbe noktasının tam zıt karşı kutbunda gelişen deselerasyon hasarıdır.",
+     "maskedTerm": "deselerasyon",
+     "hint": "Hareket halindeki başın aniden durması veya yavaşlaması esnasında ortaya çıkan biyomekanik kuvvet."
+    },
+    {
+     "type": "before_after_slider",
+     "comparisonTitle": "Kup Hasarı vs Kontrkup Hasarı Karşılaştırması",
+     "leftTitle": "Kup (Coup) Hasarı",
+     "rightTitle": "Kontrkup (Contrecoup) Hasarı",
+     "leftPoints": [
+      "Darbenin kafatasına çarptığı doğrudan temas tarafında gelişir.",
+      "Temel olarak darbe anındaki lokal akselerasyon kuvvetine bağlıdır.",
+      "Sıklıkla darbe yerinde skalp laserasyonu ve kemik kırığı eşlik eder."
+     ],
+     "rightPoints": [
+      "Darbenin uygulandığı kutbun tam zıt karşı tarafında gelişir.",
+      "Beynin karşı duvara çarpması ve deselerasyon kuvvetine bağlıdır.",
+      "Karşı kutupta yaygın hemorajik parankim kontüzyonları izlenir."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Travma Biyomekaniği ve Penetran Yaralanmalar",
+     "items": [
+      {
+       "text": "Kup lezyonu darbenin kafatasına vurduğu temas tarafında akselerasyon kuvvetiyle ortaya çıkar.",
+       "isLie": false,
+       "explanation": "Doğru. Doğrudan darbe alanında oluşan skalp ve kemik lezyonları kup hasarını simgeler."
+      },
+      {
+       "text": "Kontrkup hasarı darbe yerinin zıt kutbunda beynin kemik duvara çarpmasıyla meydana gelen deselerasyon hasarıdır.",
+       "isLie": false,
+       "explanation": "Doğru. Kafatasının aniden durması sırasında parankimin karşı iç tabulaya çarpması kontrkup lezyonudur."
+      },
+      {
+       "text": "Penetran kafa travmalarında mermi çekirdeğinin izlediği kanamalı hat hemorajik trakt olarak adlandırılır.",
+       "isLie": false,
+       "explanation": "Doğru. Yabancı cismin parankimde açtığı doku defekti ve kanama alanı hemorajik trakttır."
+      },
+      {
+       "text": "Kontrkup lezyonu temas tarafında skalp hematomu yaparken; kup lezyonu daima zıt hemisferde gelişir.",
+       "isLie": true,
+       "explanation": "Yalan. Kup temas tarafındaki doğrudan lezyondur; zıt kutupta meydana gelen hasar kontrkuptur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Ateşli silah yaralanmalarında bilgisayarlı tomografide saptanan başlıca karakteristik radyolojik bulgular nelerdir?",
+     "answer": "Kemik hasarı, metalik hiperdens yabancı cisim fragmanları, intrakraniyal serbest hava (pnömosefali), kanama ve hemorajik trakttır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 10,
+   "id": "k2p-y25-k2-12-kafa-travmalari-s10",
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Subdural Hematom, Kontüzyon ve Travma Mekanizmaları",
+   "subtitle": "Subdural kanama evreleri, pediatrik istismar, higroma, kontüzyon ve kup-kontrkup sentezi",
+   "badge": "Bölüm Tekrarı",
+   "bolum": "4",
+   "pdfSayfalari": [
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56
+   ],
+   "kaynakSayfa": "Slayt 30-56",
+   "bilgi": "Bölüm tekrarı: Subdural hematom evreleri, çocuk istismarı, subdural higroma, travmatik SAK, kontüzyonlar ve kup-kontrkup sentezlenir.",
+   "isCheckpoint": true,
+   "checkpointNumber": 2,
+   "synthesisNarrative": "Bu aşamada subdural hematomları, pediatrik sıvı koleksiyonlarını, kontüzyonları ve travma biyomekaniğini bir araya getiriyoruz.\n\n- **Subdural Hematom Dinamikleri:** Köprü venlerinin yırtılmasıyla dura altında biriken kresentik koleksiyonları inceledik. Bu kanamaların kraniyal sütürleri rahatça aştığını, ancak dural refleksiyonlar olan falks ve tentoriumu geçemediğini pekiştirdik.\n- **Evreleme:** Akut evrede hiperdens, subakut evrede izodens ve kronik evrede hipodens sıvı seviyelenmelerini netleştirdik.\n- **Pediatrik ve Sıvı Koleksiyonları:** Bebeklerde çoklu evreli subdural kanamanın istismar kanıtı olduğunu; araknoid yırtılmasına bağlı tek yönlü çekvalf mekanizmasıyla BOS toplanmasının subdural higroma oluşturduğunu gördük.\n- **Kontüzyon ve Biyomekanik:** Kemik kabartılarına çarpmayla frontal ve temporal kutupta peteşial kontüzyonların olgunlaştığını, intraventriküler hematomun kötü prognozunu ve darbe tarafındaki kup ile zıt kutuptaki kontrkup ayrımını pekiştirdik.\n\n> [!IMPORTANT]\n> Subakut subdural hematomların tomografide parankimle izodens kalabileceğini; bu aşamada sulkus silinmesi, şift ve manyetik rezonans incelemesinin belirleyici olduğunu unutmayınız.",
+   "content": "Bu aşamada subdural hematomları, pediatrik sıvı koleksiyonlarını, kontüzyonları ve travma biyomekaniğini bir araya getiriyoruz.\n\n- **Subdural Hematom Dinamikleri:** Köprü venlerinin yırtılmasıyla dura altında biriken kresentik koleksiyonları inceledik. Bu kanamaların kraniyal sütürleri rahatça aştığını, ancak dural refleksiyonlar olan falks ve tentoriumu geçemediğini pekiştirdik.\n- **Evreleme:** Akut evrede hiperdens, subakut evrede izodens ve kronik evrede hipodens sıvı seviyelenmelerini netleştirdik.\n- **Pediatrik ve Sıvı Koleksiyonları:** Bebeklerde çoklu evreli subdural kanamanın istismar kanıtı olduğunu; araknoid yırtılmasına bağlı tek yönlü çekvalf mekanizmasıyla BOS toplanmasının subdural higroma oluşturduğunu gördük.\n- **Kontüzyon ve Biyomekanik:** Kemik kabartılarına çarpmayla frontal ve temporal kutupta peteşial kontüzyonların olgunlaştığını, intraventriküler hematomun kötü prognozunu ve darbe tarafındaki kup ile zıt kutuptaki kontrkup ayrımını pekiştirdik.\n\n> [!IMPORTANT]\n> Subakut subdural hematomların tomografide parankimle izodens kalabileceğini; bu aşamada sulkus silinmesi, şift ve manyetik rezonans incelemesinin belirleyici olduğunu unutmayınız.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "SDH Mekanizması",
+      "desc": "Köprü venleri yırtılır, kresentik şekillidir, sütürleri aşar; zamanla dansitesi düşer.",
+      "isKey": true
+     },
+     {
+      "title": "İstismar ve Higroma",
+      "desc": "Çoklu evreli SDH istismardır; araknoid çekvalf mekanizması subdural higroma yapar.",
+      "isKey": true
+     },
+     {
+      "title": "Biyomekanik Ayrım",
+      "desc": "Darbe temas yerinde kup akselerasyonu, zıt kutupta kontrkup deselerasyonu gelişir.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Subdural hematom köprü venlerinin yırtılmasıyla gelişir, kresentiktir ve sütür hatlarını serbestçe geçer.",
+    "📌 [SINAV SPOTU] Bir bebekte farklı evrelerde subdural kanama bulunması sarsılmış bebek sendromu ve fiziksel istismar kanıtıdır.",
+    "📌 [SINAV SPOTU] Kontrkup hasarı darbe noktasının zıt kutbunda beynin kemik duvara çarpmasıyla gelişen deselerasyon lezyonudur."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Köprü Venleri",
+     "explanation": "Kortikal yüzeyden superior sagital sinüse uzanan ve subdural aralıkta gerilip yırtılan damarlar."
+    },
+    {
+     "term": "İzodens Hematom",
+     "explanation": "Subakut evrede hemoglobin lizisi nedeniyle tomografide beyin korteksiyle aynı gri tonda görülen kanama."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-12-10-1",
+     "front": "Subdural hematom ile epidural hematomun dural refleksiyonlar ve sütür hatları açısından en belirgin radyolojik ayrımı nedir?",
+     "back": "Epidural hematom kraniyal sütürleri geçemezken falksı geçebilir; subdural hematom ise sütürleri serbestçe geçerken falks ve tentoriumu geçemez.",
+     "hint": "Sütür çizgileri ile dural katlantı sınırlarının tersine davranışı.",
+     "category": "Radyoloji"
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "kafa travmaları .pdf",
+    "startPage": 30,
+    "endPage": 56,
+    "primaryPage": 34,
+    "citation": "Kafa Travmaları · Doç. Dr. Aydın Sinan Apaydın · Sayfa 30-56"
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kafa travmalı hastaların değerlendirilmesinde lezyonların patofizyolojisi ve radyolojisi ile ilgili aşağıdaki eşleştirmelerden hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Subdural hematom - Kortikal köprü venlerinin yırtılması ve sütür hatlarını aşan kresentik koleksiyon",
+       "isCorrect": true,
+       "explanation": "Doğru. Subdural hematom korteksten sinüslere uzanan köprü venlerinin yırtılması sonucu oluşur; kresentik şekillidir ve sütürleri geçer."
+      },
+      {
+       "key": "B",
+       "text": "Subdural higroma - Yüksek basınçlı arter kanaması sonucu sütürleri geçmeyen bikonveks kitle",
+       "isCorrect": false,
+       "explanation": "Subdural higroma kan değil, araknoid yırtılmasıyla subdural alanda biriken BOS'tur. Bikonveks arteriyel kitle epidural hematomdur."
+      },
+      {
+       "key": "C",
+       "text": "Kup lezyonu - Darbe noktasının zıt kutbunda beynin iç tabulaya çarpmasıyla gelişen hasar",
+       "isCorrect": false,
+       "explanation": "Darbe noktasının tam zıt kutbunda gelişen hasar kontrkuptur; kup lezyonu darbenin doğrudan temas ettiği tarafta oluşur."
+      },
+      {
+       "key": "D",
+       "text": "Hemorajik kontüzyon - Doğrudan travma anında en geniş boyutuna ulaşıp günlerce küçülen lezyon",
+       "isCorrect": false,
+       "explanation": "Hemorajik kontüzyonlar travma anında mikrovasküler peteşilerle başlayan parankim zedelenmeleridir. İlk saatlerde silik kalıp sonraki günlerde ödemle belirginleşir."
+      },
+      {
+       "key": "E",
+       "text": "İntraventriküler hematom - Kranioserebral travmalarda mükemmel prognozu işaret eden bulgu",
+       "isCorrect": false,
+       "explanation": "Posttravmatik intraventriküler hematom ventrikül sistemine yoğun kan sızmasını gösteren klinik bir tablodur. Bu durum mükemmel prognozu değil, son derece kötü seyri simgeler."
+      }
+     ]
+    },
+    {
+     "type": "venn_grid",
+     "title": "Epidural Hematom vs Subdural Hematom Ayırıcı Tanı Kriterleri",
+     "labelA": "Epidural Hematom (EDH)",
+     "labelB": "Subdural Hematom (SDH)",
+     "items": [
+      {
+       "criterion": "Arteria meningea media yırtılmasına bağlı gelişerek BT'de bikonveks şekil alması ve sütürleri geçememesi",
+       "correct": "A",
+       "explanation": "Epidural hematom temporal arter hasarıyla oluşur, mercek şeklindedir ve dural sütür yapışıklığını aşamaz."
+      },
+      {
+       "criterion": "Kortikal köprü venlerinin yırtılmasıyla gelişerek BT'de kresentik şekil alması ve sütürleri serbestçe aşması",
+       "correct": "B",
+       "explanation": "Subdural hematom dura altındaki venöz kanamadır; hilal şeklindedir ve sütür hatlarını rahatça geçer."
+      },
+      {
+       "criterion": "Kafa travması sonrasında kafatası içinde gelişen ekstraaksiyal kanama türü olması",
+       "correct": "both",
+       "explanation": "Hem epidural hem de subdural hematom beyin parankim dokusunun dışındaki meningeal aralıklarda yer alan ekstraaksiyal lezyonlardır."
+      },
+      {
+       "criterion": "Pia mater ile araknoid membran arasındaki mesafede sulkusları ve sisternleri doldurması",
+       "correct": "neither",
+       "explanation": "Sulkus ve sisternleri dolduran kanama subaraknoid kanamadır; epidural veya subdural hematom değildir."
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "title": "Kup Hasarı vs Kontrkup Hasarı Özellikleri",
+     "leftCategory": "Kup (Coup) Hasarı",
+     "rightCategory": "Kontrkup (Contrecoup) Hasarı",
+     "cards": [
+      {
+       "text": "Darbenin kafatasına vurduğu doğrudan temas tarafında gelişen akselerasyon hasarı",
+       "category": "left",
+       "explanation": "Temas noktasında lokal darbe kuvvetiyle meydana gelen primer lezyon kup hasarıdır."
+      },
+      {
+       "text": "Darbe kutbunun tam karşısında beynin iç tabulaya çarpmasıyla gelişen deselerasyon hasarı",
+       "category": "right",
+       "explanation": "Karşı duvara çarpma ve negatif basınçla beliren zıt kutup lezyonu kontrkuptur."
+      },
+      {
+       "text": "Temas noktasındaki lokal skalp hematomu ve lineer kemik kırığı birlikteliği",
+       "category": "left",
+       "explanation": "Doğrudan darbe alan bölgede cilt altı kanama ve kemik kırığı kup lezyonudur."
+      },
+      {
+       "text": "Zıt kutuptaki temporal ve frontal loblarda yaygın hemorajik parankim kontüzyonları",
+       "category": "right",
+       "explanation": "Yavaşlama kuvvetiyle karşı kutuptaki pürüzlü kemiğe çarpan parankim hasarı kontrkuptur."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Subdural Kanama ve Biyomekanik İlkeleri",
+     "items": [
+      {
+       "text": "Subdural hematomda biriken kan dural yaprağın altında serbestçe ilerleyerek sütür hatlarını aşar.",
+       "isLie": false,
+       "explanation": "Doğru. Dura altındaki subdural aralıkta sütür yapışıklığı bulunmadığından kan serbestçe yayılır."
+      },
+      {
+       "text": "Subdural higroma köprü venlerinden bol miktarda taze eritrosit sızmasıyla oluşan hiperdens kan birikimidir.",
+       "isLie": true,
+       "explanation": "Yalan. Subdural higroma kan değil, araknoid yırtılması sonucu subdural aralıkta biriken berrak beyin omurilik sıvısıdır."
+      },
+      {
+       "text": "Subakut subdural hematom tomografide beyin korteksiyle benzer tonda izodens görülebilir.",
+       "isLie": false,
+       "explanation": "Doğru. Eritrositlerin parçalanmasıyla hematom dansitesi korteks gri cevheri ile eşitlenir."
+      },
+      {
+       "text": "Kup lezyonu darbe tarafındaki akselerasyon hasarı iken, kontrkup karşı taraftaki deselerasyon hasarıdır.",
+       "isLie": false,
+       "explanation": "Doğru. Kafanın hareket durumuna göre iki kutupta farklı biyomekanik kuvvetler etkin olur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Subdural hematomun bilgisayarlı tomografide subakut evrede izodens kalması durumunda tanıda aranan dolaylı kitle etkisi bulguları nelerdir?",
+     "answer": "Serebral sulkusların silinmesi, ipsilateral ventrikül basısı ve orta hat yapılarının karşı tarafa şift (yer değiştirme) göstermesidir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 11,
+   "id": "k2p-y25-k2-12-kafa-travmalari-s11",
+   "title": "Diffüz Aksonal Hasar: Makaslama Kuvvetleri ve Predileksiyon Alanları",
+   "subtitle": "Rotasyonel akselerasyon-deselerasyon, aksonal kopmalar ve manyetik rezonansta SWI/T2 duyarlılığı",
+   "badge": "Diffüz Aksonal Hasar",
+   "bolum": "5",
+   "pdfSayfalari": [
+    57,
+    61
+   ],
+   "kaynakSayfa": "Slayt 57-61",
+   "bilgi": "Diffüz aksonal hasar rotasyonel makaslama kuvvetleriyle aksonların kopmasıdır; BT yetersizdir, MRG T2 ve SWI altın standarttır.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "synthesisNarrative": "Diffüz aksonal hasar kafa travmalarında travma anında başlayan ani koma, uzamış vejetatif tablo ve kötü prognoz açısından en kritik primer parankimal patolojidir.\n\n- **Makaslama Kuvvetleri:** Travma anında kranyumun maruz kaldığı ani rotasyonel akselerasyon ve deselerasyon kuvvetleri sonucu ortaya çıkar. Gri ve beyaz cevher dokularının kütle dansiteleri farklı olduğundan bu doku sınırlarında şiddetli makaslama gerilimi oluşur ve akson lifleri kopar.\n- **Predileksiyon Alanları:**\n  1. Kortikomedüller bileşke (gri ve beyaz cevher ayrım yüzeyi - en sık tutulum yeri),\n  2. Korpus kallozum (özellikle splenium bölgesi ve forniks),\n  3. Beyin sapı dorsolateral yüzeyi ve superior serebellar pedinkül (en kötü prognoz göstergesi),\n  4. İnternal kapsül.\n- **Radyolojik Tanı Kısıtlılığı:** Bilgisayarlı tomografi lezyonları saptamada son derece yetersizdir; çünkü aksonal lezyonların büyük kısmı non-hemorajiktir.\n- **Manyetik Rezonans Üstünlüğü:** Tanıda en hassas yöntemler manyetik rezonans görüntülemede T2 sekansları ve mikrokanamalara aşırı duyarlı SWI ile difüzyon incelemeleridir.\n\n> [!IMPORTANT]\n> Derin komadaki bir hastada bilgisayarlı tomografinin tamamen normal olması diffüz aksonal hasarı ekarte ettirmez; klinik tablo ile tomografi arasındaki bu uyumsuzlukta acil manyetik rezonans çekilmelidir.",
+   "content": "Diffüz aksonal hasar kafa travmalarında travma anında başlayan ani koma, uzamış vejetatif tablo ve kötü prognoz açısından en kritik primer parankimal patolojidir.\n\n- **Makaslama Kuvvetleri:** Travma anında kranyumun maruz kaldığı ani rotasyonel akselerasyon ve deselerasyon kuvvetleri sonucu ortaya çıkar. Gri ve beyaz cevher dokularının kütle dansiteleri farklı olduğundan bu doku sınırlarında şiddetli makaslama gerilimi oluşur ve akson lifleri kopar.\n- **Predileksiyon Alanları:**\n  1. Kortikomedüller bileşke (gri ve beyaz cevher ayrım yüzeyi - en sık tutulum yeri),\n  2. Korpus kallozum (özellikle splenium bölgesi ve forniks),\n  3. Beyin sapı dorsolateral yüzeyi ve superior serebellar pedinkül (en kötü prognoz göstergesi),\n  4. İnternal kapsül.\n- **Radyolojik Tanı Kısıtlılığı:** Bilgisayarlı tomografi lezyonları saptamada son derece yetersizdir; çünkü aksonal lezyonların büyük kısmı non-hemorajiktir.\n- **Manyetik Rezonans Üstünlüğü:** Tanıda en hassas yöntemler manyetik rezonans görüntülemede T2 sekansları ve mikrokanamalara aşırı duyarlı SWI ile difüzyon incelemeleridir.\n\n> [!IMPORTANT]\n> Derin komadaki bir hastada bilgisayarlı tomografinin tamamen normal olması diffüz aksonal hasarı ekarte ettirmez; klinik tablo ile tomografi arasındaki bu uyumsuzlukta acil manyetik rezonans çekilmelidir.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Hasar Mekanizması",
+      "desc": "Rotasyonel makaslama kuvvetleri gri-beyaz cevher sınırında aksonları yırtar.",
+      "isKey": true
+     },
+     {
+      "title": "Tutulum Bölgeleri",
+      "desc": "En sık kortikomedüller bileşke ve splenium; beyin sapı tutulumu en kötü prognozdur.",
+      "isKey": true
+     },
+     {
+      "title": "Radyolojik Yöntem",
+      "desc": "BT duyarsızdır (%80 non-hemorajik); MRG T2, SWI ve difüzyon en hassastır.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Diffüz aksonal hasar kafa travmalarında koma ve kötü prognoz açısından en önemli patolojidir; rotasyonel makaslama kuvvetleriyle gelişir.",
+    "📌 [SINAV SPOTU] Predileksiyon alanları: En sık gri/beyaz cevher bileşkesi ve korpus kallozum (splenium); en kötü prognoz beyin sapı hasarıdır.",
+    "📌 [SINAV SPOTU] BT diffüz aksonal lezyonları göstermede duyarsızdır; MRG'de T2 sekansları ve SWI en hassas tanı yöntemleridir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Makaslama (Shearing)",
+     "explanation": "Farklı yoğunluktaki doku katmanlarının açısal dönme hareketiyle birbirinin üzerinden zıt yönlerde kayması."
+    },
+    {
+     "term": "SWI (Duyarlılık Ağırlıklı)",
+     "explanation": "Mikroskobik peteşial kanama ve hemosiderin odaklarını saptamada son derece yüksek duyarlılığa sahip MRG sekansı."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-12-11-1",
+     "front": "Diffüz aksonal hasarlı bir hastada bilgisayarlı tomografinin genellikle normal veya yetersiz kalmasının temel patolojik nedeni nedir?",
+     "back": "Aksonal hasar odaklarının yüzde sekseninden fazlasının non-hemorajik (kanamasız) mikroskobik yırtılmalar olmasıdır.",
+     "hint": "Lezyonların büyük kısmının taze kanama içermemesi.",
+     "category": "Radyoloji"
+    }
+   ],
+   "sourcePdf": {
+    "pdf": "meds_database_25_26/pdf/kurul2/y25-k2-12-kafa-travmalari.pdf",
+    "startPage": 57,
+    "endPage": 61
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Trafik kazası sonrası derin komada acile getirilen bir hastanın bilgisayarlı tomografisinde belirgin kitle etkisi veya geniş kanama saptanmıyor; yalnızca gri-beyaz cevher sınırında birkaç milimetrik peteşi izleniyor. Manyetik rezonans SWI kesitlerinde ise korpus kallozum spleniumunda ve beyin sapında yaygın mikroyırtılmalar saptanıyor. Bu hastadaki birincil patoloji ve mekanizma hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Rotasyonel makaslama kuvvetlerine bağlı gelişen diffüz aksonal hasar",
+       "isCorrect": true,
+       "explanation": "Doğru. Rotasyonel travmalar gri-beyaz cevher sınırında ve spleniumda makaslama kuvvetleriyle aksonal hasar oluşturur; lezyonlar MRG SWI ile gösterilir."
+      },
+      {
+       "key": "B",
+       "text": "Arteria meningea media yırtılmasına bağlı gelişen akut bikonveks koleksiyon",
+       "isCorrect": false,
+       "explanation": "Arteria meningea media yırtılması temporal kemik kırıklarında yüksek basınçlı epidural kanama oluşturur. Parankimin derin aksonal mikroyırtılmalarını ve koma tablosunu simgelemez."
+      },
+      {
+       "key": "C",
+       "text": "Araknoid membranın yırtılması sonucu oluşan kistik subdural higroma",
+       "isCorrect": false,
+       "explanation": "Subdural higroma travmatik araknoid yırtığıyla subdural aralıkta biriken berrak beyin omurilik sıvısıdır; derin beyaz cevher liflerindeki kopmaları açıklamaz."
+      },
+      {
+       "key": "D",
+       "text": "Kortikal köprü venlerinin yırtılmasıyla beliren kresentik ekstraaksiyal kanama",
+       "isCorrect": false,
+       "explanation": "Köprü venlerinin yırtılması dura ile araknoid arasında kresentik subdural kanama oluşturur. Korpus kallozum ve beyin sapındaki aksonal hasarla doğrudan ilişkili değildir."
+      },
+      {
+       "key": "E",
+       "text": "Paranasal sinüs kırığına sekonder kraniyal kaviteye hava dolması",
+       "isCorrect": false,
+       "explanation": "Pnömosefali paranasal veya mastoid kemik hasarlarında kranial boşluğa serbest hava sızmasıdır. Derin komadaki aksonal hücre iskeleti hasarını temsil etmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Manyetik rezonans görüntülemede T2 sekansları ve SWI ile difüzyon incelemeleri aksonal lezyonları saptamada en hassas yöntemlerdir.",
+     "maskedTerm": "SWI",
+     "hint": "Mikrohemoraji odaklarını ortaya çıkaran ileri manyetik rezonans tekniği kısaltması."
+    },
+    {
+     "type": "causal_chain",
+     "chainTitle": "Diffüz Aksonal Hasarın Patofizyolojik Oluşum Zinciri",
+     "steps": [
+      "1. Rotasyonel ivmelenme kuvveti: Ani açısal hızlanma kranyum içindeki beyin dokusunda burulma gerilimi oluşturur.",
+      "2. Doku sınırlarında makaslama: Gri ve beyaz cevherin farklı kütle yoğunluğu arayüzeylerde makaslama gerilimi doğurur.",
+      "3. Akson iskeletinde mikroyırtılmalar: Mekanik gerilim akson hücre iskeletini koparır ve aksoplazmik akımı durdurur.",
+      "4. Aksonal şişme ve iletim kaybı: Retraksiyon sferoidleri oluşarak korpus kallozum ve beyin sapında iletimi keser ve koma gelişir."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Diffüz Aksonal Hasarın Özellikleri",
+     "items": [
+      {
+       "text": "Diffüz aksonal hasar travma anında başlayan ani koma ve kötü prognoz açısından en kritik patolojidir.",
+       "isLie": false,
+       "explanation": "Doğru. Beynin derin aksonal yollarındaki yaygın mikroyırtılmalar kalıcı koma tablosunun birincil nedenidir."
+      },
+      {
+       "text": "Predileksiyon alanları içinde beyin sapı dorsolateral yüzeyinin tutulması en kötü prognozu gösterir.",
+       "isLie": false,
+       "explanation": "Doğru. Beyin sapı tutulumu otonom ve retiküler merkezleri etkilediğinden sağkalım şansını dramatik düşürür."
+      },
+      {
+       "text": "Diffüz aksonal hasar lezyonlarının tamamı geniş kanamalar olduğundan tomografide kolayca saptanır.",
+       "isLie": true,
+       "explanation": "Yalan. Lezyonların büyük kısmı non-hemorajiktir; bu nedenle tomografi yetersiz kalır ve tanıda MRG gerekir."
+      },
+      {
+       "text": "En sık görülen tutulum alanı gri ve beyaz cevher bileşkesi ile korpus kallozum spleniumudur.",
+       "isLie": false,
+       "explanation": "Doğru. Doku yoğunluk farkının en belirgin olduğu kortikomedüller sınır ve splenium en sık etkilenen yerlerdir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Diffüz aksonal hasarda korpus kallozumun anatomik olarak en sık lezyon gösteren spesifik parçası neresidir?",
+     "answer": "Korpus kallozumun arka kalın parçası olan splenium bölgesidir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 12,
+   "id": "k2p-y25-k2-12-kafa-travmalari-s12",
+   "title": "Subkortikal Hasar, Beyin Sapı Yaralanması ve Travmatik Ödem",
+   "subtitle": "Derin gri cevher tutulumu, kraniokaudal beyin yer değiştirmesi ve sitotoksik ödem dinamikleri",
+   "badge": "Derin Hasar ve Ödem",
+   "bolum": "5",
+   "pdfSayfalari": [
+    62,
+    64
+   ],
+   "kaynakSayfa": "Slayt 62-64",
+   "bilgi": "Subkortikal hasar derin gri cevher ve beyin sapını tutar; sitotoksik ödem DWI hiperintensitesi ve ADC kısıtlılığıyla doğrulanır.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "synthesisNarrative": "Kafa travmalarında derin parankimal alanların zedelenmesi ve travmatik doku ödemi kafa içi basınç artışının temel belirleyicisidir.\n\n- **Subkortikal Zedelenme:** Beyin sapı, bazal ganglionlar, talamus ve üçüncü ventrikül komşuluğundaki parankimde gelişen şiddetli diffüz aksonal yaralanma formudur.\n- **Beyin Sapı Hasarı:** Ani kraniokaudal yer değiştirme kuvvetleri sonucu anterorostral beyin sapında ve fornikste zedelenme gelişir; manyetik rezonansta FLAIR ve T2 ağırlıklı kesitlerde hiperintens lezyonlar izlenir.\n- **Travmatik Serebral Ödem:** Hücresel membran pompalarının iflası ve metabolik çöküş sonucu geniş hemisferik ödem tablosu yerleşir.\n- **Difüzyon Kısıtlılığı:** Difüzyon ağırlıklı manyetik rezonansta korteks ve beyaz cevherde hiperintensite, ADC haritasında ise belirgin sinyal düşüşü yani difüzyon kısıtlılığı izlenir.\n\n> [!IMPORTANT]\n> ADC haritasında izlenen difüzyon kısıtlılığı hücre içi su birikimini yani sitotoksik ödem varlığını kesinleştirir; genişleyen ödemli parankim dokusu kafa içi basıncını aşırı artırarak fıtıklaşmalara zemin hazırlar.",
+   "content": "Kafa travmalarında derin parankimal alanların zedelenmesi ve travmatik doku ödemi kafa içi basınç artışının temel belirleyicisidir.\n\n- **Subkortikal Zedelenme:** Beyin sapı, bazal ganglionlar, talamus ve üçüncü ventrikül komşuluğundaki parankimde gelişen şiddetli diffüz aksonal yaralanma formudur.\n- **Beyin Sapı Hasarı:** Ani kraniokaudal yer değiştirme kuvvetleri sonucu anterorostral beyin sapında ve fornikste zedelenme gelişir; manyetik rezonansta FLAIR ve T2 ağırlıklı kesitlerde hiperintens lezyonlar izlenir.\n- **Travmatik Serebral Ödem:** Hücresel membran pompalarının iflası ve metabolik çöküş sonucu geniş hemisferik ödem tablosu yerleşir.\n- **Difüzyon Kısıtlılığı:** Difüzyon ağırlıklı manyetik rezonansta korteks ve beyaz cevherde hiperintensite, ADC haritasında ise belirgin sinyal düşüşü yani difüzyon kısıtlılığı izlenir.\n\n> [!IMPORTANT]\n> ADC haritasında izlenen difüzyon kısıtlılığı hücre içi su birikimini yani sitotoksik ödem varlığını kesinleştirir; genişleyen ödemli parankim dokusu kafa içi basıncını aşırı artırarak fıtıklaşmalara zemin hazırlar.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Subkortikal Alanlar",
+      "desc": "Beyin sapı, bazal ganglionlar, talamus ve üçüncü ventrikül komşuluğunu kapsar.",
+      "isKey": true
+     },
+     {
+      "title": "Kraniokaudal Kuvvet",
+      "desc": "Ani dikey beyin hareketi anterorostral beyin sapı ve fornikste hasar yapar.",
+      "isKey": true
+     },
+     {
+      "title": "Sitotoksik Ödem",
+      "desc": "ADC haritasında sinyal düşüşü (difüzyon kısıtlılığı) sitotoksik ödemin kanıtıdır.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Subkortikal zedelenme beyin sapı, bazal ganglionlar, talamus ve üçüncü ventrikül komşuluğunda gelişen diffüz aksonal hasardır.",
+    "📌 [SINAV SPOTU] Ani kraniokaudal beyin yer değiştirmesi anterorostral beyin sapında ve fornikste T2/FLAIR hiperintens lezyonlar oluşturur.",
+    "📌 [SINAV SPOTU] Travmatik serebral ödemde ADC haritasındaki difüzyon kısıtlılığı sitotoksik ödem varlığını kesinleştirir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Sitotoksik Ödem",
+     "explanation": "Enerji krizine bağlı olarak sodyum-potasyum pompalarının çökmesi ve suyun hücre içine hapsolarak nöronları şişirmesi."
+    },
+    {
+     "term": "ADC Haritası",
+     "explanation": "Manyetik rezonansta su moleküllerinin mikroskobik serbest difüzyon hızını gösteren katsayı haritası."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-12-12-1",
+     "front": "Travmatik beyin ödeminde difüzyon manyetik rezonans görüntülerinde ADC haritasında belirgin sinyal azalması görülmesi hangi ödem tipini belgeler?",
+     "back": "Hücre zarlarındaki pompaların çökmesiyle suyun hücre içine hapsolduğu sitotoksik ödem tipini belgeler.",
+     "hint": "Hücre zarının bozulmasıyla hücre içinde su göllenmesi.",
+     "category": "Fizyopatoloji"
+    }
+   ],
+   "sourcePdf": {
+    "pdf": "meds_database_25_26/pdf/kurul2/y25-k2-12-kafa-travmalari.pdf",
+    "startPage": 62,
+    "endPage": 64
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Ağır kafa travması geçiren bir olguda çekilen manyetik rezonans görüntülemede hemisferik korteks ve periventriküler beyaz cevherde DWI hiperintensitesi ile birlikte ADC haritasında yaygın difüzyon kısıtlılığı saptanıyor. Bu radyolojik bulgu doku düzeyinde hangisini doğrular?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Enerji yetmezliğine sekonder gelişen hücre içi su birikimi yani sitotoksik ödem tablosunu",
+       "isCorrect": true,
+       "explanation": "Doğru. ADC haritasındaki difüzyon kısıtlılığı su moleküllerinin hücre içine hapsolarak serbestçe hareket edemediğini, yani sitotoksik ödemi gösterir."
+      },
+      {
+       "key": "B",
+       "text": "Serebral arteria meningea media dallarında taze arteriyel kan pıhtısı oluşmasını",
+       "isCorrect": false,
+       "explanation": "Arteria meningea media temporal kemik oluğunda seyreden arteriyel bir damardır. Bu damarın lezyonu epidural kanama yapar; parankimal hücre içi difüzyon kısıtlılığını açıklamaz."
+      },
+      {
+       "key": "C",
+       "text": "Araknoid membranın yırtılarak subdural aralığa berrak BOS akıtmasını",
+       "isCorrect": false,
+       "explanation": "Araknoid yırtılması subdural higroma yapar ve kısıtlanmamış serbest BOS sinyali verir; parankimal sitotoksik ödemi oluşturmaz."
+      },
+      {
+       "key": "D",
+       "text": "Kemik iç tabulası ile dura arasında sınırlanmış bikonveks ekstraaksiyal kanamayı",
+       "isCorrect": false,
+       "explanation": "Bikonveks ekstraaksiyal kitle epidural hematomdur. Bu lezyon meningeal aralıkta yer alır ve parankim hücrelerinin sitotoksik şişmesini temsil etmez."
+      },
+      {
+       "key": "E",
+       "text": "Kafatasının üst tepe noktasında superior sagital sinüsün izole yırtılmasını",
+       "isCorrect": false,
+       "explanation": "Superior sagital sinüs orta hat tepe noktasında venöz kan toplayan bir sinüstür. Bu yapının hasarı verteks epidural hematomu oluşturur; parankimal difüzyon düşüşünü simgelemez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "ADC haritasında izlenen difüzyon kısıtlılığı hücre içi su birikimini yani sitotoksik ödem varlığını kesinleştirir.",
+     "maskedTerm": "sitotoksik ödem",
+     "hint": "İskemi ve pompa iflasıyla nöronların su çekerek balonlaşması."
+    },
+    {
+     "type": "interactive_table",
+     "tableTitle": "Derin Kranioserebral Hasar Alanları ve Radyolojik Bulguları",
+     "tableHeaders": [
+      "Anatomik Bölge",
+      "Hasar Mekanizması",
+      "Manyetik Rezonans Karakteristiği"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Anterorostral Beyin Sapı",
+         "isMasked": false
+        },
+        {
+         "text": "Ani kraniokaudal beyin yer değiştirmesi",
+         "isMasked": true,
+         "hint": "Kafatasının dikey boyutsal hatta sert açısal ivmelenmesi."
+        },
+        {
+         "text": "T2 ve FLAIR kesitlerinde hiperintens zedelenme odakları",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Bazal Ganglionlar ve Talamus",
+         "isMasked": false
+        },
+        {
+         "text": "Derin parankimal diffüz aksonal hasar",
+         "isMasked": false
+        },
+        {
+         "text": "Üçüncü ventrikül komşuluğunda peteşi ve difüzyon kısıtlılığı",
+         "isMasked": true,
+         "hint": "Derin gri cevher nükleuslarında hücresel şişme ve mikrokanama görünümü."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Hemisferik Beyin Parankimi",
+         "isMasked": false
+        },
+        {
+         "text": "Travmatik serebral ödem",
+         "isMasked": false
+        },
+        {
+         "text": "ADC haritasında belirgin sinyal düşüşü ve difüzyon kısıtlılığı",
+         "isMasked": true,
+         "hint": "Manyetik alanda sıvı moleküllerinin mikroskobik transfer hız kaybı."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Subkortikal Hasar ve Serebral Ödem İlkeleri",
+     "items": [
+      {
+       "text": "Subkortikal zedelenme beyin sapı, talamus ve üçüncü ventrikül komşuluğundaki parankimi içerir.",
+       "isLie": false,
+       "explanation": "Doğru. Bu derin anatomik bölgeler diffüz aksonal hasarın subkortikal derin komponentini oluşturur."
+      },
+      {
+       "text": "Sitotoksik ödem tablosunda su molekülleri serbestleştiği için ADC haritasında sinyal artar.",
+       "isLie": true,
+       "explanation": "Yalan. Sitotoksik ödemde su hücre içine hapsolduğu için mikroskobik hareket kısıtlanır ve ADC haritasında sinyal düşer."
+      },
+      {
+       "text": "Ani kraniokaudal yer değiştirme kuvvetleri beyin sapı ve fornikste zedelenme oluşturabilir.",
+       "isLie": false,
+       "explanation": "Doğru. Dikey aksiyel savrulmalar anterorostral beyin sapında makaslama hasarına yol açar."
+      },
+      {
+       "text": "Genişleyen serebral ödem kafa içi basıncını yükselterek doku perfüzyonunu bozar.",
+       "isLie": false,
+       "explanation": "Doğru. Monro-Kellie doktrinine göre şişen beyin dokusu kafa içi basıncını hızla kritik seviyelere taşır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Subkortikal zedelenme kapsamında değerlendirilen başlıca derin gri cevher ve santral yapılar nelerdir?",
+     "answer": "Beyin sapı, bazal ganglionlar, talamus ve üçüncü ventrikül komşuluğundaki derin parankim dokularıdır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 13,
+   "id": "k2p-y25-k2-12-kafa-travmalari-s13",
+   "title": "KİBAS ve Supratentorial Herniasyonlar: Subfalsin Herniasyon",
+   "subtitle": "Kafa içi basınç artışı, falks serebri altından singulat girus kayması ve ACA enfarktı",
+   "badge": "Herniasyon Sendromları",
+   "bolum": "6",
+   "pdfSayfalari": [
+    65,
+    70
+   ],
+   "kaynakSayfa": "Slayt 65-70",
+   "bilgi": "En sık herniasyon subfalsin herniasyondur; singulat girus falks altından karşıya kayar, foramen Monroyu ve ACA damarını sıkıştırabilir.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "synthesisNarrative": "Kafatasının rijit ve genişleyemez yapısı nedeniyle parankim kitlesi veya yaygın ödem kafa içi basıncını (KİBAS) hızla artırır.\n\n- **Herniasyon Kavramı:** Artan kafa içi basıncı nedeniyle beyin parankim yapılarının dural bölmeler arasındaki anatomik açıklıklardan bir kompartmandan diğerine yer değiştirmesidir; parankimal ve vasküler hasarla sonuçlanır.\n- **Herniasyon Tipleri:** Subfalsin, transtentorial (unkal ve santral), tonsiller ve eksternal herniasyon olarak sınıflandırılır.\n- **Subfalsin (Singulat) Herniasyon:** En sık görülen herniasyon tipidir. Tek taraflı hemisferik kitle veya ödem sonucu singulat girus falks serebrinin serbest alt kenarı altından karşı hemisfere doğru itilir.\n- **Radyolojik Bulgular:** Belirgin orta hat şifti izlenir ve karşı lateral ventrikül basıya uğrar. Foramen Monro obstrüksiyonu gelişirse karşı lateral ventrikülde hapsolmaya bağlı genişleme ortaya çıkabilir.\n- **Vasküler Tehlike:** Anterior serebral arter falks serebri altında sıkışarak bu damarın sulama alanında iskemik enfarktlar gelişebilir.\n\n> [!IMPORTANT]\n> Subfalsin herniasyon genellikle tek başına durmaz; basınç kontrol altına alınamazsa parankim kaudale doğru itilerek ölümcül transtentorial herniasyona ilerler.",
+   "content": "Kafatasının rijit ve genişleyemez yapısı nedeniyle parankim kitlesi veya yaygın ödem kafa içi basıncını (KİBAS) hızla artırır.\n\n- **Herniasyon Kavramı:** Artan kafa içi basıncı nedeniyle beyin parankim yapılarının dural bölmeler arasındaki anatomik açıklıklardan bir kompartmandan diğerine yer değiştirmesidir; parankimal ve vasküler hasarla sonuçlanır.\n- **Herniasyon Tipleri:** Subfalsin, transtentorial (unkal ve santral), tonsiller ve eksternal herniasyon olarak sınıflandırılır.\n- **Subfalsin (Singulat) Herniasyon:** En sık görülen herniasyon tipidir. Tek taraflı hemisferik kitle veya ödem sonucu singulat girus falks serebrinin serbest alt kenarı altından karşı hemisfere doğru itilir.\n- **Radyolojik Bulgular:** Belirgin orta hat şifti izlenir ve karşı lateral ventrikül basıya uğrar. Foramen Monro obstrüksiyonu gelişirse karşı lateral ventrikülde hapsolmaya bağlı genişleme ortaya çıkabilir.\n- **Vasküler Tehlike:** Anterior serebral arter falks serebri altında sıkışarak bu damarın sulama alanında iskemik enfarktlar gelişebilir.\n\n> [!IMPORTANT]\n> Subfalsin herniasyon genellikle tek başına durmaz; basınç kontrol altına alınamazsa parankim kaudale doğru itilerek ölümcül transtentorial herniasyona ilerler.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "En Sık Herniasyon",
+      "desc": "Subfalsin herniasyondur; singulat girus falks serebri altından karşı tarafa kayar.",
+      "isKey": true
+     },
+     {
+      "title": "Ventrikül Dinamiği",
+      "desc": "Karşı ventrikül ezilir; foramen Monro tıkanırsa hapsolup genişleyebilir.",
+      "isKey": true
+     },
+     {
+      "title": "Vasküler Risk",
+      "desc": "Anterior serebral arter (ACA) kompresyonu sonucu frontal enfarkt gelişebilir.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Subfalsin herniasyon en sık görülen herniasyon tipidir; singulat girus falks serebri altından karşı tarafa herniye olur.",
+    "📌 [SINAV SPOTU] Subfalsin herniasyonda Foramen Monro obstrüksiyonu nedeniyle karşı lateral ventrikül sonradan genişleyebilir.",
+    "📌 [SINAV SPOTU] Subfalsin herniasyonda anterior serebral arter (ACA) kompresyonu sonucu damarın sulama alanında iskemik enfarktlar gelişebilir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Subfalsin Herniasyon",
+     "explanation": "Singulat girusun sert dural falks serebrinin alt kenarından karşı serebral hemisfere doğru fıtıklaşması."
+    },
+    {
+     "term": "Orta Hat Şifti",
+     "explanation": "Kitle etkisine bağlı olarak septum pellucidum ve üçüncü ventrikülün orta hattan karşıya kayması."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-12-13-1",
+     "front": "Subfalsin herniasyonda singulat girusun falks serebri altında sıkışması hangi majör arterin lümenini daraltarak frontal enfarkta yol açar?",
+     "back": "Anterior serebral arterin (ACA) lümenini sıkıştırarak enfarkta yol açar.",
+     "hint": "İki hemisfer arasında falks tabanında seyreden serebral arter.",
+     "category": "Vasküler Anatomi"
+    }
+   ],
+   "sourcePdf": {
+    "pdf": "meds_database_25_26/pdf/kurul2/y25-k2-12-kafa-travmalari.pdf",
+    "startPage": 65,
+    "endPage": 70
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Geniş bir kitle lezyonuna bağlı olarak bilgisayarlı tomografide singulat girusun falks serebrinin serbest alt kenarı altından karşı hemisfere doğru itildiği ve belirgin orta hat şifti oluşturduğu saptanan hastada gelişebilecek en olası vasküler komplikasyon hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Anterior serebral arter kompresyonu ve bu arterin sulama alanında iskemik enfarkt gelişimi",
+       "isCorrect": true,
+       "explanation": "Doğru. Subfalsin herniasyonda falks serebri altına sıkışan anterior serebral arter daralarak medial frontal alanda enfarkta neden olur."
+      },
+      {
+       "key": "B",
+       "text": "Arteria meningea media yırtılmasına bağlı temporal kemik altında kanama",
+       "isCorrect": false,
+       "explanation": "Arteria meningea media yırtılması epidural hematoma neden olur. Falks altındaki subfalsin herniasyonun vasküler sonucu değildir."
+      },
+      {
+       "key": "C",
+       "text": "Serebral köprü venlerinin gerilip yırtılmasıyla bilateral subdural higroma oluşması",
+       "isCorrect": false,
+       "explanation": "Köprü venlerinin yırtılması subdural hematom yapar; higroma ise araknoid yırtığıyla oluşur. Subfalsin herniasyonun damarsal komplikasyonu değildir."
+      },
+      {
+       "key": "D",
+       "text": "Superior sagital sinüsün kemik iç tabulasından ayrılarak verteks epidural hematomu yapması",
+       "isCorrect": false,
+       "explanation": "Superior sagital sinüs tepe noktasında yer alır; subfalsin singulat herniasyon sırasında sıkışan damar anterior serebral arterdir."
+      },
+      {
+       "key": "E",
+       "text": "Posterior inferior serebellar arterin foramen magnum kenarında ezilmesi",
+       "isCorrect": false,
+       "explanation": "Posterior inferior serebellar arter infratentorial arka çukurda serebellar tonsiller komşuluğunda seyreder. Supratentorial subfalsin singulat girus fıtıklaşmasında bu damar basıya uğramaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Subfalsin herniasyonda anterior serebral arter falks serebri altında sıkışarak bu damarın sulama alanında iskemik enfarktlar gelişebilir.",
+     "maskedTerm": "anterior serebral arter",
+     "hint": "Falks kenarında singulat kıvrımla birlikte sıkışarak frontal lobu besleyen ana damar."
+    },
+    {
+     "type": "causal_chain",
+     "chainTitle": "Subfalsin Herniasyon ve İlerleyiş Basamakları",
+     "steps": [
+      "1. Hemisferik kitle veya ödem: Genişleyen hematom veya sitotoksik ödem kafa içi basıncı tek taraflı yükseltir.",
+      "2. Singulat girusun yer değiştirmesi: Yükselen basınç singulat girusu falks serebrinin alt kenarından karşıya iter.",
+      "3. Foramen Monro obstrüksiyonu: Karşı ventriküle yapılan bası foramen Monroyu tıkayarak ventrikülü genişletebilir.",
+      "4. Anterior serebral arter enfarktı: Falks altında sıkışan anterior serebral arter akımı durarak frontal lob enfarktı yapar."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Subfalsin Herniasyonun Karakteristikleri",
+     "items": [
+      {
+       "text": "Subfalsin herniasyon kafa travmaları ve kitle etkisinde en sık görülen herniasyon türüdür.",
+       "isLie": false,
+       "explanation": "Doğru. Hemisferik basınç artışında ilk ve en sık yer değiştiren yapı falks altındaki singulat girustur."
+      },
+      {
+       "text": "Subfalsin herniasyon sırasında foramen Monro tıkanırsa karşı ventrikülde hapsolma ve genişleme gelişebilir.",
+       "isLie": false,
+       "explanation": "Doğru. Monro deliğinin tıkanması karşı lateral ventrikülde BOS hapsolmasına ve tek taraflı ventrikülomegaliye yol açar."
+      },
+      {
+       "text": "Subfalsin herniasyonda singulat girus tentorium çentiğinden aşağıya doğru mezensefalona kayar.",
+       "isLie": true,
+       "explanation": "Yalan. Singulat girus tentoriumdan değil, falks serebrinin alt kenarından karşı hemisfere doğru yer değiştirir."
+      },
+      {
+       "text": "Anterior serebral arter falks altında sıkışarak frontal parasagital enfarktlara yol açabilir.",
+       "isLie": false,
+       "explanation": "Doğru. Falksın rijit serbest alt kenarı anterior serebral arteri sıkıştırarak kan akımını kesebilir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Kraniyal tomografide subfalsin herniasyonu tanımlayan en karakteristik parankimal yer değiştirme ve orta hat bulgusu nedir?",
+     "answer": "Singulat girusun falks altından karşı tarafa kayması ve septum pellucidumun orta hattan karşıya itilmesidir (orta hat şifti)."
+    }
+   ]
+  },
+  {
+   "slideNumber": 14,
+   "id": "k2p-y25-k2-12-kafa-travmalari-s14",
+   "title": "Transtentorial Herniasyon: Unkal Herniasyon, Duret Kanaması ve Kernohan Çentiği",
+   "subtitle": "Medial temporal lobun tentorial çentiğe kayması, 3. kranial sinir felci, PCA enfarktı ve beyin sapı kanamaları",
+   "badge": "Herniasyon Sendromları",
+   "bolum": "6",
+   "pdfSayfalari": [
+    71,
+    73
+   ],
+   "kaynakSayfa": "Slayt 71-73",
+   "bilgi": "Unkal herniasyonda medial temporal lob tentoriumdan aşağı kayar; 3. sinir basısıyla midriyazis, PCA enfarktı ve fatal Duret kanamaları gelişir.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "synthesisNarrative": "Transtentorial herniasyon kafa travmalarında en sık görülen ikinci herniasyon tipidir; tek taraflı unkal veya iki taraflı santral olabilir.\n\n- **Unkal Herniasyon Mekanizması:** Supratentorial kitle veya hematom nedeniyle temporal lobun medial yüzü (unkus ve parahippokampal girus) tentorium serebelli çentiğinden aşağıya mezensefalon ve suprasellar sisterne doğru fıtıklaşır.\n- **İlerleyen Dönem:** Quadrigeminal sistern ve serebellopontin sistern silinir, beyin sapı sıkışır.\n- **Üçüncü Kranial Sinir Basısı:** Sinirin dış yüzeyindeki parasempatik liflerin unkus tarafından ezilmesiyle lezyon tarafında ışıksız dilate pupil (midriyazis) gelişir.\n- **Posterior Serebral Arter Kompresyonu:** Arter tentorium kenarında sıkışır; oksipital lob sulama alanında iskemik enfarktlar ve görme alanı kaybı ortaya çıkar.\n- **Duret Hemorajisi:** Mezensefalon ve ponsun kaudale doğru itilmesiyle paramedyan perforan arterler gerilip yırtılır; beyin sapında ölümcül kanamalar gelişir.\n- **Kernohan Çentiği:** Karşı serebral pedinkülün karşı tentorium kenarına çarpması sonucu lezyonla aynı tarafta paradoksal hemiparezi oluşur.\n\n> [!IMPORTANT]\n> Tek taraflı dilate ve ışık yanıtı vermeyen pupil acil unkal herniasyon alarmıdır; dakikalar içinde dekompresyon sağlanmazsa Duret kanaması ve beyin ölümü kaçınılmazdır.",
+   "content": "Transtentorial herniasyon kafa travmalarında en sık görülen ikinci herniasyon tipidir; tek taraflı unkal veya iki taraflı santral olabilir.\n\n- **Unkal Herniasyon Mekanizması:** Supratentorial kitle veya hematom nedeniyle temporal lobun medial yüzü (unkus ve parahippokampal girus) tentorium serebelli çentiğinden aşağıya mezensefalon ve suprasellar sisterne doğru fıtıklaşır.\n- **İlerleyen Dönem:** Quadrigeminal sistern ve serebellopontin sistern silinir, beyin sapı sıkışır.\n- **Üçüncü Kranial Sinir Basısı:** Sinirin dış yüzeyindeki parasempatik liflerin unkus tarafından ezilmesiyle lezyon tarafında ışıksız dilate pupil (midriyazis) gelişir.\n- **Posterior Serebral Arter Kompresyonu:** Arter tentorium kenarında sıkışır; oksipital lob sulama alanında iskemik enfarktlar ve görme alanı kaybı ortaya çıkar.\n- **Duret Hemorajisi:** Mezensefalon ve ponsun kaudale doğru itilmesiyle paramedyan perforan arterler gerilip yırtılır; beyin sapında ölümcül kanamalar gelişir.\n- **Kernohan Çentiği:** Karşı serebral pedinkülün karşı tentorium kenarına çarpması sonucu lezyonla aynı tarafta paradoksal hemiparezi oluşur.\n\n> [!IMPORTANT]\n> Tek taraflı dilate ve ışık yanıtı vermeyen pupil acil unkal herniasyon alarmıdır; dakikalar içinde dekompresyon sağlanmazsa Duret kanaması ve beyin ölümü kaçınılmazdır.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Unkal Mekanizma",
+      "desc": "Medial temporal lob tentorium çentiğinden suprasellar sisterne herniye olur.",
+      "isKey": true
+     },
+     {
+      "title": "Kranial Sinir ve Damar",
+      "desc": "3. sinir basısıyla ipsilateral midriyazis, PCA basısıyla oksipital enfarkt gelişir.",
+      "isKey": true
+     },
+     {
+      "title": "Duret ve Kernohan",
+      "desc": "Mezensefalonda Duret kanamaları ve karşı pedinkül basısıyla Kernohan çentiği oluşur.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Transtentorial (unkal) herniasyon ikinci en sık tiptir; medial temporal lob suprasellar sisterne doğru yer değiştirir.",
+    "📌 [SINAV SPOTU] Unkal herniasyonda 3. kranial sinir basısına bağlı ipsilateral pupiller dilatasyon (midriyazis) ve ışık refleksi kaybı gelişir.",
+    "📌 [SINAV SPOTU] Unkal herniasyonda posterior serebral arter (PCA) kompresyonu sonucu oksipital enfarktlar meydana gelir.",
+    "📌 [SINAV SPOTU] Mezensefalonda perforan arterlerin gerilip yırtılmasıyla ölümcül Duret hemorajisi gelişir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Duret Hemorajisi",
+     "explanation": "Transtentorial herniasyonda beyin sapının aşağıya itilmesiyle mezensefalon ve ponsta oluşan fatal lineer mikrokanamalar."
+    },
+    {
+     "term": "Kernohan Çentiği",
+     "explanation": "Beyin sapının karşı tentorium kenarına çarpması sonucu lezyonla aynı tarafta paradoksal motor kayıp oluşturan çentik lezyonu."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-12-14-1",
+     "front": "Transtentorial unkal herniasyonda unkusun tentorial kenardan aşağı kayması sırasında lezyon tarafında pupillanın aniden genişlemesine (midriyazis) yol açan mekanizma nedir?",
+     "back": "Üçüncü kranial sinirin (nervus okulomotorius) dış yüzeyinde seyreden parasempatik sfinkter liflerinin sıkışmasıdır.",
+     "hint": "Göz bebeğini daraltan parasempatik lifleri taşıyan motor kranial sinir.",
+     "category": "Nöroanatomi"
+    }
+   ],
+   "sourcePdf": {
+    "pdf": "meds_database_25_26/pdf/kurul2/y25-k2-12-kafa-travmalari.pdf",
+    "startPage": 71,
+    "endPage": 73
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Geniş epidural hematomu olan bir hastada sağ gözde aniden ışıksız dilate pupil (midriyazis) gelişiyor ve tomografide sağ medial temporal lobun tentorial çentikten aşağıya doğru suprasellar sisterne fıtıklaştığı görülüyor. Bu hastanın klinik tablosunda yer alan patofizyolojik süreç için hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Unkal herniasyon gelişmiştir; üçüncü sinir basısına ek olarak PCA enfarktı ve Duret hemorajisi riski taşır",
+       "isCorrect": true,
+       "explanation": "Doğru. Medial temporal lobun tentorial çentiğe kayması unkal herniasyondur; 3. siniri ezer, PCA'yı sıkıştırır ve beyin sapında Duret kanamalarına yol açar."
+      },
+      {
+       "key": "B",
+       "text": "Singulat girusun falks altına kayması sonucu izole anterior serebral arter tıkanıklığı oluşmuştur",
+       "isCorrect": false,
+       "explanation": "Singulat girus falks altına kaydığında subfalsin herniasyon oluşur. Pupil dilatasyonu ve mezensefalon basısı unkal herniasyona özgüdür."
+      },
+      {
+       "key": "C",
+       "text": "Serebellar tonsillerin foramen magnum hattından aşağıya doğru on milimetre uzandığı kanıtlanmıştır",
+       "isCorrect": false,
+       "explanation": "Tonsillerin foramen magnumdan sarkması infratentorial tonsiller herniasyondur. Medial temporal unkusun suprasellar sisterne doğru yer değiştirmesi ise unkal herniasyondur."
+      },
+      {
+       "key": "D",
+       "text": "Kortikal köprü venlerinin yırtılmasıyla gelişen ve sütürleri aşmayan izole epidural kanama tablosudur",
+       "isCorrect": false,
+       "explanation": "Köprü venlerinin yırtılması subdural hematom tablosuna yol açar. Bu damarsal zedelenme temporal unkusun tentorial çentiğe fıtıklaşmasını ve midriyazisi doğrudan açıklamaz."
+      },
+      {
+       "key": "E",
+       "text": "Pupil dilatasyonu sempatik liflerin aşırı uyarılmasıyla oluşmuş olup cerrahi dekompresyon gerektirmez",
+       "isCorrect": false,
+       "explanation": "Pupil dilatasyonu 3. kranial sinirin parasempatik liflerinin ezilmesiyle oluşur ve acil cerrahi dekompresyon gerektiren ölümcül bir tablodur."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Mezensefalon ve ponsun kaudale doğru itilmesiyle paramedyan perforan arterler gerilip yırtılır; beyin sapında ölümcül Duret hemorajisi gelişir.",
+     "maskedTerm": "Duret hemorajisi",
+     "hint": "Transtentorial herniasyonda beyin sapının aşağı kaymasıyla oluşan ölümcül lineer mikrokanamalar."
+    },
+    {
+     "type": "causal_chain",
+     "chainTitle": "Transtentorial (Unkal) Herniasyonun İlerleyiş Basamakları",
+     "steps": [
+      "1. Medial temporal lob basısı: Supratentorial kitle unkus ve parahippokampal girusu tentorial çentiğe iter.",
+      "2. Üçüncü kranial sinir basısı: Fıtıklaşan unkus nervus okulomotoriusu ezerek aynı tarafta pupil dilatasyonu yapar.",
+      "3. Posterior serebral arter basısı: Tentorium kenarında ezilen damar kan akımını durdurarak oksipital enfarkt oluşturur.",
+      "4. Beyin sapı basısı ve Duret kanaması: Mezensefalon perforan damarları gerilip kopar, Duret hemorajisi ve derin koma gelişir."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Transtentorial (Unkal) Herniasyon Bulguları",
+     "items": [
+      {
+       "text": "Unkal herniasyonda medial temporal lob suprasellar sisterne ve tentorial çentiğe doğru yer değiştirir.",
+       "isLie": false,
+       "explanation": "Doğru. İkinci en sık herniasyon tipidir ve temporal unkusun incisuradan aşağı fıtıklaşmasıyla oluşur."
+      },
+      {
+       "text": "Unkal herniasyonda üçüncü kranial sinir basısına bağlı olarak ilk bulgu daima her iki gözde nokta pupil (miyozis) gelişimidir.",
+       "isLie": true,
+       "explanation": "Yalan. Üçüncü sinirin parasempatik sfinkter lifleri basıya uğradığından lezyon tarafındaki gözde pupil genişler (midriyazis)."
+      },
+      {
+       "text": "Posterior serebral arterin tentorium kenarında ezilmesi oksipital lobda enfarktla sonuçlanabilir.",
+       "isLie": false,
+       "explanation": "Doğru. PCA tentorium serbest kenarı komşuluğunda unkus tarafından sıkıştırılır."
+      },
+      {
+       "text": "Mezensefalonda perforan damarların gerilip yırtılmasıyla gelişen kanamalar Duret hemorajisi olarak adlandırılır.",
+       "isLie": false,
+       "explanation": "Doğru. Beyin sapının aşağıya itilmesiyle oluşan bu kanamalar son derece fataldir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Unkal herniasyonda orta beynin karşı tentorium kenarına itilip sıkışması sonucu lezyonla aynı tarafta motor kayıp (paradoksal hemiparezi) oluşturan anatomik patolojiye ne ad verilir?",
+     "answer": "Kernohan çentiği (Kernohan's notch) fenomeni adı verilir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 15,
+   "id": "k2p-y25-k2-12-kafa-travmalari-s15",
+   "title": "İnfratentorial Herniasyonlar: Tonsiller Herniasyon ve Asendan Herniasyon",
+   "subtitle": "Foramen magnumdan serebellar tonsil herniasyonu, solunum merkezi basısı ve asendan herniasyon",
+   "badge": "Herniasyon Sendromları",
+   "bolum": "6",
+   "pdfSayfalari": [
+    74,
+    76
+   ],
+   "kaynakSayfa": "Slayt 74-76",
+   "bilgi": "Tonsiller herniasyonda tonsiller foramen magnumdan >5 mm aşağı sarkar; medulla oblangata basısıyla ani solunum arresti ve ölüm gelişir.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "synthesisNarrative": "İnfratentorial herniasyonlar posterior fossada yer alan serebellum ve beyin sapı yapılarının basınç artışı sonucu kranial veya spinal kompartmanlara fıtıklaşmasıdır.\n\n- **Tonsiller Herniasyon:** Kafa içi basınç artışının en ölümcül ve son evre komplikasyonudur. Posterior fossadaki kitle veya yukarıdan aşağıya yansıyan yaygın basınç dalgası nedeniyle serebellar tonsiller foramen magnum hattından aşağıya doğru uzanır.\n- **Radyolojik Tanı Kriteri:** Manyetik rezonans veya tomografide serebellar tonsillerin foramen magnum hattından beş milimetreden daha fazla aşağıya (spinal kanala) inmesi tanı koydurucudur.\n- **Klinik Sonuç:** Aşağı inen tonsiller medulla oblangatayı (omurilik soğanını) sıkıştırır; burada bulunan kardiyovasküler ve solunum merkezlerinin iflasıyla ani apne, bradikardi, tansiyon çöküşü ve solunum durması gerçekleşir.\n- **Asendan Transtentorial Herniasyon:** Posterior fossadaki kitleler nedeniyle serebellum dokusunun tentorium incisurasından yukarıya, supratentorial kompartmana doğru fıtıklaşmasıdır.\n\n> [!IMPORTANT]\n> Tonsiller herniasyon şüphesi veya belirgin KİBAS tablosu bulunan bir hastada asla lomber ponksiyon yapılmamalıdır; spinal basıncın aniden düşürülmesi tonsillerin foramen magnuma kilitlenmesine (konileşme) ve ani ölüme yol açar.",
+   "content": "İnfratentorial herniasyonlar posterior fossada yer alan serebellum ve beyin sapı yapılarının basınç artışı sonucu kranial veya spinal kompartmanlara fıtıklaşmasıdır.\n\n- **Tonsiller Herniasyon:** Kafa içi basınç artışının en ölümcül ve son evre komplikasyonudur. Posterior fossadaki kitle veya yukarıdan aşağıya yansıyan yaygın basınç dalgası nedeniyle serebellar tonsiller foramen magnum hattından aşağıya doğru uzanır.\n- **Radyolojik Tanı Kriteri:** Manyetik rezonans veya tomografide serebellar tonsillerin foramen magnum hattından beş milimetreden daha fazla aşağıya (spinal kanala) inmesi tanı koydurucudur.\n- **Klinik Sonuç:** Aşağı inen tonsiller medulla oblangatayı (omurilik soğanını) sıkıştırır; burada bulunan kardiyovasküler ve solunum merkezlerinin iflasıyla ani apne, bradikardi, tansiyon çöküşü ve solunum durması gerçekleşir.\n- **Asendan Transtentorial Herniasyon:** Posterior fossadaki kitleler nedeniyle serebellum dokusunun tentorium incisurasından yukarıya, supratentorial kompartmana doğru fıtıklaşmasıdır.\n\n> [!IMPORTANT]\n> Tonsiller herniasyon şüphesi veya belirgin KİBAS tablosu bulunan bir hastada asla lomber ponksiyon yapılmamalıdır; spinal basıncın aniden düşürülmesi tonsillerin foramen magnuma kilitlenmesine (konileşme) ve ani ölüme yol açar.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Tonsiller Tanı Kriteri",
+      "desc": "Serebellar tonsillerin foramen magnum hattını 5 mm'den fazla aşmasıdır.",
+      "isKey": true
+     },
+     {
+      "title": "Medulla Oblangata Basısı",
+      "desc": "Solunum ve dolaşım merkezlerinin basısıyla ani apne ve kardiyak arrest gelişir.",
+      "isKey": true
+     },
+     {
+      "title": "Asendan Herniasyon",
+      "desc": "Posterior fossa kitlesiyle serebellumun incisuradan yukarı fıtıklaşmasıdır.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Tonsiller herniasyonda serebellar tonsiller foramen magnum hattından aşağı uzanır (> 5 mm); medulla oblangata basısıyla solunum durmasına yol açar.",
+    "📌 [SINAV SPOTU] Asendan transtentorial herniasyonda serebellum incisura tentoriiden yukarıya supratentorial alana herniye olur.",
+    "📌 [SINAV SPOTU] Belirgin KİBAS veya tonsiller herniasyon riski olan hastada lomber ponksiyon konileşme ve ani arrest riski nedeniyle kesinlikle kontrendikedir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Tonsiller Herniasyon",
+     "explanation": "Serebellar tonsillerin foramen magnumdan spinal kanala doğru fıtıklaşarak medulla oblangatayı ezmesi."
+    },
+    {
+     "term": "Asendan Herniasyon",
+     "explanation": "Posterior fossa basınç artışında serebellumun tentorium çentiğinden yukarıya doğru yer değiştirmesi."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-12-15-1",
+     "front": "Tonsiller herniasyonda serebellar tonsillerin foramen magnumdan aşağı inerek medulla oblangatayı sıkıştırması hastada hangi ani klinik tabloyla ölüme yol açar?",
+     "back": "Kardiyovasküler ve solunum merkezlerinin iflas etmesiyle ani solunum durması (apne) ve kardiyak arreste yol açar.",
+     "hint": "Omurilik soğanındaki yaşamsal refleks merkezlerinin ezilmesi.",
+     "category": "Fizyopatoloji"
+    }
+   ],
+   "sourcePdf": {
+    "pdf": "meds_database_25_26/pdf/kurul2/y25-k2-12-kafa-travmalari.pdf",
+    "startPage": 74,
+    "endPage": 76
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kafa içi basınç artışı sendromunda serebellar tonsillerin foramen magnum çizgisinden aşağıya doğru spinal kanala fıtıklaşması ve medulla oblangatayı sıkıştırması ile ilgili hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Tonsillerin foramen magnum hattını beş milimetreden fazla aşması tanı koydurucudur ve solunum durmasına yol açabilir",
+       "isCorrect": true,
+       "explanation": "Doğru. Tonsillerin foramen magnumdan beş milimetreden fazla sarkması tonsiller herniasyondur; medulla oblangatayı ezerek solunum durması yapar."
+      },
+      {
+       "key": "B",
+       "text": "Bu tablo singulat girusun falks altına kayması sonucu anterior serebral arteri sıkıştıran en sık tiptir",
+       "isCorrect": false,
+       "explanation": "Singulat girusun falks altına kayması subfalsin herniasyondur; tonsiller herniasyon ise foramen magnumdan serebellar tonsillerin inmesidir."
+      },
+      {
+       "key": "C",
+       "text": "Medial temporal lobun tentorium kenarından aşağıya suprasellar sisterne doğru fıtıklaşmasıyla eşdeğerdir",
+       "isCorrect": false,
+       "explanation": "Unkal herniasyon medial temporal lobun tentorium serbest kenarından aşağı fıtıklaşmasıdır. Foramen magnumdan serebellar tonsillerin spinal kanala inmesi tablosuyla anatomik olarak aynı değildir."
+      },
+      {
+       "key": "D",
+       "text": "Hastaya acil lomber ponksiyon yapılarak beyin omurilik sıvısının hızla boşaltılması hayat kurtarıcıdır",
+       "isCorrect": false,
+       "explanation": "Lomber ponksiyon tonsillerin foramen magnuma kilitlenmesine (konileşme) ve dakikalar içinde ölüme neden olacağından kesinlikle kontrendikedir."
+      },
+      {
+       "key": "E",
+       "text": "Serebellumun tentorium incisurasından yukarıya doğru yer değiştirmesi tonsiller herniasyon olarak adlandırılır",
+       "isCorrect": false,
+       "explanation": "Serebellar dokunun tentorium incisurasından yukarıya supratentorial boşluğa fıtıklaşması asendan transtentorial herniasyondur. Tonsiller herniasyon tonsillerin aşağıya sarkmasıdır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Tonsiller herniasyonda serebellar tonsiller foramen magnum hattından aşağı uzanır ve medulla oblangatayı sıkıştırır.",
+     "maskedTerm": "foramen magnum",
+     "hint": "Kranial boşluğu omurilik kanalına bağlayan ve tonsillerin aşağıya doğru taştığı büyük taban açıklığı."
+    },
+    {
+     "type": "before_after_slider",
+     "comparisonTitle": "Supratentorial Herniasyonlar vs İnfratentorial Herniasyonlar",
+     "leftTitle": "Supratentorial Herniasyonlar",
+     "rightTitle": "İnfratentorial Herniasyonlar",
+     "leftPoints": [
+      "Subfalsin ve unkal/santral transtentorial tipleri kapsar.",
+      "Singulat girus falks altından, unkus tentoriumdan kayar.",
+      "ACA ve PCA enfarktları ile ipsilateral midriyazis yapar."
+     ],
+     "rightPoints": [
+      "Tonsiller herniasyon ve asendan herniasyonu kapsar.",
+      "Serebellar tonsiller foramen magnumdan aşağı uzanır.",
+      "Medulla oblangatayı sıkıştırarak ani solunum arresti yapar."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "İnfratentorial Herniasyonlar ve Tonsiller Fıtıklaşma",
+     "items": [
+      {
+       "text": "Tonsiller herniasyonda serebellar tonsillerin foramen magnumu 5 mm'den fazla aşması tanı koydurucudur.",
+       "isLie": false,
+       "explanation": "Doğru. Radyolojik olarak tonsillerin 5 milimetreden fazla sarkması tonsiller herniasyon eşik değeridir."
+      },
+      {
+       "text": "Tonsiller herniasyon medulla oblangatadaki solunum merkezini ezerek ani apne ve kardiyovasküler çöküşe yol açar.",
+       "isLie": false,
+       "explanation": "Doğru. Omurilik soğanındaki yaşamsal solunum ve vazomotor merkezlerin basısı ölümcül arrest nedenidir."
+      },
+      {
+       "text": "Asendan transtentorial herniasyonda serebellum tentorium incisurasından yukarıya doğru yer değiştirir.",
+       "isLie": false,
+       "explanation": "Doğru. Posterior fossa kitlelerinde serebellum tentorium açıklığından supratentorial kompartmana fıtıklaşır."
+      },
+      {
+       "text": "Tonsiller herniasyon riski taşıyan KİBAS'lı olgularda acil tanı amacıyla ilk yapılacak işlem lomber ponksiyondur.",
+       "isLie": true,
+       "explanation": "Yalan. Lomber ponksiyon spinal basıncı düşürerek tonsillerin foramen magnuma kilitlenmesine (konileşme) ve ölüme yol açar; kesinlikle kontrendikedir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Posterior fossa basınç artışı sonucu serebellum dokusunun tentorium incisurasından yukarıya doğru fıtıklaşması tablosuna ne ad verilir?",
+     "answer": "Asendan transtentorial herniasyon adı verilir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 16,
+   "id": "k2p-y25-k2-12-kafa-travmalari-s16",
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Kafa ve Omurilik Yaralanmaları",
+   "subtitle": "Kafa travmaları patofizyolojisi, kanama evreleri ve herniasyon sendromlarını oyunlarla pekiştirin",
+   "badge": "Ders Sonu Değerlendirme",
+   "bolum": "6",
+   "pdfSayfalari": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76
+   ],
+   "kaynakSayfa": "Slayt 1-76",
+   "bilgi": "Ders sonu oyun sayfası: 4 temel oyun türü (sıralama, tahmin sürgüsü, parametre değişimi, metin onarımı) ile kapsamlı pekiştirme.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "isGameFinale": true,
+   "synthesisNarrative": "Kafa ve omurilik yaralanmaları dersinin tüm klinik, biyomekanik ve patofizyolojik aşamalarını interaktif oyunlarla pekiştirin.\n\n- **Sıralama Oyunu:** Epidural hematom oluşumundan unkal herniasyon ve beyin sapı kanamasına uzanan kritik zinciri basamak basamak dizin.\n- **Tahmin Sürgüsü:** Tonsiller herniasyonda foramen magnum eşik değerini ve epidural kanamalarda temporal kemik kırığı sıklığını tahmin edin.\n- **Parametre Değişimi:** Hızla artan kafa içi basınç (KİBAS) sürecinde perfüzyon basıncı, pupil çapı, orta hat şifti ve sistern hacimlerinin yönünü belirleyin.\n- **Metin Onarımı:** Epidural hematomun sütür sınırları, subdural hematomun damarsal kaynağı ve tonsiller herniasyonun anatomisiyle ilgili klinik metindeki hataları tespit edip düzeltin.\n\n> [!NOTE]\n> Bu oyun modülü kafa travmalarında acil servis değerlendirmesinden ileri cerrahi herniasyon basamaklarına kadar tüm sınav hedeflerini kalıcı hale getirmek için tasarlanmıştır.",
+   "content": "Kafa ve omurilik yaralanmaları dersinin tüm klinik, biyomekanik ve patofizyolojik aşamalarını interaktif oyunlarla pekiştirin.\n\n- **Sıralama Oyunu:** Epidural hematom oluşumundan unkal herniasyon ve beyin sapı kanamasına uzanan kritik zinciri basamak basamak dizin.\n- **Tahmin Sürgüsü:** Tonsiller herniasyonda foramen magnum eşik değerini ve epidural kanamalarda temporal kemik kırığı sıklığını tahmin edin.\n- **Parametre Değişimi:** Hızla artan kafa içi basınç (KİBAS) sürecinde perfüzyon basıncı, pupil çapı, orta hat şifti ve sistern hacimlerinin yönünü belirleyin.\n- **Metin Onarımı:** Epidural hematomun sütür sınırları, subdural hematomun damarsal kaynağı ve tonsiller herniasyonun anatomisiyle ilgili klinik metindeki hataları tespit edip düzeltin.\n\n> [!NOTE]\n> Bu oyun modülü kafa travmalarında acil servis değerlendirmesinden ileri cerrahi herniasyon basamaklarına kadar tüm sınav hedeflerini kalıcı hale getirmek için tasarlanmıştır.",
+   "sourcePdf": {
+    "fileName": "kafa travmaları .pdf",
+    "startPage": 1,
+    "endPage": 76,
+    "primaryPage": 76,
+    "citation": "Kafa Travmaları · Doç. Dr. Aydın Sinan Apaydın · Sayfa 1-76"
+   },
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "prompt": "Kafa travması geçiren bir hastada temporal kemik kırığından başlayarak unkal herniasyon ve beyin sapı kanamasına uzanan patofizyolojik basamakları doğru sıraya dizin.",
+     "steps": [
+      "1. Temporal kemikte kırık oluşması ve arteria meningea medianın yırtılması",
+      "2. İç tabula ile dura arasında yüksek basınçlı bikonveks epidural hematom birikimi",
+      "3. Medial temporal lob unkusunun tentorium çentiğinden suprasellar sisterne fıtıklaşması",
+      "4. Üçüncü kranial sinir basısı sonucu aynı tarafta ışıksız dilate pupil gelişmesi",
+      "5. Mezensefalon perforan damarlarının gerilip yırtılmasıyla ölümcül Duret hemorajisi oluşması"
+     ],
+     "explanation": "Temporal kırık arteria meningea mediayı yırtarak epidural hematom yapar. Genişleyen hematom medial temporal lobu tentorium çentiğine iter; unkus önce 3. siniri ezerek midriyazis yapar, ardından mezensefalon perforan damarlarını yırtarak Duret kanamasına yol açar."
+    },
+    {
+     "type": "estimate_slider",
+     "items": [
+      {
+       "prompt": "Tonsiller herniasyon tanısı koyabilmek için serebellar tonsillerin foramen magnum hattından aşağıya doğru en az kaç milimetre uzanması gerekir?",
+       "unit": "mm",
+       "min": 1,
+       "max": 15,
+       "step": 1,
+       "answer": 5,
+       "tolerance": 1,
+       "explanation": "Serebellar tonsillerin foramen magnum çizgisini 5 mm ve üzerinde aşarak spinal kanala inmesi tonsiller herniasyonun kesin tanısal eşik değeridir."
+      },
+      {
+       "prompt": "Epidural hematom olgularında travma mekanizmasında temporal kemik kırıklarının görülme sıklığı yüzde kaçtır?",
+       "unit": "%",
+       "min": 50,
+       "max": 100,
+       "step": 5,
+       "answer": 90,
+       "tolerance": 5,
+       "explanation": "Epidural hematomların yaklaşık yüzde doksanında etyolojik faktör temporal kemik skuamöz parçasındaki lineer kırıklardır."
+      }
+     ]
+    },
+    {
+     "type": "perturbation",
+     "scenario": "Ağır kafa travması sonrasında genişleyen hemisferik kitle ve yaygın sitotoksik beyin ödemi gelişen bir hastada kafa içi basınç (KİBAS) hızla artmaktadır.",
+     "question": "Bu patolojik süreçte aşağıdaki kranial ve nörolojik parametreler nasıl değişir?",
+     "parameters": [
+      {
+       "name": "Serebral perfüzyon basıncı (Kranial doku kan akımı)",
+       "correct": "down",
+       "explanation": "Kafa içi basıncının aşırı yükselmesi ortalama arteriyel basınç ile KİB arasındaki farkı azaltarak serebral perfüzyon basıncını düşürür."
+      },
+      {
+       "name": "Orta hat yapılarının karşı tarafa şift miktarı",
+       "correct": "up",
+       "explanation": "Genişleyen hemisferik hematom ve doku ödemi septum pellucidum ve üçüncü ventrikülü karşı tarafa doğru giderek daha fazla iter."
+      },
+      {
+       "name": "Kranial bazal sisternlerin (quadrigeminal ve suprasellar) hacmi",
+       "correct": "down",
+       "explanation": "Fıtıklaşan temporal unkus ve şişen beyin dokusu sisternleri komprese ederek bu sıvı aralıklarını daraltır ve siler."
+      },
+      {
+       "name": "Etkilenen tarafta okülomotor sinir basısına bağlı pupil çapı",
+       "correct": "up",
+       "explanation": "Üçüncü kranial sinirin parasempatik sfinkter liflerinin unkus tarafından ezilmesi pupillanın genişlemesine (midriyazis) yol açar."
+      }
+     ]
+    },
+    {
+     "type": "fix_the_text",
+     "text": "Epidural hematomda biriken arteriyel kan kraniyal sütür çizgilerini serbestçe geçer. Subdural hematom ise en sık arteria meningea media yırtılmasına bağlı gelişir ve tomografide bikonveks görünür. Tonsiller herniasyonda serebellar tonsiller foramen magnumdan aşağı uzanarak medulla oblangatayı sıkıştırır.",
+     "errors": [
+      {
+       "wrong": "serbestçe geçer",
+       "correct": "kesinlikle geçemez",
+       "options": [
+        "kolayca aşar",
+        "hızla geçer"
+       ],
+       "explanation": "Dura mater kemik iç tabulasına sütür çizgilerinde periost olarak sıkıca yapışıktır; bu nedenle epidural hematom sütür hatlarını kesinlikle geçemez."
+      },
+      {
+       "wrong": "arteria meningea media",
+       "correct": "köprü venlerinin",
+       "options": [
+        "dural sinüslerin",
+        "perforan arterlerin"
+       ],
+       "explanation": "Subdural hematom arteria meningea media değil, kortikal yüzeyden dural sinüslere uzanan köprü venlerinin yırtılması sonucu oluşur."
+      },
+      {
+       "wrong": "bikonveks",
+       "correct": "kresentik",
+       "options": [
+        "küresel",
+        "mercek biçiminde"
+       ],
+       "explanation": "Subdural hematom parankimi çevreleyen kresentik (hilal şeklinde) bir koleksiyon oluşturur; bikonveks görünüm epidural hematoma özgüdür."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "totalSlides": 16,
+ "totalInteractiveElements": 79,
+ "interactiveRatio": 4.94,
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

@@ -1,0 +1,569 @@
+{
+ "surum": 1,
+ "metinHash": "19226859f402b3d4b87f6d36374f7881bba7f97e",
+ "p": {
+  "1": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Motorlu araç kazaları",
+      "Yüksekten düşmeler",
+      "Ateşli silah yaralanmaları"
+     ],
+     "baslik": "Kafa Travması Etyolojisi",
+     "s": 2,
+     "k": [
+      0,
+      80
+     ],
+     "tip": "liste",
+     "konum": [
+      0.1,
+      0.67
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "2": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "algoritma",
+     "sablon_ad": "Yaklaşım basamakları",
+     "duzen": "adimlar",
+     "ogeler": [
+      "Kranial hasarı hızla saptama",
+      "Prognozu doğru belirleme",
+      "Acil tedaviyi planlama"
+     ],
+     "baslik": "Radyolojik Görüntülemenin Hedefleri",
+     "s": 3,
+     "k": [
+      0,
+      88
+     ],
+     "tip": "adimlar",
+     "konum": [
+      0.18,
+      0.55
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.259,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "3": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Kırık tespiti sınırlı",
+      "İntrakranial hasarı göstermez",
+      "Yetersiz tanısal değer"
+     ],
+     "baslik": "Direkt Grafilerin Kısıtlılıkları",
+     "s": 4,
+     "k": [
+      0,
+      105
+     ],
+     "tip": "liste",
+     "konum": [
+      0.44,
+      0.08
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.001,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "6": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Tetkik süresi kısa",
+      "Kolay ulaşılabilir",
+      "Akut hemoraji ve kemik kırıkları"
+     ],
+     "baslik": "Bilgisayarlı Tomografi Avantajları",
+     "s": 7,
+     "k": [
+      0,
+      97
+     ],
+     "tip": "liste",
+     "konum": [
+      0.42,
+      0.13
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "7": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "karar",
+     "sablon_ad": "Karar dalı",
+     "duzen": "dal",
+     "soru": "Akut Kanamada BT Dansitesi",
+     "dallar": [
+      [
+       "Normal kan tablosu",
+       "Hiperdens beyaz görünüm"
+      ],
+      [
+       "Şiddetli anemi ve pıhtılaşma",
+       "İzodens veya atipik görünüm"
+      ]
+     ],
+     "s": 8,
+     "k": [
+      0,
+      84
+     ],
+     "tip": "dal",
+     "konum": [
+      0.32,
+      0.57
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.274,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "8": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Bilinç kaybı öyküsü",
+      "Glaskov skoru on beş altı",
+      "Fokal nörolojik defisit",
+      "İki veya daha fazla kusma"
+     ],
+     "baslik": "Acil Beyin Tomografisi Kriterleri",
+     "s": 9,
+     "k": [
+      0,
+      84
+     ],
+     "tip": "liste",
+     "konum": [
+      0.57,
+      0.28
+     ],
+     "genislik": 0.42,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Hemotimpanum",
+      "Kulaktan sıvı gelmesi",
+      "İki yaş altı hastalar",
+      "Altmış yaş üstü hastalar"
+     ],
+     "baslik": "Kafa Tabanı Kırığı Bulguları",
+     "s": 9,
+     "k": [
+      0,
+      89
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.86
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2434,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "9": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "algoritma",
+     "sablon_ad": "Yaklaşım basamakları",
+     "duzen": "adimlar",
+     "ogeler": [
+      "Kemik fraktür taraması",
+      "Parankimal asimetri ve şift",
+      "Sisternlerde subaraknoid kanama",
+      "Pencere ayarıyla subdural koleksiyon"
+     ],
+     "baslik": "Sistematik BT İnceleme Sırası",
+     "s": 10,
+     "k": [
+      0,
+      99
+     ],
+     "tip": "adimlar",
+     "konum": [
+      0.03,
+      0.71
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.314,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0442,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "10": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Diffüz aksonal hasar",
+      "Kortikal kontüzyon",
+      "İzodens subdural hematom",
+      "Subaraknoid kanama"
+     ],
+     "baslik": "Manyetik Rezonans Üstünlükleri",
+     "s": 11,
+     "k": [
+      0,
+      97
+     ],
+     "tip": "liste",
+     "konum": [
+      0.28,
+      0.61
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "13": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Zamanlama",
+       "Darbe anında mekanik hasar",
+       "Travma sonrasında gelişen süreç"
+      ],
+      [
+       "Mekanizma",
+       "Geri dönüşsüz doku zedelenmesi",
+       "Ödem ve kafa içi basınç artışı"
+      ]
+     ],
+     "kutuplar": [
+      "Primer Hasar",
+      "Sekonder Hasar"
+     ],
+     "s": 14,
+     "k": [
+      0,
+      83
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.15,
+      0.5
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.413,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "12": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Epidural hematom",
+      "Subdural hematom",
+      "Subaraknoid kanama",
+      "İntraaksiyel kontüzyon"
+     ],
+     "baslik": "Primer Kranial Kanamalar",
+     "s": 13,
+     "k": [
+      0,
+      100
+     ],
+     "tip": "liste",
+     "konum": [
+      0.36,
+      0.3
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "15": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Kafatası iç tabulası",
+      "Potansiyel epidural aralık",
+      "Dura mater yaprağı"
+     ],
+     "baslik": "Epidural Hematom Anatomisi",
+     "s": 16,
+     "k": [
+      0,
+      85
+     ],
+     "tip": "liste",
+     "konum": [
+      0.08,
+      0.39
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.001,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "19": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Hiperdens beyaz dansite",
+      "Bikonveks lentiform mercek şekli",
+      "Sütür hatlarını aşamaz",
+      "Düzgün sınırlı kitle"
+     ],
+     "baslik": "Epidural Hematom Radyolojik Kriterleri",
+     "s": 20,
+     "k": [
+      0,
+      102
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.97
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3534,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "34": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Subakut dönemde izodens görünüm",
+      "Kortikal sulkusların silinmesi",
+      "Ventriküllerde bası etkisi",
+      "İki taraflı olgular"
+     ],
+     "baslik": "İzodens Subdural Hematom İpuçları",
+     "s": 36,
+     "k": [
+      0,
+      94
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.76
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1434,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "39": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Araknoid ile pia mater arası boşluk",
+      "Beyin omurilik sıvısına karışım",
+      "En sık neden kafa travması"
+     ],
+     "baslik": "Subaraknoid Kanama Özellikleri",
+     "s": 41,
+     "k": [
+      0,
+      98
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.82
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.148,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "59": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Duyarlılık",
+       "Aksonal hasarda yetersiz",
+       "Çok yüksek duyarlılık"
+      ],
+      [
+       "Lezyon yakalama",
+       "Yalnız yüzde yirmi hemorajik odak",
+       "Nonhemorajik mikrotübül hasarı"
+      ],
+      [
+       "İdeal sekans",
+       "Kemik ve parankim penceresi",
+       "Difüzyon ve gradyan eko sekansları"
+      ]
+     ],
+     "kutuplar": [
+      "Bilgisayarlı Tomografi",
+      "Manyetik Rezonans"
+     ],
+     "s": 61,
+     "k": [
+      0,
+      88
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.05,
+      0.79
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.39,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1996,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  }
+ },
+ "rapor": {
+  "aday": 35,
+  "gecti": 16,
+  "ret": {
+   "zincir: 2–7 öğe": 8,
+   "panel metni 'Kırık eşlik etmeyebilir' henüz anlatılmamış ter": 1,
+   "panel metni 'Falks Serebri' henüz anlatılmamış terim içeriyo": 1,
+   "resim sayfasında panel (H51)": 5,
+   "panel metni 'Orbita tavanı kemik çıkıntılar' henüz anlatılma": 1,
+   "panel metni 'Birinci kortikal gri beyaz cev' henüz anlatılma": 1,
+   "panel metni 'Tonsiller foramen magnum fıtık' henüz anlatılma": 1,
+   "panel metni 'Singulat girusun karşıya fıtık' henüz anlatılma": 1
+  }
+ }
+}

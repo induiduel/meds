@@ -1,0 +1,5567 @@
+{
+ "surum": 2,
+ "ders_id": "k2-12",
+ "anahtar": "y25-k2-12-kafa-travmalari",
+ "baslik": "Kafa Travmaları",
+ "bolumler": [
+  {
+   "id": "k2-12-b01",
+   "baslik": "Kafa Travmasına Giriş, Epidemiyoloji ve Direkt Grafiler",
+   "sayfa_araligi": [
+    1,
+    6
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-12-p001",
+     "sayfa": 1,
+     "slayt_adim": "k2-12-d-s01",
+     "cumleler": [
+      {
+       "id": "k2-12-c0001",
+       "ses": "Beyin ve Sinir Cerrahisi Anabilim Dalı öğretim üyesi Doktor Aydın Sinan Apaydın tarafından hazırlanan bu derste, acil servis ve yoğun bakım hekimliğinde en sık karşılaşılan nöroşirürjikal acillerden biri olan kafa travmalarını ve intrakraniyal kanamaları inceleyeceğiz.",
+       "ekran": "**Kafa Travmaları:** Doktor Aydın Sinan Apaydın tarafından hazırlanan klinik sunum",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kafa Travmaları",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Doktor Aydın",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Kafa Travmaları",
+         "Dr. Aydın Sinan APAYDIN"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0002",
+       "ses": "Kafa travmalı hastaya ilk yaklaşımdan başlayarak intrakraniyal hematom türlerini, kemik kırıklarını, parankim hasarlarını ve hayatı tehdit eden kafa içi herniasyonları klinik ve radyolojik özellikleri ile ele alacağız.",
+       "ekran": "**Ders Kapsamı:** Travmatik kranial hasarlar, hematom tipleri ve herniasyonlar",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Ders Kapsamı",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Travmatik kranial",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Kafa Travmaları"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p002",
+     "sayfa": 2,
+     "slayt_adim": "k2-12-d-s01",
+     "cumleler": [
+      {
+       "id": "k2-12-c0003",
+       "ses": "Epidemiyolojik verilere göre kafa travması, özellikle otuz yaşın altındaki genç popülasyonda travmaya bağlı ölüm ve kalıcı nörolojik hasarın en önemli nedenidir.",
+       "ekran": "**Epidemiyoloji:** Otuz yaş altı popülasyonda ölüm ve sakatlığın en sık nedeni",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Epidemiyoloji",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Otuz yaş",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Kafa Travması",
+         "Özellikle 30 yaşın altı popülasyonda ölüm ve",
+         "nörolojik hasarın en  önemli nedendir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0004",
+       "ses": "Etyolojide motorlu araç kazaları ilk sırada yer alırken, bunu yüksekten düşmeler ve ateşli silah yaralanmaları takip etmektedir.",
+       "ekran": "**Etyolojik Dağılım:** Motorlu araç kazaları, düşme ve ateşli silah yaralanmaları",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Etyolojik Dağılım",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Motorlu araç",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Motorlu araç kazaları",
+         "Düşme",
+         "Ateşli silah yaralanmaları"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0005",
+       "ses": "Riskli davranışlar ve mesleki maruziyetler nedeniyle kafa travması erkeklerde kadınlara kıyasla iki ila üç kat daha fazla görülür.",
+       "ekran": "**Cinsiyet Dağılımı:** Erkeklerde kadınlara oranla iki üç kat daha sık",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Cinsiyet Dağılımı",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Erkeklerde kadınlara",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Erkeklerde 2-3 kat daha fazla"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0006",
+       "ses": "Toplumda genç nüfusun üretken çağında meydana gelen bu yaralanmalar, erken dönemde yüksek mortaliteye yol açtığı gibi geç dönemde de ağır sosyoekonomik kayıplar oluşturur.",
+       "ekran": "**Klinik ve Sosyal Yük:** Genç popülasyonda kalıcı sakatlık ve yüksek mortalite",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Klinik ve Sosyal Yük",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Genç popülasyonda",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Özellikle 30 yaşın altı popülasyonda ölüm ve"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p003",
+     "sayfa": 3,
+     "slayt_adim": "k2-12-d-s01",
+     "cumleler": [
+      {
+       "id": "k2-12-c0007",
+       "ses": "Kafa travmasında hızlı ve etkin yapılan radyolojik görüntüleme, kranial hasarın çabuk ve doğru olarak saptanması açısından hayati bir öneme sahiptir.",
+       "ekran": "**Radyolojik Görüntüleme:** Kranial hasarın hızla saptanması ve doğrulanması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Radyolojik Görüntüleme",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Kranial hasarın",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Kafa travmasında hızlı ve etkin yapılan radyolojik",
+         "görüntüleme;",
+         "• Kranial hasarın çabuk ve doğru olarak saptanması"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0008",
+       "ses": "Erken ve doğru radyolojik inceleme, hastanın prognozunun değerlendirilmesi ve cerrahi ya da medikal tedavinin planlanması sürecini doğrudan belirler.",
+       "ekran": "**Tedavi Planı:** Prognozun değerlendirilmesi ve acil müdahalenin belirlenmesi",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Tedavi Planı",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Prognozun değerlendirilmesi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "• Prognozun değerlendirilmesi ve tedavinin planlanması"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0009",
+       "ses": "Özellikle bilinci kapalı olan kafa travmalı olgularda nörolojik muayene kısıtlı kaldığı için, cerrahi aciliyet gösteren kitle etkisinin tespiti tamamen radyolojiye dayanır.",
+       "ekran": "**Bilinçsiz Hastada Radyoloji:** Nörolojik muayene kısıtlılığında acil cerrahi kararı",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Bilinçsiz Hastada Radyoloji",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Nörolojik muayene",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "• Kranial hasarın çabuk ve doğru olarak saptanması"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p004",
+     "sayfa": 4,
+     "slayt_adim": "k2-12-d-s01",
+     "cumleler": [
+      {
+       "id": "k2-12-c0010",
+       "ses": "Görüntüleme teknikleri arasında yer alan direkt grafilerin kafa travmalı olguların değerlendirilmesindeki yeterliliği son derece sınırlıdır.",
+       "ekran": "**Direkt Grafiler:** Kafa travması değerlendirmesinde sınırlı yeterlilik",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Direkt Grafiler",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Kafa travması",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "GÖRÜNTÜLEME TEKNİKLERİ",
+         "Direk Grafiler",
+         "Kafa travmalı olguların değerlendirilmesinde yeterliliği"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0011",
+       "ses": "Direkt grafiler kafatası kemiklerindeki lineer kırıkları gösterebilse de intrakranial hasarın derecesi ve beyin parankimi hakkında hekime hiçbir bilgi vermez.",
+       "ekran": "**Grafi Sınırlılığı:** İntrakranial hasarın derecesi hakkında bilgi veremez",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Grafi Sınırlılığı",
+         "tur": "tanim"
+        },
+        {
+         "metin": "İntrakranial hasarın",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "İntrakranial hasarın derecesi hakkında bilgi vermez."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0012",
+       "ses": "Kafatası kemiğindeki vasküler oluklar ve dural sütür hatları kimi zaman kırık hatlarıyla karışabilirken, altındaki parankim kanamaları düz röntgen filminde tamamen gizli kalır.",
+       "ekran": "**Yanıltıcı Faktörler:** Vasküler olukların kırıkla karışması ve parankimin seçilememesi",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Yanıltıcı Faktörler",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Vasküler olukların",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Kafa travmalı olguların değerlendirilmesinde yeterliliği"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p005",
+     "sayfa": 5,
+     "slayt_adim": "k2-12-d-s01",
+     "cumleler": [
+      {
+       "id": "k2-12-c0013",
+       "ses": "Radyolojik örnekte görülen kranial kemik grafisinde kafatası çatısında uzanan lineer bir fraktür hattı izlenmekte, ancak altındaki parankim dokusu seçilememektedir.",
+       "ekran": "**Kemik Grafisi:** Kafatası çatısında lineer fraktür hattı izlemi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kemik Grafisi",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Kafatası çatısında",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "02.08.08 15:48"
+        ],
+        "sekil": "Kranial direkt grafide lineer kırık hattı"
+       }
+      },
+      {
+       "id": "k2-12-c0014",
+       "ses": "Kemik grafisinde saptanan keskin kenarlı ve sklerotik kenarı bulunmayan saydam hat, kranium kemiğini kat eden travmatik bir fissür kırığını doğrular.",
+       "ekran": "**Kırık Morfolojisi:** Keskin kenarlı ve skleroz içermeyen radyolusent hat",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Kırık Morfolojisi",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Keskin kenarlı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "02.08.08 15:48"
+        ],
+        "sekil": "Direkt grafide fissür kırığının radyolojik özellikleri"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p006",
+     "sayfa": 6,
+     "slayt_adim": "k2-12-d-s01",
+     "cumleler": [
+      {
+       "id": "k2-12-c0015",
+       "ses": "Bu nedenle direkt grafide kırık saptanmasa dahi nörolojik yakınması veya bilinç değişikliği olan bir hastada kafa içi kanamayı ekarte etmek olanaksızdır.",
+       "ekran": "**Klinik Kural:** Grafi normal olsa bile parankim hasarı dışlanamaz",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Klinik Kural",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Grafi normal",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [],
+        "sekil": "Direkt kranial grafide kemik çatı ve fraktür değerlendirmesi"
+       }
+      },
+      {
+       "id": "k2-12-c0016",
+       "ses": "Özellikle çökme kırıklarında kemik fragmanlarının dura mater yırtığı ve parankim laserasyonu oluşturma riski bulunduğundan, hastalar derhal ileri görüntülemeye sevk edilmelidir.",
+       "ekran": "**Çökme Kırığı Riski:** Kemik parçalarının dura yırtığı ve laserasyon tehlikesi",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Çökme Kırığı Riski",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Kemik parçalarının",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [],
+        "sekil": "Çökme kırığı ve parankim hasarı ilişkisi şeması"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-12-b02",
+   "baslik": "Bilgisayarlı Tomografi Endikasyonları ve Manyetik Rezonans",
+   "sayfa_araligi": [
+    7,
+    11
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-12-p007",
+     "sayfa": 7,
+     "slayt_adim": "k2-12-d-s01",
+     "cumleler": [
+      {
+       "id": "k2-12-c0017",
+       "ses": "Kafa travmasında bilgisayarlı tomografi, tetkik süresinin son derece kısa olması ve acil servislerde kolay ulaşılabilir bulunması nedeniyle altın standart ilk incelemedir.",
+       "ekran": "**Bilgisayarlı Tomografi:** Hızlı tetkik süresi ve kolay ulaşılabilirlik",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Bilgisayarlı Tomografi",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Hızlı tetkik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [
+        "d3-k2-bey-003"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Bilgisayarlı Tomografi",
+         "Tetkik süresinin kısa ve kolay ulaşılabilir olması, akut"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0018",
+       "ses": "Bilgisayarlı tomografinin en büyük klinik avantajı, dakikalar içerisinde akut hemoraji odaklarını ve kemik penceresinde kafatası kırıklarını saptama becerisidir.",
+       "ekran": "**Tomografi Avantajı:** Akut kanama ve kemik kırıklarını yüksek duyarlılıkla saptama",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Tomografi Avantajı",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Akut kanama",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "hemoraji ve kırıkları saptama becerisi nedeniyle",
+         "Akut kanama ve kırıklar *"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0019",
+       "ses": "Travma protokolünde çekilen bilgisayarlı tomografide hem beyin parankim penceresi hem de kemik penceresi birlikte incelenerek gizli kemik patolojileri aranmalıdır.",
+       "ekran": "**Pencere Ayarları:** Beyin parankim ve kemik pencerelerinin eş zamanlı analizi",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Pencere Ayarları",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Beyin parankim",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Akut kanama ve kırıklar *"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p008",
+     "sayfa": 8,
+     "slayt_adim": "k2-12-d-s01",
+     "cumleler": [
+      {
+       "id": "k2-12-c0020",
+       "ses": "Bilgisayarlı tomografide taze kanın içerisindeki globin proteini nedeniyle akut intrakraniyal kanama hiperdens yani parlak beyaz olarak izlenir.",
+       "ekran": "**Dansite Özelliği:** Akut hemoraji tomografide hiperdens beyaz görünür",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Dansite Özelliği",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Akut hemoraji",
+         "tur": "terim"
+        },
+        {
+         "metin": "Dansite Özelliği:",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [
+        "cec65023ada1",
+        "91425937cb81"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "• BT’de akut kanama hiperdens olarak görülür."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0021",
+       "ses": "Pıhtılaşmış taze kan elli ila yetmiş Hounsfield ünitesi arasında yüksek bir X ışını atenüasyonu oluşturarak normal gri ve beyaz cevherden belirgin biçimde ayrışır.",
+       "ekran": "**Atenüasyon Değeri:** Taze pıhtının elli yetmiş hounsfield ünitesinde tutulumu",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Atenüasyon Değeri",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Taze pıhtının",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "• BT’de akut kanama hiperdens olarak görülür."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0022",
+       "ses": "Ancak hastada hemoglobin değeri desilitrede sekiz gramın altında olan şiddetli anemi veya yaygın damar içi pıhtılaşma tablosu varsa, akut kanama hiperdens görünmeyebilir ve parankimle izodens kalabilir.",
+       "ekran": "**Tomografi Tuzağı:** Şiddetli anemi ve koagülopatide kanama hiperdens olmayabilir",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Tomografi Tuzağı",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Şiddetli anemi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "• Şiddetli anemi (Hb< 8 gr/dl altında ise)",
+         "• DIC varlığında BT’de akut kanama hiperdens",
+         "olmayabilir !"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p009",
+     "sayfa": 9,
+     "slayt_adim": "k2-12-d-s01",
+     "cumleler": [
+      {
+       "id": "k2-12-c0023",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Akut kafa travması sonrasında bilinç kaybı öyküsü, glaskov koma skorunun on beşin altında olması veya herhangi bir fokal nörolojik defisit varlığı mutlak acil bilgisayarlı tomografi endikasyonudur.",
+       "ekran": "**Acil Tomografi Endikasyonu:** Bilinç kaybı, glaskov skoru on beş altı veya fokal bulgu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Acil Tomografi Endikasyonu",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Bilinç kaybı,",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [
+        "d3-k2-bey-003",
+        "d3-k2-bey-006"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Kafa travmasında BT endikasyonu",
+         "*Bilinç kaybı",
+         "*GKS<15 ya da fokal nörolojik bulgu varlığı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0024",
+       "ses": "Ayrıca iki veya daha fazla kez kusma, şiddetli baş ağrısı, travma sonrası nöbet geçirme, kafatasında çökme kırığı ya da açık kırık varlığı tomografi gerektirir.",
+       "ekran": "**Klinik Kriterler:** İki ve üzeri kusma, şiddetli baş ağrısı, nöbet ve çökme kırığı",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Klinik Kriterler",
+         "tur": "tanim"
+        },
+        {
+         "metin": "İki ve",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "*Kusma (≥ 2), şiddetli başağrısı",
+         "*Nöbet",
+         "*Kafatasında çökme kırığı ya da açık kırık"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0025",
+       "ses": "Kafa tabanı kırığını düşündüren hemotimpanum, kulaktan beyin omurilik sıvısı gelmesi, iki yaş altı veya altmış yaş üstü hastalar ile kanama diyatezi varlığı acil tomografi ölçütleridir.",
+       "ekran": "**Kafa Tabanı Kırığı ve Yaş:** Hemotimpanum, otore, aşırı yaş sınırları ve koagülopati",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Kafa Tabanı Kırığı ve Yaş",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Hemotimpanum, otore,",
+         "tur": "terim"
+        },
+        {
+         "metin": "Kafa Tabanı Kırığı ve Yaş:",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [
+        "d3-k2-nor-011"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "*Kafa tabanı kırığı (hemotimpanum, otore )",
+         "*<2 yaş veya >60 yaş hastalar",
+         "*Kanama diatezi ve antikoagülan kullanımı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0026",
+       "ses": "Uluslararası kılavuzlarda yer alan Kanada Kafa Kurallarına göre, otuz dakikadan uzun süren retrograd amnezi veya tehlikeli bir yaralanma mekanizması varlığında da tomografi mutlaka çekilmelidir.",
+       "ekran": "**Kılavuz Ölçütleri:** Uzamış retrograd amnezi ve yüksek enerjili yaralanma mekanizması",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Kılavuz Ölçütleri",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Uzamış retrograd",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Kafa travmasında BT endikasyonu"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p010",
+     "sayfa": 10,
+     "slayt_adim": "k2-12-d-s01",
+     "cumleler": [
+      {
+       "id": "k2-12-c0027",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Bilgisayarlı tomografiye sistematik yaklaşımda ilk olarak kafatası kemiklerinde veya üst servikal vertebralarda fraktür varlığı araştırılır.",
+       "ekran": "**Fraktür Taraması:** Kafatası kubbesi ve üst servikal vertebra kırıklarının incelenmesi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Fraktür Taraması",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Kafatası kubbesi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [
+        "d3-k2-bey-002"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "BT’ye Yaklaşım",
+         "• Kafatası veya üst servikal vertebralarda fraktür?"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0028",
+       "ses": "Ardından beyin parankiminde asimetri, orta hat şifti, ventriküllerde bası etkisi ve doku dansite farkları ayrıntılı olarak değerlendirilir.",
+       "ekran": "**Parankimal Değerlendirme:** Asimetri, şift, ventrikül basısı ve dansite farkları",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Parankimal Değerlendirme",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Asimetri, şift,",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "• Beyinde asimetri, Şift, bası etkisi, dansite farkı ?"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0029",
+       "ses": "Sulkuslarda, silviyan fissürde ve sisternlerde subaraknoid kanama aranmalı, pencere ayarı yapılarak subdural koleksiyonlar ve kemik kırıkları taranmalıdır.",
+       "ekran": "**Sistern ve Sulkus İncelemesi:** Subaraknoid kanama ve subdural koleksiyon taraması",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Sistern ve Sulkus İncelemesi",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Subaraknoid kanama",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "• Sulkuslarda, slyvian fissürde ve sisternlerde SAK?",
+         "• Parlaklık ayarında degişiklik yaparak subdural",
+         "koleksiyon ara?",
+         "• Kemik penceresinde fraktür ara?"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0030",
+       "ses": "Görüntülenen her lezyonun beyin parankimi içerisinde yani intraaksiyel mi yoksa parankim dışında yani ekstraaksiyel mi olduğu net olarak tanımlanmalıdır.",
+       "ekran": "**Lezyon Lokalizasyonu:** İntraaksiyel ve ekstraaksiyel ayrımının yapılması",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Lezyon Lokalizasyonu",
+         "tur": "tanim"
+        },
+        {
+         "metin": "İntraaksiyel ve",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "• Lezyonu tanımla (intraaksiyal mi ekstraaksiyal mi )"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p011",
+     "sayfa": 11,
+     "slayt_adim": "k2-12-d-s01",
+     "cumleler": [
+      {
+       "id": "k2-12-c0031",
+       "ses": "Manyetik rezonans görüntüleme, özellikle diffüz aksonal hasar ve diffüz vasküler zedelenmeyi saptamada bilgisayarlı tomografiden çok daha duyarlıdır.",
+       "ekran": "**Manyetik Rezonans Üstünlüğü:** Diffüz aksonal hasar ve vasküler zedelenme tespiti",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Manyetik Rezonans Üstünlüğü",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Diffüz aksonal",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "MRG",
+         "• Diffüz aksonal hasar (DAH)",
+         "• Diffüz vasküler zedelenme"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0032",
+       "ses": "Kortikal kontüzyonları, tomografide parankimle izodens kalarak gözden kaçabilen subakut ve kronik subdural kanamaları ile subaraknoid kanamaları göstermede manyetik rezonans büyük avantaja sahiptir.",
+       "ekran": "**İzodens Kanama ve Kontüzyon:** İzodens subdural hematom ve kontüzyonda duyarlılık",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "İzodens Kanama ve Kontüzyon",
+         "tur": "tanim"
+        },
+        {
+         "metin": "İzodens subdural",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "• Kortikal kontüzyon",
+         "• Subdural hemorajiler (özellikle BT’de izodens/kronik)",
+         "• Subaraknoid kanamaları göstermede BT’ye göre",
+         "avantajlıdır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0033",
+       "ses": "Özellikle gradyan eko ve duyarlılık ağırlıklı sekanslar, deoksihemoglobin ve hemosiderin birikimlerini manyetik alanda yarattıkları bozulmayla siyah sinyalsiz odaklar olarak anında yakalar.",
+       "ekran": "**Duyarlılık Ağırlıklı Sekanslar:** Hemosiderin ve mikrokanamaların manyetik alanda saptanması",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Duyarlılık Ağırlıklı Sekanslar",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Hemosiderin ve",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "MRG"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-12-b03",
+   "baslik": "Travmatik Kraniyoserebral Hasar: Primer ve Sekonder Mekanizmalar",
+   "sayfa_araligi": [
+    12,
+    14
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-12-p012",
+     "sayfa": 12,
+     "slayt_adim": "k2-12-d-s02",
+     "cumleler": [
+      {
+       "id": "k2-12-c0034",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Travmatik kraniyoserebral hasarlar zamansal ve fizyopatolojik özelliklerine göre primer hasar ve sekonder hasar olmak üzere iki temel kategoride incelenir.",
+       "ekran": "**Kraniyoserebral Hasar:** Primer hasar ve sekonder hasar sınıflaması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kraniyoserebral Hasar",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Primer hasar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s02",
+       "cikmis": [
+        "32ccb61bda53"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "TRAVMATİK KRANİOSEREBRAL HASAR",
+         "Primer Hasar:"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0035",
+       "ses": "Primer hasar, mekanik travmanın doğrudan fiziksel etkisiyle darbe anında ortaya çıkan geri dönüşsüz mekanik doku zedelenmesidir.",
+       "ekran": "**Primer Hasar Tanımı:** Travmanın doğrudan etkisiyle darbe anında ortaya çıkan hasar",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Primer Hasar Tanımı",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Travmanın doğrudan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s02",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Travmanın direk etkisiyle travma anında ortaya çıkar."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0036",
+       "ses": "Darbe anında gelişen mekanik doku parçalanması ve nöronal nekroz sonradan geri döndürülemez; bu nedenle primer hasarın en etkili tedavisi koruyucu kask ve emniyet tedbirleridir.",
+       "ekran": "**Önleme Stratejisi:** Geri dönüşsüz mekanik doku kaybına karşı koruyucu önlemler",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Önleme Stratejisi",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Geri dönüşsüz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s02",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "TRAVMATİK KRANİOSEREBRAL HASAR"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p013",
+     "sayfa": 13,
+     "slayt_adim": "k2-12-d-s02",
+     "cumleler": [
+      {
+       "id": "k2-12-c0037",
+       "ses": "Primer hasarlar anatomik olarak skalp hematomu ve laserasyonu ile kafatası kemiklerindeki kranyum fraktürlerini kapsar.",
+       "ekran": "**Primer Yüzeyel Hasar:** Skalp laserasyonu ve kafatası kemik kırıkları",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Primer Yüzeyel Hasar",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Skalp laserasyonu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s02",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Primer Hasar",
+         "1- Skalp hematomu/laserasyonu",
+         "2- Kranyum fraktürleri"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0038",
+       "ses": "Ekstraserebral yani ekstraaksiyel kanamalar epidural hematom, subdural hematom ve subaraknoid kanama olmak üzere üç ana grupta toplanır.",
+       "ekran": "**Ekstraaksiyel Kanamalar:** Epidural hematom, subdural hematom ve subaraknoid kanama",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Ekstraaksiyel Kanamalar",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Epidural hematom,",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s02",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "3- Ekstraserebral hemorajiler",
+         "Epidural hematom",
+         "Subdural hematom",
+         "Subaknoid kanama"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0039",
+       "ses": "İntraaksiyel yani parankimal primer lezyonlar ise diffüz aksonal hasar, kortikal kontüzyon, derin gri cevher ve beyin sapı hasarı ile intraventriküler kanamadır.",
+       "ekran": "**İntraaksiyel Hasarlar:** Diffüz aksonal hasar, kontüzyon ve intraventriküler kanama",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "İntraaksiyel Hasarlar",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Diffüz aksonal",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s02",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "4- İntraaksiyel lezyonlar",
+         "Diffüz aksonal hasar",
+         "Kortikal kontüzyon/parankimal hematom",
+         "Derin serebral gri cevher ve beyin sapı yaralanması",
+         "İntraventriküler kanama/koroid pleksus kanaması"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0040",
+       "ses": "Ekstraaksiyel kanamalarda cerrahi boşaltım doğrudan hayat kurtarırken, intraaksiyel diffüz lezyonlarda yaklaşım daha çok yoğun bakım izlemi ve nöroprotektif desteğe dayanır.",
+       "ekran": "**Cerrahi Yaklaşım Farkı:** Ekstraaksiyelde cerrahi dekompresyon, intraaksiyelde medikal izlem",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Cerrahi Yaklaşım Farkı",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Ekstraaksiyelde cerrahi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s02",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Primer Hasar"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p014",
+     "sayfa": 14,
+     "slayt_adim": "k2-12-d-s02",
+     "cumleler": [
+      {
+       "id": "k2-12-c0041",
+       "ses": "Sekonder hasar, primer travmaya ikincil olarak travma sonrasında saatler ve günler içinde gelişen ilerleyici patolojik süreçlerdir.",
+       "ekran": "**Sekonder Hasar:** Travmaya sekonder olarak travma sonrasında ortaya çıkan patolojiler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Sekonder Hasar",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Travmaya sekonder",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s02",
+       "cikmis": [
+        "32ccb61bda53"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Sekonder Hasar:",
+         "Travmaya sekonder travma sonrasında",
+         "ortaya çıkan patolojilerdir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0042",
+       "ses": "Beyin ödemi, kafa içi basınç artışı sendromu, iskemi, hipotansiyon ve herniasyonlar sekonder hasarı oluşturur ve acil cerrahi tedavinin temel amacı sekonder hasarı engellemektir.",
+       "ekran": "**Sekonder Hasar Tabloları:** Beyin ödemi, kafa içi basınç artışı ve herniasyonlar",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Sekonder Hasar Tabloları",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Beyin ödemi,",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s02",
+       "cikmis": [
+        "82a829d853b5"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Sekonder Hasar:"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0043",
+       "ses": "Kafa içi kompansasyon kapasitesi aşıldığında intrakraniyal basınç hızla yükselerek serebral perfüzyon basıncını düşürür ve global serebral iskemiye yol açar.",
+       "ekran": "**Perfüzyon Bozukluğu:** Kafa içi basınç artışının serebral iskemiye ilerlemesi",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Perfüzyon Bozukluğu",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Kafa içi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s02",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Sekonder Hasar:"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-12-b04",
+   "baslik": "Epidural Hematom: Anatomi, Etyoloji ve Tomografi Bulguları",
+   "sayfa_araligi": [
+    15,
+    24
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-12-p015",
+     "sayfa": 15,
+     "slayt_adim": "k2-12-d-s03",
+     "cumleler": [
+      {
+       "id": "k2-12-c0044",
+       "ses": "Ekstraaksiyel hemorajiler, beyin parankim dokusunun dışındaki anatomik zarlar ve boşluklar içerisinde gelişen kanamaları ifade eder.",
+       "ekran": "**Ekstraaksiyel Hemorajiler:** Beyin parankimi dışındaki zarlar arası kanamalar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Ekstraaksiyel Hemorajiler",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Beyin parankimi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "EKSTRAAKSİYAL HEMORAJİLER"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0045",
+       "ses": "Bu kanamalar beyin dokusunu dıştan içeriye doğru sıkıştırarak kitle etkisi oluşturur ve zamanında boşaltılmazsa fıtıklaşmalara zemin hazırlar.",
+       "ekran": "**Dıştan Bası Etkisi:** Beyin parankimini dıştan komprese ederek herniasyona yol açma",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Dıştan Bası Etkisi",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Beyin parankimini",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "EKSTRAAKSİYAL HEMORAJİLER"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p016",
+     "sayfa": 16,
+     "slayt_adim": "k2-12-d-s03",
+     "cumleler": [
+      {
+       "id": "k2-12-c0046",
+       "ses": "Epidural hematom, kafatası kemiğinin iç tabulası ile dura mater arasındaki potansiyel epidural boşluğa olan kanamadır.",
+       "ekran": "**Epidural Hematom:** İç tabula ile dura mater arasındaki boşluğa kanama",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Epidural Hematom",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "İç tabula",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s03",
+       "cikmis": [
+        "d3-k2-bey-005",
+        "e1454640ed84"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "EPİDURAL HEMATOM",
+         "İç tabula ile dura arasındaki",
+         "boşluğa olan kanamadır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0047",
+       "ses": "Özellikle pterion bölgesinde kafatası kemiğinin ince olması ve hemen altından majör damar yapılarının geçmesi bu anatomik alanı travmaya karşı oldukça savunmasız kılar.",
+       "ekran": "**Pterion Bölgesi:** İnce kemik çatısı ve altındaki damar komşuluğu",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Pterion Bölgesi",
+         "tur": "tanim"
+        },
+        {
+         "metin": "İnce kemik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "EPİDURAL HEMATOM"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p017",
+     "sayfa": 17,
+     "slayt_adim": "k2-12-d-s03",
+     "cumleler": [
+      {
+       "id": "k2-12-c0048",
+       "ses": "Anatomik çizimde görüldüğü gibi dura mater kafatası iç yüzeyine kemik zarı gibi sıkıca yapışık olduğundan epidural kanama durayı kemikten soyup ayırarak ilerler.",
+       "ekran": "**Epidural Boşluk Anatomisi:** Duranın kafatası kemiğinden ayrılarak kanla dolması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Epidural Boşluk Anatomisi",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Duranın kafatası",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [],
+        "sekil": "Kranial kemik ve dura mater anatomik ilişkisi şeması"
+       }
+      },
+      {
+       "id": "k2-12-c0049",
+       "ses": "Kafatası iç tabulası ile dura yaprağını birbirine bağlayan Sharpey lifleri nedeniyle arteriyel basınç durayı kemikten ayırırken lokalize ve yüksek dirençli bir kitle oluşturur.",
+       "ekran": "**Dural Tutunma:** Sharpey liflerinin oluşturduğu mekanik direnç ve kan birikimi",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Dural Tutunma",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Sharpey liflerinin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [],
+        "sekil": "Sharpey lifleri ve dural yapışıklık anatomisi"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p018",
+     "sayfa": 18,
+     "slayt_adim": "k2-12-d-s03",
+     "cumleler": [
+      {
+       "id": "k2-12-c0050",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Epidural hematomun en sık nedeni yüzde doksan oranında temporal kemik skuama kırıklarıdır.",
+       "ekran": "**Epidural Etyoloji:** En sık neden yüzde doksan temporal kemik kırıklarıdır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Epidural Etyoloji",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "En sık",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s03",
+       "cikmis": [
+        "d3-k2-bey-005",
+        "e1454640ed84"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Epidural Hematom",
+         "En sık neden temporal kemik",
+         "kırıklarıdır (%90)."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0051",
+       "ses": "Dikkat edilirse bu konuda çıkmış komite sınavı sorusu bulunmaktadır: Arteriyel epidural hematomda kırığa bağlı olarak arteria meningea media yırtılır ve yüksek basınçla epidural mesafeye kanar.",
+       "ekran": "**Damarsal Kaynak:** Kırıklara bağlı arteria meningea media yırtılması",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Damarsal Kaynak",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Kırıklara bağlı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s03",
+       "cikmis": [
+        "d3-k2-bey-005",
+        "e1454640ed84"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "% 90 arteriel, %10 venöz",
+         "Arteriel EDH’da kırıklara bağlı a. meningea media",
+         "yırtılarak epidural mesafeye kanar."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0052",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Travma anındaki kısa bilinç kaybını izleyen geçici iyilik hali sonrasında hastanın hızla komaya girdiği lucid interval tablosu en tipik olarak epidural hematomda görülür.",
+       "ekran": "**Lucid İnterval:** Geçici iyilik hali sonrası hızlı koma gelişimi",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Lucid İnterval",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Geçici iyilik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s03",
+       "cikmis": [
+        "e7ce2a6a67b6",
+        "5d883361979e"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Epidural Hematom"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0053",
+       "ses": "Lucid interval döneminde hasta kendini tamamen sağlıklı hissederken, arka planda hızla büyüyen arteriyel hematom kafa içi kompanzasyonu tükettiği anda aniden unkal herniasyon gelişir.",
+       "ekran": "**Klinik Tehlike:** Kompansasyonun tükenmesiyle aniden gelişen unkal herniasyon",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Klinik Tehlike",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Kompansasyonun tükenmesiyle",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Epidural Hematom"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p019",
+     "sayfa": 19,
+     "slayt_adim": "k2-12-d-s03",
+     "cumleler": [
+      {
+       "id": "k2-12-c0054",
+       "ses": "Çocuklarda kafatası kemikleri son derece elastik olduğundan kemik kırığı gelişmeksizin de dural damarların sıyrılması sonucu epidural hematom oluşabilir.",
+       "ekran": "**Pediatrik Epidural Hematom:** Elastik kemik yapısı nedeniyle kırıksız gelişebilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Pediatrik Epidural Hematom",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Elastik kemik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Epidural Hematom",
+         "Çocuklarda kafatası elastiktir, kırık",
+         "olmadan da epidural hematom gelişebilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0055",
+       "ses": "Sütür ve fontanellerin açık olması sayesinde kafa hacmi bir miktar esneyebilse de sütür kenarlarından duranın ayrılması çocuklarda geniş subperiostal hematomlara zemin hazırlar.",
+       "ekran": "**Esnek Kranium Dinamiği:** Açık sütürler ve duranın kemikten sıyrılması",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Esnek Kranium Dinamiği",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Açık sütürler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Epidural Hematom"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p020",
+     "sayfa": 20,
+     "slayt_adim": "k2-12-d-s03",
+     "cumleler": [
+      {
+       "id": "k2-12-c0056",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Epidural hematomun bilgisayarlı tomografideki tipik görünümü akut fazda hiperdens, bikonveks yani lentiform mercek şekilli ve düzgün sınırlı kitledir.",
+       "ekran": "**Radyolojik Görünüm:** Akut fazda hiperdens, bikonveks lentiform mercek şekli",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Radyolojik Görünüm",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Akut fazda",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s03",
+       "cikmis": [
+        "d3-k2-bey-005",
+        "past-q-_SKENDERUN_T_M_d_rl___ne0__1__230709_230251-9"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Epidural Hematom",
+         "Tipik",
+         "BT’de akut fazda hiperdens, bikonveks/lentiform şekilli,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0057",
+       "ses": "Dura mater kranial sütür hatlarında kemiğe çok sıkı yapışık olduğu için epidural hematom sütür hatlarını asla aşamaz.",
+       "ekran": "**Sütür Sınırı:** Dura kemiğe yapışık olduğu için sütür hatlarını geçemez",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Sütür Sınırı",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Dura kemiğe",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s03",
+       "cikmis": [
+        "past-q-_SKENDERUN_T_M_d_rl___ne0__1__230709_230251-9"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Tipik"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0058",
+       "ses": "Kanama ancak sütür sınırları arasında kalan sınırlı kemik kompartmanında durayı parankime doğru iterek ilerler.",
+       "ekran": "**Lens Formunun Mekaniği:** İki sütür arasında içeriye doğru bombeleşen hematom",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Lens Formunun Mekaniği",
+         "tur": "tanim"
+        },
+        {
+         "metin": "İki sütür",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Epidural Hematom"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0059",
+       "ses": "Bu anatomik mekanizma sonucu hematom karakteristik çift taraflı dışbükey lens formunu alarak altındaki parankime odaklanmış kitle etkisi yapar.",
+       "ekran": "**Bikonveks Lens Geometrisi:** Hematomun parankime odaklanmış kitle etkisi ve morfolojisi",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Bikonveks",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Epidural Hematom"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p021",
+     "sayfa": 21,
+     "slayt_adim": "k2-12-d-s03",
+     "cumleler": [
+      {
+       "id": "k2-12-c0060",
+       "ses": "Epidural hematomların yaklaşık yüzde onu dural venöz sinüs yırtıkları sonucu gelişen venöz epidural hematomlardır.",
+       "ekran": "**Venöz Epidural Hematom:** Yüzde on olguda venöz sinüs yırtıklarına bağlı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Venöz Epidural Hematom",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Yüzde on",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Venöz Epidural Hematom(%10)",
+         "Venöz sinüs yırtıkları sonucu"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0061",
+       "ses": "Venöz kaynaklı epidural kanamalar çocuklarda daha sık görülür ve kafatası kırığı eşlik etmeyebilir.",
+       "ekran": "**Pediatrik Venöz Hematom:** Çocuklarda sıktır ve kırık eşlik etmeyebilir",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Pediatrik Venöz Hematom",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Çocuklarda sıktır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Çocuklarda sık olup kırık eşlik"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0062",
+       "ses": "Transvers veya sigmoid sinüs yırtıklarına bağlı gelişen arka çukur venöz hematomları, doğrudan beyin sapını sıkıştırarak solunum durmasına yol açabileceğinden çok dikkatli izlenmelidir.",
+       "ekran": "**Arka Çukur Riski:** Transvers sinüs yırtığına bağlı beyin sapı kompresyonu",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Arka Çukur Riski",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Transvers sinüs",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Venöz Epidural Hematom(%10)"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p022",
+     "sayfa": 22,
+     "slayt_adim": "k2-12-d-s03",
+     "cumleler": [
+      {
+       "id": "k2-12-c0063",
+       "ses": "Tomografi kesitinde kafatası iç tabulası ile dura mater arasında temporal yerleşimli, belirgin kitle etkisi oluşturan hiperdens bikonveks epidural hematom kitlesi izlenmektedir.",
+       "ekran": "**Tomografi Kesiti:** Temporal bölgede bikonveks hiperdens epidural hematom",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tomografi Kesiti",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Temporal bölgede",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Imm eo a 1mm",
+         "GE MEDIC"
+        ],
+        "sekil": "Aksiyel BT'de lentiform bikonveks epidural hematom"
+       }
+      },
+      {
+       "id": "k2-12-c0064",
+       "ses": "Genişleyen hematom aynı taraftaki lateral ventrikül frontal boynuzunu basılamış ve beyin orta hat yapılarını karşı tarafa doğru birkaç milimetre itmiştir.",
+       "ekran": "**Ventrikül Basısı:** Lateral ventrikül frontal boynuzunda kompresyon ve şift",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Ventrikül Basısı",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Lateral ventrikül",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "GE MEDIC"
+        ],
+        "sekil": "Tomografide ventrikül basısı ve orta hat şifti"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p023",
+     "sayfa": 23,
+     "slayt_adim": "k2-12-d-s03",
+     "cumleler": [
+      {
+       "id": "k2-12-c0065",
+       "ses": "Akut dönemdeki epidural hematomun içerisinde henüz pıhtılaşmamış taze kan akımını gösteren düşük dansiteli hipodens alanlar devam eden aktif kanamaya işaret eder.",
+       "ekran": "**Aktif Kanama Belirtisi:** Hematom içinde düşük dansiteli alanlar aktif kanamayı gösterir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Aktif Kanama Belirtisi",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Hematom içinde",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Epidural Hematom",
+         "• Akut dönemde içerisinde",
+         "düşük dansiteli alanlar"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0066",
+       "ses": "Radyolojide girdap belirtisi olarak adlandırılan bu heterojen hipodens odak, arteriyel ekstravazasyonun sürdüğünü ve acil cerrahi dekompresyon gerektiğini kanıtlar.",
+       "ekran": "**Girdap Belirtisi:** Arteriyel ekstravazasyonu gösteren acil cerrahi bulgusu",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Girdap Belirtisi",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Arteriyel ekstravazasyonu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Epidural Hematom"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p024",
+     "sayfa": 24,
+     "slayt_adim": "k2-12-d-s03",
+     "cumleler": [
+      {
+       "id": "k2-12-c0067",
+       "ses": "Epidural hematom sütür hatlarını geçememesine karşın dura yaprağının kemikten sıyrılması sayesinde falks serebrinin kafatasına yapışma yerini geçerek karşı tarafa uzanabilir.",
+       "ekran": "**Anatomik Fark:** Sütürleri geçemez ancak falks yapışma yerini aşabilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Anatomik Fark",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Sütürleri geçemez",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "EDH’un falks",
+         "yapışma yerini",
+         "geçebilmesi,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0068",
+       "ses": "Bu özellik epidural hematomun falks bariyerine takılmayan serbest kemik içi yayılımını göstererek subdural hematomdan ayrılmasında önemli bir radyolojik kriter oluşturur.",
+       "ekran": "**Falks Ayrımı:** Epidural hematomun orta hatta dural sinüs üstünden geçişi",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Falks Ayrımı",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Epidural hematomun",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s03",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "EDH’un falks"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-12-b05",
+   "baslik": "Epidural Hematomda Özel Görünümler ve Manyetik Rezonans",
+   "sayfa_araligi": [
+    25,
+    29
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-12-p025",
+     "sayfa": 25,
+     "slayt_adim": "k2-12-d-s04",
+     "cumleler": [
+      {
+       "id": "k2-12-c0069",
+       "ses": "Paranazal sinüs veya mastoid hava hücrelerini içeren kemik kırıklarına ikincil olarak epidural hematom içerisinde yüzde yirmi oranında hava kabarcıkları izlenebilir.",
+       "ekran": "**Pnömosefali:** Sinüs kırıklarına ikincil yüzde yirmi hava içerebilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Pnömosefali",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Sinüs kırıklarına",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s04",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Sinüs kırıklarına",
+         "sekonder hava",
+         "içerebilir (%20)."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0070",
+       "ses": "Hematom içinde hava görülmesi kafa tabanı kırığını ve dış ortamla ilişkiyi gösterir; bu durum menenjit riski ve gerilim tipi pnömosefali açısından yakın izlem gerektirir.",
+       "ekran": "**Enfeksiyon Riski:** Dış ortamla ilişkiyi gösteren pnömosefalide menenjit takibi",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Enfeksiyon Riski",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Dış ortamla",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s04",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Sinüs kırıklarına"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p026",
+     "sayfa": 26,
+     "slayt_adim": "k2-12-d-s04",
+     "cumleler": [
+      {
+       "id": "k2-12-c0071",
+       "ses": "Aksiyel tomografi kesitlerinde sağ frontal bölgede ve verteks düzeyinde kemik iç tabulasına yapışık lokalize epidural hematom odakları izlenmektedir.",
+       "ekran": "**Verteks Hematomu:** Sağ frontal ve verteks düzeyinde epidural hematom",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Verteks Hematomu",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Sağ frontal",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s04",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Sağ frontalde ve verteks düzeyinde EDH"
+        ],
+        "sekil": "Frontal ve verteks lokalizasyonlu epidural hematom BT görüntüsü"
+       }
+      },
+      {
+       "id": "k2-12-c0072",
+       "ses": "Verteks düzeyindeki epidural hematomlar standart aksiyel tomografi kesitlerinde tepe noktasında kaldığı için atlanabilir, bu olgularda koronal rekonstrüksiyon hayat kurtarır.",
+       "ekran": "**Koronal İnceleme:** Verteks lezyonlarında koronal rekonstrüksiyonun tanısal değeri",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Koronal İnceleme",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Verteks lezyonlarında",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s04",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Sağ frontalde ve verteks düzeyinde EDH"
+        ],
+        "sekil": "Verteks hematomunun koronal planda değerlendirilmesi"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p027",
+     "sayfa": 27,
+     "slayt_adim": "k2-12-d-s04",
+     "cumleler": [
+      {
+       "id": "k2-12-c0073",
+       "ses": "Manyetik rezonans görüntülemede epidural hematom te bir ağırlıklı kesitlerde akut dönemde parankimle izointens, subakut dönemde ise serbest methemoglobin nedeniyle hiperintens izlenir.",
+       "ekran": "**Manyetik Rezonans Evreleri:** Te bir kesitinde akut izointens, subakut hiperintens",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Manyetik Rezonans Evreleri",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Te bir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s04",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Epidural Hematom",
+         "MRG’de T1 AG’de",
+         "• Akut: izointens"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0074",
+       "ses": "Zaman içerisinde eritrositlerin yıkılması ve hücre dışı methemoglobin açığa çıkması, subakut hematomun te bir görüntülerinde parlak beyaz bir sinyal vermesini sağlar.",
+       "ekran": "**Methemoglobin Dönemi:** Subakut fazda hücre dışı methemoglobinin parlak sinyali",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Methemoglobin Dönemi",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Subakut fazda",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s04",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Epidural Hematom"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p028",
+     "sayfa": 28,
+     "slayt_adim": "k2-12-d-s04",
+     "cumleler": [
+      {
+       "id": "k2-12-c0075",
+       "ses": "Te iki ağırlıklı sekanslarda epidural hematom ile altındaki beyin parankimi arasında ince hipointens bir hat halinde uzanan dura mater bandı seçilir.",
+       "ekran": "**Hipointens Dura Bandı:** Te iki kesitinde hematom altında koyu dura çizgisi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hipointens Dura Bandı",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Te iki",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s04",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "T2 AG’de  epidural hematom ile altındaki beyin",
+         "parankimi arasında hipointens dura izleniyor."
+        ],
+        "sekil": "T2 manyetik rezonans kesitinde epidural hematom ile beyin parankimini ayıran hipointens dura mater çizgisi"
+       }
+      },
+      {
+       "id": "k2-12-c0076",
+       "ses": "Bu hipointens dural çizginin varlığı, lezyonun dural yapının dışında kaldığını göstererek epidural hematomu subdural hematomdan ayıran en güvenilir radyolojik bulgudur.",
+       "ekran": "**Ayırıcı Tanı Kriteri:** Hipointens dura çizgisi epidural hematomu subduralden ayırır",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Ayırıcı Tanı Kriteri",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Hipointens dura",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s04",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "EDH’u SDH’dan ayırır !!!"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p029",
+     "sayfa": 29,
+     "slayt_adim": "k2-12-d-s04",
+     "cumleler": [
+      {
+       "id": "k2-12-c0077",
+       "ses": "Koronal te iki kesitinde ve manyetik rezonans venografide sinüs sagittalis süperiorun yırtılmasına bağlı gelişen ve dural sinüsü basılayan verteks venöz epidural hematomu doğrulanmaktadır.",
+       "ekran": "**MR Venografi:** Sinüs sagittalis süperioru basılayan verteks venöz epidural hematom",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "MR Venografi",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Sinüs sagittalis",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s04",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Koranal T2 AG’de lasere SSS kaynaklı venöz epidural hematom",
+         "Sagittal MR Venografi’de verteksteki venöz epidural hematom SSS’ü basılıyor",
+         "Epidural Hematom"
+        ],
+        "sekil": "MR venografi ve T2 koronal kesitte superior sagital sinüsü komprese eden verteks yerleşimli venöz EDH"
+       }
+      },
+      {
+       "id": "k2-12-c0078",
+       "ses": "Manyetik rezonans venografi ile venöz dural sinüslerde akım açıklığı ve lümende travmatik tromboz gelişip gelişmediği cerrahi öncesinde titizlikle incelenir.",
+       "ekran": "**Sinüs Açıklığı:** Venöz lümen basısı ve sinüs trombozunun venografiyle dışlanması",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Sinüs Açıklığı",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Venöz lümen",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s04",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Sagittal MR Venografi’de verteksteki venöz epidural hematom SSS’ü basılıyor"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-12-b06",
+   "baslik": "Subdural Hematom: Köprü Venleri, Evreleme ve Tomografi Tuzakları",
+   "sayfa_araligi": [
+    30,
+    38
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-12-p030",
+     "sayfa": 30,
+     "slayt_adim": "k2-12-d-s06",
+     "cumleler": [
+      {
+       "id": "k2-12-c0079",
+       "ses": "Subdural hematom, dura mater ile araknoid membran arasındaki potansiyel subdural boşluğa olan kanamadır.",
+       "ekran": "**Subdural Hematom:** Dura mater ile araknoid membran arasındaki boşluğa kanama",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Subdural Hematom",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Dura mater",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s06",
+       "cikmis": [
+        "past-q-_SKENDERUN_T_M_d_rl___ne0__1__230709_230251-9"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "SUBDURAL HEMATOM",
+         "Dura ile araknoid",
+         "membran arasındaki"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0080",
+       "ses": "Subdural alan anatomik olarak geniş ve serbest bir potansiyel kompartman olduğu için kan beyin hemisferi boyunca hızla yayılarak geniş bir yüzeyi kaplar.",
+       "ekran": "**Potansiyel Boşluk:** Geniş kompartmanda serbestçe yayılan hematom tabakası",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Potansiyel Boşluk",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Geniş kompartmanda",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "SUBDURAL HEMATOM"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p031",
+     "sayfa": 31,
+     "slayt_adim": "k2-12-d-s06",
+     "cumleler": [
+      {
+       "id": "k2-12-c0081",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Subdural hematom, kafa travması sırasında beynin kafatası içinde hızlanıp yavaşlamasıyla kortikal yüzeyden dural sinüslere uzanan köprü venlerinin yırtılması sonucu gelişir.",
+       "ekran": "**Köprü Venleri Yırtılması:** Subdural mesafedeki köprü venlerinin rüptürü sonucu oluşur",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Köprü Venleri Yırtılması",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Subdural mesafedeki",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s06",
+       "cikmis": [
+        "past-q-_SKENDERUN_T_M_d_rl___ne0__1__230709_230251-9"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Subdural Hematom",
+         "Travma nedeniyle subdural mesafedeki",
+         "köprü venlerinin yırtılmasına bağlı gelişir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0082",
+       "ses": "Köprü venleri dural sinüslere dik açıyla döküldüğü için, beynin kafatası içindeki ani açısal rotasyon hareketlerinde ileri derecede gerilerek kolayca kopar.",
+       "ekran": "**Mekanik Hassasiyet:** Dik açıyla dökülen venlerin rotasyonla gerilip kopması",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Mekanik Hassasiyet",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Dik açıyla",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "köprü venlerinin yırtılmasına bağlı gelişir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p032",
+     "sayfa": 32,
+     "slayt_adim": "k2-12-d-s06",
+     "cumleler": [
+      {
+       "id": "k2-12-c0083",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Bikonveks şekilli, arteriyel kökenli ve sütürleri geçemeyen epidural hematoma karşılık; subdural hematom konkav hilal şekilli, venöz kökenli olup sütür hatlarını serbestçe geçer.",
+       "ekran": "**Epidural ve Subdural Karşılaştırması:** Bikonveks arteriyel vs hilal şeklinde venöz kanama",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Epidural ve Subdural Karşılaştırması",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Bikonveks arteriyel",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s06",
+       "cikmis": [
+        "past-q-_SKENDERUN_T_M_d_rl___ne0__1__230709_230251-9"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Epidural Hematom              Subdural Hematom"
+        ],
+        "sekil": "Epidural ve subdural hematom karşılaştırma şeması"
+       }
+      },
+      {
+       "id": "k2-12-c0084",
+       "ses": "Klinik seyir açısından epidural hematom hızla cerrahi drenaj gerektiren hiperakut bir tablo iken, subdural hematom günler ve haftalar içinde sinsi bir kitleye dönüşebilir.",
+       "ekran": "**Klinik Seyir Ayrımı:** Hiperakut arteriyel aciliyet ile sinsi venöz ilerleyiş",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Klinik Seyir Ayrımı",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Hiperakut arteriyel",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Epidural Hematom              Subdural Hematom"
+        ],
+        "sekil": "Hematomların klinik seyir ve müdahale zamanlaması"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p033",
+     "sayfa": 33,
+     "slayt_adim": "k2-12-d-s06",
+     "cumleler": [
+      {
+       "id": "k2-12-c0085",
+       "ses": "Yaşlı hastalarda serebral atrofiye bağlı olarak subdural mesafe genişler ve köprü venleri gerilerek en hafif travmalarda dahi kolaylıkla yırtılabilir.",
+       "ekran": "**Yaşlılarda Kronik Subdural:** Beyin atrofisi nedeniyle minör travmalarla gelişebilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yaşlılarda Kronik Subdural",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Beyin atrofisi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Subdural Hematom",
+         "Yaşlı hastalarda minör kafa",
+         "travmalarından sonra subdural"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0086",
+       "ses": "Hastalar ve yakınları genellikle haftalar önce gerçekleşen hafif bir baş çarpmasını hatırlamaz; tablo sıklıkla yavaş gelişen kişilik değişikliği, demans ve yürüyüş bozukluğuyla hekime başvurur.",
+       "ekran": "**Sinsi Başvuru:** Unutkanlık, denge kaybı ve demans benzeri sinsi klinik tablo",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Sinsi Başvuru",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Unutkanlık, denge",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Subdural Hematom"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p034",
+     "sayfa": 34,
+     "slayt_adim": "k2-12-d-s06",
+     "cumleler": [
+      {
+       "id": "k2-12-c0087",
+       "ses": "Subdural hematomun bilgisayarlı tomografideki tipik şekli konkav yani hilal şeklindedir ve hemisfer konveksitesini boydan boya kaplayabilir.",
+       "ekran": "**Hilal Şekli:** Tomografide konkav hilal şeklinde hemisferi saran koleksiyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hilal Şekli",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Tomografide konkav",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s06",
+       "cikmis": [
+        "past-q-_SKENDERUN_T_M_d_rl___ne0__1__230709_230251-9"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Subdural Hematom",
+         "BT Görünümü",
+         "Şekli konkavdır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0088",
+       "ses": "Subdural alanda anatomik sütür engeli bulunmadığından hematom sütür hatlarını rahatlıkla geçer, ancak falks serebri veya tentoryum engeline takılarak orta hatta durur.",
+       "ekran": "**Anatomik Yayılım:** Sütürleri serbestçe aşar ancak falks ve tentoryumu geçemez",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Anatomik Yayılım",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Sütürleri serbestçe",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Subdural Hematom"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p035",
+     "sayfa": 35,
+     "slayt_adim": "k2-12-d-s06",
+     "cumleler": [
+      {
+       "id": "k2-12-c0089",
+       "ses": "Subdural hematom kronikleştikçe içerisindeki pıhtı lizise uğrar ve hücre elemanlarının çökmesiyle tomografide sıvı seviyelenmeleri oluşur.",
+       "ekran": "**Kronikleşme Süreci:** Hematom kronikleştikçe dansite seviyelenmeleri oluşur",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kronikleşme Süreci",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Hematom kronikleştikçe",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Kronikleştikçe içerisinde seviyelenmeler  oluşur."
+        ],
+        "sekil": "Aksiyel BT kesitinde kronik subdural hematom içinde gelişen sıvı-kan seviyelenmesi ve iç membranlar"
+       }
+      },
+      {
+       "id": "k2-12-c0090",
+       "ses": "Koleksiyon içinde çöken hücresel elemanlar yerçekimi etkisiyle altta hiperdens kalırken, üstte biriken lizise uğramış seröz sıvı hipodens bir seviye oluşturur.",
+       "ekran": "**Hematokrit Düzeyi:** Altta çöken hücreler ile üstte seröz sıvının seviyelenmesi",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Hematokrit Düzeyi",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Altta çöken",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Kronikleştikçe içerisinde seviyelenmeler  oluşur."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p036",
+     "sayfa": 36,
+     "slayt_adim": "k2-12-d-s06",
+     "cumleler": [
+      {
+       "id": "k2-12-c0091",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Subakut evredeki subdural hematomlar beyin korteksiyle aynı dansiteye ulaşarak izodens hale gelir ve özellikle iki taraflı olduklarında tomografide kolaylıkla atlanabilir.",
+       "ekran": "**İzodens Subdural Tuzak:** Subakut evrede korteksle izodens olup atlanabilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İzodens Subdural Tuzak",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Subakut evrede",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s06",
+       "cikmis": [
+        "past-q-_SKENDERUN_T_M_d_rl___ne0__1__230709_230251-10"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "İzodens subdural hematomlar",
+         "özellikle de bilateral ise BT’de atlanabilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0092",
+       "ses": "İki taraflı izodens hematom varlığında orta hat şifti izlenmeyebilir; bu durumda kortikal sulkusların silinmesi ve ventrikül kompresyonu hekim için en değerli tanı ipucudur.",
+       "ekran": "**Tanı İpuçları:** İki taraflı izodens hematomda sulkus silinmesi ve ventrikül basısı",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Tanı İpuçları",
+         "tur": "tanim"
+        },
+        {
+         "metin": "İki taraflı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "Bilateral izodens subdural hematomda"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p037",
+     "sayfa": 37,
+     "slayt_adim": "k2-12-d-s06",
+     "cumleler": [
+      {
+       "id": "k2-12-c0093",
+       "ses": "Te bir ağırlıklı manyetik rezonansta subakut subdural hematom içerisindeki serbest methemoglobin nedeniyle son derece parlak hiperintens sinyal verir ve izodens olgularda tanıyı kesinleştirir.",
+       "ekran": "**Manyetik Rezonans Te Bir Parlaklığı:** Subakut süreçte en parlak hiperintens sinyal",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Manyetik Rezonans Te Bir Parlaklığı",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Subakut süreçte",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "T1AG’de subakut subdural hematom",
+         "T1 intensitesi subakut süreçte en parlaktır.",
+         "Gerekirse MRG yapılır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0094",
+       "ses": "Bilgisayarlı tomografide şüphede kalınan veya klinik tablosu açıklanamayan her yaşlı hastada manyetik rezonans çekilerek gizli izodens hematomlar aydınlatılmalıdır.",
+       "ekran": "**Şüpheli Olgularda MRG:** Tomografide atlanabilen izodens kanamaların MRG ile tespiti",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Şüpheli Olgularda MRG",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Tomografide atlanabilen",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Gerekirse MRG yapılır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p038",
+     "sayfa": 38,
+     "slayt_adim": "k2-12-d-s06",
+     "cumleler": [
+      {
+       "id": "k2-12-c0095",
+       "ses": "Manyetik rezonans görüntüsünde her iki serebral hemisfer konveksitesini saran ve te bir sekansında belirgin biçimde parlayan iki taraflı subakut subdural hematom izlenmektedir.",
+       "ekran": "**İki Taraflı Subakut Hematom:** Te bir ağırlıklı kesitte iki taraflı parlak koleksiyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İki Taraflı Subakut Hematom",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Te bir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Subdural Hematom",
+         "T1 AG’de bilateral subakut süreçte subdural hematom"
+        ],
+        "sekil": "Koronal ve aksiyel MR'da bilateral subakut subdural hematom"
+       }
+      },
+      {
+       "id": "k2-12-c0096",
+       "ses": "İki taraflı geniş hematomlarda cerrahi yaklaşım olarak her iki hemisfere burr-hole kraniyostomi açılarak hematomun kontrollü boşaltılması ve dren yerleştirilmesi tercih edilir.",
+       "ekran": "**Cerrahi Drenaj:** Burr hole yöntemiyle iki taraflı hematomun boşaltılması",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Cerrahi Drenaj",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Burr hole",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s06",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Subdural Hematom"
+        ],
+        "sekil": "Burr-hole kraniyostomi drenaj şeması"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-12-b07",
+   "baslik": "Çocuk İstismarı, Travmatik Subaraknoid Kanama ve Subdural Higroma",
+   "sayfa_araligi": [
+    39,
+    46
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-12-p039",
+     "sayfa": 39,
+     "slayt_adim": "k2-12-d-s07",
+     "cumleler": [
+      {
+       "id": "k2-12-c0097",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Bir bebekte veya küçük çocukta farklı kronolojik evrelerde subdural hematom saptanması, hırpalanmış bebek sendromu ve çocuk istismarının en güçlü göstergesidir.",
+       "ekran": "**Çocuk İstismarı Uyarısı:** Bebekte değişik evrelerde subdural hematom varlığı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Çocuk İstismarı Uyarısı",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Bebekte değişik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s07",
+       "cikmis": [
+        "past-1790877040035-257830"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Subdural Hematom",
+         "• Bir bebek/çocukta değişik evrelerde subdural",
+         "hematom varlığı dövülmüş çocuk/çocuk istismarı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0098",
+       "ses": "Şiddetli sarsılmaya maruz kalan bebeklerde retinal kanamalar, kemiklerde metafizer kırıklar ve değişik yaşlardaki subdural kanamalar adli tıbbi açıdan patognomonik bir üçlü oluşturur.",
+       "ekran": "**Sarsılmış Bebek Üçlüsü:** Subdural hematom, retinal kanama ve metafizer kemik kırığı",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Sarsılmış Bebek Üçlüsü",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Subdural hematom,",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "hematom varlığı dövülmüş çocuk/çocuk istismarı"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p040",
+     "sayfa": 40,
+     "slayt_adim": "k2-12-d-s07",
+     "cumleler": [
+      {
+       "id": "k2-12-c0099",
+       "ses": "Manyetik rezonans kesitinde bir arada izlenen akut ve kronik evre kanama komponentleri bebeğe uygulanan tekrarlayan mekanik travmaları nesnel olarak belgeler.",
+       "ekran": "**Farklı Evreler:** Manyetik rezonansta değişik evrelerde subdural kanama alanları",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Farklı Evreler",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Manyetik rezonansta",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "T1 AG’de değişik evrelerde subdural hematom"
+        ],
+        "sekil": "Pediatrik T1 MR kesitinde farklı evrelerde subdural kanamalar"
+       }
+      },
+      {
+       "id": "k2-12-c0100",
+       "ses": "Koleksiyonun bir kısmında akut deoksihemoglobin sinyali izlenirken diğer kısımlarında kronik lizis alanlarının görülmesi travmanın tek seferlik bir kaza olmadığını kanıtlar.",
+       "ekran": "**Tekrarlayan Travma Kanıtı:** Eş zamanlı akut ve kronik hematom odaklarının varlığı",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Tekrarlayan Travma Kanıtı",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Eş zamanlı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "T1 AG’de değişik evrelerde subdural hematom"
+        ],
+        "sekil": "Tekrarlayan kafa travması radyolojik kanıtı"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p041",
+     "sayfa": 41,
+     "slayt_adim": "k2-12-d-s07",
+     "cumleler": [
+      {
+       "id": "k2-12-c0101",
+       "ses": "Subaraknoid kanama, araknoid membran ile pia mater arasındaki beyin omurilik sıvısı boşluğuna olan kanamadır.",
+       "ekran": "**Subaraknoid Kanama:** Araknoid ile pia mater arasındaki mesafeye olan kanama",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Subaraknoid Kanama",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Araknoid ile",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s07",
+       "cikmis": [
+        "d3-k2-nor-007",
+        "q-2__kurul_-7-cs2"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Subaraknoid Kanama",
+         "• Araknoid membran ile pia mater arasındaki mesafeye",
+         "olan kanamadır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0102",
+       "ses": "Anevrizma rüptürlerine bağlı spontan kanamaların yanı sıra kafa travmaları klinik pratikte subaraknoid kanamanın en sık karşılaşılan nedenidir.",
+       "ekran": "**Etyoloji:** Kafa travması en sık subaraknoid kanama nedenidir",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Etyoloji",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Kafa travması",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Subaraknoid Kanama"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p042",
+     "sayfa": 42,
+     "slayt_adim": "k2-12-d-s07",
+     "cumleler": [
+      {
+       "id": "k2-12-c0103",
+       "ses": "Subaraknoid kanama bilgisayarlı tomografide sulkuslarda, bazal sisternlerde, silviyan fissürde ve bazen ventrikül içinde hiperdens dansite artışı şeklinde seçilir.",
+       "ekran": "**Tomografi Bulguları:** Sulkuslarda, sisternlerde ve ventriküllerde dansite artışı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tomografi Bulguları",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Sulkuslarda, sisternlerde",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "Subaraknoid Kanama",
+         "• BT’de sulkuslarda, sisternlerde ve ventriküller içinde",
+         "dansite artışı şeklinde izlenir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0104",
+       "ses": "Bazal sisternlerde kan birikmesi beyin omurilik sıvısı emilimini bozarak posttravmatik akut hidrosefaliye ve ani kafa içi basınç krizine zemin hazırlayabilir.",
+       "ekran": "**Akut Hidrosefali Riski:** Sisternlerdeki kanın beyin omurilik sıvısı dolaşımını tıkaması",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Akut Hidrosefali Riski",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Sisternlerdeki kanın",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "Subaraknoid Kanama"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p043",
+     "sayfa": 43,
+     "slayt_adim": "k2-12-d-s07",
+     "cumleler": [
+      {
+       "id": "k2-12-c0105",
+       "ses": "Aksiyel kesitlerde verteks düzeyindeki sulkuslar içinde yaygın hiperdens travmatik subaraknoid kanama odakları tomografi ve manyetik rezonansla doğrulanmaktadır.",
+       "ekran": "**Radyolojik Doğrulama:** Verteks sulkuslarında hiperdens subaraknoid kanama",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Radyolojik Doğrulama",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Verteks sulkuslarında",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "Subaraknoid Kanama",
+         "Axial NECT shows diffuse fhyperdense traumatic Axial FLAIR MR demonstrates traumatic subarachnoid",
+         "subarachnoid hemarrhage within sulci near the vertex. hemorrhage as hyperintense sulci; hemoglobin"
+        ],
+        "sekil": "Kontrastsız BT ve FLAIR MRG kesitlerinde verteks sulkuslarında hiperintens travmatik subaraknoid kanama odakları"
+       }
+      },
+      {
+       "id": "k2-12-c0106",
+       "ses": "Konveksite sulkusları boyunca lineer hiperdens çizgilenmeler şeklinde dağılan kan, pia mater üzerinde serebral korteksi yakından sarar.",
+       "ekran": "**Sulkus İçi Dağılım:** Kortikal yüzey boyunca lineer hiperdens kan çizgilenmeleri",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Sulkus İçi Dağılım",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Kortikal yüzey",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "within sulci near the vertex."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p044",
+     "sayfa": 44,
+     "slayt_adim": "k2-12-d-s07",
+     "cumleler": [
+      {
+       "id": "k2-12-c0107",
+       "ses": "Manyetik rezonans görüntülemede flair sekansı subaraknoid kanama tanısında idealdir, çünkü baskılanan karanlık beyin omurilik sıvısı zemininde taze kan parlak hiperintens olarak seçilir.",
+       "ekran": "**Flair Sekans Üstünlüğü:** Baskılanan sıvı zemininde kanama hiperintens parlar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Flair Sekans Üstünlüğü",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Baskılanan sıvı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "Subaraknoid Kanama",
+         "MRG’de FLAIR sekanslar",
+         "SAK için idealdir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0108",
+       "ses": "Travmatik subaraknoid kanamada eritrosit yıkım ürünlerinin pial damarlarda vazospazm tetikleme potansiyeli bulunduğundan hastaların nörolojik seyri yakından takip edilir.",
+       "ekran": "**Vazospazm Takibi:** Subaraknoid kanın pial damarlarda iskemi riski oluşturması",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Vazospazm Takibi",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Subaraknoid kanın",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "SAK için idealdir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p045",
+     "sayfa": 45,
+     "slayt_adim": "k2-12-d-s07",
+     "cumleler": [
+      {
+       "id": "k2-12-c0109",
+       "ses": "Subdural higroma, kafa travması sonrasında araknoid membranın yırtılması sonucu subdural mesafede beyin omurilik sıvısıyla aynı dansitede berrak sıvı birikmesidir.",
+       "ekran": "**Subdural Higroma:** Subdural mesafede beyin omurilik sıvısı ile aynı dansitede sıvı birikimi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Subdural Higroma",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Subdural mesafede",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Subdural Higroma",
+         "• Subdural mesafede BOS ile",
+         "aynı dansitede sıvı birikimidir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0110",
+       "ses": "Yırtılan araknoid membranın oluşturduğu tek yönlü kapakçık mekanizması, sıvının subdural alana geçmesine izin verirken geri dönüşü engeller ve koleksiyon giderek büyür.",
+       "ekran": "**Kapakçık Mekanizması:** Tek yönlü araknoid yırtığının subdural sıvı göllenmesi yapması",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Kapakçık Mekanizması",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Tek yönlü",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Subdural Higroma"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p046",
+     "sayfa": 46,
+     "slayt_adim": "k2-12-d-s07",
+     "cumleler": [
+      {
+       "id": "k2-12-c0111",
+       "ses": "Te iki ağırlıklı manyetik rezonans kesitinde beyin omurilik sıvısıyla birebir izointens sinyal veren iki taraflı subdural higroma koleksiyonu net olarak ayırt edilmektedir.",
+       "ekran": "**Te İki Manyetik Rezonans:** Beyin omurilik sıvısı ile izointens subdural higroma",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Te İki Manyetik Rezonans",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Beyin omurilik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "Subdural Higroma",
+         "T2 AG’de BOS ile izointens",
+         "bilateral subdural higroma"
+        ],
+        "sekil": "T2 ağırlıklı aksiyel manyetik rezonans kesitinde BOS ile tam izointens parlak bilateral subdural higroma"
+       }
+      },
+      {
+       "id": "k2-12-c0112",
+       "ses": "Higromanın kronik subdural hematomdan ayrımında protein içeriğinin düşüklüğü ve tomografide sıfır Hounsfield ünitesi civarındaki hipodensitesi temel tanı kriteridir.",
+       "ekran": "**Sıvı Dansitesi Farkı:** Sıfır hounsfield ünitesinde berrak sıvı dansitesi",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Sıvı Dansitesi Farkı",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Sıfır hounsfield",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "bilateral subdural higroma"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-12-b08",
+   "baslik": "Hemorajik Kontüzyon ve İntraventriküler Kanama",
+   "sayfa_araligi": [
+    47,
+    49
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-12-p047",
+     "sayfa": 47,
+     "slayt_adim": "k2-12-d-s08",
+     "cumleler": [
+      {
+       "id": "k2-12-c0113",
+       "ses": "Hemorajik kontüzyon, beyin parankiminin kafatası içindeki kemik çıkıntılara çarpması sonucu mikrodamarların yırtılmasıyla gelişen peteşiyal parankim hasarıdır.",
+       "ekran": "**Hemorajik Kontüzyon:** Peteşiyal kanamalara yol açan parankimal hasar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hemorajik Kontüzyon",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Peteşiyal kanamalara",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s08",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 47,
+        "satir": [
+         "Hemorajik Kontüzyon",
+         "• Peteşial kanamalara yol açan parankimal hasar sonucudur."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0114",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Kontüzyon lezyonları kemik çıkıntıların en belirgin olduğu inferior anterior frontal lob tabanında ve anterior temporal lob kutuplarında en sık yerleşim gösterir.",
+       "ekran": "**Tipik Yerleşim Yerleri:** İnferior anterior frontal lob ve temporal lob",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Tipik Yerleşim Yerleri",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "İnferior anterior",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s08",
+       "cikmis": [
+        "past-1790877040035-257830"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 47,
+        "satir": [
+         "• Sıklıkla inferior anterior frontal lobta*** ve temporal lobta"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0115",
+       "ses": "Kafatası tabanında yer alan sfenoid kanatları ve orbita tavanındaki pürtüklü kemik kabartıları, akselerasyon anında frontal ve temporal korteksin yıpranmasında belirleyici anatomik faktördür.",
+       "ekran": "**Kemik Çıkıntıların Rolü:** Sfenoid kanadı ve orbita tavanının korteksi zedelemesi",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Kemik Çıkıntıların Rolü",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Sfenoid kanadı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s08",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 47,
+        "satir": [
+         "Hemorajik Kontüzyon"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p048",
+     "sayfa": 48,
+     "slayt_adim": "k2-12-d-s08",
+     "cumleler": [
+      {
+       "id": "k2-12-c0116",
+       "ses": "Travmadan hemen sonra çekilen ilk tomografide kontüzyon odakları silik kalabilir; lezyonun olgunlaşması ve vazojenik ödemin oturması birkaç gün sürdüğü için takip tomografilerinde belirginleşir.",
+       "ekran": "**Zamanla Belirginleşme:** Erken dönemde silik kalıp birkaç gün içinde netleşir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Zamanla Belirginleşme",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Erken dönemde",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s08",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "Hemorajik Kontüzyon",
+         "Erken dönemde hemoraji belirgin olmayabilir. Bu nedenle saptanmaları",
+         "birkaç günlük dönemde daha kolaydır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0117",
+       "ses": "Lezyon etrafında gelişen ilerleyici vazojenik ödem kitle etkisini artırarak gecikmiş nörolojik kötüleşmeye yol açabileceğinden ilk kırk sekiz saatlik takip son derece kritiktir.",
+       "ekran": "**Gecikmiş Ödem Riski:** Vazojenik ödemin kitle etkisini artırarak kötüleşme yapması",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Gecikmiş Ödem Riski",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Vazojenik ödemin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s08",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "Hemorajik Kontüzyon"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p049",
+     "sayfa": 49,
+     "slayt_adim": "k2-12-d-s08",
+     "cumleler": [
+      {
+       "id": "k2-12-c0118",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Kafa travması sonrasında posttravmatik intraventriküler hematom saptanması derin parankim hasarının ve kötü prognozun doğrudan göstergesidir.",
+       "ekran": "**İntraventriküler Hematom:** Derin hasarın ve kötü prognozun doğrudan göstergesi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İntraventriküler Hematom",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Derin hasarın",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s08",
+       "cikmis": [
+        "past-1790877040035-257830",
+        "d3-k2-psi-006"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 49,
+        "satir": [
+         "Posttravmatik intraventriküler hematom",
+         "Kötü prognoz göstergesi !"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0119",
+       "ses": "Ventrikül içine kanama açılması, derin subependimal damarların veya koroid pleksusun ağır yırtıldığını gösterir ve sıklıkla eksternal ventriküler drenaj takılmasını zorunlu kılar.",
+       "ekran": "**Drenaj Gereksinimi:** Koroid pleksus hasarı ve eksternal ventriküler drenaj ihtiyacı",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Drenaj Gereksinimi",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Koroid pleksus",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s08",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 49,
+        "satir": [
+         "Posttravmatik intraventriküler hematom"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-12-b09",
+   "baslik": "Kup Kontrkup Mekanizması ve Penetran Yaralanmalar",
+   "sayfa_araligi": [
+    50,
+    56
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-12-p050",
+     "sayfa": 50,
+     "slayt_adim": "k2-12-d-s09",
+     "cumleler": [
+      {
+       "id": "k2-12-c0120",
+       "ses": "Kup ve kontrkup lezyon dinamiğinde darbenin doğrudan uygulandığı taraftaki kemik esnemesiyle kup lezyonu oluşurken, beynin kranium içinde yer değiştirmesi ve negatif basınç dalgasıyla tam karşı tarafta kontrkup lezyon meydana gelir.",
+       "ekran": "**Kup ve Kontrkup Mekanizması:** Darbe tarafında kup, tam karşı tarafta kontrkup hasar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kup ve Kontrkup Mekanizması",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Darbe tarafında",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s09",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 50,
+        "satir": [
+         "Kup- Kontur Kup Lezyon",
+         "Konturkup",
+         "Karşı tarafta"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0121",
+       "ses": "Kontrkup taraftaki parankimal zedelenme ve kanama alanı sıklıkla darbenin ilk vurduğu taraftaki lezyondan çok daha geniş ve ağır bir doku yıkımına yol açar.",
+       "ekran": "**Kontrkup Ağırlığı:** Karşı taraftaki hasar darbe yerinden daha geniş olabilir",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Kontrkup Ağırlığı",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Karşı taraftaki",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s09",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 50,
+        "satir": [
+         "Kup- Kontur Kup Lezyon"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0122",
+       "ses": "Akselerasyon ve deselerasyon sırasında beynin kafatası içinde serbestçe ötelenmesi, darbenin karşı kutbunda ani kavitasyon kabarcıkları ve doku makaslaması doğurur.",
+       "ekran": "**Kavitasyon Hasarı:** Kinetik enerji ve negatif basıncın karşı kutupta hasar yapması",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Kavitasyon Hasarı",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Kinetik enerji",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s09",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 50,
+        "satir": [
+         "Karşı tarafta"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p051",
+     "sayfa": 51,
+     "slayt_adim": "k2-12-d-s09",
+     "cumleler": [
+      {
+       "id": "k2-12-c0123",
+       "ses": "Olgularda darbe alanında skalp hematomu veya laserasyonu izlenirken, karşı tarafta yaygın kortikal kontüzyon ve subdural hematom birlikteliği saptanır.",
+       "ekran": "**Klinik Görünüm:** Darbe tarafında skalp laserasyonu, karşıda parankimal kontüzyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Klinik Görünüm",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Darbe tarafında",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s09",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 51,
+        "satir": [
+         "Kup- Kontur Kup Lezyon",
+         "-Kup skalp",
+         "laserasyonu/hematom"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0124",
+       "ses": "Örneğin başın arka kısmına alınan oksipital bir darbede skalp lezyonu arkada görülürken, asıl hayatı tehdit eden ağır kontüzyonlar frontal kutuplarda kontrkup mekanizmasıyla şekillenir.",
+       "ekran": "**Oksipital Darbe Örneği:** Arkadan alınan darbede frontal kutuplarda ağır kontüzyon",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Oksipital Darbe Örneği",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Arkadan alınan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s09",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 51,
+        "satir": [
+         "laserasyonu/hematom"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p052",
+     "sayfa": 52,
+     "slayt_adim": "k2-12-d-s09",
+     "cumleler": [
+      {
+       "id": "k2-12-c0125",
+       "ses": "Penetran kafa yaralanmaları; ateşli silahlar veya kafatasına giren delici yabancı cisimlerin intrakraniyal penetrasyonu ile ortaya çıkan açık kafa travmalarıdır.",
+       "ekran": "**Penetran Yaralanmalar:** Ateşli silah veya yabancı cisimle intrakranial penetrasyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Penetran Yaralanmalar",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Ateşli silah",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s09",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "PENETRAN YARALANMALAR",
+         "Ateşli silah yaralanması ya da intrakranial",
+         "penetrasyon gösteren yabancı cisim ile ortaya çıkan"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0126",
+       "ses": "Yüksek kinetik enerjili mermilerin oluşturduğu geçici kavitasyon dalgası ve termal hasar, mermi yolunun çok uzağındaki nöronal yapılarda dahi yaygın yıkıma neden olur.",
+       "ekran": "**Balistik Kavitasyon:** Mermi trasesi boyunca termal hasar ve geçici kavitasyon boşluğu",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Balistik Kavitasyon",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Mermi trasesi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s09",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "PENETRAN YARALANMALAR"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p053",
+     "sayfa": 53,
+     "slayt_adim": "k2-12-d-s09",
+     "cumleler": [
+      {
+       "id": "k2-12-c0127",
+       "ses": "Penetran yaralanmalarda bilgisayarlı tomografi ile kemik hasarı, parçalı kemik fragmanları, yabancı cismin trasesi, intrakraniyal hemoraji ve pnömosefali değerlendirilir.",
+       "ekran": "**Tomografi Bulguları:** Kemik hasarı, yabancı cisim trasesi ve intrakranial kanama",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tomografi Bulguları",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Kemik hasarı,",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s09",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "PENETRAN YARALANMALAR",
+         "BT Bulguları",
+         "• Kemik hasarı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0128",
+       "ses": "Kafa içine sürüklenen kemik kıymıkları ve yabancı cisim parçaları enfeksiyon kaynağı oluşturabileceğinden cerrahi debridman öncesinde ayrıntılı olarak haritalanır.",
+       "ekran": "**Enfeksiyon Odağı:** Kemik kıymıklarının cerrahi debridman amacıyla haritalanması",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Enfeksiyon Odağı",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Kemik kıymıklarının",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s09",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "• Kemik hasarı"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p054",
+     "sayfa": 54,
+     "slayt_adim": "k2-12-d-s09",
+     "cumleler": [
+      {
+       "id": "k2-12-c0129",
+       "ses": "Skenogram grafisinde transorbital yoldan orbita tavanını ve kemik bariyerleri delerek kafa içine penetrasyon gösteren metalik yabancı cisim açıkça izlenmektedir.",
+       "ekran": "**Skenogram Görüntüsü:** Transorbital yoldan kafa içine penetre olan yabancı cisim",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Skenogram Görüntüsü",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Transorbital yoldan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s09",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 54,
+        "satir": [
+         "Skenogramda transorbital yoldan intrakranial penetrasyon",
+         "gösteren metalik yabancı cisim izleniyor."
+        ],
+        "sekil": "Radyolojik skenogram grafisinde orbitadan girip kafa içine uzanan metalik yabancı cisim opasitesi"
+       }
+      },
+      {
+       "id": "k2-12-c0130",
+       "ses": "Transorbital yaralanmalar orbita apeksinde yer alan optik sinir ve oftalmik arter yaralanması açısından en tehlikeli penetran yaralanma koridorlarından biridir.",
+       "ekran": "**Orbita Apeksi Riski:** Optik sinir ve oftalmik arter yaralanması tehlikesi",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Orbita Apeksi Riski",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Optik sinir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s09",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 54,
+        "satir": [
+         "transorbital yoldan intrakranial penetrasyon"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p055",
+     "sayfa": 55,
+     "slayt_adim": "k2-12-d-s09",
+     "cumleler": [
+      {
+       "id": "k2-12-c0131",
+       "ses": "Aksiyal kesitlerde sağ orbita medialinden girip sfenoid kemik büyük kanadını delerek temporal loba uzanan ve ucu petröz kemikte sonlanan metalik cisim trase boyunca hasar oluşturmuştur.",
+       "ekran": "**Aksiyel Kesit Trasesi:** Sağ orbitadan girip sfenoidi delerek petröz kemiğe uzanım",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Aksiyel Kesit Trasesi",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Sağ orbitadan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s09",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 55,
+        "satir": [
+         "Aksiyal kesitlerde; sağ orbita medialinden girip, sfenoid kemik büyük kanadını",
+         "delerek temporal loba uzanan,  distal ucu petröz kemikte sonlanan metalik",
+         "hiperdens yabancı cisim izlenmektedir."
+        ],
+        "sekil": "Aksiyel BT kesitinde sfenoid kemik büyük kanadını kırarak petröz kemikte sonlanan hiperdens metalik traktus"
+       }
+      },
+      {
+       "id": "k2-12-c0132",
+       "ses": "Yabancı cismin petröz kemik tepesine ulaşması internal karotis arter ve kranial sinirlerin seyrettiği kavernöz sinüs komşuluğu nedeniyle yüksek vasküler risk taşır.",
+       "ekran": "**Kavernöz Sinüs Komşuluğu:** İnternal karotis arter ve kranial sinirler açısından risk",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Kavernöz Sinüs Komşuluğu",
+         "tur": "tanim"
+        },
+        {
+         "metin": "İnternal karotis",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s09",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 55,
+        "satir": [
+         "distal ucu petröz kemikte sonlanan metalik"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p056",
+     "sayfa": 56,
+     "slayt_adim": "k2-12-d-s09",
+     "cumleler": [
+      {
+       "id": "k2-12-c0133",
+       "ses": "Üç boyutlu multiformat rekonstrüksiyon görüntüleri yabancı cismin orbitokraniyal uzanımını ve kafa tabanı damar yapılarıyla olan kritik ilişkisini cerrahi planlama öncesinde ortaya koyar.",
+       "ekran": "**Üç Boyutlu Rekonstrüksiyon:** Yabancı cismin orbitokranial uzanımının haritalanması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Üç Boyutlu Rekonstrüksiyon",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Yabancı cismin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s09",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 56,
+        "satir": [
+         "3 boyutlu multiformat rekonstrüksiyonda yabancı cismin orbitokranial uzanımı",
+         "izlenmektedir."
+        ],
+        "sekil": "Üç boyutlu multiformat hacimsel rekonstrüksiyonda penetran cismin orbitokraniyal kemik ilişkisi ve giriş trasesi"
+       }
+      },
+      {
+       "id": "k2-12-c0134",
+       "ses": "Cerrahi ekibin kraniyotomi hattını ve yabancı cismin güvenli çıkarma açısını belirlemesinde üç boyutlu vasküler rekonstrüksiyonlar kilit rol oynar.",
+       "ekran": "**Cerrahi Çıkarma Açısı:** Kraniyotomi planlamasında üç boyutlu modellemenin rolü",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Cerrahi Çıkarma Açısı",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Kraniyotomi planlamasında",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s09",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 56,
+        "satir": [
+         "orbitokranial uzanımı"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-12-b10",
+   "baslik": "Diffüz Aksonal Hasar: Makaslama Kuvvetleri ve Koma",
+   "sayfa_araligi": [
+    57,
+    61
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-12-p057",
+     "sayfa": 57,
+     "slayt_adim": "k2-12-d-s11",
+     "cumleler": [
+      {
+       "id": "k2-12-c0135",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Diffüz aksonal hasar, kafa travmalarında uzamış koma hali, vejetatif durum ve kötü prognoz açısından en önemli primer patolojidir.",
+       "ekran": "**Diffüz Aksonal Hasar:** Koma ve kötü prognoz açısından en kritik patoloji",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Diffüz Aksonal Hasar",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Koma ve",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s11",
+       "cikmis": [
+        "past-q-_SKENDERUN_T_M_d_rl___ne0__1__230709_230251-10"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 57,
+        "satir": [
+         "Diffüz Aksonal Zedelenme",
+         "• Kafa travmalarında koma ve kötü prognoz açısından",
+         "en önemli patolojidir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0136",
+       "ses": "Ani açısal ivmelenme ve yavaşlama hareketleri sırasında beynin farklı dansitedeki dokularının birbiri üzerinde kaymasıyla ortaya çıkan rotasyonel makaslama kuvvetleri aksonal mikrotübülleri koparır.",
+       "ekran": "**Makaslama Kuvvetleri:** Rotasyonel ivmelenmeyle aksonal yapıların kopması",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Makaslama Kuvvetleri",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Rotasyonel ivmelenmeyle",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s11",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 57,
+        "satir": [
+         "Diffüz Aksonal Zedelenme"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0137",
+       "ses": "Kopan aksonlarda aksoplazmik akış kesintiye uğrar ve mikrotübül uçlarında biriken amiloid prekürsör protein ile aksonal retraksiyon sferülleri histopatolojik olarak belirir.",
+       "ekran": "**Aksonal Retraksiyon:** Aksoplazmik akışın durması ve retraksiyon sferülleri",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Aksonal Retraksiyon",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Aksoplazmik akışın",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s11",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 57,
+        "satir": [
+         "Diffüz Aksonal Zedelenme"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p058",
+     "sayfa": 58,
+     "slayt_adim": "k2-12-d-s11",
+     "cumleler": [
+      {
+       "id": "k2-12-c0138",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Diffüz aksonal zedelenme en sık kortikal gri ile beyaz cevher bileşkesinde, ikinci sıklıkla korpus kallozumda ve üçüncü sıklıkla üst beyin sapı dorsolateral mezensefalonda yerleşir.",
+       "ekran": "**Predileksiyon Alanları:** Gri beyaz cevher bileşkesi, korpus kallozum ve beyin sapı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Predileksiyon Alanları",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Gri beyaz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s11",
+       "cikmis": [
+        "past-q-_SKENDERUN_T_M_d_rl___ne0__1__230709_230251-10"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 58,
+        "satir": [
+         "Diffüz Aksonal Zedelenme",
+         "En sık",
+         "-Gri/beyaz cevher bileşkesi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0139",
+       "ses": "Adams sınıflamasına göre anatomik tutulum beyin sapına doğru derinleştikçe hastanın uyanma şansı dramatik şekilde düşer ve kalıcı vejetatif durum tablosu oturur.",
+       "ekran": "**Adams Evrelemesi:** Hasarın beyin sapına derinleşmesiyle vejetatif durum riski",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Adams Evrelemesi",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Hasarın beyin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s11",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 58,
+        "satir": [
+         "En sık"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p059",
+     "sayfa": 59,
+     "slayt_adim": "k2-12-d-s11",
+     "cumleler": [
+      {
+       "id": "k2-12-c0140",
+       "ses": "Aksiyel kesitlerde bifrontal beyaz ve gri cevher ayrım yüzeylerinde saçılmış biçimde çok sayıda milimetrik peteşiyal mikrokanama odakları izlenmektedir.",
+       "ekran": "**Ayrım Yüzeyleri:** Bifrontal beyaz gri cevher ayrımında multipl mikrokanamalar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Ayrım Yüzeyleri",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Bifrontal beyaz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s11",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 59,
+        "satir": [
+         "Diffüz Aksonal Zedelenme",
+         "Bifrontal beyaz/gri cevher",
+         "ayrım yüzlerinde multipl"
+        ],
+        "sekil": "Aksiyel beyin kesitinde bifrontal gri-beyaz cevher ayrım yüzeyinde noktasal peteşiyal mikrokanama odakları"
+       }
+      },
+      {
+       "id": "k2-12-c0141",
+       "ses": "Kortikal gri cevher ile subkortikal beyaz cevherin fiziksel dansite farkı, açısal ivmelenmede bu iki dokunun farklı hızlarda dönmesine ve aradaki akson demetlerinin makaslanmasına yol açar.",
+       "ekran": "**Dansite Farkı Etkisi:** Gri ve beyaz cevherin farklı dönme hızlarında makaslanması",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Dansite Farkı Etkisi",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Gri ve",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s11",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 59,
+        "satir": [
+         "ayrım yüzlerinde multipl"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p060",
+     "sayfa": 60,
+     "slayt_adim": "k2-12-d-s11",
+     "cumleler": [
+      {
+       "id": "k2-12-c0142",
+       "ses": "Diffüz aksonal hasara bağlı olarak forniks içerisinde hiperdens hemoraji ve korpus kallozum spleniumunda nonhemorajik aksonal hasarı yansıtan hipodens zedelenme alanı seçilmektedir.",
+       "ekran": "**Forniks ve Splenium Tutulumu:** Fornikste hemoraji ve spleniumda hipodens hasar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Forniks ve Splenium Tutulumu",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Fornikste hemoraji",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s11",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 60,
+        "satir": [
+         "Diffüz Aksonal Zedelenme",
+         "DA zedelenmeye bağlı forniks içinde  hiperdens hemoraji (siyah ok), spleniumda",
+         "nonhemorajik aksonal zedelenmeye bağlı hipodens alan (açık ok)"
+        ],
+        "sekil": "BT ve DWI difüzyon MR kesitinde forniks ve korpus kallozum spleniumunda difüzyon kısıtlılığı gösteren DAH lezyonları"
+       }
+      },
+      {
+       "id": "k2-12-c0143",
+       "ses": "Korpus kallozum gibi iki hemisferi birbirine bağlayan kalın komissüral yolların kopması, hastada derin kognitif yıkım ve interhemisferik iletişim kaybı oluşturur.",
+       "ekran": "**Komissüral Kopukluk:** Korpus kallozum liflerinin kopmasıyla interhemisferik iletişim kaybı",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Komissüral Kopukluk",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Korpus kallozum",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s11",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 60,
+        "satir": [
+         "spleniumda"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p061",
+     "sayfa": 61,
+     "slayt_adim": "k2-12-d-s11",
+     "cumleler": [
+      {
+       "id": "k2-12-c0144",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Bilgisayarlı tomografi diffüz aksonal hasar lezyonlarını göstermede yetersizdir ve derin komadaki hastanın tomografisi tamamen normal çıkabilir.",
+       "ekran": "**Tomografi Yetersizliği:** Tomografi aksonal hasarı göstermede duyarlı değildir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tomografi Yetersizliği",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Tomografi aksonal",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s11",
+       "cikmis": [
+        "past-q-_SKENDERUN_T_M_d_rl___ne0__1__230709_230251-10"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 61,
+        "satir": [
+         "Diffüz Aksonal Zedelenme",
+         "• BT lezyonları göstermede yeterince duyarlı değildir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0145",
+       "ses": "Aksonal lezyonların ancak küçük bir kısmı hemorajik olduğu için difüzyon ve gradyan eko manyetik rezonans sekansları aksonal hasarı göstermede tomografiden çok daha duyarlıdır.",
+       "ekran": "**Manyetik Rezonans Duyarlılığı:** Lezyonların çoğu nonhemorajik olup manyetik rezonansla saptanır",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Manyetik Rezonans Duyarlılığı",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Lezyonların çoğu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s11",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 61,
+        "satir": [
+         "• Lezyonların büyük kısmı hemorajik"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-12-b11",
+   "baslik": "Subkortikal Zedelenme, Beyin Sapı ve Sitotoksik Ödem",
+   "sayfa_araligi": [
+    62,
+    64
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-12-p062",
+     "sayfa": 62,
+     "slayt_adim": "k2-12-d-s12",
+     "cumleler": [
+      {
+       "id": "k2-12-c0146",
+       "ses": "Subkortikal derin zedelenmeler ani kraniyokaudal yer değiştirme sırasında beyin sapı, bazal ganglionlar ve talamus yapılarının gerilmesi ve mikrovasküler hasara uğramasıyla ortaya çıkar.",
+       "ekran": "**Subkortikal Zedelenme:** Beyin sapı, bazal ganglionlar ve talamus hasarı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Subkortikal Zedelenme",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Beyin sapı,",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s12",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 62,
+        "satir": [
+         "Subkortikal Zedelenme",
+         "• Beyin Sapı",
+         "• Bazal Ganglionlar/Talamus"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0147",
+       "ses": "Beyin sapı ve talamik çekirdeklerin etkilenmesi, otonomik dengesizlik ve solunum düzensizliği gibi hayatı tehdit eden sistemik disfonksiyonlara zemin hazırlar.",
+       "ekran": "**Otonomik Disfonksiyon:** Beyin sapı çekirdeklerinin hasarıyla solunum ve dolaşım bozukluğu",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Otonomik Disfonksiyon",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Beyin sapı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s12",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 62,
+        "satir": [
+         "• Beyin Sapı"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p063",
+     "sayfa": 63,
+     "slayt_adim": "k2-12-d-s12",
+     "cumleler": [
+      {
+       "id": "k2-12-c0148",
+       "ses": "Manyetik rezonans flair kesitinde beyin sapı anterorostral alanında ve bitemporal bölgelerde travmatik subkortikal zedelenmeye bağlı hiperintens sinyal artışı izlenmektedir.",
+       "ekran": "**Flair Kesiti:** Anterorostral beyin sapında hiperintens zedelenme sinyali",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Flair Kesiti",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Anterorostral beyin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s12",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 63,
+        "satir": [
+         "Axial FLAIR MR shows hyperintense anterorosiral",
+         "brainstem subcortical injury from sudden cramocaudal",
+         "brain displacement. Bitemporal FLAIR hyperintense"
+        ],
+        "sekil": "Aksiyel FLAIR ve sagital T2 MRG kesitlerinde kraniyokaudal savrulmaya bağlı anterorostral beyin sapı zedelenmesi"
+       }
+      },
+      {
+       "id": "k2-12-c0149",
+       "ses": "Rostral mezensefalon düzeyindeki retiküler aktive edici sistem bağlantılarının hasar görmesi, hastanın komadan çıkamamasının doğrudan anatomik iz düşümüdür.",
+       "ekran": "**Retiküler Sistem Hasarı:** Asendan retiküler sistemin hasarıyla kalıcı koma hali",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Retiküler Sistem Hasarı",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Asendan retiküler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s12",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 63,
+        "satir": [
+         "brainstem subcortical injury"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p064",
+     "sayfa": 64,
+     "slayt_adim": "k2-12-d-s12",
+     "cumleler": [
+      {
+       "id": "k2-12-c0150",
+       "ses": "Difüzyon ağırlıklı manyetik rezonans ve a de se haritalarında korteks ve periventriküler beyaz cevherde hücre içi su birikimini ve enerji yetmezliğini kanıtlayan yaygın sitotoksik ödem saptanmaktadır.",
+       "ekran": "**Sitotoksik Ödem Kanıtı:** Difüzyon kısıtlanması ve a de se düşüşü ile sitotoksik ödem",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Sitotoksik Ödem Kanıtı",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Difüzyon kısıtlanması",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s12",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 64,
+        "satir": [
+         "Axial DWİ MR shows left hemispheric edema involving Axial ADC map shows extensive left hemispheric",
+         "the cortex, subcortical and periventricular white matter decreased ADC farrows) in the same toddler,",
+         "in a toddler with inilicted brain injury. confirming cytotoxic edema,"
+        ],
+        "sekil": "DWI ve ADC difüzyon MR haritalarında geniş sol serebral hemisferik difüzyon kısıtlılığı ve sitotoksik ödem"
+       }
+      },
+      {
+       "id": "k2-12-c0151",
+       "ses": "İskemik ve travmatik hücre zedelenmesinde sodyum potasyum pompasının yetersiz kalması, su moleküllerinin hücre içinde hapsolarak brownian hareketlerinin kısıtlanmasına yol açar.",
+       "ekran": "**Enerji Pompası Yetersizliği:** Hücre içi su hapsolmasıyla mikroskobik difüzyon kısıtlanması",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Enerji Pompası Yetersizliği",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Hücre içi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s12",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 64,
+        "satir": [
+         "confirming cytotoxic edema,"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-12-b12",
+   "baslik": "Kafa İçi Herniasyonlar ve Subfalsin Herniasyon",
+   "sayfa_araligi": [
+    65,
+    70
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-12-p065",
+     "sayfa": 65,
+     "slayt_adim": "k2-12-d-s13",
+     "cumleler": [
+      {
+       "id": "k2-12-c0152",
+       "ses": "Kafa içi basınç artışı sendromunda intrakraniyal kitle etkisi nedeniyle parankimal yapıların anatomik dural bölmeler altından bir kompartmandan diğerine yer değiştirmesine herniasyon denir.",
+       "ekran": "**Kranial Herniasyon:** Parankimal yapıların bir kompartmandan diğerine yer değiştirmesi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kranial Herniasyon",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Parankimal yapıların",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s13",
+       "cikmis": [
+        "82a829d853b5",
+        "6e0a49170b5b"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 65,
+        "satir": [
+         "HERNİASYONLAR",
+         "• Kafa içi basınç artışı nedeniyle parankimal yapıların"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0153",
+       "ses": "Monro Kellie doktrinine göre kafatası rijit ve kapalı bir kemik kutudur; beyin dokusu, kan ve beyin omurilik sıvısının toplam hacmi sabit olduğundan eklenen her hacim fıtıklaşmaya yol açar.",
+       "ekran": "**Monro Kellie İlkesi:** Sabit kranial hacimde eklenen kitlenin dokuları fıtıklaştırması",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Monro Kellie İlkesi",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Sabit kranial",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s13",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 65,
+        "satir": [
+         "HERNİASYONLAR"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p066",
+     "sayfa": 66,
+     "slayt_adim": "k2-12-d-s13",
+     "cumleler": [
+      {
+       "id": "k2-12-c0154",
+       "ses": "Kranial herniasyonlar subfalsin herniasyon, transtentorial herniasyon, asendan transtentorial herniasyon ve tonsiller herniasyon olmak üzere dört ana grupta sınıflanır.",
+       "ekran": "**Herniasyon Tipleri:** Subfalsin, transtentorial, asendan ve tonsiller herniasyonlar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Herniasyon Tipleri",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Subfalsin, transtentorial,",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s13",
+       "cikmis": [
+        "82a829d853b5"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 66,
+        "satir": [
+         "Herniasyonlar",
+         "• Subfalsin-(a)",
+         "• Transtentorial"
+        ],
+        "sekil": "İntrakraniyal kompartmanlar arası subfalsin, transtentorial ve tonsiller herniasyon anatomik yönelim şeması"
+       }
+      },
+      {
+       "id": "k2-12-c0155",
+       "ses": "Herniasyonlar anatomik yönlerine göre supratentoryal kompartmandan infratentoryal alana veya foramen magnum yoluyla spinal kanala doğru ilerleyerek beyin sapını sıkıştırır.",
+       "ekran": "**Anatomik Kompartmanlar:** Supratentoryal ve infratentoryal alanlar arası tehlikeli fıtıklaşma",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Anatomik Kompartmanlar",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Supratentoryal ve",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s13",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 66,
+        "satir": [
+         "Herniasyonlar"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p067",
+     "sayfa": 67,
+     "slayt_adim": "k2-12-d-s13",
+     "cumleler": [
+      {
+       "id": "k2-12-c0156",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Subfalsin herniasyon kafa içi basınç artışında en sık görülen herniasyon tipidir ve singulat girusun falks serebri altından karşı tarafa kaymasıyla karakterizedir.",
+       "ekran": "**Subfalsin Herniasyon:** En sık tip olup singulat girus falks altından karşıya kayar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Subfalsin Herniasyon",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "En sık",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s13",
+       "cikmis": [
+        "82a829d853b5"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 67,
+        "satir": [
+         "Subfalsin Herniasyon (a)",
+         "• En sık",
+         "• Singulat girus falks serebri altından karşı tarafa herniye"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0157",
+       "ses": "Singulat girus falks kenarı altında sıkıştığında anterior serebral arteri basarak frontal lob medialinde ikincil iskemik enfarkt gelişimine yol açabilir.",
+       "ekran": "**Damarsal Komplikasyon:** Anterior serebral arter basısı ve frontal enfarkt riski",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Damarsal Komplikasyon",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Anterior serebral",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s13",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 67,
+        "satir": [
+         "Subfalsin Herniasyon (a)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0158",
+       "ses": "Anterior serebral arter enfarktına bağlı olarak hastada karşı bacakta belirgin motor güçsüzlük, yürüyüş apraksisi ve idrar inkontinansı klinik tablosu oturur.",
+       "ekran": "**Klinik Bulgular:** Karşı bacakta motor felç, abuli ve idrar kontrol kaybı",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Klinik Bulgular",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Karşı bacakta",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s13",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 67,
+        "satir": [
+         "Subfalsin Herniasyon (a)"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p068",
+     "sayfa": 68,
+     "slayt_adim": "k2-12-d-s13",
+     "cumleler": [
+      {
+       "id": "k2-12-c0159",
+       "ses": "Bilgisayarlı tomografi kesitinde geniş bir hemisferik lezyonun singulat girusta belirgin orta hat şiftine ve lateral ventrikül kompresyonuna yol açtığı izlenmektedir.",
+       "ekran": "**Tomografi Kesiti:** Singulat girusun karşı tarafa fıtıklaşması ve orta hat şifti",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tomografi Kesiti",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Singulat girusun",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s13",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 68,
+        "satir": [
+         "Subfalsin Herniasyon"
+        ],
+        "sekil": "Aksiyel BT'de subfalsin herniasyon ve ventrikül kompresyonu"
+       }
+      },
+      {
+       "id": "k2-12-c0160",
+       "ses": "Orta hat yapılarının beş milimetreden fazla karşı tarafa kayması, hastada acil cerrahi dekompresyon ve kitle boşaltımı gerektiren kritik bir radyolojik eşiktir.",
+       "ekran": "**Cerrahi Eşik Değer:** Beş milimetreden fazla orta hat şiftinde acil cerrahi kararı",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Cerrahi Eşik Değer",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Beş milimetreden",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s13",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 68,
+        "satir": [
+         "Subfalsin Herniasyon"
+        ],
+        "sekil": "Orta hat şifti ölçümü tomografi şeması"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p069",
+     "sayfa": 69,
+     "slayt_adim": "k2-12-d-s13",
+     "cumleler": [
+      {
+       "id": "k2-12-c0161",
+       "ses": "Karşı tarafa fıtıklaşan singulat girus Monro foramenini tıkayarak karşı lateral ventrikülde beyin omurilik sıvısı göllenmesine ve tek taraflı hidrosefaliye neden olabilir.",
+       "ekran": "**Monro Obstrüksiyonu:** Monro deliği tıkanmasıyla karşı ventrikülde genişleme",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Monro Obstrüksiyonu",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Monro deliği",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s13",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 69,
+        "satir": [
+         "Subfalsin Herniasyon",
+         "• Foramen Monro obstrüksiyonu nedeniyle karşı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0162",
+       "ses": "Aynı taraftaki ventrikül kitle tarafından tamamen ezilip kapatılırken, karşı ventrikülün beyin omurilik sıvısı boşalamadığı için balonlaşması asimetrik hidrosefali tablosu yaratır.",
+       "ekran": "**Asimetrik Ventrikül:** Bir tarafta ezilme diğer tarafta sıvı genişlemesi",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Asimetrik Ventrikül",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Bir tarafta",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s13",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 69,
+        "satir": [
+         "• Foramen Monro obstrüksiyonu nedeniyle karşı"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p070",
+     "sayfa": 70,
+     "slayt_adim": "k2-12-d-s13",
+     "cumleler": [
+      {
+       "id": "k2-12-c0163",
+       "ses": "İleri evre subfalsin herniasyonda orta hat yapılarının ileri derecede yer değiştirmesi üçüncü ventrikülü tamamen kapatarak kafa içi basınç krizini ağırlaştırır.",
+       "ekran": "**İleri Evre Herniasyon:** Üçüncü ventrikül basısı ve intrakranial basınç artışı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İleri Evre Herniasyon",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Üçüncü ventrikül",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s13",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 70,
+        "satir": [
+         "Subfalsin herniasyon"
+        ],
+        "sekil": "Subfalsin herniasyonda ventrikül distorsiyonu MR kesiti"
+       }
+      },
+      {
+       "id": "k2-12-c0164",
+       "ses": "Üçüncü ventrikülün kapanmasıyla birlikte kafa içi kompanzasyon rezervleri bütünüyle tükenir ve hasta saniyeler içinde unkal ya da santral herniasyona kayar.",
+       "ekran": "**Dekompanzasyon Evresi:** Kompansasyon tükenmesiyle ölümcül herniasyonlara geçiş",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Dekompanzasyon Evresi",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Kompansasyon tükenmesiyle",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s13",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 70,
+        "satir": [
+         "Subfalsin herniasyon"
+        ],
+        "sekil": "İleri evre kranial dekompanzasyon şeması"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-12-b13",
+   "baslik": "Transtentorial Herniasyon, Tonsiller Herniasyon ve Klinik Seyir",
+   "sayfa_araligi": [
+    71,
+    76
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-12-p071",
+     "sayfa": 71,
+     "slayt_adim": "k2-12-d-s14",
+     "cumleler": [
+      {
+       "id": "k2-12-c0165",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: İkinci en sık herniasyon tipi olan tek taraflı transtentorial yani unkal herniasyonda medial temporal lobun unkusu tentoryum serebelli kenarından aşağıya doğru fıtıklaşır.",
+       "ekran": "**Unkal Herniasyon:** Medial temporal lobun tentoryum kenarından aşağı fıtıklaşması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Unkal Herniasyon",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Medial temporal",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s14",
+       "cikmis": [
+        "82a829d853b5"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 71,
+        "satir": [
+         "Transtentorial Herniasyon (b)",
+         "• İkinci en sık herniasyon tipi",
+         "• Unilateral(Unkal) tipinde medial temporal lob"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0166",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Unkal herniasyonda ilk basılan yapı aynı taraftaki üçüncü kranial sinir olup klinik olarak lezyon tarafındaki pupilde genişleme yani dilate ve ışığa yanıtsız fikse pupil tablosu gelişir.",
+       "ekran": "**Üçüncü Sinir Basısı:** İpsilateral pupilde dilatasyon ve ışık refleksi kaybı",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Üçüncü Sinir Basısı",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "İpsilateral pupilde",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s14",
+       "cikmis": [
+        "82a829d853b5",
+        "6e0a49170b5b"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 71,
+        "satir": [
+         "Transtentorial Herniasyon (b)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0167",
+       "ses": "Üçüncü kraniyal sinirin dış yüzeyinde seyreden parasempatik pupillokonstriktör lifler mekanik basıya en duyarlı lifler olduğu için motor felçten çok önce pupil genişlemesi ortaya çıkar.",
+       "ekran": "**Parasempatik Duyarlılık:** Yüzeyel parasempatik liflerin ezilmesiyle ilk bulgu anizokoridir",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Parasempatik Duyarlılık",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Yüzeyel parasempatik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s14",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 71,
+        "satir": [
+         "Transtentorial Herniasyon (b)"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p072",
+     "sayfa": 72,
+     "slayt_adim": "k2-12-d-s14",
+     "cumleler": [
+      {
+       "id": "k2-12-c0168",
+       "ses": "Anatomik kesitte unkusun tentoryum kenarı boyunca mezensefalona ve kranyal sinirlere uyguladığı doğrudan mekanik kompresyon şematize edilmektedir.",
+       "ekran": "**Anatomik Kompresyon Şeması:** Unkusun tentoryum ve mezensefalon ilişkisi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Anatomik Kompresyon Şeması",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Unkusun tentoryum",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s14",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 72,
+        "satir": [
+         "Transtentorial Herniasyon"
+        ],
+        "sekil": "Transtentorial herniasyon anatomik yerleşim şeması"
+       }
+      },
+      {
+       "id": "k2-12-c0169",
+       "ses": "Mezensefalon pedinküllerinin tentoryal açıklıkta sıkışması ve beyin sapının karşı tentoryum kenarına doğru ötelenmesi nörolojik komplikasyonların zincirleme başlamasına yol açar.",
+       "ekran": "**Beyin Sapı Sıkışması:** Mezensefalon pedinküllerinin dural açıklıkta ezilmesi",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Beyin Sapı Sıkışması",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Mezensefalon pedinküllerinin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s14",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 72,
+        "satir": [
+         "Transtentorial Herniasyon"
+        ],
+        "sekil": "Mezensefalonun tentoryal insisurada sıkışması şeması"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p073",
+     "sayfa": 73,
+     "slayt_adim": "k2-12-d-s14",
+     "cumleler": [
+      {
+       "id": "k2-12-c0170",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Unkal herniasyonda tentoryum kenarına sıkışan posterior serebral arterin tıkanması oksipital lob enfarktına ve karşı görme alanı kaybına yol açar.",
+       "ekran": "**Arteriyel Enfarkt:** Posterior serebral arter kompresyonu ve oksipital enfarkt",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Arteriyel Enfarkt",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Posterior serebral",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s14",
+       "cikmis": [
+        "82a829d853b5"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 73,
+        "satir": [
+         "Transtentorial Herniasyon (b)",
+         "• Posterior serebral arter",
+         "enfarktlar"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0171",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Beyin sapının aşağı itilmesiyle mezensefalon ve üst ponstaki paramedyan damarların gerilip yırtılması sonucu ölümcül Duret kanamaları gelişir.",
+       "ekran": "**Duret Kanamaları:** Mezensefalonda paramedyan damarların yırtılmasıyla kanama",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Duret Kanamaları",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Mezensefalonda paramedyan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s14",
+       "cikmis": [
+        "82a829d853b5"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 73,
+        "satir": [
+         "• Mezensefalonda kanamalar",
+         "(Duret hemorajisi)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0172",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Üçüncü kraniyal sinir kompresyonu sonucu pupiller dilatasyon gelişirken, serebral pedinkül basısı motor felce neden olur.",
+       "ekran": "**Kranial Sinir ve Pedinkül:** Üçüncü sinir basısı ile pupil dilatasyonu ve pedinkül basısı",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Kranial Sinir ve Pedinkül",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Üçüncü sinir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s14",
+       "cikmis": [
+        "82a829d853b5"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 73,
+        "satir": [
+         "• III. Kranial sinir kompresyonu",
+         "(pupiller dilatasyon)",
+         "• Serebral pedinkül basısı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0173",
+       "ses": "Beyin sapının karşı tentoryum kenarına çarpmasıyla karşı serebral pedinkül ezildiğinde Kernohan çentiği fenomeni oluşur ve paradoksal olarak lezyonla aynı tarafta motor güçsüzlük görülür.",
+       "ekran": "**Kernohan Çentiği:** Karşı pedinkül ezilmesiyle aynı tarafta paradoksal felç",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Kernohan Çentiği",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Karşı pedinkül",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s14",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 73,
+        "satir": [
+         "• Serebral pedinkül basısı"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p074",
+     "sayfa": 74,
+     "slayt_adim": "k2-12-d-s15",
+     "cumleler": [
+      {
+       "id": "k2-12-c0174",
+       "ses": "Asendan transtentorial herniasyonda posterior fossada artan basınç nedeniyle serebellum tentoryal insisuradan yukarıya doğru supratentoryal alana herniye olur ve beyin sapını sıkıştırır.",
+       "ekran": "**Asendan Herniasyon:** Serebellumun insisuradan yukarı supratentoryal alana kayması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Asendan Herniasyon",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Serebellumun insisuradan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s15",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 74,
+        "satir": [
+         "Asendan Transtentorial Herniasyon",
+         "Serebellum incisuradan yukarı herniyedir."
+        ],
+        "sekil": "Sagital MR kesitinde infratentoryal kitlenin serebellumu tentoryal çentikten yukarı doğru ittiği asendan herniasyon"
+       }
+      },
+      {
+       "id": "k2-12-c0175",
+       "ses": "Yukarı fıtıklaşan serebellar doku akuaduktus mezensefaliyi dıştan basılayarak tıkar ve akut tıkayıcı supratentoryal hidrosefaliye neden olarak hastanın kliniğini hızla kötüleştirir.",
+       "ekran": "**Akuaduktus Basısı:** Akuaduktus tıkanmasıyla gelişen akut obstrüktif hidrosefali",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Akuaduktus Basısı",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Akuaduktus tıkanmasıyla",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s15",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 74,
+        "satir": [
+         "Asendan Transtentorial Herniasyon"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p075",
+     "sayfa": 75,
+     "slayt_adim": "k2-12-d-s15",
+     "cumleler": [
+      {
+       "id": "k2-12-c0176",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Tonsiller herniasyon, kafa içi basınç artışında serebellar tonsillerin foramen magnum hattından aşağıya spinal kanala beş milimetreden fazla sarkmasıdır.",
+       "ekran": "**Tonsiller Herniasyon:** Serebellar tonsillerin foramen magnumdan aşağı uzanması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tonsiller Herniasyon",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Serebellar tonsillerin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s15",
+       "cikmis": [
+        "82a829d853b5"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 75,
+        "satir": [
+         "Tonsiller Herniasyon (e)",
+         "Serebellar tonsiller",
+         "foramen magnum hattından",
+         "aşağı uzanır (>5 mm)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0177",
+       "ses": "Fıtıklaşan tonsiller foramen magnum düzeyinde medulla oblongatayı sıkıştırarak ani solunum durması, dolaşım kollapsı ve ölümle sonuçlanan en tehlikeli herniasyon tablosunu oluşturur.",
+       "ekran": "**Bulber Kompresyon:** Medulla oblongata basısıyla ani solunum arresti ve ölüm",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Bulber Kompresyon",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "Medulla oblongata",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s15",
+       "cikmis": [
+        "82a829d853b5"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 75,
+        "satir": [
+         "Tonsiller Herniasyon (e)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0178",
+       "ses": "Bu evrede klinikte sistemik hipertansiyon, bradikardi ve düzensiz solunumdan oluşan klasik Cushing triadı görülür ve bu bulgu yaklaşmakta olan beyin ölümünün acil habercisidir.",
+       "ekran": "**Cushing Triadı:** Hipertansiyon, bradikardi ve solunum düzensizliği alarmı",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Cushing Triadı",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Hipertansiyon, bradikardi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s15",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 75,
+        "satir": [
+         "Tonsiller Herniasyon (e)"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-12-p076",
+     "sayfa": 76,
+     "slayt_adim": "k2-12-d-s15",
+     "cumleler": [
+      {
+       "id": "k2-12-c0179",
+       "ses": "Kafa travmalarında dinamik klinik izlem, acil tomografik görüntüleme ve cerrahi bası bulgularının vaktinde tanınarak dekomprese edilmesi hastanın yaşamını kurtaran en temel hekimlik sorumluluğudur.",
+       "ekran": "**Ders Sonu Özeti:** Dinamik klinik izlem ve acil cerrahi dekompresyonun önemi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Ders Sonu Özeti",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Dinamik klinik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s15",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 76,
+        "satir": [
+         "Sabrınız için teşekkürler..."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-12-c0180",
+       "ses": "Nöroşirürjide zamanın doğrudan beyin dokusu anlamına geldiği unutulmamalı ve herniasyon gelişmeden önce erken cerrahi tahliye ile sekonder nöronal hasarın önüne geçilmelidir.",
+       "ekran": "**Erken Müdahale İlkesi:** Herniasyon gelişmeden önce cerrahiyle parankim dokusunun korunması",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Erken Müdahale İlkesi",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Herniasyon gelişmeden",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": "k2-12-d-s15",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 76,
+        "satir": [
+         "Sabrınız için teşekkürler..."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "donem": "2025-2026"
+}
