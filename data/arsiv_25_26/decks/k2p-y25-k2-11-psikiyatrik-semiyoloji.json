@@ -1,0 +1,2859 @@
+{
+ "id": "k2p-y25-k2-11-psikiyatrik-semiyoloji",
+ "deckId": "k2p-y25-k2-11-psikiyatrik-semiyoloji",
+ "title": "Psikiyatrik Semiyoloji: Bilişsel İşlevler, Duygulanım, Motor Belirtiler ve Vejetatif Süreçler",
+ "shortTitle": "Psikiyatrik Semiyoloji",
+ "discipline": "Psikiyatri",
+ "committee": "donem3-kurul2",
+ "instructor": "Dr. Öğr. Üyesi Nefise Demir",
+ "matchedNoteId": "y25-k2-11-psikiyatrik-semiyoloji",
+ "overview": "Psikiyatrik muayene ve klinik değerlendirme süreci, diğer tıp disiplinlerine kıyasla çok daha belirgin biçimde semiyolojik belirti ve bulguların sistematik analizine dayanır. Bu derste Dr. Öğr. Üyesi Nefise Demir'in amfi sunumu ve temel referans kaynakları doğrultusunda psikiyatrik semiyolojinin dört ana sütunu kapsamlı olarak incelenmektedir: Bilişsel işlevler (bilinç düzey bozuklukları, yönelim hiyerarşisi, kayıt-kısa-uzun süreli bellek ve amneziler, dikkat ve konsantrasyon kusurları, halüsinasyon ve illüzyonlar, depersonalizasyon ve derealizasyon, düşünce akış ve çağrışım sapmaları, hezeyanlar, obsesyon ve kompulsiyonlar, yargılama, soyut düşünce, gerçeği değerlendirme yetisi ve içgörü), duygulanım (duygudurum türleri, afekt kalıpları, aleksitimi ve ambivalans), motor aktivite ve hareket bozuklukları (retardasyon, eksitasyon, katalepsi, katatonik stupor, katapleksi, akatizi, distoni, diskinezi) ile bedensel vejetatif işlevler (uyku, iştah, libido, boşaltım). Her klinik antite fizyopatolojik temelleri, hiyerarşik sıralamaları ve ayırıcı tanı nüanslarıyla ele alınmaktadır.",
+ "highYieldPearls": [
+  "📌 [SINAV SPOTU] Psikiyatride tanı ve klinik değerlendirme, laboratuvar veya görüntüleme yöntemlerinden ziyade doğrudan klinik belirti ve semiyolojik bulgulara dayanır.",
+  "📌 [SINAV SPOTU] Bilinç bozuklukları her zaman beyin perfüzyonu, oksijenlenmesi veya metabolizmasını bozan organik hücresel işlev kusurlarına bağlıdır.",
+  "📌 [SINAV SPOTU] Yönelim bozukluğunda yeti kaybı katı bir hiyerarşi izler: Kişi önce zaman, ardından yer ve en son kişi yönelimini kaybeder.",
+  "📌 [SINAV SPOTU] Deliryum; akut başlangıçlı yönelim bozukluğu ve bilinçte dalgalanma ile seyreden, mortalite riski taşıyan acil organik tablodur.",
+  "📌 [SINAV SPOTU] Anterograd amnezi kısa süreli bellekten uzun süreli belleğe bilgi aktarılamamasına bağlıdır ve Wernicke-Korsakoff sendromunun kronik döneminde tipiktir.",
+  "📌 [SINAV SPOTU] Dikkatin dış uyaranlarla kolayca dağılması (distraktibilite) en sık manide, aşırı tetikte olma hali (hipervijilans) ise TSSB ve sanrısal bozuklukta görülür.",
+  "📌 [SINAV SPOTU] Dış bir uyaran olmaksızın duyusal algı oluşması halüsinasyon, var olan gerçek bir uyarının yanlış yorumlanması ise illüzyondur.",
+  "📌 [SINAV SPOTU] Şizofrenide en sık işitme halüsinasyonları görülürken, görsel halüsinasyonlar öncelikle organik beyin sendromlarını ve deliryumu işaret eder.",
+  "📌 [SINAV SPOTU] Schneider hezeyanları (düşünce çekilmesi, okunması, sokulması ve yayılması) şizofreni için tipik birinci sıra düşünce içeriği patolojileridir.",
+  "📌 [SINAV SPOTU] Katalepsi sertleşmiş gövdeyle uzun süre hareketsiz kalma iken, katapleksi ani heyecan veya kahkaha ile kas tonusunun geçici kaybıdır."
+ ],
+ "kazanimlar": [
+  "Öğrenci psikiyatrik muayene şemasındaki bilişsel, duygulanımsal, psikomotor ve bedensel alanları tanımlar.",
+  "Öğrenci somnolans, stupor ve koma bilinç düzeylerini ve yönelim bozulma hiyerarşisini açıklar.",
+  "Öğrenci tespit, kısa süreli ve uzun süreli bellek aşamaları ile anterograd-retrograd amnezi mekanizmalarını karşılaştırır.",
+  "Öğrenci dikkat bozuklukları (distraktibilite, hipervijilans) ile algı kusurlarını (halüsinasyon, illüzyon, sinestezi) ayırt eder.",
+  "Öğrenci düşünce akışı kusurları (klang, neolojizm, perseverasyon) ile düşünce içeriği bozukluklarını (hezeyanlar, obsesyonlar, fobiler) sınıflandırır.",
+  "Öğrenci yargılama, gerçeği değerlendirme yetisi, içgörü düzeyleri ve soyut düşünce muayenesini açıklar.",
+  "Öğrenci duygudurum ve afekt kavramlarını, aleksitimi ve ambivalans fenomenlerini çözümler.",
+  "Öğrenci psikomotor retardasyon/eksitasyon, katalepsi, katapleksi, akatizi ve vejetatif belirti dağılımlarını klinik tablolarda ayırt eder."
+ ],
+ "matchedPastQuestionsCount": 12,
+ "sayfaHaritasi": "teyitli",
+ "slides": [
+  {
+   "slideNumber": 1,
+   "id": "y25-k2-11-s01",
+   "title": "Psikiyatrik Değerlendirme, Bilinç ve Düzey Bozuklukları",
+   "subtitle": "Psikiyatride tanı doğrudan semiyolojiye dayanır; bilinç bozuklukları ise altta yatan hücresel ve metabolik hasarın temel göstergesidir.",
+   "badge": "Bilişsel İşlevler ve Bilinç",
+   "bolum": "1",
+   "pdfSayfalari": [
+    2,
+    5
+   ],
+   "kaynakSayfa": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "bilgi": [
+    1,
+    2
+   ],
+   "isCheckpoint": false,
+   "synthesisNarrative": "Psikiyatrik tanı ve klinik değerlendirme süreci, diğer tıp branşlarına kıyasla çok daha yüksek oranda semiyolojik belirti ve bulgulara dayanır. Bu kapsamlı değerlendirmede bilişsel işlevler, duygulanım, psikomotor aktivite ve bedensel süreçler sistematik bir muayene şeması içinde incelenir.\n\n- **Bilinç Kavramı:** Kişinin kendisinin ve çevresinin farkında olması ve haberdarlık derecesidir; beynin metabolik, vasküler ve hücresel bütünlüğünü yansıtır.\n- **Somnolans Düzeyi:** Hastanın dış uyaran verilmediğinde bilincinin kapandığı, sözel veya dokunsal uyaranla bilincinin kolayca açılabildiği patolojik uyuklama durumudur.\n- **Stupor Tablosu:** Bilinçliliğin ileri derecede azaldığı, hastanın dış nesneleri gözleriyle izleyebilmesine rağmen konuşamadığı ve belirgin hareketsizlik sergilediği klinik tablodur.\n- **Koma Durumu:** Dış dünyayla ilişkinin tamamen koptuğu ve en güçlü ağrılı uyaranlara dahi amaca yönelik yanıtın alınamadığı en ağır bilinç kaybı düzeyidir.\n\n> [!IMPORTANT]\n> Bilinçteki bozulmalar her koşulda beyin dokusunun perfüzyonunu, oksijenlenmesini veya hücresel metabolizmasını bozan organik patolojilerden kaynaklanır.",
+   "content": "Psikiyatrik tanı ve klinik değerlendirme süreci, diğer tıp branşlarına kıyasla çok daha yüksek oranda semiyolojik belirti ve bulgulara dayanır. Bu kapsamlı değerlendirmede bilişsel işlevler, duygulanım, psikomotor aktivite ve bedensel süreçler sistematik bir muayene şeması içinde incelenir.\n\n- **Bilinç Kavramı:** Kişinin kendisinin ve çevresinin farkında olması ve haberdarlık derecesidir; beynin metabolik, vasküler ve hücresel bütünlüğünü yansıtır.\n- **Somnolans Düzeyi:** Hastanın dış uyaran verilmediğinde bilincinin kapandığı, sözel veya dokunsal uyaranla bilincinin kolayca açılabildiği patolojik uyuklama durumudur.\n- **Stupor Tablosu:** Bilinçliliğin ileri derecede azaldığı, hastanın dış nesneleri gözleriyle izleyebilmesine rağmen konuşamadığı ve belirgin hareketsizlik sergilediği klinik tablodur.\n- **Koma Durumu:** Dış dünyayla ilişkinin tamamen koptuğu ve en güçlü ağrılı uyaranlara dahi amaca yönelik yanıtın alınamadığı en ağır bilinç kaybı düzeyidir.\n\n> [!IMPORTANT]\n> Bilinçteki bozulmalar her koşulda beyin dokusunun perfüzyonunu, oksijenlenmesini veya hücresel metabolizmasını bozan organik patolojilerden kaynaklanır.",
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Psikiyatride tanı ve klinik değerlendirme, diğer tıp branşlarından çok daha fazla oranda doğrudan semiyolojik belirti ve bulgulara dayanır.",
+    "📌 [SINAV SPOTU] Bilinç bozuklukları her zaman beyin dokusunun kanlanmasını, oksijenlenmesini ve hücresel metabolizmasını bozan organik etkenlere bağlıdır."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Somnolans",
+     "explanation": "Hastanın dış uyaran verilmediğinde bilincinin kapandığı, ancak uyaranla bilincinin kolayca açıldığı hafif bilinç bulanıklığı ve uyuklama halidir."
+    },
+    {
+     "term": "Stupor",
+     "explanation": "Bilinçliliğin azaldığı, hareketlerin durma noktasına vardığı, hastanın dış nesneleri gözleriyle izleyebilmesine rağmen konuşamadığı tablodur."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-1-1",
+     "front": "Bilinç düzey bozukluklarında somnolans ile koma arasındaki en temel klinik ayrım nedir?",
+     "back": "Somnolans uyaransız ortamda uykuya dalıp uyaranla hızla uyanabilme hali iken, komada en güçlü ağrılı uyaranlara dahi hiçbir yanıt alınamaz."
+    },
+    {
+     "id": "fc-1-2",
+     "front": "Stupor tablosundaki bir hastanın göz hareketleri ve sözel iletişimi nasıldır?",
+     "back": "Hasta çevredeki nesneleri ve hekimi gözleriyle izleyebilir ancak istemli olarak konuşamaz ve hareketleri aşırı yavaşlamıştır."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatrik Semiyoloji-3.SINIF.pdf",
+    "startPage": 2,
+    "endPage": 5,
+    "primaryPage": 4,
+    "citation": "Sayfa 2–5 · Kurul 2 Psikiyatri · Psikiyatrik Semiyoloji"
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Psikiyatrik muayenede bilinci değerlendirilen bir hastada, dış uyaran verilmediğinde bilincin kapanması ancak hafif uyaranla hemen açılması hangi bilinç bozukluğu düzeyidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Somnolans",
+       "isCorrect": true,
+       "explanation": "Somnolans, uyaransız ortamda bilincin kapandığı ancak hafif ses veya dokunmayla bilincin kolayca açılabildiği patolojik uyuklama düzeyidir. Soru kökünde tarif edilen uyarılma kalıbı bu klinik antite ile tam uyumludur."
+      },
+      {
+       "key": "B",
+       "text": "Stupor",
+       "isCorrect": false,
+       "explanation": "Stupor, bilincin ileri düzeyde azaldığı ve hastanın çevreyi gözüyle izleyebilmesine rağmen konuşamadığı ağır klinik tablodur. Soru kökündeki hafif uyaranla kolayca uyanabilme özelliği somnolans düzeyini yansıtır."
+      },
+      {
+       "key": "C",
+       "text": "Koma",
+       "isCorrect": false,
+       "explanation": "Koma tablosu, bilincin tamamen kapandığı ve çevreyle ilişkinin koptuğu en derin bilinç bozukluğu düzeyidir. Soru kökünde belirtilen hafif uyaranla hızla uyanabilme özelliği komada saptanmaz."
+      },
+      {
+       "key": "D",
+       "text": "Lögore",
+       "isCorrect": false,
+       "explanation": "Lögore, düşünce ve konuşma hızının tutarlı biçimde patolojik olarak artmasıyla karakterize bir düşünce akışı bulgusudur. Bilinç düzeyindeki uyanıklık ve uyuklama değişimleri bu kavramla açıklanamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kişinin uyaran olmadığında bilincinin kapanması, uyaranla bilincinin açılması durumuna somnolans adı verilir.",
+     "maskedTerm": "somnolans",
+     "hint": "Uyanıklık kusurunda letarji ve patolojik uyuklama hali"
+    },
+    {
+     "type": "interactive_table",
+     "title": "Bilinç Düzey Bozukluklarının Klinik Özellikleri",
+     "tableHeaders": [
+      "Klinik Tablo",
+      "Uyaran Yanıtı",
+      "Motor ve Sözel Yanıt"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Somnolans",
+         "isMasked": false
+        },
+        {
+         "text": "Uyaranla bilinci açılır, uyaransız kapanır",
+         "isMasked": true,
+         "hint": "Seslenince uyanma ve pasifleşince dalma"
+        },
+        {
+         "text": "Sözel yanıt alınabilir ve istemli hareket mevcuttur",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Stupor",
+         "isMasked": false
+        },
+        {
+         "text": "Dış nesneleri gözle izler ancak iletişim kuramaz",
+         "isMasked": false
+        },
+        {
+         "text": "Hasta konuşamaz ve hareketleri aşırı yavaşlamıştır",
+         "isMasked": true,
+         "hint": "Derin devinimsizlik ve suskunluk tablosu"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Koma",
+         "isMasked": false
+        },
+        {
+         "text": "Ağrılı uyaranlara bile yanıt alınamaz",
+         "isMasked": true,
+         "hint": "En şiddetli fiziksel uyarılara tam tepkisizlik"
+        },
+        {
+         "text": "İstemli motor hareket ve konuşma tamamen yoktur",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Bilinç ve Psikiyatrik Muayene Şeması",
+     "question": "Bilinç kavramı ve düzey bozuklukları ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "items": [
+      {
+       "text": "Bilinç bozuklukları her zaman beyin hücrelerinin çalışmasını engelleyen organik, vasküler veya metabolik bir soruna bağlıdır.",
+       "isLie": false,
+       "explanation": "Bilinç beynin genel bir fonksiyonudur ve bozulması hücresel düzeyde metabolizma veya oksijenlenme bozukluğunu yansıtır."
+      },
+      {
+       "text": "Stupor tablosundaki bir hasta çevresindeki dış objeleri gözleriyle izleyebildiği halde istemli olarak konuşamaz.",
+       "isLie": false,
+       "explanation": "Ders notunda stupor; bilinçliliğin azaldığı, hastanın dış objeleri izleyebildiği halde konuşamadığı durum olarak tanımlanmıştır."
+      },
+      {
+       "text": "Somnolans tablosunda bilinç dış dünyayla tamamen kopmuştur ve ağrılı uyaranlara dahi hiçbir yanıt alınamaz.",
+       "isLie": true,
+       "explanation": "Bu açıklama koma tablosuna aittir; somnolans hafif düzeydedir ve hasta dış uyaran verildiğinde bilinci hemen açılır."
+      },
+      {
+       "text": "Psikiyatrik muayene şemasında bilişsel işlevler; bilinç, yönelim, bellek, dikkat, algı ve düşünce gibi temel alanları kapsar.",
+       "isLie": false,
+       "explanation": "Bilişsel işlevler muayenesinin temel bileşenleri ders notunun muayene şemasında bu sıralamayla sunulmuştur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Stupor tablosunu somnolans ve koma düzeylerinden ayıran en karakteristik klinik semiyolojik bulgu nedir?",
+     "answer": "Hastanın bilinci ileri derecede azalıp konuşamamasına ve hareketlerinin aşırı yavaşlamasına karşın, çevredeki dış objeleri gözleriyle izleyebilmesidir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 2,
+   "id": "y25-k2-11-s02",
+   "title": "Yönelim (Oryantasyon): Bileşenler ve Bozulma Hiyerarşisi",
+   "subtitle": "Çevreyle haberdarlık durumunu belirleyen yönelim, organik hasarlarda katı bir hiyerarşik sıra izleyerek kaybolur.",
+   "badge": "Yönelim ve Deliryum",
+   "bolum": "1",
+   "pdfSayfalari": [
+    6,
+    7
+   ],
+   "kaynakSayfa": [
+    6,
+    7
+   ],
+   "bilgi": [
+    1,
+    2
+   ],
+   "isCheckpoint": false,
+   "synthesisNarrative": "Yönelim (oryantasyon), kişinin kendisi ve çevresiyle ilgili zamansal, mekânsal ve kişisel haberdarlık durumudur. Psikiyatrik muayenede yönelim üç ana bileşen üzerinden sistematik olarak sorgulanır:\n\n- **Zaman Yönelimi:** Tarihin iki günlük yanılma payıyla bilinmesi, mevsimin, ayın ve bulunulan yılın doğru ifade edilmesidir.\n- **Yer Yönelimi:** Hastanın o sırada bulunduğu hastaneyi, kliniği, kenti tanıması ve açık adresini doğru tarif edebilmesidir.\n- **Kişi Yönelimi:** Çevresindeki hekim, hemşire ve yakınlarının kim olduğunu ayırt edebilme ve kendi kimliğini bilme durumudur.\n- **Bozulma Hiyerarşisi:** Patolojik süreçlerde yönelim katı bir sıra izler; kişi önce zaman, ardından yer ve en son kişi oryantasyonunu kaybeder.\n\n> [!IMPORTANT]\n> Yönelim bozukluğu çoğunlukla organik bir beyin hasarını işaret eder; en sık dalgalı bilinçle birlikte deliryumda ve dissosiyatif tablolarda karşımıza çıkar.",
+   "content": "Yönelim (oryantasyon), kişinin kendisi ve çevresiyle ilgili zamansal, mekânsal ve kişisel haberdarlık durumudur. Psikiyatrik muayenede yönelim üç ana bileşen üzerinden sistematik olarak sorgulanır:\n\n- **Zaman Yönelimi:** Tarihin iki günlük yanılma payıyla bilinmesi, mevsimin, ayın ve bulunulan yılın doğru ifade edilmesidir.\n- **Yer Yönelimi:** Hastanın o sırada bulunduğu hastaneyi, kliniği, kenti tanıması ve açık adresini doğru tarif edebilmesidir.\n- **Kişi Yönelimi:** Çevresindeki hekim, hemşire ve yakınlarının kim olduğunu ayırt edebilme ve kendi kimliğini bilme durumudur.\n- **Bozulma Hiyerarşisi:** Patolojik süreçlerde yönelim katı bir sıra izler; kişi önce zaman, ardından yer ve en son kişi oryantasyonunu kaybeder.\n\n> [!IMPORTANT]\n> Yönelim bozukluğu çoğunlukla organik bir beyin hasarını işaret eder; en sık dalgalı bilinçle birlikte deliryumda ve dissosiyatif tablolarda karşımıza çıkar.",
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Yönelim bozulmasında katı bir sıra vardır: Kişi önce zaman, ardından yer ve en son kişi oryantasyonunu kaybeder.",
+    "📌 [SINAV SPOTU] Yönelim bozukluğu çoğunlukla organik bir etkeni gösterir ve en sık bilinçte dalgalanmayla seyreden deliryum tablosunda saptanır."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Oryantasyon (Yönelim)",
+     "explanation": "Kişinin kendisi, çevresi, içinde bulunduğu zaman dilimi ve mekan hakkındaki anlık farkındalık ve haberdarlık durumudur."
+    },
+    {
+     "term": "Deliryum",
+     "explanation": "Yönelim bozukluğu, dikkat dağınıklığı ve dalgalı bilinç bulanıklığı ile seyreden, mortalite riski yüksek akut organik beyin sendromudur."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-2-1",
+     "front": "Organik beyin hasarlarında yönelimin üç bileşeni hangi kronolojik sıra ile bozulur?",
+     "back": "Kişi ilk önce zaman, ardından yer ve en son kişi yönelimini kaybeder."
+    },
+    {
+     "id": "fc-2-2",
+     "front": "Yönelim bozukluğu saptanan bir hastada öncelikle hangi etyolojik köken düşünülmeli ve araştırılmalıdır?",
+     "back": "Öncelikle deliryum gibi hayatı tehdit edebilen organik serebral, vasküler veya metabolik etkenler düşünülmelidir."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatrik Semiyoloji-3.SINIF.pdf",
+    "startPage": 6,
+    "endPage": 7,
+    "primaryPage": 7,
+    "citation": "Sayfa 6–7 · Kurul 2 Psikiyatri · Psikiyatrik Semiyoloji"
+   },
+   "interactiveElements": [
+    {
+     "type": "causal_chain",
+     "title": "Deliryum Tablosunda Yönelim Bozulma Hiyerarşisi",
+     "steps": [
+      "1. Organik Etyoloji: Beyin hücre metabolizmasını bozan sistemik enfeksiyon, toksik etken veya hipoksi ortaya çıkar.",
+      "2. Zaman Yönelimi Kaybı: Oryantasyon bozulmasında ilk olarak gün, ay, mevsim ve yıl farkındalığı yitirilir.",
+      "3. Yer Yönelimi Kaybı: Tablo ilerledikçe hasta bulunduğu hastaneyi, odayı ve coğrafi mekanı tanıyamaz hale gelir.",
+      "4. Kişi Yönelimi Kaybı: En son ve en derin evrede hasta yakınlarını, hekimini ve çevresindeki kişileri ayırt edemez.",
+      "5. Bilinçte Dalgalanma: Tabloya gün içinde değişkenlik gösteren akut dalgalı bilinç bulanıklığı eşlik eder."
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Organik bir beyin patolojisine bağlı olarak yönelim bozukluğu gelişen bir hastada en son kaybolan oryantasyon bileşeni hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Kişi yönelimi",
+       "isCorrect": true,
+       "explanation": "Kişi yönelimi, hastanın yakınlarını, çevresindeki sağlık çalışanlarını ve kendi kimliğini tanıyabilme yetisidir. Organik serebral hasarlarda yönelim katı bir sıra izler ve kişi oryantasyonu en son kaybolur."
+      },
+      {
+       "key": "B",
+       "text": "Zaman yönelimi",
+       "isCorrect": false,
+       "explanation": "Zaman yönelimi, bulunulan gün, ay, mevsim ve yılın doğru bilinmesini ifade eden bilişsel parametredir. Organik patolojilerde yönelim kaybı başlarken ilk feda edilen ve bozulan yeti zaman oryantasyonudur."
+      },
+      {
+       "key": "C",
+       "text": "Yer yönelimi",
+       "isCorrect": false,
+       "explanation": "Yer yönelimi, bulunulan coğrafi mekanı, hastaneyi ve kliniği tanıyıp adresi doğru tarif edebilme kapasitesidir. Bozulma sürecinde zaman yöneliminin ardından ikinci basamakta kayba uğrar."
+      },
+      {
+       "key": "D",
+       "text": "Mevsim yönelimi",
+       "isCorrect": false,
+       "explanation": "Mevsim yönelimi, zaman oryantasyonunun ayrılmaz bir parçası olarak takvimsel farkındalığı kapsar. Erken dönemde zaman yönelimiyle birlikte ilk kaybedilen parametreler arasında bulunur."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Yönelim bozulmasında kişi önce zaman, ardından yer ve en son kişi oryantasyonunu kaybeder.",
+     "maskedTerm": "kişi",
+     "hint": "Kendilik ve yakın çevre kimlik farkındalığı"
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Zaman Yönelimi Muayenesi",
+     "rightTitle": "Yer ve Kişi Yönelimi Muayenesi",
+     "leftPoints": [
+      "Hangi yıl, ay ve mevsimde olunduğu sorulur.",
+      "Günün tarihini bilmede en fazla iki günlük sapma kabul edilir.",
+      "Organik beyin hasarlarında en erken kaybolan bileşendir."
+     ],
+     "rightPoints": [
+      "Bulunulan klinik, hastane ve adres bilgisi sorgulanır.",
+      "Çevredeki hekim ve refakatçi yakınların kimliği sorulur.",
+      "Kişi yönelimi organik süreçlerde en son kaybolan alandır."
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "prompt": "Aşağıdaki klinik özellikleri ve muayene ölçütlerini doğru yönelim bileşeniyle eşleştiriniz.",
+     "leftCategory": "Zaman Yönelimi",
+     "rightCategory": "Yer ve Kişi Yönelimi",
+     "cards": [
+      {
+       "text": "Hangi mevsimde ve ayda bulunulduğunun sorgulanması",
+       "category": "left"
+      },
+      {
+       "text": "Tarihin artı eksi iki günlük yanılma payıyla doğru bilinmesi",
+       "category": "left"
+      },
+      {
+       "text": "Organik bozulma sürecinde ilk olarak yitirilen oryantasyon alanı",
+       "category": "left"
+      },
+      {
+       "text": "Bulunulan hastanenin ve servis odasının doğru tanımlanması",
+       "category": "right"
+      },
+      {
+       "text": "Hastanın kendi yakınlarını ve hekimini tanıyıp isimlendirebilmesi",
+       "category": "right"
+      },
+      {
+       "text": "Yönelim kaybı hiyerarşisinde en son kaybolan kimlik farkındalığı",
+       "category": "right"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 3,
+   "id": "y25-k2-11-s03",
+   "title": "Bellek İşlevleri, Amneziler ve Bellek Bozuklukları",
+   "subtitle": "Kayıt, kısa süreli ve uzun süreli bellek basamakları ile anterograd-retrograd bellek yıkım kalıpları.",
+   "badge": "Bellek ve Amneziler",
+   "bolum": "2",
+   "pdfSayfalari": [
+    8,
+    13
+   ],
+   "kaynakSayfa": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+   ],
+   "bilgi": [
+    2,
+    3
+   ],
+   "isCheckpoint": false,
+   "synthesisNarrative": "Bellek; yakın ve uzak geçmişe ait olayları kaydetme, depolama ve anımsama yeteneğidir. Sürelerine göre tespit (kayıt: registration; anında tekrar), kısa süreli (recall; 5 dakika ile birkaç saat) ve uzun süreli bellek (birkaç gün-aylık yakın bellek ile yıllara uzanan uzak bellek) olarak üçe ayrılır.\n\n- **Anterograd Amnezi:** Hastalık veya hasardan sonraki yeni bilgileri öğrenme ve hatırlama kusurudur; kısa süreli bellekten uzun süreli belleğe aktarım yapılamaz. Wernicke-Korsakoff sendromunun kronik evresinde tipiktir.\n- **Retrograd Amnezi:** Hastalıktan önceki olayların anımsanamamasıdır; en sık demansta görülür ve bellek geriye doğru basamaklı biçimde yıkılır.\n- **Paramneziler:** Deja vu (daha önce görmüş sanma), jamais vu (bildiğini hiç görmemiş sanma), deja entendu (daha önce duymuş sanma) algı-anımsama yanılsamalarıdır.\n- **Konfabülasyon:** Anımsanamayan bellek boşluklarının gerçek dışı masal ve hikayelerle doldurulmasıdır; demans olgularında sık görülür.\n\n> [!NOTE]\n> Füg tablosunda kişi nereye ve nasıl gittiğini bilmeksizin kendini başka bir yerde bulur; dissosiyatif bozukluklarda ve temporal lob epilepsisinde ortaya çıkabilir.",
+   "content": "Bellek; yakın ve uzak geçmişe ait olayları kaydetme, depolama ve anımsama yeteneğidir. Sürelerine göre tespit (kayıt: registration; anında tekrar), kısa süreli (recall; 5 dakika ile birkaç saat) ve uzun süreli bellek (birkaç gün-aylık yakın bellek ile yıllara uzanan uzak bellek) olarak üçe ayrılır.\n\n- **Anterograd Amnezi:** Hastalık veya hasardan sonraki yeni bilgileri öğrenme ve hatırlama kusurudur; kısa süreli bellekten uzun süreli belleğe aktarım yapılamaz. Wernicke-Korsakoff sendromunun kronik evresinde tipiktir.\n- **Retrograd Amnezi:** Hastalıktan önceki olayların anımsanamamasıdır; en sık demansta görülür ve bellek geriye doğru basamaklı biçimde yıkılır.\n- **Paramneziler:** Deja vu (daha önce görmüş sanma), jamais vu (bildiğini hiç görmemiş sanma), deja entendu (daha önce duymuş sanma) algı-anımsama yanılsamalarıdır.\n- **Konfabülasyon:** Anımsanamayan bellek boşluklarının gerçek dışı masal ve hikayelerle doldurulmasıdır; demans olgularında sık görülür.\n\n> [!NOTE]\n> Füg tablosunda kişi nereye ve nasıl gittiğini bilmeksizin kendini başka bir yerde bulur; dissosiyatif bozukluklarda ve temporal lob epilepsisinde ortaya çıkabilir.",
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Anterograd amnezi kısa süreli bellekten uzun süreli belleğe bilgi aktarılamamasına bağlıdır ve Wernicke-Korsakoff sendromunda kronik tablonun tipik bulgusudur.",
+    "📌 [SINAV SPOTU] Retrograd amnezi en sık demansta görülür; bellek geriye doğru yıkılır, önce en yakın olaylar unutulurken giderek uzak anılar da silinir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Anterograd Amnezi",
+     "explanation": "Hastalık ya da hasar anından sonra yeni bilgileri öğrenme, kaydetme ve hatırlama yetisinin yitirilmesidir."
+    },
+    {
+     "term": "Konfabülasyon",
+     "explanation": "Demans ve bellek hasarı olan hastaların hatırlayamadıkları hafıza boşluklarını istemsiz uydurma hikayelerle doldurmasıdır."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-3-1",
+     "front": "Wernicke-Korsakoff sendromunda yeni bilgilerin kaydedilememesinin nörofizyolojik temeli nedir?",
+     "back": "Kısa süreli bellekten uzun süreli belleğe bilgi aktarım mekanizmasının bozulmasıdır (anterograd amnezi)."
+    },
+    {
+     "id": "fc-3-2",
+     "front": "Demansta retrograd amnezinin klinik seyri ve bellek yıkım kalıbı nasıldır?",
+     "back": "Bellek geriye doğru yıkılır; hasta önce en yakın güncel olayları unutur, zamanla uzak geçmiş ve çocukluk anıları silinir."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatrik Semiyoloji-3.SINIF.pdf",
+    "startPage": 8,
+    "endPage": 13,
+    "primaryPage": 11,
+    "citation": "Sayfa 8–13 · Kurul 2 Psikiyatri · Psikiyatrik Semiyoloji"
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Wernicke-Korsakoff sendromunun kronik döneminde görülen, kısa süreli bellekten uzun süreli belleğe bilgi aktarılamamasına bağlı olarak yeni bilgilerin öğrenilememesi durumu hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Anterograd amnezi",
+       "isCorrect": true,
+       "explanation": "Anterograd amnezi, hasar başlangıcından itibaren yeni bilgilerin belleğe kaydedilememesi ve öğrenilememesi tablosudur. Wernicke-Korsakoff sendromunda kısa süreli bellekten uzun süreliye aktarımın çökmesi sonucu gelişir."
+      },
+      {
+       "key": "B",
+       "text": "Retrograd amnezi",
+       "isCorrect": false,
+       "explanation": "Retrograd amnezi, hastalık anından önceki geçmiş yaşantıların ve eski anıların hatırlanmasındaki güçlüğü tanımlar. Demans hastalarında belleğin geriye doğru basamaklı yıkımında belirginleşir."
+      },
+      {
+       "key": "C",
+       "text": "Hiperemnezi",
+       "isCorrect": false,
+       "explanation": "Hiperemnezi, geçmişteki olay ve anıların olağan dışı derecede aşırı ayrıntılı ve canlı biçimde hatırlanması durumudur. Bilgi kaydetme yetisinin kaybını değil, anımsama yoğunluğundaki artışı ifade eder."
+      },
+      {
+       "key": "D",
+       "text": "Jamais vu",
+       "isCorrect": false,
+       "explanation": "Jamais vu, kişinin çok iyi bildiği ve daha önce karşılaştığı ortamları hiç görmemiş gibi algılaması durumudur. Bir amnezi türü olmayıp anımsama ve tanıma alanındaki paramnezilerdendir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Bellekte anımsanamayan olaylar yerine hastanın hikayeler uydurmasına konfabülasyon denir.",
+     "maskedTerm": "konfabülasyon",
+     "hint": "Demans hastalarında bellek boşluklarını uydurma anlatılarla doldurma"
+    },
+    {
+     "type": "feature_bidding",
+     "title": "Bellek Patolojilerinde Anterograd ve Retrograd Amnezi Ayrımı",
+     "optionA": "Anterograd Amnezi",
+     "optionB": "Retrograd Amnezi",
+     "rounds": [
+      {
+       "feature": "Hastalık veya travma anından sonraki yeni bilgileri öğrenme ve kaydetme yetisinin bozulması",
+       "correct": "A"
+      },
+      {
+       "feature": "Kısa süreli bellekten uzun süreli belleğe bilgi aktarım mekanizmasının felce uğraması",
+       "correct": "A"
+      },
+      {
+       "feature": "Hastalık başlangıcından önceki geçmiş yaşantı ve anıların hatırlanmasındaki güçlük",
+       "correct": "B"
+      },
+      {
+       "feature": "Demans olgularında belleğin en yakın zamandan eskiye doğru basamaklı yıkılması",
+       "correct": "B"
+      },
+      {
+       "feature": "Wernicke-Korsakoff sendromunun kronik tablosunda hastanın belleğinin sadece birkaç saatle sınırlı kalması",
+       "correct": "A"
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "title": "Bellek İşlevleri ve Bozuklukları Sınıflaması",
+     "tableHeaders": [
+      "Bellek Türü / Belirti",
+      "Klinik Özellik",
+      "Muayene Yöntemi veya Tipik Hastalık"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Tespit (Kayıt) Belleği",
+         "isMasked": false
+        },
+        {
+         "text": "Öğretilen bilginin anında tekrarlanabilme yetisidir",
+         "isMasked": true,
+         "hint": "Anlık bellek kaydı"
+        },
+        {
+         "text": "Hastadan 3-5 nesne ismini anında tekrar etmesi istenir",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Kısa Süreli Bellek",
+         "isMasked": false
+        },
+        {
+         "text": "Beş dakika ile birkaç saatlik bilgiyi tutabilme yeteneğidir",
+         "isMasked": false
+        },
+        {
+         "text": "Kayıt edilen nesnelerin 5 dakika sonra sorulması",
+         "isMasked": true,
+         "hint": "Gecikmeli hatırlama süreci"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Konfabülasyon",
+         "isMasked": false
+        },
+        {
+         "text": "Unutulan bellek boşlukları yerine hikayeler uydurulmasıdır",
+         "isMasked": true,
+         "hint": "Masallama ve yapay anlatı"
+        },
+        {
+         "text": "Demans ve Korsakoff sendromunda sıklıkla izlenir",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Kişinin nasıl gittiğini bilmeksizin kendisini aniden başka bir coğrafi mekanda bulması durumuna ne ad verilir ve hangi hastalıklarda görülür?",
+     "answer": "Bu duruma füg adı verilir; psikiyatride en sık dissosiyatif bozukluklarda ve nörolojide temporal lob parsiyel epilepsilerinde görülür."
+    }
+   ]
+  },
+  {
+   "slideNumber": 4,
+   "id": "y25-k2-11-s04",
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Bilinç, Yönelim ve Bellek",
+   "subtitle": "Bilişsel muayenenin ilk üç temel sütunu olan bilinç düzeyleri, oryantasyon hiyerarşisi ve bellek düzeneklerinin pekiştirilmesi.",
+   "badge": "Pekiştirme ve Klinik Karar",
+   "bolum": "2",
+   "pdfSayfalari": [
+    2,
+    13
+   ],
+   "kaynakSayfa": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+   ],
+   "bilgi": [
+    1,
+    2,
+    3
+   ],
+   "isCheckpoint": true,
+   "checkpointNumber": 1,
+   "synthesisNarrative": "Bu tekrar durağında bilişsel muayenenin omurgasını oluşturan bilinç, yönelim ve bellek işlevlerini sentezliyoruz. Bilinç bozuklukları somnolans, stupor ve koma derecelerinde somutlaşırken daima hücresel organik bir süreci yansıtır.\n\n- **Oryantasyon Zinciri:** Deliryum gibi tablolarda yönelim daima zaman, yer ve en son kişi hiyerarşisiyle kaybedilir.\n- **Bellek Mimarisi:** Tespit belleği anlık kaydı, kısa süreli bellek dakikalar-saatleri, uzun süreli bellek ise ayları ve yılları kapsar.\n- **Amnezi Dinamiği:** Kısa süreliden uzuna aktarım bozukluğu anterograd amneziyi (Korsakoff), geçmiş anıların geriye doğru yıkımı ise retrograd amneziyi (demans) oluşturur.\n- **Özel Fenomenler:** Unutulan boşlukların uydurma anlatılarla doldurulması konfabülasyon, amaçsız uzaklaşma hali ise fügdür.\n\n> [!IMPORTANT]\n> Deliryumda bilinç dalgalanması ve akut oryantasyon kaybı ön plandayken, demansta sinsi başlayan geriye doğru bellek yıkımı esastır.",
+   "content": "Bu tekrar durağında bilişsel muayenenin omurgasını oluşturan bilinç, yönelim ve bellek işlevlerini sentezliyoruz. Bilinç bozuklukları somnolans, stupor ve koma derecelerinde somutlaşırken daima hücresel organik bir süreci yansıtır.\n\n- **Oryantasyon Zinciri:** Deliryum gibi tablolarda yönelim daima zaman, yer ve en son kişi hiyerarşisiyle kaybedilir.\n- **Bellek Mimarisi:** Tespit belleği anlık kaydı, kısa süreli bellek dakikalar-saatleri, uzun süreli bellek ise ayları ve yılları kapsar.\n- **Amnezi Dinamiği:** Kısa süreliden uzuna aktarım bozukluğu anterograd amneziyi (Korsakoff), geçmiş anıların geriye doğru yıkımı ise retrograd amneziyi (demans) oluşturur.\n- **Özel Fenomenler:** Unutulan boşlukların uydurma anlatılarla doldurulması konfabülasyon, amaçsız uzaklaşma hali ise fügdür.\n\n> [!IMPORTANT]\n> Deliryumda bilinç dalgalanması ve akut oryantasyon kaybı ön plandayken, demansta sinsi başlayan geriye doğru bellek yıkımı esastır.",
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Deliryum; akut gelişen yönelim kaybı, dikkat dağınıklığı ve bilinçte dalgalanma ile seyreden, acil organik müdahale gerektiren tablodur.",
+    "📌 [SINAV SPOTU] Demansta geriye doğru bellek yıkımı görülürken, Wernicke-Korsakoff sendromunda yeni bilgi öğrenme yetisi olan anterograd bellek felce uğrar."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Füg",
+     "explanation": "Kişinin kendisini nasıl gittiğini bilmeksizin aniden başka bir mekanda bulmasıyla karakterize dissosiyatif veya epileptik tablodur."
+    },
+    {
+     "term": "Hiperemnezi",
+     "explanation": "Geçmişe ait anıların ve olayların hatırlanması çok güç aşırı ayrıntılarıyla zihinde canlanması durumudur."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-4-1",
+     "front": "Deliryum ile demans arasındaki klinik başlangıç ve seyir farkı nedir?",
+     "back": "Deliryum akut başlangıçlı, dalgalı seyirli ve bilinç bulanıklığı ile giderken; demans sinsi başlangıçlı, ilerleyici ve geriye doğru bellek yıkımı ile seyreder."
+    },
+    {
+     "id": "fc-4-2",
+     "front": "Yönelim bozukluğunda ilk ve son kaybolan bileşenler hangileridir?",
+     "back": "İlk kaybolan bileşen zaman yönelimi, en son kaybolan bileşen ise kişi yönelimidir."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatrik Semiyoloji-3.SINIF.pdf",
+    "startPage": 2,
+    "endPage": 13,
+    "primaryPage": 7,
+    "citation": "Sayfa 2–13 · Kurul 2 Psikiyatri · Psikiyatrik Semiyoloji"
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Bilinç düzeyleri ve yönelim muayenesiyle ilgili olarak aşağıdaki klinik eşleştirmelerden hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Stupor - Dış objeleri gözle izleyebildiği halde konuşamama",
+       "isCorrect": true,
+       "explanation": "Stupor tablosunda bilinçlilik belirgin azalmıştır ve hasta derin bir motor hareketsizlik sergiler. Çevredeki dış nesneleri gözleriyle takip edebilmesine rağmen sözel iletişim kuramaz."
+      },
+      {
+       "key": "B",
+       "text": "Somnolans - Ağrılı uyarana dahi hiçbir motor yanıt alınamama",
+       "isCorrect": false,
+       "explanation": "Somnolans, dış uyaran kesildiğinde uykuya dalınan ancak hafif uyaranla kolayca uyanılabilen hafif bilinç bozukluğudur. Ağrılı uyaranlara tam yanıtsızlık derin koma düzeyini tanımlar."
+      },
+      {
+       "key": "C",
+       "text": "Zaman yönelimi - Yönelim bozukluğunda en son kaybolan bileşen",
+       "isCorrect": false,
+       "explanation": "Zaman yönelimi, günün tarihini, mevsimi ve bulunulan yılı bilme yeteneğidir. Organik etkenlere bağlı yönelim kusurlarında katı kural gereği daima ilk kaybolan parametredir."
+      },
+      {
+       "key": "D",
+       "text": "Kişi yönelimi - Yönelim bozukluğunda ilk kaybolan bileşen",
+       "isCorrect": false,
+       "explanation": "Kişi yönelimi, hastanın yakınlarını ve çevresindekileri tanıma yetisi olup oryantasyonun en dirençli basamağıdır. Bozulma zincirinde ilk değil, her zaman en son kaybolur."
+      }
+     ]
+    },
+    {
+     "type": "venn_grid",
+     "title": "Deliryum ve Demans Klinik Özellikleri",
+     "labelA": "Deliryum",
+     "labelB": "Demans",
+     "items": [
+      {
+       "criterion": "Akut başlangıç ve gün içinde dalgalanan bilinç bulanıklığı sergileme",
+       "correct": "A"
+      },
+      {
+       "criterion": "Yönelim bozukluğunun erken evrede belirginleşip acil müdahale gerektirmesi",
+       "correct": "A"
+      },
+      {
+       "criterion": "Belleğin en yakın olaylardan eskiye doğru basamaklı ve geriye doğru yıkılması",
+       "correct": "B"
+      },
+      {
+       "criterion": "Anımsanamayan bellek boşluklarını kapatmak için konfabülasyon üretilmesi",
+       "correct": "B"
+      },
+      {
+       "criterion": "Altta yatan organik hücresel beyin hasarına bağlı olarak ortaya çıkma",
+       "correct": "both"
+      },
+      {
+       "criterion": "Kişinin kendisini nasıl gittiğini bilmeden başka şehirde bulduğu füg tablosu",
+       "correct": "neither"
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "title": "Demansta Retrograd Bellek Yıkımı ve Progresyon Aşamaları",
+     "steps": [
+      "1. Yakın Bellek Kaybı: Öncelikle son birkaç gün veya haftaya ait güncel olaylar unutulmaya başlar.",
+      "2. Konfabülasyon Gelişimi: Hasta hatırlayamadığı hafıza boşluklarını istemsizce uydurma hikayelerle doldurur.",
+      "3. Orta Dönem Kayıpları: Aylar ve birkaç yıl öncesine ait kişisel anılar ve yaşantılar bellekten silinir.",
+      "4. Uzak Bellek ve Kişi Yıkımı: İleri evrede çocukluk anıları, mesleki geçmiş ve en son yakınların kimlikleri kaybolur."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Bilişsel İşlevler: Bilinç, Oryantasyon ve Bellek",
+     "question": "Bilinç, yönelim ve bellek semiyolojisine dair aşağıdaki ifadelerden hangisi yanlıştır?",
+     "items": [
+      {
+       "text": "Kayıt belleği muayenesinde hastadan öğretilen 3-5 nesne ismini anında tekrar etmesi istenir.",
+       "isLie": false,
+       "explanation": "Tespit yani kayıt belleği anlık tutma kapasitesini ölçer ve hastadan anında tekrarlama talep edilir."
+      },
+      {
+       "text": "Wernicke-Korsakoff sendromunda kısa süreli bellekten uzun süreliye bilgi aktarılamaz ve anterograd amnezi gelişir.",
+       "isLie": false,
+       "explanation": "Korsakoff kronik evresinde yeni bilgi kaydedilemez ve anterograd amnezi temel semiyolojik bulgudur."
+      },
+      {
+       "text": "Deliryum tablosunda yönelim bozulurken kişi ilk olarak yakınlarının kimliğini, en son ise günün tarihini unutur.",
+       "isLie": true,
+       "explanation": "Tam aksine hasta ilk önce zaman oryantasyonunu kaybeder, kişi oryantasyonu ise en son kaybolur."
+      },
+      {
+       "text": "Jamais vu, kişinin çok iyi bildiği ve daha önce gördüğü bir ortamı hiç görmemiş gibi yabancı algılamasıdır.",
+       "isLie": false,
+       "explanation": "Ders notunda jamais vu, bilinen bir şeyin hiç görülmemiş sanılması şeklinde tanımlanmıştır."
+      }
+     ]
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "Acil servise getirilen 68 yaşındaki hasta, hangi günde ve nerede olduğunu bilememekte, dikkatini toplayamamakta ve muayene sırasında bilinci dalgalanma göstermektedir. Yanındaki eşini güçlükle tanımaktadır.",
+     "options": [
+      {
+       "key": "A",
+       "text": "Tabloyu akut deliryum olarak değerlendirip derhal organik etyolojiyi araştırmaya yönelik tetkik başlatmak",
+       "isCorrect": true,
+       "feedback": "Akut yönelim kaybı ve dalgalı bilinç deliryumu düşündürür; bu tablo acil ve ölümcül olabildiğinden altta yatan organik etken hızla saptanmalıdır."
+      },
+      {
+       "key": "B",
+       "text": "Hastayı sadece dissosiyatif füg kabul ederek hiçbir organik metabolik tetkik istemeden taburcu etmek",
+       "isCorrect": false,
+       "feedback": "Füg tablosunda hasta nasıl gittiğini bilmeden başka mekana gider; burada ise dalgalı bilinç ve organik deliryum bulguları mevcuttur."
+      },
+      {
+       "key": "C",
+       "text": "Belirtileri doğrudan basit somnolans sayıp hastayı uyaransız ortamda kendi haline bırakmak",
+       "isCorrect": false,
+       "feedback": "Somnolans sadece uyuklama halidir; hastada belirgin oryantasyon kaybı ve dalgalı bilinç tablosu mevcuttur, organik araştırma zorunludur."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 5,
+   "id": "y25-k2-11-s05",
+   "title": "Dikkat ve Konsantrasyon Bozuklukları",
+   "subtitle": "Zihinsel odağın yönlendirilmesi, sürdürülmesi, dış uyaranlarla çelinmesi ve aşırı tetikte olma hali.",
+   "badge": "Dikkat ve Konsantrasyon",
+   "bolum": "2",
+   "pdfSayfalari": [
+    14,
+    16
+   ],
+   "kaynakSayfa": [
+    14,
+    15,
+    16
+   ],
+   "bilgi": [
+    3
+   ],
+   "isCheckpoint": false,
+   "synthesisNarrative": "Dikkat ve konsantrasyon, zihnin çeşitli ilgi ve düşüncelerini belirli bir odak noktasına yönlendirebilmesi ve bu odağı sürdürebilmesi işlevidir. Dikkat zihnin belli bir alana çekilmesi iken, konsantrasyon bu çekilen alanda dikkatin kesintisiz devam ettirilmesidir. Bozulduğunda kişi kitap okurken veya film izlerken dakikalar geçmesine rağmen hiçbir şey anlamadığını fark eder.\n\n- **Distraktibilite (Çelinebilirlik):** Dikkatin kolaylıkla çevresel dış uyaranlara kayması ve hızla dağılmasıdır; konuşurken hekimin gömleğine veya geçen arabaya odaklanma gibi durumlarla en sık manide izlenir.\n- **Hipervijilans (Aşırı Tetikte Olma):** Dışarıdan gelebilecek bir tehlike beklentisine karşı sürekli dikkat kesilme halidir; en ufak tıkırtıda irkilme veya polis arama gibi davranışlarla TSSB ve sanrısal bozuklukta görülür.\n\n> [!NOTE]\n> Distraktibilite dikkatin içsel kontrolünün zayıflayıp dışa savrulmasını, hipervijilans ise tehdit algısıyla aşırı daralmış teyakkuz halini yansıtır.",
+   "content": "Dikkat ve konsantrasyon, zihnin çeşitli ilgi ve düşüncelerini belirli bir odak noktasına yönlendirebilmesi ve bu odağı sürdürebilmesi işlevidir. Dikkat zihnin belli bir alana çekilmesi iken, konsantrasyon bu çekilen alanda dikkatin kesintisiz devam ettirilmesidir. Bozulduğunda kişi kitap okurken veya film izlerken dakikalar geçmesine rağmen hiçbir şey anlamadığını fark eder.\n\n- **Distraktibilite (Çelinebilirlik):** Dikkatin kolaylıkla çevresel dış uyaranlara kayması ve hızla dağılmasıdır; konuşurken hekimin gömleğine veya geçen arabaya odaklanma gibi durumlarla en sık manide izlenir.\n- **Hipervijilans (Aşırı Tetikte Olma):** Dışarıdan gelebilecek bir tehlike beklentisine karşı sürekli dikkat kesilme halidir; en ufak tıkırtıda irkilme veya polis arama gibi davranışlarla TSSB ve sanrısal bozuklukta görülür.\n\n> [!NOTE]\n> Distraktibilite dikkatin içsel kontrolünün zayıflayıp dışa savrulmasını, hipervijilans ise tehdit algısıyla aşırı daralmış teyakkuz halini yansıtır.",
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Dikkatin kolaylıkla dış uyaranlara kayarak dağılması tablosu olan distraktibilite klinik pratikte en sık mani atağında görülür.",
+    "📌 [SINAV SPOTU] Tehlike beklentisine karşı sürekli dikkat kesilme hali olan hipervijilans; travma sonrası stres bozukluğunda ve sanrısal bozuklukta saptanır."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Distraktibilite",
+     "explanation": "Dikkatin zihinsel odaktan koparak çevredeki en ufak ses, renk veya hareket gibi dış uyaranlara kolaylıkla kayması ve dağılmasıdır."
+    },
+    {
+     "term": "Hipervijilans",
+     "explanation": "Olası bir dış tehlike, tehdit veya saldırı beklentisiyle kişinin sürekli tetikte, aşırı dikkatli ve kolay irkilir halde bulunmasıdır."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-5-1",
+     "front": "Mani tablosundaki bir hastada dikkat muayenesinde en sık görülen temel bozukluk nedir?",
+     "back": "Dikkatin çevresel dış uyaranlarla sürekli çelinip hızla dağılması anlamına gelen distraktibilitedir."
+    },
+    {
+     "id": "fc-5-2",
+     "front": "Deprem travması yaşayan bireyde en ufak tıkırtıda irkilme ve sürekli kaçış araması hangi terimle açıklanır?",
+     "back": "Dış tehlikeye karşı aşırı dikkat kesilme ve tetikte olma hali olan hipervijilans ile açıklanır."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatrik Semiyoloji-3.SINIF.pdf",
+    "startPage": 14,
+    "endPage": 16,
+    "primaryPage": 15,
+    "citation": "Sayfa 14–16 · Kurul 2 Psikiyatri · Psikiyatrik Semiyoloji"
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Bir hastanın muayene sırasında şikayetlerini anlatırken odadaki hekimin kravatının rengine veya dışarıdan gelen korna sesine kapılarak aniden konuyu değiştirmesi ve dikkatinin kolayca dağılması hangi kavramla tanımlanır?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Distraktibilite",
+       "isCorrect": true,
+       "explanation": "Distraktibilite, dikkatin odaklandığı konudan koparak çevredeki önemsiz dış uyaranlara kolaylıkla kayması ve dağılmasıdır. Manik tablolarda düşünce akışının hızlanmasıyla birlikte belirginleşir."
+      },
+      {
+       "key": "B",
+       "text": "Hipervijilans",
+       "isCorrect": false,
+       "explanation": "Hipervijilans, dışarıdan gelebilecek olası bir tehlike beklentisine karşı sürekli aşırı tetikte ve teyakkuzda olma halidir. Travma sonrası stres bozukluğunda tehdit algısıyla ortaya çıkar."
+      },
+      {
+       "key": "C",
+       "text": "Konsantrasyon",
+       "isCorrect": false,
+       "explanation": "Konsantrasyon, zihinsel odağın belirlenen bir alanda kesintisiz ve başarılı biçimde sürdürülebilmesi kapasitesidir. Dikkatin dış etkenlerle kolayca savrulup dağılması durumunu tanımlamaz."
+      },
+      {
+       "key": "D",
+       "text": "Stupor",
+       "isCorrect": false,
+       "explanation": "Stupor, bilincin ileri derecede azaldığı ve sözel iletişimin kaybolduğu organik bilinç düzeyi patolojisidir. Dikkatin çevresel çelinebilirliği ile ilişkili bir antite değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Dikkatin kolaylıkla dış uyaranlara kayması ve dağılması durumu olan distraktibilite en sık mani tablosunda görülür.",
+     "maskedTerm": "distraktibilite",
+     "hint": "Dış çevresel seslerle kolayca çelinen dikkat dağınıklığı"
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Distraktibilite (Mani)",
+     "rightTitle": "Hipervijilans (TSSB)",
+     "leftPoints": [
+      "Dikkat dışarıdan gelen en ufak uyaranla hemen dağılır.",
+      "Hasta hekimin giysisine veya odadaki eşyalara takılır.",
+      "Duygudurumun yükseldiği mani tablolarında tipik olarak izlenir."
+     ],
+     "rightPoints": [
+      "Dış tehlike beklentisine karşı sürekli tetikte olunur.",
+      "Depremzede en ufak tıkırtıda irkilir, sürekli kaçış yolu arar.",
+      "Travma sonrası stres bozukluğu ve sanrısal bozuklukta görülür."
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "prompt": "Aşağıdaki klinik özellikleri distraktibilite ve hipervijilans durumlarıyla eşleştiriniz.",
+     "leftCategory": "Distraktibilite",
+     "rightCategory": "Hipervijilans",
+     "cards": [
+      {
+       "text": "Dikkatin dışarıdan gelen önemsiz bir araba sesiyle aniden dağılması",
+       "category": "left"
+      },
+      {
+       "text": "Hastalık öyküsü anlatılırken birden hekimin gömlek renginden bahsedilmesi",
+       "category": "left"
+      },
+      {
+       "text": "Klinik pratikte en sık mani atağı geçiren hastalarda saptanması",
+       "category": "left"
+      },
+      {
+       "text": "Dışarıdan gelebilecek bir tehdide karşı sürekli aşırı dikkat kesilme hali",
+       "category": "right"
+      },
+      {
+       "text": "Deprem travması yaşamış bireyin en ufak sallantı veya seste panikle irkilmesi",
+       "category": "right"
+      },
+      {
+       "text": "Travma sonrası stres bozukluğu ve sanrısal bozuklukta belirginleşmesi",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Psikiyatrik muayenede dikkat ile konsantrasyon kavramları arasındaki operasyonel fark nedir?",
+     "answer": "Dikkat zihinsel odağın belirli bir uyaran veya alana yönlendirilmesi ve çekilmesi iken, konsantrasyon bu yönlendirilen odaklanmanın zaman içinde kesintisiz sürdürülebilmesidir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 6,
+   "id": "y25-k2-11-s06",
+   "title": "Algı Bozuklukları: Halüsinasyonlar ve İllüzyonlar",
+   "subtitle": "Dış uyaransız algı yaşantıları olan halüsinasyonlar ile var olan uyaranın çarpıtılması olan illüzyonlar.",
+   "badge": "Algı Bozuklukları",
+   "bolum": "3",
+   "pdfSayfalari": [
+    17,
+    20
+   ],
+   "kaynakSayfa": [
+    17,
+    18,
+    19,
+    20
+   ],
+   "bilgi": [
+    3,
+    4
+   ],
+   "isCheckpoint": false,
+   "synthesisNarrative": "Algı; içsel veya dışsal uyaranların önceki yaşantılar ışığında anlamlı bir bilgiye dönüştürülmesidir. Psikiyatrik semiyolojide algı kusurları iki temel grupta incelenir:\n\n- **Halüsinasyon (Varsanı):** Dış ortamda hiçbir nesnel duyusal uyaran olmaksızın ortaya çıkan algılamadır; beş duyunun tümünde (işitme, görme, tat, koku, dokunma) görülebilir.\n- **Normal ve Basit Halüsinasyonlar:** İsminin seslenildiğini sanma veya kapı zili duyma gibi tek duyulu elementer algılar normalde de olabilir; uykuya dalarken (hipnagojik) ve uyanırken (hipnopompik) yaşananlar psikotik sayılmaz.\n- **Psikotik Halüsinasyonlar:** Psikozlarda en sık işitme halüsinasyonları (tartışan, emir veren sesler) izlenirken; görsel halüsinasyonlar daha çok organik tablolara ve deliryuma işaret eder.\n- **İllüzyon (Yanılsama):** Dışarıda var olan gerçek bir uyarının yanlış algılanmasıdır; mezarlıkta ağacı insana benzetmek gibi durumlarda anksiyete eşliğinde prodromal evrede artar.\n\n> [!IMPORTANT]\n> Halüsinasyonda dış uyaran tamamen yoktur; illüzyonda ise gerçek bir nesnel uyaran vardır ancak yanlış yorumlanarak algılanır.",
+   "content": "Algı; içsel veya dışsal uyaranların önceki yaşantılar ışığında anlamlı bir bilgiye dönüştürülmesidir. Psikiyatrik semiyolojide algı kusurları iki temel grupta incelenir:\n\n- **Halüsinasyon (Varsanı):** Dış ortamda hiçbir nesnel duyusal uyaran olmaksızın ortaya çıkan algılamadır; beş duyunun tümünde (işitme, görme, tat, koku, dokunma) görülebilir.\n- **Normal ve Basit Halüsinasyonlar:** İsminin seslenildiğini sanma veya kapı zili duyma gibi tek duyulu elementer algılar normalde de olabilir; uykuya dalarken (hipnagojik) ve uyanırken (hipnopompik) yaşananlar psikotik sayılmaz.\n- **Psikotik Halüsinasyonlar:** Psikozlarda en sık işitme halüsinasyonları (tartışan, emir veren sesler) izlenirken; görsel halüsinasyonlar daha çok organik tablolara ve deliryuma işaret eder.\n- **İllüzyon (Yanılsama):** Dışarıda var olan gerçek bir uyarının yanlış algılanmasıdır; mezarlıkta ağacı insana benzetmek gibi durumlarda anksiyete eşliğinde prodromal evrede artar.\n\n> [!IMPORTANT]\n> Halüsinasyonda dış uyaran tamamen yoktur; illüzyonda ise gerçek bir nesnel uyaran vardır ancak yanlış yorumlanarak algılanır.",
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Dış ortamda hiçbir nesnel uyaran bulunmaksızın ortaya çıkan algılama yaşantısına halüsinasyon, var olan uyarının yanlış yorumlanmasına ise illüzyon denir.",
+    "📌 [SINAV SPOTU] Psikozlarda en sık işitme halüsinasyonları görülürken, görsel varsanılar öncelikle organik beyin patolojilerini ve deliryumu düşündürür."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Halüsinasyon (Varsanı)",
+     "explanation": "Herhangi bir dış duyusal uyaran bulunmaksızın kişinin gerçek gibi deneyimlediği beş duyuya ait algılama yaşantısıdır."
+    },
+    {
+     "term": "İllüzyon (Yanılsama)",
+     "explanation": "Dış dünyada gerçekte var olan nesnel bir duyusal uyarının yanlış algılanması ve çarpıtılarak yorumlanmasıdır."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-6-1",
+     "front": "Halüsinasyon ile illüzyon arasındaki temel semiyolojik ayrım noktası nedir?",
+     "back": "İllüzyonda ortamda gerçek bir nesnel uyaran bulunup yanlış algılanırken; halüsinasyonda hiçbir dışsal duyusal uyaran yoktur."
+    },
+    {
+     "id": "fc-6-2",
+     "front": "Uykuya dalarken ve uyanırken ortaya çıkan halüsinasyonların psikiyatrik tanısal değeri nedir?",
+     "back": "Hipnagojik ve hipnopompik halüsinasyonlar fizyolojik geçiş süreçleri olduğundan karmaşık olsalar dahi psikotik kabul edilmezler."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatrik Semiyoloji-3.SINIF.pdf",
+    "startPage": 17,
+    "endPage": 20,
+    "primaryPage": 18,
+    "citation": "Sayfa 17–20 · Kurul 2 Psikiyatri · Psikiyatrik Semiyoloji"
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Gece mezarlıktan geçen bir kişinin rüzgarda sallanan bir ağaç gövdesini kendisine yaklaşan bir insana benzetmesi ve korkması hangi algı bozukluğudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "İllüzyon",
+       "isCorrect": true,
+       "explanation": "İllüzyon, dış ortamda gerçekte var olan nesnel bir duyusal uyarının yanlış algılanıp çarpıtılmasıdır. Sallanan ağaç gövdesi fiziksel uyaran olup insana benzetilerek yanlış yorumlanmıştır."
+      },
+      {
+       "key": "B",
+       "text": "Halüsinasyon",
+       "isCorrect": false,
+       "explanation": "Halüsinasyon, dış çevrede hiçbir nesnel duyusal kaynak bulunmaksızın yaşanan algılama deneyimidir. Gerçek bir ağacın yanlış algılanması uyaransız ortaya çıkan halüsinasyon kavramıyla uyuşmaz."
+      },
+      {
+       "key": "C",
+       "text": "Sinestezi",
+       "isCorrect": false,
+       "explanation": "Sinestezi, bir duyu organına gelen uyarının bambaşka bir duyu modalitesinde algılanması fenomenidir. Işığın sesini duymak gibi duyusal çaprazlaşmaları temsil eder."
+      },
+      {
+       "key": "D",
+       "text": "Distraktibilite",
+       "isCorrect": false,
+       "explanation": "Distraktibilite, dikkatin dış uyaranlara kayarak kolayca dağılması ile karakterize dikkat alanı kusurudur. Duyusal algıların niteliğinde veya yorumlanmasında bir çarpıtılma içermez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Dış bir duyusal uyaran olmaksızın ortaya çıkan algılama yaşantısına halüsinasyon adı verilir.",
+     "maskedTerm": "halüsinasyon",
+     "hint": "Uyaran yokluğunda yaşanan varsanı deneyimi"
+    },
+    {
+     "type": "venn_grid",
+     "title": "Halüsinasyon ve İllüzyon Ayırıcı Özellikleri",
+     "labelA": "Halüsinasyon",
+     "labelB": "İllüzyon",
+     "items": [
+      {
+       "criterion": "Ortamda hiçbir nesnel dış duyusal uyaran bulunmaması",
+       "correct": "A"
+      },
+      {
+       "criterion": "Şizofrenide en sık işitme modalitesinde karşımıza çıkması",
+       "correct": "A"
+      },
+      {
+       "criterion": "Ortamda var olan gerçek bir nesnel uyarının yanlış yorumlanması",
+       "correct": "B"
+      },
+      {
+       "criterion": "Psikozların prodromal döneminde kaygı ve beklentiyle artış göstermesi",
+       "correct": "B"
+      },
+      {
+       "criterion": "Psikiyatrik klinik tablolarda algı alanı bozukluğu olarak sınıflandırılma",
+       "correct": "both"
+      },
+      {
+       "criterion": "Kişinin uyaran olmadığında bilincinin kapanıp uyaranla açılması",
+       "correct": "neither"
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Algı Bozuklukları ve Halüsinasyon Tipleri",
+     "question": "Halüsinasyon ve illüzyon semiyolojisi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "items": [
+      {
+       "text": "Uykuya dalarken ortaya çıkan hipnagojik ve uyanırken beliren hipnopompik halüsinasyonlar psikotik kabul edilmez.",
+       "isLie": false,
+       "explanation": "Ders notunda uykuya dalış ve uyanış halüsinasyonlarının karmaşık olsalar dahi fizyolojik geçiş nedeniyle psikotik sayılmadığı belirtilmiştir."
+      },
+      {
+       "text": "Psikiyatrik bozukluklarda görsel halüsinasyonlar daima primer psikoz lehinedir ve organik etkenleri tamamen dışlar.",
+       "isLie": true,
+       "explanation": "Tam aksine görsel halüsinasyonlar deliryum, madde entoksikasyonu ve organik beyin hasarlarını kuvvetle düşündürür."
+      },
+      {
+       "text": "Şizofreni gibi psikotik tablolarda en sık karşılaşılan varsanı tipi işitme halüsinasyonlarıdır.",
+       "isLie": false,
+       "explanation": "İşitme halüsinasyonları düşünceleri yorumlayan veya tartışan sesler şeklinde psikozun en karakteristik algı bulgusudur."
+      },
+      {
+       "text": "İsminin çağrıldığını sanma gibi tek duyuya ait kısa süreli elementer halüsinasyonlar normal popülasyonda da görülebilir.",
+       "isLie": false,
+       "explanation": "Basit veya elementer halüsinasyonlar sağlıklı bireylerde yorgunluk ve stres anlarında seyrek olarak deneyimlenebilir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Hipnagojik ve hipnopompik halüsinasyonların tanımları nedir ve klinik önemi nasıldır?",
+     "answer": "Hipnagojik uykuya dalarken, hipnopompik ise uykudan uyanırken ortaya çıkan halüsinasyonlardır; uzun veya karmaşık olsalar dahi psikotik bir bozukluğa işaret etmezler."
+    }
+   ]
+  },
+  {
+   "slideNumber": 7,
+   "id": "y25-k2-11-s07",
+   "title": "Benlik Algısı Bozuklukları: Depersonalizasyon, Derealizasyon ve Sinestezi",
+   "subtitle": "Kendine ve dış dünyaya yabancılaşma yaşantıları ile duyusal modalite çaprazlaşması.",
+   "badge": "Benlik Algısı ve Çapraz Algı",
+   "bolum": "3",
+   "pdfSayfalari": [
+    21,
+    22
+   ],
+   "kaynakSayfa": [
+    21,
+    22
+   ],
+   "bilgi": [
+    4
+   ],
+   "isCheckpoint": false,
+   "synthesisNarrative": "Benlik ve çevre algısı, kişinin kendi bedenini ve dış dünyayı bütüncül biçimde duyumsamasını sağlar. Bu alandaki semiyolojik bozukluklar yabancılaşma ve duyusal dönüşüm kalıpları sergiler:\n\n- **Depersonalizasyon:** Kişinin kendi bedenini, zihnini veya duygularını değişmiş, gerçek dışı veya kendine yabancı hissetmesidir.\n- **Derealizasyon:** Dış dünyaya ilişkin yabancılık duygusudur; kişi her zamanki çevresini, nesneleri ve tanıdık insanları değişmiş veya yapay hisseder. En sık travmatik stres durumlarında, psikoz prodromunda ve temporal lob epilepsisinde görülür.\n- **Sinestezi:** Bir duyusal uyarının bambaşka bir duyu modalitesinde algılanmasıdır; ışığın sesini duymak veya sesleri renk olarak görmek gibi LSD entoksikasyonlarında tipiktir.\n- **Boyut ve Görsel Yanılsamalar:** Nesneleri büyük görme makropsi, küçük görme mikropsi; var olanı görememe negatif halüsinasyon, kendini görememe ise negatif otoskopidir.\n\n> [!NOTE]\n> Depersonalizasyonda yabancılaşma kişinin kendi benliğine dönükken, derealizasyonda dış dünyaya ve çevreye yöneliktir.",
+   "content": "Benlik ve çevre algısı, kişinin kendi bedenini ve dış dünyayı bütüncül biçimde duyumsamasını sağlar. Bu alandaki semiyolojik bozukluklar yabancılaşma ve duyusal dönüşüm kalıpları sergiler:\n\n- **Depersonalizasyon:** Kişinin kendi bedenini, zihnini veya duygularını değişmiş, gerçek dışı veya kendine yabancı hissetmesidir.\n- **Derealizasyon:** Dış dünyaya ilişkin yabancılık duygusudur; kişi her zamanki çevresini, nesneleri ve tanıdık insanları değişmiş veya yapay hisseder. En sık travmatik stres durumlarında, psikoz prodromunda ve temporal lob epilepsisinde görülür.\n- **Sinestezi:** Bir duyusal uyarının bambaşka bir duyu modalitesinde algılanmasıdır; ışığın sesini duymak veya sesleri renk olarak görmek gibi LSD entoksikasyonlarında tipiktir.\n- **Boyut ve Görsel Yanılsamalar:** Nesneleri büyük görme makropsi, küçük görme mikropsi; var olanı görememe negatif halüsinasyon, kendini görememe ise negatif otoskopidir.\n\n> [!NOTE]\n> Depersonalizasyonda yabancılaşma kişinin kendi benliğine dönükken, derealizasyonda dış dünyaya ve çevreye yöneliktir.",
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Kişinin kendi bedenini veya zihnini yabancı hissetmesi depersonalizasyon, dış çevreyi ve nesneleri yabancı hissetmesi derealizasyondur.",
+    "📌 [SINAV SPOTU] Bir duyusal uyarının başka bir duyu biçiminde algılanması (ışığın sesini duymak gibi) sinestezi olup en çok LSD entoksikasyonunda görülür."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Depersonalizasyon",
+     "explanation": "Bireyin kendi bedenine, duygu ve düşüncelerine yabancılaşması, kendisini dışarıdan izliyormuş gibi hissetmesidir."
+    },
+    {
+     "term": "Sinestezi",
+     "explanation": "Bir duyu organına ait uyarının bambaşka bir duyu modalitesinde algılanması (sesleri renk, renkleri koku gibi duyumsama) durumudur."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-7-1",
+     "front": "Depersonalizasyon ile derealizasyon arasındaki temel nesnel ayrım nedir?",
+     "back": "Depersonalizasyonda yabancılaşma kişinin kendi bedenine ve benliğine; derealizasyonda ise dış dünyaya, insanlara ve mekana yöneliktir."
+    },
+    {
+     "id": "fc-7-2",
+     "front": "Sinestezi nedir ve hangi maddelerin intoksikasyonunda karakteristik olarak ortaya çıkar?",
+     "back": "Duyusal bir uyarının başka bir duyu biçiminde algılanmasıdır; özellikle LSD gibi halusinojen madde entoksikasyonlarında görülür."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatrik Semiyoloji-3.SINIF.pdf",
+    "startPage": 21,
+    "endPage": 22,
+    "primaryPage": 21,
+    "citation": "Sayfa 21–22 · Kurul 2 Psikiyatri · Psikiyatrik Semiyoloji"
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Yoğun travmatik stres yaşayan bir danışanın 'Çevremdeki sokaklar, binalar ve tanıdığım insanlar bana tamamen yabancı, değişmiş ve gerçek dışı bir tiyatro sahnesi gibi geliyor' ifadesi hangi semiyolojik tabloyu tanımlar?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Derealizasyon",
+       "isCorrect": true,
+       "explanation": "Derealizasyon, bireyin dış dünyaya, çevreye, binalara ve diğer insanlara karşı hissettiği yabancılaşma ve gerçek dışılık duygusudur. Travmatik stres durumlarında çevrenin yapay bir sahne gibi algılanmasıyla belirir."
+      },
+      {
+       "key": "B",
+       "text": "Depersonalizasyon",
+       "isCorrect": false,
+       "explanation": "Depersonalizasyon, kişinin bizzat kendi bedenine, uzuvlarına, sesine veya zihnine yabancılaşması halidir. Yabancılaşma hissinin dış çevreye ve mekanlara yöneldiği tabloları kapsamaz."
+      },
+      {
+       "key": "C",
+       "text": "Sinestezi",
+       "isCorrect": false,
+       "explanation": "Sinestezi, bir duyusal uyarının başka bir duyu biçiminde yaşanması durumu olup LSD gibi madde intoksikasyonlarında izlenir. Mekânsal veya çevresel yabancılaşma yaşantısını tanımlamaz."
+      },
+      {
+       "key": "D",
+       "text": "Mikropsi",
+       "isCorrect": false,
+       "explanation": "Mikropsi, çevredeki nesnelerin boyutsal olarak gerçekte olduklarından daha küçük algılanmasıyla giden görsel illüzyondur. Çevrenin yabancı ve sahte hissedilmesi tablosuyla örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Bir duyusal uyarının başka bir duyu biçiminde algılanmasıdır olarak tanımlanan sinestezi tablosu ışığın sesini duymak gibi örneklerle açıklanır.",
+     "maskedTerm": "sinestezi",
+     "hint": "Duyuların çapraz algılanması ve sesleri renk olarak görme hali"
+    },
+    {
+     "type": "interactive_table",
+     "title": "Algı ve Benlik Yaşantısı Bozuklukları Tablosu",
+     "tableHeaders": [
+      "Semiyolojik Terim",
+      "Algısal Tanım",
+      "Karakteristik Klinik Görünüm"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Depersonalizasyon",
+         "isMasked": false
+        },
+        {
+         "text": "Kişinin kendisini değişmiş ya da yabancı hissetmesidir",
+         "isMasked": true,
+         "hint": "Fiziksel varoluş kopukluğu"
+        },
+        {
+         "text": "Travmatik stres, ağır kişilik bozuklukları ve temporal epilepsi",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Derealizasyon",
+         "isMasked": false
+        },
+        {
+         "text": "Dış dünyaya ilişkin yabancılık duygusudur",
+         "isMasked": false
+        },
+        {
+         "text": "Çevredeki insanların ve mekanların yapaylaşmış algılanması",
+         "isMasked": true,
+         "hint": "Sokak ve caddelerin iki boyutlu resme dönüşmesi"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Sinestezi",
+         "isMasked": false
+        },
+        {
+         "text": "Bir duyusal uyarının başka bir duyu biçiminde algılanmasıdır",
+         "isMasked": true,
+         "hint": "Renkleri dinleme ve ses tonlarını seyretme tecrübesi"
+        },
+        {
+         "text": "LSD gibi halusinojen ve uyarıcı madde entoksikasyonları",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "feature_bidding",
+     "title": "Benlik ve Çevre Yabancılaşmasında Ayırıcı Özellikler",
+     "optionA": "Depersonalizasyon",
+     "optionB": "Derealizasyon",
+     "rounds": [
+      {
+       "feature": "Kişinin kendi beden parçalarını, sesini ve hislerini kendisine ait değilmiş gibi algılaması",
+       "correct": "A"
+      },
+      {
+       "feature": "Hastanın aynaya baktığında kendi yüzünü tanıyamayıp kendine yabancılaşması",
+       "correct": "A"
+      },
+      {
+       "feature": "Yaşadığı şehrin caddelerinin, evinin ve çevresindeki kişilerin aniden değişmiş hissedilmesi",
+       "correct": "B"
+      },
+      {
+       "feature": "Dış fiziksel dünyanın iki boyutlu bir resim veya cam arkasındaki yapay bir sahne gibi algılanması",
+       "correct": "B"
+      },
+      {
+       "feature": "Travmatik stres yaşantısının ardından kendi zihinsel süreçlerinden kopukluk hissi",
+       "correct": "A"
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Negatif halüsinasyon ile negatif otoskopi arasındaki klinik ayrım nedir?",
+     "answer": "Negatif halüsinasyon dış ortamda gerçekte var olan nesneleri görememe durumu iken; negatif otoskopi kişinin doğrudan kendi bedenini veya aynadaki yansımasını görememesidir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 8,
+   "id": "y25-k2-11-s08",
+   "title": "Düşünce Akışı Değişiklikleri ve Çağrışım Kusurları",
+   "subtitle": "Çağrışım hızındaki artış ve azalmalar ile düşünce rayından çıkaran çağrışım sapmaları.",
+   "badge": "Düşünce Akışı",
+   "bolum": "4",
+   "pdfSayfalari": [
+    23,
+    26
+   ],
+   "kaynakSayfa": [
+    23,
+    24,
+    25,
+    26
+   ],
+   "bilgi": [
+    4,
+    5
+   ],
+   "isCheckpoint": false,
+   "synthesisNarrative": "Düşünce akışı; fikirlerin, kavramların ve çağrışımların mantıksal bir sıra içinde amaca doğru ilerlemesidir. Çağrışım hızındaki ve yönündeki değişimler semiyolojik olarak üç grupta incelenir:\n\n- **Çağrışım Hızı Değişiklikleri:** Hızlandığında lögore (konuşma miktarı ve hızında mantıklı artış) ve basınçlı konuşma (araya girilemeyecek tempoda baskılı konuşma) izlenir. Çağrışım yavaşlamasında düşünce ve konuşma belirgin yavaşlar; blokajda ise hasta konuşurken aniden durup akışı tamamen keser.\n- **Ayrıntıcı Konuşma:** Obsesif yapılarda konudan kopmadan aşırı gereksiz ayrıntılara boğularak hedefe ulaşılmasıdır.\n- **Çağrışım Sapmaları:** Neolojizm (yeni anlamsız sözcük uydurma), perseverasyon (aynı fikrin uygunsuz yinelenmesi), klang çağrışım (anlam yerine ses ve kafiye benzerliğiyle konuşma), enkoherans (cümlelerin anlamsız kopukluğu) ve kelime salatası (sözcüklerin rastgele yığılması) görülür.\n- **Konuşma Özellikleri:** Yandan konuşma (sorunun yanından geçip teğet yanıtlama), disprosodi (melodi kaybı), çelinebilir konuşma ve ekolali (söyleneni papağan gibi tekrarlama) saptanabilir.\n\n> [!IMPORTANT]\n> Çağrışım hızlanması manide, çağrışım yavaşlaması ve konuşmanın fakirleşmesi ise depresyonda karakteristik bulgudur.",
+   "content": "Düşünce akışı; fikirlerin, kavramların ve çağrışımların mantıksal bir sıra içinde amaca doğru ilerlemesidir. Çağrışım hızındaki ve yönündeki değişimler semiyolojik olarak üç grupta incelenir:\n\n- **Çağrışım Hızı Değişiklikleri:** Hızlandığında lögore (konuşma miktarı ve hızında mantıklı artış) ve basınçlı konuşma (araya girilemeyecek tempoda baskılı konuşma) izlenir. Çağrışım yavaşlamasında düşünce ve konuşma belirgin yavaşlar; blokajda ise hasta konuşurken aniden durup akışı tamamen keser.\n- **Ayrıntıcı Konuşma:** Obsesif yapılarda konudan kopmadan aşırı gereksiz ayrıntılara boğularak hedefe ulaşılmasıdır.\n- **Çağrışım Sapmaları:** Neolojizm (yeni anlamsız sözcük uydurma), perseverasyon (aynı fikrin uygunsuz yinelenmesi), klang çağrışım (anlam yerine ses ve kafiye benzerliğiyle konuşma), enkoherans (cümlelerin anlamsız kopukluğu) ve kelime salatası (sözcüklerin rastgele yığılması) görülür.\n- **Konuşma Özellikleri:** Yandan konuşma (sorunun yanından geçip teğet yanıtlama), disprosodi (melodi kaybı), çelinebilir konuşma ve ekolali (söyleneni papağan gibi tekrarlama) saptanabilir.\n\n> [!IMPORTANT]\n> Çağrışım hızlanması manide, çağrışım yavaşlaması ve konuşmanın fakirleşmesi ise depresyonda karakteristik bulgudur.",
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Cümleler arası bağlantının mantık yerine sadece fonetik ses kafiyeleriyle kurulması klang çağrışım, yeni uydurma kelimeler türetilmesi ise neolojizmdir.",
+    "📌 [SINAV SPOTU] Düşünce blokajında konuşma birdenbire aniden kesilirken, perseverasyonda aynı yanıt veya düşünce uygunsuz biçimde sürekli yinelenir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Klang Çağrışım",
+     "explanation": "Düşünce akışında cümlelerin mantıksal anlam bağı yerine yalnızca fonetik kafiye ve ses benzerlikleri üzerinden ilerlemesidir."
+    },
+    {
+     "term": "Neolojizm",
+     "explanation": "Hastanın kendi zihninde türettiği, dilde ve sözlükte hiçbir karşılığı bulunmayan yeni yapay sözcükler kullanmasıdır."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-8-1",
+     "front": "Basınçlı konuşma ile lögore arasındaki temel klinik özellikler nelerdir?",
+     "back": "Her ikisinde de konuşma hızı ve miktarı artmıştır; ancak basınçlı konuşmada hız öylesine yüksektir ki araya girip soru sormak dahi imkansızdır."
+    },
+    {
+     "id": "fc-8-2",
+     "front": "Yandan konuşma (teğetsel konuşma) sergileyen bir hastanın tipik muayene yanıtı nasıldır?",
+     "back": "Sorulan soruya doğrudan cevap vermek yerine soruyla uzaktan bağlantılı fakat cevabı içermeyen yan konulardan bahseder."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatrik Semiyoloji-3.SINIF.pdf",
+    "startPage": 23,
+    "endPage": 26,
+    "primaryPage": 24,
+    "citation": "Sayfa 23–26 · Kurul 2 Psikiyatri · Psikiyatrik Semiyoloji"
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Psikiyatrik muayenede cümleler arasındaki anlamsal bağlantının tamamen kaybolup, düşünce akışının yalnızca kelimeler arasındaki ses benzerlikleri ve kafiyelerle kurulması durumu hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Klang çağrışım",
+       "isCorrect": true,
+       "explanation": "Klang çağrışım, düşünce akışında cümleler arasındaki anlamsal mantık bağının koparak yerini fonetik ses kafiyelerine bırakmasıdır. Konuşma ardışık kelimelerin fonetik uyumuna dayalı olarak sürdürülür."
+      },
+      {
+       "key": "B",
+       "text": "Neolojizm",
+       "isCorrect": false,
+       "explanation": "Neolojizm, hastanın kendi zihninde türettiği ve dilde hiçbir karşılığı olmayan uydurma kelimeleri kullanmasıdır. Cümleler arası fonetik kafiye örgüsünden farklı bir yapıdadır."
+      },
+      {
+       "key": "C",
+       "text": "Perseverasyon",
+       "isCorrect": false,
+       "explanation": "Perseverasyon, hastanın bir düşünceyi, kelimeyi ya da yanıtı amaca uygunsuz biçimde ısrarla tekrarlamasıdır. Ses kafiyelerine dayalı düşünce akışı değişimini açıklamaz."
+      },
+      {
+       "key": "D",
+       "text": "Lögore",
+       "isCorrect": false,
+       "explanation": "Lögore, konuşma hızının ve miktarının tutarlı ve anlaşılır biçimde belirgin olarak artması tablosudur. Mantıksal dilbilgisi kuralları korunur ve kafiye odaklı bozulma içermez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Düşünce akışında hastanın sözlükte olmayan yeni kelimeler uydurmasına neolojizm adı verilir.",
+     "maskedTerm": "neolojizm",
+     "hint": "Psikotik düşüncede uydurulan yapay sözcükler"
+    },
+    {
+     "type": "interactive_table",
+     "title": "Düşünce Akışı ve Çağrışım Kusurları Tablosu",
+     "tableHeaders": [
+      "Semiyolojik Terim",
+      "Bozukluğun Niteliği",
+      "Klinik Görünüm Örneği"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Basınçlı Konuşma",
+         "isMasked": false
+        },
+        {
+         "text": "Araya girilmesine olanak tanımayacak hızda ve çok konuşma",
+         "isMasked": true,
+         "hint": "Söz hakkı vermeyen aşırı sözel tempo"
+        },
+        {
+         "text": "Mani döneminde hastanın hekime söz hakkı tanımaması",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Blokaj",
+         "isMasked": false
+        },
+        {
+         "text": "Konuşurken düşünce akışının birden aniden durmasıdır",
+         "isMasked": false
+        },
+        {
+         "text": "Cümlenin ortasında hastanın susup kalması",
+         "isMasked": true,
+         "hint": "Anlatılan mevzunun yarıda kesilmesi"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Yandan Konuşma",
+         "isMasked": false
+        },
+        {
+         "text": "Sorulan sorunun doğrudan yanıtı yerine teğetsel cevap verilmesi",
+         "isMasked": true,
+         "hint": "Asıl hedeften sapıp komşu konudan bahsetme"
+        },
+        {
+         "text": "Hangi liseye gittiği sorulunca eğitimin önemini anlatması",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Düşünce Akışı Değişiklikleri ve Çağrışım Kusurları",
+     "question": "Düşünce akışındaki semiyolojik bozukluklar hakkında aşağıdaki ifadelerden hangisi yanlıştır?",
+     "items": [
+      {
+       "text": "Lögore durumunda konuşmanın hızı ve miktarı artmıştır ancak düşünce içeriği mantıklı ve tutarlıdır.",
+       "isLie": false,
+       "explanation": "Ders notunda lögorik hastanın tutarlı ve anlaşılır konuştuğu ancak konuşma miktarının belirgin arttığı ifade edilmiştir."
+      },
+      {
+       "text": "Ayrıntıcı konuşma sergileyen hastalar gereksiz ayrıntılara girseler dahi ana konuyu sürdürüp hedefe varabilirler.",
+       "isLie": false,
+       "explanation": "Obsesif yapılarda görülen ayrıntıcı konuşmada konudan tamamen kopulmaz, aşırı detaylarla da olsa amaca ulaşılır."
+      },
+      {
+       "text": "Kelime salatası konuşmanın miktarının azaldığı ancak dilbilgisi kurallarının kusursuz korunduğu bir durumdur.",
+       "isLie": true,
+       "explanation": "Kelime salatasında hiçbir anlamlı cümle yoktur; konuşma yan yana anlamsızca sıralanmış kelime yığınından ibarettir."
+      },
+      {
+       "text": "Disprosodi sesteki melodinin, tonlamanın ve duygusal ahengin kaybolmasıdır ve şizofrenide görülebilir.",
+       "isLie": false,
+       "explanation": "Disprosodi duygulanımın sese yansıyan ritim ve ezgisinin silinmesi olarak şizofreni semiyolojisinde yer alır."
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "prompt": "Aşağıdaki konuşma bozukluklarını çağrışım sapması veya çağrışım hızı kategorileriyle eşleştiriniz.",
+     "leftCategory": "Çağrışım Sapmaları",
+     "rightCategory": "Çağrışım Hızı Değişiklikleri",
+     "cards": [
+      {
+       "text": "Kafiye ve ses benzerlikleriyle kurulan klang çağrışımı",
+       "category": "left"
+      },
+      {
+       "text": "Sözlükte yer almayan uydurma sözcükler üretilen neolojizm",
+       "category": "left"
+      },
+      {
+       "text": "Sorunun doğrudan yanıtı yerine teğetsel konuşulan yandan konuşma",
+       "category": "left"
+      },
+      {
+       "text": "Mani tablosunda hekime fırsat vermeyen basınçlı konuşma",
+       "category": "right"
+      },
+      {
+       "text": "Konuşma miktarı ve temposunun belirgin arttığı lögore",
+       "category": "right"
+      },
+      {
+       "text": "Hastanın konuşurken aniden durup sustuğu düşünce blokajı",
+       "category": "right"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 9,
+   "id": "y25-k2-11-s09",
+   "title": "Düşünce İçeriği Bozuklukları: Hezeyanlar (Sanrılar)",
+   "subtitle": "Gerçeğe uymayan sarsılmaz inançlar, bizar sanrılar ve Schneider birinci sıra hezeyanları.",
+   "badge": "Düşünce İçeriği ve Hezeyanlar",
+   "bolum": "4",
+   "pdfSayfalari": [
+    27,
+    29
+   ],
+   "kaynakSayfa": [
+    27,
+    28,
+    29
+   ],
+   "bilgi": [
+    5
+   ],
+   "isCheckpoint": false,
+   "synthesisNarrative": "Hezeyan (sanrı); gerçeğe uymayan, mantıksal kanıtlarla ve aksini gösteren verilerle değiştirilemeyen sarsılmaz yanlış inanışlardır. Düşünce içeriğindeki hezeyanlar şu temel semiyolojik tiplerde somutlaşır:\n\n- **Bizar Hezeyan:** Kişinin ait olduğu kültür içinde dahi gerçekleşmesi fiziksel ve mantıksal olarak imkânsız olan sanrılardır (iç organların uzaylılarca çalınması gibi).\n- **Tematik Hezeyanlar:** Grandiyöz (büyüklük, peygamberlik), perseküsyon (kötülük görme, takip edilme), referans (alınma; televizyondaki haberlerden şahsi mesaj çıkarma), erotomanik (üst düzey birinin aşık olduğuna inanma), kıskançlık (eşinin aldattığı inancı), somatik (bedensel hastalık/çürüme sanrısı), mignon (gerçek anne-babasının başkası/soylu olduğuna inanma) ve nihilistik (yokluk, ölmüş olduğuna inanma).\n- **Schneider Hezeyanları:** Şizofrenide karakteristik birinci sıra hezeyanlardır; düşüncelerin zihinden çekilmesi, insanların düşüncelerini okuması, zihne yabancı düşünce sokulması ve düşüncelerin çevreye yayınlanması tablolarını kapsar.\n\n> [!IMPORTANT]\n> Depresyonda suçluluk veya günahkârlık hezeyanları duyguduruma uygunken; depresyonda büyüklük iddiası duygudurumla uyumsuzdur.",
+   "content": "Hezeyan (sanrı); gerçeğe uymayan, mantıksal kanıtlarla ve aksini gösteren verilerle değiştirilemeyen sarsılmaz yanlış inanışlardır. Düşünce içeriğindeki hezeyanlar şu temel semiyolojik tiplerde somutlaşır:\n\n- **Bizar Hezeyan:** Kişinin ait olduğu kültür içinde dahi gerçekleşmesi fiziksel ve mantıksal olarak imkânsız olan sanrılardır (iç organların uzaylılarca çalınması gibi).\n- **Tematik Hezeyanlar:** Grandiyöz (büyüklük, peygamberlik), perseküsyon (kötülük görme, takip edilme), referans (alınma; televizyondaki haberlerden şahsi mesaj çıkarma), erotomanik (üst düzey birinin aşık olduğuna inanma), kıskançlık (eşinin aldattığı inancı), somatik (bedensel hastalık/çürüme sanrısı), mignon (gerçek anne-babasının başkası/soylu olduğuna inanma) ve nihilistik (yokluk, ölmüş olduğuna inanma).\n- **Schneider Hezeyanları:** Şizofrenide karakteristik birinci sıra hezeyanlardır; düşüncelerin zihinden çekilmesi, insanların düşüncelerini okuması, zihne yabancı düşünce sokulması ve düşüncelerin çevreye yayınlanması tablolarını kapsar.\n\n> [!IMPORTANT]\n> Depresyonda suçluluk veya günahkârlık hezeyanları duyguduruma uygunken; depresyonda büyüklük iddiası duygudurumla uyumsuzdur.",
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Schneider hezeyanları (düşünce çekilmesi, okunması, sokulması ve yayılması) şizofreni için tipik birinci sıra belirtilerdir.",
+    "📌 [SINAV SPOTU] Mignon hezeyanında kişi gerçek anne-babasının başkası veya soylu olduğuna, nihilistik hezeyanda ise bizzat öldüğüne ve yok olduğuna inanır."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Hezeyan (Sanrı)",
+     "explanation": "Kişinin zekası ve kültürel geçmişiyle bağdaşmayan, mantıksal ikna ile sarsılamayan yanlış ve gerçek dışı inançlardır."
+    },
+    {
+     "term": "Bizar Hezeyan",
+     "explanation": "İçinde bulunulan toplum ve fiziksel evren kuralları gereği gerçekleşmesi imkansız olan saçma sanrısal inançlardır."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-9-1",
+     "front": "Schneider'in şizofreni için tanımladığı birinci sıra düşünce içeriği hezeyanları nelerdir?",
+     "back": "Düşüncelerin zihinden çekilmesi, düşüncelerin okunması, zihne düşünce sokulması ve düşüncelerin dışarıya yayınlanmasıdır."
+    },
+    {
+     "id": "fc-9-2",
+     "front": "Referans (alınma) hezeyanı ile perseküsyon (kötülük görme) hezeyanı arasındaki fark nedir?",
+     "back": "Referansta kişi ilgisiz olaylardan kendisine yönelik gizli anlam çıkarır; perseküsyonda ise başkalarınca takip edildiğine ve kötülük göreceğine inanır."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatrik Semiyoloji-3.SINIF.pdf",
+    "startPage": 27,
+    "endPage": 29,
+    "primaryPage": 28,
+    "citation": "Sayfa 27–29 · Kurul 2 Psikiyatri · Psikiyatrik Semiyoloji"
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Şizofreni tanılı bir hastanın 'Radyo vericileri aracılığıyla aklımdaki tüm fikirler zorla kafamdan çekilip alınıyor ve televizyondan herkese duyuruluyor' şeklindeki sanrısı hangi Schneider hezeyan grubuna girer?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Düşüncelerin çekilmesi ve yayılması",
+       "isCorrect": true,
+       "explanation": "Düşüncelerin çekilmesi ve yayılması, zihindeki düşüncelerin dış güçlerce çalındığı ve çevreye yayınlandığı inancıdır. Şizofrenide sınır kaybını gösteren tipik Schneider birinci sıra sanrılarıdır."
+      },
+      {
+       "key": "B",
+       "text": "Mignon hezeyanı",
+       "isCorrect": false,
+       "explanation": "Mignon hezeyanı, kişinin gerçek anne babasının başka veya soylu kişiler olduğuna sarsılmaz biçimde inanmasıdır. Zihinsel düşünce aktarımı ve yayını ile bağlantısı bulunmaz."
+      },
+      {
+       "key": "C",
+       "text": "Erotomanik hezeyan",
+       "isCorrect": false,
+       "explanation": "Erotomanik hezeyan, sosyoekonomik açıdan üst düzey veya ünlü birinin kendisine gizlice aşık olduğu inancıdır. Zihinden düşünce çalınması veya yayını fenomenlerini açıklamaz."
+      },
+      {
+       "key": "D",
+       "text": "Nihilistik hezeyan",
+       "isCorrect": false,
+       "explanation": "Nihilistik hezeyan, bireyin bizzat öldüğüne veya iç organlarının tamamen yok olduğuna inanması durumudur. Düşünce sınırlarının bozulması ve yayınlanması ile ilişkilenmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Hastanın kendi anne babasının başka biri olduğuna ve soylu bir aileden geldiğine inanmasına mignon hezeyan denir.",
+     "maskedTerm": "mignon hezeyan",
+     "hint": "Gerçek ebeveynleri reddedip soylu soybağı iddia etme sanrısı"
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Referans (Alınma) Hezeyanı",
+     "rightTitle": "Perseküsyon (Kötülük Görme) Hezeyanı",
+     "leftPoints": [
+      "Kişi kendisiyle tamamen ilgisiz olaylardan kişisel anlamlar çıkarır.",
+      "Haber bültenindeki spikerin gizli mesajlar verdiğine inanır.",
+      "Çevredeki insanların hareketlerini kendine yönelik imalar sayar."
+     ],
+     "rightPoints": [
+      "Başkalarının kendisine komplo kurup kötülük yapacağına inanır.",
+      "İstihbarat ajanları veya komşularınca zehirleneceğini düşünür.",
+      "Sürekli takip edildiği ve öldürüleceği korkusuyla savunmaya geçer."
+     ]
+    },
+    {
+     "type": "feature_bidding",
+     "title": "Hezeyan Tiplerinde Bizar ve Tematik Ayrımı",
+     "optionA": "Bizar Hezeyan",
+     "optionB": "Duyguduruma Uygun Olmayan Hezeyan",
+     "rounds": [
+      {
+       "feature": "Hastanın beynine uydulardan tel takılarak organlarının marslılarca çalındığına inanması",
+       "correct": "A"
+      },
+      {
+       "feature": "Kültür içinde dahi gerçekleşmesi fiziksel ve mantıksal olarak imkânsız olan düşünce içeriği",
+       "correct": "A"
+      },
+      {
+       "feature": "Ağır çökkün depresyondaki bir hastanın dünyayı kurtaracak büyük bir lider olduğunu iddia etmesi",
+       "correct": "B"
+      },
+      {
+       "feature": "Düşünce içeriğinin hastanın o anki duygusal tonu ve afektiyle taban tabana zıtlık sergilemesi",
+       "correct": "B"
+      },
+      {
+       "feature": "Şizofrenide izlenen zihne düşünce sokulması ve çekilmesi gibi Schneider belirtileri",
+       "correct": "A"
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Nihilistik hezeyan ile somatik hezeyan arasındaki semiyolojik fark nedir?",
+     "answer": "Nihilistik hezeyanda kişi bizzat öldüğüne veya bedeninin tamamen yok olduğuna inanırken; somatik hezeyanda bedensel bir hastalığı, işlev bozukluğu veya anormalliği olduğuna inanır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 10,
+   "id": "y25-k2-11-s10",
+   "title": "Düşünce İçeriği: Obsesyonlar, Kompulsiyonlar ve Fobiler",
+   "subtitle": "Saçma bulunmasına rağmen zihinden atılamayan takıntılar, ritüeller ve yersiz korkular.",
+   "badge": "Obsesyon, Kompulsiyon ve Fobi",
+   "bolum": "4",
+   "pdfSayfalari": [
+    30,
+    31
+   ],
+   "kaynakSayfa": [
+    30,
+    31
+   ],
+   "bilgi": [
+    5,
+    6
+   ],
+   "isCheckpoint": false,
+   "synthesisNarrative": "Düşünce içeriğinin diğer önemli bileşenleri obsesyonlar ve fobilerdir:\n\n- **Obsesyon (Saplantı):** Kişiye saçma veya mantıksız gelmesine rağmen zihninden atamadığı, irade dışı gelen, yoğun sıkıntı yaratan tekrarlayıcı düşünce, dürtü veya imgelerdir. Kirlilik, zarar verme, sayma, simetri ve cinsel obsesyonlar en yaygın tiplerdir.\n- **Kompulsiyon (Zorlantı):** Obsesyonun yarattığı anksiyete ve sıkıntıyı gidermek veya korkulan bir olayı önlemek amacıyla yapılan yineleyici motor veya zihinsel eylemlerdir (ellerin defalarca yıkanması, kilitlerin kontrol edilmesi gibi).\n- **Fobiler:** Ortamda somut ve gerçek bir tehlike olmamasına rağmen yaşanan yersiz, aşırı ve panik derecesinde korkulardır. Özgül fobiler (hayvan, kan-enjeksiyon-yara, yükseklik, klostrofobi) ve agorafobi yanında; sosyal fobide toplum içinde küçük düşme veya rezil olma korkusuyla kaçınma davranışları gelişir.\n\n> [!NOTE]\n> Obsesyonda hasta düşüncesinin mantıksızlığının farkındadır (egodistonik), hezeyanda ise sarsılmaz bir gerçeklik inancı mevcuttur.",
+   "content": "Düşünce içeriğinin diğer önemli bileşenleri obsesyonlar ve fobilerdir:\n\n- **Obsesyon (Saplantı):** Kişiye saçma veya mantıksız gelmesine rağmen zihninden atamadığı, irade dışı gelen, yoğun sıkıntı yaratan tekrarlayıcı düşünce, dürtü veya imgelerdir. Kirlilik, zarar verme, sayma, simetri ve cinsel obsesyonlar en yaygın tiplerdir.\n- **Kompulsiyon (Zorlantı):** Obsesyonun yarattığı anksiyete ve sıkıntıyı gidermek veya korkulan bir olayı önlemek amacıyla yapılan yineleyici motor veya zihinsel eylemlerdir (ellerin defalarca yıkanması, kilitlerin kontrol edilmesi gibi).\n- **Fobiler:** Ortamda somut ve gerçek bir tehlike olmamasına rağmen yaşanan yersiz, aşırı ve panik derecesinde korkulardır. Özgül fobiler (hayvan, kan-enjeksiyon-yara, yükseklik, klostrofobi) ve agorafobi yanında; sosyal fobide toplum içinde küçük düşme veya rezil olma korkusuyla kaçınma davranışları gelişir.\n\n> [!NOTE]\n> Obsesyonda hasta düşüncesinin mantıksızlığının farkındadır (egodistonik), hezeyanda ise sarsılmaz bir gerçeklik inancı mevcuttur.",
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Obsesyon kişiye saçma gelmesine rağmen zihinden atılamayan düşünce iken, kompulsiyon bu düşünceyi gidermek için yapılan eylemdir.",
+    "📌 [SINAV SPOTU] Sosyal fobide temel patoloji başkalarının yanında küçük düşme, küçümsenme veya beğenilmeme korkusuyla sosyal ortamlardan kaçınmaktır."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Obsesyon (Saplantı)",
+     "explanation": "Kişiye saçma gelmesine karşın iradesi dışında zihne giren ve yoğun sıkıntı doğuran yineleyici düşünce ve dürtülerdir."
+    },
+    {
+     "term": "Kompulsiyon (Zorlantı)",
+     "explanation": "Obsesif düşüncelerin yarattığı yoğun bunaltı ve anksiyeteyi düşürmek amacıyla gerçekleştirilen ritüelistik yineleyici eylemlerdir."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-10-1",
+     "front": "Obsesyon ile kompulsiyon arasındaki klinik etkileşim mekanizması nasıldır?",
+     "back": "Obsesif düşünce zihne zorla girerek şiddetli anksiyete doğurur; hasta bu kaygıyı yatıştırmak için kompulsif eylemi icra eder."
+    },
+    {
+     "id": "fc-10-2",
+     "front": "Sosyal fobi tablosunda kaçınma davranışını besleyen temel bilişsel endişe nedir?",
+     "back": "Topluluk önünde rezil olma, küçümsenme, beğenilmeme veya hata yaparak alay konusu olma korkusudur."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatrik Semiyoloji-3.SINIF.pdf",
+    "startPage": 30,
+    "endPage": 31,
+    "primaryPage": 30,
+    "citation": "Sayfa 30–31 · Kurul 2 Psikiyatri · Psikiyatrik Semiyoloji"
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sürekli olarak ellerinin kirli olduğunu ve mikrop kaptığını düşünerek yoğun kaygı yaşayan ve bu kaygıyı yatıştırmak için günde elli kez ellerini yıkayan bir hastada 'ellerini yıkama eylemi' semiyolojik olarak nasıl adlandırılır?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Kompulsiyon",
+       "isCorrect": true,
+       "explanation": "Kompulsiyon, obsesif düşüncelerin zihinde doğurduğu yoğun sıkıntı ve anksiyeteyi düşürmek amacıyla icra edilen yineleyici eylemlerdir. El yıkama eylemi temizlik takıntısını yatıştıran klasik bir zorlantıdır."
+      },
+      {
+       "key": "B",
+       "text": "Obsesyon",
+       "isCorrect": false,
+       "explanation": "Obsesyon, kişinin iradesi dışında zihnine giren ve saçma olduğunu bilmesine karşın engelleyemediği yineleyici düşüncedir. Somut motor eylemi değil, zihindeki bilişsel takıntıyı tanımlar."
+      },
+      {
+       "key": "C",
+       "text": "Fobi",
+       "isCorrect": false,
+       "explanation": "Fobi, somut bir tehlike bulunmamasına rağmen belirli nesne veya durumlara karşı duyulan orantısız korkudur. Anksiyeteyi yatıştırmaya yönelik ritüelistik davranışları ifade etmez."
+      },
+      {
+       "key": "D",
+       "text": "Hezeyan",
+       "isCorrect": false,
+       "explanation": "Hezeyan, aksine kanıtlarla değiştirilemeyen sarsılmaz gerçek dışı düşünce içeriği patolojisidir. Hastanın mantıksız bularak kurtulmaya çalıştığı ritüelistik temizlik davranışlarını kapsamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kişiye saçma gelmesine karşın durduramadığı düşüncelere obsesyon, bu düşünceleri gidermek için yapılan eylemlere ise kompulsiyon denir.",
+     "maskedTerm": "kompulsiyon",
+     "hint": "Obsesif kaygıyı azaltmaya dönük tekrarlayıcı motor eylem"
+    },
+    {
+     "type": "venn_grid",
+     "title": "Obsesyon ve Fobi Karşılaştırması",
+     "labelA": "Obsesyon",
+     "labelB": "Fobi",
+     "items": [
+      {
+       "criterion": "Zihne zorla giren ve kişiye saçma gelen yineleyici düşünce veya dürtüler olma",
+       "correct": "A"
+      },
+      {
+       "criterion": "Yarattığı kaygıyı yatıştırmak için kompulsif eylemlerle rahatlama arayışı",
+       "correct": "A"
+      },
+      {
+       "criterion": "Belirli bir nesne, durum veya sosyal ortamla karşılaşıldığında tetiklenen yersiz aşırı korku",
+       "correct": "B"
+      },
+      {
+       "criterion": "Korkulan durum veya ortamdan kaçınma davranışı sergilenmesi",
+       "correct": "B"
+      },
+      {
+       "criterion": "Kişinin yaşadığı durumun abartılı veya yersiz olduğunun farkında olması",
+       "correct": "both"
+      },
+      {
+       "criterion": "Kişinin zihnindeki düşüncelerin başkalarınca okunduğuna kesin inanması",
+       "correct": "neither"
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Fobiler ve Sosyal Fobi Semiyolojisi",
+     "question": "Fobik bozukluklar ve semiyolojik özellikleri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "items": [
+      {
+       "text": "Özgül fobiler hayvan tipi, doğal olaylar, kan-enjeksiyon-yara ve durumsal fobiler gibi alt gruplara ayrılır.",
+       "isLie": false,
+       "explanation": "Ders notunda özgül fobiler bu dört temel klinik alt sınıfta açıkça listelenmiştir."
+      },
+      {
+       "text": "Sosyal fobide kişi toplum içinde rezil olma veya küçümsenme korkusuyla toplulukta yemek yeme ve konuşmaktan kaçınır.",
+       "isLie": false,
+       "explanation": "Sosyal fobi başkalarınca olumsuz değerlendirilme ve küçümsenme korkusuna dayalı belirgin kaçınmalarla seyreder."
+      },
+      {
+       "text": "Fobik hastalar korkularının tamamen mantıklı ve orantılı olduğuna inanarak hezeyan düzeyinde savunurlar.",
+       "isLie": true,
+       "explanation": "Fobide kişi tehlikenin somut olmadığını ve korkusunun aşırı olduğunu bilir; sanrısal bir inanç söz konusu değildir."
+      },
+      {
+       "text": "Agorafobi ve klostrofobi klinik pratikte en sık karşılaşılan durumsal fobi tabloları arasındadır.",
+       "isLie": false,
+       "explanation": "Kapalı alan korkusu olan klostrofobi ve kaçışın güç olduğu alan korkusu olan agorafobi sık görülen tablolardır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Obsesyon ile hezeyan (sanrı) arasındaki en belirleyici temel semiyolojik ayrım nedir?",
+     "answer": "Obsesyonda kişi düşüncesinin saçma veya anlamsız olduğunun bilincindedir ve onunla mücadele eder (egodistonik); hezeyanda ise kişi yanlış inancının mutlak gerçek olduğuna sarsılmaz biçimde inanır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 11,
+   "id": "y25-k2-11-s11",
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Algı ve Düşünce Bozuklukları",
+   "subtitle": "Dikkat, algı modaliteleri, düşünce akış sapmaları ve düşünce içeriği patolojilerinin kapsamlı pekiştirmesi.",
+   "badge": "Pekiştirme ve Klinik Karar",
+   "bolum": "4",
+   "pdfSayfalari": [
+    14,
+    31
+   ],
+   "kaynakSayfa": [
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+   ],
+   "bilgi": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "isCheckpoint": true,
+   "checkpointNumber": 2,
+   "synthesisNarrative": "Bu tekrar durağında zihnin dikkat, algı ve düşünce alanındaki semiyolojik patolojilerini sentezliyoruz. Dikkatin dış uyaranlara savrulması manide distraktibilite, tehlike beklentisiyle teyakkuz hali ise hipervijilans olarak belirir.\n\n- **Algı Kusurları:** Dış uyaransız ortaya çıkan algılar halüsinasyon, var olanın yanlış yorumlanması ise illüzyondur.\n- **Benlik Algısı:** Kişinin bedenine yabancılaşması depersonalizasyon, çevresine yabancılaşması ise derealizasyondur.\n- **Düşünce Akışı:** Basınçlı konuşma ve lögore çağrışım artışını gösterirken; klang çağrışım ses kafiyelerine dayanır, neolojizmde uydurma sözcükler üretilir.\n- **Düşünce İçeriği:** Gerçek dışı sarsılmaz inançlar hezeyan, saçma bulunup atılamayan takıntılar obsesyon, anksiyeteyi düşüren eylemler ise kompulsiyondur.\n\n> [!IMPORTANT]\n> Schneider birinci sıra hezeyanları (düşünce sokulması, çekilmesi, yayılması) şizofrenide düşünce içeriğinin sınır kaybını belgeler.",
+   "content": "Bu tekrar durağında zihnin dikkat, algı ve düşünce alanındaki semiyolojik patolojilerini sentezliyoruz. Dikkatin dış uyaranlara savrulması manide distraktibilite, tehlike beklentisiyle teyakkuz hali ise hipervijilans olarak belirir.\n\n- **Algı Kusurları:** Dış uyaransız ortaya çıkan algılar halüsinasyon, var olanın yanlış yorumlanması ise illüzyondur.\n- **Benlik Algısı:** Kişinin bedenine yabancılaşması depersonalizasyon, çevresine yabancılaşması ise derealizasyondur.\n- **Düşünce Akışı:** Basınçlı konuşma ve lögore çağrışım artışını gösterirken; klang çağrışım ses kafiyelerine dayanır, neolojizmde uydurma sözcükler üretilir.\n- **Düşünce İçeriği:** Gerçek dışı sarsılmaz inançlar hezeyan, saçma bulunup atılamayan takıntılar obsesyon, anksiyeteyi düşüren eylemler ise kompulsiyondur.\n\n> [!IMPORTANT]\n> Schneider birinci sıra hezeyanları (düşünce sokulması, çekilmesi, yayılması) şizofrenide düşünce içeriğinin sınır kaybını belgeler.",
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Halüsinasyonda dış ortamda hiçbir duyusal uyaran bulunmazken, illüzyonda var olan gerçek uyaran yanlış yorumlanır.",
+    "📌 [SINAV SPOTU] Schneider hezeyanları (düşünce çekilmesi, okunması, sokulması ve yayılması) şizofreni için tipik birinci sıra düşünce içeriği patolojileridir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Derealizasyon",
+     "explanation": "Dış dünyaya, çevreye ve kişilere yönelik yabancılık duygusu; ortamın yapay bir sahne gibi algılanmasıdır."
+    },
+    {
+     "term": "Perseverasyon",
+     "explanation": "Hastanın aynı düşünceyi, sözcüğü veya yanıtı ısrarlı ve uygunsuz biçimde sürekli yinelemesidir."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-11-1",
+     "front": "Halüsinasyon ile hezeyan (sanrı) arasındaki semiyolojik kategori farkı nedir?",
+     "back": "Halüsinasyon bir algı bozukluğu iken (uyaransız duyumsama); hezeyan bir düşünce içeriği bozukluğudur (gerçek dışı sarsılmaz inanç)."
+    },
+    {
+     "id": "fc-11-2",
+     "front": "Obsesyon ile hezeyan arasındaki en kritik ayırıcı tanı özelliği nedir?",
+     "back": "Obsesif hasta düşüncesini saçma bulup kurtulmaya çalışır (egodistonik); hezeyanlı hasta ise inancının mutlak gerçek olduğuna kesinlikle emindir."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatrik Semiyoloji-3.SINIF.pdf",
+    "startPage": 14,
+    "endPage": 31,
+    "primaryPage": 27,
+    "citation": "Sayfa 14–31 · Kurul 2 Psikiyatri · Psikiyatrik Semiyoloji"
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Psikiyatrik semiyolojide algı ve düşünce bozukluklarının ayırıcı tanısıyla ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Halüsinasyonda dış uyaran yoktur, illüzyonda ise var olan gerçek uyaran yanlış algılanır",
+       "isCorrect": true,
+       "explanation": "Halüsinasyon hiçbir nesnel dış uyaran bulunmaksızın ortaya çıkan bir algı yaşantısıdır. İllüzyonda ise ortamda mevcut olan fiziksel uyaran yanlış yorumlanarak algılanır."
+      },
+      {
+       "key": "B",
+       "text": "Obsesyonlarda hasta düşüncelerinin mutlak bir gerçek olduğuna sarsılmaz biçimde inanır",
+       "isCorrect": false,
+       "explanation": "Obsesyonlarda kişi düşüncelerini saçma ve anlamsız bulur ancak zihninden uzaklaştıramaz. Mutlak sarsılmaz gerçeklik inancı sanrılara yani hezeyanlara ait temel özelliktir."
+      },
+      {
+       "key": "C",
+       "text": "Klang çağrışımında hasta sadece sözlükte bulunmayan yeni kelimeler uydurarak konuşur",
+       "isCorrect": false,
+       "explanation": "Dilde bulunmayan uydurma yeni kelimeler üretilmesi neolojizm kavramıyla tanımlanır. Klang çağrışımında ise cümleler sadece fonetik kafiye ve ses benzerlikleri üzerinden ilerler."
+      },
+      {
+       "key": "D",
+       "text": "Depersonalizasyonda hasta dış dünyayı yabancı hisseder, kendi bedeninde hiçbir değişim duyumsamaz",
+       "isCorrect": false,
+       "explanation": "Depersonalizasyonda yabancılaşma duygusu doğrudan kişinin kendi bedenine, uzuvlarına ve zihnine yöneliktir. Dış çevrenin ve mekanların yabancılaşması derealizasyon tablosuyla açıklanır."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "title": "Algı ve Düşünce Semiyolojisi Ayırıcı Tanı Tablosu",
+     "tableHeaders": [
+      "Klinik Fenomen",
+      "Temel Semiyolojik Mekanizma",
+      "Ayırt Edici Özellik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "İllüzyon",
+         "isMasked": false
+        },
+        {
+         "text": "Var olan gerçek bir uyarının yanlış algılanmasıdır",
+         "isMasked": true,
+         "hint": "Çarpıtılmış nesnel duyu"
+        },
+        {
+         "text": "Dış ortamda nesnel bir kaynak daima mevcuttur",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Halüsinasyon",
+         "isMasked": false
+        },
+        {
+         "text": "Dış bir uyaran olmaksızın algılama ortaya çıkmasıdır",
+         "isMasked": false
+        },
+        {
+         "text": "Şizofrenide en sık işitme tipinde izlenir",
+         "isMasked": true,
+         "hint": "Varsanıların önde gelen kulağa dönük modalitesi"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Hezeyan (Sanrı)",
+         "isMasked": false
+        },
+        {
+         "text": "Gerçek dışı düşüncelere sarsılmaz biçimde inanmaktır",
+         "isMasked": true,
+         "hint": "Değiştirilemeyen yanlış inanç"
+        },
+        {
+         "text": "Düşünce içeriği alanına ait bir bozukluktur",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "title": "Obsesif-Kompulsif Döngünün Nöropsikiyatrik Mekanizma Zinciri",
+     "steps": [
+      "1. İntrüzif Düşünce: Zihne irade dışı kirlenme veya bulaşma kuşkusu içeren obsesif bir düşünce girer.",
+      "2. Şiddetli Anksiyete: Kişi düşünceyi saçma bulsa da engelleyemez ve yoğun içsel sıkıntı yaşar.",
+      "3. Kompulsif Ritüel: Artan anksiyeteyi düşürmek amacıyla elleri defalarca yıkama kompulsiyonu başlatılır.",
+      "4. Geçici Rahatlama: Eylem tamamlandığında sıkıntı kısa süreliğine yatışır ancak döngü pekişerek kalıcılaşır."
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "prompt": "Aşağıdaki klinik tabloları ait oldukları bilişsel muayene alanıyla eşleştiriniz.",
+     "leftCategory": "Algı Bozuklukları",
+     "rightCategory": "Düşünce İçeriği Bozuklukları",
+     "cards": [
+      {
+       "text": "Uyaran olmaksızın kulağa gaipten sesler gelmesi",
+       "category": "left"
+      },
+      {
+       "text": "Rüzgarda sallanan perdelerin bir hırsız sanılması",
+       "category": "left"
+      },
+      {
+       "text": "Kişinin kendi bedenine ve uzuvlarına yabancılaşması",
+       "category": "left"
+      },
+      {
+       "text": "Aklındaki düşüncelerin televizyondan yayınlandığı inancı",
+       "category": "right"
+      },
+      {
+       "text": "Kirlenme kuşkusuyla sürekli zihinsel ritüel üretilmesi",
+       "category": "right"
+      },
+      {
+       "text": "Eşinin kendisini aldattığına dair sarsılmaz sanrı besleme",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "Polikliniğe getirilen 24 yaşındaki hasta, komşularının duvarların arkasından beynine yabancı düşünceler soktuğunu ve bu düşüncelerin sokaktaki insanlar tarafından duyulduğunu ifade etmektedir. Ancak ortamda hiçbir fısıltı veya ses işitmediğini belirtmektedir.",
+     "options": [
+      {
+       "key": "A",
+       "text": "Tabloyu Schneider tipi düşünce sokulması ve yayılması hezeyanları olarak tanımlayıp antipsikotik sağaltım planlamak",
+       "isCorrect": true,
+       "feedback": "Hastanın zihnine dışarıdan düşünce sokulduğu ve yayınlandığı inancı şizofreni için tipik Schneider birinci sıra düşünce içeriği hezeyanıdır."
+      },
+      {
+       "key": "B",
+       "text": "Durumu basit bir illüzyon kabul ederek hastaya çevredeki duvar desenlerine dikkat etmemesini söylemek",
+       "isCorrect": false,
+       "feedback": "İllüzyon gerçek bir nesnel uyarının yanlış algılanmasıdır; burada ise hastada sarsılmaz sanrısal bir düşünce içeriği bozukluğu mevcuttur."
+      },
+      {
+       "key": "C",
+       "text": "Belirtileri sadece kirlilik obsesyonu sayarak kompulsif el yıkama egzersizleri önermek",
+       "isCorrect": false,
+       "feedback": "Obsesyonda hasta düşüncesinin mantıksızlığının farkındadır; burada düşünce sokulmasına dair sarsılmaz bir hezeyan tablosu söz konusudur."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 12,
+   "id": "y25-k2-11-s12",
+   "title": "Yargılama, Gerçeği Değerlendirme Yetisi ve İçgörü",
+   "subtitle": "Muhakeme yeteneği, soyutlama kapasitesi, dış gerçeklik ayrımı ve hastalık farkındalığı.",
+   "badge": "Yargılama ve İçgörü",
+   "bolum": "5",
+   "pdfSayfalari": [
+    32,
+    34
+   ],
+   "kaynakSayfa": [
+    32,
+    33,
+    34
+   ],
+   "bilgi": [
+    6,
+    7
+   ],
+   "isCheckpoint": false,
+   "synthesisNarrative": "Bilişsel muayenenin üst düzey bütünleştirici işlevleri yargılama, soyut düşünce, gerçeği değerlendirme yetisi ve içgörüdür:\n\n- **Yargılama Yeteneği:** Kişinin verileri mantıksal bir neden-sonuç veya ilgi bağı içinde bir araya getirebilmesidir. Muayenede 'Yolda bir cüzdan bulsanız ne yaparsınız?' sorusu gibi senaryolarla değerlendirilir.\n- **Soyut Düşünce:** Benzerlik ve farklılıkları ayırt etme, sınıflandırma ve kavramsal soyutlama yetisidir; atasözü yorumlama ('Damlaya damlaya göl olur') sorularıyla muayene edilir. Kronik yıkımlı psikozlarda soyutlama bozulur ve düşünce somutlaşır.\n- **Gerçeği Değerlendirme Yetisi:** Kişinin içsel yaşantıları ile dışsal uyaranları ayırt edebilmesidir; psikozlarda bozulur ve hasta kendi zihinsel kurgularını dış nesnel gerçekler olarak algılar.\n- **İçgörü:** Kişinin kendi bilinçdışı motivasyonlarının veya hastalığının ve belirtilerinin farkında olma derecesidir; psikotik tablolarda sıklıkla kaybolur.\n\n> [!IMPORTANT]\n> Gerçeği değerlendirme yetisinin bozulması psikoza özgü temel tanısal kriterdir; hasta içsel düşüncelerini dış dünyanın gerçeği sanır.",
+   "content": "Bilişsel muayenenin üst düzey bütünleştirici işlevleri yargılama, soyut düşünce, gerçeği değerlendirme yetisi ve içgörüdür:\n\n- **Yargılama Yeteneği:** Kişinin verileri mantıksal bir neden-sonuç veya ilgi bağı içinde bir araya getirebilmesidir. Muayenede 'Yolda bir cüzdan bulsanız ne yaparsınız?' sorusu gibi senaryolarla değerlendirilir.\n- **Soyut Düşünce:** Benzerlik ve farklılıkları ayırt etme, sınıflandırma ve kavramsal soyutlama yetisidir; atasözü yorumlama ('Damlaya damlaya göl olur') sorularıyla muayene edilir. Kronik yıkımlı psikozlarda soyutlama bozulur ve düşünce somutlaşır.\n- **Gerçeği Değerlendirme Yetisi:** Kişinin içsel yaşantıları ile dışsal uyaranları ayırt edebilmesidir; psikozlarda bozulur ve hasta kendi zihinsel kurgularını dış nesnel gerçekler olarak algılar.\n- **İçgörü:** Kişinin kendi bilinçdışı motivasyonlarının veya hastalığının ve belirtilerinin farkında olma derecesidir; psikotik tablolarda sıklıkla kaybolur.\n\n> [!IMPORTANT]\n> Gerçeği değerlendirme yetisinin bozulması psikoza özgü temel tanısal kriterdir; hasta içsel düşüncelerini dış dünyanın gerçeği sanır.",
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Gerçeği değerlendirme yetisi kişinin içsel ve dışsal uyaranları ayırt edebilme yeteneğidir ve psikozlarda temel olarak bozulur.",
+    "📌 [SINAV SPOTU] Soyut düşünce yeteneği atasözü yorumlama ve benzerlik bulma ile muayene edilir; kronik psikotik yıkımda düşünce somutlaşır."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Gerçeği Değerlendirme",
+     "explanation": "Bireyin kendi iç dünyasında ürettiği düşünce ve tasarımlar ile dış fiziksel gerçekliği birbirinden ayırt edebilme yetisidir."
+    },
+    {
+     "term": "İçgörü",
+     "explanation": "Hastanın kendi yaşadığı psikolojik ve bilişsel belirtilerin bir hastalıktan kaynaklandığını kavrayabilme derecesidir."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-12-1",
+     "front": "Psikiyatrik muayenede gerçeği değerlendirme yetisinin bozulması ne anlama gelir?",
+     "back": "Kişi içsel düşünce ve duygularını dış dünyanın nesnel gerçekliği olarak algılar; bu durum psikozun temel tanısal göstergesidir."
+    },
+    {
+     "id": "fc-12-2",
+     "front": "Yargılama yeteneği ile soyut düşünce pratikte hangi standart sorularla muayene edilir?",
+     "back": "Yargılama 'Yolda para dolu bir cüzdan bulsanız ne yaparsınız?' sorusuyla; soyut düşünce ise atasözlerinin mecazi anlamları sorularak değerlendirilir."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatrik Semiyoloji-3.SINIF.pdf",
+    "startPage": 32,
+    "endPage": 34,
+    "primaryPage": 33,
+    "citation": "Sayfa 32–34 · Kurul 2 Psikiyatri · Psikiyatrik Semiyoloji"
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Psikiyatrik muayenede hastanın içsel duygu ve düşünceleri ile dışsal çevresel uyaranları ayırt edebilme kapasitesi hangi semiyolojik yeti olarak adlandırılır?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Gerçeği değerlendirme yetisi",
+       "isCorrect": true,
+       "explanation": "Gerçeği değerlendirme yetisi, kişinin içsel zihinsel tasarımları ile dış nesnel dünyayı birbirinden ayırt edebilmesini sağlar. Psikotik tablolarda bu yeti bozulur ve düşünceler gerçek sanılır."
+      },
+      {
+       "key": "B",
+       "text": "Yargılama yetisi",
+       "isCorrect": false,
+       "explanation": "Yargılama yetisi, veriler arasında mantıksal neden-sonuç bağları kurarak amaca uygun rasyonel kararlar verebilme becerisidir. İçsel ve dışsal uyaranların sınır ayrımını kapsamaz."
+      },
+      {
+       "key": "C",
+       "text": "Kayıt belleği",
+       "isCorrect": false,
+       "explanation": "Kayıt belleği, öğretilen bilginin veya nesnelerin o anda zihinde tutulup hemen tekrarlanabilmesi kapasitesidir. Gerçeklik testi ve uyaran ayrımı işlevinden farklı bir alandır."
+      },
+      {
+       "key": "D",
+       "text": "Distraktibilite",
+       "isCorrect": false,
+       "explanation": "Distraktibilite, dikkatin dış uyaranlara kayarak kolaylıkla dağılması durumunu tanımlayan dikkat kusurudur. Bilişsel gerçeklik testi mekanizmaları ile bağlantısı bulunmaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kişinin içsel ve dışsal uyaranları ayırt edebilme yeteneğidir olarak tanımlanan gerçeği değerlendirme yetisi psikozlarda bozulur.",
+     "maskedTerm": "gerçeği değerlendirme",
+     "hint": "İçsel zihinsel tasarımları dış dünyadan ayırt etme kapasitesi"
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Soyut Düşünce Muayenesi",
+     "rightTitle": "Yargılama Muayenesi",
+     "leftPoints": [
+      "Atasözlerinin simgesel ve mecazi anlamları sorgulanır.",
+      "Benzer nesneler arasındaki ortak kavramsal bağlar araştırılır.",
+      "Kronik psikozlarda ve organik hasarlarda somutlaşarak bozulur."
+     ],
+     "rightPoints": [
+      "Yolda içi para dolu bir cüzdan bulma senaryosu sorulur.",
+      "Neden-sonuç ilişkileri ve toplumsal mantık kurgusu test edilir.",
+      "Akılcı ve amaca uygun karar verme yeteneği değerlendirilir."
+     ]
+    },
+    {
+     "type": "feature_bidding",
+     "title": "Üst Bilişsel İşlevlerde Yargılama ve İçgörü Ayrımı",
+     "optionA": "Yargılama Yetisi",
+     "optionB": "İçgörü Düzeyi",
+     "rounds": [
+      {
+       "feature": "Hastaya 'Sinemada yangın çıktığını görseniz ne yaparsınız?' senaryosu verilerek mantıksal tutarlılığın ölçülmesi",
+       "correct": "A"
+      },
+      {
+       "feature": "Çeşitli seçenekler arasında neden-sonuç bağı kurarak toplum için en rasyonel davranışın seçilmesi",
+       "correct": "A"
+      },
+      {
+       "feature": "Hastanın yaşadığı halüsinasyon ve sanrıların bir hastalıktan kaynaklandığını idrak edebilmesi",
+       "correct": "B"
+      },
+      {
+       "feature": "Bireyin kendi eylemlerinin ardında yatan içsel ve bilinçdışı motivasyonların farkında olma derecesi",
+       "correct": "B"
+      },
+      {
+       "feature": "OKB hastasının temizlik ritüellerinin anlamsız bir rahatsızlık olduğunu hekime ifade edebilmesi",
+       "correct": "B"
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Psikiyatrik semiyolojide soyut düşünce yeteneği pratikte nasıl muayene edilir ve bozulduğunda düşünce nasıl bir hal alır?",
+     "answer": "Atasözlerinin derin mecazi anlamları veya nesneler arasındaki kavramsal benzerlikler sorularak muayene edilir; bozulduğunda düşünce mecazı kavrayamaz ve tamamen somut (konkret) bir yapıya bürünür."
+    }
+   ]
+  },
+  {
+   "slideNumber": 13,
+   "id": "y25-k2-11-s13",
+   "title": "Duygudurum (Mood), Afekt Tipleri ve Aleksitimi",
+   "subtitle": "Sürekli hissedilen duygusal iklim, anlık afekt yansımaları ve duyguları tanımlayamama kusuru.",
+   "badge": "Duygulanım ve Afekt",
+   "bolum": "5",
+   "pdfSayfalari": [
+    35,
+    37
+   ],
+   "kaynakSayfa": [
+    35,
+    36,
+    37
+   ],
+   "bilgi": [
+    7,
+    8
+   ],
+   "isCheckpoint": false,
+   "synthesisNarrative": "Duygulanım muayenesinde duygudurum ve afekt temel iki boyuttur:\n\n- **Duygudurum (Mood):** Kişinin yaygın ve sürekli olarak belirli bir zaman diliminde kendini hissedişidir (duygusal iklimdir). Çökme veya yükselmenin olmadığı normal dengeye ötimi denir. Aşırı neşe ve özgüven artışı yükselmiş duygudurum (mani), keder ve ümitsizlik çökkün duygudurum (depresyon), çabuk öfkelenme ise irritabl duygudurumdur.\n- **Afekt:** Yaşananlara ve düşünülenlere eşlik eden, dışarıdan gözlenebilen anlık duygulanımdır (hava durumudur). Konuşmayla uyumluysa uygun afekt, tezat oluşturuyorsa uygunsuz afekt (cenaze anlatırken kahkaha atma), dış uyarandan bağımsız hızla değişiyorsa değişken (labil) afekttir.\n- **Özel Belirtiler:** Kişinin kendi duygularını fark edip tanımlayamaması aleksitimi; içsel tehlike beklentisi anksiyete; motor huzursuzluğun eşlik ettiği anksiyete ajitasyon; aynı anda iki zıt duyguyu bir arada hissetme ise ambivalanstır.\n\n> [!NOTE]\n> Duygudurum haftalar ve aylar süren sürekli iklim iken; afekt hastanın o andaki yüz ifadesine ve ses tonuna yansıyan hava durumudur.",
+   "content": "Duygulanım muayenesinde duygudurum ve afekt temel iki boyuttur:\n\n- **Duygudurum (Mood):** Kişinin yaygın ve sürekli olarak belirli bir zaman diliminde kendini hissedişidir (duygusal iklimdir). Çökme veya yükselmenin olmadığı normal dengeye ötimi denir. Aşırı neşe ve özgüven artışı yükselmiş duygudurum (mani), keder ve ümitsizlik çökkün duygudurum (depresyon), çabuk öfkelenme ise irritabl duygudurumdur.\n- **Afekt:** Yaşananlara ve düşünülenlere eşlik eden, dışarıdan gözlenebilen anlık duygulanımdır (hava durumudur). Konuşmayla uyumluysa uygun afekt, tezat oluşturuyorsa uygunsuz afekt (cenaze anlatırken kahkaha atma), dış uyarandan bağımsız hızla değişiyorsa değişken (labil) afekttir.\n- **Özel Belirtiler:** Kişinin kendi duygularını fark edip tanımlayamaması aleksitimi; içsel tehlike beklentisi anksiyete; motor huzursuzluğun eşlik ettiği anksiyete ajitasyon; aynı anda iki zıt duyguyu bir arada hissetme ise ambivalanstır.\n\n> [!NOTE]\n> Duygudurum haftalar ve aylar süren sürekli iklim iken; afekt hastanın o andaki yüz ifadesine ve ses tonuna yansıyan hava durumudur.",
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Aleksitimi kişinin kendi duygularının farkına varmasında ve bunları tanımlamasında güçlük çekmesi durumudur.",
+    "📌 [SINAV SPOTU] Ambivalans aynı anda aynı nesne veya duruma karşı zıt yönelimli iki duygulanımın birlikte hissedilmesidir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Aleksitimi",
+     "explanation": "Bireyin kendi hissettiği duygusal durumları tanıyamaması, adlandıramaması ve sözel sözcüklerle ifade edememesidir."
+    },
+    {
+     "term": "Ambivalans",
+     "explanation": "Aynı nesneye, kişiye veya duruma karşı sevgi-nefret gibi iki zıt duygulanımın aynı anda birlikte yaşanmasıdır."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-13-1",
+     "front": "Duygudurum (mood) ile afekt arasındaki klinik ve zamansal fark nedir?",
+     "back": "Duygudurum haftalar-aylar süren yaygın ve sürekli duygusal iklim iken; afekt o anki duruma eşlik eden dışarıdan gözlenebilir anlık hava durumudur."
+    },
+    {
+     "id": "fc-13-2",
+     "front": "Uygunsuz afekt sergileyen bir hastanın tipik klinik davranış örneği nedir?",
+     "back": "Çok sevdiği bir yakınının feci ölümünü yüzünde neşeli bir tebessüm veya kahkaha ile anlatmasıdır."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatrik Semiyoloji-3.SINIF.pdf",
+    "startPage": 35,
+    "endPage": 37,
+    "primaryPage": 36,
+    "citation": "Sayfa 35–37 · Kurul 2 Psikiyatri · Psikiyatrik Semiyoloji"
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kişinin kendi içsel duygusal yaşantılarının farkına varmakta, duygularını adlandırmakta ve bunları sözcüklerle ifade etmekte belirgin güçlük çekmesi semiyolojide hangi terimle ifade edilir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Aleksitimi",
+       "isCorrect": true,
+       "explanation": "Aleksitimi, bireyin kendi hissettiği duygulanımları tanıyamaması, adlandıramaması ve bunları sözcüklerle dışa vuramaması durumudur. Duygusal farkındalık ve sözel ifade güçlüğü ile karakterizedir."
+      },
+      {
+       "key": "B",
+       "text": "Ambivalans",
+       "isCorrect": false,
+       "explanation": "Ambivalans, aynı nesneye, kişiye veya duruma karşı aynı anda iki zıt duygulanımın birlikte hissedilmesidir. Duyguları tanıyamama kusurundan farklı bir duygusal kutuplaşmadır."
+      },
+      {
+       "key": "C",
+       "text": "Ötimi",
+       "isCorrect": false,
+       "explanation": "Ötimi, duygudurumda anormal bir yükselme veya patolojik bir çökmenin bulunmadığı dengeli aralıktır. Sağlıklı duygusal dengeyi ifade eden fizyolojik bir tanımlamadır."
+      },
+      {
+       "key": "D",
+       "text": "Ajitasyon",
+       "isCorrect": false,
+       "explanation": "Ajitasyon, motor huzursuzluğun ve aşırı gergin hareketliliğin eşlik ettiği şiddetli içsel anksiyete tablosudur. Duyguları adlandıramama yetisiyle ilişkili bir semiyolojik antite değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kişinin aynı anda aynı konuyla ilgili zıt yönelimli iki duygulanımı birlikte hissetmesine ambivalans adı verilir.",
+     "maskedTerm": "ambivalans",
+     "hint": "Bir şeyi aynı anda hem sevip hem nefret etme hali"
+    },
+    {
+     "type": "interactive_table",
+     "title": "Duygulanım ve Afekt Çeşitleri Tablosu",
+     "tableHeaders": [
+      "Afekt / Belirti Türü",
+      "Klinik Tanım",
+      "Tipik Davranışsal Görünüm"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Uygunsuz Afekt",
+         "isMasked": false
+        },
+        {
+         "text": "Konuşma içeriği ile dışa vuran duygulanım arasında uyumsuzluk olmasıdır",
+         "isMasked": true,
+         "hint": "Sözler ve yüz ifadesindeki tezat"
+        },
+        {
+         "text": "Yakın bir akrabanın vefatını güler yüzle anlatma",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Değişken (Labil) Afekt",
+         "isMasked": false
+        },
+        {
+         "text": "Dış uyaranlardan bağımsız olarak afektte ani ve belirgin dalgalanmalar",
+         "isMasked": false
+        },
+        {
+         "text": "Gülerken aniden hiçbir neden yokken hıçkırarak ağlamaya başlama",
+         "isMasked": true,
+         "hint": "Dalgalı ve oynak duygu patlaması"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Ajitasyon",
+         "isMasked": false
+        },
+        {
+         "text": "Motor huzursuzluğun eşlik ettiği anksiyete halidir",
+         "isMasked": true,
+         "hint": "Kıpır kıpır gerginlik devinimi"
+        },
+        {
+         "text": "Yerinde duramama, sürekli bacak sallama ve volta atma",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Duygudurum ve Afekt Semiyolojisi",
+     "question": "Duygudurum ve afekt kavramları ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "items": [
+      {
+       "text": "Duygudurum kişinin yaygın ve sürekli olarak belirli bir zaman diliminde kendini hissedişidir.",
+       "isLie": false,
+       "explanation": "Ders notunda duygudurum sürekli ve yaygın içsel hissediş olarak afektten ayrılmıştır."
+      },
+      {
+       "text": "Ötimi, duygudurumda anormal bir çökme veya aşırı yükselmenin bulunmadığı sağlıklı denge halidir.",
+       "isLie": false,
+       "explanation": "Ötimi terimi normal aralıktaki dengeli duygudurum tablosunu tanımlar."
+      },
+      {
+       "text": "Aleksitimi hastalarının kendi duygularını olağanüstü zenginlikte ve şiirsel sözcüklerle ifade edebilmeleridir.",
+       "isLie": true,
+       "explanation": "Tam aksine aleksitimik bireyler kendi duygularının farkına varmakta ve bunları sözcüklerle tanımlamakta belirgin güçlük çekerler."
+      },
+      {
+       "text": "Ambivalans tablosunda birey bir şeyi aynı anda hem isteyip hem de istememek gibi iki zıt duyguyu bir arada yaşar.",
+       "isLie": false,
+       "explanation": "Ambivalans zıt kutuplu duyguların aynı nesneye karşı eşzamanlı hissedilmesidir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Klinik psikiyatride duygudurum (mood) ile afekt arasındaki temel semiyolojik fark nedir?",
+     "answer": "Duygudurum kişinin haftalar veya aylar boyunca hissettiği yaygın ve sürekli duygusal iklim iken; afekt o anda yaşananlara eşlik eden, konuşma ve yüz ifadesine yansıyan dışarıdan gözlenebilir anlık hava durumudur."
+    }
+   ]
+  },
+  {
+   "slideNumber": 14,
+   "id": "y25-k2-11-s14",
+   "title": "Psikomotor Aktivite ve Hareket Bozuklukları (Katatoni, Katalepsi, Distoni)",
+   "subtitle": "Psikomotor yavaşlama ve hızlanma, sertleşmiş hareketsizlik, ani tonus kaybı ve ilaç yan etkileri.",
+   "badge": "Motor Aktivite ve Hareket",
+   "bolum": "6",
+   "pdfSayfalari": [
+    38,
+    40
+   ],
+   "kaynakSayfa": [
+    38,
+    39,
+    40
+   ],
+   "bilgi": [
+    8
+   ],
+   "isCheckpoint": false,
+   "synthesisNarrative": "Psikomotor aktivite ve hareket muayenesi; hastanın genel devinim hızını, istemli eylemlerini ve istemsiz hareket kalıplarını inceler:\n\n- **Hız Değişimleri:** Retardasyon motor aktivitelerin belirgin yavaşlamasıdır (depresyonda tipik); eksitasyon ise çoğunlukla saldırganlığı da içeren aşırı motor taşkınlıktır.\n- **Katatonik Belirtiler:** Katalepsi, kişinin sertleşmiş gövde ve uzuvlarla uzun süre hareketsiz kalmasıdır. Katatonik stuporda hareketler durma noktasına varır; mutizmde ise hasta istemli olarak konuşmaz.\n- **Katapleksi:** Gülme, heyecan veya korku gibi ani duygusal uyaranlarla tetiklenen, kas tonusunun geçici olarak aniden kaybolmasıdır; hasta yere yığılabilir veya başı öne düşer.\n- **İstemsiz Hareketler ve İlaç Etkileri:** Diskinezi istemsiz hareketlerdir; distoni kas grubunun istemsiz spazmıdır; ekopraksi başkalarının hareketini taklit etmektir. Akatizi ise antipsikotiklere bağlı gelişen içsel huzursuzluk ve sürekli hareket etme dürtüsüdür.\n\n> [!IMPORTANT]\n> Katalepsi sertleşmiş gövdeyle uzun süreli hareketsizlik iken; katapleksi heyecanla tetiklenen ani ve geçici kas tonusu kaybıdır.",
+   "content": "Psikomotor aktivite ve hareket muayenesi; hastanın genel devinim hızını, istemli eylemlerini ve istemsiz hareket kalıplarını inceler:\n\n- **Hız Değişimleri:** Retardasyon motor aktivitelerin belirgin yavaşlamasıdır (depresyonda tipik); eksitasyon ise çoğunlukla saldırganlığı da içeren aşırı motor taşkınlıktır.\n- **Katatonik Belirtiler:** Katalepsi, kişinin sertleşmiş gövde ve uzuvlarla uzun süre hareketsiz kalmasıdır. Katatonik stuporda hareketler durma noktasına varır; mutizmde ise hasta istemli olarak konuşmaz.\n- **Katapleksi:** Gülme, heyecan veya korku gibi ani duygusal uyaranlarla tetiklenen, kas tonusunun geçici olarak aniden kaybolmasıdır; hasta yere yığılabilir veya başı öne düşer.\n- **İstemsiz Hareketler ve İlaç Etkileri:** Diskinezi istemsiz hareketlerdir; distoni kas grubunun istemsiz spazmıdır; ekopraksi başkalarının hareketini taklit etmektir. Akatizi ise antipsikotiklere bağlı gelişen içsel huzursuzluk ve sürekli hareket etme dürtüsüdür.\n\n> [!IMPORTANT]\n> Katalepsi sertleşmiş gövdeyle uzun süreli hareketsizlik iken; katapleksi heyecanla tetiklenen ani ve geçici kas tonusu kaybıdır.",
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Katalepsi sertleşmiş gövde ve uzuvlarla uzun süre hareketsiz kalma iken, katapleksi heyecan veya gülmeyle tetiklenen geçici tonus kaybıdır.",
+    "📌 [SINAV SPOTU] Akatizi genellikle antipsikotik kullanımına bağlı ortaya çıkan içsel huzursuzluk, gerginlik ve yerinde duramama tablosudur."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Katalepsi",
+     "explanation": "Hastanın sertleşmiş bir gövde ve uzuv tonusuyla verilen heykelimsi pozisyonlarda uzun süre hareketsiz kalması durumudur."
+    },
+    {
+     "term": "Akatizi",
+     "explanation": "Antipsikotik ilaçların indüklediği, hastanın bacaklarını sabit tutamamasına ve sürekli gezinmesine yol açan motor huzursuzluktur."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-14-1",
+     "front": "Katalepsi ile katapleksi arasındaki semiyolojik ayrım nedir?",
+     "back": "Katalepsi sertleşmiş kaslarla uzun süreli hareketsiz kalma iken; katapleksi ani heyecan veya kahkaha ile kas tonusunun geçici olarak tamamen kaybolmasıdır."
+    },
+    {
+     "id": "fc-14-2",
+     "front": "Ekopraksi ile ekolali arasındaki temel fark nedir?",
+     "back": "Ekopraksi karşısındakinin fiziksel hareketlerini taklit etme; ekolali ise söylenen sözcük ve cümleleri aynen tekrarlama kusurudur."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatrik Semiyoloji-3.SINIF.pdf",
+    "startPage": 38,
+    "endPage": 40,
+    "primaryPage": 39,
+    "citation": "Sayfa 38–40 · Kurul 2 Psikiyatri · Psikiyatrik Semiyoloji"
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Antipsikotik ilaç tedavisi başlanan bir şizofreni hastasında, içsel bir gerginlik ve huzursuzluk hissiyle birlikte yerinde oturamama ve sürekli bacaklarını hareket ettirme dürtüsü gelişmesi hangi semiyolojik tablodur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Akatizi",
+       "isCorrect": true,
+       "explanation": "Akatizi, sıklıkla antipsikotik kullanımına bağlı gelişen, içsel huzursuzluk hissiyle hastanın yerinde duramaması ve sürekli gezinme ihtiyacı duymasıdır. Ekstrapiramidal motor yan etkiler arasında yer alır."
+      },
+      {
+       "key": "B",
+       "text": "Katalepsi",
+       "isCorrect": false,
+       "explanation": "Katalepsi, hastanın sertleşmiş kas tonusuyla verilen pozisyonda uzun süre heykel gibi hareketsiz kalması durumudur. Yerinde duramama ve motor kıpırdanma tablosunun tam zıttıdır."
+      },
+      {
+       "key": "C",
+       "text": "Katapleksi",
+       "isCorrect": false,
+       "explanation": "Katapleksi, gülme veya heyecan gibi ani duygusal uyaranlarla tetiklenen geçici kas tonusu kaybıdır. Narkolepside izlenen gevşeme nöbeti olup motor huzursuzlukla uyuşmaz."
+      },
+      {
+       "key": "D",
+       "text": "Ekopraksi",
+       "isCorrect": false,
+       "explanation": "Ekopraksi, hastanın çevresindeki diğer insanların yaptığı bedensel hareketleri istemsizce taklit etmesi durumudur. İlaç yan etkisine bağlı içsel motor kıpırtıyı açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kişinin uzun süre hareketsiz olarak kalmasıdır olarak tanımlanan katalepsi durumunda sertleşmiş bir gövde ve uzuvlar izlenir.",
+     "maskedTerm": "katalepsi",
+     "hint": "Sertleşmiş uzuvlarla uzun süre hareketsiz kalma hali"
+    },
+    {
+     "type": "interactive_table",
+     "title": "Psikomotor Hareket Bozuklukları Karşılaştırması",
+     "tableHeaders": [
+      "Motor Bozukluk",
+      "Temel Patoloji",
+      "Tetikleyici / Klinik Tablo"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Katalepsi",
+         "isMasked": false
+        },
+        {
+         "text": "Uzun süre hareketsiz kalma ve sertleşmiş kas tonusu",
+         "isMasked": true,
+         "hint": "Heykel duruşu ve donma"
+        },
+        {
+         "text": "Katatonik şizofreni ve ağır duygudurum atakları",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Katapleksi",
+         "isMasked": false
+        },
+        {
+         "text": "Kas tonusunun geçici ve ani olarak kaybolmasıdır",
+         "isMasked": false
+        },
+        {
+         "text": "Gülme, sevinç ve ani korku gibi şiddetli duygular",
+         "isMasked": true,
+         "hint": "Kahkaha ve heyecanla tetiklenme"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Akatizi",
+         "isMasked": false
+        },
+        {
+         "text": "İçsel huzursuzlukla sürekli hareket etme dürtüsü",
+         "isMasked": true,
+         "hint": "Yerinde oturamama hissi"
+        },
+        {
+         "text": "Antipsikotik ilaçların ekstrapiramidal yan etkisi",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "feature_bidding",
+     "title": "Psikomotor Fenomenlerde Katalepsi ve Katapleksi Ayrımı",
+     "optionA": "Katalepsi",
+     "optionB": "Katapleksi",
+     "rounds": [
+      {
+       "feature": "Hastanın gövde ve uzuvlarının sertleşerek saatlerce aynı heykelimsi pozisyonda hareketsiz kalması",
+       "correct": "A"
+      },
+      {
+       "feature": "Katatoni sendromu içinde balmumu esnekliği ile birlikte görülen donma hali",
+       "correct": "A"
+      },
+      {
+       "feature": "Kişinin aniden çok komik bir şakaya güldüğünde dizlerinin bağının çözülüp yere yığılması",
+       "correct": "B"
+      },
+      {
+       "feature": "Ani bir korku veya heyecan anında çenenin aşağı sarkması ve boyun kas tonusunun düşmesi",
+       "correct": "B"
+      },
+      {
+       "feature": "Kas tonusunun aniden tamamen sıfırlanıp saniyeler içinde geri dönmesi",
+       "correct": "B"
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Ekopraksi ile ekolali arasındaki semiyolojik fark nedir?",
+     "answer": "Ekopraksi hastanın karşısındaki hekimin veya kişilerin yaptığı bedensel hareketleri taklit etmesi iken; ekolali başkalarının söylediği sözcük ve cümleleri aynen sesli olarak tekrarlamasıdır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 15,
+   "id": "y25-k2-11-s15",
+   "title": "Bedensel / Vejetatif İşlevler ve Kaynakça",
+   "subtitle": "Uyku, iştah, libido ve otonomik döngülerin psikiyatrik bozukluklardaki dağılımı.",
+   "badge": "Vejetatif İşlevler ve Kaynakça",
+   "bolum": "6",
+   "pdfSayfalari": [
+    41,
+    44
+   ],
+   "kaynakSayfa": [
+    41,
+    42,
+    43,
+    44
+   ],
+   "bilgi": [
+    8
+   ],
+   "isCheckpoint": false,
+   "synthesisNarrative": "Psikiyatrik değerlendirmenin dördüncü temel sütunu vejetatif ve bedensel işlevlerdir. Bu işlevler duygudurum ataklarında ve anksiyetede derin değişimler sergiler:\n\n- **Uyku Düzeni:** Tipik depresyonda uykuya dalma/sürdürme güçlüğü ve sabah vaktinden erken uyanma (terminal insomni) görülür. Aksine aşırı uyuma (hipersomni) ile seyreden tablolar atipik depresyon özelliğidir. Manide ise uyku gereksinimi belirgin azalır ancak hasta az uyumasına rağmen kendini son derece enerjik hisseder.\n- **İştah ve Kilo:** Depresyonda en sık iştah ve kilo azalması izlenirken; iştah artışı ve aşırı yeme atipik depresyonda saptanır.\n- **Libido:** Manide cinsel istekte patolojik artış ve rastgele cinsel ilişkiler görülür; depresyonda ise cinsel arzu körelir.\n- **Boşaltım:** Anksiyete ve depresyonda motilite bozukluklarına bağlı ishal veya kabızlık gelişebilir; psikojenik polidipsiye bağlı aşırı idrar çıkışı (poliüri) görülebilir.\n- **Kaynaklar:** İstanbul Üniversitesi Psikiyatri Kitabı (2009), Köroğlu & Güleç (2007), Kaplan & Sadock (2004), Köknel (1989), Öztürk (2016).\n\n> [!NOTE]\n> İştah artışı ve aşırı uyku (hipersomni), depresyonun klasik değil atipik özellikli formunu karakterize eder.",
+   "content": "Psikiyatrik değerlendirmenin dördüncü temel sütunu vejetatif ve bedensel işlevlerdir. Bu işlevler duygudurum ataklarında ve anksiyetede derin değişimler sergiler:\n\n- **Uyku Düzeni:** Tipik depresyonda uykuya dalma/sürdürme güçlüğü ve sabah vaktinden erken uyanma (terminal insomni) görülür. Aksine aşırı uyuma (hipersomni) ile seyreden tablolar atipik depresyon özelliğidir. Manide ise uyku gereksinimi belirgin azalır ancak hasta az uyumasına rağmen kendini son derece enerjik hisseder.\n- **İştah ve Kilo:** Depresyonda en sık iştah ve kilo azalması izlenirken; iştah artışı ve aşırı yeme atipik depresyonda saptanır.\n- **Libido:** Manide cinsel istekte patolojik artış ve rastgele cinsel ilişkiler görülür; depresyonda ise cinsel arzu körelir.\n- **Boşaltım:** Anksiyete ve depresyonda motilite bozukluklarına bağlı ishal veya kabızlık gelişebilir; psikojenik polidipsiye bağlı aşırı idrar çıkışı (poliüri) görülebilir.\n- **Kaynaklar:** İstanbul Üniversitesi Psikiyatri Kitabı (2009), Köroğlu & Güleç (2007), Kaplan & Sadock (2004), Köknel (1989), Öztürk (2016).\n\n> [!NOTE]\n> İştah artışı ve aşırı uyku (hipersomni), depresyonun klasik değil atipik özellikli formunu karakterize eder.",
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Tipik depresyonda uykusuzluk ve iştah kaybı görülürken; aşırı uyku (hipersomni) ve iştah artışı atipik depresyon özelliğidir.",
+    "📌 [SINAV SPOTU] Manide uyku süresi belirgin azalır ancak hasta yorgunluk hissetmez; libido ve rastgele cinsel ilişki sıklığı artar."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Terminal İnsomni",
+     "explanation": "Hastanın sabah uyanması gereken saatten birkaç saat önce uyanıp bir daha uykuya dalamaması durumudur."
+    },
+    {
+     "term": "Psikojenik Polidipsi",
+     "explanation": "Organik susuzluk olmaksızın psikiyatrik nedenlerle aşırı su içilmesi ve buna bağlı poliüri gelişmesidir."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-15-1",
+     "front": "Mani ile depresyon arasındaki uyku ve libido değişim kalıpları nasıldır?",
+     "back": "Manide uyku gereksinimi azalır ama yorgunluk hissedilmez, libido artar; klasik depresyonda ise uykusuzluk, yorgunluk ve libido kaybı görülür."
+    },
+    {
+     "id": "fc-15-2",
+     "front": "Atipik depresyonun vejetatif ve bedensel belirti özellikleri nelerdir?",
+     "back": "Tipik formun aksine aşırı uyuma (hipersomni), iştah artışı ve buna bağlı kilo alımı ile karakterizedir."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "Psikiyatrik Semiyoloji-3.SINIF.pdf",
+    "startPage": 41,
+    "endPage": 44,
+    "primaryPage": 41,
+    "citation": "Sayfa 41–44 · Kurul 2 Psikiyatri · Psikiyatrik Semiyoloji"
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Klinik semiyolojide geceleri sadece 2-3 saat uyumasına karşın sabahları hiçbir yorgunluk hissetmeyen, enerjisi taşkın ve cinsel isteği aşırı artmış bir hastada en olası vejetatif tablo hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Mani tablosu",
+       "isCorrect": true,
+       "explanation": "Mani tablosunda uyku süresi belirgin azalır ancak hasta kendini son derece zinde ve enerjik hisseder. Bu vejetatif görünüme cinsel istekte artış ve taşkınlık eşlik eder."
+      },
+      {
+       "key": "B",
+       "text": "Tipik depresyon",
+       "isCorrect": false,
+       "explanation": "Tipik depresyonda uyku sorunlarına derin halsizlik, tükenmişlik ve cinsel istekte belirgin körelme eşlik eder. Enerji taşkınlığı ve dinçlik hissi klasik depresyonda saptanmaz."
+      },
+      {
+       "key": "C",
+       "text": "Atipik depresyon",
+       "isCorrect": false,
+       "explanation": "Atipik depresyonda uyku süresinde azalma değil, günün büyük bölümünü uyuyarak geçirme ve iştah artışı görülür. Cinsel taşkınlık ve yüksek enerjiyle bağdaşmayan bir tablodur."
+      },
+      {
+       "key": "D",
+       "text": "Katatoni",
+       "isCorrect": false,
+       "explanation": "Katatoni sendromu, katalepsi, mutizm ve psikomotor yavaşlama gibi derin motor belirtilerle karakterizedir. Vejetatif uyku ve libido taşkınlığını tanımlayan bir antite değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Depresyonda aşırı uyku ve iştah artması daha çok atipik depresyonlarda görülür.",
+     "maskedTerm": "atipik",
+     "hint": "Ters vejetatif belirtilerle giden depresyon alt tipi"
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Tipik Depresyon Vejetatif Belirtileri",
+     "rightTitle": "Mani Vejetatif Belirtileri",
+     "leftPoints": [
+      "Uykuya dalmada güçlük ve sabah erkenden uyanıp uyuyamama izlenir.",
+      "İştah belirgin azalır ve buna bağlı belirgin kilo kaybı gelişir.",
+      "Cinsel istek ve dürtülerde belirgin körelme saptanır."
+     ],
+     "rightPoints": [
+      "Uyku süresi azalır ancak hasta kendini son derece enerjik hisseder.",
+      "Sürekli hareketlilik ve enerji taşkınlığı iştah kaybı yaratmaz.",
+      "Cinsel istekte aşırı artış ve rastgele cinsel ilişkiler görülür."
+     ]
+    },
+    {
+     "type": "venn_grid",
+     "title": "Tipik ve Atipik Depresyon Vejetatif Belirtileri",
+     "labelA": "Tipik Depresyon",
+     "labelB": "Atipik Depresyon",
+     "items": [
+      {
+       "criterion": "Sabah vaktinden çok önce uyanıp tekrar uyuyamama ve iştah kaybı",
+       "correct": "A"
+      },
+      {
+       "criterion": "Günün büyük bölümünü uyuyarak geçirme",
+       "correct": "B"
+      },
+      {
+       "criterion": "İştah artışı ve aşırı besin tüketimiyle kilo alma",
+       "correct": "B"
+      },
+      {
+       "criterion": "Duygudurumda çökkünlük ve zevk alamama ile seyreden depresif bozukluk olma",
+       "correct": "both"
+      },
+      {
+       "criterion": "Az uyumasına rağmen hiç yorgun hissetmeyip cinsel taşkınlık yaşama",
+       "correct": "neither"
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Bedensel ve Vejetatif İşlevler",
+     "question": "Psikiyatrik bozukluklarda vejetatif işlevlerin dağılımı ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "items": [
+      {
+       "text": "Tipik depresyonda uykuyu sürdürmede güçlük ve sabah vaktinden önce erken uyanma sık görülür.",
+       "isLie": false,
+       "explanation": "Ders notunda tipik depresyonda sabah erken uyanıp tekrar uyuyamamanın yaygın olduğu belirtilmiştir."
+      },
+      {
+       "text": "Manide uyku azalmıştır ancak hasta az uyumasına karşılık gün boyunca yorgunluk hissetmez.",
+       "isLie": false,
+       "explanation": "Manide uyku gereksinimi azalır ve hasta enerjisini korur; bu durum önemli bir manik göstergedir."
+      },
+      {
+       "text": "Depresyonda aşırı uyku ve iştah artışı hastalığın en tipik ve klasik klinik görünümüdür.",
+       "isLie": true,
+       "explanation": "Tam aksine aşırı uyku ve iştah artışı atipik depresyon özelliğidir; klasik depresyonda iştah ve uyku azalır."
+      },
+      {
+       "text": "Psikojenik polidipsiye bağlı olarak hastalarda aşırı su içme ve idrar miktarında artış görülebilir.",
+       "isLie": false,
+       "explanation": "Ders notunda bedensel işlevler başlığı altında psikojenik polidipsi ve poliüri açıkça vurgulanmıştır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 16,
+   "id": "y25-k2-11-s16",
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Psikiyatrik Semiyoloji",
+   "subtitle": "Tüm ders boyunca işlenen bilişsel, duygulanımsal, motor ve vejetatif semiyolojik bulguları pekiştirici ders sonu oyunları.",
+   "badge": "Ders Sonu Oyunları",
+   "bolum": "6",
+   "pdfSayfalari": [
+    2,
+    44
+   ],
+   "kaynakSayfa": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44
+   ],
+   "bilgi": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "isCheckpoint": false,
+   "isGameFinale": true,
+   "synthesisNarrative": "Tebrikler! Psikiyatrik Semiyoloji dersinin tüm bilişsel, duygulanımsal, psikomotor ve bedensel inceleme alanlarını başarıyla tamamladınız. Bu son aşamada, edindiğiniz tüm semiyolojik kavramları, bozulma hiyerarşilerini, ayırıcı tanı kriterlerini ve klinik ölçütleri dört farklı interaktif oyun modeliyle sınıyoruz.\n\n- **Sıralama:** Yönelim bozukluğunda oryantasyon bileşenlerinin zamansal yitim hiyerarşisi.\n- **Tahmin:** Bilişsel kayıt belleği muayenesinde anında tekrarlanması istenen standart nesne sayısı.\n- **Ne Değişir:** Akut mani atağında konuşma hızı, dikkat çelinebilirliği, uyku ve libido yönleri.\n- **Hata Düzelt:** Semiyoloji özet metninde kurgulanmış klinik terim yanılgılarını saptama ve onarma.",
+   "content": "Tebrikler! Psikiyatrik Semiyoloji dersinin tüm bilişsel, duygulanımsal, psikomotor ve bedensel inceleme alanlarını başarıyla tamamladınız. Bu son aşamada, edindiğiniz tüm semiyolojik kavramları, bozulma hiyerarşilerini, ayırıcı tanı kriterlerini ve klinik ölçütleri dört farklı interaktif oyun modeliyle sınıyoruz.\n\n- **Sıralama:** Yönelim bozukluğunda oryantasyon bileşenlerinin zamansal yitim hiyerarşisi.\n- **Tahmin:** Bilişsel kayıt belleği muayenesinde anında tekrarlanması istenen standart nesne sayısı.\n- **Ne Değişir:** Akut mani atağında konuşma hızı, dikkat çelinebilirliği, uyku ve libido yönleri.\n- **Hata Düzelt:** Semiyoloji özet metninde kurgulanmış klinik terim yanılgılarını saptama ve onarma.",
+   "sourcePdf": {
+    "fileName": "Psikiyatrik Semiyoloji-3.SINIF.pdf",
+    "startPage": 2,
+    "endPage": 44,
+    "primaryPage": 44,
+    "citation": "Sayfa 2–44 · Kurul 2 Psikiyatri · Psikiyatrik Semiyoloji"
+   },
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "prompt": "Yönelim (oryantasyon) bozukluğunda bileşenlerin kronolojik yitim sırasını ilk bozulan basamaktan son kaybolana doğru sıralayınız.",
+     "steps": [
+      "Zaman oryantasyonunun yitirilmesi (tarih, gün ve mevsimin karıştırılması)",
+      "Yer oryantasyonunun bozulması (bulunulan mekanın ve adresin tanınamaması)",
+      "Kişi oryantasyonunun kaybı (yakınların ve çevredeki insanların tanınamaması)"
+     ],
+     "explanation": "Ders notunda açıkça vurgulandığı üzere hasta ilk olarak zaman yönelimini, ardından yer yönelimini ve en son kişi yönelimini kaybeder."
+    },
+    {
+     "type": "estimate_slider",
+     "prompt": "Klinik değerlendirmede kayıt (registration) belleği muayenesi yapılırken hastadan anında tekrarlaması istenen standart nesne sayısı kaçtır?",
+     "min": 1,
+     "max": 10,
+     "answer": 4,
+     "tolerance": 1,
+     "step": 1,
+     "explanation": "Ders notunda tespit belleği muayenesi için hastadan 3 ile 5 farklı nesne ismini veya 5 rakamlı bir sayıyı anında tekrarlaması istenir."
+    },
+    {
+     "type": "perturbation",
+     "scenario": "Akut mani atağına giren bir hastada semiyolojik muayenede temel bilişsel, duygulanımsal ve vejetatif parametrelerin yönü nasıl değişir?",
+     "parameters": [
+      {
+       "name": "Düşünce ve konuşma hızı (lögore ve basınçlı konuşma)",
+       "correct": "artar",
+       "explanation": "Mani tablosunda çağrışımlar hızlanır, lögore ve basınçlı konuşma ortaya çıkar."
+      },
+      {
+       "name": "Dikkatin dış uyaranlarla çelinebilirliği (distraktibilite)",
+       "correct": "artar",
+       "explanation": "Manide dikkat kolaylıkla dış uyaranlara kayarak dağılır ve distraktibilite artar."
+      },
+      {
+       "name": "Uyku gereksinimi ve uyku süresi",
+       "correct": "azalır",
+       "explanation": "Mani döneminde hasta çok az uyumasına rağmen kendini enerjik hisseder ve uyku süresi azalır."
+      },
+      {
+       "name": "Cinsel istek ve dürtü düzeyi (libido)",
+       "correct": "artar",
+       "explanation": "Ders notunda belirtildiği üzere manide cinsel istek artar ve rastgele cinsel ilişkiler görülebilir."
+      }
+     ]
+    },
+    {
+     "type": "fix_the_text",
+     "text": "Psikiyatrik muayenede yönelim bozukluğunda hasta ilk olarak kişi yönelimini kaybederken, gerçek bir nesnel uyarının yanlış algılanması tablosuna halüsinasyon denir.",
+     "errors": [
+      {
+       "wrong": "kişi",
+       "correct": "zaman",
+       "options": [
+        "zaman",
+        "yer",
+        "mekan"
+       ],
+       "explanation": "Yönelim bozulmasında ilk kaybedilen yeti zaman oryantasyonudur; kişi yönelimi en son kaybolur."
+      },
+      {
+       "wrong": "halüsinasyon",
+       "correct": "illüzyon",
+       "options": [
+        "illüzyon",
+        "sanrı",
+        "hezeyan"
+       ],
+       "explanation": "Var olan gerçek bir uyarının yanlış yorumlanması illüzyondur; halüsinasyonda ise hiçbir dış uyaran yoktur."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "totalSlides": 16,
+ "totalInteractiveElements": 79,
+ "interactiveRatio": 4.94,
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

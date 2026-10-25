@@ -1,0 +1,4753 @@
+{
+ "surum": 2,
+ "ders_id": "k2-11",
+ "anahtar": "y25-k2-11-psikiyatrik-semiyoloji",
+ "baslik": "Psikiyatrik Semiyoloji",
+ "bolumler": [
+  {
+   "id": "k2-11-b01",
+   "baslik": "Psikiyatrik Semiyolojiye Giriş ve Muayene Şeması",
+   "sayfa_araligi": [
+    1,
+    3
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-11-p001",
+     "sayfa": 1,
+     "slayt_adim": "k2-11-d-s01",
+     "cumleler": [
+      {
+       "id": "k2-11-c0001",
+       "ses": "Doktor Öğretim Üyesi Nefise Demir tarafından hazırlanan psikiyatrik semiyoloji dersimizde, psikiyatride tanı ve klinik değerlendirmenin temel taşını oluşturan tüm belirti ve bulguları ayrıntılı olarak inceleyeceğiz.",
+       "ekran": "**Psikiyatrik Semiyolojiye Giriş ve Muayene Şeması:** Doktor Öğretim Üyesi Nefise Demir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Doktor Öğretim",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 1,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Psikiyatrik Semiyoloji",
+         "Dr. Öğretim Üyesi Nefise Demir",
+         "Psikiyatri A.B.D"
+        ],
+        "sekil": null,
+        "adim": 1
+       }
+      },
+      {
+       "id": "k2-11-c0002",
+       "ses": "Ruhsal muayenenin sistematik basamaklarını, bilişsel işlevlerden duygulanıma, düşünce içeriğinden psikomotor etkinliklere kadar uzanan zengin kavramsal yapıyı bu derste adım adım ele alacağız.",
+       "ekran": "**Psikiyatrik:** Ruhsal muayenenin sistematik basamaklarını, bilişsel işlevlerden duygulanıma, düşünce içer",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Düşünce",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 1,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Psikiyatrik Semiyoloji",
+         "Dr. Öğretim Üyesi Nefise Demir",
+         "Psikiyatri A.B.D"
+        ],
+        "sekil": null,
+        "adim": 1
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p002",
+     "sayfa": 2,
+     "slayt_adim": "k2-11-d-s02",
+     "cumleler": [
+      {
+       "id": "k2-11-c0003",
+       "ses": "Klinik tıbbın dahiliye veya cerrahi gibi diğer disiplinlerinde tanı sıklıkla laboratuvar testleri ve radyolojik görüntüleme bulgularıyla kesinleştirilirken, psikiyatride tanı ve değerlendirme süreçleri çok daha belirgin biçimde hastanın belirti ve bulgularına dayanır.",
+       "ekran": "**Psikiyatrik Semiyolojiye Giriş ve Muayene Şeması:** Klinik tıbbın dahiliye veya cerrahi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Klinik tıbbın",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 1,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Psikiyatride tanı ve değerlendirme, diğer",
+         "disiplinlerden daha fazla belirti ve",
+         "bulgulara dayanır.",
+         "Dolayısıyla belirti ve bulguların iyi",
+         "öğrenilmesi psikiyatrik bozuklukları",
+         "kavramak için bir zorunluluktur."
+        ],
+        "sekil": null,
+        "adim": 1
+       }
+      },
+      {
+       "id": "k2-11-c0004",
+       "ses": "Hastanın sözel ifadeleri, sergilediği davranışlar ve hekimin yaptığı sistematik gözlemler klinik tablonun anahtarıdır.",
+       "ekran": "**Psikiyatrik:** Hastanın sözel ifadeleri, sergilediği davranışlar ve hekimin yaptığı sistematik gözlemler",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Hastanın sözel",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 1,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Psikiyatride tanı ve değerlendirme, diğer",
+         "disiplinlerden daha fazla belirti ve",
+         "bulgulara dayanır.",
+         "Dolayısıyla belirti ve bulguların iyi",
+         "öğrenilmesi psikiyatrik bozuklukları",
+         "kavramak için bir zorunluluktur."
+        ],
+        "sekil": null,
+        "adim": 1
+       }
+      },
+      {
+       "id": "k2-11-c0005",
+       "ses": "Dolayısıyla semiyolojik kavramların eksiksiz öğrenilmesi, psikiyatrik bozuklukları doğru kavramak ve ayırıcı tanıyı hatasız kurmak adına hekimlik eğitiminde vazgeçilmez bir zorunluluktur.",
+       "ekran": "**Psikiyatrik:** Dolayısıyla semiyolojik kavramların eksiksiz öğrenilmesi, psikiyatrik bozuklukları doğru k",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Dolayısıyla semiyolojik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 1,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Psikiyatride tanı ve değerlendirme, diğer",
+         "disiplinlerden daha fazla belirti ve",
+         "bulgulara dayanır.",
+         "Dolayısıyla belirti ve bulguların iyi",
+         "öğrenilmesi psikiyatrik bozuklukları",
+         "kavramak için bir zorunluluktur."
+        ],
+        "sekil": null,
+        "adim": 1
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p003",
+     "sayfa": 3,
+     "slayt_adim": "k2-11-d-s03",
+     "cumleler": [
+      {
+       "id": "k2-11-c0006",
+       "ses": "Psikiyatrik muayene şeması beş temel eksenden meydana gelir ve hastanın ruhsal durumunu bütüncül bir yaklaşımla değerlendirmemizi sağlar.",
+       "ekran": "**Psikiyatrik Semiyolojiye Giriş ve Muayene Şeması:** Psikiyatrik muayene şeması beş temel",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Psikiyatrik muayene",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 1,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "PSİKİYATRİK MUAYENE ŞEMASI",
+         "I- BİLİŞSEL İŞLEVLER",
+         "1) Bilinç",
+         "2) Yönelim",
+         "3) Bellek",
+         "4) Dikkat"
+        ],
+        "sekil": null,
+        "adim": 1
+       }
+      },
+      {
+       "id": "k2-11-c0007",
+       "ses": "Bu şemanın ilk basamağını bilinç, yönelim, bellek, dikkat, algı, düşünce, yargılama, soyut düşünce, gerçeği değerlendirme ve içgörüden oluşan bilişsel işlevler oluşturur; ardından duygulanım, motor aktivite, bedensel işlevler ile sosyal ve mesleki işlevsellik incelenir.",
+       "ekran": "**Psikiyatrik:** Bu şemanın ilk basamağını bilinç, yönelim, bellek, dikkat, algı, düşünce, yargılama, soyut",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Bilinç",
+         "tur": "terim"
+        },
+        {
+         "metin": "Yönelim",
+         "tur": "terim"
+        },
+        {
+         "metin": "Bellek",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 1,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "PSİKİYATRİK MUAYENE ŞEMASI",
+         "I- BİLİŞSEL İŞLEVLER",
+         "1) Bilinç",
+         "2) Yönelim",
+         "3) Bellek",
+         "4) Dikkat"
+        ],
+        "sekil": null,
+        "adim": 1
+       }
+      },
+      {
+       "id": "k2-11-c0008",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Psikiyatrik görüşmede ilk muayenenin amacı tanı koymak için bilgi toplamak olup görüşme genellikle kırk beş ile altmış dakika sürer; hasta gönüllü olmasa ya da psikotik ve konfüze durumda bulunsa bile yalnızca yakınlarıyla görüşmek asla yeterli değildir, hasta ile de mutlaka doğrudan klinik temas kurulmalıdır.",
+       "ekran": "**Çıkmış Sınav Sorusu:** Burada çıkmış sınav sorusu bulunmaktadır",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Burada çıkmış",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 1,
+       "cikmis": [
+        "past-1790877044895-368611"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "PSİKİYATRİK MUAYENE ŞEMASI",
+         "I- BİLİŞSEL İŞLEVLER",
+         "1) Bilinç",
+         "2) Yönelim",
+         "3) Bellek",
+         "4) Dikkat"
+        ],
+        "sekil": null,
+        "adim": 1
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-11-b02",
+   "baslik": "Bilinç ve Bilinç Düzeyi Bozuklukları",
+   "sayfa_araligi": [
+    4,
+    5
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-11-p004",
+     "sayfa": 4,
+     "slayt_adim": "k2-11-d-s04",
+     "cumleler": [
+      {
+       "id": "k2-11-c0009",
+       "ses": "Bilişsel işlevlerin en temel basamağı olan bilinç, kişinin kendisinin ve çevresinin farkında olması ile dış dünyadan haberdarlık derecesidir.",
+       "ekran": "**Bilinç ve Bilinç Düzeyi Bozuklukları:** Bilişsel işlevlerin en temel basamağı olan bilinç",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Bilinç",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 1,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Bilişsel İşlevler",
+         "Bilinç",
+         "Kişinin kendisi ve çevresinin farkında olması ve",
+         "haberdarlık derecesidir.",
+         "Bilinç beynin genel bir fonksiyonudur ve bilinçlilik beynin",
+         "kanlanmasında, oksijenlenmesinde ve metabolizmasında"
+        ],
+        "sekil": null,
+        "adim": 1
+       }
+      },
+      {
+       "id": "k2-11-c0010",
+       "ses": "Bilinç beynin genel bir işlevidir ve bilinçlilik hali beynin kanlanmasında, oksijenlenmesinde veya enerji metabolizmasında önemli bir bozulma ortaya çıktığında hızla sekteye uğrar.",
+       "ekran": "**Bilinç:** Bilinç beynin genel bir işlevidir ve bilinçlilik hali beynin kanlanmasında, oksijenlenmesi",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Bilinç",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 1,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Bilişsel İşlevler",
+         "Bilinç",
+         "Kişinin kendisi ve çevresinin farkında olması ve",
+         "haberdarlık derecesidir.",
+         "Bilinç beynin genel bir fonksiyonudur ve bilinçlilik beynin",
+         "kanlanmasında, oksijenlenmesinde ve metabolizmasında"
+        ],
+        "sekil": null,
+        "adim": 1
+       }
+      },
+      {
+       "id": "k2-11-c0011",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Dolayısıyla bilinçte meydana gelen bozukluklar, her zaman beynin genelini etkileyen organik veya metabolik bir soruna işaret eder.",
+       "ekran": "**Bilinç:** Dolayısıyla bilinçte meydana gelen bozukluklar, her zaman beyin hücrelerinin normal çalışm",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Bilinç",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 1,
+       "cikmis": [
+        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-19"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Bilişsel İşlevler",
+         "Bilinç",
+         "Kişinin kendisi ve çevresinin farkında olması ve",
+         "haberdarlık derecesidir.",
+         "Bilinç beynin genel bir fonksiyonudur ve bilinçlilik beynin",
+         "kanlanmasında, oksijenlenmesinde ve metabolizmasında"
+        ],
+        "sekil": null,
+        "adim": 1
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p005",
+     "sayfa": 5,
+     "slayt_adim": "k2-11-d-s05",
+     "cumleler": [
+      {
+       "id": "k2-11-c0012",
+       "ses": "Bilinç düzeyindeki bozukluklar ağırlık derecelerine göre somnolans, stupor ve koma olmak üzere üç temel klinik tabloda sınıflanır.",
+       "ekran": "**Bilinç ve Bilinç Düzeyi Bozuklukları:** Bilinç düzeyindeki bozukluklar ağırlık derecelerine",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Bilinç",
+         "tur": "terim"
+        },
+        {
+         "metin": "Bilinç ve Bilinç Düzeyi Bozuklukları:",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": 1,
+       "cikmis": [
+        "past-1790877044163-968531",
+        "ed41695f77aa"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Bilişsel İşlevler",
+         "Bilinçte meydana gelen bozukluklar ağırlık derecesine göre şöyle",
+         "adlandırılırlar:",
+         "Somnolans",
+         "Kişinin uyaran olmadığında bilincinin kapanması, uyaranla bilincinin",
+         "açılması durumudur."
+        ],
+        "sekil": null,
+        "adim": 1
+       }
+      },
+      {
+       "id": "k2-11-c0013",
+       "ses": "Sınavda sorulmuş olan önemli bir tanım olarak, somnolans durumunda kişi uyaran olmadığında uykuya dalar, ancak sesli veya hafif dokunsal uyaranlarla kolaylıkla uyandırılabilir.",
+       "ekran": "**Çıkmış Sınav Sorusu:** Somnolans durumunda kişi uyaran olmadığında",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Somnolans",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 1,
+       "cikmis": [
+        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-5"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Bilişsel İşlevler",
+         "Bilinçte meydana gelen bozukluklar ağırlık derecesine göre şöyle",
+         "adlandırılırlar:",
+         "Somnolans",
+         "Kişinin uyaran olmadığında bilincinin kapanması, uyaranla bilincinin",
+         "açılması durumudur."
+        ],
+        "sekil": null,
+        "adim": 1
+       }
+      },
+      {
+       "id": "k2-11-c0014",
+       "ses": "Stuporda bilinçlilik belirgin biçimde azalmış ve hareketler ileri derecede yavaşlamıştır; hasta çevresindeki objeleri gözleriyle izleyebilse de konuşamaz.",
+       "ekran": "**Bilinç:** Stuporda bilinçlilik belirgin biçimde azalmış ve hareketler ileri derecede yavaşlamıştır;",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Bilinç",
+         "tur": "terim"
+        },
+        {
+         "metin": "Stupor",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 1,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Bilişsel İşlevler",
+         "Bilinçte meydana gelen bozukluklar ağırlık derecesine göre şöyle",
+         "adlandırılırlar:",
+         "Somnolans",
+         "Kişinin uyaran olmadığında bilincinin kapanması, uyaranla bilincinin",
+         "açılması durumudur."
+        ],
+        "sekil": null,
+        "adim": 1
+       }
+      },
+      {
+       "id": "k2-11-c0015",
+       "ses": "Koma tablosunda ise kişinin dış dünyayla bağı bütünüyle kopmuştur ve en şiddetli ağrılı uyaranlara dahi hiçbir anlamlı yanıt alınamaz.",
+       "ekran": "**Bilinç:** Koma tablosunda ise kişinin dış dünyayla bağı bütünüyle kopmuştur ve en şiddetli ağrılı uy",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Koma",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 1,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Bilişsel İşlevler",
+         "Bilinçte meydana gelen bozukluklar ağırlık derecesine göre şöyle",
+         "adlandırılırlar:",
+         "Somnolans",
+         "Kişinin uyaran olmadığında bilincinin kapanması, uyaranla bilincinin",
+         "açılması durumudur."
+        ],
+        "sekil": null,
+        "adim": 1
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-11-b03",
+   "baslik": "Yönelim ve Yönelim Bozuklukları",
+   "sayfa_araligi": [
+    6,
+    7
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-11-p006",
+     "sayfa": 6,
+     "slayt_adim": "k2-11-d-s06",
+     "cumleler": [
+      {
+       "id": "k2-11-c0016",
+       "ses": "Kişinin içinde bulunduğu çevreyle ilgili haberdarlık durumu yönelim veya diğer adıyla oryantasyon olarak adlandırılır.",
+       "ekran": "**Yönelim ve Yönelim Bozuklukları:** Kişinin içinde bulunduğu çevreyle ilgili",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yönelim",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": 2,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Yönelim",
+         "Kişinin çevreyle ilgili haberdarlık durumu yönelim (oryantasyon) olarak",
+         "adlandırılır. Yönelimin üç bileşeni vardır. 1) Zaman, 2) Yer, 3) Kişi.",
+         "Zaman yönelimi için -/+ 2 günlük bir yanılma için tarihi bilmesi, hangi yıl,",
+         "hangi mevsim, hangi ayda olunduğunu bilmesi ölçütleri kullanılır.",
+         "Yer yönelimi için bulunduğu yeri tanıma, bir adresi doğru tarif edebilme gibi"
+        ],
+        "sekil": null,
+        "adim": 2
+       }
+      },
+      {
+       "id": "k2-11-c0017",
+       "ses": "Klinik pratikte yönelimin zaman, yer ve kişi olmak üzere üç temel bileşeni ayrı ayrı sorgulanır.",
+       "ekran": "**Yönelim:** Klinik pratikte yönelimin zaman, yer ve kişi olmak üzere üç temel bileşeni ayrı ayrı sorgu",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Yönelim",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 2,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Yönelim",
+         "Kişinin çevreyle ilgili haberdarlık durumu yönelim (oryantasyon) olarak",
+         "adlandırılır. Yönelimin üç bileşeni vardır. 1) Zaman, 2) Yer, 3) Kişi.",
+         "Zaman yönelimi için -/+ 2 günlük bir yanılma için tarihi bilmesi, hangi yıl,",
+         "hangi mevsim, hangi ayda olunduğunu bilmesi ölçütleri kullanılır.",
+         "Yer yönelimi için bulunduğu yeri tanıma, bir adresi doğru tarif edebilme gibi"
+        ],
+        "sekil": null,
+        "adim": 2
+       }
+      },
+      {
+       "id": "k2-11-c0018",
+       "ses": "Zaman yönelimi için eksi veya artı iki günlük yanılma payıyla güncel tarih, bulunulan yıl, mevsim ve ay bilgisi sınanır.",
+       "ekran": "**Yönelim:** Zaman yönelimi için eksi veya artı iki günlük yanılma payıyla güncel tarih, bulunulan yıl,",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Yönelim",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 2,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Yönelim",
+         "Kişinin çevreyle ilgili haberdarlık durumu yönelim (oryantasyon) olarak",
+         "adlandırılır. Yönelimin üç bileşeni vardır. 1) Zaman, 2) Yer, 3) Kişi.",
+         "Zaman yönelimi için -/+ 2 günlük bir yanılma için tarihi bilmesi, hangi yıl,",
+         "hangi mevsim, hangi ayda olunduğunu bilmesi ölçütleri kullanılır.",
+         "Yer yönelimi için bulunduğu yeri tanıma, bir adresi doğru tarif edebilme gibi"
+        ],
+        "sekil": null,
+        "adim": 2
+       }
+      },
+      {
+       "id": "k2-11-c0019",
+       "ses": "Yer yönelimi hastanın bulunduğu kurumu ve adresi doğru tarif etmesiyle, kişi yönelimi ise hastanın hekimi, çevresindekileri ve kendi yakınlarını doğru tanımasıyla değerlendirilir.",
+       "ekran": "**Yönelim:** Yer yönelimi hastanın bulunduğu kurumu ve adresi doğru tarif etmesiyle, kişi yönelimi ise",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Yönelim",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 2,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Yönelim",
+         "Kişinin çevreyle ilgili haberdarlık durumu yönelim (oryantasyon) olarak",
+         "adlandırılır. Yönelimin üç bileşeni vardır. 1) Zaman, 2) Yer, 3) Kişi.",
+         "Zaman yönelimi için -/+ 2 günlük bir yanılma için tarihi bilmesi, hangi yıl,",
+         "hangi mevsim, hangi ayda olunduğunu bilmesi ölçütleri kullanılır.",
+         "Yer yönelimi için bulunduğu yeri tanıma, bir adresi doğru tarif edebilme gibi"
+        ],
+        "sekil": null,
+        "adim": 2
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p007",
+     "sayfa": 7,
+     "slayt_adim": "k2-11-d-s07",
+     "cumleler": [
+      {
+       "id": "k2-11-c0020",
+       "ses": "Yönelim bozulurken kesin bir klinik hiyerarşi izlenir; hasta önce zaman yönelimini, ardından yer yönelimini ve en son olarak kişi yönelimini kaybeder.",
+       "ekran": "**Yönelim ve Yönelim Bozuklukları:** Yönelim bozulurken kesin bir klinik",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yönelim",
+         "tur": "terim"
+        },
+        {
+         "metin": "Yönelim ve Yönelim Bozuklukları:",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": 2,
+       "cikmis": [
+        "4c4eb178b88b"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Yönelim",
+         "Kişi önce zaman oryantasyonunu, sonra yer",
+         "ryantasyonunu ve en son kişi oryantasyonunu",
+         "kaybeder!!!",
+         "Yönelim bozukluğu çoğunlukla organik bir etkenin",
+         "varlığını gösterir. En sık deliryumda görülür. Deliryum"
+        ],
+        "sekil": null,
+        "adim": 2
+       }
+      },
+      {
+       "id": "k2-11-c0021",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Yönelim bozukluğu saptanan bir hastada ilk bozulan öge zaman yönelimidir; en son kaybolan ise kişi oryantasyonudur.",
+       "ekran": "**Çıkmış Sınav Sorusu:** Burada çıkmış sınav sorusu bulunmaktadır",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": 2,
+       "cikmis": [
+        "64b435be39be",
+        "past-1790877040005-770270"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Yönelim",
+         "Kişi önce zaman oryantasyonunu, sonra yer",
+         "ryantasyonunu ve en son kişi oryantasyonunu",
+         "kaybeder!!!",
+         "Yönelim bozukluğu çoğunlukla organik bir etkenin",
+         "varlığını gösterir. En sık deliryumda görülür. Deliryum"
+        ],
+        "sekil": null,
+        "adim": 2
+       }
+      },
+      {
+       "id": "k2-11-c0022",
+       "ses": "Deliryum saptandığında altta yatan metabolik ya da enfeksiyöz neden hızla bulunup tedavi edilmelidir; ayrıca yönelim bozukluğunun organik tabloların yanı sıra dissosiyatif füg gibi durumlarda da görülebileceği akılda tutulmalıdır.",
+       "ekran": "**Yönelim:** Deliryum saptandığında altta yatan metabolik ya da enfeksiyöz neden hızla bulunup tedavi e",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Yönelim",
+         "tur": "terim"
+        },
+        {
+         "metin": "Deliryum",
+         "tur": "terim"
+        },
+        {
+         "metin": "Yönelim:",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": 2,
+       "cikmis": [
+        "d3-k2-psi-009"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Yönelim",
+         "Kişi önce zaman oryantasyonunu, sonra yer",
+         "ryantasyonunu ve en son kişi oryantasyonunu",
+         "kaybeder!!!",
+         "Yönelim bozukluğu çoğunlukla organik bir etkenin",
+         "varlığını gösterir. En sık deliryumda görülür. Deliryum"
+        ],
+        "sekil": null,
+        "adim": 2
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-11-b04",
+   "baslik": "Bellek Evreleri ve Bellek Muayenesi",
+   "sayfa_araligi": [
+    8,
+    9
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-11-p008",
+     "sayfa": 8,
+     "slayt_adim": "k2-11-d-s08",
+     "cumleler": [
+      {
+       "id": "k2-11-c0023",
+       "ses": "Bellek, yakın ve uzak geçmişe ait yaşantıları kaydetme, depolama ve gerektiğinde anımsayabilme yeteneğidir.",
+       "ekran": "**Bellek Evreleri ve Bellek Muayenesi:** Bellek",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Bellek",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 3,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Bellek",
+         "Yakın ve uzak geçmişe ait olayları kaydetme, depolayabilme ve",
+         "anımsayabilme yeteneğidir. Bellek, sürelerine göre üç kısma ayrılabilir:",
+         "Tespit (Kayıt: Registration) Belleği",
+         "Öğretilen bir şeyin anında tekrarlanabilmesidir. Belleğin algılananları",
+         "kayıt edip etmemesi ile ilgilidir. Muayenesinde, hastadan 3- 5 farklı"
+        ],
+        "sekil": null,
+        "adim": 3
+       }
+      },
+      {
+       "id": "k2-11-c0024",
+       "ses": "Klinik muayenede bellek zamansal özelliklerine göre tespit belleği, kısa süreli bellek ve uzun süreli bellek olarak üç aşamada incelenir.",
+       "ekran": "**Bellek:** Klinik muayenede bellek zamansal özelliklerine göre tespit belleği, kısa süreli bellek ve",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Bellek",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 3,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Bellek",
+         "Yakın ve uzak geçmişe ait olayları kaydetme, depolayabilme ve",
+         "anımsayabilme yeteneğidir. Bellek, sürelerine göre üç kısma ayrılabilir:",
+         "Tespit (Kayıt: Registration) Belleği",
+         "Öğretilen bir şeyin anında tekrarlanabilmesidir. Belleğin algılananları",
+         "kayıt edip etmemesi ile ilgilidir. Muayenesinde, hastadan 3- 5 farklı"
+        ],
+        "sekil": null,
+        "adim": 3
+       }
+      },
+      {
+       "id": "k2-11-c0025",
+       "ses": "Tespit yani kayıt belleği, öğretilen bir bilginin anında tekrarlanabilmesi olup hastaya söylenen üç ila beş farklı nesne veya beş basamaklı bir sayının yinelenmesiyle ölçülür.",
+       "ekran": "**Bellek:** Tespit yani kayıt belleği, öğretilen bir bilginin anında tekrarlanabilmesi olup hastaya sö",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Tespit yani",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 3,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Bellek",
+         "Yakın ve uzak geçmişe ait olayları kaydetme, depolayabilme ve",
+         "anımsayabilme yeteneğidir. Bellek, sürelerine göre üç kısma ayrılabilir:",
+         "Tespit (Kayıt: Registration) Belleği",
+         "Öğretilen bir şeyin anında tekrarlanabilmesidir. Belleğin algılananları",
+         "kayıt edip etmemesi ile ilgilidir. Muayenesinde, hastadan 3- 5 farklı"
+        ],
+        "sekil": null,
+        "adim": 3
+       }
+      },
+      {
+       "id": "k2-11-c0026",
+       "ses": "Kısa süreli bellek ise beş dakika ile birkaç saat arasındaki süreyi kapsar ve kayıt aşamasında verilen nesnelerin beş dakika sonra hatırlanması ya da aynı günün erken saatlerindeki olayların sorulmasıyla test edilir.",
+       "ekran": "**Bellek:** Kısa süreli bellek ise beş dakika ile birkaç saat arasındaki süreyi kapsar ve kayıt aşamas",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Bellek",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 3,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Bellek",
+         "Yakın ve uzak geçmişe ait olayları kaydetme, depolayabilme ve",
+         "anımsayabilme yeteneğidir. Bellek, sürelerine göre üç kısma ayrılabilir:",
+         "Tespit (Kayıt: Registration) Belleği",
+         "Öğretilen bir şeyin anında tekrarlanabilmesidir. Belleğin algılananları",
+         "kayıt edip etmemesi ile ilgilidir. Muayenesinde, hastadan 3- 5 farklı"
+        ],
+        "sekil": null,
+        "adim": 3
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p009",
+     "sayfa": 9,
+     "slayt_adim": "k2-11-d-s09",
+     "cumleler": [
+      {
+       "id": "k2-11-c0027",
+       "ses": "Uzun süreli bellek kendi içinde iki alt zaman dilimine ayrılır; birkaç günden birkaç aya kadar olan döneme yakın bellek, aylardan yıllara uzanan döneme ise uzak bellek adı verilir.",
+       "ekran": "**Bellek Evreleri ve Bellek Muayenesi:** Uzun süreli bellek kendi içinde",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Bellek",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 3,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Bellek",
+         "Uzun Süreli Bellek",
+         "Birkaç günden birkaç aya kadar olan bölümüne yakın bellek,",
+         "birkaç aydan, yıllara uzanan bölümüne de uzak bellek denir.",
+         "Muayenesinde hastanın yaşamına ait eski olayların tarihleri",
+         "sorulabilir. Ancak sorulan soruların yanıtlarının biliniyor olması"
+        ],
+        "sekil": null,
+        "adim": 3
+       }
+      },
+      {
+       "id": "k2-11-c0028",
+       "ses": "Uzun süreli bellek muayenesinde hastanın yaşamına ait eski olaylar, okul bitirme veya evlilik tarihleri gibi kişisel bilgiler sorgulanır.",
+       "ekran": "**Bellek:** Uzun süreli bellek muayenesinde hastanın yaşamına ait eski olaylar, okul bitirme veya evli",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Bellek",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 3,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Bellek",
+         "Uzun Süreli Bellek",
+         "Birkaç günden birkaç aya kadar olan bölümüne yakın bellek,",
+         "birkaç aydan, yıllara uzanan bölümüne de uzak bellek denir.",
+         "Muayenesinde hastanın yaşamına ait eski olayların tarihleri",
+         "sorulabilir. Ancak sorulan soruların yanıtlarının biliniyor olması"
+        ],
+        "sekil": null,
+        "adim": 3
+       }
+      },
+      {
+       "id": "k2-11-c0029",
+       "ses": "Bu muayenede hekimin dikkat etmesi gereken kritik kural, sorulan soruların yanıtlarının hekim tarafından önceden bilinmesi veya hasta yakınlarına doğrulatılabilir nitelikte nesnel olmasıdır.",
+       "ekran": "**Bellek:** Bu muayenede hekimin dikkat etmesi gereken kritik kural, sorulan soruların yanıtlarının he",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Dikkat",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 3,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Bellek",
+         "Uzun Süreli Bellek",
+         "Birkaç günden birkaç aya kadar olan bölümüne yakın bellek,",
+         "birkaç aydan, yıllara uzanan bölümüne de uzak bellek denir.",
+         "Muayenesinde hastanın yaşamına ait eski olayların tarihleri",
+         "sorulabilir. Ancak sorulan soruların yanıtlarının biliniyor olması"
+        ],
+        "sekil": null,
+        "adim": 3
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-11-b05",
+   "baslik": "Amneziler ve Özel Bellek Bozuklukları",
+   "sayfa_araligi": [
+    10,
+    13
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-11-p010",
+     "sayfa": 10,
+     "slayt_adim": "k2-11-d-s10",
+     "cumleler": [
+      {
+       "id": "k2-11-c0030",
+       "ses": "Bellek işlevlerinde ortaya çıkan patolojiler arasında en sık karşılaşılan tablo, geçmişe ait yaşantıların anımsanamaması olarak tanımlanan amnezidir.",
+       "ekran": "**Amneziler ve Özel Bellek Bozuklukları:** Bellek işlevlerinde ortaya çıkan patolojiler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Bellek",
+         "tur": "terim"
+        },
+        {
+         "metin": "Amnezi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 3,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Bellek Bozuklukları",
+         "Amnezi",
+         "Geçmişe ait yaşantıları anımsama kusurudur.",
+         "Anterograd Amnezi",
+         "Retrograd Amnezi"
+        ],
+        "sekil": null,
+        "adim": 3
+       }
+      },
+      {
+       "id": "k2-11-c0031",
+       "ses": "Amnezi ortaya çıkış şekline ve etkilenen zaman aralığına göre anterograd amnezi ve retrograd amnezi olmak üzere iki temel sınıfa ayrılır.",
+       "ekran": "**Amneziler:** Amnezi ortaya çıkış şekline ve etkilenen zaman aralığına göre anterograd amnezi ve retrogr",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Anterograd",
+         "tur": "terim"
+        },
+        {
+         "metin": "Amnezi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 3,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Bellek Bozuklukları",
+         "Amnezi",
+         "Geçmişe ait yaşantıları anımsama kusurudur.",
+         "Anterograd Amnezi",
+         "Retrograd Amnezi"
+        ],
+        "sekil": null,
+        "adim": 3
+       }
+      },
+      {
+       "id": "k2-11-c0032",
+       "ses": "Bu iki amnezi türünün mekanizmasını ve lezyonla olan zamansal ilişkisini doğru kavramak, nörolojik ve psikiyatrik hastalıkların ayırıcı tanısında büyük değer taşır.",
+       "ekran": "**Amneziler:** Bu iki amnezi türünün mekanizmasını ve lezyonla olan zamansal ilişkisini doğru kavramak, n",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Amnezi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 3,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Bellek Bozuklukları",
+         "Amnezi",
+         "Geçmişe ait yaşantıları anımsama kusurudur.",
+         "Anterograd Amnezi",
+         "Retrograd Amnezi"
+        ],
+        "sekil": null,
+        "adim": 3
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p011",
+     "sayfa": 11,
+     "slayt_adim": "k2-11-d-s11",
+     "cumleler": [
+      {
+       "id": "k2-11-c0033",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Kısa süreli bellekteki bilgilerin uzun süreli belleğe aktarılamaması sonucu, bellek bozukluğuna yol açan olaydan sonraki yeni bilgilerin öğrenilememesi ve hatırlanamaması anterograd amnezi olarak tanımlanır.",
+       "ekran": "**Amneziler ve Özel Bellek Bozuklukları:** Burada çıkmış sınav sorusu bulunmaktadır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Bellek",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Amnezi",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": 3,
+       "cikmis": [
+        "q-25-26_d_nem_3_kurul_2-82-cs2"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Anterograd Amnezi",
+         "Bellek bozukluğuna neden olan hastalık ya da durumdan",
+         "sonra, kişinin yeni bilgileri öğrenmekte ve hatırlamakta",
+         "sorun yaşamasıdır. Anterograd amnezi kısa süreli bellekten,",
+         "uzun süreli belleğe bilgi aktarılamamasına bağlıdır.",
+         "Yani kişinin belleği birkaç saat ile sınırlıdır. Anterograd"
+        ],
+        "sekil": null,
+        "adim": 3
+       }
+      },
+      {
+       "id": "k2-11-c0034",
+       "ses": "Anterograd amnezide kişinin anlık hafızası korunmuş olsa da bilgiyi kalıcı hale getiremediği için belleği yalnızca birkaç saatle sınırlı kalır.",
+       "ekran": "**Amneziler:** Anterograd amnezide kişinin anlık hafızası korunmuş olsa da bilgiyi kalıcı hale getiremedi",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Anterograd",
+         "tur": "terim"
+        },
+        {
+         "metin": "Amnezi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 3,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Anterograd Amnezi",
+         "Bellek bozukluğuna neden olan hastalık ya da durumdan",
+         "sonra, kişinin yeni bilgileri öğrenmekte ve hatırlamakta",
+         "sorun yaşamasıdır. Anterograd amnezi kısa süreli bellekten,",
+         "uzun süreli belleğe bilgi aktarılamamasına bağlıdır.",
+         "Yani kişinin belleği birkaç saat ile sınırlıdır. Anterograd"
+        ],
+        "sekil": null,
+        "adim": 3
+       }
+      },
+      {
+       "id": "k2-11-c0035",
+       "ses": "Bu durum tiamin eksikliğine bağlı gelişen Vernike Korsakoff sendromunun kronik döneminde en tipik bulgu olarak karşımıza çıkar, ancak bu tabloya genellikle retrograd amnezi de eşlik eder.",
+       "ekran": "**Amneziler:** Bu durum tiamin eksikliğine bağlı gelişen Vernike Korsakoff sendromunun kronik döneminde e",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Amnezi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 3,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Anterograd Amnezi",
+         "Bellek bozukluğuna neden olan hastalık ya da durumdan",
+         "sonra, kişinin yeni bilgileri öğrenmekte ve hatırlamakta",
+         "sorun yaşamasıdır. Anterograd amnezi kısa süreli bellekten,",
+         "uzun süreli belleğe bilgi aktarılamamasına bağlıdır.",
+         "Yani kişinin belleği birkaç saat ile sınırlıdır. Anterograd"
+        ],
+        "sekil": null,
+        "adim": 3
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p012",
+     "sayfa": 12,
+     "slayt_adim": "k2-11-d-s12",
+     "cumleler": [
+      {
+       "id": "k2-11-c0036",
+       "ses": "Bellek bozukluğuna yol açan travma, inme veya hastalıktan önceki zaman dilimine ait bilgilerin anımsanamaması ise retrograd amnezi olarak adlandırılır.",
+       "ekran": "**Amneziler ve Özel Bellek Bozuklukları:** Bellek bozukluğuna yol açan travma",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Bellek",
+         "tur": "tanim"
+        },
+        {
+         "metin": "Amnezi",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": 3,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Retrograd Amnezi",
+         "Bellek bozukluğuna neden olan hastalık ya da",
+         "durumdan önceki bilgilerin anımsanmasındaki zorluktur.",
+         "Retrograd amnezi en sık demansta görülür. Demansta",
+         "bellek tipik olarak geriye doğru yıkılır; önce en yakın",
+         "laylar anımsanmaz, giderek kişi geçmişinin eski olaylarını"
+        ],
+        "sekil": null,
+        "adim": 3
+       }
+      },
+      {
+       "id": "k2-11-c0037",
+       "ses": "Retrograd amnezi klinik uygulamada en sık demans tablolarında gözlenir.",
+       "ekran": "**Amneziler:** Retrograd amnezi klinik uygulamada en sık demans tablolarında gözlenir.",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Retrograd",
+         "tur": "terim"
+        },
+        {
+         "metin": "Amnezi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 3,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Retrograd Amnezi",
+         "Bellek bozukluğuna neden olan hastalık ya da",
+         "durumdan önceki bilgilerin anımsanmasındaki zorluktur.",
+         "Retrograd amnezi en sık demansta görülür. Demansta",
+         "bellek tipik olarak geriye doğru yıkılır; önce en yakın",
+         "laylar anımsanmaz, giderek kişi geçmişinin eski olaylarını"
+        ],
+        "sekil": null,
+        "adim": 3
+       }
+      },
+      {
+       "id": "k2-11-c0038",
+       "ses": "Demansta bellek yıkımı öncelikle yakın geçmişe ait olaylardan başlar; hastalık ilerledikçe bozulma derinleşir ve süreç uzak belleği de içine alır.",
+       "ekran": "**Amneziler:** Demansta bellek yıkımı öncelikle yakın geçmişe ait olaylardan başlar; hastalık ilerledikçe",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Bellek",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 3,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Retrograd Amnezi",
+         "Bellek bozukluğuna neden olan hastalık ya da",
+         "durumdan önceki bilgilerin anımsanmasındaki zorluktur.",
+         "Retrograd amnezi en sık demansta görülür. Demansta",
+         "bellek tipik olarak geriye doğru yıkılır; önce en yakın",
+         "laylar anımsanmaz, giderek kişi geçmişinin eski olaylarını"
+        ],
+        "sekil": null,
+        "adim": 3
+       }
+      },
+      {
+       "id": "k2-11-c0039",
+       "ses": "Nörolojide Ribo kanunu olarak da bilinen bu kural uyarınca, en eski çocukluk anıları ve kökleşmiş bilgiler en son unutulan bilgilerdir.",
+       "ekran": "**Amneziler:** Nörolojide Ribo kanunu olarak da bilinen bu kural uyarınca, en eski çocukluk anıları ve kö",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Nörolojide Ribo",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 3,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Retrograd Amnezi",
+         "Bellek bozukluğuna neden olan hastalık ya da",
+         "durumdan önceki bilgilerin anımsanmasındaki zorluktur.",
+         "Retrograd amnezi en sık demansta görülür. Demansta",
+         "bellek tipik olarak geriye doğru yıkılır; önce en yakın",
+         "laylar anımsanmaz, giderek kişi geçmişinin eski olaylarını"
+        ],
+        "sekil": null,
+        "adim": 3
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p013",
+     "sayfa": 13,
+     "slayt_adim": "k2-11-d-s13",
+     "cumleler": [
+      {
+       "id": "k2-11-c0040",
+       "ses": "Bellek alanındaki diğer özel klinik tablolar arasında füg, hiperemnezi, paramneziler ve konfabülasyon yer alır.",
+       "ekran": "**Amneziler ve Özel Bellek Bozuklukları:** Bellek alanındaki diğer özel klinik",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Bellek",
+         "tur": "terim"
+        },
+        {
+         "metin": "Amnezi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 3,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Füg",
+         "Kişinin kendisini nasıl gittiğini bilmeksizin bir yerde bulması durumudur. Dissosiyatif",
+         "bozukluklarda görülür. Temporal parsiyel epilepsiye bağlı olarak da gelişebilir.",
+         "Hiperemnezi",
+         "Bazı olayları hatırlanması güç ayrıntılarıyla anımsamak.",
+         "Deja Entandu: Bir şeyi daha önce işittiğini sanmak"
+        ],
+        "sekil": null,
+        "adim": 3
+       }
+      },
+      {
+       "id": "k2-11-c0041",
+       "ses": "Füg, kişinin geçmiş kimliğini unutup nasıl gittiğini bilmeksizin kendisini bambaşka bir yerde bulması olup dissosiyatif bozukluklarda veya temporal parsiyel epilepside gelişebilir.",
+       "ekran": "**Amneziler:** Füg, kişinin geçmiş kimliğini unutup nasıl gittiğini bilmeksizin kendisini bambaşka bir ye",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Füg",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 3,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Füg",
+         "Kişinin kendisini nasıl gittiğini bilmeksizin bir yerde bulması durumudur. Dissosiyatif",
+         "bozukluklarda görülür. Temporal parsiyel epilepsiye bağlı olarak da gelişebilir.",
+         "Hiperemnezi",
+         "Bazı olayları hatırlanması güç ayrıntılarıyla anımsamak.",
+         "Deja Entandu: Bir şeyi daha önce işittiğini sanmak"
+        ],
+        "sekil": null,
+        "adim": 3
+       }
+      },
+      {
+       "id": "k2-11-c0042",
+       "ses": "Hiperemnezi olayların aşırı ayrıntılı anımsanmasıdır; deja vu daha önce görmüş gibi, jamais vu ise çok iyi bildiği bir şeyi hiç görmemiş gibi hissetme paramnezileridir.",
+       "ekran": "**Amneziler:** Hiperemnezi olayların aşırı ayrıntılı anımsanmasıdır; deja vu daha önce görmüş gibi, jamai",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Amnezi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 3,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Füg",
+         "Kişinin kendisini nasıl gittiğini bilmeksizin bir yerde bulması durumudur. Dissosiyatif",
+         "bozukluklarda görülür. Temporal parsiyel epilepsiye bağlı olarak da gelişebilir.",
+         "Hiperemnezi",
+         "Bazı olayları hatırlanması güç ayrıntılarıyla anımsamak.",
+         "Deja Entandu: Bir şeyi daha önce işittiğini sanmak"
+        ],
+        "sekil": null,
+        "adim": 3
+       }
+      },
+      {
+       "id": "k2-11-c0043",
+       "ses": "Konfabülasyon yani masallama ise özellikle demans ve Korsakoff hastalarında unutulan bellek boşluklarının farkında olmadan uydurma hikayelerle doldurulması durumudur.",
+       "ekran": "**Amneziler:** Konfabülasyon yani masallama ise özellikle demans ve Korsakoff hastalarında unutulan belle",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Konfabülasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 3,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Füg",
+         "Kişinin kendisini nasıl gittiğini bilmeksizin bir yerde bulması durumudur. Dissosiyatif",
+         "bozukluklarda görülür. Temporal parsiyel epilepsiye bağlı olarak da gelişebilir.",
+         "Hiperemnezi",
+         "Bazı olayları hatırlanması güç ayrıntılarıyla anımsamak.",
+         "Deja Entandu: Bir şeyi daha önce işittiğini sanmak"
+        ],
+        "sekil": null,
+        "adim": 3
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-11-b06",
+   "baslik": "Dikkat ve Konsantrasyon Bozuklukları",
+   "sayfa_araligi": [
+    14,
+    16
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-11-p014",
+     "sayfa": 14,
+     "slayt_adim": "k2-11-d-s14",
+     "cumleler": [
+      {
+       "id": "k2-11-c0044",
+       "ses": "Zihnin temel yürütücü işlevlerinden olan dikkat, kişinin çevreden gelen sayısız uyaran arasından ilgisini belirli bir noktaya yönlendirebilmesi ve sınırlandırabilmesidir.",
+       "ekran": "**Dikkat ve Konsantrasyon Bozuklukları:** Zihnin temel yürütücü işlevlerinden olan dikkat",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Dikkat",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 5,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Dikkat ve Konsantrasyon",
+         "Zihnin bu işlevi kişinin birçok değişik ilgi ve",
+         "düşüncelerini belli bir noktaya yönlendirebilmesi ve",
+         "sınırlandırabilmesi ile ilgilidir. Dikkat zihnin belli bir alana",
+         "çekilmesi, konsantrasyon ise bunun sürdürebilmesi",
+         "larak tanımlanabilir."
+        ],
+        "sekil": null,
+        "adim": 5
+       }
+      },
+      {
+       "id": "k2-11-c0045",
+       "ses": "Dikkat zihinsel enerjinin belirli bir alana odaklanmasıyken, konsantrasyon bu odaklanmanın belirli bir süre boyunca kesintisiz sürdürülebilmesi yetisidir.",
+       "ekran": "**Dikkat:** Dikkat zihinsel enerjinin belirli bir alana odaklanmasıyken, konsantrasyon bu odaklanmanın",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Dikkat",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 5,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Dikkat ve Konsantrasyon",
+         "Zihnin bu işlevi kişinin birçok değişik ilgi ve",
+         "düşüncelerini belli bir noktaya yönlendirebilmesi ve",
+         "sınırlandırabilmesi ile ilgilidir. Dikkat zihnin belli bir alana",
+         "çekilmesi, konsantrasyon ise bunun sürdürebilmesi",
+         "larak tanımlanabilir."
+        ],
+        "sekil": null,
+        "adim": 5
+       }
+      },
+      {
+       "id": "k2-11-c0046",
+       "ses": "Dikkat ve konsantrasyonu bozulan hastalar kitap okurken, ders çalışırken veya film izlerken dakikalar geçmesine rağmen hiçbir şey anlamadıklarını ifade ederler ve bu tür zihinsel etkinliklerden giderek uzaklaşırlar.",
+       "ekran": "**Dikkat:** Dikkat ve konsantrasyonu bozulan hastalar kitap okurken, ders çalışırken veya film izlerke",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Dikkat",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 5,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Dikkat ve Konsantrasyon",
+         "Zihnin bu işlevi kişinin birçok değişik ilgi ve",
+         "düşüncelerini belli bir noktaya yönlendirebilmesi ve",
+         "sınırlandırabilmesi ile ilgilidir. Dikkat zihnin belli bir alana",
+         "çekilmesi, konsantrasyon ise bunun sürdürebilmesi",
+         "larak tanımlanabilir."
+        ],
+        "sekil": null,
+        "adim": 5
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p015",
+     "sayfa": 15,
+     "slayt_adim": "k2-11-d-s15",
+     "cumleler": [
+      {
+       "id": "k2-11-c0047",
+       "ses": "Dikkatin dış etkenlerle kolayca çelinebilmesi ve hedeften sapması distraktibilite olarak adlandırılır.",
+       "ekran": "**Dikkat ve Konsantrasyon Bozuklukları:** Dikkatin dış etkenlerle kolayca çelinebilmesi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Dikkat",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": 5,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Dikkat ve Konsantrasyon",
+         "Distraktibilite",
+         "Dikkat kolaylıkla dış uyaranlara kayması ve",
+         "dağılmasıdır. Örneğin, kişi bir konuda konuşurken",
+         "birden çevreden gelen bir uyaranla o konudan",
+         "bahsetmeye başlar."
+        ],
+        "sekil": null,
+        "adim": 5
+       }
+      },
+      {
+       "id": "k2-11-c0048",
+       "ses": "Distraktibilitesi olan bir hasta hekimle konuşurken en ufak bir çevresel sesle veya görsel ayrıntıyla odağını kaybederek o konudan bahsetmeye başlar.",
+       "ekran": "**Dikkat:** Distraktibilitesi olan bir hasta hekimle konuşurken en ufak bir çevresel sesle veya görsel",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Distraktibilitesi olan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 5,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Dikkat ve Konsantrasyon",
+         "Distraktibilite",
+         "Dikkat kolaylıkla dış uyaranlara kayması ve",
+         "dağılmasıdır. Örneğin, kişi bir konuda konuşurken",
+         "birden çevreden gelen bir uyaranla o konudan",
+         "bahsetmeye başlar."
+        ],
+        "sekil": null,
+        "adim": 5
+       }
+      },
+      {
+       "id": "k2-11-c0049",
+       "ses": "Örneğin kendi yakınmalarını anlatırken birden hekimin kravatının desenine veya dışarıdan geçen korna sesine takılarak apayrı konulara geçiş yapar.",
+       "ekran": "**Dikkat:** Örneğin kendi yakınmalarını anlatırken birden hekimin kravatının desenine veya dışarıdan g",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Örneğin kendi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 5,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Dikkat ve Konsantrasyon",
+         "Distraktibilite",
+         "Dikkat kolaylıkla dış uyaranlara kayması ve",
+         "dağılmasıdır. Örneğin, kişi bir konuda konuşurken",
+         "birden çevreden gelen bir uyaranla o konudan",
+         "bahsetmeye başlar."
+        ],
+        "sekil": null,
+        "adim": 5
+       }
+      },
+      {
+       "id": "k2-11-c0050",
+       "ses": "Bu tablo klinik psikiyatride en sık mani ataklarında ve dikkat eksikliği hiperaktivite bozukluğunda karşımıza çıkar.",
+       "ekran": "**Dikkat:** Bu tablo klinik psikiyatride en sık mani ataklarında ve dikkat eksikliği hiperaktivite boz",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Dikkat",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 5,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Dikkat ve Konsantrasyon",
+         "Distraktibilite",
+         "Dikkat kolaylıkla dış uyaranlara kayması ve",
+         "dağılmasıdır. Örneğin, kişi bir konuda konuşurken",
+         "birden çevreden gelen bir uyaranla o konudan",
+         "bahsetmeye başlar."
+        ],
+        "sekil": null,
+        "adim": 5
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p016",
+     "sayfa": 16,
+     "slayt_adim": "k2-11-d-s16",
+     "cumleler": [
+      {
+       "id": "k2-11-c0051",
+       "ses": "Dikkatin dışarıdan gelebilecek olası bir tehdide karşı aşırı tetikte bulunması ve sürekli çevreye odaklanması hipervijilans olarak adlandırılır.",
+       "ekran": "**Dikkat ve Konsantrasyon Bozuklukları:** Dikkatin dışarıdan gelebilecek olası bir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Dikkat",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": 5,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Dikkat ve Konsantrasyon",
+         "Hipervijilans",
+         "Dikkat kesilme-aşırı dikkatli olmaya çalışma olarak",
+         "tanımlanabilir. Kişi özellikle dışarıdan gelen bir tehlike beklentisine",
+         "karşı her şeye dikkat etmeye çalışır.",
+         "Daha çok travma sonrası stres bozukluğunda ve sanrısal"
+        ],
+        "sekil": null,
+        "adim": 5
+       }
+      },
+      {
+       "id": "k2-11-c0052",
+       "ses": "Hipervijilans tablosundaki kişi kendisini bekleyen somut veya soyut bir tehlike algısı nedeniyle her türlü sese, harekete ve ayrıntıya aşırı derecede dikkat kesilir.",
+       "ekran": "**Dikkat:** Hipervijilans tablosundaki kişi kendisini bekleyen somut veya soyut bir tehlike algısı ned",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Dikkat",
+         "tur": "terim"
+        },
+        {
+         "metin": "Algı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 5,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Dikkat ve Konsantrasyon",
+         "Hipervijilans",
+         "Dikkat kesilme-aşırı dikkatli olmaya çalışma olarak",
+         "tanımlanabilir. Kişi özellikle dışarıdan gelen bir tehlike beklentisine",
+         "karşı her şeye dikkat etmeye çalışır.",
+         "Daha çok travma sonrası stres bozukluğunda ve sanrısal"
+        ],
+        "sekil": null,
+        "adim": 5
+       }
+      },
+      {
+       "id": "k2-11-c0053",
+       "ses": "Bu durum en belirgin olarak travma sonrası stres bozukluğu ve paranoid sanrısal bozuklukta izlenir.",
+       "ekran": "**Dikkat:** Bu durum en belirgin olarak travma sonrası stres bozukluğu ve paranoid sanrısal bozuklukta",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Bu durum",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 5,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Dikkat ve Konsantrasyon",
+         "Hipervijilans",
+         "Dikkat kesilme-aşırı dikkatli olmaya çalışma olarak",
+         "tanımlanabilir. Kişi özellikle dışarıdan gelen bir tehlike beklentisine",
+         "karşı her şeye dikkat etmeye çalışır.",
+         "Daha çok travma sonrası stres bozukluğunda ve sanrısal"
+        ],
+        "sekil": null,
+        "adim": 5
+       }
+      },
+      {
+       "id": "k2-11-c0054",
+       "ses": "Örneğin büyük bir deprem yaşamış depremzede odadaki en ufak çıtırtı veya titreşimde şiddetle irkilirken, takip edilme kuşkusu yaşayan hasta sürekli sokaktaki araçları ve insanları gözetler.",
+       "ekran": "**Dikkat:** Örneğin büyük bir deprem yaşamış depremzede odadaki en ufak çıtırtı veya titreşimde şiddet",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Örneğin büyük",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 5,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Dikkat ve Konsantrasyon",
+         "Hipervijilans",
+         "Dikkat kesilme-aşırı dikkatli olmaya çalışma olarak",
+         "tanımlanabilir. Kişi özellikle dışarıdan gelen bir tehlike beklentisine",
+         "karşı her şeye dikkat etmeye çalışır.",
+         "Daha çok travma sonrası stres bozukluğunda ve sanrısal"
+        ],
+        "sekil": null,
+        "adim": 5
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-11-b07",
+   "baslik": "Algı Bozuklukları ve Halüsinasyonlar",
+   "sayfa_araligi": [
+    17,
+    19
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-11-p017",
+     "sayfa": 17,
+     "slayt_adim": "k2-11-d-s17",
+     "cumleler": [
+      {
+       "id": "k2-11-c0055",
+       "ses": "Algı, içsel ya da dışsal duyusal uyaranların önceki deneyimlerimizin ve belleğimizin ışığında anlamlı bir zihinsel bilgiye dönüştürülmesi sürecidir.",
+       "ekran": "**Algı Bozuklukları ve Halüsinasyonlar:** Algı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Algı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 6,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Algı",
+         "İçsel ya da dışsal uyaranların, önceki deneyimler ışığında bir bilgiye",
+         "dönüştürülmesi sürecidir.",
+         "Halüsinasyonlar",
+         "Dış bir uyaran olmaksızın ortaya çıkan algılamadır. 5 duyunun",
+         "her biriyle ilgili olabilir: Görme, işitme, tat, koku, dokunma."
+        ],
+        "sekil": null,
+        "adim": 6
+       }
+      },
+      {
+       "id": "k2-11-c0056",
+       "ses": "Bu sürecin en dramatik bozukluğu olan halüsinasyon, ortamda gerçek bir dış duyusal uyaran bulunmaksızın kişinin bir algı yaşamasıdır.",
+       "ekran": "**Algı:** Bu sürecin en dramatik bozukluğu olan halüsinasyon, ortamda gerçek bir dış duyusal uyaran",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Algı",
+         "tur": "terim"
+        },
+        {
+         "metin": "Halüsinasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 6,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Algı",
+         "İçsel ya da dışsal uyaranların, önceki deneyimler ışığında bir bilgiye",
+         "dönüştürülmesi sürecidir.",
+         "Halüsinasyonlar",
+         "Dış bir uyaran olmaksızın ortaya çıkan algılamadır. 5 duyunun",
+         "her biriyle ilgili olabilir: Görme, işitme, tat, koku, dokunma."
+        ],
+        "sekil": null,
+        "adim": 6
+       }
+      },
+      {
+       "id": "k2-11-c0057",
+       "ses": "Halüsinasyonlar görme, işitme, tat alma, koku ve dokunma olmak üzere beş temel duyunun herhangi birinde ortaya çıkabilir.",
+       "ekran": "**Algı:** Halüsinasyonlar görme, işitme, tat alma, koku ve dokunma olmak üzere beş temel duyunun her",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Halüsinasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 6,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Algı",
+         "İçsel ya da dışsal uyaranların, önceki deneyimler ışığında bir bilgiye",
+         "dönüştürülmesi sürecidir.",
+         "Halüsinasyonlar",
+         "Dış bir uyaran olmaksızın ortaya çıkan algılamadır. 5 duyunun",
+         "her biriyle ilgili olabilir: Görme, işitme, tat, koku, dokunma."
+        ],
+        "sekil": null,
+        "adim": 6
+       }
+      },
+      {
+       "id": "k2-11-c0058",
+       "ses": "Halüsinasyonlar psikiyatrik semiyolojinin en kritik bulgularından biridir ve altta yatan organik bir toksisite yoksa çoğunlukla psikotik bir tabloya işaret eder.",
+       "ekran": "**Algı:** Halüsinasyonlar psikiyatrik semiyolojinin en kritik bulgularından biridir ve altta yatan o",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Halüsinasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 6,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Algı",
+         "İçsel ya da dışsal uyaranların, önceki deneyimler ışığında bir bilgiye",
+         "dönüştürülmesi sürecidir.",
+         "Halüsinasyonlar",
+         "Dış bir uyaran olmaksızın ortaya çıkan algılamadır. 5 duyunun",
+         "her biriyle ilgili olabilir: Görme, işitme, tat, koku, dokunma."
+        ],
+        "sekil": null,
+        "adim": 6
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p018",
+     "sayfa": 18,
+     "slayt_adim": "k2-11-d-s18",
+     "cumleler": [
+      {
+       "id": "k2-11-c0059",
+       "ses": "Her halüsinasyon mutlaka psikotik bir hastalığı göstermez; bazı yalın halüsinasyonlar sağlıklı bireylerde de görülebilir.",
+       "ekran": "**Algı Bozuklukları ve Halüsinasyonlar:** Her halüsinasyon mutlaka psikotik bir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Halüsinasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 6,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Algı",
+         "Halüsinasyonlar",
+         "Ancak bazı halüsinasyonlar normal ya da psikotik olmayan",
+         "insanlarda da görülür. Kişinin, isminin seslenildiğini duyması, kapı",
+         "veya telefon çaldı zannetmek ya da bir fare geçtiğini sanmak",
+         "gibi tek bir duyuya ait kısa süreli halüsinasyonlar, elementer ya da"
+        ],
+        "sekil": null,
+        "adim": 6
+       }
+      },
+      {
+       "id": "k2-11-c0060",
+       "ses": "Kişinin yalnızken adının çağrıldığını duyması, telefonunun çaldığını sanması veya gözünün ucundan bir karaltı geçtiğini hissetmesi gibi tek duyuya ait geçici yaşantılara elementer ya da basit halüsinasyon denir.",
+       "ekran": "**Algı:** Kişinin yalnızken adının çağrıldığını duyması, telefonunun çaldığını sanması veya gözünün",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": 6,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Algı",
+         "Halüsinasyonlar",
+         "Ancak bazı halüsinasyonlar normal ya da psikotik olmayan",
+         "insanlarda da görülür. Kişinin, isminin seslenildiğini duyması, kapı",
+         "veya telefon çaldı zannetmek ya da bir fare geçtiğini sanmak",
+         "gibi tek bir duyuya ait kısa süreli halüsinasyonlar, elementer ya da"
+        ],
+        "sekil": null,
+        "adim": 6
+       }
+      },
+      {
+       "id": "k2-11-c0061",
+       "ses": "Bunun yanı sıra uykuya dalarken ortaya çıkan hipnogojik ve uykudan uyanırken beliren hipnopompik halüsinasyonlar karmaşık yapıda olsalar dahi fizyolojik geçiş süreçleri olarak kabul edilir ve psikotik bozukluk sayılmazlar.",
+       "ekran": "**Algı:** Bunun yanı sıra uykuya dalarken ortaya çıkan hipnogojik ve uykudan uyanırken beliren hipno",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": 6,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Algı",
+         "Halüsinasyonlar",
+         "Ancak bazı halüsinasyonlar normal ya da psikotik olmayan",
+         "insanlarda da görülür. Kişinin, isminin seslenildiğini duyması, kapı",
+         "veya telefon çaldı zannetmek ya da bir fare geçtiğini sanmak",
+         "gibi tek bir duyuya ait kısa süreli halüsinasyonlar, elementer ya da"
+        ],
+        "sekil": null,
+        "adim": 6
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p019",
+     "sayfa": 19,
+     "slayt_adim": "k2-11-d-s19",
+     "cumleler": [
+      {
+       "id": "k2-11-c0062",
+       "ses": "Basit ve fizyolojik yaşantıların ötesindeki karmaşık halüsinasyonlar klinikte doğrudan psikotik bozuklukları düşündürür.",
+       "ekran": "**Algı Bozuklukları ve Halüsinasyonlar:** Basit ve fizyolojik yaşantıların ötesindeki",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Halüsinasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 6,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Algı",
+         "Halüsinasyonlar",
+         "Bunlar dışında karmaşık halüsinasyonlar çoğunlukla bir",
+         "psikotik bozukluğa işaret eder ve önemlidirler.",
+         "Psikozlarda en fazla işitsel halüsinasyonlara rastlanır, bunu",
+         "görsel halüsinasyonlar takip eder. Koku ve tad halüsinasyonları,"
+        ],
+        "sekil": null,
+        "adim": 6
+       }
+      },
+      {
+       "id": "k2-11-c0063",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Psikozlarda ve şizofrenide en sık karşılaşılan tür işitsel halüsinasyonlar iken, deliryum gibi organik tablolarda görsel halüsinasyonlar ön plana geçer.",
+       "ekran": "**Algı:** Psikozlarda ve şizofrenide en sık karşılaşılan tür işitsel halüsinasyonlardır; bunu ikinci",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Halüsinasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 6,
+       "cikmis": [
+        "d3-k2-psi-002"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Algı",
+         "Halüsinasyonlar",
+         "Bunlar dışında karmaşık halüsinasyonlar çoğunlukla bir",
+         "psikotik bozukluğa işaret eder ve önemlidirler.",
+         "Psikozlarda en fazla işitsel halüsinasyonlara rastlanır, bunu",
+         "görsel halüsinasyonlar takip eder. Koku ve tad halüsinasyonları,"
+        ],
+        "sekil": null,
+        "adim": 6
+       }
+      },
+      {
+       "id": "k2-11-c0064",
+       "ses": "Koku ve tat alma duyularına ait halüsinasyonlar ise psikiyatriden ziyade altta yatan organik bir beyin patolojisini, özellikle temporal lob epilepsisini veya temporal yer kaplayan tümöral lezyonları düşündürdüğünden mutlaka ileri nörolojik tetkik gerektirir.",
+       "ekran": "**Algı:** Koku ve tat alma duyularına ait halüsinasyonlar ise psikiyatriden ziyade altta yatan organ",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Halüsinasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 6,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Algı",
+         "Halüsinasyonlar",
+         "Bunlar dışında karmaşık halüsinasyonlar çoğunlukla bir",
+         "psikotik bozukluğa işaret eder ve önemlidirler.",
+         "Psikozlarda en fazla işitsel halüsinasyonlara rastlanır, bunu",
+         "görsel halüsinasyonlar takip eder. Koku ve tad halüsinasyonları,"
+        ],
+        "sekil": null,
+        "adim": 6
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-11-b08",
+   "baslik": "İllüzyonlar ve Kendilik Algısı Değişiklikleri",
+   "sayfa_araligi": [
+    20,
+    22
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-11-p020",
+     "sayfa": 20,
+     "slayt_adim": "k2-11-d-s20",
+     "cumleler": [
+      {
+       "id": "k2-11-c0065",
+       "ses": "Halüsinasyondan farklı olarak illüzyonda ortamda gerçek bir dış duyusal uyaran mevcuttur, ancak bu uyaran zihin tarafından yanlış algılanır ve yorumlanır.",
+       "ekran": "**İllüzyonlar ve Kendilik Algısı Değişiklikleri:** Halüsinasyondan farklı olarak illüzyonda ortamda",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Algı",
+         "tur": "terim"
+        },
+        {
+         "metin": "Halüsinasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 6,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Algı",
+         "İlüzyonlar",
+         "Uyaranların yanlış yorumlanmasıdır. Var olan bir uyaran yanlış",
+         "algılanır.",
+         "Mezarlıktan geçerken bir ağacı insana benzetmek ya da",
+         "birini beklerken buzdolabı sesini zile benzetmek gibi olumlu ya da"
+        ],
+        "sekil": null,
+        "adim": 6
+       }
+      },
+      {
+       "id": "k2-11-c0066",
+       "ses": "Gece mezarlıktan geçerken bir ağaç gölgesini insana benzetmek ya da merakla birini beklerken buzdolabı motorunun sesini kapı ziline benzetmek gibi durumlar sağlıklı bireylerde de sıkça yaşanır.",
+       "ekran": "**İllüzyonlar:** Gece mezarlıktan geçerken bir ağaç gölgesini insana benzetmek ya da merakla birini beklerk",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Gece mezarlıktan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 6,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Algı",
+         "İlüzyonlar",
+         "Uyaranların yanlış yorumlanmasıdır. Var olan bir uyaran yanlış",
+         "algılanır.",
+         "Mezarlıktan geçerken bir ağacı insana benzetmek ya da",
+         "birini beklerken buzdolabı sesini zile benzetmek gibi olumlu ya da"
+        ],
+        "sekil": null,
+        "adim": 6
+       }
+      },
+      {
+       "id": "k2-11-c0067",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: İllüzyonlar dış uyarının yanlış yorumlanması olup psikotik bozuklukların prodromal başlangıç evresinde belirgin bir kaygı eşliğinde çarpıcı biçimde artış gösterir.",
+       "ekran": "**Çıkmış Sınav Sorusu:** Burada çıkmış sınav sorusu bulunmaktadır",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": 6,
+       "cikmis": [
+        "64b435be39be"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Algı",
+         "İlüzyonlar",
+         "Uyaranların yanlış yorumlanmasıdır. Var olan bir uyaran yanlış",
+         "algılanır.",
+         "Mezarlıktan geçerken bir ağacı insana benzetmek ya da",
+         "birini beklerken buzdolabı sesini zile benzetmek gibi olumlu ya da"
+        ],
+        "sekil": null,
+        "adim": 6
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p021",
+     "sayfa": 21,
+     "slayt_adim": "k2-11-d-s21",
+     "cumleler": [
+      {
+       "id": "k2-11-c0068",
+       "ses": "Kendilik ve çevre algısındaki bozulmalar depersonalizasyon ve derealizasyon terimleriyle ifade edilir.",
+       "ekran": "**İllüzyonlar ve Kendilik Algısı Değişiklikleri:** Kendilik ve çevre algısındaki bozulmalar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Algı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 7,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Algı",
+         "Depersonalizasyon",
+         "Kişinin kendisini değişmiş ya da yabancı hissetmesidir.",
+         "Derealizasyon",
+         "Dış dünyaya ilişkin yabancılık duygusudur. Kişi her zamanki çevresini ve",
+         "çevresindeki kişileri değişmiş ya da yabancılarmış gibi hisseder."
+        ],
+        "sekil": null,
+        "adim": 7
+       }
+      },
+      {
+       "id": "k2-11-c0069",
+       "ses": "Depersonalizasyonda kişi kendi bedenine, duygu ve düşüncelerine yabancılaşır, kendisini dışarıdan izleyen bir yabancı gibi algılar.",
+       "ekran": "**İllüzyonlar:** Depersonalizasyonda kişi kendi bedenine, duygu ve düşüncelerine yabancılaşır, kendisini dı",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Düşünce",
+         "tur": "terim"
+        },
+        {
+         "metin": "Depersonalizasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 7,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Algı",
+         "Depersonalizasyon",
+         "Kişinin kendisini değişmiş ya da yabancı hissetmesidir.",
+         "Derealizasyon",
+         "Dış dünyaya ilişkin yabancılık duygusudur. Kişi her zamanki çevresini ve",
+         "çevresindeki kişileri değişmiş ya da yabancılarmış gibi hisseder."
+        ],
+        "sekil": null,
+        "adim": 7
+       }
+      },
+      {
+       "id": "k2-11-c0070",
+       "ses": "Derealizasyonda ise dış dünya, yaşanan ortam ve çevredeki tanıdık insanlar yapay, sisli veya yabancı bir sahne gibi hissedilir.",
+       "ekran": "**İllüzyonlar:** Derealizasyonda ise dış dünya, yaşanan ortam ve çevredeki tanıdık insanlar yapay, sisli ve",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Derealizasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 7,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Algı",
+         "Depersonalizasyon",
+         "Kişinin kendisini değişmiş ya da yabancı hissetmesidir.",
+         "Derealizasyon",
+         "Dış dünyaya ilişkin yabancılık duygusudur. Kişi her zamanki çevresini ve",
+         "çevresindeki kişileri değişmiş ya da yabancılarmış gibi hisseder."
+        ],
+        "sekil": null,
+        "adim": 7
+       }
+      },
+      {
+       "id": "k2-11-c0071",
+       "ses": "Bu iki fenomen tek tek veya bir arada görülebilir ve en sık akut travmatik stres tepkilerinde, dissosiyatif tablolarda ve anksiyete bozukluklarında ortaya çıkar.",
+       "ekran": "**İllüzyonlar:** Bu iki fenomen tek tek veya bir arada görülebilir ve en sık akut travmatik stres tepkileri",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Bu iki",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 7,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Algı",
+         "Depersonalizasyon",
+         "Kişinin kendisini değişmiş ya da yabancı hissetmesidir.",
+         "Derealizasyon",
+         "Dış dünyaya ilişkin yabancılık duygusudur. Kişi her zamanki çevresini ve",
+         "çevresindeki kişileri değişmiş ya da yabancılarmış gibi hisseder."
+        ],
+        "sekil": null,
+        "adim": 7
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p022",
+     "sayfa": 22,
+     "slayt_adim": "k2-11-d-s22",
+     "cumleler": [
+      {
+       "id": "k2-11-c0072",
+       "ses": "Duyuların çapraz algılanması olarak bilinen sinestezide bir duyusal uyaran başka bir duyunun modalitesinde yaşanır; hasta rengin sesini duyduğunu veya müziğin rengini gördüğünü tarif eder.",
+       "ekran": "**İllüzyonlar ve Kendilik Algısı Değişiklikleri:** Duyuların çapraz algılanması olarak bilinen",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Algı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 7,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Algı",
+         "Sinestezi",
+         "Bir duyusal uyaranın başka bir duyu biçiminde algılanmasıdır.",
+         "Işığın sesini duymak ya da sesi görmek gibi. Daha çok LSD (Liserjik",
+         "asit dietilamid) gibi uyarıcı entoksikasyonlarında görülür.",
+         "Diğer Bazı Algı Bozuklukları"
+        ],
+        "sekil": null,
+        "adim": 7
+       }
+      },
+      {
+       "id": "k2-11-c0073",
+       "ses": "Sinestezi çoğunlukla liserjik asit dietilamid yani le se de gibi halüsinojenik madde intoksikasyonlarında belirir.",
+       "ekran": "**İllüzyonlar:** Sinestezi çoğunlukla liserjik asit dietilamid yani le se de gibi halüsinojenik madde intok",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Sinestezi çoğunlukla",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 7,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Algı",
+         "Sinestezi",
+         "Bir duyusal uyaranın başka bir duyu biçiminde algılanmasıdır.",
+         "Işığın sesini duymak ya da sesi görmek gibi. Daha çok LSD (Liserjik",
+         "asit dietilamid) gibi uyarıcı entoksikasyonlarında görülür.",
+         "Diğer Bazı Algı Bozuklukları"
+        ],
+        "sekil": null,
+        "adim": 7
+       }
+      },
+      {
+       "id": "k2-11-c0074",
+       "ses": "Diğer algı bozuklukları arasında nesneleri devasa görme yani makropsi, minik görme yani mikropsi, ortamda var olan bir nesneyi algılayamama durumu olan negatif halüsinasyon ve aynaya baktığında kendi bedenini görememe hali olan negatif otoskopi sayılır.",
+       "ekran": "**İllüzyonlar:** Diğer algı bozuklukları arasında nesneleri devasa görme yani makropsi, minik görme yani mi",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Algı",
+         "tur": "terim"
+        },
+        {
+         "metin": "İllüzyonlar:",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": 7,
+       "cikmis": [
+        "d3-k2-psi-016"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Algı",
+         "Sinestezi",
+         "Bir duyusal uyaranın başka bir duyu biçiminde algılanmasıdır.",
+         "Işığın sesini duymak ya da sesi görmek gibi. Daha çok LSD (Liserjik",
+         "asit dietilamid) gibi uyarıcı entoksikasyonlarında görülür.",
+         "Diğer Bazı Algı Bozuklukları"
+        ],
+        "sekil": null,
+        "adim": 7
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-11-b09",
+   "baslik": "Düşünce Akışı ve Çağrışım Bozuklukları",
+   "sayfa_araligi": [
+    23,
+    26
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-11-p023",
+     "sayfa": 23,
+     "slayt_adim": "k2-11-d-s23",
+     "cumleler": [
+      {
+       "id": "k2-11-c0075",
+       "ses": "Düşünce muayenesinde ilk incelenen alan, kavramların birbirini tetikleme süreci olan çağrışım zincirinin ve düşünce akışının özellikleridir.",
+       "ekran": "**Düşünce Akışı ve Çağrışım Bozuklukları:** Düşünce muayenesinde ilk incelenen alan",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Düşünce",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 8,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Düşünce",
+         "1. Düşünce Akışındaki Değişiklikler",
+         "Çağrışım: Davranışlar, düşünceler ve kavramlar arasında yer ve zaman",
+         "birliğinin etkisiyle kurulan bağlantılar sonucu, bilinç alanına bunlardan",
+         "birisi girdiğinde ötekini de bilince çekmesi çağrışım olarak adlandırılır.",
+         "a) Çağrışım Artması"
+        ],
+        "sekil": null,
+        "adim": 8
+       }
+      },
+      {
+       "id": "k2-11-c0076",
+       "ses": "Çağrışım artması durumunda konuşmanın temposu ve yoğunluğu yükselir; lögorede konuşma mantıklı ve amaca yönelik olsa da miktarı ve hızı çok belirgin artmıştır.",
+       "ekran": "**Düşünce:** Çağrışım artması durumunda konuşmanın temposu ve yoğunluğu yükselir; lögorede konuşma mant",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Lögore",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 8,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Düşünce",
+         "1. Düşünce Akışındaki Değişiklikler",
+         "Çağrışım: Davranışlar, düşünceler ve kavramlar arasında yer ve zaman",
+         "birliğinin etkisiyle kurulan bağlantılar sonucu, bilinç alanına bunlardan",
+         "birisi girdiğinde ötekini de bilince çekmesi çağrışım olarak adlandırılır.",
+         "a) Çağrışım Artması"
+        ],
+        "sekil": null,
+        "adim": 8
+       }
+      },
+      {
+       "id": "k2-11-c0077",
+       "ses": "Basınçlı konuşmada hasta araya girilmesine veya soru sorulmasına izin vermeyecek bir hız ve taşkınlıkla durmaksızın konuşur.",
+       "ekran": "**Düşünce:** Basınçlı konuşmada hasta araya girilmesine veya soru sorulmasına izin vermeyecek bir hız v",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Basınçlı konuşma",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 8,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Düşünce",
+         "1. Düşünce Akışındaki Değişiklikler",
+         "Çağrışım: Davranışlar, düşünceler ve kavramlar arasında yer ve zaman",
+         "birliğinin etkisiyle kurulan bağlantılar sonucu, bilinç alanına bunlardan",
+         "birisi girdiğinde ötekini de bilince çekmesi çağrışım olarak adlandırılır.",
+         "a) Çağrışım Artması"
+        ],
+        "sekil": null,
+        "adim": 8
+       }
+      },
+      {
+       "id": "k2-11-c0078",
+       "ses": "Ayrıntıcı konuşmada ise özellikle obsesif kişiler konunun sayısız gereksiz ayrıntısına girerler, ancak ana hedeften kopmadan eninde sonunda konuyu toparlarlar.",
+       "ekran": "**Düşünce:** Ayrıntıcı konuşmada ise özellikle obsesif kişiler konunun sayısız gereksiz ayrıntısına gir",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Ayrıntıcı konuşmada",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 8,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Düşünce",
+         "1. Düşünce Akışındaki Değişiklikler",
+         "Çağrışım: Davranışlar, düşünceler ve kavramlar arasında yer ve zaman",
+         "birliğinin etkisiyle kurulan bağlantılar sonucu, bilinç alanına bunlardan",
+         "birisi girdiğinde ötekini de bilince çekmesi çağrışım olarak adlandırılır.",
+         "a) Çağrışım Artması"
+        ],
+        "sekil": null,
+        "adim": 8
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p024",
+     "sayfa": 24,
+     "slayt_adim": "k2-11-d-s24",
+     "cumleler": [
+      {
+       "id": "k2-11-c0079",
+       "ses": "Düşünce akışında yavaşlama olduğunda çağrışımlar seyrekleşir; bu durum en tipik olarak ağır depresyonda görülürken, düşüncenin aniden bıçak gibi kesilmesi blokaj olarak adlandırılır.",
+       "ekran": "**Düşünce Akışı ve Çağrışım Bozuklukları:** Düşünce akışında yavaşlama olduğunda çağrışımlar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Düşünce",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": 8,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Düşünce",
+         "1. Düşünce Akışındaki Değişiklikler",
+         "b) Çağrışım Azalması",
+         "Çağrışım Yavaşlaması: Konuşma hızının yavaşlaması daha çok depresyonda",
+         "görülür.",
+         "Blokaj: Hasta bir şeyi anlatırken birden durur ve konuşmayı keser."
+        ],
+        "sekil": null,
+        "adim": 8
+       }
+      },
+      {
+       "id": "k2-11-c0080",
+       "ses": "Çağrışım sapmalarında ise düşüncenin mantıksal örgüsü bozulur.",
+       "ekran": "**Düşünce:** Çağrışım sapmalarında ise düşüncenin mantıksal örgüsü bozulur.",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Düşünce",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 8,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Düşünce",
+         "1. Düşünce Akışındaki Değişiklikler",
+         "b) Çağrışım Azalması",
+         "Çağrışım Yavaşlaması: Konuşma hızının yavaşlaması daha çok depresyonda",
+         "görülür.",
+         "Blokaj: Hasta bir şeyi anlatırken birden durur ve konuşmayı keser."
+        ],
+        "sekil": null,
+        "adim": 8
+       }
+      },
+      {
+       "id": "k2-11-c0081",
+       "ses": "Hastanın dilde var olmayan yeni sözcükler türetmesine neolojizm, değişen sorulara rağmen aynı yanıtı inatla tekrarlamasına perseverasyon denir.",
+       "ekran": "**Düşünce:** Hastanın dilde var olmayan yeni sözcükler türetmesine neolojizm, değişen sorulara rağmen a",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Neolojizm",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 8,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Düşünce",
+         "1. Düşünce Akışındaki Değişiklikler",
+         "b) Çağrışım Azalması",
+         "Çağrışım Yavaşlaması: Konuşma hızının yavaşlaması daha çok depresyonda",
+         "görülür.",
+         "Blokaj: Hasta bir şeyi anlatırken birden durur ve konuşmayı keser."
+        ],
+        "sekil": null,
+        "adim": 8
+       }
+      },
+      {
+       "id": "k2-11-c0082",
+       "ses": "Cümlelerin anlam yerine sadece kafiyeli ses benzerlikleriyle birbirine bağlandığı duruma klang çağrışım, hiçbir gramer kuralı kalmaksızın sözcüklerin rastgele peş peşe dizilmesine ise kelime salatası adı verilir.",
+       "ekran": "**Düşünce:** Cümlelerin anlam yerine sadece kafiyeli ses benzerlikleriyle birbirine bağlandığı duruma k",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": 8,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Düşünce",
+         "1. Düşünce Akışındaki Değişiklikler",
+         "b) Çağrışım Azalması",
+         "Çağrışım Yavaşlaması: Konuşma hızının yavaşlaması daha çok depresyonda",
+         "görülür.",
+         "Blokaj: Hasta bir şeyi anlatırken birden durur ve konuşmayı keser."
+        ],
+        "sekil": null,
+        "adim": 8
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p025",
+     "sayfa": 25,
+     "slayt_adim": "k2-11-d-s25",
+     "cumleler": [
+      {
+       "id": "k2-11-c0083",
+       "ses": "Düşünce akış sapmaları klinikte farklı konuşma kusurlarıyla kendisini gösterir.",
+       "ekran": "**Düşünce Akışı ve Çağrışım Bozuklukları:** Düşünce akış sapmaları klinikte farklı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Düşünce",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 8,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Düşünce",
+         "1. Düşünce Akışındaki Değişiklikler",
+         "c) Çağrışım Sapmaları",
+         "Yandan Konuşma: Sorulara yanıt vermek yerine konuyla bağlantılı",
+         "ancak, sorunun yanıtı olmayan ifadelerle cevap verilir. Sözgelimi",
+         "hangi liseye gittiği sorulduğunda, eğitimin öneminden söz eder."
+        ],
+        "sekil": null,
+        "adim": 8
+       }
+      },
+      {
+       "id": "k2-11-c0084",
+       "ses": "Yandan konuşmada hasta kendisine yöneltilen açık soruya doğrudan yanıt vermek yerine, konuyla teğetsel olarak ilişkili ama sorunun karşılığı olmayan yanıtlar verir; örneğin hangi okulda okuduğu sorulduğunda eğitimin ülkedeki genel öneminden bahseder.",
+       "ekran": "**Düşünce:** Yandan konuşmada hasta kendisine yöneltilen açık soruya doğrudan yanıt vermek yerine, konu",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Yandan konuşmada",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 8,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Düşünce",
+         "1. Düşünce Akışındaki Değişiklikler",
+         "c) Çağrışım Sapmaları",
+         "Yandan Konuşma: Sorulara yanıt vermek yerine konuyla bağlantılı",
+         "ancak, sorunun yanıtı olmayan ifadelerle cevap verilir. Sözgelimi",
+         "hangi liseye gittiği sorulduğunda, eğitimin öneminden söz eder."
+        ],
+        "sekil": null,
+        "adim": 8
+       }
+      },
+      {
+       "id": "k2-11-c0085",
+       "ses": "Konuşmanın dış ses ve uyaranlara göre sürekli yön değiştirmesi çelinebilir konuşmadır.",
+       "ekran": "**Düşünce:** Konuşmanın dış ses ve uyaranlara göre sürekli yön değiştirmesi çelinebilir konuşmadır.",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Konuşmanın dış",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 8,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Düşünce",
+         "1. Düşünce Akışındaki Değişiklikler",
+         "c) Çağrışım Sapmaları",
+         "Yandan Konuşma: Sorulara yanıt vermek yerine konuyla bağlantılı",
+         "ancak, sorunun yanıtı olmayan ifadelerle cevap verilir. Sözgelimi",
+         "hangi liseye gittiği sorulduğunda, eğitimin öneminden söz eder."
+        ],
+        "sekil": null,
+        "adim": 8
+       }
+      },
+      {
+       "id": "k2-11-c0086",
+       "ses": "Sesteki doğal ritim, duygu ve melodinin silinmesine disprosodi, hekimin söylediği sözcüklerin papağan gibi aynen yinelenmesine ise ekolali denir.",
+       "ekran": "**Düşünce:** Sesteki doğal ritim, duygu ve melodinin silinmesine disprosodi, hekimin söylediği sözcükle",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Sesteki doğal",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 8,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Düşünce",
+         "1. Düşünce Akışındaki Değişiklikler",
+         "c) Çağrışım Sapmaları",
+         "Yandan Konuşma: Sorulara yanıt vermek yerine konuyla bağlantılı",
+         "ancak, sorunun yanıtı olmayan ifadelerle cevap verilir. Sözgelimi",
+         "hangi liseye gittiği sorulduğunda, eğitimin öneminden söz eder."
+        ],
+        "sekil": null,
+        "adim": 8
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p026",
+     "sayfa": 26,
+     "slayt_adim": "k2-11-d-s26",
+     "cumleler": [
+      {
+       "id": "k2-11-c0087",
+       "ses": "Düşünce akışındaki diğer önemli bozukluklar fakirleşme ve enkoherans tablolarıdır.",
+       "ekran": "**Düşünce Akışı ve Çağrışım Bozuklukları:** Düşünce akışındaki diğer önemli bozukluklar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Düşünce",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 8,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Düşünce",
+         "1. Düşünce Akışındaki Değişiklikler",
+         "c) Çağrışım Sapmaları",
+         "Konuşmanın Fakirleşmesi: Konuşmanın miktarı azalmıştır. Sorulara bir",
+         "veya birkaç kelimeyle yanıt verilir. Depresyonda daha sık görülür ancak",
+         "psikozlarda da görülebilir."
+        ],
+        "sekil": null,
+        "adim": 8
+       }
+      },
+      {
+       "id": "k2-11-c0088",
+       "ses": "Konuşmanın fakirleşmesinde sözcük sayısı ileri derecede azalmıştır ve sorulara tek tük kelimelerle yanıt verilir; konuşma içeriğinde fakirleşmede ise sözcük miktarı çok olmasına rağmen belirsizlikler ve boş laflar nedeniyle hiçbir somut bilgi aktarılamaz.",
+       "ekran": "**Düşünce:** Konuşmanın fakirleşmesinde sözcük sayısı ileri derecede azalmıştır ve sorulara tek tük kel",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Konuşmanın fakirleşmesinde",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 8,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Düşünce",
+         "1. Düşünce Akışındaki Değişiklikler",
+         "c) Çağrışım Sapmaları",
+         "Konuşmanın Fakirleşmesi: Konuşmanın miktarı azalmıştır. Sorulara bir",
+         "veya birkaç kelimeyle yanıt verilir. Depresyonda daha sık görülür ancak",
+         "psikozlarda da görülebilir."
+        ],
+        "sekil": null,
+        "adim": 8
+       }
+      },
+      {
+       "id": "k2-11-c0089",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Enkoherans tablosunda tek tek cümleler gramer açısından düzgün görünse bile aralarındaki mantıksal bağ bütünüyle kopmuştur.",
+       "ekran": "**Düşünce:** Enkoherans tablosunda tek tek cümleler gramer açısından düzgün olsa bile cümleler arasında",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Enkoherans tablosunda",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 8,
+       "cikmis": [
+        "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-77"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Düşünce",
+         "1. Düşünce Akışındaki Değişiklikler",
+         "c) Çağrışım Sapmaları",
+         "Konuşmanın Fakirleşmesi: Konuşmanın miktarı azalmıştır. Sorulara bir",
+         "veya birkaç kelimeyle yanıt verilir. Depresyonda daha sık görülür ancak",
+         "psikozlarda da görülebilir."
+        ],
+        "sekil": null,
+        "adim": 8
+       }
+      },
+      {
+       "id": "k2-11-c0090",
+       "ses": "Hastanın istemsiz biçimde ayıp, küfürlü ve kaba sözcükler sarf etmesine ise koprolali denir.",
+       "ekran": "**Düşünce:** Hastanın istemsiz biçimde ayıp, küfürlü ve kaba sözcükler sarf etmesine ise koprolali deni",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Hastanın istemsiz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 8,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Düşünce",
+         "1. Düşünce Akışındaki Değişiklikler",
+         "c) Çağrışım Sapmaları",
+         "Konuşmanın Fakirleşmesi: Konuşmanın miktarı azalmıştır. Sorulara bir",
+         "veya birkaç kelimeyle yanıt verilir. Depresyonda daha sık görülür ancak",
+         "psikozlarda da görülebilir."
+        ],
+        "sekil": null,
+        "adim": 8
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-11-b10",
+   "baslik": "Düşünce İçeriği ve Hezeyan Sınıflaması",
+   "sayfa_araligi": [
+    27,
+    29
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-11-p027",
+     "sayfa": 27,
+     "slayt_adim": "k2-11-d-s27",
+     "cumleler": [
+      {
+       "id": "k2-11-c0091",
+       "ses": "Düşünce muayenesinin ikinci temel boyutu olan düşünce içeriğinde hezeyanlar yani sanrılar incelenir; hezeyan mantıklı kanıtlarla değiştirilemeyen, gerçeğe uymayan sarsılmaz yanlış inançlardır.",
+       "ekran": "**Düşünce İçeriği ve Hezeyan Sınıflaması:** Düşünce muayenesinin ikinci temel boyutu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Düşünce",
+         "tur": "terim"
+        },
+        {
+         "metin": "Hezeyan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 9,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Düşünce",
+         "2. Düşünce İçeriği",
+         "a) Hezeyanlar (Sanrı)",
+         "Gerçek olmayan şeylere ve gerçek dışı düşüncelere inanmak demektir.",
+         "Bizar Hezeyan: Gerçekleşmesi mümkün olmayan hezeyanlardır.",
+         "Duyguduruma Uygun Hezeyan: Hezeyanın, kişinin duygudurumuyla uyumlu"
+        ],
+        "sekil": null,
+        "adim": 9
+       }
+      },
+      {
+       "id": "k2-11-c0092",
+       "ses": "Fiziksel veya mantıksal olarak gerçekleşmesi olanaksız inançlara bizar hezeyan adı verilir.",
+       "ekran": "**Düşünce:** Fiziksel veya mantıksal olarak gerçekleşmesi olanaksız inançlara bizar hezeyan adı verilir",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Hezeyan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 9,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Düşünce",
+         "2. Düşünce İçeriği",
+         "a) Hezeyanlar (Sanrı)",
+         "Gerçek olmayan şeylere ve gerçek dışı düşüncelere inanmak demektir.",
+         "Bizar Hezeyan: Gerçekleşmesi mümkün olmayan hezeyanlardır.",
+         "Duyguduruma Uygun Hezeyan: Hezeyanın, kişinin duygudurumuyla uyumlu"
+        ],
+        "sekil": null,
+        "adim": 9
+       }
+      },
+      {
+       "id": "k2-11-c0093",
+       "ses": "Hezeyanlar kişinin iç dünyasıyla uyumuna göre duyguduruma uygun veya duyguduruma uygun olmayan sanrılar olarak ikiye ayrılır.",
+       "ekran": "**Düşünce:** Hezeyanlar kişinin iç dünyasıyla uyumuna göre duyguduruma uygun veya duyguduruma uygun olm",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Hezeyan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 9,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Düşünce",
+         "2. Düşünce İçeriği",
+         "a) Hezeyanlar (Sanrı)",
+         "Gerçek olmayan şeylere ve gerçek dışı düşüncelere inanmak demektir.",
+         "Bizar Hezeyan: Gerçekleşmesi mümkün olmayan hezeyanlardır.",
+         "Duyguduruma Uygun Hezeyan: Hezeyanın, kişinin duygudurumuyla uyumlu"
+        ],
+        "sekil": null,
+        "adim": 9
+       }
+      },
+      {
+       "id": "k2-11-c0094",
+       "ses": "Erotomanik hezeyanda üst düzey birinin kendisine gizlice aşık olduğuna inanılırken, grandiyöz hezeyanda kişi kendisinin doğaüstü güçlere veya olağanüstü zenginliğe sahip seçilmiş biri olduğuna sarsılmaz biçimde inanır.",
+       "ekran": "**Düşünce:** Erotomanik hezeyanda üst düzey birinin kendisine gizlice aşık olduğuna inanılırken, grandi",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Hezeyan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 9,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Düşünce",
+         "2. Düşünce İçeriği",
+         "a) Hezeyanlar (Sanrı)",
+         "Gerçek olmayan şeylere ve gerçek dışı düşüncelere inanmak demektir.",
+         "Bizar Hezeyan: Gerçekleşmesi mümkün olmayan hezeyanlardır.",
+         "Duyguduruma Uygun Hezeyan: Hezeyanın, kişinin duygudurumuyla uyumlu"
+        ],
+        "sekil": null,
+        "adim": 9
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p028",
+     "sayfa": 28,
+     "slayt_adim": "k2-11-d-s28",
+     "cumleler": [
+      {
+       "id": "k2-11-c0095",
+       "ses": "Klinik psikiyatride çok çeşitli hezeyan temalarıyla karşılaşılır.",
+       "ekran": "**Düşünce İçeriği ve Hezeyan Sınıflaması:** Klinik psikiyatride çok çeşitli hezeyan",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hezeyan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 9,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Düşünce",
+         "2. Düşünce İçeriği",
+         "Mignon Hezeyan: Anne babasının başka biri olduğuna inanma.",
+         "Nihilistik Hezeyan: Ölmüş, yok olmuş olduğuna inanma.",
+         "Perseküsyon Hezeyanı: Başkalarından kötülük göreceğine inanma.",
+         "Paylaşılmış Hezeyan: Bir kişinin hezeyanlarının başka biri veya birileri"
+        ],
+        "sekil": null,
+        "adim": 9
+       }
+      },
+      {
+       "id": "k2-11-c0096",
+       "ses": "Mignon hezeyanında kişi gerçek ailesinin soylu veya başka insanlar olduğuna inanır; nihilistik hezeyanda ise bedeninin çürüdüğünü, iç organlarının yok olduğunu ya da bütünüyle öldüğünü iddia eder.",
+       "ekran": "**Düşünce:** Mignon hezeyanında kişi gerçek ailesinin soylu veya başka insanlar olduğuna inanır; nihili",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Hezeyan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 9,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Düşünce",
+         "2. Düşünce İçeriği",
+         "Mignon Hezeyan: Anne babasının başka biri olduğuna inanma.",
+         "Nihilistik Hezeyan: Ölmüş, yok olmuş olduğuna inanma.",
+         "Perseküsyon Hezeyanı: Başkalarından kötülük göreceğine inanma.",
+         "Paylaşılmış Hezeyan: Bir kişinin hezeyanlarının başka biri veya birileri"
+        ],
+        "sekil": null,
+        "adim": 9
+       }
+      },
+      {
+       "id": "k2-11-c0097",
+       "ses": "Perseküsyon hezeyanı başkalarının kendisine komplo kurduğu ve zarar vereceği inancıdır; referans hezeyanında ise televizyondaki haberlerden veya sokaktaki hareketlerden kendisine özel gizli mesajlar çıkarılır.",
+       "ekran": "**Düşünce:** Perseküsyon hezeyanı başkalarının kendisine komplo kurduğu ve zarar vereceği inancıdır; re",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Hezeyan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 9,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Düşünce",
+         "2. Düşünce İçeriği",
+         "Mignon Hezeyan: Anne babasının başka biri olduğuna inanma.",
+         "Nihilistik Hezeyan: Ölmüş, yok olmuş olduğuna inanma.",
+         "Perseküsyon Hezeyanı: Başkalarından kötülük göreceğine inanma.",
+         "Paylaşılmış Hezeyan: Bir kişinin hezeyanlarının başka biri veya birileri"
+        ],
+        "sekil": null,
+        "adim": 9
+       }
+      },
+      {
+       "id": "k2-11-c0098",
+       "ses": "Eşinin kendisini aldattığına dair temelsiz kıskançlık hezeyanı, bedensel bir çürüme olduğuna dair somatik hezeyan ve sanrının yakın birine bulaştığı paylaşılmış hezeyan da bu gruptadır.",
+       "ekran": "**Düşünce:** Eşinin kendisini aldattığına dair temelsiz kıskançlık hezeyanı, bedensel bir çürüme olduğu",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Hezeyan",
+         "tur": "terim"
+        },
+        {
+         "metin": "Düşünce:",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": 9,
+       "cikmis": [
+        "q-25-26_d_nem_3_kurul_2-75"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Düşünce",
+         "2. Düşünce İçeriği",
+         "Mignon Hezeyan: Anne babasının başka biri olduğuna inanma.",
+         "Nihilistik Hezeyan: Ölmüş, yok olmuş olduğuna inanma.",
+         "Perseküsyon Hezeyanı: Başkalarından kötülük göreceğine inanma.",
+         "Paylaşılmış Hezeyan: Bir kişinin hezeyanlarının başka biri veya birileri"
+        ],
+        "sekil": null,
+        "adim": 9
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p029",
+     "sayfa": 29,
+     "slayt_adim": "k2-11-d-s29",
+     "cumleler": [
+      {
+       "id": "k2-11-c0099",
+       "ses": "Ağır depresyonda kişinin tüm felaketlerin sorumlusu olduğuna inandığı suçluluk veya günahkarlık hezeyanları gözlenir.",
+       "ekran": "**Düşünce İçeriği ve Hezeyan Sınıflaması:** Ağır depresyonda kişinin tüm felaketlerin",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hezeyan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 9,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Düşünce",
+         "2. Düşünce içeriği",
+         "Suçluluk veya Günahkârlık Hezeyanı:",
+         "Schneider Hezeyanları: Aşağıdaki hezeyanlar bu gruptandır ve daha çok",
+         "şizofrenide görülürler.",
+         "Düşüncelerin Çekilmesi: Düşüncelerinin başkaları ya da bir takım güçler"
+        ],
+        "sekil": null,
+        "adim": 9
+       }
+      },
+      {
+       "id": "k2-11-c0100",
+       "ses": "Sınavda sorulan bir diğer temel kazanım olarak, psikiyatride Kurt Şnayder tarafından tanımlanan birinci sıra hezeyanlar doğrudan şizofreni tanısını destekleyen özgül düşünce içeriği bozukluklarıdır.",
+       "ekran": "**Düşünce:** Psikiyatride Kurt Şnayder tarafından tanımlanan birinci sıra şizofreni hezeyanları ise zih",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Hezeyan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 9,
+       "cikmis": [
+        "365430593b97"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Düşünce",
+         "2. Düşünce içeriği",
+         "Suçluluk veya Günahkârlık Hezeyanı:",
+         "Schneider Hezeyanları: Aşağıdaki hezeyanlar bu gruptandır ve daha çok",
+         "şizofrenide görülürler.",
+         "Düşüncelerin Çekilmesi: Düşüncelerinin başkaları ya da bir takım güçler"
+        ],
+        "sekil": null,
+        "adim": 9
+       }
+      },
+      {
+       "id": "k2-11-c0101",
+       "ses": "Bu grupta düşüncelerin yabancı güçlerce zihinden çekilip alındığı düşünce çekilmesi, zihnine yabancı düşüncelerin yerleştirildiği düşünce sokulması, aklından geçenlerin herkesçe anlaşıldığı düşünce okunması ve düşüncelerinin radyo dalgaları gibi etrafa yayıldığı düşünce yayınlanması sanrıları yer alır.",
+       "ekran": "**Düşünce:** Bu grupta düşüncelerin yabancı güçlerce zihinden çekilip alındığı düşünce çekilmesi, zihni",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Düşünce",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 9,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Düşünce",
+         "2. Düşünce içeriği",
+         "Suçluluk veya Günahkârlık Hezeyanı:",
+         "Schneider Hezeyanları: Aşağıdaki hezeyanlar bu gruptandır ve daha çok",
+         "şizofrenide görülürler.",
+         "Düşüncelerin Çekilmesi: Düşüncelerinin başkaları ya da bir takım güçler"
+        ],
+        "sekil": null,
+        "adim": 9
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-11-b11",
+   "baslik": "Obsesyonlar Kompulsiyonlar ve Fobiler",
+   "sayfa_araligi": [
+    30,
+    31
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-11-p030",
+     "sayfa": 30,
+     "slayt_adim": "k2-11-d-s30",
+     "cumleler": [
+      {
+       "id": "k2-11-c0102",
+       "ses": "Düşünce içeriğinde yer alan obsesyonlar, kişiye anlamsız ve saçma gelmesine rağmen zihninden bir türlü uzaklaştıramadığı, yoğun bunaltı yaratan yineleyici düşünce ve dürtülerdir.",
+       "ekran": "**Obsesyonlar Kompulsiyonlar ve Fobiler:** Düşünce içeriğinde yer alan obsesyonlar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Düşünce",
+         "tur": "terim"
+        },
+        {
+         "metin": "Obsesyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 10,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Düşünce",
+         "2. Düşünce içeriği",
+         "b) Obsesyonlar",
+         "Kişiye saçma ya da anlamsız gelmesine karşın, durduramadığı, zihninden",
+         "atamadığı, tekrarlayıcı düşünce veya dürtülerdir. Bu düşünceleri gidermek için",
+         "yapılan eylemlere ise kompulsiyon denir. Kişinin sık sık ellerinin kirlenmiş"
+        ],
+        "sekil": null,
+        "adim": 10
+       }
+      },
+      {
+       "id": "k2-11-c0103",
+       "ses": "Bu obsesyonların doğurduğu yoğun anksiyeteyi geçici olarak dindirmek amacıyla yapılan tekrarlayıcı törensel eylemlere ise kompulsiyon adı verilir.",
+       "ekran": "**Obsesyonlar:** Bu obsesyonların doğurduğu yoğun anksiyeteyi geçici olarak dindirmek amacıyla yapılan tekr",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Obsesyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 10,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Düşünce",
+         "2. Düşünce içeriği",
+         "b) Obsesyonlar",
+         "Kişiye saçma ya da anlamsız gelmesine karşın, durduramadığı, zihninden",
+         "atamadığı, tekrarlayıcı düşünce veya dürtülerdir. Bu düşünceleri gidermek için",
+         "yapılan eylemlere ise kompulsiyon denir. Kişinin sık sık ellerinin kirlenmiş"
+        ],
+        "sekil": null,
+        "adim": 10
+       }
+      },
+      {
+       "id": "k2-11-c0104",
+       "ses": "Örneğin ellerinin kirlendiğine dair takıntı bir obsesyonken, dakikalarca ellerini sabunla yıkama davranışı kompulsiyondur; klinikte en sık kirlilik ve bulaşma, zarar verme, sayma ve cinsel içerikli obsesyonlar görülür.",
+       "ekran": "**Obsesyonlar:** Örneğin ellerinin kirlendiğine dair takıntı bir obsesyonken, dakikalarca ellerini sabunla",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Obsesyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 10,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Düşünce",
+         "2. Düşünce içeriği",
+         "b) Obsesyonlar",
+         "Kişiye saçma ya da anlamsız gelmesine karşın, durduramadığı, zihninden",
+         "atamadığı, tekrarlayıcı düşünce veya dürtülerdir. Bu düşünceleri gidermek için",
+         "yapılan eylemlere ise kompulsiyon denir. Kişinin sık sık ellerinin kirlenmiş"
+        ],
+        "sekil": null,
+        "adim": 10
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p031",
+     "sayfa": 31,
+     "slayt_adim": "k2-11-d-s31",
+     "cumleler": [
+      {
+       "id": "k2-11-c0105",
+       "ses": "Fobiler, ortada gerçek ve nesnel bir tehlike bulunmamasına rağmen belirli bir nesne veya durum karşısında duyulan aşırı, mantıksız ve kontrol edilemeyen korkulardır.",
+       "ekran": "**Obsesyonlar Kompulsiyonlar ve Fobiler:** Fobiler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Fobi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 10,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Düşünce",
+         "2. Düşünce içeriği",
+         "c) Fobiler",
+         "Somut bir tehdit olmamasına karşın görülen yersiz, aşırı korkulardır. Korku duyulan",
+         "durum ya da nesne ile karşılaşıldığında, kişi kendisine de aşırı gelse bile aşırı bir",
+         "korku, anksiyete ve panik yaşar. 100’den fazla korku tablosu tanımlanmıştır."
+        ],
+        "sekil": null,
+        "adim": 10
+       }
+      },
+      {
+       "id": "k2-11-c0106",
+       "ses": "Fobik uyaranla karşılaşıldığında kişi dehşet verici bir panik yaşar ve bu durumdan kaçınmak için hayatını kısıtlar.",
+       "ekran": "**Obsesyonlar:** Fobik uyaranla karşılaşıldığında kişi dehşet verici bir panik yaşar ve bu durumdan kaçınma",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Fobi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 10,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Düşünce",
+         "2. Düşünce içeriği",
+         "c) Fobiler",
+         "Somut bir tehdit olmamasına karşın görülen yersiz, aşırı korkulardır. Korku duyulan",
+         "durum ya da nesne ile karşılaşıldığında, kişi kendisine de aşırı gelse bile aşırı bir",
+         "korku, anksiyete ve panik yaşar. 100’den fazla korku tablosu tanımlanmıştır."
+        ],
+        "sekil": null,
+        "adim": 10
+       }
+      },
+      {
+       "id": "k2-11-c0107",
+       "ses": "Yüzden fazla fobi tanımlanmış olup özgül fobiler hayvan, doğa olayları, kan enjeksiyon yara ve kapalı alan gibi alt tiplere ayrılır; agorafobi yardım alamayacağı açık alanlardan korkma, sosyal fobi ise başkalarının önünde küçük düşme ve eleştirilme kaygısıyla toplumsal ortamlardan kaçınma durumudur.",
+       "ekran": "**Obsesyonlar:** Yüzden fazla fobi tanımlanmış olup özgül fobiler hayvan, doğa olayları, kan enjeksiyon yar",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Fobi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 10,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Düşünce",
+         "2. Düşünce içeriği",
+         "c) Fobiler",
+         "Somut bir tehdit olmamasına karşın görülen yersiz, aşırı korkulardır. Korku duyulan",
+         "durum ya da nesne ile karşılaşıldığında, kişi kendisine de aşırı gelse bile aşırı bir",
+         "korku, anksiyete ve panik yaşar. 100’den fazla korku tablosu tanımlanmıştır."
+        ],
+        "sekil": null,
+        "adim": 10
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-11-b12",
+   "baslik": "Yargılama Soyut Düşünce ve İçgörü",
+   "sayfa_araligi": [
+    32,
+    34
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-11-p032",
+     "sayfa": 32,
+     "slayt_adim": "k2-11-d-s32",
+     "cumleler": [
+      {
+       "id": "k2-11-c0108",
+       "ses": "Bilişsel işlevlerden yargılama, kişinin çevresinden edindiği verileri mantıklı bir neden sonuç bağı kurarak değerlendirebilme ve doğru kararlar üretebilme yeteneğidir; pratikte yolda içi para dolu bir cüzdan bulsanız ne yaparsınız sorusuyla sınanır.",
+       "ekran": "**Yargılama Soyut Düşünce ve İçgörü:** Bilişsel işlevlerden yargılama",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yargılama",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 12,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Yargılama",
+         "Kişinin verileri mantıklı bir neden- sonuç veya ilgi ilişkisi içinde bir",
+         "araya getirebilme yeteneğidir. “ Yolda bir cüzdan bulsanız ne",
+         "yaparsınız?”",
+         "Soyut Düşünce",
+         "Sınıflandırma, benzerlikleri ve farklılıkları ayırt edebilme gibi"
+        ],
+        "sekil": null,
+        "adim": 12
+       }
+      },
+      {
+       "id": "k2-11-c0109",
+       "ses": "Soyut düşünce ise benzerlikleri, zıtlıkları ve kavramsal anlamları kavrama yetisidir ve atasözlerinin mecazi anlamları sorularak muayene edilir.",
+       "ekran": "**Yargılama:** Soyut düşünce ise benzerlikleri, zıtlıkları ve kavramsal anlamları kavrama yetisidir ve at",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Düşünce",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 12,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Yargılama",
+         "Kişinin verileri mantıklı bir neden- sonuç veya ilgi ilişkisi içinde bir",
+         "araya getirebilme yeteneğidir. “ Yolda bir cüzdan bulsanız ne",
+         "yaparsınız?”",
+         "Soyut Düşünce",
+         "Sınıflandırma, benzerlikleri ve farklılıkları ayırt edebilme gibi"
+        ],
+        "sekil": null,
+        "adim": 12
+       }
+      },
+      {
+       "id": "k2-11-c0110",
+       "ses": "Soyutlama yeteneği özellikle kronikleşmiş ve yıkımla giden şizofreni olgularında bozulur ve hasta atasözlerini sadece yüzeysel, somut anlamlarıyla yorumlar.",
+       "ekran": "**Yargılama:** Soyutlama yeteneği özellikle kronikleşmiş ve yıkımla giden şizofreni olgularında bozulur v",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Soyutlama yeteneği",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 12,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Yargılama",
+         "Kişinin verileri mantıklı bir neden- sonuç veya ilgi ilişkisi içinde bir",
+         "araya getirebilme yeteneğidir. “ Yolda bir cüzdan bulsanız ne",
+         "yaparsınız?”",
+         "Soyut Düşünce",
+         "Sınıflandırma, benzerlikleri ve farklılıkları ayırt edebilme gibi"
+        ],
+        "sekil": null,
+        "adim": 12
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p033",
+     "sayfa": 33,
+     "slayt_adim": "k2-11-d-s33",
+     "cumleler": [
+      {
+       "id": "k2-11-c0111",
+       "ses": "Gerçeği değerlendirme yetisi, kişinin kendi zihninde ürettiği içsel yaşantılar ile dış nesnel dünyanın gerçekliklerini birbirinden ayırt edebilme gücüdür.",
+       "ekran": "**Yargılama Soyut Düşünce ve İçgörü:** Gerçeği değerlendirme yetisi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Gerçeği değerlendirme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 12,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Gerçeği Değerlendirme",
+         "Kişinin içsel ve dışsal uyaranları ayırt edebilme",
+         "yeteneğidir.",
+         "Psikozlarda gerçeği değerlendirme yetisi",
+         "bozulur.",
+         "Dolayısıyla da kendi düşüncelerini, dış gerçekler"
+        ],
+        "sekil": null,
+        "adim": 12
+       }
+      },
+      {
+       "id": "k2-11-c0112",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Bütün psikotik tablolarda gerçeği değerlendirme yetisi kökten bozulmuştur ve hasta hezeyanlarının mutlak gerçek olduğuna inanır.",
+       "ekran": "**Yargılama:** Bütün psikotik tablolarda gerçeği değerlendirme yetisi kökten bozulur.",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Bütün psikotik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 12,
+       "cikmis": [
+        "q-25-26_d_nem_3_kurul_2-85"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Gerçeği Değerlendirme",
+         "Kişinin içsel ve dışsal uyaranları ayırt edebilme",
+         "yeteneğidir.",
+         "Psikozlarda gerçeği değerlendirme yetisi",
+         "bozulur.",
+         "Dolayısıyla da kendi düşüncelerini, dış gerçekler"
+        ],
+        "sekil": null,
+        "adim": 12
+       }
+      },
+      {
+       "id": "k2-11-c0113",
+       "ses": "Bu yetinin kaybı sonucunda hastalar kendi zihinlerindeki hezeyanları ve varsanıları dış dünyanın tartışılmaz nesnel gerçekleri olarak algılar ve bu yanlış inançlara göre eylemlerde bulunurlar.",
+       "ekran": "**Yargılama:** Bu yetinin kaybı sonucunda hastalar kendi zihinlerindeki hezeyanları ve varsanıları dış dü",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Hezeyan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 12,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Gerçeği Değerlendirme",
+         "Kişinin içsel ve dışsal uyaranları ayırt edebilme",
+         "yeteneğidir.",
+         "Psikozlarda gerçeği değerlendirme yetisi",
+         "bozulur.",
+         "Dolayısıyla da kendi düşüncelerini, dış gerçekler"
+        ],
+        "sekil": null,
+        "adim": 12
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p034",
+     "sayfa": 34,
+     "slayt_adim": "k2-11-d-s34",
+     "cumleler": [
+      {
+       "id": "k2-11-c0114",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Psikiyatride içgörü, kişinin kendi durumunun farkında olması, yaşadığı belirtilerin bir ruhsal hastalıktan kaynaklandığını kabul etmesi ve tedaviye ihtiyaç duyduğunu kavramasıdır.",
+       "ekran": "**Yargılama Soyut Düşünce ve İçgörü:** Burada çıkmış sınav sorusu bulunmaktadır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Burada çıkmış",
+         "tur": "terim"
+        },
+        {
+         "metin": "Yargılama Soyut Düşünce ve İçgörü:",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": 12,
+       "cikmis": [
+        "past-1790877044847-878300",
+        "dd00370e9106",
+        "6630634703c0",
+        "41dfe004f570"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "İçgörü",
+         "İki ayrı anlamda kullanılır, birincisi, kişinin hareketlerinin",
+         "ardındaki bilinçdışı motivasyonlarından haberdarlık",
+         "derecesidir. Bu anlamıyla hiç kimsede tam bir içgörüden",
+         "söz edilemez. Çünkü kimse tüm bilinçdışı güdülenmelerinin",
+         "farkında olamaz."
+        ],
+        "sekil": null,
+        "adim": 12
+       }
+      },
+      {
+       "id": "k2-11-c0115",
+       "ses": "Şizofreni ve manik ataklarda başlangıçta içgörü genellikle bütünüyle kayıptır, ancak etkili antipsikotik tedavi ile hasta zamanla hastalık içgörüsü kazanabilir.",
+       "ekran": "**Yargılama:** Şizofreni ve manik ataklarda başlangıçta içgörü genellikle bütünüyle kayıptır, ancak etkil",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Şizofreni ve",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 12,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "İçgörü",
+         "İki ayrı anlamda kullanılır, birincisi, kişinin hareketlerinin",
+         "ardındaki bilinçdışı motivasyonlarından haberdarlık",
+         "derecesidir. Bu anlamıyla hiç kimsede tam bir içgörüden",
+         "söz edilemez. Çünkü kimse tüm bilinçdışı güdülenmelerinin",
+         "farkında olamaz."
+        ],
+        "sekil": null,
+        "adim": 12
+       }
+      },
+      {
+       "id": "k2-11-c0116",
+       "ses": "Sınavlarda sıkça sorgulanan kritik kural olarak, bir hastada içgörünün korunmuş olması psikotik bir bozukluğun varlığını kesin olarak dışlamaz; zira bazı psikotik hastalar yaşadıkları varsanıların hastalıktan kaynaklandığının kısmen bilincinde olabilirler.",
+       "ekran": "**Çıkmış Sınav Sorusu:** Sınavlarda sıkça sorgulanan kritik kural olarak",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Sınavlarda sıkça",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 12,
+       "cikmis": [
+        "past-1790877044847-878300"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "İçgörü",
+         "İki ayrı anlamda kullanılır, birincisi, kişinin hareketlerinin",
+         "ardındaki bilinçdışı motivasyonlarından haberdarlık",
+         "derecesidir. Bu anlamıyla hiç kimsede tam bir içgörüden",
+         "söz edilemez. Çünkü kimse tüm bilinçdışı güdülenmelerinin",
+         "farkında olamaz."
+        ],
+        "sekil": null,
+        "adim": 12
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-11-b13",
+   "baslik": "Duygulanım Duygudurum ve Afekt",
+   "sayfa_araligi": [
+    35,
+    37
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-11-p035",
+     "sayfa": 35,
+     "slayt_adim": "k2-11-d-s35",
+     "cumleler": [
+      {
+       "id": "k2-11-c0117",
+       "ses": "Psikiyatrik muayenenin ikinci ana ekseni olan duygulanımda öncelikle duygudurum yani mood değerlendirilir; duygudurum kişinin uzun bir zaman dilimi boyunca hakim olan yaygın içsel hissediş halidir.",
+       "ekran": "**Duygulanım Duygudurum ve Afekt:** Psikiyatrik muayenenin ikinci ana ekseni",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Psikiyatrik muayenenin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 13,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Duygulanım",
+         "Duygudurum (Mood)",
+         "Kişinin yaygın ve sürekli olarak, belli bir zaman dilimi içinde kendisini",
+         "hissedişidir.",
+         "Ötimi: Duygudurumda çökme ya da yükselmenin olmadığını",
+         "ifade eder."
+        ],
+        "sekil": null,
+        "adim": 13
+       }
+      },
+      {
+       "id": "k2-11-c0118",
+       "ses": "Çıkmış sınav sorusunda sorulduğu üzere ötimi, duygudurumda herhangi bir yükselme veya çökmenin bulunmadığı normal sınırlardaki duygu durumunu ifade eder.",
+       "ekran": "**Çıkmış Sınav Sorusu:** Çıkmış sınav sorusunda sorulduğu üzere ötimi",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Ötimi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 13,
+       "cikmis": [
+        "64b435be39be"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Duygulanım",
+         "Duygudurum (Mood)",
+         "Kişinin yaygın ve sürekli olarak, belli bir zaman dilimi içinde kendisini",
+         "hissedişidir.",
+         "Ötimi: Duygudurumda çökme ya da yükselmenin olmadığını",
+         "ifade eder."
+        ],
+        "sekil": null,
+        "adim": 13
+       }
+      },
+      {
+       "id": "k2-11-c0119",
+       "ses": "Yükselmiş duygudurum mani ve hipomanideki taşkın neşe ve aşırı özgüveni, çökkün duygudurum depresyondaki keder ve ümitsizliği, irritabl duygudurum ise engellenmeye karşı çabuk parlayan öfkeyi anlatır.",
+       "ekran": "**Duygulanım:** Yükselmiş duygudurum mani ve hipomanideki taşkın neşe ve aşırı özgüveni, çökkün duygudurum",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Yükselmiş duygudurum",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 13,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Duygulanım",
+         "Duygudurum (Mood)",
+         "Kişinin yaygın ve sürekli olarak, belli bir zaman dilimi içinde kendisini",
+         "hissedişidir.",
+         "Ötimi: Duygudurumda çökme ya da yükselmenin olmadığını",
+         "ifade eder."
+        ],
+        "sekil": null,
+        "adim": 13
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p036",
+     "sayfa": 36,
+     "slayt_adim": "k2-11-d-s36",
+     "cumleler": [
+      {
+       "id": "k2-11-c0120",
+       "ses": "Duygudurumun dışarıdan gözlenebilen anlık yansıması afekt olarak tanımlanır ve hastanın yüz ifadesi ile beden dilinden okunur.",
+       "ekran": "**Duygulanım Duygudurum ve Afekt:** Duygudurumun dışarıdan gözlenebilen anlık yansıması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Afekt",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": 13,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "Duygulanım",
+         "Afekt",
+         "Kişinin yaşadıklarına, düşündüklerine eşlik eden ve dışarıdan gözlenebilen anlık duygulanımdır.",
+         "Neşe, elem, endişelilik, gerginlik vs. gibi",
+         "Uygun Afekt",
+         "Kişinin düşünce ya da konuşma içeriği ile dışa vuran duygulanımının arasında uyum olması."
+        ],
+        "sekil": null,
+        "adim": 13
+       }
+      },
+      {
+       "id": "k2-11-c0121",
+       "ses": "Uygun afektte konuşmanın içeriği ile dışa yansıyan duygulanım tam bir ahenk içindedir; acıklı olayda hüzünlenmek veya neşeli olayda gülümsemek gibi.",
+       "ekran": "**Duygulanım:** Uygun afektte konuşmanın içeriği ile dışa yansıyan duygulanım tam bir ahenk içindedir; acı",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Afekt",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 13,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "Duygulanım",
+         "Afekt",
+         "Kişinin yaşadıklarına, düşündüklerine eşlik eden ve dışarıdan gözlenebilen anlık duygulanımdır.",
+         "Neşe, elem, endişelilik, gerginlik vs. gibi",
+         "Uygun Afekt",
+         "Kişinin düşünce ya da konuşma içeriği ile dışa vuran duygulanımının arasında uyum olması."
+        ],
+        "sekil": null,
+        "adim": 13
+       }
+      },
+      {
+       "id": "k2-11-c0122",
+       "ses": "Uygunsuz afektte ise anlatılan hüzünlü ve trajik olayla mimiklerin uyuşmadığı, örneğin annesinin ölümünü gülerek anlatma tablosu izlenir; dış uyaranlardan bağımsız ani duygu dalgalanmalarına ise değişken yani labil afekt adı verilir.",
+       "ekran": "**Duygulanım:** Uygunsuz afektte ise anlatılan hüzünlü ve trajik olayla mimiklerin uyuşmadığı, örneğin ann",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Afekt",
+         "tur": "terim"
+        },
+        {
+         "metin": "Duygulanım:",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": 13,
+       "cikmis": [
+        "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-76"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "Duygulanım",
+         "Afekt",
+         "Kişinin yaşadıklarına, düşündüklerine eşlik eden ve dışarıdan gözlenebilen anlık duygulanımdır.",
+         "Neşe, elem, endişelilik, gerginlik vs. gibi",
+         "Uygun Afekt",
+         "Kişinin düşünce ya da konuşma içeriği ile dışa vuran duygulanımının arasında uyum olması."
+        ],
+        "sekil": null,
+        "adim": 13
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p037",
+     "sayfa": 37,
+     "slayt_adim": "k2-11-d-s37",
+     "cumleler": [
+      {
+       "id": "k2-11-c0123",
+       "ses": "Duygulanım alanındaki diğer özgül belirtiler arasında aleksitimi, anksiyete, ajitasyon ve ambivalans yer alır.",
+       "ekran": "**Duygulanım Duygudurum ve Afekt:** Duygulanım alanındaki diğer özgül belirtiler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Duygulanım alanındaki",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 13,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Duygulanım",
+         "Aleksitimi",
+         "Kişinin kendi duygularının farkına varmasında ve tanımlamasında güçlük",
+         "çekmesidir.",
+         "Anksiyete",
+         "Genellikle içsel nitelikli bir tehlike beklentisinden kaynaklanan sıkıntılı olma"
+        ],
+        "sekil": null,
+        "adim": 13
+       }
+      },
+      {
+       "id": "k2-11-c0124",
+       "ses": "Aleksitimi, hastanın kendi hissettiği duyguları fark etmede ve sözcüklerle tarif etmede çektiği derin yetersizliktir.",
+       "ekran": "**Duygulanım:** Aleksitimi, hastanın kendi hissettiği duyguları fark etmede ve sözcüklerle tarif etmede çe",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Aleksitimi, hastanın",
+         "tur": "terim"
+        },
+        {
+         "metin": "Duygulanım:",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": 13,
+       "cikmis": [
+        "past-1790877044869-84754"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Duygulanım",
+         "Aleksitimi",
+         "Kişinin kendi duygularının farkına varmasında ve tanımlamasında güçlük",
+         "çekmesidir.",
+         "Anksiyete",
+         "Genellikle içsel nitelikli bir tehlike beklentisinden kaynaklanan sıkıntılı olma"
+        ],
+        "sekil": null,
+        "adim": 13
+       }
+      },
+      {
+       "id": "k2-11-c0125",
+       "ses": "Anksiyete içsel bir tehlike beklentisinden kaynaklanan bunaltı haliyken, bu kaygıya yerinde duramama ve bacak sallama gibi bedensel huzursuzluklar eklendiğinde ajitasyon gelişir.",
+       "ekran": "**Duygulanım:** Anksiyete içsel bir tehlike beklentisinden kaynaklanan bunaltı haliyken, bu kaygıya yerind",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Anksiyete içsel",
+         "tur": "terim"
+        },
+        {
+         "metin": "Duygulanım:",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": 13,
+       "cikmis": [
+        "967684a10028"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Duygulanım",
+         "Aleksitimi",
+         "Kişinin kendi duygularının farkına varmasında ve tanımlamasında güçlük",
+         "çekmesidir.",
+         "Anksiyete",
+         "Genellikle içsel nitelikli bir tehlike beklentisinden kaynaklanan sıkıntılı olma"
+        ],
+        "sekil": null,
+        "adim": 13
+       }
+      },
+      {
+       "id": "k2-11-c0126",
+       "ses": "Ambivalans ise kişinin aynı anda aynı kişiye ya da duruma karşı hem sevgi hem nefret gibi birbirine taban tabana zıt iki duyguyu birlikte yaşamasıdır.",
+       "ekran": "**Duygulanım:** Ambivalans ise kişinin aynı anda aynı kişiye ya da duruma karşı hem sevgi hem nefret gibi",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Ambivalans ise",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 13,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Duygulanım",
+         "Aleksitimi",
+         "Kişinin kendi duygularının farkına varmasında ve tanımlamasında güçlük",
+         "çekmesidir.",
+         "Anksiyete",
+         "Genellikle içsel nitelikli bir tehlike beklentisinden kaynaklanan sıkıntılı olma"
+        ],
+        "sekil": null,
+        "adim": 13
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-11-b14",
+   "baslik": "Motor Aktivite Hareket ve Katatoni",
+   "sayfa_araligi": [
+    38,
+    40
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-11-p038",
+     "sayfa": 38,
+     "slayt_adim": "k2-11-d-s38",
+     "cumleler": [
+      {
+       "id": "k2-11-c0127",
+       "ses": "Ruhsal muayenenin üçüncü temel boyutu motor aktivite ve hareket düzenidir.",
+       "ekran": "**Motor Aktivite Hareket ve Katatoni:** Ruhsal muayenenin üçüncü temel boyutu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Ruhsal muayenenin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 14,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Motor Aktivite ve",
+         "Hareket",
+         "Retardasyon",
+         "Motor aktivitelerin azalmasıdır. Temel",
+         "larak depresyonda görülür.",
+         "Eksitasyon"
+        ],
+        "sekil": null,
+        "adim": 14
+       }
+      },
+      {
+       "id": "k2-11-c0128",
+       "ses": "Bu alandaki sapmalar psikomotor retardasyon ve eksitasyon olmak üzere iki uçta kendini gösterir.",
+       "ekran": "**Motor:** Bu alandaki sapmalar psikomotor retardasyon ve eksitasyon olmak üzere iki uçta kendini gös",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Bu alandaki",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 14,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Motor Aktivite ve",
+         "Hareket",
+         "Retardasyon",
+         "Motor aktivitelerin azalmasıdır. Temel",
+         "larak depresyonda görülür.",
+         "Eksitasyon"
+        ],
+        "sekil": null,
+        "adim": 14
+       }
+      },
+      {
+       "id": "k2-11-c0129",
+       "ses": "Retardasyon hastanın tüm istemli hareketlerinde, yürümesinde ve konuşma mimiklerinde belirgin bir yavaşlama ve ağırlık olmasıdır ve temel olarak unipolar depresyonda görülür.",
+       "ekran": "**Motor:** Retardasyon hastanın tüm istemli hareketlerinde, yürümesinde ve konuşma mimiklerinde belir",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Retardasyon hastanın",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 14,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Motor Aktivite ve",
+         "Hareket",
+         "Retardasyon",
+         "Motor aktivitelerin azalmasıdır. Temel",
+         "larak depresyonda görülür.",
+         "Eksitasyon"
+        ],
+        "sekil": null,
+        "adim": 14
+       }
+      },
+      {
+       "id": "k2-11-c0130",
+       "ses": "Eksitasyon ise amaca yönelik olmayan taşkın hareketlilik, taşkın öfke ve saldırganlık potansiyelini içeren aşırı bir motor hareket artışıdır ve çoğunlukla manide veya akut psikotik alevlenmelerde gözlenir.",
+       "ekran": "**Motor:** Eksitasyon ise amaca yönelik olmayan taşkın hareketlilik, taşkın öfke ve saldırganlık pota",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Eksitasyon ise",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 14,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Motor Aktivite ve",
+         "Hareket",
+         "Retardasyon",
+         "Motor aktivitelerin azalmasıdır. Temel",
+         "larak depresyonda görülür.",
+         "Eksitasyon"
+        ],
+        "sekil": null,
+        "adim": 14
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p039",
+     "sayfa": 39,
+     "slayt_adim": "k2-11-d-s39",
+     "cumleler": [
+      {
+       "id": "k2-11-c0131",
+       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Katapleksi kahkaha, öfke ya da ani korku gibi güçlü duygusal durumlarla tetiklenen, bilinç kaybı olmaksızın kas tonusunun geçici ve ani olarak kaybolması durumudur ve narkolepsinin en karakteristik belirtisidir.",
+       "ekran": "**Motor Aktivite Hareket ve Katatoni:** Burada çıkmış sınav sorusu bulunmaktadır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": 14,
+       "cikmis": [
+        "64b435be39be"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Motor Aktivite ve Hareket",
+         "Katalepsi: Kişinin uzun süre hareketsiz olarak kalmasıdır",
+         "(sertleşmiş bir gövde ve uzuvlar).",
+         "Katatonik Stupor: Hareketlerde neredeyse durma noktasına",
+         "varan bir yavaşlama vardır. Çevresinin farkında olmadığı",
+         "izlenimini verir."
+        ],
+        "sekil": null,
+        "adim": 14
+       }
+      },
+      {
+       "id": "k2-11-c0132",
+       "ses": "Katalepsi ise sertleşmiş uzuvların verilen olağandışı duruşu saatlerce koruması halidir.",
+       "ekran": "**Motor:** Katalepsi ise sertleşmiş uzuvların verilen olağandışı duruşu saatlerce koruması halidir.",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Katalepsi ise",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 14,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Motor Aktivite ve Hareket",
+         "Katalepsi: Kişinin uzun süre hareketsiz olarak kalmasıdır",
+         "(sertleşmiş bir gövde ve uzuvlar).",
+         "Katatonik Stupor: Hareketlerde neredeyse durma noktasına",
+         "varan bir yavaşlama vardır. Çevresinin farkında olmadığı",
+         "izlenimini verir."
+        ],
+        "sekil": null,
+        "adim": 14
+       }
+      },
+      {
+       "id": "k2-11-c0133",
+       "ses": "Katatonik stuporda hareketler durma noktasına gelirken mutizmde hasta istemli olarak konuşmayı reddeder; sınavda sorulduğu üzere katatoni tablosu organik beyin hasarlarının yanı sıra şizofreni ve duygudurum bozuklukları gibi psikojenik nedenlerle de ortaya çıkabilmektedir.",
+       "ekran": "**Çıkmış Sınav Sorusu:** Katatonik stuporda hareketler durma noktasına",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Stupor",
+         "tur": "terim"
+        },
+        {
+         "metin": "Katatoni",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 14,
+       "cikmis": [
+        "64b435be39be"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Motor Aktivite ve Hareket",
+         "Katalepsi: Kişinin uzun süre hareketsiz olarak kalmasıdır",
+         "(sertleşmiş bir gövde ve uzuvlar).",
+         "Katatonik Stupor: Hareketlerde neredeyse durma noktasına",
+         "varan bir yavaşlama vardır. Çevresinin farkında olmadığı",
+         "izlenimini verir."
+        ],
+        "sekil": null,
+        "adim": 14
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p040",
+     "sayfa": 40,
+     "slayt_adim": "k2-11-d-s40",
+     "cumleler": [
+      {
+       "id": "k2-11-c0134",
+       "ses": "Psikomotor alanda görülen istemsiz hareketler ve ilaç yan etkileri semiyolojide dikkatle ayrılmalıdır.",
+       "ekran": "**Motor Aktivite Hareket ve Katatoni:** Psikomotor alanda görülen istemsiz hareketler",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": 14,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Motor Aktivite ve Hareket",
+         "Diskinezi: İstemsiz hareketlerdir.",
+         "Distoni: Belli bir kas grubunun istemsiz olarak kasılmasıdır.",
+         "Manyerizm: Kişide alışkanlık halini almış, istemsiz hareketlerdir.",
+         "Ekopraksi: Kişinin başkalarının hareketini taklit etmesidir.",
+         "Akatizi: Genellikle antipsikotiklerin kullanımına bağlı olarak"
+        ],
+        "sekil": null,
+        "adim": 14
+       }
+      },
+      {
+       "id": "k2-11-c0135",
+       "ses": "Sınavda sorulmuş olan önemli bir semiyoloji ayrımı olarak; diskinezi genel istemsiz hareketleri, distoni ise boyun ya da gövdede kasların ağrılı ve istemsiz spazmını ifade eder.",
+       "ekran": "**Motor:** Diskinezi genel istemsiz hareketleri, distoni ise boyun ya da gövdede belirli kas grupları",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Distoni",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 14,
+       "cikmis": [
+        "past-1790877044403-707646"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Motor Aktivite ve Hareket",
+         "Diskinezi: İstemsiz hareketlerdir.",
+         "Distoni: Belli bir kas grubunun istemsiz olarak kasılmasıdır.",
+         "Manyerizm: Kişide alışkanlık halini almış, istemsiz hareketlerdir.",
+         "Ekopraksi: Kişinin başkalarının hareketini taklit etmesidir.",
+         "Akatizi: Genellikle antipsikotiklerin kullanımına bağlı olarak"
+        ],
+        "sekil": null,
+        "adim": 14
+       }
+      },
+      {
+       "id": "k2-11-c0136",
+       "ses": "Hastanın yapmacık mimik ve alışkanlık hareketleri sergilemesine manyerizm, başkalarının hareketlerini aynen taklit etmesine ekopraksi denir.",
+       "ekran": "**Motor:** Hastanın yapmacık mimik ve alışkanlık hareketleri sergilemesine manyerizm, başkalarının ha",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Hastanın yapmacık",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 14,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Motor Aktivite ve Hareket",
+         "Diskinezi: İstemsiz hareketlerdir.",
+         "Distoni: Belli bir kas grubunun istemsiz olarak kasılmasıdır.",
+         "Manyerizm: Kişide alışkanlık halini almış, istemsiz hareketlerdir.",
+         "Ekopraksi: Kişinin başkalarının hareketini taklit etmesidir.",
+         "Akatizi: Genellikle antipsikotiklerin kullanımına bağlı olarak"
+        ],
+        "sekil": null,
+        "adim": 14
+       }
+      },
+      {
+       "id": "k2-11-c0137",
+       "ses": "Akatizi ise çoğunlukla antipsikotik ilaçların dopamin blokajına bağlı gelişen, hastanın bacaklarında dayanılmaz bir içsel huzursuzluk hissetmesi ve sürekli volta atma zorunluluğu duyması tablosudur.",
+       "ekran": "**Motor:** Akatizi ise çoğunlukla antipsikotik ilaçların dopamin blokajına bağlı gelişen, hastanın ba",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Akatizi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 14,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Motor Aktivite ve Hareket",
+         "Diskinezi: İstemsiz hareketlerdir.",
+         "Distoni: Belli bir kas grubunun istemsiz olarak kasılmasıdır.",
+         "Manyerizm: Kişide alışkanlık halini almış, istemsiz hareketlerdir.",
+         "Ekopraksi: Kişinin başkalarının hareketini taklit etmesidir.",
+         "Akatizi: Genellikle antipsikotiklerin kullanımına bağlı olarak"
+        ],
+        "sekil": null,
+        "adim": 14
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-11-b15",
+   "baslik": "Bedensel İşlevler Uyku ve İştah",
+   "sayfa_araligi": [
+    41,
+    42
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-11-p041",
+     "sayfa": 41,
+     "slayt_adim": "k2-11-d-s41",
+     "cumleler": [
+      {
+       "id": "k2-11-c0138",
+       "ses": "Ruhsal muayenenin dördüncü ekseni olan bedensel işlevlerde uyku ve iştah paternlerindeki değişimler tanı açısından belirleyicidir.",
+       "ekran": "**Bedensel İşlevler Uyku ve İştah:** Ruhsal muayenenin dördüncü ekseni olan",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Ruhsal muayenenin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 15,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Bedensel İşlevler",
+         "Uyku",
+         "Depresyonda uykuda artma veya azalma olur. Uykuya dalmada ve",
+         "uykuyu sürdürmede güçlük yanında sabahları vaktinden önce uyanıp",
+         "uyuyamama görülür. Bazen da aksine vaktinin büyük bölümünü",
+         "uyuyarak geçirme ortaya çıkar. Aşırı uyku ile giden depresyonların atipik"
+        ],
+        "sekil": null,
+        "adim": 15
+       }
+      },
+      {
+       "id": "k2-11-c0139",
+       "ses": "Klasik depresyonda uykuya dalma güçlüğü ve sabahın erken saatlerinde vaktinden önce uyanıp tekrar uyuyamama izlenirken, aşırı uyku ve iştah artışı ile giden tablolar atipik depresyon özelliğidir.",
+       "ekran": "**Bedensel:** Klasik depresyonda uykuya dalma güçlüğü ve sabahın erken saatlerinde vaktinden önce uyanıp",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Klasik depresyonda",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 15,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Bedensel İşlevler",
+         "Uyku",
+         "Depresyonda uykuda artma veya azalma olur. Uykuya dalmada ve",
+         "uykuyu sürdürmede güçlük yanında sabahları vaktinden önce uyanıp",
+         "uyuyamama görülür. Bazen da aksine vaktinin büyük bölümünü",
+         "uyuyarak geçirme ortaya çıkar. Aşırı uyku ile giden depresyonların atipik"
+        ],
+        "sekil": null,
+        "adim": 15
+       }
+      },
+      {
+       "id": "k2-11-c0140",
+       "ses": "Mani atağında ise uyku gereksinimi belirgin biçimde azalmıştır; hasta gecede sadece iki veya üç saat uyumasına rağmen sabah son derece dinç ve enerjik uyanır.",
+       "ekran": "**Bedensel:** Mani atağında ise uyku gereksinimi belirgin biçimde azalmıştır; hasta gecede sadece iki ve",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Mani atağında",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 15,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Bedensel İşlevler",
+         "Uyku",
+         "Depresyonda uykuda artma veya azalma olur. Uykuya dalmada ve",
+         "uykuyu sürdürmede güçlük yanında sabahları vaktinden önce uyanıp",
+         "uyuyamama görülür. Bazen da aksine vaktinin büyük bölümünü",
+         "uyuyarak geçirme ortaya çıkar. Aşırı uyku ile giden depresyonların atipik"
+        ],
+        "sekil": null,
+        "adim": 15
+       }
+      },
+      {
+       "id": "k2-11-c0141",
+       "ses": "Depresyonda genel kural olarak iştah ve kilo kaybı baskınken, atipik depresyonda karbonhidrat aşermesi ve kilo alımı eşlik edebilir.",
+       "ekran": "**Bedensel:** Depresyonda genel kural olarak iştah ve kilo kaybı baskınken, atipik depresyonda karbonhid",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Depresyonda genel",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 15,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Bedensel İşlevler",
+         "Uyku",
+         "Depresyonda uykuda artma veya azalma olur. Uykuya dalmada ve",
+         "uykuyu sürdürmede güçlük yanında sabahları vaktinden önce uyanıp",
+         "uyuyamama görülür. Bazen da aksine vaktinin büyük bölümünü",
+         "uyuyarak geçirme ortaya çıkar. Aşırı uyku ile giden depresyonların atipik"
+        ],
+        "sekil": null,
+        "adim": 15
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p042",
+     "sayfa": 42,
+     "slayt_adim": "k2-11-d-s42",
+     "cumleler": [
+      {
+       "id": "k2-11-c0142",
+       "ses": "Bedensel işlevler çerçevesinde cinsel istek, bağırsak hareketleri ve idrar boşaltımı da dikkatle sorgulanmalıdır.",
+       "ekran": "**Bedensel İşlevler Uyku ve İştah:** Bedensel işlevler çerçevesinde cinsel istek",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": 15,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "Bedensel İşlevler",
+         "Libido",
+         "Manide cinsel istekte artma ve rastgele cinsel ilişki kurma",
+         "görülür.",
+         "Dışkılama",
+         "Anksiyete ve depresyonda ishal/kabızlık görülebilir."
+        ],
+        "sekil": null,
+        "adim": 15
+       }
+      },
+      {
+       "id": "k2-11-c0143",
+       "ses": "Libido düzeyinde mani döneminde disinhibisyona bağlı belirgin bir cinsel istek artışı ve rastgele cinsel ilişkilere girme davranışı gözlenirken, depresyon döneminde tam tersine cinsel istekte kayıp izlenir.",
+       "ekran": "**Bedensel:** Libido düzeyinde mani döneminde disinhibisyona bağlı belirgin bir cinsel istek artışı ve r",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Libido düzeyinde",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 15,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "Bedensel İşlevler",
+         "Libido",
+         "Manide cinsel istekte artma ve rastgele cinsel ilişki kurma",
+         "görülür.",
+         "Dışkılama",
+         "Anksiyete ve depresyonda ishal/kabızlık görülebilir."
+        ],
+        "sekil": null,
+        "adim": 15
+       }
+      },
+      {
+       "id": "k2-11-c0144",
+       "ses": "Otonomik sinir sistemi etkileşimi nedeniyle yoğun anksiyete ve depresyon tablolarında bağırsak motilitesi bozularak ishal veya dirençli kabızlık gelişebilir; psikotik tablolarda veya psikojenik polidipsi olgularında ise kompulsif aşırı su içmeye bağlı olarak idrar miktarında çarpıcı artışlar görülür.",
+       "ekran": "**Bedensel:** Otonomik sinir sistemi etkileşimi nedeniyle yoğun anksiyete ve depresyon tablolarında bağı",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Otonomik sinir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 15,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "Bedensel İşlevler",
+         "Libido",
+         "Manide cinsel istekte artma ve rastgele cinsel ilişki kurma",
+         "görülür.",
+         "Dışkılama",
+         "Anksiyete ve depresyonda ishal/kabızlık görülebilir."
+        ],
+        "sekil": null,
+        "adim": 15
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-11-b16",
+   "baslik": "Kaynaklar ve Genel Ders Özeti",
+   "sayfa_araligi": [
+    43,
+    44
+   ],
+   "paragraflar": [
+    {
+     "id": "k2-11-p043",
+     "sayfa": 43,
+     "slayt_adim": "k2-11-d-s43",
+     "cumleler": [
+      {
+       "id": "k2-11-c0145",
+       "ses": "Dersimizde incelediğimiz semiyolojik tanımlar ve tanısal ilkeler, Türk psikiyatri yazınının ve dünya klinik psikiyatrisinin temel başvuru kaynaklarına dayanmaktadır.",
+       "ekran": "**Kaynaklar ve Genel Ders Özeti:** Dersimizde incelediğimiz semiyolojik tanımlar ve",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Dersimizde incelediğimiz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 15,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "Kaynaklar",
+         "Psikiyatri Kitabı, Ed; I. B. Kulaksızoğlu, R Tükel, A Üçok, İ Yargıç, O Yazıcı. İstanbul",
+         "Üniversitesi Basım ve Yayınevi-İstanbul. 2009",
+         "Psikiyatri Temel Kitabı. Ed: E Köroğlu, C Güleç. Hekimler Yayın Birliği, Ankara 2007.",
+         "Klinik Psikiyatri. Ed: HI Kaplan, BJ Sadock. Çeviri Ed: E Abay. Nobel Tıp Kitapevleri,",
+         "İstanbul, 2004."
+        ],
+        "sekil": null,
+        "adim": 15
+       }
+      },
+      {
+       "id": "k2-11-c0146",
+       "ses": "İstanbul Üniversitesi öğretim üyelerince hazırlanan psikiyatri kitabı, Hekimler Yayın Birliğinin temel psikiyatri kitabı ile Kaplan ve Sadock klinik psikiyatri kaynakları konunun ana omurgasını kurar.",
+       "ekran": "**Kaynaklar:** İstanbul Üniversitesi öğretim üyelerince hazırlanan psikiyatri kitabı, Hekimler Yayın Birl",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "İstanbul Üniversitesi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 15,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "Kaynaklar",
+         "Psikiyatri Kitabı, Ed; I. B. Kulaksızoğlu, R Tükel, A Üçok, İ Yargıç, O Yazıcı. İstanbul",
+         "Üniversitesi Basım ve Yayınevi-İstanbul. 2009",
+         "Psikiyatri Temel Kitabı. Ed: E Köroğlu, C Güleç. Hekimler Yayın Birliği, Ankara 2007.",
+         "Klinik Psikiyatri. Ed: HI Kaplan, BJ Sadock. Çeviri Ed: E Abay. Nobel Tıp Kitapevleri,",
+         "İstanbul, 2004."
+        ],
+        "sekil": null,
+        "adim": 15
+       }
+      },
+      {
+       "id": "k2-11-c0147",
+       "ses": "Ayrıca Profesör Özcan Köknel ile Profesör Orhan Öztürkün klasikleşmiş ruh sağlığı ve bozuklukları yapıtları psikiyatrik muayenenin kavramsal zenginliğini kavramak isteyen hekim adayları için en değerli temel başvuru eserleridir.",
+       "ekran": "**Kaynaklar:** Ayrıca Profesör Özcan Köknel ile Profesör Orhan Öztürkün klasikleşmiş ruh sağlığı ve bozuk",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Ayrıca Profesör",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 15,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "Kaynaklar",
+         "Psikiyatri Kitabı, Ed; I. B. Kulaksızoğlu, R Tükel, A Üçok, İ Yargıç, O Yazıcı. İstanbul",
+         "Üniversitesi Basım ve Yayınevi-İstanbul. 2009",
+         "Psikiyatri Temel Kitabı. Ed: E Köroğlu, C Güleç. Hekimler Yayın Birliği, Ankara 2007.",
+         "Klinik Psikiyatri. Ed: HI Kaplan, BJ Sadock. Çeviri Ed: E Abay. Nobel Tıp Kitapevleri,",
+         "İstanbul, 2004."
+        ],
+        "sekil": null,
+        "adim": 15
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p044",
+     "sayfa": 44,
+     "slayt_adim": "k2-11-d-s44",
+     "cumleler": [
+      {
+       "id": "k2-11-c0148",
+       "ses": "Psikiyatrik semiyoloji dersimizi burada başarıyla tamamlıyoruz.",
+       "ekran": "**Kaynaklar ve Genel Ders Özeti:** Psikiyatrik semiyoloji dersimizi burada başarıyla",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Psikiyatrik semiyoloji",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 15,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "Teşekkürler..."
+        ],
+        "sekil": null,
+        "adim": 15
+       }
+      },
+      {
+       "id": "k2-11-c0149",
+       "ses": "Tıp fakültesi klinik stajlarında ve meslek hayatınızda karşılaşacağınız ruhsal bozuklukların tanı ve ayırıcı tanısında, hastayı dinlerken sergileyeceğiniz dikkatli gözlem ve doğru semiyolojik çözümleme doğru tedaviye ulaşmanın en temel güvencesidir.",
+       "ekran": "**Kaynaklar:** Tıp fakültesi klinik stajlarında ve meslek hayatınızda karşılaşacağınız ruhsal bozukluklar",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Kaynaklar:",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": 15,
+       "cikmis": [
+        "past-1790877044849-897865"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "Teşekkürler..."
+        ],
+        "sekil": null,
+        "adim": 15
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "donem": "2025-2026"
+}

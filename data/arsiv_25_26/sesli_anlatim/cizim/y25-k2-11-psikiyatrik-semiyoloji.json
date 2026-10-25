@@ -1,0 +1,962 @@
+{
+ "surum": 1,
+ "metinHash": "08065bb5c45196456bcf2f690dd40233729ab224",
+ "p": {
+  "1": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Belirti ve bulgular",
+      "Sistematik gözlem",
+      "Sözel ifadeler"
+     ],
+     "baslik": "Psikiyatride Tanı Dayanağı",
+     "s": 2,
+     "k": [
+      0,
+      118
+     ],
+     "tip": "liste",
+     "konum": [
+      0.12,
+      0.78
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2108,
+     "ek_renk": "#e8eed6"
+    }
+   ]
+  },
+  "2": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Bilişsel işlevler",
+      "Duygulanım",
+      "Motor aktivite",
+      "Bedensel işlevler"
+     ],
+     "baslik": "Ruhsal Muayene Alanları",
+     "s": 3,
+     "k": [
+      0,
+      121
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.5197,
+     "ek_renk": "#e8eed6"
+    }
+   ]
+  },
+  "4": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Somnolans uyaranla açılır",
+      "Stupor hareket yavaşlaması",
+      "Koma yanıtsızlık tablosu"
+     ],
+     "baslik": "Bilinç Bozuklukları Ağırlığı",
+     "s": 5,
+     "k": [
+      0,
+      103
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.4458,
+     "ek_renk": "#e8eed6"
+    }
+   ]
+  },
+  "5": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Zaman yönelimi",
+      "Yer yönelimi",
+      "Kişi yönelimi"
+     ],
+     "baslik": "Yönelim Bileşenleri",
+     "s": 6,
+     "k": [
+      0,
+      97
+     ],
+     "tip": "liste",
+     "konum": [
+      0.15,
+      0.71
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1408,
+     "ek_renk": "#e8eed6"
+    }
+   ]
+  },
+  "6": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Zaman yönelimi",
+      "Yer yönelimi",
+      "Kişi yönelimi"
+     ],
+     "baslik": "Yönelim Hiyerarşisi",
+     "numarali": true,
+     "s": 7,
+     "k": [
+      0,
+      115
+     ],
+     "tip": "liste",
+     "konum": [
+      0.19,
+      0.86
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2908,
+     "ek_renk": "#e8eed6"
+    }
+   ]
+  },
+  "7": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Tespit kayıt belleği",
+      "Kısa süreli bellek",
+      "Uzun süreli bellek"
+     ],
+     "baslik": "Bellek Aşamaları",
+     "s": 8,
+     "k": [
+      0,
+      108
+     ],
+     "tip": "liste",
+     "konum": [
+      0.16,
+      0.83
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2608,
+     "ek_renk": "#e8eed6"
+    }
+   ]
+  },
+  "9": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Zaman aralığı",
+       "Olaydan sonraki zaman",
+       "Geçmişe ait yaşantılar"
+      ],
+      [
+       "Öğrenme sorunu",
+       "Yeni bilgileri öğrenememe",
+       "Eski anıları anımsayamama"
+      ]
+     ],
+     "kutuplar": [
+      "Anterograd",
+      "Retrograd"
+     ],
+     "s": 10,
+     "k": [
+      0,
+      113
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.48,
+      0.53
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.444,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "10": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "Anterograd amnezi",
+       "Vernike Korsakoff sendromu"
+      ],
+      [
+       "Kısa süreli bellek",
+       "Birkaç saatle sınırlı"
+      ]
+     ],
+     "s": 11,
+     "k": [
+      0,
+      110
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.17,
+      0.78
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.39,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1902,
+     "ek_renk": "#e8eed6"
+    }
+   ]
+  },
+  "11": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "Retrograd amnezi",
+       "Demans tablosu"
+      ],
+      [
+       "Ribo kuralı",
+       "Eski anılar en son unutulur"
+      ]
+     ],
+     "s": 12,
+     "k": [
+      0,
+      97
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.15,
+      0.67
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.39,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0802,
+     "ek_renk": "#e8eed6"
+    }
+   ]
+  },
+  "12": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Deja vu görmüş gibi sanma",
+      "Jamais vu hiç görmemiş sanma",
+      "Konfabülasyon masallama"
+     ],
+     "baslik": "Paramneziler ve Bozukluklar",
+     "s": 13,
+     "k": [
+      0,
+      130
+     ],
+     "tip": "liste",
+     "konum": [
+      0.13,
+      0.85
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2808,
+     "ek_renk": "#e8eed6"
+    }
+   ]
+  },
+  "13": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Belirli alana yönelme",
+       "Belirli alana odaklanma",
+       "Odaklanmayı sürdürme"
+      ],
+      [
+       "İşlev niteliği",
+       "Zihinsel enerjiyi çekme",
+       "Kesintisiz sürdürebilme"
+      ]
+     ],
+     "kutuplar": [
+      "Dikkat",
+      "Konsantrasyon"
+     ],
+     "s": 14,
+     "k": [
+      0,
+      126
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.18,
+      0.81
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.444,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2736,
+     "ek_renk": "#e8eed6"
+    }
+   ]
+  },
+  "14": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "Distraktibilite",
+       "Mani atakları"
+      ],
+      [
+       "Dikkatin çelinebilirliği",
+       "Dış etkenlerle çelinme"
+      ]
+     ],
+     "s": 15,
+     "k": [
+      0,
+      116
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.16,
+      0.84
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.39,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2502,
+     "ek_renk": "#e8eed6"
+    }
+   ]
+  },
+  "15": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "Hipervijilans",
+       "Travma sonrası stres"
+      ],
+      [
+       "Tehlike beklentisi",
+       "Çevreye aşırı dikkat kesilme"
+      ]
+     ],
+     "s": 16,
+     "k": [
+      0,
+      99
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.18,
+      0.91
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.39,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3202,
+     "ek_renk": "#e8eed6"
+    }
+   ]
+  },
+  "16": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Görme halüsinasyonu",
+      "İşitme halüsinasyonu",
+      "Koku ve tat halüsinasyonu",
+      "Dokunma halüsinasyonu"
+     ],
+     "baslik": "Duyusal Halüsinasyon",
+     "s": 17,
+     "k": [
+      0,
+      127
+     ],
+     "tip": "liste",
+     "konum": [
+      0.14,
+      0.67
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1747,
+     "ek_renk": "#e8eed6"
+    }
+   ]
+  },
+  "18": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "İşitsel halüsinasyon",
+       "Psikotik bozukluk şizofreni"
+      ],
+      [
+       "Koku ve tat halüsinasyonu",
+       "Temporal lob lezyonu"
+      ]
+     ],
+     "s": 19,
+     "k": [
+      0,
+      102
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.14,
+      0.7
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.444,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1636,
+     "ek_renk": "#e8eed6"
+    }
+   ]
+  },
+  "19": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Dış uyaran",
+       "Gerçek dış uyaran yok",
+       "Gerçek dış uyaran var"
+      ],
+      [
+       "Algı niteliği",
+       "Uyaran olmadan algılama",
+       "Uyaranı yanlış yorumlama"
+      ]
+     ],
+     "kutuplar": [
+      "Halüsinasyon",
+      "İllüzyon"
+     ],
+     "s": 20,
+     "k": [
+      0,
+      134
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.14,
+      0.83
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.444,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2936,
+     "ek_renk": "#e8eed6"
+    }
+   ]
+  },
+  "20": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Yabancılaşma odağı",
+       "Kişinin kendi bedenine",
+       "Dış dünyaya ve çevreye"
+      ],
+      [
+       "Yaşantı biçimi",
+       "Kendini dışarıdan izleme",
+       "Çevreyi yapay hissetme"
+      ]
+     ],
+     "kutuplar": [
+      "Depersonalizasyon",
+      "Derealizasyon"
+     ],
+     "s": 21,
+     "k": [
+      0,
+      80
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.12,
+      0.81
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.444,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2736,
+     "ek_renk": "#e8eed6"
+    }
+   ]
+  },
+  "22": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Lögore konuşma artışı",
+      "Basınçlı konuşma taşkınlığı",
+      "Ayrıntıcı konuşma"
+     ],
+     "baslik": "Çağrışım Artması Belirtileri",
+     "s": 23,
+     "k": [
+      0,
+      124
+     ],
+     "tip": "liste",
+     "konum": [
+      0.18,
+      0.86
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2908,
+     "ek_renk": "#e8eed6"
+    }
+   ]
+  },
+  "23": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Neolojizm yeni kelime türetme",
+      "Perseverasyon ısrarlı yanıtlama",
+      "Klang kafiyeli ses çağrışımı",
+      "Kelime salatası"
+     ],
+     "baslik": "Çağrışım Sapmaları",
+     "s": 24,
+     "k": [
+      0,
+      125
+     ],
+     "tip": "liste",
+     "konum": [
+      0.16,
+      0.9
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.4047,
+     "ek_renk": "#e8eed6"
+    }
+   ]
+  },
+  "26": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Bizar gerçek dışı hezeyan",
+      "Duyguduruma uygun hezeyan",
+      "Erotomanik aşk sanrısı",
+      "Grandiyöz büyüklük sanrısı"
+     ],
+     "baslik": "Hezeyan Sınıflaması",
+     "s": 27,
+     "k": [
+      0,
+      128
+     ],
+     "tip": "liste",
+     "konum": [
+      0.15,
+      0.88
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3847,
+     "ek_renk": "#e8eed6"
+    }
+   ]
+  },
+  "27": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Perseküsyon kötülük görme",
+      "Referans gizli anlam çıkarma",
+      "Nihilistik yokluk hezeyanı",
+      "Mignon soylu aile inancı"
+     ],
+     "baslik": "Klinik Hezeyan Türleri",
+     "s": 28,
+     "k": [
+      0,
+      116
+     ],
+     "tip": "liste",
+     "konum": [
+      0.15,
+      0.88
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3847,
+     "ek_renk": "#e8eed6"
+    }
+   ]
+  },
+  "28": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Düşünce çekilmesi",
+      "Düşünce sokulması",
+      "Düşünce okunması",
+      "Düşünce yayınlanması"
+     ],
+     "baslik": "Şnayder Birinci Sıra Sanrıları",
+     "s": 29,
+     "k": [
+      0,
+      137
+     ],
+     "tip": "liste",
+     "konum": [
+      0.11,
+      0.8
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3047,
+     "ek_renk": "#e8eed6"
+    }
+   ]
+  },
+  "29": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Klinik nitelik",
+       "Yineleyici takıntılı düşünce",
+       "Tekrarlayıcı törensel eylem"
+      ],
+      [
+       "Hasta yaşantısı",
+       "Zihinden atamama bunaltı",
+       "Kaygıyı dindirme davranışı"
+      ]
+     ],
+     "kutuplar": [
+      "Obsesyon",
+      "Kompulsiyon"
+     ],
+     "s": 30,
+     "k": [
+      0,
+      134
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.11,
+      0.83
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.444,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2936,
+     "ek_renk": "#e8eed6"
+    }
+   ]
+  },
+  "35": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Ötimi normal duygudurum",
+      "Yükselmiş duygudurum mani",
+      "Çökkün duygudurum depresyon",
+      "İrritabl öfkeli duygudurum"
+     ],
+     "baslik": "Klinik Duygudurum",
+     "s": 35,
+     "k": [
+      0,
+      118
+     ],
+     "tip": "liste",
+     "konum": [
+      0.15,
+      0.9
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.4047,
+     "ek_renk": "#e8eed6"
+    }
+   ]
+  },
+  "38": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Kas tonusu",
+       "Ani geçici tonus kaybı",
+       "Uzuvlarda sertleşmiş duruş"
+      ],
+      [
+       "Tetikleyici etken",
+       "Ani duygu gülme korku",
+       "Olağandışı postürü koruma"
+      ]
+     ],
+     "kutuplar": [
+      "Katapleksi",
+      "Katalepsi"
+     ],
+     "s": 39,
+     "k": [
+      0,
+      128
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.2,
+      0.85
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.444,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3136,
+     "ek_renk": "#e8eed6"
+    }
+   ]
+  }
+ },
+ "rapor": {
+  "aday": 26,
+  "gecti": 25,
+  "ret": {
+   "panel metni 'Beyin metabolizması' henüz anlatılmamış terim i": 1
+  }
+ }
+}
