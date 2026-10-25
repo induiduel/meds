@@ -83,7 +83,14 @@ function egri(nk: number[][], kapali = false): string {
   return d;
 }
 
-const ilerleme = (z: CizimKomut, c: number) => (c < z.k[0] ? -1 : AZ_HAREKET ? 1 : Math.min(1, (c - z.k[0]) / Math.max(1, z.k[1] - z.k[0])));
+const ilerleme = (z: CizimKomut, c: number) => {
+  const k = z.k || [0, 0];
+  // c < 0 ise (duraklatıldı, aralık dışı veya statik inceleme): çizim tam gösterilir (kullanıcı görsün)
+  if (c < 0) return 1;
+  if (c < k[0]) return -1;
+  if (AZ_HAREKET) return 1;
+  return Math.min(1, (c - k[0]) / Math.max(1, k[1] - k[0]));
+};
 
 /** Etiket yalnız betiğin boş bulduğu yerde (etiket_konum); yoksa gösterilmez — yazının üstüne binmesin */
 function Etiket({ z }: { z: CizimKomut }) {
@@ -144,39 +151,41 @@ function Komut({ z, t }: { z: CizimKomut; t: number }) {
       </g>
     );
   }
-  if (z.tur === 'akis' && z.odak) {
+  if (z.tur === 'akis' && (z.odak || (z.a && z.b))) {
     const o = z.odak;
-    return (
-      <g className="pdv-cz-akis is-odak">
-        <rect x={o[0] * V} y={o[1] * V} width={(o[2] - o[0]) * V} height={(o[3] - o[1]) * V} rx={8} className="pdv-cz-hale" pathLength={1}
-              strokeDasharray={1} strokeDashoffset={1 - t} vectorEffect="non-scaling-stroke" />
-        <rect x={o[0] * V} y={o[1] * V} width={(o[2] - o[0]) * V} height={(o[3] - o[1]) * V} rx={8} className="pdv-cz-odak" pathLength={1}
-              strokeDasharray={1} strokeDashoffset={1 - t} vectorEffect="non-scaling-stroke" />
-      </g>
-    );
-  }
-  if (z.tur === 'akis' && z.a && z.b) {
-    const [a, b] = [z.a, z.b];
-    const yol = z.yol?.length ? z.yol : z.c ? Array.from({ length: 17 }, (_, i) => {
+    const a = z.a, b = z.b;
+    const yol = a && b ? (z.yol?.length ? z.yol : z.c ? Array.from({ length: 17 }, (_, i) => {
       const u = i / 16, c = z.c!;
       return [(1 - u) ** 2 * a[0] + 2 * (1 - u) * u * c[0] + u * u * b[0], (1 - u) ** 2 * a[1] + 2 * (1 - u) * u * c[1] + u * u * b[1]];
-    }) : [a, b];
-    const m = yolNokta(yol, t);
+    }) : [a, b]) : null;
+    const m = yol ? yolNokta(yol, t) : null;
     const ui = z.iliski === 'inhibe';
     const hk = z.hedef_kutu;
     const kk = z.kaynak_kutu;
     return (
-      <g className={`pdv-cz-akis is-${z.iliski || 'aktive'}${z.dal ? ' is-dal' : ''}`}>
-        {(!z.dal || z.dal.i === 0) && (kk ? (
-          <rect x={kk[0] * V} y={kk[1] * V} width={(kk[2] - kk[0]) * V} height={(kk[3] - kk[1]) * V} rx={6} className="pdv-cz-kaynak" vectorEffect="non-scaling-stroke" />
-        ) : (
-          <circle cx={yol[0][0] * V} cy={yol[0][1] * V} r={6} className="pdv-cz-baslangic" />
-        ))}
-        <path d={yolD(yol, z.rota)} {...ciz} className="pdv-cz-hale" vectorEffect="non-scaling-stroke" />
-        <path d={yolD(yol, z.rota)} {...ciz} markerEnd={t >= 1 ? `url(#pdv-cz-${ui ? 'dur' : 'ok'})` : undefined} vectorEffect="non-scaling-stroke" />
-        {t > 0 && t < 1 && <circle cx={m[0] * V} cy={m[1] * V} r={4} className="pdv-cz-parca" />}
-        {t >= 1 && hk && (
-          <rect x={hk[0] * V} y={hk[1] * V} width={(hk[2] - hk[0]) * V} height={(hk[3] - hk[1]) * V} rx={6} className="pdv-cz-hedef" vectorEffect="non-scaling-stroke" />
+      <g className={`pdv-cz-akis is-${z.iliski || 'aktive'}${z.dal ? ' is-dal' : ''}${o ? ' is-odak' : ''}`}>
+        {o && (
+          <>
+            <rect x={o[0] * V} y={o[1] * V} width={(o[2] - o[0]) * V} height={(o[3] - o[1]) * V} rx={8} className="pdv-cz-hale" pathLength={1}
+                  strokeDasharray={1} strokeDashoffset={1 - t} vectorEffect="non-scaling-stroke" />
+            <rect x={o[0] * V} y={o[1] * V} width={(o[2] - o[0]) * V} height={(o[3] - o[1]) * V} rx={8} className="pdv-cz-odak" pathLength={1}
+                  strokeDasharray={1} strokeDashoffset={1 - t} vectorEffect="non-scaling-stroke" />
+          </>
+        )}
+        {yol && (
+          <>
+            {(!z.dal || z.dal.i === 0) && (kk ? (
+              <rect x={kk[0] * V} y={kk[1] * V} width={(kk[2] - kk[0]) * V} height={(kk[3] - kk[1]) * V} rx={6} className="pdv-cz-kaynak" vectorEffect="non-scaling-stroke" />
+            ) : (
+              <circle cx={yol[0][0] * V} cy={yol[0][1] * V} r={6} className="pdv-cz-baslangic" />
+            ))}
+            <path d={yolD(yol, z.rota)} {...ciz} className="pdv-cz-hale" vectorEffect="non-scaling-stroke" />
+            <path d={yolD(yol, z.rota)} {...ciz} markerEnd={t >= 1 ? `url(#pdv-cz-${ui ? 'dur' : 'ok'})` : undefined} vectorEffect="non-scaling-stroke" />
+            {t > 0 && t < 1 && m && <circle cx={m[0] * V} cy={m[1] * V} r={4} className="pdv-cz-parca" />}
+            {t >= 1 && hk && (
+              <rect x={hk[0] * V} y={hk[1] * V} width={(hk[2] - hk[0]) * V} height={(hk[3] - hk[1]) * V} rx={6} className="pdv-cz-hedef" vectorEffect="non-scaling-stroke" />
+            )}
+          </>
         )}
       </g>
     );

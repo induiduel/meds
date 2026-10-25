@@ -1514,7 +1514,9 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
   }, [detay.isaret, gor.dosya]);
   // Kelime takibi yalnız işaret katmanında (useFocus): görüntüleyici cümle başına bir kez çizilir, kelimede yeniden çizilmez
   const marks = useMemo<PdfMarks | null>(() => {
-    if (!canli || durdu || !isr || (isr.t === 'sayfa' && !isr.y?.length && !(isr as any).z?.length) || isr.d !== gor.dosya) return null;
+    // Slayt aynıysa (gor.sayfa === isr.s) kullanıcı elle kaysa/durdursa bile işaret ve çizim gizlenmez (kullanıcı inceleyebilsin)
+    const ayniSayfa = isr ? isr.s === gor.sayfa : false;
+    if (!canli || (durdu && !ayniSayfa) || !isr || (isr.t === 'sayfa' && !isr.y?.length && !(isr as any).z?.length) || isr.d !== gor.dosya) return null;
     const ws = isr.w;
     const yol = isr.y?.length ? isr.y : undefined;
     const useChar = (): number => useCd(() => cdKonusulanKarakter()?.c ?? -1);
@@ -1525,9 +1527,27 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
       // yalnız o an konuşulan kelimenin slayttaki karşılığı; karşılıksız kelimede işaret yok
       return ws.findIndex((w) => k.c >= w[0] && k.c < w[1]);
     });
-    const cizim = (isr as any).z as PdfMarks['cizim'];   // canlı çizim (R6): sunucu işarete ekler (canliDers.ts)
+    // O anki sayfadaki tüm canlı çizimler toplanır (önceki cümlenin çizdiği kontur kaybolmasın)
+    const sayfaCizimleri: NonNullable<PdfMarks['cizim']> = [];
+    const zSet = new Set<string>();
+    if (detay.isaret && isr) {
+      for (const cs of Object.values(detay.isaret || {})) {
+        for (const x of cs || []) {
+          if (!x || x.s !== isr.s || x.d !== gor.dosya) continue;
+          for (const z of ((x as any).z || []) as NonNullable<PdfMarks['cizim']>) {
+            if (!z) continue;
+            const anahtar = `${z.tur}:${JSON.stringify(z.nokta || z.odak || z.a || z.hedef || '')}`;
+            if (!zSet.has(anahtar)) {
+              zSet.add(anahtar);
+              sayfaCizimleri.push(z);
+            }
+          }
+        }
+      }
+    }
+    const cizim = sayfaCizimleri.length > 0 ? sayfaCizimleri : ((isr as any).z as PdfMarks['cizim']);
     return { page: isr.s, kind: isr.t, lines: isr.l, words: ws.map((w) => w.slice(2)), useFocus, path: yol, useChar: yol || cizim?.length ? useChar : undefined, cizim };
-  }, [canli, durdu, isr, gor.dosya]);
+  }, [canli, durdu, isr, gor.dosya, gor.sayfa, detay.isaret]);
 
   useEffect(() => { if (!durdu) setElle(null); }, [durdu]);
 

@@ -2,6 +2,353 @@
  "surum": 1,
  "metinHash": "0889b62d44b97380ef11b2c3d622d2254362b757",
  "p": {
+  "50": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "3B BT: Deplase Tip II odontoid kırığı",
+     "odak": [
+      0.0,
+      0.0,
+      0.458,
+      0.6
+     ],
+     "etiket_konum": [
+      0.0,
+      0.36
+     ],
+     "etiket_genislik": 0.42,
+     "s": 51,
+     "k": [
+      0,
+      128
+     ],
+     "yakin": [
+      0,
+      0,
+      0.518,
+      0.66
+     ]
+    }
+   ]
+  },
+  "44": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Aksiyel BT: Burst fraktürü arka kolon kemik fragmanı",
+     "odak": [
+      0.402,
+      0.157,
+      1.0,
+      0.921
+     ],
+     "etiket_konum": [
+      0.402,
+      0.048
+     ],
+     "etiket_genislik": 0.42,
+     "s": 45,
+     "k": [
+      0,
+      134
+     ]
+    }
+   ]
+  },
+  "38": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Alt torakal kama (wedge) kompresyon kırığı",
+     "odak": [
+      0.0,
+      0.0,
+      0.669,
+      1.0
+     ],
+     "etiket_konum": [
+      0.569,
+      0.0
+     ],
+     "etiket_genislik": 0.42,
+     "s": 39,
+     "k": [
+      0,
+      130
+     ]
+    }
+   ]
+  },
+  "32": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Sagital T2 MRG: Omurilik basısı ve miyelomalazi",
+     "odak": [
+      0.069,
+      0.099,
+      0.32,
+      0.842
+     ],
+     "etiket_konum": [
+      0.32,
+      0.039
+     ],
+     "etiket_genislik": 0.42,
+     "s": 33,
+     "k": [
+      0,
+      140
+     ]
+    }
+   ]
+  },
+  "31": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Postoperatif anterior plak-vida ve kafes füzyonu",
+     "odak": [
+      0.045,
+      0.039,
+      0.346,
+      0.901
+     ],
+     "etiket_konum": [
+      0.358,
+      0.039
+     ],
+     "etiket_genislik": 0.42,
+     "s": 32,
+     "k": [
+      0,
+      130
+     ]
+    }
+   ]
+  },
+  "30": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "C4 burst patlama kırığı ve spinal kanal retropulsiyonu",
+     "odak": [
+      0.027,
+      0.053,
+      0.322,
+      0.858
+     ],
+     "etiket_konum": [
+      0.334,
+      0.755
+     ],
+     "etiket_genislik": 0.42,
+     "s": 31,
+     "k": [
+      0,
+      120
+     ]
+    }
+   ]
+  },
+  "29": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "C2 anteroinferior teardrop (gözyaşı) kırığı",
+     "odak": [
+      0.03,
+      0.031,
+      0.401,
+      0.846
+     ],
+     "etiket_konum": [
+      0.413,
+      0.031
+     ],
+     "etiket_genislik": 0.42,
+     "s": 30,
+     "k": [
+      0,
+      140
+     ]
+    }
+   ]
+  },
+  "28": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "C5-C6 anterior dislokasyon ve faset kilitlenmesi",
+     "odak": [
+      0.0,
+      0.0,
+      0.415,
+      1.0
+     ],
+     "etiket_konum": [
+      0.0,
+      0.0
+     ],
+     "etiket_genislik": 0.42,
+     "s": 29,
+     "k": [
+      0,
+      133
+     ]
+    }
+   ]
+  },
+  "23": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Asılan adam kırığı evrelemesi ve C2-C3 açılanması",
+     "odak": [
+      0.438,
+      0.183,
+      0.899,
+      1.0
+     ],
+     "etiket_konum": [
+      0.02,
+      0.72
+     ],
+     "etiket_genislik": 0.42,
+     "s": 24,
+     "k": [
+      0,
+      113
+     ]
+    }
+   ]
+  },
+  "22": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Hangman kırığı (C2 pars interartikülaris iki taraflı kırığı)",
+     "odak": [
+      0.0,
+      0.525,
+      0.99,
+      0.992
+     ],
+     "etiket_konum": [
+      0.0,
+      0.41
+     ],
+     "etiket_genislik": 0.42,
+     "s": 23,
+     "k": [
+      0,
+      137
+     ]
+    }
+   ]
+  },
+  "20": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Odontoid kırık tipleri (Tip I apeks, Tip II boyun, Tip III korpus)",
+     "odak": [
+      0.366,
+      0.078,
+      0.975,
+      0.89
+     ],
+     "etiket_konum": [
+      0.366,
+      0.0
+     ],
+     "etiket_genislik": 0.42,
+     "s": 21,
+     "k": [
+      0,
+      97
+     ]
+    },
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Yüzde seksen konservatif kaynamaz",
+      "Psödoartroz gelişme riski",
+      "Transodontoid vida fiksasyonu"
+     ],
+     "baslik": "Odontoid Tip İki Tedavi Özellikleri",
+     "s": 21,
+     "k": [
+      0,
+      61
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.4458,
+     "ek_renk": "#252525"
+    }
+   ]
+  },
+  "19": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Tip II odontoid kırık hattı (boyun bileşkesi)",
+     "odak": [
+      0.487,
+      0.028,
+      0.959,
+      0.969
+     ],
+     "etiket_konum": [
+      0.08,
+      0.0
+     ],
+     "etiket_genislik": 0.42,
+     "s": 20,
+     "k": [
+      0,
+      119
+     ]
+    }
+   ]
+  },
+  "18": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Atlas (C1) Jefferson patlama kırığı ve lateral kitle taşması",
+     "odak": [
+      0.016,
+      0.551,
+      0.628,
+      0.979
+     ],
+     "etiket_konum": [
+      0.016,
+      0.442
+     ],
+     "etiket_genislik": 0.42,
+     "s": 19,
+     "k": [
+      0,
+      141
+     ]
+    }
+   ]
+  },
   "1": {
    "0": [
     {
@@ -197,39 +544,6 @@
     }
    ]
   },
-  "20": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Yüzde seksen konservatif kaynamaz",
-      "Psödoartroz gelişme riski",
-      "Transodontoid vida fiksasyonu"
-     ],
-     "baslik": "Odontoid Tip İki Tedavi Özellikleri",
-     "s": 21,
-     "k": [
-      0,
-      61
-     ],
-     "tip": "liste",
-     "konum": [
-      0.03,
-      1.015
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.411,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.4458,
-     "ek_renk": "#252525"
-    }
-   ]
-  },
   "40": {
    "1": [
     {
@@ -329,8 +643,8 @@
   }
  },
  "rapor": {
-  "aday": 31,
-  "gecti": 10,
+  "aday": 44,
+  "gecti": 23,
   "ret": {
    "resim sayfasında panel (H51)": 18,
    "panel metni 'Cerrahi tespit gerektirir' henüz anlatılmamış t": 1,

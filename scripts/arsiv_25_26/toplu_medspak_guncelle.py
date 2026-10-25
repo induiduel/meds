@@ -40,12 +40,13 @@ HEDEFLER = [
 
 
 def main():
-    print(f"Toplam {len(HEDEFLER)} derste lazer takip zenginleştirme ve .medspak üretimi başlatılıyor...\n")
+    hedefler = sys.argv[1:] if len(sys.argv) > 1 else HEDEFLER
+    print(f"Toplam {len(hedefler)} derste lazer takip zenginleştirme ve .medspak üretimi başlatılıyor...\n")
     basarili = []
     hatali = []
 
-    for i, key in enumerate(HEDEFLER, 1):
-        print(f"\n{'='*70}\n[{i}/{len(HEDEFLER)}] İŞLENİYOR: {key}\n{'='*70}")
+    for i, key in enumerate(hedefler, 1):
+        print(f"\n{'='*70}\n[{i}/{len(hedefler)}] İŞLENİYOR: {key}\n{'='*70}")
         try:
             # 1. Lazer zenginleştirme (capa, v2, taslak)
             l_cnt, tot_cnt, pct_l, pct_w = ULT.zenginlestir_ders(key)

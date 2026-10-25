@@ -122,6 +122,13 @@ def denetle(k: dict, kelime_sayisi: int, kutular: list, raster: SayfaRaster | No
                     return "faz aralığı/türü geçersiz"
         return None
     if tur == "akis":
+        if k.get("odak"):
+            od = k.get("odak")
+            if not (isinstance(od, (list, tuple)) and len(od) == 4 and all(isinstance(v, (int, float)) and 0 <= v <= 1 for v in od)):
+                return "odak kutusu geçersiz"
+            if od[2] <= od[0] or od[3] <= od[1]:
+                return "odak kutusu boyutları geçersiz"
+            return None
         a, b = k.get("a"), k.get("b")
         if not (_gecerli_nokta(a) and _gecerli_nokta(b)):
             return "a/b noktası geçersiz"

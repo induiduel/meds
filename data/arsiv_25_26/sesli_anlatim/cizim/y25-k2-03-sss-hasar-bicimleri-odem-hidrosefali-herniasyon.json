@@ -2,6 +2,145 @@
  "surum": 1,
  "metinHash": "eabb74f6ee94771a3458e6f8c7586197556155d1",
  "p": {
+  "17": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Hidrosefali: Ventrikülomegali ve transependimal sızıntı",
+     "odak": [
+      0.1,
+      0.2,
+      0.9,
+      0.9
+     ],
+     "etiket_konum": [
+      0.1,
+      0.085
+     ],
+     "etiket_genislik": 0.42,
+     "s": 18,
+     "k": [
+      0,
+      131
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.457,
+       0.425
+      ],
+      [
+       0.478,
+       0.417
+      ],
+      [
+       0.506,
+       0.43
+      ],
+      [
+       0.53,
+       0.453
+      ],
+      [
+       0.528,
+       0.47
+      ],
+      [
+       0.488,
+       0.47
+      ],
+      [
+       0.464,
+       0.463
+      ],
+      [
+       0.457,
+       0.445
+      ]
+     ],
+     "etiket": "koroid pleksus",
+     "s": 18,
+     "k": [
+      89,
+      131
+     ],
+     "etiket_konum": [
+      0.64,
+      0.377
+     ],
+     "etiket_genislik": 0.214,
+     "etiket_hedef": [
+      0.53,
+      0.417
+     ],
+     "etiket_boy": 0.0591,
+     "yakin": [
+      0.397,
+      0.317,
+      0.914,
+      0.53
+     ]
+    }
+   ]
+  },
+  "13": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Unkal ve subfalsin herniasyon (orta hat şifti)",
+     "odak": [
+      0.1,
+      0.2,
+      0.9,
+      0.9
+     ],
+     "etiket_konum": [
+      0.1,
+      0.085
+     ],
+     "etiket_genislik": 0.42,
+     "s": 14,
+     "k": [
+      0,
+      111
+     ]
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "Yaygın serebral ödem",
+      "Hidrosefali",
+      "Yer kaplayan tümörler"
+     ],
+     "sonuc": "Beyin hacminde artış ve kafa içi basınç artışı",
+     "s": 14,
+     "k": [
+      27,
+      198
+     ],
+     "tip": "grup",
+     "konum": [
+      0.03,
+      0.83
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.351,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2012,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
   "0": {
    "0": [
     {
@@ -1221,40 +1360,6 @@
     }
    ]
   },
-  "13": {
-   "3": [
-    {
-     "tur": "sema",
-     "sablon": "cok_neden_tek_sonuc",
-     "sablon_ad": "Birçok neden → tek sonuç",
-     "duzen": "grup",
-     "bag": "neden olur",
-     "kaynaklar": [
-      "Yaygın serebral ödem",
-      "Hidrosefali",
-      "Yer kaplayan tümörler"
-     ],
-     "sonuc": "Beyin hacminde artış ve kafa içi basınç artışı",
-     "s": 14,
-     "k": [
-      27,
-      198
-     ],
-     "tip": "grup",
-     "konum": [
-      0.03,
-      0.83
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.351,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.2012,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
   "14": {
    "0": [
     {
@@ -1472,183 +1577,6 @@
      "kutu_h": 0.275,
      "yon": "yatay",
      "olcek": 1.0
-    }
-   ]
-  },
-  "17": {
-   "0": [
-    {
-     "tur": "kontur",
-     "nokta": [
-      [
-       0.457,
-       0.425
-      ],
-      [
-       0.478,
-       0.417
-      ],
-      [
-       0.506,
-       0.43
-      ],
-      [
-       0.53,
-       0.453
-      ],
-      [
-       0.528,
-       0.47
-      ],
-      [
-       0.488,
-       0.47
-      ],
-      [
-       0.464,
-       0.463
-      ],
-      [
-       0.457,
-       0.445
-      ]
-     ],
-     "etiket": "koroid pleksus",
-     "s": 18,
-     "k": [
-      89,
-      131
-     ],
-     "etiket_konum": [
-      0.64,
-      0.377
-     ],
-     "etiket_genislik": 0.214,
-     "etiket_hedef": [
-      0.53,
-      0.417
-     ],
-     "etiket_boy": 0.0591,
-     "yakin": [
-      0.397,
-      0.317,
-      0.914,
-      0.53
-     ]
-    },
-    {
-     "tur": "akis",
-     "a": [
-      0.445,
-      0.43
-     ],
-     "b": [
-      0.478,
-      0.515
-     ],
-     "iliski": "aktive",
-     "etiket": "foramen Monro'dan üçüncü ventriküle",
-     "s": 18,
-     "k": [
-      178,
-      219
-     ],
-     "odak": [
-      0.425,
-      0.41,
-      0.498,
-      0.535
-     ],
-     "etiket_konum": [
-      0.58,
-      0.08
-     ],
-     "etiket_genislik": 0.42,
-     "etiket_hedef": [
-      0.498,
-      0.41
-     ],
-     "etiket_boy": 0.0591,
-     "yakin": [
-      0.365,
-      0.02,
-      1,
-      0.595
-     ]
-    }
-   ],
-   "1": [
-    {
-     "tur": "akis",
-     "a": [
-      0.478,
-      0.515
-     ],
-     "b": [
-      0.527,
-      0.61
-     ],
-     "iliski": "aktive",
-     "etiket": "akuadukttan dördüncü ventriküle",
-     "s": 18,
-     "k": [
-      75,
-      151
-     ],
-     "odak": [
-      0.458,
-      0.495,
-      0.547,
-      0.63
-     ],
-     "etiket_konum": [
-      0.026,
-      0.5709
-     ],
-     "etiket_genislik": 0.42,
-     "yakin": [
-      0,
-      0.435,
-      0.607,
-      0.69
-     ]
-    }
-   ],
-   "2": [
-    {
-     "tur": "akis",
-     "a": [
-      0.527,
-      0.61
-     ],
-     "b": [
-      0.585,
-      0.69
-     ],
-     "iliski": "aktive",
-     "etiket": "subaraknoid boşluğa yayılım",
-     "s": 18,
-     "k": [
-      27,
-      132
-     ],
-     "odak": [
-      0.507,
-      0.59,
-      0.605,
-      0.71
-     ],
-     "etiket_konum": [
-      0.605,
-      0.55
-     ],
-     "etiket_genislik": 0.378,
-     "yakin": [
-      0.447,
-      0.49,
-      1,
-      0.77
-     ]
     }
    ]
   },
@@ -2874,8 +2802,8 @@
   }
  },
  "rapor": {
-  "aday": 78,
-  "gecti": 68,
+  "aday": 77,
+  "gecti": 67,
   "ret": {
    "panel metni 'Büyür, yuvarlaklaşır' henüz anlatılmamış terim ": 1,
    "panel metni 'Fibroblast rolü' henüz anlatılmamış terim içeri": 1,

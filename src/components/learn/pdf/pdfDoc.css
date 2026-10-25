@@ -189,31 +189,31 @@
 .pdv-cz { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
 .pdv-cz path { fill: none; stroke-linecap: round; stroke-linejoin: round; }
 /* H40: her çizginin altında beyaz hale — resim/renkli zemin üstünde de okunur; çizgi ince ama tam opak */
-.pdv-cz-kontur path { stroke: #e11d48; stroke-width: 2.4; }
-.pdv-cz-akis path { stroke: #1d4ed8; stroke-width: 2.4; }
-.pdv-cz g path.pdv-cz-hale { stroke: #fff; stroke-width: 5.5; opacity: .9; }
+.pdv-cz-kontur path { stroke: #f43f5e; stroke-width: 3.2; filter: drop-shadow(0 0 3px rgba(244, 63, 94, 0.7)); }
+.pdv-cz-akis path { stroke: #2563eb; stroke-width: 3; filter: drop-shadow(0 0 3px rgba(37, 99, 235, 0.6)); }
+.pdv-cz g path.pdv-cz-hale { stroke: #fff; stroke-width: 6.8; opacity: .95; }
 .pdv-cz-akis.is-inhibe path { stroke: #dc2626; }
 .pdv-cz-akis.is-donusur path { stroke: #7c3aed; stroke-dasharray: none; }
 .pdv-cz-uc { fill: #2563eb; }
-.pdv-cz-uc-dur { stroke: #dc2626; stroke-width: 2; }
-.pdv-cz-parca { fill: #f59e0b; stroke: #fff; stroke-width: 1; }
-.pdv-cz g rect.pdv-cz-hale { fill: none; stroke: #fff; stroke-width: 5.5; opacity: .9; }
-.pdv-cz-odak { fill: rgb(29 78 216 / .07); stroke: #1d4ed8; stroke-width: 2.4; }
-/* kural: resimde vurgulanan bölge fosforlu kalemle boyanır (hat + yarı saydam dolgu, alttaki şekil görünür) */
-.pdv-cz g path.pdv-cz-boya { fill: rgb(250 204 21 / .38); stroke: none; mix-blend-mode: multiply; transition: opacity .3s; }
+.pdv-cz-uc-dur { stroke: #dc2626; stroke-width: 2.5; }
+.pdv-cz-parca { fill: #f59e0b; stroke: #fff; stroke-width: 1.5; }
+.pdv-cz g rect.pdv-cz-hale { fill: none; stroke: #fff; stroke-width: 6.5; opacity: .95; }
+.pdv-cz-odak { fill: rgb(37 99 235 / .15); stroke: #2563eb; stroke-width: 2.8; filter: drop-shadow(0 0 4px rgba(37, 99, 235, 0.5)); }
+/* kural: resimde vurgulanan bölge fosforlu boyanır; siyah/koyu radyoloji zemininde kaybolmaması için mix-blend multiply kullanılmaz */
+.pdv-cz g path.pdv-cz-boya { fill: rgb(250 204 21 / .45); stroke: none; filter: drop-shadow(0 0 6px rgba(250, 204, 21, 0.6)); transition: opacity .3s; }
 /* kural: okun başlangıcı her zaman belli — kaynak kutusu kesik turuncu çerçeve, kutu yoksa halkalı nokta */
 .pdv-cz-baslangic { fill: #d97706; stroke: #fff; stroke-width: 2.5; }
 .pdv-cz-kaynak { fill: rgb(245 158 11 / .1); stroke: #d97706; stroke-width: 2; stroke-dasharray: 5 3; animation: pdv-cz-hedef-gel .3s ease-out both; }
 .pdv-cz-hedef { fill: rgb(37 99 235 / .08); stroke: #1d4ed8; stroke-width: 2; animation: pdv-cz-hedef-gel .3s ease-out both; }
 @keyframes pdv-cz-hedef-gel { from { opacity: 0; } to { opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { .pdv-cz-hedef { animation: none; } }
-.pdv-cz-egri path { stroke-width: 2; }
+.pdv-cz-egri path { stroke-width: 2.4; }
 .pdv-cz-egri path.is-yukselis { stroke: #ea580c; }
 .pdv-cz-egri path.is-inis { stroke: #0284c7; }
 .pdv-cz-egri path.is-plato { stroke: #64748b; }
 .pdv-cz-etiket-kap { position: absolute; pointer-events: none; animation: pdv-cz-gel .3s ease-out both; }
-.pdv-cz-etiket { display: inline-block; max-width: 100%; padding: 0.133em 0.533em; border-radius: 0.4em; background: rgba(15, 23, 42, .9);
-  color: #fff; font: 600 max(7px, 1.9cqw)/1.3 system-ui, sans-serif; white-space: normal; overflow-wrap: break-word; }
+.pdv-cz-etiket { display: inline-block; max-width: 100%; padding: 0.22em 0.7em; border-radius: 0.5em; background: rgba(15, 23, 42, .94);
+  color: #fff; font: 700 max(8px, 2.1cqw)/1.35 system-ui, sans-serif; white-space: normal; overflow-wrap: break-word; box-shadow: 0 4px 14px rgba(0, 0, 0, .45), 0 0 0 1px rgba(255, 255, 255, .25); }
 .pdv-cz-sema { position: absolute; right: 3%; bottom: 3%; max-width: 70%; padding: 0.692em 0.923em; border-radius: 1.08em;
   background: rgba(255, 255, 255, .97); border: 0.0769em solid rgba(29, 78, 216, .16); box-shadow: 0 0.769em 2.15em -10px rgba(15, 23, 42, .35);
   pointer-events: none; font-size: max(7.5px, 1.75cqw); line-height: 1.25; color: #0f172a; animation: pdv-cz-gel .3s ease-out both; }

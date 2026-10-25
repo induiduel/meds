@@ -2,6 +2,129 @@
  "surum": 1,
  "metinHash": "d548eb3b8662b42b6992fff32c593153cb6d54cc",
  "p": {
+  "7": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Vertebra korpus patolojik çökmesi ve epidural bası",
+     "odak": [
+      0.1,
+      0.2,
+      0.9,
+      0.9
+     ],
+     "etiket_konum": [
+      0.0,
+      0.8
+     ],
+     "etiket_genislik": 0.42,
+     "s": 8,
+     "k": [
+      0,
+      110
+     ]
+    }
+   ],
+   "7": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Genç erişkin popülasyon",
+      "Vertebra korpusu tutulumu",
+      "Torasik segment yerleşimi"
+     ],
+     "baslik": "Dev hücreli tümör",
+     "s": 6,
+     "k": [
+      0,
+      47
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.91
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3408,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "5": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Pedikül erozyonu: Göz Kırpan Baykuş (Winking Owl) belirtisi",
+     "odak": [
+      0.1,
+      0.2,
+      0.9,
+      0.9
+     ],
+     "etiket_konum": [
+      0.1,
+      0.091
+     ],
+     "etiket_genislik": 0.42,
+     "s": 6,
+     "k": [
+      0,
+      126
+     ]
+    }
+   ],
+   "6": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Boyut",
+       "İki santimetreden küçük",
+       "Büyük boyut"
+      ],
+      [
+       "Nüks",
+       "Kıyasla az nüks",
+       "Yüksek lokal nüks"
+      ]
+     ],
+     "kutuplar": [
+      "Osteoid osteom",
+      "Osteoblastom"
+     ],
+     "s": 6,
+     "k": [
+      0,
+      46
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.05,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3718,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
   "1": {
    "5": [
     {
@@ -132,85 +255,6 @@
      "yon": "yatay",
      "olcek": 1.0,
      "ek_alt": 0.4147,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "5": {
-   "6": [
-    {
-     "tur": "sema",
-     "sablon": "karsilastirma",
-     "sablon_ad": "İki durumun karşılaştırması",
-     "duzen": "karsit",
-     "basliklar": [
-      "Özellik"
-     ],
-     "satirlar": [
-      [
-       "Boyut",
-       "İki santimetreden küçük",
-       "Büyük boyut"
-      ],
-      [
-       "Nüks",
-       "Kıyasla az nüks",
-       "Yüksek lokal nüks"
-      ]
-     ],
-     "kutuplar": [
-      "Osteoid osteom",
-      "Osteoblastom"
-     ],
-     "s": 6,
-     "k": [
-      0,
-      46
-     ],
-     "tip": "karsit",
-     "konum": [
-      0.05,
-      1.015
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.337,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.3718,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "7": {
-   "7": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Genç erişkin popülasyon",
-      "Vertebra korpusu tutulumu",
-      "Torasik segment yerleşimi"
-     ],
-     "baslik": "Dev hücreli tümör",
-     "s": 6,
-     "k": [
-      0,
-      47
-     ],
-     "tip": "liste",
-     "konum": [
-      0.05,
-      0.91
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.411,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.3408,
      "ek_renk": "#ffffff"
     }
    ]
@@ -383,8 +427,10 @@
   }
  },
  "rapor": {
-  "aday": 11,
-  "gecti": 11,
-  "ret": {}
+  "aday": 14,
+  "gecti": 13,
+  "ret": {
+   "kelime aralığı geçersiz (0–15, cümle 15 kelime)": 1
+  }
  }
 }

@@ -2,6 +2,102 @@
  "surum": 1,
  "metinHash": "af6ef5292b6b43565169bbdb05e82db3e85aa82f",
  "p": {
+  "39": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Hipofiz Adenomu: Sellar genişleme ve optik kiyazma basısı",
+     "odak": [
+      0.1,
+      0.15,
+      0.9,
+      0.9
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0607
+     ],
+     "etiket_genislik": 0.42,
+     "s": 40,
+     "k": [
+      0,
+      147
+     ]
+    }
+   ]
+  },
+  "29": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Vestibüler Schwannom: Serebellopontin köşe ve İAM genişlemesi",
+     "odak": [
+      0.1,
+      0.15,
+      0.9,
+      0.9
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0607
+     ],
+     "etiket_genislik": 0.42,
+     "s": 30,
+     "k": [
+      0,
+      155
+     ]
+    }
+   ]
+  },
+  "19": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Menenjiom: Homojen parlak kontrastlanma ve dural kuyruk",
+     "odak": [
+      0.1,
+      0.15,
+      0.9,
+      0.9
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0607
+     ],
+     "etiket_genislik": 0.42,
+     "s": 20,
+     "k": [
+      0,
+      161
+     ]
+    }
+   ]
+  },
+  "9": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Glioblastom: Halka kontrastlanması, santral nekroz ve ödem",
+     "odak": [
+      0.1,
+      0.15,
+      0.9,
+      0.9
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0607
+     ],
+     "etiket_genislik": 0.42,
+     "s": 10,
+     "k": [
+      0,
+      122
+     ]
+    }
+   ]
+  },
   "27": {
    "0": [
     {
@@ -37,8 +133,8 @@
   }
  },
  "rapor": {
-  "aday": 33,
-  "gecti": 1,
+  "aday": 37,
+  "gecti": 5,
   "ret": {
    "panel metni 'Selim ile habis biyolojik davr' henüz anlatılma": 1,
    "resim sayfasında panel (H51)": 2,

@@ -529,7 +529,7 @@ def cizim_dogrula_ve_yerlestir(taslak: Path, key: str, pdf_yol: Path, pars: list
             "tur", "nokta", "a", "b", "iliski", "fazlar", "dugum", "kenar", "etiket",
             "kaynak_metin", "hedef_metin", "dal", "sablon", "sablon_ad", "duzen", "basliklar",
             "bag", "satirlar", "ogeler", "kaynaklar", "sonuc", "soru", "dallar", "gorunen", "altta",
-            "kutuplar", "baslik", "numarali", "pdf_oku"
+            "kutuplar", "baslik", "numarali", "pdf_oku", "odak", "etiket_konum", "etiket_genislik"
         ) if x in k}
         komut.update(s=s, k=[ka[bas_k][0], ka[son_k][1]])
         yer = CU.yerlesim(komut, raster[s], sayfa_dolu.setdefault(s, []), satir_onbellek[s])

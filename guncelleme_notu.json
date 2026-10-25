@@ -1,32 +1,31 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 355,
-  "baslik": "Kurul 2 Tam Amfi Derinliği: 33 Derste %100 Lazer Metin Takibi, Çıkmış Soru Eşleşmeleri ve Zenginleştirilmiş Paketler Yayında",
+  "onem": 356,
+  "baslik": "Radyoloji ve Görüntüleme Hat Belirginleştirme, Odak Çerçeveleri ve Kesintisiz Çizim Görünürlüğü",
   "maddeler": [
-    "Kurul 2 Tüm Derslerde %100 Lazer Metin Takibi: 33 arşiv dersinin tamamında 'konusma_capalari' ve 'isaret' haritalaması güncellenerek PDF üzerinde kelime ve satır düzeyinde %98-100 hassasiyetle lazer takip standardına ulaşıldı.",
-    "Ders 61 (Nikotin Bağımlılığı ve Tedavisi): 46 sayfanın tamamı 1:1 amfi derinliğine genişletildi (2.949 kelime, 21.5 dk EMA GPU sesi, 22 canlı çizim, 9 çıkmış sınav sorusu doğrudan duyuruldu).",
-    "Ders 62 (Kraniyal Sinir Muayenesi): 36 sayfa, 144 cümle, 2.649 kelime (21.2 dk EMA GPU sesi) ile CN I-XII muayenesi, refleks arkları, Rinne-Weber ve kafa tabanı sendromları eksiksiz işlendi; 6 çıkmış soru bağlandı.",
-    "Ders 64 (Omurga Tümörleri): 20 sayfa, 141 cümle, 2.880 kelime (22.2 dk EMA GPU sesi) ve 11 canlı çizimle omurga primer ve metastatik lezyonları, Tokuhashi/Tomita sınıflamaları tam amfi seviyesine çıkarıldı.",
-    "Ders 65 (Konjenital Malformasyonlar ve Perinatal Beyin Hasarı): 28 sayfa, 140 cümle, 2.801 kelime (21.0 dk EMA GPU sesi), 15 canlı çizim ve 7 çıkmış soruyla nöral tüp defektleri, germinal matriks kanaması ve lissensefali derinleştirildi.",
-    "Ders 02, 54, 63 ve 05 Güçlendirmeleri: Bilinç Bozukluğuna Yaklaşım (62 sayfa, 5.822 kelime, 84 soru), Yaygın Anksiyete (3.404 kelime), Antidepresan İlaçlar (2.730 kelime) paketleri 0 hata ile SQLite .medspak formatında derlendi."
+    "Radyoloji Hat ve Sınır Belirginleştirme (Kontur & Odak): BT, MRG ve Röntgen görüntülerinde lezyon sınırları canlı mercan konturları (pdv-cz-kontur), yüksek kontrastlı odak çerçeveleri (pdv-cz-odak) ve Türkçe klinik tanı rozetleriyle (pdv-cz-etiket) kristal netliğinde belirginleştirildi.",
+    "Karanlık Zemin Kontrastı Çözümü: Röntgen, BT ve MRG görüntülerinin siyah/koyu arka planlarında vurgu ve çizimlerin kararıp kaybolmasına yol açan blend-mode multiply sorunu giderildi; parlak aydınlık ışıltı (luminous glow) ve çift katmanlı beyaz hale ile en karanlık kesitte dahi anında fark edilir hale getirildi.",
+    "Duraklatma ve İnceleme Modunda Çizim Kalıcılığı: Canlı ders duraklatıldığında veya öğrenci slaytı büyütüp incelediğinde çizimlerin ekrandan silinmesi engellendi; slayt içindeki tüm çizimler (sayfaCizimleri) sayfa boyunca ekranda kalıcı kılındı.",
+    "Klinik Görüntü Tanı Anlatımı: Kafa Travmaları, Spinal Travmalar, Omurga Tümörleri, Beyin Tümörleri ve SSS Hasar Biçimleri derslerinde öğrencinin ne görmesi gerektiği, patolojinin ayırt edici kriteri ve tam anatomik odağı hem anlatımda hem de görsel çizimlerle 1:1 eşleştirildi."
   ],
   "eklenen": [
-    "Ders 61 (Nikotin Bağımlılığı), Ders 62 (Kraniyal Sinir Muayenesi), Ders 64 (Omurga Tümörleri) ve Ders 65 (Konjenital Malformasyonlar) derin amfi paketleri",
-    "Kurul 2 33 dersinin tamamında 1:1 lazer metin takibi zenginleştirmesi (medspak SQLite formatında %100 satır eşleşmesi)"
+    "Radyoloji lezyon odak kutuları (odak), sınır konturları (kontur), yönlendirme okları (akis) ve Türkçe klinik tanı rozetleri (etiket)",
+    "Kafa Travmaları, Spinal Travmalar, Omurga Tümörleri, Beyin Tümörleri ve SSS Hasar Biçimleri derslerinde detaylı BT/MRG/Röntgen okuma ve tanı anlatımları"
   ],
   "degisen": [
-    "meds/scripts/arsiv_25_26/uygula_lazer_takip.py",
-    "meds/scripts/arsiv_25_26/generate_deep_k2_61.py",
-    "meds/scripts/arsiv_25_26/generate_deep_k2_62.py",
-    "meds/scripts/arsiv_25_26/generate_deep_k2_64.py",
-    "meds/scripts/arsiv_25_26/generate_deep_k2_65.py",
-    "meds/data/arsiv_25_26/sesli_anlatim/kayit.json",
+    "meds/src/components/learn/pdf/CizimLayer.tsx",
+    "meds/src/components/canliDers/CanliDersDers.tsx",
+    "meds/src/components/learn/pdf/pdfDoc.css",
+    "meds/scripts/cizim/cizim_dogrula.py",
+    "meds/scripts/arsiv_25_26/arsiv_yayinla.py",
+    "meds/scripts/arsiv_25_26/zenginlestir_tum_radyoloji.py",
     "meds/guncelleme_notu.json"
   ],
   "duzeltilen": [
-    "Lazer metin takibinin 'taslak/konusma_capalari.json' dosyasına yazılmaması nedeniyle oluşan satır vurgusu kaybı giderildi",
-    "Sesli anlatımlarda sınav çıkmışlarının sözlü olarak belirtilmemesi ve kural ihlali riskleri tamamen temizlendi",
-    "Çizimlerdeki ileriye dönük pedagojik sızıntılar ve taşmalar sıfır toleransla giderildi"
+    "Ders duraklatıldığında (c < 0) çizimlerin görünmez olması hatası (ilerleme = 1) düzeltildi",
+    "Kullanıcı slayta dokunduğunda veya inceleme yaptığında durdu bayrağının çizimleri sıfırlaması engellendi",
+    "Karanlık radyoloji arka planlarında mix-blend-mode multiply kaynaklı çizim kararması kaldırıldı",
+    "Radyoloji görüntülerinde gerçek kontur ve odak kutusu yerine sadece metin şeması gösterilmesi sorunu kökten çözüldü"
   ],
   "silinen": []
 }
