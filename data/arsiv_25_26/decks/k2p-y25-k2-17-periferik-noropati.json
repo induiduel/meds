@@ -1,0 +1,1909 @@
+{
+ "id": "k2p-y25-k2-17-periferik-noropati",
+ "title": "Periferik Nöropati: Fonksiyonel Birimlerden Polinöropati Kliniğine Sistematik Yaklaşım",
+ "shortTitle": "Periferik Nöropati",
+ "discipline": "Nöroloji",
+ "committee": "donem3-kurul2",
+ "instructor": "Dr. Öğr. Üyesi İrfan Yavaş",
+ "matchedNoteId": "y25-k2-17-periferik-noropati",
+ "overview": "Bu derste periferik sinir sisteminin anatomik ve histolojik organizasyonu; motor, duyusal ve otonom liflerin seyri; dinlenim ve aksiyon potansiyeli fizyolojisi ile Tip A, B, C lif özellikleri incelenir. Periferik sinir hasar biçimleri olan nöronopati, aksonopati, demiyelinizasyon ve Seddon/Sunderland travma sınıflaması ele alınır. Polinöropatilerin etiyolojik sınıflaması, mononöropati multipleks ayırımı, negatif ve pozitif duyusal fenomenler, eldiven-çorap tarzı duyu kaybı, motor zayıflığın MRC skalasıyla evrelenmesi, derin tendon refleksi arkı ile polinöropatiye eşlik eden fasiyal dipleji ve piramidal bulguların ayırıcı tanısı sistematik olarak işlenir.",
+ "highYieldPearls": [
+  "Motor liflerin hücre gövdesi omurilik ön boynuzunda (alfa motor nöron), duyusal liflerin gövdesi arka kök ganglionundadır.",
+  "Dinlenim membran potansiyeli -70 mV olup Na-K ATPaz pompasıyla korunur; uyarıldığında +30 mV değerinde aksiyon potansiyeli doğar.",
+  "Tip A lifleri en kalın miyelinli ve en hızlı ileten (10-70 m/sn) liflerdir; Tip C lifleri ise miyelinsiz olup künt ağrı ve ısıyı en yavaş iletir.",
+  "Segmental demiyelinizasyonda primer Schwann hasarı vardır ancak akson korunduğu için kas erimesi (atrofi) görülmez; aksonal hasarda ise belirgin kas erimesi izlenir.",
+  "Seddon sınıflamasında nöropraksi aksonun sağlam kaldığı en hafif formdur; aksonotmeziste akson kopuk kılıflar sağlamdır; nörotmeziste ise aksonla birlikte tüm bağ dokusu kılıfları kopmuştur.",
+  "Farklı zamanlarda birden çok periferik sinirin asimetrik tutulması mononöropati multipleks tablosudur ve en sık Poliarteritis Nodoza (PAN) gibi nekrotizan vaskülitlerde görülür.",
+  "Distal simetrik aksonal polinöropatide duyu kaybı en uzun aksonların metabolik yetmezliğine bağlı olarak ayaklardan başlar ve eldiven-çorap dağılımı gösterir.",
+  "Romberg testi propriosepsiyon kaybına bağlı duyusal ataksiyi serebellar ataksiden ayırır; duyusal atakside hasta yalnız gözlerini kapattığında düşer.",
+  "MRC kas gücü skalasında 3 puan yer çekimine karşı tam hareket olup uygulanan dirence karşı koyamamayı gösterir.",
+  "Polinöropati tablosuna iki taraflı fasiyal paralizi (VII) eşlik ediyorsa Guillain-Barré sendromu ve Lyme hastalığı; piramidal bulgular (Babinski) eşlik ediyorsa ALS, B12 eksikliği veya servikal miyelopati düşünülmelidir."
+ ],
+ "slides": [
+  {
+   "slideNumber": 1,
+   "bolum": "1.1",
+   "pdfSayfalari": [
+    2,
+    5
+   ],
+   "sourcePdf": {
+    "fileName": "POLİNÖROPATİLER.pdf",
+    "primaryPage": 2,
+    "startPage": 2,
+    "endPage": 5
+   },
+   "title": "Periferik Sinir Sistemi Anatomisi ve Fonksiyonel Birimler",
+   "subtitle": "Ön boynuz motor nöronlarından arka kök ganglionuna periferik sinir organizasyonu",
+   "badge": "Temel Anatomi",
+   "synthesisNarrative": "Periferik sinir sistemi motor, duyusal ve otonom liflerden oluşan karma iletim yollarıdır.\n\n- **Motor Birim:** Omurilik ön boynuzunda yer alan alfa motor nöron gövdesi, aksonunu ön kök (ventral kök) üzerinden gönderir. Bu akson nöromüsküler kavşağa ve kasa ulaşarak motor üniteyi kurar; inerve ettiği kas grubuna miyotom denir.\n- **Duyusal Birim:** Hücre gövdeleri arka kök ganglionunda (dorsal root ganglion) bulunan psödounipolar nöronlardır. Periferik uzantıları reseptörlerden duyu toplarken, santral uzantıları arka kök üzerinden omuriliğe girer; sorumlu olduğu deri sahasına dermatom adı verilir.\n- **Spinal Sinir ve Pleksuslar:** Ön ve arka kökler omurilik dışında birleşerek 31 çift spinal siniri oluşturur. Bu sinirlerin ön dalları brakiyal ve lumbosakral pleksusları kurarak periferik sinir gövdelerini meydana getirir.\n\n> [!NOTE]\n> Spinal sinirler saf motor ön kök ile saf duyusal arka kökün birleşmesiyle karma bir yapı kazanır.",
+   "content": "Periferik sinirler motor, duyusal ve otonom lifler içerir. Alfa motor nöronlar ön boynuzdan çıkıp kasa ulaşır; duyusal gövdeler ise arka kök ganglionunda yer alır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Omurilik ön boynuzunda yer alan alfa motor nöron aksonunun ön kök boyunca ilerleyerek ulaştığı ve inerve ettiği hedef fonksiyonel yapı hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Nöromüsküler kavşak ve iskelet kası lifleri",
+       "isCorrect": true,
+       "explanation": "Alfa motor nöronlar ön kök üzerinden çıkarak iskelet kası lifleriyle nöromüsküler kavşak kurar. Bu yapı istemli kas kasılmasını sağlayan motor üniteyi oluşturur."
+      },
+      {
+       "key": "B",
+       "text": "Arka kök ganglionundaki psödounipolar nöron gövdesi",
+       "isCorrect": false,
+       "explanation": "Arka kök ganglionu duyusal nöron gövdelerini barındıran aferent bir yapıdır. Motor nöron aksonları buraya uğramadan doğrudan efferent yolla kasa ilerler."
+      },
+      {
+       "key": "C",
+       "text": "Deri tabakasındaki serbest duyu sinir uçları",
+       "isCorrect": false,
+       "explanation": "Derideki serbest sinir uçları ağrı ve sıcaklık duyusunu toplayan aferent reseptörlerdir. Alfa motor nöronlar ise kas kasılmasını yöneten efferent liflerdir."
+      },
+      {
+       "key": "D",
+       "text": "Medulla spinalis arka kordon duyusal traktusları",
+       "isCorrect": false,
+       "explanation": "Arka kordon traktusları santral sinir sisteminde dokunma ve propriosepsiyon taşıyan yükselen yollardır. Alfa motor nöronlar ise omurilikten periferdeki kasa inen liflerdir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Bir tek omurilik segmentinden çıkan motor liflerin inerve ettiği iskelet kası grubuna miyotom adı verilir.",
+     "maskedTerm": "miyotom",
+     "hint": "Spinal segmentin innerve ettiği kas sahasını tanımlayan terim"
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Motor Lifler (Ön Kök)",
+     "rightCategory": "Duyusal Lifler (Arka Kök)",
+     "cards": [
+      {
+       "text": "Hücre gövdesi omurilik ön boynuzunda yerleşmiştir",
+       "category": "left"
+      },
+      {
+       "text": "Hücre gövdesi dorsal kök ganglionunda yerleşmiştir",
+       "category": "right"
+      },
+      {
+       "text": "Aksonu nöromüsküler kavşağa giderek kası uyarır",
+       "category": "left"
+      },
+      {
+       "text": "Periferik reseptörlerden aldığı uyarıyı omuriliğe taşır",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Ön boynuz alfa motor nöron gövdesinde aksiyon potansiyeli başlatılır.",
+      "2. Motor akson ön kök (ventral kök) boyunca omuriliği terk eder.",
+      "3. Ön ve arka kök foramen intervertebralede birleşerek mikst spinal siniri oluşturur.",
+      "4. Akson terminali iskelet kasındaki nöromüsküler kavşağa ulaşarak asetilkolin salgılar.",
+      "5. Kas lifi sarkolemmasında depolarizasyon gerçekleşir ve kas kasılması oluşur."
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Periferik sinir sisteminde toplam kaç çift spinal sinir bulunur ve kökler nerede birleşir?",
+     "answer": "Toplam 31 çift spinal sinir bulunur (8 servikal, 12 torasik, 5 lumbal, 5 sakral, 1 koksigeal); ön ve arka kökler foramen intervertebralede omurilik dışında birleşerek mikst spinal siniri oluşturur."
+    }
+   ]
+  },
+  {
+   "slideNumber": 2,
+   "bolum": "1.2",
+   "pdfSayfalari": [
+    6,
+    9
+   ],
+   "sourcePdf": {
+    "fileName": "POLİNÖROPATİLER.pdf",
+    "primaryPage": 7,
+    "startPage": 6,
+    "endPage": 9
+   },
+   "title": "Periferik Sinir Fizyolojisi ve Sinir Lifi Tipleri",
+   "subtitle": "Dinlenim potansiyeli, aksiyon potansiyeli ve Tip A, B, C lif özellikleri",
+   "badge": "Fizyoloji",
+   "synthesisNarrative": "Periferik sinir liflerinde iletim, hücre içi ve dışı iyon dağılımı ile membran potansiyeli dinamiklerine dayanır.\n\n- **Dinlenim Membran Potansiyeli:** Hücre içinde potasyum konsantrasyonu yüksek, sodyum düşüktür; hücre dışında ise sodyum yüksek, potasyum düşüktür. Membran istirahatte sodyuma geçirgen değildir. Sodyum-potasyum ATPaz pompası 3 sodyumu dışarı atıp 2 potasyumu içeri alarak denge potansiyelini yaklaşık -70 mV düzeyinde tutar.\n- **Aksiyon Potansiyeli:** Sinir lifi uyarıldığında voltaj kapılı sodyum kanalları açılır, sodyum hücre içine dolar ve membran potansiyeli +30 mV değerine ulaşarak depolarizasyon oluşur.\n- **Sinir Lifi Tipleri:**\n  * **Tip A:** 2-20 mikrometre çapında, kalın miyelinli, en hızlı ileten liflerdir (10-70 m/sn); vibrasyon, propriosepsiyon ve motor iletimi yürütür. Ranvier boğumları arasında sıçrayıcı iletim gösterir.\n  * **Tip B:** Yaklaşık 3 mikrometre çapında, ince miyelinli liflerdir (7-15 m/sn); preganglionik otonom lifler ile kısmen ağrı ve ısıyı iletir.\n  * **Tip C:** 1 mikrometreden dar, miyelinsiz liflerdir (< 2 m/sn); sürekli iletim gösterir, künt ağrı ve ısı duyusunu taşır.\n\n> [!IMPORTANT]\n> Sinir iletim hızı akson çapı ve miyelin kılıf kalınlığı ile doğru orantılıdır; en kalın ve miyelinli Tip A lifleri en hızlı iletimi sağlar.",
+   "content": "Periferik sinir dinlenim potansiyeli -70 mV, aksiyon potansiyeli +30 mV'dur. Tip A lifleri kalın miyelinli ve hızlı, Tip C lifleri ise miyelinsiz ve yavaştır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Periferik sinir lifi tipleri arasında miyelinsiz yapıda olan ve saniyede 2 metreden daha yavaş iletim hızı sergileyen sinir lifi hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Tip C lifleri",
+       "isCorrect": true,
+       "explanation": "Tip C lifleri miyelinsiz olup çapları bir mikrometreden küçüktür. İletim hızları saniyede iki metrenin altındadır ve künt ağrı ile ısı duyusunu taşır."
+      },
+      {
+       "key": "B",
+       "text": "Tip A alfa lifleri",
+       "isCorrect": false,
+       "explanation": "Tip A alfa lifleri en kalın miyelin kılıfa sahip motor ve proprioseptif liflerdir. İletim hızları saniyede yetmiş metreye kadar çıkan en hızlı lif grubudur."
+      },
+      {
+       "key": "C",
+       "text": "Tip B lifleri",
+       "isCorrect": false,
+       "explanation": "Tip B lifleri ince miyelinli preganglionik otonomik liflerdir. İletim hızları saniyede yedi ila on beş metre arasında olup miyelinsiz liflerden belirgin şekilde hızlıdır."
+      },
+      {
+       "key": "D",
+       "text": "Tip A beta lifleri",
+       "isCorrect": false,
+       "explanation": "Tip A beta lifleri dokunma ve basınç duyusunu taşıyan kalın miyelinli liflerdir. Ranvier boğumları üzerinden sıçrayıcı iletim yaparak yüksek hızda uyarı iletir."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Lif Tipi",
+      "Miyelin Kılıfı",
+      "Çap (µm)",
+      "Temel Görevi"
+     ],
+     "tableRows": [
+      [
+       "Tip A",
+       "Kalın miyelinli",
+       "2-20",
+       {
+        "text": "Vibrasyon, propriosepsiyon ve motor iletim",
+        "isMasked": true,
+        "hint": "Titreşim hissi ve kas kuvveti yollarını kapsayan geniş modaliteler"
+       }
+      ],
+      [
+       "Tip B",
+       {
+        "text": "İnce miyelinli",
+        "isMasked": true,
+        "hint": "Yalın lipid örtüsü barındırır"
+       },
+       "3",
+       "Preganglionik otonom lifler, kısmen ağrı ve ısı"
+      ],
+      [
+       "Tip C",
+       "Miyelinsiz",
+       {
+        "text": "< 1",
+        "isMasked": true,
+        "hint": "Genişliği tek bir mikrometrenin altındaki ölçü"
+       },
+       "Künt ağrı ve ısı duyusu"
+      ]
+     ]
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Miyelinli İletim (Tip A Lifleri)",
+     "rightTitle": "Miyelinsiz İletim (Tip C Lifleri)",
+     "leftPoints": [
+      "Ranvier boğumları arasında sıçrayıcı saltatorik iletim gerçekleşir.",
+      "Akson çapı geniştir ve iletim hızı saniyede yetmiş metreye ulaşır.",
+      "Duyusal olarak vibrasyon ve eklem pozisyon algısını taşır."
+     ],
+     "rightPoints": [
+      "Aksiyal membran boyunca kesintisiz sürekli iletim gerçekleşir.",
+      "Akson çapı dardır ve iletim hızı saniyede iki metrenin altındadır.",
+      "Duyusal olarak künt ağrı ve sıcaklık değişimlerini taşır."
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Periferik sinir hücresi dinlenim potansiyeli olan eksi yetmiş milivolt düzeyindeyken uyarıldığında sodyum girişiyle artı otuz milivolt değerine ulaşarak aksiyon potansiyeli gelişir.",
+     "maskedTerm": "artı otuz milivolt",
+     "hint": "Depolarizasyonun tepe noktasındaki pozitif elektriksel potansiyel değeri"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Sinir Liflerinin Fizyolojik Özellikleri",
+     "question": "Sinir lifi tipleri ve elektriksel iletim özellikleri hakkında verilen önermelerden hangisi yanlıştır?",
+     "items": [
+      {
+       "text": "Tip A lifleri kalın miyelin kılıfları sayesinde sıçrayıcı iletim yaparak en yüksek hıza ulaşır.",
+       "isLie": false,
+       "explanation": "Kalın miyelin kılıf Ranvier boğumları arasında saltatorik iletim sağlar ve hız yetmiş metreye kadar çıkar."
+      },
+      {
+       "text": "Tip B lifleri yaklaşık üç mikrometre çapında ince miyelinli preganglionik otonomik liflerdir.",
+       "isLie": false,
+       "explanation": "Tip B lifleri otonom sistemin preganglionik bağlantılarını kuran hafif miyelinli liflerdir."
+      },
+      {
+       "text": "Tip C lifleri kalın miyelin kılıfıyla donatılmış olup saltatorik sıçramalarla uyarı taşır.",
+       "isLie": true,
+       "explanation": "Tip C lifleri miyelinsizdir ve sıçrayıcı değil sürekli iletim gösterir; hızları saniyede iki metrenin altındadır."
+      },
+      {
+       "text": "Dinlenim zar potansiyelinde sodyum-potasyum pompası üç sodyumu dışarı atıp iki potasyumu içeri alır.",
+       "isLie": false,
+       "explanation": "Aktif sodyum-potasyum ATPaz pompası elektriksel polarizasyonu koruyarak dinlenim potansiyelini sağlar."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 3,
+   "bolum": "1.3",
+   "pdfSayfalari": [
+    10,
+    11
+   ],
+   "sourcePdf": {
+    "fileName": "POLİNÖROPATİLER.pdf",
+    "primaryPage": 10,
+    "startPage": 10,
+    "endPage": 11
+   },
+   "title": "Periferik Sinir Hasar Mekanizmaları",
+   "subtitle": "Nöronopati, aksonopati, demiyelinizasyon ve Wallerian dejenerasyon",
+   "badge": "Fizyopatoloji",
+   "synthesisNarrative": "Periferik sinir hasarı patolojik sürecin başladığı hücre kompartımanına göre üç temel modelde gerçekleşir:\n\n- **Nöronopati:** Primer patoloji doğrudan sinir hücre gövdesindedir (perikaryon). Ön boynuz motor nöronlarının (örneğin poliomyelit) veya arka kök ganglionu nöronlarının ölümüyle sonuçlanır. Hücre gövdesi öldüğü için rejenerasyon gelişmez; prognozu en kötü hasar tipidir ve kas inervasyonu ancak komşu sağlam sinirlerin filizlenmesiyle (kollateral filizlenme) sağlanabilir.\n- **Segmental Demiyelinizasyon:** Primer hasar Schwann hücresini ve miyelin kılıfını etkiler; akson yapısı sağlam kalır. Kas denerve olmadığı için atrofi gelişmez; remiyelinizasyon 15 gün ile 6 ay arasında tamamlanır ve prognozu iyidir (örneğin Guillain-Barré sendromu).\n- **Distal Aksonal Dejenerasyon:** Akson metabolik yetmezlik nedeniyle distalden merkeze doğru canlılığını kaybeder (\"dying back\" fenomeni). Miyelin kaybı akson harabiyetine sekonderdir; iyileşme günde 1 mm hızla seyreder (örneğin vinkristin nöropatisi).\n- **Wallerian Dejenerasyonu:** Fokal akson kesisi sonrasında lezyon distalinde akson parçalanır, miyelin globüllere ayrılır ve makrofajlarca temizlenir.\n\n> [!IMPORTANT]\n> Segmental demiyelinizasyonda akson korunduğu için kas erimesi (atrofi) gelişmez; aksonal hasarda ise denerve olan kasta belirgin atrofi izlenir.",
+   "content": "Nöronopatide hücre gövdesi ölür ve prognoz kötüdür. Demiyelinizasyonda Schwann hücresi etkilenir, kas erimesi olmaz. Aksonopatide ise dying back erimesi görülür.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Primer patolojik hasarın doğrudan sinir hücre gövdesinde (perikaryon) yerleştiği ve hücre ölümü nedeniyle prognozu en kötü olan periferik sinir hasar biçimi hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Nöronopati",
+       "isCorrect": true,
+       "explanation": "Nöronopatide hasar doğrudan ön boynuz veya arka kök ganglionundaki sinir hücre gövdesindedir. Hücre öldüğü için rejenerasyon gerçekleşmez ve prognoz en kötüdür."
+      },
+      {
+       "key": "B",
+       "text": "Segmental demiyelinizasyon",
+       "isCorrect": false,
+       "explanation": "Segmental demiyelinizasyonda primer hasar Schwann hücresindedir ve akson sağlam kalır. Kas denerve olmadığı için remiyelinizasyonla prognoz oldukça iyidir."
+      },
+      {
+       "key": "C",
+       "text": "Distal aksonopati",
+       "isCorrect": false,
+       "explanation": "Distal aksonopatide hücre gövdesi canlıdır ancak aksonun en uç kısmı metabolik yetmezlikle erir. Hücre gövdesi korunduğu için yavaş da olsa aksonal uzama mümkündür."
+      },
+      {
+       "key": "D",
+       "text": "Geçici nöropraksi",
+       "isCorrect": false,
+       "explanation": "Nöropraksi akson ve hücre gövdesinin sağlam kaldığı hafif fokal ileti bloğudur. Wallerian dejenerasyon gelişmez ve haftalar içinde tam düzelme izlenir."
+      }
+     ]
+    },
+    {
+     "type": "feature_bidding",
+     "optionA": "Segmental Demiyelinizasyon (Miyelinopati)",
+     "optionB": "Distal Aksonal Dejenerasyon (Aksonopati)",
+     "rounds": [
+      {
+       "feature": "Primer patoloji Schwann hücresini etkilerken akson silindiri sağlam kalır",
+       "correct": "A"
+      },
+      {
+       "feature": "Metabolik yetmezlik sonucu en uçtan gövdeye doğru dying back erimesi görülür",
+       "correct": "B"
+      },
+      {
+       "feature": "Kas denerve olmadığı için kas erimesi gelişmez ve remiyelinizasyon hızlıdır",
+       "correct": "A"
+      },
+      {
+       "feature": "Vinkristin gibi toksik ilaçlara bağlı gelişir ve iyileşme günde bir milimetre ilerler",
+       "correct": "B"
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Distal aksonal dejenerasyonda aksonun periferden geriye doğru canlılığını kaybetmesi sürecine dying back fenomeni adı verilir.",
+     "maskedTerm": "dying back",
+     "hint": "Sinir uzantısının uç kısımdan geriye doğru çekilerek ölmesini tanımlayan yabancı terim"
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Periferik sinirde fokal mekanik kesi veya ağır aksonal hasar meydana gelir.",
+      "2. Yaralanma yerinin distalinde kalan akson silindiri elektriksel ve yapısal bütünlüğünü kaybeder.",
+      "3. Aksonu saran miyelin kılıf küçük parçalara ve miyelin globüllerine ayrışır.",
+      "4. Dokuya göç eden makrofajlar hücresel artıkları fagositoz yoluyla temizler.",
+      "5. Boşalan endonöral tüp içinde Schwann hücreleri sıralanarak rejenerasyon hattı oluşturur."
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Segmental demiyelinizasyon ile distal aksonopati arasındaki temel patolojik fark ve kas atrofisi ilişkisi nasıldır?",
+     "answer": "Segmental demiyelinizasyonda primer hasar Schwann hücresindedir, akson sağlam kaldığı için kas denerve olmaz ve kas atrofisi görülmez; aksonopatide ise akson parçalandığı için kasta denervasyon ve belirgin kas atrofisi gelişir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 4,
+   "bolum": "1.4",
+   "pdfSayfalari": [
+    12,
+    12
+   ],
+   "sourcePdf": {
+    "fileName": "POLİNÖROPATİLER.pdf",
+    "primaryPage": 12,
+    "startPage": 12,
+    "endPage": 12
+   },
+   "title": "Travmatik Sinir Yaralanmaları: Seddon ve Sunderland Sınıflaması",
+   "subtitle": "Nöropraksi, aksonotmezis ve nörotmezis ayrımı",
+   "badge": "Sınıflama",
+   "synthesisNarrative": "Travmatik periferik sinir yaralanmaları Seddon ve Sunderland sınıflamalarına göre hasarın derinliği ve bağ dokusu kılıflarının durumuna göre değerlendirilir:\n\n- **Nöropraksi (Sunderland Derece 1):** En hafif travmatik lezyondur. Akson bütünlüğü tamdır; fokal miyelin hasarına bağlı geçici ileti bloğu mevcuttur. Wallerian dejenerasyon gelişmez, kas denerve olmaz. Haftalar içinde spontan ve tam düzelme görülür.\n- **Aksonotmezis (Sunderland Derece 2-4):** Akson bütünlüğü kopar ve yaralanmanın distalinde Wallerian dejenerasyon meydana gelir. Ancak endonöryum, perinöryum ve epinöryum bağ dokusu kılıfları kısmen veya tamamen sağlamdır. Rejenerasyon endonöral tüp kılavuzluğunda günde yaklaşık 1 mm ilerler; iyileşme yavaş fakat mümkündür.\n- **Nörotmezis (Sunderland Derece 5):** Sinirin en ağır yaralanmasıdır. Akson ile birlikte endonöral tüp, perinöryum ve epinöryum dahil tüm kılıflar tamamen kopmuştur (tam anatomik kesi). Cerrahi onarım olmaksızın spontan iyileşme gerçekleşemez; sıklıkla ağrılı nöroma gelişir.\n\n> [!NOTE]\n> Aksonotmeziste bağ dokusu kılıflarının korunması, rejenere olan akson liflerinin doğru hedef kas liflerine yönelmesini sağlar.",
+   "content": "Seddon sınıflaması nöropraksi (miyelin hasarı), aksonotmezis (akson kaybı, bağ dokusu sağlam) ve nörotmezis (akson ve tüm kılıflar kopuk) derecelerinden oluşur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Seddon sınıflamasına göre akson ile birlikte endonöral tüp, perinöryum ve epinöryum bağ dokusu kılıflarının tamamen koptuğu en ağır sinir yaralanması derecesi hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Nörotmezis",
+       "isCorrect": true,
+       "explanation": "Nörotmezis tüm bağ dokusu kılıflarının ve aksonun tam kesisiyle giden en ağır tablodur. Cerrahi rekonstrüksiyon yapılmadığı takdirde kendiliğinden fonksiyonel iyileşme imkansızdır."
+      },
+      {
+       "key": "B",
+       "text": "Nöropraksi",
+       "isCorrect": false,
+       "explanation": "Nöropraksi akson ve kılıfların sağlam kaldığı en hafif yaralanma türüdür. Yalnızca fokal miyelin hasarına bağlı geçici ileti bloğu vardır ve haftalar içinde kendiliğinden düzelir."
+      },
+      {
+       "key": "C",
+       "text": "Aksonotmezis",
+       "isCorrect": false,
+       "explanation": "Aksonotmeziste akson lifi kopmuştur ancak çevreleyen endonöral kılıflar korunmuştur. Korunan bu bağ dokusu tüpleri sayesinde aksonlar hedef dokuya doğru rejenere olabilir."
+      },
+      {
+       "key": "D",
+       "text": "Segmental demiyelinizasyon",
+       "isCorrect": false,
+       "explanation": "Segmental demiyelinizasyon otoimmün kökenli miyelin kılıf hasarıdır. Akson yapısı korunduğu için remiyelinizasyon süreciyle tam fonksiyonel düzelme sağlanır."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Yaralanma Türü",
+      "Akson Durumu",
+      "Bağ Dokusu Kılıfları",
+      "Wallerian Dejenerasyonu"
+     ],
+     "tableRows": [
+      [
+       "Nöropraksi",
+       "Sağlam (geçici blok)",
+       "Tamamen sağlam",
+       {
+        "text": "Gelişmez",
+        "isMasked": true,
+        "hint": "Lif kopmadığı için bu distal yıkım süreci oluşmaz"
+       }
+      ],
+      [
+       "Aksonotmezis",
+       {
+        "text": "Kopmuş ve parçalanmış",
+        "isMasked": true,
+        "hint": "İç iletim telinin devamlılığı bozulmuştur"
+       },
+       "Sağlam veya kısmi korunmuş",
+       "Gelişir"
+      ],
+      [
+       "Nörotmezis",
+       "Kopmuş (tam kesi)",
+       {
+        "text": "Tümüyle kopmuş ve parçalanmış",
+        "isMasked": true,
+        "hint": "Endonöryum, perinöryum ve epinöryum kılıflarının tümü ayrılmıştır"
+       },
+       "Gelişir"
+      ]
+     ]
+    },
+    {
+     "type": "venn_grid",
+     "labelA": "Nöropraksi",
+     "labelB": "Aksonotmezis",
+     "items": [
+      {
+       "criterion": "Akson bütünlüğü korunmuştur ve yalnızca geçici ileti bloğu mevcuttur",
+       "correct": "A"
+      },
+      {
+       "criterion": "Akson kopmuştur ve distalinde Wallerian dejenerasyon gelişir",
+       "correct": "B"
+      },
+      {
+       "criterion": "Periferik sinir travması sonrası gelişen ve cerrahi gerektirmeden iyileşebilen lezyondur",
+       "correct": "both"
+      },
+      {
+       "criterion": "Endonöryum, perinöryum ve epinöryumun tümüyle koptuğu tam anatomik kesidir",
+       "correct": "neither"
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Seddon sınıflamasında akson bütünlüğü kopsa dahi endonöral tüp ve kılıfların sağlam kalarak rejenerasyona kılavuzluk ettiği sinir hasarına aksonotmezis adı verilir.",
+     "maskedTerm": "aksonotmezis",
+     "hint": "İletim teli ayrılsa da kılıfların sağlam kaldığı orta dereceli Seddon derecesi"
+    },
+    {
+     "type": "active_recall",
+     "question": "Nöroprakside cerrahi müdahaleye gerek duyulmamasının histopatolojik nedeni nedir?",
+     "answer": "Nöroprakside akson silindiri ve bağ dokusu kılıfları tamamen sağlamdır; hasar yalnızca geçici miyelin ileti bloğundan ibaret olduğu için remiyelinizasyonla haftalar içinde kendiliğinden tam iyileşir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 5,
+   "bolum": "1.5",
+   "pdfSayfalari": [
+    1,
+    12
+   ],
+   "sourcePdf": {
+    "fileName": "POLİNÖROPATİLER.pdf",
+    "primaryPage": 1,
+    "startPage": 1,
+    "endPage": 12
+   },
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Anatomi, İletim Fizyolojisi ve Sinir Hasar Paternleri",
+   "subtitle": "Periferik sinir birimleri, lif tipleri, membran potansiyeli ve yaralanma mekanizmaları tekrarı",
+   "badge": "Bölüm Tekrarı",
+   "isCheckpoint": true,
+   "checkpointNumber": 1,
+   "synthesisNarrative": "Bu sayfada periferik sinir sistemi anatomisi, iletim fizyolojisi, lif sınıflaması ve temel sinir hasar modellerini pekiştiriyoruz.\n\n- **Anatomi ve Birimler:** Alfa motor nöronlar ön boynuzdan çıkıp ön kökle kasa ulaşırken, duyusal nöronlar arka kök ganglionunda yerleşir ve arka kökle omuriliğe girer. 31 çift spinal sinir pleksusları oluşturur.\n- **Fizyoloji ve Lifler:** Dinlenim potansiyeli -70 mV olup sodyum-potasyum pompası ile sürdürülür; aksiyon potansiyelinde +30 mV değerine ulaşılır. Tip A lifleri en kalın miyelinli ve en hızlı (10-70 m/sn), Tip B ince miyelinli otonomik (7-15 m/sn), Tip C ise miyelinsiz ve en yavaş (< 2 m/sn) liflerdir.\n- **Hasar Mekanizmaları:** Nöronopatide hücre gövdesi ölür ve prognoz en kötüdür. Demiyelinizasyonda Schwann hücresi etkilenir, kas atrofisi olmaz. Aksonopatide dying back görülür. Seddon sınıflaması nöropraksi, aksonotmezis ve nörotmezis basamaklarını bağ dokusu kılıflarının durumuna göre tanımlar.\n\n> [!IMPORTANT]\n> Bu temeller sonraki slaytlarda işlenecek polinöropati kliniği ve muayene bulgularının mekanik zeminini kurar.",
+   "content": "Anatomi, aksiyon potansiyeli fizyolojisi, lif tipleri, nöronopati-aksonopati-demiyelinizasyon ve Seddon travma sınıflaması tekrarı.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Periferik sinir patolojileri düşünüldüğünde, Schwann hücresinin etkilendiği, akson silindirinin sağlam kaldığı ve kasta atrofi gelişmediği hasar tipi hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Segmental demiyelinizasyon",
+       "isCorrect": true,
+       "explanation": "Segmental demiyelinizasyonda primer miyelin kılıf hasarı vardır ve akson yapısı korunur. Kas denerve olmadığı için kas erimesi görülmez ve remiyelinizasyonla iyileşir."
+      },
+      {
+       "key": "B",
+       "text": "Distal aksonal dejenerasyon",
+       "isCorrect": false,
+       "explanation": "Distal aksonopatide akson lifi parçalanır ve hedef kas denerve olur. Denervasyon sonucunda kasta belirgin atrofi ve güçsüzlük ortaya çıkar."
+      },
+      {
+       "key": "C",
+       "text": "Ön boynuz nöronopatisi",
+       "isCorrect": false,
+       "explanation": "Nöronopatide motor nöron gövdesi tamamen ölür. Aksonun tamamı dejenere olur ve innerve edilen kas gruplarında ağır atrofi gelişir."
+      },
+      {
+       "key": "D",
+       "text": "Travmatik nörotmezis",
+       "isCorrect": false,
+       "explanation": "Nörotmezis tüm akson ve bağ dokusu kılıflarının koptuğu ağır anatomik hasardır. Kas hızla denervasyona uğrar ve kalıcı atrofi gelişir."
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Hücre Gövdesi Hasarı (Nöronopati)",
+     "rightCategory": "Miyelin Kılıf Hasarı (Miyelinopati)",
+     "cards": [
+      {
+       "text": "Ön boynuz motor nöronlarının doğrudan ölümüyle seyreder",
+       "category": "left"
+      },
+      {
+       "text": "Schwann hücre hasarı vardır ancak akson lifi korunur",
+       "category": "right"
+      },
+      {
+       "text": "Kas inervasyonu ancak çevre sağlam akson filizlenmesiyle sağlanabilir",
+       "category": "left"
+      },
+      {
+       "text": "Kas denerve olmadığı için kas erimesi (atrofi) gelişmez",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Periferik Sinir Hasarları ve Travmatik Sınıflama",
+     "question": "Sinir hasar paternleri ve Seddon sınıflaması ile ilgili olarak aşağıda verilenlerden hangisi yanlıştır?",
+     "items": [
+      {
+       "text": "Wallerian dejenerasyonunda kesi distalindeki akson parçalanır ve makrofajlarca temizlenir.",
+       "isLie": false,
+       "explanation": "Aksonal kesi sonrası distal segmentte gelişen fagositer temizlenme süreci Wallerian dejenerasyonudur."
+      },
+      {
+       "text": "Nöroprakside akson kopması olmadığı için haftalar içinde tam iyileşme beklenir.",
+       "isLie": false,
+       "explanation": "Nöroprakside akson sürekliliği tamdır ve ileti bloğu miyelin onarımıyla kendiliğinden düzelir."
+      },
+      {
+       "text": "Nörotmeziste bağ dokusu kılıfları sağlam kaldığından cerrahiye gerek kalmadan akson rejenere olur.",
+       "isLie": true,
+       "explanation": "Nörotmeziste endonöryum, perinöryum ve epinöryum dahil tüm kılıflar kopmuştur; cerrahi onarım olmadan iyileşemez."
+      },
+      {
+       "text": "Distal aksonopatide erime periferden geriye doğru dying back şeklinde ilerler.",
+       "isLie": false,
+       "explanation": "Metabolik yetersizlik sonucu en distal akson uçlarından başlayan geriye doğru dejenerasyon tablosudur."
+      }
+     ]
+    },
+    {
+     "type": "feature_bidding",
+     "optionA": "Tip A Sinir Lifleri",
+     "optionB": "Tip C Sinir Lifleri",
+     "rounds": [
+      {
+       "feature": "2-20 mikrometre çapında olup kalın miyelin kılıfı taşır",
+       "correct": "A"
+      },
+      {
+       "feature": "Miyelinsiz olup iletim hızı saniyede iki metrenin altındadır",
+       "correct": "B"
+      },
+      {
+       "feature": "Vibrasyon ve propriosepsiyon duyularını omuriliğe iletir",
+       "correct": "A"
+      },
+      {
+       "feature": "Künt ağrı ve sıcaklık duyusunu yavaş iletimle taşır",
+       "correct": "B"
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Seddon sınıflamasındaki üç hasar tipini bağ dokusu kılıflarının durumuna göre hafiften ağıra özetleyiniz.",
+     "answer": "Nöroprakside akson ve kılıflar sağlamdır; aksonotmeziste akson kopuk fakat endonöryum ve diğer kılıflar korunmuştur; nörotmeziste ise aksonla birlikte endonöryum, perinöryum ve epinöryum tamamen kopmuştur."
+    }
+   ]
+  },
+  {
+   "slideNumber": 6,
+   "bolum": "2.1",
+   "pdfSayfalari": [
+    13,
+    13
+   ],
+   "sourcePdf": {
+    "fileName": "POLİNÖROPATİLER.pdf",
+    "primaryPage": 13,
+    "startPage": 13,
+    "endPage": 13
+   },
+   "title": "Polinöropati Etiyolojik Sınıflaması ve Mononöropati Multipleks",
+   "subtitle": "Nöronopati, aksonopati, miyelinopati hastalık örnekleri ve vaskülitik tutulum",
+   "badge": "Etiyoloji",
+   "synthesisNarrative": "Polinöropatiler patolojik tutulum yerine göre üç ana sınıfta değerlendirilirken, fokal sinir hasarlarının dağılımı da ayırıcı tanıda yol gösterir:\n\n- **Nöronopati Örnekleri:** Hücre gövdesinin primer tutulumudur. Motor nöron hastalığı ve poliomyelit motor nöron gövdelerini etkilerken; varisella zoster virüsü arka kök ganglionu duyusal nöronlarını tutar.\n- **Aksonopati Örnekleri:** Toksik nedenler (örneğin kemoterapötik vinkristin), metabolik bozukluklar (diyabetik polinöropati) ve nutrisyonel yetersizlikler en sık aksonal polinöropati nedenleridir.\n- **Miyelinopati Örnekleri:** Akut inflamatuvar demiyelinizan polinöropati (AIDP - Guillain-Barré sendromu) ve kronik inflamatuvar demiyelinizan polinöropati (CIDP) otoimmün miyelin kılıf hasarı prototipleridir.\n- **Mononöropati Multipleks:** Farklı zamanlarda, asimetrik olarak birden çok periferik sinirin rastgele ve ardışık biçimde tutulmasıdır. Tipik olarak nekrotizan vaskülitlere bağlı sinir enfarktları sonucu gelişir (Poliarteritis Nodoza [PAN] ve Churg-Strauss sendromu).\n\n> [!IMPORTANT]\n> Asimetrik, ağrılı ve birden fazla siniri yamalı tutan bir periferik nöropatide ilk olarak PAN ve Churg-Strauss gibi nekrotizan vaskülitler akla gelmelidir.",
+   "content": "Nöronopatiler (poliomyelit, herpes zoster), aksonopatiler (toksik, metabolik, nutrisyonel), miyelinopatiler (AIDP, CIDP) ve vaskülitik mononöropati multipleks (PAN).",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Ayrı zamanlarda, asimetrik olarak birden çok periferik sinirin ardışık tutulduğu (mononöropati multipleks) tablosunun en tipik etiyolojik nedeni hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Nekrotizan vaskülitler (Poliarteritis Nodoza, Churg-Strauss)",
+       "isCorrect": true,
+       "explanation": "Nekrotizan vaskülitler vasa nervorum damarlarını tıkayarak sinir enfarktlarına yol açar. Farklı sinirler asimetrik ve yamalı olarak tutulur."
+      },
+      {
+       "key": "B",
+       "text": "Varisella zoster virüs ganglioniti",
+       "isCorrect": false,
+       "explanation": "Varisella zoster tek bir arka kök ganglionunu tutan dermatomla sınırlı nöronopatidir. Yaygın ve çok odaklı mononöropati multipleks tablosu oluşturmaz."
+      },
+      {
+       "key": "C",
+       "text": "Guillain-Barré sendromu (AIDP)",
+       "isCorrect": false,
+       "explanation": "Guillain-Barré sendromu simetrik, asendan ve yaygın demiyelinizan bir polinöropatidir. Asimetrik çoklu sinir enfarktları ile seyretmez."
+      },
+      {
+       "key": "D",
+       "text": "Nutrisyonel vitamin yetersizliği",
+       "isCorrect": false,
+       "explanation": "Nutrisyonel yetersizlikler simetrik ve uzunluğa bağımlı distal aksonopatiye yol açar. Fokal ve asimetrik vaskülitik lezyonlar üretmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Farklı zamanlarda asimetrik olarak birden çok periferik sinirin multipl odaklar halinde tutulmasıyla seyreden vaskülitik tabloya mononöropati multipleks adı verilir.",
+     "maskedTerm": "mononöropati multipleks",
+     "hint": "Asimetrik ve çok odaklı periferik sinir tutulum paterni"
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Nöronopati / Miyelinopati",
+     "rightCategory": "Aksonopati / Vaskülit",
+     "cards": [
+      {
+       "text": "Poliomyelit ve Varisella Zoster enfeksiyonu",
+       "category": "left"
+      },
+      {
+       "text": "Toksik, metabolik ve nutrisyonel polinöropatiler",
+       "category": "right"
+      },
+      {
+       "text": "Akut inflamatuvar demiyelinizan polinöropati (AIDP)",
+       "category": "left"
+      },
+      {
+       "text": "Poliarteritis Nodoza ve Churg-Strauss mononöropatisi",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Polinöropati Etiyolojisi ve Patolojik Eşleşmeler",
+     "question": "Polinöropati etiyolojisi ve klinik tutulum tipleri ile ilgili verilenlerden hangisi yanlıştır?",
+     "items": [
+      {
+       "text": "Motor nöron hastalığı ve poliomyelit sinir hücre gövdesini tutan nöronopatilerdir.",
+       "isLie": false,
+       "explanation": "Her iki hastalık da omurilik ön boynuzundaki motor nöron gövdelerinin primer hasarıdır."
+      },
+      {
+       "text": "Akut inflamatuvar demiyelinizan polinöropati (Guillain-Barré) primer miyelinopati örneğidir.",
+       "isLie": false,
+       "explanation": "Guillain-Barré sendromunda primer immün hasar Schwann hücresi ve miyelin kılıfına yöneliktir."
+      },
+      {
+       "text": "Mononöropati multipleks simetrik ve uzunluğa bağımlı distal aksonal erimeyle başlar.",
+       "isLie": true,
+       "explanation": "Mononöropati multipleks simetrik değil, farklı zamanlarda ve asimetrik olarak birden fazla sinirin bağımsız tutulmasıdır."
+      },
+      {
+       "text": "Vinkristin kemoterapisi ve nutrisyonel eksiklikler distal aksonopati tablosuna yol açar.",
+       "isLie": false,
+       "explanation": "Vinkristin aksonal mikrotübül transportunu bozarak toksik distal aksonopati oluşturur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Mononöropati multipleks tablosunu klasik simetrik polinöropatilerden ayıran temel klinik özellik ve altta yatan vaskülitler nelerdir?",
+     "answer": "Mononöropati multipleks simetrik tutulum yerine farklı sinirlerin farklı zamanlarda asimetrik ve yamalı tutulmasıyla karakterizedir; en sık Poliarteritis Nodoza (PAN) ve Churg-Strauss gibi nekrotizan vaskülitlerde görülür."
+    }
+   ]
+  },
+  {
+   "slideNumber": 7,
+   "bolum": "2.2",
+   "pdfSayfalari": [
+    14,
+    15
+   ],
+   "sourcePdf": {
+    "fileName": "POLİNÖROPATİLER.pdf",
+    "primaryPage": 14,
+    "startPage": 14,
+    "endPage": 15
+   },
+   "title": "Duyu Bozuklukları: Negatif ve Pozitif Duyusal Fenomenler",
+   "subtitle": "Lif çapına göre duyu kaybı, parestezi, dizestezi ve kozalji",
+   "badge": "Semptomatoloji",
+   "synthesisNarrative": "Polinöropatilerde duyusal belirtiler negatif fenomenler (duyu kaybı) ve pozitif fenomenler (anormal uyarım) olarak ikiye ayrılır:\n\n- **Negatif Duyusal Fenomenler:**\n  * **Kalın Miyelinli Lif Hasarı:** Dokunma, vibrasyon ve eklem pozisyon (propriosepsiyon) duyusu kaybolur. Hasta el ve ayaklarında \"keçelenme, uyuşma\" hisseder. Görsel kontrolün azaldığı ortamlarda yürüyüş dengesizliği (özellikle gece sendeleme) gelişir.\n  * **İnce Miyelinsiz Lif Hasarı:** Ağrı ve ısı algısı kaybolur. Hasta ağrısız yanıklar, fark edilmeyen batmalar ve travmatik doku yaralanmalarına maruz kalır.\n- **Pozitif Duyusal Fenomenler:**\n  * **Kalın Lif Kaynaklı:** Distal paresteziler, karıncalanma ve iğnelenme hissi oluşur.\n  * **İnce Lif Kaynaklı:** Ağrılı fenomenler ön plandadır. Dizestezi (dokunmanın ağrılı ve rahatsız edici algılanması), hiperaljezi (ağrılı uyarana aşırı şiddetli yanıt) görülür.\n  * **Kozalji:** Sinir travması sonrasında o bölgede ortaya çıkan spontan şiddetli yanma hissi ve mekanik temaslara aşırı duyarlılıktır.\n\n> [!NOTE]\n> Ağrılı nöropatilerin en sık iki nedeni diyabetik polinöropati ve kriptojenik duyusal polinöropatidir.",
+   "content": "Negatif fenomenler duyu kaybı (keçelenme, ağrısız yanık), pozitif fenomenler ise anormal uyarımdır (parestezi, dizestezi, hiperaljezi, kozalji).",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Periferik sinir travması sonrasında yaralanan bölgede spontan şiddetli yanıcı ağrı ve mekanik temaslara aşırı duyarlılıkla seyreden pozitif duyusal tablo hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Kozalji",
+       "isCorrect": true,
+       "explanation": "Kozalji sinir travması sonrasında gelişen spontan yanıcı ağrı ve dokunmaya aşırı duyarlılık tablosudur. İnce liflerin ve sempatik yolların uyarımıyla ilişkilidir."
+      },
+      {
+       "key": "B",
+       "text": "Distal parestezi",
+       "isCorrect": false,
+       "explanation": "Parestezi ağrısız uyuşma, iğnelenme veya karıncalanma hissidir. Travma sonrası ortaya çıkan şiddetli spontan yanıcı ağrıyı tanımlamaz."
+      },
+      {
+       "key": "C",
+       "text": "Negatif duyu kaybı",
+       "isCorrect": false,
+       "explanation": "Negatif fenomenler duyu hissinin tamamen veya kısmen azalmasıdır. Spontan ağrılı duyusal deşarjlar pozitif fenomen sınıfına girer."
+      },
+      {
+       "key": "D",
+       "text": "İzole nöronopati",
+       "isCorrect": false,
+       "explanation": "Nöronopati sinir hücre gövdesinin yapısal harabiyetidir. Travma sonrası fokal dokunma hassasiyetini ve yanıcı ağrıyı ifade eden semptom değildir."
+      }
+     ]
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Negatif Duyusal Fenomenler",
+     "rightTitle": "Pozitif Duyusal Fenomenler",
+     "leftPoints": [
+      "Duyusal liflerin fonksiyon kaybı sonucu hissizlik ve duyarsızlık gelişir.",
+      "Kalın lif hasarında el ve ayaklarda keçelenme ile gece dengesizliği olur.",
+      "İnce lif hasarında sıcak cisme temasla ağrısız yanıklar ortaya çıkar."
+     ],
+     "rightPoints": [
+      "Spontan ektopik elektriksel deşarjlar sonucu anormal algılar doğar.",
+      "Kalın lif uyarımında parmak uçlarında karıncalanma ve parestezi gelişir.",
+      "İnce lif uyarımında dizestezi, hiperaljezi ve kozalji tarzı yanma görülür."
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Kalın Miyelinli Lif Bulgusu",
+     "rightCategory": "İnce Miyelinsiz Lif Bulgusu",
+     "cards": [
+      {
+       "text": "Eklem pozisyon duyusu kaybı ve gece yürüyüş dengesizliği",
+       "category": "left"
+      },
+      {
+       "text": "Ağrı ve ısı algısının kaybı sonucu oluşan ağrısız yanıklar",
+       "category": "right"
+      },
+      {
+       "text": "Distal parestezi ve el ayak uçlarında keçelenme hissi",
+       "category": "left"
+      },
+      {
+       "text": "Dizestezi, hiperaljezi ve travma sonrası kozalji yanması",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Ağrısız hafif bir dokunma uyarısının hasta tarafından şiddetli ağrılı ve rahatsız edici algılanması durumuna dizestezi adı verilir.",
+     "maskedTerm": "dizestezi",
+     "hint": "Normal dokunmanın hoşnutsuzluk verici ağrıya dönüştüğü pozitif duyu bozukluğu"
+    },
+    {
+     "type": "active_recall",
+     "question": "Klinikte ağrılı pozitif duyusal fenomenlerle seyreden nöropatiler arasında en sık görülen iki tablo hangisidir?",
+     "answer": "Ağrılı nöropatilerde en sık iki neden diyabetik polinöropati ve kriptojenik duyusal polinöropatidir; ince lif tutulumu nedeniyle dizestezi ve yanıcı ağrılar ön plandadır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 8,
+   "bolum": "2.3",
+   "pdfSayfalari": [
+    16,
+    17
+   ],
+   "sourcePdf": {
+    "fileName": "POLİNÖROPATİLER.pdf",
+    "primaryPage": 16,
+    "startPage": 16,
+    "endPage": 17
+   },
+   "title": "Motor ve Otonomik Bozukluklar",
+   "subtitle": "Fasikülasyon, kramp, otonom tutulum ve amiloid nöropati",
+   "badge": "Klinik Bulgular",
+   "synthesisNarrative": "Periferik sinir tutulumunda motor ve otonomik liflerin harabiyeti belirgin fonksiyon kayıplarına yol açar:\n\n- **Motor Belirtiler:**\n  * **Kas Güçsüzlüğü:** Genellikle simetrik distal kaslarda (ayak ve parmak ekstansörlerinde) başlar; Guillain-Barré gibi inflamatuvar tablolarda ise proksimal kas tutulumu ön plandadır.\n  * **Kramp:** Spontan gelişen, ağrılı ve istemsiz tetanik kas kasılmalarıdır.\n  * **Fasikülasyon:** Bir motor ünitenin spontan deşarjı sonucu deri altında gözlenen solucanvari ince seğirmelerdir; soğuk, yorgunluk veya kasa mekanik vurulmasıyla (perküsyon) belirginleşir.\n- **Otonomik Belirtiler:**\n  * **Kardiyovasküler:** Ortostatik hipotansiyona bağlı ayağa kalkınca baş dönmesi ve baygınlık hissi.\n  * **Terleme:** Anhidroz (azalmış terleme) veya distal hiperhidroz ile sıcak intoleransı.\n  * **Visseral Sistemler:** Nörojenik mesane (idrar retansiyonu veya kaçırma), bağırsak motilite bozuklukları (diyare/konstipasyon) ve erektil disfonksiyon.\n\n> [!IMPORTANT]\n> Ağır otonomik disfonksiyon (ortostatik hipotansiyon, gastrointestinal ve mesane bozukluğu) ile seyreden bir polinöropatide ilk akla gelmesi gereken sistemik hastalık amiloid nöropatidir.",
+   "content": "Motor belirtiler güçsüzlük, kramp ve fasikülasyondur. Otonom belirtiler ortostatik hipotansiyon, terleme anormallikleri ve mesane-barsak bozukluğudur; amiloid nöropati ilk düşünülmelidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Polinöropati tablosuna belirgin ortostatik hipotansiyon, sıcak intoleransı, mesane ve bağırsak fonksiyon bozukluğu gibi otonomik semptomlar eşlik ettiğinde ilk akla gelmesi gereken hastalık hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Amiloid nöropati",
+       "isCorrect": true,
+       "explanation": "Amiloid nöropatide amiloid birikimi küçük miyelinsiz otonomik lifleri erken dönemde harap eder. Bu nedenle ağır ortostatik hipotansiyon ve visseral tutulumla seyreder."
+      },
+      {
+       "key": "B",
+       "text": "Saf motor nöropraksi",
+       "isCorrect": false,
+       "explanation": "Nöropraksi mekanik travmaya bağlı geçici fokal ileti bloğudur. Sistemik otonomik lifleri veya mesane-bağırsak fonksiyonlarını etkilemez."
+      },
+      {
+       "key": "C",
+       "text": "İzole Tip A lif hasarı",
+       "isCorrect": false,
+       "explanation": "Tip A lifleri somatik motor ve proprioseptif iletimi yürütür. Otonomik semptomlar ise Tip B ve Tip C liflerinin hasarlanmasıyla ortaya çıkar."
+      },
+      {
+       "key": "D",
+       "text": "Akut spinal koksigeal lezyon",
+       "isCorrect": false,
+       "explanation": "Koksigeal segment izole anokoksigeal duyu sahasını inerve eder. Yaygın polinöropati ve yaygın ortostatik otonomik yetmezlik tablosu oluşturmaz."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Periferik Nöropatide Motor ve Otonom Belirtiler",
+     "question": "Motor ve otonomik sinir tutulum bulguları hakkında verilen önermelerden hangisi yanlıştır?",
+     "items": [
+      {
+       "text": "Fasikülasyonlar tek bir motor ünitenin spontan deşarjı olup perküsyonla uyarılabilir.",
+       "isLie": false,
+       "explanation": "Kasa refleks çekiciyle hafifçe vurulduğunda mekanik irritasyonla fasikülasyonlar açığa çıkar."
+      },
+      {
+       "text": "Otonom lif hasarında ortostatik baş dönmesi ve sıcak intoleransı ortaya çıkabilir.",
+       "isLie": false,
+       "explanation": "Sempatik vazomotor ve terleme innervasyonu bozulduğunda kan basıncı regülasyonu aksar."
+      },
+      {
+       "text": "Otonomik yetmezlik semptomları gösteren polinöropatide ilk olarak amiloid nöropati düşünülür.",
+       "isLie": false,
+       "explanation": "Amiloidoz otonomik lifleri en sık ve en erken tutan sistemik polinöropati nedenidir."
+      },
+      {
+       "text": "Fasikülasyonlar kas kılıfının tamamen kopması sonucu yalnız nörotmeziste görülür.",
+       "isLie": true,
+       "explanation": "Fasikülasyon kılıf kopmasına özgü olmayıp motor nöron irritasyonunda ve denervasyon sürecinde görülür."
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Motor Lif Bozukluğu",
+     "rightCategory": "Otonom Lif Bozukluğu",
+     "cards": [
+      {
+       "text": "Ekstremite kas güçsüzlüğü ve istemsiz kramplar",
+       "category": "left"
+      },
+      {
+       "text": "Ortostatik hipotansiyon ve ayağa kalkınca baygınlık",
+       "category": "right"
+      },
+      {
+       "text": "Deri altında solucanvari gözlenen fasikülasyonlar",
+       "category": "left"
+      },
+      {
+       "text": "Azalmış terleme ve mesane-barsak boşaltım bozukluğu",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Polinöropati hastasında ortostatik baş dönmesi, terleme bozuklukları ve mesane disfonksiyonu saptandığında ilk akla amiloid nöropati gelmelidir.",
+     "maskedTerm": "amiloid nöropati",
+     "hint": "Visseral yetmezlikle giden fibril çökelme hastalığı tablosu"
+    },
+    {
+     "type": "active_recall",
+     "question": "Motor muayenede görülen fasikülasyon nedir ve hangi manevralarla belirginleşir?",
+     "answer": "Fasikülasyon, tek bir motor ünitenin spontan deşarjı sonucu deri altında gözlenen istemsiz kas seğirmesidir; kas üzerine parmakla vurulmasıyla (perküsyon) veya egzersiz sonrasında belirginleşir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 9,
+   "bolum": "2.4",
+   "pdfSayfalari": [
+    18,
+    18
+   ],
+   "sourcePdf": {
+    "fileName": "POLİNÖROPATİLER.pdf",
+    "primaryPage": 18,
+    "startPage": 18,
+    "endPage": 18
+   },
+   "title": "Polinöropatilerde Duyu Muayenesi ve Eldiven-Çorap Patern",
+   "subtitle": "Muayene yöntemleri, lif eşleşmesi ve simetrik distal dağılım",
+   "badge": "Muayene",
+   "synthesisNarrative": "Polinöropatilerde duyu muayenesi tutulan sinir liflerinin kalınlığına ve fonksiyonel modalitelerine göre sistematik olarak yapılır:\n\n- **Kalın Miyelinli Lif Muayenesi:**\n  * **Yüzeyel Dokunma:** Pamuk parçası deriye hafifçe temas ettirilerek değerlendirilir.\n  * **İki Nokta Ayrımı:** Kumpas yardımıyla parmak uçlarında iki temas noktasının ayrımı test edilir.\n  * **Vibrasyon Duyusu:** 128 Hz diyapazon kemik çıkıntılara (ayak başparmağı interfalangeal eklemi, medial malleol) konularak titreşim algısı ölçülür.\n  * **Eklem Pozisyon Algısı (Propriosepsiyon):** Parmakların lateral kenarlarından tutulup yukarı veya aşağı hareket ettirilmesiyle yön algısı sınanır.\n- **İnce Miyelinli ve Miyelinsiz Lif Muayenesi:**\n  * **Ağrı Algılama:** İğne ucu ile deride batma hissi değerlendirilir.\n  * **Isı Algılama:** Sıcak ve soğuk tüpler deriye temas ettirilerek ayrım test edilir.\n- **Eldiven-Çorap Tarzı Tutulum:** Aksonal polinöropatilerde en uzun aksonlar metabolik tükenmeye ilk uğradığı için duyu kaybı ayak parmak uçlarından başlar; simetrik olarak dize yükseldiğinde ellerde de başlar.\n\n> [!IMPORTANT]\n> Polinöropatide duyu kaybının simetrik ve uzunluğa bağımlı olması (eldiven-çorap dağılımı), tek bir sinir veya kök lezyonundan ayıran en temel klinik özelliktir.",
+   "content": "Kalın lifler dokunma, iki nokta ayrımı, 128 Hz diyapazonla vibrasyon ve propriosepsiyonla sınanır. İnce lifler ağrı ve ısıyı iletir. Duyu kaybı simetrik eldiven-çorap tarzındadır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Polinöropatide 128 Hz diyapazon kullanılarak kemik çıkıntılar üzerinde değerlendirilen ve kalın miyelinli liflerle taşınan duyu modalitesi hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Vibrasyon duyusu",
+       "isCorrect": true,
+       "explanation": "Vibrasyon duyusu 128 Hz diyapazonla kemik çıkıntılarda test edilir. Kalın miyelinli Tip A lifleri ve omurilik arka kordonu üzerinden taşınır."
+      },
+      {
+       "key": "B",
+       "text": "Termal ısı algısı",
+       "isCorrect": false,
+       "explanation": "Isı algısı sıcak ve soğuk tüpleriyle deriye temas ettirilerek test edilir. İnce miyelinli ve Tip C lifleriyle taşınan bir modalitedir."
+      },
+      {
+       "key": "C",
+       "text": "İğne batma ağrısı algısı",
+       "isCorrect": false,
+       "explanation": "Ağrı duyusu iğne ucu ile deriye batırılarak değerlendirilir. İnce miyelinsiz lifler ve spinotalamik traktus aracılığıyla iletilir."
+      },
+      {
+       "key": "D",
+       "text": "Otonomik terleme yanıtı",
+       "isCorrect": false,
+       "explanation": "Terleme otonom sempatik liflerin fonksiyonudur ve diyapazonla test edilmez. Klinikte iyot-nişasta testi gibi yöntemlerle incelenir."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Muayene Modalitesi",
+      "Kullanılan Araç",
+      "İlgili Lif Tipi",
+      "Klinik Özellik"
+     ],
+     "tableRows": [
+      [
+       "Vibrasyon duyusu",
+       "128 Hz diyapazon",
+       {
+        "text": "Kalın miyelinli Tip A",
+        "isMasked": true,
+        "hint": "Titreşim taşıyan geniş çaplı elit grup"
+       },
+       "Kemik çıkıntılarda test edilir"
+      ],
+      [
+       "Ağrı algısı",
+       "İğne ucu",
+       {
+        "text": "İnce miyelinli ve miyelinsiz",
+        "isMasked": true,
+        "hint": "Termal ve nosiseptif uyarıları aktaran yavaş elemanlar"
+       },
+       "Batma hissinin algılanması"
+      ],
+      [
+       "Eklem pozisyonu",
+       "Pasif parmak hareketi",
+       "Kalın miyelinli Tip A",
+       {
+        "text": "Propriosepsiyon algısı",
+        "isMasked": true,
+        "hint": "Eklemin uzaydaki konumunu bilme yetisi"
+       }
+      ],
+      [
+       "Isı algılama",
+       {
+        "text": "Sıcak ve soğuk tüpleri",
+        "isMasked": true,
+        "hint": "Termal ayrımı test eden muayene aracı"
+       },
+       "İnce miyelinli ve Tip C",
+       "Sıcaklık farkını hissetme"
+      ]
+     ]
+    },
+    {
+     "type": "venn_grid",
+     "labelA": "Kalın Miyelinli Lif Muayenesi",
+     "labelB": "İnce Lif Muayenesi",
+     "items": [
+      {
+       "criterion": "128 Hz diyapazonla vibrasyon ve pasif parmak hareketiyle pozisyon algısını içerir",
+       "correct": "A"
+      },
+      {
+       "criterion": "İğne ucu batırma ve sıcak-soğuk tüpleriyle deride test edilir",
+       "correct": "B"
+      },
+      {
+       "criterion": "Polinöropatide simetrik eldiven-çorap dağılımında fonksiyon kaybı gösterir",
+       "correct": "both"
+      },
+      {
+       "criterion": "Yalnızca serebral korteks lezyonlarında patoloji gösteren izole testtir",
+       "correct": "neither"
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Polinöropatilerde duyu kaybının distalden proksimale simetrik olarak ayaklardan başlayıp ellere doğru ilerlemesine eldiven-çorap tarzı tutulum denir.",
+     "maskedTerm": "eldiven-çorap",
+     "hint": "Distal simetrik polinöropatide görülen klasik giysi dağılımlı duyu kaybı"
+    },
+    {
+     "type": "active_recall",
+     "question": "Aksonal polinöropatilerde duyu kaybının neden önce ayak uçlarından başlayıp sonradan ellere geçtiğini açıklayınız.",
+     "answer": "Metabolik yetersizlikten ilk olarak en uzun aksonlar etkilendiği için (uzunluğa bağımlı aksonopati) önce en uzaktaki ayak lifleri bozulur; duyu kaybı diz seviyesine ulaştığında benzer uzunluktaki kol ve el sinirleri de etkilenir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 10,
+   "bolum": "2.5",
+   "pdfSayfalari": [
+    13,
+    18
+   ],
+   "sourcePdf": {
+    "fileName": "POLİNÖROPATİLER.pdf",
+    "primaryPage": 13,
+    "startPage": 13,
+    "endPage": 18
+   },
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Polinöropati Tipleri ve Klinik Belirtiler",
+   "subtitle": "Etiyolojik sınıflama, mononöropati multipleks, duyusal fenomenler ve eldiven-çorap muayene tekrarı",
+   "badge": "Bölüm Tekrarı",
+   "isCheckpoint": true,
+   "checkpointNumber": 2,
+   "synthesisNarrative": "Bu sayfada polinöropatilerin etiyolojik sınıflamasını, mononöropati multipleksi, negatif-pozitif duyusal belirtileri, otonom tutulumu ve eldiven-çorap tarzı duyu muayenesini pekiştiriyoruz.\n\n- **Sınıflama:** Nöronopati (MNH, poliomyelit, herpes zoster), aksonopati (toksik, diyabetik, nutrisyonel), miyelinopati (AIDP/GBS, CIDP).\n- **Mononöropati Multipleks:** Farklı zamanlarda, birden çok sinirin asimetrik tutulumudur; PAN ve Churg-Strauss gibi nekrotizan vaskülitlerin tipik göstergesidir.\n- **Duyusal Fenomenler:** Negatif belirtilerde hissizlik ve gece dengesizliği (kalın lif) ile ağrısız yanıklar (ince lif) görülür. Pozitif belirtilerde parestezi, dizestezi ve travma sonrası kozalji vardır.\n- **Otonomik ve Duyu Muayenesi:** Ortostatik hipotansiyon ve terleme bozukluğunda amiloid nöropati düşünülür. Duyu kaybı simetrik eldiven-çorap tarzındadır; vibrasyon ve propriosepsiyon kalın liflerle, ağrı ve ısı ince liflerle değerlendirilir.\n\n> [!IMPORTANT]\n> Checkpoint 2'ye kadar olan konularda eldiven-çorap duyu kaybı ve vaskülitik mononöropati multipleks ayırımı temel kazanımlardır.",
+   "content": "Etiyolojik sınıflama, mononöropati multipleks (PAN), negatif ve pozitif duyusal belirtiler, amiloid otonom nöropati ve eldiven-çorap muayenesi tekrarı.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Polinöropatilerin klinik ve etiyolojik özellikleri düşünüldüğünde, nekrotizan vaskülitlerin (PAN, Churg-Strauss) yol açtığı tipik periferik sinir tutulum paterni hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Mononöropati multipleks",
+       "isCorrect": true,
+       "explanation": "Nekrotizan vaskülitler farklı zamanlarda ve asimetrik olarak birden çok sinirde enfarkt oluşturur. Bu çok odaklı tablo mononöropati multiplekstir."
+      },
+      {
+       "key": "B",
+       "text": "Simetrik eldiven-çorap tarzı distal aksonopati",
+       "isCorrect": false,
+       "explanation": "Simetrik eldiven-çorap tutulumu diyabet ve toksik etkenlerin metabolik aksonal hasarında izlenir. Vaskülitlerin asimetrik fokal tutulumuna uymaz."
+      },
+      {
+       "key": "C",
+       "text": "İzole arka kök ganglioniti",
+       "isCorrect": false,
+       "explanation": "Arka kök ganglioniti herpes zoster veya Sjögren gibi hastalıklarda görülen duyusal nöronopatidir. Yaygın vaskülitik sinir tutulumunu açıklamaz."
+      },
+      {
+       "key": "D",
+       "text": "Saf motor demiyelinizan polinöropati",
+       "isCorrect": false,
+       "explanation": "Saf motor demiyelinizasyon otoimmün polinöropatilerde görülür. Nekrotizan vaskülitler ise hem motor hem duyu liflerini içeren mikst enfarktlar yapar."
+      }
+     ]
+    },
+    {
+     "type": "feature_bidding",
+     "optionA": "Negatif Duyusal Belirti",
+     "optionB": "Pozitif Duyusal Belirti",
+     "rounds": [
+      {
+       "feature": "Ayak tabanında his kaybı nedeniyle karanlıkta dengesiz yürüme",
+       "correct": "A"
+      },
+      {
+       "feature": "Parmak uçlarında iğnelenme, karıncalanma ve distal parestezi",
+       "correct": "B"
+      },
+      {
+       "feature": "Sıcak cisimle temasta ağrısız yanık gelişmesi",
+       "correct": "A"
+      },
+      {
+       "feature": "Hafif dokunmanın şiddetli rahatsızlık vermesi (dizestezi)",
+       "correct": "B"
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Polinöropati Bulguları ve Muayene Esasları",
+     "question": "Polinöropati klinik belirtileri ve muayenesi hakkında verilenlerden hangisi yanlıştır?",
+     "items": [
+      {
+       "text": "Vibrasyon duyusu 128 Hz diyapazonla kemik çıkıntılar üzerinde kalın miyelinli lifleri değerlendirir.",
+       "isLie": false,
+       "explanation": "Diyapazon testi kalın miyelinli Tip A liflerinin iletimini güvenle gösterir."
+      },
+      {
+       "text": "Polinöropatilerde duyu kaybı tipik olarak simetrik ve eldiven-çorap dağılımı gösterir.",
+       "isLie": false,
+       "explanation": "Uzunluğa bağımlı akson erimesinde en uzun sinirler ilk tutularak bu klasik tabloyu kurar."
+      },
+      {
+       "text": "Amiloid nöropatide otonomik tutulum görülmez, yalnızca izole motor seğirmeler olur.",
+       "isLie": true,
+       "explanation": "Amiloid nöropatide ortostatik hipotansiyon ve mesane-bağırsak bozuklukları gibi ağır otonomik semptomlar çok tipiktir."
+      },
+      {
+       "text": "Kozalji travma sonrası bölgede spontan yanıcı ağrı ve aşırı duyarlılıkla seyreder.",
+       "isLie": false,
+       "explanation": "Sinir travması sonrası gelişen şiddetli yanıcı ağrı ve dokunma hassasiyeti kozalji tablosudur."
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Mononöropati Multipleks",
+     "rightCategory": "Distal Simetrik Polinöropati",
+     "cards": [
+      {
+       "text": "Asimetrik ve farklı zamanlarda yamalı tutulum",
+       "category": "left"
+      },
+      {
+       "text": "Simetrik ve eldiven-çorap tarzı duyu kaybı",
+       "category": "right"
+      },
+      {
+       "text": "Nekrotizan vaskülitlere (PAN, Churg-Strauss) bağlı sinir infarktı",
+       "category": "left"
+      },
+      {
+       "text": "Uzunluğa bağımlı distal metabolik akson tükenmesi",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Polinöropatide duyu muayenesinde kalın lif ve ince lif tutulumunu ayırt etmek için hangi testler yapılır?",
+     "answer": "Kalın lifler için pamukla yüzeyel dokunma, 128 Hz diyapazonla vibrasyon ve pasif parmak hareketiyle eklem pozisyonu test edilir; ince lifler için ise iğne ucu ile ağrı ve sıcak-soğuk tüpleri ile ısı algısı test edilir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 11,
+   "bolum": "3.1",
+   "pdfSayfalari": [
+    19,
+    19
+   ],
+   "sourcePdf": {
+    "fileName": "POLİNÖROPATİLER.pdf",
+    "primaryPage": 19,
+    "startPage": 19,
+    "endPage": 19
+   },
+   "title": "Yürüyüş Muayenesi, Duyusal Ataksi ve Romberg Testi",
+   "subtitle": "Eklem pozisyon kaybı, Romberg pozitifliği ve trofik değişiklikler",
+   "badge": "Muayene",
+   "synthesisNarrative": "Polinöropatili hastalarda yürüyüş ve denge bozuklukları proprioseptif duyusal yolların hasarıyla yakından ilişkilidir:\n\n- **Duyusal Ataksi ve Yürüyüş:** Kalın miyelinli liflerin hasarı eklem pozisyon duyusunu bozar. Hasta bastığı zemini hissedemediği için adımlarını geniş tabanlı atar, ayaklarını yere sertçe çarparak (topuk vurarak / tabetik yürüyüş) yürür. Gözler açıkken görsel denetim kompanzasyon sağlar; ancak karanlıkta veya gözler kapatıldığında denge bozulur.\n- **Romberg Testi:** Hasta ayaklarını birleştirip kollarını öne uzatarak ayakta durur. Gözler açıkken dengelidir; gözler kapatıldığında görsel destek ortadan kalkar ve hasta sallanarak düşme eğilimi gösterir (Romberg pozitif).\n- **Romberg Pozitifliği Nedenleri:**\n  * Arka kök ganglionunu tutan duyusal nöronopatiler (örneğin Sjögren sendromu, paraneoplastik nöronopati).\n  * Medulla spinalis arka kordon (dorsal kolon) lezyonları (örneğin B12 vitamini eksikliği, tabes dorsalis).\n- **Trofik Değişiklikler:** Otonomik ve duyusal denervasyon zemininde mavi ve soğuk ekstremite, kutanöz kıl dökülmesi, ciltte parlak incelme ve gevrek/kırılgan tırnak deformiteleri gelişir.\n\n> [!IMPORTANT]\n> Romberg testi duyusal ataksiyi serebellar ataksiden ayırır; serebellar lezyonlarda gözler açıkken de denge bozuktur.",
+   "content": "Eklem pozisyon kaybı duyusal ataksiye yol açar. Gözler kapatılınca düşme eğilimi Romberg pozitifliğidir (arka kordon veya duysal nöronopati). Trofik değişiklikler mavi-soğuk ekstremite ve kıl kaybıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Romberg testinde gözler açıkken ayakta dengeli durabilen bir hastanın gözlerini kapattığında şiddetle dengesini kaybedip düşme eğilimi göstermesi öncelikle hangi yapının hasarını gösterir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Arka kordon veya periferik eklem pozisyon duyusu lifleri",
+       "isCorrect": true,
+       "explanation": "Propriosepsiyon ve arka kordon yolları hasarlı olduğunda hasta dengesini görsel girdiyle korur. Gözler kapanınca bu destek kalkar ve hasta düşer."
+      },
+      {
+       "key": "B",
+       "text": "Ön boynuz alfa motor nöronları",
+       "isCorrect": false,
+       "explanation": "Alfa motor nöronlar efferent motor kasılmayı yönetir. Duyusal ataksi veya gözlerin kapanmasıyla ortaya çıkan Romberg pozitifliğiyle doğrudan ilişkili değildir."
+      },
+      {
+       "key": "C",
+       "text": "Sempatik postganglionik Tip C lifleri",
+       "isCorrect": false,
+       "explanation": "Sempatik Tip C lifleri damar tonusu ve ter bezlerini uyarır. Somatosensoriyel eklem pozisyon algısını ve postüral dengeyi taşımaz."
+      },
+      {
+       "key": "D",
+       "text": "Nöromüsküler kavşak asetilkolin reseptörleri",
+       "isCorrect": false,
+       "explanation": "Nöromüsküler kavşak motor gücü iletir ve bozukluğunda miyasteni benzeri yorulma olur. Proprioseptif duyusal ataksi ve Romberg pozitifliği oluşturmaz."
+      }
+     ]
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Duyusal Ataksi (Romberg Pozitif)",
+     "rightTitle": "Serebellar Ataksi (Romberg Uygulanamaz)",
+     "leftPoints": [
+      "Propriosepsiyon ve arka kordon yollarının hasarı mevcuttur.",
+      "Gözler açıkken görsel denetim sayesinde hasta dengesini korur.",
+      "Gözler kapatıldığında hasta şiddetle sallanır ve Romberg pozitiftir."
+     ],
+     "rightPoints": [
+      "Beyincik ve serebellar yolakların primer disfonksiyonu vardır.",
+      "Gözler açıkken de hasta geniş tabanlı ve belirgin dengesiz yürür.",
+      "Gözlerin kapatılması var olan serebellar dengesizliği değiştirmez."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Duyusal Ataksi, Romberg Testi ve Trofik Değişiklikler",
+     "question": "Yürüyüş muayenesi ve trofik bulgular hakkında verilen önermelerden hangisi yanlıştır?",
+     "items": [
+      {
+       "text": "Romberg testi pozitifliği eklem pozisyon duyusu ve arka kordon patolojisini gösterir.",
+       "isLie": false,
+       "explanation": "Duyusal proprioseptif girdi bozulduğunda gözler kapanınca denge kaybı açığa çıkar."
+      },
+      {
+       "text": "Duyusal ataksili hastalar görsel telafi nedeniyle özellikle karanlıkta sendeler.",
+       "isLie": false,
+       "explanation": "Karanlıkta görsel denetim ortadan kalktığı için propriosepsiyon kusuru belirginleşir."
+      },
+      {
+       "text": "Denervasyona bağlı trofik değişikliklerde mavi soğuk ekstremite ve kıl kaybı izlenebilir.",
+       "isLie": false,
+       "explanation": "Otonomik ve duyusal innervasyon kaybı doku beslenmesini bozarak trofik lezyonlar yapar."
+      },
+      {
+       "text": "Romberg testinde hasta gözleri açıkken de kapalıyken de aynı şekilde düşüyorsa tablo duyusal ataksidir.",
+       "isLie": true,
+       "explanation": "Gözler açıkken de düşme görülmesi serebellar ataksiye işaret eder; duyusal atakside gözler açıkken denge korunur."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Eklem pozisyon duyusu kaybına bağlı duyusal ataksisi olan bir hastada gözler kapatıldığında dengenin bozulup hastanın düşme eğilimi göstermesine Romberg testi pozitifliği denir.",
+     "maskedTerm": "Romberg testi",
+     "hint": "Gözler yumulunca postüral salınımı ortaya koyan klinik muayene yöntemi"
+    },
+    {
+     "type": "active_recall",
+     "question": "Romberg testi pozitifliğine yol açan iki temel nörolojik patoloji grubu nelerdir?",
+     "answer": "Arka kök ganglionunu tutan duyusal nöronopatiler (örneğin Sjögren sendromu) ve medulla spinalis arka kordonunu tutan lezyonlardır (örneğin B12 vitamini eksikliği ve tabes dorsalis)."
+    }
+   ]
+  },
+  {
+   "slideNumber": 12,
+   "bolum": "3.2",
+   "pdfSayfalari": [
+    20,
+    20
+   ],
+   "sourcePdf": {
+    "fileName": "POLİNÖROPATİLER.pdf",
+    "primaryPage": 20,
+    "startPage": 20,
+    "endPage": 20
+   },
+   "title": "Motor Muayene, Kas Erimesi ve Kas Gücünün MRC ile Değerlendirilmesi",
+   "subtitle": "Atrofi paterni, fasikülasyon uyarımı ve 0-5 MRC skalası",
+   "badge": "Muayene",
+   "synthesisNarrative": "Polinöropatilerde motor sistem muayenesi kas kitlesi, istemsiz hareketler ve istemli kas gücünü kapsar:\n\n- **Kas Erimesi (Atrofi):** Aksonal nöropatilerde denervasyona bağlı kas erimesi pozitiftir (+); saf demiyelinizan nöropatilerde ise akson sağlam kaldığı için kas erimesi negatiftir (-). İlk etkilenen kaslar: Üst ekstremitede el sırtındaki 1. dorsal interosseöz kas, alt ekstremitede ayak sırtındaki ekstansör digitorum brevis kasıdır.\n- **Fasikülasyon:** Kas üzerine refleks çekiciyle vurulması (perküsyon) veya egzersiz sonrasında deşarjlar artar.\n- **MRC Kas Gücü Skalası (0-5 Puan):**\n  * **0:** Hiç kas kasılması yok (tam paralizi).\n  * **1:** Eser miktarda kasılma var (palpe edilir), eklem hareketi yok.\n  * **2:** Yer çekimi ortadan kaldırıldığında (horizontal düzlemde) eklem hareketi var.\n  * **3:** Yer çekimine karşı eklem hareketi var, ancak uygulanan dirence karşı koyamaz.\n  * **4:** Hem yer çekimine hem de orta derecede dirence karşı hareket yapabilir.\n  * **5:** Maksimal dirence karşı tam hareket (normal kas gücü).\n- **Dağılım Özelliği:** Distal güçsüzlük klasik aksonal nöropatilerde; proksimal güçsüzlük ise akut veya kronik inflamatuvar demiyelinizan polinöropatilerde (AIDP, CIDP) görülür.\n\n> [!IMPORTANT]\n> Proksimal kas güçsüzlüğü varlığında Guillain-Barré (AIDP) veya CIDP gibi inflamatuvar demiyelinizan süreçler mutlaka araştırılmalıdır.",
+   "content": "Kas erimesi aksonal nöropatide (+), demiyelinizanda (-)dir. İlk 1. dorsal interosseöz ve ekstensör digitorum brevis erir. MRC skalası 0-5 arasındadır. Proksimal tutulum inflamatuvar tablolarda görülür.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Medical Research Council (MRC) kas gücü skalasında, muayene edilen kasın yer çekimine karşı tam hareket yapabildiği ancak hekimin uyguladığı karşı dirence hiç koyamadığı evre kaç puandır?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "3 puan",
+       "isCorrect": true,
+       "explanation": "MRC skalasında 3 puan kasın yer çekimine karşı eklemi tam hareket ettirebildiğini ancak uygulanan dirence karşı koyamadığını tanımlar."
+      },
+      {
+       "key": "B",
+       "text": "2 puan",
+       "isCorrect": false,
+       "explanation": "MRC 2 puan yer çekimi ortadan kaldırıldığında (horizontal planda) eklem hareketi varlığını gösterir. Yer çekimine karşı hareket yapamaz."
+      },
+      {
+       "key": "C",
+       "text": "4 puan",
+       "isCorrect": false,
+       "explanation": "MRC 4 puan hem yer çekimini yenen hem de uygulanan orta dirence karşı koyabilen kas gücüdür. Dış dirence hiç karşı koyamama tablosu ise skalada 3 puan olarak sınıflandırılır."
+      },
+      {
+       "key": "D",
+       "text": "1 puan",
+       "isCorrect": false,
+       "explanation": "MRC 1 puan eklemde belirgin hareket yaratmayan, yalnızca gözle veya elle palpe edilebilen eser kasılmayı ifade eder. Yer çekimine karşı aktif hareket oluşturma kapasitesi kesinlikle bulunmaz."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "MRC Puanı",
+      "Klinik Tanım",
+      "Yer Çekimine Karşı",
+      "Dirence Karşı"
+     ],
+     "tableRows": [
+      [
+       "0",
+       "Tam kas felci (paralizi)",
+       "Hareket yok",
+       "Hareket yok"
+      ],
+      [
+       "2",
+       {
+        "text": "Yer çekimi elenince hareket var",
+        "isMasked": true,
+        "hint": "Yatay planda kinetik eylem gerçekleşebilir"
+       },
+       "Hareket yok",
+       "Direnç yok"
+      ],
+      [
+       "3",
+       "Yalnızca yer çekimine karşı hareket",
+       {
+        "text": "Tam hareket var",
+        "isMasked": true,
+        "hint": "Yer çekimini yenerek eklemi oynatabilir"
+       },
+       "Direnç yok"
+      ],
+      [
+       "4",
+       "Orta dereceli dirence karşı koyabilir",
+       "Tam hareket var",
+       {
+        "text": "Kısmi direnç var",
+        "isMasked": true,
+        "hint": "Hekimin uyguladığı kuvvete yarım düzeyde mukavemet gösterir"
+       }
+      ],
+      [
+       "5",
+       "Normal tam kas kuvveti",
+       "Tam hareket var",
+       "Maksimal direnç"
+      ]
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Motor Muayene, Kas Erimesi ve Güçsüzlük Paternleri",
+     "question": "Motor muayene bulguları ve MRC skalası hakkında verilen önermelerden hangisi yanlıştır?",
+     "items": [
+      {
+       "text": "Aksonal nöropatilerde kas erimesi görülürken, saf demiyelinizan nöropatilerde kas erimesi beklenmez.",
+       "isLie": false,
+       "explanation": "Demiyelinizasyonda akson korunduğu için kas denerve olmaz ve kas kitlesi korunur."
+      },
+      {
+       "text": "Kas güçsüzlüğü proksimal yerleşimli ise akut veya kronik inflamatuvar polinöropatiler düşünülür.",
+       "isLie": false,
+       "explanation": "Guillain-Barré ve CIDP gibi inflamatuvar süreçler proksimal kas gruplarını belirgin tutar."
+      },
+      {
+       "text": "El sırtında 1. dorsal interosseöz ve ayakta ekstansör digitorum brevis ilk eriyen kaslardandır.",
+       "isLie": false,
+       "explanation": "En uçtaki küçük kaslar metabolik akson erimesinde en erken atrofiye uğrayan bölgelerdir."
+      },
+      {
+       "text": "MRC skalasında 2 puan, kasın uygulanan kuvvetli dirence tam karşı koyabildiğini ifade eder.",
+       "isLie": true,
+       "explanation": "MRC 2 puan yer çekimi kaldırıldığında eklem hareketi varlığıdır; dirence tam koyabilme gücü ise 5 puandır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Periferik aksonal nöropatilerde kas erimesinin en erken ve belirgin gözlendiği kaslardan biri üst ekstremitede el sırtındaki 1. dorsal interosseöz kasıdır.",
+     "maskedTerm": "1. dorsal interosseöz",
+     "hint": "Başparmak ile işaret parmağı arasındaki el sırtı kası"
+    },
+    {
+     "type": "active_recall",
+     "question": "Aksonal ve demiyelinizan nöropatiler kas erimesi (atrofi) açısından nasıl farklılık gösterir?",
+     "answer": "Aksonal nöropatilerde akson kaybı nedeniyle kas denerve olur ve belirgin kas erimesi (+) izlenir; primer demiyelinizan nöropatilerde ise akson sağlam kaldığı için kas denerve olmaz ve kas erimesi (-) görülmez."
+    }
+   ]
+  },
+  {
+   "slideNumber": 13,
+   "bolum": "3.3",
+   "pdfSayfalari": [
+    20,
+    21
+   ],
+   "sourcePdf": {
+    "fileName": "POLİNÖROPATİLER.pdf",
+    "primaryPage": 20,
+    "startPage": 20,
+    "endPage": 21
+   },
+   "title": "Derin Tendon Reflekslerinin Fizyolojisi ve Kök Seviyeleri",
+   "subtitle": "Refleks arkı basamakları, monosinaptik devre ve spinal segmentler",
+   "badge": "Fizyoloji ve Muayene",
+   "synthesisNarrative": "Derin tendon refleksleri (DTR), monosinaptik bir nöronal devre üzerinden işleyen miyotatik reflekslerdir:\n\n- **Refleks Arkı Basamakları:**\n  1. Kasa refleks çekiciyle vurulduğunda kasta ve kas iğciğinde ani mekanik gerilme meydana gelir.\n  2. Kas iğciğindeki mekanoreseptörlerin uyarılmasıyla kalın miyelinli afferent duyusal lifler aksiyon potansiyelini arka kök üzerinden omuriliğe taşır.\n  3. Omurilik ön boynuzunda alfa motor nöron ile monosinaptik eksitatör sinaps yapılır.\n  4. Alfa motor nöron aksonu ön kök ve periferik sinir üzerinden kasa dönerek kas kasılmasını oluşturur.\n  * Refleks arkının hassasiyeti ve iğcik gerginliği gama motor nöron lifleri ile düzenlenir.\n  * Bu halkanın herhangi bir basamağında hasar geliştiğinde DTR azalır veya kaybolur (hiporefleksi/arefleksi).\n- **Temel DTR'ler, Sinirler ve Kök Seviyeleri:**\n  * **Biseps Refleksi:** C5 - C6 kökleri, Muskülokutanöz sinir.\n  * **Triseps Refleksi:** C6 - C7 - C8 kökleri, Radial sinir.\n  * **Patella Refleksi:** L2 - L3 - L4 kökleri, Femoral sinir.\n  * **Aşil Refleksi:** S1 - S2 kökleri, Siyatik sinir (Tibial dalı).\n\n> [!IMPORTANT]\n> Periferik nöropatilerin en erken ve hassas objektif klinik bulgusu distal tendon reflekslerinin, özellikle Aşil refleksinin kaybıdır.",
+   "content": "Refleks arkı kas iğciği gerilmesi, afferent lifler, alfa motor nöron sinapsı ve gama nöron düzenlemesinden oluşur. Kökler: Biseps C5-6, Triseps C6-7-8, Patella L2-3-4, Aşil S1-2.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşil tendon refleksinin omurilik kök seviyesi ve innerve eden periferik sinir eşleşmesi hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "S1 - S2 kökleri ve Siyatik sinir (Tibial dalı)",
+       "isCorrect": true,
+       "explanation": "Aşil refleksi S1 ve S2 kökleri üzerinden siyatik sinirin tibial dalı aracılığıyla taşınır. Polinöropatilerde en erken kaybolan reflekstir."
+      },
+      {
+       "key": "B",
+       "text": "L2 - L3 - L4 kökleri ve Femoral sinir",
+       "isCorrect": false,
+       "explanation": "L2, L3 ve L4 kökleri femoral sinir üzerinden patella refleksini oluşturur. Aşil refleksinin segmental seviyesi değildir."
+      },
+      {
+       "key": "C",
+       "text": "C5 - C6 kökleri ve Muskülokutanöz sinir",
+       "isCorrect": false,
+       "explanation": "C5 ve C6 kökleri muskülokutanöz sinir aracılığıyla biseps refleksini meydana getirir. Üst ekstremiteye ait bir reflekstir."
+      },
+      {
+       "key": "D",
+       "text": "C6 - C7 - C8 kökleri ve Radial sinir",
+       "isCorrect": false,
+       "explanation": "C6, C7 ve C8 kökleri radial sinir üzerinden triseps tendon refleksini inerve eder. Bacak veya aşil refleksiyle ilişkili değildir."
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Refleks çekici tendona vurulduğunda kas iğciği mekanik olarak gerilir.",
+      "2. Kas iğciği afferent lifleri uyarılır ve arka kök üzerinden omuriliğe girer.",
+      "3. Omurilik ön boynuzundaki alfa motor nöron gövdesi monosinaptik olarak uyarılır.",
+      "4. Alfa motor nöron aksonu ön kök ve periferik motor sinir boyunca ilerler.",
+      "5. Nöromüsküler kavşakta asetilkolin salınımı ile hedef kasta ani kasılma gerçekleşir."
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Üst Ekstremite Refleksleri",
+     "rightCategory": "Alt Ekstremite Refleksleri",
+     "cards": [
+      {
+       "text": "Biseps refleksi (C5 - C6, Muskülokutanöz sinir)",
+       "category": "left"
+      },
+      {
+       "text": "Patella refleksi (L2 - L3 - L4, Femoral sinir)",
+       "category": "right"
+      },
+      {
+       "text": "Triseps refleksi (C6 - C7 - C8, Radial sinir)",
+       "category": "left"
+      },
+      {
+       "text": "Aşil refleksi (S1 - S2, Siyatik sinir)",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Patella tendon refleksinin segmental omurilik kök seviyeleri L2, L3 ve L4 olup femoral sinir aracılığıyla taşınır.",
+     "maskedTerm": "femoral",
+     "hint": "Uyluk ön bölgesini inerve eden ve patella arkını kuran periferik sinir"
+    },
+    {
+     "type": "active_recall",
+     "question": "Derin tendon refleksi arkında kas iğciğinin gerginliğini ayarlayan motor nöron tipi hangisidir?",
+     "answer": "Kas iğciği intrafuzal kas liflerini innerve ederek iğciğin gerginliğini ve refleks duyarlılığını ayarlayan nöron gama motor nörondur."
+    }
+   ]
+  },
+  {
+   "slideNumber": 14,
+   "bolum": "3.4",
+   "pdfSayfalari": [
+    22,
+    22
+   ],
+   "sourcePdf": {
+    "fileName": "POLİNÖROPATİLER.pdf",
+    "primaryPage": 22,
+    "startPage": 22,
+    "endPage": 22
+   },
+   "title": "Polinöropatiye Eşlik Eden Fasiyal Sinir (VII) Tutulumu Nedenleri",
+   "subtitle": "Bilateral fasiyal dipleji ve polinöropati yapan sistemik hastalıklar",
+   "badge": "Ayırıcı Tanı",
+   "synthesisNarrative": "Polinöropatiler kural olarak ekstremite sinirlerini tutsa da bazı özel sistemik hastalıklarda kraniyal sinirler, özellikle VII. kraniyal sinir (fasiyal sinir) tabloya eşlik eder. Bu durum sıklıkla iki taraflı fasiyal paralizi (fasiyal dipleji) şeklinde görülür:\n\n- **Guillain-Barré Sendromu (AIDP):** Akut demiyelinizan tabloda olguların yaklaşık yarısında iki taraflı fasiyal paralizi gelişir.\n- **CIDP:** Kronik inflamatuvar demiyelinizan polinöropatide kraniyal sinir tutulumu görülebilir.\n- **Lyme Hastalığı:** Borrelia burgdorferi enfeksiyonunda periferik nöropatiye iki taraflı fasiyal dipleji eşlik edebilir.\n- **Lepra (Hansen Hastalığı):** Fasiyal sinirin yüzeyel dallarını doğrudan invaze eder ve sinir kalınlaşması yapar.\n- **Sarkoidoz (Nörosarkoidoz):** Heerfordt sendromunda fasiyal felç, üveit, parotit ve polinöropati birlikte izlenir.\n- **HIV Enfeksiyonu:** Erken dönemde AIDP benzeri tabloyla, geç dönemde sensorimotor nöropatiyle fasiyal paralizi yapabilir.\n- **Tangier Hastalığı:** HDL yokluğuyla giden nadir metabolik hastalıkta fasiyal dipleji ve turuncu tonsiller görülür.\n\n> [!IMPORTANT]\n> Akut gelişen asendan flask paraliziye iki taraflı fasiyal paralizi (fasiyal dipleji) eşlik ediyorsa ilk akla gelmesi gereken klinik tablo Guillain-Barré sendromudur.",
+   "content": "Polinöropatiye VII. kranial sinir tutulumunun eşlik ettiği nedenler: Guillain-Barré sendromu, Lepra, Lyme hastalığı, CIDP, Sarkoidoz, HIV ve Tangier hastalığıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Periferik polinöropati tablosuna bilateral fasiyal paralizinin (VII. kraniyal sinir tutulumu) eşlik ettiği durumlarda aşağıdakilerden hangisi etiyolojide yer ALMAZ?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "İzole karpal tünel sendromu",
+       "isCorrect": true,
+       "explanation": "Karpal tünel sendromu el bileğinde median sinirin fokal sıkışmasıdır. Sistemik polinöropati veya kraniyal fasiyal dipleji oluşturmaz."
+      },
+      {
+       "key": "B",
+       "text": "Guillain-Barré sendromu",
+       "isCorrect": false,
+       "explanation": "Guillain-Barré sendromu akut demiyelinizan polinöropati olup olguların yaklaşık yarısında bilateral fasiyal dipleji ile seyreder."
+      },
+      {
+       "key": "C",
+       "text": "Lyme hastalığı",
+       "isCorrect": false,
+       "explanation": "Borrelia burgdorferi enfeksiyonu olan Lyme hastalığı periferik nöropatiye eşlik eden iki taraflı fasiyal felcin tipik enfeksiyöz nedenidir."
+      },
+      {
+       "key": "D",
+       "text": "Lepra (Hansen hastalığı)",
+       "isCorrect": false,
+       "explanation": "Mycobacterium leprae periferik sinirleri ve fasiyal sinirin yüzeyel dallarını invaze ederek kalınlaşma ve paralizi yapar."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Genç bir hastada kene teması öyküsü ve polinöropatiye eşlik eden bilateral fasiyal dipleji tablosunda etken Borrelia burgdorferi olan Lyme hastalığı düşünülmelidir.",
+     "maskedTerm": "Lyme hastalığı",
+     "hint": "Artropod ısırığıyla geçen ve çift taraflı yüz felci yapabilen spiroket tablosu"
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Fasiyal Tutulumlu Polinöropati Nedeni",
+     "rightCategory": "Fasiyal Tutulum Yapmayan İzole Durum",
+     "cards": [
+      {
+       "text": "Guillain-Barré sendromu (AIDP)",
+       "category": "left"
+      },
+      {
+       "text": "Fibula başı izole peroneal sinir tuzaklanması",
+       "category": "right"
+      },
+      {
+       "text": "Sarkoidoz ve Lyme hastalığı",
+       "category": "left"
+      },
+      {
+       "text": "Seddon derece bir izole radial nöropraksi",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Polinöropati ve Kraniyal Sinir VII Tutulumu",
+     "question": "Fasiyal sinir (VII) tutulumunun eşlik ettiği polinöropatiler hakkında verilen önermelerden hangisi yanlıştır?",
+     "items": [
+      {
+       "text": "Guillain-Barré sendromunda olguların yaklaşık yarısında fasiyal dipleji görülebilir.",
+       "isLie": false,
+       "explanation": "Akut inflamatuvar tabloda motor kraniyal sinirlerden en sık fasiyal sinir iki taraflı tutulur."
+      },
+      {
+       "text": "Lepra hastalığı fasiyal sinirin yüzeyel dallarını invaze ederek paralizi oluşturabilir.",
+       "isLie": false,
+       "explanation": "Lepra basili soğuk deri bölgelerindeki periferik sinir dallarında birikerek felç yapar."
+      },
+      {
+       "text": "Tangier hastalığında turuncu tonsiller ve polinöropatiye fasiyal paralizi eşlik edebilir.",
+       "isLie": false,
+       "explanation": "Tangier hastalığı lipid metabolizma bozukluğu olup kraniyal nöropati ve turuncu tonsil birlikteliği gösterir."
+      },
+      {
+       "text": "Fasiyal sinir tutulumu yalnızca santral kortikal lezyonlarda görülür, periferik nöropatide asla olmaz.",
+       "isLie": true,
+       "explanation": "Guillain-Barré, Lyme, sarkoidoz ve leprada fasiyal sinir periferik seyri boyunca tutularak polinöropatiye eşlik eder."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Polinöropatiye eşlik eden fasiyal sinir tutulumunda enfeksiyöz kökenli iki önemli nedeni belirtiniz.",
+     "answer": "Borrelia burgdorferi'nin yol açtığı Lyme hastalığı ile Mycobacterium leprae'nin yol açtığı Lepra (Hansen hastalığı) iki önemli enfeksiyöz nedendir; ayrıca viral olarak HIV enfeksiyonu da eşlik edebilir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 15,
+   "bolum": "3.5",
+   "pdfSayfalari": [
+    23,
+    23
+   ],
+   "sourcePdf": {
+    "fileName": "POLİNÖROPATİLER.pdf",
+    "primaryPage": 23,
+    "startPage": 23,
+    "endPage": 23
+   },
+   "title": "Polinöropatiye Eşlik Eden Piramidal Yol Bulguları ve Ayırıcı Tanı",
+   "subtitle": "Mikst sistemik tutulum, Babinski pozitifliği ve miyelonöropatiler",
+   "badge": "Ayırıcı Tanı",
+   "synthesisNarrative": "Klasik periferik polinöropatide derin tendon refleksleri kaybolur, tonus azalır ve Babinski negatiftir. Eğer bir hastada hem periferik nöropati (arefleksi, kas atrofisi, distal duyu kaybı) hem de piramidal yol hasarı bulguları (Babinski pozitifliği, spastisite, klonus) bir aradaysa, hem santral hem de periferik sistemi tutan mikst hastalıklar düşünülmelidir:\n\n- **Motor Nöron Hastalığı (ALS):** Ön boynuz hücre hasarına bağlı alt motor nöron bulguları (kas erimesi, fasikülasyon) ile kortikospinal traktus hasarına bağlı üst motor nöron bulguları (Babinski pozitifliği, spastisite) birliktedir.\n- **Servikal Spinal Miyelopati:** Kolda bası düzeyinde alt motor nöron bulgusu, basının altındaki bacaklarda ise piramidal üst motor nöron bulguları izlenir.\n- **B12 Vitamini Eksikliği (Subakut Kombine Dejenerasyon):** Periferik nöropatiye ek olarak arka kordon (propriosepsiyon kaybı) ve yan kordon (kortikospinal piramidal yol hasarı - Babinski) birlikte tutulur.\n- **Diğer Nedenler:** HIV miyelonöropatisi, ileri karaciğer hastalığı (hepatik miyelopati) ve adrenomiyelonöropati (AMN).\n\n> [!IMPORTANT]\n> Duyu kusuru ve arefleksisi olan bir hastada Babinski refleksinin pozitif saptanması saf polinöropati tanısını dışlar; B12 eksikliği, servikal miyelopati veya ALS gibi mikst santral-periferik süreçleri gösterir.",
+   "content": "Polinöropatiye piramidal bulguların eşlik ettiği durumlar: Motor nöron hastalığı, Servikal spinal miyelopati, B12 eksikliği (subakut kombine dejenerasyon), HIV, Karaciğer hastalığı ve Adrenomiyelonöropatidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Bir hastada periferik duyu kaybı ve kas zayıflığına kortikospinal piramidal traktus tutulumu bulgusu olan Babinski pozitifliğinin eşlik ettiği tablolardan biri DEĞİLDİR?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Saf Guillain-Barré sendromu (AIDP)",
+       "isCorrect": true,
+       "explanation": "Guillain-Barré sendromu saf periferik sinir demiyelinizasyonudur. Refleksler kaybolur, tonus azalır ve piramidal Babinski bulgusu kesinlikle görülmez."
+      },
+      {
+       "key": "B",
+       "text": "B12 vitamini eksikliği (Subakut kombine dejenerasyon)",
+       "isCorrect": false,
+       "explanation": "B12 eksikliği periferik sinirlerin yanı sıra omurilik yan kordonunu da tutarak Babinski pozitifliği ve piramidal bulgular üretir."
+      },
+      {
+       "key": "C",
+       "text": "Motor nöron hastalığı (ALS)",
+       "isCorrect": false,
+       "explanation": "ALS ön boynuz alt motor nöronları ile kortikospinal piramidal üst motor nöronları birlikte yıkarak Babinski pozitifliği yapar."
+      },
+      {
+       "key": "D",
+       "text": "Servikal spinal miyelopati",
+       "isCorrect": false,
+       "explanation": "Servikal kanaldaki bası kollarda alt motor, bası altında kalan bacaklarda ise piramidal üst motor nöron bulguları oluşturur."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Periferik nöropatiye arka kordon ve kortikospinal piramidal yol dejenerasyonunun eşlik ettiği, Babinski pozitifliği görülen hematolojik-nörolojik tablo B12 vitamini eksikliği sonucu gelişen subakut kombine dejenerasyondur.",
+     "maskedTerm": "B12 vitamini eksikliği",
+     "hint": "Kobalamin düzeyi düşüklüğüne bağlı gelişen nörolojik sendrom etkeni"
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Polinöropati + Piramidal Bulgu Nedeni",
+     "rightCategory": "Saf Periferik Nöropati Nedeni",
+     "cards": [
+      {
+       "text": "B12 vitamini eksikliği (Subakut kombine dejenerasyon)",
+       "category": "left"
+      },
+      {
+       "text": "Basit toksik vinkristin kemoterapi aksonopatisi",
+       "category": "right"
+      },
+      {
+       "text": "Motor nöron hastalığı (ALS) ve Servikal miyelopati",
+       "category": "left"
+      },
+      {
+       "text": "Tipik diyabetik distal simetrik polinöropati",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Piramidal Bulgu ve Polinöropati Birlikteliği",
+     "question": "Polinöropatiye piramidal bulguların eşlik ettiği durumlar hakkında verilen önermelerden hangisi yanlıştır?",
+     "items": [
+      {
+       "text": "B12 eksikliğinde periferik sinirler ile birlikte arka ve yan kordonlar dejenerasyona uğrar.",
+       "isLie": false,
+       "explanation": "Subakut kombine dejenerasyon arka kordon propriosepsiyonunu ve yan kordon piramidal yolunu yıkar."
+      },
+      {
+       "text": "Servikal miyelopatide lezyon seviyesinde alt, lezyon altında ise üst motor nöron bulgusu izlenir.",
+       "isLie": false,
+       "explanation": "Bası seviyesinde kök harabiyeti, bası altında ise inen piramidal liflerin kesintisi gerçekleşir."
+      },
+      {
+       "text": "Adrenomiyelonöropatide periferik nöropati tablosuna spinal piramidal yol hasarı eşlik edebilir.",
+       "isLie": false,
+       "explanation": "Peroksizomal yağ asidi birikimi hem periferik sinirleri hem de spinal kordonu birlikte etkiler."
+      },
+      {
+       "text": "Saf polinöropatide Babinski pozitifliği ve spastisite olağan ve beklenen bir bulgudur.",
+       "isLie": true,
+       "explanation": "Saf polinöropatide alt motor nöron ve periferik duyusal hasar vardır; tonus azalır, Babinski negatiftir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Subakut kombine dejenerasyonda (B12 eksikliği) hangi üç anatomik sistem birlikte dejenerasyona uğrar?",
+     "answer": "Medulla spinalis arka kordonu (propriosepsiyon ve vibrasyon kaybı), yan kordon kortikospinal traktus (piramidal bulgu, Babinski pozitifliği) ve periferik sinirler (distal simetrik eldiven-çorap duyu kaybı ve parestezi) birlikte tutulur."
+    }
+   ]
+  },
+  {
+   "slideNumber": 16,
+   "bolum": "4.1",
+   "pdfSayfalari": [
+    1,
+    23
+   ],
+   "sourcePdf": {
+    "fileName": "POLİNÖROPATİLER.pdf",
+    "primaryPage": 1,
+    "startPage": 1,
+    "endPage": 23
+   },
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Periferik Nöropati ve Polinöropatiler",
+   "subtitle": "Dört farklı oyunla periferik sinir anatomisi, hasar mekanizmaları ve klinik muayene tekrarı",
+   "badge": "Ders Sonu Oyunları",
+   "isGameFinale": true,
+   "synthesisNarrative": "Bu sayfada periferik nöropatiler konusunun tamamını dört farklı oyun formatıyla gözden geçireceksiniz. Yeni bir konu eklenmemiştir; derste öğrendiğiniz bilgileri farklı açılardan pekiştireceksiniz.\n\n- **Sırala:** Derin tendon refleksi arkının nöronal iletim basamaklarını doğru fizyolojik sıraya dizin.\n- **Değeri Tahmin Et:** Aksiyon potansiyeli tepe voltajını, spinal sinir çifti sayısını ve normal kas gücü MRC puanını bulun.\n- **Ne Değişir?:** Distal aksonal polinöropati gelişen hastada parametre değişimlerini belirleyin.\n- **Hatayı Düzelt:** Sinir hasar sınıflaması ve muayene bulguları hakkındaki hatalı ifadeleri düzeltin.\n\n> [!TIP]\n> Oyunlarda zorlandığınız kavramları ilgili slaytların tekrar sayfalarından yeniden gözden geçirebilirsiniz.",
+   "content": "Dört oyunla periferik nöropatileri gözden geçir: derin tendon refleksi sırası, sayısal tahminler, klinik parametre değişimleri ve metin hatası düzeltme.",
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "prompt": "Derin tendon refleksi arkında elektriksel uyarının ilerleme basamaklarını fizyolojik sıraya diziniz.",
+     "steps": [
+      "Çekiç darbesi ile kas iğciği mekanik olarak gerilir",
+      "Kalın miyelinli duyusal afferent lifler uyarılır",
+      "Omurilik ön boynuz alfa motor nöronu ile monosinaptik sinaps yapılır",
+      "Alfa motor nöron aksonu efferent yolla kasa ilerler",
+      "Nöromüsküler kavşaktan asetilkolin salınarak kasta kasılma gerçekleşir"
+     ],
+     "explanation": "Refleks arkı kas iğciğinin gerilmesiyle başlar, afferent duyusal liflerle omuriliğe taşınır, ön boynuz alfa motor nöronunda monosinaptik sinaps yapar ve efferent motor aksonla kasa ulaşarak kasılmayla sonlanır."
+    },
+    {
+     "type": "estimate_slider",
+     "items": [
+      {
+       "prompt": "Periferik sinir lifinde aksiyon potansiyeli oluştuğunda membran potansiyeli tepe noktada kaç milivolt (mV) değerine ulaşır?",
+       "unit": "mV",
+       "min": 0,
+       "max": 60,
+       "step": 1,
+       "answer": 30,
+       "tolerance": 0,
+       "explanation": "Uyarılan sinir lifinde voltaj kapılı sodyum kanallarının açılmasıyla potansiyel -70 mV değerinden +30 mV değerine yükselir."
+      },
+      {
+       "prompt": "İnsan periferik sinir sisteminde medulla spinalisten çıkan toplam spinal sinir sayısı kaç çifttir?",
+       "unit": "çift",
+       "min": 20,
+       "max": 40,
+       "step": 1,
+       "answer": 31,
+       "tolerance": 0,
+       "explanation": "Spinal sinirler 8 servikal, 12 torasik, 5 lumbal, 5 sakral ve 1 koksigeal olmak üzere toplam 31 çifttir."
+      },
+      {
+       "prompt": "Medical Research Council (MRC) kas gücü skalasında yer çekimine karşı tam hareket edebilen ancak karşı dirence hiç koyamayan kasın puanı kaçtır?",
+       "unit": "puan",
+       "min": 0,
+       "max": 5,
+       "step": 1,
+       "answer": 3,
+       "tolerance": 0,
+       "explanation": "MRC skalasında 3 puan kasın yer çekimine karşı hareket ettiğini fakat dirence karşı koyamadığını ifade eder."
+      }
+     ]
+    },
+    {
+     "type": "perturbation",
+     "scenario": "Bir hastada metabolik ve toksik nedenlere bağlı distal simetrik aksonal polinöropati gelişiyor.",
+     "question": "Hastanın distal ekstremitelerinde aşağıda belirtilen klinik parametreler nasıl değişir?",
+     "parameters": [
+      {
+       "name": "Aşil derin tendon refleksi canlılığı",
+       "correct": "down",
+       "explanation": "Distal aksonal dejenerasyonda en uzun lifler erkenden hasarlanır ve Aşil refleksi hızla kaybolur."
+      },
+      {
+       "name": "Eklem pozisyon (propriosepsiyon) algılama düzeyi",
+       "correct": "down",
+       "explanation": "Kalın miyelinli liflerin distal harabiyeti sonucu propriosepsiyon duyusu azalır ve duyusal ataksi gelişir."
+      },
+      {
+       "name": "Distal kas kitlesi (kas atrofisi varlığı)",
+       "correct": "down",
+       "explanation": "Aksonal dejenerasyon kasta denervasyona yol açar; denervasyon sonucunda kas erimesi gelişir ve kas kitlesi azalır."
+      },
+      {
+       "name": "Piramidal spastisite ve Babinski refleksi yanıtı",
+       "correct": "same",
+       "explanation": "Saf aksonal polinöropati alt motor nöron ve periferik duyusal patolojidir; piramidal kortikospinal traktus etkilenmediği için Babinski negatif kalır ve spastisite gelişmez."
+      }
+     ]
+    },
+    {
+     "type": "fix_the_text",
+     "text": "Seddon sınıflamasında nöropraksi aksonun koptuğu en ağır hasar tipidir. Primer segmental demiyelinizasyonda belirgin kas erimesi izlenir. Polinöropatilerde duyu kaybı asimetrik tek taraflı başlar.",
+     "errors": [
+      {
+       "wrong": "aksonun koptuğu en ağır",
+       "correct": "fokal miyelin hasarlı en hafif",
+       "options": [
+        "aksonun parçalandığı orta",
+        "tüm kılıfların koptuğu en derin"
+       ],
+       "explanation": "Nöropraksi aksonun sağlam kaldığı, yalnızca geçici miyelin ileti bloğuyla seyreden en hafif Seddon derecesidir; en ağır form nörotmezistir."
+      },
+      {
+       "wrong": "belirgin kas erimesi izlenir",
+       "correct": "kas erimesi izlenmez",
+       "options": [
+        "hızlı kemik erimesi izlenir",
+        "şiddetli spastisite izlenir"
+       ],
+       "explanation": "Segmental demiyelinizasyonda akson sağlam kaldığı için kas denerve olmaz ve bu nedenle kas erimesi (atrofi) gelişmez."
+      },
+      {
+       "wrong": "asimetrik tek taraflı başlar",
+       "correct": "simetrik eldiven-çorap tarzı başlar",
+       "options": [
+        "rastgele gövdede başlar",
+        "yalnızca yüzde başlar"
+       ],
+       "explanation": "Klasik aksonal polinöropatilerde en uzun aksonlar metabolik tükenmeye ilk uğradığı için duyu kaybı distalde simetrik ve eldiven-çorap tarzında başlar."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "totalSlides": 16,
+ "totalInteractiveElements": 79,
+ "interactiveRatio": 4.94,
+ "sayfaHaritasi": "teyitli",
+ "deckId": "k2p-y25-k2-17-periferik-noropati",
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "matchedPastQuestionsCount": 12,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

@@ -1,0 +1,95 @@
+{
+ "surum": 1,
+ "metinHash": "f36622b35ef8f37fc648e7292f6f889b7e235af5",
+ "p": {
+  "1": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Motor lifler",
+      "Duysal lifler",
+      "Otonom lifler"
+     ],
+     "baslik": "Periferik Sinir Lifleri",
+     "s": 2,
+     "k": [
+      0,
+      58
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.79
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.118,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "4": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "8 servikal",
+      "12 torasik",
+      "5 lumbal",
+      "5 sakral",
+      "1 koksigeal"
+     ],
+     "baslik": "Spinal Sinir Dağılımı",
+     "s": 5,
+     "k": [
+      0,
+      47
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.78
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.419,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2189,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  }
+ },
+ "rapor": {
+  "aday": 17,
+  "gecti": 2,
+  "ret": {
+   "panel metni 'Miyelinopati' henüz anlatılmamış terim içeriyor": 1,
+   "panel metni 'Membran Potansiyeli' henüz anlatılmamış terim i": 1,
+   "panel metni 'Tip A: Kalın miyelinli (10-70 ' henüz anlatılma": 1,
+   "panel metni 'Hasar Mekanizmaları' henüz anlatılmamış terim i": 1,
+   "panel metni 'Nörotmezis: Tam kesi' henüz anlatılmamış terim ": 1,
+   "panel metni 'Polinöropati Etiyolojisi' henüz anlatılmamış te": 1,
+   "panel metni 'Duyusal Bozukluklar' henüz anlatılmamış terim i": 1,
+   "panel metni 'Parestezi ve karıncalanma' henüz anlatılmamış t": 1,
+   "panel metni 'Distal ve proksimal zaaf' henüz anlatılmamış te": 1,
+   "panel metni 'Ortostatik hipotansiyon' henüz anlatılmamış ter": 1,
+   "panel metni 'Eldiven-çorap dağılımı' henüz anlatılmamış teri": 1,
+   "panel metni 'Fasikülasyon: Perküsyonla arta' henüz anlatılma": 1,
+   "panel metni 'Biseps: C5-C6' henüz anlatılmamış terim içeriyo": 1,
+   "panel metni 'Lyme ve lepra' henüz anlatılmamış terim içeriyo": 1,
+   "panel metni 'Adrenomiyelonöropati' henüz anlatılmamış terim ": 1
+  }
+ }
+}
