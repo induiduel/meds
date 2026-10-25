@@ -1,15 +1,17 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 347,
-  "baslik": "Kurul 2 Arşiv Dersi 17: Periferik Nöropati ve Polinöropatiler (2025-2026)",
+  "onem": 348,
+  "baslik": "Kurul 2 Arşiv Dersleri 16-18: Nörolojik Rehabilitasyon, Periferik Nöropati ve Bazal Gangliyonlar (2025-2026)",
   "maddeler": [
-    "Ders 17 (Nöroloji - Periferik Nöropati / Polinöropatiler): 16 slayt Öğren destesi (11 interaktif model + ders sonu oyunları finali), 23 sayfa tam amfi dersi kapsamı (23 paragraf, 101 cümle, 1.641 kelime, 11,9 dk EMA GPU sesli anlatım), 17 canlı çizim şeması, 12 çıkmış soru eşleşmesi ve gömülü .medspak paketi (3.25 MB)",
-    "Metin takip ve lazer vurgu sistemi: motor/duyusal birimler, miyotom-dermatom haritası, istirahat ve aksiyon potansiyeli (-70 mV / +30 mV), Tip A, B, C lif özellikleri, Wallerian dejenerasyon, segmental demiyelinizasyon, distal aksonopati (dying back), Seddon sınıflaması (nöropraksi, aksonotmezis, nörotmezis), mononöropati multipleks (PAN), negatif/pozitif duyusal fenomenler, eldiven-çorap patern, MRC kas gücü skalası, derin tendon refleksi kök seviyeleri (C5-S2), kraniyal VII tutulumu (GBS) ve piramidal bulgular (ALS, B12 eksikliği) konuşmacı sesine birebir senkron olarak PDF üzerinde satır satır aydınlatıldı",
-    "Canlı çizim ve panel doğrulayıcısı: tüm ekran genişliklerinde (366, 567, 1100 px) sıfır taşma ve sıfır kelime kırılmasıyla 0 HATA ile doğrulandı",
-    "Kurul 2 Arşiv Dersleri Durumu: Mevcut 30 dersin 30'u da (%100) başarıyla üretildi, doğrulandı ve yayına alındı"
+    "Ders 16 (FTR - Nörolojik Rehabilitasyona Giriş): 43 sayfa tam amfi dersi kapsamı (44 paragraf, 191 cümle, 3.937 kelime, 29,4 dk EMA GPU sesli anlatım), 16 slayt Öğren destesi (11 interaktif model + ders sonu oyunları finali), 13 çizim şeması, 7 çıkmış soru bağlantısı ve gömülü .medspak paketi.",
+    "Ders 17 (Nöroloji - Periferik Nöropati / Polinöropatiler): 23 sayfa tam amfi dersi kapsamı (49 paragraf, 236 cümle, 4.028 kelime, 29,6 dk EMA GPU sesli anlatım), 16 slayt Öğren destesi, 13 çizim şeması, 12 çıkmış soru bağlantısı ve gömülü .medspak paketi.",
+    "Ders 18 (Nöroloji - Bazal Gangliyonlar ve Ekstrapiramidal Sistem): 20 sayfa tam amfi dersi kapsamı (42 paragraf, 252 cümle, 4.130 kelime, 31,0 dk EMA GPU sesli anlatım), 16 slayt Öğren destesi, 12 çizim şeması, 11 çıkmış soru bağlantısı ve gömülü .medspak paketi.",
+    "Yüksek hassasiyetli lazer metin takibi ve şekil vurguları: Tüm satırlar ve anatomik/fizyolojik şekiller konuşmacı sesine birebir senkron olarak PDF üzerinde aydınlatıldı; çıkmış soru uyarıları doğrudan sınav sorularına bağlandı."
   ],
   "eklenen": [
-    "Kurul 2 Nöroloji 'Periferik Nöropati (Polinöropatiler)' (2025-2026 Arşivi)"
+    "Kurul 2 FTR 'Nörolojik Rehabilitasyona Giriş' (2025-2026 Arşivi)",
+    "Kurul 2 Nöroloji 'Periferik Nöropati' (2025-2026 Arşivi)",
+    "Kurul 2 Nöroloji 'Bazal Gangliyonlar ve Ekstrapiramidal Sistem' (2025-2026 Arşivi)"
   ],
   "degisen": [
     "meds/data/arsiv_25_26/sesli_anlatim/dersler.json",
@@ -17,8 +19,8 @@
     "meds/guncelleme_notu.json"
   ],
   "duzeltilen": [
-    "Ders 17 tam amfi dersi kapsamıyla zenginleştirildi; 23 sayfanın tamamı, tüm anatomik, histopatolojik ve fizyopatolojik mekanizmalar eksiksiz anlatıldı",
-    "PDF metin takip motoru ve satır çapaları konuşmacı telaffuzuna ve slayt satırlarına %100 uyumlu hale getirildi"
+    "Ders 16, 17 ve 18 tam amfi dersi derinliğiyle (her biri 3.800-4.200 kelime, ~30-35 dk) baştan sona eksiksiz tamamlandı",
+    "PDF metin takip motoru ve satır çapaları slayt satırlarına ve konuşmacı telaffuzuna %100 uyumlu hale getirildi"
   ],
   "silinen": []
 }
