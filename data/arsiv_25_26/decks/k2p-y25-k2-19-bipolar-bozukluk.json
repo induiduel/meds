@@ -1,0 +1,2169 @@
+{
+ "id": "k2p-y25-k2-19-bipolar-bozukluk",
+ "deckId": "k2p-y25-k2-19-bipolar-bozukluk",
+ "title": "Bipolar Bozukluk",
+ "shortTitle": "Bipolar Bozukluk",
+ "discipline": "Psikiyatri",
+ "committee": "donem3-kurul2",
+ "instructor": "Dr. Öğr. Üyesi Nefise Demir",
+ "matchedNoteId": "y25-k2-19-bipolar-bozukluk",
+ "overview": "Bipolar duygudurum bozukluğunun klinik özellikleri, etiyolojisi, nozolojisi, DSM-5 tanı kriterleri, ayırıcı tanısı, gidişi ve tedavisi.",
+ "highYieldPearls": [
+  "Bipolar I için tek bir tam manik atak şart ve yeterlidir; Bipolar II'de ise asla tam mani olamaz.",
+  "Hipomaninin asgari süresi 4 gün, manik epizodun 1 hafta, majör depresif epizodun 15 gündür.",
+  "Manideki uyku bozukluğu insomnia değil, uyku ihtiyacında azalmadır (2-3 saat uykuyla zinde hissetme).",
+  "Lityum bipolar bozuklukta akut mani ve idame profilaksisinde altın standart olup intiharı önleyen tek ajandır.",
+  "Lityum kesilmesinde 18 aylık nüks oranı %92'dir; koruyucu tedavi aksatılmamalıdır."
+ ],
+ "totalSlides": 16,
+ "totalInteractiveElements": 79,
+ "interactiveRatio": 4.94,
+ "sayfaHaritasi": "teyitli",
+ "slides": [
+  {
+   "slideNumber": 1,
+   "bolum": "1.1",
+   "pdfSayfalari": [
+    2,
+    3
+   ],
+   "sourcePdf": {
+    "fileName": "Bipolar Bozukluk.pdf",
+    "primaryPage": 2,
+    "startPage": 2,
+    "endPage": 3
+   },
+   "title": "Bipolar Bozukluk: Tanım, Temel Kavramlar ve Afektif Kutuplar",
+   "subtitle": "Duygudurum Bozukluklarının Doğası ve Klinik Kutuplar",
+   "badge": "TEMEL KAVRAM",
+   "synthesisNarrative": "Duygudurum bozuklukları, primer patolojinin duygulanımda (afekt) yer aldığı klinik antitelere verilen genel addır.\n\n- **İki Zıt Kutup:** Hastalık aşırı neşe, taşkınlık ve büyüklük hissi yaşanan mani dönemleri ile derin çökkünlük, keder ve anhedoninin hakim olduğu depresyon dönemleri arasında seyreder.\n- **Karma (Mikst) Tablo:** Bazı ataklarda bu iki kutbun belirtileri eş zamanlı veya gün içinde hızla birbirini izleyerek bir arada ortaya çıkabilir.\n- **Epizodik ve Yineleyici Seyir:** Ataklar genellikle birkaç ay sürer; kendiliğinden veya tedaviyle remisyona girer ancak ömür boyu yineleme eğilimindedir.\n\n> [!NOTE]\n> Bipolar bozukluk tıbbi literatürde İki Uçlu Bozukluk, Manik Depressif Hastalık ve Bipolar Afektif Bozukluk eş isimleriyle anılır.",
+   "content": "Duygudurum bozuklukları, primer patolojinin duygulanımda yer aldığı klinik antitelere verilen genel addır.\n\n- **İki Zıt Kutup:** Hastalık aşırı neşe yaşanan mani ile çökkünlük yaşanan depresyon dönemleri arasında seyreder.\n- **Karma Tablo:** Bazı ataklarda iki kutbun belirtileri eş zamanlı ortaya çıkar.\n- **Yineleyici Seyir:** Ataklar birkaç ay sürer ve nüks etme eğilimindedir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Duygudurum bozukluklarının genel klinik doğası ve bipolar polarite ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Mani ve depresyon atakları genellikle birkaç ay sürüp düzelme ve daha sonra yineleme eğilimi gösterir.",
+       "isCorrect": true,
+       "explanation": "Mani ve depresyon atakları genellikle birkaç ay sürüp düzelme ve daha sonra yineleme eğilimi gösterir ifadesi bipolar bozukluğun temel nozolojik ve klinik kuralını eksiksiz açıklayan doğru yaklaşımdır. Klinik pratikte hastaların tanısal değerlendirmesi ve sağaltımı doğrudan bu bilimsel ilkeye dayanılarak yürütülür."
+      },
+      {
+       "key": "B",
+       "text": "Bipolar bozuklukta hastalar ömür boyu tek bir manik atak yaşar ve bir daha asla atak geçirmezler.",
+       "isCorrect": false,
+       "explanation": "Bipolar bozuklukta hastalar ömür boyu tek bir manik atak yaşar ve bir daha asla atak geçirmezler ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "C",
+       "text": "Duygudurum bozukluklarında temel biyolojik patoloji işitme korteksindeki primer nörondadır.",
+       "isCorrect": false,
+       "explanation": "Duygudurum bozukluklarında temel biyolojik patoloji işitme korteksindeki primer nörondadır ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "D",
+       "text": "Karma dönemlerde mani ve depresyon belirtilerinin aynı anda görülmesi tıbben imkansızdır.",
+       "isCorrect": false,
+       "explanation": "Karma dönemlerde mani ve depresyon belirtilerinin aynı anda görülmesi tıbben imkansızdır ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "E",
+       "text": "Bipolar bozukluk ile manik depressif hastalık tamamen zıt ve alakasız iki ayrı hastalığı ifade eder.",
+       "isCorrect": false,
+       "explanation": "Bipolar bozukluk ile manik depressif hastalık tamamen zıt ve alakasız iki ayrı hastalığı ifade eder ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Mani ve depresyon belirtilerinin birlikte ortaya çıktığı tablolara karma dönem adı verilir.",
+     "maskedTerm": "karma",
+     "hint": "Mikst veya iki kutbun iç içe geçtiği klinik durum"
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Duygulanım Devrelerinde Disregülasyon: Kortiko-limbik ağlarda ortaya çıkan biyokimyasal dalgalanma duygusal iklimi bozar.",
+      "2. Manik Epizot Gelişimi: Hastada kabarmış mizaç, öfori, büyüklük hissi ve psikomotor aktivite artışı başlar.",
+      "3. Remisyon ve Ötimi: Birkaç ay süren akut manik epizot kendiliğinden veya tedaviyle yatışarak normal dengeye döner.",
+      "4. Depresif Epizot Atağı: Belirli bir iyilik döneminin ardından hasta hayattan zevk alamama ve derin çökkünlük kutbuna kayar."
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Bipolar bozukluğun tıbbi literatürde kullanılan başlıca eşanlamlı isimleri nelerdir?",
+     "answer": "İki Uçlu Bozukluk, Manik Depressif Hastalık ve Bipolar Afektif Bozukluk."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Duygudurum Kutupları ve Terminoloji",
+     "items": [
+      {
+       "text": "Duygudurum bozukluklarında temel patolojinin duygulanımda (afekt) olduğu kabul edilir.",
+       "isLie": false,
+       "explanation": "Afektif bozukluklar tanımı gereği birincil bozukluğun mizaç ve duygulanımda olduğu antitelerdir."
+      },
+      {
+       "text": "Mani döneminde hastada aşırı neşe, hareketlilik ve büyüklük hissi ön plandadır.",
+       "isLie": false,
+       "explanation": "Mani döneminin kardinal klinik özellikleri öfori, hiperaktivite ve grandiyözitedir."
+      },
+      {
+       "text": "Bipolar bozuklukta ortaya çıkan manik dönemler kural olarak 10 yıldan uzun süre aralıksız sürer ve hiç düzelmez.",
+       "isLie": true,
+       "explanation": "Manik epizotlar tedavi edilmediğinde ortalama birkaç ay (3-6 ay) sürer; 10 yıl aralıksız süren manik epizot görülmez, araya remisyonlar girer."
+      },
+      {
+       "text": "Depresyon dönemlerinde hasta hayattan zevk alamama (anhedoni) ve durgunluk yaşar.",
+       "isLie": false,
+       "explanation": "Depresif kutbun çekirdek semptomları anhedoni, çökkünlük ve psikomotor yavaşlamadır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 2,
+   "bolum": "1.2",
+   "pdfSayfalari": [
+    4,
+    7
+   ],
+   "sourcePdf": {
+    "fileName": "Bipolar Bozukluk.pdf",
+    "primaryPage": 4,
+    "startPage": 4,
+    "endPage": 7
+   },
+   "title": "Tarihsel Gelişim: Antik Tıptan Kraepelin ve Leonhard'a",
+   "subtitle": "Humoral Patolojiden Modern Nozolojik Sınıflandırmaya",
+   "badge": "TARİHÇE VE NOZOLOJİ",
+   "synthesisNarrative": "Duygudurum dalgalanmalarının sistematik tıbbi tanımlaması MÖ 400'de Hipokrat ile başlamıştır.\n\n- **Hipokrat ve Kara Safra:** Hipokrat melankoliyi kara safranın beyin üzerindeki etkisiyle ruhun kararması olarak tanımlamış; böylece akıl hastalığı ile beyin biyokimyası arasında ilk nedensel ilişkiyi kurmuştur.\n- **Aretaeus:** Maninin temel özelliklerini (öfori, grandiyözite, psikomotor eksitasyon) ve irritabiliteyi tanımlamıştır.\n- **Galen:** Dört vücut sıvısıyla karakter tiplerini (Sanguine-kan, Choleric-sarı safra, Melancholic-kara safra, Phlegmatic-balgam) eşleştirmiştir.\n- **Kraepelin İkilemi (1896):** Endojen psikozları ilerleyici yıkımla giden dementia praecox ve ataklarla iyileşen manik depressif delilik olarak ikiye ayırmıştır.\n\n> [!IMPORTANT]\n> Karl Leonhard duygudurum bozukluklarını tek uçlu (unipolar) ve iki uçlu (bipolar) olarak ayırarak modern nozolojinin temelini atmıştır.",
+   "content": "Hipokrat MÖ 400'de melankoliyi kara safra ile açıklayarak beyin biyokimyası ilişkisini kurmuştur.\n\n- **Aretaeus:** Maninin öfori, büyüklük ve eksitasyon triadını tanımlamıştır.\n- **Galen:** Dört mizaç tipini vücut sıvılarıyla eşleştirmiştir.\n- **Kraepelin (1896):** Şizofreni ile manik depressif deliliği klinik seyir ve sonlanmaya göre ayırmıştır.\n- **Leonhard:** Unipolar ve bipolar ayrımını yapmıştır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "1896 yılında endojen psikozları ilerleyici yıkımla giden dementia praecox ve ataklar arasında tam iyileşen manik depressif delilik olarak ikiye ayıran hekim kimdir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Emil Kraepelin",
+       "isCorrect": true,
+       "explanation": "Emil Kraepelin ifadesi bipolar bozukluğun temel nozolojik ve klinik kuralını eksiksiz açıklayan doğru yaklaşımdır. Klinik pratikte hastaların tanısal değerlendirmesi ve sağaltımı doğrudan bu bilimsel ilkeye dayanılarak yürütülür."
+      },
+      {
+       "key": "B",
+       "text": "Hipokrat",
+       "isCorrect": false,
+       "explanation": "Hipokrat ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "C",
+       "text": "Kapadokyalı Aretaeus",
+       "isCorrect": false,
+       "explanation": "Kapadokyalı Aretaeus ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "D",
+       "text": "Karl Leonhard",
+       "isCorrect": false,
+       "explanation": "Karl Leonhard ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "E",
+       "text": "Galen",
+       "isCorrect": false,
+       "explanation": "Galen ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Hekim / Dönem",
+      "Temel Tanımlama",
+      "Psikiyatrik Önemi"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "Hipokrat (MÖ 400)"
+       },
+       {
+        "text": "Melankoli ve kara safra",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Beyin biyokimyası ile akıl hastalığı ilişkisi"
+       }
+      ],
+      [
+       {
+        "text": "Aretaeus (MS 1. yy)"
+       },
+       {
+        "text": "Öfori, grandiyözite ve eksitasyon",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Mani çekirdek belirtilerini tanımlama"
+       }
+      ],
+      [
+       {
+        "text": "Galen (MS 129-200)"
+       },
+       {
+        "text": "Dört vücut sıvısı ve mizaç tipleri"
+       },
+       {
+        "text": "Sanguine, Choleric, Melancholic, Phlegmatic",
+        "isMasked": true,
+        "hint": ""
+       }
+      ],
+      [
+       {
+        "text": "Karl Leonhard"
+       },
+       {
+        "text": "Unipolar ve Bipolar ayrımı",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Duygudurum bozukluklarını nozolojik ayırma"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Hipokrat melankoliyi kara safranın beyin üzerindeki etkisiyle ruhun kararması olarak tanımlamıştır.",
+     "maskedTerm": "kara safranın",
+     "hint": "Melaina chole anlamına gelen antik vücut sıvısı"
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Antik Dönem Hekimleri",
+     "rightCategory": "Modern Dönem Psikiyatristleri",
+     "cards": [
+      {
+       "text": "Hipokrat (MÖ 400)",
+       "category": "left"
+      },
+      {
+       "text": "Emil Kraepelin (1896)",
+       "category": "right"
+      },
+      {
+       "text": "Kapadokyalı Aretaeus",
+       "category": "left"
+      },
+      {
+       "text": "Karl Leonhard (1957)",
+       "category": "right"
+      },
+      {
+       "text": "Galen (MS 129-200)",
+       "category": "left"
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Kraepelin ve Leonhard Nozolojisi",
+     "items": [
+      {
+       "text": "Kraepelin'e göre manik depressif delilik ataklar arasında tam iyileşmeyle seyreder.",
+       "isLie": false,
+       "explanation": "Kraepelin bu hastalığın şizofreni gibi sekel ve demans bırakmadığını vurgulamıştır."
+      },
+      {
+       "text": "Leonhard duygudurum bozukluklarını tek uçlu ve iki uçlu olarak ikiye ayırmıştır.",
+       "isLie": false,
+       "explanation": "Leonhard unipolar ve bipolar ayrımının öncüsüdür."
+      },
+      {
+       "text": "Dementia praecox tablosu ataklar arasında tam zihinsel iyileşme gösteren bir mizaç bozukluğudur.",
+       "isLie": true,
+       "explanation": "Dementia praecox (şizofreni) ilerleyici yıkımla giden bir hastalıktır; tam iyileşme manik depressif deliliğe aittir."
+      },
+      {
+       "text": "Kapadokyalı Aretaeus manide irritabilite ve psikotik belirtilerin görülebileceğini bildirmiştir.",
+       "isLie": false,
+       "explanation": "Aretaeus maninin irritabl seyredebileceğini ve hezeyanların eklenebileceğini ilk kaydeden hekimdir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 3,
+   "bolum": "1.3",
+   "pdfSayfalari": [
+    8,
+    12
+   ],
+   "sourcePdf": {
+    "fileName": "Bipolar Bozukluk.pdf",
+    "primaryPage": 8,
+    "startPage": 8,
+    "endPage": 12
+   },
+   "title": "Bipolar Bozukluğun Alt Tipleri: Bipolar I, Bipolar II ve Siklotimi",
+   "subtitle": "Klinik Ayrım Kriterleri ve Süre Koşulları",
+   "badge": "TANI VE AYIRICI TANI",
+   "synthesisNarrative": "Bipolar bozukluk spektrumu klinik şiddet ve atak tiplerine göre alt gruplara ayrılır.\n\n- **Bipolar I Bozukluk:** Tanı için yaşam boyu en az bir tam manik epizot geçirilmiş olması şarttır. Öncesinde veya sonrasında depresyon bulunabilir ancak zorunlu değildir.\n- **Bipolar II Bozukluk:** En az bir majör depresyon (≥2 hafta) ve en az bir hipomani (≥4 gün) ile seyreder. Yaşam boyu hiçbir zaman tam manik atak geçirilmemiş olması şarttır; tek bir mani tanıyı anında Bipolar I yapar.\n- **Siklotimi Bozukluğu:** En az 2 yıldır süren, hipomani ve depresif belirti dilimlerini içeren ancak tam atak kriterini karşılamayan dalgalanmadır; aralıksız iyilik süresi en fazla 2 aydır.\n\n> [!IMPORTANT]\n> Antidepresan sonrası ortaya çıkan 1-2 hafif irritabilite belirtisi mani/hipomani sayılmaz; ancak tedavi ötesinde sendrom düzeyinde süren hipomani/mani iki uçlu bozukluk için yeterli kanıttır.",
+   "content": "Bipolar I bozuklukta en az bir tam mani şarttır.\n\n- **Bipolar II:** Majör depresyon ve hipomani ile seyreder, asla tam mani atağı görülmez.\n- **Siklotimi:** En az 2 yıl süren subsendromal mizaç dalgalanmasıdır, iyilik süresi en fazla 2 aydır.\n- **İlaca Bağlı:** Antidepresan sonrası hafif kızma tanı koydurmaz, sendrom düzeyinde sürme şarttır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Bipolar II bozukluk tanısı için aşağıdaki klinik koşullardan hangisi KESİN bir zorunluluktur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Hastanın yaşamı boyunca hiçbir zaman tam bir manik atak geçirmemiş olması",
+       "isCorrect": true,
+       "explanation": "Hastanın yaşamı boyunca hiçbir zaman tam bir manik atak geçirmemiş olması ifadesi bipolar bozukluğun temel nozolojik ve klinik kuralını eksiksiz açıklayan doğru yaklaşımdır. Klinik pratikte hastaların tanısal değerlendirmesi ve sağaltımı doğrudan bu bilimsel ilkeye dayanılarak yürütülür."
+      },
+      {
+       "key": "B",
+       "text": "Hipomani atağının en az 6 ay boyunca aralıksız devam etmesi",
+       "isCorrect": false,
+       "explanation": "Hipomani atağının en az 6 ay boyunca aralıksız devam etmesi ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "C",
+       "text": "Hastada mutlaka peygamberlik gibi büyüklük sanrılarının bulunması",
+       "isCorrect": false,
+       "explanation": "Hastada mutlaka peygamberlik gibi büyüklük sanrılarının bulunması ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "D",
+       "text": "Hastalığın yalnızca 60 yaşın üzerindeki bireylerde ortaya çıkması",
+       "isCorrect": false,
+       "explanation": "Hastalığın yalnızca 60 yaşın üzerindeki bireylerde ortaya çıkması ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "E",
+       "text": "Depresyon ataklarının 3 günden kısa sürmesi",
+       "isCorrect": false,
+       "explanation": "Depresyon ataklarının 3 günden kısa sürmesi ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Tanısal Kategori",
+      "Mani Durumu",
+      "Depresyon Durumu",
+      "Süre Kriteri"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "Bipolar I Bozukluk"
+       },
+       {
+        "text": "En az bir tam mani şart",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Bulunabilir (zorunlu değil)"
+       },
+       {
+        "text": "Mani için en az 1 hafta (veya yatış)"
+       }
+      ],
+      [
+       {
+        "text": "Bipolar II Bozukluk"
+       },
+       {
+        "text": "Asla mani olamaz",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "En az bir majör depresyon şart"
+       },
+       {
+        "text": "Depresyon ≥2 hafta, hipomani ≥4 gün"
+       }
+      ],
+      [
+       {
+        "text": "Siklotimi Bozukluğu"
+       },
+       {
+        "text": "Yalnızca subsendromal hipomani"
+       },
+       {
+        "text": "Subsendromal depresif belirtiler",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "En az 2 yıl (iyilik en fazla 2 ay)"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Bipolar II tanısı alabilmesi için hipomani dönemi en az dört gün sürmelidir.",
+     "maskedTerm": "dört",
+     "hint": "Hipomani asgari gün sayısı (yazıyla)"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Alt Tip Tanı Kuralları",
+     "items": [
+      {
+       "text": "Bipolar I bozuklukta hastanın majör depresyon geçirmesi tanı için zorunlu değildir.",
+       "isLie": false,
+       "explanation": "Tek bir manik atak geçirmek Bipolar I tanısı için yeterlidir."
+      },
+      {
+       "text": "Siklotimi tanısı için belirtilerin yetişkinlerde en az 2 yıldır sürüyor olması gerekir.",
+       "isLie": false,
+       "explanation": "Siklotimi kronik dalgalanmadır ve asgari 2 yıl sürer."
+      },
+      {
+       "text": "Bipolar II tanılı bir hastada izlemde mani atağı görülmesi tanıyı değiştirmeden Tip II olarak bırakır.",
+       "isLie": true,
+       "explanation": "Tek bir tam mani atağının varlığı Bipolar II tanısını engeller ve hastayı Bipolar I yapar."
+      },
+      {
+       "text": "Siklotimik bozuklukta 2 yıllık sürede belirtisiz geçen sürekli iyilik en fazla 2 ay olabilir.",
+       "isLie": false,
+       "explanation": "İki aydan uzun tam remisyon siklotimi tanısını bozar."
+      }
+     ]
+    },
+    {
+     "type": "feature_bidding",
+     "optionA": "Bipolar I Bozukluk",
+     "optionB": "Bipolar II Bozukluk",
+     "rounds": [
+      {
+       "feature": "Tanı konulabilmesi için yaşam boyu en az bir tam manik atak şarttır",
+       "correct": "A",
+       "explanation": "Bipolar I tanısının mutlak şartı manik epizottur."
+      },
+      {
+       "feature": "Klinik gidişinde asla tam bir manik epizot bulunamaz",
+       "correct": "B",
+       "explanation": "Bipolar II'de yalnızca hipomani ve depresyon bulunur; mani kesinlikle yoktur."
+      },
+      {
+       "feature": "Hipomani atağının en az 4 gün sürmesi ve majör depresyon atağının eşlik etmesi",
+       "correct": "B",
+       "explanation": "Bipolar II hipomani ve majör depresyon kombinasyonudur."
+      },
+      {
+       "feature": "Psikotik belirtiler ve zorunlu hastaneye yatış gerektiren ağır taşkınlık tablosu",
+       "correct": "A",
+       "explanation": "Hastaneye yatış gerektiren veya psikotik kabarma Bipolar I'e aittir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 4,
+   "bolum": "1.1",
+   "pdfSayfalari": [
+    1,
+    12
+   ],
+   "sourcePdf": {
+    "fileName": "Bipolar Bozukluk.pdf",
+    "primaryPage": 1,
+    "startPage": 1,
+    "endPage": 12
+   },
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Tanım, Tarihçe ve Alt Tip Sınıflandırması",
+   "subtitle": "İlk 12 Sayfanın Kritik Kazanım ve Tanı Kuralları",
+   "badge": "CHECKPOINT",
+   "synthesisNarrative": "Bu bölümde bipolar bozukluğun genel çerçevesini, tarihsel nozolojisini ve alt tiplerini ele aldık.\n\n- **Kavramsal Temel:** Primer bozukluk duygulanımdadır; mani (taşkınlık), depresyon (çökkünlük) ve karma dönemler epizodik dalgalanır.\n- **Tarihsel Dönüm Noktaları:** Hipokrat melankoliyi kara safra ile açıklamış; Aretaeus mani triadını kurmuş; Kraepelin (1896) şizofreniyi manik depressif delilikten ayırmış; Leonhard unipolar-bipolar ayrımını yapmıştır.\n- **Alt Tip Kuralları:** Bipolar I için tek bir tam mani şarttır. Bipolar II'de majör depresyon ve hipomani bulunur, mani kesinlikle yasaktır. Siklotimi ise en az 2 yıl süren subsendromal dalgalanmadır.",
+   "content": "İlk 12 sayfanın temel kazanımları:\n\n- **Duygudurum Kutupları:** Mani, depresyon ve karma dönemler.\n- **Tarihsel Gelişim:** Hipokrat, Aretaeus, Galen, Kraepelin ve Leonhard.\n- **Alt Tipler:** Bipolar I (mani şart), Bipolar II (mani yasak), Siklotimi (2 yıl süren subsendromal dalgalanma).",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdaki klinik tablolardan hangisinde hastaya Bipolar I bozukluk tanısı konulması ZORUNLUDUR?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Yaşamında daha önce hiç depresyon geçirmemiş ancak 10 gündür grandiyöz sanrılar ve uykusuzlukla seyreden akut manik atak yaşayan hasta",
+       "isCorrect": true,
+       "explanation": "Yaşamında daha önce hiç depresyon geçirmemiş ancak 10 gündür grandiyöz sanrılar ve uykusuzlukla seyreden akut manik atak yaşayan hasta ifadesi bipolar bozukluğun temel nozolojik ve klinik kuralını eksiksiz açıklayan doğru yaklaşımdır. Klinik pratikte hastaların tanısal değerlendirmesi ve sağaltımı doğrudan bu bilimsel ilkeye dayanılarak yürütülür."
+      },
+      {
+       "key": "B",
+       "text": "Üç yıldır devam eden, en fazla 3 gün süren neşelenmeler ve hafif çökkünlüklerle dalgalanan hasta",
+       "isCorrect": false,
+       "explanation": "Üç yıldır devam eden, en fazla 3 gün süren neşelenmeler ve hafif çökkünlüklerle dalgalanan hasta ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "C",
+       "text": "Yalnızca 2 hafta süren ağır majör depresyon atağı geçirip hiç kabarma yaşamayan hasta",
+       "isCorrect": false,
+       "explanation": "Yalnızca 2 hafta süren ağır majör depresyon atağı geçirip hiç kabarma yaşamayan hasta ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "D",
+       "text": "Bir haftadır süren majör depresyonu olan ve 2 yıl önce 4 gün süren hipomani atağı geçirmiş olan hasta",
+       "isCorrect": false,
+       "explanation": "Bir haftadır süren majör depresyonu olan ve 2 yıl önce 4 gün süren hipomani atağı geçirmiş olan hasta ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "E",
+       "text": "Antidepresan başladıktan sonraki ilk gün yalnızca çabuk kızma ve sinirlilik tarifleyen hasta",
+       "isCorrect": false,
+       "explanation": "Antidepresan başladıktan sonraki ilk gün yalnızca çabuk kızma ve sinirlilik tarifleyen hasta ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      }
+     ]
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Bipolar I Bozukluk",
+     "rightTitle": "Bipolar II Bozukluk",
+     "leftPoints": [
+      "En az bir tam manik epizot şarttır",
+      "Psikotik belirtiler ve ağır işlev kaybı sıktır",
+      "Hastaneye zorunlu yatış sıklıkla gerekir",
+      "Majör depresyon bulunabilir ancak zorunlu değildir"
+     ],
+     "rightPoints": [
+      "Klinik gidişinde asla tam mani bulunamaz",
+      "Hipomanide psikotik belirti kesinlikle yoktur",
+      "Hastaneye yatış gerektirecek ağırlıkta değildir",
+      "En az bir majör depresyon atağı bulunması şarttır"
+     ]
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "Polikliniğe getirilen bir hastanın geçmişinde 2 yıl önce 5 gün süren hipomanik bir dönem ve geçen yıl 1 ay süren majör depresyon atağı bulunuyor.",
+     "question": "Bu hastanın güncel klinik tablosunda tanısal sınıflandırma için en doğru karar hangisidir?",
+     "options": [
+      {
+       "text": "Hasta yaşam boyu hiç tam manik atak geçirmediği için Bipolar II bozukluk olarak sınıflandırılmalıdır.",
+       "isCorrect": true,
+       "feedback": "Hasta yaşam boyu hiç tam manik atak geçirmediği için Bipolar II bozukluk olarak sınıflandırılmalıdır tercihi hastanın belirti ve süre kriterlerine tam uyan doğru klinik karardır. Bu tanısal basamak uluslararası kılavuzlar doğrultusunda en uygun tedavi protokolünü başlatır."
+      },
+      {
+       "text": "Hipomani atağı geçirdiği için doğrudan Bipolar I bozukluk kabul edilmelidir.",
+       "isCorrect": false,
+       "feedback": "Hipomani atağı geçirdiği için doğrudan Bipolar I bozukluk kabul edilmelidir tercihi hastanın klinik tablosu ve tanı kriterleriyle çelişen hatalı bir karardır. Bu yaklaşım yanlış tedaviye yol açabileceğinden psikiyatri pratiğinde tercih edilmez."
+      },
+      {
+       "text": "Ataklar 2 yıl arayla geldiği için siklotimik bozukluk tanısı verilmelidir.",
+       "isCorrect": false,
+       "feedback": "Ataklar 2 yıl arayla geldiği için siklotimik bozukluk tanısı verilmelidir tercihi hastanın klinik tablosu ve tanı kriterleriyle çelişen hatalı bir karardır. Bu yaklaşım yanlış tedaviye yol açabileceğinden psikiyatri pratiğinde tercih edilmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Leonhard duygudurum bozukluklarını unipolar ve bipolar olarak ikiye ayırmıştır.",
+     "maskedTerm": "unipolar",
+     "hint": "Tek uçlu depresyon anlamına gelen Latince terim"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Checkpoint 1 Temel İlkeleri",
+     "items": [
+      {
+       "text": "Hipokrat akıl hastalıkları ile beyin biyokimyası arasında tarihte ilk nedensel ilişkiyi kurmuştur.",
+       "isLie": false,
+       "explanation": "Melankoliyi kara safra ile açıklayarak biyolojik temeli ilk Hipokrat savunmuştur."
+      },
+      {
+       "text": "Bipolar I bozuklukta hastanın ömrü boyunca hiç depresyon atağı yaşamamış olması mümkündür.",
+       "isLie": false,
+       "explanation": "Yalnızca tekrarlayan mani ataklarıyla seyreden unipolar mani de Bipolar I kabul edilir."
+      },
+      {
+       "text": "Siklotimi tanısı alan bir hasta 2 yıllık izleminde 1 yıl boyunca tamamen belirtisiz kalabilir.",
+       "isLie": true,
+       "explanation": "Siklotimik bozuklukta iki yıllık süreçte belirtisiz geçen sürekli iyilik dönemi en fazla 2 ay olabilir; 1 yıllık iyilik tanıyı bozar."
+      },
+      {
+       "text": "Galen Sanguine karakter tipini kan sıvısı ve canlı mizaç ile eşleştirmiştir.",
+       "isLie": false,
+       "explanation": "Galen'in 4 sıvı kuramında Sanguine kan sıvısıyla ilişkilidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 5,
+   "bolum": "2.1",
+   "pdfSayfalari": [
+    13,
+    15
+   ],
+   "sourcePdf": {
+    "fileName": "Bipolar Bozukluk.pdf",
+    "primaryPage": 13,
+    "startPage": 13,
+    "endPage": 15
+   },
+   "title": "Epidemiyoloji ve Etiyoloji: Genetik Yatkınlık ve Nöroanatomi",
+   "subtitle": "Yaygınlık Oranları, İkiz Konkordansı ve Nöronal Ağlar",
+   "badge": "ETİYOLOJİ",
+   "synthesisNarrative": "Bipolar bozukluk genel toplumda %1-5 oranında yaygınlığa sahip önemli bir halk sağlığı sorunudur.\n\n- **Epidemiyolojik Özellikler:** Bipolar I %0.4-1.6, Bipolar II ~%0.5 yaygınlıktadır. Kadın ve erkeklerde eşit sıklıkta (1:1) görülür. Başlangıç yaşı ortalama 20-30 yaştır.\n- **Güçlü Genetik Temel:** Birinci derece akrabalarda mizaç bozukluğu riski genel topluma göre 8-18 kat artmıştır. Monozigot ikizlerde konkordans %40-70, dizigot ikizlerde ise %10-20'dir.\n- **İlgili Nöroanatomik Yapılar:** Duygusal ve bilişsel işlevlerden sorumlu nöronal devrelerde disfonksiyon mevcuttur. Prefrontal korteks, amigdala, hipokampus ve striatum arasındaki bağlantılar kilit rol oynar.\n\n> [!NOTE]\n> Monozigot ikizlerdeki konkordansın %100 olmaması, genetik yatkınlığın yanında çevresel faktörlerin de tetiği çekmede zorunlu olduğunu kanıtlar.",
+   "content": "Bipolar bozukluk genel toplumda %1-5 oranında görülür.\n\n- **Cinsiyet ve Yaş:** Kadın ve erkekte eşittir; başlangıç yaşı 20-30 yaştır.\n- **Genetik:** 1. derece akrabada risk 8-18 kat artmıştır; tek yumurta ikizinde konkordans %40-70'tir.\n- **Nöroanatomi:** Prefrontal korteks, amigdala ve limbik-kortikal devrelerde disfonksiyon vardır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Bipolar bozukluğun epidemiyolojisi ve genetik özellikleri ile ilgili aşağıdaki bilgilerden hangisi DOĞRUDUR?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Bipolar bozukluk kadın ve erkeklerde eşit sıklıkta görülür ve monozigot ikizlerde konkordans %40-70 arasındadır.",
+       "isCorrect": true,
+       "explanation": "Bipolar bozukluk kadın ve erkeklerde eşit sıklıkta görülür ve monozigot ikizlerde konkordans %40-70 arasındadır ifadesi bipolar bozukluğun temel nozolojik ve klinik kuralını eksiksiz açıklayan doğru yaklaşımdır. Klinik pratikte hastaların tanısal değerlendirmesi ve sağaltımı doğrudan bu bilimsel ilkeye dayanılarak yürütülür."
+      },
+      {
+       "key": "B",
+       "text": "Hastalık kadınlarda erkeklere oranla dört kat daha sık görülür.",
+       "isCorrect": false,
+       "explanation": "Hastalık kadınlarda erkeklere oranla dört kat daha sık görülür ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "C",
+       "text": "Bipolar bozukluğun en sık başlangıç yaşı 60-70 yaş arasıdır.",
+       "isCorrect": false,
+       "explanation": "Bipolar bozukluğun en sık başlangıç yaşı 60-70 yaş arasıdır ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "D",
+       "text": "Birinci derece akrabalarda hastalık riski genel popülasyondan daha düşüktür.",
+       "isCorrect": false,
+       "explanation": "Birinci derece akrabalarda hastalık riski genel popülasyondan daha düşüktür ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "E",
+       "text": "Dizigot ikizlerdeki eşhastalanma oranı monozigot ikizlerden daha yüksektir.",
+       "isCorrect": false,
+       "explanation": "Dizigot ikizlerdeki eşhastalanma oranı monozigot ikizlerden daha yüksektir ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Aile ve kalıtım çalışmalarında mizaç bozukluğu olanların birinci derece akrabalarında bipolar I riski 8-18 kat artmıştır.",
+     "maskedTerm": "8-18",
+     "hint": "Risk artış katsayısı aralığı"
+    },
+    {
+     "type": "active_recall",
+     "question": "Bipolar bozuklukta duygusal ve bilişsel işlevlerden sorumlu başlıca nöroanatomik yapılar hangileridir?",
+     "answer": "Prefrontal korteks, amigdala, hipokampus, bazal ganglionlar (striatum) ve singulat korteks arasındaki devreler."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Epidemiyoloji ve Genetik Veriler",
+     "items": [
+      {
+       "text": "Bipolar bozukluğun genel toplumdaki yaşam boyu yaygınlığı %1-5 arasındadır.",
+       "isLie": false,
+       "explanation": "Geniş bipolar spektrum prevalansı %1-5 olarak kabul edilir."
+      },
+      {
+       "text": "Monozigot ikizlerde konkordans oranı %40-70 düzeyindedir.",
+       "isLie": false,
+       "explanation": "İkiz çalışmaları bu yüksek konkordans aralığını kanıtlamıştır."
+      },
+      {
+       "text": "Bipolar bozukluk kural olarak tek bir genin otozomal dominant mutasyonuyla kalıtılır.",
+       "isLie": true,
+       "explanation": "Bipolar bozukluk monogenik değil, poligenik ve multifaktöriyel karmaşık bir kalıtım modeline sahiptir."
+      },
+      {
+       "text": "Bipolar I bozukluğun başlangıç yaşı en sık 20-30 yaş arasıdır.",
+       "isLie": false,
+       "explanation": "Hastalık genç erişkinlikte zirve yapar."
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Yüksek İkiz Eşhastalanması",
+     "rightCategory": "Daha Düşük İkiz Eşhastalanması",
+     "cards": [
+      {
+       "text": "Monozigot (tek yumurta) ikiz konkordansı (%40-70)",
+       "category": "left"
+      },
+      {
+       "text": "Dizigot (çift yumurta) ikiz konkordansı (%10-20)",
+       "category": "right"
+      },
+      {
+       "text": "Genetik paylaşımı %100 olan ikiz grubu",
+       "category": "left"
+      },
+      {
+       "text": "Genetik paylaşımı %50 olan kardeşlik grubu",
+       "category": "right"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 6,
+   "bolum": "2.2",
+   "pdfSayfalari": [
+    16,
+    18
+   ],
+   "sourcePdf": {
+    "fileName": "Bipolar Bozukluk.pdf",
+    "primaryPage": 16,
+    "startPage": 16,
+    "endPage": 18
+   },
+   "title": "Nörobiyolojik Mekanizmalar: Membran Teorisi, Nörotransmitterler ve Yaşam Olayları",
+   "subtitle": "İyon Pompası Disfonksiyonu, Sirkadiyen Ritim ve Manik Savunma",
+   "badge": "MEKANİZMA",
+   "synthesisNarrative": "Bipolar bozukluğun hücresel patofizyolojisinde nöron zarındaki iyon pompaları ve sinyal iletimi kritik rol oynar.\n\n- **Membran Teorisi:** Pek çok çalışma bipolar hastaların hücre zarında Na+/K+ ATPaz pompa düzeyinde ve aktivitesinde yetersizlik olduğunu bildirmektedir. Bu durum nöron uyarılabilirliğini bozar.\n- **Nörotransmitterler:** Manide dopaminerjik ve noradrenerjik aktivitede artış, reseptör duyarlılık dalgalanmaları izlenir.\n- **Yaşam Olayları ve Uyku:** Olumsuz yaşam olayları genellikle ilk atağı tetikler. Özellikle sirkadiyen ritim bozulması ve uyku yoksunluğu atağı tetikleyen en güçlü çevresel faktördür.\n\n> [!NOTE]\n> Psikoanalitik yaklaşıma göre mani, altta yatan derin melankolik çökkünlük ve kayıp duygularına karşı egonun geliştirdiği bir 'manik savunma' (inkar ve coşku) mekanizmasıdır.",
+   "content": "Membran teorisine göre hücre zarında Na+/K+ ATPaz yetersizliği vardır.\n\n- **Aminler:** Manide dopamin ve noradrenalin iletimi artmıştır.\n- **Tetikleyici:** Yaşam olayları ve özellikle uyku yoksunluğu atağı tetikler.\n- **Psikodinamik:** Mani, melankoliye karşı geliştirilen bir manik savunmadır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Bipolar bozukluk etiyolojisinde öne sürülen 'Membran Teorisi'ne göre hücre zarında yetersizliği bildirilen enzim sistemi hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Na+/K+ ATPaz",
+       "isCorrect": true,
+       "explanation": "Na+/K+ ATPaz ifadesi bipolar bozukluğun temel nozolojik ve klinik kuralını eksiksiz açıklayan doğru yaklaşımdır. Klinik pratikte hastaların tanısal değerlendirmesi ve sağaltımı doğrudan bu bilimsel ilkeye dayanılarak yürütülür."
+      },
+      {
+       "key": "B",
+       "text": "Asetilkolinesteraz",
+       "isCorrect": false,
+       "explanation": "Asetilkolinesteraz ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "C",
+       "text": "Monoamin oksidaz B",
+       "isCorrect": false,
+       "explanation": "Monoamin oksidaz B ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "D",
+       "text": "DNA Polimeraz III",
+       "isCorrect": false,
+       "explanation": "DNA Polimeraz III ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "E",
+       "text": "HMG-KoA redüktaz",
+       "isCorrect": false,
+       "explanation": "HMG-KoA redüktaz ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Pek çok çalışma sonucunda bipolar hastaların hücre zarında Na-K ATP az düzeyinde yetersizlik bildirilmiştir.",
+     "maskedTerm": "yetersizlik",
+     "hint": "Enzim düzeyindeki eksiklik veya işlev düşüklüğü"
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Hücresel Membran Kırılganlığı: Na+/K+ ATPaz yetersizliği ve monoamin disregülasyonu nöronal uyarılabilirliği artırır.",
+      "2. Çevresel Stresör ve Uykusuzluk: Yaşam olayları veya uyku yoksunluğu biyolojik saati bozarak ilk atağı tetikler.",
+      "3. Manik Savunmanın Devreye Girmesi: Ego altta yatan çökkünlük ve kayıp acısına karşı taşkın neşe ve büyüklük zırhına bürünür.",
+      "4. Kindling (Tutuşturma) Etkisi: Tekrarlayan ataklarla beyin duyarlılaşır ve ilerleyen ataklar dış stresör olmadan spontan nüks eder."
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Psikoanalitik kurama göre mani tablosunun intrapsişik anlamı nedir?",
+     "answer": "Mani, altta yatan derin melankolik çökkünlük, keder ve kayıp duygularına karşı egonun geliştirdiği aşırı telafi edici bir 'manik savunma' (inkar, omnipotans) mekanizmasıdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Biyokimya ve Psikososyal Mekanizmalar",
+     "items": [
+      {
+       "text": "Membran teorisine göre bipolar hastaların hücre zarında Na+/K+ ATPaz yetersizliği bildirilmiştir.",
+       "isLie": false,
+       "explanation": "Hücre zarı iyon pompa yetersizliği membran hipotezinin temelidir."
+      },
+      {
+       "text": "Uyku yoksunluğu manik atakların tetiklenmesinde en güçlü çevresel faktörlerden biridir.",
+       "isLie": false,
+       "explanation": "Sirkadiyen bozulma ve uykusuzluk mani atağını doğrudan provoke eder."
+      },
+      {
+       "text": "Bipolar bozuklukta yaşam olaylarının ve psikososyal stresörlerin atak başlangıcında hiçbir etkisi yoktur.",
+       "isLie": true,
+       "explanation": "Olumsuz yaşam olayları özellikle ilk epizotların tetiklenmesinde kritik bir rol oynar."
+      },
+      {
+       "text": "Psikoanalitik yaklaşımlarda çocuğun anne ve babayla yaptığı özdeşimlerin rolü vurgulanır.",
+       "isLie": false,
+       "explanation": "Erken dönem ebeveyn özdeşimleri psikodinamik modellerde önemli bir etkendir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 7,
+   "bolum": "2.3",
+   "pdfSayfalari": [
+    19,
+    21
+   ],
+   "sourcePdf": {
+    "fileName": "Bipolar Bozukluk.pdf",
+    "primaryPage": 19,
+    "startPage": 19,
+    "endPage": 21
+   },
+   "title": "Klinik Özellikler: Maninin Kardinal Triadı, Genel Görünüm ve Duygudurum",
+   "subtitle": "Öfori, Renkli Görünüm, Bulaşıcı Neşe ve İrritabilite",
+   "badge": "KLİNİK BELİRTİLER",
+   "synthesisNarrative": "Manik epizodun klinik tablosu üç kardinal belirti etrafında şekillenir.\n\n- **Maninin Klasik Triadı:** Kendini iyi hissetme (öfori), fikir uçuşması ve psikomotor eksitasyon maninin çekirdek belirtileridir.\n- **Genel Görünüm:** Hastalar son derece canlı, renkli, uyumsuz ve dikkat çekici giyinirler; abartılı makyaj ve süslenme eşlik eder. Ancak aşırı hareketlilik nedeniyle kişisel özbakımlarını ve hijyenlerini ihmal ederler.\n- **Duygudurum Dinamiği:** Mizaç öfori, coşkunluk, taşkınlık ve aşırı güven ile karakterizedir; neşeleri çevreye bulaşıcıdır.\n\n> [!IMPORTANT]\n> Manide duygudurum her zaman neşeli değildir; engellenmeye tahammülsüzlük, çabuk kızma, öfke patlamaları ve irritabilite son derece sıktır.",
+   "content": "Maninin triadı: Kendini iyi hissetme (öfori), fikir uçuşması ve psikomotor eksitasyondur.\n\n- **Genel Görünüm:** Canlı, renkli giyinmiş, abartılı makyajlıdır; özbakımı ihmal edebilirler.\n- **Duygudurum:** Öfori ve aşırı güven hakimdir; neşe bulaşıcıdır.\n- **İrritabilite:** Engellendiklerinde hızla öfkeli ve saldırgan olabilirler.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Manik epizodun klinik tablosunda yer alan klasik semptom triadı aşağıdakilerden hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Kendini iyi hissetme (öfori), fikir uçuşması ve psikomotor eksitasyon",
+       "isCorrect": true,
+       "explanation": "Kendini iyi hissetme (öfori), fikir uçuşması ve psikomotor eksitasyon ifadesi bipolar bozukluğun temel nozolojik ve klinik kuralını eksiksiz açıklayan doğru yaklaşımdır. Klinik pratikte hastaların tanısal değerlendirmesi ve sağaltımı doğrudan bu bilimsel ilkeye dayanılarak yürütülür."
+      },
+      {
+       "key": "B",
+       "text": "Depresif mizaç, anhedoni ve kilo kaybı",
+       "isCorrect": false,
+       "explanation": "Depresif mizaç, anhedoni ve kilo kaybı ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "C",
+       "text": "Bilinç kaybı, konvülsiyon ve nistagmus",
+       "isCorrect": false,
+       "explanation": "Bilinç kaybı, konvülsiyon ve nistagmus ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "D",
+       "text": "Duygusal küntlük, aloji ve avolisyon",
+       "isCorrect": false,
+       "explanation": "Duygusal küntlük, aloji ve avolisyon ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "E",
+       "text": "Aşırı uyku ihtiyacı, yorgunluk ve mutizm",
+       "isCorrect": false,
+       "explanation": "Aşırı uyku ihtiyacı, yorgunluk ve mutizm ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kendini iyi hissetme (öfori), fikir uçuşması ve psikomotor eksitasyon maninin klasik belirtileridir.",
+     "maskedTerm": "öfori",
+     "hint": "Patolojik taşkın neşe hali"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Manik Görünüm ve Duygudurum Özellikleri",
+     "items": [
+      {
+       "text": "Manik hastaların genel görünümünde canlı, renkli ve uyumsuz giyim dikkat çeker.",
+       "isLie": false,
+       "explanation": "Abartılı ve renkli giyim maninin tipik vizite bulgusudur."
+      },
+      {
+       "text": "Manik hastalar aşırı koşturmaca nedeniyle kişisel özbakım ve hijyenlerini ihmal edebilirler.",
+       "isLie": false,
+       "explanation": "Sürekli hareket halinde olduklarından temel bakımlarını savsaklarlar."
+      },
+      {
+       "text": "Manik duygudurumda engellenmeye karşı hiçbir tepki verilmez, hasta her zaman sakin kalır.",
+       "isLie": true,
+       "explanation": "Manik duygudurum labildir; istekleri engellendiğinde aşırı irritabl, saldırgan ve öfkeli hale gelirler."
+      },
+      {
+       "text": "Fikir uçuşması ve psikomotor eksitasyon maninin klasik çekirdek belirtilerindendir.",
+       "isLie": false,
+       "explanation": "Öfori ile birlikte manik triadın diğer iki parçasıdır."
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Manik Dönem Belirtisi",
+     "rightCategory": "Depresif Dönem Belirtisi",
+     "cards": [
+      {
+       "text": "Öfori ve taşkın mizaç",
+       "category": "left"
+      },
+      {
+       "text": "Anhedoni ve zevk alamama",
+       "category": "right"
+      },
+      {
+       "text": "Fikir uçuşması ve basınçlı konuşma",
+       "category": "left"
+      },
+      {
+       "text": "Psikomotor yavaşlama ve suskunluk",
+       "category": "right"
+      },
+      {
+       "text": "Canlı, renkli ve abartılı giyim",
+       "category": "left"
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Manik bir hastanın istekleri sınırlandırıldığında veya engellendiğinde duygudurumunda ne tür bir değişim gözlenir?",
+     "answer": "Hasta anında öforiden irritabiliteye (çabuk kızma, öfke patlamaları, saldırganlık) kayar; duygudurum labildir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 8,
+   "bolum": "2.1",
+   "pdfSayfalari": [
+    13,
+    21
+   ],
+   "sourcePdf": {
+    "fileName": "Bipolar Bozukluk.pdf",
+    "primaryPage": 13,
+    "startPage": 13,
+    "endPage": 21
+   },
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Etiyoloji ve Erken Manik Belirtiler",
+   "subtitle": "Epidemiyoloji, Genetik, Nörobiyoloji ve Klinik Triad Tekrarı",
+   "badge": "CHECKPOINT",
+   "synthesisNarrative": "Bu aşamaya kadar bipolar bozukluğun yaygınlığını, biyolojik mekanizmalarını ve erken manik fenomenolojisini inceledik.\n\n- **Epidemiyoloji ve Genetik:** Prevalans %1-5, kadın=erkek eşitliği, 20-30 yaş başlangıcı. Monozigot ikizlerde %40-70 konkordans, 1. derece akrabalarda 8-18 kat risk artışı.\n- **Hücresel Temel:** Membran Na+/K+ ATPaz yetersizliği, monoamin disregülasyonu ve uyku yoksunluğunun tetikleyici gücü.\n- **Manik Triad:** Kendini iyi hissetme (öfori/irritabilite), fikir uçuşması ve psikomotor eksitasyon.",
+   "content": "Checkpoint 2 kazanımları:\n\n- **Biyolojik Risk:** 1. derece akrabada 8-18 kat risk, tek yumurta ikizinde %40-70 konkordans.\n- **Membran Teorisi:** Hücre zarında Na+/K+ ATPaz pompa yetersizliği.\n- **Klinik Triad:** Öfori, fikir uçuşması ve psikomotor eksitasyon.\n- **Görünüm:** Canlı renkli giyim, bulaşıcı neşe ve labil irritabilite.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Bipolar bozukluğun etiyolojisi ve klinik görünümü hakkında aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Membran teorisi - Na+/K+ ATPaz pompa yetersizliği",
+       "isCorrect": true,
+       "explanation": "Membran teorisi - Na+/K+ ATPaz pompa yetersizliği ifadesi bipolar bozukluğun temel nozolojik ve klinik kuralını eksiksiz açıklayan doğru yaklaşımdır. Klinik pratikte hastaların tanısal değerlendirmesi ve sağaltımı doğrudan bu bilimsel ilkeye dayanılarak yürütülür."
+      },
+      {
+       "key": "B",
+       "text": "Cinsiyet dağılımı - Kadınlarda erkeklerden 5 kat sık",
+       "isCorrect": false,
+       "explanation": "Cinsiyet dağılımı - Kadınlarda erkeklerden 5 kat sık ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "C",
+       "text": "Manik triad - Afazi, apraksi ve agnozi",
+       "isCorrect": false,
+       "explanation": "Manik triad - Afazi, apraksi ve agnozi ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "D",
+       "text": "Monozigot ikiz konkordansı - %5'in altındadır",
+       "isCorrect": false,
+       "explanation": "Monozigot ikiz konkordansı - %5'in altındadır ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "E",
+       "text": "En sık başlangıç yaşı - 70 yaş sonrası",
+       "isCorrect": false,
+       "explanation": "En sık başlangıç yaşı - 70 yaş sonrası ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Alan",
+      "Kritik Değer / Bulgu",
+      "Klinik Önemi"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "1. Derece Akraba Riski"
+       },
+       {
+        "text": "8-18 kat artış",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Güçlü kalıtımsal yatkınlık"
+       }
+      ],
+      [
+       {
+        "text": "Monozigot İkiz Konkordansı"
+       },
+       {
+        "text": "%40-70 konkordans",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Genetik faktörlerin baskın rolü"
+       }
+      ],
+      [
+       {
+        "text": "Hücresel Membran Patolojisi"
+       },
+       {
+        "text": "Na+/K+ ATPaz yetersizliği"
+       },
+       {
+        "text": "Nöron uyarılabilirliğinde bozulma",
+        "isMasked": true,
+        "hint": ""
+       }
+      ],
+      [
+       {
+        "text": "Maninin Klasik Triadı"
+       },
+       {
+        "text": "Öfori, fikir uçuşması, eksitasyon",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Klinik çekirdek semptom grubu"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kadın ve erkeklerde görülme sıklığı: Eşit",
+     "maskedTerm": "Eşit",
+     "hint": "Cinsiyetler arası prevalans dengesi"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Checkpoint 2 Hızlı Denetim",
+     "items": [
+      {
+       "text": "Monozigot ikizlerde bipolar bozukluk konkordansı %40-70 düzeyindedir.",
+       "isLie": false,
+       "explanation": "İkiz çalışmaları bu yüksek oranı doğrulamıştır."
+      },
+      {
+       "text": "Manik hastaların neşesi çevreye bulaşıcıdır ancak engellendiklerinde irritabl olabilirler.",
+       "isLie": false,
+       "explanation": "Duygudurum labildir ve irritabilite sıktır."
+      },
+      {
+       "text": "Manik epizodun klasik semptom triadında uyku ihtiyacında aşırı artış yer alır.",
+       "isLie": true,
+       "explanation": "Manik triad öfori, fikir uçuşması ve psikomotor eksitasyondur; uyku ihtiyacı artmaz, aksine belirgin olarak azalır."
+      },
+      {
+       "text": "Kortiko-limbik devreler duygudurumun yürütülmesinden sorumlu temel nöroanatomik ağlardır.",
+       "isLie": false,
+       "explanation": "Prefrontal korteks, amigdala ve hipokampus devreleri disfonksiyoneldir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Bipolar hastanın ailesinde hastalık riski ve ikiz eşhastalanma oranları nasıldır?",
+     "answer": "1. derece akrabalarda risk 8-18 kat artmıştır; monozigot ikizlerde konkordans %40-70, dizigot ikizlerde %10-20'dir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 9,
+   "bolum": "3.1",
+   "pdfSayfalari": [
+    22,
+    24
+   ],
+   "sourcePdf": {
+    "fileName": "Bipolar Bozukluk.pdf",
+    "primaryPage": 22,
+    "startPage": 22,
+    "endPage": 24
+   },
+   "title": "Bilişsel Yetiler, Algı Bozuklukları ve Düşünce Süreci Patolojileri",
+   "subtitle": "Distraktibilite, Halüsinasyonlar, Fikir Uçuşması ve Grandiyözite",
+   "badge": "PSİKOPATOLOJİ",
+   "synthesisNarrative": "Manik epizotta bilişsel süreçler, algı ve düşünce yapısı dramatik biçimde etkilenir.\n\n- **Bilişsel Yetiler ve Bilinç:** Bilinç genellikle açıktır; ancak aşırı uykusuzluk ve beslenme yetersizliğiyle bitkin düşenlerde dalgalanmalar olabilir. Dikkat aşırı distraktibildir (en ufak uyarana çelinir).\n- **Algı Bozuklukları:** Ağır manik hastaların yaklaşık %50'sinde işitme ve görme halüsinasyonları görülür; bunlar genellikle duygudurumla uyumludur (övgü dolu, yüceltici sesler).\n- **Düşünce Süreci:** Düşünce akışında hızlanma, fikir uçuşması ve çağrışım zenginliği vardır; konuşma durdurulamaz bir basınçla akar (logore).\n\n> [!IMPORTANT]\n> Düşünce içeriğinde grandiyöz sanrılar (peygamberlik, olağanüstü zenginlik, üstün güçler) ve perseküsyon sanrıları sıklıkla tabloya hakimdir.",
+   "content": "Bilinç genellikle açıktır; dikkat distraktibildir.\n\n- **Algı:** Ağır olguların %50'sinde işitme/görme halüsinasyonları görülür; sıklıkla duygudurumla uyumludur.\n- **Düşünce Süreci:** Düşünce hızlanması, fikir uçuşması ve basınçlı konuşma (logore) vardır.\n- **Düşünce İçeriği:** Büyüklük (grandiyözite) sanrıları ve perseküsyon izlenir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Ağır manik tablolarda görülen algı bozuklukları ve düşünce içeriği ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Ağır hastaların yaklaşık %50'sinde duygudurumla uyumlu işitme/görme halüsinasyonları ve grandiyöz sanrılar görülür.",
+       "isCorrect": true,
+       "explanation": "Ağır hastaların yaklaşık %50'sinde duygudurumla uyumlu işitme/görme halüsinasyonları ve grandiyöz sanrılar görülür ifadesi bipolar bozukluğun temel nozolojik ve klinik kuralını eksiksiz açıklayan doğru yaklaşımdır. Klinik pratikte hastaların tanısal değerlendirmesi ve sağaltımı doğrudan bu bilimsel ilkeye dayanılarak yürütülür."
+      },
+      {
+       "key": "B",
+       "text": "Manik hastalarda halüsinasyon görülme oranı binde birin altındadır.",
+       "isCorrect": false,
+       "explanation": "Manik hastalarda halüsinasyon görülme oranı binde birin altındadır ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "C",
+       "text": "Manide düşünce akışı tamamen donar ve hasta dakikalarca tek kelime konuşamaz.",
+       "isCorrect": false,
+       "explanation": "Manide düşünce akışı tamamen donar ve hasta dakikalarca tek kelime konuşamaz ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "D",
+       "text": "Manik hastaların dikkati tek bir noktaya saatlerce hiç dağılmadan kilitlenir.",
+       "isCorrect": false,
+       "explanation": "Manik hastaların dikkati tek bir noktaya saatlerce hiç dağılmadan kilitlenir ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "E",
+       "text": "Grandiyöz sanrılar manide asla görülmez, yalnızca depresyona özgüdür.",
+       "isCorrect": false,
+       "explanation": "Grandiyöz sanrılar manide asla görülmez, yalnızca depresyona özgüdür ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Manik hastalarda düşünce akışında bir hızlanma olduğu görülür.",
+     "maskedTerm": "hızlanma",
+     "hint": "Akış temposundaki süratlenme"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Biliş, Algı ve Düşünce Değerlendirmesi",
+     "items": [
+      {
+       "text": "Manide dikkat distraktibildir; iç ve dış uyaranlarla son derece kolay çelinir.",
+       "isLie": false,
+       "explanation": "Distraktibilite maninin temel bilişsel bulgusudur."
+      },
+      {
+       "text": "Manik hastalarda düşünce sürecinde fikir uçuşması ve çağrışım zenginliği izlenir.",
+       "isLie": false,
+       "explanation": "Zihindeki fikirlerin yarışması fikir uçuşması tablosunu doğurur."
+      },
+      {
+       "text": "Ağır manik hastalarda halüsinasyon görülmesi kesinlikle imkansızdır.",
+       "isLie": true,
+       "explanation": "Ağır olguların yaklaşık yarısında (%50) işitme ve görme halüsinasyonları ortaya çıkabilir."
+      },
+      {
+       "text": "Grandiyözite duyguları hastanın kendini peygamber veya lider sanmasına yol açabilir.",
+       "isLie": false,
+       "explanation": "Büyüklük hezeyanları manik düşünce içeriğinde sıktır."
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Bilişsel ve Düşünce Patolojisi",
+     "rightCategory": "Duygudurum ve Algı Patolojisi",
+     "cards": [
+      {
+       "text": "Distraktibilite (dikkatin kolay çelinmesi)",
+       "category": "left"
+      },
+      {
+       "text": "Öfori ve taşkın duygudurum",
+       "category": "right"
+      },
+      {
+       "text": "Fikir uçuşması ve basınçlı konuşma (logore)",
+       "category": "left"
+      },
+      {
+       "text": "İşitme ve görme halüsinasyonları",
+       "category": "right"
+      },
+      {
+       "text": "Grandiyöz (büyüklük) sanrıları",
+       "category": "left"
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Ağır manik tablolarda algı bozukluklarının sıklığı ve içeriği nasıldır?",
+     "answer": "Ağır maniklerin yaklaşık %50'sinde işitme ve görme halüsinasyonları görülür; bunlar çoğunlukla duygudurumla uyumlu (büyüklüğü destekleyici) niteliktedir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 10,
+   "bolum": "3.2",
+   "pdfSayfalari": [
+    25,
+    28
+   ],
+   "sourcePdf": {
+    "fileName": "Bipolar Bozukluk.pdf",
+    "primaryPage": 25,
+    "startPage": 25,
+    "endPage": 28
+   },
+   "title": "Davranışsal Özellikler, Dürtüsellik ve Fizyolojik Değişiklikler",
+   "subtitle": "Yargılama Kaybı, Hiperseksüalite, Aşırı Harcama ve Azalmış Uyku İhtiyacı",
+   "badge": "DAVRANIŞ VE FİZYOLOJİ",
+   "synthesisNarrative": "Manik epizotta grandiyözite ve yargılama bozukluğu hastanın davranışlarını doğrudan kontrol eder.\n\n- **Riskli Davranışlar:** Hastalar kendilerine ve çevreye zarar verebilecek tehlikeli girişimlere atılırlar; hızlı araç kullanma ve sosyal sınırları ihlal etme sıktır.\n- **Hiperseksüalite ve Sedüktivite:** Cinsel dürtülerde artış, baştan çıkarıcı tavırlar ve rastgele cinsel ilişkiler görülür; bu durum hastanın olağan ahlaki yapısıyla çelişir.\n- **Finansal Dürtüsellik:** Ödeyebileceğinin üzerinde para harcama, aşırı borçlanma, mal varlığını yabancılara dağıtma tipiktir.\n- **Fizyolojik Belirteç:** Çok enerjiktirler; yorgunluk ve ağrıya olağanüstü direnç gösterirler. Uyku gereksinimi belirgin azalır (2-3 saat uykuyla son derece dinç kalkarlar).\n\n> [!IMPORTANT]\n> Manideki uyku bozukluğu insomnia (uyuyamama) değil, 'uyku ihtiyacında azalma'dır.",
+   "content": "Yargılama bozukluğu sonucu riskli davranışlar sergilenir.\n\n- **Cinsellik:** Hiperseksüalite ve sedüktif tavırlar sıktır.\n- **Finans:** Aşırı para harcama, borçlanma ve mal varlığını dağıtma görülür.\n- **Fizyoloji:** Çok enerjiktirler, ağrı ve yorgunluğa dirençlidirler.\n- **Uyku:** Uyku ihtiyacı belirgin azalır (2-3 saat uyku yeterli gelir).",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Manik dönemdeki bir hastanın fizyolojik özellikleri ve uyku paterni ile ilgili aşağıdakilerden hangisi DOĞRUDUR?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Uyku ihtiyacı belirgin olarak azalır; günde 2-3 saat uyumalarına rağmen kendilerini son derece enerjik hissederler.",
+       "isCorrect": true,
+       "explanation": "Uyku ihtiyacı belirgin olarak azalır; günde 2-3 saat uyumalarına rağmen kendilerini son derece enerjik hissederler ifadesi bipolar bozukluğun temel nozolojik ve klinik kuralını eksiksiz açıklayan doğru yaklaşımdır. Klinik pratikte hastaların tanısal değerlendirmesi ve sağaltımı doğrudan bu bilimsel ilkeye dayanılarak yürütülür."
+      },
+      {
+       "key": "B",
+       "text": "Günde 15 saatten fazla uyurlar ve yataktan çıkmakta zorlanırlar.",
+       "isCorrect": false,
+       "explanation": "Günde 15 saatten fazla uyurlar ve yataktan çıkmakta zorlanırlar ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "C",
+       "text": "Ağrı duyumuna karşı aşırı hassaslaşırlar ve en ufak uyaranla kıvranırlar.",
+       "isCorrect": false,
+       "explanation": "Ağrı duyumuna karşı aşırı hassaslaşırlar ve en ufak uyaranla kıvranırlar ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "D",
+       "text": "Enerji düzeyleri sıfıra iner ve kronik bir yorgunluk yaşarlar.",
+       "isCorrect": false,
+       "explanation": "Enerji düzeyleri sıfıra iner ve kronik bir yorgunluk yaşarlar ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "E",
+       "text": "Finansal harcamalarında aşırı tutumlu ve cimri hale gelirler.",
+       "isCorrect": false,
+       "explanation": "Finansal harcamalarında aşırı tutumlu ve cimri hale gelirler ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Çok enerjiktirler. Yorgunluk gibi ağrıya da çok direnç gösterirler.",
+     "maskedTerm": "direnç",
+     "hint": "Zorluğa veya acıya karşı dayanma gücü"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Manik Davranış ve Fizyoloji Değerlendirmesi",
+     "items": [
+      {
+       "text": "Manik hastalar yorgunluk hissetmedikleri gibi ağrıya karşı da yüksek direnç gösterirler.",
+       "isLie": false,
+       "explanation": "Fizyolojik duyumların santral regülasyonu değişmiştir."
+      },
+      {
+       "text": "Bazı manik hastalar ödeyebileceğinin üzerinde para harcar, bazıları ise malını bağışlar.",
+       "isLie": false,
+       "explanation": "Finansal dürtüsellik ve hezeyani cömertlik tipiktir."
+      },
+      {
+       "text": "Manik hastalar tüm eylemlerinin yasal ve sosyal sonuçlarını titizlikle ve sağduyuyla tartar.",
+       "isLie": true,
+       "explanation": "Yargılama ve sonuçları değerlendirme yetisi çökmüştür; pervasızca risk alırlar."
+      },
+      {
+       "text": "Hiperseksüalite ve rastgele cinsel ilişkiler manik dönemde ortaya çıkabilen davranışlardandır.",
+       "isLie": false,
+       "explanation": "Cinsel inhibisyonların kalkmasıyla hiperseksüalite gelişir."
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Dürtüsel Davranışlar",
+     "rightCategory": "Fizyolojik Değişiklikler",
+     "cards": [
+      {
+       "text": "Aşırı para harcama ve kontrolsüz borçlanma",
+       "category": "left"
+      },
+      {
+       "text": "Uyku gereksiniminde belirgin azalma (2-3 saat)",
+       "category": "right"
+      },
+      {
+       "text": "Hiperseksüalite ve sedüktif tavırlar",
+       "category": "left"
+      },
+      {
+       "text": "Yorgunluk ve ağrıya olağanüstü direnç",
+       "category": "right"
+      },
+      {
+       "text": "Yüksek hızda araba kullanma ve kural tanımazlık",
+       "category": "left"
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Manik hastaların uyku bozukluğu sıradan uykusuzluktan (insomnia) nasıl ayrılır?",
+     "answer": "Hasta uyuyamamaktan yakınmaz; uyku gereksinimi azalmıştır, 2-3 saat uykuyla kendini tamamen dinlenmiş ve enerjik hisseder."
+    }
+   ]
+  },
+  {
+   "slideNumber": 11,
+   "bolum": "3.3",
+   "pdfSayfalari": [
+    29,
+    32
+   ],
+   "sourcePdf": {
+    "fileName": "Bipolar Bozukluk.pdf",
+    "primaryPage": 29,
+    "startPage": 29,
+    "endPage": 32
+   },
+   "title": "DSM-5 Tanı Kriterleri: Manik Epizod ve Majör Depresif Epizod",
+   "subtitle": "Tanısal Süre Şartları, Semptom Sayımı ve Duygudurum Yelpazesi",
+   "badge": "TANI VE KLAVUZLAR",
+   "synthesisNarrative": "DSM-5 tanı sisteminde her iki epizodun süre ve semptom eşikleri açıkça tanımlanmıştır.\n\n- **Manik Epizod:** En az bir hafta süren (veya hastaneye yatırılmayı gerektiren) kabarmış, taşkın ya da irritabl duygudurum şarttır. Taşkın ise en az 3, yalnızca irritabl ise en az 4 semptom (grandiyözite, uyku ihtiyacında azalma, logore, fikir uçuşması, distraktibilite, ajitasyon, risk alma) bulunmalıdır. Belirgin işlev kaybı veya hastaneye yatış gereği olmalıdır.\n- **Majör Depresif Epizod:** En az 15 gün (2 hafta) süren, en az biri çökkün mizaç veya anhedoni olmak üzere 9 belirtiden en az 5'inin bulunması gerekir. Yas durumu dışlanmalıdır.\n\n> [!IMPORTANT]\n> Pür mani öfori ve büyüklükle giderken; disforik (karma) mani depresyon, anksiyete ve düşmanlık komorbiditesiyle seyreder ve intihar riski çok yüksektir.",
+   "content": "Manik epizot en az 1 hafta sürmelidir (veya hastaneye yatış gerektirir).\n\n- **Semptom Kuralı:** Taşkın ise en az 3, irritabl ise en az 4 semptom şarttır.\n- **Depresif Epizot:** En az 15 gün süreyle 9 belirtiden en az 5'i (biri çökkünlük veya anhedoni) olmalıdır.\n- **Duygudurum Yelpazesi:** Pür mani, disforik mani, hipomani, ötimi ve depresyon basamaklarını içerir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "DSM-5'e göre Manik Epizod tanısı koyabilmek için duygudurumdaki değişikliğin asgari olarak ne kadar sürmesi gerekir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "En az bir hafta sürmelidir (veya hastaneye yatış gerektirecek ağırlıkta olmalıdır).",
+       "isCorrect": true,
+       "explanation": "En az bir hafta sürmelidir (veya hastaneye yatış gerektirecek ağırlıkta olmalıdır) ifadesi bipolar bozukluğun temel nozolojik ve klinik kuralını eksiksiz açıklayan doğru yaklaşımdır. Klinik pratikte hastaların tanısal değerlendirmesi ve sağaltımı doğrudan bu bilimsel ilkeye dayanılarak yürütülür."
+      },
+      {
+       "key": "B",
+       "text": "En az 24 saat sürmesi her durumda yeterlidir.",
+       "isCorrect": false,
+       "explanation": "En az 24 saat sürmesi her durumda yeterlidir ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "C",
+       "text": "Yalnızca 4 gün sürmesi mani tanısı için tam yeterlidir.",
+       "isCorrect": false,
+       "explanation": "Yalnızca 4 gün sürmesi mani tanısı için tam yeterlidir ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "D",
+       "text": "Belirtilerin en az 6 ay boyunca kesintisiz sürmesi şarttır.",
+       "isCorrect": false,
+       "explanation": "Belirtilerin en az 6 ay boyunca kesintisiz sürmesi şarttır ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "E",
+       "text": "Süreye bakılmaksızın sadece sabah saatlerinde görülmesi yeterlidir.",
+       "isCorrect": false,
+       "explanation": "Süreye bakılmaksızın sadece sabah saatlerinde görülmesi yeterlidir ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Tanısal Parametre",
+      "Manik Epizod",
+      "Majör Depresif Epizod"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "Asgari Süre Şartı"
+       },
+       {
+        "text": "En az 1 hafta (veya yatış)",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "En az 15 gün (2 hafta)"
+       }
+      ],
+      [
+       {
+        "text": "Kardinal Mizaç Özelliği"
+       },
+       {
+        "text": "Kabarmış, öforik veya irritabl"
+       },
+       {
+        "text": "Çökkün mizaç veya anhedoni",
+        "isMasked": true,
+        "hint": ""
+       }
+      ],
+      [
+       {
+        "text": "Gereken Ek Semptom"
+       },
+       {
+        "text": "En az 3 (irritabl ise 4)",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "9 belirtiden en az 5'i"
+       }
+      ],
+      [
+       {
+        "text": "Uyku Değişikliği"
+       },
+       {
+        "text": "Uyku ihtiyacında azalma"
+       },
+       {
+        "text": "Uykusuzluk veya aşırı uyuma",
+        "isMasked": true,
+        "hint": ""
+       }
+      ]
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "En az bir hafta süren duygudurum değişikliği (taşkınlık, İrritabilite, yükselme)",
+     "maskedTerm": "hafta",
+     "hint": "Yedi günlük zaman birimi"
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Pür (Saf) Mani",
+     "rightTitle": "Disforik / Karma Mani",
+     "leftPoints": [
+      "Kabarmış, öforik ve taşkın mizaç hakimdir",
+      "Neşe çevreye bulaşıcı ve sıcaktır",
+      "Grandiyözite ve benlik saygısında artış vardır",
+      "İntihar riski karma maniye göre daha düşüktür"
+     ],
+     "rightPoints": [
+      "Depresyon ve anksiyete komorbiditesi mevcuttur",
+      "İrritabilite, huzursuzluk ve düşmanlık ön plandadır",
+      "Hasta taşkınlık içinde ağlama nöbetleri yaşar",
+      "Dürtüsel intihar riski son derece yüksektir"
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "DSM-5 Tanı Kriterleri Denetimi",
+     "items": [
+      {
+       "text": "Manik epizotta hastaneye yatış gerektiren durumlarda 1 haftalık süre şartı aranmaz.",
+       "isLie": false,
+       "explanation": "Yatış gerekliliği süreden bağımsız mani kriteridir."
+      },
+      {
+       "text": "Majör depresif epizot tanısı için en az 15 gün süreyle 9 belirtiden en az 5'i bulunmalıdır.",
+       "isLie": false,
+       "explanation": "DSM-5 depresyon ölçütüdür."
+      },
+      {
+       "text": "Manik epizodun konulabilmesi için tablonun mutlaka madde kullanımına bağlı olması gerekir.",
+       "isLie": true,
+       "explanation": "Madde kullanımına veya genel tıbbi duruma bağlı olmaması dışlama kriteridir; maddeye bağlı ise primer manik epizot denmez."
+      },
+      {
+       "text": "Ötimi, duygudurum atakları arasındaki normal ve dengeli sürdürüm evresidir.",
+       "isLie": false,
+       "explanation": "Ötimi sağlıklı duygudurum dengesini ifade eder."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 12,
+   "bolum": "3.1",
+   "pdfSayfalari": [
+    22,
+    32
+   ],
+   "sourcePdf": {
+    "fileName": "Bipolar Bozukluk.pdf",
+    "primaryPage": 22,
+    "startPage": 22,
+    "endPage": 32
+   },
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Fenomenoloji, Fizyoloji ve Tanı Kriterleri",
+   "subtitle": "Klinik Tablo, Psikopatoloji ve DSM-5 Ölçütleri Bütünleştirmesi",
+   "badge": "CHECKPOINT",
+   "synthesisNarrative": "Bu bölümde manik tablonun bilişsel, davranışsal, fizyolojik ve tanısal boyutlarını derinlemesine işledik.\n\n- **Psikopatoloji:** Distraktibilite, logore (basınçlı konuşma), fikir uçuşması, grandiyözite ve %50 olguda duygudurumla uyumlu halüsinasyonlar.\n- **Dürtüsellik ve Fizyoloji:** Yargılama kaybı, hiperseksüalite, sedüktivite, aşırı borçlanma ve 2-3 saatlik uykuyla dinç hissetme.\n- **Tanı Kriterleri:** Manik epizot için en az 1 hafta (3/4 kuralı), depresif epizot için en az 15 gün (5/9 kuralı).\n- **Spektrum:** Pür mani ile disforik karma mani arasındaki kritik klinik ayrım.",
+   "content": "Checkpoint 3 kazanımları:\n\n- **Psikopatoloji:** Fikir uçuşması, logore, distraktibilite, grandiyözite.\n- **Fizyoloji:** Azalmış uyku ihtiyacı, ağrı ve yorgunluğa direnç.\n- **DSM-5:** Mani için en az 1 hafta, depresyon için en az 15 gün.\n- **Klinik Tipler:** Pür mani vs disforik karma mani ayrımı.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdaki klinik tablolardan hangisi tipik bir manik epizodun düşünce ve davranış özellikleriyle TAM UYUMLUDUR?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Logore, fikir uçuşması, grandiyöz sanrılar ve uyku ihtiyacında belirgin azalma",
+       "isCorrect": true,
+       "explanation": "Logore, fikir uçuşması, grandiyöz sanrılar ve uyku ihtiyacında belirgin azalma ifadesi bipolar bozukluğun temel nozolojik ve klinik kuralını eksiksiz açıklayan doğru yaklaşımdır. Klinik pratikte hastaların tanısal değerlendirmesi ve sağaltımı doğrudan bu bilimsel ilkeye dayanılarak yürütülür."
+      },
+      {
+       "key": "B",
+       "text": "Düşünce blokları, aloji, aşırı uyuma ve suçluluk hezeyanları",
+       "isCorrect": false,
+       "explanation": "Düşünce blokları, aloji, aşırı uyuma ve suçluluk hezeyanları ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "C",
+       "text": "Günde 16 saat uyuma, mutizm ve derin psikomotor retardasyon",
+       "isCorrect": false,
+       "explanation": "Günde 16 saat uyuma, mutizm ve derin psikomotor retardasyon ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "D",
+       "text": "Konsantrasyonun kusursuz olması ve her konunun günlerce sakinlikle düşünülmesi",
+       "isCorrect": false,
+       "explanation": "Konsantrasyonun kusursuz olması ve her konunun günlerce sakinlikle düşünülmesi ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "E",
+       "text": "Para harcamaktan aşırı korkma ve evden hiç çıkmama",
+       "isCorrect": false,
+       "explanation": "Para harcamaktan aşırı korkma ve evden hiç çıkmama ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      }
+     ]
+    },
+    {
+     "type": "venn_grid",
+     "labelA": "Manik Epizod",
+     "labelB": "Hipomanik Epizod",
+     "items": [
+      {
+       "criterion": "En az 1 hafta sürme veya hastaneye yatış gerektirme",
+       "correct": "A",
+       "explanation": "Hastaneye yatış veya 1 haftalık süre maniye aittir."
+      },
+      {
+       "criterion": "En az 4 gün sürme ve hastaneye yatış gerektirmeme",
+       "correct": "B",
+       "explanation": "Hipomaninin temel tanı süresi 4 gündür ve yatış gerektirmez."
+      },
+      {
+       "criterion": "Kabarmış, taşkın veya irritabl duygudurum bulunması",
+       "correct": "both",
+       "explanation": "Her iki epizotta da mizaç kabarmış veya irritabldır."
+      },
+      {
+       "criterion": "Psikotik belirtilerin (sanrı ve halüsinasyon) bulunabilmesi",
+       "correct": "A",
+       "explanation": "Psikoz varlığı tabloyu doğrudan mani yapar; hipomanide psikoz olamaz."
+      },
+      {
+       "criterion": "Toplumsal veya mesleki işlevsellikte belirgin yıkım yapmaması",
+       "correct": "B",
+       "explanation": "Hipomani işlevselliği ağır şekilde bozmaz."
+      },
+      {
+       "criterion": "Kalıcı ve ilerleyici demansiyel kortikal yıkımla sonlanması",
+       "correct": "neither",
+       "explanation": "Her iki duygudurum epizodu da demans yapmaz, remisyona girer."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Aşağıdakilerden en az 5’inin en az 15 gün süre ile bulunması",
+     "maskedTerm": "15",
+     "hint": "İki haftalık sürenin gün sayısı (rakamla)"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Checkpoint 3 Doğrulama",
+     "items": [
+      {
+       "text": "Manik epizotta belirgin işlev kaybı veya hastaneye yatış gereği vardır.",
+       "isLie": false,
+       "explanation": "Maninin hipomaniden temel ayrımıdır."
+      },
+      {
+       "text": "Ağır manik hastaların yaklaşık %50'sinde işitme ve görme halüsinasyonları eşlik edebilir.",
+       "isLie": false,
+       "explanation": "Slayt 23 verisidir."
+      },
+      {
+       "text": "Hipomanik epizotta peygamberlik gibi grandiyöz psikotik sanrılar sıklıkla görülür.",
+       "isLie": true,
+       "explanation": "Hipomanide psikotik belirti asla bulunamaz; psikoz varsa tablo manidir."
+      },
+      {
+       "text": "Disforik karma manide anksiyete, depresyon ve irritabilite iç içedir.",
+       "isLie": false,
+       "explanation": "Karma maninin disforik yapısıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "DSM-5'e göre manik epizotta aranan semptom sayımı kuralı nedir?",
+     "answer": "Duygudurum kabarmış/öforik ise en az 3; yalnızca irritabl ise en az 4 semptom bulunmalıdır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 13,
+   "bolum": "4.1",
+   "pdfSayfalari": [
+    33,
+    34
+   ],
+   "sourcePdf": {
+    "fileName": "Bipolar Bozukluk.pdf",
+    "primaryPage": 33,
+    "startPage": 33,
+    "endPage": 34
+   },
+   "title": "Tanısal Zorluklar, Gecikmeler ve Ayırıcı Tanı İlkeleri",
+   "subtitle": "10 Yıllık Tanı Gecikmesi, Yanlış Tanılar ve Kapsamlı Ayırıcı Tanı",
+   "badge": "AYIRICI TANI",
+   "synthesisNarrative": "Bipolar bozuklukta ilk semptomlardan doğru tanıya ulaşma süreci ortalama 10 yılı bulabilir.\n\n- **Tanısal Engeller:** Her 3 hastadan biri başlangıçta yanlış tanı alır (en sık unipolar depresyon). Hastalar taşkınlık dönemini hastalık saymayıp inkar ederler; çoğunlukla çökkünlükte başvururlar. Anksiyete, DEHB, yeme bozuklukları ve madde bağımlılığı komorbiditeleri tanıyı gölgeler.\n- **Ayırıcı Tanı:**\n  - **Madde Kullanımı:** Başta kokain ve amfetamin olmak üzere uyarıcı maddeler dışlanmalıdır.\n  - **Şizofreni:** Manide duygudurum öforik ve bulaşıcıdır; akut paranoid şizofrenide duygulanım künt ve uyumsuzdur; klinik izlemle ayrılır.\n  - **Şizoafektif Bozukluk ve Organik Durumlar:** Nöropsikiyatrik ve organik patolojiler taranmalıdır.\n\n> [!IMPORTANT]\n> Depresyonla başvuran her hastada geçmiş hipomani veya mani dönemleri mutlaka taranmalıdır; aksi halde antidepresanla manik kayma tetiklenir.",
+   "content": "Tanı koyma ortalama 10 yıl alabilir; 3 hastadan biri yanlış tanı alır.\n\n- **Nedenler:** Hastanın inkarı, depresyonda başvurması, komorbiditeler.\n- **Ayırıcı Tanı:** Kokain ve amfetamin kullanımı, şizofreni, şizoafektif bozukluk ve organik hastalıklar dışlanmalıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Bipolar bozuklukta tanısal süreç ve ayırıcı tanı ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "İlk belirtilerden doğru tanıya ulaşma süresi 10 yılı bulabilir ve her 3 hastadan biri başlangıçta yanlış tanı alır.",
+       "isCorrect": true,
+       "explanation": "İlk belirtilerden doğru tanıya ulaşma süresi 10 yılı bulabilir ve her 3 hastadan biri başlangıçta yanlış tanı alır ifadesi bipolar bozukluğun temel nozolojik ve klinik kuralını eksiksiz açıklayan doğru yaklaşımdır. Klinik pratikte hastaların tanısal değerlendirmesi ve sağaltımı doğrudan bu bilimsel ilkeye dayanılarak yürütülür."
+      },
+      {
+       "key": "B",
+       "text": "Bipolar hastalar ilk manik atakta içgörüleri tam olduğu için hemen ilk gün psikiyatriye koşarlar.",
+       "isCorrect": false,
+       "explanation": "Bipolar hastalar ilk manik atakta içgörüleri tam olduğu için hemen ilk gün psikiyatriye koşarlar ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "C",
+       "text": "Kokain ve amfetamin kullanımı manik tabloyu asla taklit edemez.",
+       "isCorrect": false,
+       "explanation": "Kokain ve amfetamin kullanımı manik tabloyu asla taklit edemez ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "D",
+       "text": "Şizofreni ile mani ayrımında duygulanımın bulaşıcılığı hiçbir anlam taşımaz.",
+       "isCorrect": false,
+       "explanation": "Şizofreni ile mani ayrımında duygulanımın bulaşıcılığı hiçbir anlam taşımaz ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "E",
+       "text": "Bipolar depresyon geçiren hastalara çekinmeden yüksek doz antidepresan monoterapisi verilmelidir.",
+       "isCorrect": false,
+       "explanation": "Bipolar depresyon geçiren hastalara çekinmeden yüksek doz antidepresan monoterapisi verilmelidir ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Başta kokain ve amfetamin olmak üzere madde kötüye kullanımı maninin ayırıcı tanısında yer alır.",
+     "maskedTerm": "kokain",
+     "hint": "Sempatomimetik etkiyle taşkınlık yapan bağımlılık maddesi"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Tanısal Güçlükler ve Ayırıcı Tanı",
+     "items": [
+      {
+       "text": "Bipolar bozuklukta doğru tanı konulması ortalama 10 yıl gecikebilmektedir.",
+       "isLie": false,
+       "explanation": "Klinik çalışmalarda ortalama tanı gecikmesi 10 yıldır."
+      },
+      {
+       "text": "Bazı hastalar doğru tanıdan önce dörtten fazla hekime başvurmuş olabilir.",
+       "isLie": false,
+       "explanation": "Slayt 33 verisidir."
+      },
+      {
+       "text": "Akut paranoid şizofreni ile maniyi ayırmak klinikte her zaman tek vizitte çok kolaydır.",
+       "isLie": true,
+       "explanation": "Klinik görünüm açısından maniyi akut paranoid şizofreniden ayırmak zordur; gözlem ve klinik izlem gerekir."
+      },
+      {
+       "text": "Hasta manik dönemdeki coşkusunu bir hastalık olarak görmeyip inkar edebilir.",
+       "isLie": false,
+       "explanation": "İçgörü kaybı ve inkar temel tanısal engeldir."
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Maddeye Bağlı Durumlar",
+     "rightCategory": "Psikotik Bozukluklar",
+     "cards": [
+      {
+       "text": "Kokain ve amfetamin intoksikasyonu",
+       "category": "left"
+      },
+      {
+       "text": "Akut paranoid şizofreni",
+       "category": "right"
+      },
+      {
+       "text": "Sempatomimetik aşırı uyarılma",
+       "category": "left"
+      },
+      {
+       "text": "Şizoaffektif bozukluk",
+       "category": "right"
+      },
+      {
+       "text": "Madde kötüye kullanımı",
+       "category": "left"
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Bipolar bozukluk tanısının 10 yıla kadar gecikmesinin temel nedenleri nelerdir?",
+     "answer": "Hastaların hipomaniyi hastalık saymayıp inkar etmesi, genellikle depresyonda başvurmaları, unipolar depresyon zannedilmeleri ve komorbiditelerdir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 14,
+   "bolum": "4.2",
+   "pdfSayfalari": [
+    35,
+    39
+   ],
+   "sourcePdf": {
+    "fileName": "Bipolar Bozukluk.pdf",
+    "primaryPage": 35,
+    "startPage": 35,
+    "endPage": 39
+   },
+   "title": "Klinik Gidiş, Nüks Riskleri, Hızlı Döngülü Seyir ve Prognoz",
+   "subtitle": "Atak Sıklığı, İlk 3 Ay Relaps Tehlikesi ve Yaşam Yükü",
+   "badge": "GİDİŞ VE PROGNOZ",
+   "synthesisNarrative": "Bipolar bozukluk epizodik seyirli ancak yaşam boyu yüksek nüks oranına sahip bir hastalıktır.\n\n- **Tedavi Yanıtı ve Nüks:** Hastalar tedavi başlangıcından itibaren genellikle 3-4 haftada önemli ölçüde düzelir. Ancak tek manik atak geçirenlerin %90'ından fazlasında nüks olur. Yaş ilerledikçe atak araları kısalır.\n- **Kritik Relaps Dönemi:** Belirtiler tamamen düzeldikten sonraki ilk 3 ay tekrarlama için en kritik dönemdir.\n- **Lityum Kesilme Riski:** Lityum kesildikten sonraki 18 ayda relaps oranı %92 iken, sürdürenlerde %37'dir.\n- **Hastalık Yükü:** Bipolar bozukluk sağlıklı yaşam süresinde 12 yıl, iş yaşamında 14 yıl, yaşam beklentisinde 9 yıl azalmaya yol açar; iş sorunları ve boşanma 2 kat sıktır.\n\n> [!IMPORTANT]\n> İyi prognoz faktörleri: maninin hafif geçmesi, depresyonun kısa sürmesi, uzun iyilik aralıkları, iyi aile desteği ve madde bağımlılığı olmamasıdır.",
+   "content": "Tedaviyle 3-4 haftada düzelme sağlanır; tek atak geçirenlerin %90'ında nüks olur.\n\n- **Kritik Dönem:** Düzelmeden sonraki ilk 3 ay en yüksek relaps riskini taşır.\n- **Lityum Kesilmesi:** 18 ayda %92 nüks yaratır (sürdürenlerde %37).\n- **Yaşam Kaybı:** Sağlıklı yaşamda 12 yıl, iş yaşamında 14 yıl, yaşam beklentisinde 9 yıl kayıp yaratır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Bipolar bozukluğun klinik gidişi ve lityum profilaksisi ile ilgili aşağıdaki istatistiklerden hangisi DOĞRUDUR?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Lityum kesildikten sonraki 18 ay içinde relaps oranı %92'dir; lityumu sürdürenlerde ise bu oran %37'ye geriler.",
+       "isCorrect": true,
+       "explanation": "Lityum kesildikten sonraki 18 ay içinde relaps oranı %92'dir; lityumu sürdürenlerde ise bu oran %37'ye geriler ifadesi bipolar bozukluğun temel nozolojik ve klinik kuralını eksiksiz açıklayan doğru yaklaşımdır. Klinik pratikte hastaların tanısal değerlendirmesi ve sağaltımı doğrudan bu bilimsel ilkeye dayanılarak yürütülür."
+      },
+      {
+       "key": "B",
+       "text": "Tek bir manik atak geçirenlerin %90'ı bir daha asla atak geçirmez.",
+       "isCorrect": false,
+       "explanation": "Tek bir manik atak geçirenlerin %90'ı bir daha asla atak geçirmez ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "C",
+       "text": "Bir epizodun düzelmesinden sonraki ilk 3 ay nüks açısından en güvenli dönemdir.",
+       "isCorrect": false,
+       "explanation": "Bir epizodun düzelmesinden sonraki ilk 3 ay nüks açısından en güvenli dönemdir ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "D",
+       "text": "Bipolar bozukluk bireyin yaşam beklentisinde hiçbir azalmaya yol açmaz.",
+       "isCorrect": false,
+       "explanation": "Bipolar bozukluk bireyin yaşam beklentisinde hiçbir azalmaya yol açmaz ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "E",
+       "text": "Orta ve geç yaşlarda atak aralıkları giderek uzar.",
+       "isCorrect": false,
+       "explanation": "Orta ve geç yaşlarda atak aralıkları giderek uzar ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Bir epizodun tüm belirtilerinin tedavi ile ortadan kalktıktan sonraki ilk 3 ay, tekrarlama için en kritik dönemdir.",
+     "maskedTerm": "3",
+     "hint": "En kritik ilk ayların rakamla sayısı"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Gidiş ve Prognoz Değerlendirmesi",
+     "items": [
+      {
+       "text": "Hastalar tedavinin başlamasından itibaren genellikle 3-4 hafta içinde önemli ölçüde düzelir.",
+       "isLie": false,
+       "explanation": "Akut tedaviye yanıt süresi 3-4 haftadır."
+      },
+      {
+       "text": "Bipolar hastaların %40'ından fazlasında yaşam boyu 10'dan fazla epizot izlenir.",
+       "isLie": false,
+       "explanation": "Slayt 37 verisidir."
+      },
+      {
+       "text": "Madde bağımlılığının bulunması ve erken başlangıç bipolar bozuklukta iyi prognoz göstergesidir.",
+       "isLie": true,
+       "explanation": "Madde bağımlılığı ve erken başlangıç en önemli kötü prognoz göstergeleridir."
+      },
+      {
+       "text": "Bipolar bozukluk sağlıklı yaşam süresinde yaklaşık 12 yıl azalmaya neden olur.",
+       "isLie": false,
+       "explanation": "Hastalık yükü slayt 39'da belirtilmiştir."
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "İyi Prognoz Göstergeleri",
+     "rightCategory": "Kötü Prognoz Göstergeleri",
+     "cards": [
+      {
+       "text": "Mani atağının hafif geçmesi ve kısa depresyon",
+       "category": "left"
+      },
+      {
+       "text": "Alkol ve madde bağımlılığının bulunması",
+       "category": "right"
+      },
+      {
+       "text": "İyilik dönemlerinin uzun sürmesi",
+       "category": "left"
+      },
+      {
+       "text": "Erken başlangıç ve komorbid psikiyatrik hastalıklar",
+       "category": "right"
+      },
+      {
+       "text": "Olumlu aile ve sosyal destek koşulları",
+       "category": "left"
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Bipolar bozuklukta iyi prognozla ilişkili faktörler nelerdir?",
+     "answer": "Maninin hafif geçmesi, depresyonun kısa sürmesi, iyilik dönemlerinin uzunluğu, iyi aile/sosyal destek, madde alışkanlığı olmaması ve yaşın ilerlememiş olması."
+    }
+   ]
+  },
+  {
+   "slideNumber": 15,
+   "bolum": "4.3",
+   "pdfSayfalari": [
+    40,
+    43
+   ],
+   "sourcePdf": {
+    "fileName": "Bipolar Bozukluk.pdf",
+    "primaryPage": 40,
+    "startPage": 40,
+    "endPage": 43
+   },
+   "title": "Tedavi Stratejileri, Duygudurum Düzenleyiciler ve Biyolojik Tedaviler",
+   "subtitle": "Lityum, Antikonvülzanlar, Antipsikotikler, EKT ve Psikoeğitim",
+   "badge": "TEDAVİ",
+   "synthesisNarrative": "Bipolar bozukluk tedavisinde temel amaç her iki ucu da kontrol eden duygudurum stabilizasyonudur.\n\n- **Tedavi Evreleri:** Kısa süreli amaç akut semptomların kontrolü, ajitasyonun yatıştırılması ve intiharın önlenmesidir. Uzun süreli amaç relapsların önlenmesi ve kognitif işlevlerin korunmasıdır.\n- **Farmakoterapi:**\n  - **Duygudurum Düzenleyiciler:** Lityum (altın standart, intihar koruması kanıtlanmış tek ajan), Valproat (karma ve hızlı döngülü olgularda ilk tercih), Karbamazepin.\n  - **Antipsikotikler:** Akut manide ajitasyon ve psikoz kontrolünde atipik antipsikotikler kombinasyona girer.\n  - **Antidepresanlar:** Çökkün dönemde yalnız duygudurum düzenleyici kalkanında verilebilir; monoterapi manik kayma riski nedeniyle yasaktır.\n- **Biyolojik ve Psikososyal:** İlaç direncinde, gebelikte ve ağır manide EKT hayat kurtarır. BDT ve psikoeğitim uyumu artırır.\n\n> [!IMPORTANT]\n> Bipolar bozukluk yaşam boyu süren kronik ve yıkıcı bir hastalıktır; başarılı bir tedavi her iki kutbu da stabilize etmelidir.",
+   "content": "Temel amaç duygudurum stabilizasyonudur.\n\n- **Duygudurum Düzenleyiciler:** Lityum (altın standart, intiharı önler), Valproat, Karbamazepin.\n- **Antipsikotikler:** Akut mani ve ajitasyon kontrolünde kullanılır.\n- **Antidepresanlar:** Yalnız çökkün dönemde ve dengeleyici korumasında verilebilir.\n- **Biyolojik:** EKT dirençli manide ve gebelikte hayat kurtarıcıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Bipolar bozukluk tedavisinde akut mani ve idame profilaksisinde altın standart kabul edilen, aynı zamanda intihar riskini kanıtlanmış olarak azaltan temel duygudurum düzenleyici ilaç hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Lityum",
+       "isCorrect": true,
+       "explanation": "Lityum ifadesi bipolar bozukluğun temel nozolojik ve klinik kuralını eksiksiz açıklayan doğru yaklaşımdır. Klinik pratikte hastaların tanısal değerlendirmesi ve sağaltımı doğrudan bu bilimsel ilkeye dayanılarak yürütülür."
+      },
+      {
+       "key": "B",
+       "text": "Fluoksetin monoterapisi",
+       "isCorrect": false,
+       "explanation": "Fluoksetin monoterapisi ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "C",
+       "text": "Haloperidol monoterapisi",
+       "isCorrect": false,
+       "explanation": "Haloperidol monoterapisi ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "D",
+       "text": "Diazepam",
+       "isCorrect": false,
+       "explanation": "Diazepam ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      },
+      {
+       "key": "E",
+       "text": "Metilfenidat",
+       "isCorrect": false,
+       "explanation": "Metilfenidat ifadesi bipolar bozukluğun gerçek tanısal ve fizyopatolojik prensipleriyle bağdaşmayan hatalı bir varsayımdır. Söz konusu klinik durum farklı bir patolojiyi veya yanlış bir klinik çıkarımı temsil ettiğinden elenmelidir."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Tedavi Seçeneği",
+      "İlaç / Yöntem",
+      "Temel Endikasyon ve Özellik"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "Altın Standart Dengeleyici"
+       },
+       {
+        "text": "Lityum",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Akut mani ve idame profilaksisi, özkıyım koruması"
+       }
+      ],
+      [
+       {
+        "text": "Antikonvülzan Dengeleyici"
+       },
+       {
+        "text": "Valproat / Valproik Asit",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Disforik karma mani ve hızlı döngülü bipolar"
+       }
+      ],
+      [
+       {
+        "text": "Akut Ajitasyon ve Psikoz"
+       },
+       {
+        "text": "Atipik Antipsikotikler"
+       },
+       {
+        "text": "Hızlı sedasyon ve psikotik belirti kontrolü",
+        "isMasked": true,
+        "hint": ""
+       }
+      ],
+      [
+       {
+        "text": "Dirençli ve Acil Durumlar"
+       },
+       {
+        "text": "Elektrokonvülsif Terapi (EKT)",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "İlaca dirençli mani, gebelik, katatoni, yüksek intihar riski"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Duygudurum düzenleyiciler (Lityum, Valproat/valproik asit, Karbamazepin)",
+     "maskedTerm": "Lityum",
+     "hint": "En eski inorganik tuz yapısındaki mizaç dengeleyici"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Bipolar Tedavi Prensipleri",
+     "items": [
+      {
+       "text": "Lityum, Valproat ve Karbamazepin temel duygudurum düzenleyici ilaçlardır.",
+       "isLie": false,
+       "explanation": "Slayt 41 farmakoterapi listesidir."
+      },
+      {
+       "text": "Bipolar depresyonda antidepresanlar manik kayma riski nedeniyle tek başına (monoterapi) verilmemelidir.",
+       "isLie": false,
+       "explanation": "Duygudurum düzenleyici kalkanı olmadan antidepresan verilmesi yasaktır."
+      },
+      {
+       "text": "Elektrokonvülsif terapi (EKT) bipolar bozuklukta kesin kontrendikedir ve asla kullanılmaz.",
+       "isLie": true,
+       "explanation": "EKT ilaca dirençli manide ve gebelikte hayat kurtarıcı en etkili biyolojik tedavidir."
+      },
+      {
+       "text": "Bilişsel Davranışçı Terapi ve psikoeğitim tedavi uyumunu artıran psikososyal yöntemlerdir.",
+       "isLie": false,
+       "explanation": "Psikososyal destek tedavinin vazgeçilmez parçasıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Bipolar depresyon tedavisinde antidepresan ilaç kullanılırken dikkat edilmesi gereken en kritik kural nedir?",
+     "answer": "Antidepresanlar asla tek başına (monoterapi) verilmemeli; manik kayma ve hızlı döngülülüğü önlemek için mutlaka terapötik dozda bir duygudurum düzenleyici korumasında başlanmalıdır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 16,
+   "bolum": "4.3",
+   "pdfSayfalari": [
+    1,
+    43
+   ],
+   "sourcePdf": {
+    "fileName": "Bipolar Bozukluk.pdf",
+    "primaryPage": 1,
+    "startPage": 1,
+    "endPage": 43
+   },
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Bipolar Bozukluk",
+   "subtitle": "Kritik Klinik Bilgileri Pekiştiren 4 Özel Oyun Modeli",
+   "badge": "DERS SONU OYUNU",
+   "isGameFinale": true,
+   "synthesisNarrative": "Tebrikler! Bipolar Duygudurum Bozukluğu dersini başarıyla tamamladınız.\n\nBu final sayfasında öğrendiğiniz kritik nozolojik, klinik, farmakolojik ve prognoz bilgilerini dört interaktif oyun modeliyle pekiştireceksiniz:\n- **Sıralama Oyunu:** Klinik karar ve tanı aşamalarının doğru kronolojik dizilimi.\n- **Tahmin Kaydırıcısı:** İkiz konkordansı, lityum relapsı ve hastalık yükü sayısal verileri.\n- **Bozulma / Pertürbasyon:** İlaç kesilmesi ve antidepresan monoterapisinin tetiklediği krizler.\n- **Metin Düzeltme:** Klinik vaka ve tanı kurallarındaki yanıltıcı tuzakların ayıklanması.",
+   "content": "Bipolar bozukluk ders sonu pekiştirme oyunları:\n\n- **Sıralama:** Klinik tanı ve seyir adımları.\n- **Tahmin:** İkiz konkordansı ve relaps oranları.\n- **Bozulma:** Manik kayma ve lityum kesilmesi etkileri.\n- **Metin Düzeltme:** Yanlış klinik önermelerin düzeltilmesi.",
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "prompt": "Akut mani atağıyla acil servise getirilen bir hastada tanı, güvenlik ve tedavi yönetiminin doğru klinik basamaklarını sıraya diziniz.",
+     "explanation": "Önce kardinal triad tanınır, toksik nedenler elenir, kapalı servise yatırılır, antipsikotik/duygudurum düzenleyici başlanır ve idameye geçilir.",
+     "steps": [
+      "Klinik Görünümün Tespiti: Öfori, fikir uçuşması, logore ve psikomotor eksitasyonun fark edilmesi",
+      "Madde ve Organik Nedenlerin Dışlanması: Acil idrar toksikolojisi ile kokain/amfetamin intoksikasyonunun elenmesi",
+      "Güvenliğin Sağlanması ve Servis Yatışı: Yargılama kaybı ve riskli davranışlar nedeniyle kapalı servise yatış kararı",
+      "Akut Farmakolojik Müdahale: Atipik antipsikotik ile birlikte duygudurum düzenleyici (Lityum/Valproat) başlanması",
+      "Uzun Dönem İdame ve Profilaksi: Epizot yatıştıktan sonra relapsı önlemek için düzenli ilaç ve uyku takibi"
+     ]
+    },
+    {
+     "type": "estimate_slider",
+     "items": [
+      {
+       "prompt": "Bipolar bozuklukta lityum tedavisi kesildikten sonraki 18 ay içinde relaps oranı yüzde kaçtır?",
+       "unit": "%",
+       "min": 0,
+       "max": 100,
+       "step": 1,
+       "answer": 92,
+       "tolerance": 5,
+       "explanation": "Klinik araştırmalarda lityum kesildikten sonraki 18 ay içinde nüks oranının %92 olduğu gösterilmiştir; lityumu sürdürenlerde bu oran %37'dir."
+      },
+      {
+       "prompt": "Bipolar bozukluğun bireyin sağlıklı yaşam süresinde yol açtığı kayıp kaç yıldır?",
+       "unit": "yıl",
+       "min": 0,
+       "max": 25,
+       "step": 1,
+       "answer": 12,
+       "tolerance": 2,
+       "explanation": "Slayt 39'da bipolar bozukluğun sağlıklı yaşam süresinde 12 yıl azalmaya yol açtığı bildirilmiştir."
+      }
+     ]
+    },
+    {
+     "type": "perturbation",
+     "scenario": "Bipolar bozukluğu olan ve o sırada majör depresif dönem yaşayan bir hastaya koruyucu duygudurum düzenleyici verilmeden tek başına yüksek doz trisiklik antidepresan monoterapisi başlanmıştır.",
+     "question": "Bu hatalı farmakolojik müdahale sonrasında hastanın klinik tablosunda ve biyolojik göstergelerinde ne tür değişimler beklenir?",
+     "parameters": [
+      {
+       "name": "Manik kayma (manic switch) ve taşkınlık riski",
+       "correct": "up",
+       "explanation": "Duygudurum düzenleyici kalkanı olmadan verilen antidepresan manik epizodu hızla provoke eder."
+      },
+      {
+       "name": "Hastalığın hızlı döngülü (yılda ≥4 atak) forma dönüşme olasılığı",
+       "correct": "up",
+       "explanation": "Antidepresan monoterapisi döngüleri hızlandırarak dirençli hızlı döngülülüğe yol açar."
+      },
+      {
+       "name": "Duygudurum stabilitesi ve ötimide kalma süresi",
+       "correct": "down",
+       "explanation": "Antidepresan monoterapisi duygudurum dengesini tamamen çözer ve dalgalanmayı artırır."
+      }
+     ]
+    },
+    {
+     "type": "fix_the_text",
+     "text": "Bipolar II bozukluk tanısı koyabilmek için hastanın yaşam boyu en az bir kez tam bir manik atak geçirmesi şarttır; hipomani atakları ise en az 3 ay sürmelidir. Ayrıca siklotimi tanısı için belirtilerin yalnızca 10 gün sürmesi yeterli kabul edilir.",
+     "errors": [
+      {
+       "wrong": "en az bir kez tam bir manik atak geçirmesi şarttır",
+       "correct": "yaşam boyu asla tam bir manik atak geçirmemiş olması şarttır",
+       "options": [
+        "yaşam boyu asla tam bir manik atak geçirmemiş olması şarttır",
+        "en az 3 kez ardışık manik atak geçirmesi şarttır",
+        "yalnızca katatonik mani atağı geçirmesi şarttır"
+       ],
+       "explanation": "Bipolar II'de tam manik atak kesinlikle bulunamaz; tek bir mani tanıyı Bipolar I yapar."
+      },
+      {
+       "wrong": "en az 3 ay sürmelidir",
+       "correct": "en az 4 gün sürmelidir",
+       "options": [
+        "en az 4 gün sürmelidir",
+        "en az 2 yıl sürmelidir",
+        "en az 6 hafta sürmelidir"
+       ],
+       "explanation": "DSM-5'e göre hipomanik epizodun asgari süresi en az 4 gündür."
+      },
+      {
+       "wrong": "yalnızca 10 gün sürmesi yeterli kabul edilir",
+       "correct": "en az 2 yıldır sürüyor olması şarttır",
+       "options": [
+        "en az 2 yıldır sürüyor olması şarttır",
+        "en az 5 yıl boyunca devam etmesi şarttır",
+        "en az 6 ay sürmesi şarttır"
+       ],
+       "explanation": "Siklotimik bozukluk kronik bir tablodur ve tanı için yetişkinlerde en az 2 yıllık süre aranır."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "matchedPastQuestionsCount": 13,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}
