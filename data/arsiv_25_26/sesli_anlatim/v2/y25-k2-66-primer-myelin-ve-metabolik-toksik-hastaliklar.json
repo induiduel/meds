@@ -42,7 +42,11 @@
          "Edinsel Metabolik ve Toksik",
          "Bozukluklar"
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         0,
+         1
+        ]
        }
       },
       {
@@ -70,7 +74,11 @@
          "Santral sinir sistemi ve periferik sinirlerde aksonları sarar.",
          "Santral sinir sisteminde oligodentrositler periferik sinir sisteminde ise schwann hücreleri tarafından oluşturulur."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         1,
+         2
+        ]
        }
       },
       {
@@ -101,7 +109,11 @@
          "Yapısının yaklaşık %40’ı sudur.",
          "Kuru ağırlığının yaklaşık %75’i lipit %25’i ise proteinlerden oluşur."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         5,
+         4
+        ]
        }
       },
       {
@@ -123,7 +135,11 @@
         "satir": [
          "Myelin elektriksel uyarının bir hücreden diğerine çok daha hızlı ulaşmasını sağlar."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         6,
+         7
+        ]
        }
       }
      ]
@@ -157,7 +173,11 @@
          "Myelinin yapısındaki lipitler",
          "- Galaktoserebrozid: Myelinin yapısında en bol bulunan lipit"
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         1,
+         0
+        ]
        }
       },
       {
@@ -184,7 +204,11 @@
          "- Sfingomyelin: Myelin kılfının sağlamlığını arttırır",
          "- Kolesterol: Myelin kılıfının esansiyel lipit komponenti"
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         3,
+         2
+        ]
        }
       },
       {
@@ -212,7 +236,11 @@
          "- Myelin basic protein (MBP): MSS’de daha bol bulunur",
          "- Myelin oligodentrosit glikoprotein (MOG): Sadece MSS’de bulunur"
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         2,
+         1
+        ]
        }
       },
       {
@@ -238,7 +266,11 @@
         "satir": [
          "- Proteolipit protein (PLP): MSS’de en fazla bulunan protein, PSS’de çok az bulunur"
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         3,
+         4
+        ]
        }
       },
       {
@@ -265,7 +297,11 @@
          "- Myelin protein zero (MPZ veya P0): MSS’de bulunmaz",
          "P0 ve PLP myelin kılıfını oluşturan konsantrik hücre zarı tabaklarını bir arada tutar."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         6,
+         5
+        ]
        }
       }
      ]
@@ -299,7 +335,11 @@
          "Eletriksel uyarı aksonlarda Ranvier nodları yoluyla atlayarak (saltatory conduction) ilerler.",
          "Ranvier nodları aksonlar üzerindeki myelinsiz bölgelerdir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         0,
+         2
+        ]
        }
       },
       {
@@ -325,7 +365,11 @@
         "satir": [
          "Ranvier nodlarının uzunluğu yaklaşık 1 mikron iken devamındaki myelinli aksonun uzunluğu 0,2-1 mm arasındadır."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         3,
+         4
+        ]
        }
       },
       {
@@ -355,7 +399,12 @@
          "Myelin sheath",
          "Nucleus"
         ],
-        "sekil": "Nöron şeması: dendrit, hücre gövdesi, çekirdek, akson ve Schwann hücrelerinin sardığı myelin kılıfı"
+        "sekil": "Nöron şeması: dendrit, hücre gövdesi, çekirdek, akson ve Schwann hücrelerinin sardığı myelin kılıfı",
+        "madde": [
+         4,
+         2
+        ],
+        "resim": 0
        }
       },
       {
@@ -379,7 +428,12 @@
          "Myelin sheath",
          "Node of Ranvier"
         ],
-        "sekil": "Nöron şemasında Schwann hücreleriyle sarılı myelinli segmentler ve aralarındaki Ranvier düğümleri"
+        "sekil": "Nöron şemasında Schwann hücreleriyle sarılı myelinli segmentler ve aralarındaki Ranvier düğümleri",
+        "madde": [
+         3,
+         4
+        ],
+        "resim": 0
        }
       },
       {
@@ -402,7 +456,12 @@
          "Axon Terminal",
          "Node of Ranvier"
         ],
-        "sekil": "Nöron şemasının sağ ucundaki akson terminali dallanmaları"
+        "sekil": "Nöron şemasının sağ ucundaki akson terminali dallanmaları",
+        "madde": [
+         0,
+         1
+        ],
+        "resim": 0
        }
       }
      ]
@@ -433,7 +492,8 @@
        "slayt": {
         "sayfa": 7,
         "satir": [],
-        "sekil": "Elektron mikroskobu görüntüsü (500 nm ölçek): akson enine kesiti, aksonal mitokondri ve sıkıca paketlenmiş konsantrik myelin lamelleri"
+        "sekil": "Elektron mikroskobu görüntüsü (500 nm ölçek): akson enine kesiti, aksonal mitokondri ve sıkıca paketlenmiş konsantrik myelin lamelleri",
+        "resim": 0
        }
       },
       {
@@ -453,7 +513,8 @@
        "slayt": {
         "sayfa": 7,
         "satir": [],
-        "sekil": "Elektron mikroskobunda konsantrik myelin lamellerinin sıkı paketlenmiş ultrastrüktürel görünümü"
+        "sekil": "Elektron mikroskobunda konsantrik myelin lamellerinin sıkı paketlenmiş ultrastrüktürel görünümü",
+        "resim": 0
        }
       },
       {
@@ -486,7 +547,12 @@
          "SCHWANN CELL WRAPS",
          "AROUND THE AXON"
         ],
-        "sekil": "Myelin oluşumu diyagramı (1. aşama): Schwann hücresinin nörofibril ve mitokondri içeren aksonu sarması"
+        "sekil": "Myelin oluşumu diyagramı (1. aşama): Schwann hücresinin nörofibril ve mitokondri içeren aksonu sarması",
+        "resim": 0,
+        "madde": [
+         2,
+         4
+        ]
        }
       },
       {
@@ -514,7 +580,12 @@
          "AROUND THE AXON FORMING LAYERS",
          "MYELIN SHEATH IS FORMED"
         ],
-        "sekil": "Myelin oluşumu diyagramı (2. ve 3. aşama): Schwann hücresinin akson etrafında dönmesi ve kompakt çok katmanlı myelin kılıfının oluşması"
+        "sekil": "Myelin oluşumu diyagramı (2. ve 3. aşama): Schwann hücresinin akson etrafında dönmesi ve kompakt çok katmanlı myelin kılıfının oluşması",
+        "resim": 0,
+        "madde": [
+         4,
+         5
+        ]
        }
       }
      ]
@@ -554,7 +625,11 @@
          "PRİMER MYELİN HASTALIKLARI",
          "Merkezi sinir sistemi içinde aksonlar, uyarıların hızla yayılmasına olanak tanıyan ve elektriksel bir yalıtkanlaştırıcı işlevi gören myelinle sıkıca kaplanmıştır."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         1,
+         2
+        ]
        }
       },
       {
@@ -581,7 +656,11 @@
          "Myelin oligodendrositlerin sıkıca birbirine yapışmış plazma membranlarının oluşturduğu, multipl tabakalardan yapılıdır.",
          "Myelinli aksonların beyinin tüm bölgelerinde bulunmalarına karşın, beyaz cevherin baskın bileşeni olduğundan çoğu myelin hastalığı primer olarak beyaz cevher bozukluğudur."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         6,
+         3
+        ]
        }
       },
       {
@@ -604,7 +683,11 @@
          "Periferik sinirlerdeki myelin, merkezi sinir sistemindeki myeline benzer, ancak bazı önemli farklılıklar bulunur:",
          "1- Periferik myelin oligodendrositler tarafından değil Schwann hücreleri tarafından üretilir"
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         2,
+         1
+        ]
        }
       },
       {
@@ -630,7 +713,11 @@
         "satir": [
          "2- Periferik sinirdeki her bir Schwann hücresi sadece tek bir internoda katılırken, merkezi sinir sisteminde birçok internod tek bir oligodendrosit uzantılarıyla kaplanabilir"
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         5,
+         4
+        ]
        }
       },
       {
@@ -652,7 +739,11 @@
         "satir": [
          "3- Spesifik proteinleri ve lipidleri farklıdır. Bu nedenle, merkezi sinir sistemi myelinini tutan bir hastalığın mutlaka periferik sinirleri de tutması gerekmez ve bunun tam tersi de doğrudur."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         7,
+         6
+        ]
        }
       }
      ]
@@ -687,7 +778,11 @@
          "1- Demyelinizan hastalıklar",
          "Öncesinde normal olan myelinin primer hasarı ile karakterize edinsel patolojilerdir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         0,
+         2
+        ]
        }
       },
       {
@@ -716,7 +811,11 @@
          "Bu grupta en sık karşılaşılan hastalıklar bağışıklık aracılı olan Multipl Skleroz (MS) ve bununla ilişkili diğer bazı antitelerdir.",
          "Bu tip hastalığa neden olabilecek diğer süreçler arasında progresif multifokal lökoensefalopatide de görüldüğü şekilde oligodendrositlerin virüs enfeksiyonu veya ilaçlarla ve diğer toksik ajanlarla gelişen hasarı yer almaktadır."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         7,
+         4
+        ]
        }
       },
       {
@@ -743,7 +842,11 @@
          "2- Dismyelinizan hastalıklar",
          "Myelin ya uygun şekilde oluşmamıştır ya da anormal döngü kinetiklerine sahiptir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         1,
+         0
+        ]
        }
       },
       {
@@ -766,7 +869,11 @@
          "Normal myelinin oluşması için gerekli olan proteinlerin fonksiyonunu bozan genetik mutasyonlar sonucu görülür.",
          "Bu hastalıklar için kullanılan genel terim lökodistrofidir"
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         3,
+         5
+        ]
        }
       }
      ]
@@ -814,7 +921,11 @@
          "Multiple Skleroz (MS)",
          "MS; beyaz cevherin birbiriyle ilişkisiz farklı alanlarını tutan ve farklı zamanlarda değişik nörolojik defisitlerin ortaya çıktığı otoimmün demyelinizan bir hastalıktır."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         2,
+         1
+        ]
        }
       },
       {
@@ -840,7 +951,11 @@
         "satir": [
          "MS; demyelinizan hastalıklar içinde, ABD ve Avrupa'nın çoğu bölgelerinde yaklaşık olarak 1/1000 prevalansı ile en sık rastlanan demyelinizan hastalıktır ve insidansı giderek artıyor görünmektedir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         4,
+         3
+        ]
        }
       },
       {
@@ -869,7 +984,11 @@
          "Hastalık klinik olarak herhangi bir yaşta belirgin hale gelebilir, ancak çocukluk döneminde ya da 50 yaşından sonra ortaya çıkması oldukça nadirdir.",
          "Kadınlarda, erkeklerden iki kat sık görülür."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         0,
+         1
+        ]
        }
       },
       {
@@ -899,7 +1018,11 @@
         "satir": [
          "Çoğu MS olgusunda hastalık tekrarlayan ve duraksayan özellikte nörolojik yetersizlik atakları ile kendini gösterir, ataklar arasında nörolojik bozuklukta kısmi bir düzelme görülür."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         4,
+         3
+        ]
        }
       },
       {
@@ -921,7 +1044,11 @@
         "satir": [
          "Tekrarlamaların sıklığı hastalığın seyri sırasında azalma eğilimi gösterir ancak çoğu hastada nörolojik defisit giderek artar."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         5,
+         6
+        ]
        }
       }
      ]
@@ -955,7 +1082,11 @@
          "Patogenez",
          "Diğer otoimmün hastalıklar gibi MS'in bireyin kendi proteinlerine (bu durumda myelin antijenlerine) karşı toleransının yitirilmesiyle sonuçlanan, çevresel ve genetik faktörlerin birleşimiyle geliştiğine inanılır."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         2,
+         1
+        ]
        }
       },
       {
@@ -978,7 +1109,11 @@
          "Hastalığı ortaya çıkaran etkenin enfeksiyöz olduğu öne sürülmüştür, ancak kesin değildir.",
          "MS gelişiminde risk olarak, genetik faktörlerin katkısının önemli bir gösterge olduğunu işaret eden birçok kanıt vardır:"
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         3,
+         6
+        ]
        }
       },
       {
@@ -1005,7 +1140,11 @@
          "- Birinci derece akrabaları arasında hastalık bulunan kişi için MS gelişme riski 15 kat artar.",
          "- Tek yumurta ikizlerinde her iki ikizde birden hastalık gelişme oranı yaklaşık olarak % 25’tir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         2,
+         0
+        ]
        }
       },
       {
@@ -1032,7 +1171,11 @@
          "- DR2 aleli MS oluşma riskini artıran faktörlerden en önemlisidir.",
          "- Genom-bazlı araştırmalarla, birçok genetik polimorfizmin de hastalıkla ilişkili olabileceği kanıtlanmıştır. Bu polimorfizmler arasından son günlerde öne çıkan ikisi T hücre ilişkili immun yanıtta düzenleyici ve aktive edici görevi olan sitokinlerden IL-2 ve IL-7 reseptörlerini kodlayan genlerdeki polimorfizmdir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         6,
+         4
+        ]
        }
       },
       {
@@ -1060,7 +1203,11 @@
          "Yapılan araşatırmalardan elde edilen kanıtlar immün hücrelerin bir çoğunun MS gelişimine katkıda bulunduğunu göstermiştir.",
          "En temel rolü CD4+ T hücreleri oynadığı, Th17 ve Th1 CD4+ hücrelerin, myelin hasarının kritik komponentlerini oluşturduğu öne sürülmektedir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         2,
+         0
+        ]
        }
       },
       {
@@ -1088,7 +1235,11 @@
          "Th17 lökositlerin toplanmasını uyarır.",
          "B lenfositlerin ve antikorların da henüz tanımlanmamış ancak önemli etkileri vardır."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         6,
+         8
+        ]
        }
       }
      ]
@@ -1134,7 +1285,11 @@
          "MORFOLOJİ",
          "MS beyaz maddenin hastalığıdır, tutulum alanlarında, multipl, hafifçe çökük, gri-taba renkte, camsı görünümlü ve düzensiz, çevre dokudan keskin sınırlı plak adı verilen lezyonlar oluşur."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         2,
+         1
+        ]
        }
       },
       {
@@ -1162,7 +1317,11 @@
         "satir": [
          "Bunlar büyük çoğunlukla ventrikül yakınlarında belirirler. Ayrıca optik sinir ve kiazmada, beyin sapında, asandan ve desandan traktuslarda, serebellum ve medulla spinaliste de plaklar görülebilir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         4,
+         3
+        ]
        }
       },
       {
@@ -1184,7 +1343,11 @@
         "satir": [
          "Plakların büyüklüğü çok değişkendir. Ancak mikroskopta görülebilecek kadar küçük olabileceği gibi derin beyaz cevherin geniş alanlarını da tutabilir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         6,
+         5
+        ]
        }
       },
       {
@@ -1213,7 +1376,11 @@
          "Mikroskobik olarak lezyonlar keskin sınırlıdır.",
          "Aktif bir plakta devam eden myelin yıkımının kanıtı olarak myelin parçacıkları içeren bol makrofaj vardır."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         1,
+         2
+        ]
        }
       },
       {
@@ -1243,7 +1410,11 @@
          "Aktif lezyonların merkezinde genellikle küçük venler vardır.",
          "Aksonlar nisbeten korunmuştur fakat sayıları azalmıştır."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         3,
+         4
+        ]
        }
       }
      ]
@@ -1278,7 +1449,11 @@
         "satir": [
          "Plaklar durgun hale geldiğinde (inaktif plak), inflamasyon çoğunlukla ortadan kaybolur, geride pek az myelin kalır ya da hiç kalmaz. Bunun yerine, astrositik proliferasyon ile gliozis belirgindir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         1,
+         0
+        ]
        }
       },
       {
@@ -1307,7 +1482,11 @@
          "Bu fenomen genel olarak sağ kalan oligodentrostler tarafından yapılan kısmi ve yetersiz remyelinizasyon kanıtı olarak değerlendirilmiştir.",
          "Ve remyelinizasyon yeni araştırmalar için önemli bir odak noktası olmuştur."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         3,
+         4
+        ]
        }
       },
       {
@@ -1330,7 +1509,11 @@
          "Figure 28-33 Multiple sclerosis. Section of fresh brain showing brown plaque",
          "around occipital hom of the lateral ventricle."
         ],
-        "sekil": "Şekil 28-33 Multipl skleroz makroskopik beyin kesiti: lateral ventrikülün oksipital boynuzu çevresinde kahverengi-gri demyelinizasyon plağı"
+        "sekil": "Şekil 28-33 Multipl skleroz makroskopik beyin kesiti: lateral ventrikülün oksipital boynuzu çevresinde kahverengi-gri demyelinizasyon plağı",
+        "resim": 0,
+        "madde": [
+         0
+        ]
        }
       },
       {
@@ -1353,7 +1536,11 @@
          "Figure 28-33 Multiple sclerosis. Section of fresh brain showing brown plaque",
          "around occipital hom of the lateral ventricle."
         ],
-        "sekil": "Şekil 28-33 makroskopik kesitte demyelinizasyon plağının çevre beyaz cevherden keskin sınırı"
+        "sekil": "Şekil 28-33 makroskopik kesitte demyelinizasyon plağının çevre beyaz cevherden keskin sınırı",
+        "resim": 0,
+        "madde": [
+         0
+        ]
        }
       },
       {
@@ -1376,7 +1563,11 @@
          "Figure 28-33 Multiple sclerosis. Section of fresh brain showing brown plaque",
          "around occipital hom of the lateral ventricle."
         ],
-        "sekil": "Şekil 28-33 lateral ventrikül komşuluğunda periventriküler demyelinizasyon plağı"
+        "sekil": "Şekil 28-33 lateral ventrikül komşuluğunda periventriküler demyelinizasyon plağı",
+        "resim": 0,
+        "madde": [
+         0
+        ]
        }
       }
      ]
@@ -1407,7 +1598,11 @@
         "satir": [
          "Figure 28-35 Multiple sclerosis. A, Myelin-stained section shows the sharp edge of a demyelinated plaque and perivascular lymphocytic cuffs. B, The same"
         ],
-        "sekil": "Şekil 28-35A Multipl skleroz myelin boyalı mikroskobik kesit: demyelinizasyon plağının keskin sınırı"
+        "sekil": "Şekil 28-35A Multipl skleroz myelin boyalı mikroskobik kesit: demyelinizasyon plağının keskin sınırı",
+        "resim": 0,
+        "madde": [
+         0
+        ]
        }
       },
       {
@@ -1431,7 +1626,11 @@
         "satir": [
          "Figure 28-35 Multiple sclerosis. A, Myelin-stained section shows the sharp edge of a demyelinated plaque and perivascular lymphocytic cuffs. B, The same"
         ],
-        "sekil": "Şekil 28-35A myelin boyalı kesitte perivasküler lenfositik manşonlar"
+        "sekil": "Şekil 28-35A myelin boyalı kesitte perivasküler lenfositik manşonlar",
+        "resim": 0,
+        "madde": [
+         0
+        ]
        }
       },
       {
@@ -1455,7 +1654,11 @@
         "satir": [
          "Figure 28-35 Multiple sclerosis. A, Myelin-stained section shows the sharp edge of a demyelinated plaque and perivascular lymphocytic cuffs. B, The same"
         ],
-        "sekil": "Şekil 28-35B Multipl skleroz akson boyalı mikroskobik kesit: aynı lezyonda göreceli aksonal korunma"
+        "sekil": "Şekil 28-35B Multipl skleroz akson boyalı mikroskobik kesit: aynı lezyonda göreceli aksonal korunma",
+        "resim": 0,
+        "madde": [
+         0
+        ]
        }
       }
      ]
@@ -1500,7 +1703,11 @@
          "MS seyri değişkendir, ancak sıklıkla multipl relaps ve ardından remisyon atakları görülür.",
          "Tipik olarak, remisyonlarda iyileşme tam değildir. Bunların sonucunda zaman içerisinde, çoğunlukla yavaş yavaş, adım adım nörolojik defisitler artar."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         4,
+         1
+        ]
        }
       },
       {
@@ -1522,7 +1729,11 @@
         "satir": [
          "Görüntüleme çalışmaları, MS hastalarının beyninde, klinik muayene bulgularına göre tahmin edilenden daha fazla lezyon olduğunu ve bu lezyonların tahmin edilenden daha sık ortaya çıkıp kaybolduğunu göstermiştir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         6,
+         5
+        ]
        }
       },
       {
@@ -1550,7 +1761,11 @@
          "Güç kaybı, spazm, kas sertliği, kramp, ağrı",
          "Görme kaybı, çift görme,"
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         1,
+         0
+        ]
        }
       },
       {
@@ -1584,7 +1799,11 @@
          "Kısa süreli hafıza problemleri",
          "Yutma zorluğu"
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         10,
+         6
+        ]
        }
       }
      ]
@@ -1614,7 +1833,11 @@
          "Bilişsel fonksiyonda değişim bulunabilir, fakat çoğunlukla diğer defisitlerden daha hafiftir.",
          "Herhangi bir hastada gelecek relapsın ne zaman ortaya çıkacağının öngörülmesi güçtür."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         2,
+         0
+        ]
        }
       },
       {
@@ -1640,7 +1863,11 @@
         "satir": [
          "En güncel tedaviler, kaybedilen fonksiyonun iyileştirilmesinden çok, tekrarlama oranını ve şiddetini azaltmayı hedef alan immün yanıtın kontrolü şeklindedir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         5,
+         4
+        ]
        }
       },
       {
@@ -1666,7 +1893,11 @@
         "satir": [
          "MS hastalarında beyin ve omurilik sıvısında immunglobulin oranında artışla beraber, protein düzeyinde hafif yükselme görülür, olguların üçte birinde orta derecede pleiositoz vardır."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         1,
+         0
+        ]
        }
       },
       {
@@ -1691,7 +1922,11 @@
          "İmmünglobulin daha detaylı incelendiğinde, genellikle oligoklonal bantlar saptanır. Bu antikorlar çeşitli antijenleri hedef almış antikorlardır ve hastalık aktivitesini gösteren belirteç olarak kullanılabilir.",
          "‘B’ hücrelerinin MS'in patogenezindeki rolü kesin olmasına rağmen, karakteristik antikorların hastalık sürecine katkısı henüz bilinmemektedir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         3,
+         5
+        ]
        }
       }
      ]
@@ -1735,7 +1970,11 @@
          "Akut Dissemine Ensefalomiyelit ve Akut Nekrotizan Hemorajik Ensefalomiyelit",
          "Bağışıklık aracılı demyelinizasyon göreceli olarak hafif virüs hastalıklarını da kapsayan çeşitli sistemik enfeksiyon hastalıklarında ortaya çıkabilir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         3,
+         2
+        ]
        }
       },
       {
@@ -1758,7 +1997,11 @@
          "Bunların, enfeksiyöz etkenin sinir sistemine doğrudan yayılımıyla ilgisi olmadığı düşünülmektedir.",
          "Patojen ile ilişkili antijenlere karşı yanıt veren bağışıklık hücrelerinin, myelin antijenlerine çapraz reaksiyon verdiğine ve bunun myelin hasarı ile sonuçlandığına inanılmaktadır."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         6,
+         4
+        ]
        }
       },
       {
@@ -1785,7 +2028,11 @@
          "Myeline karşı gelişen otoimmün reaksiyonla ilgili postenfeksiyöz otoimmün yanıtın gelişimine ait iki patern vardır ve bunlar MS'in aksine, akut başlangıçlı ve tek aşamalı-monofazik hastalıktır.",
          "- Akut dissemine ensefalomiyelitte belirtiler tipik olarak geçirilmiş enfeksiyondan bir ya da iki hafta sonra gelişir ve MS için tipik olan tutulum bölgesine ait nörolojik bulgular yerine, baş ağrısı, letarji ve koma durumu ortaya çıkar ve lokalize olmayan beyin tutulumu akla gelir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         3,
+         1
+        ]
        }
       },
       {
@@ -1812,7 +2059,11 @@
          "Belirtiler hızla ilerler, hastalık olguların %20 kadarında ölümcüldür, geri kalan hastalarda tamamen iyileşme gözlenir.",
          "- Akut nekrotizan hemorajik ensefalomiyelit, tipik olarak genç erişkinleri ve çocukları etkileyen, ancak daha fazla yıkıma yol açan bir hastalıktır."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         4,
+         6
+        ]
        }
       }
      ]
@@ -1846,7 +2097,11 @@
          "Nöromyelitis Optika (NMO)",
          "Optik sinirleri ve spinal kordu eş zamanlı veya hemen hemen eş zamanlı tutan inflamatuar demyelinizan hastalıktır."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         1,
+         2
+        ]
        }
       },
       {
@@ -1869,7 +2124,11 @@
          "Önceden MS’in belirli anatomik lokalizasyonda oluşan bir formu olduğu düşünülüyordu, şimdi antikor ilişkili otoimmun bir hastalık olduğu biliniyor.",
          "Bu antikorlar akuaporin-4 su kanallarına karşıdır (astrositlerdeki majör su kanalı)"
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         4,
+         3
+        ]
        }
       },
       {
@@ -1900,7 +2159,11 @@
          "Merkezi Pons Myelinolizi",
          "Sıklıkla hiponatreminin hızlı düzeltilmesi sonrasında genellikle 2-6 gün içerisinde pons santralinde myelin kaybıyla kendini gösteren ve bağışıklıkla ilişkisi olmayan bir durumdur."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         2,
+         1
+        ]
        }
       },
       {
@@ -1927,7 +2190,11 @@
          "Oligodendroglial hücre hasarının mekanizması belirsizdir, ani değişen ozmotik basınca bağlı ödemle ilişkili olabilir.",
          "Alkolizm, malnutrisyon ve kronik karaciğer hastalığı gibi elektrolit ya da ozmolar dengesizliği de kapsayan çeşitli klinik durumlarda gelişimi kolaylaşır."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         6,
+         3
+        ]
        }
       },
       {
@@ -1955,7 +2222,11 @@
         "satir": [
          "En belirleyici lezyonun ponsta gelişmesine karşın, benzer lezyonlar beynin diğer bölgelerinde de görülebilir. Ancak periventriküler ve subpial bölgeler korunmuştur ve pontomedüller bileşkenin aşağısına uzanım oldukça nadirdir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         1,
+         0
+        ]
        }
       },
       {
@@ -1977,7 +2248,11 @@
         "satir": [
          "Ponsun omurilikteki motor nöronlara uyarı taşıyan liflerindeki tutulum nedeniyle hastalar doktora sıklıkla hızlı gelişen kuadripleji ile başvurur."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         3,
+         2
+        ]
        }
       }
      ]
@@ -2013,7 +2288,11 @@
          "Progresif Multifokal Lökoensefalopati (PML)",
          "Bağışıklığı baskılanmış hastalarda JC virüsünün yeniden aktifleşmesi sonrasında ortaya çıkan demyelinizan bir hastalıktır."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         1,
+         2
+        ]
        }
       },
       {
@@ -2037,7 +2316,11 @@
         "satir": [
          "Virüs özellikle oligodentrositleri infekte eder ve bu hücrelerin hasarına ve ölümüne neden olarak demyelinizasyon oluşturur."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         3,
+         4
+        ]
        }
       },
       {
@@ -2064,7 +2347,11 @@
          "Lökodistrofiler",
          "Klinik belirtilerin, anormal myelin yapımı ya da döngüsünden kaynaklandığı kalıtsal dismyelinizan hastalıklardır."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         1,
+         2
+        ]
        }
       },
       {
@@ -2091,7 +2378,11 @@
          "Bu hastalıkların bazıları lizozomal enzimlerle ilişkiliyken, diğerleri peroksizomal enzimlerle ilgilidir, pek azına myelin proteinlerinde mutasyonlar eşlik eder.",
          "Çoğu otozomal resesif geçişli olmakla birlikte X'e bağlı hastalıklar da görülebilir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         4,
+         5
+        ]
        }
       }
      ]
@@ -2137,7 +2428,11 @@
          "- Renk: Gri ve yarı saydam hale gelir",
          "- Volüm: Azalır"
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         1,
+         3
+        ]
        }
       },
       {
@@ -2164,7 +2459,11 @@
          "Erken dönemde bu hastalıkların bazıları yama tarzında tutulum gösterirken, bazılarında ise oksipital lob tutulumuna bir yatkınlık söz konusudur.",
          "Sonunda genellikle beyaz cevherin neredeyse tamamı tutulur."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         6,
+         5
+        ]
        }
       },
       {
@@ -2190,7 +2489,11 @@
         "satir": [
          "Beyaz cevher kaybıyla beyin atrofik hale gelir, ventriküller genişler ve gri cevherde ikincil değişiklikler saptanabilir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         0,
+         1
+        ]
        }
       },
       {
@@ -2217,7 +2520,11 @@
          "Myelin kaybı lipidle dolu makrofaj infiltrasyonuna neden olur.",
          "Bu hastalıkların bazılarında kimi lipidlerin birikmesiyle ilgili olarak özgün inklüzyonlar da saptanır."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         2,
+         3
+        ]
        }
       }
      ]
@@ -2248,7 +2555,11 @@
          "Çeşitli lökodistrofilerin her birinin karakteristik bir klinik prezantasyonu vardır ve çoğuna genetik ya da biyokimyasal yöntemlerle tanı konabilir.",
          "Altta yatan mekanizmalardaki farklılıklara karşın lökodistrofiler, myelinin ortak hedefleri oluşu nedeniyle birçok ortak özelliğe sahiptirler."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         2,
+         4
+        ]
        }
       },
       {
@@ -2274,7 +2585,11 @@
         "satir": [
          "Hasta çocuklar doğumda normaldir, ancak bebeklik ile çocukluk dönemleri arasında gelişimsel önemli noktaları kaçırmaya başlarlar."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         6,
+         5
+        ]
        }
       },
       {
@@ -2296,7 +2611,11 @@
         "satir": [
          "Beyaz cevherin yaygın tutulumuyla motor becerilerde bozulma, spastisite, hipotoni ya da ataksi görülür."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         0,
+         1
+        ]
        }
       },
       {
@@ -2323,7 +2642,11 @@
          "Genel olarak, hastalık ortaya çıktığında yaş ne kadar küçükse, eksiklik ve klinik seyir de o kadar şiddetli olur.",
          "Görüntülemede diffüz ve simetrik değişiklikler söz konusudur."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         2,
+         4
+        ]
        }
       }
      ]
@@ -2359,7 +2682,12 @@
          "Arylsulfatase A deficiency",
          "Krabbe disease"
         ],
-        "sekil": "Tablo 23-2 Seçilmiş Lökodistrofiler (1. ve 2. satır): Metakromatik lökodistrofi (AR, Arilsülfataz A eksikliği) ve Krabbe hastalığı (AR, Galaktoserebrozid beta-galaktozidaz eksikliği)"
+        "sekil": "Tablo 23-2 Seçilmiş Lökodistrofiler (1. ve 2. satır): Metakromatik lökodistrofi (AR, Arilsülfataz A eksikliği) ve Krabbe hastalığı (AR, Galaktoserebrozid beta-galaktozidaz eksikliği)",
+        "resim": 0,
+        "madde": [
+         3,
+         10
+        ]
        }
       },
       {
@@ -2394,7 +2722,12 @@
          "Canavan disease",
          "Aspartoacylase deficieny"
         ],
-        "sekil": "Tablo 23-2 Seçilmiş Lökodistrofiler (3. ve 4. satır): Adrenolökodistrofi (AR/X, peroksizomal defektler) ve Canavan hastalığı (AR, Aspartoaçilaz eksikliği)"
+        "sekil": "Tablo 23-2 Seçilmiş Lökodistrofiler (3. ve 4. satır): Adrenolökodistrofi (AR/X, peroksizomal defektler) ve Canavan hastalığı (AR, Aspartoaçilaz eksikliği)",
+        "resim": 0,
+        "madde": [
+         12,
+         1
+        ]
        }
       },
       {
@@ -2425,7 +2758,12 @@
          "Alexander disease",
          "Mutations in glial fibrillary acidic protein"
         ],
-        "sekil": "Tablo 23-2 Seçilmiş Lökodistrofiler (5–7. satırlar): Pelizaeus-Merzbacher (X, PLP mutasyonu), Vanishing white matter (AR, translasyon başlatma faktörü) ve Alexander hastalığı (GFAP mutasyonu)"
+        "sekil": "Tablo 23-2 Seçilmiş Lökodistrofiler (5–7. satırlar): Pelizaeus-Merzbacher (X, PLP mutasyonu), Vanishing white matter (AR, translasyon başlatma faktörü) ve Alexander hastalığı (GFAP mutasyonu)",
+        "resim": 0,
+        "madde": [
+         14,
+         15
+        ]
        }
       }
      ]
@@ -2470,7 +2808,11 @@
          "Toksik ve edinsel metabolik hastalıklar, nörolojik hastalıkların göreceli olarak sık karşılaşılan nedenlerindendir.",
          "Beyin, yüksek metabolik gereksinimleri nedeniyle, beslenme hastalıklarına ve metabolik durumdaki değişikliklere özellikle duyarlıdır."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         3,
+         1
+        ]
        }
       },
       {
@@ -2492,7 +2834,11 @@
         "satir": [
          "Şaşırtıcı olarak, beynin tamamını üniform şekilde etkileyecek metabolik değişiklikler beklenmesine karşın, farklı anatomik bölgelerin gereksinimleri ya da kendilerine özgü özellikleri nedeniyle oldukça farklı klinik prezantasyonlar söz konusu olabilir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         6,
+         5
+        ]
        }
       },
       {
@@ -2521,7 +2867,11 @@
          "Tiamin eksikliğinin (beriberi) sistemik etkilerine ek olarak, ani konfüzyon gelişmesi, göz hareketi anormallikleri ve ataksiyle ortaya çıkan sendrom Wernicke ensefalopatisi olarak isimlendirilir.",
          "Tiamin tedavisi bu defisitleri düzeltir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         3,
+         2
+        ]
        }
       },
       {
@@ -2547,7 +2897,11 @@
         "satir": [
          "Akut evreler tedavisiz geçerse, hastalar belirgin bellek bozukluklarının ön planda olduğu, geri dönüşsüz bir duruma geçer (Korsakoff sendromu)."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         6,
+         5
+        ]
        }
       }
      ]
@@ -2581,7 +2935,11 @@
          "İki sendrom birbiriyle yakın ilişkili olduğundan sıklıkla Wernicke- Korsakoff sendromu olarak adlandırılır.",
          "Bu sendrom özellikle kronik alkolizmde sık görülür."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         0,
+         2
+        ]
        }
       },
       {
@@ -2603,7 +2961,11 @@
         "satir": [
          "Ancak karsinom, kronik gastrit ya da inatçı kusmayı da kapsayan gastrik bozukuklardan kaynaklanan tiamin eksikliği olgularında da karşılaşılabilir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         4,
+         3
+        ]
        }
       },
       {
@@ -2637,7 +2999,11 @@
          "Wernicke ensefalopatisi, özellikle corpus mamillarede ve aynı zamanda üçüncü ve dördüncü ventrikül komşuluğunda hemoraji ve nekroz odaklarıyla karakterizedir.",
          "Nekroz bulunmasına karşın, bu lezyonlarda nöronların bir kısmı genellikle korunmuştur."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         2,
+         3
+        ]
        }
       },
       {
@@ -2665,7 +3031,11 @@
          "Lezyonlar iyileştikçe, makrofaj inflltrasyonu gerçekleşir ve hemosiderin yüklü makrofajların çevrelediği kistik bir alan belirir.",
          "Talamusun medial dorsal çekirdeğindeki lezyonlar Korsakoff sendromundaki bellek bozukluğundan sorumlu görünmektedir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         8,
+         5
+        ]
        }
       }
      ]
@@ -2699,7 +3069,11 @@
          "- B12 Vitamini Eksikliği",
          "Pernisiyöz anemiye ek olarak B12 vitamini eksikliği; omurilikteki oluşturduğu değişikliklerle çeşitli nörolojik defisitlere yol açabilir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         2,
+         1
+        ]
        }
       },
       {
@@ -2726,7 +3100,11 @@
          "Bu durum omuriliğin subakut kombine dejenerasyonu olarak isimlendirilir.",
          "Bu isim spinal kordun hem asandan ve hem desandan yollarının etkilenmesi nedeniyle verilmiştir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         5,
+         3
+        ]
        }
       },
       {
@@ -2749,7 +3127,11 @@
          "Belirtiler haftalar içinde gelişir.",
          "Erken klinik bulgular hafif ataksi ve uyuşma ve alt ekstremitelerde karıncalanma şeklindedir"
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         1,
+         0
+        ]
        }
       },
       {
@@ -2772,7 +3154,11 @@
          "Daha sonra hızla ilerleyerek alt ekstremitelerde spastik güçsüzlüğe yol açabilir, bazen de tam parapleji görülebilir.",
          "Zamanında vitamin yerine koyma tedavisiyle klinik iyileşme gözlenir, ancak, eğer parapleji gelişmişse iyileşme çok azdır."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         5,
+         3
+        ]
        }
       }
      ]
@@ -2817,7 +3203,11 @@
          "- Hipoglisemi:",
          "Beyin enerji üretiminde substrat olarak glikoza gereksinim duyduğundan, glikoz azlığının hücresel etkileri global hipoksiye benzer."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         3,
+         2
+        ]
        }
       },
       {
@@ -2844,7 +3234,11 @@
          "Hipokampal nöronlar hipoglisemik hasardan özellikle etkilenirler, serebellumun Purkinje hücreleri daha az etkilenir.",
          "Anokside olduğu gibi, hipogliseminin düzeyi ve süresi yeterince şiddetliyse, beynin birçok bölgesinde yaygın hasar olabilir"
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         4,
+         7
+        ]
        }
       },
       {
@@ -2872,7 +3266,11 @@
          "Hiperglisemi, en sık olarak kontrolü yetersiz diabetes mellitusta gelişir ve ketoasidoz ya da hiperozmolar komaya sebep olabilir.",
          "Hastalarda, hiperozmolar ortam nedeniyle ortaya çıkan intrasellüler dehidrasyona bağlı konfüzyon, stupor ve sonuçta koma gelişir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         4,
+         1
+        ]
        }
       },
       {
@@ -2898,7 +3296,11 @@
         "satir": [
          "Hiperglisemi aşamalı olarak düzeltilmelidir, çünkü hızlı düzeltme durumunda ağır beyin ödemi gelişebilir"
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         6,
+         5
+        ]
        }
       }
      ]
@@ -2933,7 +3335,11 @@
          "Karaciğer işlevi azalmış olan bireylerde bilinç düzeylerinde baskılanma ve bazen koma görülür.",
          "Erken evrelerde hastalar kollarını avuç içlerini gözlemciye dönük uzattıklarında kanat çırpar tarzda (flapping) tremor (asteriksis) olur."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         3,
+         1
+        ]
        }
       },
       {
@@ -2960,7 +3366,11 @@
          "Normalde karaciğerde üre siklusu yoluyla temizlenen amonyağın yüksek seviyeleri beyin fonksiyonlarında değişikliklere neden olur.",
          "Ancak hastadan hastaya amonyak seviyeleri ciddi farklılıklar gösterebilir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         5,
+         6
+        ]
        }
       },
       {
@@ -2982,7 +3392,11 @@
         "satir": [
          "Santral sinir sisteminde amonyak metabolizması glutamin sentetazın aktivasyonu ile sadece astrositlerde gerçekleşir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         0,
+         1
+        ]
        }
       },
       {
@@ -3008,7 +3422,11 @@
         "satir": [
          "Hiperamonyemi durumunda korteksteki ve bazal ganglionlardaki astrositler şişkin, soluk çekirdekli hale dönüşür (bunlara Alzheimer tip II hücreleri adı verilir, bu hücreler en sık Wilson hastalığında görülür)."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         3,
+         2
+        ]
        }
       }
      ]
@@ -3045,7 +3463,11 @@
          "Civa",
          "Organo-fosfatlar (pestisidlerde bulunur)"
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         1,
+         4
+        ]
        }
       },
       {
@@ -3072,7 +3494,11 @@
          "Metanol: Retina hasarına bağlı körlüğe neden olur.",
          "Karbon monoksit: Hipoksi ile birlikte globus pallidusun seçici hasarına neden olur"
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         6,
+         5
+        ]
        }
       },
       {
@@ -3094,7 +3520,11 @@
         "satir": [
          "Etanol: Etanolün akut intoksikasyonu geri dönüşlü iken, aşırı alımı beyinde şişme ve ölümü de kapsayan belirgin metabolik bozukluklarla sonuçlanabilir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         1,
+         0
+        ]
        }
       },
       {
@@ -3120,7 +3550,11 @@
         "satir": [
          "Alkole kronik maruz kalma Wernicke-Korsakoff sendromu yanısıra olguların yaklaşık olarak % 1'inde beyincikte fonksiyon bozukluğuna neden olur; beyinciğin ön vermisinde atrofinin eşlik ettiği, gövdesel ataksi, sarsak yürüyüş ve nistagmus görülür."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         3,
+         2
+        ]
        }
       }
      ]
@@ -3149,7 +3583,11 @@
         "satir": [
          "Metotreksat: Önemli bir antineoplastik ajan olup aynı zamanda yan etki olarak MSS hasarına neden olur."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         0,
+         1
+        ]
        }
       },
       {
@@ -3171,7 +3609,11 @@
         "satir": [
          "Hasar özellikle beyaz cevherde olup nekroz, demyelinizasyon, gliozis ve kalsifikasyon görülebilir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         2,
+         3
+        ]
        }
       },
       {
@@ -3197,7 +3639,11 @@
         "satir": [
          "İyonize radyasyon: Intrakraniyal tümörlerin tedavisinde sıklıkla kullanılır. Hızla gelişen baş ağrıları, bulantı, kusma, pupilla ödemi şeklindeki semptomlara neden olabilir ve bu semptomlar radyasyon uygulandıktan aylar hatta yıllar sonra bile görülebilmektedir."
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         1,
+         0
+        ]
        }
       },
       {
@@ -3227,7 +3673,11 @@
          "- Ve son aşamada sklerozis gelişebilir.",
          "- Ayrıca yıllar sonra oluşabilecek tümör gelişimini uyarabilir"
         ],
-        "sekil": null
+        "sekil": null,
+        "madde": [
+         3,
+         6
+        ]
        }
       }
      ]

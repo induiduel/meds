@@ -1,6 +1,6 @@
 {
  "surum": 1,
- "metinHash": "61b7ee640b5bb0446a714820d5b43e2d3a787c95",
+ "metinHash": "cd4a3542f247f1adac00cce47e85d369e7062bea",
  "q": [
   {
    "id": "6169f77f722f",
@@ -8,7 +8,7 @@
    "cevap": "Parkinson hastalığı",
    "yil": "2020-2021",
    "p": 21,
-   "c": 0,
+   "c": 2,
    "skor": 0.92
   },
   {
@@ -17,7 +17,7 @@
    "cevap": "Amiyotrofik lateral skleroz (ALS)",
    "yil": "2023",
    "p": 27,
-   "c": 0,
+   "c": 2,
    "skor": 0.92
   },
   {
@@ -26,7 +26,7 @@
    "cevap": "Creutzfeldt-Jakob hastalığı (prion hastalığı)",
    "yil": "2021-2026",
    "p": 50,
-   "c": 0,
+   "c": 1,
    "skor": 0.92
   },
   {
@@ -34,27 +34,27 @@
    "kok": "Hangisi demiyelinizan hastalıktır?",
    "cevap": "Progresif multifokal lökoensefalopati",
    "yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
-   "p": 35,
-   "c": 0,
-   "skor": 0.629
+   "p": 39,
+   "c": 1,
+   "skor": 0.637
   },
   {
    "id": "past-1790877045043-164805",
    "kok": "Aşağıdakilerden hangisi bir demiyelinizan hastalıktır?",
    "cevap": "Progresif multifokal lökoensefalopati",
    "yil": "2021-2022",
-   "p": 9,
-   "c": 0,
-   "skor": 0.634
+   "p": 39,
+   "c": 1,
+   "skor": 0.637
   },
   {
    "id": "447c07f50aed",
    "kok": "Distrofin-glikoprotein kompleksindeki hücre sinyalizasyonunun bozulmasına yol açan ve zamanla onarım kapasitesini aşan miyofibril dejenerasyonları ile ortaya çıkan iskelet kası hastalığı aşağıdakilerden hangisidir?",
    "cevap": "Duchenne ve Becker musküler distrofi",
    "yil": "2020-2021",
-   "p": 2,
-   "c": 0,
-   "skor": 0.615
+   "p": 75,
+   "c": 1,
+   "skor": 0.636
   },
   {
    "id": "d3-k2-nor-010",
@@ -63,7 +63,25 @@
    "yil": "2021-2026",
    "p": 35,
    "c": 0,
-   "skor": 0.785
+   "skor": 0.755
+  },
+  {
+   "id": "6ae0aab3c534",
+   "kok": "Distrofin-glikoprotein kompleksindeki hücre sinyalizasyonunun bozulmasına yol açan zamanla onarım kapasitesini aşan miyojenik dejenerasyonları ile ortaya çıkan iskelet kası hastalığı hangisidir?",
+   "cevap": "Duchenne ve Becker musküler distrofin",
+   "yil": "2020-2021",
+   "p": 75,
+   "c": 1,
+   "skor": 0.607
+  },
+  {
+   "id": "8dd2f0beac7a",
+   "kok": "Distrofon-glikoprotein kompleksindeki hücre sinyalizasyonunun bozulmasına yol açan zamanla onarım kapasitesini aşan miyoÕbril dejenerasyonları ile ortaya çıkan iskelet kası hastalığı hangisidir?",
+   "cevap": "Duchenne ve Becker musküler distroÕsi",
+   "yil": "2020-2021",
+   "p": 75,
+   "c": 1,
+   "skor": 0.618
   },
   {
    "id": "past-1790877045026-798094",
@@ -79,9 +97,18 @@
    "kok": "Nörodejeneratif hastalıklarda görülen, nöron sitoplazmasında nükleusu çevreleyen ya da yerini alan, alev şekilli tau proteininden oluşan filamanların adı nedir?",
    "cevap": "Nörofibriler yumaklar",
    "yil": "2021-2022",
-   "p": 14,
-   "c": 1,
-   "skor": 0.727
+   "p": 2,
+   "c": 0,
+   "skor": 0.602
+  },
+  {
+   "id": "past-1790877488856-908119",
+   "kok": "Xq11-q12 bölgesinde androjen reseptörü (AR) geninin ekson 1'inde CAG trinükleotid tekrar artışı ile ortaya çıkan hastalık aşağıdakilerden hangisidir?",
+   "cevap": "Spinobulber müsküler atrofi (Kennedy hastalığı)",
+   "yil": "2020-2021",
+   "p": 82,
+   "c": 2,
+   "skor": 0.61
   },
   {
    "id": "past-1790877042007-733748",
@@ -89,7 +116,7 @@
    "cevap": "Hipotiroidi",
    "yil": "2020-2021",
    "p": 2,
-   "c": 1,
+   "c": 2,
    "skor": 0.682
   },
   {
@@ -108,16 +135,7 @@
    "yil": "2020-2021",
    "p": 44,
    "c": 0,
-   "skor": 0.625
-  },
-  {
-   "id": "past-1790877048109-324070",
-   "kok": "Aşağıdakilerden hangisi nöromüsküler kavşağı hedefleyen otoantikorların neden olduğu, dalgalanan kas güçsüzlüğü gösteren, en sık postsinaptik asetilkolin reseptörlerini etkileyen ve klinik olarak sıklıkla ekstraoküler kaslardaki güçsüzlük nedeniyle pitozis ve diplopi ile kendini gösteren otoimmün nöromüsküler kavşak hastalığıdır?",
-   "cevap": "Myastenia gravis",
-   "yil": "2021-2022",
-   "p": 76,
-   "c": 0,
-   "skor": 0.63
+   "skor": 0.637
   },
   {
    "id": "past-1790877040564-780438",
@@ -133,36 +151,18 @@
    "kok": "Aşağıdakilerden hangisi geç başlangıçlı Alzheimer hastalığı ile ilişkili genetik risk belirteçlerinden biri DEĞİLDİR?",
    "cevap": "Presenilin 1 (PSEN1) ve Presenilin 2 (PSEN2) mutasyonları",
    "yil": "2021-2026",
-   "p": 17,
-   "c": 0,
-   "skor": 0.703
+   "p": 13,
+   "c": 2,
+   "skor": 0.721
   },
   {
    "id": "d3-k2-psi-016",
    "kok": "Herhangi bir nörolojik veya organik patoloji ile açıklanamayan, sıklıkla psikolojik bir stresör sonrasında aniden ortaya çıkan motor veya duyusal defisitler (örn. psödofelç, afoni, psikojenik körlük) hangi bozukluğu tanımlar?",
    "cevap": "Konversiyon Bozukluğu (Fonksiyonel Nörolojik Belirti Bozukluğu)",
    "yil": "2021-2026",
-   "p": 4,
-   "c": 0,
-   "skor": 0.617
-  },
-  {
-   "id": "past-1790877040604-983358",
-   "kok": "șağidakdlerden hangisi, nõromüskūler kavșağ hedeñleyen otoantikorlanın neden olduğu, dalgalanan kas güçsüzlüğü gösteren otoimmu hastalik olan, en sik postsinaptik asetikolin reseptörlerini etkileyen, klinik olarak sıklkla, ekstraoküler kaslardaki güçsüzlük nedeniyle pitozis diplopi ile kendini gösteren, nöromüsküler kavşak hastalğıdir?",
-   "cevap": "Myastenia Gravis",
-   "yil": "2020-2021",
-   "p": 76,
-   "c": 0,
-   "skor": 0.61
-  },
-  {
-   "id": "5b02969dd7bc",
-   "kok": "Tiamin (B1 vitamini) eksikliğinde göz hareketi anormallikleri, konfüzyon ve ataksi bulgularıyla ortaya çıkan sendrom aşağıdakilerden hangisidir?",
-   "cevap": "Wernicke ensefalopatisi",
-   "yil": "2020-2021",
-   "p": 59,
-   "c": 1,
-   "skor": 0.604
+   "p": 10,
+   "c": 2,
+   "skor": 0.627
   },
   {
    "id": "d3-k2-nor-004",
@@ -170,8 +170,8 @@
    "cevap": "Nöronopati",
    "yil": "2021-2026",
    "p": 29,
-   "c": 0,
-   "skor": 0.618
+   "c": 1,
+   "skor": 0.615
   },
   {
    "id": "4c4eb178b88b",
@@ -179,44 +179,35 @@
    "cevap": "Multipl skleroz (MS)",
    "yil": "2020-2021",
    "p": 35,
-   "c": 0,
-   "skor": 0.706
-  },
-  {
-   "id": "past-q-2025-2026_DO_NEM_3_FI_NAL_SINAVI-123",
-   "kok": "Parkinson hastalığı ile ilgili hangisi yanlıştır?",
-   "cevap": "",
-   "yil": "2021-2022",
-   "p": 21,
-   "c": 1,
-   "skor": 0.619
+   "c": 2,
+   "skor": 0.691
   },
   {
    "id": "d3-k2-tbg-006",
    "kok": "Huntington hastalığının moleküler genetiği ve klinik özellikleri ile ilgili aşağıdakilerden hangisi doğrudur?",
    "cevap": "HTT geninde CAG trinükleotid tekrar artışı ile karakterizedir; babadan aktarılırken antisipasyon gösterir",
    "yil": "2021-2026",
-   "p": 5,
-   "c": 0,
-   "skor": 0.623
+   "p": 82,
+   "c": 2,
+   "skor": 0.659
   },
   {
    "id": "past-1790877039307-169821",
    "kok": "Aksonal nöropatide bir akson hasar gördüğünde aşağıdakilerden hangisi o akson için tipiktir?",
    "cevap": "Aksonun tüm distal kısmında Waller dejenerasyonu ve sekonder miyelin kaybı",
    "yil": "2022-2023",
-   "p": 40,
+   "p": 35,
    "c": 1,
-   "skor": 0.652
+   "skor": 0.624
   },
   {
    "id": "d3-k2-pat-007",
    "kok": "Multipl sklerozun makroskopik ve mikroskopik patolojisi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
    "cevap": "Klasik patolojide öncelikle akson gövdeleri tamamen kesintiye uğrar; miyelin kılıf ise korunur.",
    "yil": "2021-2026",
-   "p": 40,
+   "p": 35,
    "c": 1,
-   "skor": 0.671
+   "skor": 0.65
   }
  ]
 }

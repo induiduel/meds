@@ -1,14 +1,426 @@
 {
  "surum": 1,
- "metinHash": "61b7ee640b5bb0446a714820d5b43e2d3a787c95",
- "p": {},
+ "metinHash": "cd4a3542f247f1adac00cce47e85d369e7062bea",
+ "p": {
+  "1": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Bölünmeyen Nöronlar: Yenilenme yeteneği olmayan hücreler",
+      "Kalıcı Doku Kaybı: Hücre ölümü sonrası geri dönüşümsüz hasar"
+     ],
+     "baslik": "Nöron Biyolojisi ve Hasar",
+     "s": 2,
+     "k": [
+      0,
+      36
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.68
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0368,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "5": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Kararsız Tekrarlar: Ce a ge dizilerinin genetik artışı",
+      "Poliglutamin Zinciri: Fazla glutamin birikimi ve toksisite"
+     ],
+     "baslik": "Trinükleotid Tekrar Genişlemesi",
+     "s": 6,
+     "k": [
+      0,
+      48
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.64
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "6": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Amiloid ve Tau: Alzheimer senil plak ve yumakları",
+      "Alfa Sinüklein: Parkinson hastalığı ve Lewy cisimciği"
+     ],
+     "baslik": "Nörodejeneratif Proteopatiler",
+     "s": 7,
+     "k": [
+      0,
+      44
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.85
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2068,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "14": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Hücre Dışı Plaklar: Beta amiloid peptid birikimi",
+      "Nörofibriler Yumaklar: Hiperfosforile tau proteinleri"
+     ],
+     "baslik": "Alzheimer Histopatolojik Belirteçleri",
+     "s": 15,
+     "k": [
+      0,
+      39
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.85
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2068,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "21": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Substantia Nigra Hasarı: Dopaminerjik nöron ölümü",
+      "Lewy Cisimcikleri: Hücre içi alfa sinüklein birikimi"
+     ],
+     "baslik": "Parkinson Patogenez Zinciri",
+     "s": 22,
+     "k": [
+      0,
+      46
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.96
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3168,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "24": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Baskın Kalıtım: Lare ka iki gen mutasyonları",
+      "Çekinik Kalıtım: Pink bir ve parkin mutasyonları"
+     ],
+     "baslik": "Parkinson Genetik Tipleri",
+     "s": 25,
+     "k": [
+      0,
+      15
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.81
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1668,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "27": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Üst Motor Nöron: Spastisite ve canlı tendon refleksleri",
+      "Alt Motor Nöron: Ön boynuz harabiyeti ve kas atrofisi"
+     ],
+     "baslik": "A L S Motor Nöron Tutulumu",
+     "s": 28,
+     "k": [
+      0,
+      47
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.88
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2368,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "31": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Ce Dokuz Orf Yetmiş İki: Hekzanükleotid tekrar artışı",
+      "Se O De Bir Mutasyonu: Süperoksit dismutaz disfonksiyonu"
+     ],
+     "baslik": "A L S Moleküler Genetiği",
+     "s": 32,
+     "k": [
+      0,
+      33
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.95
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3068,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "32": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Genetik Genişleme: Haş te te geninde ce a ge tekrarı",
+      "Kaudat Atrofisi: İstem dışı koreik hareketler"
+     ],
+     "baslik": "Huntington Hastalığı Patogenezi",
+     "s": 33,
+     "k": [
+      0,
+      36
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.84
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1968,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "35": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Akut Demiyelinizasyon: Otoimmün miyelin kılıf hasarı",
+      "Kronik Dönem: Akson kaybı ve glial plak sklerozu"
+     ],
+     "baslik": "Multipl Skleroz Evreleri",
+     "s": 36,
+     "k": [
+      0,
+      53
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.77
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.444,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2336,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "45": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Hücresel Form: Çözünür alfa heliks yapısı",
+      "Hurda Formu: Dirençli beta tabaka konformasyonu"
+     ],
+     "baslik": "Prion Hastalığı Özellikleri",
+     "s": 46,
+     "k": [
+      0,
+      27
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.97
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3268,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "50": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Talamik Nörodejenerasyon: Ağır uyku yapısı bozulması",
+      "Pe Re Pe Mutasyonu: De yüz yetmiş sekiz en değişimi"
+     ],
+     "baslik": "Ölümcül Ailesel Uykusuzluk",
+     "s": 51,
+     "k": [
+      0,
+      50
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.93
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2868,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "55": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Purkinje Hücre Kaybı: Progresif serebellar ataksi",
+      "İşlev Kazanımı: Kararsız poliglutamin toksisitesi"
+     ],
+     "baslik": "Spinoserebellar Ataksi Spektrumu",
+     "s": 56,
+     "k": [
+      0,
+      35
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.92
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2768,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  }
+ },
  "rapor": {
   "aday": 15,
-  "gecti": 0,
+  "gecti": 13,
   "ret": {
-   "karşıt: 2 kutup, 1–6 satır [özellik, A, B]": 5,
-   "şablon 'zincir' kütüphanede yok": 3,
-   "hücre 60 karakterden uzun": 5,
    "resim sayfasında panel (H51)": 2
   }
  }

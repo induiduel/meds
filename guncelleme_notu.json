@@ -1,18 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 350,
-  "baslik": "Kurul 2 Tam Amfi Derinliği Güncellemesi: Milestone 7 (Ders 19, 20, 21) Tamamlandı",
+  "onem": 351,
+  "baslik": "Kurul 2 Tam Amfi Derinliği: Nörodejeneratif Hastalıklar Genetiği (Ders 53) Yayında",
   "maddeler": [
-    "Ders 21 (Tıbbi Farmakoloji - Sedatif ve Hipnotik İlaçlar): 55 sayfa tam amfi dersi kapsamı (18 bölüm, 55 paragraf, 223 cümle, 4.239 kelime, 32,4 dk EMA GPU sesli anlatım), 14 slayt Öğren destesi, 12 çizim şeması, 5 doğrulanmış çıkmış soru bağlantısı, %100 lazer metin takibi ve gömülü .medspak paketi ile 0 atlanan sayfa garantisi.",
-    "Ders 20 (Psikiyatri - Psikiyatrik Tedaviler): 29 sayfa tam amfi dersi kapsamı (14 bölüm, 29 paragraf, 150 cümle, 3.250 kelime, 27 dk EMA GPU sesli anlatım), 12 slayt Öğren destesi, 10 çizim şeması, 4 çıkmış soru bağlantısı ve gömülü .medspak paketi.",
-    "Ders 19 (Psikiyatri - Bipolar Bozukluk ve İlgili Bozukluklar): 36 sayfa tam amfi dersi kapsamı (12 bölüm, 36 paragraf, 130 cümle, 2.750 kelime, 23 dk EMA GPU sesli anlatım), 12 slayt Öğren destesi, 8 çizim şeması, 4 çıkmış soru bağlantısı ve gömülü .medspak paketi.",
-    "Milestone 7 Kapsamı: Psikiyatri ve Tıbbi Farmakoloji bloklarına ait bu 3 kritik ders yüzeysel anlatımlardan tamamen arındırılarak amfi dersi standartlarında derinlemesine işlendi.",
-    "Tüm seslendirmeler EMA Lightning yerel GPU ile sıfır harici servis bağımlılığıyla üretilmiş, lazer metin takipleri ve canlı çizim şemaları %100 doğrulanmıştır."
+    "Ders 53 (Nörodejeneratif Hastalıklar Genetiği - Dr. Öğr. Üyesi Serap Arslan): 83 sayfanın tamamı eksiksiz kapsandı; 10 bölüm, 83 paragraf, 274 cümle, 4.586 kelime (32,6 dk EMA GPU sesli anlatım) ile amfi derinliğine ulaştırıldı.",
+    "Tüm Görsel ve Tabloların Açıklanması: Alzheimer amiloid/tau yolakları, MCI yaklaşım algoritması, asemptomatik danışma, Parkinson oksidatif stres basamakları, Tablo 1 ALS genleri, Huntington CAG eşikleri, MS evreleri, Prion süngerimsi ensefalopati ve SMA ekzon 7 alternatif kırpılma ile fenotipik özet tabloları ayrıntılı şekilde anlatıldı.",
+    "15 Canlı Çizim Şeması ve Çıkmış Sınav Soruları: 15 canlı çizim şablonu sıfır ileri sızıntı ile doğrulandı; 3 komite çıkmış sınav sorusu sesli uyarı ve kanıtlarıyla ders akışına entegre edildi.",
+    "0 Atlanan Sayfa Garantisi: 83 slaydın her biri kendi özgün kazanım ve cümleleriyle işlenerek yüzeysel şablonlardan tamamen arındırıldı, 10.68 MB .medspak paketi derlendi."
   ],
   "eklenen": [
-    "Kurul 2 Tıbbi Farmakoloji 'Sedatif ve Hipnotik İlaçlar' (2025-2026 Arşivi, 55 sayfa tam amfi kapsamı)",
-    "Kurul 2 Psikiyatri 'Psikiyatrik Tedaviler' (2025-2026 Arşivi, 29 sayfa tam amfi kapsamı)",
-    "Kurul 2 Psikiyatri 'Bipolar Bozukluk ve İlgili Bozukluklar' (2025-2026 Arşivi, 36 sayfa tam amfi kapsamı)"
+    "Kurul 2 Tıbbi Genetik 'Nörodejeneratif Hastalıklar Genetiği' (2025-2026 Arşivi, 83 sayfa tam amfi kapsamı, 10.68 MB .medspak)"
   ],
   "degisen": [
     "meds/data/arsiv_25_26/sesli_anlatim/dersler.json",
@@ -20,8 +17,8 @@
     "meds/guncelleme_notu.json"
   ],
   "duzeltilen": [
-    "Ders 21, 20 ve 19 amfi dersi standardında 20–35 dakikalık derin anlatımlarla sıfırdan tamamlandı",
-    "Kısaltma okunuşları, lazer metin takibi satır eşlemeleri ve çıkmış soru uyarıları eksiksiz sağlandı"
+    "Ders 53'teki yüzeysel 2 cümlelik anlatımlar kaldırılarak 83 sayfanın tamamı amfi derinliğinde eksiksiz genişletildi",
+    "Tüm şekil ve tablolar (Alzheimer algoritmaları, Parkinson kaskadları, ALS genleri, SMA kopya tablosu) detaylı olarak açıklandı"
   ],
   "silinen": []
 }

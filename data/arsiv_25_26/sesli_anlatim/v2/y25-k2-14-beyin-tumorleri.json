@@ -37,7 +37,12 @@
          "Dr. Aydın Sinan Apaydın"
         ],
         "sekil": null,
-        "adim": 1
+        "adim": 1,
+        "madde": [
+         0,
+         1
+        ],
+        "resim": 0
        }
       },
       {
@@ -60,7 +65,12 @@
          "Dr. Aydın Sinan Apaydın"
         ],
         "sekil": null,
-        "adim": 1
+        "adim": 1,
+        "madde": [
+         0,
+         1
+        ],
+        "resim": 0
        }
       }
      ]
@@ -93,7 +103,11 @@
          "Benign-malign davranış şekilleri"
         ],
         "sekil": null,
-        "adim": 1
+        "adim": 1,
+        "madde": [
+         3,
+         2
+        ]
        }
       },
       {
@@ -126,7 +140,11 @@
          "Tedavi"
         ],
         "sekil": null,
-        "adim": 1
+        "adim": 1,
+        "madde": [
+         6,
+         1
+        ]
        }
       }
      ]
@@ -158,7 +176,11 @@
          "Meninks tümörleri"
         ],
         "sekil": null,
-        "adim": 1
+        "adim": 1,
+        "madde": [
+         1,
+         0
+        ]
        }
       },
       {
@@ -192,7 +214,11 @@
          "Metastatik tümörler"
         ],
         "sekil": null,
-        "adim": 1
+        "adim": 1,
+        "madde": [
+         5,
+         7
+        ]
        }
       }
      ]
@@ -229,7 +255,11 @@
          "3. Ependymal tumors"
         ],
         "sekil": "Dünya Sağlık Örgütü santral sinir sistemi tümörleri kapsamlı sınıflama tablosu",
-        "adim": 1
+        "adim": 1,
+        "madde": [
+         0,
+         64
+        ]
        }
       },
       {
@@ -259,7 +289,11 @@
          ". Metastatic tumor to the central nervous system"
         ],
         "sekil": "Santral sinir sistemi tümör sınıflama şeması ve histolojik alt gruplar",
-        "adim": 1
+        "adim": 1,
+        "madde": [
+         57,
+         106
+        ]
        }
       },
       {
@@ -289,7 +323,11 @@
          ". Metastatic tumor to the central nervous system"
         ],
         "sekil": "Dünya Sağlık Örgütü santral sinir sistemi tümörleri histopatolojik sınıflama tablosu",
-        "adim": 1
+        "adim": 1,
+        "madde": [
+         57,
+         106
+        ]
        }
       }
      ]
@@ -320,7 +358,11 @@
          "Cerrahi rezeksiyon sınırlı"
         ],
         "sekil": null,
-        "adim": 1
+        "adim": 1,
+        "madde": [
+         0,
+         1
+        ]
        }
       },
       {
@@ -348,7 +390,11 @@
          "yaparak kardiyorespiratuar arrest"
         ],
         "sekil": null,
-        "adim": 1
+        "adim": 1,
+        "madde": [
+         3,
+         2
+        ]
        }
       },
       {
@@ -377,7 +423,11 @@
          "olabilir)"
         ],
         "sekil": null,
-        "adim": 1
+        "adim": 1,
+        "madde": [
+         4,
+         5
+        ]
        }
       }
      ]
@@ -416,7 +466,11 @@
          "- sıklıkla motor güçsüzlük"
         ],
         "sekil": null,
-        "adim": 2
+        "adim": 2,
+        "madde": [
+         0,
+         1
+        ]
        }
       },
       {
@@ -444,7 +498,11 @@
          "Nöbet"
         ],
         "sekil": null,
-        "adim": 2
+        "adim": 2,
+        "madde": [
+         2,
+         3
+        ]
        }
       }
      ]
@@ -476,7 +534,11 @@
          "- hidrosefaliye bağlı"
         ],
         "sekil": null,
-        "adim": 2
+        "adim": 2,
+        "madde": [
+         1,
+         0
+        ]
        }
       },
       {
@@ -502,7 +564,11 @@
          "5- Mental değişiklikler"
         ],
         "sekil": null,
-        "adim": 2
+        "adim": 2,
+        "madde": [
+         3,
+         4
+        ]
        }
       },
       {
@@ -527,7 +593,11 @@
          "bulgular, BOS kaçağı"
         ],
         "sekil": null,
-        "adim": 2
+        "adim": 2,
+        "madde": [
+         7,
+         8
+        ]
        }
       }
      ]
@@ -566,7 +636,11 @@
          "Papilödem"
         ],
         "sekil": null,
-        "adim": 2
+        "adim": 2,
+        "madde": [
+         0,
+         1
+        ]
        }
       },
       {
@@ -594,7 +668,11 @@
          "Nistagmus"
         ],
         "sekil": null,
-        "adim": 2
+        "adim": 2,
+        "madde": [
+         3,
+         4
+        ]
        }
       }
      ]
@@ -627,7 +705,11 @@
          "hemiparezi"
         ],
         "sekil": null,
-        "adim": 2
+        "adim": 2,
+        "madde": [
+         1,
+         0
+        ]
        }
       },
       {
@@ -662,7 +744,11 @@
          "alanı defektleri"
         ],
         "sekil": null,
-        "adim": 2
+        "adim": 2,
+        "madde": [
+         2,
+         5
+        ]
        }
       }
      ]
@@ -696,7 +782,8 @@
         "sayfa": 10,
         "satir": [],
         "sekil": "Aksiyel beyin manyetik rezonans kesitinde kitle etkisi, orta hat şifti ve subfalsin herniasyon görünümü",
-        "adim": 2
+        "adim": 2,
+        "resim": 0
        }
       },
       {
@@ -717,7 +804,8 @@
         "sayfa": 10,
         "satir": [],
         "sekil": "Çoklu aksiyel manyetik rezonans serisinde serebral ödem ve ventriküler bası bulguları",
-        "adim": 2
+        "adim": 2,
+        "resim": 0
        }
       }
      ]
@@ -756,7 +844,11 @@
          "Oligodendrogliom"
         ],
         "sekil": null,
-        "adim": 3
+        "adim": 3,
+        "madde": [
+         0,
+         1
+        ]
        }
       },
       {
@@ -788,7 +880,11 @@
          "Koroid pleksus papillomları"
         ],
         "sekil": null,
-        "adim": 3
+        "adim": 3,
+        "madde": [
+         7,
+         6
+        ]
        }
       }
      ]
@@ -820,7 +916,11 @@
          "Astrositlerden kaynaklanır"
         ],
         "sekil": null,
-        "adim": 3
+        "adim": 3,
+        "madde": [
+         0,
+         2
+        ]
        }
       },
       {
@@ -848,7 +948,11 @@
          "40-60 yaş arası en sık görülür."
         ],
         "sekil": null,
-        "adim": 3
+        "adim": 3,
+        "madde": [
+         4,
+         0
+        ]
        }
       },
       {
@@ -875,7 +979,11 @@
          "ikiye ayrılır."
         ],
         "sekil": null,
-        "adim": 3
+        "adim": 3,
+        "madde": [
+         8,
+         5
+        ]
        }
       }
      ]
@@ -912,7 +1020,11 @@
          "– anaplastiye eğilim ↑"
         ],
         "sekil": null,
-        "adim": 3
+        "adim": 3,
+        "madde": [
+         2,
+         3
+        ]
        }
       },
       {
@@ -940,7 +1052,11 @@
          "– prognozları kötü"
         ],
         "sekil": null,
-        "adim": 3
+        "adim": 3,
+        "madde": [
+         4,
+         5
+        ]
        }
       }
      ]
@@ -978,7 +1094,11 @@
          "Pilositik astrositom"
         ],
         "sekil": null,
-        "adim": 3
+        "adim": 3,
+        "madde": [
+         0,
+         2
+        ]
        }
       },
       {
@@ -1002,7 +1122,11 @@
          "Pilositik astrositom"
         ],
         "sekil": null,
-        "adim": 3
+        "adim": 3,
+        "madde": [
+         0,
+         2
+        ]
        }
       }
      ]
@@ -1034,7 +1158,11 @@
          "– atipik hücre(polimorfizm)"
         ],
         "sekil": null,
-        "adim": 3
+        "adim": 3,
+        "madde": [
+         2,
+         0
+        ]
        }
       },
       {
@@ -1062,7 +1190,11 @@
          "Doumas-Douport"
         ],
         "sekil": null,
-        "adim": 3
+        "adim": 3,
+        "madde": [
+         0,
+         1
+        ]
        }
       }
      ]
@@ -1094,7 +1226,12 @@
          "ödem ve kitle etkisi T1A"
         ],
         "sekil": "Aksiyel kesitlerde düşük ve yüksek dereceli astrositom karşılaştırmalı görüntüleri",
-        "adim": 3
+        "adim": 3,
+        "resim": 0,
+        "madde": [
+         2,
+         1
+        ]
        }
       },
       {
@@ -1117,7 +1254,12 @@
          "– Kontrastlı BT ve T1A MR’da çevresinde belir"
         ],
         "sekil": "Manyetik rezonans kesitinde glioblastom lezyonunun halkasal kontrastlanma paterni",
-        "adim": 3
+        "adim": 3,
+        "resim": 0,
+        "madde": [
+         6,
+         2
+        ]
        }
       }
      ]
@@ -1160,7 +1302,11 @@
          "teşhislerden birisi GBM dir. Konuyla ilgili"
         ],
         "sekil": null,
-        "adim": 4
+        "adim": 4,
+        "madde": [
+         0,
+         1
+        ]
        }
       },
       {
@@ -1183,7 +1329,10 @@
          "Nöroşirürjinin tamamında en cesaret kırıcı"
         ],
         "sekil": null,
-        "adim": 4
+        "adim": 4,
+        "madde": [
+         0
+        ]
        }
       }
      ]
@@ -1214,7 +1363,11 @@
          "ortaya çıkarlar."
         ],
         "sekil": null,
-        "adim": 4
+        "adim": 4,
+        "madde": [
+         0,
+         1
+        ]
        }
       },
       {
@@ -1237,7 +1390,11 @@
          "Orijinlerinin low-grade"
         ],
         "sekil": null,
-        "adim": 4
+        "adim": 4,
+        "madde": [
+         2,
+         3
+        ]
        }
       }
      ]
@@ -1275,7 +1432,11 @@
          "YÜKSEK GRADE’Lİ"
         ],
         "sekil": null,
-        "adim": 4
+        "adim": 4,
+        "madde": [
+         0,
+         1
+        ]
        }
       },
       {
@@ -1298,7 +1459,11 @@
          "ASTROSİTOMLAR"
         ],
         "sekil": null,
-        "adim": 4
+        "adim": 4,
+        "madde": [
+         1,
+         4
+        ]
        }
       }
      ]
@@ -1330,7 +1495,11 @@
          "yararlanılmalıdır. Çü"
         ],
         "sekil": "Glioblastom olgusunda MR perfüzyon ve spektroskopi metabolit haritası",
-        "adim": 4
+        "adim": 4,
+        "madde": [
+         0,
+         1
+        ]
        }
       },
       {
@@ -1353,7 +1522,10 @@
          "radyolojik olarak gözlenen"
         ],
         "sekil": "Tümör çevresi beyaz cevher infiltrasyonunu gösteren ileri MR görüntüleme sekansı",
-        "adim": 4
+        "adim": 4,
+        "madde": [
+         1
+        ]
        }
       }
      ]
@@ -1385,7 +1557,11 @@
          "– İleri yaş gurubunda uygulanan tedavil"
         ],
         "sekil": null,
-        "adim": 4
+        "adim": 4,
+        "madde": [
+         0,
+         2
+        ]
        }
       },
       {
@@ -1408,7 +1584,11 @@
          "Prognozu etkileyen faktörler"
         ],
         "sekil": null,
-        "adim": 4
+        "adim": 4,
+        "madde": [
+         0,
+         2
+        ]
        }
       }
      ]
@@ -1450,7 +1630,11 @@
          "Ortalama yaş 40"
         ],
         "sekil": null,
-        "adim": 6
+        "adim": 6,
+        "madde": [
+         0,
+         2
+        ]
        }
       },
       {
@@ -1479,7 +1663,12 @@
          "Çoğunlukla frontal loblarda görülür."
         ],
         "sekil": "Aksiyel beyin BT ve MR kesitinde frontal lob oligodendrogliom kalsifikasyonları",
-        "adim": 6
+        "adim": 6,
+        "resim": 0,
+        "madde": [
+         3,
+         7
+        ]
        }
       },
       {
@@ -1503,7 +1692,11 @@
          "60, BT’de %90 kalsifiye görülür."
         ],
         "sekil": null,
-        "adim": 6
+        "adim": 6,
+        "madde": [
+         5,
+         6
+        ]
        }
       }
      ]
@@ -1541,7 +1734,11 @@
          "Agresif rezeksiyon + KT"
         ],
         "sekil": null,
-        "adim": 6
+        "adim": 6,
+        "madde": [
+         0,
+         1
+        ]
        }
       },
       {
@@ -1567,7 +1764,11 @@
          "KT ve RT’e duyarlılığı artırır"
         ],
         "sekil": null,
-        "adim": 6
+        "adim": 6,
+        "madde": [
+         8,
+         10
+        ]
        }
       }
      ]
@@ -1599,7 +1800,11 @@
          "kalıntılarından kaynaklanır."
         ],
         "sekil": null,
-        "adim": 6
+        "adim": 6,
+        "madde": [
+         1,
+         0
+        ]
        }
       },
       {
@@ -1627,7 +1832,11 @@
          "oluşturur. %69’u çocuklarda ortaya çıkar."
         ],
         "sekil": null,
-        "adim": 6
+        "adim": 6,
+        "madde": [
+         3,
+         2
+        ]
        }
       }
      ]
@@ -1657,7 +1866,10 @@
          "Cerrahi + Radyoterapi"
         ],
         "sekil": "Dördüncü ventrikül ependimomunun sagittal T1 kontrastlı manyetik rezonans görüntüsü",
-        "adim": 6
+        "adim": 6,
+        "madde": [
+         0
+        ]
        }
       },
       {
@@ -1681,7 +1893,11 @@
          "pons yakınlığı nedeniyle komplet ekstirpasyo"
         ],
         "sekil": "Ventrikül tabanında beyin sapı ile yakın anatomik ilişki gösteren tümör kesiti",
-        "adim": 6
+        "adim": 6,
+        "madde": [
+         1,
+         2
+        ]
        }
       }
      ]
@@ -1718,7 +1934,11 @@
          "Hem glial hem de nöral hücrelerin prokürsörü olduğu"
         ],
         "sekil": null,
-        "adim": 6
+        "adim": 6,
+        "madde": [
+         0,
+         1
+        ]
        }
       },
       {
@@ -1744,7 +1964,11 @@
          "BOS dolaşımına katılarak spinal ve diğer beyin"
         ],
         "sekil": null,
-        "adim": 6
+        "adim": 6,
+        "madde": [
+         5,
+         4
+        ]
        }
       }
      ]
@@ -1783,7 +2007,12 @@
          "orijin: adenohipofiz veya"
         ],
         "sekil": "Sellar ve suprasellar bölgede kistik kraniofarinjioma kitle lezyonunun koronal MR görüntüsü",
-        "adim": 7
+        "adim": 7,
+        "resim": 0,
+        "madde": [
+         5,
+         6
+        ]
        }
       },
       {
@@ -1807,7 +2036,12 @@
          "kalsifikasyon,"
         ],
         "sekil": "Kraniofarinjioma histolojisi ve makine yağı kıvamında kist sıvısı içeren kistik alanlar",
-        "adim": 7
+        "adim": 7,
+        "resim": 0,
+        "madde": [
+         4,
+         9
+        ]
        }
       }
      ]
@@ -1838,7 +2072,11 @@
          "– tümöral bası"
         ],
         "sekil": null,
-        "adim": 7
+        "adim": 7,
+        "madde": [
+         0,
+         1
+        ]
        }
       },
       {
@@ -1861,7 +2099,10 @@
          "– hidrosefali"
         ],
         "sekil": null,
-        "adim": 7
+        "adim": 7,
+        "madde": [
+         2
+        ]
        }
       }
      ]
@@ -1902,7 +2143,11 @@
          ">5 cm"
         ],
         "sekil": null,
-        "adim": 7
+        "adim": 7,
+        "madde": [
+         0,
+         1
+        ]
        }
       },
       {
@@ -1930,7 +2175,11 @@
          "subtotal rezeksiyon+RT"
         ],
         "sekil": null,
-        "adim": 7
+        "adim": 7,
+        "madde": [
+         7,
+         9
+        ]
        }
       }
      ]
@@ -1960,7 +2209,8 @@
          "Kraniofarinjiomalar"
         ],
         "sekil": "Sellar ve suprasellar kraniofarinjiomanın kalsifiye kistik morfolojisini gösteren kranial BT kesiti",
-        "adim": 7
+        "adim": 7,
+        "resim": 0
        }
       },
       {
@@ -1983,7 +2233,8 @@
          "Kraniofarinjiomalar"
         ],
         "sekil": "Kiazma optikum basısını ve üçüncü ventrikül deformitesini gösteren sagittal MR kesiti",
-        "adim": 7
+        "adim": 7,
+        "resim": 0
        }
       }
      ]
@@ -2021,7 +2272,12 @@
          "nodül ile karakterizedir"
         ],
         "sekil": "Serebellumda kistik kitle içinde kontrast tutan vasküler mural nodülün MR görüntüsü",
-        "adim": 8
+        "adim": 8,
+        "resim": 0,
+        "madde": [
+         1,
+         0
+        ]
        }
       },
       {
@@ -2046,7 +2302,12 @@
          "birlikte bulunabilir"
         ],
         "sekil": "Aksiyel T1 kontrastlı kesitte hemanjiyoblastom nodülünün yoğun kontrastlanması",
-        "adim": 8
+        "adim": 8,
+        "resim": 0,
+        "madde": [
+         3,
+         2
+        ]
        }
       }
      ]
@@ -2078,7 +2339,11 @@
          "hastalarda polistemi olabilir"
         ],
         "sekil": null,
-        "adim": 8
+        "adim": 8,
+        "madde": [
+         1,
+         0
+        ]
        }
       },
       {
@@ -2102,7 +2367,11 @@
          "intrakraniyal lezyon ortaya çıkma ihtimali"
         ],
         "sekil": null,
-        "adim": 8
+        "adim": 8,
+        "madde": [
+         2,
+         3
+        ]
        }
       }
      ]
@@ -2138,7 +2407,11 @@
          "traktı mevcuttur"
         ],
         "sekil": null,
-        "adim": 8
+        "adim": 8,
+        "madde": [
+         1,
+         0
+        ]
        }
       },
       {
@@ -2167,7 +2440,11 @@
          "Hidrosefali"
         ],
         "sekil": null,
-        "adim": 8
+        "adim": 8,
+        "madde": [
+         4,
+         3
+        ]
        }
       }
      ]
@@ -2201,7 +2478,12 @@
          "bir süreç içinde büyürler"
         ],
         "sekil": "Serebellopontin köşe epidermoid kistinin inci benzeri lobüle morfolojisini gösteren MR kesiti",
-        "adim": 8
+        "adim": 8,
+        "resim": 0,
+        "madde": [
+         2,
+         1
+        ]
        }
       },
       {
@@ -2226,7 +2508,12 @@
          "konulmasında sorunlar olabilir"
         ],
         "sekil": "Sisternal boşluklara yayılan epidermoid kistin difüzyon MRG görünümü",
-        "adim": 8
+        "adim": 8,
+        "resim": 0,
+        "madde": [
+         4,
+         3
+        ]
        }
       }
      ]
@@ -2264,7 +2551,11 @@
          "Sıklıkla B hücreli lenfoma"
         ],
         "sekil": null,
-        "adim": 8
+        "adim": 8,
+        "madde": [
+         0,
+         5
+        ]
        }
       },
       {
@@ -2290,7 +2581,11 @@
          "Prognoz kötü"
         ],
         "sekil": null,
-        "adim": 8
+        "adim": 8,
+        "madde": [
+         2,
+         6
+        ]
        }
       }
      ]
@@ -2320,7 +2615,10 @@
          "Orta hatta,pineal ve suprasellar yerleşim"
         ],
         "sekil": null,
-        "adim": 8
+        "adim": 8,
+        "madde": [
+         0
+        ]
        }
       },
       {
@@ -2344,7 +2642,11 @@
          "Testis deki histolojik tip gibidir."
         ],
         "sekil": null,
-        "adim": 8
+        "adim": 8,
+        "madde": [
+         1,
+         2
+        ]
        }
       }
      ]
@@ -2382,7 +2684,11 @@
          "tümörlerdir."
         ],
         "sekil": null,
-        "adim": 9
+        "adim": 9,
+        "madde": [
+         1,
+         0
+        ]
        }
       },
       {
@@ -2411,7 +2717,11 @@
          "boyunca yerleşir."
         ],
         "sekil": null,
-        "adim": 9
+        "adim": 9,
+        "madde": [
+         2,
+         3
+        ]
        }
       }
      ]
@@ -2442,7 +2752,11 @@
          "Kadın/erkek oranı 3-7/1"
         ],
         "sekil": null,
-        "adim": 9
+        "adim": 9,
+        "madde": [
+         1,
+         0
+        ]
        }
       },
       {
@@ -2466,7 +2780,11 @@
          "Meninjiomlu hastaların %60’ında kafa travması öyküsü mevcut"
         ],
         "sekil": null,
-        "adim": 9
+        "adim": 9,
+        "madde": [
+         3,
+         2
+        ]
        }
       }
      ]
@@ -2506,7 +2824,11 @@
          "Östrojen ve progesteron reseptörleri"
         ],
         "sekil": null,
-        "adim": 9
+        "adim": 9,
+        "madde": [
+         13,
+         12
+        ]
        }
       },
       {
@@ -2538,7 +2860,11 @@
          "Nörofibromatozis tip II"
         ],
         "sekil": null,
-        "adim": 9
+        "adim": 9,
+        "madde": [
+         4,
+         7
+        ]
        }
       }
      ]
@@ -2570,7 +2896,11 @@
          "hücrelerinden köken alırlar"
         ],
         "sekil": null,
-        "adim": 9
+        "adim": 9,
+        "madde": [
+         1,
+         0
+        ]
        }
       },
       {
@@ -2596,7 +2926,11 @@
          "koroidea’dan orijin alırlar"
         ],
         "sekil": null,
-        "adim": 9
+        "adim": 9,
+        "madde": [
+         3,
+         2
+        ]
        }
       }
      ]
@@ -2643,7 +2977,11 @@
          "papiller"
         ],
         "sekil": null,
-        "adim": 9
+        "adim": 9,
+        "madde": [
+         4,
+         3
+        ]
        }
       },
       {
@@ -2671,7 +3009,11 @@
          "kordoid"
         ],
         "sekil": null,
-        "adim": 9
+        "adim": 9,
+        "madde": [
+         3,
+         2
+        ]
        }
       }
      ]
@@ -2703,7 +3045,11 @@
          "22. kromozom"
         ],
         "sekil": null,
-        "adim": 9
+        "adim": 9,
+        "madde": [
+         2,
+         0
+        ]
        }
       },
       {
@@ -2732,7 +3078,11 @@
          "17q mutasyon"
         ],
         "sekil": null,
-        "adim": 9
+        "adim": 9,
+        "madde": [
+         4,
+         7
+        ]
        }
       }
      ]
@@ -2771,7 +3121,11 @@
          "– Belirgin çevre ödemi"
         ],
         "sekil": "Malign menenjiom olgusunda parankimal invazyon ve heterojen kontrastlanma gösteren BT kesiti",
-        "adim": 11
+        "adim": 11,
+        "madde": [
+         3,
+         0
+        ]
        }
       },
       {
@@ -2794,7 +3148,11 @@
          "– Nöral doku içerisine mush-room uzanım"
         ],
         "sekil": "Aksiyel kesitte kortikal yüzeyi aşan mantar benzeri tümöral yayılım görüntüsü",
-        "adim": 11
+        "adim": 11,
+        "madde": [
+         4,
+         3
+        ]
        }
       }
      ]
@@ -2826,7 +3184,11 @@
          "kanıtlanmamış."
         ],
         "sekil": null,
-        "adim": 11
+        "adim": 11,
+        "madde": [
+         1,
+         0
+        ]
        }
       },
       {
@@ -2849,7 +3211,11 @@
          "5 yıllık yaşam süresi: %91.3"
         ],
         "sekil": null,
-        "adim": 11
+        "adim": 11,
+        "madde": [
+         3,
+         0
+        ]
        }
       }
      ]
@@ -2887,7 +3253,11 @@
          "0"
         ],
         "sekil": null,
-        "adim": 11
+        "adim": 11,
+        "madde": [
+         2,
+         4
+        ]
        }
       },
       {
@@ -2929,7 +3299,11 @@
          "29"
         ],
         "sekil": null,
-        "adim": 11
+        "adim": 11,
+        "madde": [
+         8,
+         4
+        ]
        }
       },
       {
@@ -2962,7 +3336,11 @@
          "100"
         ],
         "sekil": null,
-        "adim": 11
+        "adim": 11,
+        "madde": [
+         10,
+         13
+        ]
        }
       }
      ]
@@ -3011,7 +3389,12 @@
          "hücrelerinden orijin alırlar"
         ],
         "sekil": "Pontoserebellar köşede internal akustik kanalı genişleten vestibüler schwannomun MRG görüntüsü",
-        "adim": 12
+        "adim": 12,
+        "resim": 0,
+        "madde": [
+         2,
+         3
+        ]
        }
       },
       {
@@ -3044,7 +3427,12 @@
          "vertigo"
         ],
         "sekil": "Internal akustik porus genişlemesi ve pontoserebellar köşe tümör kompresyonu",
-        "adim": 12
+        "adim": 12,
+        "resim": 0,
+        "madde": [
+         6,
+         7
+        ]
        }
       },
       {
@@ -3080,7 +3468,12 @@
          "trigeminal nevralji"
         ],
         "sekil": "Beyin sapına ve komşu kraniyal sinirlere bası yapan dev akustik nörinom kesiti",
-        "adim": 12
+        "adim": 12,
+        "resim": 0,
+        "madde": [
+         9,
+         10
+        ]
        }
       }
      ]
@@ -3118,7 +3511,11 @@
          "görülen en yaygın beyin tümörüdür."
         ],
         "sekil": null,
-        "adim": 13
+        "adim": 13,
+        "madde": [
+         8,
+         7
+        ]
        }
       },
       {
@@ -3151,7 +3548,11 @@
          "GIS"
         ],
         "sekil": null,
-        "adim": 13
+        "adim": 13,
+        "madde": [
+         0,
+         1
+        ]
        }
       },
       {
@@ -3174,7 +3575,11 @@
          "Metastaz bazen ilk bulgu olabilir."
         ],
         "sekil": null,
-        "adim": 13
+        "adim": 13,
+        "madde": [
+         9,
+         1
+        ]
        }
       }
      ]
@@ -3211,7 +3616,12 @@
          "tipik özellikler"
         ],
         "sekil": "Aksiyel kontrastlı MR kesitinde gri-beyaz cevher sınırında multipl metastatik nodüller",
-        "adim": 13
+        "adim": 13,
+        "resim": 0,
+        "madde": [
+         1,
+         0
+        ]
        }
       },
       {
@@ -3237,7 +3647,12 @@
          "Beyin sapı %5"
         ],
         "sekil": "Serebral kan akımıyla orantılı parankimal metastaz dağılım şeması",
-        "adim": 13
+        "adim": 13,
+        "resim": 0,
+        "madde": [
+         2,
+         3
+        ]
        }
       }
      ]
@@ -3269,7 +3684,11 @@
          "posterior parçasındadır."
         ],
         "sekil": null,
-        "adim": 13
+        "adim": 13,
+        "madde": [
+         1,
+         0
+        ]
        }
       },
       {
@@ -3293,7 +3712,11 @@
          "tümörüdür."
         ],
         "sekil": null,
-        "adim": 13
+        "adim": 13,
+        "madde": [
+         2,
+         3
+        ]
        }
       }
      ]
@@ -3324,7 +3747,11 @@
          "süreleri 32 haftadır."
         ],
         "sekil": null,
-        "adim": 13
+        "adim": 13,
+        "madde": [
+         0,
+         1
+        ]
        }
       },
       {
@@ -3350,7 +3777,11 @@
          "önerilir."
         ],
         "sekil": null,
-        "adim": 13
+        "adim": 13,
+        "madde": [
+         3,
+         2
+        ]
        }
       }
      ]
@@ -3392,7 +3823,11 @@
          "– semptomların düzeltilmesi"
         ],
         "sekil": null,
-        "adim": 14
+        "adim": 14,
+        "madde": [
+         0,
+         1
+        ]
        }
       },
       {
@@ -3415,7 +3850,11 @@
          "– total rezeksiyon ile lokal kürün elde edilmesi"
         ],
         "sekil": null,
-        "adim": 14
+        "adim": 14,
+        "madde": [
+         3,
+         0
+        ]
        }
       }
      ]
@@ -3452,7 +3891,11 @@
          "– Lezyon kolaylıkla çıkartılabilir lokalizasyonda"
         ],
         "sekil": null,
-        "adim": 14
+        "adim": 14,
+        "madde": [
+         3,
+         0
+        ]
        }
       },
       {
@@ -3480,7 +3923,11 @@
          "– Tanı ile ilgili kuşku"
         ],
         "sekil": null,
-        "adim": 14
+        "adim": 14,
+        "madde": [
+         4,
+         5
+        ]
        }
       }
      ]
@@ -3516,7 +3963,11 @@
          "– Tanı ile ilgili kuşku"
         ],
         "sekil": null,
-        "adim": 14
+        "adim": 14,
+        "madde": [
+         4,
+         2
+        ]
        }
       },
       {
@@ -3540,7 +3991,11 @@
          "metastazlar ile aynı survival oranına ulaşmak mümkündür."
         ],
         "sekil": null,
-        "adim": 14
+        "adim": 14,
+        "madde": [
+         7,
+         8
+        ]
        }
       }
      ]
@@ -3572,7 +4027,11 @@
          "– SSS dışındaki sistemik kanser hastalığının durumu"
         ],
         "sekil": null,
-        "adim": 14
+        "adim": 14,
+        "madde": [
+         2,
+         1
+        ]
        }
       },
       {
@@ -3599,7 +4058,11 @@
          "Oncology, 2001"
         ],
         "sekil": null,
-        "adim": 14
+        "adim": 14,
+        "madde": [
+         6,
+         3
+        ]
        }
       }
      ]
@@ -3646,7 +4109,12 @@
          "%10’u"
         ],
         "sekil": "Sellar ve parasellar anatomik bölge ve hipofiz bezi mikroadenom kesiti",
-        "adim": 15
+        "adim": 15,
+        "resim": 0,
+        "madde": [
+         0,
+         2
+        ]
        }
       },
       {
@@ -3669,7 +4137,11 @@
          "Baş ağrısı, görme problemleri, rinore"
         ],
         "sekil": "Optik kiazmaya suprasellar bası yapan hipofiz makroadenomunun MR görüntüsü",
-        "adim": 15
+        "adim": 15,
+        "resim": 0,
+        "madde": [
+         4
+        ]
        }
       },
       {
@@ -3694,7 +4166,11 @@
          "hipotiroidizm, diabetes insipitus"
         ],
         "sekil": null,
-        "adim": 15
+        "adim": 15,
+        "madde": [
+         6,
+         5
+        ]
        }
       }
      ]
@@ -3722,7 +4198,8 @@
         "sayfa": 56,
         "satir": [],
         "sekil": "Sagittal T1 ağırlıklı kontrastlı manyetik rezonans kesitinde sella turcikayı genişleten ve optik kiazmaya bası yapan hipofiz makroadenomu",
-        "adim": 15
+        "adim": 15,
+        "resim": 0
        }
       },
       {
@@ -3743,7 +4220,8 @@
         "sayfa": 56,
         "satir": [],
         "sekil": "Kiazma optikumu yukarı doğru geren suprasellar hipofiz tümörü görünümü",
-        "adim": 15
+        "adim": 15,
+        "resim": 0
        }
       }
      ]
@@ -3771,7 +4249,8 @@
         "sayfa": 57,
         "satir": [],
         "sekil": "Koronal T1 kontrastlı manyetik rezonans kesitinde sellar tabandan kavernöz sinüse uzanan hipofiz adenomu",
-        "adim": 15
+        "adim": 15,
+        "resim": 0
        }
       },
       {
@@ -3792,7 +4271,8 @@
         "sayfa": 57,
         "satir": [],
         "sekil": "İnternal karotid arter ve kavernöz sinüs anatomik ilişkisini gösteren koronal kesit",
-        "adim": 15
+        "adim": 15,
+        "resim": 0
        }
       }
      ]
@@ -3820,7 +4300,8 @@
         "sayfa": 58,
         "satir": [],
         "sekil": "Aksiyel T1 kontrastlı kranial kesitte sellar bölge kitlesi ve çevre sisternalar",
-        "adim": 15
+        "adim": 15,
+        "resim": 0
        }
       },
       {
@@ -3841,7 +4322,8 @@
         "sayfa": 58,
         "satir": [],
         "sekil": "Parasellar alanda anatomik sınırları gösteren kranial aksiyel MRG kesiti",
-        "adim": 15
+        "adim": 15,
+        "resim": 0
        }
       }
      ]
@@ -3869,7 +4351,8 @@
         "sayfa": 59,
         "satir": [],
         "sekil": "Aksiyel T1 kontrastlı MR kesitinde santral nekroz ve periferik halkasal kontrast tutan glioblastom lezyonu",
-        "adim": 15
+        "adim": 15,
+        "resim": 0
        }
       },
       {
@@ -3890,7 +4373,8 @@
         "sayfa": 59,
         "satir": [],
         "sekil": "Glioblastom lezyonunun periferik nodüler kontrastlanma halkası ve santral hipointens kavitasyon",
-        "adim": 15
+        "adim": 15,
+        "resim": 0
        }
       }
      ]
@@ -3918,7 +4402,8 @@
         "sayfa": 60,
         "satir": [],
         "sekil": "Aksiyel MR kesitinde korpus kallozum invazyonu ile her iki hemisferik beyaz cevhere uzanan kelebek gliom lezyonu",
-        "adim": 15
+        "adim": 15,
+        "resim": 0
        }
       },
       {
@@ -3939,7 +4424,8 @@
         "sayfa": 60,
         "satir": [],
         "sekil": "Kallozal lifler boyunca simetrik yayılım gösteren bilateral yüksek dereceli gliom infiltrasyonu",
-        "adim": 15
+        "adim": 15,
+        "resim": 0
        }
       }
      ]
@@ -3967,7 +4453,8 @@
         "sayfa": 61,
         "satir": [],
         "sekil": "Aksiyel T1 kontrastlı kranial kesitte konveksitede dural tabanlı homojen kontrast tutan menenjiom",
-        "adim": 15
+        "adim": 15,
+        "resim": 0
        }
       },
       {
@@ -3988,7 +4475,8 @@
         "sayfa": 61,
         "satir": [],
         "sekil": "Menenjiom kitlesinin kenarında dura mater boyunca uzanan tipik dural tail işareti",
-        "adim": 15
+        "adim": 15,
+        "resim": 0
        }
       }
      ]
@@ -4016,7 +4504,8 @@
         "sayfa": 62,
         "satir": [],
         "sekil": "Çoklu sagital ve koronal MR serisinde hipofiz adenomunun suprasellar uzanım dereceleri",
-        "adim": 15
+        "adim": 15,
+        "resim": 0
        }
       },
       {
@@ -4037,7 +4526,8 @@
         "sayfa": 62,
         "satir": [],
         "sekil": "Dinamik kontrastlı hipofiz serisinde mikroadenomun erken fazda hipointens kalması",
-        "adim": 15
+        "adim": 15,
+        "resim": 0
        }
       }
      ]
@@ -4065,7 +4555,8 @@
         "sayfa": 63,
         "satir": [],
         "sekil": "Aksiyel kontrastlı MR kesitinde internal akustik kanalı genişleten ve ponsa bası yapan sol vestibüler schwannom",
-        "adim": 15
+        "adim": 15,
+        "resim": 0
        }
       },
       {
@@ -4086,7 +4577,8 @@
         "sayfa": 63,
         "satir": [],
         "sekil": "Pons ve serebellumu mediale doğru deplase eden akustik nörinom kitle etkisi",
-        "adim": 15
+        "adim": 15,
+        "resim": 0
        }
       }
      ]
@@ -4114,7 +4606,8 @@
         "sayfa": 64,
         "satir": [],
         "sekil": "Aksiyel kranial BT kesitinde hiperdens kalsifiye menenjiom ve komşu kemikte hiperostozis",
-        "adim": 15
+        "adim": 15,
+        "resim": 0
        }
       },
       {
@@ -4135,7 +4628,8 @@
         "sayfa": 64,
         "satir": [],
         "sekil": "Kranial iç tabulada menenjioma sekonder gelişen fokal hiperostotik kemik kalınlaşması",
-        "adim": 15
+        "adim": 15,
+        "resim": 0
        }
       }
      ]
@@ -4163,7 +4657,8 @@
         "sayfa": 65,
         "satir": [],
         "sekil": "Aksiyel kontrastlı MRG kesitinde gri-beyaz cevher sınırında yer alan multipl nodüler metastazlar",
-        "adim": 15
+        "adim": 15,
+        "resim": 0
        }
       },
       {
@@ -4184,7 +4679,8 @@
         "sayfa": 65,
         "satir": [],
         "sekil": "Nodüler metastaz odaklarını çevreleyen yaygın parmak benzeri vazojenik beyaz cevher ödemi",
-        "adim": 15
+        "adim": 15,
+        "resim": 0
        }
       }
      ]
@@ -4212,7 +4708,8 @@
         "sayfa": 66,
         "satir": [],
         "sekil": "Sagittal MR kesitinde dördüncü ventrikül lümenini oblitere eden pediatrik kitle lezyonu",
-        "adim": 15
+        "adim": 15,
+        "resim": 0
        }
       },
       {
@@ -4233,7 +4730,8 @@
         "sayfa": 66,
         "satir": [],
         "sekil": "Arka çukur obstrüksiyonuna sekonder gelişen supratentoryal ventrikülomegali görüntüsü",
-        "adim": 15
+        "adim": 15,
+        "resim": 0
        }
       }
      ]
@@ -4265,7 +4763,12 @@
          "SE/M"
         ],
         "sekil": "Koronal ve sagital dinamik hipofiz MRG kesitlerinde mikroadenom kontrastlanma kinetiği",
-        "adim": 15
+        "adim": 15,
+        "resim": 0,
+        "madde": [
+         0,
+         2
+        ]
        }
       },
       {
@@ -4288,7 +4791,12 @@
          "FH -67 feet"
         ],
         "sekil": "Transsfenoidal cerrahi koridoru gösteren sellar ve sfenoid sinüs MRG anatomisi",
-        "adim": 15
+        "adim": 15,
+        "resim": 0,
+        "madde": [
+         0,
+         2
+        ]
        }
       }
      ]
@@ -4316,7 +4824,8 @@
         "sayfa": 68,
         "satir": [],
         "sekil": "Aksiyel T2 ve FLAIR sekanslarında tümör çevresinde parmak benzeri uzanan yaygın vazojenik beyaz cevher ödemi",
-        "adim": 15
+        "adim": 15,
+        "resim": 0
        }
       },
       {
@@ -4337,7 +4846,8 @@
         "sayfa": 68,
         "satir": [],
         "sekil": "Kan-beyin bariyeri bozulmasına bağlı parankimal sıvı birikimi ve sulkus silinmesi",
-        "adim": 15
+        "adim": 15,
+        "resim": 0
        }
       }
      ]
