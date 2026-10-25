@@ -1,0 +1,1806 @@
+{
+ "surum": 1,
+ "metinHash": "61fe47e6ee6d5b96ce183ca01792d8a61ba673c5",
+ "p": {
+  "0": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Myelin hücreleri",
+       "Oligodendrositler oluşturur",
+       "Schwann hücreleri oluşturur"
+      ],
+      [
+       "Myelin kılıfı",
+       "Santralde aksonları sarar",
+       "Periferikte aksonları sarar"
+      ]
+     ],
+     "kutuplar": [
+      "Santral Sinir Sistemi",
+      "Periferik Sinir Sistemi"
+     ],
+     "s": 2,
+     "k": [
+      0,
+      204
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.77
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.444,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2336,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "1": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Galaktoserebrozid: en bol bulunan lipit",
+      "Sfingomyelin: kılıfın sağlamlığını arttırır",
+      "Kolesterol: esansiyel lipit komponenti"
+     ],
+     "baslik": "Myelinin Yapısındaki Lipitler",
+     "s": 3,
+     "k": [
+      0,
+      158
+     ],
+     "tip": "liste",
+     "konum": [
+      0.14,
+      0.54
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Myelin bazik protein: santralde daha bol",
+      "Myelin oligodendrosit glikoprotein: sadece santralde",
+      "Proteolipit protein: santralde en fazla protein",
+      "Myelin protein sıfır: santralde bulunmaz"
+     ],
+     "baslik": "Myelinin Yapısındaki Proteinler",
+     "s": 4,
+     "k": [
+      0,
+      203
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.83
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3347,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "2": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Ranvier nodları yaklaşık bir mikron myelinsiz bölgeler",
+      "Myelinli akson sıfır virgül iki ile bir milimetre",
+      "Elektriksel uyarı Ranvier nodları yoluyla atlar"
+     ],
+     "s": 5,
+     "k": [
+      0,
+      149
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.57
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.466,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.0562,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.11,
+       0.25
+      ],
+      [
+       0.222,
+       0.25
+      ],
+      [
+       0.322,
+       0.248
+      ],
+      [
+       0.329,
+       0.499
+      ],
+      [
+       0.34,
+       0.76
+      ],
+      [
+       0.225,
+       0.779
+      ],
+      [
+       0.11,
+       0.779
+      ],
+      [
+       0.111,
+       0.515
+      ]
+     ],
+     "etiket": "nöron gövdesi ve dendritler",
+     "s": 6,
+     "k": [
+      50,
+      100
+     ],
+     "etiket_konum": [
+      0.33,
+      0.128
+     ],
+     "etiket_genislik": 0.378,
+     "etiket_hedef": [
+      0.34,
+      0.248
+     ],
+     "etiket_boy": 0.0591
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.34,
+       0.45
+      ],
+      [
+       0.369,
+       0.4
+      ],
+      [
+       0.421,
+       0.373
+      ],
+      [
+       0.462,
+       0.375
+      ],
+      [
+       0.503,
+       0.385
+      ],
+      [
+       0.569,
+       0.328
+      ],
+      [
+       0.635,
+       0.406
+      ],
+      [
+       0.692,
+       0.445
+      ],
+      [
+       0.72,
+       0.45
+      ],
+      [
+       0.705,
+       0.558
+      ],
+      [
+       0.692,
+       0.583
+      ],
+      [
+       0.7,
+       0.678
+      ],
+      [
+       0.72,
+       0.71
+      ],
+      [
+       0.624,
+       0.679
+      ],
+      [
+       0.53,
+       0.71
+      ],
+      [
+       0.439,
+       0.693
+      ],
+      [
+       0.34,
+       0.71
+      ],
+      [
+       0.34,
+       0.579
+      ]
+     ],
+     "etiket": "miyelin kılıfı segmentleri",
+     "s": 6,
+     "k": [
+      108,
+      182
+     ],
+     "etiket_konum": [
+      0.63,
+      0.328
+     ],
+     "etiket_genislik": 0.366
+    }
+   ],
+   "3": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.479,
+       0.63
+      ],
+      [
+       0.503,
+       0.641
+      ],
+      [
+       0.508,
+       0.65
+      ],
+      [
+       0.518,
+       0.651
+      ],
+      [
+       0.524,
+       0.648
+      ],
+      [
+       0.529,
+       0.645
+      ],
+      [
+       0.555,
+       0.638
+      ],
+      [
+       0.55,
+       0.655
+      ],
+      [
+       0.55,
+       0.71
+      ],
+      [
+       0.516,
+       0.707
+      ],
+      [
+       0.48,
+       0.707
+      ],
+      [
+       0.481,
+       0.69
+      ],
+      [
+       0.474,
+       0.676
+      ],
+      [
+       0.474,
+       0.67
+      ],
+      [
+       0.474,
+       0.661
+      ],
+      [
+       0.481,
+       0.651
+      ]
+     ],
+     "etiket": "Ranvier düğümü",
+     "s": 6,
+     "k": [
+      142,
+      181
+     ],
+     "etiket_konum": [
+      0.365,
+      0.51
+     ],
+     "etiket_genislik": 0.214,
+     "etiket_hedef": [
+      0.474,
+      0.63
+     ],
+     "etiket_boy": 0.0591
+    }
+   ],
+   "4": [
+    {
+     "tur": "akis",
+     "a": [
+      0.38,
+      0.604
+     ],
+     "b": [
+      0.754,
+      0.38
+     ],
+     "iliski": "aktive",
+     "etiket": "saltatuar iletim → akson terminali",
+     "s": 6,
+     "k": [
+      26,
+      126
+     ],
+     "yol": [
+      [
+       0.38,
+       0.604
+      ],
+      [
+       0.38,
+       0.38
+      ],
+      [
+       0.754,
+       0.38
+      ]
+     ],
+     "rota": "dirsek",
+     "etiket_konum": [
+      0.38,
+      0.694
+     ],
+     "etiket_genislik": 0.42,
+     "etiket_hedef": [
+      0.744,
+      0.39
+     ],
+     "etiket_boy": 0.0591
+    }
+   ]
+  },
+  "4": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Myelin hücreleri",
+       "Oligodendrositler üretir",
+       "Schwann hücreleri üretir"
+      ],
+      [
+       "İnternod",
+       "Birçok internod kaplanır",
+       "Tek bir internoda katılır"
+      ]
+     ],
+     "kutuplar": [
+      "Merkezi Sinir Sistemi",
+      "Periferik Sinir Sistemi"
+     ],
+     "s": 10,
+     "k": [
+      0,
+      191
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.83
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1868,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "5": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Myelin hasarı",
+       "Normal olan myelinin hasarı",
+       "Myelin uygun oluşmamıştır"
+      ],
+      [
+       "Hastalıklar",
+       "Edinsel multipl skleroz",
+       "Genetik lökodistrofi"
+      ]
+     ],
+     "kutuplar": [
+      "Demyelinizan Hastalıklar",
+      "Dismyelinizan Hastalıklar"
+     ],
+     "s": 12,
+     "k": [
+      0,
+      198
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.63
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.39,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0402,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "6": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Yaklaşık binde bir prevalans ile en sık",
+      "Kadınlarda erkeklerden iki kat sık görülür",
+      "Çocuklukta ve elli yaşından sonra nadirdir",
+      "Tekrarlayan ataklar ve kısmi düzelme"
+     ],
+     "baslik": "Multipl Skleroz",
+     "s": 14,
+     "k": [
+      0,
+      193
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.78
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2847,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "7": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "Birinci derece akrabada risk on beş kat artar",
+      "Tek yumurta ikizlerinde oran yüzde yirmi beş",
+      "De re iki aleli en önemli risk faktörüdür",
+      "İnterlökin iki ve yedi reseptör polimorfizmi"
+     ],
+     "sonuc": "Multipl skleroz gelişme riski",
+     "s": 16,
+     "k": [
+      0,
+      305
+     ],
+     "tip": "grup",
+     "konum": [
+      0.03,
+      0.83
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.587,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.4374,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "5": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Myelin antijenlerine karşı toleransın yitirilmesi",
+      "Yardımcı te bir interferon gama ile makrofajları uyarır",
+      "Yardımcı te on yedi lökositlerin toplanmasını uyarır"
+     ],
+     "s": 17,
+     "k": [
+      0,
+      219
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.86
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.466,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3462,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "8": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Hafifçe çökük gri taba renkte keskin sınırlı plak",
+      "Ventrikül yakınlarında periventriküler beyaz cevherde",
+      "Optik sinir ve kiazma ile beyin sapında plaklar",
+      "Serebellum ve medulla spinalis traktuslarında plaklar"
+     ],
+     "baslik": "Multipl Skleroz Plakları",
+     "s": 18,
+     "k": [
+      0,
+      236
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.81
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3147,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "9": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Aktif plak: myelin parçacıkları içeren bol makrofaj",
+      "Aktif plak: damarlar etrafında lenfositler",
+      "İnaktif plak: inflamasyon kaybolur ve gliozis belirgin",
+      "Gölge plak: kısmi ve yetersiz remyelinizasyon"
+     ],
+     "baslik": "Multipl Skleroz Plakları",
+     "s": 20,
+     "k": [
+      0,
+      278
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.8
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3047,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "12": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "tani_tetkik",
+     "sablon_ad": "Durum → bakılacak tetkik",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum / şüphe",
+      "Bakılacak tetkik"
+     ],
+     "satirlar": [
+      [
+       "Multipl skleroz sıvısı",
+       "İmmünglobulin ve hafif protein artışı"
+      ],
+      [
+       "Olguların üçte biri",
+       "Orta derecede pleositoz vardır"
+      ],
+      [
+       "Hastalık aktivitesi",
+       "Oligoklonal bantlar saptanır"
+      ]
+     ],
+     "s": 26,
+     "k": [
+      0,
+      304
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.81
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.413,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2428,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "13": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Hastalık",
+       "Enfeksiyondan bir iki hafta sonra",
+       "Genç erişkin ve çocukları etkiler"
+      ],
+      [
+       "İlerleme",
+       "Yüzde yirmi ölümcül kalanı iyileşir",
+       "Daha fazla yıkıma yol açar"
+      ]
+     ],
+     "kutuplar": [
+      "Akut Dissemine Ensefalomiyelit",
+      "Akut Nekrotizan Hemorajik"
+     ],
+     "s": 28,
+     "k": [
+      0,
+      301
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.9
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.444,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3636,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "14": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Akuaporin dört su kanallarına karşı antikor",
+      "Optik sinir ve spinal kordda demyelinizasyon"
+     ],
+     "s": 29,
+     "k": [
+      0,
+      243
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.87
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.378,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.2679,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "5": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Hiponatreminin hızlı düzeltilmesi ve ozmotik ödem",
+      "İki ile altı günde pons santralinde myelin kaybı",
+      "Motor liflerin tutulumuyla hızlı gelişen kuadripleji"
+     ],
+     "s": 31,
+     "k": [
+      0,
+      146
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.67
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.466,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.1562,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "15": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Bağışıklığı baskılanmış hastada je ce virüsü aktifleşir",
+      "Je ce virüsü özellikle oligodendrositleri enfekte eder",
+      "Oligodendrosit ölümüyle demyelinizasyon oluşur"
+     ],
+     "s": 32,
+     "k": [
+      0,
+      140
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.7
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.466,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.1862,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "16": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Beyaz cevher: gri yarı saydam renk ve volüm azalması",
+      "Beyaz cevher kaybı: beyin atrofisi ve ventrikül genişlemesi",
+      "Myelin kaybı: lipidle dolu makrofaj ve özgün inklüzyonlar"
+     ],
+     "baslik": "Lökodistrofi Morfolojisi",
+     "s": 35,
+     "k": [
+      0,
+      165
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.57
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0008,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "20": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Klinik",
+       "Ani konfüzyon ve ataksi düzelir",
+       "Geri dönüşsüz bellek bozukluğu"
+      ],
+      [
+       "Lezyonlar",
+       "Korpus mamillarede hemoraji nekroz",
+       "Talamus mediyal dorsal çekirdekte"
+      ]
+     ],
+     "kutuplar": [
+      "Wernicke Ensefalopatisi",
+      "Korsakoff Sendromu"
+     ],
+     "s": 42,
+     "k": [
+      0,
+      289
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.9
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.444,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3636,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "21": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Vitamin be on iki eksikliğinde asandan ve desandan yollar",
+      "Haftalar içinde hafif ataksi uyuşma ve karıncalanma",
+      "Alt ekstremitelerde spastik güçsüzlük ve tam parapleji"
+     ],
+     "s": 44,
+     "k": [
+      0,
+      227
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.68
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.466,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.1662,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "23": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Üre siklusuyla temizlenemeyen yüksek amonyak seviyeleri",
+      "Astrositlerde glutamin sentetazın aktivasyonu",
+      "Şişkin soluk çekirdekli Alzheimer tip iki hücreleri"
+     ],
+     "s": 48,
+     "k": [
+      0,
+      210
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.55
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.466,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.0362,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "24": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Kurşun: sıklıkla diffüz ensefalopatiye neden olur",
+      "Metanol: retina hasarına bağlı körlüğe neden olur",
+      "Karbon monoksit: hipoksi ve globus pallidus hasarı"
+     ],
+     "baslik": "Toksik Bozukluklar",
+     "s": 49,
+     "k": [
+      0,
+      181
+     ],
+     "tip": "liste",
+     "konum": [
+      0.69,
+      0.02
+     ],
+     "genislik": 0.3,
+     "doluluk": 0.0,
+     "kutu_h": 0.624,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "25": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Nekroz",
+       "Özellikle beyaz cevherde nekroz",
+       "Geniş koagülasyon nekrozu ve ödem"
+      ],
+      [
+       "Bulgular",
+       "Demyelinizasyon ve kalsifikasyon",
+       "Damarlarda fibrinoid nekroz"
+      ]
+     ],
+     "kutuplar": [
+      "Metotreksat Hasarı",
+      "İyonize Radyasyon Hasarı"
+     ],
+     "s": 52,
+     "k": [
+      0,
+      232
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.83
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.444,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2936,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "3": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.37,
+       0.24
+      ],
+      [
+       0.475,
+       0.24
+      ],
+      [
+       0.58,
+       0.24
+      ],
+      [
+       0.58,
+       0.499
+      ],
+      [
+       0.581,
+       0.76
+      ],
+      [
+       0.475,
+       0.76
+      ],
+      [
+       0.37,
+       0.76
+      ],
+      [
+       0.37,
+       0.499
+      ]
+     ],
+     "s": 7,
+     "k": [
+      63,
+      118
+     ],
+     "yakin": [
+      0.31,
+      0.18,
+      0.641,
+      0.82
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.3,
+       0.16
+      ],
+      [
+       0.475,
+       0.16
+      ],
+      [
+       0.65,
+       0.16
+      ],
+      [
+       0.65,
+       0.51
+      ],
+      [
+       0.65,
+       0.859
+      ],
+      [
+       0.475,
+       0.859
+      ],
+      [
+       0.3,
+       0.859
+      ],
+      [
+       0.3,
+       0.51
+      ]
+     ],
+     "s": 7,
+     "k": [
+      148,
+      202
+     ],
+     "yakin": [
+      0.24,
+      0.1,
+      0.71,
+      0.919
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.4,
+       0.419
+      ],
+      [
+       0.44,
+       0.419
+      ],
+      [
+       0.48,
+       0.419
+      ],
+      [
+       0.48,
+       0.505
+      ],
+      [
+       0.48,
+       0.59
+      ],
+      [
+       0.44,
+       0.59
+      ],
+      [
+       0.4,
+       0.59
+      ],
+      [
+       0.4,
+       0.505
+      ]
+     ],
+     "s": 7,
+     "k": [
+      38,
+      146
+     ],
+     "yakin": [
+      0.34,
+      0.359,
+      0.54,
+      0.65
+     ]
+    }
+   ],
+   "2": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.149,
+       0.401
+      ],
+      [
+       0.21,
+       0.379
+      ],
+      [
+       0.222,
+       0.379
+      ],
+      [
+       0.242,
+       0.405
+      ],
+      [
+       0.25,
+       0.396
+      ],
+      [
+       0.28,
+       0.379
+      ],
+      [
+       0.273,
+       0.396
+      ],
+      [
+       0.271,
+       0.427
+      ],
+      [
+       0.278,
+       0.44
+      ],
+      [
+       0.279,
+       0.497
+      ],
+      [
+       0.284,
+       0.6
+      ],
+      [
+       0.21,
+       0.61
+      ],
+      [
+       0.147,
+       0.602
+      ],
+      [
+       0.14,
+       0.495
+      ]
+     ],
+     "etiket": "1. Schwann hücresinin aksonu sarması",
+     "s": 8,
+     "k": [
+      51,
+      174
+     ],
+     "etiket_konum": [
+      0.274,
+      0.259
+     ],
+     "etiket_genislik": 0.42,
+     "etiket_hedef": [
+      0.284,
+      0.379
+     ],
+     "etiket_boy": 0.0591,
+     "yakin": [
+      0.08,
+      0.199,
+      0.754,
+      0.67
+     ]
+    }
+   ],
+   "3": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.435,
+       0.379
+      ],
+      [
+       0.47,
+       0.373
+      ],
+      [
+       0.485,
+       0.392
+      ],
+      [
+       0.499,
+       0.382
+      ],
+      [
+       0.513,
+       0.367
+      ],
+      [
+       0.582,
+       0.381
+      ],
+      [
+       0.6,
+       0.49
+      ],
+      [
+       0.579,
+       0.584
+      ],
+      [
+       0.51,
+       0.63
+      ],
+      [
+       0.443,
+       0.589
+      ],
+      [
+       0.421,
+       0.49
+      ]
+     ],
+     "etiket": "2. Akson etrafında dönerek katmanlaşma",
+     "s": 8,
+     "k": [
+      11,
+      100
+     ],
+     "etiket_konum": [
+      0.31,
+      0.327
+     ],
+     "etiket_genislik": 0.42,
+     "yakin": [
+      0.25,
+      0.267,
+      0.79,
+      0.69
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.737,
+       0.336
+      ],
+      [
+       0.83,
+       0.299
+      ],
+      [
+       0.844,
+       0.282
+      ],
+      [
+       0.859,
+       0.284
+      ],
+      [
+       0.871,
+       0.287
+      ],
+      [
+       0.883,
+       0.293
+      ],
+      [
+       0.931,
+       0.318
+      ],
+      [
+       0.939,
+       0.354
+      ],
+      [
+       0.926,
+       0.381
+      ],
+      [
+       0.933,
+       0.406
+      ],
+      [
+       0.94,
+       0.49
+      ],
+      [
+       0.917,
+       0.618
+      ],
+      [
+       0.83,
+       0.678
+      ],
+      [
+       0.738,
+       0.639
+      ],
+      [
+       0.712,
+       0.493
+      ]
+     ],
+     "etiket": "3. Çok katmanlı kompakt miyelin kılıfı",
+     "s": 8,
+     "k": [
+      104,
+      175
+     ],
+     "etiket_konum": [
+      0.28,
+      0.575
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "10": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.04,
+       0.179
+      ],
+      [
+       0.185,
+       0.179
+      ],
+      [
+       0.33,
+       0.179
+      ],
+      [
+       0.33,
+       0.45
+      ],
+      [
+       0.33,
+       0.72
+      ],
+      [
+       0.185,
+       0.72
+      ],
+      [
+       0.04,
+       0.72
+      ],
+      [
+       0.04,
+       0.45
+      ]
+     ],
+     "etiket": "A: keskin sınırlı demiyelinize plak kenarı",
+     "s": 22,
+     "k": [
+      66,
+      160
+     ],
+     "etiket_konum": [
+      0.04,
+      0.064
+     ],
+     "etiket_genislik": 0.42
+    }
+   ],
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.33,
+       0.419
+      ],
+      [
+       0.39,
+       0.419
+      ],
+      [
+       0.453,
+       0.419
+      ],
+      [
+       0.45,
+       0.499
+      ],
+      [
+       0.45,
+       0.579
+      ],
+      [
+       0.39,
+       0.579
+      ],
+      [
+       0.33,
+       0.579
+      ],
+      [
+       0.33,
+       0.499
+      ]
+     ],
+     "etiket": "perivasküler lenfositik manşonlanma",
+     "s": 22,
+     "k": [
+      31,
+      123
+     ],
+     "etiket_konum": [
+      0.32,
+      0.82
+     ],
+     "etiket_genislik": 0.42,
+     "etiket_hedef": [
+      0.453,
+      0.579
+     ],
+     "etiket_boy": 0.0591,
+     "yakin": [
+      0.26,
+      0.359,
+      0.8,
+      0.9391
+     ]
+    }
+   ],
+   "2": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.52,
+       0.179
+      ],
+      [
+       0.735,
+       0.179
+      ],
+      [
+       0.95,
+       0.179
+      ],
+      [
+       0.95,
+       0.455
+      ],
+      [
+       0.95,
+       0.73
+      ],
+      [
+       0.735,
+       0.73
+      ],
+      [
+       0.52,
+       0.73
+      ],
+      [
+       0.52,
+       0.455
+      ]
+     ],
+     "etiket": "B: akson boyasında görece korunmuş aksonlar",
+     "s": 22,
+     "k": [
+      14,
+      120
+     ],
+     "etiket_konum": [
+      0.52,
+      0.064
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "18": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.02,
+       0.299
+      ],
+      [
+       0.5,
+       0.299
+      ],
+      [
+       0.98,
+       0.301
+      ],
+      [
+       0.98,
+       0.339
+      ],
+      [
+       0.98,
+       0.379
+      ],
+      [
+       0.5,
+       0.379
+      ],
+      [
+       0.02,
+       0.379
+      ],
+      [
+       0.02,
+       0.339
+      ]
+     ],
+     "etiket": "Metakromatik lökodistrofi ve Krabbe",
+     "s": 38,
+     "k": [
+      100,
+      305
+     ],
+     "etiket_konum": [
+      0.56,
+      0.2279
+     ],
+     "etiket_genislik": 0.42,
+     "yakin": [
+      0,
+      0.1679,
+      1,
+      0.439
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.02,
+       0.379
+      ],
+      [
+       0.5,
+       0.379
+      ],
+      [
+       0.98,
+       0.379
+      ],
+      [
+       0.98,
+       0.421
+      ],
+      [
+       0.98,
+       0.459
+      ],
+      [
+       0.5,
+       0.459
+      ],
+      [
+       0.02,
+       0.459
+      ],
+      [
+       0.02,
+       0.421
+      ]
+     ],
+     "etiket": "Adrenolökodistrofi ve Canavan",
+     "s": 38,
+     "k": [
+      40,
+      268
+     ],
+     "etiket_konum": [
+      0.02,
+      0.3079
+     ],
+     "etiket_genislik": 0.404,
+     "yakin": [
+      0,
+      0.2479,
+      1,
+      0.519
+     ]
+    }
+   ],
+   "2": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.02,
+       0.459
+      ],
+      [
+       0.5,
+       0.459
+      ],
+      [
+       0.98,
+       0.459
+      ],
+      [
+       0.98,
+       0.532
+      ],
+      [
+       0.98,
+       0.579
+      ],
+      [
+       0.5,
+       0.579
+      ],
+      [
+       0.02,
+       0.579
+      ],
+      [
+       0.02,
+       0.52
+      ]
+     ],
+     "etiket": "Pelizaeus-Merzbacher ve Alexander",
+     "s": 38,
+     "k": [
+      49,
+      293
+     ],
+     "etiket_konum": [
+      0.29,
+      0.591
+     ],
+     "etiket_genislik": 0.42,
+     "yakin": [
+      0,
+      0.399,
+      1,
+      0.691
+     ]
+    }
+   ]
+  }
+ },
+ "rapor": {
+  "aday": 40,
+  "gecti": 38,
+  "ret": {
+   "noktaların %69'i çizgi üstünde (en az %70)": 1,
+   "noktaların %57'i çizgi üstünde (en az %70)": 1
+  }
+ }
+}

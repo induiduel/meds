@@ -1,0 +1,1809 @@
+{
+ "id": "k2p-y25-k2-64-omurga-tumorleri",
+ "title": "Omurga Tümörleri",
+ "subject": "Beyin ve Sinir Cerrahisi",
+ "committee": "donem3-kurul2",
+ "sourcePdf": "Beyin ve Sinir Cerrahisi 4 (Doç. Dr. Aydın Sinan Apaydın) Omurga Tümörleri.pdf",
+ "sayfaHaritasi": "teyitli",
+ "totalSlides": 17,
+ "slides": [
+  {
+   "slideNumber": 1,
+   "title": "Omurga Tümörleri: Giriş ve Primer Kemik Tümörü Oranı",
+   "section": "1.1",
+   "bolum": "1.1",
+   "pdfSayfalari": [
+    1,
+    2
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 1,
+    "endPage": 2
+   },
+   "content": "Omurga tümörleri şiddetli sırt veya bel ağrısı, spinal deformite ve nörolojik defisitlerle seyreden klinik tablolardır.\n\n- **Epidemiyolojik Dağılım:** Omurga tümörlerinin yalnızca %10'u primer kemik tümörüdür.\n- **Metastaz Ağırlığı:** Omurgada saptanan lezyonların %90'ı metastazdır ve iskelet metastazları en sık omurgaya yerleşir.\n- **Klinik Yaklaşım:** Omurgada kemik lezyonu saptandığında öncelikle sistemik primer odak araştırılmalıdır.\n\n> [!IMPORTANT]\n> İskelet sistemi metastazlarının en sık görüldüğü anatomik yapı omurgadır.",
+   "synthesisNarrative": "Omurga tümörleri şiddetli sırt veya bel ağrısı, spinal deformite ve nörolojik defisitlerle seyreden klinik tablolardır.\n\n- **Epidemiyolojik Dağılım:** Omurga tümörlerinin yalnızca %10'u primer kemik tümörüdür.\n- **Metastaz Ağırlığı:** Omurgada saptanan lezyonların %90'ı metastazdır ve iskelet metastazları en sık omurgaya yerleşir.\n- **Klinik Yaklaşım:** Omurgada kemik lezyonu saptandığında öncelikle sistemik primer odak araştırılmalıdır.\n\n> [!IMPORTANT]\n> İskelet sistemi metastazlarının en sık görüldüğü anatomik yapı omurgadır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Omurga tümörlerinin genel dağılımında primer kemik tümörlerinin oranı nedir?",
+     "options": [
+      {
+       "text": "%10",
+       "isCorrect": true,
+       "explanation": "Omurga tümörlerinin yalnızca %10'u primer kemik tümörüdür; geri kalan %90 metastatiktir."
+      },
+      {
+       "text": "%30",
+       "isCorrect": false,
+       "explanation": "Bu oran primer tümörler için yüksektir; primer kemik tümörleri omurgada nadirdir (%10)."
+      },
+      {
+       "text": "%50",
+       "isCorrect": false,
+       "explanation": "Spinal tümörlerin yarısı değil sadece onda biri primer kemik neoplazisidir."
+      },
+      {
+       "text": "%90",
+       "isCorrect": false,
+       "explanation": "%90 oranı primer tümörleri değil metastatik omurga lezyonlarını ifade eder."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "%10",
+       "isCorrect": true,
+       "explanation": "Primer kemik neoplazileri omurgadaki tüm kitlelerin yalnızca yüzde onunu oluşturur. Geri kalan yüzde doksanlık ezici çoğunluğu sistemik kanserlerin metastazları teşkil etmektedir."
+      },
+      {
+       "key": "B",
+       "text": "%50",
+       "isCorrect": false,
+       "explanation": "Yüzde elli oranı spinal metastazların akciğer, meme ve prostat kökenli olma payını ifade eder. Primer omurga tümörleri ise omurgada çok daha düşük sıklıkta, sadece onda bir oranında izlenir."
+      },
+      {
+       "key": "C",
+       "text": "%75",
+       "isCorrect": false,
+       "explanation": "Yüzde yetmiş beş oranı primer neoplaziler için fazlasıyla yüksek bir tahmindir. Omurga iskeletinde primer kemik kaynaklı lezyonların gerçek oranı yalnızca yüzde on düzeyindedir."
+      },
+      {
+       "key": "D",
+       "text": "%90",
+       "isCorrect": false,
+       "explanation": "Yüzde doksanlık büyük oran omurgada saptanan metastatik tümörlerin sıklığını temsil eder. Primer kemik dokusundan gelişen neoplaziler ise omurgada yalnızca yüzde onluk paya sahiptir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Omurga tümörlerinin yalnızca %10'u primer kemik tümörüdür.",
+     "maskedTerm": "%10'u",
+     "hint": "Primer kemik neoplazilerinin omurgadaki onda birlik oranı"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Omurga Tümörleri: Giriş ve Primer Kemik Tümörü Oranı",
+     "items": [
+      {
+       "text": "Omurga tümörlerinin yalnızca %10'u primer kemik tümörüdür.",
+       "isLie": false,
+       "explanation": "Ders notunda primer omurga tümörlerinin oranı açıkça %10 olarak belirtilmiştir."
+      },
+      {
+       "text": "Omurgada görülen neoplazilerin %90'ı primer benign kemik lezyonudur.",
+       "isLie": true,
+       "explanation": "Tuzaktır; omurgadaki tümörlerin %90'ı primer benign kemik lezyonu değil metastazdır."
+      },
+      {
+       "text": "İskelet sistemi metastazları en sık omurgaya gerçekleşir.",
+       "isLie": false,
+       "explanation": "Omurga tüm iskelet sisteminde metastazların en sık yerleştiği organdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "İskelet sistemi metastazlarının en sık yerleştiği anatomik yapı neresidir?",
+     "answer": "Omurga kemikleri Vertebra korpusu %90 metastatik oran"
+    }
+   ]
+  },
+  {
+   "slideNumber": 2,
+   "title": "Primer Benign ve Malign Omurga Tümörlerinin Sınıflandırılması",
+   "section": "1.2",
+   "bolum": "1.2",
+   "pdfSayfalari": [
+    3,
+    4
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 3,
+    "endPage": 4
+   },
+   "content": "Primer omurga tümörleri histolojik kökenlerine ve biyolojik davranışlarına göre ikiye ayrılır.\n\n- **Benign Lezyonlar:** Osteoid osteom, osteoblastom, osteokondrom, dev hücreli tümör, anevrizmal kemik kisti, eozinofilik granülom ve hemanjiom.\n- **Malign Neoplaziler:** Osteosarkom, kondrosarkom, Ewing sarkomu, multipl myelom, lenfoma, kordoma ve nöroblastom.\n- **Klinik Yerleşim Farkı:** Benign lezyonlar çoğunlukla genç yaşta arka kolon elemanlarını, malign lezyonlar ise ileri yaşta korpusu tutar.\n\n> [!NOTE]\n> Primer benign tümörler genç erişkinde lokal ağrı ve skolyozla; malign lezyonlar ise destrüksiyonla başvurur.",
+   "synthesisNarrative": "Primer omurga tümörleri histolojik kökenlerine ve biyolojik davranışlarına göre ikiye ayrılır.\n\n- **Benign Lezyonlar:** Osteoid osteom, osteoblastom, osteokondrom, dev hücreli tümör, anevrizmal kemik kisti, eozinofilik granülom ve hemanjiom.\n- **Malign Neoplaziler:** Osteosarkom, kondrosarkom, Ewing sarkomu, multipl myelom, lenfoma, kordoma ve nöroblastom.\n- **Klinik Yerleşim Farkı:** Benign lezyonlar çoğunlukla genç yaşta arka kolon elemanlarını, malign lezyonlar ise ileri yaşta korpusu tutar.\n\n> [!NOTE]\n> Primer benign tümörler genç erişkinde lokal ağrı ve skolyozla; malign lezyonlar ise destrüksiyonla başvurur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi primer benign omurga tümörleri arasında yer alır?",
+     "options": [
+      {
+       "text": "Osteoid osteom",
+       "isCorrect": true,
+       "explanation": "Osteoid osteom primer benign omurga tümörlerinin en tipik örneklerindendir."
+      },
+      {
+       "text": "Ewing sarkomu",
+       "isCorrect": false,
+       "explanation": "Ewing sarkomu habis küçük hücreli primer malign bir kemik tümörüdür."
+      },
+      {
+       "text": "Kondrosarkom",
+       "isCorrect": false,
+       "explanation": "Kondrosarkom habis kıkırdak kaynaklı primer malign bir neoplazidir."
+      },
+      {
+       "text": "Multipl myelom",
+       "isCorrect": false,
+       "explanation": "Multipl myelom erişkin çağın en sık görülen habis kemik tümörüdür."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Osteoblastom",
+       "isCorrect": true,
+       "explanation": "Osteoblastom genç bireylerin omurga arka elemanlarında yerleşen selim osteoblastik bir kemik neoplazisidir. Agresif biyolojik davranışı ve ağrılı skolyoz oluşturmasıyla primer selim omurga tümörleri grubunda incelenir."
+      },
+      {
+       "key": "B",
+       "text": "Osteosarkom",
+       "isCorrect": false,
+       "explanation": "Osteosarkom habis osteoid matriks üreten yüksek dereceli primer malign bir kemik sarkomudur. Kemik destrüksiyonu ve korpus harabiyeti yaparak primer malign omurga tümörleri sınıfında yer alır."
+      },
+      {
+       "key": "C",
+       "text": "Kondrosarkom",
+       "isCorrect": false,
+       "explanation": "Kondrosarkom kıkırdak matriks üreten habis bir mezenkimal kemik neoplazisidir. İleri yaş grubunda destrüktif kitleler oluşturduğu için primer malign omurga tümörleri kategorisinde değerlendirilir."
+      },
+      {
+       "key": "D",
+       "text": "Ewing sarkomu",
+       "isCorrect": false,
+       "explanation": "Ewing sarkomu nöroektodermal kökenli küçük yuvarlak mavi hücreli primer malign bir kemik neoplazisidir. Sistemik inflamasyon bulguları ve kötü prognozu nedeniyle primer malign omurga lezyonları arasında sayılır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Primer benign omurga tümörleri arasında osteoid osteom ve hemanjiom yer alır.",
+     "maskedTerm": "osteoid osteom",
+     "hint": "Genç erişkinlerde arka elemanlarda görülen selim kemik lezyonu"
+    },
+    {
+     "type": "swipe_matching",
+     "instruction": "Tümörleri biyolojik davranışlarına göre eşleştirin.",
+     "leftCategory": "Benign Tümörler",
+     "rightCategory": "Malign Tümörler",
+     "cards": [
+      {
+       "text": "Osteoblastom",
+       "category": "left"
+      },
+      {
+       "text": "Kondrosarkom",
+       "category": "right"
+      },
+      {
+       "text": "Anevrizmal kemik kisti",
+       "category": "left"
+      },
+      {
+       "text": "Multipl myelom",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Primer Benign ve Malign Omurga Tümörlerinin Sınıflandırılması",
+     "items": [
+      {
+       "text": "Osteokondrom ve hemanjiom primer benign omurga tümörleridir.",
+       "isLie": false,
+       "explanation": "Her iki lezyon da benign omurga tümörleri sınıflamasında yer alır."
+      },
+      {
+       "text": "Osteosarkom selim seyirli bir omurga tümörüdür.",
+       "isLie": true,
+       "explanation": "Tuzaktır; osteosarkom primer malign agresif bir kemik sarkomudur."
+      },
+      {
+       "text": "Ewing sarkomu primer malign omurga tümörlerindendir.",
+       "isLie": false,
+       "explanation": "Ewing sarkomu primer malign neoplaziler arasında sayılmıştır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 3,
+   "title": "Osteoid Osteom: Arka Kolon Tutulumu ve Aspirin Yanıtı",
+   "section": "1.3",
+   "bolum": "1.3",
+   "pdfSayfalari": [
+    5,
+    5
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 5,
+    "endPage": 5
+   },
+   "content": "Osteoid osteom genç yaş grubunda sık görülen selim osteoblastik bir kemik lezyonudur.\n\n- **Yaş Grubu ve Bölge:** 10-25 yaş arasında sıktır; omurgada en sık lomber bölgeyi tercih eder.\n- **Anatomik Lokalizasyon:** Lamina ve pedikül gibi arka kolon elemanları daha sık tutulur.\n- **Karakteristik Ağrı:** Dinlenmekle azalmayan, gece şiddetlenen ve aspirin ile azalan ağrı tipiktir.\n- **Klinik Deformite:** Erişkinde ağrılı skolyozun en sık nedenidir ve semptomların özgül olmaması nedeniyle geç teşhis konur.\n\n> [!IMPORTANT]\n> Gece artan ve aspirin ile dramatik azalan ağrı osteoid osteomun klasik patognomonik bulgusudur.",
+   "synthesisNarrative": "Osteoid osteom genç yaş grubunda sık görülen selim osteoblastik bir kemik lezyonudur.\n\n- **Yaş Grubu ve Bölge:** 10-25 yaş arasında sıktır; omurgada en sık lomber bölgeyi tercih eder.\n- **Anatomik Lokalizasyon:** Lamina ve pedikül gibi arka kolon elemanları daha sık tutulur.\n- **Karakteristik Ağrı:** Dinlenmekle azalmayan, gece şiddetlenen ve aspirin ile azalan ağrı tipiktir.\n- **Klinik Deformite:** Erişkinde ağrılı skolyozun en sık nedenidir ve semptomların özgül olmaması nedeniyle geç teşhis konur.\n\n> [!IMPORTANT]\n> Gece artan ve aspirin ile dramatik azalan ağrı osteoid osteomun klasik patognomonik bulgusudur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Osteoid osteomun ağrı karakteri ve medikal yanıtı nasıldır?",
+     "options": [
+      {
+       "text": "Dinlenmekle azalmayan, gece şiddetlenen ve aspirin ile azalan",
+       "isCorrect": true,
+       "explanation": "Osteoid osteomda gece artan ve salisilatlara dramatik yanıt veren ağrı karakteristiktir."
+      },
+      {
+       "text": "Sadece hareketle artan ve dinlenmekle tamamen geçen",
+       "isCorrect": false,
+       "explanation": "Mekanik ağrı tablosudur; osteoid osteomda ağrı dinlenmekle azalmaz."
+      },
+      {
+       "text": "Gündüzleri şiddetlenen ve aspirine dirençli olan",
+       "isCorrect": false,
+       "explanation": "Osteoid osteom ağrısı gündüz değil özellikle geceleri şiddetlenir."
+      },
+      {
+       "text": "Yalnızca sabah sertliği ile seyreden hafif ağrı",
+       "isCorrect": false,
+       "explanation": "İnflamatuar artrit bulgusudur; osteoid osteomda şiddetli kemik ağrısı vardır."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Gece şiddetlenen ve aspirin ile dramatik azalan ağrı",
+       "isCorrect": true,
+       "explanation": "Osteoid osteom nidus bölgesinde yoğun prostaglandin sentezi yapan selim bir kemik lezyonudur. Bu vazoaktif prostaglandin salınımı nedeniyle ağrı geceleri belirginleşir ve siklooksijenaz inhibitörü olan aspirin kullanımına dramatik yanıt verir."
+      },
+      {
+       "key": "B",
+       "text": "İstirahatle tamamen kaybolan mekanik ağrı",
+       "isCorrect": false,
+       "explanation": "Mekanik omurga ağrıları dejeneratif disk ve faset eklem hastalıklarında dinlenmeyle rahatlar. Oysa osteoid osteom kaynaklı inflamatuar ağrı dinlenmekle azalmaz ve özellikle gece uykudan uyandırır."
+      },
+      {
+       "key": "C",
+       "text": "Yalnızca fiziksel aktiviteyle tetiklenen batıcı ağrı",
+       "isCorrect": false,
+       "explanation": "Aktiviteyle artan ağrılar genellikle mekanik instabilite veya kas zorlanmalarında ön plandadır. Osteoid osteomda ise biyokimyasal prostaglandin aracılı ağrı vardır ve tipik olarak gece saatlerinde şiddetlenir."
+      },
+      {
+       "key": "D",
+       "text": "Sadece kortikosteroid tedavisine yanıt veren yaygın ağrı",
+       "isCorrect": false,
+       "explanation": "Kortikosteroid yanıtı romatolojik ve sistemik otoimmün omurga tutulumlarında belirgindir. Osteoid osteomun prostaglandin bağımlı lokal ağrısı ise aspirin ve nonsteroid antiinflamatuar ilaçlarla hızla geriler."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Osteoid osteom erişkinde ağrılı skolyozun en sık nedenidir.",
+     "maskedTerm": "ağrılı skolyozun",
+     "hint": "Arka kolon kas spazmına bağlı gelişen eğrilik tablosu"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Osteoid Osteom: Arka Kolon Tutulumu ve Aspirin Yanıtı",
+     "items": [
+      {
+       "text": "Osteoid osteomda lamina ve pedikül gibi arka kolon elemanları tutulur.",
+       "isLie": false,
+       "explanation": "Osteoid osteom omurganın arka kolon elemanlarını tipik olarak tutar."
+      },
+      {
+       "text": "Osteoid osteom erişkinde ağrısız kifozun en sık nedenidir.",
+       "isLie": true,
+       "explanation": "Tuzaktır; ağrısız kifoz değil erişkinde ağrılı skolyozun en sık nedenidir."
+      },
+      {
+       "text": "Osteoid osteom semptomlarının özgül olmaması nedeniyle geç teşhis konur.",
+       "isLie": false,
+       "explanation": "Hastalarda tanı sıklıkla aylar veya yıllar sonra gecikmeli olarak konur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Osteoid osteom omurgada en sık hangi bölgede ve hangi elemanlarda görülür?",
+     "answer": "Lomber omurga Arka kolon Lamina ve pedikül"
+    }
+   ]
+  },
+  {
+   "slideNumber": 4,
+   "title": "Osteoblastom: Agresif Selim Doğası ve Nörolojik Defisit Riski",
+   "section": "1.4",
+   "bolum": "1.4",
+   "pdfSayfalari": [
+    6,
+    6
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 6,
+    "endPage": 6
+   },
+   "content": "Osteoblastom histolojik olarak osteoid osteoma benzemekle birlikte biyolojik davranışı belirgin farklılık gösterir.\n\n- **Biyolojik Davranış:** Agresif selim tümörlerdir ve omurgada sık görülür.\n- **Epidemiyoloji:** Olguların %80'i 30 yaş altındadır; servikal, torakal ve lomber bölgelerde eşit oranda izlenebilir.\n- **Klinik ve Defisit:** Büyük boyut nedeniyle nörolojik defisit sıktır ve lezyonların %50'den fazlası skolyozla beraberdir.\n- **Nüks Eğilimi:** Ağrılı skolyoz yapar ve osteoid osteoma göre daha çok nükseder.\n\n> [!NOTE]\n> Büyük kitle etkisi ve spinal kanal uzanımı nedeniyle osteoblastomda erken dekompresif cerrahi uygulanır.",
+   "synthesisNarrative": "Osteoblastom histolojik olarak osteoid osteoma benzemekle birlikte biyolojik davranışı belirgin farklılık gösterir.\n\n- **Biyolojik Davranış:** Agresif selim tümörlerdir ve omurgada sık görülür.\n- **Epidemiyoloji:** Olguların %80'i 30 yaş altındadır; servikal, torakal ve lomber bölgelerde eşit oranda izlenebilir.\n- **Klinik ve Defisit:** Büyük boyut nedeniyle nörolojik defisit sıktır ve lezyonların %50'den fazlası skolyozla beraberdir.\n- **Nüks Eğilimi:** Ağrılı skolyoz yapar ve osteoid osteoma göre daha çok nükseder.\n\n> [!NOTE]\n> Büyük kitle etkisi ve spinal kanal uzanımı nedeniyle osteoblastomda erken dekompresif cerrahi uygulanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Osteoblastomun osteoid osteomdan temel klinik ve davranış farkı hangisidir?",
+     "options": [
+      {
+       "text": "Büyük boyut nedeniyle defisit sıktır ve daha çok nükseder",
+       "isCorrect": true,
+       "explanation": "Osteoblastom agresiftir, kitle etkisiyle nörolojik defisite daha sık yol açar ve nüks oranı yüksektir."
+      },
+      {
+       "text": "Daima yaşlı hastalarda görülür ve ağrısız seyreder",
+       "isCorrect": false,
+       "explanation": "Osteoblastom olgularının %80'i 30 yaş altındadır ve ağrılı skolyoz yapar."
+      },
+      {
+       "text": "Kıkırdak matriks üreterek metastaz yapar",
+       "isCorrect": false,
+       "explanation": "Osteoblastom kıkırdak değil osteoid kaynaklı selim bir tümördür."
+      },
+      {
+       "text": "Omurgada asla skolyoz oluşturmaz",
+       "isCorrect": false,
+       "explanation": "Vakaların yarısından fazlasında (%50'den çok) skolyozla birliktedir."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Büyük boyut, nörolojik defisit sıklığı ve nüks eğilimi",
+       "isCorrect": true,
+       "explanation": "Osteoblastom osteoid osteoma benzer histoloji gösteren ancak biyolojik olarak daha agresif selim bir neoplazidir. Lezyon boyutunun büyüklüğü çevre nöral yapılara bası yaparak nörolojik defisite ve cerrahi sonrası yüksek nüks oranına yol açar."
+      },
+      {
+       "key": "B",
+       "text": "Yalnızca yaşlı hastalarda ve korpusta görülmesi",
+       "isCorrect": false,
+       "explanation": "İleri yaşta vertebra korpusu tutulumu metastatik karsinom ve multipl myelom lezyonlarına özgüdür. Osteoblastom ise tıpkı osteoid osteom gibi genç yaş grubunda ve posterior elemanlarda ortaya çıkar."
+      },
+      {
+       "key": "C",
+       "text": "Aspirine osteoid osteomdan çok daha dramatik yanıt vermesi",
+       "isCorrect": false,
+       "explanation": "Aspirin tedavisine dramatik klinik rahatlama yanıtı osteoid osteom lezyonunun klasik tanrusal bulgusudur. Osteoblastomda kitle boyutu büyük olup prostaglandin bağımlılığı zayıftır ve aspirine belirgin yanıt alınmaz."
+      },
+      {
+       "key": "D",
+       "text": "Kıkırdak matriks üreten kıkırdak kaynaklı bir tümör olması",
+       "isCorrect": false,
+       "explanation": "Kıkırdak matriks üretimi osteokondrom ve kondrosarkom gibi kondroid neoplazilere ait bir özelliktir. Osteoblastom ise osteoid trabeküller ve osteoblastik dokudan köken alan kemik yapıcı bir lezyondur."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Osteoblastom büyük boyut nedeniyle nörolojik defisit oluşturur.",
+     "maskedTerm": "nörolojik defisit",
+     "hint": "Spinal korda kitle basısına bağlı ortaya çıkan kuvvet kaybı ve duyu kusuru"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Osteoblastom: Agresif Selim Doğası ve Nörolojik Defisit Riski",
+     "items": [
+      {
+       "text": "Osteoblastom olgularının %80'i 30 yaş altındaki genç bireylerdedir.",
+       "isLie": false,
+       "explanation": "Ders notunda %80 30 yaş altında olduğu açıkça belirtilmiştir."
+      },
+      {
+       "text": "Osteoblastom osteoid osteoma göre daha az nükseden stabil bir lezyondur.",
+       "isLie": true,
+       "explanation": "Tuzaktır; osteoblastom osteoid osteoma göre daha çok nükseder."
+      },
+      {
+       "text": "Osteoblastom omurga arka elemanlarında yerleşim gösterir.",
+       "isLie": false,
+       "explanation": "Osteoblastom tipik olarak omurganın arka elemanlarını tutar."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Osteoblastomda skolyoz birlikteliği oranı nedir?",
+     "answer": ">%50 oranında Ağrılı skolyoz Arka eleman tutulumu"
+    }
+   ]
+  },
+  {
+   "slideNumber": 5,
+   "title": "Osteokondrom: En Sık Kemik Tümörü ve Kıkırdak Kaynağı",
+   "section": "1.5",
+   "bolum": "1.5",
+   "pdfSayfalari": [
+    7,
+    7
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 7,
+    "endPage": 7
+   },
+   "content": "Osteokondrom iskelet sisteminde en sık rastlanan selim kemik neoplazisidir.\n\n- **Genel Özellikler:** Selimdirler, tek veya çok sayıda olabilirler.\n- **Köken ve Yapı:** Kıkırdak kaynaklıdır ve kemik yüzeyinden dışarı doğru büyüyen ekzostoz oluşturur.\n- **Omurga Tutulumu:** Arka elemanlar ve özellikle spinoz proçes tutulur.\n- **Klinik Seyir:** Nadiren ağrılıdır; düşük oranda habis dejenerasyon (kondrosarkom gelişimi) görülebilir.\n\n> [!IMPORTANT]\n> Osteokondrom kıkırdak kaynaklıdır ve omurgada özellikle spinoz proçesi tutar.",
+   "synthesisNarrative": "Osteokondrom iskelet sisteminde en sık rastlanan selim kemik neoplazisidir.\n\n- **Genel Özellikler:** Selimdirler, tek veya çok sayıda olabilirler.\n- **Köken ve Yapı:** Kıkırdak kaynaklıdır ve kemik yüzeyinden dışarı doğru büyüyen ekzostoz oluşturur.\n- **Omurga Tutulumu:** Arka elemanlar ve özellikle spinoz proçes tutulur.\n- **Klinik Seyir:** Nadiren ağrılıdır; düşük oranda habis dejenerasyon (kondrosarkom gelişimi) görülebilir.\n\n> [!IMPORTANT]\n> Osteokondrom kıkırdak kaynaklıdır ve omurgada özellikle spinoz proçesi tutar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Osteokondromun omurgadaki anatomik yerleşimi ve kökeni hangisidir?",
+     "options": [
+      {
+       "text": "Kıkırdak kaynaklıdır; arka elemanlar ve özellikle spinoz proçes tutulur",
+       "isCorrect": true,
+       "explanation": "Osteokondrom kıkırdak kaynaklı olup omurgada spinoz proçes ve arka elemanları tutar."
+      },
+      {
+       "text": "Kemik iliği kaynaklıdır; vertebra korpusunu tutar",
+       "isCorrect": false,
+       "explanation": "Kemik iliği kökenli değildir; kıkırdak kökenli selim bir ekzostozdur."
+      },
+      {
+       "text": "Vasküler kaynaklıdır; epidural aralığı tutar",
+       "isCorrect": false,
+       "explanation": "Vasküler lezyon hemanjiomdur; osteokondrom kıkırdak kaynaklıdır."
+      },
+      {
+       "text": "Notokord kalıntısıdır; sakrokoksigeal bölgeyi tutar",
+       "isCorrect": false,
+       "explanation": "Notokord kökenli lezyon kordomadır; osteokondrom ile ilgisi yoktur."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Spinoz proçes yerleşimi ve kıkırdak kökeni",
+       "isCorrect": true,
+       "explanation": "Osteokondrom iskeletin en sık rastlanan selim kemik tümörü olup kıkırdak doku şapkasından köken alır. Omurga kemiklerinde yerleştiğinde tipik olarak posterior arkusta spinoz proçesi tutar ve düşük oranda habis dejenerasyon riski taşır."
+      },
+      {
+       "key": "B",
+       "text": "Korpus yerleşimi ve vasküler endotel kökeni",
+       "isCorrect": false,
+       "explanation": "Vertebra korpusunda vasküler endotelden köken alan benign vasküler lezyon hemanjiomdur. Osteokondrom ise kıkırdak kaynaklı bir kemik çıkıntısı olup arka elemanlarda spinoz proçese yerleşir."
+      },
+      {
+       "key": "C",
+       "text": "Nöral kanal içi yerleşimi ve meninks kökeni",
+       "isCorrect": false,
+       "explanation": "Nöral kanal içinde meninkslerden gelişen intradural lezyonlara meningiom adı verilir. Osteokondrom ise kemiğin dış korteksinden kıkırdak başlıkla büyüyen selim bir ekzostozdur."
+      },
+      {
+       "key": "D",
+       "text": "İntervertebral disk yerleşimi ve kordomal notokord kökeni",
+       "isCorrect": false,
+       "explanation": "Notokord kalıntılarından gelişen lezyonlar omurga ekseninde yer alan malign kordomalardır. Osteokondrom ise büyüme plağı kıkırdağından gelişen kemik çıkıntısıdır ve disk mesafesini tutmaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Osteokondrom kıkırdak kaynaklıdır ve en sık kemik tümörüdür.",
+     "maskedTerm": "kıkırdak",
+     "hint": "Ekzostoz başlığını örten selim kondral bağ dokusu tipi"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Osteokondrom: En Sık Kemik Tümörü ve Kıkırdak Kaynağı",
+     "items": [
+      {
+       "text": "Osteokondromlar tek veya çok sayıda görülebilen selim lezyonlardır.",
+       "isLie": false,
+       "explanation": "Tekil veya herediter multipl ekzostoz şeklinde çok sayıda olabilir."
+      },
+      {
+       "text": "Osteokondrom yüksek oranda habis dejenerasyona uğrayarak osteosarkom oluşturur.",
+       "isLie": true,
+       "explanation": "Tuzaktır; habis dejenerasyon riski düşüktür ve kondrosarkoma dönüşebilir."
+      },
+      {
+       "text": "Osteokondrom klinik olarak nadiren ağrılıdır.",
+       "isLie": false,
+       "explanation": "Ağrı nadirdir, lezyonlar çoğunlukla mekanik kitle veya bası ile fark edilir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "En sık görülen kemik tümörü hangisidir?",
+     "answer": "Osteokondrom Kıkırdak kaynaklı Selim tümör"
+    }
+   ]
+  },
+  {
+   "slideNumber": 6,
+   "title": "Dev Hücreli Tümör (GCT): Korpus Tutulumu",
+   "section": "1.6",
+   "bolum": "1.6",
+   "pdfSayfalari": [
+    8,
+    8
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 8,
+    "endPage": 8
+   },
+   "content": "Dev hücreli kemik tümörü (GCT) omurgada lokal agresif seyredebilen selim bir lezyondur.\n\n- **Biyolojik Nitelik:** Selim karakterdedir ancak lokal destrüksiyon yapabilir.\n- **Yaş ve Yerleşim:** Genç erişkinde uzun kemiklerde metafiz ve epifiz tutulumu tipiktir.\n- **Omurga Segmenti:** Omurgada korpus tutulur ve en sık torasik omurgada izlenir.\n- **Klinik Önem:** Arka elemanları tutan osteoid tümörlerin aksine gövde harabiyeti ve kord basısı oluşturabilir.\n\n> [!NOTE]\n> Dev hücreli tümör omurgada arka elemanları değil tipik olarak vertebra korpusunu tutar.",
+   "synthesisNarrative": "Dev hücreli kemik tümörü (GCT) omurgada lokal agresif seyredebilen selim bir lezyondur.\n\n- **Biyolojik Nitelik:** Selim karakterdedir ancak lokal destrüksiyon yapabilir.\n- **Yaş ve Yerleşim:** Genç erişkinde uzun kemiklerde metafiz ve epifiz tutulumu tipiktir.\n- **Omurga Segmenti:** Omurgada korpus tutulur ve en sık torasik omurgada izlenir.\n- **Klinik Önem:** Arka elemanları tutan osteoid tümörlerin aksine gövde harabiyeti ve kord basısı oluşturabilir.\n\n> [!NOTE]\n> Dev hücreli tümör omurgada arka elemanları değil tipik olarak vertebra korpusunu tutar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Dev hücreli tümörün (GCT) omurgadaki tipik anatomik yerleşimi neresidir?",
+     "options": [
+      {
+       "text": "Vertebra korpusu (özellikle torasik omurga)",
+       "isCorrect": true,
+       "explanation": "Dev hücreli tümör omurgada korpusu tutar ve en sık torasik bölgede yerleşir."
+      },
+      {
+       "text": "Lamina ve pedikül (özellikle lomber bölge)",
+       "isCorrect": false,
+       "explanation": "Arka kolon yerleşimi osteoid osteom ve anevrizmal kemik kisti için tipiktir."
+      },
+      {
+       "text": "Yalnızca spinoz proçes",
+       "isCorrect": false,
+       "explanation": "Spinoz proçes osteokondrom için tipiktir; dev hücreli tümör korpustadır."
+      },
+      {
+       "text": "Sakrokoksigeal kıkırdak bileşkesi",
+       "isCorrect": false,
+       "explanation": "Sakrokoksigeal bölge kordoma için tipiktir; dev hücreli tümör torasik korpustadır."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Vertebra korpusu (en sık torasik omurga)",
+       "isCorrect": true,
+       "explanation": "Dev hücreli kemik tümörü genç erişkinlerde izlenen lokal agresif selim bir neoplazidir. Çoğu selim omurga lezyonunun aksine arka elemanları değil doğrudan vertebra korpusunu, özellikle de torasik bölgeyi tutar."
+      },
+      {
+       "key": "B",
+       "text": "Yalnızca spinoz proçes ucu",
+       "isCorrect": false,
+       "explanation": "Spinoz proçes yerleşimi kıkırdak kaynaklı ekzostoz olan osteokondromun klasik anatomik lokalizasyonudur. Dev hücreli tümör ise omurganın ön yük taşıyıcı kolonu olan korpus kemiğinde litik harabiyet yapar."
+      },
+      {
+       "key": "C",
+       "text": "Sakroiliak eklem kapsülü dışı",
+       "isCorrect": false,
+       "explanation": "Eklem kapsülü patolojileri romatolojik artritler ve sinovyal proliferasyonlarla ilişkilidir. Dev hücreli tümör kemik iliği epifiz eşdeğeri olan vertebra korpus kemik dokusunun primer neoplazisidir."
+      },
+      {
+       "key": "D",
+       "text": "Yalnızca transvers proçes köşesi",
+       "isCorrect": false,
+       "explanation": "Transvers proçes lezyonları nadir olup arka eleman tutulumu yapan osteoid osteomda görülebilir. Dev hücreli tümör ise geniş litik expansil kitle halinde vertebra korpusunun içinde gelişir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Dev hücreli tümörde omurgada korpus tutulur.",
+     "maskedTerm": "korpus",
+     "hint": "Vertebranın ön kolonunu oluşturan silindirik kemik gövdesi"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Dev Hücreli Tümör (GCT): Korpus Tutulumu",
+     "items": [
+      {
+       "text": "Dev hücreli tümör selim karakterde bir kemik tümörüdür.",
+       "isLie": false,
+       "explanation": "Dev hücreli tümör benign sınıflama içinde yer alır."
+      },
+      {
+       "text": "Dev hücreli tümör omurgada en sık servikal arka elemanları tutar.",
+       "isLie": true,
+       "explanation": "Tuzaktır; omurgada korpus tutulur ve en sık torasik bölgede görülür."
+      },
+      {
+       "text": "Genç erişkinde uzun kemiklerde metafiz ve epifizi tutar.",
+       "isLie": false,
+       "explanation": "Ekstremite kemiklerinde epifiz-metafiz tutulumu karakteristiktir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Dev hücreli tümör omurgada en sık hangi spinal segmentte görülür?",
+     "answer": "Torasik omurga Vertebra korpusu Genç erişkin"
+    }
+   ]
+  },
+  {
+   "slideNumber": 7,
+   "title": "Anevrizmal Kemik Kisti (AKK): Genç Yaş ve Arka Eleman Tutulumu",
+   "section": "1.7",
+   "bolum": "1.7",
+   "pdfSayfalari": [
+    9,
+    9
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 9,
+    "endPage": 9
+   },
+   "content": "Anevrizmal kemik kisti (AKK) ekspansil vasküler kistik boşluklar içeren selim bir lezyondur.\n\n- **Yaş ve Lokalizasyon:** 20-30 yaş arasında sıktır; vakaların %60'ında arka elemanlar tutulur ve lomber bölgede sıktır.\n- **Klinik Tablo:** Bel ağrısı ana semptomdur; olguların %55'inde nörolojik defisit gelişebilir.\n- **Deformite:** Osteoblastom ve osteoid osteom gibi rijit ağrılı skolyoz yapar.\n- **Tedavi:** Temel tedavi cerrahidir; nüks riskini azaltmak amacıyla radyoterapi adjuvan olarak verilebilir.\n\n> [!IMPORTANT]\n> Anevrizmal kemik kisti lomber bölgede arka elemanları tutar, bel ağrısı ve %55 oranında defisit yapar.",
+   "synthesisNarrative": "Anevrizmal kemik kisti (AKK) ekspansil vasküler kistik boşluklar içeren selim bir lezyondur.\n\n- **Yaş ve Lokalizasyon:** 20-30 yaş arasında sıktır; vakaların %60'ında arka elemanlar tutulur ve lomber bölgede sıktır.\n- **Klinik Tablo:** Bel ağrısı ana semptomdur; olguların %55'inde nörolojik defisit gelişebilir.\n- **Deformite:** Osteoblastom ve osteoid osteom gibi rijit ağrılı skolyoz yapar.\n- **Tedavi:** Temel tedavi cerrahidir; nüks riskini azaltmak amacıyla radyoterapi adjuvan olarak verilebilir.\n\n> [!IMPORTANT]\n> Anevrizmal kemik kisti lomber bölgede arka elemanları tutar, bel ağrısı ve %55 oranında defisit yapar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Anevrizmal kemik kistinin (AKK) omurgadaki yerleşimi ve tedavi yaklaşımı hangisidir?",
+     "options": [
+      {
+       "text": "%60 arka elemanlar ve lomber bölge; temel tedavi cerrahidir",
+       "isCorrect": true,
+       "explanation": "AKK %60 arka elemanları ve lomber bölgeyi tutar; temel tedavi cerrahidir."
+      },
+      {
+       "text": "Yalnızca korpus tutulumu; tedavi primer kemoterapidir",
+       "isCorrect": false,
+       "explanation": "AKK arka elemanları tutar ve kemoterapiye yanıt veren bir sarkom değildir."
+      },
+      {
+       "text": "İleri yaşta servikal tutulum; tedavi sadece izlemdir",
+       "isCorrect": false,
+       "explanation": "AKK 20-30 yaş genç grupta görülür ve cerrahi eksizyon gerekir."
+      },
+      {
+       "text": "Spinoz proçes ekzostozu; tedavi radyofrekans ablasyondur",
+       "isCorrect": false,
+       "explanation": "Ekzostoz osteokondromdur; AKK cerrahi küretaj ve eksizyonla tedavi edilir."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Arka elemanlar (%60) ve cerrahi tedavi",
+       "isCorrect": true,
+       "explanation": "Anevrizmal kemik kisti 20-30 yaş arası gençlerde görülen kan dolu kistik boşluklardan oluşan selim bir lezyondur. Vakaların yüzde altmışında omurga arka elemanlarını tutar ve kitle etkisine karşı cerrahi küretaj veya rezeksiyon uygulanır."
+      },
+      {
+       "key": "B",
+       "text": "Yalnızca korpus tutulumu ve izole radyoterapi",
+       "isCorrect": false,
+       "explanation": "Vertebra korpusunun primer radyoterapiyle kontrol edildiği malign lezyonlar lenfoma ve plazmositomdur. Anevrizmal kemik kisti selim vasküler kistik lezyondur, arka elemanı sever ve cerrahiyle tedavi edilir."
+      },
+      {
+       "key": "C",
+       "text": "İntervertebral disk tutulumu ve antibiyoterapi",
+       "isCorrect": false,
+       "explanation": "Disk mesafesini tutarak destrüksiyon yapan lezyonlar enfeksiyöz spondilodiskitlerdir. Anevrizmal kemik kisti enfeksiyon değil psödotümöral kemik patolojisidir ve cerrahi boşaltma gerektirir."
+      },
+      {
+       "key": "D",
+       "text": "Servikal ön ligament tutulumu ve kemoterapi",
+       "isCorrect": false,
+       "explanation": "Sistemik kemoterapi Ewing sarkomu ve osteosarkom gibi habis kemik sarkomlarının sistemik tedavisidir. Anevrizmal kemik kisti selim arka kolon lezyonudur ve sistemik sitotoksik tedavi verilmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Anevrizmal kemik kistinde bel ağrısı ana semptomdur.",
+     "maskedTerm": "bel ağrısı",
+     "hint": "Lomber tutulumda hastayı doktora getiren ana sızlama şikayeti"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Anevrizmal Kemik Kisti (AKK): Genç Yaş ve Arka Eleman Tutulumu",
+     "items": [
+      {
+       "text": "Anevrizmal kemik kisti 20-30 yaş arasında ve lomber bölgede sıktır.",
+       "isLie": false,
+       "explanation": "AKK genç erişkinlerde lomber yerleşimi tercih eder."
+      },
+      {
+       "text": "Anevrizmal kemik kistinde nörolojik defisit hiçbir zaman görülmez.",
+       "isLie": true,
+       "explanation": "Tuzaktır; AKK olgularının %55'inde nörolojik defisit sıktır."
+      },
+      {
+       "text": "Osteoblastom ve osteoid osteom gibi ağrılı skolyoz yapabilir.",
+       "isLie": false,
+       "explanation": "Arka eleman tutulumuna bağlı paraspinal spazm skolyoz oluşturur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Anevrizmal kemik kistinde nörolojik defisit görülme sıklığı nedir?",
+     "answer": "%55 sıklıkla Bel ağrısı eşlik eder Cerrahi tedavi endikasyonu"
+    }
+   ]
+  },
+  {
+   "slideNumber": 8,
+   "title": "Eozinofilik Granülom ve Hand-Schüller-Christian Triadı",
+   "section": "1.8",
+   "bolum": "1.8",
+   "pdfSayfalari": [
+    10,
+    11
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 10,
+    "endPage": 11
+   },
+   "content": "Eozinofilik granülom, Langerhans hücreli histiyositoz spektrumunda yer alan bir neoplazidir.\n\n- **Epidemiyoloji:** En sık 2. dekadda görülür; özellikle 5 ve 10 yaşta iki ayrı pik yapar.\n- **Klinik Tablo:** Akut sırt ağrısı ile başlar ve en sık torasik omurga tutulumu izlenir.\n- **Formlar ve Tedavi:** Tekil veya sistemik olabilir; sistemik ise kemoterapi, tekil ise cerrahi uygulanır.\n- **Triad Bileşenleri:** Hand-Schüller-Christian triadı kemik lezyonları, diabetes insipidus ve ekzoftalmus üçlüsüyle karakterizedir.\n\n> [!NOTE]\n> Hand-Schüller-Christian triadı: kemik lezyonları + diabetes insipidus + ekzoftalmus multisistem tutulumunu yansıtır.",
+   "synthesisNarrative": "Eozinofilik granülom, Langerhans hücreli histiyositoz spektrumunda yer alan bir neoplazidir.\n\n- **Epidemiyoloji:** En sık 2. dekadda görülür; özellikle 5 ve 10 yaşta iki ayrı pik yapar.\n- **Klinik Tablo:** Akut sırt ağrısı ile başlar ve en sık torasik omurga tutulumu izlenir.\n- **Formlar ve Tedavi:** Tekil veya sistemik olabilir; sistemik ise kemoterapi, tekil ise cerrahi uygulanır.\n- **Triad Bileşenleri:** Hand-Schüller-Christian triadı kemik lezyonları, diabetes insipidus ve ekzoftalmus üçlüsüyle karakterizedir.\n\n> [!NOTE]\n> Hand-Schüller-Christian triadı: kemik lezyonları + diabetes insipidus + ekzoftalmus multisistem tutulumunu yansıtır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Hand-Schüller-Christian triadını oluşturan üç klinik bulgu hangisidir?",
+     "options": [
+      {
+       "text": "Kemik lezyonları, diabetes insipidus ve ekzoftalmus",
+       "isCorrect": true,
+       "explanation": "Hand-Schüller-Christian triadı kemik lezyonları, diabetes insipidus ve ekzoftalmus üçlüsüdür."
+      },
+      {
+       "text": "Anemi, ateş ve yüksek sedimentasyon",
+       "isCorrect": false,
+       "explanation": "Ewing sarkomunda osteomiyeliti taklit eden sistemik bulgulardır."
+      },
+      {
+       "text": "Kafatasında litik lezyon, skolyoz ve hipertansiyon",
+       "isCorrect": false,
+       "explanation": "Triadın bileşenleri arasında hipertansiyon veya skolyoz yer almaz."
+      },
+      {
+       "text": "Akut bel ağrısı, parezi ve sfinkter kusuru",
+       "isCorrect": false,
+       "explanation": "Genel kord basısı bulgularıdır; histiyositoz triadı değildir."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Kemik lezyonları, diabetes insipidus ve ekzoftalmus",
+       "isCorrect": true,
+       "explanation": "Hand-Schüller-Christian hastalığı Langerhans hücreli histiyositozun multifokal kronik multisistem formudur. Kafa ve omurga kemik lezyonları, hipofiz sapı tutulumuna bağlı diabetes insipidus ve retroorbital kitleye bağlı ekzoftalmus klasik triadını oluşturur."
+      },
+      {
+       "key": "B",
+       "text": "Ateş, splenomegali ve pansitopeni",
+       "isCorrect": false,
+       "explanation": "Ateş, splenomegali ve pansitopeni hemofagositik lenfohistiyositoz veya fulminan enfeksiyon bulgularıdır. Langerhans histiyositozunun sistemik triadında ise kemik lezyonu, diabetes insipidus ve ekzoftalmus bulunur."
+      },
+      {
+       "key": "C",
+       "text": "Hipertansiyon, bradikardi ve solunum düzensizliği",
+       "isCorrect": false,
+       "explanation": "Hipertansiyon, bradikardi ve solunum depresyonu kafa içi basınç artışını gösteren Cushing triadıdır. Eozinofilik granülomun multisistem triadıyla herhangi bir ortak bileşeni yoktur."
+      },
+      {
+       "key": "D",
+       "text": "Karın ağrısı, asit ve hepatomegali",
+       "isCorrect": false,
+       "explanation": "Karın ağrısı, asit ve hepatomegali Budd-Chiari sendromu veya portal hipertansiyon klinik tablosudur. Histiyositoz kemik, hipofiz arka lobu ve orbita dokusunu hedef alarak Hand-Schüller triadını yapar."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Eozinofilik granülom çocuklarda 5 ve 10 yaşta pik yapar.",
+     "maskedTerm": "5 ve 10",
+     "hint": "Histiyositozun çocukluk döneminde tepe noktasına ulaştığı iki yaşam dönemi"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Eozinofilik Granülom ve Hand-Schüller-Christian Triadı",
+     "items": [
+      {
+       "text": "Eozinofilik granülom akut sırt ağrısı ve torasik omurga tutulumu ile seyreder.",
+       "isLie": false,
+       "explanation": "Ders notunda torasik omurga tutulumu ve akut sırt ağrısı vurgulanmıştır."
+      },
+      {
+       "text": "Hand-Schüller-Christian triadı hiperglisemi, gut ve tremor üçlüsüdür.",
+       "isLie": true,
+       "explanation": "Tuzaktır; triad kemik lezyonları, diabetes insipidus ve ekzoftalmustan oluşur."
+      },
+      {
+       "text": "Sistemik tutulum varsa kemoterapi, tekil lezyonda cerrahi tedavi düşünülür.",
+       "isLie": false,
+       "explanation": "Ders notunda sistemik ise kemoterapi diğer türlü cerrahi tedavi önerilmiştir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Eozinofilik granülom omurgada en sık hangi bölgeyi tutar?",
+     "answer": "Torasik omurga Akut sırt ağrısı 5 ve 10 yaş piki"
+    }
+   ]
+  },
+  {
+   "slideNumber": 9,
+   "title": "Vertebra Hemanjiomu: Vertikal Çizgilenme ve İnsidental Tanı",
+   "section": "1.9",
+   "bolum": "1.9",
+   "pdfSayfalari": [
+    12,
+    12
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 12,
+    "endPage": 12
+   },
+   "content": "Vertebra hemanjiomu erişkin omurgasında en sık karşılaşılan selim vasküler lezyondur.\n\n- **Köken ve Nitelik:** Vasküler kökenli, selim lezyonlardır; sıklıkla insidental olarak saptanır.\n- **Lokalizasyon:** Vücuttaki hemanjiomların %50'den fazlası omurga ve kafatasında görülür; omurgada torakolomber veya lomber bölgeyi seçer.\n- **Radyolojik Görünüm:** Direkt grafide kalınlaşmış trabeküllere bağlı vertikal çizgilenmeler tipiktir.\n- **Komplikasyon ve Tedavi:** Nadiren patolojik kırıklar yapabilir; kord veya kök basısı durumunda cerrahi uygulanır.\n\n> [!IMPORTANT]\n> Direkt grafide izlenen vertikal çizgilenmeler vertebra hemanjiomunun karakteristik radyolojik bulgusudur.",
+   "synthesisNarrative": "Vertebra hemanjiomu erişkin omurgasında en sık karşılaşılan selim vasküler lezyondur.\n\n- **Köken ve Nitelik:** Vasküler kökenli, selim lezyonlardır; sıklıkla insidental olarak saptanır.\n- **Lokalizasyon:** Vücuttaki hemanjiomların %50'den fazlası omurga ve kafatasında görülür; omurgada torakolomber veya lomber bölgeyi seçer.\n- **Radyolojik Görünüm:** Direkt grafide kalınlaşmış trabeküllere bağlı vertikal çizgilenmeler tipiktir.\n- **Komplikasyon ve Tedavi:** Nadiren patolojik kırıklar yapabilir; kord veya kök basısı durumunda cerrahi uygulanır.\n\n> [!IMPORTANT]\n> Direkt grafide izlenen vertikal çizgilenmeler vertebra hemanjiomunun karakteristik radyolojik bulgusudur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Vertebra hemanjiomunun direkt radyografideki tipik görünümü hangisidir?",
+     "options": [
+      {
+       "text": "Vertikal çizgilenmeler",
+       "isCorrect": true,
+       "explanation": "Hemanjiomda dikey kemik trabeküllerinin kalınlaşması direkt grafide vertikal çizgilenmeler verir."
+      },
+      {
+       "text": "Litik güve yeniği görünümü",
+       "isCorrect": false,
+       "explanation": "Multipl myelomun klasik radyolojik bulgusudur; hemanjiomda çizgilenme izlenir."
+      },
+      {
+       "text": "Soğan zarı periost reaksiyonu",
+       "isCorrect": false,
+       "explanation": "Ewing sarkomunun klasik radyolojik bulgusudur; hemanjiomla ilgisi yoktur."
+      },
+      {
+       "text": "Halka ve ark tarzı kalsifikasyon",
+       "isCorrect": false,
+       "explanation": "Kondrosarkom gibi kıkırdak lezyonlarında görülen kalsifikasyon paternidir."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Direkt grafide vertikal çizgilenmeler (akordeon görünümü)",
+       "isCorrect": true,
+       "explanation": "Vertebra hemanjiomu erişkin omurgasının en sık rastlanan asemptomatik selim vasküler hamartomudur. Horizontal trabeküllerin rezorpsiyonu ve vertikal kemik trabeküllerinin kalınlaşması sonucu direkt grafide karakteristik vertikal çizgilenmeler izlenir."
+      },
+      {
+       "key": "B",
+       "text": "Soğan zarı şeklinde periost reaksiyonu",
+       "isCorrect": false,
+       "explanation": "Soğan zarı periost laminasyonu kemiğin habis küçük hücreli tümörü olan Ewing sarkomunun tipik radyolojik bulgusudur. Hemanjiomda periost reaksiyonu olmaz, vertebra korpusunda dikey trabeküler çizgilenme izlenir."
+      },
+      {
+       "key": "C",
+       "text": "Güneş ışını paterni ve Codman üçgeni",
+       "isCorrect": false,
+       "explanation": "Güneş ışını manzarası ve Codman periost üçgeni agresif osteoid üreten osteosarkomun habaset göstergesidir. Hemanjiom ise selim vasküler bir lezyon olup paralel dikey kemik trabekülleri gösterir."
+      },
+      {
+       "key": "D",
+       "text": "Tamamen zımba deliği tarzında multipl litik odaklar",
+       "isCorrect": false,
+       "explanation": "Kafatası ve omurgada zımba deliği tarzında keskin sınırlı multipl litik lezyonlar multipl myelom hastalığına özgüdür. Hemanjiomda ise trabeküler kemik kalınlaşmasına bağlı vertikal çizgilenme saptanır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Hemanjiom direkt grafide vertikal çizgilenmeler görüntüsü verir.",
+     "maskedTerm": "vertikal çizgilenmeler",
+     "hint": "Trabeküler kalınlaşmanın filmdeki dikey boylamsal deseni"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Vertebra Hemanjiomu: Vertikal Çizgilenme ve İnsidental Tanı",
+     "items": [
+      {
+       "text": "Hemanjiom selim vasküler kökenli olup sıklıkla insidental saptanır.",
+       "isLie": false,
+       "explanation": "Hemanjiomlar genellikle başka nedenlerle çekilen grafilerde tesadüfen bulunur."
+      },
+      {
+       "text": "Hemanjiomda patolojik kırık ve bası durumunda cerrahi tedavi uygulanır.",
+       "isLie": false,
+       "explanation": "Semptomatik bası ve kırık geliştiğinde cerrahi dekompresyon gerekir."
+      },
+      {
+       "text": "Hemanjiomlar daima agresif malign dönüşüm gösterir.",
+       "isLie": true,
+       "explanation": "Tuzaktır; hemanjiom selim karakterli vasküler bir lezyondur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Hemanjiomların %50'den fazlası hangi iki anatomik yapıda görülür?",
+     "answer": "Omurga Kafatur (kafatası) Torakolomber / lomber bölge"
+    }
+   ]
+  },
+  {
+   "slideNumber": 10,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Benign Omurga Tümörleri ve Triadlar",
+   "isCheckpoint": true,
+   "section": "1.9",
+   "bolum": "1.9",
+   "pdfSayfalari": [
+    1,
+    12
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 1,
+    "endPage": 12
+   },
+   "content": "Bu aşamaya kadar primer benign omurga tümörlerinin patolojik, klinik ve radyolojik ayrımlarını inceledik.\n\n- **Osteoid Osteom:** Gece şiddetlenen, aspirine dramatik yanıt veren ağrı ve erişkinde ağrılı skolyoz.\n- **Osteoblastom:** Agresif selim tümör, büyük boyut, nörolojik defisit ve nüks sıklığı.\n- **Dev Hücreli Tümör:** Torasik omurgada korpus tutulumu.\n- **Anevrizmal Kemik Kisti:** 20-30 yaş, %60 arka eleman ve lomber yerleşim, cerrahi tedavi.\n- **Eozinofilik Granülom:** 5 ve 10 yaş pik, Hand-Schüller-Christian triadı (kemik lezyonu, diabetes insipidus, ekzoftalmus).\n- **Hemanjiom:** Direkt grafide karakteristik vertikal çizgilenmeler.\n\n> [!IMPORTANT]\n> Arka elemanları tutan osteoid lezyonlar ile korpusu tutan dev hücreli tümör ayrımı temel sınav konusudur.",
+   "synthesisNarrative": "Bu aşamaya kadar primer benign omurga tümörlerinin patolojik, klinik ve radyolojik ayrımlarını inceledik.\n\n- **Osteoid Osteom:** Gece şiddetlenen, aspirine dramatik yanıt veren ağrı ve erişkinde ağrılı skolyoz.\n- **Osteoblastom:** Agresif selim tümör, büyük boyut, nörolojik defisit ve nüks sıklığı.\n- **Dev Hücreli Tümör:** Torasik omurgada korpus tutulumu.\n- **Anevrizmal Kemik Kisti:** 20-30 yaş, %60 arka eleman ve lomber yerleşim, cerrahi tedavi.\n- **Eozinofilik Granülom:** 5 ve 10 yaş pik, Hand-Schüller-Christian triadı (kemik lezyonu, diabetes insipidus, ekzoftalmus).\n- **Hemanjiom:** Direkt grafide karakteristik vertikal çizgilenmeler.\n\n> [!IMPORTANT]\n> Arka elemanları tutan osteoid lezyonlar ile korpusu tutan dev hücreli tümör ayrımı temel sınav konusudur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdaki benign omurga tümörlerinden hangisi tipik olarak vertebra korpusunu tutar?",
+     "options": [
+      {
+       "text": "Dev hücreli tümör",
+       "isCorrect": true,
+       "explanation": "Dev hücreli tümör omurgada korpusu tutar; osteoid osteom ve AKK arka elemanları tutar."
+      },
+      {
+       "text": "Osteoid osteom",
+       "isCorrect": false,
+       "explanation": "Osteoid osteom lamina ve pedikül gibi arka kolon elemanlarını tutar."
+      },
+      {
+       "text": "Osteoblastom",
+       "isCorrect": false,
+       "explanation": "Osteoblastom omurga arka elemanlarında yerleşen bir lezyondur."
+      },
+      {
+       "text": "Anevrizmal kemik kisti",
+       "isCorrect": false,
+       "explanation": "Anevrizmal kemik kisti %60 oranında omurga arka elemanlarında görülür."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Dev hücreli tümör (GCT)",
+       "isCorrect": true,
+       "explanation": "Dev hücreli kemik tümörü omurgada tipik olarak ön kolonu yani vertebra korpusunu tutan nadir selim neoplazilerdendir. Osteoid osteom ve anevrizmal kemik kisti gibi diğer selim tümörlerin aksine korpusta destrüksiyon yapar."
+      },
+      {
+       "key": "B",
+       "text": "Osteoid osteom",
+       "isCorrect": false,
+       "explanation": "Osteoid osteom gençlerde omurganın posterior elemanlarını, pedikül ve laminalarını seçici olarak tutar. Korpus tutulumu yapmadığı için tipik olarak ağrılı skolyoz ve arka kolon semptomları oluşturur."
+      },
+      {
+       "key": "C",
+       "text": "Osteoblastom",
+       "isCorrect": false,
+       "explanation": "Osteoblastom da osteoid osteom gibi lezyon ağırlığını omurganın arka kemik elemanlarında yoğunlaştırır. Korpus tutulumu göstermez, posterior arkustaki kitle etkisiyle spinal korda arkadan bası yapar."
+      },
+      {
+       "key": "D",
+       "text": "Anevrizmal kemik kisti",
+       "isCorrect": false,
+       "explanation": "Anevrizmal kemik kisti vakalarının yaklaşık yüzde altmışı posterior elemanlarda ve faset eklem komşuluğunda başlar. Ön kolondaki vertebra korpusu tutulumu ise tipik olarak dev hücreli tümörün belirleyici yerleşimidir."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "[TEKRAR SAYFASI - CHECKPOINT 1] Benign Omurga Tümörleri ve Triadlar",
+     "items": [
+      {
+       "text": "Osteoid osteom erişkinde ağrılı skolyozun en sık nedenidir.",
+       "isLie": false,
+       "explanation": "Genç erişkinde skolyozun en sık selim neoplazik nedenidir."
+      },
+      {
+       "text": "Hand-Schüller-Christian triadı hemanjiom komplikasyonudur.",
+       "isLie": true,
+       "explanation": "Tuzaktır; triad hemanjiomun değil Langerhans hücreli histiyositozun (eozinofilik granülom) formudur."
+      },
+      {
+       "text": "Hemanjiom direkt grafide vertikal çizgilenmeler ile tanınır.",
+       "isLie": false,
+       "explanation": "Kalınlaşmış dikey trabeküller vertikal çizgilenme bulgusu verir."
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "instruction": "Tümörleri tipik anatomik yerleşimlerine göre gruplayın.",
+     "leftCategory": "Arka Kolon / Elemanlar",
+     "rightCategory": "Vertebra Korpusu",
+     "cards": [
+      {
+       "text": "Osteoid osteom",
+       "category": "left"
+      },
+      {
+       "text": "Dev hücreli tümör",
+       "category": "right"
+      },
+      {
+       "text": "Anevrizmal kemik kisti",
+       "category": "left"
+      },
+      {
+       "text": "Osteoblastom",
+       "category": "left"
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Aspirin ile ağrısı dramatik azalan benign omurga tümörü hangisidir?",
+     "answer": "Osteoid osteom Gece şiddetlenen ağrı Ağrılı skolyoz"
+    }
+   ]
+  },
+  {
+   "slideNumber": 11,
+   "title": "Primer Malign Spektrumu ve Osteosarkom",
+   "section": "2.1",
+   "bolum": "2.1",
+   "pdfSayfalari": [
+    13,
+    14
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 13,
+    "endPage": 14
+   },
+   "content": "Primer malign omurga tümörleri osteosarkom, kondrosarkom, Ewing sarkomu, multipl myelom ve lenfomayı kapsar.\n\n- **Omurga Osteosarkomu:** İleri yaş grubunda görülen nadir bir kemik sarkomudur.\n- **Lezyon Paterni:** Arka elemanların ve korpusun litik veya destrüktif lezyonu ile seyreder.\n- **Klinik Yıkım:** Hızlı kemik harabiyeti mekanik instabiliteye ve erken nörolojik defisite yol açar.\n- **Tedavi:** Cerrahi rezeksiyon ve radyoterapi kombinasyonu önerilmektedir.\n\n> [!NOTE]\n> Omurga osteosarkomu hem korpusu hem de arka elemanları tutan destrüktif yüksek dereceli bir sarkomdur.",
+   "synthesisNarrative": "Primer malign omurga tümörleri osteosarkom, kondrosarkom, Ewing sarkomu, multipl myelom ve lenfomayı kapsar.\n\n- **Omurga Osteosarkomu:** İleri yaş grubunda görülen nadir bir kemik sarkomudur.\n- **Lezyon Paterni:** Arka elemanların ve korpusun litik veya destrüktif lezyonu ile seyreder.\n- **Klinik Yıkım:** Hızlı kemik harabiyeti mekanik instabiliteye ve erken nörolojik defisite yol açar.\n- **Tedavi:** Cerrahi rezeksiyon ve radyoterapi kombinasyonu önerilmektedir.\n\n> [!NOTE]\n> Omurga osteosarkomu hem korpusu hem de arka elemanları tutan destrüktif yüksek dereceli bir sarkomdur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Omurga osteosarkomunun klinik ve patolojik özellikleri hangisidir?",
+     "options": [
+      {
+       "text": "İleri yaşta nadir; arka elemanların ve korpusun litik veya destrüktif lezyonudur",
+       "isCorrect": true,
+       "explanation": "Osteosarkom omurgada nadirdir, ileri yaşta arka eleman ve korpusta destrüksiyon yapar."
+      },
+      {
+       "text": "Çocukluk çağında benign kıkırdak ekzostozudur",
+       "isCorrect": false,
+       "explanation": "Bu tanım osteokondroma aittir; osteosarkom habis mezenkimal tümördür."
+      },
+      {
+       "text": "Sadece lomber spinoz proçesi tutan asemptomatik lezyondur",
+       "isCorrect": false,
+       "explanation": "Osteosarkom korpus ve arka elemanlarda destrüksiyon yapan ağır bir tümördür."
+      },
+      {
+       "text": "Yalnızca aspirin ile tedavi edilen selim lezyondur",
+       "isCorrect": false,
+       "explanation": "Aspirin yanıtı osteoid osteomdadır; osteosarkom cerrahi ve radyoterapi gerektirir."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Arka elemanların ve korpusun litik/destrüktif lezyonu, cerrahi ve radyoterapi",
+       "isCorrect": true,
+       "explanation": "Omurga osteosarkomu habis osteoblastların osteoid kemik matriksi ürettiği yüksek dereceli agresif bir tümördür. Hem korpusu hem de arka elemanları infiltre ederek destrüksiyon oluşturur; tedavisi cerrahi rezeksiyon ve adjuvan radyoterapidir."
+      },
+      {
+       "key": "B",
+       "text": "Yalnızca asemptomatik rastlantısal trabeküler kalınlaşma",
+       "isCorrect": false,
+       "explanation": "Rastlantısal trabeküler kalınlaşma selim vasküler lezyon olan vertebra hemanjiomunun klinik tablosudur. Osteosarkom ise hızla ilerleyen kemik yıkımı, şiddetli ağrı ve nörolojik kayıpla giden habis bir tümördür."
+      },
+      {
+       "key": "C",
+       "text": "Tek başına antibiyotikle iyileşen subperiostal enfeksiyon",
+       "isCorrect": false,
+       "explanation": "Subperiostal abse ve enfeksiyon antibiyoterapiye yanıt veren piyojenik osteomiyelit tablosudur. Osteosarkom neoplazik kemik malignitesidir ve mutlak onkolojik cerrahi ile radyoterapi gerektirir."
+      },
+      {
+       "key": "D",
+       "text": "Aspirin ile tamamen geçen selim vasküler anomali",
+       "isCorrect": false,
+       "explanation": "Aspirin ile tam rahatlama osteoid osteom nidusuna özgü selim bir prostaglandin inhibisyon yanıtıdır. Osteosarkom ise kemiği hızla tahrip eden öldürücü bir kemik habis neoplazisidir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Omurga osteosarkomunda cerrahi ve radyoterapi birlikte uygulanır.",
+     "maskedTerm": "radyoterapi",
+     "hint": "Lokal nüksü önlemek için uygulanan iyonlaştırıcı ışınlama tedavisi"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Primer Malign Spektrumu ve Osteosarkom",
+     "items": [
+      {
+       "text": "Osteosarkom primer malign omurga tümörleri sınıflamasında yer alır.",
+       "isLie": false,
+       "explanation": "Osteosarkom malign primer kemik tümörlerinin başında sayılmıştır."
+      },
+      {
+       "text": "Omurga osteosarkomu çok sık görülen selim bir çocukluk çağı hastalığıdır.",
+       "isLie": true,
+       "explanation": "Tuzaktır; osteosarkom omurgada nadirdir, ileri yaşta görülür ve maligndir."
+      },
+      {
+       "text": "Arka elemanların ve korpusun destrüktif lezyonu ile seyreder.",
+       "isLie": false,
+       "explanation": "Vertebrada yaygın litik ve destrüktif kemik harabiyeti oluşturur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Omurga osteosarkomunun temel tedavi kombinasyonu nedir?",
+     "answer": "Cerrahi rezeksiyon Radyoterapi Lokal kontrol"
+    }
+   ]
+  },
+  {
+   "slideNumber": 12,
+   "title": "Kondrosarkom: 40-70 Yaş Omurga Tutulumu ve Cerrahi",
+   "section": "2.2",
+   "bolum": "2.2",
+   "pdfSayfalari": [
+    15,
+    15
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 15,
+    "endPage": 15
+   },
+   "content": "Kondrosarkom malign kıkırdak matriksi üreten primer habis kemik tümörüdür.\n\n- **Görülme Yerleri:** Uzun kemiklerde ve pelviste sıktır; omurga tutulumu da sıktır.\n- **Yaş Dağılımı:** Tipik olarak 40-70 yaş grubundaki erişkinlerde saptanır.\n- **Klinik Seyir:** Yavaş veya agresif seyirli olabilir.\n- **Tedavi:** Kemoradyoterapiye dirençli kabul edilir; izole ise cerrahi tedavi temel seçenektir.\n\n> [!IMPORTANT]\n> Kondrosarkom 40-70 yaş grubunda görülür; izole lezyonlarda temel tedavi cerrahi eksizyondur.",
+   "synthesisNarrative": "Kondrosarkom malign kıkırdak matriksi üreten primer habis kemik tümörüdür.\n\n- **Görülme Yerleri:** Uzun kemiklerde ve pelviste sıktır; omurga tutulumu da sıktır.\n- **Yaş Dağılımı:** Tipik olarak 40-70 yaş grubundaki erişkinlerde saptanır.\n- **Klinik Seyir:** Yavaş veya agresif seyirli olabilir.\n- **Tedavi:** Kemoradyoterapiye dirençli kabul edilir; izole ise cerrahi tedavi temel seçenektir.\n\n> [!IMPORTANT]\n> Kondrosarkom 40-70 yaş grubunda görülür; izole lezyonlarda temel tedavi cerrahi eksizyondur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Omurga kondrosarkomunun yaş grubu ve temel tedavi yaklaşımı hangisidir?",
+     "options": [
+      {
+       "text": "40-70 yaş; izole lezyonlarda cerrahi tedavi",
+       "isCorrect": true,
+       "explanation": "Kondrosarkom 40-70 yaş grubunda izlenir ve izole ise cerrahi tedavi uygulanır."
+      },
+      {
+       "text": "10-20 yaş; yalnızca medikal aspirin tedavisi",
+       "isCorrect": false,
+       "explanation": "Osteoid osteom genç gruptadır; kondrosarkom 40-70 yaş habis tümörüdür."
+      },
+      {
+       "text": "Bebeklik dönemi; sadece gözlem",
+       "isCorrect": false,
+       "explanation": "Bebeklikte görülmez; erişkin çağda agresif kıkırdak destrüksiyonu yapar."
+      },
+      {
+       "text": ">80 yaş; primer yüksek doz kemoterapi",
+       "isCorrect": false,
+       "explanation": "Kondrosarkom kemoterapiye dirençlidir; temel yaklaşım cerrahidir."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "40–70 yaş ve kemoradyoterapiye direnç nedeniyle cerrahi rezeksiyon",
+       "isCorrect": true,
+       "explanation": "Kondrosarkom 40 ila 70 yaş arasındaki olgun erişkinlerde uzun kemikler, pelvis ve omurgada görülen habis kıkırdak tümörüdür. Kıkırdak matriksin damarsız yapısı nedeniyle kemoterapi ve radyoterapiye dirençlidir; temel küratif yaklaşım geniş cerrahi rezeksiyondur."
+      },
+      {
+       "key": "B",
+       "text": "5–10 yaş ve tek başına yüksek doz sitotoksik kemoterapi",
+       "isCorrect": false,
+       "explanation": "Çocukluk çağında kemoterapiye hassas küçük yuvarlak hücreli tümör Ewing sarkomudur. Kondrosarkom ise ileri erişkin yaşta izlenir ve konvansiyonel kemoterapi ajanlarına yanıtsızdır."
+      },
+      {
+       "key": "C",
+       "text": "Yenidoğan dönemi ve sadece gözlemsel takip",
+       "isCorrect": false,
+       "explanation": "Yenidoğan döneminde konjenital malformasyonlar ve selim kistler gözlemle izlenebilir. Kondrosarkom olgun erişkinlerin agresif habis neoplazisidir ve mutlak cerrahi müdahale şarttır."
+      },
+      {
+       "key": "D",
+       "text": "Ergenlik dönemi ve tek başına oral nonsteroid antienflamatuar tedavi",
+       "isCorrect": false,
+       "explanation": "Ergenlikte antiinflamatuar tedavi osteoid osteomun ağrısını hafifletmede medikal amaçla verilir. Kondrosarkom ise kıkırdak yıkan habis bir sarkomdur ve antiinflamatuar ilaçlarla tedavi edilemez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kondrosarkom uzun kemiklerde ve pelviste sıktır.",
+     "maskedTerm": "pelviste",
+     "hint": "Kıkırdak sarkomunun omurgadan başka sık tuttuğu leğen kemiği kuşağı"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Kondrosarkom: 40-70 Yaş Omurga Tutulumu ve Cerrahi",
+     "items": [
+      {
+       "text": "Kondrosarkom 40-70 yaş aralığında omurgada da sık tutulum yapar.",
+       "isLie": false,
+       "explanation": "Ders notunda 40-70 yaş ve omurga tutulumunun sık olduğu belirtilmiştir."
+      },
+      {
+       "text": "Kondrosarkom daima çok hızlı seyreden ve cerrahinin imkansız olduğu bir lezyondur.",
+       "isLie": true,
+       "explanation": "Tuzaktır; yavaş veya agresif seyirli olabilir ve izole ise cerrahi tedavi esastır."
+      },
+      {
+       "text": "Kondrosarkom kıkırdak doku kökenli habis bir tümördür.",
+       "isLie": false,
+       "explanation": "Kondrosarkom kıkırdak matriks üreten malign neoplazidir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Kondrosarkomun en sık görüldüğü yaş aralığı nedir?",
+     "answer": "40-70 yaş Pelvis ve uzun kemikler Omurga tutulumu"
+    }
+   ]
+  },
+  {
+   "slideNumber": 13,
+   "title": "Ewing Sarkomu: Osteomiyelit Taklidi ve Kemoradyoterapi",
+   "section": "2.3",
+   "bolum": "2.3",
+   "pdfSayfalari": [
+    16,
+    16
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 16,
+    "endPage": 16
+   },
+   "content": "Ewing sarkomu çocukluk ve adölesan çağın yüksek dereceli kemik neoplazisidir.\n\n- **Histolojik Yapı:** Kemiğin habis küçük hücreli tümörüdür; prognozu kötüdür.\n- **Yaş Grubu:** En sık ilk iki dekadda (çocukluk ve ergenlik çağı) görülür.\n- **Enfeksiyon Taklidi:** Subfebril ateş, anemi, lökositoz ve yüksek sedimentasyon ile osteomiyelit ile karıştırılır.\n- **Tedavi Protokolü:** Cerrahinin yeri sınırlıdır; kemoterapi ve radyoterapi kombinasyonu önerilir.\n\n> [!IMPORTANT]\n> Subfebril ateş, lökositoz ve yüksek sedim ile osteomiyeliti taklit eden küçük hücreli tümör Ewing sarkomudur.",
+   "synthesisNarrative": "Ewing sarkomu çocukluk ve adölesan çağın yüksek dereceli kemik neoplazisidir.\n\n- **Histolojik Yapı:** Kemiğin habis küçük hücreli tümörüdür; prognozu kötüdür.\n- **Yaş Grubu:** En sık ilk iki dekadda (çocukluk ve ergenlik çağı) görülür.\n- **Enfeksiyon Taklidi:** Subfebril ateş, anemi, lökositoz ve yüksek sedimentasyon ile osteomiyelit ile karıştırılır.\n- **Tedavi Protokolü:** Cerrahinin yeri sınırlıdır; kemoterapi ve radyoterapi kombinasyonu önerilir.\n\n> [!IMPORTANT]\n> Subfebril ateş, lökositoz ve yüksek sedim ile osteomiyeliti taklit eden küçük hücreli tümör Ewing sarkomudur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Ewing sarkomunun osteomiyelit ile karıştırılmasına yol açan klinik bulgular hangisidir?",
+     "options": [
+      {
+       "text": "Subfebril ateş, anemi, lökositoz ve yüksek sedimentasyon",
+       "isCorrect": true,
+       "explanation": "Bu sistemik inflamatuar bulgular Ewing sarkomunda osteomiyelit taklidine yol açar."
+      },
+      {
+       "text": "Aspirin ile ağrının tamamen geçmesi",
+       "isCorrect": false,
+       "explanation": "Aspirin yanıtı osteoid osteomun özelliğidir; Ewing sarkomunda sistemik ateş ve lökositoz vardır."
+      },
+      {
+       "text": "Direkt grafide vertikal çizgilenmeler izlenmesi",
+       "isCorrect": false,
+       "explanation": "Vertikal çizgilenme selim hemanjiom bulgusudur."
+      },
+      {
+       "text": "Kemik lezyonları, diabetes insipidus ve ekzoftalmus",
+       "isCorrect": false,
+       "explanation": "Bu tablo Hand-Schüller-Christian triadıdır."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Ateş, lökositoz ve sedimentasyon yüksekliği",
+       "isCorrect": true,
+       "explanation": "Ewing sarkomu çocukluk ve ergenlik çağında görülen agresif habis küçük yuvarlak hücreli kemik neoplazisidir. Tümör dokusunun salgıladığı sitokinler ve nekroz nedeniyle subfebril ateş, lökositoz ve kanda sedim artışı yaparak piyojenik osteomiyeliti kusursuz taklit eder."
+      },
+      {
+       "key": "B",
+       "text": "Asemptomatik seyir ve normal laboratuvar değerleri",
+       "isCorrect": false,
+       "explanation": "Tamamen normal laboratuvar değerleri ve sessiz klinik seyir selim kemik adacıkları veya hemanjiomlarda görülür. Ewing sarkomunda ise yoğun inflamatuar yanıt, şiddetli kemik ağrısı ve sistemik belirtiler izlenir."
+      },
+      {
+       "key": "C",
+       "text": "Aşırı kilo alımı ve serum kalsiyumunda dramatik düşüş",
+       "isCorrect": false,
+       "explanation": "Kilo artışı ve hipokalsemi endokrinolojik paratiroid ve metabolik kemik bozukluklarında ortaya çıkar. Ewing sarkomunda katabolik habaset nedeniyle kilo kaybı, halsizlik ve sistemik inflamasyon mevcuttur."
+      },
+      {
+       "key": "D",
+       "text": "Yalnızca gece ağrısı ve aspirinle tam düzelme",
+       "isCorrect": false,
+       "explanation": "Gece ağrısının aspirinle dramatik düzelmesi selim osteoid osteoma özgü tanısal bir kriterdir. Ewing sarkomunda aspirin ağrıyı geçirmez ve hastada ateş ile enfeksiyon benzeri tablosu bulunur."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Ewing sarkomu sistemik bulguları nedeniyle osteomyelit ile karıştırılır.",
+     "maskedTerm": "osteomyelit",
+     "hint": "Küçük hücreli sarkomun laboratuvarıyla karışabildiği piyojenik kemik enfeksiyonu"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Ewing Sarkomu: Osteomiyelit Taklidi ve Kemoradyoterapi",
+     "items": [
+      {
+       "text": "Ewing sarkomu kemiğin habis küçük hücreli tümörüdür.",
+       "isLie": false,
+       "explanation": "Küçük yuvarlak mavi hücreli yüksek dereceli malign neoplazidir."
+      },
+      {
+       "text": "Ewing sarkomunda birincil küratif yaklaşım yalnız cerrahidir, kemoterapi verilmez.",
+       "isLie": true,
+       "explanation": "Tuzaktır; cerrahinin yeri sınırlıdır, kemoterapi ve radyoterapi temeldir."
+      },
+      {
+       "text": "En sık ilk iki dekadda çocukluk ve ergenlik çağında görülür.",
+       "isLie": false,
+       "explanation": "Ders notunda ilk 2 dekadda sık görüldüğü belirtilmiştir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Ewing sarkomunda cerrahinin yeri ve önerilen tedavi nedir?",
+     "answer": "Cerrahinin yeri sınırlı Kemoterapi Radyoterapi kombinasyonu"
+    }
+   ]
+  },
+  {
+   "slideNumber": 14,
+   "title": "Multipl Myelom ve Omurga Lenfoması",
+   "section": "2.4",
+   "bolum": "2.4",
+   "pdfSayfalari": [
+    17,
+    18
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 17,
+    "endPage": 18
+   },
+   "content": "Hematolojik maligniteler omurgada yaygın korpus tutulumu ve destrüksiyon ile seyreder.\n\n- **Multipl Myelom:** >50 yaş erişkin çağın en sık habis kemik tümörüdür; plazma hücre tümörüdür.\n- **Myelom Bulguları:** Normositik-normokromik anemi, yüksek sedim ve litik güve yeniği görünümü yapar; birincil tedavi kemoterapidir.\n- **Omurga Lenfoması:** Erişkin çağda vertebra korpusunda litik lezyonlar yapar; kesin teşhis biyopsi ile konur.\n- **Lenfoma Tedavisi:** Birincil tedavi radyoterapidir; kemoterapi ile kombine edildiğinde sağkalımı artırır.\n\n> [!NOTE]\n> Multipl myelomda birincil tedavi kemoterapi iken, omurga lenfomasında birincil tedavi radyoterapidir.",
+   "synthesisNarrative": "Hematolojik maligniteler omurgada yaygın korpus tutulumu ve destrüksiyon ile seyreder.\n\n- **Multipl Myelom:** >50 yaş erişkin çağın en sık habis kemik tümörüdür; plazma hücre tümörüdür.\n- **Myelom Bulguları:** Normositik-normokromik anemi, yüksek sedim ve litik güve yeniği görünümü yapar; birincil tedavi kemoterapidir.\n- **Omurga Lenfoması:** Erişkin çağda vertebra korpusunda litik lezyonlar yapar; kesin teşhis biyopsi ile konur.\n- **Lenfoma Tedavisi:** Birincil tedavi radyoterapidir; kemoterapi ile kombine edildiğinde sağkalımı artırır.\n\n> [!NOTE]\n> Multipl myelomda birincil tedavi kemoterapi iken, omurga lenfomasında birincil tedavi radyoterapidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Multipl myelomun omurgadaki klinik, laboratuvar ve radyolojik özellikleri hangisidir?",
+     "options": [
+      {
+       "text": "Normositik-normokromik anemi, yüksek sedimentasyon ve litik güve yeniği görünümü",
+       "isCorrect": true,
+       "explanation": "Multipl myelomda plazma hücre infiltrasyonu anemi, yüksek sedim ve litik güve yeniği lezyonları yapar."
+      },
+      {
+       "text": "Polisitemi, düşük sedim ve osteoblastik skleroz",
+       "isCorrect": false,
+       "explanation": "Myelomda eritrositoz değil anemi ve litik lezyonlar izlenir."
+      },
+      {
+       "text": "Lökositoz, trombositoz ve kemik kistleri",
+       "isCorrect": false,
+       "explanation": "Myelomda kemik iliği baskılanmasına bağlı anemi tipiktir."
+      },
+      {
+       "text": "Yalnızca spinoz proçeste kıkırdak ekzostozu",
+       "isCorrect": false,
+       "explanation": "Bu osteokondromdur; myelom yaygın korpus tutulumu yapar."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": ">50 yaş, normositik anemi, yüksek sedim ve litik güve yeniği görünümü",
+       "isCorrect": true,
+       "explanation": "Multipl myelom elli yaş üstü erişkinlerde en sık rastlanan primer habis kemik iliği neoplazisidir. Plazma hücre proliferasyonuna bağlı korpusta zımba deliği litik lezyonlar, kanda normositik normokrom anemi ve belirgin eritrosit sedim yüksekliği ile karakterizedir."
+      },
+      {
+       "key": "B",
+       "text": "Çocukluk çağı, trombositoz ve periost reaksiyonu",
+       "isCorrect": false,
+       "explanation": "Çocukluk çağında periost reaksiyonu ve reaktif trombositoz Ewing sarkomu veya enfeksiyonlarda izlenir. Multipl myelom ileri yaştaki olgularda kemik iliği tutulumu ve anemi ile ortaya çıkar."
+      },
+      {
+       "key": "C",
+       "text": "Genç erişkinde tek taraflı pedikül sklerozu ve normal sedim",
+       "isCorrect": false,
+       "explanation": "Tek taraflı pedikül sklerozu osteoid osteomun nidus çevresindeki reaktif kemikleşmesine ait bir bulgudur. Multipl myelomda skleroz değil kemik iliğini harabeden destrüktif litik odaklar ve aşırı sedim vardır."
+      },
+      {
+       "key": "D",
+       "text": "Yenidoğanda intrakranial kalsifikasyon ve mikrosefali",
+       "isCorrect": false,
+       "explanation": "İntrakranial kalsifikasyon ve mikrosefali perinatal konjenital enfeksiyonların klasik beyin malformasyonu bulgusudur. Multipl myelom ileri yaştaki hematolojik habis kemik hastalığıdır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Multipl myelom plazma hücre tümörü olması nedeniyle yaygın tutulum yapar.",
+     "maskedTerm": "plazma hücre",
+     "hint": "İmmünoglobulin salgılayan antikor üretici kemik iliği elemanları"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Multipl Myelom ve Omurga Lenfoması",
+     "items": [
+      {
+       "text": "Multipl myelom 50 yaş üzerinde erişkin çağın en sık habis kemik tümörüdür.",
+       "isLie": false,
+       "explanation": "Ders notunda >50 yaş erişkin çağın en sık habis kemik tümörü olarak tanımlanmıştır."
+      },
+      {
+       "text": "Multipl myelomun birincil tedavisi acil radikal omurga rezeksiyonudur, kemoterapi verilmez.",
+       "isLie": true,
+       "explanation": "Tuzaktır; sistemik plazma hücre hastalığıdır ve birincil tedavi kemoterapidir."
+      },
+      {
+       "text": "Omurga lenfomasında vertebra korpusunda litik lezyonlar görülür ve teşhis biyopsiyle konur.",
+       "isLie": false,
+       "explanation": "Lenfomada kesin tanı doku biyopsisidir ve korpusta litik lezyon yapar."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Omurga lenfomasında birincil tedavi modalitesi nedir?",
+     "answer": "Radyoterapi Biyopsi ile kesin tanı Kemo+Radyoterapi sağkalımı artırır"
+    }
+   ]
+  },
+  {
+   "slideNumber": 15,
+   "title": "Metastatik Omurga Tümörleri (%90) ve Primer Kaynaklar",
+   "section": "2.5",
+   "bolum": "2.5",
+   "pdfSayfalari": [
+    19,
+    20
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 19,
+    "endPage": 20
+   },
+   "content": "Metastatik omurga tümörleri erişkin spinal onkolojisinin en büyük bölümünü oluşturur.\n\n- **Epidemiyolojik Oran:** Omurga tümörlerinin %90'ı metastazdır.\n- **İskelet Tutulumu:** Vücutta iskelet sistemi metastazları en sık omurgaya gerçekleşir.\n- **Primer Kanser Odakları:** Spinal metastazların %50'si akciğer, meme veya prostat kanserinden kaynaklanır.\n- **Klinik Yansıma:** İlerleyici sırt ağrısı, patolojik kompresyon kırıkları ve epidural kord basısı en önemli cerrahi acillerdir.\n\n> [!IMPORTANT]\n> Omurga tümörlerinin %90'ı metastazdır ve spinal metastazların yarısı akciğer, meme veya prostat kanseri kökenlidir.",
+   "synthesisNarrative": "Metastatik omurga tümörleri erişkin spinal onkolojisinin en büyük bölümünü oluşturur.\n\n- **Epidemiyolojik Oran:** Omurga tümörlerinin %90'ı metastazdır.\n- **İskelet Tutulumu:** Vücutta iskelet sistemi metastazları en sık omurgaya gerçekleşir.\n- **Primer Kanser Odakları:** Spinal metastazların %50'si akciğer, meme veya prostat kanserinden kaynaklanır.\n- **Klinik Yansıma:** İlerleyici sırt ağrısı, patolojik kompresyon kırıkları ve epidural kord basısı en önemli cerrahi acillerdir.\n\n> [!IMPORTANT]\n> Omurga tümörlerinin %90'ı metastazdır ve spinal metastazların yarısı akciğer, meme veya prostat kanseri kökenlidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Spinal metastazların %50'sinden sorumlu olan primer kanser üçlüsü hangisidir?",
+     "options": [
+      {
+       "text": "Akciğer, meme veya prostat kanseri",
+       "isCorrect": true,
+       "explanation": "Ders notunda spinal metastazların %50'sinin akciğer, meme veya prostat kanserinden kaynaklandığı vurgulanmıştır."
+      },
+      {
+       "text": "Kolon, mide veya pankreas kanseri",
+       "isCorrect": false,
+       "explanation": "Gastrointestinal kanserler omurga metastazlarının en sık nedenleri arasında yer almaz."
+      },
+      {
+       "text": "Melanom, tiroid veya laringeal kanser",
+       "isCorrect": false,
+       "explanation": "Bu tümörler omurgaya metastaz yapabilse de ilk üçlüyü oluşturmaz (%50 akciğer, meme, prostat)."
+      },
+      {
+       "text": "Osteosarkom, kondrosarkom veya Ewing sarkomu",
+       "isCorrect": false,
+       "explanation": "Bunlar primer kemik tümörleridir; metastazların primer kaynağı karsinomlardır."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Akciğer, meme ve prostat kanseri",
+       "isCorrect": true,
+       "explanation": "Omurga iskelet sistemi metastazlarının en sık yerleştiği anatomik bölgedir ve omurga kitlelerinin yüzde doksanını metastazlar oluşturur. Bu spinal metastazların yarısından fazlası zengin venöz Batson pleksusu drenajı nedeniyle akciğer, meme ve prostat karsinomlarından kaynaklanır."
+      },
+      {
+       "key": "B",
+       "text": "Tiroid, mide ve pankreas kanseri",
+       "isCorrect": false,
+       "explanation": "Gastrointestinal organ karsinomları daha çok karaciğer ve peritoneal yayılım yapma eğilimindedir. Omurgaya metastaz yapan primer odakların en büyük yarısını akciğer, meme ve prostat tümörleri oluşturur."
+      },
+      {
+       "key": "C",
+       "text": "Kolon, mesane ve over kanseri",
+       "isCorrect": false,
+       "explanation": "Kolon ve pelvik organ tümörleri kemik metastazı yapabilmekle birlikte ilk sırada yer almazlar. Omurga metastazlarında epidemiyolojik olarak akciğer, meme ve prostat kanserleri belirleyici liderliği paylaşır."
+      },
+      {
+       "key": "D",
+       "text": "Cilt melanomu, osteosarkom ve glioblastom",
+       "isCorrect": false,
+       "explanation": "Glioblastom santral sinir sistemi dışına hemen hiç metastaz yapmaz; osteosarkom ise primer kemik tümörüdür. Spinal metastazların en yaygın kaynakları glandüler organ karsinomları olan akciğer, meme ve prostattır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Omurga tümörlerinin %90'ı metastazdır.",
+     "maskedTerm": "%90'ı",
+     "hint": "Spinal neoplazilerde ikincil yayılımların ezici çoğunluk oranı"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Metastatik Omurga Tümörleri (%90) ve Primer Kaynaklar",
+     "items": [
+      {
+       "text": "İskelet sistemi metastazları en sık omurgaya olur.",
+       "isLie": false,
+       "explanation": "Ders notunda iskelet metastazlarının en sık omurgada olduğu açıkça yazılıdır."
+      },
+      {
+       "text": "Omurga tümörlerinin yalnızca %10'u metastazdır, kalanı primer kemik lezyonudur.",
+       "isLie": true,
+       "explanation": "Tuzaktır; tam tersine omurga tümörlerinin %90'ı metastaz, %10'u primerdir."
+      },
+      {
+       "text": "Spinal metastazların yarısı akciğer, meme veya prostat kanserinden kaynaklanır.",
+       "isLie": false,
+       "explanation": "En sık primer odaklar akciğer, meme ve prostattır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Omurga tümörlerinde metastazların oranı nedir ve en sık kaynaklar nelerdir?",
+     "answer": "%90 metastaz oranı Akciğer, meme, prostat (%50) En sık iskelet metastaz bölgesi"
+    }
+   ]
+  },
+  {
+   "slideNumber": 16,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Malign ve Metastatik Omurga Tümörleri",
+   "isCheckpoint": true,
+   "section": "2.5",
+   "bolum": "2.5",
+   "pdfSayfalari": [
+    13,
+    20
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 13,
+    "endPage": 20
+   },
+   "content": "Bu bölümde primer malign kemik tümörleri ve metastatik omurga lezyonlarını gözden geçirdik.\n\n- **Osteosarkom:** İleri yaşta korpus ve arka elemanlarda destrüktif lezyon; cerrahi + radyoterapi.\n- **Kondrosarkom:** 40-70 yaş arası, kıkırdak matriks, cerrahi eksizyon temel tedavidir.\n- **Ewing Sarkomu:** Çocukluk çağı küçük hücreli tümörü; subfebril ateş, lökositoz ve sedim artışıyla osteomiyeliti taklit eder; kemoradyoterapi uygulanır.\n- **Multipl Myelom:** >50 yaş erişkin çağın en sık habis kemik tümörü; litik güve yeniği ve anemi; kemoterapi.\n- **Omurga Lenfoması:** Korpus tutulumu, biyopsi ile tanı, radyoterapi.\n- **Metastazlar:** Omurga tümörlerinin %90'ı; en sık akciğer, meme ve prostat kökenlidir.\n\n> [!IMPORTANT]\n> Erişkin çağda en sık habis primer tümör multipl myelom iken, omurganın genelinde en sık tümör metastazdır.",
+   "synthesisNarrative": "Bu bölümde primer malign kemik tümörleri ve metastatik omurga lezyonlarını gözden geçirdik.\n\n- **Osteosarkom:** İleri yaşta korpus ve arka elemanlarda destrüktif lezyon; cerrahi + radyoterapi.\n- **Kondrosarkom:** 40-70 yaş arası, kıkırdak matriks, cerrahi eksizyon temel tedavidir.\n- **Ewing Sarkomu:** Çocukluk çağı küçük hücreli tümörü; subfebril ateş, lökositoz ve sedim artışıyla osteomiyeliti taklit eder; kemoradyoterapi uygulanır.\n- **Multipl Myelom:** >50 yaş erişkin çağın en sık habis kemik tümörü; litik güve yeniği ve anemi; kemoterapi.\n- **Omurga Lenfoması:** Korpus tutulumu, biyopsi ile tanı, radyoterapi.\n- **Metastazlar:** Omurga tümörlerinin %90'ı; en sık akciğer, meme ve prostat kökenlidir.\n\n> [!IMPORTANT]\n> Erişkin çağda en sık habis primer tümör multipl myelom iken, omurganın genelinde en sık tümör metastazdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdaki malign kemik tümörlerinden hangisi osteomiyeliti taklit eden sistemik inflamatuar bulgular verir?",
+     "options": [
+      {
+       "text": "Ewing sarkomu",
+       "isCorrect": true,
+       "explanation": "Ewing sarkomu subfebril ateş, lökositoz ve yüksek sedim ile osteomiyeliti taklit eder."
+      },
+      {
+       "text": "Multipl myelom",
+       "isCorrect": false,
+       "explanation": "Myelomda anemi ve litik lezyonlar tipiktir; osteomiyelit taklidi Ewing sarkomundadır."
+      },
+      {
+       "text": "Kondrosarkom",
+       "isCorrect": false,
+       "explanation": "Kondrosarkom yavaş veya agresif kıkırdak lezyonudur, enfeksiyon tablosu oluşturmaz."
+      },
+      {
+       "text": "Hemanjiom",
+       "isCorrect": false,
+       "explanation": "Hemanjiom benign vasküler lezyondur."
+      }
+     ],
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Ewing sarkomu",
+       "isCorrect": true,
+       "explanation": "Ewing sarkomu nöroektodermal küçük yuvarlak mavi hücreli çocukluk çağı kemik kanseridir. Nekroz ve sitokin üretimi nedeniyle subfebril ateş, lökositoz ve sedim artışına yol açarak bakteriyel osteomiyelit enfeksiyonunu taklit eder."
+      },
+      {
+       "key": "B",
+       "text": "Multipl myelom",
+       "isCorrect": false,
+       "explanation": "Multipl myelom ileri yaşta klonal plazma hücre artışı ve monoklonal gamopati ile seyreden hematolojik kanserdir. Osteomiyelit gibi akut enfeksiyöz sistemik bulgular oluşturmaz, litik odaklar ve anemi yapar."
+      },
+      {
+       "key": "C",
+       "text": "Kondrosarkom",
+       "isCorrect": false,
+       "explanation": "Kondrosarkom olgun yaştaki bireylerde yavaş büyüyen ağrılı kıkırdak kütlesi şeklinde kendini gösterir. Ateş ve lökositoz yapmaz, cerrahi rezeksiyon gerektiren kemoradyoterapiye dirençli bir tümördür."
+      },
+      {
+       "key": "D",
+       "text": "Vertebra hemanjiomu",
+       "isCorrect": false,
+       "explanation": "Vertebra hemanjiomu direkt grafide vertikal trabeküler çizgilenme veren selim asemptomatik bir vasküler malformasyondur. Habaset veya enfeksiyon benzeri inflamatuar sistemik bulgu oluşturmaz."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "[TEKRAR SAYFASI - CHECKPOINT 2] Malign ve Metastatik Omurga Tümörleri",
+     "items": [
+      {
+       "text": "Multipl myelomda birincil tedavi kemoterapidir.",
+       "isLie": false,
+       "explanation": "Plazma hücre hastalığında birincil yaklaşım kemoterapidir."
+      },
+      {
+       "text": "Omurgada metastazlar primer tümörlerden daha az sıklıkta görülür.",
+       "isLie": true,
+       "explanation": "Tuzaktır; omurga tümörlerinin %90'ı metastazdır."
+      },
+      {
+       "text": "Omurga lenfomasında kesin tanı doku biyopsisi ile konur.",
+       "isLie": false,
+       "explanation": "Vertebra lezyonlarında lenfoma teşhisi biyopsi gerektirir."
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "instruction": "Malign lezyonları birincil tedavi yaklaşımlarına göre eşleştirin.",
+     "leftCategory": "Kemoterapi / Kemoradyoterapi",
+     "rightCategory": "Cerrahi Eksizyon",
+     "cards": [
+      {
+       "text": "Ewing sarkomu",
+       "category": "left"
+      },
+      {
+       "text": "Kondrosarkom",
+       "category": "right"
+      },
+      {
+       "text": "Multipl myelom",
+       "category": "left"
+      },
+      {
+       "text": "İzole osteosarkom",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Erişkin çağın en sık görülen habis kemik tümörü hangisidir?",
+     "answer": "Multipl myelom >50 yaş Plazma hücre tümörü"
+    }
+   ]
+  },
+  {
+   "slideNumber": 17,
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Omurga Tümörleri",
+   "isGameFinale": true,
+   "section": "2.5",
+   "bolum": "2.5",
+   "pdfSayfalari": [
+    1,
+    20
+   ],
+   "sourcePdf": {
+    "pdfIndex": 0,
+    "startPage": 1,
+    "endPage": 20
+   },
+   "content": "Tebrikler! Omurga tümörleri dersini başarıyla tamamladınız.\n\n- **Epidemiyoloji:** Omurga tümörlerinin %90'ı metastaz, %10'u primer kemik tümörüdür.\n- **Benign Spektrum:** Osteoid osteom (gece ağrısı/aspirin), osteoblastom (defisit/skolyoz), osteokondrom (spinoz proçes), GCT (korpus), AKK (arka eleman), hemanjiom (vertikal çizgilenme).\n- **Malign Spektrum:** Multipl myelom (en sık habis primer kemik tümörü), Ewing sarkomu (osteomiyelit taklidi), kondrosarkom (cerrahi), lenfoma (radyoterapi).\n\n> [!IMPORTANT]\n> Ders sonu pekiştirme oyunlarında edindiğiniz bilgileri sınayın.",
+   "synthesisNarrative": "Tebrikler! Omurga tümörleri dersini başarıyla tamamladınız.\n\n- **Epidemiyoloji:** Omurga tümörlerinin %90'ı metastaz, %10'u primer kemik tümörüdür.\n- **Benign Spektrum:** Osteoid osteom (gece ağrısı/aspirin), osteoblastom (defisit/skolyoz), osteokondrom (spinoz proçes), GCT (korpus), AKK (arka eleman), hemanjiom (vertikal çizgilenme).\n- **Malign Spektrum:** Multipl myelom (en sık habis primer kemik tümörü), Ewing sarkomu (osteomiyelit taklidi), kondrosarkom (cerrahi), lenfoma (radyoterapi).\n\n> [!IMPORTANT]\n> Ders sonu pekiştirme oyunlarında edindiğiniz bilgileri sınayın.",
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "prompt": "Omurga tümörlerini genel görülme sıklığına göre en sık olandan en nadire doğru sıralayın.",
+     "steps": [
+      "1. Metastatik omurga tümörleri (%90)",
+      "2. Multipl myelom (en sık primer kemik neoplazisi)",
+      "3. Benign primer kemik tümörleri (hemanjiom, osteoid osteom)",
+      "4. Nadir primer malign sarkomlar (osteosarkom, kondrosarkom)"
+     ],
+     "explanation": "Omurgada en sık metastatik karsinomlar (%90) görülür; primer kemik tümörleri (%10) içinde erişkinde en sık multipl myelom, ardından benign lezyonlar ve en nadir olarak primer sarkomlar izlenir."
+    },
+    {
+     "type": "estimate_slider",
+     "items": [
+      {
+       "prompt": "Omurga tümörleri içinde metastatik karsinomların oranı yüzde kaçtır?",
+       "unit": "%",
+       "min": 50,
+       "max": 100,
+       "answer": 90,
+       "tolerance": 5,
+       "explanation": "Omurgadaki tüm neoplazilerin %90'ı metastatik kökenlidir; primer kemik tümörleri yalnızca %10'luk küçük bir dilimi oluşturur."
+      }
+     ]
+    },
+    {
+     "type": "perturbation",
+     "scenario": "Bir omurga hastasında osteoid osteom yerine agresif selim karakterdeki osteoblastom geliştiğinde klinik parametreler nasıl değişir?",
+     "question": "Aşağıdaki klinik ve radyolojik parametrelerin yönünü belirleyin:",
+     "parameters": [
+      {
+       "name": "Lezyon boyutu ve çevre dokuya bası etkisi",
+       "correct": "artar",
+       "explanation": "Osteoblastom osteoid osteoma göre belirgin derecede büyük boyutlara ulaşır ve çevre elemanlara kitle etkisi uygular."
+      },
+      {
+       "name": "Nörolojik defisit ve nüks görülme riski",
+       "correct": "artar",
+       "explanation": "Büyük kitle boyutu ve agresif selim biyolojik davranış nedeniyle osteoblastomda nörolojik defisit ve cerrahi sonrası nüks riski artar."
+      },
+      {
+       "name": "Salisilat (aspirin) tedavisine dramatik klinik yanıt alma ihtimali",
+       "correct": "azalır",
+       "explanation": "Aspirin ile dramatik ağrı rahatlaması osteoid osteoma özgüdür; osteoblastomda bu dramatik medikal yanıt belirgin derecede azalır veya izlenmez."
+      }
+     ]
+    },
+    {
+     "type": "fix_the_text",
+     "text": "Omurga neoplazilerinin yaklaşık yüzde doksanını primer selim kemik lezyonları oluştururken, sistemik metastazlar yalnızca yüzde onluk dilimde yer alır.",
+     "errors": [
+      {
+       "wrong": "primer selim kemik lezyonları",
+       "correct": "sistemik metastatik tümörler",
+       "options": [
+        "sistemik metastatik tümörler",
+        "sekonder enfeksiyöz granülomlar",
+        "primer vasküler anomaliler"
+       ],
+       "explanation": "Omurga tümörlerinin %90'ı sistemik organ metastazlarıdır; primer kemik neoplazileri ise vakaların yalnızca %10'unu teşkil eder."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "discipline": "Beyin ve Sinir Cerrahisi",
+ "deckId": "k2p-y25-k2-64-omurga-tumorleri",
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "matchedPastQuestionsCount": 0,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

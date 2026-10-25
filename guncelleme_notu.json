@@ -1,25 +1,26 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 340,
-  "baslik": "Kurul 2 Arşiv Dersleri 10-12: Baş Ağrısı, Psikiyatrik Semiyoloji ve Kafa Travmaları (2025-2026)",
+  "onem": 341,
+  "baslik": "Kurul 2 Arşiv Dersleri 64-66: Omurga Tümörleri, Malformasyonlar ve Miyelin Hastalıkları (2025-2026)",
   "maddeler": [
-    "Ders 10 (Nöroloji 4 - Baş Ağrısına Yaklaşım): 10 sayfa, 12,9 dk EMA GPU sesli anlatım, 11 slayt Öğren destesi, 17 canlı çizim, 27 çıkmış soru eşleşmesi ve gömülü .medspak",
-    "Ders 11 (Psikiyatri 1 - Psikiyatrik Semiyoloji): 44 sayfa, 22,8 dk EMA GPU sesli anlatım, 16 slayt Öğren destesi, 26 canlı çizim, 12 çıkmış soru eşleşmesi ve gömülü .medspak",
-    "Ders 12 (Beyin ve Sinir Cerrahisi 1 - Kafa ve Omurilik Yaralanmaları): 76 sayfa, 28,1 dk EMA GPU sesli anlatım, 16 slayt Öğren destesi, 35 canlı çizim, 13 çıkmış soru eşleşmesi ve gömülü .medspak",
-    "Geliştirilmiş PDF metin takibi çıpaları ve tam güncellenen Güncelleme Günlüğü altyapısı devrede"
+    "Ders 66 (Patoloji - Primer Miyelin ve Metabolik-Toksik Hastalıklar): 112 cümle, 15,2 dk EMA GPU sesli anlatım, 17 slayt Öğren destesi, 35 canlı çizim, %91 satır vurgusu ve gömülü .medspak (5,89 MB)",
+    "Ders 65 (Patoloji - Konjenital Malformasyonlar ve Perinatal Beyin Hasarı): 84 cümle, 13,7 dk EMA GPU sesli anlatım, 18 slayt Öğren destesi, 19 canlı çizim, %92 satır vurgusu ve gömülü .medspak (3,93 MB)",
+    "Ders 64 (Beyin ve Sinir Cerrahisi - Omurga Tümörleri): 51 cümle, 4,6 dk EMA GPU sesli anlatım, 17 slayt Öğren destesi, 20 canlı çizim, %94 satır vurgusu, %98 kelime kutusu ve gömülü .medspak (2,18 MB)",
+    "PDF metin takip motoru v7 devrede: konuşmacı sesine birebir senkron mavi satır ve kelime kutusu takibi (%94–98 kapsama, 0 boş sayfa işareti)"
   ],
   "eklenen": [
-    "Kurul 2 Nöroloji 4 'Baş Ağrısına Yaklaşım' (2025-2026 Arşivi)",
-    "Kurul 2 Psikiyatri 1 'Psikiyatrik Semiyoloji' (2025-2026 Arşivi)",
-    "Kurul 2 Beyin ve Sinir Cerrahisi 1 'Kafa ve Omurilik Yaralanmaları' (2025-2026 Arşivi)"
+    "Kurul 2 Patoloji 'Primer Miyelin ve Metabolik-Toksik Hastalıklar' (2025-2026 Arşivi)",
+    "Kurul 2 Patoloji 'Konjenital Malformasyonlar ve Perinatal Beyin Hasarı' (2025-2026 Arşivi)",
+    "Kurul 2 Beyin ve Sinir Cerrahisi 'Omurga Tümörleri' (2025-2026 Arşivi)"
   ],
   "degisen": [
     "meds/data/arsiv_25_26/sesli_anlatim/dersler.json",
-    "meds/data/arsiv_25_26/sesli_anlatim/kayit.json"
+    "meds/data/arsiv_25_26/sesli_anlatim/kayit.json",
+    "meds/guncelleme_notu.json"
   ],
   "duzeltilen": [
-    "Ders 11 slayt adımları ve konuşma adımları tam eşitlendi",
-    "Ders 12 görsel anlatım etiketleri ve çıkmış sınav sesli uyarı kalıpları standartlaştırıldı"
+    "PDF metin takip motorunda madde ve yüzde işaretleri temizliği ile harita eslestir geri dönüşü eklendi",
+    "Öğren destesi mini-soru şık açıklamaları, tuzak avı ve aktif hatırlama şemaları tam standartlaştırıldı"
   ],
   "silinen": []
 }

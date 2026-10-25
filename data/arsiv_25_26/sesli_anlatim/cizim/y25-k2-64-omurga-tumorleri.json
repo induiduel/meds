@@ -1,0 +1,640 @@
+{
+ "surum": 1,
+ "metinHash": "318a2e18f1a0e7aa1fc80deb559c22185e85fab0",
+ "p": {
+  "4": {
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.23,
+       0.45
+      ],
+      [
+       0.243,
+       0.433
+      ],
+      [
+       0.257,
+       0.447
+      ],
+      [
+       0.264,
+       0.483
+      ],
+      [
+       0.259,
+       0.52
+      ],
+      [
+       0.243,
+       0.53
+      ],
+      [
+       0.23,
+       0.508
+      ],
+      [
+       0.226,
+       0.475
+      ]
+     ],
+     "etiket": "arka kolondaki lezyon",
+     "s": 5,
+     "k": [
+      9,
+      53
+     ],
+     "etiket_konum": [
+      0.36,
+      0.12
+     ],
+     "etiket_genislik": 0.302,
+     "etiket_hedef": [
+      0.264,
+      0.433
+     ],
+     "etiket_boy": 0.0591,
+     "yakin": [
+      0.166,
+      0.06,
+      0.722,
+      0.59
+     ]
+    }
+   ]
+  },
+  "5": {
+   "2": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.532,
+       0.55
+      ],
+      [
+       0.556,
+       0.53
+      ],
+      [
+       0.579,
+       0.542
+      ],
+      [
+       0.585,
+       0.583
+      ],
+      [
+       0.579,
+       0.633
+      ],
+      [
+       0.556,
+       0.658
+      ],
+      [
+       0.535,
+       0.642
+      ],
+      [
+       0.526,
+       0.6
+      ]
+     ],
+     "etiket": "arka elemanda osteoblastom",
+     "s": 6,
+     "k": [
+      0,
+      45
+     ],
+     "etiket_konum": [
+      0.22,
+      0.88
+     ],
+     "etiket_genislik": 0.366,
+     "etiket_hedef": [
+      0.526,
+      0.658
+     ],
+     "etiket_boy": 0.0591
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.491,
+       0.375
+      ],
+      [
+       0.505,
+       0.35
+      ],
+      [
+       0.519,
+       0.358
+      ],
+      [
+       0.523,
+       0.387
+      ],
+      [
+       0.514,
+       0.413
+      ],
+      [
+       0.5,
+       0.413
+      ]
+     ],
+     "etiket": "büyük tümör kitlesi",
+     "s": 6,
+     "k": [
+      46,
+      85
+     ],
+     "etiket_konum": [
+      0.22,
+      0.02
+     ],
+     "etiket_genislik": 0.277,
+     "etiket_hedef": [
+      0.491,
+      0.35
+     ],
+     "etiket_boy": 0.0591
+    }
+   ]
+  },
+  "6": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.1406,
+       0.4867
+      ],
+      [
+       0.1874,
+       0.4833
+      ],
+      [
+       0.2174,
+       0.5033
+      ],
+      [
+       0.2099,
+       0.5833
+      ],
+      [
+       0.2024,
+       0.7333
+      ],
+      [
+       0.1837,
+       0.78
+      ],
+      [
+       0.1406,
+       0.7833
+      ],
+      [
+       0.105,
+       0.7583
+      ],
+      [
+       0.0872,
+       0.675
+      ],
+      [
+       0.0918,
+       0.575
+      ],
+      [
+       0.1143,
+       0.53
+      ]
+     ],
+     "etiket": "osteokondrom kitlesi",
+     "s": 7,
+     "k": [
+      0,
+      43
+     ],
+     "etiket_konum": [
+      0.24,
+      0.88
+     ],
+     "etiket_genislik": 0.29,
+     "etiket_hedef": [
+      0.2174,
+      0.7833
+     ],
+     "etiket_boy": 0.0591,
+     "yakin": [
+      0.0272,
+      0.4233,
+      0.59,
+      0.9991
+     ]
+    }
+   ]
+  },
+  "8": {
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.7123,
+       0.3333
+      ],
+      [
+       0.7498,
+       0.2917
+      ],
+      [
+       0.7966,
+       0.2667
+      ],
+      [
+       0.8482,
+       0.28
+      ],
+      [
+       0.8838,
+       0.33
+      ],
+      [
+       0.8857,
+       0.4167
+      ],
+      [
+       0.8669,
+       0.5
+      ],
+      [
+       0.8247,
+       0.55
+      ],
+      [
+       0.7779,
+       0.55
+      ],
+      [
+       0.7498,
+       0.5
+      ],
+      [
+       0.7404,
+       0.4333
+      ],
+      [
+       0.7263,
+       0.3833
+      ]
+     ],
+     "etiket": "ekspansil kistik lezyon",
+     "s": 9,
+     "k": [
+      27,
+      49
+     ],
+     "etiket_konum": [
+      0.24,
+      0.16
+     ],
+     "etiket_genislik": 0.328,
+     "etiket_hedef": [
+      0.7123,
+      0.2667
+     ],
+     "etiket_boy": 0.0591,
+     "yakin": [
+      0.18,
+      0.1,
+      0.9457,
+      0.61
+     ]
+    }
+   ]
+  },
+  "9": {
+   "1": [
+    {
+     "tur": "akis",
+     "a": [
+      0.574,
+      0.522
+     ],
+     "b": [
+      0.63,
+      0.545
+     ],
+     "iliski": "aktive",
+     "etiket": "torasik vertebra tutulumu",
+     "s": 10,
+     "k": [
+      69,
+      92
+     ],
+     "odak": [
+      0.554,
+      0.502,
+      0.65,
+      0.565
+     ],
+     "etiket_konum": [
+      0.18,
+      0.8
+     ],
+     "etiket_genislik": 0.353,
+     "etiket_hedef": [
+      0.554,
+      0.565
+     ],
+     "etiket_boy": 0.0591,
+     "yakin": [
+      0.12,
+      0.442,
+      0.71,
+      0.9191
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.8828,
+       0.53
+      ],
+      [
+       0.8997,
+       0.525
+      ],
+      [
+       0.9166,
+       0.5333
+      ],
+      [
+       0.9185,
+       0.55
+      ],
+      [
+       0.9138,
+       0.5667
+      ],
+      [
+       0.8978,
+       0.57
+      ],
+      [
+       0.8847,
+       0.5633
+      ],
+      [
+       0.881,
+       0.5467
+      ]
+     ],
+     "s": 10,
+     "k": [
+      39,
+      55
+     ],
+     "yakin": [
+      0.821,
+      0.465,
+      0.9785,
+      0.63
+     ]
+    }
+   ]
+  },
+  "10": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "kemik lezyonları",
+      "diabetes insipidus",
+      "ekzoftalmus"
+     ],
+     "baslik": "Hand-Schüller-Christian triadı",
+     "s": 11,
+     "k": [
+      0,
+      92
+     ],
+     "tip": "liste",
+     "konum": [
+      0.13,
+      0.49
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "16": {
+   "2": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.714,
+       0.24
+      ],
+      [
+       0.761,
+       0.232
+      ],
+      [
+       0.78,
+       0.39
+      ],
+      [
+       0.784,
+       0.557
+      ],
+      [
+       0.775,
+       0.723
+      ],
+      [
+       0.761,
+       0.807
+      ],
+      [
+       0.709,
+       0.807
+      ],
+      [
+       0.719,
+       0.64
+      ],
+      [
+       0.719,
+       0.473
+      ],
+      [
+       0.705,
+       0.34
+      ]
+     ],
+     "etiket": "litik güve yeniği korpuslar",
+     "s": 17,
+     "k": [
+      54,
+      80
+     ],
+     "etiket_konum": [
+      0.3146,
+      0.232
+     ],
+     "etiket_genislik": 0.378
+    }
+   ]
+  },
+  "17": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.747,
+       0.217
+      ],
+      [
+       0.77,
+       0.183
+      ],
+      [
+       0.803,
+       0.192
+      ],
+      [
+       0.822,
+       0.25
+      ],
+      [
+       0.817,
+       0.317
+      ],
+      [
+       0.794,
+       0.342
+      ],
+      [
+       0.761,
+       0.325
+      ],
+      [
+       0.742,
+       0.275
+      ]
+     ],
+     "etiket": "korpusta litik lezyon",
+     "s": 18,
+     "k": [
+      14,
+      58
+     ],
+     "etiket_konum": [
+      0.4276,
+      0.183
+     ],
+     "etiket_genislik": 0.302,
+     "yakin": [
+      0.3676,
+      0.123,
+      0.882,
+      0.402
+     ]
+    }
+   ]
+  },
+  "18": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "diğer organ kanserleri",
+      "omurga metastazı (omurga tümörlerinin %90'ı)"
+     ],
+     "s": 19,
+     "k": [
+      34,
+      73
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.46,
+      0.53
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.001,
+     "kutu_h": 0.431,
+     "yon": "dikey",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "19": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "akciğer kanseri",
+      "meme kanseri",
+      "prostat kanseri"
+     ],
+     "sonuc": "spinal metastazların %50'si",
+     "s": 20,
+     "k": [
+      34,
+      85
+     ],
+     "tip": "grup",
+     "konum": [
+      0.44,
+      0.41
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.351,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  }
+ },
+ "rapor": {
+  "aday": 20,
+  "gecti": 12,
+  "ret": {
+   "resim sayfasında panel (H51)": 3,
+   "noktaların %33'i çizgi üstünde (en az %70)": 1,
+   "noktaların %53'i çizgi üstünde (en az %70)": 1,
+   "noktaların %60'i çizgi üstünde (en az %70)": 1,
+   "a ile b çok yakın": 1,
+   "noktaların %67'i çizgi üstünde (en az %70)": 1
+  }
+ }
+}

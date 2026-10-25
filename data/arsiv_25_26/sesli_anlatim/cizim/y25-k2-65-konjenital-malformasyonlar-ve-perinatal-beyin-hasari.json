@@ -1,0 +1,741 @@
+{
+ "surum": 1,
+ "metinHash": "81dee41cda7a44662d13f35f4aa10f8760b10ac0",
+ "p": {
+  "0": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "İnsidansı yüzde bir ila iki civarında",
+      "Zekâ geriliği ve serebral palsi",
+      "Nöral tüp kusurlarına yol açabilir",
+      "Prenatal ve perinatal zararlı faktörler"
+     ],
+     "baslik": "Santral Sinir Sistemi Malformasyonları",
+     "s": 2,
+     "k": [
+      0,
+      160
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.57
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0747,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "1": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "Diferansiasyon ve maturasyon gen mutasyonları",
+      "Hücreler arası haberleşme gen mutasyonları",
+      "Kimyasallar ve enfeksiyonların teratojenik etkileri"
+     ],
+     "sonuc": "Santral sinir sistemi malformasyonu",
+     "s": 3,
+     "k": [
+      0,
+      149
+     ],
+     "tip": "grup",
+     "konum": [
+      0.03,
+      0.71
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.511,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2414,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "2": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Genetik inceleme",
+       "Sinaptik bağlantı genleri",
+       "Metil se pe ge bağlayan protein iki"
+      ],
+      [
+       "Klinik gelişim",
+       "Sinaptik gelişim kontrolü",
+       "Bir ila iki yaşında nörolojik bozukluk"
+      ]
+     ],
+     "kutuplar": [
+      "Otizm Formları",
+      "Rett Sendromu"
+     ],
+     "s": 4,
+     "k": [
+      0,
+      252
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.76
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.444,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2236,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "3": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Nöral tüp defektleri",
+      "Ön beyin malformasyonları",
+      "Arka fossa anomalileri",
+      "Spinal kord anormallikleri"
+     ],
+     "baslik": "Santral Sinir Sistemi Malformasyonları",
+     "s": 5,
+     "k": [
+      0,
+      213
+     ],
+     "tip": "liste",
+     "konum": [
+      0.44,
+      0.2
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "4": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Ventriküler sistem ve beyin için nöral tüp oluşumu",
+      "Nöral tüpün kapanmasının yetersizliği veya olmaması",
+      "Sinir dokusu meninksler ve kemikte malformasyonlar"
+     ],
+     "s": 6,
+     "k": [
+      0,
+      201
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.61
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.466,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.0962,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "5": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "En sık görülen santral sinir sistemi malformasyonları",
+      "Sonraki gebelikte tekrarlama riski yüzde dört ila beş",
+      "Prenatal folat kullanımı riski yüzde yetmiş azaltır",
+      "Alfa fetoprotein taramaları ve görüntüleme yöntemleri"
+     ],
+     "baslik": "Nöral Tüp Defektleri Özellikleri",
+     "s": 7,
+     "k": [
+      0,
+      186
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.89
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3947,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "6": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Anatomik kusur",
+       "Belirti oluşturmayan kemik kusuru",
+       "Vertebral defektten dışarı çıkma"
+      ],
+      [
+       "Klinik sorunlar",
+       "Belirti oluşturmayan hafif kusur",
+       "Motor duyusal ve mesane kusurları"
+      ]
+     ],
+     "kutuplar": [
+      "Spina Bifida Okülta",
+      "Myelomeningosel"
+     ],
+     "s": 8,
+     "k": [
+      0,
+      270
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.85
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.444,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3136,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "8": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Gelişim kusuru",
+       "Nöral tüpün anterior ucu",
+       "Kafatasındaki defektten divertikül"
+      ],
+      [
+       "Beyin dokusu",
+       "Kafatası ve beyin dokusu yokluğu",
+       "Oksipital bölgede veya sinüslerde"
+      ]
+     ],
+     "kutuplar": [
+      "Anensefali",
+      "Ensefalosel"
+     ],
+     "s": 10,
+     "k": [
+      0,
+      163
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.73
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.444,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1936,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "9": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "Kromozom anormallikleri",
+      "Fetal alkol sendromu",
+      "İntrauterin insan immün yetmezlik virüsü tip bir"
+     ],
+     "sonuc": "Kortikal nöron azalması ve mikroensefali",
+     "s": 11,
+     "k": [
+      0,
+      275
+     ],
+     "tip": "grup",
+     "konum": [
+      0.03,
+      0.93
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.405,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3546,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "10": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Progenitör hücrelerin subependimal zonda prolifere olması",
+      "Nöron göçü ve nöron farklılaşmasının kesintiye uğraması",
+      "Girus oluşumu ve altı tabakalı yapılanma anomalisi"
+     ],
+     "s": 12,
+     "k": [
+      0,
+      274
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.86
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.466,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3462,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "12": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Girusların total yokluğu lissensefali yani agria",
+      "Girusların aralıklı yokluğu pakigria ve düz yüzeyli beyin",
+      "Korteks anormal kalınlaşmıştır ve dört tabaka içerir",
+      "Nöronal migrasyonu kontrol eden genlerle ilişkili defekt"
+     ],
+     "baslik": "Lissensefali ve Pakigria",
+     "s": 14,
+     "k": [
+      0,
+      141
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.68
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1847,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "14": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Beyinde fokal veya yaygın artmış sayıda küçük girus oluşumu",
+      "Kaldırım taşı benzeri düzensiz yüzeyler ile polimikrogria"
+     ],
+     "s": 16,
+     "k": [
+      0,
+      134
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.61,
+      0.4
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "dikey",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "15": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Beyin lezyonu",
+       "Olfaktör bulbus yokluğu arhinensefali",
+       "Hemisferlere veya loblara bölünememiş"
+      ],
+      [
+       "Eşlik eden bulgu",
+       "Orta hat yapılarının kesintisi",
+       "Siklopi gibi orta hat yüz kusurları"
+      ]
+     ],
+     "kutuplar": [
+      "Hafif Holoprosensefali",
+      "Şiddetli Holoprosensefali"
+     ],
+     "s": 17,
+     "k": [
+      0,
+      128
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.82
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.444,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2836,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "17": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Arka fossa",
+       "Vermis foramen magnuma uzanır",
+       "Aşağı yerleşimli serebellar tonsiller"
+      ],
+      [
+       "Klinik tablo",
+       "Hidrosefali ve lomber myelomeningosel",
+       "Yetişkin dönemde baş ağrısı ve bası"
+      ]
+     ],
+     "kutuplar": [
+      "Arnold Chiari Tip İki",
+      "Chiari Tip Bir"
+     ],
+     "s": 19,
+     "k": [
+      0,
+      246
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.71
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.444,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1736,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "18": {
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Vermis ve fossa",
+       "Vermis yokluğu ve geniş arka fossa",
+       "Vermis yokluğu ve beyin sapı anomalisi"
+      ],
+      [
+       "Temel özellik",
+       "Büyük bir orta hat kisti",
+       "Primer silia ve solunum bozukluğu"
+      ]
+     ],
+     "kutuplar": [
+      "Dandy Walker Malformasyonu",
+      "Joubert Sendromu"
+     ],
+     "s": 21,
+     "k": [
+      0,
+      135
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.65
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.444,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1136,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "20": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Kord lezyonu",
+       "Ependimle döşeli santral kanal genişler",
+       "Kord içinde sıvı dolu yarık kavite"
+      ],
+      [
+       "Doku özelliği",
+       "Yapısal spinal kord değişikliği",
+       "Reaktif gliozis ve Rosenthal fibrilleri"
+      ]
+     ],
+     "kutuplar": [
+      "Hidromyeli",
+      "Siringomyeli"
+     ],
+     "s": 23,
+     "k": [
+      0,
+      183
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.81
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.444,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2736,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "21": {
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Prenatal ve perinatal dönemdeki beyin hasarına bağlıdır",
+      "Spastisite distoni ataksi veya atetoz ve pareziler",
+      "İlerleyici olmayan nörolojik motor kusurlar terimidir",
+      "Bulgular doğumda hemen belli olmayabilir"
+     ],
+     "baslik": "Serebral Palsi Özellikleri",
+     "s": 25,
+     "k": [
+      0,
+      147
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.82
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3247,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "22": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Prematürelerde germinal matriks içine kanama",
+      "Kanamanın ventrikül ve subaraknoid boşluğa yayılması",
+      "Beyin omurilik sıvısı akımını tıkayarak hidrosefali"
+     ],
+     "s": 26,
+     "k": [
+      0,
+      196
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.91
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.466,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3962,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "24": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Tutulan doku",
+       "Periventriküler beyaz madde infarktüsü",
+       "Hem gri hem beyaz madde hasarı"
+      ],
+      [
+       "Morfoloji",
+       "Tebeşirsi sarı nekroz plakları",
+       "Hemisferler boyunca geniş kistler"
+      ]
+     ],
+     "kutuplar": [
+      "Periventriküler Lökomalazi",
+      "Multikistik Ensefalopati"
+     ],
+     "s": 28,
+     "k": [
+      0,
+      200
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.66
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.444,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1236,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  }
+ },
+ "rapor": {
+  "aday": 19,
+  "gecti": 19,
+  "ret": {}
+ }
+}
