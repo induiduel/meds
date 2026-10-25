@@ -241,14 +241,13 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
     lastTarget.current = null;
     anchor.current = null;
     const base = `${getCustomApiUrl() || ''}/vendor/pdfjs/`;
-    // Küçük dosya (≤15 MB, boyut akış adresindeki ?v= değerinde): ilk sayfa aralık isteğiyle hemen açılır, kalanı arka
-    // planda iner — sonraki sayfalar ağ gidiş-dönüşü beklemeden çizilir. Büyük dosyada yalnız çizilen sayfaların baytları.
-    let boyut = 0;
-    try { boyut = Number(new URL(src, location.href).searchParams.get('v')) || 0; } catch { /* blob: */ }
+    // Range chunk boyutu: 256 KB. İlk sayfa ve xref tablosu anında gelir.
+    // disableAutoFetch: true — PDF.js arka planda tüm 10-50 MB'lık dosyayı indirmeye çalışıp
+    // ağ hattını ve ilk sayfa çizimini kilitlemesin; yalnızca görünen/istenen sayfaların chunk'larını çeksin.
     const task = pdfjs.getDocument({
       url: src,
-      rangeChunkSize: 512 * 1024,
-      disableAutoFetch: !(boyut > 0 && boyut <= 15 * 1024 * 1024),
+      rangeChunkSize: 256 * 1024,
+      disableAutoFetch: true,
       disableStream: true,
       isEvalSupported: false,
       standardFontDataUrl: `${base}standard_fonts/`,

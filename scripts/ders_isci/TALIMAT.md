@@ -75,6 +75,25 @@ yönetici onayından sonra yayınlanır.
 - Kazanımlar: varsa `baglam.kazanimlar`'ı aynen kullan; yoksa dersten 4–8 ölçülebilir kazanım yaz.
 - `bilgi_paketi`: dersteki tüm önemli bilgiler, 30–120 madde, her biri kanıtlı.
 
+### 1d. `atomik_bilgi_envanteri.json` — Birleştirilmiş Derin Analiz & Atomik Bilgi Ayrıştırması (Single Source of Truth)
+Bu çıktı hem Sesli Ders (Audio Lesson) hem de ardından çalışacak Quiz Motorunun ortak tek doğruluk kaynağıdır (işlem tekrarı ve mükerrer analiz kesinlikle yasaktır):
+1. **Kazanım ve İçerik Eşleştirmesi:** Her başlık, alt başlık ve madde taranarak dersin öğrenim kazanımları (`kazanimlar`) ile eşleştirilir.
+2. **Çıkmış Soru Tersine Mühendisliği:** `cikmis_baglantilari.json` üzerinden geçmiş sınav sorularının slaytların tam hangi bölümlerinden geldiği, sorgulama biçimi (eşleştirme, istisna, mekanizma, yan etki vb.) ve çekirdek bilgiler yapılandırılır.
+3. **Atomik Bilgi Ayrıştırması (Knowledge Atoms):** Slaytlarda geçen tüm ilaç (`drug`), reseptör (`receptor`), enzim (`enzyme`), protein (`protein`), gen (`gene`), hastalık (`disease`), semptom (`symptom`), ilaç sınıfı (`drug_class`), farmakokinetik/ADME (`pharmacokinetics`), farmakodinamik mekanizma (`pharmacodynamics`), yan etki/toksisite (`side_effect`) ve klinik not/vurgu (`clinical_note`) tekil atomik bilgi birimleri olarak ayrıştırılır.
+4. **Kırmızı Çizgi (Sıfır Halüsinasyon):** Kaynaktaki hiçbir bilgi dışarıda bırakılamaz ve **kesinlikle slaytın dışına çıkılamaz (uydurma bilgi YASAKTIR)**. Her atom kanıt alıntısıyla eşleşir.
+```json
+{"course_id": "pharmacology", "board_id": "2026_2027_kurul_2", "topic_id": "<baglam.ders_id>",
+ "audio_lesson_id": "<baglam.ders_id>-sesli", "generated_at": "YYYY-AA-GG",
+ "total_atoms": 50,
+ "atoms": [{"knowledge_atom_id": "ka_<ders_id>_001", "course_id": "pharmacology", "board_id": "2026_2027_kurul_2",
+            "schedule_ref": "kurul_2_<ders_id>", "topic_id": "<ders_id>", "audio_lesson_id": "<ders_id>-sesli",
+            "learning_objective_id": "<ders_id>-lo-01", "category": "drug|receptor|enzyme|side_effect|...",
+            "title": "...", "statement": "tekil net bilgi cümlesi", "page_number": 4,
+            "evidence": {"sayfa": 4, "alinti": "..."},
+            "past_exam_relevance": {"has_appeared": true, "question_ids": ["..."], "frequency": 1}}]}
+```
+*(Not: `python3 /app/scripts/quiz_motoru/envanter_genislet.py .` komutu `ders_paketi.json` ve çıkmış bağlarından bu dosyayı otomatik de oluşturabilir.)*
+
 ### 1b. `sayfa_haritasi.json` — başlık yapısı + teyitli sayfa kaydı (ZORUNLU; deck.json'dan ÖNCE yaz)
 Dersin omurgasıdır: ders başlıklara bölünür, PDF'in **her sayfası** kayda geçer, her sayfanın hangi başlıkta, hangi
 adımlarda ve hangi özet (bilgi_paketi) maddelerinde anlatıldığı yazılır. Öğren'deki "PDF'te bu sayfa" eşlemesi ve ders

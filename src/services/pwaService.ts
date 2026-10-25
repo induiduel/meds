@@ -42,7 +42,7 @@ export type PwaListener = (state: PwaState) => void;
  * kalmıştı (yeni SW hiç inmiyordu). public/sw.js değişince (CACHE_VERSION ile birlikte) bunu da artır.
  * Tüm kayıtlar bu adresi kullanır; sorgusuz /sw.js kaydı CDN'deki eski sürüme dönebilir.
  */
-export const SW_URL = '/sw.js?v=12';
+export const SW_URL = '/sw.js?v=13';
 
 export const PWA_WELCOME_STORAGE_KEY = 'medsoru_pwa_welcome_dismissed_v1';
 export const PWA_GUIDE_OPEN_EVENT = 'medsor:open-pwa-install-guide';

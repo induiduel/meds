@@ -1,5 +1,5 @@
 // MeDSor Service Worker - PWA v8: Yüksek Hızlı Açılış, Optimize Edilmiş Bellek & Modül Parçalama
-const CACHE_VERSION = 'medsoru-pwa-v15';
+const CACHE_VERSION = 'medsoru-pwa-v16';
 const STATIC_CACHE = `medsoru-static-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `medsoru-runtime-${CACHE_VERSION}`;
 const DATA_CACHE = `medsoru-data-${CACHE_VERSION}`;
@@ -245,6 +245,11 @@ self.addEventListener('fetch', (event) => {
       event.respondWith(fetch(req).catch(() => sessizYanit(req)));
       return;
     }
+    // Cihazda olmayan PDF akışı (Range/206): Service Worker üzerinden yakalanmaz,
+    // tarayıcının yerel ağ yığınına bırakılır (SW fetch Range/206 akışlarını kilitler/tamponlar).
+    if (url.pathname.startsWith('/api/lecture-pdf/')) {
+      return;
+    }
   }
 
   // Sadece GET isteklerini önbellekle
@@ -472,6 +477,7 @@ self.addEventListener('fetch', (event) => {
       url.pathname === '/api/surum' || // sürüm denetimi her zaman ağdan (güncelleme diyaloğu)
       url.pathname.startsWith('/api/ai-test/') || // test erişimi çerezi: önbellekten asla
       url.pathname.startsWith('/api/canli-ders/ses/') || // ses akışı (Range/206): tarayıcı doğrudan alır, önbelleğe yazılmaz
+      url.pathname.startsWith('/api/lecture-pdf/') || // PDF akışı (Range/206): tarayıcı doğrudan alır, SW tamponlamasından kaçın
       url.pathname.startsWith('/api/patoloji-asistan/ses/') || // sınav asistanı EMA klipleri (Range/206)
       url.pathname.startsWith('/api/patoloji-cozucu/ses/') || // soru çözücü EMA klipleri (Range/206)
       url.pathname.startsWith('/api/cozucu-ses/') || // soru çözücü klipleri, branş geneli (Range/206)

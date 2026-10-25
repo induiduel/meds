@@ -1,21 +1,23 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 362,
-  "baslik": "Beyin Tümörleri Radyoloji Atlası Düzeltildi",
+  "onem": 363,
+  "baslik": "Eski Arşiv Sesli Derslerinde PDF Yükleme ve Hızlı Açılış Optimizasyonu",
   "maddeler": [
-    "Geçen yılın Beyin Tümörleri sesli dersinde radyoloji atlası anlatımı slayttaki görüntülerle uyuşmuyordu (glioblastom ve arka çukur kitleleri hipofiz adenomu diye anlatılıyordu); her görüntü gerçekte gösterdiğine göre yeniden anlatıldı.",
-    "Görüntüde karşılığı olmayan 11 cümle çıkarıldı; ders yeniden seslendirildi.",
-    "Atlas görüntülerinde anlatılan kitle (glioblastom, makroadenom, menenjiom, pontoserebellar köşe kitlesi, metastazlar) anlatılırken görüntünün üstünde çiziliyor.",
-    "Beyin Tümörleri dersinin güncelleme günlüğü bu düzeltmeyle güncellendi."
+    "Eski arşiv (2025-2026) sesli derslerinde slayt PDF'lerinin çok geç yüklenmesi veya zaman aşımına uğraması sorunu kökten çözüldü.",
+    "PDF.js motorunda 10-50 MB'lık dosyaların ilk sayfa açılışını geciktiren tam arka plan indirmesi (autoFetch) kaldırılarak 256 KB'lık optimize byte-range akışına geçildi.",
+    "Service Worker'ın PDF Range (206) akışlarını yutup önbellek iş parçacığını kilitlemesi engellendi; PDF range istekleri doğrudan tarayıcının yerel yüksek hızlı ağına bağlandı.",
+    "Tüm arşiv PDF dosyaları web için linearize edilerek (Fast Web View) ilk sayfanın ilk 256 KB'lık veriyle anında ekrana gelmesi sağlandı."
   ],
   "eklenen": [],
   "degisen": [
-    "meds/data/arsiv_25_26/sesli_anlatim/*/y25-k2-14-beyin-tumorleri.*",
-    "meds_database_25_26/medspak/kurul2/y25-k2-14-beyin-tumorleri.medspak"
+    "meds/src/components/learn/pdf/PdfDocView.tsx",
+    "meds/public/sw.js",
+    "meds/src/services/pwaService.ts",
+    "meds/server.ts"
   ],
   "duzeltilen": [
-    "Aynı slaytta birden fazla çizimin aynı anda ekranda belirmesi ve iç içe geçmesi hatası giderildi",
-    "Cümle değişimlerinde karakter sayacının sıfırlanmasıyla çizim animasyonlarının tekrar tekrar baştan oynaması döngüsü durduruldu"
+    "Arşiv sesli derslerinde PDF'in dakikalarca yüklenmemesi veya context canceled zaman aşımına düşmesi sorunu giderildi",
+    "Service Worker üzerinden geçen PDF Range/206 isteklerinin tarayıcı tamponuna takılması ve donması önlendi"
   ],
   "silinen": [
     "CanliDersDers.tsx içerisindeki zamansız sayfaCizimleri toplayıcısı"

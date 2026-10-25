@@ -444,6 +444,27 @@
       "not": "Kurul 2+ Son Prova: sınava 9 gün kala açılır. plan_kurul.py (kayıt defteri + bilgi deposu, PDF okunmaz) → Claude yazar (TALIMAT + YENI_SORU) → kapı dogrula.py → bağımsız denetçi (DENETIM + YENI_DENETIM, H19 çıkmış anahtarı) → PART 0 HATA → derle → özet PDF → soru_dagit → EMA (yeni_ses) → Oracle ders-ekle (yalnizEma). Tüm partlar geçmeden sorular/yayın yok; sınav dağılımı duyurusu yoksa tahmin + bildirim."
     },
     {
+      "id": "quiz_havuzu",
+      "kapsam": "ders",
+      "durum": "hazir",
+      "gerekir": [
+        "sesli_ders_metni",
+        "yayin"
+      ],
+      "tetik": [
+        "gece",
+        "elle",
+        "drive_yeni_pdf"
+      ],
+      "komut": "python3 meds/scripts/quiz_motoru/pipeline_baglanti.py meds_downloads/taslak_{ders_id} --ders {ders_id}",
+      "kapi": "meds/scripts/quiz_motoru/quiz_dogrula.py meds_downloads/taslak_{ders_id}/quiz_havuzu.json",
+      "cikti": [
+        "atomik_bilgi_envanteri.json",
+        "quiz_havuzu.json"
+      ],
+      "not": "Faz 1-4 sıralı Quiz hattı: Farmakoloji için aktif (Scope Lock), course-agnostic altyapı. Sesli ders (konusma_v2.json) tamamlanmadan tetiklenmez (Priority Lock). Atomik Bilgi Envanteri ortak Single Source of Truth; N atom -> en az 2N soru (2x Çapraz Sorgulama, batch max 25 atom / 50 soru). Kapı: quiz_dogrula.py 0 HATA."
+    },
+    {
       "id": "icerik_dagit",
       "kapsam": "genel",
       "durum": "hazir",

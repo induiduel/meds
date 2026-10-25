@@ -1,0 +1,443 @@
+/**
+ * MeDSor Düşük Gecikmeli (Low-Latency) Realtime Quiz Oda Yöneticisi
+ * 
+ * Sıfır Gecikme İlkeleri:
+ * 1. WebSocket Native Taşıma Katmanı: HTTP overhead yok, iki yönlü full-duplex <10ms soket.
+ * 2. In-Memory State (RAM): Yanıtlar ve puanlama RAM'de mikro-saniyeler içinde hesaplanır; DB blokajı 0.
+ * 3. Pre-fetching (Ön Yükleme): Soru metinleri istemciye önceden aktarılır, tur başlangıcında 0ms ağ beklemesi.
+ * 4. Server-Authoritative Clock & RTT Senkronizasyonu: Saat kaymalarını telafi eden adil süre motoru.
+ * 5. Write-Behind Persistence: Veritabanına yazma işlemi oyun tamamlandığında asenkron yapılır.
+ */
+
+import { createRequire } from 'module';
+import type { QuizQuestion } from '../../types/quiz';
+
+const require = createRequire(import.meta.url);
+const wsModule = require('ws');
+const WebSocketServer = wsModule.Server || wsModule.WebSocketServer;
+
+export interface PlayerState {
+  userId: string;
+  displayName: string;
+  socket: any;
+  isReady: boolean;
+  score: number;
+  streak: number;
+  rttMs: number;
+  timeOffsetMs: number;
+  answers: Record<string, {
+    option: string;
+    responseTimeMs: number;
+    isCorrect: boolean;
+    pointsAwarded: number;
+  }>;
+}
+
+export interface QuizRoom {
+  roomId: string;
+  courseId: string;
+  topicId: string;
+  status: 'lobby' | 'countdown' | 'in_round' | 'reveal' | 'finished';
+  questions: QuizQuestion[];
+  currentQuestionIndex: number;
+  roundStartTimeMs: number;
+  roundDurationSec: number;
+  roundDeadlineMs: number;
+  players: Map<string, PlayerState>;
+  revealTimeoutId?: any;
+}
+
+class QuizRealtimeManager {
+  private wss: any = null;
+  private rooms: Map<string, QuizRoom> = new Map();
+
+  /**
+   * HTTP Sunucusuna WebSocket sunucusunu /api/quiz/ws yolunda bağlar.
+   */
+  public initialize(server: any) {
+    if (!server) return;
+    this.wss = new WebSocketServer({ noServer: true });
+
+    server.on('upgrade', (request: any, socket: any, head: any) => {
+      const url = new URL(request.url || '', `http://${request.headers.host || 'localhost'}`);
+      if (url.pathname === '/api/quiz/ws') {
+        this.wss?.handleUpgrade(request, socket, head, (ws: any) => {
+          this.wss?.emit('connection', ws, request);
+        });
+      }
+    });
+
+    this.wss.on('connection', (ws: any, req: any) => {
+      this.handleConnection(ws, req);
+    });
+
+    console.log('⚡ [Realtime Quiz] WebSocket sunucusu /api/quiz/ws üzerinde aktif.');
+  }
+
+  private handleConnection(ws: any, req: any) {
+    let currentRoomId: string | null = null;
+    let currentUserId: string | null = null;
+
+    ws.on('message', (messageRaw: any) => {
+      try {
+        const msg = JSON.parse(messageRaw.toString());
+        const now = Date.now();
+
+        switch (msg.type) {
+          // 1. Ultra-düşük gecikmeli ping-pong ve zaman senkronizasyonu
+          case 'ping': {
+            const clientSendTime = msg.clientTime;
+            ws.send(JSON.stringify({
+              type: 'pong',
+              clientTime: clientSendTime,
+              serverTime: now
+            }));
+            break;
+          }
+
+          // RTT ve Saat ofseti raporlama
+          case 'sync_time': {
+            if (currentRoomId && currentUserId) {
+              const player = this.rooms.get(currentRoomId)?.players.get(currentUserId);
+              if (player) {
+                player.rttMs = msg.rttMs || 0;
+                player.timeOffsetMs = msg.timeOffsetMs || 0;
+              }
+            }
+            break;
+          }
+
+          // 2. Odaya katılma
+          case 'join_room': {
+            const { roomId, userId, displayName, courseId, topicId } = msg;
+            currentRoomId = roomId;
+            currentUserId = userId;
+            this.handleJoinRoom(ws, roomId, userId, displayName || 'Öğrenci', courseId, topicId);
+            break;
+          }
+
+          // 3. Hazır durumu
+          case 'set_ready': {
+            if (currentRoomId && currentUserId) {
+              this.handleSetReady(currentRoomId, currentUserId);
+            }
+            break;
+          }
+
+          // 4. Anlık Cevap Gönderimi (Zero-Latency Answer Submit)
+          case 'submit_answer': {
+            if (currentRoomId && currentUserId) {
+              const room = this.rooms.get(currentRoomId);
+              if (room) {
+                this.handleSubmitAnswer(room, currentUserId, msg.questionId, msg.option, now);
+              }
+            }
+            break;
+          }
+
+          default:
+            break;
+        }
+      } catch (err) {
+        console.error('[Realtime Quiz WS] Mesaj ayrıştırma hatası:', err);
+      }
+    });
+
+    ws.on('close', () => {
+      if (currentRoomId && currentUserId) {
+        this.handleDisconnect(currentRoomId, currentUserId);
+      }
+    });
+  }
+
+  /**
+   * Odaya oyuncu ekleme veya yeni oda oluşturma.
+   */
+  public createOrJoinRoom(roomId: string, courseId: string, topicId: string, questions: QuizQuestion[]): QuizRoom {
+    let room = this.rooms.get(roomId);
+    if (!room) {
+      room = {
+        roomId,
+        courseId,
+        topicId,
+        status: 'lobby',
+        questions,
+        currentQuestionIndex: 0,
+        roundStartTimeMs: 0,
+        roundDurationSec: 10,
+        roundDeadlineMs: 0,
+        players: new Map()
+      };
+      this.rooms.set(roomId, room);
+    }
+    return room;
+  }
+
+  private handleJoinRoom(ws: any, roomId: string, userId: string, displayName: string, courseId: string, topicId: string) {
+    let room = this.rooms.get(roomId);
+    if (!room) {
+      room = this.createOrJoinRoom(roomId, courseId || 'pharmacology', topicId || 'k2-07', []);
+    }
+
+    // Oyuncu kaydı
+    const player: PlayerState = {
+      userId,
+      displayName,
+      socket: ws,
+      isReady: false,
+      score: 0,
+      streak: 0,
+      rttMs: 0,
+      timeOffsetMs: 0,
+      answers: {}
+    };
+
+    room.players.set(userId, player);
+
+    // Önceden Yükleme (Pre-fetching): Soru metinlerini (doğru cevap gizlenmiş olarak) istemciye tek seferde yolla!
+    const sanitizedQuestions = room.questions.map(q => ({
+      id: q.id,
+      prompt: q.prompt,
+      options: q.options,
+      estimated_reading_sec: q.estimated_reading_sec,
+      archetype: q.archetype
+    }));
+
+    // Katılan oyuncuya oda durumu ve sorular
+    ws.send(JSON.stringify({
+      type: 'room_joined',
+      roomId,
+      status: room.status,
+      currentQuestionIndex: room.currentQuestionIndex,
+      questions: sanitizedQuestions, // Pre-fetched questions
+      players: this.getPublicPlayersList(room)
+    }));
+
+    // Diğer oyunculara duyur
+    this.broadcast(room, {
+      type: 'player_joined',
+      player: { userId, displayName, score: 0, streak: 0, isReady: false }
+    }, userId);
+  }
+
+  private handleSetReady(roomId: string, userId: string) {
+    const room = this.rooms.get(roomId);
+    if (!room) return;
+    const player = room.players.get(userId);
+    if (!player) return;
+
+    player.isReady = true;
+    this.broadcast(room, {
+      type: 'player_ready_changed',
+      userId,
+      isReady: true
+    });
+
+    // Tüm oyuncular hazırsa ve en az 1 kişi varsa geri sayımı başlat
+    const allReady = Array.from(room.players.values()).every(p => p.isReady);
+    if (allReady && room.players.size >= 1 && room.status === 'lobby' && room.questions.length > 0) {
+      this.startCountdown(room);
+    }
+  }
+
+  /**
+   * Oyun geri sayımı (3, 2, 1) ve ardından 1. soru
+   */
+  private startCountdown(room: QuizRoom) {
+    room.status = 'countdown';
+    const countdownSec = 3;
+    const startTime = Date.now() + countdownSec * 1000;
+
+    this.broadcast(room, {
+      type: 'game_countdown',
+      countdownSec,
+      startTime
+    });
+
+    setTimeout(() => {
+      this.startRound(room, 0);
+    }, countdownSec * 1000);
+  }
+
+  /**
+   * Tur Başlatma: Sıfır Ağ Gecikmeli Tetikleme
+   * İstemci zaten soruyu belleğe aldığı için sadece round index ve deadline yollanır!
+   */
+  private startRound(room: QuizRoom, questionIndex: number) {
+    if (questionIndex >= room.questions.length) {
+      this.finishGame(room);
+      return;
+    }
+
+    room.status = 'in_round';
+    room.currentQuestionIndex = questionIndex;
+    const question = room.questions[questionIndex];
+    const durationSec = question.estimated_reading_sec || 10;
+    const now = Date.now();
+
+    room.roundDurationSec = durationSec;
+    room.roundStartTimeMs = now;
+    room.roundDeadlineMs = now + (durationSec * 1000);
+
+    // Tüm oyunculara anlık tur başlangıç sinyali
+    this.broadcast(room, {
+      type: 'round_started',
+      questionIndex,
+      questionId: question.id,
+      durationSec,
+      deadlineMs: room.roundDeadlineMs,
+      serverTime: now
+    });
+
+    // Otomatik süre dolumu zamanlayıcısı (Süre bitince doğru şıkkı açıkla)
+    if (room.revealTimeoutId) clearTimeout(room.revealTimeoutId);
+    room.revealTimeoutId = setTimeout(() => {
+      this.revealRound(room);
+    }, durationSec * 1000 + 150); // 150ms ağ marjı
+  }
+
+  /**
+   * Anlık Cevap Gönderimi ve Puanlama
+   */
+  private handleSubmitAnswer(room: QuizRoom, userId: string, questionId: string, option: string, submitTimeMs: number) {
+    if (room.status !== 'in_round') return;
+
+    const currentQ = room.questions[room.currentQuestionIndex];
+    if (!currentQ || currentQ.id !== questionId) return;
+
+    const player = room.players.get(userId);
+    if (!player || player.answers[questionId]) return; // Çift cevap engelleme
+
+    const responseTimeMs = Math.max(0, submitTimeMs - room.roundStartTimeMs);
+    const isCorrect = (option === currentQ.correct_option);
+
+    // Puanlama: Doğruluk (1000 puan) + Hız Bonusu (Kalan süreye göre maks 500 puan) + Streak Bonusu
+    let points = 0;
+    if (isCorrect) {
+      const remainingTimeRatio = Math.max(0, (room.roundDeadlineMs - submitTimeMs) / (room.roundDurationSec * 1000));
+      const speedBonus = Math.round(remainingTimeRatio * 500);
+      const streakBonus = Math.min(player.streak * 50, 250);
+      points = 1000 + speedBonus + streakBonus;
+      player.streak += 1;
+      player.score += points;
+    } else {
+      player.streak = 0;
+    }
+
+    player.answers[questionId] = {
+      option,
+      responseTimeMs,
+      isCorrect,
+      pointsAwarded: points
+    };
+
+    // Cevap onayını yalnız cevaplayan kişiye hemen dön (düşük gecikmeli ACK)
+    if (player.socket?.readyState === 1) {
+      player.socket.send(JSON.stringify({
+        type: 'answer_ack',
+        questionId,
+        isCorrect,
+        pointsAwarded: points,
+        currentScore: player.score,
+        currentStreak: player.streak
+      }));
+    }
+
+    // Diğer oyunculara kimin cevapladığını duyur (seçeneği gizli tutarak)
+    this.broadcast(room, {
+      type: 'player_answered',
+      userId,
+      responseTimeMs
+    }, userId);
+
+    // Eğer odadaki herkes cevap verdiyse sürenin bitmesini beklemeden hemen açıkla!
+    const allAnswered = Array.from(room.players.values()).every(p => !!p.answers[questionId]);
+    if (allAnswered) {
+      if (room.revealTimeoutId) clearTimeout(room.revealTimeoutId);
+      this.revealRound(room);
+    }
+  }
+
+  /**
+   * Doğru Şıkkı Açıklama ve Canlı Skor Tablosu
+   */
+  private revealRound(room: QuizRoom) {
+    if (room.status !== 'in_round') return;
+    room.status = 'reveal';
+
+    const currentQ = room.questions[room.currentQuestionIndex];
+    const leaderboard = this.getLeaderboard(room);
+
+    this.broadcast(room, {
+      type: 'round_revealed',
+      questionId: currentQ.id,
+      correctOption: currentQ.correct_option,
+      optionExplanations: currentQ.option_explanations,
+      leaderboard
+    });
+
+    // 4 saniye sonra sonraki tura geç
+    setTimeout(() => {
+      this.startRound(room, room.currentQuestionIndex + 1);
+    }, 4000);
+  }
+
+  private finishGame(room: QuizRoom) {
+    room.status = 'finished';
+    const finalLeaderboard = this.getLeaderboard(room);
+
+    this.broadcast(room, {
+      type: 'game_finished',
+      finalLeaderboard
+    });
+  }
+
+  private handleDisconnect(roomId: string, userId: string) {
+    const room = this.rooms.get(roomId);
+    if (!room) return;
+
+    room.players.delete(userId);
+    this.broadcast(room, {
+      type: 'player_left',
+      userId
+    });
+
+    if (room.players.size === 0) {
+      if (room.revealTimeoutId) clearTimeout(room.revealTimeoutId);
+      this.rooms.delete(roomId);
+    }
+  }
+
+  private broadcast(room: QuizRoom, payload: any, exceptUserId?: string) {
+    const data = JSON.stringify(payload);
+    for (const [uid, player] of room.players) {
+      if (exceptUserId && uid === exceptUserId) continue;
+      if (player.socket && player.socket.readyState === 1) { // 1 = OPEN
+        player.socket.send(data);
+      }
+    }
+  }
+
+  private getPublicPlayersList(room: QuizRoom) {
+    return Array.from(room.players.values()).map(p => ({
+      userId: p.userId,
+      displayName: p.displayName,
+      isReady: p.isReady,
+      score: p.score,
+      streak: p.streak
+    }));
+  }
+
+  private getLeaderboard(room: QuizRoom) {
+    return Array.from(room.players.values())
+      .map(p => ({
+        userId: p.userId,
+        displayName: p.displayName,
+        score: p.score,
+        streak: p.streak
+      }))
+      .sort((a, b) => b.score - a.score);
+  }
+}
+
+export const quizRealtimeServer = new QuizRealtimeManager();

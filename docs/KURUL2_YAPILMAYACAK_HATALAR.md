@@ -552,4 +552,30 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   1. Cümle bazlı çizim izolasyonu ile C0 bittiğinde "dekortike postür" kalkar, C1 başladığında "kollar fleksiyonda" gelir; asla aynı anda görünmezler.
   2. Tek bir cümlede veya aynı görsel üzerinde eşzamanlı çakışan/iç içe geçen koordinatlar YASAKTIR. Çizim kapısı (`cizim_kapisi.py`) çakışan konturları denetler.
 
+## H62 — Quiz Üretiminde Öncelik Sırasının İhlali, Çifte Analiz Maliyeti ve Yarış Durumu Hatası (2026-10-26)
+
+- **Belirti (Risk):** Drive'a yeni ders geldiğinde Quiz ajanlarının Sesli Ders süreci tamamlanmadan devreye girmesi, sesli dersin analiziyle quiz analizinin mükerrer yapılması (duplikasyon), dosya ezilmesi (overwrite) veya henüz onaylanmamış sesli ders taslağı üzerinden tutarsız soru havuzu üretilmesi.
+- **Kök Neden:** Pipeline adımları arasında katı bir durum bağımlılığı (state dependency) ve tekil analiz deposu (Single Source of Truth) olmaması; modüllerin asenkron veya paralel başlatılması durumunda yarış durumu (race condition) doğması.
+- **Çözüm & Kural:**
+  1. **Öncelik Kilidi (Priority Lock):** Sesli Ders (Audio Lesson) `COMPLETED` (onaylı `konusma_v2.json` ve 0 HATA denetim) durumuna geçmeden Quiz soru üretim ajanları KESİNLİKLE tetiklenemez.
+  2. **Kapsam Kilidi (Scope Lock):** Quiz üretimi şimdilik YALNIZCA `Farmakoloji` (`Tıbbi Farmakoloji`) dersi için aktiftir. Kod altyapısı ders-bağımsız (`course-agnostic`) kurulmuştur.
+  3. **Single Source of Truth:** Sesli dersin ilk analiz adımında üretilen `atomik_bilgi_envanteri.json`, hem Sesli Dersi hem de ardından çalışacak Quiz Ajanını besler. İkinci bir LLM analizi yapılmaz; mükerrer araştırma yasaktır.
+  4. **2x Çapraz Sorgulama ve Batch Processing:** $N$ atomik bilgi $\rightarrow$ en az $2N$ soru. Token limitine takılmamak için en fazla 25 atom (50 soru) partileri halinde döngüyle işlenir.
+- **Kapı:** `meds/scripts/quiz_motoru/quiz_dogrula.py` (Öncelik kilidi, 2x soru kuralı, 5-15 sn okunma süresi, gerekçeli şık açıklamaları, sıfır halüsinasyon). Çıkış kod 0 olmadan yayın yapılamaz.
+
+## H63 — Sesli Derslerde Arşiv PDF'lerinin Çok Geç Yüklenmesi veya Hiç Yüklenmemesi (AutoFetch, SW Range ve Linearization Hatası) (2026-10-26, kullanıcı)
+
+- **Belirti:** Sesli derslerde 2025-2026 arşivi açıldığında slayt PDF'leri ya dakikalarca yüklenmiyor (uzun süre `%...` ilerleme çubuğunda bekliyor) ya da hiç yüklenmiyor (Cloudflare tunnel `context canceled`, zaman aşımı veya boş ekran).
+- **Kök Neden:** 
+  1. `PdfDocView.tsx` içinde `disableAutoFetch: !(boyut > 0 && boyut <= 15 * 1024 * 1024)` kuralı nedeniyle 15 MB altındaki tüm PDF dosyalarında autoFetch açık kalıyordu. PDF.js, ilk sayfa için range isteği atmak yerine arka planda bütün 5-15 MB'lık dosyanın stream indirmesini başlatıyor ve ilk sayfa çizimi bu dev stream bitene kadar bloke oluyordu.
+  2. `public/sw.js` dosyasında ses akışları (`/api/canli-ders/ses/` vb.) Range/206 muafiyetindeyken `/api/lecture-pdf/` akışları bu listeye eklenmemişti. İstemci çevrimdışı paketini indirmediğinde istek SW'nin genel `/api/` Network-First bloğuna düşüyor; Service Worker Range isteklerini `fetch(req)` ile yakalayıp tarayıcının yerel Range motorunu bozuyor ve dönen yanıtları `DATA_CACHE`'e yazmaya çalışarak iş parçacığını kilitliyordu.
+  3. Arşivdeki PDF dosyalarının hiçbiri linearize (Fast Web View) formatında değildi (0/65). Linearize olmayan PDF'lerde katalog ve xref tablosu dosyanın sonunda olduğu için autoFetch ile yarışan range istekleri zaman aşımına uğruyordu.
+  4. Sunucu `Accept-Ranges: bytes` ve `public, max-age=604800, stale-while-revalidate=86400` başlıklarını eksik döndürdüğünden CDN ve ara katmanlar byte-range parçalarını önbellekleyemiyordu.
+- **Çözüm & Kural:**
+  1. `PdfDocView.tsx`: `disableAutoFetch: true` ve `rangeChunkSize: 256 * 1024` sabitlendi. PDF.js artık asla tüm dosyayı arka planda otomatik çekmez; yalnızca o an görüntülenen sayfanın 256 KB'lık dilimini çeker ve ilk sayfa 1 saniyenin altında ekrana gelir.
+  2. `public/sw.js`: `/api/lecture-pdf/` akışları Service Worker tamponlama ve cache mekanizmasından tamamen muaf tutularak (`return;`) doğrudan tarayıcının yerel yüksek hızlı ağ motoruna bırakıldı (`SW v16`).
+  3. `pikepdf` motoru ile tüm arşiv PDF'leri linearize edildi (Fast Web View); ilk sayfa ve xref tablosu dosyanın ilk kilobaytlarına taşındı.
+  4. `server.ts`: `/api/lecture-pdf/deck/:deckId/:index` için `Accept-Ranges: bytes` ve `public, max-age=604800, stale-while-revalidate=86400` başlıkları eklendi.
+
+
 

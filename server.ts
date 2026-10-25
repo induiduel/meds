@@ -35,6 +35,7 @@ import { registerCozucuSesRoutes } from './src/services/cozucuSes';
 import { registerOgrenSesRoutes } from './src/services/ogrenSes';
 import { registerCevrimdisiKatalogRoutes } from './src/services/cevrimdisiKatalog';
 import { registerWhatsAppRoutes, runScheduledWhatsAppDigests } from './src/services/whatsappService';
+import { quizRealtimeServer } from './src/services/quiz/quizRealtimeServer';
 import crypto from 'crypto';
 
 const require = createRequire(import.meta.url);
@@ -10237,7 +10238,8 @@ app.get('/api/lecture-pdf/deck/:deckId/:index', (req, res) => {
   res.setHeader('Content-Type', 'application/pdf');
   res.setHeader('Content-Disposition', `inline; filename*=UTF-8''${encodeURIComponent(f.name)}`);
   // İstemci URL'ye ?v=<boyut> ekler; dosya değişince adres de değişir.
-  res.setHeader('Cache-Control', 'private, max-age=604800');
+  res.setHeader('Cache-Control', 'public, max-age=604800, stale-while-revalidate=86400');
+  res.setHeader('Accept-Ranges', 'bytes');
   res.setHeader('Access-Control-Expose-Headers', 'Accept-Ranges, Content-Range, Content-Length');
   res.sendFile(f.full, { acceptRanges: true, lastModified: true, etag: true }, (err: any) => {
     if (err && !res.headersSent) res.status(err.statusCode || 500).end();
@@ -11988,6 +11990,8 @@ async function startServer() {
 
   httpServerRef = app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT} (isProd: ${isProd})`);
+    // ⚡ Düşük Gecikmeli (Low-Latency) Realtime Quiz WebSocket Sunucusunu Başlat
+    quizRealtimeServer.initialize(httpServerRef);
     // 🤖 Ücretsiz Gemini Hata İnceleme ve Onarım Otomasyonunu Başlat
     hydrateExistingReportsToAutoRepair();
     startAutoRepairWorker();

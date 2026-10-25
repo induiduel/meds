@@ -103,6 +103,26 @@ Durum `meds_temp/hat/dersler/<id>.json`. Kaynak değişince eski ara dosyalar `_
 Art arda hata → 1/2/4/7 gün geri çekilme. Claude zaman aşımı 3 sa. Branş klasörü `k<N><slug>` (Kurul 1 klasörleri ezilmez);
 sitede sekme, veri klasörü oluşunca kendiliğinden (`components/spots/brans.ts`).
 
+### Aşama C2 — Otomatik Quiz ve Aktif Geri Çağırma (Active Recall) Hattı
+Kurul 2+ derslerinde Sesli Ders (Audio Lesson) akışının doğal uzantısı olarak çalışan, çakışmasız 4 Fazlı Sıralı Pipeline (`scripts/quiz_motoru/`):
+1. **Faz 1 - Tetikleme ve Kapsam Kontrolü (Drive Watcher & Scope Lock):**
+   - Drive'a yeni ders materyali geldiğinde ders ve kurul kontrol edilir.
+   - **Kapsam Kilidi (Scope Lock):** Quiz üretimi şimdilik **yalnızca `Farmakoloji` (`f`, `Tıbbi Farmakoloji`)** için aktiftir. Veri modelleri ve pipeline altyapısı tüm branşlara (Patoloji, Mikrobiyoloji, Biyokimya vb.) sadece konfigürasyon değişikliğiyle açılabilecek şekilde ders-bağımsızdır (`course-agnostic`).
+2. **Faz 2 - Birleştirilmiş Derin Analiz (İşlem Tekrarını Önleme):**
+   - Sesli ders için yürütülen çıkmış soru, kazanım ve slayt araştırması tekrar edilmez. Ortak analiz adımı `atomik_bilgi_envanteri.json` çıktısını üreterek hem Sesli Dersi hem de Quiz motorunu besler (**Single Source of Truth**). Kaynaktaki tüm ilaç, reseptör, enzim, protein, gen, hastalık, semptom, ADME, yan etki ve klinik notlar tekil bilgi birimleri olarak ayrıştırılır (Sıfır Halüsinasyon).
+3. **Faz 3 - Sesli Dersin Tamamlanması (Öncelik Kilidi - Priority Lock):**
+   - Sesli Ders (Audio Lesson) `COMPLETED` (onaylı `konusma_v2.json`, metin denetimi 0 HATA) olmadan Quiz soru üretim ajanları **KESİNLİKLE tetiklenemez**.
+4. **Faz 4 - Otomatik Quiz Havuzu Üretimi (Batch Processing & 2x Çapraz Sorgulama):**
+   - Sesli ders tamamlanır tamamlanmaz Quiz Ajanı (`TALIMAT_QUIZ.md`) devreye girer.
+   - **$N \rightarrow \text{en az } 2N$ Çapraz Sorgulama:** Her atomik bilgi en az iki kez, zıt açıyla sorulur:
+     * 1. Soru: Pozitif / Doğrudan / İsimden Özelliğe (`positive_direct`)
+     * 2. Soru: Negatif / Ters Yönlü / Özellikten İsme (`negative_inverse`)
+     * İki soru `question_pair_id` ile eşleşir.
+   - **Batch Processing:** Token sınırına takılmamak ve eksiksiz üretim için en fazla 25 atomik bilgi (50 soru) per batch partileri halinde sırayla üretilir.
+   - **Soru Yapısı:** 5-15 saniyede çözülebilen kısa active recall formatı. Solo çalışma ve eş zamanlı multiplayer modları destekler. Şık açıklamaları gerekçelidir.
+   - **Kapı:** `python3 meds/scripts/quiz_motoru/quiz_dogrula.py <quiz_dosyasi>` 0 HATA.
+
+
 ### Aşama D — Cihaz: hastalık zinciri (`otomasyon/hastalik_zinciri.py`, gece)
 Oracle önerileri (yalnız `k[2-6]-*`) → Claude `scripts/diseases/TALIMAT_SEMA2.md` → `yayinla.hastaliklari_uygula`
 (`diseases.json` kirliyse bekler; denetim hatası artarsa geri alır) → Oracle `data/content/diseases.json` +
