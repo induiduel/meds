@@ -1,0 +1,1625 @@
+{
+ "id": "k2p-y25-k2-21-sedatif-ve-hipnotik-ilaclar",
+ "deckId": "k2p-y25-k2-21-sedatif-ve-hipnotik-ilaclar",
+ "title": "Sedatif ve Hipnotik İlaçlar",
+ "shortTitle": "Sedatif-Hipnotikler",
+ "discipline": "Tıbbi Farmakoloji",
+ "committee": "donem3-kurul2",
+ "instructor": "Prof. Dr. Mehmet Özdemir",
+ "totalSlides": 14,
+ "totalInteractiveElements": 69,
+ "slides": [
+  {
+   "slideNumber": 1,
+   "title": "Sedatif ve Hipnotik Kavramları: Doz-Yanıt İlişkisi ve Güvenlik Sınırları",
+   "synthesisNarrative": "Sedatif ve hipnotik ilaçlar santral sinir sistemi fonksiyonlarını kademeli ve doza bağımlı olarak deprese eden temel farmakolojik bileşiklerdir.\n\n- **Sedatif Etki:** Hastada belirgin uyku hali yapmaksızın psişik gerginliği azaltan ve sakinleştirici etki ortaya koyan terapötik durumdur.\n- **Hipnotik Etki:** Doğrudan uyuşukluk oluşturan ve uyku durumunun başlatılmasını teşvik eden belirgin bir depresyon basamağıdır.\n- **A İlacı (Doğrusal Eğim):** Barbitüratlar ve alkol doza bağımlı doğrusal bir eğim izler. Hipnoz dozunun aşılması hızla genel anesteziye, medüller solunum felcine, komaya ve ölüme yol açar.\n- **B İlacı (Tavan Etkisi):** Benzodiazepinler doğrusal eğriden saparak plato çizer. Hipnozdan daha derin santral depresyon için devasa doz artışları gerekir; bu tavan etkisi benzodiazepinlere yüksek güvenlik indeksi kazandırır.\n\n> [!IMPORTANT]\n> Benzodiazepinlerdeki tavan etkisi tek başına ölümcül solunum felcini önler; oysa barbitüratlarda tavan etkisi yoktur ve doğrusal eğri doğrudan ölüme götürür.",
+   "content": "Sedatif ve hipnotik ilaçlar santral sinir sistemi fonksiyonlarını kademeli ve doza bağımlı olarak deprese eden temel farmakolojik bileşiklerdir.\n\n- **Sedatif Etki:** Hastada belirgin uyku hali yapmaksızın psişik gerginliği azaltan ve sakinleştirici etki ortaya koyan terapötik durumdur.\n- **Hipnotik Etki:** Doğrudan uyuşukluk oluşturan ve uyku durumunun başlatılmasını teşvik eden belirgin bir depresyon basamağıdır.\n- **A İlacı (Doğrusal Eğim):** Barbitüratlar ve alkol doza bağımlı doğrusal bir eğim izler. Hipnoz dozunun aşılması hızla genel anesteziye, medüller solunum felcine, komaya ve ölüme yol açar.\n- **B İlacı (Tavan Etkisi):** Benzodiazepinler doğrusal eğriden saparak plato çizer. Hipnozdan daha derin santral depresyon için devasa doz artışları gerekir; bu tavan etkisi benzodiazepinlere yüksek güvenlik indeksi kazandırır.\n\n> [!IMPORTANT]\n> Benzodiazepinlerdeki tavan etkisi tek başına ölümcül solunum felcini önler; oysa barbitüratlarda tavan etkisi yoktur ve doğrusal eğri doğrudan ölüme götürür.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Doz-yanıt eğrisi doğrusal bir eğim göstererek hipnoz dozunun üzerinde hızla genel anestezi, medüller solunum felci ve ölüme yol açan sedatif-hipnotik prototipi hangisidir?",
+     "options": [
+      {
+       "text": "Pentobarbital",
+       "isCorrect": true,
+       "explanation": "Pentobarbital barbitürat sınıfının tipik bir üyesidir ve santral sinir sisteminde doğrusal A eğrisi çizerek doz arttıkça medüller solunum merkezini felç edip ölüme yol açar."
+      },
+      {
+       "text": "Diazepam",
+       "isCorrect": false,
+       "explanation": "Diazepam klasik bir 1,4-benzodiazepin türevi olup santral GABA-A reseptörlerini allosterik olarak modüle eder. Tavan etkisi sergilediğinden barbitüratlar gibi tek başına ölümcül solunum depresyonuna yol açma riski düşüktür."
+      },
+      {
+       "text": "Zolpidem",
+       "isCorrect": false,
+       "explanation": "Zolpidem imidazopiridin yapısında bir hipnotiktir ve GABA-A alfa-1 reseptörlerine seçici bağlanarak güvenli B eğrisi platosu oluşturur, doğrusal ölümcül eğri çizmez."
+      },
+      {
+       "text": "Buspiron",
+       "isCorrect": false,
+       "explanation": "Buspiron serotonin 5-HT1A reseptörlerinde parsiyel agonist olarak etki eden bir anksiyolitiktir ve genel anestezi, sedasyon veya medüller solunum depresyonu oluşturmaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Benzodiazepinler doğrusal eğriden saparak plato çizerler; hipnozdan daha derin santral depresyon için devasa doz artışları gerektiren bu fenomene tavan etkisi adı verilir.",
+     "maskedTerm": "tavan etkisi",
+     "hint": ""
+    },
+    {
+     "type": "causal_chain",
+     "title": "Barbitüratların Doğrusal A Eğrisi ile Medüller Felç Kaskadı",
+     "steps": [
+      "1. Doz Artışı: Barbitürat dozu hipnotik terapötik sınırın üzerine çıkarılarak santral konsantrasyon yükseltilir.",
+      "2. Kademeli Depresyon: Retiküler formasyon ve kortikal nöronların ardından medüller solunum ve vazomotor merkezler baskılanır.",
+      "3. Solunum Arresti: Tavan etkisi bulunmadığı için medüller nöronlar tamamen felç olur ve solunum arrestiyle ölüm gerçekleşir."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Sedatif-Hipnotik Tanımları ve Doz-Yanıt Dinamikleri",
+     "items": [
+      {
+       "text": "Sedatif bir ajan anksiyeteyi azaltırken hastada belirgin uyku hali oluşturmamalıdır.",
+       "isLie": false,
+       "explanation": "Sedatif ilacın temel tanımı hastayı uyutmadan psişik gerginliği ve anksiyeteyi sakinleştirmektir."
+      },
+      {
+       "text": "Hipnotik etkiler sedasyona kıyasla daha belirgin bir santral sinir sistemi depresyonunu kapsar.",
+       "isLie": false,
+       "explanation": "Hipnoz uykunun başlatılması ve sürdürülmesini sağlayan daha derin bir farmakolojik depresyondur."
+      },
+      {
+       "text": "Benzodiazepinler doğrusal doz-yanıt eğrisi çizerek yüksek dozda tek başlarına medüller solunum merkezini felç ederler.",
+       "isLie": true,
+       "explanation": "Bu önerme yanlıştır; doğrusal eğri barbitüratlara aittir, benzodiazepinler plato çizerek tavan etkisi gösterir ve tek başına medüller felç yapmaz."
+      },
+      {
+       "text": "Santral sinir sistemi fonksiyonunun kademeli doz-bağımlı depresyonu sedatif-hipnotiklerin ortak özelliğidir.",
+       "isLie": false,
+       "explanation": "Düşük dozda sedasyon, orta dozda hipnoz ve yüksek dozda anestezi bu kademeli depresyonun doğal sonucudur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sedatif ve hipnotik etkiler arasındaki temel farmakodinamik ve klinik fark nedir?",
+     "answer": "Sedatif etki hastayı uyutmadan sakinleştirip psişik gerginliği azaltırken; hipnotik etki doğrudan uyuşukluk oluşturarak uykunun başlatılmasını ve sürdürülmesini sağlayan daha derin bir santral sinir sistemi depresyonudur."
+    }
+   ],
+   "pdfSayfalari": [
+    2,
+    4
+   ],
+   "bolum": "1",
+   "sourcePdf": {
+    "startPage": 2,
+    "endPage": 4
+   }
+  },
+  {
+   "slideNumber": 2,
+   "title": "1,4-Benzodiazepinler ve Kimyasal Yapı Özellikleri",
+   "synthesisNarrative": "Klinikte en sık kullanılan sedatif-hipnotiklerin başında gelen klasik benzodiazepinler karakteristik bir 1,4-benzodiazepin çekirdeği taşırlar.\n\n- **Heterosiklik Halka Yapısı:** Bu moleküllerin büyük kısmı 7 üyeli heterosiklik bir halkaya sahiptir ve yapısında karboksamid grubu barındırır.\n- **7. Pozisyon Kuralı:** Reseptör bağlanması ve sedatif-hipnotik aktivite için 7. pozisyonda mutlaka klor gibi bir halojen veya nitro grubu gibi elektronegatif substituent bulunmalıdır. Bu grubun yokluğunda farmakolojik güç belirgin şekilde çöker.\n- **Eski Sedatiflerin Çeşitliliği:** Glutetimid, meprobamat ve kloralhidrat farklı kimyasal iskeletlere sahip olsalar da santral etkileri pratik olarak barbitüratlarınkine eşdeğerdir.\n\n> [!NOTE]\n> Benzodiazepin halkasındaki kimyasal substituentler molekülün lipofilitesini, reseptör afinitesini ve mikrozomal metabolizma hızını belirler.",
+   "content": "Klinikte en sık kullanılan sedatif-hipnotiklerin başında gelen klasik benzodiazepinler karakteristik bir 1,4-benzodiazepin çekirdeği taşırlar.\n\n- **Heterosiklik Halka Yapısı:** Bu moleküllerin büyük kısmı 7 üyeli heterosiklik bir halkaya sahiptir ve yapısında karboksamid grubu barındırır.\n- **7. Pozisyon Kuralı:** Reseptör bağlanması ve sedatif-hipnotik aktivite için 7. pozisyonda mutlaka klor gibi bir halojen veya nitro grubu gibi elektronegatif substituent bulunmalıdır. Bu grubun yokluğunda farmakolojik güç belirgin şekilde çöker.\n- **Eski Sedatiflerin Çeşitliliği:** Glutetimid, meprobamat ve kloralhidrat farklı kimyasal iskeletlere sahip olsalar da santral etkileri pratik olarak barbitüratlarınkine eşdeğerdir.\n\n> [!NOTE]\n> Benzodiazepin halkasındaki kimyasal substituentler molekülün lipofilitesini, reseptör afinitesini ve mikrozomal metabolizma hızını belirler.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "1,4-benzodiazepin çekirdeğinde sedatif-hipnotik aktivite ve reseptör etkileşimi için 7. pozisyonda bulunması zorunlu olan kimyasal özellik hangisidir?",
+     "options": [
+      {
+       "text": "Halojen veya nitro gibi elektronegatif bir substituent",
+       "isCorrect": true,
+       "explanation": "Klor veya nitro gibi elektronegatif atomlar heterosiklik halkanın elektronik yapısını stabilize ederek GABA-A allosterik cebine yüksek afiniteyle bağlanmayı sağlar."
+      },
+      {
+       "text": "Elektron verici uzun alkil zinciri",
+       "isCorrect": false,
+       "explanation": "Alkil zincirleri elektron verici gruplar olup 7. pozisyona bağlandıklarında reseptör bağlanmasını zayıflatır ve sedatif etki gücünü dramatik olarak düşürür."
+      },
+      {
+       "text": "Kuaterner polar amonyum köprüsü",
+       "isCorrect": false,
+       "explanation": "Kuaterner amonyum iyonu moleküle kalıcı pozitif yük kazandırarak kan-beyin bariyerini aşmasını imkansız hale getirir ve periferik kürar benzeri etki yapar."
+      },
+      {
+       "text": "Aromatik fenol hidroksil grubu",
+       "isCorrect": false,
+       "explanation": "Fenolik hidroksil grubu morfin gibi opioidlerde analjeziyi belirleyen yapıdır; 1,4-benzodiazepin çekirdeğinde sedatif güç için 7. konumda yer almaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "1,4-benzodiazepin halkasında sedatif aktivite için 7. pozisyonda klor gibi bir halojen veya nitro grubu gibi elektronegatif substituent bulunması zorunludur.",
+     "maskedTerm": "elektronegatif substituent",
+     "hint": ""
+    },
+    {
+     "type": "causal_chain",
+     "title": "Benzodiazepin Çekirdeğinde Elektronegatif Sübstitüsyon Kaskadı",
+     "steps": [
+      "1. Kimyasal Modifikasyon: 1,4-benzodiazepin çekirdeğinin 7. pozisyonuna klor veya nitro grubu bağlanır.",
+      "2. Elektronik Polarizasyon: Heterosiklik karboksamid halkasında negatif yük yoğunluğu reseptör cebine uygun biçimde kutuplanır.",
+      "3. Yüksek Afiniteli Bağlanma: GABA-A allosterik cebindeki pozitif yüklü aminoasitlerle güçlü elektrostatik bağ kurulur."
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "İlaç Sınıfı",
+      "Temel Kimyasal İskelet",
+      "Kritik Sübstitüsyon",
+      "Farmakolojik Eşdeğerlik"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "1,4-Benzodiazepinler"
+       },
+       {
+        "text": "7-üyeli heterosiklik karboksamid"
+       },
+       {
+        "text": "7. pozisyonda klor veya nitro",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Tavan etkili güvenli anksiyoliz"
+       }
+      ],
+      [
+       {
+        "text": "Barbitüratlar"
+       },
+       {
+        "text": "Barbitürik asit çekirdeği"
+       },
+       {
+        "text": "C5 alkil/aril zincirleri",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Doğrusal A eğrisi ve genel anestezi"
+       }
+      ],
+      [
+       {
+        "text": "Glutetimid ve Meprobamat"
+       },
+       {
+        "text": "Piperidindion ve karbamat"
+       },
+       {
+        "text": "Benzodiazepin dışı heterosiklik yapı",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Pratik olarak barbitüratlara denk"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Meprobamat ve glutetimid gibi eski ajanların kimyasal yapıları benzodiazepinlerden farklı olmasına rağmen klinik açıdan neden barbitüratlara eşdeğer kabul edilirler?",
+     "answer": "Bu ajanlar farklı kimyasal iskelet taşısalar da tavan etkisine sahip değillerdir; barbitüratlar gibi santral sinir sistemini derinlemesine deprese eder, doğrusal doz-yanıt eğrisi gösterir, yüksek bağımlılık potansiyeline sahiptir ve aşırı dozda ölümcül komaya yol açarlar."
+    }
+   ],
+   "pdfSayfalari": [
+    5,
+    8
+   ],
+   "bolum": "1",
+   "sourcePdf": {
+    "startPage": 5,
+    "endPage": 8
+   }
+  },
+  {
+   "slideNumber": 3,
+   "title": "Atipik Non-Benzodiazepinler: Z-Hipnotikleri (Zolpidem, Zaleplon, Eszopiklon)",
+   "synthesisNarrative": "Uyku bozukluklarının tedavisinde benzodiazepin yapısında olmayan fakat GABA reseptörlerini hedefleyen atipik hipnotikler geliştirilmiştir.\n\n- **Kimyasal İskelet:** Zolpidem imidazopiridin, zaleplon pirazolopirimidin, eszopiklon ise siklopirolon yapısındadır. Benzodiazepin halkası içermezler.\n- **Alfa-1 Alt Birim Selektivitesi:** Bu yeni ajanlar yalnızca alfa-1 alt birimi içeren GABA reseptörlerine yüksek afiniteyle bağlanırlar. Bu seçicilik sayesinde saf hipnotik etki sağlarlar.\n- **Klinik Avantajlar:** Alfa-2 ve alfa-3 alt birimlerine bağlanmadıkları için belirgin antikonvülzan veya kas gevşetici etki yapmazlar. Zaleplon çok kısa yarı ömrüyle (<1 saat) gece yarısı uyanmalarında rezidüel sersemlik bırakmadan uykuya dönüşü sağlar.\n\n> [!IMPORTANT]\n> Zolpidem, zaleplon ve eszopiklonun antikonvülzan veya kas gevşetici aktiviteleri yoktur; yalnızca alfa-1 alt birimi üzerinden saf hipnoz oluştururlar.",
+   "content": "Uyku bozukluklarının tedavisinde benzodiazepin yapısında olmayan fakat GABA reseptörlerini hedefleyen atipik hipnotikler geliştirilmiştir.\n\n- **Kimyasal İskelet:** Zolpidem imidazopiridin, zaleplon pirazolopirimidin, eszopiklon ise siklopirolon yapısındadır. Benzodiazepin halkası içermezler.\n- **Alfa-1 Alt Birim Selektivitesi:** Bu yeni ajanlar yalnızca alfa-1 alt birimi içeren GABA reseptörlerine yüksek afiniteyle bağlanırlar. Bu seçicilik sayesinde saf hipnotik etki sağlarlar.\n- **Klinik Avantajlar:** Alfa-2 ve alfa-3 alt birimlerine bağlanmadıkları için belirgin antikonvülzan veya kas gevşetici etki yapmazlar. Zaleplon çok kısa yarı ömrüyle (<1 saat) gece yarısı uyanmalarında rezidüel sersemlik bırakmadan uykuya dönüşü sağlar.\n\n> [!IMPORTANT]\n> Zolpidem, zaleplon ve eszopiklonun antikonvülzan veya kas gevşetici aktiviteleri yoktur; yalnızca alfa-1 alt birimi üzerinden saf hipnoz oluştururlar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Z-hipnotiklerinin (zolpidem, zaleplon) klasik benzodiazepinlerin aksine antikonvülzan ve kas gevşetici etki göstermemesinin temel moleküler sebebi nedir?",
+     "options": [
+      {
+       "text": "Yalnızca alfa-1 alt birimi içeren GABA reseptörlerine selektif bağlanmaları",
+       "isCorrect": true,
+       "explanation": "Zolpidem ve zaleplon yalnızca sedasyon ve hipnoz oluşturan alfa-1 alt birimine seçici bağlanır; kas gevşemesi ve anksiyolizden sorumlu alfa-2 ve alfa-3 izoformlarını etkilemez."
+      },
+      {
+       "text": "Klorür kanalının açılmasını doğrudan bloke etmeleri",
+       "isCorrect": false,
+       "explanation": "Bu bileşikler klorür kanalını bloke etmezler; endojen GABA varlığında kanalın açılma frekansını allosterik olarak artırıp hiperpolarizasyon yaparlar."
+      },
+      {
+       "text": "Kan-beyin bariyerini geçemeyip periferde kalmaları",
+       "isCorrect": false,
+       "explanation": "Z-bileşikleri yüksek lipofiliklikleri sayesinde kan-beyin bariyerini saniyeler içinde aşarak hızla santral sinir sistemine nüfuz ederler."
+      },
+      {
+       "text": "Melatonin MT1 reseptörlerini kompetitif antagonize etmeleri",
+       "isCorrect": false,
+       "explanation": "Z-hipnotikleri alfa-1 alt birimi içeren GABA-A reseptörlerini allosterik olarak aktive eden saf hipnotiklerdir. Melatonin reseptörleri üzerinden değil klorür iletkenliğini artırarak sedasyon sağladıkları için bu soruda yanlıştır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Z-bileşikleri yalnızca alfa-1 alt birim içeren GABA reseptörlerine bağlandıkları için antikonvülzan veya kas gevşetici etki yapmazlar.",
+     "maskedTerm": "alfa-1",
+     "hint": ""
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Atipik Z-Hipnotiklerinin Farmakolojik Özellikleri",
+     "items": [
+      {
+       "text": "Zolpidem bir imidazopiridin türevi olup hızlı başlayan hipnotik etki sergiler.",
+       "isLie": false,
+       "explanation": "Zolpidem imidazopiridin yapısındadır ve hızla emilerek uyku latansını kısaltır."
+      },
+      {
+       "text": "Zaleplon yaklaşık bir saatlik çok kısa yarılanma ömrü sayesinde gece uyanmalarında rezidüel sersemlik yapmaz.",
+       "isLie": false,
+       "explanation": "Zaleplon hızlı metabolize olarak ertesi sabah sedasyon ve motor koordinasyon bozukluğu bırakmaz."
+      },
+      {
+       "text": "Eszopiklon ve zolpidem yüksek antikonvülzan etkinlikleri nedeniyle status epileptikusta ilk tercihtir.",
+       "isLie": true,
+       "explanation": "Bu önerme yanlıştır; Z-bileşikleri alfa-1 selektiftir, antikonvülzan aktiviteleri yoktur ve nöbet tedavisinde kesinlikle kullanılmazlar."
+      },
+      {
+       "text": "Z-bileşiklerinin oluşturduğu sedatif etki kompetitif antagonist flumazenil ile geri çevrilebilir.",
+       "isLie": false,
+       "explanation": "Flumazenil aynı allosterik cebi paylaştığı için hem benzodiazepinleri hem de Z-bileşiklerini bloke eder."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "İlaç Adı",
+      "Kimyasal Sınıfı",
+      "Eliminasyon Yarı Ömrü",
+      "Ayırt Edici Klinik Özellik"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "Zolpidem"
+       },
+       {
+        "text": "İmidazopiridin türevi"
+       },
+       {
+        "text": "Yaklaşık 2-3 saat"
+       },
+       {
+        "text": "Saf hipnoz, miyorelaksasyon yok",
+        "isMasked": true,
+        "hint": ""
+       }
+      ],
+      [
+       {
+        "text": "Zaleplon"
+       },
+       {
+        "text": "Pirazolopirimidin türevi"
+       },
+       {
+        "text": "Yaklaşık 1 saat (<1 saat)",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Gece uyanmalarında sabah sersemliği yapmaz"
+       }
+      ],
+      [
+       {
+        "text": "Eszopiklon"
+       },
+       {
+        "text": "Siklopirolon türevi"
+       },
+       {
+        "text": "Yaklaşık 6 saat"
+       },
+       {
+        "text": "6 aya kadar minimal tolerans gelişimi",
+        "isMasked": true,
+        "hint": ""
+       }
+      ]
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Gece 03:00'te uyanıp tekrar uyuyamayan bir hastaya zaleplon verilmesinin temel farmakokinetik gerekçesi nedir?",
+     "answer": "Zaleplonun eliminasyon yarılanma ömrü yaklaşık 1 saattir; hızla inaktive olduğu için hasta sabah uyandığında ertesi gün rezidüel sersemlik, kognitif yavaşlama veya motor koordinasyon kaybı yaşamaz."
+    }
+   ],
+   "pdfSayfalari": [
+    9,
+    11
+   ],
+   "bolum": "1",
+   "sourcePdf": {
+    "startPage": 9,
+    "endPage": 11
+   }
+  },
+  {
+   "slideNumber": 4,
+   "title": "Melatonin ve Oreksin Reseptör Hedefleri: Ramelteon, Suvoreksant ve Buspiron",
+   "synthesisNarrative": "GABAerjik mekanizmalar dışındaki santral nörokimyasal yolaklar da sedatif ve anksiyolitik tedavi için hedeflenmektedir.\n\n- **Ramelteon:** Suprakiazmatik nükleusta bulunan melatonin MT1 ve MT2 reseptörlerinin agonistidir. Uykululuk oluşturarak sirkadiyen ritmi düzenler; GABA sistemiyle etkileşmediği için bağımlılık yapmaz.\n- **Suvoreksant ve Lemboreksant:** Çift oreksin reseptör antagonistleridir. Uyanıklık nöropeptitleri oreksin A ve B'nin OX1 ve OX2 reseptörlerine bağlanmasını engelleyerek uyanıklık sistemini kapatırlar.\n- **Buspiron:** Etkisi yavaş başlayan selektif anksiyolitiktir. Beyindeki 5-HT1A reseptörlerinde parsiyel agonist olarak etkir. Benzodiazepinlerin aksine sedatif, hipnotik, antikonvülzan veya kas gevşetici özellikleri bulunmaz; tolerans ve bağımlılık riski taşımaz.\n\n> [!NOTE]\n> Buspironun anksiyolitik klinik etkisi 2 ila 4 haftada kademeli olarak ortaya çıkar; bu nedenle akut panik veya anksiyete krizlerinde kullanılamaz.",
+   "content": "GABAerjik mekanizmalar dışındaki santral nörokimyasal yolaklar da sedatif ve anksiyolitik tedavi için hedeflenmektedir.\n\n- **Ramelteon:** Suprakiazmatik nükleusta bulunan melatonin MT1 ve MT2 reseptörlerinin agonistidir. Uykululuk oluşturarak sirkadiyen ritmi düzenler; GABA sistemiyle etkileşmediği için bağımlılık yapmaz.\n- **Suvoreksant ve Lemboreksant:** Çift oreksin reseptör antagonistleridir. Uyanıklık nöropeptitleri oreksin A ve B'nin OX1 ve OX2 reseptörlerine bağlanmasını engelleyerek uyanıklık sistemini kapatırlar.\n- **Buspiron:** Etkisi yavaş başlayan selektif anksiyolitiktir. Beyindeki 5-HT1A reseptörlerinde parsiyel agonist olarak etkir. Benzodiazepinlerin aksine sedatif, hipnotik, antikonvülzan veya kas gevşetici özellikleri bulunmaz; tolerans ve bağımlılık riski taşımaz.\n\n> [!NOTE]\n> Buspironun anksiyolitik klinik etkisi 2 ila 4 haftada kademeli olarak ortaya çıkar; bu nedenle akut panik veya anksiyete krizlerinde kullanılamaz.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Hipotalamustan salgılanan uyanıklık nöropeptitleri oreksin A ve oreksin B'nin OX1 ve OX2 reseptörlerini bloke ederek uyku başlatan ilaç sınıfı hangisidir?",
+     "options": [
+      {
+       "text": "Çift oreksin reseptör antagonistleri (Suvoreksant, Lemboreksant)",
+       "isCorrect": true,
+       "explanation": "Suvoreksant ve lemboreksant OX1 ve OX2 reseptörlerini çift olarak bloke ederek fizyolojik uyanıklık sistemini kapatır ve uykunun hem başlamasını hem sürdürülmesini sağlar."
+      },
+      {
+       "text": "Melatonin MT1 ve MT2 reseptör agonistleri",
+       "isCorrect": false,
+       "explanation": "Ramelteon suprakiazmatik çekirdekte bulunan melatonin MT1 ve MT2 reseptörlerini yüksek afiniteyle aktive eden bir hipnotiktir. Sirkadiyen uyku ritmini düzenleyen bir agonist olduğundan oreksin yolağını antagonize etme özelliği göstermez."
+      },
+      {
+       "text": "GABA-A alfa-1 selektif allosterik modülatörleri",
+       "isCorrect": false,
+       "explanation": "Zolpidem ve zaleplon santral sinir sistemindeki GABA-A reseptör kompleksine bağlanarak klorür akışını kuvvetlendiren ajanlardır. Hipotalamik oreksin nöropeptidleri ve reseptörleri üzerinde herhangi bir antagonistik etkileri bulunmaz."
+      },
+      {
+       "text": "Serotonin 5-HT1A reseptör parsiyel agonistleri",
+       "isCorrect": false,
+       "explanation": "Buspiron presinaptik ve postsinaptik serotonin 5-HT1A reseptörlerinde parsiyel agonist etki gösteren bir anksiyolitiktir. Belirgin bir sedatif veya hipnotik etkisi olmadığı gibi oreksin reseptör blokajı mekanizmasına da sahip değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Ramelteon suprakiazmatik çekirdekteki melatonin reseptörlerini uyararak sirkadiyen ritmi düzenler ve bağımlılık yapmaz.",
+     "maskedTerm": "melatonin",
+     "hint": ""
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "42 yaşında alkol bağımlılığı öyküsü olan hasta, 3 aydır süren kontrolsüz gerginlik ve endişe nedeniyle psikiyatri polikliniğine başvuruyor.",
+     "options": [
+      {
+       "text": "Bağımlılık yapmayan serotonin 5-HT1A parsiyel agonisti Buspiron başlanmalıdır.",
+       "isCorrect": true,
+       "explanation": "Buspiron GABA sistemiyle etkileşmediği için öfori, tolerans veya çapraz bağımlılık oluşturmaz ve bağımlılık öyküsü olan anksiyeteli hastalarda güvenle seçilir."
+      },
+      {
+       "text": "Hemen yüksek doz hızlı etkili Alprazolam başlanıp uzun süre devam edilmelidir.",
+       "isCorrect": false,
+       "explanation": "Alprazolam güçlü bağımlılık potansiyeline sahiptir; alkol bağımlılığı geçmişi olan bireylerde çapraz bağımlılığı tetikleyerek ciddi kötüye kullanıma yol açar."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "GABA-Dışı Sedatif ve Anksiyolitik İlaçlar",
+     "items": [
+      {
+       "text": "Ramelteon suprakiazmatik çekirdekte MT1 ve MT2 melatonin reseptörlerini uyarır.",
+       "isLie": false,
+       "explanation": "Sirkadiyen uyku uyanıklık döngüsünü düzenleyerek uyku latansını kısaltır."
+      },
+      {
+       "text": "Suvoreksant OX1 ve OX2 reseptörlerini bloke ederek uyanıklık sistemini kapatır.",
+       "isLie": false,
+       "explanation": "Çift oreksin reseptör antagonistidir ve uykuyu teşvik eder."
+      },
+      {
+       "text": "Buspiron ilk dozdan sonraki 15 dakikada derin sedasyon ve kas gevşemesi oluşturur.",
+       "isLie": true,
+       "explanation": "Bu önerme yanlıştır; buspironun etkisi 2 ila 4 haftada yavaş başlar ve sedasyon, ataksi veya kas gevşetici etkisi bulunmaz."
+      },
+      {
+       "text": "Ramelteon GABA sistemiyle etkileşmediği için yoksunluk krizi oluşturmaz.",
+       "isLie": false,
+       "explanation": "Kötüye kullanım ve fiziksel bağımlılık riski taşımayan güvenli bir ajandır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Buspiron tedavisinde hastaya etkinin başlama süresi ve sedatif etkiler hakkında nasıl bir bilgilendirme yapılmalıdır?",
+     "answer": "Buspironun anksiyolitik klinik etkisi 2 ila 4 hafta içinde kademeli olarak ortaya çıkar; akut kriz yatıştırıcı değildir. Ayrıca klasik benzodiazepinlerin aksine hastada uyuşukluk, sedasyon, kas gevşemesi yapmaz ve motor koordinasyonu bozmaz."
+    }
+   ],
+   "pdfSayfalari": [
+    12,
+    14
+   ],
+   "bolum": "2",
+   "sourcePdf": {
+    "startPage": 12,
+    "endPage": 14
+   }
+  },
+  {
+   "slideNumber": 5,
+   "title": "Sedatif-Hipnotik Farmakokinetiği: Lipofilisite, Absorbsiyon ve Dağılım",
+   "synthesisNarrative": "Sedatif-hipnotiklerin klinik etki başlama hızı ve doku dağılımı temel olarak fizikokimyasal özelliklerine bağlıdır.\n\n- **Lipofilisite ve Giriş Hızı:** Santral sinir sistemine giriş hızını lipitte çözünürlük belirler. Triazolam, tiyopental ve Z-hipnotikleri yüksek lipofiliklikleri sayesinde kan-beyin bariyerini hızla aşarak anında etki başlatırlar.\n- **Ön İlaç Klorazepat:** Bir ön ilaç olan klorazepat midede asit hidrolize uğrayarak hızla aktif desmetildiazepama dönüştürülür ve emilir.\n- **Plasenta Bariyeri:** Tüm sedatif-hipnotikler lipofilik yapıları nedeniyle plasenta engelini kolayca geçerler ve anne sütüne salgılanırlar. Doğum öncesi kullanım neonatal solunum felcine ve gevşek bebek tablosuna yol açabilir.\n- **Renal Atılım ve İyon Tuzağı:** Fenobarbital gibi zayıf asit ilaçlar kısmen değişmeden idrarla atılır. İdrarın sodyum bikarbonat ile alkalileştirilmesi ilacı iyonize forma dönüştürerek tübüler geri emilimi engeller ve atılımı hızlandırır.\n\n> [!IMPORTANT]\n> Akut fenobarbital zehirlenmesinde sodyum bikarbonat ile idrarın alkalileştirilmesi, zayıf asit olan ilacın iyon tuzağına düşürülerek atılımını sağlayan hayat kurtarıcı bir müdahaledir.",
+   "content": "Sedatif-hipnotiklerin klinik etki başlama hızı ve doku dağılımı temel olarak fizikokimyasal özelliklerine bağlıdır.\n\n- **Lipofilisite ve Giriş Hızı:** Santral sinir sistemine giriş hızını lipitte çözünürlük belirler. Triazolam, tiyopental ve Z-hipnotikleri yüksek lipofiliklikleri sayesinde kan-beyin bariyerini hızla aşarak anında etki başlatırlar.\n- **Ön İlaç Klorazepat:** Bir ön ilaç olan klorazepat midede asit hidrolize uğrayarak hızla aktif desmetildiazepama dönüştürülür ve emilir.\n- **Plasenta Bariyeri:** Tüm sedatif-hipnotikler lipofilik yapıları nedeniyle plasenta engelini kolayca geçerler ve anne sütüne salgılanırlar. Doğum öncesi kullanım neonatal solunum felcine ve gevşek bebek tablosuna yol açabilir.\n- **Renal Atılım ve İyon Tuzağı:** Fenobarbital gibi zayıf asit ilaçlar kısmen değişmeden idrarla atılır. İdrarın sodyum bikarbonat ile alkalileştirilmesi ilacı iyonize forma dönüştürerek tübüler geri emilimi engeller ve atılımı hızlandırır.\n\n> [!IMPORTANT]\n> Akut fenobarbital zehirlenmesinde sodyum bikarbonat ile idrarın alkalileştirilmesi, zayıf asit olan ilacın iyon tuzağına düşürülerek atılımını sağlayan hayat kurtarıcı bir müdahaledir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sedatif-hipnotiklerin santral sinir sistemine giriş hızını ve etki başlangıcının çabukluğunu belirleyen en kritik faktör hangisidir?",
+     "options": [
+      {
+       "text": "Lipitte çözünürlük (lipofilisite)",
+       "isCorrect": true,
+       "explanation": "Lipitte çözünürlüğü yüksek olan moleküller kan-beyin bariyerindeki endotel hücre membranlarından pasif difüzyonla saniyeler içinde geçerek hızla etki oluştururlar."
+      },
+      {
+       "text": "Plazma albüminine bağlanma oranı",
+       "isCorrect": false,
+       "explanation": "Plazma proteinlerine bağlanma ilacın kanda taşınan serbest fraksiyonunu ve biyoyararlanımını etkileyen bir parametredir. Kan-beyin bariyerini aşarak santral sinir sistemine hızlı difüzyonu belirleyen temel fizikokimyasal faktör lipofilisitedir."
+      },
+      {
+       "text": "İdrar dansitesi ve osmolaritesi",
+       "isCorrect": false,
+       "explanation": "İdrar dansitesi böbreğin idrarı konsantre etme gücünü ve renal tübüler fonksiyonları yansıtan fizyolojik bir değerdir. Molekülün lipid membranları aşarak beyin dokusuna penetre olma hızıyla herhangi bir fizyolojik bağlantısı bulunmaz."
+      },
+      {
+       "text": "Glukuronil transferaz enzim kapasitesi",
+       "isCorrect": false,
+       "explanation": "Glukuronidasyon karaciğerde lipofilik moleküllerin suda çözünür hale getirilerek safrayla veya idrarla atılmasını sağlayan konjugasyondur. İlacın santral sinir sistemine geçiş ve etki başlangıç hızını değil eliminasyon ve klirens sürecini belirler."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Akut fenobarbital zehirlenmesinde idrarın sodyum bikarbonat ile alkalileştirilmesi zayıf asit ilacın iyonize forma geçerek hızla atılmasını sağlar.",
+     "maskedTerm": "alkalileştirilmesi",
+     "hint": ""
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Sedatif-Hipnotik Farmakokinetik İlkeleri",
+     "items": [
+      {
+       "text": "Triazolam yüksek lipofilisitesi nedeniyle çok hızlı emilir ve santral etkisi çabuk başlar.",
+       "isLie": false,
+       "explanation": "Yüksek lipofilitesi ve kısa yarı ömrü sayesinde hızla uyku başlatır."
+      },
+      {
+       "text": "Klorazepat bir ön ilaç olup midedeki asit ortamda aktif desmetildiazepama dönüşür.",
+       "isLie": false,
+       "explanation": "Midede hidroliz olduktan sonra aktif molekül olarak dolaşıma katılır."
+      },
+      {
+       "text": "Sedatif-hipnotik ilaçlar polar yapıları sayesinde gebelikte plasenta bariyerini kesinlikle aşamazlar.",
+       "isLie": true,
+       "explanation": "Bu önerme yanlıştır; sedatif-hipnotikler lipofilik olduklarından plasentayı kolaylıkla geçerler ve fetusta birikerek neonatal depresyon yaparlar."
+      },
+      {
+       "text": "Fenobarbital idrarın alkalileştirilmesi sonucu iyon tuzağına yakalanarak hızla atılır.",
+       "isLie": false,
+       "explanation": "Zayıf asit yapısı alkali idrarda iyonize olur ve geri emilimi durur."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "İlaç / Durum",
+      "Farmakokinetik Özellik",
+      "Klinik Sonuç",
+      "Girişim / Önlem"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "Triazolam / Tiyopental"
+       },
+       {
+        "text": "Aşırı yüksek lipofilisite"
+       },
+       {
+        "text": "Dakikalar içinde hızlı santral etki başlangıcı",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Hızlı anestezi indüksiyonu ve hipnoz"
+       }
+      ],
+      [
+       {
+        "text": "Fenobarbital Zehirlenmesi"
+       },
+       {
+        "text": "Zayıf asit yapı (pKa ~7.2)"
+       },
+       {
+        "text": "Alkali idrarda iyonize olarak tübülde tuzaklanma",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "İntravenöz sodyum bikarbonat infüzyonu"
+       }
+      ],
+      [
+       {
+        "text": "Gebelikte Sedatif Alımı"
+       },
+       {
+        "text": "Plasenta bariyerini serbestçe aşma"
+       },
+       {
+        "text": "Neonatal solunum depresyonu ve hipotoni",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Doğum öncesi kullanımın sınırlandırılması"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Gebe bir kadına doğum öncesi sedatif-hipnotik verilmesinin yenidoğan üzerindeki temel riskleri nelerdir?",
+     "answer": "Tüm sedatif-hipnotikler lipofilik olduklarından plasentayı kolayca aşarlar. Doğum öncesi maruziyet yenidoğanda santral solunum depresyonuna, kas gevşekliğine ve emme güçlüğüne (gevşek bebek sendromu) ve doğum sonrası neonatal yoksunluk krizine yol açabilir."
+    }
+   ],
+   "pdfSayfalari": [
+    15,
+    20
+   ],
+   "bolum": "2",
+   "sourcePdf": {
+    "startPage": 15,
+    "endPage": 20
+   }
+  },
+  {
+   "slideNumber": 6,
+   "title": "Hepatik Biyotransformasyon: Desmetildiazepam ve Doğrudan Glukuronidasyon (LOT)",
+   "synthesisNarrative": "Sedatif-hipnotiklerin vücuttan temizlenmesi karaciğer mikrozomal enzim sistemlerine (özellikle CYP3A4) bağımlıdır.\n\n- **Faz I Oksidasyon:** Benzodiazepinlerin çoğu mikrozomal oksidasyonla aktif ara metabolitlere dönüşür. Klordiazepoksit ve diazepamın ortak ara ürünü olan **Desmetildiazepam (nordiazepam)**, 40 saatten uzun yarılanma ömrüne sahiptir. Çoklu dozlarda birikerek kümülatif sedasyona yol açar.\n- **Doğrudan Glukuronidasyon (LOT Grubu):** Lorazepam, Oksazepam ve Temazepam Faz I oksidasyona uğramazlar; doğrudan inaktif glukuronidlere konjuge edilirler.\n- **Yaşlılar ve Karaciğer Yetmezliği:** Siroz gibi karaciğer hastalıklarında mikrozomal oksidasyon çökerken glukuronidasyon kapasitesi korunur. Bu nedenle karaciğer hastalarında ve yaşlılarda aktif metabolit oluşturmayan LOT grubu ilaçlar seçilmelidir.\n\n> [!IMPORTANT]\n> Karaciğer yetmezliği olan veya yaşlı hastalarda diazepam gibi uzun etkili ajanlar kümülasyonla ölümcül koma yapabilir; mutlaka doğrudan glukuronize olan LOT grubu (Lorazepam, Oksazepam) tercih edilmelidir.",
+   "content": "Sedatif-hipnotiklerin vücuttan temizlenmesi karaciğer mikrozomal enzim sistemlerine (özellikle CYP3A4) bağımlıdır.\n\n- **Faz I Oksidasyon:** Benzodiazepinlerin çoğu mikrozomal oksidasyonla aktif ara metabolitlere dönüşür. Klordiazepoksit ve diazepamın ortak ara ürünü olan **Desmetildiazepam (nordiazepam)**, 40 saatten uzun yarılanma ömrüne sahiptir. Çoklu dozlarda birikerek kümülatif sedasyona yol açar.\n- **Doğrudan Glukuronidasyon (LOT Grubu):** Lorazepam, Oksazepam ve Temazepam Faz I oksidasyona uğramazlar; doğrudan inaktif glukuronidlere konjuge edilirler.\n- **Yaşlılar ve Karaciğer Yetmezliği:** Siroz gibi karaciğer hastalıklarında mikrozomal oksidasyon çökerken glukuronidasyon kapasitesi korunur. Bu nedenle karaciğer hastalarında ve yaşlılarda aktif metabolit oluşturmayan LOT grubu ilaçlar seçilmelidir.\n\n> [!IMPORTANT]\n> Karaciğer yetmezliği olan veya yaşlı hastalarda diazepam gibi uzun etkili ajanlar kümülasyonla ölümcül koma yapabilir; mutlaka doğrudan glukuronize olan LOT grubu (Lorazepam, Oksazepam) tercih edilmelidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "İleri evre karaciğer sirozu bulunan yaşlı bir hastada Faz I mikrozomal oksidasyona uğramadan doğrudan Faz II glukuronidasyon ile inaktive olan hangi benzodiazepin tercih edilmelidir?",
+     "options": [
+      {
+       "text": "Oksazepam",
+       "isCorrect": true,
+       "explanation": "Oksazepam 3-hidroksi yapısına sahip bir benzodiazepin olup karaciğerde mikrozomal enzimler yerine faz 2 glukuronidasyona uğrar. Karaciğer yetmezliği olan veya yaşlı hastalarda birikim yapmadan güvenle atılabildiği için doğru yanıttır."
+      },
+      {
+       "text": "Diazepam",
+       "isCorrect": false,
+       "explanation": "Diazepam yoğun CYP3A4 oksidasyonuna muhtaçtır ve 40 saatlik aktif metabolit desmetildiazepam oluşturur; sirozda şiddetli kümülasyon yaparak komaya yol açar."
+      },
+      {
+       "text": "Klordiazepoksit",
+       "isCorrect": false,
+       "explanation": "Klordiazepoksit karaciğer mikrozomal sitokrom P450 enzimleriyle uzun ömürlü aktif metabolitlerine dönüşen klasik bir ajandır. Siroz hastalarında ve hepatik fonksiyonu azalmış yaşlı bireylerde aktif metabolit birikimi riski yüksek olduğundan yanlıştır."
+      },
+      {
+       "text": "Flurazepam",
+       "isCorrect": false,
+       "explanation": "Flurazepam çok uzun yarı ömürlü aktif metabolitlere dönüşür; karaciğer yetmezliğinde derin gündüz sedasyonu ve ensefalopati riskini artırır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Klordiazepoksit ve diazepamın karaciğerde mikrozomal oksidasyonu sonucu oluşan ve 40 saatten uzun yarı ömre sahip majör aktif metabolit desmetildiazepam olarak adlandırılır.",
+     "maskedTerm": "desmetildiazepam",
+     "hint": ""
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "74 yaşında karaciğer sirozu ve asiti bulunan hastaya anksiyete ve ajitasyon nedeniyle hekim tarafından sedatif başlanması düşünülmektedir.",
+     "options": [
+      {
+       "text": "Faz I oksidasyona uğramayan, doğrudan glukuronize olan LOT grubu Oksazepam seçilmelidir.",
+       "isCorrect": true,
+       "explanation": "Glukuronidasyon kapasitesi sirozda ve yaşlılıkta korunur; bu sayede toksik ara ürün birikmeden hasta güvenle sakinleştirilir."
+      },
+      {
+       "text": "Uzun süreli rahatlama sağlamak amacıyla standart dozda Diazepam başlanmalıdır.",
+       "isCorrect": false,
+       "explanation": "Diazepam sirozda temizlenemeyen 40 saatlik desmetildiazepam oluşturarak hastada kümülatif toksisite, derin koma ve hepatik ensefalopati tetikler."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "İlaç Grubu",
+      "Metabolizma Basamağı",
+      "Majör Aktif Metabolit",
+      "Klinik Özellik"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "Diazepam / Klordiazepoksit"
+       },
+       {
+        "text": "Faz I mikrozomal oksidasyon"
+       },
+       {
+        "text": "Desmetildiazepam (t1/2 > 40 saat)",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Kümülasyon ve uzamış gündüz sedasyonu"
+       }
+      ],
+      [
+       {
+        "text": "Lorazepam / Oksazepam (LOT)"
+       },
+       {
+        "text": "Doğrudan Faz II glukuronidasyon"
+       },
+       {
+        "text": "Aktif metaboliti yoktur",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Karaciğer yetmezliği ve yaşlıda güvenli"
+       }
+      ],
+      [
+       {
+        "text": "Alprazolam / Triazolam"
+       },
+       {
+        "text": "Alfa-hidroksilasyon ve konjugasyon"
+       },
+       {
+        "text": "Kısa ömürlü hidroksi türevler",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Hızlı etki başlangıcı ve kısa etki süresi"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Geriatrik bir hastada anksiyolitik tedavi planlanırken neden diazepam yerine lorazepam veya oksazepam tercih edilir?",
+     "answer": "Diazepam yaşlılarda mikrozomal Faz I oksidasyonunun yavaşlaması nedeniyle 40 saatten uzun yarı ömürlü desmetildiazepama dönüşerek vücutta birikir ve aşırı sedasyon, ataksi, düşme ve kalça kırığı riskini artırır. Lorazepam ve oksazepam ise doğrudan glukuronide konjuge edildiklerinden yaşlılarda kümülasyon yapmazlar."
+    }
+   ],
+   "pdfSayfalari": [
+    21,
+    26
+   ],
+   "bolum": "2",
+   "sourcePdf": {
+    "startPage": 21,
+    "endPage": 26
+   }
+  },
+  {
+   "slideNumber": 7,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Temel Farmakoloji, Kimyasal Sınıflandırma ve Kinetik",
+   "isCheckpoint": true,
+   "synthesisNarrative": "Dersin ilk yarısında sedatif-hipnotiklerin temel tanımları, kimyasal iskeletleri ve farmakokinetik kaderleri işlenmiştir.\n\n- **Doz-Yanıt Kuralı:** Barbitüratlar doğrusal A eğrisi izleyerek solunum depresyonu ve ölüme götürürken; benzodiazepinler plato çizerek tavan etkisi sergiler.\n- **Yapı-Aktivite:** 1,4-benzodiazepin halkasında 7. pozisyondaki elektronegatif grup aktivite için şarttır. Z-hipnotikleri yalnızca alfa-1 alt birimine selektiftir; miyorelaksan etkileri yoktur.\n- **GABA Dışı Yeni Hedefler:** Ramelteon melatonin MT1/MT2 agonisti, suvoreksant çift oreksin antagonisti, buspiron ise 5-HT1A parsiyel agonistidir.\n- **Kinetik ve Eliminasyon:** Desmetildiazepam 40 saatten uzun yarı ömrüyle birikirken; LOT grubu doğrudan glukuronide edilerek karaciğer yetmezliğinde güvenle kullanılır. Zayıf asit fenobarbital idrar alkalinizasyonu ile atılır.\n\n> [!IMPORTANT]\n> Bu aşamaya kadar öğrenilen tüm mekanizmalar, sonraki slaytlarda incelenecek olan GABA-A klorür kanalı elektrofizyolojisinin ve klinik toksikolojinin temelini oluşturur.",
+   "content": "Dersin ilk yarısında sedatif-hipnotiklerin temel tanımları, kimyasal iskeletleri ve farmakokinetik kaderleri işlenmiştir.\n\n- **Doz-Yanıt Kuralı:** Barbitüratlar doğrusal A eğrisi izleyerek solunum depresyonu ve ölüme götürürken; benzodiazepinler plato çizerek tavan etkisi sergiler.\n- **Yapı-Aktivite:** 1,4-benzodiazepin halkasında 7. pozisyondaki elektronegatif grup aktivite için şarttır. Z-hipnotikleri yalnızca alfa-1 alt birimine selektiftir; miyorelaksan etkileri yoktur.\n- **GABA Dışı Yeni Hedefler:** Ramelteon melatonin MT1/MT2 agonisti, suvoreksant çift oreksin antagonisti, buspiron ise 5-HT1A parsiyel agonistidir.\n- **Kinetik ve Eliminasyon:** Desmetildiazepam 40 saatten uzun yarı ömrüyle birikirken; LOT grubu doğrudan glukuronide edilerek karaciğer yetmezliğinde güvenle kullanılır. Zayıf asit fenobarbital idrar alkalinizasyonu ile atılır.\n\n> [!IMPORTANT]\n> Bu aşamaya kadar öğrenilen tüm mekanizmalar, sonraki slaytlarda incelenecek olan GABA-A klorür kanalı elektrofizyolojisinin ve klinik toksikolojinin temelini oluşturur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "İlk altı slaytta incelenen farmakolojik ilkeler bütünleştirildiğinde, aşağıdaki ifadelerden hangisi BİYOKİMYASAL VE KLİNİK OLARAK DOĞRUDUR?",
+     "options": [
+      {
+       "text": "Zaleplon ve zolpidem alfa-1 alt birimine selektif bağlandıkları için miyorelaksan etki yapmazlar",
+       "isCorrect": true,
+       "explanation": "Z-bileşikleri yalnızca hipnotik alfa-1 izoformuna bağlanır; kas tonusunu düzenleyen alfa-2 veya alfa-3 izoformlarını etkilemediklerinden miyorelaksasyon oluşturmazlar."
+      },
+      {
+       "text": "Benzodiazepinler doğrusal doz-yanıt eğrisiyle tek başına medüller solunum felcine yol açarlar",
+       "isCorrect": false,
+       "explanation": "Benzodiazepinler GABA varlığında kanal açılma frekansını artırarak plato çizen tavan etkisi gösteren güvenli ajanlardır. Doz artışıyla doğrusal şekilde derin anestezi ve medüller solunum felcine ilerleyen özellik barbitüratlara aittir."
+      },
+      {
+       "text": "Lorazepam ve oksazepam CYP3A4 ile oksitlenerek 40 saatlik desmetildiazepama dönerler",
+       "isCorrect": false,
+       "explanation": "Diazepam ve klordiazepoksit karaciğerde faz 1 oksidasyonla uzun ömürlü desmetildiazepam metabolitine dönüşen lipofilik ajanlardır. Lorazepam ve oksazepam ise doğrudan faz 2 glukuronil transferaz ile konjuge edilerek inaktive edilir."
+      },
+      {
+       "text": "Buspiron suprakiazmatik çekirdekteki melatonin MT1 ve MT2 reseptörlerini uyararak akut uyku başlatır",
+       "isCorrect": false,
+       "explanation": "Ramelteon suprakiazmatik çekirdekte sirkadiyen ritmi kontrol eden melatonin MT1 ve MT2 reseptörlerini seçici olarak uyarır. Buspiron ise serotonin 5-HT1A reseptörlerinde parsiyel agonist olarak etki gösteren bağımlılık yapmayan bir anksiyolitiktir."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Birinci Bölüm Sentezi ve Tuzak Avı",
+     "items": [
+      {
+       "text": "1,4-benzodiazepin çekirdeğinde 7. pozisyondaki elektronegatif grup sedatif aktivite için zorunludur.",
+       "isLie": false,
+       "explanation": "Klor veya nitro gibi elektronegatif gruplar reseptör afinitesini sağlar."
+      },
+      {
+       "text": "Suvoreksant uyanıklık nöropeptitleri oreksin A ve B'nin OX1 ve OX2 reseptörlerini bloke eden bir hipnotiktir.",
+       "isLie": false,
+       "explanation": "Çift oreksin reseptör antagonistidir ve uykuyu teşvik eder."
+      },
+      {
+       "text": "Karaciğer sirozu olan hastada aktif metabolit birikimini önlemek için diazepam ilk tercih olmalıdır.",
+       "isLie": true,
+       "explanation": "Bu önerme yanlıştır; diazepam sirozda temizlenemeyen 40 saatlik desmetildiazepam oluşturur, sirozda mutlaka LOT grubu (Oksazepam) seçilmelidir."
+      },
+      {
+       "text": "Ramelteon melatonin MT1/MT2 agonisti olup GABA sistemiyle etkileşmediğinden bağımlılık yapmaz.",
+       "isLie": false,
+       "explanation": "Sirkadiyen uyku başlatır ve kötüye kullanım potansiyeli taşımaz."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "İlaç / Grup",
+      "Doz-Yanıt / Kimyasal Özellik",
+      "Metabolik Yolak",
+      "Kritik Klinik Nokta"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "Barbitüratlar (Fenobarbital)"
+       },
+       {
+        "text": "Doğrusal A eğrisi (Tavan yok)"
+       },
+       {
+        "text": "Renal atılım (%20-30 değişmeden)"
+       },
+       {
+        "text": "İdrar alkalinizasyonu ile atılır",
+        "isMasked": true,
+        "hint": ""
+       }
+      ],
+      [
+       {
+        "text": "Benzodiazepinler (LOT Grubu)"
+       },
+       {
+        "text": "Plato çizen B eğrisi (Tavan var)"
+       },
+       {
+        "text": "Doğrudan Faz II glukuronidasyon"
+       },
+       {
+        "text": "Karaciğer yetmezliğinde tercih edilir",
+        "isMasked": true,
+        "hint": ""
+       }
+      ],
+      [
+       {
+        "text": "Z-Bileşikleri (Zaleplon/Zolpidem)"
+       },
+       {
+        "text": "Alfa-1 alt birim selektivitesi"
+       },
+       {
+        "text": "Hızlı hepatik inaktivasyon (<1 saat)"
+       },
+       {
+        "text": "Saf hipnoz, miyorelaksasyon yok",
+        "isMasked": true,
+        "hint": ""
+       }
+      ]
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Klordiazepoksit, diazepam, prazepam ve klorazepatın ortak aktif Faz I metaboliti desmetildiazepam olarak adlandırılır.",
+     "maskedTerm": "desmetildiazepam",
+     "hint": ""
+    },
+    {
+     "type": "active_recall",
+     "question": "A ilacı ile B ilacının doz-yanıt eğrileri arasındaki temel fark klinikte neden hayati önem taşır?",
+     "answer": "A ilacı (barbitürat) doğrusal eğri izleyerek doz arttıkça medüller solunum merkezini felç edip ölüme yol açarken; B ilacı (benzodiazepin) tavan etkisi sergileyerek plato çizer ve tek başına fatal solunum koması yapmaz, bu da yüksek terapötik güvenlik indeksi sağlar."
+    }
+   ]
+  },
+  {
+   "slideNumber": 8,
+   "title": "GABA-A Reseptör Kompleksi: Pentamerik Mimari ve Allosterik Bölgeler",
+   "synthesisNarrative": "Santral sinir sisteminin majör inhibitör nörotransmiteri olan GABA, etkisini ligand-kapılı bir klorür kanalı olan GABA-A reseptörü üzerinden gösterir.\n\n- **Pentamerik Alt Birim Mimarisi:** GABA-A reseptörü beş polipeptit alt biriminin birleşmesiyle silindirik bir kanal oluşturur. Beyindeki en yaygın ana izoform iki adet alfa-1, iki adet beta-2 ve bir adet gama-2 alt biriminden meydana gelir.\n- **Ortosterik Bağlanma Cebri:** Endojen nörotransmiter GABA, komşu alfa-1 ve beta-2 alt birimlerinin arayüzünde bulunan iki ayrı bağlanma bölgesine tutunur.\n- **Benzodiazepin Allosterik Cebri:** Benzodiazepinler ise GABA'nın bağlandığı yere değil, bir alfa-1 ile gama-2 alt biriminin arayüzünde yer alan özgül allosterik cebe bağlanırlar. Barbitüratların bağlanma bölgeleri ise benzodiazepinlerin etkileştiği bu bölgeden tamamen farklıdır.\n\n> [!NOTE]\n> Benzodiazepinlerin bağlanabilmesi için reseptör kompleksinde mutlaka bir gama alt birimi bulunmalıdır; gama alt birimi içermeyen GABA reseptörlerine benzodiazepinler bağlanamaz.",
+   "content": "Santral sinir sisteminin majör inhibitör nörotransmiteri olan GABA, etkisini ligand-kapılı bir klorür kanalı olan GABA-A reseptörü üzerinden gösterir.\n\n- **Pentamerik Alt Birim Mimarisi:** GABA-A reseptörü beş polipeptit alt biriminin birleşmesiyle silindirik bir kanal oluşturur. Beyindeki en yaygın ana izoform iki adet alfa-1, iki adet beta-2 ve bir adet gama-2 alt biriminden meydana gelir.\n- **Ortosterik Bağlanma Cebri:** Endojen nörotransmiter GABA, komşu alfa-1 ve beta-2 alt birimlerinin arayüzünde bulunan iki ayrı bağlanma bölgesine tutunur.\n- **Benzodiazepin Allosterik Cebri:** Benzodiazepinler ise GABA'nın bağlandığı yere değil, bir alfa-1 ile gama-2 alt biriminin arayüzünde yer alan özgül allosterik cebe bağlanırlar. Barbitüratların bağlanma bölgeleri ise benzodiazepinlerin etkileştiği bu bölgeden tamamen farklıdır.\n\n> [!NOTE]\n> Benzodiazepinlerin bağlanabilmesi için reseptör kompleksinde mutlaka bir gama alt birimi bulunmalıdır; gama alt birimi içermeyen GABA reseptörlerine benzodiazepinler bağlanamaz.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Beyinde en yaygın bulunan ana GABA-A reseptör izoformunda benzodiazepin allosterik bağlanma cebi hangi iki alt birimin arayüzünde konumlanmıştır?",
+     "options": [
+      {
+       "text": "Alfa-1 ve gama-2 alt birimleri arasında",
+       "isCorrect": true,
+       "explanation": "Benzodiazepin allosterik cebi alfa-1 ile gama-2 alt birimlerinin komşuluğunda kurulur; bu sayede endojen GABA'nın reseptöre ilgisini allosterik olarak artırır."
+      },
+      {
+       "text": "İki alfa-1 alt birimi arasında",
+       "isCorrect": false,
+       "explanation": "Alfa-1 alt birimleri klorür kanalının silindirik pentamerik duvarında yer alan yapısal polipeptid zincirleridir. İki alfa alt birimi arasında allosterik benzodiazepin bağlanma cebi bulunmadığından bu seçenek yanlıştır."
+      },
+      {
+       "text": "Alfa-1 ve beta-2 alt birimleri arasında",
+       "isCorrect": false,
+       "explanation": "Alfa-1 ve beta-2 alt birimleri arasındaki temas yüzeyi endojen nörotransmiter GABA molekülünün bağlandığı ortosterik bölgedir. Allosterik benzodiazepin bağlanma cebi bu bölgede değil alfa ile gama alt birimlerinin arayüzünde yer alır."
+      },
+      {
+       "text": "İki beta-2 alt birimi arasında",
+       "isCorrect": false,
+       "explanation": "Beta alt birimleri santral klorür kanalının iyon geçirgenliğini ve GABA afinitesini düzenleyen integral proteinlerdir. İki beta alt birimi arasındaki temas yüzeyinde benzodiazepin bağlanma cebi yer almadığından seçenek hatalıdır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Beyindeki ana GABA-A reseptör kompleksi iki alfa-1, iki beta-2 ve bir gama-2 alt biriminden meydana gelen pentamerik bir klorür kanalıdır.",
+     "maskedTerm": "gama-2",
+     "hint": ""
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "GABA Ortosterik Bölgesi",
+     "rightTitle": "Benzodiazepin Allosterik Cebri",
+     "leftPoints": [
+      "Alfa-1 ve beta-2 alt birim arayüzünde yer alır.",
+      "Endojen nörotransmiter GABA molekülünü bağlar.",
+      "Toplamda iki adet bağlanma noktası mevcuttur.",
+      "Klorür kanalını doğrudan açan birincil etkidir."
+     ],
+     "rightPoints": [
+      "Alfa-1 ve gama-2 alt birim arayüzünde yer alır.",
+      "Benzodiazepinler ve Z-bileşiklerini bağlar.",
+      "Pentamerik kanalda tek bir adet allosterik cep bulunur.",
+      "Kanalı doğrudan açamaz, frekansını modüle eder."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "GABA-A Reseptörünün Moleküler Mimarisi",
+     "items": [
+      {
+       "text": "GABA santral sinir sisteminin temel inhibitör iletisini sağlayan nörotransmiterdir.",
+       "isLie": false,
+       "explanation": "GABA nöronal membran hiperpolarizasyonu yaparak aksiyon potansiyeli eşiğini yükseltir."
+      },
+      {
+       "text": "Endojen GABA molekülleri alfa-1 ve beta-2 alt birimlerinin arayüzüne bağlanırlar.",
+       "isLie": false,
+       "explanation": "Pentamerik kanalda iki adet GABA bağlanma bölgesi yer alır."
+      },
+      {
+       "text": "Benzodiazepinler GABA reseptörüne bağlanmak için gama alt birimine kesinlikle ihtiyaç duymazlar.",
+       "isLie": true,
+       "explanation": "Bu önerme yanlıştır; benzodiazepin bağlanma cebi alfa ile gama arayüzünde kurulur, gama alt birimi eksikse benzodiazepin bağlanamaz."
+      },
+      {
+       "text": "Barbitüratların bağlandığı membran bölgeleri benzodiazepinlerin etkileştiği cepten farklıdır.",
+       "isLie": false,
+       "explanation": "Barbitüratlar bağımsız transmembran bölgelere bağlanırlar."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "GABA-A reseptöründe ortosterik bağlanma bölgesi ile benzodiazepin allosterik cebinin yerleşim farkı nedir?",
+     "answer": "Ortosterik bölge endojen GABA'nın bağlandığı yer olup alfa-1 ve beta-2 alt birimlerinin arayüzünde (2 adet) bulunur. Benzodiazepin allosterik cebi ise alfa-1 ile gama-2 alt birimlerinin arayüzünde (1 adet) yer alır ve endojen GABA olmaksızın kanalı doğrudan açamaz."
+    }
+   ],
+   "pdfSayfalari": [
+    27,
+    31
+   ],
+   "bolum": "3",
+   "sourcePdf": {
+    "startPage": 27,
+    "endPage": 31
+   }
+  },
+  {
+   "slideNumber": 9,
+   "title": "Klorür Kanal Kinetiği: Frekans Artışı (BZ) ve Durasyon Uzatması (Barbitürat)",
+   "synthesisNarrative": "Benzodiazepinler ve barbitüratlar GABA-A klorür kanalının iletkenliğini elektrofizyolojik olarak birbirinden tamamen farklı kinetik mekanizmalarla artırırlar.\n\n- **Benzodiazepinler (Frekans Artışı):** Benzodiazepinler klorür kanalını doğrudan kendileri açamazlar. Endojen GABA varlığında kanalın birim zamandaki açılma frekansını artırırlar. GABA olmadan etkisiz oldukları için tavan etkisine sahiptirler ve güvenlidirler.\n- **Barbitüratlar (Durasyon Uzatması):** Barbitüratlar GABA-bağımlı klorür kanallarının açık kalma süresini uzatırlar. Klorür iyonlarının hücre içine daha uzun süre akmasını sağlarlar.\n- **GABA-Mimetik Etki ve AMPA Blokajı:** Yüksek konsantrasyonlarda barbitüratlar GABA'ya ihtiyaç duymaksızın klorür kanalını doğrudan açabilirler. Ayrıca eksitatör AMPA reseptörlerini de baskıladıkları için benzodiazepinlere kıyasla çok daha derin, selektif olmayan ve ölümcül bir santral depresyon oluştururlar.\n\n> [!IMPORTANT]\n> Klasik amfi ve sınav kuralı: Benzodiazepinler klor kanalının açılma frekansını artırır; Barbitüratlar ise kanalın açık kalma süresini uzatır ve yüksek dozda doğrudan açar.",
+   "content": "Benzodiazepinler ve barbitüratlar GABA-A klorür kanalının iletkenliğini elektrofizyolojik olarak birbirinden tamamen farklı kinetik mekanizmalarla artırırlar.\n\n- **Benzodiazepinler (Frekans Artışı):** Benzodiazepinler klorür kanalını doğrudan kendileri açamazlar. Endojen GABA varlığında kanalın birim zamandaki açılma frekansını artırırlar. GABA olmadan etkisiz oldukları için tavan etkisine sahiptirler ve güvenlidirler.\n- **Barbitüratlar (Durasyon Uzatması):** Barbitüratlar GABA-bağımlı klorür kanallarının açık kalma süresini uzatırlar. Klorür iyonlarının hücre içine daha uzun süre akmasını sağlarlar.\n- **GABA-Mimetik Etki ve AMPA Blokajı:** Yüksek konsantrasyonlarda barbitüratlar GABA'ya ihtiyaç duymaksızın klorür kanalını doğrudan açabilirler. Ayrıca eksitatör AMPA reseptörlerini de baskıladıkları için benzodiazepinlere kıyasla çok daha derin, selektif olmayan ve ölümcül bir santral depresyon oluştururlar.\n\n> [!IMPORTANT]\n> Klasik amfi ve sınav kuralı: Benzodiazepinler klor kanalının açılma frekansını artırır; Barbitüratlar ise kanalın açık kalma süresini uzatır ve yüksek dozda doğrudan açar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Elektrofizyolojik kanal kinetiği açısından, benzodiazepinler ile barbitüratların GABA-A klorür kanalı üzerindeki temel farkı hangisidir?",
+     "options": [
+      {
+       "text": "Benzodiazepinler kanal açılma frekansını artırırken, barbitüratlar açık kalma süresini uzatır",
+       "isCorrect": true,
+       "explanation": "Benzodiazepinler kanalın birim zamandaki açılma frekansını artırırlar; barbitüratlar ise klorür kanalının açık kalma süresini uzatır ve yüksek dozda doğrudan açarlar."
+      },
+      {
+       "text": "Benzodiazepinler açık kalma süresini uzatırken, barbitüratlar sodyum kanalını bloke eder",
+       "isCorrect": false,
+       "explanation": "Barbitüratlar GABA-A reseptör kompleksinde klorür kanalının açık kalma süresini uzatarak nöronal inhibisyon meydana getirirler. Hem benzodiazepinlerin hem de barbitüratların birincil hedef iyonu sodyum değil klorür olduğundan bu seçenek yanlıştır."
+      },
+      {
+       "text": "Her iki grup da potasyum kanallarını aktive ederek nöronu depolarize eder",
+       "isCorrect": false,
+       "explanation": "Potasyum kanalları nöronal membran repolarizasyonunu sağlayan farklı bir iletkenlik sistemi olup sedatiflerin birincil hedefi değildir. Benzodiazepin ve barbitüratlar etkilerini klorür kanal iletkenliğini modüle ederek gösterdikleri için yanlıştır."
+      },
+      {
+       "text": "Barbitüratlar kanal açılma frekansını artırarak tavan etkisi gösterirler",
+       "isCorrect": false,
+       "explanation": "Benzodiazepinler kanal açılma frekansını artırarak plato çizen tavan etkisi gösteren klinik açıdan güvenli moleküllerdir. Tavan etkisi barbitüratlarda bulunmadığı ve barbitüratlar durasyonu uzattığı için bu önerme tamamen yanlıştır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Benzodiazepinler GABA-A klorür kanalının birim zamandaki açılma frekansını artırırken, barbitüratlar kanalın açık kalma süresini uzatırlar.",
+     "maskedTerm": "açılma frekansını",
+     "hint": ""
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Klorür Kanal Kinetiği ve İyon İletkenliği",
+     "items": [
+      {
+       "text": "Benzodiazepinler endojen GABA olmadan klorür kanalını doğrudan açamazlar.",
+       "isLie": false,
+       "explanation": "GABA'ya bağımlı allosterik modülatörlerdir; bu sayede tavan etkisi gösterirler."
+      },
+      {
+       "text": "Barbitüratlar yüksek konsantrasyonlarda doğrudan GABA-mimetik etki sergileyebilirler.",
+       "isLie": false,
+       "explanation": "GABA olmaksızın klorür kanalını doğrudan açarak kontrolsüz depresyon yaparlar."
+      },
+      {
+       "text": "Barbitüratlar klorür kanalı açılma frekansını artırırken flumazenil ile derhal bloke edilirler.",
+       "isLie": true,
+       "explanation": "Bu önerme yanlıştır; barbitüratlar kanalın açık kalma süresini uzatır ve flumazenil barbitüratları kesinlikle antagonize edemez."
+      },
+      {
+       "text": "Barbitüratlar eksitatör AMPA reseptörlerini de baskılayarak selektif olmayan derin depresyon yaparlar.",
+       "isLie": false,
+       "explanation": "AMPA blokajı barbitüratların genel anestezik ve fatal toksik etkilerine katkıda bulunur."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "İlaç Sınıfı",
+      "Kanal Kinetiği Etkisi",
+      "GABA Bağımlılığı",
+      "AMPA Reseptör Etkisi"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "Benzodiazepinler"
+       },
+       {
+        "text": "Kanal açılma frekansında artış",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Tamamen GABA'ya bağımlı"
+       },
+       {
+        "text": "AMPA reseptörlerini etkilemez"
+       }
+      ],
+      [
+       {
+        "text": "Barbitüratlar"
+       },
+       {
+        "text": "Açık kalma süresinde uzama",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Yüksek dozda GABA-mimetik (bağımsız)",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "AMPA reseptörlerini baskılar"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Barbitüratların yüksek dozda doğrudan GABA-mimetik etki göstermesi klinik açıdan neden öldürücüdür?",
+     "answer": "Benzodiazepinler endojen GABA olmadan kanalı açamadıkları için tavan etkisine sahiptir ve tek başlarına koma yapmazlar. Oysa barbitüratlar yüksek dozda GABA'ya ihtiyaç duymadan klorür kanalını doğrudan ve sürekli açık tuttukları için medüller solunum merkezini felç ederek koma ve ölüme yol açarlar."
+    }
+   ],
+   "pdfSayfalari": [
+    32,
+    36
+   ],
+   "bolum": "3",
+   "sourcePdf": {
+    "startPage": 32,
+    "endPage": 36
+   }
+  },
+  {
+   "slideNumber": 10,
+   "title": "Benzodiazepin Antagonisti: Flumazenil ve Klinik Uygulama İlkeleri",
+   "synthesisNarrative": "GABA-A reseptörü üzerindeki benzodiazepin bağlanma cebi üç farklı farmakolojik ligand tipi tarafından modüle edilir.\n\n- **Ligand Tipleri:** Agonistler GABA etkisini artırır. Ters agonistler negatif allosterik modülasyonla anksiyete ve konvülziyon oluştururlar. Antagonistler ise her iki etkiyi de nötralize eder.\n- **Flumazenil Mekanizması:** Flumazenil benzodiazepin cebine yüksek afiniteyle bağlanan kompetitif bir antagonisttir. Benzodiazepinlerin ve Z-bileşiklerinin sedatif etkilerini hızla geri çevirir; ancak barbitürat, etanol veya opioidlerin santral depresyonunu antagonize edemez.\n- **Re-Sedasyon Tehlikesi:** Flumazenilin eliminasyon yarı ömrü çok kısadır (yaklaşık 1 saat). Çoğu benzodiazepin flumazenilden çok daha uzun etkili olduğundan, hasta uyandıktan bir süre sonra flumazenilin etkisi geçince hasta yeniden derin sedasyona ve komaya girebilir.\n- **Ölümcül Risk (TCA ve Bağımlılık):** Kronik benzodiazepin bağımlısı olanlarda veya trisiklik antidepresan (TCA) zehirlenmesi bulunan olgularda flumazenil verilmesi ölümcül konvülziyon ve aritmileri tetikler.\n\n> [!IMPORTANT]\n> Flumazenil barbitürat veya alkol komasını geri çeviremez! Ayrıca trisiklik antidepresan aşırı dozunda konvülziyonları tetiklediği için uygulanması KONTRENDİKEDİR.",
+   "content": "GABA-A reseptörü üzerindeki benzodiazepin bağlanma cebi üç farklı farmakolojik ligand tipi tarafından modüle edilir.\n\n- **Ligand Tipleri:** Agonistler GABA etkisini artırır. Ters agonistler negatif allosterik modülasyonla anksiyete ve konvülziyon oluştururlar. Antagonistler ise her iki etkiyi de nötralize eder.\n- **Flumazenil Mekanizması:** Flumazenil benzodiazepin cebine yüksek afiniteyle bağlanan kompetitif bir antagonisttir. Benzodiazepinlerin ve Z-bileşiklerinin sedatif etkilerini hızla geri çevirir; ancak barbitürat, etanol veya opioidlerin santral depresyonunu antagonize edemez.\n- **Re-Sedasyon Tehlikesi:** Flumazenilin eliminasyon yarı ömrü çok kısadır (yaklaşık 1 saat). Çoğu benzodiazepin flumazenilden çok daha uzun etkili olduğundan, hasta uyandıktan bir süre sonra flumazenilin etkisi geçince hasta yeniden derin sedasyona ve komaya girebilir.\n- **Ölümcül Risk (TCA ve Bağımlılık):** Kronik benzodiazepin bağımlısı olanlarda veya trisiklik antidepresan (TCA) zehirlenmesi bulunan olgularda flumazenil verilmesi ölümcül konvülziyon ve aritmileri tetikler.\n\n> [!IMPORTANT]\n> Flumazenil barbitürat veya alkol komasını geri çeviremez! Ayrıca trisiklik antidepresan aşırı dozunda konvülziyonları tetiklediği için uygulanması KONTRENDİKEDİR.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşırı doz sedatif zehirlenmesi tablosunda flumazenil aşağıdaki ilaçlardan hangisinin oluşturduğu santral sinir sistemi depresyonunu GERİ ÇEVİREMEZ?",
+     "options": [
+      {
+       "text": "Fenobarbital",
+       "isCorrect": true,
+       "explanation": "Fenobarbital barbitürat sınıfındandır ve klorür kanalında farklı bir transmembran bölgeye bağlanır; flumazenil barbitürat veya alkol zehirlenmesinde kesinlikle etkisizdir."
+      },
+      {
+       "text": "Midazolam",
+       "isCorrect": false,
+       "explanation": "Midazolam kısa etkili bir benzodiazepin olup GABA-A benzodiazepin cebine bağlanır; flumazenil ile saniyeler içinde kompetitif olarak bloke edilir."
+      },
+      {
+       "text": "Zolpidem",
+       "isCorrect": false,
+       "explanation": "Zolpidem atipik bir Z-hipnotiğidir ve benzodiazepin cebine bağlandığı için etkileri flumazenil tarafından başarıyla geri çevrilir."
+      },
+      {
+       "text": "Diazepam",
+       "isCorrect": false,
+       "explanation": "Diazepam klasik 1,4-benzodiazepin türevidir ve oluşturduğu sedasyon kompetitif antagonist flumazenil ile hızla antagonize edilir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Flumazenilin yarı ömrü yaklaşık bir saat olduğundan, uzun etkili benzodiazepin alan olgularda antidot atılınca hasta yeniden derin sedasyona tablosuna kayabilir.",
+     "maskedTerm": "yeniden derin sedasyona",
+     "hint": ""
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "Acil servise aşırı doz ilaç alımıyla komada getirilen hastanın yanında boş diazepam kutusu ve amitriptilin (trisiklik antidepresan) bulunmuştur. EKG'de QRS uzamıştır.",
+     "options": [
+      {
+       "text": "Flumazenil verilmemelidir; hava yolu desteklenip bikarbonat infüzyonu başlanmalıdır.",
+       "isCorrect": true,
+       "explanation": "Trisiklik antidepresan alan hastada benzodiazepinler koruyucu antikonvülzandır; flumazenil verilmesi koruyucu etkiyi kırarak ölümcül nöbet ve aritmileri tetikler."
+      },
+      {
+       "text": "Hastayı komadan derhal uyandırmak için bolus intravenöz Flumazenil puşe edilmelidir.",
+       "isCorrect": false,
+       "explanation": "Ölümcül hata! TCA zehirlenmesinde flumazenil verilmesi kontrolsüz status epileptikus nöbetlerini ve letal ventriküler arresti başlatır."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Flumazenilin Klinik Özellikleri ve Kısıtlılıkları",
+     "items": [
+      {
+       "text": "Flumazenil benzodiazepin bağlanma cebinin kompetitif antagonistidir.",
+       "isLie": false,
+       "explanation": "GABA-A üzerindeki BZ ceplerine bağlanarak agonistlerin etkisini nötralize eder."
+      },
+      {
+       "text": "Flumazenil etanol, barbitürat veya genel anesteziklerin santral depresyonunu hızla düzeltir.",
+       "isLie": true,
+       "explanation": "Bu önerme yanlıştır; flumazenil yalnızca BZ cebine bağlanan ilaçları (BZ ve Z-hipnotikleri) antagonize eder; barbitürat veya alkolde tamamen etkisizdir."
+      },
+      {
+       "text": "Fizyolojik benzodiazepin bağımlısı olan bireylerde flumazenil şiddetli yoksunluk sendromunu tetikler.",
+       "isLie": false,
+       "explanation": "Reseptör blokajı aniden akut yoksunluk krizine ve konvülziyonlara yol açar."
+      },
+      {
+       "text": "Flumazenil uygulamasından sonra hastanın solunumu izlenmeye devam edilmelidir.",
+       "isLie": false,
+       "explanation": "Solunum depresyonunu düzeltici etkisi tam öngörülemez ve re-sedasyon riski yüksektir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Flumazenil uygulanan bir hastada klinik tablonun 're-sedasyon' açısından yakından izlenmesini gerektiren farmakokinetik uyumsuzluk nedir?",
+     "answer": "Flumazenil hızlı hepatik klirense sahiptir ve yarı ömrü 0.7-1.3 saat (yaklaşık 1 saat) civarındadır. Ancak diazepam ve flurazepam gibi benzodiazepinlerin ve aktif metabolitlerinin etki süreleri 20 ila 50 saati bulur. Flumazenil vücuttan atıldığında reseptörler yeniden serbest benzodiazepinlerce işgal edilir ve hasta tekrar derin komaya kayar."
+    }
+   ],
+   "pdfSayfalari": [
+    37,
+    40
+   ],
+   "bolum": "3",
+   "sourcePdf": {
+    "startPage": 37,
+    "endPage": 40
+   }
+  },
+  {
+   "slideNumber": 11,
+   "title": "Sedatif-Hipnotiklerin Uyku Mimarisi ve Organ Düzeyindeki Etkileri",
+   "synthesisNarrative": "Sedatif-hipnotik ilaçlar santral sinir sisteminin farklı bölgelerini etkileyerek karmaşık fizyolojik ve organ düzeyinde yanıtlar oluştururlar.\n\n- **Sedasyon ve Kognitif Depresyon:** Düşük dozlarda anksiyetede azalma sağlanırken kognitif işlevlerde ve psikomotor hızda doz bağımlı yavaşlama görülür. İlacın plazmada bulunduğu süre içinde yeni anıların kaydedilmesini engelleyen doza bağımlı anterograd amnezi gelişir.\n- **Uyku Mimarisi Değişiklikleri:** Sedatif-hipnotiklerin tümü uykuya dalma süresini kısaltırlar. Evre 2 NREM uyku süresini belirgin şekilde artırırlar; buna karşın fizyolojik REM uykusunu ve Evre 4 yavaş dalga derin uykusunu baskılarlar.\n- **REM Reboundu:** İlacın aniden kesilmesi durumunda baskılanmış olan REM uykusu şiddetli bir geri tepme gösterir; hasta kabuslar ve uykusuzlukla seyreder.\n- **Kas Gevşetici Etki:** Benzodiazepinler omurilik polisinaptik reflekslerini ve internöronal iletimi inhibe ederek iskelet kası tonusunu azaltırlar; oysa Z-hipnotikleri kas gevşetici etki yapmazlar.\n\n> [!NOTE]\n> Eszopiklon, zaleplon ve zolpidem gibi yeni Z-hipnotikleri, klasik benzodiazepinlere kıyasla uyku mimarisini çok daha az bozarlar.",
+   "content": "Sedatif-hipnotik ilaçlar santral sinir sisteminin farklı bölgelerini etkileyerek karmaşık fizyolojik ve organ düzeyinde yanıtlar oluştururlar.\n\n- **Sedasyon ve Kognitif Depresyon:** Düşük dozlarda anksiyetede azalma sağlanırken kognitif işlevlerde ve psikomotor hızda doz bağımlı yavaşlama görülür. İlacın plazmada bulunduğu süre içinde yeni anıların kaydedilmesini engelleyen doza bağımlı anterograd amnezi gelişir.\n- **Uyku Mimarisi Değişiklikleri:** Sedatif-hipnotiklerin tümü uykuya dalma süresini kısaltırlar. Evre 2 NREM uyku süresini belirgin şekilde artırırlar; buna karşın fizyolojik REM uykusunu ve Evre 4 yavaş dalga derin uykusunu baskılarlar.\n- **REM Reboundu:** İlacın aniden kesilmesi durumunda baskılanmış olan REM uykusu şiddetli bir geri tepme gösterir; hasta kabuslar ve uykusuzlukla seyreder.\n- **Kas Gevşetici Etki:** Benzodiazepinler omurilik polisinaptik reflekslerini ve internöronal iletimi inhibe ederek iskelet kası tonusunu azaltırlar; oysa Z-hipnotikleri kas gevşetici etki yapmazlar.\n\n> [!NOTE]\n> Eszopiklon, zaleplon ve zolpidem gibi yeni Z-hipnotikleri, klasik benzodiazepinlere kıyasla uyku mimarisini çok daha az bozarlar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sedatif-hipnotiklerin normal uyku mimarisi üzerindeki etkileri polisomnografi ile incelendiğinde aşağıdakilerden hangisi izlenir?",
+     "options": [
+      {
+       "text": "Evre 2 NREM süresi uzar, REM ve yavaş dalga derin uyku süresi azalır",
+       "isCorrect": true,
+       "explanation": "Sedatif-hipnotikler uyku latansını kısaltıp Evre 2 NREM süresini belirgin uzatırlar; buna karşılık fizyolojik REM ve Evre 4 yavaş dalga uykusunu baskılarlar."
+      },
+      {
+       "text": "REM uykusunun toplam uyku süresine oranı iki katına çıkar",
+       "isCorrect": false,
+       "explanation": "Sedatif-hipnotikler REM süresini artırmazlar; tam aksine doza bağımlı olarak REM uykusunu belirgin biçimde kısaltıp baskılarlar."
+      },
+      {
+       "text": "Uykuya dalma süresi (latans) belirgin derecede uzar",
+       "isCorrect": false,
+       "explanation": "Uyku latansı hastanın yatağa yattıktan sonra uykuya dalıncaya kadar geçen süreyi tanımlayan polisomnografik bir parametredir. Hipnotik ilaçların temel klinik hedefi bu süreyi kısaltarak hastanın hızla uykuya geçişini sağlamaktır."
+      },
+      {
+       "text": "Evre 4 delta yavaş dalga uykusu iki kat uzar",
+       "isCorrect": false,
+       "explanation": "Evre 4 derin yavaş dalga uykusu santral dinlenmeyi ve doku rejenerasyonunu sağlayan kritik bir fizyolojik evredir. Sedatif ve hipnotik ilaçlar bu derin yavaş dalga uykusunu belirgin şekilde baskılayıp azalttıkları için seçenek yanlıştır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sedatif-hipnotik ilaçlar uykuya dalma süresini kısaltırken fizyolojik REM uykusunu ve Evre 4 yavaş dalga derin uykusunu baskılarlar.",
+     "maskedTerm": "REM uykusunu",
+     "hint": ""
+    },
+    {
+     "type": "causal_chain",
+     "title": "Hipnotik Kesilmesi Sonrası REM Reboundu Kaskadı",
+     "steps": [
+      "1. Kronik Hipnotik Kullanımı: Haftalar boyunca alınan sedatif-hipnotik ilaç kolinerjik REM merkezlerini baskılar.",
+      "2. İlacın Aniden Kesilmesi: İlaç dolaşımdan hızla çekilince REM baskılayıcı inhibitör tonus aniden ortadan kalkar.",
+      "3. Geri Tepme ve Kabuslar: Kompansatuar mekanizmayla REM süresi ve yoğunluğu patlar; canlı kabuslar ve şiddetli uykusuzluk yaşanır."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Organ Düzeyindeki Etkiler ve Kas Gevşemesi",
+     "items": [
+      {
+       "text": "Benzodiazepinler ilacın aktif olduğu dönemde olayların kaydedilmesini önleyen anterograd amnezi yaparlar.",
+       "isLie": false,
+       "explanation": "Bu etki endoskopik ve cerrahi girişimlerde hasta konforu için yararlıdır."
+      },
+      {
+       "text": "Benzodiazepinler omurilik internöronal iletimini deprese ederek iskelet kası tonusunu azaltırlar.",
+       "isLie": false,
+       "explanation": "Santral miyorelaksan etkileri spinal polisinaptik refleks inhibisyonuna dayanır."
+      },
+      {
+       "text": "Zolpidem ve zaleplon güçlü kas gevşetici etkileri nedeniyle spastisite ve disk hernisi tedavisinde kullanılır.",
+       "isLie": true,
+       "explanation": "Bu önerme yanlıştır; Z-hipnotikleri alfa-1 selektiftir, hiçbir kas gevşetici veya spazmolitik etkileri yoktur."
+      },
+      {
+       "text": "Sağlıklı bireylerde standart hipnotik dozlarda kardiyovasküler sistem üzerinde önemli bir depresyon izlenmez.",
+       "isLie": false,
+       "explanation": "Ancak hipovolemi veya kalp yetmezliği olanlarda hipotansiyon riski artar."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Anterograd amnezi nedir ve sedatif-hipnotik tedavisinde ne zaman terapötik bir kazanç, ne zaman bir yan etki olarak değerlendirilir?",
+     "answer": "Anterograd amnezi, ilacın plazmada aktif olduğu süre boyunca meydana gelen olayların hafızaya kaydedilememesi durumudur. Endoskopi, bronkoskopi veya diş cerrahisi gibi rahatsızlık verici girişimlerde hastanın operasyon anını hatırlamaması istenen bir kazançtır. Ancak ayaktan çalışan bir hastada günlük yaşam olaylarını unutmaya yol açması ciddi bir advers etkidir."
+    }
+   ],
+   "pdfSayfalari": [
+    41,
+    45
+   ],
+   "bolum": "4",
+   "sourcePdf": {
+    "startPage": 41,
+    "endPage": 45
+   }
+  },
+  {
+   "slideNumber": 12,
+   "title": "Klinik Endikasyonlar: Anksiyete Bozuklukları ve Akut Nöbet Yönetimi",
+   "synthesisNarrative": "Sedatif-hipnotiklerin klinik kullanımı anksiyete bozuklukları, nöbet acilleri ve premedikasyon protokollerinde yoğunlaşır.\n\n- **Anksiyete ve Panik Bozukluk:** Akut anksiyete krizlerinde, panik bozuklukta ve agorafobide hızlı semptom kontrolü için benzodiazepinler kullanılır. Alprazolam panik atakların önlenmesinde diğer benzodiazepinlere kıyasla daha selektif bir klinik etkinlik gösterir.\n- **Kronik Anksiyetede Dönüşüm:** Günümüzde jeneralize anksiyete bozukluğunda bağımlılık riski nedeniyle SSRI ve SNRI grubu antidepresanlar birinci tercih haline gelmiştir; benzodiazepinler ise geçiş döneminde sınırlı süreyle verilir.\n- **Nöbet Acilleri ve Status Epileptikus:** İntravenöz Diazepam ve Lorazepam status epileptikusun sonlandırılmasında ilk basamak hayat kurtarıcı ajanlardır. Klonazepam kronik antiepileptik tedavide yer alır.\n- **Z-Bileşikleri Uyarısı:** Alfa-1 selektif zolpidem, zaleplon ve eszopiklonun antikonvülzan etkisi bulunmaz; nöbet hastalarında kullanılmazlar.\n\n> [!IMPORTANT]\n> Status epileptikus tablosunda damar yolu açılarak intravenöz Diazepam veya Lorazepam puşe edilmesi nöbet deşarjlarını durduran ilk basamak acil tedavi standardıdır.",
+   "content": "Sedatif-hipnotiklerin klinik kullanımı anksiyete bozuklukları, nöbet acilleri ve premedikasyon protokollerinde yoğunlaşır.\n\n- **Anksiyete ve Panik Bozukluk:** Akut anksiyete krizlerinde, panik bozuklukta ve agorafobide hızlı semptom kontrolü için benzodiazepinler kullanılır. Alprazolam panik atakların önlenmesinde diğer benzodiazepinlere kıyasla daha selektif bir klinik etkinlik gösterir.\n- **Kronik Anksiyetede Dönüşüm:** Günümüzde jeneralize anksiyete bozukluğunda bağımlılık riski nedeniyle SSRI ve SNRI grubu antidepresanlar birinci tercih haline gelmiştir; benzodiazepinler ise geçiş döneminde sınırlı süreyle verilir.\n- **Nöbet Acilleri ve Status Epileptikus:** İntravenöz Diazepam ve Lorazepam status epileptikusun sonlandırılmasında ilk basamak hayat kurtarıcı ajanlardır. Klonazepam kronik antiepileptik tedavide yer alır.\n- **Z-Bileşikleri Uyarısı:** Alfa-1 selektif zolpidem, zaleplon ve eszopiklonun antikonvülzan etkisi bulunmaz; nöbet hastalarında kullanılmazlar.\n\n> [!IMPORTANT]\n> Status epileptikus tablosunda damar yolu açılarak intravenöz Diazepam veya Lorazepam puşe edilmesi nöbet deşarjlarını durduran ilk basamak acil tedavi standardıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Acil serviste beş dakikadan uzun süren status epileptikus krizini durdurmak amacıyla intravenöz yolla ilk tercih edilen benzodiazepinler hangileridir?",
+     "options": [
+      {
+       "text": "İntravenöz Diazepam ve Lorazepam",
+       "isCorrect": true,
+       "explanation": "İntravenöz diazepam ve lorazepam santral inhibitör GABA tonusunu anında yükselterek status epileptikus deşarjlarını kesen ilk basamak altın standarttır."
+      },
+      {
+       "text": "Oral Triazolam ve Zaleplon",
+       "isCorrect": false,
+       "explanation": "Triazolam çok kısa yarılanma ömrüne sahip olan ve yalnızca uykusuzluk tedavisinde tercih edilen oral bir hipnotiktir. Zaleplon ise alfa-1 seçiciliği nedeniyle status epileptikus tablosunda antikonvülzan etkinlik gösteremez."
+      },
+      {
+       "text": "İntravenöz Zolpidem ve Eszopiklon",
+       "isCorrect": false,
+       "explanation": "Z-bileşikleri yalnızca hipnotik alfa-1 izoformuna bağlanırlar; antikonvülzan etkileri olmadığı için nöbet tedavisinde kesinlikle kullanılmazlar."
+      },
+      {
+       "text": "Oral Buspiron ve Ramelteon",
+       "isCorrect": false,
+       "explanation": "Buspiron 5-HT1A agonisti anksiyolitik, ramelteon melatonin agonistidir; her ikisi de nöbet eşiğini yükseltmez ve status acilinde etkisizdir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Status epileptikus krizinin acil hastane tedavisinde damar yoluyla uygulanan intravenöz Diazepam ve Lorazepam ilk basamak hayat kurtarıcı ajanlardır.",
+     "maskedTerm": "Diazepam",
+     "hint": ""
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "35 yaşında hasta acil servise jeneralize tonik-klonik nöbet tablosunda getirildi; nöbetin 8 dakikadır aralıksız sürdüğü öğrenildi.",
+     "options": [
+      {
+       "text": "İntravenöz yavaş puşe Lorazepam (veya Diazepam) uygulanmalıdır.",
+       "isCorrect": true,
+       "explanation": "İntravenöz lorazepam nöbet deşarjlarını dakikalar içinde durdurarak hipoksik beyin hasarını önleyen ilk basamak standart protokoldür."
+      },
+      {
+       "text": "Hastaya oral yoldan Zolpidem verilerek nöbetin durması beklenmelidir.",
+       "isCorrect": false,
+       "explanation": "Ölümcül hata! Zolpidemin antikonvülzan etkisi yoktur ve nöbet geçiren bilinci kapalı hastaya oral ilaç verilmesi ölümcül aspirasyona yol açar."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Klinik Endikasyon",
+      "İlk Tercih İlaç",
+      "Etki Başlangıcı",
+      "Kullanım Kısıtlılığı"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "Status Epileptikus"
+       },
+       {
+        "text": "İntravenöz Diazepam / Lorazepam",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Dakikalar içinde anında yanıt"
+       },
+       {
+        "text": "Solunum depresyonu riski izlenmelidir"
+       }
+      ],
+      [
+       {
+        "text": "Panik Bozukluk ve Agorafobi"
+       },
+       {
+        "text": "Alprazolam (seçici etkinlik)",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Hızlı anksiyolitik rahatlama"
+       },
+       {
+        "text": "Bağımlılık ve kesilmede rebound panik"
+       }
+      ],
+      [
+       {
+        "text": "Kronik Yaygın Anksiyete (YAB)"
+       },
+       {
+        "text": "SSRI / SNRI Antidepresanlar"
+       },
+       {
+        "text": "2-4 hafta gecikmeli başlangıç",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "İlk haftalarda BZ köprü tedavisi gerekebilir"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Alprazolamın diğer benzodiazepinlere kıyasla panik bozukluk tedavisindeki ayırt edici klinik özelliği nedir?",
+     "answer": "Alprazolam panik bozukluk ve agorafobi tedavisinde diğer klasik benzodiazepinlerden daha selektif ve belirgin bir klinik etkinlik gösterir; panik atakların sıklığını ve şiddetini hızla azaltır ancak kısa yarı ömrü nedeniyle ani kesilmede şiddetli rebound anksiyete ve panik yapabilir."
+    }
+   ],
+   "pdfSayfalari": [
+    46,
+    50
+   ],
+   "bolum": "4",
+   "sourcePdf": {
+    "startPage": 46,
+    "endPage": 50
+   }
+  },
+  {
+   "slideNumber": 13,
+   "title": "Klinik Toksikoloji, Tolerans, Bağımlılık ve Kontrendikasyonlar",
+   "synthesisNarrative": "Sedatif-hipnotiklerin klinik kullanımını sınırlayan en önemli engeller tolerans, bağımlılık, toksisite ve spesifik kontrendikasyonlardır.\n\n- **Tolerans:** Kronik kullanımda beyindeki GABA reseptör sayısının azalması (down-regülasyon) sonucu doz artırımı gerekir. Sedatif etkilere tolerans gelişirken letal doza tolerans gelişmez; bu durum güvenlik aralığını daraltır.\n- **Bağımlılık ve Kesilme:** İlacın aniden kesilmesi anksiyete, tremor, terleme ve jeneralize konvülziyonlarla seyreden yoksunluk sendromu başlatır. Triazolam gibi kısa ömürlü ajanlarda yoksunluk çok daha şiddetlidir.\n- **Ölümcül Etkileşim:** Benzodiazepinler tek başlarına nadiren ölümcül koma yaparlar; ancak alkol veya opioidlerle birlikte alındıklarında fatal doz onda birine düşer ve derin medüller solunum felci gelişir.\n- **Akut Porfiriya Yasağı:** Barbitüratlar mikrozomal enzimleri ve ALA sentaz enzimini güçlü şekilde indüklerler. Akut intermitan porfiryalı hastalarda porfirin sentezini patlatarak ölümcül paralitik atak başlattıkları için KESİNLİKLE KONTRENDİKEDİR.\n- **Gebelikte Kullanım:** Benzodiazepinler Kategori D/X, barbitüratlar Kategori D, Z-hipnotikleri Kategori C, buspiron ise Kategori B'dir.\n\n> [!CAUTION]\n> Barbitüratlar ALA sentaz indüksiyonu yaparak akut intermitan porfiriyada fatal kriz tetikler; kesinlikle KONTRENDİKEDİR! Benzodiazepinler ise alkol ile kombine edildiğinde öldürücüdür.",
+   "content": "Sedatif-hipnotiklerin klinik kullanımını sınırlayan en önemli engeller tolerans, bağımlılık, toksisite ve spesifik kontrendikasyonlardır.\n\n- **Tolerans:** Kronik kullanımda beyindeki GABA reseptör sayısının azalması (down-regülasyon) sonucu doz artırımı gerekir. Sedatif etkilere tolerans gelişirken letal doza tolerans gelişmez; bu durum güvenlik aralığını daraltır.\n- **Bağımlılık ve Kesilme:** İlacın aniden kesilmesi anksiyete, tremor, terleme ve jeneralize konvülziyonlarla seyreden yoksunluk sendromu başlatır. Triazolam gibi kısa ömürlü ajanlarda yoksunluk çok daha şiddetlidir.\n- **Ölümcül Etkileşim:** Benzodiazepinler tek başlarına nadiren ölümcül koma yaparlar; ancak alkol veya opioidlerle birlikte alındıklarında fatal doz onda birine düşer ve derin medüller solunum felci gelişir.\n- **Akut Porfiriya Yasağı:** Barbitüratlar mikrozomal enzimleri ve ALA sentaz enzimini güçlü şekilde indüklerler. Akut intermitan porfiryalı hastalarda porfirin sentezini patlatarak ölümcül paralitik atak başlattıkları için KESİNLİKLE KONTRENDİKEDİR.\n- **Gebelikte Kullanım:** Benzodiazepinler Kategori D/X, barbitüratlar Kategori D, Z-hipnotikleri Kategori C, buspiron ise Kategori B'dir.\n\n> [!CAUTION]\n> Barbitüratlar ALA sentaz indüksiyonu yaparak akut intermitan porfiriyada fatal kriz tetikler; kesinlikle KONTRENDİKEDİR! Benzodiazepinler ise alkol ile kombine edildiğinde öldürücüdür.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Hepatik ALA sentaz enzimini güçlü şekilde indükleyerek porfirin sentezini artıran ve akut intermitan porfiriyada ölümcül kriz tetiklediği için KESİNLİKLE KONTRENDİKE olan ilaç sınıfı hangisidir?",
+     "options": [
+      {
+       "text": "Barbitüratlar (Örn. Fenobarbital)",
+       "isCorrect": true,
+       "explanation": "Barbitüratlar karaciğer mikrozomal enzimlerini ve ALA sentazı güçlü biçimde indükler; porfiryalı hastalarda nörotoksik porfirin birikimine ve ölümcül felce yol açar."
+      },
+      {
+       "text": "Benzodiazepinler",
+       "isCorrect": false,
+       "explanation": "Benzodiazepinler karaciğerde sitokrom P450 enzimlerini güçlü bir şekilde indüklemeyen güvenli sedatif hipnotik ajanlardır. Akut intermittan porfiriya krizini tetikleyen ALA sentaz enzim indüksiyonu barbitüratlara özgü olduğundan yanlıştır."
+      },
+      {
+       "text": "Melatonin agonistleri (Ramelteon)",
+       "isCorrect": false,
+       "explanation": "Ramelteon suprakiazmatik çekirdekteki melatonin reseptörlerini uyararak uyku uyanıklık döngüsünü düzenleyen bir agonisttir. Karaciğerdeki porfirin biyosentezi yolakları ve ALA sentaz indüksiyonu ile herhangi bir ilişkisi bulunmaz."
+      },
+      {
+       "text": "Oreksin antagonistleri (Suvoreksant)",
+       "isCorrect": false,
+       "explanation": "Suvoreksant oreksin OX1 ve OX2 reseptörlerini bloke ederek santral uyanıklık uyarısını kesen yeni nesil bir hipnotiktir. Hepatik mikrozomal enzimleri indükleme ve akut porfiriya atağı başlatma potansiyeline sahip olmadığından yanlıştır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Barbitüratlar karaciğerde ALA sentaz enzimini güçlü şekilde indükledikleri için porfiriya öyküsü olan hastalarda kullanımları kesinlikle kontrendikedir.",
+     "maskedTerm": "ALA sentaz",
+     "hint": ""
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Toksisite, Tolerans ve Yoksunluk Dinamikleri",
+     "items": [
+      {
+       "text": "Sedatif-hipnotiklerin uzun süreli kullanımı ile sedatif etkilere tolerans gelişebilir.",
+       "isLie": false,
+       "explanation": "Tolerans BZ reseptör down-regülasyonuna bağlıdır."
+      },
+      {
+       "text": "Tolerans geliştikçe sedatif etkinin yanında letal doz sınırı da aynı oranda güvenle yükselir.",
+       "isLie": true,
+       "explanation": "Bu önerme yanlıştır; letal doza karşı anlamlı tolerans gelişmez, bu nedenle terapötik güvenlik penceresi giderek daralır."
+      },
+      {
+       "text": "Kısa yarı ömürlü triazolam gibi ilaçların ani kesilmesi daha şiddetli yoksunluk belirtilerine yol açar.",
+       "isLie": false,
+       "explanation": "Dolaşımdan aniden çekilme santral eksitabilite patlaması yapar."
+      },
+      {
+       "text": "Buspiron fetal toksisitesi kanıtlanmamış olan Kategori B grubu bir anksiyolitiktir.",
+       "isLie": false,
+       "explanation": "Sedatifler içinde gebelikte en güvenli farmakolojik profile sahiptir."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "İlaç Sınıfı",
+      "FDA Gebelik Kategorisi",
+      "Temel Toksisite Mekanizması",
+      "Önemli Kontrendikasyon"
+     ],
+     "tableRows": [
+      [
+       {
+        "text": "Barbitüratlar"
+       },
+       {
+        "text": "Kategori D"
+       },
+       {
+        "text": "Medüller solunum felci ve mikrozomal indüksiyon"
+       },
+       {
+        "text": "Akut intermitan porfiriya (KESİN YASAK)",
+        "isMasked": true,
+        "hint": ""
+       }
+      ],
+      [
+       {
+        "text": "Benzodiazepinler"
+       },
+       {
+        "text": "Kategori D veya X",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Teratojenite, floppy infant, bağımlılık"
+       },
+       {
+        "text": "Alkol veya opioid ile birlikte alım"
+       }
+      ],
+      [
+       {
+        "text": "Buspiron"
+       },
+       {
+        "text": "Kategori B (En güvenli)",
+        "isMasked": true,
+        "hint": ""
+       },
+       {
+        "text": "Hafif baş dönmesi ve baş ağrısı"
+       },
+       {
+        "text": "Akut panik krizi (Etkisizdir)"
+       }
+      ]
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Barbitüratların akut intermitan porfiriyalı hastalarda KESİNLİKLE KONTRENDİKE olmasının biyokimyasal mekanizması nedir?",
+     "answer": "Barbitüratlar karaciğerde mikrozomal enzimleri ve heme sentezinin hız kısıtlayıcı ana enzimi olan delta-aminolevulinik asit (ALA) sentazı çok güçlü şekilde indüklerler. Heme sentez yolunda genetik enzim bloğu bulunan porfiriyalı hastalarda bu indüksiyon toksik porfirin ara ürünlerinin (ALA ve PBG) patlamasına yol açarak ölümcül abdominal ağrı, nöropsikiyatrik kriz ve periferik solunum felcine neden olur."
+    }
+   ],
+   "pdfSayfalari": [
+    51,
+    55
+   ],
+   "bolum": "4",
+   "sourcePdf": {
+    "startPage": 51,
+    "endPage": 55
+   }
+  },
+  {
+   "slideNumber": 14,
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Sedatif ve Hipnotik İlaçlar",
+   "isGameFinale": true,
+   "synthesisNarrative": "Tebrikler! Prof. Dr. Mehmet Özdemir tarafından sunulan Sedatif ve Hipnotik İlaçlar dersini başarıyla tamamladınız.\n\nBu final aşamasında, amfi sunumunda ele alınan doz-yanıt eğrilerini, GABA reseptör kinetiğini, metabolizma yolaklarını ve toksikoloji kurallarını pekiştirmek için 4 farklı ders sonu oyununu tamamlayacaksınız:\n- **Sıralama Oyunu (`sequence_order`):** Doz artışıyla gelişen santral depresyon basamaklarını sıralayınız.\n- **Tahmin Kaydırıcısı (`estimate_slider`):** Desmetildiazepamın aktif eliminasyon yarı ömrünü tahmin ediniz.\n- **Denge Bozumu (`perturbation`):** Barbitürat maruziyetinde ALA sentaz ve porfirin sentez yolundaki kaskadı analiz ediniz.\n- **Metin Onarımı (`fix_the_text`):** Tıp öğrencisi özetindeki farmakolojik hataları tespit edip düzeltiniz.",
+   "content": "Tebrikler! Sedatif ve Hipnotik İlaçlar dersini tamamladınız.\n\nDers sonu oyunlarıyla öğrendiklerinizi pekiştiriniz:\n- Sıralama Oyunu: Santral depresyon basamakları.\n- Tahmin Kaydırıcısı: Desmetildiazepam yarı ömrü.\n- Denge Bozumu: Barbitürat ve porfirin sentez kaskadı.\n- Metin Onarımı: Kanal kinetiği ve flumazenil antagonizması.",
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "prompt": "Doğrusal doz-yanıt eğrisine sahip bir sedatif-hipnotik ilacın (barbitürat) artan dozlarında ortaya çıkan santral sinir sistemi depresyon basamaklarını en düşük dozdan en yüksek doza doğru sıralayınız.",
+     "explanation": "Doğrusal doz-yanıt eğrisinde doz arttıkça sırasıyla sedasyon, hipnoz, genel anestezi ve medüller solunum felci gelişerek ölüme yol açar.",
+     "steps": [
+      "Sedasyon (Anksiyoliz ve sakinleşme düzeyi)",
+      "Hipnoz (Uyku durumunun başlatılması ve sürdürülmesi)",
+      "Genel Anestezi (Bilinç kaybı ve cerrahi anestezi düzeyi)",
+      "Medüller Solunum Felci ve Koma (Ölümcül merkez depresyonu)"
+     ]
+    },
+    {
+     "type": "estimate_slider",
+     "items": [
+      {
+       "prompt": "Diazepam ve klordiazepoksitin majör aktif metaboliti olan desmetildiazepamın ortalama eliminasyon yarılanma ömrü kaç saattir?",
+       "unit": "saat",
+       "min": 10,
+       "max": 100,
+       "step": 5,
+       "answer": 45,
+       "tolerance": 10,
+       "explanation": "Ders notunda desmetildiazepamın eliminasyon yarılanma ömrünün kırk saatten daha uzun olduğu ve kümülasyon yaptığı bildirilmiştir."
+      }
+     ]
+    },
+    {
+     "type": "perturbation",
+     "scenario": "Akut intermitan porfiriyalı asemptomatik bir hastaya sedasyon sağlamak amacıyla yüksek dozda fenobarbital (barbitürat) infüzyonu uygulanmıştır.",
+     "question": "Bu müdahale sonrasında hastanın hepatik enzim ve porfirin parametrelerinde ne tür değişimler beklenir?",
+     "parameters": [
+      {
+       "name": "Karaciğer mikrozomal ALA sentaz enzim aktivitesi",
+       "correct": "up",
+       "explanation": "Barbitüratlar hepatik ALA sentaz enzim ekspresyonunu katlanarak indükler ve uyarırlar."
+      },
+      {
+       "name": "Kanda biriken nörotoksik porfirin öncülleri (ALA ve PBG) düzeyi",
+       "correct": "up",
+       "explanation": "Enzim bloğu nedeniyle sentez tamamlanamaz ve toksik ara ürünler kana taşarak patlama yapar."
+      },
+      {
+       "name": "Hastanın periferik solunum kas gücü ve hayati fonksiyon stabilitesi",
+       "correct": "down",
+       "explanation": "Toksik porfirin birikimi periferik nöropatiye, paraliziye ve medüller solunum arrestine yol açar."
+      }
+     ]
+    },
+    {
+     "type": "fix_the_text",
+     "text": "Benzodiazepinler GABA-A klorür kanalının açık kalma süresini uzatırlar ve endojen GABA olmadan da kanalı doğrudan açabilirler. Barbitüratlar ise kanalın açılma frekansını artırırlar ve etkileri flumazenil ile derhal geri çevrilir.",
+     "errors": [
+      {
+       "wrong": "açık kalma süresini uzatırlar",
+       "correct": "açılma frekansını artırırlar",
+       "options": [
+        "açılma frekansını artırırlar",
+        "sodyum kanalını tıkarlar",
+        "potasyum çıkışını durdururlar"
+       ],
+       "explanation": "Benzodiazepinler kanalın açık kalma süresini değil, açılma frekansını (sıklığını) artırırlar."
+      },
+      {
+       "wrong": "açılma frekansını artırırlar",
+       "correct": "açık kalma süresini uzatırlar",
+       "options": [
+        "açık kalma süresini uzatırlar",
+        "kalsiyum girişini hızlandırırlar",
+        "reseptör sayısını katlarlar"
+       ],
+       "explanation": "Klorür kanalının açık kalma süresini (durasyonunu) uzatanlar barbitüratlardır."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "sayfaHaritasi": "teyitli",
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "matchedPastQuestionsCount": 5,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

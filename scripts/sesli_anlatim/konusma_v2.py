@@ -182,9 +182,21 @@ def capalar(d):
     out = []
     for b in d["bolumler"]:
         for p in b["paragraflar"]:
-            out.append([{"ses": c["ses"].strip(), "sayfa": (c.get("slayt") or {}).get("sayfa", p.get("sayfa")),
-                         "satir": (c.get("slayt") or {}).get("satir") or [], "sekil": (c.get("slayt") or {}).get("sekil")}
-                        for c in p["cumleler"]])
+            para_capa = []
+            for c in p["cumleler"]:
+                sl = c.get("slayt") or {}
+                it = {
+                    "ses": c["ses"].strip(),
+                    "sayfa": sl.get("sayfa", p.get("sayfa")),
+                    "satir": sl.get("satir") or [],
+                    "sekil": sl.get("sekil"),
+                }
+                if sl.get("madde") is not None:
+                    it["madde"] = sl["madde"]
+                if sl.get("resim") is not None:
+                    it["resim"] = sl["resim"]
+                para_capa.append(it)
+            out.append(para_capa)
     return out
 
 

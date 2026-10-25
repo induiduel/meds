@@ -1,19 +1,18 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 349,
-  "baslik": "Kurul 2 Tam Amfi Derinliği Güncellemesi: Tüm Dersler Eksiksiz ve Derinlemesine Genişletildi",
+  "onem": 350,
+  "baslik": "Kurul 2 Tam Amfi Derinliği Güncellemesi: Milestone 7 (Ders 19, 20, 21) Tamamlandı",
   "maddeler": [
-    "Ders 59 (Tıbbi Biyoloji - Psikiyatrik Hastalıklar ve Genetik Analizi): 82 sayfa tam amfi dersi kapsamı (15 bölüm, 82 paragraf, 164 cümle, 3.509 kelime, 26,7 dk EMA GPU sesli anlatım), 24 slayt Öğren destesi, 13 çizim şeması, 4 çıkmış soru bağlantısı ve gömülü .medspak paketi ile 0 atlanan sayfa garantisi.",
-    "Ders 54 (Psikiyatri - Yaygın Anksiyete Bozukluğu): 20 sayfa tam amfi dersi kapsamı (12 bölüm, 20 paragraf, 103 cümle, 2.013 kelime, 14,8 dk EMA GPU sesli anlatım), 20 slayt Öğren destesi, 12 çizim şeması, 3 çıkmış soru bağlantısı ve gömülü .medspak paketi.",
-    "Ders 64 (Beyin Cerrahisi - Omurga ve Omurilik Tümörleri): 20 sayfa tam amfi dersi kapsamı (12 bölüm, 20 paragraf, 86 cümle, 1.795 kelime, 13,3 dk EMA GPU sesli anlatım), 16 slayt Öğren destesi, 12 çizim şeması, 5 çıkmış soru bağlantısı ve gömülü .medspak paketi.",
-    "Ders 63 (Farmakoloji - Antidepresan İlaçlar), Ders 58 (Alkoller), Ders 60 (Miyorelaksanlar), Ders 61 (Nikotin), Ders 62 (Kraniyal Sinir Muayenesi), Ders 06 (Ağrı Yolları) ve Ders 02 (Bilinç Bozukluğu): Tüm atlanan slaytlar ve yüzeysel özetler tam amfi dersi derinliğinde (her biri 2.000–3.500 kelime, 15–27 dk) baştan sona eksiksiz tamamlandı.",
-    "Kurul 2 Genel Kapsamı: Kurul 2'deki 33 arşiv dersinin tamamı en az 1.790 kelime ve en az 13,5 dakika derinliğe kavuşturularak hiçbir dersin yüzeysel veya atlamalı geçilmemesi sağlandı.",
+    "Ders 21 (Tıbbi Farmakoloji - Sedatif ve Hipnotik İlaçlar): 55 sayfa tam amfi dersi kapsamı (18 bölüm, 55 paragraf, 223 cümle, 4.239 kelime, 32,4 dk EMA GPU sesli anlatım), 14 slayt Öğren destesi, 12 çizim şeması, 5 doğrulanmış çıkmış soru bağlantısı, %100 lazer metin takibi ve gömülü .medspak paketi ile 0 atlanan sayfa garantisi.",
+    "Ders 20 (Psikiyatri - Psikiyatrik Tedaviler): 29 sayfa tam amfi dersi kapsamı (14 bölüm, 29 paragraf, 150 cümle, 3.250 kelime, 27 dk EMA GPU sesli anlatım), 12 slayt Öğren destesi, 10 çizim şeması, 4 çıkmış soru bağlantısı ve gömülü .medspak paketi.",
+    "Ders 19 (Psikiyatri - Bipolar Bozukluk ve İlgili Bozukluklar): 36 sayfa tam amfi dersi kapsamı (12 bölüm, 36 paragraf, 130 cümle, 2.750 kelime, 23 dk EMA GPU sesli anlatım), 12 slayt Öğren destesi, 8 çizim şeması, 4 çıkmış soru bağlantısı ve gömülü .medspak paketi.",
+    "Milestone 7 Kapsamı: Psikiyatri ve Tıbbi Farmakoloji bloklarına ait bu 3 kritik ders yüzeysel anlatımlardan tamamen arındırılarak amfi dersi standartlarında derinlemesine işlendi.",
     "Tüm seslendirmeler EMA Lightning yerel GPU ile sıfır harici servis bağımlılığıyla üretilmiş, lazer metin takipleri ve canlı çizim şemaları %100 doğrulanmıştır."
   ],
   "eklenen": [
-    "Kurul 2 Tıbbi Biyoloji 'Psikiyatrik Hastalıklar ve Genetik Analizi' (2025-2026 Arşivi, 82 sayfa tam amfi kapsamı)",
-    "Kurul 2 Psikiyatri 'Yaygın Anksiyete Bozukluğu' (2025-2026 Arşivi, 20 sayfa tam amfi kapsamı)",
-    "Kurul 2 Beyin Cerrahisi 'Omurga ve Omurilik Tümörleri' (2025-2026 Arşivi, 20 sayfa tam amfi kapsamı)"
+    "Kurul 2 Tıbbi Farmakoloji 'Sedatif ve Hipnotik İlaçlar' (2025-2026 Arşivi, 55 sayfa tam amfi kapsamı)",
+    "Kurul 2 Psikiyatri 'Psikiyatrik Tedaviler' (2025-2026 Arşivi, 29 sayfa tam amfi kapsamı)",
+    "Kurul 2 Psikiyatri 'Bipolar Bozukluk ve İlgili Bozukluklar' (2025-2026 Arşivi, 36 sayfa tam amfi kapsamı)"
   ],
   "degisen": [
     "meds/data/arsiv_25_26/sesli_anlatim/dersler.json",
@@ -21,8 +20,8 @@
     "meds/guncelleme_notu.json"
   ],
   "duzeltilen": [
-    "Kurul 2 derslerindeki tüm atlamalı ve yüzeysel slayt işleyişleri sonlandırılarak her sayfanın mekanizması, klinik ve farmakolojik ayrıntıları eksiksiz aktarıldı",
-    "Ders 59, 54, 64, 63, 62, 61, 60, 58, 06 ve 02 amfi dersi standardında 15–30 dakikalık derin anlatımlarla sıfırdan tamamlandı"
+    "Ders 21, 20 ve 19 amfi dersi standardında 20–35 dakikalık derin anlatımlarla sıfırdan tamamlandı",
+    "Kısaltma okunuşları, lazer metin takibi satır eşlemeleri ve çıkmış soru uyarıları eksiksiz sağlandı"
   ],
   "silinen": []
 }
