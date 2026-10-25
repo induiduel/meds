@@ -1,23 +1,25 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 339,
-  "baslik": "Kurul 2 Tıbbi Farmakoloji 2 'SSS İlaçları' (2025-2026 Arşivi) ve 9 Derslik Kilometre Taşı",
+  "onem": 340,
+  "baslik": "Kurul 2 Arşiv Dersleri 10-12: Baş Ağrısı, Psikiyatrik Semiyoloji ve Kafa Travmaları (2025-2026)",
   "maddeler": [
-    "Kurul 2 Tıbbi Farmakoloji 2 'SSS İlaçları' (2025-2026 Arşivi): 56 sayfa, 25,7 dk EMA GPU sesli ders, 28 canlı çizim, 20 adımlı Öğren destesi (11 model + oyunlar) ve 26 çıkmış soru eşleşmesi",
-    "9 Derslik Kilometre Taşı Tamamlandı: Kurul 2 Ders 1'den 9'a kadar (Nöroloji 1-3, Patoloji 1-2, Anestezi 1, Farmakoloji 1-2, Genetik 1) tüm dersler tam otomatik hat ile üretilip doğrulandı",
-    "Tüm arşiv derslerinde sıfır atlanan sayfa garantisi, geliştirilmiş PDF metin takip motoru v7 (%97,7 başarım), gömülü .medspak ve Güncelleme Günlüğü altyapısı devrede"
+    "Ders 10 (Nöroloji 4 - Baş Ağrısına Yaklaşım): 10 sayfa, 12,9 dk EMA GPU sesli anlatım, 11 slayt Öğren destesi, 17 canlı çizim, 27 çıkmış soru eşleşmesi ve gömülü .medspak",
+    "Ders 11 (Psikiyatri 1 - Psikiyatrik Semiyoloji): 44 sayfa, 22,8 dk EMA GPU sesli anlatım, 16 slayt Öğren destesi, 26 canlı çizim, 12 çıkmış soru eşleşmesi ve gömülü .medspak",
+    "Ders 12 (Beyin ve Sinir Cerrahisi 1 - Kafa ve Omurilik Yaralanmaları): 76 sayfa, 28,1 dk EMA GPU sesli anlatım, 16 slayt Öğren destesi, 35 canlı çizim, 13 çıkmış soru eşleşmesi ve gömülü .medspak",
+    "Geliştirilmiş PDF metin takibi çıpaları ve tam güncellenen Güncelleme Günlüğü altyapısı devrede"
   ],
   "eklenen": [
-    "Kurul 2 Tıbbi Farmakoloji 2 'SSS İlaçları' (2025-2026 Arşivi)",
-    "Ders 9 .medspak paketi ve Güncelleme Günlüğü"
+    "Kurul 2 Nöroloji 4 'Baş Ağrısına Yaklaşım' (2025-2026 Arşivi)",
+    "Kurul 2 Psikiyatri 1 'Psikiyatrik Semiyoloji' (2025-2026 Arşivi)",
+    "Kurul 2 Beyin ve Sinir Cerrahisi 1 'Kafa ve Omurilik Yaralanmaları' (2025-2026 Arşivi)"
   ],
   "degisen": [
     "meds/data/arsiv_25_26/sesli_anlatim/dersler.json",
     "meds/data/arsiv_25_26/sesli_anlatim/kayit.json"
   ],
   "duzeltilen": [
-    "SSS İlaçları sayfa haritası, bilgi paketi ve başlık hiyerarşisi tam uyumlu hale getirildi",
-    "Konuşma adımları ve slayt adımları harita ile birebir eşitlendi"
+    "Ders 11 slayt adımları ve konuşma adımları tam eşitlendi",
+    "Ders 12 görsel anlatım etiketleri ve çıkmış sınav sesli uyarı kalıpları standartlaştırıldı"
   ],
   "silinen": []
 }
