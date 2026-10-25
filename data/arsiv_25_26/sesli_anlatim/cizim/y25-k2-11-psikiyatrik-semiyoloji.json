@@ -914,6 +914,15 @@
   "ret": {
    "panel metni 'Beyin metabolizması' henüz anlatılmamış terim i": 1,
    "resim sayfasında panel (H51)": 1
-  }
+  },
+  "ret_ayrinti": [
+   {
+    "cumle": "P3.C2",
+    "sayfa": 4,
+    "tur": "sema",
+    "neden": "panel metni 'Beyin metabolizması' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   }
+  ]
  }
 }

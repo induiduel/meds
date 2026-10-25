@@ -191,17 +191,27 @@ class Sayfa:
                     self.tablolar.append(t.bbox)
         except Exception:
             pass
+        # R# dizini kalıcıdır (yazılmış çapalar ona bakar): aynı yere üst üste konmuş görsel (maske, yinelenen yerleşim)
+        # listede kalır ama tekil_resim'e girmez; dökümde ve otomatik seçimde yalnız tekiller görünür (2026-10-25).
         self.resimler = []
+        self.tekil_resim: list[int] = []
+        self.zemin = None  # sayfanın %85'inden büyük görsel (taranmış slayt/arka plan): yalnız şekil çapasında yedek
         alan = W * H
         for im in pg.get_image_info():
             x0, y0, x1, y1 = im["bbox"]
             x0, y0, x1, y1 = max(0, x0), max(0, y0), min(W, x1), min(H, y1)
             a = max(0, x1 - x0) * max(0, y1 - y0)
             if 0.04 * alan <= a <= 0.85 * alan:
-                self.resimler.append((x0, y0, x1, y1))
+                b = (x0, y0, x1, y1)
+                if not any(kesisim_orani(b, self.resimler[i]) >= 0.9 for i in self.tekil_resim):
+                    self.tekil_resim.append(len(self.resimler))
+                self.resimler.append(b)
+            elif a > 0.85 * alan:
+                self.zemin = (round(W * 0.04, 2), round(H * 0.04, 2), round(W * 0.96, 2), round(H * 0.96, 2))
         # Metinsiz/az metinli tam slayt görseli ya da diyagramı (şema, anatomi, radyoloji)
         if not self.resimler and (not self.kelimeler or len(self.kelimeler) < 15) and pg.get_image_info():
             self.resimler.append((round(W * 0.04, 2), round(H * 0.04, 2), round(W * 0.96, 2), round(H * 0.96, 2)))
+            self.tekil_resim = [0]
 
     def tabloda(self, r) -> bool:
         cx, cy = (r[0] + r[2]) / 2, (r[1] + r[3]) / 2
@@ -318,8 +328,45 @@ def eslestir_capa(cumle: str, sy: Sayfa, ms: set[int]):
     return {"t": "tablo" if tablo * 2 >= len(l) else "metin", "l": l, "w": w}
 
 
-def resim_kutusu(sy: Sayfa):
-    return max(sy.resimler, key=lambda b: (b[2] - b[0]) * (b[3] - b[1])) if sy.resimler else None
+def kesisim_orani(a, b) -> float:
+    """İki kutunun kesişim / birleşim oranı (IoU)."""
+    ix = max(0, min(a[2], b[2]) - max(a[0], b[0]))
+    iy = max(0, min(a[3], b[3]) - max(a[1], b[1]))
+    k = ix * iy
+    u = (a[2] - a[0]) * (a[3] - a[1]) + (b[2] - b[0]) * (b[3] - b[1]) - k
+    return k / u if u > 0 else 0.0
+
+
+def resim_kutusu(sy: Sayfa, zemin: bool = False):
+    """Sayfanın en büyük tekil resim kutusu; yoksa ve zemin istenirse tam sayfa görselin kutusu."""
+    tekil = [sy.resimler[i] for i in sy.tekil_resim]
+    if tekil:
+        return max(tekil, key=lambda b: (b[2] - b[0]) * (b[3] - b[1]))
+    return sy.zemin if zemin else None
+
+
+TABLO_SOZ = re.compile(r"\b(tablo|table|çizelge|sınıflama|karşılaştırma)", re.I)
+
+
+def sekil_isareti(sy: Sayfa, sayfa: int, capalar: list[dict]) -> dict | None:
+    """Şekil/tablo çapalı cümle: yazarın gösterdiği tablo (T#) ya da resim (R#), yoksa sayfadaki tablo/en büyük resim.
+    Tablo anlatılıyorsa (çapada tablo, ya da şekil tarifinde "tablo") tür "tablo" olur; tablo PDF'te resimse kutusu R'dir."""
+    tablo_mu = any(c.get("tablo") is not None and c.get("tablo") is not False for c in capalar) or \
+        any(TABLO_SOZ.search(str(c.get("sekil") or "")) for c in capalar)
+    for c in capalar:
+        t = c.get("tablo")
+        if isinstance(t, int) and not isinstance(t, bool) and 0 <= t < len(sy.tablolar):
+            return {"s": sayfa, "t": "tablo", "l": [sy.n(sy.tablolar[t])], "w": []}
+    tur = "tablo" if tablo_mu else "resim"
+    for c in capalar:
+        if c.get("kutu"):
+            return {"s": sayfa, "t": tur, "l": [[round(float(v), 4) for v in c["kutu"]]], "w": []}
+        if c.get("resim") is not None and 0 <= int(c["resim"]) < len(sy.resimler):
+            return {"s": sayfa, "t": tur, "l": [sy.n(sy.resimler[int(c["resim"])])], "w": []}
+    if tablo_mu and sy.tablolar:
+        return {"s": sayfa, "t": "tablo", "l": [sy.n(t) for t in sy.tablolar], "w": []}
+    rb = resim_kutusu(sy, zemin=True)
+    return {"s": sayfa, "t": tur, "l": [sy.n(rb)], "w": []} if rb else None
 
 
 def cumle_capalari(metin: str, sinir: list[int], capa: list[dict]) -> list[list[dict]]:
@@ -444,7 +491,13 @@ def capali_ic(cumle: str, capalar: list[dict], pdf: "Pdf | None") -> dict | None
     if not sy:
         return None
     # Anlamsal çapa (2026-10-21): "madde" = Sayfa.maddeler dizinleri (capa_dok.py'nin numaraladığı M kutuları),
-    # "resim" = Sayfa.resimler dizini (R kutuları), "kutu" = elle sayfa oranı kutu; kelime eşlemesi yalnız madde içinde.
+    # "resim" = Sayfa.resimler dizini (R kutuları), "tablo" = Sayfa.tablolar dizini (T kutuları) ya da true,
+    # "kutu" = elle sayfa oranı kutu; kelime eşlemesi yalnız madde içinde.
+    # Şekil/tablo anlatılıyorsa görsel önce gelir (2026-10-25): madde ya da tek ortak kelime onu ezemez.
+    if any(c.get("sekil") or c.get("tablo") not in (None, False) for c in capalar):
+        isr = sekil_isareti(sy, int(sayfa), capalar)
+        if isr:
+            return isr
     if any(c.get("madde") for c in capalar):
         ms = {int(i) for c in capalar for i in (c.get("madde") or []) if 0 <= int(i) < len(sy.maddeler)}
         if ms:
@@ -454,7 +507,8 @@ def capali_ic(cumle: str, capalar: list[dict], pdf: "Pdf | None") -> dict | None
             return {"s": int(sayfa), "t": "resim", "l": [[round(float(v), 4) for v in c["kutu"]]], "w": []}
         if c.get("resim") is not None and 0 <= int(c["resim"]) < len(sy.resimler):
             return {"s": int(sayfa), "t": "resim", "l": [sy.n(sy.resimler[int(c["resim"])])], "w": []}
-    satirlar = [x for c in capalar for x in (c.get("satir") or [])]
+    # satir tek dize de yazılmış olabilir (arşiv çapaları): harf harf gezilmesin
+    satirlar = [x for c in capalar for x in ([c["satir"]] if isinstance(c.get("satir"), str) else (c.get("satir") or [])) if x]
     ms = capa_maddeleri(sy, satirlar) if satirlar else set()
     if ms:
         return {"s": int(sayfa), **eslestir_capa(cumle, sy, ms)}
@@ -462,10 +516,11 @@ def capali_ic(cumle: str, capalar: list[dict], pdf: "Pdf | None") -> dict | None
     n, r = eslestir(cumle, sy)
     if r and n >= 1:
         return {"s": int(sayfa), **r}
-    if any(c.get("sekil") for c in capalar):
-        rb = resim_kutusu(sy)
-        if rb:
-            return {"s": int(sayfa), "t": "resim", "l": [sy.n(rb)], "w": []}
+    # şekil çapası yazılmamış ama cümle görseli anlatıyor ya da slayt resimden ibaret: resme git
+    if sy.tekil_resim and (GORSEL.search(cumle) or (len(sy.kelimeler) < 15 and not sy.ocr)):
+        isr = sekil_isareti(sy, int(sayfa), [{"sekil": cumle}] if TABLO_SOZ.search(cumle) else [{}])
+        if isr:
+            return isr
     return {"s": int(sayfa), "t": "sayfa", "l": [], "w": []}
 
 

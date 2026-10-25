@@ -70,6 +70,12 @@ def main():
                     H.append(f"{yer}: resim R{c['resim']} sayfada yok")
                 else:
                     ok = True
+            t = c.get("tablo")
+            if isinstance(t, int) and not isinstance(t, bool):
+                if not 0 <= t < len(sy.tablolar):
+                    H.append(f"{yer}: tablo T{t} sayfada yok")
+                else:
+                    ok = True
             if c.get("kutu") is not None:
                 k = c["kutu"]
                 if not (len(k) == 4 and all(0 <= float(v) <= 1 for v in k) and k[0] < k[2] and k[1] < k[3]):

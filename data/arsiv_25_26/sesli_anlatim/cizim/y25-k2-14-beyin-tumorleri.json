@@ -267,6 +267,136 @@
       155
      ]
     }
+   ],
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.634,
+       0.462
+      ],
+      [
+       0.658,
+       0.433
+      ],
+      [
+       0.68,
+       0.42
+      ],
+      [
+       0.708,
+       0.405
+      ],
+      [
+       0.74,
+       0.398
+      ],
+      [
+       0.771,
+       0.422
+      ],
+      [
+       0.791,
+       0.457
+      ],
+      [
+       0.794,
+       0.502
+      ],
+      [
+       0.711,
+       0.583
+      ],
+      [
+       0.634,
+       0.54
+      ]
+     ],
+     "etiket": "suprasellar lezyon",
+     "s": 30,
+     "k": [
+      38,
+      113
+     ],
+     "etiket_konum": [
+      0.42,
+      0.2
+     ],
+     "etiket_genislik": 0.264,
+     "etiket_hedef": [
+      0.634,
+      0.398
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.36,
+      0.14,
+      0.854,
+      0.643
+     ]
+    }
+   ],
+   "2": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.26,
+       0.445
+      ],
+      [
+       0.285,
+       0.435
+      ],
+      [
+       0.315,
+       0.445
+      ],
+      [
+       0.32,
+       0.48
+      ],
+      [
+       0.315,
+       0.525
+      ],
+      [
+       0.295,
+       0.54
+      ],
+      [
+       0.27,
+       0.525
+      ],
+      [
+       0.26,
+       0.49
+      ]
+     ],
+     "etiket": "lameller kalsifikasyonlar",
+     "s": 30,
+     "k": [
+      64,
+      101
+     ],
+     "etiket_konum": [
+      0.04,
+      0.2
+     ],
+     "etiket_genislik": 0.353,
+     "etiket_hedef": [
+      0.26,
+      0.435
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0,
+      0.14,
+      0.453,
+      0.6
+     ]
+    }
    ]
   },
   "19": {
@@ -349,14 +479,365 @@
      "ek_renk": "#808271"
     }
    ]
+  },
+  "44": {
+   "0": [
+    {
+     "tur": "sema",
+     "s": 45,
+     "k": [
+      31,
+      89
+     ],
+     "dugum": [
+      {
+       "id": "d0",
+       "metin": "rezeksiyon genişliği"
+      },
+      {
+       "id": "d1",
+       "metin": "nüks"
+      }
+     ],
+     "kenar": [
+      {
+       "a": "d0",
+       "b": "d1",
+       "tur": "aktive"
+      }
+     ],
+     "kaynak": "ok",
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.106,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1413,
+     "ek_renk": "#808271"
+    }
+   ]
+  },
+  "65": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.3638,
+       0.6933
+      ],
+      [
+       0.3762,
+       0.7217
+      ],
+      [
+       0.3638,
+       0.7433
+      ],
+      [
+       0.3488,
+       0.7733
+      ],
+      [
+       0.2838,
+       0.7383
+      ],
+      [
+       0.28,
+       0.7083
+      ],
+      [
+       0.2863,
+       0.6817
+      ],
+      [
+       0.2975,
+       0.6617
+      ],
+      [
+       0.3075,
+       0.6433
+      ],
+      [
+       0.325,
+       0.63
+      ],
+      [
+       0.3412,
+       0.6467
+      ],
+      [
+       0.3525,
+       0.66
+      ],
+      [
+       0.3688,
+       0.67
+      ]
+     ],
+     "s": 66,
+     "k": [
+      101,
+      166
+     ],
+     "yakin": [
+      0.22,
+      0.57,
+      0.4362,
+      0.8333
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "akis",
+     "a": [
+      0.319,
+      0.63
+     ],
+     "b": [
+      0.25,
+      0.446
+     ],
+     "iliski": "aktive",
+     "etiket": "obstrüktif hidrosefali",
+     "s": 66,
+     "k": [
+      0,
+      141
+     ],
+     "yol": [
+      [
+       0.319,
+       0.63
+      ],
+      [
+       0.25,
+       0.63
+      ],
+      [
+       0.25,
+       0.446
+      ]
+     ],
+     "rota": "dirsek",
+     "etiket_konum": [
+      0.04,
+      0.14
+     ],
+     "etiket_genislik": 0.315,
+     "etiket_hedef": [
+      0.24,
+      0.436
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0,
+      0.08,
+      0.415,
+      0.69
+     ]
+    }
+   ]
+  },
+  "67": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.6713,
+       0.37
+      ],
+      [
+       0.6667,
+       0.3942
+      ],
+      [
+       0.6544,
+       0.4119
+      ],
+      [
+       0.6375,
+       0.4183
+      ],
+      [
+       0.6206,
+       0.4119
+      ],
+      [
+       0.6083,
+       0.3942
+      ],
+      [
+       0.6038,
+       0.37
+      ],
+      [
+       0.6083,
+       0.3458
+      ],
+      [
+       0.6206,
+       0.3281
+      ],
+      [
+       0.6375,
+       0.3217
+      ],
+      [
+       0.6544,
+       0.3281
+      ],
+      [
+       0.6667,
+       0.3458
+      ]
+     ],
+     "etiket": "intraaksiyal kitle",
+     "s": 68,
+     "k": [
+      84,
+      111
+     ],
+     "etiket_konum": [
+      0.34,
+      0.14
+     ],
+     "etiket_genislik": 0.264,
+     "etiket_hedef": [
+      0.6038,
+      0.3217
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.28,
+      0.08,
+      0.7313,
+      0.4783
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "akis",
+     "a": [
+      0.794,
+      0.42
+     ],
+     "b": [
+      0.631,
+      0.345
+     ],
+     "iliski": "aktive",
+     "etiket": "vazojenik ödem",
+     "s": 68,
+     "k": [
+      3,
+      24
+     ],
+     "yol": [
+      [
+       0.794,
+       0.42
+      ],
+      [
+       0.7825,
+       0.4182
+      ],
+      [
+       0.7712,
+       0.416
+      ],
+      [
+       0.76,
+       0.4134
+      ],
+      [
+       0.749,
+       0.4104
+      ],
+      [
+       0.7382,
+       0.4071
+      ],
+      [
+       0.7276,
+       0.4033
+      ],
+      [
+       0.7172,
+       0.3992
+      ],
+      [
+       0.7069,
+       0.3947
+      ],
+      [
+       0.6968,
+       0.3898
+      ],
+      [
+       0.6869,
+       0.3846
+      ],
+      [
+       0.6771,
+       0.3789
+      ],
+      [
+       0.6675,
+       0.3729
+      ],
+      [
+       0.6581,
+       0.3665
+      ],
+      [
+       0.6489,
+       0.3597
+      ],
+      [
+       0.6399,
+       0.3526
+      ],
+      [
+       0.631,
+       0.345
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.62,
+      0.14
+     ],
+     "etiket_genislik": 0.214,
+     "etiket_hedef": [
+      0.641,
+      0.335
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.56,
+      0.08,
+      0.894,
+      0.48
+     ]
+    }
+   ]
   }
  },
  "rapor": {
-  "aday": 41,
-  "gecti": 9,
+  "aday": 53,
+  "gecti": 16,
   "ret": {
    "panel metni 'Selim ile habis biyolojik davr' henüz anlatılma": 1,
-   "resim sayfasında panel (H51)": 2,
+   "resim sayfasında panel (H51)": 1,
    "panel metni 'Tümör Yerleşimine Bağlı Hayati' henüz anlatılma": 1,
    "panel metni 'Progresif nörolojik defisit ve' henüz anlatılma": 1,
    "panel metni 'Sabahları şiddetlenen baş ağrı' henüz anlatılma": 1,
@@ -382,10 +863,543 @@
    "panel metni 'Menenjiom Hormonal ve Genetik ' henüz anlatılma": 1,
    "panel metni 'Dünya Sağlık Örgütü Menenjiom ' henüz anlatılma": 1,
    "panel metni 'Nöral doku içerisine mantar be' henüz anlatılma": 1,
-   "panel metni 'Simpson Cerrahi Dereceleri ve ' henüz anlatılma": 1,
    "panel metni 'Pontoserebellar köşede vestibü' henüz anlatılma": 1,
    "panel metni 'Sistemik primer kanser odağını' henüz anlatılma": 1,
-   "panel metni 'Makroadenom' henüz anlatılmamış terim içeriyor ": 1
-  }
+   "panel metni 'Makroadenom' henüz anlatılmamış terim içeriyor ": 1,
+   "noktaların %53'i çizgi üstünde (en az %70)": 1,
+   "noktalar tek bir resim kutusunun içinde değil": 2,
+   "noktaların %62'i çizgi üstünde (en az %70)": 1,
+   "noktaların %61'i çizgi üstünde (en az %70)": 1,
+   "ok uçlarından biri boş alanda (yazı/çizim yok)": 1,
+   "noktaların %65'i çizgi üstünde (en az %70)": 1
+  },
+  "ret_ayrinti": [
+   {
+    "cumle": "P0.C2",
+    "sayfa": 2,
+    "tur": "sema",
+    "neden": "panel metni 'Selim ile habis biyolojik davr' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P2.C2",
+    "sayfa": 5,
+    "tur": "sema",
+    "neden": "panel metni 'Tümör Yerleşimine Bağlı Hayati' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P3.C2",
+    "sayfa": 6,
+    "tur": "sema",
+    "neden": "panel metni 'Progresif nörolojik defisit ve' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P4.C2",
+    "sayfa": 8,
+    "tur": "sema",
+    "neden": "panel metni 'Sabahları şiddetlenen baş ağrı' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P4.C3",
+    "sayfa": 8,
+    "tur": "sema",
+    "neden": "panel metni 'Posterior Fossa ve Serebellar ' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P5.C1",
+    "sayfa": 9,
+    "tur": "sema",
+    "neden": "panel metni 'Frontal lob: Abuli, kişilik de' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P6.C1",
+    "sayfa": 11,
+    "tur": "sema",
+    "neden": "panel metni 'Astrositom ve glioblastoma mul' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P7.C0",
+    "sayfa": 12,
+    "tur": "sema",
+    "neden": "panel metni 'Erkeklerde kadınlara göre iki ' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P8.C0",
+    "sayfa": 14,
+    "tur": "sema",
+    "neden": "panel metni 'Pediatrik yaş grubunda arka çu' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P8.C2",
+    "sayfa": 15,
+    "tur": "sema",
+    "neden": "panel metni 'Hücresel atipi ve nükleer poli' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P9.C0",
+    "sayfa": 16,
+    "tur": "sema",
+    "neden": "panel metni 'Düşük Dereceli' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P9.C2",
+    "sayfa": 17,
+    "tur": "sema",
+    "neden": "panel metni 'Glioblastoma Multiforme Özelli' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P10.C2",
+    "sayfa": 19,
+    "tur": "sema",
+    "neden": "panel metni 'Mikrovasküler endotelyal proli' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P11.C1",
+    "sayfa": 20,
+    "tur": "sema",
+    "neden": "panel metni 'Radyolojik kontrast sınırının ' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P12.C2",
+    "sayfa": 22,
+    "tur": "sema",
+    "neden": "panel metni 'Çoğunlukla frontal loblarda be' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P13.C0",
+    "sayfa": 23,
+    "tur": "sema",
+    "neden": "panel metni 'Tavuk teli damarlanma: İnce an' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P13.C2",
+    "sayfa": 24,
+    "tur": "sema",
+    "neden": "panel metni 'İntrakraniyal gliomların yüzde' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P14.C2",
+    "sayfa": 26,
+    "tur": "sema",
+    "neden": "panel metni 'Dördüncü ventrikül tavanında v' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P15.C0",
+    "sayfa": 27,
+    "tur": "sema",
+    "neden": "panel metni 'Adamantinomatoz' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P15.C2",
+    "sayfa": 28,
+    "tur": "sema",
+    "neden": "panel metni 'Optik kiazmaya bası ile bitemp' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P17.C1",
+    "sayfa": 31,
+    "tur": "sema",
+    "neden": "panel metni 'İçinde anormal vasküler besley' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P19.C1",
+    "sayfa": 35,
+    "tur": "sema",
+    "neden": "panel metni 'Ekstranodal lenfomaların yüzde' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P20.C2",
+    "sayfa": 37,
+    "tur": "sema",
+    "neden": "panel metni 'Yavaş büyüyen, ekstraaksiyel g' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P21.C2",
+    "sayfa": 39,
+    "tur": "sema",
+    "neden": "panel metni 'Menenjiom Hormonal ve Genetik ' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P22.C2",
+    "sayfa": 41,
+    "tur": "sema",
+    "neden": "panel metni 'Dünya Sağlık Örgütü Menenjiom ' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P23.C2",
+    "sayfa": 43,
+    "tur": "sema",
+    "neden": "panel metni 'Nöral doku içerisine mantar be' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P25.C3",
+    "sayfa": 46,
+    "tur": "sema",
+    "neden": "panel metni 'Pontoserebellar köşede vestibü' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P30.C0",
+    "sayfa": 53,
+    "tur": "sema",
+    "neden": "panel metni 'Sistemik primer kanser odağını' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P31.C1",
+    "sayfa": 55,
+    "tur": "sema",
+    "neden": "panel metni 'Makroadenom' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P29.C1",
+    "sayfa": 30,
+    "tur": "kontur",
+    "neden": "noktaların %53'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.63,
+       0.45
+      ],
+      [
+       0.66,
+       0.42
+      ],
+      [
+       0.72,
+       0.41
+      ],
+      [
+       0.78,
+       0.43
+      ],
+      [
+       0.8,
+       0.49
+      ],
+      [
+       0.79,
+       0.55
+      ],
+      [
+       0.74,
+       0.59
+      ],
+      [
+       0.67,
+       0.58
+      ],
+      [
+       0.63,
+       0.54
+      ]
+     ],
+     "etiket": "suprasellar lezyon"
+    }
+   },
+   {
+    "cumle": "P44.C0",
+    "sayfa": 45,
+    "tur": "kontur",
+    "neden": "noktalar tek bir resim kutusunun içinde değil",
+    "komut": {
+     "nokta": [
+      [
+       0.288,
+       0.305
+      ],
+      [
+       0.45,
+       0.305
+      ],
+      [
+       0.615,
+       0.305
+      ],
+      [
+       0.615,
+       0.57
+      ],
+      [
+       0.615,
+       0.835
+      ],
+      [
+       0.45,
+       0.835
+      ],
+      [
+       0.288,
+       0.835
+      ],
+      [
+       0.288,
+       0.57
+      ]
+     ],
+     "etiket": "rezeksiyon genişliği"
+    }
+   },
+   {
+    "cumle": "P44.C0",
+    "sayfa": 45,
+    "tur": "kontur",
+    "neden": "noktalar tek bir resim kutusunun içinde değil",
+    "komut": {
+     "nokta": [
+      [
+       0.622,
+       0.305
+      ],
+      [
+       0.73,
+       0.305
+      ],
+      [
+       0.832,
+       0.305
+      ],
+      [
+       0.832,
+       0.57
+      ],
+      [
+       0.832,
+       0.835
+      ],
+      [
+       0.73,
+       0.835
+      ],
+      [
+       0.622,
+       0.835
+      ],
+      [
+       0.622,
+       0.57
+      ]
+     ],
+     "etiket": "on yıllık nüks"
+    }
+   },
+   {
+    "cumle": "P63.C0",
+    "sayfa": 64,
+    "tur": "kontur",
+    "neden": "noktaların %62'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.585,
+       0.25
+      ],
+      [
+       0.61,
+       0.258
+      ],
+      [
+       0.626,
+       0.28
+      ],
+      [
+       0.63,
+       0.308
+      ],
+      [
+       0.619,
+       0.338
+      ],
+      [
+       0.598,
+       0.357
+      ],
+      [
+       0.573,
+       0.355
+      ],
+      [
+       0.55,
+       0.338
+      ],
+      [
+       0.54,
+       0.31
+      ],
+      [
+       0.546,
+       0.277
+      ],
+      [
+       0.563,
+       0.257
+      ]
+     ],
+     "etiket": "menenjiom lezyonu"
+    }
+   },
+   {
+    "cumle": "P65.C0",
+    "sayfa": 66,
+    "tur": "kontur",
+    "neden": "noktaların %61'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.3762,
+       0.6917
+      ],
+      [
+       0.3699,
+       0.7267
+      ],
+      [
+       0.3525,
+       0.7523
+      ],
+      [
+       0.3287,
+       0.7617
+      ],
+      [
+       0.305,
+       0.7523
+      ],
+      [
+       0.2876,
+       0.7267
+      ],
+      [
+       0.2812,
+       0.6917
+      ],
+      [
+       0.2876,
+       0.6567
+      ],
+      [
+       0.305,
+       0.631
+      ],
+      [
+       0.3287,
+       0.6217
+      ],
+      [
+       0.3525,
+       0.631
+      ],
+      [
+       0.3699,
+       0.6567
+      ]
+     ],
+     "etiket": "posterior fossa kitlesi"
+    }
+   },
+   {
+    "cumle": "P43.C1",
+    "sayfa": 44,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.72,
+      0.36
+     ],
+     "b": [
+      0.55,
+      0.36
+     ],
+     "etiket": "rutin radyoterapinin yeri yok"
+    }
+   },
+   {
+    "cumle": "P63.C0",
+    "sayfa": 64,
+    "tur": "kontur",
+    "neden": "noktaların %65'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.632,
+       0.305
+      ],
+      [
+       0.627,
+       0.338
+      ],
+      [
+       0.607,
+       0.356
+      ],
+      [
+       0.585,
+       0.362
+      ],
+      [
+       0.565,
+       0.351
+      ],
+      [
+       0.549,
+       0.333
+      ],
+      [
+       0.537,
+       0.305
+      ],
+      [
+       0.543,
+       0.273
+      ],
+      [
+       0.564,
+       0.257
+      ],
+      [
+       0.585,
+       0.252
+      ],
+      [
+       0.606,
+       0.256
+      ],
+      [
+       0.619,
+       0.279
+      ]
+     ],
+     "etiket": "menenjiom lezyonu"
+    }
+   }
+  ]
  }
 }

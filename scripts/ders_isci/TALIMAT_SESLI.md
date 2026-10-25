@@ -127,8 +127,13 @@ kuralları aynen geçerlidir. Şema ve kimlik kuralları `konusma_v2.py` başın
     hariç, satır bölünmüşse birleştir). Uydurma/yeniden yazılmış satır kapıdan geçmez.
   - `ses` cümlesini o maddenin kelimeleriyle kur: maddedeki terimler aynı sırayla ve aynı biçimde geçsin (açıklama,
     neden-sonuç ekleri serbest). Maddenin en az %80'i cümlede geçmezse PDF'te madde zemini yanmaz.
-  - `sekil`: metni olmayan resim/şema/grafik anlatılıyorsa kısa tarifi (ör. "nekroz tiplerinin mikroskobik görüntüsü");
-    canlı derste lazer imleci o resme gider. Tablo hücresi anlatılıyorsa hücre metni `satir`'a yazılır.
+  - `sekil`: cümle bir resim/şema/grafik ya da tabloyu anlatıyorsa kısa tarifi (ör. "nekroz tiplerinin mikroskobik
+    görüntüsü"); canlı derste lazer o resme/tabloya gider ve **madde eşlemesine üstün gelir** (aynı cümleye `satir`
+    da yazılabilir, işaret yine görsele gider). Slayttaki resmin içindeki yazıyı anlatan cümle de şekil cümlesidir.
+  - `tablo: true`: anlatılan bir tabloysa ekle (PDF'te tablo resim olarak duruyor olsa da). Tablo PDF'te yazı olarak
+    duruyor ve tek hücre anlatılıyorsa hücre metni `satir`'a yazılır, `sekil` boş kalır.
+  - `madde`/`resim` dizinlerini elle ya da toplu betikle **doldurma**; her cümleye madde veya `resim: 0` basmak
+    kapsama oranını şişirir ama lazeri yanlış yere götürür (H59). Kapsama düşükse çapayı düzelt, oranı değil.
   - Yalnız bağlam/geçiş cümlesi `slayt: null` olabilir (en çok %25). Kapı her satırı o sayfanın metninde arar.
 - **Kimlik:** `ders_id` = `baglam.json` → `ders_id`'nin ilk iki parçası (ör. `k2-07`). Bölüm `k2-07-b01`, paragraf
   `k2-07-p001`, cümle `k2-07-c0001`; ders içinde tekil. İlk yazımda sırayla ver. Düzeltme turunda var olan cümlenin

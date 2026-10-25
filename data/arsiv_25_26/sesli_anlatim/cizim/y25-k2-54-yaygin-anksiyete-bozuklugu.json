@@ -252,6 +252,36 @@
    "panel metni 'Hava açlığı ve paresteziler' henüz anlatılmamış": 1,
    "panel metni 'SSRI grubu antidepresanlar' henüz anlatılmamış ": 1,
    "resim sayfasında panel (H51)": 1
-  }
+  },
+  "ret_ayrinti": [
+   {
+    "cumle": "P1.C4",
+    "sayfa": 2,
+    "tur": "sema",
+    "neden": "panel metni 'Reaksiyon' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P2.C4",
+    "sayfa": 3,
+    "tur": "sema",
+    "neden": "panel metni 'Kadınlarda iki kat sık' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P8.C5",
+    "sayfa": 9,
+    "tur": "sema",
+    "neden": "panel metni 'Hava açlığı ve paresteziler' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P16.C5",
+    "sayfa": 17,
+    "tur": "sema",
+    "neden": "panel metni 'SSRI grubu antidepresanlar' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   }
+  ]
  }
 }

@@ -691,7 +691,7 @@ def anlam_denetimi(W: Path, key: str, C: dict, komutlar: list) -> dict:
 
 
 def dok_uret(belge, out_dir: Path, force: bool = False):
-    """PDF sayfalarını sNN.png (M# mavi madde, R# kırmızı resim kutuları) ve sNN.txt olarak üretir."""
+    """PDF sayfalarını sNN.png (M# mavi madde, R# kırmızı resim, T# yeşil tablo kutuları) ve sNN.txt olarak üretir."""
     out_dir.mkdir(parents=True, exist_ok=True)
     import pymupdf
     sys.path.insert(0, str(MEDS / "scripts" / "sesli_anlatim"))
@@ -709,11 +709,17 @@ def dok_uret(belge, out_dir: Path, force: bool = False):
             pg.draw_rect(r, color=(0, 0, 1), width=0.8)
             pg.insert_text((r.x0 - 2, r.y0 + 6), f"M{mi}", fontsize=7, color=(0, 0, 1))
             satir.append(f"M{mi}: {' '.join(m['metin'])}")
-        for ri, b in enumerate(sy.resimler):
+        for ri in sy.tekil_resim:  # yinelenen (üst üste) görsel kutusu gösterilmez; numara kalıcı dizindir
+            b = sy.resimler[ri]
             r = pymupdf.Rect(b)
             pg.draw_rect(r, color=(1, 0, 0), width=1.2)
             pg.insert_text((r.x0 + 2, r.y0 + 10), f"R{ri}", fontsize=10, color=(1, 0, 0))
             satir.append(f"R{ri}: resim {sy.n(b)}")
+        for ti, b in enumerate(sy.tablolar):
+            r = pymupdf.Rect(b)
+            pg.draw_rect(r, color=(0, 0.6, 0), width=1.2)
+            pg.insert_text((r.x1 - 18, r.y0 + 10), f"T{ti}", fontsize=10, color=(0, 0.6, 0))
+            satir.append(f"T{ti}: tablo {sy.n(b)}")
         pg.get_pixmap(dpi=80).save(str(png_yol))
         txt_yol.write_text("\n".join(satir), encoding="utf-8")
 

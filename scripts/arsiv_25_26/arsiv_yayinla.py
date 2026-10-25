@@ -298,8 +298,8 @@ def pdf_isaret_yerel(key: str, pars: list[dict], pdf_yol: Path, hz: dict, capa_p
                 sy = pdf.sayfa(s0)
                 v_sl = v_cs[ci].get("slayt", {}) if pn < len(vp) and ci < len(vp[pn].get("cumleler", [])) else {}
                 if sy and sy.resimler and (PI.GORSEL.search(cumle) or v_sl.get("sekil") or (len(sy.kelimeler) < 15 and not sy.ocr)):
-                    rb = max(sy.resimler, key=lambda b: (b[2] - b[0]) * (b[3] - b[1]))
-                    isr = {"d": 0, "s": s0, "t": "resim", "l": [sy.n(rb)], "w": []}
+                    rb = PI.resim_kutusu(sy)
+                    isr = {"d": 0, "s": s0, "t": "resim", "l": [sy.n(rb)], "w": []} if rb else {"d": 0, "s": s0, "t": "sayfa", "l": [], "w": []}
                 else:
                     isr = {"d": 0, "s": s0, "t": "sayfa", "l": [], "w": []}
             liste.append(isr)
@@ -519,6 +519,8 @@ def cizim_dogrula_ve_yerlestir(taslak: Path, key: str, pdf_yol: Path, pars: list
             neden = "sayfada >8 çizim"
         if neden:
             say["ret"][neden[:60]] = say["ret"].get(neden[:60], 0) + 1
+            say.setdefault("ret_ayrinti", []).append({"cumle": cid, "sayfa": s, "tur": k.get("tur"), "neden": neden,
+                                                      "komut": {x: k[x] for x in ("nokta", "a", "b", "etiket") if x in k}})
             continue
 
         kel = C[cid].split()

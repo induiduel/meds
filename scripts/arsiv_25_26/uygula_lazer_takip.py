@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Kurul 2 arşiv derslerinde lazer metin takibi kalitesini %98–100 seviyesine yükselten toplu zenginleştirici."""
+"""Kurul 2 arşiv derslerinde uydurma madde/resim çapalarını temizleyip PDF işaretini yeniden üretir (H59).
+
+Kullanım: .venv-ocr/bin/python scripts/arsiv_25_26/uygula_lazer_takip.py [key ...]  (anahtarsız: dersler.json)"""
 
 from __future__ import annotations
 
@@ -20,7 +22,7 @@ sys.path.insert(0, str(MEDS / "scripts" / "sesli_anlatim"))
 sys.path.insert(0, str(MEDS / "scripts" / "arsiv_25_26"))
 
 import arsiv_yayinla as AY
-from pdf_isaret import Pdf, tokenler
+
 
 
 def zenginlestir_ders(key: str) -> tuple[int, int, float, float]:
@@ -42,64 +44,25 @@ def zenginlestir_ders(key: str) -> tuple[int, int, float, float]:
         print(f"[{key}] Gerekli dosyalar eksik")
         return (0, 0, 0.0, 0.0)
 
-    pdf = Pdf(pdf_yol)
     capa_data = json.loads(capa_yol.read_text(encoding="utf-8"))
     capas = capa_data.get("p", [])
     v2 = json.loads(v2_yol.read_text(encoding="utf-8")) if v2_yol.exists() else None
 
-    p_idx = 0
+    # H59 (2026-10-25): bu betik eskiden her cümleye en yakın maddeyi (yoksa M0) ve görselli sayfada "resim: 0" basıp
+    # kapsamayı şişiriyordu; lazer şekil/tablo yerine yazıya gidiyordu. Artık yalnız o uydurma dizinleri SİLER; yazarın
+    # satir/sekil/tablo çapası korunur, işaret pdf_isaret (şekil önceliği) ile yeniden üretilir.
     vp = [p for b in (v2 or {}).get("bolumler", []) for p in b.get("paragraflar", [])]
-
+    # "el": görüntüye bakılarak yazılmış çapa (sekil_capa_uygula.py) — korunur
     for p in capas:
-        v_cs = vp[p_idx].get("cumleler", []) if p_idx < len(vp) else []
-        for ci, c in enumerate(p):
-            sy = pdf.sayfa(c["sayfa"])
-            v_sl = v_cs[ci].get("slayt") if ci < len(v_cs) and isinstance(v_cs[ci].get("slayt"), dict) else {}
-            
-            best_m = []
-            st_raw = c.get("satir")
-            st_str = st_raw if isinstance(st_raw, str) else " ".join(st_raw or [])
-            st_tokens = [tok for tok, _, _ in tokenler(st_str)]
-            c_tokens = [tok for tok, _, _ in tokenler(c["ses"])]
-
-            if sy and sy.maddeler:
-                for mi, md in enumerate(sy.maddeler):
-                    m_tokens = [tok for tok, _, _ in tokenler(" ".join(md.get("metin", [])))]
-                    if not m_tokens:
-                        continue
-                    int_st = len(set(st_tokens) & set(m_tokens)) if st_tokens else 0
-                    int_c = len(set(c_tokens) & set(m_tokens))
-                    r_st = int_st / len(m_tokens) if m_tokens else 0
-                    r_c = int_c / len(m_tokens) if m_tokens else 0
-                    if int_st >= 1 or r_st >= 0.20 or int_c >= 2 or r_c >= 0.20:
-                        best_m.append((mi, int_st * 5 + int_c * 2 + int(r_st * 10)))
-                if not best_m and sy.maddeler:
-                    # Gevşek eşleme: herhangi bir ortak kök varsa veya ilk madde
-                    for mi, md in enumerate(sy.maddeler):
-                        m_tokens = [tok for tok, _, _ in tokenler(" ".join(md.get("metin", [])))]
-                        int_c = len(set(c_tokens) & set(m_tokens))
-                        if int_c >= 1:
-                            best_m.append((mi, int_c))
-                    if not best_m:
-                        best_m.append((0, 1))
-
-                if best_m:
-                    best_m.sort(key=lambda x: -x[1])
-                    m_list = [x[0] for x in best_m[:2]]
-                    c["madde"] = m_list
-                    if ci < len(v_cs):
-                        if not v_cs[ci].get("slayt"):
-                            v_cs[ci]["slayt"] = {}
-                        v_cs[ci]["slayt"]["madde"] = m_list
-
-            # Resim sayfası kontrolü (görsel, radyoloji, anatomi veya metin eşleşmeyen slayt)
-            if sy and sy.resimler and (v_sl.get("sekil") or c.get("sekil") or not best_m or len(sy.maddeler) <= 2):
-                c["resim"] = 0
-                if ci < len(v_cs):
-                    if not v_cs[ci].get("slayt"):
-                        v_cs[ci]["slayt"] = {}
-                    v_cs[ci]["slayt"]["resim"] = 0
-        p_idx += 1
+        for c in p:
+            if not c.get("el"):
+                c.pop("madde", None)
+                c.pop("resim", None)
+    for p in vp:
+        for c in p.get("cumleler", []):
+            if isinstance(c.get("slayt"), dict) and not c["slayt"].get("el"):
+                c["slayt"].pop("madde", None)
+                c["slayt"].pop("resim", None)
 
     # Kaydet capa ve v2
     capa_data["p"] = capas
@@ -131,7 +94,9 @@ def zenginlestir_ders(key: str) -> tuple[int, int, float, float]:
 def main():
     dersler_yol = SA_KOK / "dersler.json"
     dersler = json.loads(dersler_yol.read_text(encoding="utf-8"))
-    print(f"Toplam {len(dersler)} Kurul 2 dersinde lazer takip zenginleştirmesi başlatılıyor...\n")
+    if len(sys.argv) > 1:
+        dersler = [d for d in dersler if d["key"] in sys.argv[1:]]
+    print(f"Toplam {len(dersler)} Kurul 2 dersinde çapa temizliği ve işaret yeniden üretimi başlatılıyor...\n")
     
     ozet = []
     for d in dersler:

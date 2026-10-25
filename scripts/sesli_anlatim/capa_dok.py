@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Anlamsal çapa yazımı için slayt dökümü: her sayfa PNG'si üzerine pdf_isaret.Sayfa'nın gördüğü madde (M#, mavi)
-ve resim (R#, kırmızı) kutuları numaralı çizilir + metin dökümü; cümle listesi (cumleler.md, sunucu bölmesiyle).
+resim (R#, kırmızı) ve tablo (T#, yeşil) kutuları numaralı çizilir + metin dökümü; cümle listesi (cumleler.md, sunucu bölmesiyle).
 Çapa yazan (insan/ajan) cümlenin gerçekten anlattığı yeri görüntüden seçer → data/sesli_anlatim/capa/<key>.json
   {"mdSha1": sha1(metin/<key>.md), "p": [[{"ses": "<cümlenin başı>", "sayfa": n, "dosya": d (çok dosyalı),
-     "madde": [M#...] | "resim": R# | "kutu": [x0,y0,x1,y1] (0–1),
+     "madde": [M#...] | "resim": R# | "tablo": T# | "kutu": [x0,y0,x1,y1] (0–1),
+     "sekil": "<anlatılan resim/şema/tablo>" (doluysa resim/tablo maddeye üstün gelir; tablo resimse "resim": R# + "tablo": true),
      "yol": [{"k": "cümlede geçen ifade", "x": 0–1, "y": 0–1}, ...]  # hareketli imleç (resim anlatımı)
    }...] (paragraf başına, cümle sırasıyla)]}
 Dosyalar: <çıktı>/d<dosya>_s<NN>.png/.txt (tek dosyalıda sNN.png/.txt), cumleler.md.
@@ -33,10 +34,15 @@ for fi, f in enumerate(hz["dosyalar"]):
             pg.draw_rect(r, color=(0, 0, 1), width=0.8)
             pg.insert_text((r.x0 - 2, r.y0 + 6), f"M{mi}", fontsize=7, color=(0, 0, 1))
             satir.append(f"M{mi}: {' '.join(m['metin'])}")
-        for ri, b in enumerate(sy.resimler):
+        for ri in sy.tekil_resim:  # yinelenen (üst üste) görsel kutusu gösterilmez; numara kalıcı dizindir
+            b = sy.resimler[ri]
             r = pymupdf.Rect(b); pg.draw_rect(r, color=(1, 0, 0), width=1.2)
             pg.insert_text((r.x0 + 2, r.y0 + 10), f"R{ri}", fontsize=10, color=(1, 0, 0))
             satir.append(f"R{ri}: resim {sy.n(b)}")
+        for ti, b in enumerate(sy.tablolar):
+            r = pymupdf.Rect(b); pg.draw_rect(r, color=(0, 0.6, 0), width=1.2)
+            pg.insert_text((r.x1 - 18, r.y0 + 10), f"T{ti}", fontsize=10, color=(0, 0.6, 0))
+            satir.append(f"T{ti}: tablo {sy.n(b)}")
         ad = f"d{fi}_s{i:02d}" if cok else f"s{i:02d}"
         pg.get_pixmap(dpi=80).save(str(out / f"{ad}.png"))
         (out / f"{ad}.txt").write_text("\n".join(satir))

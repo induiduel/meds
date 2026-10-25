@@ -18,9 +18,12 @@ Kurul 2'den itibaren ders işçisi (TALIMAT_SESLI.md §v2) `konusma_v2.json` yaz
                    "spot": "k2-07-s03" | null,
                    "slayt": {"sayfa": 5,              # anlatılan slayt (yoksa paragrafın sayfası)
                              "satir": ["<kaynak.md o sayfasından BİREBİR kopyalanmış madde/satır>", …],
-                             "sekil": "<anlatılan resim/şema/tablo kısa tarifi>" | null} | null}]}]}]}
+                             "sekil": "<anlatılan resim/şema/tablo kısa tarifi>" | null,
+                             "tablo": true | null} | null}]}]}]}
 Slayt çapası (canlı derste kelime kelime PDF işareti, pdf_isaret.py): her cümle anlattığı slayt satır(lar)ını
-`satir`'a harfi harfine kopyalar; metinsiz resim/şema anlatılıyorsa `sekil` dolar (lazer o resme gider).
+`satir`'a harfi harfine kopyalar; resim/şema/tablo anlatılıyorsa `sekil` dolar (lazer o resme/tabloya gider; şekil
+çapası madde eşlemesine üstün gelir). Anlatılan bir tabloysa (PDF'te resim de olsa) `tablo: true` eklenir.
+`madde`/`resim` dizinleri elle ya da toplu betikle UYDURULMAZ (her cümleye madde/R0 basmak işareti bozar, H-çapa).
 Bağlam/geçiş cümlesi `slayt: null` olabilir (en çok %25). Kapı: her satır o sayfanın metninde geçmeli.
 Kimlik kuralları: bölüm b NN, paragraf p NNN, cümle c NNNN; ders içinde tekil. Kimlik kalıcıdır: düzeltmede var olan
 cümlenin kimliği değişmez, araya eklenen cümle kullanılmamış bir sonraki numarayı alır (sıra şartı yok).
@@ -195,6 +198,8 @@ def capalar(d):
                     it["madde"] = sl["madde"]
                 if sl.get("resim") is not None:
                     it["resim"] = sl["resim"]
+                if sl.get("tablo") not in (None, False):
+                    it["tablo"] = sl["tablo"]
                 para_capa.append(it)
             out.append(para_capa)
     return out

@@ -409,11 +409,1403 @@
      "olcek": 1.0
     }
    ]
+  },
+  "19": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.928,
+      0.746
+     ],
+     "b": [
+      0.8,
+      0.746
+     ],
+     "iliski": "aktive",
+     "etiket": "kromozom üzerindeki dizilim",
+     "s": 20,
+     "k": [
+      32,
+      77
+     ],
+     "yol": [
+      [
+       0.928,
+       0.746
+      ],
+      [
+       0.8,
+       0.746
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.6108,
+      0.6789
+     ],
+     "etiket_genislik": 0.378,
+     "yakin": [
+      0.5508,
+      0.6189,
+      1,
+      0.806
+     ]
+    }
+   ]
+  },
+  "20": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.356,
+       0.853
+      ],
+      [
+       0.385,
+       0.852
+      ],
+      [
+       0.417,
+       0.853
+      ],
+      [
+       0.419,
+       0.872
+      ],
+      [
+       0.417,
+       0.892
+      ],
+      [
+       0.385,
+       0.893
+      ],
+      [
+       0.356,
+       0.892
+      ],
+      [
+       0.354,
+       0.872
+      ]
+     ],
+     "etiket": "bağlantı analizi",
+     "s": 21,
+     "k": [
+      0,
+      17
+     ],
+     "etiket_konum": [
+      0.129,
+      0.812
+     ],
+     "etiket_genislik": 0.239
+    }
+   ]
+  },
+  "24": {
+   "2": [
+    {
+     "tur": "akis",
+     "a": [
+      0.7576687116564418,
+      0.8969090909090909
+     ],
+     "b": [
+      0.905593755086263,
+      0.9567593044704861
+     ],
+     "iliski": "aktive",
+     "etiket": "lokus → hastalık bağlantısı",
+     "s": 25,
+     "k": [
+      87,
+      117
+     ],
+     "yol": [
+      [
+       0.7577,
+       0.8969
+      ],
+      [
+       0.7577,
+       0.9568
+      ],
+      [
+       0.9056,
+       0.9568
+      ]
+     ],
+     "rota": "dirsek",
+     "kaynak_kutu": [
+      0.737,
+      0.853,
+      0.7784,
+      0.8949
+     ],
+     "hedef_kutu": [
+      0.9076,
+      0.9416,
+      0.9282,
+      0.9719
+     ],
+     "etiket_konum": [
+      0.5577,
+      0.8569
+     ],
+     "etiket_genislik": 0.378,
+     "etiket_hedef": [
+      0.9076,
+      0.9416
+     ],
+     "etiket_boy": 0.0591
+    }
+   ]
+  },
+  "75": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.627,
+       0.027
+      ],
+      [
+       0.666,
+       0.024
+      ],
+      [
+       0.705,
+       0.027
+      ],
+      [
+       0.707,
+       0.062
+      ],
+      [
+       0.705,
+       0.097
+      ],
+      [
+       0.666,
+       0.1
+      ],
+      [
+       0.627,
+       0.097
+      ],
+      [
+       0.625,
+       0.062
+      ]
+     ],
+     "etiket": "nüfus kohortu",
+     "s": 76,
+     "k": [
+      51,
+      77
+     ],
+     "etiket_konum": [
+      0.717,
+      0.024
+     ],
+     "etiket_genislik": 0.201,
+     "yakin": [
+      0.565,
+      0,
+      0.978,
+      0.16
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.629,
+       0.257
+      ],
+      [
+       0.667,
+       0.254
+      ],
+      [
+       0.705,
+       0.257
+      ],
+      [
+       0.707,
+       0.292
+      ],
+      [
+       0.705,
+       0.328
+      ],
+      [
+       0.667,
+       0.331
+      ],
+      [
+       0.629,
+       0.328
+      ],
+      [
+       0.627,
+       0.292
+      ]
+     ],
+     "etiket": "genotipleme",
+     "s": 76,
+     "k": [
+      134,
+      160
+     ],
+     "etiket_konum": [
+      0.717,
+      0.214
+     ],
+     "etiket_genislik": 0.176,
+     "yakin": [
+      0.567,
+      0.154,
+      0.953,
+      0.391
+     ]
+    }
+   ]
+  },
+  "76": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.632,
+       0.352
+      ],
+      [
+       0.7,
+       0.35
+      ],
+      [
+       0.77,
+       0.352
+      ],
+      [
+       0.773,
+       0.395
+      ],
+      [
+       0.77,
+       0.438
+      ],
+      [
+       0.7,
+       0.44
+      ],
+      [
+       0.632,
+       0.438
+      ],
+      [
+       0.629,
+       0.395
+      ]
+     ],
+     "etiket": "hedef genler",
+     "s": 77,
+     "k": [
+      158,
+      171
+     ],
+     "etiket_konum": [
+      0.763,
+      0.29
+     ],
+     "etiket_genislik": 0.188,
+     "yakin": [
+      0.569,
+      0.23,
+      1,
+      0.5
+     ]
+    }
+   ]
+  },
+  "77": {
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.089,
+       0.525
+      ],
+      [
+       0.29,
+       0.522
+      ],
+      [
+       0.48,
+       0.525
+      ],
+      [
+       0.481,
+       0.64
+      ],
+      [
+       0.48,
+       0.762
+      ],
+      [
+       0.29,
+       0.765
+      ],
+      [
+       0.089,
+       0.762
+      ],
+      [
+       0.088,
+       0.64
+      ]
+     ],
+     "etiket": "Manhattan plot",
+     "s": 78,
+     "k": [
+      67,
+      92
+     ],
+     "etiket_konum": [
+      0.191,
+      0.552
+     ],
+     "etiket_genislik": 0.214,
+     "yakin": [
+      0.028,
+      0.462,
+      0.541,
+      0.825
+     ]
+    }
+   ]
+  },
+  "78": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.0406,
+       0.135
+      ],
+      [
+       0.1204,
+       0.135
+      ],
+      [
+       0.128,
+       0.14
+      ],
+      [
+       0.128,
+       0.193
+      ],
+      [
+       0.1204,
+       0.198
+      ],
+      [
+       0.0406,
+       0.198
+      ],
+      [
+       0.033,
+       0.193
+      ],
+      [
+       0.033,
+       0.14
+      ]
+     ],
+     "etiket": "restriksiyon kesim noktaları",
+     "s": 79,
+     "k": [
+      55,
+      89
+     ],
+     "etiket_konum": [
+      0.118,
+      0.095
+     ],
+     "etiket_genislik": 0.391
+    }
+   ],
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.226,
+       0.065
+      ],
+      [
+       0.3,
+       0.065
+      ],
+      [
+       0.307,
+       0.096
+      ],
+      [
+       0.307,
+       0.421
+      ],
+      [
+       0.3,
+       0.452
+      ],
+      [
+       0.226,
+       0.452
+      ],
+      [
+       0.219,
+       0.421
+      ],
+      [
+       0.219,
+       0.096
+      ]
+     ],
+     "etiket": "agaroz jel bantları",
+     "s": 79,
+     "k": [
+      69,
+      96
+     ],
+     "etiket_konum": [
+      0.417,
+      0.025
+     ],
+     "etiket_genislik": 0.277,
+     "etiket_hedef": [
+      0.307,
+      0.065
+     ],
+     "etiket_boy": 0.0591
+    }
+   ]
+  },
+  "80": {
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.1734,
+       0.558
+      ],
+      [
+       0.1876,
+       0.558
+      ],
+      [
+       0.189,
+       0.5606
+      ],
+      [
+       0.189,
+       0.5874
+      ],
+      [
+       0.1876,
+       0.59
+      ],
+      [
+       0.1734,
+       0.59
+      ],
+      [
+       0.172,
+       0.5874
+      ],
+      [
+       0.172,
+       0.5606
+      ]
+     ],
+     "etiket": "insersiyon",
+     "s": 81,
+     "k": [
+      117,
+      145
+     ],
+     "etiket_konum": [
+      0.179,
+      0.588
+     ],
+     "etiket_genislik": 0.163,
+     "yakin": [
+      0.112,
+      0.498,
+      0.402,
+      0.688
+     ]
+    }
+   ]
   }
  },
  "rapor": {
-  "aday": 13,
-  "gecti": 13,
-  "ret": {}
+  "aday": 49,
+  "gecti": 23,
+  "ret": {
+   "noktaların %58'i çizgi üstünde (en az %70)": 1,
+   "noktaların %67'i çizgi üstünde (en az %70)": 2,
+   "noktaların %9'i çizgi üstünde (en az %70)": 1,
+   "noktaların %63'i çizgi üstünde (en az %70)": 1,
+   "noktaların %47'i çizgi üstünde (en az %70)": 2,
+   "noktaların %7'i çizgi üstünde (en az %70)": 1,
+   "noktaların %33'i çizgi üstünde (en az %70)": 2,
+   "noktaların %27'i çizgi üstünde (en az %70)": 2,
+   "noktaların %20'i çizgi üstünde (en az %70)": 2,
+   "ok uçlarından biri boş alanda (yazı/çizim yok)": 9,
+   "a ile b çok yakın": 3
+  },
+  "ret_ayrinti": [
+   {
+    "cumle": "P17.C0",
+    "sayfa": 18,
+    "tur": "kontur",
+    "neden": "noktaların %58'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.37,
+       0.53
+      ],
+      [
+       0.46,
+       0.528
+      ],
+      [
+       0.555,
+       0.53
+      ],
+      [
+       0.556,
+       0.585
+      ],
+      [
+       0.556,
+       0.66
+      ],
+      [
+       0.555,
+       0.735
+      ],
+      [
+       0.46,
+       0.737
+      ],
+      [
+       0.37,
+       0.735
+      ],
+      [
+       0.367,
+       0.66
+      ],
+      [
+       0.367,
+       0.585
+      ]
+     ],
+     "etiket": "mikrosatellitler"
+    }
+   },
+   {
+    "cumle": "P17.C0",
+    "sayfa": 18,
+    "tur": "kontur",
+    "neden": "noktaların %67'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.327,
+       0.527
+      ],
+      [
+       0.353,
+       0.527
+      ],
+      [
+       0.355,
+       0.6
+      ],
+      [
+       0.355,
+       0.665
+      ],
+      [
+       0.354,
+       0.735
+      ],
+      [
+       0.327,
+       0.735
+      ],
+      [
+       0.325,
+       0.665
+      ],
+      [
+       0.325,
+       0.6
+      ]
+     ],
+     "etiket": "tek nükleotid polimorfizmi"
+    }
+   },
+   {
+    "cumle": "P17.C2",
+    "sayfa": 18,
+    "tur": "kontur",
+    "neden": "noktaların %67'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.327,
+       0.527
+      ],
+      [
+       0.353,
+       0.527
+      ],
+      [
+       0.355,
+       0.6
+      ],
+      [
+       0.355,
+       0.665
+      ],
+      [
+       0.354,
+       0.735
+      ],
+      [
+       0.327,
+       0.735
+      ],
+      [
+       0.325,
+       0.665
+      ],
+      [
+       0.325,
+       0.6
+      ]
+     ],
+     "etiket": "tek nükleotid polimorfizmi"
+    }
+   },
+   {
+    "cumle": "P19.C0",
+    "sayfa": 20,
+    "tur": "kontur",
+    "neden": "noktaların %9'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.535,
+       0.627
+      ],
+      [
+       0.62,
+       0.625
+      ],
+      [
+       0.71,
+       0.625
+      ],
+      [
+       0.8,
+       0.625
+      ],
+      [
+       0.89,
+       0.627
+      ],
+      [
+       0.892,
+       0.65
+      ],
+      [
+       0.89,
+       0.69
+      ],
+      [
+       0.8,
+       0.692
+      ],
+      [
+       0.71,
+       0.692
+      ],
+      [
+       0.62,
+       0.692
+      ],
+      [
+       0.535,
+       0.69
+      ],
+      [
+       0.533,
+       0.65
+      ]
+     ],
+     "etiket": "genetik harita"
+    }
+   },
+   {
+    "cumle": "P19.C0",
+    "sayfa": 20,
+    "tur": "kontur",
+    "neden": "noktaların %63'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.612,
+       0.718
+      ],
+      [
+       0.7,
+       0.717
+      ],
+      [
+       0.79,
+       0.717
+      ],
+      [
+       0.884,
+       0.718
+      ],
+      [
+       0.886,
+       0.737
+      ],
+      [
+       0.884,
+       0.758
+      ],
+      [
+       0.79,
+       0.759
+      ],
+      [
+       0.7,
+       0.759
+      ],
+      [
+       0.612,
+       0.758
+      ],
+      [
+       0.61,
+       0.737
+      ]
+     ],
+     "etiket": "kromozom üzerindeki dizilim"
+    }
+   },
+   {
+    "cumle": "P24.C0",
+    "sayfa": 25,
+    "tur": "kontur",
+    "neden": "noktaların %47'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.731,
+       0.853
+      ],
+      [
+       0.752,
+       0.85
+      ],
+      [
+       0.772,
+       0.853
+      ],
+      [
+       0.773,
+       0.874
+      ],
+      [
+       0.772,
+       0.895
+      ],
+      [
+       0.752,
+       0.898
+      ],
+      [
+       0.731,
+       0.895
+      ],
+      [
+       0.73,
+       0.874
+      ]
+     ],
+     "etiket": "aday gen"
+    }
+   },
+   {
+    "cumle": "P24.C2",
+    "sayfa": 25,
+    "tur": "kontur",
+    "neden": "noktaların %47'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.848,
+       0.892
+      ],
+      [
+       0.876,
+       0.842
+      ],
+      [
+       0.914,
+       0.85
+      ],
+      [
+       0.918,
+       0.9
+      ],
+      [
+       0.912,
+       0.94
+      ],
+      [
+       0.909,
+       0.967
+      ],
+      [
+       0.872,
+       0.975
+      ],
+      [
+       0.843,
+       0.958
+      ]
+     ],
+     "etiket": "hastalıkla bağlantılı lokus"
+    }
+   },
+   {
+    "cumle": "P76.C0",
+    "sayfa": 77,
+    "tur": "kontur",
+    "neden": "noktaların %7'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.424,
+       0.025
+      ],
+      [
+       0.478,
+       0.022
+      ],
+      [
+       0.533,
+       0.025
+      ],
+      [
+       0.535,
+       0.045
+      ],
+      [
+       0.533,
+       0.065
+      ],
+      [
+       0.478,
+       0.068
+      ],
+      [
+       0.424,
+       0.065
+      ],
+      [
+       0.422,
+       0.045
+      ]
+     ],
+     "etiket": "GWAS lokusu"
+    }
+   },
+   {
+    "cumle": "P77.C0",
+    "sayfa": 78,
+    "tur": "kontur",
+    "neden": "noktaların %33'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.066,
+       0.11
+      ],
+      [
+       0.09,
+       0.058
+      ],
+      [
+       0.12,
+       0.055
+      ],
+      [
+       0.145,
+       0.11
+      ],
+      [
+       0.146,
+       0.2
+      ],
+      [
+       0.14,
+       0.258
+      ],
+      [
+       0.07,
+       0.258
+      ],
+      [
+       0.064,
+       0.2
+      ]
+     ],
+     "etiket": "hasta kohortu"
+    }
+   },
+   {
+    "cumle": "P77.C0",
+    "sayfa": 78,
+    "tur": "kontur",
+    "neden": "noktaların %33'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.408,
+       0.11
+      ],
+      [
+       0.432,
+       0.058
+      ],
+      [
+       0.462,
+       0.055
+      ],
+      [
+       0.487,
+       0.11
+      ],
+      [
+       0.488,
+       0.2
+      ],
+      [
+       0.482,
+       0.258
+      ],
+      [
+       0.412,
+       0.258
+      ],
+      [
+       0.406,
+       0.2
+      ]
+     ],
+     "etiket": "sağlıklı kontroller"
+    }
+   },
+   {
+    "cumle": "P77.C1",
+    "sayfa": 78,
+    "tur": "kontur",
+    "neden": "noktaların %27'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.436,
+       0.54
+      ],
+      [
+       0.448,
+       0.54
+      ],
+      [
+       0.452,
+       0.667
+      ],
+      [
+       0.459,
+       0.717
+      ],
+      [
+       0.431,
+       0.717
+      ],
+      [
+       0.434,
+       0.667
+      ]
+     ],
+     "etiket": "Manhattan gökdelenleri"
+    }
+   },
+   {
+    "cumle": "P81.C0",
+    "sayfa": 82,
+    "tur": "kontur",
+    "neden": "noktaların %20'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.0315,
+       0.025
+      ],
+      [
+       0.2155,
+       0.025
+      ],
+      [
+       0.233,
+       0.0418
+      ],
+      [
+       0.233,
+       0.2182
+      ],
+      [
+       0.2155,
+       0.235
+      ],
+      [
+       0.0315,
+       0.235
+      ],
+      [
+       0.014,
+       0.2182
+      ],
+      [
+       0.014,
+       0.0418
+      ]
+     ],
+     "etiket": "DNA ekstraksiyonu"
+    }
+   },
+   {
+    "cumle": "P81.C0",
+    "sayfa": 82,
+    "tur": "kontur",
+    "neden": "noktaların %27'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.2587,
+       0.025
+      ],
+      [
+       0.4443,
+       0.025
+      ],
+      [
+       0.462,
+       0.0418
+      ],
+      [
+       0.462,
+       0.2182
+      ],
+      [
+       0.4443,
+       0.235
+      ],
+      [
+       0.2587,
+       0.235
+      ],
+      [
+       0.241,
+       0.2182
+      ],
+      [
+       0.241,
+       0.0418
+      ]
+     ],
+     "etiket": "kütüphane hazırlığı"
+    }
+   },
+   {
+    "cumle": "P81.C1",
+    "sayfa": 82,
+    "tur": "kontur",
+    "neden": "noktaların %20'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.2587,
+       0.245
+      ],
+      [
+       0.4443,
+       0.245
+      ],
+      [
+       0.462,
+       0.262
+      ],
+      [
+       0.462,
+       0.441
+      ],
+      [
+       0.4443,
+       0.458
+      ],
+      [
+       0.2587,
+       0.458
+      ],
+      [
+       0.241,
+       0.441
+      ],
+      [
+       0.241,
+       0.262
+      ]
+     ],
+     "etiket": "biyoenformatik analiz"
+    }
+   },
+   {
+    "cumle": "P17.C0",
+    "sayfa": 18,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.534,
+      0.567
+     ],
+     "b": [
+      0.49,
+      0.6
+     ],
+     "etiket": "mikrosatellitler"
+    }
+   },
+   {
+    "cumle": "P17.C0",
+    "sayfa": 18,
+    "tur": "akis",
+    "neden": "a ile b çok yakın",
+    "komut": {
+     "a": [
+      0.344,
+      0.636
+     ],
+     "b": [
+      0.343,
+      0.612
+     ],
+     "etiket": "tek nükleotid polimorfizmi"
+    }
+   },
+   {
+    "cumle": "P17.C2",
+    "sayfa": 18,
+    "tur": "akis",
+    "neden": "a ile b çok yakın",
+    "komut": {
+     "a": [
+      0.36,
+      0.752
+     ],
+     "b": [
+      0.343,
+      0.727
+     ],
+     "etiket": "tek nükleotid polimorfizmi"
+    }
+   },
+   {
+    "cumle": "P19.C0",
+    "sayfa": 20,
+    "tur": "akis",
+    "neden": "a ile b çok yakın",
+    "komut": {
+     "a": [
+      0.747,
+      0.621
+     ],
+     "b": [
+      0.747,
+      0.657
+     ],
+     "etiket": "rekombinasyon sıklığı"
+    }
+   },
+   {
+    "cumle": "P24.C0",
+    "sayfa": 25,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.703,
+      0.875
+     ],
+     "b": [
+      0.758,
+      0.875
+     ],
+     "etiket": "aday gen"
+    }
+   },
+   {
+    "cumle": "P25.C0",
+    "sayfa": 26,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.62,
+      0.39
+     ],
+     "b": [
+      0.46,
+      0.39
+     ],
+     "etiket": "hastalık örnekleri"
+    }
+   },
+   {
+    "cumle": "P77.C0",
+    "sayfa": 78,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.19,
+      0.12
+     ],
+     "b": [
+      0.13,
+      0.18
+     ],
+     "etiket": "hasta kohortu"
+    }
+   },
+   {
+    "cumle": "P77.C0",
+    "sayfa": 78,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.37,
+      0.12
+     ],
+     "b": [
+      0.43,
+      0.18
+     ],
+     "etiket": "sağlıklı kontroller"
+    }
+   },
+   {
+    "cumle": "P80.C0",
+    "sayfa": 81,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.7,
+      0.7
+     ],
+     "b": [
+      0.76,
+      0.72
+     ],
+     "etiket": "nükleotid dizilimleri"
+    }
+   },
+   {
+    "cumle": "P80.C2",
+    "sayfa": 81,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.345,
+      0.575
+     ],
+     "b": [
+      0.183,
+      0.573
+     ],
+     "etiket": "genetik varyasyon"
+    }
+   },
+   {
+    "cumle": "P81.C0",
+    "sayfa": 82,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.12,
+      0.225
+     ],
+     "b": [
+      0.07,
+      0.15
+     ],
+     "etiket": "DNA ekstraksiyonu"
+    }
+   },
+   {
+    "cumle": "P81.C0",
+    "sayfa": 82,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.28,
+      0.21
+     ],
+     "b": [
+      0.37,
+      0.19
+     ],
+     "etiket": "kütüphane hazırlığı"
+    }
+   }
+  ]
  }
 }

@@ -35,47 +35,6 @@
     }
    ]
   },
-  "2": {
-   "3": [
-    {
-     "tur": "sema",
-     "sablon": "karsilastirma",
-     "sablon_ad": "İki durumun karşılaştırması",
-     "duzen": "karsit",
-     "basliklar": [
-      "Eğim"
-     ],
-     "satirlar": [
-      [
-       "Doz yanıt ilişkisi",
-       "Doğrusal ilişki",
-       "Plato ve tavan etkisi"
-      ]
-     ],
-     "kutuplar": [
-      "Barbitürat",
-      "Benzodiazepin"
-     ],
-     "s": 3,
-     "k": [
-      0,
-      46
-     ],
-     "tip": "karsit",
-     "konum": [
-      0.04,
-      0.98
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.196,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.1956,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
   "5": {
    "3": [
     {
@@ -429,11 +388,750 @@
      "ek_renk": "#ffffff"
     }
    ]
+  },
+  "2": {
+   "0": [
+    {
+     "tur": "egri_faz",
+     "nokta": [
+      [
+       0.4375,
+       0.858
+      ],
+      [
+       0.4875,
+       0.79
+      ],
+      [
+       0.5375,
+       0.722
+      ],
+      [
+       0.5875,
+       0.653
+      ],
+      [
+       0.631,
+       0.593
+      ]
+     ],
+     "fazlar": [
+      {
+       "aralik": [
+        0,
+        4
+       ],
+       "faz": "yukselis"
+      }
+     ],
+     "etiket": "A ilacı doğrusal eğim",
+     "s": 3,
+     "k": [
+      35,
+      60
+     ],
+     "etiket_konum": [
+      0.4375,
+      0.818
+     ],
+     "etiket_genislik": 0.302
+    }
+   ]
+  },
+  "10": {
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.614,
+       0.533
+      ],
+      [
+       0.601,
+       0.5636
+      ],
+      [
+       0.567,
+       0.5825
+      ],
+      [
+       0.525,
+       0.5825
+      ],
+      [
+       0.491,
+       0.5636
+      ],
+      [
+       0.478,
+       0.533
+      ],
+      [
+       0.491,
+       0.5024
+      ],
+      [
+       0.525,
+       0.4835
+      ],
+      [
+       0.567,
+       0.4835
+      ],
+      [
+       0.601,
+       0.5024
+      ]
+     ],
+     "etiket": "glukuronid konjugasyonu",
+     "s": 11,
+     "k": [
+      82,
+      137
+     ],
+     "etiket_konum": [
+      0.604,
+      0.5735
+     ],
+     "etiket_genislik": 0.328,
+     "yakin": [
+      0.418,
+      0.4235,
+      0.992,
+      0.6735
+     ]
+    }
+   ]
+  },
+  "43": {
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.578,
+       0.707
+      ],
+      [
+       0.76,
+       0.707
+      ],
+      [
+       0.94,
+       0.707
+      ],
+      [
+       0.94,
+       0.74
+      ],
+      [
+       0.76,
+       0.74
+      ],
+      [
+       0.578,
+       0.74
+      ]
+     ],
+     "etiket": "zolpidem 5–10 mg",
+     "s": 44,
+     "k": [
+      130,
+      171
+     ],
+     "etiket_konum": [
+      0.65,
+      0.797
+     ],
+     "etiket_genislik": 0.239,
+     "etiket_hedef": [
+      0.7695,
+      0.74
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.518,
+      0.647,
+      1,
+      0.9013
+     ]
+    }
+   ]
   }
  },
  "rapor": {
-  "aday": 12,
-  "gecti": 12,
-  "ret": {}
+  "aday": 32,
+  "gecti": 14,
+  "ret": {
+   "noktaların %13'i çizgi üstünde (en az %70)": 1,
+   "noktaların %20'i çizgi üstünde (en az %70)": 1,
+   "noktaların %60'i çizgi üstünde (en az %70)": 1,
+   "noktaların %53'i çizgi üstünde (en az %70)": 1,
+   "noktaların %0'i çizgi üstünde (en az %70)": 2,
+   "noktaların %27'i çizgi üstünde (en az %70)": 3,
+   "noktaların %40'i çizgi üstünde (en az %70)": 1,
+   "noktaların %36'i çizgi üstünde (en az %70)": 1,
+   "ok uçlarından biri boş alanda (yazı/çizim yok)": 3,
+   "a/b noktası geçersiz": 4
+  },
+  "ret_ayrinti": [
+   {
+    "cumle": "P4.C0",
+    "sayfa": 5,
+    "tur": "kontur",
+    "neden": "noktaların %13'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.115,
+       0.14
+      ],
+      [
+       0.17,
+       0.14
+      ],
+      [
+       0.225,
+       0.14
+      ],
+      [
+       0.225,
+       0.2425
+      ],
+      [
+       0.225,
+       0.345
+      ],
+      [
+       0.17,
+       0.345
+      ],
+      [
+       0.115,
+       0.345
+      ],
+      [
+       0.115,
+       0.2425
+      ]
+     ],
+     "etiket": "diazepam"
+    }
+   },
+   {
+    "cumle": "P4.C0",
+    "sayfa": 5,
+    "tur": "kontur",
+    "neden": "noktaların %20'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.245,
+       0.6
+      ],
+      [
+       0.3825,
+       0.6
+      ],
+      [
+       0.52,
+       0.6
+      ],
+      [
+       0.52,
+       0.71
+      ],
+      [
+       0.52,
+       0.82
+      ],
+      [
+       0.3825,
+       0.82
+      ],
+      [
+       0.245,
+       0.82
+      ],
+      [
+       0.245,
+       0.71
+      ]
+     ],
+     "etiket": "triazolam ve alprazolam"
+    }
+   },
+   {
+    "cumle": "P4.C1",
+    "sayfa": 5,
+    "tur": "kontur",
+    "neden": "noktaların %60'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.585,
+       0.355
+      ],
+      [
+       0.63,
+       0.355
+      ],
+      [
+       0.675,
+       0.355
+      ],
+      [
+       0.675,
+       0.4325
+      ],
+      [
+       0.675,
+       0.51
+      ],
+      [
+       0.63,
+       0.51
+      ],
+      [
+       0.585,
+       0.51
+      ],
+      [
+       0.585,
+       0.4325
+      ]
+     ],
+     "etiket": "barbitürat çekirdeği"
+    }
+   },
+   {
+    "cumle": "P4.C1",
+    "sayfa": 5,
+    "tur": "kontur",
+    "neden": "noktaların %53'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.68,
+       0.38
+      ],
+      [
+       0.835,
+       0.38
+      ],
+      [
+       0.99,
+       0.38
+      ],
+      [
+       0.99,
+       0.445
+      ],
+      [
+       0.99,
+       0.51
+      ],
+      [
+       0.835,
+       0.51
+      ],
+      [
+       0.68,
+       0.51
+      ],
+      [
+       0.68,
+       0.445
+      ]
+     ],
+     "etiket": "pentobarbital, sekobarbital, fenobarbital"
+    }
+   },
+   {
+    "cumle": "P10.C0",
+    "sayfa": 11,
+    "tur": "kontur",
+    "neden": "noktaların %0'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.21,
+       0.12
+      ],
+      [
+       0.49,
+       0.12
+      ],
+      [
+       0.77,
+       0.12
+      ],
+      [
+       0.77,
+       0.14250000000000002
+      ],
+      [
+       0.77,
+       0.165
+      ],
+      [
+       0.49,
+       0.165
+      ],
+      [
+       0.21,
+       0.165
+      ],
+      [
+       0.21,
+       0.14250000000000002
+      ]
+     ],
+     "etiket": "öncül benzodiazepinler"
+    }
+   },
+   {
+    "cumle": "P10.C0",
+    "sayfa": 11,
+    "tur": "kontur",
+    "neden": "noktaların %27'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.48,
+       0.288
+      ],
+      [
+       0.55,
+       0.288
+      ],
+      [
+       0.62,
+       0.288
+      ],
+      [
+       0.62,
+       0.309
+      ],
+      [
+       0.62,
+       0.33
+      ],
+      [
+       0.55,
+       0.33
+      ],
+      [
+       0.48,
+       0.33
+      ],
+      [
+       0.48,
+       0.309
+      ]
+     ],
+     "etiket": "desmetildiazepam"
+    }
+   },
+   {
+    "cumle": "P10.C1",
+    "sayfa": 11,
+    "tur": "kontur",
+    "neden": "noktaların %27'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.5,
+       0.378
+      ],
+      [
+       0.5485,
+       0.378
+      ],
+      [
+       0.597,
+       0.378
+      ],
+      [
+       0.597,
+       0.398
+      ],
+      [
+       0.597,
+       0.418
+      ],
+      [
+       0.5485,
+       0.418
+      ],
+      [
+       0.5,
+       0.418
+      ],
+      [
+       0.5,
+       0.398
+      ]
+     ],
+     "etiket": "oksazepam"
+    }
+   },
+   {
+    "cumle": "P12.C0",
+    "sayfa": 13,
+    "tur": "kontur",
+    "neden": "noktaların %40'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.05,
+       0.66
+      ],
+      [
+       0.5,
+       0.66
+      ],
+      [
+       0.95,
+       0.66
+      ],
+      [
+       0.95,
+       0.696
+      ],
+      [
+       0.95,
+       0.732
+      ],
+      [
+       0.5,
+       0.732
+      ],
+      [
+       0.05,
+       0.732
+      ],
+      [
+       0.05,
+       0.696
+      ]
+     ],
+     "etiket": "lorazepam ve oksazepam"
+    }
+   },
+   {
+    "cumle": "P35.C1",
+    "sayfa": 36,
+    "tur": "kontur",
+    "neden": "noktaların %0'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.15,
+       0.452
+      ],
+      [
+       0.485,
+       0.452
+      ],
+      [
+       0.82,
+       0.452
+      ],
+      [
+       0.82,
+       0.487
+      ],
+      [
+       0.82,
+       0.522
+      ],
+      [
+       0.485,
+       0.522
+      ],
+      [
+       0.15,
+       0.522
+      ],
+      [
+       0.15,
+       0.487
+      ]
+     ],
+     "etiket": "girişimlerde sedasyon, amnezi"
+    }
+   },
+   {
+    "cumle": "P43.C0",
+    "sayfa": 44,
+    "tur": "kontur",
+    "neden": "noktaların %36'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.068,
+       0.222
+      ],
+      [
+       0.4,
+       0.222
+      ],
+      [
+       0.73,
+       0.222
+      ],
+      [
+       0.73,
+       0.258
+      ],
+      [
+       0.4,
+       0.258
+      ],
+      [
+       0.068,
+       0.258
+      ]
+     ],
+     "etiket": "Tablo 22-3"
+    }
+   },
+   {
+    "cumle": "P43.C1",
+    "sayfa": 44,
+    "tur": "kontur",
+    "neden": "noktaların %27'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.068,
+       0.372
+      ],
+      [
+       0.3,
+       0.372
+      ],
+      [
+       0.568,
+       0.372
+      ],
+      [
+       0.568,
+       0.402
+      ],
+      [
+       0.3,
+       0.402
+      ],
+      [
+       0.068,
+       0.402
+      ]
+     ],
+     "etiket": "alprazolam 0,25–0,5 mg"
+    }
+   },
+   {
+    "cumle": "P4.C0",
+    "sayfa": 5,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.04,
+      0.24
+     ],
+     "b": [
+      0.13,
+      0.24
+     ],
+     "etiket": "diazepam"
+    }
+   },
+   {
+    "cumle": "P4.C0",
+    "sayfa": 5,
+    "tur": "akis",
+    "neden": "a/b noktası geçersiz",
+    "komut": {
+     "a": [
+      0.4,
+      0.6
+     ]
+    }
+   },
+   {
+    "cumle": "P4.C1",
+    "sayfa": 5,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.535,
+      0.42
+     ],
+     "b": [
+      0.6,
+      0.42
+     ],
+     "etiket": "barbitürat çekirdeği"
+    }
+   },
+   {
+    "cumle": "P4.C1",
+    "sayfa": 5,
+    "tur": "akis",
+    "neden": "a/b noktası geçersiz",
+    "komut": {
+     "a": [
+      0.655,
+      0.42
+     ]
+    }
+   },
+   {
+    "cumle": "P10.C0",
+    "sayfa": 11,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.66,
+      0.37
+     ],
+     "b": [
+      0.56,
+      0.31
+     ],
+     "etiket": "ortak aktif metabolit"
+    }
+   },
+   {
+    "cumle": "P12.C0",
+    "sayfa": 13,
+    "tur": "akis",
+    "neden": "a/b noktası geçersiz",
+    "komut": {
+     "a": [
+      0.86,
+      0.695
+     ]
+    }
+   },
+   {
+    "cumle": "P43.C0",
+    "sayfa": 44,
+    "tur": "akis",
+    "neden": "a/b noktası geçersiz",
+    "komut": {
+     "a": [
+      0.55,
+      0.18
+     ]
+    }
+   }
+  ]
  }
 }

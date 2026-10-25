@@ -1,25 +1,21 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 357,
-  "baslik": "Radyolojide Lezyon Odaklı Hedefleyici İşaretleme ve Hassas Ok Kılavuzu",
+  "onem": 358,
+  "baslik": "Geçen Yıl Sesli Derslerinde Lazer Şekil ve Tablolara Gidiyor",
   "maddeler": [
-    "Lezyon Odaklı Hassas Çerçeveleme: BT, MRG ve Röntgen görüntülerinde tüm resim çerçevesi yerine doğrudan patolojinin kendisi (bikonveks EDH lensi, hilal SDH, C1 Jefferson kırığı, Hangman fraktürü, Winking Owl pedikül erozyonu, GBM halkasal kontrastı) dar ve odaklanmış çerçeveyle (odak) sınırlandı.",
-    "Hedefleyici Kılavuz Oklar (a -> b): Radyoloji kesitinde net doku alanından başlayıp doğrudan lezyon merkezine yönelen canlı hedefleyici oklar eklendi; öğrencinin dikkati tam tanı noktasına odaklandı.",
-    "Kelime Aralığı ve Çizim Senkronizasyonu: Çizim motorundaki kelime aralığı sınırları (son parametresi) optimize edilerek tüm odak ve hedefleyici okların kesintisiz biçimde PDF ve .medspak paketine işlenmesi sağlandı.",
-    "5 Kritik Radyoloji Dersinde Tam Kapsam: Kafa Travmaları (18 lezyon), Spinal Travmalar (8 lezyon), Omurga Tümörleri (3 lezyon), Beyin Tümörleri (4 lezyon) ve SSS Hasar Biçimleri (2 lezyon) olmak üzere tüm radyoloji paketleri 0 hata ile güncellendi."
+    "Lazer artık şekil ve tablo anlatılırken yazıya değil görselin kendisine gider: 33 arşiv dersinde resim işareti 169'dan 682'ye, tablo işareti 17'den 134'e çıktı.",
+    "Hoca görseli anlatırken lezyon, yapı ve bölgeler resmin üstünde çizilir: şekil anlatan cümlelerin yarıdan fazlasında (474/853) kontur ya da ok var.",
+    "Her cümleye rastgele madde işaretleyen eski toplu betik kaldırıldı; işaret yalnız anlatılan yere düşer."
   ],
   "eklenen": [
-    "Doğrudan lezyon merkezine yönelen hedefleyici oklar (a -> b)",
-    "Radyolojik patolojileri dar alanda saran hassas odak çerçeveleri (odak)"
+    "Şekil/tablo çapası (tablo: T# | true) ve T# tablo kutuları",
+    "Arşiv şekil cümlelerine görsel üstü çizim (sekil_cizim.py)"
   ],
   "degisen": [
-    "meds/scripts/arsiv_25_26/zenginlestir_tum_radyoloji.py",
-    "meds/data/arsiv_25_26/sesli_anlatim/cizim/y25-k2-12-kafa-travmalari.json",
-    "meds/data/arsiv_25_26/sesli_anlatim/cizim/y25-k2-13-spinal-travmalar.json",
-    "meds/data/arsiv_25_26/sesli_anlatim/cizim/y25-k2-64-omurga-tumorleri.json",
-    "meds/data/arsiv_25_26/sesli_anlatim/cizim/y25-k2-14-beyin-tumorleri.json",
-    "meds/data/arsiv_25_26/sesli_anlatim/cizim/y25-k2-03-sss-hasar-bicimleri-odem-hidrosefali-herniasyon.json",
-    "meds/guncelleme_notu.json"
+    "meds/scripts/sesli_anlatim/pdf_isaret.py",
+    "meds/scripts/arsiv_25_26/sekil_cizim.py",
+    "meds/scripts/arsiv_25_26/uygula_lazer_takip.py",
+    "meds/data/arsiv_25_26/sesli_anlatim/{capa,isaret,cizim,v2}"
   ],
   "duzeltilen": [
     "Radyoloji slaytlarında tüm resim alanını çevreleyen geniş kutuların yerine lezyonun kendisini saran dar odak kutusu getirildi",

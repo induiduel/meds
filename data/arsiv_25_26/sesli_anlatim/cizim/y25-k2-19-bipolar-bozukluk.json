@@ -418,11 +418,545 @@
      "ek_renk": "#e6ecd0"
     }
    ]
+  },
+  "4": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.115,
+       0.05
+      ],
+      [
+       0.1562,
+       0.06
+      ],
+      [
+       0.1812,
+       0.1133
+      ],
+      [
+       0.1775,
+       0.18
+      ],
+      [
+       0.1525,
+       0.2333
+      ],
+      [
+       0.115,
+       0.25
+      ],
+      [
+       0.0775,
+       0.2267
+      ],
+      [
+       0.06,
+       0.16
+      ],
+      [
+       0.0725,
+       0.0867
+      ]
+     ],
+     "etiket": "Galen",
+     "s": 5,
+     "k": [
+      31,
+      56
+     ],
+     "etiket_konum": [
+      0.2312,
+      0.01
+     ],
+     "etiket_genislik": 0.1,
+     "etiket_hedef": [
+      0.1812,
+      0.05
+     ],
+     "etiket_boy": 0.0443
+    }
+   ],
+   "3": [
+    {
+     "tur": "akis",
+     "a": [
+      0.8650754716661241,
+      0.31622442626953123
+     ],
+     "b": [
+      0.8650754716661241,
+      0.36327999651873555
+     ],
+     "iliski": "aktive",
+     "etiket": "flegmatik: balgam",
+     "s": 5,
+     "k": [
+      55,
+      78
+     ],
+     "yol": [
+      [
+       0.8651,
+       0.3162
+      ],
+      [
+       0.8651,
+       0.3633
+      ]
+     ],
+     "rota": "duz",
+     "kaynak_kutu": [
+      0.8,
+      0.3182,
+      0.9302,
+      0.3613
+     ],
+     "hedef_kutu": [
+      0.8,
+      0.3182,
+      0.9302,
+      0.3613
+     ],
+     "etiket_konum": [
+      0.5651,
+      0.2562
+     ],
+     "etiket_genislik": 0.252
+    }
+   ]
   }
  },
  "rapor": {
-  "aday": 12,
-  "gecti": 12,
-  "ret": {}
+  "aday": 28,
+  "gecti": 14,
+  "ret": {
+   "noktalar tek bir resim kutusunun içinde değil": 7,
+   "ok uçlarından biri boş alanda (yazı/çizim yok)": 7
+  },
+  "ret_ayrinti": [
+   {
+    "cumle": "P4.C1",
+    "sayfa": 5,
+    "tur": "kontur",
+    "neden": "noktalar tek bir resim kutusunun içinde değil",
+    "komut": {
+     "nokta": [
+      [
+       0.2612,
+       0.3233
+      ],
+      [
+       0.3469,
+       0.3233
+      ],
+      [
+       0.4325,
+       0.3233
+      ],
+      [
+       0.4325,
+       0.6433
+      ],
+      [
+       0.4325,
+       0.9633
+      ],
+      [
+       0.3469,
+       0.9633
+      ],
+      [
+       0.2612,
+       0.9633
+      ],
+      [
+       0.2612,
+       0.6433
+      ]
+     ],
+     "etiket": "Sanguin: kan, hava, ilkbahar"
+    }
+   },
+   {
+    "cumle": "P4.C2",
+    "sayfa": 5,
+    "tur": "kontur",
+    "neden": "noktalar tek bir resim kutusunun içinde değil",
+    "komut": {
+     "nokta": [
+      [
+       0.6038,
+       0.3233
+      ],
+      [
+       0.6894,
+       0.3233
+      ],
+      [
+       0.775,
+       0.3233
+      ],
+      [
+       0.775,
+       0.6433
+      ],
+      [
+       0.775,
+       0.9633
+      ],
+      [
+       0.6894,
+       0.9633
+      ],
+      [
+       0.6038,
+       0.9633
+      ],
+      [
+       0.6038,
+       0.6433
+      ]
+     ],
+     "etiket": "Melankolik: kara safra"
+    }
+   },
+   {
+    "cumle": "P4.C3",
+    "sayfa": 5,
+    "tur": "kontur",
+    "neden": "noktalar tek bir resim kutusunun içinde değil",
+    "komut": {
+     "nokta": [
+      [
+       0.4375,
+       0.3233
+      ],
+      [
+       0.5181,
+       0.3233
+      ],
+      [
+       0.5988,
+       0.3233
+      ],
+      [
+       0.5988,
+       0.6433
+      ],
+      [
+       0.5988,
+       0.9633
+      ],
+      [
+       0.5181,
+       0.9633
+      ],
+      [
+       0.4375,
+       0.9633
+      ],
+      [
+       0.4375,
+       0.6433
+      ]
+     ],
+     "etiket": "Kolerik: sarı safra, ateş"
+    }
+   },
+   {
+    "cumle": "P4.C4",
+    "sayfa": 5,
+    "tur": "kontur",
+    "neden": "noktalar tek bir resim kutusunun içinde değil",
+    "komut": {
+     "nokta": [
+      [
+       0.265,
+       0.6
+      ],
+      [
+       0.3262,
+       0.6
+      ],
+      [
+       0.3875,
+       0.6
+      ],
+      [
+       0.3875,
+       0.7833
+      ],
+      [
+       0.3875,
+       0.9667
+      ],
+      [
+       0.3262,
+       0.9667
+      ],
+      [
+       0.265,
+       0.9667
+      ],
+      [
+       0.265,
+       0.7833
+      ]
+     ],
+     "etiket": "Sanguin özellikler"
+    }
+   },
+   {
+    "cumle": "P4.C5",
+    "sayfa": 5,
+    "tur": "kontur",
+    "neden": "noktalar tek bir resim kutusunun içinde değil",
+    "komut": {
+     "nokta": [
+      [
+       0.4425,
+       0.6
+      ],
+      [
+       0.5012,
+       0.6
+      ],
+      [
+       0.56,
+       0.6
+      ],
+      [
+       0.56,
+       0.6725
+      ],
+      [
+       0.56,
+       0.745
+      ],
+      [
+       0.5012,
+       0.745
+      ],
+      [
+       0.4425,
+       0.745
+      ],
+      [
+       0.4425,
+       0.6725
+      ]
+     ],
+     "etiket": "Kolerik özellikler"
+    }
+   },
+   {
+    "cumle": "P4.C6",
+    "sayfa": 5,
+    "tur": "kontur",
+    "neden": "noktalar tek bir resim kutusunun içinde değil",
+    "komut": {
+     "nokta": [
+      [
+       0.6025,
+       0.6
+      ],
+      [
+       0.685,
+       0.6
+      ],
+      [
+       0.7675,
+       0.6
+      ],
+      [
+       0.7675,
+       0.7067
+      ],
+      [
+       0.7675,
+       0.8133
+      ],
+      [
+       0.685,
+       0.8133
+      ],
+      [
+       0.6025,
+       0.8133
+      ],
+      [
+       0.6025,
+       0.7067
+      ]
+     ],
+     "etiket": "Melankolik özellikler"
+    }
+   },
+   {
+    "cumle": "P4.C7",
+    "sayfa": 5,
+    "tur": "kontur",
+    "neden": "noktalar tek bir resim kutusunun içinde değil",
+    "komut": {
+     "nokta": [
+      [
+       0.785,
+       0.6333
+      ],
+      [
+       0.8488,
+       0.6333
+      ],
+      [
+       0.9125,
+       0.6333
+      ],
+      [
+       0.9125,
+       0.7633
+      ],
+      [
+       0.9125,
+       0.8933
+      ],
+      [
+       0.8488,
+       0.8933
+      ],
+      [
+       0.785,
+       0.8933
+      ],
+      [
+       0.785,
+       0.7633
+      ]
+     ],
+     "etiket": "Flegmatik özellikler"
+    }
+   },
+   {
+    "cumle": "P4.C1",
+    "sayfa": 5,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.346,
+      0.285
+     ],
+     "b": [
+      0.346,
+      0.335
+     ],
+     "etiket": "sanguin: kan, hava"
+    }
+   },
+   {
+    "cumle": "P4.C2",
+    "sayfa": 5,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.69,
+      0.285
+     ],
+     "b": [
+      0.69,
+      0.335
+     ],
+     "etiket": "melankolik: kara safra"
+    }
+   },
+   {
+    "cumle": "P4.C3",
+    "sayfa": 5,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.51,
+      0.285
+     ],
+     "b": [
+      0.51,
+      0.335
+     ],
+     "etiket": "kolerik: sarı safra"
+    }
+   },
+   {
+    "cumle": "P4.C4",
+    "sayfa": 5,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.41,
+      0.69
+     ],
+     "b": [
+      0.34,
+      0.69
+     ],
+     "etiket": "popüler, neşeli"
+    }
+   },
+   {
+    "cumle": "P4.C5",
+    "sayfa": 5,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.545,
+      0.653
+     ],
+     "b": [
+      0.505,
+      0.653
+     ],
+     "etiket": "asabi, tepkisel"
+    }
+   },
+   {
+    "cumle": "P4.C6",
+    "sayfa": 5,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.66,
+      0.87
+     ],
+     "b": [
+      0.66,
+      0.815
+     ],
+     "etiket": "bipolar depresyon"
+    }
+   },
+   {
+    "cumle": "P4.C7",
+    "sayfa": 5,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.975,
+      0.65
+     ],
+     "b": [
+      0.9,
+      0.65
+     ],
+     "etiket": "soğukkanlı, güvenilir"
+    }
+   }
+  ]
  }
 }

@@ -510,3 +510,16 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   klip (k2farmakoloji 2f01 q-26) yenilendi.
 - Kural: bu sınır geri çekilmez; tek cümle 30 sn'yi aşıyorsa metin aşamasında bölünür. Sayım betiği: kütüphanenin
   `chunker.chunk` çıktısında `SENTENCE_PAUSE` dışı kesim = hata.
+
+## H59 — Arşiv derslerinde lazer resim ve tabloları göstermiyordu (2026-10-25, kullanıcı, 2025-26 Kurul 2)
+
+- **Belirti:** 33 arşiv dersinde 6.023 cümlenin yalnız 169'u resme, 17'si tabloya işaret ediyordu; şekil anlatılırken
+  lazer yazı satırında duruyordu.
+- **Kök:** (1) `uygula_lazer_takip.py` "%98–100 kapsama" için her cümleye en yakın maddeyi (bulamazsa M0) ve görselli
+  sayfada `resim: 0` basıyordu; (2) `pdf_isaret.capali_ic` maddeyi şekil çapasından önce işliyor, tek ortak kelimelik
+  metin eşleşmesi de şekli eziyordu; (3) çapa şemasında tablo alanı, dökümde T# kutusu yoktu; (4) yinelenen R kutuları
+  (aynı yere iki görsel) R0 = R1 karışıklığı yaratıyordu.
+- **Kural:** şekil/tablo çapası maddeye üstündür; `madde`/`resim` dizini toplu betikle uydurulmaz; kapsama oranı
+  çapayı düzelterek yükseltilir. Döküm (capa_dok, cizim dok) yalnız tekil R# ve yeşil T# kutularını gösterir.
+- **Kapı:** `pdf_isaret.sekil_isareti` (şekil önceliği), `capa_dogrula.py` T# denetimi; `uygula_lazer_takip.py` çapa yazmaz.
+
