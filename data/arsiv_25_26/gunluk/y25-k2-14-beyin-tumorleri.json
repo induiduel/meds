@@ -129,6 +129,29 @@
         "cizimSayisi": 9,
         "cikmisEslesme": 28
       }
+    },
+    {
+      "surum": 6,
+      "tarih": "2026-10-26 00:34",
+      "neden": "Radyoloji atlası (s.56–68) cümleleri sayfa görüntülerine göre yeniden yazıldı",
+      "hatali_bilgiler": [
+        "Atlas cümleleri görüntülerle uyuşmuyordu: GBM ve arka çukur kitleleri hipofiz adenomu diye anlatılıyordu"
+      ],
+      "degisiklikler": [
+        "P55–P67 görüntüye dayalı yeniden yazıldı, görüntüde karşılığı olmayan 11 cümle çıkarıldı; atlas sayfalarına lezyon konturları"
+      ],
+      "metrikler": {
+        "sureSn": 2039,
+        "sureDk": 34.0,
+        "sayfaSayisi": 68,
+        "atlananSayfa": 0,
+        "bolumSayisi": 13,
+        "paragrafSayisi": 68,
+        "cumleSayisi": 221,
+        "slaytAdimSayisi": 16,
+        "cizimSayisi": 26,
+        "cikmisEslesme": 28
+      }
     }
   ]
 }
