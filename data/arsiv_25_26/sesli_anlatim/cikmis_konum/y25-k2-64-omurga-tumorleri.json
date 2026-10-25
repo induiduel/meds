@@ -1,13 +1,13 @@
 {
  "surum": 1,
- "metinHash": "f61ba06d94ae120cd3866255b4dcb020d9d6cfc0",
+ "metinHash": "d548eb3b8662b42b6992fff32c593153cb6d54cc",
  "q": [
   {
    "id": "past-1790877037605-566383",
    "kok": "Yumuşak dokularda, iç organlarda veya spinal sinir köklerinde ortaya çıkabilen; benign ve kapsüllü olan; en sık sekizinci kranial sinirin vestibüler kısmını tutan; sinir kökü sıkışmasına bağlı işitme kaybı gibi bulgulara yol açabilen; ailesel nörofibromatozis tip 2 ile ilişkili olabilen ve mikroskopik incelemede Antoni A, Antoni B alanları ile Verocay cisimcikleriyle karakterize olan tümör aşağıdakilerden hangisidir?",
    "cevap": "Schwannom",
    "yil": "2020-2021",
-   "p": 3,
+   "p": 2,
    "c": 2,
    "skor": 0.616
   },
@@ -16,45 +16,36 @@
    "kok": "Genellikle genç erkeklerde, geceleri uykudan uyandıran, tek taraflı periorbital/temporal, delici-oyucu tarzda çok şiddetli ağrıya eşlik eden aynı tarafta göz yaşarması, burun tıkanıklığı ve konjonktival hiperemi ile seyreden primer baş ağrısı hangisidir?",
    "cevap": "Küme baş ağrısı (trigeminal otonomik sefalalji)",
    "yil": "2021-2026",
-   "p": 9,
-   "c": 2,
-   "skor": 0.611
+   "p": 4,
+   "c": 3,
+   "skor": 0.616
   },
   {
    "id": "d3-k2-pat-003",
    "kok": "Histopatolojik incelemesinde selüler palizatlanmalar gösteren yoğun alanlar (Antoni A) ile gevşek miksoid alanlar (Antoni B) ve karakteristik Verocay cisimcikleri içeren, sıklıkla 8. kranial sinirin vestibüler dalından köken alan benign periferik sinir kılıfı tümörü aşağıdakilerden hangisidir?",
    "cevap": "Schwannom (akustik nörinom)",
    "yil": "2021-2026",
-   "p": 12,
-   "c": 1,
-   "skor": 0.607
+   "p": 2,
+   "c": 2,
+   "skor": 0.6
   },
   {
-   "id": "q-2__kurul_-9",
-   "kok": "Çocukluk çağında en sık görülen malign beyin tümörü olan ve histolojik olarak Homer-Wright rozetleri içeren tümör aşağıdakilerden hangisidir?",
-   "cevap": "Medulloblastom",
-   "yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
-   "p": 12,
+   "id": "dea0348ff630",
+   "kok": "Spina bifida ile ilgili aşağıdaki ifadeler verilmiştir:\nI. Nöral tüpün kapanma defektidir.\nII. En sık görülen konjenital anomalilerden/nörolojik bozukluklardandır.\nIII. İlk çocukta spina bifida varsa sonraki çocuklar için risk artmaktadır.\nIV. En ağır tipi miyelomeningoseldir.\nYukarıdaki ifadelerden hangileri doğrudur?",
+   "cevap": "I, II, III ve IV",
+   "yil": "2023-2024",
+   "p": 10,
    "c": 1,
-   "skor": 0.615
+   "skor": 0.602
   },
   {
    "id": "e1454640ed84",
    "kok": "Kafatası kırıklarında (özellikle temporal kemik) arteria meningea media'nın hasar görmesi sonucu aşağıdaki kanama veya hematom tiplerinden hangisi gelişir?",
    "cevap": "Epidural hematom",
    "yil": "2020-2021",
-   "p": 11,
-   "c": 4,
-   "skor": 0.61
-  },
-  {
-   "id": "past-q-KURUL_2_C_IKMIS__3-78",
-   "kok": "Meningiom ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
-   "cevap": "Sinsisyal, trofoblastik, psammomatöz ve papiller tipleri WHO grade I meningiom olarak değerlendirilir.",
-   "yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
-   "p": 2,
-   "c": 2,
-   "skor": 0.601
+   "p": 10,
+   "c": 1,
+   "skor": 0.628
   }
  ]
 }

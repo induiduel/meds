@@ -1,10 +1,10 @@
 {
- "surum": 2,
  "ders_id": "k2-55",
+ "surum": 2,
  "bolumler": [
   {
    "id": "k2-55-b01",
-   "baslik": "Panik Atak ve Panik Bozukluk Kavramı",
+   "baslik": "Bölüm 1: Panik Atak ve Panik Bozukluk Kavramı",
    "paragraflar": [
     {
      "id": "k2-55-p001",
@@ -12,47 +12,58 @@
      "cumleler": [
       {
        "id": "k2-55-c0001",
-       "ses": "Panik bozukluğu ve fobik bozukluklar dersimize başlarken akut anksiyete krizlerinin patofizyolojisini ve klinik seyrini inceleyeceğiz.",
-       "ekran": "**Panik Bozukluk:** Genel giriş ve klinik hedefler.",
+       "ses": "Ruh sağlığı ve hastalıkları anabilim dalı klinik dersimiz kapsamında panik bozukluk, agorafobi, özgül fobiler ve sosyal kaygı bozukluğunu tüm klinik, tanısal ve sağaltım yönleriyle ele alacağız.",
+       "ekran": "**Panik Bozukluk ve Fobik Bozukluklar:** Giriş ve klinik kapsam.",
        "duzey": 0,
        "slayt": {
         "sayfa": 1,
         "satir": [
          "PANİK BOZUKLUK"
         ],
-        "sekil": null,
-        "madde": [
-         0
-        ],
-        "resim": 0
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Panik Bozukluk:"
+         "metin": "Panik Bozukluk"
         }
        ]
       },
       {
        "id": "k2-55-c0002",
-       "ses": "Ders boyunca panik atak ile panik bozukluk ayrımını, agorafobiyi, özgül fobileri ve sosyal anksiyete bozukluğunu ele alacağız.",
-       "ekran": "Panik atak, **agorafobi ve fobiler** kapsamlı incelenecektir.",
+       "ses": "Dersimiz Karabük Üniversitesi Tıp Fakültesi Ruh Sağlığı ve Hastalıkları Anabilim Dalından Doktor Öğretim Üyesi Zuhal Koç Apaydın tarafından hazırlanmıştır.",
+       "ekran": "Dersimiz Doktor Öğretim Üyesi **Zuhal Koç Apaydın** tarafından tıp fakültesi amfi kurulu için hazırlanmıştır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 1,
         "satir": [
-         "PANİK BOZUKLUK"
+         "Dr. Öğrt. Üyesi Zuhal KOÇ APAYDIN"
         ],
-        "sekil": null,
-        "madde": [
-         0
-        ],
-        "resim": 0
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "agorafobi ve fobiler"
+         "metin": "Zuhal Koç Apaydın"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0003",
+       "ses": "Genel hekimlik pratiğinde ve acil servislerde anksiyete bozukluklarının ayırıcı tanısını yaparken otonomik belirtiler ile bilişsel çarpıtmaları doğru ayrıştırmak hastaya yaklaşımın temelini oluşturur.",
+       "ekran": "Anksiyete bozukluklarının ayırıcı tanısında **otonomik belirtiler** ile bilişsel çarpıtmaları doğru ayrıştırmak esastır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Ruh Sağlığı ve Hastalıkları Anabilim Dalı"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "otonomik belirtiler"
         }
        ]
       }
@@ -63,71 +74,85 @@
      "sayfa": 2,
      "cumleler": [
       {
-       "id": "k2-55-c0003",
-       "ses": "Panik atak aniden başlayan, hızla şiddetlenen, belirgin bir başlangıcı ve sonu olan yoğun korku veya dehşet nöbetidir.",
-       "ekran": "**Panik Atak Tanımı:** Aniden başlayan ve hızla doruğa ulaşan dehşet nöbetidir.",
+       "id": "k2-55-c0004",
+       "ses": "Panik atak aniden başlayan ve dakikalar içinde hızla şiddetlenen, çoğu zaman şiddetli bir tehlike hissi veya öleceği hissinin eşlik ettiği yoğun korku ya da sıkıntı nöbetidir.",
+       "ekran": "**Panik Atak:** Aniden başlayan ve dakikalar içinde şiddetlenen yoğun korku ve sıkıntı nöbetidir.",
        "duzey": 0,
        "slayt": {
         "sayfa": 2,
         "satir": [
          "PANİK ATAK: Aniden başlayan ve hızla şiddetlenen, çoğu"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         2
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Panik Atak Tanımı:"
-        }
-       ]
-      },
-      {
-       "id": "k2-55-c0004",
-       "ses": "Nöbet sırasında hastaya şiddetli bir tehlike hissi, kalp krizi geçirme korkusu ya da öleceği düşüncesi eşlik eder.",
-       "ekran": "Atak sırasında **yoğun ölüm korkusu** ve tehlike hissi yaşanır.",
-       "duzey": 0,
-       "slayt": {
-        "sayfa": 2,
-        "satir": [
-         "zaman şiddetli bir tehlike hissi veya öleceği hissinin"
-        ],
-        "sekil": null,
-        "madde": [
-         2,
-         1
-        ]
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "yoğun ölüm korkusu"
+         "metin": "yoğun korku ve sıkıntı"
         }
        ]
       },
       {
        "id": "k2-55-c0005",
-       "ses": "Panik atağı genellikle on dakika içinde en yüksek şiddetine ulaşır ve yirmi ila otuz dakika içinde kendiliğinden yatışır.",
-       "ekran": "Atak **on dakikada doruğa** çıkar ve yarım saatte yatışır.",
+       "ses": "Panik atağının dakikalarla sınırlı belirgin bir başlangıcı, kısa sürede ulaştığı bir doruk noktası ve yatışma evresi bulunur.",
+       "ekran": "Panik atağının **belli bir başlangıcı** ve dakikalar içinde sönen belirgin bir bitişi bulunur.",
        "duzey": 0,
        "slayt": {
         "sayfa": 2,
         "satir": [
-         "PANİK BOZUKLUĞU"
+         "ettiği, belli bir başlangıcı ve sonu olan yoğun korku veya"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         1
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "on dakikada doruğa"
+         "metin": "Panik"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0006",
+       "ses": "Klinik pratikte önemle vurgulanan bir kural olarak: Panik atak tek başına bir psikiyatrik hastalık veya nozolojik tanı değildir, pek çok ruhsal bozuklukta ve tıbbi tabloda görülebilen bir klinik semptomdur.",
+       "ekran": "Klinik pratikte önemle vurgulanan bir kural olarak: **Panik atak tek başına** bir psikiyatrik hastalık veya tanı değildir!",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "ettiği, belli bir başlangıcı ve sonu olan yoğun korku veya"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Klinik pratikte önemle vurgulanan bir kural olarak"
+        },
+        {
+         "metin": "Panik atak tek başına",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-76"
+       ]
+      },
+      {
+       "id": "k2-55-c0007",
+       "ses": "Nitekim panik ataklar majör depresyonda, travma sonrası stres bozukluğunda, madde kullanımında veya hipertiroidi gibi genel tıbbi durumlarda da karşımıza çıkabilmektedir.",
+       "ekran": "Panik ataklar depresyonda, travma sonrası stres bozukluğunda veya **genel tıbbi durumlarda** da tetiklenebilir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "sıkıntı nöbetidir."
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "genel tıbbi durumlarda"
         }
        ]
       }
@@ -138,76 +163,101 @@
      "sayfa": 3,
      "cumleler": [
       {
-       "id": "k2-55-c0006",
-       "ses": "Panik bozukluk ise beklenmedik zamanlarda gelen yineleyici panik atakları, beklenti anksiyetesi ve agorafobik kaçınma ile karakterizedir ve bu bilgi çıkmış sınavda sorulmuştur.",
-       "ekran": "**Panik Bozukluk:** Beklenmedik panik atakları ve beklenti kaygısıdır.",
+       "id": "k2-55-c0008",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: Panik bozukluk beklenmedik anlarda kendiliğinden gelen, yineleyici panik atakları ve bu atakların doğurduğu kronik kaygılar ile karakterize bağımsız bir anksiyete bozukluğudur.",
+       "ekran": "Bu bilgi çıkmış sınavda sorulmuştur: **Panik Bozukluk**, beklenmedik anlarda gelen ve yineleyen panik nöbetleri ile karakterizedir.",
        "duzey": 1,
        "slayt": {
         "sayfa": 3,
         "satir": [
-         "PANİK BOZUKLUK:"
+         "Beklenmeden gelen, yineleyici panik ataklarla karakterize bir bozukluktur."
         ],
-        "sekil": null,
-        "madde": [
-         2,
-         0
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "cikmis",
-         "metin": "Panik Bozukluk:"
+         "metin": "Panik Bozukluk"
         }
        ],
        "cikmis": [
         "d3-k2-psi-015",
-        "967684a10028",
-        "1e5ac6eef6a7"
+        "past-1790877044882-168910"
        ]
       },
       {
-       "id": "k2-55-c0007",
-       "ses": "Hasta sürekli olarak yeni bir kriz geçireceği, kontrolünü kaybedeceği ya da çıldıracağı korkusuyla yaşar.",
-       "ekran": "Hasta **kontrolünü kaybetme veya çıldırma** korkusuna kapılır.",
+       "id": "k2-55-c0009",
+       "ses": "Hasta nöbet anında kalp krizi geçirip öleceği, felç kalacağı, kontrolünü tamamen kaybedeceği ya da aklını yitirip çıldıracağı yönünde derin ve katastrofik bir dehşet yaşar.",
+       "ekran": "Hasta kriz sırasında **kontrolünü kaybedeceği**, çıldıracağı ya da kalp krizi geçireceği korkusuna kapılır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 3,
         "satir": [
-         "Hasta “Kontrolünü kaybedeceği”, “kalp krizi geçireceği” ya da"
+         "Hasta “Kontrolünü kaybedeceği”, “kalp krizi geçireceği” ya da “çıldıracağı” gibi korkulara kapılır."
         ],
-        "sekil": null,
-        "madde": [
-         3,
-         5
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "kontrolünü kaybetme veya çıldırma"
+         "metin": "kontrolünü kaybedeceği"
         }
        ]
       },
       {
-       "id": "k2-55-c0008",
-       "ses": "Bu beklenti anksiyetesi nedeniyle hastalar yalnız kalmaktan veya yardım alamayacakları mekanlara gitmekten kaçınmaya başlarlar.",
-       "ekran": "Beklenti anksiyetesi **agorafobik kaçınma davranışını** tetikler.",
+       "id": "k2-55-c0010",
+       "ses": "Panik atağı yaşayan bireyde ataklar geçtikten sonra dahi her an yeni bir atağın geleceğine ilişkin kesintisiz ve yıpratıcı bir beklenti anksiyetesi gelişir.",
+       "ekran": "Ataklar sonrasında hastada sürekli bir **beklenti anksiyetesi** yerleşir.",
        "duzey": 0,
        "slayt": {
         "sayfa": 3,
         "satir": [
-         "Hasta “Kontrolünü kaybedeceği”, “kalp krizi geçireceği” ya da"
+         "Panik atak ya da ataklardan sonra başka atakların olacağına ilişkin sürekli endişe yaşanır."
         ],
-        "sekil": null,
-        "madde": [
-         3,
-         5
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "agorafobik kaçınma davranışını"
+         "metin": "beklenti anksiyetesi"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0011",
+       "ses": "Kişi yeni bir panik atak geçirebileceğini veya yardım alamayacağını düşündüğü ortamlardan kaçınma şeklinde uyum bozucu davranış değişiklikleri göstermeye başlar.",
+       "ekran": "Kişi panik atak geçirebileceği ortamlardan kaçınarak belirgin **davranış değişiklikleri** sergiler.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Kişi, panik atak geçirebileceğini düşündüğü ortamlardan kaçınma şeklinde davranış değişiklikleri de"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Kişi"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0012",
+       "ses": "Panik nöbetleri diğer fobik bozukluklarda belirli bir nesneyle karşılaşınca ortaya çıkarken, panik bozuklukta nöbetler hiçbir dış uyaran yokken tamamen beklenmedik biçimde patlak verir.",
+       "ekran": "Diğer anksiyete bozukluklarının aksine panik bozukluktaki nöbetler **kendiliğinden ve beklenmedik** biçimde patlak verir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "panik bozukluk kendiliğinden ve beklenmedik panik nöbetleri ile giden bir anksiyete bozukluğudur."
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Diğer"
         }
        ]
       }
@@ -218,51 +268,62 @@
      "sayfa": 4,
      "cumleler": [
       {
-       "id": "k2-55-c0009",
-       "ses": "Panik bozukluğun yaşam boyu yaygınlığı toplumda yüzde bir virgül beş ila üç virgül beş arasında bildirilmektedir.",
-       "ekran": "**Epidemiyoloji:** Yaşam boyu yaygınlık yüzde iki ila üç civarındadır.",
+       "id": "k2-55-c0013",
+       "ses": "Epidemiyolojik çalışmalara göre genel toplumda ömür boyu en az bir kez tekil panik atak geçirme sıklığı yılda yaklaşık yüzde on düzeyindedir.",
+       "ekran": "Toplumda tek bir panik atak geçirme sıklığı **yılda yüzde on** civarındadır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 4,
         "satir": [
-         "EPİDEMİYOLOJİ"
+         "Panik atak görülme sıklığı yılda %10 iken panik bozukluk yaşam boyu"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         2
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Epidemiyoloji:"
+         "metin": "yılda yüzde on"
         }
        ]
       },
       {
-       "id": "k2-55-c0010",
-       "ses": "Hastalık kadınlarda erkeklere göre iki ila üç kat daha sık görülür ve en sık yirmili yaşların başında başlar.",
-       "ekran": "Hastalık **kadınlarda iki kat** sık olup genç erişkinlikte başlar.",
+       "id": "k2-55-c0014",
+       "ses": "Düzenli tanı kriterlerini dolduran panik bozukluğun yaşam boyu yaygınlığı ise genel popülasyonda yüzde bir buçuk ile beş arasında değişkenlik gösterir.",
+       "ekran": "Panik bozukluğun yaşam boyu prevalansı ise **yüzde bir buçuk ile beş** arasında değişir.",
        "duzey": 0,
        "slayt": {
         "sayfa": 4,
         "satir": [
-         "EPİDEMİYOLOJİ"
+         "prevelansı %1,5-5 arasında değişir."
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         4
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "kadınlarda iki kat"
+         "metin": "yüzde bir buçuk ile beş"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0015",
+       "ses": "Cinsiyet dağılımına bakıldığında kadınlarda panik bozukluk görülme oranı erkeklere kıyasla iki ila üç kat daha yüksek olarak saptanmaktadır.",
+       "ekran": "Kadınlarda bozukluğun görülme oranı erkeklere kıyasla **iki ila üç kat** daha fazladır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Kadınlarda bozukluğun görülme oranı erkeklere göre 2-3 kat  fazladır."
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "iki ila üç kat"
         },
         {
-         "metin": "kadınlarda iki kat",
+         "metin": "iki ila üç kat",
          "tur": "cikmis"
         }
        ],
@@ -271,26 +332,29 @@
        ]
       },
       {
-       "id": "k2-55-c0011",
-       "ses": "Acil servislere göğüs ağrısı ve nefes darlığı ile başvuran hastaların önemli bir kısmında altta yatan neden panik bozukluktur.",
-       "ekran": "Acilde **göğüs ağrısı başvurularında** panik bozukluk sık nedendir.",
+       "id": "k2-55-c0016",
+       "ses": "Hastalık her yaşta gelişebilmekle birlikte tipik olarak yirmili yaşlarda başlar ve her on hastanın sekizinde ilk atak otuz yaşından önce ortaya çıkar.",
+       "ekran": "Hastalık çoğunlukla **yirmili yaşlarda** başlar ve hastaların yüzde sekseninde başlangıç otuz yaş öncesidir.",
        "duzey": 0,
        "slayt": {
         "sayfa": 4,
         "satir": [
-         "EPİDEMİYOLOJİ"
+         "Hastalık her hangi bir yaşta gelişebilmekle birlikte daha çok 20’li yaşlarda başlar."
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         0
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "göğüs ağrısı başvurularında"
+         "metin": "yirmili yaşlar"
+        },
+        {
+         "metin": "yirmili yaşlarda",
+         "tur": "cikmis"
         }
+       ],
+       "cikmis": [
+        "d3-k2-nor-007"
        ]
       }
      ]
@@ -299,77 +363,123 @@
   },
   {
    "id": "k2-55-b02",
-   "baslik": "Panik Bozukluk Etiyolojisi ve Nörobiyolojisi",
+   "baslik": "Bölüm 2: Panik Bozukluk Etiyolojisi ve Nörobiyolojisi",
    "paragraflar": [
     {
      "id": "k2-55-p005",
      "sayfa": 5,
      "cumleler": [
       {
-       "id": "k2-55-c0012",
-       "ses": "Biyolojik kuramlarda merkezi sinir sisteminde katekolamin düzeylerinde artış ve lokus seruleustaki noradrenerjik hiperaktivite temel patolojidir.",
-       "ekran": "**Nörobiyolojik Temel:** Lokus seruleus noradrenerjik hiperaktivitesidir.",
+       "id": "k2-55-c0017",
+       "ses": "Panik bozukluğun biyolojik etiyolojisinde merkezi sinir sisteminde katekolamin düzeylerinde artış ve aşırı otonomik uyarılabilirlik temel faktördür.",
+       "ekran": "**Biyolojik Kuramlar:** Merkezi sinir sisteminde katekolamin düzeylerinde belirgin artış izlenir.",
        "duzey": 0,
        "slayt": {
         "sayfa": 5,
         "satir": [
-         "ETYOLOJİ"
+         "SSS’DE  katekolamin düzeylerinde artış,"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         2
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Nörobiyolojik Temel:"
+         "metin": "Biyolojik Kuramlar"
         }
        ]
       },
       {
-       "id": "k2-55-c0013",
-       "ses": "Lokus seruleusun uyarılması sempatik otonomik deşarja yol açarak taşikardi, terleme ve nefes darlığı krizini tetikler.",
-       "ekran": "Lokus seruleus deşarjı **akut sempatik fırtına** başlatır.",
+       "id": "k2-55-c0018",
+       "ses": "Beyin sapında yer alan ve vücudun temel noradrenalin merkezi olan lokus seruleus nükleusundaki hiperaktivite ani panik alarmını başlatan en kritik nörobiyolojik odaktır.",
+       "ekran": "Beyin sapındaki **lokus seruleus** nükleusunda artmış noradrenerjik aktivite panik alarmını tetikler.",
        "duzey": 0,
        "slayt": {
         "sayfa": 5,
         "satir": [
          "Locus seruleusta artmış noradrenerjik aktivite,"
         ],
-        "sekil": null,
-        "madde": [
-         3
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "akut sempatik fırtına"
+         "metin": "lokus seruleus"
         }
        ]
       },
       {
-       "id": "k2-55-c0014",
-       "ses": "Ayrıca serotonin ve gama aminobütirik asit inhibitör iletimindeki yetersizlik ve karbondioksit aşırı duyarlılığı panik atağa zemin hazırlar.",
-       "ekran": "gaba ve **serotonin yetersizliği** panik duyarlılığını artırır.",
+       "id": "k2-55-c0019",
+       "ses": "Klein tarafından öne sürülen boğulma yanlış alarmı teorisine göre beyin sapı kemoreseptörlerinin karbondioksite aşırı duyarlılığı panik atağını alevlendirir.",
+       "ekran": "Beyin sapı **kemoreseptörlerinin duyarlılığındaki artış** karbondioksit birikimini boğulma tehdidi olarak algılar.",
        "duzey": 0,
        "slayt": {
         "sayfa": 5,
         "satir": [
-         "Biyolojik kuramlar"
+         "Beyin sapı kemoreseptörlerinin duyarlılığında artış"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         7
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "serotonin yetersizliği"
+         "metin": "Beyin"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0020",
+       "ses": "Merkezi sinir sisteminin temel inhibitör sistemi olan gaba nörotransmitter sistemindeki ve benzodiazepin reseptörlerindeki düzensizlik hastanın anksiyeteyi kontrol etmesini engeller.",
+       "ekran": "GABA ve **benzodiazepin reseptör** kompleksindeki yetersizlik baskılayıcı mekanizmayı zayıflatır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "GABA nörotransmitter sisteminde düzensizliklerdir."
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "GABA"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0021",
+       "ses": "Genetik geçiş incelendiğinde panik bozukluk hastalarının birinci derece akrabalarında bozukluğun ortaya çıkma riski genel topluma göre dört ila sekiz kat daha fazladır.",
+       "ekran": "Genetik çalışmalarda panik bozukluğu olanların **birinci derece akrabalarında** risk dört ila sekiz kat artmıştır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Genetik kuramlar ( Birinci derece yakınlarında 4-8 kat artış)"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Genetik"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0022",
+       "ses": "Psikososyal kuramlardan psikodinamik görüşe göre bilinçdışı kaygı uyandırıcı dürtülere karşı ego savunma mekanizmalarının başarısız kalması somatik panik patlamalarına yol açar.",
+       "ekran": "Psikodinamik kurama göre kaygı uyandırıcı dürtülere karşı **savunma düzenekleri** yetersiz kalmaktadır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Psikodinamik kuram (kaygı uyarıcı dürtülere karşı başarısız savunma"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Psikodinamik"
         }
        ]
       }
@@ -380,70 +490,78 @@
      "sayfa": 6,
      "cumleler": [
       {
-       "id": "k2-55-c0015",
-       "ses": "Bilişsel davranışçı kurama göre hasta zararsız bedensel duyumları ölümcül bir felaket olarak yanlış yorumlar.",
-       "ekran": "**Bilişsel Model:** Masum bedensel duyumların felaketleştirilmesidir.",
+       "id": "k2-55-c0023",
+       "ses": "Bilişsel davranışçı modele göre panik bozukluğun merkezinde içsel veya dışsal uyaranların oluşturduğu fizyolojik duyumların felaketleştirilerek yorumlanması yer alır.",
+       "ekran": "**Bilişsel Davranışçı Model:** Bedensel duyumların felaketleştirici biçimde yanlış yorumlanmasıdır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 6,
         "satir": [
          "Bilişsel"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         2
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Bilişsel Model:"
+         "metin": "Bilişsel Davranışçı Model"
         }
        ]
       },
       {
-       "id": "k2-55-c0016",
-       "ses": "Örneğin hafif bir çarpıntı kalp krizi, hafif bir baş dönmesi ise felç veya delirme işareti olarak algılanır.",
-       "ekran": "Çarpıntı **kalp krizi ve ölüm** olarak yanlış yorumlanır.",
+       "id": "k2-55-c0024",
+       "ses": "Merdiven çıkma veya stres gibi durumlarda gelişen hafif bir taşikardi veya terleme gibi zararsız fizyolojik duyumlar hasta tarafından doğrudan bir ölüm tehdidi olarak kodlanır.",
+       "ekran": "Hafif bir çarpıntı veya nefes darlığı gibi **tetikleyici duyumlar** zihinde bir tehdit olarak algılanır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 6,
         "satir": [
-         "Davranışçı"
+         "Tetikleyici"
         ],
-        "sekil": null,
-        "madde": [
-         0
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "kalp krizi ve ölüm"
+         "metin": "Hafif"
         }
        ]
       },
       {
-       "id": "k2-55-c0017",
-       "ses": "Bu katastrofik yanlış yorumlama anksiyeteyi tırmandırır ve kısır bir döngü halinde tam bir panik krizine dönüşür.",
-       "ekran": "Katastrofik yorumlama **kısır döngü yaratarak** atağı tetikler.",
+       "id": "k2-55-c0025",
+       "ses": "Bu duyumların kalp krizi geçiriyorum, beynime kan gitmiyor veya aklımı kaçırıyorum şeklinde katastrofize edilmesi yani felaketleştirilmesi sempatik sistemi daha da kamçılar.",
+       "ekran": "Bu duyumların 'kalp krizi geçiriyorum' veya 'ölüyorum' şeklinde **katastrofize edilmesi** korkuyu tırmandırır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 6,
         "satir": [
-         "Bilişsel"
+         "katastrofize"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         2
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "kısır döngü yaratarak"
+         "metin": "katastrofize edilmesi"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0026",
+       "ses": "Tırmanan korku hissi lokus seruleusu ve böbrek üstü bezlerini daha fazla uyararak bedensel belirtileri katlar ve hasta kendi kendini besleyen bir panik döngüsüne hapsolur.",
+       "ekran": "Artan korku sempatik deşarjı büyüterek **kendi kendini besleyen** tam bir panik kısır döngüsü kurar.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Korku"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "panik kısır döngüsü"
         }
        ]
       }
@@ -453,85 +571,85 @@
   },
   {
    "id": "k2-55-b03",
-   "baslik": "Panik Atağın Semptomatolojisi ve DSM-5 Kriterleri",
+   "baslik": "Bölüm 3: Panik Atağın Semptomatolojisi ve DSM-5 Kriterleri",
    "paragraflar": [
     {
      "id": "k2-55-p007",
      "sayfa": 7,
      "cumleler": [
       {
-       "id": "k2-55-c0018",
-       "ses": "Panik atak klinik belirtileri arasında çarpıntı, kalp atımlarını duyumsama veya kalp hızında artma en sık görülen bulgudur.",
-       "ekran": "**Kardiyak Belirtiler:** Çarpıntı ve taşikardi en belirgin yakınmadır.",
+       "id": "k2-55-c0027",
+       "ses": "Panik atağın ilk ve en sık somatik belirtisi çarpıntı, kalbin küt küt atması, nabzın fırlaması, bol soğuk terleme ve tüm gövdede kontrolsüz titreme veya sarsılmadır.",
+       "ekran": "**Kardinal Belirtiler 1-3:** Çarpıntı, kalp hızında artış, terleme ve titreme nöbeti görülür.",
        "duzey": 0,
        "slayt": {
         "sayfa": 7,
         "satir": [
-         "Panik Bozukluk Klinik Özellikler"
+         "(1)çarpıntı, kalp atımlarını duyumsama veya kalp hızında artma olması"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         3
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Kardiyak Belirtiler:"
-        },
-        {
-         "metin": "Kardiyak Belirtiler:",
-         "tur": "cikmis"
-        }
-       ],
-       "cikmis": [
-        "d3-k2-nor-007"
-       ]
-      },
-      {
-       "id": "k2-55-c0019",
-       "ses": "Buna terleme, titreme veya sarsılma hissi ile nefes darlığı ve boğulma hissi eşlik eder.",
-       "ekran": "Terleme, titreme ve **nefes darlığı veya boğulma** hissi gelişir.",
-       "duzey": 0,
-       "slayt": {
-        "sayfa": 7,
-        "satir": [
-         "Panik Atağı"
-        ],
-        "sekil": null,
-        "madde": [
-         1,
-         0
-        ]
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "nefes darlığı veya boğulma"
+         "metin": "Kardinal Belirtiler 1-3"
         }
        ]
       },
       {
-       "id": "k2-55-c0020",
-       "ses": "Hastalar göğüs ağrısı, göğüste sıkışma hissi, bulantı ya da karın ağrısı ile acil servise koşarlar.",
-       "ekran": "Göğüs ağrısı ve **karın rahatsızlığı** acil başvurulara yol açar.",
+       "id": "k2-55-c0028",
+       "ses": "Solunum sisteminde hastanın soluğunun kesilmesi, havanın akciğerlerine yetmediği duygusu ve boğazında düğümlenmeyle boğuluyormuş gibi hissetmesi belirgindir.",
+       "ekran": "**Solunumsal Belirtiler 4-5:** Nefes darlığı, boğuluyor gibi olma ve hava açlığı hissi yaşanır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 7,
         "satir": [
-         "Panik Bozukluk Klinik Özellikler"
+         "(4)nefes darlığı veya boğuluyor gibi olma duyumları"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         1
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "karın rahatsızlığı"
+         "metin": "Solunumsal Belirtiler 4-5"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0029",
+       "ses": "Göğüs kafesinde sol kola yayılan bir koroner ağrıyı andıran göğüs sıkışması hissi, midede kramp tarzı ağrılar ve kusacakmış gibi şiddetli bulantı tabloya eklenir.",
+       "ekran": "**Göğüs ve Karın Belirtileri 6-7:** Göğüs ağrısı, göğüste baskı, bulantı ve karın ağrısı eşlik eder.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "(6)göğüs ağrısı veya göğüste sıkıntı hissi"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Göğüs ve Karın Belirtileri 6-7"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0030",
+       "ses": "Santral sinir sistemi perfüzyonundaki hiperventilasyona bağlı değişikliklerle baş dönmesi, sarhoşluk hissi, dengesizlik, sersemlik ve bayılacakmış gibi olma hissi ortaya çıkar.",
+       "ekran": "**Santral Belirti 8:** Baş dönmesi, sersemlik hissi, ayakta duramama ve düşecekmiş gibi olmadır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "(8)baş dönmesi, sersemlik hissi, düşecekmiş veya bayılacakmış gibi olma"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Santral Belirti 8"
         }
        ]
       }
@@ -542,162 +660,147 @@
      "sayfa": 8,
      "cumleler": [
       {
-       "id": "k2-55-c0021",
-       "ses": "Panik atağa sıklıkla baş dönmesi, sersemlik, düşecekmiş hissi veya bayılacak gibi olma eşlik eder.",
-       "ekran": "**Nörolojik Semptomlar:** Baş dönmesi, sersemlik ve bayılma hissidir.",
+       "id": "k2-55-c0031",
+       "ses": "Hastanın çevredeki nesneleri ve ortamı sanki bir rüyadaymış gibi gerçek dışı algılamasına derealizasyon, kendi bedenine ve ellerine yabancılaşmasına depersonalizasyon adı verilir.",
+       "ekran": "**Dissosiyatif Belirti 9:** Derealizasyon ya da depersonalizasyon yaşanır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 8,
         "satir": [
-         "Panik Bozukluk Klinik Özellikler"
+         "(9) derealizasyon ya da depersonalizasyon (Çevredeki şeyler size sanki gerçek değilmiş gibi geldi mi?"
         ],
-        "sekil": null,
-        "madde": [
-         0
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Nörolojik Semptomlar:"
+         "metin": "Dissosiyatif Belirti 9"
         }
        ]
       },
       {
-       "id": "k2-55-c0022",
-       "ses": "Klinikte derealizasyon yani çevrenin gerçek dışı algılanması ya da depersonalizasyon yani kendi bedenine yabancılaşma görülebilir.",
-       "ekran": "**Derealizasyon ve Depersonalizasyon:** Çevreye ve kendine yabancılaşmadır.",
-       "duzey": 0,
-       "slayt": {
-        "sayfa": 8,
-        "satir": [
-         "(9) derealizasyon ya da depersonalizasyon (Çevredeki şeyler size"
-        ],
-        "sekil": null,
-        "madde": [
-         1,
-         2
-        ]
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "Derealizasyon ve Depersonalizasyon:"
-        },
-        {
-         "metin": "Derealizasyon ve Depersonalizasyon:",
-         "tur": "cikmis"
-        }
-       ],
-       "cikmis": [
-        "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-76"
-       ]
-      },
-      {
-       "id": "k2-55-c0023",
-       "ses": "Bilişsel olarak kontrolünü kaybetme korkusu, çıldırma korkusu ve ölüm korkusu krizin zirve noktasını oluşturur.",
-       "ekran": "Kontrolü kaybetme ve **yoğun ölüm korkusu** zirve yapar.",
+       "id": "k2-55-c0032",
+       "ses": "Nöbet esnasında hastanın zihnini kaplayan en dehşet verici düşünce özdenetimini tümden yitirip çıldıracağı, delireceği ya da o an derhal öleceği korkusudur.",
+       "ekran": "**Bilişsel Belirtiler 10-11:** Kontrolünü kaybedeceği, çıldıracağı ve öleceği korkusu yaşanır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 8,
         "satir": [
          "(10) kontrolünü kaybedeceği ya da çıldıracağı korkusu"
         ],
-        "sekil": null,
-        "madde": [
-         3,
-         4
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "yoğun ölüm korkusu"
+         "metin": "Bilişsel Belirtiler 10-11"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0033",
+       "ses": "Ekstremitelerde, dudak çevresinde ve parmak uçlarında uyuşma ve karıncalanma şeklindeki paresteziler ile vücutta ürperme, donma veya alev alev ateş basması hisleri yaşanır.",
+       "ekran": "**Duyusal Belirtiler 12-13:** Paresteziler, uyuşmalar, üşüme, ürperme veya ani ateş basmalarıdır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "(12) paresteziler-uyuşma"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Duyusal Belirtiler 12-13"
         }
        ]
       }
      ]
-    }
-   ]
-  },
-  {
-   "id": "k2-55-b04",
-   "baslik": "Klinik Özellikler ve Bilişsel Yetiler",
-   "paragraflar": [
+    },
     {
      "id": "k2-55-p009",
      "sayfa": 9,
      "cumleler": [
       {
-       "id": "k2-55-c0024",
-       "ses": "Panik bozukluğu olan hastaların kriz dışındaki genel görünüm ve davranışları tamamen normaldir, ancak nöbet esnasında ileri derecede telaşlıdırlar ve bu bilgi çıkmış sınavda sorulmuştur.",
-       "ekran": "**Genel Görünüm:** Kriz dışında normal, nöbet sırasında aşırı telaşlıdır.",
+       "id": "k2-55-c0034",
+       "ses": "Panik bozukluğu olan hastaların nöbet dışı dönemlerde genel görünüm, davranış ve motor aktiviteleri tamamen normal sınırlardadır.",
+       "ekran": "**Genel Görünüm:** Panik nöbeti olmadığı zamanlarda hastanın genel muayenesinde belirgin bir fark yoktur.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Genel görünüm ve davranış: panik nöbetleri olmadığı zaman hastanın genel"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Genel Görünüm"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0035",
+       "ses": "Buna karşın panik nöbeti patladığı anda hasta dehşet içinde çırpınan, soluk soluğa kalmış, aşırı tedirgin ve telaşlı bir görünüm sergiler.",
+       "ekran": "Ancak panik nöbetleri esnasında hasta **ileri derecede endişeli**, tedirgin ve telaşlıdır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "görünümünde bir fark olmaz. Ancak nöbetler esnasında ileri derecede endişeli ve"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Ancak"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0036",
+       "ses": "Nöbet anında hasta kesik kesik konuşur, soluksuz kalır, sesi titrer ve içinde bulunduğu ölüm korkusu nedeniyle hekimle sakin bir iletişim kurmak güçleşebilir.",
+       "ekran": "Konuşma ve ilişki kurma muayenesinde hastanın **sesi titrer** ve hekimle sağlıklı iletişim güçleşir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Konuşma ve ilişki kurma: panik nöbeti esnasında rahat konuşamaz, sesi titrer. Hasta"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Konuşma"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0037",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: Panik atağın bilişsel kognitif belirtileri çıldırma, kontrolü kaybetme ve ölüm korkusudur; beklenti anksiyetesi ise ataklar arası dönemde süregiden duygulanımsal bir kaygıdır.",
+       "ekran": "Bu bilgi çıkmış sınavda sorulmuştur: **Beklenti anksiyetesi** panik atağın bilişsel belirtileri arasında yer almaz!",
        "duzey": 1,
        "slayt": {
         "sayfa": 9,
         "satir": [
-         "Genel görünüm ve davranış: panik nöbetleri olmadığı zaman"
+         "Duygulanım: nöbetler sırasında ileri derecede korku ve uyarılmışlık hali vardır. Panik"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         2
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "cikmis",
-         "metin": "Genel Görünüm:"
+         "metin": "bilişsel belirtiler"
         }
        ],
        "cikmis": [
-        "past-1790877044855-217832"
-       ]
-      },
-      {
-       "id": "k2-55-c0025",
-       "ses": "Nöbet esnasında hasta yerinde duramaz, kapı ve pencerelere koşar, temiz hava almaya ve en yakın sağlık kuruluşuna ulaşmaya çalışır.",
-       "ekran": "Nöbet anında **acil yardım arayışı ve hava açlığı** baskındır.",
-       "duzey": 0,
-       "slayt": {
-        "sayfa": 9,
-        "satir": [
-         "görünümünde bir fark olmaz. Ancak nöbetler esnasında ileri"
-        ],
-        "sekil": null,
-        "madde": [
-         2,
-         3
-        ]
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "acil yardım arayışı ve hava açlığı"
-        }
-       ]
-      },
-      {
-       "id": "k2-55-c0026",
-       "ses": "Krizler arasında ise sürekli yeni bir atağın geleceği endişesiyle tetikte bekleme hali yani beklenti kaygısı hüküm sürer.",
-       "ekran": "Ataklar arasında **beklenti kaygısı ve gerginlik** devam eder.",
-       "duzey": 0,
-       "slayt": {
-        "sayfa": 9,
-        "satir": [
-         "PANİK BOZUKLUK- KLİNİK ÖZELLİKLER"
-        ],
-        "sekil": null,
-        "madde": [
-         0,
-         5
-        ]
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "beklenti kaygısı ve gerginlik"
-        }
+        "past-1790877044855-217832",
+        "967684a10028",
+        "1e5ac6eef6a7"
        ]
       }
      ]
@@ -707,25 +810,40 @@
      "sayfa": 10,
      "cumleler": [
       {
-       "id": "k2-55-c0027",
-       "ses": "Bilişsel yetiler panik nöbetleri dışında tamamen normaldir; ancak atak anında öze yabancılaşma, algı bozukluğu ve çevreye yabancılaşma görülebilir ve bu bilgi çıkmış sınavda sorulmuştur.",
-       "ekran": "**Bilişsel Yetiler:** Atak dışında tam normal, atak anında yabancılaşma görülür.",
+       "id": "k2-55-c0038",
+       "ses": "Hastanın bilişsel yetileri değerlendirildiğinde yönelim, bellek, konsantrasyon ve soyutlama yetisi nöbetler haricinde tamamen korunmuştur.",
+       "ekran": "**Bilişsel Yetiler:** Nöbetler dışında hastanın algılama, yönelim ve bellek işlevleri tamdır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Bilişsel yetiler: panik nöbetler dışında genellikle hastanın algılama, yönelim, diğer"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Bilişsel Yetiler"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0039",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: Panik nöbetleri esnasında öze yabancılaşma ve gerçekdışılaşma gibi geçici algı bozuklukları belirgindir ve atağın ardından sürekli beklenti kaygısı yaşanır.",
+       "ekran": "Bu bilgi çıkmış sınavda sorulmuştur: Nöbet esnasında öze yabancılaşma yani **depersonalizasyon** ve gerçekdışılaşma yani **derealizasyon** gelişebilir.",
        "duzey": 1,
        "slayt": {
         "sayfa": 10,
         "satir": [
-         "Bilişsel yetiler: panik nöbetler dışında genellikle hastanın algılama,"
+         "varmış gibi durumlar ortaya çıkabilir. Öze yabancılaşma (depersonalizasyon),"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         2
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "cikmis",
-         "metin": "Bilişsel Yetiler:"
+         "metin": "depersonalizasyon"
         }
        ],
        "cikmis": [
@@ -733,48 +851,40 @@
        ]
       },
       {
-       "id": "k2-55-c0028",
-       "ses": "Duygulanımda panik nöbetleri sırasında derin bir dehşet, çaresizlik ve ölüm korkusu izlenirken kriz sonrasında bitkinlik hakimdir.",
-       "ekran": "Nöbet esnasında **dehşet ve ölüm korkusu**, sonrasında bitkinlik vardır.",
+       "id": "k2-55-c0040",
+       "ses": "Hastanın düşünce içeriğini derinlemesine incelediğimizde zihninin tamamen bir sonraki nöbetin nerede geleceği ve bedenine ne zarar vereceği endişesiyle dolu olduğu saptanır.",
+       "ekran": "Düşünce içeriğinde sürekli nöbet tekrarlarsa kendisine **ne olacağı yönündeki kaygılar** yer alır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 10,
         "satir": [
-         "varmış gibi durumlar ortaya çıkabilir. Öze yabancılaşma (depersonalizasyon),"
+         "Düşünce süreci ve içeriği: çoğu hasta nöbet tekrar gelirse kendisine ne olacağı ile"
         ],
-        "sekil": null,
-        "madde": [
-         2,
-         1
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "dehşet ve ölüm korkusu"
+         "metin": "Düşünce içeriği"
         }
        ]
       },
       {
-       "id": "k2-55-c0029",
-       "ses": "Düşünce içeriğinde kalp krizi, beyin kanaması veya aklını yitirme temaları sürekli olarak zihni meşgul eder.",
-       "ekran": "Düşünce içeriğinde **somatik felaket temaları** yoğunlaşır.",
+       "id": "k2-55-c0041",
+       "ses": "Tüm bu somatik ve viseral fırtına, otonom sinir sisteminin sempatik deşarjının aniden en yüksek seviyeye fırlamasının doğrudan bir sonucudur.",
+       "ekran": "Bedensel belirtiler otonom sinir sisteminin sempatik kolunun **şiddetli kamçılanması** sonucudur.",
        "duzey": 0,
        "slayt": {
         "sayfa": 10,
         "satir": [
-         "PANİK BOZUKLUK- KLİNİK ÖZELLİKLER"
+         "Bedensel ve fizyolojik belirtiler: otonom sinir sistemi kamçılanışına bağlı belirtiler"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         1
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "somatik felaket temaları"
+         "metin": "Bedensel"
         }
        ]
       }
@@ -785,78 +895,116 @@
      "sayfa": 11,
      "cumleler": [
       {
-       "id": "k2-55-c0030",
-       "ses": "De se me beş tanı kriterlerine göre beklenmedik yineleyen panik atakları bulunmalı ve en az bir atağı bir ay süren endişe izlemelidir.",
-       "ekran": "**DSM-5 Tanı Kriterleri:** Yineleyen ataklar ve en az bir aylık beklenti kaygısıdır.",
-       "duzey": 0,
-       "slayt": {
-        "sayfa": 11,
-        "satir": [
-         "4. Yineleyen, beklenmedik panik atakları. Bir panik atağı,"
-        ],
-        "sekil": null,
-        "madde": [
-         0,
-         16
-        ]
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "DSM-5 Tanı Kriterleri:"
-        },
-        {
-         "metin": "DSM-5 Tanı Kriterleri:",
-         "tur": "cikmis"
-        }
-       ],
-       "cikmis": [
-        "5745fea7afd3",
-        "d1594f9e30c1"
-       ]
-      },
-      {
-       "id": "k2-55-c0031",
-       "ses": "Bu bir aylık süreçte yeni bir atak geçirme kaygısı veya atakların yol açabileceği sonuçlarla ilgili sürekli bir tasa yaşanmalıdır.",
-       "ekran": "Yeni atak geçirme **endişesi en az bir ay** sürmelidir.",
-       "duzey": 0,
-       "slayt": {
-        "sayfa": 11,
-        "satir": [
-         "4. Yineleyen, beklenmedik panik atakları. Bir panik atağı,"
-        ],
-        "sekil": null,
-        "madde": [
-         0,
-         17
-        ]
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "endişesi en az bir ay"
-        }
-       ]
-      },
-      {
-       "id": "k2-55-c0032",
-       "ses": "Ayrıca ataklarla ilişkili olarak belirgin uyumsuz davranış değişiklikleri yani mekanlardan ve efor sarf etmekten kaçınma gelişmelidir.",
-       "ekran": "Ataklara bağlı **kaçınma ve davranış değişiklikleri** gelişir.",
+       "id": "k2-55-c0042",
+       "ses": "Amerikan Psikiyatri Birliği de se me beş tanı sistemine göre birinci temel kriter, kendiliğinden başlayan yineleyen beklenmedik panik ataklarının varlığıdır.",
+       "ekran": "**DSM-5 Tanı Kriteri A:** Yineleyen, beklenmedik panik ataklarının varlığı zorunludur.",
        "duzey": 0,
        "slayt": {
         "sayfa": 11,
         "satir": [
          "PB- DSM-5 tanı kriterleri"
         ],
-        "sekil": null,
-        "madde": [
-         19
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "kaçınma ve davranış değişiklikleri"
+         "metin": "DSM-5 Tanı Kriteri A"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0043",
+       "ses": "Tanı konabilmesi için krizin dakikalar içinde doruk noktaya ulaşması ve sayılan on üç kardinal belirtiden en az dördünün ya da daha fazlasının tabloya eşlik etmesi şarttır.",
+       "ekran": "Bir panik atağında dakikalar içinde doruğa çıkan **on üç belirtiden en az dördü** bulunmalıdır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "belirtilerden dördünün veya daha fazlasının ortaya çıktığı birden yoğun bir korku ya da yoğun bir sıkıntının"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Bir"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0044",
+       "ses": "Kılavuzda önemle vurgulandığı üzere kulak çınlaması, ense ağrısı veya kontrolsüz ağlama gibi kültüre özgü semptomlar gereken dört temel belirti arasında sayılamaz.",
+       "ekran": "Kültüre özgü kulak çınlaması veya baş ağrısı gibi yakınmalar bu **dört belirtiden biri** sayılmaz.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "13) Ölüm Korkusu"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Kültüre"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0045",
+       "ses": "İkinci tanı kriteri uyarınca atakların ardından en az bir ay ya da daha uzun süreyle başka atakların olacağına ilişkin sürekli bir kaygı duyulmalı veya uyum bozucu kaçınma davranışı sergilenmelidir.",
+       "ekran": "**DSM-5 Tanı Kriteri B:** Ataklardan sonra en az bir ay süren beklenti kaygısı veya uyum bozucu davranış gelişmelidir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "B. Ataklardan en az birinden sonra, aşağıdakilerden biri ya da her ikisi bir ay ya da daha uzun bir süreyle olur:"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "en az bir ay süre"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0046",
+       "ses": "Amfi derslerimizde ve klinik sınavlarda sıkça vurgulanan bir kural olarak beklenti kaygısı atağın kendisinden farklı olup iki nöbet arasındaki sürece yayılır.",
+       "ekran": "Amfi derslerimizde ve klinik sınavlarda sıkça vurgulanan bir kural olarak **beklenti kaygısı** atağın kendisinden farklıdır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "vb.) ilgili olarak sürekli bir kaygı duyma ya da endişelenme"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "beklenti kaygısı"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0047",
+       "ses": "Son tanı ölçütlerine göre klinik tablo tiroit hormonu fazlalığı, feokromositoma veya madde kullanımı gibi organik bir duruma bağlanamamalı ve başka bir ruhsal hastalıkla daha iyi açıklanamamalıdır.",
+       "ekran": "**Dışlama Ölçütü:** Bozukluk bir maddenin veya hipertiroidi gibi tıbbi durumun etkisine bağlanamaz.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "C. Bu bozukluk bir maddenin (kötüye kullanılabilen bir madde veya ilaç gibi) ya da başka bir tibbi durumunun"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Dışlama Ölçütü"
         }
        ]
       }
@@ -865,87 +1013,94 @@
    ]
   },
   {
-   "id": "k2-55-b05",
-   "baslik": "Tıbbi Ayırıcı Tanı ve Panik Bozukluk Tedavisi",
+   "id": "k2-55-b04",
+   "baslik": "Bölüm 4: Ayırıcı Tanı, Gidiş ve Panik Bozukluk Tedavisi",
    "paragraflar": [
     {
      "id": "k2-55-p012",
      "sayfa": 12,
      "cumleler": [
       {
-       "id": "k2-55-c0033",
-       "ses": "Panik bozukluğu ayırıcı tanısında ilk olarak kardiyak nedenler olan koroner arter hastalığı, aritmiler ve mitral kapak prolapsusu elenmelidir.",
-       "ekran": "**Kardiyak Ayırıcı Tanı:** Aritmi, iskemi ve prolapsus dışlanmalıdır.",
+       "id": "k2-55-c0048",
+       "ses": "Panik bozukluğu tanısı koymadan önce benzer sempatik fırtına oluşturan hipertiroidizm, feokromositoma, hipoglisemi ve paratiroid hastalıkları laboratuvarla mutlaka ekarte edilmelidir.",
+       "ekran": "**Tıbbi Ayırıcı Tanı:** Endokrin bozukluklar, özellikle hipertiroidizm ve feokromositoma dışlanmalıdır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 12,
         "satir": [
-         "Panik bozukluğu ile ayırıcı tanıları yapılması gereken bedensel"
+         "Hipertiroidizm, Hipotiroidizm, Hiperparatiroidizm, Hipoglisemi, Feokromositoma"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         10
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Kardiyak Ayırıcı Tanı:"
+         "metin": "Tıbbi Ayırıcı Tanı"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0049",
+       "ses": "Kardiyolojik açıdan paroksismal supraventriküler aritmiler, koroner yetersizlik ve özellikle genç kadınlarda mitral kapak prolapsusu ayırıcı tanıda ön planda incelenmelidir.",
+       "ekran": "Kardiyak hastalıklardan **paroksismal aritmiler** ve mitral kapak prolapsusu titizlikle taranmalıdır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Kardiyak aritmiler, Koroner yetersizlik, Mitral kapak prolapsusu"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Kardiyak"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0050",
+       "ses": "Alkol veya benzodiazepin kesilmesine bağlı yoksunluk sendromları ile aşırı kafein ya da amfetamin intoksikasyonları panik atağı kusursuz biçimde taklit edebilmektedir.",
+       "ekran": "Alkol ve sedatif ilaçların **yoksunluk sendromları** ile kafein intoksikasyonu panik atağı kusursuz taklit eder.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Alkol,ilaç yoksunluk send., İlaç zehirlenmesi"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Alkol"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0051",
+       "ses": "Ruhsal hastalıklar cephesinde ise sosyal fobi, özgül fobi, obsesif kompulsif bozukluk, travma sonrası stres bozukluğu ve yaygın anksiyete bozukluğu dikkatle ayrıştırılmalıdır.",
+       "ekran": "Ruhsal hastalıklardan sosyal fobi, özgül fobi, travma sonrası stres bozukluğu ve **yaygın anksiyete** ayrılmalıdır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "travma sonrası stres bozukluğu"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Ruhsal"
         },
         {
-         "metin": "Kardiyak Ayırıcı Tanı:",
+         "metin": "yaygın anksiyete",
          "tur": "cikmis"
         }
        ],
        "cikmis": [
-        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-19"
-       ]
-      },
-      {
-       "id": "k2-55-c0034",
-       "ses": "Endokrin hastalıklardan hipertiroidizm, hipoglisemi ve feokromositoma epizodik katekolamin salınımıyla panik atağı birebir taklit eder.",
-       "ekran": "Hipertiroidi ve **feokromositoma epizodik panik** benzeri kriz yapar.",
-       "duzey": 0,
-       "slayt": {
-        "sayfa": 12,
-        "satir": [
-         "Panik bozukluğu ile ayırıcı tanıları yapılması gereken bedensel"
-        ],
-        "sekil": null,
-        "madde": [
-         1,
-         10
-        ]
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "feokromositoma epizodik panik"
-        }
-       ]
-      },
-      {
-       "id": "k2-55-c0035",
-       "ses": "Solunum sisteminde pulmoner emboli ve astım atağı, nörolojide ise parsiyel temporal lob epilepsisi ayırıcı tanıda mutlaka akılda tutulmalıdır.",
-       "ekran": "Pulmoner emboli ve **temporal lob epilepsisi** elenmelidir.",
-       "duzey": 0,
-       "slayt": {
-        "sayfa": 12,
-        "satir": [
-         "PB- Ayırıcı Tanı"
-        ],
-        "sekil": null,
-        "madde": [
-         0,
-         1
-        ]
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "temporal lob epilepsisi"
-        }
+        "d3-k2-psi-016"
        ]
       }
      ]
@@ -955,71 +1110,92 @@
      "sayfa": 13,
      "cumleler": [
       {
-       "id": "k2-55-c0036",
-       "ses": "Panik bozukluk dalgalı bir gidiş gösteren, alevlenmeler ve remisyonlarla seyreden kronik bir tablodur.",
-       "ekran": "**Hastalık Seyri:** Alevlenme ve remisyonlarla dalgalı kronik tablodur.",
+       "id": "k2-55-c0052",
+       "ses": "Panik bozukluk yaşam boyu dalgalı bir seyir izleyen, zaman zaman alevlenmeler ve iyilik dönemleriyle karakterize kronik seyirli bir tablodur.",
+       "ekran": "**Gidiş ve Sonlanış:** Panik bozukluk dalgalı gidişli, alevlenmeler ve remisyonlarla seyreden kronik bir hastalıktır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 13,
         "satir": [
          "Panik bozukluk dalgalı gidişli kronik bir hastalıktır."
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         7
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Hastalık Seyri:"
+         "metin": "Gidiş ve Sonlanış"
+        },
+        {
+         "metin": "Gidiş ve Sonlanış:",
+         "tur": "cikmis"
         }
+       ],
+       "cikmis": [
+        "d3-k2-psi-005"
        ]
       },
       {
-       "id": "k2-55-c0037",
-       "ses": "Tedavi edilmediğinde olguların önemli bir kısmında agorafobi, depresyon ve alkol kötüye kullanımı tabloya eklenir.",
-       "ekran": "Tedavisiz olgularda **agorafobi ve sekonder depresyon** gelişir.",
+       "id": "k2-55-c0053",
+       "ses": "Modern farmakoterapi ve bilişsel davranışçı tedavilerle hastaların yüzde elli ila yetmişinde belirgin ve kalıcı klinik iyilik elde edilebilmektedir.",
+       "ekran": "Hastaların **yüzde elli ila yetmişinde** uygun tedaviyle klinik açıdan tam veya belirgin iyilik sağlanır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 13,
         "satir": [
-         "Panik bozukluk dalgalı gidişli kronik bir hastalıktır."
+         "Hastaların %50-70’inde tedaviyle önemli iyilik sağlanabilmektedir."
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         7
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "agorafobi ve sekonder depresyon"
+         "metin": "Hastaların"
         }
        ]
       },
       {
-       "id": "k2-55-c0038",
-       "ses": "Erken tanı ve uygun tedavi ile hastaların büyük çoğunluğunda tam remisyon ve sosyal işlevsellik kazanımı sağlanır.",
-       "ekran": "Erken ve etkin tedavi **tam klinik remisyon** sağlar.",
+       "id": "k2-55-c0054",
+       "ses": "Çaresizlik ve tükenmişlik hissinin derinleşmesi nedeniyle panik bozukluk olgularında intihar riski normal popülasyona kıyasla anlamlı derecede yüksektir.",
+       "ekran": "Panik bozukluğu olan bireylerde **intihar riski** genel topluma oranla belirgin düzeyde yüksektir.",
        "duzey": 0,
        "slayt": {
         "sayfa": 13,
         "satir": [
-         "PB- Gidiş ve Sonlanış"
+         "İntihar riski normal populasyona göre yüksektir."
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         1
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "tam klinik remisyon"
+         "metin": "intihar riski"
+        },
+        {
+         "metin": "intihar riski",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "630ec96d2e21"
+       ]
+      },
+      {
+       "id": "k2-55-c0055",
+       "ses": "Hastalığa en sık eklenen komplikasyon olguların yarısında izlenen majör depresyon ile hastaların beşte birinde anksiyeteyi kendi kendine yatıştırma amacıyla gelişen alkol ve madde bağımlılığıdır.",
+       "ekran": "En sık eşlik eden komplikasyonlar **yüzde elli oranında majör depresyon** ve yüzde yirmi oranında alkol bağımlılığıdır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "En sık karşılaşılan komplikasyonlar, depresyon ve alkol-madde bağımlılığının gelişmesidir."
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "En"
         }
        ]
       }
@@ -1030,71 +1206,97 @@
      "sayfa": 14,
      "cumleler": [
       {
-       "id": "k2-55-c0039",
-       "ses": "Panik bozukluk farmakoterapisinde birinci basamak ajanlar seçici serotonin gerialım inhibitörleri ve venlafaksindir.",
-       "ekran": "**Birinci Basamak Tedavi:** es es er ı grubu antidepresanlardır.",
+       "id": "k2-55-c0056",
+       "ses": "Panik bozukluğun farmakoterapisinde birinci basamak altın standart seçenek seçici serotonin geri alım inhibitörleri yani se se re ı grubu antidepresanlardır.",
+       "ekran": "**Farmakoterapi:** Birinci basamak temel tedavi seçici serotonin geri alım inhibitörleridir.",
        "duzey": 0,
        "slayt": {
         "sayfa": 14,
         "satir": [
-         "Farmakoterapi"
+         "seçici serotonin geri alım inhibitörleri(sitalopram, essitalopram, fluoksetin, fluvoksamin, paroksetin ve"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         2
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Birinci Basamak Tedavi:"
+         "metin": "Farmakoterapi"
         }
        ]
       },
       {
-       "id": "k2-55-c0040",
-       "ses": "Tedaviye düşük dozda başlanmalı ve ilk günlerde oluşabilecek anksiyete artışını önlemek için doz yavaş yavaş yükseltilmelidir.",
-       "ekran": "Başlangıçta **doz yavaş titre edilerek** anksiyete uyarımı önlenir.",
+       "id": "k2-55-c0057",
+       "ses": "Klinik uygulamada sitalopram, essitalopram, fluoksetin, fluvoksamin, paroksetin ve sertralin en yüksek kanıt düzeyine sahip serotonin geri alım inhibitörleridir.",
+       "ekran": "Sitalopram, essitalopram, fluoksetin, sertralin ve **paroksetin** ruhsatlı temel ajanlardır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 14,
         "satir": [
-         "PB- Tedavi"
+         "sertralin),"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         8
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "doz yavaş titre edilerek"
+         "metin": "Sitalopram,"
         }
        ]
       },
       {
-       "id": "k2-55-c0041",
-       "ses": "Benzodiazepinler ise sadece tedavinin ilk birkaç haftasında krizleri hızlı baskılamak amacıyla kısa süreli kullanılır.",
-       "ekran": "Benzodiazepinler yalnızca **akut dönemde kısa süreli** verilir.",
+       "id": "k2-55-c0058",
+       "ses": "Serotonin ve noradrenalin geri alımını birlikte bloke eden venlafaksin de panik bozukluk tedavisinde güçlü bir diğer seçenektir.",
+       "ekran": "Ayrıca serotonin noradrenalin geri alım inhibitörü **venlafaksin** de yüksek etkinliğe sahiptir.",
        "duzey": 0,
        "slayt": {
         "sayfa": 14,
         "satir": [
-         "Farmakoterapi"
+         "serotonin-norepinefrin geri alım inhibitörleri(venlafaksin)"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         0
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "akut dönemde kısa süreli"
+         "metin": "venlafaksin"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0059",
+       "ses": "Antidepresanların terapötik etkisi iki ila dört haftada başladığından, ilk haftalardaki şiddetli krizleri ve anksiyete alevlenmesini yatıştırmak için kısa süreli alprazolam veya klonazepam köprüsü kurulabilir.",
+       "ekran": "Akut krizlerde ve tedavinin ilk haftalarında **alprazolam veya klonazepam** gibi benzodiazepinler kısa süreli köprü olarak verilebilir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "benzodiazepinler(klonazepam, alprazolam, lorazepam),"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Akut"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0060",
+       "ses": "Tedaviye dirençli olgularda klomipramin gibi güçlü trisiklik antidepresanlar veya monoamino oksidaz inhibitörleri devreye sokulabilir.",
+       "ekran": "Dirençli olgularda klomipramin veya imipramin gibi **trisiklik antidepresanlar** tercih edilir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "trisiklik antidepresanlar (klomipramin, imipramin)"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "trisiklik antidepresanlar"
         }
        ]
       }
@@ -1105,71 +1307,78 @@
      "sayfa": 15,
      "cumleler": [
       {
-       "id": "k2-55-c0042",
-       "ses": "Psikoterapide bilişsel davranışçı terapi panik bozukluğunda etkinliği en yüksek ve kanıta dayalı yöntemdir.",
-       "ekran": "**Bilişsel Davranışçı Terapi:** En yüksek kanıt düzeyine sahip psikoterapidir.",
+       "id": "k2-55-c0061",
+       "ses": "Panik bozukluk tedavisinde psikoterapötik müdahalelerin temel taşını kanıta dayalı bilişsel davranışçı terapiler oluşturmaktadır.",
+       "ekran": "**Psikoterapi:** Bilişsel davranışçı terapi panik bozuklukta etkinliği en yüksek terapi yöntemidir.",
        "duzey": 0,
        "slayt": {
         "sayfa": 15,
         "satir": [
-         "Panik bozukluğunda bilişsel-davranışçı terapiler etkili terapi yöntemidir. Hasta"
+         "Panik bozukluğunda bilişsel-davranışçı terapiler etkili terapi yöntemidir. Hasta panik bozukluk"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         2
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Bilişsel Davranışçı Terapi:"
+         "metin": "Bilişsel davranışçı terapi"
         }
        ]
       },
       {
-       "id": "k2-55-c0043",
-       "ses": "Hastaya panik fizyolojisi öğretilerek bedensel algıların katastrofik yanlış yorumlanması bilişsel olarak yeniden yapılandırılır.",
-       "ekran": "Fizyopatolojik eğitimle **felaketleştirici düşünceler** yeniden yapılandırılır.",
+       "id": "k2-55-c0062",
+       "ses": "Terapide hastaya psiko-eğitim verilerek kalbin hızlı çarpmasının kalp krizi anlamına gelmediği öğretilir ve katastrofik ölüm düşünceleri yeniden yapılandırılır.",
+       "ekran": "Hastanın felaketleştirici düşüncelerinin **bilişsel olarak yeniden yapılandırılması** hedeflenir.",
        "duzey": 0,
        "slayt": {
         "sayfa": 15,
         "satir": [
          "felaketleştirici düşüncelerin yeniden yapılandırılması hedeflenir."
         ],
-        "sekil": null,
-        "madde": [
-         2,
-         4
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "felaketleştirici düşünceler"
+         "metin": "Hastanın"
         }
        ]
       },
       {
-       "id": "k2-55-c0044",
-       "ses": "Solunum eğitimi, gevşeme egzersizleri ve kademeli maruz bırakma teknikleri ile kaçınma davranışları tamamen kırılır.",
-       "ekran": "Maruz bırakma ve **nefes eğitimi ile kaçınmalar** ortadan kaldırılır.",
+       "id": "k2-55-c0063",
+       "ses": "Hastaya doğru diyafram nefesi alma ve kas gevşeme teknikleri öğretilerek kriz anındaki hiperventilasyon ve sempatik aktivite artışı güvenle kontrol altına alınır.",
+       "ekran": "Diyafram nefes egzersizleri ve **progresif kas gevşetme** teknikleri ile sempatik tonus düşürülür.",
        "duzey": 0,
        "slayt": {
         "sayfa": 15,
         "satir": [
-         "Psikoterapi"
+         "Nefes alma ve kas gevşeme yöntemleri ile anksiyeteyi azaltıcı tekniklerin öğretilmesi önemlidir."
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         3
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "nefes eğitimi ile kaçınmalar"
+         "metin": "Diyafram"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0064",
+       "ses": "Seans sırasında zorlu hızlı nefes alıp verdirilerek yapay baş dönmesi ve taşikardi oluşturulur; hastanın bu somatik duyumlar nedeniyle ölmediğini bizzat deneyimlemesi sağlanarak duyarsızlaşma elde edilir.",
+       "ekran": "Zorlu hiperventilasyon gibi **interoseptif maruz bırakma** egzersizleri ile bedensel duyumların zararsızlığı kanıtlanır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "uyaranlara maruz bırakılması(örn. zorlu hiperventilasyon) zarar görmediği deneyimini yaşatarak"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "interoseptif maruz bırakma"
         }
        ]
       }
@@ -1178,78 +1387,95 @@
    ]
   },
   {
-   "id": "k2-55-b06",
-   "baslik": "Agorafobi: Tanı Kriterleri, Ayırıcı Tanı ve Tedavi",
+   "id": "k2-55-b05",
+   "baslik": "Bölüm 5: Agorafobi: Tanı Kriterleri, Ayırıcı Tanı ve Tedavi",
    "paragraflar": [
     {
      "id": "k2-55-p016",
      "sayfa": 16,
      "cumleler": [
       {
-       "id": "k2-55-c0045",
-       "ses": "Agorafobi panik benzeri belirtiler veya kaçmanın zor olabileceği toplumsal alanlara yalnız başına girmekten duyulan yoğun korkudur.",
-       "ekran": "**Agorafobi Tanımı:** Kaçmanın zor olduğu mekanlardan duyulan korkudur.",
+       "id": "k2-55-c0065",
+       "ses": "Agorafobi terimi köken olarak pazar yeri korkusu anlamına gelmekte olup bireyin panik benzeri belirtiler yaşadığında kaçamayacağı veya yardım alamayacağı ortamlardan korkmasını tanımlar.",
+       "ekran": "**Agorafobi:** Toplumsal yerlere ve kaçmanın güç olabileceği ortamlara yalnız girmekten korkmadır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 16,
         "satir": [
          "Toplumsal yerlere yalnız başına girmeye"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         0
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Agorafobi Tanımı:"
+         "metin": "Agorafobi"
         }
        ]
       },
       {
-       "id": "k2-55-c0046",
-       "ses": "Hastalar panik atağı geçirdiğinde yardım alamayacaklarını düşündükleri açık alanlardan, kalabalıktan ve kapalı mekanlardan kaçınırlar.",
-       "ekran": "Yardım alamama korkusuyla **kalabalık ve açık mekanlardan** kaçınılır.",
+       "id": "k2-55-c0066",
+       "ses": "Toplum tabanlı epidemiyolojik araştırmalarda agorafobinin yaşam boyu yaygınlığının yüzde iki ila altı arasında olduğu bildirilmektedir.",
+       "ekran": "Agorafobinin yaşam boyu yaygınlığı toplumda **yüzde iki ila altı** arasında değişmektedir.",
        "duzey": 0,
        "slayt": {
         "sayfa": 16,
         "satir": [
-         "AGORAFOBİ"
+         "Yaşam boyu yaygınlığı %2-6 arasında değişir."
         ],
-        "sekil": null,
-        "madde": [
-         0
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "kalabalık ve açık mekanlardan"
+         "metin": "yüzde iki ila altı"
         }
        ]
       },
       {
-       "id": "k2-55-c0047",
-       "ses": "Ağır olgularda hasta evden dışarı hiç çıkamaz hale gelerek tamamen eve bağımlı bir yaşam sürmeye başlar.",
-       "ekran": "Ağır olgular **tamamen eve bağımlı** hale gelebilir.",
+       "id": "k2-55-c0067",
+       "ses": "Klinik sınavlarda ve amfi derslerinde önemle vurgulandığı üzere: Psikiyatri kliniklerine başvuran agorafobik olguların yaklaşık dörtte üçünde altta yatan tetikleyici antite panik bozukluk tablosudur.",
+       "ekran": "Klinik sınavlarda ve amfi derslerinde önemle vurgulandığı üzere: Agorafobili olguların **dörtte üçüne panik bozukluk** eşlik etmektedir!",
        "duzey": 0,
        "slayt": {
         "sayfa": 16,
         "satir": [
-         "Toplumsal yerlere yalnız başına girmeye"
+         "3/4’ünde panik bozukluk eşlik etmektedir."
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         6
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "tamamen eve bağımlı"
+         "metin": "Klinik sınavlarda ve amfi derslerinde önemle vurgulandığı üzere"
+        },
+        {
+         "metin": "dörtte üçüne panik bozukluk",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "dd00370e9106",
+        "6630634703c0",
+        "41dfe004f570"
+       ]
+      },
+      {
+       "id": "k2-55-c0068",
+       "ses": "Hastalık öyküsü ayrıntılandırıldığında agorafobik kaçınmanın ilk kez sokakta geçirilen ağır bir panik krizi veya travmatik bir kayıp sonrasında patladığı görülür.",
+       "ekran": "Pek çok olguda agorafobik kaçınmanın başlangıcını **travmatik bir yaşam olayı** tetiklemektedir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Pek çok olguda başlangıcı travmatik bir olay"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Pek"
         }
        ]
       }
@@ -1260,79 +1486,98 @@
      "sayfa": 17,
      "cumleler": [
       {
-       "id": "k2-55-c0048",
-       "ses": "De se me beş kriterlerine göre agorafobi tanısı için beş özgül durumdan en az ikisinde belirgin korku veya kaygı bulunmalıdır.",
-       "ekran": "**DSM-5 Agorafobi Kriterleri:** Beş durumdan en az ikisinde korku duyulmalıdır.",
+       "id": "k2-55-c0069",
+       "ses": "De se me beş kriterlerine göre agorafobi tanısı için tanımlanan beş karakteristik yaşam durumundan en az ikisi veya daha fazlasında belirgin korku ya da kaygı bulunması şarttır.",
+       "ekran": "**DSM-5 Agorafobi Tanı Kriteri A:** Beş temel durumdan en az ikisinde belirgin korku veya kaygı duyulmalıdır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 17,
         "satir": [
-         "DSM-5 Agorafobi Tanı Ölçütleri"
+         "A. Aşağıdaki beş durumdan ikisi ( ya da daha fazlası) ile ilgili olarak belirgin korku ya da kaygı"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         12
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "DSM-5 Agorafobi Kriterleri:"
+         "metin": "DSM-5 Agorafobi Tanı Kriteri A"
         }
        ]
       },
       {
-       "id": "k2-55-c0049",
-       "ses": "Bu durumlar toplu taşıma araçlarını kullanma, açık alanlarda bulunma, kapalı alanlarda bulunma, sırada bekleme ve ev dışında yalnız kalmadır.",
-       "ekran": "Toplu taşıma, **açık ve kapalı alanlar, sıra bekleme** temel durumlardır.",
+       "id": "k2-55-c0070",
+       "ses": "Birinci durum otobüs, metro, tren, vapur veya uçak gibi kapalı ve hareket halindeki toplu taşıma araçlarını kullanırken kapana kısılma korkusudur.",
+       "ekran": "**Durum 1:** Otobüs, tren, vapur veya uçak gibi **toplu taşıma araçlarını** kullanma korkusudur.",
        "duzey": 0,
        "slayt": {
         "sayfa": 17,
         "satir": [
-         "Tanı ve Klinik Özellikler"
+         "Toplu taşıma araçlarını kullanma ( otobüs, tren vs.)"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         5
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "açık ve kapalı alanlar, sıra bekleme"
+         "metin": "toplu taşıma araçları"
         }
        ]
       },
       {
-       "id": "k2-55-c0050",
-       "ses": "Kişi bu durumlarda panik benzeri semptomlar geliştiğinde kaçamayacağı veya yardım bulamayacağı düşüncesiyle korku duyar.",
-       "ekran": "Temel korku **kaçamama veya yardım bulamama** çaresizliğidir.",
+       "id": "k2-55-c0071",
+       "ses": "İkinci durum otopark, pazar yeri ve köprü gibi açık alanlarda bulunmak; üçüncü durum ise alışveriş merkezleri, tiyatro ve sinema gibi kapalı mekanlarda bulunmaktır.",
+       "ekran": "**Durum 2 ve 3:** Otopark ve köprü gibi **açık alanlar** ile mağaza ve sinema gibi **kapalı yerlerde** bulunmadır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 17,
         "satir": [
-         "DSM-5 Agorafobi Tanı Ölçütleri"
+         "Açık yerlerde bulunma ( otopark, köprüler, alışveriş merkezleri)"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         12
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "kaçamama veya yardım bulamama"
-        },
-        {
-         "metin": "kaçamama veya yardım bulamama",
-         "tur": "cikmis"
+         "metin": "Durum 2 ve 3"
         }
-       ],
-       "cikmis": [
-        "q-25-26_d_nem_3_kurul_2-75"
+       ]
+      },
+      {
+       "id": "k2-55-c0072",
+       "ses": "Dördüncü durum banka ya da market kuyruğunda beklemek, beşinci durum ise güvenli liman olan evin dışında tek başına bulunma korkusudur.",
+       "ekran": "**Durum 4 ve 5:** Kalabalıkta sırada bekleme ve **tek başına evin dışında** bulunma korkusudur.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Sırada bekleme ya da kalabalık bir yerde bulunma"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Durum 4 ve 5"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0073",
+       "ses": "Kişinin bu ortamlardan dehşetle kaçınmasının altında yatan temel bilişsel mekanizma fenalaşırsa kaçamayacağı veya kimsenin kendisine yardım edemeyeceği düşüncesidir.",
+       "ekran": "Kişi fenalaştığında **kaçmanın güç olacağı** ya da yardım alamayacağı düşüncesiyle bu ortamlardan kaçınır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "B. Kişi, kaçmanın güç olabileceği ya da panik benzeri ya da yetersizliğe neden olan veya utanç"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Kişi"
+        }
        ]
       }
      ]
@@ -1342,71 +1587,107 @@
      "sayfa": 18,
      "cumleler": [
       {
-       "id": "k2-55-c0051",
-       "ses": "Agorafobik durumlar neredeyse her zaman anında yoğun korku ya da anksiyete doğurur ve bu durum en az altı ay sürmelidir.",
-       "ekran": "**Süre Kriteri:** Korku ve kaçınma en az altı ay devam etmelidir.",
+       "id": "k2-55-c0074",
+       "ses": "Kişi söz konusu fobik mekanlarla karşılaştığında veya bu ortamlara gireceğini düşündüğünde neredeyse her seferinde doğrudan anksiyete yanıtı açığa çıkar.",
+       "ekran": "Agorafobik durumlar neredeyse her zaman **anında korku ya da kaygı** doğurur.",
        "duzey": 0,
        "slayt": {
         "sayfa": 18,
         "satir": [
-         "C. Agorafobik durumlar, neredeyse her zaman, korku ya"
+         "C. Agorafobik durumlar, neredeyse her zaman, korku ya da kaygı doğurur."
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         3
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Süre Kriteri:"
+         "metin": "Agorafobik"
         }
        ]
       },
       {
-       "id": "k2-55-c0052",
-       "ses": "Hasta bu ortamlardan ya etkin bir biçimde kaçınır ya da yanında güvenilir bir refakatçi bulunmasını şart koşar.",
-       "ekran": "Ortamlardan kaçınılır veya **mutlaka bir eşlikçi** aranır.",
+       "id": "k2-55-c0075",
+       "ses": "Hasta bu ortamlardan tamamen kaçınır, yalnız gidemeyip mutlaka yanına eşini veya yakınını refakatçi alır ya da yoğun bir içsel ıstırap içinde bu duruma katlanır.",
+       "ekran": "Hasta bu durumlardan kaçınır, yanına **güvenli bir refakatçi** alır ya da yoğun ıstırapla katlanır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 18,
         "satir": [
-         "D. Agorafobik olabilecek durumlardan etkin bir biçimde kaçınılır,"
+         "D. Agorafobik olabilecek durumlardan etkin bir biçimde kaçınılır, bir eşlik edene"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         5
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "mutlaka bir eşlikçi"
+         "metin": "Hasta"
         }
        ]
       },
       {
-       "id": "k2-55-c0053",
-       "ses": "Duyulan korku ve kaçınma kişinin mesleki, ailevi ve sosyal işlevselliğinde ağır kısıtlılıklara yol açar.",
-       "ekran": "Kaçınma davranışı **sosyal ve mesleki işlevselliği** felç eder.",
+       "id": "k2-55-c0076",
+       "ses": "Hastanın hissettiği felaket beklentisi ve dehşet, sosyokültürel bağlamda ortamın barındırdığı objektif ve gerçek tehlikeye kıyasla tamamen orantısızdır.",
+       "ekran": "Duyulan korku çevrenin yarattığı **gerçek tehlikeye göre orantısız** düzeydedir.",
        "duzey": 0,
        "slayt": {
         "sayfa": 18,
         "satir": [
-         "C. Agorafobik durumlar, neredeyse her zaman, korku ya"
+         "E. Duyulan korku ya da kaygı, agorafobik durumların yarattığı gerçek tehlikeye göre ve"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         3
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "sosyal ve mesleki işlevselliği"
+         "metin": "Duyulan"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0077",
+       "ses": "Tanısal açıdan geçici durumlardan ayrılabilmesi için korku, kaygı ve kaçınma örüntüsünün en az altı ay ya da daha uzun süredir kesintisiz devam ediyor olması zorunludur.",
+       "ekran": "Tanı konabilmesi için korku ve kaçınmanın sürekli olması ve **en az altı ay sürmesi** şarttır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "F. Korku ya da kaçınma sürekli bir durumdur, altı ay ya da daha uzun sürer."
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Tanı"
+        },
+        {
+         "metin": "en az altı ay sürmesi",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "5745fea7afd3",
+        "d1594f9e30c1",
+        "d3-k2-psi-002",
+        "d3-k2-psi-008"
+       ]
+      },
+      {
+       "id": "k2-55-c0078",
+       "ses": "Süregiden bu kaçınmalar bireyin işe gitmesini, sokağa çıkmasını ve sosyal ilişki kurmasını engelleyerek mesleki ve ailesel alanlarda ağır işlev kaybı yaratır.",
+       "ekran": "Korku ve kaçınma hastanın mesleki, sosyal ve **ailevi işlevselliğinde belirgin çöküşe** yol açar.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "alanlarda ya da önemli diğer işlevsellik alanlarında işlevsellikte düşmeye neden olur."
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Korku"
         }
        ]
       }
@@ -1417,78 +1698,59 @@
      "sayfa": 19,
      "cumleler": [
       {
-       "id": "k2-55-c0054",
-       "ses": "Agorafobi ayırıcı tanısında sosyal fobi, özgül fobi, majör depresyon ve tıbbi hastalıklar dikkatle değerlendirilmelidir.",
-       "ekran": "**Agorafobi Ayırıcı Tanısı:** Sosyal fobi ve özgül fobilerden ayırt edilir.",
-       "duzey": 0,
-       "slayt": {
-        "sayfa": 19,
-        "satir": [
-         "Ayırıcı tanıda kaygı ve depresyona neden olabilecek tüm"
-        ],
-        "sekil": null,
-        "madde": [
-         1,
-         0
-        ]
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "Agorafobi Ayırıcı Tanısı:"
-        },
-        {
-         "metin": "Agorafobi Ayırıcı Tanısı:",
-         "tur": "cikmis"
-        }
-       ],
-       "cikmis": [
-        "past-1790877044869-84754"
-       ]
-      },
-      {
-       "id": "k2-55-c0055",
-       "ses": "Sosyal fobide temel korku başkaları tarafından eleştirilmek ve küçük düşmek iken agorafobide yardım alamamak ve mahsur kalmaktır.",
-       "ekran": "Sosyal fobide **eleştirilme korkusu**, agorafobide mahsur kalma esastır.",
+       "id": "k2-55-c0079",
+       "ses": "Agorafobi ayırıcı tanısında hastayı eve kapatabilecek majör depresyon, agorafobik hezeyanlar içeren şizofreni ve kişilik bozuklukları ekarte edilmelidir.",
+       "ekran": "**Agorafobide Ayırıcı Tanı:** Depresyon, şizofreni ve kişilik bozuklukları dikkatle dışlanmalıdır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 19,
         "satir": [
          "Ayırıcı tanı"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         1
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "eleştirilme korkusu"
+         "metin": "Agorafobide Ayırıcı Tanı"
         }
        ]
       },
       {
-       "id": "k2-55-c0056",
-       "ses": "Özgül fobide ise korku tek bir özgül nesneyle sınırlı olup yaygın mekan kaçınması görülmez.",
-       "ekran": "Özgül fobide korku **tek bir nesneye** özgüdür.",
+       "id": "k2-55-c0080",
+       "ses": "Çekingen kişilik bozukluğunda birey panik nöbeti korkusuyla değil, başkaları tarafından yetersiz bulunma, eleştirilme ve aşağılanma korkusuyla toplumsal temaslardan çekinir.",
+       "ekran": "Çekingen kişilik bozukluğunda hasta **eleştirilme ve reddedilme korkusuyla** insanlardan kaçınır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 19,
         "satir": [
-         "Ayırıcı tanıda kaygı ve depresyona neden olabilecek tüm"
+         "Çekingen kişilik bozukluğu"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         0
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "tek bir nesneye"
+         "metin": "Çekingen kişilik"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0081",
+       "ses": "Bağımlı kişilik bozukluğunda ise kişi kendi başına hayatını idame ettiremeyeceğine inandığı için sürekli bir eşlikçiye yapışır ancak agorafobik panik korkusu taşımaz.",
+       "ekran": "Bağımlı kişilik bozukluğunda ise kişi **kendi başına karar alamadığı** için bir refakatçiye bağlanır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Bağımlı kişilik bozukluğu"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Bağımlı kişilik"
         }
        ]
       }
@@ -1499,71 +1761,59 @@
      "sayfa": 20,
      "cumleler": [
       {
-       "id": "k2-55-c0057",
-       "ses": "Panik bozukluğa ikincil gelişen agorafobide panik atakları başarıyla tedavi edildiğinde agorafobik kaçınma da hızla geriler.",
-       "ekran": "**Prognoz:** Panik ataklar düzeldikçe agorafobik kaçınma da geriler.",
+       "id": "k2-55-c0082",
+       "ses": "Eğer agorafobi panik bozukluğun bir komplikasyonu olarak gelişmişse, panik ataklar başarılı biçimde tedavi edildiğinde agorafobik kaçınma da büyük oranda çözülür.",
+       "ekran": "**Gidiş ve Prognoz:** Panik bozukluğa bağlı agorafobide panik tedavi edildiğinde agorafobi de düzelir.",
        "duzey": 0,
        "slayt": {
         "sayfa": 20,
         "satir": [
          "Panik bozukluk nedeniyle mevcut olan agorafobide panik bozukluk"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         3
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Prognoz:"
+         "metin": "Gidiş ve Prognoz"
         }
        ]
       },
       {
-       "id": "k2-55-c0058",
-       "ses": "Buna karşılık panik bozukluğun eşlik etmediği primer agorafobi genellikle daha kronik ve kısıtlayıcı bir seyir gösterir.",
-       "ekran": "Primer agorafobi **daha inatçı ve kısıtlayıcı** seyreder.",
+       "id": "k2-55-c0083",
+       "ses": "Buna karşılık altta panik atakların bulunmadığı primer saf agorafobi klinik olarak çok daha inatçı, tedaviye dirençli ve hastayı eve hapseden kronik bir gidiş gösterir.",
+       "ekran": "Buna karşın panik bozukluğun eşlik etmediği **saf agorafobi** son derece kısıtlayıcı ve kroniktir.",
        "duzey": 0,
        "slayt": {
         "sayfa": 20,
         "satir": [
-         "Panik bozukluğun eşlik etmediği agorafobi genellikle kısıtlayıcı ve"
+         "kroniktir."
         ],
-        "sekil": null,
-        "madde": [
-         3,
-         1
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "daha inatçı ve kısıtlayıcı"
+         "metin": "Buna"
         }
        ]
       },
       {
-       "id": "k2-55-c0059",
-       "ses": "Erken dönemde uygulanan maruz bırakma terapisi hastanın bağımsızlığını yeniden kazanmasında belirleyicidir.",
-       "ekran": "Erken maruz bırakma **bağımsız hareket yeteneğini** geri kazandırır.",
+       "id": "k2-55-c0084",
+       "ses": "Hastalığın kronikleştiği olgularda sekonder majör depresyon ve alkolle kendini uyuşturma çabası klinik gidişatı son derece komplike ve karanlık hale getirir.",
+       "ekran": "Tabloya **depresyon ve alkol kullanım bozukluğunun** eklenmesi prognozu ağırlaştırır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 20,
         "satir": [
-         "Gidiş ve Prognoz"
+         "Depresif bozukluk ve alkol kullanım bozukluğu hastalık gidişatını"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         5
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "bağımsız hareket yeteneğini"
+         "metin": "depresyon ve alkol"
         }
        ]
       }
@@ -1574,69 +1824,59 @@
      "sayfa": 21,
      "cumleler": [
       {
-       "id": "k2-55-c0060",
-       "ses": "Agorafobi tedavisinde farmakoterapi panik bozuklukta olduğu gibi seçici serotonin gerialım inhibitörleri ile yürütülür.",
-       "ekran": "**Agorafobi Tedavisi:** es es er ı tedavisi ve aşamalı maruz bırakmadır.",
+       "id": "k2-55-c0085",
+       "ses": "Agorafobinin farmakolojik tedavisinde panik bozuklukta olduğu gibi seçici serotonin geri alım inhibitörleri ve kriz anlarında kontrollü benzodiazepinler reçete edilir.",
+       "ekran": "**Agorafobi Tedavisi:** Farmakoterapide SSRI antidepresanlar ve benzodiazepinler kullanılır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 21,
         "satir": [
          "Farmakoterapi"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         3
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Agorafobi Tedavisi:"
+         "metin": "Agorafobi Tedavisi"
         }
        ]
       },
       {
-       "id": "k2-55-c0061",
-       "ses": "İlaç tedavisinin yanı sıra canlı maruz bırakma yani in vivo ekspojur teknikleri agorafobide olmazsa olmaz basamaktır.",
-       "ekran": "**Canlı Maruz Bırakma:** Korkulan mekanlara kademeli girilmesidir.",
+       "id": "k2-55-c0086",
+       "ses": "Psikoterapide en yüksek başarıyı sağlayan yöntem kaçınılan ortamlara kolaydan zora doğru aşamalı olarak adım atılmasını sağlayan in vivo yani gerçek yaşamda maruz bırakmadır.",
+       "ekran": "Psikoterapide davranışçı maruz bırakma ve **kademeli in vivo alıştırma** temel yöntemdir.",
        "duzey": 0,
        "slayt": {
         "sayfa": 21,
         "satir": [
-         "Tedavi"
+         "Davranışçı Terapi"
         ],
-        "sekil": null,
-        "madde": [
-         0
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Canlı Maruz Bırakma:"
+         "metin": "maruz bırakma"
         }
        ]
       },
       {
-       "id": "k2-55-c0062",
-       "ses": "Hasta kaçındığı ortamlara basamak basamak girerek panik yaşasa bile bunun hayati bir tehlike oluşturmadığını yaşantısal olarak öğrenir.",
-       "ekran": "Yaşantısal maruz kalma **kaçınma refleksini kalıcı** olarak söndürür.",
+       "id": "k2-55-c0087",
+       "ses": "Son yıllarda sanal gerçeklik gözlükleri ve simülasyonlar kullanılarak hastanın güvenli klinik ortamında fobik mekanlara sanal olarak maruz bırakılması tedavi uyumunu belirgin biçimde artırmıştır.",
+       "ekran": "Son yıllarda bilgisayar destekli **sanal gerçeklik terapisi** de maruziyeti kolaylaştırmaktadır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 21,
         "satir": [
-         "Tedavi"
+         "Sanal Terapi"
         ],
-        "sekil": null,
-        "madde": [
-         0
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "kaçınma refleksini kalıcı"
+         "metin": "sanal gerçeklik terapisi"
         }
        ]
       }
@@ -1645,79 +1885,86 @@
    ]
   },
   {
-   "id": "k2-55-b07",
-   "baslik": "Fobik Bozukluklar ve Özgül Fobi",
+   "id": "k2-55-b06",
+   "baslik": "Bölüm 6: Fobik Bozukluklar ve Özgül Fobi",
    "paragraflar": [
     {
      "id": "k2-55-p022",
      "sayfa": 22,
      "cumleler": [
       {
-       "id": "k2-55-c0063",
-       "ses": "Fobi belirli bir nesne, durum ya da aktiviteye karşı duyulan, mantıksız, orantısız ve ısrarcı korku tepkisidir.",
-       "ekran": "**Fobi Tanımı:** Belirli nesne veya duruma karşı mantıksız korkudur.",
-       "duzey": 0,
-       "slayt": {
-        "sayfa": 22,
-        "satir": [
-         "Fobi; belirli nesne, durum ya da aktivitelere karşı"
-        ],
-        "sekil": null,
-        "madde": [
-         1,
-         4
-        ]
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "Fobi Tanımı:"
-        }
-       ]
-      },
-      {
-       "id": "k2-55-c0064",
-       "ses": "Kişi korkusunun anlamsız ve aşırı olduğunu bilir ancak fobi odağı ile karşılaştığında anksiyete tepkisini engelleyemez.",
-       "ekran": "Kişi korkunun **aşırı olduğunu bilmesine rağmen** engelleyemez.",
-       "duzey": 0,
-       "slayt": {
-        "sayfa": 22,
-        "satir": [
-         "Fobi; belirli nesne, durum ya da aktivitelere karşı"
-        ],
-        "sekil": null,
-        "madde": [
-         1,
-         4
-        ]
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "aşırı olduğunu bilmesine rağmen"
-        }
-       ]
-      },
-      {
-       "id": "k2-55-c0065",
-       "ses": "Bu durum fobik uyarandan yoğun bir kaçınma davranışına ve günlük yaşamda ciddi zorluklara neden olur.",
-       "ekran": "Fobik uyarandan **yoğun kaçınma davranışı** gelişir.",
+       "id": "k2-55-c0088",
+       "ses": "Fobi terimi bireyin belirli bir nesne, canlı, doğal durum ya da eylemle karşılaştığında hissettiği akıl dışı, gerçek tehditle orantısız ve aşırı korku reaksiyonunu tanımlar.",
+       "ekran": "**Fobik Bozukluk:** Belirli nesne, durum ya da aktivitelere karşı akılcı olmayan aşırı korku halidir.",
        "duzey": 0,
        "slayt": {
         "sayfa": 22,
         "satir": [
          "Fobik Bozukluk"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         2
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "yoğun kaçınma davranışı"
+         "metin": "Fobik Bozukluk"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0089",
+       "ses": "Klinik psikiyatride fobik bozukluklar özgül bir duruma yönelik olan özgül fobi ve başkalarının önünde küçük düşme kaygısı taşıyan sosyal fobi şeklinde iki ana sınıfa ayrılır.",
+       "ekran": "Fobik bozukluklar temel olarak **özgül fobi** ve **sosyal fobi** olmak üzere iki ana gruba ayrılır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "aşırı korku halidir. Fobik bozukluğu, özgül fobi ve sosyal fobi(sosyal"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Fobik"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0090",
+       "ses": "Özgül fobide kedi, köpek, örümcek gibi hayvanlar, kan görme, iğne yapılması veya uçak ve asansör gibi özgül durumlara karşı orantısız panik reaksiyonu ortaya çıkar.",
+       "ekran": "Özgül fobide kedi, köpek, örümcek, yükseklik veya **uçak yolculuğu** gibi nesne ve durumlar korku üretir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "durumun(uçak yolculuğu, yüksek yerler, kan görme gibi) varlığı ya"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Özgül"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0091",
+       "ses": "Sosyal fobide ise birey yabancılarla tanışırken, topluluk önünde sunum yaparken ya da başkalarının bakışları altında yemek yerken rezil olacağı ve küçük düşeceği korkusunu yaşar.",
+       "ekran": "Sosyal fobide ise kişi toplum karşısında konuşma veya yemek yeme gibi eylemlerde **küçük düşme korkusu** yaşar.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "küçük duruma düşeceği korkusunu yaşar."
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "küçük düşme korkusu"
         }
        ]
       }
@@ -1728,81 +1975,79 @@
      "sayfa": 23,
      "cumleler": [
       {
-       "id": "k2-55-c0066",
-       "ses": "Özgül fobinin toplumda yaşam boyu görülme sıklığı yaklaşık yüzde on bir civarındadır ve kadınlarda daha yaygındır.",
-       "ekran": "**Özgül Fobi Sıklığı:** Yaşam boyu görülme oranı yüzde on birdir.",
+       "id": "k2-55-c0092",
+       "ses": "Epidemiyolojik çalışmalarda özgül fobinin toplumda yaşam boyu görülme sıklığının yüzde on bir gibi oldukça yüksek bir orana ulaştığı gösterilmiştir.",
+       "ekran": "**Fobilerin Epidemiyolojisi:** Özgül fobinin yaşam boyu görülme sıklığı yüzde on bir civarındadır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 23,
         "satir": [
-         "Özgül fobinin yaşam boyu görülme olasılığının %11 ,"
+         "Özgül fobinin yaşam boyu görülme olasılığının %11 , sosyal"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         3
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Özgül Fobi Sıklığı:"
+         "metin": "Fobilerin Epidemiyolojisi"
         }
        ]
       },
       {
-       "id": "k2-55-c0067",
-       "ses": "Sosyal fobinin yaşam boyu prevalansı ise yüzde üç ila on üç arasında bildirilmektedir.",
-       "ekran": "Sosyal fobi toplumda **yüzde üç ila on üç** sıklıkta saptanır.",
+       "id": "k2-55-c0093",
+       "ses": "Toplumsal kaygı bozukluğu yani sosyal fobinin yaygınlığı ise farklı toplumlarda yüzde üç ila on üç arasında geniş bir aralık sergilemektedir.",
+       "ekran": "Sosyal fobinin yaşam boyu yaygınlığı ise **yüzde üç ila on üç** arasında bildirilmektedir.",
        "duzey": 0,
        "slayt": {
         "sayfa": 23,
         "satir": [
-         "Fobik Bozukluk- Epidemiyoloji"
+         "Özgül fobinin yaşam boyu görülme olasılığının %11 , sosyal"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         1
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "yüzde üç ila on üç"
+         "metin": "Sosyal"
         }
        ]
       },
       {
-       "id": "k2-55-c0068",
-       "ses": "Fobik bozukluklar psikiyatri polikliniklerine en sık başvuruya yol açan anksiyete bozuklukları arasında yer alır.",
-       "ekran": "Fobiler toplumda **en sık görülen psikiyatrik** durumlardandır.",
+       "id": "k2-55-c0094",
+       "ses": "Özgül fobiler genellikle çocukluk çağında başlangıç gösterir ve kadınlarda erkeklere kıyasla iki kat daha sık karşımıza çıkar.",
+       "ekran": "Özgül fobiler sıklıkla **çocukluk yaşlarında** başlar ve kadınlarda erkeklere göre iki kat fazladır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 23,
         "satir": [
-         "Özgül fobinin yaşam boyu görülme olasılığının %11 ,"
+         "Özgül fobiler sıklıkla çocukluk yaşlarında başlar. Kadınlarda"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         2
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "en sık görülen psikiyatrik"
-        },
-        {
-         "metin": "en sık görülen psikiyatrik",
-         "tur": "cikmis"
+         "metin": "Özgül"
         }
-       ],
-       "cikmis": [
-        "dd00370e9106",
-        "6630634703c0",
-        "41dfe004f570"
+       ]
+      },
+      {
+       "id": "k2-55-c0095",
+       "ses": "Sosyal fobi ise kimlik gelişiminin ve akran ilişkilerinin ön plana çıktığı ergenlik döneminde başlar ve özgül fobinin aksine kadın ve erkeklerde eşit oranda görülür.",
+       "ekran": "Sosyal fobi ise çoğunlukla **ergenlik yıllarında** başlar ve kadın ile erkeklerde eşit oranda görülür.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Sosyal fobi ise çoğunlukla ergenlik yıllarında başlar. Kadın ve"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Sosyal"
+        }
        ]
       }
      ]
@@ -1812,71 +2057,59 @@
      "sayfa": 24,
      "cumleler": [
       {
-       "id": "k2-55-c0069",
-       "ses": "Özgül fobi etiyolojisinde klasik koşullanma, model alma, evrimsel hazırlıklı olma ve genetik yatkınlık rol oynar.",
-       "ekran": "**Etiyolojik Modeller:** Koşullanma, evrimsel hazırlık ve genetiktir.",
+       "id": "k2-55-c0096",
+       "ses": "Özgül fobilerin davranışçı etiyolojisinde Watson tarafından yürütülen meşhur Küçük Albert deneyindeki klasik koşullanma ve pekiştirme ilkeleri yer alır.",
+       "ekran": "**Davranışsal Etiyoloji:** Klasik koşullanma ve meşhur Küçük Albert deneyi modelidir.",
        "duzey": 0,
        "slayt": {
         "sayfa": 24,
         "satir": [
-         "Etyoloji:"
+         "Küçük Albert Deneyi"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         0
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Etiyolojik Modeller:"
+         "metin": "Küçük Albert deneyi"
         }
        ]
       },
       {
-       "id": "k2-55-c0070",
-       "ses": "Örneğin hayvan fobileri ve kan yaralanma fobisi aile bireyleri arasında belirgin kümelenme gösterir.",
-       "ekran": "Kan ve hayvan fobilerinde **güçlü ailesel kümelenme** görülür.",
+       "id": "k2-55-c0097",
+       "ses": "Psikanalitik kuramda id kaynaklı kabul edilemez bilinçdışı dürtülerin yarattığı anksiyete, yer değiştirme mekanizmasıyla dış dünyadaki simgesel bir nesneye aktarılır.",
+       "ekran": "Psikanalitik kurama göre yasaklı dürtüler **yer değiştirme ve sembolizasyon** ile nesneye aktarılır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 24,
         "satir": [
-         "Özgül Fobi"
+         "Yasaklı bilinçdışı dürtüleri yer değiştirme savunma düzeneği ileyer değiştirme ve"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         7
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "güçlü ailesel kümelenme"
+         "metin": "yer değiştirme ve sembolizasyon"
         }
        ]
       },
       {
-       "id": "k2-55-c0071",
-       "ses": "Evrimsel kuram insanların yılan, örümcek ve yükseklik gibi türün devamını tehdit eden uyaranlara fobi geliştirmeye biyolojik olarak yatkın olduğunu savunur.",
-       "ekran": "Evrimsel süreç **tehlikeli uyaranlara fobi** gelişimini kolaylaştırmıştır.",
+       "id": "k2-55-c0098",
+       "ses": "Genetik faktörler değerlendirildiğinde özellikle kan, enjeksiyon ve yaralanma tipi fobisi olan bireylerin ailelerinde benzer tablonun görülme oranı son derece yüksektir.",
+       "ekran": "Genetik faktörler incelendiğinde **kan, enjeksiyon ve yaralanma** tipi fobi çok yüksek ailesel yatkınlığa sahiptir.",
        "duzey": 0,
        "slayt": {
         "sayfa": 24,
         "satir": [
-         "Etyoloji:"
+         "özellikle kan-enjeksiyon-yaralanma tipi fobi çok yüksek ailesel yatkınlığa sahiptir."
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         7
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "tehlikeli uyaranlara fobi"
+         "metin": "Genetik"
         }
        ]
       }
@@ -1887,79 +2120,105 @@
      "sayfa": 25,
      "cumleler": [
       {
-       "id": "k2-55-c0072",
-       "ses": "De se me beş kriterlerine göre özgül bir nesne ya da durumla ilgili belirgin ve orantısız bir korku duyulmalıdır.",
-       "ekran": "**DSM-5 Özgül Fobi Kriterleri:** Belirli nesne veya duruma orantısız korkudur.",
+       "id": "k2-55-c0099",
+       "ses": "De se me beş kriterlerine göre özgül fobi tanısı için belirli bir nesne, canlı veya durumla karşılaşma ya da karşılaşma beklentisiyle anında korku doğması şarttır.",
+       "ekran": "**DSM-5 Özgül Fobi Kriterleri:** Özgül bir nesne ya da durumla ilgili belirgin korku veya kaygı duyulmalıdır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 25,
         "satir": [
-         "DSM-5 Tanı Kriterleri"
+         "A-Özgül bir nesne ya da durumla ilgili olarak belirgin bir korku ya da kaygı duyma(ör uçağa binme, hayvanlar,"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         6
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "DSM-5 Özgül Fobi Kriterleri:"
+         "metin": "DSM-5 Özgül Fobi Kriterleri"
         }
        ]
       },
       {
-       "id": "k2-55-c0073",
-       "ses": "Fobik nesne neredeyse her zaman anında bir korku tepkisi doğurmalı ve bu durumdan etkin biçimde kaçınılmalıdır.",
-       "ekran": "Fobik nesne **anında korku doğurur** ve kaçınma yaratır.",
+       "id": "k2-55-c0100",
+       "ses": "Klinik pratikte çocuk hastalar korkularını sözel olarak ifade edemeyebilir; ağlama krizleri, öfke patlamaları, donakalma ya da ebeveyne sımsıkı yapışma ile dışa vururlar.",
+       "ekran": "Çocuklarda bu korku ağlama, **bağırıp çağırma, tepinme**, donakalma ya da sıkıca sarılma ile kendini gösterir.",
        "duzey": 0,
        "slayt": {
         "sayfa": 25,
         "satir": [
-         "A-Özgül bir nesne ya da durumla ilgili olarak"
+         "Not: Çocuklarda korku ya da kaygı, ağlama, bağırıp çağırarak tepinme, donakalma ya da sıkıca sarılma ile"
         ],
-        "sekil": null,
-        "madde": [
-         5,
-         2
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "anında korku doğurur"
+         "metin": "Çocuklarda"
         }
        ]
       },
       {
-       "id": "k2-55-c0074",
-       "ses": "Tanı konulabilmesi için duyulan korkunun ve kaçınmanın en az altı ay sürmesi ve işlevsellikte düşme yaratması şarttır.",
-       "ekran": "Korku ve kaçınma **en az altı ay** sürmelidir.",
+       "id": "k2-55-c0101",
+       "ses": "Fobi kaynağı uyaran her temas edildiğinde kaçınılmaz bir dehşet üretir ve hasta bu nesneyle karşılaşmamak için hayatını kısıtlayıcı önlemler alır.",
+       "ekran": "Fobik nesne neredeyse her zaman doğrudan kaygı doğurur ve durumdan **etkin biçimde kaçınılır**.",
        "duzey": 0,
        "slayt": {
         "sayfa": 25,
         "satir": [
-         "Özgül Fobi-Tanı"
+         "C-Fobi kaynağı nesne ya da durumdan etkin bir biçimde kaçınılır ya da yoğun bir korku ya da kaygı ile buna"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         6
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "en az altı ay"
+         "metin": "Fobik"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0102",
+       "ses": "Tanı konabilmesi için bu korku ve kaçınmanın sürekli olması, en az altı ay devam etmesi ve hastanın günlük yaşamında belirgin işlevsellik kaybı yaratması gereklidir.",
+       "ekran": "Tanı için korkunun sürekli olması, **en az altı ay sürmesi** ve belirgin işlev kaybı yaratması zorunludur.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "E-Korku, kaygı ya da kaçınma sürekli bir durumdur."
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "en az altı ay sürmesi"
         },
         {
-         "metin": "en az altı ay",
+         "metin": "en az altı ay sürmesi",
          "tur": "cikmis"
         }
        ],
        "cikmis": [
         "q-25-26_d_nem_3_kurul_2-82-cs3"
+       ]
+      },
+      {
+       "id": "k2-55-c0103",
+       "ses": "Özgül fobiler klinik olarak hayvan tipi, fırtına ve yükseklik gibi doğal çevre tipi, kan-enjeksiyon-yaralanma tipi ve uçak veya asansör gibi durumsal tip olarak kodlanır.",
+       "ekran": "Fobi türleri **hayvan, doğal çevre**, kan-enjeksiyon-yaralanma ve durumsal olmak üzere kodlanır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Fobi kaynağı uyarana göre kodlanır: hayvan, doğal çevre(yükseklik, fırtına),kan-iğne yaralanma,"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Fobi"
+        }
        ]
       }
      ]
@@ -1969,71 +2228,78 @@
      "sayfa": 26,
      "cumleler": [
       {
-       "id": "k2-55-c0075",
-       "ses": "Özgül fobiler hayvan tipi, doğal çevre tipi, kan enjeksiyon yara tipi ve durumsal tip olmak üzere alt sınıflara ayrılır.",
-       "ekran": "**Özgül Fobi Tipleri:** Hayvan, çevre, kan enjeksiyon ve durumsal tiplerdir.",
+       "id": "k2-55-c0104",
+       "ses": "Hayvan veya yükseklik gibi tipik bir fobik uyaranla yüzleşen kişide akut kaç ya da savaş refleksi devreye girerek taşikardi, takipne, terleme ve kas sertliği gelişir.",
+       "ekran": "Özgül fobi uyarısıyla karşılaşan bireylerde taşikardi, terleme ve kas gerginliği gibi **sempatik aktivite artışı** olur.",
        "duzey": 0,
        "slayt": {
         "sayfa": 26,
         "satir": [
-         "Özgül fobi:"
+         "Fobik uyaranla karşılaşan bireylerde sempatik aktivitede artış olur. En sık gözlenen bulgular;"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         0
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Özgül Fobi Tipleri:"
+         "metin": "sempatik aktivite artışı"
         }
        ]
       },
       {
-       "id": "k2-55-c0076",
-       "ses": "Kan enjeksiyon yara tipi diğer tüm fobilerden farklı olarak bifazik bir vazovagal yanıtla tansiyon düşmesi ve senkop ile seyreder.",
-       "ekran": "**Kan Enjeksiyon Tipi:** Vazovagal senkop ve bradikardi ile ayrılır.",
+       "id": "k2-55-c0105",
+       "ses": "Klinik sınavlarda ve amfi derslerinde önemle vurgulandığı üzere: Kan, enjeksiyon ve yaralanma fobisinde diğer tüm fobilerden farklı olarak önce kısa süreli bir taşikardi, hemen ardından derin bir bradikardi ile seyreden bifazik tepki gelişir.",
+       "ekran": "Klinik sınavlarda ve amfi derslerinde önemle vurgulandığı üzere: **Kan-enjeksiyon tipinde farklı olarak bifazik tepki** gelişir!",
        "duzey": 0,
        "slayt": {
         "sayfa": 26,
         "satir": [
-         "Özgül Fobi-Klinik Özellikler"
+         "Kan-enjeksiyon-yaralanma tipinde farklı olarak bifazik tepki gelişir. Sempatik aktivite artışını"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         1
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Kan Enjeksiyon Tipi:"
+         "metin": "bifazik tepki"
         }
        ]
       },
       {
-       "id": "k2-55-c0077",
-       "ses": "Durumsal tip ise uçak, asansör ve kapalı mekan gibi özgül durumlarda ortaya çıkan fobi tablosudur.",
-       "ekran": "Durumsal tip **uçak, asansör ve kapalı alan** korkusunu kapsar.",
+       "id": "k2-55-c0106",
+       "ses": "Bu bifazik yanıtta ani vagal tonus artışı ve vazodilatasyon kan basıncını düşürür, serebral perfüzyonu azaltarak hastada klasik vazovagal bayılma yani senkop oluşturur.",
+       "ekran": "Sempatik aktiviteyi hızla takip eden **vazovagal deşarj ve bradikardi**, baygınlık hissi ve senkopla sonuçlanır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 26,
         "satir": [
-         "Özgül fobi:"
+         "baygınlık hissi ve senkop ile sonuçlanan bradikardi takip eder(vazovagal bayılma)."
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         0
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "uçak, asansör ve kapalı alan"
+         "metin": "Sempatik"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0107",
+       "ses": "Klinik veriler özgül fobisi olan bireylerin yüzde elli ila sekseninde diğer anksiyete bozuklukları, majör depresyon veya madde kötüye kullanımı bulunduğunu göstermektedir.",
+       "ekran": "Özgül fobiye hastaların **yüzde elli ila sekseninde** başka bir anksiyete veya duygudurum bozukluğu eşlik eder.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Özgül fobinin başkaca ruhsal hastalıkla birlikte görülme oranı %50-80 arasında değişmektedir. Eşlik"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Özgül"
         }
        ]
       }
@@ -2044,71 +2310,66 @@
      "sayfa": 27,
      "cumleler": [
       {
-       "id": "k2-55-c0078",
-       "ses": "Özgül fobi çocukluk veya erken ergenlik döneminde başlar ve tedavi edilmediğinde yıllarca kronik olarak sürebilir.",
-       "ekran": "**Klinik Seyir:** Çocuklukta başlar ve tedavi edilmezse kronikleşir.",
+       "id": "k2-55-c0108",
+       "ses": "Diğer anksiyete bozukluklarının alevlenip yatışan dalgalı klinik tablosunun aksine özgül fobiler yıllar boyu oldukça sabit ve kronik bir klinik seyir gösterir.",
+       "ekran": "**Gidiş ve Sonlanış:** Özgül fobi dalgalanma göstermeyen, kronik ve sabit seyirli bir bozukluktur.",
        "duzey": 0,
        "slayt": {
         "sayfa": 27,
         "satir": [
-         "Özgül fobi:"
+         "Kronik seyirli bir bozukluktur."
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         0
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Klinik Seyir:"
+         "metin": "Gidiş ve Sonlanış"
+        },
+        {
+         "metin": "Gidiş ve Sonlanış:",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "q-25-26_d_nem_3_kurul_2-82-cs7"
+       ]
+      },
+      {
+       "id": "k2-55-c0109",
+       "ses": "Başlangıç yaşı açısından bimodal bir dağılım söz konusudur: Hayvan ve kan fobileri erken çocuklukta patlarken, uçak ve araba gibi durumsal fobiler yirmili yaşlarda tepe yapar.",
+       "ekran": "Hayvan, doğal çevre ve kan fobileri çocuklukta; **durumsal fobiler erken erişkinlikte** tepe yapar.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "nedeniyle bimodal bir başlangıç gösterir."
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Hayvan,"
         }
        ]
       },
       {
-       "id": "k2-55-c0079",
-       "ses": "Çocukluk çağındaki hayvan fobilerinin bir kısmı yaşla kendiliğinden gerilerken erişkinlikte devam eden fobiler kalıcı olma eğilimindedir.",
-       "ekran": "Erişkinlikte devam eden **fobiler kendiliğinden düzelmez**.",
+       "id": "k2-55-c0110",
+       "ses": "Kendi haline bırakılan özgül fobilerde kendiliğinden remisyon oranı son derece düşüktür; tedavi edilmediği takdirde bireyin tüm erişkinlik yaşamı boyunca devam eder.",
+       "ekran": "Tedavi edilmeyen özgül fobiler **kendiliğinden düzelme göstermez** ve ömür boyu sebat eder.",
        "duzey": 0,
        "slayt": {
         "sayfa": 27,
         "satir": [
-         "Özgül Fobi- Gidiş ve Sonlanış"
+         "sabit bir klinik gidiş söz konusudur."
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         1
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "fobiler kendiliğinden düzelmez"
-        }
-       ]
-      },
-      {
-       "id": "k2-55-c0080",
-       "ses": "Kişinin mesleki veya sosyal hayatını engellemediği sürece hastalar genellikle profesyonel tedavi arayışına girmezler.",
-       "ekran": "İşlevselliği bozmadıkça **hastalar doktora başvurmayabilir**.",
-       "duzey": 0,
-       "slayt": {
-        "sayfa": 27,
-        "satir": [
-         "Özgül fobi:"
-        ],
-        "sekil": null,
-        "madde": [
-         1,
-         0
-        ]
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "hastalar doktora başvurmayabilir"
+         "metin": "Tedavi"
         }
        ]
       }
@@ -2119,25 +2380,21 @@
      "sayfa": 28,
      "cumleler": [
       {
-       "id": "k2-55-c0081",
-       "ses": "Özgül fobi ayırıcı tanısında panik bozukluk, agorafobi, sosyal anksiyete bozukluğu ve travma sonrası stres bozukluğu elenmelidir.",
-       "ekran": "**Ayırıcı Tanı:** Panik bozukluk, agorafobi ve sosyal fobi dışlanır.",
+       "id": "k2-55-c0111",
+       "ses": "Özgül fobi ayırıcı tanısında panik bozukluk, travma sonrası stres bozukluğu, obsesif kompulsif bozukluk ve hipokondriyazis yani hastalık kaygısı bozukluğu dışlanmalıdır.",
+       "ekran": "**Ayırıcı Tanı:** Panik bozukluk, travma sonrası stres bozukluğu, OKB ve hipokondriyazis ayrılmalıdır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 28,
         "satir": [
-         "panik bozukluğu,"
+         "Özgül Fobi- Ayırıcı Tanı"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         2
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Ayırıcı Tanı:"
+         "metin": "Ayırıcı Tanı"
         },
         {
          "metin": "Ayırıcı Tanı:",
@@ -2145,52 +2402,44 @@
         }
        ],
        "cikmis": [
-        "365430593b97"
+        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-19"
        ]
       },
       {
-       "id": "k2-55-c0082",
-       "ses": "Panik bozuklukta nöbetler beklenmedik anda gelirken özgül fobide anksiyete yalnızca fobik uyarana maruz kalındığında tetiklenir.",
-       "ekran": "Panikte kriz **beklenmedik anda gelir**, fobide uyarana bağlıdır.",
-       "duzey": 0,
-       "slayt": {
-        "sayfa": 28,
-        "satir": [
-         "Özgül Fobi- Ayırıcı Tanı"
-        ],
-        "sekil": null,
-        "madde": [
-         0,
-         1
-        ]
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "beklenmedik anda gelir"
-        }
-       ]
-      },
-      {
-       "id": "k2-55-c0083",
-       "ses": "Agorafobide kaçınma alanları çok geniş ve yardımsız kalma korkusuna bağlıyken, özgül fobide tek bir nesne korkusu vardır.",
-       "ekran": "Agorafobi **yaygın mekan kaçınması**, özgül fobi tekil odaktır.",
+       "id": "k2-55-c0112",
+       "ses": "Panik bozuklukta nöbetler tamamen öngörülemez ve kendiliğinden patlarken, özgül fobide anksiyete reaksiyonu yalnız ve ancak fobi kaynağı spesifik nesneyle karşılaşınca başlar.",
+       "ekran": "Panik bozuklukta nöbetler beklenmedik anlarda gelirken, fobi nöbeti **yalnızca fobik nesneyle** tetiklenir.",
        "duzey": 0,
        "slayt": {
         "sayfa": 28,
         "satir": [
          "panik bozukluğu,"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         3
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "yaygın mekan kaçınması"
+         "metin": "Panik"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0113",
+       "ses": "Travma sonrası stres bozukluğundaki kaçınmalar genel bir nesneye değil, hastanın bizzat maruz kaldığı kaza veya saldırı gibi yaşamsal travmanın anımsatıcılarına karşıdır.",
+       "ekran": "Travma sonrası stres bozukluğunda ise kaçınma **yaşanmış ağır bir travmanın** hatırlatıcılarına yöneliktir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "travma sonrası stres bozukluğu,"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Travma"
         }
        ]
       }
@@ -2201,71 +2450,59 @@
      "sayfa": 29,
      "cumleler": [
       {
-       "id": "k2-55-c0084",
-       "ses": "Özgül fobi tedavisinde ilaç tedavisinin etkinliği kanıtlanmamıştır ve farmakoterapi birinci basamakta önerilmez.",
-       "ekran": "**Tedavi İlkesi:** İlaç tedavisi etkisizdir, temel tedavi psikoterapidir.",
+       "id": "k2-55-c0114",
+       "ses": "Sınavlarda ve klinik pratikte çok önemli bir kural olarak özgül fobinin primer tedavisinde etkinliği bilimsel olarak kanıtlanmış hiçbir psikotropik ilaç bulunmamaktadır.",
+       "ekran": "**Özgül Fobide İlaç Tedavisi:** Bu bozukluğun tedavisinde etkinliği kanıtlanmış hiçbir psikotropik ilaç yoktur!",
        "duzey": 0,
        "slayt": {
         "sayfa": 29,
         "satir": [
          "Farmakoterapi: Özgül fobinin tedavisinde etkinliği kanıtlanmış"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         0
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Tedavi İlkesi:"
+         "metin": "Özgül Fobide İlaç Tedavisi"
         }
        ]
       },
       {
-       "id": "k2-55-c0085",
-       "ses": "Temel ve en etkili tedavi yöntemi bilişsel davranışçı terapi kapsamında uygulanan sistematik duyarsızlaştırma ve maruz bırakmadır.",
-       "ekran": "**Sistematik Duyarsızlaştırma:** Kademeli maruz bırakma en başarılı yöntemdir.",
+       "id": "k2-55-c0115",
+       "ses": "Özgül fobinin tartışmasız altın standart ve kesin tedavi yöntemi bilişsel davranışçı terapi ve hastanın korkulan nesneyle aşamalı olarak yüzleştirildiği maruz bırakma protokolüdür.",
+       "ekran": "**Psikoterapi:** Bilişsel davranışçı terapi ve aşamalı maruz bırakma altın standart tedavi yöntemidir.",
        "duzey": 0,
        "slayt": {
         "sayfa": 29,
         "satir": [
-         "Özgül Fobi-Tedavi"
+         "Bilişsel-davranışçı terapi"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         1
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Sistematik Duyarsızlaştırma:"
+         "metin": "Psikoterapi"
         }
        ]
       },
       {
-       "id": "k2-55-c0086",
-       "ses": "Kan enjeksiyon yara fobisinde ise senkopu önlemek için kas germe ve gerilme teknikleri başarıyla uygulanır.",
-       "ekran": "Kan fobisinde **kas germe teknikleri** senkopu önler.",
+       "id": "k2-55-c0116",
+       "ses": "Vazovagal senkop riski taşıyan kan ve iğne fobilerinde kan basıncının aniden çakılmasını engellemek için büyük kas gruplarının ritmik kasılmasını içeren uygulamalı kas germe öğretilir.",
+       "ekran": "Kan ve enjeksiyon fobisinde bayılmayı önlemek amacıyla **uygulamalı kas germe** tekniği uygulanır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 29,
         "satir": [
-         "Farmakoterapi: Özgül fobinin tedavisinde etkinliği kanıtlanmış"
+         "Psikoterapi:"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         0
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "kas germe teknikleri"
+         "metin": "uygulamalı kas germe"
         }
        ]
       }
@@ -2274,78 +2511,67 @@
    ]
   },
   {
-   "id": "k2-55-b08",
-   "baslik": "Sosyal Fobi ve Tedavi",
+   "id": "k2-55-b07",
+   "baslik": "Bölüm 7: Sosyal Fobi (Toplumsal Kaygı Bozukluğu)",
    "paragraflar": [
     {
      "id": "k2-55-p030",
      "sayfa": 30,
      "cumleler": [
       {
-       "id": "k2-55-c0087",
-       "ses": "Sosyal fobi diğer adıyla toplumsal kaygı bozukluğu, bireyin başkaları tarafından değerlendirilebileceği durumlardan duyduğu belirgin korkudur.",
-       "ekran": "**Sosyal Fobi:** Toplumsal durumlarda yargılanma ve eleştirilme korkusudur.",
+       "id": "k2-55-c0117",
+       "ses": "Sosyal fobi diğer adıyla toplumsal kaygı bozukluğu, bireyin yabancılarla karşılaşabileceği veya başkalarının dikkatli bakışlarına maruz kalacağı sosyal durumlardan belirgin dehşet duymasıdır.",
+       "ekran": "**Sosyal Fobi:** Yabancılarla teması ve dikkatle incelenmeyi içeren toplumsal durumlardan belirgin korkudur.",
        "duzey": 0,
        "slayt": {
         "sayfa": 30,
         "satir": [
          "Sosyal Fobi ( Toplumsal Kaygı"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         1
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Sosyal Fobi:"
+         "metin": "Sosyal Fobi"
         }
        ]
       },
       {
-       "id": "k2-55-c0088",
-       "ses": "Kişi küçük düşeceği, rezil olacağı ya da utanç duyacağı bir biçimde davranmaktan veya anksiyete belirtisi göstermekten korkar.",
-       "ekran": "Kişi **küçük düşme veya rezil olma** korkusu yaşar.",
+       "id": "k2-55-c0118",
+       "ses": "Hastalar topluluk önünde konuşurken, resmi toplantılarda veya yeni biriyle tanışırken ellerinin titreyeceği, seslerinin kısılacağı, rezil olup küçük duruma düşecekleri dehşeti yaşarlar.",
+       "ekran": "Bu kişiler toplumsal ortamlarda **küçük duruma düşmekten ve utanmaktan** aşırı derecede korkarlar.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "yeni insanlarla tanışma) utanmalarının korkusu içerisindedir."
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Bu"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0119",
+       "ses": "Korkulan durumlar yalnızca kürsüde sunum yapmaktan ibaret olmayıp restoranda başkalarının gözü önünde yemek yemek, bir form doldururken yazı yazmak gibi eylemleri de kapsar.",
+       "ekran": "Korkulan eylemler arasında **başkalarıyla yemek yemek** veya karşılıklı yazı yazmak gibi sıradan durumlar da bulunur.",
        "duzey": 0,
        "slayt": {
         "sayfa": 30,
         "satir": [
          "Bozukluğu)"
         ],
-        "sekil": null,
-        "madde": [
-         0
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "küçük düşme veya rezil olma"
-        }
-       ]
-      },
-      {
-       "id": "k2-55-c0089",
-       "ses": "Topluluk önünde konuşma, yemek yeme, yazı yazma veya yabancılarla tanışma gibi durumlar yoğun panik benzeri bunaltı doğurur.",
-       "ekran": "Topluluk önünde konuşma ve **sosyal etkileşimler** kriz yaratır.",
-       "duzey": 0,
-       "slayt": {
-        "sayfa": 30,
-        "satir": [
-         "Sosyal Fobi ( Toplumsal Kaygı"
-        ],
-        "sekil": null,
-        "madde": [
-         0,
-         1
-        ]
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "sosyal etkileşimler"
+         "metin": "Korkulan"
         }
        ]
       }
@@ -2356,70 +2582,59 @@
      "sayfa": 31,
      "cumleler": [
       {
-       "id": "k2-55-c0090",
-       "ses": "Sosyal fobi etiyolojisinde dopaminerjik sistemde duyarlılık azalması ve serotonin düzensizliği temel nörokimyasal bulgulardır.",
-       "ekran": "**Nörokimyasal Etkenler:** Dopamin ve serotonin işlev bozukluğudur.",
+       "id": "k2-55-c0120",
+       "ses": "Sosyal fobinin nörobiyolojisinde adrenerjik sistem hiperaktivitesi, artmış norepinefrin ve epinefrin salınımı ile periferik reseptörlerin aşırı duyarlılığı rol oynamaktadır.",
+       "ekran": "**Nörokimyasal Etiyoloji:** Performans fobisi olanlarda artmış norepinefrin ve epinefrin salınımı izlenir.",
        "duzey": 0,
        "slayt": {
         "sayfa": 31,
         "satir": [
          "Nörokimyasal Etkenler:"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         5
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Nörokimyasal Etkenler:"
+         "metin": "Nörokimyasal Etiyoloji"
         }
        ]
       },
       {
-       "id": "k2-55-c0091",
-       "ses": "Ayrıca erken çocukluk döneminde mizaç özelliği olarak görülen davranışsal ketlenme sosyal anksiyete için en güçlü biyolojik risk faktörüdür.",
-       "ekran": "Çocukluktaki **davranışsal ketlenme mizacı** riski belirgin artırır.",
+       "id": "k2-55-c0121",
+       "ses": "Sosyal ödül ve motivasyon devrelerini yöneten dopaminerjik yollardaki işlev bozukluğunun da sosyal kaygının kronikleşmesinde etkili olduğu gösterilmiştir.",
+       "ekran": "Ayrıca striatal ve mezokortikal devrelerde **dopaminerjik işlev bozukluğu** mevcuttur.",
        "duzey": 0,
        "slayt": {
         "sayfa": 31,
         "satir": [
-         "Sosyal Fobi- Etiyoloji"
+         "Ayrıca dopaminerjik işlev bozukluğu mevcuttur."
         ],
-        "sekil": null,
-        "madde": [
-         0
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "davranışsal ketlenme mizacı"
+         "metin": "dopaminerjik işlev bozukluğu"
         }
        ]
       },
       {
-       "id": "k2-55-c0092",
-       "ses": "Aile içi aşırı koruyucu veya reddedici ebeveyn tutumları da sosyal beceri gelişimini engelleyerek tabloyu pekiştirir.",
-       "ekran": "Aşırı koruyucu tutumlar **sosyal kaygıyı pekiştiren** faktörlerdir.",
+       "id": "k2-55-c0122",
+       "ses": "Aile ve ikiz çalışmaları sosyal fobisi bulunan bireylerin birinci derece akrabalarında toplumsal kaygı bozukluğu riskinin genel topluma göre üç kat arttığını ortaya koymaktadır.",
+       "ekran": "Genetik faktörler incelendiğinde hastaların **birinci derece akrabalarında üç kat fazla** risk saptanır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 31,
         "satir": [
-         "Nörokimyasal Etkenler:"
+         "Birinci derece akrabalarda 3 kat fazla risk mevcuttur."
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         5
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "sosyal kaygıyı pekiştiren"
+         "metin": "Genetik"
         }
        ]
       }
@@ -2430,71 +2645,78 @@
      "sayfa": 32,
      "cumleler": [
       {
-       "id": "k2-55-c0093",
-       "ses": "Bilişsel davranışçı kurama göre sosyal bir durumla karşılaşan birey otomatik olarak olumsuz değerlendirileceği inancını aktive eder.",
-       "ekran": "**Bilişsel Model:** Otomatik yetersizlik inançları ve içe odaklanmadır.",
+       "id": "k2-55-c0123",
+       "ses": "Sosyal fobinin bilişsel modeline göre kişi toplumsal bir ortama girdiğinde zihninde ne kadar sıkıcı ve yetersiz birisi olduğumu düşünecekler şeklinde otomatik inançlar devreye girer.",
+       "ekran": "**Bilişsel Davranışçı Kuram:** Sosyal ortama girince otomatik olumsuz düşünceler hızla aktive olur.",
        "duzey": 0,
        "slayt": {
         "sayfa": 32,
         "satir": [
-         "Sosyal Fobi- bilişsel davranışsal kuram"
+         "Otomatik düşüncelerin aktivasyonu"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         1
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Bilişsel Model:"
+         "metin": "Bilişsel Davranışçı Kuram"
         }
        ]
       },
       {
-       "id": "k2-55-c0094",
-       "ses": "Kişi dikkatini kendi bedenine yönelterek yüzünün kızardığını, sesinin titrediğini düşünür ve bu algı anksiyeteyi daha da tırmandırır.",
-       "ekran": "Kişi **kendi bedensel belirtilerine odaklanarak** kaygıyı büyütür.",
+       "id": "k2-55-c0124",
+       "ses": "Bu olumsuz düşünceler ortamı bir tehdit alanına dönüştürerek çarpıntı, takipne, terleme ve yüz kızarması ile giden sempatik otonomik alarmı ateşler.",
+       "ekran": "Birey ortamı doğrudan bir **sosyal tehlike alanı** olarak algılar ve sempatik kaç ya da savaş yanıtı patlar.",
        "duzey": 0,
        "slayt": {
         "sayfa": 32,
         "satir": [
-         "sosyal durum"
+         "Sosyal tehlike algısı"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         3
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "kendi bedensel belirtilerine odaklanarak"
+         "metin": "Birey"
         }
        ]
       },
       {
-       "id": "k2-55-c0095",
-       "ses": "Sonuçta güvenlik arayıcı davranışlar ve ortamdan kaçınma gelişerek sosyal işlevsellik tamamen felç olur.",
-       "ekran": "Güvenlik arayıcı **davranışlar ve kaçınma** tabloyu kalıcılaştırır.",
+       "id": "k2-55-c0125",
+       "ses": "Hasta dikkatini dış dünyaya ve sohbete vermek yerine tamamen kendi bedensel kusurlarına, kalp atışına ve ses tonuna odaklayarak dışarıdan ne kadar acınası göründüğünü kurgular.",
+       "ekran": "Dikkatin tamamen **kendine odaklanması** ve başkalarının gözüyle kendine bakış kaygıyı tırmandırır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 32,
         "satir": [
-         "Sosyal Fobi- bilişsel davranışsal kuram"
+         "Kendine odaklanma"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         8
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "davranışlar ve kaçınma"
+         "metin": "kendine odaklanma"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0126",
+       "ses": "Kaygıyı gizlemek amacıyla göz temasını kesme, bir köşeye saklanma veya suskun kalma gibi güvenlik sağlayıcı davranışlar hastanın performansını bozarak kısır döngüyü sürdürür.",
+       "ekran": "Göz temasından kaçınma ve sessiz kalma gibi **güvenlik sağlayıcı davranışlar** patolojiyi pekiştirir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Kaçınma ve güvenlik sağlayıcı davranışlar"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "güvenlik sağlayıcı davranışlar"
         }
        ]
       }
@@ -2505,87 +2727,98 @@
      "sayfa": 33,
      "cumleler": [
       {
-       "id": "k2-55-c0096",
-       "ses": "De se me beş tanı kriterlerine göre toplumsal etkileşimlerde, gözlenme durumlarında ve performans sergilerken belirgin kaygı duyulmalıdır.",
-       "ekran": "**DSM-5 Tanı Ölçütleri:** Sosyal etkileşim ve performans kaygısı aranır.",
+       "id": "k2-55-c0127",
+       "ses": "De se me beş kriterlerine göre bireyin başkaları tarafından değerlendirilme, eleştirilme veya gözlenme olasılığı bulunan toplumsal ortamlarda belirgin dehşet duyması şarttır.",
+       "ekran": "**DSM-5 Sosyal Fobi Kriterleri:** Başkalarınca değerlendirilebilecek toplumsal durumlarda belirgin korku duyulmalıdır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 33,
         "satir": [
-         "Sosyal Fobi- Tanı"
+         "A-Kişinin başkalarınca değerlendirilebilecek olduğu bir ya da birden çok toplumsal durumda belirgin bir korku ya da kaygı"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         2
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "DSM-5 Tanı Ölçütleri:"
+         "metin": "DSM-5 Sosyal Fobi Kriterleri"
         }
        ]
       },
       {
-       "id": "k2-55-c0097",
-       "ses": "Kişi olumsuz olarak değerlendirilecek bir biçimde davranmaktan ya da kaygı duyduğunun anlaşılmasından yoğun korku duyar.",
-       "ekran": "Temel korku **olumsuz değerlendirilmek ve yargılanmaktır**.",
+       "id": "k2-55-c0128",
+       "ses": "Hasta terleyerek, titreyerek veya kekeleyerek yetersizliğinin ortaya çıkmasından, rezil olmaktan, alay edilmekten ya da dışlanmaktan derin bir utançla korkar.",
+       "ekran": "Kişi olumsuz değerlendirilecek, **küçük düşecek veya başkalarını kıracak** biçimde davranmaktan korkar.",
        "duzey": 0,
        "slayt": {
         "sayfa": 33,
         "satir": [
-         "Sosyal Fobi- Tanı"
+         "B-Kişi, olumsuz olarak değerlendirilecek bir biçimde davranmaktan ya da kaygı duyduğuna ilişkin belirti göstermekten"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         2
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "olumsuz değerlendirilmek ve yargılanmaktır"
-        },
-        {
-         "metin": "olumsuz değerlendirilmek ve yargılanmaktır",
-         "tur": "cikmis"
+         "metin": "Kişi"
         }
-       ],
-       "cikmis": [
-        "past-1790877044882-168910"
        ]
       },
       {
-       "id": "k2-55-c0098",
-       "ses": "Korku, kaygı ve kaçınma en az altı ay sürmeli ve kişinin mesleki veya sosyal yaşamında belirgin bozulmaya yol açmalıdır.",
-       "ekran": "Korku ve kaçınma **en az altı ay boyunca** devam etmelidir.",
+       "id": "k2-55-c0129",
+       "ses": "Kişi toplantılardan, sunumlardan ve davetlerden bütünüyle kaçınır veya kaçamadığı zorunlu durumlara dayanılmaz bir içsel panik ve korku eşliğinde katlanır.",
+       "ekran": "Söz konusu sosyal ortamlardan etkin biçimde kaçınılır ya da **yoğun korku ile katlanılır**.",
        "duzey": 0,
        "slayt": {
         "sayfa": 33,
         "satir": [
-         "Sosyal Fobi- Tanı"
+         "D- Söz konusu toplumsal durumdan kaçınılır ya da yoğun bir korku ya da kaygı ile buna katlanılır."
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         2
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "en az altı ay boyunca"
-        },
-        {
-         "metin": "en az altı ay boyunca",
-         "tur": "cikmis"
+         "metin": "Söz"
         }
-       ],
-       "cikmis": [
-        "d3-k2-psi-002",
-        "d3-k2-psi-008"
+       ]
+      },
+      {
+       "id": "k2-55-c0130",
+       "ses": "Tanı konabilmesi için fobik kaçınmaların süreğen olması, en az altı ay devam etmesi ve hastanın okul, iş veya arkadaşlık ilişkilerinde belirgin çöküşe yol açması şarttır.",
+       "ekran": "Tanı için korku ve kaçınmanın sürekli olması, **en az altı ay sürmesi** ve belirgin işlev kaybı yapması gerekir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "F-Korku, kaygı ya da kaçınma sürekli bir durumdur, altı ay ya da daha uzun sürer."
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "en az altı ay"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0131",
+       "ses": "Dışlama kriterleri uyarınca sosyal çekiniklik bir maddeye, panik nöbetlerine ya da Parkinson veya yüzde yanık izi gibi organik biçim bozukluklarının yarattığı sıkıntıya bağlanamamalıdır.",
+       "ekran": "Korku bir maddenin etkisine, panik bozukluğa ya da **Parkinson veya yanık** gibi organik bir duruma bağlanamaz.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "rganik bir hastalığa örn parkinson,yanık gibi bir nedenden kaynaklanan biçimsel bozukluğa bağlanamaz."
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Korku"
+        }
        ]
       }
      ]
@@ -2595,71 +2828,59 @@
      "sayfa": 34,
      "cumleler": [
       {
-       "id": "k2-55-c0099",
-       "ses": "Sosyal fobide klinik belirtiler çarpıntı, titreme, yüz kızarması, kas gerginliği ve terleme gibi somatik bulguları içerir.",
-       "ekran": "**Klinik Belirtiler:** Yüz kızarması, el titremesi ve taşikardidir.",
+       "id": "k2-55-c0132",
+       "ses": "Klinik pratikte eğer hasta hem konuşmaktan hem yemekten hem de yabancılarla tanışmaktan kaçınıyorsa bu tabloya yaygın tip sosyal fobi adı verilir.",
+       "ekran": "**Klinik Tipler:** Birçok sosyal durumdan korkan olgularda **yaygın tip sosyal fobi** tanımlanır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 34,
         "satir": [
-         "Sosyal Fobi- Klinik Özellikler"
+         "Bir çok sosyal durumdan korkan sosyal fobi hastalarında yaygın tipte sosyal fobi olduğu düşünülür."
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         8
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Klinik Belirtiler:"
+         "metin": "yaygın tip sosyal fobi"
         }
        ]
       },
       {
-       "id": "k2-55-c0100",
-       "ses": "Özellikle yüz kızarması sosyal anksiyete bozukluğuna en özgül ve hastayı en çok rahatsız eden sempatik bulgudur.",
-       "ekran": "**Yüz kızarması bulgusu** sosyal fobi için karakteristik yakınmadır.",
+       "id": "k2-55-c0133",
+       "ses": "Yaygın tip sosyal fobi olgularının çok büyük bir kısmı yaşam boyu süregiden ve derin bir aşağılık kompleksi içeren çekingen kişilik bozukluğu ile iç içe geçmiştir.",
+       "ekran": "Yaygın tip sosyal fobi klinik pratikte çoğunlukla **çekingen kişilik bozukluğu** ile birlikte görülür.",
        "duzey": 0,
        "slayt": {
         "sayfa": 34,
         "satir": [
-         "Sosyal Fobi- Klinik Özellikler"
+         "genellikle çekingen kişilik bozukluğu ile birlikte görülmektedir."
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         10
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Yüz kızarması bulgusu"
+         "metin": "Yaygın"
         }
        ]
       },
       {
-       "id": "k2-55-c0101",
-       "ses": "Hasta dikkatini sürekli diğer insanların yüz ifadelerine odaklayarak kendisinde bir kusur arandığına dair yanlış ipuçları toplar.",
-       "ekran": "Hasta çevresinde **eleştirel ipuçları arayan** hipervijilans sergiler.",
+       "id": "k2-55-c0134",
+       "ses": "Eşlik eden psikiyatrik komorbiditeler incelendiğinde depresif bozukluklar, diğer anksiyete tabloları, kaygıyı baskılamak için sığınılan alkol bağımlılığı ve bulimia nervoza başı çeker.",
+       "ekran": "Sosyal fobiye en sık **diğer anksiyete bozuklukları, depresyon**, alkol bağımlılığı ve bulimia nervoza eşlik eder.",
        "duzey": 0,
        "slayt": {
         "sayfa": 34,
         "satir": [
-         "Sosyal Fobi- Klinik Özellikler"
+         "Sosyal fobiye eşlik eden ruhsal hastalıkları; diğer anksiyete bozuklukları, duygudurum bozuklukları,"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         8
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "eleştirel ipuçları arayan"
+         "metin": "Sosyal"
         }
        ]
       }
@@ -2670,80 +2891,76 @@
      "sayfa": 35,
      "cumleler": [
       {
-       "id": "k2-55-c0102",
-       "ses": "Sosyal fobi ayırıcı tanısında agorafobi, panik bozukluk, çekingen kişilik bozukluğu ve beden dismorfik bozukluğu elenmelidir.",
-       "ekran": "**Ayırıcı Tanı:** Agorafobi ve çekingen kişilik bozukluğu dışlanır.",
+       "id": "k2-55-c0135",
+       "ses": "Ayırıcı tanıda agorafobi, panik bozukluk, majör depresyon, çekingen kişilik bozukluğu ve şizoid kişilik bozukluğu dikkatle ayrıştırılmalıdır.",
+       "ekran": "**Sosyal Fobide Ayırıcı Tanı:** Agorafobi, panik bozukluk, çekingen ve şizoid kişilik bozuklukları ayrılmalıdır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Sosyal Fobi- Ayırıcı Tanı"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Sosyal Fobide Ayırıcı Tanı"
+        },
+        {
+         "metin": "Sosyal Fobide Ayırıcı Tanı:",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "past-1790877044869-84754",
+        "bea2e4416c65",
+        "365430593b97"
+       ]
+      },
+      {
+       "id": "k2-55-c0136",
+       "ses": "Klinik ayrımdaki en zarif kural şudur: Agorafobide hasta fenalaştığında ortamdan kaçamayacağından ve yardım bulamayacağından korkarken, sosyal fobide insanların gözünde rezil olmaktan korkar.",
+       "ekran": "Agorafobide temel korku **panik anında yardım alamamaktır**; sosyal fobide ise temel korku **rezil olmaktır**.",
        "duzey": 0,
        "slayt": {
         "sayfa": 35,
         "satir": [
          "Agorafobi"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         0
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Ayırıcı Tanı:"
+         "metin": "Agorafobide"
         }
        ]
       },
       {
-       "id": "k2-55-c0103",
-       "ses": "Çekingen kişilik bozukluğu çok daha yaygın, erken başlangıçlı ve benlikle kaynaşık bir yetersizlik duygusu ile seyreder.",
-       "ekran": "Çekingen kişilik **benlikle kaynaşık yaygın** yetersizlik tablosudur.",
+       "id": "k2-55-c0137",
+       "ses": "Şizoid kişilik bozukluğundaki birey insan ilişkilerine karşı tamamen kayıtsızdır ve sosyalleşmeyi istemez; oysa sosyal fobik birey insanlarla yakın bağ kurmayı çok ister ama utanç ve korkusu nedeniyle yaklaşamaz.",
+       "ekran": "Şizoid kişilik bozukluğunda hasta **sosyal ilişki kurmak istemez**; sosyal fobide ise hasta ilişki ister ama korkar.",
        "duzey": 0,
        "slayt": {
         "sayfa": 35,
         "satir": [
-         "Çekingen KB"
+         "Şizoid KB"
         ],
-        "sekil": null,
-        "madde": [
-         3,
-         2
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "benlikle kaynaşık yaygın"
+         "metin": "Şizoid"
         },
         {
-         "metin": "benlikle kaynaşık yaygın",
+         "metin": "sosyal ilişki kurmak istemez",
          "tur": "cikmis"
         }
        ],
        "cikmis": [
-        "d3-k2-psi-005",
-        "bea2e4416c65"
-       ]
-      },
-      {
-       "id": "k2-55-c0104",
-       "ses": "Panik bozuklukta ise korku sosyal ortamlarda eleştirilmek değil doğrudan nöbetin ölümcül bedensel sonuçlarıdır.",
-       "ekran": "Panikte odak **bedensel ölüm korkusu**, sosyal fobide eleştirilmektir.",
-       "duzey": 0,
-       "slayt": {
-        "sayfa": 35,
-        "satir": [
-         "Panik Bozukluk"
-        ],
-        "sekil": null,
-        "madde": [
-         2,
-         4
-        ]
-       },
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "bedensel ölüm korkusu"
-        }
+        "q-25-26_d_nem_3_kurul_2-75"
        ]
       }
      ]
@@ -2753,146 +2970,147 @@
      "sayfa": 36,
      "cumleler": [
       {
-       "id": "k2-55-c0105",
-       "ses": "Sosyal fobi genellikle erken ergenlik döneminde başlayan ve tedavi edilmediğinde ömür boyu kronik seyir gösteren bir rahatsızlıktır.",
-       "ekran": "**Klinik Seyir:** Erken ergenlikte başlar ve kronik seyirlidir.",
+       "id": "k2-55-c0138",
+       "ses": "Sosyal fobi tedavi edilmediği takdirde bireyin kariyerini, evliliğini ve akademik başarısını derinden baltalayan ömür boyu kronik seyirli bir tablodur.",
+       "ekran": "**Gidiş ve Sonlanış:** Sosyal fobi erken yaşta başlayan ve ömür boyu işlevselliği kısıtlayan kronik bir hastalıktır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 36,
         "satir": [
          "Sosyal fobi kronik seyir gösteren bir rahatsızlıktır."
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         0
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Klinik Seyir:"
+         "metin": "Gidiş ve Sonlanış"
         }
        ]
       },
       {
-       "id": "k2-55-c0106",
-       "ses": "Hastalık kişinin eğitim başarısını, kariyer hedeflerini, evlilik ve arkadaşlık ilişkilerini ileri düzeyde olumsuz etkiler.",
-       "ekran": "Hastalık **kariyer ve evlilik başarısını** ileri düzeyde sınırlar.",
+       "id": "k2-55-c0139",
+       "ses": "Klinik araştırmalarda kötü gidiş göstergeleri hastalığın on bir yaşından önce erken patlaması, ek psikiyatrik tanıların bulunması ve düşük sosyoekonomik eğitim düzeyidir.",
+       "ekran": "Kötü prognoz ölçütleri bozukluğun **on bir yaşından önce başlaması** ve ek psikiyatrik hastalığın bulunmasıdır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 36,
         "satir": [
-         "Sosyal fobi kronik seyir gösteren bir rahatsızlıktır."
+         "açmaktadır."
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         0
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "kariyer ve evlilik başarısını"
+         "metin": "Kötü"
         }
        ]
       },
       {
-       "id": "k2-55-c0107",
-       "ses": "Hastaların önemli bir kısmında sosyal kaygıyı bastırmak amacıyla sekonder alkol kötüye kullanımı ve majör depresyon gelişir.",
-       "ekran": "Sosyal fobide **sekonder alkol bağımlılığı** riski çok yüksektir.",
+       "id": "k2-55-c0140",
+       "ses": "Sağaltım uygulanmayan hastalarda üniversiteyi bırakma, meslek edinememe, işsiz kalma ve yapayalnız bir hayata mahkum olma riski son derece yüksektir.",
+       "ekran": "Tedavi edilmeyen olgularda **kronik işsizlik ve yalnızlık** yaşam boyu kaçınılmaz hale gelmektedir.",
        "duzey": 0,
        "slayt": {
         "sayfa": 36,
         "satir": [
-         "Sosyal Fobi- Gidiş ve Sonlanış"
+         "Hastalık yaşamın bir çok alanında önemli işlev kayıplarına yol"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         1
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "sekonder alkol bağımlılığı"
+         "metin": "Tedavi"
         }
        ]
       }
      ]
-    },
+    }
+   ]
+  },
+  {
+   "id": "k2-55-b08",
+   "baslik": "Bölüm 8: Fobik Bozukluklarda Tedavi ve Psikoterapi Modaliteleri",
+   "paragraflar": [
     {
      "id": "k2-55-p037",
      "sayfa": 37,
      "cumleler": [
       {
-       "id": "k2-55-c0108",
-       "ses": "Sosyal fobi farmakoterapisinde birinci basamakta seçici serotonin gerialım inhibitörleri ve venlafaksin yer alır.",
-       "ekran": "**Farmakoterapi:** es es er ı ve venlafaksin birinci basamak ilaçlardır.",
+       "id": "k2-55-c0141",
+       "ses": "Yaygın tip sosyal fobinin farmakolojik tedavisinde ilk basamak tercih seçici serotonin geri alım inhibitörleri olan essitalopram, fluoksetin, sertralin ve paroksetindir.",
+       "ekran": "**Sosyal Fobide Farmakoterapi:** Yaygın tipte birinci basamak tedavi seçici serotonin geri alım inhibitörleridir.",
        "duzey": 0,
        "slayt": {
         "sayfa": 37,
         "satir": [
-         "Farmakoterapi:"
+         "seçici serotonin geri alım inhibitörleri-SSGI(essitalopram, fluoksetin, fluvoksamin,"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         2
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Farmakoterapi:"
+         "metin": "Sosyal Fobide Farmakoterapi"
         }
        ]
       },
       {
-       "id": "k2-55-c0109",
-       "ses": "Yalnızca performans durumlarıyla sınırlı olan olgularda performans öncesinde kullanılan beta blokerler sempatik belirtileri başarıyla baskılar.",
-       "ekran": "**Performans Anksiyetesi:** Beta blokerler taşikardi ve titremeyi önler.",
+       "id": "k2-55-c0142",
+       "ses": "İkinci basamak farmakoterapide venlafaksin gibi ajanlar ile tersinir bir monoamino oksidaz a inhibitörü olan moklobemid yüksek klinik etkinlikle tercih edilebilir.",
+       "ekran": "Ayrıca serotonin noradrenalin geri alım inhibitörü **venlafaksin** ve MAO-A inhibitörü **moklobemid** kullanılır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 37,
         "satir": [
-         "Sosyal Fobi- Tedavi"
+         "moklobemid,"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         8
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Performans Anksiyetesi:"
+         "metin": "Ayrıca"
         }
        ]
       },
       {
-       "id": "k2-55-c0110",
-       "ses": "İlaç tedavisinin tam terapötik doza ulaşıldıktan sonra en az bir yıl boyunca sürdürülmesi nüksleri önlemek için esastır.",
-       "ekran": "Farmakoterapi **en az bir yıl boyunca** sürdürülmelidir.",
+       "id": "k2-55-c0143",
+       "ses": "Klinik sınavlarda ve amfi derslerinde önemle vurgulandığı üzere: Yalnızca topluluk önünde konuşma veya müzik dinletisi gibi kısıtlı performans anksiyetesi olan olgularda eylemden kırk beş dakika önce alınan propranolol gibi beta blokerler taşikardi ve el titremesini önlemede son derece etkilidir.",
+       "ekran": "Klinik sınavlarda ve amfi derslerinde önemle vurgulandığı üzere: **Performans kaygısında durumsal beta blokerler** kullanılır!",
        "duzey": 0,
        "slayt": {
         "sayfa": 37,
         "satir": [
-         "Farmakoterapi:"
+         "α-adrenerjik blokerler (performans anksiyetesi olan hastalarda)"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         0
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "en az bir yıl boyunca"
+         "metin": "beta blokerler"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0144",
+       "ses": "Farmakolojik kontrol sağlandıktan sonra nükslerin kalıcı olarak engellenmesi için hastanın mutlaka bilişsel davranışçı terapi sürecinden geçirilmesi gerekir.",
+       "ekran": "İlaç tedavisinin yanı sıra **bilişsel davranışçı terapi** sosyal fobinin kalıcı tedavisinde vazgeçilmezdir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Bilişsel-davranışçı tedavi"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "İlaç"
         }
        ]
       }
@@ -2903,71 +3121,97 @@
      "sayfa": 38,
      "cumleler": [
       {
-       "id": "k2-55-c0111",
-       "ses": "Fobik bozuklukların tedavisinde bilişsel davranışçı terapi en etkili ve kalıcı terapi yaklaşımıdır.",
-       "ekran": "**Bilişsel Davranışçı Terapi:** Fobilerde en etkili ve kalıcı yöntemdir.",
+       "id": "k2-55-c0145",
+       "ses": "Tüm fobik bozuklukların tedavisinde hem özgül hem sosyal fobide uzun vadeli başarısı kanıtlanmış en güçlü yaklaşım bilişsel davranışçı terapidir.",
+       "ekran": "**Psikoterapi Teknikleri:** Fobik bozuklukların tedavisinde bilişsel davranışçı terapiler en etkili yaklaşımdır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 38,
         "satir": [
          "Fobik bozuklukların tedavisinde bilişsel-davranışçı terapiler en etkili terapilerdir."
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         1
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Bilişsel Davranışçı Terapi:"
+         "metin": "Psikoterapi Teknikleri"
         }
        ]
       },
       {
-       "id": "k2-55-c0112",
-       "ses": "Tedavide giderek artan oranda fobik uyarana veya sosyal duruma maruz kalınması yani ekspojur sağlanır.",
-       "ekran": "**Kademeli Maruz Bırakma:** Fobik uyaranla aşamalı yüzleşme sağlanır.",
+       "id": "k2-55-c0146",
+       "ses": "Korku hiyerarşisinde en hafif basamaktan başlanarak hastanın korkulan nesneyle kontrollü ve kademeli biçimde yüzleştirilmesine maruz bırakma ve sistematik desensitizasyon adı verilir.",
+       "ekran": "Fobik nesneye aşamalı olarak maruz bırakma yani **sistematik desensitizasyon** ile duyarsızlaşma sağlanır.",
        "duzey": 0,
        "slayt": {
         "sayfa": 38,
         "satir": [
-         "Giderek artan oranda fobik obje ya da duruma"
+         "Böylece fobik uyarana karşı duyarsızlaşma olur(sistematik desentisizasyon). Diğer"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         0
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "Kademeli Maruz Bırakma:"
+         "metin": "sistematik desensitizasyon"
         }
        ]
       },
       {
-       "id": "k2-55-c0113",
-       "ses": "Sosyal beceri eğitimi, grup terapisi ve maruz bırakma egzersizleri ile hastanın kaçınma davranışları tamamen söndürülür.",
-       "ekran": "Sosyal beceri ve **grup terapisi ile kaçınmalar** tamamen aşılır.",
+       "id": "k2-55-c0147",
+       "ses": "Kademeli alıştırma yerine hastanın tolere edebildiği en son noktadaki yoğun fobik uyaranla aniden karşılaştırılıp kaygı sönene dek tutulması yöntemine ise taşırma yani flooding adı verilir.",
+       "ekran": "Hastanın doğrudan en yüksek korku uyaranıyla yüzleştirilip beklenmesine ise **taşırma yani flooding** denir.",
        "duzey": 0,
        "slayt": {
         "sayfa": 38,
         "satir": [
-         "Giderek artan oranda fobik obje ya da duruma"
+         "şey hissedemeyeceği noktaya kadar fobik uyaranla karşılaştırılmasıdır(flooding)."
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         3
-        ]
+        "sekil": null
        },
        "vurgu": [
         {
          "tur": "terim",
-         "metin": "grup terapisi ile kaçınmalar"
+         "metin": "Hastanın"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0148",
+       "ses": "Sosyal fobiye özel olarak maruz bırakmanın yanına göz teması kurma ve sohbete başlama gibi sosyal beceri eğitimleri ile yetersiz benlik algısını düzelten bilişsel yeniden yapılanma eklenir.",
+       "ekran": "Sosyal fobide maruziyetin yanı sıra **sosyal beceri eğitimi** ve bilişsel yeniden yapılanma uygulanır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Sosyal fobide, maruz bırakılma yönteminin yanı sıra sosyal beceri eğitimi ve bilişsel"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "sosyal beceri eğitimi"
+        }
+       ]
+      },
+      {
+       "id": "k2-55-c0149",
+       "ses": "Böylece panik bozukluk ve fobik bozukluklar dersimizi tamamlarken doğru tanısal ayrımın, erken psikoeğitimin ve hedefe yönelik tedavinin hastanın yaşam kalitesini eksiksiz geri kazandırdığını bir kez daha vurguluyoruz.",
+       "ekran": "Dersimizi tamamlarken anksiyete bozukluklarında doğru tanı, **erken maruz bırakma ve hedefe yönelik sağaltımın** hastanın hayatını geri kazandırdığını unutmuyoruz.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "yeniden yapılanma teknikleri de kullanılır. Bilişsel yeniden yapılanma; başkaları"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Dersimizi"
         }
        ]
       }

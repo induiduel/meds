@@ -1,82 +1,12 @@
 {
  "surum": 1,
- "metinHash": "7139dc523c079ab5f9ee2262ff0c6ac6cfc1f7c8",
- "p": {
-  "6": {
-   "2": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Monitor: Tütün kullanımını izle",
-      "Protect: Toplumu dumanından koru",
-      "Offer: Bırakmaya yardım et",
-      "Warn: Zararları konusunda uyar"
-     ],
-     "baslik": "Tütün Kontrolü Stratejileri",
-     "s": 7,
-     "k": [
-      0,
-      39
-     ],
-     "tip": "liste",
-     "konum": [
-      0.03,
-      1.015
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.485,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.5197,
-     "ek_renk": "#f7c895"
-    }
-   ]
-  },
-  "11": {
-   "2": [
-    {
-     "tur": "sema",
-     "sablon": "neden_sonuc",
-     "sablon_ad": "Neden → sonuç",
-     "duzen": "zincir",
-     "bag": "yol açar",
-     "ogeler": [
-      "Precontemplation: Bırakmanın düşünülmediği evre",
-      "Contemplation: Bırakmanın düşünüldüğü evre",
-      "Preparation: Hazırlığın yapıldığı evre",
-      "Action: Denemenin başladığı evre"
-     ],
-     "baslik": "Transteoretik Değişim Evreleri",
-     "s": 12,
-     "k": [
-      0,
-      52
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.05,
-      1.015
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.735,
-     "yon": "dikey",
-     "olcek": 1.0,
-     "ek_alt": 0.7703,
-     "ek_renk": "#f8b769"
-    }
-   ]
-  }
- },
+ "metinHash": "bc7f63d495cc56581af5bc3b9bc08f0148aeb230",
+ "p": {},
  "rapor": {
   "aday": 8,
-  "gecti": 2,
+  "gecti": 0,
   "ret": {
-   "resim sayfasında panel (H51)": 6
+   "resim sayfasında panel (H51)": 8
   }
  }
 }

@@ -36,10 +36,7 @@
         "satir": [
          "BAŞAĞRISI"
         ],
-        "sekil": null,
-        "madde": [
-         0
-        ]
+        "sekil": null
        }
       },
       {
@@ -61,10 +58,7 @@
         "satir": [
          "Dr. İrfan Yavaş"
         ],
-        "sekil": null,
-        "madde": [
-         1
-        ]
+        "sekil": null
        }
       },
       {
@@ -85,7 +79,13 @@
        "slayt_adim": "k2-10-d-s01",
        "cikmis": [],
        "spot": null,
-       "slayt": null
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "BAŞAĞRISI"
+        ],
+        "sekil": null
+       }
       },
       {
        "id": "k2-10-c0004",
@@ -101,7 +101,13 @@
        "slayt_adim": "k2-10-d-s01",
        "cikmis": [],
        "spot": null,
-       "slayt": null
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "BAŞAĞRISI"
+        ],
+        "sekil": null
+       }
       }
      ]
     }
@@ -139,10 +145,7 @@
         "satir": [
          "• Hekimlik hayatında en sık karşılaşılan yakınma"
         ],
-        "sekil": null,
-        "madde": [
-         0
-        ]
+        "sekil": null
        }
       },
       {
@@ -169,11 +172,7 @@
          "• Ömür boyu en az bir kez başağrısı yaşayan kişi",
          "oranı E %93 K %99"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         2
-        ]
+        "sekil": null
        }
       },
       {
@@ -191,9 +190,11 @@
        "cikmis": [],
        "spot": null,
        "slayt": {
-        "madde": [
-         2
-        ]
+        "sayfa": 2,
+        "satir": [
+         "• Ömür boyu en az bir kez başağrısı yaşayan kişi"
+        ],
+        "sekil": null
        }
       },
       {
@@ -211,9 +212,11 @@
        "cikmis": [],
        "spot": null,
        "slayt": {
-        "madde": [
-         1
-        ]
+        "sayfa": 2,
+        "satir": [
+         "oranı E %93 K %99"
+        ],
+        "sekil": null
        }
       }
      ]
@@ -243,11 +246,7 @@
          "• Hastaların çoğu altta yatan ciddi bir sorunun",
          "belirtisi olduğundan korkar. Fakat çoğu iyi"
         ],
-        "sekil": null,
-        "madde": [
-         3,
-         4
-        ]
+        "sekil": null
        }
       },
       {
@@ -269,10 +268,7 @@
         "satir": [
          "seyirlidir."
         ],
-        "sekil": null,
-        "madde": [
-         4
-        ]
+        "sekil": null
        }
       },
       {
@@ -289,7 +285,13 @@
        "slayt_adim": "k2-10-d-s02",
        "cikmis": [],
        "spot": null,
-       "slayt": null
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "• Hastaların çoğu altta yatan ciddi bir sorunun"
+        ],
+        "sekil": null
+       }
       },
       {
        "id": "k2-10-c0012",
@@ -306,9 +308,11 @@
        "cikmis": [],
        "spot": null,
        "slayt": {
-        "madde": [
-         3
-        ]
+        "sayfa": 2,
+        "satir": [
+         "belirtisi olduğundan korkar. Fakat çoğu iyi"
+        ],
+        "sekil": null
        }
       }
      ]
@@ -349,11 +353,7 @@
          "Headache Society) sınıflaması. 1988-2004-",
          "2013."
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         1
-        ]
+        "sekil": null
        }
       },
       {
@@ -383,11 +383,7 @@
         "satir": [
          "• ICHD 3 ana başlıkları ile"
         ],
-        "sekil": null,
-        "madde": [
-         2,
-         6
-        ]
+        "sekil": null
        }
       },
       {
@@ -404,7 +400,13 @@
        "slayt_adim": "k2-10-d-s03",
        "cikmis": [],
        "spot": null,
-       "slayt": null
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "• Genel kabul gören sınıflama IHS (Internatiınal"
+        ],
+        "sekil": null
+       }
       },
       {
        "id": "k2-10-c0016",
@@ -421,9 +423,11 @@
        "cikmis": [],
        "spot": null,
        "slayt": {
-        "madde": [
-         0
-        ]
+        "sayfa": 3,
+        "satir": [
+         "• ICHD 3 ana başlıkları ile"
+        ],
+        "sekil": null
        }
       }
      ]
@@ -454,11 +458,7 @@
         "satir": [
          "    A – Primer başağrıları:"
         ],
-        "sekil": null,
-        "madde": [
-         3,
-         7
-        ]
+        "sekil": null
        }
       },
       {
@@ -487,11 +487,7 @@
          "    1. Migren",
          "    2. Gerilim tipi başağrısı"
         ],
-        "sekil": null,
-        "madde": [
-         5,
-         4
-        ]
+        "sekil": null
        }
       },
       {
@@ -521,11 +517,7 @@
          "    3. Trigeminal otonomik başağrısı",
          "    4. Diğer primer başağrısı sendromları"
         ],
-        "sekil": null,
-        "madde": [
-         7,
-         6
-        ]
+        "sekil": null
        }
       },
       {
@@ -553,11 +545,7 @@
         "satir": [
          "    3. Trigeminal otonomik başağrısı"
         ],
-        "sekil": null,
-        "madde": [
-         6,
-         3
-        ]
+        "sekil": null
        }
       },
       {
@@ -577,10 +565,11 @@
        ],
        "spot": null,
        "slayt": {
-        "madde": [
-         5,
-         6
-        ]
+        "sayfa": 3,
+        "satir": [
+         "A – Primer başağrıları:"
+        ],
+        "sekil": null
        }
       }
      ]
@@ -619,11 +608,7 @@
         "satir": [
          "• B- Sekonder başağrıları"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         3
-        ]
+        "sekil": null
        }
       },
       {
@@ -645,11 +630,7 @@
         "satir": [
          "    5. Baş ve boyun travmasına bağlı başağrısı"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         5
-        ]
+        "sekil": null
        }
       },
       {
@@ -678,11 +659,7 @@
          "    6. Kraniyal veya servikal damarsal bozukluklara bağlı",
          "başağrısı"
         ],
-        "sekil": null,
-        "madde": [
-         2,
-         10
-        ]
+        "sekil": null
        }
       },
       {
@@ -711,11 +688,7 @@
          "      7. Damarsal olmayan intrakraniyal bozukluklara",
          "bağlı başağrısı"
         ],
-        "sekil": null,
-        "madde": [
-         4,
-         2
-        ]
+        "sekil": null
        }
       }
      ]
@@ -749,11 +722,7 @@
          "      8. Madde kullanımı veya kesilmesine bağlı başağrısı",
          "      9. Enfeksiyona bağlı başağrısı"
         ],
-        "sekil": null,
-        "madde": [
-         6,
-         7
-        ]
+        "sekil": null
        }
       },
       {
@@ -775,11 +744,7 @@
         "satir": [
          "      10. Homeostaz bozukluğuna bağlı başağrısı"
         ],
-        "sekil": null,
-        "madde": [
-         8,
-         11
-        ]
+        "sekil": null
        }
       },
       {
@@ -803,11 +768,7 @@
          "ağız ya da diğer yüz veya kraniyal yapıların",
          "bozukluklarına bağlı başağrısı ya da yüz ağrısı"
         ],
-        "sekil": null,
-        "madde": [
-         10,
-         9
-        ]
+        "sekil": null
        }
       },
       {
@@ -829,11 +790,7 @@
         "satir": [
          "      12. Psikiyatrik bozukluklara bağlı başağrısı"
         ],
-        "sekil": null,
-        "madde": [
-         11,
-         8
-        ]
+        "sekil": null
        }
       }
      ]
@@ -873,11 +830,7 @@
          "• C- Ağrılı kraniyal nöropatiler, diğer yüz ağrıları",
          "ve diğer başağrıları"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         2
-        ]
+        "sekil": null
        }
       },
       {
@@ -901,11 +854,7 @@
          "      14. Diğer başağrısı bozuklukları",
          "( sınıflandırılamayan )"
         ],
-        "sekil": null,
-        "madde": [
-         2,
-         0
-        ]
+        "sekil": null
        }
       },
       {
@@ -922,7 +871,13 @@
        "slayt_adim": "k2-10-d-s05",
        "cikmis": [],
        "spot": null,
-       "slayt": null
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "13. Ağrılı kraniyal nöropatiler ve diğer yüz ağrıları"
+        ],
+        "sekil": null
+       }
       },
       {
        "id": "k2-10-c0033",
@@ -938,7 +893,13 @@
        "slayt_adim": "k2-10-d-s05",
        "cikmis": [],
        "spot": null,
-       "slayt": null
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "14. Diğer başağrısı bozuklukları"
+        ],
+        "sekil": null
+       }
       }
      ]
     },
@@ -967,11 +928,7 @@
          "Primer başağrıları bizzat kendisi bir hastalık, yaşamı",
          "tehdit etmez"
         ],
-        "sekil": null,
-        "madde": [
-         5,
-         10
-        ]
+        "sekil": null
        }
       },
       {
@@ -994,11 +951,7 @@
          "Genellikle tanı için ileri tetkik gerekmez, çoğunlukla",
          "tedavi ve önerilerle kontrol altına alınabilir."
         ],
-        "sekil": null,
-        "madde": [
-         6,
-         7
-        ]
+        "sekil": null
        }
       },
       {
@@ -1021,11 +974,7 @@
          "Sekonder başağrıları bir semptom, altta yatan bir başka",
          "hastalık."
         ],
-        "sekil": null,
-        "madde": [
-         8,
-         5
-        ]
+        "sekil": null
        }
       },
       {
@@ -1053,11 +1002,7 @@
          "İvedi davranılması gerekir.",
          "İleri inceleme gerekir"
         ],
-        "sekil": null,
-        "madde": [
-         10,
-         11
-        ]
+        "sekil": null
        }
       }
      ]
@@ -1099,11 +1044,7 @@
          "TANISAL YAKLAŞIM",
          "    Anamnez tanının temelini oluşturur."
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         0
-        ]
+        "sekil": null
        }
       },
       {
@@ -1127,11 +1068,7 @@
          "almak primer , sekonder ayrımında ve gereksiz",
          "tetkiklerden kaçınmada faydalı"
         ],
-        "sekil": null,
-        "madde": [
-         3,
-         2
-        ]
+        "sekil": null
        }
       },
       {
@@ -1152,10 +1089,11 @@
        ],
        "spot": null,
        "slayt": {
-        "madde": [
-         0,
-         1
-        ]
+        "sayfa": 6,
+        "satir": [
+         "• Hastaya yeterli zaman ayrıp iyi bir anamnez"
+        ],
+        "sekil": null
        }
       },
       {
@@ -1173,10 +1111,11 @@
        "cikmis": [],
        "spot": null,
        "slayt": {
-        "madde": [
-         2,
-         1
-        ]
+        "sayfa": 6,
+        "satir": [
+         "almak primer , sekonder ayrımında ve gereksiz"
+        ],
+        "sekil": null
        }
       }
      ]
@@ -1206,11 +1145,7 @@
          "• Primer başağrılarında çoğunlukla tıbbi ve",
          "nörolojik muayene normal"
         ],
-        "sekil": null,
-        "madde": [
-         4,
-         5
-        ]
+        "sekil": null
        }
       },
       {
@@ -1228,10 +1163,11 @@
        "cikmis": [],
        "spot": null,
        "slayt": {
-        "madde": [
-         3,
-         5
-        ]
+        "sayfa": 6,
+        "satir": [
+         "• Primer başağrılarında çoğunlukla tıbbi ve"
+        ],
+        "sekil": null
        }
       },
       {
@@ -1255,10 +1191,11 @@
        ],
        "spot": null,
        "slayt": {
-        "madde": [
-         1,
-         5
-        ]
+        "sayfa": 6,
+        "satir": [
+         "nörolojik muayene normal"
+        ],
+        "sekil": null
        }
       },
       {
@@ -1276,9 +1213,11 @@
        "cikmis": [],
        "spot": null,
        "slayt": {
-        "madde": [
-         0
-        ]
+        "sayfa": 6,
+        "satir": [
+         "nörolojik muayene normal"
+        ],
+        "sekil": null
        }
       }
      ]
@@ -1317,10 +1256,7 @@
         "satir": [
          "Mutlaka sorulmalı"
         ],
-        "sekil": null,
-        "madde": [
-         0
-        ]
+        "sekil": null
        }
       },
       {
@@ -1342,10 +1278,7 @@
         "satir": [
          "• Başağrısının tipi ve karakteri"
         ],
-        "sekil": null,
-        "madde": [
-         1
-        ]
+        "sekil": null
        }
       },
       {
@@ -1374,11 +1307,7 @@
          "• Yeri",
          "• Şiddeti"
         ],
-        "sekil": null,
-        "madde": [
-         2,
-         3
-        ]
+        "sekil": null
        }
       },
       {
@@ -1406,11 +1335,7 @@
         "satir": [
          "• Aura ve prodorom belirtilerinin olup olmaması"
         ],
-        "sekil": null,
-        "madde": [
-         6,
-         8
-        ]
+        "sekil": null
        }
       }
      ]
@@ -1445,11 +1370,7 @@
         "satir": [
          "• Eşlik eden belirtiler; bulantı, kusma, fotofobi, fonofobi"
         ],
-        "sekil": null,
-        "madde": [
-         7,
-         6
-        ]
+        "sekil": null
        }
       },
       {
@@ -1473,11 +1394,7 @@
          "• Uyku düzeni",
          "• Emosyonel faktörler"
         ],
-        "sekil": null,
-        "madde": [
-         8,
-         9
-        ]
+        "sekil": null
        }
       },
       {
@@ -1504,11 +1421,7 @@
          "• Aile öyküsü",
          "• Önceki medikasyonlar ve tedaviler"
         ],
-        "sekil": null,
-        "madde": [
-         12,
-         11
-        ]
+        "sekil": null
        }
       },
       {
@@ -1530,9 +1443,11 @@
        "cikmis": [],
        "spot": null,
        "slayt": {
-        "madde": [
-         0
-        ]
+        "sayfa": 7,
+        "satir": [
+         "• Önceki medikasyonlar ve tedaviler"
+        ],
+        "sekil": null
        }
       }
      ]
@@ -1571,11 +1486,7 @@
         "satir": [
          "Sekonder başağrısı düşündüren öykü özellikleri:"
         ],
-        "sekil": null,
-        "madde": [
-         0,
-         3
-        ]
+        "sekil": null
        }
       },
       {
@@ -1597,11 +1508,7 @@
         "satir": [
          "- Yeni başlayan akut ve çok şiddetli başağrısı"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         8
-        ]
+        "sekil": null
        }
       },
       {
@@ -1631,11 +1538,7 @@
         "satir": [
          "- 10 yaşından önce, 50 yaşından sonra başlaması"
         ],
-        "sekil": null,
-        "madde": [
-         2,
-         1
-        ]
+        "sekil": null
        }
       },
       {
@@ -1663,11 +1566,7 @@
          "- Son 6 ay içinde başlayan ve devamlılık gösteren , tedaviye direnç",
          "öyküsü"
         ],
-        "sekil": null,
-        "madde": [
-         4,
-         3
-        ]
+        "sekil": null
        }
       },
       {
@@ -1697,11 +1596,7 @@
          "- Hastada mevcut malignite tanısı",
          "- Hastada mevcut sistemik hastalık tanısı"
         ],
-        "sekil": null,
-        "madde": [
-         6,
-         7
-        ]
+        "sekil": null
        }
       }
      ]
@@ -1740,11 +1635,7 @@
         "satir": [
          "- Hastanın yaşamındaki “en şiddetli başağrısı” tanımı"
         ],
-        "sekil": null,
-        "madde": [
-         8,
-         1
-        ]
+        "sekil": null
        }
       },
       {
@@ -1766,11 +1657,7 @@
         "satir": [
          "- Gebelik ve doğum sonrası ortaya çıkması"
         ],
-        "sekil": null,
-        "madde": [
-         9,
-         11
-        ]
+        "sekil": null
        }
       },
       {
@@ -1793,11 +1680,7 @@
          "- Fiziksel aktivite, ıkınma, öksürme g.b işlevler sırasında ortaya",
          "çıkması"
         ],
-        "sekil": null,
-        "madde": [
-         10,
-         9
-        ]
+        "sekil": null
        }
       },
       {
@@ -1821,11 +1704,7 @@
          "- Erkek cinsiyet",
          "- Belirli bir şekle uymayan başağrısı"
         ],
-        "sekil": null,
-        "madde": [
-         14,
-         12
-        ]
+        "sekil": null
        }
       }
      ]
@@ -1865,11 +1744,7 @@
          "• Fizik muayene; primer başağrılarında normal.",
          "Sekonder başağrısı düşündüren bulgular var. Bunlar:"
         ],
-        "sekil": null,
-        "madde": [
-         1,
-         0
-        ]
+        "sekil": null
        }
       },
       {
@@ -1897,11 +1772,7 @@
          "- Epileptik nöbet",
          "- Fokal nörolojik bulgu"
         ],
-        "sekil": null,
-        "madde": [
-         2,
-         4
-        ]
+        "sekil": null
        }
       },
       {
@@ -1932,10 +1803,7 @@
         "satir": [
          "- Papilödem, subhyaloid hemoraji"
         ],
-        "sekil": null,
-        "madde": [
-         5
-        ]
+        "sekil": null
        }
       },
       {
@@ -1962,11 +1830,7 @@
          "- Ateş, ense sertliği",
          "- Kilo kaybı, halsizlik"
         ],
-        "sekil": null,
-        "madde": [
-         6,
-         7
-        ]
+        "sekil": null
        }
       }
      ]
@@ -1991,9 +1855,11 @@
        "cikmis": [],
        "spot": null,
        "slayt": {
-        "madde": [
-         8
-        ]
+        "sayfa": 9,
+        "satir": [
+         "- 5., 7. KS tutulumu"
+        ],
+        "sekil": null
        }
       },
       {
@@ -2019,11 +1885,7 @@
         "satir": [
          "- 3. kranial sinir tutulumu, anizokori"
         ],
-        "sekil": null,
-        "madde": [
-         8,
-         10
-        ]
+        "sekil": null
        }
       },
       {
@@ -2046,11 +1908,7 @@
          "- Horner sendromu",
          "- 5., 7. KS tutulumu"
         ],
-        "sekil": null,
-        "madde": [
-         10,
-         9
-        ]
+        "sekil": null
        }
       },
       {
@@ -2067,7 +1925,13 @@
        "slayt_adim": "k2-10-d-s09",
        "cikmis": [],
        "spot": null,
-       "slayt": null
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "- 3. kranial sinir tutulumu, anizokori"
+        ],
+        "sekil": null
+       }
       }
      ]
     }
@@ -2111,10 +1975,7 @@
         "satir": [
          "YARDIMCI TANI YÖNTEMLERİ"
         ],
-        "sekil": null,
-        "madde": [
-         0
-        ]
+        "sekil": null
        }
       },
       {
@@ -2136,10 +1997,7 @@
         "satir": [
          "• Waters, direk grafiler"
         ],
-        "sekil": null,
-        "madde": [
-         1
-        ]
+        "sekil": null
        }
       },
       {
@@ -2165,11 +2023,7 @@
         "satir": [
          "• BBT (hemoraji, hidrosefali, tümör). İnme"
         ],
-        "sekil": null,
-        "madde": [
-         2,
-         4
-        ]
+        "sekil": null
        }
       },
       {
@@ -2203,10 +2057,7 @@
          "şüphesinde, KIBAS düşünülüyorsa, LP öncesi,",
          "kafa travması GKS:9"
         ],
-        "sekil": null,
-        "madde": [
-         3
-        ]
+        "sekil": null
        }
       }
      ]
@@ -2240,11 +2091,7 @@
          "• MR  arka çukur tümör, inme, demyelinizan",
          "plak"
         ],
-        "sekil": null,
-        "madde": [
-         4,
-         5
-        ]
+        "sekil": null
        }
       },
       {
@@ -2276,11 +2123,7 @@
          "neurological deficits with cerebrospinal fluid",
          "lymphocytosis)"
         ],
-        "sekil": null,
-        "madde": [
-         7,
-         6
-        ]
+        "sekil": null
        }
       },
       {
@@ -2302,10 +2145,7 @@
         "satir": [
          "• Kan testleri, sedim"
         ],
-        "sekil": null,
-        "madde": [
-         8
-        ]
+        "sekil": null
        }
       },
       {
@@ -2327,10 +2167,7 @@
         "satir": [
          "• Başağrısı günlüğü"
         ],
-        "sekil": null,
-        "madde": [
-         9
-        ]
+        "sekil": null
        }
       }
      ]

@@ -1,15 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 351,
-  "baslik": "Kurul 2 Tam Amfi Derinliği: Nörodejeneratif Hastalıklar Genetiği (Ders 53) Yayında",
+  "onem": 352,
+  "baslik": "Kurul 2 Tam Amfi Derinliği: Beyin Tümörleri (Ders 14) ve Omurga Tümörleri (Ders 64) Yayında",
   "maddeler": [
-    "Ders 53 (Nörodejeneratif Hastalıklar Genetiği - Dr. Öğr. Üyesi Serap Arslan): 83 sayfanın tamamı eksiksiz kapsandı; 10 bölüm, 83 paragraf, 274 cümle, 4.586 kelime (32,6 dk EMA GPU sesli anlatım) ile amfi derinliğine ulaştırıldı.",
-    "Tüm Görsel ve Tabloların Açıklanması: Alzheimer amiloid/tau yolakları, MCI yaklaşım algoritması, asemptomatik danışma, Parkinson oksidatif stres basamakları, Tablo 1 ALS genleri, Huntington CAG eşikleri, MS evreleri, Prion süngerimsi ensefalopati ve SMA ekzon 7 alternatif kırpılma ile fenotipik özet tabloları ayrıntılı şekilde anlatıldı.",
-    "15 Canlı Çizim Şeması ve Çıkmış Sınav Soruları: 15 canlı çizim şablonu sıfır ileri sızıntı ile doğrulandı; 3 komite çıkmış sınav sorusu sesli uyarı ve kanıtlarıyla ders akışına entegre edildi.",
-    "0 Atlanan Sayfa Garantisi: 83 slaydın her biri kendi özgün kazanım ve cümleleriyle işlenerek yüzeysel şablonlardan tamamen arındırıldı, 10.68 MB .medspak paketi derlendi."
+    "Ders 14 (Beyin Tümörleri - Doç. Dr. Aydın Sinan Apaydın): 68 sayfanın tamamı eksiksiz kapsandı; 13 bölüm, 68 paragraf, 232 cümle, 4.761 kelime (~34 dk EMA GPU sesli anlatım) ile tam amfi derinliğine ulaştırıldı.",
+    "0 Atlanan Sayfa ve Sıfır Seyrek Sayfa: 68 slaydın her biri kendi özgün kazanım ve cümleleriyle işlendi (tüm radyoloji kesitleri ve histopatoloji atlası dahil, sayfa başına ortalama ~70 kelime), 0 seyrek sayfa sağlandı.",
+    "33 Canlı Vektör Çizim ve 25 Çıkmış Sınav Sorusu: 33 canlı çizim şablonu konuşma akışıyla senkronize edildi ve sıfır ileri sızıntı ile doğrulandı; 25 komite çıkmış sınav sorusu sesli uyarı ve kanıtlarıyla ders akışına entegre edildi.",
+    "Ders 10 ve Ders 64 Güncellemeleri: Ders 10 (Başağrısına Yaklaşım) slayt çapaları 0 hata ile eksiksiz bağlandı; Ders 64 (Omurga Tümörleri) 20 sayfa amfi derinliğinde güncellendi ve tüm .medspak paketleri Oracle sunucusuna senkronize edildi."
   ],
   "eklenen": [
-    "Kurul 2 Tıbbi Genetik 'Nörodejeneratif Hastalıklar Genetiği' (2025-2026 Arşivi, 83 sayfa tam amfi kapsamı, 10.68 MB .medspak)"
+    "Kurul 2 Beyin Cerrahisi 'İntrakraniyal Kitlelerde Belirti ve Bulgular (Beyin Tümörleri)' (68 sayfa tam amfi kapsamı, 11 MB .medspak)",
+    "Kurul 2 Beyin Cerrahisi 'Omurga Tümörleri' (20 sayfa amfi derinliği, 6.2 MB .medspak)"
   ],
   "degisen": [
     "meds/data/arsiv_25_26/sesli_anlatim/dersler.json",
@@ -17,8 +18,9 @@
     "meds/guncelleme_notu.json"
   ],
   "duzeltilen": [
-    "Ders 53'teki yüzeysel 2 cümlelik anlatımlar kaldırılarak 83 sayfanın tamamı amfi derinliğinde eksiksiz genişletildi",
-    "Tüm şekil ve tablolar (Alzheimer algoritmaları, Parkinson kaskadları, ALS genleri, SMA kopya tablosu) detaylı olarak açıklandı"
+    "Ders 14'teki atlanan ve seyrek sayfalar kaldırılarak 68 sayfanın tamamı amfi derinliğinde eksiksiz genişletildi",
+    "Ders 10'daki slayt çapası boş 19 cümle ilgili sayfa ve satırlarına çapalandı",
+    "Tüm radyoloji MRG kesitleri ve histopatoloji atlası slaytları detaylı olarak açıklandı"
   ],
   "silinen": []
 }

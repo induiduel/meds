@@ -1,70 +1,393 @@
 {
- "surum": 1,
- "metinHash": "521535ff2dc4ade06a60c4254c1ead5edc472ee0",
- "p": {
-  "36": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "En az 1 ay süren bir veya daha fazla sanrı",
-      "Şizofreni A ölçütünün hiçbir zaman karşılanmaması",
-      "Sanrılar tek alana odaklı, sistematize ve bizar değildir",
-      "Şizofrenideki gibi ağır yeti kaybı ve işlev çöküşü yoktur"
-     ],
-     "baslik": "Sanrılı Bozukluk Tanı Ölçütleri",
-     "s": 37,
-     "k": [
-      0,
-      25
-     ],
-     "tip": "liste",
-     "konum": [
-      0.03,
-      1.015
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.363,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.3984,
-     "ek_renk": "#e6ecd0"
+  "surum": 1,
+  "metinHash": "f3e0bc139b0ab3ef70dcb8270054860f76dccaeb",
+  "p": {
+    "2": {
+      "1": [
+        {
+          "tur": "sema",
+          "sablon": "siniflama",
+          "sablon_ad": "Sınıflama",
+          "duzen": "liste",
+          "ogeler": [
+            "Eugen Bleuler: zihinsel yarılma kavramı",
+            "Zihinsel işlevler ve çağrışım yarılması",
+            "Kaçınılmaz bir bunama tablosu değildir"
+          ],
+          "baslik": "Tarihsel Gelişim",
+          "s": 3,
+          "k": [
+            0,
+            34
+          ],
+          "tip": "liste",
+          "konum": [
+            0.54,
+            0.22
+          ],
+          "genislik": 0.42,
+          "doluluk": 0.0,
+          "kutu_h": 0.428,
+          "yon": "yatay",
+          "olcek": 1.0
+        }
+      ]
+    },
+    "3": {
+      "3": [
+        {
+          "tur": "sema",
+          "sablon": "siniflama",
+          "sablon_ad": "Sınıflama",
+          "duzen": "liste",
+          "ogeler": [
+            "Kış mevsiminde doğanlarda yüksek risk",
+            "İlkbaharın ilk yarısında doğan bireyler",
+            "Genel toplumda yüzde bir sıklık"
+          ],
+          "baslik": "Epidemiyolojik Dağılım",
+          "s": 4,
+          "k": [
+            0,
+            39
+          ],
+          "tip": "liste",
+          "konum": [
+            0.68,
+            0.53
+          ],
+          "genislik": 0.3,
+          "doluluk": 0.0,
+          "kutu_h": 0.428,
+          "yon": "yatay",
+          "olcek": 1.0
+        }
+      ]
+    },
+    "11": {
+      "3": [
+        {
+          "tur": "sema",
+          "sablon": "siniflama",
+          "sablon_ad": "Sınıflama",
+          "duzen": "liste",
+          "ogeler": [
+            "Genel toplum riski: yüzde bir",
+            "Hasta anne çocuğu riski: yüzde on",
+            "Monozigot ikiz riski: yüzde kırk altı"
+          ],
+          "baslik": "Genetik Risk Oranları",
+          "s": 12,
+          "k": [
+            0,
+            41
+          ],
+          "tip": "liste",
+          "konum": [
+            0.4,
+            0.03
+          ],
+          "genislik": 0.5,
+          "doluluk": 0.0,
+          "kutu_h": 0.308,
+          "yon": "yatay",
+          "olcek": 1.0
+        }
+      ]
+    },
+    "12": {
+      "2": [
+        {
+          "tur": "sema",
+          "sablon": "siniflama",
+          "sablon_ad": "Sınıflama",
+          "duzen": "liste",
+          "ogeler": [
+            "Lateral ventriküllerde genişleme",
+            "Kortikal sulkuslarda belirgin genişleme",
+            "Frontal kortekste belirgin incelme"
+          ],
+          "baslik": "Yapısal Beyin Bulguları",
+          "s": 13,
+          "k": [
+            0,
+            47
+          ],
+          "tip": "liste",
+          "konum": [
+            0.43,
+            0.04
+          ],
+          "genislik": 0.5,
+          "doluluk": 0.0,
+          "kutu_h": 0.308,
+          "yon": "yatay",
+          "olcek": 1.0
+        }
+      ]
+    },
+    "15": {
+      "0": [
+        {
+          "tur": "sema",
+          "sablon": "siniflama",
+          "sablon_ad": "Sınıflama",
+          "duzen": "liste",
+          "ogeler": [
+            "Biyokimyasal araştırmaların temeli",
+            "Dopaminerjik hiperaktivite ve pozitifler",
+            "Antipsikotik ilaçların reseptör blokajı"
+          ],
+          "baslik": "Dopamin Hipotezi",
+          "s": 17,
+          "k": [
+            0,
+            41
+          ],
+          "tip": "liste",
+          "konum": [
+            0.14,
+            0.92
+          ],
+          "genislik": 0.5,
+          "doluluk": 0.0,
+          "kutu_h": 0.308,
+          "yon": "yatay",
+          "olcek": 1.0,
+          "ek_alt": 0.248,
+          "ek_renk": "#e6ecd0"
+        }
+      ],
+      "3": [
+        {
+          "tur": "sema",
+          "sablon": "siniflama",
+          "sablon_ad": "Sınıflama",
+          "duzen": "liste",
+          "ogeler": [
+            "Fensiklidin ve reseptör blokajı",
+            "Glutamat reseptör hipofonksiyonu",
+            "Hem pozitif hem negatif belirti taklidi"
+          ],
+          "baslik": "Glutamaterjik Hipotez",
+          "s": 18,
+          "k": [
+            0,
+            42
+          ],
+          "tip": "liste",
+          "konum": [
+            0.54,
+            0.23
+          ],
+          "genislik": 0.42,
+          "doluluk": 0.0,
+          "kutu_h": 0.348,
+          "yon": "yatay",
+          "olcek": 1.0
+        }
+      ]
+    },
+    "18": {
+      "2": [
+        {
+          "tur": "sema",
+          "sablon": "siniflama",
+          "sablon_ad": "Sınıflama",
+          "duzen": "liste",
+          "ogeler": [
+            "Bizar olmayan sanrılar tablosu",
+            "Varsanılar ve gerçeği değerlendirme",
+            "Kişilerarası ilişkilerde belirgin bozulma"
+          ],
+          "baslik": "Psikotik Belirtiler",
+          "s": 21,
+          "k": [
+            0,
+            32
+          ],
+          "tip": "liste",
+          "konum": [
+            0.03,
+            1.015
+          ],
+          "genislik": 0.9,
+          "doluluk": 0.0,
+          "kutu_h": 0.308,
+          "yon": "yatay",
+          "olcek": 1.0,
+          "ek_alt": 0.343,
+          "ek_renk": "#e6ecd0"
+        }
+      ]
+    },
+    "19": {
+      "2": [
+        {
+          "tur": "sema",
+          "sablon": "siniflama",
+          "sablon_ad": "Sınıflama",
+          "duzen": "liste",
+          "ogeler": [
+            "Nörosifiliz gibi santral enfeksiyonlar",
+            "Sistemik lupus eritematozus vasküliti",
+            "Ağır metal zehirlenmeleri ve toksinler"
+          ],
+          "baslik": "Organik Psikoz Nedenleri",
+          "s": 23,
+          "k": [
+            0,
+            38
+          ],
+          "tip": "liste",
+          "konum": [
+            0.29,
+            0.25
+          ],
+          "genislik": 0.5,
+          "doluluk": 0.0,
+          "kutu_h": 0.308,
+          "yon": "yatay",
+          "olcek": 1.0
+        }
+      ]
+    },
+    "23": {
+      "2": [
+        {
+          "tur": "sema",
+          "sablon": "siniflama",
+          "sablon_ad": "Sınıflama",
+          "duzen": "liste",
+          "ogeler": [
+            "Anhedoni: hiçbir aktiviteden zevk alamama",
+            "Toplumsal içe çekilme ve ilişkilerden kopma",
+            "Duygusal tepkilerde belirgin kısıtlılık"
+          ],
+          "baslik": "Negatif Belirtiler",
+          "s": 27,
+          "k": [
+            0,
+            41
+          ],
+          "tip": "liste",
+          "konum": [
+            0.03,
+            1.015
+          ],
+          "genislik": 0.9,
+          "doluluk": 0.0,
+          "kutu_h": 0.308,
+          "yon": "yatay",
+          "olcek": 1.0,
+          "ek_alt": 0.343,
+          "ek_renk": "#e6ecd0"
+        }
+      ]
+    },
+    "27": {
+      "2": [
+        {
+          "tur": "sema",
+          "sablon": "siniflama",
+          "sablon_ad": "Sınıflama",
+          "duzen": "liste",
+          "ogeler": [
+            "Sanrıların ve varsanıların varlığı",
+            "Dezorganize konuşma ve davranış",
+            "Klinik alevlenme dönemi"
+          ],
+          "baslik": "Aktif Epizod Özellikleri",
+          "s": 32,
+          "k": [
+            0,
+            29
+          ],
+          "tip": "liste",
+          "konum": [
+            0.12,
+            0.76
+          ],
+          "genislik": 0.5,
+          "doluluk": 0.0,
+          "kutu_h": 0.308,
+          "yon": "yatay",
+          "olcek": 1.0,
+          "ek_alt": 0.088,
+          "ek_renk": "#e6ecd0"
+        }
+      ]
+    },
+    "30": {
+      "2": [
+        {
+          "tur": "sema",
+          "sablon": "siniflama",
+          "sablon_ad": "Sınıflama",
+          "duzen": "liste",
+          "ogeler": [
+            "Akut psikotik belirtilerin kontrolü",
+            "Nüksleri önlemek için aile terapileri",
+            "Sosyal beceri eğitimi ve rehabilitasyon"
+          ],
+          "baslik": "Psikososyal Tedaviler",
+          "s": 36,
+          "k": [
+            0,
+            39
+          ],
+          "tip": "liste",
+          "konum": [
+            0.03,
+            1.015
+          ],
+          "genislik": 0.9,
+          "doluluk": 0.0,
+          "kutu_h": 0.308,
+          "yon": "yatay",
+          "olcek": 1.0,
+          "ek_alt": 0.343,
+          "ek_renk": "#e6ecd0"
+        }
+      ]
+    },
+    "31": {
+      "2": [
+        {
+          "tur": "sema",
+          "sablon": "siniflama",
+          "sablon_ad": "Sınıflama",
+          "duzen": "liste",
+          "ogeler": [
+            "Akut başlangıç ve geç yaş iyi prognoz",
+            "Sinsi başlangıç ve negatif belirtiler kötü",
+            "Tedaviye erken başlanması kritik"
+          ],
+          "baslik": "Prognoz Ölçütleri",
+          "s": 37,
+          "k": [
+            0,
+            39
+          ],
+          "tip": "liste",
+          "konum": [
+            0.03,
+            1.015
+          ],
+          "genislik": 0.9,
+          "doluluk": 0.0,
+          "kutu_h": 0.308,
+          "yon": "yatay",
+          "olcek": 1.0,
+          "ek_alt": 0.343,
+          "ek_renk": "#e6ecd0"
+        }
+      ]
     }
-   ]
+  },
+  "rapor": {
+    "aday": 12,
+    "gecti": 12,
+    "ret": {}
   }
- },
- "rapor": {
-  "aday": 36,
-  "gecti": 1,
-  "ret": {
-   "panel metni 'Genç yaş grubunda ağır yeti yi' henüz anlatılma": 1,
-   "panel metni 'Bleuler 4A Temel Belirtileri' henüz anlatılmamı": 1,
-   "panel metni 'Kadın ve erkek sıklığı eşit' henüz anlatılmamış": 1,
-   "panel metni 'Yalnız yaşama ve işsizlik' henüz anlatılmamış t": 1,
-   "panel metni 'Stres-Diyatez Çoklu Vuruş Mode' henüz anlatılma": 1,
-   "panel metni 'Fetal hipoksi-iskemi ve gelişm' henüz anlatılma": 1,
-   "panel metni 'Kış mevsiminde viral enfeksiyo' henüz anlatılma": 1,
-   "panel metni 'Kanabinoid ve dopaminerjik sis' henüz anlatılma": 1,
-   "panel metni 'Vitamin yetmezlikleri ve epige' henüz anlatılma": 1,
-   "panel metni 'Monozigot ikizler: %46' henüz anlatılmamış teri": 1,
-   "panel metni 'Frontal ve temporal sulkuslard' henüz anlatılma": 1,
-   "panel metni '1. Prefrontal korteks aktivite' henüz anlatılma": 1,
-   "karşıt: 2 kutup, 1–6 satır [özellik, A, B]": 7,
-   "panel metni 'Glutamat ve NMDA Reseptör Hipo' henüz anlatılma": 1,
-   "panel metni '3. Darmadağın konuşma (ilk 3't' henüz anlatılma": 1,
-   "panel metni 'Psikotik Bozukluklarda Süre Me' henüz anlatılma": 1,
-   "hücre 60 karakterden uzun": 6,
-   "panel metni 'Otoimmün SSS vasküliti (SLE) v' henüz anlatılma": 1,
-   "panel metni 'Sanrılar (perseküsyon, referan' henüz anlatılma": 1,
-   "panel metni 'Affektif Küntleşme: Duygusal k' henüz anlatılma": 1,
-   "panel metni 'Stereognozi bozukluğu (dokunar' henüz anlatılma": 1,
-   "resim sayfasında panel (H51)": 1,
-   "panel metni 'Kıskançlık tipi (Othello sendr' henüz anlatılma": 1,
-   "dal: soru + 2–4 dal [koşul, sonuç]": 1
-  }
- }
 }

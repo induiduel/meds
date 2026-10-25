@@ -1,8 +1,8 @@
 {
  "surum": 1,
- "metinHash": "23d2223c28f1022291bef6cac85204a81b4426aa",
+ "metinHash": "af6ef5292b6b43565169bbdb05e82db3e85aa82f",
  "p": {
-  "1": {
+  "27": {
    "0": [
     {
      "tur": "sema",
@@ -10,16 +10,15 @@
      "sablon_ad": "Sınıflama",
      "duzen": "liste",
      "ogeler": [
-      "Tümörlerin histopatolojik sınıflaması",
-      "Klinik nörolojik bulgular ve yaş faktörü",
-      "Selim ile habis biyolojik davranış şekilleri",
-      "Radyolojik tanı kriterleri ve cerrahi yaklaşım"
+      "Serebral hemisferlerde çok sayıda intrakraniyal lezyon",
+      "Gri ve beyaz cevher bileşkesinde yerleşim",
+      "Nodül boyutuna oranla belirgin çevre ödemi"
      ],
-     "baslik": "Beyin Tümörlerinde Değerlendirme Kriterleri",
-     "s": 2,
+     "baslik": "Beyin Metastazlarının Radyolojik Triadı",
+     "s": 48,
      "k": [
       0,
-      54
+      49
      ],
      "tip": "liste",
      "konum": [
@@ -28,226 +27,10 @@
      ],
      "genislik": 0.9,
      "doluluk": 0.0,
-     "kutu_h": 0.363,
+     "kutu_h": 0.308,
      "yon": "yatay",
      "olcek": 1.0,
-     "ek_alt": 0.3984,
-     "ek_renk": "#808271"
-    }
-   ]
-  },
-  "10": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Astrositom ve glioblastoma multiforme",
-      "Ependimom ve oligodendrogliom",
-      "Primitif nöroektodermal tümörler",
-      "Pineal tümörler ve koroid pleksus papillomları"
-     ],
-     "baslik": "Nöroepitelyal Glial Neoplaziler",
-     "s": 11,
-     "k": [
-      0,
-      58
-     ],
-     "tip": "liste",
-     "konum": [
-      0.49,
-      0.22
-     ],
-     "genislik": 0.42,
-     "doluluk": 0.0,
-     "kutu_h": 0.444,
-     "yon": "yatay",
-     "olcek": 1.0
-    }
-   ]
-  },
-  "14": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Hücresel atipi ve nükleer polimorfizm",
-      "Mitotik aktivite artışı",
-      "Mikrovasküler proliferasyon",
-      "Nekroz odakları"
-     ],
-     "baslik": "Astrositom Derecelendirme Kriterleri",
-     "s": 15,
-     "k": [
-      0,
-      56
-     ],
-     "tip": "liste",
-     "konum": [
-      0.67,
-      0.35
-     ],
-     "genislik": 0.3,
-     "doluluk": 0.0,
-     "kutu_h": 0.444,
-     "yon": "yatay",
-     "olcek": 1.0
-    }
-   ]
-  },
-  "42": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Bilgisayarlı tomografide heterojen kontrastlanma",
-      "Tümör içinde kavitasyon odakları",
-      "Belirgin paratümöral çevre ödemi",
-      "Nöral doku içerisine mantar benzeri parankimal uzanım"
-     ],
-     "baslik": "Menenjiomda Radyolojik Malignite Bulguları",
-     "s": 43,
-     "k": [
-      0,
-      54
-     ],
-     "tip": "liste",
-     "konum": [
-      0.21,
-      0.52
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.444,
-     "yon": "yatay",
-     "olcek": 1.0
-    }
-   ]
-  },
-  "44": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Grade sıfır: Dura eksizyonu ile on yıllık nüks yüzde sıfır",
-      "Grade bir: Orijin aldığı duranın çıkartılması (%9 nüks)",
-      "Grade iki: Dural tabanın koagülasyonu (%19 nüks)",
-      "Grade üç: Dural tabanın koagüle edilememesi (%29 nüks)",
-      "Grade dört: Tümörün subtotal rezeksiyonu (%40 nüks)"
-     ],
-     "baslik": "Simpson Cerrahi Dereceleri ve Nüks",
-     "s": 45,
-     "k": [
-      0,
-      38
-     ],
-     "tip": "liste",
-     "konum": [
-      0.05,
-      1.015
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.419,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.4539,
-     "ek_renk": "#808271"
-    }
-   ]
-  },
-  "51": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Sistemik primer kanser odağının kontrol altında olması",
-      "Lezyonun kolay çıkartılabilir lokalizasyonda olması",
-      "Kitle etkisiyle hayatı tehdit eden semptomların varlığı",
-      "Histolojik doku tanısı ile ilgili klinik kuşku bulunması"
-     ],
-     "baslik": "Beyin Metastazlarında Cerrahi Kriterler",
-     "s": 53,
-     "k": [
-      0,
-      43
-     ],
-     "tip": "liste",
-     "konum": [
-      0.03,
-      1.015
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.363,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.3984,
-     "ek_renk": "#808271"
-    }
-   ]
-  },
-  "54": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "karsilastirma",
-     "sablon_ad": "İki durumun karşılaştırması",
-     "duzen": "karsit",
-     "basliklar": [
-      "Özellik"
-     ],
-     "satirlar": [
-      [
-       "Kitle büyüklüğü",
-       "Bir santimetreden küçük",
-       "Bir santimetreden büyük"
-      ],
-      [
-       "Kitle etkisi",
-       "Belirgin bası oluşturmaz",
-       "Optik kiazmaya bası yapar"
-      ],
-      [
-       "Klinik bulgular",
-       "Endokrin hormonal tablo",
-       "Baş ağrısı ve görme kaybı"
-      ]
-     ],
-     "kutuplar": [
-      "Mikroadenom",
-      "Makroadenom"
-     ],
-     "s": 55,
-     "k": [
-      0,
-      44
-     ],
-     "tip": "karsit",
-     "konum": [
-      0.03,
-      1.015
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.31,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.3445,
+     "ek_alt": 0.343,
      "ek_renk": "#808271"
     }
    ]
@@ -255,33 +38,39 @@
  },
  "rapor": {
   "aday": 33,
-  "gecti": 7,
+  "gecti": 1,
   "ret": {
+   "panel metni 'Selim ile habis biyolojik davr' henüz anlatılma": 1,
    "resim sayfasında panel (H51)": 2,
    "panel metni 'Tümör Yerleşimine Bağlı Hayati' henüz anlatılma": 1,
-   "panel metni 'Artan kitle hacmine ikincil ba' henüz anlatılma": 1,
-   "panel metni 'Klasik Kafa İçi Basınç Artışı ' henüz anlatılma": 1,
+   "panel metni 'Progresif nörolojik defisit ve' henüz anlatılma": 1,
+   "panel metni 'Sabahları şiddetlenen baş ağrı' henüz anlatılma": 1,
    "panel metni 'Posterior Fossa ve Serebellar ' henüz anlatılma": 1,
-   "panel metni 'Temporal lob: Hafıza bozuklukl' henüz anlatılma": 1,
-   "panel metni 'Frontal, temporal, parietal ve' henüz anlatılma": 1,
+   "panel metni 'Frontal lob: Abuli, kişilik de' henüz anlatılma": 1,
+   "panel metni 'Astrositom ve glioblastoma mul' henüz anlatılma": 1,
+   "panel metni 'Erkeklerde kadınlara göre iki ' henüz anlatılma": 1,
    "panel metni 'Pediatrik yaş grubunda arka çu' henüz anlatılma": 1,
-   "panel metni 'Halkasal kontrastlanma' henüz anlatılmamış teri": 1,
-   "panel metni 'Süratli hücre proliferasyonu v' henüz anlatılma": 1,
-   "panel metni 'Yüksek oranda atipik mitoz fig' henüz anlatılma": 1,
-   "panel metni 'Beyaz cevher traktusları boyun' henüz anlatılma": 1,
-   "panel metni 'Bilgisayarlı tomografide yüzde' henüz anlatılma": 1,
-   "panel metni '1p ve 19q delesyonu: Kemoterap' henüz anlatılma": 1,
-   "panel metni 'Olguların yüzde altmış dokuzu ' henüz anlatılma": 1,
+   "panel metni 'Hücresel atipi ve nükleer poli' henüz anlatılma": 1,
+   "panel metni 'Düşük Dereceli' henüz anlatılmamış terim içeriy": 1,
+   "panel metni 'Glioblastoma Multiforme Özelli' henüz anlatılma": 1,
+   "panel metni 'Mikrovasküler endotelyal proli' henüz anlatılma": 1,
+   "panel metni 'Radyolojik kontrast sınırının ' henüz anlatılma": 1,
+   "panel metni 'Çoğunlukla frontal loblarda be' henüz anlatılma": 1,
+   "panel metni 'Tavuk teli damarlanma: İnce an' henüz anlatılma": 1,
+   "panel metni 'İntrakraniyal gliomların yüzde' henüz anlatılma": 1,
    "panel metni 'Dördüncü ventrikül tavanında v' henüz anlatılma": 1,
-   "panel metni 'Keratin ve kolesterol' henüz anlatılmamış terim": 1,
-   "panel metni 'Üçüncü ventrikül tabanının yuk' henüz anlatılma": 1,
-   "panel metni 'Von Hippel-Lindau sendromu ile' henüz anlatılma": 1,
-   "panel metni 'Hücresel immün yetmezlik ve AI' henüz anlatılma": 1,
-   "panel metni 'Çoğunlukla falks serebri, konv' henüz anlatılma": 1,
+   "panel metni 'Adamantinomatoz' henüz anlatılmamış terim içeri": 1,
+   "panel metni 'Optik kiazmaya bası ile bitemp' henüz anlatılma": 1,
+   "panel metni 'İçinde anormal vasküler besley' henüz anlatılma": 1,
+   "panel metni 'Ekstranodal lenfomaların yüzde' henüz anlatılma": 1,
+   "panel metni 'Yavaş büyüyen, ekstraaksiyel g' henüz anlatılma": 1,
    "panel metni 'Menenjiom Hormonal ve Genetik ' henüz anlatılma": 1,
-   "panel metni 'Grade iki (%8): Atipik, şeffaf' henüz anlatılma": 1,
-   "panel metni 'İleri dönemde periferik fasiya' henüz anlatılma": 1,
-   "panel metni 'Nodül boyutuna oranla belirgin' henüz anlatılma": 1
+   "panel metni 'Dünya Sağlık Örgütü Menenjiom ' henüz anlatılma": 1,
+   "panel metni 'Nöral doku içerisine mantar be' henüz anlatılma": 1,
+   "panel metni 'Simpson Cerrahi Dereceleri ve ' henüz anlatılma": 1,
+   "panel metni 'Pontoserebellar köşede vestibü' henüz anlatılma": 1,
+   "panel metni 'Sistemik primer kanser odağını' henüz anlatılma": 1,
+   "panel metni 'Makroadenom' henüz anlatılmamış terim içeriyor ": 1
   }
  }
 }

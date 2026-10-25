@@ -199,6 +199,9 @@ class Sayfa:
             a = max(0, x1 - x0) * max(0, y1 - y0)
             if 0.04 * alan <= a <= 0.85 * alan:
                 self.resimler.append((x0, y0, x1, y1))
+        # Metinsiz/az metinli tam slayt görseli ya da diyagramı (şema, anatomi, radyoloji)
+        if not self.resimler and (not self.kelimeler or len(self.kelimeler) < 15) and pg.get_image_info():
+            self.resimler.append((round(W * 0.04, 2), round(H * 0.04, 2), round(W * 0.96, 2), round(H * 0.96, 2)))
 
     def tabloda(self, r) -> bool:
         cx, cy = (r[0] + r[2]) / 2, (r[1] + r[3]) / 2

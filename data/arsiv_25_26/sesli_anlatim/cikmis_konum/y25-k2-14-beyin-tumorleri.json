@@ -1,27 +1,27 @@
 {
  "surum": 1,
- "metinHash": "23d2223c28f1022291bef6cac85204a81b4426aa",
+ "metinHash": "af6ef5292b6b43565169bbdb05e82db3e85aa82f",
  "q": [
-  {
-   "id": "195e701dbb18",
-   "kok": "Tıbbi Patoloji Santral sinir sistemi tümörleri hangisi santral sinir sisteminin nöronal orjinli tümörlerinden biridir?",
-   "cevap": "Gangliogliom",
-   "yil": "2020-2021",
-   "p": 3,
-   "c": 0,
-   "skor": 0.92
-  },
   {
    "id": "1b8d30729ede",
    "kok": "Tıbbi Patoloji Santral sinir sistemi tümörleri hangisi santral sinir sisteminin nöronal orjinli tümörlerinden biridir?",
    "cevap": "Gangliogliom",
    "yil": "2020-2021",
    "p": 3,
-   "c": 0,
+   "c": 1,
    "skor": 0.92
   },
   {
    "id": "173011739449",
+   "kok": "Tıbbi Patoloji Santral sinir sistemi tümörleri hangisi santral sinir sisteminin nöronal orjinli tümörlerinden biridir?",
+   "cevap": "Gangliogliom",
+   "yil": "2020-2021",
+   "p": 3,
+   "c": 1,
+   "skor": 0.92
+  },
+  {
+   "id": "195e701dbb18",
    "kok": "Tıbbi Patoloji Santral sinir sistemi tümörleri hangisi santral sinir sisteminin nöronal orjinli tümörlerinden biridir?",
    "cevap": "Gangliogliom",
    "yil": "2020-2021",
@@ -39,11 +39,29 @@
    "skor": 0.92
   },
   {
+   "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-29",
+   "kok": "En sık görülen intrakraniyal herniasyon hangisidir?",
+   "cevap": "Subfalsin (singulat) herniasyon",
+   "yil": "2023",
+   "p": 4,
+   "c": 3,
+   "skor": 0.92
+  },
+  {
    "id": "past-1790877480031-411629",
    "kok": "Beyinde tek taraflı supranükleer (nükleus üstü) seviyede bir lezyon durumunda aşağıdaki kraniyal sinirler veriliyor:\nI. N. abducens\nII. N. facialis\nIII. N. accessorius\nIV. N. hypoglossus\nYukarıdakilerden hangilerinin motor işlevleri bozulur?",
    "cevap": "II ve IV",
    "yil": "2020-2021",
    "p": 5,
+   "c": 1,
+   "skor": 0.92
+  },
+  {
+   "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-1",
+   "kok": "Kafa içi basınç artışı sendromunun (KİBAS) klasik ana bulguları aşağıdakilerin hangisinde birlikte verilmiştir?",
+   "cevap": "Baş ağrısı, bulantı-kusma, papil ödem",
+   "yil": "2023",
+   "p": 7,
    "c": 0,
    "skor": 0.92
   },
@@ -57,30 +75,12 @@
    "skor": 0.92
   },
   {
-   "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-1",
-   "kok": "Kafa içi basınç artışı sendromunun (KİBAS) klasik ana bulguları aşağıdakilerin hangisinde birlikte verilmiştir?",
-   "cevap": "Baş ağrısı, bulantı-kusma, papil ödem",
-   "yil": "2023",
-   "p": 7,
-   "c": 0,
-   "skor": 0.92
-  },
-  {
    "id": "past-1790877481517-691074",
    "kok": "Okuduklarını anlayamama ile karakterize beyin lezyonu hangi durumda görülür?",
    "cevap": "Angular gyrus lezyonu",
    "yil": "2020-2021",
    "p": 8,
    "c": 1,
-   "skor": 0.92
-  },
-  {
-   "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-29",
-   "kok": "En sık görülen intrakraniyal herniasyon hangisidir?",
-   "cevap": "Subfalsin (singulat) herniasyon",
-   "yil": "2023",
-   "p": 9,
-   "c": 0,
    "skor": 0.92
   },
   {
@@ -97,8 +97,8 @@
    "kok": "Dünya Sağlık Örgütü (WHO) sınıflamasına göre yüksek dereceli bir astrositomun glioblastom (WHO grade 4) olarak kabul edilmesi için hücresel atipi ve mitoza ek olarak mikroskopta saptanması gereken patolojik kriterler hangileridir?",
    "cevap": "Mikrovasküler endotelyal proliferasyon ve/veya psödopalizatlanma gösteren coğrafi nekroz",
    "yil": "2021-2026",
-   "p": 16,
-   "c": 0,
+   "p": 14,
+   "c": 3,
    "skor": 0.92
   },
   {
@@ -107,7 +107,7 @@
    "cevap": "Oligodendrogliom",
    "yil": "2023-2024",
    "p": 22,
-   "c": 0,
+   "c": 2,
    "skor": 0.92
   },
   {
@@ -125,7 +125,52 @@
    "cevap": "Lenfoma",
    "yil": "2020-2021",
    "p": 34,
-   "c": 0,
+   "c": 2,
+   "skor": 0.92
+  },
+  {
+   "id": "past-q-KURUL_2_C_IKMIS__3-78",
+   "kok": "Meningiom ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+   "cevap": "Sinsisyal, trofoblastik, psammomatöz ve papiller tipleri WHO grade I meningiom olarak değerlendirilir.",
+   "yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
+   "p": 36,
+   "c": 2,
+   "skor": 0.92
+  },
+  {
+   "id": "ec0aef56ba26",
+   "kok": "Bilateral vestibüler schwannom saptanan bir hastada öncelikle hangi sendrom düşünülmelidir?",
+   "cevap": "Nörofibromatozis tip 2",
+   "yil": "2020-2021",
+   "p": 38,
+   "c": 1,
+   "skor": 0.92
+  },
+  {
+   "id": "7d48e260ad22",
+   "kok": "İki taraflı vestibüler schwannom tanısı almış bir hastada hangi sendrom akla gelmelidir?",
+   "cevap": "Nörofibromatozis tip 2",
+   "yil": "2020-2021",
+   "p": 38,
+   "c": 1,
+   "skor": 0.92
+  },
+  {
+   "id": "6a59f09ac912",
+   "kok": "Bilateral vestibüler schwannom tanısı almış bir hastada hangi sendrom akla gelmelidir?",
+   "cevap": "Nörofibromatozis tip 2",
+   "yil": "2020-2021",
+   "p": 38,
+   "c": 1,
+   "skor": 0.92
+  },
+  {
+   "id": "9a52e2346c4b",
+   "kok": "Bilateral vestibüler schwannom tanısı almış bir hastada aşağıdaki genetik sendromlardan hangisi akla gelmelidir?",
+   "cevap": "Nörofibromatozis tip 2",
+   "yil": "2020-2021",
+   "p": 38,
+   "c": 1,
    "skor": 0.92
   },
   {
@@ -134,39 +179,12 @@
    "cevap": "Meningiom",
    "yil": "2020-2021",
    "p": 38,
-   "c": 0,
-   "skor": 0.92
-  },
-  {
-   "id": "past-q-KURUL_2_C_IKMIS__3-78",
-   "kok": "Meningiom ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
-   "cevap": "Sinsisyal, trofoblastik, psammomatöz ve papiller tipleri WHO grade I meningiom olarak değerlendirilir.",
-   "yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
-   "p": 40,
-   "c": 0,
+   "c": 2,
    "skor": 0.92
   },
   {
    "id": "past-1790877037605-566383",
    "kok": "Yumuşak dokularda, iç organlarda veya spinal sinir köklerinde ortaya çıkabilen; benign ve kapsüllü olan; en sık sekizinci kranial sinirin vestibüler kısmını tutan; sinir kökü sıkışmasına bağlı işitme kaybı gibi bulgulara yol açabilen; ailesel nörofibromatozis tip 2 ile ilişkili olabilen ve mikroskopik incelemede Antoni A, Antoni B alanları ile Verocay cisimcikleriyle karakterize olan tümör aşağıdakilerden hangisidir?",
-   "cevap": "Schwannom",
-   "yil": "2020-2021",
-   "p": 45,
-   "c": 0,
-   "skor": 0.92
-  },
-  {
-   "id": "d3-k2-pat-003",
-   "kok": "Histopatolojik incelemesinde selüler palizatlanmalar gösteren yoğun alanlar (Antoni A) ile gevşek miksoid alanlar (Antoni B) ve karakteristik Verocay cisimcikleri içeren, sıklıkla 8. kranial sinirin vestibüler dalından köken alan benign periferik sinir kılıfı tümörü aşağıdakilerden hangisidir?",
-   "cevap": "Schwannom (akustik nörinom)",
-   "yil": "2021-2026",
-   "p": 45,
-   "c": 0,
-   "skor": 0.92
-  },
-  {
-   "id": "past-1790877040524-73173",
-   "kok": "Ailesel nörofibromatozis tip 2 ile ilişkili olabilen, mikroskopik incelemede Antoni A ve Antoni B alanları ile karakterize olan ve Verocay cisimcikleri adı verilen palizatlanma yapıları içeren periferik sinir kılıf tümörü aşağıdakilerden hangisidir?",
    "cevap": "Schwannom",
    "yil": "2020-2021",
    "p": 45,
@@ -188,43 +206,25 @@
    "cevap": "Periferik fasiyal parezi",
    "yil": "2020-2021",
    "p": 45,
-   "c": 2,
+   "c": 1,
    "skor": 0.92
   },
   {
-   "id": "ec0aef56ba26",
-   "kok": "Bilateral vestibüler schwannom saptanan bir hastada öncelikle hangi sendrom düşünülmelidir?",
-   "cevap": "Nörofibromatozis tip 2",
-   "yil": "2020-2021",
+   "id": "d3-k2-pat-003",
+   "kok": "Histopatolojik incelemesinde selüler palizatlanmalar gösteren yoğun alanlar (Antoni A) ile gevşek miksoid alanlar (Antoni B) ve karakteristik Verocay cisimcikleri içeren, sıklıkla 8. kranial sinirin vestibüler dalından köken alan benign periferik sinir kılıfı tümörü aşağıdakilerden hangisidir?",
+   "cevap": "Schwannom (akustik nörinom)",
+   "yil": "2021-2026",
    "p": 45,
-   "c": 2,
+   "c": 3,
    "skor": 0.92
   },
   {
-   "id": "9a52e2346c4b",
-   "kok": "Bilateral vestibüler schwannom tanısı almış bir hastada aşağıdaki genetik sendromlardan hangisi akla gelmelidir?",
-   "cevap": "Nörofibromatozis tip 2",
+   "id": "past-1790877040524-73173",
+   "kok": "Ailesel nörofibromatozis tip 2 ile ilişkili olabilen, mikroskopik incelemede Antoni A ve Antoni B alanları ile karakterize olan ve Verocay cisimcikleri adı verilen palizatlanma yapıları içeren periferik sinir kılıf tümörü aşağıdakilerden hangisidir?",
+   "cevap": "Schwannom",
    "yil": "2020-2021",
    "p": 45,
-   "c": 2,
-   "skor": 0.92
-  },
-  {
-   "id": "6a59f09ac912",
-   "kok": "Bilateral vestibüler schwannom tanısı almış bir hastada hangi sendrom akla gelmelidir?",
-   "cevap": "Nörofibromatozis tip 2",
-   "yil": "2020-2021",
-   "p": 45,
-   "c": 2,
-   "skor": 0.92
-  },
-  {
-   "id": "7d48e260ad22",
-   "kok": "İki taraflı vestibüler schwannom tanısı almış bir hastada hangi sendrom akla gelmelidir?",
-   "cevap": "Nörofibromatozis tip 2",
-   "yil": "2020-2021",
-   "p": 45,
-   "c": 2,
+   "c": 3,
    "skor": 0.92
   },
   {
@@ -234,7 +234,7 @@
    "yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
    "p": 2,
    "c": 1,
-   "skor": 0.607
+   "skor": 0.602
   },
   {
    "id": "past-1790877044051-128509",
@@ -250,9 +250,9 @@
    "kok": "Nörolojik öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği, zamanla düzelen ve tekrarlayan epizodlar geçirdiği anlaşılan bir hastada en olası tanı aşağıdakilerden hangisidir?",
    "cevap": "Multipl skleroz (MS)",
    "yil": "2020-2021",
-   "p": 1,
-   "c": 1,
-   "skor": 0.646
+   "p": 3,
+   "c": 3,
+   "skor": 0.645
   }
  ]
 }
