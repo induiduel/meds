@@ -533,10 +533,10 @@
   "aday": 44,
   "gecti": 9,
   "ret": {
-   "lazer sayfası dışında çizim (H59)": 16,
+   "lazer sayfası dışında çizim (H59)": 6,
+   "sayfada resim kutusu yok (kontur/eğri yalnız resim üstünde)": 10,
    "noktaların %0'i çizgi üstünde (en az %70)": 1,
-   "sayfada resim kutusu yok (kontur/eğri yalnız resim üstünde)": 5,
-   "ok uçlarından biri boş alanda (yazı/çizim yok)": 11,
+   "ok uçlarından biri boş alanda (yazı/çizim yok)": 16,
    "a/b noktası geçersiz": 2
   },
   "ret_ayrinti": [
@@ -586,29 +586,173 @@
     "cumle": "P28.C0",
     "sayfa": 29,
     "tur": "kontur",
-    "neden": "lazer sayfası dışında çizim (H59)",
-    "komut": {}
+    "neden": "sayfada resim kutusu yok (kontur/eğri yalnız resim üstünde)",
+    "komut": {
+     "nokta": [
+      [
+       0.205,
+       0.343
+      ],
+      [
+       0.47,
+       0.343
+      ],
+      [
+       0.735,
+       0.343
+      ],
+      [
+       0.735,
+       0.367
+      ],
+      [
+       0.735,
+       0.39
+      ],
+      [
+       0.47,
+       0.39
+      ],
+      [
+       0.205,
+       0.39
+      ],
+      [
+       0.205,
+       0.367
+      ]
+     ],
+     "etiket": "başlangıç yaşı"
+    }
    },
    {
     "cumle": "P28.C0",
     "sayfa": 29,
     "tur": "kontur",
-    "neden": "lazer sayfası dışında çizim (H59)",
-    "komut": {}
+    "neden": "sayfada resim kutusu yok (kontur/eğri yalnız resim üstünde)",
+    "komut": {
+     "nokta": [
+      [
+       0.205,
+       0.497
+      ],
+      [
+       0.47,
+       0.497
+      ],
+      [
+       0.735,
+       0.497
+      ],
+      [
+       0.735,
+       0.518
+      ],
+      [
+       0.735,
+       0.54
+      ],
+      [
+       0.47,
+       0.54
+      ],
+      [
+       0.205,
+       0.54
+      ],
+      [
+       0.205,
+       0.518
+      ]
+     ],
+     "etiket": "hastalık süresi"
+    }
    },
    {
     "cumle": "P29.C0",
     "sayfa": 30,
     "tur": "kontur",
-    "neden": "lazer sayfası dışında çizim (H59)",
-    "komut": {}
+    "neden": "sayfada resim kutusu yok (kontur/eğri yalnız resim üstünde)",
+    "komut": {
+     "nokta": [
+      [
+       0.165,
+       0.43
+      ],
+      [
+       0.497,
+       0.43
+      ],
+      [
+       0.83,
+       0.43
+      ],
+      [
+       0.83,
+       0.455
+      ],
+      [
+       0.83,
+       0.48
+      ],
+      [
+       0.497,
+       0.48
+      ],
+      [
+       0.165,
+       0.48
+      ],
+      [
+       0.165,
+       0.455
+      ]
+     ],
+     "etiket": "nörolojik durum"
+    }
    },
    {
     "cumle": "P29.C0",
     "sayfa": 30,
     "tur": "kontur",
-    "neden": "lazer sayfası dışında çizim (H59)",
-    "komut": {}
+    "neden": "sayfada resim kutusu yok (kontur/eğri yalnız resim üstünde)",
+    "komut": {
+     "nokta": [
+      [
+       0.165,
+       0.748
+      ],
+      [
+       0.505,
+       0.748
+      ],
+      [
+       0.845,
+       0.748
+      ],
+      [
+       0.845,
+       0.772
+      ],
+      [
+       0.845,
+       0.797
+      ],
+      [
+       0.505,
+       0.797
+      ],
+      [
+       0.165,
+       0.797
+      ],
+      [
+       0.165,
+       0.772
+      ]
+     ],
+     "etiket": "sosyokültürel özellikler"
+    }
    },
    {
     "cumle": "P30.C0",
@@ -657,8 +801,44 @@
     "cumle": "P31.C0",
     "sayfa": 32,
     "tur": "kontur",
-    "neden": "lazer sayfası dışında çizim (H59)",
-    "komut": {}
+    "neden": "sayfada resim kutusu yok (kontur/eğri yalnız resim üstünde)",
+    "komut": {
+     "nokta": [
+      [
+       0.17,
+       0.21
+      ],
+      [
+       0.52,
+       0.21
+      ],
+      [
+       0.87,
+       0.21
+      ],
+      [
+       0.87,
+       0.252
+      ],
+      [
+       0.87,
+       0.293
+      ],
+      [
+       0.52,
+       0.293
+      ],
+      [
+       0.17,
+       0.293
+      ],
+      [
+       0.17,
+       0.252
+      ]
+     ],
+     "etiket": "en az üçü baskın"
+    }
    },
    {
     "cumle": "P39.C0",
@@ -964,29 +1144,69 @@
     "cumle": "P28.C0",
     "sayfa": 29,
     "tur": "akis",
-    "neden": "lazer sayfası dışında çizim (H59)",
-    "komut": {}
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.8,
+      0.365
+     ],
+     "b": [
+      0.68,
+      0.365
+     ],
+     "etiket": "başlangıç yaşı"
+    }
    },
    {
     "cumle": "P28.C0",
     "sayfa": 29,
     "tur": "akis",
-    "neden": "lazer sayfası dışında çizim (H59)",
-    "komut": {}
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.82,
+      0.517
+     ],
+     "b": [
+      0.7,
+      0.517
+     ],
+     "etiket": "hastalık süresi"
+    }
    },
    {
     "cumle": "P29.C0",
     "sayfa": 30,
     "tur": "akis",
-    "neden": "lazer sayfası dışında çizim (H59)",
-    "komut": {}
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.92,
+      0.455
+     ],
+     "b": [
+      0.78,
+      0.455
+     ],
+     "etiket": "nörolojik durum"
+    }
    },
    {
     "cumle": "P29.C0",
     "sayfa": 30,
     "tur": "akis",
-    "neden": "lazer sayfası dışında çizim (H59)",
-    "komut": {}
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.93,
+      0.772
+     ],
+     "b": [
+      0.8,
+      0.772
+     ],
+     "etiket": "sosyokültürel özellikler"
+    }
    },
    {
     "cumle": "P30.C0",
@@ -1009,8 +1229,18 @@
     "cumle": "P31.C0",
     "sayfa": 32,
     "tur": "akis",
-    "neden": "lazer sayfası dışında çizim (H59)",
-    "komut": {}
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.8,
+      0.16
+     ],
+     "b": [
+      0.7,
+      0.233
+     ],
+     "etiket": "en az üçü baskın"
+    }
    },
    {
     "cumle": "P39.C0",

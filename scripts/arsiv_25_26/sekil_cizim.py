@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import re
 import json
 import os
 import sqlite3
@@ -224,7 +225,7 @@ ONAR_EK = (
 
 
 SUS = ("süs", "kapak", "şablon", "arka plan", "logo", "dekoratif", "görselde yok", "görünmüyor", "başlık yazısı",
-       "görselde karşılığı yok", "resim yok", "görüntü yok")
+       "görselde karşılığı yok", "resim yok", "görüntü yok", "cümleyle uyuşmuyor", "uyuşmuyor")
 
 
 def sus_temizle(key: str) -> int:
@@ -238,7 +239,9 @@ def sus_temizle(key: str) -> int:
             ats += json.loads(f.read_text(encoding="utf-8")).get("atlanan") or []
         except Exception:
             pass
-    hedef = {str(a.get("cumle")) for a in ats if any(w in str(a.get("neden", "")).lower() for w in SUS)}
+    yok = re.compile(r"(sayfada|s\d+'(?:de|da|te|ta)|sayfa \d+'(?:de|da|te|ta))\s+yok|bu sayfada değil|sayfada bulunmuyor")
+    hedef = {str(a.get("cumle")) for a in ats
+             if any(w in str(a.get("neden", "")).lower() for w in SUS) or yok.search(str(a.get("neden", "")).lower())}
     if not hedef:
         return 0
     capa = json.loads((SA_KOK / "capa" / f"{key}.json").read_text(encoding="utf-8"))

@@ -101,7 +101,8 @@ def denetle(key: str, kok: Path) -> tuple[list[str], dict]:
             gorsel = bool(i) and i["t"] in ("resim", "tablo")
             if gorsel and (beyanli is None or (pn, ci) in beyanli):
                 sekil += 1
-                cizimli += any(z.get("tur") != "sema" for z in zs)
+                # resimde yalnız görsel üstü çizim sayılır; yazı olarak duran tabloda tablo/şablon paneli de anlatımdır
+                cizimli += any(z.get("tur") != "sema" or i["t"] == "tablo" for z in zs)
             yer = f"P{pn}.C{ci}"
             if len(zs) > 2:
                 H.append(f"K6 {yer}: cümlede {len(zs)} çizim (en çok 2)")

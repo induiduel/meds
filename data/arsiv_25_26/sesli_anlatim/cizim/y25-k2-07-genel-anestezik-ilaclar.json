@@ -1188,49 +1188,6 @@
     }
    ]
   },
-  "21": {
-   "0": [
-    {
-     "tur": "sema",
-     "s": 22,
-     "k": [
-      116,
-      196
-     ],
-     "dugum": [
-      {
-       "id": "d0",
-       "metin": "alveolar konsantrasyonlarıyla orantılı…"
-      },
-      {
-       "id": "d1",
-       "metin": "basınçta  hafif bir düşme yaparlar"
-      }
-     ],
-     "kenar": [
-      {
-       "a": "d0",
-       "b": "d1",
-       "tur": "aktive",
-       "etiket": "konsantrasyonla orantılı basınç düşüşü"
-      }
-     ],
-     "kaynak": "ok",
-     "tip": "zincir",
-     "konum": [
-      0.05,
-      0.92
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.253,
-     "yon": "dikey",
-     "olcek": 1.0,
-     "ek_alt": 0.1926,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
   "32": {
    "0": [
     {
@@ -4659,49 +4616,6 @@
     }
    ]
   },
-  "23": {
-   "0": [
-    {
-     "tur": "sema",
-     "s": 24,
-     "k": [
-      34,
-      107
-     ],
-     "dugum": [
-      {
-       "id": "d0",
-       "metin": "✓ Böbrek kan akımında da azalma yaparlar"
-      },
-      {
-       "id": "d1",
-       "metin": "✓Genel anestezikler glomerüler filtrasyon…"
-      }
-     ],
-     "kenar": [
-      {
-       "a": "d0",
-       "b": "d1",
-       "tur": "aktive",
-       "etiket": "kan akımı, GFR, idrar ↓"
-      }
-     ],
-     "kaynak": "ok",
-     "tip": "zincir",
-     "konum": [
-      0.03,
-      0.95
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.253,
-     "yon": "dikey",
-     "olcek": 1.0,
-     "ek_alt": 0.2226,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
   "25": {
    "0": [
     {
@@ -4809,7 +4723,7 @@
  },
  "rapor": {
   "aday": 168,
-  "gecti": 83,
+  "gecti": 81,
   "ret": {
    "noktaların %68'i çizgi üstünde (en az %70)": 2,
    "noktaların %53'i çizgi üstünde (en az %70)": 3,
@@ -4828,6 +4742,7 @@
    "noktaların %64'i çizgi üstünde (en az %70)": 2,
    "noktaların %40'i çizgi üstünde (en az %70)": 2,
    "ok uçlarından biri boş alanda (yazı/çizim yok)": 27,
+   "resim anlatılırken panel (H59)": 2,
    "a/b noktası geçersiz": 2
   },
   "ret_ayrinti": [

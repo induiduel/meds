@@ -1,22 +1,23 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 359,
-  "baslik": "Canlı Ders Çizim Senkronizasyonu ve Tekillik Standardı",
+  "onem": 360,
+  "baslik": "Sesli Derste Çizimler Sıkı Denetimden Geçiyor",
   "maddeler": [
-    "Slayttaki tüm çizimlerin aynı anda görünmesi ve iç içe geçmesi engellendi; her çizim yalnızca okunan aktif cümlesiyle tam eşzamanlı gösterilir.",
-    "Animasyonun her yeni cümlede baştan tekrar tekrar oynaması sorunu kökten çözüldü; tamamlanan çizimler cümle boyunca sabit ve kararlı kalır.",
-    "Her hata çözümünde kök neden analizi ve kalıcı dokümantasyon zorunlu kılındı (H60 ve H61)."
+    "Çizimler artık hep lazerin gösterdiği sayfada; başka sayfaya düşen çizim kalmadı.",
+    "Slayt şablonu, kapak süsü ve yazının arkasındaki kart görseli artık \"resim\" sayılmıyor; yazı slaytında lazer yazıya gider.",
+    "Resim anlatılırken yazı paneli açılmaz; görselin üstünde anlatılan yapı gösterilir.",
+    "Her ders yayından önce yeni çizim kapısından (9 kural) geçer; kapıdan geçemeyen çizim yayına çıkmaz."
   ],
   "eklenen": [
-    "CizimLayer tamamlanan komut kilidi (tamamlananRef) ve stabil anahtarlar",
-    "KURUL2_YAPILMAYACAK_HATALAR H60 ve H61 maddeleri"
+    "scripts/cizim/cizim_kapisi.py (K1–K9)",
+    "TALIMAT_CIZIM 21–26, CIZIM_KURALLARI §10, AGENTS kural 17"
   ],
   "degisen": [
-    "meds/src/components/canliDers/CanliDersDers.tsx",
-    "meds/src/components/learn/pdf/CizimLayer.tsx",
-    "meds/docs/KURUL2_YAPILMAYACAK_HATALAR.md",
-    "AGENTS.md",
-    "DEGISIKLIK_KAYDI.md"
+    "meds/scripts/sesli_anlatim/pdf_isaret.py",
+    "meds/scripts/cizim/cizim_uret.py",
+    "meds/otomasyon/ders_zinciri.py",
+    "meds/scripts/arsiv_25_26/{arsiv_yayinla,sekil_cizim}.py",
+    "meds/data/arsiv_25_26/sesli_anlatim/{capa,isaret,cizim,v2}"
   ],
   "duzeltilen": [
     "Aynı slaytta birden fazla çizimin aynı anda ekranda belirmesi ve iç içe geçmesi hatası giderildi",
