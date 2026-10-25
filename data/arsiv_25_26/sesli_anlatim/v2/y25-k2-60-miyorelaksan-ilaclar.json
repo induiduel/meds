@@ -1,0 +1,1464 @@
+{
+ "surum": 2,
+ "ders_id": "k2-60",
+ "anahtar": "y25-k2-60-miyorelaksan-ilaclar",
+ "baslik": "Miyorelaksan İlaçlar (İskelet Kası Gevşeticileri)",
+ "bolumler": [
+  {
+   "id": "k2-60-b01",
+   "baslik": "Nöromüsküler Kavşak ve İskelet Kası Gevşeticilerine Giriş",
+   "paragraflar": [
+    {
+     "id": "k2-60-p001",
+     "sayfa": 1,
+     "cumleler": [
+      {
+       "id": "k2-60-c0001",
+       "ses": "İskelet kası gevşeticileri dersimize başlarken nöromüsküler kavşak blokörleri ve spazmolitik ilaçların temel prensiplerini ele alacağız.",
+       "ekran": "**İskelet Kası Gevşeticileri:** Giriş, temel sınıflar ve klinik hedefler.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "İskelet Kası Gevşeticileri"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "İskelet Kası Gevşeticileri"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p002",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k2-60-c0002",
+       "ses": "İskelet kası fonksiyonunu etkileyen ilaçlar, cerrahi girişimlerde kas felci oluşturan nöromüsküler blokörler ve spastisiteyi azaltan spazmolitikler olarak ikiye ayrılır.",
+       "ekran": "İskelet kasını etkileyen ilaçlar **nöromüsküler blokörler** ve **spazmolitikler** olarak sınıflandırılır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "İskelet kas fonksiyonunu etkileyen ilaçlar"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "nöromüsküler blokörler"
+        },
+        {
+         "metin": "nöromüsküler blokörler",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "past-1790877044841-868772"
+       ]
+      },
+      {
+       "id": "k2-60-c0003",
+       "ses": "Nöromüsküler blokör ilaçlar motor son plakta iletiyi önlerken kuaterner yapıları nedeniyle santral sinir sistemi etkisi göstermezler.",
+       "ekran": "Nöromüsküler blokörler **motor son plakta** iletiyi önler ve santral sinir sistemine geçmezler.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Cerrahi işlemler sırasında veya yoğun"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "motor son plakta"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p003",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k2-60-c0004",
+       "ses": "Spazmolitik ilaçlar geleneksel olarak santral etkili kas gevşeticiler olarak adlandırılır ve öncelikli olarak kronik spastisite ile ağrılı durumlarda kullanılır.",
+       "ekran": "Spazmolitik ilaçlar **santral etkili kas gevşeticiler** olarak spastisite tedavisinde kullanılır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Spazmolitik ilaçlar geleneksel olarak santral"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "santral etkili kas gevşeticiler"
+        },
+        {
+         "metin": "santral etkili kas gevşeticiler",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "past-1790877038133-633883"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p004",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k2-60-c0005",
+       "ses": "Motor son plakta nöromüsküler iletimde aksiyon potansiyeli motor sinir terminaline ulaştığında içeri kalsiyum akımı olur ve nörotransmiter asetilkolin salıverilir.",
+       "ekran": "Terminaldeki aksiyon potansiyeli içeri **kalsiyum akımı** başlatır ve asetilkolin salıverilir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Normal nöromusküler fonksiyon"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "kalsiyum akımı"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p005",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k2-60-c0006",
+       "ses": "Şekilde görüldüğü üzere çizgili kas nikotinik asetilkolin reseptörü iki alfa, bir beta, bir delta ve bir epsilon alt biriminden oluşan pentamerik bir iyon kanalıdır.",
+       "ekran": "Nikotinik reseptör iki alfa, bir beta, bir delta içeren **pentamerik iyon kanalıdır**.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "~ ~ vE OO)"
+        ],
+        "sekil": "Nikotinik asetilkolin reseptörünün pentamerik alt birim yapısı şeması"
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "pentamerik iyon kanalıdır"
+        }
+       ]
+      },
+      {
+       "id": "k2-60-c0007",
+       "ses": "Reseptörün merkezindeki katyon kanalının açılabilmesi için iki adet asetilkolin molekülünün alfa alt birimlerine eşzamanlı oturması zorunludur.",
+       "ekran": "Kanal aktivasyonu için iki alfa alt birimine **iki asetilkolin molekülü** bağlanmalıdır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "SQ v4 +"
+        ],
+        "sekil": "Nikotinik reseptör kanal aktivasyon modeli"
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "iki asetilkolin molekülü"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p006",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k2-60-c0008",
+       "ses": "Şematik çizimde izlendiği üzere iki asetilkolin molekülünün reseptöre bağlanmasıyla iyon kanalı açılarak hücre içine yoğun sodyum girişi gerçekleşir.",
+       "ekran": "İki asetilkolin bağlanmasıyla kanal açılarak hücreye **yoğun sodyum girişi** olur.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "İki ACh molekülü reseptörlerin -"
+        ],
+        "sekil": "Asetilkolin bağlanması ve sodyum iyon kanalı açılması şeması"
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "yoğun sodyum girişi"
+        }
+       ]
+      },
+      {
+       "id": "k2-60-c0009",
+       "ses": "Hücre içine sodyum akımı son plak membranında yerel bir elektriksel depolarizasyon dalgası başlatır.",
+       "ekran": "Sodyum akımı motor son plakta **yerel depolarizasyon** meydana getirir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "İki ACh molekülü reseptörlerin -"
+        ],
+        "sekil": "Motor son plak depolarizasyon modeli"
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "yerel depolarizasyon"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p007",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k2-60-c0010",
+       "ses": "Oluşan son plak potansiyelinin büyüklüğü salıverilen asetilkolin miktarıyla doğrudan ilişkilidir ve eşik aşıldığında kas aksiyon potansiyeli tetiklenir.",
+       "ekran": "Son plak potansiyelinin büyüklüğü salıverilen **asetilkolin miktarıyla** doğrudan ilişkilidir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Son plak potansiyelinin büyüklüğü direkt"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "asetilkolin miktarıyla"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p008",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k2-60-c0011",
+       "ses": "İskelet kası gevşemesi ve paralizisi, reseptörün kompetitif antagonistlerle bloke edilmesi veya depolarizan agonist fazlalığı ile sağlanır.",
+       "ekran": "Kas paralizisi **kompetitif blokaj** veya **depolarizan uyarım** ile oluşturulur.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "İskelet kası gevşemesi ve felci,"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "kompetitif blokaj"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p009",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k2-60-c0012",
+       "ses": "Depolarizan blokaj ise asetilkolin benzeri bir agonist olan süksinilkolinin son plakta oluşturduğu sürekli refrakterlik ile ortaya çıkar.",
+       "ekran": "Depolarizan blokaj süksinilkolinin oluşturduğu **sürekli refrakterlik** ile gelişir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "İkinci tip blokaj ise ACh"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "sürekli refrakterlik"
+        },
+        {
+         "metin": "sürekli refrakterlik",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "d3-k2-far-008"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p010",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k2-60-c0013",
+       "ses": "Nöromüsküler bloke edici ilaçlar kuaterner amonyum grupları nedeniyle yüksek oranda iyonizedir ve kan beyin bariyerini aşamazlar.",
+       "ekran": "Nöromüsküler blokörler **yüksek oranda iyonizedir** ve kan-beyin bariyerini geçemezler.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "A. Non-depolorizan Gevşetici İlaçlar"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "yüksek oranda iyonizedir"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p011",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k2-60-c0014",
+       "ses": "Orta etki süreli steroid kas gevşeticiler vekuronyum ve rokuronyum, eliminasyonları için karaciğer metabolizması ve safrayla atılmaya bağımlıdır.",
+       "ekran": "Steroid yapılı **vekuronyum ve rokuronyum** karaciğer metabolizması ve safra ile atılır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Orta etki süreli steroid kas"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "vekuronyum ve rokuronyum"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p012",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k2-60-c0015",
+       "ses": "Atrakuryumun izomeri olan sisatrakuryum, plazmada kendiliğinden gerçekleşen spontan Hoffman eliminasyonu ile parçalandığından organ yetmezliğinde ilk tercihtir.",
+       "ekran": "Sisatrakuryum organ fonksiyonundan bağımsız **spontan Hoffman eliminasyonu** ile parçalanır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Atrakuryumun birkaç stereoizomeri vardır, en"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "spontan Hoffman eliminasyonu"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p013",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k2-60-c0016",
+       "ses": "Gantakuryum yeni bir grubu temsil eder ve hızlı başlayan çok kısa süreli etki profiliyle öne çıkan nondepolarizan bir gevşeticidir.",
+       "ekran": "Gantakuryum **hızlı başlayan ve kısa süreli** etki gösteren yeni jenerasyon bir blokördür.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Gantakuryum yeni bir grubu temsil"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "kısa süreli"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p014",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k2-60-c0017",
+       "ses": "Plazma psödokolinesterazı ile metabolize edilme, süksinilkolinin eliminasyonunun ana yolağıdır ve ilacın dakikalar içinde inaktive olmasını sağlar.",
+       "ekran": "Süksinilkolin **plazma psödokolinesterazı** tarafından dakikalar içinde hızla hidroliz edilir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Plazma kolinesterazı ile metabolize edilme, süksinilkolinin"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "plazma psödokolinesterazı"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p015",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k2-60-c0018",
+       "ses": "Genetik olarak atipik plazma kolinesteraz enzim varyantı taşıyan bireylerde süksinilkolin hidroliz edilemez ve saatlerce süren uzamış apne gelişir.",
+       "ekran": "Atipik kolinesteraz varlığında süksinilkolin parçalanamaz ve **uzamış apne** gelişir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Bu nedenle, dolaşımdaki plazma kolinesteraz"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "uzamış apne"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-60-b02",
+   "baslik": "Blok Tipleri, Farmakodinami ve Yan Etkiler",
+   "paragraflar": [
+    {
+     "id": "k2-60-p016",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k2-60-c0019",
+       "ses": "Nondepolarizan kas gevşeticiler, nikotinik reseptöre kompetitif antagonist olarak bağlanıp kanal açılmasını önleyerek kas gevşemesi oluştururlar.",
+       "ekran": "Nondepolarizan ajanlar nikotinik reseptörde **kompetitif antagonizma** oluştururlar.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Etki Mekanizması"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "kompetitif antagonizma"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p017",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k2-60-c0020",
+       "ses": "Etki gücü en az olan nondepolarizan gevşeticiler yüksek miligram dozlarında verildiklerinden kavşağa dik gradyentle hızla difüze olur ve en hızlı başlayan etkiyi gösterirler.",
+       "ekran": "Etki gücü az olan gevşeticiler yüksek doz verildiklerinden **en hızlı başlayan** etkiye sahiptir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Etki gücü en az olan"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "en hızlı başlayan"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p018",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k2-60-c0021",
+       "ses": "Süksinilkolin uygulamasında başlangıçta motor son plakta yaygın depolarizasyon ve kas fasikülasyonları ile seyreden Faz bir blok meydana gelir.",
+       "ekran": "Süksinilkolin başlangıçta kas fasikülasyonları ile seyreden **Faz I depolarizan blok** yapar.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "B. Depolarizan İlaçlar"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Faz I depolarizan blok"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p019",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k2-60-c0022",
+       "ses": "Şemada görüldüğü üzere süksinilkoline uzamış maruziyet durumunda membran repolarize olur ve reseptör desensitizasyonu ile Faz iki blok gelişir.",
+       "ekran": "Uzamış maruziyette membran repolarize olur ve **Faz II desensitizasyon bloğu** gelişir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "2. Faz II Blok (desensitizan)-Süksinilkoline"
+        ],
+        "sekil": "Faz I depolarizan ve Faz II desensitizan blok şeması"
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Faz II desensitizasyon bloğu"
+        }
+       ]
+      },
+      {
+       "id": "k2-60-c0023",
+       "ses": "Diyagramda izlendiği gibi Faz iki blok evresinde reseptör kanalı agonist varlığına rağmen duyarsız inaktif durumda kilitlenir.",
+       "ekran": "Reseptör kanalı Faz II evresinde **duyarsız inaktif durumda** kilitli kalır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "ile başlangıçtaki depolarizasyon azalır ve"
+        ],
+        "sekil": "Nikotinik reseptör desensitizasyon modeli"
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "duyarsız inaktif durumda"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p020",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k2-60-c0024",
+       "ses": "Şekilde açık ve kapalı konformasyonları gösterilen reseptör kanalı, Faz iki blok evresinde nondepolarizan blokaj benzeri elektrofizyolojik özellikler sergiler.",
+       "ekran": "Nikotinik reseptör konformasyonu Faz II blokta **nondepolarizan blokaj benzeri** yanıt verir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "© Agonist"
+        ],
+        "sekil": "Nikotinik reseptör konformasyon durumları şeması"
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "nondepolarizan blokaj benzeri"
+        }
+       ]
+      },
+      {
+       "id": "k2-60-c0025",
+       "ses": "Çizimde belirtilen inaktif konformasyon nedeniyle dörtlü uyarı yanıtında kademeli sönme izlenir.",
+       "ekran": "İnaktif konformasyon sonucu dörtlü uyarı yanıtında **kademeli sönme** ortaya çıkar.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "© Agonist"
+        ],
+        "sekil": "Kanal inaktivasyon basamakları"
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "kademeli sönme"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p021",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k2-60-c0026",
+       "ses": "Nöromüsküler blokajda ilk olarak göz çevresi ve çene kasları felç olurken, solunumun ana kası olan diyafram en son felç olur ve ilk iyileşir.",
+       "ekran": "İlk olarak **küçük yüz kasları** felç olur; diyafram en son felç olan kastır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Nöromusküler Blokör İlaçların Klinik Farmakolojisi"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "küçük yüz kasları"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p022",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k2-60-c0027",
+       "ses": "Nöromüsküler iletinin derinliği periferik sinir stimülatörü ile dörtlü uyarı oranı ölçülerek ameliyat boyunca objektif olarak izlenir.",
+       "ekran": "Nöromüsküler ileti periferik stimülatör ile **dörtlü uyarı oranı** üzerinden izlenir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Nöromusküler İletinin Değerlendirilmesi"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "dörtlü uyarı oranı"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p023",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k2-60-c0028",
+       "ses": "Süksinilkolinin damar içi uygulanmasını takiben otuz saniye içinde fasikülasyonlar başlar ve bir dakikada mükemmel entübasyon koşulları sağlanır.",
+       "ekran": "Süksinilkolin uygulandıktan **otuz saniye içinde** fasikülasyonlar ve hızlı kas paralizisi oluşturur.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "B. Depolarizan Gevşetici İlaçlar"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "otuz saniye içinde"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p024",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k2-60-c0029",
+       "ses": "Vekuronyum, sisatrakuryum ve rokuronyumun kardiyovasküler etkileri minimaldir ve klinik dozlarda histamin salınımına yol açmazlar.",
+       "ekran": "Vekuronyum, sisatrakuryum ve rokuronyum **kardiyovasküler açıdan stabildir** ve histamin salmaz.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Kardiyovasküler Etkiler"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "kardiyovasküler açıdan stabildir"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p025",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k2-60-c0030",
+       "ses": "Tubokürarin ve atrakuryum mast hücrelerinden histamin salınımı yaparak belirgin hipotansiyon ve bronkospazm oluşturabilir.",
+       "ekran": "Tubokürarin mast hücrelerinden **histamin salarak** hipotansiyon yapabilir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Antihistaminiklerle premedikasyon tubokürarin ve mivakuryum ile"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "histamin salarak"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p026",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k2-60-c0031",
+       "ses": "Süksinilkolin halotan anestezisiyle birlikte uygulandığında veya tekrarlayan dozlarda kardiyak muskarinik uyarım ile bradikardi ve disritmilere neden olabilir.",
+       "ekran": "Süksinilkolin kalpte muskarinik uyarım ile **bradikardi ve disritmilere** yol açabilir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Süksinilkolin halotan anestezisiyle birlikte uygulandığında kardiyak"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "bradikardi ve disritmilere"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p027",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k2-60-c0032",
+       "ses": "Süksinilkolinin neden olduğu bu geçici bradikardi tablosu atropin gibi antimuskarinik ilaçlarla premedikasyon yapılarak kolaylıkla önlenebilir.",
+       "ekran": "Bradikardi riski **atropin premedikasyonu** ile güvenle engellenebilir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Bu geçici bradikardi tiyopental, atropin"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "atropin premedikasyonu"
+        },
+        {
+         "metin": "atropin premedikasyonu",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "a4fdf364b253",
+        "e41068856050",
+        "35880b6cd9bb"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p028",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k2-60-c0033",
+       "ses": "Süksinilkolin fasikülasyonları nedeniyle intragastrik ve intraoküler basınç artar; yanık hastalarında ise masif potasyum çıkışı ölümcül hiperkalemiye yol açabilir.",
+       "ekran": "Fasikülasyonlar **intragastrik ve intraoküler basıncı** artırır; yanık olgularında hiperkalemi riski doğurur.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "C. Artmış intragastrik basınç"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "intragastrik ve intraoküler basıncı"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-60-b03",
+   "baslik": "İlaç Etkileşimleri ve Bloğun Geri Döndürülmesi",
+   "paragraflar": [
+    {
+     "id": "k2-60-p029",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k2-60-c0034",
+       "ses": "İnhalasyon anestezikleri nöromüsküler blokörlerin kas felci yapıcı etkilerini doza bağımlı olarak belirgin biçimde artırırlar.",
+       "ekran": "İnhalasyon anestezikleri nöromüsküler blokörlerin etkisini **potansiyalize eder**.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Diğer İlaçlarla Etkileşimler"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "potansiyalize eder"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p030",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k2-60-c0035",
+       "ses": "Süksinilkolin ile uçucu anesteziklerin nadir görülen fakat ölümcül bir etkileşimi de iskelet kası sarkoplazmik retikulumundan anormal kalsiyum salıverilmesine bağlı gelişen malign hipertermidir; bu mekanizma çıkmış sınav sorusu olarak sorulmuştur.",
+       "ekran": "Süksinilkolin ve halotan etkileşimi kontrolsüz kalsiyum salınımıyla **Malign Hipertermi** krizini tetikler.",
+       "duzey": 1,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Süksinilkolin ile uçucu anesteziklerin nadir"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "cikmis",
+         "metin": "Malign Hipertermi"
+        }
+       ],
+       "cikmis": [
+        "09e61290e8aa"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p031",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k2-60-c0036",
+       "ses": "Süksinilkolinin son plak depolarize edici etkisi cerrahi öncesinde uygulanan düşük doz nondepolarizan kas gevşeticilerle hafifletilebilir.",
+       "ekran": "Süksinilkolin fasikülasyonları **düşük doz nondepolarizan** ön uygulaması ile azaltılabilir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "D. Diğer Nöromusküler Blokör İlaçlar"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "düşük doz nondepolarizan"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p032",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k2-60-c0037",
+       "ses": "Çeşitli hastalıklar ve özellikle myastenia gravis, nikotinik reseptör sayısındaki azalma nedeniyle nondepolarizan kas gevşeticilere karşı aşırı duyarlılık oluşturur.",
+       "ekran": "Myastenia gravis hastalarında nondepolarizan blokörlere karşı **aşırı duyarlılık** görülür.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Hastalıkların ve Yaşlanmanın Nöromusküler Yanıtlara Etkisi"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "aşırı duyarlılık"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p033",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k2-60-c0038",
+       "ses": "Neostigmin gibi kolinesteraz inhibitörleri nondepolarizan ilaçların oluşturduğu bloğu asetilkolin miktarını artırarak geri döndürürler; bu geri çevirme yöntemi çıkmış sınavda sorulmuştur.",
+       "ekran": "Kolinesteraz inhibitörleri (neostigmin) nondepolarizan bloğu **kompetitif olarak geri döndürür**.",
+       "duzey": 1,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Non-depolarizan Nöromusküler Blokajın Geri Döndürülmesi"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "cikmis",
+         "metin": "kompetitif olarak geri döndürür"
+        }
+       ],
+       "cikmis": [
+        "3ced1081dab9"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p034",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k2-60-c0039",
+       "ses": "Mivakuryum plazma kolinesterazı tarafından metabolize edildiğinden kolinesteraz inhibitörleri verilme zamanlamasına dikkat edilmelidir.",
+       "ekran": "Mivakuryum plazma kolinesterazı ile metabolize olduğundan **enzim inhibitörleri** ile dikkatle izlenmelidir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Mivakuryum plazma kolinesterazı tarafından metabolize"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "enzim inhibitörleri"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p035",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k2-60-c0040",
+       "ses": "Böbrek fonksiyonu normal olan hastalarda sugammadeks rokuronyum kompleksi tipik olarak yirmi dört saat içinde idrarla değişmeden atılır.",
+       "ekran": "Sugammadeks-rokuronyum şelasyon kompleksi yirmi dört saat içinde **idrarla değişmeden atılır**.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Böbrek fonksiyonu normal olan hastalarda"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "idrarla değişmeden atılır"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p036",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "id": "k2-60-c0041",
+       "ses": "Sugammadeks nadiren aşırı duyarlılık ve anafilaksi reaksiyonlarına yol açabileceğinden klinik kullanımda alerji yönünden dikkatli olunmalıdır.",
+       "ekran": "Sugammadeks kullanımında nadir görülen **aşırı duyarlılık reaksiyonları** izlenmelidir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "Sugammadeks birkaç önemli advers reaksiyonla ilişkilidir."
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "aşırı duyarlılık reaksiyonları"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p037",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k2-60-c0042",
+       "ses": "Sugammadeks steroidal yapılı rokuronyum ve vekuronyumu bağladığından progesteron içeren oral kontraseptifleri de bağlayarak etkinliklerini azaltabilir.",
+       "ekran": "Sugammadeks steroid yapılı **oral kontraseptifleri** bağlayarak koruyuculuklarını azaltabilir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Sugammadeks, steroidal nöromusküler bloke edici"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "oral kontraseptifleri"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p038",
+     "sayfa": 38,
+     "cumleler": [
+      {
+       "id": "k2-60-c0043",
+       "ses": "Nöromüsküler blokör ilaçlar cerrahi girişimlerde karın kaslarının gevşetilmesi ve endotrakeal entübasyonun kolaylaştırılması amacıyla yaygın şekilde kullanılır.",
+       "ekran": "Nöromüsküler blokörler **cerrahi gevşeme** ve endotrakeal entübasyon için temel ilaçlardır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Nöromusküler Blokör İlaçların Kullanımı"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "cerrahi gevşeme"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p039",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k2-60-c0044",
+       "ses": "Ayrıca status epileptikus gibi dirençli konvülsiyonlarda periferik kasılmaları durdurarak hastayı metabolik asidoz ve rabdomiyoliz hasarından korurlar.",
+       "ekran": "Dirençli konvülsiyonlarda periferik kasılmaları durdurarak **rabdomiyoliz ve asidozu** önlerler.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "D. Konvülsiyonların Tedavisi"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "rabdomiyoliz ve asidozu"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-60-b04",
+   "baslik": "Spazmolitikler ve Santral Etkili Kas Gevşeticiler",
+   "paragraflar": [
+    {
+     "id": "k2-60-p040",
+     "sayfa": 40,
+     "cumleler": [
+      {
+       "id": "k2-60-c0045",
+       "ses": "Diazepam santral sinir sisteminde gama-aminobütirik asidin gama aminobütirik asit A reseptörleri üzerindeki klor kanalı açma frekansını artırarak kas tonusunu azaltır; bu mekanizma çıkmış sınavda sorulmuştur.",
+       "ekran": "Diazepam **GABA-A klor kanalı** üzerinden santral inhibitör tonusu artırarak spazmı çözer.",
+       "duzey": 1,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Diazepam"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "cikmis",
+         "metin": "GABA-A klor kanalı"
+        }
+       ],
+       "cikmis": [
+        "b71287aec894"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p041",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "id": "k2-60-c0046",
+       "ses": "Baklofen, oral yoldan kullanım için tasarlanmış bir gama aminobütirik asit B reseptör agonistidir; bu farmakolojik kimlik çıkmış sınav sorusu olarak test edilmiştir.",
+       "ekran": "Baklofen oral yoldan kullanılan sentetik bir **GABA-B reseptör agonistidir**.",
+       "duzey": 1,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Baklofen"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "cikmis",
+         "metin": "GABA-B reseptör agonistidir"
+        }
+       ],
+       "cikmis": [
+        "ea7f887c8593"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p042",
+     "sayfa": 42,
+     "cumleler": [
+      {
+       "id": "k2-60-c0047",
+       "ses": "Baklofen omurilik düzeyinde internöronal hiperpolarizasyon yaparak en az diazepam kadar spastisiteyi azaltır ve belirgin olarak daha az sedasyon oluşturur.",
+       "ekran": "Baklofen diazepama kıyasla **daha az sedasyon** ile spastisiteyi kontrol eder.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "Baklofen en az diazepam kadar"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "daha az sedasyon"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p043",
+     "sayfa": 43,
+     "cumleler": [
+      {
+       "id": "k2-60-c0048",
+       "ses": "Şekilde görüldüğü üzere oral tedaviye dirençli şiddetli spastisite olgularında baklofen cerrahi olarak yerleştirilen bir intratekal pompa aracılığıyla doğrudan subaraknoid boşluğa infüze edilir.",
+       "ekran": "Dirençli olgularda cerrahi pompa sistemiyle **intratekal baklofen** infüzyonu uygulanır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "Çalışmalar, baklofenin intratekal uygulanmasının, diğer uygulama"
+        ],
+        "sekil": "İntratekal baklofen pompa sistemi ve lomber kateter yerleşimi şeması"
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "intratekal baklofen"
+        }
+       ]
+      },
+      {
+       "id": "k2-60-c0049",
+       "ses": "Diyagramda gösterilen lomber subaraknoid kateter sistemi sayesinde sistemik yan etkiler olmaksızın omurilikte yüksek ilaç konsantrasyonu elde edilir.",
+       "ekran": "Lomber intratekal infüzyon sistemik yan etki olmadan güçlü **spinal spazmolizis** sağlar.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "yollarıyla yanıt alınamayan şiddetli spazm"
+        ],
+        "sekil": "Subaraknoid kateter infüzyon modeli"
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "spinal spazmolizis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p044",
+     "sayfa": 44,
+     "cumleler": [
+      {
+       "id": "k2-60-c0050",
+       "ses": "Tizanidin, omurilik ara nöronlarında yer alan presinaptik alfa-iki adrenoseptörleri uyararak eksitatör aminoasit salınımını baskılar; bu farmakolojik özellik çıkmış sınavda iki kez sorulmuştur.",
+       "ekran": "Tizanidin presinaptik **alfa-2 adrenoseptör agonisti** olarak eksitatör aminoasit salınımını inhibe eder.",
+       "duzey": 1,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "Tizanidin"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "cikmis",
+         "metin": "alfa-2 adrenoseptör agonisti"
+        }
+       ],
+       "cikmis": [
+        "5d76925ac6c0",
+        "d3-k2-far-010"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p045",
+     "sayfa": 45,
+     "cumleler": [
+      {
+       "id": "k2-60-c0051",
+       "ses": "Spastisite durumlarında tizanidinin santral nosisepsiyonu azaltarak kronik migren profilaksisinde de klinik etkinlik gösterdiği bilinmektedir.",
+       "ekran": "Tizanidin spastisite kontrolü yanında **kronik migren profilaksisinde** de etkilidir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Spastisite durumlarında tizanidinin kronik migren"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "kronik migren profilaksisinde"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p046",
+     "sayfa": 46,
+     "cumleler": [
+      {
+       "id": "k2-60-c0052",
+       "ses": "Gabapentin antiepileptik bir ilaç olup multipl sklerozlu hastalarda spastisiteyi azaltmada ek tedavi olarak fayda sağlar.",
+       "ekran": "Gabapentin kalsiyum kanal modülasyonu ile multipl sklerozda **spastisite kontrolüne** yardımcı olur.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "Santral Etkili Diğer Spazmolitik İlaçlar"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "spastisite kontrolüne"
+        },
+        {
+         "metin": "spastisite kontrolüne",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "past-1790877035988-839316",
+        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-32",
+        "d3-k2-far-003"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p047",
+     "sayfa": 47,
+     "cumleler": [
+      {
+       "id": "k2-60-c0053",
+       "ses": "Riluzol santral sinir sisteminde glutamaterjik iletimin inhibisyonu ile motor nöron hastalıklarında spazm giderici etkiler gösterir.",
+       "ekran": "Riluzol **glutamaterjik iletimi inhibe ederek** nöroprotektif ve spazm giderici etki sunar.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 47,
+        "satir": [
+         "İdrosilamid ve riluzol olasılıkla santral"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "glutamaterjik iletimi inhibe ederek"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p048",
+     "sayfa": 48,
+     "cumleler": [
+      {
+       "id": "k2-60-c0054",
+       "ses": "Dantrolen sarkoplazmik retikulumdaki riyanodin reseptörlerine bağlanarak kalsiyum kanallarının açılmasını bloke eder ve malign hipertermi krizinde hayat kurtarır; bu etki çıkmış sınavda doğrudan sorulmuştur.",
+       "ekran": "Dantrolen **RyR1 kalsiyum kanal blokajı** ile kas kasılmasını periferde durdurur ve Malign Hipertermide hayat kurtarır.",
+       "duzey": 1,
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "Dantrolen RyR1'e bağlanarak kalsiyum kanallarının"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "cikmis",
+         "metin": "RyR1 kalsiyum kanal blokajı"
+        }
+       ],
+       "cikmis": [
+        "past-1790877044812-375943"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p049",
+     "sayfa": 49,
+     "cumleler": [
+      {
+       "id": "k2-60-c0055",
+       "ses": "Botulinum toksini presinaptik sinaptozomal ilişkili yirmi beş proteinini enzimatik olarak yıkarak asetilkolin salınımını inhibe eder ve fokal distonilerde lokal olarak uygulanır.",
+       "ekran": "Botulinum toksini SNAP-25 yıkımı ile **presinaptik asetilkolin salınımını** bloke eder.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 49,
+        "satir": [
+         "Botulinum Toksini"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "presinaptik asetilkolin salınımını"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k2-60-p050",
+     "sayfa": 50,
+     "cumleler": [
+      {
+       "id": "k2-60-c0056",
+       "ses": "Siklobenzaprin ve karizoprodol gibi akut lokal kas spazmı ilaçları beyin sapı reflekslerini baskılayarak akut bel ve boyun tutulmalarında kullanılır.",
+       "ekran": "Siklobenzaprin ve karizoprodol **akut lokal kas spazmı** tedavisinde santral yoldan etkilidir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 50,
+        "satir": [
+         "Akut lokal kas spazmı için"
+        ],
+        "sekil": null
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "akut lokal kas spazmı"
+        },
+        {
+         "metin": "akut lokal kas spazmı",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-87",
+        "3311fead6205",
+        "d3-k2-far-016"
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "donem": "2025-2026"
+}

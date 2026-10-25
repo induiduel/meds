@@ -1,17 +1,17 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 342,
-  "baslik": "Kurul 2 Arşiv Dersleri 61-63: Nikotin Bağımlılığı, Kraniyal Sinir Muayenesi ve Antidepresanlar (2025-2026)",
+  "onem": 343,
+  "baslik": "Kurul 2 Arşiv Dersleri 58-60: Alkoller, Psikiyatrik Genetik ve Miyorelaksanlar (2025-2026)",
   "maddeler": [
-    "Ders 63 (Farmakoloji - Antidepresan İlaçlar): 22 slayt Öğren destesi, EMA GPU sesli anlatım, 15 canlı çizim ve gömülü .medspak (4,44 MB)",
-    "Ders 62 (Nöroloji - Kraniyal Sinir Muayenesi): 24 slayt Öğren destesi, 56 cümle, 7,7 dk EMA GPU sesli anlatım, 15 canlı çizim, %93 satır vurgusu ve gömülü .medspak (54,92 MB)",
-    "Ders 61 (Aile Hekimliği - Nikotin Bağımlılığı ve Tedavisi): 24 slayt Öğren destesi, 61 cümle, 7,3 dk EMA GPU sesli anlatım, 15 canlı çizim, %95 satır vurgusu ve gömülü .medspak (14,86 MB)",
-    "PDF metin takip motoru devrede: konuşmacı sesine birebir senkron mavi satır ve kelime kutusu takibi (0 boş sayfa işareti, yüksek sadakat)"
+    "Ders 60 (Farmakoloji - Miyorelaksan İlaçlar): 24 slayt Öğren destesi, 58 cümle, EMA GPU sesli anlatım, 15 canlı çizim ve gömülü .medspak (2.57 MB)",
+    "Ders 59 (Tıbbi Genetik - Psikiyatrik Hastalıklar ve Genetik Analizi): 24 slayt Öğren destesi, 82 sayfa tam sesli kapsam, 97 cümle, 11,6 dk EMA GPU sesli anlatım, 15 canlı çizim ve gömülü .medspak (5.23 MB)",
+    "Ders 58 (Farmakoloji - Alkoller): 24 slayt Öğren destesi, 53 sayfa tam sesli kapsam, 58 cümle, 7,4 dk EMA GPU sesli anlatım, 15 canlı çizim ve gömülü .medspak (2.37 MB)",
+    "PDF metin takip motoru ve satır işaretleme: konuşmacı sesine birebir senkron satır ve kelime kutusu takibi (%100 sayfa kapsamı, sıfır boşluk)"
   ],
   "eklenen": [
-    "Kurul 2 Farmakoloji 'Antidepresan İlaçlar' (2025-2026 Arşivi)",
-    "Kurul 2 Nöroloji 'Kraniyal Sinir Muayenesi' (2025-2026 Arşivi)",
-    "Kurul 2 Aile Hekimliği 'Nikotin Bağımlılığı ve Tedavisi' (2025-2026 Arşivi)"
+    "Kurul 2 Farmakoloji 'Miyorelaksan İlaçlar' (2025-2026 Arşivi)",
+    "Kurul 2 Tıbbi Genetik 'Psikiyatrik Hastalıklar ve Genetik Analizi' (2025-2026 Arşivi)",
+    "Kurul 2 Farmakoloji 'Alkoller' (2025-2026 Arşivi)"
   ],
   "degisen": [
     "meds/data/arsiv_25_26/sesli_anlatim/dersler.json",

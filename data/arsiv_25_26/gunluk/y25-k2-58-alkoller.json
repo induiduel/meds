@@ -1,0 +1,34 @@
+{
+  "key": "y25-k2-58-alkoller",
+  "donem": "2025-2026",
+  "kurul": 2,
+  "brans": "Tıbbi Farmakoloji",
+  "baslik": "Alkoller",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-10-25 14:21",
+      "neden": "2025-2026 geçmiş yıl arşiv dersi ilk üretimi ve Kurul 2 tam otomatik hat kapı doğrulaması",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi 23 Alkoller_251117_130304.pdf (53 sayfa) kaynağından 0 atlanan sayfa ile 53 paragraf / 58 cümlelik sesli anlatım üretildi.",
+        "24 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 0 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 7.5 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 447,
+        "sureDk": 7.5,
+        "sayfaSayisi": 53,
+        "atlananSayfa": 0,
+        "bolumSayisi": 4,
+        "paragrafSayisi": 53,
+        "cumleSayisi": 58,
+        "slaytAdimSayisi": 24,
+        "cizimSayisi": 0,
+        "cikmisEslesme": 12
+      }
+    }
+  ]
+}

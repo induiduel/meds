@@ -1,0 +1,2490 @@
+{
+ "id": "k2p-y25-k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi",
+ "title": "Psikiyatrik Hastalıklar ve Genetik Analizi",
+ "discipline": "Tıbbi Genetik",
+ "committee": "donem3-kurul2",
+ "totalSlides": 24,
+ "sayfaHaritasi": "teyitli",
+ "slides": [
+  {
+   "slideNumber": 1,
+   "id": "k59-s01",
+   "title": "Psikiyatrik Genetik: Kompleks Kalıtım Modeli",
+   "bolum": "1.1",
+   "pdfSayfalari": [
+    1,
+    5
+   ],
+   "sourcePdf": {
+    "startPage": 1,
+    "endPage": 5
+   },
+   "synthesisNarrative": "Psikiyatrik hastalıklar tek gen defekti ile değil, poligenik ve multifaktöriyel etkiyle ortaya çıkar.\n\n- **Kompleks Kalıtım:** Çok sayıda duyarlılık geni çevresel faktörlerle bir araya gelerek hastalık eşiğini aşar.\n- **Epidemiyolojik Hedef:** Aile, ikiz ve evlat edinme yöntemleriyle kalıtımsal risk oranları hesaplanır.\n- **Moleküler Yaklaşım:** Sitogenetik ve genom genelinde bağlantı ile ilişki analizleri lokusları belirler.\n\n> [!NOTE]\n> Psikiyatrik bozukluklarda Mendel kuralları tek başına geçerli olmayıp poligenik risk skorları önem taşır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "mq59-s01-1",
+     "question": "Psikiyatrik hastalıkların genetik mekanizması için hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Otozomal dominant tek gen mutasyonları ile kalıtılırlar.",
+       "isCorrect": false,
+       "explanation": "Otozomal dominant tek gen mutasyonları i seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Çok sayıda gen ve çevresel etmenin etkileştiği multifaktöriyel yapıdadırlar.",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi genetik açısından doğru bir tanımlamadır. Çok sayıda gen ve çevresel etmenin etkil ifadesi amfi ders notlarında ve temel genetik kaynaklarında doğrudan vurgulanan mekanizmayı eksiksiz açıklar."
+      },
+      {
+       "text": "Yalnızca maternal yolla geçen mitokondriyal DNA delesyonlarıdır.",
+       "isCorrect": false,
+       "explanation": "Yalnızca maternal yolla geçen mitokondri seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Genetik hiçbir etki olmayıp sadece çocukluk çağı travmasıyla oluşurlar.",
+       "isCorrect": false,
+       "explanation": "Genetik hiçbir etki olmayıp sadece çocuk seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "cm59-s01-1",
+     "sentence": "Psikiyatrik hastalıklar tek gen defekti ile değil, poligenik ve multifaktöriyel etkiyle ortaya çıkar.",
+     "maskedTerm": "multifaktöriyel",
+     "hint": "Çok sayıda genetik ve çevresel etmenin bir arada rol oynamasını belirten kavram"
+    },
+    {
+     "type": "causal_chain",
+     "id": "cc59-s01-1",
+     "prompt": "Kompleks psikiyatrik hastalık gelişim basamaklarını sıralayınız:",
+     "steps": [
+      "1. Genetik Altyapı: Çoklu duyarlılık polimorfizmlerinin kalıtılması",
+      "2. Biyolojik Yatkınlık: Nörogelişimsel ve sinaptik işlevlerde hafif hassasiyet",
+      "3. Çevresel Tetikleyici: Yaşam stresi veya biyolojik travma ile karşılaşma",
+      "4. Eşik Aşımı: Klinik psikiyatrik sendrom tablosunun ortaya çıkması"
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar59-s01-1",
+     "question": "Psikiyatrik genetik temel ilkesi nedir?",
+     "answer": "Psikiyatrik hastalıklar kompleks poligenik ve multifaktöriyeldir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 2,
+   "id": "k59-s02",
+   "title": "Genetik Epidemiyoloji: İkiz ve Evlat Edinme",
+   "bolum": "1.1",
+   "pdfSayfalari": [
+    6,
+    10
+   ],
+   "sourcePdf": {
+    "startPage": 6,
+    "endPage": 10
+   },
+   "synthesisNarrative": "Genetik epidemiyoloji, kalıtsallık katsayısını belirlemek için ikiz ve evlat edinme modellerini kullanır.\n\n- **İkiz Mantığı:** Genetik olarak özdeş monozigot ikizler ile yüzde 50 benzer dizigot ikizler kıyaslanır.\n- **Kalıtım Oranları:** İkiz çalışmalarına göre psikiyatrik bozukluklarda kalıtım riski yüzde 40 ile 80 arasındadır.\n- **Evlat Edinme Gücü:** Evlat edinme çalışmaları biyolojik ebeveyn genetiği ile yetiştiren ailenin çevresel etkisini net olarak ayrıştırır.\n\n> [!IMPORTANT]\n> Monozigot ikizlerdeki konkordansın dizigotlara göre belirgin yüksek olması genetik etkiyi doğrular.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "mq59-s02-1",
+     "question": "Evlat edinme çalışmalarının araştırmalara sağladığı en kritik avantaj hangisidir?",
+     "options": [
+      {
+       "text": "DNA dizi analizini tek seansta tamamlaması",
+       "isCorrect": false,
+       "explanation": "DNA dizi analizini tek seansta tamamlama seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Genetik yatkınlık ile yetiştirilme çevresini birbirinden ayrıştırması",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi genetik açısından doğru bir tanımlamadır. Genetik yatkınlık ile yetiştirilme çevre ifadesi amfi ders notlarında ve temel genetik kaynaklarında doğrudan vurgulanan mekanizmayı eksiksiz açıklar."
+      },
+      {
+       "text": "Tüm psikiyatrik hastalıklarda kesin ilaç tedavisi belirlemesi",
+       "isCorrect": false,
+       "explanation": "Tüm psikiyatrik hastalıklarda kesin ilaç seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "LOD skorunu bağımsız olarak üçe yükseltmesi",
+       "isCorrect": false,
+       "explanation": "LOD skorunu bağımsız olarak üçe yükseltm seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "cm59-s02-1",
+     "sentence": "Genetik epidemiyoloji, kalıtsallık katsayısını belirlemek için ikiz ve evlat edinme modellerini kullanır.",
+     "maskedTerm": "epidemiyoloji",
+     "hint": "Toplumsal sıklık ve dağılım kalıplarını inceleyen tıp disiplini"
+    },
+    {
+     "type": "interactive_table",
+     "id": "it59-s02-1",
+     "title": "Genetik Epidemiyolojik Yöntemlerin Karşılaştırılması",
+     "tableHeaders": [
+      "Yöntem",
+      "Temel Kıyaslama",
+      "Ayrıştırılan Faktör"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "İkiz Çalışmaları",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "MZ ve DZ ikiz konkordansı",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Kalıtılabilirlik payı",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Evlat Edinme",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Biyolojik ve evlat edinen aile",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Genetik ve çevre etkisi",
+         "isMasked": true,
+         "hint": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "stl59-s02-1",
+     "topic": "Psikiyatrik genetik önermeleri",
+     "items": [
+      {
+       "text": "Monozigot ikizler genetik olarak tamamen özdeş kabul edilir.",
+       "isLie": false,
+       "explanation": "Monozigot ikizler tek bir zigotun bölünmesiyle oluştukları için genomik nükleotid dizilimleri özdeştir."
+      },
+      {
+       "text": "İkiz çalışmalarında psikiyatrik hastalıkların kalıtım riski yüzde 40 ila 80 arasındadır.",
+       "isLie": false,
+       "explanation": "Literatürdeki ikiz verileri psikiyatrik bozukluklarda kalıtılabilirlik payını bu geniş aralıkta doğrulamaktadır."
+      },
+      {
+       "text": "Dizigot ikizlerdeki konkordans oranı monozigot ikizlerden daima daha yüksektir.",
+       "isLie": true,
+       "explanation": "Dizigot ikizler genetik olarak kardeşler gibi yüzde 50 benzerdir. Bu nedenle genetik yatkınlığı olan hastalıklarda MZ konkordansı DZ'den daima yüksektir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 3,
+   "id": "k59-s03",
+   "title": "Sitogenetik: Kromozom ve DNA Varyasyonları",
+   "bolum": "1.2",
+   "pdfSayfalari": [
+    11,
+    15
+   ],
+   "sourcePdf": {
+    "startPage": 11,
+    "endPage": 15
+   },
+   "synthesisNarrative": "Kromozomal varyasyonlar ve DNA dizi farklılıkları psikiyatrik hastalıklarda genetik zemin oluşturur.\n\n- **Genetik Bilgi:** Genler kromozomlar üzerinde dizilmiş olup transkripsiyonla fenotipik etkilerini gösterir.\n- **Sitogenetik İnceleme:** Işık mikroskobunda karyotip analiziyle büyük kromozomal anormallikler taranır.\n- **Moleküler Düzey:** Mikroskopla görülemeyen mikrodelesyonlar ve baz değişimleri ileri moleküler analiz gerektirir.\n\n> [!NOTE]\n> Psikiyatrik olguların çoğunda karyotip normal olup ince moleküler polimorfizmler hastalığa yol açar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "mq59-s03-1",
+     "question": "Sitogenetik karyotip analizi ile ilgili hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Yalnızca tek nükleotid değişimlerini gösterebilir.",
+       "isCorrect": false,
+       "explanation": "Yalnızca tek nükleotid değişimlerini gös seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Büyük kromozomal sayı ve yapı anomalilerini saptar.",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi genetik açısından doğru bir tanımlamadır. Büyük kromozomal sayı ve yapı anomaliler ifadesi amfi ders notlarında ve temel genetik kaynaklarında doğrudan vurgulanan mekanizmayı eksiksiz açıklar."
+      },
+      {
+       "text": "Tüm psikiyatrik hastaların genetik tanısını kesinleştirir.",
+       "isCorrect": false,
+       "explanation": "Tüm psikiyatrik hastaların genetik tanıs seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Restriksiyon enzim kesim parçalarını boyutlarına göre ayırır.",
+       "isCorrect": false,
+       "explanation": "Restriksiyon enzim kesim parçalarını boy seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "cm59-s03-1",
+     "sentence": "Kromozomal varyasyonlar ve DNA dizi farklılıkları psikiyatrik hastalıklarda genetik zemin oluşturur.",
+     "maskedTerm": "kromozomal",
+     "hint": "Hücre çekirdeğinde DNA ve histon proteinlerinden oluşan mikroskopik yapı"
+    },
+    {
+     "type": "before_after_slider",
+     "id": "bas59-s03-1",
+     "leftTitle": "Klasik Sitogenetik",
+     "rightTitle": "Moleküler Genetik",
+     "leftPoints": [
+      "Işık mikroskobu ile metafaz incelemesi",
+      "Yalnızca büyük kromozom anomalileri görünür",
+      "Çözünürlük megabaz düzeyindedir"
+     ],
+     "rightPoints": [
+      "DNA ve nükleotid dizi analizleri",
+      "Tek baz polimorfizmleri ve mikrodelesyonlar saptanır",
+      "Çözünürlük tek baz çifti düzeyindedir"
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar59-s03-1",
+     "question": "Psikiyatrik genetik temel ilkesi nedir?",
+     "answer": "Psikiyatrik hastalıklar kompleks poligenik ve multifaktöriyeldir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 4,
+   "id": "k59-s04",
+   "title": "Moleküler Belirteçler: RFLP, VNTR ve SNP",
+   "bolum": "1.2",
+   "pdfSayfalari": [
+    16,
+    20
+   ],
+   "sourcePdf": {
+    "startPage": 16,
+    "endPage": 20
+   },
+   "synthesisNarrative": "Genomik haritalamada nükleotid çeşitliliğini izlemek için moleküler polimorfizm belirteçleri kullanılır.\n\n- **RFLP Mekanizması:** Restriksiyon enzimleri ile oluşturulan parça uzunluklarındaki farklılıklar kesim bölgesi mutasyonlarını yansıtır.\n- **Tandem Tekrarlar:** VNTR ve mikrosatellit polimorfizmleri kısa nükleotid tekrar sayılarına dayanır.\n- **SNP Çeşitliliği:** Genomda en sık rastlanan tek nükleotid polimorfizmleri GWAS çalışmalarının temelidir.\n\n> [!NOTE]\n> Genetik haritalarda yüzde 1 rekombinasyon sıklığı 1 harita birimi yani 1 centiMorgan (cM) kabul edilir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "mq59-s04-1",
+     "question": "Restriksiyon enzim kesim noktası mutasyonlarına dayanan belirteç hangisidir?",
+     "options": [
+      {
+       "text": "RFLP (Restriksiyon Parça Uzunluk Polimorfizmi)",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi genetik açısından doğru bir tanımlamadır. RFLP Restriksiyon Parça Uzunluk Polimor ifadesi amfi ders notlarında ve temel genetik kaynaklarında doğrudan vurgulanan mekanizmayı eksiksiz açıklar."
+      },
+      {
+       "text": "Karyotip G-bantlama",
+       "isCorrect": false,
+       "explanation": "Karyotip Gbantlama seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Western blot protein analizi",
+       "isCorrect": false,
+       "explanation": "Western blot protein analizi seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "P50 kapılama potansiyeli",
+       "isCorrect": false,
+       "explanation": "P50 kapılama potansiyeli seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "cm59-s04-1",
+     "sentence": "Genetik haritalarda yüzde 1 rekombinasyon sıklığı 1 harita birimi yani 1 centiMorgan kabul edilir.",
+     "maskedTerm": "centiMorgan",
+     "hint": "Genetik harita uzaklık birimi"
+    },
+    {
+     "type": "swipe_matching",
+     "id": "sm59-s04-1",
+     "prompt": "Moleküler belirteçleri doğru sınıfa eşleyiniz:",
+     "leftCategory": "Enzimatik Kesim Belirteçleri",
+     "rightCategory": "Dizi ve Tekrar Belirteçleri",
+     "cards": [
+      {
+       "text": "RFLP (Restriksiyon Parça Uzunluk Polimorfizmi)",
+       "category": "Enzimatik Kesim Belirteçleri"
+      },
+      {
+       "text": "SNP (Tek Nükleotid Polimorfizmi)",
+       "category": "Dizi ve Tekrar Belirteçleri"
+      },
+      {
+       "text": "Mikrosatellit ardışık tekrarları",
+       "category": "Dizi ve Tekrar Belirteçleri"
+      },
+      {
+       "text": "Restriksiyon endonükleaz kesim bölgesi",
+       "category": "Enzimatik Kesim Belirteçleri"
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "id": "it59-s04-1",
+     "title": "Moleküler Belirteç Tipleri",
+     "tableHeaders": [
+      "Belirteç",
+      "Temel Mekanizma",
+      "Genomik Sıklık"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "SNP",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Tek baz nükleotid değişimi",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Çok yüksek (milyonlarca)",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "RFLP",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Restriksiyon enzim kesimi",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Enzim bölgesine bağımlı",
+         "isMasked": true,
+         "hint": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 5,
+   "id": "k59-s05",
+   "title": "Genetik Analiz: Bağlantı ve İlişki Çalışmaları",
+   "bolum": "1.3",
+   "pdfSayfalari": [
+    21,
+    27
+   ],
+   "sourcePdf": {
+    "startPage": 21,
+    "endPage": 27
+   },
+   "synthesisNarrative": "Hastalık genlerini haritalamak için bağlantı (linkage) ve ilişki (assosiasyon) yöntemleri kullanılır.\n\n- **Bağlantı Analizi:** Aile soyağaçlarında iki lokusun mayozda birlikte aktarılma olasılığını inceler.\n- **LOD Skoru Kriteri:** LOD skorunun artı 3 veya üzerinde olması istatistiksel genetik bağlantıyı kanıtlar; eksi 2 ise dışlar.\n- **Assosiasyon Mantığı:** Vaka ve kontrol gruplarında belirli bir aday gen alelinin görülme sıklığını karşılaştırır.\n\n> [!IMPORTANT]\n> LOD skoru logaritmik bir oran olup 1000'e 1 bağlantı lehine olasılık eşiğini temsil eder.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "mq59-s05-1",
+     "question": "Bağlantı analizinde kesin bağlantı kanıtı sayılan LOD skoru eşiği kaçtır?",
+     "options": [
+      {
+       "text": "Eksi 2",
+       "isCorrect": false,
+       "explanation": "Eksi 2 seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Sıfır",
+       "isCorrect": false,
+       "explanation": "Sıfır seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Artı 3 veya daha yüksek",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi genetik açısından doğru bir tanımlamadır. Artı 3 veya daha yüksek ifadesi amfi ders notlarında ve temel genetik kaynaklarında doğrudan vurgulanan mekanizmayı eksiksiz açıklar."
+      },
+      {
+       "text": "Artı 50",
+       "isCorrect": false,
+       "explanation": "Artı 50 seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "cm59-s05-1",
+     "sentence": "Hastalık genlerini haritalamak için bağlantı ve ilişki yöntemleri kullanılır.",
+     "maskedTerm": "bağlantı",
+     "hint": "Mayozda birlikte kalıtılma eğilimini inceleyen genetik yöntem"
+    },
+    {
+     "type": "venn_grid",
+     "id": "vg59-s05-1",
+     "title": "Bağlantı ve İlişki Analizlerinin Karşılaştırılması",
+     "labelA": "Grup A",
+     "labelB": "Grup B",
+     "items": [
+      {
+       "criterion": "Geniş aile soyağaçlarında mayoz rekombinasyonunu inceler",
+       "correct": "both"
+      },
+      {
+       "criterion": "Vaka ve kontrol gruplarında alel frekansı kıyaslar",
+       "correct": "both"
+      },
+      {
+       "criterion": "Hastalıkla ilişkili genomik lokusları belirlemeyi hedefler",
+       "correct": "both"
+      },
+      {
+       "criterion": "Karyotip mikroskobu ile tek seansta görselleştirilir",
+       "correct": "both"
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar59-s05-1",
+     "question": "Psikiyatrik genetik temel ilkesi nedir?",
+     "answer": "Psikiyatrik hastalıklar kompleks poligenik ve multifaktöriyeldir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 6,
+   "id": "k59-s06",
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Psikiyatrik Genetiğe Giriş ve Yöntemler",
+   "bolum": "1.3",
+   "isCheckpoint": true,
+   "pdfSayfalari": [
+    1,
+    27
+   ],
+   "sourcePdf": {
+    "startPage": 1,
+    "endPage": 27
+   },
+   "synthesisNarrative": "Bu bölümde psikiyatrik genetiğin kompleks yapısını ve epidemiyolojik ile moleküler analiz yöntemlerini inceledik.\n\n- **Multifaktöriyel Kalıtım:** Psikiyatrik hastalıklar tek gen defekti değil, çoklu poligenik risk etmenleridir.\n- **Epidemiyolojik Özellik:** İkiz çalışmaları kalıtılabilirlik oranını, evlat edinme modeli ise genetik ve çevre ayrımını sağlar.\n- **Moleküler Haritalama:** RFLP, mikrosatellit ve SNP belirteçleri LOD skoru ile bağlantı analizinde haritalanır.\n\n> [!IMPORTANT]\n> LOD skoru +3 kesin bağlantıyı gösterirken, ikizlerde MZ konkordansı genetik gücün göstergesidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "mq59-s06-1",
+     "question": "Birinci bölümde öğrenilen kavramlara göre hangisi yanlıştır?",
+     "options": [
+      {
+       "text": "Psikiyatrik hastalıklar multifaktöriyel kompleks kalıtım gösterir.",
+       "isCorrect": false,
+       "explanation": "Psikiyatrik hastalıklar multifaktöriyel seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "LOD skorunun eksi iki olması bağlantıyı kesin olarak dışlar.",
+       "isCorrect": false,
+       "explanation": "LOD skorunun eksi iki olması bağlantıyı seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Psikiyatrik hastalıklar tek bir otozomal dominant mutasyonla kesin tanı alır.",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi genetik açısından doğru bir tanımlamadır. Psikiyatrik hastalıklar tek bir otozomal ifadesi amfi ders notlarında ve temel genetik kaynaklarında doğrudan vurgulanan mekanizmayı eksiksiz açıklar."
+      },
+      {
+       "text": "centiMorgan yüzde bir rekombinasyon sıklığını temsil eden harita birimidir.",
+       "isCorrect": false,
+       "explanation": "centiMorgan yüzde bir rekombinasyon sıkl seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "id": "it59-s06-1",
+     "title": "Bölüm 1 Yöntem Özeti",
+     "tableHeaders": [
+      "Yöntem",
+      "Temel Ölçüt",
+      "Sonuç Kriteri"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "İkiz Modeli",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Konkordans oranı",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Kalıtılabilirlik katsayısı",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Bağlantı Analizi",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Mayoz rekombinasyonu",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "LOD skoru (+3 eşiği)",
+         "isMasked": true,
+         "hint": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "stl59-s06-1",
+     "topic": "Psikiyatrik genetik önermeleri",
+     "items": [
+      {
+       "text": "Evlat edinme çalışmaları yetiştiren çevre ile genetik mirası ayırır.",
+       "isLie": false,
+       "explanation": "Biyolojik ebeveynden gelen genetik ve evlat edinen aileden gelen çevre bu modelle ayrıştırılır."
+      },
+      {
+       "text": "LOD skorunun artı üç olması iki lokusun bağımsız kalıtıldığını gösterir.",
+       "isLie": true,
+       "explanation": "Artı 3 LOD skoru bağımsız kalıtımı değil, aksine lokusların güçlü şekilde bağlantılı olduğunu kanıtlar."
+      },
+      {
+       "text": "SNP varyasyonları genom genelinde en sık rastlanan tek baz değişimleridir.",
+       "isLie": false,
+       "explanation": "Tek nükleotid polimorfizmleri insan genomunda milyonlarca noktada bulunan yaygın belirteçlerdir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar59-s06-1",
+     "question": "Psikiyatrik genetik temel ilkesi nedir?",
+     "answer": "Psikiyatrik hastalıklar kompleks poligenik ve multifaktöriyeldir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 7,
+   "id": "k59-s07",
+   "title": "Kişilik Bozuklukları: Dürtüsellik ve Kalıtım",
+   "bolum": "2.1",
+   "pdfSayfalari": [
+    28,
+    30
+   ],
+   "sourcePdf": {
+    "startPage": 28,
+    "endPage": 30
+   },
+   "synthesisNarrative": "Kişilik özellikleri ve bozuklukları, genetik yatkınlık ile erken çevresel deneyimlerin etkileşimiyle şekillenir.\n\n- **Poligenik Zemin:** Dürtüsellik, yenilik arayışı ve agresyon eğilimleri çoklu gen lokusları tarafından modüle edilir.\n- **Serotonerjik Sistem:** Serotonin nörotransmisyonu prefrontal kortekste dürtü kontrolü ve affektif dengeyi sağlar.\n- **Aday Yolaklar:** Dopamin ve serotonin metabolizmasını yöneten genlerdeki polimorfizmler kişilik boyutlarını etkiler.\n\n> [!NOTE]\n> Kişilik bozukluklarında tek bir nedensel gen olmayıp biyolojik mizaç genleri çevreyle etkileşir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "mq59-s07-1",
+     "question": "Kişilik özellikleri ve dürtüsellik genetiği ile ilgili hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Yalnızca tek bir otozomal resesif gen mutasyonuna bağlıdır.",
+       "isCorrect": false,
+       "explanation": "Yalnızca tek bir otozomal resesif gen mu seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Serotonerjik ve dopaminerjik nörotransmisyon genleri dürtü kontrolünde rol oynar.",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi genetik açısından doğru bir tanımlamadır. Serotonerjik ve dopaminerjik nörotransmi ifadesi amfi ders notlarında ve temel genetik kaynaklarında doğrudan vurgulanan mekanizmayı eksiksiz açıklar."
+      },
+      {
+       "text": "Çevresel faktörlerin kişilik gelişiminde hiçbir rolü bulunmaz.",
+       "isCorrect": false,
+       "explanation": "Çevresel faktörlerin kişilik gelişiminde seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Kişilik bozuklukları karyotipte trizomi şeklinde doğrudan izlenir.",
+       "isCorrect": false,
+       "explanation": "Kişilik bozuklukları karyotipte trizomi seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "cm59-s07-1",
+     "sentence": "Kişilik özellikleri ve bozuklukları, genetik yatkınlık ile erken çevresel deneyimlerin etkileşimiyle şekillenir.",
+     "maskedTerm": "çevresel",
+     "hint": "Genetik olmayan dışsal ve ailesel faktörler"
+    },
+    {
+     "type": "causal_chain",
+     "id": "cc59-s07-1",
+     "prompt": "Dürtüsel davranış yatkınlığının gelişim basamaklarını sıralayınız:",
+     "steps": [
+      "1. Genetik Varyasyon: Serotonin ve dopamin yolak genlerinde polimorfizm",
+      "2. Prefrontal Disfonksiyon: Kortikal inhibisyon mekanizmalarında zayıflama",
+      "3. Çevresel Tetiklenme: Erken çocukluk çağı stresi ve olumsuz çevre",
+      "4. Fenotipik Yansıma: Dürtüsellik ve agresyon eğiliminin belirginleşmesi"
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar59-s07-1",
+     "question": "Psikiyatrik genetik temel ilkesi nedir?",
+     "answer": "Psikiyatrik hastalıklar kompleks poligenik ve multifaktöriyeldir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 8,
+   "id": "k59-s08",
+   "title": "Aday Genler: 5-HTTLPR ve MAO-A Polimorfizmi",
+   "bolum": "2.1",
+   "pdfSayfalari": [
+    31,
+    34
+   ],
+   "sourcePdf": {
+    "startPage": 31,
+    "endPage": 34
+   },
+   "synthesisNarrative": "Serotonerjik aday gen polimorfizmleri, çevresel stresle etkileşerek psikiyatrik yatkınlığı belirler.\n\n- **5-HTTLPR Varyantı:** Serotonin taşıyıcı geninin promoter bölgesindeki kısa alel, düşük transkripsiyon ve anksiyete eğilimiyle ilişkilidir.\n- **MAO-A Enzimi:** Monoamin oksidaz A promoter bölgesindeki tekrar sayısı enzim aktivitesini modüle eder.\n- **Gen-Çevre Etkileşimi:** Düşük aktiviteli MAO-A aleli taşıyan bireylerde çocukluk çağı travması antisosyal davranış riskini artırır.\n\n> [!IMPORTANT]\n> 5-HTTLPR ve MAO-A polimorfizmleri tek başlarına deterministik olmayıp çevresel travma ile birlikte anlam kazanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "mq59-s08-1",
+     "question": "5-HTTLPR polimorfizmi ve MAO-A etkileşimi ile ilgili hangisi doğrudur?",
+     "options": [
+      {
+       "text": "5-HTTLPR kısa aleli taşıyanlarda serotonin geri alım kapasitesi artar.",
+       "isCorrect": false,
+       "explanation": "5HTTLPR kısa aleli taşıyanlarda seroton seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Düşük aktiviteli MAO-A aleli erken travma varlığında antisosyal eğilimi artırabilir.",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi genetik açısından doğru bir tanımlamadır. Düşük aktiviteli MAOA aleli erken travm ifadesi amfi ders notlarında ve temel genetik kaynaklarında doğrudan vurgulanan mekanizmayı eksiksiz açıklar."
+      },
+      {
+       "text": "MAO-A enzimi yalnızca asetilkolini yıkan kolinerjik bir enzimdir.",
+       "isCorrect": false,
+       "explanation": "MAOA enzimi yalnızca asetilkolini yıkan seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "5-HTTLPR polimorfizmi mitokondriyal DNA'da kodlanan tek bir gendir.",
+       "isCorrect": false,
+       "explanation": "5HTTLPR polimorfizmi mitokondriyal DNA seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "cm59-s08-1",
+     "sentence": "Serotonerjik aday gen polimorfizmleri, çevresel stresle etkileşerek psikiyatrik yatkınlığı belirler.",
+     "maskedTerm": "serotonerjik",
+     "hint": "5-hidroksitriptamin nörotransmitteri ile ilişkili olan sistem"
+    },
+    {
+     "type": "interactive_table",
+     "id": "it59-s08-1",
+     "title": "Aday Gen Polimorfizmlerinin Özellikleri",
+     "tableHeaders": [
+      "Gen Lokusu",
+      "Polimorfizm Tipi",
+      "Fonksiyonel Etki"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "5-HTTLPR (SLC6A4)",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Promoter insersiyon/delesyon",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Serotonin geri alım transkripsiyonu",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "MAO-A Promoter",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Tandem tekrar (VNTR)",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Amin katabolizması enzim düzeyi",
+         "isMasked": true,
+         "hint": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "stl59-s08-1",
+     "topic": "Psikiyatrik genetik önermeleri",
+     "items": [
+      {
+       "text": "5-HTTLPR kısa aleli stres karşısında amigdala reaktivitesini artırabilir.",
+       "isLie": false,
+       "explanation": "Kısa alel taşıyıcılarında limbik amigdala uyarılabilirliğinin ve anksiyete duyarlılığının arttığı gösterilmiştir."
+      },
+      {
+       "text": "MAO-A geni tek başına çocukluk ortamından bağımsız olarak yüzde yüz suç davranışı yaratır.",
+       "isLie": true,
+       "explanation": "Genetik varyantlar deterministik değildir; MAO-A etkisi ancak çocukluk çağı istismarı gibi çevresel travmalarla etkileştiğinde belirginleşir."
+      },
+      {
+       "text": "Serotonin taşıyıcısı sinaptik aralıktan serotonini presinaptik nörona geri alır.",
+       "isLie": false,
+       "explanation": "SLC6A4 tarafından kodlanan taşıyıcı protein sinaptik iletimin sonlandırılmasında temel mekanizmadır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 9,
+   "id": "k59-s09",
+   "title": "Duygudurum Bozuklukları: Bipolar ve Unipolar",
+   "bolum": "2.2",
+   "pdfSayfalari": [
+    35,
+    37
+   ],
+   "sourcePdf": {
+    "startPage": 35,
+    "endPage": 37
+   },
+   "synthesisNarrative": "Duygudurum bozuklukları, tek uçlu (unipolar) depresyon ve iki uçlu (bipolar) hastalık olmak üzere iki temel grupta incelenir.\n\n- **Bipolar Bozukluk:** Mani ve depresyon ataklarıyla seyreder; ailesel geçişi ve kalıtılabilirlik katsayısı oldukça yüksektir.\n- **Unipolar Depresyon:** Yalnızca depresif dönemlerle seyreder; genetik yükü bipolara göre daha düşük ve çevresel faktörlere daha açıktır.\n- **Klinik Fenotip:** Erken başlangıç ve psikotik özellikler taşıyan olgularda genetik yatkınlık daha belirgindir.\n\n> [!NOTE]\n> Bipolar bozuklukta birinci derece akrabalarda bipolar hastalık riski toplum prevalansından katbekat yüksektir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "mq59-s09-1",
+     "question": "Bipolar bozukluk ile unipolar depresyonun genetik karşılaştırması için hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Unipolar depresyonun kalıtılabilirliği bipolar bozukluktan çok daha yüksektir.",
+       "isCorrect": false,
+       "explanation": "Unipolar depresyonun kalıtılabilirliği b seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Bipolar bozuklukta ailesel yatkınlık ve ikiz konkordansı unipolar depresyona göre daha belirgindir.",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi genetik açısından doğru bir tanımlamadır. Bipolar bozuklukta ailesel yatkınlık ve ifadesi amfi ders notlarında ve temel genetik kaynaklarında doğrudan vurgulanan mekanizmayı eksiksiz açıklar."
+      },
+      {
+       "text": "Her iki hastalık da tek gen otozomal dominant mutasyonuyla kalıtılır.",
+       "isCorrect": false,
+       "explanation": "Her iki hastalık da tek gen otozomal dom seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Bipolar bozuklukta çevresel stresörlerin hiçbir etkisi yoktur.",
+       "isCorrect": false,
+       "explanation": "Bipolar bozuklukta çevresel stresörlerin seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "cm59-s09-1",
+     "sentence": "Duygudurum bozuklukları, tek uçlu depresyon ve iki uçlu hastalık olmak üzere iki temel grupta incelenir.",
+     "maskedTerm": "depresyon",
+     "hint": "Çökkün duygudurum ve ilgi kaybı ile karakterize klinik tablo"
+    },
+    {
+     "type": "before_after_slider",
+     "id": "bas59-s09-1",
+     "leftTitle": "Bipolar Bozukluk",
+     "rightTitle": "Unipolar Depresyon",
+     "leftPoints": [
+      "Yüksek kalıtılabilirlik (%60-80)",
+      "Mani ve depresyon epizotları",
+      "Akrabalarda bipolar riskinde belirgin artış"
+     ],
+     "rightPoints": [
+      "Orta düzeyde kalıtılabilirlik (%35-45)",
+      "Yalnızca yineleyici depresyon epizotları",
+      "Çevresel yaşam olaylarına daha yüksek duyarlılık"
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar59-s09-1",
+     "question": "Psikiyatrik genetik temel ilkesi nedir?",
+     "answer": "Psikiyatrik hastalıklar kompleks poligenik ve multifaktöriyeldir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 10,
+   "id": "k59-s10",
+   "title": "Bipolar Bozukluk: Epidemiyolojik ve İkiz Verileri",
+   "bolum": "2.2",
+   "pdfSayfalari": [
+    38,
+    39
+   ],
+   "sourcePdf": {
+    "startPage": 38,
+    "endPage": 39
+   },
+   "synthesisNarrative": "Bipolar bozukluk, ikiz ve aile çalışmalarında en güçlü genetik kanıtlara sahip duygudurum bozukluğudur.\n\n- **İkiz Konkordansı:** Monozigot (MZ) ikizlerde konkordans yüzde 60 ile 70 arasındayken, dizigotlarda yüzde 8-10 düzeyindedir.\n- **Akraba Riski:** Birinci derece akrabalarda bipolar hastalık riski genel topluma göre yaklaşık 5-10 kat fazladır.\n- **Aday Lokuslar:** GWAS taramalarında CACNA1C voltaj bağımlı kalsiyum kanalı ve ANK3 genleri öne çıkmıştır.\n\n> [!IMPORTANT]\n> MZ ikiz konkordansının yüzde 70 olması güçlü genetiği gösterirken, yüzde 100 olmaması çevresel ve epigenetik faktörlerin varlığını kanıtlar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "mq59-s10-1",
+     "question": "Bipolar bozukluk ikiz çalışmalarında monozigot ikizlerdeki risk oranı yaklaşık kaçtır?",
+     "options": [
+      {
+       "text": "Yüzde 1",
+       "isCorrect": false,
+       "explanation": "Yüzde 1 seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Yüzde 8-10",
+       "isCorrect": false,
+       "explanation": "Yüzde 810 seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Yüzde 60-70",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi genetik açısından doğru bir tanımlamadır. Yüzde 6070 ifadesi amfi ders notlarında ve temel genetik kaynaklarında doğrudan vurgulanan mekanizmayı eksiksiz açıklar."
+      },
+      {
+       "text": "Yüzde 100",
+       "isCorrect": false,
+       "explanation": "Yüzde 100 seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "cm59-s10-1",
+     "sentence": "Bipolar bozukluk, ikiz ve aile çalışmalarında en güçlü genetik kanıtlara sahip duygudurum bozukluğudur.",
+     "maskedTerm": "bipolar",
+     "hint": "İki uçlu duygudurum dalgalanması gösteren bozukluk"
+    },
+    {
+     "type": "interactive_table",
+     "id": "it59-s10-1",
+     "title": "Bipolar Bozuklukta Epidemiyolojik Risk Dağılımı",
+     "tableHeaders": [
+      "Popülasyon Grubu",
+      "Ortalama Risk Oranı",
+      "Genetik Benzerlik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Genel Popülasyon",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Yaklaşık %1",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Temel toplum zemini",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Monozigot (MZ) İkizler",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "%60-70",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "%100 genetik özdeşlik",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "stl59-s10-1",
+     "topic": "Psikiyatrik genetik önermeleri",
+     "items": [
+      {
+       "text": "Monozigot ikizlerde konkordans oranı dizigot ikizlerden belirgin şekilde yüksektir.",
+       "isLie": false,
+       "explanation": "MZ ikizlerde konkordans %60-70 iken DZ ikizlerde %8-10 civarındadır."
+      },
+      {
+       "text": "Bipolar bozukluk tek bir resesif gende ortaya çıkan mutasyonla yüzde yüz belirlenir.",
+       "isLie": true,
+       "explanation": "Bipolar bozukluk tek gen hastalığı değildir; CACNA1C ve ANK3 gibi çok sayıda lokusun etkileştiği poligenik kompleks tablodur."
+      },
+      {
+       "text": "Birinci derece akrabalardaki risk genel topluma göre 5 ila 10 kat artış gösterir.",
+       "isLie": false,
+       "explanation": "Aile çalışmalarında bipolar hastaların anne, baba ve kardeşlerinde risk genel popülasyondan belirgin yüksektir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 11,
+   "id": "k59-s11",
+   "title": "İntihar Davranışı: Nörobiyoloji ve Aday Genler",
+   "bolum": "2.3",
+   "pdfSayfalari": [
+    40,
+    41
+   ],
+   "sourcePdf": {
+    "startPage": 40,
+    "endPage": 41
+   },
+   "synthesisNarrative": "İntihar davranışı, altta yatan psikiyatrik tablodan kısmen bağımsız kalıtsal biyolojik bileşenler taşır.\n\n- **Serotonerjik Hipofonksiyon:** İntihar girişiminde bulunanlarda prefrontal kortekste serotonin düzeyinde ve iletiminde düşüklük saptanır.\n- **Triptofan Hidroksilaz (TPH):** Serotonin biyosentezinde hız kısıtlayıcı basamağı yöneten TPH1 ve TPH2 gen polimorfizmleri öne çıkar.\n- **Taşıyıcı Polimorfizmi:** 5-HTT taşıyıcı gen varyantları duygudurum regülasyonu ve dürtü kontrolünde biyolojik risk katsayısını artırır.\n\n> [!NOTE]\n> Aile ve ikiz çalışmaları intihar davranışının majör depresyondan bağımsız bir kalıtılabilirlik payına sahip olduğunu gösterir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "mq59-s11-1",
+     "question": "İntihar davranışının moleküler genetiğinde en çok incelenen enzim ve nörotransmitter yolağı hangisidir?",
+     "options": [
+      {
+       "text": "Triptofan hidroksilaz (TPH) ve serotonerjik yolak",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi genetik açısından doğru bir tanımlamadır. Triptofan hidroksilaz TPH ve serotoner ifadesi amfi ders notlarında ve temel genetik kaynaklarında doğrudan vurgulanan mekanizmayı eksiksiz açıklar."
+      },
+      {
+       "text": "Asetilkolinesteraz ve kolinerjik sistem",
+       "isCorrect": false,
+       "explanation": "Asetilkolinesteraz ve kolinerjik sistem seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Psödokolinesteraz ve süksinilkolin hidrolizi",
+       "isCorrect": false,
+       "explanation": "Psödokolinesteraz ve süksinilkolin hidro seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Dihidrofolat redüktaz ve folik asit yolu",
+       "isCorrect": false,
+       "explanation": "Dihidrofolat redüktaz ve folik asit yolu seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "cm59-s11-1",
+     "sentence": "İntihar davranışı, altta yatan psikiyatrik tablodan kısmen bağımsız kalıtsal biyolojik bileşenler taşır.",
+     "maskedTerm": "biyolojik",
+     "hint": "Canlı organizma ve nörokimyasal mekanizmalarla ilişkili olan"
+    },
+    {
+     "type": "causal_chain",
+     "id": "cc59-s11-1",
+     "prompt": "İntihar yatkınlığında serotonerjik işlev bozukluğu zincirini sıralayınız:",
+     "steps": [
+      "1. Genetik Varyasyon: TPH veya 5-HTT genlerinde fonksiyon azaltıcı polimorfizm",
+      "2. Sinaptik Düşüş: Prefrontal kortekste serotonerjik iletimin azalması",
+      "3. Otokontrol Kaybı: Dürtüsellik ve agresyon inhibisyonunun zayıflaması",
+      "4. Klinik Eylem: Ağır yaşam stresi altında özkıyım girişiminin tetiklenmesi"
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar59-s11-1",
+     "question": "Psikiyatrik genetik temel ilkesi nedir?",
+     "answer": "Psikiyatrik hastalıklar kompleks poligenik ve multifaktöriyeldir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 12,
+   "id": "k59-s12",
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Kişilik ve Duygudurum Bozuklukları Genetiği",
+   "bolum": "2.3",
+   "isCheckpoint": true,
+   "pdfSayfalari": [
+    28,
+    41
+   ],
+   "sourcePdf": {
+    "startPage": 28,
+    "endPage": 41
+   },
+   "synthesisNarrative": "Bu bölümde kişilik özellikleri, monoaminerjik polimorfizmler, bipolar bozukluk ve intihar davranışının genetiğini inceledik.\n\n- **Gen-Çevre Etkileşimi:** 5-HTTLPR ve MAO-A polimorfizmleri çocukluk çağı travmasıyla birleştiğinde davranışsal yatkınlığı artırır.\n- **Bipoların Yüksek Yükü:** Bipolar bozuklukta MZ ikiz konkordansı yüzde 60-70 olup unipolar depresyondan çok daha güçlüdür.\n- **Serotonerjik Odak:** İntihar davranışında TPH enzim defektleri ve prefrontal serotonerjik hipofonksiyon kilit rol oynar.\n\n> [!IMPORTANT]\n> Duygudurum bozuklukları tek gen kalıtımı göstermez; poligenik mimari çevresel stresörlerle bir araya gelir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "mq59-s12-1",
+     "question": "İkinci bölümde öğrenilen duygudurum genetiği bilgileri açısından hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Bipolar bozuklukta MZ ikiz konkordansı yüzde 60-70 arasında saptanmaktadır.",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi genetik açısından doğru bir tanımlamadır. Bipolar bozuklukta MZ ikiz konkordansı y ifadesi amfi ders notlarında ve temel genetik kaynaklarında doğrudan vurgulanan mekanizmayı eksiksiz açıklar."
+      },
+      {
+       "text": "Unipolar depresyon bipolar bozukluktan çok daha yüksek ikiz konkordansına sahiptir.",
+       "isCorrect": false,
+       "explanation": "Unipolar depresyon bipolar bozukluktan ç seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "İntihar davranışı yalnızca tek bir dominant gende saptanan mutasyonla kesinleşir.",
+       "isCorrect": false,
+       "explanation": "İntihar davranışı yalnızca tek bir domin seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "MAO-A polimorfizmi çocukluk çağı travmalarından tamamen bağımsız tek faktördür.",
+       "isCorrect": false,
+       "explanation": "MAOA polimorfizmi çocukluk çağı travmal seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "id": "it59-s12-1",
+     "title": "Bölüm 2 Duygudurum ve Aday Gen Özeti",
+     "tableHeaders": [
+      "Hastalık / Durum",
+      "Temel Aday Genler",
+      "Genetik Özellik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Bipolar Bozukluk",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "CACNA1C, ANK3",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "MZ konkordansı %60-70",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "İntihar Davranışı",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "TPH1, TPH2, 5-HTT",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Serotonerjik hipofonksiyon",
+         "isMasked": true,
+         "hint": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "stl59-s12-1",
+     "topic": "Psikiyatrik genetik önermeleri",
+     "items": [
+      {
+       "text": "Bipolar bozuklukta birinci derece akrabalardaki risk genel topluma göre 5-10 kat fazladır.",
+       "isLie": false,
+       "explanation": "Aile çalışmalarında bipolar hastaların akrabalarında risk belirgin derecede artmıştır."
+      },
+      {
+       "text": "5-HTTLPR polimorfizmi dopamin D2 reseptörünü kodlayan ekzonik bir gendir.",
+       "isLie": true,
+       "explanation": "5-HTTLPR serotonin taşıyıcı geni (SLC6A4) promoter bölgesindedir; dopamin D2 reseptörü değildir."
+      },
+      {
+       "text": "İntihar davranışı majör depresyondan bağımsız bir kalıtsal risk bileşenine sahiptir.",
+       "isLie": false,
+       "explanation": "İkiz ve evlat edinme verileri intihar eğiliminin bağımsız biyolojik bir yatkınlık içerdiğini kanıtlamaktadır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar59-s12-1",
+     "question": "Psikiyatrik genetik temel ilkesi nedir?",
+     "answer": "Psikiyatrik hastalıklar kompleks poligenik ve multifaktöriyeldir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 13,
+   "id": "k59-s13",
+   "title": "Şizofreni Genetiği: Epidemiyolojik Risk ve Aile",
+   "bolum": "3.1",
+   "pdfSayfalari": [
+    42,
+    45
+   ],
+   "sourcePdf": {
+    "startPage": 42,
+    "endPage": 45
+   },
+   "synthesisNarrative": "Şizofreni, genel popülasyonda yaklaşık yüzde 1 prevalans gösteren ağır bir nörogelişimsel bozukluktur.\n\n- **Genel Toplum Riski:** Herhangi bir aile öyküsü olmayan bireylerde yaşam boyu risk yüzde 1 civarındadır.\n- **Birinci Derece Akrabalar:** Anne, baba veya kardeşinde şizofreni olanlarda risk yüzde 5 ile 10 düzeyine çıkar.\n- **Ebeveyn Etkisi:** Anne ve babasının her ikisi de şizofreni olan çocuklarda hastalık riski yüzde 40'a ulaşır.\n\n> [!NOTE]\n> Akrabalık derecesi ve paylaşılan genetik benzerlik arttıkça şizofreni görülme riski katlanarak yükselir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "mq59-s13-1",
+     "question": "Genel popülasyonda şizofreni yaşam boyu görülme prevalansı yaklaşık kaçtır?",
+     "options": [
+      {
+       "text": "Yüzde 1",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi genetik açısından doğru bir tanımlamadır. Yüzde 1 ifadesi amfi ders notlarında ve temel genetik kaynaklarında doğrudan vurgulanan mekanizmayı eksiksiz açıklar."
+      },
+      {
+       "text": "Yüzde 10",
+       "isCorrect": false,
+       "explanation": "Yüzde 10 seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Yüzde 50",
+       "isCorrect": false,
+       "explanation": "Yüzde 50 seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Yüzde 0.001",
+       "isCorrect": false,
+       "explanation": "Yüzde 0001 seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "cm59-s13-1",
+     "sentence": "Şizofreni, genel popülasyonda yaklaşık yüzde 1 prevalans gösteren ağır bir nörogelişimsel bozukluktur.",
+     "maskedTerm": "prevalans",
+     "hint": "Belirli bir popülasyonda hastalığın toplam görülme sıklığı oranı"
+    },
+    {
+     "type": "interactive_table",
+     "id": "it59-s13-1",
+     "title": "Şizofrenide Akrabalık Derecesine Göre Hastalık Riski",
+     "tableHeaders": [
+      "Akrabalık Derecesi",
+      "Genetik Paylaşım",
+      "Hastalık Riski"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Genel Popülasyon",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Akrabalık yok",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Yaklaşık %1",
+         "isMasked": true,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Birinci Derece Akraba (Kardeş)",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "%50 genetik benzerlik",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "%5-10",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Her İki Ebeveyn Hasta",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "İki taraflı genetik yük",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Yaklaşık %40-46",
+         "isMasked": true,
+         "hint": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar59-s13-1",
+     "question": "Psikiyatrik genetik temel ilkesi nedir?",
+     "answer": "Psikiyatrik hastalıklar kompleks poligenik ve multifaktöriyeldir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 14,
+   "id": "k59-s14",
+   "title": "Şizofreni: İkiz Çalışmaları ve Konkordans",
+   "bolum": "3.1",
+   "pdfSayfalari": [
+    46,
+    49
+   ],
+   "sourcePdf": {
+    "startPage": 46,
+    "endPage": 49
+   },
+   "synthesisNarrative": "İkiz çalışmaları, şizofreninin güçlü bir kalıtsal bileşene sahip olduğunu kanıtlamaktadır.\n\n- **Monozigot İkizler:** Genetik yapısı özdeş MZ ikizlerde konkordans oranı yaklaşık yüzde 53'tür.\n- **Dizigot İkizler:** Genetik benzerliği kardeşlerle aynı olan DZ ikizlerde konkordans yüzde 15 düzeyindedir.\n- **Kalıtılabilirlik Katsayısı:** Şizofreninin hesaplanan kalıtılabilirlik oranı yüzde 80 ile 85 arasında saptanır.\n\n> [!IMPORTANT]\n> MZ ikiz konkordansının yüzde 53 olması yüksek genetik gücü, tam yüzde 100 olmaması ise çevresel katkıyı gösterir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "mq59-s14-1",
+     "question": "Şizofreni ikiz çalışmalarında monozigot ikizlerdeki konkordans oranı yaklaşık kaçtır?",
+     "options": [
+      {
+       "text": "Yüzde 15",
+       "isCorrect": false,
+       "explanation": "Yüzde 15 seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Yüzde 53",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi genetik açısından doğru bir tanımlamadır. Yüzde 53 ifadesi amfi ders notlarında ve temel genetik kaynaklarında doğrudan vurgulanan mekanizmayı eksiksiz açıklar."
+      },
+      {
+       "text": "Yüzde 5",
+       "isCorrect": false,
+       "explanation": "Yüzde 5 seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Yüzde 100",
+       "isCorrect": false,
+       "explanation": "Yüzde 100 seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "cm59-s14-1",
+     "sentence": "İkiz çalışmaları, şizofreninin güçlü bir kalıtsal bileşene sahip olduğunu kanıtlamaktadır.",
+     "maskedTerm": "kalıtsal",
+     "hint": "Ebeveynlerden genler yoluyla yavrulara aktarılan özellik"
+    },
+    {
+     "type": "before_after_slider",
+     "id": "bas59-s14-1",
+     "leftTitle": "Monozigot (MZ) İkizler",
+     "rightTitle": "Dizigot (DZ) İkizler",
+     "leftPoints": [
+      "%100 genomik benzerlik",
+      "Konkordans oranı yaklaşık %53",
+      "Risk DZ ikizlere göre 3-4 kat yüksek"
+     ],
+     "rightPoints": [
+      "%50 genomik benzerlik",
+      "Konkordans oranı yaklaşık %15",
+      "Risk normal kardeşlerle eşdeğer düzeyde"
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "stl59-s14-1",
+     "topic": "Psikiyatrik genetik önermeleri",
+     "items": [
+      {
+       "text": "Monozigot ikizlerdeki konkordans dizigot ikizlere göre belirgin yüksektir.",
+       "isLie": false,
+       "explanation": "MZ ikizlerde %53, DZ ikizlerde %15 olup konkordans farkı genetik etkiden kaynaklanır."
+      },
+      {
+       "text": "Şizofreninin kalıtılabilirlik katsayısı yaklaşık yüzde 80-85 olarak hesaplanmaktadır.",
+       "isLie": false,
+       "explanation": "İkiz modelleme çalışmalarında varyansın %80-85'inin genetik faktörlerce açıklandığı gösterilmiştir."
+      },
+      {
+       "text": "Monozigot ikizlerden biri hasta ise diğer ikizin de kesinlikle yüzde yüz hasta olması şarttır.",
+       "isLie": true,
+       "explanation": "MZ ikiz konkordansı %53'tür; %100 değildir. Bu durum çevresel ve epigenetik faktörlerin varlığını kanıtlar."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 15,
+   "id": "k59-s15",
+   "title": "Şizofrenide Aday Genler: DTNBP1, NRG1 ve DISC1",
+   "bolum": "3.2",
+   "pdfSayfalari": [
+    50,
+    51
+   ],
+   "sourcePdf": {
+    "startPage": 50,
+    "endPage": 51
+   },
+   "synthesisNarrative": "Moleküler bağlantı ve assosiasyon çalışmaları, şizofrenide sinaptik plastisiteyi etkileyen aday genleri saptamıştır.\n\n- **Disbindin (DTNBP1):** Glutamat salınımını ve sinaptik vezikül trafiğini düzenler; 6p22 bölgesindedir.\n- **Neuregulin 1 (NRG1):** ErbB4 reseptörüyle etkileşerek nöronal göç, miyelinizasyon ve sinaps oluşumunu yönetir; 8p bölgesindedir.\n- **DISC1 Lokusu:** Nörogenez ve dendritik arborizasyonu kontrol eden, şizofrenide ilk tanımlanan translokasyon genidir.\n\n> [!NOTE]\n> Bu aday genlerin her biri hastalığı tek başına başlatamaz; sinaptik devrelerde kümülatif hassasiyet oluşturur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "mq59-s15-1",
+     "question": "ErbB4 reseptörü ile etkileşerek nöronal göç ve miyelinizasyonu yöneten şizofreni aday geni hangisidir?",
+     "options": [
+      {
+       "text": "Neuregulin 1 (NRG1)",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi genetik açısından doğru bir tanımlamadır. Neuregulin 1 NRG1 ifadesi amfi ders notlarında ve temel genetik kaynaklarında doğrudan vurgulanan mekanizmayı eksiksiz açıklar."
+      },
+      {
+       "text": "Asetilkolinesteraz",
+       "isCorrect": false,
+       "explanation": "Asetilkolinesteraz seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Riyanodin reseptörü (RyR1)",
+       "isCorrect": false,
+       "explanation": "Riyanodin reseptörü RyR1 seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Faktör VIII pıhtılaşma geni",
+       "isCorrect": false,
+       "explanation": "Faktör VIII pıhtılaşma geni seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "cm59-s15-1",
+     "sentence": "Moleküler bağlantı ve assosiasyon çalışmaları, şizofrenide sinaptik plastisiteyi etkileyen aday genleri saptamıştır.",
+     "maskedTerm": "plastisiteyi",
+     "hint": "Sinir sisteminin yapısal ve işlevsel olarak değişebilme ve uyum yeteneği"
+    },
+    {
+     "type": "swipe_matching",
+     "id": "sm59-s15-1",
+     "prompt": "Şizofreni aday genlerini temel fonksiyonlarıyla eşleyiniz:",
+     "leftCategory": "Sinaptik Vezikül ve İletim",
+     "rightCategory": "Nöronal Göç ve Gelişim",
+     "cards": [
+      {
+       "text": "DTNBP1 (Disbindin - glutamat salınımı)",
+       "category": "Sinaptik Vezikül ve İletim"
+      },
+      {
+       "text": "NRG1 (Neuregulin 1 - nöron göçü ve ErbB4)",
+       "category": "Nöronal Göç ve Gelişim"
+      },
+      {
+       "text": "DISC1 (Dendritik gelişim ve nörogenez)",
+       "category": "Nöronal Göç ve Gelişim"
+      },
+      {
+       "text": "DAO / DAOA (D-aminoasit oksidaz)",
+       "category": "Sinaptik Vezikül ve İletim"
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "id": "it59-s15-1",
+     "title": "Şizofreni Aday Gen Lokusları",
+     "tableHeaders": [
+      "Aday Gen",
+      "Kromozomal Bölge",
+      "Hücresel Rol"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "DTNBP1 (Disbindin)",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "6p22.3",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Glutamaterjik vezikül trafiği",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "NRG1 (Neuregulin 1)",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "8p12",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "ErbB4 ile nöronal maturasyon",
+         "isMasked": true,
+         "hint": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 16,
+   "id": "k59-s16",
+   "title": "Genomik Varyasyon: CNV ve 22q11.2 Delesyonu",
+   "bolum": "3.3",
+   "pdfSayfalari": [
+    52,
+    54
+   ],
+   "sourcePdf": {
+    "startPage": 52,
+    "endPage": 54
+   },
+   "synthesisNarrative": "Şizofrenide sık polimorfizmlerin yanı sıra yüksek etki büyüklüğüne sahip kopya sayısı varyasyonları (CNV) bulunur.\n\n- **CNV Tanımı:** Genomda 1 kilobazdan (genellikle >500 kb) büyük submikroskopik delesyon veya duplikasyonlardır.\n- **22q11.2 Mikrodelesyonu:** Velokardiyofasiyal sendromlu bireylerin yaklaşık yüzde 25-30'unda yetişkinlikte şizofreni gelişir.\n- **Etki Katsayısı:** 22q11.2 delesyonu taşıyanlarda şizofreni riski genel popülasyona kıyasla yaklaşık 20-30 kat artmıştır.\n\n> [!IMPORTANT]\n> CNV'ler seyrek görülmelerine rağmen hastalık riskini tek başlarına onlarca kat artıran en güçlü genetik faktörlerdir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "mq59-s16-1",
+     "question": "Velokardiyofasiyal sendromda saptanan ve şizofreni riskini onlarca kat artıran mikrodelesyon hangisidir?",
+     "options": [
+      {
+       "text": "22q11.2 mikrodelesyonu",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi genetik açısından doğru bir tanımlamadır. 22q112 mikrodelesyonu ifadesi amfi ders notlarında ve temel genetik kaynaklarında doğrudan vurgulanan mekanizmayı eksiksiz açıklar."
+      },
+      {
+       "text": "Trizomi 18 (Edwards sendromu)",
+       "isCorrect": false,
+       "explanation": "Trizomi 18 Edwards sendromu seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Xp21 distrofin delesyonu",
+       "isCorrect": false,
+       "explanation": "Xp21 distrofin delesyonu seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "5p delesyonu (Kedi miyavlaması)",
+       "isCorrect": false,
+       "explanation": "5p delesyonu Kedi miyavlaması seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "cm59-s16-1",
+     "sentence": "Şizofrenide sık polimorfizmlerin yanı sıra yüksek etki büyüklüğüne sahip kopya sayısı varyasyonları bulunur.",
+     "maskedTerm": "kopya sayısı",
+     "hint": "Büyük genom parçalarının delesyon veya duplikasyonunu belirten kavram"
+    },
+    {
+     "type": "interactive_table",
+     "id": "it59-s16-1",
+     "title": "Şizofrenide Genetik Varyasyon Tipleri",
+     "tableHeaders": [
+      "Varyasyon Tipi",
+      "Toplum Sıklığı",
+      "Risk Artış Oranı (Etki Büyüklüğü)"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Yaygın SNP Polimorfizmleri",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Yüksek (>%5)",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Çok küçük (1.1 - 1.2 kat)",
+         "isMasked": true,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Nadir CNV Delesyonları (22q11.2)",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Çok düşük (<%1)",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Çok yüksek (20-30 kat)",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "stl59-s16-1",
+     "topic": "Psikiyatrik genetik önermeleri",
+     "items": [
+      {
+       "text": "22q11.2 mikrodelesyonu taşıyan bireylerde şizofreni riski belirgin derecede artar.",
+       "isLie": false,
+       "explanation": "Bu delesyonu taşıyanların yaklaşık üçte birinde erişkin dönemde şizofreni tablosu gelişmektedir."
+      },
+      {
+       "text": "Kopya sayısı varyasyonları her zaman standart ışık mikroskobu karyotipiyle kolayca görülür.",
+       "isLie": true,
+       "explanation": "CNV'ler submikroskopik boyuttadır; saptanmaları için mikrodizi (aCGH) veya ileri moleküler yöntemler gerekir."
+      },
+      {
+       "text": "Nadir CNV'ler bireysel olarak güçlü risk oluştursalar da toplumdaki vakaların küçük kısmını açıklar.",
+       "isLie": false,
+       "explanation": "Şizofreni vakalarının çoğu nadir delesyonlardan değil, çok sayıda yaygın SNP'nin birikiminden kaynaklanır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 17,
+   "id": "k59-s17",
+   "title": "Biyolojik Belirteçler: Şizofrenide Endofenotip",
+   "bolum": "3.3",
+   "pdfSayfalari": [
+    55,
+    55
+   ],
+   "sourcePdf": {
+    "startPage": 55,
+    "endPage": 55
+   },
+   "synthesisNarrative": "Endofenotipler, hastalık fenotipi ile altta yatan genetik risk arasında köprü oluşturan ölçülebilir biyolojik belirteçlerdir.\n\n- **Endofenotip Kriterleri:** Kalıtsal olmalı, hastalıkla birlikte kalıtılmalı ve klinik remisyonda bile saptanabilmelidir.\n- **P50 Duyusal Kapılama:** Arka arkaya gelen ses uyaranlarına karşı beynin ikinci yanıtta inhibisyon yapamamasıdır.\n- **Göz Takip Bozukluğu:** Düzgün takip göz hareketlerindeki anormallikler hem hastalarda hem sağlıklı birinci derece akrabalarda görülür.\n\n> [!NOTE]\n> Endofenotip kullanımı klinik semptomların heterojenliğini aşarak genetik araştırmalara homojen biyolojik hedefler sunar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "mq59-s17-1",
+     "question": "Şizofrenide genotip ile klinik sendrom arasında köprü oluşturan kalıtsal ara biyolojik belirtece ne denir?",
+     "options": [
+      {
+       "text": "Endofenotip",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi genetik açısından doğru bir tanımlamadır. Endofenotip ifadesi amfi ders notlarında ve temel genetik kaynaklarında doğrudan vurgulanan mekanizmayı eksiksiz açıklar."
+      },
+      {
+       "text": "Karyotip formülü",
+       "isCorrect": false,
+       "explanation": "Karyotip formülü seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "LOD skoru",
+       "isCorrect": false,
+       "explanation": "LOD skoru seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Mendeliyen baskınlık",
+       "isCorrect": false,
+       "explanation": "Mendeliyen baskınlık seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "cm59-s17-1",
+     "sentence": "Endofenotipler, hastalık fenotipi ile altta yatan genetik risk arasında köprü oluşturan ölçülebilir biyolojik belirteçlerdir.",
+     "maskedTerm": "belirteçlerdir",
+     "hint": "Bir durumu veya riski nesnel olarak gösteren ölçülebilir biyolojik işaret"
+    },
+    {
+     "type": "interactive_table",
+     "id": "it59-s17-1",
+     "title": "Şizofreni Endofenotip Örnekleri",
+     "tableHeaders": [
+      "Endofenotip",
+      "Ölçüm Yöntemi",
+      "Biyolojik Mekanizma"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "P50 Duyusal Kapılama",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "İşitsel uyarılmış EEG potansiyeli",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Gereksiz uyaranı filtreleyememe",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Düzgün Takip Göz Hareketi",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Okülomotor takip testi",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Prefrontal ve vestibüler kontrol defekti",
+         "isMasked": true,
+         "hint": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar59-s17-1",
+     "question": "Psikiyatrik genetik temel ilkesi nedir?",
+     "answer": "Psikiyatrik hastalıklar kompleks poligenik ve multifaktöriyeldir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 18,
+   "id": "k59-s18",
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Şizofreni Genetiği, Aday Genler ve CNV",
+   "bolum": "3.3",
+   "isCheckpoint": true,
+   "pdfSayfalari": [
+    42,
+    55
+   ],
+   "sourcePdf": {
+    "startPage": 42,
+    "endPage": 55
+   },
+   "synthesisNarrative": "Bu bölümde şizofreninin epidemiyolojik riskini, ikiz oranlarını, aday genlerini, CNV delesyonlarını ve endofenotiplerini inceledik.\n\n- **Epidemiyolojik Dağılım:** Genel toplum riski yüzde 1 iken, MZ ikiz konkordansı yüzde 53'tür.\n- **Aday Gen Ağı:** DTNBP1, NRG1 ve DISC1 sinaptik iletim ve nörogelişimsel devrelerde görev alır.\n- **CNV ve Biyobelirteç:** 22q11.2 delesyonu riski 20-30 kat artırırken, P50 kapılama defekti kalıtsal endofenotiptir.\n\n> [!IMPORTANT]\n> Şizofreni poligenik yaygın varyantlar ile seyrek güçlü CNV'lerin oluşturduğu karmaşık bir spektrumdur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "mq59-s18-1",
+     "question": "Üçüncü bölümde işlenen şizofreni genetiği ilkelerine göre hangisi doğrudur?",
+     "options": [
+      {
+       "text": "22q11.2 mikrodelesyonu şizofreni riskini yaklaşık 20-30 kat artırır.",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi genetik açısından doğru bir tanımlamadır. 22q112 mikrodelesyonu şizofreni riskini ifadesi amfi ders notlarında ve temel genetik kaynaklarında doğrudan vurgulanan mekanizmayı eksiksiz açıklar."
+      },
+      {
+       "text": "Şizofrenide monozigot ikiz konkordansı yüzde 1 düzeyindedir.",
+       "isCorrect": false,
+       "explanation": "Şizofrenide monozigot ikiz konkordansı y seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Endofenotipler yalnızca hastalık alevlenme döneminde ortaya çıkan geçici belirtilerdir.",
+       "isCorrect": false,
+       "explanation": "Endofenotipler yalnızca hastalık alevlen seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "DTNBP1 geni hemoglobin zincirini kodlayan bir eritrosit genidir.",
+       "isCorrect": false,
+       "explanation": "DTNBP1 geni hemoglobin zincirini kodlaya seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "id": "it59-s18-1",
+     "title": "Bölüm 3 Şizofreni Genetik Veri Özeti",
+     "tableHeaders": [
+      "Özellik",
+      "Gözlenen Değer / Lokus",
+      "Klinik Yansıma"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "MZ İkiz Konkordansı",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Yaklaşık %53",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Yüksek kalıtılabilirlik (%80)",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Majör CNV Bölgesi",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "22q11.2 mikrodelesyonu",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Şizofreni riskinde 20-30 kat artış",
+         "isMasked": true,
+         "hint": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "stl59-s18-1",
+     "topic": "Psikiyatrik genetik önermeleri",
+     "items": [
+      {
+       "text": "Anne ve babasının her ikisi de şizofreni olan çocuklarda risk yaklaşık yüzde 40'tır.",
+       "isLie": false,
+       "explanation": "İki taraflı aile yükü riski toplum prevalansının kırk katına kadar çıkarır."
+      },
+      {
+       "text": "Neuregulin 1 geni ErbB4 reseptörü ile etkileşerek sinaps maturasyonunu yönetir.",
+       "isLie": false,
+       "explanation": "NRG1-ErbB4 yolağı nöronal gelişim ve miyelinizasyonda anahtar aday sistemdir."
+      },
+      {
+       "text": "Şizofreni genel popülasyonda yüzde 25 sıklıkla görülen hafif bir tablodur.",
+       "isLie": true,
+       "explanation": "Şizofreninin yaşam boyu toplum prevalansı yüzde 25 değil, yaklaşık yüzde 1 düzeyindedir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar59-s18-1",
+     "question": "Psikiyatrik genetik temel ilkesi nedir?",
+     "answer": "Psikiyatrik hastalıklar kompleks poligenik ve multifaktöriyeldir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 19,
+   "id": "k59-s19",
+   "title": "Bağımlılık Genetiği: Ödül Yolakları ve Yatkınlık",
+   "bolum": "4.1",
+   "pdfSayfalari": [
+    56,
+    59
+   ],
+   "sourcePdf": {
+    "startPage": 56,
+    "endPage": 59
+   },
+   "synthesisNarrative": "Madde ve alkol bağımlılığı, mezolimbik dopaminerjik ödül yolağındaki genetik varyasyonlarla yakından ilişkilidir.\n\n- **Ödül Devresi:** Ventral tegmental alandan nükleus akkumbense uzanan dopamin iletimi pekiştirici etkiyi yönetir.\n- **Dopamin Reseptörleri:** DRD2 ve DRD4 reseptör polimorfizmleri madde arama davranışı ve yenilik merakını etkiler.\n- **Kalıtılabilirlik Payı:** Bağımlılık tablolarında aile ve ikiz çalışmaları yüzde 50-60 civarında genetik kalıtılabilirlik gösterir.\n\n> [!NOTE]\n> Bağımlılık gelişiminde dopaminerjik haz algısı ile prefrontal otokontrol genleri birlikte rol oynar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "mq59-s19-1",
+     "question": "Bağımlılık geliştirmede pekiştirici etkiyi yöneten temel nöroanatomik yolak hangisidir?",
+     "options": [
+      {
+       "text": "Mezolimbik dopaminerjik ödül yolağı",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi genetik açısından doğru bir tanımlamadır. Mezolimbik dopaminerjik ödül yolağı ifadesi amfi ders notlarında ve temel genetik kaynaklarında doğrudan vurgulanan mekanizmayı eksiksiz açıklar."
+      },
+      {
+       "text": "Spinotalamik ağrı yolağı",
+       "isCorrect": false,
+       "explanation": "Spinotalamik ağrı yolağı seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Piramidal kortikospinal motor yolak",
+       "isCorrect": false,
+       "explanation": "Piramidal kortikospinal motor yolak seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Arka kordon fasikulus kuneatus",
+       "isCorrect": false,
+       "explanation": "Arka kordon fasikulus kuneatus seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "cm59-s19-1",
+     "sentence": "Madde ve alkol bağımlılığı, mezolimbik dopaminerjik ödül yolağındaki genetik varyasyonlarla yakından ilişkilidir.",
+     "maskedTerm": "mezolimbik",
+     "hint": "Orta beyinden limbik sisteme uzanan nöronal devre"
+    },
+    {
+     "type": "causal_chain",
+     "id": "cc59-s19-1",
+     "prompt": "Bağımlılık gelişimindeki nörobiyolojik basamakları sıralayınız:",
+     "steps": [
+      "1. Genetik Zemin: Dopamin reseptör ve taşıyıcı genlerinde varyasyon",
+      "2. Madde Maruziyeti: Mezolimbik aralıkta aşırı dopamin salınımı",
+      "3. Reseptör Desensitizasyonu: Nöroadaptasyon ve tolerans gelişimi",
+      "4. Kompulsif Kullanım: Yoksunluktan kaçınma ve bağımlılık tablosu"
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar59-s19-1",
+     "question": "Psikiyatrik genetik temel ilkesi nedir?",
+     "answer": "Psikiyatrik hastalıklar kompleks poligenik ve multifaktöriyeldir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 20,
+   "id": "k59-s20",
+   "title": "Alkol Metabolizması: ADH1B, ALDH2 ve Flushing",
+   "bolum": "4.1",
+   "pdfSayfalari": [
+    60,
+    63
+   ],
+   "sourcePdf": {
+    "startPage": 60,
+    "endPage": 63
+   },
+   "synthesisNarrative": "Alkol metabolizmasında rol alan enzimlerin genetik varyantları, bireysel alkol toleransını ve bağımlılık riskini belirler.\n\n- **Enzimatik Oksidasyon:** Etanol önce ADH1B ile asetaldehite, ardından ALDH2 ile asetik asite dönüştürülür.\n- **İnaktif ALDH2 Aleli:** Doğu Asya toplumlarında sık görülen inaktif ALDH2 varyantı, asetaldehitin kanda birikmesine yol açar.\n- **Koruyucu Flushing:** Biriken asetaldehit yüzde kızarma, bulantı ve taşikardi yaparak kişiyi alkol tüketmekten alıkoyar ve korur.\n\n> [!IMPORTANT]\n> ALDH2 eksikliği şiddetli toksik asetaldehit flushing tablosu oluşturarak alkol bağımlılığına karşı güçlü biyolojik direnç sağlar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "mq59-s20-1",
+     "question": "İnaktif ALDH2 enzim varyantına sahip bireylerde görülen flushing reaksiyonunun nedeni nedir?",
+     "options": [
+      {
+       "text": "Asetaldehitin metabolize edilemeyip kanda birikmesi",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi genetik açısından doğru bir tanımlamadır. Asetaldehitin metabolize edilemeyip kand ifadesi amfi ders notlarında ve temel genetik kaynaklarında doğrudan vurgulanan mekanizmayı eksiksiz açıklar."
+      },
+      {
+       "text": "Etanolün hiç emilmeden mide asidini nötralize etmesi",
+       "isCorrect": false,
+       "explanation": "Etanolün hiç emilmeden mide asidini nötr seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Kan şekerinin aniden koma düzeyine yükselmesi",
+       "isCorrect": false,
+       "explanation": "Kan şekerinin aniden koma düzeyine yükse seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Serotonin taşıyıcısının kanda pıhtılaşma başlatması",
+       "isCorrect": false,
+       "explanation": "Serotonin taşıyıcısının kanda pıhtılaşma seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "cm59-s20-1",
+     "sentence": "Alkol metabolizmasında rol alan enzimlerin genetik varyantları, bireysel alkol toleransını ve bağımlılık riskini belirler.",
+     "maskedTerm": "toleransını",
+     "hint": "Maddenin yinelenen kullanımı sonucu başlangıçtaki etkiyi elde etmek için dozu artırma gereksinimi"
+    },
+    {
+     "type": "interactive_table",
+     "id": "it59-s20-1",
+     "title": "Alkol Metabolizma Enzimlerinin Karşılaştırılması",
+     "tableHeaders": [
+      "Enzim",
+      "Substrat ve Ürün",
+      "Klinik Varyant Etkisi"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "ADH1B",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Etanol -> Asetaldehit",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Hızlı metabolizörler daha çabuk asetaldehit üretir",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "ALDH2",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Asetaldehit -> Asetat",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "İnaktif varyant flushing yapar ve bağımlılıktan korur",
+         "isMasked": true,
+         "hint": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "stl59-s20-1",
+     "topic": "Psikiyatrik genetik önermeleri",
+     "items": [
+      {
+       "text": "ALDH2 inaktivasyonu taşıyan bireylerde alkol bağımlılığı görülme oranı belirgin derecede düşüktür.",
+       "isLie": false,
+       "explanation": "Flushing tablosunun yarattığı şiddetli rahatsızlık kişiyi alkol içmekten caydırır ve koruyucu etki gösterir."
+      },
+      {
+       "text": "Asetaldehit vazodilatasyona yol açarak yüzde belirgin eritem ve taşikardiye neden olur.",
+       "isLie": false,
+       "explanation": "Asetaldehit damar düz kaslarını gevşeterek flushing eritemi ve kompanzatuar taşikardi yaratır."
+      },
+      {
+       "text": "ADH1B enzimi asetaldehiti karbondioksit ve suya kadar yıkan son enzimdir.",
+       "isLie": true,
+       "explanation": "ADH1B ilk basamak enzimidir ve etanolü asetaldehite dönüştürür; sonraki yıkımı ALDH2 gerçekleştirir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 21,
+   "id": "k59-s21",
+   "title": "Katekolamin Katabolizması: COMT Val158Met",
+   "bolum": "4.2",
+   "pdfSayfalari": [
+    64,
+    66
+   ],
+   "sourcePdf": {
+    "startPage": 64,
+    "endPage": 66
+   },
+   "synthesisNarrative": "Katekol-O-metiltransferaz (COMT), prefrontal kortekste dopamin ve noradrenalin katabolizmasını yönetir.\n\n- **Enzim İzoformları:** Vücutta çözünür form (S-COMT) ve beyinde yüksek aktivite gösteren membrana bağlı form (MB-COMT) bulunur.\n- **Val158Met Polimorfizmi:** 158. kodonda valin yerine metiyonin gelmesi enzimin termolabilitesini artırır.\n- **Met158 Etkisi:** Met158 formu 3-4 kat daha az aktiftir; sinapslarda dopamin birikerek çalışma belleğini güçlendirir ancak anksiyeteyi artırabilir.\n\n> [!NOTE]\n> Val158 aleli yüksek enzim aktivitesi ve hızlı dopamin yıkımı sağlarken, Met158 aleli yüksek prefrontal dopamin düzeyi oluşturur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "mq59-s21-1",
+     "question": "COMT Val158Met polimorfizminde Met158 alelinin biyokimyasal özelliği hangisidir?",
+     "options": [
+      {
+       "text": "Enzim aktivitesi 3-4 kat daha düşüktür.",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi genetik açısından doğru bir tanımlamadır. Enzim aktivitesi 34 kat daha düşüktür ifadesi amfi ders notlarında ve temel genetik kaynaklarında doğrudan vurgulanan mekanizmayı eksiksiz açıklar."
+      },
+      {
+       "text": "Enzim aktivitesi normalin 20 katına fırlar.",
+       "isCorrect": false,
+       "explanation": "Enzim aktivitesi normalin 20 katına fırl seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Enzim yalnızca asetilkolini parçalamaya başlar.",
+       "isCorrect": false,
+       "explanation": "Enzim yalnızca asetilkolini parçalamaya seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Enzim sadece eritrosit membranında bulunur.",
+       "isCorrect": false,
+       "explanation": "Enzim sadece eritrosit membranında bulun seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "cm59-s21-1",
+     "sentence": "Katekol-O-metiltransferaz, prefrontal kortekste dopamin ve noradrenalin katabolizmasını yönetir.",
+     "maskedTerm": "prefrontal",
+     "hint": "Beynin ön bölgesinde yer alan ve üst düzey bilişsel işlevleri yöneten korteks"
+    },
+    {
+     "type": "before_after_slider",
+     "id": "bas59-s21-1",
+     "leftTitle": "Val158 Aleli (Yüksek Aktivite)",
+     "rightTitle": "Met158 Aleli (Düşük Aktivite)",
+     "leftPoints": [
+      "Termostabil enzim yapısı",
+      "Hızlı dopamin katabolizması",
+      "Düşük prefrontal dopamin düzeyi"
+     ],
+     "rightPoints": [
+      "Termolabil enzim yapısı (3-4 kat düşük)",
+      "Yavaş dopamin katabolizması",
+      "Yüksek prefrontal dopamin düzeyi"
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "id": "it59-s21-1",
+     "title": "COMT Alellerinin Biyolojik Etkileri",
+     "tableHeaders": [
+      "Alel Tipi",
+      "Enzim Aktivite Hızı",
+      "Prefrontal Dopamin"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Val158",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Yüksek (stabil)",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Daha düşük",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Met158",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Düşük (termolabil)",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Daha yüksek (birikir)",
+         "isMasked": true,
+         "hint": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 22,
+   "id": "k59-s22",
+   "title": "Anksiyete ve OKB: İkiz Verileri ve Genetik",
+   "bolum": "4.3",
+   "pdfSayfalari": [
+    67,
+    74
+   ],
+   "sourcePdf": {
+    "startPage": 67,
+    "endPage": 74
+   },
+   "synthesisNarrative": "Anksiyete bozuklukları, panik bozukluk ve obsesif kompulsif bozukluk (OKB) belirgin ailesel kümelenme gösterir.\n\n- **OKB İkiz Verisi:** OKB için MZ ikizlerde konkordans oranı yüzde 75 iken, DZ ikizlerde bu oran yüzde 47 düzeyindedir.\n- **Nöral Devreler:** Kortiko-striato-talamo-kortikal (CSTC) döngüdeki genetik glutamaterjik ve serotonerjik iletim anormallikleri saptanır.\n- **Fobiler ve Yeme Bozuklukları:** Panik bozukluk, agorafobi ve anoreksiya nervoza tablolarında da kalıtılabilirlik yüzde 40-60 aralığındadır.\n\n> [!NOTE]\n> OKB'de erken çocukluk çağı başlangıçlı olgularda genetik yük ve aile içi geçiş erişkin başlangıçlılara göre daha yüksektir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "mq59-s22-1",
+     "question": "Obsesif Kompulsif Bozukluk (OKB) ikiz çalışmalarında monozigot ikiz konkordansı yaklaşık kaçtır?",
+     "options": [
+      {
+       "text": "Yüzde 75",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi genetik açısından doğru bir tanımlamadır. Yüzde 75 ifadesi amfi ders notlarında ve temel genetik kaynaklarında doğrudan vurgulanan mekanizmayı eksiksiz açıklar."
+      },
+      {
+       "text": "Yüzde 10",
+       "isCorrect": false,
+       "explanation": "Yüzde 10 seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Yüzde 1",
+       "isCorrect": false,
+       "explanation": "Yüzde 1 seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Yüzde 100",
+       "isCorrect": false,
+       "explanation": "Yüzde 100 seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "cm59-s22-1",
+     "sentence": "Anksiyete bozuklukları, panik bozukluk ve obsesif kompulsif bozukluk belirgin ailesel kümelenme gösterir.",
+     "maskedTerm": "kümelenme",
+     "hint": "Bir hastalığın belirli ailelerde toplum ortalamasından sık görülmesi"
+    },
+    {
+     "type": "interactive_table",
+     "id": "it59-s22-1",
+     "title": "Anksiyete Spektrumunda İkiz Konkordansları",
+     "tableHeaders": [
+      "Hastalık",
+      "MZ İkiz Konkordansı",
+      "DZ İkiz Konkordansı"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "OKB",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "%75",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "%47",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Panik Bozukluk",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Yaklaşık %40-50",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Yaklaşık %10-15",
+         "isMasked": true,
+         "hint": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar59-s22-1",
+     "question": "Psikiyatrik genetik temel ilkesi nedir?",
+     "answer": "Psikiyatrik hastalıklar kompleks poligenik ve multifaktöriyeldir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 23,
+   "id": "k59-s23",
+   "title": "Klinik Yaklaşım: Psikiyatrik Genetik Danışma",
+   "bolum": "4.3",
+   "pdfSayfalari": [
+    75,
+    82
+   ],
+   "sourcePdf": {
+    "startPage": 75,
+    "endPage": 82
+   },
+   "synthesisNarrative": "Psikiyatrik hastalıklar kompleks ve multifaktöriyeldir; bu nedenle altın standart tek bir genetik tanı testi yoktur.\n\n- **Danışma İlkeleri:** Ailelere, aile çalışmalarından elde edilen ampirik morbid risk oranları ışığında bilgilendirme yapılır.\n- **Risk Belirleme:** Tek bir akrabada hastalık olması riski hafif artırırken, iki ebeveynin hasta olması riski belirgin yükseltir.\n- **İleri Yöntemler:** GWAS, mikrodizi kopya sayısı analizi ve yeni nesil dizileme (NGS) araştırma amaçlı kullanılır.\n\n> [!IMPORTANT]\n> Rutin pratikte psikiyatrik hastalık tanısı koyduran tek bir DNA mutasyon testi bulunmamaktadır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "mq59-s23-1",
+     "question": "Psikiyatrik genetik danışma süreci ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Ailelere ampirik aile çalışmaları bulguları ışığında risk bilgilendirmesi yapılır.",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi genetik açısından doğru bir tanımlamadır. Ailelere ampirik aile çalışmaları bulgul ifadesi amfi ders notlarında ve temel genetik kaynaklarında doğrudan vurgulanan mekanizmayı eksiksiz açıklar."
+      },
+      {
+       "text": "Her majör depresyon hastasına rutin kanda tek gen DNA testiyle tanı konur.",
+       "isCorrect": false,
+       "explanation": "Her majör depresyon hastasına rutin kand seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Genetik danışmada aile ağacı ve akrabalık öyküsüne hiç bakılmaz.",
+       "isCorrect": false,
+       "explanation": "Genetik danışmada aile ağacı ve akrabalı seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      },
+      {
+       "text": "Psikiyatrik hastalıkların tümü otozomal resesif tek gen kusurudur.",
+       "isCorrect": false,
+       "explanation": "Psikiyatrik hastalıkların tümü otozomal seçeneği farklı bir biyolojik ve genetik süreci temsil eden kavramdır. Bu nedenle sorulan özgül klinik durum ve hedeflenen genetik kazanım ile doğrudan örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "cm59-s23-1",
+     "sentence": "Psikiyatrik hastalıklar kompleks ve multifaktöriyeldir; bu nedenle altın standart tek bir genetik tanı testi yoktur.",
+     "maskedTerm": "multifaktöriyeldir",
+     "hint": "Birden çok genetik ve çevresel etmenin bir arada rol oynadığı durum"
+    },
+    {
+     "type": "interactive_table",
+     "id": "it59-s23-1",
+     "title": "Psikiyatrik Genetik Danışma Yaklaşımı",
+     "tableHeaders": [
+      "Parametre",
+      "Mevcut Durum",
+      "Klinik Yaklaşım"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Rutin Tanı Testi",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Altın standart DNA testi yok",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Klinik psikiyatrik muayene esastır",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Risk Değerlendirmesi",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Ampirik aile risk tabloları",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Akrabalık derecesine göre yüzde verilir",
+         "isMasked": true,
+         "hint": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar59-s23-1",
+     "question": "Psikiyatrik genetik temel ilkesi nedir?",
+     "answer": "Psikiyatrik hastalıklar kompleks poligenik ve multifaktöriyeldir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 24,
+   "id": "k59-s24",
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Psikiyatrik Hastalıklar ve Genetik Analizi",
+   "bolum": "4.3",
+   "isGameFinale": true,
+   "pdfSayfalari": [
+    1,
+    82
+   ],
+   "sourcePdf": {
+    "startPage": 1,
+    "endPage": 82
+   },
+   "synthesisNarrative": "Tebrikler! Psikiyatrik Hastalıklar ve Genetik Analizi dersinin tüm basamaklarını başarıyla tamamladınız.\n\n- **Epidemiyolojiden Moleküle:** Aile, ikiz ve evlat edinme yöntemlerinden RFLP, mikrosatellit ve SNP belirteçlerine uzandık.\n- **Klinik Genetik Tablolar:** Bipolar bozukluk, şizofreni, alkol bağımlılığı ve OKB'deki kalıtsal risk paternlerini öğrendik.\n- **Biyolojik Mekanizmalar:** 22q11.2 mikrodelesyonu, ALDH2 flushing reaksiyonu ve COMT Val158Met polimorfizmini kavradık.\n\n> [!IMPORTANT]\n> Şimdi ders sonu etkileşimli oyunlarıyla öğrendiğiniz tüm kritik kazanımları pekiştiriniz.",
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "id": "so59-s24-1",
+     "prompt": "Psikiyatrik genetik araştırmalarında uygulanan yöntemleri tarihsel ve yöntemsel gelişim sırasına göre diziniz:",
+     "steps": [
+      "Aile ve soyağacı morbid risk çalışmaları",
+      "Monozigot ve dizigot ikiz konkordans analizleri",
+      "Evlat edinme (doğa ve yetiştirilme ayrımı) çalışmaları",
+      "RFLP ve mikrosatellit belirteçleri ile bağlantı analizi",
+      "Genom genelinde ilişki (GWAS) ve yeni nesil dizileme"
+     ],
+     "explanation": "Yöntemler epidemiyolojik aile çalışmalarından moleküler analizlere doğru tarihsel ve teknolojik sırayla gelişmiştir."
+    },
+    {
+     "type": "estimate_slider",
+     "id": "es59-s24-1",
+     "prompt": "Şizofreni ikiz çalışmalarında genetik olarak özdeş monozigot (MZ) ikizlerde saptanan konkordans oranı yüzde kaçtır?",
+     "min": 0,
+     "max": 100,
+     "answer": 53,
+     "tolerance": 5,
+     "step": 1,
+     "explanation": "Şizofrenide monozigot ikiz konkordansı yaklaşık yüzde 53 olup güçlü genetik kalıtılabilirliği kanıtlar."
+    },
+    {
+     "type": "perturbation",
+     "id": "pt59-s24-1",
+     "scenario": "İnaktif ALDH2 enzim varyantına sahip bir bireyde alkol tüketimi sonrası metabolik parametrelerin değişim yönünü belirleyiniz:",
+     "parameters": [
+      {
+       "name": "Kanda biriken toksik asetaldehit miktarı",
+       "correct": "up",
+       "explanation": "İnaktif ALDH2 enzimi asetaldehiti asetik asite çeviremediği için kanda asetaldehit hızla yükselir."
+      },
+      {
+       "name": "Yüzde vazodilatasyon, eritem ve flushing şiddeti",
+       "correct": "up",
+       "explanation": "Biriken asetaldehit kan damarlarında güçlü vazodilatasyon yaparak yüzde kızarma ve flushing tablosunu artırır."
+      },
+      {
+       "name": "Kişinin alkol tüketmeye devam etme isteği ve bağımlılık riski",
+       "correct": "down",
+       "explanation": "Asetaldehitin yarattığı şiddetli baş ağrısı, bulantı ve çarpıntı kişide caydırıcılık oluşturarak bağımlılık riskini azaltır."
+      }
+     ]
+    },
+    {
+     "type": "fix_the_text",
+     "id": "ft59-s24-1",
+     "text": "Velokardiyofasiyal sendromda saptanan ve yetişkinlikte şizofreni gelişme riskini yaklaşık 20-30 kat artıran majör kromozomal kopya sayısı varyasyonu Trizomi 21 olarak bilinir.",
+     "errors": [
+      {
+       "wrong": "Trizomi 21",
+       "correct": "22q11.2 mikrodelesyonu",
+       "options": [
+        "22q11.2 mikrodelesyonu",
+        "Trizomi 18",
+        "Xp21 delesyonu",
+        "5p delesyonu"
+       ],
+       "explanation": "22q11.2 mikrodelesyonu şizofreni gelişme riskini 20-30 kat artıran majör kopya sayısı varyasyonudur."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "deckId": "k2p-y25-k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi",
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "matchedPastQuestionsCount": 4,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

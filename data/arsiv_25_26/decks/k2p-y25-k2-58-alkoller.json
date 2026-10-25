@@ -1,0 +1,2458 @@
+{
+ "id": "k2p-y25-k2-58-alkoller",
+ "title": "Alkoller",
+ "discipline": "Tıbbi Farmakoloji",
+ "committee": "donem3-kurul2",
+ "totalSlides": 24,
+ "sayfaHaritasi": "teyitli",
+ "slides": [
+  {
+   "id": "k58-s01",
+   "title": "Alkollerin Genel Özellikleri: Bağımlılık ve Sedasyon",
+   "subtitle": "Alkol Tüketimi, Kötüye Kullanım ve Fiziksel Bağımlılık Ayrımı",
+   "section": "1.1 Genel Farmakoloji ve Kinetik",
+   "content": "Etanol toplumda yaygın tüketilen temel sedatif-hipnotik bileşiktir.\n\n- **Düşük ve Orta Doz Etkileri:** Küçük miktarlarda anksiyeteyi giderir, rahatlama sağlar ve öfori oluşturur.\n- **Kötüye Kullanım Tanımı:** İstenmeyen tıbbi, sosyal veya hukuki sonuçlara rağmen alkol almaya devam etme durumudur.\n- **Fiziksel Bağımlılık:** Kötüye kullanıma ek olarak tolerans gelişimi ve kesildiğinde belirgin yoksunluk bulgularının ortaya çıkmasıdır.\n\n> [!NOTE]\n> Etanol kimyasal yapısıyla hem santral sinir sistemi depresanı hem de endüstriyel çözücü olarak geniş kullanım alanına sahiptir.",
+   "synthesisNarrative": "Etanol toplumda yaygın tüketilen temel sedatif-hipnotik bileşiktir.\n\n- **Düşük ve Orta Doz Etkileri:** Küçük miktarlarda anksiyeteyi giderir, rahatlama sağlar ve öfori oluşturur.\n- **Kötüye Kullanım Tanımı:** İstenmeyen tıbbi, sosyal veya hukuki sonuçlara rağmen alkol almaya devam etme durumudur.\n- **Fiziksel Bağımlılık:** Kötüye kullanıma ek olarak tolerans gelişimi ve kesildiğinde belirgin yoksunluk bulgularının ortaya çıkmasıdır.\n\n> [!NOTE]\n> Etanol kimyasal yapısıyla hem santral sinir sistemi depresanı hem de endüstriyel çözücü olarak geniş kullanım alanına sahiptir.",
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Etanol günümüzde en yaygın tüketilen sedatif-hipnotik maddedir.",
+     "maskedTerm": "sedatif-hipnotik",
+     "hint": "",
+     "explanation": "Etanol farmakolojik sınıflandırmada santral sinir sistemi depresanı olan sedatif-hipnotik ajanlar grubunda yer alır."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Alkol kullanım bozukluklarında 'fiziksel bağımlılık' tanısını 'kötüye kullanım'dan ayıran temel kardinal kriter hangisidir?",
+     "options": [
+      {
+       "id": "o1",
+       "text": "Alkol kesildiğinde tolerans ve yoksunluk sendromu bulgularının ortaya çıkması",
+       "isCorrect": true,
+       "explanation": "Fiziksel bağımlılık nöroadaptasyon sonucu ilaca tolerans gelişmesini ve madde kesildiğinde fizyolojik yoksunluk belirtilerinin yaşanmasını zorunlu kılar. Bu durum patofizyolojik süreçle tam olarak uyumludur."
+      },
+      {
+       "id": "o2",
+       "text": "Yalnızca hafta sonları sosyal ortamlarda alkol tüketilmesi",
+       "isCorrect": false,
+       "explanation": "Yalnızca hafta sonları so ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o3",
+       "text": "Her alkol alımında gastrit ve karın ağrısı yakınması olması",
+       "isCorrect": false,
+       "explanation": "Her alkol alımında gastri ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o4",
+       "text": "Alkolün tadından hoşlanılmaması ve zorla tüketilmesi",
+       "isCorrect": false,
+       "explanation": "Alkolün tadından hoşlanıl ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Alkol Tüketim Düzeyleri ve Bağımlılık",
+     "items": [
+      {
+       "text": "Düşük dozlarda etanol anksiyolitik etki göstererek öfori ve rahatlama oluşturur.",
+       "isLie": false,
+       "explanation": "Etanol santral kortikal inhibitör kontrolü gevşeterek hafif dozlarda anksiyeteyi azaltır."
+      },
+      {
+       "text": "Alkolün kötüye kullanımı daima fiziksel yoksunluk krizleri ile birlikte başlar.",
+       "isLie": true,
+       "explanation": "Kötüye kullanım olumsuz sonuçlara rağmen tüketimdir; fiziksel bağımlılık ve yoksunluk daha ileri evrede gelişir."
+      },
+      {
+       "text": "Fiziksel bağımlılıkta nöronal tolerans ve madde kesilmesinde otonomik semptomlar görülür.",
+       "isLie": false,
+       "explanation": "Tolerans ve yoksunluk tablosu fiziksel bağımlılığın fizyopatolojik temelidir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Kötüye kullanım ile fiziksel bağımlılık arasındaki en temel klinik ve fizyolojik fark nedir?",
+     "answer": "Kötüye kullanım olumsuz sonuçlara rağmen içmeye devam etmeyi ifade ederken; fiziksel bağımlılık ek olarak nöronal tolerans ve kesilme anında yoksunluk sendromu gelişmesini gerektirir."
+    }
+   ],
+   "slideNumber": 1,
+   "bolum": "1.1",
+   "pdfSayfalari": [
+    1,
+    3
+   ],
+   "sourcePdf": {
+    "startPage": 1,
+    "endPage": 3
+   }
+  },
+  {
+   "id": "k58-s02",
+   "title": "Etanol Farmakokinetiği: Emilim ve Dağılım",
+   "subtitle": "Gastrointestinal Emilim, Dağılım Hacmi ve Sıfırıncı Derece Eliminasyon",
+   "section": "1.1 Genel Farmakoloji ve Kinetik",
+   "content": "Etanol küçük ve suda yüksek oranda çözünen bir moleküldür.\n\n- **Hızlı Emilim:** Mide ve ince bağırsaktan pasif difüzyonla emilir. Aç karnına alındığında doruk kan konsantrasyonuna 30 dakika içinde ulaşır.\n- **Geniş Dağılım:** Plazma proteinlerine bağlanmaz. Dağılım hacmi yaklaşık 0.5-0.7 L/kg olup total vücut suyuna eşittir.\n- **Sıfırıncı Derece Eliminasyon:** Alkolün yüzde doksanından fazlası karaciğerde okside olur. Enzimler düşük konsantrasyonda doyduğu için saatte 7-10 gram sabit hızla atılır.\n\n> [!IMPORTANT]\n> Alınan alkolün yalnızca yüzde beş ila onu akciğerler ve böbrekler yoluyla değişmeden atılır.",
+   "synthesisNarrative": "Etanol küçük ve suda yüksek oranda çözünen bir moleküldür.\n\n- **Hızlı Emilim:** Mide ve ince bağırsaktan pasif difüzyonla emilir. Aç karnına alındığında doruk kan konsantrasyonuna 30 dakika içinde ulaşır.\n- **Geniş Dağılım:** Plazma proteinlerine bağlanmaz. Dağılım hacmi yaklaşık 0.5-0.7 L/kg olup total vücut suyuna eşittir.\n- **Sıfırıncı Derece Eliminasyon:** Alkolün yüzde doksanından fazlası karaciğerde okside olur. Enzimler düşük konsantrasyonda doyduğu için saatte 7-10 gram sabit hızla atılır.\n\n> [!IMPORTANT]\n> Alınan alkolün yalnızca yüzde beş ila onu akciğerler ve böbrekler yoluyla değişmeden atılır.",
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Etanolün dağılım hacmi yaklaşık 0.5-0.7 L/kg olup total vücut suyu değerine eşittir.",
+     "maskedTerm": "total vücut suyu",
+     "hint": "",
+     "explanation": "Etanol küçük ve yüksüz polar yapısıyla hücresel membranları aşarak tüm vücut sıvısına homojen dağılır."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Etanolün eliminasyon kinetiğinin klinik dozlarda 'sıfırıncı derece' olmasının temel biyokimyasal nedeni nedir?",
+     "options": [
+      {
+       "id": "o1",
+       "text": "Hepatik metabolizma enzimlerinin (ADH) çok düşük kan konsantrasyonlarında bile tamamen doyması",
+       "isCorrect": true,
+       "explanation": "Alkol dehidrogenaz enziminin Km değeri çok düşüktür; bu nedenle sosyal içicilikte dahi enzim kapasitesi doyar ve birim zamanda sabit miktar atılır. Bu durum patofizyolojik süreçle tam olarak uyumludur."
+      },
+      {
+       "id": "o2",
+       "text": "Böbrek tübüllerinden aktif geri emiliminin glukoz taşıyıcılarına bağımlı olması",
+       "isCorrect": false,
+       "explanation": "Böbrek tübüllerinden akti ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o3",
+       "text": "Plazma albüminine yüzde doksan dokuz oranında geri dönüşümsüz bağlanması",
+       "isCorrect": false,
+       "explanation": "Plazma albüminine yüzde d ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o4",
+       "text": "Etanolün safra yollarıyla enterohepatik dolaşıma girmesi",
+       "isCorrect": false,
+       "explanation": "Etanolün safra yollarıyla ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "title": "Etanol Farmakokinetik Parametreleri",
+     "tableHeaders": [
+      "Parametre",
+      "Klinik Değer",
+      "Özellik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Doruk Konsantrasyon Süresi",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "30 dakika",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Aç karnına hızlı emilim",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Dağılım Hacmi",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "0.5-0.7 L/kg",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Total vücut suyuna eşdeğer",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Eliminasyon Hızı",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "7-10 g/saat",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Sıfırıncı derece sabit kinetik",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Etanol Kinetiği",
+     "items": [
+      {
+       "text": "Aç karnına alınan etanol 30 dakika içinde kanda doruk seviyeye ulaşır.",
+       "isLie": false,
+       "explanation": "Gastrik boşalma hızlı olduğunda ince bağırsaktan emilim süratle tamamlanır."
+      },
+      {
+       "text": "Etanol konsantrasyonu arttıkça eliminasyon yarı ömrü kısalır ve klerens katlanarak artar.",
+       "isLie": true,
+       "explanation": "Sıfır derece kinetiğinde klerens sabit bir oranda değil sabit bir kütleyle yürür; konsantrasyon arttıkça yarı ömür uzar."
+      },
+      {
+       "text": "Alınan dozun yüzde doksanından fazlası karaciğerde enzimatik yolla okside edilir.",
+       "isLie": false,
+       "explanation": "Hepatik oksidasyon majör eliminasyon yoludur."
+      }
+     ]
+    }
+   ],
+   "slideNumber": 2,
+   "bolum": "1.1",
+   "pdfSayfalari": [
+    4,
+    6
+   ],
+   "sourcePdf": {
+    "startPage": 4,
+    "endPage": 6
+   }
+  },
+  {
+   "id": "k58-s03",
+   "title": "Alkol Dehidrogenaz (ADH) Yolağı ve Cinsiyet Farkı",
+   "subtitle": "Sitozolik Oksidasyon, NADH Üretimi ve Gastrik Metabolizma",
+   "section": "1.2 Metabolizma Yolakları",
+   "content": "Etanol metabolizmasının ana basamağı sitozolik alkol dehidrogenaz (ADH) enzimidir.\n\n- **Sitozolik Reaksiyon:** ADH, NAD+ kofaktörünü kullanarak etanolü asetaldehide dönüştürür ve NADH açığa çıkarır.\n- **Gastrik İlk Geçiş:** Mide mukozasında da ADH bulunur ve alınan alkolün bir kısmını kana karışmadan önce parçalar.\n- **Cinsiyet Farklılığı:** Kadınlarda gastrik ADH aktivitesi erkeklere kıyasla daha düşüktür. Ayrıca kadınlarda yağ oranı yüksek ve total vücut suyu düşüktür.\n\n> [!NOTE]\n> Bu iki faktör nedeniyle kadınlar aynı miktarda alkol aldıklarında erkeklerden çok daha yüksek kan konsantrasyonlarına ulaşırlar.",
+   "synthesisNarrative": "Etanol metabolizmasının ana basamağı sitozolik alkol dehidrogenaz (ADH) enzimidir.\n\n- **Sitozolik Reaksiyon:** ADH, NAD+ kofaktörünü kullanarak etanolü asetaldehide dönüştürür ve NADH açığa çıkarır.\n- **Gastrik İlk Geçiş:** Mide mukozasında da ADH bulunur ve alınan alkolün bir kısmını kana karışmadan önce parçalar.\n- **Cinsiyet Farklılığı:** Kadınlarda gastrik ADH aktivitesi erkeklere kıyasla daha düşüktür. Ayrıca kadınlarda yağ oranı yüksek ve total vücut suyu düşüktür.\n\n> [!NOTE]\n> Bu iki faktör nedeniyle kadınlar aynı miktarda alkol aldıklarında erkeklerden çok daha yüksek kan konsantrasyonlarına ulaşırlar.",
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Etanol metabolizmasının ana basamağı sitozolik alkol dehidrogenaz enzimidir.",
+     "maskedTerm": "alkol dehidrogenaz",
+     "hint": "",
+     "explanation": "Alkol dehidrogenaz (ADH) düşük konsantrasyonlarda dahi aktif olan majör metabolik enzimdir."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Aynı kilodaki bir kadın ile bir erkeğe eşit dozda oral etanol verildiğinde kadında kan alkol düzeyinin daha yüksek çıkmasının temel nedeni nedir?",
+     "options": [
+      {
+       "id": "o1",
+       "text": "Kadınlarda gastrik ADH aktivitesinin ve total vücut suyunun daha düşük olması",
+       "isCorrect": true,
+       "explanation": "Midedeki ilk geçiş metabolizmasının azlığı ve daha küçük sıvı dağılım hacmi kan alkol konsantrasyonunu belirgin şekilde artırır. Bu durum patofizyolojik süreçle tam olarak uyumludur."
+      },
+      {
+       "id": "o2",
+       "text": "Kadınlarda karaciğerde mikrozomal enzimlerin tamamen inaktif olması",
+       "isCorrect": false,
+       "explanation": "Kadınlarda karaciğerde mi ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o3",
+       "text": "Kadınlarda böbreklerden alkol atılımının hormonal olarak engellenmesi",
+       "isCorrect": false,
+       "explanation": "Kadınlarda böbreklerden a ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o4",
+       "text": "Kadınlarda alkolün kanda albümine geri dönüşümsüz bağlanması",
+       "isCorrect": false,
+       "explanation": "Kadınlarda alkolün kanda ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      }
+     ]
+    },
+    {
+     "type": "before_after_slider",
+     "title": "Cinsiyetler Arası Etanol Dağılımı",
+     "leftTitle": "Erkek Birey",
+     "rightTitle": "Kadın Birey",
+     "leftPoints": [
+      "Yüksek gastrik ADH aktivitesi",
+      "Geniş total vücut suyu hacmi",
+      "Daha düşük doruk plazma düzeyi"
+     ],
+     "rightPoints": [
+      "Düşük gastrik ADH aktivitesi",
+      "Dar total vücut suyu hacmi",
+      "Daha yüksek doruk plazma düzeyi"
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "title": "Etanol Sitozolik Oksidasyonu",
+     "steps": [
+      "1. Giriş: Etanol hepatosit sitozolüne pasif difüzyonla girer.",
+      "2. Enzimatik basamak: Alkol dehidrogenaz enzimi NAD+ kofaktörünü bağlar.",
+      "3. Ürün oluşumu: Etanol asetaldehide okside edilirken NAD+ indirgenerek NADH üretilir."
+     ]
+    }
+   ],
+   "slideNumber": 3,
+   "bolum": "1.2",
+   "pdfSayfalari": [
+    7,
+    8
+   ],
+   "sourcePdf": {
+    "startPage": 7,
+    "endPage": 8
+   }
+  },
+  {
+   "id": "k58-s04",
+   "title": "Mikrozomal Etanol Oksitleyici Sistem (MEOS)",
+   "subtitle": "Sitokrom P450 2E1 İndüksiyonu ve Serbest Radikal Oluşumu",
+   "section": "1.2 Metabolizma Yolakları",
+   "content": "Yüksek alkol konsantrasyonlarında mikrozomal etanol oksitleyici sistem (MEOS) devreye girer.\n\n- **Enzim Yapısı:** Endoplazmik retikulumda yer alan karma fonksiyonlu oksidaz sistemidir; temel bileşeni CYP2E1 izoenzimidir.\n- **Kofaktör Gereksinimi:** Reaksiyon sırasında oksijen ve NADPH tüketilir.\n- **Enzim İndüksiyonu:** Kronik alkol tüketimi CYP2E1 sentezini artırır; bu durum hem etanol klirensini hızlandırır hem de diğer ilaçların metabolizmasını değiştirir.\n\n> [!IMPORTANT]\n> MEOS aktivasyonu serbest oksijen radikalleri ve toksik ara ürünler oluşturarak hücresel hasara zemin hazırlar.",
+   "synthesisNarrative": "Yüksek alkol konsantrasyonlarında mikrozomal etanol oksitleyici sistem (MEOS) devreye girer.\n\n- **Enzim Yapısı:** Endoplazmik retikulumda yer alan karma fonksiyonlu oksidaz sistemidir; temel bileşeni CYP2E1 izoenzimidir.\n- **Kofaktör Gereksinimi:** Reaksiyon sırasında oksijen ve NADPH tüketilir.\n- **Enzim İndüksiyonu:** Kronik alkol tüketimi CYP2E1 sentezini artırır; bu durum hem etanol klirensini hızlandırır hem de diğer ilaçların metabolizmasını değiştirir.\n\n> [!IMPORTANT]\n> MEOS aktivasyonu serbest oksijen radikalleri ve toksik ara ürünler oluşturarak hücresel hasara zemin hazırlar.",
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Endoplazmik retikulumda yer alan karma fonksiyonlu oksidaz sistemidir; temel bileşeni CYP2E1 izoenzimidir.",
+     "maskedTerm": "CYP2E1",
+     "hint": "",
+     "explanation": "CYP2E1 kronik alkol ile indüklenen ve yüksek alkol düzeylerinde çalışan temel MEOS enzimidir."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Mikrozomal Etanol Oksitleyici Sistem (MEOS) ile ilgili aşağıdaki özelliklerden hangisi sitozolik ADH yolağından farklıdır?",
+     "options": [
+      {
+       "id": "o1",
+       "text": "Kofaktör olarak NADPH ve moleküler oksijen kullanması ve kronik alkolle indüklenmesi",
+       "isCorrect": true,
+       "explanation": "MEOS mikrozomal bir P450 sistemi olup NADPH tüketir ve indüklenebilir; ADH ise sitozolik olup NAD+ kullanır. Bu durum patofizyolojik süreçle tam olarak uyumludur."
+      },
+      {
+       "id": "o2",
+       "text": "Etanolü doğrudan glukoza dönüştürmesi",
+       "isCorrect": false,
+       "explanation": "Etanolü doğrudan glukoza ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o3",
+       "text": "Yalnızca böbrek glomerüllerinde bulunması",
+       "isCorrect": false,
+       "explanation": "Yalnızca böbrek glomerüll ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o4",
+       "text": "Etanol konsantrasyonu çok düşükken tam kapasiteyle çalışması",
+       "isCorrect": false,
+       "explanation": "Etanol konsantrasyonu çok ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "MEOS ve CYP2E1 Özellikleri",
+     "items": [
+      {
+       "text": "MEOS yolağı kronik alkol kullanımı ile aktive olarak indüklenir.",
+       "isLie": false,
+       "explanation": "Enzim indüksiyonu yüksek alkol tüketenlerde klerensi artırır."
+      },
+      {
+       "text": "MEOS kofaktör olarak NAD+ kullanır ve ATP sentezine doğrudan katılır.",
+       "isLie": true,
+       "explanation": "MEOS kofaktör olarak NADPH ve oksijen kullanır; ATP sentezlemez."
+      },
+      {
+       "text": "CYP2E1 indüksiyonu serbest oksijen radikali üretimini artırarak hepatotoksisiteye katkıda bulunur.",
+       "isLie": false,
+       "explanation": "Toksik radikal üretimi doku hasarını tetikler."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Kronik alkol tüketiminin MEOS sistemi üzerindeki etkisi ve bunun klinik sonucu nedir?",
+     "answer": "CYP2E1 enzimini indükler; bu durum yüksek kan konsantrasyonlarında alkol metabolizmasını hızlandırır ve toksik reaktif oksijen türevlerinin oluşumunu artırır."
+    }
+   ],
+   "slideNumber": 4,
+   "bolum": "1.2",
+   "pdfSayfalari": [
+    9,
+    11
+   ],
+   "sourcePdf": {
+    "startPage": 9,
+    "endPage": 11
+   }
+  },
+  {
+   "id": "k58-s05",
+   "title": "Asetaldehit Metabolizması ve ALDH Yolağı",
+   "subtitle": "Mitokondriyal Oksidasyon, Genetik Polimorfizm ve Disülfiram",
+   "section": "1.2 Metabolizma Yolakları",
+   "content": "Etanolün oksidasyonu sonucu oluşan asetaldehit son derece reaktif ve toksik bir bileşiktir.\n\n- **Mitokondriyal Enzim:** Karaciğerde asetaldehidin büyük kısmı mitokondriyal aldehit dehidrogenaz (ALDH) ile asetata dönüştürülür.\n- **Asetatın Kaderi:** Asetat dolaşıma katılarak periferik dokularda asetil-CoA'ya çevrilir ve Krebs döngüsünde karbondioksit ve suya yıkılır.\n- **ALDH İnhibisyonu:** Disülfiram ilacı ALDH enzimini bloke eder. Alkol alındığında asetaldehit birikir ve yüzde kızarma, zonklayıcı baş ağrısı, bulantı ve hipotansiyon gelişir.\n\n> [!NOTE]\n> Doğu Asya toplumlarında ALDH2 geninde inaktive edici polimorfizm sıktır; bu bireyler az miktarda alkolle dahi şiddetli flushing yaşarlar.",
+   "synthesisNarrative": "Etanolün oksidasyonu sonucu oluşan asetaldehit son derece reaktif ve toksik bir bileşiktir.\n\n- **Mitokondriyal Enzim:** Karaciğerde asetaldehidin büyük kısmı mitokondriyal aldehit dehidrogenaz (ALDH) ile asetata dönüştürülür.\n- **Asetatın Kaderi:** Asetat dolaşıma katılarak periferik dokularda asetil-CoA'ya çevrilir ve Krebs döngüsünde karbondioksit ve suya yıkılır.\n- **ALDH İnhibisyonu:** Disülfiram ilacı ALDH enzimini bloke eder. Alkol alındığında asetaldehit birikir ve yüzde kızarma, zonklayıcı baş ağrısı, bulantı ve hipotansiyon gelişir.\n\n> [!NOTE]\n> Doğu Asya toplumlarında ALDH2 geninde inaktive edici polimorfizm sıktır; bu bireyler az miktarda alkolle dahi şiddetli flushing yaşarlar.",
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Karaciğerde asetaldehidin büyük kısmı mitokondriyal aldehit dehidrogenaz ile asetata dönüştürülür.",
+     "maskedTerm": "aldehit dehidrogenaz",
+     "hint": "",
+     "explanation": "Aldehit dehidrogenaz (ALDH) asetaldehit toksisitesini önleyen kritik enzimdir."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Disülfiram tedavisi altındaki bir hasta az miktarda etanol tükettiğinde ortaya çıkan şiddetli flushing, bulantı ve hipotansiyon tablosunun doğrudan nedeni nedir?",
+     "options": [
+      {
+       "id": "o1",
+       "text": "ALDH enziminin inhibe edilmesi sonucu kanda toksik asetaldehit birikimi",
+       "isCorrect": true,
+       "explanation": "Bu seçenekte belirtilen mekanizma, ilgili farmakolojik sürecin temel klinik ve biyokimyasal basamağını doğru olarak açıklar. Dolayısıyla soruda istenen doğru yanıtı bu seçenek oluşturmaktadır."
+      },
+      {
+       "id": "o2",
+       "text": "Alkolün doğrudan beta reseptörleri aşırı uyarması",
+       "isCorrect": false,
+       "explanation": "Alkolün doğrudan beta res ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o3",
+       "text": "Etanolün midede hidroklorik asitle reaksiyona girip gaz oluşturması",
+       "isCorrect": false,
+       "explanation": "Etanolün midede hidroklor ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o4",
+       "text": "Böbrek tübüllerinde ürik asit kristallerinin tıkanma yapması",
+       "isCorrect": false,
+       "explanation": "Böbrek tübüllerinde ürik ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "title": "Asetaldehit Toksisitesi Gelişimi",
+     "steps": [
+      "1. Etanol alımı: Alkol dehidrogenaz etanolü asetaldehide dönüştürür.",
+      "2. Blokaj: Disülfiram veya ALDH2 eksikliği mitokondriyal aldehit dehidrogenazı engeller.",
+      "3. Birikim: Kanda yükselen asetaldehit vazodilatasyon, flushing, bulantı ve hipotansiyon oluşturur."
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Mitokondriyal ALDH2 enziminde inaktive edici genetik varyant taşıyan bireylerde alkol alımı sonrası ne gözlenir?",
+     "answer": "Asetaldehit hızla birikir; yüzde kızarma (flushing), taşikardi, bulantı ve şiddetli rahatsızlık hissi gelişir; bu durum alkolizm riskine karşı koruyucudur."
+    }
+   ],
+   "slideNumber": 5,
+   "bolum": "1.3",
+   "pdfSayfalari": [
+    12,
+    14
+   ],
+   "sourcePdf": {
+    "startPage": 12,
+    "endPage": 14
+   }
+  },
+  {
+   "id": "k58-s06",
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Emilim, Dağılım ve Metabolizma",
+   "subtitle": "Kinetik Kurallar, Enzimatik Yolaklar ve Cinsiyet Dinamikleri",
+   "section": "1.3 Bölüm Tekrarı",
+   "content": "Bu aşamada etanolün emilimi, doku dağılımı ve karaciğer metabolizmasının temel basamaklarını pekiştiriyoruz.\n\n- **Kinetik Profil:** Total vücut suyuna eşit dağılım hacmi (0.5-0.7 L/kg) ve saatte 7-10 gram sabit hızlı sıfırıncı derece eliminasyon esastır.\n- **ADH ve Cinsiyet:** Midedeki ilk geçiş ADH aktivitesinin düşüklüğü ve düşük vücut suyu kadınlarda daha yüksek kan konsantrasyonu oluşturur.\n- **MEOS ve ALDH:** Kronik indüklenen CYP2E1 serbest radikal üretir; ALDH blokajı ise asetaldehit birikimi ile toksik sendrom yaratır.\n\n> [!IMPORTANT]\n> Klinik dozlardaki sıfır derece eliminasyonu, alkol alımı arttıkça kandan temizlenme süresinin öngörülemez şekilde uzamasına yol açar.",
+   "synthesisNarrative": "Bu aşamada etanolün emilimi, doku dağılımı ve karaciğer metabolizmasının temel basamaklarını pekiştiriyoruz.\n\n- **Kinetik Profil:** Total vücut suyuna eşit dağılım hacmi (0.5-0.7 L/kg) ve saatte 7-10 gram sabit hızlı sıfırıncı derece eliminasyon esastır.\n- **ADH ve Cinsiyet:** Midedeki ilk geçiş ADH aktivitesinin düşüklüğü ve düşük vücut suyu kadınlarda daha yüksek kan konsantrasyonu oluşturur.\n- **MEOS ve ALDH:** Kronik indüklenen CYP2E1 serbest radikal üretir; ALDH blokajı ise asetaldehit birikimi ile toksik sendrom yaratır.\n\n> [!IMPORTANT]\n> Klinik dozlardaki sıfır derece eliminasyonu, alkol alımı arttıkça kandan temizlenme süresinin öngörülemez şekilde uzamasına yol açar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Etanol metabolizmasında görev alan enzimler ve özellikleri ile ilgili aşağıdaki eşleştirmelerden hangisi doğrudur?",
+     "options": [
+      {
+       "id": "o1",
+       "text": "Alkol dehidrogenaz (ADH): Sitozolik yerleşimli, düşük Km'li ve NAD+ bağımlı ana enzim",
+       "isCorrect": true,
+       "explanation": "Bu seçenekte belirtilen mekanizma, ilgili farmakolojik sürecin temel klinik ve biyokimyasal basamağını doğru olarak açıklar. Dolayısıyla soruda istenen doğru yanıtı bu seçenek oluşturmaktadır."
+      },
+      {
+       "id": "o2",
+       "text": "CYP2E1 (MEOS): Sitozolik yerleşimli olup sadece tek doz alkolle tamamen inhibe olan enzim",
+       "isCorrect": false,
+       "explanation": "CYP2E1 (MEOS): Sitozolik ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o3",
+       "text": "Aldehit dehidrogenaz (ALDH): Yalnızca kanda serbest dolaşan ve oksijeni tüketen enzim",
+       "isCorrect": false,
+       "explanation": "Aldehit dehidrogenaz (ALD ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o4",
+       "text": "Katalaz: Alkolün yüzde doksan beşini mitokondride suya dönüştüren majör enzim",
+       "isCorrect": false,
+       "explanation": "Katalaz: Alkolün yüzde do ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "title": "Metabolik Enzimlerin Karşılaştırması",
+     "tableHeaders": [
+      "Enzim",
+      "Hücresel Yerleşim",
+      "Kofaktör",
+      "İnhibitör / İndükleyici"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Alkol Dehidrogenaz",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Sitozol",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "NAD+",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Fomepizol ile inhibe",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "CYP2E1 (MEOS)",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Endoplazmik retikulum",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "NADPH ve O2",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Kronik etanolle indüklenir",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Aldehit Dehidrogenaz",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Mitokondri",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "NAD+",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Disülfiram ile inhibe",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Temel Farmakokinetik Kurallar",
+     "items": [
+      {
+       "text": "Etanolün dağılım hacmi total vücut suyuna yaklaşık olarak eşittir.",
+       "isLie": false,
+       "explanation": "Küçük ve suda çözünür molekül tüm kompartımanlara dağılır."
+      },
+      {
+       "text": "Etanol kanda birinci derece kinetikle atıldığı için kan düzeyi ne olursa olsun sabit yüzde ile temizlenir.",
+       "isLie": true,
+       "explanation": "Klinik dozlarda enzimler doymuş olduğundan sıfır derece kinetikle sabit miktarda (7-10 g/saat) atılır."
+      },
+      {
+       "text": "Disülfiram varlığında alkol alındığında asetaldehit birikimi toksik flushing yapar.",
+       "isLie": false,
+       "explanation": "ALDH inhibisyonu sonucu asetaldehit birikir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Etanolün eliminasyon hızını belirleyen temel faktör nedir ve saatte ne kadar etanol atılır?",
+     "answer": "Hepatik ADH enziminin doymuş kapasitesi belirler; sıfır derece kinetikle saatte yaklaşık 7-10 gram etanol metabolize edilir."
+    }
+   ],
+   "slideNumber": 6,
+   "bolum": "1.3",
+   "pdfSayfalari": [
+    1,
+    14
+   ],
+   "sourcePdf": {
+    "startPage": 1,
+    "endPage": 14
+   }
+  },
+  {
+   "id": "k58-s07",
+   "title": "MSS Farmakodinamiği: GABA-A ve NMDA Reseptörleri",
+   "subtitle": "İnhibitör İletinin Kolaylaştırılması ve Eksitatör Yolakların Baskılanması",
+   "section": "2.1 Farmakodinami ve Toksisite",
+   "content": "Etanol santral sinir sisteminde birden fazla nörotransmitter sistemini eş zamanlı modüle eder.\n\n- **GABA-A Kolaylaştırması:** GABA-A reseptörlerine bağlanarak GABA aracılı klorür girişini artırır; nöronal membranı hiperpolarize ederek sedasyon oluşturur.\n- **NMDA İnhibisyonu:** Eksitatör glutamat NMDA reseptörlerinin iyon kanal fonksiyonunu allosterik olarak baskılar; bilişsel yavaşlama ve amneziye yol açar.\n- **Akut Tolerans:** Birkaç saatlik tüketim sonrasında dahi beyin dokusunda alkolün depresan etkilerine karşı akut tolerans gelişmeye başlar.\n\n> [!NOTE]\n> Etanol ayrıca serotonerjik, nikotinik ve kannabinoid sistemlerle de etkileşime girerek genel sedatif tabloyu pekiştirir.",
+   "synthesisNarrative": "Etanol santral sinir sisteminde birden fazla nörotransmitter sistemini eş zamanlı modüle eder.\n\n- **GABA-A Kolaylaştırması:** GABA-A reseptörlerine bağlanarak GABA aracılı klorür girişini artırır; nöronal membranı hiperpolarize ederek sedasyon oluşturur.\n- **NMDA İnhibisyonu:** Eksitatör glutamat NMDA reseptörlerinin iyon kanal fonksiyonunu allosterik olarak baskılar; bilişsel yavaşlama ve amneziye yol açar.\n- **Akut Tolerans:** Birkaç saatlik tüketim sonrasında dahi beyin dokusunda alkolün depresan etkilerine karşı akut tolerans gelişmeye başlar.\n\n> [!NOTE]\n> Etanol ayrıca serotonerjik, nikotinik ve kannabinoid sistemlerle de etkileşime girerek genel sedatif tabloyu pekiştirir.",
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Etanol santral sinir sisteminde majör inhibitör reseptör olan GABA-A fonksiyonunu kolaylaştırır.",
+     "maskedTerm": "GABA-A",
+     "hint": "",
+     "explanation": "Etanol GABA-A reseptörünün allosterik pozitif modülatörüdür ve klor akımını artırır."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Etanolün santral sinir sistemindeki nörobiyolojik etkileri ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "options": [
+      {
+       "id": "o1",
+       "text": "GABA-A aracılı inhibitör iletiyi kolaylaştırırken, glutamat NMDA reseptörlerini allosterik olarak baskılar",
+       "isCorrect": true,
+       "explanation": "Bu seçenekte belirtilen mekanizma, ilgili farmakolojik sürecin temel klinik ve biyokimyasal basamağını doğru olarak açıklar. Dolayısıyla soruda istenen doğru yanıtı bu seçenek oluşturmaktadır."
+      },
+      {
+       "id": "o2",
+       "text": "NMDA reseptörlerini uyararak intraselüler kalsiyumu aşırı yükseltir ve konvülsiyon yapar",
+       "isCorrect": false,
+       "explanation": "NMDA reseptörlerini uyara ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o3",
+       "text": "Yalnızca dopamin geri alım pompalarını geri dönüşümsüz bloke eder",
+       "isCorrect": false,
+       "explanation": "Yalnızca dopamin geri alı ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o4",
+       "text": "GABA-A reseptör antagonistleri gibi davranarak uykusuzluk oluşturur",
+       "isCorrect": false,
+       "explanation": "GABA-A reseptör antagonis ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      }
+     ]
+    },
+    {
+     "type": "before_after_slider",
+     "title": "Nörotransmitter Modülasyonu",
+     "leftTitle": "GABAerjik Sistem",
+     "rightTitle": "Glutamaterjik Sistem",
+     "leftPoints": [
+      "GABA-A reseptör fonksiyonu artar",
+      "Klorür iyon iletkenliği yükselir",
+      "Membran hiperpolarizasyonu ve sedasyon"
+     ],
+     "rightPoints": [
+      "NMDA reseptör fonksiyonu baskılanır",
+      "Kalsiyum iyon geçişi engellenir",
+      "Bilişsel yavaşlama ve amnezi gelişimi"
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Santral Reseptör Etkileşimleri",
+     "items": [
+      {
+       "text": "Etanol GABA-A reseptörlerinde allosterik kolaylaştırıcı etki yaparak sedasyon sağlar.",
+       "isLie": false,
+       "explanation": "GABAerjik transmisyonun güçlenmesi temel depresan mekanizmadır."
+      },
+      {
+       "text": "Etanol NMDA glutamat reseptörlerini doğrudan açarak postsinaptik nöronu uyarır.",
+       "isLie": true,
+       "explanation": "Etanol NMDA reseptörlerini inhibe eder, uyarmaz."
+      },
+      {
+       "text": "Tüketimden birkaç saat sonra alkolün etkilerine karşı nöronal akut tolerans gelişebilir.",
+       "isLie": false,
+       "explanation": "Akut tolerans aynı kan düzeyinde daha az klinik etki görülmesine yol açar."
+      }
+     ]
+    }
+   ],
+   "slideNumber": 7,
+   "bolum": "2.1",
+   "pdfSayfalari": [
+    15,
+    17
+   ],
+   "sourcePdf": {
+    "startPage": 15,
+    "endPage": 17
+   }
+  },
+  {
+   "id": "k58-s08",
+   "title": "Akut Kardiyovasküler ve Düz Kas Etkileri",
+   "subtitle": "Kutanöz Vazodilatasyon, Hipotermi Riski ve Miyokard Depresyonu",
+   "section": "2.1 Farmakodinami ve Toksisite",
+   "content": "Akut alkol alımı periferik damar yatağını ve kalp kasını belirgin şekilde etkiler.\n\n- **Düz Kas Gevşemesi:** Etanol ve metaboliti asetaldehit vasküler düz kaslarda gevşeme yapar. Kutanöz damarlarda vazodilatasyon ve yüzde kızarma gelişir.\n- **Hipotermi Riski:** Cilt damarlarının genişlemesi ısı kaybını hızlandırır; soğuk ortamlarda maruziyetle ölümcül hipotermi riski artar.\n- **Miyokard Depresyonu:** Kan konsantrasyonu 100 mg/dL'yi aştığında miyokard kontraktilitesi doğrudan baskılanır.\n\n> [!IMPORTANT]\n> Akut sarhoşluktaki bireylerde hissedilen sıcaklık duygusu yalancıdır; aksine periferik vazodilatasyon nedeniyle çekirdek vücut ısısı düşer.",
+   "synthesisNarrative": "Akut alkol alımı periferik damar yatağını ve kalp kasını belirgin şekilde etkiler.\n\n- **Düz Kas Gevşemesi:** Etanol ve metaboliti asetaldehit vasküler düz kaslarda gevşeme yapar. Kutanöz damarlarda vazodilatasyon ve yüzde kızarma gelişir.\n- **Hipotermi Riski:** Cilt damarlarının genişlemesi ısı kaybını hızlandırır; soğuk ortamlarda maruziyetle ölümcül hipotermi riski artar.\n- **Miyokard Depresyonu:** Kan konsantrasyonu 100 mg/dL'yi aştığında miyokard kontraktilitesi doğrudan baskılanır.\n\n> [!IMPORTANT]\n> Akut sarhoşluktaki bireylerde hissedilen sıcaklık duygusu yalancıdır; aksine periferik vazodilatasyon nedeniyle çekirdek vücut ısısı düşer.",
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Cilt damarlarının genişlemesi ısı kaybını hızlandırır; soğuk ortamlarda maruziyetle ölümcül hipotermi riski artar.",
+     "maskedTerm": "hipotermi",
+     "hint": "",
+     "explanation": "Kutanöz vazodilatasyon çevreye ısı transferini artırarak çekirdek vücut sıcaklığını düşürür."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Yüksek doz akut etanol alan bir bireyde periferik damarlarda vazodilatasyon gelişmesine rağmen donma ve hipotermi riskinin artmasının fizyolojik nedeni nedir?",
+     "options": [
+      {
+       "id": "o1",
+       "text": "Kutanöz vazodilatasyon ile cilde kan akımının artması sonucu çevreye aşırı ısı kaybedilmesi",
+       "isCorrect": true,
+       "explanation": "Cilt kan akımının artışı yüzeyel sıcaklık hissi verirken çekirdekten çevreye ısı kaçışını hızlandırarak vücut ısısını düşürür. Bu durum patofizyolojik süreçle tam olarak uyumludur."
+      },
+      {
+       "id": "o2",
+       "text": "Etanolün tiroid bezinden kalsitonin salgısını sıfırlaması",
+       "isCorrect": false,
+       "explanation": "Etanolün tiroid bezinden ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o3",
+       "text": "Periferik damarların tamamen büzüşerek cildi kansız bırakması",
+       "isCorrect": false,
+       "explanation": "Periferik damarların tama ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o4",
+       "text": "Etanolün eritrositlerde oksijen taşımasını tamamen bloke etmesi",
+       "isCorrect": false,
+       "explanation": "Etanolün eritrositlerde o ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Akut Kardiyovasküler Yanıtlar",
+     "items": [
+      {
+       "text": "Etanol ve asetaldehit periferik damar düz kaslarında direkt gevşeme oluşturur.",
+       "isLie": false,
+       "explanation": "Düz kas gevşemesi kutanöz kızarıklık ve hipotansiyon eğilimi yaratır."
+      },
+      {
+       "text": "Akut etanol alımı miyokard kontraktilitesini artırarak kardiyak debiyi daima iki katına çıkarır.",
+       "isLie": true,
+       "explanation": "Aksine yüksek konsantrasyonlarda miyokard kontraktilitesini deprese eder."
+      },
+      {
+       "text": "Periferik vazodilatasyon soğuk havalarda ısı kaybını hızlandırarak hipotermiye zemin hazırlar.",
+       "isLie": false,
+       "explanation": "Çekirdek sıcaklığının düşmesi akut intoksikasyonda ölümcül bir tehlikedir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Akut etanol tüketiminde ciltte kızarma ve sıcaklık hissi olmasına rağmen neden hipotermi riski bulunur?",
+     "answer": "Kutanöz damarların vazodilatasyonu ciltte yalancı bir ısınma algısı oluştursa da, vücut çekirdeğindeki ısının hızla çevreye yayılmasına ve çekirdek sıcaklığının tehlikeli düzeyde düşmesine neden olur."
+    }
+   ],
+   "slideNumber": 8,
+   "bolum": "2.2",
+   "pdfSayfalari": [
+    18,
+    20
+   ],
+   "sourcePdf": {
+    "startPage": 18,
+    "endPage": 20
+   }
+  },
+  {
+   "id": "k58-s09",
+   "title": "Karaciğer Hasarı: Yağlı Karaciğer, Hepatit ve Siroz",
+   "subtitle": "Metabolik Yansımalar, Yağ Asidi Oksidasyon İnhibisyonu ve Fibrozis",
+   "section": "2.2 Kronik Toksisite ve Organ Hasarları",
+   "content": "Karaciğer hastalığı kronik alkol kötüye kullanımının en yaygın tıbbi komplikasyonudur.\n\n- **Yağlı Karaciğer (Steatoz):** Yüksek NADH/NAD+ oranı yağ asidi beta-oksidasyonunu baskılar ve trigliserit sentezini artırır; erken dönemde geri dönüşümlüdür.\n- **Alkolik Hepatit:** Hepatosit nekrozu, Mallory cisimcikleri ve nötrofilik infiltrasyon ile karakterize akut inflamatuvar tablodur.\n- **Alkolik Siroz:** Kronik nekroz ve hepatik stellat hücre aktivasyonu sonucu kollajen birikimi, rejenerasyon nodülleri ve portal hipertansiyon gelişir.\n\n> [!NOTE]\n> Siroz gelişen kronik alkolik bireylerde hepatoselüler karsinom riski belirgin şekilde artar.",
+   "synthesisNarrative": "Karaciğer hastalığı kronik alkol kötüye kullanımının en yaygın tıbbi komplikasyonudur.\n\n- **Yağlı Karaciğer (Steatoz):** Yüksek NADH/NAD+ oranı yağ asidi beta-oksidasyonunu baskılar ve trigliserit sentezini artırır; erken dönemde geri dönüşümlüdür.\n- **Alkolik Hepatit:** Hepatosit nekrozu, Mallory cisimcikleri ve nötrofilik infiltrasyon ile karakterize akut inflamatuvar tablodur.\n- **Alkolik Siroz:** Kronik nekroz ve hepatik stellat hücre aktivasyonu sonucu kollajen birikimi, rejenerasyon nodülleri ve portal hipertansiyon gelişir.\n\n> [!NOTE]\n> Siroz gelişen kronik alkolik bireylerde hepatoselüler karsinom riski belirgin şekilde artar.",
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Kronik nekroz ve hepatik stellat hücre aktivasyonu sonucu kollajen birikimi, rejenerasyon nodülleri ve portal hipertansiyon gelişir.",
+     "maskedTerm": "portal hipertansiyon",
+     "hint": "",
+     "explanation": "Sirozda parankim mimarisinin bozulması portal kan akımına direnç oluşturarak portal hipertansiyon tablosu yaratır."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Kronik alkolizmde hepatik steatoz (yağlı karaciğer) gelişimini başlatan temel biyokimyasal mekanizma hangisidir?",
+     "options": [
+      {
+       "id": "o1",
+       "text": "Etanol metabolizması sırasında artan NADH/NAD+ oranının yağ asidi beta-oksidasyonunu baskılaması",
+       "isCorrect": true,
+       "explanation": "Bu seçenekte belirtilen mekanizma, ilgili farmakolojik sürecin temel klinik ve biyokimyasal basamağını doğru olarak açıklar. Dolayısıyla soruda istenen doğru yanıtı bu seçenek oluşturmaktadır."
+      },
+      {
+       "id": "o2",
+       "text": "Alkolün doğrudan safra asitlerini yağ dokusuna dönüştürmesi",
+       "isCorrect": false,
+       "explanation": "Alkolün doğrudan safra as ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o3",
+       "text": "Hepatik albümin sentezinin aşırı artarak hepatositleri parçalaması",
+       "isCorrect": false,
+       "explanation": "Hepatik albümin sentezini ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o4",
+       "text": "Etanolün karaciğerde glikojen depolarını devasa boyutta büyütmesi",
+       "isCorrect": false,
+       "explanation": "Etanolün karaciğerde glik ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "title": "Alkolik Karaciğer Hastalığı Evreleri",
+     "steps": [
+      "1. Hepatik steatoz: Artan NADH etkisiyle yağ asidi oksidasyonu durur ve mikroveziküler yağ birikir.",
+      "2. Alkolik hepatit: Sitokin salınımı, nötrofilik infiltrasyon ve Mallory cisimciği oluşumu ile nekroz başlar.",
+      "3. Siroz evresi: Stellat hücrelerin kollajen üretimiyle parankim nodüllere bölünür ve portal hipertansiyon yerleşir."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Alkolik Karaciğer Patolojisi",
+     "items": [
+      {
+       "text": "Yağlı karaciğer evresi alkol tüketimi kesildiğinde tamamen gerileyebilen geri dönüşümlü bir tablodur.",
+       "isLie": false,
+       "explanation": "Erken dönemde alkol kesilirse hepatositlerdeki trigliserit birikimi kaybolur."
+      },
+      {
+       "text": "Alkolik siroz geri dönüşümsüz fibrozis ve vasküler mimari bozulmasıyla seyreder.",
+       "isLie": false,
+       "explanation": "Siroz kalıcı doku yeniden yapılanmasıdır."
+      },
+      {
+       "text": "Alkol hepatitinde karaciğer biyopsisinde hiçbir zaman lökosit veya nötrofil infiltrasyonu görülmez.",
+       "isLie": true,
+       "explanation": "Alkolik hepatitin temel histopatolojik özelliği nötrofil infiltrasyonu ve Mallory cisimcikleridir."
+      }
+     ]
+    }
+   ],
+   "slideNumber": 9,
+   "bolum": "2.2",
+   "pdfSayfalari": [
+    21,
+    24
+   ],
+   "sourcePdf": {
+    "startPage": 21,
+    "endPage": 24
+   }
+  },
+  {
+   "id": "k58-s10",
+   "title": "Gastrointestinal Sistem ve Pankreatit",
+   "subtitle": "Mukozal Hasar, Kronik Pankreatit ve Malabsorbsiyon Tablosu",
+   "section": "2.2 Kronik Toksisite ve Organ Hasarları",
+   "content": "Etanol gastrointestinal mukozada doğrudan toksik hasar oluşturur.\n\n- **Gastrit ve Ülser:** Mide mukozal bariyerini bozar, akut eroziv gastrite ve üst gastrointestinal sistem kanamalarına yol açar.\n- **Kronik Pankreatit:** Kronik alkol kötüye kullanımı yetişkinlerde kronik pankreatitin en sık nedenidir; asiner hücre hasarı ve kalsifikasyona yol açar.\n- **Emilim Bozukluğu:** İnce bağırsak enterosit fırçamsı kenar enzimlerini ve taşıyıcıları deprese eder. Diyare, kilo kaybı ve suda eriyen vitaminlerin emiliminde bozulma görülür.\n\n> [!IMPORTANT]\n> Alkoliklerde folat ve tiamin emiliminin bozulması hem nörolojik hem de hematolojik yıkımın temel zeminini hazırlar.",
+   "synthesisNarrative": "Etanol gastrointestinal mukozada doğrudan toksik hasar oluşturur.\n\n- **Gastrit ve Ülser:** Mide mukozal bariyerini bozar, akut eroziv gastrite ve üst gastrointestinal sistem kanamalarına yol açar.\n- **Kronik Pankreatit:** Kronik alkol kötüye kullanımı yetişkinlerde kronik pankreatitin en sık nedenidir; asiner hücre hasarı ve kalsifikasyona yol açar.\n- **Emilim Bozukluğu:** İnce bağırsak enterosit fırçamsı kenar enzimlerini ve taşıyıcıları deprese eder. Diyare, kilo kaybı ve suda eriyen vitaminlerin emiliminde bozulma görülür.\n\n> [!IMPORTANT]\n> Alkoliklerde folat ve tiamin emiliminin bozulması hem nörolojik hem de hematolojik yıkımın temel zeminini hazırlar.",
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Kronik alkol kötüye kullanımı yetişkinlerde kronik pankreatit tablosunun en sık nedenidir.",
+     "maskedTerm": "kronik pankreatit",
+     "hint": "",
+     "explanation": "Alkol asiner hücre enzim sekresyonunu ve duktal tıkaç oluşumunu tetikleyerek kronik pankreatite yol açar."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Kronik alkol bağımlılarında gelişen yaygın vitamin eksiklikleri ve malabsorbsiyonun temel mekanizması hangisidir?",
+     "options": [
+      {
+       "id": "o1",
+       "text": "Bağırsak mukozasının doğrudan hasar görmesi, taşınma mekanizmalarının bozulması ve yetersiz beslenme",
+       "isCorrect": true,
+       "explanation": "Bu seçenekte belirtilen mekanizma, ilgili farmakolojik sürecin temel klinik ve biyokimyasal basamağını doğru olarak açıklar. Dolayısıyla soruda istenen doğru yanıtı bu seçenek oluşturmaktadır."
+      },
+      {
+       "id": "o2",
+       "text": "Vitaminlerin kalın bağırsakta bakteriler tarafından alkole dönüştürülmesi",
+       "isCorrect": false,
+       "explanation": "Vitaminlerin kalın bağırs ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o3",
+       "text": "Alkolün mide asidini tamamen sıfırlayarak pepsin oluşumunu engellemesi",
+       "isCorrect": false,
+       "explanation": "Alkolün mide asidini tama ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o4",
+       "text": "Folat ve B1 vitamininin böbrekten aşırı geri emilmesi",
+       "isCorrect": false,
+       "explanation": "Folat ve B1 vitamininin b ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Gastrointestinal Etkiler",
+     "items": [
+      {
+       "text": "Kronik alkol kullanımı yetişkinlerde kronik kalsifiye pankreatitin önde gelen nedenidir.",
+       "isLie": false,
+       "explanation": "Alkol pankreas duktuslarında protein tıkaçları ve taş oluşumunu tetikler."
+      },
+      {
+       "text": "Etanol ince bağırsak enterositlerini uyararak vitamin emilimini iki katına çıkarır.",
+       "isLie": true,
+       "explanation": "Etanol enterosit hasarı yaparak malabsorbsiyona ve vitamin eksikliğine yol açar."
+      },
+      {
+       "text": "Mide mukozal bariyerinin zedelenmesi akut eroziv gastrit ve kanamaya neden olur.",
+       "isLie": false,
+       "explanation": "Mukozal erozyon üst GİS kanamalarının sık nedenidir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Alkolün gastrointestinal sistemde en sık neden olduğu kronik organ inflamasyonu hangisidir ve klinik önemi nedir?",
+     "answer": "Kronik pankreatittir; asiner hücre harabiyeti, duktal kalsifikasyon, şiddetli karın ağrısı ve ekzokrin yetmezliğe (steatore) yol açar."
+    }
+   ],
+   "slideNumber": 10,
+   "bolum": "2.3",
+   "pdfSayfalari": [
+    25,
+    27
+   ],
+   "sourcePdf": {
+    "startPage": 25,
+    "endPage": 27
+   }
+  },
+  {
+   "id": "k58-s11",
+   "title": "Tolerans ve Fiziksel Bağımlılığın Temelleri",
+   "subtitle": "GABA-A Down-Regülasyonu, NMDA Up-Regülasyonu ve Çapraz Tolerans",
+   "section": "2.2 Kronik Toksisite ve Organ Hasarları",
+   "content": "Kronik alkol maruziyeti santral sinir sistemi sinapslarında derin nöroadaptif değişikliklere yol açar.\n\n- **GABA-A Resepsiyonu:** Sürekli alkol uyarısına maruz kalan GABA-A reseptörlerinde down-regülasyon ve klorür kanal duyarsızlaşması gelişir.\n- **NMDA Artışı:** Alkolün kronik baskısını dengelemek amacıyla beyinde NMDA glutamat reseptör sayısı ve eksitatör iletim artar (up-regülasyon).\n- **Çapraz Tolerans:** Alkol bağımlısı bireyler benzodiazepinler ve barbitüratlar gibi diğer sedatif-hipnotik ilaçlara karşı da çapraz tolerans gösterirler.\n\n> [!NOTE]\n> Bağımlı birey alkolü kestiğinde baskılanmış inhibitör tonus ve aşırı uyarılmış eksitatör sistem nedeniyle hiperaktivite ve nöbet tablosu ortaya çıkar.",
+   "synthesisNarrative": "Kronik alkol maruziyeti santral sinir sistemi sinapslarında derin nöroadaptif değişikliklere yol açar.\n\n- **GABA-A Resepsiyonu:** Sürekli alkol uyarısına maruz kalan GABA-A reseptörlerinde down-regülasyon ve klorür kanal duyarsızlaşması gelişir.\n- **NMDA Artışı:** Alkolün kronik baskısını dengelemek amacıyla beyinde NMDA glutamat reseptör sayısı ve eksitatör iletim artar (up-regülasyon).\n- **Çapraz Tolerans:** Alkol bağımlısı bireyler benzodiazepinler ve barbitüratlar gibi diğer sedatif-hipnotik ilaçlara karşı da çapraz tolerans gösterirler.\n\n> [!NOTE]\n> Bağımlı birey alkolü kestiğinde baskılanmış inhibitör tonus ve aşırı uyarılmış eksitatör sistem nedeniyle hiperaktivite ve nöbet tablosu ortaya çıkar.",
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Alkol bağımlısı bireyler benzodiazepinler ve barbitüratlar gibi diğer sedatif-hipnotik ilaçlara karşı da çapraz tolerans gösterirler.",
+     "maskedTerm": "çapraz tolerans",
+     "hint": "",
+     "explanation": "GABA-A reseptör kompleksini paylaşan ajanlar arasında farmakodinamik çapraz tolerans gelişir."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Kronik alkol kullanımı sonrası alkol aniden kesildiğinde ortaya çıkan santral eksitasyon ve konvülsiyonların moleküler temeli hangisidir?",
+     "options": [
+      {
+       "id": "o1",
+       "text": "GABA-A reseptör fonksiyonunun azalmış (down-regüle) ve NMDA reseptörlerinin artmış (up-regüle) olması",
+       "isCorrect": true,
+       "explanation": "Bu seçenekte belirtilen mekanizma, ilgili farmakolojik sürecin temel klinik ve biyokimyasal basamağını doğru olarak açıklar. Dolayısıyla soruda istenen doğru yanıtı bu seçenek oluşturmaktadır."
+      },
+      {
+       "id": "o2",
+       "text": "GABA-A reseptör sayısının yüz katına çıkması ve beyni dondurması",
+       "isCorrect": false,
+       "explanation": "GABA-A reseptör sayısının ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o3",
+       "text": "Tüm glutamat reseptörlerinin geri dönüşümsüz olarak parçalanması",
+       "isCorrect": false,
+       "explanation": "Tüm glutamat reseptörleri ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o4",
+       "text": "Dopamin D2 reseptörlerinin tamamen sessizleşmesi",
+       "isCorrect": false,
+       "explanation": "Dopamin D2 reseptörlerini ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      }
+     ]
+    },
+    {
+     "type": "before_after_slider",
+     "title": "Nöroadaptif Reseptör Değişimi",
+     "leftTitle": "Akut Etanol Etkisi",
+     "rightTitle": "Kronik Nöroadaptasyon",
+     "leftPoints": [
+      "GABA-A klor iletiminde akut artış",
+      "NMDA kalsiyum iletiminde baskılanma",
+      "Genel santral sedasyon ve anksiyoliz"
+     ],
+     "rightPoints": [
+      "GABA-A reseptörlerinde down-regülasyon",
+      "NMDA reseptörlerinde kompansatuvar up-regülasyon",
+      "Yoksunlukta hipereksitabilite ve nöbet riski"
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Tolerans ve Nöroadaptasyon",
+     "items": [
+      {
+       "text": "Kronik alkol maruziyeti GABA-A reseptör duyarlılığında azalmaya yol açar.",
+       "isLie": false,
+       "explanation": "Down-regülasyon ve desensitizasyon gelişir."
+      },
+      {
+       "text": "Alkol bağımlılarında benzodiazepinlere karşı tolerans görülmez, aşırı duyarlılık oluşur.",
+       "isLie": true,
+       "explanation": "Tam aksine GABA-A sistemi üzerinden güçlü çapraz tolerans gelişir; daha yüksek doz gerekir."
+      },
+      {
+       "text": "Kompansatuvar NMDA up-regülasyonu yoksunluk nöbetlerinin temel tetikleyicisidir.",
+       "isLie": false,
+       "explanation": "Glutamaterjik eksitotoksisite nöbet riskini artırır."
+      }
+     ]
+    }
+   ],
+   "slideNumber": 11,
+   "bolum": "2.3",
+   "pdfSayfalari": [
+    28,
+    30
+   ],
+   "sourcePdf": {
+    "startPage": 28,
+    "endPage": 30
+   }
+  },
+  {
+   "id": "k58-s12",
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Organ Hasarları ve Nöroadaptasyon",
+   "subtitle": "Karaciğer Fibrozisi, Malabsorbsiyon ve Sinaptik Plastisite",
+   "section": "2.3 Bölüm Tekrarı",
+   "content": "Bu checkpoint adımında kronik etanol kullanımının hücresel ve sistemik toksisitesini özetliyoruz.\n\n- **Hepatik Seyir:** Yüksek NADH kaynaklı steatoz geri dönüşümlüdür; devam eden hasar Mallory cisimcikli hepatite ve kalıcı siroza ilerler.\n- **GİS Yıkımı:** Mukozal bariyer çöküşü eroziv gastrit, yetişkinlerde kronik kalsifiye pankreatit ve tiamin/folat malabsorbsiyonu üretir.\n- **Nöronal Dengesizlik:** GABA-A down-regülasyonu ve NMDA up-regülasyonu hem toleransı oluşturur hem de kesilme anında nöbet zeminini hazırlar.\n\n> [!IMPORTANT]\n> Çapraz tolerans ilkesi gereği, alkol yoksunluğundaki ajitasyon ve nöbetleri kontrol altına almak için yüksek doz GABAerjik agonistler gerekir.\n\n- **Önemli Nokta:** Yüksek NADH oranına bağlı gelişen hepatik steatoz alkol kesildiğinde gerileyebilen erken tablodur.",
+   "synthesisNarrative": "Bu checkpoint adımında kronik etanol kullanımının hücresel ve sistemik toksisitesini özetliyoruz.\n\n- **Hepatik Seyir:** Yüksek NADH kaynaklı steatoz geri dönüşümlüdür; devam eden hasar Mallory cisimcikli hepatite ve kalıcı siroza ilerler.\n- **GİS Yıkımı:** Mukozal bariyer çöküşü eroziv gastrit, yetişkinlerde kronik kalsifiye pankreatit ve tiamin/folat malabsorbsiyonu üretir.\n- **Nöronal Dengesizlik:** GABA-A down-regülasyonu ve NMDA up-regülasyonu hem toleransı oluşturur hem de kesilme anında nöbet zeminini hazırlar.\n\n> [!IMPORTANT]\n> Çapraz tolerans ilkesi gereği, alkol yoksunluğundaki ajitasyon ve nöbetleri kontrol altına almak için yüksek doz GABAerjik agonistler gerekir.\n\n- **Önemli Nokta:** Yüksek NADH oranına bağlı gelişen hepatik steatoz alkol kesildiğinde gerileyebilen erken tablodur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kronik alkol tüketiminin neden olduğu organ hasarları ile ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+     "options": [
+      {
+       "id": "o1",
+       "text": "Pankreas: Asiner hücre hasarı ve kalsifikasyonla giden kronik pankreatit",
+       "isCorrect": false,
+       "explanation": "Pankreas: Asiner hücre ha ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o2",
+       "text": "Karaciğer: Artan NADH ile yağ asidi beta-oksidasyonunun hızlanması ve lipid depolarının tükenmesi",
+       "isCorrect": true,
+       "explanation": "Bu seçenekte belirtilen mekanizma, ilgili farmakolojik sürecin temel klinik ve biyokimyasal basamağını doğru olarak açıklar. Dolayısıyla soruda istenen doğru yanıtı bu seçenek oluşturmaktadır."
+      },
+      {
+       "id": "o3",
+       "text": "Mide: Mukozal bariyer yıkımı ile akut eroziv gastrit ve kanama",
+       "isCorrect": false,
+       "explanation": "Mide: Mukozal bariyer yık ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o4",
+       "text": "Santral Sinir Sistemi: GABA-A duyarsızlaşması ve NMDA up-regülasyonu",
+       "isCorrect": false,
+       "explanation": "Santral Sinir Sistemi: GA ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "title": "Kronik Alkol Organ Hasarları Tablosu",
+     "tableHeaders": [
+      "Hedef Organ",
+      "Patolojik Tablo",
+      "Hücresel / Moleküler Mekanizma"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Karaciğer",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Steatoz ve Siroz",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "NADH artışı ve stellat hücre fibrozisi",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Pankreas",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Kronik Pankreatit",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Asiner hücre hasarı ve kalsifiye tıkaçlar",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Sinapslar",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Çapraz Tolerans",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "GABA-A down-regülasyonu, NMDA artışı",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Hücresel Toksisite Özeti",
+     "items": [
+      {
+       "text": "Karaciğerde yağlı karaciğer evresi alkol bırakıldığında tamamen düzelebilir.",
+       "isLie": false,
+       "explanation": "Steatoz geri dönüşümlü metabolik birikimdir."
+      },
+      {
+       "text": "Kronik alkol bağımlılarında NMDA reseptör sayısı ve glutamat duyarlılığı belirgin şekilde azalır.",
+       "isLie": true,
+       "explanation": "Aksine kompansatuvar olarak NMDA reseptör sayısı ve aktivitesi artar (up-regülasyon)."
+      },
+      {
+       "text": "İnce bağırsak enterosit hasarı tiamin ve folat eksikliğine yol açar.",
+       "isLie": false,
+       "explanation": "Malabsorbsiyon nörolojik komplikasyonları tetikler."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Kronik alkolizmin karaciğer ve pankreastaki iki kalıcı yapısal hasarı nedir?",
+     "answer": "Karaciğerde rejenerasyon nodülleri ve yaygın fibrozisle giden siroz; pankreasta ise duktal tıkaçlar ve kalsifikasyonla seyreden kronik pankreatittir."
+    }
+   ],
+   "slideNumber": 12,
+   "bolum": "2.3",
+   "pdfSayfalari": [
+    15,
+    30
+   ],
+   "sourcePdf": {
+    "startPage": 15,
+    "endPage": 30
+   }
+  },
+  {
+   "id": "k58-s13",
+   "title": "Nörolojik Toksisite ve Wernicke-Korsakoff",
+   "subtitle": "Periferik Nöropati, Tiamin Eksikliği ve Kalıcı Bellek Kusuru",
+   "section": "3.1 Sistemik Komplikasyonlar",
+   "content": "Kronik alkolizmde nörolojik sistem hem doğrudan etanol toksisitesine hem de nutrisyonel eksikliklere karşı savunmasızdır.\n\n- **Periferik Nöropati:** En yaygın tablodur. Distal paresteziler, el ve ayaklarda eldiven-çorap tarzı simetrik duyu kaybı ve arefleksi görülür.\n- **Wernicke Ensefalopatisi:** Akut tiamin (B1 vitamini) eksikliği tablosudur. Oftalmopleji/nistagmus, ataksi ve konfüzyon triadı ile karakterizedir; acil tiaminle geri dönebilir.\n- **Korsakoff Psikozu:** Tedavisiz kalan Wernicke sonrası gelişir. Ağır anterograd amnezi ve konfabulasyon (masallama) ile kalıcı demansiyal tablodur.\n\n> [!IMPORTANT]\n> Alkolik hastaya intravenöz glukoz vermeden önce mutlaka tiamin uygulanmalıdır; aksi takdirde glukoz metabolizması mevcut tiamini tüketerek akut Wernicke tablosunu tetikler.\n\n- **Önemli Nokta:** Akut tiamin eksikliğinde gelişen Wernicke ensefalopatisi oftalmopleji, ataksi ve konfüzyonla seyreder.",
+   "synthesisNarrative": "Kronik alkolizmde nörolojik sistem hem doğrudan etanol toksisitesine hem de nutrisyonel eksikliklere karşı savunmasızdır.\n\n- **Periferik Nöropati:** En yaygın tablodur. Distal paresteziler, el ve ayaklarda eldiven-çorap tarzı simetrik duyu kaybı ve arefleksi görülür.\n- **Wernicke Ensefalopatisi:** Akut tiamin (B1 vitamini) eksikliği tablosudur. Oftalmopleji/nistagmus, ataksi ve konfüzyon triadı ile karakterizedir; acil tiaminle geri dönebilir.\n- **Korsakoff Psikozu:** Tedavisiz kalan Wernicke sonrası gelişir. Ağır anterograd amnezi ve konfabulasyon (masallama) ile kalıcı demansiyal tablodur.\n\n> [!IMPORTANT]\n> Alkolik hastaya intravenöz glukoz vermeden önce mutlaka tiamin uygulanmalıdır; aksi takdirde glukoz metabolizması mevcut tiamini tüketerek akut Wernicke tablosunu tetikler.\n\n- **Önemli Nokta:** Akut tiamin eksikliğinde gelişen Wernicke ensefalopatisi oftalmopleji, ataksi ve konfüzyonla seyreder.",
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Akut tiamin eksikliğinde gelişen Wernicke ensefalopatisi oftalmopleji, ataksi ve konfüzyonla seyreder.",
+     "maskedTerm": "Wernicke ensefalopatisi",
+     "hint": "",
+     "explanation": "Wernicke ensefalopatisi akut metabolik acil durum olup acil parenteral tiamin verilmesini gerektirir."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Acil servise şuur bulanıklığı ile getirilen kronik alkol bağımlısı bir hastaya intravenöz dekstroz infüzyonundan önce parenteral tiamin (B1) verilmesinin yaşamsal gerekçesi nedir?",
+     "options": [
+      {
+       "id": "o1",
+       "text": "Dekstroz infüzyonunun kalan sınırlı tiamini tüketerek akut Wernicke ensefalopatisini tetiklemesini veya ağırlaştırmasını önlemek",
+       "isCorrect": true,
+       "explanation": "Bu seçenekte belirtilen mekanizma, ilgili farmakolojik sürecin temel klinik ve biyokimyasal basamağını doğru olarak açıklar. Dolayısıyla soruda istenen doğru yanıtı bu seçenek oluşturmaktadır."
+      },
+      {
+       "id": "o2",
+       "text": "Tiaminin etanolü kanda doğrudan kimyasal olarak çöktürmesi",
+       "isCorrect": false,
+       "explanation": "Tiaminin etanolü kanda do ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o3",
+       "text": "Dekstrozun tiamin varlığında doğrudan yağa dönüşmesini engellemek",
+       "isCorrect": false,
+       "explanation": "Dekstrozun tiamin varlığı ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o4",
+       "text": "Tiaminin kanda alkol kokusunu gidermesi",
+       "isCorrect": false,
+       "explanation": "Tiaminin kanda alkol koku ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      }
+     ]
+    },
+    {
+     "type": "before_after_slider",
+     "title": "Wernicke vs Korsakoff Tablosu",
+     "leftTitle": "Wernicke Ensefalopatisi",
+     "rightTitle": "Korsakoff Psikozu",
+     "leftPoints": [
+      "Akut başlangıçlı tiamin eksikliği",
+      "Oftalmopleji, ataksi, konfüzyon triadı",
+      "Parenteral tiamin ile geri dönüşümlü"
+     ],
+     "rightPoints": [
+      "Kronik nörodejeneratif sekelli evre",
+      "Ağır anterograd amnezi ve konfabulasyon",
+      "Çoğunlukla geri dönüşümsüz kalıcı hasar"
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Alkolik Nörolojik Hasarlar",
+     "items": [
+      {
+       "text": "Kronik alkolizmde en sık görülen nörolojik bozukluk simetrik periferik nöropatidir.",
+       "isLie": false,
+       "explanation": "Distal simetrik parestezi ve duyu kaybı çok yaygındır."
+      },
+      {
+       "text": "Korsakoff psikozu erken evrede tek doz glukoz verilmesiyle tamamen iyileşir.",
+       "isLie": true,
+       "explanation": "Korsakoff kalıcı bellek defektidir; glukoz aksine tiaminsiz verildiğinde tabloyu tetikler."
+      },
+      {
+       "text": "Wernicke ensefalopatisinin temel klinik bulguları oküler felçler, ataksi ve mental konfüzyondur.",
+       "isLie": false,
+       "explanation": "Klasik klinik triad budur."
+      }
+     ]
+    }
+   ],
+   "slideNumber": 13,
+   "bolum": "3.1",
+   "pdfSayfalari": [
+    31,
+    33
+   ],
+   "sourcePdf": {
+    "startPage": 31,
+    "endPage": 33
+   }
+  },
+  {
+   "id": "k58-s14",
+   "title": "Kronik Kardiyovasküler Toksisite",
+   "subtitle": "Alkolik Kardiyomiyopati, 'Tatil Kalbi' Aritmileri ve Hipertansiyon",
+   "section": "3.1 Sistemik Komplikasyonlar",
+   "content": "Uzun süreli aşırı alkol tüketimi kardiyovasküler sistemde kalıcı hasarlar bırakır.\n\n- **Dilate Kardiyomiyopati:** Uzun süreli yüksek doz tüketim doğrudan kalp kası dejenerasyonuna, dört boşluk dilatasyonuna ve konjestif kalp yetmezliğine yol açar.\n- **Aritmiler ('Tatil Kalbi'):** Ağır içicilerde veya hafta sonu aşırı alımlarda atriyal fibrilasyon ve ventriküler aritmiler sık gelişir; bu tablo 'holiday heart' sendromu olarak bilinir.\n- **Hipertansiyon:** Sempatik tonus artışı ve endotel disfonksiyonu ile dirençli sistemik hipertansiyon insidansı yükselir.\n\n> [!NOTE]\n> Düşük doz alkolün HDL artışı sağladığı iddialarına rağmen, tüketim arttıkça kardiyovasküler mortalite katlanarak artar.\n\n- **Önemli Nokta:** Uzun süreli aşırı tüketim kalp kası hasarı ve dilate kardiyomiyopati tablosuna yol açar.",
+   "synthesisNarrative": "Uzun süreli aşırı alkol tüketimi kardiyovasküler sistemde kalıcı hasarlar bırakır.\n\n- **Dilate Kardiyomiyopati:** Uzun süreli yüksek doz tüketim doğrudan kalp kası dejenerasyonuna, dört boşluk dilatasyonuna ve konjestif kalp yetmezliğine yol açar.\n- **Aritmiler ('Tatil Kalbi'):** Ağır içicilerde veya hafta sonu aşırı alımlarda atriyal fibrilasyon ve ventriküler aritmiler sık gelişir; bu tablo 'holiday heart' sendromu olarak bilinir.\n- **Hipertansiyon:** Sempatik tonus artışı ve endotel disfonksiyonu ile dirençli sistemik hipertansiyon insidansı yükselir.\n\n> [!NOTE]\n> Düşük doz alkolün HDL artışı sağladığı iddialarına rağmen, tüketim arttıkça kardiyovasküler mortalite katlanarak artar.\n\n- **Önemli Nokta:** Uzun süreli aşırı tüketim kalp kası hasarı ve dilate kardiyomiyopati tablosuna yol açar.",
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Uzun süreli aşırı tüketim kalp kası hasarı ve dilate kardiyomiyopati tablosuna yol açar.",
+     "maskedTerm": "kardiyomiyopati",
+     "hint": "",
+     "explanation": "Alkolik kardiyomiyopati non-iskemik dilate kardiyomiyopatilerin en önemli edinilmiş nedenlerindendir."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Aşırı alkol alan genç bir bireyde hafta sonu partisi sonrası acil serviste çarpıntı ve taşikardi ile saptanan akut atriyal fibrilasyon tablosu klinik pratikte nasıl adlandırılır?",
+     "options": [
+      {
+       "id": "o1",
+       "text": "Tatil kalbi (Holiday Heart) sendromu",
+       "isCorrect": true,
+       "explanation": "Bu seçenekte belirtilen mekanizma, ilgili farmakolojik sürecin temel klinik ve biyokimyasal basamağını doğru olarak açıklar. Dolayısıyla soruda istenen doğru yanıtı bu seçenek oluşturmaktadır."
+      },
+      {
+       "id": "o2",
+       "text": "Dressler sendromu",
+       "isCorrect": false,
+       "explanation": "Dressler sendromu ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o3",
+       "text": "Brugada sendromu",
+       "isCorrect": false,
+       "explanation": "Brugada sendromu ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o4",
+       "text": "Kussmaul sendromu",
+       "isCorrect": false,
+       "explanation": "Kussmaul sendromu ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Kardiyovasküler Etkiler",
+     "items": [
+      {
+       "text": "Kronik aşırı alkol tüketimi dilate kardiyomiyopati ve sistolik kalp yetmezliğine yol açar.",
+       "isLie": false,
+       "explanation": "Miyofibril kaybı ve dilatasyon gelişir."
+      },
+      {
+       "text": "Aşırı alkol alımı sonrasında atriyal fibrilasyon dahil kardiyak aritmiler tetiklenebilir.",
+       "isLie": false,
+       "explanation": "Tatil kalbi sendromu tipik bir klinik tablodur."
+      },
+      {
+       "text": "Kronik ağır alkol kullanımı periferik damarları sürekli genişleterek kalıcı hipotansiyon yapar.",
+       "isLie": true,
+       "explanation": "Kronik kullanım sempatik aktivasyonla dirençli sistemik hipertansiyona neden olur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Alkolik kardiyomiyopatinin kardiyak morfolojik tipi nedir ve kalpte hangi değişikliğe yol açar?",
+     "answer": "Dilate kardiyomiyopatidir; kalp odacıklarında dilatasyon, ventriküler duvar incelmesi ve sistolik ejeksiyon fraksiyonunda düşmeye neden olur."
+    }
+   ],
+   "slideNumber": 14,
+   "bolum": "3.2",
+   "pdfSayfalari": [
+    34,
+    35
+   ],
+   "sourcePdf": {
+    "startPage": 34,
+    "endPage": 35
+   }
+  },
+  {
+   "id": "k58-s15",
+   "title": "Hematolojik Toksisite, Endokrin Dengesizlik ve FAS",
+   "subtitle": "Megaloblastik Anemi, Feminizasyon Bulguları ve Fetal Alkol Sendromu",
+   "section": "3.1 Sistemik Komplikasyonlar",
+   "content": "Alkol kemik iliği, steroid hormon dengesi ve gelişen fetüs üzerinde ağır toksik etkilere sahiptir.\n\n- **Hematolojik Tablo:** Folat eksikliği ve doğrudan kemik iliği süpresyonu nedeniyle megaloblastik anemi sık görülür. Trombositopeni ve lökopeni eşlik edebilir.\n- **Endokrin Değişiklik:** Hepatik östrojen klirensinin bozulması ve periferik aromatizasyon sonucu erkekte jinekomasti, palmar eritem ve testiküler atrofi gelişir.\n- **Fetal Alkol Sendromu (FAS):** Gebelikte tüketilen etanol plasentayı serbestçe geçer. Karakteristik triad: İntrauterin gelişme geriliği, mikrosefali ve fasiyal dismorfizmdir (düz filtrum, ince üst dudak).\n\n> [!IMPORTANT]\n> Etanol gelişmekte olan fetal beyin dokusunda nörogenezi ve nöron göçünü bozarak zihinsel yetersizliğin en yaygın önlenebilir nedenini oluşturur.",
+   "synthesisNarrative": "Alkol kemik iliği, steroid hormon dengesi ve gelişen fetüs üzerinde ağır toksik etkilere sahiptir.\n\n- **Hematolojik Tablo:** Folat eksikliği ve doğrudan kemik iliği süpresyonu nedeniyle megaloblastik anemi sık görülür. Trombositopeni ve lökopeni eşlik edebilir.\n- **Endokrin Değişiklik:** Hepatik östrojen klirensinin bozulması ve periferik aromatizasyon sonucu erkekte jinekomasti, palmar eritem ve testiküler atrofi gelişir.\n- **Fetal Alkol Sendromu (FAS):** Gebelikte tüketilen etanol plasentayı serbestçe geçer. Karakteristik triad: İntrauterin gelişme geriliği, mikrosefali ve fasiyal dismorfizmdir (düz filtrum, ince üst dudak).\n\n> [!IMPORTANT]\n> Etanol gelişmekte olan fetal beyin dokusunda nörogenezi ve nöron göçünü bozarak zihinsel yetersizliğin en yaygın önlenebilir nedenini oluşturur.",
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Gebelikte alkol tüketimi mikrosefali ve gelişme geriliği ile giden Fetal Alkol Sendromu tablosuna yol açar.",
+     "maskedTerm": "Fetal Alkol Sendromu",
+     "hint": "",
+     "explanation": "FAS gebelikte alkol tüketimine bağlı gelişen kraniyofasiyal anomali ve zeka geriliği tablosudur."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Fetal Alkol Sendromu (FAS) tanısı alan bir yenidoğanda beklenen kardinal kraniyofasiyal dismorfizm bulguları hangisinde doğru verilmiştir?",
+     "options": [
+      {
+       "id": "o1",
+       "text": "Mikrosefali, filtrum düzleşmesi, ince üst dudak ve epikantal kıvrımlar",
+       "isCorrect": true,
+       "explanation": "Bu seçenekte belirtilen mekanizma, ilgili farmakolojik sürecin temel klinik ve biyokimyasal basamağını doğru olarak açıklar. Dolayısıyla soruda istenen doğru yanıtı bu seçenek oluşturmaktadır."
+      },
+      {
+       "id": "o2",
+       "text": "Makrosefali, prognatizm ve kalınlaşmış dudak yapısı",
+       "isCorrect": false,
+       "explanation": "Makrosefali, prognatizm v ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o3",
+       "text": "Geniş burun kökü, polidaktili ve konjenital guatr",
+       "isCorrect": false,
+       "explanation": "Geniş burun kökü, polidak ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o4",
+       "text": "Yarık damak, kraniofaringiom ve mikrognati",
+       "isCorrect": false,
+       "explanation": "Yarık damak, kraniofaring ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Sistemik Komplikasyonlar",
+     "items": [
+      {
+       "text": "Kronik alkolizmde folat emilim bozukluğu sonucu megaloblastik anemi sık gelişir.",
+       "isLie": false,
+       "explanation": "Kemik iliği süpresyonu ve folat eksikliği makrositer anemi yapar."
+      },
+      {
+       "text": "Etanol plasenta bariyerini kesinlikle geçemez ve fetüsü hiçbir şekilde etkilemez.",
+       "isLie": true,
+       "explanation": "Etanol serbestçe plasentayı geçerek fetüste anneye yakın kan konsantrasyonlarına ulaşır ve FAS yapar."
+      },
+      {
+       "text": "Sirozlu erkeklerde östrojen yıkımının azalması jinekomasti ve testiküler atrofiye yol açar.",
+       "isLie": false,
+       "explanation": "Feminizasyon bulguları hepatik hormon klirens bozukluğunun sonucudur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Fetal Alkol Sendromunun üç temel tanısal komponenti nedir?",
+     "answer": "(1) İntrauterin ve doğum sonrası büyüme-gelişme geriliği, (2) Mikrosefali ve santral sinir sistemi disfonksiyonu, (3) Karakteristik fasiyal dismorfizm (düz filtrum, ince üst dudak, dar göz yarıkları)."
+    }
+   ],
+   "slideNumber": 15,
+   "bolum": "3.2",
+   "pdfSayfalari": [
+    36,
+    37
+   ],
+   "sourcePdf": {
+    "startPage": 36,
+    "endPage": 37
+   }
+  },
+  {
+   "id": "k58-s16",
+   "title": "İmmünite, Karsinojenez ve İlaç Etkileşimleri",
+   "subtitle": "Kupffer Hücre Aktivasyonu, Sitokrom İndüksiyonu ve Akut İnhibisyon",
+   "section": "3.1 Sistemik Komplikasyonlar",
+   "content": "Alkol bağışıklık yanıtını bozar, kanser riskini artırır ve majör ilaç etkileşimleri üretir.\n\n- **İmmün Baskılama:** Karaciğerde Kupffer hücre aktivasyonu ve proinflamatuvar sitokin salınımı artarken; periferde hücresel immünite çöker, pnömoni ve enfeksiyon riski yükselir.\n- **Karsinojenik Potansiyel:** Kendisi direkt karsinojen olmasa da reaktif metaboliti asetaldehit DNA hasarı yapar. Ağız, yutak, özofagus ve meme kanseri riski artar.\n- **Çift Yönlü İlaç Etkileşimi:** Kronik kullanım CYP2E1 ve diğer mikrozomal enzimleri indükleyerek parasetamol toksisitesi riskini artırır. Buna karşın akut alkol alımı sitokrom enzimlerini yarışmalı olarak inhibe eder ve sedatif ilaçların kan düzeyini tehlikeli biçimde yükseltir.\n\n> [!IMPORTANT]\n> Akut alkolle birlikte sedatif-hipnotik veya antihistaminik alınması ölümcül santral sinir sistemi depresyonuna yol açar.",
+   "synthesisNarrative": "Alkol bağışıklık yanıtını bozar, kanser riskini artırır ve majör ilaç etkileşimleri üretir.\n\n- **İmmün Baskılama:** Karaciğerde Kupffer hücre aktivasyonu ve proinflamatuvar sitokin salınımı artarken; periferde hücresel immünite çöker, pnömoni ve enfeksiyon riski yükselir.\n- **Karsinojenik Potansiyel:** Kendisi direkt karsinojen olmasa da reaktif metaboliti asetaldehit DNA hasarı yapar. Ağız, yutak, özofagus ve meme kanseri riski artar.\n- **Çift Yönlü İlaç Etkileşimi:** Kronik kullanım CYP2E1 ve diğer mikrozomal enzimleri indükleyerek parasetamol toksisitesi riskini artırır. Buna karşın akut alkol alımı sitokrom enzimlerini yarışmalı olarak inhibe eder ve sedatif ilaçların kan düzeyini tehlikeli biçimde yükseltir.\n\n> [!IMPORTANT]\n> Akut alkolle birlikte sedatif-hipnotik veya antihistaminik alınması ölümcül santral sinir sistemi depresyonuna yol açar.",
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Kronik kullanım CYP2E1 ve diğer mikrozomal enzimleri indükleyerek parasetamol toksisitesi riskini artırır.",
+     "maskedTerm": "parasetamol toksisitesi",
+     "hint": "",
+     "explanation": "Kronik alkolikle indüklenen CYP2E1, parasetamolden toksik NAPQI oluşumunu hızlandırarak hepatotoksisiteyi şiddetlendirir."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Kronik alkol tüketen bir hastada normal tedavi dozlarında dahi parasetamol (asetaminofen) hepatotoksisitesi gelişme riskinin yüksek olmasının temel mekanizması nedir?",
+     "options": [
+      {
+       "id": "o1",
+       "text": "Kronik alkolün CYP2E1 izoenzimini indükleyerek toksik reaktif metabolit (NAPQI) üretimini artırması ve glutatyonun tükenmesi",
+       "isCorrect": true,
+       "explanation": "Bu seçenekte belirtilen mekanizma, ilgili farmakolojik sürecin temel klinik ve biyokimyasal basamağını doğru olarak açıklar. Dolayısıyla soruda istenen doğru yanıtı bu seçenek oluşturmaktadır."
+      },
+      {
+       "id": "o2",
+       "text": "Alkolün parasetamolün böbrekten atılımını tamamen durdurması",
+       "isCorrect": false,
+       "explanation": "Alkolün parasetamolün böb ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o3",
+       "text": "Parasetamolün alkol molekülüyle birleşerek siyanür gazı oluşturması",
+       "isCorrect": false,
+       "explanation": "Parasetamolün alkol molek ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o4",
+       "text": "Alkolün parasetamole karşı antikor üretimini tetiklemesi",
+       "isCorrect": false,
+       "explanation": "Alkolün parasetamole karş ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      }
+     ]
+    },
+    {
+     "type": "before_after_slider",
+     "title": "Alkolün İlaç Metabolizmasına Etkisi",
+     "leftTitle": "Kronik Alkol Tüketimi",
+     "rightTitle": "Akut Alkol Alımı",
+     "leftPoints": [
+      "CYP2E1 enzim indüksiyonu",
+      "Diğer ilaçların klerensinde artış",
+      "Toksik metabolit (NAPQI) oluşum riski"
+     ],
+     "rightPoints": [
+      "Mikrozomal enzimlerin yarışmalı inhibisyonu",
+      "Birlikte alınan ilaçların metabolizmasının yavaşlaması",
+      "Sedatif ilaç kan düzeyinde tehlikeli artış"
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "İmmünite ve İlaç Etkileşimi",
+     "items": [
+      {
+       "text": "Kronik alkol kullanımı mikrozomal enzimleri indükleyerek ilaç klerensini değiştirebilir.",
+       "isLie": false,
+       "explanation": "CYP enzim indüksiyonu iyi bilinen bir etkileşimdir."
+      },
+      {
+       "text": "Akut etanol alımı sitokrom P450 enzimlerini inhibe ederek sedatif ilaçların toksisitesini artırır.",
+       "isLie": false,
+       "explanation": "Yarışmalı inhibisyon kan ilaç düzeyini fırlatır."
+      },
+      {
+       "text": "Alkol metaboliti asetaldehit hücre DNA'sını koruyucu ve stabilize edici etki gösterir.",
+       "isLie": true,
+       "explanation": "Asetaldehit mutajen ve reaktif bir bileşik olup DNA hasarı oluşturur."
+      }
+     ]
+    }
+   ],
+   "slideNumber": 16,
+   "bolum": "3.3",
+   "pdfSayfalari": [
+    38,
+    39
+   ],
+   "sourcePdf": {
+    "startPage": 38,
+    "endPage": 39
+   }
+  },
+  {
+   "id": "k58-s17",
+   "title": "Akut Alkol İntoksikasyonu ve Acil Yaklaşım",
+   "subtitle": "Kan Düzeyleri, Koma Tablosu ve Destekleyici Tedavi İlkeleri",
+   "section": "3.2 Akut Zehirlenme ve Yoksunluk",
+   "content": "Akut etanol zehirlenmesi doz bağımlı olarak ilerleyen santral sinir sistemi depresyonudur.\n\n- **Klinik Tablo ve Kan Düzeyleri:** 50-100 mg/dL'de hafif sedasyon ve ataksi; 100-200 mg/dL'de belirgin sarhoşluk ve motor koordinasyon kaybı; 300-400 mg/dL'de stupor, koma ve solunum depresyonu; 500 mg/dL üzerinde kardiyorespiratuvar arrest gelişir.\n- **Hava Yolu Güvenliği:** Koma halindeki hastada aspirasyonu önlemek için solunum yolu güvenceye alınır ve endotrakeal entübasyon uygulanır.\n- **Metabolik Destek:** Hipoglisemi kontrolü yapılır; glukoz infüzyonundan önce Wernicke krizini önlemek için mutlaka intravenöz tiamin verilir.\n\n> [!NOTE]\n> Mide lavajı ve aktif kömür etanol çok hızlı emildiği için ve kömür alkolü bağlamadığı için genellikle yararsızdır.",
+   "synthesisNarrative": "Akut etanol zehirlenmesi doz bağımlı olarak ilerleyen santral sinir sistemi depresyonudur.\n\n- **Klinik Tablo ve Kan Düzeyleri:** 50-100 mg/dL'de hafif sedasyon ve ataksi; 100-200 mg/dL'de belirgin sarhoşluk ve motor koordinasyon kaybı; 300-400 mg/dL'de stupor, koma ve solunum depresyonu; 500 mg/dL üzerinde kardiyorespiratuvar arrest gelişir.\n- **Hava Yolu Güvenliği:** Koma halindeki hastada aspirasyonu önlemek için solunum yolu güvenceye alınır ve endotrakeal entübasyon uygulanır.\n- **Metabolik Destek:** Hipoglisemi kontrolü yapılır; glukoz infüzyonundan önce Wernicke krizini önlemek için mutlaka intravenöz tiamin verilir.\n\n> [!NOTE]\n> Mide lavajı ve aktif kömür etanol çok hızlı emildiği için ve kömür alkolü bağlamadığı için genellikle yararsızdır.",
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Kan alkol düzeyi 300 mg/dL üzerine çıktığında derin koma ve ölümcül solunum depresyonu gelişir.",
+     "maskedTerm": "solunum depresyonu",
+     "hint": "",
+     "explanation": "Yüksek doz etanol medüller solunum merkezini deprese ederek ölümcül hipoventilasyona yol açar."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Akut ağır etanol intoksikasyonunda kan konsantrasyonu 300-400 mg/dL düzeyine ulaştığında acil serviste en acil yaşamsal risk hangisidir?",
+     "options": [
+      {
+       "id": "o1",
+       "text": "Hava yolu koruyucu reflekslerinin kaybı, aspirasyon ve medüller solunum arresti",
+       "isCorrect": true,
+       "explanation": "Yüksek konsantrasyonlarda faringeal koruyucu refleksler çöker; kusmuk aspirasyonu ve solunum merkez felci en sık ölüm nedenidir. Bu durum patofizyolojik süreçle tam olarak uyumludur."
+      },
+      {
+       "id": "o2",
+       "text": "Trombositoz ve yaygın arteriyel tromboz krizi",
+       "isCorrect": false,
+       "explanation": "Trombositoz ve yaygın art ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o3",
+       "text": "Aşırı tükürük salgısı ve bronkospazm",
+       "isCorrect": false,
+       "explanation": "Aşırı tükürük salgısı ve ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o4",
+       "text": "Malign hipertansif kriz ve beyin kanaması",
+       "isCorrect": false,
+       "explanation": "Malign hipertansif kriz v ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "title": "Kan Alkol Konsantrasyonları ve Klinik Etkiler",
+     "tableHeaders": [
+      "Kan Düzeyi (mg/dL)",
+      "Baskın Klinik Tablo",
+      "Hayati Tehlike"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "50-100",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Hafif sedasyon ve motor yavaşlama",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Düşük (kaza riski var)",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "100-200",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Belirgin sarhoşluk ve ataksi",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Orta (koordinasyon kaybı)",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "300-400 ve üzeri",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Stupor, koma ve solunum arresti",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Çok Yüksek (ölümcül)",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Akut Zehirlenme Yönetimi",
+     "items": [
+      {
+       "text": "Koma halindeki hastada aspirasyon riskine karşı solunum yolu entübasyonla güvenceye alınır.",
+       "isLie": false,
+       "explanation": "Hava yolu korunması ilk önceliktir."
+      },
+      {
+       "text": "Aktif kömür etanol moleküllerini midede yüzde yüz oranında bağlayarak emilimi tamamen durdurur.",
+       "isLie": true,
+       "explanation": "Aktif kömür küçük ve polar olan etanol molekülünü bağlayamaz, rutin tedavide yeri yoktur."
+      },
+      {
+       "text": "Damar yoluyla glukoz verilmeden önce akut Wernicke riskine karşı mutlaka tiamin yapılmalıdır.",
+       "isLie": false,
+       "explanation": "Tiamin önceliği hayati metabolik kuraldır."
+      }
+     ]
+    }
+   ],
+   "slideNumber": 17,
+   "bolum": "3.3",
+   "pdfSayfalari": [
+    40,
+    41
+   ],
+   "sourcePdf": {
+    "startPage": 40,
+    "endPage": 41
+   }
+  },
+  {
+   "id": "k58-s18",
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Sistemik Komplikasyonlar ve Zehirlenme",
+   "subtitle": "Kardiyak Patolojiler, Teratojenite ve Akut İntoksikasyon",
+   "section": "3.3 Bölüm Tekrarı",
+   "content": "Bu checkpoint adımında kronik alkol hasarlarını ve akut intoksikasyonun acil yönetimini pekiştiriyoruz.\n\n- **Nörokardiyak Tablo:** Distal simetrik nöropati, tiamin kaynaklı Wernicke triadı (ataksi, oftalmopleji, konfüzyon) ve dilate kardiyomiyopati tipiktir.\n- **Teratojenik Hasar:** Fetal alkol sendromu büyüme geriliği, mikrosefali ve karakteristik yüz dismorfizmi ile seyreder.\n- **Akut Yönetim:** Koma ve 300 mg/dL üzerindeki düzeylerde hava yolu açıklığı, hipoglisemi düzeltilmesi ve dekstroz öncesi tiamin uygulanması esastır.\n\n> [!IMPORTANT]\n> Alkol intoksikasyonunda spesifik bir reseptör antagonisti (antidot) bulunmadığından tedavi tamamen destekleyicidir.\n\n- **Önemli Nokta:** Damar yoluyla dekstroz infüzyonundan önce Wernicke krizini önlemek için mutlaka tiamin uygulanmalıdır.",
+   "synthesisNarrative": "Bu checkpoint adımında kronik alkol hasarlarını ve akut intoksikasyonun acil yönetimini pekiştiriyoruz.\n\n- **Nörokardiyak Tablo:** Distal simetrik nöropati, tiamin kaynaklı Wernicke triadı (ataksi, oftalmopleji, konfüzyon) ve dilate kardiyomiyopati tipiktir.\n- **Teratojenik Hasar:** Fetal alkol sendromu büyüme geriliği, mikrosefali ve karakteristik yüz dismorfizmi ile seyreder.\n- **Akut Yönetim:** Koma ve 300 mg/dL üzerindeki düzeylerde hava yolu açıklığı, hipoglisemi düzeltilmesi ve dekstroz öncesi tiamin uygulanması esastır.\n\n> [!IMPORTANT]\n> Alkol intoksikasyonunda spesifik bir reseptör antagonisti (antidot) bulunmadığından tedavi tamamen destekleyicidir.\n\n- **Önemli Nokta:** Damar yoluyla dekstroz infüzyonundan önce Wernicke krizini önlemek için mutlaka tiamin uygulanmalıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Wernicke ensefalopatisi şüphesi olan bir hastada aşağıdaki klinik bulgulardan hangisi klasik tanısal triad içerisinde yer almaz?",
+     "options": [
+      {
+       "id": "o1",
+       "text": "Hemiparezili spastik felç ve tek taraflı Babinski pozitifliği",
+       "isCorrect": true,
+       "explanation": "Bu seçenekte belirtilen mekanizma, ilgili farmakolojik sürecin temel klinik ve biyokimyasal basamağını doğru olarak açıklar. Dolayısıyla soruda istenen doğru yanıtı bu seçenek oluşturmaktadır."
+      },
+      {
+       "id": "o2",
+       "text": "Okülomotor fonksiyon bozukluğu ve nistagmus",
+       "isCorrect": false,
+       "explanation": "Okülomotor fonksiyon bozu ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o3",
+       "text": "Gövde ve ekstremite ataksisi",
+       "isCorrect": false,
+       "explanation": "Gövde ve ekstremite ataks ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o4",
+       "text": "Global mental konfüzyon hali",
+       "isCorrect": false,
+       "explanation": "Global mental konfüzyon h ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "title": "Sistemik Patolojiler Özeti",
+     "tableHeaders": [
+      "Hastalık / Durum",
+      "Temel Neden",
+      "Klinik Özellik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Wernicke Ensefalopatisi",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Tiamin (B1) eksikliği",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Oftalmopleji, ataksi, konfüzyon",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Fetal Alkol Sendromu",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Gebelikte maternal alkol",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Mikrosefali, gelişme geriliği, dismorfizm",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Tatil Kalbi Sendromu",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Akut aşırı alkol yükü",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Atriyal fibrilasyon ve taşikardi",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Sistemik Bulgular ve Resüsitasyon",
+     "items": [
+      {
+       "text": "Fetal alkol sendromu önlenebilir mental retardasyonun başlıca nedenlerinden biridir.",
+       "isLie": false,
+       "explanation": "Gebelikte alkol alınmaması ile tamamen önlenebilir."
+      },
+      {
+       "text": "Akut etanol intoksikasyonunun flumazenil gibi spesifik bir reseptör antidotu vardır.",
+       "isLie": true,
+       "explanation": "Flumazenil benzodiazepin antagonistidir; etanolün spesifik reseptör antidotu yoktur."
+      },
+      {
+       "text": "Kronik ağır içicilerde sol ventrikül dilatasyonu ile giden kardiyomiyopati gelişebilir.",
+       "isLie": false,
+       "explanation": "Alkolik kardiyomiyopati tipik dilate tiptedir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Wernicke ensefalopatisi gelişimini önlemek için acil serviste dekstroz verilmeden önce ne yapılmalıdır?",
+     "answer": "Dekstroz infüzyonundan önce mutlaka parenteral tiamin (B1 vitamini) uygulanmalıdır."
+    }
+   ],
+   "slideNumber": 18,
+   "bolum": "3.3",
+   "pdfSayfalari": [
+    31,
+    41
+   ],
+   "sourcePdf": {
+    "startPage": 31,
+    "endPage": 41
+   }
+  },
+  {
+   "id": "k58-s19",
+   "title": "Alkol Yoksunluk Sendromu ve Deliryum Tremens",
+   "subtitle": "Otonomik Hiperaktivite, Yoksunluk Nöbetleri ve Deliryum Evresi",
+   "section": "4.1 Yoksunluk ve Tedavi",
+   "content": "Alkol bağımlısı bireylerde alkolün kesilmesi ya da azaltılması hayatı tehdit eden bir yoksunluk sendromuna yol açar.\n\n- **Erken Evre (6-12 saat):** Otonomik hiperaktivite başlar. İnce el tremoru, taşikardi, terleme, bulantı ve anksiyete belirgindir.\n- **Yoksunluk Nöbetleri (12-48 saat):** Jeneralize tonik-klonik nöbetler (rum fits) görülebilir; genellikle antiepileptiklere değil benzodiazepinlere yanıt verir.\n- **Deliryum Tremens (48-96 saat):** En ağır tablodur. Şiddetli ajitasyon, fluktuasyon gösteren deliryum, görsel ve işitsel halüsinasyonlar, hipertermi ve kardiyovasküler kollaps gelişebilir.\n\n> [!IMPORTANT]\n> Deliryum Tremens tedavi edilmediğinde yüzde beş ila onbeş arasında ölümcül seyreden tıbbi bir acildir.",
+   "synthesisNarrative": "Alkol bağımlısı bireylerde alkolün kesilmesi ya da azaltılması hayatı tehdit eden bir yoksunluk sendromuna yol açar.\n\n- **Erken Evre (6-12 saat):** Otonomik hiperaktivite başlar. İnce el tremoru, taşikardi, terleme, bulantı ve anksiyete belirgindir.\n- **Yoksunluk Nöbetleri (12-48 saat):** Jeneralize tonik-klonik nöbetler (rum fits) görülebilir; genellikle antiepileptiklere değil benzodiazepinlere yanıt verir.\n- **Deliryum Tremens (48-96 saat):** En ağır tablodur. Şiddetli ajitasyon, fluktuasyon gösteren deliryum, görsel ve işitsel halüsinasyonlar, hipertermi ve kardiyovasküler kollaps gelişebilir.\n\n> [!IMPORTANT]\n> Deliryum Tremens tedavi edilmediğinde yüzde beş ila onbeş arasında ölümcül seyreden tıbbi bir acildir.",
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Alkol kesilmesinden 48-96 saat sonra ajitasyon ve halüsinasyonlarla seyreden Deliryum Tremens gelişebilir.",
+     "maskedTerm": "Deliryum Tremens",
+     "hint": "",
+     "explanation": "Deliryum tremens derin otonomik fırtına ve halüsinasyonlarla giden ölümcül yoksunluk fazıdır."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Kronik alkol bağımlısı bir hastada alkolün kesilmesini takip eden süreçte ortaya çıkan klinik belirtilerin kronolojik sırası hangisinde doğru verilmiştir?",
+     "options": [
+      {
+       "id": "o1",
+       "text": "Tremor ve otonomik hiperaktivite (6-12 saat) -> Nöbetler (12-48 saat) -> Deliryum Tremens (48-96 saat)",
+       "isCorrect": true,
+       "explanation": "Bu seçenekte belirtilen mekanizma, ilgili farmakolojik sürecin temel klinik ve biyokimyasal basamağını doğru olarak açıklar. Dolayısıyla soruda istenen doğru yanıtı bu seçenek oluşturmaktadır."
+      },
+      {
+       "id": "o2",
+       "text": "Deliryum Tremens -> İnce el tremoru -> Uyku hali",
+       "isCorrect": false,
+       "explanation": "Deliryum Tremens -> İnce ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o3",
+       "text": "Tonik-klonik nöbetler -> Tam iyileşme -> Tremor",
+       "isCorrect": false,
+       "explanation": "Tonik-klonik nöbetler -> ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o4",
+       "text": "Hemen derin koma -> 7 gün sonra hafif terleme",
+       "isCorrect": false,
+       "explanation": "Hemen derin koma -> 7 gün ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "title": "Alkol Yoksunluğu Gelişim Zinciri",
+     "steps": [
+      "1. Alkolün kesilmesi: GABAerjik baskı aniden kalkar ve kompanse NMDA reseptörleri aşırı uyarılır.",
+      "2. Sempatik deşarj: 6-12 saat içinde taşikardi, terleme ve el tremoru ortaya çıkar.",
+      "3. Deliryum evresi: 48-72 saatte ajitasyon, halüsinasyonlar ve hipertermi ile Delirium Tremens gelişir."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Yoksunluk Belirtileri ve Evreleri",
+     "items": [
+      {
+       "text": "Alkol yoksunluğunun en erken belirtisi ince motor tremor ve sempatik taşikardidir.",
+       "isLie": false,
+       "explanation": "İlk 6-12 saatte tremor başlar."
+      },
+      {
+       "text": "Deliryum Tremens alkol kesildikten 10 dakika sonra başlayıp kendiliğinden biter.",
+       "isLie": true,
+       "explanation": "Deliryum tremens genellikle 48-96 saat sonra başlar ve tedavi edilmezse ölümcüldür."
+      },
+      {
+       "text": "Yoksunluk dönemindeki konvülsiyonlar klasik antiepileptiklerden ziyade GABAerjik ajanlara yanıt verir.",
+       "isLie": false,
+       "explanation": "Benzodiazepinler primer tedavidir."
+      }
+     ]
+    }
+   ],
+   "slideNumber": 19,
+   "bolum": "4.1",
+   "pdfSayfalari": [
+    42,
+    44
+   ],
+   "sourcePdf": {
+    "startPage": 42,
+    "endPage": 44
+   }
+  },
+  {
+   "id": "k58-s20",
+   "title": "Yoksunluk Tedavisi ve Benzodiazepin Tercihi",
+   "subtitle": "Diazepam, Klordiazepoksit ve Karaciğer Yetmezliğinde Lorazepam",
+   "section": "4.1 Yoksunluk ve Tedavi",
+   "content": "Alkol yoksunluk sendromunun tedavisinde ve Deliryum Tremens profilaksisinde altın standart benzodiazepinlerdir.\n\n- **Etki Mekanizması:** Benzodiazepinler GABA-A reseptörlerini uyararak etanol ile çapraz tolerans gösterir ve nöronal eksitabiliteyi yatıştırır.\n- **Uzun Etkili Ajanlar:** Karaciğer fonksiyonu normal olan hastalarda düzgün plazma düzeyi sağlayan diazepam veya klordiazepoksit tercih edilir.\n- **Karaciğer Yetmezliği Durumu:** İleri hepatik yetmezliği veya sirozu olan hastalarda sitokrom oksidasyonuna uğramayan, aktif metaboliti bulunmayan ve doğrudan glukuronidasyonla atılan lorazepam veya oksazepam seçilmelidir.\n\n> [!IMPORTANT]\n> Sirozlu bir hastaya uzun etkili diazepam verilmesi aktif metabolitlerin birikmesine ve hepatik komanın tetiklenmesine yol açabilir.",
+   "synthesisNarrative": "Alkol yoksunluk sendromunun tedavisinde ve Deliryum Tremens profilaksisinde altın standart benzodiazepinlerdir.\n\n- **Etki Mekanizması:** Benzodiazepinler GABA-A reseptörlerini uyararak etanol ile çapraz tolerans gösterir ve nöronal eksitabiliteyi yatıştırır.\n- **Uzun Etkili Ajanlar:** Karaciğer fonksiyonu normal olan hastalarda düzgün plazma düzeyi sağlayan diazepam veya klordiazepoksit tercih edilir.\n- **Karaciğer Yetmezliği Durumu:** İleri hepatik yetmezliği veya sirozu olan hastalarda sitokrom oksidasyonuna uğramayan, aktif metaboliti bulunmayan ve doğrudan glukuronidasyonla atılan lorazepam veya oksazepam seçilmelidir.\n\n> [!IMPORTANT]\n> Sirozlu bir hastaya uzun etkili diazepam verilmesi aktif metabolitlerin birikmesine ve hepatik komanın tetiklenmesine yol açabilir.",
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "İleri karaciğer yetmezliği olanlarda aktif metaboliti olmayan lorazepam veya oksazepam tercih edilir.",
+     "maskedTerm": "lorazepam",
+     "hint": "",
+     "explanation": "Lorazepam faz I oksidasyona girmeden glukuronidasyonla atıldığı için sirotiklerde birikme yapmaz."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "İleri evre alkolik sirozu ve asiti bulunan bir hastada alkol yoksunluk sendromu tedavisinde diazepam yerine lorazepam tercih edilmesinin farmakokinetik esası nedir?",
+     "options": [
+      {
+       "id": "o1",
+       "text": "Lorazepamın hepatik sitokrom P450 oksidasyonuna bağımlı olmaması ve doğrudan glukuronidasyonla inaktive edilmesi",
+       "isCorrect": true,
+       "explanation": "Bu seçenekte belirtilen mekanizma, ilgili farmakolojik sürecin temel klinik ve biyokimyasal basamağını doğru olarak açıklar. Dolayısıyla soruda istenen doğru yanıtı bu seçenek oluşturmaktadır."
+      },
+      {
+       "id": "o2",
+       "text": "Lorazepamın karaciğerde yeni hepatosit üretimini uyarması",
+       "isCorrect": false,
+       "explanation": "Lorazepamın karaciğerde y ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o3",
+       "text": "Diazepamın böbreklerden hiç atılamayıp idrarı tamamen durdurması",
+       "isCorrect": false,
+       "explanation": "Diazepamın böbreklerden h ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o4",
+       "text": "Lorazepamın GABA-A reseptörlerini bloke edici etkisinin olması",
+       "isCorrect": false,
+       "explanation": "Lorazepamın GABA-A resept ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      }
+     ]
+    },
+    {
+     "type": "before_after_slider",
+     "title": "Benzodiazepin Seçimi",
+     "leftTitle": "Diazepam / Klordiazepoksit",
+     "rightTitle": "Lorazepam / Oksazepam",
+     "leftPoints": [
+      "Uzun yarı ömürlü aktif metabolitler",
+      "Hepatik mikrozomal oksidasyonla yıkım",
+      "Normal karaciğer fonksiyonunda ideal"
+     ],
+     "rightPoints": [
+      "Aktif metabolit oluşturmaz",
+      "Doğrudan faz II glukuronidasyon",
+      "Siroz ve karaciğer yetmezliğinde güvenli"
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Yoksunluk Tedavisi İlkeleri",
+     "items": [
+      {
+       "text": "Benzodiazepinler alkol yoksunluk nöbetlerini ve deliryum gelişimini önlemede altın standarttır.",
+       "isLie": false,
+       "explanation": "Çapraz tolerans yoluyla GABA stimülasyonu sağlar."
+      },
+      {
+       "text": "Alkol yoksunluğundaki tüm hastalara istisnasız en yüksek dozda haloperidol tek başına verilmelidir.",
+       "isLie": true,
+       "explanation": "Antipsikotikler nöbet eşiğini düşürür ve tek başına asla verilmez."
+      },
+      {
+       "text": "Karaciğer hasarı olan alkoliklerde lorazepam birikme riski en düşük seçenektir.",
+       "isLie": false,
+       "explanation": "Glukuronidasyon yolu korunduğu için güvenlidir."
+      }
+     ]
+    }
+   ],
+   "slideNumber": 20,
+   "bolum": "4.2",
+   "pdfSayfalari": [
+    45,
+    47
+   ],
+   "sourcePdf": {
+    "startPage": 45,
+    "endPage": 47
+   }
+  },
+  {
+   "id": "k58-s21",
+   "title": "İdame Tedavisi: Naltrekson, Akamprosat ve Disülfiram",
+   "subtitle": "Nüks Önleme Farmakoterapisi ve Caydırıcı Tedavi Yaklaşımları",
+   "section": "4.2 İdame Tedavisi ve Toksik Alkoller",
+   "content": "Detoksifikasyon tamamlandıktan sonra nüksü önlemek ve ayıklığı korumak için idame farmakoterapisi uygulanır.\n\n- **Naltrekson:** Oral veya depo formda uzun etkili mü-opioid reseptör antagonistidir. Alkolün ödül yolağındaki dopaminerjik haz verici ve pekiştirici etkilerini bloke ederek aşermeyi azaltır.\n- **Akamprosat:** Zayıf NMDA reseptör antagonisti ve GABA-A reseptör modülatörüdür. Yoksunluk sonrası glutamaterjik hiperaktiviteyi yatıştırır; karaciğerden değil böbrekten atılır.\n- **Disülfiram:** Aldehit dehidrogenazı (ALDH) irreversibl inhibe eden caydırıcı ajandır. Alkol alındığında asetaldehit birikir ve hasta şiddetli nahoş reaksiyon geçirir.\n\n> [!IMPORTANT]\n> Naltrekson ve disülfiram potansiyel hepatotoksik olduklarından birlikte kombine edilmemeli ve karaciğer enzimleri izlenmelidir.",
+   "synthesisNarrative": "Detoksifikasyon tamamlandıktan sonra nüksü önlemek ve ayıklığı korumak için idame farmakoterapisi uygulanır.\n\n- **Naltrekson:** Oral veya depo formda uzun etkili mü-opioid reseptör antagonistidir. Alkolün ödül yolağındaki dopaminerjik haz verici ve pekiştirici etkilerini bloke ederek aşermeyi azaltır.\n- **Akamprosat:** Zayıf NMDA reseptör antagonisti ve GABA-A reseptör modülatörüdür. Yoksunluk sonrası glutamaterjik hiperaktiviteyi yatıştırır; karaciğerden değil böbrekten atılır.\n- **Disülfiram:** Aldehit dehidrogenazı (ALDH) irreversibl inhibe eden caydırıcı ajandır. Alkol alındığında asetaldehit birikir ve hasta şiddetli nahoş reaksiyon geçirir.\n\n> [!IMPORTANT]\n> Naltrekson ve disülfiram potansiyel hepatotoksik olduklarından birlikte kombine edilmemeli ve karaciğer enzimleri izlenmelidir.",
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Alkol aşermesini ve pekiştirici haz duygusunu azaltan Naltrekson oral veya depo formda kullanılır.",
+     "maskedTerm": "Naltrekson",
+     "hint": "",
+     "explanation": "Naltrekson endorfin aracılı alkol pekiştirmesini engelleyerek nüksü azaltır."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Alkol bağımlılığı nüks önleme tedavisinde kullanılan akamprosat ilacının organ yetmezliklerindeki güvenlilik profili nasıldır?",
+     "options": [
+      {
+       "id": "o1",
+       "text": "Karaciğerde metabolize edilmeyip böbreklerden atıldığı için karaciğer hastalığı olan alkoliklerde güvenle kullanılabilir",
+       "isCorrect": true,
+       "explanation": "Bu seçenekte belirtilen mekanizma, ilgili farmakolojik sürecin temel klinik ve biyokimyasal basamağını doğru olarak açıklar. Dolayısıyla soruda istenen doğru yanıtı bu seçenek oluşturmaktadır."
+      },
+      {
+       "id": "o2",
+       "text": "Yalnızca karaciğerde mikrozomal enzimlerle parçalandığı için karaciğer yetmezliğinde kontrendikedir",
+       "isCorrect": false,
+       "explanation": "Yalnızca karaciğerde mikr ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o3",
+       "text": "Disülfiram gibi ALDH enzimini bloke ederek asetaldehit sendromu yapar",
+       "isCorrect": false,
+       "explanation": "Disülfiram gibi ALDH enzi ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o4",
+       "text": "Opioid reseptörlerini uyararak bağımlılık potansiyeli taşır",
+       "isCorrect": false,
+       "explanation": "Opioid reseptörlerini uya ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "title": "İdame Tedavisinde Kullanılan İlaçlar",
+     "tableHeaders": [
+      "İlaç",
+      "Temel Mekanizma",
+      "Klinik Özellik / Eliminasyon"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Naltrekson",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Mü-opioid antagonisti",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Haz ve aşermeyi azaltır, hepatotoksisite riski",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Akamprosat",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "NMDA modülatörü",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Böbrekten atılır, karaciğerde güvenli",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Disülfiram",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "ALDH inhibitörü",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Asetaldehit birikimiyle caydırıcı reaksiyon",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Alkol Bağımlılığı İdame İlaçları",
+     "items": [
+      {
+       "text": "Naltrekson alkol alındığında oluşan ödül ve haz duygusunu engeller.",
+       "isLie": false,
+       "explanation": "Opioid reseptör blokajı ile dopamin deşarjını baskılar."
+      },
+      {
+       "text": "Disülfiram alkolün vücuttan atılımını hızlandırarak sarhoşluğu anında bitirir.",
+       "isLie": true,
+       "explanation": "Aksine ALDH'yi bloke ederek asetaldehit zehirlenmesi ve ağır rahatsızlık hissi yaratır."
+      },
+      {
+       "text": "Akamprosat renal yolla elimine edildiğinden hepatik yetmezlikte avantaj sağlar.",
+       "isLie": false,
+       "explanation": "Karaciğer toksisitesi riski düşüktür."
+      }
+     ]
+    }
+   ],
+   "slideNumber": 21,
+   "bolum": "4.2",
+   "pdfSayfalari": [
+    48,
+    49
+   ],
+   "sourcePdf": {
+    "startPage": 48,
+    "endPage": 49
+   }
+  },
+  {
+   "id": "k58-s22",
+   "title": "Metanol Zehirlenmesi ve Retinal Körlük",
+   "subtitle": "Formaldehit, Formik Asit Toksisitesi ve Anyon Açıklı Asidoz",
+   "section": "4.2 İdame Tedavisi ve Toksik Alkoller",
+   "content": "Metanol (odun alkolü) endüstriyel çözücülerde ve kaçak içkilerde bulunan son derece toksik bir maddedir.\n\n- **Metabolizma Zinciri:** Metanol karaciğerde ADH ile formaldehide; ardından ALDH ile formik asite (formata) dönüştürülür.\n- **Retinal Hasar:** Formik asit mitokondriyal sitokrom oksidazı inhibe ederek histotoksik hipoksi yapar. Optik disk ödemi, fotofobi ve 'kar fırtınasında yürüyor gibi görme' tablosu gelişir; kalıcı körlüğe yol açabilir.\n- **Metabolik Asidoz:** Formik asit birikimi ağır anyon açığı yüksek metabolik asidoz ve solunum depresyonuna neden olur.\n\n> [!IMPORTANT]\n> Serum metanol düzeyi 20 mg/dL'yi aştığında acil tedavi endikasyonu doğar; 50 mg/dL üzerinde hemodiyaliz şarttır.",
+   "synthesisNarrative": "Metanol (odun alkolü) endüstriyel çözücülerde ve kaçak içkilerde bulunan son derece toksik bir maddedir.\n\n- **Metabolizma Zinciri:** Metanol karaciğerde ADH ile formaldehide; ardından ALDH ile formik asite (formata) dönüştürülür.\n- **Retinal Hasar:** Formik asit mitokondriyal sitokrom oksidazı inhibe ederek histotoksik hipoksi yapar. Optik disk ödemi, fotofobi ve 'kar fırtınasında yürüyor gibi görme' tablosu gelişir; kalıcı körlüğe yol açabilir.\n- **Metabolik Asidoz:** Formik asit birikimi ağır anyon açığı yüksek metabolik asidoz ve solunum depresyonuna neden olur.\n\n> [!IMPORTANT]\n> Serum metanol düzeyi 20 mg/dL'yi aştığında acil tedavi endikasyonu doğar; 50 mg/dL üzerinde hemodiyaliz şarttır.",
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Metanol karaciğerde parçalanarak retina toksisitesi ve körlük yapan formik asit bileşiğine dönüşür.",
+     "maskedTerm": "formik asit",
+     "hint": "",
+     "explanation": "Formik asit hücresel solunumu felç ederek retinal nekroz ve derin asidoz üretir."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Kaçak içki tüketimi sonrası 'gözlerinin önünde kar fırtınası uçuştuğunu' söyleyen ve derin metabolik asidoz saptanan hastada kalıcı körlüğe yol açan primer toksik metabolit hangisidir?",
+     "options": [
+      {
+       "id": "o1",
+       "text": "Metanolün ALDH ile dönüştüğü formik asit (format)",
+       "isCorrect": true,
+       "explanation": "Bu seçenekte belirtilen mekanizma, ilgili farmakolojik sürecin temel klinik ve biyokimyasal basamağını doğru olarak açıklar. Dolayısıyla soruda istenen doğru yanıtı bu seçenek oluşturmaktadır."
+      },
+      {
+       "id": "o2",
+       "text": "Etanol metabolizmasında oluşan zararsız asetik asit",
+       "isCorrect": false,
+       "explanation": "Etanol metabolizmasında o ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o3",
+       "text": "İzopropil alkolden oluşan aseton",
+       "isCorrect": false,
+       "explanation": "İzopropil alkolden oluşan ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o4",
+       "text": "Parasetamol metaboliti NAPQI",
+       "isCorrect": false,
+       "explanation": "Parasetamol metaboliti NA ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "title": "Metanol Toksisitesi Yolağı",
+     "steps": [
+      "1. Yutulma: Metanol gastrointestinal kanaldan hızla absorbe edilir.",
+      "2. Enzimatik yıkım: Alkol dehidrogenaz metanolü önce formaldehide, sonra formik asite okside eder.",
+      "3. Retinal toksisite: Formik asit optik sinir sitokrom oksidazını bloke ederek ödem ve kalıcı körlük yapar."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Metanol İntoksikasyonu",
+     "items": [
+      {
+       "text": "Metanol zehirlenmesinde optik disk ödemi ve kalıcı körlük riski mevcuttur.",
+       "isLie": false,
+       "explanation": "Retinal görme bozuklukları kardinal bulgudur."
+      },
+      {
+       "text": "Metanolün kendisi direkt toksik olup metabolitlerine dönüşmeden tüm hasarı tamamlar.",
+       "isLie": true,
+       "explanation": "Metanolün kendisi hafif sarhoşluk yapar; asıl öldürücü toksisite ve körlük metaboliti formik asitten kaynaklanır."
+      },
+      {
+       "text": "Şiddetli anyon açıklı metabolik asidoz metanol zehirlenmesinin tipik laboratuvar özelliğidir.",
+       "isLie": false,
+       "explanation": "Format birikimi anyon açığını belirgin artırır."
+      }
+     ]
+    }
+   ],
+   "slideNumber": 22,
+   "bolum": "4.3",
+   "pdfSayfalari": [
+    50,
+    51
+   ],
+   "sourcePdf": {
+    "startPage": 50,
+    "endPage": 51
+   }
+  },
+  {
+   "id": "k58-s23",
+   "title": "Etilen Glikol Zehirlenmesi ve Antidot Tedavisi",
+   "subtitle": "Kalsiyum Oksalat Kristalleri, Akut Tübüler Nekroz ve Fomepizol",
+   "section": "4.2 İdame Tedavisi ve Toksik Alkoller",
+   "content": "Etilen glikol antifriz sıvılarında yaygın bulunan tatlımsı toksik bir glikoldür.\n\n- **Toksik Metabolitler:** ADH ile glikoaldehit, glikolat ve nihayetinde okzalik asite (okzalata) dönüştürülür.\n- **Böbrek Hasarı ve Kristalüri:** Okzalik asit serum kalsiyumu ile birleşerek kalsiyum oksalat monohidrat kristalleri oluşturur. İdrarda zarf/iğne şekilli kristaller, hipokalsemi ve akut tübüler nekroz gelişir.\n- **Fomepizol Antidotu:** Alkol dehidrogenazı (ADH) güçlü şekilde yarışmalı inhibe eden FDA onaylı spesifik antidottur; toksik metabolit oluşumunu durdurur.\n- **Etanol Alternatifi:** Fomepizol bulunmadığında intravenöz etanol infüzyonu ADH'ya yarışmalı bağlanarak aynı koruyucu etkiyi sağlar.\n\n> [!IMPORTANT]\n> Ağır asidoz ve organ yetmezliği gelişen vakalarda hem metanol hem etilen glikol için acil hemodiyaliz hayat kurtarıcıdır.",
+   "synthesisNarrative": "Etilen glikol antifriz sıvılarında yaygın bulunan tatlımsı toksik bir glikoldür.\n\n- **Toksik Metabolitler:** ADH ile glikoaldehit, glikolat ve nihayetinde okzalik asite (okzalata) dönüştürülür.\n- **Böbrek Hasarı ve Kristalüri:** Okzalik asit serum kalsiyumu ile birleşerek kalsiyum oksalat monohidrat kristalleri oluşturur. İdrarda zarf/iğne şekilli kristaller, hipokalsemi ve akut tübüler nekroz gelişir.\n- **Fomepizol Antidotu:** Alkol dehidrogenazı (ADH) güçlü şekilde yarışmalı inhibe eden FDA onaylı spesifik antidottur; toksik metabolit oluşumunu durdurur.\n- **Etanol Alternatifi:** Fomepizol bulunmadığında intravenöz etanol infüzyonu ADH'ya yarışmalı bağlanarak aynı koruyucu etkiyi sağlar.\n\n> [!IMPORTANT]\n> Ağır asidoz ve organ yetmezliği gelişen vakalarda hem metanol hem etilen glikol için acil hemodiyaliz hayat kurtarıcıdır.",
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Alkol dehidrogenaz enzimini yarışmalı bloke eden Fomepizol spesifik ve hayat kurtarıcı bir antidottur.",
+     "maskedTerm": "Fomepizol",
+     "hint": "",
+     "explanation": "Fomepizol ADH enzimini inhibe ederek toksik asit metabolitlerinin üretimini engeller."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Antifriz içme şüphesiyle getirilen bir hastada anyon açığı yüksek asidoz, akut böbrek yetmezliği ve idrar sedimentinde kalsiyum oksalat kristalleri saptanmıştır. Bu hastada toksik metabolit oluşumunu durdurmak için ilk tercih edilecek spesifik antidot hangisidir?",
+     "options": [
+      {
+       "id": "o1",
+       "text": "Fomepizol (veya intravenöz etanol)",
+       "isCorrect": true,
+       "explanation": "Bu seçenekte belirtilen mekanizma, ilgili farmakolojik sürecin temel klinik ve biyokimyasal basamağını doğru olarak açıklar. Dolayısıyla soruda istenen doğru yanıtı bu seçenek oluşturmaktadır."
+      },
+      {
+       "id": "o2",
+       "text": "N-asetilsistein",
+       "isCorrect": false,
+       "explanation": "N-asetilsistein ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o3",
+       "text": "Flumazenil",
+       "isCorrect": false,
+       "explanation": "Flumazenil ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      },
+      {
+       "id": "o4",
+       "text": "Nalokson",
+       "isCorrect": false,
+       "explanation": "Nalokson ifadesi, organizmada farklı biyokimyasal veya fizyolojik mekanizmalarda rol oynayan bir kavramdır. Ancak bu soruda sorgulanan spesifik farmakolojik süreçle doğrudan örtüşmediği için doğru yanıt olamaz."
+      }
+     ]
+    },
+    {
+     "type": "before_after_slider",
+     "title": "Toksik Alkollerin Karşılaştırması",
+     "leftTitle": "Metanol Zehirlenmesi",
+     "rightTitle": "Etilen Glikol Zehirlenmesi",
+     "leftPoints": [
+      "Ana toksik ürün: Formik asit",
+      "Hedef organ: Retina ve optik sinir",
+      "Karakteristik bulgu: Görme kaybı / körlük"
+     ],
+     "rightPoints": [
+      "Ana toksik ürün: Okzalik asit",
+      "Hedef organ: Böbrek tübülleri",
+      "Karakteristik bulgu: Oksalat kristalleri ve ATN"
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Etilen Glikol ve Antidotlar",
+     "items": [
+      {
+       "text": "Etilen glikol zehirlenmesinde idrarda kalsiyum oksalat kristalleri ve akut böbrek yetmezliği görülür.",
+       "isLie": false,
+       "explanation": "Okzalat tübüllerde çöker ve tübüler nekroz yapar."
+      },
+      {
+       "text": "Fomepizol aldehit dehidrogenazı uyararak toksik madde atılımını hızlandıran bir ön ilaçtır.",
+       "isLie": true,
+       "explanation": "Fomepizol ALDH'yi değil alkol dehidrogenazı (ADH) yarışmalı inhibe eder."
+      },
+      {
+       "text": "Fomepizol bulunmadığında intravenöz etanol ADH yarışması sağlayarak antidot olarak kullanılabilir.",
+       "isLie": false,
+       "explanation": "Etanolün ADH ilgisi metanol ve etilen glikolden yüksektir."
+      }
+     ]
+    }
+   ],
+   "slideNumber": 23,
+   "bolum": "4.3",
+   "pdfSayfalari": [
+    52,
+    53
+   ],
+   "sourcePdf": {
+    "startPage": 52,
+    "endPage": 53
+   }
+  },
+  {
+   "id": "k58-s24",
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Alkoller Farmakolojisi",
+   "subtitle": "Kinetik, Enzimler, Toksisiteler ve Antidot Eşleştirmeleri",
+   "section": "4.3 Ders Sonu Değerlendirmesi",
+   "content": "Tebrikler! Alkollerin farmakokinetiğini, reseptör hedeflerini, kronik organ yıkımlarını, yoksunluk yönetimini ve toksik alkol antidotlarını başarıyla tamamladınız.\n\n- **Kinetik Özellik:** Etanolün sıfır derece eliminasyonu ve total vücut suyuna eşit dağılımı temel kurallardır.\n- **Reseptörler:** GABA-A aktivasyonu ve NMDA baskılanması sedasyon yaparken; kronik nöroadaptasyon yoksunluk fırtınasını hazırlar.\n- **Toksik Alkoller:** Metanol körlük, etilen glikol böbrek yetmezliği yapar; fomepizol ortak kurtarıcı antidottur.\n\n> [!NOTE]\n> Bu interaktif oyunlarla farmakolojik bilgilerinizi pekiştirip sınav hazırlığınızı taçlandırın.",
+   "synthesisNarrative": "Tebrikler! Alkollerin farmakokinetiğini, reseptör hedeflerini, kronik organ yıkımlarını, yoksunluk yönetimini ve toksik alkol antidotlarını başarıyla tamamladınız.\n\n- **Kinetik Özellik:** Etanolün sıfır derece eliminasyonu ve total vücut suyuna eşit dağılımı temel kurallardır.\n- **Reseptörler:** GABA-A aktivasyonu ve NMDA baskılanması sedasyon yaparken; kronik nöroadaptasyon yoksunluk fırtınasını hazırlar.\n- **Toksik Alkoller:** Metanol körlük, etilen glikol böbrek yetmezliği yapar; fomepizol ortak kurtarıcı antidottur.\n\n> [!NOTE]\n> Bu interaktif oyunlarla farmakolojik bilgilerinizi pekiştirip sınav hazırlığınızı taçlandırın.",
+   "isGameFinale": true,
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "prompt": "Alkol yoksunluk belirtilerinin kronolojik gelişim sırasını doğru şekilde diziniz.",
+     "steps": [
+      "Erken otonomik hiperaktivite ve ince el tremoru başlangıcı (6-12 saat)",
+      "Alkol çekilmesine bağlı tonik-klonik nöbet atakları (12-48 saat)",
+      "Şiddetli ajitasyon ve Delirium Tremens tablosu gelişimi (48-96 saat)",
+      "Benzodiazepin desteği ve metabolik resüsitasyon ile tam stabilizasyon"
+     ],
+     "explanation": "Alkol yoksunluğunda nöroadaptif eksitasyon sırasıyla tremor, konvülsiyon ve deliryum tremens şeklinde ilerler."
+    },
+    {
+     "type": "estimate_slider",
+     "prompt": "Alınan etanolün karaciğerde metabolize edilen yaklaşık yüzdesi kaçtır?",
+     "min": 0,
+     "max": 100,
+     "answer": 90,
+     "tolerance": 5,
+     "explanation": "Etanolün yüzde doksanından fazlası karaciğerde okside olur; kalan kısım akciğer ve böbrekle atılır."
+    },
+    {
+     "type": "perturbation",
+     "scenario": "Alkol bağımlısı bir hastada disülfiram tedavisi başlanmış ve hasta ardından etanol tüketmiştir.",
+     "parameters": [
+      {
+       "name": "Plazma asetaldehit konsantrasyonu",
+       "correct": "up",
+       "explanation": "ALDH enziminin inhibe edilmesi sonucu kanda asetaldehit hızla birikir."
+      },
+      {
+       "name": "Mitokondriyal ALDH enzim aktivitesi",
+       "correct": "down",
+       "explanation": "Disülfiram ALDH enzimini irreversibl olarak inaktive eder."
+      },
+      {
+       "name": "Etanolün total vücut suyu dağılım hacmi",
+       "correct": "same",
+       "explanation": "Akut kimyasal reaksiyonda vücut sıvı kompartımanlarının bazal hacmi değişmez."
+      }
+     ]
+    },
+    {
+     "type": "fix_the_text",
+     "text": "Metanol zehirlenmesinde retinal hasar ve kalıcı körlükten sorumlu olan temel toksik metabolit asetik asit olup optik sinirde sitokrom oksidazı bloke eder.",
+     "errors": [
+      {
+       "wrong": "asetik asit",
+       "correct": "formik asit",
+       "options": [
+        "okzalik asit",
+        "aseton"
+       ],
+       "explanation": "Metanolün toksik metaboliti formik asittir; asetik asit etanolün zararsız metabolitidir."
+      }
+     ]
+    }
+   ],
+   "slideNumber": 24,
+   "bolum": "4.3",
+   "pdfSayfalari": [
+    1,
+    53
+   ],
+   "sourcePdf": {
+    "startPage": 1,
+    "endPage": 53
+   }
+  }
+ ],
+ "deckId": "k2p-y25-k2-58-alkoller",
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "matchedPastQuestionsCount": 4,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

@@ -1,0 +1,2109 @@
+{
+ "id": "k2p-y25-k2-60-miyorelaksan-ilaclar",
+ "title": "Miyorelaksan İlaçlar (İskelet Kası Gevşeticileri)",
+ "discipline": "Tıbbi Farmakoloji",
+ "committee": "donem3-kurul2",
+ "totalSlides": 24,
+ "sayfaHaritasi": "teyitli",
+ "slides": [
+  {
+   "slideNumber": 1,
+   "id": "k2p-y25-k2-60-s01",
+   "title": "İskelet Kası Gevşeticileri: Terapötik Sınıflar ve Giriş",
+   "bolum": "1.1",
+   "pdfSayfalari": [
+    2,
+    4
+   ],
+   "sourcePdf": {
+    "startPage": 2,
+    "endPage": 4
+   },
+   "synthesisNarrative": "İskelet kası fonksiyonunu etkileyen ilaçlar, cerrahi anestezide kas felci oluşturan nöromüsküler blokörler ve nörolojik hastalıklarda spastisiteyi azaltan spazmolitikler olmak üzere iki temel gruba ayrılır.\n\n- **Nöromüsküler Blokörler:** Nöromüsküler son plakta iletimi önleyerek cerrahi işlemler ve endotrakeal entübasyonda kas felci sağlarlar; kuaterner yapıları nedeniyle santral sinir sistemine geçmezler.\n- **Spazmolitik İlaçlar:** Omurilik ve beyin sapındaki refleks arklarını inhibe ederek kronik spastisite ve ağrılı kas spazmlarını giderirler.\n- **Normal Kavşak İletimi:** Motor aksiyon potansiyeli sinir ucuna ulaştığında kalsiyum girişi nörotransmiter asetilkolinin sinaptik aralığa salıverilmesini tetikler.\n\n> [!NOTE]\n> Nöromüsküler blokörler yüksek iyonizasyonları sebebiyle kan-beyin bariyerini aşamaz; hastada bilinç kaybı veya analjezi oluşturmazlar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "q60-s01-1",
+     "question": "İskelet kası gevşeticilerinin genel farmakolojik özellikleri ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Nöromüsküler blokörler kan-beyin bariyerini hızla geçerek doğrudan sedasyon oluştururlar.",
+       "isCorrect": false,
+       "explanation": "Nöromüsküler blokörler kan-bey kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Nöromüsküler blokörler motor son plakta iletimi keserken terapötik dozlarda santral sinir sistemi etkisi göstermezler.",
+       "isCorrect": true,
+       "explanation": "Bu seçenek doğru bir farmakolojik tespittir. Nöromüsküler blokörler motor son plakta iletimi keserken terapötik dozlarda santral sinir sistemi etkisi göstermezler ifadesi amfi ders notlarında ve referans farmakoloji kaynaklarında doğrudan vurgulanan temel mekanizmayı yansıtır."
+      },
+      {
+       "text": "Spazmolitik ilaçlar yalnızca cerrahi entübasyon sırasında tam kas paralizisi oluşturmak için kullanılır.",
+       "isCorrect": false,
+       "explanation": "Spazmolitik ilaçlar yalnızca c kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Motor sinir terminalinden asetilkolin salınımı hücre içine sodyum akımı ile doğrudan başlatılır.",
+       "isCorrect": false,
+       "explanation": "Motor sinir terminalinden aset kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "c60-s01-1",
+     "sentence": "Motor son plakta nöromüsküler iletimde aksiyon potansiyeli sinir ucuna ulaştığında içeri kalsiyum akımı olur ve nörotransmiter olarak asetilkolin salıverilir.",
+     "maskedTerm": "asetilkolin",
+     "hint": ""
+    },
+    {
+     "type": "interactive_table",
+     "id": "t60-s01-1",
+     "title": "İskelet Kası Gevşeticilerinin Temel Karşılaştırması",
+     "tableHeaders": [
+      "İlaç Grubu",
+      "Temel Etki Yeri",
+      "Klinik Amaç"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Nöromüsküler Blokörler",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Motor son plak (Kavşak)",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Cerrahi kas felci ve entübasyon",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Spazmolitikler",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Santral sinir sistemi ve omurilik",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Kronik spastisite ve ağrılı spazmlar",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar60-s01-1",
+     "question": "Nöromüsküler blokör ilaçlar neden anestezi veya ağrı kesici etki oluşturamazlar?",
+     "answer": "Yüksek oranda iyonize kuaterner yapıları nedeniyle kan-beyin bariyerini aşamazlar ve santral sinir sistemine geçemezler."
+    }
+   ]
+  },
+  {
+   "slideNumber": 2,
+   "id": "k2p-y25-k2-60-s02",
+   "title": "Nikotinik Reseptör: Pentamerik Kanal ve Son Plak Potansiyeli",
+   "bolum": "1.1",
+   "pdfSayfalari": [
+    5,
+    7
+   ],
+   "sourcePdf": {
+    "startPage": 5,
+    "endPage": 7
+   },
+   "synthesisNarrative": "Çizgili kas motor son plağında bulunan nikotinik asetilkolin reseptörü (NM), pentamerik yapıya sahip klasik bir ligand kapılı iyon kanalıdır.\n\n- **Reseptör Alt Birimleri:** Yetişkin çizgili kasında iki alfa, bir beta, bir delta ve bir epsilon alt biriminden oluşur; reseptörün merkezinde katyon kanalı yer alır.\n- **Kanal Açılma Mekanizması:** İki adet asetilkolin molekülünün alfa-beta ve alfa-delta alt birim arayüzlerindeki bağlanma ceplerine eşzamanlı oturmasıyla kanal açılır.\n- **Son Plak Potansiyeli (EPP):** Kanal açıldığında hücre içine yoğun sodyum girişi gerçekleşir; oluşan yerel depolarizasyon eşik değeri aştığında kas membranında aksiyon potansiyeli tetiklenir.\n\n> [!IMPORTANT]\n> İyon kanalının açılabilmesi için tek bir asetilkolin molekülü yetersizdir; her iki alfa alt biriminin de ligand ile doyması zorunludur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "q60-s02-1",
+     "question": "Motor son plaktaki nikotinik reseptörün (NM) iyon kanalı aktivasyonu için gereken temel şart nedir?",
+     "options": [
+      {
+       "text": "İki asetilkolin molekülünün alfa alt birimlerine eşzamanlı bağlanması",
+       "isCorrect": true,
+       "explanation": "Bu seçenek doğru bir farmakolojik tespittir. İki asetilkolin molekülünün alfa alt birimlerine eşzamanlı bağlanması ifadesi amfi ders notlarında ve referans farmakoloji kaynaklarında doğrudan vurgulanan temel mekanizmayı yansıtır."
+      },
+      {
+       "text": "Tek bir asetilkolin molekülünün beta alt birimine bağlanması",
+       "isCorrect": false,
+       "explanation": "Tek bir asetilkolin molekülünü kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Hücre içindeki kalsiyum iyonlarının reseptör kanalını dışarıdan tıkaması",
+       "isCorrect": false,
+       "explanation": "Hücre içindeki kalsiyum iyonla kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Reseptörün sitoplazmik kuyruğunun adenilat siklaz tarafından fosforillenmesi",
+       "isCorrect": false,
+       "explanation": "Reseptörün sitoplazmik kuyruğu kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "c60-s02-1",
+     "sentence": "İki asetilkolin molekülünün reseptörün alfa alt birimlerine bağlanması kanalın açılmasına ve son plak potansiyeli oluşmasına neden olur.",
+     "maskedTerm": "son plak potansiyeli",
+     "hint": ""
+    },
+    {
+     "type": "causal_chain",
+     "id": "cc60-s02-1",
+     "title": "Nöromüsküler Kavşakta İyonik İletim Basamakları",
+     "steps": [
+      "1. Aksiyon Potansiyeli: Motor sinir ucuna gelen elektriksel uyarı voltaj bağımlı kalsiyum kanallarını açar.",
+      "2. Asetilkolin Salınımı: Kalsiyum girişi sinaptik veziküllerin ekzositozunu başlatır ve asetilkolin kavşağa yayılır.",
+      "3. Reseptör Aktivasyonu: İki asetilkolin molekülü nikotinik reseptörün alfa alt birimlerine bağlanır.",
+      "4. Sodyum Akımı ve EPP: Ligand kapılı kanal açılarak hücreye sodyum girer ve son plak potansiyeli oluşur.",
+      "5. Kas Kasılması: Eşik değer aşılınca voltaj bağımlı sodyum kanalları açılarak kas aksiyon potansiyeli tetiklenir."
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar60-s02-1",
+     "question": "Nikotinik asetilkolin reseptörü hangi alt birimlerden meydana gelir?",
+     "answer": "İki alfa, bir beta, bir delta ve bir gama veya epsilon alt biriminden oluşan bir heteropentamerdir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 3,
+   "id": "k2p-y25-k2-60-s03",
+   "title": "Nöromüsküler Blok Mekanizmaları ve Farmakokinetik",
+   "bolum": "1.2",
+   "pdfSayfalari": [
+    8,
+    10
+   ],
+   "sourcePdf": {
+    "startPage": 8,
+    "endPage": 10
+   },
+   "synthesisNarrative": "Nöromüsküler kavşakta kas gevşemesi ve paralizi, reseptörün kompetitif blokajı veya aşırı depolarizasyonu ile sağlanır.\n\n- **Kompetitif (Nondepolarizan) Blokaj:** İlaçlar nikotinik reseptörde asetilkolinle yarışır; reseptöre bağlanırlar fakat kanalı açmazlar, böylece son plak potansiyeli oluşumunu engellerler.\n- **Depolarizan Blokaj:** Süksinilkolin gibi agonistler reseptörü uyararak uzun süreli depolarizasyon ve elektriksel refrakterlik oluştururlar.\n- **Farmakokinetik Profil:** Nöromüsküler blokörler kuaterner azot atomları içerir, suda yüksek oranda çözünür ve iyonize olurlar; hücre membranlarını, plasentayı ve kan-beyin bariyerini aşamazlar.\n\n> [!NOTE]\n> Nöromüsküler blokörlerin dağılım hacmi küçüktür ve esas olarak ekstrasellüler sıvı hacmine karşılık gelir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "q60-s03-1",
+     "question": "Nondepolarizan kas gevşeticilerin farmakokinetik davranışını belirleyen en temel moleküler özellik nedir?",
+     "options": [
+      {
+       "text": "Yüksek oranda iyonize olmaları ve hücre membranlarını aşamamaları",
+       "isCorrect": true,
+       "explanation": "Bu seçenek doğru bir farmakolojik tespittir. Yüksek oranda iyonize olmaları ve hücre membranlarını aşamamaları ifadesi amfi ders notlarında ve referans farmakoloji kaynaklarında doğrudan vurgulanan temel mekanizmayı yansıtır."
+      },
+      {
+       "text": "Aşırı lipofilik olup beyin dokusunda yüksek oranda birikmeleri",
+       "isCorrect": false,
+       "explanation": "Aşırı lipofilik olup beyin dok kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Oral yoldan alındıklarında yüzde yüz biyoyararlanım göstermeleri",
+       "isCorrect": false,
+       "explanation": "Oral yoldan alındıklarında yüz kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Tamamının plazma albüminine yüzde doksan dokuz oranında bağlanması",
+       "isCorrect": false,
+       "explanation": "Tamamının plazma albüminine yü kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "c60-s03-1",
+     "sentence": "Nöromüsküler bloke edici ilaçlar yüksek oranda iyonize olurlar, hücre membranlarını ve kan beyin bariyerini aşamazlar.",
+     "maskedTerm": "iyonize",
+     "hint": ""
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "stl60-s03-1",
+     "topic": "Nöromüsküler Blokörlerin Temel Özellikleri",
+     "items": [
+      {
+       "text": "Kompetitif nondepolarizan ilaçlar nikotinik reseptöre bağlanır ancak kanal açılmasına neden olmazlar.",
+       "isLie": false,
+       "explanation": "Doğrudur, kompetitif antagonistler asetilkolin bağlanmasını engelleyerek kanal açılışını önlerler."
+      },
+      {
+       "text": "Nöromüsküler blokörler yüksek iyonizasyonları sebebiyle santral sinir sistemine geçip anestezik uyku sağlarlar.",
+       "isLie": true,
+       "explanation": "Tuzaktır! İyonize yapıları kan-beyin bariyerini aşmalarını engeller; bu ilaçlar asla uyku veya sedasyon yapmazlar."
+      },
+      {
+       "text": "Depolarizan blokörler reseptörde agonist gibi davranarak başlangıçta son plakta depolarizasyon yaparlar.",
+       "isLie": false,
+       "explanation": "Doğrudur, süksinilkolin nikotinik reseptör agonisti olarak Faz I depolarizasyon oluşturur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar60-s03-1",
+     "question": "Nondepolarizan blokörlerin etki mekanizması nedir?",
+     "answer": "Nikotinik asetilkolin reseptörüne yarışmalı (kompetitif) olarak bağlanıp asetilkolini engelleyerek kanal açılışını bloke ederler."
+    }
+   ]
+  },
+  {
+   "slideNumber": 4,
+   "id": "k2p-y25-k2-60-s04",
+   "title": "Nondepolarizan Ajanlar: Steroid ve Benzilizokinolin Türevleri",
+   "bolum": "1.2",
+   "pdfSayfalari": [
+    11,
+    13
+   ],
+   "sourcePdf": {
+    "startPage": 11,
+    "endPage": 13
+   },
+   "synthesisNarrative": "Nondepolarizan kas gevşeticiler kimyasal yapılarına göre steroid türevleri ve benzilizokinolin türevleri olarak sınıflandırılır.\n\n- **Steroid Türevleri (Rokuronyum, Vekuronyum):** Orta etki sürelidirler; karaciğer metabolizması ve safra yoluyla atılırlar. Rokuronyum düşük potensine bağlı yüksek doz verildiği için hızlı başlar ve acil entübasyonda tercih edilir.\n- **Benzilizokinolin Türevleri (Sisatrakuryum, Mivakuryum):** Atrakuryumun izomeri olan sisatrakuryum organ bağımsız spontan Hoffman eliminasyonu ile parçalanır; böbrek veya karaciğer yetmezliğinde ilk seçenektir.\n- **Gantakuryum:** Hızlı başlayan ve çok kısa süren etki profiline sahip yeni jenerasyon fumarat türevi bir nondepolarizan gevşeticidir.\n\n> [!NOTE]\n> Sisatrakuryumun metabolizması karaciğer veya böbrek fonksiyonuna bağlı olmadığından organ yetmezlikli kritik yoğun bakım hastalarında güvenle kullanılır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "q60-s04-1",
+     "question": "Böbrek ve karaciğer yetmezliği olan bir hastada eliminasyonu organ fonksiyonlarına bağımlı olmayan ve spontan Hoffman eliminasyonu ile parçalanan kas gevşetici hangisidir?",
+     "options": [
+      {
+       "text": "Pankuronyum",
+       "isCorrect": false,
+       "explanation": "Pankuronyum kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Sisatrakuryum",
+       "isCorrect": true,
+       "explanation": "Bu seçenek doğru bir farmakolojik tespittir. Sisatrakuryum ifadesi amfi ders notlarında ve referans farmakoloji kaynaklarında doğrudan vurgulanan temel mekanizmayı yansıtır."
+      },
+      {
+       "text": "Vekuronyum",
+       "isCorrect": false,
+       "explanation": "Vekuronyum kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Rokuronyum",
+       "isCorrect": false,
+       "explanation": "Rokuronyum kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Gantakuryum",
+       "isCorrect": false,
+       "explanation": "Gantakuryum kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "c60-s04-1",
+     "sentence": "Orta etki süreli steroid kas gevşeticiler vekuronyum ve rokuronyum eliminasyonları için hepatik metabolizma ve safrayla atılmaya bağımlıdır.",
+     "maskedTerm": "hepatik metabolizma",
+     "hint": ""
+    },
+    {
+     "type": "before_after_slider",
+     "id": "bas60-s04-1",
+     "leftTitle": "Steroid Türevleri (Rokuronyum)",
+     "rightTitle": "Benzilizokinolin (Sisatrakuryum)",
+     "leftPoints": [
+      "Karaciğer metabolizması ve safra ile atılır",
+      "Düşük potens, hızlı etki başlangıcı",
+      "Sugammadeks ile hızla şelasyonla geri çevrilir"
+     ],
+     "rightPoints": [
+      "Spontan Hoffman eliminasyonu ile parçalanır",
+      "Organ yetmezliklerinde doz ayarı gerektirmez",
+      "Antikolinesterazlarla klasik yoldan geri çevrilir"
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar60-s04-1",
+     "question": "Hoffman eliminasyonu nedir ve hangi kas gevşetici için karakteristiktir?",
+     "answer": "Plazmada fizyolojik pH ve vücut sıcaklığında gerçekleşen spontan kimyasal parçalanmadır; sisatrakuryum ve atrakuryum için karakteristiktir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 5,
+   "id": "k2p-y25-k2-60-s05",
+   "title": "Süksinilkolin: Plazma Kolinesterazı ve Genetik Varyasyonlar",
+   "bolum": "1.2",
+   "pdfSayfalari": [
+    14,
+    15
+   ],
+   "sourcePdf": {
+    "startPage": 14,
+    "endPage": 15
+   },
+   "synthesisNarrative": "Süksinilkolin, iki asetilkolin molekülünün uç uca bağlanmasıyla oluşan ve çok hızlı etki başlayan bir depolarizan nöromüsküler blokördür.\n\n- **Metabolizma Yolağı:** İntravenöz verildiğinde plazma psödokolinesterazı (bütirilkolinesteraz) tarafından süksinilmonokolin ve koline hızla hidroliz edilir.\n- **Kısa Etki Süresi:** Karaciğer kökenli plazma kolinesterazının yüksek hızı nedeniyle enjekte edilen dozun yalnızca küçük bir kısmı kavşağa ulaşır ve etki 5-10 dakikada biter.\n- **Atipik Psödokolinesteraz:** Genetik olarak atipik kolinesteraz enzim varyantı taşıyan bireylerde süksinilkolin metabolize edilemez; standart bir doz sonrasında saatlerce süren uzamış apne gelişir.\n\n> [!IMPORTANT]\n> Atipik psödokolinesteraz yetmezliğinde spesifik farmakolojik bir antidot yoktur; hasta spontan solunumuna kavuşana kadar mekanik ventilatörde ventile edilmelidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "q60-s05-1",
+     "question": "Standart doz süksinilkolin uygulanan bir hastada saatlerce süren uzamış kas felci ve apne geliştiğinde öncelikle düşünülmesi gereken patoloji nedir?",
+     "options": [
+      {
+       "text": "Genetik atipik plazma kolinesteraz enzim varyantı varlığı",
+       "isCorrect": true,
+       "explanation": "Bu seçenek doğru bir farmakolojik tespittir. Genetik atipik plazma kolinesteraz enzim varyantı varlığı ifadesi amfi ders notlarında ve referans farmakoloji kaynaklarında doğrudan vurgulanan temel mekanizmayı yansıtır."
+      },
+      {
+       "text": "Böbrek tübüler sekresyonunda ani akut yetmezlik gelişmesi",
+       "isCorrect": false,
+       "explanation": "Böbrek tübüler sekresyonunda a kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Hastada sitokrom P450 enzimlerinin aşırı indüklenmiş olması",
+       "isCorrect": false,
+       "explanation": "Hastada sitokrom P450 enzimler kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Asetilkolin reseptörlerinin mutasyona bağlı irreversibl blokajı",
+       "isCorrect": false,
+       "explanation": "Asetilkolin reseptörlerinin mu kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "c60-s05-1",
+     "sentence": "Plazma kolinesterazı ile metabolize edilme süksinilkolinin eliminasyonunun ana yolağıdır.",
+     "maskedTerm": "Plazma kolinesterazı",
+     "hint": ""
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "stl60-s05-1",
+     "topic": "Süksinilkolin Farmakokinetiği",
+     "items": [
+      {
+       "text": "Süksinilkolin plazma psödokolinesterazı tarafından hızla hidroliz edilir.",
+       "isLie": false,
+       "explanation": "Doğrudur, bütirilkolinesteraz enzimi ilacı hızla parçalayarak etkisini dakikalarla sınırlar."
+      },
+      {
+       "text": "Atipik kolinesteraz varlığında neostigmin verilerek süksinilkolin etkisi anında sonlandırılır.",
+       "isLie": true,
+       "explanation": "Tuzaktır! Neostigmin plazma kolinesterazını da inhibe ederek süksinilkolin yıkımını büsbütün durdurur ve felci uzatır."
+      },
+      {
+       "text": "Genetik enzim yetmezliğinde hasta kendi soluyana kadar solunum desteğinde tutulmalıdır.",
+       "isLie": false,
+       "explanation": "Doğrudur, enzim eksikliğinde tek güvenli yaklaşım mekanik ventilatörle beklemektir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar60-s05-1",
+     "question": "Süksinilkolinin kısa etki süresini sağlayan temel faktör nedir?",
+     "answer": "Plazma psödokolinesterazı (bütirilkolinesteraz) tarafından hızla hidroliz edilmesidir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 6,
+   "id": "k2p-y25-k2-60-s06",
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Kavşak İletimi ve Blokör Sınıfları",
+   "bolum": "1.2",
+   "isCheckpoint": true,
+   "pdfSayfalari": [
+    2,
+    15
+   ],
+   "sourcePdf": {
+    "startPage": 2,
+    "endPage": 15
+   },
+   "synthesisNarrative": "Bu bölümde nöromüsküler iletim fizyolojisi, nikotinik reseptörün pentamerik yapısı ve kas gevşeticilerin temel farmakokinetik prensipleri incelendi.\n\n- **İyonik Mekanizma:** Presinaptik kalsiyum girişi asetilkolini salar; postsinaptik iki alfa alt birimine asetilkolin oturarak sodyum kanalını açar ve son plak potansiyeli oluşturur.\n- **Blokör Farkı:** Nondepolarizanlar kompetitif antagonisttir (kanal açılmaz); süksinilkolin ise depolarizan agonisttir (Faz I blok).\n- **Metabolizma Özeti:** Steroidler karaciğerle, sisatrakuryum spontan Hoffman yoluyla, süksinilkolin ise plazma psödokolinesterazı ile metabolize edilir.\n\n> [!NOTE]\n> Nöromüsküler blokörlerin hiçbiri kan-beyin bariyerini aşamaz; anestezi derinliği sağlanmadan kas gevşetici verilmemelidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "q60-s06-1",
+     "question": "Nöromüsküler kavşak iletimi ve blokör ilaçların ilk bölüm kazanımları değerlendirildiğinde aşağıdakilerden hangisi yanlıştır?",
+     "options": [
+      {
+       "text": "Nikotinik reseptörün açılması için iki alfa alt birimine iki asetilkolin molekülü bağlanmalıdır.",
+       "isCorrect": false,
+       "explanation": "Nikotinik reseptörün açılması  kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Nondepolarizan blokörler reseptörde kompetitif antagonizma yaparak son plak potansiyelini önlerler.",
+       "isCorrect": false,
+       "explanation": "Nondepolarizan blokörler resep kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Sisatrakuryumun metabolizması karaciğer yetmezliğinde ileri derecede yavaşlar ve birikim yapar.",
+       "isCorrect": true,
+       "explanation": "Bu seçenek doğru bir farmakolojik tespittir. Sisatrakuryumun metabolizması karaciğer yetmezliğinde ileri derecede yavaşlar ve birikim yapar ifadesi amfi ders notlarında ve referans farmakoloji kaynaklarında doğrudan vurgulanan temel mekanizmayı yansıtır."
+      },
+      {
+       "text": "Süksinilkolin plazma psödokolinesterazı tarafından metabolize edilen tek klinik depolarizan ajandır.",
+       "isCorrect": false,
+       "explanation": "Süksinilkolin plazma psödokoli kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "id": "sw60-s06-1",
+     "title": "İlaç ve Eliminasyon Yolu Eşleştirmesi",
+     "cards": [
+      {
+       "text": "Rokuronyum",
+       "category": "Karaciğer Metabolizması"
+      },
+      {
+       "text": "Vekuronyum",
+       "category": "Karaciğer Metabolizması"
+      },
+      {
+       "text": "Sisatrakuryum",
+       "category": "Hoffman Eliminasyonu"
+      },
+      {
+       "text": "Süksinilkolin",
+       "category": "Plazma Kolinesterazı"
+      }
+     ],
+     "leftCategory": "Karaciğer Metabolizması",
+     "rightCategory": "Hoffman Eliminasyonu"
+    },
+    {
+     "type": "cloze_masking",
+     "id": "c60-s06-1",
+     "sentence": "Nöromüsküler bloke ilaçlar yüksek oranda iyonize olurlar, hücre membranlarını ve kan beyin bariyerini geçemezler.",
+     "maskedTerm": "kan beyin bariyerini",
+     "hint": ""
+    },
+    {
+     "type": "active_recall",
+     "id": "ar60-s06-1",
+     "question": "Neden sisatrakuryum çoklu organ yetmezliği olan kritik yoğun bakım hastalarında tercih edilir?",
+     "answer": "Plazmada fizyolojik pH ve ısıda kendiliğinden parçalanan Hoffman eliminasyonu sayesinde karaciğer ve böbrek fonksiyonuna bağımlı değildir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 7,
+   "id": "k2p-y25-k2-60-s07",
+   "title": "Nondepolarizan Blok Mekanizması ve Potens-Hız İlişkisi",
+   "bolum": "2.1",
+   "pdfSayfalari": [
+    16,
+    17
+   ],
+   "sourcePdf": {
+    "startPage": 16,
+    "endPage": 17
+   },
+   "synthesisNarrative": "Nondepolarizan kas gevşeticiler, nikotinik asetilkolin reseptörüne kompetitif antagonist olarak bağlanarak etki gösterirler.\n\n- **Kompetitif Antagonizma:** Reseptörün alfa alt birimlerindeki asetilkolin bağlanma ceplerini işgal ederler; iyon kanalının açılmasını önleyerek son plak potansiyelini eşik değerin altında tutarlar.\n- **Potens ve Etki Başlangıcı:** İlginç bir farmakolojik ilke olarak, etki gücü (potensi) en az olan nondepolarizan gevşeticiler en hızlı başlayan klinik etkiye sahiptir.\n- **Difüzyon Gradyenti:** Düşük potensli rokuronyum gibi ilaçlar etkili olabilmek için yüksek miligram dozlarında verilir; oluşan dik kan-doku konsantrasyon gradyenti ilacın kavşağa hızla akmasını sağlar.\n\n> [!NOTE]\n> Rokuronyumun süksinilkoline yakın bir hızda (60-90 saniye) entübasyon koşulları sağlamasının nedeni düşük potense bağlı uygulanan yüksek molekül sayısıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "q60-s07-1",
+     "question": "Nondepolarizan kas gevşeticilerde etki gücü az olan ilaçların daha hızlı etki başlatmasının temel mekanizması nedir?",
+     "options": [
+      {
+       "text": "Düşük potensli ilacın yüksek dozda verilmesiyle kavşağa güçlü difüzyon gradyenti oluşması",
+       "isCorrect": true,
+       "explanation": "Bu seçenek doğru bir farmakolojik tespittir. Düşük potensli ilacın yüksek dozda verilmesiyle kavşağa güçlü difüzyon gradyenti oluşması ifadesi amfi ders notlarında ve referans farmakoloji kaynaklarında doğrudan vurgulanan temel mekanizmayı yansıtır."
+      },
+      {
+       "text": "Düşük potensli ilaçların nikotinik reseptöre kovalent bağlarla bağlanması",
+       "isCorrect": false,
+       "explanation": "Düşük potensli ilaçların nikot kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "İlacın plazma psödokolinesterazını tamamen tüketerek etki göstermesi",
+       "isCorrect": false,
+       "explanation": "İlacın plazma psödokolinestera kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Karaciğer enzimlerini indükleyerek aktif metabolit üretmesi",
+       "isCorrect": false,
+       "explanation": "Karaciğer enzimlerini indükley kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "c60-s07-1",
+     "sentence": "Etki gücü en az olan non-depolarizan gevşeticiler en hızlı başlayan ve kısa süreli etkiye sahiptirler.",
+     "maskedTerm": "en hızlı başlayan",
+     "hint": ""
+    },
+    {
+     "type": "interactive_table",
+     "id": "t60-s07-1",
+     "title": "Nondepolarizan Blokörlerde Potens ve Başlama Hızı",
+     "tableHeaders": [
+      "İlaç",
+      "Göreceli Potens",
+      "Etki Başlama Hızı",
+      "Klinik Özellik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Rokuronyum",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Düşük",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Çok Hızlı (60-90 sn)",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Acil entübasyonda tercih",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Sisatrakuryum",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Yüksek",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Orta (2-3 dk)",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Organ bağımsız Hoffman yolu",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar60-s07-1",
+     "question": "Nondepolarizan blokaj neden kompetitif olarak adlandırılır?",
+     "answer": "Asetilkolin konsantrasyonu artırıldığında ilaç reseptörden ayrılarak bloğun tersine çevrilebilmesi nedeniyle kompetitiftir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 8,
+   "id": "k2p-y25-k2-60-s08",
+   "title": "Depolarizan Blok: Faz I, Faz II ve Reseptör Desensitizasyonu",
+   "bolum": "2.1",
+   "pdfSayfalari": [
+    18,
+    20
+   ],
+   "sourcePdf": {
+    "startPage": 18,
+    "endPage": 20
+   },
+   "synthesisNarrative": "Süksinilkolin uygulandığında motor son plakta iki farklı elektrofizyolojik blok evresi gözlenir.\n\n- **Faz I Blok (Depolarizan Blok):** Süksinilkolin reseptörü uyararak sodyum kanallarını açar; son plakta sürekli depolarizasyon oluşur. Perikavşak voltaj bağımlı sodyum kanalları inaktif konformasyonda kilitlenir; başlangıçta yaygın kas fasikülasyonları izlenir.\n- **Faz II Blok (Desensitizan Blok):** Süksinilkoline uzamış maruziyet veya yüksek dozlarda membran repolarize olsa da reseptör duyarsızlaşır (desensitizasyon); kanal kapalı kalır.\n- **Farmakolojik Özellik:** Faz I blokta antikolinesteraz verilirse blok derinleşir; Faz II blok ise nondepolarizan bloğa benzer özellikler gösterir.\n\n> [!IMPORTANT]\n> Faz I blok evresinde neostigmin verilmesi kesinlikle kontrendikedir; artan asetilkolin depolarizasyonu daha da şiddetlendirerek felci uzatır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "q60-s08-1",
+     "question": "Süksinilkolin infüzyonunda Faz I blok ile Faz II blok arasındaki en belirgin farmakolojik fark nedir?",
+     "options": [
+      {
+       "text": "Faz I blok antikolinesterazlarla derinleşirken, Faz II blok nondepolarizan benzeri özellik gösterir.",
+       "isCorrect": true,
+       "explanation": "Bu seçenek doğru bir farmakolojik tespittir. Faz I blok antikolinesterazlarla derinleşirken, Faz II blok nondepolarizan benzeri özellik gösterir ifadesi amfi ders notlarında ve referans farmakoloji kaynaklarında doğrudan vurgulanan temel mekanizmayı yansıtır."
+      },
+      {
+       "text": "Faz I blokta kaslarda hiçbir fasikülasyon görülmezken Faz II'de şiddetli kasılma olur.",
+       "isCorrect": false,
+       "explanation": "Faz I blokta kaslarda hiçbir f kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Faz I blok karaciğer yetmezliğinde, Faz II blok ise böbrek yetmezliğinde görülür.",
+       "isCorrect": false,
+       "explanation": "Faz I blok karaciğer yetmezliğ kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Faz II blokta nikotinik reseptörler kovalent bağlarla parçalanır ve yok olur.",
+       "isCorrect": false,
+       "explanation": "Faz II blokta nikotinik resept kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "c60-s08-1",
+     "sentence": "Süksinilkoline uzun süreli maruz kalma ile başlangıçtaki depolarizasyon azalır ve membran repolarize olur.",
+     "maskedTerm": "repolarize",
+     "hint": ""
+    },
+    {
+     "type": "before_after_slider",
+     "id": "bas60-s08-1",
+     "leftTitle": "Faz I Blok (Depolarizan)",
+     "rightTitle": "Faz II Blok (Desensitizan)",
+     "leftPoints": [
+      "Başlangıçta kas fasikülasyonları görülür",
+      "Membran sürekli depolarize durumdadır",
+      "Antikolinesteraz verilirse blok derinleşir"
+     ],
+     "rightPoints": [
+      "Kas fasikülasyonu izlenmez, tam gevşeme vardır",
+      "Membran repolarize ancak reseptör duyarsızdır",
+      "Nondepolarizan bloğa benzer elektrofizyoloji gösterir"
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar60-s08-1",
+     "question": "Süksinilkolinin Faz I bloğu neden antikolinesterazlarla geri çevrilemez?",
+     "answer": "Çünkü kavşakta asetilkolin miktarının artması son plaktaki mevcut depolarizasyonu daha da şiddetlendirir ve felci uzatır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 9,
+   "id": "k2p-y25-k2-60-s09",
+   "title": "Kas Paralizisi Sırası ve Nöromüsküler Monitörizasyon",
+   "bolum": "2.2",
+   "pdfSayfalari": [
+    21,
+    22
+   ],
+   "sourcePdf": {
+    "startPage": 21,
+    "endPage": 22
+   },
+   "synthesisNarrative": "Nöromüsküler blokör uygulandığında vücuttaki çizgili kasların felç olma ve iyileşme hızları farklılık gösterir.\n\n- **Paralizi Sırası:** İlk olarak göz çevresi, çene, boyun ve yüz gibi küçük, hızlı hareket eden kaslar felç olur; ardından ekstremite ve gövde kasları felç olur.\n- **Diyafram Direnci:** Solunumun ana kası olan diyafram en son felç olan ve ilaç etkisi azaldığında en erken iyileşen kastır.\n- **Train of Four (TOF) Monitörizasyonu:** Ulnar sinir gibi periferik bir sinire iki saniye içinde dört supramaksimal uyarı verilerek adduktor pollisis kasının yanıtı izlenir.\n- **Klinik Hedef:** Dördüncü yanıtın birinci yanıta oranı (T4/T1) TOF oranıdır; güvenli ekstübasyon için bu oranın en az yüzde doksan olması gerekir.\n\n> [!NOTE]\n> Nondepolarizan blokta TOF uyarısına verilen yanıtlarda kademeli sönme (fade) görülürken, Faz I blokta dört yanıt da eşit oranda azalır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "q60-s09-1",
+     "question": "Nöromüsküler blokör ilaçların uygulanması sonrasında çizgili kasların felç olma sırası ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Diyafram ilk felç olan kastır ve entübasyondan hemen önce durur.",
+       "isCorrect": false,
+       "explanation": "Diyafram ilk felç olan kastır  kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "İlk olarak göz, çene ve yüz gibi küçük kaslar felç olur, diyafram en son felç olur.",
+       "isCorrect": true,
+       "explanation": "Bu seçenek doğru bir farmakolojik tespittir. İlk olarak göz, çene ve yüz gibi küçük kaslar felç olur, diyafram en son felç olur ifadesi amfi ders notlarında ve referans farmakoloji kaynaklarında doğrudan vurgulanan temel mekanizmayı yansıtır."
+      },
+      {
+       "text": "Bacak ve kalça kasları yüz kaslarından belirgin olarak daha önce felç olur.",
+       "isCorrect": false,
+       "explanation": "Bacak ve kalça kasları yüz kas kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Tüm çizgili kaslar aynı saniyede tamamen eşit oranda felç tablosuna girer.",
+       "isCorrect": false,
+       "explanation": "Tüm çizgili kaslar aynı saniye kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "c60-s09-1",
+     "sentence": "Nöromüsküler iletinin değerlendirilmesinde periferik sinir stimülatörü ile dörtlü uyarı yanıtı takip edilir.",
+     "maskedTerm": "dörtlü uyarı",
+     "hint": ""
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "stl60-s09-1",
+     "topic": "Nöromüsküler Monitörizasyon ve Kas Duyarlılığı",
+     "items": [
+      {
+       "text": "Göz ve çene kasları nöromüsküler blokörlere karşı diyaframdan çok daha erken felç olur.",
+       "isLie": false,
+       "explanation": "Doğrudur, küçük kaslar hızla paralize olur."
+      },
+      {
+       "text": "Nondepolarizan blokta dörtlü uyarı (TOF) yanıtında kademeli sönme (fade) izlenir.",
+       "isLie": false,
+       "explanation": "Doğrudur, presinaptik asetilkolin salınımının azalmasıyla yanıtlarda kademeli azalma görülür."
+      },
+      {
+       "text": "Güvenli ekstübasyon için dördüncü yanıtın birinciye oranı olan TOF oranının en fazla yüzde yirmi olması yeterlidir.",
+       "isLie": true,
+       "explanation": "Tuzaktır! Güvenli ekstübasyon için TOF oranının en az yüzde doksan (0.90) olması şarttır; yüzde yirmi derin felç göstergesidir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar60-s09-1",
+     "question": "Güvenli cerrahi ekstübasyon için gereken minimum Train of Four (TOF) oranı nedir?",
+     "answer": "Yüzde doksan (%90 veya 0.90) ve üzerinde olmalıdır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 10,
+   "id": "k2p-y25-k2-60-s10",
+   "title": "Depolarizan Blokörlerin Klinik Kullanımı ve Acil Entübasyon",
+   "bolum": "2.2",
+   "pdfSayfalari": [
+    23,
+    23
+   ],
+   "sourcePdf": {
+    "startPage": 23,
+    "endPage": 23
+   },
+   "synthesisNarrative": "Süksinilkolin klinik pratikte hızlı başlangıcı ve kısa etki süresi nedeniyle acil hava yolu yönetiminde altın standart olarak kabul edilir.\n\n- **Doz ve Başlama Süresi:** 0,75-1,5 mg/kg intravenöz uygulandıktan sonra 30 saniye içinde kolda, boyunda ve göğüste geçici fasikülasyonlar başlar.\n- **Mükemmel Entübasyon Şartları:** Fasikülasyonların bitimiyle birlikte 60 saniye içinde tam çene ve laringeal gevşeme sağlanır.\n- **Klinik Endikasyon:** Midesi dolu travma hastalarında aspirasyon riskini en aza indiren hızlı seri entübasyonda (RSI) ilk tercih ilaçtır.\n- **Kısa Etki:** Genetik kolinesteraz anomalisi olmayan hastalarda kas tonusu 5-10 dakika içinde tamamen normale döner.\n\n> [!IMPORTANT]\n> Zor hava yolu beklenen ve entübasyonun başarısız olabileceği durumlarda, hastanın kendi spontan solunumuna hızla dönebilmesi süksinilkolinin en büyük emniyet avantajıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "q60-s10-1",
+     "question": "Süksinilkolinin acil hava yolu yönetiminde ve hızlı seri entübasyonda (RSI) yaygın tercih edilmesinin ana farmakolojik gerekçesi nedir?",
+     "options": [
+      {
+       "text": "Histamin salınımı yapmaması ve tansiyonu hiç değiştirmemesi",
+       "isCorrect": false,
+       "explanation": "Histamin salınımı yapmaması ve kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Otuz saniyede başlayıp altmış saniyede tam gevşeme sağlaması ve etkisinin dakikalar içinde kendiliğinden bitmesi",
+       "isCorrect": true,
+       "explanation": "Bu seçenek doğru bir farmakolojik tespittir. Otuz saniyede başlayıp altmış saniyede tam gevşeme sağlaması ve etkisinin dakikalar içinde kendiliğinden bitmesi ifadesi amfi ders notlarında ve referans farmakoloji kaynaklarında doğrudan vurgulanan temel mekanizmayı yansıtır."
+      },
+      {
+       "text": "Karaciğer sitokrom enzimleri tarafından glukuronidasyonla yıkılması",
+       "isCorrect": false,
+       "explanation": "Karaciğer sitokrom enzimleri t kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Tüm nöromüsküler kavşak reseptörlerini kalıcı olarak bloke etmesi",
+       "isCorrect": false,
+       "explanation": "Tüm nöromüsküler kavşak resept kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "c60-s10-1",
+     "sentence": "Süksinilkolinin intravenöz uygulanmasını takiben otuz saniye içinde fasikülasyonlar başlar ve hızlı kas paralizisi gelişir.",
+     "maskedTerm": "otuz saniye",
+     "hint": ""
+    },
+    {
+     "type": "active_recall",
+     "id": "ar60-s10-1",
+     "question": "Hızlı seri entübasyonda (RSI) süksinilkolinin en önemli alternatifi olan nondepolarizan blokör hangisidir?",
+     "answer": "Yüksek dozda uygulandığında 60-90 saniyede entübasyon koşulları sağlayan rokuronyumdur."
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "stl60-s10-1",
+     "topic": "Süksinilkolin Uygulaması",
+     "items": [
+      {
+       "text": "Süksinilkolin verilmesini takiben ilk 30 saniyede kaslarda geçici fasikülasyonlar izlenir.",
+       "isLie": false,
+       "explanation": "Doğrudur, depolarizasyon başlangıcında yaygın fasikülasyon görülür."
+      },
+      {
+       "text": "Süksinilkolin acil entübasyon sağladıktan sonra 5-10 dakika içinde plazma kolinesterazı ile temizlenir.",
+       "isLie": false,
+       "explanation": "Doğrudur, enzimatik yıkım çok süratlidir."
+      },
+      {
+       "text": "Süksinilkolin uygulandığında hasta bilincini tamamen kaybeder ve derin cerrahi anesteziye girer.",
+       "isLie": true,
+       "explanation": "Tuzaktır! Kas gevşeticiler bilinci veya ağrıyı etkilemez; hasta anestezi verilmezse uyanık halde felç yaşar."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 11,
+   "id": "k2p-y25-k2-60-s11",
+   "title": "Kardiyovasküler ve Sistemik Yan Etkiler",
+   "bolum": "2.3",
+   "pdfSayfalari": [
+    24,
+    28
+   ],
+   "sourcePdf": {
+    "startPage": 24,
+    "endPage": 28
+   },
+   "synthesisNarrative": "Nöromüsküler blokörler, otonomik gangliyonları, muskarinik reseptörleri etkileyerek veya mast hücrelerinden histamin salarak sistemik yan etkiler oluştururlar.\n\n- **Histamin Salınımı (Tubokürarin, Atrakuryum):** Mast hücre degranülasyonu ile kanda histamin artar; hipotansiyon, taşikardi, yüzde kızarma ve bronkospazm gelişir.\n- **Kardiyovasküler Stabilite (Rokuronyum, Sisatrakuryum):** Klinik dozlarda histamin salmazlar ve otonomik reseptörleri etkilemezler; hemodinamik olarak stabildirler.\n- **Süksinilkolin Bradikardisi:** Kalpteki muskarinik M2 reseptörlerini uyararak özellikle ikinci dozda şiddetli bradikardi ve asistoli yapabilir; atropin ile önlenir.\n- **Basınç Artışları ve Hiperkalemi:** Fasikülasyonlar intragastrik basıncı artırarak aspirasyon riskini, intraoküler basıncı artırarak göz içi hasar riskini artırır; hücre dışına potasyum sızması hiperkalemiye yol açar.\n\n> [!IMPORTANT]\n> Açık göz yaralanması olan hastalarda süksinilkolin intraoküler basıncı artırabileceğinden kesinlikle kullanılmamalıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "q60-s11-1",
+     "question": "Süksinilkolin uygulamasında kardiyak muskarinik reseptör uyarımına bağlı gelişebilecek bradikardiyi önlemek için hangi premedikasyon tercih edilir?",
+     "options": [
+      {
+       "text": "Atropin",
+       "isCorrect": true,
+       "explanation": "Bu seçenek doğru bir farmakolojik tespittir. Atropin ifadesi amfi ders notlarında ve referans farmakoloji kaynaklarında doğrudan vurgulanan temel mekanizmayı yansıtır."
+      },
+      {
+       "text": "Propranolol",
+       "isCorrect": false,
+       "explanation": "Propranolol kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Neostigmin",
+       "isCorrect": false,
+       "explanation": "Neostigmin kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Pilokarpin",
+       "isCorrect": false,
+       "explanation": "Pilokarpin kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "c60-s11-1",
+     "sentence": "Vekuronyum, sisatrakuryum ve rokuronyumun kardiyovasküler etkileri minimaldir ve histamin salınımı yapmazlar.",
+     "maskedTerm": "kardiyovasküler",
+     "hint": ""
+    },
+    {
+     "type": "venn_grid",
+     "id": "vg60-s11-1",
+     "title": "Kas Gevşeticilerde Yan Etki Dağılımı",
+     "items": [
+      {
+       "criterion": "Histamin salınımına bağlı hipotansiyon",
+       "correct": "A"
+      },
+      {
+       "criterion": "Muskarinik uyarım ile bradikardi ve hiperkalemi",
+       "correct": "B"
+      },
+      {
+       "criterion": "Çizgili kas gevşemesi ve paralizi oluşturma",
+       "correct": "both"
+      },
+      {
+       "criterion": "Santral sinir sisteminde sedatif uyku oluşturma",
+       "correct": "neither"
+      }
+     ],
+     "labelA": "Tubokürarin / Atrakuryum",
+     "labelB": "Süksinilkolin"
+    },
+    {
+     "type": "active_recall",
+     "id": "ar60-s11-1",
+     "question": "Süksinilkolin neden açık göz küresi yaralanması olan hastalarda kontrendikedir?",
+     "answer": "Ekstraoküler kaslarda oluşturduğu fasikülasyonlar nedeniyle intraoküler basıncı artırarak göz içi içeriğin dışarı fıtıklaşmasına yol açabilir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 12,
+   "id": "k2p-y25-k2-60-s12",
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Blok Tipleri ve Klinik Yan Etkiler",
+   "bolum": "2.3",
+   "isCheckpoint": true,
+   "pdfSayfalari": [
+    16,
+    28
+   ],
+   "sourcePdf": {
+    "startPage": 16,
+    "endPage": 28
+   },
+   "synthesisNarrative": "Bu bölümde nondepolarizan ve depolarizan blok mekanizmaları, monitörizasyon ve kardiyovasküler yan etkiler pekiştirildi.\n\n- **Blok Karşılaştırması:** Nondepolarizan blok kompetitiftir; TOF yanıtında kademeli sönme izlenir. Faz I depolarizan blokta ise TOF eşit azalır ve antikolinesterazla derinleşir.\n- **Potens Kuralı:** Düşük potensli rokuronyum yüksek dozda verilerek kavşağa dik gradyentle hızla difüze olur ve hızlı etki başlatır.\n- **Klinik Güvenlik:** Süksinilkolin bradikardi (atropinle önlenir), intragastrik/intraoküler basınç artışı ve yanık/travma hastalarında ölümcül hiperkalemi riski taşır.\n\n> [!NOTE]\n> Ekstübasyon kararı için periferik sinir stimülatöründe Train of Four (TOF) oranının en az yüzde doksan olması aranır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "q60-s12-1",
+     "question": "İkinci bölüm kazanımları dikkate alındığında aşağıdaki klinik durumlardan hangisinde süksinilkolin kullanımı güvenli kabul edilir?",
+     "options": [
+      {
+       "text": "Açık delici göz küresi yaralanması olan hasta",
+       "isCorrect": false,
+       "explanation": "Açık delici göz küresi yaralan kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Üçüncü derece geniş vücut yanığı olan yoğun bakım hastası",
+       "isCorrect": false,
+       "explanation": "Üçüncü derece geniş vücut yanı kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Aspirasyon riski yüksek, genel durumu stabil acil cerrahi hastasında hızlı seri entübasyon",
+       "isCorrect": true,
+       "explanation": "Bu seçenek doğru bir farmakolojik tespittir. Aspirasyon riski yüksek, genel durumu stabil acil cerrahi hastasında hızlı seri entübasyon ifadesi amfi ders notlarında ve referans farmakoloji kaynaklarında doğrudan vurgulanan temel mekanizmayı yansıtır."
+      },
+      {
+       "text": "Travmatik omurilik tam kesisi üzerinden 2 hafta geçmiş hasta",
+       "isCorrect": false,
+       "explanation": "Travmatik omurilik tam kesisi  kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "id": "sw60-s12-1",
+     "title": "İlaç ve Yan Etki / Özellik Eşleştirmesi",
+     "cards": [
+      {
+       "text": "Tubokürarin",
+       "category": "Histamin Salınımı"
+      },
+      {
+       "text": "Süksinilkolin",
+       "category": "Hiperkalemi ve Bradikardi"
+      },
+      {
+       "text": "Rokuronyum",
+       "category": "Kardiyovasküler Stabilite"
+      },
+      {
+       "text": "Sisatrakuryum",
+       "category": "Hoffman Eliminasyonu"
+      }
+     ],
+     "leftCategory": "Histamin Salınımı",
+     "rightCategory": "Hiperkalemi ve Bradikardi"
+    },
+    {
+     "type": "cloze_masking",
+     "id": "c60-s12-1",
+     "sentence": "Süksinilkolin ile ilişkili fasikülasyonlar aşırı kaslı hastalarda intragastrik basıncı belirgin şekilde artırabilir.",
+     "maskedTerm": "intragastrik basıncı",
+     "hint": ""
+    },
+    {
+     "type": "active_recall",
+     "id": "ar60-s12-1",
+     "question": "Neden yanık ve omurilik travmalı hastalarda süksinilkolin verilmesi ölümcül kardiyak arreste yol açabilir?",
+     "answer": "Kas membranında ekstrajonksiyonel nikotinik reseptörlerin yaygınlaşması sonucu kitlesel potasyum çıkışı ve ani hiperkalemi gelişir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 13,
+   "id": "k2p-y25-k2-60-s13",
+   "title": "Anestezik Etkileşimleri ve Malign Hipertermi",
+   "bolum": "3.1",
+   "pdfSayfalari": [
+    29,
+    30
+   ],
+   "sourcePdf": {
+    "startPage": 29,
+    "endPage": 30
+   },
+   "synthesisNarrative": "İnhalasyon anestezikleri (izofluran, sevofluran, desfluran, halotan) nöromüsküler blokörlerin etkisini doza bağımlı olarak belirgin şekilde potansiyalize eder.\n\n- **Malign Hipertermi Tetiklenmesi:** Süksinilkolin ile uçucu anesteziklerin (özellikle halotan) birlikte uygulanması, genetik yatkınlığı olan bireylerde hayatı tehdit eden malign hipertermiyi tetikleyebilir.\n- **Patofizyoloji:** İskelet kası sarkoplazmik retikulumundaki riyanodin reseptörlerinde (RyR1) genetik mutasyon vardır; kalsiyum kanalları kontrolsüzce açılarak sitoplazmaya kitlesel kalsiyum salar.\n- **Klinik Bulgular:** Sürekli kas kasılması (çene masseter spazmı), aşırı karbondioksit üretimi, metabolik ve respiratuvar asidoz, rabdomiyoliz ve hızla yükselen hipertermi gelişir.\n\n> [!IMPORTANT]\n> Malign hipertermi şüphesinde tüm anestezik gazlar ve süksinilkolin derhal kapatılmalı, yüzde yüz oksijene geçilmeli ve derhal spesifik antidot olan intravenöz Dantrolen verilmelidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "q60-s13-1",
+     "question": "Süksinilkolin ve halotan anestezisi altında çenede rijidite, hiperkapni ve hızlı ateş artışı ile Malign Hipertermi gelişen hastada derhal yapılması gereken ilk farmakolojik müdahale nedir?",
+     "options": [
+      {
+       "text": "Anestezik gazları kapatıp derhal intravenöz Dantrolen uygulamak",
+       "isCorrect": true,
+       "explanation": "Bu seçenek doğru bir farmakolojik tespittir. Anestezik gazları kapatıp derhal intravenöz Dantrolen uygulamak ifadesi amfi ders notlarında ve referans farmakoloji kaynaklarında doğrudan vurgulanan temel mekanizmayı yansıtır."
+      },
+      {
+       "text": "Hastaya yüksek doz neostigmin ve atropin kombinasyonu infüze etmek",
+       "isCorrect": false,
+       "explanation": "Hastaya yüksek doz neostigmin  kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Kas gevşemesini sağlamak için süksinilkolin dozunu iki katına çıkarmak",
+       "isCorrect": false,
+       "explanation": "Kas gevşemesini sağlamak için  kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Böbrek atılımını hızlandırmak için sugammadeks enjekte etmek",
+       "isCorrect": false,
+       "explanation": "Böbrek atılımını hızlandırmak  kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "c60-s13-1",
+     "sentence": "Süksinilkolin ile uçucu anesteziklerin nadir görülen bir etkileşimi de iskelet kası depolarından anormal kalsiyum salıverilmesine bağlı gelişen malign hipertermidir.",
+     "maskedTerm": "kalsiyum salıverilmesine",
+     "hint": ""
+    },
+    {
+     "type": "causal_chain",
+     "id": "cc60-s13-1",
+     "title": "Malign Hipertermi Patofizyolojik Zinciri",
+     "steps": [
+      "1. Tetikleyici Temas: Süksinilkolin ve uçucu anestezik (halotan) uygulaması.",
+      "2. RyR1 Kanal Açılması: Mutasyonlu riyanodin reseptörlerinden sarkoplazmaya kitlesel kalsiyum sızması.",
+      "3. Sürekli Aktin-Miyozin Etkileşimi: Geri emilemeyen kalsiyumun sürekli rijidite ve ATP tüketimi başlatması.",
+      "4. Hipermetabolizma ve Asidoz: Laktik asidoz, aşırı karbondioksit üretimi ve dakikada yükselen hipertermi.",
+      "5. Rabdomiyoliz ve Aritmi: Kas yıkımı ile hücre dışına miyoglobin ve potasyum salınarak ölümcül kardiyak arrest riski."
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar60-s13-1",
+     "question": "Malign hipertermi krizinin spesifik periferik antidotu nedir?",
+     "answer": "Sarkoplazmik retikulum RyR1 riyanodin kalsiyum kanalını bloke eden Dantrolendir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 14,
+   "id": "k2p-y25-k2-60-s14",
+   "title": "Antibiyotik Etkileşimleri ve Myastenia Gravis",
+   "bolum": "3.1",
+   "pdfSayfalari": [
+    31,
+    32
+   ],
+   "sourcePdf": {
+    "startPage": 31,
+    "endPage": 32
+   },
+   "synthesisNarrative": "Nöromüsküler blokörlerin etkisi diğer ilaç sınıfları ve altta yatan nörolojik hastalıklar tarafından güçlü biçimde değiştirilir.\n\n- **Antibiyotik Etkileşimi:** Aminoglikozitler (gentamisin, tobramisin) motor sinir ucunda kalsiyum girişini engelleyerek asetilkolin salınımını azaltır; nöromüsküler bloğu belirgin şekilde güçlendirir ve uzatırlar.\n- **Lokal Anestezikler:** Yüksek dozlarda postsinaptik kanalları doğrudan tıkayarak blokajı derinleştirirler.\n- **Myastenia Gravis:** Postsinaptik nikotinik reseptör sayısı azaldığı için hastalar nondepolarizan blokörlere (rokuronyum, vekuronyum) karşı aşırı duyarlıdır; normal dozun yarısı bile saatlerce süren felç oluşturabilir.\n\n> [!NOTE]\n> Myastenia gravis hastalarında süksinilkoline karşı göreceli bir direnç bulunurken, nondepolarizan blokör dozları en az yüzde elli oranında azaltılmalıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "q60-s14-1",
+     "question": "Yoğun bakımda aminoglikozit grubu antibiyotik (örneğin gentamisin) tedavisi gören bir hastaya nondepolarizan kas gevşetici uygulandığında ne beklenir?",
+     "options": [
+      {
+       "text": "Kas gevşeticinin tamamen etkisiz hale gelmesi ve hızla atılması",
+       "isCorrect": false,
+       "explanation": "Kas gevşeticinin tamamen etkis kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Presinaptik asetilkolin salınımının azalması nedeniyle nöromüsküler bloğun belirgin derinleşmesi ve uzaması",
+       "isCorrect": true,
+       "explanation": "Bu seçenek doğru bir farmakolojik tespittir. Presinaptik asetilkolin salınımının azalması nedeniyle nöromüsküler bloğun belirgin derinleşmesi ve uzaması ifadesi amfi ders notlarında ve referans farmakoloji kaynaklarında doğrudan vurgulanan temel mekanizmayı yansıtır."
+      },
+      {
+       "text": "Hastada ani epileptik nöbetlerin tetiklenmesi",
+       "isCorrect": false,
+       "explanation": "Hastada ani epileptik nöbetler kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Sisatrakuryumun Hoffman parçalanmasının durması",
+       "isCorrect": false,
+       "explanation": "Sisatrakuryumun Hoffman parçal kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "c60-s14-1",
+     "sentence": "Myastenia gravis hastalarında fonksiyonel nikotinik reseptör sayısı azaldığından non-depolarizan kas gevşeticilere aşırı duyarlılık görülür.",
+     "maskedTerm": "aşırı duyarlılık",
+     "hint": ""
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "stl60-s14-1",
+     "topic": "Nöromüsküler Blokör İlaç Etkileşimleri",
+     "items": [
+      {
+       "text": "Aminoglikozit antibiyotikler presinaptik asetilkolin salınımını azaltarak kas felcini derinleştirir.",
+       "isLie": false,
+       "explanation": "Doğrudur, kalsiyum girişini baskılayarak blokajı potansiyalize ederler."
+      },
+      {
+       "text": "Myastenia gravis hastalarına normal dozda rokuronyum verildiğinde standart sürede uyanırlar.",
+       "isLie": true,
+       "explanation": "Tuzaktır! Myastenia gravis hastaları nondepolarizanlara aşırı duyarlıdır; normal doz uzamış felce yol açar, doz azaltılmalıdır."
+      },
+      {
+       "text": "İnhalasyon anestezikleri nöromüsküler blokörlerin kas gevşetici etkisini artırırlar.",
+       "isLie": false,
+       "explanation": "Doğrudur, uçucu gazlar doza bağımlı olarak nöromüsküler bloğu güçlendirir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar60-s14-1",
+     "question": "Aminoglikozit antibiyotikler nöromüsküler kavşakta hangi iyonun girişini engelleyerek bloğu artırır?",
+     "answer": "Presinaptik motor sinir ucuna kalsiyum iyonlarının girişini engelleyerek asetilkolin salınımını azaltırlar."
+    }
+   ]
+  },
+  {
+   "slideNumber": 15,
+   "id": "k2p-y25-k2-60-s15",
+   "title": "Antikolinesterazlar ile Bloğun Geri Döndürülmesi",
+   "bolum": "3.2",
+   "pdfSayfalari": [
+    33,
+    34
+   ],
+   "sourcePdf": {
+    "startPage": 33,
+    "endPage": 34
+   },
+   "synthesisNarrative": "Cerrahi operasyon bitiminde nondepolarizan nöromüsküler blokajın ortadan kaldırılması geleneksel olarak asetilkolinesteraz inhibitörleri ile sağlanır.\n\n- **Etki Mekanizması:** Neostigmin ve edrofonyum, kavşakta asetilkolini yıkan asetilkolinesteraz enzimini inhibe ederler; sinaptik aralıkta biriken asetilkolin kompetitif kas gevşeticisini reseptörden kovar.\n- **Muskarinik Yan Etkiler:** Artan asetilkolin kalpteki M2 reseptörlerini uyararak bradikardi, asistoli; bronş ve tükürük bezlerinde aşırı sekresyon ve bronkospazm oluşturur.\n- **Antimuskarinik Kombinasyonu:** Bu tehlikeli yan etkileri nötralize etmek için neostigmin mutlaka atropin veya glikopirolat ile aynı enjektörde kombine edilerek verilir.\n\n> [!IMPORTANT]\n> Antikolinesterazlar süksinilkolinin Faz I bloğunu derinleştirir; yalnızca nondepolarizan blokajın geri çevrilmesinde kullanılırlar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "q60-s15-1",
+     "question": "Nondepolarizan kas gevşetici uygulanmış bir hastada bloğu geri çevirmek için neostigmin verilirken neden mutlaka atropin de eklenmelidir?",
+     "options": [
+      {
+       "text": "Neostigminin çizgili kaslardaki nikotinik etkisini iki katına çıkarmak için",
+       "isCorrect": false,
+       "explanation": "Neostigminin çizgili kaslardak kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Asetilkolin artışına bağlı gelişebilecek şiddetli bradikardi ve sekresyon artışını engellemek için",
+       "isCorrect": true,
+       "explanation": "Bu seçenek doğru bir farmakolojik tespittir. Asetilkolin artışına bağlı gelişebilecek şiddetli bradikardi ve sekresyon artışını engellemek için ifadesi amfi ders notlarında ve referans farmakoloji kaynaklarında doğrudan vurgulanan temel mekanizmayı yansıtır."
+      },
+      {
+       "text": "Neostigminin böbreklerden hızla atılmasını sağlamak için",
+       "isCorrect": false,
+       "explanation": "Neostigminin böbreklerden hızl kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Hastanın ameliyat sonrası ağrısını dindirmek için",
+       "isCorrect": false,
+       "explanation": "Hastanın ameliyat sonrası ağrı kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "c60-s15-1",
+     "sentence": "Kolinesteraz inhibitörleri non-depolarizan ilaçlar tarafından oluşturulan nöromusküler blokajı geri döndürmek için kullanılır.",
+     "maskedTerm": "geri döndürmek",
+     "hint": ""
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "stl60-s15-1",
+     "topic": "Bloğun Geri Çevrilmesi İlkeleri",
+     "items": [
+      {
+       "text": "Neostigmin asetilkolinesteraz enzimini inhibe ederek sinapsta asetilkolin miktarını artırır.",
+       "isLie": false,
+       "explanation": "Doğrudur, yarışmalı geri çevirmenin temel mekanizması asetilkolin birikimidir."
+      },
+      {
+       "text": "Neostigmin süksinilkolinin oluşturduğu Faz I bloğu hızla tersine çevirerek solunumu başlatır.",
+       "isLie": true,
+       "explanation": "Tuzaktır! Faz I blokta neostigmin verilmesi kesinlikle kontrendikedir; bloğu daha da derinleştirir."
+      },
+      {
+       "text": "Neostigminin muskarinik yan etkilerini önlemek için atropin veya glikopirolat birlikte uygulanır.",
+       "isLie": false,
+       "explanation": "Doğrudur, bradikardi ve bronkosekresyonu önlemek için antimuskarinik zorunludur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar60-s15-1",
+     "question": "Neostigminin nondepolarizan bloğu geri çevirme mekanizması nedir?",
+     "answer": "Asetilkolinesteraz enzimini inhibe ederek kavşakta asetilkolin miktarını artırır; artan asetilkolin nondepolarizan ilacı reseptörden yarışmalı olarak uzaklaştırır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 16,
+   "id": "k2p-y25-k2-60-s16",
+   "title": "Sugammadeks: Selektif Şelasyon ve İlaç Etkileşimleri",
+   "bolum": "3.3",
+   "pdfSayfalari": [
+    35,
+    37
+   ],
+   "sourcePdf": {
+    "startPage": 35,
+    "endPage": 37
+   },
+   "synthesisNarrative": "Sugammadeks, steroidal kas gevşeticilerin etkisini geri çevirmek üzere tasarlanmış modifiye bir gama-siklodekstrin molekülüdür.\n\n- **Enkapsülasyon Mekanizması:** Lipofilik bir iç boşluğa ve hidrofilik bir dış yüzeye sahiptir; plazmadaki serbest rokuronyum (ve vekuronyum) moleküllerini 1:1 oranında içine alarak sıkıca hapseder (şelasyon).\n- **Hızlı Geri Dönüş:** Kavşaktaki serbest ilaç konsantrasyonu sıfıra iner; reseptördeki moleküller plazmaya difüze olarak bağlanır ve derin blokaj bile 2-3 dakikada tamamen çözülür.\n- **Atılım ve Emniyet:** Kompleks böbrekler yoluyla değişmeden atılır; asetilkolin reseptörlerini etkilemediği için bradikardi veya kolinerjik yan etki oluşturmaz ve atropin gerektirmez.\n- **İlaç Etkileşimi:** Diğer steroid molekülleri de bağlayabildiği için oral kontraseptif kullanan kadınlarda 7 gün süreyle ek bariyer korunma önerilmelidir.\n\n> [!IMPORTANT]\n> Sugammadeks yalnızca steroidal blokörleri (rokuronyum > vekuronyum) bağlar; sisatrakuryum veya süksinilkolin üzerinde hiçbir etkisi yoktur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "q60-s16-1",
+     "question": "Sugammadeksin rokuronyum bloğunu geri çevirme mekanizması aşağıdakilerden hangisinde tam olarak açıklanmıştır?",
+     "options": [
+      {
+       "text": "Asetilkolinesteraz enzimini allosterik olarak aktive ederek asetilkolini artırmak",
+       "isCorrect": false,
+       "explanation": "Asetilkolinesteraz enzimini al kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Rokuronyum molekülünü siklodekstrin kafesi içine 1:1 oranında hapsederek inaktive etmek",
+       "isCorrect": true,
+       "explanation": "Bu seçenek doğru bir farmakolojik tespittir. Rokuronyum molekülünü siklodekstrin kafesi içine 1:1 oranında hapsederek inaktive etmek ifadesi amfi ders notlarında ve referans farmakoloji kaynaklarında doğrudan vurgulanan temel mekanizmayı yansıtır."
+      },
+      {
+       "text": "Postsinaptik nikotinik reseptörlerin sayısını gen transkripsiyonuyla artırmak",
+       "isCorrect": false,
+       "explanation": "Postsinaptik nikotinik reseptö kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Karaciğer sitokrom P450 enzimlerini indükleyerek ilacın parçalanmasını sağlamak",
+       "isCorrect": false,
+       "explanation": "Karaciğer sitokrom P450 enziml kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "c60-s16-1",
+     "sentence": "Böbrek fonksiyonu normal olan hastalarda sugammadeks rokuronyum kompleksi tipik olarak yirmi dört saat içinde idrarla değişmeden atılır.",
+     "maskedTerm": "idrarla değişmeden",
+     "hint": ""
+    },
+    {
+     "type": "interactive_table",
+     "id": "t60-s16-1",
+     "title": "Geri Döndürücü Ajanların Karşılaştırılması",
+     "tableHeaders": [
+      "Özellik",
+      "Neostigmin",
+      "Sugammadeks"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Etki Mekanizması",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Asetilkolinesteraz inhibisyonu",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Doğrudan moleküler şelasyon",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Hedef İlaçlar",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Tüm nondepolarizanlar",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Steroid yapılılar (Rokuronyum)",
+         "isMasked": true,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Atropin İhtiyacı",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Zorunlu (bradikardi riski)",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Gerekmez (kolinerjik etki yok)",
+         "isMasked": true,
+         "hint": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar60-s16-1",
+     "question": "Sugammadeks uygulanan doğurganlık çağındaki bir kadına taburculukta hangi farmakolojik uyarı yapılmalıdır?",
+     "answer": "Sugammadeks oral kontraseptif steroidleri de bağlayabileceği için hastaya bir hafta boyunca ek bariyer korunma yöntemi kullanması önerilmelidir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 17,
+   "id": "k2p-y25-k2-60-s17",
+   "title": "Nöromüsküler Blokörlerin Klinik Kullanım Endikasyonları",
+   "bolum": "3.3",
+   "pdfSayfalari": [
+    38,
+    39
+   ],
+   "sourcePdf": {
+    "startPage": 38,
+    "endPage": 39
+   },
+   "synthesisNarrative": "Nöromüsküler blokör ilaçlar ameliyathane dışında da kritik hasta yönetiminde önemli kullanım alanlarına sahiptir.\n\n- **Cerrahi Gevşeme:** Karın içi ve ortopedik cerrahide cerrahi sahanın açılmasını kolaylaştırır ve daha hafif genel anestezi dozlarıyla ameliyat yapılmasına olanak tanır.\n- **Endotrakeal Entübasyon:** Laringeal ve çene kaslarını felç ederek vokal kordların net görülmesini ve tüpün hasarsız yerleştirilmesini sağlar.\n- **Mekanik Ventilasyon:** Ağır solunum yetmezliği (ARDS) olan yoğun bakım hastalarında hastanın ventilatörle savaşmasını önleyerek gaz değişimini optimize eder.\n- **Dirençli Konvülsiyonlar:** Status epileptikus ve lokal anestezik toksisitesinde periferik kas kasılmalarını durdurarak hipertermi, asidoz ve rabdomiyoliz gelişimini önler.\n\n> [!NOTE]\n> Nöromüsküler blokörler konvülsiyon sırasında periferik kas kasılmalarını durdursa da beyindeki elektriksel epileptik aktiviteyi sonlandırmaz; santral antiepileptik tedavi esastır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "q60-s17-1",
+     "question": "Status epileptikus gibi dirençli konvülsiyon geçiren bir hastada nöromüsküler blokör uygulanmasının temel klinik amacı nedir?",
+     "options": [
+      {
+       "text": "Beyindeki epileptojenik nöronal odak deşarjını tamamen durdurmak",
+       "isCorrect": false,
+       "explanation": "Beyindeki epileptojenik nörona kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Şiddetli periferik kasılmaları durdurarak hipoksi, asidoz ve rabdomiyoliz hasarını önlemek",
+       "isCorrect": true,
+       "explanation": "Bu seçenek doğru bir farmakolojik tespittir. Şiddetli periferik kasılmaları durdurarak hipoksi, asidoz ve rabdomiyoliz hasarını önlemek ifadesi amfi ders notlarında ve referans farmakoloji kaynaklarında doğrudan vurgulanan temel mekanizmayı yansıtır."
+      },
+      {
+       "text": "GABA reseptörlerini aktive ederek santral sedasyon sağlamak",
+       "isCorrect": false,
+       "explanation": "GABA reseptörlerini aktive ede kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Plazma kalsiyum düzeylerini yükselterek kalbi korumak",
+       "isCorrect": false,
+       "explanation": "Plazma kalsiyum düzeylerini yü kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "c60-s17-1",
+     "sentence": "Nöromusküler blokör ilaçlar cerrahi gevşeme, entübasyon, mekanik ventilasyon uyumu ve konvülsiyonların periferik kontrolünde kullanılır.",
+     "maskedTerm": "cerrahi gevşeme",
+     "hint": ""
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "stl60-s17-1",
+     "topic": "Kas Gevşeticilerin Klinik Kullanımı",
+     "items": [
+      {
+       "text": "Yoğun bakımda ARDS hastalarında ventilatör uyumunu artırmak için nöromüsküler blokörler uygulanabilir.",
+       "isLie": false,
+       "explanation": "Doğrudur, mekanik ventilasyon senkronizasyonunda yaygın kullanılırlar."
+      },
+      {
+       "text": "Status epileptikusta süksinilkolin verilmesi beyindeki epileptik nöbeti anında tamamen sonlandırır.",
+       "isLie": true,
+       "explanation": "Tuzaktır! İlaç santral sisteme geçmez; kasılmaları durdurur fakat beyindeki elektriksel nöbet EEG'de devam eder."
+      },
+      {
+       "text": "Karın cerrahisinde kas gevşetici kullanımı cerrahın görüş alanını genişletir.",
+       "isLie": false,
+       "explanation": "Doğrudur, abdominal duvar kaslarını gevşeterek cerrahi konfor sağlar."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar60-s17-1",
+     "question": "Konvülsiyon geçiren bir hastada kas gevşetici verildiğinde EEG'de ne görülür?",
+     "answer": "Kas gevşeticiler kan-beyin bariyerini geçemediği için periferde kaslar dursa bile EEG'de epileptik deşarjlar devam eder."
+    }
+   ]
+  },
+  {
+   "slideNumber": 18,
+   "id": "k2p-y25-k2-60-s18",
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Bloğun Geri Çevrilmesi ve Sugammadeks",
+   "bolum": "3.3",
+   "isCheckpoint": true,
+   "pdfSayfalari": [
+    29,
+    39
+   ],
+   "sourcePdf": {
+    "startPage": 29,
+    "endPage": 39
+   },
+   "synthesisNarrative": "Bu bölümde ilaç etkileşimleri, malign hipertermi kriz yönetimi ve bloğun geri çevrilmesi mekanizmaları pekiştirildi.\n\n- **Malign Hipertermi:** Süksinilkolin ve halotan duyarlı bireylerde RyR1 kalsiyum salınımını tetikler; krizin tek spesifik tedavisi intravenöz Dantrolendir.\n- **Neostigmin Mekanizması:** Asetilkolinesterazı inhibe ederek asetilkolini artırır; bradikardiyi engellemek için mutlaka atropinle kombine edilir.\n- **Sugammadeks Farkı:** Rokuronyum ve vekuronyumu 1:1 şelasyonla hapseder; kolinerjik yan etki oluşturmaz ve atropin gerektirmez.\n\n> [!NOTE]\n> Sugammadeks yalnızca steroidal yapılı blokörleri bağlar; benzilizokinolinler (sisatrakuryum) veya süksinilkolin üzerinde etkisizdir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "q60-s18-1",
+     "question": "Üçüncü bölüm kazanımları ışığında rokuronyum ile süksinilkolin ve bunların geri çevrilmesi karşılaştırıldığında hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Süksinilkolinin Faz I bloğu sugammadeks ile saniyeler içinde geri çevrilir.",
+       "isCorrect": false,
+       "explanation": "Süksinilkolinin Faz I bloğu su kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Rokuronyumun oluşturduğu derin blokaj sugammadeks ile doğrudan şelasyonla hızla ortadan kaldırılabilir.",
+       "isCorrect": true,
+       "explanation": "Bu seçenek doğru bir farmakolojik tespittir. Rokuronyumun oluşturduğu derin blokaj sugammadeks ile doğrudan şelasyonla hızla ortadan kaldırılabilir ifadesi amfi ders notlarında ve referans farmakoloji kaynaklarında doğrudan vurgulanan temel mekanizmayı yansıtır."
+      },
+      {
+       "text": "Neostigmin hem rokuronyum hem de süksinilkolin Faz I bloğunu eşit etkinlikte geri döndürür.",
+       "isCorrect": false,
+       "explanation": "Neostigmin hem rokuronyum hem  kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Sugammadeks uygulandığında hastada şiddetli taşikardi ve ağız kuruluğu gelişir.",
+       "isCorrect": false,
+       "explanation": "Sugammadeks uygulandığında has kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "id": "sw60-s18-1",
+     "title": "İlaç ve Geri Çevirme Yöntemi Eşleştirmesi",
+     "cards": [
+      {
+       "text": "Rokuronyum",
+       "category": "Sugammadeks ile Şelasyon"
+      },
+      {
+       "text": "Vekuronyum",
+       "category": "Sugammadeks ile Şelasyon"
+      },
+      {
+       "text": "Sisatrakuryum",
+       "category": "Neostigmin + Atropin"
+      },
+      {
+       "text": "Süksinilkolin",
+       "category": "Spontan Kolinesteraz Yıkımı"
+      }
+     ],
+     "leftCategory": "Sugammadeks ile Şelasyon",
+     "rightCategory": "Neostigmin + Atropin"
+    },
+    {
+     "type": "cloze_masking",
+     "id": "c60-s18-1",
+     "sentence": "Sugammadeks steroidal nöromusküler bloke edici ajanlar olan rokuronyum ve vekuronyumu bağlayarak idrarla atılmasını sağlar.",
+     "maskedTerm": "rokuronyum ve vekuronyumu",
+     "hint": ""
+    },
+    {
+     "type": "active_recall",
+     "id": "ar60-s18-1",
+     "question": "Malign hipertermide Dantrolen hücrenin hangi organelindeki hangi reseptörü bloke eder?",
+     "answer": "Sarkoplazmik retikulum membranındaki riyanodin reseptörünü (RyR1) bloke eder."
+    }
+   ]
+  },
+  {
+   "slideNumber": 19,
+   "id": "k2p-y25-k2-60-s19",
+   "title": "Diazepam: GABA-A Reseptör Modülasyonu ve Santral Spazmolizis",
+   "bolum": "4.1",
+   "pdfSayfalari": [
+    40,
+    40
+   ],
+   "sourcePdf": {
+    "startPage": 40,
+    "endPage": 40
+   },
+   "synthesisNarrative": "Diazepam, benzodiazepin türevi bir ilaç olup santral sinir sisteminde majör inhibitör nörotransmiter olan gama-aminobütirik asidin (GABA) etkisini güçlendirir.\n\n- **Reseptör Mekanizması:** GABA-A reseptör kompleksinde allosterik bağlanma bölgesine oturarak GABA'nın klor iyon kanallarını açma sıklığını (frekansını) artırır.\n- **Spinal Etki:** Hücre içine klor girişi nöronal membranda hiperpolarizasyon oluşturur; omurilik düzeyinde monosinaptik ve polisinaptik refleks arklarını baskılar.\n- **Klinik Kullanım:** Serebral palsi, omurilik yaralanmaları ve akut kas zorlanmalarında spazmı çözmek için kullanılır.\n- **Kısıtlayıcı Yan Etki:** Kas gevşetici dozlarda belirgin sedasyon ve uyku hali yapması en önemli klinik dezavantajıdır.\n\n> [!NOTE]\n> Diazepam çizgili kas hücresi veya nöromüsküler kavşak üzerinde doğrudan bir etki göstermez; gevşetici etkisi tamamen santral sinir sistemi aracılıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "q60-s19-1",
+     "question": "Diazepamın kas spazmını azaltıcı spazmolitik etkisini ortaya çıkaran moleküler etki mekanizması nedir?",
+     "options": [
+      {
+       "text": "Postsinaptik nikotinik asetilkolin reseptörlerini kompetitif olarak tıkamak",
+       "isCorrect": false,
+       "explanation": "Postsinaptik nikotinik asetilk kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "GABA-A reseptör kompleksine bağlanarak klor kanalı açılma frekansını ve inhibitör tonusu artırmak",
+       "isCorrect": true,
+       "explanation": "Bu seçenek doğru bir farmakolojik tespittir. GABA-A reseptör kompleksine bağlanarak klor kanalı açılma frekansını ve inhibitör tonusu artırmak ifadesi amfi ders notlarında ve referans farmakoloji kaynaklarında doğrudan vurgulanan temel mekanizmayı yansıtır."
+      },
+      {
+       "text": "Sarkoplazmik retikulumdan kalsiyum salınımını doğrudan durdurmak",
+       "isCorrect": false,
+       "explanation": "Sarkoplazmik retikulumdan kals kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Presinaptik veziküllerden glutamat salınımını eksitatör olarak artırmak",
+       "isCorrect": false,
+       "explanation": "Presinaptik veziküllerden glut kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "c60-s19-1",
+     "sentence": "Benzodiazepinler santral sinir sisteminde gama-aminobütirik asidin GABA-A reseptörleri üzerindeki etkisini kolaylaştırarak kas tonusunu azaltır.",
+     "maskedTerm": "gama-aminobütirik asidin",
+     "hint": ""
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "stl60-s19-1",
+     "topic": "Diazepamın Farmakolojisi",
+     "items": [
+      {
+       "text": "Diazepam GABA-A reseptörlerinde klor kanalı açılma sıklığını artırarak hiperpolarizasyon yapar.",
+       "isLie": false,
+       "explanation": "Doğrudur, allosterik modülasyonla klor kanalı frekansını artırır."
+      },
+      {
+       "text": "Diazepam çizgili kas liflerine doğrudan girerek aktin ve miyozin flamentlerini parçalar.",
+       "isLie": true,
+       "explanation": "Tuzaktır! Kas lifleri üzerinde doğrudan periferik etkisi yoktur; etkisi santral ve spinal kökenlidir."
+      },
+      {
+       "text": "Diazepamın kas gevşetici dozlarında belirgin sedasyon ve uyku hali görülmesi kısıtlayıcıdır.",
+       "isLie": false,
+       "explanation": "Doğrudur, santral sedatif etkisi terapötik kullanımı sınırlar."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar60-s19-1",
+     "question": "Diazepamın spazmolitik kullanımını kısıtlayan en belirgin santral yan etki nedir?",
+     "answer": "Belirgin sedasyon, uyku hali ve psikomotor yavaşlamadır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 20,
+   "id": "k2p-y25-k2-60-s20",
+   "title": "Baklofen: GABA-B Agonizmi ve İntratekal Uygulama",
+   "bolum": "4.1",
+   "pdfSayfalari": [
+    41,
+    43
+   ],
+   "sourcePdf": {
+    "startPage": 41,
+    "endPage": 43
+   },
+   "synthesisNarrative": "Baklofen (p-klorofenil GABA), oral yoldan kullanılmak üzere geliştirilmiş sentetik bir GABA-B reseptör agonistidir.\n\n- **Reseptör Mekanizması:** Gi/o proteinine kenetli GABA-B reseptörlerini uyararak potasyum iletkenliğini artırır ve membran hiperpolarizasyonu oluşturur; presinaptik kalsiyum girişini azaltarak eksitatör aminoasit salınımını baskılar.\n- **Klinik Avantaj:** En az diazepam kadar spastisiteyi azaltırken belirgin olarak daha az sedasyon ve uyku hali oluşturur.\n- **İntratekal Pompa Uygulaması:** Multipl skleroz veya omurilik travmasına bağlı şiddetli ve oral tedaviye dirençli spastisitede, cerrahi olarak yerleştirilen bir pompa sistemiyle doğrudan lomber subaraknoid boşluğa uygulanır.\n\n> [!IMPORTANT]\n> İntratekal baklofen pompasının aniden tıkanması veya ilacın kesilmesi; şiddetli rebound spastisite, rijidite, halüsinasyonlar ve hayatı tehdit eden nöbetlere yol açabilir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "q60-s20-1",
+     "question": "Multipl skleroz hastasında şiddetli spastisite tedavisinde kullanılan, GABA-B reseptörlerini aktive ederek omurilikte internöronal hiperpolarizasyon yapan ilaç hangisidir?",
+     "options": [
+      {
+       "text": "Diazepam",
+       "isCorrect": false,
+       "explanation": "Diazepam kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Baklofen",
+       "isCorrect": true,
+       "explanation": "Bu seçenek doğru bir farmakolojik tespittir. Baklofen ifadesi amfi ders notlarında ve referans farmakoloji kaynaklarında doğrudan vurgulanan temel mekanizmayı yansıtır."
+      },
+      {
+       "text": "Dantrolen",
+       "isCorrect": false,
+       "explanation": "Dantrolen kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Neostigmin",
+       "isCorrect": false,
+       "explanation": "Neostigmin kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "c60-s20-1",
+     "sentence": "Baklofen p-klorofenil GABA oral yoldan kullanım için dizayn edilmiş bir GABA-B reseptör agonistidir.",
+     "maskedTerm": "GABA-B reseptör agonistidir",
+     "hint": ""
+    },
+    {
+     "type": "before_after_slider",
+     "id": "bas60-s20-1",
+     "leftTitle": "Diazepam (GABA-A)",
+     "rightTitle": "Baklofen (GABA-B)",
+     "leftPoints": [
+      "Ligand kapılı klor kanalı üzerinden etki gösterir",
+      "Kas gevşetici dozlarda belirgin sedasyon yapar",
+      "Yalnızca oral veya parenteral uygulanır"
+     ],
+     "rightPoints": [
+      "G proteinine kenetli potasyum kanallarını açar",
+      "Diazepama göre belirgin olarak daha az sedasyon yapar",
+      "Dirençli olgularda intratekal pompa ile subaraknoid verilir"
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar60-s20-1",
+     "question": "İntratekal baklofen pompasının aniden durması veya ilacın aniden kesilmesi hangi tehlikeli tabloya yol açar?",
+     "answer": "Şiddetli rebound spastisite, hipertermi, halüsinasyonlar, epileptik nöbetler ve rabdomiyoliz tablosuna yol açar."
+    }
+   ]
+  },
+  {
+   "slideNumber": 21,
+   "id": "k2p-y25-k2-60-s21",
+   "title": "Tizanidin: Alfa-2 Adrenoseptör Agonizmi ve Migren",
+   "bolum": "4.2",
+   "pdfSayfalari": [
+    44,
+    45
+   ],
+   "sourcePdf": {
+    "startPage": 44,
+    "endPage": 45
+   },
+   "synthesisNarrative": "Tizanidin, klonidin benzeri kimyasal yapıya sahip santral etkili bir alfa-2 adrenoseptör agonistidir.\n\n- **Etki Mekanizması:** Omurilik ara nöronlarında yer alan presinaptik alfa-2 adrenerjik reseptörleri uyarır; eksitatör aminoasitlerin (özellikle glutamat) salıverilmesini baskılayarak polisinaptik spinal refleksleri inhibe eder.\n- **Klinik Endikasyonlar:** Multipl skleroz, inme ve omurilik travmasına bağlı spastisitede etkilidir; ayrıca santral nosisepsiyonu modüle ederek kronik migren profilaksisinde de başarıyla kullanılır.\n- **Yan Etki Profili:** Klonidin türevi olması nedeniyle uyuşukluk, hipotansiyon, baş dönmesi ve belirgin ağız kuruluğu (kserostomi) oluşturabilir.\n\n> [!NOTE]\n> Tizanidin kas gücünü belirgin zayıflatmadan spastisiteyi azalttığı için ayakta durabilen ve yürüyebilen nörolojik hastalarda baklofene göre fonksiyonel bir avantaj sağlayabilir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "q60-s21-1",
+     "question": "Presinaptik alfa-2 adrenerjik reseptörleri uyararak omurilikte eksitatör aminoasit salınımını inhibe eden ve kronik migren tedavisinde de kullanılan kas gevşetici ilaç hangisidir?",
+     "options": [
+      {
+       "text": "Tizanidin",
+       "isCorrect": true,
+       "explanation": "Bu seçenek doğru bir farmakolojik tespittir. Tizanidin ifadesi amfi ders notlarında ve referans farmakoloji kaynaklarında doğrudan vurgulanan temel mekanizmayı yansıtır."
+      },
+      {
+       "text": "Dantrolen",
+       "isCorrect": false,
+       "explanation": "Dantrolen kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Baklofen",
+       "isCorrect": false,
+       "explanation": "Baklofen kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Süksinilkolin",
+       "isCorrect": false,
+       "explanation": "Süksinilkolin kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "c60-s21-1",
+     "sentence": "Tizanidin önemli ölçüde alfa-iki adrenoseptör agonisti etkiye sahiptir ve omurilikte eksitatör iletimi baskılar.",
+     "maskedTerm": "alfa-iki adrenoseptör",
+     "hint": ""
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "stl60-s21-1",
+     "topic": "Tizanidinin Özellikleri",
+     "items": [
+      {
+       "text": "Tizanidin omurilik ara nöronlarında presinaptik alfa-2 adrenerjik reseptörleri uyarır.",
+       "isLie": false,
+       "explanation": "Doğrudur, temel hücresel mekanizması presinaptik alfa-2 agonizmidir."
+      },
+      {
+       "text": "Tizanidin spastisite yanında kronik migren baş ağrılarının profilaksisinde de etkilidir.",
+       "isLie": false,
+       "explanation": "Doğrudur, santral nosisepsiyonu azaltarak migren sıklığını düşürür."
+      },
+      {
+       "text": "Tizanidin periferik kas son plağında asetilkolin reseptörlerini irreversibl bloke eder.",
+       "isLie": true,
+       "explanation": "Tuzaktır! Tizanidin periferik kavşakta etkili değildir; etkisi tamamen santral omurilik düzeyindedir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar60-s21-1",
+     "question": "Tizanidinin klonidin benzeri yapısına bağlı olarak en sık görülen otonomik yan etkileri nelerdir?",
+     "answer": "Hipotansiyon, bradikardi, uyuşukluk/sedasyon ve belirgin ağız kuruluğudur."
+    }
+   ]
+  },
+  {
+   "slideNumber": 22,
+   "id": "k2p-y25-k2-60-s22",
+   "title": "Dantrolen: RyR1 Kalsiyum Kanal Blokajı ve Malign Hipertermi",
+   "bolum": "4.2",
+   "pdfSayfalari": [
+    46,
+    48
+   ],
+   "sourcePdf": {
+    "startPage": 46,
+    "endPage": 48
+   },
+   "synthesisNarrative": "Dantrolen, etki yeri doğrudan iskelet kası lifi olan özgün ve periferik etkili tek kas gevşetici ajandır.\n\n- **Moleküler Mekanizma:** Sarkoplazmik retikulum membranında yer alan riyanodin reseptör kalsiyum kanallarına (RyR1) bağlanarak kanal açılmasını bloke eder.\n- **Eksitasyon-Kontraksiyon Kenetlenmesi:** Aksiyon potansiyelinin T tübülleri aracılığıyla kalsiyum salınımına dönüşmesini engelleyerek aktin-miyozin etkileşimini doğrudan durdurur.\n- **Malign Hiperterminin Antidotu:** Süksinilkolin ve anestezik gazların başlattığı kontrolsüz intrasellüler kalsiyum selini ve hipermetabolizmayı durduran tek spesifik ilaçtır.\n- **Yan Etkiler:** Genel kas güçsüzlüğü, sedasyon ve kronik oral kullanımda ciddi hepatotoksisite riski taşır.\n\n> [!IMPORTANT]\n> Santral etkili spazmolitikler eksitasyon-kontraksiyon kenetlenmesini etkilemezken, Dantrolen doğrudan kasta kalsiyum salınımını engelleyerek kas gücünü periferde azaltır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "q60-s22-1",
+     "question": "Santral etkili kas gevşeticilerin aksine, kas liflerinde eksitasyon-kontraksiyon kenetlenmesini engelleyerek çalışan ve Malign Hipertermi tedavisinde kullanılan ilaç hangisidir?",
+     "options": [
+      {
+       "text": "Tizanidin",
+       "isCorrect": false,
+       "explanation": "Tizanidin kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Dantrolen",
+       "isCorrect": true,
+       "explanation": "Bu seçenek doğru bir farmakolojik tespittir. Dantrolen ifadesi amfi ders notlarında ve referans farmakoloji kaynaklarında doğrudan vurgulanan temel mekanizmayı yansıtır."
+      },
+      {
+       "text": "Baklofen",
+       "isCorrect": false,
+       "explanation": "Baklofen kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Diazepam",
+       "isCorrect": false,
+       "explanation": "Diazepam kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Neostigmin",
+       "isCorrect": false,
+       "explanation": "Neostigmin kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "c60-s22-1",
+     "sentence": "Dantrolen RyR1 reseptörüne bağlanarak kalsiyum kanallarının açılmasını bloke eder ve sarkoplazmik retikulumdan kalsiyum salınımını engeller.",
+     "maskedTerm": "kalsiyum kanallarının",
+     "hint": ""
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "stl60-s22-1",
+     "topic": "Dantrolen Farmakolojisi",
+     "items": [
+      {
+       "text": "Dantrolen sarkoplazmik retikulumdaki riyanodin kanalına (RyR1) bağlanarak kalsiyum salınımını önler.",
+       "isLie": false,
+       "explanation": "Doğrudur, doğrudan kalsiyum salınımını durdurur."
+      },
+      {
+       "text": "Dantrolen çizgili kas gücünü azaltırken düz kaslar ve kalp kasını belirgin şekilde felç eder.",
+       "isLie": true,
+       "explanation": "Tuzaktır! Kalp kası RyR2 izoformunu içerir; Dantrolen iskelet kası RyR1'e özgüldür ve terapötik dozda kalbi etkilemez."
+      },
+      {
+       "text": "Dantrolen anestezide görülen Malign Hipertermi krizinin hayat kurtarıcı tek spesifik antidotudur.",
+       "isLie": false,
+       "explanation": "Doğrudur, kalsiyum krizini durduran tek ilaçtır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar60-s22-1",
+     "question": "Dantrolen kronik oral spastisite tedavisinde kullanıldığında hangi organ fonksiyonu periyodik kan testleri ile izlenmelidir?",
+     "answer": "Hepatotoksisite riski nedeniyle karaciğer fonksiyon testleri (AST, ALT) düzenli olarak izlenmelidir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 23,
+   "id": "k2p-y25-k2-60-s23",
+   "title": "Botulinum Toksini ve Akut Lokal Kas Spazmı İlaçları",
+   "bolum": "4.2",
+   "pdfSayfalari": [
+    49,
+    50
+   ],
+   "sourcePdf": {
+    "startPage": 49,
+    "endPage": 50
+   },
+   "synthesisNarrative": "Botulinum toksini, Clostridium botulinum bakterisinden elde edilen ve presinaptik kolinerjik iletimi bloke eden güçlü bir nörotoksindir.\n\n- **Etki Mekanizması:** Motor sinir terminaline endositozla girer; vezikül füzyonundan sorumlu SNARE kompleksindeki SNAP-25 proteinini enzimatik olarak parçalar ve asetilkolin ekzositozunu durdurur.\n- **Klinik Endikasyonlar:** Blefarospazm, servikal distoni, serebral palside lokal spastisite, aşırı terleme (hiperhidrozis) ve estetik kırışıklık tedavisinde lokalize enjekte edilir.\n- **Etki Süresi:** Toksinin etkisi 2-3 günde başlar ve sinir ucundan yeni akson filizlenmesi gelişene kadar 3-6 ay devam eder.\n- **Akut Lokal Spazm İlaçları:** Siklobenzaprin, karizoprodol ve metokarbamol beyin sapında polisinaptik refleksleri baskılayarak travmatik bel ve boyun tutulmalarında kullanılır.\n\n> [!NOTE]\n> Botulinum toksini sistemik spastisitede değil, yalnız hedeflenen hiperaktif kas gruplarına fokal intramüsküler enjeksiyon şeklinde uygulanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "id": "q60-s23-1",
+     "question": "Botulinum toksininin presinaptik motor sinir ucunda asetilkolin ekzositozunu engellemek için parçaladığı hedef protein aşağıdakilerden hangisidir?",
+     "options": [
+      {
+       "text": "Asetilkolinesteraz enzimi",
+       "isCorrect": false,
+       "explanation": "Asetilkolinesteraz enzimi kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "SNAP-25 (SNARE kompleksi proteini)",
+       "isCorrect": true,
+       "explanation": "Bu seçenek doğru bir farmakolojik tespittir. SNAP-25 (SNARE kompleksi proteini) ifadesi amfi ders notlarında ve referans farmakoloji kaynaklarında doğrudan vurgulanan temel mekanizmayı yansıtır."
+      },
+      {
+       "text": "Nikotinik reseptörün alfa alt birimi",
+       "isCorrect": false,
+       "explanation": "Nikotinik reseptörün alfa alt  kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Sarkoplazmik retikulum riyanodin kanalı",
+       "isCorrect": false,
+       "explanation": "Sarkoplazmik retikulum riyanod kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      },
+      {
+       "text": "Kolin asetiltransferaz enzimi",
+       "isCorrect": false,
+       "explanation": "Kolin asetiltransferaz enzimi kavramı ilgili klinik tabloda farklı bir fizyolojik mekanizma üzerinden değerlendirilir. Bu nedenle sorulan özgül klinik durum ve hedeflenen farmakodinamik ilke ile uyuşmadığı için doğru yanıt olarak kabul edilemez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "id": "c60-s23-1",
+     "sentence": "Botulinum toksini presinaptik ACh salınımını inhibe eder ve lokal enjeksiyonla fokal kas spazmlarını giderir.",
+     "maskedTerm": "presinaptik ACh salınımını",
+     "hint": ""
+    },
+    {
+     "type": "interactive_table",
+     "id": "t60-s23-1",
+     "title": "Spazmolitik İlaçların Etki Mekanizmaları",
+     "tableHeaders": [
+      "İlaç",
+      "Hedef Reseptör / Mekanizma",
+      "Temel Etki Yeri"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Diazepam",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "GABA-A klor kanalı frekans artışı",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Santral ve spinal kord",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Baklofen",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "GABA-B potasyum hiperpolarizasyonu",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Spinal kord ara nöronları",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Tizanidin",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Alfa-2 adrenerjik presinaptik inhibisyon",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Omurilik eksitatör yolları",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Dantrolen",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "RyR1 kalsiyum salınım blokajı",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "İskelet kası lifi (Periferik)",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Botulinum Toksini",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "SNAP-25 yıkımı ile ACh blokajı",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Presinaptik motor sinir ucu",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "ar60-s23-1",
+     "question": "Botulinum toksini enjeksiyonunun kas gevşetici etkisi neden 3-6 ay sonra sonlanır?",
+     "answer": "Motor sinir terminalinden yeni aksonal filizlenmeler (sprouting) gelişerek yeni fonksiyonel nöromüsküler sinapslar oluştuğu için etkisi biter."
+    }
+   ]
+  },
+  {
+   "slideNumber": 24,
+   "id": "k2p-y25-k2-60-s24",
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Miyorelaksan İlaçlar",
+   "bolum": "4.2",
+   "isGameFinale": true,
+   "pdfSayfalari": [
+    2,
+    50
+   ],
+   "sourcePdf": {
+    "startPage": 2,
+    "endPage": 50
+   },
+   "synthesisNarrative": "Tebrikler! Miyorelaksan İlaçlar (İskelet Kası Gevşeticileri) dersini başarıyla tamamladınız. Bu oyun sayfasında nöromüsküler kavşak mekanizmaları, blokör sınıfları, geri çevirme stratejileri ve spazmolitik ilaçları pekiştireceksiniz.",
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "id": "so60-s24-1",
+     "prompt": "Nöromüsküler blokör uygulamasında çizgili kasların felç olma sırasını baştan sona doğru sıralayınız:",
+     "steps": [
+      "Göz çevresi ve ekstraoküler küçük kaslar",
+      "Yüz, çene ve yutak kasları",
+      "Kol, bacak ve boyun kasları",
+      "Gövde ve interkostal kaburga kasları",
+      "Solunumun ana kası olan diyafram"
+     ],
+     "explanation": "Kas paralizisi önce küçük ve hızlı hareket eden göz ve yüz kaslarında başlar, ardından ekstremite ve gövdeye yayılır, en son diyafram felç olur."
+    },
+    {
+     "type": "estimate_slider",
+     "id": "es60-s24-1",
+     "prompt": "Genel anestezi sonrası bir hastanın mekanik ventilatörden güvenle ayrılması (ekstübasyon) için gereken minimum Train of Four (TOF) oranı yüzde kaçtır?",
+     "min": 0,
+     "max": 100,
+     "answer": 90,
+     "tolerance": 5,
+     "step": 5,
+     "explanation": "Güvenli spontan solunum ve postoperatif solunum depresyonunu önlemek için TOF oranının en az yüzde doksan olması şarttır."
+    },
+    {
+     "type": "perturbation",
+     "id": "pt60-s24-1",
+     "scenario": "Süksinilkolin uygulanan genetik atipik kolinesteraz enzim eksikliği olan bir hastada plazma ve kavşak parametrelerinin değişim yönünü belirleyiniz:",
+     "parameters": [
+      {
+       "name": "Süksinilkolinin etki ve apne süresi",
+       "correct": "up",
+       "explanation": "Plazma psödokolinesteraz enzim yetmezliğinde süksinilkolin hidrolizi bozulduğu için etki süresi uzar ve uyanma gecikir."
+      },
+      {
+       "name": "Plazma bütirilkolinesteraz enzim hidroliz hızı",
+       "correct": "down",
+       "explanation": "Plazma psödokolinesteraz enzim yetmezliğinde süksinilkolin hidrolizi bozulduğu için etki süresi uzar ve uyanma gecikir."
+      },
+      {
+       "name": "Hastanın spontan solunuma dönüş hızı",
+       "correct": "down",
+       "explanation": "Plazma psödokolinesteraz enzim yetmezliğinde süksinilkolin hidrolizi bozulduğu için etki süresi uzar ve uyanma gecikir."
+      }
+     ]
+    },
+    {
+     "type": "fix_the_text",
+     "id": "ft60-s24-1",
+     "text": "Süksinilkolin ve halotan anestezisi sonrasında gelişen Malign Hipertermi krizinde hayat kurtarıcı olan ve sarkoplazmik retikulum riyanodin reseptöründen kalsiyum salınımını doğrudan durduran spesifik antidot Baklofen olarak bilinir.",
+     "errors": [
+      {
+       "wrong": "Baklofen",
+       "correct": "Dantrolen",
+       "options": [
+        "Dantrolen",
+        "Neostigmin",
+        "Sugammadeks",
+        "Atropin"
+       ],
+       "explanation": "Malign hipertermi krizinde sarkoplazmik retikulumdan kalsiyum salınımını durduran tek spesifik antidot Dantrolendir."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "deckId": "k2p-y25-k2-60-miyorelaksan-ilaclar",
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "matchedPastQuestionsCount": 7,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}
