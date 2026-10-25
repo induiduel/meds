@@ -553,9 +553,10 @@ def medspak_uret_yerel(key: str, kurul: int, v2: dict, metin: str, deste: dict, 
     out_dir = DB_25_26 / "medspak" / f"kurul{kurul}"
     out_dir.mkdir(parents=True, exist_ok=True)
     yol = out_dir / f"{key}.medspak"
-    yol.unlink(missing_ok=True)
+    tmp_yol = out_dir / f"{key}.tmp.{os.getpid()}.medspak"
+    tmp_yol.unlink(missing_ok=True)
 
-    db = sqlite3.connect(yol)
+    db = sqlite3.connect(str(tmp_yol))
     db.executescript("""
       CREATE TABLE meta(anahtar TEXT PRIMARY KEY, deger TEXT);
       CREATE TABLE deste(id TEXT PRIMARY KEY, json TEXT);
@@ -653,6 +654,7 @@ def medspak_uret_yerel(key: str, kurul: int, v2: dict, metin: str, deste: dict, 
     db.executemany("INSERT INTO meta VALUES (?,?)", [(k, json.dumps(v, ensure_ascii=False) if not isinstance(v, str) else v) for k, v in meta.items()])
     db.commit()
     db.close()
+    os.replace(tmp_yol, yol)
 
     # medspak_dogrula.py ile denetle
     import medspak_dogrula as MD

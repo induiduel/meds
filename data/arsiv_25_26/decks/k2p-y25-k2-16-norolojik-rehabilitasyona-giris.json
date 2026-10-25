@@ -1,0 +1,1690 @@
+{
+ "id": "k2p-y25-k2-16-norolojik-rehabilitasyona-giris",
+ "courseCode": "k2-16",
+ "title": "Nörolojik Rehabilitasyona Giriş ve Genel İlkeler",
+ "shortTitle": "Nörolojik Rehabilitasyon",
+ "discipline": "Fiziksel Tıp ve Rehabilitasyon",
+ "department": "Fiziksel Tıp ve Rehabilitasyon",
+ "committee": "donem3-kurul2",
+ "instructor": "Dr. Öğr. Üyesi Şengül Metin Tarhan",
+ "matchedNoteId": "y25-k2-16-norolojik-rehabilitasyona-giris",
+ "sayfaHaritasi": "teyitli",
+ "overview": "Nörolojik rehabilitasyon, santral ve periferik sinir sistemi hasarlarında hastanın optimal potansiyeline ulaşması için yürütülen multidisipliner bir süreçtir. Bu deste, DSÖ sınıflamasını, kas gücü ve tonusu değerlendirmesini, serebellar muayeneyi, inme motor evrelerini (Brunnstrom), akut-subakut dönem yönetimini ve nöroplastisite mekanizmalarını interaktif modellerle öğretir.",
+ "highYieldPearls": [
+  "DSÖ sınıflamasında yapı kaybı bozukluk, aktivite kaybı özürlülük, sosyal rol kaybı engelliliktir.",
+  "MRC kas gücünde Grade 2 yerçekimsiz hareket, Grade 3 yerçekimine karşı harekettir.",
+  "Spastisite piramidal ve hıza bağımlıdır; rijidite ekstrapiramidal ve hıza bağımsız dişli çark direnci verir.",
+  "Serebellar bulgular (dismetri, ataksi, disdiyadokokinezi, intansiyonel tremor) ipsilateraldir.",
+  "Brunnstrom Evre 3'te spastisite zirvededir ve hareket tamamen sinerjidir; Evre 4'te sinerji dışı hareket başlar.",
+  "Nöroplastisite kullanıma bağımlıdır (use-dependent); erken ve aktif stimülasyon kortikal haritayı genişletir."
+ ],
+ "totalSlides": 16,
+ "totalInteractiveElements": 64,
+ "interactiveRatio": 4.0,
+ "slides": [
+  {
+   "slideNumber": 1,
+   "bolum": "1",
+   "title": "Nörolojik Rehabilitasyonun Tanımı ve Ekip Yaklaşımı",
+   "pdfSayfalari": [
+    1,
+    3
+   ],
+   "sourcePdf": {
+    "fileName": "Nörolojik rehabilitasyona giriş ve genel ilkeler-şengül.pptx-02.11.2022.pdf",
+    "startPage": 1,
+    "endPage": 3,
+    "primaryPage": 2
+   },
+   "synthesisNarrative": "Nörolojik rehabilitasyon, santral veya periferik sinir sistemi hasarı sonucu gelişen fonksiyonel kayıpların en aza indirilmesi amacıyla yürütülen aktif çabalar bütünüdür.\n\n- **Rehabilitasyon Felsefesi:** Özürlülüğü olan bireylerin tam veya tama yakın iyileşme imkanı bulunmadığında, optimal fiziksel, mental ve sosyal potansiyellerinin gerçekleştirilmesi ve kendileri için en uygun çevreye katılımlarının sağlanması hedeflenir.\n- **Multidisipliner Ekip Yapısı:** Süreç Fiziksel Tıp ve Rehabilitasyon (FTR) uzman doktorunun liderliğinde; fizyoterapist, iş-uğraşı terapisti, rehabilitasyon hemşiresi, konuşma terapisti, klinik psikolog ve sosyal hizmet uzmanından oluşan geniş bir ekiple yürütülür.\n\n> [!NOTE]\n> Rehabilitasyon tek bir hekimin veya fizyoterapistin bireysel uygulaması değil, farklı disiplinlerin hasta merkezli koordineli çalışmasıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Nörolojik rehabilitasyonun temel tanımı ve felsefesi ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Özürlülüğü olan bireylerin tam iyileşme imkanı olmadığında optimal potansiyellerini gerçekleştirmeyi amaçlar.",
+       "isCorrect": true,
+       "explanation": "Doğru. Rehabilitasyon tam iyileşme imkanı bulunmayan durumlarda bireyin fiziksel, mental ve sosyal potansiyelini en üst düzeye çıkarmayı hedefler."
+      },
+      {
+       "key": "B",
+       "text": "Yalnızca doku hasarının tamamen geriye döndürülebildiği akut cerrahi tablolarda uygulanır.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Rehabilitasyon tam iyileşme imkanı olmadığında bireyin mevcut kapasitesini en verimli şekilde kullanmasını amaçlar. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      },
+      {
+       "key": "C",
+       "text": "Yalnızca fizik tedavi teknikerinin tek başına yürüttüğü tek disiplinli bir egzersiz seansıdır.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Rehabilitasyon FTR hekimi, fizyoterapist, ergoterapist ve psikolog gibi birçok uzmandan oluşan multidisipliner bir ekip çalışmasıdır."
+      },
+      {
+       "key": "D",
+       "text": "Hastanın çevresel ve sosyal katılımını göz ardı ederek yalnızca kas kitlesini büyütmeye odaklanır.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Rehabilitasyon bireyin en uygun çevreye katılımını ve sosyal entegrasyonunu sağlamayı temel ilke kabul eder."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "çevreye",
+     "hint": "Bireyin toplumsal yaşama ve fiziksel ortama entegre olmasını anlatan kavram",
+     "sentence": "Rehabilitasyon, özürlülüğü olanların tam veya tama yakın iyileşme imkanı olmadığında optimal potansiyellerinin gerçekleştirilmesi ve kendileri için en uygun çevreye katılımlarının sağlanması için yürütülen aktif çabalardır."
+    },
+    {
+     "type": "swipe_matching",
+     "instruction": "Rehabilitasyon ekibi üyelerini temel sorumluluk alanlarına göre doğru kategoriye eşleştiriniz.",
+     "cards": [
+      {
+       "text": "FTR Uzman Doktoru",
+       "category": "left"
+      },
+      {
+       "text": "Fizyoterapist",
+       "category": "left"
+      },
+      {
+       "text": "İş-Uğraşı Terapisti",
+       "category": "right"
+      },
+      {
+       "text": "Sosyal Hizmet Uzmanı",
+       "category": "right"
+      }
+     ],
+     "leftCategory": "Tıbbi Liderlik ve Motor Tedavi",
+     "rightCategory": "Fonksiyonel ve Psikososyal Destek"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Rehabilitasyon ekibi ve felsefesiyle ilgili önermeleri inceleyiniz ve yanlış olanı belirleyiniz.",
+     "items": [
+      {
+       "text": "Rehabilitasyon ekibinde konuşma terapisti, klinik psikolog ve rehabilitasyon hemşiresi yer alır.",
+       "isLie": false,
+       "explanation": "Doğru. Bu meslek grupları nörolojik rehabilitasyon ekibinin resmi ve çekirdek üyeleri arasında yer alır."
+      },
+      {
+       "text": "Rehabilitasyon sürecinde hastanın yalnız fiziksel değil, mental ve sosyal potansiyeli de hedeflenir.",
+       "isLie": false,
+       "explanation": "Doğru. DSÖ ilkelerine göre fiziksel, mental ve sosyal bileşenler bir bütün olarak ele alınır."
+      },
+      {
+       "text": "Rehabilitasyon hekimi ekibin tek uygulayıcısıdır ve diğer sağlık profesyonellerine danışmadan tek başına karar verir.",
+       "isLie": true,
+       "explanation": "Yalandır. FTR uzmanı ekip lideridir ancak rehabilitasyon kararları tüm ekibin ortak değerlendirmesiyle multidisipliner alınır."
+      }
+     ]
+    }
+   ],
+   "content": "Nörolojik rehabilitasyon, santral veya periferik sinir sistemi hasarı sonucu gelişen fonksiyonel kayıpların en aza indirilmesi amacıyla yürütülen aktif çabalar bütünüdür.\n\n- **Rehabilitasyon Felsefesi:** Özürlülüğü olan bireylerin tam veya tama yakın iyileşme imkanı bulunmadığında, optimal fiziksel, mental ve sosyal potansiyellerinin gerçekleştirilmesi ve kendileri için en uygun çevreye katılımlarının sağlanması hedeflenir.\n- **Multidisipliner Ekip Yapısı:** Süreç Fiziksel Tıp ve Rehabilitasyon (FTR) uzman doktorunun liderliğinde; fizyoterapist, iş-uğraşı terapisti, rehabilitasyon hemşiresi, konuşma terapisti, klinik psikolog ve sosyal hizmet uzmanından oluşan geniş bir ekiple yürütülür.\n\n> [!NOTE]\n> Rehabilitasyon tek bir hekimin veya fizyoterapistin bireysel uygulaması değil, farklı disiplinlerin hasta merkezli koordineli çalışmasıdır.",
+   "stepNumber": 1,
+   "isCheckpoint": false,
+   "isGameFinale": null
+  },
+  {
+   "slideNumber": 2,
+   "bolum": "1",
+   "title": "Dünya Sağlık Örgütü Sınıflaması ve Rehabilitasyon Amaçları",
+   "pdfSayfalari": [
+    4,
+    5
+   ],
+   "sourcePdf": {
+    "fileName": "Nörolojik rehabilitasyona giriş ve genel ilkeler-şengül.pptx-02.11.2022.pdf",
+    "startPage": 4,
+    "endPage": 5,
+    "primaryPage": 4
+   },
+   "synthesisNarrative": "Dünya Sağlık Örgütü (DSÖ/ICIDH), sağlık durumunun sonuçlarını bozukluk, özürlülük ve engellilik olmak üzere üç düzeyde sınıflandırır.\n\n- **Bozukluk (Impairment):** Organ veya doku düzeyindeki anatomik yapı ve fizyolojik fonksiyon kaybıdır (örneğin parmak falanksının kopması).\n- **Özürlülük (Disability):** Bozukluktan kaynaklanan aktivite kısıtlılığı ve günlük yaşam aktivitelerindeki fonksiyonel kayıptır (örneğin parmağın kullanılamaması nedeniyle düğme ilikleyememek).\n- **Engellilik (Handicap):** Bozukluk veya özürlülük nedeniyle bireyin toplumsal ve mesleki rollerini yerine getirememesidir (örneğin piyanistin mesleğini yapamaması).\n\n> [!IMPORTANT]\n> İki bireyde aynı doku bozukluğu ve benzer özürlülük bulunsa dahi, mesleki ve sosyal beklentilerin farklılığı nedeniyle biri engelli hale gelirken diğeri engelli olmayabilir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kaza sonucu işaret parmağı distal falanksı kopan bir futbolcu ile bir piyanistin durumu karşılaştırıldığında hangisi doğrudur?",
+     "options": [
+      {
+       "key": "A",
+       "text": "İki hastada da kemik kaybı aynı bozukluktur, düğme ilikleyememek ikisinde de özürlülüktür, ancak piyanist mesleği gereği engellidir.",
+       "isCorrect": true,
+       "explanation": "Doğru. Doku hasarı ikisinde de aynı bozukluğu, düğme ilikleyememek aynı özürlülüğü yaratır; piyano çalamamak ise mesleki engelliliktir."
+      },
+      {
+       "key": "B",
+       "text": "Futbolcunun parmağı koptuğu için futbol oynayamayarak ağır engelli sınıfına girer.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Futbolcunun mesleki performansında parmak distal falanksı kaybı belirleyici bir kısıtlılık yaratmaz ve engelli sayılmaz."
+      },
+      {
+       "key": "C",
+       "text": "Düğme ilikleyememek piyanistte özürlülük iken futbolcuda engellilik olarak adlandırılır.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Düğme ilikleme günlük yaşam aktivitesidir ve her iki bireyde de aktivite kısıtlılığı yani özürlülüktür."
+      },
+      {
+       "key": "D",
+       "text": "Piyanistin parmak kaybı doğrudan engelliliktir, yapısal doku düzeyinde hiçbir bozukluk oluşmamıştır.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Falanksın kopması iskelet sisteminde doğrudan anatomik bir kayıp yani bozukluktur. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "instruction": "Dünya Sağlık Örgütü sınıflaması basamaklarını ve piyanist olgusundaki karşılıklarını inceleyiniz.",
+     "tableHeaders": [
+      "Kavram",
+      "Düzey",
+      "Piyanist Olgusu"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "{'text': 'Bozukluk (Impairment)', 'hidden': False}",
+         "isMasked": false,
+         "hint": null
+        },
+        {
+         "text": "{'text': 'Organ / Doku düzeyi', 'hidden': False}",
+         "isMasked": false,
+         "hint": null
+        },
+        {
+         "text": "{'text': 'İşaret parmağı distal falanks kopması', 'hidden': True, 'hint': 'İskelet sistemindeki anatomik yapı kaybı'}",
+         "isMasked": true,
+         "hint": "Doğru kavram"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "{'text': 'Özürlülük (Disability)', 'hidden': False}",
+         "isMasked": false,
+         "hint": null
+        },
+        {
+         "text": "{'text': 'Kişisel aktivite düzeyi', 'hidden': False}",
+         "isMasked": false,
+         "hint": null
+        },
+        {
+         "text": "{'text': 'Düğme ilikleyememe kısıtlılığı', 'hidden': True, 'hint': 'Günlük yaşam eylemindeki fonksiyonel kayıp'}",
+         "isMasked": true,
+         "hint": "Doğru kavram"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "{'text': 'Engellilik (Handicap)', 'hidden': False}",
+         "isMasked": false,
+         "hint": null
+        },
+        {
+         "text": "{'text': 'Toplumsal ve mesleki rol', 'hidden': False}",
+         "isMasked": false,
+         "hint": null
+        },
+        {
+         "text": "{'text': 'Piyano çalamayarak mesleğini yapamama', 'hidden': True, 'hint': 'Mesleki rolün yerine getirilememesi'}",
+         "isMasked": true,
+         "hint": "Doğru kavram"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "before_after_slider",
+     "title": "Aynı Yapısal Bozuklukta Mesleki Sonuç Karşılaştırması",
+     "leftTitle": "Profesyonel Futbolcu",
+     "rightTitle": "Piyano Sanatçısı",
+     "leftItems": [
+      "Bozukluk: İskelet sisteminde falanks kaybı mevcuttur.",
+      "Özürlülük: Düğme ilikleme gibi ince işlerde kısıtlılık yaşar.",
+      "Engellilik: Mesleki bağımsızlığı bozulmaz, engelli sayılmaz."
+     ],
+     "rightItems": [
+      "Bozukluk: İskelet sisteminde falanks kaybı mevcuttur.",
+      "Özürlülük: Düğme ilikleme gibi ince işlerde kısıtlılık yaşar.",
+      "Engellilik: Piyano icra edemez, mesleki olarak engelli olur."
+     ],
+     "leftPoints": [
+      "Birinci klinik özellik",
+      "İkinci klinik özellik"
+     ],
+     "rightPoints": [
+      "Karşıt birinci özellik",
+      "Karşıt ikinci özellik"
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "engellilik",
+     "hint": "DSÖ sınıflamasında sosyal rol kaybını ifade eden terim",
+     "sentence": "Bozukluk nedeniyle sosyal ve mesleki fonksiyonların yerine getirilememesi durumu engellilik olarak adlandırılır."
+    }
+   ],
+   "content": "Dünya Sağlık Örgütü (DSÖ/ICIDH), sağlık durumunun sonuçlarını bozukluk, özürlülük ve engellilik olmak üzere üç düzeyde sınıflandırır.\n\n- **Bozukluk (Impairment):** Organ veya doku düzeyindeki anatomik yapı ve fizyolojik fonksiyon kaybıdır (örneğin parmak falanksının kopması).\n- **Özürlülük (Disability):** Bozukluktan kaynaklanan aktivite kısıtlılığı ve günlük yaşam aktivitelerindeki fonksiyonel kayıptır (örneğin parmağın kullanılamaması nedeniyle düğme ilikleyememek).\n- **Engellilik (Handicap):** Bozukluk veya özürlülük nedeniyle bireyin toplumsal ve mesleki rollerini yerine getirememesidir (örneğin piyanistin mesleğini yapamaması).\n\n> [!IMPORTANT]\n> İki bireyde aynı doku bozukluğu ve benzer özürlülük bulunsa dahi, mesleki ve sosyal beklentilerin farklılığı nedeniyle biri engelli hale gelirken diğeri engelli olmayabilir.",
+   "stepNumber": 2,
+   "isCheckpoint": false,
+   "isGameFinale": null
+  },
+  {
+   "slideNumber": 3,
+   "bolum": "2",
+   "title": "Klinik Değerlendirme, Anamnez ve Kas Gücü (MRC Skalası)",
+   "pdfSayfalari": [
+    6,
+    8
+   ],
+   "sourcePdf": {
+    "fileName": "Nörolojik rehabilitasyona giriş ve genel ilkeler-şengül.pptx-02.11.2022.pdf",
+    "startPage": 6,
+    "endPage": 8,
+    "primaryPage": 8
+   },
+   "synthesisNarrative": "Rehabilitasyon hastasında doğru tedavi protokolü ayrıntılı anamnez ve sistematik nörolojik değerlendirme ile başlar.\n\n- **Anamnez:** Hastalık tipi, öz ve soygeçmiş sorgulanır; serebrovasküler risk faktörleri (yaş, cinsiyet, ırk, kronik komorbiditeler, sigara, geçirilmiş inme öyküsü) kaydedilir.\n- **Kuvvet Kaybı ve Manuel Kas Testi (MRC):** Kas gücü 0 ile 5 arasında derecelendirilir:\n  * **0/5:** Görülebilir kasılma yoktur (tam felç).\n  * **1/5:** Gözle görülebilen veya palpasyonla fark edilen kasılma vardır, eklem hareketi yoktur.\n  * **2/5:** Yalnızca yerçekimi ortadan kaldırıldığında tam eklem hareketi mevcuttur.\n  * **3/5:** Yalnızca yerçekimine karşı tam eklem hareketi mevcuttur.\n  * **4/5:** Yerçekimi ve dirence karşı hareket mevcuttur ancak dirençle yenilebilir.\n  * **5/5:** Normal kas gücü.\n\n> [!NOTE]\n> Kas gücü değerlendirmesinde yerçekimini yenme eşiği Grade 3/5 olarak kabul edilir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Manuel Kas Testinde yerçekimi elimine edildiğinde eklemini tam hareket ettirebilen ancak yerçekimine karşı hiç hareket yapamayan hastanın kas gücü derecesi nedir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Grade 2/5",
+       "isCorrect": true,
+       "explanation": "Doğru. Yerçekimi ortadan kaldırıldığında eklem hareketinin tam yapılabilmesi Grade 2 kas gücünü tanımlar. Bu durum amfi ders notlarında ve klinik kılavuzlarda nörolojik rehabilitasyonun temel ve doğru ilkesi olarak tanımlanmıştır."
+      },
+      {
+       "key": "B",
+       "text": "Grade 1/5",
+       "isCorrect": false,
+       "explanation": "Yanlış. Grade 1 kas gücünde kasta kasılma hissedilir veya görülür ancak hiçbir eklem hareketi oluşmaz."
+      },
+      {
+       "key": "C",
+       "text": "Grade 3/5",
+       "isCorrect": false,
+       "explanation": "Yanlış. Grade 3 kas gücünde kas yerçekimine karşı koyarak tam eklem hareketi oluşturabilmelidir. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      },
+      {
+       "key": "D",
+       "text": "Grade 0/5",
+       "isCorrect": false,
+       "explanation": "Yanlış. Grade 0 tam paraliziyi ifade eder, kasta gözle veya elle hiçbir kasılma saptanmaz. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "title": "Manuel Kas Testinde (MRC) Kuvvet Derecelendirme Sıralaması",
+     "steps": [
+      "1. Görülebilir Kasılma Yokluğu: Kasta ne palpasyonla ne de gözle hiçbir kasılma fark edilmez (Grade 0/5).",
+      "2. Minimal Kontraksiyon: Gözle veya palpasyonla kasılma fark edilir ancak eklem hareketi oluşmaz (Grade 1/5).",
+      "3. Yerçekimsiz Hareket: Yerçekimi elimine edildiğinde tam eklem hareketi ortaya çıkar (Grade 2/5).",
+      "4. Yerçekimine Karşı Hareket: Kas yerçekimini yenerek tam eklem hareketi yapar ancak dirence karşı koyamaz (Grade 3/5).",
+      "5. Dirence Karşı Hareket: Dirence karşı hareket yapılabilir ancak güçlü dirençle yenilebilir (Grade 4/5)."
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "Grade 2",
+     "hint": "Yerçekimsiz düzlemde eklem hareketini gösteren MRC derecesi",
+     "sentence": "Manuel Kas Testinde yerçekimi ortadan kaldırıldığında eklem hareketinin tam olması Grade 2 seviyesini tanımlar."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Manuel Kas Testi basamakları ile ilgili önermeleri inceleyiniz ve yanlış olanı bulunuz.",
+     "items": [
+      {
+       "text": "Grade 3/5 kas gücüne sahip bir hasta yerçekimine karşı tam eklem hareketi yapabilir.",
+       "isLie": false,
+       "explanation": "Doğru. Grade 3/5 seviyesinde kas yerçekimini tam olarak yenebilmektedir."
+      },
+      {
+       "text": "Grade 1/5 kas gücünde belirgin eklem hareketi ortaya çıkar ve hasta ekstremitesini kaldırabilir.",
+       "isLie": true,
+       "explanation": "Yalandır. Grade 1/5 seviyesinde kasta minimal kasılma izlenir ancak eklem hareketi kesinlikle yoktur."
+      },
+      {
+       "text": "Grade 4/5 kas gücünde kas normal hareketini yapabilir ancak uygulanan dirence karşı yenilebilir.",
+       "isLie": false,
+       "explanation": "Doğru. Grade 4 dirence karşı hareket olduğunu fakat tam normal (Grade 5) güce ulaşmadığını gösterir."
+      }
+     ]
+    }
+   ],
+   "content": "Rehabilitasyon hastasında doğru tedavi protokolü ayrıntılı anamnez ve sistematik nörolojik değerlendirme ile başlar.\n\n- **Anamnez:** Hastalık tipi, öz ve soygeçmiş sorgulanır; serebrovasküler risk faktörleri (yaş, cinsiyet, ırk, kronik komorbiditeler, sigara, geçirilmiş inme öyküsü) kaydedilir.\n- **Kuvvet Kaybı ve Manuel Kas Testi (MRC):** Kas gücü 0 ile 5 arasında derecelendirilir:\n  * **0/5:** Görülebilir kasılma yoktur (tam felç).\n  * **1/5:** Gözle görülebilen veya palpasyonla fark edilen kasılma vardır, eklem hareketi yoktur.\n  * **2/5:** Yalnızca yerçekimi ortadan kaldırıldığında tam eklem hareketi mevcuttur.\n  * **3/5:** Yalnızca yerçekimine karşı tam eklem hareketi mevcuttur.\n  * **4/5:** Yerçekimi ve dirence karşı hareket mevcuttur ancak dirençle yenilebilir.\n  * **5/5:** Normal kas gücü.\n\n> [!NOTE]\n> Kas gücü değerlendirmesinde yerçekimini yenme eşiği Grade 3/5 olarak kabul edilir.",
+   "stepNumber": 3,
+   "isCheckpoint": false,
+   "isGameFinale": null
+  },
+  {
+   "slideNumber": 4,
+   "bolum": "2",
+   "title": "Kas Tonusu Patolojileri: Spastisite, Rijidite ve Modifiye Ashworth Skalası",
+   "pdfSayfalari": [
+    9,
+    11
+   ],
+   "sourcePdf": {
+    "fileName": "Nörolojik rehabilitasyona giriş ve genel ilkeler-şengül.pptx-02.11.2022.pdf",
+    "startPage": 9,
+    "endPage": 11,
+    "primaryPage": 10
+   },
+   "synthesisNarrative": "Kas tonusu, istirahat halindeki kasta pasif hareket sırasında hissedilen gerginliktir; segmenter ark ve suprasegmenter yapılarla düzenlenir.\n\n- **Hipotoni:** Ön boynuz, tabes dorsalis, polinöropati, miyopatiler ve akut piramidal lezyonların erken şok döneminde görülür.\n- **Hipertoni - Spastisite:** Piramidal yol hasarında görülür; tonus agonist veya antagonist gruptan birinde daha belirgin artar ve pasif germe hızına bağımlıdır.\n- **Hipertoni - Rigor (Rijidite):** Parkinson hastalığı gibi ekstrapiramidal hastalıklarda görülür; hem agonist hem antagonist kasta eşit artar ve pasif harekette kesik kesik çözülen dişli çark belirtisi verir.\n- **Modifiye Ashworth Skalası:** Grade 0 tonus artışı yok, Grade 1 hareket sonunda hafif direnç, Grade 2 (1+) tutukluğu takiben hareketin yarısından azında minimal direnç, Grade 3 hareketin çoğunda belirgin artış, Grade 4 güç pasif hareket, Grade 5 rijit fiksasyondur.\n\n> [!IMPORTANT]\n> Piramidal spastisite hıza bağımlı iken, ekstrapiramidal rijidite hıza bağımsız kurşun boru veya dişli çark direnci gösterir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Piramidal yol hasarına bağlı spastisite ile ekstrapiramidal Parkinson rijiditesi arasındaki temel fark nedir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Spastisitede tonus selektif kas grubunda hıza bağımlı artarken, rijiditede agonist ve antagonist kasta hıza bağımsız artış ve dişli çark belirtisi izlenir.",
+       "isCorrect": true,
+       "explanation": "Doğru. Spastisite piramidal ve hıza bağımlıdır; rijidite ekstrapiramidal olup her iki kas grubunda eşit direnç verir."
+      },
+      {
+       "key": "B",
+       "text": "Spastisite periferik sinir hasarında görülürken rijidite primer kas distrofilerinde saptanır.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Spastisite ve rijidite santral sinir sistemi lezyonlarıdır; periferik hasarlarda hipotoni görülür. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      },
+      {
+       "key": "C",
+       "text": "Rijiditede kas tonusu tamamen kaybolurken spastisitede derin tendon refleksleri silinir.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Rijidite bir hipertoni tablosudur; spastisitede ise piramidal hasara bağlı refleksler hiperaktiftir. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      },
+      {
+       "key": "D",
+       "text": "Spastisitede pasif hareket direnci hıza bağımsız kurşun boru şeklinde seyreder.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Kurşun boru direnci Parkinson rijiditesine aittir; spastisite ise hıza bağımlı sustalı çakı karakterindedir. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      }
+     ]
+    },
+    {
+     "type": "before_after_slider",
+     "title": "Hipertoni Tiplerinin Patofizyolojik Karşılaştırması",
+     "leftTitle": "Piramidal Spastisite",
+     "rightTitle": "Ekstrapiramidal Rijidite",
+     "leftItems": [
+      "Lezyon Yeri: Piramidal traktus (üst motor nöron) hasarı.",
+      "Kas Dağılımı: Agonist veya antagonist gruptan birinde selektif artış.",
+      "Hız Bağımlılığı: Pasif germe hızına doğrudan bağımlı direnç.",
+      "Karakter: Hareket başlangıcında yakalama ve bırakma (sustalı çakı)."
+     ],
+     "rightItems": [
+      "Lezyon Yeri: Ekstrapiramidal sistem ve bazal ganglionlar (Parkinson).",
+      "Kas Dağılımı: Hem agonist hem antagonist kaslarda eş zamanlı artış.",
+      "Hız Bağımlılığı: Pasif hareket hızından bağımsız sabit direnç.",
+      "Karakter: Pasif ekstansiyonda kesik kesik çözülme (dişli çark belirtisi)."
+     ],
+     "leftPoints": [
+      "Birinci klinik özellik",
+      "İkinci klinik özellik"
+     ],
+     "rightPoints": [
+      "Karşıt birinci özellik",
+      "Karşıt ikinci özellik"
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "dişli çark",
+     "hint": "Ekstrapiramidal rijiditede tremor ile direncin birleşmesiyle oluşan mekanik fenomen",
+     "sentence": "Parkinson hastalarında önkol yavaşça ekstansiyona getirilirken kastaki direncin kesik kesik çözülmesine dişli çark belirtisi adı verilir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Kas tonusu ve Modifiye Ashworth Skalası ile ilgili önermeleri inceleyiniz ve yanlış olanı bulunuz.",
+     "items": [
+      {
+       "text": "Modifiye Ashworth Skalasında Grade 0 kas tonusunda hiç artış olmadığını gösterir.",
+       "isLie": false,
+       "explanation": "Doğru. Grade 0 normal kas tonusu düzeyini ifade eder."
+      },
+      {
+       "text": "Akut yerleşen hemiplejinin ilk evresinde piramidal şok nedeniyle felçli ekstremitelerde hipotoni görülebilir.",
+       "isLie": false,
+       "explanation": "Doğru. Piramidal lezyonların akut başlangıcında geçici bir gevşeklik ve hipotoni dönemi yaşanır."
+      },
+      {
+       "text": "Ön boynuz hastalıkları ve polinöropatiler piramidal spastisiteye yol açarak hipertoni tablosu oluşturur.",
+       "isLie": true,
+       "explanation": "Yalandır. Ön boynuz ve polinöropati segmenter refleks arkını bozarak tonus kaybına yani hipotoniye yol açar."
+      }
+     ]
+    }
+   ],
+   "content": "Kas tonusu, istirahat halindeki kasta pasif hareket sırasında hissedilen gerginliktir; segmenter ark ve suprasegmenter yapılarla düzenlenir.\n\n- **Hipotoni:** Ön boynuz, tabes dorsalis, polinöropati, miyopatiler ve akut piramidal lezyonların erken şok döneminde görülür.\n- **Hipertoni - Spastisite:** Piramidal yol hasarında görülür; tonus agonist veya antagonist gruptan birinde daha belirgin artar ve pasif germe hızına bağımlıdır.\n- **Hipertoni - Rigor (Rijidite):** Parkinson hastalığı gibi ekstrapiramidal hastalıklarda görülür; hem agonist hem antagonist kasta eşit artar ve pasif harekette kesik kesik çözülen dişli çark belirtisi verir.\n- **Modifiye Ashworth Skalası:** Grade 0 tonus artışı yok, Grade 1 hareket sonunda hafif direnç, Grade 2 (1+) tutukluğu takiben hareketin yarısından azında minimal direnç, Grade 3 hareketin çoğunda belirgin artış, Grade 4 güç pasif hareket, Grade 5 rijit fiksasyondur.\n\n> [!IMPORTANT]\n> Piramidal spastisite hıza bağımlı iken, ekstrapiramidal rijidite hıza bağımsız kurşun boru veya dişli çark direnci gösterir.",
+   "stepNumber": 4,
+   "isCheckpoint": false,
+   "isGameFinale": null
+  },
+  {
+   "slideNumber": 5,
+   "isCheckpoint": true,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Temel İlkeler, Değerlendirme, Kas Gücü ve Tonus",
+   "synthesisNarrative": "Bu bölümde nörolojik rehabilitasyonun temel kavramlarını, DSÖ sınıflamasını ve klinik değerlendirme araçlarını pekiştiriyoruz.\n\n- **Rehabilitasyon ve Ekip:** Tam iyileşme imkanı olmadığında optimal potansiyeli ve sosyal katılımı hedefler. FTR uzmanı liderliğinde çok disiplinli yürütülür.\n- **DSÖ Sınıflaması:** Organ düzeyindeki kayıp bozukluk (impairment), günlük yaşam aktivite kısıtlılığı özürlülük (disability), sosyal ve mesleki rol kaybı ise engelliliktir (handicap).\n- **Kas Gücü (MRC):** Grade 0 kasılma yok, Grade 1 eklem hareketsiz kasılma, Grade 2 yerçekimsiz hareket, Grade 3 yerçekimine karşı hareket, Grade 4 dirence karşı hareket, Grade 5 normal güçtür.\n- **Tonus Değerlendirmesi:** Piramidal spastisite hıza bağımlıdır; ekstrapiramidal rijidite ise agonist/antagonist kasları eşit tutar ve dişli çark direnci gösterir.",
+   "interactiveElements": [
+    {
+     "type": "venn_grid",
+     "instruction": "Klinik olguları ve özellikleri Spastisite (Piramidal) ile Rijidite (Ekstrapiramidal) kutuplarına göre sınıflandırınız.",
+     "poleA": "Piramidal Spastisite",
+     "poleB": "Ekstrapiramidal Rijidite",
+     "items": [
+      {
+       "criterion": "Hıza bağımlı direnç artışı gösterme",
+       "correct": "A"
+      },
+      {
+       "criterion": "Agonist ve antagonist kaslarda birlikte direnç artışı",
+       "correct": "B"
+      },
+      {
+       "criterion": "Dişli çark belirtisi oluşturma",
+       "correct": "B"
+      },
+      {
+       "criterion": "Modifiye Ashworth Skalası ile evrelenme",
+       "correct": "A"
+      }
+     ],
+     "labelA": "Piramidal Spastisite",
+     "labelB": "Ekstrapiramidal Rijidite"
+    },
+    {
+     "type": "swipe_matching",
+     "instruction": "Klinik durumları Dünya Sağlık Örgütü sınıflamasına göre eşleştiriniz.",
+     "cards": [
+      {
+       "text": "İşaret parmağı distal falanksının kopması",
+       "category": "left"
+      },
+      {
+       "text": "Gömlek düğmesini ilikleyememe kısıtlılığı",
+       "category": "right"
+      },
+      {
+       "text": "Piyano çalamayarak mesleğini yitirme",
+       "category": "right"
+      }
+     ],
+     "leftCategory": "Bozukluk (Impairment)",
+     "rightCategory": "Özürlülük (Disability)"
+    },
+    {
+     "type": "active_recall",
+     "question": "Manuel Kas Testinde Grade 3/5 ile Grade 2/5 arasındaki en kritik fiziksel ayırıcı kriter nedir?",
+     "answer": "Grade 2/5 ancak yerçekimi elimine edildiğinde eklem hareketi yapabilirken; Grade 3/5 yerçekimine karşı koyarak tam eklem hareketi yapabilir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "İlk iki bölümün temel kazanımlarıyla ilgili önermeleri inceleyiniz ve yanlış olanı bulunuz.",
+     "items": [
+      {
+       "text": "Falanksı kopan bir futbolcunun mesleğine devam edebilmesi, onun mesleki düzeyde engelli olmadığını gösterir.",
+       "isLie": false,
+       "explanation": "Doğru. Sosyal ve mesleki rolü aksamadığı için futbolcu engelli sayılmaz."
+      },
+      {
+       "text": "Manuel Kas Testinde yerçekimi ortadan kaldırıldığında bile hareket yapamayan kas Grade 2 kabul edilir.",
+       "isLie": true,
+       "explanation": "Yalandır. Yerçekimsiz ortamda hareket yapamayan kas Grade 2 olamaz; yalnızca Grade 0 veya Grade 1 olabilir."
+      },
+      {
+       "text": "Modifiye Ashworth Skalası spastisitenin pasif eklem hareketi sırasındaki direncini ölçmek için kullanılır.",
+       "isLie": false,
+       "explanation": "Doğru. MAS piramidal spastisite şiddetini derecelendirmede standart klinik ölçektir."
+      }
+     ]
+    }
+   ],
+   "content": "Bu bölümde nörolojik rehabilitasyonun temel kavramlarını, DSÖ sınıflamasını ve klinik değerlendirme araçlarını pekiştiriyoruz.\n\n- **Rehabilitasyon ve Ekip:** Tam iyileşme imkanı olmadığında optimal potansiyeli ve sosyal katılımı hedefler. FTR uzmanı liderliğinde çok disiplinli yürütülür.\n- **DSÖ Sınıflaması:** Organ düzeyindeki kayıp bozukluk (impairment), günlük yaşam aktivite kısıtlılığı özürlülük (disability), sosyal ve mesleki rol kaybı ise engelliliktir (handicap).\n- **Kas Gücü (MRC):** Grade 0 kasılma yok, Grade 1 eklem hareketsiz kasılma, Grade 2 yerçekimsiz hareket, Grade 3 yerçekimine karşı hareket, Grade 4 dirence karşı hareket, Grade 5 normal güçtür.\n- **Tonus Değerlendirmesi:** Piramidal spastisite hıza bağımlıdır; ekstrapiramidal rijidite ise agonist/antagonist kasları eşit tutar ve dişli çark direnci gösterir.",
+   "stepNumber": 5,
+   "bolum": "2",
+   "pdfSayfalari": [
+    1,
+    11
+   ],
+   "sourcePdf": {
+    "startPage": 1,
+    "endPage": 11
+   },
+   "isGameFinale": null
+  },
+  {
+   "slideNumber": 6,
+   "bolum": "3",
+   "title": "Serebellar Değerlendirme: Hipotoni, Dissinerji, Disdiyadokokinezi ve Dizartri",
+   "pdfSayfalari": [
+    12,
+    12
+   ],
+   "sourcePdf": {
+    "fileName": "Nörolojik rehabilitasyona giriş ve genel ilkeler-şengül.pptx-02.11.2022.pdf",
+    "startPage": 12,
+    "endPage": 12,
+    "primaryPage": 12
+   },
+   "synthesisNarrative": "Serebellum, istemli hareketlerin zamanlamasını, koordinasyonunu ve akıcılığını sağlayan temel kontrol merkezidir. Hasarında tipik motor koordinasyon bozuklukları ortaya çıkar.\n\n- **Hipotoni:** Hastalanan serebellar hemisfer ile aynı taraftaki (ipsilateral) kol ve bacakta kas tonusunda belirgin azalma saptanır.\n- **Dissinerji:** İstemli bir eylemde agonist kaslar kasılırken antagonist kasların gevşeyememesi durumudur; hareketin pürüzsüz akıcılığı kaybolur.\n- **Disdiyadokokinezi:** Dissinerji nedeniyle hasta hızlı ardışık hareketleri yapamaz. Hastadan elleriyle hızlı pronasyon-supinasyon yapması veya el sırtına vurması istendiğinde lezyon tarafındaki el düzensiz ve beceriksiz hareket eder.\n- **Serebellar Dizartri:** Konuşma kasları arasındaki koordinasyon bozulur; kesik kesik, vurguların yanlış yerde yapıldığı, hecelerin patlayıcı çıktığı sarhoşvari (skandere) konuşma gelişir.\n\n> [!NOTE]\n> Serebellar bulgular serebral korteksin aksine lezyonun bulunduğu hemisfer ile aynı tarafta (ipsilateral) ortaya çıkar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Serebellar lezyonu olan bir hastada elleriyle bilekten hızlı pronasyon-supinasyon yaparken lezyon tarafındaki elin beceriksiz ve düzensiz hareket etmesi hangi terimle adlandırılır?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Disdiyadokokinezi",
+       "isCorrect": true,
+       "explanation": "Doğru. Hızlı ardışık hareketleri düzenli yapamama beceriksizliği disdiyadokokinezi olarak tanımlanır. Bu durum amfi ders notlarında ve klinik kılavuzlarda nörolojik rehabilitasyonun temel ve doğru ilkesi olarak tanımlanmıştır."
+      },
+      {
+       "key": "B",
+       "text": "Dismetri",
+       "isCorrect": false,
+       "explanation": "Yanlış. Dismetri hedefin mesafesini ayarlayamama ve parmak burun testinde hedefi ıskalama durumudur. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      },
+      {
+       "key": "C",
+       "text": "Spastisite",
+       "isCorrect": false,
+       "explanation": "Yanlış. Spastisite piramidal hasara bağlı hıza bağımlı tonus artışıdır; serebellar hasarda ise hipotoni görülür. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      },
+      {
+       "key": "D",
+       "text": "Rijidite",
+       "isCorrect": false,
+       "explanation": "Yanlış. Rijidite ekstrapiramidal tonus artışıdır ve hızlı ardışık hareket testini tanımlamaz. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "aynı",
+     "hint": "Serebellar bulguların çaprazlaşma yapmadığını gösteren ipsilateral ilişki",
+     "sentence": "Serebellar hemisfer lezyonlarında hastalanan hemisferin aynı tarafındaki kol ve bacakta kas hipotonisi görülür."
+    },
+    {
+     "type": "active_recall",
+     "question": "Serebellar dizartrinin klinik telaffuz özellikleri nelerdir ve neye benzetilir?",
+     "answer": "Kesik kesik, vurguların yanlış yapıldığı, hecelerin patlayıcı telaffuz edildiği bir konuşmadır ve sarhoş konuşmasına benzetilir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Serebellar muayene bulguları ile ilgili önermeleri inceleyiniz ve yanlış olanı bulunuz.",
+     "items": [
+      {
+       "text": "Dissinerji, istemli hareket sırasında agonist kasılırken antagonist kasın gevşeyememesi durumudur.",
+       "isLie": false,
+       "explanation": "Doğru. Dissinerji kaslar arasındaki koordineli gevşeme ve kasılma dengesinin bozulmasıdır."
+      },
+      {
+       "text": "Serebellar hemisfer lezyonlarında lezyonun karşı tarafındaki ekstremitelerde spastisite gelişir.",
+       "isLie": true,
+       "explanation": "Yalandır. Serebellar lezyonlar karşı tarafta değil aynı tarafta (ipsilateral) hipotoniye yol açar."
+      },
+      {
+       "text": "Serebellar dizartri, konuşma kasları arasındaki sinerji bozulduğu için ortaya çıkan motor bir konuşma kusurudur.",
+       "isLie": false,
+       "explanation": "Doğru. Telaffuz kasları koordinasyonunu yitirdiği için skandere konuşma ortaya çıkar."
+      }
+     ]
+    }
+   ],
+   "content": "Serebellum, istemli hareketlerin zamanlamasını, koordinasyonunu ve akıcılığını sağlayan temel kontrol merkezidir. Hasarında tipik motor koordinasyon bozuklukları ortaya çıkar.\n\n- **Hipotoni:** Hastalanan serebellar hemisfer ile aynı taraftaki (ipsilateral) kol ve bacakta kas tonusunda belirgin azalma saptanır.\n- **Dissinerji:** İstemli bir eylemde agonist kaslar kasılırken antagonist kasların gevşeyememesi durumudur; hareketin pürüzsüz akıcılığı kaybolur.\n- **Disdiyadokokinezi:** Dissinerji nedeniyle hasta hızlı ardışık hareketleri yapamaz. Hastadan elleriyle hızlı pronasyon-supinasyon yapması veya el sırtına vurması istendiğinde lezyon tarafındaki el düzensiz ve beceriksiz hareket eder.\n- **Serebellar Dizartri:** Konuşma kasları arasındaki koordinasyon bozulur; kesik kesik, vurguların yanlış yerde yapıldığı, hecelerin patlayıcı çıktığı sarhoşvari (skandere) konuşma gelişir.\n\n> [!NOTE]\n> Serebellar bulgular serebral korteksin aksine lezyonun bulunduğu hemisfer ile aynı tarafta (ipsilateral) ortaya çıkar.",
+   "stepNumber": 6,
+   "isCheckpoint": false,
+   "isGameFinale": null
+  },
+  {
+   "slideNumber": 7,
+   "bolum": "3",
+   "title": "Serebellar Değerlendirme: Dismetri, İntansiyonel Tremor ve Ataksi",
+   "pdfSayfalari": [
+    13,
+    13
+   ],
+   "sourcePdf": {
+    "fileName": "Nörolojik rehabilitasyona giriş ve genel ilkeler-şengül.pptx-02.11.2022.pdf",
+    "startPage": 13,
+    "endPage": 13,
+    "primaryPage": 13
+   },
+   "synthesisNarrative": "Serebellar hemisfer hastalıklarında hedef kontrolü, hareket stabilitesi ve yürüyüş dengesi belirgin şekilde bozulur.\n\n- **Dismetri:** Ekstremite bir objeye uzatıldığında mesafe ayarlanamaz. Hastanın kolunu yana açarak işaret parmağını burnuna değdirmesi istendiğinde (parmak-burun testi) lezyon tarafındaki parmak hedefi tutturamaz, burna veya yanağa çarpar.\n- **İntansiyonel Tremor:** Serebellar tremor koordine bir hareketin yapılması sırasında ortaya çıkan kinetik bir tremordur. Parkinson hastalığındaki gibi istirahat tremoru değildir; özellikle ekstremite hareket amacına (hedefe) yaklaştıkça genliği belirginleşir.\n- **Serebellar Ataksi:** Yürüyüş sarhoşvari ve dengesizdir; hasta geniş tabanlı adımlarla yürür. Yürüme sırasında hasta lezyon tarafına doğru sapar veya lezyon tarafına düşme eğilimi gösterir.\n\n> [!IMPORTANT]\n> Parkinson tremoru istirahatte belirip hareketle azalırken; serebellar tremor istirahatte kaybolur ve hedefe yaklaşırken şiddetlenir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Serebellar tremorun Parkinson hastalığında görülen tremordan temel ayırıcı özelliği aşağıdakilerden hangisidir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Serebellar tremor istirahat halindeyken kaybolur, hareket sırasında hedefe yaklaştıkça şiddeti artar.",
+       "isCorrect": true,
+       "explanation": "Doğru. Serebellar tremor kinetik ve intansiyoneldir; amaca yaklaştıkça belirginleşir. Bu durum amfi ders notlarında ve klinik kılavuzlarda nörolojik rehabilitasyonun temel ve doğru ilkesi olarak tanımlanmıştır."
+      },
+      {
+       "key": "B",
+       "text": "Serebellar tremor yalnızca hasta uyurken veya tam istirahat halindeyken ortaya çıkar.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Serebellar tremor istirahatte görülmez, koordine istemli hareket sırasında ortaya çıkar. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      },
+      {
+       "key": "C",
+       "text": "Parkinson tremoru hedefe yaklaşırken artan intansiyonel bir tremordur.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Parkinson tremoru statik istirahat tremorudur, hedefe yaklaşırken belirginleşmez. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      },
+      {
+       "key": "D",
+       "text": "Serebellar tremor yalnızca göz kaslarını tutar ve ekstremitelerde hiçbir zaman görülmez.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Serebellar tremor kol ve bacak gibi ekstremitelerde istemli hedefe yönelik hareket sırasında belirgindir. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "lezyon",
+     "hint": "Serebellar atakside sapmanın hasarlı hemisfer yönüne olduğunu gösteren terim",
+     "sentence": "Serebellar hemisfer lezyonlarında hasta yürüme sırasında lezyon tarafına doğru sapar veya aynı tarafa düşebilir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Parmak-burun testinde hedefin aşılarak burna veya yanağa çarpması hangi serebellar bozukluğun sonucudur?",
+     "answer": "Mesafe ayarlama yeteneğinin kaybolması anlamına gelen dismetri bulgusunun sonucudur."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Serebellar bulgularla ilgili önermeleri inceleyiniz ve yanlış olanı bulunuz.",
+     "items": [
+      {
+       "text": "Serebellar ataksisi olan hasta düşme eğiliminde olduğu taraf ekstremitelerinde dismetri ve disdiyadokokinezi gösterir.",
+       "isLie": false,
+       "explanation": "Doğru. Düşme yönündeki ekstremiteler lezyon tarafıdır ve koordinasyon kaybı eşlik eder."
+      },
+      {
+       "text": "Serebellum hastalıklarında görülen tremor Parkinson hastalığında olduğu gibi istirahat tremoru karakterindedir.",
+       "isLie": true,
+       "explanation": "Yalandır. Serebellar tremor istirahat tremoru değil, hareket hedefe yaklaşırken artan intansiyonel kinetik tremordur."
+      },
+      {
+       "text": "Dismetri, istemli hareket sırasında serebellar sürekli kontrolün ortadan kalkmasıyla mesafenin ayarlanamamasıdır.",
+       "isLie": false,
+       "explanation": "Doğru. Kontrol mekanizması kaybolduğu için parmak hedef mesafesini tutturamaz."
+      }
+     ]
+    }
+   ],
+   "content": "Serebellar hemisfer hastalıklarında hedef kontrolü, hareket stabilitesi ve yürüyüş dengesi belirgin şekilde bozulur.\n\n- **Dismetri:** Ekstremite bir objeye uzatıldığında mesafe ayarlanamaz. Hastanın kolunu yana açarak işaret parmağını burnuna değdirmesi istendiğinde (parmak-burun testi) lezyon tarafındaki parmak hedefi tutturamaz, burna veya yanağa çarpar.\n- **İntansiyonel Tremor:** Serebellar tremor koordine bir hareketin yapılması sırasında ortaya çıkan kinetik bir tremordur. Parkinson hastalığındaki gibi istirahat tremoru değildir; özellikle ekstremite hareket amacına (hedefe) yaklaştıkça genliği belirginleşir.\n- **Serebellar Ataksi:** Yürüyüş sarhoşvari ve dengesizdir; hasta geniş tabanlı adımlarla yürür. Yürüme sırasında hasta lezyon tarafına doğru sapar veya lezyon tarafına düşme eğilimi gösterir.\n\n> [!IMPORTANT]\n> Parkinson tremoru istirahatte belirip hareketle azalırken; serebellar tremor istirahatte kaybolur ve hedefe yaklaşırken şiddetlenir.",
+   "stepNumber": 7,
+   "isCheckpoint": false,
+   "isGameFinale": null
+  },
+  {
+   "slideNumber": 8,
+   "bolum": "3",
+   "title": "Eklem Hareket Açıklığı, Kontraktürler ve Afazi-Dizartri Ayrımı",
+   "pdfSayfalari": [
+    14,
+    15
+   ],
+   "sourcePdf": {
+    "fileName": "Nörolojik rehabilitasyona giriş ve genel ilkeler-şengül.pptx-02.11.2022.pdf",
+    "startPage": 14,
+    "endPage": 15,
+    "primaryPage": 15
+   },
+   "synthesisNarrative": "Nörolojik hastada eklem açıklığı ve iletişim yetisi rehabilitasyon başarısının ana parametreleridir.\n\n- **Eklem Hareket Açıklığı (EHA) ve Kontraktür:** EHA en doğru olarak gonyometrik ölçüm ile değerlendirilir; rehabilitasyon kazanımlarının izlenmesinde temel monitörizasyon göstergesidir. İmmobilizasyon ve spastisite basit kısıtlılıklardan kalıcı kontraktürlere kadar uzanan yapısal deformitelere yol açabilir.\n- **Afazi:** Dil fonksiyonunun konuşma öğrenildikten sonra serebral korteks hasarına (vasküler, travmatik, tümöral) bağlı edinsel bozulmasıdır. Psikiyatrik sorun veya periferik kas felcinden kaynaklanmaz; anlama, ifade etme veya her iki dil kapasitesi seçici olarak bozulur.\n- **Dizartri:** Dil anlama ve kelime haznesi tam korunmuşken, konuşmayı sağlayan kaslar arasındaki sinerjinin bozulmasıyla ortaya çıkan mekanik telaffuz güçlüğüdür.\n\n> [!NOTE]\n> Afazide kortikal dil kapasitesi hasarlıdır; dizartride ise dil kapasitesi sağlam olup telaffuz motor düzeyde bozulmuştur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Afazi ile dizartri arasındaki temel klinik ve fizyopatolojik fark aşağıdakilerden hangisinde doğru verilmiştir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Afazide serebral korteks hasarına bağlı dil kapasitesi (anlama/ifade) bozulurken, dizartride dil korunmuş olup konuşma kaslarının koordinasyonu bozulur.",
+       "isCorrect": true,
+       "explanation": "Doğru. Afazi kortikal dil bozukluğudur; dizartri ise konuşma motor mekanizmasının bozulmasıdır. Bu durum amfi ders notlarında ve klinik kılavuzlarda nörolojik rehabilitasyonun temel ve doğru ilkesi olarak tanımlanmıştır."
+      },
+      {
+       "key": "B",
+       "text": "Dizartri kortikal düzeyde kelime hafızasının kaybıdır, afazi ise periferik dil kaslarının felcidir.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Tam tersi geçerlidir; kortikal hasar afaziye yol açar, motor telaffuz bozukluğu dizartridir. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      },
+      {
+       "key": "C",
+       "text": "Afazi yalnızca çocuklukta konuşma öğrenilmeden önce ortaya çıkan gelişimsel bir mutizmdir.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Afazi konuşma öğrenildikten sonra serebral korteks hasarı sonucu ortaya çıkan edinsel dil kaybıdır. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      },
+      {
+       "key": "D",
+       "text": "Eklem hareket açıklığı ölçümünde stetoskop kullanılır ve kontraktür gelişimi engellenemez.",
+       "isCorrect": false,
+       "explanation": "Yanlış. EHA ölçümünde gonyometri kullanılır ve kontraktürler erken rehabilitasyonla önlenebilir. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      }
+     ]
+    },
+    {
+     "type": "before_after_slider",
+     "title": "İletişim Bozukluklarının Karşılaştırmalı Analizi",
+     "leftTitle": "Afazi (Kortikal Dil Kaybı)",
+     "rightTitle": "Dizartri (Motor Telaffuz Kaybı)",
+     "leftItems": [
+      "Hasar Yeri: Serebral korteks dil alanları (vasküler, travmatik).",
+      "Dil Kapasitesi: Anlama, ifade etme veya her ikisi seçici bozulur.",
+      "Kas Fonksiyonu: Periferik konuşma kaslarında felç olmak zorunda değildir.",
+      "Klinik Tablo: Kelime bulamama, anlamsız konuşma veya kavrayamama."
+     ],
+     "rightItems": [
+      "Hasar Yeri: Konuşma motor yolları, serebellum veya beyin sapı.",
+      "Dil Kapasitesi: Dili anlama, okuma ve kelime haznesi tamamen korunur.",
+      "Kas Fonksiyonu: Solunum, fonasyon ve artikülasyon kasları uyumsuz çalışır.",
+      "Klinik Tablo: Skandere konuşma, pelteklik veya hecelerin patlayıcı çıkması."
+     ],
+     "leftPoints": [
+      "Birinci klinik özellik",
+      "İkinci klinik özellik"
+     ],
+     "rightPoints": [
+      "Karşıt birinci özellik",
+      "Karşıt ikinci özellik"
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "gonyometrik",
+     "hint": "Eklem açısını derece cinsinden ölçen aletle yapılan muayene",
+     "sentence": "Eklem hareket açıklığı en doğru olarak gonyometrik ölçüm ile değerlendirilir ve rehabilitasyon sonuçlarının izlenmesinde temel göstergedir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "EHA ve iletişim bozuklukları ile ilgili önermeleri inceleyiniz ve yanlış olanı bulunuz.",
+     "items": [
+      {
+       "text": "Afazi, psikiyatrik bir sorundan ya da kas düzeyindeki engellemeden ileri gelmeyen kortikal dil bozukluğudur.",
+       "isLie": false,
+       "explanation": "Doğru. Ders notundaki tanıma göre afazi serebral korteks zedelenmesine bağlıdır."
+      },
+      {
+       "text": "Eklem hareket açıklığının kısıtlanması ilerleyerek eklemde kalıcı kontraktür tablosuna dönüşebilir.",
+       "isLie": false,
+       "explanation": "Doğru. Kısıtlılık zamanında tedavi edilmezse kalıcı kontraktür gelişir."
+      },
+      {
+       "text": "Dizartrisi olan bir hasta konuşulan dili kesinlikle anlayamaz ve zihninde kelimeleri hiçbir zaman oluşturamaz.",
+       "isLie": true,
+       "explanation": "Yalandır. Dizartride dil anlama ve kavramsal kapasite tam korunmuştur; yalnızca motor telaffuz bozulmuştur."
+      }
+     ]
+    }
+   ],
+   "content": "Nörolojik hastada eklem açıklığı ve iletişim yetisi rehabilitasyon başarısının ana parametreleridir.\n\n- **Eklem Hareket Açıklığı (EHA) ve Kontraktür:** EHA en doğru olarak gonyometrik ölçüm ile değerlendirilir; rehabilitasyon kazanımlarının izlenmesinde temel monitörizasyon göstergesidir. İmmobilizasyon ve spastisite basit kısıtlılıklardan kalıcı kontraktürlere kadar uzanan yapısal deformitelere yol açabilir.\n- **Afazi:** Dil fonksiyonunun konuşma öğrenildikten sonra serebral korteks hasarına (vasküler, travmatik, tümöral) bağlı edinsel bozulmasıdır. Psikiyatrik sorun veya periferik kas felcinden kaynaklanmaz; anlama, ifade etme veya her iki dil kapasitesi seçici olarak bozulur.\n- **Dizartri:** Dil anlama ve kelime haznesi tam korunmuşken, konuşmayı sağlayan kaslar arasındaki sinerjinin bozulmasıyla ortaya çıkan mekanik telaffuz güçlüğüdür.\n\n> [!NOTE]\n> Afazide kortikal dil kapasitesi hasarlıdır; dizartride ise dil kapasitesi sağlam olup telaffuz motor düzeyde bozulmuştur.",
+   "stepNumber": 8,
+   "isCheckpoint": false,
+   "isGameFinale": null
+  },
+  {
+   "slideNumber": 9,
+   "bolum": "4",
+   "title": "Nörolojik Rehabilitasyon Spektrumu ve İnme Patolojisi",
+   "pdfSayfalari": [
+    16,
+    18
+   ],
+   "sourcePdf": {
+    "fileName": "Nörolojik rehabilitasyona giriş ve genel ilkeler-şengül.pptx-02.11.2022.pdf",
+    "startPage": 16,
+    "endPage": 18,
+    "primaryPage": 17
+   },
+   "synthesisNarrative": "Nörolojik rehabilitasyon geniş bir hastalık yelpazesini kapsar; en sık karşılaşılan klinik tablo serebrovasküler olaylardır.\n\n- **Hastalık Spektrumu:** İnme, medulla spinalis yaralanmaları, travmatik beyin hasarı, Parkinson, Multipl Skleroz (MS), ALS, miyopatiler, serebral palsi, spina bifida ve periferik sinir lezyonlarını içerir.\n- **İnme Etyolojisi ve Dağılımı:**\n  * **İskemik İnme (%85):** Serebral tromboz (%60), serebral emboli (%20), vaskülit veya sistemik hipoperfüzyon (%5).\n  * **Hemorajik İnme (%15):** İntraserebral kanama (%10), subaraknoid kanama (%5).\n- **İnmeye Bağlı Gelişen Sendromlar:** Bilinç bozuklukları, motor kontrol ve güç kaybı, denge-koordinasyon bozukluğu, tonus anormallikleri, duyu ve görme alanı kayıpları, afazi, apraksi, ihmal sendromu (unilateral neglect) ve emosyonel labilite.\n\n> [!IMPORTANT]\n> İskemik inmelerin en sık nedeni %60 oranıyla serebral trombozdur; hemorajik inmeler ise vakaların %15'ini oluşturur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Serebrovasküler olayların etyolojik alt tipleri ve sıklık oranları ile ilgili aşağıdaki bilgilerden hangisi doğrudur?",
+     "options": [
+      {
+       "key": "A",
+       "text": "İskemik inme tüm inmelerin %85'ini oluşturur ve en sık nedeni %60 ile serebral trombozdur.",
+       "isCorrect": true,
+       "explanation": "Doğru. İskemik inme %85 oranındadır ve tromboz %60 sıklıkla en yaygın etyolojidir. Bu durum amfi ders notlarında ve klinik kılavuzlarda nörolojik rehabilitasyonun temel ve doğru ilkesi olarak tanımlanmıştır."
+      },
+      {
+       "key": "B",
+       "text": "Hemorajik inme tüm inmelerin %85'ini oluşturur ve en sık subaraknoid kanamayla seyreder.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Hemorajik inme tüm inmelerin yalnızca %15'ini oluşturur. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      },
+      {
+       "key": "C",
+       "text": "Serebral emboli tüm inmelerin %60'ından sorumlu en yaygın etyolojik faktördür.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Serebral emboli %20 sıklıkta görülür; %60'lık en büyük pay tromboza aittir. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      },
+      {
+       "key": "D",
+       "text": "İnmede apraksi ve ihmal sendromu hiçbir zaman görülmez, yalnızca kas gücü kaybı gelişir.",
+       "isCorrect": false,
+       "explanation": "Yanlış. İnmede kortikal hasara bağlı ihmal sendromu, apraksi ve kognitif kayıplar sık gelişir. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "instruction": "İnme etyolojik sınıflamasını ve alt tiplerin yüzdelerini inceleyiniz.",
+     "tableHeaders": [
+      "İnme Tipi",
+      "Genel Oran",
+      "En Sık Alt Tip ve Yüzdesi"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "{'text': 'İskemik İnme', 'hidden': False}",
+         "isMasked": false,
+         "hint": null
+        },
+        {
+         "text": "{'text': '%85', 'hidden': False}",
+         "isMasked": false,
+         "hint": null
+        },
+        {
+         "text": "{'text': 'Serebral Tromboz (%60)', 'hidden': True, 'hint': 'İskemik grupta en sık görülen vasküler patoloji'}",
+         "isMasked": true,
+         "hint": "Doğru kavram"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "{'text': 'İskemik İnme (İkinci Sık)', 'hidden': False}",
+         "isMasked": false,
+         "hint": null
+        },
+        {
+         "text": "{'text': '%85 grubu içinde', 'hidden': False}",
+         "isMasked": false,
+         "hint": null
+        },
+        {
+         "text": "{'text': 'Serebral Emboli (%20)', 'hidden': True, 'hint': 'Kardiyak veya vasküler kaynaktan kopan pıhtı'}",
+         "isMasked": true,
+         "hint": "Doğru kavram"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "{'text': 'Hemorajik İnme', 'hidden': False}",
+         "isMasked": false,
+         "hint": null
+        },
+        {
+         "text": "{'text': '%15', 'hidden': False}",
+         "isMasked": false,
+         "hint": null
+        },
+        {
+         "text": "{'text': 'İntraserebral Kanama (%10)', 'hidden': True, 'hint': 'Parankim içine kanama tablosu'}",
+         "isMasked": true,
+         "hint": "Doğru kavram"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "seksen beşini",
+     "hint": "İskemik inmenin tüm vakalar içindeki yüzdelik payı (%85)",
+     "sentence": "Tüm inme vakalarının yaklaşık yüzde seksen beşini iskemik inme oluşturmaktadır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "İnme ve nörolojik rehabilitasyon kapsamı ile ilgili önermeleri inceleyiniz ve yanlış olanı bulunuz.",
+     "items": [
+      {
+       "text": "Hemorajik inmeler intraserebral kanama (%10) ve subaraknoid kanama (%5) olarak ikiye ayrılır.",
+       "isLie": false,
+       "explanation": "Doğru. Ders notundaki oranlara göre hemorajik inme toplamda %15 sıklıktadır."
+      },
+      {
+       "text": "İnme sonrasında görme alanı defektleri, ihmal sendromu ve emosyonel labilite klinik tabloya eşlik edebilir.",
+       "isLie": false,
+       "explanation": "Doğru. İnme kortikal ve subkortikal alanları etkileyerek algısal ve emosyonel kayıplar yaratır."
+      },
+      {
+       "text": "Nörolojik rehabilitasyon yalnızca inme hastalarına uygulanır; MS, Parkinson ve omurilik yaralanmalarında uygulanamaz.",
+       "isLie": true,
+       "explanation": "Yalandır. Nörolojik rehabilitasyon MS, Parkinson, travmatik beyin hasarı ve omurilik yaralanmalarını da kapsar."
+      }
+     ]
+    }
+   ],
+   "content": "Nörolojik rehabilitasyon geniş bir hastalık yelpazesini kapsar; en sık karşılaşılan klinik tablo serebrovasküler olaylardır.\n\n- **Hastalık Spektrumu:** İnme, medulla spinalis yaralanmaları, travmatik beyin hasarı, Parkinson, Multipl Skleroz (MS), ALS, miyopatiler, serebral palsi, spina bifida ve periferik sinir lezyonlarını içerir.\n- **İnme Etyolojisi ve Dağılımı:**\n  * **İskemik İnme (%85):** Serebral tromboz (%60), serebral emboli (%20), vaskülit veya sistemik hipoperfüzyon (%5).\n  * **Hemorajik İnme (%15):** İntraserebral kanama (%10), subaraknoid kanama (%5).\n- **İnmeye Bağlı Gelişen Sendromlar:** Bilinç bozuklukları, motor kontrol ve güç kaybı, denge-koordinasyon bozukluğu, tonus anormallikleri, duyu ve görme alanı kayıpları, afazi, apraksi, ihmal sendromu (unilateral neglect) ve emosyonel labilite.\n\n> [!IMPORTANT]\n> İskemik inmelerin en sık nedeni %60 oranıyla serebral trombozdur; hemorajik inmeler ise vakaların %15'ini oluşturur.",
+   "stepNumber": 9,
+   "isCheckpoint": false,
+   "isGameFinale": null
+  },
+  {
+   "slideNumber": 10,
+   "isCheckpoint": true,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Serebellar Bulgular, İletişim ve İnme Sendromları",
+   "synthesisNarrative": "Bu bölümde serebellar disfonksiyon testlerini, iletişim bozukluklarını ve inme etyolojisini pekiştiriyoruz.\n\n- **Serebellar Testler:** İpsilateral hipotoni, dissinerji (hareket akıcılık kaybı), disdiyadokokinezi (hızlı ardışık hareket beceriksizliği), dismetri (mesafe ayarlayamama), intansiyonel tremor (hedefe yaklaşırken artan kinetik tremor) ve ataksi.\n- **EHA ve Kontraktür:** EHA en doğru gonyometri ile ölçülür; tedavi edilmeyen spastisite ve immobilizasyon kontraktürle sonuçlanır.\n- **Afazi ve Dizartri:** Afazi kortikal dil yetisinin (anlama/ifade) hasarıdır; dizartri ise dil kapasitesi tamken konuşma motor kaslarının koordinasyon kaybıdır.\n- **İnme Etyolojisi:** İskemik (%85; tromboz %60, emboli %20) ve hemorajik (%15; intraserebral %10, subaraknoid %5).",
+   "interactiveElements": [
+    {
+     "type": "venn_grid",
+     "instruction": "Muayene bulgularını Serebellar Hasar ile Piramidal İnme Hasarı kutuplarına göre sınıflandırınız.",
+     "poleA": "Serebellar Disfonksiyon",
+     "poleB": "Piramidal İnme Hasarı",
+     "items": [
+      {
+       "criterion": "İntansiyonel kinetik tremor ve dismetri",
+       "correct": "A"
+      },
+      {
+       "criterion": "Hıza bağımlı spastisite ve motor güç kaybı",
+       "correct": "B"
+      },
+      {
+       "criterion": "Disdiyadokokinezi ve dissinerji",
+       "correct": "A"
+      },
+      {
+       "criterion": "İhmal sendromu ve kortikal afazi gelişimi",
+       "correct": "B"
+      }
+     ],
+     "labelA": "Serebellar Disfonksiyon",
+     "labelB": "Piramidal İnme Hasarı"
+    },
+    {
+     "type": "swipe_matching",
+     "instruction": "Klinik belirtileri doğru patoloji türüyle eşleştiriniz.",
+     "cards": [
+      {
+       "text": "Parmak burun testinde hedefi aşma (Dismetri)",
+       "category": "left"
+      },
+      {
+       "text": "Hızlı pronasyon-supinasyonu yapamama (Disdiyadokokinezi)",
+       "category": "left"
+      },
+      {
+       "text": "Kortikal zedelenmeye bağlı edinsel dil kaybı (Afazi)",
+       "category": "right"
+      },
+      {
+       "text": "Telaffuz kasları koordinasyon kaybı (Dizartri)",
+       "category": "right"
+      }
+     ],
+     "leftCategory": "Serebellar Bozukluk",
+     "rightCategory": "Konuşma / Dil Bozukluğu"
+    },
+    {
+     "type": "active_recall",
+     "question": "İskemik inmelerin en sık görülen vasküler nedeni nedir ve tüm inmelerdeki payı yüzde kaçtır?",
+     "answer": "Serebral trombozdur ve tüm inmelerin yaklaşık yüzde altmışını (%60) oluşturur."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Bu bölüme kadarki temel klinik kazanımlarla ilgili önermeleri inceleyiniz ve yanlış olanı belirleyiniz.",
+     "items": [
+      {
+       "text": "Serebellar dismetride ekstremite mesafeyi ayarlayamaz ve parmak burun testinde hedef ıskalanır.",
+       "isLie": false,
+       "explanation": "Doğru. Dismetri serebellar mesafe ayarlama yeteneğinin kaybıdır."
+      },
+      {
+       "text": "Dizartrisi olan bir hastada kortikal dil alanları tahrip olmuştur ve hasta konuşulan dili anlayamaz.",
+       "isLie": true,
+       "explanation": "Yalandır. Kortikal anlama kaybı afazide görülür; dizartride dil kapasitesi ve kavrayış tamamen korunmuştur."
+      },
+      {
+       "text": "İnmelerin yaklaşık yüzde seksen beşi iskemik orijinlidir.",
+       "isLie": false,
+       "explanation": "Doğru. İskemik inme %85, hemorajik inme %15 sıklıktadır."
+      }
+     ]
+    }
+   ],
+   "content": "Bu bölümde serebellar disfonksiyon testlerini, iletişim bozukluklarını ve inme etyolojisini pekiştiriyoruz.\n\n- **Serebellar Testler:** İpsilateral hipotoni, dissinerji (hareket akıcılık kaybı), disdiyadokokinezi (hızlı ardışık hareket beceriksizliği), dismetri (mesafe ayarlayamama), intansiyonel tremor (hedefe yaklaşırken artan kinetik tremor) ve ataksi.\n- **EHA ve Kontraktür:** EHA en doğru gonyometri ile ölçülür; tedavi edilmeyen spastisite ve immobilizasyon kontraktürle sonuçlanır.\n- **Afazi ve Dizartri:** Afazi kortikal dil yetisinin (anlama/ifade) hasarıdır; dizartri ise dil kapasitesi tamken konuşma motor kaslarının koordinasyon kaybıdır.\n- **İnme Etyolojisi:** İskemik (%85; tromboz %60, emboli %20) ve hemorajik (%15; intraserebral %10, subaraknoid %5).",
+   "stepNumber": 10,
+   "bolum": "4",
+   "pdfSayfalari": [
+    12,
+    18
+   ],
+   "sourcePdf": {
+    "startPage": 12,
+    "endPage": 18
+   },
+   "isGameFinale": null
+  },
+  {
+   "slideNumber": 11,
+   "bolum": "4",
+   "title": "İlkel Sinerjiler, Brunnstrom Motor Evreleri, MS ve Parkinson",
+   "pdfSayfalari": [
+    19,
+    23
+   ],
+   "sourcePdf": {
+    "fileName": "Nörolojik rehabilitasyona giriş ve genel ilkeler-şengül.pptx-02.11.2022.pdf",
+    "startPage": 19,
+    "endPage": 23,
+    "primaryPage": 21
+   },
+   "synthesisNarrative": "Hemiplejide motor iyileşme ilkel spinal refleks kalıplarından bağımsız izole eklem hareketlerine doğru aşamalı bir seyir izler.\n\n- **Sinerjik Hareket Paternleri:** Yüksek kortikal merkezlerin inhibisyonu kalktığında kaba, stereotipik ilkel spinal fleksiyon ve ekstansiyon kalıpları serbestleşir. Sinerjiye bağlı kaslar nörofizyolojik olarak birbirine bağımlıdır, izole hareket edemez.\n- **Brunnstrom Motor İyileşme Evreleri:**\n  * **Evre 1:** İstemli aktif hareket yoktur (flask dönem).\n  * **Evre 2:** Spastisite belirmeye başlar; zayıf temel sinerjiler ortaya çıkar.\n  * **Evre 3:** Spastisite zirve yapar; hasta istemli hareket yapabilir ancak hareket tamamen sinerji içindedir.\n  * **Evre 4:** Spastisite azalmaya başlar; sinerji dışı ilk özgün/izole hareketler başlar.\n  * **Evre 5:** Spastisite belirgin azalır; hareketlerin çoğu sinerjiden bağımsızdır.\n  * **Evre 6:** Spastisite kaybolur; iyi koordine fazik izole hareketler yapılır.\n- **Eşlik Eden Tablolar:** Multipl Sklerozda (MS) görsel/duysal bozukluklar, spastisite ve kısıtlayıcı yorgunluk; Parkinson hastalığında rijidite, bradikinezi, istirahat tremoru ve hızlanan (festinasyon) yürüyüş görülür.\n\n> [!IMPORTANT]\n> Brunnstrom Evre 3'te spastisite en belirgindir ve hareket tamamen sinerjiye bağlıdır; Evre 4'te sinerji dışı ilk izole hareketler başlar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Brunnstrom motor iyileşme evrelemesinde, spastisitenin zirveye ulaştığı ve istemli hareketin tamamen sinerji kalıbı içinde kaldığı evre hangisidir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Evre 3",
+       "isCorrect": true,
+       "explanation": "Doğru. Evre 3'te spastisite belirgindir ve istemli hareket tamamen sinerji kalıpları içindedir. Bu durum amfi ders notlarında ve klinik kılavuzlarda nörolojik rehabilitasyonun temel ve doğru ilkesi olarak tanımlanmıştır."
+      },
+      {
+       "key": "B",
+       "text": "Evre 1",
+       "isCorrect": false,
+       "explanation": "Yanlış. Evre 1 flask dönemdir, kasta hiçbir aktif istemli hareket ortaya çıkmaz. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      },
+      {
+       "key": "C",
+       "text": "Evre 4",
+       "isCorrect": false,
+       "explanation": "Yanlış. Evre 4'te spastisite azalır ve sinerji kalıpları dışına çıkan ilk izole hareketler başlar."
+      },
+      {
+       "key": "D",
+       "text": "Evre 6",
+       "isCorrect": false,
+       "explanation": "Yanlış. Evre 6'da spastisite kaybolmuştur ve hasta tam koordineli izole hareketler yapar. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "title": "Brunnstrom Motor İyileşme Sürecinin Fizyolojik Evreleri",
+     "steps": [
+      "1. Flask Felç Dönemi: İstemli hiçbir aktif kas hareketi yoktur (Evre 1).",
+      "2. Spastisite ve Sinerji Başlangıcı: Spastisite belirmeye başlar ve zayıf temel fleksör/ekstansör sinerjiler görülür (Evre 2).",
+      "3. Sinerji Hakimiyeti: Spastisite belirginleşir, istemli hareket vardır ancak tamamen sinerjiye bağlıdır (Evre 3).",
+      "4. Sinerji Dışı Ayrışma: Spastisite azalmaya başlar, sinerji kalıpları dışına çıkan ilk özgün hareketler başlar (Evre 4).",
+      "5. İleri İyileşme: Çoğu kas hareketi sinerjiden bağımsızlaşır ve spastisite belirgin azalır (Evre 5).",
+      "6. İzole Koordinasyon: Spastisite kaybolur, koordineli fazik ve izole eklem hareketleri yapılabilir (Evre 6)."
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "Evre 4",
+     "hint": "Sinerji dışı ilk izole hareketlerin başladığı Brunnstrom basamağı",
+     "sentence": "Brunnstrom evrelemesinde fleksör ve ekstansör sinerjilerin dışında özgün hareketlerin ilk başladığı basamak Evre 4 olarak adlandırılır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Motor evreleme ve nörodejeneratif tablolarla ilgili önermeleri inceleyiniz ve yanlış olanı bulunuz.",
+     "items": [
+      {
+       "text": "Multipl Sklerozda yorgunluk, mobilite güçlüğü, spastisite ve mesane sorunları sık görülen semptomlardır.",
+       "isLie": false,
+       "explanation": "Doğru. MS hastalarında özellikle yorgunluk ve mobilite kısıtlılığı belirgindir."
+      },
+      {
+       "text": "Parkinson hastalığında rijidite, bradikinezi, istirahat tremoru, assosiye hareket kaybı ve hızlanan yürüyüş görülür.",
+       "isLie": false,
+       "explanation": "Doğru. Bu bulgular Parkinson hastalığının klasik motor semiolojisini oluşturur."
+      },
+      {
+       "text": "Brunnstrom Evre 1'de hasta sinerjiden bağımsız fazik ve koordine izole hareketler yapar.",
+       "isLie": true,
+       "explanation": "Yalandır. Evre 1 flask dönemdir, aktif hareket hiç yoktur; izole hareketler Evre 6'da görülür."
+      }
+     ]
+    }
+   ],
+   "content": "Hemiplejide motor iyileşme ilkel spinal refleks kalıplarından bağımsız izole eklem hareketlerine doğru aşamalı bir seyir izler.\n\n- **Sinerjik Hareket Paternleri:** Yüksek kortikal merkezlerin inhibisyonu kalktığında kaba, stereotipik ilkel spinal fleksiyon ve ekstansiyon kalıpları serbestleşir. Sinerjiye bağlı kaslar nörofizyolojik olarak birbirine bağımlıdır, izole hareket edemez.\n- **Brunnstrom Motor İyileşme Evreleri:**\n  * **Evre 1:** İstemli aktif hareket yoktur (flask dönem).\n  * **Evre 2:** Spastisite belirmeye başlar; zayıf temel sinerjiler ortaya çıkar.\n  * **Evre 3:** Spastisite zirve yapar; hasta istemli hareket yapabilir ancak hareket tamamen sinerji içindedir.\n  * **Evre 4:** Spastisite azalmaya başlar; sinerji dışı ilk özgün/izole hareketler başlar.\n  * **Evre 5:** Spastisite belirgin azalır; hareketlerin çoğu sinerjiden bağımsızdır.\n  * **Evre 6:** Spastisite kaybolur; iyi koordine fazik izole hareketler yapılır.\n- **Eşlik Eden Tablolar:** Multipl Sklerozda (MS) görsel/duysal bozukluklar, spastisite ve kısıtlayıcı yorgunluk; Parkinson hastalığında rijidite, bradikinezi, istirahat tremoru ve hızlanan (festinasyon) yürüyüş görülür.\n\n> [!IMPORTANT]\n> Brunnstrom Evre 3'te spastisite en belirgindir ve hareket tamamen sinerjiye bağlıdır; Evre 4'te sinerji dışı ilk izole hareketler başlar.",
+   "stepNumber": 11,
+   "isCheckpoint": false,
+   "isGameFinale": null
+  },
+  {
+   "slideNumber": 12,
+   "bolum": "5",
+   "title": "Rehabilitasyonda Bütüncül Değerlendirme ve İmmobilizasyon Komplikasyonları",
+   "pdfSayfalari": [
+    24,
+    26
+   ],
+   "sourcePdf": {
+    "fileName": "Nörolojik rehabilitasyona giriş ve genel ilkeler-şengül.pptx-02.11.2022.pdf",
+    "startPage": 24,
+    "endPage": 26,
+    "primaryPage": 26
+   },
+   "synthesisNarrative": "Nörolojik rehabilitasyon yalnızca kas gücünü değil, hastanın tüm fonksiyonel alanlarını ve immobilizasyon risklerini bir bütün olarak ele alır.\n\n- **Bütüncül Değerlendirme Alanları:** Motor fonksiyonlar, duyu, mental durum, konuşma, kraniyal sinirler, denge-koordinasyon, yürüme, GYA ve yaşam kalitesi kapsamlı taranır.\n- **Kısa Vadeli Rehabilitasyon Amaçları:**\n  * İmmobilizasyon komplikasyonlarının önlenmesi.\n  * Deformite, bası yarası (dekübit ülseri) ve kas atrofisinin önlenmesi.\n  * Mesane ve bağırsak problemlerinin yönetimi.\n  * Spinal kord hasarında otonomik disrefleksinin engellenmesi.\n- **Uzamış Yatak İstirahatinin Riskleri:** Kardiyovasküler dekondisyon, plazma hacminde azalma, ortostatik hipotansiyon, derin ven trombozu (DVT), atelektazi, aspirasyon pnömonisi, eklem kontraktürleri ve kemik demineralizasyonu.\n\n> [!NOTE]\n> Nörolojik rehabilitasyonda en acil kısa vadeli hedef, hastanın hayatını tehdit edebilecek immobilizasyon komplikasyonlarını önlemektir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Nörolojik rehabilitasyonda akut dönemde belirlenen kısa vadeli amaçlar arasında aşağıdakilerden hangisi yer almaz?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Hastanın yatak istirahatini uzatarak aylarca tamamen hareketsiz kalmasını sağlamak",
+       "isCorrect": true,
+       "explanation": "Doğru. Yatak istirahatinin uzatılması komplikasyonları artırır; amaç en kısa sürede güvenli mobilizasyondur. Bu durum amfi ders notlarında ve klinik kılavuzlarda nörolojik rehabilitasyonun temel ve doğru ilkesi olarak tanımlanmıştır."
+      },
+      {
+       "key": "B",
+       "text": "Bası yaralarını (dekübit) ve kalıcı eklem deformitelerini önlemek",
+       "isCorrect": false,
+       "explanation": "Yanlış. Bası yarası ve deformiteyi önlemek kısa vadeli temel hedefler arasındadır. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      },
+      {
+       "key": "C",
+       "text": "Derin ven trombozu ve kas atrofisi gibi immobilizasyon komplikasyonlarını engellemek",
+       "isCorrect": false,
+       "explanation": "Yanlış. DVT ve atrofi önlenmesi akut rehabilitasyonun en birincil amaçlarındandır. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      },
+      {
+       "key": "D",
+       "text": "Mesane ve bağırsak problemlerini yöneterek otonomik disrefleksiyi önlemek",
+       "isCorrect": false,
+       "explanation": "Yanlış. Mesane ve otonomik disrefleksi yönetimi hayati kısa vadeli hedeftir. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "immobilizasyon",
+     "hint": "Uzamış yatak istirahati ve hareketsizliğe bağlı gelişen istenmeyen durumları tanımlayan kavram",
+     "sentence": "Nörolojik rehabilitasyonun kısa vadeli en acil amaçlarından biri immobilizasyon komplikasyonlarının, bası yaralarının ve atrofisinin önlenmesidir."
+    },
+    {
+     "type": "swipe_matching",
+     "instruction": "İmmobilizasyon komplikasyonlarını etkiledikleri organ sistemine göre eşleştiriniz.",
+     "cards": [
+      {
+       "text": "Plazma hacmi kaybı ve ortostatik hipotansiyon",
+       "category": "left"
+      },
+      {
+       "text": "Derin ven trombozu ve atelektazi",
+       "category": "left"
+      },
+      {
+       "text": "Kemik çıkıntılar üzerinde bası yaraları (dekübit)",
+       "category": "right"
+      },
+      {
+       "text": "Kas atrofisi ve eklem kontraktürleri",
+       "category": "right"
+      }
+     ],
+     "leftCategory": "Kardiyovasküler ve Pulmoner",
+     "rightCategory": "Cilt ve Kas-İskelet"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Rehabilitasyon hedefleri ve immobilizasyon ile ilgili önermeleri inceleyiniz ve yanlış olanı bulunuz.",
+     "items": [
+      {
+       "text": "Nörolojik hastanın değerlendirilmesinde günlük yaşam aktiviteleri ve yaşam kalitesi ölçekleri kullanılır.",
+       "isLie": false,
+       "explanation": "Doğru. Fonksiyonel bağımsızlık ve yaşam kalitesi standart anketlerle izlenir."
+      },
+      {
+       "text": "Uzamış yatak istirahati kemik yapımını artırarak osteoskleroza ve kemik sertleşmesine yol açar.",
+       "isLie": true,
+       "explanation": "Yalandır. Hareketsizlik kemik rezorpsiyonunu hızlandırarak osteoporoza neden olur."
+      },
+      {
+       "text": "Kısa vadeli amaçlar arasında bası yaraları, kas atrofisi ve mesane problemlerinin önlenmesi yer alır.",
+       "isLie": false,
+       "explanation": "Doğru. Bu hedefler akut dönem nörolojik bakımın temel taşlarıdır."
+      }
+     ]
+    }
+   ],
+   "content": "Nörolojik rehabilitasyon yalnızca kas gücünü değil, hastanın tüm fonksiyonel alanlarını ve immobilizasyon risklerini bir bütün olarak ele alır.\n\n- **Bütüncül Değerlendirme Alanları:** Motor fonksiyonlar, duyu, mental durum, konuşma, kraniyal sinirler, denge-koordinasyon, yürüme, GYA ve yaşam kalitesi kapsamlı taranır.\n- **Kısa Vadeli Rehabilitasyon Amaçları:**\n  * İmmobilizasyon komplikasyonlarının önlenmesi.\n  * Deformite, bası yarası (dekübit ülseri) ve kas atrofisinin önlenmesi.\n  * Mesane ve bağırsak problemlerinin yönetimi.\n  * Spinal kord hasarında otonomik disrefleksinin engellenmesi.\n- **Uzamış Yatak İstirahatinin Riskleri:** Kardiyovasküler dekondisyon, plazma hacminde azalma, ortostatik hipotansiyon, derin ven trombozu (DVT), atelektazi, aspirasyon pnömonisi, eklem kontraktürleri ve kemik demineralizasyonu.\n\n> [!NOTE]\n> Nörolojik rehabilitasyonda en acil kısa vadeli hedef, hastanın hayatını tehdit edebilecek immobilizasyon komplikasyonlarını önlemektir.",
+   "stepNumber": 12,
+   "isCheckpoint": false,
+   "isGameFinale": null
+  },
+  {
+   "slideNumber": 13,
+   "bolum": "5",
+   "title": "Akut Dönem İlkeleri ve Subakut-Kronik Fonksiyonel Kazanımlar",
+   "pdfSayfalari": [
+    27,
+    29
+   ],
+   "sourcePdf": {
+    "fileName": "Nörolojik rehabilitasyona giriş ve genel ilkeler-şengül.pptx-02.11.2022.pdf",
+    "startPage": 27,
+    "endPage": 29,
+    "primaryPage": 28
+   },
+   "synthesisNarrative": "Nörolojik hastada rehabilitasyon, medikal stabilizasyon sağlandıktan hemen sonra evreye özgü adımlarla ilerler.\n\n- **Akut Dönem (İlk 12-24 Saat):**\n  * Aktif ve pasif eklem hareket açıklığı (ROM) egzersizleri başlatılır.\n  * Progresif aktivite artışı planlanır.\n  * Yatak pozisyonu 2 saatte bir değiştirilir; ekstremiteler ödem ve kontraktürleri önleyecek şekilde desteklenir.\n  * Hasta kendine bakım ve sosyalizasyon için cesaretlendirilir.\n- **Subakut ve Kronik Dönem İlkeleri:**\n  * Erken mobilizasyon sağlanır; hasta ve ailesi kapsamlı eğitime alınır.\n  * Yatak içi egzersizlerden oturma-ayakta durma dengesine, transferden yürüme ve merdiven egzersizlerine geçilir.\n  * İş-uğraşı tedavisi (İMT) ile kişisel bakım becerileri ve ortez kullanımı geliştirilir.\n  * Yutma değerlendirimi (disfaji), afazi terapisi, kognitif rehabilitasyon ve mesane-bağırsak eğitimi eş zamanlı yürütülür.\n\n> [!IMPORTANT]\n> Yutma refleksi değerlendirilmeden hastaya oral beslenme verilmemelidir; aspirasyon pnömonisi inmede önlenebilir en ölümcül komplikasyondur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "İnme geçiren bir hastada akut dönem rehabilitasyonu kapsamında ilk 12-24 saatte yapılması gereken en öncelikli girişimler hangisinde doğru verilmiştir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Aktif/pasif ROM egzersizleri başlatmak, iki saatte bir yatak pozisyonunu değiştirmek ve ekstremiteleri desteklemek.",
+       "isCorrect": true,
+       "explanation": "Doğru. İlk 12-24 saatte aktif/pasif ROM ve yatak pozisyonlama temel basamaklardır. Bu durum amfi ders notlarında ve klinik kılavuzlarda nörolojik rehabilitasyonun temel ve doğru ilkesi olarak tanımlanmıştır."
+      },
+      {
+       "key": "B",
+       "text": "Hastayı hemen ayağa kaldırarak merdiven çıkma ve koşma antrenmanlarına başlatmak.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Akut dönemde kademeli ilerlenir; merdiven eğitimi subakut ve kronik evrededir. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      },
+      {
+       "key": "C",
+       "text": "Tüm fiziksel girişimleri erteleyip hastayı haftalarca tamamen hareketsiz yatırmak.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Hareketsizlik DVT ve dekübit riskini artırır; rehabilitasyon ilk saatlerde başlar. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      },
+      {
+       "key": "D",
+       "text": "Yutma fonksiyonunu değerlendirmeden hastaya derhal katı gıdalarla oral beslenme vermek.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Yutma muayenesi yapılmadan besleme aspirasyon pnömonisine yol açabilir. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "title": "Akut Dönemden Subakut Mobilizasyona İlerleme Basamakları",
+     "steps": [
+      "1. Erken Pozisyonlama: İlk 12-24 saatte yatak pozisyonu 2 saatte bir değiştirilir ve pasif ROM başlanır.",
+      "2. Yatak İçi Mobilite: Yatak içi dönme ve oturma dengesi egzersizleri geliştirilir.",
+      "3. Transfer ve Denge: Yataktan tekerlekli sandalyeye transfer ve ayakta durma dengesi çalışılır.",
+      "4. Yürüme ve Fonksiyonel Bağımsızlık: Paralel bar, yürüteç, merdiven eğitimi ve ergoterapi ile bağımsızlık sağlanır."
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "12-24",
+     "hint": "Akut rehabilitasyonun başlaması gereken ilk saat aralığı",
+     "sentence": "Akut dönemde bası yaralarını önlemek için hastanın yatak pozisyonunun değiştirilmesi ilk 12-24 saatte başlatılmalıdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Akut ve subakut rehabilitasyon ilkeleriyle ilgili önermeleri inceleyiniz ve yanlış olanı bulunuz.",
+     "items": [
+      {
+       "text": "Subakut dönemde yutma değerlendirimi, afazi rehabilitasyonu ve kognitif eğitim eş zamanlı yürütülür.",
+       "isLie": false,
+       "explanation": "Doğru. Subakut dönemde fonksiyonel, iletişimsel ve kognitif alanlar birlikte ele alınır."
+      },
+      {
+       "text": "Akut dönemde hastaya en az 2 saatte bir pozisyon verilmesi bası yaralarını önlemede esastır.",
+       "isLie": false,
+       "explanation": "Doğru. İki saatte bir pozisyon değişimi doku perfüzyonunu korur."
+      },
+      {
+       "text": "İnme hastalarında mesane ve bağırsak eğitimi yalnızca eşlik eden omurilik travması varsa uygulanır.",
+       "isLie": true,
+       "explanation": "Yalandır. İnme sonrası da nörojenik mesane ve inkontinans sık gelişir ve bağırsak eğitimi mutlaka uygulanır."
+      }
+     ]
+    }
+   ],
+   "content": "Nörolojik hastada rehabilitasyon, medikal stabilizasyon sağlandıktan hemen sonra evreye özgü adımlarla ilerler.\n\n- **Akut Dönem (İlk 12-24 Saat):**\n  * Aktif ve pasif eklem hareket açıklığı (ROM) egzersizleri başlatılır.\n  * Progresif aktivite artışı planlanır.\n  * Yatak pozisyonu 2 saatte bir değiştirilir; ekstremiteler ödem ve kontraktürleri önleyecek şekilde desteklenir.\n  * Hasta kendine bakım ve sosyalizasyon için cesaretlendirilir.\n- **Subakut ve Kronik Dönem İlkeleri:**\n  * Erken mobilizasyon sağlanır; hasta ve ailesi kapsamlı eğitime alınır.\n  * Yatak içi egzersizlerden oturma-ayakta durma dengesine, transferden yürüme ve merdiven egzersizlerine geçilir.\n  * İş-uğraşı tedavisi (İMT) ile kişisel bakım becerileri ve ortez kullanımı geliştirilir.\n  * Yutma değerlendirimi (disfaji), afazi terapisi, kognitif rehabilitasyon ve mesane-bağırsak eğitimi eş zamanlı yürütülür.\n\n> [!IMPORTANT]\n> Yutma refleksi değerlendirilmeden hastaya oral beslenme verilmemelidir; aspirasyon pnömonisi inmede önlenebilir en ölümcül komplikasyondur.",
+   "stepNumber": 13,
+   "isCheckpoint": false,
+   "isGameFinale": null
+  },
+  {
+   "slideNumber": 14,
+   "bolum": "6",
+   "title": "Nöroplastisite Mekanizmaları, Kullanıma Bağımlılık ve Elektriksel Stimülasyon",
+   "pdfSayfalari": [
+    30,
+    33
+   ],
+   "sourcePdf": {
+    "fileName": "Nörolojik rehabilitasyona giriş ve genel ilkeler-şengül.pptx-02.11.2022.pdf",
+    "startPage": 30,
+    "endPage": 33,
+    "primaryPage": 31
+   },
+   "synthesisNarrative": "İnmede fonksiyonel geri dönüş, insan beyninin çevre etkilerine, deneyimlere ve beyin hasarına adapte olabilme yeteneği olan nöroplastisite ile gerçekleşir.\n\n- **Nöroplastisite Dinamiği:** İyileşme iskemik olaydan hemen sonra tetiklenir; birkaç hafta sonra belirginleşip aylarca sürer ve en kritik özelliği **kullanıma bağımlı (use-dependent)** olmasıdır.\n- **Geri Dönüş Mekanizmaları:**\n  * Parsiyel hasarlı yolların tekrar fonksiyonel hale gelmesi.\n  * Beyin haritasında temsil alanının genişlemesi.\n  * Atıl (sessiz) nöron ve sinapsların çalışır hale gelmesi.\n  * Nöronal filizlenme (aksonal sprouting) ve yeni sinaptik yollar.\n  * Diyaskizis (uzak alan depresyonu) tablosunun çözülmesi.\n- **Stimülasyon ve Elektriksel Yöntemler:** Duyusal stimülasyon plastisiteyi uyarır. Nöromusküler Elektriksel Stimülasyon (NMES) ve Fonksiyonel Elektriksel Stimülasyon (FES) kas gücünü artırmak, spastisiteyi azaltmak, ödemi tedavi etmek ve eklem propriosepsiyonunu geliştirmek için kullanılır. Üst ekstremitede FES omuz subluksasyonunu ve ağrısını azaltır.\n\n> [!NOTE]\n> Nöronal ağların kullanıma bağımlı olması özelliği nörolojik rehabilitasyonun temel anahtarıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "İnme rehabilitasyonunda üst ekstremiteye uygulanan Fonksiyonel Elektriksel Stimülasyonun (FES) en temel amaçlarından biri nedir?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Omuz subluksasyonunu ve omuz ağrısını azaltarak el ve bilek kaslarının fonksiyonelliğini artırmak.",
+       "isCorrect": true,
+       "explanation": "Doğru. Üst ekstremitede FES omuz eklemini stabilize eder, subluksasyonu ve ağrıyı belirgin azaltır. Bu durum amfi ders notlarında ve klinik kılavuzlarda nörolojik rehabilitasyonun temel ve doğru ilkesi olarak tanımlanmıştır."
+      },
+      {
+       "key": "B",
+       "text": "Kas liflerini kalıcı olarak denervasyona uğratarak hiçbir kasılma üretmemesini sağlamak.",
+       "isCorrect": false,
+       "explanation": "Yanlış. FES kasılmayı uyararak kas gücünü ve fonksiyonel hareketi artırmayı amaçlar. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      },
+      {
+       "key": "C",
+       "text": "Beyin hasarından sonra kortikal haritanın tamamen silinmesini ve plastisitenin durmasını sağlamak.",
+       "isCorrect": false,
+       "explanation": "Yanlış. FES duyusal ve motor girdi sağlayarak kortikal plastisiteyi uyarır ve genişletir. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      },
+      {
+       "key": "D",
+       "text": "Ödemi artırarak ekstremitenin pasif harekete tamamen direnç göstermesini sağlamak.",
+       "isCorrect": false,
+       "explanation": "Yanlış. FES kas pompasını çalıştırarak ödemi azaltır ve hareket açıklığını artırır. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "title": "İnme Sonrası Nöroplastik İyileşme ve Reorganizasyon Basamakları",
+     "steps": [
+      "1. İskemik Hasar ve Tetiklenme: İskemik olaydan hemen sonra hücresel onarım sinyalleri başlar.",
+      "2. Diyaskizis Çözülmesi: Hasarlı bölgeye bağlı uzak sağlam beyin alanlarındaki nöronal şok çözülür.",
+      "3. Atıl Sinaps Aktivasyonu: Sessiz nöronal yollar aktif hale gelir ve iletimi devralır.",
+      "4. Aksonal Filizlenme ve Harita Genişlemesi: Yeni sinaptik bağlantılar kurulur ve temsili alan genişler.",
+      "5. Kullanıma Bağımlı Pekiştirme: Tekrarlı egzersizlerle yeni nöronal ağlar kalıcı ve fonksiyonel hale gelir."
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "kullanım",
+     "hint": "Egzersiz ve tekrarla şekillenen 'use-dependent' özelliğe atıf yapan kelime",
+     "sentence": "Beyinde nöronal ağların kullanım bağımlı olması özelliği nöroplastisitenin rehabilitasyon için oynadığı anahtar roldür."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Nöroplastisite ve elektriksel stimülasyon ile ilgili önermeleri inceleyiniz ve yanlış olanı bulunuz.",
+     "items": [
+      {
+       "text": "Nöroplastisite iskemik olaydan hemen sonra başlar, haftalar ve aylar boyunca dinamik olarak sürer.",
+       "isLie": false,
+       "explanation": "Doğru. İyileşme erken dönemde tetiklenir ve uzun süre devam eder."
+      },
+      {
+       "text": "Elektriksel stimülasyon tam paralizisi olan ölü kaslarda en yüksek verimle çalışır ve periferik sinire ihtiyaç duymaz.",
+       "isLie": true,
+       "explanation": "Yalandır. FES tam paralizisi olmayan ve periferik siniri intakt olan kaslarda dengeli kasılma sağlar."
+      },
+      {
+       "text": "Zenginleştirilmiş duyusal ve çevresel stimülasyon beyin plastisitesini destekler.",
+       "isLie": false,
+       "explanation": "Doğru. Duyusal stimülasyon kortikal yeniden yapılanmayı güçlü şekilde tetikler."
+      }
+     ]
+    }
+   ],
+   "content": "İnmede fonksiyonel geri dönüş, insan beyninin çevre etkilerine, deneyimlere ve beyin hasarına adapte olabilme yeteneği olan nöroplastisite ile gerçekleşir.\n\n- **Nöroplastisite Dinamiği:** İyileşme iskemik olaydan hemen sonra tetiklenir; birkaç hafta sonra belirginleşip aylarca sürer ve en kritik özelliği **kullanıma bağımlı (use-dependent)** olmasıdır.\n- **Geri Dönüş Mekanizmaları:**\n  * Parsiyel hasarlı yolların tekrar fonksiyonel hale gelmesi.\n  * Beyin haritasında temsil alanının genişlemesi.\n  * Atıl (sessiz) nöron ve sinapsların çalışır hale gelmesi.\n  * Nöronal filizlenme (aksonal sprouting) ve yeni sinaptik yollar.\n  * Diyaskizis (uzak alan depresyonu) tablosunun çözülmesi.\n- **Stimülasyon ve Elektriksel Yöntemler:** Duyusal stimülasyon plastisiteyi uyarır. Nöromusküler Elektriksel Stimülasyon (NMES) ve Fonksiyonel Elektriksel Stimülasyon (FES) kas gücünü artırmak, spastisiteyi azaltmak, ödemi tedavi etmek ve eklem propriosepsiyonunu geliştirmek için kullanılır. Üst ekstremitede FES omuz subluksasyonunu ve ağrısını azaltır.\n\n> [!NOTE]\n> Nöronal ağların kullanıma bağımlı olması özelliği nörolojik rehabilitasyonun temel anahtarıdır.",
+   "stepNumber": 14,
+   "isCheckpoint": false,
+   "isGameFinale": null
+  },
+  {
+   "slideNumber": 15,
+   "bolum": "6",
+   "title": "Çağdaş Tedavi Ekolleri, Ergoterapi, Spastisite Yönetimi ve Ortezler",
+   "pdfSayfalari": [
+    34,
+    43
+   ],
+   "sourcePdf": {
+    "fileName": "Nörolojik rehabilitasyona giriş ve genel ilkeler-şengül.pptx-02.11.2022.pdf",
+    "startPage": 34,
+    "endPage": 43,
+    "primaryPage": 40
+   },
+   "synthesisNarrative": "İnme ve nörolojik hastalıklarda fonksiyonel bağımsızlık; geleneksel egzersiz ekolleri, ileri teknolojik yöntemler, ergoterapi ve ortezlerin entegrasyonu ile sağlanır.\n\n- **Geleneksel ve Çağdaş Ekoller:** Bobath (nörogelişimsel eğitim: anormal refleks inhibisyonu), PNF (diagonal paternler), Brunnstrom, Carr (motor yeniden eğitim), Zorunlu Kullanım Tedavisi (CIMT), vücut ağırlığı destekli treadmill ve robot yardımlı eğitim.\n- **Biyofeedback ve Ayna Terapisi:** EMG biofeedback kas kontrolü sağlar; ayna terapisi simetrik kullanım görsel yanılsamasıyla plastisiteyi uyarır.\n- **İş-Uğraşı Terapisi (Ergoterapi):** Beslenme, giyinme, banyo, tuvalet ve transfer gibi kendine bakım aktivitelerinde üst ekstremite fonksiyonunu ve kognitif adaptasyonu sağlar.\n- **Spastisite Tedavi İlkeleri:** Spastisite aktivite veya hasta bakımını (hijyeni) güçleştirdiğinde tedavi edilir. Spastisite alt ekstremitede stabiliteyi artırarak ayakta durmaya yardımcı olabileceğinden yalnızca olumsuz etkisi belirgin olan spastisite tedavi edilmelidir. Tedavide germe, pozisyonlama, ortezler, kriyoterapi ve TENS uygulanır.\n- **AFO (Ankle Foot Orthosis):** Hemiplejik hastada düşük ayağı önlemek ve basma fazında stabilite sağlamak için temel ortezdir.\n\n> [!IMPORTANT]\n> Alt ekstremitedeki ekstansör spastisite hastanın ayakta durmasına destek olabilir; bu yüzden her spastisite yok edilmez, yalnızca fonksiyonu bozan spastisite tedavi edilir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Spastisite tedavisinde klinik karar verme süreci ile ilgili aşağıdaki ilkelerden hangisi doğrudur?",
+     "options": [
+      {
+       "key": "A",
+       "text": "Spastisite alt ekstremitede stabiliteyi artırıp ayakta durmaya yardımcı olabileceğinden, yalnızca aktivite veya hijyeni bozan spastisite tedavi edilir.",
+       "isCorrect": true,
+       "explanation": "Doğru. Ekstansör spastisite duruşu destekleyebilir; bu nedenle yalnız fonksiyonu bozan spastisite hedeflenir. Bu durum amfi ders notlarında ve klinik kılavuzlarda nörolojik rehabilitasyonun temel ve doğru ilkesi olarak tanımlanmıştır."
+      },
+      {
+       "key": "B",
+       "text": "Her düzeydeki spastisite hastanın ayakta durmasını tamamen engellediği için derhal yok edilmelidir.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Hafif spastisite sütun bacak etkisi yaratarak ayakta durmaya katkı sağlayabilir. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      },
+      {
+       "key": "C",
+       "text": "AFO ortezleri yalnızca üst ekstremite omuz subluksasyonunu tedavi etmek amacıyla kola takılır.",
+       "isCorrect": false,
+       "explanation": "Yanlış. AFO ayak-ayak bileği ortezidir, düşük ayağı kontrol etmek için alt ekstremiteye uygulanır. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      },
+      {
+       "key": "D",
+       "text": "İş-uğraşı terapisi yalnızca tekerlekli sandalyenin mekanik tamirini kapsayan teknik bir alandır.",
+       "isCorrect": false,
+       "explanation": "Yanlış. Ergoterapi beslenme, giyinme ve kendine bakım gibi günlük yaşam aktivitelerini kazandırır. Bu ifade patofizyolojik gerçeklerle ve ders müfredatındaki temel rehabilitasyon prensipleriyle bağdaşmadığı için doğru seçenek değildir."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "instruction": "Nörolojik rehabilitasyon yöntemlerini ve temel etki hedeflerini inceleyiniz.",
+     "tableHeaders": [
+      "Yöntem / Cihaz",
+      "Kategori",
+      "Temel Klinik Hedef"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "{'text': 'Bobath Yaklaşımı', 'hidden': False}",
+         "isMasked": false,
+         "hint": null
+        },
+        {
+         "text": "{'text': 'Geleneksel Nörogelişimsel', 'hidden': False}",
+         "isMasked": false,
+         "hint": null
+        },
+        {
+         "text": "{'text': 'Anormal refleks inhibisyonu ve normal hareket fasilitasyonu', 'hidden': True, 'hint': 'Sinerjik spazmı kırıp normal hareketi öğretme'}",
+         "isMasked": true,
+         "hint": "Doğru kavram"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "{'text': 'Zorunlu Kullanım Terapisi (CIMT)', 'hidden': False}",
+         "isMasked": false,
+         "hint": null
+        },
+        {
+         "text": "{'text': 'Çağdaş Nöroplastik', 'hidden': False}",
+         "isMasked": false,
+         "hint": null
+        },
+        {
+         "text": "{'text': 'Sağlam kolu kısıtlayarak paretik kolu yoğun eğitime zorlama', 'hidden': True, 'hint': 'Öğrenilmiş kullanılmamayı kırma yaklaşımı'}",
+         "isMasked": true,
+         "hint": "Doğru kavram"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "{'text': 'AFO (Ankle Foot Orthosis)', 'hidden': False}",
+         "isMasked": false,
+         "hint": null
+        },
+        {
+         "text": "{'text': 'Ortez ve Yardımcı Cihaz', 'hidden': False}",
+         "isMasked": false,
+         "hint": null
+        },
+        {
+         "text": "{'text': 'Düşük ayak deformitesini kontrol edip yürüyüşü stabilize etme', 'hidden': True, 'hint': 'Salınım fazında ayağın takılmasını engelleme'}",
+         "isMasked": true,
+         "hint": "Doğru kavram"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "AFO",
+     "hint": "Ankle Foot Orthosis teriminin tıp literatüründeki kısaltması",
+     "sentence": "Hemiplejik hastada düşük ayağı engellemek ve salınım fazında ayağın yere sürtmesini önlemek amacıyla en sık AFO ortezi kullanılır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Çağdaş rehabilitasyon yaklaşımları ve spastisite yönetimi ile ilgili önermeleri inceleyiniz ve yanlış olanı bulunuz.",
+     "items": [
+      {
+       "text": "Ayna terapisi gibi görsel yanılsamalar hastaya iki ekstremiteyi simetrik kullanma hissi vererek beyin plastisitesini uyarır.",
+       "isLie": false,
+       "explanation": "Doğru. Ayna nöron sistemi kortikal reorganizasyonu tetikler."
+      },
+      {
+       "text": "Spastisite tedavisinde germe, statik pozisyonlama, ortezler, alçılama ve kriyoterapi uygulanabilir.",
+       "isLie": false,
+       "explanation": "Doğru. Bu fiziksel yaklaşımlar spastisite tedavisinin temel basamaklarıdır."
+      },
+      {
+       "text": "Yetersiz tedavi edilen şiddetli spastisite hiçbir zaman kontraktür veya bası yarasına yol açmaz.",
+       "isLie": true,
+       "explanation": "Yalandır. Yetersiz tedavi edilen spastisite kontraktürlere, bası yaralarına ve şiddetli ağrıya yol açar."
+      }
+     ]
+    }
+   ],
+   "content": "İnme ve nörolojik hastalıklarda fonksiyonel bağımsızlık; geleneksel egzersiz ekolleri, ileri teknolojik yöntemler, ergoterapi ve ortezlerin entegrasyonu ile sağlanır.\n\n- **Geleneksel ve Çağdaş Ekoller:** Bobath (nörogelişimsel eğitim: anormal refleks inhibisyonu), PNF (diagonal paternler), Brunnstrom, Carr (motor yeniden eğitim), Zorunlu Kullanım Tedavisi (CIMT), vücut ağırlığı destekli treadmill ve robot yardımlı eğitim.\n- **Biyofeedback ve Ayna Terapisi:** EMG biofeedback kas kontrolü sağlar; ayna terapisi simetrik kullanım görsel yanılsamasıyla plastisiteyi uyarır.\n- **İş-Uğraşı Terapisi (Ergoterapi):** Beslenme, giyinme, banyo, tuvalet ve transfer gibi kendine bakım aktivitelerinde üst ekstremite fonksiyonunu ve kognitif adaptasyonu sağlar.\n- **Spastisite Tedavi İlkeleri:** Spastisite aktivite veya hasta bakımını (hijyeni) güçleştirdiğinde tedavi edilir. Spastisite alt ekstremitede stabiliteyi artırarak ayakta durmaya yardımcı olabileceğinden yalnızca olumsuz etkisi belirgin olan spastisite tedavi edilmelidir. Tedavide germe, pozisyonlama, ortezler, kriyoterapi ve TENS uygulanır.\n- **AFO (Ankle Foot Orthosis):** Hemiplejik hastada düşük ayağı önlemek ve basma fazında stabilite sağlamak için temel ortezdir.\n\n> [!IMPORTANT]\n> Alt ekstremitedeki ekstansör spastisite hastanın ayakta durmasına destek olabilir; bu yüzden her spastisite yok edilmez, yalnızca fonksiyonu bozan spastisite tedavi edilir.",
+   "stepNumber": 15,
+   "isCheckpoint": false,
+   "isGameFinale": null
+  },
+  {
+   "slideNumber": 16,
+   "isGameFinale": true,
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Nörolojik Rehabilitasyona Giriş ve Genel İlkeler",
+   "synthesisNarrative": "Tebrikler! Nörolojik rehabilitasyonun temel kavramlarını, DSÖ sınıflamasını, motor değerlendirme skalalarını, inme evrelerini ve nöroplastisite ilkelerini tamamladınız. Şimdi öğrendiklerinizi pekiştirici dört aşamalı ders sonu oyunlarıyla test edin.",
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "prompt": "Brunnstrom motor iyileşme evrelerini flask felçten tam koordineli izole harekete doğru kronolojik olarak sıralayınız.",
+     "steps": [
+      "Evre 1: İstemli aktif hareket yoktur (flask evre)",
+      "Evre 2: Spastisite belirmeye başlar ve zayıf temel sinerjiler görülür",
+      "Evre 3: Spastisite belirgindir, hareket tamamen sinerji paterni içindedir",
+      "Evre 4: Spastisite azalır, sinerji kalıpları dışı ilk özgün hareketler başlar",
+      "Evre 5: Hareketlerin çoğu sinerjiden bağımsız ve özgündür",
+      "Evre 6: Spastisite kaybolur, koordineli fazik ve izole eklem hareketleri yapılır"
+     ],
+     "explanation": "Brunnstrom motor iyileşme flask felçten başlayıp sinerjilerin belirginleşmesi ve ardından aşamalı olarak izole harekete geçişle tamamlanır."
+    },
+    {
+     "type": "estimate_slider",
+     "prompt": "Tüm inme vakaları içinde iskemik inmelerin oluşturduğu yüzdelik oranı tahmin ediniz.",
+     "min": 0,
+     "max": 100,
+     "answer": 85,
+     "tolerance": 5,
+     "step": 5,
+     "explanation": "Ders verilerine göre inmelerin yüzde seksen beşi (%85) iskemik, yüzde on beşi (%15) hemorajiktir."
+    },
+    {
+     "type": "perturbation",
+     "scenario": "Hemiplejik bir hastada alt ekstremitede hafif düzeyde ekstansör spastisite mevcuttur. Hasta bu tonus artışı sayesinde ayakta durabilmekte ve transfer yapabilmektedir. Bir hekim hastaya agresif tonus düşürücü tedavi vererek ekstansör tonusu tamamen ortadan kaldırmıştır.",
+     "parameters": [
+      {
+       "name": "Ayakta durma stabilitesi",
+       "correct": "azalir",
+       "explanation": "Ekstansör tonus bacağa destek oluyordu; tonusun tamamen silinmesi stabiliteyi bozar."
+      },
+      {
+       "name": "Diz ekleminin boşalma riski",
+       "correct": "artar",
+       "explanation": "Ekstansör direnç kalktığında diz eklemi vücut ağırlığını taşıyamayarak çöker."
+      },
+      {
+       "name": "Kortikal dil ve konuşma kapasitesi",
+       "correct": "degismez",
+       "explanation": "Bacak tonusuna yapılan periferik müdahale serebral kortikal dil merkezlerini etkilemez."
+      }
+     ]
+    },
+    {
+     "type": "fix_the_text",
+     "text": "Piramidal yol hasarında görülen spastisite pasif germe hızından tamamen bağımsız bir direnç gösterirken; Parkinson hastalığındaki rijidite pasif germe hızına güçlü şekilde bağımlıdır.",
+     "errors": [
+      {
+       "wrong": "hızından tamamen bağımsız",
+       "correct": "hızına güçlü şekilde bağımlı",
+       "options": [
+        "hızından tamamen bağımsız",
+        "hızına hiçbir etki yapmayan"
+       ],
+       "explanation": "Spastisite piramidal yol hasarında pasif hareketin hızına bağımlı olarak artan bir hipertonidir."
+      }
+     ]
+    }
+   ],
+   "content": "Tebrikler! Nörolojik rehabilitasyonun temel kavramlarını, DSÖ sınıflamasını, motor değerlendirme skalalarını, inme evrelerini ve nöroplastisite ilkelerini tamamladınız. Şimdi öğrendiklerinizi pekiştirici dört aşamalı ders sonu oyunlarıyla test edin.",
+   "stepNumber": 16,
+   "bolum": "6",
+   "pdfSayfalari": [
+    1,
+    43
+   ],
+   "sourcePdf": {
+    "startPage": 1,
+    "endPage": 43
+   },
+   "isCheckpoint": false
+  }
+ ],
+ "deckId": "k2p-y25-k2-16-norolojik-rehabilitasyona-giris",
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "matchedPastQuestionsCount": 7,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

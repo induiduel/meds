@@ -1,26 +1,23 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 345,
-  "baslik": "Kurul 2 Arşiv Dersleri 53-55: Nörodejeneratif Hastalıklar, YAB ve Panik Bozukluk (2025-2026)",
+  "onem": 346,
+  "baslik": "Kurul 2 Arşiv Dersi 16: Nörolojik Rehabilitasyona Giriş ve Genel İlkeler (2025-2026)",
   "maddeler": [
-    "Ders 53 (Tıbbi Genetik - Nörodejeneratif Hastalıklar ve Genetiği): 24 slayt Öğren destesi, 83 sayfa tam amfi dersi kapsamı (166 cümle, 2.851 kelime, 20,8 dk EMA GPU sesli anlatım), 15 canlı tuval çizimi, 3 çıkmış soru eşleşmesi ve gömülü .medspak (7.78 MB)",
-    "Ders 54 (Psikiyatri - Yaygın Anksiyete Bozukluğu): 24 slayt Öğren destesi, 20 sayfa derinlemesine klinik kapsam (66 cümle, 1.165 kelime, 8,7 dk EMA GPU sesli anlatım), 15 canlı tuval çizimi, 3 çıkmış soru eşleşmesi ve gömülü .medspak (4.16 MB)",
-    "Ders 55 (Psikiyatri - Panik Bozukluk ve Fobiler): 24 slayt Öğren destesi, 38 sayfa tam klinik kapsam (113 cümle, 1.793 kelime, 12,8 dk EMA GPU sesli anlatım), 15 canlı tuval çizimi, 3 çıkmış soru eşleşmesi ve gömülü .medspak (3.93 MB)",
-    "Metin takip ve lazer vurgu sistemi: slayttaki tüm maddeler, tanı kriterleri, etiyoloji ve genetik mekanizmalar konuşmacı sesine birebir senkron biçimde PDF üzerinde satır satır aydınlatıldı"
+    "Ders 16 (FTR - Nörolojik Rehabilitasyona Giriş): 16 slayt Öğren destesi (11 interaktif model + ders sonu oyunları finali), 43 sayfa tam amfi dersi kapsamı (44 paragraf, 191 cümle, 3.937 kelime, 29,4 dk EMA GPU sesli anlatım), 14 canlı çizim şeması, 11 çıkmış soru eşleşmesi ve gömülü .medspak paketi (8.48 MB)",
+    "Metin takip ve lazer vurgu sistemi: slaytlardaki tüm DSÖ kavramları (bozukluk, özürlülük, engellilik), 0-5 MRC skalası, Modifiye Ashworth Skalası (MAS), serebellar testler, Brunnstrom evreleri, akut bakım protokolleri ve nöroplastisite mekanizmaları konuşmacı sesine birebir senkron olarak PDF üzerinde satır satır aydınlatıldı",
+    "Canlı çizim ve panel doğrulayıcısı: tüm ekran genişliklerinde (366, 567, 1100 px) sıfır taşma ve sıfır kelime kırılmasıyla 0 HATA ile doğrulandı"
   ],
   "eklenen": [
-    "Kurul 2 Tıbbi Genetik 'Nörodejeneratif Hastalıklar ve Genetiği' (2025-2026 Arşivi)",
-    "Kurul 2 Psikiyatri 'Yaygın Anksiyete Bozukluğu' (2025-2026 Arşivi)",
-    "Kurul 2 Psikiyatri 'Panik Bozukluk ve Fobik Bozukluklar' (2025-2026 Arşivi)"
+    "Kurul 2 FTR 'Nörolojik Rehabilitasyona Giriş ve Genel İlkeler' (2025-2026 Arşivi)"
   ],
   "degisen": [
-    "meds/data/arsiv_25_26/sesli_anlatim/dersler.json",
-    "meds/data/arsiv_25_26/sesli_anlatim/kayit.json",
+    "meds/data/arsiv_25_26/sesli_anlatim/cizim/y25-k2-16-norolojik-rehabilitasyona-giris.json",
+    "meds/data/arsiv_25_26/gunluk/y25-k2-16-norolojik-rehabilitasyona-giris.json",
     "meds/guncelleme_notu.json"
   ],
   "duzeltilen": [
-    "Ders 53, 54 ve 55 amfi dersi standartlarında derinleştirildi; slaytlardaki tüm maddeler ve mekanizmalar atlanmadan tam akademik sürede anlatıldı",
-    "PDF metin takip motoru konuşmacı sesine ve satırlara %100 uyumlu hale getirildi"
+    "Ders 16 tam amfi dersi kapsamıyla zenginleştirildi; 43 sayfanın tamamı, tüm anatomik ve fizyopatolojik mekanizmalar 29,4 dakikalık gerçekçi akademik sürede eksiksiz anlatıldı",
+    "PDF metin takip motoru ve satır çapaları konuşmacı telaffuzuna ve slayt satırlarına %100 uyumlu hale getirildi"
   ],
   "silinen": []
 }

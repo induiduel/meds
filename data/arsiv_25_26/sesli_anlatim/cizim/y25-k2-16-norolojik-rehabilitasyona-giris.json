@@ -1,0 +1,506 @@
+{
+ "surum": 1,
+ "metinHash": "3b322a1af78f154108e826e2c6a54e2b622c355b",
+ "p": {
+  "2": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Fiziksel tıp hekimi",
+      "Fizyoterapist",
+      "İş ve uğraşı terapisti"
+     ],
+     "baslik": "Rehabilitasyon Ekibi",
+     "s": 3,
+     "k": [
+      0,
+      85
+     ],
+     "tip": "liste",
+     "konum": [
+      0.4,
+      0.34
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "3": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Bozukluk: Yapı ve fonksiyon kaybı",
+      "Özürlülük: Kişisel aktivite kaybı",
+      "Engellilik: Toplumsal rol kaybı"
+     ],
+     "baslik": "Dünya Sağlık Örgütü Sınıflaması",
+     "numarali": true,
+     "s": 4,
+     "k": [
+      0,
+      86
+     ],
+     "tip": "liste",
+     "konum": [
+      0.41,
+      0.09
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "4": {
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Anatomik Bozukluk",
+       "Distal falanks kaybı",
+       "Distal falanks kaybı"
+      ],
+      [
+       "Özürlülük",
+       "Düğme ilikleme kaybı",
+       "Düğme ilikleme kaybı"
+      ],
+      [
+       "Engellilik",
+       "Mesleğini icra edemez",
+       "Mesleğini sürdürür"
+      ]
+     ],
+     "kutuplar": [
+      "Piyano sanatçısı",
+      "Futbolcu"
+     ],
+     "s": 4,
+     "k": [
+      0,
+      84
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.86
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.413,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2928,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "9": {
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Hipotoni (Tonus azalması)",
+      "Spastisite (Kas tonusu artışı)",
+      "Hipertoni (Aşırı tonus artışı)"
+     ],
+     "baslik": "Kas Tonusu Değerlendirmesi",
+     "s": 9,
+     "k": [
+      0,
+      77
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.92
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3508,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "10": {
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Sistem",
+       "Piramidal yollar",
+       "Ekstrapiramidal sistem"
+      ],
+      [
+       "Direnç",
+       "Hıza bağımlı artış",
+       "Her iki kasta direnç"
+      ],
+      [
+       "Muayene",
+       "Sustalı çakı",
+       "Dişli çark belirtisi"
+      ]
+     ],
+     "kutuplar": [
+      "Spastisite",
+      "Rijidite"
+     ],
+     "s": 10,
+     "k": [
+      0,
+      79
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.91
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.413,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3428,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "13": {
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Ataksi (Sarhoşvari yürüme)",
+      "Dismetri (Hedefe ulaşamama)",
+      "Disdiadokokinezi (Ardışık hareket)",
+      "İntansiyonel tremor"
+     ],
+     "baslik": "Serebellar Muayene",
+     "s": 13,
+     "k": [
+      0,
+      86
+     ],
+     "tip": "liste",
+     "konum": [
+      0.04,
+      0.89
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3947,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "17": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "İskemik inme (Yüzde seksen beş): Enfarkt",
+      "Hemorajik inme (Yüzde on beş): Beyin kanaması"
+     ],
+     "baslik": "İnme Etiyolojisi",
+     "s": 17,
+     "k": [
+      0,
+      84
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2968,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "22": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Görsel bozukluklar ve optik nörit",
+      "Duysal bozukluklar ve paresteziler",
+      "Santral yorgunluk",
+      "Spastisite ve mobilite güçlüğü"
+     ],
+     "baslik": "Multipl Skleroz Bulguları",
+     "s": 22,
+     "k": [
+      0,
+      84
+     ],
+     "tip": "liste",
+     "konum": [
+      0.22,
+      0.82
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3247,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "27": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "algoritma",
+     "sablon_ad": "Yaklaşım basamakları",
+     "duzen": "adimlar",
+     "ogeler": [
+      "1. İlk on iki ila yirmi dört saatte başlama",
+      "2. Aktif ve pasif eklem hareket açıklığı egzersizleri",
+      "3. İki saatte bir yatak pozisyonunu değiştirme",
+      "4. Yutma değerlendirilmeden oral beslenmeme"
+     ],
+     "baslik": "Akut Dönem Girişimleri",
+     "s": 27,
+     "k": [
+      0,
+      96
+     ],
+     "tip": "adimlar",
+     "konum": [
+      0.03,
+      0.79
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.419,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.229,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "28": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "algoritma",
+     "sablon_ad": "Yaklaşım basamakları",
+     "duzen": "adimlar",
+     "ogeler": [
+      "1. Yatak içi dönme ve köprü kurma",
+      "2. Destekli ve desteksiz oturma",
+      "3. Ayakta durma ve ağırlık aktarma",
+      "4. Transfer, yürüme ve merdiven egzersizleri"
+     ],
+     "baslik": "Mobilizasyon Basamakları",
+     "s": 28,
+     "k": [
+      0,
+      80
+     ],
+     "tip": "adimlar",
+     "konum": [
+      0.05,
+      0.79
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.472,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2824,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "34": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Bobath yaklaşımı (Nörogelişimsel eğitim)",
+      "Proprioseptif nöromuskuler fasilitasyon",
+      "Carr motor yeniden eğitim yaklaşımı",
+      "Zorunlu kullanım tedavisi ve robotik cihazlar"
+     ],
+     "baslik": "İnmede Tedavi Ekolleri",
+     "s": 34,
+     "k": [
+      0,
+      87
+     ],
+     "tip": "liste",
+     "konum": [
+      0.55,
+      0.21
+     ],
+     "genislik": 0.42,
+     "doluluk": 0.0,
+     "kutu_h": 0.645,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "37": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Sağlam kolun aynadaki görsel yanılsaması",
+      "İki ekstremiteyi simetrik kullanma algısı",
+      "Motor kortekste beyin plastisitesinin artışı"
+     ],
+     "s": 37,
+     "k": [
+      0,
+      83
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.7
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.557,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.2766,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "40": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Tedavi Edilmeli: Hijyen ve aktiviteyi bozan tonus",
+      "Korunmalı: Ayakta durma stabilitesi veren tonus"
+     ],
+     "baslik": "Spastisitede Tedavi ve Koruma Ayrımı",
+     "s": 40,
+     "k": [
+      0,
+      72
+     ],
+     "tip": "liste",
+     "konum": [
+      0.62,
+      0.48
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.444,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "41": {
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Pasif germe ve statik pozisyonlama",
+      "Ortezler ve seri alçılama",
+      "Elektroterapi, hidroterapi ve kriyoterapi",
+      "Biyofeedback ve manyetik stimülasyon"
+     ],
+     "baslik": "Spastisitede Fiziksel Tedavi",
+     "s": 41,
+     "k": [
+      0,
+      102
+     ],
+     "tip": "liste",
+     "konum": [
+      0.64,
+      0.2
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.645,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  }
+ },
+ "rapor": {
+  "aday": 27,
+  "gecti": 14,
+  "ret": {
+   "resim sayfasında panel (H51)": 13
+  }
+ }
+}
