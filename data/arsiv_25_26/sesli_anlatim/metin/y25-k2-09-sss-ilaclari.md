@@ -1,7 +1,7 @@
 # MSS İlaçları Farmakolojisine Giriş
 
 @@ MSS İlaçları Farmakolojisine Giriş ve Temel İlkeler
-Merkezi sinir sistemi ilaçları farmakolojisine giriş dersimizde, santral nörotransmisyonun temel mekanizmalarını, reseptör sınıflarını ve ilaç etki hedeflerini inceleyeceğiz. Bu derste kazanacağımız farmakolojik ilkeler, tıp fakültesi kurulu boyunca göreceğimiz tüm nörolojik ve psikiyatrik ilaç gruplarının temelini oluşturacaktır.
+Merkezi sinir sistemi ilaçları farmakolojisine giriş dersimizde, santral nörotransmisyonun temel mekanizmalarını, reseptör sınıflarını ve ilaç etki hedeflerini inceleyeceğiz. Bu derste kazanacağımız farmakolojik ilkeler, tıp fakültesi kurulu boyunca göreceğimiz tüm nörolojik ve psikiyatrik ilaç gruplarının temelini oluşturacaktır. Santral nöronlar arasındaki eksitatör ve inhibitör dengenin farmakolojik modülasyonu, sedatif hipnotiklerden antiepileptiklere kadar geniş bir tedavi yelpazesini belirler.
 
 Merkezi sinir sisteminde etkili ilaçlar, eski çağlardan beri insanlar tarafından keşfedilen ilk ajanlar arasında olup günümüzde de en yaygın kullanılan farmakolojik gruptur. Bu bileşikler nörolojik ve psikiyatrik hastalıkların tedavisinden ağrı kesilmesine, bulantının baskılanmasına ve ateşin düşürülmesine kadar uzanan son derece geniş bir klinik kullanım alanına sahiptir. Merkezi sinir sistemini etkileyen neredeyse tüm ajanlar sinaptik iletiyi modüle eden özgül reseptörlere etkir; genel anestezikler ve alkol gibi moleküller bile sinaptik iletimde gösterilebilir değişiklikler oluşturur.
 
@@ -125,4 +125,4 @@ Pürin reseptörleri özellikle adenozin ve a t p olmak üzere merkezi sinir sis
 
 Diğer nörotransmiterlerle birlikte salınan a t p, pe iki iks ve pe iki ye olmak üzere iki ana reseptör sınıfına bağlanabilir. A t p reseptörlerinin pe iki iks ailesi seçici olmayan ligand kapılı katyon kanallarını içerirken, pe iki ye ailesi metabotropiktir. Farmakolojik çalışmalar bu reseptörlerin hafıza, uyanıklık ve iştahla ilgili olduğunu ve çok sayıda nöropsikiyatrik bozuklukta rol oynayabileceğini ileri sürmektedir.
 
-Dersimiz boyunca ele aldığımız merkezi sinir sistemi ilkeleri, Katzung Temel ve Klinik Farmakoloji referans kitabının rehberliğinde derlenmiştir. Bu derste öğrendiğimiz iyon kanalları, reseptör sınıflamaları ve nörotransmiter mekanizmaları, kurul boyunca işlenecek tüm santral farmakoloji konularının ortak çatısını oluşturmaktadır.
+Dersimiz boyunca ele aldığımız merkezi sinir sistemi ilkeleri, Katzung Temel ve Klinik Farmakoloji referans kitabının rehberliğinde derlenmiştir. Bu derste öğrendiğimiz iyon kanalları, reseptör sınıflamaları ve nörotransmiter mekanizmaları, kurul boyunca işlenecek tüm santral farmakoloji konularının ortak çatısını oluşturmaktadır. Klinik akılcı ilaç kullanımı ilkeleri doğrultusunda doğru etki mekanizması ve hedef reseptör bilgisi hekimlik uygulamalarında hasta güvenliğinin en birincil garantisidir.

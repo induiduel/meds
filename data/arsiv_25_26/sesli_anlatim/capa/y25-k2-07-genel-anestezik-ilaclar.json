@@ -1,15 +1,40 @@
 {
- "mdSha1": "b3e58deea915524fb20fc19edfe57f03721c79c7",
+ "mdSha1": "6ab71782d78940c59b05398a40110fe94728fe3b",
  "p": [
   [
    {
-    "ses": "Genel anestezik ilaçlar dersinde, cerrahi girişimlerde geri döndürülebilir bilinç, duyu ve refleks kaybı sağlayan inhalasyon ve intravenöz anestezik ajanların farmakokinetik özelliklerini, etki mekanizmalarını ve klinik yan etkilerini inceleyeceğiz.",
+    "ses": "Genel anestezik ilaçlar dersinde; cerrahi girişimlerin ağrısız ve güvenle yapılabilmesi amacıyla hastada geri döndürülebilir bilinç, duyu, otonomik refleks ve çizgili kas tonusu kaybı sağlayan temel ajanları inceleyeceğiz.",
     "sayfa": 1,
     "satir": [
-     "Tababet sanatı üç şeydir:"
+     "BİLİCİ"
+    ],
+    "sekil": "Genel anestezi ders başlığı ve tıbbın temel ilkeleri",
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Geleneksel tıp anlayışında tababet sanatı el mahareti ile aletler, farmakolojik ilaçlar ve hekimlik ahlakı olmak üzere üç sacayağı üzerine kuruludur; cerrahi başarı anestezi güvenliğiyle doğrudan ilişkilidir.",
+    "sayfa": 1,
+    "satir": [
+     "Tababet sanatı üç şeydir: 1. el mahareti ile aletler, 2. ilaç, 3. ahlaktır."
     ],
     "sekil": null,
     "madde": [
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "Erdem kavramı şifayı yüksek maharetle, güçlü anestezik ilaçları ise derin bir özen ve rikkatle sunmayı gerektirir; zira genel anestezi yönetimi hastanın tüm yaşamsal fonksiyonlarının yapay olarak devralınmasıdır.",
+    "sayfa": 1,
+    "satir": [
+     "Erdem; şifayı maharet, ilacı rikkatle sunmaktır.   nb"
+    ],
+    "sekil": null,
+    "madde": [
+     2,
      1
     ]
    }
@@ -77,8 +102,8 @@
     ],
     "sekil": null,
     "madde": [
-     4,
-     5
+     1,
+     4
     ]
    },
    {
@@ -215,35 +240,39 @@
   ],
   [
    {
-    "ses": "İnhalasyon anestezikleri azot protoksit, desfluran, enfluran, halotan, izofluran, ksenon, metoksifluran, sevofluran, artık kullanılmayan siklopropan ve eterdir.",
+    "ses": "İnhalasyon anestezikleri klinik kullanımda azot protoksit ve ksenon gibi oda ısısında gaz olan ajanlar ile desfluran, izofluran, sevofluran ve halotan gibi uçucu sıvı anestezikler olmak üzere iki ana grupta toplanır.",
     "sayfa": 6,
     "satir": [
-     "Azot protoksit",
-     "Enfluran",
-     "Halotan",
-     "Ksenon",
-     "Sevofluran",
-     "Siklopropan (kullanılmıyor)"
+     "İnhalasyon anestezikleri"
     ],
     "sekil": null,
     "madde": [
-     1,
-     9
+     0,
+     11
     ]
    },
    {
-    "ses": "Hocanın listesinde halojenli uçucu ajanlar içinde desfluran en zayıf, metoksifluran en güçlü olarak işaretlenmiştir.",
+    "ses": "Halojenli uçucu ajanlar arasında potens sıralamasında asgari alveolar konsantrasyonu en yüksek olan desfluran en zayıf ajan kabul edilirken, lipid çözünürlüğü en yüksek metoksifluran ise en güçlü uçucu anesteziktir.",
     "sayfa": 6,
     "satir": [
-     "Desfluran",
-     "en zayıf",
-     "Metoksifluran",
-     "en güçlü"
+     "2. Desfluran ………………………..en zayıf"
     ],
     "sekil": null,
     "madde": [
      2,
      7
+    ]
+   },
+   {
+    "ses": "Geçmişte yaygın kullanılan eter ve siklopropan patlama riskleri nedeniyle tamamen terk edilmiş olup; enfluran ise epileptojenik elektriksel deşarj riski sebebiyle günümüz modern ameliyathanelerinde tercih edilmemektedir.",
+    "sayfa": 6,
+    "satir": [
+     "9. Siklopropan (kullanılmıyor)"
+    ],
+    "sekil": null,
+    "madde": [
+     9,
+     3
     ]
    }
   ],
@@ -269,11 +298,11 @@
      "Fa: arteriyel gaz konsantrasyonu"
     ],
     "sekil": "vaporizatör, solunum devresi, akciğer ve beyin şeması",
-    "resim": 0,
     "madde": [
      3,
      5
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "İnspiratuar konsantrasyonu taze gaz akımı hızı, solunum devresinin volümü ve absorbsiyon; alveolar konsantrasyonu ventilasyon, uptake ve konsantrasyon etkisi; arteriyel konsantrasyonu ise ventilasyon perfüzyon uyumu belirler.",
@@ -293,39 +322,52 @@
     "sayfa": 7,
     "satir": [],
     "sekil": "vaporizatör, solunum devresi, akciğer ve beyin şeması",
-    "resim": 0,
     "madde": [
      8,
      6
-    ]
+    ],
+    "resim": 0
    }
   ],
   [
    {
-    "ses": "Görüntüde izofluran ve sevofluran şişeleri ile vaporizatör ürün fotoğrafları görülür; uçucu ajanlar oda ısısında sıvıdır, şişelerde sunulur ve vaporizatörle verilir.",
+    "ses": "İnhalasyon anestezikleri oda sıcaklığında sıvı formda cam şişelerde sunulur; bu sıvıların hastaya güvenli biçimde solutulabilmesi için anestezi cihazlarına takılan özel buharlaştırıcı yani vaporizatör cihazları kullanılır.",
     "sayfa": 8,
     "satir": [
-     "Isoflurane Vapor",
-     "Vaporizatör"
+     "Abbott we Inhalasyon 8 Draeger é Isoflurane Vapor > Bloom tech = Vaporizatör >"
     ],
-    "sekil": "izofluran ve sevofluran şişeleri ile vaporizatör fotoğrafları",
-    "resim": 0,
+    "sekil": "İzofluran ve sevofluran ürün şişeleri ve vaporizatör cihazı görseli",
     "madde": [
      11,
      15
-    ]
+    ],
+    "resim": 0
    },
    {
-    "ses": "Yani elimizdeki sevofluran, anestezi cihazına takılan vaporizatöre doldurulan bir sıvıdır.",
+    "ses": "Her uçucu anestezik ajanın doymuş buhar basıncı farklı olduğundan her ilaç yalnızca kendine özel kalibre edilmiş vaporizatörle verilir; karışıklığı önlemek için izofluran mor, sevofluran sarı renk koduyla işaretlenmiştir.",
     "sayfa": 8,
     "satir": [
-     "Sevofluran"
+     "Once Hayat - Polifar... Hastane Urinleri | Ba... Sevofluran - Vikipedi Sevoflurane Inhalation... sevoflurane - Rompharm Co... Sevoflurane | Alpha M..."
     ],
-    "sekil": null,
+    "sekil": "Ajanlara özel kalibre edilmiş vaporizatörlerin renk kodları ve dolum sistemleri",
     "madde": [
-     16,
+     0,
      9
-    ]
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Piyasada izofluran Anesteran, sevofluran ise Sevorane adıyla likit çözelti olarak bulunur; anestezi uzmanı bu sıvıyı vaporizatör haznesine doldurarak taşıyıcı taze gaz akımıyla hastaya hassas yüzdelerle uygular.",
+    "sayfa": 8,
+    "satir": [
+     "Anesteran"
+    ],
+    "sekil": "Hastane kullanımındaki ticari uçucu anestezik sıvı şişesi preparatları",
+    "madde": [
+     12,
+     11
+    ],
+    "resim": 0
    }
   ],
   [
@@ -371,32 +413,39 @@
   ],
   [
    {
-    "ses": "Yan etki sıklığında çok yaygın, on hastada birden fazlası demektir; sevofluranın çok yaygın yan etkileri boğaz spazmı, ajitasyon, bradikardi, hipotansiyon, öksürük, bulantı ve kusmadır.",
+    "ses": "Sevofluran prospektüsünde bildirilen istenmeyen etkiler sıklıklarına göre ayrılır; tedavi edilen hastaların onda birinden fazlasında görülen durumlar çok yaygın, yüzde bir ile onda bir arasındakiler ise yaygın etki olarak sınıflanır.",
     "sayfa": 10,
     "satir": [
-     "Boğaz spazmı",
-     "Huzursuzluk (ajitasyon)",
-     "Bulantı",
-     "Kusma"
+     "Çok yaygın: Tedavi edilen hastaların 10’da 1’inden fazla."
+    ],
+    "sekil": null,
+    "madde": [
+     3,
+     4
+    ]
+   },
+   {
+    "ses": "Sevofluran uygulamasında çok yaygın görülen istenmeyen etkiler arasında boğaz spazmı yani laringospazm, öksürük, kalp hızında yavaşlama olan bradikardi, kan basıncında düşüş yani hipotansiyon ile bulantı ve kusma yer alır.",
+    "sayfa": 10,
+    "satir": [
+     "- Boğaz spazmı (boğazda daralma hissi)"
+    ],
+    "sekil": null,
+    "madde": [
+     10,
+     3
+    ]
+   },
+   {
+    "ses": "Özellikle çocuklarda anestezi sonrasında huzursuzluk ve uyanma ajitasyonu çok sık izlenirken; yaygın yan etkiler arasında uyuklama yani somnolans, baş dönmesi, geçici taşikardi ve reaktif kan basıncı yükselmeleri bulunur.",
+    "sayfa": 10,
+    "satir": [
+     "- Huzursuzluk (ajitasyon)"
     ],
     "sekil": null,
     "madde": [
      11,
-     10
-    ]
-   },
-   {
-    "ses": "Yaygın yan etkileri ise somnolans, baş dönmesi, baş ağrısı, taşikardi ve hipertansiyondur.",
-    "sayfa": 10,
-    "satir": [
-     "Uyuklama (somnolans)",
-     "Baş dönmesi",
-     "Baş ağrısı"
-    ],
-    "sekil": null,
-    "madde": [
-     19,
-     20
+     3
     ]
    }
   ],
@@ -506,11 +555,11 @@
      "Inhalasyon anestetiklerinin karakteristik özellikleri"
     ],
     "sekil": "Tablo 25.1 inhalasyon anesteziklerinin karşılaştırma tablosu",
-    "resim": 0,
     "madde": [
      2,
      1
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Kan gaz katsayısı desfluranda sıfır virgül kırk iki, azot protoksitte sıfır virgül kırk yedi, ksenonda sıfır virgül on dörttür; bunların indüksiyon ve uyanması çok hızlı, ksenonunki en hızlıdır, eter ve metoksifluranda ise katsayı on iki ve indüksiyon yavaştır; azot protoksitin hızlı yükselmesi çıkmışta soruldu.",
@@ -599,11 +648,11 @@
      "İskelet kas gevşemesi"
     ],
     "sekil": "genel anestezinin beş etkisini sıralayan madde listesi",
-    "resim": 0,
     "madde": [
      0,
      4
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Hiçbir anestezik madde bu beş etkiyi tek başına gösteremez; bu yüzden inhaler ve intravenöz anestezikler kombine edilerek advers etkiler ve riskler azaltılır.",
@@ -695,11 +744,11 @@
      "Bunlar normal oda sıcaklığında sıvı şeklinde bulunurlar."
     ],
     "sekil": "uçucu anestezikleri sıralayan madde listesi",
-    "resim": 0,
     "madde": [
      6,
      7
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Oda koşullarında sıvı olan, düşük çözünürlüklü ve düşük kan gaz katsayılı, hoş kokulu ve hem indüksiyon hem idame için kullanılan uçucu ajan denince sevofluranı düşünün; bu özellikler çıkmışta soruldu.",
@@ -775,7 +824,7 @@
     "sekil": null,
     "madde": [
      11,
-     12
+     10
     ]
    }
   ],
@@ -844,8 +893,8 @@
     ],
     "sekil": "farmakodinamik madde listesi",
     "madde": [
-     0,
-     2
+     2,
+     0
     ]
    },
    {
@@ -883,11 +932,11 @@
      "Bu dönemin sonunda hem analjezi hem de amnezi vardır."
     ],
     "sekil": "anestezi dönemlerini sıralayan madde listesi",
-    "resim": 0,
     "madde": [
      1,
      2
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Eksitasyon döneminde hasta deliryuma geçer ve tamamen amneziktir; solunum hızlanır, kalp hızı ve kan basıncı artar, bu dönemin şiddeti ve süresi anestezik konsantrasyonunu hızla artırarak azaltılabilir.",
@@ -937,11 +986,11 @@
      "Damarlarda sistemik vasküler direnç değişimi azdır."
     ],
     "sekil": "kardiyovasküler etkiler madde listesi",
-    "resim": 0,
     "madde": [
      1,
      5
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Nitröz oksit de miyokard kontraktilitesini konsantrasyona bağlı deprese eder, ancak daha güçlü volatil anesteziklerle kombinasyonu kardiyovasküler depresyonu azaltabilir; arteriyel basıncın doz bağımlı düşmesi ise refleks olarak kalp hızını artırabilir.",
@@ -979,11 +1028,11 @@
      "Halotan miyokardı başta adrenalin olmak üzere dolaşımdaki katekolaminlere duyarlı kılar."
     ],
     "sekil": "kardiyovasküler ve solunum etkileri madde listesi",
-    "resim": 0,
     "madde": [
      0,
      2
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Bütün uçucu anestezikler wheezingi ya da astımı olan hastalarda bronkodilatördür; ancak desfluranın keskin kokusu ve halotanın irritasyonu öksürük ve solunum tutulmasına yol açabilir, nitröz oksit ise keskin kokulu değildir ve inhalasyonla indüksiyonu kolaylaştırır.",
@@ -1020,11 +1069,11 @@
      "Böbrek kan akımında da azalma yaparlar"
     ],
     "sekil": "böbrek, karaciğer ve uterus etkileri madde listesi",
-    "resim": 0,
     "madde": [
      0,
      2
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Halotan dışında karaciğer üzerine ciddi etkileri yoktur; halotan on iki yaşından küçüklerde hepatotoksik değildir, bunun nedeni ise derste açıklanmaz, öğrenciye soru olarak bırakılmıştır.",
@@ -1073,11 +1122,11 @@
      "Enfluran ve sevofluran (sadece metabolitleri) nefrotoksisitesi florid iyonlarının açığa çıkışına bağlanır."
     ],
     "sekil": "toksisite madde listesi",
-    "resim": 0,
     "madde": [
      0,
      1
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Hematolojik olarak nitröz oksit be on iki vitaminini inaktive ederek megaloblastik anemiye neden olur ve bu yan etki çıkmışta soruldu; havalandırması yetersiz diş hekimliği odalarında bu bir meslek hastalığı olarak karşımıza çıkar.",
@@ -1127,11 +1176,11 @@
      "Elektrolit dengesi ve asit baz dengesi de sağlanmalıdır"
     ],
     "sekil": "toksisite madde listesi",
-    "resim": 0,
     "madde": [
      1,
      0
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Bütün inhalasyon anestezikleri güçlü bazlarla etkileşerek düşük miktarda karbonmonoksit oluşturur.",
@@ -1168,11 +1217,11 @@
      "Anestezide esas olgu indüksiyon olduğundan entübasyon doğru olandır."
     ],
     "sekil": "intravenöz anestezi madde listesi",
-    "resim": 0,
     "madde": [
      1,
      0
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Propofol tedaviye girdiğinden beri hem indüksiyon hızı hem de anestezinin idamesinin yönetilebilirliği kolaylaşmıştır.",
@@ -1208,11 +1257,11 @@
      "Soya yağı, gliserol, yumurta sarısı lesitini içeren bir emülsiyondur."
     ],
     "sekil": "propofol özellikleri madde listesi",
-    "resim": 0,
     "madde": [
      1,
      0
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Taze kullanılmalıdır; lipit emülsiyonu bakteri üremesine elverişli olduğundan flakon açıldıktan sonra uygun ortamda en çok sekiz saat kullanılabilir.",
@@ -1250,11 +1299,11 @@
      "Plazma klerensi karaciğer kan akımından hızlı olduğu için karaciğer dışı dokularda metabolizasyonunun olduğu da bilinir."
     ],
     "sekil": "propofol kinetiği madde listesi",
-    "resim": 0,
     "madde": [
      1,
      0
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Propofolle ayılma sorunsuzdur; ayılmaya konvülsiyon eşlik etmez, yalnız akşamdan kalma durumu oluşur ve bunun tiyopentalden daha az olduğu çıkmışta soruldu.",
@@ -1292,11 +1341,11 @@
      "SSS aktivitesini deprese eder."
     ],
     "sekil": "propofol farmakodinamiği madde listesi",
-    "resim": 0,
     "madde": [
      0,
      2
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Nadiren seyirme ve spontan hareketler gibi eksitatör etkiler görülse de nöbet bozukluğu olan hastalarda kullanılabilir; kafa içi ve göz içi basıncını tiyopentalle kıyaslanabilir düzeyde azaltır, fokal iskemide tiyopental ve izoflurana yakın etki gösterir.",
@@ -1335,11 +1384,11 @@
      "özellik larenks tüpü takılmasını kolaylaştırır."
     ],
     "sekil": "propofol klinik özellikleri madde listesi",
-    "resim": 0,
     "madde": [
      0,
      1
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Uzun infüzyon sonrası propofol infüzyon sendromu, yani metabolik asidoz için önlem alınmalıdır.",
@@ -1429,11 +1478,11 @@
      "1 aydan küçük çocukların genel anestezisi için uygulanması önerilmez."
     ],
     "sekil": "propofol uyarı maddeleri",
-    "resim": 0,
     "madde": [
      0,
      1
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "On altı yaş ve altındaki çocukların sedasyonunda ciddi ve bazen ölümcül yan etkilere yol açabilir; genel olarak yaşlı ve güçsüz hastalara da dikkatle verilmelidir.",
@@ -1563,11 +1612,11 @@
      "Karaciğerde metabolize edilirler."
     ],
     "sekil": "barbitürat madde listesi",
-    "resim": 0,
     "madde": [
      2,
      3
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Beyin kan akımını, kan hacmini ve kafa içi basıncını azaltır, fokal serebral iskemide koruma sağlarlar; bu özellikler intrakraniyal ya da yer kaplayıcı lezyonu olan hastalarda barbitüratları eşsiz kılar.",
@@ -1639,29 +1688,40 @@
   ],
   [
    {
-    "ses": "Görüntüde Türkiye'de tiyopental sodyumun Pental Sodyum ve Tyosod adlarıyla, yarım gram ve bir gramlık enjeksiyonluk çözelti hazırlamak için toz olarak bulunduğu görülür.",
+    "ses": "Türkiye'de tiyopental sodyum piyasada Pental Sodyum ve Tyosod ticari adlarıyla, sıfır virgül beş gram ve bir gramlık liyofilize toz içeren cam flakonlar halinde sunulmaktadır.",
     "sayfa": 38,
     "satir": [
-     "Tiyopental sodyum etkin maddesini içeren ilaçlar",
-     "PENTAL SODYUM 0,5 G ENJEKSIYONLUK COZELTI ICIN TOZ"
+     "pi Tiyopental sodyum etkin maddesini içeren ilaçlar"
     ],
-    "sekil": "tiyopental müstahzar listesi ekran görüntüsü",
-    "resim": 0,
+    "sekil": "Tiyopental sodyum flakon ve kutu ürün fotoğrafları",
     "madde": [
-     1,
-     3
-    ]
+     0,
+     2
+    ],
+    "resim": 0
    },
    {
-    "ses": "Yani tiyopental flakonda toz hâlinde gelir ve kullanmadan önce çözülerek hazırlanır.",
+    "ses": "Tiyopental tozu suda dayanıksız olduğundan enjeksiyondan hemen önce steril distile suyla çözülerek genellikle yüzde iki buçukluk solüsyon şeklinde hazırlanır ve açıldıktan sonra yirmi dört saat içinde tüketilmelidir.",
     "sayfa": 38,
     "satir": [
-     "TYOSOD 1 G I.V. ENJEKSİYONLUK ÇÖZELTİ HAZIRLAMAK İÇİN TOZ"
+     "TYOSOD 0,5 G I.V. ENJEKSİYONLUK ÇÖZELTİ HAZIRLAMAK"
     ],
     "sekil": null,
     "madde": [
-     4,
-     3
+     3,
+     4
+    ]
+   },
+   {
+    "ses": "Tiyopental çözeltisinin pi ha değeri on ile on bir arasında aşırı alkalidir; bu nedenle asidik yapıdaki kas gevşeticiler veya opioidlerle aynı damar yolunda karıştırılırsa anında çöker ve damar içi presipitasyona yol açar.",
+    "sayfa": 38,
+    "satir": [
+     "TYOSOD 0,5 G I.V. ENJEKSİYONLUK ÇÖZELTİ HAZIRLAMAK"
+    ],
+    "sekil": null,
+    "madde": [
+     3,
+     4
     ]
    }
   ],
@@ -1674,11 +1734,11 @@
      "Anksiyeteyi bertaraf ederler ancak anterograd amnezi yaparlar"
     ],
     "sekil": "benzodiazepin madde listesi",
-    "resim": 0,
     "madde": [
      0,
      2
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Lipofilik olduklarından santral sinir sistemine hızla girer, sonra inaktif doku bölgelerine hızla redistribüsyona uğrarlar, yani etkinin bitişi atılımla değil yeniden dağılımla olur; midazolam bağlama duyarlı yarılanma ömrü en kısa benzodiazepindir.",
@@ -1727,11 +1787,11 @@
      "Gecikmiş ayılmaya karşı flumazenil uygundur."
     ],
     "sekil": "benzodiazepin klinik kullanım madde listesi",
-    "resim": 0,
     "madde": [
      0,
      3
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Anksiyolitik, sedatif ve amnezik etkileri onları seçkin kılar; midazolam pediatrik premedikasyonda indüksiyon için güvenilirdir.",
@@ -1762,27 +1822,34 @@
   ],
   [
    {
-    "ses": "Tabloda benzodiazepin müstahzarları olarak alprazolam için Xanax, klonazepam için Rivotril, klorazepat için Tranxilene, diazepam için Diazem ve Nervium, lorazepam için Ativan listelenmiştir.",
+    "ses": "Anestezi premedikasyonunda ve nöropsikiyatride sık başvurulan benzodiazepinler arasında alprazolam, klonazepam, klorazepat, diazepam ve lorazepam molekülleri yer alır.",
     "sayfa": 41,
     "satir": [
-     "Alprazolam (Xanax)",
-     "Clonazepam (Rivotril)",
-     "Klorazepat (Tranxilene)",
-     "Diazepam (Diazem, Nervium)",
-     "Lorazepam (Ativan)"
+     "Alprazolam (Xanax),"
     ],
-    "sekil": "benzodiazepin ticari adları listesi",
-    "resim": 0,
+    "sekil": "Alprazolam ve klonazepam içeren ilaç listelerinin ekran görüntüsü; benzodiazepin müstahzar örnekleri",
     "madde": [
      0
-    ]
+    ],
+    "resim": 0
    },
    {
-    "ses": "Bu adları bilmek, hastanın kullandığı ilacı tanımanızı kolaylaştırır; örneğin Xanax alprazolam, Ativan lorazepamdır.",
+    "ses": "Piyasada alprazolam Xanax, klonazepam Rivotril, klorazepat Tranxilene, diazepam Diazem veya Nervium, lorazepam ise Ativan ticari adlarıyla hekimlerin karşısına çıkar.",
     "sayfa": 41,
     "satir": [
-     "Alprazolam (Xanax)",
-     "Lorazepam (Ativan)"
+     "Klorazepat (Tranxilene),"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Bu ajanlar gaba a reseptör kompleksinde klor kanal açılma frekansını artırarak cerrahi öncesi hastada anksiyeteyi giderir, sakinleşme sağlar ve cerrahiye dair antegrad amnezi oluşturur.",
+    "sayfa": 41,
+    "satir": [
+     "Diazepam (Diazem, Nervium),"
     ],
     "sekil": null,
     "madde": [
@@ -1800,11 +1867,11 @@
      "DIAKSI 10 MG /2.5 ML REKTAL COZELTI"
     ],
     "sekil": "diazepam müstahzar listesi ekran görüntüsü",
-    "resim": 0,
     "madde": [
      0,
      15
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Yani aynı molekül hem ağızdan, hem kas ya da damar içine, hem de rektal yoldan verilebilir.",
@@ -1821,21 +1888,33 @@
   ],
   [
    {
-    "ses": "Görüntüde lorazepamın Ativan Expidet tablet, klorazepat dipotasyumun ise Tranxilene kapsül olarak bulunduğu görülür.",
+    "ses": "Görüntüde lorazepam etkin maddeli Ativan Expidet dil altı eriyen tablet ile klorazepat dipotasyum etkin maddeli Tranxilene kapsül formları yer almaktadır.",
     "sayfa": 43,
     "satir": [
-     "Lorazepam etkin maddesini içeren ilaçlar",
-     "Klorazepat dipotasyum İçeren İlaç Listesi"
+     "ATIVAN EXPIDET 1 MG 20 TABLET hkt - küb 129,58 $"
     ],
-    "sekil": "lorazepam ve klorazepat müstahzar listesi",
-    "resim": 0,
+    "sekil": "Ativan Expidet tablet ve Tranxilene kapsül ilaç ambalaj görselleri",
     "madde": [
-     6,
-     0
-    ]
+     1,
+     2
+    ],
+    "resim": 0
    },
    {
-    "ses": "Bunlar ağızdan kullanılan benzodiazepin müstahzarlarıdır.",
+    "ses": "Ativan Expidet dil üstüne konulduğunda tükürükle saniyeler içinde eriyen liyofilize bir tablettir; preoperatif dönemde ameliyata girmeden önce hastanın su içmeden ilacı hızla emmesini sağlar.",
+    "sayfa": 43,
+    "satir": [
+     "ATIVAN EXPIDET 2,5 MG 20 TABLET hkt - küb 228,73 t"
+    ],
+    "sekil": "Ativan Expidet liyofilize dil altı tablet kutu ve blister yapısı",
+    "madde": [
+     2,
+     1
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Klorazepat midede dekarboksillenerek aktif metabolitine dönüşen bir ön ilaçken; lorazepam karaciğer sitokrom sistemini baypas edip doğrudan glukuronidasyona uğradığı için hepatik yetmezlikte en güvenli seçenektir.",
     "sayfa": 43,
     "satir": [
      "TRANXILENE KAPSUL 10 mg 30 kapsül"
@@ -1857,11 +1936,11 @@
      "GABAA üzerinden etki oluşturduğu düşünülmektedir."
     ],
     "sekil": "etomidat madde listesi",
-    "resim": 0,
     "madde": [
      0,
      2
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "İndüksiyonu hızlıdır, ayılma ise doku redistribüsyonuna bağlıdır; inaktif metabolitlerinin yüzde sekseni idrarla, kalanı safrayla atılır ve yarı ömrü çok kısa olduğundan klirensi tiyopentalden beş kat fazladır.",
@@ -1939,10 +2018,10 @@
      "Etomidate induces unconsciousness within one circulation time."
     ],
     "sekil": "etomidat hakkında İngilizce metin pasajı",
-    "resim": 0,
     "madde": [
      0
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Barbitüratlar ve propofol gibi analjezi oluşturmaz, yaygın redistribüsyon ve hızlı metabolizma sayesinde ayılma hızlıdır; karaciğerde ester hidrolizi ile inaktif metabolitlere yıkılır.",
@@ -2024,11 +2103,11 @@
      "Bunlara şiddetli korku ve konfüzyon eşlik eder."
     ],
     "sekil": "ketamin yan etkileri madde listesi",
-    "resim": 0,
     "madde": [
      1,
      3
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Öforik bir durum da gelişebildiği için kötüye kullanım potansiyeli yüksektir; bu reaksiyonlar çocuklarda daha sık ve şiddetlidir, azaltmak ve amnezik etkiyi artırmak için benzodiazepin kombinasyonu önerilebilir.",
@@ -2066,11 +2145,11 @@
      "Hoş olmayan psikomimetik etkileri onu yardımcı bir ilaç durumuna getirir."
     ],
     "sekil": "ketamin klinik kullanım madde listesi",
-    "resim": 0,
     "madde": [
      3,
      1
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Ketamin intravenöz, oral, rektal ve epidural uygulanabilir; zihinsel engelli ve kooperasyonu olmayan çocukların premedikasyonunda önemli bir seçenektir ve sezaryen doğumda yararlı olabilir.",
@@ -2107,11 +2186,11 @@
      "Her ml 50 mg ketamin baza eşdeğer 57,6 mg ketamin hidroklorür"
     ],
     "sekil": "Ketalar kullanma talimatı",
-    "resim": 0,
     "madde": [
      1,
      0
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Damar içine infüzyon, damar içine enjeksiyon ya da kas içine enjeksiyon şeklinde uygulanır, yani ketamin kas içine de verilebilir.",
@@ -2135,11 +2214,11 @@
      "Yapısı itibarıyla suda çözünür"
     ],
     "sekil": "deksmedetomidin madde listesi",
-    "resim": 0,
     "madde": [
      0,
      2
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Yaptığı sedasyon diğerlerinden farklıdır, endojen uyku yolaklarının aktivasyonuyla oluşan fizyolojik bir uyku durumudur; kafa içi basıncını değiştirmeden kan akımını azaltır, etkilerine tolerans ve bağımlılık gelişir.",
@@ -2170,21 +2249,32 @@
   ],
   [
    {
-    "ses": "Görüntüde deksmedetomidinin Dinesin adıyla iki yüz mikrogram bölü iki mililitrelik intravenöz infüzyon konsantresi olarak bulunduğu ve hipnotik sedatifler sınıfında yer aldığı görülür.",
+    "ses": "Görüntüde deksmedetomidin etkin maddesini içeren Dinesin iki yüz mikrogram bölü iki mililitrelik intravenöz infüzyon konsantresi ve ürün prospektüs bilgileri görülmektedir.",
     "sayfa": 52,
     "satir": [
-     "DINESIN 200 mcg/2 ml I.V infüzyonluk çözelti hazırlamak için konsantre",
-     "Etkin Madde Deksmedetomidin"
+     "DINESIN 200 mcg/2 ml I.V infüzyonluk çözelti hazırlamak için konsantre (5 flakon)"
     ],
-    "sekil": "Dinesin prospektüs ekran görüntüsü",
-    "resim": 0,
+    "sekil": "Dinesin deksmedetomidin konsantre infüzyon flakon görseli ve prospektüs bilgileri",
     "madde": [
      0,
-     3
+     9
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "İlaç anatomik tedavi sınıflamasında hipnotikler ve sedatifler kategorisinde yer alan, beyin sapı lokus seruleustaki alfa-iki adrenerjik reseptörleri son derece selektif olarak uyaran bir moleküldür.",
+    "sayfa": 52,
+    "satir": [
+     "Etkin Madde Deksmedetomidin"
+    ],
+    "sekil": null,
+    "madde": [
+     3,
+     4
     ]
    },
    {
-    "ses": "Reçete durumu kırmızı reçetelidir, bu da kontrollü kullanılan bir ilaç olduğunu gösterir.",
+    "ses": "Deksmedetomidin güçlü santral etkileri ve yoğun bakım prosedürlerindeki hassasiyeti nedeniyle kırmızı reçeteye tabi kontrollü bir ilaç olup yalnızca uzman hekim gözetiminde uygulanır.",
     "sayfa": 52,
     "satir": [
      "Reçete Durumu Kırmızı Reçeteli"
@@ -2192,35 +2282,45 @@
     "sekil": null,
     "madde": [
      9,
-     4
+     3
     ]
    }
   ],
   [
    {
-    "ses": "Tabloda deksmedetomidinin piyasada Dekstomid, Dinesin, Hipnodex, Precedex, Prexodin, Provenix, Sedadomid ve Semotidin adlarıyla, çoğunlukla iki yüz mikrogram bölü iki mililitrelik flakon olarak bulunduğu görülür.",
+    "ses": "Tabloda deksmedetomidinin Türkiye pazarında Dekstomid, Dinesin, Precedex, Hipnodex ve Sedadomid gibi çok sayıda farklı ticari isim altında satışa sunulduğu listelenmiştir.",
     "sayfa": 53,
     "satir": [
-     "DEKSTOMİD 200 MCG / 2 ML",
-     "HIPNODEX 200 MCG",
-     "PRECEDEX 200 MCG 2 ML 5 FLAKON"
+     "DEKSTOMİD 200 MCG / 2 ML 1.V. KONSANTRE İNFÜZYON"
     ],
-    "sekil": "deksmedetomidin müstahzar listesi ekran görüntüsü",
-    "resim": 0,
+    "sekil": "Deksmedetomidin içeren müstahzarların firma ve fiyat listesi ekran görüntüsü",
     "madde": [
-     4,
-     0
-    ]
+     0,
+     2
+    ],
+    "resim": 0
    },
    {
-    "ses": "Bu liste, aynı etken maddenin çok sayıda farklı ticari adla satıldığını gösterir.",
+    "ses": "Deksmedetomidinin en önemli klinik avantajı solunum merkezini baskılamamasıdır; mekanik ventilatördeki hasta istendiğinde sesli komutla kolayca uyandırılıp kooperasyon kurabilir.",
     "sayfa": 53,
     "satir": [
-     "SEDADOMID 200 MCG/2 ML IV KONSANTRE INFUZYON"
+     "ÇÖZELTİSİ İÇEREN FLAKON (5 FLAKON) hkt - küb"
     ],
     "sekil": null,
     "madde": [
-     7,
+     0,
+     3
+    ]
+   },
+   {
+    "ses": "İnfüzyon başlangıcında geçici periferik vazokonstrüksiyonla hipertansiyon, ardından santral sempatolitik etkiyle bradikardi ve hipotansiyon gelişebileceğinden devamlı nabız ve tansiyon takibi şarttır.",
+    "sayfa": 53,
+    "satir": [
+     "DEKSTOMİD 200 MCG / 2 ML 1.V. KONSANTRE İNFÜZYON"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
      2
     ]
    }
@@ -2274,11 +2374,11 @@
      "ALDOLAN 100 MG/2 ML 25 AMPUL"
     ],
     "sekil": "kırmızı reçete ilaç listesi ekran görüntüsü",
-    "resim": 0,
     "madde": [
      3,
      6
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Petidinin kronik ağrı tedavisinde kullanımı kontrendikedir ve akut ağrıda beş günden uzun kullanılması uygun değildir; ayrıca üç aydan önce yeniden reçete edilemez.",
@@ -2296,50 +2396,71 @@
   ],
   [
    {
-    "ses": "Görüntüde belirtildiği üzere transdermal fentanil Durogesic reçetesinde yüz elli mikrogramlık miktar aşılmamak kaydıyla farklı dozlar bir arada yazılabilir ve reçete geçerli bir rapor yoksa on günden önce tekrarlanamaz.",
+    "ses": "Görüntüde güçlü sentetik opioid fentanil içeren transdermal terapötik sistem Durogesic flasterlerin kırmızı reçete azami doz ve kutu kısıtlama mevzuatı görülmektedir.",
     "sayfa": 56,
     "satir": [
-     "150 mcg'lik miktar aşılmamak kaydıyla, bir reçeteye bu ilacın farklı dozlar içeren miktarları yazılabilecektir.",
-     "önce tekrarlanamayacaktır."
+     "DUROGESIC 100 MCG 5 TTS FLASTER fentanyl 1 kutu"
     ],
-    "sekil": "fentanil reçete kuralları ekran görüntüsü",
-    "resim": 0,
+    "sekil": "Durogesic transdermal flaster ürün ambalajı ve kırmızı reçete azami doz tablosu",
     "madde": [
-     3,
-     13
-    ]
+     0,
+     2
+    ],
+    "resim": 0
    },
    {
-    "ses": "İntravenöz fentanil ampulleri ve bukkal fentanil Effentora da kırmızı reçeteye tabidir.",
+    "ses": "Sağlık Bakanlığı kurallarına göre tek bir kırmızı reçetede yüz elli mikrogramlık flaster dozu aşılamaz ve geçerli bir sağlık kurulu raporu bulunmadıkça reçete on günden önce yenilenemez.",
     "sayfa": 56,
     "satir": [
-     "EFFENTORA 100 MCG BUKKAL TABLET (28 TABLET) fentanyl 1 kutu",
-     "FENTANYL 0,05 MG/ML 10 ML IV 50 AMPUL"
+     "DUROGESIC 100 MCG 5 TTS FLASTER fentanyl 1 kutu"
     ],
     "sekil": null,
     "madde": [
-     12,
-     14
+     0,
+     2
+    ]
+   },
+   {
+    "ses": "Durogesic deride depo oluşturup yavaş salındığından akut ağrıda ve opioid kullanmamış bireylerde solunum arresti riski nedeniyle kesinlikle kontrendikedir; yalnızca kronik kanser ağrısında kullanılır.",
+    "sayfa": 56,
+    "satir": [
+     "DUROGESIC 100 MCG 5 TTS FLASTER fentanyl 1 kutu"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     2
     ]
    }
   ],
   [
    {
-    "ses": "Görüntüde morfin müstahzarları M Eslon ve Morfia için kırmızı reçetede belirtilen maksimal dozların on günlük dozu ifade ettiği ve reçetenin on günden önce tekrarlanamayacağı görülür.",
+    "ses": "Kırmızı reçete listesinde doğal afyon alkaloidi morfin içeren Morfia ve M-Eslon kapsüller ile santral sempatomimetik metilfenidat içeren Medikinet preparatları yer alır.",
     "sayfa": 57,
     "satir": [
-     "Maksimal dozlar, kırmızı reçeteye yazılabilecek 10 günlük dozu ifade eder.",
-     "10 günden önce reçete tekrarlanamaz."
+     "MORFIA 15 MG 30 TABLET morphine 6 kutu 10 günden önce reçete tekrarlanamaz."
     ],
-    "sekil": "morfin ve metilfenidat reçete listesi ekran görüntüsü",
-    "resim": 0,
+    "sekil": "Morfia morfin tablet ve Medikinet metilfenidat kutu görselleri",
     "madde": [
-     38,
-     40
+     39,
+     41
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Morfin tabletlerde reçeteye yazılabilecek maksimal miktar on günlük tedavi dozunu ifade eder ve suiistimal ile bağımlılık riskini engellemek için reçete on günden önce tekrarlanamaz.",
+    "sayfa": 57,
+    "satir": [
+     "M-ESLON 10 MG 21 MIKROPELLET KAPSUL morphine 12 kutu"
+    ],
+    "sekil": null,
+    "madde": [
+     25,
+     28
     ]
    },
    {
-    "ses": "Aynı listede Medikinet gibi metilfenidat müstahzarları da kırmızı reçeteli ilaçlar arasında yer alır.",
+    "ses": "Dikkat eksikliği ve narkolepside kullanılan metilfenidat ise raporsuz durumlarda yalnızca erişkin veya çocuk psikiyatristleri tarafından günde en fazla altmış miligram kotasıyla yazılabilir.",
     "sayfa": 57,
     "satir": [
      "MEDIKINET 10 MG 30 TABLET"
@@ -2353,79 +2474,109 @@
   ],
   [
    {
-    "ses": "Görüntüde morfin hidroklorür ampullerinde maksimal dozların beş günlük dozu ifade ettiği ve gerekçeli rapor yoksa reçetenin beş günden önce tekrarlanamayacağı görülür.",
+    "ses": "Cerrahi anestezide damar yoluyla uygulanan kısa etkili sentetik opioidlerden alfentanil Rapifen, remifentanil ise Rentanil adıyla liyofilize toz flakonlar halinde kırmızı reçeteye tabidir.",
     "sayfa": 58,
     "satir": [
-     "Maksimal dozlar, kırmızı reçeteye yazılabilecek 5 günlük dozu ifade eder."
+     "RAPIFEN 0,5 MG 10 ML 5 AMPUL"
     ],
-    "sekil": "opioid reçete listesi ekran görüntüsü",
-    "resim": 0,
+    "sekil": "Rapifen ve Rentanil enjeksiyonluk preparatların ambalajları ve kırmızı reçete kotaları",
     "madde": [
-     3,
-     4
-    ]
+     23,
+     10
+    ],
+    "resim": 0
    },
    {
-    "ses": "Oksikodon, petidin, alfentanil yani Rapifen ve remifentanil yani Rentanil de kırmızı reçeteli ilaçlardır.",
+    "ses": "Remifentanil kanda ve dokularda nonspesifik esterazlar tarafından saniyeler içinde parçalanır; karaciğer ve böbrek fonksiyonlarından bağımsız olarak infüzyon kesilince etkisi hızla kaybolur.",
     "sayfa": 58,
     "satir": [
-     "RAPIFEN 0,5 MG 2 MLS AMPUL alfentanil 1 kutu",
      "RENTANIL 2 MG ENJEKSIYONLUK LIYOFILIZE TOZ ICEREN FLAKON remifentanil 1 kutu"
     ],
     "sekil": null,
     "madde": [
      23,
-     17
-    ]
-   }
-  ],
-  [
-   {
-    "ses": "Görüntüde buprenorfin ve nalokson kombinasyonu Suboxone, sufentanil yani Sufenta, fentanil yani Talinat ve remifentanil yani Ultiva kırmızı reçete listesinde görülür.",
-    "sayfa": 59,
-    "satir": [
-     "SUFENTA 5 MCG/10 MLS AMPUL sufentanil 1 kutu",
-     "TALINAT 0,1MG/2ML 10 AMPUL fentanyl 1kutu",
-     "ULTIVA 2 MG 5 FLAKON remifentanil 1 kutu"
-    ],
-    "sekil": "kırmızı reçete listesi ekran görüntüsü",
-    "resim": 0,
-    "madde": [
-     17,
-     4
-    ]
-   },
-   {
-    "ses": "Sodyum oksibat yani Xyrem de bu listede yer alır.",
-    "sayfa": 59,
-    "satir": [
-     "XYREM ORAL ÇÖZELTİ 500 MG/ML."
-    ],
-    "sekil": null,
-    "madde": [
-     31,
-     37
-    ]
-   }
-  ],
-  [
-   {
-    "ses": "Görüntüde listenin sonunda etil morfin yani dionin, kodein, kodein fosfat ve afyon tozu için kırmızı reçeteye yazılabilecek maksimal dozlar verilmiştir.",
-    "sayfa": 60,
-    "satir": [
-     "DİONİN (ETİL MORFİN) dionine (ethylmorphine) 375 mg",
-     "KODEİN codeine 1000 mg",
-     "OPİUM TOZU poudre d'opium 1250 mg"
-    ],
-    "sekil": "zayıf opioid reçete listesi ekran görüntüsü",
-    "resim": 0,
-    "madde": [
-     0,
      2
     ]
    },
    {
-    "ses": "Bu liste iki bin yirmi bir yılının şubat ayında güncellenmiştir.",
+    "ses": "Morfin hidroklorür ampullerde maksimal miktar beş günlük dozu geçemez; kronik kullanımda tolerans ve fiziksel bağımlılık gelişebileceğinden gerekçeli rapor aranır.",
+    "sayfa": 58,
+    "satir": [
+     "RITALIN 10 MG 30 TABLET"
+    ],
+    "sekil": null,
+    "madde": [
+     24,
+     31
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Listede opioid bağımlılığı tedavisinde kullanılan Suboxone, en güçlü opioid sufentanil yani Sufenta, fentanil yani Talinat, remifentanil yani Ultiva ve sodyum oksibat yani Xyrem yer almaktadır.",
+    "sayfa": 59,
+    "satir": [
+     "SUBOXONE 2 MG/0,5 MG 28 DILALTI TABLET buprenorphine, 6 kutu ayaklar ve yatarak erişkin ve socu ergen madde bağımlılığı tedavi"
+    ],
+    "sekil": "Suboxone dil altı tablet, Ultiva flakon ve Xyrem solüsyon ürün kutuları",
+    "madde": [
+     0,
+     10
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Suboxone içinde buprenorfin mü reseptörünü kısmi uyararak yoksunluğu önlerken; ezilip damardan enjekte edilmesini engellemek için formüle eklenen nalokson suiistimale karşı koruyucu kilit işlevi görür.",
+    "sayfa": 59,
+    "satir": [
+     "SUBOXONE 2 MG/0,5 MG 28 DILALTI TABLET buprenorphine, 6 kutu ayaklar ve yatarak erişkin ve socu ergen madde bağımlılığı tedavi"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     12
+    ]
+   },
+   {
+    "ses": "Sodyum oksibat yani Xyrem, gaba b ve özel g ha be reseptörlerini aktive ederek narkolepsiye bağlı katapleksiyi tedavi eder; sedatif suistimal riski nedeniyle üç uzman hekimli rapor ve onam formuyla verilir.",
+    "sayfa": 59,
+    "satir": [
+     "hastaya eczanede \"Xyrem için Bilgilendirilmiş Hasta Onam Formu\" eşliğinde"
+    ],
+    "sekil": null,
+    "madde": [
+     37,
+     12
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Kırmızı reçete mevzuatının sonunda doğal afyon alkaloidi türevlerinden etil morfin yani dionin, kodein, kodein fosfat ve saf afyon tozu için yazılabilecek azami dozlar belirtilmiştir.",
+    "sayfa": 60,
+    "satir": [
+     "DİONİN (ETİL MORFİN) dionine (ethylmorphine) 375 mg"
+    ],
+    "sekil": "Kırmızı reçete tablosunun son bölümü: kodein, etil morfin ve opium tozu maksimum miktarları",
+    "madde": [
+     0,
+     2
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Kodein zayıf bir ön ilaç olup analjezik etkisini karaciğerde sitokrom iki de altı enzimiyle morfine dönüşerek gösterir; genetik olarak aşırı hızlı metabolizörlerde kanda tehlikeli morfin birikimi olabilir.",
+    "sayfa": 60,
+    "satir": [
+     "KODEİN codeine 1000 mg"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Bu müstahzarlar aksi gerekçeli raporda belirtilmedikçe en fazla on günlük tedavi için yazılabilir ve iki bin yirmi bir yılındaki düzenlemeyle bukkal fentanil formları da kırmızı reçete kapsamına alınmıştır.",
     "sayfa": 60,
     "satir": [
      "Güncellenme Tarihi: 03.02.2021"
@@ -2439,19 +2590,31 @@
   ],
   [
    {
-    "ses": "Görüntüde Amanita muscaria mantarının fotoğrafı yer alır.",
+    "ses": "Slaytta kırmızı şapkası ve beyaz benekleriyle tanınan Amanita muscaria mantarı görülmektedir; bu mantar tıp tarihinde santral sinir sistemini etkileyen doğal toksik ve sedatif maddelere klasik örnektir.",
     "sayfa": 61,
     "satir": [
      "Amanita muscaria"
     ],
-    "sekil": "kırmızı şapkalı, beyaz benekli Amanita muscaria mantarı fotoğrafı",
-    "resim": 0,
+    "sekil": "Amanita muscaria kırmızı şapkalı beyaz benekli sinek mantarı fotoğrafı",
     "madde": [
      0
-    ]
+    ],
+    "resim": 0
    },
    {
-    "ses": "Kırmızı şapkalı, beyaz benekli bu mantar doğal psikoaktif maddelere bir örnek olarak gösterilmiştir.",
+    "ses": "Mantarın temel aktif bileşenleri muskimol ve ibotenik asittir; muskimol beyinde gaba a reseptörlerini doğrudan uyararak genel anesteziklere benzer derin santral depresyon ve sedasyon oluşturur.",
+    "sayfa": 61,
+    "satir": [
+     "Amanita muscaria"
+    ],
+    "sekil": "Amanita muscaria mantarının orman zeminindeki doğal morfolojik görüntüsü",
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Yutulduğunda önce konfüzyon, ajitasyon ve görsel halüsinasyonlar, ardından ataksi, kas seğirmeleri ve derin dissosiyatif koma tablosu geliştirir; modern anestezik ilaçların reseptör araştırmalarına ışık tutmuştur.",
     "sayfa": 61,
     "satir": [
      "Amanita muscaria"
@@ -2472,11 +2635,11 @@
      "Kardiyovasküler sistem stabil kalır."
     ],
     "sekil": "Tablo 25.2 intravenöz anestezikleri karşılaştırma tablosu",
-    "resim": 0,
     "madde": [
      1,
      5
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Fentanilin indüksiyonu ve uyanması yavaştır, etkileri naloksonla geri çevrilir, analjezik etkisi güçlüdür ve dengeli anestezi ile bilinçli sedasyonda kullanılır; ketamin ise kardiyovasküler sistemi uyarır, serebral kan akımını artırır ve uyanmada sorunlar yaşatabilir.",
@@ -2513,11 +2676,11 @@
      "Etomidat"
     ],
     "sekil": "Tablo 25.2 intravenöz anestezikleri karşılaştırma tablosu",
-    "resim": 0,
     "madde": [
      8,
      1
-    ]
+    ],
+    "resim": 0
    }
   ],
   [
@@ -2528,11 +2691,11 @@
      "Kullanım amacı Uygulama Erişkin dozu"
     ],
     "sekil": "Tablo 25.3 intravenöz anestezik doz tablosu",
-    "resim": 0,
     "madde": [
      2,
      0
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Diğerleri bölümünde droperidol premedikasyonda kas içine kilogram başına sıfır virgül sıfır dört ile sıfır virgül sıfır yedi miligram, sedasyonda damar içine sıfır virgül sıfır iki ile sıfır virgül sıfır yedi miligram, antiemetik olarak sıfır virgül sıfır beş miligram, en çok iki buçuk miligram verilir; bu tabloda midazolam yer almaz.",
@@ -2598,37 +2761,51 @@
   ],
   [
    {
-    "ses": "Görüntüde midazolam flakonları, Dormicum ampul kutuları, Diazem kapsül, ketamin hidroklorür flakonu ve rektal Diazepam Desitin tüpünün ambalaj fotoğrafları gösterilir.",
+    "ses": "Slaytta klinik pratikte en sık başvurulan intravenöz ve rektal anestezik müstahzarlar olan midazolam flakonu, Dormicum ampulü, Diazem kapsülü ve ketamin hidroklorür şişesi sergilenmektedir.",
     "sayfa": 64,
     "satir": [],
-    "sekil": "midazolam, Dormicum, Diazem, ketamin ve rektal diazepam ambalaj fotoğrafları",
+    "sekil": "Midazolam, Dormicum ampul, Diazem ve Ketamin flakon ürün fotoğrafları",
+    "madde": [
+     0
+    ],
     "resim": 0
    },
    {
-    "ses": "Görselden çıkan sonuç, midazolam ve diazepamın hem parenteral hem rektal formlarının bulunmasıdır.",
+    "ses": "Görseldeki Diazepam Desitin rektal tüpü; damar yolu açılamayan pediatrik hastalarda status epileptikus nöbetini durdurmak veya cerrahi öncesi sedasyon sağlamak için rektal yoldan hızla uygulanır.",
     "sayfa": 64,
     "satir": [],
-    "sekil": "rektal Diazepam Desitin tüpü",
+    "sekil": "Diazepam Desitin rektal tüp aplikatörü ve ambalajı",
+    "madde": [
+     0
+    ],
     "resim": 0
+   },
+   {
+    "ses": "Bu ilaçların hem enjeksiyonluk ampul hem oral kapsül hem de rektal jel formlarının bulunması, hekime ameliyathane, acil servis ve yoğun bakım ortamında büyük bir uygulama esnekliği kazandırır.",
+    "sayfa": 64,
+    "satir": [],
+    "sekil": null,
+    "madde": [
+     0
+    ]
    }
   ],
   [
    {
-    "ses": "Midazolam Midolam on beş miligram bölü üç mililitre, Dormicum elli miligram bölü on mililitre ve Sedozolam beş miligram bölü beş mililitre ampuller hâlinde bulunur.",
+    "ses": "Midazolam Türkiye'de Midolam on beş miligram bölü üç mililitre, Dormicum elli miligram bölü on mililitre ve Sedozolam beş miligramlık enjeksiyonluk ampul formlarıyla bulunmaktadır.",
     "sayfa": 65,
     "satir": [
-     "MİDOLAM 15 mg/3 ml IM/IV/rektal çözelti içeren ampul",
-     "DORMICUM 50 mg/10 ml iv çözelti içeren ampul"
+     "❖MİDOLAM 15 mg/3 ml IM/IV/rektal çözelti içeren ampul"
     ],
-    "sekil": "midazolam ampul listesi",
-    "resim": 0,
+    "sekil": "Midolam, Dormicum ve Sedozolam ampul ve kutu görselleri",
     "madde": [
      0,
-     1
-    ]
+     2
+    ],
+    "resim": 0
    },
    {
-    "ses": "Midazolam damar veya kas içine ya da rektal olarak uygulanır.",
+    "ses": "Midazolam çözeltisi damar içine yavaş enjeksiyonla, kas içine enjeksiyonla veya rektal yolla uygulanabilir; suda erir yapısı sayesinde kas içi enjeksiyonda diazepam gibi doku nekrozu veya ağrı yapmaz.",
     "sayfa": 65,
     "satir": [
      "Damar veya kas içine ya da rektal olarak uygulanır."
@@ -2636,6 +2813,18 @@
     "sekil": null,
     "madde": [
      3,
+     2
+    ]
+   },
+   {
+    "ses": "Hızlı başlangıçlı ve kısa etki süreli bir benzodiazepin olduğundan endoskopi, kolonoskopi ve günübirlik cerrahi girişimlerde hastada anksiyoliz ve güçlü antegrad amnezi oluşturmak için ilk tercihtir.",
+    "sayfa": 65,
+    "satir": [
+     "❖SEDOZOLAM 5 mg/5 ml IM/IV/rektal enjeksiyonluk çözelti içeren ampul Steril"
+    ],
+    "sekil": null,
+    "madde": [
+     2,
      0
     ]
    }
@@ -2648,11 +2837,11 @@
      "Pairwise comparison of treatment groups at 15 minutes."
     ],
     "sekil": "ajite hastada sedasyon oranlarının ikili karşılaştırma tablosu",
-    "resim": 0,
     "madde": [
      0,
      1
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Midazolam, haloperidol beş miligrama göre yüzde otuz daha fazla yeterli sedasyon sağlamıştır, güven aralığı yüzde on dokuz ile kırk bir arasındadır; yani ajitasyonda midazolam hızlı sedasyon sağlar.",
@@ -2674,11 +2863,11 @@
      "Table 4. Adverse events."
     ],
     "sekil": "advers olay karşılaştırma tablosu",
-    "resim": 0,
     "madde": [
      0,
      2
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Midazolam grubunda distoni, akatizi, bradikardi ve torsades de pointes görülmedi; hipotansiyon, hipoksemi ve entübasyon seyrek bildirildi, distoni ise yalnız haloperidol on miligram grubunda iki hastada görüldü.",
@@ -2701,11 +2890,11 @@
      "Midazolam is a short-acting hypnotic-sedative drug with anxiolytic, muscle relaxant, anticonvulsant, sedative, hypnotic, and amnesic properties."
     ],
     "sekil": "midazolam ilaç veri tabanı sayfası",
-    "resim": 0,
     "madde": [
      1,
      2
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Oral, rektal, intranazal, kas içi ve damar içi yollarla verilebilir; diş hekimliğinde, kalp cerrahisinde ve endoskopik işlemlerde preanestezik ilaç olarak ve lokal anesteziye ek olarak kullanılır.",
@@ -2722,46 +2911,77 @@
   ],
   [
    {
-    "ses": "Görüntüde fentanil ampulü, yetmiş iki saat etkili transdermal fentanil sistemi, sevofluran, remifentanil yani Ultiva ve haloperidol ambalajları görülür.",
+    "ses": "Görüntüde fentanil ampulü, yetmiş iki saat etkili transdermal fentanil flasteri, sevofluran şişesi, remifentanil yani Ultiva ve antipsikotik haloperidol ambalajları bir arada sergilenmektedir.",
     "sayfa": 69,
     "satir": [
-     "Fentanyl"
+     "Fentanyl fu"
     ],
-    "sekil": "fentanil, transdermal fentanil, sevofluran, Ultiva ve haloperidol ambalaj fotoğrafları",
-    "resim": 0,
+    "sekil": "Fentanil, Durogesic flaster, Sevofluran, Ultiva ve Haloperidol ürün kutuları",
     "madde": [
      7,
      4
-    ]
+    ],
+    "resim": 0
    },
    {
-    "ses": "Buradan fentanilin hem enjeksiyon hem de üç gün süren transdermal formu olduğunu çıkarıyoruz.",
+    "ses": "Modern anesteziyolojide tek bir ilacın yüksek dozdaki toksik etkilerinden kaçınmak için hipnoz için sevofluran, analjezi için fentanil veya remifentanil kombine edilerek dengeli anestezi sağlanır.",
     "sayfa": 69,
-    "satir": [],
-    "sekil": "transdermal fentanil sistemi",
-    "resim": 0,
+    "satir": [
+     "Fentanyl fu"
+    ],
+    "sekil": "Dengeli anestezi bileşenlerini temsil eden ilaç ürünleri sergisi",
     "madde": [
-     4
+     7
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Geçmişte güçlü bir opioid ile butirofenon türevi nöroleptik bir ajanın birlikte verilmesiyle hastanın uyanık ancak hareketsiz ve ağrısız olduğu nöroleptanaljezi durumu elde edilirdi.",
+    "sayfa": 69,
+    "satir": [
+     "Fentanyl fu"
+    ],
+    "sekil": null,
+    "madde": [
+     0
     ]
    }
   ],
   [
    {
-    "ses": "Görüntüde tiyopental için Pental Sodyum yarım gram ve bir gram flakonları ile Propofol yüzde bir ve yüzde iki emülsiyon flakonları gösterilir.",
+    "ses": "Görüntüde intravenöz indüksiyonun iki temel direği olan tiyopental sodyum liyofilize toz flakonları ile propofolün yüzde bir ve yüzde ikilik süt beyazı lipid emülsiyon şişeleri görülmektedir.",
     "sayfa": 70,
-    "satir": [],
-    "sekil": "Pental Sodyum ve propofol flakonlarının fotoğrafları",
-    "resim": 0,
+    "satir": [
+     "27"
+    ],
+    "sekil": "Pental Sodyum tiyopental flakonları ve Propofol lipid emülsiyon şişeleri",
     "madde": [
-     0
-    ]
+     5
+    ],
+    "resim": 0
    },
    {
-    "ses": "Görselde tiyopentalin toz, propofolün ise emülsiyon şeklinde olduğu görülür.",
+    "ses": "Tiyopental alkali tuz halinde çözündürülmeyi bekleyen bir tozken; suda çözünmeyen propofol soya yağı, gliserol ve yumurta lesitini içeren özel bir emülsiyon içinde kullanıma hazır sıvı formdadır.",
     "sayfa": 70,
-    "satir": [],
-    "sekil": "propofol emülsiyon flakonu",
+    "satir": [
+     "27"
+    ],
+    "sekil": "Propofolün süt beyazı lipid emülsiyon yapısı ve tiyopental tozu karşılaştırması",
+    "madde": [
+     5
+    ],
     "resim": 0
+   },
+   {
+    "ses": "Propofol enjeksiyon sırasında belirgin damar ağrısı yapar ve lipid ortamı bakteri üremesine zemin hazırlar; tiyopental ise kazara artere verilirse şiddetli vazospazm ve parmak gangrenine yol açabilir.",
+    "sayfa": 70,
+    "satir": [
+     "27"
+    ],
+    "sekil": null,
+    "madde": [
+     5
+    ]
    }
   ],
   [
@@ -2778,10 +2998,10 @@
      "Sevofluran : Sevorane"
     ],
     "sekil": "müstahzar adları listesi",
-    "resim": 0,
     "madde": [
      0
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Ayrıca kloroformun Kamfoform adıyla listelendiğini görüyoruz; bu adlar ameliyathanede ilacı tanımanızı sağlar.",
@@ -2810,7 +3030,29 @@
   ],
   [
    {
-    "ses": "Son sayfada genel anestezik ilaçların klinik seçiminde hastanın kardiyovasküler rezervi, karaciğer ve böbrek fonksiyonları ile malign hipertermi veya porfiri gibi bireysel kontrendikasyonların birlikte değerlendirilmesi gerektiği hatırlatılmaktadır.",
+    "ses": "Genel anestezik ilaçlar dersimizin sonuna geldik; cerrahi hastasında ideal anestezik seçimi hastanın kardiyovasküler rezervi, karaciğer ve böbrek fonksiyonları ile mevcut komorbiditelerine göre kişiselleştirilmelidir.",
+    "sayfa": 72,
+    "satir": [
+     "Beni dinlediğiniz için Teşekkür ederim."
+    ],
+    "sekil": "Teşekkür ve genel anestezi klinik karar özeti slaytı",
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Ailede malign hipertermi öyküsü olanlarda tüm uçucu halojenli ajanlar ve süksinilkolin kesinlikle yasaklanmalı; akut intermitan porfirisi bulunan hastalarda ise barbitürat kullanımından titizlikle kaçınılmalıdır.",
+    "sayfa": 72,
+    "satir": [
+     "Beni dinlediğiniz için Teşekkür ederim."
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Anestezide kullanılan her molekülün hücresel mekanizmasını, toksisite sınırlarını ve acil antidotlarını çok iyi bilen bir hekim; ameliyathanede ve yoğun bakımda hastasına en üst düzeyde yaşam güvenliği sağlayacaktır.",
     "sayfa": 72,
     "satir": [
      "Beni dinlediğiniz için Teşekkür ederim."

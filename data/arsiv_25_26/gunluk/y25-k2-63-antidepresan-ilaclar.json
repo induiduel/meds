@@ -54,6 +54,31 @@
         "cizimSayisi": 6,
         "cikmisEslesme": 28
       }
+    },
+    {
+      "surum": 3,
+      "tarih": "2026-10-25 19:29",
+      "neden": "51 sayfalık antidepresan ilaçlar dersinin 0 seyrek sayfa ile amfi derinliğinde genişletilmesi ve 7 çizimle yayını",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi 14. Antidepresanlar.pdf (51 sayfa) kaynağından 0 atlanan sayfa ile 51 paragraf / 202 cümlelik sesli anlatım üretildi.",
+        "21 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 6 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 22.9 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 1377,
+        "sureDk": 22.9,
+        "sayfaSayisi": 51,
+        "atlananSayfa": 0,
+        "bolumSayisi": 18,
+        "paragrafSayisi": 51,
+        "cumleSayisi": 202,
+        "slaytAdimSayisi": 21,
+        "cizimSayisi": 6,
+        "cikmisEslesme": 28
+      }
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
  "surum": 1,
- "metinHash": "3f82929c4b91b60f7f002cfd610ebe772c9af85e",
+ "metinHash": "0e60b7536c132abc4ead76a53938866b5d1e5560",
  "q": [
   {
    "id": "q-2__kurul_-12",
@@ -25,8 +25,8 @@
    "kok": "Aşağıdakilerden hangisi somatik ağrının özelliklerinden biri değildir?",
    "cevap": "Ağrılı uyaran karın içi organları örten viseral peritondan kaynaklanır.",
    "yil": "2023-2024",
-   "p": 27,
-   "c": 0,
+   "p": 28,
+   "c": 1,
    "skor": 0.92
   },
   {
@@ -35,7 +35,7 @@
    "cevap": "Visseral ağrı",
    "yil": "2020-2021",
    "p": 29,
-   "c": 0,
+   "c": 1,
    "skor": 0.92
   },
   {
@@ -44,7 +44,7 @@
    "cevap": "Batma, sızlama, zonklama tarzındadır",
    "yil": "2020-2021",
    "p": 29,
-   "c": 2,
+   "c": 1,
    "skor": 0.92
   },
   {
@@ -53,6 +53,15 @@
    "cevap": "Batma, sızlama, zonklama tarzındadır",
    "yil": "2020-2021",
    "p": 29,
+   "c": 1,
+   "skor": 0.92
+  },
+  {
+   "id": "11cec678fef5",
+   "kok": "Ağrı fizyolojisinde periferik nosiseptörlerde zararlı termal, mekanik veya kimyasal bir enerjinin elektriksel potansiyele (aksiyon potansiyeli) dönüştürülmesi aşaması aşağıdakilerden hangisidir?",
+   "cevap": "Transdüksiyon",
+   "yil": "2023-2024",
+   "p": 35,
    "c": 2,
    "skor": 0.92
   },
@@ -62,7 +71,7 @@
    "cevap": "Remisyon",
    "yil": "2020-2021",
    "p": 35,
-   "c": 0,
+   "c": 2,
    "skor": 0.92
   },
   {
@@ -71,16 +80,7 @@
    "cevap": "Remisyon",
    "yil": "2020-2021",
    "p": 35,
-   "c": 0,
-   "skor": 0.92
-  },
-  {
-   "id": "11cec678fef5",
-   "kok": "Ağrı fizyolojisinde periferik nosiseptörlerde zararlı termal, mekanik veya kimyasal bir enerjinin elektriksel potansiyele (aksiyon potansiyeli) dönüştürülmesi aşaması aşağıdakilerden hangisidir?",
-   "cevap": "Transdüksiyon",
-   "yil": "2023-2024",
-   "p": 35,
-   "c": 1,
+   "c": 2,
    "skor": 0.92
   },
   {
@@ -88,34 +88,34 @@
    "kok": "Geleneksel tıbbi veya psikiyatrik anlayışı aşan, belirtilerin olağan dışı ve dramatik sunumu, alışılmış tedavi ve ilaçlara uygun cevap vermeyen belirtiler, diğer belirtiler çözülürken yeni olağan dışı belirtilerin ortaya çıkması, işlemlere ve testlere girmeye ve belirtileri tekrar anlatmaya istek duyma, olağan dışı belirtilerin gelişimi şeklinde ortaya çıkan bir tabloda aşağıdakilerden hangisi düşünülmelidir?",
    "cevap": "Yapay bozukluk",
    "yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
-   "p": 23,
-   "c": 0,
-   "skor": 0.604
+   "p": 13,
+   "c": 2,
+   "skor": 0.617
   },
   {
    "id": "4ba07c308e35",
    "kok": "Öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği, zaman içinde atak ve düzelmelerle seyreden epizodlar geçirdiği anlaşılan hastada olası tanı nedir?",
    "cevap": "Multipl skleroz (MS)",
    "yil": "2020-2021",
-   "p": 19,
-   "c": 1,
-   "skor": 0.61
+   "p": 7,
+   "c": 3,
+   "skor": 0.624
   },
   {
    "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-62",
    "kok": "Hastanın \"hayatımdaki en şiddetli baş ağrısı\" ifadesinde ilk akla gelmesi gereken baş ağrısı nedeni aşağıdakilerden hangisidir?",
    "cevap": "Subaraknoid kanama (SAK)",
    "yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
-   "p": 12,
-   "c": 2,
-   "skor": 0.651
+   "p": 1,
+   "c": 0,
+   "skor": 0.615
   },
   {
    "id": "4c4eb178b88b",
    "kok": "Nörolojik öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği, zamanla düzelen ve tekrarlayan epizodlar geçirdiği anlaşılan bir hastada en olası tanı aşağıdakilerden hangisidir?",
    "cevap": "Multipl skleroz (MS)",
    "yil": "2020-2021",
-   "p": 18,
+   "p": 7,
    "c": 3,
    "skor": 0.646
   },
@@ -125,8 +125,8 @@
    "cevap": "Narsistik kişilik bozukluğu",
    "yil": "2021-2022",
    "p": 23,
-   "c": 0,
-   "skor": 0.633
+   "c": 1,
+   "skor": 0.651
   }
  ]
 }

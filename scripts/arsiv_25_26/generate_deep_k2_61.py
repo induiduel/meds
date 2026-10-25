@@ -975,6 +975,13 @@ SLIDES = [
             "Notriptilin",
             ["etki sınırları", "tedavi alternatifleri"],
             []
+        ),
+        (
+            "Geliştirilen nikotin aşıları antikorlar vasıtasıyla nikotini kanda bağlayarak beyne geçişini engellemeyi hedefler.",
+            "**Nikotin Aşısı Hedefi:** Nikotini kanda bağlayarak santral sinir sistemine geçişini engelleme mekanizması.",
+            "Nikotin Aşısı",
+            ["nikotin antikorları", "kan beyin bariyeri"],
+            []
         )
     ]),
 
@@ -1393,3 +1400,12 @@ cizim_komutlari = [
 cizim_aday = {"komutlar": cizim_komutlari}
 (TASLAK / "cizim_aday.json").write_text(json.dumps(cizim_aday, ensure_ascii=False, indent=2), encoding="utf-8")
 print(f"Saved cizim_aday.json with {len(cizim_komutlari)} commands.")
+
+# Derive konusma_metni.md, sayfalari, capalari
+sys.path.insert(0, "/home/indu/medsor/meds/scripts/sesli_anlatim")
+import konusma_v2 as KV
+md_txt, sayfalar_l = KV.turet(konusma_v2)
+(TASLAK / "konusma_metni.md").write_text(md_txt, encoding="utf-8")
+(TASLAK / "konusma_sayfalari.json").write_text(json.dumps(sayfalar_l), encoding="utf-8")
+(TASLAK / "konusma_capalari.json").write_text(json.dumps(KV.capalar(konusma_v2), ensure_ascii=False), encoding="utf-8")
+print("Derived and saved konusma_metni.md, sayfalari, capalari.")

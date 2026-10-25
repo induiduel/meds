@@ -1,5 +1,5 @@
 {
- "mdSha1": "83a47024facddc72d1e6ce326629a2429095c8ce",
+ "mdSha1": "152beaa8e0e2e826774a397f51f4768e062343c9",
  "p": [
   [
    {
@@ -36,6 +36,18 @@
     "madde": [
      0
     ]
+   },
+   {
+    "ses": "Ruhsal ıstırabın dindirilmesinde hekimin hastaya gösterdiği derin empatik anlayış, farmakolojik tedavinin etkinliğini artıran en temel insani unsurdur.",
+    "sayfa": 1,
+    "satir": [
+     "Tababet sanatı üç şeydir: 1. el mahareti ile aletler, 2. ilaç, 3. ahlaktır."
+    ],
+    "sekil": null,
+    "madde": [
+     1,
+     2
+    ]
    }
   ],
   [
@@ -65,6 +77,18 @@
    },
    {
     "ses": "Bu gruptaki ilaçların farmakokinetik süreçleri, klinik endikasyonları ve toksisite profilleri klinik pratiğin temelini oluşturur.",
+    "sayfa": 2,
+    "satir": [
+     "Antidepresanlar"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Depresyon tedavisinde yanıtın haftalar sonra ortaya çıkması ve ilaç etkileşimlerinin yönetimi hekimlikte derin bir farmakolojik bilgi birikimi gerektirir.",
     "sayfa": 2,
     "satir": [
      "Antidepresanlar"
@@ -507,6 +531,15 @@
     ],
     "sekil": null,
     "resim": 0
+   },
+   {
+    "ses": "Rezerpin gibi veziküler amin pompasını geri dönüşsüz felç eden ajanlar dopamin, noradrenalin ve serotonin rezervlerini boşaltarak ağır depresif tablolar tetikler.",
+    "sayfa": 12,
+    "satir": [
+     "Vezküler Amin Kapısı"
+    ],
+    "sekil": null,
+    "resim": 0
    }
   ],
   [
@@ -553,7 +586,9 @@
      "PSYCHOPHARMACOLOGY\nINSTITUTE"
     ],
     "sekil": null,
-    "resim": 0
+    "madde": [
+     5
+    ]
    }
   ],
   [
@@ -624,6 +659,9 @@
     "sayfa": 15,
     "satir": [],
     "sekil": "Hipotalamo-hipofizer-adrenal aks şeması",
+    "madde": [
+     0
+    ],
     "resim": 0
    },
    {
@@ -631,6 +669,9 @@
     "sayfa": 15,
     "satir": [],
     "sekil": "Hipotalamo-hipofizer-adrenal aks şeması",
+    "madde": [
+     0
+    ],
     "resim": 0
    },
    {
@@ -638,6 +679,9 @@
     "sayfa": 15,
     "satir": [],
     "sekil": "Antidepresan ilaç sınıfları genel şeması",
+    "madde": [
+     0
+    ],
     "resim": 0
    }
   ],
@@ -761,7 +805,9 @@
      "FDA-approved indications"
     ],
     "sekil": null,
-    "resim": 0
+    "madde": [
+     0
+    ]
    },
    {
     "ses": "Majör depresif bozukluk epizotlarının akut tedavisi ve idamesi onaylı temel kullanım alanıdır.",
@@ -871,7 +917,7 @@
     "sekil": null,
     "madde": [
      3,
-     0
+     4
     ]
    },
    {
@@ -884,6 +930,18 @@
     "madde": [
      4,
      3
+    ]
+   },
+   {
+    "ses": "Postsinaptik reseptörlerin artan monoaminlerle uzun süreli uyarılması zamanla reseptör duyarsızlaşmasına ve hücre içi gen ekspresyonu değişikliklerine yol açar.",
+    "sayfa": 20,
+    "satir": [
+     "Antidepresan ilaçların olası etki alanları. Norepinefrin (NE) ve serotoninin (5-HT) nöronal alımının inhibisyonu,\nbu nörotransmiterlerin sinaptik aktivitelerini arttırır."
+    ],
+    "sekil": null,
+    "madde": [
+     3,
+     4
     ]
    }
   ],
@@ -921,6 +979,17 @@
     "madde": [
      3,
      4
+    ]
+   },
+   {
+    "ses": "Bu ajanlar hem serotonin hem noradrenalin geri alımını eşzamanlı engelleyerek trisiklik antidepresanların etkinliğini taşırken, onların antikolinerjik yan etkilerinden belirgin ölçüde uzaktır.",
+    "sayfa": 21,
+    "satir": [
+     "Selektif serotonin – noradrenalin gerialım inhibitörleri (SNRİ)"
+    ],
+    "sekil": null,
+    "madde": [
+     0
     ]
    }
   ],
@@ -1370,6 +1439,18 @@
    },
    {
     "ses": "Sinaptik aralıkta artan monoaminler postsinaptik reseptörleri uyararak hücre içi sinyal kaskadlarını tetikler.",
+    "sayfa": 30,
+    "satir": [
+     "Antidepressant\ndrug blocks\nreuptake of the\nneurotransmitter. PRESYNAPTIC"
+    ],
+    "sekil": null,
+    "madde": [
+     0,
+     1
+    ]
+   },
+   {
+    "ses": "Sinaptik aralıkta sağlanan bu monoamin artışı, nörotrofik faktörlerin transkripsiyonunu uyararak hipokampal nörogenezisi ve sinaptik plastisiteyi kademeli olarak güçlendirir.",
     "sayfa": 30,
     "satir": [
      "Antidepressant\ndrug blocks\nreuptake of the\nneurotransmitter. PRESYNAPTIC"

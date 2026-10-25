@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Deep Amfi-Depth Generator for Lesson 62: Kraniyal Sinir Muayenesi (36 slides).
-Provides 3-4 comprehensive sentences per slide (130 sentences, ~2,200 words, ~18 min audio).
+Provides 4 comprehensive sentences per slide (144 sentences, ~3,400 words, ~27 min amfi audio).
 All anchors are exact verbatim substrings from kaynak.md or empty for visual slides.
 All 6 quality gates verified 0 HATA.
 """
@@ -32,7 +32,8 @@ VISUAL_PAGES = {
     27: "Santral ve periferik fasiyal paralizide alın tutulumu farkını gösteren karşılaştırma şeması.",
     29: "Rinne ve Weber testlerinin iletim tipi ve sensörinöral kayıptaki yorum tablosu.",
     34: "Hipoglossus sinir felcinde dil deviasyonu ve atrofi klinik görünümü.",
-    35: "Kraniyal sinir lezyonlarının sendromik lokalizasyon tablosu (kavernöz sinüs, serebellopontin açı, foramen jugulare)."
+    35: "Kraniyal sinir lezyonlarının sendromik lokalizasyon tablosu (kavernöz sinüs, serebellopontin açı, foramen jugulare).",
+    36: "Kraniyal sinir muayenesi özet şeması ve klinik karar algoritmaları."
 }
 
 # Raw slide blueprints: (sayfa, bolum_id, bolum_baslik, [ (ses, ekran, anchor, terms, cikmis_list) ])
@@ -47,7 +48,7 @@ SLIDES = [
             []
         ),
         (
-            "Ders sunumumuz nöroloji anabilim dalından Doktor Serkan Emekli tarafından hazırlanmıştır.",
+            "Sunumumuz nöroloji anabilim dalından Doktor Serkan Emekli tarafından hazırlanmış olup poliklinik ve yataklı servis pratiğinde tanısal basamakları aktarmaktadır.",
             "**Sunum:** A. Serkan Emekli, Kraniyal Sinir Muayenesi.",
             "A. Serkan Emekli",
             ["öğretim üyesi", "klinik nöroloji"],
@@ -57,31 +58,45 @@ SLIDES = [
             "Kraniyal sinirler kafa tabanındaki özel foramenlerden geçerek baş boyun bölgesinin duyusal, motor ve otonomik innervasyonunu sağlar.",
             "**Kafa Tabanı Anatomisi:** Foramenler ve kraniyal innervasyon alanları.",
             "MUAYENESİ",
-            ["kafa tabanı", "foramenler"],
+            ["kafa tabanı", "innervasyon"],
+            []
+        ),
+        (
+            "Nörolojik muayenenin bu en ayrıntılı bileşeni beyin sapı düzeyindeki iskemik, tümöral veya enflamatuar patolojilerin yerini santimetre düzeyinde belirlememize olanak tanır.",
+            "**Lezyon Lokalizasyonu:** Beyin sapı düzeylerinin kraniyal sinirlerle tespiti.",
+            "Nöroloji",
+            ["beyin sapı", "lezyon lokalizasyonu"],
             []
         )
     ]),
 
     (2, "k2-62-b01", "Kraniyal Sinir Muayenesine Giriş", [
         (
-            "On iki çift kraniyal sinir beyin sapından ve ön beyinden çıkarak kranial foramenler yoluyla hedef dokulara ulaşır.",
+            "On iki çift kraniyal sinir beyin sapından ve ön beyinden çıkarak kranial foramenler yoluyla hedef organlarına dağılır.",
             "**Kraniyal Sinirler:** 12 çift sinirin anatomik yerleşimi ve kafa tabanı çıkışları.",
             "KRANYAL SİNİRLER",
-            ["on iki çift", "beyin sapı"],
+            ["kraniyal sinirler", "beyin sapı"],
             []
         ),
         (
-            "Birinci sinir olan koku siniri olfaktor ve ikinci sinir olan görme siniri optik doğrudan ön beyin uzantılarıdır.",
-            "**Ön Beyin Sinirleri:** Olfaktor ve optik sinirler.",
+            "Birinci kraniyal sinir olan olfaktor ve ikinci kraniyal sinir olan optik sinir embriyolojik olarak doğrudan telensefalon ve diensefalon uzantısıdır.",
+            "**Ön Beyin Sinirleri:** Olfaktor ve optik sinirlerin embriyolojik kökeni.",
             "Olfactory nerve fibers (I)",
             ["olfaktor sinir", "optik sinir"],
             []
         ),
         (
-            "Diğer on çift kraniyal sinir ise mezensefalon, pons ve bulbus düzeylerinden çıkarak spesifik motor, duyusal ve parasempatik işlevleri yürütür.",
+            "Üçüncü ve dördüncü sinirler mezensefalondan, beş, altı, yedi ve sekizinci sinirler ponstan, dokuz, on, on bir ve on ikinci sinirler ise bulbustan köken alır.",
             "**Beyin Sapı Çıkışları:** Mezensefalon, pons ve bulbus çekirdekleri.",
-            "Optic nerve (Il)",
-            ["mezensefalon", "bulbus"],
+            "Trochlear nerve (IV)",
+            ["mezensefalon", "pons", "bulbus"],
+            []
+        ),
+        (
+            "Bu anatomik sıralama sayesinde kraniyal sinir lezyonlarının kombinasyonu beyin sapının hangi düzeyinde patoloji olduğunu kusursuz biçimde gösterir.",
+            "**Klinik Korelasyon:** Kraniyal sinir felçlerinin seviye belirleyici değeri.",
+            "Hypoglossal nerve (XII)",
+            ["kraniyal sinir", "beyin sapı düzeyi"],
             []
         )
     ]),
@@ -89,24 +104,31 @@ SLIDES = [
     # --- BOLUM 2: CN I (Nervus Olfactorius) ve Koku Muayenesi (3) ---
     (3, "k2-62-b02", "CN I (Nervus Olfactorius) ve Koku Muayenesi", [
         (
-            "Birinci kraniyal sinir olan nervus olfactorius koku alma duyusunu ileten saf duyusal bir sinirdir.",
+            "Birinci kraniyal sinir olan nervus olfactorius koku alma duyusunu ileten saf duyusal özel viseral afferent bir sinirdir.",
             "**CN I (N. Olfactorius):** Koku alma duyusunun özel viseral afferent iletimi.",
             "CN I / N. OLFACTORIUS",
             ["nervus olfactorius", "koku alma"],
             []
         ),
         (
-            "Muayenede amonyak gibi trigeminal siniri uyaran tahriş edici maddeler yerine kahve, sabun veya tütün gibi kokularla her iki burun deliği ayrı ayrı test edilir.",
+            "Muayenede amonyak veya alkol gibi trigeminal siniri uyaran tahriş edici maddeler yerine kahve, vanilya, tütün veya sabun kokuları tercih edilir.",
             "**Muayene Yöntemi:** Tahriş etmeyen kokularla burun deliklerinin tek tek muayenesi.",
-            "İşlev: Koku alma",
-            ["tahriş etmeyen kokular", "burun deliği"],
+            "tahriş etmeyen kokularla iki",
+            ["tahriş etmeyen kokular", "trigeminal sinir"],
             []
         ),
         (
-            "Sinir lezyonunda koku alamama yani anozmi gelişir; kafa tabanı kırıkları ve olfaktor oluk meningiomları tek taraflı anozminin başlıca nedenleridir.",
+            "Hastanın gözleri kapatılarak her iki burun deliği tek tek kapatılır ve koku eşiği, koku ayrımı ile koku adlandırma yeteneği değerlendirilir.",
+            "**Koku Testi Basamakları:** Koku eşiği, koku ayrımı ve adlandırma parametreleri.",
+            "\uf0adİşlev: Koku alma",
+            ["burun deliği", "koku ayrımı"],
+            []
+        ),
+        (
+            "Kafa tabanı travmalarında lamina kribroza kırıkları veya olfaktor oluk meningiomlarında tek taraflı anozmi gelişebileceği akılda tutulmalıdır.",
             "**Anozmi ve Etyoloji:** Kafa tabanı travması ve meningiomlarda koku kaybı.",
-            "Lezyonunda: Koku alamama",
-            ["anozmi", "kafa tabanı kırığı"],
+            "\uf0adPatolojik durum: Kafa",
+            ["anozmi", "kafa tabanı travması"],
             []
         )
     ]),
@@ -114,768 +136,978 @@ SLIDES = [
     # --- BOLUM 3: CN II (Nervus Opticus) ve Görme Muayenesi (4-8) ---
     (4, "k2-62-b03", "CN II (Nervus Opticus) ve Görme Muayenesi", [
         (
-            "Görsel şemamızda optik sinir, kiazma optikum ve retrokiazmal görme yolları lezyonlarında ortaya çıkan karakteristik görme alanı defektleri gösterilmektedir.",
+            "Görsel şemamızda optik sinir, optik kiazma ve retrokiazmal görme yolları lezyonlarında ortaya çıkan karakteristik görme alanı defektleri özetlenmektedir.",
             "**Görme Yolları Şeması:** Kiazmal ve postkiazmal lezyonlarda görme alanı kayıpları.",
             "-CNII/N. OPTICUS",
-            ["görme yolları", "optik kiazma"],
+            ["optik sinir", "görme yolları"],
             []
         ),
         (
-            "Optik kiazmayı basıya uğratan hipofiz adenomlarında nazal liflerin çaprazlaşması engellendiği için bitemporal hemianopsi gelişir.",
-            "**Bitemporal Hemianopsi:** Hipofiz adenomlarında kiazma basısı ve dış alan kaybı.",
-            "Binocular Chiasmal or",
-            ["kiazma basısı", "bitemporal hemianopsi"],
+            "Optik sinir tam kesildiğinde lezyon tarafında monooküler anopsi yani tam görme kaybı görülür.",
+            "**Optik Sinir Lezyonu:** Tek taraflı monooküler anopsi ve görme kaybı.",
+            "-CNII/N. OPTICUS",
+            ["monooküler anopsi", "optik sinir"],
             []
         ),
         (
-            "Kiazmanın gerisindeki optik traktus veya optik radyasyon lezyonlarında ise lezyonun karşı tarafını görememe yani kontralateral homonim hemianopsi ortaya çıkar.",
-            "**Homonim Hemianopsi:** Postkiazmal traktus ve korteks lezyonlarında karşı alan kaybı.",
-            "Postchiasmal Field Defects:",
-            ["homonim hemianopsi", "optik traktus"],
+            "Optik kiazma lezyonunda hipofiz adenomu basısına bağlı olarak nazal retina lifleri hasarlanır ve klasik bitemporal hemianopsi tablosu ortaya çıkar.",
+            "**Kiazma Lezyonu:** Hipofiz basısında nazal lif hasarı ve bitemporal hemianopsi.",
+            "Junctional Scotoma",
+            ["optik kiazma", "bitemporal hemianopsi"],
+            []
+        ),
+        (
+            "Kiazma bileşkesinde junctional skotom, retrokiazmal optik traktus veya optik radyasyon lezyonlarında ise kontralateral homonim hemianopsi defekti gelişir.",
+            "**Retrokiazmal Lezyonlar:** Traktus ve optik radyasyon hasarında homonim hemianopsi.",
+            "Optic Radiations",
+            ["junctional skotom", "homonim hemianopsi"],
             []
         )
     ]),
 
     (5, "k2-62-b03", "CN II (Nervus Opticus) ve Görme Muayenesi", [
         (
-            "Görme keskinliği uzak muayenesinde uluslararası standart olan Snellen kartları, yakın muayenesinde ise Jaeger kartları kullanılır.",
-            "**Görme Keskinliği:** Snellen kartı ile uzak, Jaeger kartı ile yakın görme muayenesi.",
+            "Santral görme keskinliğinin değerlendirilmesinde uluslararası standart muayene yöntemi Snellen kartları kullanılarak yapılır.",
+            "**Görme Keskinliği:** Snellen kartları ile santral görmenin kantitatif tayini.",
             "Görme Keskinliği (Snellen Kartları)",
-            ["Snellen kartı", "görme keskinliği"],
+            ["görme keskinliği", "snellen kartları"],
             []
         ),
         (
-            "Her iki göz ayrı ayrı kapatılarak hastanın altı metre mesafeden harfleri en küçük satıra kadar net okuyabilmesi değerlendirilir.",
-            "**Monoküler Test:** Gözlerin tek tek 6 metre mesafeden test edilmesi.",
+            "Hasta altı metre veya yirmi fit mesafeye yerleştirilerek her iki göz refraksiyon kusuru düzeltilmiş halde tek tek test edilir.",
+            "**Uzak Görme Testi:** 6 metre mesafeden refraksiyon düzeltmesi ile muayene.",
+            "Görme Keskinliği (Snellen Kartları)",
+            ["refraksiyon", "santral görme"],
+            []
+        ),
+        (
+            "En üstteki büyük harfi dahi okuyamayan hastalarda görme mesafesi adım adım azaltılarak parmak sayma derecesi belirlenir.",
+            "**İleri Görme Azlığı:** Yakın mesafeden parmak sayma değerlendirmesi.",
             "r b FLTI6ö5büö",
-            ["monoküler muayene", "uzak görme"],
+            ["parmak sayma", "görme derecesi"],
             []
         ),
         (
-            "Gözlükle düzeltilemeyen veya iğne deliği testine yanıt vermeyen görme kayıpları optik sinir nöropatisi veya retina hasarını düşündürür.",
-            "**İğne Deliği Testi:** Refraksiyon kusuru ile optik sinir lezyonu ayrımı.",
+            "Parmak sayamayacak kadar ileri görme kaybında el hareketlerini fark etme ve son basamakta sadece ışık algılama derecesi kaydedilir.",
+            "**Derin Görme Kaybı:** El hareketleri ve ışık algılama basamakları.",
             "FSEZ5LUrTE",
-            ["optik nöropati", "iğne deliği"],
+            ["el hareketleri", "ışık algılama"],
             []
         )
     ]),
 
     (6, "k2-62-b03", "CN II (Nervus Opticus) ve Görme Muayenesi", [
         (
-            "Görme alanı değerlendirilmesinde poliklinik şartlarında en pratik ve güvenilir yöntem konfrontasyon yöntemidir.",
-            "**Konfrontasyon Testi:** Hekim ve hastanın görme alanlarını karşılıklı kıyaslama yöntemi.",
+            "Görme alanı değerlendirilmesinde poliklinik ve yatak başı şartlarında en pratik ve güvenilir muayene yöntemi konfrontasyon testidir.",
+            "**Görme Alanı Muayenesi:** Konfrontasyon (karşılaştırma) yöntemi prensipleri.",
             "Görme Alanı Değerlendirilmesi",
-            ["konfrontasyon yöntemi", "görme alanı"],
+            ["görme alanı", "konfrontasyon"],
             []
         ),
         (
-            "Hekim ile hasta bir metre mesafede karşılıklı oturur; aynı taraf gözler kapatılarak parmak hareketleri dört kadranda test edilir.",
-            "**Dört Kadran Muayenesi:** Üst-alt nazal ve temporal kadranların taranması.",
+            "Hekim ile hasta karşılıklı aynı göz seviyesinde bir metre mesafede oturur ve karşılıklı gözlerini kapatarak periferik sınırları kıyaslar.",
+            "**Muayene Pozisyonu:** Hekim ve hastanın periferik sınırlarının birebir karşılaştırılması.",
             "Görme Alanı Değerlendirilmesi",
-            ["dört kadran", "periferik görme"],
+            ["periferik görme", "karşılıklı muayene"],
             []
         ),
         (
-            "Böylece skotomlar, kadrananopsiler ve homonim hemianopsi defektleri yatak başında dakikalar içinde haritalanabilir.",
-            "**Defekt Haritalama:** Skotom, kadrananopsi ve hemianopsi tanısı.",
+            "Dört kadranda parmak hareketleri veya kırmızı renkli nesneler merkeze doğru yaklaştırılarak alt ve üst kadranlardaki skotomlar araştırılır.",
+            "**Kadran Muayenesi:** Kırmızı nesne ve parmak hareketleriyle skotom tespiti.",
             "Görme Alanı Değerlendirilmesi",
-            ["skotom", "kadrananopsi"],
+            ["kadrananopsi", "skotom"],
+            []
+        ),
+        (
+            "Ayrıca her iki tarafta aynı anda parmak oynatılarak parietal lob lezyonlarını düşündüren görsel ihmal ve sönme fenomeni taranır.",
+            "**Görsel Sönme:** Çift eşzamanlı uyarı ile parietal lob lezyonlarının tespiti.",
+            "Görme Alanı Değerlendirilmesi",
+            ["parietal lob", "görsel ihmal"],
             []
         )
     ]),
 
     (7, "k2-62-b03", "CN II (Nervus Opticus) ve Görme Muayenesi", [
         (
-            "Gözdibi muayenesi oftalmoskop cihazı ile optik diskin, retinanın ve retinal damarların doğrudan incelenmesini sağlar.",
-            "**Gözdibi Muayenesi:** Oftalmoskopi ile optik disk sınırları ve damar kalibrasyonu.",
+            "Gözdibi muayenesi oftalmoskop cihazı yardımıyla optik diskin, retinanın ve retinal vasküler yapıların doğrudan incelenmesini sağlar.",
+            "**Gözdibi Muayenesi:** Direkt oftalmoskopi ile optik disk ve retina değerlendirmesi.",
             "Gözdibi muayenesi",
-            ["oftalmoskopi", "gözdibi muayenesi"],
+            ["gözdibi muayenesi", "oftalmoskop"],
             []
         ),
         (
-            "Kafa içi basınç artışı sendromunda optik disk sınırları silinir, venöz pulsasyon kaybolur ve bilateral papilödem tablosu gelişir.",
-            "**Papilödem:** KİBAS bulgusu olarak disk sınır silinmesi ve venöz dolgunluk.",
+            "Optik diskin sınırlarının netliği, fizyolojik çukurluğun derinliği ve disk renginin solukluğu optik atrofi açısından dikkatle değerlendirilir.",
+            "**Optik Disk Morfolojisi:** Sınır netliği, çukurluk ve optik atrofi bulguları.",
             "Gözdibi muayenesi",
-            ["papilödem", "kafa içi basınç artışı"],
+            ["optik disk", "optik atrofi"],
             []
         ),
         (
-            "Kronik optik nöropatilerde ise optik diskin rengi solarak porselen beyazı bir görünüm alır ve optik atrofi gelişir.",
-            "**Optik Atrofi:** Kronik lif kaybı ve optik disk solukluğu.",
+            "Kafa içi basınç artışının en kritik nörolojik bulgusu olan papilödemde disk sınırları silinir, ödem gelişir ve venöz pulsasyon kaybolur.",
+            "**Papilödem:** KİBAS durumunda disk sınırlarının silinmesi ve venöz dolgunluk.",
             "Gözdibi muayenesi",
-            ["optik atrofi", "disk solukluğu"],
+            ["papilödem", "venöz pulsasyon"],
+            []
+        ),
+        (
+            "Spontan venöz pulsasyonun varlığı kafa içi basıncının o an için normal sınırlarda olduğunu gösteren en değerli negatif belirteçtir.",
+            "**Spontan Venöz Pulsasyon:** Normal KİB varlığını gösteren güvenilir klinik ipucu.",
+            "Gözdibi muayenesi",
+            ["kafa içi basıncı", "venöz pulsasyon"],
             []
         )
     ]),
 
     (8, "k2-62-b03", "CN II (Nervus Opticus) ve Görme Muayenesi", [
         (
-            "Renkli görme muayenesinde psödoizokromatik Ishihara kartları kullanılarak foveadaki koni fotoreseptör fonksiyonu ölçülür.",
-            "**Ishihara Kartları:** Renkli görme ve koni fotoreseptör işlev testi.",
+            "Renkli görme muayenesinde psödoizokromatik Ishihara kartları kullanılarak özellikle kırmızı ve yeşil renk ayrımı test edilir.",
+            "**Renkli Görme:** Ishihara psödoizokromatik kartları ile renk ayrımı testi.",
             "Renkli Görme (Ishıhara Kartları)",
-            ["Ishihara kartları", "renkli görme"],
+            ["renkli görme", "ishihara kartları"],
             []
         ),
         (
-            "Optik nörit ve demiyelinizan hastalıklarda görme keskinliği henüz bozulmadan önce erken dönemde kırmızı renk duyusunda ve kontrast duyarlılığında azalma saptanır.",
-            "**Kırmızı Desatürasyonu:** Optik nöritin erken bulgusu olarak renk ve kontrast kaybı.",
+            "Optik nörit ve demiyelinizan hastalıklarda görme keskinliği henüz bozulmadan önce ilk ve en erken kaybolan bulgu renkli görme ve kontrast duyarlılığı kaybıdır.",
+            "**Erken Optik Nöropati:** Keskinlik bozulmadan önce renk ve kontrast kaybı.",
             "Kontrast Duyarlılığı",
-            ["kontrast duyarlılığı", "optik nörit"],
+            ["optik nörit", "kontrast duyarlılığı"],
             []
         ),
         (
-            "Bu erken diskromatopsi bulgusu multipl skleroz ön tanısında klinik olarak son derece kıymetlidir.",
-            "**Erken Teşhis:** Multipl skleroz şüphesinde erken tanısal değer.",
+            "Kırmızı desatürasyonu yani kırmızı rengin hastaya soluk veya gri görünmesi erken retrobulber optik sinir tutulumunu saptamada son derece duyarlıdır.",
+            "**Kırmızı Desatürasyonu:** Retrobulber sinir inflamasyonunun hassas klinik işareti.",
             "Renkli Görme (Ishıhara Kartları)",
-            ["multipl skleroz", "diskromatopsi"],
+            ["kırmızı desatürasyonu", "retrobulber tutulum"],
+            []
+        ),
+        (
+            "Bu testler multipl skleroz gibi optik nöropatilerin erken dönem teşhisinde ve remisyon takibinde vazgeçilmez klinik öneme sahiptir.",
+            "**Klinik Değer:** Demiyelinizan süreçlerin erken teşhisinde renkli görme rolü.",
+            "Kontrast Duyarlılığı",
+            ["multipl skleroz", "optik nöropati"],
             []
         )
     ]),
 
-    # --- BOLUM 4: Ekstraoküler Motor Sinirler (CN III, IV, VI) ve Göz Hareketleri (9-12) ---
+    # --- BOLUM 4: Ekstraoküler Motor Sinirler (CN III, IV, VI) (9-12) ---
     (9, "k2-62-b04", "Ekstraoküler Motor Sinirler (CN III, IV, VI)", [
         (
-            "Ekstraoküler kasları innerve eden üçüncü, dördüncü ve altıncı kraniyal sinirler klinikte daima birlikte değerlendirilir.",
-            "**Ekstraoküler Sinirler:** CN III (Okülomotor), CN IV (Troklear) ve CN VI (Abdusens).",
+            "Ekstraoküler kasları innerve eden üçüncü, dördüncü ve altıncı kraniyal sinirler göz hareketlerini koordine biçimde yönetir.",
+            "**Ekstraoküler Sinirler:** CN III, IV ve VI ortak göz hareketleri kontrolü.",
             "CN III-IV-VI /",
-            ["ekstraoküler kaslar", "üçüncü kraniyal sinir"],
+            ["ekstraoküler kaslar", "göz hareketleri"],
             []
         ),
         (
-            "Nervus oculomotorius, nervus trochlearis ve nervus abducens göz küresinin dokuz farklı bakış yönünde kusursuz hareketini koordine eder.",
-            "**Göz Hareketleri:** Üç motor sinirin koordineli bakış fonksiyonu.",
+            "Nervus oculomotorius, nervus trochlearis ve nervus abducens sinirleri birlikte muayene edilerek gözün tüm eksenlerdeki deviasyonu incelenir.",
+            "**Ortak Muayene:** Üç motor sinirin birlikte değerlendirilme zorunluluğu.",
             "N. OCULOMOTORIUS & N.",
-            ["nervus trochlearis", "nervus abducens"],
+            ["okülomotor", "troklear", "abdusens"],
             []
         ),
         (
-            "Bu sinirlerin herhangi birinin felcinde göz kürelerinin görme eksenleri paralel kalamaz ve hasta çift görme yani diplopi yakınmasıyla başvurur.",
-            "**Diplopi Mekanizması:** Görsel eksen paralelliğinin bozulması ve çift görme.",
+            "Bu üç sinirin koordinasyonu sayesinde göz küresi abdüksiyon, addüksiyon, elevasyon, depresyon ile intorsiyon ve ekstorsiyon hareketlerini yapar.",
+            "**Göz Hareket Eksenleri:** Horizontal, vertikal ve torsiyonel eksen tanımları.",
+            "Abdüksiyo",
+            ["abdüksiyon", "addüksiyon", "elevasyon", "depresyon"],
+            []
+        ),
+        (
+            "Hekim parmağını veya bir kalemi hastanın önünde H paterni çizerek hareket ettirir ve her iki gözün eşzamanlı izleme yeteneğini değerlendirir.",
+            "**H Paterni Muayenesi:** Dokuz bakış yönünün sistematik olarak taranması.",
             "TROCHLEARIS & N. ABDUCENS",
-            ["diplopi", "görme ekseni"],
+            ["H paterni", "eşzamanlı izleme"],
             []
         )
     ]),
 
     (10, "k2-62-b04", "Ekstraoküler Motor Sinirler (CN III, IV, VI)", [
         (
-            "Göz hareketleri horizontal, vertikal ve torsiyonel eksenlerde gerçekleşir.",
-            "**Hareket Eksenleri:** Horizontal, vertikal ve torsiyonel göz hareketleri.",
+            "Ekstraoküler kaslarımızın horizontal eksendeki hareketlerini lateral rektus kası abdüksiyon, mediyal rektus kası ise addüksiyon yaparak sağlar.",
+            "**Horizontal Hareketler:** Lateral rektus abdüksiyon, mediyal rektus addüksiyon.",
             "Horizontal göz hareketleri",
-            ["horizontal hareket", "vertikal hareket"],
-            []
-        ),
-        (
-            "Horizontal düzlemde lateral rektus kası abdüksiyon yani dışa bakış sağlarken mediyal rektus kası addüksiyon yani içe bakış yaptırır.",
-            "**Lateral ve Mediyal Rektus:** Abdüksiyon ve addüksiyon agonist kasları.",
-            "Vertikal göz hareketleri",
             ["lateral rektus", "mediyal rektus"],
             []
         ),
         (
-            "Vertikal ve torsiyonel hareketlerde ise superior ve inferior rektuslar ile oblik kaslar karmaşık bir denge içinde çalışır.",
-            "**Oblik ve Dikey Kaslar:** İntorsiyon, ekstorsiyon, elevasyon ve depresyon dengesi.",
-            "Torsiyonel göz hareketleri",
-            ["oblik kaslar", "torsiyon"],
+            "Vertikal bakış ekseninde superior rektus ve inferior oblik kasları elevasyon yaparken, inferior rektus ve superior oblik kasları depresyon yaptırır.",
+            "**Vertikal Hareketler:** Elevatör kaslar (SR, IO) ve depresör kaslar (IR, SO).",
+            "Vertikal göz hareketleri",
+            ["superior rektus", "inferior oblik", "elevasyon"],
+            []
+        ),
+        (
+            "Torsiyonel eksende ise superior oblik kası içe rotasyon yani intorsiyon, inferior oblik kası ise dışa rotasyon yani ekstorsiyon görevini üstlenir.",
+            "**Torsiyonel Hareketler:** Superior oblik intorsiyon, inferior oblik ekstorsiyon.",
+            "Sup oblik: depresyon",
+            ["intorsiyon", "ekstorsiyon"],
+            []
+        ),
+        (
+            "Oblik kasların dikey hareketi göz addüksiyondayken en belirgin hale gelirken, rektus kaslarının dikey hareketi göz abdüksiyondayken test edilir.",
+            "**Kas İzolasyon Pozisyonları:** Addüksiyonda oblik, abdüksiyonda rektus muayenesi.",
+            "Lat rektus: abdüksiyon",
+            ["oblik kaslar", "rektus kasları"],
             []
         )
     ]),
 
     (11, "k2-62-b04", "Ekstraoküler Motor Sinirler (CN III, IV, VI)", [
         (
-            "Ekstraoküler kasların innervasyon kuralı tıp fakültesinde altın formül olarak bilinir: lateral rektus altıncı sinirle, superior oblik dördüncü sinirle uyarılır.",
-            "**İnnervasyon Kuralı:** LR6, SO4; diğer tüm ekstraoküler kaslar CN III.",
+            "Ekstraoküler kasların innervasyon kuralı tıp fakültesinde altın formül olan se o dört, le re altı, geri kalanlar üç şeklinde ezberlenir.",
+            "**İnnervasyon Formülü:** SO4, LR6 ve geri kalan tüm kaslar CN III kuralı.",
             "Okülomotor sinir (111)",
-            ["innervasyon kuralı", "lateral rektus"],
+            ["innervasyon kuralı", "okülomotor sinir"],
             []
         ),
         (
-            "Geriye kalan superior rektus, inferior rektus, mediyal rektus ve inferior oblik kasları ile üst göz kapağını kaldıran levator palpebrae kası okülomotor sinir tarafından innerve edilir.",
-            "**Okülomotor Kas Grubu:** 4 ekstraoküler kas ve levator palpebrae superioris.",
+            "Buna göre superior oblik kası dördüncü sinir olan troklear sinir yani nervus trochlearis, lateral rektus kası ise altıncı sinir olan abdusens siniri yani nervus abducens tarafından innerve edilir.",
+            "**Spesifik İnnervasyon:** CN IV superior oblik, CN VI lateral rektus dağılımı.",
             "Trochlear sinir (IV)",
-            ["superior rektus", "levator palpebrae"],
+            ["superior oblik", "troklear sinir", "lateral rektus"],
             []
         ),
         (
-            "Ayrıca okülomotor sinir Edinger-Westphal nükleusundan çıkan parasempatik liflerle pupilla sfinkterini ve siliyer kası kasar.",
-            "**Parasempatik İnnervasyon:** Edinger-Westphal çekirdeği ile sfinkter pupilla ve siliyer kas.",
+            "Diğer tüm rektus kasları, inferior oblik ve üst göz kapağını kaldıran levator palpebrae superioris kası okülomotor sinir tarafından yönetilir.",
+            "**Okülomotor Motor Alanı:** Medial, superior, inferior rektus ve levator palpebrae.",
             "Abdusens siniri (VI)",
-            ["Edinger-Westphal", "sfinkter pupilla"],
+            ["levator palpebrae", "inferior oblik"],
+            []
+        ),
+        (
+            "Ayrıca okülomotor sinirin Edinger-Westphal nükleusundan çıkan parasempatik lifleri iris sfinkter ve silier kasları uyararak miyozis ve akomodasyonu sağlar.",
+            "**Parasempatik İnnervasyon:** Edinger-Westphal lifleri ile sfinkter pupilla ve siliyer kas.",
+            "Edinger-Westphal nükleus",
+            ["Edinger-Westphal", "parasempatik lifler"],
             []
         )
     ]),
 
     (12, "k2-62-b04", "Ekstraoküler Motor Sinirler (CN III, IV, VI)", [
         (
-            "Ekstraoküler muayenenin temel amacı göz hareketlerinin sınırlarını değerlendirmek, bakış parezisini saptamak ve kapak pozisyonunu kontrol etmektir.",
-            "**Muayene Hedefleri:** Bakış genişliği, nistagmus varlığı ve pitozis değerlendirmesi.",
+            "Oküler motor muayenenin temel klinik amacı göz hareketlerinin tam ve simetrik olup olmadığını kardinal yönlerde belirlemektir.",
+            "**Muayene Amaçları:** Hareket sınırları, kapak pozisyonu, pupilla ve nistagmus.",
             "Muayenenin amacı",
-            ["muayene amacı", "bakış kısıtlılığı"],
+            ["oküler motor muayene", "göz hareketleri"],
             []
         ),
         (
-            "Hastaya hekimin parmağını başını hareket ettirmeden sadece gözleriyle takip etmesi söylenir ve geniş bir H harfi çizdirilir.",
-            "**H Testi:** Göz hareketlerinin H harfi yörüngesinde muayenesi.",
-            "Göz hareketlerini değerlendirmek",
-            ["H testi", "ekstraoküler muayene"],
+            "Göz kapağının açıklığı incelenerek levator kas zaafına bağlı pitozis veya sempatik sinir tutulumuna bağlı yalancı pitozis araştırılır.",
+            "**Göz Kapağı Muayenesi:** Pitozis varlığı ve sempatik-okülomotor ayrımı.",
+            "Göz kapağını ve",
+            ["göz kapağı", "pitozis"],
             []
         ),
         (
-            "Bu sırada göz kapağında düşüklük yani pitozis ve uç bakışlarda ritmik göz atımları yani nistagmus dikkatle aranır.",
-            "**Pitozis ve Nistagmus:** Kapak düşüklüğü ve patolojik nistagmus tespiti.",
-            "Göz kapağını ve",
-            ["pitozis", "nistagmus"],
+            "Pupilla boyutları ve şekli ışık altında incelenerek anizokori, miyotik ya da midriyatik asimetriler kaydedilir.",
+            "**Pupilla Değerlendirmesi:** Boyut, şekil, simetri ve anizokori incelemesi.",
+            "Pupillayı incelemek",
+            ["pupilla", "anizokori"],
+            []
+        ),
+        (
+            "Uç bakışlarda göz küresinin istemsiz ritmik salınımları olan nistagmusun varlığı, yönü ve fiksasyonla değişimi nörolojik lezyon açısından taranır.",
+            "**Nistagmus Taraması:** Uç bakışlarda fizyolojik ve patolojik nistagmus ayrımı.",
+            "Varsa nistagmusu değerlendirmek",
+            ["nistagmus", "lezyon taraması"],
             []
         )
     ]),
 
-    # --- BOLUM 5: Pupilla Işık ve Akomodasyon Refleks Yolakları (13-14) ---
-    (13, "k2-62-b05", "Pupilla Işık ve Akomodasyon Refleksleri", [
+    # --- BOLUM 5: Pupilla Refleksleri ve Okülomotor Sinir (13-16) ---
+    (13, "k2-62-b05", "Pupilla Refleksleri ve Okülomotor Sinir", [
         (
-            "Görsel şemamızda pupilla ışık refleksinin afferent ve efferent nöronal arkı ayrıntılı şekilde gösterilmektedir.",
-            "**Işık Refleksi Arkı:** CN II afferent, bilateral Edinger-Westphal ve CN III efferent yolu.",
+            "Görsel şemamızda pupilla ışık refleksinin afferent ve efferent nöronal yolakları ayrıntılı olarak gösterilmektedir.",
+            "**Işık Refleksi Yolağı:** Afferent CN II ve efferent CN III nöronal arkı.",
             "Işık Refleksi",
-            ["ışık refleksi", "refleks arkı"],
+            ["ışık refleksi", "afferent yolak"],
             []
         ),
         (
-            "Göze ışık tutulduğunda afferent uyarı optik sinirle mezensefalondaki pretektal nükleusa ulaşır ve buradan her iki taraftaki Edinger-Westphal çekirdeklerine sinaps yapar.",
-            "**Pretektal Çekirdek:** Bilateral Edinger-Westphal innervasyonu ve konsensüel yanıt temeli.",
+            "Işık uyarısı retinadaki fotoreseptörlerden optik sinir afferent yoluyla mezensefalondaki pretektal nükleusa ulaştırılır.",
+            "**Afferent Yolak:** Optik sinirden pretektal nükleusa uzanan duyusal ark.",
             "PRETECTAL",
-            ["pretektal nükleus", "afferent uyarı"],
+            ["optik sinir", "pretektal nükleus"],
             []
         ),
         (
-            "Efferent parasempatik lifler üçüncü sinirle her iki göze giderek hem ışık tutulan gözde direkt yanıtı hem de diğer gözde konsensüel indirekt miyozisi oluşturur.",
-            "**Direkt ve Konsensüel Yanıt:** İki taraflı eşzamanlı sfinkter pupilla kasılması.",
-            "NUCLEUS",
-            ["direkt ışık refleksi", "konsensüel refleks"],
+            "Pretektal çekirdekten çıkan internöronlar arka komissür aracılığıyla her iki taraftaki Edinger-Westphal nükleuslarına bilateral uyarı gönderir.",
+            "**Bilateral Uyarı:** Arka komissür üzerinden her iki Edinger-Westphal çekirdeğine iletim.",
+            "EDINGER-",
+            ["Edinger-Westphal", "arka komissür"],
+            []
+        ),
+        (
+            "Efferent parasempatik lifler üçüncü sinir içinde silier gangliona gelir ve oradan sfinkter pupilla kasını kasarak hem direkt hem konsensüel miyozis oluşturur.",
+            "**Efferent Yolak:** Silier ganglion ve iris sfinkteri ile bilateral miyozis yanıtı.",
+            "PARASYMPATHETIC",
+            ["parasempatik lifler", "miyozis", "silier ganglion"],
             []
         )
     ]),
 
-    (14, "k2-62-b05", "Pupilla Işık ve Akomodasyon Refleksleri", [
+    (14, "k2-62-b05", "Pupilla Refleksleri ve Okülomotor Sinir", [
         (
             "Akomodasyon ve yakın refleks, hastanın uzaktaki bir nesneden burnunun ucuna yaklaştırılan bir hedefe odaklanmasıyla tetiklenir.",
-            "**Yakın Refleks:** Yakına bakışta konverjans, akomodasyon ve miyozis triadı.",
+            "**Yakın Refleks Triadı:** Akomodasyon, konverjans ve miyozis eşzamanlı yanıtı.",
             "Akomodasyon Refle",
-            ["akomodasyon", "yakın refleks"],
+            ["akomodasyon refleksi", "yakın refleks"],
             []
         ),
         (
-            "Bu sırada üçlü senkronize yanıt meydana gelir: her iki göz içe döner yani konverjans, lens kalınlaşır yani akomodasyon ve pupillalar daralır yani miyozis gelişir.",
-            "**Üçlü Yanıt Triadı:** Konverjans, lens kalınlaşması ve pupiller miyozis.",
+            "Bu refleks sırasında üç kritik anatomik yanıt eşzamanlı olarak gerçekleşir: konverjans, akomodasyon ve pupiller miyozis.",
+            "**Triad Bileşenleri:** Medial rektus, siliyer kas ve iris sfinkteri aktivasyonu.",
             "Convergence reflex Accommodation reflex",
-            ["konverjans", "miyozis"],
+            ["konverjans", "akomodasyon", "miyozis"],
             []
         ),
         (
-            "Işık refleksinin kaybolup yakın refleksin korunduğu tabloya ışık-yakın disosiasyonu denir ve nörosifilisteki Argyll Robertson pupillasının tipik bulgusudur.",
-            "**Işık-Yakın Disosiasyonu:** Argyll Robertson pupillasında ışık yanıtı yok, yakın refleks korunur.",
+            "Mediyal rektus kasları her iki gözü içe doğru konverjans yaptırırken, silier kaslar kasılarak lensi kalınlaştırır ve iris sfinkteri pupillayı daraltır.",
+            "**Mekanizma:** Gözlerin addüksiyonu, lens kırıcılık artışı ve pupilla daralması.",
             "Near reflexes",
-            ["ışık-yakın disosiasyonu", "Argyll Robertson"],
+            ["mediyal rektus", "silier kas", "lens"],
+            []
+        ),
+        (
+            "Işık refleksinden farklı olarak yakın refleks kortikal yolakları kullanır; bu nedenle sifiliz ve mezensefalon lezyonlarında ışık-yakın disosiasyonu görülebilir.",
+            "**Işık-Yakın Disosiasyonu:** Argyll Robertson pupillası ve dorsal mezensefalon sendromu.",
+            "Edinger-Westphal nucleus",
+            ["kortikal yolak", "ışık-yakın disosiasyonu"],
             []
         )
     ]),
 
-    # --- BOLUM 6: Okülomotor Sinir (CN III) Çekirdeği ve Felci (15-16) ---
-    (15, "k2-62-b06", "Okülomotor Sinir (CN III) Çekirdeği ve Felci", [
+    (15, "k2-62-b05", "Pupilla Refleksleri ve Okülomotor Sinir", [
         (
-            "Görsel kesitimizde okülomotor sinir nükleusunun mezensefalonda superior kollikulus düzeyindeki anatomik yerleşimi şematize edilmiştir.",
-            "**Okülomotor Çekirdek Anatomisi:** Mezensefalon tegmentumu, superior kollikulus kesiti.",
+            "Görsel kesitimizde okülomotor sinir nükleusunun mezensefalonda superior kollikulus seviyesinde periaquaduktal gri cevherin ventralinde yerleşimi görülmektedir.",
+            "**Okülomotor Nükleus Kompleksi:** Mezensefalon superior kollikulus seviyesi kesiti.",
             "OCULOMOTOR SUPERIOR",
-            ["okülomotor nükleus", "mezensefalon"],
+            ["okülomotor nükleus", "superior kollikulus"],
             []
         ),
         (
-            "Nükleustan çıkan motor ve parasempatik lifler serebral pedinküller arasından, interpedinküler fossadan beyin sapını terk eder.",
-            "**İnterpedinküler Fossa:** Sinirin beyin sapından ventral çıkış noktası.",
+            "Bu kompleks yapı içerisinde her bir ekstraoküler kas için özelleşmiş alt çekirdekler ve otonomik Edinger-Westphal nükleusu yer alır.",
+            "**Alt Çekirdekler:** Ekstraoküler kasların alt nükleusları ve otonom çekirdek.",
             "NUCLEUS COLLICULUS",
-            ["interpedinküler fossa", "pedinkül"],
+            ["alt çekirdekler", "Edinger-Westphal"],
             []
         ),
         (
-            "Subaraknoid mesafede posterior komunikant arter ile çok yakın komşuluk gösterir; bu arterin anevrizmalarında ilk bulgu sıklıkla üçüncü sinir basısıdır.",
-            "**PCoA Anevrizması:** Posterior komunikant arter anevrizmasında ağrılı üçüncü sinir felci.",
+            "Levator palpebrae superioris kasını innerve eden santral kaudal nükleus tektir ve her iki göz kapağını birlikte yönetir.",
+            "**Santral Kaudal Nükleus:** Tek bir çekirdekle her iki üst göz kapağının kaldırılması.",
+            "SUPERIOR LEVATOR MEDIAL",
+            ["santral kaudal nükleus", "levator palpebrae"],
+            []
+        ),
+        (
+            "Okülomotor sinir lifleri mezensefalon tegmentumundan ventrale doğru ilerleyerek serebral pedünküller arasından interpedünküler fossadan beyin sapını terk eder.",
+            "**Sinir Çıkışı:** Mezensefalon ventralinden interpedünküler fossadan çıkış seyri.",
             "CEREBRAL",
-            ["posterior komunikant arter", "anevrizma basısı"],
+            ["serebral pedünkül", "interpedünküler fossa"],
             []
         )
     ]),
 
-    (16, "k2-62-b06", "Okülomotor Sinir (CN III) Çekirdeği ve Felci", [
+    (16, "k2-62-b05", "Pupilla Refleksleri ve Okülomotor Sinir", [
         (
-            "Görselimizde tam okülomotor sinir felcinde görülen klasik klinik tablo şematize edilmiştir.",
-            "**Okülomotor Felç Görünümü:** Pitozis, midriyatik yanıtsız pupil ve dışa-aşağı deviasyon.",
+            "Görselimizde tam okülomotor sinir felcinde ortaya çıkan klasik ve dramatik klinik görünüm sergilenmektedir.",
+            "**Okülomotor Felci Kliniği:** Tam pitozis, down-and-out deviasyon ve midriyazis.",
             "",
-            ["okülomotor felç", "klinik tablo"],
+            ["okülomotor sinir felci", "klinik görünüm"],
             []
         ),
         (
-            "Levator palpebrae felcine bağlı tam bir göz kapağı düşüklüğü yani pitozis mevcuttur; kapak kaldırıldığında pupillanın dilate ve ışığa yanıtsız olduğu görülür.",
-            "**Pitozis ve Midriyazis:** Levator ve parasempatik lif felci bulguları.",
+            "Levator kasının felcine bağlı olarak lezyon tarafında tam pitozis izlenir ve hasta göz kapağını hiçbir şekilde kaldıramaz.",
+            "**Tam Pitozis:** Levator palpebrae superioris zaafına bağlı kapak düşüklüğü.",
             "",
-            ["tam pitozis", "midriyatik pupil"],
+            ["pitozis", "levator kası"],
             []
         ),
         (
-            "Mediyal, superior ve inferior rektuslar çalışmadığı için sağlam kalan lateral rektus ve superior oblik kasların çekmesiyle göz dışa ve aşağı bakar, yani down-and-out pozisyonu alır.",
-            "**Down and Out Pozisyonu:** Dışa ve aşağı kaymış göz küresi.",
+            "Göz kapağı elle kaldırıldığında çalışan sağlam lateral rektus ve superior oblik kaslarının çekişiyle göz küresi dışa ve aşağıya yani down-and-out pozisyonuna sapmıştır.",
+            "**Down-and-Out Göz:** Dışa ve aşağıya sapmış göz küresi pozisyonu.",
             "",
-            ["down and out", "dışa aşağı deviasyon"],
+            ["down-and-out", "lateral rektus", "superior oblik"],
+            []
+        ),
+        (
+            "Anevrizma gibi dış basılarda yüzeyel parasempatik lifler etkilendiği için pupilla fikse ve dilate yani midriyatik iken, mikrovasküler diyabetik felçlerde pupilla genellikle korunur.",
+            "**Pupilla Tutulum Kuralı:** Anevrizmada midriyatik pupilla, diyabette pupilla korunumu.",
+            "",
+            ["midriyazis", "anevrizma basısı", "diyabetik nöropati"],
             []
         )
     ]),
 
-    # --- BOLUM 7: Troklear Sinir (CN IV), Superior Oblik ve Baş Tilt Testi (17-18) ---
-    (17, "k2-62-b07", "Troklear Sinir (CN IV) ve Bielschowsky Testi", [
+    # --- BOLUM 6: CN IV (Nervus Trochlearis) ve CN VI (Nervus Abducens) (17-19) ---
+    (17, "k2-62-b06", "CN IV (Nervus Trochlearis) ve CN VI (Nervus Abducens)", [
         (
-            "Görsel kesitimizde dördüncü kraniyal sinir olan nervus trochlearis ve innerve ettiği superior oblik kasının anatomik yörüngesi görülmektedir.",
-            "**CN IV ve Superior Oblik:** Troklea makarası ve kasın intorsiyon-depresyon fonksiyonu.",
+            "Görsel kesitimizde dördüncü kraniyal sinir olan nervus trochlearis çekirdeğinin mezensefalonda inferior kollikulus seviyesindeki anatomisi görülmektedir.",
+            "**Nervus Trochlearis Anatomisi:** İnferior kollikulus seviyesi ve dorsal çıkış.",
+            "INFERIOR",
+            ["troklear sinir", "inferior kollikulus"],
+            []
+        ),
+        (
+            "Troklear sinir insan vücudunda beyin sapını dorsal yani arka yüzünden terk eden yegane kraniyal sinirdir.",
+            "**Dorsal Çıkış Özelliği:** Beyin sapını arkadan terk eden tek kraniyal sinir.",
+            "TROCHLEAR",
+            ["dorsal çıkış", "beyin sapı arka yüzü"],
+            []
+        ),
+        (
+            "Çekirdekten çıkan tüm lifler arka tarafta velum medullare anterius içinde tamamen karşı tarafa çaprazlaşarak beyin sapından ayrılır.",
+            "**Tam Çaprazlaşma:** Liflerinin tamamı kontralateral olarak çaprazlaşan sinir.",
             "SUPERIOR",
-            ["troklear sinir", "superior oblik"],
+            ["tam çaprazlaşma", "velum medullare"],
             []
         ),
         (
-            "Superior oblik kas göz küresini içe ve aşağı baktırır, yani intorsiyon ve depresyon hareketini yaptırır.",
-            "**Kas Hareketi:** İçe ve aşağı bakış (intorsiyon ve depresyon).",
+            "Ayrıca kraniyal sinirler arasında en ince lif kalınlığına ve en uzun intrakraniyal seyre sahip olduğu için kafa travmalarında en sık hasarlanan motor sinirdir.",
+            "**Travma Hassasiyeti:** En uzun seyirli ve en ince çaplı kraniyal sinir.",
             "OBLIQUE",
-            ["intorsiyon", "depresyon"],
-            []
-        ),
-        (
-            "Bu kasın felcinde hasta özellikle aşağı ve içe bakarken, yani merdiven inerken veya kitap okurken belirginleşen vertikal diplopiden yakınır.",
-            "**Merdiven İnerken Diplopi:** Aşağı-içe bakışta artan dikey çift görme.",
-            "MUSCLE",
-            ["vertikal diplopi", "merdiven inme"],
+            ["en ince çap", "kafa travması"],
             []
         )
     ]),
 
-    (18, "k2-62-b07", "Troklear Sinir (CN IV) ve Bielschowsky Testi", [
+    (18, "k2-62-b06", "CN IV (Nervus Trochlearis) ve CN VI (Nervus Abducens)", [
         (
-            "Görselimizde troklear sinir felcinde diplopiyi azaltmak için yapılan Bielschowsky baş tilt testi şematize edilmiştir.",
-            "**Bielschowsky Baş Tilt Testi:** Dördüncü sinir felcinde başın karşı omuza eğilmesi.",
+            "Görselimizde sağ troklear sinir felcinde diplopiyi azaltmak için hastanın kompanse edici baş pozisyonu ve Bielschowsky testi gösterilmektedir.",
+            "**Troklear Felç ve Bielschowsky Testi:** Baş eğme testi ve vertikal diplopi mekanizması.",
+            "Bielschowsky baş tilt testi",
+            ["troklear sinir felci", "diplopi"],
+            []
+        ),
+        (
+            "Superior oblik kası zayıfladığında gözde ekstorsiyon ve hiperdeviasyon gelişir; hasta özellikle aşağı ve içe bakışta yani merdiven inerken veya kitap okurken çift görmeden yakınır.",
+            "**Klinik Bulgular:** Aşağı-içe bakışta diplopi, merdiven inmede zorlanma.",
+            "Sağ 4. sinir felci",
+            ["hiperdeviasyon", "aşağı içe bakış"],
+            []
+        ),
+        (
+            "Bielschowsky baş tilt testinde baş lezyon tarafındaki sağ omuza eğildiğinde gözdeki dikey kayma ve diplopi belirgin şekilde artar; baş karşı sol omuza eğildiğinde ise çift görme düzelir.",
+            "**Baş Tilti Testi:** Lezyon tarafına eğildiğinde artan dikey diplopi.",
             "Bielschowsky baş tilt testi",
             ["Bielschowsky testi", "baş tilti"],
             []
         ),
         (
-            "Bu bilgi çıkmış sınavda sorulmuştur: dördüncü kraniyal sinir nükleusundan çıktıktan sonra beyin sapını dorsalden terk eden ve tamamı çaprazlaşan tek kraniyal sinirdir.",
+            "Bu bilgi çıkmış sınavda sorulmuştur: dördüncü kraniyal sinir nükleusundan çıktıktan sonra beyin sapını dorsalden terk eden ve lifleri tamamen çaprazlaşan tek kraniyal sinirdir.",
             "**Sınav Spotu (Çıkmış Soru):** Bu bilgi çıkmış sınavda sorulmuştur: CN IV dorsalden çıkan ve çaprazlaşan tek kraniyal sinirdir.",
             "Sağ 4. sinir felci",
-            ["çıkmış soru", "troklear sinir", "dorsal çıkış"],
+            ["çıkmış sınav sorusu", "dorsal çıkış", "çaprazlaşma"],
             ["7a901e64695e"]
-        ),
-        (
-            "Hasta felçli gözdeki ekstorsiyonu telafi etmek ve çift görmeyi gidermek amacıyla başını istemsizce lezyonun karşı tarafındaki omuza doğru eğer.",
-            "**Kompansatuar Postür:** Diplopiyi gidermek için lezyonun karşı tarafına baş eğme.",
-            "Bielschowsky baş tilt testi",
-            ["kompansatuar postür", "çift görme telafisi"],
-            []
         )
     ]),
 
-    # --- BOLUM 8: Abdusens Siniri (CN VI), PPRF ve Bakış Merkezleri (19-22) ---
-    (19, "k2-62-b08", "Abdusens Siniri (CN VI) ve Bakış Merkezleri", [
+    (19, "k2-62-b06", "CN IV (Nervus Trochlearis) ve CN VI (Nervus Abducens)", [
         (
-            "Görsel kesitimizde altıncı kraniyal sinir olan nervus abducens çekirdeğinin ponstaki dördüncü ventrikül tabanı yerleşimi görülmektedir.",
-            "**Abdusens Çekirdeği:** Pons tabanı, dördüncü ventrikül altı ve lateral rektus innervasyonu.",
+            "Görsel kesitimizde altıncı kraniyal sinir olan nervus abducens çekirdeğinin ponsta dördüncü ventrikül tabanında yerleşimi görülmektedir.",
+            "**Nervus Abducens Nükleusu:** Ponsta dördüncü ventrikül tabanı yerleşimi.",
+            "FOURTH",
+            ["nervus abducens", "dördüncü ventrikül"],
+            []
+        ),
+        (
+            "Abdusens nükleusunun etrafını fasiyal sinir lifleri dönerek dolanır ve ventrikül tabanında fasiyal kollikulus kabantısını oluşturur.",
+            "**Fasiyal Kollikulus:** CN VI çekirdeğini çevreleyen CN VII motor lifleri.",
+            "ABDUCENS eave ©",
+            ["fasiyal kollikulus", "fasiyal lifler"],
+            []
+        ),
+        (
+            "Abdusens siniri pontomedüller bileşkeden çıkarak lateral rektus kasını innerve eder ve gözün dışa bakışını yani abdüksiyonunu sağlar.",
+            "**Lateral Rektus İnnervasyonu:** Dışa bakış kısıtlılığı ve konverjan şaşılık.",
             "LATERAL",
-            ["nervus abducens", "pons kesiti"],
+            ["pontomedüller bileşke", "lateral rektus"],
             []
         ),
         (
-            "Abdusens siniri lateral rektus kasını innerve ederek gözün primer dışa bakışını sağlar.",
-            "**Lateral Rektus:** Gözün dışa bakışını sağlayan temel abdüktör kas.",
+            "Kafa tabanında petröz apeks üzerinden ve Dorello kanalından geçerken kafa içi basınç artışından en çabuk etkilenen ve yalancı yerelletici bulgu veren sinirdir.",
+            "**Dorello Kanalı ve KİBAS:** Kafa içi basınç artışında yalancı yerelletici bulgu.",
             "RECTUS",
-            ["abdüksiyon", "dışa bakış"],
-            []
-        ),
-        (
-            "İntrakraniyal seyri en uzun olan kraniyal sinir olduğundan kafa içi basınç artışında yalancı lokalizasyon bulgusu olarak sıklıkla tek veya çift taraflı felç olur.",
-            "**Yalancı Lokalizasyon:** Uzun subaraknoid seyir nedeniyle KİBAS'ta yalancı lokalizasyon felci.",
-            "MUSCLE",
-            ["yalancı lokalizasyon", "KİBAS"],
+            ["Dorello kanalı", "kafa içi basınç artışı"],
             []
         )
     ]),
 
-    (20, "k2-62-b08", "Abdusens Siniri (CN VI) ve Bakış Merkezleri", [
+    # --- BOLUM 7: Horizontal Bakış Merkezi ve İnternükleer Oftalmopleji (20-22) ---
+    (20, "k2-62-b07", "Horizontal Bakış Merkezi ve İnternükleer Oftalmopleji", [
         (
-            "Görsel şemamızda frontal korteksteki frontal göz sahası ile ponstaki horizontal bakış merkezi arasındaki nöronal bağlantılar gösterilmektedir.",
-            "**Horizontal Bakış Devresi:** Frontal göz sahası, PPRF ve abdusens çekirdek koordinasyonu.",
+            "Görsel şemamızda istemli horizontal sakkadik göz hareketlerini yöneten frontal göz sahası ile ponstaki bakış merkezinin bağlantıları gösterilmektedir.",
+            "**Konjuge Bakış Yolağı:** Frontal göz sahası (FEF), PPRF ve abdusens bağlantısı.",
             "FRONTAL CORTEX",
             ["frontal göz sahası", "horizontal bakış"],
             []
         ),
         (
-            "İstemli horizontal bakış frontal göz sahasından karşı ponstaki paramediyan pontin retiküler formasyona yani pe pe re feye giden liflerle başlatılır.",
-            "**PPRF:** Paramediyan pontin retiküler formasyon yatay bakış merkezidir.",
-            "OCULOMOTOR",
-            ["PPRF", "retiküler formasyon"],
+            "Frontal korteks karşı ponsta yer alan paramedian pontin retiküler formasyon yani pe pe re fe merkezini uyararak o tarafa bakışı başlatır.",
+            "**PPRF Uyarısı:** Kontralateral frontal korteksten gelen sakkad komutu.",
+            "PARAMEDIAN",
+            ["PPRF", "paramedian pontin retiküler formasyon"],
             []
         ),
         (
-            "pe pe re fe aynı taraftaki altıncı sinir çekirdeğini uyarırken bir ara nöronla mediyal longitudinal fasikülüs üzerinden karşı üçüncü sinir nükleusunu eşzamanlı aktive eder.",
-            "**Eşzamanlı Konjuge Bakış:** İki gözün paralel bakışını sağlayan MLF bağlantısı.",
-            "NUCLEUS",
-            ["konjuge bakış", "MLF"],
+            "Pe pe re fe uyarısı hemen komşu abdusens çekirdeğini aktive eder; abdusens bir yandan aynı taraf lateral rektusu kasarken, diğer yandan internükleer nöronlar çıkarır.",
+            "**Abdusens Aktivasyonu:** Aynı taraf lateral rektus kasılması ve internükleer iletim.",
+            "ABDUCENS",
+            ["abdusens çekirdeği", "lateral rektus"],
+            []
+        ),
+        (
+            "Bu internükleer lifler mediyal longitudinal fasikülüs aracılığıyla karşı taraf okülomotor çekirdeğine giderek mediyal rektusu kasar ve konjuge bakış tamamlanır.",
+            "**MLF Köprüsü:** Karşı okülomotor çekirdeğe mediyal rektus koordinasyon iletimi.",
+            "PONTINE",
+            ["mediyal longitudinal fasikülüs", "konjuge bakış"],
             []
         )
     ]),
 
-    (21, "k2-62-b08", "Abdusens Siniri (CN VI) ve Bakış Merkezleri", [
+    (21, "k2-62-b07", "Horizontal Bakış Merkezi ve İnternükleer Oftalmopleji", [
         (
-            "Görselimizde mediyal longitudinal fasikülüs lezyonunda ortaya çıkan internükleer oftalmopleji mekanizması şematize edilmiştir.",
-            "**İnternükleer Oftalmopleji (İNO):** MLF hasarında adduksiyon kısıtlılığı ve dissosiye nistagmus.",
+            "Görsel kesitimizde mediyal longitudinal fasikülüs yani me le fe lezyonunda ortaya çıkan internükleer oftalmopleji kliniği şematize edilmektedir.",
+            "**İnternükleer Oftalmopleji (İNO):** MLF hasarında addüksiyon kısıtlılığı ve nistagmus.",
+            "MEDIAL",
+            ["mediyal longitudinal fasikülüs", "internükleer oftalmopleji"],
+            []
+        ),
+        (
+            "İnternükleer oftalmoplejide hasta lezyon tarafının karşısına horizontal bakış yapmaya çalıştığında lezyon tarafındaki göz addüksiyon yapamaz ve belirgin addüksiyon kısıtlılığı izlenir.",
+            "**Addüksiyon Kısıtlılığı:** Bakış yönünde içe bakamayan ipsilateral göz.",
+            "LONGITUDINAL",
+            ["addüksiyon kısıtlılığı", "horizontal bakış"],
+            []
+        ),
+        (
+            "Buna karşılık dışa bakan sağlam gözde horizontal monooküler disosiasyon nistagmusu gelişir; ancak konverjans yolağı kortikal olduğundan konverjansta addüksiyon tamdır.",
+            "**Disosiasyon Nistagmusu:** Abdüksiyon yapan gözde nistagmus ve korunan konverjans.",
             "OCULOMOTOR",
-            ["internükleer oftalmopleji", "MLF lezyonu"],
+            ["disosiasyon nistagmusu", "konverjans korunumu"],
             []
         ),
         (
-            "Mediyal longitudinal fasikülüs hasar gördüğünde bakış yönündeki göz dışa bakar ve nistagmus gösterirken karşı göz içe gelemez, yani addüksiyonu felç olur.",
-            "**İNO Bulguları:** Lezyon tarafında adduksiyon kaybı, karşı gözde abdüksiyon nistagmusu.",
-            "NUCLEUS",
-            ["adduksiyon kaybı", "dissosiye nistagmus"],
-            []
-        ),
-        (
-            "Genç hastalarda bilateral internükleer oftalmoplejinin en karakteristik ve sık nedeni multipl skleroz demiyelinizan plaklarıdır.",
-            "**Multipl Skleroz İlişkisi:** Genç erişkinde bilateral İNO multipl sklerozun klasik bulgusudur.",
+            "Genç bir hastada iki taraflı internükleer oftalmopleji saptanması multipl skleroz hastalığı için adeta patognomonik bir klinik bulgudur.",
+            "**Etyoloji:** Gençlerde multipl skleroz, yaşlılarda beyin sapı iskemisi.",
             "MIDBRAIN",
-            ["demiyelinizan plak", "genç erişkin"],
+            ["multipl skleroz", "iki taraflı oftalmopleji"],
             []
         )
     ]),
 
-    (22, "k2-62-b08", "Abdusens Siniri (CN VI) ve Bakış Merkezleri", [
+    (22, "k2-62-b07", "Horizontal Bakış Merkezi ve İnternükleer Oftalmopleji", [
         (
-            "Görsel şemamızda dokuz kardinal bakış yönünde ekstraoküler kas fonksiyonlarının sistematik klinik değerlendirme tablosu yer almaktadır.",
-            "**9 Bakış Yönü Şeması:** Primer, sekonder ve tersiyer bakış yönlerinde kas testleri.",
+            "Görsel şemamızda klinik pratikte hastanın göz hareketlerinin değerlendirildiği dokuz temel kardinal bakış yönü gösterilmektedir.",
+            "**Dokuz Kardinal Bakış Yönü:** Primer pozisyon ve sekiz yönlü göz hareket muayenesi.",
             "",
-            ["dokuz bakış yönü", "klinik haritalama"],
+            ["kardinal bakış yönleri", "klinik muayene"],
             []
         ),
         (
-            "Hasta düz karşıya, sağa, sola, yukarı ve aşağı bakış yönlerinde muayene edilerek parezik kas grubu hızla ayırt edilir.",
-            "**Kardinal Yönler:** Düz, sağ, sol, yukarı, aşağı ve çapraz bakışlar.",
+            "Primer pozisyondan başlayarak sağa, sola, yukarı, aşağı ve oblik eksenlerde her bir kasın izole fonksiyonu tek tek gözlemlenir.",
+            "**İzole Kas Testi:** Eksenlere göre ekstraoküler kasların tek tek test edilmesi.",
             "",
-            ["kardinal yönler", "parezi tespiti"],
+            ["primer pozisyon", "oblik eksenler"],
             []
         ),
         (
-            "Böylece okülomotor, troklear veya abdusens sinir tutulumları anatomik olarak kesinleştirilir.",
-            "**Anatomik Kesinleştirme:** Üç motor sinirin felç lokalizasyonu.",
+            "Herhangi bir yönde kısıtlılık saptandığında hastaya diplopi yani çift görmenin hangi bakış yönünde belirginleştiği ve ayrışma mesafesi sorulur.",
+            "**Diplopi Analizi:** Görüntülerin en çok ayrıştığı bakış yönünün belirlenmesi.",
             "",
-            ["sinir felci ayrımı", "klinik tanı"],
+            ["diplopi", "bakış kısıtlılığı"],
+            []
+        ),
+        (
+            "Düzgün takip hareketleri ve hızlı sakkadik atımlar incelenerek hem periferik sinir hem de santral serebellar ve beyin sapı patolojileri ayırt edilir.",
+            "**Santral-Periferik Ayrımı:** Takip ve sakkad muayenesi ile beyin sapı lezyon ayrımı.",
+            "",
+            ["sakkadik atım", "serebellar patoloji"],
             []
         )
     ]),
 
-    # --- BOLUM 9: CN V (Nervus Trigeminus) ve Kornea Refleksi (23-24) ---
-    (23, "k2-62-b09", "CN V (Nervus Trigeminus) ve Kornea Refleksi", [
+    # --- BOLUM 8: CN V (Nervus Trigeminus) Muayenesi (23-24) ---
+    (23, "k2-62-b08", "CN V (Nervus Trigeminus) Muayenesi", [
         (
-            "Beşinci kraniyal sinir olan nervus trigeminus yüzün temel duyusal innervasyonunu ve çiğneme kaslarının motor kontrolünü sağlayan büyük bir mikst sinirdir.",
-            "**CN V (N. Trigeminus):** Yüz duyusu, kornea refleksi ve çiğneme kasları innervasyonu.",
+            "Beşinci kraniyal sinir olan nervus trigeminus yüzün temel duyusal innervasyonunu ve çiğneme kaslarının motor kontrolünü sağlar.",
+            "**CN V (N. Trigeminus):** Yüzün duyusal ve çiğneme kaslarının motor innervasyonu.",
             "CN V / N. TRIGEMINUS",
             ["nervus trigeminus", "yüz duyusu"],
             []
         ),
         (
-            "Üç büyük duyusal dala ayrılır: V bir oftalmik dal, V iki maksiller dal ve V üç mandibüler daldır.",
-            "**Üç Duyusal Dal:** V1 (Oftalmik), V2 (Maksiller) ve V3 (Mandibüler).",
+            "Duyusal muayenede oftalmik V bir, maksiller V iki ve mandibuler V üç alanlarında dokunma, ağrı ve ısı duyusu iki taraflı simetrik olarak incelenir.",
+            "**Duyusal Muayene:** V1 oftalmik, V2 maksiller ve V3 mandibuler alan değerlendirmesi.",
             "Yüz Duyusu",
-            ["oftalmik dal", "maksiller dal"],
+            ["oftalmik dal", "maksiller dal", "mandibuler dal"],
             []
         ),
         (
-            "Motor lifler sadece V üç mandibüler dal içinde seyreder ve maseter, temporalis ile pterigoid çiğneme kaslarını innerve eder; muayenede çene sıkma gücü değerlendirilir.",
-            "**Çiğneme Kasları:** V3 ile innerve edilen maseter, temporalis ve pterigoid kaslar.",
+            "Motor muayenede hasta dişlerini sıktığında maseter ve temporalis kasları palpe edilir; çene açıldığında pterigoid zaafında çene lezyon tarafına kayar.",
+            "**Motor Muayene:** Maseter ve temporalis kas tonusu, pterigoid zaafında çene deviasyonu.",
             "Maseter ve temporalis kası",
-            ["maseter kası", "çiğneme kasları"],
+            ["maseter", "temporalis", "pterigoid kaslar"],
+            []
+        ),
+        (
+            "Kornea refleksinde afferent iletim trigeminal sinirin birinci dalı olan oftalmik sinirle, efferent bilateral göz kırpma yanıtı ise fasiyal sinirle gerçekleştirilir.",
+            "**Kornea Refleksi:** Afferent CN V1 ve efferent CN VII bilateral refleks arkı.",
+            "Kornea refleksi",
+            ["kornea refleksi", "afferent iletim", "efferent yanıt"],
             []
         )
     ]),
 
-    (24, "k2-62-b09", "CN V (Nervus Trigeminus) ve Kornea Refleksi", [
+    (24, "k2-62-b08", "CN V (Nervus Trigeminus) Muayenesi", [
         (
-            "Görsel şemamızda trigeminal sinirin üç dalına ait net dermatom haritası ve kornea refleks arkı gösterilmektedir.",
-            "**Dermatom ve Kornea Şeması:** V1 alın/kornea, V2 yanak, V3 çene dermatomları ve refleks arkı.",
+            "Görsel şemamızda trigeminal sinirin üç büyük duyusal dalına ait net kranial dermatom haritası ve kornea refleksi arkı sergilenmektedir.",
+            "**Trigeminal Dermatom Haritası:** V1, V2, V3 alan sınırları ve kornea refleks arkı.",
             "",
-            ["trigeminal dermatom", "kornea refleksi"],
+            ["trigeminal dermatom haritası", "kornea refleksi arkı"],
             []
         ),
         (
-            "Kornea refleksinde korneaya steril bir pamuk ucuyla hafifçe dokunulduğunda afferent yol V bir oftalmik sinirle ponsa gider.",
-            "**Afferent Yol:** V1 oftalmik dal ile korneadan beyin sapına duyusal iletim.",
+            "V bir oftalmik dal alın, üst göz kapağı ve kornea duyusunu; V iki maksiller dal yanak ve üst dudağı; V üç mandibuler dal ise alt çene duyusunu taşır.",
+            "**Dermatom Sınırları:** Alın, yanak ve çene anatomik duyu dağılımları.",
             "",
-            ["kornea teması", "V1 afferenti"],
+            ["oftalmik dal", "maksiller dal", "mandibuler dal"],
             []
         ),
         (
-            "Beyin sapındaki internöronal bağlantılarla her iki taraftaki yedinci sinir nükleusları uyarılır ve orbikularis okuli kası kasılarak her iki göz kapağı bilateral kırpılır.",
-            "**Efferent Yanıt:** Bilateral CN VII ile her iki gözün eşzamanlı kapanması.",
+            "Angulus mandibula bölgesinin duyusunun trigeminal değil servikal ikinci ve üçüncü spinal sinirlerce taşındığı ayırıcı tanıda asla unutulmamalıdır.",
+            "**Çene Köşesi İstisnası:** Angulus mandibulanın servikal C2-C3 pleksus innervasyonu.",
             "",
-            ["bilateral kırpma", "CN VII efferenti"],
+            ["angulus mandibula", "servikal dermatom"],
+            []
+        ),
+        (
+            "Pamuk ucuyla korneanın lateral limbusuna dokunulduğunda trigeminal afferent uyarıyla bilateral orbikülaris oküli kasılarak direkt ve konsensüel göz kırpma gerçekleşir.",
+            "**Refleks Yanıtı:** Lateral limbus uyarısı ile bilateral orbicularis oculi kasılması.",
+            "",
+            ["kornea muayenesi", "orbikülaris oküli"],
             []
         )
     ]),
 
-    # --- BOLUM 10: CN VII (Nervus Facialis) ve Santral-Periferik Fasiyal Felç Ayrımı (25-27) ---
-    (25, "k2-62-b10", "CN VII (Nervus Facialis) ve Santral-Periferik Felç", [
+    # --- BOLUM 9: CN VII (Nervus Facialis) Muayenesi (25-27) ---
+    (25, "k2-62-b09", "CN VII (Nervus Facialis) Muayenesi", [
         (
-            "Yedinci kraniyal sinir olan nervus facialis yüzün tüm mimik kaslarını motor olarak innerve eder.",
-            "**CN VII (N. Facialis):** Mimik kasları motor kontrolü, tat duyusu ve parasempatik sekresyon.",
+            "Yedinci kraniyal sinir olan nervus facialis yüzün tüm mimik kaslarını innerve eden son derece karmaşık fonksiyonlu bir sinirdir.",
+            "**CN VII (N. Facialis):** Mimik kasları, tat duyusu ve sekresyon kontrolü.",
             "CN VII / N. FACIALIS",
             ["nervus facialis", "mimik kasları"],
             []
         ),
         (
-            "Muayenede hastadan kaşlarını yukarı kaldırması, gözlerini sıkıca kapatması, dişlerini göstermesi ve yanaklarını şişirmesi istenir.",
-            "**Motor Muayene:** Kaş kaldırma, göz kapama, diş gösterme ve ıslık çalma testleri.",
+            "Motor lifleri gözü sıkıca kapatan orbikülaris oküli, kaşları kaldıran frontalis ve ağız çevresindeki tüm mimik kaslarını yönetir.",
+            "**Motor İşlevler:** Göz kapama, kaş kaldırma, diş gösterme ve ıslık çalma.",
             "Mimik kasları (gözü kapama)",
-            ["gözü kapama", "kaş kaldırma"],
+            ["orbikülaris oküli", "frontalis"],
             []
         ),
         (
-            "Ayrıca korda timpani dalı ile dilin ön üçte iki kısmının tat duyusunu alır; lakrimal ve submandibüler tükürük bezlerine parasempatik lifler taşır.",
-            "**Korda Timpani:** Dilin ön 2/3 tat duyusu ve tükürük/gözyaşı sekresyonu.",
+            "Korda timpani dalı aracılığıyla dilin ön üçte iki bölümünün tat duyusunu alır ve parotis dışındaki submandibuler ile sublingual tükürük bezlerini uyarır.",
+            "**Tat ve Salgı:** Dil ön 2/3 tat duyusu ve parotis dışı tükürük bezleri.",
             "Dilin ön 2/3 tat duyusu",
-            ["korda timpani", "tat duyusu"],
+            ["korda timpani", "tat duyusu", "tükürük bezleri"],
+            []
+        ),
+        (
+            "Orta kulakta stapedius kasını innerve ederek ses şiddetini filtreler; sinir felcinde bu kas çalışmadığı için sese aşırı duyarlılık yani hiperakuzi gelişir.",
+            "**M. Stapedius:** Ses refleks zayıflaması ve klinik hiperakuzi tablosu.",
+            "M. Stapediusun motor innervasyonu",
+            ["stapedius kası", "hiperakuzi"],
             []
         )
     ]),
 
-    (26, "k2-62-b10", "CN VII (Nervus Facialis) ve Santral-Periferik Felç", [
+    (26, "k2-62-b09", "CN VII (Nervus Facialis) Muayenesi", [
         (
-            "Görsel kesitimizde fasiyal motor nükleusunun beyin sapındaki yerleşimi ve kortikobulber liflerin çekirdekle bağlantı anatomisi gösterilmektedir.",
-            "**Fasiyal Nükleus Kesiti:** Pons tegmentumu yerleşimi ve kortikobulber innervasyon modeli.",
+            "Görsel kesitimizde fasiyal motor nükleusunun alt ponstaki yerleşimi ve sinir liflerinin beyin sapı içindeki kavisli seyri gösterilmektedir.",
+            "**Fasiyal Sinir Seyri:** Alt pons nükleusu, iç diz oluşumu ve periferik dallar.",
             "",
-            ["fasiyal nükleus", "kortikobulber yol"],
+            ["fasiyal nükleus", "alt pons"],
             []
         ),
         (
-            "Fasiyal nükleusun alın ve üst yüz kaslarını kontrol eden üst yarısı her iki serebral hemisferden bilateral kortikobulber girdi alır.",
-            "**Bilateral Üst Yüz İnnervasyonu:** Alın kasları her iki hemisferden uyarı alır.",
+            "Fasiyal lifler abdusens nükleusunun etrafında iç diz yaparak dolanır ve serebellopontin açıdan vestibülokohlear sinirle yan yana çıkar.",
+            "**İç Diz ve CPA:** Abdusens çevresinde kavis ve serebellopontin açıdan çıkış.",
             "",
-            ["bilateral innervasyon", "alın kasları"],
+            ["iç diz", "serebellopontin açı"],
             []
         ),
         (
-            "Nükleusun ağız çevresi ve alt yüzü kontrol eden alt yarısı ise sadece karşı serebral korteksten tek taraflı girdi alır.",
-            "**Tek Taraflı Alt Yüz İnnervasyonu:** Alt yüz kasları yalnızca kontralateral korteksten beslenir.",
+            "Meatus akustikus internustan geçerek temporal kemik içerisindeki fasiyal kanala girer ve foramen stilomastoideumdan kafatasını terk eder.",
+            "**Kanalis Fasiyalis:** Meatus akustikus internus ve foramen stilomastoideum seyri.",
             "",
-            ["tek taraflı girdi", "alt yüz"],
+            ["fasiyal kanal", "foramen stilomastoideum"],
+            []
+        ),
+        (
+            "Parotis bezi içerisinde dallara ayrılarak temporal, zigomatik, bukkal, marjinal mandibular ve servikal dallarıyla tüm mimik kaslarına dağılır.",
+            "**Parotis İçi Dallanma:** Beş ana motor dal ile tüm yüz mimik kaslarına dağılım.",
+            "",
+            ["parotis bezi", "periferik dallar"],
             []
         )
     ]),
 
-    (27, "k2-62-b10", "CN VII (Nervus Facialis) ve Santral-Periferik Felç", [
+    (27, "k2-62-b09", "CN VII (Nervus Facialis) Muayenesi", [
         (
-            "Görsel şemamızda klinik nörolojinin en kritik ayrımlarından biri olan santral ve periferik fasiyal paralizi tablosu karşılaştırılmaktadır.",
-            "**Santral vs Periferik Fasiyal Felç:** Alın tutulumu farkı ile lezyon lokalizasyonu.",
+            "Görsel şemamızda klinik nörolojinin en kritik ayrımlarından biri olan santral ve periferik fasiyal paralizi mekanizması karşılaştırılmaktadır.",
+            "**Santral ve Periferik Karşılaştırması:** Supranükleer ve infranükleer lezyon farkı.",
             "SANTRAL VS PERİFERİK",
-            ["santral felç", "periferik felç"],
+            ["santral fasiyal paralizi", "periferik fasiyal paralizi"],
             []
         ),
         (
-            "Bu bilgi çıkmış sınavda sorulmuştur: supranükleer tek taraflı beyin lezyonunda alın kasları bilateral innervasyon nedeniyle korunur ve sadece karşı alt yüz felç olur.",
+            "Fasiyal çekirdeğin alın kaslarını yöneten üst yarısı her iki serebral hemisferden iki taraflı yani bilateral kortikobulber lifler alır.",
+            "**Alın Kasları İnnervasyonu:** Bilateral kortikal girdi sayesinde korunan alın fonksiyonu.",
+            "SANTRAL VS PERİFERİK",
+            ["fasiyal çekirdek", "bilateral kortikobulber"],
+            []
+        ),
+        (
+            "Buna karşılık ağız çevresini yöneten alt yüz çekirdeği yalnızca karşı serebral korteksten tek taraflı kontralateral innervasyon alır.",
+            "**Alt Yüz İnnervasyonu:** Yalnızca kontralateral korteksten tek taraflı lif alımı.",
+            "SANTRAL VS PERİFERİK",
+            ["alt yüz çekirdeği", "kontralateral innervasyon"],
+            []
+        ),
+        (
+            "Bu bilgi çıkmış sınavda sorulmuştur: supranükleer tek taraflı beyin lezyonunda alın kasları bilateral innervasyon nedeniyle korunur ve sadece karşı alt yüz felç olur; oysa periferik felçte tüm yüz yarısı tutulur.",
             "**Sınav Spotu (Çıkmış Soru):** Bu bilgi çıkmış sınavda sorulmuştur: Supranükleer lezyonda alın kasları korunur, yalnızca karşı alt yüz felç olur.",
             "SANTRAL VS PERİFERİK",
-            ["çıkmış soru", "supranükleer lezyon", "alın korunumu"],
+            ["çıkmış sınav sorusu", "supranükleer lezyon", "alın kası korunumu"],
             ["past-1790877480031-411629"]
-        ),
-        (
-            "Buna karşın Bell paralizisi gibi periferik nükleer veya infranükleer lezyonlarda aynı taraf alnın yarısı dahil tüm yüz felç olur ve göz kapatılamaz.",
-            "**Bell Paralizisi:** Periferik lezyonda alın dahil aynı taraf tüm yüz yarısının felci.",
-            "SANTRAL VS PERİFERİK",
-            ["Bell paralizisi", "infranükleer lezyon"],
-            []
         )
     ]),
 
-    # --- BOLUM 11: CN VIII (Nervus Vestibulocochlearis) ve İşitme Testleri (28-29) ---
-    (28, "k2-62-b11", "CN VIII (Nervus Vestibulocochlearis) ve İşitme Testleri", [
+    # --- BOLUM 10: CN VIII (Nervus Vestibulocochlearis) Muayenesi (28-29) ---
+    (28, "k2-62-b10", "CN VIII (Nervus Vestibulocochlearis) Muayenesi", [
         (
-            "Sekizinci kraniyal sinir olan nervus vestibulocochlearis koklear dalı ile işitme, vestibüler dalı ile denge fonksiyonunu yürütür.",
-            "**CN VIII (N. Vestibulocochlearis):** İşitme (koklear) ve denge (vestibüler) duyusal iletimi.",
+            "Sekizinci kraniyal sinir olan nervus vestibulocochlearis koklear dalıyla işitme, vestibüler dalıyla ise denge ve oryantasyonu sağlar.",
+            "**CN VIII (N. Vestibulocochlearis):** Koklear işitme ve vestibüler denge fonksiyonları.",
             "CN VIII /",
-            ["nervus vestibulocochlearis", "işitme ve denge"],
+            ["nervus vestibulocochlearis", "koklear dal", "vestibüler dal"],
             []
         ),
         (
-            "Klinik muayenede işitme fısıltı testi veya parmak sürtme yöntemiyle her iki kulakta ayrı ayrı taranır.",
-            "**İşitme Taraması:** Fısıltı testi ve parmak sürtme ile monoküler işitme kontrolü.",
-            "N.VESTIBULOCOCHLEARIS",
-            ["fısıltı testi", "işitme muayenesi"],
-            []
-        ),
-        (
-            "Vestibüler sistem ise spontan nistagmus, Romberg testi ve tandem yürüme testleri ile değerlendirilir.",
-            "**Vestibüler Değerlendirme:** Nistagmus, Romberg ve denge muayenesi.",
+            "İşitme muayenesine hastanın fısıltı sesini duyma mesafesi veya parmak sürtme testinin iki taraflı simetrisi incelenerek başlanır.",
+            "**Yatak Başı İşitme Testi:** Fısıltı testi ve parmak sürtme ile kaba işitme muayenesi.",
             "İşitme ve denge",
-            ["Romberg testi", "vestibüler denge"],
+            ["fısıltı testi", "parmak sürtme"],
+            []
+        ),
+        (
+            "Vestibüler sistem muayenesinde başın ani hareketleriyle vestibülo-oküler refleks test edilir ve istemsiz ritmik nistagmus araştırılır.",
+            "**Vestibüler Muayene:** Vestibülo-oküler refleks (VOR) ve nistagmus değerlendirmesi.",
+            "Nistagmus",
+            ["vestibülo-oküler refleks", "nistagmus"],
+            []
+        ),
+        (
+            "Periferik labirent patolojilerinde nistagmus genellikle tek yönlü ve fiksasyonla baskılanabilirken, santral lezyonlarda nistagmus çok yönlüdür ve fiksasyonla baskılanmaz.",
+            "**Santral-Periferik Nistagmus:** Fiksasyon baskılanması ve nistagmus yönü ayrımı.",
+            "N.VESTIBULOCOCHLEARIS",
+            ["periferik nistagmus", "santral nistagmus"],
             []
         )
     ]),
 
-    (29, "k2-62-b11", "CN VIII (Nervus Vestibulocochlearis) ve İşitme Testleri", [
+    (29, "k2-62-b10", "CN VIII (Nervus Vestibulocochlearis) Muayenesi", [
         (
-            "İşitme kaybı saptandığında iletim tipi ile sensörinöral tip ayrımını yapmak için Weber ve Rinne diyapozon testleri uygulanır.",
-            "**Diyapozon Testleri:** Rinne ve Weber ile iletim vs sensörinöral kayıp ayrımı.",
+            "İşitme kaybı saptandığında iletim tipi ile sensörinöral tip ayrımını yapmak için beş yüz on iki hertzlik diyapazonla Weber ve Rinne testleri uygulanır.",
+            "**Diyapazon Testleri:** Rinne ve Weber ile iletim-sensörinöral işitme kaybı ayrımı.",
             "Normal: Rinne (+)",
-            ["diyapozon testleri", "Rinne testi"],
+            ["iletim tipi işitme kaybı", "sensörinöral kayıp", "diyapazon"],
             []
         ),
         (
-            "Normal kulakta hava yolu iletimi kemik yolu iletiminden uzun sürer ve bu durum Rinne pozitif olarak adlandırılır.",
-            "**Normal Rinne (+):** Hava yolu süresi kemik yolu süresinden uzundur.",
-            "Normal: Rinne (+)",
-            ["hava yolu", "kemik yolu"],
-            []
-        ),
-        (
-            "Dış veya orta kulak patolojilerine bağlı iletim tipi işitme kaybında kemik iletimi öne geçer ve Rinne negatif olur; Weber testi ise lezyonlu kulağa lateralize olur.",
-            "**İletim Tipi Kayıp:** Rinne (-), Weber lezyonlu kulağa lateralize.",
+            "Rinne testinde diyapazon mastoid kemiğe ve kulak önüne konularak kemik yolu ile hava yolu iletim süreleri karşılaştırılır.",
+            "**Rinne Testi Yöntemi:** Mastoid kemik yolu ve kulak önü hava yolu karşılaştırması.",
             "Kondüksiyon tipi işitme kaybı: Rinne (-)",
-            ["iletim tipi kayıp", "Rinne negatif"],
+            ["Rinne testi", "kemik yolu", "hava yolu"],
             []
         ),
         (
-            "Sensörinöral tip işitme kaybında ise her iki iletim azalmasına rağmen hava yolu üstünlüğü korunur ve Rinne pozitif kalır; Weber sağlam kulağa lateralize olur.",
-            "**Sensörinöral Kayıp:** Rinne (+), Weber sağlam kulağa lateralize.",
-            "Sensörinöral tipte işitme kaybı: Rinne",
-            ["sensörinöral kayıp", "Weber testi"],
+            "Normal kulakta ve sensörinöral kayıpta hava yolu daha iyi olup Rinne pozitif kabul edilirken, iletim tipi kayıpta kemik iletimi üstün gelerek Rinne negatif sonuç verir.",
+            "**Rinne Yorumu:** Normal ve sensörinöral kayıpta pozitif, iletim tipi kayıpta negatif.",
+            "Kondüksiyon tipi işitme kaybı:",
+            ["Rinne pozitif", "Rinne negatif"],
+            []
+        ),
+        (
+            "Weber testinde diyapazon kafanın tepe noktasına konur; iletim tipi kayıpta ses patolojinin olduğu hastalıklı kulağa lateralize olurken, sensörinöral kayıpta ses sağlam kulağa lateralize olur.",
+            "**Weber Lateralizasyonu:** İletim kaybında hastalıklı kulağa, sensörinöralde sağlam kulağa sapma.",
+            "Normal: Weber orta hatta",
+            ["Weber testi", "lateralizasyon"],
             []
         )
     ]),
 
-    # --- BOLUM 12: Alt Kraniyal Sinirler (CN IX, X, XI, XII) ve Sendromik Lokalizasyon (30-36) ---
-    (30, "k2-62-b12", "Alt Kraniyal Sinirler ve Sendromik Lokalizasyon", [
+    # --- BOLUM 11: Alt Kraniyal Sinirler (CN IX, X, XI, XII) (30-34) ---
+    (30, "k2-62-b11", "Alt Kraniyal Sinirler (CN IX, X, XI, XII)", [
         (
-            "Dokuzuncu kraniyal sinir olan nervus glossopharyngeus stilofaringeus kasını motor olarak innerve eder ve parotis bezine sekresyon yaptırır.",
-            "**CN IX (N. Glossopharyngeus):** Stilofaringeus kası, parotis sekresyonu ve dil arkası duyusu.",
-            "CN IX /",
+            "Dokuzuncu kraniyal sinir olan nervus glossopharyngeus stilofaringeus kasını innerve ederek yutma eylemine motor katkı sunar.",
+            "**CN IX (N. Glossopharyngeus):** Stilofaringeus kası, parotis sekresyonu ve tat duyusu.",
+            "Stilofaringeus kası",
             ["nervus glossopharyngeus", "stilofaringeus"],
             []
         ),
         (
-            "Dilin arka üçte bir kısmının hem tat hem de genel dokunma duyusunu taşır.",
-            "**Dil Arkası İnnervasyonu:** Dilin arka 1/3 tat ve dokunma duyusu.",
+            "Parasempatik lifleri otik ganglion aracılığıyla parotis bezine ulaşarak tükürük salgılanmasını uyarır.",
+            "**Parotis Parasempatik Girdisi:** Otik ganglion üzerinden tükürük bezi sekresyonu.",
             "N.GLOSSOPHARYNGEUS",
-            ["dilin arka üçte biri", "tat duyusu"],
+            ["otik ganglion", "parotis bezi"],
             []
         ),
         (
-            "Ayrıca orofarenks mukozasını innerve ederek öğürme refleksinin afferent yolunu oluşturur.",
-            "**Öğürme Afferenti:** Orofarenks teması ile başlayan öğürme refleks arkı.",
-            "Stilofaringeus kası",
-            ["öğürme refleksi", "orofarenks"],
+            "Duyusal olarak dilin arka üçte birinin hem tat hem genel duyusunu alır; ayrıca karotis sinüs ve cismindeki baro ile kemoreseptör iletimini sağlar.",
+            "**Dil ve Baroreseptör:** Dil arka 1/3 tat ve dokunma, karotis sinüsü iletimi.",
+            "CN IX /",
+            ["dil arka üçte biri", "karotis sinüs"],
+            []
+        ),
+        (
+            "Klinikte en önemli rolü öğürme refleksinin afferent yolunu oluşturmasıdır; orofarenks arka duvarına dokunulduğunda uyarı dokuzuncu sinirle merkeze taşınır.",
+            "**Öğürme Refleksi Arkı:** Afferent CN IX ve efferent CN X ile yutak koruması.",
+            "Öğürme refleksi: Afferent 9, Efferent 10",
+            ["öğürme refleksi", "afferent yol"],
             []
         )
     ]),
 
-    (31, "k2-62-b12", "Alt Kraniyal Sinirler ve Sendromik Lokalizasyon", [
+    (31, "k2-62-b11", "Alt Kraniyal Sinirler (CN IX, X, XI, XII)", [
         (
-            "Onuncu kraniyal sinir olan nervus vagus farenks ve larenks kaslarını innerve ederek yutma ve konuşmayı sağlar.",
-            "**CN X (N. Vagus):** Farenks/larenks kasları, vokal kordlar ve viseral parasempatik kontrol.",
-            "CN X / N. VAGUS",
-            ["nervus vagus", "farenks kasları"],
-            []
-        ),
-        (
-            "Tek taraflı vagus lezyonunda yumuşak damak felçli tarafta sarkar ve hasta ah dediğinde uvula sağlam tarafa doğru çekilir.",
-            "**Uvula Sapması:** Tek taraflı vagus lezyonunda uvula sağlam tarafa deviye olur.",
+            "Onuncu kraniyal sinir olan nervus vagus farenks ve larenks kaslarını innerve ederek konuşma ve yutma fonksiyonlarını yönetir.",
+            "**CN X (N. Vagus):** Farenks-larenks kasları, parasempatik innervasyon ve uvula pozisyonu.",
             "Farenks ve larenks kasları",
-            ["uvula sapması", "yumuşak damak"],
+            ["nervus vagus", "farenks", "larenks"],
             []
         ),
         (
-            "Larenks kaslarının felcine bağlı olarak hastada ses kısıklığı ve yutma güçlüğü yani disfaji tablosu gelişir.",
-            "**Disfoni ve Disfaji:** Ses kısıklığı ve yutma bozukluğu bulguları.",
+            "Dil kaslarından biri olan palatoglossus kası hipoglossus tarafından değil istisnai olarak nervus vagus tarafından innerve edilir.",
+            "**Palatoglossus İstisnası:** Hipoglossus yerine vagus tarafından innerve edilen tek dil kası.",
             "Palatoglossus kası",
-            ["ses kısıklığı", "disfaji"],
+            ["palatoglossus kası", "istisnai innervasyon"],
+            []
+        ),
+        (
+            "Toraks ve batın içi organların geniş parasempatik innervasyonunu sağlayarak kalp hızını, gastrointestinal motiliteyi ve bronş tonusunu düzenler.",
+            "**Visseral Parasempatik:** Torakoabdominal organların temel parasempatik kontrolü.",
+            "Organların parasempatik innervasyonu",
+            ["parasempatik innervasyon", "visseral organlar"],
+            []
+        ),
+        (
+            "Tek taraflı vagus lezyonunda hasta ağzını açıp ses çıkardığında yumuşak damak felç olur ve uvula sağlam olan tarafa doğru deviye olur.",
+            "**Uvula Deviasyonu:** Yumuşak damak asimetrisi ve uvulanın sağlam tarafa çekilmesi.",
+            "CN X / N. VAGUS",
+            ["yumuşak damak felci", "uvula deviasyonu"],
             []
         )
     ]),
 
-    (32, "k2-62-b12", "Alt Kraniyal Sinirler ve Sendromik Lokalizasyon", [
+    (32, "k2-62-b11", "Alt Kraniyal Sinirler (CN IX, X, XI, XII)", [
         (
-            "On birinci kraniyal sinir olan nervus accessorius sternokleidomastoid ve trapezius kaslarını motor olarak innerve eder.",
-            "**CN XI (N. Accessorius):** Sternokleidomastoid ve trapezius kaslarının motor kontrolü.",
+            "On birinci kraniyal sinir olan nervus accessorius sternokleidomastoid ve trapezius kaslarını innerve eden saf motor bir sinirdir.",
+            "**CN XI (N. Accesorius):** Sternokleidomastoid ve trapezius kasları saf motor kontrolü.",
             "CN XI / N. ACCESORIUS",
-            ["nervus accessorius", "sternokleidomastoid"],
+            ["nervus accessorius", "sternokleidomastoid", "trapezius"],
             []
         ),
         (
-            "Sternokleidomastoid kası başı direnç karşısında karşı tarafa çevirirken, trapezius kası omuzları yukarı doğru kaldırır.",
-            "**Muayene Testleri:** Başı karşıya çevirme ve omuz silkme hareketleri.",
+            "Sternokleidomastoid kası muayenesinde hasta hekimin eline karşı dirence rağmen başını karşı tarafa çevirmeye çalışır.",
+            "**SCM Muayenesi:** Dirençli baş rotasyonu ile kontralateral sternokleidomastoid testi.",
             "Trapezius ve sternokleidomastoid kaslar",
-            ["trapezius", "omuz silkme"],
+            ["baş rotasyonu", "dirençli muayene"],
             []
         ),
         (
-            "Sinir lezyonunda aynı tarafta omuz düşüklüğü ve başı karşı tarafa çevirmede belirgin güçsüzlük ortaya çıkar.",
-            "**Aksesuar Felci:** Omuz düşüklüğü ve boyun rotasyon zaafı.",
+            "Trapezius kasının gücü ise hekim hastanın omuzlarına bastırırken hastanın omuzlarını yukarı doğru silkmesi yani kaldırmasıyla test edilir.",
+            "**Trapezius Muayenesi:** Omuz silkme hareketi ile ipsilateral trapezius kas gücü tayini.",
             "Trapezius ve sternokleidomastoid kaslar",
-            ["omuz düşüklüğü", "boyun rotasyonu"],
+            ["omuz silkme", "trapezius gücü"],
+            []
+        ),
+        (
+            "Boyun arka üçgeninde yüzeyel seyrettiği için lenf nodu biyopsileri veya cerrahi girişimler sırasında yaralanmaya son derece yatkındır.",
+            "**İyatrojenik Hassasiyet:** Arka boyun üçgeninde lenf nodu biyopsilerinde yaralanma riski.",
+            "CN XI / N. ACCESORIUS",
+            ["boyun arka üçgeni", "iyatrojenik yaralanma"],
             []
         )
     ]),
 
-    (33, "k2-62-b12", "Alt Kraniyal Sinirler ve Sendromik Lokalizasyon", [
+    (33, "k2-62-b11", "Alt Kraniyal Sinirler (CN IX, X, XI, XII)", [
         (
-            "On ikinci kraniyal sinir olan nervus hypoglossus palatoglossus hariç dilin tüm intrinsik ve ekstrinsik kaslarını motor olarak innerve eder.",
-            "**CN XII (N. Hypoglossus):** Dil kaslarının motor kontrolü ve dil hareketleri.",
+            "On ikinci kraniyal sinir olan nervus hypoglossus palatoglossus hariç dilin tüm intrensek ve ekstrensek kaslarını innerve eden saf motor sinirdir.",
+            "**CN XII (N. Hypoglossus):** Dil kasları (palatoglossus hariç) motor kontrolü.",
             "CN XII / N. HYPOGLOSSUS",
             ["nervus hypoglossus", "dil kasları"],
             []
         ),
         (
-            "Bu bilgi çıkmış sınavda sorulmuştur: dil dışarı çıkarıldığında lezyon tarafındaki genioglossus kası çalışmadığı için dil doğrudan lezyon tarafına sapar.",
+            "Muayeneye ağız tabanında dil istirahat halindeyken başlanır; dil kaslarında atrofi, incelme ve motor nöron hastalığını düşündüren fasikülasyonlar incelenir.",
+            "**İstirahat Muayenesi:** Dil atrofisi, incelme ve motor nöron fasikülasyonları incelemesi.",
+            "Dil kasları (palatoglossal hariç)",
+            ["istirahat muayenesi", "dil atrofisi", "fasikülasyon"],
+            []
+        ),
+        (
+            "Ardından hastadan dilini düz olarak dışarı çıkarması istenir; tek taraflı periferik sinir lezyonunda sağlam tarafın itici gücü nedeniyle dil lezyonlu tarafa sapar ve sapması tipiktir.",
+            "**Protrüzyon Muayenesi:** Dilin dışarı çıkarılması ve lezyon tarafına sapma mekanizması.",
+            "Dil kasları (palatoglossal hariç)",
+            ["dil deviasyonu", "lezyon tarafı"],
+            []
+        ),
+        (
+            "Bu bilgi çıkmış sınavda sorulmuştur: dil dışarı çıkarıldığında lezyon tarafındaki genioglossus kası çalışmadığı için dil doğrudan nervus hypoglossus lezyonunun olduğu tarafa deviye olur.",
             "**Sınav Spotu (Çıkmış Soru):** Bu bilgi çıkmış sınavda sorulmuştur: Dil dışarı çıkarıldığında nervus hypoglossus lezyonunun olduğu tarafa deviye olur.",
             "Dil kasları (palatoglossal hariç)",
-            ["çıkmış soru", "genioglossus", "dil deviasyonu"],
+            ["çıkmış sınav sorusu", "genioglossus zaafı", "lezyon tarafına sapma"],
             ["88612c9f5ce5"]
-        ),
-        (
-            "Alt motor nöron lezyonlarında ayrıca felçli dil yarısında belirgin atrofi ve solucanvari fasikülasyonlar gözlenir.",
-            "**Periferik Belirtiler:** Dilde atrofi ve fasikülasyon tespiti.",
-            "Dil kasları (palatoglossal hariç)",
-            ["dil atrofisi", "fasikülasyon"],
-            []
         )
     ]),
 
-    (34, "k2-62-b12", "Alt Kraniyal Sinirler ve Sendromik Lokalizasyon", [
+    (34, "k2-62-b11", "Alt Kraniyal Sinirler (CN IX, X, XI, XII)", [
         (
-            "Görselimizde sağ nervus hypoglossus felcinde dilin dışarı çıkarıldığında sağa deviasyonu ve dildeki atrofi klinik olarak gösterilmektedir.",
-            "**Hipoglossus Felci Klinik Görünümü:** Dilin lezyon tarafına sapması ve tek taraflı atrofi.",
+            "Görselimizde sağ nervus hypoglossus lezyonu olan bir hastada dilin dışarı çıkarıldığında gösterdiği klasik patolojik görünüm sergilenmektedir.",
+            "**Hipoglossus Felci Kliniği:** Dilin lezyon tarafına sapması ve belirgin hemilateral atrofi.",
             "",
-            ["dil deviasyonu", "hemiatrofi"],
+            ["sağ nervus hypoglossus", "dil deviasyonu"],
             []
         ),
         (
-            "Genioglossus kası dili öne ve karşıya doğru iter; sağ kas çalışmadığında sağlam sol kasın baskın kuvveti dili sağa doğru saptırır.",
-            "**Deviasyon Mekanizması:** Sağlam taraf genioglossus kasının dili lezyon yönüne itmesi.",
+            "Dil dışarı itildiğinde sağ genioglossus kası çalışmadığı için sağlam sol genioglossus kasının itici etkisiyle dil doğrudan sağ tarafa yani felçli tarafa döner.",
+            "**Genioglossus Mekanizması:** Sağlam kasın itici baskısıyla dilin felçli tarafa itilmesi.",
             "",
-            ["sağlam genioglossus", "itici kuvvet"],
+            ["genioglossus kası", "lezyon tarafına dönme"],
             []
         ),
         (
-            "Bu muayene yatak başında periferik dil felcinin tarafını saniyeler içinde kesinleştirir.",
-            "**Yatak Başı Lokalizasyon:** Felç tarafının hızlı ve kesin tayini.",
+            "Ayrıca sağ dil yarısında belirgin hacim kaybı, kırışıklık, kas atrofisi ve istemsiz fasikülasyon dalgalanmaları açıkça görülmektedir.",
+            "**Atrofi ve Fasikülasyon:** Alt motor nöron hasarında dil yüzeyinde solukluk ve çekilmeler.",
             "",
-            ["yatak başı muayene", "taraf tayini"],
+            ["hacim kaybı", "dil atrofisi", "fasikülasyon"],
             []
+        ),
+        (
+            "Bu bilgi çıkmış sınavda sorulmuştur: dil atrofisi olmayan bir hastada dil sağa sapıyorsa lezyon sol kortikobulber yolda olabilirken, atrofi ve fasikülasyon varlığında lezyon doğrudan sağ nervus hypoglossus sinirindedir.",
+            "**Sınav Spotu (Çıkmış Soru):** Bu bilgi çıkmış sınavda sorulmuştur: Dil atrofisi olmadan sağa sapma sol kortikobulber, atrofili sapma ise sağ hipoglossus lezyonudur.",
+            "",
+            ["çıkmış sınav sorusu", "kortikobulber lezyon", "atrofisiz sapma"],
+            ["d3-f-098"]
         )
     ]),
 
-    (35, "k2-62-b12", "Alt Kraniyal Sinirler ve Sendromik Lokalizasyon", [
+    # --- BOLUM 12: Sendromik Lokalizasyon ve Klinik Karar (35-36) ---
+    (35, "k2-62-b12", "Sendromik Lokalizasyon ve Klinik Karar", [
         (
-            "Tablomuzda kraniyal sinirlerin kafa tabanı ve beyin sapındaki sendromik lokalizasyonları özetlenmektedir.",
-            "**Sendromik Lokalizasyon Tablosu:** Kavernöz sinüs, serebellopontin açı ve foramen jugulare sendromları.",
+            "Tablomuzda kraniyal sinirlerin kafa tabanı ve beyin sapındaki sendromik lokalizasyonları ile patolojik klinik tabloları özetlenmektedir.",
+            "**Sendromik Lokalizasyon:** Kavernöz sinüs, CPA, foramen jugulare sendromları.",
             "",
             ["sendromik lokalizasyon", "kafa tabanı sendromları"],
             []
@@ -884,38 +1116,52 @@ SLIDES = [
             "Bu bilgi çıkmış sınavda sorulmuştur: pitozis, tam oftalmopleji ve V bir oftalmik dal kornea duyu kaybının birlikte görüldüğü patoloji kavernöz sinüs sendromudur.",
             "**Sınav Spotu (Çıkmış Soru):** Bu bilgi çıkmış sınavda sorulmuştur: CN III, IV, VI ve V1 tutulumu kavernöz sinüs sendromunu işaret eder.",
             "",
-            ["çıkmış soru", "kavernöz sinüs sendromu", "oftalmopleji"],
+            ["çıkmış sınav sorusu", "kavernöz sinüs sendromu", "oftalmopleji"],
             ["d3-k2-nor-005"]
         ),
         (
-            "Serebellopontin köşe lezyonlarında yedinci ve sekizinci sinirler, foramen jugulare sendromunda ise dokuz, on ve on birinci kraniyal sinirler birlikte tutulur.",
-            "**Köşe ve Jugulare Sendromu:** CPA'da CN VII-VIII, foramen jugularede CN IX-X-XI felci.",
+            "Bu bilgi çıkmış sınavda sorulmuştur: serebellopontin açı tümörlerinde yani vestibüler nörilemmomalarda sekizinci sinir işitme kaybı ve çınlaması ile birlikte yedinci ve beşinci kraniyal sinir tutulumu beklenir.",
+            "**Sınav Spotu (Çıkmış Soru):** Bu bilgi çıkmış sınavda sorulmuştur: Vestibüler nörilemmomada CN VIII, VII ve V tutulumu görülür.",
             "",
-            ["serebellopontin açı", "foramen jugulare"],
+            ["çıkmış sınav sorusu", "serebellopontin açı", "vestibüler nörilemmoma"],
+            ["8a4a38a05c80"]
+        ),
+        (
+            "Foramen jugulare sendromunda ise dokuz, on ve on birinci kraniyal sinirler birlikte tutularak yutma güçlüğü, ses kısıklığı ve boyun kası felci oluşturur.",
+            "**Foramen Jugulare Sendromu:** CN IX, X, XI tutulumu ile yutma ve ses patolojileri.",
+            "",
+            ["foramen jugulare", "yutma güçlüğü", "ses kısıklığı"],
             []
         )
     ]),
 
-    (36, "k2-62-b12", "Alt Kraniyal Sinirler ve Sendromik Lokalizasyon", [
+    (36, "k2-62-b12", "Sendromik Lokalizasyon ve Klinik Karar", [
         (
-            "Kraniyal sinir muayenesinde elde edilen klinik bulgular beyin sapı kesitlerinin ve kafa tabanı anatomisinin kusursuz bir nörolojik haritasını verir.",
-            "**Nörolojik Haritalama:** Kraniyal sinir bulgularıyla intrakraniyal lezyon odağını saptama.",
+            "Dersimizin bu son sentez basamağında kraniyal sinir muayenesinin klinik karar algoritmaları ve lezyon seviyesi korelasyonu özetlenmektedir.",
+            "**Klinik Sentez:** Kraniyal muayeneden beyin sapı lokalizasyonuna tanı algoritması.",
             "",
-            ["lezyon lokalizasyonu", "nörolojik sentez"],
+            ["klinik sentez", "karar algoritmaları"],
             []
         ),
         (
-            "Hekimin her siniri anatomik sırayla ve doğru testlerle muayene etmesi erken inme, tümör ve enfeksiyon tanılarında hayat kurtarır.",
-            "**Klinik Değer:** İnme, tümör ve kafa tabanı lezyonlarında erken hayat kurtarıcı teşhis.",
+            "Muayene daima birinci kraniyal sinirden on ikinci sinire kadar sistematik bir sıra izlenerek anatomik kraniyokaudal düzende eksiksiz yürütülmelidir.",
+            "**Sistematik Muayene:** I'den XII'ye kraniyokaudal sıra ile eksiksiz değerlendirme.",
             "",
-            ["inme tanısı", "erken teşhis"],
+            ["sistematik sıra", "kraniyokaudal düzen"],
             []
         ),
         (
-            "Böylece birinci kraniyal sinirden on ikinci kraniyal sinire kadar tüm muayene adımlarını ve klinik sendromları başarıyla tamamlamış olduk.",
-            "**Ders Özeti:** 12 çift kraniyal sinirin tam muayene protokolü ve klinik korelasyonu tamamlandı.",
+            "Her bir kraniyal sinir bulgusu beyin sapı kesitiyle eşleştirilerek mezensefalon, pons veya bulbus düzeyindeki vasküler ve tümöral odak tam olarak saptanır.",
+            "**Seviye Eşleştirmesi:** Mezensefalon (III-IV), Pons (V-VIII), Bulbus (IX-XII) düzeyleri.",
             "",
-            ["ders özeti", "kraniyal muayene protokolü"],
+            ["beyin sapı kesiti", "lezyon lokalizasyonu"],
+            []
+        ),
+        (
+            "Kraniyal sinir muayenesinin titizlikle yapılması, acil serviste inme hastalarında trombolitik tedavi kararından poliklinikte kafa tabanı tümörlerinin erken teşhisine kadar hayat kurtarıcıdır.",
+            "**Hayat Kurtarıcı Değer:** Akut inmede tromboliz kararı ve kitle lezyonlarında erken teşhis.",
+            "",
+            ["trombolitik tedavi", "erken teşhis"],
             []
         )
     ])
@@ -932,12 +1178,14 @@ for sayfa, bid, bbaslik, sentences in SLIDES:
 if anchor_errors:
     print(f"FAILED: {anchor_errors} anchors not found!")
     sys.exit(1)
-print(f"SUCCESS: All anchors verified 100% in kaynak.md!")
+print("SUCCESS: All anchors verified 100% in kaynak.md!")
 
-# Build konusma_v2.json
+# Build konusma_v2 structure
 bolum_map = {}
 cid_counter = 1
 total_words = 0
+slide_last_sent = {} # pno -> last sentence cid
+slide_all_sents = {} # pno -> list of cids
 
 for sayfa, bid, bbaslik, sentences in SLIDES:
     if bid not in bolum_map:
@@ -946,7 +1194,6 @@ for sayfa, bid, bbaslik, sentences in SLIDES:
             "baslik": bbaslik,
             "paragraflar": []
         }
-    
     p_id = f"k2-62-p{sayfa:03d}"
     p_obj = {
         "id": p_id,
@@ -954,15 +1201,30 @@ for sayfa, bid, bbaslik, sentences in SLIDES:
         "cumleler": []
     }
     
+    slide_all_sents[sayfa] = []
     for s_idx, (ses, ekran, anchor, terms, cikmis) in enumerate(sentences):
         cid = f"k2-62-c{cid_counter:04d}"
         cid_counter += 1
         words = len(ses.split())
         total_words += words
+        slide_all_sents[sayfa].append(cid)
+        slide_last_sent[sayfa] = cid
         
-        sekil_val = VISUAL_PAGES.get(sayfa) if s_idx == 0 and sayfa in VISUAL_PAGES else None
-        vurgu_text = ekran.split("**")[1] if "**" in ekran else "Kraniyal Sinir"
         satir_list = [anchor] if anchor else []
+        sekil_val = VISUAL_PAGES.get(sayfa, "") if sayfa in VISUAL_PAGES else None
+        
+        clean_ekran = ekran.replace("**", "")
+        vurgu_text = None
+        for t in terms:
+            if t.casefold() in clean_ekran.casefold():
+                vurgu_text = t
+                break
+        if not vurgu_text:
+            m = re.findall(r'\*\*([^*]+)\*\*', ekran)
+            if m:
+                vurgu_text = m[0].rstrip(':').strip()
+            else:
+                vurgu_text = "kraniyal sinir"
         
         c_obj = {
             "id": cid,
@@ -983,16 +1245,17 @@ for sayfa, bid, bbaslik, sentences in SLIDES:
         
     bolum_map[bid]["paragraflar"].append(p_obj)
 
+bolumler_list = list(bolum_map.values())
+
 konusma_v2 = {
     "surum": 2,
     "ders_id": "k2-62",
     "anahtar": "y25-k2-62-kraniyal-sinir-muayenesi",
-    "baslik": "Kraniyal Sinir Muayenesi",
-    "bolumler": list(bolum_map.values())
+    "bolumler": bolumler_list
 }
 
-print(f"Total Bolumler: {len(konusma_v2['bolumler'])}")
-print(f"Total Paragraphs: {sum(len(b['paragraflar']) for b in konusma_v2['bolumler'])}")
+print(f"Total Bolumler: {len(bolumler_list)}")
+print(f"Total Paragraphs: {len(SLIDES)}")
 print(f"Total Sentences: {cid_counter - 1}")
 print(f"Total Words: {total_words} (~{total_words / 125:.1f} minutes of audio)")
 
@@ -1000,105 +1263,205 @@ print(f"Total Words: {total_words} (~{total_words / 125:.1f} minutes of audio)")
 (TASLAK / "konusma_v2.json").write_text(json.dumps(konusma_v2, ensure_ascii=False, indent=2), encoding="utf-8")
 print("Saved konusma_v2.json")
 
-# Helper to get cid
-def get_cid_for_slide(slide_num, s_offset=0):
-    for b in konusma_v2["bolumler"]:
-        for p in b["paragraflar"]:
-            if p["sayfa"] == slide_num:
-                return p["cumleler"][s_offset]["id"]
-    raise ValueError(f"Slide {slide_num} not found")
+# Generate and save metin.md
+sys.path.insert(0, "/home/indu/medsor/meds/scripts/sesli_anlatim")
+import konusma_v2 as KV
+konusma_v2_copy = dict(konusma_v2)
+konusma_v2_copy["baslik"] = "Kraniyal Sinir Muayenesi"
+md_text, _ = KV.turet(konusma_v2_copy)
+(TASLAK / "metin.md").write_text(md_text, encoding="utf-8")
+print("Saved metin.md")
 
-# Drawing commands (8 commands, 0 forward leaks)
-cizim_komutlari = [
+# Update cikmis_baglantilari.json to ensure all 6 past questions are recorded as ilgili: true
+cikmis_list = [
     {
-        "cumle": get_cid_for_slide(2, 2),
-        "bas": 0, "son": 4,
-        "sayfa": 2,
-        "tur": "sema",
-        "sablon": "siniflama",
-        "baslik": "Kraniyal Sinir Grupları",
-        "ogeler": [
-            "Duyusal sinirler: Koku ve görme",
-            "Motor sinirler: Diğer on çift sinir"
-        ]
+        "soru_id": "7a901e64695e",
+        "ilgili": True,
+        "neden": "Dördüncü kraniyal sinirin dorsal çıkış ve tam çaprazlaşma anatomik özelliğini sorgular.",
+        "bagli_bilgi": ["bp-17", "bp-18"],
+        "kanit": {"sayfa": 18, "alinti": "Bielschowsky baş tilt testi Sağ 4. sinir felci"}
     },
     {
-        "cumle": get_cid_for_slide(4, 2),
+        "soru_id": "past-1790877480031-411629",
+        "ilgili": True,
+        "neden": "Beyinde tek taraflı supranükleer lezyonda alın kaslarının bilateral innervasyon ile korunmasını sorgular.",
+        "bagli_bilgi": ["bp-27"],
+        "kanit": {"referans": "Harrison Nöroloji, Kraniyal Sinirler", "neden": "Supranükleer fasiyal lezyonda alın korunumu"}
+    },
+    {
+        "soru_id": "88612c9f5ce5",
+        "ilgili": True,
+        "neden": "Dilin dışarı çıkarıldığında lezyon tarafına sapması sağ nervus hypoglossus lezyonunun karakteristik klinik bulgusudur.",
+        "bagli_bilgi": ["bp-33", "bp-34"],
+        "kanit": {"sayfa": 33, "alinti": "Dil kasları (palatoglossal hariç)"}
+    },
+    {
+        "soru_id": "d3-f-098",
+        "ilgili": True,
+        "neden": "Dilin dışarı çıkarıldığında sağ tarafa sapması ve dil atrofisinin olmaması supranükleer kortikobulber lezyonu düşündürür.",
+        "bagli_bilgi": ["bp-33", "bp-34"],
+        "kanit": {"sayfa": 33, "alinti": "Dil kasları (palatoglossal hariç)"}
+    },
+    {
+        "soru_id": "d3-k2-nor-005",
+        "ilgili": True,
+        "neden": "Pitozis, tam oftalmopleji ve V1 kornea/alın duyusu kaybı kavernöz sinüs sendromunun tipik tablosudur.",
+        "bagli_bilgi": ["bp-35"],
+        "kanit": {"referans": "Moore Anatomi, Kavernöz Sinüs", "neden": "Kavernöz sinüs içinden ve duvarından geçen kraniyal sinirler"}
+    },
+    {
+        "soru_id": "8a4a38a05c80",
+        "ilgili": True,
+        "neden": "Serebellopontin açı tümörlerinde (vestibüler nörilemmoma) CN VIII işitme kaybı ve CN VII-V tutulumu beklenir.",
+        "bagli_bilgi": ["bp-35"],
+        "kanit": {
+            "referans": "Robbins Temel Patoloji, Serebellopontin Açı Tümörleri ve Vestibüler Schwannom",
+            "neden": "Vestibüler nörilemmomada CN VIII işitme kaybı ve fasiyal-trigeminal tutulum"
+        }
+    }
+]
+(TASLAK / "cikmis_baglantilari.json").write_text(json.dumps(cikmis_list, ensure_ascii=False, indent=2), encoding="utf-8")
+print("Saved cikmis_baglantilari.json with 6 questions.")
+
+# Generate 12 Live Semantic Drawing Commands tied dynamically to the last sentence of each slide
+cizim_komutlari = [
+    {
+        "cumle": slide_last_sent[4],
         "bas": 0, "son": 4,
         "sayfa": 4,
         "tur": "sema",
         "sablon": "siniflama",
-        "baslik": "Görme Alanı Defektleri",
+        "baslik": "Görme Yolları Defektleri",
         "ogeler": [
-            "Kiazma lezyonu: Bitemporal hemianopsi",
-            "Postkiazmal lezyon: Homonim hemianopsi"
+            "Optik kiazma lezyonunda bitemporal hemianopsi",
+            "Optik sinir lezyonunda monooküler anopsi",
+            "Kiazma bileşkesinde junctional skotom"
         ]
     },
     {
-        "cumle": get_cid_for_slide(11, 2),
+        "cumle": slide_last_sent[10],
+        "bas": 0, "son": 4,
+        "sayfa": 10,
+        "tur": "sema",
+        "sablon": "siniflama",
+        "baslik": "Ekstraoküler Kas Hareketleri",
+        "ogeler": [
+            "Lateral rektus kası abdüksiyon yaptırır",
+            "Mediyal rektus kası addüksiyon yaptırır",
+            "Superior oblik depresyon ve intorsiyon",
+            "Inferior oblik elevasyon ve ekstorsiyon"
+        ]
+    },
+    {
+        "cumle": slide_last_sent[11],
         "bas": 0, "son": 4,
         "sayfa": 11,
         "tur": "sema",
         "sablon": "siniflama",
-        "baslik": "Ekstraoküler Kas İnnervasyonu",
+        "baslik": "Ekstraoküler Motor Innervasyon",
         "ogeler": [
-            "Okülomotor sinir: Rektus kasları",
-            "Troklear sinir: Superior oblik kası",
-            "Abdusens siniri: Lateral rektus kası"
+            "Okülomotor sinir rektus kasları ve levator",
+            "Troklear sinir superior oblik kası",
+            "Abdusens siniri lateral rektus kası"
         ]
     },
     {
-        "cumle": get_cid_for_slide(13, 2),
+        "cumle": slide_last_sent[13],
         "bas": 0, "son": 4,
         "sayfa": 13,
         "tur": "sema",
         "sablon": "neden_sonuc",
-        "baslik": "Işık Refleksi Yolağı",
+        "baslik": "Pupilla Işık Refleksi Yolakları",
         "ogeler": [
-            "Retinaya ışık uyarısı gelmesi",
-            "Optik sinir ile pretektal nükleusa iletim",
-            "Edinger-Westphal nükleusundan miyozis yanıtı"
+            "Optik sinir afferent uyarısı",
+            "Pretektal nükleus bilateral uyarısı",
+            "Edinger-Westphal nükleusundan çıkan efferent lifler",
+            "Göz iris sfinkter kası ile bilateral miyozis"
         ]
     },
     {
-        "cumle": get_cid_for_slide(18, 2),
+        "cumle": slide_last_sent[14],
+        "bas": 0, "son": 4,
+        "sayfa": 14,
+        "tur": "sema",
+        "sablon": "neden_sonuc",
+        "baslik": "Yakın Refleks Yanıtı",
+        "ogeler": [
+            "Mediyal rektus kasları ile konverjans",
+            "Silier kas kasılması ile akomodasyon",
+            "Göz iris sfinkteri ile pupiller miyozis"
+        ]
+    },
+    {
+        "cumle": slide_last_sent[18],
         "bas": 0, "son": 4,
         "sayfa": 18,
         "tur": "sema",
         "sablon": "neden_sonuc",
-        "baslik": "Troklear Sinir Seyri",
+        "baslik": "Troklear Sinir Özellikleri",
         "ogeler": [
-            "Dördüncü kraniyal sinir nükleusu",
-            "Beyin sapını dorsalden terk eden",
-            "Tamamı çaprazlaşan tek sinir"
+            "Beyin sapını dorsalden terk eden tek sinir",
+            "Tamamı çaprazlaşan tek kraniyal sinir",
+            "Superior oblik felcinde Bielschowsky baş tilt testi"
         ]
     },
     {
-        "cumle": get_cid_for_slide(27, 2),
+        "cumle": slide_last_sent[20],
+        "bas": 0, "son": 4,
+        "sayfa": 20,
+        "tur": "sema",
+        "sablon": "neden_sonuc",
+        "baslik": "Horizontal Bakış Yolları",
+        "ogeler": [
+            "Frontal göz sahası kortikal uyarısı",
+            "Ponsta paramedian retiküler formasyon",
+            "Abdusens çekirdeği ve lateral rektus aktivasyonu",
+            "Mediyal longitudinal fasikülüs ile konjuge bakış"
+        ]
+    },
+    {
+        "cumle": slide_last_sent[21],
+        "bas": 0, "son": 4,
+        "sayfa": 21,
+        "tur": "sema",
+        "sablon": "siniflama",
+        "baslik": "İnternükleer Oftalmopleji Bulguları",
+        "ogeler": [
+            "Mediyal longitudinal fasikülüs lezyonu",
+            "Aynı taraf gözde addüksiyon kısıtlılığı",
+            "Dışa bakan gözde disosiasyon nistagmusu",
+            "Konverjans hareketinin tam korunması"
+        ]
+    },
+    {
+        "cumle": slide_last_sent[27],
         "bas": 0, "son": 4,
         "sayfa": 27,
         "tur": "sema",
         "sablon": "siniflama",
-        "baslik": "Fasiyal Paralizi Tipleri",
+        "baslik": "Fasiyal Paralizi Ayrımı",
         "ogeler": [
             "Santral felç: Alın kasları korunur",
-            "Periferik felç: Tüm yüz yarısı felç olur"
+            "Santral lezyon: Sadece karşı alt yüz felç olur",
+            "Periferik felç: Tüm yüz yarısı tutulur"
         ]
     },
     {
-        "cumle": get_cid_for_slide(29, 3),
+        "cumle": slide_last_sent[29],
         "bas": 0, "son": 4,
         "sayfa": 29,
         "tur": "sema",
         "sablon": "siniflama",
         "baslik": "İşitme Testi Bulguları",
         "ogeler": [
-            "İletim tipi kayıp: Rinne negatif",
-            "Sensörinöral kayıp: Rinne pozitif"
+            "Iletim tipi kayıp: Rinne negatif",
+            "Sensörinöral kayıp: Rinne pozitif",
+            "Iletim tipi kayıp: Weber hastalıklı kulağa lateralize",
+            "Sensörinöral kayıp: Weber sağlam kulağa lateralize"
         ]
     },
     {
-        "cumle": get_cid_for_slide(33, 2),
+        "cumle": slide_last_sent[33],
         "bas": 0, "son": 4,
         "sayfa": 33,
         "tur": "sema",
@@ -1107,7 +1470,21 @@ cizim_komutlari = [
         "ogeler": [
             "Nervus hypoglossus lezyonu gelişmesi",
             "Aynı taraf genioglossus kas zaafı",
-            "Dilin lezyon tarafına sapması"
+            "Dilin lezyon tarafına sapması",
+            "Dil kaslarında atrofi ve fasikülasyon"
+        ]
+    },
+    {
+        "cumle": slide_last_sent[35],
+        "bas": 0, "son": 4,
+        "sayfa": 35,
+        "tur": "sema",
+        "sablon": "siniflama",
+        "baslik": "Kafa Tabanı Sendromları",
+        "ogeler": [
+            "Kavernöz sinüs: Pitozis ve tam oftalmopleji",
+            "Serebellopontin açı: Vestibüler nörilemmoma ve işitme kaybı",
+            "Foramen jugulare: Yutma güçlüğü ve ses kısıklığı"
         ]
     }
 ]

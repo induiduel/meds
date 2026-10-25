@@ -1,53 +1,55 @@
 {
  "surum": 1,
- "metinHash": "da15b7dc4538e7bee97547228053384be7263e9a",
+ "metinHash": "19913bfdad0f9daaf78e8cb7121ec9b71a50500d",
  "p": {
   "0": {
-   "3": [
-    {
-     "tur": "sema",
-     "sablon": "algoritma",
-     "sablon_ad": "Yaklaşım basamakları",
-     "duzen": "adimlar",
-     "ogeler": [
-      "Sistematik klinik yaklaşım",
-      "Primer ve sekonder ayrımı",
-      "Fizik muayene ve ayırıcı tanı"
-     ],
-     "s": 1,
-     "k": [
-      0,
-      117
-     ],
-     "tip": "adimlar",
-     "konum": [
-      0.25,
-      0.6
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.345,
-     "yon": "yatay",
-     "olcek": 1.0
-    }
-   ]
-  },
-  "1": {
-   "1": [
+   "4": [
     {
      "tur": "sema",
      "sablon": "siniflama",
      "sablon_ad": "Sınıflama",
      "duzen": "liste",
      "ogeler": [
-      "Kadınlarda yüzde 99",
-      "Erkeklerde yüzde 93"
+      "Klinik yaklaşım ve ayırıcı değerlendirme",
+      "Primer ve sekonder baş ağrısı ayrımı",
+      "Ayrıntılı anamnez ve nörolojik muayene"
      ],
-     "baslik": "Yaşam boyu baş ağrısı sıklığı",
+     "baslik": "Klinik Yaklaşım",
+     "s": 1,
+     "k": [
+      0,
+      40
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.18
+     ],
+     "genislik": 0.3,
+     "doluluk": 0.0,
+     "kutu_h": 0.571,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "1": {
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Hekimlik hayatında en sık görülen yakınma",
+      "Kadınlarda ömür boyu en az bir kez görülür",
+      "Erkeklerde ömür boyu en az bir kez görülür"
+     ],
+     "baslik": "Baş Ağrısı Yaygınlığı",
      "s": 2,
      "k": [
       0,
-      110
+      35
      ],
      "tip": "liste",
      "konum": [
@@ -56,65 +58,62 @@
      ],
      "genislik": 0.5,
      "doluluk": 0.0,
-     "kutu_h": 0.337,
+     "kutu_h": 0.411,
      "yon": "yatay",
      "olcek": 1.0
     }
    ]
   },
   "2": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "karar",
-     "sablon_ad": "Karar dalı",
-     "duzen": "dal",
-     "soru": "Baş ağrılı hastanın klinik seyri",
-     "dallar": [
-      [
-       "Olguların büyük kısmı",
-       "İyi seyirlidir"
-      ],
-      [
-       "Altta yatan ciddi sorun",
-       "Hayatı tehdit eden durum"
-      ]
-     ],
-     "s": 2,
-     "k": [
-      0,
-      109
-     ],
-     "tip": "dal",
-     "konum": [
-      0.03,
-      0.6
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.366,
-     "yon": "yatay",
-     "olcek": 1.0
-    }
-   ]
-  },
-  "3": {
-   "1": [
+   "4": [
     {
      "tur": "sema",
      "sablon": "siniflama",
      "sablon_ad": "Sınıflama",
      "duzen": "liste",
      "ogeler": [
-      "Bin dokuz yüz seksen sekiz ilk sürüm",
-      "İki bin dört güncellemesi",
-      "İki bin on üç üçüncü sürüm"
+      "Hastaların büyük kısmı tümör veya felç korkusu duyar",
+      "Olguların büyük kısmı selim ve iyi seyirlidir",
+      "Sekonder nedenler erken tanınmadığında ölümle sonuçlanabilir"
      ],
-     "baslik": "Uluslararası baş ağrısı sınıflaması",
+     "baslik": "Baş Ağrısı Klinik Seyri",
+     "s": 2,
+     "k": [
+      0,
+      43
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.6
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0308,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "3": {
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Uluslararası Baş Ağrısı Derneği sınıflaması",
+      "Bin dokuz yüz seksen sekiz ilk sürüm",
+      "İki bin on üç üçüncü sürüm sınıflaması"
+     ],
+     "baslik": "Uluslararası Sınıflama Sistemi",
      "s": 3,
      "k": [
       0,
-      83
+      39
      ],
      "tip": "liste",
      "konum": [
@@ -132,23 +131,22 @@
    ]
   },
   "4": {
-   "2": [
+   "5": [
     {
      "tur": "sema",
      "sablon": "siniflama",
      "sablon_ad": "Sınıflama",
      "duzen": "liste",
      "ogeler": [
-      "Migren",
-      "Gerilim tipi baş ağrısı",
-      "Trigeminal otonomik baş ağrısı",
-      "Diğer primer sendromlar"
+      "Migren: Tek taraflı zonklayıcı baş ağrısı",
+      "Gerilim tipi: İki taraflı sıkıştırıcı ağrı",
+      "Trigeminal otonomik: Küme baş ağrısı ve lakrimasyon"
      ],
-     "baslik": "Primer baş ağrıları sınıflaması",
+     "baslik": "Primer Baş Ağrıları Grupları",
      "s": 3,
      "k": [
       0,
-      96
+      55
      ],
      "tip": "liste",
      "konum": [
@@ -157,71 +155,31 @@
      ],
      "genislik": 0.9,
      "doluluk": 0.0,
-     "kutu_h": 0.485,
+     "kutu_h": 0.411,
      "yon": "yatay",
      "olcek": 1.0,
-     "ek_alt": 0.2047,
-     "ek_renk": "#ffffff"
-    }
-   ],
-   "3": [
-    {
-     "tur": "sema",
-     "sablon": "bulgu_dusundurur",
-     "sablon_ad": "Bulgu → düşündürdüğü tanı",
-     "duzen": "tablo",
-     "basliklar": [
-      "Bulgu",
-      "Düşündürdüğü"
-     ],
-     "satirlar": [
-      [
-       "Periorbital delici ve oyucu ağrı",
-       "Küme baş ağrısı"
-      ],
-      [
-       "Göz yaşarması ve burun tıkanıklığı",
-       "Trigeminal otonomik tablo"
-      ]
-     ],
-     "s": 3,
-     "k": [
-      0,
-      148
-     ],
-     "tip": "tablo",
-     "konum": [
-      0.03,
-      0.7
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.337,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.0568,
+     "ek_alt": 0.1308,
      "ek_renk": "#ffffff"
     }
    ]
   },
-  "6": {
-   "3": [
+  "5": {
+   "4": [
     {
      "tur": "sema",
      "sablon": "siniflama",
      "sablon_ad": "Sınıflama",
      "duzen": "liste",
      "ogeler": [
-      "Baş ve boyun travması",
-      "Kraniyal damarsal bozukluklar",
-      "Madde kullanımı ve enfeksiyon",
-      "Homeostaz ve psikiyatrik bozukluk"
+      "Baş ve boyun travmasına bağlı baş ağrısı",
+      "Subaraknoid kanama ve damarsal bozukluklar",
+      "Beyin tümörleri ve hidrosefali tablosu"
      ],
-     "baslik": "Sekonder baş ağrısı nedenleri",
+     "baslik": "Sekonder Vasküler ve Travmatik Nedenler",
      "s": 4,
      "k": [
       0,
-      127
+      35
      ],
      "tip": "liste",
      "konum": [
@@ -230,31 +188,64 @@
      ],
      "genislik": 0.9,
      "doluluk": 0.0,
-     "kutu_h": 0.485,
+     "kutu_h": 0.411,
      "yon": "yatay",
      "olcek": 1.0,
-     "ek_alt": 0.3847,
+     "ek_alt": 0.3108,
      "ek_renk": "#ffffff"
     }
    ]
   },
-  "7": {
-   "1": [
+  "6": {
+   "4": [
     {
      "tur": "sema",
      "sablon": "siniflama",
      "sablon_ad": "Sınıflama",
      "duzen": "liste",
      "ogeler": [
-      "Trigeminal nevralji",
-      "Glossofaringeal nevralji",
-      "Sınıflandırılamayan bozukluklar"
+      "Aşırı analjezik kullanımına bağlı baş ağrısı",
+      "Menenjit ve santral sinir sistemi enfeksiyonları",
+      "Glokom, sinüzit ve psikiyatrik bozukluklar"
      ],
-     "baslik": "Ağrılı kraniyal nöropatiler",
+     "baslik": "Sekonder Sistemik ve Enfeksiyöz Nedenler",
+     "s": 4,
+     "k": [
+      0,
+      33
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.88
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3108,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "7": {
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Trigeminal nevralji: Elektrik çarpması ağrısı",
+      "Glossofaringeal nevralji ve yüz ağrıları",
+      "Damar basısı ve mikrovasküler kompresyon"
+     ],
+     "baslik": "Ağrılı Kraniyal Nöropatiler",
      "s": 5,
      "k": [
       0,
-      117
+      50
      ],
      "tip": "liste",
      "konum": [
@@ -272,140 +263,121 @@
    ]
   },
   "8": {
-   "3": [
-    {
-     "tur": "sema",
-     "sablon": "karsilastirma",
-     "sablon_ad": "İki durumun karşılaştırması",
-     "duzen": "karsit",
-     "basliklar": [
-      "Özellik"
-     ],
-     "satirlar": [
-      [
-       "Hastalık tanımı",
-       "Kendisi bağımsız hastalık",
-       "Altta yatanın semptomu"
-      ],
-      [
-       "Yaşam tehdidi",
-       "Yaşamı tehdit etmez",
-       "Yaşamı tehdit edebilir"
-      ],
-      [
-       "İleri tetkik",
-       "İleri tetkik gerekmez",
-       "İvedi ileri inceleme gerekir"
-      ]
-     ],
-     "kutuplar": [
-      "Primer baş ağrısı",
-      "Sekonder baş ağrısı"
-     ],
-     "s": 5,
-     "k": [
-      0,
-      119
-     ],
-     "tip": "karsit",
-     "konum": [
-      0.03,
-      1.015
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.466,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.5012,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "9": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "algoritma",
-     "sablon_ad": "Yaklaşım basamakları",
-     "duzen": "adimlar",
-     "ogeler": [
-      "Yeterli zaman ve anamnez",
-      "Primer ve sekonder ayrımı",
-      "Gereksiz tetkiklerden kaçınma"
-     ],
-     "s": 6,
-     "k": [
-      0,
-      94
-     ],
-     "tip": "adimlar",
-     "konum": [
-      0.2,
-      0.6
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.345,
-     "yon": "yatay",
-     "olcek": 1.0
-    }
-   ]
-  },
-  "10": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "karar",
-     "sablon_ad": "Karar dalı",
-     "duzen": "dal",
-     "soru": "Nörolojik muayene sonucu",
-     "dallar": [
-      [
-       "Doğal muayene bulgusu",
-       "Primer baş ağrısı tanısı"
-      ],
-      [
-       "Anormal muayene bulgusu",
-       "Sekonder neden araştırması"
-      ]
-     ],
-     "s": 6,
-     "k": [
-      0,
-      126
-     ],
-     "tip": "dal",
-     "konum": [
-      0.03,
-      0.6
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.366,
-     "yon": "yatay",
-     "olcek": 1.0
-    }
-   ]
-  },
-  "12": {
-   "3": [
+   "5": [
     {
      "tur": "sema",
      "sablon": "siniflama",
      "sablon_ad": "Sınıflama",
      "duzen": "liste",
      "ogeler": [
-      "Karakter, başlangıç ve şiddet",
-      "Aura ve eşlik eden belirtiler",
-      "Presipite eden faktörler ve uyku",
-      "Aile öyküsü ve önceki medikasyonlar"
+      "Primer: Bizzat hastalık, yaşamı tehdit etmez",
+      "Sekonder: Altta yatan organik hastalığın semptomu",
+      "Sekonderde yaşamı tehdit eder ve ivedi tetkik gerekir"
      ],
-     "baslik": "Anamnezde mutlaka sorulması gerekenler",
+     "baslik": "Primer ve Sekonder Ayrım Tablosu",
+     "s": 5,
+     "k": [
+      0,
+      37
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.4458,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "9": {
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Anamnez baş ağrısında tanının temelidir",
+      "Hastaya yeterli zaman ayırıp öykü almak",
+      "Gereksiz radyolojik tetkiklerden kaçınma"
+     ],
+     "baslik": "Tanıda Anamnezin Temel Önemi",
+     "s": 6,
+     "k": [
+      0,
+      44
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.6
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0308,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "10": {
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Primer baş ağrılarında muayene tamamen normaldir",
+      "Patolojik muayene bulgusu sekonder alarmıdır",
+      "Muayenenin normal bulunması selim süreci teyit eder"
+     ],
+     "baslik": "Nörolojik Muayene Sonucu",
+     "s": 6,
+     "k": [
+      0,
+      35
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.6
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0308,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "11": {
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Ağrının tipi, karakteri ve başlangıç hızı",
+      "Ağrının sıklığı, süresi ve hemikranyal lokalizasyonu",
+      "Şiddet derecesi ve fokal yerleşim özellikleri"
+     ],
+     "baslik": "Anamnezde Sorgulanan Ölçütler",
      "s": 7,
      "k": [
       0,
-      103
+      30
      ],
      "tip": "liste",
      "konum": [
@@ -414,228 +386,247 @@
      ],
      "genislik": 0.9,
      "doluluk": 0.0,
-     "kutu_h": 0.485,
+     "kutu_h": 0.411,
      "yon": "yatay",
      "olcek": 1.0,
-     "ek_alt": 0.4347,
+     "ek_alt": 0.3608,
      "ek_renk": "#ffffff"
     }
    ]
   },
-  "14": {
-   "3": [
+  "12": {
+   "4": [
     {
      "tur": "sema",
-     "sablon": "bulgu_dusundurur",
-     "sablon_ad": "Bulgu → düşündürdüğü tanı",
-     "duzen": "tablo",
-     "basliklar": [
-      "Bulgu",
-      "Düşündürdüğü"
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Aura, bulantı, kusma, fotofobi ve fonofobi",
+      "Stres, açlık, uykusuzluk ve tiramin tetikleyicileri",
+      "Aşırı analjezik kullanımı ve triptan tüketimi"
      ],
-     "satirlar": [
-      [
-       "Akut ve en şiddetli baş ağrısı",
-       "Subaraknoid kanama"
-      ],
-      [
-       "Elli yaşından sonra başlama",
-       "Sekonder kitle veya arterit"
-      ],
-      [
-       "Mevcut malignite ve dirençli ağrı",
-       "Beyin metastazı"
-      ],
-      [
-       "Fiziksel aktivite ve ıkınmayla artış",
-       "Kafa içi basınç artışı"
-      ]
+     "baslik": "Eşlik Eden Belirtiler ve Tetikleyiciler",
+     "s": 7,
+     "k": [
+      0,
+      24
      ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.93
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3608,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "13": {
+   "5": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Yaşamın en şiddetli ağrısı ve subaraknoid kanama",
+      "Yeni başlayan akut patlayıcı gök gürültüsü ağrısı",
+      "Elli yaşından sonra başlangıç ve temporal arterit"
+     ],
+     "baslik": "Sekonder Baş Ağrısı Kırmızı Bayrakları",
      "s": 8,
      "k": [
       0,
-      115
+      41
      ],
-     "tip": "tablo",
+     "tip": "liste",
      "konum": [
       0.03,
       0.88
      ],
      "genislik": 0.9,
      "doluluk": 0.0,
-     "kutu_h": 0.489,
+     "kutu_h": 0.411,
      "yon": "yatay",
      "olcek": 1.0,
-     "ek_alt": 0.3888,
+     "ek_alt": 0.3108,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "14": {
+   "5": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Mevcut malignite varlığında beyin metastazı",
+      "Gebelik ve lohusalıkta venöz sinüs trombozu",
+      "Dirençli kusmalar, atipik şekil ve erkek cinsiyet"
+     ],
+     "baslik": "Sekonder Alarm Özellikleri",
+     "s": 8,
+     "k": [
+      0,
+      42
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.88
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3108,
      "ek_renk": "#ffffff"
     }
    ]
   },
   "15": {
-   "2": [
+   "5": [
     {
      "tur": "sema",
-     "sablon": "bulgu_dusundurur",
-     "sablon_ad": "Bulgu → düşündürdüğü tanı",
-     "duzen": "tablo",
-     "basliklar": [
-      "Bulgu",
-      "Düşündürdüğü"
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Bilinç bozukluğu, senkop ve epileptik nöbet",
+      "Fokal nörolojik defisit ve hemiparezi bulguları",
+      "Papilödem, subhyaloid hemoraji ve yüksek ateş"
      ],
-     "satirlar": [
-      [
-       "Papilödem bulgusu",
-       "Kafa içi basınç artışı sendromu"
-      ],
-      [
-       "Subhyaloid retina hemorajisi",
-       "Subaraknoid kanama tablosu"
-      ],
-      [
-       "Ateş ve ense sertliği",
-       "Menenjit veya enfeksiyon"
-      ]
-     ],
+     "baslik": "Fizik Muayenede Sekonder Bulgular",
      "s": 9,
      "k": [
       0,
-      145
+      31
      ],
-     "tip": "tablo",
+     "tip": "liste",
      "konum": [
       0.61,
       0.17
      ],
      "genislik": 0.34,
      "doluluk": 0.0,
-     "kutu_h": 0.626,
+     "kutu_h": 0.571,
      "yon": "yatay",
      "olcek": 1.0
     }
    ]
   },
   "16": {
-   "2": [
+   "5": [
     {
      "tur": "sema",
-     "sablon": "lezyon_bulgu",
-     "sablon_ad": "Lezyon yeri → bulgu",
-     "duzen": "tablo",
-     "basliklar": [
-      "Lezyon düzeyi",
-      "Bulgu"
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Ateş ve ense sertliği ile menenjit tablosu",
+      "Üçüncü kraniyal sinir felci ve anizokori",
+      "Horner sendromu ve karotis diseksiyonu şüphesi"
      ],
-     "satirlar": [
-      [
-       "Üçüncü kraniyal sinir ve anizokori",
-       "Arka komünikan arter anevrizması"
-      ],
-      [
-       "Horner sendromu tablosu",
-       "Karotis arter diseksiyonu"
-      ],
-      [
-       "Beşinci ve yedinci kraniyal sinir",
-       "Beyin sapı veya kafa tabanı"
-      ]
-     ],
+     "baslik": "Kraniyal Sinir Alarmları",
      "s": 9,
      "k": [
       0,
-      128
+      29
      ],
-     "tip": "tablo",
+     "tip": "liste",
      "konum": [
       0.03,
       0.84
      ],
      "genislik": 0.9,
      "doluluk": 0.0,
-     "kutu_h": 0.413,
+     "kutu_h": 0.411,
      "yon": "yatay",
      "olcek": 1.0,
-     "ek_alt": 0.2728,
+     "ek_alt": 0.2708,
      "ek_renk": "#ffffff"
     }
    ]
   },
-  "18": {
-   "2": [
+  "17": {
+   "5": [
     {
      "tur": "sema",
-     "sablon": "tani_tetkik",
-     "sablon_ad": "Durum → bakılacak tetkik",
-     "duzen": "tablo",
-     "basliklar": [
-      "Durum / şüphe",
-      "Bakılacak tetkik"
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Akut subaraknoid kanama ve kafa travması",
+      "Lomber ponksiyon öncesi herniasyonu önlemek",
+      "Glaskov koma skoru dokuz ve altı ağır travma"
      ],
-     "satirlar": [
-      [
-       "Akut hemoraji, travma ve kibas",
-       "Beyin bilgisayarlı tomografisi"
-      ],
-      [
-       "Arka çukur tümörleri ve demiyelinizan",
-       "Manyetik rezonans incelemesi"
-      ],
-      [
-       "Menenjit ve se a ke şüphesi",
-       "Lomber ponksiyon incelemesi"
-      ]
-     ],
+     "baslik": "Acil Bilgisayarlı Tomografi Endikasyonları",
      "s": 10,
      "k": [
       0,
-      144
+      36
      ],
-     "tip": "tablo",
+     "tip": "liste",
      "konum": [
       0.03,
       0.85
      ],
      "genislik": 0.9,
      "doluluk": 0.0,
-     "kutu_h": 0.413,
+     "kutu_h": 0.411,
      "yon": "yatay",
      "olcek": 1.0,
-     "ek_alt": 0.2828,
+     "ek_alt": 0.2808,
      "ek_renk": "#ffffff"
     }
-   ],
-   "3": [
+   ]
+  },
+  "18": {
+   "5": [
     {
      "tur": "sema",
-     "sablon": "algoritma",
-     "sablon_ad": "Yaklaşım basamakları",
-     "duzen": "adimlar",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
      "ogeler": [
-      "Kırmızı bayrak taraması",
-      "Hedefe yönelik görüntüleme",
-      "Tedavi ve baş ağrısı günlüğü"
+      "Menenjit ve ksantokromi için lomber ponksiyon",
+      "Temporal arterit taramasında sedimantasyon",
+      "Atak takibinde baş ağrısı günlüğü kullanımı"
      ],
+     "baslik": "Lomber Ponksiyon ve Laboratuvar Testleri",
      "s": 10,
      "k": [
       0,
-      124
+      37
      ],
-     "tip": "adimlar",
+     "tip": "liste",
      "konum": [
-      0.46,
-      0.64
+      0.03,
+      0.85
      ],
-     "genislik": 0.5,
+     "genislik": 0.9,
      "doluluk": 0.0,
-     "kutu_h": 0.345,
+     "kutu_h": 0.411,
      "yon": "yatay",
-     "olcek": 1.0
+     "olcek": 1.0,
+     "ek_alt": 0.2808,
+     "ek_renk": "#ffffff"
     }
    ]
   }
  },
  "rapor": {
-  "aday": 17,
-  "gecti": 17,
+  "aday": 19,
+  "gecti": 19,
   "ret": {}
  }
 }

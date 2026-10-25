@@ -1,6 +1,6 @@
 {
  "surum": 1,
- "metinHash": "19226859f402b3d4b87f6d36374f7881bba7f97e",
+ "metinHash": "b696dd85b3f2a5ae0f7923fde727df71b58bfa6a",
  "p": {
   "1": {
    "1": [
@@ -334,6 +334,35 @@
      "yon": "yatay",
      "olcek": 1.0
     }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Primer mekanik hasar",
+      "Kafa içi basınç artışı",
+      "Serebral perfüzyon bozulması",
+      "İlerleyici serebral iskemi"
+     ],
+     "s": 14,
+     "k": [
+      0,
+      101
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.66,
+      0.43
+     ],
+     "genislik": 0.3,
+     "doluluk": 0.0,
+     "kutu_h": 0.49,
+     "yon": "dikey",
+     "olcek": 1.0
+    }
    ]
   },
   "12": {
@@ -399,6 +428,39 @@
     }
    ]
   },
+  "17": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Travma anında bilinç kaybı",
+      "Lucid interval geçici iyilik hali",
+      "Hematom büyümesi ve kitle etkisi",
+      "Hızlı bilinç kaybı ve koma"
+     ],
+     "s": 18,
+     "k": [
+      0,
+      85
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.9
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.45,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3697,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
   "19": {
    "0": [
     {
@@ -429,6 +491,147 @@
      "yon": "yatay",
      "olcek": 1.0,
      "ek_alt": 0.3534,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "20": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Venöz sinüs yırtıkları sonucu",
+      "Çocuklarda sık görülür",
+      "Kırık eşlik etmeyebilir"
+     ],
+     "baslik": "Venöz Epidural Hematom",
+     "s": 21,
+     "k": [
+      0,
+      80
+     ],
+     "tip": "liste",
+     "konum": [
+      0.64,
+      0.64
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.008,
+     "kutu_h": 0.348,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "23": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Dura yapışıklığı",
+       "Sütürde dura kemiğe yapışık",
+       "Falks yapışma yerini geçebilir"
+      ],
+      [
+       "Orta hat",
+       "Sütür hattını aşamaz",
+       "Orta hatta karşıya uzanabilir"
+      ]
+     ],
+     "kutuplar": [
+      "Sütür Hatları",
+      "Falks Serebri"
+     ],
+     "s": 24,
+     "k": [
+      0,
+      98
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.05,
+      0.85
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.333,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2026,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "30": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Açısal ivmelenme travması",
+      "Kortikal köprü venlerinde gerilme",
+      "Köprü venlerinin yırtılması",
+      "Subdural hilal hematom"
+     ],
+     "s": 31,
+     "k": [
+      0,
+      81
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.37,
+      0.49
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.49,
+     "yon": "dikey",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "32": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Senil serebral atrofi",
+      "Subdural boşluğun genişlemesi",
+      "Köprü venlerinin gerilmesi",
+      "Minör travmayla kronik kanama"
+     ],
+     "s": 33,
+     "k": [
+      0,
+      81
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.66
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.45,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.1297,
      "ek_renk": "#ffffff"
     }
    ]
@@ -500,6 +703,134 @@
     }
    ]
   },
+  "44": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Travmatik araknoid yırtığı",
+      "Tek yönlü kapakçık mekanizması",
+      "Subdural boşluğa BOS dolumu",
+      "Higroma kitle etkisi"
+     ],
+     "s": 45,
+     "k": [
+      0,
+      94
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.27,
+      0.76
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.45,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.2297,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "46": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "İnferior anterior frontal lob",
+      "Anterior temporal kutup",
+      "Orbita tavanı kemik çıkıntıları"
+     ],
+     "baslik": "Kontüzyon Predileksiyon Alanları",
+     "s": 47,
+     "k": [
+      0,
+      82
+     ],
+     "tip": "liste",
+     "konum": [
+      0.12,
+      0.68
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "55": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Açısal ivmelenme yavaşlama",
+      "Farklı dokularda makaslama",
+      "Aksonal mikrotübül kopması",
+      "Koma ve vejetatif tablo"
+     ],
+     "s": 57,
+     "k": [
+      0,
+      91
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.97
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.45,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.4397,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "57": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "algoritma",
+     "sablon_ad": "Yaklaşım basamakları",
+     "duzen": "adimlar",
+     "ogeler": [
+      "Birinci kortikal gri beyaz cevher bileşkesi",
+      "İkinci korpus kallozum spleniumu",
+      "Üçüncü üst beyin sapı mezensefalon"
+     ],
+     "baslik": "Diffüz Aksonal Hasar Anatomik Sırası",
+     "s": 58,
+     "k": [
+      0,
+      82
+     ],
+     "tip": "adimlar",
+     "konum": [
+      0.14,
+      0.66
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.259,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
   "59": {
    "1": [
     {
@@ -550,20 +881,112 @@
      "ek_renk": "#ffffff"
     }
    ]
+  },
+  "65": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Subfalsin singulat herniasyon",
+      "Transtentorial unkal herniasyon",
+      "Asendan transtentorial herniasyon",
+      "Tonsiller foramen magnum fıtıklaşması"
+     ],
+     "baslik": "Kranial Herniasyon Tipleri",
+     "s": 66,
+     "k": [
+      0,
+      107
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.78
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1634,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "66": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Singulat girusun karşıya fıtıklaşması",
+      "Anterior serebral arter basısı",
+      "Foramen Monro tıkanması ve hidrosefali"
+     ],
+     "baslik": "Subfalsin Herniasyon Komplikasyonları",
+     "s": 67,
+     "k": [
+      0,
+      88
+     ],
+     "tip": "liste",
+     "konum": [
+      0.12,
+      0.6
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "70": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Temporal kitle etkisi",
+      "Unkusun tentoryumdan sarkması",
+      "Üçüncü kraniyal sinir basısı",
+      "İpsilateral dilate fikse pupil"
+     ],
+     "s": 71,
+     "k": [
+      0,
+      82
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.45,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.4847,
+     "ek_renk": "#0e0e0e"
+    }
+   ]
   }
  },
  "rapor": {
   "aday": 35,
-  "gecti": 16,
+  "gecti": 29,
   "ret": {
-   "zincir: 2–7 öğe": 8,
-   "panel metni 'Kırık eşlik etmeyebilir' henüz anlatılmamış ter": 1,
-   "panel metni 'Falks Serebri' henüz anlatılmamış terim içeriyo": 1,
-   "resim sayfasında panel (H51)": 5,
-   "panel metni 'Orbita tavanı kemik çıkıntılar' henüz anlatılma": 1,
-   "panel metni 'Birinci kortikal gri beyaz cev' henüz anlatılma": 1,
-   "panel metni 'Tonsiller foramen magnum fıtık' henüz anlatılma": 1,
-   "panel metni 'Singulat girusun karşıya fıtık' henüz anlatılma": 1
+   "panel metni 'Duranın kemikten sıyrılması' henüz anlatılmamış": 1,
+   "resim sayfasında panel (H51)": 5
   }
  }
 }

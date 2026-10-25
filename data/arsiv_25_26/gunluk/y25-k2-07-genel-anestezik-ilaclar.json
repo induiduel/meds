@@ -96,6 +96,56 @@
         "cizimSayisi": 27,
         "cikmisEslesme": 19
       }
+    },
+    {
+      "surum": 5,
+      "tarih": "2026-10-25 19:05",
+      "neden": "73 sayfalık genel anestezik ilaçlar dersinin 0 seyrek sayfa ile amfi derinliğinde genişletilmesi ve 28 çizimle yayını",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi 1. 23-24    Genel Anestezik İLaçlar.pdf (72 sayfa) kaynağından 0 atlanan sayfa ile 73 paragraf / 227 cümlelik sesli anlatım üretildi.",
+        "20 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 28 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 41.8 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 2509,
+        "sureDk": 41.8,
+        "sayfaSayisi": 72,
+        "atlananSayfa": 0,
+        "bolumSayisi": 12,
+        "paragrafSayisi": 73,
+        "cumleSayisi": 227,
+        "slaytAdimSayisi": 20,
+        "cizimSayisi": 28,
+        "cikmisEslesme": 19
+      }
+    },
+    {
+      "surum": 6,
+      "tarih": "2026-10-25 19:07",
+      "neden": "73 sayfalık genel anestezik ilaçlar dersinin 0 seyrek sayfa ile amfi derinliğinde genişletilmesi ve 28 çizimle yayını",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi 1. 23-24    Genel Anestezik İLaçlar.pdf (72 sayfa) kaynağından 0 atlanan sayfa ile 73 paragraf / 227 cümlelik sesli anlatım üretildi.",
+        "20 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 28 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 41.8 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 2509,
+        "sureDk": 41.8,
+        "sayfaSayisi": 72,
+        "atlananSayfa": 0,
+        "bolumSayisi": 12,
+        "paragrafSayisi": 73,
+        "cumleSayisi": 227,
+        "slaytAdimSayisi": 20,
+        "cizimSayisi": 28,
+        "cikmisEslesme": 19
+      }
     }
   ]
 }

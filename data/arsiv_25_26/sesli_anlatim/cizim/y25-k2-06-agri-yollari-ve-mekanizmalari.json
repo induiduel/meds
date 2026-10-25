@@ -1,404 +1,35 @@
 {
  "surum": 1,
- "metinHash": "3f82929c4b91b60f7f002cfd610ebe772c9af85e",
+ "metinHash": "0e60b7536c132abc4ead76a53938866b5d1e5560",
  "p": {
-  "4": {
+  "14": {
    "2": [
-    {
-     "tur": "sema",
-     "sablon": "mekanizma_adimlari",
-     "sablon_ad": "Mekanizma basamakları",
-     "duzen": "zincir",
-     "ogeler": [
-      "objektif uyaranlar + sübjektif özellikler",
-      "ağrı eşiği",
-      "kişiden kişiye farklı yanıt"
-     ],
-     "s": 6,
-     "k": [
-      15,
-      84
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.13,
-      0.83
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.35,
-     "yon": "dikey",
-     "olcek": 1.0,
-     "ek_alt": 0.1996,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "5": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "mekanizma_adimlari",
-     "sablon_ad": "Mekanizma basamakları",
-     "duzen": "zincir",
-     "ogeler": [
-      "nosiseptörler",
-      "anatomik duyusal yollar",
-      "santral sistemler"
-     ],
-     "s": 7,
-     "k": [
-      13,
-      88
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.03,
-      1.015
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.149,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.1844,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "6": {
-   "3": [
-    {
-     "tur": "sema",
-     "sablon": "boyut_bolge",
-     "sablon_ad": "Boyut → beyin bölgesi ve işlevi",
-     "duzen": "tablo",
-     "basliklar": [
-      "Boyut",
-      "Beyin bölgesi",
-      "İşlevi"
-     ],
-     "satirlar": [
-      [
-       "Duyusal diskriminatif",
-       "Somatosensoriyel korteks, talamus",
-       "Yer, süre, şiddet, özellik"
-      ],
-      [
-       "Motivasyonel afektif",
-       "Limbik sistem, anterior singulat korteks",
-       "Hoş olmayan his, korku, kaygı"
-      ],
-      [
-       "Kognitif değerlendirme",
-       "Prefrontal, anterior singulat, orbitofrontal",
-       "Anlamlandırma, ağrı belleği"
-      ]
-     ],
-     "s": 8,
-     "k": [
-      95,
-      234
-     ],
-     "tip": "tablo",
-     "konum": [
-      0.2,
-      0.85
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.55,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.4198,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "7": {
-   "3": [
-    {
-     "tur": "sema",
-     "sablon": "terim_tanim",
-     "sablon_ad": "Terim → tanım",
-     "duzen": "tablo",
-     "basliklar": [
-      "Terim",
-      "Tanım"
-     ],
-     "satirlar": [
-      [
-       "Allodini",
-       "Ağrılı olmayan uyaranın ağrıya sebep olması"
-      ],
-      [
-       "Anestezi dolorosa",
-       "Anestezik bölgede oluşan ağrı"
-      ],
-      [
-       "Kozalji",
-       "Travmatik sinir lezyonu sonrası süren yanıcı ağrı"
-      ],
-      [
-       "Santral ağrı",
-       "Santral sinir sistemi lezyonuyla olan ağrı"
-      ]
-     ],
-     "s": 9,
-     "k": [
-      0,
-      77
-     ],
-     "tip": "tablo",
-     "konum": [
-      0.2,
-      0.85
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.567,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.4367,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "8": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "karsilastirma",
-     "sablon_ad": "İki durumun karşılaştırması",
-     "duzen": "karsit",
-     "basliklar": [
-      "Özellik"
-     ],
-     "satirlar": [
-      [
-       "Anormal duyu",
-       "Var",
-       "Var"
-      ],
-      [
-       "Hoş olmama niteliği",
-       "Var",
-       "Yok"
-      ]
-     ],
-     "kutuplar": [
-      "Disestezi",
-      "Parestezi"
-     ],
-     "s": 10,
-     "k": [
-      0,
-      112
-     ],
-     "tip": "karsit",
-     "konum": [
-      0.21,
-      0.89
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.293,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.2026,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "9": {
-   "2": [
-    {
-     "tur": "sema",
-     "sablon": "terim_tanim",
-     "sablon_ad": "Terim → tanım",
-     "duzen": "tablo",
-     "basliklar": [
-      "Terim",
-      "Tanım"
-     ],
-     "satirlar": [
-      [
-       "Hipoestezi",
-       "Uyarıya karşı duyarlılığın azalması"
-      ],
-      [
-       "Nöralji",
-       "Bir sinire yayılan ağrı"
-      ],
-      [
-       "Nöropati",
-       "Sinirde patolojik değişiklik ya da işlev bozukluğu"
-      ],
-      [
-       "Nosiseptör",
-       "Ağrılı uyarıya duyarlı spesifik reseptör"
-      ],
-      [
-       "Noksiyöz uyarı",
-       "Doku hasarı oluşturan uyarı"
-      ]
-     ],
-     "s": 11,
-     "k": [
-      0,
-      144
-     ],
-     "tip": "tablo",
-     "konum": [
-      0.13,
-      0.85
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.544,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.4136,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "10": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "karsilastirma",
-     "sablon_ad": "İki durumun karşılaştırması",
-     "duzen": "karsit",
-     "basliklar": [
-      "Özellik"
-     ],
-     "satirlar": [
-      [
-       "Tanım",
-       "Ağrı yapan en küçük uyarı",
-       "Tolere edilen en büyük uyarı"
-      ],
-      [
-       "Sınır",
-       "Alt sınır",
-       "Üst sınır"
-      ]
-     ],
-     "kutuplar": [
-      "Ağrı eşiği",
-      "Ağrı tolerans seviyesi"
-     ],
-     "s": 12,
-     "k": [
-      0,
-      136
-     ],
-     "tip": "karsit",
-     "konum": [
-      0.17,
-      0.6
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.293,
-     "yon": "yatay",
-     "olcek": 1.0
-    }
-   ]
-  },
-  "11": {
-   "1": [
     {
      "tur": "sema",
      "sablon": "siniflama",
      "sablon_ad": "Sınıflama",
      "duzen": "liste",
      "ogeler": [
-      "Akut",
-      "Subakut",
-      "Kronik"
+      "Akut ağrı: Doku hasarıyla başlar, onarımla kaybolur",
+      "Subakut ağrı: Altı haftadan üç aya kadar uzanan dönem",
+      "Kronik ağrı: Üç ila altı aydan uzun devam eden hastalık"
      ],
-     "baslik": "Başlama süresine göre ağrı",
-     "numarali": true,
-     "s": 13,
+     "baslik": "Süreye Göre Ağrı Sınıflaması",
+     "s": 16,
      "k": [
       0,
-      63
+      34
      ],
      "tip": "liste",
      "konum": [
-      0.13,
-      0.58
+      0.39,
+      0.53
      ],
      "genislik": 0.5,
      "doluluk": 0.0,
-     "kutu_h": 0.308,
+     "kutu_h": 0.428,
      "yon": "yatay",
      "olcek": 1.0
-    }
-   ]
-  },
-  "12": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "neden_sonuc",
-     "sablon_ad": "Neden → sonuç",
-     "duzen": "zincir",
-     "bag": "yol açar",
-     "ogeler": [
-      "Neden olan lezyon",
-      "Ağrı (yer, şiddet, zaman uyumlu)"
-     ],
-     "s": 14,
-     "k": [
-      0,
-      88
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.16,
-      0.76
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.186,
-     "yon": "yatay",
-     "olcek": 1.0
-    }
-   ],
-   "2": [
-    {
-     "tur": "sema",
-     "sablon": "cok_neden_tek_sonuc",
-     "sablon_ad": "Birçok neden → tek sonuç",
-     "duzen": "grup",
-     "bag": "neden olur",
-     "kaynaklar": [
-      "Travma",
-      "Enfeksiyon",
-      "Doku hipoksisi",
-      "Enflamasyon"
-     ],
-     "sonuc": "Akut ağrı",
-     "s": 14,
-     "k": [
-      0,
-      81
-     ],
-     "tip": "grup",
-     "konum": [
-      0.16,
-      0.76
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.32,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.1003,
-     "ek_renk": "#ffffff"
     }
    ]
   },
@@ -406,122 +37,88 @@
    "2": [
     {
      "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Nöropatik ağrı",
-      "Fibromiyalji"
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
      ],
-     "baslik": "Kronik ağrı örnekleri",
+     "satirlar": [
+      [
+       "Biyolojik rol",
+       "Koruyucu biyolojik alarm",
+       "Alarm fonksiyonu kaybı"
+      ],
+      [
+       "Klinik tablo",
+       "Semptom ve doku uyarısı",
+       "Kalıcı sinir sistemi hastalığı"
+      ],
+      [
+       "Zaman ilişkisi",
+       "Doğrusal ilişki bulunur",
+       "Normal doku süresini aşar"
+      ],
+      [
+       "Klinik süreç",
+       "Doku onarımıyla kaybolur",
+       "Hayat kalitesini bozar"
+      ]
+     ],
+     "kutuplar": [
+      "Akut Ağrı",
+      "Kronik Ağrı"
+     ],
      "s": 15,
      "k": [
       0,
-      63
+      31
      ],
-     "tip": "liste",
+     "tip": "karsit",
      "konum": [
-      0.46,
-      0.07
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.253,
-     "yon": "yatay",
-     "olcek": 1.0
-    }
-   ]
-  },
-  "14": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "mekanizma_adimlari",
-     "sablon_ad": "Mekanizma basamakları",
-     "duzen": "zincir",
-     "ogeler": [
-      "Akut ağrı",
-      "Subakut ağrı (6 hafta – 3 ay)",
-      "Kronik ağrı (3–6 aydan uzun)"
-     ],
-     "s": 16,
-     "k": [
-      0,
-      103
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.39,
-      0.53
-     ],
-     "genislik": 0.34,
-     "doluluk": 0.0,
-     "kutu_h": 0.35,
-     "yon": "dikey",
-     "olcek": 1.0
-    }
-   ]
-  },
-  "15": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Nosiseptif",
-      "Nöropatik",
-      "Psikojenik",
-      "Nosiplastik"
-     ],
-     "baslik": "Mekanizmaya göre ağrı",
-     "s": 17,
-     "k": [
-      7,
-      99
-     ],
-     "tip": "liste",
-     "konum": [
-      0.13,
-      0.06
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.363,
-     "yon": "yatay",
-     "olcek": 1.0
-    }
-   ]
-  },
-  "16": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "mekanizma_adimlari",
-     "sablon_ad": "Mekanizma basamakları",
-     "duzen": "zincir",
-     "ogeler": [
-      "Fizyopatolojik olaylar ve süreçler",
-      "Nosiseptörlerin uyarılması",
-      "Nosiseptif ağrı"
-     ],
-     "s": 18,
-     "k": [
-      17,
-      153
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.15,
+      0.14,
       0.86
      ],
      "genislik": 0.7,
      "doluluk": 0.0,
-     "kutu_h": 0.35,
-     "yon": "dikey",
+     "kutu_h": 0.527,
+     "yon": "yatay",
      "olcek": 1.0,
-     "ek_alt": 0.2296,
+     "ek_alt": 0.4067,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "15": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Nosiseptif ağrı: Sağlam sinir boyunca doku hasarı iletimi",
+      "Nöropatik ağrı: Sinir liflerinin kendi patolojisi",
+      "Nosiplastik ağrı: Değişen nosiseptif mekanizma tablosu",
+      "Psikojenik ağrı: Psikososyal etkenlerin belirlediği ağrı"
+     ],
+     "baslik": "Mekanizmalarına Göre Ağrı Kategorileri",
+     "s": 17,
+     "k": [
+      0,
+      39
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3984,
      "ek_renk": "#ffffff"
     }
    ]
@@ -530,290 +127,60 @@
    "2": [
     {
      "tur": "sema",
-     "sablon": "cok_neden_tek_sonuc",
-     "sablon_ad": "Birçok neden → tek sonuç",
-     "duzen": "grup",
-     "bag": "neden olur",
-     "kaynaklar": [
-      "Disk hernisi (mekanik travma)",
-      "Diyabetik nöropati (metabolitler)"
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
      ],
-     "sonuc": "Nöropatik ağrı",
+     "satirlar": [
+      [
+       "Temel mekanizma",
+       "Nosiseptörlerin uyarılması",
+       "Sinir dokusunun hasarlanması"
+      ],
+      [
+       "Sinir yapısı",
+       "Sinir yolları tamamen sağlam",
+       "Sinir sistemi hasarı bulunur"
+      ],
+      [
+       "Tedavi yaklaşımı",
+       "Antienflamatuar ve opioid",
+       "Antiepileptik ve antidepresan"
+      ],
+      [
+       "Örnek durum",
+       "Doku yıkımı ve travma",
+       "Mekanik sinir kompresyonu"
+      ]
+     ],
+     "kutuplar": [
+      "Nosiseptif Ağrı",
+      "Nöropatik Ağrı"
+     ],
      "s": 19,
      "k": [
       0,
-      128
+      28
      ],
-     "tip": "grup",
+     "tip": "karsit",
      "konum": [
       0.17,
       0.84
      ],
      "genislik": 0.7,
      "doluluk": 0.0,
-     "kutu_h": 0.246,
+     "kutu_h": 0.527,
      "yon": "yatay",
      "olcek": 1.0,
-     "ek_alt": 0.1064,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "18": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "neden_sonuc",
-     "sablon_ad": "Neden → sonuç",
-     "duzen": "zincir",
-     "bag": "yol açar",
-     "ogeler": [
-      "Sinir dokusunun hassaslaşması",
-      "Normalde ağrısız uyaranlar ağrıya yol açar"
-     ],
-     "s": 20,
-     "k": [
-      0,
-      97
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.14,
-      0.82
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.283,
-     "yon": "dikey",
-     "olcek": 1.0,
-     "ek_alt": 0.1234,
-     "ek_renk": "#ffffff"
-    }
-   ],
-   "3": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Periferik: diyabetik nöropati, postherpetik nevralji",
-      "Santral: serebrovasküler olay, multipl skleroza bağlı ağrı"
-     ],
-     "baslik": "Nöropatik ağrı",
-     "s": 20,
-     "k": [
-      105,
-      297
-     ],
-     "tip": "liste",
-     "konum": [
-      0.14,
-      0.82
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.253,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.0926,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "19": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "mekanizma_adimlari",
-     "sablon_ad": "Mekanizma basamakları",
-     "duzen": "zincir",
-     "ogeler": [
-      "Periferik ya da santral sinir sistemi lezyonu",
-      "Somatosensoriyel uyaranların santral iletimi kesilir",
-      "Deafferentasyon ağrısı"
-     ],
-     "s": 21,
-     "k": [
-      0,
-      166
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.15,
-      0.87
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.35,
-     "yon": "dikey",
-     "olcek": 1.0,
-     "ek_alt": 0.2396,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "20": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Travmatik paraplejiler",
-      "Fantom ağrısı"
-     ],
-     "baslik": "Deafferentasyon ağrısı örnekleri",
-     "s": 22,
-     "k": [
-      0,
-      79
-     ],
-     "tip": "liste",
-     "konum": [
-      0.17,
-      0.79
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.253,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.0626,
-     "ek_renk": "#ffffff"
-    }
-   ],
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "mekanizma_adimlari",
-     "sablon_ad": "Mekanizma basamakları",
-     "duzen": "zincir",
-     "ogeler": [
-      "Sinir travması",
-      "Medulla spinalis ve SSS'ye ileti kesilir",
-      "Elektriksel deşarjda kısa devreler",
-      "Kısa devreler başlı başına odak: ağrı"
-     ],
-     "s": 22,
-     "k": [
-      74,
-      253
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.17,
-      0.79
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.45,
-     "yon": "dikey",
-     "olcek": 1.0,
-     "ek_alt": 0.2597,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "21": {
-   "3": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Primer hastalıktan haftalar-aylar sonra başlar",
-      "Şiddeti gittikçe artar",
-      "Deri hassas ve soğuk; soğukta artar",
-      "Yanma ile üşüme arasında his"
-     ],
-     "baslik": "Sempatik ağrının özellikleri",
-     "s": 23,
-     "k": [
-      0,
-      149
-     ],
-     "tip": "liste",
-     "konum": [
-      0.17,
-      0.79
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.363,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.1734,
+     "ek_alt": 0.3867,
      "ek_renk": "#ffffff"
     }
    ]
   },
   "22": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Damarlardan kaynaklanan ağrılar",
-      "Kozalji (yanma tarzında ağrı)"
-     ],
-     "baslik": "Sempatik ağrı örnekleri",
-     "s": 24,
-     "k": [
-      0,
-      108
-     ],
-     "tip": "liste",
-     "konum": [
-      0.25,
-      0.67
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.253,
-     "yon": "yatay",
-     "olcek": 1.0
-    }
-   ]
-  },
-  "23": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "mekanizma_adimlari",
-     "sablon_ad": "Mekanizma basamakları",
-     "duzen": "zincir",
-     "ogeler": [
-      "Kronik ağrı",
-      "İşinden gücünden alıkonma, toplum dışına çıkma",
-      "Psikolojik semptomlar"
-     ],
-     "s": 25,
-     "k": [
-      0,
-      196
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.16,
-      0.86
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.35,
-     "yon": "dikey",
-     "olcek": 1.0,
-     "ek_alt": 0.2296,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "24": {
-   "0": [
+   "2": [
     {
      "tur": "sema",
      "sablon": "neden_sonuc",
@@ -821,110 +188,49 @@
      "duzen": "zincir",
      "bag": "yol açar",
      "ogeler": [
-      "psişik ya da psikososyal sorunlar",
-      "ağrı biçiminde ifade"
+      "Periferik sinir hasarı ve anormal sempatik filizlenme",
+      "Nosiseptörlerde alfa-bir adrenerjik reseptör artışı",
+      "Sempatik deşarjla tetiklenen vazomotor dengesizlik",
+      "Ekstremitede yanıcı ağrı, ödem ve trofik bozukluk"
      ],
-     "s": 26,
+     "baslik": "Sempatik Aracılı Ağrı ve Kozalji Kaskadı",
+     "s": 24,
      "k": [
-      35,
-      112
+      0,
+      38
      ],
      "tip": "zincir",
      "konum": [
-      0.17,
-      0.8
+      0.15,
+      0.67
      ],
      "genislik": 0.7,
      "doluluk": 0.0,
-     "kutu_h": 0.186,
-     "yon": "yatay",
+     "kutu_h": 0.551,
+     "yon": "dikey",
      "olcek": 1.0,
-     "ek_alt": 0.0063,
+     "ek_alt": 0.2413,
      "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "25": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "cok_neden_tek_sonuc",
-     "sablon_ad": "Birçok neden → tek sonuç",
-     "duzen": "grup",
-     "bag": "neden olur",
-     "kaynaklar": [
-      "santral sensitizasyon",
-      "ağrı modülasyon bozukluğu"
-     ],
-     "sonuc": "nosiplastik ağrı",
-     "s": 27,
-     "k": [
-      0,
-      75
-     ],
-     "tip": "grup",
-     "konum": [
-      0.12,
-      0.91
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.206,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.1364,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "26": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "somatik ağrı",
-      "visseral ağrı"
-     ],
-     "baslik": "Kaynaklandığı bölgeye göre ağrı",
-     "s": 28,
-     "k": [
-      17,
-      95
-     ],
-     "tip": "liste",
-     "konum": [
-      0.13,
-      0.09
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.253,
-     "yon": "yatay",
-     "olcek": 1.0
     }
    ]
   },
   "27": {
-   "0": [
+   "2": [
     {
      "tur": "sema",
      "sablon": "siniflama",
      "sablon_ad": "Sınıflama",
      "duzen": "liste",
      "ogeler": [
-      "ani başlar",
-      "keskindir",
-      "iyi lokalize edilir",
-      "batma, sızlama, zonklama tarzında"
+      "Yüzeyel somatik ağrı: Deri ve mukozadan kaynaklanır",
+      "Derin somatik ağrı: Kas, eklem ve periostu tutar",
+      "Visseral ağrı: İç organlardan kaynaklanan nosiseptif ağrı"
      ],
-     "baslik": "Somatik ağrının özellikleri",
+     "baslik": "Kaynaklandığı Bölgeye Göre Ağrı",
      "s": 29,
      "k": [
-      64,
-      147
+      0,
+      32
      ],
      "tip": "liste",
      "konum": [
@@ -932,303 +238,6 @@
       0.84
      ],
      "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.363,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.2234,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "28": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "karsilastirma",
-     "sablon_ad": "İki durumun karşılaştırması",
-     "duzen": "karsit",
-     "basliklar": [
-      "Özellik"
-     ],
-     "satirlar": [
-      [
-       "kaynak",
-       "deri ve mukoza",
-       "kas, eklem, bağ dokusu"
-      ],
-      [
-       "nitelik",
-       "iyi lokalize edilir",
-       "künt ve yaygın"
-      ],
-      [
-       "örnek",
-       "yanık ağrısı",
-       "miyofasiyal ağrı, artrit ağrısı"
-      ]
-     ],
-     "kutuplar": [
-      "somatik yüzeyel ağrı",
-      "somatik derin ağrı"
-     ],
-     "s": 30,
-     "k": [
-      0,
-      129
-     ],
-     "tip": "karsit",
-     "konum": [
-      0.2,
-      0.82
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.47,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.3097,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "29": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "mekanizma_adimlari",
-     "sablon_ad": "Mekanizma basamakları",
-     "duzen": "zincir",
-     "ogeler": [
-      "bağırsakta gerilme",
-      "çeperdeki sinir lifleri uyarılır",
-      "ağrı"
-     ],
-     "s": 31,
-     "k": [
-      67,
-      174
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.16,
-      0.79
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.35,
-     "yon": "dikey",
-     "olcek": 1.0,
-     "ek_alt": 0.1596,
-     "ek_renk": "#ffffff"
-    }
-   ],
-   "2": [
-    {
-     "tur": "sema",
-     "sablon": "karsilastirma",
-     "sablon_ad": "İki durumun karşılaştırması",
-     "duzen": "karsit",
-     "basliklar": [
-      "Özellik"
-     ],
-     "satirlar": [
-      [
-       "nitelik",
-       "künt",
-       "batma, sızlama, zonklama"
-      ],
-      [
-       "başlangıç",
-       "yavaş yavaş artar",
-       "ani başlar"
-      ],
-      [
-       "lokalizasyon",
-       "kolay lokalize edilemez",
-       "iyi lokalize edilir"
-      ]
-     ],
-     "kutuplar": [
-      "visseral ağrı",
-      "somatik ağrı"
-     ],
-     "s": 31,
-     "k": [
-      0,
-      172
-     ],
-     "tip": "karsit",
-     "konum": [
-      0.16,
-      0.79
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.39,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.1996,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "30": {
-   "2": [
-    {
-     "tur": "sema",
-     "sablon": "neden_sonuc",
-     "sablon_ad": "Neden → sonuç",
-     "duzen": "zincir",
-     "bag": "yol açar",
-     "ogeler": [
-      "sinir kesisi veya spinal lezyon",
-      "deafferentasyon ağrısı (spontan)"
-     ],
-     "s": 33,
-     "k": [
-      0,
-      91
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.13,
-      0.75
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.283,
-     "yon": "dikey",
-     "olcek": 1.0,
-     "ek_alt": 0.0534,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "38": {
-   "0": [
-    {
-     "tur": "akis",
-     "a": [
-      0.69,
-      0.794
-     ],
-     "b": [
-      0.456,
-      0.67
-     ],
-     "iliski": "aktive",
-     "etiket": "nosiseptörden spinal korda",
-     "s": 41,
-     "k": [
-      51,
-      127
-     ],
-     "yol": [
-      [
-       0.69,
-       0.794
-      ],
-      [
-       0.69,
-       0.67
-      ],
-      [
-       0.456,
-       0.67
-      ]
-     ],
-     "rota": "dirsek",
-     "etiket_konum": [
-      0.0683,
-      0.66
-     ],
-     "etiket_genislik": 0.366
-    }
-   ]
-  },
-  "42": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "neden_sonuc",
-     "sablon_ad": "Neden → sonuç",
-     "duzen": "zincir",
-     "bag": "yol açar",
-     "ogeler": [
-      "Sensitizasyon",
-      "Düşük şiddetli mekanik uyaran ağrılı algılanır"
-     ],
-     "s": 45,
-     "k": [
-      0,
-      147
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.31,
-      0.67
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.001,
-     "kutu_h": 0.283,
-     "yon": "dikey",
-     "olcek": 1.0
-    }
-   ],
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "neden_sonuc",
-     "sablon_ad": "Neden → sonuç",
-     "duzen": "zincir",
-     "bag": "yol açar",
-     "ogeler": [
-      "Harabiyet bölgesi",
-      "Termal uyarana yanıtta artış"
-     ],
-     "s": 45,
-     "k": [
-      11,
-      91
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.19,
-      0.02
-     ],
-     "genislik": 0.6,
-     "doluluk": 0.0,
-     "kutu_h": 0.186,
-     "yon": "yatay",
-     "olcek": 1.0
-    }
-   ]
-  },
-  "47": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Spinal kord",
-      "Talamus",
-      "Korteks"
-     ],
-     "baslik": "Reorganizasyonun olduğu düzeyler",
-     "s": 50,
-     "k": [
-      98,
-      139
-     ],
-     "tip": "liste",
-     "konum": [
-      0.18,
-      0.84
-     ],
-     "genislik": 0.5,
      "doluluk": 0.0,
      "kutu_h": 0.308,
      "yon": "yatay",
@@ -1238,39 +247,7 @@
     }
    ]
   },
-  "49": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Mekanik",
-      "Termal",
-      "Kimyasal",
-      "Polimodal"
-     ],
-     "baslik": "Nosiseptör tipleri",
-     "s": 52,
-     "k": [
-      0,
-      66
-     ],
-     "tip": "liste",
-     "konum": [
-      0.13,
-      0.81
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.363,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.1934,
-     "ek_renk": "#ffffff"
-    }
-   ],
+  "35": {
    "3": [
     {
      "tur": "sema",
@@ -1278,118 +255,189 @@
      "sablon_ad": "Mekanizma basamakları",
      "duzen": "zincir",
      "ogeler": [
-      "Kronik inflamasyon",
-      "TRP Ca ve Na kanalları aşırı duyarlı",
-      "Hiperaljezi"
+      "Transdüksiyon: Uyarının aksiyon potansiyeline dönüşümü",
+      "Transmisyon: Sinyalin omurilik ve beyne iletilmesi",
+      "Modülasyon: Omurilik arka boynuzunda sinyal ayarı",
+      "Persepsiyon: Kortekste ağrının bilinçli algılanması"
      ],
-     "s": 52,
+     "baslik": "Ağrı Algılanmasının Dört Temel Aşaması",
+     "s": 37,
      "k": [
       0,
-      109
+      47
      ],
      "tip": "zincir",
      "konum": [
-      0.03,
-      1.015
+      0.13,
+      0.87
      ],
-     "genislik": 0.9,
+     "genislik": 0.7,
      "doluluk": 0.0,
-     "kutu_h": 0.149,
-     "yon": "yatay",
+     "kutu_h": 0.45,
+     "yon": "dikey",
      "olcek": 1.0,
-     "ek_alt": 0.1844,
+     "ek_alt": 0.3397,
      "ek_renk": "#ffffff"
     }
    ]
   },
-  "52": {
-   "1": [
+  "36": {
+   "2": [
     {
-     "tur": "akis",
-     "a": [
-      0.3,
-      0.41100000000000003
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
      ],
-     "b": [
-      0.519,
-      0.485
-     ],
-     "iliski": "aktive",
-     "etiket": "SG uyarılır, kapı kapanır",
-     "s": 55,
-     "k": [
-      0,
-      69
-     ],
-     "yol": [
+     "satirlar": [
       [
-       0.3,
-       0.411
+       "Miyelin yapısı",
+       "Miyelinli lifler",
+       "Miyelinsiz lifler"
       ],
       [
-       0.3,
-       0.485
+       "İletim özelliği",
+       "Yüksek hızla iletir",
+       "Yavaş hızla iletir"
       ],
       [
-       0.519,
-       0.485
+       "Ağrı niteliği",
+       "İlk keskin batıcı ağrı",
+       "İkinci künt sızlayıcı ağrı"
+      ],
+      [
+       "Lokalizasyon",
+       "Tam lokalize ağrı",
+       "Yaygın künt ağrı"
       ]
      ],
-     "rota": "dirsek",
-     "etiket_konum": [
-      0.3,
-      0.441
+     "kutuplar": [
+      "A-delta Lifleri",
+      "C Lifleri"
      ],
-     "etiket_genislik": 0.353,
-     "yakin": [
-      0.24,
-      0.351,
-      0.713,
-      0.545
-     ]
+     "s": 38,
+     "k": [
+      0,
+      25
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.14,
+      0.8
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.407,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2266,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "41": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Doku hasarı ile mast hücresi ve makrofaj uyarımı",
+      "Prostaglandin, bradikinin ve histamin salınımı",
+      "Nosiseptör uçlarından nörojenik peptit salınması",
+      "Reseptör eşiğinin düşmesi ve primer hiperaljezi"
+     ],
+     "baslik": "Periferik Sensitizasyon ve İnflamatuar Mediyatörler",
+     "s": 43,
+     "k": [
+      0,
+      24
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.16,
+      0.8
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.551,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3713,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "44": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Oluştuğu alan",
+       "Doğrudan hasar yeri",
+       "Çevreleyen sağlam doku"
+      ],
+      [
+       "Temel mekanizma",
+       "Periferik sensitizasyon",
+       "Santral sensitizasyon"
+      ],
+      [
+       "Aşırı duyarlılık",
+       "Hem termal hem mekanik",
+       "Baskın olarak mekanik"
+      ],
+      [
+       "Tedavi yanıtı",
+       "Lokal anestezikler",
+       "Santral etkili ajanlar"
+      ]
+     ],
+     "kutuplar": [
+      "Primer Hiperaljezi",
+      "Sekonder Hiperaljezi"
+     ],
+     "s": 46,
+     "k": [
+      0,
+      30
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.05,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.367,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.4015,
+     "ek_renk": "#ffffff"
     }
    ]
   }
  },
  "rapor": {
-  "aday": 84,
-  "gecti": 38,
+  "aday": 15,
+  "gecti": 10,
   "ret": {
-   "panel metni 'Ağrının iki boyutu' henüz anlatılmamış terim iç": 1,
-   "maske: görünen + 1–4 altta": 1,
-   "panel metni 'Nitelik' henüz anlatılmamış terim içeriyor (ile": 2,
-   "panel metni 'emosyonel yapı' henüz anlatılmamış terim içeriy": 1,
-   "panel metni 'Duyarlılık ve cevap artar' henüz anlatılmamış t": 1,
-   "panel metni 'Artar' henüz anlatılmamış terim içeriyor (ileri": 1,
-   "panel metni 'sağ omuz' henüz anlatılmamış terim içeriyor (il": 1,
-   "kelime aralığı geçersiz (6–15, cümle 9 kelime)": 1,
-   "panel metni 'dokularda oksijen yetersizliği' henüz anlatılma": 1,
-   "bilinmeyen cümle": 11,
-   "panel metni 'Opioide duyarlı' henüz anlatılmamış terim içeri": 1,
-   "kelime aralığı geçersiz (2–26, cümle 10 kelime)": 1,
-   "panel metni 'persepsiyon' henüz anlatılmamış terim içeriyor ": 1,
-   "panel metni 'A delta lifi' henüz anlatılmamış terim içeriyor": 1,
-   "kelime aralığı geçersiz (0–15, cümle 14 kelime)": 1,
-   "kelime aralığı geçersiz (3–17, cümle 10 kelime)": 1,
-   "kelime aralığı geçersiz (15–22, cümle 18 kelime)": 1,
-   "panel metni 'Disinhibisyon' henüz anlatılmamış terim içeriyo": 1,
-   "kelime aralığı geçersiz (2–21, cümle 13 kelime)": 1,
-   "kelime aralığı geçersiz (0–22, cümle 22 kelime)": 1,
-   "kelime aralığı geçersiz (2–22, cümle 21 kelime)": 1,
-   "kelime aralığı geçersiz (15–26, cümle 14 kelime)": 1,
-   "panel metni 'NMDA reseptör aktivasyonu, mik' henüz anlatılma": 1,
-   "kelime aralığı geçersiz (0–16, cümle 10 kelime)": 1,
-   "kelime aralığı geçersiz (18–27, cümle 21 kelime)": 1,
-   "kelime aralığı geçersiz (0–29, cümle 28 kelime)": 1,
-   "kelime aralığı geçersiz (0–19, cümle 12 kelime)": 1,
-   "panel metni 'Kapsaisin' henüz anlatılmamış terim içeriyor (i": 1,
-   "kelime aralığı geçersiz (10–37, cümle 9 kelime)": 1,
-   "kelime aralığı geçersiz (0–21, cümle 20 kelime)": 1,
-   "panel metni 'Alfa adrenerjik' henüz anlatılmamış terim içeri": 1,
-   "kelime aralığı geçersiz (0–26, cümle 22 kelime)": 1,
-   "noktaların %70'i çizgi üstünde (en az %70)": 1,
-   "kelime aralığı geçersiz (18–22, cümle 21 kelime)": 1,
-   "ok uçlarından biri boş alanda (yazı/çizim yok)": 1
+   "panel metni 'Arka boynuzda primer afferent ' henüz anlatılma": 1,
+   "panel metni 'Otonomik bulgu' henüz anlatılmamış terim içeriy": 1,
+   "panel metni 'NMDA reseptör aktivasyonu ve k' henüz anlatılma": 1,
+   "panel metni 'NMDA aktivasyonu ile ağrı siny' henüz anlatılma": 1,
+   "resim sayfasında panel (H51)": 1
   }
  }
 }

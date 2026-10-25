@@ -1,13 +1,11 @@
 {
- "mdSha1": "375f271f6600c9cecf19fb37887f11f754666879",
+ "mdSha1": "bc14b003288d53ea941282fd6668f1669ac2c946",
  "p": [
   [
    {
-    "ses": "Nörolojik hastaya yaklaşım, sinir sisteminin karmaşık yapısını klinik verilerle adım adım çözümleyen sistematik bir tanı sürecidir.",
+    "ses": "Nörolojik hastaya klinik yaklaşım, sinir sisteminin karmaşık anatomik ve işlevsel hiyerarşisini adım adım çözümleyen sistematik bir tanı sürecidir.",
     "sayfa": 1,
-    "satir": [
-     "NÖROLOJİK HASTAYA YAKLAŞIM"
-    ],
+    "satir": "NÖROLOJİK HASTAYA",
     "sekil": null,
     "madde": [
      0,
@@ -15,87 +13,78 @@
     ]
    },
    {
-    "ses": "Klinik nörolojide hekimin temel amacı iki ana soruya doğru yanıt bulmaktır, bunlardan birincisi lezyonun sinir sisteminin neresinde olduğu yani anatomik lokalizasyondur.",
+    "ses": "Klinik nörolojide hekimin temel amacı iki ana soruya doğru yanıt bulmaktır; bunlardan birincisi lezyonun sinir sisteminin neresinde olduğu yani anatomik lokalizasyondur.",
     "sayfa": 1,
-    "satir": [
-     "NÖROLOJİK HASTAYA YAKLAŞIM"
-    ],
+    "satir": "YAKLAŞIM",
     "sekil": null,
     "madde": [
-     0,
-     1
+     1,
+     0
     ]
    },
    {
-    "ses": "İkinci temel soru ise bu bozukluğa yol açan patolojik sürecin ne olduğu yani lezyonun natürü ve etyolojisidir.",
+    "ses": "İkinci temel soru ise bu bozukluğa yol açan patolojik sürecin ne olduğu yani lezyonun natürü ve etiyolojisidir.",
     "sayfa": 1,
-    "satir": [
-     "NÖROLOJİK HASTAYA YAKLAŞIM"
-    ],
+    "satir": "NÖROLOJİK HASTAYA",
     "sekil": null,
     "madde": [
-     0,
-     1
+     0
     ]
    },
    {
-    "ses": "Sinir sistemi serebral korteksten beyin sapına, medulla spinalisten radikslere, periferik sinirlere ve kas kavşağına kadar uzanan kesintisiz bir ağ oluşturur.",
+    "ses": "Sinir sistemi serebral korteksten beyin sapına, medulla spinalisten spinal köklere, periferik sinirlere ve nöromüsküler kavşağa kadar uzanan kesintisiz bir anatomik ağ oluşturur.",
     "sayfa": 1,
-    "satir": [
-     "NÖROLOJİK HASTAYA YAKLAŞIM"
-    ],
+    "satir": "YAKLAŞIM",
     "sekil": null,
     "madde": [
-     0,
      1
     ]
    },
    {
     "ses": "Bu anatomik hiyerarşinin her bir düzeyi kendine özgü fizyolojik görevler üstlendiği için, ortaya çıkan nörolojik kayıp doğrudan hasarlanan bölgeyi işaret eder.",
     "sayfa": 1,
-    "satir": [
-     "NÖROLOJİK HASTAYA YAKLAŞIM"
-    ],
+    "satir": "NÖROLOJİK HASTAYA",
     "sekil": null,
     "madde": [
-     0,
-     1
+     0
+    ]
+   },
+   {
+    "ses": "Örneğin serebral korteks hasarlarında fokal bilişsel ve lisan kayıpları görülürken, ön boynuz motor nöron lezyonlarında fasikülasyon ve arefleksi gibi alt motor nöron bulguları ortaya çıkar.",
+    "sayfa": 1,
+    "satir": "NÖROLOJİK HASTAYA",
+    "sekil": null,
+    "madde": [
+     0
     ]
    },
    {
     "ses": "Bu nedenle nörolojik değerlendirme ayrıntılı bir anamnez ile başlar ve bulguları birleştiren dikkatli bir nörolojik muayene ile devam eder.",
     "sayfa": 1,
-    "satir": [
-     "NÖROLOJİK HASTAYA YAKLAŞIM"
-    ],
+    "satir": "Dr. İrfan YAVAŞ",
     "sekil": null,
     "madde": [
-     0,
-     1
+     2,
+     0
     ]
    },
    {
     "ses": "Elde edilen klinik veriler sendromik bir bütünlüğe oturtulduktan sonra, en uygun laboratuvar ve görüntüleme yöntemleri seçilerek kesin tanıya ulaşılır.",
     "sayfa": 1,
-    "satir": [
-     "NÖROLOJİK HASTAYA YAKLAŞIM"
-    ],
+    "satir": "NÖROLOJİK HASTAYA",
     "sekil": null,
     "madde": [
-     0,
-     1
+     0
     ]
    },
    {
-    "ses": "Hiçbir modern teknolojik tetkik, hastayı dinleyerek ve muayene ederek kurulan klinik muhakemenin yerini tutamaz ve plansız tetkik istemi zaman kaybettirir.",
+    "ses": "Hiçbir modern teknolojik tetkik, hastayı dinleyerek ve muayene ederek kurulan klinik muhakemenin yerini tutamaz ve plansız tetkik istemi tanı sürecinde yalnızca zaman kaybettirir.",
     "sayfa": 1,
-    "satir": [
-     "NÖROLOJİK HASTAYA YAKLAŞIM"
-    ],
+    "satir": "YAKLAŞIM",
     "sekil": null,
     "madde": [
-     0,
-     1
+     1,
+     0
     ]
    }
   ],
@@ -103,21 +92,17 @@
    {
     "ses": "Ünlü nörolog Merritt, hastayı dinledikten sonra nesi olduğunu anlamadıysanız muayene ettikten sonra da anlamayacaksınız diyerek öykünün tanıdaki belirleyici yerini ortaya koymuştur.",
     "sayfa": 2,
-    "satir": [
-     "«Hastayı dinledikten sonra nesi olduğunu anlamadıysanız muayene ettikten sonra da anlamayacaksınız.» Merritt"
-    ],
+    "satir": "«Hastayı dinledikten sonra nesi olduğunu anlamadıysanız",
     "sekil": null,
     "madde": [
      0,
-     1
+     9
     ]
    },
    {
-    "ses": "Gerçekten de iyi alınan bir anamnez, hekime hastanın sorunu hakkında doğru bir yönelim ve klinik yaklaşım sağlar.",
+    "ses": "Gerçekten de iyi alınan bir anamnez, hekime hastanın sorunu hakkında doğru bir yönelim ve rasyonel bir klinik yaklaşım sağlar.",
     "sayfa": 2,
-    "satir": [
-     "İyi bir anamnez doğru bir yönelim ve yaklaşım sağlar"
-    ],
+    "satir": "• İyi bir anamnez doğru bir yönelim ve yaklaşım sağlar",
     "sekil": null,
     "madde": [
      2,
@@ -125,35 +110,28 @@
     ]
    },
    {
-    "ses": "Hastanın temel yakınması, belirtilerin başlangıç şekli ve zaman içindeki kronolojik gidişi, anatomik lokalizasyon ve etyoloji yönünden problemi büyük ölçüde aydınlatır.",
+    "ses": "Hastanın temel yakınması, belirtilerin başlangıç şekli ve zaman içindeki kronolojik gidişi, anatomik lokalizasyon ve etiyoloji yönünden problemi büyük ölçüde aydınlatır.",
     "sayfa": 2,
-    "satir": [
-     "Hastanın yakınması, belirtilerin başlangıç şekli, kronolojik gidişi anatomik lokalizasyon ve etyoloji yönünden problemi büyük ölçüde aydınlatır"
-    ],
+    "satir": "• Hastanın yakınması, belirtilerin başlangıç şekli, kronolojik gidişi anatomik",
     "sekil": null,
     "madde": [
      3,
-     4
+     11
     ]
    },
    {
-    "ses": "Örneğin saniyeler içinde gelişen bir belirti damarsal ya da elektriksel bir olayı düşündürürken, aylara yayılan bir tablo büyüyen bir kitleyi veya dejenerasyonu işaret eder.",
+    "ses": "Örneğin saniyeler içinde gelişen bir belirti damarsal bir oklüzyonu ya da elektriksel bir deşarjı düşündürürken, aylara yayılan ilerleyici bir tablo büyüyen bir kitleyi veya nörodejenerasyonu işaret eder.",
     "sayfa": 2,
-    "satir": [
-     "Hastanın yakınması, belirtilerin başlangıç şekli, kronolojik gidişi anatomik lokalizasyon ve etyoloji yönünden problemi büyük ölçüde aydınlatır"
-    ],
+    "satir": "lokalizasyon ve etyoloji yönünden problemi büyük ölçüde aydınlatır",
     "sekil": null,
     "madde": [
-     3,
      4
     ]
    },
    {
     "ses": "Hastanın öyküsü alınırken kullandığı kelimelerle gerçekte neyi kastettiğini anlamak tanı açısından kritik bir gerekliliktir.",
     "sayfa": 2,
-    "satir": [
-     "Hastanın öyküsü alınırken kullandığı kelimelerle neyi kasdettiğini anlamak çok önemli."
-    ],
+    "satir": "• Hastanın öyküsü alınırken kullandığı kelimelerle neyi kasdettiğini anlamak çok",
     "sekil": null,
     "madde": [
      5,
@@ -161,69 +139,59 @@
     ]
    },
    {
-    "ses": "Çünkü hastalar tıbbi kavramları günlük dildeki alışkanlıklarıyla farklı anlamlarda kullanabilirler ve bu ifadeler sorgulanmadan yazılırsa hekimi yanlış lokalizasyona götürebilir.",
+    "ses": "Çünkü hastalar tıbbi kavramları günlük dildeki alışkanlıklarıyla çok farklı anlamlarda kullanabilirler ve bu ifadeler derinlemesine sorgulanmadan kayda geçirilirse hekimi yanlış bir anatomik lokalizasyona götürebilir.",
     "sayfa": 2,
-    "satir": [
-     "Hastanın öyküsü alınırken kullandığı kelimelerle neyi kasdettiğini anlamak çok önemli."
-    ],
+    "satir": "önemli.",
     "sekil": null,
     "madde": [
-     5,
-     0
+     6,
+     5
     ]
    },
    {
     "ses": "Somut bir örnek olarak, hastanın kolumda veya bacağımda uyuşma var demesi gerçek bir duyu kusuru olabileceği gibi aslında motor bir kuvvet kaybını da anlatıyor olabilir.",
     "sayfa": 2,
-    "satir": [
-     "«Uyuşma» duyu kusuru olabilir ya da kuvvet kaybını anlatıyor olabilir"
-    ],
+    "satir": "• «Uyuşma» duyu kusuru olabilir ya da kuvvet kaybını anlatıyor olabilir",
     "sekil": null,
     "madde": [
-     7
+     7,
+     0
     ]
    },
    {
-    "ses": "Bu ayrımı netleştirmek için hastaya dokunulanı mı hissetmediği, yoksa elindeki bardağı tutmakta veya ayağını kaldırmakta mı güçlük çektiği açıkça sorulmalıdır.",
+    "ses": "Bu ayrımı netleştirmek için hastaya dokunulanı mı hissetmediği, yoksa elindeki bardağı tutmakta veya merdiven çıkarken ayağını kaldırmakta mı güçlük çektiği somut sorularla açıkça sorgulanmalıdır.",
     "sayfa": 2,
-    "satir": [
-     "«Uyuşma» duyu kusuru olabilir ya da kuvvet kaybını anlatıyor olabilir"
-    ],
+    "satir": "• «Uyuşma» duyu kusuru olabilir ya da kuvvet kaybını anlatıyor olabilir",
     "sekil": null,
     "madde": [
-     7
+     7,
+     0
     ]
    }
   ],
   [
    {
-    "ses": "Benzer biçimde ağrı tamamen sübjektif bir yakınmadır ve yönlendirici olmayan dikkatli sorularla tüm nitelikleri ortaya konmalıdır.",
+    "ses": "Benzer biçimde ağrı tamamen sübjektif bir yakınmadır ve yönlendirici olmayan dikkatli sorularla tüm nitelikleri tek tek ortaya konmalıdır.",
     "sayfa": 2,
-    "satir": [
-     "Ağrı sübjektif, sorularla nitelikleri ortaya konmalı"
-    ],
+    "satir": "• Ağrı sübjektif, sorularla nitelikleri ortaya konmalı",
     "sekil": null,
     "madde": [
      8
     ]
    },
    {
-    "ses": "Ağrının lokalizasyonu, yayılımı, zonklayıcı veya şimşek çakar tarzda oluşu, süresi ve tetikleyici faktörleri sorgulanarak spesifik ağrı sendromları birbirinden ayrılır.",
+    "ses": "Ağrının anatomik lokalizasyonu, yayılım trasesi, zonklayıcı veya şimşek çakar tarzda oluşu, süresi ve tetikleyici faktörleri sorgulanarak spesifik ağrı sendromları birbirinden ayırt edilir.",
     "sayfa": 2,
-    "satir": [
-     "Ağrı sübjektif, sorularla nitelikleri ortaya konmalı"
-    ],
+    "satir": "• Ağrı sübjektif, sorularla nitelikleri ortaya konmalı",
     "sekil": null,
     "madde": [
      8
     ]
    },
    {
-    "ses": "Özellikle hastanın hayatımda gördüğüm en şiddetli baş ağrısı şeklinde tanımladığı ani başlangıçlı baş ağrısında subaraknoid kanama mutlaka ilk sırada düşünülmelidir.",
+    "ses": "Özellikle hastanın yaşamındaki en şiddetli baş ağrısı şeklinde tanımladığı ani patlayıcı gök gürültüsü ağrısında rüptüre anevrizmaya bağlı subaraknoid kanama mutlaka ilk sırada düşünülmelidir.",
     "sayfa": 2,
-    "satir": [
-     "Ağrı sübjektif, sorularla nitelikleri ortaya konmalı"
-    ],
+    "satir": "• Ağrı sübjektif, sorularla nitelikleri ortaya konmalı",
     "sekil": null,
     "madde": [
      8,
@@ -233,9 +201,7 @@
    {
     "ses": "Hekim, hastanın esas sıkıntısının ne olduğunu ve ne söylemek istediğini tam olarak anlamadan nörolojik muayeneye geçmemelidir.",
     "sayfa": 2,
-    "satir": [
-     "Hekim hastanın «sıkıntı»sının ne olduğunu, ne söylemek istediğini anlamadan muayeneye geçmemelidir."
-    ],
+    "satir": "• Hekim hastanın «sıkıntı»sının ne olduğunu, ne söylemek istediğini anlamadan",
     "sekil": null,
     "madde": [
      9,
@@ -245,282 +211,232 @@
    {
     "ses": "Çünkü öyküden elde edilen ön tanı hipotezleri, muayene sırasında hangi nörolojik sistemin daha derinlemesine inceleneceğini doğrudan belirler.",
     "sayfa": 2,
-    "satir": [
-     "Hekim hastanın «sıkıntı»sının ne olduğunu, ne söylemek istediğini anlamadan muayeneye geçmemelidir."
-    ],
+    "satir": "muayeneye geçmemelidir.",
     "sekil": null,
     "madde": [
-     9,
-     10
-    ]
-   },
-   {
-    "ses": "Ayrıca hekim ile hastanın ortak bir zeminde buluşması, hastanın beklentilerinin ve duygularının anlaşılması tanısal doğruluğu ve hasta uyumunu artırır.",
-    "sayfa": 2,
-    "satir": [
-     "Hekim hastanın «sıkıntı»sının ne olduğunu, ne söylemek istediğini anlamadan muayeneye geçmemelidir."
-    ],
-    "sekil": null,
-    "madde": [
-     9,
-     0
-    ]
-   },
-   {
-    "ses": "Eğer hasta bilinçsiz ise ya da afazi gibi bir konuşma bozukluğu varsa, anamnez mutlaka hastanın yakınından ya da onu hastaneye getiren kişiden alınmalıdır.",
-    "sayfa": 2,
-    "satir": [
-     "Hasta bilinçsiz, ya da konuşma bozukluğu varsa yakını ya da getiren kişiden"
-    ],
-    "sekil": null,
-    "madde": [
-     11,
-     3
-    ]
-   },
-   {
-    "ses": "Epileptik nöbet, senkop veya akut konfüzyon gibi hastanın atak anını hatırlayamadığı durumlarda da olaya tanıklık eden kişilerin gözlemleri tanı için vazgeçilmezdir.",
-    "sayfa": 2,
-    "satir": [
-     "Hasta bilinçsiz, ya da konuşma bozukluğu varsa yakını ya da getiren kişiden"
-    ],
-    "sekil": null,
-    "madde": [
-     11,
-     3
-    ]
-   }
-  ],
-  [
-   {
-    "ses": "Nörolojik hastalıklarda belirtilerin başlayış şekli ve doğal gidişi, altta yatan patolojik mekanizmayı doğrudan yansıtan en güçlü klinik ipuçlarıdır.",
-    "sayfa": 3,
-    "satir": [
-     "Nörolojik Hastalıklarda Başlayış Şekli ve Doğal Gidiş"
-    ],
-    "sekil": null,
-    "madde": [
-     0,
-     5
-    ]
-   },
-   {
-    "ses": "Sınavda soruldu; akut başlangıçlı nörolojik hastalıklar dakikalar veya saatler içinde hızla yerleşir ve bunun en tipik klinik örneği inme sonucu gelişen hemiplejidir.",
-    "sayfa": 3,
-    "satir": [
-     "Akut başlangıç. Dakika veya saat içinde. Örneğin hemipleji."
-    ],
-    "sekil": null,
-    "madde": [
-     1,
-     2
-    ]
-   },
-   {
-    "ses": "Serebral bir arterin tromboemboli ile tıkanması veya yırtılarak kanaması beyin dokusunu aniden kansız bıraktığı için motor güç kaybı dakikalar içinde en üst düzeyine ulaşır.",
-    "sayfa": 3,
-    "satir": [
-     "Akut başlangıç. Dakika veya saat içinde. Örneğin hemipleji."
-    ],
-    "sekil": null,
-    "madde": [
-     1,
-     2
-    ]
-   },
-   {
-    "ses": "Buna karşılık bazı nörolojik hastalıklar sinsi başlar ve haftalar, aylar ya da yıllar içinde yavaşça yerleşerek ilerleyici bir seyir gösterir.",
-    "sayfa": 3,
-    "satir": [
-     "Bazı hastalıklar sinsi başlar. Haftalar, aylar, yıllar içinde yerleşir. Beyin tümörü, dejeneratif hastalıklar gibi"
-    ],
-    "sekil": null,
-    "madde": [
-     2,
-     3
-    ]
-   },
-   {
-    "ses": "Sinsi başlayan ve kronik ilerleyen bu tablolara beyin tümörü gibi yer kaplayan kitleler ile Alzheimer, Parkinson veya amiyotrofik lateral skleroz gibi dejeneratif hastalıklar örnek verilir.",
-    "sayfa": 3,
-    "satir": [
-     "Bazı hastalıklar sinsi başlar. Haftalar, aylar, yıllar içinde yerleşir. Beyin tümörü, dejeneratif hastalıklar gibi"
-    ],
-    "sekil": null,
-    "madde": [
-     2,
-     3
-    ]
-   },
-   {
-    "ses": "Bu hastalıklarda başlangıç o kadar yavaştır ki hasta ve yakınları belirtilerin tam olarak hangi gün başladığını söyleyemez, yalnızca aylar içinde giderek arttığını fark ederler.",
-    "sayfa": 3,
-    "satir": [
-     "Bazı hastalıklar sinsi başlar. Haftalar, aylar, yıllar içinde yerleşir. Beyin tümörü, dejeneratif hastalıklar gibi"
-    ],
-    "sekil": null,
-    "madde": [
-     2,
-     3
-    ]
-   },
-   {
-    "ses": "Üçüncü temel seyir tipi ise kötüleşme yani atak ve iyileşme yani remisyon dönemleri ile karakterize olan dalgalı gidiştir.",
-    "sayfa": 3,
-    "satir": [
-     "Dalgalı gidiş. Kötüleşme ve iyileşme dönemleri vardır. Relapsing-remitting MS"
-    ],
-    "sekil": null,
-    "madde": [
-     4,
-     0
-    ]
-   },
-   {
-    "ses": "Kötüleşme ve iyileşme dönemleri gösteren bu dalgalı gidişin klinikteki en klasik örneği yineleyici düzelen yani relapsing remitting multipl sklerozdur.",
-    "sayfa": 3,
-    "satir": [
-     "Dalgalı gidiş. Kötüleşme ve iyileşme dönemleri vardır. Relapsing-remitting MS"
-    ],
-    "sekil": null,
-    "madde": [
-     4,
-     0
-    ]
-   }
-  ],
-  [
-   {
-    "ses": "Hastalığın doğal gidişini bilmek, doğru tanı koymak yönünden olduğu kadar uygulanan tedavi sonuçlarının değerlendirilmesi bakımından da belirleyicidir.",
-    "sayfa": 3,
-    "satir": [
-     "Hastalığın doğal gidişi tanı yönünden olduğu kadar tedavi sonuçlarının değerlendirilmesi bakımından da önemlidir"
-    ],
-    "sekil": null,
-    "madde": [
-     5,
-     6
-    ]
-   },
-   {
-    "ses": "Hekim hastadaki klinik düzelmenin gerçekten uygulanan tedaviye mi bağlı olduğunu yoksa hastalığın kendi doğal seyrine mi ait olduğunu bu bilgiyle ayırt eder.",
-    "sayfa": 3,
-    "satir": [
-     "Düzelme uygulanan tedaviye mi bağlı yoksa doğal seyrine mi?"
-    ],
-    "sekil": null,
-    "madde": [
-     7,
-     5
-    ]
-   },
-   {
-    "ses": "Örneğin multipl skleroz atağındaki bir hasta kendiliğinden remisyona girebileceği için, bu doğal iyileşmeyi etkisiz bir tedavinin başarısı sanmamak gerekir.",
-    "sayfa": 3,
-    "satir": [
-     "Düzelme uygulanan tedaviye mi bağlı yoksa doğal seyrine mi?"
-    ],
-    "sekil": null,
-    "madde": [
-     7,
-     5
-    ]
-   },
-   {
-    "ses": "Tersine, doğal seyrinde ilerleyici olan dejeneratif bir hastalıkta belirtilerin sabit kalması bile uygulanan tedavinin kısmi bir başarısı olarak değerlendirilebilir.",
-    "sayfa": 3,
-    "satir": [
-     "Hastalığın doğal gidişi tanı yönünden olduğu kadar tedavi sonuçlarının değerlendirilmesi bakımından da önemlidir"
-    ],
-    "sekil": null,
-    "madde": [
-     5,
-     6
-    ]
-   },
-   {
-    "ses": "Dolayısıyla her nörolojik sendromun tedavisiz bırakıldığında nasıl seyredeceğini bilmek, kanıta dayalı klinik karar vermenin ön koşuludur.",
-    "sayfa": 3,
-    "satir": [
-     "Hastalığın doğal gidişi tanı yönünden olduğu kadar tedavi sonuçlarının değerlendirilmesi bakımından da önemlidir"
-    ],
-    "sekil": null,
-    "madde": [
-     5,
-     6
-    ]
-   },
-   {
-    "ses": "Öyküde bu zamansal seyir eğrisi netleştirildikten sonra, muayenede bulgu vermeyen ancak öyküsüyle tanınan özel nörolojik hastalıklara geçilir.",
-    "sayfa": 3,
-    "satir": [
-     "Nörolojik Hastalıklarda Başlayış Şekli ve Doğal Gidiş"
-    ],
-    "sekil": null,
-    "madde": [
-     0,
-     5
-    ]
-   },
-   {
-    "ses": "Çünkü bazı paroksismal nörolojik bozukluklarda hasta polikliniğe başvurduğu sırada tamamen normal bir nörolojik muayeneye sahiptir.",
-    "sayfa": 3,
-    "satir": [
-     "Dalgalı gidiş. Kötüleşme ve iyileşme dönemleri vardır. Relapsing-remitting MS"
-    ],
-    "sekil": null,
-    "madde": [
-     4,
-     0
-    ]
-   },
-   {
-    "ses": "Bu gibi durumlarda tanısal ipucu muayene masasında değil, hastanın atak dönemine ilişkin anlattığı ayrıntılarda gizlidir.",
-    "sayfa": 3,
-    "satir": [
-     "Hastalığın doğal gidişi tanı yönünden olduğu kadar tedavi sonuçlarının değerlendirilmesi bakımından da önemlidir"
-    ],
-    "sekil": null,
-    "madde": [
-     5,
-     6
-    ]
-   }
-  ],
-  [
-   {
-    "ses": "Bu bilgi çıkmışta soruldu; bazı nörolojik hastalıkların tanısı esas olarak hastadan alınan öyküye dayanır ve bunların başında migren ile trigeminal nevralji gelir.",
-    "sayfa": 4,
-    "satir": [
-     "Tanısı Öyküye Dayanan Nörolojik Hastalıklar",
-     "Migren",
-     "Trigeminal nevralji"
-    ],
-    "sekil": null,
-    "madde": [
-     0,
-     2
-    ]
-   },
-   {
-    "ses": "Migrende saatler süren tek taraflı zonklayıcı baş ağrısı ve bulantı öyküsü, trigeminal nevraljide ise yüzde saniyeler süren şimşek çakar tarzda ağrı öyküsü tanıyı koydurur.",
-    "sayfa": 4,
-    "satir": [
-     "Migren",
-     "Trigeminal nevralji"
-    ],
-    "sekil": null,
-    "madde": [
-     2,
+     10,
      1
     ]
    },
    {
-    "ses": "Migren ve trigeminal nevralji hastalarında ataklar dışında yapılan nörolojik muayenede patolojik bir nörolojik belirti veya laboratuvar bulgusu yoktur.",
+    "ses": "Ayrıca hekim ile hastanın ortak bir zeminde buluşması, hastanın beklentilerinin ve duygularının anlaşılması tanısal doğruluğu ve tedaviye uyumu büyük ölçüde artırır.",
+    "sayfa": 2,
+    "satir": "• Hekim hastanın «sıkıntı»sının ne olduğunu, ne söylemek istediğini anlamadan",
+    "sekil": null,
+    "madde": [
+     9,
+     0
+    ]
+   },
+   {
+    "ses": "Eğer hasta bilinçsiz ise ya da afazi gibi ağır bir konuşma bozukluğu varsa, anamnez mutlaka hastanın yakınından ya da onu hastaneye getiren kişiden alınmalıdır.",
+    "sayfa": 2,
+    "satir": "• Hasta bilinçsiz, ya da konuşma bozukluğu varsa yakını ya da getiren kişiden",
+    "sekil": null,
+    "madde": [
+     11,
+     3
+    ]
+   },
+   {
+    "ses": "Epileptik nöbet, senkop veya akut konfüzyon gibi hastanın atak anını hatırlayamadığı durumlarda da olaya tanıklık eden kişilerin gözlemleri doğru teşhis için vazgeçilmezdir.",
+    "sayfa": 2,
+    "satir": "• Hasta bilinçsiz, ya da konuşma bozukluğu varsa yakını ya da getiren kişiden",
+    "sekil": null,
+    "madde": [
+     11,
+     3
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Nörolojik hastalıklarda belirtilerin başlayış şekli ve zaman içindeki doğal gidişi etiyolojik tanının en kilit belirleyicisidir.",
+    "sayfa": 3,
+    "satir": "Nörolojik Hastalıklarda Başlayış Şekli ve Doğal Gidiş",
+    "sekil": null,
+    "madde": [
+     0,
+     5
+    ]
+   },
+   {
+    "ses": "Bu bilgi çıkmış sınavda sorulmuştur: akut başlangıçlı nörolojik hastalıklar dakikalar veya saatler içinde hızla yerleşir ve bunun en tipik klinik örneği serebrovasküler tıkanıklığa bağlı hemiplejidir.",
+    "sayfa": 3,
+    "satir": "• Akut başlangıç. Dakika veya saat içinde. Örneğin hemipleji.",
+    "sekil": null,
+    "madde": [
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "Dakikalar içinde aniden ortaya çıkan motor defisit veya konuşma kaybı, serebral damar tıkanıklığını, kanamayı veya fokal epileptik deşarjı doğrudan yansıtır.",
+    "sayfa": 3,
+    "satir": "• Akut başlangıç. Dakika veya saat içinde. Örneğin hemipleji.",
+    "sekil": null,
+    "madde": [
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "Buna karşılık bazı nörolojik hastalıklar son derece sinsi başlar ve belirtiler haftalar, aylar hatta yıllar içinde yavaş yavaş yerleşir.",
+    "sayfa": 3,
+    "satir": "• Bazı hastalıklar sinsi başlar. Haftalar, aylar, yıllar içinde yerleşir. Beyin tümörü,",
+    "sekil": null,
+    "madde": [
+     2,
+     0
+    ]
+   },
+   {
+    "ses": "Haftalar veya aylar içinde basamaklı ya da sürekli ilerleyen nörolojik kayıplarda primer beyin tümörleri veya kronik subdural hematom gibi yer kaplayıcı lezyonlar akla gelmelidir.",
+    "sayfa": 3,
+    "satir": "dejeneratif hastalıklar gibi",
+    "sekil": null,
+    "madde": [
+     3,
+     2
+    ]
+   },
+   {
+    "ses": "Yıllar boyunca yavaş ve kesintisiz kötüleşen sinsi klinik tablolar ise Alzheimer veya Parkinson hastalığı gibi nörodejeneratif süreçleri işaret eder.",
+    "sayfa": 3,
+    "satir": "dejeneratif hastalıklar gibi",
+    "sekil": null,
+    "madde": [
+     3,
+     2
+    ]
+   },
+   {
+    "ses": "Nörolojide bir diğer temel seyir tipi, kötüleşme ve iyileşme dönemlerinin birbirini izlediği dalgalı gidiştir.",
+    "sayfa": 3,
+    "satir": "• Dalgalı gidiş. Kötüleşme ve iyileşme dönemleri vardır. Relapsing-remitting MS",
+    "sekil": null,
+    "madde": [
+     4,
+     0
+    ]
+   },
+   {
+    "ses": "Bu bilgi çıkmış sınavda sorulmuştur: kötüleşme ve iyileşme dönemleri gösteren bu dalgalı gidişin klinikteki en klasik örneği yineleyici düzelen multipl sklerozdur.",
+    "sayfa": 3,
+    "satir": "• Dalgalı gidiş. Kötüleşme ve iyileşme dönemleri vardır. Relapsing-remitting MS",
+    "sekil": null,
+    "madde": [
+     4,
+     0
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Hastalığın doğal gidişini doğru anlamak, sadece tanı koymak açısından değil, uygulanan tedavi sonuçlarının değerlendirilmesi bakımından da son derece önemlidir.",
+    "sayfa": 3,
+    "satir": "• Hastalığın doğal gidişi tanı yönünden olduğu kadar tedavi sonuçlarının",
+    "sekil": null,
+    "madde": [
+     5,
+     0
+    ]
+   },
+   {
+    "ses": "Çünkü tedavi başlanan bir hastada görülen klinik düzelmenin, ilacın farmakolojik etkisine mi bağlı olduğu yoksa hastalığın kendi doğal seyrindeki remisyona mı ait olduğu titizlikle ayırt edilmelidir.",
+    "sayfa": 3,
+    "satir": "değerlendirilmesi bakımından da önemlidir",
+    "sekil": null,
+    "madde": [
+     6,
+     7
+    ]
+   },
+   {
+    "ses": "Örneğin multipl skleroz atağı geçiren bir hasta tedavi verilmese dahi haftalar içinde spontan bir remisyona girip kısmen veya tamamen düzelebilir.",
+    "sayfa": 3,
+    "satir": "• Düzelme uygulanan tedaviye mi bağlı yoksa doğal seyrine mi?",
+    "sekil": null,
+    "madde": [
+     7,
+     5
+    ]
+   },
+   {
+    "ses": "Eğer hekim hastalığın bu doğal remisyon eğilimini bilmezse, hastaya verilen herhangi bir ilacın veya deneysel uygulamanın mucizevi bir iyileşme sağladığı yanılgısına düşebilir.",
+    "sayfa": 3,
+    "satir": "• Düzelme uygulanan tedaviye mi bağlı yoksa doğal seyrine mi?",
+    "sekil": null,
+    "madde": [
+     7,
+     5
+    ]
+   },
+   {
+    "ses": "Aynı şekilde periferik fasiyal paralizi olan Bell felcinde de hastaların büyük çoğunluğu steroid tedavisi alsın veya almasın ilk üç haftada belirgin klinik düzelme gösterir.",
+    "sayfa": 3,
+    "satir": "• Düzelme uygulanan tedaviye mi bağlı yoksa doğal seyrine mi?",
+    "sekil": null,
+    "madde": [
+     7,
+     5
+    ]
+   },
+   {
+    "ses": "Dolayısıyla bir tedavinin gerçek etkinliğini kanıtlamak için, hastalığın tedavi edilmeyen kontrol grubundaki doğal seyriyle karşılaştırılması bilimsel bir zorunluluktur.",
+    "sayfa": 3,
+    "satir": "• Hastalığın doğal gidişi tanı yönünden olduğu kadar tedavi sonuçlarının",
+    "sekil": null,
+    "madde": [
+     5,
+     0
+    ]
+   },
+   {
+    "ses": "Tedaviye verilen yanıtın objektif parametrelerle ölçülmesi, gereksiz ve toksik ilaçların uzun süre kullanımını önlemede hekime yol gösterir.",
+    "sayfa": 3,
+    "satir": "değerlendirilmesi bakımından da önemlidir",
+    "sekil": null,
+    "madde": [
+     6
+    ]
+   },
+   {
+    "ses": "Hastalığın gidişatını öngörebilen bir hekim, hem hasta ve ailesine doğru bir prognoz verebilir hem de gerçekçi tedavi hedefleri koyabilir.",
+    "sayfa": 3,
+    "satir": "• Hastalığın doğal gidişi tanı yönünden olduğu kadar tedavi sonuçlarının",
+    "sekil": null,
+    "madde": [
+     5,
+     0
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Klinik nörolojide bazı hastalıklar vardır ki, bunların tanısı tamamen ve sadece hastadan alınan ayrıntılı öyküye dayanır.",
     "sayfa": 4,
-    "satir": [
-     "Nörolojik belirti, lab. bulgusu yoktur"
-    ],
+    "satir": "Tanısı Öyküye Dayanan Nörolojik Hastalıklar",
+    "sekil": null,
+    "madde": [
+     0,
+     3
+    ]
+   },
+   {
+    "ses": "Bu bilgi çıkmış sınavda sorulmuştur: tanısı esas olarak hastadan alınan klinik öyküye dayanan hastalıkların başında migren ve trigeminal nevralji gelmektedir.",
+    "sayfa": 4,
+    "satir": "• Migren",
+    "sekil": null,
+    "madde": [
+     1,
+     0
+    ]
+   },
+   {
+    "ses": "Migren hastasında ataklar arasında yapılan fizik muayenede, rutin laboratuvar testlerinde ve beyin görüntülemelerinde hiçbir patolojik bulguya rastlanmaz.",
+    "sayfa": 4,
+    "satir": "• Nörolojik belirti, lab. bulgusu yoktur",
     "sekil": null,
     "madde": [
      3,
@@ -528,22 +444,29 @@
     ]
    },
    {
-    "ses": "Bu hastalarda bilgisayarlı tomografi veya manyetik rezonans görüntüleme, primer hastalığı doğrudan görmek için değil, ikincil nedenleri dışlayıp tanının doğru olduğunu göstermek için çekilir.",
+    "ses": "Benzer şekilde trigeminal nevraljide de hastanın yüzünde elektrik çarpması benzeri paroksismal ağrı tariflenmesine rağmen nörolojik duyu muayenesi tamamen normaldir.",
     "sayfa": 4,
-    "satir": [
-     "BT, MR tanının doğru olduğunu göstermek için çekilir"
-    ],
+    "satir": "• Trigeminal nevralji",
     "sekil": null,
     "madde": [
-     4
+     2,
+     0
     ]
    },
    {
-    "ses": "Benzer şekilde epilepsi de esas olarak klinik bir tanıdır ve hastanın veya tanığın nöbet anına dair verdiği öyküye dayanır.",
+    "ses": "Bu hastalıklarda çekilen beyin bilgisayarlı tomografisi veya manyetik rezonans görüntüleme, tanı koymaktan ziyade sekonder yapısal nedenleri dışlamak için istenir.",
     "sayfa": 4,
-    "satir": [
-     "Epilepsi de klinik tanıdır. EEG normal olması tanıdan uzaklaştırmaz"
-    ],
+    "satir": "• BT, MR tanının doğru olduğunu göstermek için çekilir",
+    "sekil": null,
+    "madde": [
+     4,
+     0
+    ]
+   },
+   {
+    "ses": "Epilepsi de temel olarak bir klinik öykü tanısıdır; hastanın elektroensefalografisinin normal bulunması epilepsi tanısını kesinlikle dışlamaz.",
+    "sayfa": 4,
+    "satir": "• Epilepsi de klinik tanıdır. EEG normal olması tanıdan uzaklaştırmaz",
     "sekil": null,
     "madde": [
      5,
@@ -551,22 +474,61 @@
     ]
    },
    {
-    "ses": "Nöbetler arasındaki dönemde çekilen elektroensefalografinin normal olması epilepsi tanısından kesinlikle uzaklaştırmaz.",
+    "ses": "Çünkü interiktal dönemde çekilen rutin bir elektroensefalografide hastaların yaklaşık yarısında epileptiform anormallik saptanamayabilir.",
     "sayfa": 4,
-    "satir": [
-     "Epilepsi de klinik tanıdır. EEG normal olması tanıdan uzaklaştırmaz"
-    ],
+    "satir": "• Epilepsi de klinik tanıdır. EEG normal olması tanıdan uzaklaştırmaz",
     "sekil": null,
     "madde": [
+     5,
+     6
+    ]
+   },
+   {
+    "ses": "Büyük hekim Gordon Holmes'un dediği gibi, hasta karşınızda bir muamma gibi duruyorsa onu ikinci kez dinleyiniz; bilmeceyi çözme şansınız bütün araştırma yöntemlerinden daha büyük olacaktır.",
+    "sayfa": 4,
+    "satir": "• «Hasta karşınızda bir muamma gibi duruyorsa onu ikinci kez dinleyiniz.",
+    "sekil": null,
+    "madde": [
+     6,
+     7
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Nörolojik muayene hasta muayene masasına yatırıldığında değil, poliklinik odasının kapısından içeri adım attığı ilk anda başlar.",
+    "sayfa": 5,
+    "satir": "Nörolojik Muayene",
+    "sekil": null,
+    "madde": [
+     0,
+     1
+    ]
+   },
+   {
+    "ses": "Hastanın odaya girerken yürüyüşü, karşınıza oturduğunda yüz ifadesi, bakışları, ses tonu ve spontan hareketleri hekime sayısız tanısal ipucu verir.",
+    "sayfa": 5,
+    "satir": "• Odaya girerken yürümesi, karşınıza oturduğunda yüzü, bakışları, ses tonu,",
+    "sekil": null,
+    "madde": [
+     2,
+     3
+    ]
+   },
+   {
+    "ses": "Örneğin hemiplejik bir hastada etkilenen kol dirsekten fleksiyonda ve gövdeye yapışık dururken, yürürken parezik bacağını dizden bükemeden dışa doğru oraklar tarzda savurur.",
+    "sayfa": 5,
+    "satir": "• Hemiplejik kolun gövdeye yapışık olması, yürürken bacağını oraklaması",
+    "sekil": null,
+    "madde": [
+     4,
      5
     ]
    },
    {
-    "ses": "Ayrıca epileptik nöbet ile psikojenik nonepileptik nöbet ayırıcı tanısında, atak sırasında gözlerin sıkıca kapatılması ve muayenede göz açılmasına direnç gösterilmesi psödonöbet lehine belirleyici bir bulgudur.",
-    "sayfa": 4,
-    "satir": [
-     "Epilepsi de klinik tanıdır. EEG normal olması tanıdan uzaklaştırmaz"
-    ],
+    "ses": "Bu bilgi çıkmış sınavda sorulmuştur: Parkinson hastalığında mimiklerin kaybolduğu donuk bir maske yüz, alçak sesli monoton konuşma, ağız kenarından salya akması, yürürken kolları sallamama ve vücudun öne eğik fleksör postürü odaya girişte derhal fark edilir.",
+    "sayfa": 5,
+    "satir": "• Parkinson H. maske yüz, monoton konuşma, salya akması, yürürken kollarını",
     "sekil": null,
     "madde": [
      5,
@@ -574,761 +536,370 @@
     ]
    },
    {
-    "ses": "Ünlü nörolog Gordon Holmes, hasta karşınızda bir muamma gibi duruyorsa onu ikinci kez dinleyiniz, bütün araştırma yöntemlerine oranla bilmeceyi çözme şansınız daha büyük olacaktır demiştir.",
-    "sayfa": 4,
-    "satir": [
-     "«Hasta karşınızda bir muamma gibi duruyorsa onu ikinci kez dinleyiniz.",
-     "Bütün araştırma yöntemlerine oranla bilmeceyi çözme şansınız daha büyük olacaktır» Gordon Holmes"
-    ],
+    "ses": "Proksimal kas güçsüzlüğü ile seyreden kas distrofilerinde ise hasta pelvik kuşağını sabitleyemediği için karın önde, iki yana sallanarak ördek yürüyüşü yapar.",
+    "sayfa": 5,
+    "satir": "• Kas distrofisinde karın önde «badi-badi» yürüyüşü ördeğe benzer",
     "sekil": null,
     "madde": [
      7,
      6
     ]
-   }
-  ],
-  [
-   {
-    "ses": "Nörolojik muayene, hekimin eline refleks çekicini almasıyla değil, hastayı gördüğü ilk anda edindiği izlenimle başlar ve bu ilk izlenim bile tanıya yardımcı olur.",
-    "sayfa": 5,
-    "satir": [
-     "Nörolojik Muayene",
-     "İlk izlenim bile tanıya yardımcı olur"
-    ],
-    "sekil": null,
-    "madde": [
-     1,
-     0
-    ]
    },
    {
-    "ses": "Hastanın muayene odasına girerken yürümesi, karşınıza oturduğunda yüzü, bakışları, ses tonu ve konuşması daha baştan itibaren pek çok klinik ipucu verir.",
+    "ses": "Bu karakteristik sallantılı yürüyüş klinikte badi badi yürüyüşü olarak adlandırılır ve iki taraflı gluteus medius kas yetersizliğini yansıtan Trendelenburg belirtisine dayanır.",
     "sayfa": 5,
-    "satir": [
-     "Odaya girerken yürümesi, karşınıza oturduğunda yüzü, bakışları, ses tonu, konuşması baştan itibaren pek çok ipucu verir"
-    ],
+    "satir": "• Kas distrofisinde karın önde «badi-badi» yürüyüşü ördeğe benzer",
     "sekil": null,
     "madde": [
-     2,
-     3
-    ]
-   },
-   {
-    "ses": "Piramidal yol lezyonu olan bir hastada hemiplejik kolun fleksiyonda gövdeye yapışık olması ve yürürken bacağını dıştan daire çizerek oraklaması tipiktir.",
-    "sayfa": 5,
-    "satir": [
-     "Hemiplejik kolun gövdeye yapışık olması, yürürken bacağını oraklaması"
-    ],
-    "sekil": null,
-    "madde": [
-     4,
-     5
-    ]
-   },
-   {
-    "ses": "Üst motor nöron hasarına bağlı spastisite kolda fleksör, bacakta ekstansör kaslarda baskın olduğu için hasta dizini bükemez ve bacağını oraklayarak atar.",
-    "sayfa": 5,
-    "satir": [
-     "Hemiplejik kolun gövdeye yapışık olması, yürürken bacağını oraklaması"
-    ],
-    "sekil": null,
-    "madde": [
-     4,
-     5
-    ]
-   },
-   {
-    "ses": "Sınavda soruldu; Parkinson hastalığında mimiklerin azaldığı maske yüz, monoton konuşma, salya akması, yürürken kollarını sallamaması ve vücudun fleksör postürü görülür.",
-    "sayfa": 5,
-    "satir": [
-     "Parkinson H. maske yüz, monoton konuşma, salya akması, yürürken kollarını sallamaması, vücudun fleksör postürü"
-    ],
-    "sekil": null,
-    "madde": [
-     5,
+     7,
      6
     ]
    },
    {
-    "ses": "Dopaminerjik kayıp sonucu gelişen akinezi ve rijidite, hastanın odaya girerken yavaş yürümesine ve fizyolojik kol salınımlarının kaybolmasına yol açar.",
+    "ses": "Serebellar ataksisi olan bir hasta ise dengesini koruyabilmek için ayaklarını geniş açarak sarhoşvari ve sendeleme tarzında geniş tabanlı yürür.",
     "sayfa": 5,
-    "satir": [
-     "Parkinson H. maske yüz, monoton konuşma, salya akması, yürürken kollarını sallamaması, vücudun fleksör postürü"
-    ],
+    "satir": "• İlk izlenim bile tanıya yardımcı olur",
     "sekil": null,
     "madde": [
-     5,
-     6
+     1
     ]
    },
    {
-    "ses": "Kas distrofisinde ise pelvik kuşak kaslarının güçsüzlüğüne bağlı olarak karın önde durur ve ördeğe benzeyen badi badi yürüyüşü ortaya çıkar.",
+    "ses": "Böylece hekim henüz elini hastaya sürmeden ve refleks çekicini eline almadan önce, sadece dikkatli bir görsel gözlem ile sendromik ön tanısını zihninde kurmuş olur.",
     "sayfa": 5,
-    "satir": [
-     "Kas distrofisinde karın önde «badi-badi» yürüyüşü ördeğe benzer"
-    ],
+    "satir": "• İlk izlenim bile tanıya yardımcı olur",
     "sekil": null,
     "madde": [
-     7
-    ]
-   },
-   {
-    "ses": "Ayrıca hastayla ilk iletişim kurulduğu anda artikülasyon kusuru olan dizartri ile dilin anlama veya ifade bozukluğu olan afazi hemen fark edilir.",
-    "sayfa": 5,
-    "satir": [
-     "Dizartri, afazi hemen farkedilir"
-    ],
-    "sekil": null,
-    "madde": [
-     8
-    ]
-   },
-   {
-    "ses": "Yüksek kortikal dil işlevlerinden biri olan okuduğunu anlama yeteneğinin bozulması yani aleksi ise dominant pariyetal lobdaki angular girus lezyonlarında görülür.",
-    "sayfa": 5,
-    "satir": [
-     "Dizartri, afazi hemen farkedilir"
-    ],
-    "sekil": null,
-    "madde": [
-     8
+     1
     ]
    }
   ],
   [
    {
-    "ses": "Nörolojik muayenede yürüyüş ve postür analizi, piramidal, ekstrapiramidal ve nöromüsküler sistemlerin hangisinin tutulduğunu saniyeler içinde ayırt ettirir.",
+    "ses": "İlk izlenim sırasında hastanın konuşma niteliği dikkatle dinlenmeli, konuşmanın motor telaffuzu ile kortikal lisan içeriği birbirinden titizlikle ayırt edilmelidir.",
     "sayfa": 5,
-    "satir": [
-     "Odaya girerken yürümesi, karşınıza oturduğunda yüzü, bakışları, ses tonu, konuşması baştan itibaren pek çok ipucu verir"
-    ],
-    "sekil": null,
-    "madde": [
-     2,
-     3
-    ]
-   },
-   {
-    "ses": "Hemiplejik yürüyüşte tek taraflı üst motor nöron hasarı söz konusuyken, Parkinson yürüyüşünde bazal gangliyonların hareketi başlatma ve otomatik sürdürme işlevi bozulmuştur.",
-    "sayfa": 5,
-    "satir": [
-     "Hemiplejik kolun gövdeye yapışık olması, yürürken bacağını oraklaması",
-     "Parkinson H. maske yüz, monoton konuşma, salya akması, yürürken kollarını sallamaması, vücudun fleksör postürü"
-    ],
-    "sekil": null,
-    "madde": [
-     5,
-     4
-    ]
-   },
-   {
-    "ses": "Parkinson hastalarında yutma refleksinin yavaşlamasına bağlı gelişen salya akması yani siyalore ve yüz kaslarındaki hipomimi, muayene odasında otururken bile hemen dikkat çeker.",
-    "sayfa": 5,
-    "satir": [
-     "Parkinson H. maske yüz, monoton konuşma, salya akması, yürürken kollarını sallamaması, vücudun fleksör postürü"
-    ],
-    "sekil": null,
-    "madde": [
-     5,
-     6
-    ]
-   },
-   {
-    "ses": "Kas distrofilerinde görülen ördekvari badi badi yürüyüşü ise santral sinir sisteminden değil, doğrudan kalça çevresi proksimal iskelet kaslarının primer zaafından kaynaklanır.",
-    "sayfa": 5,
-    "satir": [
-     "Kas distrofisinde karın önde «badi-badi» yürüyüşü ördeğe benzer"
-    ],
-    "sekil": null,
-    "madde": [
-     7
-    ]
-   },
-   {
-    "ses": "Benzer şekilde konuşma muayenesinde dizartri ile afaziyi birbirinden ayırmak, lezyonun kortikal dil merkezlerinde mi yoksa sesin çıkarılmasını sağlayan motor yollarda mı olduğunu gösterir.",
-    "sayfa": 5,
-    "satir": [
-     "Dizartri, afazi hemen farkedilir"
-    ],
+    "satir": "• Dizartri, afazi hemen farkedilir",
     "sekil": null,
     "madde": [
      8,
-     0
+     1
     ]
    },
    {
-    "ses": "Dizartride hasta söylemek istediği kelimeleri doğru seçer ve dilbilgisi tamdır, ancak dil, dudak, damak veya serebellar koordinasyon bozukluğu nedeniyle kelimeleri peltek ve bozuk telaffuz eder.",
+    "ses": "Hastanın sözcükleri peltek, yuvarlayarak veya sarhoşvari çıkarması ancak doğru sözcükleri seçip tam olarak anlaması dizartri tablosudur.",
     "sayfa": 5,
-    "satir": [
-     "Dizartri, afazi hemen farkedilir"
-    ],
+    "satir": "• Dizartri, afazi hemen farkedilir",
     "sekil": null,
     "madde": [
      8
     ]
    },
    {
-    "ses": "Afazide ise ses çıkarma kasları sağlam olmasına rağmen, dominant hemisfer hasarı nedeniyle hasta konuşulanı anlayamaz, doğru kelimeyi bulamaz veya anlamsız kelimeler üretir.",
+    "ses": "Dizartri dil, dudak, damak ve larinks kaslarının motor innervasyon bozukluğuna veya serebellar koordinasyon kaybına bağlı mekanik bir telaffuz kusurudur.",
     "sayfa": 5,
-    "satir": [
-     "Dizartri, afazi hemen farkedilir"
-    ],
+    "satir": "• Dizartri, afazi hemen farkedilir",
     "sekil": null,
     "madde": [
      8
     ]
    },
    {
-    "ses": "Böylece hastanın sadece odaya girişini izlemek ve birkaç cümlelik konuşmasını dinlemek bile lokalizasyon basamağına güçlü bir temel hazırlar.",
+    "ses": "Buna karşılık sözcük bulamama, anlamsız sözcük üretme veya söyleneni anlayamama lisan merkezlerinin kortikal hasarını gösteren afazi tablosudur.",
     "sayfa": 5,
-    "satir": [
-     "İlk izlenim bile tanıya yardımcı olur"
-    ],
+    "satir": "• Dizartri, afazi hemen farkedilir",
     "sekil": null,
     "madde": [
-     1
-    ]
-   }
-  ],
-  [
-   {
-    "ses": "Nörolojik lokalizasyon aşamasında, öykü ve muayeneden elde edilen bulguların bir araya gelmesiyle hemipleji sendromu veya parapleji sendromu gibi bir sendrom ortaya çıkar.",
-    "sayfa": 6,
-    "satir": [
-     "Nörolojik Lokalizasyon",
-     "Elde edilen bulguların bir araya gelmesiyle bir sendrom ortaya çıkar. Hemipleji send, parapleji sendromu g.b"
-    ],
-    "sekil": null,
-    "madde": [
-     1,
-     2
+     8
     ]
    },
    {
-    "ses": "Bazen muayene bulguları birbirini anatomik olarak o derece tamamlar ki, bu tablo sinir sisteminde sadece tek bir bölgeye karşılık gelir.",
-    "sayfa": 6,
-    "satir": [
-     "Bazen bulgular birbirini o derece tamamlar ki sadece bir bölgeye karşılık gelir"
-    ],
+    "ses": "Hastanın şikayetini anlatırken kelimeleri nasıl telaffuz ettiği ve hekimin yönergelerini anlayıp anlamadığı ilk dakikalarda kendiliğinden ortaya çıkar.",
+    "sayfa": 5,
+    "satir": "• Dizartri, afazi hemen farkedilir",
     "sekil": null,
     "madde": [
-     3,
+     8,
      1
     ]
    },
    {
-    "ses": "Birinci klasik lokalizasyon örneğinde, afazi ile birlikte sağ hemipleji görülmesi piramidal yolun ve konuşma alanının tutulduğunu, yani lezyonun sol hemisferde olduğunu gösterir.",
-    "sayfa": 6,
-    "satir": [
-     "1. Afazi+ sağ hemipleji piramidal yolu+ konuşma alanı. Sol hemisferde lezyon"
-    ],
-    "sekil": null,
-    "madde": [
-     4,
-     5
-    ]
-   },
-   {
-    "ses": "Çünkü sol dominant hemisferdeki konuşma merkezleri ile motor korteksten inen piramidal yol komşudur ve bu yol bulbus alt ucunda çaprazlaşarak sağ vücut yarısını yönetir.",
-    "sayfa": 6,
-    "satir": [
-     "1. Afazi+ sağ hemipleji piramidal yolu+ konuşma alanı. Sol hemisferde lezyon"
-    ],
-    "sekil": null,
-    "madde": [
-     4,
-     5
-    ]
-   },
-   {
-    "ses": "İkinci klasik örnekte, diplopi yani çift görme, vertigo, piramidal bulgu ve serebellar bulgunun bir arada bulunması lezyonun beyin sapında olduğunu kanıtlar.",
-    "sayfa": 6,
-    "satir": [
-     "2. Diplopi+ vertigo+ piramidal bulgu+serebellar bulgu lezyon beyin sapında"
-    ],
-    "sekil": null,
-    "madde": [
-     5,
-     4
-    ]
-   },
-   {
-    "ses": "Kraniyal sinir muayenesinde bir diğer lokalizasyon örneği olarak, dil dışarı çıkarıldığında sağ tarafa sapma varsa lezyon aynı taraftaki sağ nervus hipoglossustadır.",
-    "sayfa": 6,
-    "satir": [
-     "2. Diplopi+ vertigo+ piramidal bulgu+serebellar bulgu lezyon beyin sapında"
-    ],
-    "sekil": null,
-    "madde": [
-     5,
-     4
-    ]
-   },
-   {
-    "ses": "Üçüncü örnekte, her iki bacakta felç yani parapleji, gövdede seviye veren duyu kaybı ve sfinkter bozukluğu birlikteliği lezyonun medulla spinaliste olduğunu gösterir.",
-    "sayfa": 6,
-    "satir": [
-     "3. Parapleji+ gövdede seviye veren duyu kaybı+ sfinkter boz. Medulla spinalis"
-    ],
-    "sekil": null,
-    "madde": [
-     6,
-     2
-    ]
-   },
-   {
-    "ses": "Dördüncü örnekte ise belden başlayıp bacak arkasına vuran ağrı ile birlikte muayenede aşil refleksi alınamıyorsa lezyon birinci sakral radiks düzeyindedir.",
-    "sayfa": 6,
-    "satir": [
-     "4. Bel ve bacak arkasına vuran ağrı+ aşil refleksi alınamıyorsa 1. sakral radiks"
-    ],
-    "sekil": null,
-    "madde": [
-     7,
-     4
-    ]
-   }
-  ],
-  [
-   {
-    "ses": "Bu dört klasik lokalizasyon sendromunu karşılaştırdığımızda, kortikal, beyin sapı, spinal ve radiküler düzeylerin birbirinden net sınırlarla ayrıldığını görürüz.",
-    "sayfa": 6,
-    "satir": [
-     "Nörolojik Lokalizasyon",
-     "Bazen bulgular birbirini o derece tamamlar ki sadece bir bölgeye karşılık gelir"
-    ],
-    "sekil": null,
-    "madde": [
-     3,
-     0
-    ]
-   },
-   {
-    "ses": "Afazi gibi yüksek kortikal bir işlev bozukluğunun sağ hemiplejiye eşlik etmesi, lezyonun beyin sapı veya omurilikte değil kesinlikle sol serebral korteks veya subkortikal ak maddede olduğunu gösterir.",
-    "sayfa": 6,
-    "satir": [
-     "1. Afazi+ sağ hemipleji piramidal yolu+ konuşma alanı. Sol hemisferde lezyon"
-    ],
-    "sekil": null,
-    "madde": [
-     4,
-     5
-    ]
-   },
-   {
-    "ses": "Diplopi ve vertigo gibi kraniyal sinir ve vestibüler sistem bulgularının uzun traktus yani piramidal ve serebellar bulgularla birleşmesi ise yalnız beyin sapı lezyonlarına özgüdür.",
-    "sayfa": 6,
-    "satir": [
-     "2. Diplopi+ vertigo+ piramidal bulgu+serebellar bulgu lezyon beyin sapında"
-    ],
-    "sekil": null,
-    "madde": [
-     5,
-     4
-    ]
-   },
-   {
-    "ses": "Her iki bacağı tutan parapleji tablosunda kraniyal sinirler tamamen sağlamdır ve gövdede seviye veren duyu kaybı ile sfinkter kusuru lezyonu medulla spinalise lokalize eder.",
-    "sayfa": 6,
-    "satir": [
-     "3. Parapleji+ gövdede seviye veren duyu kaybı+ sfinkter boz. Medulla spinalis"
-    ],
-    "sekil": null,
-    "madde": [
-     6,
-     2
-    ]
-   },
-   {
-    "ses": "Medulla spinalis yaralanmalarında ayrıca inme sonrası rehabilitasyon sürecinde de dikkat edilmesi gereken otonomik disrefleksi ve mesane disfonksiyonu gibi komplikasyonlar gelişebilir.",
-    "sayfa": 6,
-    "satir": [
-     "3. Parapleji+ gövdede seviye veren duyu kaybı+ sfinkter boz. Medulla spinalis"
-    ],
-    "sekil": null,
-    "madde": [
-     6,
-     2
-    ]
-   },
-   {
-    "ses": "Birinci sakral radiks lezyonunda ise üst motor nöron bulgusu veya sfinkter kaybı olmaksızın, yalnızca bacak arkasına yayılan radiküler ağrı ve aşil refleksi kaybı saptanır.",
-    "sayfa": 6,
-    "satir": [
-     "4. Bel ve bacak arkasına vuran ağrı+ aşil refleksi alınamıyorsa 1. sakral radiks"
-    ],
-    "sekil": null,
-    "madde": [
-     7,
-     4
-    ]
-   },
-   {
-    "ses": "Derin tendon refleksinin alınamaması lezyonun santral piramidal yolda değil, periferik refleks arkını oluşturan spinal kök veya periferik sinir düzeyinde olduğunu kanıtlar.",
-    "sayfa": 6,
-    "satir": [
-     "4. Bel ve bacak arkasına vuran ağrı+ aşil refleksi alınamıyorsa 1. sakral radiks"
-    ],
-    "sekil": null,
-    "madde": [
-     7,
-     4
-    ]
-   },
-   {
-    "ses": "Görüldüğü gibi nörolojik muayenedeki her bir bulgu diğerini tamamlayarak hekimi geniş bir anatomik alandan noktasal bir hedefe ulaştırır.",
-    "sayfa": 6,
-    "satir": [
-     "Bazen bulgular birbirini o derece tamamlar ki sadece bir bölgeye karşılık gelir"
-    ],
-    "sekil": null,
-    "madde": [
-     3,
-     1
-    ]
-   }
-  ],
-  [
-   {
-    "ses": "Anatomik lokalizasyon yapıldıktan sonra ikinci adım lezyonun natürünü belirlemektir; çünkü aynı lokalizasyon sendromu farklı etyolojilerden kaynaklanabilir.",
-    "sayfa": 7,
-    "satir": [
-     "Lezyonun Natürü"
-    ],
-    "sekil": null,
-    "madde": [
-     0
-    ]
-   },
-   {
-    "ses": "Örneğin hemipleji ile gelen hastada hipertansiyon ve diyabetes mellitus öyküsü varsa ve tablo akut gelişmişse ilk sırada damarsal etyoloji düşünülür.",
-    "sayfa": 7,
-    "satir": [
-     "Hemipleji HT+DM ilk sırada damarsal etyoloji"
-    ],
-    "sekil": null,
-    "madde": [
-     1,
-     3
-    ]
-   },
-   {
-    "ses": "Eğer aynı hemipleji tablosu yavaş yerleşmişse ve giderek ağırlaşıyorsa, bu kez kafa içi yer kaplayan lezyon yani beyin tümörü akla gelmelidir.",
-    "sayfa": 7,
-    "satir": [
-     "yavaş yerleşmişse, giderek ağırlaşıyorsa YKL"
-    ],
+    "ses": "Göz kapaklarında tek taraflı pitozis veya yüzde asimetri görülmesi kraniyal sinir felçlerini ilk bakışta hekimin dikkatine sunar.",
+    "sayfa": 5,
+    "satir": "• Odaya girerken yürümesi, karşınıza oturduğunda yüzü, bakışları, ses tonu,",
     "sekil": null,
     "madde": [
      2,
-     0
+     1
     ]
    },
    {
-    "ses": "Yavaş ilerleyen hemipleji tablosuna hastanın özgeçmişinde bilinen bir malignite öyküsü eşlik ediyorsa, etyolojide öncelikle beyin metastazı düşünülür.",
-    "sayfa": 7,
-    "satir": [
-     "malignite öyküsü + metastaz"
-    ],
-    "sekil": null,
-    "madde": [
-     2,
-     3
-    ]
-   },
-   {
-    "ses": "Sınavda soruldu; beyin sapı lokalizasyonu saptanan genç hastada tablo kısa zamanda gelişmişse ve öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği epizodlar geçirip düzelmişse tanı multipl sklerozdur.",
-    "sayfa": 7,
-    "satir": [
-     "Beyin sapı lokalizasyonu genç hasta, kısa zamanda gelişmiş, öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği epizodlar geçirip düzelmişse MS"
-    ],
-    "sekil": null,
-    "madde": [
-     3,
-     4
-    ]
-   },
-   {
-    "ses": "Sinir sisteminin farklı bölgelerinin tutulması ve atakların tekrarlayıp düzelmesi, multipl sklerozun mekanda ve zamanda yayılım özelliğini yansıtır.",
-    "sayfa": 7,
-    "satir": [
-     "Beyin sapı lokalizasyonu genç hasta, kısa zamanda gelişmiş, öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği epizodlar geçirip düzelmişse MS"
-    ],
-    "sekil": null,
-    "madde": [
-     3,
-     4
-    ]
-   },
-   {
-    "ses": "Aynı beyin sapı bulguları yaşlı ve aterosklerozu olan bir hastada akut gelişmişse, etyolojide serebrovasküler olay düşünülür.",
-    "sayfa": 7,
-    "satir": [
-     "Yaşlı hasta+ ateroskleroz SVO"
-    ],
-    "sekil": null,
-    "madde": [
-     4,
-     3
-    ]
-   },
-   {
-    "ses": "Parapleji sendromunda ise tablo sinsi başlangıçlı ve ilerleyici bir seyir gösteriyorsa, tümör gibi bir nedene bağlı medulla spinalis basısı akla gelmelidir.",
-    "sayfa": 7,
-    "satir": [
-     "Parapleji sinsi başlangıç, ilerleyici seyir medulla spinalis basısı"
-    ],
-    "sekil": null,
-    "madde": [
-     5
-    ]
-   },
-   {
-    "ses": "Buna karşılık parapleji yakın zamanda geçirilmiş bir aşı ya da viral enfeksiyon sonrasında gelişmişse, tanı otoimmün mekanizmalı post enfeksiyöz miyelittir.",
-    "sayfa": 7,
-    "satir": [
-     "aşı ya da viral enf + post-infeksiyöz miyelit"
-    ],
+    "ses": "Ayrıca istirahat halinde ellerde para sayar tarzda titreme izlenmesi Parkinsoniyen sendromların en klasik objektif dış bulgusudur.",
+    "sayfa": 5,
+    "satir": "sallamaması, vücudun fleksör postürü",
     "sekil": null,
     "madde": [
      6,
-     3
+     1
+    ]
+   },
+   {
+    "ses": "Bu sistematik ilk gözlem süreci, nörolojik muayenenin geri kalan adımlarının çok daha odaklanmış ve amaca yönelik yapılmasını mümkün kılar.",
+    "sayfa": 5,
+    "satir": "• İlk izlenim bile tanıya yardımcı olur",
+    "sekil": null,
+    "madde": [
+     1,
+     0
     ]
    }
   ],
   [
    {
-    "ses": "Lezyonun natürünü belirlerken hastanın yaşı, vasküler risk faktörleri, sistemik hastalıkları ve tablonun zamansal seyri birlikte değerlendirilir.",
-    "sayfa": 7,
-    "satir": [
-     "Lezyonun Natürü",
-     "Hemipleji HT+DM ilk sırada damarsal etyoloji"
-    ],
+    "ses": "Nörolojik muayenede elde edilen objektif bulgular tek tek değil, birbirini tamamlayan bir klinik sendrom olarak ele alınmalıdır.",
+    "sayfa": 6,
+    "satir": "• Elde edilen bulguların bir araya gelmesiyle bir sendrom ortaya çıkar. Hemipleji",
     "sekil": null,
     "madde": [
      1,
-     0
-    ]
-   },
-   {
-    "ses": "Hemipleji sendromunda akut başlangıç ve hipertansiyon veya diyabet varlığı damarsal tıkanıklık ya da kanamayı düşündürürken, haftalar içinde ilerleyen seyir yer kaplayan kitleyi işaret eder.",
-    "sayfa": 7,
-    "satir": [
-     "Hemipleji HT+DM ilk sırada damarsal etyoloji",
-     "yavaş yerleşmişse, giderek ağırlaşıyorsa YKL"
-    ],
-    "sekil": null,
-    "madde": [
-     1,
-     2
-    ]
-   },
-   {
-    "ses": "Benzer şekilde beyin sapı sendromunda genç yaş ve geçmişte düzelmiş farklı nörolojik atakların varlığı demiyelinizan multipl skleroz plaklarını düşündürür.",
-    "sayfa": 7,
-    "satir": [
-     "Beyin sapı lokalizasyonu genç hasta, kısa zamanda gelişmiş, öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği epizodlar geçirip düzelmişse MS"
-    ],
-    "sekil": null,
-    "madde": [
-     3,
-     4
-    ]
-   },
-   {
-    "ses": "Oysa aynı beyin sapı bulguları ileri yaşta ve ateroskleroz zemininde aniden ortaya çıktığında vertebrobaziler sistemdeki bir serebrovasküler olay ilk sıraya yerleşir.",
-    "sayfa": 7,
-    "satir": [
-     "Yaşlı hasta+ ateroskleroz SVO"
-    ],
-    "sekil": null,
-    "madde": [
-     4,
      3
     ]
    },
    {
-    "ses": "Parapleji tablosunda da sinsi başlangıç ve kronik ilerleme omuriliği dıştan sıkıştıran bir kitle basısını gösterirken, enfeksiyon veya aşı sonrası akut gelişim inflamatuar miyeliti düşündürür.",
-    "sayfa": 7,
-    "satir": [
-     "Parapleji sinsi başlangıç, ilerleyici seyir medulla spinalis basısı",
-     "aşı ya da viral enf + post-infeksiyöz miyelit"
-    ],
+    "ses": "Bazen bulgular birbirini o derece kusursuz tamamlar ki, sinir sisteminde sadece ve sadece tek bir anatomik bölgeye karşılık gelir.",
+    "sayfa": 6,
+    "satir": "• Bazen bulgular birbirini o derece tamamlar ki sadece bir bölgeye karşılık gelir",
     "sekil": null,
     "madde": [
-     5,
-     6
+     3,
+     1
     ]
    },
    {
-    "ses": "Sinsi ilerleyen medulla spinalis basısında erken tanı konup cerrahi dekompresyon yapılmazsa omurilikteki iskemi kalıcı paraplejiye ve sfinkter kaybına dönüşür.",
-    "sayfa": 7,
-    "satir": [
-     "Parapleji sinsi başlangıç, ilerleyici seyir medulla spinalis basısı"
-    ],
+    "ses": "Klasik lokalizasyon örneklerinden birincisinde afazi ile birlikte sağ hemipleji tablosunun bulunmasıdır.",
+    "sayfa": 6,
+    "satir": "1. Afazi+ sağ hemipleji            piramidal yolu+ konuşma alanı. Sol hemisferde lezyon",
     "sekil": null,
     "madde": [
+     4,
      5
     ]
    },
    {
-    "ses": "Post enfeksiyöz miyelitte ise viral bir enfeksiyonu veya aşılama öyküsünü izleyen günlerde omurilikte immün aracılı demiyelinizasyon ve ödem gelişir.",
-    "sayfa": 7,
-    "satir": [
-     "aşı ya da viral enf + post-infeksiyöz miyelit"
-    ],
+    "ses": "Bu tabloda piramidal motor yol ile motor veya duyusal konuşma alanı birlikte etkilenmiştir ve lezyon kesinlikle sol serebral hemisferdedir.",
+    "sayfa": 6,
+    "satir": "1. Afazi+ sağ hemipleji            piramidal yolu+ konuşma alanı. Sol hemisferde lezyon",
     "sekil": null,
     "madde": [
-     6,
-     3
+     4,
+     5
     ]
    },
    {
-    "ses": "Böylece anatomik lokalizasyon ve lezyonun natürü sorularına yanıt veren hekim, hangi hastada anjiyografi, hangi hastada lomber ponksiyon veya kontrastlı manyetik rezonans isteyeceğini kesin olarak bilir.",
-    "sayfa": 7,
-    "satir": [
-     "Lezyonun Natürü"
-    ],
+    "ses": "İkinci klasik lokalizasyon örneği diplopi, vertigo, piramidal bulgular ve serebellar bulguların aynı anda bir arada bulunmasıdır.",
+    "sayfa": 6,
+    "satir": "2. Diplopi+ vertigo+ piramidal bulgu+serebellar bulgu             lezyon beyin sapında",
+    "sekil": null,
+    "madde": [
+     5,
+     4
+    ]
+   },
+   {
+    "ses": "Bu dört temel bulgunun birlikteliği, kraniyal sinir çekirdekleri ile uzun çıkan ve inen yolların sıkışık biçimde komşu olduğu beyin sapı lezyonunu kesin olarak gösterir.",
+    "sayfa": 6,
+    "satir": "2. Diplopi+ vertigo+ piramidal bulgu+serebellar bulgu             lezyon beyin sapında",
+    "sekil": null,
+    "madde": [
+     5,
+     4
+    ]
+   },
+   {
+    "ses": "Çünkü başka hiçbir anatomik alanda vestibüler çekirdekler, göz kaslarını innerve eden sinirler, piramidal yol ve serebellar bağlantılar bu kadar dar bir alanda birleşemez.",
+    "sayfa": 6,
+    "satir": "2. Diplopi+ vertigo+ piramidal bulgu+serebellar bulgu             lezyon beyin sapında",
+    "sekil": null,
+    "madde": [
+     5,
+     4
+    ]
+   },
+   {
+    "ses": "Böylece hekim bulguların kesişim kümesini bularak lezyonun santral sinir sistemindeki koordinatını milimetrik düzeyde saptar.",
+    "sayfa": 6,
+    "satir": "Nörolojik Lokalizasyon",
     "sekil": null,
     "madde": [
      0,
-     3
+     5
     ]
    }
   ],
   [
    {
-    "ses": "Klinik lokalizasyon ve etyolojik ön tanı belirlendikten sonra başvurulan laboratuvar incelemeleri, genel metodlar ve nörolojiye özgü spesifik incelemeler olarak ikiye ayrılır.",
-    "sayfa": 8,
-    "satir": [
-     "Laboratuvar İncelemeleri",
-     "Genel metodlar: biyokimya, bakteriyolojik metodlar g.b"
-    ],
+    "ses": "Üçüncü klasik anatomik lokalizasyon örneği her iki bacakta motor güçsüzlük yani parapleji, gövdede seviye veren duyu kaybı ve sfinkter bozukluğu birlikteliğidir.",
+    "sayfa": 6,
+    "satir": "3. Parapleji+ gövdede seviye veren duyu kaybı+ sfinkter boz.          Medulla spinalis",
     "sekil": null,
     "madde": [
-     1,
-     0
+     6,
+     2
     ]
    },
    {
-    "ses": "Genel metodlar arasında yer alan rutin biyokimya ve bakteriyolojik incelemeler, sinir sistemini ikincil olarak etkileyen metabolik ve enfeksiyöz tabloları saptamakta kullanılır.",
-    "sayfa": 8,
-    "satir": [
-     "Genel metodlar: biyokimya, bakteriyolojik metodlar g.b"
-    ],
+    "ses": "Bu klinik triad, lezyonun medulla spinaliste yer aldığını ve o duyu seviyesindeki spinal segmentin hasarlandığını tartışmasız biçimde kanıtlar.",
+    "sayfa": 6,
+    "satir": "3. Parapleji+ gövdede seviye veren duyu kaybı+ sfinkter boz.          Medulla spinalis",
     "sekil": null,
     "madde": [
-     1,
-     0
+     6,
+     2
     ]
    },
    {
-    "ses": "Özellikle bilinç bozukluğu olan her hastanın ayırıcı tanısında, beyinde hızla kalıcı hasar bırakan hipoglisemi mutlaka biyokimyasal olarak düşünülmeli ve kan şekeri ölçülmelidir.",
-    "sayfa": 8,
-    "satir": [
-     "Genel metodlar: biyokimya, bakteriyolojik metodlar g.b"
-    ],
+    "ses": "Örneğin meme başı hizasında duyu seviyesi dördüncü torakal segmenti, göbek hizasındaki seviye ise onuncu torakal segmenti işaret eder.",
+    "sayfa": 6,
+    "satir": "3. Parapleji+ gövdede seviye veren duyu kaybı+ sfinkter boz.          Medulla spinalis",
     "sekil": null,
     "madde": [
-     1,
-     7
+     6,
+     2
     ]
    },
    {
-    "ses": "Spesifik nörolojik tetkiklerin ilki olan beyin omurilik sıvısı incelemesi, santral sinir sistemi enfeksiyonları, subaraknoid kanama ve demiyelinizan hastalıkların tanısında temel yöntemdir.",
-    "sayfa": 8,
-    "satir": [
-     "Spesifik: BOS incelemesi"
-    ],
+    "ses": "Sfinkter kontrolünün bozulması ve seviye veren duyu kusuru, spinal kordun transvers lezyonunu periferik polinöropatilerden kesin olarak ayırır.",
+    "sayfa": 6,
+    "satir": "3. Parapleji+ gövdede seviye veren duyu kaybı+ sfinkter boz.          Medulla spinalis",
     "sekil": null,
     "madde": [
-     2,
-     0
+     6,
+     2
     ]
    },
    {
-    "ses": "Elektroensefalografi beynin elektriksel aktivitesini kaydederek epilepsi ve ensefalopatileri değerlendirirken, elektromiyografi periferik sinir, kök ve kas hastalıklarını inceler.",
-    "sayfa": 8,
-    "satir": [
-     "EEG",
-     "EMG"
-    ],
+    "ses": "Dördüncü klasik lokalizasyon örneği ise belden bacak arkasına yayılan radiküler ağrı ile birlikte aşil refleksinin alınamaması tablosudur.",
+    "sayfa": 6,
+    "satir": "4. Bel ve bacak arkasına vuran ağrı+ aşil refleksi alınamıyorsa            1. sakral radiks",
     "sekil": null,
     "madde": [
-     3,
+     7,
      4
     ]
    },
    {
-    "ses": "Uyarılmış potansiyeller ise görsel, işitsel veya duyusal yolların iletim hızını ölçerek özellikle multipl sklerozdaki sessiz demiyelinizan plakları ortaya koyar.",
-    "sayfa": 8,
-    "satir": [
-     "Uyarılmış potansiyeller- EP evoked potentials"
-    ],
-    "sekil": null,
-    "madde": [
-     5
-    ]
-   },
-   {
-    "ses": "Nörogörüntülemede beyin bilgisayarlı tomografisi ve beyin manyetik rezonans görüntüleme yapısal lezyonları doğrudan gösteren en güçlü araçlardır.",
-    "sayfa": 8,
-    "satir": [
-     "BBT",
-     "beyin MRI"
-    ],
+    "ses": "Bu klinik tablo birinci sakral spinal radiksin yani se bir kökünün lumbosakral disk hernisi veya osteofit ile basılandığını gösterir.",
+    "sayfa": 6,
+    "satir": "4. Bel ve bacak arkasına vuran ağrı+ aşil refleksi alınamıyorsa            1. sakral radiks",
     "sekil": null,
     "madde": [
      7,
-     6
+     4
     ]
    },
    {
-    "ses": "Bu bilgi çıkmışta soruldu; hipertansiyon öyküsü olan, ani güç kaybı ve dizartri ile acile başvuran akut inme hastasında kanamayı dışlamak ve erken iskemiyi görmek için öncelikle kontrastsız beyin bilgisayarlı tomografisi ve difüzyon manyetik rezonans görüntüleme istenir.",
-    "sayfa": 8,
-    "satir": [
-     "BBT",
-     "beyin MRI"
-    ],
+    "ses": "Aşil refleksi doğrudan birinci sakral segmentin refleks arkını test ettiği için, refleks kaybı kök basısının en güvenilir objektif motor kanıtıdır.",
+    "sayfa": 6,
+    "satir": "4. Bel ve bacak arkasına vuran ağrı+ aşil refleksi alınamıyorsa            1. sakral radiks",
     "sekil": null,
     "madde": [
      7,
-     6
+     4
+    ]
+   },
+   {
+    "ses": "Bu sendromik düşünce sistemi sayesinde hekim, semptomların karmaşası içinde kaybolmadan doğrudan sorumlu nöroanatomik odağa kilitlenir.",
+    "sayfa": 6,
+    "satir": "Nörolojik Lokalizasyon",
+    "sekil": null,
+    "madde": [
+     0,
+     2
     ]
    }
   ],
   [
    {
-    "ses": "Acil servise getirilen nörolojik hastalarda bazı özel durumlar söz konusudur; hasta bilinçsiz ya da afazik olabilir ve getiren kişi bilgi sahibi olmayabilir.",
-    "sayfa": 9,
-    "satir": [
-     "Bazı Özel durumlar",
-     "Acil olarak getirilen hasta bilinçsiz ya da afazik olabilir. Getiren kişi bilgi sahibi olmayabilir."
-    ],
+    "ses": "Lezyonun anatomik lokalizasyonu kesinleştirildikten sonra hekimin yanıtlaması gereken ikinci hayati soru, lezyonun natürü yani etiyolojisidir.",
+    "sayfa": 7,
+    "satir": "Lezyonun Natürü",
     "sekil": null,
     "madde": [
-     1,
      0
     ]
    },
    {
-    "ses": "Böyle bir durumda geri dönüşü olmayan bir noktaya gelmeden önce hızla müdahale etmek gerekir; çünkü zaman hastanın ve hekimin aleyhine işler.",
-    "sayfa": 9,
-    "satir": [
-     "Böyle bir durumda geri dönüşü olmayan bir noktaya gelmeden önce müdahale etmek gerekiyor. Zaman hastanın ve hekimin aleyhine işler."
-    ],
+    "ses": "Aynı anatomik sendromu oluşturan hastalıklar, hastanın özgeçmişine, yaşına ve lezyonun yerleşim hızına göre bambaşka patolojik süreçlerden kaynaklanabilir.",
+    "sayfa": 7,
+    "satir": "Lezyonun Natürü",
     "sekil": null,
     "madde": [
-     2,
-     6
+     0
     ]
    },
    {
-    "ses": "Nörolojik acillerde bu temel kural zaman beyindir ilkesiyle özetlenir; zira iskemi veya kesintisiz nöbet süresince her dakika milyonlarca nöron kaybedilir.",
-    "sayfa": 9,
-    "satir": [
-     "Zaman=beyin"
-    ],
+    "ses": "Örneğin hemipleji sendromu olan bir hastada hipertansiyon ve diyabet öyküsü varsa, ilk sırada damarsal etiyoloji yani serebrovasküler olay düşünülür.",
+    "sayfa": 7,
+    "satir": "• Hemipleji          HT+DM ilk sırada damarsal etyoloji",
+    "sekil": null,
+    "madde": [
+     1,
+     3
+    ]
+   },
+   {
+    "ses": "Eğer hemipleji tablosu dakikalar içinde değil de haftalar veya aylar içinde yavaş yavaş yerleşmiş ve giderek ağırlaşmışsa, primer beyin tümörü gibi yer kaplayan lezyonlar akla gelmelidir.",
+    "sayfa": 7,
+    "satir": "yavaş yerleşmişse, giderek ağırlaşıyorsa YKL",
+    "sekil": null,
+    "madde": [
+     2,
+     0
+    ]
+   },
+   {
+    "ses": "Hastada bilinen bir akciğer veya meme kanseri gibi sistemik malignite öyküsü bulunuyorsa, yeni gelişen nörolojik kayıpta ilk akla gelmesi gereken olasılık beyin metastazıdır.",
+    "sayfa": 7,
+    "satir": "malignite öyküsü +  metastaz",
+    "sekil": null,
+    "madde": [
+     2,
+     3
+    ]
+   },
+   {
+    "ses": "Metastatik kitleler genellikle gri-beyaz cevher bileşkesine yerleşerek etrafında yoğun vazojenik ödem oluşturur ve hızla kafa içi basınç artışına yol açar.",
+    "sayfa": 7,
+    "satir": "malignite öyküsü +  metastaz",
+    "sekil": null,
+    "madde": [
+     2,
+     3
+    ]
+   },
+   {
+    "ses": "Dolayısıyla hemiplejinin klinik tablosu aynı kalsa bile, hastanın klinik arka planı hekimi vasküler, tümöral veya metastatik tanılara yönlendirir.",
+    "sayfa": 7,
+    "satir": "• Hemipleji          HT+DM ilk sırada damarsal etyoloji",
+    "sekil": null,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Bu ayrım yapılmaksızın doğru tedavi protokolünü belirlemek ve cerrahi ya da medikal kararı vermek asla mümkün değildir.",
+    "sayfa": 7,
+    "satir": "Lezyonun Natürü",
+    "sekil": null,
+    "madde": [
+     0
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Beyin sapı lokalizasyonunda etiyolojik ayrım hastanın yaşı ve geçmiş atak öyküsü üzerinden kurulur.",
+    "sayfa": 7,
+    "satir": "• Beyin sapı lokalizasyonu       genç hasta, kısa zamanda gelişmiş, öyküsünde sinir",
     "sekil": null,
     "madde": [
      3,
@@ -1336,23 +907,136 @@
     ]
    },
    {
-    "ses": "Bu nedenle hızlı bir şekilde bilgi toplarken tedaviye de başlanır; vital bulguları stabil hale getirmek, solunum yolunu açık tutmak ve nöbeti durdurmak ilk önceliktir.",
-    "sayfa": 9,
-    "satir": [
-     "Hızlı bir şekilde bilgi toplarken tedaviye de başlanır. Vital bulguları stabil hale getirmek g.b solunum yolunu açık tutmak, nöbet geçiriyorsa durdurmaya çalışmak"
-    ],
+    "ses": "Bu bilgi çıkmış sınavda sorulmuştur: genç bir hastada beyin sapı bulguları kısa zamanda gelişmişse ve öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği, zamanla düzelen atak epizodları varsa en olası tanı multipl sklerozdur.",
+    "sayfa": 7,
+    "satir": "sisteminin farklı bölgelerinin etkilendiği epizodlar geçirip düzelmişse            MS",
     "sekil": null,
     "madde": [
      4,
+     3
+    ]
+   },
+   {
+    "ses": "Multipl skleroz santral sinir sisteminde zaman ve mekan içinde dissemine olan otoimmün demiyelinizan plaklarla karakterizedir.",
+    "sayfa": 7,
+    "satir": "sisteminin farklı bölgelerinin etkilendiği epizodlar geçirip düzelmişse            MS",
+    "sekil": null,
+    "madde": [
+     4,
+     3
+    ]
+   },
+   {
+    "ses": "Buna karşılık benzer beyin sapı bulguları ileri yaşta ve ateroskleroz ile hipertansiyon zemininde aniden ortaya çıktığında, vertebrobaziler sistemde bir serebrovasküler olay düşünülür.",
+    "sayfa": 7,
+    "satir": "Yaşlı hasta+ ateroskleroz          SVO",
+    "sekil": null,
+    "madde": [
+     4,
+     3
+    ]
+   },
+   {
+    "ses": "Parapleji sendromunda da sinsi başlangıç ve ilerleyici seyir omuriliği dıştan basılayan bir spinal tümör veya servikal spondilotik miyelopatiyi işaret eder.",
+    "sayfa": 7,
+    "satir": "• Parapleji              sinsi başlangıç, ilerleyici seyir           medulla spinalis basısı",
+    "sekil": null,
+    "madde": [
      5
     ]
    },
    {
-    "ses": "İlk gören hekim hastanın giderek kapandığını ve progrese olduğunu fark etmeli, tanı konulamayan veya tedavi edilemeyen hastayı nöroloji kliniğine göndermelidir.",
-    "sayfa": 9,
-    "satir": [
-     "İlk gören hekim hastanın giderek kapandığını, progrese olduğunu farketmeli. Tanı konulamayan, tedavi edilemeyen hastayı nöroloji kliniğine göndermeli"
-    ],
+    "ses": "Buna karşın parapleji yakın zamanda geçirilmiş bir aşılama veya viral enfeksiyonu takiben akut gelişmişse, post enfeksiyöz transvers miyelit düşünülmelidir.",
+    "sayfa": 7,
+    "satir": "aşı ya da viral enf +             post-infeksiyöz miyelit",
+    "sekil": null,
+    "madde": [
+     6,
+     3
+    ]
+   },
+   {
+    "ses": "Post enfeksiyöz miyelitte otoimmün çapraz reaksiyon sonucu omurilikte diffüz inflamasyon ve iletim bloğu meydana gelir.",
+    "sayfa": 7,
+    "satir": "aşı ya da viral enf +             post-infeksiyöz miyelit",
+    "sekil": null,
+    "madde": [
+     6
+    ]
+   },
+   {
+    "ses": "Böylece hekim anatomik koordinat ile klinik natürü birleştirerek hastasına tam ve eksiksiz bir nörolojik tanı koymuş olur.",
+    "sayfa": 7,
+    "satir": "Lezyonun Natürü",
+    "sekil": null,
+    "madde": [
+     0
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Klinik muayene ve lezyon natürü hipotezleri oluşturulduktan sonra, tanıyı doğrulamak için genel metodlar ve spesifik nörolojik incelemelerden yararlanılır.",
+    "sayfa": 8,
+    "satir": "Laboratuvar İncelemeleri",
+    "sekil": null,
+    "madde": [
+     0,
+     2
+    ]
+   },
+   {
+    "ses": "Genel metodlar arasında yer alan rutin biyokimya ve bakteriyolojik incelemeler; elektrolit bozuklukları, üremi, karaciğer yetmezliği ve sistemik enfeksiyonları aydınlatır.",
+    "sayfa": 8,
+    "satir": "• Genel metodlar: biyokimya, bakteriyolojik metodlar g.b",
+    "sekil": null,
+    "madde": [
+     1,
+     0
+    ]
+   },
+   {
+    "ses": "Spesifik incelemelerin başında gelen beyin omurilik sıvısı incelemesi, menenjit, ensefalit, subaraknoid kanama ve multipl sklerozdaki oligoklonal bantların saptanmasında altın standarttır.",
+    "sayfa": 8,
+    "satir": "• Spesifik: BOS incelemesi",
+    "sekil": null,
+    "madde": [
+     2,
+     0
+    ]
+   },
+   {
+    "ses": "Elektroensefalografi beynin kortikal elektriksel aktivitesini kaydederek epileptik odakları ve metabolik ensefalopatileri inceler.",
+    "sayfa": 8,
+    "satir": "• EEG",
+    "sekil": null,
+    "madde": [
+     3,
+     0
+    ]
+   },
+   {
+    "ses": "Elektromiyografi ve sinir ileti çalışmaları ise periferik nöropatiler, radikülopatiler ve kas hastalıklarının ayrımında vazgeçilmez elektrofizyolojik yöntemlerdir.",
+    "sayfa": 8,
+    "satir": "• EMG",
+    "sekil": null,
+    "madde": [
+     4
+    ]
+   },
+   {
+    "ses": "Uyarılmış potansiyeller görsel, işitsel ve somatosensoriyel yolların subklinik demiyelinizan iletim gecikmelerini yüksek duyarlılıkla ortaya koyar.",
+    "sayfa": 8,
+    "satir": "• Uyarılmış potansiyeller- EP evoked potentials",
+    "sekil": null,
+    "madde": [
+     5
+    ]
+   },
+   {
+    "ses": "Nörogörüntülemede beyin bilgisayarlı tomografisi akut kanama, kemik kırığı ve herniasyon acillerinde dakikalar içinde hayat kurtarır.",
+    "sayfa": 8,
+    "satir": "• BBT",
     "sekil": null,
     "madde": [
      6,
@@ -1360,23 +1044,80 @@
     ]
    },
    {
-    "ses": "Bilinç takibinde sözel uyaranla uyandırılabilen ancak uyaran kesilince tekrar uykuya meyilli olan hastanın durumu somnolans olarak tanımlanır.",
-    "sayfa": 9,
-    "satir": [
-     "İlk gören hekim hastanın giderek kapandığını, progrese olduğunu farketmeli. Tanı konulamayan, tedavi edilemeyen hastayı nöroloji kliniğine göndermeli"
-    ],
+    "ses": "Bu bilgi çıkmış sınavda sorulmuştur: hipertansiyon öyküsü olan, ani hemipleji ve dizartri ile acile başvuran inme şüpheli hastada damarsal etiyolojiyi doğrulamak ve kanama ile iskemiyi ayırt etmek için ilk tercih kontrastsız bilgisayarlı tomografi ve difüzyon manyetik rezonanstır.",
+    "sayfa": 8,
+    "satir": "• beyin MRI",
     "sekil": null,
     "madde": [
-     6,
+     7
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Acil nörolojide bazı özel klinik durumlar vardır; acile getirilen hasta bilinçsiz, stupor halinde ya da afazik olabilir ve getiren kişinin hastanın geçmişi hakkında hiçbir bilgisi bulunmayabilir.",
+    "sayfa": 9,
+    "satir": "• Acil olarak getirilen hasta bilinçsiz ya da afazik olabilir. Getiren kişi bilgi sahibi",
+    "sekil": null,
+    "madde": [
+     1,
      7
     ]
    },
    {
-    "ses": "Gönderirken öykü ve muayene bulgularını açık ve anlaşılır yazmalı, anlaşılmaz kısaltmalar kullanmamalı, epilepsi, miyokloni veya kore gibi deyimler yerine gördüğünü yazmalıdır.",
+    "ses": "Böyle bir durumda geri dönüşü olmayan kalıcı nöronal hasar gelişmeden önce ivedi müdahale etmek gerekir; çünkü zaman hastanın ve hekimin aleyhine işler.",
     "sayfa": 9,
-    "satir": [
-     "Gönderirken öykü ve muayene bulgularını açık, anlaşılır bir şekilde yazmalı. Anlaşılmaz kısaltmalar kullanmamalı, epilepsi, miyokloni, kore gibi deyimler yerine gördüğünü yazmalı."
-    ],
+    "satir": "müdahale etmek gerekiyor. Zaman hastanın ve hekimin aleyhine işler.",
+    "sekil": null,
+    "madde": [
+     2,
+     6
+    ]
+   },
+   {
+    "ses": "Nörolojik acillerde bu hayati ilke zaman beyindir kuralı ile özetlenir; iskemik inmede her geçen dakika yaklaşık iki milyon nöron geri dönüşsüz olarak ölür.",
+    "sayfa": 9,
+    "satir": "Zaman=beyin",
+    "sekil": null,
+    "madde": [
+     3,
+     2
+    ]
+   },
+   {
+    "ses": "Hızlı bir şekilde öykü toplanırken eş zamanlı olarak tedaviye başlanmalı; hava yolu açık tutulmalı, oksijenasyon sağlanmalı ve devam eden epileptik nöbetler hızla durdurulmalıdır.",
+    "sayfa": 9,
+    "satir": "• Hızlı bir şekilde bilgi toplarken tedaviye de başlanır. Vital bulguları stabil hale",
+    "sekil": null,
+    "madde": [
+     4,
+     8
+    ]
+   },
+   {
+    "ses": "İlk gören hekim hastanın nörolojik durumunun giderek kapandığını ve tablonun progrese olduğunu fark ettiğinde, tanı konulamayan hastayı derhal donanımlı bir nöroloji merkezine sevk etmelidir.",
+    "sayfa": 9,
+    "satir": "• İlk gören hekim hastanın giderek kapandığını, progrese olduğunu farketmeli. Tanı",
+    "sekil": null,
+    "madde": [
+     6,
+     2
+    ]
+   },
+   {
+    "ses": "Sevk sırasında hastanın öykü ve muayene bulguları açık, anlaşılır ve objektif ifadelerle kaydedilmeli; yanıltıcı olabilecek anlaşılmaz tıbbi kısaltmalardan kesinlikle kaçınılmalıdır.",
+    "sayfa": 9,
+    "satir": "• Gönderirken öykü ve muayene bulgularını açık, anlaşılır bir şekilde yazmalı.",
+    "sekil": null,
+    "madde": [
+     8,
+     4
+    ]
+   },
+   {
+    "ses": "Ayrıca hekim epilepsi, miyokloni veya kore gibi tanısal deyimler yazmak yerine doğrudan gözlemlediği hareketleri tarif etmeli; bilinç düzeyini, muayene saatini ve pupil büyüklükleri ile ışık refleksini mutlaka kaydetmelidir.",
+    "sayfa": 9,
+    "satir": "yerine gördüğünü yazmalı. Bilinç düzeyini , saatini, pupil büyüklüklerini",
     "sekil": null,
     "madde": [
      9,
@@ -1384,15 +1125,12 @@
     ]
    },
    {
-    "ses": "Sevk kağıdına bilinç düzeyini, saatini ve pupil büyüklüklerini kaydetmeli, hemipareziyi bacağını kaldıramıyor ancak yatak içinde çekebiliyor şeklinde açıklamalıdır.",
+    "ses": "Hemiparezi varlığı kaydedilirken sağ bacağını yerçekimine karşı kaldıramıyor ancak yatak içinde çekebiliyor şeklinde objektif kas gücü derecelendirmesi açıkça belirtilmelidir.",
     "sayfa": 9,
-    "satir": [
-     "Bilinç düzeyini , saatini, pupil büyüklüklerini kaydetmeli. Hemiparezi açıklamalı ( bacağını kaldıramıyor yatak içinde çekebiliyor)"
-    ],
+    "satir": "kaydetmeli. Hemiparezi açıklamalı ( bacağını kaldıramıyor yatak içinde çekebiliyor)",
     "sekil": null,
     "madde": [
-     9,
-     1
+     9
     ]
    }
   ]

@@ -14,30 +14,63 @@
      "cumleler": [
       {
        "id": "k2-07-c0001",
-       "ses": "Genel anestezik ilaçlar dersinde, cerrahi girişimlerde geri döndürülebilir bilinç, duyu ve refleks kaybı sağlayan inhalasyon ve intravenöz anestezik ajanların farmakokinetik özelliklerini, etki mekanizmalarını ve klinik yan etkilerini inceleyeceğiz.",
-       "ekran": "**Genel Anestezik İlaçlar:** İnhalasyon ve intravenöz ajanların **farmakokinetik, mekanizma ve yan etki** ilkeleri",
+       "ses": "Genel anestezik ilaçlar dersinde; cerrahi girişimlerin ağrısız ve güvenle yapılabilmesi amacıyla hastada geri döndürülebilir bilinç, duyu, otonomik refleks ve çizgili kas tonusu kaybı sağlayan temel ajanları inceleyeceğiz.",
+       "ekran": "Genel anesteziye giriş: **Geri döndürülebilir bilinç, duyu ve refleks kaybı**",
        "duzey": 0,
-       "vurgu": [
-        {
-         "metin": "Genel Anestezik İlaçlar",
-         "tur": "tanim"
-        },
-        {
-         "metin": "farmakokinetik, mekanizma ve yan etki",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-07-d-s01",
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 1,
         "satir": [
-         "Tababet sanatı üç şeydir:"
+         "BİLİCİ"
+        ],
+        "sekil": "Genel anestezi ders başlığı ve tıbbın temel ilkeleri",
+        "madde": [
+         0
+        ],
+        "resim": 0
+       }
+      },
+      {
+       "id": "k2-07-c0002",
+       "ses": "Geleneksel tıp anlayışında tababet sanatı el mahareti ile aletler, farmakolojik ilaçlar ve hekimlik ahlakı olmak üzere üç sacayağı üzerine kuruludur; cerrahi başarı anestezi güvenliğiyle doğrudan ilişkilidir.",
+       "ekran": "Tababet sanatı: **El mahareti, ilaç ve hekimlik ahlakı**",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-07-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Tababet sanatı üç şeydir: 1. el mahareti ile aletler, 2. ilaç, 3. ahlaktır."
         ],
         "sekil": null,
-        "adim": 1,
         "madde": [
+         1,
+         2
+        ]
+       }
+      },
+      {
+       "id": "k2-07-c0003",
+       "ses": "Erdem kavramı şifayı yüksek maharetle, güçlü anestezik ilaçları ise derin bir özen ve rikkatle sunmayı gerektirir; zira genel anestezi yönetimi hastanın tüm yaşamsal fonksiyonlarının yapay olarak devralınmasıdır.",
+       "ekran": "Tıbbi erdem: **Şifayı maharet, ilacı özen ve rikkatle sunmak**",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-07-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Erdem; şifayı maharet, ilacı rikkatle sunmaktır.   nb"
+        ],
+        "sekil": null,
+        "madde": [
+         2,
          1
         ]
        }
@@ -49,7 +82,7 @@
      "sayfa": 2,
      "cumleler": [
       {
-       "id": "k2-07-c0002",
+       "id": "k2-07-c0004",
        "ses": "Ağrısız cerrahi arayışı çok eskidir; tarihî belgelerde genel anestezik olarak kenevir, banotu, adamotu, haşhaş, soğuk kompres, beyin sarsıntısı ve karotis arter oklüzyonu gibi pek çok yöntem denenmiştir.",
        "ekran": "Tarihte denenen yöntemler: **kenevir, banotu, adamotu, haşhaş**, soğuk kompres, beyin sarsıntısı, karotis oklüzyonu",
        "duzey": 0,
@@ -76,7 +109,7 @@
        }
       },
       {
-       "id": "k2-07-c0003",
+       "id": "k2-07-c0005",
        "ses": "Ağrı hissettirmeden cerrahi girişimi Çin, Hint ve Grek medeniyetleri ile İslam medeniyetinden İbni Sina, İbnün Nefis, İbnül Baytar, Zehravi ve Sabuncuoğlu Şerefeddin anlatmış ve uygulamıştır.",
        "ekran": "Ağrısız cerrahiyi anlatanlar: **İbni Sina**, İbnün Nefis, İbnül Baytar, Zehravi, **Sabuncuoğlu Şerefeddin**",
        "duzey": 0,
@@ -103,7 +136,7 @@
        }
       },
       {
-       "id": "k2-07-c0004",
+       "id": "k2-07-c0006",
        "ses": "Günümüzde bilinen, halka açık ilk genel anestezi bin sekiz yüz kırk altı yılında yapılmıştır; modern anestezinin başlangıç tarihi olarak bu yılı aklınızda tutun.",
        "ekran": "Halka açık ilk genel anestezi: **1846**",
        "duzey": 0,
@@ -136,7 +169,7 @@
      "sayfa": 3,
      "cumleler": [
       {
-       "id": "k2-07-c0005",
+       "id": "k2-07-c0007",
        "ses": "Genel anestezi, nörolojik fonksiyonlardaki geri döndürülebilir değişiklikler ya da vital fonksiyonlarda geçici bir değişimle birlikte bilinç, refleks ve duyu kaybıyla karakterize bir durumdur; tanımın kilit kelimesi geri döndürülebilirliktir, kalıcı nörolojik hasar bu tanıma girmez.",
        "ekran": "Genel anestezi: **geri döndürülebilir** bilinç, refleks ve duyu kaybı",
        "duzey": 0,
@@ -163,7 +196,7 @@
        }
       },
       {
-       "id": "k2-07-c0006",
+       "id": "k2-07-c0008",
        "ses": "Bu durumun ögeleri bilinç kaybı, duyu kaybı, amnezi, analjezi ve hareketsizliktir.",
        "ekran": "Ögeler: bilinç kaybı, duyu kaybı, **amnezi**, **analjezi**, hareketsizlik",
        "duzey": 1,
@@ -183,13 +216,13 @@
         "sekil": null,
         "adim": 1,
         "madde": [
-         4,
-         5
+         1,
+         4
         ]
        }
       },
       {
-       "id": "k2-07-c0007",
+       "id": "k2-07-c0009",
        "ses": "Amaç, cerrahi uyaranlara karşı oluşan otonomik, somatik ve duyusal davranışların, yani reflekslerin sorunsuz baskılanmasıdır; anestezi tek bir etki değil, birden çok bileşenin toplamıdır ve bu bileşenlerin farklı ilaçlarla sağlanması dengeli anestezinin temelidir.",
        "ekran": "Amaç: cerrahi uyarana karşı **otonomik, somatik ve duyusal reflekslerin** baskılanması",
        "duzey": 0,
@@ -217,7 +250,7 @@
      "sayfa": 4,
      "cumleler": [
       {
-       "id": "k2-07-c0008",
+       "id": "k2-07-c0010",
        "ses": "Klasik anestezi evreleri sırasıyla analjezi ve amnezi evresi, eksitasyon ya da deliryum evresi, cerrahi anestezi evresi ve bulber paralizi evresidir; bulber paralizi ölümcül derinliktir.",
        "ekran": "Evreler: **analjezi-amnezi** → **eksitasyon (deliryum)** → **cerrahi anestezi** → **bulber paralizi**",
        "duzey": 0,
@@ -247,7 +280,7 @@
        }
       },
       {
-       "id": "k2-07-c0009",
+       "id": "k2-07-c0011",
        "ses": "Cerrahi anestezi evresi kendi içinde dört döneme ayrılır: birinci dönemde solunum değişiklikleri, ikinci dönemde dolaşım değişiklikleri, üçüncü dönemde pupillerde değişiklik, dördüncü dönemde refleks değişiklikleri öne çıkar.",
        "ekran": "Cerrahi evrenin 4 dönemi: solunum, dolaşım, pupil, refleks değişiklikleri",
        "duzey": 1,
@@ -272,7 +305,7 @@
        }
       },
       {
-       "id": "k2-07-c0010",
+       "id": "k2-07-c0012",
        "ses": "Anestezi derinliğini kirpik ve kornea refleksleri, pupil büyüklüğü ve ışığa reaksiyon, göz hareketleri ve göz yaşı, kan basıncı, kalp hızı, solunumun derinliği, sayısı ve ritmi, insizyonda kardiyovasküler sistem ve solunum yanıtı, terleme ve diyafram solunumuyla izleriz.",
        "ekran": "Derinlik ölçütleri: **kirpik-kornea refleksi**, pupil, göz yaşı, kan basıncı, kalp hızı, solunum, terleme, diyafram solunumu",
        "duzey": 0,
@@ -297,7 +330,7 @@
        }
       },
       {
-       "id": "k2-07-c0011",
+       "id": "k2-07-c0013",
        "ses": "Burada en önemli ölçü, cerrahi kesinin bu belirtilerde yol açtığı değişikliklerdir; insizyona kardiyovasküler ya da solunum yanıtı geliyorsa anestezi yüzeyseldir.",
        "ekran": "En önemli ölçü: **cerrahi kesinin** bu belirtilerde yaptığı değişiklik",
        "duzey": 0,
@@ -340,7 +373,7 @@
      "sayfa": 5,
      "cumleler": [
       {
-       "id": "k2-07-c0012",
+       "id": "k2-07-c0014",
        "ses": "Uygulama yoluna göre genel anestezi dört başlıkta sınıflanır; birincisi inhalasyon anestezisidir ve total inhalasyon anestezisi ile indüksiyon ve idame anestezisi olarak ikiye ayrılır.",
        "ekran": "**İnhalasyon anestezisi**: total inhalasyon; indüksiyon ve idame",
        "duzey": 0,
@@ -364,7 +397,7 @@
        }
       },
       {
-       "id": "k2-07-c0013",
+       "id": "k2-07-c0015",
        "ses": "İkincisi intravenöz anestezidir; total intravenöz anestezi, nörolept anestezi ve disosiyatif anestezi bunun alt türleridir, yani disosiyatif anestezi intravenöz anestezinin bir biçimidir.",
        "ekran": "**İV anestezi**: total intravenöz, **nörolept**, **disosiyatif**",
        "duzey": 0,
@@ -393,7 +426,7 @@
        }
       },
       {
-       "id": "k2-07-c0014",
+       "id": "k2-07-c0016",
        "ses": "Üçüncüsü dengeli anestezidir; örnekleri propofol artı opioid artı azot protoksit ya da volatil anestezik ile izofluran, azot protoksit ve oksijen artı fentanil kombinasyonudur.",
        "ekran": "**Dengeli anestezi**: propofol + opioid + N2O/volatil; izofluran (+N2O+O2) + fentanil",
        "duzey": 0,
@@ -417,7 +450,7 @@
        }
       },
       {
-       "id": "k2-07-c0015",
+       "id": "k2-07-c0017",
        "ses": "Dördüncüsü kombine anestezidir; genel anesteziye topikal, rejyonel, infiltrasyon, spinal ya da epidural anestezi eklenir.",
        "ekran": "**Kombine anestezi** = genel anestezi + topikal, rejyonel, infiltrasyon, spinal ya da epidural",
        "duzey": 0,
@@ -449,63 +482,65 @@
      "sayfa": 6,
      "cumleler": [
       {
-       "id": "k2-07-c0016",
-       "ses": "İnhalasyon anestezikleri azot protoksit, desfluran, enfluran, halotan, izofluran, ksenon, metoksifluran, sevofluran, artık kullanılmayan siklopropan ve eterdir.",
-       "ekran": "İnhalasyon ajanları: N2O, desfluran, enfluran, halotan, izofluran, ksenon, metoksifluran, sevofluran, siklopropan, eter",
+       "id": "k2-07-c0018",
+       "ses": "İnhalasyon anestezikleri klinik kullanımda azot protoksit ve ksenon gibi oda ısısında gaz olan ajanlar ile desfluran, izofluran, sevofluran ve halotan gibi uçucu sıvı anestezikler olmak üzere iki ana grupta toplanır.",
+       "ekran": "İnhalasyon anestezikleri listesi: **Uçucu sıvılar ve anestezik gazlar**",
        "duzey": 0,
        "vurgu": [],
-       "slayt_adim": 2,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 6,
         "satir": [
-         "Azot protoksit",
-         "Enfluran",
-         "Halotan",
-         "Ksenon",
-         "Sevofluran",
-         "Siklopropan (kullanılmıyor)"
+         "İnhalasyon anestezikleri"
         ],
         "sekil": null,
-        "adim": 2,
         "madde": [
-         1,
-         9
+         0,
+         11
         ]
        }
       },
       {
-       "id": "k2-07-c0017",
-       "ses": "Hocanın listesinde halojenli uçucu ajanlar içinde desfluran en zayıf, metoksifluran en güçlü olarak işaretlenmiştir.",
-       "ekran": "Halojenliler içinde **desfluran en zayıf**, **metoksifluran en güçlü**",
+       "id": "k2-07-c0019",
+       "ses": "Halojenli uçucu ajanlar arasında potens sıralamasında asgari alveolar konsantrasyonu en yüksek olan desfluran en zayıf ajan kabul edilirken, lipid çözünürlüğü en yüksek metoksifluran ise en güçlü uçucu anesteziktir.",
+       "ekran": "Potens farkları: **En zayıf desfluran, en güçlü metoksifluran**",
        "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "desfluran en zayıf",
-         "tur": "tuzak"
-        },
-        {
-         "metin": "metoksifluran en güçlü",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": 2,
+       "vurgu": [],
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 6,
         "satir": [
-         "Desfluran",
-         "en zayıf",
-         "Metoksifluran",
-         "en güçlü"
+         "2. Desfluran ………………………..en zayıf"
         ],
         "sekil": null,
-        "adim": 2,
         "madde": [
          2,
          7
+        ]
+       }
+      },
+      {
+       "id": "k2-07-c0020",
+       "ses": "Geçmişte yaygın kullanılan eter ve siklopropan patlama riskleri nedeniyle tamamen terk edilmiş olup; enfluran ise epileptojenik elektriksel deşarj riski sebebiyle günümüz modern ameliyathanelerinde tercih edilmemektedir.",
+       "ekran": "Tarihsel ajanlar: **Yanıcı siklopropan ve eterin terk edilmesi**",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "9. Siklopropan (kullanılmıyor)"
+        ],
+        "sekil": null,
+        "madde": [
+         9,
+         3
         ]
        }
       }
@@ -516,7 +551,7 @@
      "sayfa": 7,
      "cumleler": [
       {
-       "id": "k2-07-c0018",
+       "id": "k2-07-c0021",
        "ses": "İnhalasyon anestezikleri vaporizatör yardımıyla buharlaştırılarak inhalasyon yoluyla uygulanır; uçucu sıvı ajanlar önce buhar hâline getirilmelidir.",
        "ekran": "**Vaporizatörle** buharlaştırılıp inhalasyonla verilir",
        "duzey": 0,
@@ -542,7 +577,7 @@
        }
       },
       {
-       "id": "k2-07-c0019",
+       "id": "k2-07-c0022",
        "ses": "Şekilde vaporizatörlü anestezi cihazından solunum devresine, oradan akciğer ve beyne uzanan bir konsantrasyon zinciri görülür: taze gaz akımından inspiratuar konsantrasyona, sonra alveolar ve arteriyel konsantrasyona geçilir.",
        "ekran": "Zincir: **TGA → Fi → FA → Fa** (beyin)",
        "duzey": 0,
@@ -560,15 +595,15 @@
         ],
         "sekil": "vaporizatör, solunum devresi, akciğer ve beyin şeması",
         "adim": 3,
-        "resim": 0,
         "madde": [
          3,
          5
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0020",
+       "id": "k2-07-c0023",
        "ses": "İnspiratuar konsantrasyonu taze gaz akımı hızı, solunum devresinin volümü ve absorbsiyon; alveolar konsantrasyonu ventilasyon, uptake ve konsantrasyon etkisi; arteriyel konsantrasyonu ise ventilasyon perfüzyon uyumu belirler.",
        "ekran": "Fi: TGA hızı, devre volümü, absorbsiyon; FA: ventilasyon, uptake, konsantrasyon etkisi; Fa: **ventilasyon/perfüzyon**",
        "duzey": 1,
@@ -591,7 +626,7 @@
        }
       },
       {
-       "id": "k2-07-c0021",
+       "id": "k2-07-c0024",
        "ses": "Bu yüzden ventilasyon perfüzyon bozukluğu olan hastada arteriyel düzey düşer ve ajanın beyne ulaşması gecikir.",
        "ekran": "V/Q bozukluğu → arteriyel düzey ↓",
        "duzey": 1,
@@ -604,11 +639,11 @@
         "satir": [],
         "sekil": "vaporizatör, solunum devresi, akciğer ve beyin şeması",
         "adim": 3,
-        "resim": 0,
         "madde": [
          8,
          6
-        ]
+        ],
+        "resim": 0
        }
       }
      ]
@@ -618,49 +653,69 @@
      "sayfa": 8,
      "cumleler": [
       {
-       "id": "k2-07-c0022",
-       "ses": "Görüntüde izofluran ve sevofluran şişeleri ile vaporizatör ürün fotoğrafları görülür; uçucu ajanlar oda ısısında sıvıdır, şişelerde sunulur ve vaporizatörle verilir.",
-       "ekran": "İzofluran ve sevofluran şişeleri, **vaporizatör** görselleri",
+       "id": "k2-07-c0025",
+       "ses": "İnhalasyon anestezikleri oda sıcaklığında sıvı formda cam şişelerde sunulur; bu sıvıların hastaya güvenli biçimde solutulabilmesi için anestezi cihazlarına takılan özel buharlaştırıcı yani vaporizatör cihazları kullanılır.",
+       "ekran": "Vaporizatör teknolojisi: **Uçucu sıvıların gaz fazına buharlaştırılması**",
        "duzey": 0,
        "vurgu": [],
-       "slayt_adim": 3,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 8,
         "satir": [
-         "Isoflurane Vapor",
-         "Vaporizatör"
+         "Abbott we Inhalasyon 8 Draeger é Isoflurane Vapor > Bloom tech = Vaporizatör >"
         ],
-        "sekil": "izofluran ve sevofluran şişeleri ile vaporizatör fotoğrafları",
-        "adim": 3,
-        "resim": 0,
+        "sekil": "İzofluran ve sevofluran ürün şişeleri ve vaporizatör cihazı görseli",
         "madde": [
          11,
          15
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0023",
-       "ses": "Yani elimizdeki sevofluran, anestezi cihazına takılan vaporizatöre doldurulan bir sıvıdır.",
-       "ekran": "Sevofluran: vaporizatöre doldurulan **sıvı** ajan",
+       "id": "k2-07-c0026",
+       "ses": "Her uçucu anestezik ajanın doymuş buhar basıncı farklı olduğundan her ilaç yalnızca kendine özel kalibre edilmiş vaporizatörle verilir; karışıklığı önlemek için izofluran mor, sevofluran sarı renk koduyla işaretlenmiştir.",
+       "ekran": "Ajan spesifik kalibrasyon: **Doymuş buhar basıncına göre renk kodlaması**",
        "duzey": 1,
        "vurgu": [],
-       "slayt_adim": 3,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 8,
         "satir": [
-         "Sevofluran"
+         "Once Hayat - Polifar... Hastane Urinleri | Ba... Sevofluran - Vikipedi Sevoflurane Inhalation... sevoflurane - Rompharm Co... Sevoflurane | Alpha M..."
         ],
-        "sekil": null,
-        "adim": 3,
+        "sekil": "Ajanlara özel kalibre edilmiş vaporizatörlerin renk kodları ve dolum sistemleri",
         "madde": [
-         16,
+         0,
          9
-        ]
+        ],
+        "resim": 0
+       }
+      },
+      {
+       "id": "k2-07-c0027",
+       "ses": "Piyasada izofluran Anesteran, sevofluran ise Sevorane adıyla likit çözelti olarak bulunur; anestezi uzmanı bu sıvıyı vaporizatör haznesine doldurarak taşıyıcı taze gaz akımıyla hastaya hassas yüzdelerle uygular.",
+       "ekran": "Klinik preparatlar: **Anesteran ve Sevorane sıvı şişeleri**",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Anesteran"
+        ],
+        "sekil": "Hastane kullanımındaki ticari uçucu anestezik sıvı şişesi preparatları",
+        "madde": [
+         12,
+         11
+        ],
+        "resim": 0
        }
       }
      ]
@@ -670,7 +725,7 @@
      "sayfa": 9,
      "cumleler": [
       {
-       "id": "k2-07-c0024",
+       "id": "k2-07-c0028",
        "ses": "Sevofluranın ticari adı Sevorane'dir; kullanma talimatına göre ilaca ya da başka bir anesteziğe alerjide ve hastanın kendisinde ya da ailesinde malign hipertermi öyküsünde kullanılmaz, çünkü malign hipertermi uçucu ajanlarla tetiklenir.",
        "ekran": "Sevofluran kullanılmaz: alerji, **kişisel/ailesel malign hipertermi** öyküsü",
        "duzey": 0,
@@ -698,7 +753,7 @@
        }
       },
       {
-       "id": "k2-07-c0025",
+       "id": "k2-07-c0029",
        "ses": "Halojenli anesteziklerle ilişkilendirilen sarılık, ateş ve eozinofiliyle birlikte açıklanamayan orta ya da şiddetli karaciğer bozukluğu öyküsünde de verilmez; halojenli ajanlar böyle bir hepatit tablosu yapabilir.",
        "ekran": "Halojenliye bağlı **sarılık, ateş, eozinofili** ile karaciğer bozukluğu öyküsü → verilmez",
        "duzey": 0,
@@ -720,7 +775,7 @@
        }
       },
       {
-       "id": "k2-07-c0026",
+       "id": "k2-07-c0030",
        "ses": "Ku te uzaması ya da torsades de pointes varsa, mitokondriyal hastalıkta ve nöbet eğiliminde sevofluran dikkatli kullanılır, çünkü ku te uzamasına bazen neden olduğu bilinmektedir.",
        "ekran": "Dikkat: **QT uzaması**/torsades de pointes, mitokondriyal hastalık, nöbet eğilimi",
        "duzey": 1,
@@ -755,56 +810,65 @@
      "sayfa": 10,
      "cumleler": [
       {
-       "id": "k2-07-c0027",
-       "ses": "Yan etki sıklığında çok yaygın, on hastada birden fazlası demektir; sevofluranın çok yaygın yan etkileri boğaz spazmı, ajitasyon, bradikardi, hipotansiyon, öksürük, bulantı ve kusmadır.",
-       "ekran": "Çok yaygın (>1/10): **boğaz spazmı**, ajitasyon, bradikardi, hipotansiyon, öksürük, bulantı, kusma",
+       "id": "k2-07-c0031",
+       "ses": "Sevofluran prospektüsünde bildirilen istenmeyen etkiler sıklıklarına göre ayrılır; tedavi edilen hastaların onda birinden fazlasında görülen durumlar çok yaygın, yüzde bir ile onda bir arasındakiler ise yaygın etki olarak sınıflanır.",
+       "ekran": "Sevofluran istenmeyen etkileri: **Çok yaygın ve yaygın klinik bulgular**",
        "duzey": 0,
-       "vurgu": [
-        {
-         "metin": "boğaz spazmı",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": 3,
+       "vurgu": [],
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 10,
         "satir": [
-         "Boğaz spazmı",
-         "Huzursuzluk (ajitasyon)",
-         "Bulantı",
-         "Kusma"
+         "Çok yaygın: Tedavi edilen hastaların 10’da 1’inden fazla."
         ],
         "sekil": null,
-        "adim": 3,
         "madde": [
-         11,
-         10
+         3,
+         4
         ]
        }
       },
       {
-       "id": "k2-07-c0028",
-       "ses": "Yaygın yan etkileri ise somnolans, baş dönmesi, baş ağrısı, taşikardi ve hipertansiyondur.",
-       "ekran": "Yaygın: somnolans, baş dönmesi, baş ağrısı, taşikardi, hipertansiyon",
+       "id": "k2-07-c0032",
+       "ses": "Sevofluran uygulamasında çok yaygın görülen istenmeyen etkiler arasında boğaz spazmı yani laringospazm, öksürük, kalp hızında yavaşlama olan bradikardi, kan basıncında düşüş yani hipotansiyon ile bulantı ve kusma yer alır.",
+       "ekran": "Solunum ve hemodinami: **Laringospazm, bradikardi ve hipotansiyon**",
        "duzey": 1,
        "vurgu": [],
-       "slayt_adim": 3,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 10,
         "satir": [
-         "Uyuklama (somnolans)",
-         "Baş dönmesi",
-         "Baş ağrısı"
+         "- Boğaz spazmı (boğazda daralma hissi)"
         ],
         "sekil": null,
-        "adim": 3,
         "madde": [
-         19,
-         20
+         10,
+         3
+        ]
+       }
+      },
+      {
+       "id": "k2-07-c0033",
+       "ses": "Özellikle çocuklarda anestezi sonrasında huzursuzluk ve uyanma ajitasyonu çok sık izlenirken; yaygın yan etkiler arasında uyuklama yani somnolans, baş dönmesi, geçici taşikardi ve reaktif kan basıncı yükselmeleri bulunur.",
+       "ekran": "Nöropsikiyatrik profil: **Uyanma ajitasyonu ve somnolans yönetimi**",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "- Huzursuzluk (ajitasyon)"
+        ],
+        "sekil": null,
+        "madde": [
+         11,
+         3
         ]
        }
       }
@@ -825,7 +889,7 @@
      "sayfa": 11,
      "cumleler": [
       {
-       "id": "k2-07-c0029",
+       "id": "k2-07-c0034",
        "ses": "Minimum alveolar konsantrasyon, kısaca mak, bir atmosfer basınç altında inhale edilen anestezik ajanın deneklerin yüzde ellisinde ağrılı bir uyarana yanıtı engellemek için gereken minimum alveolar konsantrasyondur.",
        "ekran": "**MAK**: 1 atm'de deneklerin **%50**'sinde ağrılı uyarana yanıtı önleyen alveolar konsantrasyon",
        "duzey": 0,
@@ -856,7 +920,7 @@
        }
       },
       {
-       "id": "k2-07-c0030",
+       "id": "k2-07-c0035",
        "ses": "Mak beyindeki parsiyel basıncın bir ifadesidir ve ajanın gücünü gösterir; mak düşükse ajan güçlüdür, yüksekse zayıftır.",
        "ekran": "MAK = beyindeki parsiyel basınç; **düşük MAK = güçlü ajan**",
        "duzey": 1,
@@ -883,7 +947,7 @@
        }
       },
       {
-       "id": "k2-07-c0031",
+       "id": "k2-07-c0036",
        "ses": "İnhaler anestezik kombinasyonları mak üzerinde aditif etkilidir; vücut ısısındaki her bir derecelik düşüş makı yüzde üç ile dört azaltır, tersi de doğrudur, yani hipotermik hastada daha az ajan yeter.",
        "ekran": "Kombinasyon **aditif**; her 1 °C düşüş MAK'ı **%3-4 azaltır**",
        "duzey": 0,
@@ -911,7 +975,7 @@
        }
       },
       {
-       "id": "k2-07-c0032",
+       "id": "k2-07-c0037",
        "ses": "Makı yaş, gebelik, hipotermi, akut alkol, opioid, benzodiazepin, antihipertansifler ve klonidin gibi alfa iki agonistler azaltır.",
        "ekran": "MAK ↓: **yaş, gebelik, hipotermi, akut alkol**, opioid, BZD, antihipertansif, klonidin (α2 agonist)",
        "duzey": 0,
@@ -944,7 +1008,7 @@
        }
       },
       {
-       "id": "k2-07-c0033",
+       "id": "k2-07-c0038",
        "ses": "Makı hipertermi, mao inhibitörleri ve kronik alkolizm artırır, cinsiyet ise makı değiştirmez; akut alkolün azalttığını, kronik alkolizmin artırdığını karıştırmayın, klasik çeldiricidir.",
        "ekran": "MAK ↑: **hipertermi, MAO inhibitörleri, kronik alkolizm**; cinsiyet değiştirmez",
        "duzey": 0,
@@ -980,7 +1044,7 @@
      "sayfa": 12,
      "cumleler": [
       {
-       "id": "k2-07-c0034",
+       "id": "k2-07-c0039",
        "ses": "Kan gaz partisyon katsayısı, inhalasyon ajanının kandaki ve alveoldeki konsantrasyonları eşitlendiği anda parsiyel basınçlarının oranıdır.",
        "ekran": "**Kan-gaz partisyon katsayısı**: kan ve alveol konsantrasyonu eşitken parsiyel basınç oranı",
        "duzey": 0,
@@ -1007,7 +1071,7 @@
        }
       },
       {
-       "id": "k2-07-c0035",
+       "id": "k2-07-c0040",
        "ses": "Katsayı ne kadar büyükse indüksiyon o kadar yavaştır; çünkü kanda çok çözünen ajan kana dolup gider ve alveolde basınç oluşturmakta gecikir, düşük katsayılı desfluran ve azot protoksit ise hızlı indüksiyon sağlar.",
        "ekran": "Katsayı büyükse **indüksiyon yavaş**; düşük katsayı → hızlı indüksiyon",
        "duzey": 0,
@@ -1040,7 +1104,7 @@
      "sayfa": 13,
      "cumleler": [
       {
-       "id": "k2-07-c0036",
+       "id": "k2-07-c0041",
        "ses": "Tabloda inhalasyon anestezikleri kan gaz ve yağ gaz katsayıları, mak, buhar basıncı, metabolizma oranı ve indüksiyon uyanma hızı açısından karşılaştırılır.",
        "ekran": "Tablo 25.1: kan/gaz, yağ/gaz, MAK, buhar basıncı, metabolizma, indüksiyon hızı",
        "duzey": 0,
@@ -1055,15 +1119,15 @@
         ],
         "sekil": "Tablo 25.1 inhalasyon anesteziklerinin karşılaştırma tablosu",
         "adim": 4,
-        "resim": 0,
         "madde": [
          2,
          1
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0037",
+       "id": "k2-07-c0042",
        "ses": "Kan gaz katsayısı desfluranda sıfır virgül kırk iki, azot protoksitte sıfır virgül kırk yedi, ksenonda sıfır virgül on dörttür; bunların indüksiyon ve uyanması çok hızlı, ksenonunki en hızlıdır, eter ve metoksifluranda ise katsayı on iki ve indüksiyon yavaştır; azot protoksitin hızlı yükselmesi çıkmışta soruldu.",
        "ekran": "Kan/gaz: desfluran **0,42**, N2O 0,47, **ksenon 0,14 (en hızlı)**; eter, metoksifluran 12 → yavaş",
        "duzey": 0,
@@ -1103,7 +1167,7 @@
        }
       },
       {
-       "id": "k2-07-c0038",
+       "id": "k2-07-c0043",
        "ses": "Mak değeri azot protoksitte yüzün üzerinde, desfluranda altı, halotanda sıfır virgül yetmiş beş, metoksifluranda sıfır virgül on altıdır; yani bütün inhaler ajanlar içinde en zayıfı azot protoksittir, halojenli ajanlar içinde ise maki en yüksek olan desflurandır ve bu güç sıralaması sınavda soruldu.",
        "ekran": "MAK: **N2O >100 (tüm inhaler ajanlarda en zayıf)**, desfluran 6,0 (halojenlilerde en zayıf), halotan 0,75, metoksifluran 0,16",
        "duzey": 0,
@@ -1138,7 +1202,7 @@
        }
       },
       {
-       "id": "k2-07-c0039",
+       "id": "k2-07-c0044",
        "ses": "Burası önemli: metabolizma oranı halotanda yüzde kırkın, metoksifluranda yüzde yetmişin üzerinde, desfluranda yüzde sıfır virgül sıfır beşin altındadır; çok metabolize olan halotan hepatotoksisiteyle, metoksifluran nefrotoksisiteyle ilişkilidir.",
        "ekran": "Metabolizma: **halotan >%40**, **metoksifluran >%70**, desfluran <%0,05",
        "duzey": 1,
@@ -1186,7 +1250,7 @@
      "sayfa": 14,
      "cumleler": [
       {
-       "id": "k2-07-c0040",
+       "id": "k2-07-c0045",
        "ses": "İntravenöz verilebilen genel anestezikler dört grupta toplanır: barbitüratlar yani tiyopental, metoheksital ve tiyamilal; benzodiazepinler yani diazepam, lorazepam ve midazolam; opioidler yani alfentanil, fentanil, sufentanil ve remifentanil; ve diğerleri yani etomidat ile propofol.",
        "ekran": "İV ajanlar: **barbitüratlar**, **benzodiazepinler**, **opioidler**, diğerleri (etomidat, propofol)",
        "duzey": 0,
@@ -1224,7 +1288,7 @@
        }
       },
       {
-       "id": "k2-07-c0041",
+       "id": "k2-07-c0046",
        "ses": "Tiyopental, midazolam, fentanil ve propofolün dördü de genel anestezide intravenöz yoldan kullanılabilir ve bu bilgi çıkmışta soruldu; nörolept anestezi ise fentanil ile droperidolün birlikte verilmesiyle yapılır.",
        "ekran": "Nörolept anestezi = **fentanil + droperidol**",
        "duzey": 1,
@@ -1265,7 +1329,7 @@
      "sayfa": 15,
      "cumleler": [
       {
-       "id": "k2-07-c0042",
+       "id": "k2-07-c0047",
        "ses": "Genel anestezi nörofizyolojik olarak beş ana etkiyle karakterizedir: bilinç kaybı, amnezi, analjezi, otonom reflekslerin inhibisyonu ve iskelet kası gevşemesi.",
        "ekran": "5 etki: bilinç kaybı, amnezi, analjezi, **otonom refleks inhibisyonu**, **iskelet kası gevşemesi**",
        "duzey": 0,
@@ -1282,15 +1346,15 @@
         ],
         "sekil": "genel anestezinin beş etkisini sıralayan madde listesi",
         "adim": 5,
-        "resim": 0,
         "madde": [
          0,
          4
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0043",
+       "id": "k2-07-c0048",
        "ses": "Hiçbir anestezik madde bu beş etkiyi tek başına gösteremez; bu yüzden inhaler ve intravenöz anestezikler kombine edilerek advers etkiler ve riskler azaltılır.",
        "ekran": "**Hiçbir ajan** 5 etkiyi tek başına sağlamaz → kombinasyon",
        "duzey": 0,
@@ -1318,7 +1382,7 @@
        }
       },
       {
-       "id": "k2-07-c0044",
+       "id": "k2-07-c0049",
        "ses": "Küçük yüzeysel cerrahi ya da invazif tanısal girişimlerde oral veya parenteral sedatifler lokal anesteziklerle birleştirilerek monitörize anestezi bakımı uygulanır; bu teknikte hasta hava yolu açıklığını ve sözel komutlara yanıt verebilme yeteneğini sürdürür.",
        "ekran": "Küçük girişim: sedatif + lokal = **monitörize anestezi bakımı**; hava yolu ve sözel yanıt korunur",
        "duzey": 0,
@@ -1346,7 +1410,7 @@
        }
       },
       {
-       "id": "k2-07-c0045",
+       "id": "k2-07-c0050",
        "ses": "Büyük cerrahide anesteziye preoperatif olarak benzodiazepinlerle başlanır, indüksiyon ise tiyopental ve propofol gibi hızlı indüktif ajanlarla yapılır.",
        "ekran": "Büyük cerrahi: premedikasyon **BZD**, indüksiyon **tiyopental, propofol**",
        "duzey": 0,
@@ -1375,7 +1439,7 @@
      "sayfa": 16,
      "cumleler": [
       {
-       "id": "k2-07-c0046",
+       "id": "k2-07-c0051",
        "ses": "Genel anesteziklerin etki yeri sinapslardır; sinapsları inhibe ederek ya da daha güçlü biçimde eksite ederek etki oluşturdukları kesindir.",
        "ekran": "Etki yeri: **sinapslar**",
        "duzey": 0,
@@ -1403,7 +1467,7 @@
        }
       },
       {
-       "id": "k2-07-c0047",
+       "id": "k2-07-c0052",
        "ses": "İnhibitör hedefler, özellikle klorür kanalıyla çalışan gaba a ve glisin reseptörleri ile potasyum kanallarıdır; inhibisyonun güçlenmesi bilinç kaybını açıklar ve propofol, barbitüratlar ve etomidat gaba a üzerinden etkir.",
        "ekran": "İnhibitör hedef: **GABA-A**, glisin reseptörleri (klorür), potasyum kanalları",
        "duzey": 0,
@@ -1430,7 +1494,7 @@
        }
       },
       {
-       "id": "k2-07-c0048",
+       "id": "k2-07-c0053",
        "ses": "Eksitatör hedefler nikotinik ve muskarinik asetilkolin reseptörleri ile glutamatın ampa, kainat ve en em de a reseptörleridir; beş ha te iki ve beş ha te üç reseptörleri de eklenebilir, en em de a blokajı ise ketaminin temel mekanizmasıdır.",
        "ekran": "Eksitatör hedef: nikotinik/muskarinik, glutamat **AMPA, kainat, NMDA**; 5HT2, 5HT3",
        "duzey": 0,
@@ -1474,7 +1538,7 @@
      "sayfa": 17,
      "cumleler": [
       {
-       "id": "k2-07-c0049",
+       "id": "k2-07-c0054",
        "ses": "Halotan, enfluran, izofluran, desfluran ve sevofluran uçucu anesteziklerdir; buhar basınçları düşük, kaynama noktaları yüksektir ve normal oda sıcaklığında sıvı hâlde bulunurlar.",
        "ekran": "**Uçucu sıvılar**: halotan, enfluran, izofluran, desfluran, sevofluran; düşük buhar basıncı, yüksek kaynama noktası",
        "duzey": 0,
@@ -1502,15 +1566,15 @@
         ],
         "sekil": "uçucu anestezikleri sıralayan madde listesi",
         "adim": 5,
-        "resim": 0,
         "madde": [
          6,
          7
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0050",
+       "id": "k2-07-c0055",
        "ses": "Oda koşullarında sıvı olan, düşük çözünürlüklü ve düşük kan gaz katsayılı, hoş kokulu ve hem indüksiyon hem idame için kullanılan uçucu ajan denince sevofluranı düşünün; bu özellikler çıkmışta soruldu.",
        "ekran": "Oda ısısında sıvı, düşük kan/gaz katsayılı uçucu ajan: **sevofluran**",
        "duzey": 1,
@@ -1543,7 +1607,7 @@
        }
       },
       {
-       "id": "k2-07-c0051",
+       "id": "k2-07-c0056",
        "ses": "Nitröz oksit ve ksenonun ise buhar basınçları yüksek, kaynama noktaları düşüktür; normal oda sıcaklığında gaz formundadırlar.",
        "ekran": "**N2O ve ksenon**: yüksek buhar basıncı, düşük kaynama noktası → **gaz**",
        "duzey": 0,
@@ -1577,7 +1641,7 @@
      "sayfa": 18,
      "cumleler": [
       {
-       "id": "k2-07-c0052",
+       "id": "k2-07-c0057",
        "ses": "İnhalasyon anesteziklerinin en önemli belirleyici özelliği akciğer alveollerinden doğrudan kana geçmeleridir; indüksiyon ve sonrası için kandan santral sinir sistemine geçiş hızı önemlidir.",
        "ekran": "Alveolden **doğrudan kana** geçiş; kandan SSS'ye geçiş hızı belirleyici",
        "duzey": 0,
@@ -1600,7 +1664,7 @@
        }
       },
       {
-       "id": "k2-07-c0053",
+       "id": "k2-07-c0058",
        "ses": "Burası önemli: alveolar konsantrasyonun solunan konsantrasyona oranı, yani alveolar bölü inspiratuar konsantrasyon oranı bire ne kadar hızlı yaklaşırsa indüksiyon o hızda gerçekleşir; bu oranın zamana karşı en hızlı yükseldiği ajanların nitröz oksit ve desfluran gibi kanda az çözünenler olduğu sınavda soruldu.",
        "ekran": "**FA/FI** 1'e ne kadar hızlı yaklaşırsa indüksiyon o kadar hızlı",
        "duzey": 0,
@@ -1634,7 +1698,7 @@
        }
       },
       {
-       "id": "k2-07-c0054",
+       "id": "k2-07-c0059",
        "ses": "Bu orandaki artış anesteziğin kana geçişiyle ters orantılıdır; kana az geçen ajanda alveolar konsantrasyon hızla yükselir.",
        "ekran": "FA/FI artışı kana geçişle **ters orantılı**",
        "duzey": 1,
@@ -1656,7 +1720,7 @@
        }
       },
       {
-       "id": "k2-07-c0055",
+       "id": "k2-07-c0060",
        "ses": "Aynı sayfada çözünürlüğün arteriyel basınçla doğru orantılı olduğu da yazar; bu cümleyi indüksiyon hızı kuralıyla karıştırmayın, çünkü hızı belirleyen, kanda az çözünen ajanda alveol konsantrasyonunun solunan konsantrasyona hızla yaklaşmasıdır; hiperventilasyon da önemlidir.",
        "ekran": "Hız kuralı: az çözünen ajanda **FA hızla FI'ya yaklaşır**; **hiperventilasyon** önemli",
        "duzey": 1,
@@ -1679,7 +1743,7 @@
         "adim": 6,
         "madde": [
          11,
-         12
+         10
         ]
        }
       }
@@ -1690,7 +1754,7 @@
      "sayfa": 19,
      "cumleler": [
       {
-       "id": "k2-07-c0056",
+       "id": "k2-07-c0061",
        "ses": "Anestezinin bileşenlerinden immobilite, minimum alveolar konsantrasyonla hedef dokuda etki sağlama gücüdür.",
        "ekran": "**İmmobilite**: MAK ile hedef dokuda etki sağlama gücü",
        "duzey": 0,
@@ -1712,7 +1776,7 @@
        }
       },
       {
-       "id": "k2-07-c0057",
+       "id": "k2-07-c0062",
        "ses": "Amnezide hipokampus, amigdala, prefrontal korteks ve motor korteks dahil santral sinir sisteminin birçok bölgesi rol oynar; bellek açısından anestezi altında uyanıklıkla ilişkili açık bellek ve yeterli anestezide bilinçdışı edinilen örtülü bellek ayrılır.",
        "ekran": "**Amnezi**: hipokampus, amigdala, prefrontal ve motor korteks; açık ve örtülü bellek",
        "duzey": 0,
@@ -1735,7 +1799,7 @@
        }
       },
       {
-       "id": "k2-07-c0058",
+       "id": "k2-07-c0063",
        "ses": "Anestezikler bilince katkıda bulunan serebral korteks, talamus ve retiküler formasyonun işlevini bozar.",
        "ekran": "Bilinç merkezleri: **serebral korteks, talamus, retiküler formasyon**",
        "duzey": 1,
@@ -1757,7 +1821,7 @@
        }
       },
       {
-       "id": "k2-07-c0059",
+       "id": "k2-07-c0064",
        "ses": "Anestezinin durumunu ajanın çözünürlüğü, kalp debisi, alveoler venöz parsiyel basınç farkı, ventilasyon hızı ve metabolizması doğrudan etkiler.",
        "ekran": "Belirleyiciler: **çözünürlük, kalp debisi**, alveoler-venöz basınç farkı, ventilasyon hızı, metabolizma",
        "duzey": 0,
@@ -1789,7 +1853,7 @@
      "sayfa": 20,
      "cumleler": [
       {
-       "id": "k2-07-c0060",
+       "id": "k2-07-c0065",
        "ses": "İnhalasyon anestezikleri beyinde metabolik aktiviteyi azaltır; serebral metabolik hızın azalması mak değişim oranına bağlıdır.",
        "ekran": "Beyin **metabolik aktivitesi ↓**",
        "duzey": 0,
@@ -1806,13 +1870,13 @@
         "sekil": "farmakodinamik madde listesi",
         "adim": 6,
         "madde": [
-         0,
-         2
+         2,
+         0
         ]
        }
       },
       {
-       "id": "k2-07-c0061",
+       "id": "k2-07-c0066",
        "ses": "Beyin kan akımındaki net artış verilen konsantrasyona bağlıdır ve kafa içi basıncını artıracağı için uçucu anesteziklerin bu etkisi istenmez.",
        "ekran": "Beyin kan akımı ↑ → **kafa içi basıncı ↑** (istenmez)",
        "duzey": 0,
@@ -1839,7 +1903,7 @@
        }
       },
       {
-       "id": "k2-07-c0062",
+       "id": "k2-07-c0067",
        "ses": "Bunu önlemek için uçucu ajan başlamadan önce hiperventilasyon yapılabilir; böylece kafa içi basıncındaki artış düşürülebilir. Genel anestezikler elektroensefalografide ölçülebilir değişiklikler de yapar.",
        "ekran": "Önlem: **hiperventilasyon**; EEG'de ölçülebilir değişiklik",
        "duzey": 0,
@@ -1868,7 +1932,7 @@
      "sayfa": 21,
      "cumleler": [
       {
-       "id": "k2-07-c0063",
+       "id": "k2-07-c0068",
        "ses": "Anestezi derinliği dört dönemle karakterizedir; analjezi döneminde hasta önce amnezi olmaksızın analjezi duyumsar, bu dönemin sonunda hem analjezi hem amnezi vardır.",
        "ekran": "**Analjezi dönemi**: önce analjezi, sonunda analjezi + amnezi",
        "duzey": 0,
@@ -1884,15 +1948,15 @@
         ],
         "sekil": "anestezi dönemlerini sıralayan madde listesi",
         "adim": 6,
-        "resim": 0,
         "madde": [
          1,
          2
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0064",
+       "id": "k2-07-c0069",
        "ses": "Eksitasyon döneminde hasta deliryuma geçer ve tamamen amneziktir; solunum hızlanır, kalp hızı ve kan basıncı artar, bu dönemin şiddeti ve süresi anestezik konsantrasyonunu hızla artırarak azaltılabilir.",
        "ekran": "**Eksitasyon**: deliryum, tam amnezi, solunum, nabız ve kan basıncı ↑; konsantrasyonu hızla artır",
        "duzey": 0,
@@ -1920,7 +1984,7 @@
        }
       },
       {
-       "id": "k2-07-c0065",
+       "id": "k2-07-c0070",
        "ses": "Cerrahi anestezi dönemi solunum ve kalp hızının yavaşlamasıyla başlar, spontan solunumun durmasına yani apneye kadar sürer ve göz hareketleri, göz refleksleri ve pupilla genişliğine göre dört aşamalıdır.",
        "ekran": "**Cerrahi anestezi**: solunum, kalp hızı yavaşlar → apneye dek; 4 aşama",
        "duzey": 0,
@@ -1942,7 +2006,7 @@
        }
       },
       {
-       "id": "k2-07-c0066",
+       "id": "k2-07-c0071",
        "ses": "Meduller depresyon döneminde vazomotor merkez ve beyin sapındaki solunum merkezi dahil şiddetli santral sinir sistemi depresyonu oluşur; dolaşım ve solunum desteği olmazsa ölüm hızla yaklaşır.",
        "ekran": "**Meduller depresyon**: vazomotor ve solunum merkezi baskısı; destek yoksa ölüm",
        "duzey": 0,
@@ -1986,7 +2050,7 @@
      "sayfa": 22,
      "cumleler": [
       {
-       "id": "k2-07-c0067",
+       "id": "k2-07-c0072",
        "ses": "Halotan, enfluran, izofluran, desfluran ve sevofluran kalp kontraktilitesini deprese eder; bütün uçucu anestezikler alveolar konsantrasyonlarıyla orantılı olarak arteriyel basınçta hafif bir düşme yapar, sistemik vasküler direnç ise az değişir.",
        "ekran": "Uçucu ajanlar **kontraktiliteyi deprese eder**; konsantrasyonla orantılı hafif hipotansiyon",
        "duzey": 0,
@@ -2002,15 +2066,15 @@
         ],
         "sekil": "kardiyovasküler etkiler madde listesi",
         "adim": 7,
-        "resim": 0,
         "madde": [
          1,
          5
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0068",
+       "id": "k2-07-c0073",
        "ses": "Nitröz oksit de miyokard kontraktilitesini konsantrasyona bağlı deprese eder, ancak daha güçlü volatil anesteziklerle kombinasyonu kardiyovasküler depresyonu azaltabilir; arteriyel basıncın doz bağımlı düşmesi ise refleks olarak kalp hızını artırabilir.",
        "ekran": "N2O kombinasyonu KVS depresyonunu azaltabilir; hipotansiyon → **refleks taşikardi**",
        "duzey": 1,
@@ -2033,7 +2097,7 @@
        }
       },
       {
-       "id": "k2-07-c0069",
+       "id": "k2-07-c0074",
        "ses": "İzofluran, desfluran ve sevofluran vazodilatasyon yapar; ön yükü ve art yükü azaltarak kalp debisini korurlar, bu nedenle miyokard fonksiyonu bozulmuş hastalarda iyi bir seçenek oldukları çıkmışta soruldu.",
        "ekran": "**İzofluran, desfluran, sevofluran**: ön ve art yük ↓, debi korunur → kalp yetmezliğinde iyi seçenek",
        "duzey": 0,
@@ -2073,7 +2137,7 @@
      "sayfa": 23,
      "cumleler": [
       {
-       "id": "k2-07-c0070",
+       "id": "k2-07-c0075",
        "ses": "Desfluran yüksek dozlarda kalp hızında ve kan basıncında diğerlerinden daha belirgin artış yapar; halotan ise miyokardı başta adrenalin olmak üzere dolaşımdaki katekolaminlere duyarlı kılar ve aritmi riskini artırır.",
        "ekran": "Desfluran yüksek dozda nabız ↑; **halotan miyokardı adrenaline duyarlılaştırır**",
        "duzey": 0,
@@ -2094,15 +2158,15 @@
         ],
         "sekil": "kardiyovasküler ve solunum etkileri madde listesi",
         "adim": 7,
-        "resim": 0,
         "madde": [
          0,
          2
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0071",
+       "id": "k2-07-c0076",
        "ses": "Bütün uçucu anestezikler wheezingi ya da astımı olan hastalarda bronkodilatördür; ancak desfluranın keskin kokusu ve halotanın irritasyonu öksürük ve solunum tutulmasına yol açabilir, nitröz oksit ise keskin kokulu değildir ve inhalasyonla indüksiyonu kolaylaştırır.",
        "ekran": "Uçucular **bronkodilatör**; desfluran keskin kokulu, halotan irritan; N2O kokusuz",
        "duzey": 0,
@@ -2124,7 +2188,7 @@
        }
       },
       {
-       "id": "k2-07-c0072",
+       "id": "k2-07-c0077",
        "ses": "Azot dışındaki volatil anestezikler doz bağımlı tidal volüm azalması ve solunum hızında artışla yüzeysel solunum yapar; apne eşiğini yükseltir, hipoksiye ventilasyon yanıtını azaltır ve mukosiliyer fonksiyonu da deprese eder.",
        "ekran": "Tidal volüm ↓, solunum hızı ↑ (**yüzeysel solunum**); apne eşiği ↑, mukosiliyer fonksiyon ↓",
        "duzey": 0,
@@ -2153,7 +2217,7 @@
      "sayfa": 24,
      "cumleler": [
       {
-       "id": "k2-07-c0073",
+       "id": "k2-07-c0078",
        "ses": "Burası önemli: genel anestezikler glomerüler filtrasyon hızını, böbrek kan akımını ve idrar akışını azaltma eğilimindedir; artırdıkları yönündeki yanlış önerme çıkmışta soruldu.",
        "ekran": "GFR, idrar akışı ve böbrek kan akımı **azalır**",
        "duzey": 0,
@@ -2180,15 +2244,15 @@
         ],
         "sekil": "böbrek, karaciğer ve uterus etkileri madde listesi",
         "adim": 7,
-        "resim": 0,
         "madde": [
          0,
          2
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0074",
+       "id": "k2-07-c0079",
        "ses": "Halotan dışında karaciğer üzerine ciddi etkileri yoktur; halotan on iki yaşından küçüklerde hepatotoksik değildir, bunun nedeni ise derste açıklanmaz, öğrenciye soru olarak bırakılmıştır.",
        "ekran": "Karaciğerde istisna **halotan**; **12 yaş altında hepatotoksik değil**",
        "duzey": 0,
@@ -2218,7 +2282,7 @@
        }
       },
       {
-       "id": "k2-07-c0075",
+       "id": "k2-07-c0080",
        "ses": "Halojenli anestezikler uterus kaslarını güçlü ve konsantrasyon bağımlı gevşetir, nitröz oksidin ise hafif dilatör etkisi vardır.",
        "ekran": "**Halojenli ajanlar uterusu gevşetir**; N2O hafif dilatör",
        "duzey": 0,
@@ -2248,7 +2312,7 @@
        }
       },
       {
-       "id": "k2-07-c0076",
+       "id": "k2-07-c0081",
        "ses": "Bu gevşeme doğum sırasında ya da plasenta retansiyonunda manuel müdahale için gereken gevşemeyi sağlar, ancak uterusta kanamayı da beraberinde getireceği unutulmamalıdır.",
        "ekran": "Plasenta retansiyonunda manuel müdahaleyi kolaylaştırır; **kanama riski**",
        "duzey": 1,
@@ -2283,7 +2347,7 @@
      "sayfa": 25,
      "cumleler": [
       {
-       "id": "k2-07-c0077",
+       "id": "k2-07-c0082",
        "ses": "Enfluran ve sevofluranın, sevofluranda yalnız metabolitlerinin, nefrotoksisitesi florür iyonlarının açığa çıkmasına bağlanır.",
        "ekran": "**Enfluran, sevofluran** nefrotoksisitesi: **florür** iyonu",
        "duzey": 0,
@@ -2303,15 +2367,15 @@
         ],
         "sekil": "toksisite madde listesi",
         "adim": 8,
-        "resim": 0,
         "madde": [
          0,
          1
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0078",
+       "id": "k2-07-c0083",
        "ses": "Hematolojik olarak nitröz oksit be on iki vitaminini inaktive ederek megaloblastik anemiye neden olur ve bu yan etki çıkmışta soruldu; havalandırması yetersiz diş hekimliği odalarında bu bir meslek hastalığı olarak karşımıza çıkar.",
        "ekran": "**N2O → megaloblastik anemi**; diş hekimliği odalarında meslek hastalığı",
        "duzey": 0,
@@ -2346,7 +2410,7 @@
        }
       },
       {
-       "id": "k2-07-c0079",
+       "id": "k2-07-c0084",
        "ses": "Malign hipertermi, uçucu anesteziklerin genetik yatkınlığı olan bireylerde oluşturduğu nadir bir tablodur; depolarizan kas gevşetici süksinilkolin de tetikler ve genetik olarak riyanodin reseptörü bir aracılık eder.",
        "ekran": "**Malign hipertermi**: kalıtsal yatkınlık, **süksinilkolin** tetikler, **RyR1**",
        "duzey": 0,
@@ -2378,7 +2442,7 @@
        }
       },
       {
-       "id": "k2-07-c0080",
+       "id": "k2-07-c0085",
        "ses": "Burası önemli: malign hipertermi tedavisinde sarkoplazmik retikulumdan kalsiyum çıkışını azaltmak için dantrolen verilir ve bu bilgi çıkmışta soruldu; dantrolen kas lifinin içinde eksitasyon kontraksiyon kenetlenmesini engelleyerek etki eder.",
        "ekran": "Tedavi: **dantrolen** (sarkoplazmik retikulumdan Ca++ çıkışı ↓)",
        "duzey": 0,
@@ -2418,7 +2482,7 @@
      "sayfa": 26,
      "cumleler": [
       {
-       "id": "k2-07-c0081",
+       "id": "k2-07-c0086",
        "ses": "Halotana maruz kalan bireylerde yaklaşık otuz binde bir sıklıkta fulminan hepatit ve yetmezlik görülmüştür; elektrolit ve asit baz dengesi de sağlanmalıdır.",
        "ekran": "Halotan: **1/30.000** fulminan hepatit; elektrolit ve asit-baz dengesi korunmalı",
        "duzey": 0,
@@ -2439,15 +2503,15 @@
         ],
         "sekil": "toksisite madde listesi",
         "adim": 8,
-        "resim": 0,
         "madde": [
          1,
          0
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0082",
+       "id": "k2-07-c0087",
        "ses": "Bütün inhalasyon anestezikleri güçlü bazlarla etkileşerek düşük miktarda karbonmonoksit oluşturur.",
        "ekran": "Güçlü bazlarla etkileşim → az miktarda **karbonmonoksit**",
        "duzey": 0,
@@ -2469,7 +2533,7 @@
        }
       },
       {
-       "id": "k2-07-c0083",
+       "id": "k2-07-c0088",
        "ses": "Anestezik ajanların mutajen ve karsinojen etkileri gösterilmemiştir, ancak uzun süreli maruziyette eşlik eden fizyolojik değişimlerin teratojenik etki yapabileceği gözden kaçırılmamalıdır; ameliyathane personelinde kanser hızındaki artışı ajana bağlamak ise oldukça zordur.",
        "ekran": "Mutajen/karsinojen değil; uzun maruziyette **teratojenite** göz ardı edilmemeli",
        "duzey": 1,
@@ -2508,7 +2572,7 @@
      "sayfa": 27,
      "cumleler": [
       {
-       "id": "k2-07-c0084",
+       "id": "k2-07-c0089",
        "ses": "İntravenöz anestezide opioid olmayan anestezikler tercih nedenidir; anestezide esas olgu indüksiyon olduğundan entübasyon doğru yaklaşımdır.",
        "ekran": "Opioid olmayan İV ajanlar tercih; esas olgu **indüksiyon**, entübasyon doğru",
        "duzey": 0,
@@ -2524,15 +2588,15 @@
         ],
         "sekil": "intravenöz anestezi madde listesi",
         "adim": 10,
-        "resim": 0,
         "madde": [
          1,
          0
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0085",
+       "id": "k2-07-c0090",
        "ses": "Propofol tedaviye girdiğinden beri hem indüksiyon hızı hem de anestezinin idamesinin yönetilebilirliği kolaylaşmıştır.",
        "ekran": "**Propofol** indüksiyonu ve idameyi kolaylaştırdı",
        "duzey": 0,
@@ -2554,7 +2618,7 @@
        }
       },
       {
-       "id": "k2-07-c0086",
+       "id": "k2-07-c0091",
        "ses": "Anestezide istenenler amnezi, analjezi, otonom refleks inhibisyonu ve iskelet kası gevşemesidir; tek ilacın yan etkilerinden kurtulmak için inhalasyon anestezikleri, sedatif hipnotikler, opioidler ve nöromüsküler blokerlerle dengeli anestezi oluşturulur ve her ilaç daha düşük dozda kullanılır.",
        "ekran": "Dengeli anestezi: inhalasyon ajanı + sedatif-hipnotik + opioid + **nöromüsküler bloker**",
        "duzey": 0,
@@ -2582,7 +2646,7 @@
      "sayfa": 28,
      "cumleler": [
       {
-       "id": "k2-07-c0087",
+       "id": "k2-07-c0092",
        "ses": "Propofol diğer intravenöz anesteziklerden kimyasal yapı olarak farklıdır; soya yağı, gliserol ve yumurta sarısı lesitini içeren, süt beyazı görünümlü ve pH'sı yedi civarında bir emülsiyondur.",
        "ekran": "Propofol: **soya yağı, gliserol, yumurta lesitini** emülsiyonu; süt beyazı, pH ~7",
        "duzey": 0,
@@ -2603,15 +2667,15 @@
         ],
         "sekil": "propofol özellikleri madde listesi",
         "adim": 10,
-        "resim": 0,
         "madde": [
          1,
          0
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0088",
+       "id": "k2-07-c0093",
        "ses": "Taze kullanılmalıdır; lipit emülsiyonu bakteri üremesine elverişli olduğundan flakon açıldıktan sonra uygun ortamda en çok sekiz saat kullanılabilir.",
        "ekran": "Açılan flakon en çok **8 saat**",
        "duzey": 1,
@@ -2638,7 +2702,7 @@
        }
       },
       {
-       "id": "k2-07-c0089",
+       "id": "k2-07-c0094",
        "ses": "Propofol barbitüratların yerini almıştır; idamede ve hızlı sedasyonda kullanılır, yoğun bakım ve ameliyathaneler için vazgeçilmezdir ve etki mekanizmasının gaba a aracılı klorür akımını artırmak olduğu düşünülür.",
        "ekran": "Barbitüratların yerini aldı; idame, hızlı sedasyon; **GABA-A aracılı Cl- akımı ↑**",
        "duzey": 0,
@@ -2668,7 +2732,7 @@
      "sayfa": 29,
      "cumleler": [
       {
-       "id": "k2-07-c0090",
+       "id": "k2-07-c0095",
        "ses": "Propofol karaciğerde hızla metabolize olur ve böbreklerden hızlı atıldığı varsayılır; plazma klerensi karaciğer kan akımından hızlı olduğu için karaciğer dışı dokularda da metabolize edildiği bilinir.",
        "ekran": "Klerens > karaciğer kan akımı → **karaciğer dışı metabolizma**",
        "duzey": 0,
@@ -2689,15 +2753,15 @@
         ],
         "sekil": "propofol kinetiği madde listesi",
         "adim": 10,
-        "resim": 0,
         "madde": [
          1,
          0
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0091",
+       "id": "k2-07-c0096",
        "ses": "Propofolle ayılma sorunsuzdur; ayılmaya konvülsiyon eşlik etmez, yalnız akşamdan kalma durumu oluşur ve bunun tiyopentalden daha az olduğu çıkmışta soruldu.",
        "ekran": "**Ayılma sorunsuz**; akşamdan kalma tiyopentalden az",
        "duzey": 0,
@@ -2731,7 +2795,7 @@
        }
       },
       {
-       "id": "k2-07-c0092",
+       "id": "k2-07-c0097",
        "ses": "Propofolün bağlama duyarlı yarılanma ömrü, yani sürekli infüzyon sonrası eliminasyon yarılanma ömrü, uzun süreli infüzyonda bile kısadır; bu da idamede hızlı uyanma sağlar.",
        "ekran": "**Bağlama duyarlı yarılanma ömrü** uzun infüzyonda bile kısa",
        "duzey": 0,
@@ -2764,7 +2828,7 @@
      "sayfa": 30,
      "cumleler": [
       {
-       "id": "k2-07-c0093",
+       "id": "k2-07-c0098",
        "ses": "Propofol hipnotik bir ajan gibi etki eder, analjezik etkisi yoktur ve santral sinir sistemi aktivitesini deprese eder; analjezi için ek ilaç gerekir.",
        "ekran": "Hipnotik; **analjezik etkisi yok**",
        "duzey": 0,
@@ -2786,15 +2850,15 @@
         ],
         "sekil": "propofol farmakodinamiği madde listesi",
         "adim": 11,
-        "resim": 0,
         "madde": [
          0,
          2
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0094",
+       "id": "k2-07-c0099",
        "ses": "Nadiren seyirme ve spontan hareketler gibi eksitatör etkiler görülse de nöbet bozukluğu olan hastalarda kullanılabilir; kafa içi ve göz içi basıncını tiyopentalle kıyaslanabilir düzeyde azaltır, fokal iskemide tiyopental ve izoflurana yakın etki gösterir.",
        "ekran": "Nöbet hastasında kullanılabilir; **kafa içi ve göz içi basıncı ↓**",
        "duzey": 1,
@@ -2817,7 +2881,7 @@
        }
       },
       {
-       "id": "k2-07-c0095",
+       "id": "k2-07-c0100",
        "ses": "Hem ön yükü hem art yükü azaltarak sistemik kan basıncını düşürür; ayrıca bir solunum depresanıdır, indüksiyon dozunda apne yapar, idame dozlarında solunum hızını azaltır, bu yüzden indüksiyonda ventilasyon desteği hazır olmalıdır.",
        "ekran": "Ön ve art yük ↓ → **hipotansiyon**; indüksiyonda **apne**",
        "duzey": 0,
@@ -2852,7 +2916,7 @@
      "sayfa": 31,
      "cumleler": [
       {
-       "id": "k2-07-c0096",
+       "id": "k2-07-c0101",
        "ses": "Propofol üst solunum yolu reflekslerini tiyopentale göre daha çok baskılar; bu özellik larenks tüpü takılmasını kolaylaştırır ve nöromüsküler bloker kullanılmadan yapılan entübasyonda gevşeme yeterli düzeydedir.",
        "ekran": "Üst solunum yolu refleksleri **tiyopentalden çok** baskılanır → larenks tüpü kolay",
        "duzey": 0,
@@ -2868,15 +2932,15 @@
         ],
         "sekil": "propofol klinik özellikleri madde listesi",
         "adim": 11,
-        "resim": 0,
         "madde": [
          0,
          1
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0097",
+       "id": "k2-07-c0102",
        "ses": "Uzun infüzyon sonrası propofol infüzyon sendromu, yani metabolik asidoz için önlem alınmalıdır.",
        "ekran": "**Propofol infüzyon sendromu**: metabolik asidoz",
        "duzey": 0,
@@ -2904,7 +2968,7 @@
        }
       },
       {
-       "id": "k2-07-c0098",
+       "id": "k2-07-c0103",
        "ses": "Propofolün ilginç ve istenen yan etkisi antiemetik aktivitesidir; subanestezik dozlarda postoperatif bulantı ve kusmada da kullanılabilir.",
        "ekran": "İstenen yan etki: **antiemetik**",
        "duzey": 0,
@@ -2932,7 +2996,7 @@
        }
       },
       {
-       "id": "k2-07-c0099",
+       "id": "k2-07-c0104",
        "ses": "Enjeksiyon yerindeki rahatsız edici ağrı opioid premedikasyonla ya da lidokainle birlikte verilerek azaltılabilir; propofolü solunum desteği eğitimi almış kişiler uygulamalı, dozu anestezi uzmanınca belirlenmelidir ve çocukların dozu oransal olarak yüksektir.",
        "ekran": "Enjeksiyon ağrısı: **lidokain** ya da opioid; uygulayan solunum desteği eğitimli olmalı",
        "duzey": 1,
@@ -2961,7 +3025,7 @@
      "sayfa": 32,
      "cumleler": [
       {
-       "id": "k2-07-c0100",
+       "id": "k2-07-c0105",
        "ses": "Fospropofol suda çözünebilen bir propofol ön maddesidir; metabolizasyonu sonrası propofol, fosfat ve formaldehit oluşur ve günümüzde üretilmemektedir.",
        "ekran": "**Fospropofol**: suda çözünen ön ilaç → propofol, fosfat, formaldehit; üretilmiyor",
        "duzey": 0,
@@ -2989,7 +3053,7 @@
        }
       },
       {
-       "id": "k2-07-c0101",
+       "id": "k2-07-c0106",
        "ses": "Farmakokinetiği propofolden karmaşıktır; propofol kinetiğinde iki kompartmanlı, fospropofolde üç kompartmanlı model kullanılır.",
        "ekran": "Propofol **2**, fospropofol **3** kompartmanlı model",
        "duzey": 1,
@@ -3011,7 +3075,7 @@
        }
       },
       {
-       "id": "k2-07-c0102",
+       "id": "k2-07-c0107",
        "ses": "İyi bir solunum depresanı olduğu için ilacı alan bütün hastalara ek oksijen verilir ve yaşlı hastalarda doz dörtte bir oranında azaltılır.",
        "ekran": "Tüm hastalara **ek oksijen**; yaşlıda doz **1/4** azaltılır",
        "duzey": 0,
@@ -3045,7 +3109,7 @@
      "sayfa": 33,
      "cumleler": [
       {
-       "id": "k2-07-c0103",
+       "id": "k2-07-c0108",
        "ses": "Görüntüde yer alan uyarı kutusunda vurgulandığı üzere propofol yüzde birlik preparatın bir aydan küçük çocukların genel anestezisinde kullanılması önerilmez.",
        "ekran": "**1 aydan küçük** çocukta genel anestezi için önerilmez",
        "duzey": 0,
@@ -3060,15 +3124,15 @@
         ],
         "sekil": "propofol uyarı maddeleri",
         "adim": 11,
-        "resim": 0,
         "madde": [
          0,
          1
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0104",
+       "id": "k2-07-c0109",
        "ses": "On altı yaş ve altındaki çocukların sedasyonunda ciddi ve bazen ölümcül yan etkilere yol açabilir; genel olarak yaşlı ve güçsüz hastalara da dikkatle verilmelidir.",
        "ekran": "**16 yaş ve altı** sedasyonda ölümcül yan etki riski; yaşlı ve güçsüzde dikkat",
        "duzey": 0,
@@ -3112,7 +3176,7 @@
      "sayfa": 34,
      "cumleler": [
       {
-       "id": "k2-07-c0105",
+       "id": "k2-07-c0110",
        "ses": "Barbitüratlar barbitürik asidin sodyum tuzlarıdır; santral sinir sisteminde bilinci kontrol eden retiküler aktive edici sistemi deprese eder, eksitatör asetilkolin iletimini baskılayıp inhibitör gaba iletimini artırırlar ve en sık kullanılanı sodyum tiyopentaldir.",
        "ekran": "Barbitürik asidin **sodyum tuzları**; retiküler aktive edici sistem depresyonu; en sık **sodyum tiyopental**",
        "duzey": 0,
@@ -3135,7 +3199,7 @@
        }
       },
       {
-       "id": "k2-07-c0106",
+       "id": "k2-07-c0111",
        "ses": "Doza bağlı olarak hafif sedasyondan bilinç kaybına kadar depresyon yaparlar; analjezik etkileri yoktur ve bu özellik çıkmışta soruldu, hatta subanestezik dozda ya da büyük dozlardan sonra ayılma döneminde ağrıya duyarlılığı artırarak hiperaljezi yaparlar.",
        "ekran": "Analjezik değil; subanestezik dozda **hiperaljezi**",
        "duzey": 0,
@@ -3168,7 +3232,7 @@
        }
       },
       {
-       "id": "k2-07-c0107",
+       "id": "k2-07-c0112",
        "ses": "Klinik dozlarda intrakraniyal basıncı düşürürler, antikonvülzandırlar ve status epileptikusta kullanılırlar; kas gevşetici özellikleri yoktur ve tekrarlayan doz ya da infüzyonda vücutta biriktikleri için anestezi idamesinde kullanılmazlar.",
        "ekran": "Kafa içi basıncı ↓, **antikonvülzan**; kas gevşetmez; birikim → **idamede kullanılmaz**",
        "duzey": 0,
@@ -3197,7 +3261,7 @@
        }
       },
       {
-       "id": "k2-07-c0108",
+       "id": "k2-07-c0113",
        "ses": "Solunumu doz bağımlı deprese eder, indüksiyon dozunda bile geçici apne yapabilirler; laringeal ve öksürük reflekslerini yeterince baskılayamadıkları için laringoskopide hıçkırık, laringospazm ve bronkospazm görülebilir.",
        "ekran": "Geçici apne; laringoskopide **laringospazm, bronkospazm**",
        "duzey": 1,
@@ -3219,7 +3283,7 @@
        }
       },
       {
-       "id": "k2-07-c0109",
+       "id": "k2-07-c0114",
        "ses": "Arteriyel basınç ve kalp debisi düşer, hiperkapni ya da hipoksi yoksa ritmi bozmaz; tiyopentalin etkisinin beş on dakikada hızla sonlanmasının beyinden kas ve yağ dokusuna redistribüsyona bağlı olduğu ve uterus kontraksiyonlarını etkilemediği çıkmışta soruldu.",
        "ekran": "Kalp debisi ↓; uterusu etkilemez, **plasentadan geçer**, histamin salınımı",
        "duzey": 1,
@@ -3259,7 +3323,7 @@
      "sayfa": 35,
      "cumleler": [
       {
-       "id": "k2-07-c0110",
+       "id": "k2-07-c0115",
        "ses": "Tiyopentalin hazır preparatları alkalidir, pH'sı ondan büyüktür ve uygulama yerinde venöz irritasyon yapabilir; intravenöz yoldan yüzde bir ile iki buçukluk solüsyonları kilogram başına beş ile yedi miligram olarak kullanılır.",
        "ekran": "Tiyopental preparatı **alkali (pH>10)**; doz **5-7 mg/kg**",
        "duzey": 0,
@@ -3292,7 +3356,7 @@
        }
       },
       {
-       "id": "k2-07-c0111",
+       "id": "k2-07-c0116",
        "ses": "Hatalı olarak arter içine verilirse şiddetli ağrı, doku hasarı ve nekroz yapar; derhal aynı yerden lidokain ya da papaverin enjekte edilmeli, spazmı azaltmak için brakiyal ya da stellat ganglion bloğu ve heparinizasyon uygulanmalıdır.",
        "ekran": "İntraarteriyel → nekroz; tedavi **lidokain/papaverin**, brakiyal ya da stellat blok, **heparin**",
        "duzey": 0,
@@ -3315,7 +3379,7 @@
        }
       },
       {
-       "id": "k2-07-c0112",
+       "id": "k2-07-c0117",
        "ses": "Tiyopental porfiride kesinlikle kontrendikedir ve ölüme yol açabilir; astım ve aşırı duyarlılık öyküsü varsa da tercih edilmez.",
        "ekran": "**Porfiride kesin kontrendike**; astımda tercih edilmez",
        "duzey": 0,
@@ -3349,7 +3413,7 @@
      "sayfa": 36,
      "cumleler": [
       {
-       "id": "k2-07-c0113",
+       "id": "k2-07-c0118",
        "ses": "Tiyopental ve metoheksitalin gaba a üzerinden etkili olduğu düşünülür; karaciğerde metabolize edilirler ve santral sinir sistemini sedasyondan genel anesteziye uzanan doz bağımlı bir depresyonla baskılarlar.",
        "ekran": "Tiyopental, metoheksital: **GABA-A**, karaciğerde metabolize",
        "duzey": 0,
@@ -3365,15 +3429,15 @@
         ],
         "sekil": "barbitürat madde listesi",
         "adim": 12,
-        "resim": 0,
         "madde": [
          2,
          3
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0114",
+       "id": "k2-07-c0119",
        "ses": "Beyin kan akımını, kan hacmini ve kafa içi basıncını azaltır, fokal serebral iskemide koruma sağlarlar; bu özellikler intrakraniyal ya da yer kaplayıcı lezyonu olan hastalarda barbitüratları eşsiz kılar.",
        "ekran": "Beyin kan akımı ve **kafa içi basıncı ↓**; yer kaplayan lezyonda eşsiz",
        "duzey": 0,
@@ -3396,7 +3460,7 @@
        }
       },
       {
-       "id": "k2-07-c0115",
+       "id": "k2-07-c0120",
        "ses": "Metoheksital dışındaki barbitüratlar elektroensefalografide elektriksel aktiviteyi azaltır ve antikonvülsandır; metoheksital ise tam tersine epileptik odakları aktive eder, bu yüzden elektrokonvülsif terapide ve cerrahi sırasında epileptik odakların belirlenmesinde faydalıdır.",
        "ekran": "İstisna **metoheksital**: epileptik odağı aktive eder → **EKT**, odak belirleme",
        "duzey": 0,
@@ -3430,7 +3494,7 @@
      "sayfa": 37,
      "cumleler": [
       {
-       "id": "k2-07-c0116",
+       "id": "k2-07-c0121",
        "ses": "Barbitüratlar periferik vazodilatasyon sonucu sistemik kan basıncını düşürür ama bu etki propofolden azdır; larinks ve öksürük reflekslerini baskılamaları da propofolden düşüktür, tiyopental ve metoheksital tipik olarak geçici apne yapar.",
        "ekran": "Hipotansiyon ve refleks baskısı **propofolden az**; geçici apne",
        "duzey": 0,
@@ -3453,7 +3517,7 @@
        }
       },
       {
-       "id": "k2-07-c0117",
+       "id": "k2-07-c0122",
        "ses": "Yanlışlıkla arter içine verilmesi çok şiddetli ağrı ve vazokonstriksiyonla gangrene kadar giden doku zedelenmesi yapar; damar dışına kaçırılırsa yüzde beşlik lidokain önerilir ve bireysel alerjik reaksiyon oranı otuz binde birdir.",
        "ekran": "Arter içi → **gangren**; ekstravazasyonda **%5 lidokain**; alerji 1/30.000",
        "duzey": 0,
@@ -3481,7 +3545,7 @@
        }
       },
       {
-       "id": "k2-07-c0118",
+       "id": "k2-07-c0123",
        "ses": "Tiyopental ve metoheksitalle indüksiyon süresi otuz saniyeden azdır; uygulamadan hemen sonra hastalar sarımsak tadı aldıklarını söyleyebilir ve rektal uygulama da mümkündür.",
        "ekran": "İndüksiyon **<30 sn**; **sarımsak tadı**; rektal verilebilir",
        "duzey": 1,
@@ -3515,53 +3579,66 @@
      "sayfa": 38,
      "cumleler": [
       {
-       "id": "k2-07-c0119",
-       "ses": "Görüntüde Türkiye'de tiyopental sodyumun Pental Sodyum ve Tyosod adlarıyla, yarım gram ve bir gramlık enjeksiyonluk çözelti hazırlamak için toz olarak bulunduğu görülür.",
-       "ekran": "Tiyopental: **Pental Sodyum**, **Tyosod** (0,5 g ve 1 g toz)",
+       "id": "k2-07-c0124",
+       "ses": "Türkiye'de tiyopental sodyum piyasada Pental Sodyum ve Tyosod ticari adlarıyla, sıfır virgül beş gram ve bir gramlık liyofilize toz içeren cam flakonlar halinde sunulmaktadır.",
+       "ekran": "Tiyopental sodyum müstahzarları: **Pental Sodyum ve Tyosod liyofilize toz**",
        "duzey": 0,
-       "vurgu": [
-        {
-         "metin": "Pental Sodyum",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": 12,
+       "vurgu": [],
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 38,
         "satir": [
-         "Tiyopental sodyum etkin maddesini içeren ilaçlar",
-         "PENTAL SODYUM 0,5 G ENJEKSIYONLUK COZELTI ICIN TOZ"
+         "pi Tiyopental sodyum etkin maddesini içeren ilaçlar"
         ],
-        "sekil": "tiyopental müstahzar listesi ekran görüntüsü",
-        "adim": 12,
-        "resim": 0,
+        "sekil": "Tiyopental sodyum flakon ve kutu ürün fotoğrafları",
         "madde": [
-         1,
-         3
+         0,
+         2
+        ],
+        "resim": 0
+       }
+      },
+      {
+       "id": "k2-07-c0125",
+       "ses": "Tiyopental tozu suda dayanıksız olduğundan enjeksiyondan hemen önce steril distile suyla çözülerek genellikle yüzde iki buçukluk solüsyon şeklinde hazırlanır ve açıldıktan sonra yirmi dört saat içinde tüketilmelidir.",
+       "ekran": "Solüsyon hazırlığı: **Yüzde iki buçukluk alkali konsantrasyon**",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "TYOSOD 0,5 G I.V. ENJEKSİYONLUK ÇÖZELTİ HAZIRLAMAK"
+        ],
+        "sekil": null,
+        "madde": [
+         3,
+         4
         ]
        }
       },
       {
-       "id": "k2-07-c0120",
-       "ses": "Yani tiyopental flakonda toz hâlinde gelir ve kullanmadan önce çözülerek hazırlanır.",
-       "ekran": "Flakonda **toz**, kullanmadan önce çözülür",
+       "id": "k2-07-c0126",
+       "ses": "Tiyopental çözeltisinin pi ha değeri on ile on bir arasında aşırı alkalidir; bu nedenle asidik yapıdaki kas gevşeticiler veya opioidlerle aynı damar yolunda karıştırılırsa anında çöker ve damar içi presipitasyona yol açar.",
+       "ekran": "Kimyasal geçimsizlik: **Alkali pH ve presipitasyon tehlikesi**",
        "duzey": 1,
        "vurgu": [],
-       "slayt_adim": 12,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 38,
         "satir": [
-         "TYOSOD 1 G I.V. ENJEKSİYONLUK ÇÖZELTİ HAZIRLAMAK İÇİN TOZ"
+         "TYOSOD 0,5 G I.V. ENJEKSİYONLUK ÇÖZELTİ HAZIRLAMAK"
         ],
         "sekil": null,
-        "adim": 12,
         "madde": [
-         4,
-         3
+         3,
+         4
         ]
        }
       }
@@ -3582,7 +3659,7 @@
      "sayfa": 39,
      "cumleler": [
       {
-       "id": "k2-07-c0121",
+       "id": "k2-07-c0127",
        "ses": "Midazolam, lorazepam ve diazepam intravenöz kullanılabilen önemli benzodiazepinlerdir, antagonistleri flumazenildir; premedikasyon için son derece yararlıdırlar, anksiyeteyi giderir ve anterograd amnezi yaparlar.",
        "ekran": "Midazolam, lorazepam, diazepam; antagonist **flumazenil**; anksiyolizis + **anterograd amnezi**",
        "duzey": 0,
@@ -3603,15 +3680,15 @@
         ],
         "sekil": "benzodiazepin madde listesi",
         "adim": 13,
-        "resim": 0,
         "madde": [
          0,
          2
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0122",
+       "id": "k2-07-c0128",
        "ses": "Lipofilik olduklarından santral sinir sistemine hızla girer, sonra inaktif doku bölgelerine hızla redistribüsyona uğrarlar, yani etkinin bitişi atılımla değil yeniden dağılımla olur; midazolam bağlama duyarlı yarılanma ömrü en kısa benzodiazepindir.",
        "ekran": "Etki **redistribüsyonla** biter; **midazolam** en kısa bağlama duyarlı yarılanma ömrü",
        "duzey": 0,
@@ -3639,7 +3716,7 @@
        }
       },
       {
-       "id": "k2-07-c0123",
+       "id": "k2-07-c0129",
        "ses": "Santral sinir sistemi kan akımını barbitüratlar ve propofolden daha az azaltırlar; güçlü antikonvülsan oldukları için status epileptikusta, alkol sendromlarında ve lokal anesteziklerin yaptığı nöbetlerde kullanılırlar, spesifik antagonistleri flumazenilin olması ise çıkmışta sorulduğu üzere barbitüratlara karşı üstünlükleridir.",
        "ekran": "Güçlü **antikonvülsan**: status epileptikus, alkol sendromu, lokal anestezik nöbeti",
        "duzey": 0,
@@ -3668,7 +3745,7 @@
        }
       },
       {
-       "id": "k2-07-c0124",
+       "id": "k2-07-c0130",
        "ses": "Midazolam hızlı intravenöz verildiğinde, opioidle premedikasyon yapılmışsa solunum depresyonu yapar, aksi hâlde solunum depresyonu daha düşüktür; tromboflebit ve enjeksiyon yeri ağrısı ise suda çözünürlüğü düşük olan diazepam için geçerlidir.",
        "ekran": "Midazolam + opioid → **solunum depresyonu**; tromboflebit **diazepamda**",
        "duzey": 1,
@@ -3701,7 +3778,7 @@
      "sayfa": 40,
      "cumleler": [
       {
-       "id": "k2-07-c0125",
+       "id": "k2-07-c0131",
        "ses": "Benzodiazepinlerde alerjik reaksiyon neredeyse yok gibidir; perioperatif medikasyon, intravenöz sedasyon ve nöbet baskılamada, midazolam ve diazepam ise anestezi indüksiyonunda kullanılır, gecikmiş ayılmada flumazenil uygundur.",
        "ekran": "Alerji neredeyse yok; gecikmiş ayılmada **flumazenil**",
        "duzey": 0,
@@ -3717,15 +3794,15 @@
         ],
         "sekil": "benzodiazepin klinik kullanım madde listesi",
         "adim": 13,
-        "resim": 0,
         "madde": [
          0,
          3
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0126",
+       "id": "k2-07-c0132",
        "ses": "Anksiyolitik, sedatif ve amnezik etkileri onları seçkin kılar; midazolam pediatrik premedikasyonda indüksiyon için güvenilirdir.",
        "ekran": "**Midazolam** pediatrik premedikasyonda güvenilir",
        "duzey": 0,
@@ -3748,7 +3825,7 @@
        }
       },
       {
-       "id": "k2-07-c0127",
+       "id": "k2-07-c0133",
        "ses": "Opioidler ve propofolle sinerjistik etkileşmelerinden yararlanılır, ancak bu durum solunum depresyonu getirebilir; yaş ilerledikçe yanıtta sapmalar olur ve dolaşım üzerine önemli bir yan etkileri yoktur.",
        "ekran": "Opioid ve propofolle **sinerji** → solunum depresyonu; dolaşıma etkisi önemsiz",
        "duzey": 0,
@@ -3782,48 +3859,62 @@
      "sayfa": 41,
      "cumleler": [
       {
-       "id": "k2-07-c0128",
-       "ses": "Tabloda benzodiazepin müstahzarları olarak alprazolam için Xanax, klonazepam için Rivotril, klorazepat için Tranxilene, diazepam için Diazem ve Nervium, lorazepam için Ativan listelenmiştir.",
-       "ekran": "Alprazolam **Xanax**, klonazepam **Rivotril**, klorazepat **Tranxilene**, diazepam **Diazem**, lorazepam **Ativan**",
+       "id": "k2-07-c0134",
+       "ses": "Anestezi premedikasyonunda ve nöropsikiyatride sık başvurulan benzodiazepinler arasında alprazolam, klonazepam, klorazepat, diazepam ve lorazepam molekülleri yer alır.",
+       "ekran": "Benzodiazepinler listesi: **Klinikte sık kullanılan temel moleküller**",
        "duzey": 0,
        "vurgu": [],
-       "slayt_adim": 13,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 41,
         "satir": [
-         "Alprazolam (Xanax)",
-         "Clonazepam (Rivotril)",
-         "Klorazepat (Tranxilene)",
-         "Diazepam (Diazem, Nervium)",
-         "Lorazepam (Ativan)"
+         "Alprazolam (Xanax),"
         ],
-        "sekil": "benzodiazepin ticari adları listesi",
-        "adim": 13,
-        "resim": 0,
+        "sekil": "Alprazolam ve klonazepam içeren ilaç listelerinin ekran görüntüsü; benzodiazepin müstahzar örnekleri",
         "madde": [
          0
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0129",
-       "ses": "Bu adları bilmek, hastanın kullandığı ilacı tanımanızı kolaylaştırır; örneğin Xanax alprazolam, Ativan lorazepamdır.",
-       "ekran": "Xanax = alprazolam, Ativan = lorazepam",
+       "id": "k2-07-c0135",
+       "ses": "Piyasada alprazolam Xanax, klonazepam Rivotril, klorazepat Tranxilene, diazepam Diazem veya Nervium, lorazepam ise Ativan ticari adlarıyla hekimlerin karşısına çıkar.",
+       "ekran": "Ticari eşdeğerler: **Xanax, Rivotril, Tranxilene, Diazem ve Ativan**",
        "duzey": 1,
        "vurgu": [],
-       "slayt_adim": 13,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 41,
         "satir": [
-         "Alprazolam (Xanax)",
-         "Lorazepam (Ativan)"
+         "Klorazepat (Tranxilene),"
         ],
         "sekil": null,
-        "adim": 13,
+        "madde": [
+         0
+        ],
+        "resim": 0
+       }
+      },
+      {
+       "id": "k2-07-c0136",
+       "ses": "Bu ajanlar gaba a reseptör kompleksinde klor kanal açılma frekansını artırarak cerrahi öncesi hastada anksiyeteyi giderir, sakinleşme sağlar ve cerrahiye dair antegrad amnezi oluşturur.",
+       "ekran": "Preanestezik amaç: **Sedasyon, anksiyoliz ve antegrad amnezi**",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Diazepam (Diazem, Nervium),"
+        ],
+        "sekil": null,
         "madde": [
          0
         ],
@@ -3837,7 +3928,7 @@
      "sayfa": 42,
      "cumleler": [
       {
-       "id": "k2-07-c0130",
+       "id": "k2-07-c0137",
        "ses": "Görüntüde diazepamın rektal çözelti olarak Diaksi ve Diazepam Desitin, kas ve damar içi ampul olarak Diapam ve Diazem, ayrıca kapsül ve tablet formlarında bulunduğu görülür; rektal formun varlığı çocuk nöbetinde pratiklik sağlar.",
        "ekran": "Diazepam: **rektal** (Diaksi, Desitin), ampul (Diapam, Diazem), kapsül, tablet",
        "duzey": 0,
@@ -3858,15 +3949,15 @@
         ],
         "sekil": "diazepam müstahzar listesi ekran görüntüsü",
         "adim": 13,
-        "resim": 0,
         "madde": [
          0,
          15
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0131",
+       "id": "k2-07-c0138",
        "ses": "Yani aynı molekül hem ağızdan, hem kas ya da damar içine, hem de rektal yoldan verilebilir.",
        "ekran": "Diazepam oral, IM/IV ve rektal verilebilir",
        "duzey": 1,
@@ -3894,36 +3985,56 @@
      "sayfa": 43,
      "cumleler": [
       {
-       "id": "k2-07-c0132",
-       "ses": "Görüntüde lorazepamın Ativan Expidet tablet, klorazepat dipotasyumun ise Tranxilene kapsül olarak bulunduğu görülür.",
-       "ekran": "Lorazepam **Ativan Expidet**; klorazepat **Tranxilene**",
+       "id": "k2-07-c0139",
+       "ses": "Görüntüde lorazepam etkin maddeli Ativan Expidet dil altı eriyen tablet ile klorazepat dipotasyum etkin maddeli Tranxilene kapsül formları yer almaktadır.",
+       "ekran": "Oral benzodiazepin formları: **Ativan Expidet ve Tranxilene kapsül**",
        "duzey": 0,
        "vurgu": [],
-       "slayt_adim": 13,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 43,
         "satir": [
-         "Lorazepam etkin maddesini içeren ilaçlar",
-         "Klorazepat dipotasyum İçeren İlaç Listesi"
+         "ATIVAN EXPIDET 1 MG 20 TABLET hkt - küb 129,58 $"
         ],
-        "sekil": "lorazepam ve klorazepat müstahzar listesi",
-        "adim": 13,
-        "resim": 0,
+        "sekil": "Ativan Expidet tablet ve Tranxilene kapsül ilaç ambalaj görselleri",
         "madde": [
-         6,
-         0
-        ]
+         1,
+         2
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0133",
-       "ses": "Bunlar ağızdan kullanılan benzodiazepin müstahzarlarıdır.",
-       "ekran": "Oral benzodiazepin müstahzarları",
+       "id": "k2-07-c0140",
+       "ses": "Ativan Expidet dil üstüne konulduğunda tükürükle saniyeler içinde eriyen liyofilize bir tablettir; preoperatif dönemde ameliyata girmeden önce hastanın su içmeden ilacı hızla emmesini sağlar.",
+       "ekran": "Dil altı liyofilize teknoloji: **Suya ihtiyaç duymadan anında emilim**",
        "duzey": 1,
        "vurgu": [],
-       "slayt_adim": 13,
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "ATIVAN EXPIDET 2,5 MG 20 TABLET hkt - küb 228,73 t"
+        ],
+        "sekil": "Ativan Expidet liyofilize dil altı tablet kutu ve blister yapısı",
+        "madde": [
+         2,
+         1
+        ],
+        "resim": 0
+       }
+      },
+      {
+       "id": "k2-07-c0141",
+       "ses": "Klorazepat midede dekarboksillenerek aktif metabolitine dönüşen bir ön ilaçken; lorazepam karaciğer sitokrom sistemini baypas edip doğrudan glukuronidasyona uğradığı için hepatik yetmezlikte en güvenli seçenektir.",
+       "ekran": "Karaciğer avantajı: **Doğrudan glukuronidasyon ile güvenli eliminasyon**",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
@@ -3932,7 +4043,6 @@
          "TRANXILENE KAPSUL 10 mg 30 kapsül"
         ],
         "sekil": null,
-        "adim": 13,
         "madde": [
          8,
          10
@@ -3956,7 +4066,7 @@
      "sayfa": 44,
      "cumleler": [
       {
-       "id": "k2-07-c0134",
+       "id": "k2-07-c0142",
        "ses": "Etomidat analjezik olmayan ve hemodinamik etkileri minimal bir hipnotik ilaçtır; imidazol türevidir, yüzde otuz beşlik propilen glikol içinde mililitrede iki miligram formunda bulunur ve gaba a üzerinden etki ettiği düşünülür.",
        "ekran": "Etomidat: analjezik değil, **hemodinamik etkisi minimal**; imidazol türevi; GABA-A",
        "duzey": 0,
@@ -3978,15 +4088,15 @@
         ],
         "sekil": "etomidat madde listesi",
         "adim": 14,
-        "resim": 0,
         "madde": [
          0,
          2
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0135",
+       "id": "k2-07-c0143",
        "ses": "İndüksiyonu hızlıdır, ayılma ise doku redistribüsyonuna bağlıdır; inaktif metabolitlerinin yüzde sekseni idrarla, kalanı safrayla atılır ve yarı ömrü çok kısa olduğundan klirensi tiyopentalden beş kat fazladır.",
        "ekran": "Ayılma **redistribüsyonla**; metabolitlerin %80'i idrarla; klirens tiyopentalden **5 kat**",
        "duzey": 0,
@@ -4014,7 +4124,7 @@
        }
       },
       {
-       "id": "k2-07-c0136",
+       "id": "k2-07-c0144",
        "ses": "Etomidat kafa içi basıncında düşme yapar ve güçlü bir vazokonstriktördür.",
        "ekran": "Kafa içi basıncı ↓; güçlü **vazokonstriktör**",
        "duzey": 1,
@@ -4043,7 +4153,7 @@
      "sayfa": 45,
      "cumleler": [
       {
-       "id": "k2-07-c0137",
+       "id": "k2-07-c0145",
        "ses": "Etomidat alan hastaların yarısından fazlasında spontan miyoklonus görülür, ancak solunumu deprese edici etkisi barbitüratlardan azdır.",
        "ekran": "**%50'den fazlasında miyoklonus**; solunum depresyonu barbitüratlardan az",
        "duzey": 0,
@@ -4071,7 +4181,7 @@
        }
       },
       {
-       "id": "k2-07-c0138",
+       "id": "k2-07-c0146",
        "ses": "En önemli yan etkisi adrenokortikal supresyondur; kolesterolün kortizole dönüşümünü baskılar ve bu baskı ortalama beş saat ya da daha uzun sürebilir.",
        "ekran": "**Adrenokortikal supresyon**: kolesterol → kortizol dönüşümü ↓, ≥5 saat",
        "duzey": 0,
@@ -4098,7 +4208,7 @@
        }
       },
       {
-       "id": "k2-07-c0139",
+       "id": "k2-07-c0147",
        "ses": "Miyokard kontraktilite sorunu olan hastalarda barbitürat ve propofolün alternatifidir; postoperatif bulantı ve kusma ise tiyopental ve propofole göre daha sıktır.",
        "ekran": "Kalp hastasında **alternatif**; bulantı-kusma daha sık",
        "duzey": 0,
@@ -4127,7 +4237,7 @@
      "sayfa": 46,
      "cumleler": [
       {
-       "id": "k2-07-c0140",
+       "id": "k2-07-c0148",
        "ses": "İngilizce kaynak pasajı etomidatı retiküler aktive edici sistem düzeyinde etkili, barbitürat olmayan bir hipnotik olarak tanımlar; etki süresi tiyopental ile metoheksital arasındadır ve tek dolaşım zamanında bilinç kaybı yapar.",
        "ekran": "Barbitürat olmayan hipnotik; **tek dolaşım zamanında** bilinç kaybı",
        "duzey": 0,
@@ -4143,14 +4253,14 @@
         ],
         "sekil": "etomidat hakkında İngilizce metin pasajı",
         "adim": 14,
-        "resim": 0,
         "madde": [
          0
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0141",
+       "id": "k2-07-c0149",
        "ses": "Barbitüratlar ve propofol gibi analjezi oluşturmaz, yaygın redistribüsyon ve hızlı metabolizma sayesinde ayılma hızlıdır; karaciğerde ester hidrolizi ile inaktif metabolitlere yıkılır.",
        "ekran": "Analjezi yok; karaciğerde **ester hidrolizi** ile inaktif metabolit",
        "duzey": 1,
@@ -4179,7 +4289,7 @@
      "sayfa": 47,
      "cumleler": [
       {
-       "id": "k2-07-c0142",
+       "id": "k2-07-c0150",
        "ses": "Ketamin suda kısmen çözünen, lipit çözünürlüğü yüksek bir fensiklidin türevidir; onu diğer anesteziklerden ayıran analjezik etkinliğidir ve temel mekanizması en em de a reseptör kompleksini inhibe etmesidir.",
        "ekran": "Ketamin: **fensiklidin türevi**, **analjezik**; mekanizma **NMDA inhibisyonu**",
        "duzey": 0,
@@ -4208,7 +4318,7 @@
        }
       },
       {
-       "id": "k2-07-c0143",
+       "id": "k2-07-c0151",
        "ses": "İndüksiyon dozunda hastada gözler açık, nistagmuslu bir bakışla seyreden ve kataleptik durum olarak tanımlanan disosiyatif anestezi oluşur; anestezi hızlı başlar, redistribüsyonla sona erer ve ilaç sitokrom pe dört yüz elli ile en demetilasyona uğrar.",
        "ekran": "**Disosiyatif anestezi**: gözler açık, nistagmus, kataleptik; sitokrom P450 ile N-demetilasyon",
        "duzey": 0,
@@ -4237,7 +4347,7 @@
        }
       },
       {
-       "id": "k2-07-c0144",
+       "id": "k2-07-c0152",
        "ses": "Tek başına kullanıldığında benzodiazepinlerin aksine amnezi yapmaz ve refleksler korunur; pupillalar hafif dilatedir, lakrimasyon ve salivasyon artar, bunu önlemek için antikolinerjik premedikasyon önerilir.",
        "ekran": "Tek başına **amnezi yok**, refleksler korunur; salivasyon ↑ → antikolinerjik",
        "duzey": 0,
@@ -4266,7 +4376,7 @@
        }
       },
       {
-       "id": "k2-07-c0145",
+       "id": "k2-07-c0153",
        "ses": "Ketamin diğer intravenöz anesteziklerin tam tersine beyin kan akımını artıran bir serebral vazodilatördür; bu nedenle kafa içi basıncı artmış kişilere önerilmez, status epileptikusta ise kullanımı mümkündür.",
        "ekran": "**Beyin kan akımını artırır** → kafa içi basıncı yüksekse önerilmez",
        "duzey": 0,
@@ -4300,7 +4410,7 @@
      "sayfa": 48,
      "cumleler": [
       {
-       "id": "k2-07-c0146",
+       "id": "k2-07-c0154",
        "ses": "Uygulamadan sonra canlı ve renkli rüyalar, halüsinasyonlar, beden dışı deneyimler, görsel, dokunsal ve işitsel duyarlılıkta artış ve bozukluklar görülebilir; bunlara şiddetli korku ve konfüzyon eşlik eder.",
        "ekran": "**Psikomimetik** reaksiyonlar: canlı rüyalar, halüsinasyon, beden dışı deneyim, korku, konfüzyon",
        "duzey": 0,
@@ -4316,15 +4426,15 @@
         ],
         "sekil": "ketamin yan etkileri madde listesi",
         "adim": 16,
-        "resim": 0,
         "madde": [
          1,
          3
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0147",
+       "id": "k2-07-c0155",
        "ses": "Öforik bir durum da gelişebildiği için kötüye kullanım potansiyeli yüksektir; bu reaksiyonlar çocuklarda daha sık ve şiddetlidir, azaltmak ve amnezik etkiyi artırmak için benzodiazepin kombinasyonu önerilebilir.",
        "ekran": "Öfori → **kötüye kullanım**; çocukta sık; **BZD kombinasyonu** azaltır",
        "duzey": 0,
@@ -4347,7 +4457,7 @@
        }
       },
       {
-       "id": "k2-07-c0148",
+       "id": "k2-07-c0156",
        "ses": "Ketaminin solunum depresyonu etkisi belirgin değildir; salivasyon ve lakrimasyon artışı antikolinerjik premedikasyonla giderilebilir.",
        "ekran": "**Solunum depresyonu belirgin değil**",
        "duzey": 1,
@@ -4376,7 +4486,7 @@
      "sayfa": 49,
      "cumleler": [
       {
-       "id": "k2-07-c0149",
+       "id": "k2-07-c0157",
        "ses": "Ketaminin iyi tarafları analjezik etkisi, sempatik stimülasyonu, bronkodilatasyon ve minimum solunum depresyonudur; ancak hoş olmayan psikomimetik etkileri onu yardımcı bir ilaç durumuna getirir.",
        "ekran": "Artılar: analjezi, **sempatik stimülasyon**, **bronkodilatasyon**, minimum solunum depresyonu",
        "duzey": 0,
@@ -4392,15 +4502,15 @@
         ],
         "sekil": "ketamin klinik kullanım madde listesi",
         "adim": 16,
-        "resim": 0,
         "madde": [
          3,
          1
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0150",
+       "id": "k2-07-c0158",
        "ses": "Ketamin intravenöz, oral, rektal ve epidural uygulanabilir; zihinsel engelli ve kooperasyonu olmayan çocukların premedikasyonunda önemli bir seçenektir ve sezaryen doğumda yararlı olabilir.",
        "ekran": "İV, oral, rektal, epidural; **kooperasyonsuz çocuk** premedikasyonu; sezaryen",
        "duzey": 0,
@@ -4423,7 +4533,7 @@
        }
       },
       {
-       "id": "k2-07-c0151",
+       "id": "k2-07-c0159",
        "ses": "Opioid toleransını ve opioidlerin yaptığı hiperaljeziyi azaltmak için de yararlanılır; güçlü analjezik etkisi ve çok düşük solunum depresyonu ketamini değerli kılar.",
        "ekran": "**Opioid toleransı ve hiperaljezisini** azaltır",
        "duzey": 1,
@@ -4451,7 +4561,7 @@
      "sayfa": 50,
      "cumleler": [
       {
-       "id": "k2-07-c0152",
+       "id": "k2-07-c0160",
        "ses": "Ketalar beş yüz miligram bölü on mililitre enjeksiyonluk çözeltinin her mililitresi elli miligram ketamin baza eşdeğer elli yedi virgül altı miligram ketamin hidroklorür içerir.",
        "ekran": "**Ketalar**: her mL'de 50 mg ketamin baz (57,6 mg ketamin HCl)",
        "duzey": 0,
@@ -4467,15 +4577,15 @@
         ],
         "sekil": "Ketalar kullanma talimatı",
         "adim": 16,
-        "resim": 0,
         "madde": [
          1,
          0
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0153",
+       "id": "k2-07-c0161",
        "ses": "Damar içine infüzyon, damar içine enjeksiyon ya da kas içine enjeksiyon şeklinde uygulanır, yani ketamin kas içine de verilebilir.",
        "ekran": "İV infüzyon, İV veya **İM** enjeksiyon",
        "duzey": 1,
@@ -4513,7 +4623,7 @@
      "sayfa": 51,
      "cumleler": [
       {
-       "id": "k2-07-c0154",
+       "id": "k2-07-c0162",
        "ses": "Deksmedetomidin yüksek derecede selektif bir alfa iki adrenerjik agonisttir; alfa iki agonist etkisinin yanı sıra hipnotik ve omurilik düzeyinde analjeziktir ve yapısı itibarıyla suda çözünür.",
        "ekran": "**Deksmedetomidin**: selektif **α2 agonist**; hipnotik, spinal analjezik; suda çözünür",
        "duzey": 0,
@@ -4534,15 +4644,15 @@
         ],
         "sekil": "deksmedetomidin madde listesi",
         "adim": 17,
-        "resim": 0,
         "madde": [
          0,
          2
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0155",
+       "id": "k2-07-c0163",
        "ses": "Yaptığı sedasyon diğerlerinden farklıdır, endojen uyku yolaklarının aktivasyonuyla oluşan fizyolojik bir uyku durumudur; kafa içi basıncını değiştirmeden kan akımını azaltır, etkilerine tolerans ve bağımlılık gelişir.",
        "ekran": "Sedasyon **fizyolojik uyku** benzeri; tolerans ve bağımlılık gelişir",
        "duzey": 0,
@@ -4565,7 +4675,7 @@
        }
       },
       {
-       "id": "k2-07-c0156",
+       "id": "k2-07-c0164",
        "ses": "Kalp hızını ve sistemik vasküler direnci azaltarak kan basıncını düşürür, solunum üzerine etkileri ise belli belirsizdir; başlıca kullanım alanı yoğun bakımda ventile hastaların sedasyonudur.",
        "ekran": "Bradikardi, hipotansiyon; başlıca **yoğun bakımda ventile hasta sedasyonu**",
        "duzey": 0,
@@ -4599,36 +4709,55 @@
      "sayfa": 52,
      "cumleler": [
       {
-       "id": "k2-07-c0157",
-       "ses": "Görüntüde deksmedetomidinin Dinesin adıyla iki yüz mikrogram bölü iki mililitrelik intravenöz infüzyon konsantresi olarak bulunduğu ve hipnotik sedatifler sınıfında yer aldığı görülür.",
-       "ekran": "**Dinesin** 200 mcg/2 mL; hipnotik-sedatif sınıfı",
+       "id": "k2-07-c0165",
+       "ses": "Görüntüde deksmedetomidin etkin maddesini içeren Dinesin iki yüz mikrogram bölü iki mililitrelik intravenöz infüzyon konsantresi ve ürün prospektüs bilgileri görülmektedir.",
+       "ekran": "Deksmedetomidin konsantresi: **Dinesin iki yüz mikrogram infüzyon**",
        "duzey": 0,
        "vurgu": [],
-       "slayt_adim": 17,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 52,
         "satir": [
-         "DINESIN 200 mcg/2 ml I.V infüzyonluk çözelti hazırlamak için konsantre",
-         "Etkin Madde Deksmedetomidin"
+         "DINESIN 200 mcg/2 ml I.V infüzyonluk çözelti hazırlamak için konsantre (5 flakon)"
         ],
-        "sekil": "Dinesin prospektüs ekran görüntüsü",
-        "adim": 17,
-        "resim": 0,
+        "sekil": "Dinesin deksmedetomidin konsantre infüzyon flakon görseli ve prospektüs bilgileri",
         "madde": [
          0,
-         3
+         9
+        ],
+        "resim": 0
+       }
+      },
+      {
+       "id": "k2-07-c0166",
+       "ses": "İlaç anatomik tedavi sınıflamasında hipnotikler ve sedatifler kategorisinde yer alan, beyin sapı lokus seruleustaki alfa-iki adrenerjik reseptörleri son derece selektif olarak uyaran bir moleküldür.",
+       "ekran": "Farmakolojik sınıf: **Selektif alfa-iki adrenerjik reseptör agonisti**",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "Etkin Madde Deksmedetomidin"
+        ],
+        "sekil": null,
+        "madde": [
+         3,
+         4
         ]
        }
       },
       {
-       "id": "k2-07-c0158",
-       "ses": "Reçete durumu kırmızı reçetelidir, bu da kontrollü kullanılan bir ilaç olduğunu gösterir.",
-       "ekran": "**Kırmızı reçeteli**",
+       "id": "k2-07-c0167",
+       "ses": "Deksmedetomidin güçlü santral etkileri ve yoğun bakım prosedürlerindeki hassasiyeti nedeniyle kırmızı reçeteye tabi kontrollü bir ilaç olup yalnızca uzman hekim gözetiminde uygulanır.",
+       "ekran": "Mevzuat ve güvenlik: **Kırmızı reçete denetimi ve kontrollü kullanım**",
        "duzey": 1,
        "vurgu": [],
-       "slayt_adim": 17,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
@@ -4637,10 +4766,9 @@
          "Reçete Durumu Kırmızı Reçeteli"
         ],
         "sekil": null,
-        "adim": 17,
         "madde": [
          9,
-         4
+         3
         ]
        }
       }
@@ -4651,48 +4779,65 @@
      "sayfa": 53,
      "cumleler": [
       {
-       "id": "k2-07-c0159",
-       "ses": "Tabloda deksmedetomidinin piyasada Dekstomid, Dinesin, Hipnodex, Precedex, Prexodin, Provenix, Sedadomid ve Semotidin adlarıyla, çoğunlukla iki yüz mikrogram bölü iki mililitrelik flakon olarak bulunduğu görülür.",
-       "ekran": "Müstahzarlar: Dekstomid, Dinesin, Hipnodex, **Precedex**, Prexodin, Provenix, Sedadomid, Semotidin",
+       "id": "k2-07-c0168",
+       "ses": "Tabloda deksmedetomidinin Türkiye pazarında Dekstomid, Dinesin, Precedex, Hipnodex ve Sedadomid gibi çok sayıda farklı ticari isim altında satışa sunulduğu listelenmiştir.",
+       "ekran": "Piyasadaki müstahzarlar: **Dekstomid, Precedex ve Dinesin flakonları**",
        "duzey": 0,
        "vurgu": [],
-       "slayt_adim": 17,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 53,
         "satir": [
-         "DEKSTOMİD 200 MCG / 2 ML",
-         "HIPNODEX 200 MCG",
-         "PRECEDEX 200 MCG 2 ML 5 FLAKON"
+         "DEKSTOMİD 200 MCG / 2 ML 1.V. KONSANTRE İNFÜZYON"
         ],
-        "sekil": "deksmedetomidin müstahzar listesi ekran görüntüsü",
-        "adim": 17,
-        "resim": 0,
+        "sekil": "Deksmedetomidin içeren müstahzarların firma ve fiyat listesi ekran görüntüsü",
         "madde": [
-         4,
-         0
+         0,
+         2
+        ],
+        "resim": 0
+       }
+      },
+      {
+       "id": "k2-07-c0169",
+       "ses": "Deksmedetomidinin en önemli klinik avantajı solunum merkezini baskılamamasıdır; mekanik ventilatördeki hasta istendiğinde sesli komutla kolayca uyandırılıp kooperasyon kurabilir.",
+       "ekran": "Yoğun bakım endikasyonu: **Kooperatif sedasyon ve solunum emniyeti**",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "ÇÖZELTİSİ İÇEREN FLAKON (5 FLAKON) hkt - küb"
+        ],
+        "sekil": null,
+        "madde": [
+         0,
+         3
         ]
        }
       },
       {
-       "id": "k2-07-c0160",
-       "ses": "Bu liste, aynı etken maddenin çok sayıda farklı ticari adla satıldığını gösterir.",
-       "ekran": "Aynı etken maddenin çok sayıda ticari adı var",
+       "id": "k2-07-c0170",
+       "ses": "İnfüzyon başlangıcında geçici periferik vazokonstrüksiyonla hipertansiyon, ardından santral sempatolitik etkiyle bradikardi ve hipotansiyon gelişebileceğinden devamlı nabız ve tansiyon takibi şarttır.",
+       "ekran": "Hemodinamik takip: **Bradikardi ve kan basıncı dalgalanması**",
        "duzey": 1,
        "vurgu": [],
-       "slayt_adim": 17,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 53,
         "satir": [
-         "SEDADOMID 200 MCG/2 ML IV KONSANTRE INFUZYON"
+         "DEKSTOMİD 200 MCG / 2 ML 1.V. KONSANTRE İNFÜZYON"
         ],
         "sekil": null,
-        "adim": 17,
         "madde": [
-         7,
+         0,
          2
         ]
        }
@@ -4704,7 +4849,7 @@
      "sayfa": 54,
      "cumleler": [
       {
-       "id": "k2-07-c0161",
+       "id": "k2-07-c0171",
        "ses": "Opioidler genel anestezik ve hipnotiklerden farklı olarak analjezik ajanlardır; yüksek dozlarda bile benzodiazepin kullanılmadıkça yeterli amnezi oluşturmazlar.",
        "ekran": "Opioid **analjeziktir**; BZD olmadan **yeterli amnezi yok**",
        "duzey": 0,
@@ -4732,7 +4877,7 @@
        }
       },
       {
-       "id": "k2-07-c0162",
+       "id": "k2-07-c0172",
        "ses": "Postoperatif analjezi için ve intraoperatif dengeli anestezinin parçası olarak kullanılırlar.",
        "ekran": "Postoperatif analjezi; **dengeli anestezinin** parçası",
        "duzey": 0,
@@ -4755,7 +4900,7 @@
        }
       },
       {
-       "id": "k2-07-c0163",
+       "id": "k2-07-c0173",
        "ses": "Sentetik opioidlerden fentanil genel anestezide intravenöz indüksiyon ve analjezi amacıyla sık kullanılır ve bu bilgi çıkmışta soruldu; ancak yüksek dozlarda larinks ve göğüs duvarı rijiditesi yaparak mekanik ventilasyonu bozarlar ve tolerans oluştururlar.",
        "ekran": "Yüksek doz: **göğüs duvarı rijiditesi**, tolerans",
        "duzey": 0,
@@ -4795,7 +4940,7 @@
      "sayfa": 55,
      "cumleler": [
       {
-       "id": "k2-07-c0164",
+       "id": "k2-07-c0174",
        "ses": "Görüntüde yer alan kırmızı reçete listesinde dil altı fentanil Abstral, oromukozal fentanil Actiq ve transdermal fentanil Durogesic ile petidin Aldolan yer alır.",
        "ekran": "Kırmızı reçete: **fentanil** (Abstral, Actiq, Durogesic), **petidin** (Aldolan)",
        "duzey": 0,
@@ -4811,15 +4956,15 @@
         ],
         "sekil": "kırmızı reçete ilaç listesi ekran görüntüsü",
         "adim": 17,
-        "resim": 0,
         "madde": [
          3,
          6
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0165",
+       "id": "k2-07-c0175",
        "ses": "Petidinin kronik ağrı tedavisinde kullanımı kontrendikedir ve akut ağrıda beş günden uzun kullanılması uygun değildir; ayrıca üç aydan önce yeniden reçete edilemez.",
        "ekran": "**Petidin**: kronik ağrıda kontrendike; akut ağrıda **>5 gün** uygun değil",
        "duzey": 1,
@@ -4853,54 +4998,66 @@
      "sayfa": 56,
      "cumleler": [
       {
-       "id": "k2-07-c0166",
-       "ses": "Görüntüde belirtildiği üzere transdermal fentanil Durogesic reçetesinde yüz elli mikrogramlık miktar aşılmamak kaydıyla farklı dozlar bir arada yazılabilir ve reçete geçerli bir rapor yoksa on günden önce tekrarlanamaz.",
-       "ekran": "Durogesic: **150 mcg** sınırı; reçete **10 günden önce** tekrarlanamaz",
+       "id": "k2-07-c0176",
+       "ses": "Görüntüde güçlü sentetik opioid fentanil içeren transdermal terapötik sistem Durogesic flasterlerin kırmızı reçete azami doz ve kutu kısıtlama mevzuatı görülmektedir.",
+       "ekran": "Transdermal fentanil: **Durogesic yetmiş iki saatlik flaster**",
        "duzey": 0,
-       "vurgu": [
-        {
-         "metin": "10 günden önce",
-         "tur": "sayi"
-        }
-       ],
-       "slayt_adim": 17,
+       "vurgu": [],
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 56,
         "satir": [
-         "150 mcg'lik miktar aşılmamak kaydıyla, bir reçeteye bu ilacın farklı dozlar içeren miktarları yazılabilecektir.",
-         "önce tekrarlanamayacaktır."
+         "DUROGESIC 100 MCG 5 TTS FLASTER fentanyl 1 kutu"
         ],
-        "sekil": "fentanil reçete kuralları ekran görüntüsü",
-        "adim": 17,
-        "resim": 0,
+        "sekil": "Durogesic transdermal flaster ürün ambalajı ve kırmızı reçete azami doz tablosu",
         "madde": [
-         3,
-         13
+         0,
+         2
+        ],
+        "resim": 0
+       }
+      },
+      {
+       "id": "k2-07-c0177",
+       "ses": "Sağlık Bakanlığı kurallarına göre tek bir kırmızı reçetede yüz elli mikrogramlık flaster dozu aşılamaz ve geçerli bir sağlık kurulu raporu bulunmadıkça reçete on günden önce yenilenemez.",
+       "ekran": "Mevzuat kuralları: **Yüz elli mikrogram tavanı ve on gün kuralı**",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 56,
+        "satir": [
+         "DUROGESIC 100 MCG 5 TTS FLASTER fentanyl 1 kutu"
+        ],
+        "sekil": null,
+        "madde": [
+         0,
+         2
         ]
        }
       },
       {
-       "id": "k2-07-c0167",
-       "ses": "İntravenöz fentanil ampulleri ve bukkal fentanil Effentora da kırmızı reçeteye tabidir.",
-       "ekran": "İV fentanil ampulleri, **Effentora** da kırmızı reçeteli",
+       "id": "k2-07-c0178",
+       "ses": "Durogesic deride depo oluşturup yavaş salındığından akut ağrıda ve opioid kullanmamış bireylerde solunum arresti riski nedeniyle kesinlikle kontrendikedir; yalnızca kronik kanser ağrısında kullanılır.",
+       "ekran": "Kritik kontrendikasyon: **Akut postoperatif ağrıda flaster yasağı**",
        "duzey": 1,
        "vurgu": [],
-       "slayt_adim": 17,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 56,
         "satir": [
-         "EFFENTORA 100 MCG BUKKAL TABLET (28 TABLET) fentanyl 1 kutu",
-         "FENTANYL 0,05 MG/ML 10 ML IV 50 AMPUL"
+         "DUROGESIC 100 MCG 5 TTS FLASTER fentanyl 1 kutu"
         ],
         "sekil": null,
-        "adim": 17,
         "madde": [
-         12,
-         14
+         0,
+         2
         ]
        }
       }
@@ -4911,41 +5068,55 @@
      "sayfa": 57,
      "cumleler": [
       {
-       "id": "k2-07-c0168",
-       "ses": "Görüntüde morfin müstahzarları M Eslon ve Morfia için kırmızı reçetede belirtilen maksimal dozların on günlük dozu ifade ettiği ve reçetenin on günden önce tekrarlanamayacağı görülür.",
-       "ekran": "Morfin (**M-Eslon, Morfia**): maksimal doz = **10 günlük** doz",
+       "id": "k2-07-c0179",
+       "ses": "Kırmızı reçete listesinde doğal afyon alkaloidi morfin içeren Morfia ve M-Eslon kapsüller ile santral sempatomimetik metilfenidat içeren Medikinet preparatları yer alır.",
+       "ekran": "Oral morfin ve metilfenidat: **Kontrollü salımlı preparatlar**",
        "duzey": 0,
-       "vurgu": [
-        {
-         "metin": "10 günlük",
-         "tur": "sayi"
-        }
-       ],
-       "slayt_adim": 17,
+       "vurgu": [],
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 57,
         "satir": [
-         "Maksimal dozlar, kırmızı reçeteye yazılabilecek 10 günlük dozu ifade eder.",
-         "10 günden önce reçete tekrarlanamaz."
+         "MORFIA 15 MG 30 TABLET morphine 6 kutu 10 günden önce reçete tekrarlanamaz."
         ],
-        "sekil": "morfin ve metilfenidat reçete listesi ekran görüntüsü",
-        "adim": 17,
-        "resim": 0,
+        "sekil": "Morfia morfin tablet ve Medikinet metilfenidat kutu görselleri",
         "madde": [
-         38,
-         40
+         39,
+         41
+        ],
+        "resim": 0
+       }
+      },
+      {
+       "id": "k2-07-c0180",
+       "ses": "Morfin tabletlerde reçeteye yazılabilecek maksimal miktar on günlük tedavi dozunu ifade eder ve suiistimal ile bağımlılık riskini engellemek için reçete on günden önce tekrarlanamaz.",
+       "ekran": "Morfin azami kotaları: **On günlük doz ve suistimal kontrolü**",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 57,
+        "satir": [
+         "M-ESLON 10 MG 21 MIKROPELLET KAPSUL morphine 12 kutu"
+        ],
+        "sekil": null,
+        "madde": [
+         25,
+         28
         ]
        }
       },
       {
-       "id": "k2-07-c0169",
-       "ses": "Aynı listede Medikinet gibi metilfenidat müstahzarları da kırmızı reçeteli ilaçlar arasında yer alır.",
-       "ekran": "Metilfenidat (**Medikinet**) da listede",
+       "id": "k2-07-c0181",
+       "ses": "Dikkat eksikliği ve narkolepside kullanılan metilfenidat ise raporsuz durumlarda yalnızca erişkin veya çocuk psikiyatristleri tarafından günde en fazla altmış miligram kotasıyla yazılabilir.",
+       "ekran": "Metilfenidat protokolü: **Yalnızca psikiyatri uzmanı reçetesi**",
        "duzey": 1,
        "vurgu": [],
-       "slayt_adim": 17,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
@@ -4954,7 +5125,6 @@
          "MEDIKINET 10 MG 30 TABLET"
         ],
         "sekil": null,
-        "adim": 17,
         "madde": [
          0,
          20
@@ -4968,53 +5138,66 @@
      "sayfa": 58,
      "cumleler": [
       {
-       "id": "k2-07-c0170",
-       "ses": "Görüntüde morfin hidroklorür ampullerinde maksimal dozların beş günlük dozu ifade ettiği ve gerekçeli rapor yoksa reçetenin beş günden önce tekrarlanamayacağı görülür.",
-       "ekran": "Morfin HCl ampul: **5 günlük** doz",
+       "id": "k2-07-c0182",
+       "ses": "Cerrahi anestezide damar yoluyla uygulanan kısa etkili sentetik opioidlerden alfentanil Rapifen, remifentanil ise Rentanil adıyla liyofilize toz flakonlar halinde kırmızı reçeteye tabidir.",
+       "ekran": "Parenteral sentetik opioidler: **Rapifen alfentanil ve Rentanil remifentanil**",
        "duzey": 0,
-       "vurgu": [
-        {
-         "metin": "5 günlük",
-         "tur": "sayi"
-        }
-       ],
-       "slayt_adim": 17,
+       "vurgu": [],
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 58,
         "satir": [
-         "Maksimal dozlar, kırmızı reçeteye yazılabilecek 5 günlük dozu ifade eder."
+         "RAPIFEN 0,5 MG 10 ML 5 AMPUL"
         ],
-        "sekil": "opioid reçete listesi ekran görüntüsü",
-        "adim": 17,
-        "resim": 0,
+        "sekil": "Rapifen ve Rentanil enjeksiyonluk preparatların ambalajları ve kırmızı reçete kotaları",
         "madde": [
-         3,
-         4
+         23,
+         10
+        ],
+        "resim": 0
+       }
+      },
+      {
+       "id": "k2-07-c0183",
+       "ses": "Remifentanil kanda ve dokularda nonspesifik esterazlar tarafından saniyeler içinde parçalanır; karaciğer ve böbrek fonksiyonlarından bağımsız olarak infüzyon kesilince etkisi hızla kaybolur.",
+       "ekran": "Kısa etki farmakokinetiği: **Plazma esteraz yıkımı ve birikmeme özelliği**",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 58,
+        "satir": [
+         "RENTANIL 2 MG ENJEKSIYONLUK LIYOFILIZE TOZ ICEREN FLAKON remifentanil 1 kutu"
+        ],
+        "sekil": null,
+        "madde": [
+         23,
+         2
         ]
        }
       },
       {
-       "id": "k2-07-c0171",
-       "ses": "Oksikodon, petidin, alfentanil yani Rapifen ve remifentanil yani Rentanil de kırmızı reçeteli ilaçlardır.",
-       "ekran": "Oksikodon, petidin, **alfentanil (Rapifen)**, **remifentanil (Rentanil)**",
+       "id": "k2-07-c0184",
+       "ses": "Morfin hidroklorür ampullerde maksimal miktar beş günlük dozu geçemez; kronik kullanımda tolerans ve fiziksel bağımlılık gelişebileceğinden gerekçeli rapor aranır.",
+       "ekran": "Parenteral morfin ampul: **Akut ağrıda beş günlük reçete sınırı**",
        "duzey": 1,
        "vurgu": [],
-       "slayt_adim": 17,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 58,
         "satir": [
-         "RAPIFEN 0,5 MG 2 MLS AMPUL alfentanil 1 kutu",
-         "RENTANIL 2 MG ENJEKSIYONLUK LIYOFILIZE TOZ ICEREN FLAKON remifentanil 1 kutu"
+         "RITALIN 10 MG 30 TABLET"
         ],
         "sekil": null,
-        "adim": 17,
         "madde": [
-         23,
-         17
+         24,
+         31
         ]
        }
       }
@@ -5025,49 +5208,66 @@
      "sayfa": 59,
      "cumleler": [
       {
-       "id": "k2-07-c0172",
-       "ses": "Görüntüde buprenorfin ve nalokson kombinasyonu Suboxone, sufentanil yani Sufenta, fentanil yani Talinat ve remifentanil yani Ultiva kırmızı reçete listesinde görülür.",
-       "ekran": "**Suboxone**, sufentanil **Sufenta**, fentanil **Talinat**, remifentanil **Ultiva**",
+       "id": "k2-07-c0185",
+       "ses": "Listede opioid bağımlılığı tedavisinde kullanılan Suboxone, en güçlü opioid sufentanil yani Sufenta, fentanil yani Talinat, remifentanil yani Ultiva ve sodyum oksibat yani Xyrem yer almaktadır.",
+       "ekran": "Özel kontrollü preparatlar: **Suboxone, Sufenta, Talinat, Ultiva ve Xyrem**",
        "duzey": 0,
        "vurgu": [],
-       "slayt_adim": 17,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 59,
         "satir": [
-         "SUFENTA 5 MCG/10 MLS AMPUL sufentanil 1 kutu",
-         "TALINAT 0,1MG/2ML 10 AMPUL fentanyl 1kutu",
-         "ULTIVA 2 MG 5 FLAKON remifentanil 1 kutu"
+         "SUBOXONE 2 MG/0,5 MG 28 DILALTI TABLET buprenorphine, 6 kutu ayaklar ve yatarak erişkin ve socu ergen madde bağımlılığı tedavi"
         ],
-        "sekil": "kırmızı reçete listesi ekran görüntüsü",
-        "adim": 17,
-        "resim": 0,
+        "sekil": "Suboxone dil altı tablet, Ultiva flakon ve Xyrem solüsyon ürün kutuları",
         "madde": [
-         17,
-         4
+         0,
+         10
+        ],
+        "resim": 0
+       }
+      },
+      {
+       "id": "k2-07-c0186",
+       "ses": "Suboxone içinde buprenorfin mü reseptörünü kısmi uyararak yoksunluğu önlerken; ezilip damardan enjekte edilmesini engellemek için formüle eklenen nalokson suiistimale karşı koruyucu kilit işlevi görür.",
+       "ekran": "Suboxone formülü: **Buprenorfin kısmi agonisti ve nalokson kilidi**",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 59,
+        "satir": [
+         "SUBOXONE 2 MG/0,5 MG 28 DILALTI TABLET buprenorphine, 6 kutu ayaklar ve yatarak erişkin ve socu ergen madde bağımlılığı tedavi"
+        ],
+        "sekil": null,
+        "madde": [
+         0,
+         12
         ]
        }
       },
       {
-       "id": "k2-07-c0173",
-       "ses": "Sodyum oksibat yani Xyrem de bu listede yer alır.",
-       "ekran": "Sodyum oksibat (**Xyrem**)",
+       "id": "k2-07-c0187",
+       "ses": "Sodyum oksibat yani Xyrem, gaba b ve özel g ha be reseptörlerini aktive ederek narkolepsiye bağlı katapleksiyi tedavi eder; sedatif suistimal riski nedeniyle üç uzman hekimli rapor ve onam formuyla verilir.",
+       "ekran": "Xyrem protokolü: **Narkolepsi ve kataplekside sıkı hasta onamı**",
        "duzey": 1,
        "vurgu": [],
-       "slayt_adim": 17,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 59,
         "satir": [
-         "XYREM ORAL ÇÖZELTİ 500 MG/ML."
+         "hastaya eczanede \"Xyrem için Bilgilendirilmiş Hasta Onam Formu\" eşliğinde"
         ],
         "sekil": null,
-        "adim": 17,
         "madde": [
-         31,
-         37
+         37,
+         12
         ]
        }
       }
@@ -5078,37 +5278,54 @@
      "sayfa": 60,
      "cumleler": [
       {
-       "id": "k2-07-c0174",
-       "ses": "Görüntüde listenin sonunda etil morfin yani dionin, kodein, kodein fosfat ve afyon tozu için kırmızı reçeteye yazılabilecek maksimal dozlar verilmiştir.",
-       "ekran": "Dionin, **kodein**, kodein fosfat, afyon tozu için maksimal doz",
+       "id": "k2-07-c0188",
+       "ses": "Kırmızı reçete mevzuatının sonunda doğal afyon alkaloidi türevlerinden etil morfin yani dionin, kodein, kodein fosfat ve saf afyon tozu için yazılabilecek azami dozlar belirtilmiştir.",
+       "ekran": "Afyon türevleri kotası: **Dionin, kodein, kodein fosfat ve afyon tozu**",
        "duzey": 0,
        "vurgu": [],
-       "slayt_adim": 17,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 60,
         "satir": [
-         "DİONİN (ETİL MORFİN) dionine (ethylmorphine) 375 mg",
-         "KODEİN codeine 1000 mg",
-         "OPİUM TOZU poudre d'opium 1250 mg"
+         "DİONİN (ETİL MORFİN) dionine (ethylmorphine) 375 mg"
         ],
-        "sekil": "zayıf opioid reçete listesi ekran görüntüsü",
-        "adim": 17,
-        "resim": 0,
+        "sekil": "Kırmızı reçete tablosunun son bölümü: kodein, etil morfin ve opium tozu maksimum miktarları",
         "madde": [
          0,
          2
+        ],
+        "resim": 0
+       }
+      },
+      {
+       "id": "k2-07-c0189",
+       "ses": "Kodein zayıf bir ön ilaç olup analjezik etkisini karaciğerde sitokrom iki de altı enzimiyle morfine dönüşerek gösterir; genetik olarak aşırı hızlı metabolizörlerde kanda tehlikeli morfin birikimi olabilir.",
+       "ekran": "Metabolik dönüşüm: **Karaciğer CYP2D6 enzimi ile morfine aktivasyon**",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 60,
+        "satir": [
+         "KODEİN codeine 1000 mg"
+        ],
+        "sekil": null,
+        "madde": [
+         0
         ]
        }
       },
       {
-       "id": "k2-07-c0175",
-       "ses": "Bu liste iki bin yirmi bir yılının şubat ayında güncellenmiştir.",
-       "ekran": "Liste güncelleme: **03.02.2021**",
+       "id": "k2-07-c0190",
+       "ses": "Bu müstahzarlar aksi gerekçeli raporda belirtilmedikçe en fazla on günlük tedavi için yazılabilir ve iki bin yirmi bir yılındaki düzenlemeyle bukkal fentanil formları da kırmızı reçete kapsamına alınmıştır.",
+       "ekran": "Mevzuat ve reçete süresi: **On günlük azami kota ve Effentora güncellemesi**",
        "duzey": 1,
        "vurgu": [],
-       "slayt_adim": 17,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
@@ -5117,7 +5334,6 @@
          "Güncellenme Tarihi: 03.02.2021"
         ],
         "sekil": null,
-        "adim": 17,
         "madde": [
          6,
          7
@@ -5131,12 +5347,12 @@
      "sayfa": 61,
      "cumleler": [
       {
-       "id": "k2-07-c0176",
-       "ses": "Görüntüde Amanita muscaria mantarının fotoğrafı yer alır.",
-       "ekran": "**Amanita muscaria** fotoğrafı",
+       "id": "k2-07-c0191",
+       "ses": "Slaytta kırmızı şapkası ve beyaz benekleriyle tanınan Amanita muscaria mantarı görülmektedir; bu mantar tıp tarihinde santral sinir sistemini etkileyen doğal toksik ve sedatif maddelere klasik örnektir.",
+       "ekran": "Doğal sedatif ve toksin: **Amanita muscaria sinek mantarı**",
        "duzey": 0,
        "vurgu": [],
-       "slayt_adim": 17,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
@@ -5144,21 +5360,41 @@
         "satir": [
          "Amanita muscaria"
         ],
-        "sekil": "kırmızı şapkalı, beyaz benekli Amanita muscaria mantarı fotoğrafı",
-        "adim": 17,
-        "resim": 0,
+        "sekil": "Amanita muscaria kırmızı şapkalı beyaz benekli sinek mantarı fotoğrafı",
         "madde": [
          0
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0177",
-       "ses": "Kırmızı şapkalı, beyaz benekli bu mantar doğal psikoaktif maddelere bir örnek olarak gösterilmiştir.",
-       "ekran": "Doğal psikoaktif madde örneği",
+       "id": "k2-07-c0192",
+       "ses": "Mantarın temel aktif bileşenleri muskimol ve ibotenik asittir; muskimol beyinde gaba a reseptörlerini doğrudan uyararak genel anesteziklere benzer derin santral depresyon ve sedasyon oluşturur.",
+       "ekran": "Aktif nörotoksinler: **Muskimol GABA agonisti ve ibotenik asit**",
        "duzey": 1,
        "vurgu": [],
-       "slayt_adim": 17,
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 61,
+        "satir": [
+         "Amanita muscaria"
+        ],
+        "sekil": "Amanita muscaria mantarının orman zeminindeki doğal morfolojik görüntüsü",
+        "madde": [
+         0
+        ],
+        "resim": 0
+       }
+      },
+      {
+       "id": "k2-07-c0193",
+       "ses": "Yutulduğunda önce konfüzyon, ajitasyon ve görsel halüsinasyonlar, ardından ataksi, kas seğirmeleri ve derin dissosiyatif koma tablosu geliştirir; modern anestezik ilaçların reseptör araştırmalarına ışık tutmuştur.",
+       "ekran": "Toksikolojik klinik tablo: **Halüsinasyonlar, ataksi ve dissosiyatif koma**",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
@@ -5167,7 +5403,6 @@
          "Amanita muscaria"
         ],
         "sekil": null,
-        "adim": 17,
         "madde": [
          0
         ],
@@ -5191,7 +5426,7 @@
      "sayfa": 62,
      "cumleler": [
       {
-       "id": "k2-07-c0178",
+       "id": "k2-07-c0194",
        "ses": "Tabloda intravenöz anesteziklerin indüksiyon ve uyanma hızları ile ayırt edici özellikleri karşılaştırılır; etomidatın indüksiyonu ve uyanması hızlıdır, kardiyovasküler sistem stabil kalır, adrenokortikal supresyon ve indüksiyonda miyokloni yapar.",
        "ekran": "Tablo 25.2 — **etomidat**: hızlı, KVS stabil, adrenokortikal supresyon, miyokloni",
        "duzey": 0,
@@ -5207,15 +5442,15 @@
         ],
         "sekil": "Tablo 25.2 intravenöz anestezikleri karşılaştırma tablosu",
         "adim": 18,
-        "resim": 0,
         "madde": [
          1,
          5
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0179",
+       "id": "k2-07-c0195",
        "ses": "Fentanilin indüksiyonu ve uyanması yavaştır, etkileri naloksonla geri çevrilir, analjezik etkisi güçlüdür ve dengeli anestezi ile bilinçli sedasyonda kullanılır; ketamin ise kardiyovasküler sistemi uyarır, serebral kan akımını artırır ve uyanmada sorunlar yaşatabilir.",
        "ekran": "**Fentanil**: yavaş, **naloksonla** geri döner; **ketamin**: KVS uyarır, serebral kan akımı ↑",
        "duzey": 0,
@@ -5243,7 +5478,7 @@
        }
       },
       {
-       "id": "k2-07-c0180",
+       "id": "k2-07-c0196",
        "ses": "Midazolamın indüksiyonu ve uyanması yavaştır, etkisi flumazenille geri çevrilir ve antegrad amnezi yapar; propofolün indüksiyonu ve uyanması hızlıdır, hipotansiyon yapabilir ve antiemetiktir; tiyopental bolus dozla hızlı olan standart indüksiyon ajanıdır, idamede kullanılırsa uyanma yavaşlar ve porfiride kullanılmamalıdır.",
        "ekran": "**Midazolam**: flumazenil; **propofol**: hızlı, antiemetik; **tiyopental**: standart indüksiyon, porfiride kullanılmaz",
        "duzey": 0,
@@ -5267,7 +5502,7 @@
        }
       },
       {
-       "id": "k2-07-c0181",
+       "id": "k2-07-c0197",
        "ses": "Tabloda ayrıca tiyopentalin standart indüksiyon ajanı olduğu ve kısa işlemler dışında idamede tercih edilmediği, etomidatın ise kardiyovasküler stabilite sağlarken istemsiz kas hareketlerine yol açabildiği görülür.",
        "ekran": "Tablo 25.2 özeti: **tiyopental** standart indüksiyon ajanı; **etomidat** hemodinamik olarak stabil",
        "duzey": 1,
@@ -5292,11 +5527,11 @@
         ],
         "sekil": "Tablo 25.2 intravenöz anestezikleri karşılaştırma tablosu",
         "adim": 18,
-        "resim": 0,
         "madde": [
          8,
          1
-        ]
+        ],
+        "resim": 0
        }
       }
      ]
@@ -5306,7 +5541,7 @@
      "sayfa": 63,
      "cumleler": [
       {
-       "id": "k2-07-c0182",
+       "id": "k2-07-c0198",
        "ses": "Tabloda intravenöz anesteziklerin kullanım amacına ve uygulama yoluna göre erişkin ve çocuk doz aralıkları listelenir; aynı ilacın indüksiyon, idame, sedasyon ya da analjezi için dozu farklıdır.",
        "ekran": "Tablo 25.3: amaç ve yola göre **erişkin ve çocuk doz** aralıkları",
        "duzey": 0,
@@ -5321,15 +5556,15 @@
         ],
         "sekil": "Tablo 25.3 intravenöz anestezik doz tablosu",
         "adim": 18,
-        "resim": 0,
         "madde": [
          2,
          0
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0183",
+       "id": "k2-07-c0199",
        "ses": "Diğerleri bölümünde droperidol premedikasyonda kas içine kilogram başına sıfır virgül sıfır dört ile sıfır virgül sıfır yedi miligram, sedasyonda damar içine sıfır virgül sıfır iki ile sıfır virgül sıfır yedi miligram, antiemetik olarak sıfır virgül sıfır beş miligram, en çok iki buçuk miligram verilir; bu tabloda midazolam yer almaz.",
        "ekran": "**Droperidol**: premedikasyon İM 0,04–0,07 mg/kg, sedasyon İV 0,02–0,07 mg/kg, antiemetik 0,05 mg/kg (en çok 2,5 mg)",
        "duzey": 1,
@@ -5357,7 +5592,7 @@
        }
       },
       {
-       "id": "k2-07-c0184",
+       "id": "k2-07-c0200",
        "ses": "Propofol indüksiyonda kilogram başına bir ile iki buçuk miligram, idamede dakikada kilogram başına elli ile iki yüz mikrogram, sedasyonda yirmi beş ile yüz mikrogram verilir; tablonun dipnotuna göre iki yaşın altındaki çocuklarda kullanılması önerilmez.",
        "ekran": "Propofol: indüksiyon **1–2,5 mg/kg**, idame 50–200 µg/kg/dk; **2 yaş altında önerilmez**",
        "duzey": 1,
@@ -5391,7 +5626,7 @@
      "sayfa": 63,
      "cumleler": [
       {
-       "id": "k2-07-c0185",
+       "id": "k2-07-c0201",
        "ses": "Tiyopental bu tabloda indüksiyon için kilogram başına üç ile altı miligram, sedasyon için sıfır virgül beş ile bir buçuk miligram olarak verilir; tiyopental sayfasındaki beş ile yedi miligramlık doz ise yüzde bir ile iki buçukluk solüsyon için yazılmıştır.",
        "ekran": "Tiyopental: Tablo 25.3'te indüksiyon **3–6 mg/kg**, sedasyon 0,5–1,5 mg/kg; s.35'te 5–7 mg/kg",
        "duzey": 1,
@@ -5417,7 +5652,7 @@
        "spot": null
       },
       {
-       "id": "k2-07-c0186",
+       "id": "k2-07-c0202",
        "ses": "Opioid bölümünde fentanil anestezi için kilogram başına iki ile yüz elli, analjezi için sıfır virgül beş ile bir buçuk mikrogram, sufentanil anestezi için sıfır virgül yirmi beş ile otuz mikrogram verilir; alfentanilin indüksiyon dozu sekiz ile yüz mikrogramdır.",
        "ekran": "Fentanil anestezi 2–150, **analjezi 0,5–1,5 µg/kg**; sufentanil 0,25–30 µg/kg; alfentanil indüksiyon 8–100 µg/kg",
        "duzey": 1,
@@ -5443,7 +5678,7 @@
        "spot": null
       },
       {
-       "id": "k2-07-c0187",
+       "id": "k2-07-c0203",
        "ses": "Remifentanilde yükleme dozu kilogram başına bir mikrogram, idame dakikada sıfır virgül beş ile yirmi mikrogramdır; morfin ve meperidinin dozları ise mikrogram değil miligramla yazılır, örneğin morfin premedikasyonda kas içine sıfır virgül sıfır beş ile sıfır virgül iki miligram verilir.",
        "ekran": "Remifentanil: yükleme **1 µg/kg**, idame 0,5–20 µg/kg/dk; morfin ve meperidin **mg/kg** ile",
        "duzey": 1,
@@ -5475,37 +5710,59 @@
      "sayfa": 64,
      "cumleler": [
       {
-       "id": "k2-07-c0188",
-       "ses": "Görüntüde midazolam flakonları, Dormicum ampul kutuları, Diazem kapsül, ketamin hidroklorür flakonu ve rektal Diazepam Desitin tüpünün ambalaj fotoğrafları gösterilir.",
-       "ekran": "Ambalajlar: midazolam, **Dormicum**, Diazem, ketamin, rektal Diazepam Desitin",
+       "id": "k2-07-c0204",
+       "ses": "Slaytta klinik pratikte en sık başvurulan intravenöz ve rektal anestezik müstahzarlar olan midazolam flakonu, Dormicum ampulü, Diazem kapsülü ve ketamin hidroklorür şişesi sergilenmektedir.",
+       "ekran": "Klinik formülasyonlar: **Midazolam, Dormicum, Diazem ve Ketamin flakonları**",
        "duzey": 0,
        "vurgu": [],
-       "slayt_adim": 19,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 64,
         "satir": [],
-        "sekil": "midazolam, Dormicum, Diazem, ketamin ve rektal diazepam ambalaj fotoğrafları",
-        "adim": 19,
+        "sekil": "Midazolam, Dormicum ampul, Diazem ve Ketamin flakon ürün fotoğrafları",
+        "madde": [
+         0
+        ],
         "resim": 0
        }
       },
       {
-       "id": "k2-07-c0189",
-       "ses": "Görselden çıkan sonuç, midazolam ve diazepamın hem parenteral hem rektal formlarının bulunmasıdır.",
-       "ekran": "Midazolam ve diazepamın **rektal formu** var",
-       "duzey": 0,
+       "id": "k2-07-c0205",
+       "ses": "Görseldeki Diazepam Desitin rektal tüpü; damar yolu açılamayan pediatrik hastalarda status epileptikus nöbetini durdurmak veya cerrahi öncesi sedasyon sağlamak için rektal yoldan hızla uygulanır.",
+       "ekran": "Rektal acil uygulama: **Diazepam Desitin rektal tüp jel**",
+       "duzey": 1,
        "vurgu": [],
-       "slayt_adim": 19,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 64,
         "satir": [],
-        "sekil": "rektal Diazepam Desitin tüpü",
-        "adim": 19,
+        "sekil": "Diazepam Desitin rektal tüp aplikatörü ve ambalajı",
+        "madde": [
+         0
+        ],
         "resim": 0
+       }
+      },
+      {
+       "id": "k2-07-c0206",
+       "ses": "Bu ilaçların hem enjeksiyonluk ampul hem oral kapsül hem de rektal jel formlarının bulunması, hekime ameliyathane, acil servis ve yoğun bakım ortamında büyük bir uygulama esnekliği kazandırır.",
+       "ekran": "Uygulama esnekliği: **Parenteral, oral ve rektal seçenekler**",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 64,
+        "satir": [],
+        "sekil": null,
+        "madde": [
+         0
+        ]
        }
       }
      ]
@@ -5515,36 +5772,34 @@
      "sayfa": 65,
      "cumleler": [
       {
-       "id": "k2-07-c0190",
-       "ses": "Midazolam Midolam on beş miligram bölü üç mililitre, Dormicum elli miligram bölü on mililitre ve Sedozolam beş miligram bölü beş mililitre ampuller hâlinde bulunur.",
-       "ekran": "Midazolam: **Midolam**, **Dormicum**, **Sedozolam** ampulleri",
+       "id": "k2-07-c0207",
+       "ses": "Midazolam Türkiye'de Midolam on beş miligram bölü üç mililitre, Dormicum elli miligram bölü on mililitre ve Sedozolam beş miligramlık enjeksiyonluk ampul formlarıyla bulunmaktadır.",
+       "ekran": "Midazolam müstahzarları: **Midolam, Dormicum ve Sedozolam ampulleri**",
        "duzey": 0,
        "vurgu": [],
-       "slayt_adim": 19,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 65,
         "satir": [
-         "MİDOLAM 15 mg/3 ml IM/IV/rektal çözelti içeren ampul",
-         "DORMICUM 50 mg/10 ml iv çözelti içeren ampul"
+         "❖MİDOLAM 15 mg/3 ml IM/IV/rektal çözelti içeren ampul"
         ],
-        "sekil": "midazolam ampul listesi",
-        "adim": 19,
-        "resim": 0,
+        "sekil": "Midolam, Dormicum ve Sedozolam ampul ve kutu görselleri",
         "madde": [
          0,
-         1
-        ]
+         2
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0191",
-       "ses": "Midazolam damar veya kas içine ya da rektal olarak uygulanır.",
-       "ekran": "Damar, kas içi ya da **rektal**",
+       "id": "k2-07-c0208",
+       "ses": "Midazolam çözeltisi damar içine yavaş enjeksiyonla, kas içine enjeksiyonla veya rektal yolla uygulanabilir; suda erir yapısı sayesinde kas içi enjeksiyonda diazepam gibi doku nekrozu veya ağrı yapmaz.",
+       "ekran": "Çoklu uygulama yolları: **İntravenöz, intramüsküler ve rektal yol**",
        "duzey": 1,
        "vurgu": [],
-       "slayt_adim": 19,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
@@ -5553,9 +5808,29 @@
          "Damar veya kas içine ya da rektal olarak uygulanır."
         ],
         "sekil": null,
-        "adim": 19,
         "madde": [
          3,
+         2
+        ]
+       }
+      },
+      {
+       "id": "k2-07-c0209",
+       "ses": "Hızlı başlangıçlı ve kısa etki süreli bir benzodiazepin olduğundan endoskopi, kolonoskopi ve günübirlik cerrahi girişimlerde hastada anksiyoliz ve güçlü antegrad amnezi oluşturmak için ilk tercihtir.",
+       "ekran": "Klinik kullanım: **Bilinçli sedasyon ve günübirlik cerrahi**",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 65,
+        "satir": [
+         "❖SEDOZOLAM 5 mg/5 ml IM/IV/rektal enjeksiyonluk çözelti içeren ampul Steril"
+        ],
+        "sekil": null,
+        "madde": [
+         2,
          0
         ]
        }
@@ -5567,7 +5842,7 @@
      "sayfa": 66,
      "cumleler": [
       {
-       "id": "k2-07-c0192",
+       "id": "k2-07-c0210",
        "ses": "Tabloda ajite hastada midazolam, olanzapin, ziprasidon ve haloperidolün on beşinci dakikada yeterli sedasyon oranları ikili olarak karşılaştırılır.",
        "ekran": "Tablo 3: ajitasyonda 15. dakikada **yeterli sedasyon** karşılaştırması",
        "duzey": 0,
@@ -5582,15 +5857,15 @@
         ],
         "sekil": "ajite hastada sedasyon oranlarının ikili karşılaştırma tablosu",
         "adim": 19,
-        "resim": 0,
         "madde": [
          0,
          1
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0193",
+       "id": "k2-07-c0211",
        "ses": "Midazolam, haloperidol beş miligrama göre yüzde otuz daha fazla yeterli sedasyon sağlamıştır, güven aralığı yüzde on dokuz ile kırk bir arasındadır; yani ajitasyonda midazolam hızlı sedasyon sağlar.",
        "ekran": "Midazolam vs haloperidol 5 mg: **%30** daha fazla yeterli sedasyon",
        "duzey": 1,
@@ -5622,7 +5897,7 @@
      "sayfa": 67,
      "cumleler": [
       {
-       "id": "k2-07-c0194",
+       "id": "k2-07-c0212",
        "ses": "Tabloda aynı çalışmanın advers olay verileri olarak midazolam, olanzapin, ziprasidon ve haloperidol gruplarında ekstrapiramidal, kardiyovasküler ve solunumsal yan etkiler karşılaştırılır.",
        "ekran": "Tablo 4: **advers olaylar** karşılaştırması",
        "duzey": 0,
@@ -5637,15 +5912,15 @@
         ],
         "sekil": "advers olay karşılaştırma tablosu",
         "adim": 19,
-        "resim": 0,
         "madde": [
          0,
          2
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0195",
+       "id": "k2-07-c0213",
        "ses": "Midazolam grubunda distoni, akatizi, bradikardi ve torsades de pointes görülmedi; hipotansiyon, hipoksemi ve entübasyon seyrek bildirildi, distoni ise yalnız haloperidol on miligram grubunda iki hastada görüldü.",
        "ekran": "Midazolam: **distoni, akatizi, bradikardi, torsades yok**; hipotansiyon, hipoksemi, entübasyon seyrek",
        "duzey": 1,
@@ -5678,7 +5953,7 @@
      "sayfa": 68,
      "cumleler": [
       {
-       "id": "k2-07-c0196",
+       "id": "k2-07-c0214",
        "ses": "Görüntüde yer alan ilaç veri tabanı sayfasında midazolam; anksiyolitik, kas gevşetici, antikonvülsan, sedatif, hipnotik ve amnezik özellikleri olan kısa etkili bir benzodiazepin olarak tanımlanır ve hızlı başlangıcıyla sınıfından ayrılır.",
        "ekran": "Midazolam: kısa etkili BZD; **hızlı başlangıç, kısa süre**",
        "duzey": 0,
@@ -5693,15 +5968,15 @@
         ],
         "sekil": "midazolam ilaç veri tabanı sayfası",
         "adim": 19,
-        "resim": 0,
         "madde": [
          1,
          2
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0197",
+       "id": "k2-07-c0215",
        "ses": "Oral, rektal, intranazal, kas içi ve damar içi yollarla verilebilir; diş hekimliğinde, kalp cerrahisinde ve endoskopik işlemlerde preanestezik ilaç olarak ve lokal anesteziye ek olarak kullanılır.",
        "ekran": "Oral, rektal, **intranazal**, İM, İV; diş, kalp cerrahisi, **endoskopi**",
        "duzey": 1,
@@ -5729,45 +6004,65 @@
      "sayfa": 69,
      "cumleler": [
       {
-       "id": "k2-07-c0198",
-       "ses": "Görüntüde fentanil ampulü, yetmiş iki saat etkili transdermal fentanil sistemi, sevofluran, remifentanil yani Ultiva ve haloperidol ambalajları görülür.",
-       "ekran": "Ambalajlar: fentanil ampulü, **72 saatlik transdermal fentanil**, sevofluran, Ultiva, haloperidol",
+       "id": "k2-07-c0216",
+       "ses": "Görüntüde fentanil ampulü, yetmiş iki saat etkili transdermal fentanil flasteri, sevofluran şişesi, remifentanil yani Ultiva ve antipsikotik haloperidol ambalajları bir arada sergilenmektedir.",
+       "ekran": "Dengeli anestezi kombinasyonu: **Uçucu ajan, opioid ve nöroleptik**",
        "duzey": 0,
        "vurgu": [],
-       "slayt_adim": 19,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 69,
         "satir": [
-         "Fentanyl"
+         "Fentanyl fu"
         ],
-        "sekil": "fentanil, transdermal fentanil, sevofluran, Ultiva ve haloperidol ambalaj fotoğrafları",
-        "adim": 19,
-        "resim": 0,
+        "sekil": "Fentanil, Durogesic flaster, Sevofluran, Ultiva ve Haloperidol ürün kutuları",
         "madde": [
          7,
          4
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0199",
-       "ses": "Buradan fentanilin hem enjeksiyon hem de üç gün süren transdermal formu olduğunu çıkarıyoruz.",
-       "ekran": "Fentanil: enjeksiyon ve **transdermal** form",
-       "duzey": 0,
+       "id": "k2-07-c0217",
+       "ses": "Modern anesteziyolojide tek bir ilacın yüksek dozdaki toksik etkilerinden kaçınmak için hipnoz için sevofluran, analjezi için fentanil veya remifentanil kombine edilerek dengeli anestezi sağlanır.",
+       "ekran": "Dengeli anestezi prensibi: **Her ilacın avantajından faydalanma**",
+       "duzey": 1,
        "vurgu": [],
-       "slayt_adim": 19,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 69,
-        "satir": [],
-        "sekil": "transdermal fentanil sistemi",
-        "adim": 19,
-        "resim": 0,
+        "satir": [
+         "Fentanyl fu"
+        ],
+        "sekil": "Dengeli anestezi bileşenlerini temsil eden ilaç ürünleri sergisi",
         "madde": [
-         4
+         7
+        ],
+        "resim": 0
+       }
+      },
+      {
+       "id": "k2-07-c0218",
+       "ses": "Geçmişte güçlü bir opioid ile butirofenon türevi nöroleptik bir ajanın birlikte verilmesiyle hastanın uyanık ancak hareketsiz ve ağrısız olduğu nöroleptanaljezi durumu elde edilirdi.",
+       "ekran": "Nöroleptanaljezi konsepti: **Fentanil ve droperidol veya haloperidol**",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 69,
+        "satir": [
+         "Fentanyl fu"
+        ],
+        "sekil": null,
+        "madde": [
+         0
         ]
        }
       }
@@ -5778,40 +6073,65 @@
      "sayfa": 70,
      "cumleler": [
       {
-       "id": "k2-07-c0200",
-       "ses": "Görüntüde tiyopental için Pental Sodyum yarım gram ve bir gram flakonları ile Propofol yüzde bir ve yüzde iki emülsiyon flakonları gösterilir.",
-       "ekran": "**Pental Sodyum** flakonları; **Propofol %1 ve %2** emülsiyon",
+       "id": "k2-07-c0219",
+       "ses": "Görüntüde intravenöz indüksiyonun iki temel direği olan tiyopental sodyum liyofilize toz flakonları ile propofolün yüzde bir ve yüzde ikilik süt beyazı lipid emülsiyon şişeleri görülmektedir.",
+       "ekran": "İndüksiyon ajanlarının karşılaştırılması: **Tiyopental tozu ve Propofol emülsiyonu**",
        "duzey": 0,
        "vurgu": [],
-       "slayt_adim": 19,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 70,
-        "satir": [],
-        "sekil": "Pental Sodyum ve propofol flakonlarının fotoğrafları",
-        "adim": 19,
-        "resim": 0,
+        "satir": [
+         "27"
+        ],
+        "sekil": "Pental Sodyum tiyopental flakonları ve Propofol lipid emülsiyon şişeleri",
         "madde": [
-         0
-        ]
+         5
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0201",
-       "ses": "Görselde tiyopentalin toz, propofolün ise emülsiyon şeklinde olduğu görülür.",
-       "ekran": "Tiyopental **toz**, propofol **emülsiyon**",
-       "duzey": 0,
+       "id": "k2-07-c0220",
+       "ses": "Tiyopental alkali tuz halinde çözündürülmeyi bekleyen bir tozken; suda çözünmeyen propofol soya yağı, gliserol ve yumurta lesitini içeren özel bir emülsiyon içinde kullanıma hazır sıvı formdadır.",
+       "ekran": "Formülasyon farkları: **Yüksek alkali pH ve lipid çözücü ortam**",
+       "duzey": 1,
        "vurgu": [],
-       "slayt_adim": 19,
+       "slayt_adim": null,
        "cikmis": [],
        "spot": null,
        "slayt": {
         "sayfa": 70,
-        "satir": [],
-        "sekil": "propofol emülsiyon flakonu",
-        "adim": 19,
+        "satir": [
+         "27"
+        ],
+        "sekil": "Propofolün süt beyazı lipid emülsiyon yapısı ve tiyopental tozu karşılaştırması",
+        "madde": [
+         5
+        ],
         "resim": 0
+       }
+      },
+      {
+       "id": "k2-07-c0221",
+       "ses": "Propofol enjeksiyon sırasında belirgin damar ağrısı yapar ve lipid ortamı bakteri üremesine zemin hazırlar; tiyopental ise kazara artere verilirse şiddetli vazospazm ve parmak gangrenine yol açabilir.",
+       "ekran": "Klinik riskler: **Enjeksiyon ağrısı, bakteri üremesi ve gangren**",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 70,
+        "satir": [
+         "27"
+        ],
+        "sekil": null,
+        "madde": [
+         5
+        ]
        }
       }
      ]
@@ -5821,7 +6141,7 @@
      "sayfa": 71,
      "cumleler": [
       {
-       "id": "k2-07-c0202",
+       "id": "k2-07-c0222",
        "ses": "Son olarak müstahzar adları: enfluran Ethrane, halotan Fluothane, izofluran Forane, ketamin Ketalar, midazolam Dormicum, propanidid Epontol, propofol Diprivan, sevofluran Sevorane, tiyopental sodyum ise Pental sodyum ve Pentothal sodyumdur.",
        "ekran": "Enfluran Ethrane, halotan Fluothane, **izofluran Forane**, ketamin Ketalar, midazolam Dormicum, **propofol Diprivan**, sevofluran Sevorane",
        "duzey": 0,
@@ -5842,14 +6162,14 @@
         ],
         "sekil": "müstahzar adları listesi",
         "adim": 19,
-        "resim": 0,
         "madde": [
          0
-        ]
+        ],
+        "resim": 0
        }
       },
       {
-       "id": "k2-07-c0203",
+       "id": "k2-07-c0223",
        "ses": "Ayrıca kloroformun Kamfoform adıyla listelendiğini görüyoruz; bu adlar ameliyathanede ilacı tanımanızı sağlar.",
        "ekran": "Kloroform: Kamfoform",
        "duzey": 1,
@@ -5871,7 +6191,7 @@
        }
       },
       {
-       "id": "k2-07-c0204",
+       "id": "k2-07-c0224",
        "ses": "Özetle, genel anestezi tek ilaçla sağlanamayan bir bileşenler toplamıdır; inhalasyon ajanlarında gücü mak, hızı kan gaz katsayısı belirler, intravenöz ajanlarda ise her ilacın ayırt edici özelliğini, yani propofolün antiemetik etkisini, etomidatın adrenal baskısını, ketaminin analjezi ve kafa içi basıncı artışını, tiyopentalin porfiri kontrendikasyonunu aklınızda tutun.",
        "ekran": "Özet: güç **MAK**, hız **kan/gaz katsayısı**; her İV ajanın ayırt edici özelliği",
        "duzey": 0,
@@ -5900,17 +6220,32 @@
      "slayt_adim": "k2-07-d-s65",
      "cumleler": [
       {
-       "id": "k2-07-c0205",
-       "ses": "Son sayfada genel anestezik ilaçların klinik seçiminde hastanın kardiyovasküler rezervi, karaciğer ve böbrek fonksiyonları ile malign hipertermi veya porfiri gibi bireysel kontrendikasyonların birlikte değerlendirilmesi gerektiği hatırlatılmaktadır.",
-       "ekran": "**Klinik Seçim Özeti:** Hemodinamik rezerv, organ fonksiyonları ve **malign hipertermi / porfiri** kontrendikasyonları",
+       "id": "k2-07-c0225",
+       "ses": "Genel anestezik ilaçlar dersimizin sonuna geldik; cerrahi hastasında ideal anestezik seçimi hastanın kardiyovasküler rezervi, karaciğer ve böbrek fonksiyonları ile mevcut komorbiditelerine göre kişiselleştirilmelidir.",
+       "ekran": "Ders sonu değerlendirmesi: **Genel anestezi prensipleri ve hasta güvenliği**",
        "duzey": 0,
-       "vurgu": [
-        {
-         "metin": "malign hipertermi / porfiri",
-         "tur": "tuzak"
-        }
-       ],
-       "slayt_adim": 19,
+       "vurgu": [],
+       "slayt_adim": 20,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 72,
+        "satir": [
+         "Beni dinlediğiniz için Teşekkür ederim."
+        ],
+        "sekil": "Teşekkür ve genel anestezi klinik karar özeti slaytı",
+        "madde": [
+         0
+        ]
+       }
+      },
+      {
+       "id": "k2-07-c0226",
+       "ses": "Ailede malign hipertermi öyküsü olanlarda tüm uçucu halojenli ajanlar ve süksinilkolin kesinlikle yasaklanmalı; akut intermitan porfirisi bulunan hastalarda ise barbitürat kullanımından titizlikle kaçınılmalıdır.",
+       "ekran": "Bireysel kontrendikasyonlar: **Malign hipertermi ve porfiri krizi**",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": 20,
        "cikmis": [],
        "spot": null,
        "slayt": {
@@ -5919,7 +6254,26 @@
          "Beni dinlediğiniz için Teşekkür ederim."
         ],
         "sekil": null,
-        "adim": 19,
+        "madde": [
+         0
+        ]
+       }
+      },
+      {
+       "id": "k2-07-c0227",
+       "ses": "Anestezide kullanılan her molekülün hücresel mekanizmasını, toksisite sınırlarını ve acil antidotlarını çok iyi bilen bir hekim; ameliyathanede ve yoğun bakımda hastasına en üst düzeyde yaşam güvenliği sağlayacaktır.",
+       "ekran": "Hekimlik sorumluluğu: **Kritik ilaçların güvenli ve multidisipliner yönetimi**",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": 20,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 72,
+        "satir": [
+         "Beni dinlediğiniz için Teşekkür ederim."
+        ],
+        "sekil": null,
         "madde": [
          0
         ]

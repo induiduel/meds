@@ -1,6 +1,6 @@
 {
  "surum": 1,
- "metinHash": "08065bb5c45196456bcf2f690dd40233729ab224",
+ "metinHash": "ae2ebe1516a5fd94d68a620628939a5af3ef9421",
  "p": {
   "1": {
    "1": [
@@ -199,50 +199,6 @@
      "olcek": 1.0,
      "ek_alt": 0.2608,
      "ek_renk": "#e8eed6"
-    }
-   ]
-  },
-  "9": {
-   "2": [
-    {
-     "tur": "sema",
-     "sablon": "karsilastirma",
-     "sablon_ad": "İki durumun karşılaştırması",
-     "duzen": "karsit",
-     "basliklar": [
-      "Özellik"
-     ],
-     "satirlar": [
-      [
-       "Zaman aralığı",
-       "Olaydan sonraki zaman",
-       "Geçmişe ait yaşantılar"
-      ],
-      [
-       "Öğrenme sorunu",
-       "Yeni bilgileri öğrenememe",
-       "Eski anıları anımsayamama"
-      ]
-     ],
-     "kutuplar": [
-      "Anterograd",
-      "Retrograd"
-     ],
-     "s": 10,
-     "k": [
-      0,
-      113
-     ],
-     "tip": "karsit",
-     "konum": [
-      0.48,
-      0.53
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.444,
-     "yon": "yatay",
-     "olcek": 1.0
     }
    ]
   },
@@ -954,9 +910,10 @@
  },
  "rapor": {
   "aday": 26,
-  "gecti": 25,
+  "gecti": 24,
   "ret": {
-   "panel metni 'Beyin metabolizması' henüz anlatılmamış terim i": 1
+   "panel metni 'Beyin metabolizması' henüz anlatılmamış terim i": 1,
+   "resim sayfasında panel (H51)": 1
   }
  }
 }

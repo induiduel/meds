@@ -1091,7 +1091,13 @@ PD[71] = [
      "Yaşam beklentisi", 1, None, "solunum fonksiyonlarını kısıtlayıcı akciğer hastalığına", None),
     ("Güncel medikal ve solunum bakımı ile hastaların **yüzde yetmişi yirmi beş yaşına kadar** yaşayabilmektedir.",
      "Destekleyici pulmoner ve nutrisyonel tedaviler sayesinde hastaların yüzde yetmişi erişkin yaşa ulaşabilmektedir.",
-     "erişkinlik dönemine", 2, None, "yüzde yetmişi yirmi beş yaşına kadar", None)
+     "erişkinlik dönemine", 2, None, "yüzde yetmişi yirmi beş yaşına kadar", None),
+    ("Hastalarda genellikle **üç adet se me ne iki gen kopyası** saptanır ve klinik tabloyu hafifletir.",
+     "Spinal müsküler atrofi tip iki hastalarında genellikle üç kopya se me ne iki geni bulunur ve bu kopya sayısı sağkalımı doğrudan etkiler.",
+     "SMN2", 0, None, "üç adet se me ne iki gen kopyası", None),
+    ("İlerleyici omurga deformitesinde **restriktif solunum yetmezliğini önlemek** için ventilasyon desteği şarttır.",
+     "İlerleyici omurga deformitesine bağlı restriktif solunum yetmezliğini önlemek için solunum fizyoterapisi ve noninvaziv ventilasyon desteği şarttır.",
+     "Kas zayıflığı", 0, None, "restriktif solunum yetmezliğini önlemek", None)
 ]
 
 PD[72] = [

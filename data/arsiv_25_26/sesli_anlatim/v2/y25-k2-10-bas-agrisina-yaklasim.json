@@ -2,112 +2,131 @@
  "surum": 2,
  "ders_id": "k2-10",
  "anahtar": "y25-k2-10-bas-agrisina-yaklasim",
- "baslik": "Baş Ağrısına Yaklaşım",
  "bolumler": [
   {
    "id": "k2-10-b01",
    "baslik": "Baş Ağrısına Giriş ve Genel Klinik Yaklaşım",
-   "sayfa_araligi": [
-    1,
-    1
-   ],
    "paragraflar": [
     {
      "id": "k2-10-p001",
      "sayfa": 1,
-     "slayt_adim": "k2-10-d-s01",
      "cumleler": [
       {
        "id": "k2-10-c0001",
-       "ses": "Tıp fakültesi klinik stajlarında ve hekimlik pratiğinde baş ağrısı, polikliniklere ve acil servislere yapılan başvuruların en başında gelen temel nörolojik yakınmadır.",
-       "ekran": "**Baş Ağrısına Giriş:** Poliklinik ve acilde en sık başvuru nedeni olan yakınma",
+       "ses": "Baş ağrısına klinik yaklaşım dersimize başlarken, hekimlik hayatında hem birinci basamakta hem de acil servislerde en sık karşılaşılan bu temel semptomun ayırıcı tanısını ayrıntılı olarak inceleyeceğiz.",
+       "ekran": "**Giriş:** Baş ağrısına sistematik klinik yaklaşım ve ayırıcı tanı ilkeleri.",
        "duzey": 0,
-       "vurgu": [
-        {
-         "metin": "Baş Ağrısına Giriş",
-         "tur": "tanim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s01",
-       "cikmis": [],
-       "spot": null,
        "slayt": {
         "sayfa": 1,
         "satir": [
          "BAŞAĞRISI"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         0
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Baş ağrısı"
+        }
+       ]
       },
       {
        "id": "k2-10-c0002",
-       "ses": "Nöroloji anabilim dalından Doktor İrfan Yavaş tarafından hazırlanan bu derste, baş ağrısı olan hastaya adım adım sistematik klinik yaklaşım, uluslararası sınıflama ilkeleri ve kritik alarm bulguları kapsamlı olarak ele alınmaktadır.",
-       "ekran": "**Ders Sunumu:** Doktor İrfan Yavaş tarafından hazırlanan sistematik klinik yaklaşım",
-       "duzey": 1,
+       "ses": "Baş ağrısı yakınmasıyla başvuran bir hastada hekimin en birincil ve hayati görevi, hayatı tehdit etmeyen iyi seyirli primer baş ağrılarını, acil müdahale gerektiren sekonder nedenlerden hızla ayırt etmektir.",
+       "ekran": "**Temel Görev:** Primer baş ağrılarını yaşamı tehdit eden sekonder nedenlerden ayırt etmek.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "BAŞAĞRISI"
+        ],
+        "sekil": null,
+        "madde": [
+         0
+        ]
+       },
        "vurgu": [
         {
-         "metin": "Doktor İrfan Yavaş",
-         "tur": "terim"
+         "tur": "terim",
+         "metin": "sekonder nedenler"
         }
-       ],
-       "slayt_adim": "k2-10-d-s01",
-       "cikmis": [],
-       "spot": null,
+       ]
+      },
+      {
+       "id": "k2-10-c0003",
+       "ses": "Bu derste Uluslararası Baş Ağrısı Derneğinin sınıflama standartlarını, migren ve gerilim tipi gibi primer sendromları ve kırmızı bayrak olarak tanımladığımız sekonder alarm bulgularını tek tek ele alacağız.",
+       "ekran": "**Ders Kapsamı:** Uluslararası sınıflama, primer baş ağrıları ve kırmızı bayrak alarm bulguları.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "BAŞAĞRISI"
+        ],
+        "sekil": null,
+        "madde": [
+         0
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "alarm bulguları"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0004",
+       "ses": "Doğru yapılandırılmış bir klinik anamnez ve eksiksiz bir nörolojik muayene, gereksiz ve pahalı nörogörüntüleme tetkiklerinden kaçınarak doğru tanıya ulaşmanın en güvenilir yoludur.",
+       "ekran": "**Tanısal Çerçeve:** Ayrıntılı anamnez ve nörolojik muayene ile tanıya ulaşım.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 1,
         "satir": [
          "Dr. İrfan Yavaş"
         ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0003",
-       "ses": "Bir hekimin baş ağrılı hastayı değerlendirirken üstlendiği en yaşamsal sorumluluk, toplumda son derece sık görülen iyi huylu primer baş ağrılarını tanımak ve acil girişim gerektiren ölümcül sekonder nedenleri gözden kaçırmadan doğru ayırıcı tanıyı hızla kurmaktır.",
-       "ekran": "**Temel Klinik Amaç:** İyi huylu primer ağrıyı ölümcül sekonder nedenlerden ayırmak",
-       "duzey": 1,
+        "sekil": null,
+        "madde": [
+         1
+        ]
+       },
        "vurgu": [
         {
-         "metin": "primer",
-         "tur": "tanim"
+         "tur": "terim",
+         "metin": "nörolojik muayene"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0005",
+       "ses": "Özellikle nörolojik aciller arasında yer alan subaraknoid kanama, menenjit, kafa içi basınç artışı ve temporal arterit gibi klinik tabloların erken tanınması hayat kurtarıcıdır.",
+       "ekran": "**Acil Tablolar:** Subaraknoid kanama, menenjit ve kafa içi basınç artışının erken tanınması.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "BAŞAĞRISI"
+        ],
+        "sekil": null,
+        "madde": [
+         0
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Subaraknoid kanama"
         },
         {
-         "metin": "sekonder",
-         "tur": "tuzak"
+         "metin": "Acil Tablolar:",
+         "tur": "cikmis"
         }
        ],
-       "slayt_adim": "k2-10-d-s01",
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 1,
-        "satir": [
-         "BAŞAĞRISI"
-        ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0004",
-       "ses": "Sistematik bir öykü ve dikkatli bir fizik muayene yapılmadan istenecek rastgele tetkikler tanı sürecini geciktirir ve klinik karmaşaya yol açar.",
-       "ekran": "**Klinik Metot:** Öykü ve muayene olmadan yapılan tetkik süreci geciktirir",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "tetkik",
-         "tur": "tuzak"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s01",
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 1,
-        "satir": [
-         "BAŞAĞRISI"
-        ],
-        "sekil": null
-       }
+       "cikmis": [
+        "q-2__kurul_-1"
+       ]
       }
      ]
     }
@@ -116,204 +135,244 @@
   {
    "id": "k2-10-b02",
    "baslik": "Baş Ağrısının Epidemiyolojisi ve Genel Klinik Seyri",
-   "sayfa_araligi": [
-    2,
-    2
-   ],
    "paragraflar": [
     {
      "id": "k2-10-p002",
      "sayfa": 2,
-     "slayt_adim": "k2-10-d-s02",
      "cumleler": [
       {
-       "id": "k2-10-c0005",
-       "ses": "Genel tıp pratiğinde ve hekimlik hayatında poliklinik ve birinci basamak sağlık kuruluşlarında en sık karşılaşılan yakınma baş ağrısıdır.",
-       "ekran": "**Epidemiyoloji:** Hekimlik hayatında en sık karşılaşılan yakınma baş ağrısıdır",
-       "duzey": 0,
-       "vurgu": [
-        {
-         "metin": "en sık karşılaşılan yakınma",
-         "tur": "tanim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s02",
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 2,
-        "satir": [
-         "• Hekimlik hayatında en sık karşılaşılan yakınma"
-        ],
-        "sekil": null
-       }
-      },
-      {
        "id": "k2-10-c0006",
-       "ses": "Geniş ölçekli epidemiyolojik çalışmalara göre ömür boyu en az bir kez baş ağrısı yaşayan kişi oranı erkeklerde yüzde doksan üç, kadınlarda ise yüzde doksan dokuz gibi toplumun tamamını kapsayan çarpıcı bir düzeye ulaşır.",
-       "ekran": "**Yaşam Boyu Sıklık:** Erkeklerde %93, kadınlarda %99 oranında görülür",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "%93",
-         "tur": "sayi"
-        },
-        {
-         "metin": "%99",
-         "tur": "sayi"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s02",
-       "cikmis": [],
-       "spot": null,
+       "ses": "Baş ağrısı tüm dünyada hekimlik hayatında poliklinik ve acil servis başvurularında en sık karşılaşılan subjektif yakınmaların başında gelmektedir.",
+       "ekran": "**Epidemiyoloji:** Hekimlik hayatında en sık karşılaşılan poliklinik ve acil başvuru yakınmasıdır.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 2,
         "satir": [
-         "• Ömür boyu en az bir kez başağrısı yaşayan kişi",
-         "oranı E %93 K %99"
+         "Hekimlik hayatında en sık karşılaşılan yakınma"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         0
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "en sık karşılaşılan"
+        }
+       ]
       },
       {
        "id": "k2-10-c0007",
-       "ses": "Kadınlarda hormonal dalgalanmaların ve östrojen düzeyindeki değişimlerin vasküler ve nöronal uyarılabilirliği artırması, kadın cinsiyetteki baş ağrısı oranının erkeklere kıyasla daha yüksek seyretmesinde belirleyici biyolojik faktördür.",
-       "ekran": "**Cinsiyet Dağılımı:** Kadınlarda hormonal dalgalanmalar nedeniyle sıklık daha yüksektir",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "hormonal dalgalanmalar",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s02",
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 2,
-        "satir": [
-         "• Ömür boyu en az bir kez başağrısı yaşayan kişi"
-        ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0008",
-       "ses": "Yaşam boyu bu kadar yüksek bir prevalansa sahip olması nedeniyle hekimlerin baş ağrısı fizyopatolojisine ve sınıflandırma mantığına tam olarak hakim olması gerekir.",
-       "ekran": "**Klinik Hakimiyet:** Yüksek prevalans nedeniyle sınıflandırma mantığı bilinmelidir",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "prevalans",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s02",
-       "cikmis": [],
-       "spot": null,
+       "ses": "Toplum tabanlı epidemiyolojik çalışmalarda ömür boyu en az bir kez baş ağrısı yaşayan kişi oranı erkeklerde yüzde doksan üç, kadınlarda ise yüzde doksan dokuz gibi son derece çarpıcı bir düzeye ulaşmaktadır.",
+       "ekran": "**Yaşam Boyu Prevalans:** Ömür boyu en az bir kez baş ağrısı oranı erkeklerde %93, kadınlarda %99'dur.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 2,
         "satir": [
          "oranı E %93 K %99"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         2,
+         1
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Yaşam Boyu Prevalans"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0008",
+       "ses": "Bu yüksek yaygınlık nedeniyle her hekim, acil serviste ya da aile sağlığı merkezinde baş ağrısı şikayeti ile gelen hastayı değerlendirebilecek klinik yetkinliğe sahip olmalıdır.",
+       "ekran": "**Klinik Yetkinlik:** Her hekimin baş ağrılı hastayı birinci basamakta değerlendirme zorunluluğu.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Ömür boyu en az bir kez başağrısı"
+        ],
+        "sekil": null,
+        "madde": [
+         1,
+         3
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Klinik Yetkinlik"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0009",
+       "ses": "Kadın cinsiyetteki belirgin yüksekliğin temelinde hormonal dalgalanmalar, östrojen çekilme atakları ve genetik yatkınlık faktörleri önemli rol oynamaktadır.",
+       "ekran": "**Cinsiyet Farkı:** Hormonal dalgalanmalar ve östrojen ilişkili baş ağrısı prevalansı.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "oranı E %93 K %99"
+        ],
+        "sekil": null,
+        "madde": [
+         2
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Hormonal dalgalanmalar"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0010",
+       "ses": "Toplumdaki her on kişiden dokuzunun hayatında en az bir kez deneyimlediği bu yakınma, iş gücü kaybı ve sağlık ekonomisi açısından muazzam bir küresel yük oluşturur.",
+       "ekran": "**Toplumsal Yük:** Yaygın iş gücü kaybı ve sağlık harcamalarında yüksek morbidite payı.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Hekimlik hayatında en sık karşılaşılan yakınma"
+        ],
+        "sekil": null,
+        "madde": [
+         0,
+         1
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "iş gücü kaybı"
+        }
+       ]
       }
      ]
     },
     {
      "id": "k2-10-p003",
      "sayfa": 2,
-     "slayt_adim": "k2-10-d-s02",
      "cumleler": [
       {
-       "id": "k2-10-c0009",
-       "ses": "Baş ağrısı yakınmasıyla hekime başvuran hastaların çoğu, altta yatan beyin tümörü, anevrizma kanaması veya felç gibi hayatı tehdit eden ciddi bir sorunun belirtisi olduğundan büyük bir korku ve panik yaşar.",
-       "ekran": "**Hasta Korkusu:** Altta yatan tümör veya anevrizma gibi ciddi sorun korkusu",
-       "duzey": 0,
-       "vurgu": [
-        {
-         "metin": "ciddi sorun korkusu",
-         "tur": "tuzak"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s02",
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 2,
-        "satir": [
-         "• Hastaların çoğu altta yatan ciddi bir sorunun",
-         "belirtisi olduğundan korkar. Fakat çoğu iyi"
-        ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0010",
-       "ses": "Oysa klinik tıbbın istatistiksel gerçekliğine bakıldığında bu olguların çok büyük bir kısmı iyi seyirlidir ve herhangi bir kalıcı yapısal veya yıkıcı intrakraniyal lezyon içermez.",
-       "ekran": "**Klinik Gerçeklik:** Baş ağrısı olgularının çok büyük kısmı iyi seyirlidir",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "iyi seyirlidir",
-         "tur": "tanim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s02",
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 2,
-        "satir": [
-         "seyirlidir."
-        ],
-        "sekil": null
-       }
-      },
-      {
        "id": "k2-10-c0011",
-       "ses": "Bu nedenle klinisyenin temel görevi, hastanın kaygılarını dinleyerek gereksiz radyolojik tetkik yükünü engellemek, ancak potansiyel tehlike taşıyan az sayıdaki hastayı da asla gözden kaçırmamaktır.",
-       "ekran": "**Klinik Denge:** Gereksiz radyolojiden kaçınırken tehlikeli olguları atlamamak",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "Gereksiz radyolojiden",
-         "tur": "tuzak"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s02",
-       "cikmis": [],
-       "spot": null,
+       "ses": "Baş ağrısı ile hekime başvuran hastaların çok büyük bir kısmı, ağrının beyin tümörü, anevrizma kanaması veya felç gibi ölümcül bir hastalığın belirtisi olduğundan derin bir endişe ve korku duyarlar.",
+       "ekran": "**Hasta Kaygısı:** Hastaların çoğu intrakraniyal tümör veya kanama gibi ölümcül nedenlerden korkar.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 2,
         "satir": [
-         "• Hastaların çoğu altta yatan ciddi bir sorunun"
+         "Hastaların çoğu altta yatan ciddi bir sorunun"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         3,
+         4
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Hasta Kaygısı"
+        }
+       ]
       },
       {
        "id": "k2-10-c0012",
-       "ses": "Hastaya güven veren empatik bir iletişim ve kapsamlı bir bilgilendirme, gereksiz acil servis başvurularını ve poliklinik yığılmalarını belirgin ölçüde azaltır.",
-       "ekran": "**İletişim ve Güven:** Kapsamlı bilgilendirme gereksiz acil başvurularını azaltır",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "bilgilendirme",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s02",
-       "cikmis": [],
-       "spot": null,
+       "ses": "Ancak hekimin bilmesi gereken temel gerçek, polikliniklere başvuran baş ağrısı olgularının yüzde doksanından fazlasının tamamen selim ve iyi seyirli primer baş ağrılarından oluştuğudur.",
+       "ekran": "**İyi Seyirli Doğa:** Başvuran baş ağrılarının çok büyük kısmı selim ve iyi seyirlidir.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 2,
         "satir": [
          "belirtisi olduğundan korkar. Fakat çoğu iyi"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         4,
+         3
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "yi seyirlid"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0013",
+       "ses": "Hastaya güven veren empatik bir hekim yaklaşımı ve ayrıntılı bir muayene, gereksiz anksiyeteyi yatıştırarak hastanın tedaviye uyumunu dramatik biçimde artırır.",
+       "ekran": "**Hekim Yaklaşımı:** Empatik yaklaşım ve güven verici muayene ile anksiyetenin giderilmesi.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Fakat çoğu iyi"
+        ],
+        "sekil": null,
+        "madde": [
+         4,
+         3
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Empatik yaklaşım"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0014",
+       "ses": "Buna karşılık altta yatan organik bir patolojiye bağlı gelişen sekonder baş ağrıları azınlıkta olmasına rağmen, erken tanınmadığında kalıcı sakatlık veya ölümle sonuçlanabilmektedir.",
+       "ekran": "**Sekonder Tehlike:** Azınlıkta kalan sekonder baş ağrılarının potansiyel ölümcül riskleri.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Hastaların çoğu altta yatan ciddi bir sorunun"
+        ],
+        "sekil": null,
+        "madde": [
+         3,
+         1
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Sekonder Tehlike"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0015",
+       "ses": "Dolayısıyla hekimin klinik duruşu, hastanın korkusunu anlayışla karşılarken kırmızı bayrakları asla gözden kaçırmayan yüksek bir uyanıklık dengesi kurmaktır.",
+       "ekran": "**Klinik Uyanıklık:** Hastayı rahatlatırken kırmızı bayrakları titizlikle tarayan klinik duruş.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "belirtisi olduğundan korkar. Fakat çoğu iyi"
+        ],
+        "sekil": null,
+        "madde": [
+         4,
+         3
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Klinik Uyanıklık"
+        }
+       ]
       }
      ]
     }
@@ -322,255 +381,282 @@
   {
    "id": "k2-10-b03",
    "baslik": "Uluslararası Baş Ağrısı Sınıflaması ve Primer Baş Ağrıları",
-   "sayfa_araligi": [
-    3,
-    3
-   ],
    "paragraflar": [
     {
      "id": "k2-10-p004",
      "sayfa": 3,
-     "slayt_adim": "k2-10-d-s03",
      "cumleler": [
       {
-       "id": "k2-10-c0013",
-       "ses": "Dünya genelinde klinik uygulamalarda ve araştırmalarda genel kabul gören sınıflama, Uluslararası Baş Ağrısı Derneği yani i he se sınıflamasıdır.",
-       "ekran": "**Uluslararası Sınıflama:** Genel kabul gören temel IHS sınıflaması",
-       "duzey": 0,
-       "vurgu": [
-        {
-         "metin": "IHS sınıflaması",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s03",
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 3,
-        "satir": [
-         "• Genel kabul gören sınıflama IHS (Internatiınal",
-         "Headache Society) sınıflaması. 1988-2004-",
-         "2013."
-        ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0014",
-       "ses": "İlk olarak bin dokuz yüz seksen sekiz yılında yayımlanan bu rehber, iki bin dört ve iki bin on üç yıllarında güncellenerek üçüncü sürümü olan i ce he de üç ana başlıkları ile yürürlüğe girmiştir.",
-       "ekran": "**ICHD-3 Sınıflaması:** 1988, 2004 ve 2013 yıllarında güncellenen tanı sistemi",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "ICHD-3",
-         "tur": "terim"
-        },
-        {
-         "metin": "1988",
-         "tur": "sayi"
-        },
-        {
-         "metin": "2013",
-         "tur": "sayi"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s03",
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 3,
-        "satir": [
-         "• ICHD 3 ana başlıkları ile"
-        ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0015",
-       "ses": "Bu kılavuz, tanı kriterlerini standardize ederek tüm dünyadaki hekimlerin aynı klinik dili konuşmasını sağlamış ve nörolojik yaklaşımı kanıta dayalı kurallara bağlamıştır.",
-       "ekran": "**Standart Terminoloji:** Dünya çapında kanıta dayalı tanı kriterleri standardı",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "tanı kriterleri",
-         "tur": "tanim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s03",
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 3,
-        "satir": [
-         "• Genel kabul gören sınıflama IHS (Internatiınal"
-        ],
-        "sekil": null
-       }
-      },
-      {
        "id": "k2-10-c0016",
-       "ses": "Sınıflamanın hiyerarşik yapısı sayesinde hem genel poliklinik pratiğinde pratik tanı konabilmekte hem de ileri akademik çalışmalarda alt tipler ayrıntılandırılabilmektedir.",
-       "ekran": "**Hiyerarşik Yapı:** Hem genel pratikte hem akademik çalışmada tanı kolaylığı",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "Hiyerarşik Yapı",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s03",
-       "cikmis": [],
-       "spot": null,
+       "ses": "Dünya genelinde baş ağrılarının tanı ve araştırmalarında genel kabul gören temel sınıflama, Uluslararası Baş Ağrısı Derneği yani i he se tarafından geliştirilen sınıflamadır.",
+       "ekran": "**Uluslararası Sınıflama:** International Headache Society (IHS) tarafından geliştirilen tanısal sistem.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 3,
         "satir": [
-         "• ICHD 3 ana başlıkları ile"
+         "Genel kabul gören sınıflama IHS"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         0,
+         1
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Uluslararası Sınıflama"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0017",
+       "ses": "İlk sürümü bin dokuz yüz seksen sekiz yılında yayımlanan bu sınıflama sistemi, iki bin dört yılındaki ikinci sürümün ardından iki bin on üç yılında üçüncü sürümü olan ı ce he de üçe kavuşmuştur.",
+       "ekran": "**Sınıflama Tarihçesi:** 1988, 2004 ve son olarak 2013 yılında ICHD-3 sürümü yayımlanmıştır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "1988-2004-"
+        ],
+        "sekil": null,
+        "madde": [
+         1
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Sınıflama Tarihçesi"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0018",
+       "ses": "Uluslararası Baş Ağrısı Sınıflamasının üçüncü sürümü olan ı ce he de üç, baş ağrılarını etiyolojik ve mekanistik olarak üç büyük ana kategori altında toplamaktadır.",
+       "ekran": "**ICHD-3 Yapısı:** Baş ağrılarını üç ana kategori ve on dört alt grupta toplayan hiyerarşik yapı.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "ICHD 3 ana başlıkları ile"
+        ],
+        "sekil": null,
+        "madde": [
+         2,
+         6
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "üç ana kategori"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0019",
+       "ses": "Bu kategoriler sırasıyla A grubunda primer baş ağrıları, B grubunda sekonder baş ağrıları ve C grubunda ağrılı kraniyal nöropatiler ile yüz ağrılarıdır.",
+       "ekran": "**Üç Büyük Grup:** A- Primer baş ağrıları, B- Sekonder baş ağrıları, C- Ağrılı kraniyal nöropatiler.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "A – Primer başağrıları:"
+        ],
+        "sekil": null,
+        "madde": [
+         3,
+         7
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Primer baş ağrıları"
+        },
+        {
+         "metin": "Üç Büyük Grup:",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "past-q-_SKENDERUN_T_M_d_rl___ne0__1__230709_230251-7",
+        "966e1cde012c"
+       ]
+      },
+      {
+       "id": "k2-10-c0020",
+       "ses": "Bu standart sınıflama sistemi sayesinde dünyanın her yerindeki hekimler aynı semiyolojik kriterleri kullanarak ortak bir bilimsel dil konuşabilmektedir.",
+       "ekran": "**Ortak Terminoloji:** Dünya çapında standardize edilmiş tanı kriterleri ve bilimsel dil birliği.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Genel kabul gören sınıflama IHS"
+        ],
+        "sekil": null,
+        "madde": [
+         0,
+         1
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "bilimsel dil"
+        }
+       ]
       }
      ]
     },
     {
      "id": "k2-10-p005",
      "sayfa": 3,
-     "slayt_adim": "k2-10-d-s03",
      "cumleler": [
       {
-       "id": "k2-10-c0017",
-       "ses": "Sınıflamanın birinci ana grubunu oluşturan a grubu primer baş ağrıları başlığını taşır ve kendi içinde dört ana alt sınıfa ayrılır.",
-       "ekran": "**A Grubu Primer Baş Ağrıları:** Dört ana klinik alt sınıfa ayrılır",
-       "duzey": 0,
-       "vurgu": [
-        {
-         "metin": "Primer Baş Ağrıları",
-         "tur": "tanim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s03",
-       "cikmis": [
-        "q-2__kurul_-1-cs2"
-       ],
-       "spot": null,
-       "slayt": {
-        "sayfa": 3,
-        "satir": [
-         "    A – Primer başağrıları:"
-        ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0018",
-       "ses": "Bu grupta birinci sırada zonklayıcı nörovasküler ataklarla giden migren, ikinci sırada ense ve şakaklarda mengene gibi sıkıştıran gerilim tipi baş ağrısı yer alır.",
-       "ekran": "**Migren ve Gerilim Tipi:** Birinci ve ikinci sıradaki primer baş ağrıları",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "Migren",
-         "tur": "terim"
-        },
-        {
-         "metin": "Gerilim Tipi",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s03",
-       "cikmis": [
-        "q-2__kurul_-1-cs2"
-       ],
-       "spot": null,
-       "slayt": {
-        "sayfa": 3,
-        "satir": [
-         "    1. Migren",
-         "    2. Gerilim tipi başağrısı"
-        ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0019",
-       "ses": "Üçüncü sırada trigeminal otonomik baş ağrısı, dördüncü sırada ise egzersiz, soğuk veya öksürükle tetiklenen diğer primer baş ağrısı sendromları tanımlanmıştır.",
-       "ekran": "**Otonomik ve Diğerleri:** Trigeminal otonomik ve diğer primer baş ağrıları",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "Trigeminal otonomik",
-         "tur": "terim"
-        },
-        {
-         "metin": "Otonomik ve Diğerleri:",
-         "tur": "cikmis"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s03",
-       "cikmis": [
-        "q-2__kurul_-1-cs2",
-        "past-1790877045073-786870"
-       ],
-       "spot": null,
-       "slayt": {
-        "sayfa": 3,
-        "satir": [
-         "    3. Trigeminal otonomik başağrısı",
-         "    4. Diğer primer başağrısı sendromları"
-        ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0020",
-       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Genellikle genç erkeklerde geceleri uykudan uyandıran, tek taraflı periorbital delici ve oyucu ağrıya aynı tarafta göz yaşarması, burun tıkanıklığı ve konjonktival hipereminin eşlik ettiği tablo, trigeminal otonomik sefalaljiler grubundaki küme baş ağrısıdır.",
-       "ekran": "**Çıkmış Soru:** Genç erkekte tek taraflı otonomik bulgulu küme baş ağrısı",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "küme baş ağrısı",
-         "tur": "cikmis"
-        },
-        {
-         "metin": "otonomik bulgulu",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s03",
-       "cikmis": [
-        "d3-k2-nor-011"
-       ],
-       "spot": null,
-       "slayt": {
-        "sayfa": 3,
-        "satir": [
-         "    3. Trigeminal otonomik başağrısı"
-        ],
-        "sekil": null
-       }
-      },
-      {
        "id": "k2-10-c0021",
-       "ses": "Sınavda sorulan bir diğer temel kazanım olarak migren, gerilim tipi baş ağrısı ve trigeminal otonomik sefalaljilerin doğrudan primer baş ağrıları sınıflamasında yer aldığını kavramak gerekir.",
-       "ekran": "**Sınav Spotu:** Migren ve gerilim tipi baş ağrısı primer gruptadır",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "primer gruptadır",
-         "tur": "cikmis"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s03",
-       "cikmis": [
-        "q-2__kurul_-1-cs2"
-       ],
-       "spot": null,
+       "ses": "Uluslararası Baş Ağrısı Sınıflamasının üçüncü sürümünde A grubunu oluşturan primer baş ağrıları dört temel alt grupta incelenmektedir.",
+       "ekran": "**Primer Baş Ağrıları Grubu:** ICHD-3 kapsamında tanımlanan dört temel primer baş ağrısı alt türü.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 3,
         "satir": [
          "A – Primer başağrıları:"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         3,
+         7
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Primer Baş Ağrıları"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0022",
+       "ses": "Birinci sırada tek taraflı zonklayıcı ağrı ve otonomik semptomlarla karakterize migren; ikinci sırada ise iki taraflı sıkıştırıcı bant tarzı gerilim tipi baş ağrısı yer alır.",
+       "ekran": "**Migren ve Gerilim Tipi:** Birinci sırada migren, ikinci sırada gerilim tipi baş ağrısı yer alır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "1. Migren"
+        ],
+        "sekil": null,
+        "madde": [
+         4,
+         5
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Migren"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0023",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: trigeminal otonomik baş ağrısı Uluslararası Baş Ağrısı Sınıflamasında A grubu primer baş ağrıları arasında yer almaktadır.",
+       "ekran": "**Sınav Spotu (Çıkmış Soru):** Bu bilgi çıkmış sınavda sorulmuştur: Trigeminal otonomik baş ağrısı A grubu primer baş ağrısıdır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "3. Trigeminal otonomik başağrısı"
+        ],
+        "sekil": null,
+        "madde": [
+         6,
+         3
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Trigeminal otonomik"
+        }
+       ],
+       "cikmis": [
+        "q-2__kurul_-1-cs2"
+       ]
+      },
+      {
+       "id": "k2-10-c0024",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: genç erkeklerde periorbital ya da temporal tek taraflı şiddetli delici oyucu ağrı ve aynı tarafta lakrimasyon ile rinore gibi otonomik bulgularla seyreden tablo küme baş ağrısıdır.",
+       "ekran": "**Sınav Spotu (Çıkmış Soru):** Bu bilgi çıkmış sınavda sorulmuştur: Tek taraflı delici göz ağrısı, lakrimasyon ve rinore küme baş ağrısını gösterir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "3. Trigeminal otonomik başağrısı"
+        ],
+        "sekil": null,
+        "madde": [
+         6,
+         3
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "küme baş ağrısı"
+        }
+       ],
+       "cikmis": [
+        "d3-k2-nor-011"
+       ]
+      },
+      {
+       "id": "k2-10-c0025",
+       "ses": "Dördüncü sırada ise primer öksürük baş ağrısı, primer egzersiz baş ağrısı ve primer gök gürültüsü baş ağrısı gibi diğer primer baş ağrısı sendromları sıralanır.",
+       "ekran": "**Diğer Primer Sendromlar:** Egzersiz, öksürük ve soğuk uyaranla tetiklenen diğer primer baş ağrıları.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "4. Diğer primer başağrısı sendromları"
+        ],
+        "sekil": null,
+        "madde": [
+         7,
+         3
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Diğer Primer Sendromlar"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0026",
+       "ses": "Primer baş ağrılarının mekanizmasında trigeminovasküler sistem aktivasyonu, kortikal yayılan depresyon ve santral nosiseptif duyarlılaşma rol oynamaktadır.",
+       "ekran": "**Patofizyoloji:** Trigeminovasküler aktivasyon, kortikal yayılan depresyon ve santral duyarlılaşma.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "A – Primer başağrıları:"
+        ],
+        "sekil": null,
+        "madde": [
+         3,
+         7
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "kortikal yayılan depresyon"
+        }
+       ]
       }
      ]
     }
@@ -579,219 +665,260 @@
   {
    "id": "k2-10-b04",
    "baslik": "Sekonder Baş Ağrıları ve Etyolojik Sınıflama",
-   "sayfa_araligi": [
-    4,
-    4
-   ],
    "paragraflar": [
     {
      "id": "k2-10-p006",
      "sayfa": 4,
-     "slayt_adim": "k2-10-d-s04",
      "cumleler": [
       {
-       "id": "k2-10-c0022",
-       "ses": "Uluslararası sınıflamanın b grubu sekonder baş ağrıları başlığını taşır ve altta yatan nedene göre beşinci maddeden on ikinci maddeye kadar toplam sekiz etyolojik kategoriye ayrılır.",
-       "ekran": "**B Grubu:** Sekonder baş ağrıları sekiz etyolojik grupta sınıflandırılır",
+       "id": "k2-10-c0027",
+       "ses": "Uluslararası Baş Ağrısı Sınıflamasının üçüncü sürümünde B grubunu oluşturan sekonder baş ağrıları, altta yatan başka bir organik hastalık ya da yapısal bozukluğun belirtisi olarak ortaya çıkan ağrılardır.",
+       "ekran": "**Sekonder Baş Ağrıları Grubu:** Altta yatan organik hastalığın belirtisi olan etyolojik baş ağrıları.",
        "duzey": 0,
-       "vurgu": [
-        {
-         "metin": "Sekonder baş ağrıları",
-         "tur": "tanim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s04",
-       "cikmis": [],
-       "spot": null,
        "slayt": {
         "sayfa": 4,
         "satir": [
-         "• B- Sekonder başağrıları"
+         "B- Sekonder başağrıları"
         ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0023",
-       "ses": "Beşinci sırada kafaya alınan darbeler, epidural ve subdural kanamalar ile boyun travmalarını kapsayan baş ve boyun travmasına bağlı baş ağrısı yer alır.",
-       "ekran": "**5. Madde:** Baş ve boyun travmasına bağlı sekonder baş ağrısı",
-       "duzey": 1,
+        "sekil": null,
+        "madde": [
+         0,
+         3
+        ]
+       },
        "vurgu": [
         {
-         "metin": "travmasına bağlı",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s04",
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 4,
-        "satir": [
-         "    5. Baş ve boyun travmasına bağlı başağrısı"
-        ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0024",
-       "ses": "Altıncı sırada anevrizma rüptürleri, serebral enfarktüsler, dural sinüs trombozu ve dev hücreli arteriti kapsayan kraniyal veya servikal damarsal bozukluklara bağlı baş ağrısı tanımlanır.",
-       "ekran": "**6. Madde:** Kraniyal veya servikal damarsal bozukluklara bağlı baş ağrısı",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "damarsal bozukluklara bağlı",
-         "tur": "terim"
+         "tur": "terim",
+         "metin": "Sekonder Baş Ağrıları"
         },
         {
-         "metin": "6. Madde:",
+         "metin": "Sekonder Baş Ağrıları Grubu:",
          "tur": "cikmis"
         }
        ],
-       "slayt_adim": "k2-10-d-s04",
        "cikmis": [
         "58700c98a3db"
-       ],
-       "spot": null,
-       "slayt": {
-        "sayfa": 4,
-        "satir": [
-         "    6. Kraniyal veya servikal damarsal bozukluklara bağlı",
-         "başağrısı"
-        ],
-        "sekil": null
-       }
+       ]
       },
       {
-       "id": "k2-10-c0025",
-       "ses": "Yedinci sırada beyin tümörleri, idiyopatik intrakraniyal hipertansiyon ve beyin omurilik sıvısı basınç değişikliklerini içeren damarsal olmayan intrakraniyal bozukluklara bağlı baş ağrısı kategorize edilir.",
-       "ekran": "**7. Madde:** Damarsal olmayan intrakraniyal bozukluklara bağlı baş ağrısı",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "intrakraniyal bozukluklara",
-         "tur": "terim"
-        },
-        {
-         "metin": "7. Madde:",
-         "tur": "cikmis"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s04",
-       "cikmis": [
-        "d3-k2-ftr-005"
-       ],
-       "spot": null,
+       "id": "k2-10-c0028",
+       "ses": "Beşinci grupta kafa travması, beyin sarsıntısı ve kamçı zedelenmesi gibi baş ve boyun travmalarına bağlı gelişen akut ve kronik baş ağrıları yer almaktadır.",
+       "ekran": "**Grup 5 (Travma):** Kafa travması, beyin sarsıntısı ve servikal kamçı zedelenmesi baş ağrıları.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 4,
         "satir": [
-         "      7. Damarsal olmayan intrakraniyal bozukluklara",
+         "5. Baş ve boyun travmasına bağlı başağrısı"
+        ],
+        "sekil": null,
+        "madde": [
+         1,
+         5
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "sarsıntı"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0029",
+       "ses": "Altıncı grup kraniyal veya servikal damarsal bozukluklara bağlı baş ağrıları olup, subaraknoid kanama, iskemik inme, serebral venöz tromboz ve karotis diseksiyonu gibi en ölümcül tabloları barındırır.",
+       "ekran": "**Grup 6 (Vasküler):** SAK, iskemik inme, venöz sinüs trombozu ve arter diseksiyonu baş ağrıları.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "6. Kraniyal veya servikal damarsal bozukluklara bağlı"
+        ],
+        "sekil": null,
+        "madde": [
+         2,
+         10
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Grup 6 (Vasküler)"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0030",
+       "ses": "Yedinci grup ise damarsal olmayan intrakraniyal bozukluklara bağlı baş ağrılarıdır; bu başlık altında beyin tümörleri, hidrosefali, idiyopatik intrakraniyal hipertansiyon ve intrakraniyal hipotansiyon yer alır.",
+       "ekran": "**Grup 7 (Non-Vasküler İntrakraniyal):** Beyin tümörleri, hidrosefali, psödotümör serebri ve BOS kaçağı.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "7. Damarsal olmayan intrakraniyal bozukluklara"
+        ],
+        "sekil": null,
+        "madde": [
+         4,
+         2
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "eyin tümörleri,"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0031",
+       "ses": "Bu intrakraniyal yer kaplayıcı veya basınç değiştirici süreçler ağrıya duyarlı dura mater, venöz sinüsler ve serebral arterlerin mekanik traksiyonu ile şiddetli ağrı uyandırır.",
+       "ekran": "**Ağrı Mekanizması:** Dura mater, venöz sinüsler ve büyük damarların mekanik traksiyonu.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
          "bağlı başağrısı"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         5,
+         3
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "mekanik traksiyon"
+        }
+       ]
       }
      ]
     },
     {
      "id": "k2-10-p007",
      "sayfa": 4,
-     "slayt_adim": "k2-10-d-s04",
      "cumleler": [
       {
-       "id": "k2-10-c0026",
-       "ses": "Sekizinci sırada aşırı ağrı kesici tüketimi ve toksik maddelere maruziyeti kapsayan madde kullanımı veya kesilmesine bağlı baş ağrısı, dokuzuncu sırada menenjit ve beyin apsesini içeren enfeksiyona bağlı baş ağrısı sıralanır.",
-       "ekran": "**8. ve 9. Maddeler:** Madde kullanımı veya kesilmesi ile enfeksiyona bağlı ağrılar",
-       "duzey": 1,
+       "id": "k2-10-c0032",
+       "ses": "Sekonder baş ağrılarının sekizinci grubunda madde kullanımı veya madde kesilmesine bağlı baş ağrıları yer almakta olup, klinikte en sık aşırı analjezik kullanımına bağlı ilaca dirençli baş ağrısı izlenir.",
+       "ekran": "**Grup 8 (Madde ve İlaç):** Madde kullanımı/kesilmesi ve en sık aşırı analjezik kullanım baş ağrısı.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "8. Madde kullanımı veya kesilmesine bağlı başağrısı"
+        ],
+        "sekil": null,
+        "madde": [
+         6,
+         5
+        ]
+       },
        "vurgu": [
         {
-         "metin": "Madde kullanımı",
-         "tur": "terim"
+         "tur": "terim",
+         "metin": "adde kullanımı/"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0033",
+       "ses": "Dokuzuncu grup sistemik veya intrakraniyal enfeksiyonlara bağlı baş ağrılarıdır; akut bakteriyel menenjit, viral ensefalit ve beyin apsesi bu grupta acil tanı gerektiren prototiplerdir.",
+       "ekran": "**Grup 9 (Enfeksiyon):** Menenjit, ensefalit ve beyin apsesi gibi merkezi ve sistemik enfeksiyonlar.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "9. Enfeksiyona bağlı başağrısı"
+        ],
+        "sekil": null,
+        "madde": [
+         7,
+         5
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Menenjit"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0034",
+       "ses": "Onuncu grupta hipoksi, hiperkapni, diyaliz veya feokromositoma gibi homeostaz bozukluğuna bağlı baş ağrıları tanımlanmaktadır.",
+       "ekran": "**Grup 10 (Homeostaz):** Hipoksi, hiperkapni, hipertansif kriz ve feokromositoma ilişkili ağrılar.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "10. Homeostaz bozukluğuna bağlı başağrısı"
+        ],
+        "sekil": null,
+        "madde": [
+         8,
+         11
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "hipertansif kriz"
         },
         {
-         "metin": "enfeksiyona bağlı",
-         "tur": "terim"
+         "metin": "Grup 10 (Homeostaz):",
+         "tur": "cikmis"
         }
        ],
-       "slayt_adim": "k2-10-d-s04",
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 4,
-        "satir": [
-         "      8. Madde kullanımı veya kesilmesine bağlı başağrısı",
-         "      9. Enfeksiyona bağlı başağrısı"
-        ],
-        "sekil": null
-       }
+       "cikmis": [
+        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-19"
+       ]
       },
       {
-       "id": "k2-10-c0027",
-       "ses": "Onuncu sırada arteriyel hipertansiyon, hiperkapni ve diyaliz dengesizliklerini içeren homeostaz bozukluğuna bağlı baş ağrısı tanımlanır.",
-       "ekran": "**10. Madde:** Homeostaz bozukluğuna bağlı baş ağrısı",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "Homeostaz bozukluğuna",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s04",
-       "cikmis": [],
-       "spot": null,
+       "id": "k2-10-c0035",
+       "ses": "On birinci grup kraniyum kemikleri, boyun servikal omurga, akut açı kapanması glokomu, diş apseleri ve paranazal sinüs hastalıklarına bağlı yansıyan baş ve yüz ağrılarını içerir.",
+       "ekran": "**Grup 11 (Kraniyofasiyal Yapılar):** Göz, kulak, sinüs, diş ve servikal omurga kaynaklı yansıyan ağrılar.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 4,
         "satir": [
-         "      10. Homeostaz bozukluğuna bağlı başağrısı"
+         "11. Kraniyum, boyun, gözler, kulaklar, burun, sinüsler"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         9,
+         1
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "servikal omurga"
+        }
+       ]
       },
       {
-       "id": "k2-10-c0028",
-       "ses": "On birinci grupta akut sinüzit, glokom krizleri ve diş apselerini içeren kraniyum, boyun, gözler, kulaklar, burun, sinüsler, ağız ya da diğer yüz veya kraniyal yapıların bozukluklarına bağlı baş ağrısı ya da yüz ağrısı yer alır.",
-       "ekran": "**11. Madde:** Kraniyum, boyun, göz, sinüs ve çevre yapı bozuklukları",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "çevre yapı bozuklukları",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s04",
-       "cikmis": [],
-       "spot": null,
+       "id": "k2-10-c0036",
+       "ses": "On ikinci grupta ise somatizasyon ve majör depresif bozukluk gibi psikiyatrik bozukluklara bağlı baş ağrıları sınıflandırılmaktadır.",
+       "ekran": "**Grup 12 (Psikiyatrik):** Somatizasyon, anksiyete ve konversiyon zeminindeki baş ağrıları.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 4,
         "satir": [
-         "      11. Kraniyum, boyun, gözler, kulaklar, burun, sinüsler,",
-         "ağız ya da diğer yüz veya kraniyal yapıların",
-         "bozukluklarına bağlı başağrısı ya da yüz ağrısı"
+         "12. Psikiyatrik bozukluklara bağlı başağrısı"
         ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0029",
-       "ses": "Sınıflamanın on ikinci maddesinde ise anksiyete, depresyon ve somatizasyon zemininde gelişen psikiyatrik bozukluklara bağlı baş ağrısı ele alınır.",
-       "ekran": "**12. Madde:** Psikiyatrik bozukluklara bağlı baş ağrısı",
-       "duzey": 1,
+        "sekil": null,
+        "madde": [
+         11,
+         8
+        ]
+       },
        "vurgu": [
         {
-         "metin": "Psikiyatrik bozukluklara",
-         "tur": "terim"
+         "tur": "terim",
+         "metin": "Somatizasyon"
         }
-       ],
-       "slayt_adim": "k2-10-d-s04",
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 4,
-        "satir": [
-         "      12. Psikiyatrik bozukluklara bağlı başağrısı"
-        ],
-        "sekil": null
-       }
+       ]
       }
      ]
     }
@@ -800,210 +927,269 @@
   {
    "id": "k2-10-b05",
    "baslik": "Ağrılı Kraniyal Nöropatiler ve Primer ile Sekonder Ayrımı",
-   "sayfa_araligi": [
-    5,
-    5
-   ],
    "paragraflar": [
     {
      "id": "k2-10-p008",
      "sayfa": 5,
-     "slayt_adim": "k2-10-d-s05",
      "cumleler": [
       {
-       "id": "k2-10-c0030",
-       "ses": "Sınıflamanın üçüncü ana kümesi olan c grubu, ağrılı kraniyal nöropatiler, diğer yüz ağrıları ve diğer baş ağrıları başlığını taşır.",
-       "ekran": "**C Grubu:** Ağrılı kraniyal nöropatiler ve diğer yüz ağrıları",
+       "id": "k2-10-c0037",
+       "ses": "Uluslararası Baş Ağrısı Sınıflamasının üçüncü sürümünde C kategorisini oluşturan on üçüncü grup, ağrılı kraniyal nöropatiler ve diğer yüz ağrılarını kapsamaktadır.",
+       "ekran": "**Grup 13 (Ağrılı Nöropatiler):** Kraniyal ve servikal sinirlerin patolojilerine bağlı yüz ağrıları.",
        "duzey": 0,
-       "vurgu": [
-        {
-         "metin": "kraniyal nöropatiler",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s05",
-       "cikmis": [],
-       "spot": null,
        "slayt": {
         "sayfa": 5,
         "satir": [
-         "• C- Ağrılı kraniyal nöropatiler, diğer yüz ağrıları",
-         "ve diğer başağrıları"
+         "C- Ağrılı kraniyal nöropatiler"
         ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0031",
-       "ses": "Bu kümede on üçüncü sırada trigeminal ve glossofaringeal nevraljileri içeren ağrılı kraniyal nöropatiler ve diğer yüz ağrıları, on dördüncü sırada ise mevcut kriterlerle sınıflandırılamayan diğer baş ağrısı bozuklukları sıralanır.",
-       "ekran": "**13. ve 14. Maddeler:** Kraniyal nöropatiler ve sınıflandırılamayan ağrılar",
-       "duzey": 1,
+        "sekil": null,
+        "madde": [
+         0,
+         2
+        ]
+       },
        "vurgu": [
         {
-         "metin": "sınıflandırılamayan",
-         "tur": "terim"
+         "tur": "terim",
+         "metin": "yüz ağrıları"
         }
-       ],
-       "slayt_adim": "k2-10-d-s05",
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 5,
-        "satir": [
-         "    13. Ağrılı kraniyal nöropatiler ve diğer yüz ağrıları",
-         "      14. Diğer başağrısı bozuklukları",
-         "( sınıflandırılamayan )"
-        ],
-        "sekil": null
-       }
+       ]
       },
       {
-       "id": "k2-10-c0032",
-       "ses": "Bu nöropatik tablolarda ağrı genellikle şimşek çakar tarzda, saniyeler süren paroksizmler halinde ortaya çıkar ve periferik sinir basısı ya da demyelinizasyon mekanizmasıyla tetiklenir.",
-       "ekran": "**Nöropatik Özellik:** Şimşek çakar tarzda paroksizmal ağrı atakları",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "paroksizmal ağrı",
-         "tur": "tanim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s05",
-       "cikmis": [],
-       "spot": null,
+       "id": "k2-10-c0038",
+       "ses": "Bu grubun en bilinen klinik örneği, trigeminal sinirin duyusal dallarında şimşek çakar tarzda, saniyeler süren elektrik çarpması benzeri paroksismal ağrılarla seyreden trigeminal nevraljidir.",
+       "ekran": "**Trigeminal Nevralji:** Trigeminal dal dağılımında elektrik çarpması benzeri şimşek tarzı ağrı.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 5,
         "satir": [
          "13. Ağrılı kraniyal nöropatiler ve diğer yüz ağrıları"
         ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0033",
-       "ses": "Yüzün duyusal inervasyonunu sağlayan sinir köklerinin mikrovasküler basıya uğraması, çiğneme veya dokunmayla tetiklenen şiddetli elektrik çarpması hissini doğurur.",
-       "ekran": "**Mikrovasküler Bası:** Trigeminal kök basısı elektrik çarpması hissi yaratır",
-       "duzey": 1,
+        "sekil": null,
+        "madde": [
+         2,
+         0
+        ]
+       },
        "vurgu": [
         {
-         "metin": "Mikrovasküler Bası",
-         "tur": "terim"
+         "tur": "terim",
+         "metin": "Trigeminal Nevralji"
         }
-       ],
-       "slayt_adim": "k2-10-d-s05",
-       "cikmis": [],
-       "spot": null,
+       ]
+      },
+      {
+       "id": "k2-10-c0039",
+       "ses": "Yutkunmakla veya boğaza dokunmakla tetiklenen glossofaringeal nevralji ve herpes zoster enfeksiyonu sonrasında gelişen postherpetik nevralji de bu başlıkta yer alır.",
+       "ekran": "**Diğer Nevraljiler:** Glossofaringeal nevralji ve zona sekeli postherpetik nöropati.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "ve diğer başağrıları"
+        ],
+        "sekil": null,
+        "madde": [
+         1,
+         3
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Glossofaringeal nevralji"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0040",
+       "ses": "On dördüncü grup ise mevcut kriterlerin hiçbirine uymayan ve sınıflandırılamayan diğer baş ağrısı bozukluklarını ifade eder.",
+       "ekran": "**Grup 14 (Sınıflandırılamayan):** Belirli kriterlere oturmayan atipik baş ağrısı tabloları.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 5,
         "satir": [
          "14. Diğer başağrısı bozuklukları"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         3,
+         1
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Sınıflandırılamayan"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0041",
+       "ses": "Ağrılı kraniyal nöropatilerde patofizyolojik temel çoğu zaman periferik sinir köküne aberan bir arteriyel damar lupunun yaptığı mikrovasküler kompresyondur.",
+       "ekran": "**Mikrovasküler Kompresyon:** Sinir giriş zonunda pulsatif damar basısı ve fokal demiyelinizasyon.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "ve diğer başağrıları"
+        ],
+        "sekil": null,
+        "madde": [
+         1,
+         3
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Mikrovasküler Kompresyon"
+        }
+       ]
       }
      ]
     },
     {
      "id": "k2-10-p009",
      "sayfa": 5,
-     "slayt_adim": "k2-10-d-s05",
      "cumleler": [
       {
-       "id": "k2-10-c0034",
-       "ses": "Klinik hekimlik yaklaşımında en temel ilke şudur: Primer baş ağrıları bizzat kendisi bağımsız bir hastalıktır ve doğrudan yaşamı tehdit etmez.",
-       "ekran": "**Primer Baş Ağrısı:** Bizzat kendisi hastalıktır ve yaşamı tehdit etmez",
+       "id": "k2-10-c0042",
+       "ses": "Klinik pratikte baş ağrılı hastaya yaklaşımın en temel felsefesi primer baş ağrıları ile sekonder baş ağrıları arasındaki zıt özellikleri eksiksiz kavramaktır.",
+       "ekran": "**Temel Klinik Felsefe:** Primer ve sekonder baş ağrıları arasındaki kategorik zıtlıklar.",
        "duzey": 0,
-       "vurgu": [
-        {
-         "metin": "yaşamı tehdit etmez",
-         "tur": "tanim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s05",
-       "cikmis": [],
-       "spot": null,
        "slayt": {
         "sayfa": 5,
         "satir": [
-         "Primer başağrıları bizzat kendisi bir hastalık, yaşamı",
-         "tehdit etmez"
+         "Primer başağrıları bizzat kendisi bir hastalık"
         ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0035",
-       "ses": "Bu tablolarda genellikle tanı için ileri tetkik gerekmez; hasta ayrıntılı klinik öyküyle tanınır ve çoğunlukla medikal tedavi ile yaşam tarzı önerileriyle kontrol altına alınabilir.",
-       "ekran": "**Primer Yönetim:** İleri tetkik gerekmez, tedavi ve önerilerle kontrol edilir",
-       "duzey": 1,
+        "sekil": null,
+        "madde": [
+         5,
+         9
+        ]
+       },
        "vurgu": [
         {
-         "metin": "İleri tetkik gerekmez",
-         "tur": "tuzak"
+         "tur": "terim",
+         "metin": "Klinik Felsefe"
         }
-       ],
-       "slayt_adim": "k2-10-d-s05",
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 5,
-        "satir": [
-         "Genellikle tanı için ileri tetkik gerekmez, çoğunlukla",
-         "tedavi ve önerilerle kontrol altına alınabilir."
-        ],
-        "sekil": null
-       }
+       ]
       },
       {
-       "id": "k2-10-c0036",
-       "ses": "Buna tam bir karşıtlık olarak sekonder baş ağrıları bağımsız bir hastalık değil bir semptomdur ve altta yatan bir başka hastalığın klinik dışa vurumudur.",
-       "ekran": "**Sekonder Baş Ağrısı:** Bağımsız hastalık değil, altta yatanın semptomudur",
+       "id": "k2-10-c0043",
+       "ses": "Primer baş ağrıları bizzat kendisi bağımsız bir hastalıktır; altta yatan yapısal bir lezyon bulunmaz ve doğrudan doğruya yaşamı tehdit etmez.",
+       "ekran": "**Primer Doğa:** Bizzat hastalıktır, yapısal lezyon yoktur, doğrudan yaşamı tehdit etmez.",
        "duzey": 0,
-       "vurgu": [
-        {
-         "metin": "altta yatanın semptomudur",
-         "tur": "tanim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s05",
-       "cikmis": [],
-       "spot": null,
        "slayt": {
         "sayfa": 5,
         "satir": [
-         "Sekonder başağrıları bir semptom, altta yatan bir başka",
-         "hastalık."
+         "Primer başağrıları bizzat kendisi bir hastalık, yaşamı"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         5,
+         8
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Bizzat hastalık"
+        }
+       ]
       },
       {
-       "id": "k2-10-c0037",
-       "ses": "Sekonder nedenler kanama, menenjit veya kitle basısı gibi süreçlerle doğrudan yaşamı tehdit edebilir; bu nedenle tanıda ivedi davranılması ve acil ileri inceleme yapılması hayati bir zorunluluktur.",
-       "ekran": "**Sekonder Aciliyeti:** Yaşamı tehdit edebilir, ivedi ileri inceleme gerekir",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "Yaşamı tehdit edebilir",
-         "tur": "tuzak"
-        },
-        {
-         "metin": "ivedi ileri inceleme",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s05",
-       "cikmis": [],
-       "spot": null,
+       "id": "k2-10-c0044",
+       "ses": "Primer baş ağrılarında tanı klinik öykü ile konur; kural olarak ileri tetkik gerekmez ve çoğunlukla uygun medikal tedavi ve yaşam tarzı önerileriyle kontrol altına alınabilir.",
+       "ekran": "**Primer Yönetim:** İleri tetkik gerekmez, tanı kliniktir, medikal tedaviyle kontrol edilir.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 5,
         "satir": [
-         "Yaşamı tehdit edebilir.",
-         "İvedi davranılması gerekir.",
+         "Genellikle tanı için ileri tetkik gerekmez, çoğunlukla"
+        ],
+        "sekil": null,
+        "madde": [
+         6,
+         12
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Primer Yönetim"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0045",
+       "ses": "Buna karşın sekonder baş ağrıları bağımsız bir hastalık değil, altta yatan bir başka organik hastalığın habercisi olan alarm verici bir semptomdur.",
+       "ekran": "**Sekonder Doğa:** Bağımsız hastalık değil, altta yatan organik hastalığın öncü semptomudur.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Sekonder başağrıları bir semptom, altta yatan bir başka"
+        ],
+        "sekil": null,
+        "madde": [
+         8,
+         5
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "semptom"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0046",
+       "ses": "Sekonder baş ağrıları yaşamı doğrudan tehdit edebilir; bu nedenle hekimin ivedi davranması ve hedefe yönelik ileri incelemeleri gecikmeksizin başlatması zorunludur.",
+       "ekran": "**Sekonder Yönetim:** Yaşamı tehdit eder; ivedi tanı ve ileri görüntüleme incelemesi zorunludur.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Yaşamı tehdit edebilir"
+        ],
+        "sekil": null,
+        "madde": [
+         10,
+         6
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Yaşamı tehdit eder"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0047",
+       "ses": "Sekonder baş ağrısında nedene yönelik acil etiyolojik tedavi uygulanmazsa hasta dakikalar veya saatler içinde geri dönüşsüz nörolojik hasara veya ölüme gidebilir.",
+       "ekran": "**Acil Tedavi Zorunluluğu:** Gecikmiş müdahalenin kalıcı sakatlık veya fatal sonlanım riski.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
          "İleri inceleme gerekir"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         12,
+         6
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Acil Tedavi Zorunluluğu"
+        }
+       ]
       }
      ]
     }
@@ -1012,213 +1198,254 @@
   {
    "id": "k2-10-b06",
    "baslik": "Tanısal Yaklaşım ve Anamnezin Temel Önemi",
-   "sayfa_araligi": [
-    6,
-    6
-   ],
    "paragraflar": [
     {
      "id": "k2-10-p010",
      "sayfa": 6,
-     "slayt_adim": "k2-10-d-s06",
      "cumleler": [
       {
-       "id": "k2-10-c0038",
-       "ses": "Baş ağrılı hastada tanısal yaklaşım sürecinde anamnez tanının temelini oluşturur ve en kıymetli klinik adımdır.",
-       "ekran": "**Tanısal Yaklaşım:** Anamnez tanının temelini oluşturur",
+       "id": "k2-10-c0048",
+       "ses": "Baş ağrısıyla başvuran bir hastada doğru tanıya ulaşmanın en kritik ve vazgeçilmez temel basamağını titizlikle alınmış ayrıntılı bir anamnez oluşturur.",
+       "ekran": "**Tanısal Yaklaşım:** Anamnez baş ağrısında tanının temelini ve en güçlü basamağını oluşturur.",
        "duzey": 0,
-       "vurgu": [
-        {
-         "metin": "tanının temelini",
-         "tur": "tanim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s06",
-       "cikmis": [
-        "d3-k2-nor-001"
-       ],
-       "spot": null,
        "slayt": {
         "sayfa": 6,
         "satir": [
-         "TANISAL YAKLAŞIM",
-         "    Anamnez tanının temelini oluşturur."
+         "TANISAL YAKLAŞIM"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         0,
+         1
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Tanısal Yaklaşım"
+        }
+       ]
       },
       {
-       "id": "k2-10-c0039",
-       "ses": "Hastaya yeterli zaman ayırıp iyi bir anamnez almak, primer ve sekonder baş ağrısı ayrımında en belirleyici basamaktır ve hastayı gereksiz tetkiklerden kaçınmada hekime büyük fayda sağlar.",
-       "ekran": "**Klinik Yarar:** Primer-sekonder ayrımı sağlar ve gereksiz tetkiki önler",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "gereksiz tetkiki",
-         "tur": "tuzak"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s06",
-       "cikmis": [],
-       "spot": null,
+       "id": "k2-10-c0049",
+       "ses": "Baş ağrılarında laboratuvar testleri veya radyolojik görüntülemeler değil, doğrudan hastanın kendi ifadesi ve öyküsü tanının temelini oluşturur.",
+       "ekran": "**Anamnezin Gücü:** Tanı oranının büyük kısmını sağlayan birinci basamak araç öyküdür.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 6,
         "satir": [
-         "• Hastaya yeterli zaman ayrıp iyi bir anamnez",
-         "almak primer , sekonder ayrımında ve gereksiz",
+         "Anamnez tanının temelini oluşturur"
+        ],
+        "sekil": null,
+        "madde": [
+         1,
+         2
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "öykü"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0050",
+       "ses": "Hastaya yeterli zaman ayırıp iyi bir anamnez almak, primer ve sekonder baş ağrısı ayrımını güvenle yapmada hekime eşsiz bir klinik rehberlik sağlar.",
+       "ekran": "**Zaman Ayırma:** Hastaya yeterli vakit ayırarak derinlemesine klinik sorgulama yapmak.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Hastaya yeterli zaman ayrıp iyi bir anamnez"
+        ],
+        "sekil": null,
+        "madde": [
+         2,
+         1
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "klinik sorgulama"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0051",
+       "ses": "Ayrıca doğru bir anamnez, hastayı gereksiz bilgisayarlı tomografi ve manyetik rezonans çekimlerinden, radyasyon maruziyetinden ve sağlık sistemi maliyetlerinden korur.",
+       "ekran": "**Gereksiz Tetkik Önleme:** Hastayı lüzumsuz radyasyon, kontrast madde ve maliyet yükünden koruma.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
          "tetkiklerden kaçınmada faydalı"
         ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0040",
-       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Migren, gerilim tipi baş ağrısı veya küme baş ağrısının tanısı laboratuvar testleriyle değil, tamamen ayrıntılı klinik öykü ve anamnez bilgisi ile konur.",
-       "ekran": "**Çıkmış Soru:** Migren tanısı tamamen ayrıntılı klinik öykü ile konur",
-       "duzey": 1,
+        "sekil": null,
+        "madde": [
+         3,
+         2
+        ]
+       },
        "vurgu": [
         {
-         "metin": "klinik öykü",
-         "tur": "cikmis"
+         "tur": "terim",
+         "metin": "Gereksiz Tetkik Önleme"
         }
-       ],
-       "slayt_adim": "k2-10-d-s06",
-       "cikmis": [
-        "d3-k2-nor-001",
-        "past-1790877039274-141162"
-       ],
-       "spot": null,
-       "slayt": {
-        "sayfa": 6,
-        "satir": [
-         "• Hastaya yeterli zaman ayrıp iyi bir anamnez"
-        ],
-        "sekil": null
-       }
+       ]
       },
       {
-       "id": "k2-10-c0041",
-       "ses": "Hastayı dikkatle dinlemek yalnızca doğru tanıya ulaştırmakla kalmaz, aynı zamanda hekim ile hasta arasında tedavi uyumunu güçlendiren güçlü bir güven bağı oluşturur.",
-       "ekran": "**Hasta Uyumu:** Dikkatli dinleme tedavi uyumu ve güven bağını artırır",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "tedavi uyumu",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s06",
-       "cikmis": [],
-       "spot": null,
+       "id": "k2-10-c0052",
+       "ses": "Hekimin anamnezde hastanın ağrıyı anlatırken kullandığı mimikleri, ağrının başladığı anı tasvir edişini dikkatle gözlemlemesi ayırıcı tanıda paha biçilmez ipuçları verir.",
+       "ekran": "**Gözlem ve İpuçları:** Hastanın ağrıyı tasvir ederken sergilediği davranışsal ve klinik ipuçları.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 6,
         "satir": [
          "almak primer , sekonder ayrımında ve gereksiz"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         3,
+         4
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "asvir "
+        }
+       ]
       }
      ]
     },
     {
      "id": "k2-10-p011",
      "sayfa": 6,
-     "slayt_adim": "k2-10-d-s06",
      "cumleler": [
       {
-       "id": "k2-10-c0042",
-       "ses": "Primer baş ağrılarında ataklar arasında ve hatta atak sırasında yapılan genel tıbbi ve nörolojik muayene çoğunlukla tamamen normal bulunur.",
-       "ekran": "**Muayene Özelliği:** Primer baş ağrısında tıbbi ve nörolojik muayene normaldir",
+       "id": "k2-10-c0053",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: migren ve gerilim tipi gibi primer baş ağrılarında tanı tamamen hastadan alınan ayrıntılı klinik öykü ve anamneze dayanır; rutin nörolojik muayene, biyokimyasal testler ve nörogörüntüleme kural olarak tamamen normaldir.",
+       "ekran": "**Sınav Spotu (Çıkmış Soru):** Bu bilgi çıkmış sınavda sorulmuştur: Primer baş ağrılarında tanı anamneze dayanır; muayene tamamen normaldir.",
        "duzey": 0,
-       "vurgu": [
-        {
-         "metin": "muayene normaldir",
-         "tur": "tanim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s06",
-       "cikmis": [],
-       "spot": null,
        "slayt": {
         "sayfa": 6,
         "satir": [
-         "• Primer başağrılarında çoğunlukla tıbbi ve",
-         "nörolojik muayene normal"
+         "Primer başağrılarında çoğunlukla tıbbi ve"
         ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0043",
-       "ses": "Nörolojik muayenenin tamamen doğal bulunması primer baş ağrısı tanısını pekiştirirken, en ufak bir asimetri, refleks canlılığı veya kranial sinir felci hekimi derhal sekonder nedenlere yönlendirmelidir.",
-       "ekran": "**Muayene Kararı:** Normal muayene primeri destekler, defisit sekonderi düşündürür",
-       "duzey": 1,
+        "sekil": null,
+        "madde": [
+         4,
+         3
+        ]
+       },
        "vurgu": [
         {
-         "metin": "sekonderi düşündürür",
-         "tur": "tuzak"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s06",
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 6,
-        "satir": [
-         "• Primer başağrılarında çoğunlukla tıbbi ve"
-        ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0044",
-       "ses": "Hekimin yapacağı sistemik muayenede vital bulgular, kan basıncı ölçümü ve boyun hareket açıklığı değerlendirmesi sekonder hipertansif ve menengeal tabloların dışlanmasında temel role sahiptir.",
-       "ekran": "**Sistemik Değerlendirme:** Vital bulgular, kan basıncı ve boyun hareketleri muayenesi",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "Vital bulgular",
-         "tur": "terim"
+         "tur": "terim",
+         "metin": "Sınav Spotu (Çıkmış Soru)"
         },
         {
-         "metin": "Sistemik Değerlendirme:",
+         "metin": "Sınav Spotu (Çıkmış Soru):",
          "tur": "cikmis"
         }
        ],
-       "slayt_adim": "k2-10-d-s06",
        "cikmis": [
-        "d3-k2-ah-008"
-       ],
-       "spot": null,
-       "slayt": {
-        "sayfa": 6,
-        "satir": [
-         "nörolojik muayene normal"
-        ],
-        "sekil": null
-       }
+        "d3-k2-nor-001",
+        "past-1790877039274-141162",
+        "4c4eb178b88b"
+       ]
       },
       {
-       "id": "k2-10-c0045",
-       "ses": "Özellikle ense sertliği ve laseg belirtisi gibi menengeal irritasyon bulguları akut enfeksiyon ve kanamalarda tanısal yönden belirleyicidir.",
-       "ekran": "**Menengeal İrritasyon:** Ense sertliği enfeksiyon ve kanamada belirleyicidir",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "Ense sertliği",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s06",
-       "cikmis": [],
-       "spot": null,
+       "id": "k2-10-c0054",
+       "ses": "Migren veya gerilim tipi baş ağrısı atakları yaşayan bir hastada atak anı dışında yapılan muayenede hiçbir patolojik nörolojik bulguya rastlanmaz.",
+       "ekran": "**Ataklar Arası Normallik:** İnteriktal dönemde kraniyal sinir, motor ve refleks muayenesinin doğallığı.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 6,
         "satir": [
          "nörolojik muayene normal"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         5,
+         2
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Ataklar Arası Normallik"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0055",
+       "ses": "Buna karşın yapılan fizik ve nörolojik muayenede saptanan en ufak bir anormallik, hekimi derhal primer tanıdan uzaklaştırıp sekonder bir neden aramaya sevk etmelidir.",
+       "ekran": "**Patolojik Bulgu Uyarısı:** Muayenede en ufak patolojik bulgu derhal sekonder neden araştırması gerektirir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Primer başağrılarında çoğunlukla tıbbi ve"
+        ],
+        "sekil": null,
+        "madde": [
+         4,
+         3
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Patolojik Bulgu"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0056",
+       "ses": "Muayenenin normal bulunması hastayı rahatlatmak ve selim süreci teyit etmek için hekimin elindeki en somut klinik kanıttır.",
+       "ekran": "**Klinik Güvence:** Muayenenin tam normal saptanması selim süreci teyit eden en somut kanıttır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "nörolojik muayene normal"
+        ],
+        "sekil": null,
+        "madde": [
+         5
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Klinik Güvence"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0057",
+       "ses": "Ancak muayenenin normal olması, ani başlangıçlı şiddetli kanama gibi hiperakut süreçleri ekarte etmeye tek başına yetmeyebilir; anamnezdeki alarm bulguları daima muayene bulgusundan önce gelir.",
+       "ekran": "**Anamnez Önceliği:** Muayene normal olsa dahi öyküdeki kırmızı bayraklar ileri tetkik gerektirir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "almak primer , sekonder ayrımında ve gereksiz"
+        ],
+        "sekil": null,
+        "madde": [
+         3,
+         4
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Anamnez Önceliği"
+        }
+       ]
       }
      ]
     }
@@ -1227,228 +1454,245 @@
   {
    "id": "k2-10-b07",
    "baslik": "Anamnezde Mutlaka Sorgulanması Gereken Özellikler",
-   "sayfa_araligi": [
-    7,
-    7
-   ],
    "paragraflar": [
     {
      "id": "k2-10-p012",
      "sayfa": 7,
-     "slayt_adim": "k2-10-d-s07",
      "cumleler": [
       {
-       "id": "k2-10-c0046",
-       "ses": "Baş ağrısı ile gelen her olguda sistematik bir klinik harita izlenmeli ve bazı temel sorular hekim tarafından mutlaka sorulmalıdır.",
-       "ekran": "**Anamnez İlkeleri:** Baş ağrısında mutlaka sorulması gereken klinik özellikler",
+       "id": "k2-10-c0058",
+       "ses": "Baş ağrısı yakınmasıyla gelen her hastada hekimin sistematik olarak mutlaka sorması gereken temel semiyolojik parametreler bulunmaktadır.",
+       "ekran": "**Sistematik Anamnez Parametreleri:** Hekimin sorgulaması gereken temel semiyolojik ölçütler.",
        "duzey": 0,
-       "vurgu": [
-        {
-         "metin": "mutlaka sorulması gereken",
-         "tur": "tanim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s07",
-       "cikmis": [],
-       "spot": null,
        "slayt": {
         "sayfa": 7,
         "satir": [
          "Mutlaka sorulmalı"
         ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0047",
-       "ses": "Öncelikle baş ağrısının tipi ve karakteri sorgulanmalı; ağrının zonklayıcı, sıkıştırıcı bant tarzında, patlayıcı veya delici karakterde olup olmadığı kaydedilmelidir.",
-       "ekran": "**Ağrı Karakteri:** Zonklayıcı, sıkıştırıcı veya delici karakter sorgulanır",
-       "duzey": 1,
+        "sekil": null,
+        "madde": [
+         0
+        ]
+       },
        "vurgu": [
         {
-         "metin": "Ağrı Karakteri",
-         "tur": "terim"
+         "tur": "terim",
+         "metin": "Sistematik Anamnez"
         }
-       ],
-       "slayt_adim": "k2-10-d-s07",
-       "cikmis": [],
-       "spot": null,
+       ]
+      },
+      {
+       "id": "k2-10-c0059",
+       "ses": "İlk olarak baş ağrısının tipi ve karakteri sorgulanmalıdır; zonklayıcı pulsatif bir ağrı migreni, mengene gibi sıkıştırıcı bir ağrı gerilim tipini, elektrik çarpması veya delici oyucu bir ağrı ise nevraljileri ve küme baş ağrısını düşündürür.",
+       "ekran": "**Ağrı Karakteri:** Zonklayıcı (migren), sıkıştırıcı (gerilim), delici/oyucu (küme, nevralji).",
+       "duzey": 0,
        "slayt": {
         "sayfa": 7,
         "satir": [
-         "• Başağrısının tipi ve karakteri"
+         "Başağrısının tipi ve karakteri"
         ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0048",
-       "ses": "Ağrının başlangıcı, gün veya ay içindeki sıklığı, tek taraflı veya iki taraflı anatomik yeri ve hastanın günlük yaşamını kısıtlayan şiddeti netleştirilmelidir.",
-       "ekran": "**Ağrı Boyutları:** Başlangıç, sıklık, anatomik yer ve şiddet derecesi",
-       "duzey": 1,
+        "sekil": null,
+        "madde": [
+         1
+        ]
+       },
        "vurgu": [
         {
-         "metin": "Başlangıç",
-         "tur": "terim"
-        },
-        {
-         "metin": "sıklık",
-         "tur": "terim"
+         "tur": "terim",
+         "metin": "Zonklayıcı"
         }
-       ],
-       "slayt_adim": "k2-10-d-s07",
-       "cikmis": [],
-       "spot": null,
+       ]
+      },
+      {
+       "id": "k2-10-c0060",
+       "ses": "Ağrının başlangıç biçimi hayati önem taşır; saniyeler içinde aniden en yüksek şiddete ulaşan gök gürültüsü tarzı başlangıç ile yavaş yavaş saatler içinde gelişen başlangıç birbirinden tamamen farklı klinik anlamlar taşır.",
+       "ekran": "**Başlangıç Hızı:** Saniyeler içinde patlayan gök gürültüsü ağrısı ile yavaş başlangıç ayrımı.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 7,
         "satir": [
-         "• Başlangıcı",
-         "• Sıklığı",
-         "• Yeri",
-         "• Şiddeti"
+         "Başlangıcı"
         ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0049",
-       "ses": "Ağrı atağından önce ortaya çıkan görsel zikzaklar veya uyuşmalar gibi aura ve prodrom belirtilerinin olup olmaması özellikle auralı migren tanısında anahtardır.",
-       "ekran": "**Öncü Bulgular:** Aura ve prodrom belirtilerinin varlığı araştırılır",
-       "duzey": 1,
+        "sekil": null,
+        "madde": [
+         2,
+         5
+        ]
+       },
        "vurgu": [
         {
-         "metin": "Aura ve prodrom",
-         "tur": "terim"
-        },
-        {
-         "metin": "Öncü Bulgular:",
-         "tur": "cikmis"
+         "tur": "terim",
+         "metin": "gök gürültüsü"
         }
-       ],
-       "slayt_adim": "k2-10-d-s07",
-       "cikmis": [
-        "365430593b97"
-       ],
-       "spot": null,
+       ]
+      },
+      {
+       "id": "k2-10-c0061",
+       "ses": "Ağrının sıklığı, atakların süresi, lokalizasyonu yani tek taraflı hemikranyal mi yoksa tüm başı saran holosefalik mi olduğu ve şiddet derecesi mutlaka kaydedilmelidir.",
+       "ekran": "**Sıklık, Lokalizasyon ve Şiddet:** Tek taraflı hemikranyal veya holosefalik yayılım ve atak süresi.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 7,
         "satir": [
-         "• Aura ve prodorom belirtilerinin olup olmaması"
+         "Yeri"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         4,
+         0
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "hemikranyal"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0062",
+       "ses": "Örneğin tek taraflı ve sürekli aynı bölgeye lokalize kalan baş ağrıları altta yatan yapısal fokal bir lezyon açısından daha dikkatli inceleme gerektirir.",
+       "ekran": "**Fokal Lokalizasyon:** Hep aynı tarafta sabit kalan tek taraflı ağrılarda yapısal lezyon kuşkusu.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Şiddeti"
+        ],
+        "sekil": null,
+        "madde": [
+         5
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Fokal Lokalizasyon"
+        }
+       ]
       }
      ]
     },
     {
      "id": "k2-10-p013",
      "sayfa": 7,
-     "slayt_adim": "k2-10-d-s07",
      "cumleler": [
       {
-       "id": "k2-10-c0050",
-       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Ağrıya eşlik eden bulantı, kusma, fotofobi ve fonofobi gibi belirtiler migren tanısında kritik ipuçlarıdır.",
-       "ekran": "**Eşlik Eden Belirtiler:** Bulantı, kusma, fotofobi ve fonofobi mevcudiyeti",
-       "duzey": 1,
+       "id": "k2-10-c0063",
+       "ses": "Ağrıya eşlik eden öncü ve eşzamanlı semptomların sorgulanması tanı koydurucu en kıymetli basamaklardan biridir.",
+       "ekran": "**Eşlik Eden Semptomlar:** Aura, prodrom ve otonomik bulguların tanısal değeri.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Aura ve prodorom belirtilerinin olup olmaması"
+        ],
+        "sekil": null,
+        "madde": [
+         6,
+         7
+        ]
+       },
        "vurgu": [
         {
-         "metin": "fotofobi",
-         "tur": "terim"
-        },
+         "tur": "terim",
+         "metin": "Eşlik Eden Semptomlar"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0064",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: migrende ağrı öncesinde görsel skotomlar ve parıltılar şeklinde aura görülebilirken, atağa bulantı, kusma, fotofobi ve fonofobi eşlik eder; akut atakta triptanlar, koruyucu profilakside ise beta blokör ve antiepileptikler kullanılır.",
+       "ekran": "**Sınav Spotu (Çıkmış Soru):** Bu bilgi çıkmış sınavda sorulmuştur: Migrende aura, bulantı, kusma, fotofobi ve fonofobi görülür; akut atakta triptanlar kullanılır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "bulantı, kusma, fotofobi, fonofobi"
+        ],
+        "sekil": null,
+        "madde": [
+         7,
+         0
+        ]
+       },
+       "vurgu": [
         {
-         "metin": "fonofobi",
-         "tur": "terim"
+         "tur": "terim",
+         "metin": "fotofobi ve fonofobi"
         }
        ],
-       "slayt_adim": "k2-10-d-s07",
        "cikmis": [
         "past-1790877038133-633883"
-       ],
-       "spot": null,
-       "slayt": {
-        "sayfa": 7,
-        "satir": [
-         "• Eşlik eden belirtiler; bulantı, kusma, fotofobi, fonofobi"
-        ],
-        "sekil": null
-       }
+       ]
       },
       {
-       "id": "k2-10-c0051",
-       "ses": "Ağrıyı presipite eden faktörler olup olmaması, açlık, stres, çikolata veya peynir gibi besinler ile hastanın uyku düzeni ve maruz kaldığı emosyonel faktörler titizlikle sorgulanmalıdır.",
-       "ekran": "**Tetikleyici Faktörler:** Presipite eden faktörler, uyku düzeni ve emosyonel faktörler",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "Presipite eden faktörler",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s07",
-       "cikmis": [],
-       "spot": null,
+       "id": "k2-10-c0065",
+       "ses": "Ağrıyı presipite eden tetikleyici faktörler mutlaka araştırılmalıdır; parlak ışık, açlık, uykusuzluk, emosyonel stres, menstruasyon döngüsü, tiramin içeren peynir veya çikolata tüketimi klasik migren tetikleyicileridir.",
+       "ekran": "**Tetikleyiciler:** Stres, uykusuzluk, açlık, menstruasyon ve tiraminli gıdalar.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 7,
         "satir": [
-         "• Presipite eden faktörler olup olmaması",
-         "• Uyku düzeni",
-         "• Emosyonel faktörler"
+         "Presipite eden faktörler olup olmaması"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         8,
+         10
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "tiramin"
+        }
+       ]
       },
       {
-       "id": "k2-10-c0052",
-       "ses": "Hastanın genetik yatkınlığını aydınlatan aile öyküsü ile analjezik aşırı kullanım baş ağrısını ayırt etmek amacıyla önceki medikasyonlar ve tedaviler tam listesiyle alınmalıdır.",
-       "ekran": "**Özgeçmiş Sorgusu:** Aile öyküsü ve önceki medikasyonlar",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "Aile öyküsü",
-         "tur": "terim"
-        },
-        {
-         "metin": "Önceki medikasyonlar",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s07",
-       "cikmis": [],
-       "spot": null,
+       "id": "k2-10-c0066",
+       "ses": "Hastanın uyku düzeni, emosyonel dalgalanmaları, ailede benzer baş ağrısı öyküsünün bulunması ve daha önce kullandığı medikasyonlar ile aşırı analjezik tüketimi ayrıntılı sorgulanmalıdır.",
+       "ekran": "**Öykü Detayları:** Uyku düzeni, ailede migren öyküsü ve önceki medikasyon yanıtları.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 7,
         "satir": [
-         "• Aile öyküsü",
-         "• Önceki medikasyonlar ve tedaviler"
+         "Önceki medikasyonlar ve tedaviler"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         12,
+         9
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Uyku düzeni"
+        }
+       ]
       },
       {
-       "id": "k2-10-c0053",
-       "ses": "Özellikle haftada iki veya üç günden fazla basit analjezik veya triptan kullanan hastalarda ilaca bağlı kronikleşme tuzağı mutlaka hesaba katılmalıdır.",
-       "ekran": "**İlaç Aşırı Kullanımı:** Sık analjezik alımı kronikleşme tuzağı yaratır",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "analjezik",
-         "tur": "terim"
-        },
-        {
-         "metin": "kronikleşme tuzağı",
-         "tur": "tuzak"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s07",
-       "cikmis": [],
-       "spot": null,
+       "id": "k2-10-c0067",
+       "ses": "Ayda on beş günden fazla analjezik veya triptan kullanan hastalarda ilacın bizzat kendisinin kronik baş ağrısını tetiklediği aşırı analjezik kullanım baş ağrısı tablosu akılda tutulmalıdır.",
+       "ekran": "**İlaç Kötüye Kullanımı:** Ayda 15 günden fazla analjezikte gelişen aşırı kullanım baş ağrısı.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 7,
         "satir": [
-         "• Önceki medikasyonlar ve tedaviler"
+         "Önceki medikasyonlar ve tedaviler"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         12
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "İlaç Kötüye Kullanımı"
+        }
+       ]
       }
      ]
     }
@@ -1457,255 +1701,314 @@
   {
    "id": "k2-10-b08",
    "baslik": "Sekonder Baş Ağrısını Düşündüren Kırmızı Bayraklar ve Öykü Özellikleri",
-   "sayfa_araligi": [
-    8,
-    8
-   ],
    "paragraflar": [
     {
      "id": "k2-10-p014",
      "sayfa": 8,
-     "slayt_adim": "k2-10-d-s08",
      "cumleler": [
       {
-       "id": "k2-10-c0054",
-       "ses": "Acil servis ve poliklinikte hekimin en yüksek klinik uyanıklık göstermesi gereken alan, sekonder baş ağrısı düşündüren öykü özellikleri yani kırmızı bayraklardır.",
-       "ekran": "**Kırmızı Bayraklar:** Sekonder baş ağrısı düşündüren klinik alarm öyküleri",
+       "id": "k2-10-c0068",
+       "ses": "Sekonder baş ağrısını düşündüren ve literatürde kırmızı bayraklar olarak adlandırılan öykü özellikleri hastanın acil servise sevkini ve ivedi görüntülenmesini gerektirir.",
+       "ekran": "**Kırmızı Bayraklar:** Acil tetkik ve ileri nörogörüntüleme gerektiren hayati alarm bulguları.",
        "duzey": 0,
-       "vurgu": [
-        {
-         "metin": "Sekonder baş ağrısı düşündüren",
-         "tur": "tanim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s08",
-       "cikmis": [],
-       "spot": null,
        "slayt": {
         "sayfa": 8,
         "satir": [
          "Sekonder başağrısı düşündüren öykü özellikleri:"
         ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0055",
-       "ses": "Daha önce hiç baş ağrısı çekmemiş bir kişide yeni başlayan akut ve çok şiddetli baş ağrısı damarsal bir felaketi düşündürür.",
-       "ekran": "**Akut Başlangıç:** Yeni başlayan akut ve çok şiddetli baş ağrısı",
-       "duzey": 1,
+        "sekil": null,
+        "madde": [
+         0,
+         3
+        ]
+       },
        "vurgu": [
         {
-         "metin": "Akut Başlangıç",
-         "tur": "tuzak"
+         "tur": "terim",
+         "metin": "Kırmızı Bayraklar"
         }
-       ],
-       "slayt_adim": "k2-10-d-s08",
-       "cikmis": [],
-       "spot": null,
+       ]
+      },
+      {
+       "id": "k2-10-c0069",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: hastanın yaşamındaki en şiddetli baş ağrısı tanımı ve saniyeler içinde patlayan gök gürültüsü tarzı akut başlangıç, ense sertliği ve fotofobi ile birleştiğinde ilk olarak rüptüre anevrizmaya bağlı subaraknoid kanamayı düşündürmelidir.",
+       "ekran": "**Sınav Spotu (Çıkmış Soru):** Bu bilgi çıkmış sınavda sorulmuştur: Yaşamın en şiddetli baş ağrısı tanımı ilk olarak SAK düşünülmesini gerektirir.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 8,
         "satir": [
-         "- Yeni başlayan akut ve çok şiddetli başağrısı"
+         "Hastanın yaşamındaki “en şiddetli başağrısı” tanımı"
         ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0056",
-       "ses": "Sınavda sorulmuş olan önemli bir kural olarak, baş ağrısının on yaşından önce veya elli yaşından sonra başlaması, çocuklarda oksipital yerleşim ve erkek cinsiyet sekonder alarm bulgusudur.",
-       "ekran": "**Yaş Kriteri:** 10 yaş öncesi ve 50 yaş sonrası başlayan baş ağrısı",
-       "duzey": 1,
+        "sekil": null,
+        "madde": [
+         8,
+         1
+        ]
+       },
        "vurgu": [
         {
-         "metin": "10 yaş öncesi",
-         "tur": "sayi"
-        },
-        {
-         "metin": "50 yaş sonrası",
-         "tur": "sayi"
+         "tur": "terim",
+         "metin": "en şiddetli baş ağrısı"
         }
        ],
-       "slayt_adim": "k2-10-d-s08",
        "cikmis": [
-        "048fe1e04f10",
-        "e4c0d0bc7be7",
-        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-21"
-       ],
-       "spot": null,
+        "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-62",
+        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-20",
+        "q-2__kurul_-7-cs2",
+        "d3-k2-nor-007"
+       ]
+      },
+      {
+       "id": "k2-10-c0070",
+       "ses": "Yeni başlayan akut ve çok şiddetli baş ağrıları, daha önce hiç baş ağrısı çekmemiş bir kişide ortaya çıktığında daima aksi kanıtlanana kadar sekonder kabul edilmelidir.",
+       "ekran": "**Yeni Akut Başlangıç:** Önceden ağrısı olmayan hastada ilk kez patlayan şiddetli ağrı.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 8,
         "satir": [
-         "- 10 yaşından önce, 50 yaşından sonra başlaması"
+         "Yeni başlayan akut ve çok şiddetli başağrısı"
         ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0057",
-       "ses": "Özellikle çocuklarda oksipital yerleşim göstermesi arka çukur patolojilerini akla getirirken, son altı ay içinde başlayan ve devamlılık gösteren tedaviye direnç öyküsü ilerleyici bir kitleyi düşündürür.",
-       "ekran": "**Yerleşim ve Seyir:** Çocukta oksipital yerleşim ve son 6 ayda tedaviye direnç",
-       "duzey": 1,
+        "sekil": null,
+        "madde": [
+         1,
+         8
+        ]
+       },
        "vurgu": [
         {
-         "metin": "oksipital yerleşim",
-         "tur": "terim"
-        },
-        {
-         "metin": "tedaviye direnç",
-         "tur": "tuzak"
+         "tur": "terim",
+         "metin": "Yeni Akut Başlangıç"
         }
-       ],
-       "slayt_adim": "k2-10-d-s08",
-       "cikmis": [],
-       "spot": null,
+       ]
+      },
+      {
+       "id": "k2-10-c0071",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: baş ağrısının elli yaşından sonra yeni başlaması sekonder baş ağrısı kırmızı bayrağıdır; özellikle şakak ağrısı ve çiğneme klodikasyonu varlığında dev hücreli temporal arterit acilen araştırılmalıdır.",
+       "ekran": "**Sınav Spotu (Çıkmış Soru):** Bu bilgi çıkmış sınavda sorulmuştur: 50 yaş üstü başlangıç temporal arterit ve sekonder neden alarmıdır.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 8,
         "satir": [
-         "- Özellikle çocuklarda oksipital yerleşim göstermesi",
-         "- Son 6 ay içinde başlayan ve devamlılık gösteren , tedaviye direnç",
-         "öyküsü"
+         "10 yaşından önce, 50 yaşından sonra başlaması"
         ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0058",
-       "ses": "Hastada mevcut malignite tanısı bulunması beyin metastazını, mevcut sistemik hastalık tanısı ise otoimmün vaskülitleri veya sistemik enfeksiyon tutulumlarını işaret eder.",
-       "ekran": "**Sistemik Hastalık:** Mevcut malignite veya sistemik hastalık öyküsü",
-       "duzey": 1,
+        "sekil": null,
+        "madde": [
+         2,
+         1
+        ]
+       },
        "vurgu": [
         {
-         "metin": "malignite",
-         "tur": "tuzak"
-        },
-        {
-         "metin": "Sistemik Hastalık:",
-         "tur": "cikmis"
+         "tur": "terim",
+         "metin": "temporal arterit"
         }
        ],
-       "slayt_adim": "k2-10-d-s08",
        "cikmis": [
-        "4c4eb178b88b",
-        "4ba07c308e35"
-       ],
-       "spot": null,
+        "048fe1e04f10"
+       ]
+      },
+      {
+       "id": "k2-10-c0072",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: çocukluk çağında yeni ortaya çıkan baş ağrısının özellikle oksipital bölgeye lokalize olması, selim tablolardan ziyade arka çukur tümörleri ve Chiari malformasyonu gibi sekonder patolojileri düşündürür.",
+       "ekran": "**Sınav Spotu (Çıkmış Soru):** Bu bilgi çıkmış sınavda sorulmuştur: Çocukta oksipital baş ağrısı arka çukur kitle lezyonunu düşündürür.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 8,
         "satir": [
-         "- Hastada mevcut malignite tanısı",
-         "- Hastada mevcut sistemik hastalık tanısı"
+         "Özellikle çocuklarda oksipital yerleşim göstermesi"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         3,
+         0
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Sınav Spotu (Çıkmış Soru)"
+        }
+       ],
+       "cikmis": [
+        "e4c0d0bc7be7"
+       ]
+      },
+      {
+       "id": "k2-10-c0073",
+       "ses": "Temporal arterit zamanında tanınıp yüksek doz kortikosteroid tedavisi başlanmazsa oftalmik arter tutulumu ile kalıcı tek veya çift taraflı körlüğe yol açabilir.",
+       "ekran": "**Temporal Arterit Riski:** Hızlı kortikosteroid başlanmazsa kalıcı monooküler veya binoküler körlük.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "10 yaşından önce, 50 yaşından sonra başlaması"
+        ],
+        "sekil": null,
+        "madde": [
+         2,
+         4
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Temporal Arterit"
+        }
+       ]
       }
      ]
     },
     {
      "id": "k2-10-p015",
      "sayfa": 8,
-     "slayt_adim": "k2-10-d-s08",
      "cumleler": [
       {
-       "id": "k2-10-c0059",
-       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Hastanın yaşamındaki en şiddetli baş ağrısı tanımı, aniden saniyeler içinde doruğa ulaşan gök gürültüsü baş ağrısını anlatır ve ilk akla gelmesi gereken patoloji anevrizma rüptürüne bağlı subaraknoid kanama yani se a ke tablosudur.",
-       "ekran": "**Çıkmış Soru:** Yaşamdaki en şiddetli baş ağrısı subaraknoid kanamayı gösterir",
+       "id": "k2-10-c0074",
+       "ses": "Son altı ay içinde başlayan, giderek sıklığı ve şiddeti artan ve klasik analjezik tedavilere direnç gösteren ilerleyici baş ağrıları intrakraniyal yer kaplayan kitle lezyonlarını işaret eder.",
+       "ekran": "**İlerleyici Seyir:** Son 6 ayda başlayan, giderek şiddetlenen ve tedaviye dirençli seyir.",
        "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Son 6 ay içinde başlayan ve devamlılık gösteren , tedaviye direnç"
+        ],
+        "sekil": null,
+        "madde": [
+         4,
+         1
+        ]
+       },
        "vurgu": [
         {
-         "metin": "subaraknoid kanama",
-         "tur": "cikmis"
+         "tur": "terim",
+         "metin": "edaviye dirençli "
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0075",
+       "ses": "Öyküsünde akciğer veya meme kanseri gibi mevcut malignite tanısı olan bir hastada yeni gelişen baş ağrısı aksi kanıtlanana kadar beyin metastazı olarak kabul edilmelidir.",
+       "ekran": "**Malignite Öyküsü:** Kanseri olan hastada yeni baş ağrısı beyin metastazı habercisidir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Hastada mevcut malignite tanısı"
+        ],
+        "sekil": null,
+        "madde": [
+         6,
+         7
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "beyin metastazı"
         },
         {
-         "metin": "en şiddetli baş ağrısı",
-         "tur": "tuzak"
+         "metin": "Malignite Öyküsü:",
+         "tur": "cikmis"
         }
        ],
-       "slayt_adim": "k2-10-d-s08",
        "cikmis": [
-        "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-62",
-        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-20",
-        "q-2__kurul_-7-cs2",
-        "d3-k2-nor-007",
-        "q-2__kurul_-1"
-       ],
-       "spot": null,
-       "slayt": {
-        "sayfa": 8,
-        "satir": [
-         "- Hastanın yaşamındaki “en şiddetli başağrısı” tanımı"
-        ],
-        "sekil": null
-       }
+        "4ba07c308e35"
+       ]
       },
       {
-       "id": "k2-10-c0060",
-       "ses": "Baş ağrısının gebelik ve doğum sonrası ortaya çıkması preeklampsi, eklampsi veya serebral venöz sinüs trombozunu gösteren acil bir alarm bulgusudur.",
-       "ekran": "**Gebelik Alarmı:** Gebelik ve doğum sonrası ortaya çıkan baş ağrısı",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "Gebelik ve doğum",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s08",
-       "cikmis": [],
-       "spot": null,
+       "id": "k2-10-c0076",
+       "ses": "Ayrıca bilinen sistemik hastalığı olanlarda, gebelik döneminde veya doğum sonrası lohusalıkta ortaya çıkan baş ağrıları serebral venöz sinüs trombozu ve preeklampsi açısından taranmalıdır.",
+       "ekran": "**Gebelik ve Lohusalık:** Gebelik ve puerperiumda serebral venöz sinüs trombozu riski.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 8,
         "satir": [
-         "- Gebelik ve doğum sonrası ortaya çıkması"
+         "Gebelik ve doğum sonrası ortaya çıkması"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         9,
+         11
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "venöz sinüs trombozu"
+        }
+       ]
       },
       {
-       "id": "k2-10-c0061",
-       "ses": "Ağrının fiziksel aktivite, ıkınma, öksürme gibi valsalva manevraları ve işlevler sırasında ortaya çıkması kafa içi basınç artışı sendromunu veya Arnold Chiari malformasyonunu düşündürür.",
-       "ekran": "**Valsalva Tetiklenmesi:** Ikınma, öksürme ve eforla ortaya çıkan baş ağrısı",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "öksürme",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s08",
-       "cikmis": [],
-       "spot": null,
+       "id": "k2-10-c0077",
+       "ses": "Ağrının fiziksel aktivite, öksürme, ıkınma veya cinsel ilişki sırasında aniden ortaya çıkması ya da artması, arka çukur patolojilerini ve kafa içi basınç artışı sendromunu düşündürür.",
+       "ekran": "**Valsalva ile Tetiklenme:** Öksürük, ıkınma ve eforla tetiklenen ağrılarda KİBAS ve kitle riski.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 8,
         "satir": [
-         "- Fiziksel aktivite, ıkınma, öksürme g.b işlevler sırasında ortaya",
-         "çıkması"
+         "Fiziksel aktivite, ıkınma, öksürme g.b işlevler sırasında ortaya"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         10,
+         9
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Valsalva ile Tetiklenme"
+        }
+       ]
       },
       {
-       "id": "k2-10-c0062",
-       "ses": "Dirençli kusmaların eşlikçiliği, primer ağrıların aksine erkek cinsiyet varlığı ve belirli bir klinik şekle uymayan baş ağrısı profili daima sekonder nedenler yönünden ileri görüntüleme gerektirir.",
-       "ekran": "**Diğer İpuçları:** Dirençli kusma, erkek cinsiyet ve atipik baş ağrısı",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "Dirençli kusma",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s08",
-       "cikmis": [],
-       "spot": null,
+       "id": "k2-10-c0078",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: dirençli kusmaların eşlikçiliği, belirli bir şekle uymayan atipik karakter ve erkek cinsiyet sekonder baş ağrısı düşündüren öykü özellikleri arasında yer alır.",
+       "ekran": "**Sınav Spotu (Çıkmış Soru):** Bu bilgi çıkmış sınavda sorulmuştur: Dirençli kusma, atipik şekil ve erkek cinsiyet sekonder alarm bulgusudur.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 8,
         "satir": [
-         "- Dirençli kusmaların eşlikçiliği",
-         "- Erkek cinsiyet",
-         "- Belirli bir şekle uymayan başağrısı"
+         "Erkek cinsiyet"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         13,
+         0
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "erkek cinsiyet"
+        }
+       ],
+       "cikmis": [
+        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-21"
+       ]
+      },
+      {
+       "id": "k2-10-c0079",
+       "ses": "Özellikle sabahları uykudan uyandıran, baş eğmekle artan ve fışkırır tarzda kusmanın eşlik ettiği baş ağrıları intrakraniyal basınç artışının en karakteristik triadıdır.",
+       "ekran": "**Sabah Baş Ağrısı Triadı:** Uykudan uyandıran ağrı, öne eğilmekle artış ve fışkırır tarzda kusma.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Dirençli kusmaların eşlikçiliği"
+        ],
+        "sekil": null,
+        "madde": [
+         12,
+         4
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Sabah Baş Ağrısı"
+        }
+       ]
       }
      ]
     }
@@ -1714,224 +2017,300 @@
   {
    "id": "k2-10-b09",
    "baslik": "Fizik ve Nörolojik Muayenede Sekonder Alarm Bulguları",
-   "sayfa_araligi": [
-    9,
-    9
-   ],
    "paragraflar": [
     {
      "id": "k2-10-p016",
      "sayfa": 9,
-     "slayt_adim": "k2-10-d-s09",
      "cumleler": [
       {
-       "id": "k2-10-c0063",
-       "ses": "Hastanın fizik muayene bulguları primer baş ağrılarında normal kalırken, sekonder baş ağrısı düşündüren bulgular varlığı altta yatan organik hasarın objektif kanıtıdır.",
-       "ekran": "**Muayene Alarmı:** Primerde normal, sekonderde nesnel alarm bulguları vardır",
+       "id": "k2-10-c0080",
+       "ses": "Fizik muayene primer baş ağrılarında tamamen normal iken, sekonder baş ağrılarında hayatı tehdit eden acil durumlara işaret eden çok kritik fiziksel bulgular saptanabilir.",
+       "ekran": "**Muayene Alarmları:** Sekonder baş ağrısına işaret eden objektif fizik ve nörolojik bulgular.",
        "duzey": 0,
-       "vurgu": [
-        {
-         "metin": "Muayene Alarmı",
-         "tur": "tanim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s09",
-       "cikmis": [],
-       "spot": null,
        "slayt": {
         "sayfa": 9,
         "satir": [
-         "• Fizik muayene; primer başağrılarında normal.",
-         "Sekonder başağrısı düşündüren bulgular var. Bunlar:"
+         "Fizik muayene; primer başağrılarında normal"
         ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0064",
-       "ses": "Bilinç bozukluğu ve senkop gelişmesi intrakraniyal difüz hasarı, epileptik nöbet kortikal irritasyonu, fokal nörolojik bulgu ise anatomik bir yerleşim gösteren kitle veya enfarktüsü kanıtlar.",
-       "ekran": "**Majör Nörolojik Bulgular:** Bilinç bozukluğu, senkop, nöbet ve fokal nörolojik defisit",
-       "duzey": 1,
+        "sekil": null,
+        "madde": [
+         0,
+         1
+        ]
+       },
        "vurgu": [
         {
-         "metin": "Bilinç bozukluğu",
-         "tur": "tuzak"
+         "tur": "terim",
+         "metin": "Muayene Alarmları"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0081",
+       "ses": "Baş ağrısına eşlik eden letarji, konfüzyon, stupor gibi bilinç bozuklukları veya senkop atağı, intrakraniyal kanama ve akut herniasyon tehdidini gösterir.",
+       "ekran": "**Bilinç Bozukluğu:** Letarji, konfüzyon ve senkop varlığı akut herniasyon alarmıdır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Bilinç bozukluğu, senkop"
+        ],
+        "sekil": null,
+        "madde": [
+         2
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Bilinç Bozukluğu"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0082",
+       "ses": "Hastanın epileptik nöbet geçirmesi ya da muayenesinde hemiparezi, babinski pozitifliği, afazi ve hemihipoestezi gibi fokal nörolojik bulguların saptanması doğrudan yapısal bir lezyona işaret eder.",
+       "ekran": "**Fokal Defisit ve Nöbet:** Epileptik nöbet, hemiparezi ve fokal defisit yapısal lezyon kanıtıdır.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Fokal nörolojik bulgu"
+        ],
+        "sekil": null,
+        "madde": [
+         4,
+         1
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Epileptik nöbet"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0083",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: fundus muayenesinde papilödem saptanması kafa içi basınç artışının en belirgin oftalmolojik bulgusu olup baş ağrısı ve kusma ile birlikte klasik triadı tamamlar; preretinal subhyaloid hemoraji görülmesi ise subaraknoid kanamayı düşündüren en kritik alarm bulgusudur.",
+       "ekran": "**Sınav Spotu (Çıkmış Soru):** Bu bilgi çıkmış sınavda sorulmuştur: Papilödem KİBAS'ı, subhyaloid retina hemorajisi ise SAK'ı gösterir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Papilödem, subhyaloid hemoraji"
+        ],
+        "sekil": null,
+        "madde": [
+         5,
+         1
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Papilödem"
         },
         {
-         "metin": "nöbet",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s09",
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 9,
-        "satir": [
-         "- Bilinç bozukluğu, senkop",
-         "- Epileptik nöbet",
-         "- Fokal nörolojik bulgu"
-        ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0065",
-       "ses": "Burada çıkmış sınav sorusu bulunmaktadır: Oftalmolojik muayenede papilödem saptanması kafa içi basınç artışının en doğrudan kanıtıdır; subhyaloid hemoraji ise subaraknoid kanamayı düşündürür.",
-       "ekran": "**Göz Dibi İncelemesi:** Papilödem ve subhyaloid retinal hemoraji",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "Papilödem",
+         "metin": "Sınav Spotu (Çıkmış Soru):",
          "tur": "cikmis"
-        },
-        {
-         "metin": "subhyaloid",
-         "tur": "terim"
         }
        ],
-       "slayt_adim": "k2-10-d-s09",
        "cikmis": [
+        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-20",
         "d3-k2-bey-004",
         "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-1",
-        "6e0a49170b5b",
-        "82a829d853b5"
-       ],
-       "spot": null,
-       "slayt": {
-        "sayfa": 9,
-        "satir": [
-         "- Papilödem, subhyaloid hemoraji"
-        ],
-        "sekil": null
-       }
+        "82a829d853b5",
+        "d3-k2-ftr-005"
+       ]
       },
       {
-       "id": "k2-10-c0066",
-       "ses": "Ateş ve ense sertliği menenjit veya meningoensefalit gibi santral enfeksiyonları gösterirken, istemsiz kilo kaybı ve halsizlik temporal arterit veya gizli karsinomları düşündürür.",
-       "ekran": "**Sistemik Bulgular:** Ateş, ense sertliği, kilo kaybı ve halsizlik",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "ense sertliği",
-         "tur": "terim"
-        },
-        {
-         "metin": "kilo kaybı",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s09",
-       "cikmis": [],
-       "spot": null,
+       "id": "k2-10-c0084",
+       "ses": "Yüksek ateş, halsizlik, kilo kaybı ve gece terlemesi gibi sistemik semptomların eşlik etmesi santral sinir sistemi tüberkülozu, menenjit ve sistemik vaskülitleri düşündürür.",
+       "ekran": "**Sistemik Bulgular:** Ateş, kilo kaybı ve halsizlik enfeksiyon veya vaskülit habercisidir.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 9,
         "satir": [
-         "- Ateş, ense sertliği",
-         "- Kilo kaybı, halsizlik"
+         "Kilo kaybı, halsizlik"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         7,
+         6
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "kilo kaybı"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0085",
+       "ses": "Baş ağrısıyla gelen her hastada oftalmoskop ile optik disk sınırlarının incelenmesi ve papilödem varlığının araştırılması asla atlanmaması gereken zorunlu bir hekimlik görevidir.",
+       "ekran": "**Zorunlu Fundoskopi:** Optik disk sınırları ve venöz pulsasyon kaybının muayenede tespiti.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Papilödem, subhyaloid hemoraji"
+        ],
+        "sekil": null,
+        "madde": [
+         5,
+         8
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Optik disk sınırları"
+        }
+       ]
       }
      ]
     },
     {
      "id": "k2-10-p017",
      "sayfa": 9,
-     "slayt_adim": "k2-10-d-s09",
      "cumleler": [
       {
-       "id": "k2-10-c0067",
-       "ses": "Kraniyal sinir muayenesi baş ağrılı hastada anatomik lokalizasyonu belirleyen en değerli klinik basamaktır.",
-       "ekran": "**Kraniyal Sinir Değerlendirmesi:** Anatomik lezyonun lokalizasyonunu belirleyen temel adım",
+       "id": "k2-10-c0086",
+       "ses": "Baş ağrısıyla başvuran bir hastada ateş ile birlikte ense sertliği, Kernig ve Brudzinski belirtilerinin pozitif olması menenjit ve meningoensefalitin kesin alarmıdır.",
+       "ekran": "**Meningeal İritasyon:** Ateş, ense sertliği, Kernig ve Brudzinski bulguları ile menenjit tablosu.",
        "duzey": 0,
-       "vurgu": [
-        {
-         "metin": "Kraniyal Sinir",
-         "tur": "tanim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s09",
-       "cikmis": [],
-       "spot": null,
        "slayt": {
         "sayfa": 9,
         "satir": [
-         "- 5., 7. KS tutulumu"
+         "Ateş, ense sertliği"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         6
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "nse sertliği,"
+        }
+       ]
       },
       {
-       "id": "k2-10-c0068",
-       "ses": "Üçüncü kraniyal sinir tutulumu ve buna eşlik eden anizokori, arka komünikan arter anevrizmasının üçüncü sinire basısını veya unkal herniasyon tehdidini gösteren en acil kırmızı bayraktır.",
-       "ekran": "**3. Sinir Tutulumu:** Üçüncü kraniyal sinir felci ve anizokori",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "anizokori",
-         "tur": "terim"
-        },
-        {
-         "metin": "kraniyal sinir",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s09",
-       "cikmis": [],
-       "spot": null,
+       "id": "k2-10-c0087",
+       "ses": "Üçüncü kraniyal sinir tutulumu ve aynı tarafta ışığa yanıtsız midriyatik pupilla yani anizokori saptanması, arka komünikan arter anevrizma basısının veya unkal herniasyonun acil göstergesidir.",
+       "ekran": "**Üçüncü Sinir ve Anizokori:** Anizokori ve ptozis posterior komünikan arter anevrizması alarmıdır.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 9,
         "satir": [
-         "- 3. kranial sinir tutulumu, anizokori"
+         "3. kranial sinir tutulumu, anizokori"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         8,
+         10
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Anizokori"
+        }
+       ]
       },
       {
-       "id": "k2-10-c0069",
-       "ses": "Miyozis, pitozis ve fasiyal anhidrozisle seyreden Horner sendromu karotis arter diseksiyonunu işaret ederken, beşinci ve yedinci kraniyal sinir tutulumları beyin sapı, pontoserebellar köşe veya kafa tabanı lezyonlarına işaret eder.",
-       "ekran": "**Horner ve Yüz Sinirleri:** Horner sendromu, 5. ve 7. kraniyal sinir tutulumu",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "Horner sendromu",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s09",
-       "cikmis": [],
-       "spot": null,
+       "id": "k2-10-c0088",
+       "ses": "Ptozis, miyozis ve yüzde anhidrozis triyadı ile karakterize Horner sendromunun eşlik etmesi, ağrılı taraf karotis arter diseksiyonunu akla getirmelidir.",
+       "ekran": "**Horner Sendromu:** Tek taraflı boyun ve baş ağrısında karotis arter diseksiyonu şüphesi.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 9,
         "satir": [
-         "- Horner sendromu",
-         "- 5., 7. KS tutulumu"
+         "Horner sendromu"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         9
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Horner Sendromu"
+        }
+       ]
       },
       {
-       "id": "k2-10-c0070",
-       "ses": "Pupil asimetrisi saptanan her olguda ışık refleksi değerlendirilmeli ve parasempatik pupil liflerinin dıştan basıya ilk uğrayan lifler olduğu unutulmamalıdır.",
-       "ekran": "**Pupil Refleksi:** Parasempatik lifler anevrizma basısına en duyarlıdır",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "Parasempatik",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s09",
-       "cikmis": [],
-       "spot": null,
+       "id": "k2-10-c0089",
+       "ses": "Beşinci kraniyal sinir tutulumuna bağlı kornea refleksi kaybı veya fasiyal duyu kaybı ile yedinci kraniyal sinir tutulumuna bağlı periferik fasiyal paralizi, kafa tabanı ve beyin sapı lezyonlarını düşündürür.",
+       "ekran": "**Beşinci ve Yedinci Sinir:** Kornea refleksi kaybı ve fasiyal paralizi ile kafa tabanı tutulumu.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 9,
         "satir": [
-         "- 3. kranial sinir tutulumu, anizokori"
+         "5., 7. KS tutulumu"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         10,
+         8
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Kornea refleksi"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0090",
+       "ses": "Temporal bölgede eritemli, şiş, hassas ve nabzı azalmış bir temporal arter palpasyonu elli yaş üstü dev hücreli temporal arteritin fiziksel kanıtıdır.",
+       "ekran": "**Temporal Arter Muayenesi:** Şiş, nodüler ve hassas temporal arter palpasyon bulgusu.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Fizik muayene; primer başağrılarında normal"
+        ],
+        "sekil": null,
+        "madde": [
+         0,
+         1
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Temporal Arter Muayenesi"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0091",
+       "ses": "Bu kraniyal sinir felçleri ve meningeal bulgular saptandığında hasta vakit kaybetmeksizin acil nöroşirürji ve nöroloji ünitelerine yönlendirilmelidir.",
+       "ekran": "**Acil Konsültasyon:** Kraniyal defisit ve ense sertliğinde ivedi nöroloji ve nöroşirürji sevk.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Sekonder başağrısı düşündüren bulgular var. Bunlar:"
+        ],
+        "sekil": null,
+        "madde": [
+         1,
+         4
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Acil Konsültasyon"
+        }
+       ]
       }
      ]
     }
@@ -1940,235 +2319,308 @@
   {
    "id": "k2-10-b10",
    "baslik": "Yardımcı Tanı Yöntemleri ve Nörogörüntüleme İlkeleri",
-   "sayfa_araligi": [
-    10,
-    10
-   ],
    "paragraflar": [
     {
      "id": "k2-10-p018",
      "sayfa": 10,
-     "slayt_adim": "k2-10-d-s10",
      "cumleler": [
       {
-       "id": "k2-10-c0071",
-       "ses": "Baş ağrılı hastanın ayırıcı tanısında yardımcı tanı yöntemleri, hastadan elde edilen anamnez ve fizik muayene verileri doğrultusunda hedefe yönelik olarak planlanmalıdır.",
-       "ekran": "**Yardımcı Tanı Yöntemleri:** Klinik şüpheye göre hedefe yönelik tetkik planı",
+       "id": "k2-10-c0092",
+       "ses": "Baş ağrılı hastada kırmızı bayrak varlığında doğru yardımcı tanı yönteminin seçimi, hem hızlı tanı hem de gereksiz tetkiklerin önlenmesi açısından hayati önem taşır.",
+       "ekran": "**Yardımcı Tanı Stratejisi:** Kırmızı bayrağa göre hedefe yönelik rasyonel tetkik seçimi.",
        "duzey": 0,
-       "vurgu": [
-        {
-         "metin": "Yardımcı Tanı Yöntemleri",
-         "tur": "tanim"
-        },
-        {
-         "metin": "Yardımcı Tanı Yöntemleri:",
-         "tur": "cikmis"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s10",
-       "cikmis": [
-        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-19"
-       ],
-       "spot": null,
        "slayt": {
         "sayfa": 10,
         "satir": [
          "YARDIMCI TANI YÖNTEMLERİ"
         ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0072",
-       "ses": "Akut veya kronik paranazal sinüzit şüphesi varlığında waters grafisi ve kranium kemik yapılarını gösteren direkt grafiler ilk inceleme olarak istenebilir.",
-       "ekran": "**Direkt Grafiler:** Sinüzitte waters grafisi ve direkt grafiler",
-       "duzey": 1,
+        "sekil": null,
+        "madde": [
+         0
+        ]
+       },
        "vurgu": [
         {
-         "metin": "waters",
-         "tur": "terim"
+         "tur": "terim",
+         "metin": "tetkik seçimi"
         }
-       ],
-       "slayt_adim": "k2-10-d-s10",
-       "cikmis": [],
-       "spot": null,
+       ]
+      },
+      {
+       "id": "k2-10-c0093",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: akut inme şüphesi ve ani nörolojik defisit ile başvuran baş ağrılı hastada intrakraniyal kanama ile iskemiyi dakikalar içinde ayırt etmek ve uygun tedaviye karar vermek için acil serviste ilk tercih kontrastsız beyin bilgisayarlı tomografisidir.",
+       "ekran": "**Sınav Spotu (Çıkmış Soru):** Bu bilgi çıkmış sınavda sorulmuştur: İnme şüphesinde kanama ile iskemiyi ayırt etmede ilk tercih BT'dir.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 10,
         "satir": [
-         "• Waters, direk grafiler"
+         "BBT (hemoraji, hidrosefali, tümör)"
         ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0073",
-       "ses": "Beyin bilgisayarlı tomografisi yani be be te; akut hemoraji, hidrosefali ve yer kaplayan tümörleri göstermede acil serviste en hızlı ve en duyarlı görüntüleme yöntemidir.",
-       "ekran": "**Beyin Tomografisi:** Akut hemoraji, hidrosefali ve kitlede ilk tetkik",
-       "duzey": 1,
+        "sekil": null,
+        "madde": [
+         2,
+         4
+        ]
+       },
        "vurgu": [
         {
-         "metin": "hemoraji",
-         "tur": "terim"
+         "tur": "terim",
+         "metin": "Sınav Spotu (Çıkmış Soru)"
         },
         {
-         "metin": "hidrosefali",
-         "tur": "terim"
+         "metin": "Sınav Spotu (Çıkmış Soru):",
+         "tur": "cikmis"
         }
        ],
-       "slayt_adim": "k2-10-d-s10",
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 10,
-        "satir": [
-         "• BBT (hemoraji, hidrosefali, tümör). İnme"
-        ],
-        "sekil": null
-       }
-      },
-      {
-       "id": "k2-10-c0074",
-       "ses": "Sınavda sorulan acil endikasyonlar uyarınca; inme şüphesinde, kibas tablosunda, lomber ponksiyon öncesinde ve glaskov koma skoru dokuz olan kafa travmalarında acil be be te çekilmelidir.",
-       "ekran": "**Tomografi Endikasyonları:** İnme, KİBAS, LP öncesi herniasyon ve travmada GKS 9",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "KİBAS",
-         "tur": "terim"
-        },
-        {
-         "metin": "LP öncesi",
-         "tur": "terim"
-        },
-        {
-         "metin": "GKS 9",
-         "tur": "sayi"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s10",
        "cikmis": [
-        "past-1790877044163-968531",
-        "3807e9b207c5"
-       ],
-       "spot": null,
+        "3807e9b207c5",
+        "past-1790877045073-786870"
+       ]
+      },
+      {
+       "id": "k2-10-c0094",
+       "ses": "Bilgisayarlı tomografi akut subaraknoid kanama, intrakraniyal kanama, akut hidrosefali ve kemik kırıklarını dakikalar içinde yüksek duyarlılıkla saptar.",
+       "ekran": "**BT Duyarlılığı:** Hiperakut subaraknoid hemoraji ve hidrosefalide altın standart acil tarama.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 10,
         "satir": [
-         "şüphesinde, KIBAS düşünülüyorsa, LP öncesi,",
+         "BBT (hemoraji, hidrosefali, tümör)"
+        ],
+        "sekil": null,
+        "madde": [
+         2,
+         4
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "hidrosefali"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0095",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: intrakraniyal yer kaplayıcı kitle ve kafa içi basınç artışı şüphesi olan hastalarda, ölümcül tonsiller herniasyonu önlemek için lomber ponksiyon öncesinde mutlaka beyin tomografisi çekilerek kitle etkisi ve orta hat şifti ekarte edilmelidir.",
+       "ekran": "**Sınav Spotu (Çıkmış Soru):** Bu bilgi çıkmış sınavda sorulmuştur: KİBAS şüphesinde herniasyonu önlemek için LP öncesi zorunlu BT çekilmelidir.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "KIBAS düşünülüyorsa, LP öncesi"
+        ],
+        "sekil": null,
+        "madde": [
+         3
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Sınav Spotu (Çıkmış Soru)"
+        }
+       ],
+       "cikmis": [
+        "6e0a49170b5b"
+       ]
+      },
+      {
+       "id": "k2-10-c0096",
+       "ses": "Beyin manyetik rezonans görüntüleme ise arka çukur tümörleri, serebellar lezyonlar, serebral venöz sinüs trombozu ve multipl skleroz gibi demiyelinizan plakların gösterilmesinde bilgisayarlı tomografiden çok daha üstündür.",
+       "ekran": "**Manyetik Rezonans Endikasyonları:** Arka çukur lezyonları, venöz tromboz ve demiyelinizan plaklar.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "MR  arka çukur tümör, inme"
+        ],
+        "sekil": null,
+        "madde": [
+         4,
+         2
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Manyetik Rezonans"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0097",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: kafa travması geçiren ve Glaskov koma skoru dokuz veya daha düşük olan orta ve ağır travmalı hastalarda epidural ve subdural hematomları dışlamak için acil beyin bilgisayarlı tomografisi çekilmelidir.",
+       "ekran": "**Sınav Spotu (Çıkmış Soru):** Bu bilgi çıkmış sınavda sorulmuştur: GKS skoru 9 ve altı travmalarda acil bilgisayarlı tomografi zorunludur.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
          "kafa travması GKS:9"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         3
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Sınav Spotu (Çıkmış Soru)"
+        }
+       ],
+       "cikmis": [
+        "past-1790877044163-968531"
+       ]
       }
      ]
     },
     {
      "id": "k2-10-p019",
      "sayfa": 10,
-     "slayt_adim": "k2-10-d-s10",
      "cumleler": [
       {
-       "id": "k2-10-c0075",
-       "ses": "Manyetik rezonans yani em ar incelemesi; kemik komşuluğundaki arka çukur tümörleri, beyin sapı enfarktüsleri ve multipl skleroz gibi demiyelinizan plak varlığını saptamada tomografiden belirgin biçimde üstündür.",
-       "ekran": "**Manyetik Rezonans:** Arka çukur tümörü, inme ve demiyelinizan plaklar",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "arka çukur tümör",
-         "tur": "terim"
-        },
-        {
-         "metin": "demiyelinizan plaklar",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s10",
-       "cikmis": [],
-       "spot": null,
+       "id": "k2-10-c0098",
+       "ses": "Lomber ponksiyon incelemesi menenjit ve meningoensefalit şüphesinde beyin omurilik sıvısının basıncını ölçmek, mikrobiyolojik kültür ve hücre sayımı yapmak için temel tanı yöntemidir.",
+       "ekran": "**Lomber Ponksiyon (Menenjit):** BOS basıncı, hücre sayımı ve kültür ile menenjit tanısı.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 10,
         "satir": [
-         "• MR  arka çukur tümör, inme, demyelinizan",
-         "plak"
+         "LP memenjit, SAK"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         6,
+         0
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Lomber Ponksiyon"
+        }
+       ]
       },
       {
-       "id": "k2-10-c0076",
-       "ses": "Lomber ponksiyon yani le pe; menenjit tanısında, tomografisi normal olan ancak klinik kuşkusu devam eden se a ke olgularında ve beyin omurilik sıvısında lenfositozla seyreden handle sendromunda altın standarttır.",
-       "ekran": "**Lomber Ponksiyon:** Menenjit, SAK ve HANDLE sendromu incelemesi",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "Menenjit",
-         "tur": "terim"
-        },
-        {
-         "metin": "SAK",
-         "tur": "terim"
-        },
-        {
-         "metin": "HANDLE",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s10",
-       "cikmis": [],
-       "spot": null,
+       "id": "k2-10-c0099",
+       "ses": "Ayrıca akut başlangıçlı gök gürültüsü baş ağrısında bilgisayarlı tomografi normal gelse bile, subaraknoid kanamayı kesin ekarte etmek için lomber ponksiyonda ksantokromi aranması zorunludur.",
+       "ekran": "**Ksantokromi İncelemesi:** BT normal gelse bile SAK'ı dışlamak için BOS spektrofotometrisi ve ksantokromi.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 10,
         "satir": [
-         "• LP memenjit, SAK , HANDLE (headache and",
-         "neurological deficits with cerebrospinal fluid",
-         "lymphocytosis)"
+         "LP memenjit, SAK"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         6
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Ksantokromi"
+        }
+       ]
       },
       {
-       "id": "k2-10-c0077",
-       "ses": "Sistemik inflamasyonu, enfeksiyonları ve özellikle elli yaş üstünde dev hücreli temporal arterit olasılığını araştırmak için tam kan testleri ve eritrosit sedimantasyon hızı yani sedim incelenmelidir.",
-       "ekran": "**Laboratuvar:** Sistemik enfeksiyon ve temporal arteritte sedim ölçümü",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "sedim",
-         "tur": "terim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s10",
-       "cikmis": [],
-       "spot": null,
+       "id": "k2-10-c0100",
+       "ses": "Geçici nörolojik defisitler ve beyin omurilik sıvısında lenfositoz ile seyreden baş ağrısı tablosu olan HaNDL sendromunda lomber ponksiyon tanı koydurucudur.",
+       "ekran": "**HaNDL Sendromu:** BOS lenfositozu ve geçici nörolojik defisitlerle seyreden selim baş ağrısı.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 10,
         "satir": [
-         "• Kan testleri, sedim"
+         "LP memenjit, SAK , HANDLE"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         6,
+         0
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "HaNDL Sendromu"
+        }
+       ]
       },
       {
-       "id": "k2-10-c0078",
-       "ses": "Primer baş ağrılı hastaların ayaktan klinik takibinde ise atak sıklığını, eşlik eden tetikleyicileri ve ilaç yanıtını nesnel biçimde kaydetmek için baş ağrısı günlüğü kullanılması hasta yönetiminin en değerli aracıdır.",
-       "ekran": "**Klinik Takip:** Atak sıklığı ve tedavi yönetiminde baş ağrısı günlüğü",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "metin": "baş ağrısı günlüğü",
-         "tur": "tanim"
-        }
-       ],
-       "slayt_adim": "k2-10-d-s10",
-       "cikmis": [],
-       "spot": null,
+       "id": "k2-10-c0101",
+       "ses": "Elli yaş üstünde yeni başlayan baş ağrılarında eritrosit sedimantasyon hızı ve C-reaktif protein düzeyleri temporal arterit taramasında mutlaka ilk basamakta istenmelidir.",
+       "ekran": "**Laboratuvar Testleri:** 50 yaş üstünde sedimantasyon ve CRP ile temporal arterit taraması.",
+       "duzey": 0,
        "slayt": {
         "sayfa": 10,
         "satir": [
-         "• Başağrısı günlüğü"
+         "Kan testleri, sedim"
         ],
-        "sekil": null
-       }
+        "sekil": null,
+        "madde": [
+         8
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "sedimantasyon"
+        },
+        {
+         "metin": "Laboratuvar Testleri:",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "d3-k2-ah-008"
+       ]
+      },
+      {
+       "id": "k2-10-c0102",
+       "ses": "Akut sinüzit kuşkusu olan olgularda Waters grafisi ve paranazal sinüs grafileri mukozal kalınlaşma ve hava sıvı seviyelerini göstermede yardımcı olur.",
+       "ekran": "**Waters Grafisi:** Akut sinüzit tanısında paranazal sinüs havalanması ve sıvı seviyesi.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Waters, direk grafiler"
+        ],
+        "sekil": null,
+        "madde": [
+         1,
+         0
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Waters Grafisi"
+        }
+       ]
+      },
+      {
+       "id": "k2-10-c0103",
+       "ses": "Kronik ve tekrarlayan baş ağrılarında hastaya baş ağrısı günlüğü tutturulması; atak sıklığını, tetikleyicileri, adet döngüsü ilişkisini ve aşırı ilaç kullanımını objektif olarak izlemede en etkili klinik yöntemdir.",
+       "ekran": "**Baş Ağrısı Günlüğü:** Atak sıklığı, tetikleyiciler ve ilaç aşırı kullanımını izlemede en etkili rehber.",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Başağrısı günlüğü"
+        ],
+        "sekil": null,
+        "madde": [
+         9,
+         0
+        ]
+       },
+       "vurgu": [
+        {
+         "tur": "terim",
+         "metin": "Baş Ağrısı Günlüğü"
+        }
+       ]
       }
      ]
     }

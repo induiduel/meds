@@ -1,325 +1,78 @@
 {
-  "surum": 1,
-  "metinHash": "10e8f6d5a33d2603327a77c33c676e6d793f154a",
-  "p": {
-    "2": {
-      "2": [
-        {
-          "tur": "sema",
-          "sablon": "siniflama",
-          "sablon_ad": "Sınıflama",
-          "duzen": "liste",
-          "ogeler": [
-            "Koku alma duyusunu iletir",
-            "Sinir lezyonunda anozmi gelişir",
-            "Kafa tabanı kırıkları ve meningiomlar"
-          ],
-          "baslik": "Olfaktör Sinir Muayenesi",
-          "s": 3,
-          "k": [
-            0,
-            34
-          ],
-          "tip": "liste",
-          "konum": [
-            0.05,
-            0.86
-          ],
-          "genislik": 0.5,
-          "doluluk": 0.0,
-          "kutu_h": 0.308,
-          "yon": "yatay",
-          "olcek": 1.0,
-          "ek_alt": 0.188,
-          "ek_renk": "#ffffff"
-        }
-      ]
-    },
-    "4": {
-      "2": [
-        {
-          "tur": "sema",
-          "sablon": "siniflama",
-          "sablon_ad": "Sınıflama",
-          "duzen": "liste",
-          "ogeler": [
-            "Uzak muayenede Snellen kartları",
-            "Yakın muayenede Jaeger kartları",
-            "Optik sinir nöropatisi veya retina hasarı"
-          ],
-          "baslik": "Görme Keskinliği Kartları",
-          "s": 5,
-          "k": [
-            0,
-            40
-          ],
-          "tip": "liste",
-          "konum": [
-            0.1,
-            0.01
-          ],
-          "genislik": 0.5,
-          "doluluk": 0.0,
-          "kutu_h": 0.308,
-          "yon": "yatay",
-          "olcek": 1.0
-        }
-      ]
-    },
-    "7": {
-      "2": [
-        {
-          "tur": "sema",
-          "sablon": "siniflama",
-          "sablon_ad": "Sınıflama",
-          "duzen": "liste",
-          "ogeler": [
-            "Ishihara kartları ile renkli görme",
-            "Erken dönemde kırmızı renk duyusu azalır",
-            "Optik nörit ve multipl skleroz bulgusu"
-          ],
-          "baslik": "Renkli Görme Muayenesi",
-          "s": 8,
-          "k": [
-            0,
-            38
-          ],
-          "tip": "liste",
-          "konum": [
-            0.04,
-            0.01
-          ],
-          "genislik": 0.5,
-          "doluluk": 0.007,
-          "kutu_h": 0.308,
-          "yon": "yatay",
-          "olcek": 1.0
-        }
-      ]
-    },
-    "11": {
-      "2": [
-        {
-          "tur": "sema",
-          "sablon": "siniflama",
-          "sablon_ad": "Sınıflama",
-          "duzen": "liste",
-          "ogeler": [
-            "Geniş bir H harfi çizdirilir",
-            "Göz kapağında düşüklük yani pitozis",
-            "Uç bakışlarda ritmik nistagmus aranır"
-          ],
-          "baslik": "Göz Hareketleri Muayenesi",
-          "s": 12,
-          "k": [
-            0,
-            32
-          ],
-          "tip": "liste",
-          "konum": [
-            0.38,
-            0.01
-          ],
-          "genislik": 0.5,
-          "doluluk": 0.0,
-          "kutu_h": 0.308,
-          "yon": "yatay",
-          "olcek": 1.0
-        }
-      ]
-    },
-    "22": {
-      "2": [
-        {
-          "tur": "sema",
-          "sablon": "siniflama",
-          "sablon_ad": "Sınıflama",
-          "duzen": "liste",
-          "ogeler": [
-            "V bir oftalmik dal duyusu",
-            "V iki maksiller dal duyusu",
-            "V üç mandibüler dal ve çiğneme kasları"
-          ],
-          "baslik": "Trigeminal Sinir Dalları",
-          "s": 23,
-          "k": [
-            0,
-            24
-          ],
-          "tip": "liste",
-          "konum": [
-            0.05,
-            0.86
-          ],
-          "genislik": 0.9,
-          "doluluk": 0.0,
-          "kutu_h": 0.308,
-          "yon": "yatay",
-          "olcek": 1.0,
-          "ek_alt": 0.188,
-          "ek_renk": "#ffffff"
-        }
-      ]
-    },
-    "24": {
-      "2": [
-        {
-          "tur": "sema",
-          "sablon": "siniflama",
-          "sablon_ad": "Sınıflama",
-          "duzen": "liste",
-          "ogeler": [
-            "Yüzün tüm mimik kaslarını innerve eder",
-            "Dilin ön üçte iki kısmının tat duyusu",
-            "Gözleri sıkıca kapatma ve mimikler"
-          ],
-          "baslik": "Fasiyal Sinir İşlevleri",
-          "s": 25,
-          "k": [
-            0,
-            29
-          ],
-          "tip": "liste",
-          "konum": [
-            0.61,
-            0.53
-          ],
-          "genislik": 0.34,
-          "doluluk": 0.0,
-          "kutu_h": 0.428,
-          "yon": "yatay",
-          "olcek": 1.0
-        }
-      ]
-    },
-    "29": {
-      "2": [
-        {
-          "tur": "sema",
-          "sablon": "siniflama",
-          "sablon_ad": "Sınıflama",
-          "duzen": "liste",
-          "ogeler": [
-            "Stilofaringeus kası motor kontrolü",
-            "Dilin arka üçte bir tat ve genel duyusu",
-            "Öğürme refleksinin afferent yolu"
-          ],
-          "baslik": "Glossofaringeal Sinir",
-          "s": 30,
-          "k": [
-            0,
-            43
-          ],
-          "tip": "liste",
-          "konum": [
-            0.1,
-            0.66
-          ],
-          "genislik": 0.5,
-          "doluluk": 0.0,
-          "kutu_h": 0.308,
-          "yon": "yatay",
-          "olcek": 1.0
-        }
-      ]
-    },
-    "30": {
-      "2": [
-        {
-          "tur": "sema",
-          "sablon": "siniflama",
-          "sablon_ad": "Sınıflama",
-          "duzen": "liste",
-          "ogeler": [
-            "Farenks ve larenks kasları kontrolü",
-            "Uvula sağlam tarafa doğru çekilir",
-            "Ses kısıklığı ve yutma güçlüğü disfaji"
-          ],
-          "baslik": "Vagus Siniri Bulguları",
-          "s": 31,
-          "k": [
-            0,
-            39
-          ],
-          "tip": "liste",
-          "konum": [
-            0.05,
-            0.6
-          ],
-          "genislik": 0.5,
-          "doluluk": 0.0,
-          "kutu_h": 0.308,
-          "yon": "yatay",
-          "olcek": 1.0
-        }
-      ]
-    },
-    "31": {
-      "2": [
-        {
-          "tur": "sema",
-          "sablon": "siniflama",
-          "sablon_ad": "Sınıflama",
-          "duzen": "liste",
-          "ogeler": [
-            "Sternokleidomastoid kası başı çevirir",
-            "Trapezius kası omuzları yukarı kaldırır",
-            "Sinir lezyonunda omuz düşüklüğü"
-          ],
-          "baslik": "Aksesuar Sinir Muayenesi",
-          "s": 32,
-          "k": [
-            0,
-            34
-          ],
-          "tip": "liste",
-          "konum": [
-            0.16,
-            0.4
-          ],
-          "genislik": 0.5,
-          "doluluk": 0.0,
-          "kutu_h": 0.308,
-          "yon": "yatay",
-          "olcek": 1.0
-        }
-      ]
-    },
-    "32": {
-      "2": [
-        {
-          "tur": "sema",
-          "sablon": "siniflama",
-          "sablon_ad": "Sınıflama",
-          "duzen": "liste",
-          "ogeler": [
-            "Dilin intrinsik ve ekstrinsik kasları",
-            "Dil doğrudan lezyon tarafına sapar",
-            "Dilde belirgin atrofi ve fasikülasyonlar"
-          ],
-          "baslik": "Hipoglossus Siniri Muayenesi",
-          "s": 33,
-          "k": [
-            0,
-            36
-          ],
-          "tip": "liste",
-          "konum": [
-            0.18,
-            0.4
-          ],
-          "genislik": 0.5,
-          "doluluk": 0.0,
-          "kutu_h": 0.308,
-          "yon": "yatay",
-          "olcek": 1.0
-        }
-      ]
+ "surum": 1,
+ "metinHash": "806b05ed888f12e51a3e8dfdeff0f92f053d9096",
+ "p": {
+  "17": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Beyin sapını dorsalden terk eden tek sinir",
+      "Tamamı çaprazlaşan tek kraniyal sinir",
+      "Superior oblik felcinde Bielschowsky baş tilt testi"
+     ],
+     "baslik": "Troklear Sinir Özellikleri",
+     "s": 18,
+     "k": [
+      0,
+      36
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.64,
+      0.01
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.002,
+     "kutu_h": 0.537,
+     "yon": "dikey",
+     "olcek": 1.0
     }
+   ]
   },
-  "rapor": {
-    "aday": 10,
-    "gecti": 10,
-    "ret": {}
+  "32": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Nervus hypoglossus lezyonu gelişmesi",
+      "Aynı taraf genioglossus kas zaafı",
+      "Dilin lezyon tarafına sapması",
+      "Dil kaslarında atrofi ve fasikülasyon"
+     ],
+     "baslik": "Hipoglossus Felci Bulgusu",
+     "s": 33,
+     "k": [
+      0,
+      36
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.51,
+      0.26
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.671,
+     "yon": "dikey",
+     "olcek": 1.0
+    }
+   ]
   }
+ },
+ "rapor": {
+  "aday": 12,
+  "gecti": 2,
+  "ret": {
+   "resim sayfasında panel (H51)": 10
+  }
+ }
 }

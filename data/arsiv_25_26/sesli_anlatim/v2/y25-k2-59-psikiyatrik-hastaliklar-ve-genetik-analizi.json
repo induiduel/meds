@@ -22,11 +22,11 @@
          "Psikiyatrik Hastalıklar ve"
         ],
         "sekil": "Psikiyatrik hastalıklar genetik analiz yöntemleri sayfa 1 şematik gösterimi ve diyagramı.",
-        "resim": 0,
         "madde": [
          0,
          1
-        ]
+        ],
+        "resim": 0
        },
        "vurgu": [
         {
@@ -110,6 +110,27 @@
          "metin": "biyolojik belirteçler"
         }
        ]
+      },
+      {
+       "id": "k2-59-c0005",
+       "ses": "Böylece moleküler genetik veriler, psikiyatride ampirik ilaç seçiminin yerini biyolojik mekanizmaya dayalı hedefe yönelik tedavilerin almasını sağlar.",
+       "ekran": "**Hedefe Yönelik Tedavi:** Biyolojik mekanizmaya dayalı rasyonel farmakoterapi",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Psikiyatride Genetik"
+        ],
+        "sekil": null,
+        "madde": [
+         0,
+         1
+        ]
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null
       }
      ]
     },
@@ -119,7 +140,7 @@
      "bolum": "k2-59-b01",
      "cumleler": [
       {
-       "id": "k2-59-c0005",
+       "id": "k2-59-c0006",
        "ekran": "Genetik araştırmalarda **epidemiyolojik, sitogenetik ve moleküler** yöntemler sıklıkla birlikte kullanılır.",
        "ses": "Çıkmış kurul sınavı sorusunda doğrudan sorgulandığı üzere, psikiyatrik genetik araştırmalarında popülasyon genetiği, aile ve ikiz analizleri, sitogenetik teknikler, bağlantı incelemeleri ve aday gen ilişki modelleri sıklıkla başvurulan temel metodolojilerdir.",
        "satir": "Genetik araştırmalarda sıklıkla kullanılan metodlar;",
@@ -145,7 +166,7 @@
        ]
       },
       {
-       "id": "k2-59-c0006",
+       "id": "k2-59-c0007",
        "ekran": "Bu metotlar klinik tablonun arkasındaki **poligenik altyapıyı** ve risk lokuslarını aydınlatır.",
        "ses": "Bu araştırma metodolojileri klinik tablonun arkasındaki çok genli altyapıyı, kromozomal düzensizlikleri ve risk lokuslarını adım adım aydınlatmaktadır.",
        "satir": "Genetik araştırmalarda sıklıkla kullanılan metodlar;",
@@ -175,7 +196,7 @@
      "bolum": "k2-59-b01",
      "cumleler": [
       {
-       "id": "k2-59-c0007",
+       "id": "k2-59-c0008",
        "ekran": "Psikiyatrik bozukluklar klasik tek gen kalıtımından ziyade **poligenik kalıtım** özellikleri gösterir.",
        "ses": "Psikiyatrik hastalıklar tek bir genin mutasyonuna bağlı Mendel kalıtımı göstermez; çok sayıda gen varyantının kümülatif etkisiyle ortaya çıkan poligenik bozukluklardır.",
        "satir": "Psikiyatrik hastalıklar poligeniktir,",
@@ -207,7 +228,7 @@
        ]
       },
       {
-       "id": "k2-59-c0008",
+       "id": "k2-59-c0009",
        "ekran": "İkiz çalışmalarına göre psikiyatrik hastalıklarda **kalıtım riski yüzde kırk ila seksen** arasında tahmin edilmektedir.",
        "ses": "İkiz çalışmalarından elde edilen epidemiyolojik verilere göre bu hastalıklarda kalıtılabilirlik riski yüzde kırk ila seksen arasında son derece yüksek oranlarda tahmin edilmektedir.",
        "satir": "Psikiyatrik hastalıklar poligeniktir,",
@@ -243,7 +264,7 @@
      "bolum": "k2-59-b02",
      "cumleler": [
       {
-       "id": "k2-59-c0009",
+       "id": "k2-59-c0010",
        "ekran": "Popülasyon çalışmaları **aile, ikiz ve evlat edinme** araştırmaları olmak üzere üç ana başlıkta incelenir.",
        "ses": "Popülasyon genetiği çalışmaları temel olarak aile çalışmaları, ikiz çalışmaları ve evlat edinme modelleri olmak üzere üç ana kategoride incelenmektedir.",
        "satir": "Popülasyon Çalışmaları",
@@ -266,7 +287,7 @@
        ]
       },
       {
-       "id": "k2-59-c0010",
+       "id": "k2-59-c0011",
        "ekran": "Bu yaklaşımlar genetik yatkınlığın büyüklüğünü ve **aile içi kümelenmeyi** ölçmede ilk epidemiyolojik basamaktır.",
        "ses": "Bu epidemiyolojik yaklaşımlar, genetik yatkınlığın göreceli payını ve ailesel kümelenme paternini kantitatif olarak ölçmede ilk basamağı teşkil eder.",
        "satir": "Popülasyon Çalışmaları",
@@ -287,6 +308,27 @@
          "metin": "Bu yaklaşımlar"
         }
        ]
+      },
+      {
+       "id": "k2-59-c0012",
+       "ses": "Her bir araştırma modeli genetik faktörler ile çevresel değişkenleri farklı açılardan ayrıştırarak hastalığın etiyolojik mimarisini aydınlatır.",
+       "ekran": "**Epidemiyolojik Ayrıştırma:** Genetik ve çevresel payların metodolojik modelleri",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Popülasyon Çalışmaları"
+        ],
+        "sekil": null,
+        "madde": [
+         0,
+         1
+        ]
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null
       }
      ]
     },
@@ -296,7 +338,7 @@
      "bolum": "k2-59-b02",
      "cumleler": [
       {
-       "id": "k2-59-c0011",
+       "id": "k2-59-c0013",
        "ekran": "Aile çalışmalarında hasta bireylerin akrabalarındaki morbid risk **genel popülasyon riski** ile kıyaslanır.",
        "ses": "Aile çalışmalarında proband yani indeks hasta üzerinden akrabalardaki hastalık sıklığı saptanır ve genel popülasyondaki bazal risk ile titizlikle karşılaştırılır.",
        "satir": "Popülasyon Çalışmaları",
@@ -319,7 +361,7 @@
        ]
       },
       {
-       "id": "k2-59-c0012",
+       "id": "k2-59-c0014",
        "ekran": "Akrabalık derecesi yaklaştıkça riskin belirgin artması, hastalığın **güçlü genetik bileşenine** işaret eder.",
        "ses": "Bireyin birinci derece akrabalarında riskin ikinci ve üçüncü derece akrabalara oranla katlanarak artması, hastalığın güçlü genetik zeminini somutlaştırır.",
        "satir": "Popülasyon Çalışmaları",
@@ -340,6 +382,27 @@
          "metin": "Akrabalık derecesi"
         }
        ]
+      },
+      {
+       "id": "k2-59-c0015",
+       "ses": "Bununla birlikte aile bireylerinin aynı zamanda ortak bir çevreyi paylaşması, saf genetik etkiyi izole etmede aile çalışmalarının temel kısıtlılığıdır.",
+       "ekran": "**Ortak Çevre Etkisi:** Aile çalışmalarında çevresel değişkenlerin kısıtlayıcılığı",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Popülasyon Çalışmaları"
+        ],
+        "sekil": null,
+        "madde": [
+         0,
+         1
+        ]
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null
       }
      ]
     },
@@ -349,7 +412,7 @@
      "bolum": "k2-59-b02",
      "cumleler": [
       {
-       "id": "k2-59-c0013",
+       "id": "k2-59-c0016",
        "ekran": "İkiz çalışmaları **monozigot ve dizigot ikizler** arasındaki fenotipik uyum farkını modelleyerek kalıtsallığı hesaplar.",
        "ses": "İkiz çalışmaları monozigot ve dizigot ikiz çiftleri arasındaki fenotipik konkordans varyansını matematiksel olarak modelleyerek kalıtsallık katsayısını hesaplar.",
        "satir": "Popülasyon Çalışmaları",
@@ -372,7 +435,7 @@
        ]
       },
       {
-       "id": "k2-59-c0014",
+       "id": "k2-59-c0017",
        "ekran": "Böylece fenotipik çeşitliliğin ne kadarının **genetik varyasyondan** kaynaklandığı matematiksel olarak kestirilir.",
        "ses": "Bu sayede toplumda gözlenen fenotipik çeşitliliğin ne kadarlık kısmının alttaki genetik varyasyondan kaynaklandığı ampirik olarak ortaya konur.",
        "satir": "Popülasyon Çalışmaları",
@@ -393,6 +456,27 @@
          "metin": "Böylece fenotipik"
         }
        ]
+      },
+      {
+       "id": "k2-59-c0018",
+       "ses": "Genetik olarak birebir özdeş olan tek yumurta ikizlerindeki uyum oranının çift yumurta ikizlerinden belirgin yüksek çıkması kalıtımın belirleyici kanıtıdır.",
+       "ekran": "**Konkordans Oranı:** Monozigot ikizlerde dizigotlara göre belirgin yüksek uyum",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Popülasyon Çalışmaları"
+        ],
+        "sekil": null,
+        "madde": [
+         0,
+         1
+        ]
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null
       }
      ]
     },
@@ -402,7 +486,7 @@
      "bolum": "k2-59-b02",
      "cumleler": [
       {
-       "id": "k2-59-c0015",
+       "id": "k2-59-c0019",
        "ekran": "Monozigot ikizler **yüzde yüz genetik özdeşlik** taşırken, dizigot ikizler genlerinin ortalama yarısını paylaşır.",
        "ses": "Monozigot ikizler tüm nükleer genom düzeyinde yüzde yüz genetik özdeşlik taşırken, dizigot ikizler normal kardeşler gibi genlerinin yalnızca yüzde ellisini paylaşırlar.",
        "satir": "Popülasyon Çalışmaları",
@@ -425,7 +509,7 @@
        ]
       },
       {
-       "id": "k2-59-c0016",
+       "id": "k2-59-c0020",
        "ekran": "Her iki ikiz grubunun da ortak aile çevresinde büyümesi, **çevresel faktörlerin kontrol edilmesini** sağlar.",
        "ses": "Her iki grubun da aynı intrauterin ve ailesel çevrede büyümesi, paylaşılan çevresel etkilerin kontrol altında tutulmasını ve genetik farkın izole edilmesini sağlar.",
        "satir": "Popülasyon Çalışmaları",
@@ -455,7 +539,7 @@
      "bolum": "k2-59-b02",
      "cumleler": [
       {
-       "id": "k2-59-c0017",
+       "id": "k2-59-c0021",
        "ekran": "Kalıtsallık sabit bir biyolojik kader değil, incelenen **popülasyonun çevresel koşullarına** bağımlı bir orandır.",
        "ses": "Kalıtsallık değeri değişmez statik bir oran olmayıp, incelenen popülasyonun demografik yapısından ve çevresel stresör maruziyetinden doğrudan etkilenir.",
        "satir": "Popülasyon Çalışmaları",
@@ -465,11 +549,11 @@
          "Popülasyon Çalışmaları"
         ],
         "sekil": "Psikiyatrik hastalıklar genetik analiz yöntemleri sayfa 9 şematik gösterimi ve diyagramı.",
-        "resim": 0,
         "madde": [
          0,
          1
-        ]
+        ],
+        "resim": 0
        },
        "vurgu": [
         {
@@ -479,7 +563,7 @@
        ]
       },
       {
-       "id": "k2-59-c0018",
+       "id": "k2-59-c0022",
        "ekran": "Gen-çevre etkileşimi nedeniyle, aynı genetik zemin farklı çevresel şartlarda **farklı fenotipik şiddetler** üretebilir.",
        "ses": "Gen ile çevre arasındaki dinamik etkileşim nedeniyle, aynı risk varyantını taşıyan bireyler farklı çevresel koşullarda çok farklı klinik tablolar sergileyebilir.",
        "satir": "Popülasyon Çalışmaları",
@@ -500,6 +584,28 @@
          "metin": "Gen-çevre etkileşimi"
         }
        ]
+      },
+      {
+       "id": "k2-59-c0023",
+       "ses": "Bu sebeple kalıtılabilirlik analizleri mutlak bir biyolojik yazgıdan ziyade, belirli bir çevresel bağlamdaki popülasyonel yatkınlığı tanımlar.",
+       "ekran": "**Dinamik Kalıtsallık:** Popülasyonel bağlama ve çevresel koşullara duyarlı oran",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Popülasyon Çalışmaları"
+        ],
+        "sekil": "Psikiyatrik hastalıklar genetik analiz yöntemleri sayfa 9 şematik gösterimi ve diyagramı.",
+        "madde": [
+         0,
+         1
+        ],
+        "resim": 0
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null
       }
      ]
     },
@@ -509,7 +615,7 @@
      "bolum": "k2-59-b02",
      "cumleler": [
       {
-       "id": "k2-59-c0019",
+       "id": "k2-59-c0024",
        "ekran": "Evlat edinme çalışmaları, **biyolojik miras ile yetiştirilme çevresini** birbirinden ayıran en mükemmel modeldir.",
        "ses": "Evlat edinme çalışmaları, biyolojik ebeveynden gelen genetik miras ile evlat edinen ailenin sağladığı yetiştirilme çevresini birbirinden kesin çizgilerle ayıran en güçlü yöntemdir.",
        "satir": "Popülasyon Çalışmaları",
@@ -532,7 +638,7 @@
        ]
       },
       {
-       "id": "k2-59-c0020",
+       "id": "k2-59-c0025",
        "ekran": "Biyolojik anne-babası hasta olan çocuk, sağlıklı bir ailede büyütülse dahi **yüksek hastalık riski** taşımaya devam eder.",
        "ses": "Biyolojik ebeveyninde psikiyatrik bozukluk bulunan bir çocuk tamamen sağlıklı koruyucu bir aile ortamında büyütülse bile, biyolojik kökeninden kaynaklanan yüksek morbid riski korumaktadır.",
        "satir": "Popülasyon Çalışmaları",
@@ -568,7 +674,7 @@
      "bolum": "k2-59-b03",
      "cumleler": [
       {
-       "id": "k2-59-c0021",
+       "id": "k2-59-c0026",
        "ekran": "Sitogenetik çalışmalarda floresan **in situ hibridizasyon** teknikleriyle genlerin kromozom bant yerleşimleri incelenir.",
        "ses": "Sitogenetik analizlerde floresan in situ hibridizasyon gibi ileri moleküler sitogenetik teknikler kullanılarak genlerin kromozom bantlarındaki fiziksel lokasyonları belirlenir.",
        "satir": "Sitogenetik çalışmalar",
@@ -591,7 +697,7 @@
        ]
       },
       {
-       "id": "k2-59-c0022",
+       "id": "k2-59-c0027",
        "ekran": "Bu analizler özellikle psikiyatrik tablolara eşlik eden **kromozomal translokasyon ve delesyonları** aydınlatır.",
        "ses": "Bu kromozomal incelemeler, özellikle nörogelişimsel ve psikiyatrik sendromlara zemin hazırlayan submikroskobik mikrodelesyon ve translokasyonları tespit eder.",
        "satir": "Sitogenetik çalışmalar",
@@ -612,6 +718,27 @@
          "metin": "Bu analizler"
         }
        ]
+      },
+      {
+       "id": "k2-59-c0028",
+       "ses": "Özellikle mikrodelesyon sendromlarının mental retardasyon ve otizm spektrum bozuklukları gibi tablolara eşlik etmesi sitogenetik yaklaşımın klinik önemini artırır.",
+       "ekran": "**Sitogenetik Haritalama:** Mikrodelesyonlar ve nörogelişimsel sendrom ilişkisi",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Sitogenetik çalışmalar"
+        ],
+        "sekil": null,
+        "madde": [
+         0,
+         1
+        ]
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null
       }
      ]
     },
@@ -621,7 +748,7 @@
      "bolum": "k2-59-b03",
      "cumleler": [
       {
-       "id": "k2-59-c0023",
+       "id": "k2-59-c0029",
        "ekran": "Moleküler genetik çalışmaların ana hedefi, bozukluğun fenotipik kalıtım kalıbını yöneten **ilişkili aday genleri** tespit etmektir.",
        "ses": "Moleküler genetik araştırmaların temel amacı, belirli bir psikiyatrik fenotipin ortaya çıkışında doğrudan görev yapan fonksiyonel aday genleri ve alelleri saptamaktır.",
        "satir": "Moleküler genetik çalışmalar",
@@ -644,7 +771,7 @@
        ]
       },
       {
-       "id": "k2-59-c0024",
+       "id": "k2-59-c0030",
        "ekran": "Aday genlerin tanımlanması, patogenetik **biyokimyasal yolakların** ve hedeflenebilir moleküler reseptörlerin keşfini sağlar.",
        "ses": "Aday genlerin belirlenmesi, nörobiyolojik sinyal iletim yolaklarının çözülmesini ve farmakolojik müdahaleler için yeni moleküler reseptör hedeflerinin ortaya konmasını sağlar.",
        "satir": "Moleküler genetik çalışmalar",
@@ -665,6 +792,27 @@
          "metin": "Aday genlerin"
         }
        ]
+      },
+      {
+       "id": "k2-59-c0031",
+       "ses": "Nöronal sinapslarda görev yapan proteinleri kodlayan aday genlerin aydınlatılması, patogenezin hücresel temelde kavranmasında en kritik aşamadır.",
+       "ekran": "**Aday Genler:** Sinaptik proteinler ve moleküler iletim yolakları",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Moleküler genetik çalışmalar"
+        ],
+        "sekil": null,
+        "madde": [
+         0,
+         1
+        ]
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null
       }
      ]
     },
@@ -674,7 +822,7 @@
      "bolum": "k2-59-b03",
      "cumleler": [
       {
-       "id": "k2-59-c0025",
+       "id": "k2-59-c0032",
        "ekran": "Kalıtım kalıpları tek genli Mendelyen kalıtım ile **kompleks multigenik kalıtım** olarak ikiye ayrılır.",
        "ses": "Kalıtım paternleri otozomal dominant ya da resesif tek gen kalıtımı ile çok sayıda genin ortak katkısıyla şekillenen multigenik kalıtım kalıpları olarak ikiye ayrılmaktadır.",
        "satir": "Kalıtım kalıpları;",
@@ -696,7 +844,7 @@
        ]
       },
       {
-       "id": "k2-59-c0026",
+       "id": "k2-59-c0033",
        "ekran": "Psikiyatrik hastalıklar neredeyse istisnasız olarak **eksik penetrans ve değişken ekspresyon** gösteren multigenik modele uyar.",
        "ses": "Psikiyatrik rahatsızlıklar neredeyse istisnasız biçimde eksik penetrans, fenokopi ve değişken klinik ekspresyon sergileyen kompleks multigenik modele uymaktadır.",
        "satir": "Kalıtım kalıpları;",
@@ -731,7 +879,7 @@
      "bolum": "k2-59-b04",
      "cumleler": [
       {
-       "id": "k2-59-c0027",
+       "id": "k2-59-c0034",
        "ekran": "Genetik bilgiyi taşıyan genler, fonksiyonel **protein kodlayan ekzonlar** ile kodlamayan intron bölgelerinden oluşur.",
        "ses": "Hücresel genetik kodu taşıyan gen yapıları, olgunlaşmış protein ürününü kodlayan ekzon bölgeleri ile transkripsiyon sonrası uzaklaştırılan intron segmentlerinden meydana gelir.",
        "satir": "Polimorfik Varyasyonlar",
@@ -754,7 +902,7 @@
        ]
       },
       {
-       "id": "k2-59-c0028",
+       "id": "k2-59-c0035",
        "ekran": "Ekzonlardaki ya da düzenleyici dizilerdeki **polimorfik varyasyonlar** proteinin sentez miktarını ve işlevini değiştirir.",
        "ses": "Ekzonik bölgelerdeki veya promoter dizilerindeki tek nükleotid polimorfizmleri, sentezlenen nörotransmitter reseptörlerinin ya da enzimlerin kinetik işlevini değiştirebilir.",
        "satir": "Polimorfik Varyasyonlar",
@@ -774,6 +922,27 @@
          "metin": "polimorfik varyasyonlar"
         }
        ]
+      },
+      {
+       "id": "k2-59-c0036",
+       "ses": "Ayrıca gen transkripsiyonunu kontrol eden düzenleyici promoter bölgelerindeki mutasyonlar, bazal protein ifade düzeylerini değiştirerek duyarlılığı artırabilir.",
+       "ekran": "**Promoter Polimorfizmi:** Düzenleyici bölgelerdeki nükleotid değişimleri",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Polimorfik Varyasyonlar"
+        ],
+        "sekil": null,
+        "madde": [
+         0,
+         1
+        ]
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null
       }
      ]
     },
@@ -783,7 +952,7 @@
      "bolum": "k2-59-b04",
      "cumleler": [
       {
-       "id": "k2-59-c0029",
+       "id": "k2-59-c0037",
        "ekran": "İnsan genomunda tarihsel süreçte **RFLP, VNTR, mikrosatellit ve SNP** olmak üzere farklı varyasyon tipleri tanımlanmıştır.",
        "ses": "İnsan genomunda moleküler belirteç olarak kullanılan varyasyon tipleri kronolojik olarak restriksiyon parçacık uzunluğu, minisatellitler, mikrosatellitler ve tek nükleotid polimorfizmleridir.",
        "satir": "Varyasyon",
@@ -806,7 +975,7 @@
        ]
       },
       {
-       "id": "k2-59-c0030",
+       "id": "k2-59-c0038",
        "ekran": "Bu polimorfizmler psikiyatrik hastalıklarda **genetik haritalama ve risk belirteci** olarak büyük değer taşır.",
        "ses": "Bu genomik polimorfizmler psikiyatrik bozukluklarda kromozomal bağlantı haritalaması ve poligenik risk skorlamasında vazgeçilmez birer moleküler araçtır.",
        "satir": "Varyasyon",
@@ -827,6 +996,27 @@
          "metin": "Bu polimorfizmler"
         }
        ]
+      },
+      {
+       "id": "k2-59-c0039",
+       "ses": "Kromozom üzerinde belirli bir konumu temsil eden bu moleküler belirteçler, kalıtım paternini kuşaklar boyunca izlemede genetik kılavuz işlevi görür.",
+       "ekran": "**Genetik Belirteçler:** Kuşaklar arası kalıtım takibinde moleküler kılavuzlar",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Varyasyon"
+        ],
+        "sekil": null,
+        "madde": [
+         0,
+         11
+        ]
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null
       }
      ]
     },
@@ -836,7 +1026,7 @@
      "bolum": "k2-59-b04",
      "cumleler": [
       {
-       "id": "k2-59-c0031",
+       "id": "k2-59-c0040",
        "ekran": "RFLP varyasyonları, **restriksiyon enzimlerinin** DNA kesim noktalarındaki baz dizisi farklılıklarından kaynaklanır.",
        "ses": "Restriksiyon parça uzunluk polimorfizmi yani re fe le pe, restriksiyon endonükleaz enzimlerinin hedef de na kesim noktalarında meydana gelen baz değişikliklerine dayanır.",
        "satir": "RFLP",
@@ -858,7 +1048,7 @@
        ]
       },
       {
-       "id": "k2-59-c0032",
+       "id": "k2-59-c0041",
        "ekran": "Minisatellitler yani **VNTR dizileri** ise on beş ila yüz baz çifti uzunluğundaki ardışık tekrar bloklarıdır.",
        "ses": "Minisatellitler yani değişken sayıda tandem tekrarlar ise on beş ila yüz baz çifti uzunluğunda olup genom genelinde gen içi veya genler arası bölgelerde serpişmiştir.",
        "satir": "RFLP",
@@ -887,7 +1077,7 @@
      "bolum": "k2-59-b04",
      "cumleler": [
       {
-       "id": "k2-59-c0033",
+       "id": "k2-59-c0042",
        "ekran": "DNA'daki ardışık tekrar dizileri sentromerik satellitler, **minisatellitler ve mikrosatellitler** olarak sınıflandırılır.",
        "ses": "Genomik ardışık tekrar dizileri sentromerik satellit de na, genler arası minisatellitler ve mikrosatellitler olmak üzere üç ana büyüklük grubunda sınıflandırılmaktadır.",
        "satir": "Polimorfik Varyasyonlar",
@@ -910,7 +1100,7 @@
        ]
       },
       {
-       "id": "k2-59-c0034",
+       "id": "k2-59-c0043",
        "ekran": "Mikrosatellitler iki ila altı baz çiftlik **kısa tandem tekrarlar** olup yüksek polimorfizm derecesine sahiptir.",
        "ses": "Mikrosatellitler iki ila altı nükleotidden oluşan kısa tandem tekrarlar olup popülasyonda son derece yüksek oranda heterozigotluk ve polimorfizm gösterir.",
        "satir": "Polimorfik Varyasyonlar",
@@ -931,6 +1121,27 @@
          "metin": "Mikrosatellitler iki"
         }
        ]
+      },
+      {
+       "id": "k2-59-c0044",
+       "ses": "Tekrarlayan baz çiftlerinin sayısı bireyden bireye yüksek çeşitlilik gösterdiğinden, mikrosatellitler adli tıpta ve genetik kimliklendirmede de yaygın kullanılır.",
+       "ekran": "**Tandem Tekrarlar:** Yüksek heterozigotluk ve adli genetik belirteçler",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Polimorfik Varyasyonlar"
+        ],
+        "sekil": null,
+        "madde": [
+         0,
+         1
+        ]
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null
       }
      ]
     },
@@ -940,7 +1151,7 @@
      "bolum": "k2-59-b04",
      "cumleler": [
       {
-       "id": "k2-59-c0035",
+       "id": "k2-59-c0045",
        "ekran": "Genetik belirteçler arasında mikrosatellitler ve **tek nükleotid polimorfizmleri** günümüzde en yaygın kullanılanlardır.",
        "ses": "Moleküler genetik belirteçler ailesinde restriksiyon parçaları ve minisatellitlerin yerini günümüzde yüksek verimli mikrosatellitler ve tek nükleotid polimorfizmleri almıştır.",
        "satir": "Genetik Belirteçler",
@@ -950,10 +1161,11 @@
          "Genetik Belirteçler"
         ],
         "sekil": "Psikiyatrik hastalıklar genetik analiz yöntemleri sayfa 18 şematik gösterimi ve diyagramı.",
-        "resim": 0,
         "madde": [
-         0
-        ]
+         0,
+         1
+        ],
+        "resim": 0
        },
        "vurgu": [
         {
@@ -963,7 +1175,7 @@
        ]
       },
       {
-       "id": "k2-59-c0036",
+       "id": "k2-59-c0046",
        "ekran": "Özellikle **SNP varyantları** genom boyunca yüz binlerce noktada taranarak yüksek çözünürlüklü ilişkilendirme sağlar.",
        "ses": "Özellikle es ne pe varyantları genom boyunca yüz binlerce hatta milyonlarca lokusta eşzamanlı taranarak yüksek çözünürlüklü assosiasyon analizlerine olanak verir.",
        "satir": "Genetik Belirteçler",
@@ -983,6 +1195,27 @@
          "metin": "Özellikle SNP"
         }
        ]
+      },
+      {
+       "id": "k2-59-c0047",
+       "ses": "Milyonlarca tek nükleotid polimorfizminin mikroçip platformlarında taranması, psikiyatride geniş ölçekli genom çapında ilişkilendirme çalışmalarının temel altyapısını oluşturur.",
+       "ekran": "**Yüksek Verimli Tarama:** Genom çapında assosiasyon ve mikroçip teknolojisi",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Genetik Belirteçler"
+        ],
+        "sekil": "Psikiyatrik hastalıklar genetik analiz yöntemleri sayfa 18 şematik gösterimi ve diyagramı.",
+        "madde": [
+         0
+        ],
+        "resim": 0
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null
       }
      ]
     }
@@ -998,7 +1231,7 @@
      "bolum": "k2-59-b05",
      "cumleler": [
       {
-       "id": "k2-59-c0037",
+       "id": "k2-59-c0048",
        "ekran": "Varyasyon analizleri model bağımlı **parametrik analizler** ile modelden bağımsız nonparametrik yöntemler olarak uygulanır.",
        "ses": "Varyasyonların kullanım alanlarında parametrik yani model bağımlı analizlerde kalıtım şekli ve penetrans önceden varsayılırken, nonparametrik modellerde soy ağacı kalıtım varsayımından bağımsız çalışılır.",
        "satir": "Varyasyonların Kullanım Alanları",
@@ -1021,7 +1254,7 @@
        ]
       },
       {
-       "id": "k2-59-c0038",
+       "id": "k2-59-c0049",
        "ekran": "Kromozom yerleşimi bilinen bir belirtecin aile kuşakları boyunca **hastalıkla birlikte aktarımı** incelenir.",
        "ses": "Kromozomal yerleşimi kesin olarak saptanmış bir moleküler belirtecin, hasta aile bireyleri arasında kuşaklar boyu hastalık fenotipiyle birlikte aktarılıp aktarılmadığı izlenir.",
        "satir": "Varyasyonların Kullanım Alanları",
@@ -1051,7 +1284,7 @@
      "bolum": "k2-59-b05",
      "cumleler": [
       {
-       "id": "k2-59-c0039",
+       "id": "k2-59-c0050",
        "ekran": "Genetik haritalama, genlerin kromozom üzerindeki sırasını ve **rekombinasyon sıklığını** haritalandırır.",
        "ses": "Genetik haritalama, fonksiyonel genlerin kromozom üzerindeki dizilim sırasını ve mayotik krossingover sırasındaki rekombinasyon sıklığını matematiksel olarak ortaya koyar.",
        "satir": "Genetik Haritalama",
@@ -1061,11 +1294,11 @@
          "Genetik Haritalama"
         ],
         "sekil": "Psikiyatrik hastalıklar genetik analiz yöntemleri sayfa 20 şematik gösterimi ve diyagramı.",
-        "resim": 0,
         "madde": [
          0,
          1
-        ]
+        ],
+        "resim": 0
        },
        "vurgu": [
         {
@@ -1075,7 +1308,7 @@
        ]
       },
       {
-       "id": "k2-59-c0040",
+       "id": "k2-59-c0051",
        "ekran": "Genetik haritalarda yüzde bir oranındaki rekombinasyon, **bir centimorgan** fiziksel uzaklık birimine karşılık gelir.",
        "ses": "Genetik bağlantı haritalarında yüzde birlik rekombinasyon oranı, yaklaşık bir milyon baz çiftine denk gelen bir centimorganlık harita birimi olarak tanımlanır.",
        "satir": "Genetik Haritalama",
@@ -1096,6 +1329,27 @@
          "metin": "Genetik haritalarda"
         }
        ]
+      },
+      {
+       "id": "k2-59-c0052",
+       "ses": "İki genetik lokus kromozom üzerinde birbirine ne kadar yakınsa, mayoz bölünme sırasında birlikte aktarılma olasılıkları o kadar yüksek olur.",
+       "ekran": "**Genetik Bağlantı:** Kromozomal yakınlık ve birlikte kalıtılma olasılığı",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Genetik Haritalama"
+        ],
+        "sekil": null,
+        "madde": [
+         0,
+         1
+        ]
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null
       }
      ]
     },
@@ -1105,7 +1359,7 @@
      "bolum": "k2-59-b05",
      "cumleler": [
       {
-       "id": "k2-59-c0041",
+       "id": "k2-59-c0053",
        "ekran": "Bağlantı analizi, hastalık fenotipinin altında yatan **kromozom bölgesini ve risk lokusunu** belirlemeyi hedefler.",
        "ses": "Bağlantı analizi, hastalığın patogenezinden sorumlu mutant genin veya risk bölgesinin kromozom üzerindeki kaba fiziksel lokasyonunu tespit etmek amacıyla kullanılır.",
        "satir": "Bağlantı Analizi",
@@ -1115,11 +1369,11 @@
          "Bağlantı Analizi"
         ],
         "sekil": "Psikiyatrik hastalıklar genetik analiz yöntemleri sayfa 21 şematik gösterimi ve diyagramı.",
-        "resim": 0,
         "madde": [
          0,
          2
-        ]
+        ],
+        "resim": 0
        },
        "vurgu": [
         {
@@ -1129,7 +1383,7 @@
        ]
       },
       {
-       "id": "k2-59-c0042",
+       "id": "k2-59-c0054",
        "ekran": "Aynı kromozomda birbirine çok yakın bulunan lokuslar, mayoz sırasında **birlikte kalıtılma eğilimi** gösterir.",
        "ses": "Fiziksel olarak aynı kromozom kolunda birbirine çok yakın konumlanan genetik belirteçler, mayotik bölünmede birbirinden ayrılmayarak beraberce sonraki nesillere aktarılır.",
        "satir": "Bağlantı Analizi",
@@ -1150,6 +1404,27 @@
          "metin": "Aynı kromozomda"
         }
        ]
+      },
+      {
+       "id": "k2-59-c0055",
+       "ses": "Bağlantı analizi aile soylarında geniş kromozomal bölgeleri yakalarken, assosiasyon analizi popülasyon düzeyinde spesifik risk alellerini tek baz çözünürlüğünde hedefler.",
+       "ekran": "**Bağlantı ve Assosiasyon:** Aile içi geniş haritalamadan popülasyonel alel hedefine",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Bağlantı Analizi"
+        ],
+        "sekil": null,
+        "madde": [
+         0,
+         2
+        ]
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null
       }
      ]
     },
@@ -1159,7 +1434,7 @@
      "bolum": "k2-59-b05",
      "cumleler": [
       {
-       "id": "k2-59-c0043",
+       "id": "k2-59-c0056",
        "ekran": "Linkage çalışmalarında bilinen bir belirteç ile hastalık geninin **ko-segregasyonu** matematiksel olarak test edilir.",
        "ses": "Bağlantı yani linkage çalışmalarında, genomik konumu kesin bilinen bir mikrosatellit belirteç ile hastalık geninin aile soyağacında birlikte kalıtılması yani ko segregasyonu incelenir.",
        "satir": "Bağlantı Analizi",
@@ -1182,7 +1457,7 @@
        ]
       },
       {
-       "id": "k2-59-c0044",
+       "id": "k2-59-c0057",
        "ekran": "Aralarındaki mesafe ne kadar darsa, aralarında **krossingover gerçekleşme ihtimali** o kadar düşüktür.",
        "ses": "İki lokus arasındaki fiziksel mesafe ne kadar darsa, mayoz profazında aralarında krossingover gerçekleşme ve birbirlerinden kopma olasılığı o denli azalmaktadır.",
        "satir": "Bağlantı Analizi",
@@ -1212,7 +1487,7 @@
      "bolum": "k2-59-b05",
      "cumleler": [
       {
-       "id": "k2-59-c0045",
+       "id": "k2-59-c0058",
        "ekran": "Bağlantı analizinin gücü **LOD skoru yani log of odds** değeri hesaplanarak istatistiksel olarak değerlendirilir.",
        "ses": "Bağlantı gücünün istatistiksel kanıtı, bağlantı olasılığının bağımsız dağılım olasılığına oranının logaritması olan el o de skoru yani log of odds değeriyle hesaplanır.",
        "satir": "Bağlantı Analizi",
@@ -1235,7 +1510,7 @@
        ]
       },
       {
-       "id": "k2-59-c0046",
+       "id": "k2-59-c0059",
        "ekran": "LOD skorunun **üç ve üzerinde çıkması** bağlantıyı kesin olarak kanıtlarken, eksi ikinin altı bağlantıyı kesinlikle dışlar.",
        "ses": "El o de skorunun artı üç veya üzerinde bir değer alması iki lokus arasında kesin genetik bağlantıyı ispatlar; eksi iki ve altındaki negatif değerler ise o kromozom bölgesinde bağlantı olmadığını gösterir.",
        "satir": "Bağlantı Analizi",
@@ -1265,7 +1540,7 @@
      "bolum": "k2-59-b05",
      "cumleler": [
       {
-       "id": "k2-59-c0047",
+       "id": "k2-59-c0060",
        "ekran": "Klasik bağlantı analizleri özellikle **tek gen kalıtımı veya majör gen etkisi** taşıyan tablolarda yüksek başarı sağlar.",
        "ses": "Klasik bağlantı analizleri, hastalığın belirgin bir Mendel kalıtım paternine sahip olduğu ve ailede tek bir majör gen mutasyonunun baskın rol oynadığı tablolarda çok başarılıdır.",
        "satir": "Bağlantı Analizi",
@@ -1288,7 +1563,7 @@
        ]
       },
       {
-       "id": "k2-59-c0048",
+       "id": "k2-59-c0061",
        "ekran": "Çok sayıda küçük etkili genin rol oynadığı **kompleks psikiyatrik tablolarda** ise bağlantı analizinin gücü sınırlı kalır.",
        "ses": "Buna karşın yüzlerce gen varyantının mikro etkilerinin birleştiği kompleks psikiyatrik hastalıklarda klasik linkage çalışmaları zayıf kalmakta ve yerini ilişki çalışmalarına bırakmaktadır.",
        "satir": "Bağlantı Analizi",
@@ -1324,7 +1599,7 @@
      "bolum": "k2-59-b06",
      "cumleler": [
       {
-       "id": "k2-59-c0049",
+       "id": "k2-59-c0062",
        "ekran": "İlişki yani assosiasyon çalışmalarında, patogenezde rol oynadığı düşünülen **aday gen varyantları** araştırılır.",
        "ses": "İlişki yani assosiasyon çalışmalarında, hastalığın nörobiyolojik patogenezinde rol aldığı varsayılan spesifik bir aday genin ve polimorfizmlerinin varlığı araştırılmaktadır.",
        "satir": "İlişki (Assosiasyon) çalışmaları",
@@ -1334,11 +1609,11 @@
          "İlişki (Assosiasyon) çalışmaları"
         ],
         "sekil": "Psikiyatrik hastalıklar genetik analiz yöntemleri sayfa 25 şematik gösterimi ve diyagramı.",
-        "resim": 0,
         "madde": [
          0,
          1
-        ]
+        ],
+        "resim": 0
        },
        "vurgu": [
         {
@@ -1348,7 +1623,7 @@
        ]
       },
       {
-       "id": "k2-59-c0050",
+       "id": "k2-59-c0063",
        "ekran": "Hasta grubu ile sağlıklı kontrol grubu arasında **alel frekansı farkı** istatistiksel olarak karşılaştırılır.",
        "ses": "Geniş vaka ve sağlıklı kontrol kohortları arasında incelenen alelin görülme sıklığı karşılaştırılarak, o varyantın hastalık riskini artırıp artırmadığı saptanır.",
        "satir": "İlişki (Assosiasyon) çalışmaları",
@@ -1369,6 +1644,28 @@
          "metin": "Hasta grubu"
         }
        ]
+      },
+      {
+       "id": "k2-59-c0064",
+       "ses": "Olgu kontrol grupları arasında alel sıklığının anlamlı farklılık göstermesi, incelenen lokusun hastalık patogeneziyle biyolojik bir bağlantı taşıdığına işaret eder.",
+       "ekran": "**Alel Frekans Farkı:** Olgu kontrol gruplarında anlamlı frekans dağılımı",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "İlişki (Assosiasyon) çalışmaları"
+        ],
+        "sekil": "Psikiyatrik hastalıklar genetik analiz yöntemleri sayfa 25 şematik gösterimi ve diyagramı.",
+        "madde": [
+         0,
+         1
+        ],
+        "resim": 0
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null
       }
      ]
     },
@@ -1378,7 +1675,7 @@
      "bolum": "k2-59-b06",
      "cumleler": [
       {
-       "id": "k2-59-c0051",
+       "id": "k2-59-c0065",
        "ekran": "Şimdi psikiyatrideki spesifik **hastalık örnekleri ve genetik mekanizmalar** üzerinden ilerleyeceğiz.",
        "ses": "Genel araştırma ilkelerini tamamladıktan sonra, şimdi psikiyatri kliniğinde en sık karşılaşılan spesifik hastalık örnekleri ve altlarındaki moleküler genetik mekanizmaları ele alacağız.",
        "satir": "Hastalık Örnekleri",
@@ -1388,10 +1685,10 @@
          "Hastalık Örnekleri"
         ],
         "sekil": "Psikiyatrik hastalıklar genetik analiz yöntemleri sayfa 26 şematik gösterimi ve diyagramı.",
-        "resim": 0,
         "madde": [
          0
-        ]
+        ],
+        "resim": 0
        },
        "vurgu": [
         {
@@ -1401,7 +1698,7 @@
        ]
       },
       {
-       "id": "k2-59-c0052",
+       "id": "k2-59-c0066",
        "ekran": "Kişilik bozukluklarından şizofreniye, bipolar bozukluktan **bağımlılık genetiğine** kadar geniş bir yelpaze bulunmaktadır.",
        "ses": "Kişilik bozukluklarından şizofreniye, duygudurum tablolarından alkol bağımlılığına ve anksiyeteye uzanan geniş yelpazede kanıtlanmış genetik bulguları adım adım inceleyeceğiz.",
        "satir": "Hastalık Örnekleri",
@@ -1422,6 +1719,27 @@
          "metin": "Kişilik bozukluklarından"
         }
        ]
+      },
+      {
+       "id": "k2-59-c0067",
+       "ses": "Her klinik antite tek bir majör genden ziyade, küçük etkili yüzlerce risk varyantının poligenik birikimiyle şekillenen karmaşık bir biyolojik yapı sunar.",
+       "ekran": "**Poligenik Mimari:** Çok sayıda genetik varyantın kümülatif katkısı",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Hastalık Örnekleri"
+        ],
+        "sekil": "Psikiyatrik hastalıklar genetik analiz yöntemleri sayfa 26 şematik gösterimi ve diyagramı.",
+        "madde": [
+         0
+        ],
+        "resim": 0
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null
       }
      ]
     }
@@ -1437,7 +1755,7 @@
      "bolum": "k2-59-b07",
      "cumleler": [
       {
-       "id": "k2-59-c0053",
+       "id": "k2-59-c0068",
        "ekran": "Kişilik bozukluklarında kalıtılabilirlik oranları yaklaşık **yüzde otuz ila altmış** arasında tahmin edilir.",
        "ses": "Kişilik bozuklukları üzerine yapılan epidemiyolojik ikiz ve aile araştırmalarında kalıtılabilirlik oranları yaklaşık yüzde otuz ila altmış arasında hesaplanmaktadır.",
        "satir": "Kişilik Bozuklukları",
@@ -1460,7 +1778,7 @@
        ]
       },
       {
-       "id": "k2-59-c0054",
+       "id": "k2-59-c0069",
        "ekran": "Genetik faktörler özellikle mizaç özelliklerini, **dürtü kontrol kapasitesini** ve stres toleransını belirler.",
        "ses": "Genetik yatkınlık bireyin nörobiyolojik mizaç özelliklerini, prefrontal korteksteki dürtü kontrol kapasitesini ve çevresel tehlikelere verdiği duygusal yanıtı şekillendirir.",
        "satir": "Kişilik Bozuklukları",
@@ -1481,6 +1799,27 @@
          "metin": "Genetik faktörler"
         }
        ]
+      },
+      {
+       "id": "k2-59-c0070",
+       "ses": "Özellikle sınırda ve antisosyal kişilik bozukluklarında ailesel kümelenme belirgin olup mizaç faktörleri kuşaktan kuşağa yüksek oranda aktarılır.",
+       "ekran": "**Ailesel Mizaç:** Sınırda ve antisosyal tablolarda mizaç aktarımı",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Kişilik Bozuklukları"
+        ],
+        "sekil": null,
+        "madde": [
+         0,
+         2
+        ]
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null
       }
      ]
     },
@@ -1490,7 +1829,7 @@
      "bolum": "k2-59-b07",
      "cumleler": [
       {
-       "id": "k2-59-c0055",
+       "id": "k2-59-c0071",
        "ekran": "Kişilik bozuklukları etiyolojisinde **serotonerjik, dopaminerjik ve noradrenerjik** yolak polimorfizmleri odak noktasıdır.",
        "ses": "Kişilik bozukluklarının moleküler patogenezinde serotonerjik disfonksiyon dürtüsellik ve agresyonla, dopaminerjik yolaklar yenilik arayışıyla, noradrenerjik sistem ise tehlikeden kaçınmayla bağlantılıdır.",
        "satir": "Kişilik Bozuklukları",
@@ -1513,7 +1852,7 @@
        ]
       },
       {
-       "id": "k2-59-c0056",
+       "id": "k2-59-c0072",
        "ekran": "Serotonin taşıyıcı ve parçalayıcı genlerdeki varyantlar **prefrontal otokontrolü zayıflatarak** davranışsal disinhibisyona yol açabilir.",
        "ses": "Serotonin taşıyıcı proteini ve monoamin katabolizma enzimlerini kodlayan genetik polimorfizmler prefrontal denetimi zayıflatarak patolojik davranış kalıplarına zemin hazırlar.",
        "satir": "Kişilik Bozuklukları",
@@ -1534,6 +1873,27 @@
          "metin": "Serotonin taşıyıcı"
         }
        ]
+      },
+      {
+       "id": "k2-59-c0073",
+       "ses": "Monoamin oksidaz A enzim aktivitesini düşüren polimorfizmler, çocukluk çağı travmasıyla birleştiğinde erişkin dönemde agresyon ve antisosyal davranış riskini katlar.",
+       "ekran": "**Monoamin Oksidaz ve Travma:** Gen ve çevre etkileşimiyle artan agresyon",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Kişilik Bozuklukları"
+        ],
+        "sekil": null,
+        "madde": [
+         0,
+         5
+        ]
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null
       }
      ]
     },
@@ -1543,7 +1903,7 @@
      "bolum": "k2-59-b07",
      "cumleler": [
       {
-       "id": "k2-59-c0057",
+       "id": "k2-59-c0074",
        "ekran": "Antisosyal kişilik bozukluğunda **dürtüsellik, kural tanımazlık ve empati yoksunluğu** temel klinik özelliklerdir.",
        "ses": "Antisosyal kişilik bozukluğu tablosunda çocukluk çağından itibaren süregelen dürtüsellik, agresyon, sosyal kuralları çiğneme ve empati eksikliği en belirgin klinik özelliklerdir.",
        "satir": "Antisosyal Kişilik Bozukluğu(ASKB)",
@@ -1566,7 +1926,7 @@
        ]
       },
       {
-       "id": "k2-59-c0058",
+       "id": "k2-59-c0075",
        "ekran": "Bu bozukluğun etiyolojisinde genetik yatkınlık ile **çocukluk çağı travması** güçlü bir sinerji oluşturur.",
        "ses": "Bu bozukluğun etiyolojisinde kalıtsal yatkınlık ile çocukluk döneminde maruz kalınan ağır fiziksel veya duygusal istismar güçlü bir etkileşim gösterir.",
        "satir": "Antisosyal Kişilik Bozukluğu(ASKB)",
@@ -1587,6 +1947,27 @@
          "metin": "Bu bozukluğun"
         }
        ]
+      },
+      {
+       "id": "k2-59-c0076",
+       "ses": "Nörobiyolojik olarak ventromedial prefrontal korteks ve amigdala arasındaki fonksiyonel bağlantının zayıflaması, ahlaki muhakeme ve suçluluk duygusunun gelişimini engeller.",
+       "ekran": "**Prefrontal Amigdala Devresi:** Ahlaki muhakeme ve duygu denetim zaafı",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Antisosyal Kişilik Bozukluğu(ASKB)"
+        ],
+        "sekil": null,
+        "madde": [
+         0,
+         1
+        ]
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null
       }
      ]
     },
@@ -1596,7 +1977,7 @@
      "bolum": "k2-59-b07",
      "cumleler": [
       {
-       "id": "k2-59-c0059",
+       "id": "k2-59-c0077",
        "ekran": "Antisosyal kişilik bozukluğunda **5-HTTLPR ve MAO-A promoter polimorfizmleri** üzerine yoğun çalışmalar yapılmıştır.",
        "ses": "Antisosyal davranışların biyolojisinde serotonin geri alım taşıyıcısı beş haş te te le pe re geni ile monoamin oksidaz a promoter bölgesindeki değişken tandem tekrarlar mercek altına alınmıştır.",
        "satir": "Antisosyal Kişilik Bozukluğu",
@@ -1619,7 +2000,7 @@
        ]
       },
       {
-       "id": "k2-59-c0060",
+       "id": "k2-59-c0078",
        "ekran": "Serotonin taşıyıcı genin **kısa alelini taşıyan bireylerde** dürtüsel saldırganlık ve anksiyöz tepkisellik daha belirgin bulunur.",
        "ses": "Serotonin taşıyıcı genin kısa es alelini homozigot ya da heterozigot taşıyan bireylerde, duygusal stresörler karşısında amigdala hiperaktivitesi ve dürtüsel agresyon daha sık saptanır.",
        "satir": "Antisosyal Kişilik Bozukluğu",
@@ -1649,7 +2030,7 @@
      "bolum": "k2-59-b07",
      "cumleler": [
       {
-       "id": "k2-59-c0061",
+       "id": "k2-59-c0079",
        "ekran": "Caspi ve arkadaşlarının klasik çalışmasında, **düşük aktiviteli MAO-A aleli** taşıyan çocukların istismara uğradığında antisosyal olma riski yüksek bulunmuştur.",
        "ses": "Caspi ve çalışma arkadaşlarının tıp literatürüne giren çığır açıcı bulgusuna göre, düşük aktiviteli monoamin oksidaz a aleli taşıyan çocuklar ağır istismara maruz kaldıklarında erişkin dönemde antisosyal olma riski dramatik şekilde artmaktadır.",
        "satir": "Kişilik Bozuklukları",
@@ -1672,7 +2053,7 @@
        ]
       },
       {
-       "id": "k2-59-c0062",
+       "id": "k2-59-c0080",
        "ekran": "Buna karşılık **yüksek aktiviteli MAO-A aleli** taşıyan çocuklar, travmaya rağmen antisosyal gelişime karşı korunabilmektedir.",
        "ses": "Buna karşın yüksek enzimatik aktiviteye sahip promoter alelini taşıyan çocukların, benzer travmatik çevreye maruz kalsalar bile antisosyal davranış gelişimine karşı biyolojik bir direnç sergilediği gösterilmiştir.",
        "satir": "Kişilik Bozuklukları",
@@ -1702,7 +2083,7 @@
      "bolum": "k2-59-b07",
      "cumleler": [
       {
-       "id": "k2-59-c0063",
+       "id": "k2-59-c0081",
        "ekran": "Bu çarpıcı bulgu, psikiyatride **gen-çevre etkileşiminin** en somut ve kanıtlanmış bilimsel modelini oluşturur.",
        "ses": "Bu bulgu, psikiyatrik genetik araştırmalarında biyolojik genetik risk ile psikososyal çevrenin nasıl iç içe geçtiğini gösteren en kusursuz gen çevre etkileşimi modelidir.",
        "satir": "Kişilik Bozuklukları",
@@ -1725,7 +2106,7 @@
        ]
       },
       {
-       "id": "k2-59-c0064",
+       "id": "k2-59-c0082",
        "ekran": "Tek başına genetik yapı veya tek başına çevre değil, **ikisinin birleşimi** patolojik fenotipik sonucu belirler.",
        "ses": "Dolayısıyla tek başına genetik varyasyon ya da tek başına çevresel stres değil, bu iki faktörün moleküler düzeydeki kesişimi bireyin nihai davranışsal profilini ortaya çıkarmaktadır.",
        "satir": "Kişilik Bozuklukları",
@@ -1761,7 +2142,7 @@
      "bolum": "k2-59-b08",
      "cumleler": [
       {
-       "id": "k2-59-c0065",
+       "id": "k2-59-c0083",
        "ekran": "Manik-depresif hastalık yani **bipolar bozukluk**, psikiyatride kalıtsallığı en yüksek tablolardan biridir.",
        "ses": "Manik depresif hastalık yani bipolar bozukluk, psikiyatri kliniğinde kalıtılabilirlik gücü en yüksek ve genetik kökeni en belirgin duygu durum bozukluklarından biridir.",
        "satir": "Manik-Depresif Hastalık",
@@ -1792,7 +2173,7 @@
        ]
       },
       {
-       "id": "k2-59-c0066",
+       "id": "k2-59-c0084",
        "ekran": "Mani ve depresyon ataklarıyla seyreden bu bozuklukta **ailesel kümelenme** son derece belirgindir.",
        "ses": "Dönemsel mani veya hipomani ile çökkünlük ataklarıyla seyreden bu tabloda, birinci derece aile bireylerinde hem bipolar hem de unipolar bozukluk görülme riski oldukça yüksektir.",
        "satir": "Manik-Depresif Hastalık",
@@ -1822,7 +2203,7 @@
      "bolum": "k2-59-b08",
      "cumleler": [
       {
-       "id": "k2-59-c0067",
+       "id": "k2-59-c0085",
        "ekran": "Bipolar bozuklukta monozigot ikiz konkordansı **yüzde altmış ila yetmişe** ulaşırken, unipolar depresyonda yüzde kırk civarındadır.",
        "ses": "Bipolar bozuklukta monozigot ikizler arasındaki konkordans oranı yüzde altmış ila yetmiş gibi çok yüksek bir seviyeye ulaşırken, unipolar depresyonda bu oran yüzde kırk civarında seyretmektedir.",
        "satir": "Tekrarlama riski (bipolar, unipolar,",
@@ -1845,7 +2226,7 @@
        ]
       },
       {
-       "id": "k2-59-c0068",
+       "id": "k2-59-c0086",
        "ekran": "Bu dramatik fark, bipolar bozukluğun unipolar depresyona kıyasla **çok daha güçlü genetik ağırlık** taşıdığını kanıtlar.",
        "ses": "Bu belirgin konkordans uçurumu, bipolar tablonun unipolar depresyona kıyasla çok daha baskın bir nörobiyolojik ve kalıtsal temele dayandığını açıkça kanıtlamaktadır.",
        "satir": "Tekrarlama riski (bipolar, unipolar,",
@@ -1875,7 +2256,7 @@
      "bolum": "k2-59-b08",
      "cumleler": [
       {
-       "id": "k2-59-c0069",
+       "id": "k2-59-c0087",
        "ekran": "Bipolar bozuklukta bağlantı çalışmaları dördüncü, on ikinci, **on sekizinci ve yirmi ikinci kromozomlarda** risk lokusları saptamıştır.",
        "ses": "Bipolar bozuklukta yapılan genom tarama ve bağlantı çalışmaları; dördüncü kromozom p kolu, on ikinci kromozom q kolu, on sekizinci ve yirmi ikinci kromozomlarda tekrarlayan risk bölgeleri bildirmiştir.",
        "satir": "Manik-Depresif Hastalık-Genetik Faktörler",
@@ -1897,7 +2278,7 @@
        ]
       },
       {
-       "id": "k2-59-c0070",
+       "id": "k2-59-c0088",
        "ekran": "Bu kromozomal bölgeler kalsiyum sinyal iletimi ve **sinaptik plastisiteden sorumlu** genleri barındırır.",
        "ses": "Bu kromozomal segmentler, nöronal kalsiyum kanal iletiminden ve sinaptik nöroplastisiteden sorumlu kritik gen kümelerini bünyesinde barındırmaktadır.",
        "satir": "Manik-Depresif Hastalık-Genetik Faktörler",
@@ -1926,7 +2307,7 @@
      "bolum": "k2-59-b08",
      "cumleler": [
       {
-       "id": "k2-59-c0071",
+       "id": "k2-59-c0089",
        "ekran": "Aday genler arasında beyin kaynaklı nörotrofik faktör **BDNF, DAOA yani G72 ve DISC1** öne çıkar.",
        "ses": "Bipolar bozukluk için araştırılan aday genler arasında beyin kaynaklı nörotrofik faktör be de ne fe geni, de a o a yani ge yetmiş iki lokusu ve disk bir genleri ön plana çıkmaktadır.",
        "satir": "Manik-Depresif Hastalık-Aday Genler (BD)",
@@ -1948,7 +2329,7 @@
        ]
       },
       {
-       "id": "k2-59-c0072",
+       "id": "k2-59-c0090",
        "ekran": "Özellikle **BDNF Val66Met polimorfizmi**, hipokampal plastisiteyi ve lityum tedavisine verilen klinik yanıtı etkiler.",
        "ses": "Özellikle be de ne fe genindeki valin altmış altı metiyonin polimorfizmi, hipokampal hacmi, nöroplastisiteyi ve hastanın lityum sağaltımına verdiği yanıtı doğrudan etkilemektedir.",
        "satir": "Manik-Depresif Hastalık-Aday Genler (BD)",
@@ -1977,7 +2358,7 @@
      "bolum": "k2-59-b08",
      "cumleler": [
       {
-       "id": "k2-59-c0073",
+       "id": "k2-59-c0091",
        "ekran": "Duygudurum bozukluklarında poligenik risk skorları, binlerce **küçük etkili varyantın toplamını** temsil eder.",
        "ses": "Duygudurum bozukluklarının genetik mimarisinde poligenik risk skorlamaları, genom geneline yayılmış binlerce küçük etkili tek nükleotid varyantının matematiksel toplamını ifade eder.",
        "satir": "Duygudurum Bozuklukları",
@@ -2000,7 +2381,7 @@
        ]
       },
       {
-       "id": "k2-59-c0074",
+       "id": "k2-59-c0092",
        "ekran": "Bu poligenik yatkınlık eşik değeri aştığında ve **psikososyal stresörlerle birleştiğinde** klinik atak tetiklenir.",
        "ses": "Bu poligenik kalıtsal yük bireyin biyolojik eşik değerini aştığında ve çevresel yaşam olaylarıyla tetiklendiğinde mani ya da depresyon atağı klinik olarak patlak verir.",
        "satir": "Duygudurum Bozuklukları",
@@ -2036,7 +2417,7 @@
      "bolum": "k2-59-b09",
      "cumleler": [
       {
-       "id": "k2-59-c0075",
+       "id": "k2-59-c0093",
        "ekran": "İntihar davranışı, altta yatan psikiyatrik tanıdan kısmen bağımsız olarak **kendi içinde genetik bir kalıtılabilirlik** gösterir.",
        "ses": "İntihar davranışı sadece majör depresyonun bir belirtisi olmayıp, altta yatan psikiyatrik tablodan bağımsız olarak aile ve ikiz çalışmalarında kendi genetik kalıtılabilirliğini sergiler.",
        "satir": "Duygudurum Bozuklukları",
@@ -2059,7 +2440,7 @@
        ]
       },
       {
-       "id": "k2-59-c0076",
+       "id": "k2-59-c0094",
        "ekran": "Ailesinde tamamlanmış intihar öyküsü bulunan bireylerde özkıyım riski, **tanıdan bağımsız olarak artış** sergiler.",
        "ses": "Ailesinde tamamlanmış intihar öyküsü bulunan kişilerde intihar girişimi riski, hastada duygudurum bozukluğu olup olmamasından bağımsız şekilde anlamlı düzeyde artmış bulunur.",
        "satir": "Duygudurum Bozuklukları",
@@ -2089,7 +2470,7 @@
      "bolum": "k2-59-b09",
      "cumleler": [
       {
-       "id": "k2-59-c0077",
+       "id": "k2-59-c0095",
        "ekran": "İntihar davranışının nörobiyolojisinde en tutarlı bulgu, **santral serotonerjik iletim yetersizliğidir**.",
        "ses": "İntihar davranışının nörobiyolojik incelemelerinde en tutarlı ve tekrarlanan biyolojik bulgu, santral sinir sistemindeki serotonerjik iletim yetersizliği ve hipoaktivitedir.",
        "satir": "Duygudurum Bozuklukları",
@@ -2112,7 +2493,7 @@
        ]
       },
       {
-       "id": "k2-59-c0078",
+       "id": "k2-59-c0096",
        "ekran": "Beyin omurilik sıvısında serotonin metaboliti olan **5-HIAA düzeylerinin düşük bulunması** ölümcül intihar girişimleriyle doğrudan ilişkilidir.",
        "ses": "Beyin omurilik sıvısında serotonin ana metaboliti olan beş haş i a a konsantrasyonunun belirgin düşük saptanması, ölümcül ve şiddet içerikli intihar eylemleriyle doğrudan korele bulunmuştur.",
        "satir": "Duygudurum Bozuklukları",
@@ -2142,7 +2523,7 @@
      "bolum": "k2-59-b09",
      "cumleler": [
       {
-       "id": "k2-59-c0079",
+       "id": "k2-59-c0097",
        "ekran": "İntiharda aday gen olarak serotonin sentezini başlatan hız kısıtlayıcı **triptofan hidroksilaz yani TPH genleri** incelenmiştir.",
        "ses": "İntihar biyolojisinde aday gen olarak, serotonin biyosentezinde hız kısıtlayıcı basamağı katalizleyen triptofan hidroksilaz yani te pe haş enzimi genleri yoğun şekilde araştırılmıştır.",
        "satir": "Duygudurum Bozuklukları",
@@ -2165,7 +2546,7 @@
        ]
       },
       {
-       "id": "k2-59-c0080",
+       "id": "k2-59-c0098",
        "ekran": "Özellikle beyin kaynaklı **TPH2 varyantları**, prefrontal kortekste serotonin düzeyini düşürerek dürtüsel özkıyım riskini artırır.",
        "ses": "Özellikle beyin dokusunda eksprese olan te pe haş iki izoformundaki fonksiyonel polimorfizmler, prefrontal serotonini azaltarak dürtü kontrolünün çökmesine ve intihar eğilimine yol açabilir.",
        "satir": "Duygudurum Bozuklukları",
@@ -2195,7 +2576,7 @@
      "bolum": "k2-59-b09",
      "cumleler": [
       {
-       "id": "k2-59-c0081",
+       "id": "k2-59-c0099",
        "ekran": "Ayrıca serotonin **5-HT1A ve 5-HT2A reseptör polimorfizmleri** de intihar riskiyle ilişkili bulunmuştur.",
        "ses": "Ayrıca presinaptik otoreseptör olan beş haş te bir a ve postsinaptik beş haş te iki a reseptör gen polimorfizmleri de agresyon ve intihar riskiyle ilişkili bildirilmiştir.",
        "satir": "Duygudurum Bozuklukları",
@@ -2218,7 +2599,7 @@
        ]
       },
       {
-       "id": "k2-59-c0082",
+       "id": "k2-59-c0100",
        "ekran": "Bu polimorfizmler stres yanıtı sırasında **amigdala-prefrontal korteks dengesini** bozarak akut dürtüsel krize yol açar.",
        "ses": "Bu reseptör polimorfizmleri stres esnasında amigdala ile prefrontal korteks arasındaki inhibitör dengeyi bozarak krize yanıt olarak kendine zarar verme davranışını tetikler.",
        "satir": "Duygudurum Bozuklukları",
@@ -2254,7 +2635,7 @@
      "bolum": "k2-59-b10",
      "cumleler": [
       {
-       "id": "k2-59-c0083",
+       "id": "k2-59-c0101",
        "ekran": "Şizofreni, genel toplumda yaklaşık **yüzde bir prevalansa** sahip kronik ve yıkıcı bir psikotik bozukluktur.",
        "ses": "Şizofreni, genel toplumda coğrafyadan bağımsız olarak yaklaşık yüzde bir yaşam boyu yaygınlığa sahip, bilişsel ve duygusal yıkımla seyreden kronik bir psikotik tablodur.",
        "satir": "Şizofreni",
@@ -2277,7 +2658,7 @@
        ]
       },
       {
-       "id": "k2-59-c0084",
+       "id": "k2-59-c0102",
        "ekran": "Bozukluğun ortaya çıkışında genetik faktörlerin katkısı **yüzde seksen gibi muazzam bir orana** ulaşmaktadır.",
        "ses": "Bu ağır bozukluğun etiyolojisinde genetik yatkınlığın göreceli payı yüzde seksen gibi muazzam bir kalıtsallık düzeyine ulaşmaktadır.",
        "satir": "Şizofreni",
@@ -2298,6 +2679,27 @@
          "metin": "Bozukluğun ortaya"
         }
        ]
+      },
+      {
+       "id": "k2-59-c0103",
+       "ses": "Yüksek kalıtsallığa karşın tek bir mutasyon hastalığı açıklamaya yetmez; hastalık yüzlerce genetik lokusun ortaklaşa katkısıyla ortaya çıkar.",
+       "ekran": "**Yüksek Kalıtılabilirlik:** Poligenik mimarinin yüzde seksenlik kalıtım payı",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "Şizofreni"
+        ],
+        "sekil": null,
+        "madde": [
+         0,
+         6
+        ]
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null
       }
      ]
     },
@@ -2307,7 +2709,7 @@
      "bolum": "k2-59-b10",
      "cumleler": [
       {
-       "id": "k2-59-c0085",
+       "id": "k2-59-c0104",
        "ekran": "Şizofreni etiyolojisinde genetik zemin temel olsa da, **intrauterin ve çevresel stresörler** tetikleyici rol oynar.",
        "ses": "Şizofreni patogenezinde genetik zemin birincil olsa da; maternal enfeksiyonlar, obstetrik komplikasyonlar, kış doğumu ve erken esrar kullanımı tetikleyici risk etmenleridir.",
        "satir": "Şizofreni",
@@ -2330,7 +2732,7 @@
        ]
       },
       {
-       "id": "k2-59-c0086",
+       "id": "k2-59-c0105",
        "ekran": "İki vuruş hipotezine göre, **erken nörogelişimsel hasar** pubertede sinaptik budanma anomalisiyle birleşerek psikozu başlatır.",
        "ses": "İki vuruş hipotezi uyarınca, intrauterin dönemde meydana gelen erken nörogelişimsel hasar ergenlikteki aşırı sinaptik budanma anomalisiyle birleştiğinde psikoz kliniği patlak verir.",
        "satir": "Şizofreni",
@@ -2360,7 +2762,7 @@
      "bolum": "k2-59-b10",
      "cumleler": [
       {
-       "id": "k2-59-c0087",
+       "id": "k2-59-c0106",
        "ekran": "Şizofreni genetiğinde yapılan geniş aile çalışmaları, akrabalık derecesiyle **doğru orantılı bir morbid risk** ortaya koyar.",
        "ses": "Şizofreni genetiğinde yapılan geniş çaplı aile kohortları, proband ile akrabalık derecesi yakınlaştıkça morbid riskin geometrik olarak arttığını net şekilde belgelemiştir.",
        "satir": "Şizofreni Genetiği",
@@ -2383,7 +2785,7 @@
        ]
       },
       {
-       "id": "k2-59-c0088",
+       "id": "k2-59-c0107",
        "ekran": "İkinci derece akrabalarda risk yüzde iki ila dört iken, **birinci derece akrabalarda yüzde ona** fırlar.",
        "ses": "Genel toplumda yüzde bir olan risk; amca, dayı ve torun gibi ikinci derece akrabalarda yüzde iki ila dörde, kardeş ve çocuk gibi birinci derece akrabalarda ise yüzde ona fırlamaktadır.",
        "satir": "Şizofreni Genetiği",
@@ -2413,7 +2815,7 @@
      "bolum": "k2-59-b10",
      "cumleler": [
       {
-       "id": "k2-59-c0089",
+       "id": "k2-59-c0108",
        "ekran": "Aile çalışmalarında şizofreni ile duygudurum bozukluklarının **ortak genetik havuz paylaştığı** gösterilmiştir.",
        "ses": "Geniş aile araştırmalarında şizofreni ile psikotik özellikli bipolar bozukluğun önemli ölçüde ortak bir genetik duyarlılık havuzunu paylaştığı anlaşılmıştır.",
        "satir": "Şizofreni",
@@ -2436,7 +2838,7 @@
        ]
       },
       {
-       "id": "k2-59-c0090",
+       "id": "k2-59-c0109",
        "ekran": "Bazı ailelerde aynı risk alellerinin bir bireyde şizofreniye, diğerinde **şizoafektif veya bipolar tabloya** yol açtığı izlenir.",
        "ses": "Nitekim aynı soyağacında belirli risk allellerinin bir fertte klasik şizofreniye yol açarken, diğer bir aile üyesinde şizoafektif veya manik tabloya neden olduğu sıkça gözlenir.",
        "satir": "Şizofreni",
@@ -2466,7 +2868,7 @@
      "bolum": "k2-59-b10",
      "cumleler": [
       {
-       "id": "k2-59-c0091",
+       "id": "k2-59-c0110",
        "ekran": "Bir ebeveyni şizofreni olan çocuğun hastalanma riski **yüzde on ila on iki** civarındadır.",
        "ses": "Anne veya babasından biri şizofreni tanısı almış olan bir çocuğun hayat boyu şizofreniye yakalanma riski genel toplumun on katına çıkarak yüzde on ila on ikiye ulaşır.",
        "satir": "Şizofreni",
@@ -2488,7 +2890,7 @@
        ]
       },
       {
-       "id": "k2-59-c0092",
+       "id": "k2-59-c0111",
        "ekran": "Tek bir hasta ebeveyn bile çocuktaki **hastalık ihtimalini on kat** artırmaktadır.",
        "ses": "Görüldüğü üzere tek bir hasta ebeveyn dahi çocuğun gelecekteki psikoz geliştirme ihtimalini taban riske oranla tam on kat yukarı çekmektedir.",
        "satir": "Şizofreni",
@@ -2517,7 +2919,7 @@
      "bolum": "k2-59-b10",
      "cumleler": [
       {
-       "id": "k2-59-c0093",
+       "id": "k2-59-c0112",
        "ekran": "Eğer her iki ebeveyn de şizofreni hastasıysa, çocuktaki hastalık riski **yüzde kırk ila kırk altıya** kadar yükselir.",
        "ses": "Eğer hem anne hem de baba şizofreni hastasıysa, bu evlilikten doğacak çocuklarda şizofreni gelişme riski yüzde kırk ila kırk altı gibi dramatik bir düzeye fırlamaktadır.",
        "satir": "Şizofreni-Aile Çalışmaları",
@@ -2540,7 +2942,7 @@
        ]
       },
       {
-       "id": "k2-59-c0094",
+       "id": "k2-59-c0113",
        "ekran": "Bu bulgu şizofrenide gen dozajının ve **bilateral poligenik yükün** belirleyici olduğunu kanıtlar.",
        "ses": "Bu çarpıcı epidemiyolojik veri, şizofrenide her iki ebeveynden gelen risk alellerinin kümülatif dozunun patogenezdeki belirleyici ağırlığını kanıtlamaktadır.",
        "satir": "Şizofreni-Aile Çalışmaları",
@@ -2570,7 +2972,7 @@
      "bolum": "k2-59-b10",
      "cumleler": [
       {
-       "id": "k2-59-c0095",
+       "id": "k2-59-c0114",
        "ekran": "Evlat edinme çalışmaları, biyolojik ebeveyni şizofreni olan çocukların **sağlıklı ailede büyütülseler bile** risk taşıdığını belgeler.",
        "ses": "Şizofreni evlat edinme modellerinde, biyolojik annesi şizofreni olan çocuklar doğumda sağlıklı koruyucu ailelere evlatlık verilseler dahi yüksek hastalık riskini korumaktadırlar.",
        "satir": "Şizofreni-Aile Çalışmaları",
@@ -2592,7 +2994,7 @@
        ]
       },
       {
-       "id": "k2-59-c0096",
+       "id": "k2-59-c0115",
        "ekran": "Buna karşılık sağlıklı ebeveynin çocuğu şizofren bir ailede büyütülürse, **hastalık riski artış göstermez**.",
        "ses": "Buna mukabil sağlıklı biyolojik ebeveynlerin çocukları şizofren bir koruyucu ailede büyütülseler bile hastalık risklerinde belirgin bir artış meydana gelmemektedir.",
        "satir": "Şizofreni-Aile Çalışmaları",
@@ -2612,6 +3014,26 @@
          "metin": "Buna karşılık"
         }
        ]
+      },
+      {
+       "id": "k2-59-c0116",
+       "ses": "Evlat edinme bulguları, şizofrenide gözlenen yüksek ailesel sıklığın paylaşılan ev ortamından değil, doğrudan biyolojik genetik mirastan kaynaklandığını kesin olarak kanıtlar.",
+       "ekran": "**Biyolojik Miras:** Koruyucu aile modellerinde genetik riskin korunması",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "Şizofreni-Aile Çalışmaları"
+        ],
+        "sekil": null,
+        "madde": [
+         0
+        ]
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null
       }
      ]
     },
@@ -2621,7 +3043,7 @@
      "bolum": "k2-59-b10",
      "cumleler": [
       {
-       "id": "k2-59-c0097",
+       "id": "k2-59-c0117",
        "ekran": "Şizofrenide ikiz konkordansı **monozigot ikizlerde yüzde elli üç**, dizigot ikizlerde ise yüzde on beş civarındadır.",
        "ses": "Geçmiş yılların çıkmış sınav sorusunda özellikle sorulduğu gibi, şizofrenide monozigot ikizler arasındaki eş hastalanma yani konkordans oranı yaklaşık yüzde elli üç iken, dizigot ikizlerde bu oran yüzde on beşe gerilemektedir.",
        "satir": "Şizofreni-İkiz Çalışmaları",
@@ -2647,7 +3069,7 @@
        ]
       },
       {
-       "id": "k2-59-c0098",
+       "id": "k2-59-c0118",
        "ekran": "Monozigot ikizlerin yüzde yüz genetik özdeşliğine rağmen uyumun tam yüzde yüz olmaması, **çevresel faktörlerin ve epigenetiğin rolünü** gösterir.",
        "ses": "Monozigot ikizler tamamen aynı genoma sahip olmalarına rağmen konkordansın tam yüzde yüz olmaması, intrauterin mikro çevre, somatik mutasyonlar ve epigenetiğin payını kesinleştirmektedir.",
        "satir": "Şizofreni-İkiz Çalışmaları",
@@ -2683,7 +3105,7 @@
      "bolum": "k2-59-b11",
      "cumleler": [
       {
-       "id": "k2-59-c0099",
+       "id": "k2-59-c0119",
        "ekran": "Genom tarama çalışmaları şizofreni için **1q21-q22, 6p24-p22 ve 13q32-34** bölgelerinde güçlü bağlantılar saptamıştır.",
        "ses": "Genom tarama çalışmaları şizofreni riski için birinci kromozom q kolu, altıncı kromozom p kolu ve on üçüncü kromozom q kolu gibi kritik lokuslarda güçlü sinyaller yakalamıştır.",
        "satir": "Şizofreni-Genetik Faktörler",
@@ -2706,7 +3128,7 @@
        ]
       },
       {
-       "id": "k2-59-c0100",
+       "id": "k2-59-c0120",
        "ekran": "Bu bağlantı bölgeleri nöronal göç, akson rehberliği ve **sinaps olgunlaşması** ile ilgili genleri barındırır.",
        "ses": "Bu kromozomal bağlantı alanları fetal beyin gelişiminde nöronal göç, akson yönelimi ve sinaps matürasyonunu yöneten anahtar genleri içermektedir.",
        "satir": "Şizofreni-Genetik Faktörler",
@@ -2735,7 +3157,7 @@
      "bolum": "k2-59-b11",
      "cumleler": [
       {
-       "id": "k2-59-c0101",
+       "id": "k2-59-c0121",
        "ekran": "Aday genler arasında disbindin geni **DTNBP1**, nörogulin geni **NRG1** ve **DISC1** en çok araştırılanlardır.",
        "ses": "Şizofrenide aday gen çalışmalarında disbindin proteinini kodlayan de te ne be pe bir, nörogulin bir geni olan ne re ge bir ve disk bir genleri en kapsamlı biçimde doğrulanmıştır.",
        "satir": "Şizofreni-Aday Genler (Linkage çalışmaları)",
@@ -2757,7 +3179,7 @@
        ]
       },
       {
-       "id": "k2-59-c0102",
+       "id": "k2-59-c0122",
        "ekran": "Bu genler **glutamat NMDA reseptör fonksiyonlarını** ve veziküler nörotransmitter salınımını doğrudan düzenler.",
        "ses": "Bu protein ürünleri glutamat en em de a reseptör sinyal iletimini, dendritik dallanmayı ve presinaptik vezikül trafiğini doğrudan modüle etmektedir.",
        "satir": "Şizofreni-Aday Genler (Linkage çalışmaları)",
@@ -2786,7 +3208,7 @@
      "bolum": "k2-59-b11",
      "cumleler": [
       {
-       "id": "k2-59-c0103",
+       "id": "k2-59-c0123",
        "ekran": "Şizofrenide genom boyu ilişkilendirme çalışmaları yani GWAS, **yüzün üzerinde bağımsız genomik lokus** tespit etmiştir.",
        "ses": "Şizofrenide yüz bini aşkın hastanın tarandığı genom boyu ilişkilendirme yani gıvas çalışmaları, hastalık riskiyle ilişkili yüzün üzerinde bağımsız genomik lokus ortaya çıkarmıştır.",
        "satir": "Şizofreni-Genome-Wide Association",
@@ -2809,7 +3231,7 @@
        ]
       },
       {
-       "id": "k2-59-c0104",
+       "id": "k2-59-c0124",
        "ekran": "En güçlü ilişki sinyali, altıncı kromozomdaki **majör histouyumluluk kompleksi MHC bölgesinden** elde edilmiştir.",
        "ses": "Bu devasa analizlerdeki en kuvvetli biyolojik istatistiksel sinyal, altıncı kromozomda yer alan majör histouyumluluk kompleksi yani me ha şe lokusundan elde edilmiştir.",
        "satir": "Şizofreni-Genome-Wide Association",
@@ -2838,7 +3260,7 @@
      "bolum": "k2-59-b11",
      "cumleler": [
       {
-       "id": "k2-59-c0105",
+       "id": "k2-59-c0125",
        "ekran": "MHC bölgesindeki kompleman bileşeni C4 geni, ergenlik döneminde **patolojik sinaptik budanmayı** yönetir.",
        "ses": "Majör histouyumluluk bölgesindeki kompleman faktörü se dört geni, ergenlik döneminde gereksiz nöronal sinapsların fagositozla budanma sürecini yönetir.",
        "satir": "Şizofreni-GWA",
@@ -2860,7 +3282,7 @@
        ]
       },
       {
-       "id": "k2-59-c0106",
+       "id": "k2-59-c0126",
        "ekran": "C4A ekspresyonunun aşırı artması, serebral kortekste **aşırı sinaps kaybına ve frontal gri cevher incelmesine** yol açar.",
        "ses": "Se dört a gen ekspresyonunun genetik olarak aşırı artması, ergenlikte frontal kortekste aşırı sinaps kaybına ve gri cevher incelmesine sebep olarak psikoz zeminini kurar.",
        "satir": "Şizofreni-GWA",
@@ -2889,7 +3311,7 @@
      "bolum": "k2-59-b11",
      "cumleler": [
       {
-       "id": "k2-59-c0107",
+       "id": "k2-59-c0127",
        "ekran": "Kopya sayısı varyasyonları yani CNV'ler arasında **22q11.2 mikrodelesyonu** şizofreni riskini yirmi ila otuz kat artırır.",
        "ses": "Submikroskobik kopya sayısı değişiklikleri yani se ne ve ler arasında yirmi ikinci kromozom uzun kolundaki yirmi iki kü on bir nokta iki mikrodelesyonu, şizofreni gelişme riskini tam yirmi ila otuz kat artırmaktadır.",
        "satir": "Şizofreni-Submikroskobik Kromozomal",
@@ -2912,7 +3334,7 @@
        ]
       },
       {
-       "id": "k2-59-c0108",
+       "id": "k2-59-c0128",
        "ekran": "Velokardiyofasiyal sendromlu bireylerin yaklaşık **yüzde yirmi beşinde erişkin yaşta şizofreni** tablosu gelişir.",
        "ses": "Velokardiyofasiyal veya DiGeorge sendromlu hastaların yaklaşık dörtte birinde yani yüzde yirmi beşinde erişkin yaşta belirgin şizofreni tablosu ortaya çıkmaktadır.",
        "satir": "Şizofreni-Submikroskobik Kromozomal",
@@ -2942,7 +3364,7 @@
      "bolum": "k2-59-b11",
      "cumleler": [
       {
-       "id": "k2-59-c0109",
+       "id": "k2-59-c0129",
        "ekran": "Endofenotipler, genetik riski temsil eden **objektif, kalıtsal ve ölçülebilir** biyolojik aracı belirteçlerdir.",
        "ses": "Endofenotipler, poligenik psikiyatrik hastalıkların karmaşık genetik riskini temsil ettiği kabul edilen objektif, kalıtsal ve laboratuvarda ölçülebilir biyolojik belirteçlerdir.",
        "satir": "Endofenotipler",
@@ -2965,7 +3387,7 @@
        ]
       },
       {
-       "id": "k2-59-c0110",
+       "id": "k2-59-c0130",
        "ekran": "Şizofrenide **P50 duyusal kapılama defekti ve SPEM yani göz izleme bozuklukları** en tipik endofenotiplerdir.",
        "ses": "Şizofrenide elektroensefalografide pe elli işitsel duyusal kapılama yetersizliği ile düzgün izleme göz hareketleri yani es pe e me defektleri kanıtlanmış tipik endofenotiplerdir.",
        "satir": "Endofenotipler",
@@ -3000,7 +3422,7 @@
      "bolum": "k2-59-b12",
      "cumleler": [
       {
-       "id": "k2-59-c0111",
+       "id": "k2-59-c0131",
        "ekran": "Alkol bağımlılığı bulunan bireylerin ailelerinde alkolizm riski genel topluma kıyasla **dört kat daha fazladır**.",
        "ses": "Alkol bağımlılığı tanısı almış bireylerin ailelerinde yapılan epidemiyolojik çalışmalarda, bu ailelerde alkolizm riskinin normal ailelere kıyasla tam dört kat daha yüksek olduğu saptanmıştır.",
        "satir": "Alkol ve Madde Bağımlılığı",
@@ -3012,7 +3434,7 @@
         "sekil": null,
         "madde": [
          0,
-         1
+         5
         ]
        },
        "vurgu": [
@@ -3023,7 +3445,7 @@
        ]
       },
       {
-       "id": "k2-59-c0112",
+       "id": "k2-59-c0132",
        "ekran": "Monozigot ikizlerdeki konkordans oranı dizigot ikizlerin **iki katı düzeyinde** seyretmektedir.",
        "ses": "İkiz çalışmalarında monozigot ikizler arasındaki konkordans oranı, dizigot ikiz çiftlerine kıyasla iki kat daha yüksek bulunarak genetik yatkınlığı doğrulamıştır.",
        "satir": "Alkol ve Madde Bağımlılığı",
@@ -3053,7 +3475,7 @@
      "bolum": "k2-59-b12",
      "cumleler": [
       {
-       "id": "k2-59-c0113",
+       "id": "k2-59-c0133",
        "ekran": "Alkolün pekiştirici ve bağımlılık yapıcı etkisi, **mezolimbik dopaminerjik ödül yolağının** aktivasyonuna dayanır.",
        "ses": "Alkolün ödüllendirici ve pekiştirici etkisi, ventral tegmental alandan nükleus akkumbense uzanan mezolimbik dopaminerjik ödül sistemini doğrudan aktive etmesiyle ortaya çıkar.",
        "satir": "Alkol ve Madde Bağımlılığı",
@@ -3076,7 +3498,7 @@
        ]
       },
       {
-       "id": "k2-59-c0114",
+       "id": "k2-59-c0134",
        "ekran": "Ayrıca serotonerjik yolaklardaki **TPH ve 5-HT2A/2C reseptör genleri** de bağımlılık yatkınlığında rol oynar.",
        "ses": "Ayrıca serotonerjik iletimi yöneten triptofan hidroksilaz ile beş haş te iki a ve iki c reseptör genlerindeki polimorfizmler alkol arama davranışını etkilemektedir.",
        "satir": "Alkol ve Madde Bağımlılığı",
@@ -3106,7 +3528,7 @@
      "bolum": "k2-59-b12",
      "cumleler": [
       {
-       "id": "k2-59-c0115",
+       "id": "k2-59-c0135",
        "ekran": "Bağımlılıkta genetik faktörler kadın ve erkekte benzer etki gösterirken, **toplumsal normlar** erkek prevalansını artırır.",
        "ses": "Bağımlılığın moleküler genetik etki derecesi kadın ve erkekte biyolojik olarak benzer bulunmakla birlikte, kültürel normlar ve alkole erişim sıklığı erkeklerde kullanım oranını iki kattan fazla artırmaktadır.",
        "satir": "Bağımlılık",
@@ -3129,7 +3551,7 @@
        ]
       },
       {
-       "id": "k2-59-c0116",
+       "id": "k2-59-c0136",
        "ekran": "Yaş ilerledikçe genetik faktörlerin etkisi belirginleşirken, **paylaşılan aile çevresinin etkisi** azalmaktadır.",
        "ses": "Bireyin yaşı ilerledikçe genetik yatkınlığın göreceli etkisi artmakta, buna karşılık ergenlikte belirleyici olan ortak aile çevresinin etkisi zamanla gerilemektedir.",
        "satir": "Bağımlılık",
@@ -3159,7 +3581,7 @@
      "bolum": "k2-59-b12",
      "cumleler": [
       {
-       "id": "k2-59-c0117",
+       "id": "k2-59-c0137",
        "ekran": "Kalıtılabilirlik oranları kokain bağımlılığı için **yüzde yetmiş iki**, alkol için ise yüzde elli ila altmıştır.",
        "ses": "Bağımlılık türlerinin kalıtılabilirlik oranlarına bakıldığında; kokain bağımlılığı için yüzde yetmiş iki, patolojik kumar için yüzde elli, alkolizm için ise yüzde elli ila altmış düzeyindedir.",
        "satir": "Kalıtılabilirlik oranları",
@@ -3181,7 +3603,7 @@
        ]
       },
       {
-       "id": "k2-59-c0118",
+       "id": "k2-59-c0138",
        "ekran": "Bu yüksek oranlar madde kullanım bozukluklarının **biyolojik bir beyin hastalığı** olduğunu kanıtlar.",
        "ses": "Bu yüksek kalıtsallık katsayıları, bağımlılık tablolarının zayıf iradeden ibaret olmayıp güçlü genetik temelleri bulunan biyolojik bir beyin hastalığı olduğunu açıkça gösterir.",
        "satir": "Kalıtılabilirlik oranları",
@@ -3216,7 +3638,7 @@
      "bolum": "k2-59-b13",
      "cumleler": [
       {
-       "id": "k2-59-c0119",
+       "id": "k2-59-c0139",
        "ekran": "Alkol metabolizmasında ardışık görev yapan iki temel enzim **ADH1B ve ALDH2** enzimidir.",
        "ses": "Etanolün hepatik metabolizmasında ardışık reaksiyonları katalizleyen iki anahtar enzim; alkol dehidrogenaz bir be yani a de haş bir be ile aldehit dehidrogenaz iki yani a le de haş ikidir.",
        "satir": "Aday Genler",
@@ -3239,7 +3661,7 @@
        ]
       },
       {
-       "id": "k2-59-c0120",
+       "id": "k2-59-c0140",
        "ekran": "Etanol önce asetaldehite, ardından asetaldehit toksik olmayan **asetat molekülüne** oksitlenir.",
        "ses": "Alkol dehidrogenaz etanolü önce toksik asetaldehite dönüştürür; ardından aldehit dehidrogenaz bu zehirli ara ürünü zararsız asetat molekülüne okside eder.",
        "satir": "Aday Genler",
@@ -3269,7 +3691,7 @@
      "bolum": "k2-59-b13",
      "cumleler": [
       {
-       "id": "k2-59-c0121",
+       "id": "k2-59-c0141",
        "ekran": "Toksik asetaldehit birikimi, histamin salınımına ve sistemik **flushing reaksiyonuna** yol açar.",
        "ses": "Vücutta toksik asetaldehitin birikmesi yoğun bir histamin deşarjına neden olarak baş ağrısı, bulantı, çarpıntı ve deride yaygın kızarma ile seyreden flaşing reaksiyonuna yol açar.",
        "satir": "Flushing  reaksiyonu",
@@ -3292,7 +3714,7 @@
        ]
       },
       {
-       "id": "k2-59-c0122",
+       "id": "k2-59-c0142",
        "ekran": "Asetaldehit biriken ve yoğun kızarma yaşayan bireylerde uzun dönemde **üst gastrointestinal sistem kanseri** riski artar.",
        "ses": "Asetaldehit birikimi olan ve buna rağmen alkol tüketmeye devam eden bireylerde karsinojenik hasar nedeniyle üst gastrointestinal sistem kanseri riski anlamlı şekilde artar.",
        "satir": "Flushing  reaksiyonu",
@@ -3322,7 +3744,7 @@
      "bolum": "k2-59-b13",
      "cumleler": [
       {
-       "id": "k2-59-c0123",
+       "id": "k2-59-c0143",
        "ekran": "Flushing reaksiyonuna yatkınlıkta **ADH1B His47Arg ve ALDH2 Glu487Lys** polimorfizmleri belirleyicidir.",
        "ses": "Alkol aracılı flaşing reaksiyonuna genetik yatkınlıkta a de haş bir be enzimindeki histidin kırk yedi arjinin ile a le de haş iki enzimindeki glutamat dört yüz seksen yedi lizin varyantları kilit rol oynar.",
        "satir": "Alkol-aracılı “Flushing” reaksiyonuna genetik yatkınlık;",
@@ -3345,7 +3767,7 @@
        ]
       },
       {
-       "id": "k2-59-c0124",
+       "id": "k2-59-c0144",
        "ekran": "İnaktif ALDH2 enzimini taşıyan bireyler asetaldehiti yıkamaz, yoğun rahatsızlık duyarak **alkol bağımlılığından korunur**.",
        "ses": "Lizin dört yüz seksen yedi aleline bağlı inaktif enzim taşıyan bireyler asetaldehiti hızla yıkamadıkları için bir kadehte bile şiddetli zehirlenme yaşar ve alkolizmden doğal olarak korunurlar.",
        "satir": "Alkol-aracılı “Flushing” reaksiyonuna genetik yatkınlık;",
@@ -3375,7 +3797,7 @@
      "bolum": "k2-59-b13",
      "cumleler": [
       {
-       "id": "k2-59-c0125",
+       "id": "k2-59-c0145",
        "ekran": "Alkolizmde diğer önemli aday genler arasında **COMT, MAOA ve SLC6A4** genleri yer almaktadır.",
        "ses": "Alkol bağımlılığında dopamin ve serotonin sinyalizasyonunu etkileyen diğer majör aday genler katekol o metiltransferaz, monoamin oksidaz a ve se le ce altı a dört genleridir.",
        "satir": "Diğer Aday Genler",
@@ -3398,7 +3820,7 @@
        ]
       },
       {
-       "id": "k2-59-c0126",
+       "id": "k2-59-c0146",
        "ekran": "Bu genler sinaptik aralıktaki **katekolamin ve indolamin katabolizmasını** yöneterek pekiştirme süreçlerini belirler.",
        "ses": "Bu genetik belirteçler sinaptik aralıktaki dopamin, noradrenalin ve serotonin katabolizmasını düzenleyerek bağımlılık motivasyonunu ve toleransı etkiler.",
        "satir": "Diğer Aday Genler",
@@ -3428,7 +3850,7 @@
      "bolum": "k2-59-b13",
      "cumleler": [
       {
-       "id": "k2-59-c0127",
+       "id": "k2-59-c0147",
        "ekran": "COMT enziminde Val158Met polimorfizminde **Met158 aleli üç ila dört kat daha az aktif** çalışır.",
        "ses": "Çıkmış komite sınavı sorusunda hekim adaylarına yöneltilen kritik bir soruya göre, katekol o metiltransferaz enziminde valin yerine metiyonin geçmesi enzimatik aktiviteyi üç ila dört kat düşürerek prefrontal kortekste dopamin miktarını artırmaktadır.",
        "satir": "COMT-II",
@@ -3454,7 +3876,7 @@
        ]
       },
       {
-       "id": "k2-59-c0128",
+       "id": "k2-59-c0148",
        "ekran": "Val aleli ise enzimi termostabil ve hızlı kılarak **prefrontal dopamin düzeyini düşürür**.",
        "ses": "Buna karşılık valin aleli taşıyıcılarında enzim termostabil olup dopamini hızla yıkar; bu durum prefrontal kortekste dopamin seviyesini azaltarak bilişsel sebatı zayıflatabilir.",
        "satir": "COMT-II",
@@ -3484,7 +3906,7 @@
      "bolum": "k2-59-b13",
      "cumleler": [
       {
-       "id": "k2-59-c0129",
+       "id": "k2-59-c0149",
        "ekran": "MAOA enzimi **X kromozomu üzerinde yerleşik** olup hipokampusta yüksek ekspresyon gösterir.",
        "ses": "Monoamin oksidaz a enzimi iks kromozomu üzerinde yerleşiktir; hipokampus ve prefrontal kortekste noradrenalin, dopamin ve serotonini katabolize eder.",
        "satir": "MAOA-I",
@@ -3507,7 +3929,7 @@
        ]
       },
       {
-       "id": "k2-59-c0130",
+       "id": "k2-59-c0150",
        "ekran": "X'e bağlı kalıtım nedeniyle erkeklerde tek bir mutant alel **enzim aktivitesini bütünüyle** belirler.",
        "ses": "İkse bağlı kalıtım modeli nedeniyle erkek bireylerde tek bir düşük ya da yüksek aktiviteli promoter alelinin bulunması doku enzim aktivitesini doğrudan belirlemektedir.",
        "satir": "MAOA-I",
@@ -3537,7 +3959,7 @@
      "bolum": "k2-59-b13",
      "cumleler": [
       {
-       "id": "k2-59-c0131",
+       "id": "k2-59-c0151",
        "ekran": "SLC6A4 geninin promoter bölgesindeki **5-HTTLPR varyantı** uzun L ve kısa S alellerinden oluşur.",
        "ses": "Se le ce altı a dört serotonin taşıyıcı geninin promoter bölgesinde yer alan beş haş te te le pe re polimorfizmi uzun le aleli ile kısa es alelinden meydana gelir.",
        "satir": "SLC6A4",
@@ -3560,7 +3982,7 @@
        ]
       },
       {
-       "id": "k2-59-c0132",
+       "id": "k2-59-c0152",
        "ekran": "Kısa S aleli taşıyıcılarında serotonin geri alımı azalırken, **anksiyete ve depresif reaktivite** anlamlı derecede yükselir.",
        "ses": "Kısa es aleli transkripsiyon hızını düşürerek serotonin taşıyıcı sentezini azaltır; bu durum çevresel stres karşısında anksiyete, nevrotizm ve depresif çökkünlük riskini artırır.",
        "satir": "SLC6A4",
@@ -3596,7 +4018,7 @@
      "bolum": "k2-59-b14",
      "cumleler": [
       {
-       "id": "k2-59-c0133",
+       "id": "k2-59-c0153",
        "ekran": "Anksiyete bozuklukları popülasyonda son derece sık görülen ve **kadınlarda iki kat daha yaygın** tablolardır.",
        "ses": "Anksiyete bozuklukları klinik pratikte en sık rastlanan psikiyatrik rahatsızlıklardan olup kadın cinsiyette erkeklere oranla yaklaşık iki kat daha sık saptanmaktadır.",
        "satir": "Anksiyete Bozuklukları",
@@ -3619,7 +4041,7 @@
        ]
       },
       {
-       "id": "k2-59-c0134",
+       "id": "k2-59-c0154",
        "ekran": "Etiyolojilerinde genetik yatkınlık, organik zemin ve **kronik psikososyal stresörler** karmaşık bir etkileşim içindedir.",
        "ses": "Anksiyetenin etiyolojisinde genetik varyantlar, nörobiyolojik santral otonomik aşırı uyarılabilirlik ve erken yaşam stresörleri karmaşık bir ağ oluşturur.",
        "satir": "Anksiyete Bozuklukları",
@@ -3640,6 +4062,27 @@
          "metin": "Etiyolojilerinde genetik"
         }
        ]
+      },
+      {
+       "id": "k2-59-c0155",
+       "ses": "Santral otonomik sinir sistemindeki noradrenerjik hiperaktivite ve amigdala aşırı duyarlılığı, tehdit algısını tetikleyerek kronik anksiyete semptomlarını sürekli kılar.",
+       "ekran": "**Otonomik Hiperaktivite:** Noradrenerjik aşırı uyarılma ve amigdala duyarlılığı",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt": {
+        "sayfa": 67,
+        "satir": [
+         "Anksiyete Bozuklukları"
+        ],
+        "sekil": null,
+        "madde": [
+         0,
+         5
+        ]
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null
       }
      ]
     },
@@ -3649,7 +4092,7 @@
      "bolum": "k2-59-b14",
      "cumleler": [
       {
-       "id": "k2-59-c0135",
+       "id": "k2-59-c0156",
        "ekran": "Obsesif-kompulsif bozuklukta monozigot ikiz konkordansı **yüzde yetmiş beş**, dizigot ikizlerde ise yüzde kırk yedidir.",
        "ses": "Obsesif kompulsif bozukluk yani o ke be için monozigot ikizler arasındaki eş hastalanma oranı yüzde yetmiş beş iken, dizigot ikizlerde bu oran yüzde kırk yedi seviyesindedir.",
        "satir": "Obsesif-Kompulsif Bozukluk(OKB)",
@@ -3672,7 +4115,7 @@
        ]
       },
       {
-       "id": "k2-59-c0136",
+       "id": "k2-59-c0157",
        "ekran": "Bu yüksek oran OKB'nin psikiyatrik bozukluklar arasında **en kuvvetli genetik yüke sahip** tablolardan biri olduğunu gösterir.",
        "ses": "Bu yüksek ikiz konkordansı, obsesif kompulsif bozukluğun nörobiyolojik ve kalıtsal temeli en güçlü psikiyatrik rahatsızlıklardan biri olduğunu kanıtlamaktadır.",
        "satir": "Obsesif-Kompulsif Bozukluk(OKB)",
@@ -3702,7 +4145,7 @@
      "bolum": "k2-59-b14",
      "cumleler": [
       {
-       "id": "k2-59-c0137",
+       "id": "k2-59-c0158",
        "ekran": "Panik bozuklukta birinci derece akrabalarda hastalık riski **genel popülasyonun dört ila sekiz katına** çıkmaktadır.",
        "ses": "Panik bozuklukta yapılan aile araştırmalarında, birinci derece akrabalarda panik atak ve agorafobi gelişme riskinin genel topluma kıyasla dört ila sekiz kat arttığı belgelenmiştir.",
        "satir": "Panik Bozukluk (PB)",
@@ -3725,7 +4168,7 @@
        ]
       },
       {
-       "id": "k2-59-c0138",
+       "id": "k2-59-c0159",
        "ekran": "Klinik tabloda kadın baskınlığı belirgin olup, sıklıkla **majör depresyon ve madde bağımlılığı** ile komorbidite gösterir.",
        "ses": "Klinik tabloda kadın cinsiyet baskınlığı dikkat çekerken, hastaların önemli bir bölümünde majör depresif bozukluk ve yatıştırıcı madde kullanımı tabloya eşlik eder.",
        "satir": "Panik Bozukluk (PB)",
@@ -3755,7 +4198,7 @@
      "bolum": "k2-59-b14",
      "cumleler": [
       {
-       "id": "k2-59-c0139",
+       "id": "k2-59-c0160",
        "ekran": "Özgül fobiler toplumda en yaygın görülen anksiyete türü olup, **etiyolojisinde genetik yatkınlık** önemli yer tutar.",
        "ses": "Özgül fobiler toplumda en sık karşılaşılan anksiyete bozukluğu tipi olup, kan yaralanma enjeksiyon fobisi ve hayvan fobilerinde genetik yatkınlık çok belirgindir.",
        "satir": "Özgül Fobiler",
@@ -3766,7 +4209,8 @@
         ],
         "sekil": null,
         "madde": [
-         0
+         0,
+         3
         ]
        },
        "vurgu": [
@@ -3777,7 +4221,7 @@
        ]
       },
       {
-       "id": "k2-59-c0140",
+       "id": "k2-59-c0161",
        "ekran": "Özellikle **kan-yaralanma fobisinde** vazovagal senkop yanıtı aile bireyleri arasında yüksek konkordans gösterir.",
        "ses": "Özellikle kan ve enjeksiyon fobisindeki vazovagal bradikardi ve senkop paterni, aile soyağacında doğrudan kalıtılan otonomik bir aşırı duyarlılık yansıtır.",
        "satir": "Özgül Fobiler",
@@ -3806,7 +4250,7 @@
      "bolum": "k2-59-b14",
      "cumleler": [
       {
-       "id": "k2-59-c0141",
+       "id": "k2-59-c0162",
        "ekran": "Sosyal fobide aile içi görülme sıklığı genel popülasyondan belirgin şekilde **yüksek saptanmıştır**.",
        "ses": "Sosyal fobi tablosunda yapılan klinik araştırmalarda, hasta bireylerin birinci derece aile üyelerinde sosyal anksiyete sıklığı genel popülasyondan anlamlı derecede yüksek bulunmuştur.",
        "satir": "Sosyal Fobi",
@@ -3829,7 +4273,7 @@
        ]
       },
       {
-       "id": "k2-59-c0142",
+       "id": "k2-59-c0163",
        "ekran": "Kalıtımsal davranışsal ketlenme ve utangaçlık özellikleri, **çevresel pekiştireçlerle birleşerek** fobiye dönüşür.",
        "ses": "Çocukluk çağındaki kalıtımsal davranışsal inhibisyon ve aşırı çekingenlik mizaç özellikleri, olumsuz sosyal deneyimlerle birleşerek erişkin sosyal anksiyeteyi yapılandırır.",
        "satir": "Sosyal Fobi",
@@ -3849,6 +4293,26 @@
          "metin": "Kalıtımsal davranışsal"
         }
        ]
+      },
+      {
+       "id": "k2-59-c0164",
+       "ses": "Sosyal fobi olgularında serotonin taşıyıcı gen polimorfizmleri ve dopamin reseptör duyarlılığındaki değişiklikler sosyal ipuçlarına karşı aşırı hassasiyete yol açar.",
+       "ekran": "**Sosyal Tehdit Duyarlılığı:** Serotonin ve dopamin sistem değişiklikleri",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt": {
+        "sayfa": 71,
+        "satir": [
+         "Sosyal Fobi"
+        ],
+        "sekil": null,
+        "madde": [
+         0
+        ]
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null
       }
      ]
     },
@@ -3858,7 +4322,7 @@
      "bolum": "k2-59-b14",
      "cumleler": [
       {
-       "id": "k2-59-c0143",
+       "id": "k2-59-c0165",
        "ekran": "Genelleşmiş anksiyete bozukluğu olan bireylerin birinci derece akrabalarında bozukluğun görülme sıklığı **yüzde yirmiye** ulaşır.",
        "ses": "Genelleşmiş anksiyete bozukluğunda ailesel kümelenme belirgin olup, probandın birinci derece akrabalarında hastalık sıklığı yaklaşık yüzde yirmi düzeyinde saptanmaktadır.",
        "satir": "Genelleşmiş  Anksiyete Bozukluğu",
@@ -3881,7 +4345,7 @@
        ]
       },
       {
-       "id": "k2-59-c0144",
+       "id": "k2-59-c0166",
        "ekran": "Bu oran genel popülasyon prevalansının **üç ila beş kat üzerinde** bir risk artışına karşılık gelmektedir.",
        "ses": "Bu ailesel oran genel toplum yaygınlığının üç ila beş kat üzerinde olup, yaygın kronik endişenin altında yatan genetik zemini ortaya koymaktadır.",
        "satir": "Genelleşmiş  Anksiyete Bozukluğu",
@@ -3902,6 +4366,27 @@
          "metin": "Bu oran"
         }
        ]
+      },
+      {
+       "id": "k2-59-c0167",
+       "ses": "Genetik yatkınlığa ek olarak kronik çevresel stres ve belirsizliğe tahammülsüzlük, yaygın anksiyetenin klinik tablosunu daha da şiddetlendirir.",
+       "ekran": "**Çevresel Stres:** Belirsizliğe tahammülsüzlük ve semptom alevlenmesi",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt": {
+        "sayfa": 72,
+        "satir": [
+         "Genelleşmiş  Anksiyete Bozukluğu"
+        ],
+        "sekil": null,
+        "madde": [
+         0,
+         2
+        ]
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null
       }
      ]
     },
@@ -3911,7 +4396,7 @@
      "bolum": "k2-59-b14",
      "cumleler": [
       {
-       "id": "k2-59-c0145",
+       "id": "k2-59-c0168",
        "ekran": "Yeme bozukluklarından anoreksiya nervoza, **yüksek morbidite ve mortalite** ile seyreden ciddi bir hastalıktır.",
        "ses": "Yeme bozuklukları spektrumunda anoreksiya nervoza, belirgin beden imajı bozukluğu ve besin reddiyle seyreden, biyolojik ve psikososyal bileşenleri bulunan çok etiyolojili bir hastalıktır.",
        "satir": "Yeme Bozuklukları",
@@ -3934,7 +4419,7 @@
        ]
       },
       {
-       "id": "k2-59-c0146",
+       "id": "k2-59-c0169",
        "ekran": "İkiz çalışmalarında anoreksiya nervoza için kalıtılabilirlik oranları **yüzde elli ila yetmiş** arasında bildirilmiştir.",
        "ses": "İkiz kohortlarında anoreksiya nervoza için hesaplanan kalıtılabilirlik katsayıları yüzde elli ila yetmiş arasında olup güçlü bir metabolik ve psikiyatrik genetik yükü yansıtır.",
        "satir": "Yeme Bozuklukları",
@@ -3964,7 +4449,7 @@
      "bolum": "k2-59-b14",
      "cumleler": [
       {
-       "id": "k2-59-c0147",
+       "id": "k2-59-c0170",
        "ekran": "Anoreksiyada inflamatuar sitokinlerden **tümör nekrozis faktör alfa yani TNF-alfa** salınımında artış saptanır.",
        "ses": "Anoreksiya nervoza biyolojisinde proinflamatuar bir sitokin olan tümör nekrozis faktör alfa yani te ne fe alfa salınımında belirgin artış gösterilmiştir.",
        "satir": "Yeme Bozuklukları",
@@ -3987,7 +4472,7 @@
        ]
       },
       {
-       "id": "k2-59-c0148",
+       "id": "k2-59-c0171",
        "ekran": "TNF-alfa hipotalamik-pitüiter-adrenal aksı uyararak **iştah merkezini baskılar ve kaşeksiye** yol açar.",
        "ses": "Te ne fe alfa hipotalamo hipofizer adrenal aksı hiperaktive ederek anoreksijenik sinyalleri tetikler, besin alımını baskılar ve ağır kilo kaybı ile kaşeksiye zemin hazırlar.",
        "satir": "Yeme Bozuklukları",
@@ -4023,7 +4508,7 @@
      "bolum": "k2-59-b15",
      "cumleler": [
       {
-       "id": "k2-59-c0149",
+       "id": "k2-59-c0172",
        "ekran": "Psikiyatrik hastalıklar tek gen defekti değil, **kompleks ve multifaktöriyel** genetik bozukluklardır.",
        "ses": "Geçmiş yılların çıkmış kurul sınavı sorusunda özellikle sorgulandığı üzere, psikiyatrik hastalıklar klasik Mendel kurallarına uyan tek gen bozuklukları olmayıp kompleks ve multifaktöriyel bir etiyolojiye sahiptir.",
        "satir": "Genetik Danışma",
@@ -4049,7 +4534,7 @@
        ]
       },
       {
-       "id": "k2-59-c0150",
+       "id": "k2-59-c0173",
        "ekran": "Bu nedenle klinik genetik danışmada kesin yüzdeler yerine **ampirik aile verilerine dayalı risk aralıkları** sunulur.",
        "ses": "Bu multifaktöriyel doğa nedeniyle genetik danışma sürecinde ailelere mutlak deterministik yüzdeler yerine, geniş aile çalışmalarından elde edilen ampirik olasılık aralıkları aktarılır.",
        "satir": "Genetik Danışma",
@@ -4079,7 +4564,7 @@
      "bolum": "k2-59-b15",
      "cumleler": [
       {
-       "id": "k2-59-c0151",
+       "id": "k2-59-c0174",
        "ekran": "Moleküler genetik analizler, geniş **nüfus kohortlarından DNA izolasyonu** ve yüksek verimli genotiplemeyle başlar.",
        "ses": "Moleküler genetik analiz iş akışı, iyi tanımlanmış geniş nüfus kohortlarından periferik lökosit de na'sının izole edilmesi ve robotik yüksek verimli genotipleme sistemleriyle başlar.",
        "satir": "Moleküler Analizler",
@@ -4089,11 +4574,11 @@
          "Moleküler Analizler"
         ],
         "sekil": "Psikiyatrik hastalıklar genetik analiz yöntemleri sayfa 76 şematik gösterimi ve diyagramı.",
-        "resim": 0,
         "madde": [
          4,
          0
-        ]
+        ],
+        "resim": 0
        },
        "vurgu": [
         {
@@ -4103,7 +4588,7 @@
        ]
       },
       {
-       "id": "k2-59-c0152",
+       "id": "k2-59-c0175",
        "ekran": "Genetik materyalin saflığı ve derişimi spektrofotometrik yöntemlerle doğrulanarak **biyoçip analizlerine** aktarılır.",
        "ses": "İzole edilen genetik materyalin konsantrasyonu ve optik saflığı spektrofotometrik olarak denetlenerek mikroarray biyoçip ve dizi analiz platformlarına sevk edilir.",
        "satir": "Moleküler Analizler",
@@ -4133,7 +4618,7 @@
      "bolum": "k2-59-b15",
      "cumleler": [
       {
-       "id": "k2-59-c0153",
+       "id": "k2-59-c0176",
        "ekran": "GWAS analizlerinde saptanan genomik lokuslar **koşullu analizler ve ince haritalama** ile daraltılır.",
        "ses": "Genom boyu ilişkilendirme çalışmalarında anlamlılık eşiğini aşan devasa lokuslar, koşullu istatistiksel analizler ve ince haritalama adımlarıyla daraltılarak hedef genlere odaklanılır.",
        "satir": "GWAS lokusu",
@@ -4143,11 +4628,11 @@
          "GWAS lokusu"
         ],
         "sekil": "Psikiyatrik hastalıklar genetik analiz yöntemleri sayfa 77 şematik gösterimi ve diyagramı.",
-        "resim": 0,
         "madde": [
          0,
          10
-        ]
+        ],
+        "resim": 0
        },
        "vurgu": [
         {
@@ -4157,7 +4642,7 @@
        ]
       },
       {
-       "id": "k2-59-c0154",
+       "id": "k2-59-c0177",
        "ekran": "Kromatin yapısı ve epigenetik modifikasyonlar incelenerek **hastalıkla ilişkili fonksiyonel gen** doğrulanır.",
        "ses": "Bölgedeki üç boyutlu kromatin yapısı, promoter etkileşimleri ve epigenetik metilasyon paternleri incelenerek hastalıktan doğrudan sorumlu olan fonksiyonel hedef gen doğrulanır.",
        "satir": "GWAS lokusu",
@@ -4187,7 +4672,7 @@
      "bolum": "k2-59-b15",
      "cumleler": [
       {
-       "id": "k2-59-c0155",
+       "id": "k2-59-c0178",
        "ekran": "Vaka-kontrol tasarımlarında binlerce hasta ile **sağlıklı kontrol bireylerinin genotipleri** kıyaslanır.",
        "ses": "Gıvas vaka kontrol araştırmalarında binlerce kesin tanı almış hasta kohortu ile eşleştirilmiş sağlıklı kontrollerin genomik belirteçleri paralel olarak karşılaştırılır.",
        "satir": "cases controls",
@@ -4197,11 +4682,11 @@
          "cases controls"
         ],
         "sekil": "Psikiyatrik hastalıklar genetik analiz yöntemleri sayfa 78 şematik gösterimi ve diyagramı.",
-        "resim": 0,
         "madde": [
          0,
          4
-        ]
+        ],
+        "resim": 0
        },
        "vurgu": [
         {
@@ -4211,7 +4696,7 @@
        ]
       },
       {
-       "id": "k2-59-c0156",
+       "id": "k2-59-c0179",
        "ekran": "Her bir belirteç için **Manhattan plot grafiğinde eksi log p değeri** hesaplanarak istatistiksel tepe noktaları belirlenir.",
        "ses": "Taranan milyonlarca es ne pe belirteci için hesaplanan p değerleri Manhattan plot grafiğinde eksi logaritma ölçeğinde çizilerek istatistiksel eşiği aşan Manhattan gökdelenleri tespit edilir.",
        "satir": "cases controls",
@@ -4241,7 +4726,7 @@
      "bolum": "k2-59-b15",
      "cumleler": [
       {
-       "id": "k2-59-c0157",
+       "id": "k2-59-c0180",
        "ekran": "Restriksiyon analizinde **MstI gibi endonükleazlar** hedef DNA dizisini spesifik baz noktalarından keser.",
        "ses": "Klasik restriksiyon parça analizinde me se te bir gibi restriksiyon endonükleaz enzimleri çift zincirli hedef de na yı spesifik tanıma dizilerinden hassasiyetle keser.",
        "satir": "Normal",
@@ -4251,11 +4736,11 @@
          "Normal"
         ],
         "sekil": "Psikiyatrik hastalıklar genetik analiz yöntemleri sayfa 79 şematik gösterimi ve diyagramı.",
-        "resim": 0,
         "madde": [
          0,
          1
-        ]
+        ],
+        "resim": 0
        },
        "vurgu": [
         {
@@ -4265,7 +4750,7 @@
        ]
       },
       {
-       "id": "k2-59-c0158",
+       "id": "k2-59-c0181",
        "ekran": "Oluşan farklı uzunluktaki parçalar agaroz jel elektroforezinde **moleküler ağırlıklarına göre ayrılarak** bant oluşturur.",
        "ses": "Enzimatik kesim sonucu ortaya çıkan farklı boyuttaki de na parçaları agaroz jel elektroforezinde elektriksel akım altında yürütülerek moleküler boyutlarına göre bantlar halinde ayrışır.",
        "satir": "Normal",
@@ -4294,7 +4779,7 @@
      "bolum": "k2-59-b15",
      "cumleler": [
       {
-       "id": "k2-59-c0159",
+       "id": "k2-59-c0182",
        "ekran": "Sanger dizileme yönteminde **dört farklı florofor ile işaretlenmiş** dideoksinükleotidler kullanılır.",
        "ses": "Sanger otomatik dizi analizinde adenin, guanin, sitozin ve timin bazları dört farklı florofor boya ile işaretlenmiş zincir sonlandırıcı dideoksinükleotidlerle reaksiyona sokulur.",
        "satir": "MOL -60SA9",
@@ -4304,6 +4789,9 @@
          "MOL -60SA9"
         ],
         "sekil": "Psikiyatrik hastalıklar genetik analiz yöntemleri sayfa 80 şematik gösterimi ve diyagramı.",
+        "madde": [
+         0
+        ],
         "resim": 0
        },
        "vurgu": [
@@ -4314,7 +4802,7 @@
        ]
       },
       {
-       "id": "k2-59-c0160",
+       "id": "k2-59-c0183",
        "ekran": "Kapiller elektroforezden geçen parçaların floresan ışıması detektörle okunarak **sekans elektroferogramı** elde edilir.",
        "ses": "Kapiller elektroforez tüpünden lazer ışını altından geçen sonlandırılmış fragmanların florofor ışıması algılanarak renkli piklerden oluşan sekans elektroferogramı çıkarılır.",
        "satir": "MOL -60SA9",
@@ -4324,7 +4812,9 @@
          "MOL -60SA9"
         ],
         "sekil": null,
-        "resim": 0
+        "madde": [
+         0
+        ]
        },
        "vurgu": [
         {
@@ -4332,6 +4822,27 @@
          "metin": "Kapiller elektroforezden"
         }
        ]
+      },
+      {
+       "id": "k2-59-c0184",
+       "ses": "Her nükleotidin kendine özgü renkte floresan ışıma vermesi, otomatize de na sekanslama cihazının diziyi baz baz hatasız okumasını sağlar.",
+       "ekran": "**Otomatize Floresan Okuma:** Dört renkli florofor ışıması ve nükleotid dizilimi",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt": {
+        "sayfa": 80,
+        "satir": [
+         "MOL -60SA9"
+        ],
+        "sekil": "Psikiyatrik hastalıklar genetik analiz yöntemleri sayfa 80 şematik gösterimi ve diyagramı.",
+        "madde": [
+         0
+        ],
+        "resim": 0
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null
       }
      ]
     },
@@ -4341,7 +4852,7 @@
      "bolum": "k2-59-b15",
      "cumleler": [
       {
-       "id": "k2-59-c0161",
+       "id": "k2-59-c0185",
        "ekran": "Dizi analizinde elde edilen sekans, insan **referans genom dizisiyle bilgisayar ortamında** hizalanır.",
        "ses": "Sekanslama cihazından elde edilen nükleotid dizilimleri, biyobilişimsel algoritmalarla insan referans genom kütüphanesiyle nükleotid nükleotid hizalanarak karşılaştırılır.",
        "satir": "Ararat | Seqerce| Pastray Giectocteregar | ene) CFT] ace |",
@@ -4351,6 +4862,9 @@
          "Ararat | Seqerce| Pastray Giectocteregar | ene) CFT] ace |"
         ],
         "sekil": "Psikiyatrik hastalıklar genetik analiz yöntemleri sayfa 81 şematik gösterimi ve diyagramı.",
+        "madde": [
+         0
+        ],
         "resim": 0
        },
        "vurgu": [
@@ -4361,7 +4875,7 @@
        ]
       },
       {
-       "id": "k2-59-c0162",
+       "id": "k2-59-c0186",
        "ekran": "Böylece baz değişimleri, mikrodelesyonlar ve **tek bazlık insersiyon mutasyonları** kesin olarak doğrulanır.",
        "ses": "Bu bilgisayarlı dizi karşılaştırması sayesinde tek bazlık nükleotid değişimleri, mikrodelesyonlar veya baz eklenmesi yani insersiyon mutasyonları nükleotid düzeyinde kesinleştirilir.",
        "satir": "Ararat | Seqerce| Pastray Giectocteregar | ene) CFT] ace |",
@@ -4382,6 +4896,27 @@
          "metin": "Böylece baz"
         }
        ]
+      },
+      {
+       "id": "k2-59-c0187",
+       "ses": "Tespit edilen genetik varyasyonların patojenik potansiyeli uluslararası klinik varyant veri tabanları ile çapraz kontrol edilerek raporlanır.",
+       "ekran": "**Biyobilişimsel Doğrulama:** Varyant veri tabanları ile çapraz klinik kontrol",
+       "duzey": 2,
+       "vurgu": [],
+       "slayt": {
+        "sayfa": 81,
+        "satir": [
+         "Ararat | Seqerce| Pastray Giectocteregar | ene) CFT] ace |"
+        ],
+        "sekil": "Psikiyatrik hastalıklar genetik analiz yöntemleri sayfa 81 şematik gösterimi ve diyagramı.",
+        "madde": [
+         1
+        ],
+        "resim": 0
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null
       }
      ]
     },
@@ -4391,7 +4926,7 @@
      "bolum": "k2-59-b15",
      "cumleler": [
       {
-       "id": "k2-59-c0163",
+       "id": "k2-59-c0188",
        "ekran": "Yeni nesil dizileme iş akışı; **DNA ekstraksiyonu, kütüphane hazırlığı ve yüksek verimli sekanslama** adımlarını içerir.",
        "ses": "Yeni nesil dizileme protokolü; birinci basamakta de na ekstraksiyonu, ikinci basamakta kütüphane hazırlığı, ardından amplifikasyon ve milyonlarca parçanın paralel sekanslanması basamaklarını içerir.",
        "satir": "STEP 1: STEP 2: Template",
@@ -4401,11 +4936,11 @@
          "STEP 1: STEP 2: Template"
         ],
         "sekil": "Psikiyatrik hastalıklar genetik analiz yöntemleri sayfa 82 şematik gösterimi ve diyagramı.",
-        "resim": 0,
         "madde": [
          4,
          6
-        ]
+        ],
+        "resim": 0
        },
        "vurgu": [
         {
@@ -4415,7 +4950,7 @@
        ]
       },
       {
-       "id": "k2-59-c0164",
+       "id": "k2-59-c0189",
        "ekran": "Elde edilen terabaytlarca ham veri **biyoenformatik filtrelerden geçirilerek** patojenik varyantlar raporlanır.",
        "ses": "Elde edilen devasa ham dizileme verisi ileri biyoenformatik algoritmalar ve patojenite filtrelerinden geçirilerek hastanın psikiyatrik riskini belirleyen varyantlar nihai rapor haline getirilir.",
        "satir": "STEP 1: STEP 2: Template",

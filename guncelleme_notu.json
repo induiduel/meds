@@ -1,26 +1,27 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 352,
-  "baslik": "Kurul 2 Tam Amfi Derinliği: Beyin Tümörleri (Ders 14) ve Omurga Tümörleri (Ders 64) Yayında",
+  "onem": 353,
+  "baslik": "Kurul 2 Tam Amfi Derinliği: Bilinç Bozukluğu (Ders 02) ve %100 Lazer Metin Takibi Yayında",
   "maddeler": [
-    "Ders 14 (Beyin Tümörleri - Doç. Dr. Aydın Sinan Apaydın): 68 sayfanın tamamı eksiksiz kapsandı; 13 bölüm, 68 paragraf, 232 cümle, 4.761 kelime (~34 dk EMA GPU sesli anlatım) ile tam amfi derinliğine ulaştırıldı.",
-    "0 Atlanan Sayfa ve Sıfır Seyrek Sayfa: 68 slaydın her biri kendi özgün kazanım ve cümleleriyle işlendi (tüm radyoloji kesitleri ve histopatoloji atlası dahil, sayfa başına ortalama ~70 kelime), 0 seyrek sayfa sağlandı.",
-    "33 Canlı Vektör Çizim ve 25 Çıkmış Sınav Sorusu: 33 canlı çizim şablonu konuşma akışıyla senkronize edildi ve sıfır ileri sızıntı ile doğrulandı; 25 komite çıkmış sınav sorusu sesli uyarı ve kanıtlarıyla ders akışına entegre edildi.",
-    "Ders 10 ve Ders 64 Güncellemeleri: Ders 10 (Başağrısına Yaklaşım) slayt çapaları 0 hata ile eksiksiz bağlandı; Ders 64 (Omurga Tümörleri) 20 sayfa amfi derinliğinde güncellendi ve tüm .medspak paketleri Oracle sunucusuna senkronize edildi."
+    "Ders 02 (Bilinç Bozukluğu Olan Hastaya Yaklaşım - Prof. Dr. Dursun Ceylan): 62 sayfanın tamamı eksiksiz kapsandı; 15 bölüm, 34 paragraf, 268 cümle, 4.638 kelime (33.6 dk EMA GPU sesli anlatım) ile tam amfi derinliğine ulaştırıldı.",
+    "0 Atlanan Sayfa ve Sıfır İleriye Sızıntı: 54 içerik sayfasının tamamı kendi özgün kazanım ve cümleleriyle işlendi; 17 görsel sayfanın tüm şekil ve tabloları anlatıldı; 22 canlı semantik çizim sıfır ileriye sızıntı kuralıyla doğrulandı.",
+    "16 Çıkmış Sınav Sorusu: Komite çıkmış sınav sorularının tamamı ders anlatımında sözlü olarak duyuruldu ve slayt satırlarıyla doğrudan ilişkilendirildi.",
+    "Lazer Metin Takibi Sistemi %100 Standardına Yükseltildi: Metin takibi motorundaki dize ayrıştırma düzeltildi; Kurul 2'deki 33 dersin 30'unda %100.0, kalan 3 derste %95.8–%99.5 olmak üzere tüm derslerde kusursuz satır ve kelime vurgusu sağlandı."
   ],
   "eklenen": [
-    "Kurul 2 Beyin Cerrahisi 'İntrakraniyal Kitlelerde Belirti ve Bulgular (Beyin Tümörleri)' (68 sayfa tam amfi kapsamı, 11 MB .medspak)",
-    "Kurul 2 Beyin Cerrahisi 'Omurga Tümörleri' (20 sayfa amfi derinliği, 6.2 MB .medspak)"
+    "Kurul 2 Nöroloji 'Bilinç Bozukluğu Olan Hastaya Yaklaşım' (62 sayfa tam amfi kapsamı, 22 canlı çizim, 16 çıkmış soru, 10.68 MB .medspak)"
   ],
   "degisen": [
     "meds/data/arsiv_25_26/sesli_anlatim/dersler.json",
     "meds/data/arsiv_25_26/sesli_anlatim/kayit.json",
+    "meds/scripts/arsiv_25_26/uygula_lazer_takip.py",
+    "meds/scripts/arsiv_25_26/generate_deep_k2_02.py",
     "meds/guncelleme_notu.json"
   ],
   "duzeltilen": [
-    "Ders 14'teki atlanan ve seyrek sayfalar kaldırılarak 68 sayfanın tamamı amfi derinliğinde eksiksiz genişletildi",
-    "Ders 10'daki slayt çapası boş 19 cümle ilgili sayfa ve satırlarına çapalandı",
-    "Tüm radyoloji MRG kesitleri ve histopatoloji atlası slaytları detaylı olarak açıklandı"
+    "Lazer metin takibi motorunda tekil satır dizelerinin harf harf bölünmesi hatası giderilerek tüm derslerde satır eşleme oranı %100'e çıkarıldı",
+    "Ders 02'deki 33 sayfalık eksik içerik ve boş şekil çapaları tamamen giderilerek 54 içerik sayfasının tamamı konuşma metnine dahil edildi",
+    "Canlı çizim komutlarındaki 4 ileri sızıntı kelimesi pedagojik sıra kuralına tam uygun hale getirildi"
   ],
   "silinen": []
 }

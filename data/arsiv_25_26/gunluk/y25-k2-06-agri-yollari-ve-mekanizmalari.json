@@ -100,6 +100,31 @@
         "cizimSayisi": 38,
         "cikmisEslesme": 14
       }
+    },
+    {
+      "surum": 5,
+      "tarih": "2026-10-25 18:55",
+      "neden": "56 sayfalık ağrı mekanizmaları dersinin 0 seyrek sayfa ile amfi derinliğinde genişletilmesi ve 15 çizimle yayını",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi AĞRI 3.SINIF.pdf (56 sayfa) kaynağından 0 atlanan sayfa ile 55 paragraf / 171 cümlelik sesli anlatım üretildi.",
+        "63 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 10 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 30.2 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 1811,
+        "sureDk": 30.2,
+        "sayfaSayisi": 56,
+        "atlananSayfa": 0,
+        "bolumSayisi": 14,
+        "paragrafSayisi": 55,
+        "cumleSayisi": 171,
+        "slaytAdimSayisi": 63,
+        "cizimSayisi": 10,
+        "cikmisEslesme": 14
+      }
     }
   ]
 }

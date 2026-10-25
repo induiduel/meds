@@ -55,7 +55,7 @@ Mikroskopik olarak ilk on iki saat içinde iskemik nöronal değişiklikler yani
 
 Birkaç ay sonra astrositlerdeki belirgin büyüme geriler ve kavite duvarında astrosit uzantıları, yeni kapiller damarlar ve az miktarda perivasküler bağ doku lifleriyle birlikte glial liflerden zengin bir fibröz ağ oluşur. Kavite serebral kortekste, korteksin moleküler tabakasından köken alan gliotik bir tabaka ile meninkslerden ve subaraknoid boşluktan ayrılır; piya ve araknoid etkilenmez ve iyileşmeye katılmaz.
 
-Hemorajik infarktüsün mikroskopik görünümü ve gelişimi iskemik infarktüse paralellik gösterir; olaya fazladan kan ekstravazasyonu ve rezorpsiyonu eşlik eder. Antikoagülan kullanan kişilerde gelişen hemorajik infarktüsler yaygın intraserebral hematomla birlikte olabilir.
+Hemorajik infarktüsün mikroskopik görünümü ve gelişimi iskemik infarktüse paralellik gösterir; olaya fazladan kan ekstravazasyonu ve rezorpsiyonu eşlik eder. Antikoagülan kullanan kişilerde gelişen hemorajik infarktüsler yaygın intraserebral hematomla birlikte olabilir. Damar lümeninin yeniden açılması veya kollateral akımın perfüzyon basıncıyla nekrotik damar duvarından sızan eritrositler, dokuda yoğun hemosiderin pigmenti birikimine ve lezyon çevresinde peteşiyal kanamalara neden olur.
 
 @@ İntrakraniyal kanamalar ve primer hipertansif parankim kanaması
 Beynin içindeki kanamalar hipertansiyon ve diğer damar duvarı hasarı hastalıklarına, arteriyovenöz ve kavernöz malformasyonlar gibi yapısal lezyonlara ya da tümörlere bağlı olabilir. Subaraknoid kanamalar en sık anevrizma rüptürüne bağlıdır ama diğer vasküler malformasyonlarla da ortaya çıkabilir. Subdural ya da epidural hemorajiler ise sıklıkla travma ile ilişkilidir.
@@ -87,7 +87,7 @@ Yırtılmamış bir sakküler anevrizma arterde dışa doğru genişlemiş, ince
 Sakküler anevrizmalara ek olarak intrakraniyal damarlarda aterosklerotik, mikotik, travmatik ve dissekan anevrizma tipleri de görülebilir. Burası önemli, bu bilgi çıkmışta soruldu; mikotik, travmatik ve dissekan anevrizmalar sakküler anevrizmalar gibi sıklıkla anterior dolaşımda bulunurken, aterosklerotik anevrizmalar sıklıkla baziler arteri tutarlar ve fuziform şekillidirler. Sakküler olmayan bu fuziform anevrizmalar subaraknoid kanama yerine lümen trombozu ve damar tıkanıklığına bağlı serebral infarktüs ile kendilerini gösterirler.
 
 @@ Serebral vasküler malformasyonlar
-Beynin vasküler malformasyonları, lezyonu oluşturan anormal damarların histolojik ve yapısal özelliklerine göre dört ana gruba ayrılır. Bu dört grup arteriyovenöz malformasyonlar, kavernöz malformasyonlar, kapiller telenjiektaziler ve venöz anjiyomlardır.
+Beynin vasküler malformasyonları, lezyonu oluşturan anormal damarların histolojik ve yapısal özelliklerine göre dört ana gruba ayrılır. Bu dört grup arteriyovenöz malformasyonlar, kavernöz malformasyonlar, kapiller telenjiektaziler ve venöz anjiyomlardır. Bu vasküler lezyonlar arasında arteriyovenöz malformasyonlar yüksek akımlı şant ve rüptür riski nedeniyle en sık semptomatik kanamaya ve fokal epileptik nöbetlere yol açan gruptur.
 
 Burası önemli, sınavda soruldu; beyinde klinik olarak en sık görülen vasküler malformasyon arteriyovenöz malformasyonlardır ve kadınlara göre erkeklerde iki kat daha fazla izlenir. Arteriyovenöz malformasyonlar en sık on ila otuz yaşlarında klinik bulgu verir ve kendisini epilepsi nöbeti, intraserebral bir kanama ya da subaraknoid kanama ile gösterir.
 

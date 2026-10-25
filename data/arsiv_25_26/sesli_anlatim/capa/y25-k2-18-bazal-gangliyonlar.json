@@ -1,5 +1,5 @@
 {
- "mdSha1": "62e9d0db73c4f62fff07b53faa4287042decf73b",
+ "mdSha1": "dfdb81b0a8931bdf7469fb225bccfc868f9ad257",
  "p": [
   [
    {
@@ -9,10 +9,22 @@
      "Dr. İrfan YAVAŞ"
     ],
     "sekil": "Ders giriş başlığı ve öğretim üyesi künyesi",
-    "resim": 0,
     "madde": [
      0
-    ]
+    ],
+    "resim": 0
+   },
+   {
+    "ses": "Bazal gangliyonlar, serebral korteks ile talamus arasındaki karmaşık döngüler üzerinden istemli hareketlerin başlatılmasını ve uygunsuz motor paternlerin baskılanmasını hassasiyetle düzenler.",
+    "sayfa": 1,
+    "satir": [
+     "Dr. İrfan YAVAŞ"
+    ],
+    "sekil": null,
+    "madde": [
+     0
+    ],
+    "resim": 0
    },
    {
     "ses": "Ekstrapiramidal sistem motor işlevlerin yürütülmesinde piramidal sistem dışında kalan anatomik yapıların tamamını ifade eden geniş bir düzenleyici şebekedir.",
@@ -834,10 +846,11 @@
      "BG’ı oluşturan bu yapılar arasında oluşmuş devreler"
     ],
     "sekil": "Direkt ve indirekt yol devre şeması",
-    "resim": 0,
     "madde": [
-     0
-    ]
+     0,
+     1
+    ],
+    "resim": 0
    },
    {
     "ses": "Direkt yol frontal ve parietal serebral korteksten doğan glutamaterjik eksitatör liflerin striatuma ulaşmasıyla başlar.",
@@ -1674,7 +1687,7 @@
     "sekil": null,
     "madde": [
      9,
-     8
+     0
     ]
    },
    {
@@ -2053,7 +2066,7 @@
     "sekil": null,
     "madde": [
      6,
-     2
+     1
     ]
    },
    {
@@ -2099,27 +2112,30 @@
     "sayfa": 14,
     "satir": [],
     "sekil": "Slayt 14 genel",
-    "resim": 0,
     "madde": [
      0,
      2
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "İntansiyonel tremor bazal gangliyon değil serebellar hemisfer ve süperior serebellar pedinkül lezyonlarının kardinal patolojisidir.",
     "sayfa": 14,
     "satir": [],
     "sekil": "Slayt 14 genel",
-    "resim": 0,
     "madde": [
      0
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Parmak burun testinde hasta parmağını burnuna yaklaştırdıkça genlik dramatik biçimde büyür ve hedefi şaşırır.",
     "sayfa": 14,
     "satir": [],
     "sekil": "Slayt 14 genel",
+    "madde": [
+     0
+    ],
     "resim": 0
    },
    {
@@ -2127,17 +2143,20 @@
     "sayfa": 14,
     "satir": [],
     "sekil": "Slayt 14 genel",
-    "resim": 0,
     "madde": [
      4,
      0
-    ]
+    ],
+    "resim": 0
    },
    {
     "ses": "Bu ayrım nörolojik muayenede bazal gangliyon ile serebellum lezyonlarını ayırt eden en güvenilir klinik ölçüttür.",
     "sayfa": 14,
     "satir": [],
     "sekil": "Slayt 14 genel",
+    "madde": [
+     1
+    ],
     "resim": 0
    },
    {
@@ -2145,11 +2164,11 @@
     "sayfa": 14,
     "satir": [],
     "sekil": "Slayt 14 genel",
-    "resim": 0,
     "madde": [
      4,
      0
-    ]
+    ],
+    "resim": 0
    }
   ],
   [
@@ -2209,7 +2228,8 @@
     ],
     "sekil": null,
     "madde": [
-     4
+     4,
+     1
     ]
    },
    {
@@ -2426,7 +2446,8 @@
     ],
     "sekil": null,
     "madde": [
-     4
+     4,
+     3
     ]
    },
    {
