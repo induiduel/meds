@@ -1,23 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 360,
-  "baslik": "Sesli Derste Çizimler Sıkı Denetimden Geçiyor",
+  "onem": 361,
+  "baslik": "Beyin Tümörleri Radyoloji Atlası Düzeltildi",
   "maddeler": [
-    "Çizimler artık hep lazerin gösterdiği sayfada; başka sayfaya düşen çizim kalmadı.",
-    "Slayt şablonu, kapak süsü ve yazının arkasındaki kart görseli artık \"resim\" sayılmıyor; yazı slaytında lazer yazıya gider.",
-    "Resim anlatılırken yazı paneli açılmaz; görselin üstünde anlatılan yapı gösterilir.",
-    "Her ders yayından önce yeni çizim kapısından (9 kural) geçer; kapıdan geçemeyen çizim yayına çıkmaz."
+    "Geçen yılın Beyin Tümörleri sesli dersinde radyoloji atlası anlatımı slayttaki görüntülerle uyuşmuyordu (glioblastom ve arka çukur kitleleri hipofiz adenomu diye anlatılıyordu); her görüntü gerçekte gösterdiğine göre yeniden anlatıldı.",
+    "Görüntüde karşılığı olmayan 11 cümle çıkarıldı; ders yeniden seslendirildi.",
+    "Atlas görüntülerinde anlatılan kitle (glioblastom, makroadenom, menenjiom, pontoserebellar köşe kitlesi, metastazlar) anlatılırken görüntünün üstünde çiziliyor."
   ],
-  "eklenen": [
-    "scripts/cizim/cizim_kapisi.py (K1–K9)",
-    "TALIMAT_CIZIM 21–26, CIZIM_KURALLARI §10, AGENTS kural 17"
-  ],
+  "eklenen": [],
   "degisen": [
-    "meds/scripts/sesli_anlatim/pdf_isaret.py",
-    "meds/scripts/cizim/cizim_uret.py",
-    "meds/otomasyon/ders_zinciri.py",
-    "meds/scripts/arsiv_25_26/{arsiv_yayinla,sekil_cizim}.py",
-    "meds/data/arsiv_25_26/sesli_anlatim/{capa,isaret,cizim,v2}"
+    "meds/data/arsiv_25_26/sesli_anlatim/*/y25-k2-14-beyin-tumorleri.*",
+    "meds_database_25_26/medspak/kurul2/y25-k2-14-beyin-tumorleri.medspak"
   ],
   "duzeltilen": [
     "Aynı slaytta birden fazla çizimin aynı anda ekranda belirmesi ve iç içe geçmesi hatası giderildi",

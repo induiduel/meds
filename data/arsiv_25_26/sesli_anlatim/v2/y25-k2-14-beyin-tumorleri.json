@@ -4965,13 +4965,13 @@
      "cumleler": [
       {
        "id": "k2-14-c0194",
-       "ses": "Radyoloji atlasımızın ilk kesitinde sagital planda sella tursikayı genişleterek suprasellar sisternaya uzanan dev hipofiz makroadenomu izlenmektedir.",
-       "ekran": "Atlas Kesiti: **Sagital MRG kesitinde sellar tabanı genişleten dev makroadenom**",
+       "ses": "Atlasın ilk görüntüsü koronal kontrastlı manyetik rezonans kesitidir; her iki frontal lobda orta hattı aşan düzensiz bir kitle izlenir.",
+       "ekran": "Koronal kontrastlı MR: iki frontal lobda **orta hattı aşan** düzensiz kitle",
        "duzey": 0,
        "vurgu": [
         {
-         "tur": "tanim",
-         "metin": "Sagital MRG kesitinde sellar tabanı genişleten dev makroadenom"
+         "metin": "orta hattı aşan",
+         "tur": "terim"
         }
        ],
        "slayt_adim": 15,
@@ -4980,19 +4980,18 @@
        "slayt": {
         "sayfa": 56,
         "satir": [],
-        "sekil": "Sagital T1 kontrastlı MRG kesitinde sellar tabanı genişleten ve optik kiazmayı yukarı iten makroadenom",
-        "adim": 15
+        "sekil": "Koronal kontrastlı MR'da iki frontal loba uzanan halkasal kontrastlanan kitle"
        }
       },
       {
        "id": "k2-14-c0195",
-       "ses": "Tümör kitlesi optik kiazmayı yukarı doğru eleve ederek hastalarda karakteristik bitemporal hemianopsi tablosuna yol açmaktadır.",
-       "ekran": "Optik kiazma elevasyonu: **Görme yollarında yukarı itilme ve bitemporal hemianopsi**",
+       "ses": "Kitlenin çeperi kalın ve düzensiz bir halka biçiminde kontrastlanırken ortası koyu kalır; bu koyu merkez glioblastomun santral nekrozudur.",
+       "ekran": "Kalın, düzensiz **halkasal kontrastlanma** + koyu merkez = GBM'de santral nekroz",
        "duzey": 1,
        "vurgu": [
         {
-         "tur": "terim",
-         "metin": "Görme yollarında yukarı itilme ve bitemporal hemianopsi"
+         "metin": "halkasal kontrastlanma",
+         "tur": "terim"
         }
        ],
        "slayt_adim": 15,
@@ -5001,19 +5000,18 @@
        "slayt": {
         "sayfa": 56,
         "satir": [],
-        "sekil": null,
-        "adim": 15
+        "sekil": "Kitlenin kalın halkasal çeperi ve nekrotik merkezi"
        }
       },
       {
        "id": "k2-14-c0196",
-       "ses": "Sfenoid sinus tavanına doğru sellar tabanda erozyon izlenirken, sağlam ön hipofiz dokusunun lezyon periferinde ince bir hilal şeklinde sıkıştığı seçilmektedir.",
-       "ekran": "Kemik erozyonu ve hipofiz hilali: **Sellar taban erozyonu ve basılmış adenohipofiz dokusu**",
+       "ses": "Glioblastomun korpus kallozum üzerinden iki hemisfere kanat tarzında uzanmasına kelebek gliom denir ve bu hastalar agresif cerrahiye uygun değildir.",
+       "ekran": "**Kelebek gliom:** korpus kallozum üzerinden iki hemisfere uzanan GBM; cerrahiye uygun değil",
        "duzey": 1,
        "vurgu": [
         {
-         "tur": "terim",
-         "metin": "Sellar taban erozyonu ve basılmış adenohipofiz dokusu"
+         "metin": "Kelebek gliom",
+         "tur": "tanim"
         }
        ],
        "slayt_adim": 15,
@@ -5022,8 +5020,7 @@
        "slayt": {
         "sayfa": 56,
         "satir": [],
-        "sekil": "Sellar taban destrüksiyonu ve normal hipofiz parankiminin hilal şeklinde basılması",
-        "adim": 15
+        "sekil": "Korpus kallozum üzerinden iki hemisfere uzanan kelebek görünümü"
        }
       }
      ]
@@ -5035,13 +5032,13 @@
      "cumleler": [
       {
        "id": "k2-14-c0197",
-       "ses": "Koronal kontrastlı manyetik rezonans kesitinde sellar tabandan kaynaklanan ve lateral komşuluktaki kavernöz sinüse doğru uzanım gösteren adenom lezyonu görülmektedir.",
-       "ekran": "Atlas Kesiti: **Koronal MRG kesitinde kavernöz sinüse doğru uzanan sellar adenom**",
+       "ses": "Aynı kitlenin aksiyel kesitinde, korpus kallozumun ön kısmı boyunca iki frontal loba yayılan çok odaklı halkasal kontrastlanma görülür.",
+       "ekran": "Aksiyel kesit: korpus kallozum ön kısmından **iki frontal loba** yayılan halkasal kontrastlanma",
        "duzey": 0,
        "vurgu": [
         {
-         "tur": "tanim",
-         "metin": "Koronal MRG kesitinde kavernöz sinüse doğru uzanan sellar adenom"
+         "metin": "iki frontal loba",
+         "tur": "terim"
         }
        ],
        "slayt_adim": 15,
@@ -5050,19 +5047,18 @@
        "slayt": {
         "sayfa": 57,
         "satir": [],
-        "sekil": "Koronal T1 kontrastlı MRG kesitinde sellar adenomun lateral kavernöz sinüse ve internal karotid arter çevresine uzanımı",
-        "adim": 15
+        "sekil": "Aksiyel MR'da iki frontal loba yayılan halkasal kontrastlanan kitle"
        }
       },
       {
        "id": "k2-14-c0198",
-       "ses": "Kavernöz sinüsün internal karotid arter çevresindeki invazyon derecesi transsfenoidal cerrahi rezeksiyonun sınırlarını doğrudan belirleyen en kritik anatomik kriterdir.",
-       "ekran": "Knosp derecelendirmesi: **İnternal karotid arter çevresinde invazyon analizi**",
+       "ses": "Halkaların içindeki koyu alanlar nekrozu, kalın ve tomurcuklu çeper ise canlı tümör dokusunu gösterir.",
+       "ekran": "Koyu iç alan **nekroz**, kalın tomurcuklu çeper canlı tümör",
        "duzey": 1,
        "vurgu": [
         {
-         "tur": "terim",
-         "metin": "İnternal karotid arter çevresinde invazyon analizi"
+         "metin": "nekroz",
+         "tur": "terim"
         }
        ],
        "slayt_adim": 15,
@@ -5071,29 +5067,7 @@
        "slayt": {
         "sayfa": 57,
         "satir": [],
-        "sekil": "İnternal karotid arterin kavernöz parçasının tümör dokusu ile sarılma derecesi",
-        "adim": 15
-       }
-      },
-      {
-       "id": "k2-14-c0199",
-       "ses": "İnternal karotid arteri çevreleyen lateral uzanımlar endoskopik transsfenoidal yaklaşımla tam çıkarılamayabilir ve rezidüel kitle bırakabilir.",
-       "ekran": "Cerrahi sınır riski: **Karotid arter medial sınırını aşan infiltratif yayılım**",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "Karotid arter medial sınırını aşan infiltratif yayılım"
-        }
-       ],
-       "slayt_adim": 15,
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 57,
-        "satir": [],
-        "sekil": null,
-        "adim": 15
+        "sekil": "Halkaların içindeki nekrotik alanlar ve tomurcuklu çeper"
        }
       }
      ]
@@ -5105,13 +5079,13 @@
      "cumleler": [
       {
        "id": "k2-14-c0200",
-       "ses": "Aksiyel kontrastlı manyetik rezonans kesitinde sellar bölgeden çevre sisternalara uzanım gösteren geniş sellar kitle yapısı net olarak seçilmektedir.",
-       "ekran": "Atlas Kesiti: **Aksiyel kontrastlı MRG kesitinde sellar kitle ve sisternal anatomi**",
+       "ses": "Bu aksiyel kontrastlı kesitte sol parietal bölgede, kortekse yakın yerleşimli küçük ve yuvarlak bir lezyon izlenir.",
+       "ekran": "Aksiyel kontrastlı MR: sol parietalde **küçük yuvarlak lezyon**",
        "duzey": 0,
        "vurgu": [
         {
-         "tur": "tanim",
-         "metin": "Aksiyel kontrastlı MRG kesitinde sellar kitle ve sisternal anatomi"
+         "metin": "küçük yuvarlak lezyon",
+         "tur": "terim"
         }
        ],
        "slayt_adim": 15,
@@ -5120,19 +5094,18 @@
        "slayt": {
         "sayfa": 58,
         "satir": [],
-        "sekil": "Aksiyel kontrastlı MRG kesitinde sellar kitlenin parasellar vasküler yapılar ve üçüncü ventrikül tabanı ile ilişkisi",
-        "adim": 15
+        "sekil": "Sol parietal bölgede küçük yuvarlak lezyon"
        }
       },
       {
        "id": "k2-14-c0201",
-       "ses": "Bu kesit lezyonun parasellar vasküler yapılarla ve optik traktuslarla olan üç boyutlu uzaysal ilişkisini ortaya koymaktadır.",
-       "ekran": "Üç boyutlu komşuluk: **Parasellar vasküler yapılar ve optik traktus ilişkisi**",
+       "ses": "Lezyon ince bir halka biçiminde kontrast tutar; gri-beyaz cevher bileşkesine yakın bu tür halkasal lezyonlar metastazı akla getirir.",
+       "ekran": "İnce halkasal kontrast + **gri-beyaz cevher bileşkesi** yerleşimi → metastaz akla gelir",
        "duzey": 1,
        "vurgu": [
         {
-         "tur": "terim",
-         "metin": "Parasellar vasküler yapılar ve optik traktus ilişkisi"
+         "metin": "gri-beyaz cevher bileşkesi",
+         "tur": "terim"
         }
        ],
        "slayt_adim": 15,
@@ -5141,29 +5114,7 @@
        "slayt": {
         "sayfa": 58,
         "satir": [],
-        "sekil": "Kitle sınırlarının Willis poligonu damarları ve optik kiazma traktusları ile ilişkisi",
-        "adim": 15
-       }
-      },
-      {
-       "id": "k2-14-c0202",
-       "ses": "Üçüncü ventrikül ön tabanına doğru uzanan kitle komponentinin ventriküler genişlemeye yol açıp açmadığı bu aksiyel planda değerlendirilir.",
-       "ekran": "Ventriküler etki: **Üçüncü ventrikül ön tabanında bası ve genişleme değerlendirmesi**",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "Üçüncü ventrikül ön tabanında bası ve genişleme değerlendirmesi"
-        }
-       ],
-       "slayt_adim": 15,
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 58,
-        "satir": [],
-        "sekil": "Üçüncü ventrikül ön reseslerinin kitle tarafından basıya uğraması",
-        "adim": 15
+        "sekil": "Lezyonun ince halkasal kontrastlanması"
        }
       }
      ]
@@ -5175,13 +5126,13 @@
      "cumleler": [
       {
        "id": "k2-14-c0203",
-       "ses": "Bu radyolojik kesitte serebral hemisfer derin beyaz cevherinde yerleşmiş, santralinde nekrotik kavitasyon bulunan tipik glioblastoma multiforme lezyonu izlenmektedir.",
-       "ekran": "Atlas Kesiti: **Aksiyel kontrastlı MRG kesitinde santrali nekrotik glioblastom**",
+       "ses": "Bu aksiyel kontrastlı kesitte arka çukurda, serebellumun orta hattında heterojen kontrastlanan yuvarlak bir kitle görülür.",
+       "ekran": "Arka çukur: serebellum **orta hattında** heterojen kontrastlanan kitle",
        "duzey": 0,
        "vurgu": [
         {
-         "tur": "tanim",
-         "metin": "Aksiyel kontrastlı MRG kesitinde santrali nekrotik glioblastom"
+         "metin": "orta hattında",
+         "tur": "terim"
         }
        ],
        "slayt_adim": 15,
@@ -5190,19 +5141,18 @@
        "slayt": {
         "sayfa": 59,
         "satir": [],
-        "sekil": "Aksiyel T1 kontrastlı MRG kesitinde santrali nekrotik, kalın ve düzensiz halkasal kontrastlanan glioblastom lezyonu",
-        "adim": 15
+        "sekil": "Serebellum orta hattında heterojen kontrastlanan kitle"
        }
       },
       {
        "id": "k2-14-c0204",
-       "ses": "Lezyonun çevresindeki kalın, düzensiz nodüler kontrastlanma halkası ve geniş vazojenik ödem tümörün yoğun mikrovasküler proliferasyonunu yansıtır.",
-       "ekran": "Halkasal nodüler boyanma: **Yoğun mikrovasküler proliferasyon ve peritümöral ödem**",
+       "ses": "Dördüncü ventrikül komşuluğunda büyüyen bu tür kitleler ventrikül çıkışlarını tıkayarak obstrüktif hidrosefaliye yol açabilir.",
+       "ekran": "4. ventrikül çıkışlarının tıkanması → **obstrüktif hidrosefali**",
        "duzey": 1,
        "vurgu": [
         {
-         "tur": "terim",
-         "metin": "Yoğun mikrovasküler proliferasyon ve peritümöral ödem"
+         "metin": "obstrüktif hidrosefali",
+         "tur": "terim"
         }
        ],
        "slayt_adim": 15,
@@ -5211,29 +5161,7 @@
        "slayt": {
         "sayfa": 59,
         "satir": [],
-        "sekil": "Düzensiz ve nodüler halkasal kontrast tutulumu gösteren neoplastik kenar",
-        "adim": 15
-       }
-      },
-      {
-       "id": "k2-14-c0205",
-       "ses": "Santraldeki avasküler nekrotik alan glioblastomun hızlı büyüme hızına ve doku iskemisine bağlı Daumas-Duport derece dört kriterini radyolojik olarak doğrular.",
-       "ekran": "Nekrotik kavite kanıtı: **Daumas-Duport derece dört kriterinin radyolojik karşılığı**",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "Daumas-Duport derece dört kriterinin radyolojik karşılığı"
-        }
-       ],
-       "slayt_adim": 15,
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 59,
-        "satir": [],
-        "sekil": "Glioblastom merkezinde hipointens avasküler santral nekroz kavitesi",
-        "adim": 15
+        "sekil": "Dördüncü ventrikül komşuluğundaki kitle"
        }
       }
      ]
@@ -5245,13 +5173,13 @@
      "cumleler": [
       {
        "id": "k2-14-c0206",
-       "ses": "Bu kesitte korpus kallozum üzerinden her iki hemisferik beyaz cevhere simetrik uzanım gösteren klasik kelebek gliom tablosu görülmektedir.",
-       "ekran": "Atlas Kesiti: **Koronal kontrastlı MRG kesitinde korpus kallozumu geçen kelebek gliom**",
+       "ses": "Aksiyel ve sagital kesitler, kitlenin beyin sapının arkasında dördüncü ventrikül bölgesini doldurduğunu gösterir.",
+       "ekran": "Aksiyel + sagital: kitle beyin sapının arkasında **dördüncü ventrikülü** dolduruyor",
        "duzey": 0,
        "vurgu": [
         {
-         "tur": "tanim",
-         "metin": "Koronal kontrastlı MRG kesitinde korpus kallozumu geçen kelebek gliom"
+         "metin": "dördüncü ventrikülü",
+         "tur": "terim"
         }
        ],
        "slayt_adim": 15,
@@ -5260,19 +5188,18 @@
        "slayt": {
         "sayfa": 60,
         "satir": [],
-        "sekil": null,
-        "adim": 15
+        "sekil": "Beyin sapının arkasında dördüncü ventrikülü dolduran kitle"
        }
       },
       {
        "id": "k2-14-c0207",
-       "ses": "Glioblastomun kallozal lifler boyunca kontralateral hemisfer beyaz cevherine geçmesi cerrahi kür şansını ortadan kaldırarak prognozu son derece ağırlaştırır.",
-       "ekran": "Hemisferik infiltrasyon: **Kallozal lifler boyunca iki taraflı yayılım ve kötü prognoz**",
+       "ses": "Sagital kesitte kitlenin önde beyin sapı, arkada serebellum arasında kaldığı ve ventrikül boşluğunu doldurduğu izlenir.",
+       "ekran": "Sagital kesit: kitle **beyin sapı ile serebellum** arasında",
        "duzey": 1,
        "vurgu": [
         {
-         "tur": "terim",
-         "metin": "Kallozal lifler boyunca iki taraflı yayılım ve kötü prognoz"
+         "metin": "beyin sapı ile serebellum",
+         "tur": "terim"
         }
        ],
        "slayt_adim": 15,
@@ -5281,29 +5208,7 @@
        "slayt": {
         "sayfa": 60,
         "satir": [],
-        "sekil": null,
-        "adim": 15
-       }
-      },
-      {
-       "id": "k2-14-c0208",
-       "ses": "Bu iki taraflı derin infiltratif yayılım nedeniyle radikal cerrahi rezeksiyon şansı bulunmaz ve hastaya palyatif kemoradyoterapi protokolü uygulanır.",
-       "ekran": "Cerrahi sınırlılık: **Bilateral tutulumda rezeksiyonun imkansızlığı ve palyasyon**",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "Bilateral tutulumda rezeksiyonun imkansızlığı ve palyasyon"
-        }
-       ],
-       "slayt_adim": 15,
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 60,
-        "satir": [],
-        "sekil": null,
-        "adim": 15
+        "sekil": "Sagital kesitte beyin sapı ile serebellum arasındaki kitle"
        }
       }
      ]
@@ -5315,13 +5220,13 @@
      "cumleler": [
       {
        "id": "k2-14-c0209",
-       "ses": "Aksiyel kontrastlı manyetik rezonans görüntüsünde konveksitede dural tabanlı, homojen ve son derece yoğun kontrastlanan ekstraaksiyal bir menenjiom kitlesi izlenmektedir.",
-       "ekran": "Atlas Kesiti: **Aksiyel kontrastlı MRG kesitinde konveksite menenjiomu ve dural kuyruk**",
+       "ses": "Koronal ve sagital kontrastlı kesitlerde oklar, sella tursikadan yukarı doğru taşan ve kontrast tutan yuvarlak bir kitleyi gösterir.",
+       "ekran": "Koronal + sagital: oklar **sella tursikadan yukarı taşan** kitleyi gösteriyor",
        "duzey": 0,
        "vurgu": [
         {
-         "tur": "tanim",
-         "metin": "Aksiyel kontrastlı MRG kesitinde konveksite menenjiomu ve dural kuyruk"
+         "metin": "sella tursikadan yukarı taşan",
+         "tur": "terim"
         }
        ],
        "slayt_adim": 15,
@@ -5330,19 +5235,18 @@
        "slayt": {
         "sayfa": 61,
         "satir": [],
-        "sekil": "Aksiyel kontrastlı MRG kesitinde dural tabanlı homojen kontrastlanan ekstraaksiyal konveksite menenjiomu ve dural kuyruk bulgusu",
-        "adim": 15
+        "sekil": "Sella tursikadan yukarı taşan kitle (oklar)"
        }
       },
       {
        "id": "k2-14-c0210",
-       "ses": "Kitlenin komşu dura mater boyunca lineer incelerek uzandığı dural kuyruk işareti menenjiom tanısında en karakteristik radyolojik bulgudur.",
-       "ekran": "Dural kuyruk işareti: **Komşu dura mater boyunca lineer kontrastlanma uzanımı**",
+       "ses": "Bir santimetreden büyük olan bu kitle bir hipofiz makroadenomudur; yukarı doğru uzanımı görme problemlerine yol açar.",
+       "ekran": "1 cm'den büyük → **makroadenom**; yukarı uzanım görme problemleri yapar",
        "duzey": 1,
        "vurgu": [
         {
-         "tur": "terim",
-         "metin": "Komşu dura mater boyunca lineer kontrastlanma uzanımı"
+         "metin": "makroadenom",
+         "tur": "tanim"
         }
        ],
        "slayt_adim": 15,
@@ -5351,29 +5255,7 @@
        "slayt": {
         "sayfa": 61,
         "satir": [],
-        "sekil": null,
-        "adim": 15
-       }
-      },
-      {
-       "id": "k2-14-c0211",
-       "ses": "Parankim ile tümör arasında izlenen ince beyin omurilik sıvısı yarığı kitlenin tamamen ekstraaksiyal kompartmanda yer aldığını ve parankimi dıştan bastırdığını gösterir.",
-       "ekran": "Ekstraaksiyal BOS yarığı: **Parankimi dıştan basarak sulkusları koruma bulgusu**",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "Parankimi dıştan basarak sulkusları koruma bulgusu"
-        }
-       ],
-       "slayt_adim": 15,
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 61,
-        "satir": [],
-        "sekil": "Tümör kapsülü ile komşu serebral korteks arasındaki ekstraaksiyal BOS yarığı",
-        "adim": 15
+        "sekil": "Hipofiz makroadenomunun yukarı uzanımı"
        }
       }
      ]
@@ -5385,13 +5267,13 @@
      "cumleler": [
       {
        "id": "k2-14-c0212",
-       "ses": "Bu serideki üçlü sagital ve koronal sekanslarda hipofiz adenomunun optik kiazmayı ve üçüncü ventrikül ön tabanını bası altına alma dereceleri izlenmektedir.",
-       "ekran": "Atlas Kesiti: **Dinamik hipofiz MRG serisinde mikroadenom boyanma kinetiği**",
+       "ses": "Bu seride aksiyel kesitlerde sağ frontal lobda düzensiz sınırlı bir kitle izlenir; sağdaki te iki ağırlıklı kesitte çevresi yaygın parlak ödemle sarılıdır.",
+       "ekran": "Sağ frontal lobda düzensiz kitle; T2'de çevresinde **yaygın ödem**",
        "duzey": 0,
        "vurgu": [
         {
-         "tur": "tanim",
-         "metin": "Dinamik hipofiz MRG serisinde mikroadenom boyanma kinetiği"
+         "metin": "yaygın ödem",
+         "tur": "terim"
         }
        ],
        "slayt_adim": 15,
@@ -5400,19 +5282,18 @@
        "slayt": {
         "sayfa": 62,
         "satir": [],
-        "sekil": "Dinamik kontrastlı hipofiz MRG kesitlerinde mikroadenomun gecikmiş kontrastlanma kinetiği",
-        "adim": 15
+        "sekil": "Sağ frontal lobdaki kitle ve T2'de çevre ödemi"
        }
       },
       {
        "id": "k2-14-c0213",
-       "ses": "Dinamik kontrastlanma serilerinde mikroadenom dokusunun normal adenohipofize kıyasla daha geç kontrast tutması erken tanıyı mümkün kılar.",
-       "ekran": "Gecikmiş kontrastlanma: **Normal adenohipofize kıyasla adenomun geç boyanması**",
+       "ses": "Kitle ve ödemin oluşturduğu bası lateral ventrikülü sıkıştırmakta ve orta hat yapılarını karşı tarafa itmektedir.",
+       "ekran": "Kitle + ödem → **lateral ventrikül** basısı, orta hat kayması",
        "duzey": 1,
        "vurgu": [
         {
-         "tur": "terim",
-         "metin": "Normal adenohipofize kıyasla adenomun geç boyanması"
+         "metin": "lateral ventrikül",
+         "tur": "terim"
         }
        ],
        "slayt_adim": 15,
@@ -5421,29 +5302,7 @@
        "slayt": {
         "sayfa": 62,
         "satir": [],
-        "sekil": "Normal adenohipofiz kapiller dolumu ile mikroadenom hipointens defekti ayrımı",
-        "adim": 15
-       }
-      },
-      {
-       "id": "k2-14-c0214",
-       "ses": "Normal ön lob dokusu ilk saniyelerde hızla boyanırken, mikroadenom odağı hipointens bir kontrast defekti olarak parıldayarak cerrahi sınırları netleştirir.",
-       "ekran": "Erken evre saptama: **Milimetrik hipointens odak ile selektif mikrodiseksiyon**",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "Milimetrik hipointens odak ile selektif mikrodiseksiyon"
-        }
-       ],
-       "slayt_adim": 15,
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 62,
-        "satir": [],
-        "sekil": "Adenohipofiz parankiminde milimetrik mikroadenom kontrastlanma defekti",
-        "adim": 15
+        "sekil": "Lateral ventrikül basısı ve orta hat kayması"
        }
       }
      ]
@@ -5455,13 +5314,13 @@
      "cumleler": [
       {
        "id": "k2-14-c0215",
-       "ses": "Aksiyel kontrastlı manyetik rezonans kesitinde sol pontoserebellar köşede internal akustik kanalı genişleterek açıyı dolduran bir vestibüler schwannom görülmektedir.",
-       "ekran": "Atlas Kesiti: **Aksiyel kontrastlı MRG kesitinde sol pontoserebellar köşe schwannomu**",
+       "ses": "Sagital, aksiyel ve koronal kontrastlı kesitlerde frontal bölgede duraya geniş tabanla oturan, büyük ve homojen kontrastlanan yuvarlak bir kitle görülür.",
+       "ekran": "Üç plan: frontalde **duraya geniş tabanla oturan**, homojen kontrastlanan kitle",
        "duzey": 0,
        "vurgu": [
         {
-         "tur": "tanim",
-         "metin": "Aksiyel kontrastlı MRG kesitinde sol pontoserebellar köşe schwannomu"
+         "metin": "duraya geniş tabanla oturan",
+         "tur": "terim"
         }
        ],
        "slayt_adim": 15,
@@ -5470,19 +5329,18 @@
        "slayt": {
         "sayfa": 63,
         "satir": [],
-        "sekil": null,
-        "adim": 15
+        "sekil": "Duraya geniş tabanla oturan homojen kontrastlanan kitle"
        }
       },
       {
        "id": "k2-14-c0216",
-       "ses": "İç kulak kanalına uzanan komponenti ve sisternal kitlesi ile klasik dondurma külahı işareti oluşturan kitle internal akustik porusu belirgin genişletir.",
-       "ekran": "Dondurma külahı işareti: **İç kulak kanalını genişleterek sisternaya taşma**",
+       "ses": "Beyin dokusunu dıştan iten, homojen parlak boyanan ve duraya tutunan bu ekstraaksiyal kitle tipik bir menenjiom görünümüdür.",
+       "ekran": "Ekstraaksiyal, homojen parlak, duraya tutunan kitle = **menenjiom**",
        "duzey": 1,
        "vurgu": [
         {
-         "tur": "terim",
-         "metin": "İç kulak kanalını genişleterek sisternaya taşma"
+         "metin": "menenjiom",
+         "tur": "tanim"
         }
        ],
        "slayt_adim": 15,
@@ -5491,29 +5349,7 @@
        "slayt": {
         "sayfa": 63,
         "satir": [],
-        "sekil": "Porus akustikus internusu genişleterek pontoserebellar sisternaya taşan schwannom kitlesi",
-        "adim": 15
-       }
-      },
-      {
-       "id": "k2-14-c0217",
-       "ses": "Kitle beyin sapını ve serebellar pedinkülleri mediale iterek hastadaki tipik sensörinöral işitme kaybı, kulak çınlaması ve dengesizlik tablosunu oluşturur.",
-       "ekran": "Beyin sapı basısı: **Pons ve serebellar pedinkülde mediale yer değiştirme**",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "Pons ve serebellar pedinkülde mediale yer değiştirme"
-        }
-       ],
-       "slayt_adim": 15,
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 63,
-        "satir": [],
-        "sekil": null,
-        "adim": 15
+        "sekil": "Beyni dıştan iten ekstraaksiyal menenjiom"
        }
       }
      ]
@@ -5525,13 +5361,13 @@
      "cumleler": [
       {
        "id": "k2-14-c0218",
-       "ses": "Bilgisayarlı tomografi kesitinde parankim dışı yerleşimli, yoğun psammomatöz kalsifikasyonlar içeren kalsifiye bir menenjiom lezyonu izlenmektedir.",
-       "ekran": "Atlas Kesiti: **Bilgisayarlı tomografide kalsifiye menenjiom ve hiperostozis**",
+       "ses": "Koronal kontrastlı kesitte kırmızı ok, konveksite durasına oturan küçük, yuvarlak ve homojen kontrastlanan bir kitleyi gösterir.",
+       "ekran": "Kırmızı ok: **konveksite durasına** oturan küçük homojen kitle",
        "duzey": 0,
        "vurgu": [
         {
-         "tur": "tanim",
-         "metin": "Bilgisayarlı tomografide kalsifiye menenjiom ve hiperostozis"
+         "metin": "konveksite durasına",
+         "tur": "terim"
         }
        ],
        "slayt_adim": 15,
@@ -5540,19 +5376,18 @@
        "slayt": {
         "sayfa": 64,
         "satir": [],
-        "sekil": "Beyin bilgisayarlı tomografisinde yoğun kalsifiye menenjiom ve komşu kalvaryum kemiğinde reaktif hiperostozis kalınlaşması",
-        "adim": 15
+        "sekil": "Konveksite durasına oturan küçük kitle (kırmızı ok)"
        }
       },
       {
        "id": "k2-14-c0219",
-       "ses": "Tümörün komşuluğundaki kraniyal kemik tabulasında izlenen reaktif kemik kalınlaşması yani hiperostozis menenjiomların kemik penceresindeki tipik sekonder bulgusudur.",
-       "ekran": "Kemik penceresi bulgusu: **Komşu kraniyal tabulada reaktif hiperostozis reaksiyonu**",
+       "ses": "Duraya geniş tabanla tutunan bu ekstraaksiyal kitle de menenjiom ile uyumludur.",
+       "ekran": "Duraya tutunan ekstraaksiyal kitle → **menenjiom** ile uyumlu",
        "duzey": 1,
        "vurgu": [
         {
-         "tur": "terim",
-         "metin": "Komşu kraniyal tabulada reaktif hiperostozis reaksiyonu"
+         "metin": "menenjiom",
+         "tur": "tanim"
         }
        ],
        "slayt_adim": 15,
@@ -5561,29 +5396,7 @@
        "slayt": {
         "sayfa": 64,
         "satir": [],
-        "sekil": "Kalvaryum iç ve dış tabulasında tümör tabanına komşu kemik hiperostozis reaksiyonu",
-        "adim": 15
-       }
-      },
-      {
-       "id": "k2-14-c0220",
-       "ses": "Bu reaktif hiperostozis kemik invazyonunu ve Simpson derece bir cerrahi rezeksiyonda çıkartılması gereken patolojik kemik marjinini doğrudan belirler.",
-       "ekran": "Cerrahi sınır planlaması: **Kemik rezeksiyon genişliğinin belirlenmesi**",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "Kemik rezeksiyon genişliğinin belirlenmesi"
-        }
-       ],
-       "slayt_adim": 15,
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 64,
-        "satir": [],
-        "sekil": "Rezeksiyon planında patolojik kemik sınırlarının haritalanması",
-        "adim": 15
+        "sekil": "Konveksite menenjiomu"
        }
       }
      ]
@@ -5595,13 +5408,13 @@
      "cumleler": [
       {
        "id": "k2-14-c0221",
-       "ses": "Bu manyetik rezonans kesitinde serebral hemisferlerde gri ve beyaz cevher bileşkesinde yerleşmiş çok sayıda nodüler metastatik odak izlenmektedir.",
-       "ekran": "Atlas Kesiti: **Aksiyel kontrastlı MRG kesitinde gri-beyaz bileşkede multipl metastazlar**",
+       "ses": "Aksiyel ve koronal kontrastlı kesitlerde oklar, pontoserebellar köşede beyin sapının yanında kontrast tutan yuvarlak bir kitleyi gösterir.",
+       "ekran": "Oklar: **pontoserebellar köşede** kontrast tutan yuvarlak kitle",
        "duzey": 0,
        "vurgu": [
         {
-         "tur": "tanim",
-         "metin": "Aksiyel kontrastlı MRG kesitinde gri-beyaz bileşkede multipl metastazlar"
+         "metin": "pontoserebellar köşede",
+         "tur": "terim"
         }
        ],
        "slayt_adim": 15,
@@ -5610,19 +5423,18 @@
        "slayt": {
         "sayfa": 65,
         "satir": [],
-        "sekil": "Aksiyel T1 kontrastlı MRG kesitinde gri-beyaz cevher bileşkesinde multipl halkasal kontrastlanan metastatik odaklar ve yaygın vazojenik ödem",
-        "adim": 15
+        "sekil": "Pontoserebellar köşedeki kitle (oklar)"
        }
       },
       {
        "id": "k2-14-c0222",
-       "ses": "Metastatik nodüllerin boyutuna oranla çok geniş parmak benzeri peritümöral vazojenik ödem oluşturması sistemik metastazların en belirgin radyolojik özelliğidir.",
-       "ekran": "Orantısız ödem kaskadı: **Küçük nodüller çevresinde parmak benzeri yaygın vazojenik ödem**",
+       "ses": "Pontoserebellar köşenin en sık tümörü vestibüler schwannomdur; sekizinci sinirden köken alır ve tek taraflı işitme kaybı ile kulak çınlaması yapar.",
+       "ekran": "Köşenin en sık tümörü **vestibüler schwannom**: 8. sinir, tek taraflı işitme kaybı + tinnitus",
        "duzey": 1,
        "vurgu": [
         {
-         "tur": "terim",
-         "metin": "Küçük nodüller çevresinde parmak benzeri yaygın vazojenik ödem"
+         "metin": "vestibüler schwannom",
+         "tur": "tanim"
         }
        ],
        "slayt_adim": 15,
@@ -5631,29 +5443,7 @@
        "slayt": {
         "sayfa": 65,
         "satir": [],
-        "sekil": null,
-        "adim": 15
-       }
-      },
-      {
-       "id": "k2-14-c0223",
-       "ses": "Arteriyel dallanmanın sonlandığı watershed alanlarındaki bu multipl lezyonlar sistemik primer kanserin hematojen yolla beyin parankimine saçıldığını belgeler.",
-       "ekran": "Hematojen saçılım: **Terminal kapiller yatakta arteryel emboli tutunumu**",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "Terminal kapiller yatakta arteryel emboli tutunumu"
-        }
-       ],
-       "slayt_adim": 15,
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 65,
-        "satir": [],
-        "sekil": null,
-        "adim": 15
+        "sekil": "Pontoserebellar köşe kitlesi"
        }
       }
      ]
@@ -5665,13 +5455,13 @@
      "cumleler": [
       {
        "id": "k2-14-c0224",
-       "ses": "Pediatrik posterior fossa manyetik rezonans kesitinde dördüncü ventrikülü tamamen doldurarak tıkayan medulloblastom ve ependimom ayrımını gerektiren bir kitle lezyonu izlenmektedir.",
-       "ekran": "Atlas Kesiti: **Pediatrik posterior fossa MRG kesitinde dördüncü ventrikül kitlesi**",
+       "ses": "Koronal te iki ağırlıklı kesitlerde arka çukurda, beyin sapının yanında heterojen sinyalli büyük bir kitle izlenir.",
+       "ekran": "Koronal T2: arka çukurda beyin sapı yanında **heterojen sinyalli** büyük kitle",
        "duzey": 0,
        "vurgu": [
         {
-         "tur": "tanim",
-         "metin": "Pediatrik posterior fossa MRG kesitinde dördüncü ventrikül kitlesi"
+         "metin": "heterojen sinyalli",
+         "tur": "terim"
         }
        ],
        "slayt_adim": 15,
@@ -5680,19 +5470,18 @@
        "slayt": {
         "sayfa": 66,
         "satir": [],
-        "sekil": "Pediatrik sagital T1 kontrastlı MRG kesitinde dördüncü ventrikülü dolduran posterior fossa kitlesi ve supratentoryal hidrosefali",
-        "adim": 15
+        "sekil": "Arka çukurda beyin sapı yanındaki heterojen kitle"
        }
       },
       {
        "id": "k2-14-c0225",
-       "ses": "Tümör kitlesi foramen Luschka ve Magendie çıkışlarını tıkayarak supratentoryal lateral ve üçüncü ventriküllerde akut obstrüktif hidrosefaliye yol açmaktadır.",
-       "ekran": "Akut ventriküler blokaj: **Foramen Luschka ve Magendie tıkanmasıyla obstrüktif hidrosefali**",
+       "ses": "Kitle arka çukuru doldurarak beyin sapına bası yapmaktadır.",
+       "ekran": "Kitle arka çukuru dolduruyor, **beyin sapına bası**",
        "duzey": 1,
        "vurgu": [
         {
-         "tur": "terim",
-         "metin": "Foramen Luschka ve Magendie tıkanmasıyla obstrüktif hidrosefali"
+         "metin": "beyin sapına bası",
+         "tur": "terim"
         }
        ],
        "slayt_adim": 15,
@@ -5701,29 +5490,7 @@
        "slayt": {
         "sayfa": 66,
         "satir": [],
-        "sekil": "Dördüncü ventrikül çıkışlarının tıkanması ve lateral ventriküllerde akut genişleme",
-        "adim": 15
-       }
-      },
-      {
-       "id": "k2-14-c0226",
-       "ses": "Ventrikülomegaliye eşlik eden periventriküler sinyal artışı, beyin omurilik sıvısının epandim bariyerini aşarak parankime sızdığı transependimal ödemi yansıtır.",
-       "ekran": "Transependimal ödem: **BOS sızıntısına bağlı periventriküler beyaz cevher ödemi**",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "BOS sızıntısına bağlı periventriküler beyaz cevher ödemi"
-        }
-       ],
-       "slayt_adim": 15,
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 66,
-        "satir": [],
-        "sekil": "Ventrikül duvarı boyunca izlenen transependimal BOS rezorpsiyon ödemi",
-        "adim": 15
+        "sekil": "Beyin sapına bası yapan arka çukur kitlesi"
        }
       }
      ]
@@ -5735,13 +5502,13 @@
      "cumleler": [
       {
        "id": "k2-14-c0227",
-       "ses": "Sellar ve parasellar dinamik kesit dizisinde hipofiz mikroadenomu ile normal hipofiz ön lob parankiminin milimetrik kontrastlanma kinetikleri ayrıntılı olarak gösterilmektedir.",
-       "ekran": "Atlas Kesiti: **Dinamik sellar koronal kesitte mikroadenom ve transsfenoidal koridor**",
+       "ses": "Kontrast sonrası aksiyel kesitlerde serebellumda yoğun ve homojen kontrastlanan, keskin sınırlı yuvarlak bir kitle görülür.",
+       "ekran": "Kontrast sonrası: serebellumda **keskin sınırlı**, homojen kontrastlanan kitle",
        "duzey": 0,
        "vurgu": [
         {
-         "tur": "tanim",
-         "metin": "Dinamik sellar koronal kesitte mikroadenom ve transsfenoidal koridor"
+         "metin": "keskin sınırlı",
+         "tur": "terim"
         }
        ],
        "slayt_adim": 15,
@@ -5749,22 +5516,19 @@
        "spot": null,
        "slayt": {
         "sayfa": 67,
-        "satir": [
-         "FH -67 feet"
-        ],
-        "sekil": "Dinamik koronal sellar MRG serisinde mikroadenom sınırları ve transsfenoidal mikrocerrahi koridoru",
-        "adim": 15
+        "satir": [],
+        "sekil": "Serebellumda homojen kontrastlanan keskin sınırlı kitle"
        }
       },
       {
        "id": "k2-14-c0228",
-       "ses": "Mikroadenomların cerrahi sınırlarının net belirlenmesi transsfenoidal mikrocerrahi yaklaşımda normal adenohipofiz dokusunun korunması açısından büyük öneme sahiptir.",
-       "ekran": "Normal dokunun korunması: **Adenohipofiz parankim fonksiyonlarının mikrocerrahiyle korunması**",
+       "ses": "Kitle dördüncü ventrikül komşuluğunda yer alır ve arka çukur yapılarına bası yapar.",
+       "ekran": "Kitle **dördüncü ventrikül** komşuluğunda, arka çukurda bası",
        "duzey": 1,
        "vurgu": [
         {
-         "tur": "terim",
-         "metin": "Adenohipofiz parankim fonksiyonlarının mikrocerrahiyle korunması"
+         "metin": "dördüncü ventrikül",
+         "tur": "terim"
         }
        ],
        "slayt_adim": 15,
@@ -5772,34 +5536,8 @@
        "spot": null,
        "slayt": {
         "sayfa": 67,
-        "satir": [
-         "FH -67 feet"
-        ],
-        "sekil": null,
-        "adim": 15
-       }
-      },
-      {
-       "id": "k2-14-c0229",
-       "ses": "Sfenoid sinus içerisinden girilen bu endonazal transsfenoidal koridorda hipofiz sapının ve optik kiazmanın korunarak adenomun selektif küretajı başarılabilmektedir.",
-       "ekran": "Selektif adenomektomi: **Optik kiazma ve hipofiz sapına zarar vermeden küretaj**",
-       "duzey": 1,
-       "vurgu": [
-        {
-         "tur": "terim",
-         "metin": "Optik kiazma ve hipofiz sapına zarar vermeden küretaj"
-        }
-       ],
-       "slayt_adim": 15,
-       "cikmis": [],
-       "spot": null,
-       "slayt": {
-        "sayfa": 67,
-        "satir": [
-         "SE/M"
-        ],
-        "sekil": "Endonazal transsfenoidal yaklaşımda anterior sellar taban mikrocerrahi sınırları",
-        "adim": 15
+        "satir": [],
+        "sekil": "Dördüncü ventrikül komşuluğundaki serebellar kitle"
        }
       }
      ]
@@ -5811,13 +5549,13 @@
      "cumleler": [
       {
        "id": "k2-14-c0230",
-       "ses": "Radyoloji atlasımızın son slaytında te iki ve fleyr manyetik rezonans sekanslarında primer intraaksiyal kitleyi çevreleyen parmak benzeri yaygın vazojenik ödem paterni izlenmektedir.",
-       "ekran": "Atlas Kesiti: **Aksiyel T2 ve FLAIR sekanslarında parmak benzeri vazojenik ödem**",
+       "ses": "Atlasın son görüntüsünde, aksiyel kontrastlı kesitte her iki hemisferde çok sayıda küçük ve halkasal kontrastlanan lezyon izlenir.",
+       "ekran": "Son görüntü: iki hemisferde **çok sayıda** küçük halkasal lezyon",
        "duzey": 0,
        "vurgu": [
         {
-         "tur": "tanim",
-         "metin": "Aksiyel T2 ve FLAIR sekanslarında parmak benzeri vazojenik ödem"
+         "metin": "çok sayıda",
+         "tur": "terim"
         }
        ],
        "slayt_adim": 15,
@@ -5826,19 +5564,18 @@
        "slayt": {
         "sayfa": 68,
         "satir": [],
-        "sekil": "Aksiyel T2 ve FLAIR sekanslarında tümör çevresinde parmak benzeri uzanan yaygın vazojenik beyaz cevher ödemi",
-        "adim": 15
+        "sekil": "İki hemisferde çok sayıda halkasal kontrastlanan lezyon"
        }
       },
       {
        "id": "k2-14-c0231",
-       "ses": "Bu yaygın vazojenik ödem tümörün salgıladığı vasküler endotelyal büyüme faktörüne bağlı olarak kan-beyin bariyerinin bozulması sonucu gelişen ekstrasellüler sıvı birikimidir.",
-       "ekran": "Ödem mekanizması: **Kan-beyin bariyeri hasarı ve ekstrasellüler sıvı birikimi**",
+       "ses": "Lezyonların gri-beyaz cevher bileşkesine yerleşmesi ve çok sayıda olması beyin metastazlarının tipik görünümüdür.",
+       "ekran": "Gri-beyaz cevher bileşkesinde çok sayıda lezyon = **beyin metastazı**",
        "duzey": 1,
        "vurgu": [
         {
-         "tur": "terim",
-         "metin": "Kan-beyin bariyeri hasarı ve ekstrasellüler sıvı birikimi"
+         "metin": "beyin metastazı",
+         "tur": "tanim"
         }
        ],
        "slayt_adim": 15,
@@ -5847,19 +5584,18 @@
        "slayt": {
         "sayfa": 68,
         "satir": [],
-        "sekil": "Kan-beyin bariyeri bozulmasına bağlı parankimal sıvı birikimi ve sulkus silinmesi",
-        "adim": 15
+        "sekil": "Gri-beyaz cevher bileşkesindeki metastatik lezyonlar"
        }
       },
       {
        "id": "k2-14-c0232",
-       "ses": "Sıvı infiltrasyonunun beyaz cevher lifleri boyunca yayılması sulkusları silerek belirgin kitle etkisi oluşturur ve deksametazon tedavisine saatler içinde dramatik yanıt verir.",
-       "ekran": "Tedaviye dramatik yanıt: **Sulkus silinmesi, kitle etkisi ve deksametazon etkinliği**",
+       "ses": "Beyin metastazlarının primer odağı en sık akciğer, ikinci sıklıkla memedir.",
+       "ekran": "Primer odak: en sık **akciğer**, sonra meme",
        "duzey": 1,
        "vurgu": [
         {
-         "tur": "terim",
-         "metin": "Sulkus silinmesi, kitle etkisi ve deksametazon etkinliği"
+         "metin": "akciğer",
+         "tur": "terim"
         }
        ],
        "slayt_adim": 15,
@@ -5868,8 +5604,7 @@
        "slayt": {
         "sayfa": 68,
         "satir": [],
-        "sekil": "Beyaz cevher traktusları boyunca uzanan ödemin kortikal sulkusları silmesi ve orta hat basısı",
-        "adim": 15
+        "sekil": "Gri-beyaz cevher bileşkesindeki metastatik lezyonlar"
        }
       }
      ]
