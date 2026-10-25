@@ -1,0 +1,2295 @@
+{
+ "id": "k2p-y25-k2-54-yaygin-anksiyete-bozuklugu",
+ "title": "Yaygın Anksiyete Bozukluğu",
+ "discipline": "Psikiyatri",
+ "kurul": 2,
+ "sayfaHaritasi": "teyitli",
+ "slides": [
+  {
+   "slideNumber": 1,
+   "title": "Kaygı Kavramı ve Anksiyetenin Temel Doğası",
+   "content": "Kaygı hoş olmayan, serbest dalgalanan ve otonomik semptomların eşlik ettiği yaygın bir tedirginlik duygusudur. Kişi belirli bir tehlike kaynağı olmaksızın sürekli içsel bir alarm ve gerginlik hali yaşar.\n\n- **Duygusal Boyut:** Belirsiz bir tehdit algısı ve huzursuzluk hissi baskındır.\n- **Somatik Boyut:** Çarpıntı, kas gerginliği ve terleme gibi sempatik uyarılma bulguları eşlik eder.\n- **Adaptif Kaygı:** Normal düzeyde kaygı performansı artırırken, süreğen aşırı kaygı patolojiktir.\n\n> [!NOTE]\n> Korku bilinen somut bir tehdide verilen yanıt iken, kaygı belirsiz geleceğe yönelik yaygın bir beklentidir.",
+   "synthesisNarrative": "Kaygı hoş olmayan, serbest dalgalanan ve otonomik semptomların eşlik ettiği yaygın bir tedirginlik duygusudur. Kişi belirli bir tehlike kaynağı olmaksızın sürekli içsel bir alarm ve gerginlik hali yaşar.\n\n- **Duygusal Boyut:** Belirsiz bir tehdit algısı ve huzursuzluk hissi baskındır.\n- **Somatik Boyut:** Çarpıntı, kas gerginliği ve terleme gibi sempatik uyarılma bulguları eşlik eder.\n- **Adaptif Kaygı:** Normal düzeyde kaygı performansı artırırken, süreğen aşırı kaygı patolojiktir.\n\n> [!NOTE]\n> Korku bilinen somut bir tehdide verilen yanıt iken, kaygı belirsiz geleceğe yönelik yaygın bir beklentidir.",
+   "pdfSayfalari": [
+    2,
+    2
+   ],
+   "sourcePdf": {
+    "startPage": 2,
+    "endPage": 2
+   },
+   "bolum": "1",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kaygı duygusunun klinik tanımı hakkında aşağıdakilerden hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Hoş olmayan, serbest dalgalanan ve otonomik semptomların eşlik ettiği yaygın tedirginliktir.",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Yalnızca tek bir hayvan türüne karşı duyulan kısıtlı korkudur.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Daima dakikalar içinde tamamen geçici benign bir reflekstir.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Hiçbir zaman fizyolojik veya somatik yansıması olmayan soyut düşüncedir.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kaygı hoş olmayan, serbest dalgalanan ve otonomik semptomların eşlik ettiği yaygın bir tedirginlik duygusudur.",
+     "maskedTerm": "otonomik semptomların",
+     "hint": ""
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Aşama: Geleceğe yönelik belirsiz tehdit algısı oluşur.",
+      "2. Aşama: Felaketleştirici otomatik düşünceler zihni kaplar.",
+      "3. Aşama: Otonomik uyarılma ve motor kas gerginliği ile YAB tablosu yerleşir."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 1 Klinik Analiz",
+     "items": [
+      {
+       "text": "Yaygın anksiyete bozukluğunda aşırı endişe ve gerginlik temel klinik tablodur.",
+       "isLie": false,
+       "explanation": "Hastalık kontrol edilemeyen süreğen endişe ve motor gerginlikle seyreder."
+      },
+      {
+       "text": "SSRI ve SNRI grubu ilaçlar YAB idamesinde ilk basamak seçenektir.",
+       "isLie": false,
+       "explanation": "Kanıtlanmış etkinlikleri ile rehberlerin ilk önerdiği medikal tedavidir."
+      },
+      {
+       "text": "YAB hastaları endişelerini her zaman saniyeler içinde tamamen yok edebilirler.",
+       "isLie": true,
+       "explanation": "YAB'ın kardinal özelliği hastanın endişeyi kontrol etmekte aşırı güçlük çekmesidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 2,
+   "title": "Yaygın Anksiyete Bozukluğu: Tanım ve Çerçeve",
+   "content": "Yaygın anksiyete bozukluğu belli bir nesneye, yere veya duruma bağlı olmayan aşırı endişe tablosudur. Kişi hayatın hemen her alanında kontrol edilmesi son derece güç olan sürekli bir felaket beklentisi taşır.\n\n- **Serbest Dalgalanan Yapı:** Kaygı tek bir odakla sınırlı kalmayıp konudan konuya atlar.\n- **Kontrol Güçlüğü:** Hasta endişelerini durduramaz ve zihnini sakinleştirmekte yetersiz kalır.\n- **İşlevsellik Kaybı:** Günlük yaşam, mesleki başarı ve sosyal ilişkiler sürekli yıpranır.\n\n> [!IMPORTANT]\n> Endişenin serbest dalgalanması ve kontrol edilememesi YAB'ın en belirgin ayırt edici özelliğidir.",
+   "synthesisNarrative": "Yaygın anksiyete bozukluğu belli bir nesneye, yere veya duruma bağlı olmayan aşırı endişe tablosudur. Kişi hayatın hemen her alanında kontrol edilmesi son derece güç olan sürekli bir felaket beklentisi taşır.\n\n- **Serbest Dalgalanan Yapı:** Kaygı tek bir odakla sınırlı kalmayıp konudan konuya atlar.\n- **Kontrol Güçlüğü:** Hasta endişelerini durduramaz ve zihnini sakinleştirmekte yetersiz kalır.\n- **İşlevsellik Kaybı:** Günlük yaşam, mesleki başarı ve sosyal ilişkiler sürekli yıpranır.\n\n> [!IMPORTANT]\n> Endişenin serbest dalgalanması ve kontrol edilememesi YAB'ın en belirgin ayırt edici özelliğidir.",
+   "pdfSayfalari": [
+    3,
+    3
+   ],
+   "sourcePdf": {
+    "startPage": 3,
+    "endPage": 3
+   },
+   "bolum": "1",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Yaygın anksiyete bozukluğunun kardinal özelliği aşağıdakilerden hangisidir?",
+     "options": [
+      {
+       "text": "Belli bir nesneye bağlı olmayan ve kontrol edilmesi güç aşırı endişe",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Sadece yüksek katlı binalarda ortaya çıkan akrofobi nöbeti",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Yalnızca genel anestezi indüksiyonunda gelişen laringospazm",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Tamamen hastanın istemiyle saniyede durdurulan geçici alışkanlık",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Yaygın anksiyete bozukluğu belli bir nesneye, yere veya duruma bağlı olmayan aşırı endişe tablosudur.",
+     "maskedTerm": "aşırı endişe",
+     "hint": ""
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Klinik Boyut",
+      "Temel Mekanizma",
+      "Yönetim İlkesi"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Bilişsel Alan"
+        },
+        {
+         "text": "Tehdit algısının abartılması",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Kognitif Yeniden Yapılandırma"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Somatik Alan"
+        },
+        {
+         "text": "Kronik motor kas gerginliği",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Progresif Gevşeme Teknikleri"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 2 Klinik Analiz",
+     "items": [
+      {
+       "text": "Yaygın anksiyete bozukluğunda aşırı endişe ve gerginlik temel klinik tablodur.",
+       "isLie": false,
+       "explanation": "Hastalık kontrol edilemeyen süreğen endişe ve motor gerginlikle seyreder."
+      },
+      {
+       "text": "SSRI ve SNRI grubu ilaçlar YAB idamesinde ilk basamak seçenektir.",
+       "isLie": false,
+       "explanation": "Kanıtlanmış etkinlikleri ile rehberlerin ilk önerdiği medikal tedavidir."
+      },
+      {
+       "text": "YAB hastaları endişelerini her zaman saniyeler içinde tamamen yok edebilirler.",
+       "isLie": true,
+       "explanation": "YAB'ın kardinal özelliği hastanın endişeyi kontrol etmekte aşırı güçlük çekmesidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 3,
+   "title": "YAB Epidemiyolojisi ve Risk Etmenleri",
+   "content": "YAB epidemiyolojisinde kadın cinsiyet ve kronik travmatik yaşantılar en güçlü risk etmenleridir. Toplumda yaşam boyu görülme sıklığı yüzde beş civarında olup kadınlarda iki kat sıktır.\n\n- **Çocukluk Çağı Travmaları:** Erken dönemde kötü muamele, ihmal veya kayıplar riski artırır.\n- **Ailevi Yatkınlık:** Birinci derece akrabalarda anksiyete bozukluğu öyküsü genetik yatkınlığı gösterir.\n- **Kronik Stresörler:** Ekonomik zorluklar ve uzun süreli ilişki sorunları alevlenmeleri tetikler.\n\n> [!NOTE]\n> Hastalar çoğunlukla psikiyatriden önce kas ağrıları ve uykusuzlukla dahiliye polikliniklerine başvururlar.",
+   "synthesisNarrative": "YAB epidemiyolojisinde kadın cinsiyet ve kronik travmatik yaşantılar en güçlü risk etmenleridir. Toplumda yaşam boyu görülme sıklığı yüzde beş civarında olup kadınlarda iki kat sıktır.\n\n- **Çocukluk Çağı Travmaları:** Erken dönemde kötü muamele, ihmal veya kayıplar riski artırır.\n- **Ailevi Yatkınlık:** Birinci derece akrabalarda anksiyete bozukluğu öyküsü genetik yatkınlığı gösterir.\n- **Kronik Stresörler:** Ekonomik zorluklar ve uzun süreli ilişki sorunları alevlenmeleri tetikler.\n\n> [!NOTE]\n> Hastalar çoğunlukla psikiyatriden önce kas ağrıları ve uykusuzlukla dahiliye polikliniklerine başvururlar.",
+   "pdfSayfalari": [
+    4,
+    4
+   ],
+   "sourcePdf": {
+    "startPage": 4,
+    "endPage": 4
+   },
+   "bolum": "1",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "YAB epidemiyolojisi ve risk faktörleri ile ilgili hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Kadınlarda iki kat sık görülür ve çocukluk çağı travmaları önemli risk faktörüdür.",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Yalnızca erkeklerde görülür ve hiçbir çocukluk travmasıyla ilişkilenmez.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Toplumda prevalansı sıfır olan teorik bir antitedir.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Sadece 90 yaşından sonra başlayan akut tablodur.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "YAB epidemiyolojisinde kadın cinsiyet ve kronik travmatik yaşantılar en güçlü risk etmenleridir.",
+     "maskedTerm": "risk etmenleridir",
+     "hint": ""
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Klinik Boyut",
+      "Temel Mekanizma",
+      "Yönetim İlkesi"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Bilişsel Alan"
+        },
+        {
+         "text": "Tehdit algısının abartılması",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Kognitif Yeniden Yapılandırma"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Somatik Alan"
+        },
+        {
+         "text": "Kronik motor kas gerginliği",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Progresif Gevşeme Teknikleri"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 3 Klinik Analiz",
+     "items": [
+      {
+       "text": "Yaygın anksiyete bozukluğunda aşırı endişe ve gerginlik temel klinik tablodur.",
+       "isLie": false,
+       "explanation": "Hastalık kontrol edilemeyen süreğen endişe ve motor gerginlikle seyreder."
+      },
+      {
+       "text": "SSRI ve SNRI grubu ilaçlar YAB idamesinde ilk basamak seçenektir.",
+       "isLie": false,
+       "explanation": "Kanıtlanmış etkinlikleri ile rehberlerin ilk önerdiği medikal tedavidir."
+      },
+      {
+       "text": "YAB hastaları endişelerini her zaman saniyeler içinde tamamen yok edebilirler.",
+       "isLie": true,
+       "explanation": "YAB'ın kardinal özelliği hastanın endişeyi kontrol etmekte aşırı güçlük çekmesidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 4,
+   "title": "Nörobiyolojik Etiyoloji: GABA ve Monoaminler",
+   "content": "YAB'ın nörobiyolojik etiyolojisinde santral inhibitör sistem olan GABAerjik iletim yetersizliği kilit rol oynar. Ayrıca serotonerjik ve noradrenerjik disregülasyon anksiyete uyarılmasını artırır.\n\n- **GABA-Benzodiazepin Kompleksi:** Reseptör duyarlılığındaki azalma uyarılabilirlik eşiğini düşürür.\n- **Serotonerjik Sistem:** 5-HT yollarındaki fonksiyon bozukluğu duygulanım kontrolünü bozar.\n- **Noradrenerjik Aşırı Aktivite:** Loküs seruleustan kaynaklanan aşırı uyarılma otonomik semptomları besler.\n\n> [!IMPORTANT]\n> İnhibitör GABA kontrolünün yetersiz kalması beynin sürekli tehdit alarmında çalışmasına yol açar.",
+   "synthesisNarrative": "YAB'ın nörobiyolojik etiyolojisinde santral inhibitör sistem olan GABAerjik iletim yetersizliği kilit rol oynar. Ayrıca serotonerjik ve noradrenerjik disregülasyon anksiyete uyarılmasını artırır.\n\n- **GABA-Benzodiazepin Kompleksi:** Reseptör duyarlılığındaki azalma uyarılabilirlik eşiğini düşürür.\n- **Serotonerjik Sistem:** 5-HT yollarındaki fonksiyon bozukluğu duygulanım kontrolünü bozar.\n- **Noradrenerjik Aşırı Aktivite:** Loküs seruleustan kaynaklanan aşırı uyarılma otonomik semptomları besler.\n\n> [!IMPORTANT]\n> İnhibitör GABA kontrolünün yetersiz kalması beynin sürekli tehdit alarmında çalışmasına yol açar.",
+   "pdfSayfalari": [
+    5,
+    5
+   ],
+   "sourcePdf": {
+    "startPage": 5,
+    "endPage": 5
+   },
+   "bolum": "1",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "YAB etiyolojisinde yer alan majör inhibitör nörotransmitter sistemi hangisidir?",
+     "options": [
+      {
+       "text": "GABA-benzodiazepin reseptör kompleksi",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Yalnızca periferik troponin-tropomiyosin kompleksi",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Sadece pankreatik amilaz ve lipaz salınımı",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Santral tiroid uyarıcı hormon deşarjı",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "YAB'ın nörobiyolojik etiyolojisinde santral inhibitör sistem olan GABAerjik iletim yetersizliği kilit rol oynar.",
+     "maskedTerm": "nörobiyolojik etiyolojisinde",
+     "hint": ""
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Aşama: Geleceğe yönelik belirsiz tehdit algısı oluşur.",
+      "2. Aşama: Felaketleştirici otomatik düşünceler zihni kaplar.",
+      "3. Aşama: Otonomik uyarılma ve motor kas gerginliği ile YAB tablosu yerleşir."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 4 Klinik Analiz",
+     "items": [
+      {
+       "text": "Yaygın anksiyete bozukluğunda aşırı endişe ve gerginlik temel klinik tablodur.",
+       "isLie": false,
+       "explanation": "Hastalık kontrol edilemeyen süreğen endişe ve motor gerginlikle seyreder."
+      },
+      {
+       "text": "SSRI ve SNRI grubu ilaçlar YAB idamesinde ilk basamak seçenektir.",
+       "isLie": false,
+       "explanation": "Kanıtlanmış etkinlikleri ile rehberlerin ilk önerdiği medikal tedavidir."
+      },
+      {
+       "text": "YAB hastaları endişelerini her zaman saniyeler içinde tamamen yok edebilirler.",
+       "isLie": true,
+       "explanation": "YAB'ın kardinal özelliği hastanın endişeyi kontrol etmekte aşırı güçlük çekmesidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 5,
+   "title": "Bilişsel Model: Tehdit Algısı ve Felaketleştirme",
+   "content": "Bilişsel modelde YAB hastalarının dünyayı aşırı tehditkar algıladıkları ve olumsuzlukları büyüttükleri görülür. Hastalar gelecekteki olası tehlikeleri felaketleştirir ve başa çıkma kaynaklarını küçümserler.\n\n- **Tehdit Algısı:** Düşük olasılıklı riskler kesinleşmiş felaketler gibi değerlendirilir.\n- **Olumsuz Otomatik Düşünceler:** 'Ya hastalanırsam', 'Ya kaza olursa' sorgulamaları zihni tüketir.\n- **Endişenin Pekişmesi:** Kişi endişelenmenin kendisini felaketlere karşı koruduğuna inanır.\n\n> [!NOTE]\n> Endişelenme davranışı hastada yalancı bir kontrol hissi yaratarak kısır döngüyü sürdürür.",
+   "synthesisNarrative": "Bilişsel modelde YAB hastalarının dünyayı aşırı tehditkar algıladıkları ve olumsuzlukları büyüttükleri görülür. Hastalar gelecekteki olası tehlikeleri felaketleştirir ve başa çıkma kaynaklarını küçümserler.\n\n- **Tehdit Algısı:** Düşük olasılıklı riskler kesinleşmiş felaketler gibi değerlendirilir.\n- **Olumsuz Otomatik Düşünceler:** 'Ya hastalanırsam', 'Ya kaza olursa' sorgulamaları zihni tüketir.\n- **Endişenin Pekişmesi:** Kişi endişelenmenin kendisini felaketlere karşı koruduğuna inanır.\n\n> [!NOTE]\n> Endişelenme davranışı hastada yalancı bir kontrol hissi yaratarak kısır döngüyü sürdürür.",
+   "pdfSayfalari": [
+    6,
+    6
+   ],
+   "sourcePdf": {
+    "startPage": 6,
+    "endPage": 6
+   },
+   "bolum": "1",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Bilişsel kurama göre YAB'da kaygıyı besleyen kognitif hata hangisidir?",
+     "options": [
+      {
+       "text": "Gelecekteki tehlike olasılıklarının abartılması ve felaketleştirilmesi",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Tüm tehlikelerin tamamen yok sayılarak aşırı kayıtsız kalınması",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Geçmiş hatıraların cerrahi olarak tamamen silinmiş olması",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Sadece manik büyüklük hezeyanları üretilmesi",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Bilişsel modelde YAB hastalarının dünyayı aşırı tehditkar algıladıkları ve olumsuzlukları büyüttükleri görülür.",
+     "maskedTerm": "Bilişsel modelde",
+     "hint": ""
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Klinik Boyut",
+      "Temel Mekanizma",
+      "Yönetim İlkesi"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Bilişsel Alan"
+        },
+        {
+         "text": "Tehdit algısının abartılması",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Kognitif Yeniden Yapılandırma"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Somatik Alan"
+        },
+        {
+         "text": "Kronik motor kas gerginliği",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Progresif Gevşeme Teknikleri"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 5 Klinik Analiz",
+     "items": [
+      {
+       "text": "Yaygın anksiyete bozukluğunda aşırı endişe ve gerginlik temel klinik tablodur.",
+       "isLie": false,
+       "explanation": "Hastalık kontrol edilemeyen süreğen endişe ve motor gerginlikle seyreder."
+      },
+      {
+       "text": "SSRI ve SNRI grubu ilaçlar YAB idamesinde ilk basamak seçenektir.",
+       "isLie": false,
+       "explanation": "Kanıtlanmış etkinlikleri ile rehberlerin ilk önerdiği medikal tedavidir."
+      },
+      {
+       "text": "YAB hastaları endişelerini her zaman saniyeler içinde tamamen yok edebilirler.",
+       "isLie": true,
+       "explanation": "YAB'ın kardinal özelliği hastanın endişeyi kontrol etmekte aşırı güçlük çekmesidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 6,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Tanım ve Etiyoloji",
+   "content": "Bu bölümde yaygın anksiyete bozukluğunun tanımını, risk faktörlerini ve etiyolojik mekanizmalarını inceledik. Serbest dalgalanan kontrolsüz endişe ve GABAerjik yetersizlik temel klinik dayanaklardır.\n\n- **Tanım Özeti:** Nesnesiz, serbest dalgalanan ve kontrol edilemeyen kronik kaygı tablosudur.\n- **Epidemiyoloji Özeti:** Kadınlarda iki kat sıktır; çocukluk kötü muamelesi önemli risk faktörüdür.\n- **Etiyoloji Özeti:** GABA-A yetersizliği, monoamin dengesizliği ve bilişsel felaketleştirme esastır.\n\n> [!IMPORTANT]\n> Şimdi bu kazanımları pekiştirmek için aşağıdaki klinik değerlendirme adımlarını tamamlayınız.",
+   "synthesisNarrative": "Bu bölümde yaygın anksiyete bozukluğunun tanımını, risk faktörlerini ve etiyolojik mekanizmalarını inceledik. Serbest dalgalanan kontrolsüz endişe ve GABAerjik yetersizlik temel klinik dayanaklardır.\n\n- **Tanım Özeti:** Nesnesiz, serbest dalgalanan ve kontrol edilemeyen kronik kaygı tablosudur.\n- **Epidemiyoloji Özeti:** Kadınlarda iki kat sıktır; çocukluk kötü muamelesi önemli risk faktörüdür.\n- **Etiyoloji Özeti:** GABA-A yetersizliği, monoamin dengesizliği ve bilişsel felaketleştirme esastır.\n\n> [!IMPORTANT]\n> Şimdi bu kazanımları pekiştirmek için aşağıdaki klinik değerlendirme adımlarını tamamlayınız.",
+   "isCheckpoint": true,
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "YAB'ı diğer fobilere kıyasla ayıran en temel klinik dinamik nedir?",
+     "options": [
+      {
+       "text": "Kaygının serbest dalgalanması ve belirli tek bir nesneye bağlı olmaması",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Hiçbir zaman endişe veya huzursuzluk oluşturmaması",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Yalnızca uyku esnasında ortaya çıkıp uyanınca bitmesi",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Sadece kan görünce bayılma oluşturması",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Bu bölümde yaygın anksiyete bozukluğunun tanımını, risk faktörlerini ve etiyolojik mekanizmalarını inceledik.",
+     "maskedTerm": "etiyolojik mekanizmalarını",
+     "hint": ""
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Tanı Kriterleri",
+     "rightCategory": "Klinik Özellikler",
+     "cards": [
+      {
+       "text": "En az 6 ay süren kontrolsüz aşırı endişe",
+       "category": "left"
+      },
+      {
+       "text": "Kaş çatma ve inatçı kronik kas spazmları",
+       "category": "right"
+      },
+      {
+       "text": "Tanımlanan 6 kardinal belirtiden en az üçü",
+       "category": "left"
+      },
+      {
+       "text": "Yakınlarının başına kaza geleceği korkusu",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 6 Klinik Analiz",
+     "items": [
+      {
+       "text": "Yaygın anksiyete bozukluğunda aşırı endişe ve gerginlik temel klinik tablodur.",
+       "isLie": false,
+       "explanation": "Hastalık kontrol edilemeyen süreğen endişe ve motor gerginlikle seyreder."
+      },
+      {
+       "text": "SSRI ve SNRI grubu ilaçlar YAB idamesinde ilk basamak seçenektir.",
+       "isLie": false,
+       "explanation": "Kanıtlanmış etkinlikleri ile rehberlerin ilk önerdiği medikal tedavidir."
+      },
+      {
+       "text": "YAB hastaları endişelerini her zaman saniyeler içinde tamamen yok edebilirler.",
+       "isLie": true,
+       "explanation": "YAB'ın kardinal özelliği hastanın endişeyi kontrol etmekte aşırı güçlük çekmesidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 7,
+   "title": "YAB Genel Görünüm ve Motor Gerginlik Bulguları",
+   "content": "YAB hastalarının genel görünümünde kronik motor gerginlik ve huzursuzluk derhal göze çarpar. Hasta otururken yerinde duramaz, sürekli kıpırdanır ve yüz ifadesinde kaş çatması belirgindir.\n\n- **Motor Huzursuzluk:** Diken üstünde oturma hissi ve gevşeyememe hakimdir.\n- **Kas Ağrıları:** Özellikle boyun, sırt ve omuz kaslarında inatçı gerginlik ve spazm mevcuttur.\n- **Fiziksel Yorgunluk:** Sürekli kas kasılması gün sonunda hastayı bitkin ve tükenmiş bırakır.\n\n> [!NOTE]\n> Kronik kas gerginliği YAB'ın en sık görülen ve en inatçı bedensel yakınmasıdır.",
+   "synthesisNarrative": "YAB hastalarının genel görünümünde kronik motor gerginlik ve huzursuzluk derhal göze çarpar. Hasta otururken yerinde duramaz, sürekli kıpırdanır ve yüz ifadesinde kaş çatması belirgindir.\n\n- **Motor Huzursuzluk:** Diken üstünde oturma hissi ve gevşeyememe hakimdir.\n- **Kas Ağrıları:** Özellikle boyun, sırt ve omuz kaslarında inatçı gerginlik ve spazm mevcuttur.\n- **Fiziksel Yorgunluk:** Sürekli kas kasılması gün sonunda hastayı bitkin ve tükenmiş bırakır.\n\n> [!NOTE]\n> Kronik kas gerginliği YAB'ın en sık görülen ve en inatçı bedensel yakınmasıdır.",
+   "pdfSayfalari": [
+    7,
+    7
+   ],
+   "sourcePdf": {
+    "startPage": 7,
+    "endPage": 7
+   },
+   "bolum": "2",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "YAB muayenesinde en sık saptanan karakteristik fiziksel bulgu hangisidir?",
+     "options": [
+      {
+       "text": "Kronik motor kas gerginliği ve huzursuzluk",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Flask motor paralizi ve derin tendon refleks kaybı",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Yalnızca tek taraflı patolojik Babinski yanıtı",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Göz küresinde masif kornea opasitesi",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "YAB hastalarının genel görünümünde kronik motor gerginlik ve huzursuzluk derhal göze çarpar.",
+     "maskedTerm": "kronik motor gerginlik",
+     "hint": ""
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Aşama: Geleceğe yönelik belirsiz tehdit algısı oluşur.",
+      "2. Aşama: Felaketleştirici otomatik düşünceler zihni kaplar.",
+      "3. Aşama: Otonomik uyarılma ve motor kas gerginliği ile YAB tablosu yerleşir."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 7 Klinik Analiz",
+     "items": [
+      {
+       "text": "Yaygın anksiyete bozukluğunda aşırı endişe ve gerginlik temel klinik tablodur.",
+       "isLie": false,
+       "explanation": "Hastalık kontrol edilemeyen süreğen endişe ve motor gerginlikle seyreder."
+      },
+      {
+       "text": "SSRI ve SNRI grubu ilaçlar YAB idamesinde ilk basamak seçenektir.",
+       "isLie": false,
+       "explanation": "Kanıtlanmış etkinlikleri ile rehberlerin ilk önerdiği medikal tedavidir."
+      },
+      {
+       "text": "YAB hastaları endişelerini her zaman saniyeler içinde tamamen yok edebilirler.",
+       "isLie": true,
+       "explanation": "YAB'ın kardinal özelliği hastanın endişeyi kontrol etmekte aşırı güçlük çekmesidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 8,
+   "title": "Düşünce İçeriği: Yakınlar İçin Katastrofik Endişe",
+   "content": "YAB hastasının düşünce içeriğinde en baskın tema aile bireylerinin başına felaket geleceği korkusudur. Yakınları birkaç dakika geciktiğinde bile kaza veya ölüm senaryoları kurgulanır.\n\n- **Aile Odaklı Endişe:** Çocuklarının sağlığı ve eşinin güvenliği sürekli sorgulanır.\n- **Katastrofik İçerik:** 'Acaba anneme bir şey mi oldu' endişesi zihinden atılamaz.\n- **Ruminatif Döngü:** Mantıksal güvenceler hastayı yalnızca çok kısa bir süre rahatlatır.\n\n> [!IMPORTANT]\n> Yakınlarının güvenliğiyle ilgili aşırı felaket beklentisi YAB düşünce içeriğinin kardinal işaretidir.",
+   "synthesisNarrative": "YAB hastasının düşünce içeriğinde en baskın tema aile bireylerinin başına felaket geleceği korkusudur. Yakınları birkaç dakika geciktiğinde bile kaza veya ölüm senaryoları kurgulanır.\n\n- **Aile Odaklı Endişe:** Çocuklarının sağlığı ve eşinin güvenliği sürekli sorgulanır.\n- **Katastrofik İçerik:** 'Acaba anneme bir şey mi oldu' endişesi zihinden atılamaz.\n- **Ruminatif Döngü:** Mantıksal güvenceler hastayı yalnızca çok kısa bir süre rahatlatır.\n\n> [!IMPORTANT]\n> Yakınlarının güvenliğiyle ilgili aşırı felaket beklentisi YAB düşünce içeriğinin kardinal işaretidir.",
+   "pdfSayfalari": [
+    8,
+    8
+   ],
+   "sourcePdf": {
+    "startPage": 8,
+    "endPage": 8
+   },
+   "bolum": "2",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "YAB hastasının düşünce içeriğinde en sık tekrarlayan felaket beklentisi hangisidir?",
+     "options": [
+      {
+       "text": "Aile bireylerinin ve sevdiklerinin başına kaza veya felaket geleceği korkusu",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Kendi bedeninin tamamen porselene dönüştüğü hezeyanı",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Tüm dünya dillerini doğuştan bildiği inancı",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Yalnızca çift sayılardan dolayı zehirleneceği sanrısı",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "YAB hastasının düşünce içeriğinde en baskın tema aile bireylerinin başına felaket geleceği korkusudur.",
+     "maskedTerm": "felaket geleceği korkusudur",
+     "hint": ""
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Klinik Boyut",
+      "Temel Mekanizma",
+      "Yönetim İlkesi"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Bilişsel Alan"
+        },
+        {
+         "text": "Tehdit algısının abartılması",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Kognitif Yeniden Yapılandırma"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Somatik Alan"
+        },
+        {
+         "text": "Kronik motor kas gerginliği",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Progresif Gevşeme Teknikleri"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 8 Klinik Analiz",
+     "items": [
+      {
+       "text": "Yaygın anksiyete bozukluğunda aşırı endişe ve gerginlik temel klinik tablodur.",
+       "isLie": false,
+       "explanation": "Hastalık kontrol edilemeyen süreğen endişe ve motor gerginlikle seyreder."
+      },
+      {
+       "text": "SSRI ve SNRI grubu ilaçlar YAB idamesinde ilk basamak seçenektir.",
+       "isLie": false,
+       "explanation": "Kanıtlanmış etkinlikleri ile rehberlerin ilk önerdiği medikal tedavidir."
+      },
+      {
+       "text": "YAB hastaları endişelerini her zaman saniyeler içinde tamamen yok edebilirler.",
+       "isLie": true,
+       "explanation": "YAB'ın kardinal özelliği hastanın endişeyi kontrol etmekte aşırı güçlük çekmesidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 9,
+   "title": "Düşünce Süreci ve Heyecanlı Konuşma Tarzı",
+   "content": "Klinik görüşmede YAB hastası yakınmalarını büyük bir heyecan, telaş ve sabırsızlıkla aktarır. Konuşma akışında zihindeki kontrolsüz endişelerin ve aceleciliğin izleri belirgindir.\n\n- **Konuşma Tarzı:** Hızlı, gergin ve sürekli yardım arayışını yansıtan bir tonlama görülür.\n- **İçgörü:** Hasta endişelerinin aşırı olduğunu bilse dahi durduramadığını çaresizlikle ifade eder.\n- **Duygulanım:** Anksiyöz, gergin ve kolay irkilen bir emosyonel durum sergilenir.\n\n> [!NOTE]\n> Hastanın sabırsız ve telaşlı iletişim tarzı içsel gerginliğin dışa vurumudur.",
+   "synthesisNarrative": "Klinik görüşmede YAB hastası yakınmalarını büyük bir heyecan, telaş ve sabırsızlıkla aktarır. Konuşma akışında zihindeki kontrolsüz endişelerin ve aceleciliğin izleri belirgindir.\n\n- **Konuşma Tarzı:** Hızlı, gergin ve sürekli yardım arayışını yansıtan bir tonlama görülür.\n- **İçgörü:** Hasta endişelerinin aşırı olduğunu bilse dahi durduramadığını çaresizlikle ifade eder.\n- **Duygulanım:** Anksiyöz, gergin ve kolay irkilen bir emosyonel durum sergilenir.\n\n> [!NOTE]\n> Hastanın sabırsız ve telaşlı iletişim tarzı içsel gerginliğin dışa vurumudur.",
+   "pdfSayfalari": [
+    9,
+    9
+   ],
+   "sourcePdf": {
+    "startPage": 9,
+    "endPage": 9
+   },
+   "bolum": "2",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "YAB hastasının görüşmedeki konuşma ve ilişki kurma tarzı tipik olarak nasıldır?",
+     "options": [
+      {
+       "text": "Yakınmalarını büyük bir telaş, heyecan ve sabırsızlıkla aktarma",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Saatlerce tek bir kelime dahi konuşmama ve mutizm",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Yalnızca hezeyanlı yabancı dilde anlamsız sesler çıkarma",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Fikir uçuşmalarıyla giden taşkın manik öfori",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Klinik görüşmede YAB hastası yakınmalarını büyük bir heyecan, telaş ve sabırsızlıkla aktarır.",
+     "maskedTerm": "büyük bir heyecan",
+     "hint": ""
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Klinik Boyut",
+      "Temel Mekanizma",
+      "Yönetim İlkesi"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Bilişsel Alan"
+        },
+        {
+         "text": "Tehdit algısının abartılması",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Kognitif Yeniden Yapılandırma"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Somatik Alan"
+        },
+        {
+         "text": "Kronik motor kas gerginliği",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Progresif Gevşeme Teknikleri"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 9 Klinik Analiz",
+     "items": [
+      {
+       "text": "Yaygın anksiyete bozukluğunda aşırı endişe ve gerginlik temel klinik tablodur.",
+       "isLie": false,
+       "explanation": "Hastalık kontrol edilemeyen süreğen endişe ve motor gerginlikle seyreder."
+      },
+      {
+       "text": "SSRI ve SNRI grubu ilaçlar YAB idamesinde ilk basamak seçenektir.",
+       "isLie": false,
+       "explanation": "Kanıtlanmış etkinlikleri ile rehberlerin ilk önerdiği medikal tedavidir."
+      },
+      {
+       "text": "YAB hastaları endişelerini her zaman saniyeler içinde tamamen yok edebilirler.",
+       "isLie": true,
+       "explanation": "YAB'ın kardinal özelliği hastanın endişeyi kontrol etmekte aşırı güçlük çekmesidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 10,
+   "title": "DSM-5 Tanı Kriterleri: Süre ve Kontrol Güçlüğü",
+   "content": "DSM-5 tanı kriterlerine göre YAB tanısı için en az 6 ay süreyle aşırı kaygı ve endişe bulunmalıdır. Bu kaygı günlerin çoğunda birden çok olay hakkında hissedilmeli ve kontrol edilememelidir.\n\n- **Zaman Kriteri:** En az altı ay süren süreğen endişe varlığı zorunludur.\n- **Kapsam Kriteri:** İş, okul, sağlık veya aile gibi farklı yaşam alanlarını kapsamalıdır.\n- **Kontrol Güçlüğü:** Kişi endişesini denetlemekte ve sakinleşmekte belirgin güçlük çeker.\n\n> [!IMPORTANT]\n> DSM-5'e göre en az 6 ay süren kontrol edilemeyen aşırı endişe YAB'ın temel tanı koşuludur.",
+   "synthesisNarrative": "DSM-5 tanı kriterlerine göre YAB tanısı için en az 6 ay süreyle aşırı kaygı ve endişe bulunmalıdır. Bu kaygı günlerin çoğunda birden çok olay hakkında hissedilmeli ve kontrol edilememelidir.\n\n- **Zaman Kriteri:** En az altı ay süren süreğen endişe varlığı zorunludur.\n- **Kapsam Kriteri:** İş, okul, sağlık veya aile gibi farklı yaşam alanlarını kapsamalıdır.\n- **Kontrol Güçlüğü:** Kişi endişesini denetlemekte ve sakinleşmekte belirgin güçlük çeker.\n\n> [!IMPORTANT]\n> DSM-5'e göre en az 6 ay süren kontrol edilemeyen aşırı endişe YAB'ın temel tanı koşuludur.",
+   "pdfSayfalari": [
+    10,
+    10
+   ],
+   "sourcePdf": {
+    "startPage": 10,
+    "endPage": 10
+   },
+   "bolum": "2",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "DSM-5'e göre YAB tanısı için aşırı endişe en az ne kadar sürmelidir?",
+     "options": [
+      {
+       "text": "En az 6 ay boyunca günlerin çoğunda",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Yalnızca 2 gün boyunca aralıksız",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "En az 15 yıl boyunca hiç kesilmeden",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Herhangi bir süre kuralı yoktur 1 saat yeterlidir",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "DSM-5 tanı kriterlerine göre YAB tanısı için en az 6 ay süreyle aşırı kaygı ve endişe bulunmalıdır.",
+     "maskedTerm": "en az 6 ay süreyle",
+     "hint": ""
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Aşama: Geleceğe yönelik belirsiz tehdit algısı oluşur.",
+      "2. Aşama: Felaketleştirici otomatik düşünceler zihni kaplar.",
+      "3. Aşama: Otonomik uyarılma ve motor kas gerginliği ile YAB tablosu yerleşir."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 10 Klinik Analiz",
+     "items": [
+      {
+       "text": "Yaygın anksiyete bozukluğunda aşırı endişe ve gerginlik temel klinik tablodur.",
+       "isLie": false,
+       "explanation": "Hastalık kontrol edilemeyen süreğen endişe ve motor gerginlikle seyreder."
+      },
+      {
+       "text": "SSRI ve SNRI grubu ilaçlar YAB idamesinde ilk basamak seçenektir.",
+       "isLie": false,
+       "explanation": "Kanıtlanmış etkinlikleri ile rehberlerin ilk önerdiği medikal tedavidir."
+      },
+      {
+       "text": "YAB hastaları endişelerini her zaman saniyeler içinde tamamen yok edebilirler.",
+       "isLie": true,
+       "explanation": "YAB'ın kardinal özelliği hastanın endişeyi kontrol etmekte aşırı güçlük çekmesidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 11,
+   "title": "DSM-5 Kardinal Semptom Kümesi ve Klinik Değerlendirme",
+   "content": "DSM-5 tanı sisteminde YAB için tanımlanan altı kardinal semptomdan en az üçü mevcudiyet göstermelidir. Bu semptomlar motor gerginlik, zihinsel tükenme ve otonomik dengesizliği yansıtır.\n\n- **Tanımlanan Altı Belirti:** Huzursuzluk, kolay yorulma, odaklanma güçlüğü, irritabilite, kas gerginliği ve uykusuzluktur.\n- **Tanı Eşiği:** Erişkinlerde en az 3 belirti aranırken çocuklarda tek bir belirti yeterlidir.\n- **Uyku Bozukluğu:** Özellikle uykuya dalmakta güçlük ve huzursuz dinlendirmeyen uyku karakteristiktir.\n\n> [!NOTE]\n> Bu belirtiler klinik olarak belirgin sıkıntıya ve mesleki işlevsellik kaybına yol açmalıdır.",
+   "synthesisNarrative": "DSM-5 tanı sisteminde YAB için tanımlanan altı kardinal semptomdan en az üçü mevcudiyet göstermelidir. Bu semptomlar motor gerginlik, zihinsel tükenme ve otonomik dengesizliği yansıtır.\n\n- **Tanımlanan Altı Belirti:** Huzursuzluk, kolay yorulma, odaklanma güçlüğü, irritabilite, kas gerginliği ve uykusuzluktur.\n- **Tanı Eşiği:** Erişkinlerde en az 3 belirti aranırken çocuklarda tek bir belirti yeterlidir.\n- **Uyku Bozukluğu:** Özellikle uykuya dalmakta güçlük ve huzursuz dinlendirmeyen uyku karakteristiktir.\n\n> [!NOTE]\n> Bu belirtiler klinik olarak belirgin sıkıntıya ve mesleki işlevsellik kaybına yol açmalıdır.",
+   "pdfSayfalari": [
+    11,
+    11
+   ],
+   "sourcePdf": {
+    "startPage": 11,
+    "endPage": 11
+   },
+   "bolum": "2",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "DSM-5 YAB kardinal semptom listesinde aşağıdakilerden hangisi yer alır?",
+     "options": [
+      {
+       "text": "Kas gerginliği, kolay yorulma ve uyku bozukluğu",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Yaygın jeneralize koreoatetotik hareketler",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Sadece ani başlayan geçici global amnezi",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Kalıcı bilateral sensörinöral işitme kaybı",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "DSM-5 tanı sisteminde YAB için tanımlanan altı kardinal semptomdan en az üçü mevcudiyet göstermelidir.",
+     "maskedTerm": "altı kardinal semptomdan",
+     "hint": ""
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Klinik Boyut",
+      "Temel Mekanizma",
+      "Yönetim İlkesi"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Bilişsel Alan"
+        },
+        {
+         "text": "Tehdit algısının abartılması",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Kognitif Yeniden Yapılandırma"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Somatik Alan"
+        },
+        {
+         "text": "Kronik motor kas gerginliği",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Progresif Gevşeme Teknikleri"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 11 Klinik Analiz",
+     "items": [
+      {
+       "text": "Yaygın anksiyete bozukluğunda aşırı endişe ve gerginlik temel klinik tablodur.",
+       "isLie": false,
+       "explanation": "Hastalık kontrol edilemeyen süreğen endişe ve motor gerginlikle seyreder."
+      },
+      {
+       "text": "SSRI ve SNRI grubu ilaçlar YAB idamesinde ilk basamak seçenektir.",
+       "isLie": false,
+       "explanation": "Kanıtlanmış etkinlikleri ile rehberlerin ilk önerdiği medikal tedavidir."
+      },
+      {
+       "text": "YAB hastaları endişelerini her zaman saniyeler içinde tamamen yok edebilirler.",
+       "isLie": true,
+       "explanation": "YAB'ın kardinal özelliği hastanın endişeyi kontrol etmekte aşırı güçlük çekmesidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 12,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Kliniği ve Tanı Ölçütleri",
+   "content": "Bu bölümde YAB'ın genel klinik görünümünü, motor gerginlik bulgularını ve DSM-5 tanı kriterlerini işledik. En az 6 ay süre ve altı semptomdan en az üçünün varlığı temel tanısal standardı oluşturur.\n\n- **Klinik Görünüm:** Kaş çatma, yerinde duramama ve kronik inatçı kas spazmları hakimdir.\n- **Düşünce İçeriği:** Sevdiklerinin başına kaza veya felaket geleceği yönünde aşırı kaygıdır.\n- **Tanı Kriteri:** En az altı ay süren kontrol edilemeyen endişe ve en az 3 kardinal belirtidir.\n\n> [!IMPORTANT]\n> Tanı kriterlerini klinik olgular üzerinde pekiştirmek için aşağıdaki soruları yanıtlayınız.",
+   "synthesisNarrative": "Bu bölümde YAB'ın genel klinik görünümünü, motor gerginlik bulgularını ve DSM-5 tanı kriterlerini işledik. En az 6 ay süre ve altı semptomdan en az üçünün varlığı temel tanısal standardı oluşturur.\n\n- **Klinik Görünüm:** Kaş çatma, yerinde duramama ve kronik inatçı kas spazmları hakimdir.\n- **Düşünce İçeriği:** Sevdiklerinin başına kaza veya felaket geleceği yönünde aşırı kaygıdır.\n- **Tanı Kriteri:** En az altı ay süren kontrol edilemeyen endişe ve en az 3 kardinal belirtidir.\n\n> [!IMPORTANT]\n> Tanı kriterlerini klinik olgular üzerinde pekiştirmek için aşağıdaki soruları yanıtlayınız.",
+   "isCheckpoint": true,
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "YAB tanı ölçütlerinde erişkinlerde aranan minimum semptom sayısı kaçtır?",
+     "options": [
+      {
+       "text": "Tanımlanan 6 belirtiden en az 3 tanesi",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Tanımlanan tüm belirtilerin eksiksiz bulunması",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Sadece 1 belirtinin bulunması yeterlidir",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Hiçbir belirti aranmaz yalnız endişe yeterlidir",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Bu bölümde YAB'ın genel klinik görünümünü, motor gerginlik bulgularını ve DSM-5 tanı kriterlerini işledik.",
+     "maskedTerm": "genel klinik görünümünü",
+     "hint": ""
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Tanı Kriterleri",
+     "rightCategory": "Klinik Özellikler",
+     "cards": [
+      {
+       "text": "En az 6 ay süren kontrolsüz aşırı endişe",
+       "category": "left"
+      },
+      {
+       "text": "Kaş çatma ve inatçı kronik kas spazmları",
+       "category": "right"
+      },
+      {
+       "text": "Tanımlanan 6 kardinal belirtiden en az üçü",
+       "category": "left"
+      },
+      {
+       "text": "Yakınlarının başına kaza geleceği korkusu",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 12 Klinik Analiz",
+     "items": [
+      {
+       "text": "Yaygın anksiyete bozukluğunda aşırı endişe ve gerginlik temel klinik tablodur.",
+       "isLie": false,
+       "explanation": "Hastalık kontrol edilemeyen süreğen endişe ve motor gerginlikle seyreder."
+      },
+      {
+       "text": "SSRI ve SNRI grubu ilaçlar YAB idamesinde ilk basamak seçenektir.",
+       "isLie": false,
+       "explanation": "Kanıtlanmış etkinlikleri ile rehberlerin ilk önerdiği medikal tedavidir."
+      },
+      {
+       "text": "YAB hastaları endişelerini her zaman saniyeler içinde tamamen yok edebilirler.",
+       "isLie": true,
+       "explanation": "YAB'ın kardinal özelliği hastanın endişeyi kontrol etmekte aşırı güçlük çekmesidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 13,
+   "title": "YAB Organik Ayırıcı Tanısı: Kardiyak ve Solunumsal Nedenler",
+   "content": "YAB tanısı konulmadan önce anksiyete semptomlarını birebir taklit edebilecek organik nedenler dışlanmalıdır. Özellikle kardiyak aritmiler ve solunumsal hipoksi tabloları titizlikle taranmalıdır.\n\n- **Kardiyovasküler Nedenler:** Paroksismal supraventriküler taşikardi ve koroner arter hastalığı dışlanmalıdır.\n- **Pulmoner Nedenler:** KOAH, bronşial astım ve pulmoner emboli hava açlığı yaparak kaygı yaratır.\n- **Madde ve Kafein:** Aşırı kahve, enerji içeceği tüketimi veya sempatomimetik ilaçlar sorgulanmalıdır.\n\n> [!NOTE]\n> Organik ayırıcı tanı için temel fizik muayene ve elektrokardiyografi incelemesi yapılmalıdır.",
+   "synthesisNarrative": "YAB tanısı konulmadan önce anksiyete semptomlarını birebir taklit edebilecek organik nedenler dışlanmalıdır. Özellikle kardiyak aritmiler ve solunumsal hipoksi tabloları titizlikle taranmalıdır.\n\n- **Kardiyovasküler Nedenler:** Paroksismal supraventriküler taşikardi ve koroner arter hastalığı dışlanmalıdır.\n- **Pulmoner Nedenler:** KOAH, bronşial astım ve pulmoner emboli hava açlığı yaparak kaygı yaratır.\n- **Madde ve Kafein:** Aşırı kahve, enerji içeceği tüketimi veya sempatomimetik ilaçlar sorgulanmalıdır.\n\n> [!NOTE]\n> Organik ayırıcı tanı için temel fizik muayene ve elektrokardiyografi incelemesi yapılmalıdır.",
+   "pdfSayfalari": [
+    12,
+    12
+   ],
+   "sourcePdf": {
+    "startPage": 12,
+    "endPage": 12
+   },
+   "bolum": "3",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Taşikardi ve dispne ile gelen bir hastada YAB'dan önce dışlanması gereken organik durum hangisidir?",
+     "options": [
+      {
+       "text": "Paroksismal supraventriküler aritmiler ve KOAH alevlenmesi",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Yalnızca asemptomatik tırnak mantarı enfeksiyonu",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Primer konjenital katarakt tablosu",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Sadece hafif eksternal otit enflamasyonu",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "YAB tanısı konulmadan önce anksiyete semptomlarını birebir taklit edebilecek organik nedenler dışlanmalıdır.",
+     "maskedTerm": "organik nedenler dışlanmalıdır",
+     "hint": ""
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Aşama: Geleceğe yönelik belirsiz tehdit algısı oluşur.",
+      "2. Aşama: Felaketleştirici otomatik düşünceler zihni kaplar.",
+      "3. Aşama: Otonomik uyarılma ve motor kas gerginliği ile YAB tablosu yerleşir."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 13 Klinik Analiz",
+     "items": [
+      {
+       "text": "Yaygın anksiyete bozukluğunda aşırı endişe ve gerginlik temel klinik tablodur.",
+       "isLie": false,
+       "explanation": "Hastalık kontrol edilemeyen süreğen endişe ve motor gerginlikle seyreder."
+      },
+      {
+       "text": "SSRI ve SNRI grubu ilaçlar YAB idamesinde ilk basamak seçenektir.",
+       "isLie": false,
+       "explanation": "Kanıtlanmış etkinlikleri ile rehberlerin ilk önerdiği medikal tedavidir."
+      },
+      {
+       "text": "YAB hastaları endişelerini her zaman saniyeler içinde tamamen yok edebilirler.",
+       "isLie": true,
+       "explanation": "YAB'ın kardinal özelliği hastanın endişeyi kontrol etmekte aşırı güçlük çekmesidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 14,
+   "title": "Endokrin ve Metabolik Patolojilerle Ayırıcı Tanı",
+   "content": "Endokrin ve metabolik bozukluklar sempatik sinir sistemini kamçılayarak YAB benzeri tablolar oluşturabilir. Tirotoksikoz ve adrenal medülla tümörleri ayırıcı tanıda mutlaka akılda tutulmalıdır.\n\n- **Hipertiroidi:** Kilo kaybı, terleme ve taşikardi ile YAB'ın en sık organik taklitçisidir.\n- **Feokromositoma:** Paroksismal katekolamin deşarjıyla hipertansiyon ve anksiyete krizleri yapar.\n- **Hipoglisemi ve Cushing:** Glukoz dalgalanmaları ve hiperkortizolemi huzursuzluğu tetikler.\n\n> [!IMPORTANT]\n> Serbest T4 ve TSH düzeyleri her yeni anksiyete olgusunda rutin olarak değerlendirilmelidir.",
+   "synthesisNarrative": "Endokrin ve metabolik bozukluklar sempatik sinir sistemini kamçılayarak YAB benzeri tablolar oluşturabilir. Tirotoksikoz ve adrenal medülla tümörleri ayırıcı tanıda mutlaka akılda tutulmalıdır.\n\n- **Hipertiroidi:** Kilo kaybı, terleme ve taşikardi ile YAB'ın en sık organik taklitçisidir.\n- **Feokromositoma:** Paroksismal katekolamin deşarjıyla hipertansiyon ve anksiyete krizleri yapar.\n- **Hipoglisemi ve Cushing:** Glukoz dalgalanmaları ve hiperkortizolemi huzursuzluğu tetikler.\n\n> [!IMPORTANT]\n> Serbest T4 ve TSH düzeyleri her yeni anksiyete olgusunda rutin olarak değerlendirilmelidir.",
+   "pdfSayfalari": [
+    13,
+    13
+   ],
+   "sourcePdf": {
+    "startPage": 13,
+    "endPage": 13
+   },
+   "bolum": "3",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Hipertansiyon ve terleme atakları yapan, YAB ayırıcı tanısındaki adrenal tümör hangisidir?",
+     "options": [
+      {
+       "text": "Feokromositoma (katekolamin üreten tümör)",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Primer prolaktin salgılayan adenom",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Medüller tiroid karsinomu foliküler tipi",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Benign prostat hiperplazisi adenomu",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Endokrin ve metabolik bozukluklar sempatik sinir sistemini kamçılayarak YAB benzeri tablolar oluşturabilir.",
+     "maskedTerm": "Endokrin ve metabolik",
+     "hint": ""
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Klinik Boyut",
+      "Temel Mekanizma",
+      "Yönetim İlkesi"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Bilişsel Alan"
+        },
+        {
+         "text": "Tehdit algısının abartılması",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Kognitif Yeniden Yapılandırma"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Somatik Alan"
+        },
+        {
+         "text": "Kronik motor kas gerginliği",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Progresif Gevşeme Teknikleri"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 14 Klinik Analiz",
+     "items": [
+      {
+       "text": "Yaygın anksiyete bozukluğunda aşırı endişe ve gerginlik temel klinik tablodur.",
+       "isLie": false,
+       "explanation": "Hastalık kontrol edilemeyen süreğen endişe ve motor gerginlikle seyreder."
+      },
+      {
+       "text": "SSRI ve SNRI grubu ilaçlar YAB idamesinde ilk basamak seçenektir.",
+       "isLie": false,
+       "explanation": "Kanıtlanmış etkinlikleri ile rehberlerin ilk önerdiği medikal tedavidir."
+      },
+      {
+       "text": "YAB hastaları endişelerini her zaman saniyeler içinde tamamen yok edebilirler.",
+       "isLie": true,
+       "explanation": "YAB'ın kardinal özelliği hastanın endişeyi kontrol etmekte aşırı güçlük çekmesidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 15,
+   "title": "Psikiyatrik Bozukluklarla Ayırıcı Tanı",
+   "content": "YAB'ın psikiyatrik ayırıcı tanısında panik bozukluk, majör depresyon ve uyum bozukluğu öne çıkar. Klinik tablonun başlangıç şekli ve kaygının süresi ayırıcı tanıda yol göstericidir.\n\n- **Panik Bozukluk Ayrımı:** Panik bozuklukta paroksismal akut nöbetler varken YAB'da süreğen dalgalı kaygı vardır.\n- **Uyum Bozukluğu:** Belirgin bir psikososyal stresörü izleyen ilk 3 ayda başlar ve 6 ayı geçmez.\n- **Majör Depresyon:** Çökkün duygudurum ve anhedoni temeldir; YAB ile yüksek oranda komorbid seyreder.\n\n> [!NOTE]\n> Kaygının paroksismal kriz mi yoksa sürekli arka plan endişesi mi olduğu dikkatle ayrılmalıdır.",
+   "synthesisNarrative": "YAB'ın psikiyatrik ayırıcı tanısında panik bozukluk, majör depresyon ve uyum bozukluğu öne çıkar. Klinik tablonun başlangıç şekli ve kaygının süresi ayırıcı tanıda yol göstericidir.\n\n- **Panik Bozukluk Ayrımı:** Panik bozuklukta paroksismal akut nöbetler varken YAB'da süreğen dalgalı kaygı vardır.\n- **Uyum Bozukluğu:** Belirgin bir psikososyal stresörü izleyen ilk 3 ayda başlar ve 6 ayı geçmez.\n- **Majör Depresyon:** Çökkün duygudurum ve anhedoni temeldir; YAB ile yüksek oranda komorbid seyreder.\n\n> [!NOTE]\n> Kaygının paroksismal kriz mi yoksa sürekli arka plan endişesi mi olduğu dikkatle ayrılmalıdır.",
+   "pdfSayfalari": [
+    14,
+    14
+   ],
+   "sourcePdf": {
+    "startPage": 14,
+    "endPage": 14
+   },
+   "bolum": "3",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "YAB ile panik bozukluğun ayırıcı tanısındaki temel zamansal fark nedir?",
+     "options": [
+      {
+       "text": "YAB'da süreğen dalgalı endişe varken panik bozuklukta paroksismal akut ataklar vardır.",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "YAB'da hiçbir zaman endişe görülmezken panikte görülür.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Panik bozuklukta hastalar daima çok sakindir.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "YAB yalnızca bebeklikte teşhis edilir.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "YAB'ın psikiyatrik ayırıcı tanısında panik bozukluk, majör depresyon ve uyum bozukluğu öne çıkar.",
+     "maskedTerm": "psikiyatrik ayırıcı tanısında",
+     "hint": ""
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Klinik Boyut",
+      "Temel Mekanizma",
+      "Yönetim İlkesi"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Bilişsel Alan"
+        },
+        {
+         "text": "Tehdit algısının abartılması",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Kognitif Yeniden Yapılandırma"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Somatik Alan"
+        },
+        {
+         "text": "Kronik motor kas gerginliği",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Progresif Gevşeme Teknikleri"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 15 Klinik Analiz",
+     "items": [
+      {
+       "text": "Yaygın anksiyete bozukluğunda aşırı endişe ve gerginlik temel klinik tablodur.",
+       "isLie": false,
+       "explanation": "Hastalık kontrol edilemeyen süreğen endişe ve motor gerginlikle seyreder."
+      },
+      {
+       "text": "SSRI ve SNRI grubu ilaçlar YAB idamesinde ilk basamak seçenektir.",
+       "isLie": false,
+       "explanation": "Kanıtlanmış etkinlikleri ile rehberlerin ilk önerdiği medikal tedavidir."
+      },
+      {
+       "text": "YAB hastaları endişelerini her zaman saniyeler içinde tamamen yok edebilirler.",
+       "isLie": true,
+       "explanation": "YAB'ın kardinal özelliği hastanın endişeyi kontrol etmekte aşırı güçlük çekmesidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 16,
+   "title": "YAB Klinik Seyri, Dalgalanmalar ve Prognoz",
+   "content": "Yaygın anksiyete bozukluğu tipik olarak sinsi bir başlangıç ve şiddetinde dalgalanmalar gösterir. Tedavi edilmeyen olgularda kendiliğinden remisyon oranı düşüktür ve hastalık kronikleşir.\n\n- **Başlangıç Yaşı:** Genellikle erken erişkinlikte sinsi başlar; hastalar 'Kendimi bildim bileli kaygılıyım' der.\n- **Dalgalı Gidiş:** Yaşam stresörleri arttığında alevlenmeler, sakin dönemlerde hafiflemeler görülür.\n- **Kronik Seyir:** Uygun tedavi başlanmadığında yıllarca sürerek yaşam enerjisini tüketir.\n\n> [!IMPORTANT]\n> Erken tanı ve yeterli süre idame tedavisi hastalığın kronik yıkıcı seyrini durdurmada esastır.",
+   "synthesisNarrative": "Yaygın anksiyete bozukluğu tipik olarak sinsi bir başlangıç ve şiddetinde dalgalanmalar gösterir. Tedavi edilmeyen olgularda kendiliğinden remisyon oranı düşüktür ve hastalık kronikleşir.\n\n- **Başlangıç Yaşı:** Genellikle erken erişkinlikte sinsi başlar; hastalar 'Kendimi bildim bileli kaygılıyım' der.\n- **Dalgalı Gidiş:** Yaşam stresörleri arttığında alevlenmeler, sakin dönemlerde hafiflemeler görülür.\n- **Kronik Seyir:** Uygun tedavi başlanmadığında yıllarca sürerek yaşam enerjisini tüketir.\n\n> [!IMPORTANT]\n> Erken tanı ve yeterli süre idame tedavisi hastalığın kronik yıkıcı seyrini durdurmada esastır.",
+   "pdfSayfalari": [
+    15,
+    15
+   ],
+   "sourcePdf": {
+    "startPage": 15,
+    "endPage": 15
+   },
+   "bolum": "3",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "YAB'ın klinik gidişi ve prognozu hakkında hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Sinsi başlangıçlı, dalgalı şiddette ve kronikleşme eğilimi yüksek bir tablodur.",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Daima bir gecede başlayıp sabah tamamen spontan iyileşir.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Hiçbir zaman mesleki veya sosyal işlev kaybı yapmaz.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Yalnızca beyin cerrahisi ameliyatıyla düzelir.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Yaygın anksiyete bozukluğu tipik olarak sinsi bir başlangıç ve şiddetinde dalgalanmalar gösterir.",
+     "maskedTerm": "şiddetinde dalgalanmalar gösterir",
+     "hint": ""
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Aşama: Geleceğe yönelik belirsiz tehdit algısı oluşur.",
+      "2. Aşama: Felaketleştirici otomatik düşünceler zihni kaplar.",
+      "3. Aşama: Otonomik uyarılma ve motor kas gerginliği ile YAB tablosu yerleşir."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 16 Klinik Analiz",
+     "items": [
+      {
+       "text": "Yaygın anksiyete bozukluğunda aşırı endişe ve gerginlik temel klinik tablodur.",
+       "isLie": false,
+       "explanation": "Hastalık kontrol edilemeyen süreğen endişe ve motor gerginlikle seyreder."
+      },
+      {
+       "text": "SSRI ve SNRI grubu ilaçlar YAB idamesinde ilk basamak seçenektir.",
+       "isLie": false,
+       "explanation": "Kanıtlanmış etkinlikleri ile rehberlerin ilk önerdiği medikal tedavidir."
+      },
+      {
+       "text": "YAB hastaları endişelerini her zaman saniyeler içinde tamamen yok edebilirler.",
+       "isLie": true,
+       "explanation": "YAB'ın kardinal özelliği hastanın endişeyi kontrol etmekte aşırı güçlük çekmesidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 17,
+   "title": "Komorbiditeler ve İşlevsellik Kaybı Boyutu",
+   "content": "Kronikleşen YAB tablosuna en sık eşlik eden ikincil komorbidite majör depresif bozukluktur. Sürekli endişe ve çaresizlik hastanın tükenmesine ve sekonder depresyona sürüklenmesine yol açar.\n\n- **Depresyon Komorbiditesi:** YAB hastalarının yaklaşık üçte ikisinde yaşam boyu depresyon gelişir.\n- **Alkol Kötüye Kullanımı:** Anksiyeteyi yatıştırmak için kontrolsüz alkol tüketimi bağımlılık yaratabilir.\n- **Mesleki Kayıplar:** Odaklanma güçlüğü ve yorgunluk nedeniyle iş verimliliği ciddi oranda düşer.\n\n> [!NOTE]\n> Komorbid depresyon varlığı intihar riskini artırır ve tedaviye direnci güçlendirir.",
+   "synthesisNarrative": "Kronikleşen YAB tablosuna en sık eşlik eden ikincil komorbidite majör depresif bozukluktur. Sürekli endişe ve çaresizlik hastanın tükenmesine ve sekonder depresyona sürüklenmesine yol açar.\n\n- **Depresyon Komorbiditesi:** YAB hastalarının yaklaşık üçte ikisinde yaşam boyu depresyon gelişir.\n- **Alkol Kötüye Kullanımı:** Anksiyeteyi yatıştırmak için kontrolsüz alkol tüketimi bağımlılık yaratabilir.\n- **Mesleki Kayıplar:** Odaklanma güçlüğü ve yorgunluk nedeniyle iş verimliliği ciddi oranda düşer.\n\n> [!NOTE]\n> Komorbid depresyon varlığı intihar riskini artırır ve tedaviye direnci güçlendirir.",
+   "pdfSayfalari": [
+    15,
+    15
+   ],
+   "sourcePdf": {
+    "startPage": 15,
+    "endPage": 15
+   },
+   "bolum": "3",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kronik YAB hastalarında en sık eklenen sekonder psikiyatrik komorbidite hangisidir?",
+     "options": [
+      {
+       "text": "Majör depresif bozukluk",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Creutzfeldt-Jakob prion hastalığı",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Huntington kore dejenerasyonu",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Primer progresif afazi tablosu",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kronikleşen YAB tablosuna en sık eşlik eden ikincil komorbidite majör depresif bozukluktur.",
+     "maskedTerm": "ikincil komorbidite",
+     "hint": ""
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Klinik Boyut",
+      "Temel Mekanizma",
+      "Yönetim İlkesi"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Bilişsel Alan"
+        },
+        {
+         "text": "Tehdit algısının abartılması",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Kognitif Yeniden Yapılandırma"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Somatik Alan"
+        },
+        {
+         "text": "Kronik motor kas gerginliği",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Progresif Gevşeme Teknikleri"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 17 Klinik Analiz",
+     "items": [
+      {
+       "text": "Yaygın anksiyete bozukluğunda aşırı endişe ve gerginlik temel klinik tablodur.",
+       "isLie": false,
+       "explanation": "Hastalık kontrol edilemeyen süreğen endişe ve motor gerginlikle seyreder."
+      },
+      {
+       "text": "SSRI ve SNRI grubu ilaçlar YAB idamesinde ilk basamak seçenektir.",
+       "isLie": false,
+       "explanation": "Kanıtlanmış etkinlikleri ile rehberlerin ilk önerdiği medikal tedavidir."
+      },
+      {
+       "text": "YAB hastaları endişelerini her zaman saniyeler içinde tamamen yok edebilirler.",
+       "isLie": true,
+       "explanation": "YAB'ın kardinal özelliği hastanın endişeyi kontrol etmekte aşırı güçlük çekmesidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 18,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Ayırıcı Tanı ve Seyir",
+   "content": "Bu bölümde YAB'ın organik taklitçilerini, psikiyatrik ayırıcı tanısını ve kronik klinik seyrini gözden geçirdik. Tiroid hastalıkları ile feokromositomanın dışlanması ve dalgalı gidişin tanınması temel esastır.\n\n- **Organik Dışlama:** Hipertiroidi, feokromositoma, aritmiler ve KOAH ekarte edilmelidir.\n- **Psikiyatrik Değerlendirme:** Panik atağın paroksismal doğası ile uyum bozukluğunun stresör ilişkisi ayrılır.\n- **Seyir Özeti:** Sinsi başlangıçlı, kronik ve sekonder depresyon riski yüksek bir hastalıktır.\n\n> [!IMPORTANT]\n> Ayırıcı tanı ve prognoz bilgilerini pekiştirmek için aşağıdaki değerlendirme adımlarını çözünüz.",
+   "synthesisNarrative": "Bu bölümde YAB'ın organik taklitçilerini, psikiyatrik ayırıcı tanısını ve kronik klinik seyrini gözden geçirdik. Tiroid hastalıkları ile feokromositomanın dışlanması ve dalgalı gidişin tanınması temel esastır.\n\n- **Organik Dışlama:** Hipertiroidi, feokromositoma, aritmiler ve KOAH ekarte edilmelidir.\n- **Psikiyatrik Değerlendirme:** Panik atağın paroksismal doğası ile uyum bozukluğunun stresör ilişkisi ayrılır.\n- **Seyir Özeti:** Sinsi başlangıçlı, kronik ve sekonder depresyon riski yüksek bir hastalıktır.\n\n> [!IMPORTANT]\n> Ayırıcı tanı ve prognoz bilgilerini pekiştirmek için aşağıdaki değerlendirme adımlarını çözünüz.",
+   "isCheckpoint": true,
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "YAB ayırıcı tanısında tiroid fonksiyonlarının yeri nedir?",
+     "options": [
+      {
+       "text": "Hipertiroidi taşikardi ve anksiyete taklidi yapabileceğinden TSH bakılmalıdır.",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Tiroid hormonlarının anksiyete ile hiçbir biyolojik ilişkisi yoktur.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Yalnızca tiroid ameliyatı olanlarda YAB gelişebilir.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "TSH düzeyi her zaman sıfır olmak zorundadır.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Bu bölümde YAB'ın organik taklitçilerini, psikiyatrik ayırıcı tanısını ve kronik klinik seyrini gözden geçirdik.",
+     "maskedTerm": "kronik klinik seyrini",
+     "hint": ""
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Tanı Kriterleri",
+     "rightCategory": "Klinik Özellikler",
+     "cards": [
+      {
+       "text": "En az 6 ay süren kontrolsüz aşırı endişe",
+       "category": "left"
+      },
+      {
+       "text": "Kaş çatma ve inatçı kronik kas spazmları",
+       "category": "right"
+      },
+      {
+       "text": "Tanımlanan 6 kardinal belirtiden en az üçü",
+       "category": "left"
+      },
+      {
+       "text": "Yakınlarının başına kaza geleceği korkusu",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 18 Klinik Analiz",
+     "items": [
+      {
+       "text": "Yaygın anksiyete bozukluğunda aşırı endişe ve gerginlik temel klinik tablodur.",
+       "isLie": false,
+       "explanation": "Hastalık kontrol edilemeyen süreğen endişe ve motor gerginlikle seyreder."
+      },
+      {
+       "text": "SSRI ve SNRI grubu ilaçlar YAB idamesinde ilk basamak seçenektir.",
+       "isLie": false,
+       "explanation": "Kanıtlanmış etkinlikleri ile rehberlerin ilk önerdiği medikal tedavidir."
+      },
+      {
+       "text": "YAB hastaları endişelerini her zaman saniyeler içinde tamamen yok edebilirler.",
+       "isLie": true,
+       "explanation": "YAB'ın kardinal özelliği hastanın endişeyi kontrol etmekte aşırı güçlük çekmesidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 19,
+   "title": "Bilişsel Davranışçı Terapi: Yeniden Yapılandırma ve Gevşeme",
+   "content": "YAB'ın kanıta dayalı psikoterapi yönetiminde bilişsel davranışçı terapi altın standart kabul edilir. BDT ile hastanın felaketleştirici bilişleri yeniden yapılandırılır ve bedensel duyumları kontrol edilir.\n\n- **Bilişsel Yeniden Yapılandırma:** Gerçekçi olmayan felaket senaryoları mantıksal kanıtlarla incelenir.\n- **Gevşeme Teknikleri:** Progresif kas gevşemesi ve diyafram solunumu motor spazmları hafifletir.\n- **Endişe Erteleme:** Gün içinde belirli bir 20 dakikalık 'endişe saati' tanımlanarak zihinsel kontrol kurulur.\n\n> [!NOTE]\n> Bilişsel davranışçı terapi uzun vadeli nüksleri önlemede farmakoterapi kadar yüksek etkinliğe sahiptir.",
+   "synthesisNarrative": "YAB'ın kanıta dayalı psikoterapi yönetiminde bilişsel davranışçı terapi altın standart kabul edilir. BDT ile hastanın felaketleştirici bilişleri yeniden yapılandırılır ve bedensel duyumları kontrol edilir.\n\n- **Bilişsel Yeniden Yapılandırma:** Gerçekçi olmayan felaket senaryoları mantıksal kanıtlarla incelenir.\n- **Gevşeme Teknikleri:** Progresif kas gevşemesi ve diyafram solunumu motor spazmları hafifletir.\n- **Endişe Erteleme:** Gün içinde belirli bir 20 dakikalık 'endişe saati' tanımlanarak zihinsel kontrol kurulur.\n\n> [!NOTE]\n> Bilişsel davranışçı terapi uzun vadeli nüksleri önlemede farmakoterapi kadar yüksek etkinliğe sahiptir.",
+   "pdfSayfalari": [
+    16,
+    16
+   ],
+   "sourcePdf": {
+    "startPage": 16,
+    "endPage": 16
+   },
+   "bolum": "4",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "YAB'da uygulanan bilişsel davranışçı terapideki temel teknik hangisidir?",
+     "options": [
+      {
+       "text": "Bilişsel yeniden yapılandırma ve progresif gevşeme egzersizleri",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Hastayı ömür boyu karanlık bir odaya kapatma",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Sürekli yüksek doz kafeinli enerji içeceği verme",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Cerrahi lobotomi ve koterizasyon uygulama",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "YAB'ın kanıta dayalı psikoterapi yönetiminde bilişsel davranışçı terapi altın standart kabul edilir.",
+     "maskedTerm": "bilişsel davranışçı terapi",
+     "hint": ""
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Aşama: Geleceğe yönelik belirsiz tehdit algısı oluşur.",
+      "2. Aşama: Felaketleştirici otomatik düşünceler zihni kaplar.",
+      "3. Aşama: Otonomik uyarılma ve motor kas gerginliği ile YAB tablosu yerleşir."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 19 Klinik Analiz",
+     "items": [
+      {
+       "text": "Yaygın anksiyete bozukluğunda aşırı endişe ve gerginlik temel klinik tablodur.",
+       "isLie": false,
+       "explanation": "Hastalık kontrol edilemeyen süreğen endişe ve motor gerginlikle seyreder."
+      },
+      {
+       "text": "SSRI ve SNRI grubu ilaçlar YAB idamesinde ilk basamak seçenektir.",
+       "isLie": false,
+       "explanation": "Kanıtlanmış etkinlikleri ile rehberlerin ilk önerdiği medikal tedavidir."
+      },
+      {
+       "text": "YAB hastaları endişelerini her zaman saniyeler içinde tamamen yok edebilirler.",
+       "isLie": true,
+       "explanation": "YAB'ın kardinal özelliği hastanın endişeyi kontrol etmekte aşırı güçlük çekmesidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 20,
+   "title": "Farmakoterapide Birinci Basamak: SSRI ve SNRI Grubu",
+   "content": "Yaygın anksiyete bozukluğunda birinci basamak uzun süreli idame farmakoterapisi antidepresanlardır. Seçici serotonin ve serotonin-noradrenalin geri alım inhibitörleri yüksek etkinliğe sahiptir.\n\n- **SSRI Grubu:** Essitalopram, sertralin ve paroksetin ilk basamak seçenekler arasındadır.\n- **SNRI Grubu:** Venlafaksin ve duloksetin özellikle inatçı kaygı ve ağrılı somatik bulgularda tercih edilir.\n- **Tedavi Süresi:** Semptomlar düzeldikten sonra nüksleri önlemek adına en az 1 yıl sürdürülmelidir.\n\n> [!IMPORTANT]\n> Tedavinin ilk günlerinde geçici ajitasyonu önlemek için düşük dozla başlanıp yavaş artırılmalıdır.",
+   "synthesisNarrative": "Yaygın anksiyete bozukluğunda birinci basamak uzun süreli idame farmakoterapisi antidepresanlardır. Seçici serotonin ve serotonin-noradrenalin geri alım inhibitörleri yüksek etkinliğe sahiptir.\n\n- **SSRI Grubu:** Essitalopram, sertralin ve paroksetin ilk basamak seçenekler arasındadır.\n- **SNRI Grubu:** Venlafaksin ve duloksetin özellikle inatçı kaygı ve ağrılı somatik bulgularda tercih edilir.\n- **Tedavi Süresi:** Semptomlar düzeldikten sonra nüksleri önlemek adına en az 1 yıl sürdürülmelidir.\n\n> [!IMPORTANT]\n> Tedavinin ilk günlerinde geçici ajitasyonu önlemek için düşük dozla başlanıp yavaş artırılmalıdır.",
+   "pdfSayfalari": [
+    17,
+    17
+   ],
+   "sourcePdf": {
+    "startPage": 17,
+    "endPage": 17
+   },
+   "bolum": "4",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "YAB farmakoterapisinde birinci basamak idame ilaç grubu hangisidir?",
+     "options": [
+      {
+       "text": "Seçici serotonin geri alım inhibitörleri (SSRI) ve SNRI grubu",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Yüksek doz birinci kuşak nöroleptikler",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Sürekli intravenöz fenobarbital infüzyonları",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Santral direkt sempatomimetik stimülanlar",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Yaygın anksiyete bozukluğunda birinci basamak uzun süreli idame farmakoterapisi antidepresanlardır.",
+     "maskedTerm": "idame farmakoterapisi",
+     "hint": ""
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Klinik Boyut",
+      "Temel Mekanizma",
+      "Yönetim İlkesi"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Bilişsel Alan"
+        },
+        {
+         "text": "Tehdit algısının abartılması",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Kognitif Yeniden Yapılandırma"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Somatik Alan"
+        },
+        {
+         "text": "Kronik motor kas gerginliği",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Progresif Gevşeme Teknikleri"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 20 Klinik Analiz",
+     "items": [
+      {
+       "text": "Yaygın anksiyete bozukluğunda aşırı endişe ve gerginlik temel klinik tablodur.",
+       "isLie": false,
+       "explanation": "Hastalık kontrol edilemeyen süreğen endişe ve motor gerginlikle seyreder."
+      },
+      {
+       "text": "SSRI ve SNRI grubu ilaçlar YAB idamesinde ilk basamak seçenektir.",
+       "isLie": false,
+       "explanation": "Kanıtlanmış etkinlikleri ile rehberlerin ilk önerdiği medikal tedavidir."
+      },
+      {
+       "text": "YAB hastaları endişelerini her zaman saniyeler içinde tamamen yok edebilirler.",
+       "isLie": true,
+       "explanation": "YAB'ın kardinal özelliği hastanın endişeyi kontrol etmekte aşırı güçlük çekmesidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 21,
+   "title": "Buspiron: 5-HT1A Parsiyel Agonizmi ve Avantajları",
+   "content": "Buspiron serotonin 5-HT1A reseptör parsiyel agonisti olan özgün ve etkili bir anksiyolitiktir. Benzodiazepinlerden farklı olarak sedasyon, kas gevşemesi veya bağımlılık potansiyeli taşımaz.\n\n- **Etki Mekanizması:** Presinaptik ve postsinaptik 5-HT1A reseptörlerini parsiyel aktive eder.\n- **Klinik Üstünlükleri:** Sedasyon yapmaz, psikomotor performansı bozmaz ve bağımlılık riski yoktur.\n- **Etki Başlangıcı:** Etkisi benzodiazepinler gibi anında başlamaz, iki ila dört hafta içinde ortaya çıkar.\n\n> [!NOTE]\n> Bağımlılık öyküsü olan veya sedasyondan kaçınılması gereken anksiyete olgularında mükemmel bir tercihtir.",
+   "synthesisNarrative": "Buspiron serotonin 5-HT1A reseptör parsiyel agonisti olan özgün ve etkili bir anksiyolitiktir. Benzodiazepinlerden farklı olarak sedasyon, kas gevşemesi veya bağımlılık potansiyeli taşımaz.\n\n- **Etki Mekanizması:** Presinaptik ve postsinaptik 5-HT1A reseptörlerini parsiyel aktive eder.\n- **Klinik Üstünlükleri:** Sedasyon yapmaz, psikomotor performansı bozmaz ve bağımlılık riski yoktur.\n- **Etki Başlangıcı:** Etkisi benzodiazepinler gibi anında başlamaz, iki ila dört hafta içinde ortaya çıkar.\n\n> [!NOTE]\n> Bağımlılık öyküsü olan veya sedasyondan kaçınılması gereken anksiyete olgularında mükemmel bir tercihtir.",
+   "pdfSayfalari": [
+    18,
+    18
+   ],
+   "sourcePdf": {
+    "startPage": 18,
+    "endPage": 18
+   },
+   "bolum": "4",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Buspironun YAB tedavisindeki özgün mekanizması ve üstünlüğü nedir?",
+     "options": [
+      {
+       "text": "5-HT1A parsiyel agonisti olup sedasyon ve bağımlılık yapmamasıdır.",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "GABA kanalını kilitler ve anında derin anestezi yapar.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Yalnızca akut hipertansif krizlerde dil altı kullanılır.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Dopamin reseptörlerini tahrip ederek katatoni yapar.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Buspiron serotonin 5-HT1A reseptör parsiyel agonisti olan özgün ve etkili bir anksiyolitiktir.",
+     "maskedTerm": "etkili bir anksiyolitiktir",
+     "hint": ""
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Klinik Boyut",
+      "Temel Mekanizma",
+      "Yönetim İlkesi"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Bilişsel Alan"
+        },
+        {
+         "text": "Tehdit algısının abartılması",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Kognitif Yeniden Yapılandırma"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Somatik Alan"
+        },
+        {
+         "text": "Kronik motor kas gerginliği",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Progresif Gevşeme Teknikleri"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 21 Klinik Analiz",
+     "items": [
+      {
+       "text": "Yaygın anksiyete bozukluğunda aşırı endişe ve gerginlik temel klinik tablodur.",
+       "isLie": false,
+       "explanation": "Hastalık kontrol edilemeyen süreğen endişe ve motor gerginlikle seyreder."
+      },
+      {
+       "text": "SSRI ve SNRI grubu ilaçlar YAB idamesinde ilk basamak seçenektir.",
+       "isLie": false,
+       "explanation": "Kanıtlanmış etkinlikleri ile rehberlerin ilk önerdiği medikal tedavidir."
+      },
+      {
+       "text": "YAB hastaları endişelerini her zaman saniyeler içinde tamamen yok edebilirler.",
+       "isLie": true,
+       "explanation": "YAB'ın kardinal özelliği hastanın endişeyi kontrol etmekte aşırı güçlük çekmesidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 22,
+   "title": "Benzodiazepinlerin Yeri ve Bağımlılık Riski",
+   "content": "Benzodiazepinler GABA-A reseptörünün allosterik modülatörü olarak dakikalar içinde hızlı anksiyoliz sağlar. Ancak tolerans, sedasyon ve fiziksel bağımlılık riski nedeniyle kronik YAB idamesinde önerilmez.\n\n- **Akut Kullanım:** Yalnızca ilk 2 ila 4 haftada antidepresan etki başlayana dek köprü tedavi olarak verilir.\n- **Kullanılan Ajanlar:** Diazepam, alprazolam ve lorazepam sık başvurulan moleküllerdir.\n- **Kesilme Riski:** Uzun süreli kullanımdan sonra aniden kesilirse şiddetli rebound anksiyete doğurur.\n\n> [!IMPORTANT]\n> Benzodiazepinler YAB'da hiçbir zaman birinci basamak uzun süreli tek tedavi ajanı olmamalıdır.",
+   "synthesisNarrative": "Benzodiazepinler GABA-A reseptörünün allosterik modülatörü olarak dakikalar içinde hızlı anksiyoliz sağlar. Ancak tolerans, sedasyon ve fiziksel bağımlılık riski nedeniyle kronik YAB idamesinde önerilmez.\n\n- **Akut Kullanım:** Yalnızca ilk 2 ila 4 haftada antidepresan etki başlayana dek köprü tedavi olarak verilir.\n- **Kullanılan Ajanlar:** Diazepam, alprazolam ve lorazepam sık başvurulan moleküllerdir.\n- **Kesilme Riski:** Uzun süreli kullanımdan sonra aniden kesilirse şiddetli rebound anksiyete doğurur.\n\n> [!IMPORTANT]\n> Benzodiazepinler YAB'da hiçbir zaman birinci basamak uzun süreli tek tedavi ajanı olmamalıdır.",
+   "pdfSayfalari": [
+    18,
+    18
+   ],
+   "sourcePdf": {
+    "startPage": 18,
+    "endPage": 18
+   },
+   "bolum": "4",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Benzodiazepinlerin YAB tedavisindeki doğru kullanım endikasyonu nedir?",
+     "options": [
+      {
+       "text": "İlk 2-4 haftada antidepresan etki başlayana dek kısa süreli köprü tedavi",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Ömür boyu kesintisiz tek başına yüksek doz idame tedavisi",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Hiçbir anksiyolitik etkisi olmadığından asla verilmemesi",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Yalnızca genel anestezi altında elektif cerrahide kullanımı",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Benzodiazepinler GABA-A reseptörünün allosterik modülatörü olarak dakikalar içinde hızlı anksiyoliz sağlar.",
+     "maskedTerm": "Benzodiazepinler GABA-A",
+     "hint": ""
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Aşama: Geleceğe yönelik belirsiz tehdit algısı oluşur.",
+      "2. Aşama: Felaketleştirici otomatik düşünceler zihni kaplar.",
+      "3. Aşama: Otonomik uyarılma ve motor kas gerginliği ile YAB tablosu yerleşir."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 22 Klinik Analiz",
+     "items": [
+      {
+       "text": "Yaygın anksiyete bozukluğunda aşırı endişe ve gerginlik temel klinik tablodur.",
+       "isLie": false,
+       "explanation": "Hastalık kontrol edilemeyen süreğen endişe ve motor gerginlikle seyreder."
+      },
+      {
+       "text": "SSRI ve SNRI grubu ilaçlar YAB idamesinde ilk basamak seçenektir.",
+       "isLie": false,
+       "explanation": "Kanıtlanmış etkinlikleri ile rehberlerin ilk önerdiği medikal tedavidir."
+      },
+      {
+       "text": "YAB hastaları endişelerini her zaman saniyeler içinde tamamen yok edebilirler.",
+       "isLie": true,
+       "explanation": "YAB'ın kardinal özelliği hastanın endişeyi kontrol etmekte aşırı güçlük çekmesidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 23,
+   "title": "YAB Tedavi Algoritması ve Uzun Dönem Takip",
+   "content": "YAB'ın rasyonel klinik yönetiminde ilaç tedavisi ile bilişsel davranışçı teknikler entegre edilmelidir. Kombine yaklaşım hem akut semptom kontrolü hem de uzun vadeli relapsların engellenmesini güvenceye alır.\n\n- **Birinci Basamak:** SSRI veya SNRI başlanır, gerekirse ilk 2-3 hafta kısa etkili benzodiazepin eklenir.\n- **Psikoterapi Entegrasyonu:** Erken dönemden itibaren BDT teknikleri ve gevşeme egzersizleri öğretilir.\n- **Dirençli Olgular:** Doz artırımı, molekül değişimi veya pregabalin/buspiron güçlendirmesi uygulanır.\n\n> [!NOTE]\n> Düzenli psikiyatrik izlem ve yaşam tarzı düzenlemeleri tam fonksiyonel iyileşmenin anahtarıdır.",
+   "synthesisNarrative": "YAB'ın rasyonel klinik yönetiminde ilaç tedavisi ile bilişsel davranışçı teknikler entegre edilmelidir. Kombine yaklaşım hem akut semptom kontrolü hem de uzun vadeli relapsların engellenmesini güvenceye alır.\n\n- **Birinci Basamak:** SSRI veya SNRI başlanır, gerekirse ilk 2-3 hafta kısa etkili benzodiazepin eklenir.\n- **Psikoterapi Entegrasyonu:** Erken dönemden itibaren BDT teknikleri ve gevşeme egzersizleri öğretilir.\n- **Dirençli Olgular:** Doz artırımı, molekül değişimi veya pregabalin/buspiron güçlendirmesi uygulanır.\n\n> [!NOTE]\n> Düzenli psikiyatrik izlem ve yaşam tarzı düzenlemeleri tam fonksiyonel iyileşmenin anahtarıdır.",
+   "pdfSayfalari": [
+    19,
+    19
+   ],
+   "sourcePdf": {
+    "startPage": 19,
+    "endPage": 19
+   },
+   "bolum": "4.2",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "YAB'ın rasyonel uzun dönem klinik yönetiminde en etkili strateji nedir?",
+     "options": [
+      {
+       "text": "İlaç farmakoterapisi ile BDT tekniklerinin kombine uygulanması",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Hastanın toplumdan tamamen tecrit edilmesi",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "İlaçların birinci haftada hemen kesilmesi",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Yalnızca vitamin takviyeleri verilip izlenmemesi",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki yaygın anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "YAB'ın rasyonel klinik yönetiminde ilaç tedavisi ile bilişsel davranışçı teknikler entegre edilmelidir.",
+     "maskedTerm": "rasyonel klinik yönetiminde",
+     "hint": ""
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Klinik Boyut",
+      "Temel Mekanizma",
+      "Yönetim İlkesi"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Bilişsel Alan"
+        },
+        {
+         "text": "Tehdit algısının abartılması",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Kognitif Yeniden Yapılandırma"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Somatik Alan"
+        },
+        {
+         "text": "Kronik motor kas gerginliği",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Progresif Gevşeme Teknikleri"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 23 Klinik Analiz",
+     "items": [
+      {
+       "text": "Yaygın anksiyete bozukluğunda aşırı endişe ve gerginlik temel klinik tablodur.",
+       "isLie": false,
+       "explanation": "Hastalık kontrol edilemeyen süreğen endişe ve motor gerginlikle seyreder."
+      },
+      {
+       "text": "SSRI ve SNRI grubu ilaçlar YAB idamesinde ilk basamak seçenektir.",
+       "isLie": false,
+       "explanation": "Kanıtlanmış etkinlikleri ile rehberlerin ilk önerdiği medikal tedavidir."
+      },
+      {
+       "text": "YAB hastaları endişelerini her zaman saniyeler içinde tamamen yok edebilirler.",
+       "isLie": true,
+       "explanation": "YAB'ın kardinal özelliği hastanın endişeyi kontrol etmekte aşırı güçlük çekmesidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 24,
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Yaygın Anksiyete Bozukluğu",
+   "content": "Yaygın Anksiyete Bozukluğu dersini başarıyla tamamladınız! Bu final oyun sayfasında YAB tanı kriterleri, etiyolojik mekanizmalar ve tedavi stratejilerini pekiştireceksiniz.\n\n- **Sıralama:** YAB bilişsel kaygı döngüsünün tetiklenişinden kronikleşmesine kadar basamakları diziniz.\n- **Sürgü:** YAB için aranan minimum tanısal süre ve kardinal belirti sayılarını tahmin ediniz.\n- **Bozulma Analizi:** Başarılı SSRI farmakoterapisi ve BDT uygulamasıyla parametre değişimlerini çözünüz.\n- **Metin Düzeltme:** Klinik vaka sunumundaki ayırıcı tanı ve semptom hatalarını tespit edip düzeltiniz.",
+   "synthesisNarrative": "Yaygın Anksiyete Bozukluğu dersini başarıyla tamamladınız! Bu final oyun sayfasında YAB tanı kriterleri, etiyolojik mekanizmalar ve tedavi stratejilerini pekiştireceksiniz.\n\n- **Sıralama:** YAB bilişsel kaygı döngüsünün tetiklenişinden kronikleşmesine kadar basamakları diziniz.\n- **Sürgü:** YAB için aranan minimum tanısal süre ve kardinal belirti sayılarını tahmin ediniz.\n- **Bozulma Analizi:** Başarılı SSRI farmakoterapisi ve BDT uygulamasıyla parametre değişimlerini çözünüz.\n- **Metin Düzeltme:** Klinik vaka sunumundaki ayırıcı tanı ve semptom hatalarını tespit edip düzeltiniz.",
+   "isGameFinale": true,
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "prompt": "YAB bilişsel kaygı döngüsünün ortaya çıkış aşamalarını kronolojik sıraya diziniz:",
+     "steps": [
+      "Geleceğe yönelik belirsiz bir tehdit veya risk uyarısının algılanması",
+      "Tehlike olasılığının abartılarak felaket senaryoları kurgulanması",
+      "GABA yetersizliği zemininde otonomik sempatik uyarılma ve motor kas spazmı",
+      "En az altı ay süren kontrol edilemeyen kronik yaygın anksiyete tablosunun yerleşmesi"
+     ],
+     "explanation": "YAB döngüsü belirsiz tehdidin abartılması, motor gerginlik ve süreğen kontrolsüz endişe ile gelişir."
+    },
+    {
+     "type": "estimate_slider",
+     "prompt": "DSM-5 tanı kriterlerine göre YAB tanısı koyabilmek için aşırı kaygı en az kaç ay sürmelidir?",
+     "min": 1,
+     "max": 12,
+     "answer": 6,
+     "tolerance": 0,
+     "explanation": "DSM-5 tanı kılavuzunda YAB için zorunlu asgari süre kriteri en az 6 ay olarak belirlenmiştir."
+    },
+    {
+     "type": "perturbation",
+     "scenario": "Yaygın anksiyete bozukluğu olan hastaya birinci basamak SSRI başlanıp düzenli BDT uygulandığında sistem parametreleri nasıl değişir?",
+     "parameters": [
+      {
+       "name": "Kronik motor kas gerginliği ve huzursuzluk",
+       "correct": "down",
+       "explanation": "Etkin tedavi santral anksiyeteyi düşürerek kronik kas spazmı ve gerginliği azaltır."
+      },
+      {
+       "name": "Geleceğe yönelik kontrolsüz endişe süresi",
+       "correct": "down",
+       "explanation": "Kognitif yeniden yapılandırma ve ilaç desteğiyle felaketleştirici endişe süresi kısalır."
+      },
+      {
+       "name": "Hastanın mesleki ve sosyal fonksiyonelliği",
+       "correct": "up",
+       "explanation": "Kaygının yatışması ve uyku kalitesinin düzelmesiyle günlük yaşam işlevselliği artar."
+      }
+     ]
+    },
+    {
+     "type": "fix_the_text",
+     "text": "Yaygın anksiyete bozukluğunda kaygı daima tek bir nesneyle sınırlıdır ve hastalarda hiçbir zaman motor kas gerginliği görülmez.",
+     "errors": [
+      {
+       "wrong": "tek bir nesneyle",
+       "correct": "serbest dalgalanan",
+       "options": [
+        "serbest dalgalanan",
+        "yalnızca yükseklikle",
+        "sadece karanlıkla"
+       ],
+       "explanation": "YAB nesnesiz ve serbest dalgalanan kontrol edilemeyen aşırı bir endişe tablosudur."
+      },
+      {
+       "wrong": "hiçbir zaman motor",
+       "correct": "şiddetli kronik",
+       "options": [
+        "şiddetli kronik",
+        "asla periferik",
+        "sadece geçici"
+       ],
+       "explanation": "Motor kas gerginliği ve kaş çatması YAB'ın en belirgin kardinal fiziksel bulgusudur."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "deckId": "k2p-y25-k2-54-yaygin-anksiyete-bozuklugu",
+ "donem": "2025-2026",
+ "arsiv": true,
+ "committee": "donem3-kurul2",
+ "confidence": "high",
+ "totalSlides": 24,
+ "matchedPastQuestionsCount": 3,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

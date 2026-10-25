@@ -6,7 +6,7 @@
  * ORACLE_API_URL ya da kullanıcının ayarladığı özel API adresi. Üçüncü taraf kökenlere asla eklenmez.
  * Zaten Authorization taşıyan isteğe dokunulmaz. main.tsx'te uygulama başlamadan kurulur.
  */
-import { ORACLE_API_URL } from '../config/deployment';
+import { ORACLE_API_URL, getLocalServerUrl, getStoredPanelSecret } from '../config/deployment';
 
 const ADMIN = 'nofrostlife@gmail.com';
 const CUSTOM_API_KEY = 'medsoru_custom_api_url';
@@ -19,6 +19,8 @@ function apiOrigins(): Set<string> {
   const s = new Set<string>([window.location.origin]);
   const o = originOf(ORACLE_API_URL);
   if (o) s.add(o);
+  const loc = originOf(getLocalServerUrl());
+  if (loc) s.add(loc);
   try {
     const c = localStorage.getItem(CUSTOM_API_KEY) || '';
     const co = c ? originOf(c) : '';
@@ -60,22 +62,35 @@ export function installAdminFetchAuth() {
   window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {
     try {
       if (isOurApi(input)) {
+        const panelSecret = getStoredPanelSecret();
         const { auth, getLocalAdminSession } = await import('./auth');
         // Açılışta Firebase oturumu henüz geri yüklenmemişse yönetici istekleri jetonsuz gidip reddedilmesin
         if (!auth?.currentUser && getLocalAdminSession() && typeof (auth as any)?.authStateReady === 'function') {
           await Promise.race([(auth as any).authStateReady(), new Promise((r) => setTimeout(r, 4000))]).catch(() => {});
         }
         const user = auth?.currentUser;
+        const base = init?.headers ?? (typeof Request !== 'undefined' && input instanceof Request ? input.headers : undefined);
+        const headers = new Headers(base);
+        let modified = false;
+
+        if (panelSecret && !headers.has('x-panel-secret')) {
+          headers.set('x-panel-secret', panelSecret);
+          if (!headers.has('x-admin-email')) headers.set('x-admin-email', ADMIN);
+          modified = true;
+        }
+
         if (user && (String(user.email || '').toLowerCase() === ADMIN || ogrenciJetonu(input, init))) {
-          const base = init?.headers ?? (typeof Request !== 'undefined' && input instanceof Request ? input.headers : undefined);
-          const headers = new Headers(base);
           if (!headers.has('Authorization')) {
             const token = await user.getIdToken();
             if (token) {
               headers.set('Authorization', `Bearer ${token}`);
-              return inner(input, { ...init, headers });
+              modified = true;
             }
           }
+        }
+
+        if (modified) {
+          return inner(input, { ...init, headers });
         }
       }
     } catch {

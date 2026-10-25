@@ -38,7 +38,8 @@ const lc = (v: unknown) => String(v || '').trim().toLowerCase();
 
 export function panelSecretOk(req: express.Request): boolean {
   const expected = String(process.env.MEDS_PANEL_SECRET || '').trim();
-  const supplied = String(req.headers['x-panel-secret'] || '');
+  const querySecret = req.path === '/api/realtime/events' ? String((req.query as any)?.panelSecret || '') : '';
+  const supplied = String(req.headers['x-panel-secret'] || querySecret || '');
   if (expected.length < 24 || supplied.length !== expected.length) return false;
   return crypto.timingSafeEqual(Buffer.from(supplied), Buffer.from(expected));
 }

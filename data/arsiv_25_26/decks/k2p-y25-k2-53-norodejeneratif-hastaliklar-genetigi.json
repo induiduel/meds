@@ -1,0 +1,2230 @@
+{
+ "id": "k2p-y25-k2-53-norodejeneratif-hastaliklar-genetigi",
+ "title": "Nörodejeneratif Hastalıklar ve Genetiği",
+ "course": "Tıbbi Genetik",
+ "discipline": "Tıbbi Genetik",
+ "kurul": 2,
+ "donem": "2025-2026",
+ "version": "2.0.0",
+ "sayfaHaritasi": "teyitli",
+ "slides": [
+  {
+   "id": "k2-53-d-s01",
+   "title": "Nöron Hasarı ve Nörodejenerasyonun Temel İlkeleri",
+   "subtitle": "MSS Hücresel Hasar Mekanizmaları",
+   "section": "Genel Nörodejenerasyon",
+   "content": "Nöronlar sinir sisteminin temel yapı taşlarıdır ve çoğalma yetenekleri yoktur.\n\n- **Rejenerasyon Eksikliği:** Hasar gören veya ölen nöronlar kendilerini yenileyemezler.\n- **Oksidatif Stres ve ROS:** Reaktif oksijen türleri membran lipidlerinde ve DNA'da makromoleküler hasar oluşturur.\n- **Kolinesteraz ve Tirozinaz Artışı:** Oksidatif stres kolinerjik iletimi bozar ve apoptoz kaskadını tetikler.\n\n> [!IMPORTANT]\n> Nörodejeneratif hastalıklar kardiyovasküler hastalıklar ve kanserden sonra en sık ölüm nedenleri arasındadır.",
+   "synthesisNarrative": "Nöronlar sinir sisteminin temel yapı taşlarıdır ve çoğalma yetenekleri yoktur.\n\n- **Rejenerasyon Eksikliği:** Hasar gören veya ölen nöronlar kendilerini yenileyemezler.\n- **Oksidatif Stres ve ROS:** Reaktif oksijen türleri membran lipidlerinde ve DNA'da makromoleküler hasar oluşturur.\n- **Kolinesteraz ve Tirozinaz Artışı:** Oksidatif stres kolinerjik iletimi bozar ve apoptoz kaskadını tetikler.\n\n> [!IMPORTANT]\n> Nörodejeneratif hastalıklar kardiyovasküler hastalıklar ve kanserden sonra en sık ölüm nedenleri arasındadır.",
+   "slideNumber": 1,
+   "bolum": "1.1",
+   "pdfSayfalari": [
+    2,
+    5
+   ],
+   "sourcePdf": {
+    "startPage": 2,
+    "endPage": 5
+   },
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Nöronlar normalde kendilerini yenileyemezler ve çoğalma yetenekleri yoktur.",
+     "maskedTerm": "yenileyemezler",
+     "hint": "",
+     "explanation": "Matür sinir hücreleri G0 evresinde kalıcı olduklarından rejenerasyon kapasiteleri bulunmaz."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Nöronların hasar sonrası yenilenememesinin temel hücresel nedeni aşağıdakilerden hangisidir?",
+     "options": [
+      {
+       "id": "o1",
+       "label": "A",
+       "text": "Rejenerasyon ve mitotik çoğalma yeteneklerinin bulunmaması",
+       "isCorrect": true,
+       "explanation": "Matür santral sinir sistemi nöronları terminal diferansiye hücrelerdir ve mitotik döngüye girmezler. Bu nedenle hücre kaybı geliştiğinde doku kendini yenileyemez ve ilerleyici nörodejenerasyon ortaya çıkar."
+      },
+      {
+       "id": "o2",
+       "label": "B",
+       "text": "Yalnızca glia hücrelerinin apoptoza uğraması",
+       "isCorrect": false,
+       "explanation": "Glia hücreleri nöronları destekleyen ve hasar durumunda çoğalarak glial skar oluşturan hücrelerdir. Nörodejeneratif hastalıklarda primer kayba uğrayan hedef hücreler doğrudan nöronların kendisidir."
+      },
+      {
+       "id": "o3",
+       "label": "C",
+       "text": "Nöron zarında voltaj kapılı iyon kanallarının bulunmaması",
+       "isCorrect": false,
+       "explanation": "Voltaj kapılı sodyum ve potasyum kanalları aksiyon potansiyeli iletimini sağlayan temel membran proteinleridir. Nöron zarları bu iyon kanalları açısından oldukça zengindir ve eksiklikleri söz konusu değildir."
+      },
+      {
+       "id": "o4",
+       "label": "D",
+       "text": "Mitokondriyal ATP üretiminin tamamen durmuş olması",
+       "isCorrect": false,
+       "explanation": "Mitokondriyal ATP sentezi canlı hücrelerin hücresel metabolizmasını ve iyon pompalarını sürdürmesi için esastır. Nöronlar yüksek düzeyde ATP tüketirler ve metabolik üretim tamamen durmamıştır."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Nöron Biyolojisi ve Oksidatif Stres",
+     "items": [
+      {
+       "text": "Nöronlar erişkin dönemde hasar gördüklerinde kendilerini çoğalarak yenileyemezler.",
+       "isLie": false,
+       "explanation": "Santral sinir sistemi nöronları bölünme yeteneğini kaybetmiş terminal hücrelerdir."
+      },
+      {
+       "text": "Reaktif oksijen türleri MSS makromoleküllerinde artmış oksidatif hasara yol açar.",
+       "isLie": false,
+       "explanation": "ROS artışı membran lipid peroksidasyonuna ve DNA kırıklarına neden olur."
+      },
+      {
+       "text": "Nöron hasarı sonrasında sinir sistemi dokusunda hiçbir zaman apoptoz kaskadı tetiklenmez.",
+       "isLie": true,
+       "explanation": "Oksidatif stres ve kalsiyum aşırı yüklenmesi nöronlarda apoptozu doğrudan aktive ederek hücre ölümüne yol açar."
+      },
+      {
+       "text": "Nörodejeneratif hastalıklar demans ve hareket bozukluklarına yol açan ilerleyici durumlardır.",
+       "isLie": false,
+       "explanation": "Kortikal dejenerasyon demansa, bazal ganglion ve serebellar dejenerasyon hareket bozukluğuna yol açar."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Nörodejeneratif hastalıklarda artan serbest radikallerin kolinerjik iletim üzerindeki etkisi nedir?",
+     "answer": "Reaktif oksijen türleri kolinesteraz enzim aktivitesini artırarak kolinerjik iletiyi baskılar ve apoptozu hızlandırır."
+    }
+   ]
+  },
+  {
+   "id": "k2-53-d-s02",
+   "title": "Protein Katlanma Bozuklukları ve Agregasyon Toksisitesi",
+   "subtitle": "Proteopati ve Hücre İçi Toksik Birikim",
+   "section": "Genel Nörodejenerasyon",
+   "content": "Nörodejeneratif süreçlerin merkezinde hatalı katlanan proteinlerin birikimi yer alır.\n\n- **Proteozomal Yetersizlik:** Hatalı katlanan proteinler ubikitin-proteazom sisteminin kapasitesini aşar.\n- **Agregasyon ve İnklüzyon:** Katlanma anomalisi gösteren proteinler oligomer ve fibril oluşturarak çöker.\n- **Seçici Hücresel Hasar:** Farklı nörodejeneratif hastalıklarda spesifik proteinler belirli nöron gruplarında birikir.\n\n> [!NOTE]\n> Demanslar nörodejeneratif hastalıkların en büyük grubunu oluşturur ve en sık nedeni Alzheimer hastalığıdır.",
+   "synthesisNarrative": "Nörodejeneratif süreçlerin merkezinde hatalı katlanan proteinlerin birikimi yer alır.\n\n- **Proteozomal Yetersizlik:** Hatalı katlanan proteinler ubikitin-proteazom sisteminin kapasitesini aşar.\n- **Agregasyon ve İnklüzyon:** Katlanma anomalisi gösteren proteinler oligomer ve fibril oluşturarak çöker.\n- **Seçici Hücresel Hasar:** Farklı nörodejeneratif hastalıklarda spesifik proteinler belirli nöron gruplarında birikir.\n\n> [!NOTE]\n> Demanslar nörodejeneratif hastalıkların en büyük grubunu oluşturur ve en sık nedeni Alzheimer hastalığıdır.",
+   "slideNumber": 2,
+   "bolum": "1.1",
+   "pdfSayfalari": [
+    6,
+    10
+   ],
+   "sourcePdf": {
+    "startPage": 6,
+    "endPage": 10
+   },
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Demans vakalarının yaklaşık yüzde altmış ile yetmişini Alzheimer hastalığı oluşturur.",
+     "maskedTerm": "Alzheimer",
+     "hint": "",
+     "explanation": "Alzheimer hastalığı tüm demans olguları içinde en sık saptanan etyolojik nedendir."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Nörodejeneratif hastalıklarda hatalı katlanan proteinlerin hücre içinde çözünmez yapılar oluşturmasına ne ad verilir?",
+     "options": [
+      {
+       "id": "o1",
+       "label": "A",
+       "text": "Proteopati ve toksik agregasyon oluşumu",
+       "isCorrect": true,
+       "explanation": "Proteopati hatalı katlanan proteinlerin şaperon sistemini aşarak çözünmez oligomer ve fibriller halinde birikmesidir. Bu durum hücresel fonksiyonları bozarak nöronal dejenerasyon ve apoptozu başlatır."
+      },
+      {
+       "id": "o2",
+       "label": "B",
+       "text": "Hücresel hiperplazi ve kontrolsüz mitoz",
+       "isCorrect": false,
+       "explanation": "Hiperplazi dokuda hücre sayısının mitotik bölünmelerle artması durumudur. Nörodejeneratif hastalıklarda hücre çoğalması değil, aksine geri dönüşümsüz nöron kaybı ve doku atrofisi gerçekleşir."
+      },
+      {
+       "id": "o3",
+       "label": "C",
+       "text": "Miyogenez ve sarkomerik hipertrofi",
+       "isCorrect": false,
+       "explanation": "Miyogenez kas dokusunun embriyonik gelişim ve olgunlaşma sürecini tanımlar. Santral sinir sistemindeki nörodejeneratif protein birikimi mekanizmalarıyla doğrudan bir ilişkisi bulunmaz."
+      },
+      {
+       "id": "o4",
+       "label": "D",
+       "text": "Endositoz yoluyla glikoz depolanması",
+       "isCorrect": false,
+       "explanation": "Endositoz hücre dışındaki moleküllerin veziküller aracılığıyla sitoplazmaya alınması mekanizmasıdır. Nörodejenerasyondaki protein agregasyonu hücre içi sentezlenen proteinlerin hatalı katlanmasından kaynaklanır."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Protein Katlanması ve Demans Spektrumu",
+     "items": [
+      {
+       "text": "Hatalı katlanan proteinler şaperon ve proteazom kapasitesini aşarak birikir.",
+       "isLie": false,
+       "explanation": "Ubikitin-proteazom sisteminin doygunluğa ulaşması protein agregasyonunu hızlandırır."
+      },
+      {
+       "text": "Demans vakalarının en büyük kısmını Alzheimer hastalığı oluşturur.",
+       "isLie": false,
+       "explanation": "Alzheimer hastalığı demans olgularının yaklaşık %60-70'inden sorumludur."
+      },
+      {
+       "text": "Tüm nörodejeneratif hastalıklarda aynı tek tip protein aynı beyin bölgesinde birikir.",
+       "isLie": true,
+       "explanation": "Farklı hastalıklarda amiloid, tau veya alfa-sinüklein gibi özgül proteinler farklı anatomik bölgelerde birikir."
+      },
+      {
+       "text": "Agregat oluşturan proteinler nöron fonksiyonlarında ilerleyici kayba yol açar.",
+       "isLie": false,
+       "explanation": "Toksik oligomerler sinaptik iletiyi ve aksonal taşımayı bozar."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Nörodejeneratif proteopatilerde hücre içi protein yıkımından sorumlu temel mekanizma nedir?",
+     "answer": "Ubikitin-proteazom sistemi ve otofaji yolakları hatalı katlanan proteinlerin yıkımından sorumludur."
+    }
+   ]
+  },
+  {
+   "id": "k2-53-d-s03",
+   "title": "Alzheimer Hastalığı: Klinik Tablo ve Etyopatogenez",
+   "subtitle": "Kortikal Atrofi ve Amiloid Birikim Kaskadı",
+   "section": "Alzheimer Hastalığı",
+   "content": "Alzheimer hastalığı progresif kortikal atrofi ile giden en sık demans nedenidir.\n\n- **Demans Epidemiyolojisi:** Tüm demans vakalarının yaklaşık yüzde 60-70'ini oluşturur.\n- **Klinik Başlangıç:** Yakın bellek kaybı ile başlar; zamanla yargılama, lisan ve mekansal oryantasyon bozulur.\n- **Progresif Nöron Kaybı:** Kolinerjik nöron kaybı temporal ve parietal kortekste belirgin atrofiye neden olur.\n\n> [!IMPORTANT]\n> Olguların yüzde beşi erken başlangıçlı monogenik ailesel formlarken, büyük kısmı geç başlangıçlıdır.",
+   "synthesisNarrative": "Alzheimer hastalığı progresif kortikal atrofi ile giden en sık demans nedenidir.\n\n- **Demans Epidemiyolojisi:** Tüm demans vakalarının yaklaşık yüzde 60-70'ini oluşturur.\n- **Klinik Başlangıç:** Yakın bellek kaybı ile başlar; zamanla yargılama, lisan ve mekansal oryantasyon bozulur.\n- **Progresif Nöron Kaybı:** Kolinerjik nöron kaybı temporal ve parietal kortekste belirgin atrofiye neden olur.\n\n> [!IMPORTANT]\n> Olguların yüzde beşi erken başlangıçlı monogenik ailesel formlarken, büyük kısmı geç başlangıçlıdır.",
+   "slideNumber": 3,
+   "bolum": "1.2",
+   "pdfSayfalari": [
+    11,
+    13
+   ],
+   "sourcePdf": {
+    "startPage": 11,
+    "endPage": 13
+   },
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Alzheimer hastalığında kolinerjik nöron kaybı sonucu kortikal atrofi ve demans gelişir.",
+     "maskedTerm": "atrofi",
+     "hint": "",
+     "explanation": "Girusların incelmesi ve sulkusların genişlemesiyle karakterize progresif kortikal atrofi izlenir."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Alzheimer hastalığının klinik tablosunda ilk etkilenen ve en erken bozulan kognitif fonksiyon hangisidir?",
+     "options": [
+      {
+       "id": "o1",
+       "label": "A",
+       "text": "Epizodik yakın bellek ve yeni bilgileri öğrenme yetisi",
+       "isCorrect": true,
+       "explanation": "Alzheimer patolojisi öncelikle hipokampus ve entorinal korteksteki sinapsları hasara uğratır. Bu anatomik seçicilik nedeniyle hastaların ilk şikayeti yakın hafıza kaybı ve yeni olayları hatırlayamamadır."
+      },
+      {
+       "id": "o2",
+       "label": "B",
+       "text": "Primer motor korteksteki kaba kas gücü",
+       "isCorrect": false,
+       "explanation": "Primer motor alan frontal lobda yer alır ve piramidal yolları kontrol eder. Alzheimer hastalığının erken evrelerinde motor kas gücü tamamen normaldir ve felç tablosu beklenmez."
+      },
+      {
+       "id": "o3",
+       "label": "C",
+       "text": "İşitme korteksi ve odyolojik ses algılama",
+       "isCorrect": false,
+       "explanation": "İşitme fonksiyonu periferik koklea ve beyin sapı akustik çekirdekleri tarafından yürütülür. Alzheimer patolojisi afferent duyusal işitmeyi primer olarak hedeflemez ve işitme kaybı yapmaz."
+      },
+      {
+       "id": "o4",
+       "label": "D",
+       "text": "Medüller kardiyovasküler refleks yanıtlar",
+       "isCorrect": false,
+       "explanation": "Medulla oblangata otonom solunum ve dolaşım merkezlerini barındırır. Alzheimer hastalığı kortikal ve limbik yapıları tuttuğundan medüller yaşamsal refleksler hastalığın son evresine dek korunur."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Alzheimer Kliniği ve Epidemiyolojik Özellikleri",
+     "items": [
+      {
+       "text": "Alzheimer hastalığı toplumda en yaygın görülen nörodejeneratif demans türüdür.",
+       "isLie": false,
+       "explanation": "Demans vakalarının yaklaşık üçte ikisinden Alzheimer sorumludur."
+      },
+      {
+       "text": "Hastalığın erken başlangıçlı formları tüm olguların yaklaşık yüzde beşini oluşturur.",
+       "isLie": false,
+       "explanation": "Erken başlangıçlı vakalar nadirdir ve çoğunlukla otozomal dominant genetik mutasyonlarla seyreder."
+      },
+      {
+       "text": "Alzheimer hastalığında koku alma ve yakın bellek fonksiyonları daima en son aşamada bozulur.",
+       "isLie": true,
+       "explanation": "Entorinal korteks tutulumu nedeniyle koku duyusu ve yakın bellek kaybı hastalığın en erken klinik bulgularıdır."
+      },
+      {
+       "text": "Progresif beyin atrofisi ile seyrederek zamanla lisan ve oryantasyon bozukluğuna yol açar.",
+       "isLie": false,
+       "explanation": "Kortikal dejenerasyon yaygınlaştıkça afazi, apraksi ve agnozi gelişir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Alzheimer hastalığında erken dönemde belirgin nöron kaybına uğrayan temel limbik yapı hangisidir?",
+     "answer": "Hipokampus ve entorinal korteks nöronları erken dönemde dejenere olur."
+    }
+   ]
+  },
+  {
+   "id": "k2-53-d-s04",
+   "title": "Alzheimer Genetik Mimarisi: APP, PSEN1, PSEN2 ve ApoE",
+   "subtitle": "Kromozom Lokusları ve Amiloid İşlenmesi",
+   "section": "Alzheimer Hastalığı",
+   "content": "Alzheimer genetiği erken ve geç başlangıçlı formlar olarak iki grupta incelenir.\n\n- **Erken Başlangıçlı Genler:** APP (Kromozom 21), PSEN1 (Kromozom 14) ve PSEN2 (Kromozom 1) otozomal dominant kalıtılır.\n- **Down Sendromu Bağlantısı:** Kromozom 21 trizomisinde üç APP geni bulunması 40 yaş civarında amiloid plak gelişimine yol açar.\n- **Geç Başlangıçlı Form ve ApoE:** Kromozom 19'daki ApoE4 aleli en güçlü genetik risk faktörüdür; ApoE2 aleli ise koruyucudur.\n\n> [!NOTE]\n> Histopatolojide ekstraselüler Aβ42 plakları ve intraselüler hiperfosforile tau yumakları kesin tanı kriteridir.",
+   "synthesisNarrative": "Alzheimer genetiği erken ve geç başlangıçlı formlar olarak iki grupta incelenir.\n\n- **Erken Başlangıçlı Genler:** APP (Kromozom 21), PSEN1 (Kromozom 14) ve PSEN2 (Kromozom 1) otozomal dominant kalıtılır.\n- **Down Sendromu Bağlantısı:** Kromozom 21 trizomisinde üç APP geni bulunması 40 yaş civarında amiloid plak gelişimine yol açar.\n- **Geç Başlangıçlı Form ve ApoE:** Kromozom 19'daki ApoE4 aleli en güçlü genetik risk faktörüdür; ApoE2 aleli ise koruyucudur.\n\n> [!NOTE]\n> Histopatolojide ekstraselüler Aβ42 plakları ve intraselüler hiperfosforile tau yumakları kesin tanı kriteridir.",
+   "slideNumber": 4,
+   "bolum": "1.2",
+   "pdfSayfalari": [
+    14,
+    17
+   ],
+   "sourcePdf": {
+    "startPage": 14,
+    "endPage": 17
+   },
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Geç başlangıçlı Alzheimer hastalığında en güçlü duyarlılık geni ApoE geni varyantıdır.",
+     "maskedTerm": "ApoE",
+     "hint": "",
+     "explanation": "Apolipoprotein E geni alellerinden epsilon-4 geç başlangıçlı Alzheimer riskini doza bağımlı artırır."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Erken başlangıçlı otozomal dominant Alzheimer hastalığından sorumlu gen ve kromozom eşleşmelerinden hangisi doğrudur?",
+     "options": [
+      {
+       "id": "o1",
+       "label": "A",
+       "text": "Presenilin 1 - Kromozom 14",
+       "isCorrect": true,
+       "explanation": "PSEN1 geni gama sekretaz kompleksinin katalitik çekirdeğini kodlar ve kromozom 14 üzerinde yer alır. Bu gendeki mutasyonlar erken başlangıçlı ailesel Alzheimer hastalığının en sık ve en agresif nedenidir."
+      },
+      {
+       "id": "o2",
+       "label": "B",
+       "text": "APP geni - Kromozom 1",
+       "isCorrect": false,
+       "explanation": "APP amiloid prekürsör proteinini kodlayan transmembran gendir ve kromozom 21 üzerinde haritalanmıştır. Kromozom 1 üzerinde yer alan erken başlangıçlı Alzheimer geni ise Presenilin 2 (PSEN2) genidir."
+      },
+      {
+       "id": "o3",
+       "label": "C",
+       "text": "Presenilin 2 - Kromozom 21",
+       "isCorrect": false,
+       "explanation": "Presenilin 2 geni gama sekretaz alt birimini kodlar ve kromozom 1 üzerinde bulunmaktadır. Kromozom 21 üzerinde yer alan gen amiloid prekürsör proteini kodlayan APP genidir."
+      },
+      {
+       "id": "o4",
+       "label": "D",
+       "text": "Apolipoprotein E - Kromozom 14",
+       "isCorrect": false,
+       "explanation": "Apolipoprotein E lipid taşınmasında görevli plazma proteinidir ve kromozom 19 üzerinde lokalizedir. Kromozom 14 üzerindeki gen erken başlangıçlı formu oluşturan Presenilin 1 (PSEN1) genidir."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Alzheimer Genetik Lokusları ve Biyobelirteçler",
+     "items": [
+      {
+       "text": "Down sendromlu bireylerde üçüncü kromozom 21 kopyası nedeniyle APP gen dozu artmıştır.",
+       "isLie": false,
+       "explanation": "Trizomi 21 nedeniyle erken yaşta amiloid birikimi ve Alzheimer fenotipi görülür."
+      },
+      {
+       "text": "ApoE epsilon-4 aleli Alzheimer gelişme riskini doza bağımlı olarak yükseltir.",
+       "isLie": false,
+       "explanation": "Homozigot ApoE4 taşıyıcılarında risk 8-12 kat artar."
+      },
+      {
+       "text": "ApoE epsilon-2 aleli Alzheimer riskini artıran en tehlikeli mutasyondur.",
+       "isLie": true,
+       "explanation": "ApoE2 aleli riski artırmaz, aksine Alzheimer'a karşı koruyucu etki gösterir."
+      },
+      {
+       "text": "Erken başlangıçlı ailesel Alzheimer olguları genellikle otozomal dominant geçişlidir.",
+       "isLie": false,
+       "explanation": "APP, PSEN1 ve PSEN2 mutasyonları otozomal dominant kalıtım sergiler."
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "title": "Alzheimer Amiloid Kaskadı Mekanizması",
+     "steps": [
+      "1. Membran Proteini: APP transmembran glikoproteininin beta ve gama sekretaz ile anormal kesimi.",
+      "2. Oligomer Oluşumu: Aβ42 peptidlerinin ekstraselüler alanda toksik oligomerler oluşturması.",
+      "3. Plak Çöküşü: Çözünmeyen amiloid fibrillerinin birikerek senil plakları meydana getirmesi.",
+      "4. Tau Patolojisi: Amiloid toksisitesinin kinazları aktive edip tau hiperfosforilasyonunu tetiklemesi.",
+      "5. Nörodejenerasyon: Sinaps kaybı, nöron ölümü ve progresif beyin atrofisinin gelişmesi."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-53-d-s05",
+   "title": "Alzheimer Tanı Algoritması ve BOS Biyobelirteçleri",
+   "subtitle": "Asemptomatik Bireyler ve Moleküler Tanı",
+   "section": "Alzheimer Hastalığı",
+   "content": "Alzheimer tanısında klinik kriterlerin yanında laboratuvar biyobelirteçleri kullanılır.\n\n- **Ilımlı Kognitif Bozukluk:** Günlük yaşam aktivitelerini bozmayan ancak testlerde bellek kusuru gösteren evredir.\n- **BOS Analizinde Aβ42:** Plaklarda çöktüğü için beyin omurilik sıvısında serbest Aβ42 düzeyi anlamlı derecede azalır.\n- **BOS Tau Düzeyleri:** Nöron hasarı sonucu toplam tau (t-tau) ve hiperfosforile tau (p-tau) düzeyleri yükselir.\n\n> [!IMPORTANT]\n> Asemptomatik bireylerde rutin genetik tarama önerilmez; güçlü ailesel erken başlangıç öyküsü olanlarda genetik danışmanlık verilir.",
+   "synthesisNarrative": "Alzheimer tanısında klinik kriterlerin yanında laboratuvar biyobelirteçleri kullanılır.\n\n- **Ilımlı Kognitif Bozukluk:** Günlük yaşam aktivitelerini bozmayan ancak testlerde bellek kusuru gösteren evredir.\n- **BOS Analizinde Aβ42:** Plaklarda çöktüğü için beyin omurilik sıvısında serbest Aβ42 düzeyi anlamlı derecede azalır.\n- **BOS Tau Düzeyleri:** Nöron hasarı sonucu toplam tau (t-tau) ve hiperfosforile tau (p-tau) düzeyleri yükselir.\n\n> [!IMPORTANT]\n> Asemptomatik bireylerde rutin genetik tarama önerilmez; güçlü ailesel erken başlangıç öyküsü olanlarda genetik danışmanlık verilir.",
+   "slideNumber": 5,
+   "bolum": "1.2",
+   "pdfSayfalari": [
+    18,
+    21
+   ],
+   "sourcePdf": {
+    "startPage": 18,
+    "endPage": 21
+   },
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Alzheimer şüphesinde BOS analizinde serbest amiloid beta kırk iki düzeyi azalırken fosforile tau artar.",
+     "maskedTerm": "azalırken",
+     "hint": "",
+     "explanation": "Aβ42 peptidleri parankimdeki plaklarda çöktüğü için serbest BOS konsantrasyonu düşer."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Alzheimer hastalığı tanısında BOS analizi yapıldığında saptanan tipik biyobelirteç profili hangisidir?",
+     "options": [
+      {
+       "id": "o1",
+       "label": "A",
+       "text": "Aβ42 düzeyinde azalma ile birlikte fosforile tau (p-tau) düzeyinde artış",
+       "isCorrect": true,
+       "explanation": "Aβ42 peptidleri beyin parankimindeki senil plaklarda çöktüğü için BOS sıvısındaki serbest konsantrasyonu azalır. Nöronların harabiyeti sonucu sitoplazmik fosforile tau proteini BOS'a salınarak yükselir."
+      },
+      {
+       "id": "o2",
+       "label": "B",
+       "text": "Aβ42 düzeyinde aşırı yükselme ve tau proteininin tamamen kaybolması",
+       "isCorrect": false,
+       "explanation": "BOS'ta Aβ42 düzeyi yükselmez, aksine dokuda depolandığı için belirgin düşüş gösterir. Tau proteini ise nöron ölümüyle BOS'a döküldüğünden konsantrasyonu katlanarak artar."
+      },
+      {
+       "id": "o3",
+       "label": "C",
+       "text": "Glikoz düzeyinin sıfıra inmesi ve bol nötrofil lökosit görülmesi",
+       "isCorrect": false,
+       "explanation": "BOS glikozunun düşmesi ve nötrofil hakimiyeti akut bakteriyel menenjitlerin karakteristik bulgusudur. Alzheimer dejeneratif bir süreç olup BOS'ta hücresel lökosit artışı ve hipoglikoraji beklenmez."
+      },
+      {
+       "id": "o4",
+       "label": "D",
+       "text": "Yalnızca albümin düzeyinin artması ve immünglobulinlerin sıfırlanması",
+       "isCorrect": false,
+       "explanation": "Albümin artışı kan beyin bariyerinin mekanik yıkımını gösteren genel bir parametredir. Alzheimer hastalığına özgül biyobelirteç profili amiloid ve tau proteinlerinin dengesiyle belirlenir."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Alzheimer Tanı Kriterleri ve BOS Analizi",
+     "items": [
+      {
+       "text": "BOS analizinde ELISA yöntemiyle Aβ ve tau düzeyleri ölçülebilir.",
+       "isLie": false,
+       "explanation": "ELISA ve immünoassay yöntemleri BOS biyobelirteç analizinde standarttır."
+      },
+      {
+       "text": "Asemptomatik bireylerde prediktif genetik testler öncesinde mutlaka genetik danışmanlık verilmelidir.",
+       "isLie": false,
+       "explanation": "Etik ilkeler ve psikolojik etkiler nedeniyle danışmanlık zorunludur."
+      },
+      {
+       "text": "Alzheimer hastalığında BOS'ta serbest Aβ42 seviyesi kontrol bireylerine göre belirgin olarak yükselir.",
+       "isLie": true,
+       "explanation": "Serbest Aβ42 beyin dokusunda senil plaklarda çöktüğü için BOS'taki miktarı belirgin şekilde azalır."
+      },
+      {
+       "text": "Ilımlı kognitif bozukluk evresindeki hastaların bir kısmı zamanla Alzheimer demansına ilerler.",
+       "isLie": false,
+       "explanation": "MCI olgularının yıllık yaklaşık %10-15'i klinik Alzheimer demansına dönüşür."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Alzheimer hastalarının beyin omurilik sıvısında (BOS) tipik amiloid ve tau bulguları nasıldır?",
+     "answer": "BOS analizinde plaklarda çöktüğü için serbest Aβ42 düzeyi düşer; nöronal hasar nedeniyle fosforile tau (p-tau) düzeyi yükselir."
+    }
+   ]
+  },
+  {
+   "id": "k2-53-d-s06",
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Demans ve Nörodejenerasyon İlkeleri",
+   "subtitle": "Kazanımların Pekiştirilmesi",
+   "section": "Genel Nörodejenerasyon",
+   "content": "Bu bölümde nörodejenerasyon mekanizmalarını ve Alzheimer genetiğini pekiştiriyoruz.\n\n- **Hücresel Temel:** Nöronların bölünememesi, oksidatif stres ve proteozomal kapasite aşımı.\n- **Alzheimer Histopatolojisi:** Ekstraselüler Aβ42 senil plakları ve intraselüler hiperfosforile tau yumakları.\n- **Genetik Lokuslar:** Erken formlarda APP (21), PSEN1 (14), PSEN2 (1); geç formda ApoE4 riski artırır.\n\n> [!IMPORTANT]\n> BOS'ta serbest Aβ42 düşüklüğü ve p-tau yüksekliği Alzheimer biyobelirteç profilinin temelidir.",
+   "synthesisNarrative": "Bu bölümde nörodejenerasyon mekanizmalarını ve Alzheimer genetiğini pekiştiriyoruz.\n\n- **Hücresel Temel:** Nöronların bölünememesi, oksidatif stres ve proteozomal kapasite aşımı.\n- **Alzheimer Histopatolojisi:** Ekstraselüler Aβ42 senil plakları ve intraselüler hiperfosforile tau yumakları.\n- **Genetik Lokuslar:** Erken formlarda APP (21), PSEN1 (14), PSEN2 (1); geç formda ApoE4 riski artırır.\n\n> [!IMPORTANT]\n> BOS'ta serbest Aβ42 düşüklüğü ve p-tau yüksekliği Alzheimer biyobelirteç profilinin temelidir.",
+   "slideNumber": 6,
+   "bolum": "1.2",
+   "pdfSayfalari": [
+    1,
+    21
+   ],
+   "sourcePdf": {
+    "startPage": 1,
+    "endPage": 21
+   },
+   "isCheckpoint": true,
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Alzheimer hastalığı demans olgularının yaklaşık yüzde yetmişini oluşturan en sık nörodejeneratif nedendir.",
+     "maskedTerm": "yetmişini",
+     "hint": "",
+     "explanation": "Demans vakalarının yaklaşık %60-70'i Alzheimer tanısı almaktadır."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Alzheimer hastalığında görülen genetik lokus ve patolojik lezyon eşleşmelerinden hangisi doğrudur?",
+     "options": [
+      {
+       "id": "o1",
+       "label": "A",
+       "text": "Kromozom 21 trizomisi - Artmış APP gen dozu ve erken amiloid plak oluşumu",
+       "isCorrect": true,
+       "explanation": "Down sendromlu bireylerde üçüncü kromozom 21 kopyası nedeniyle APP gen ekspresyonu artar. Bu durum 40 yaş civarında aşırı amiloid beta üretimine ve erken başlangıçlı Alzheimer demansına yol açar."
+      },
+      {
+       "id": "o2",
+       "label": "B",
+       "text": "ApoE2 aleli taşıyıcılığı - Senil plak oluşumunu hızlandıran en riskli mutasyon",
+       "isCorrect": false,
+       "explanation": "Apolipoprotein E2 aleli Alzheimer riskini artıran değil, aksine hastalığa karşı koruyucu etki gösteren aleldir. Hastalık riskini belirgin artıran form ApoE4 alelidir."
+      },
+      {
+       "id": "o3",
+       "label": "C",
+       "text": "Presenilin 1 mutasyonu - Kolinesteraz enziminin aşırı çoğalması",
+       "isCorrect": false,
+       "explanation": "Presenilin 1 gama sekretaz enzim kompleksinin katalitik alt birimini kodlar. Mutasyonları kolinesteraz enzimini çoğaltmaz, APP'nin anormal kesilerek Aβ42 peptidlerinin artmasına neden olur."
+      },
+      {
+       "id": "o4",
+       "label": "D",
+       "text": "Nörofibriler yumaklar - Ekstraselüler alanda biriken serbest kolesterol kristalleri",
+       "isCorrect": false,
+       "explanation": "Nörofibriler yumaklar nöron sitoplazması içinde mikrotübül proteini tau'nun hiperfosforilasyonuyla oluşur. Ekstraselüler yerleşimli değildir ve kolesterol kristali içermez."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Demans ve Alzheimer Temel İlkeleri",
+     "items": [
+      {
+       "text": "ApoE4 aleli Alzheimer hastalığı riskini doza bağımlı yükselten güçlü bir faktördür.",
+       "isLie": false,
+       "explanation": "ApoE4 aleli tek kopya ile 3 kat, çift kopya ile 8-12 kat risk artışı sağlar."
+      },
+      {
+       "text": "PSEN1 mutasyonları erken başlangıçlı ailesel Alzheimer olgularına yol açar.",
+       "isLie": false,
+       "explanation": "PSEN1 kromozom 14 üzerinde olup erken başlangıçlı OD Alzheimer'ın en sık nedenidir."
+      },
+      {
+       "text": "ApoE2 aleli taşıyan bireylerde Alzheimer hastalığı riski en yüksek seviyededir.",
+       "isLie": true,
+       "explanation": "ApoE2 koruyucu aleldir; en yüksek risk ApoE4 taşıyıcılarındadır."
+      },
+      {
+       "text": "BOS'ta serbest Aβ42 düzeyi azalırken fosforile tau düzeyi artış gösterir.",
+       "isLie": false,
+       "explanation": "Bu biyobelirteç profili Alzheimer patofizyolojisini doğrudan yansıtır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Kromozom 21 trizomisi olan Down sendromlu hastalarda neden erken yaşta Alzheimer görülür?",
+     "answer": "APP geni kromozom 21 üzerinde yer aldığı için gen dozu artar ve aşırı amiloid beta üretilerek genç yaşta plaklar oluşur."
+    }
+   ]
+  },
+  {
+   "id": "k2-53-d-s07",
+   "title": "Parkinson Hastalığı: Substantia Nigra ve Alfa-Sinüklein",
+   "subtitle": "Lewy Cisimcikleri ve Monogenik Kalıtım",
+   "section": "Parkinson Hastalığı",
+   "content": "Parkinson hastalığı substantia nigra pars compactada dopaminerjik nöron kaybıyla karakterizedir.\n\n- **Klinik Triad:** İstirahat tremoru, rijidite (dişli çark), bradikinezi ve postural instabilite ile seyreder.\n- **Lewy Cisimcikleri:** Nöron sitoplazmasında alfa-sinüklein proteininin fibriler agregatlarından oluşan inklüzyonlardır.\n- **Otozomal Dominant Genler:** SNCA (PARK1/4, alfa-sinüklein geni) ve LRRK2 (PARK8, dardarin) baskın kalıtılır.\n\n> [!IMPORTANT]\n> Olguların yüzde onu monogenik ailesel kökenli olup genetik mutasyonlarla doğrudan ilişkilidir.",
+   "synthesisNarrative": "Parkinson hastalığı substantia nigra pars compactada dopaminerjik nöron kaybıyla karakterizedir.\n\n- **Klinik Triad:** İstirahat tremoru, rijidite (dişli çark), bradikinezi ve postural instabilite ile seyreder.\n- **Lewy Cisimcikleri:** Nöron sitoplazmasında alfa-sinüklein proteininin fibriler agregatlarından oluşan inklüzyonlardır.\n- **Otozomal Dominant Genler:** SNCA (PARK1/4, alfa-sinüklein geni) ve LRRK2 (PARK8, dardarin) baskın kalıtılır.\n\n> [!IMPORTANT]\n> Olguların yüzde onu monogenik ailesel kökenli olup genetik mutasyonlarla doğrudan ilişkilidir.",
+   "slideNumber": 7,
+   "bolum": "2.1",
+   "pdfSayfalari": [
+    22,
+    24
+   ],
+   "sourcePdf": {
+    "startPage": 22,
+    "endPage": 24
+   },
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Parkinson hastalığının karakteristik histopatolojik bulgusu olan Lewy cisimciği alfa-sinüklein proteini içerir.",
+     "maskedTerm": "alfa-sinüklein",
+     "hint": "",
+     "explanation": "Lewy cisimcikleri SNCA geni tarafından kodlanan alfa-sinüklein agregatlarından oluşur."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdaki genlerden hangisi Parkinson hastalığında otozomal dominant kalıtılan en yaygın ailesel formdan sorumludur?",
+     "options": [
+      {
+       "id": "o1",
+       "label": "A",
+       "text": "LRRK2 (PARK8 - Dardarin kinaz geni)",
+       "isCorrect": true,
+       "explanation": "LRRK2 geni sitoplazmik bir multienzim kinaz kodlar ve mutasyonları otozomal dominant Parkinson vakalarının en sık nedenidir. Genellikle geç başlangıçlı ve klasik sporadik Parkinson kliniğine benzer tablo oluşturur."
+      },
+      {
+       "id": "o2",
+       "label": "B",
+       "text": "PRKN (Parkin ubikitin ligaz geni)",
+       "isCorrect": false,
+       "explanation": "Parkin geni bir E3 ubikitin ligaz kodlar ve otozomal resesif kalıtım sergiler. Genç başlangıçlı Parkinson vakalarından sorumludur ve dominant kalıtım özelliği göstermez."
+      },
+      {
+       "id": "o3",
+       "label": "C",
+       "text": "PINK1 (Mitokondriyal serin kinaz geni)",
+       "isCorrect": false,
+       "explanation": "PINK1 mitokondriyal membran potansiyelini izleyen bir kinazdır ve otozomal resesif olarak aktarılır. Erken yaşta başlayan Parkinsonizm olgularında rol oynar."
+      },
+      {
+       "id": "o4",
+       "label": "D",
+       "text": "APP (Amiloid prekürsör protein geni)",
+       "isCorrect": false,
+       "explanation": "APP amiloid beta öncül proteinidir ve mutasyonları erken başlangıçlı Alzheimer hastalığına yol açar. Nigrostriatal dopaminerjik nöron dejenerasyonunda rol oynayan bir Parkinson geni değildir."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Parkinson Patolojisi ve SNCA Geni",
+     "items": [
+      {
+       "text": "Substantia nigra pars compactadaki dopaminerjik nöronlar selektif yıkıma uğrar.",
+       "isLie": false,
+       "explanation": "Hastalığın temel anatomik odağı mezensefalondaki substantia nigra pars compactadır."
+      },
+      {
+       "text": "LRRK2 mutasyonları otozomal dominant Parkinson vakalarının en sık nedenlerindendir.",
+       "isLie": false,
+       "explanation": "LRRK2 kinaz mutasyonları dominant ailesel formlarda sıktır."
+      },
+      {
+       "text": "Lewy cisimcikleri primer olarak ekstraselüler amiloid plak çöküntüleridir.",
+       "isLie": true,
+       "explanation": "Lewy cisimcikleri hücre içi (intraselüler) alfa-sinüklein inklüzyonlarıdır; amiloid ekstraselülerdir."
+      },
+      {
+       "text": "SNCA gen duplikasyon ve triplikasyonları alfa-sinüklein dozunu artırarak erken Parkinson yapar.",
+       "isLie": false,
+       "explanation": "Gen dozu arttıkça protein agregasyonu hızlanır ve hastalık daha agresif seyreder."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Parkinson hastalığında motor bulguların ortaya çıkabilmesi için substantia nigra nöronlarının yaklaşık ne kadarı kaybedilmelidir?",
+     "answer": "Klinik motor semptomların belirginleşmesi için substantia nigradaki dopaminerjik nöronların yaklaşık %60-70'i kaybedilmiş olmalıdır."
+    }
+   ]
+  },
+  {
+   "id": "k2-53-d-s08",
+   "title": "Parkinson Genetiği: Mitofaji, PINK1, Parkin ve Oksidatif Hasar",
+   "subtitle": "Mitokondriyal Kalite Kontrolü ve Kompleks I",
+   "section": "Parkinson Hastalığı",
+   "content": "Dopamin metabolizması substantia nigra nöronlarında yüksek oksidatif stres yaratır.\n\n- **Otozomal Resesif Genler:** Parkin (PRKN, PARK2) ve PINK1 (PARK6) erken başlangıçlı resesif formlardan sorumludur.\n- **PINK1 ve Parkin Yolu:** Normalde hasarlı mitokondrileri otolitik yıkıma (mitofaji) yönlendiren bu yolak mutasyonlarda durur.\n- **Kompleks I İnhibisyonu:** Mitokondriyal elektron taşıma zinciri disfonksiyonu enerji krizine yol açar.\n\n> [!NOTE]\n> Mitofajinin bozulması hücre içinde hasarlı ve reaktif oksijen üreten mitokondrilerin birikmesine neden olur.",
+   "synthesisNarrative": "Dopamin metabolizması substantia nigra nöronlarında yüksek oksidatif stres yaratır.\n\n- **Otozomal Resesif Genler:** Parkin (PRKN, PARK2) ve PINK1 (PARK6) erken başlangıçlı resesif formlardan sorumludur.\n- **PINK1 ve Parkin Yolu:** Normalde hasarlı mitokondrileri otolitik yıkıma (mitofaji) yönlendiren bu yolak mutasyonlarda durur.\n- **Kompleks I İnhibisyonu:** Mitokondriyal elektron taşıma zinciri disfonksiyonu enerji krizine yol açar.\n\n> [!NOTE]\n> Mitofajinin bozulması hücre içinde hasarlı ve reaktif oksijen üreten mitokondrilerin birikmesine neden olur.",
+   "slideNumber": 8,
+   "bolum": "2.1",
+   "pdfSayfalari": [
+    25,
+    27
+   ],
+   "sourcePdf": {
+    "startPage": 25,
+    "endPage": 27
+   },
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "PINK1 ve Parkin proteinleri hasarlı mitokondrilerin temizlendiği mitofaji sürecini yönetir.",
+     "maskedTerm": "mitofaji",
+     "hint": "",
+     "explanation": "Mitokondriyal kalite kontrolü olan mitofaji bozulduğunda oksidatif hasar ve apoptoz hızlanır."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdaki Parkinson ilişkili genlerden hangisi otozomal resesif kalıtım gösterir ve mitofaji yolağında görev alır?",
+     "options": [
+      {
+       "id": "o1",
+       "label": "A",
+       "text": "PINK1 (PARK6) mitokondriyal serin/treonin kinaz",
+       "isCorrect": true,
+       "explanation": "PINK1 mitokondriyal zarda yerleşen bir serin/treonin kinazdır ve hasarlı organelleri işaretler. Bu gendeki inaktive edici mutasyonlar otozomal resesif geçişli erken başlangıçlı Parkinson fenotipine yol açar."
+      },
+      {
+       "id": "o2",
+       "label": "B",
+       "text": "SNCA (PARK1) alfa-sinüklein yapı geni",
+       "isCorrect": false,
+       "explanation": "SNCA alfa-sinüklein proteinini kodlayan temel gendir ve sinaptik vezikül trafiğinde görev alır. Bu gendeki mutasyonlar veya gen duplikasyonları otozomal dominant kalıtımla Parkinson oluşturur."
+      },
+      {
+       "id": "o3",
+       "label": "C",
+       "text": "LRRK2 (PARK8) dardarin kinaz enzimi",
+       "isCorrect": false,
+       "explanation": "LRRK2 proteini hücre içi sinyal iletiminde rol oynayan büyük bir multienzim kinazdır. En sık rastlanan ailesel Parkinson mutasyonlarını barındırır ve kalıtım modeli otozomal dominanttır."
+      },
+      {
+       "id": "o4",
+       "label": "D",
+       "text": "PSEN1 gama sekretaz katalitik alt birimi",
+       "isCorrect": false,
+       "explanation": "PSEN1 amiloid prekürsör proteini kesen enzim kompleksinin bileşenidir. Erken başlangıçlı Alzheimer hastalığına neden olur ve mitofaji ilişkili Parkinson genleri arasında bulunmaz."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Mitokondriyal Fonksiyon ve Mitofaji Bozukluğu",
+     "items": [
+      {
+       "text": "Dopaminin enzimatik ve non-enzimatik oksidasyonu hidrojen peroksit ve serbest radikaller üretir.",
+       "isLie": false,
+       "explanation": "Dopamin turnover'ı substantia nigrayı oksidatif strese son derece duyarlı hale getirir."
+      },
+      {
+       "text": "PINK1 mitokondriyal zar potansiyeli düştüğünde dış zarda birikerek Parkin'i uyarır.",
+       "isLie": false,
+       "explanation": "Bu sinyal hasarlı mitokondrinin ubikitinlenip otofajizoma gitmesini sağlar."
+      },
+      {
+       "text": "Parkinson hastalığında dopamin sentezi arttığı için nöronlar aşırı uyarılmayla ölür.",
+       "isLie": true,
+       "explanation": "Hastalıkta dopamin sentezi artmaz, substantia nigra dejenerasyonu ile dopamin konsantrasyonu ağır şekilde düşer."
+      },
+      {
+       "text": "Oksidatif stres alfa-sinüklein proteininin hatalı katlanmasını ve agregasyonunu hızlandırır.",
+       "isLie": false,
+       "explanation": "Serbest radikaller alfa-sinüklein oligomerizasyonunu doğrudan stimüle eder."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Dopaminerjik nöronlarda PINK1 ve Parkin gen mutasyonlarının ortak hücresel sonucu nedir?",
+     "answer": "Hasarlı mitokondrilerin mitofaji ile ortadan kaldırılamaması sonucu biriken reaktif oksijen türleri ve enerji yetersizliğidir."
+    }
+   ]
+  },
+  {
+   "id": "k2-53-d-s09",
+   "title": "Amiyotrofik Lateral Skleroz: Motor Nöron Dejenerasyonu ve Kliniği",
+   "subtitle": "Kombine Üst ve Alt Motor Nöron Yıkımı",
+   "section": "Amiyotrofik Lateral Skleroz",
+   "content": "ALS, serebral korteks ve medulla spinalisteki motor nöronların dejenerasyonudur.\n\n- **Üst Motor Nöron Tutulumu:** Piramidal yolak hasarıyla spastisite, hiperrefleksi ve Babinski pozitifliği görülür.\n- **Alt Motor Nöron Tutulumu:** Medulla spinalis ön boynuz hücre kaybıyla asimetrik kas güçsüzlüğü, atrofi ve fasikülasyon gelişir.\n- **Karakteristik Korunma:** Duyu fonksiyonları, sfinkter kontrolü ve ekstraoküler göz hareketleri korunur.\n\n> [!IMPORTANT]\n> Hem üst hem alt motor nöron bulgularının aynı hastada birlikte bulunması ALS'nin en temel tanısal özelliğidir.",
+   "synthesisNarrative": "ALS, serebral korteks ve medulla spinalisteki motor nöronların dejenerasyonudur.\n\n- **Üst Motor Nöron Tutulumu:** Piramidal yolak hasarıyla spastisite, hiperrefleksi ve Babinski pozitifliği görülür.\n- **Alt Motor Nöron Tutulumu:** Medulla spinalis ön boynuz hücre kaybıyla asimetrik kas güçsüzlüğü, atrofi ve fasikülasyon gelişir.\n- **Karakteristik Korunma:** Duyu fonksiyonları, sfinkter kontrolü ve ekstraoküler göz hareketleri korunur.\n\n> [!IMPORTANT]\n> Hem üst hem alt motor nöron bulgularının aynı hastada birlikte bulunması ALS'nin en temel tanısal özelliğidir.",
+   "slideNumber": 9,
+   "bolum": "2.1",
+   "pdfSayfalari": [
+    28,
+    30
+   ],
+   "sourcePdf": {
+    "startPage": 28,
+    "endPage": 30
+   },
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "ALS hastalığında omurilik ön boynuzundaki alt motor nöronlar ve kortikal üst motor nöronlar dejenerasyona uğrar.",
+     "maskedTerm": "motor",
+     "hint": "",
+     "explanation": "ALS seçici olarak somatik istemli kas hareketlerini yöneten motor nöronları hedefler."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdaki klinik fonksiyonlardan hangisi ALS tanılı bir hastada tipik olarak KORUNAN bir bulgudur?",
+     "options": [
+      {
+       "id": "o1",
+       "label": "A",
+       "text": "Ekstraoküler göz hareketleri ve sfinkter kontrolü",
+       "isCorrect": true,
+       "explanation": "Ekstraoküler motor çekirdekler ve Onuf sfinkter nükleusu ALS nörodejenerasyonuna karşı dirençlidir. Hastalığın ileri evrelerinde dahi hastaların göz hareketleri, sfinkter kontrolü ve somatosensöriyel duyuları korunur."
+      },
+      {
+       "id": "o2",
+       "label": "B",
+       "text": "Distal ekstremitelerin istemli kas gücü",
+       "isCorrect": false,
+       "explanation": "İstemli kas gücü alt ve üst motor nöronların innervasyonuyla sağlanır. ALS hastalığında ön boynuz nöronlarının ölümüyle birlikte ekstremitelerde belirgin asimetrik kas güçsüzlüğü ve atrofi gelişir."
+      },
+      {
+       "id": "o3",
+       "label": "C",
+       "text": "Derin tendon reflekslerinin fizyolojik canlılığı",
+       "isCorrect": false,
+       "explanation": "Derin tendon refleksleri kortikospinal traktus tarafından inhibe edilen monosinaptik reflekslerdir. ALS'de üst motor nöron hasarı geliştikçe refleks inhibisyonu bozulur ve hiperrefleksi ile klonus ortaya çıkar."
+      },
+      {
+       "id": "o4",
+       "label": "D",
+       "text": "Diyafram ve interkostal solunum kas gücü",
+       "isCorrect": false,
+       "explanation": "Diyafram kası servikal C3-C5 ön boynuzundan köken alan frenik sinir tarafından innerve edilir. ALS'de servikal motor nöron kaybı solunum kaslarını zayıflatır ve temel ölüm nedeni solunum yetmezliğidir."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "ALS Nörolojik Tutulum Özellikleri",
+     "items": [
+      {
+       "text": "Hem üst hem alt motor nöron bulgularının eş zamanlı varlığı tanı koydurucudur.",
+       "isLie": false,
+       "explanation": "Spastisite ve hiperrefleksi (ÜMN) ile atrofi ve fasikülasyonun (AMN) bir arada olması karakteristiktir."
+      },
+      {
+       "text": "Dejenere olan nöronların yerini astrositik gliosis dokusu alır.",
+       "isLie": false,
+       "explanation": "Nöron kaybı lateral kordlarda skleroz (glial skar) ile sonuçlanır."
+      },
+      {
+       "text": "ALS hastalarında hastalık tablosuna daima ağır derin duyu kaybı eşlik eder.",
+       "isLie": true,
+       "explanation": "ALS saf motor nöron hastalığıdır; duyu yolları (dokunma, ağrı, vibrasyon, propriosepsiyon) korunur."
+      },
+      {
+       "text": "Kortikal motor hücreler ve omurilik ön boynuz hücreleri primer etkilenen yapılardır.",
+       "isLie": false,
+       "explanation": "Betz piramidal hücreleri ve ön boynuz alfa motor nöronları ölür."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "ALS hastasında saptanan fasikülasyon ve kas atrofisi hangi motor nöron seviyesinin hasarını gösterir?",
+     "answer": "Medulla spinalis ön boynuzundaki alt motor nöron (AMN) hasarını gösterir."
+    }
+   ]
+  },
+  {
+   "id": "k2-53-d-s10",
+   "title": "ALS Genetik Etyolojisi: SOD1 ve C9orf72 Hekzanükleotid Tekrarı",
+   "subtitle": "Ailesel Formlar ve TDP-43 Proteopatisi",
+   "section": "Amiyotrofik Lateral Skleroz",
+   "content": "ALS vakalarının yaklaşık yüzde onu ailesel geçiş gösteren genetik formlardır.\n\n- **C9orf72 Geni:** Ailesel ALS'nin en sık nedenidir; intron 1'deki GGGGCC hekzanükleotid tekrar artışı ile karakterizedir.\n- **FTD Birlikteliği:** C9orf72 mutasyonları hem ALS hem de Frontotemporal Demans (FTD) fenotipini bir arada oluşturabilir.\n- **SOD1 Enzim Mutasyonu:** Süperoksit dismutaz 1 gen defekti ailesel ALS'nin ikinci en sık nedenidir.\n- **TDP-43 İnklüzyonları:** Hem sporadik hem ailesel olguların çoğunda sitoplazmada TDP-43 (TARDBP) proteini kümelenir.\n\n> [!NOTE]\n> C9orf72 geninde normalde 30'un altında olan tekrar sayısı, mutant alellerde yüzlerce kopyaya ulaşarak RNA toksisitesi yapar.",
+   "synthesisNarrative": "ALS vakalarının yaklaşık yüzde onu ailesel geçiş gösteren genetik formlardır.\n\n- **C9orf72 Geni:** Ailesel ALS'nin en sık nedenidir; intron 1'deki GGGGCC hekzanükleotid tekrar artışı ile karakterizedir.\n- **FTD Birlikteliği:** C9orf72 mutasyonları hem ALS hem de Frontotemporal Demans (FTD) fenotipini bir arada oluşturabilir.\n- **SOD1 Enzim Mutasyonu:** Süperoksit dismutaz 1 gen defekti ailesel ALS'nin ikinci en sık nedenidir.\n- **TDP-43 İnklüzyonları:** Hem sporadik hem ailesel olguların çoğunda sitoplazmada TDP-43 (TARDBP) proteini kümelenir.\n\n> [!NOTE]\n> C9orf72 geninde normalde 30'un altında olan tekrar sayısı, mutant alellerde yüzlerce kopyaya ulaşarak RNA toksisitesi yapar.",
+   "slideNumber": 10,
+   "bolum": "2.1",
+   "pdfSayfalari": [
+    31,
+    32
+   ],
+   "sourcePdf": {
+    "startPage": 31,
+    "endPage": 32
+   },
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Ailesel ALS olgularının en sık genetik nedeni C9orf72 genindeki hekzanükleotid tekrar artışıdır.",
+     "maskedTerm": "C9orf72",
+     "hint": "",
+     "explanation": "C9orf72 genindeki GGGGCC tekrarı hem ailesel ALS'nin hem ailesel FTD'nin en yaygın nedenidir."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Ailesel ALS etyolojisinde en sık saptanan ikinci genetik defekt olan SOD1 geninin hücresel fonksiyonu nedir?",
+     "options": [
+      {
+       "id": "o1",
+       "label": "A",
+       "text": "Süperoksit radikallerini hidrojen peroksit ve moleküler oksijene dönüştürmek",
+       "isCorrect": true,
+       "explanation": "Süperoksit dismutaz 1 sitoplazmada serbest oksijen radikallerini temizleyen antioksidan bir enzimdir. Mutant SOD1 proteini toksik fonksiyon kazanımı sergileyerek yanlış katlanır ve motor nöronlarda agregat oluşturur."
+      },
+      {
+       "id": "o2",
+       "label": "B",
+       "text": "Tirozin amino asidinden L-DOPA sentezini başlatmak",
+       "isCorrect": false,
+       "explanation": "Tirozin hidroksilaz katekolamin biyosentezinin hız kısıtlayıcı basamağını katalizleyen enzimdir. Substantia nigra dopamin sentezinde görev alır ve SOD1 geninin enzimatik aktivitesiyle ilgisi yoktur."
+      },
+      {
+       "id": "o3",
+       "label": "C",
+       "text": "Miyelin proteinlerini proteolitik olarak parçalamak",
+       "isCorrect": false,
+       "explanation": "Miyelin kılıfı yıkan enzimler matriks metalloproteinazlar veya fagositer lizozomal hidrolazlardır. SOD1 bir proteaz değildir, sitozolik antioksidan savunma mekanizmasının parçasıdır."
+      },
+      {
+       "id": "o4",
+       "label": "D",
+       "text": "Sinaptik aralıktaki asetilkolini hidroliz etmek",
+       "isCorrect": false,
+       "explanation": "Asetilkolin nöromüsküler kavşakta iletimi sağlayan nörotransmitterdir ve asetilkolinesteraz tarafından parçalanır. SOD1 geninin kolinerjik iletim veya esteraz aktivitesi üzerinde doğrudan bir görevi yoktur."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "ALS Genetik Mutasyonları ve TDP-43",
+     "items": [
+      {
+       "text": "C9orf72 mutasyonlarında hekzanükleotid tekrar artışı görülür.",
+       "isLie": false,
+       "explanation": "GGGGCC tekrarının uzaması dipeptit tekrar proteinleri ve RNA odağı toksisitesi yaratır."
+      },
+      {
+       "text": "TDP-43 proteini ALS vakalarının büyük çoğunluğunda sitoplazmik patolojik inklüzyon oluşturur.",
+       "isLie": false,
+       "explanation": "Çekirdekten sitoplazmaya yer değiştiren hiperfosforile TDP-43 temel patolojik bulgudur."
+      },
+      {
+       "text": "SOD1 geni mutasyonları yalnızca otozomal resesif olarak aktarılır ve demansla seyreder.",
+       "isLie": true,
+       "explanation": "SOD1 mutasyonları tipik olarak otozomal dominant kalıtılır ve klasik motor nöron tablosu yapar, demans yapmaz."
+      },
+      {
+       "text": "ALS hastalarında C9orf72 mutasyonu varsa frontotemporal demans tablosu da eşlik edebilir.",
+       "isLie": false,
+       "explanation": "C9orf72 ALS/FTD spektrumunun ortak moleküler genetik zeminidir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "C9orf72 genindeki hekzanükleotid tekrar artışının nükleotid dizilimi nedir?",
+     "answer": "GGGGCC (guanin-guanin-guanin-guanin-sitozin-sitozin) diziliminin yüzlerce kez tekrar etmesidir."
+    }
+   ]
+  },
+  {
+   "id": "k2-53-d-s11",
+   "title": "Huntington Hastalığı: HTT Geni, CAG Tekrarları ve Paternal Antisipasyon",
+   "subtitle": "Kaudat Atrofisi ve Poliglutamin Toksisitesi",
+   "section": "Huntington Hastalığı",
+   "content": "Huntington hastalığı otozomal dominant kalıtılan nörodejeneratif bir hareket bozukluğudur.\n\n- **CAG Tekrar Artışı:** Kromozom 4p16.3'teki HTT geninde kodlanan CAG trinükleotidinin aşırı uzamasıdır.\n- **Penetrans Eşikleri:** Normalde 26 ve altı; 27-35 premutasyon; 36-39 azalmış penetrans; 40 ve üzeri tam penetranstır.\n- **Striatum Nöron Kaybı:** Kaudat çekirdek ve putamendeki GABAerjik ve kolinerjik nöronlar selektif olarak ölür.\n- **Klinik Tablo ve Antisipasyon:** Kore, distoni, psikiyatrik bozukluk ve demans görülür; babadan aktarımda hastalık erken başlar.\n\n> [!IMPORTANT]\n> Babadan aktarılan mayozda CAG tekrarları kararsız uzama gösterir; bu durum sonraki kuşaklarda erken başlangıca (antisipasyon) yol açar.",
+   "synthesisNarrative": "Huntington hastalığı otozomal dominant kalıtılan nörodejeneratif bir hareket bozukluğudur.\n\n- **CAG Tekrar Artışı:** Kromozom 4p16.3'teki HTT geninde kodlanan CAG trinükleotidinin aşırı uzamasıdır.\n- **Penetrans Eşikleri:** Normalde 26 ve altı; 27-35 premutasyon; 36-39 azalmış penetrans; 40 ve üzeri tam penetranstır.\n- **Striatum Nöron Kaybı:** Kaudat çekirdek ve putamendeki GABAerjik ve kolinerjik nöronlar selektif olarak ölür.\n- **Klinik Tablo ve Antisipasyon:** Kore, distoni, psikiyatrik bozukluk ve demans görülür; babadan aktarımda hastalık erken başlar.\n\n> [!IMPORTANT]\n> Babadan aktarılan mayozda CAG tekrarları kararsız uzama gösterir; bu durum sonraki kuşaklarda erken başlangıca (antisipasyon) yol açar.",
+   "slideNumber": 11,
+   "bolum": "2.2",
+   "pdfSayfalari": [
+    33,
+    35
+   ],
+   "sourcePdf": {
+    "startPage": 33,
+    "endPage": 35
+   },
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Huntington hastalığında HTT genindeki CAG trinükleotid tekrar sayısı kırk ve üzerinde olduğunda tam penetrans görülür.",
+     "maskedTerm": "CAG",
+     "hint": "",
+     "explanation": "CAG kodonu glutamin amino asidini kodlar ve poliglutamin zincirinin uzamasına yol açar."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Huntington hastalığında patolojik dejenerasyonun en belirgin olduğu anatomik bölge aşağıdakilerden hangisidir?",
+     "options": [
+      {
+       "id": "o1",
+       "label": "A",
+       "text": "Korpus striatum (Kaudat çekirdek başı ve putamen)",
+       "isCorrect": true,
+       "explanation": "Striatum bazal ganglionların inhibitör girdi merkezidir ve orta boy dikenli GABAerjik nöronlar içerir. Huntington hastalığında bu hücreler erken ölür ve kaudat atrofisi sonucu lateral ventriküller genişler."
+      },
+      {
+       "id": "o2",
+       "label": "B",
+       "text": "Medulla spinalis arka kordon funikulusu",
+       "isCorrect": false,
+       "explanation": "Fasikülüs grasilis ve kuneatus pozisyon ve vibrasyon duyusunu beyne ileten duyusal yollardır. Huntington hastalığı striatal motor devreleri etkileyen bir hastalıktır ve arka kordonlar korunur."
+      },
+      {
+       "id": "o3",
+       "label": "C",
+       "text": "Serebellar vermis Purkinje tabakası",
+       "isCorrect": false,
+       "explanation": "Serebellar vermis aksiyel denge ve gövde koordinasyonunu sağlayan serebellum merkezidir. Serebellar ataksilerde primer hasarlanırken, Huntington hastalığının kardinal dejenerasyon alanı striatumdur."
+      },
+      {
+       "id": "o4",
+       "label": "D",
+       "text": "Kiyazma optikum ve görme traktusları",
+       "isCorrect": false,
+       "explanation": "Kiyazma optikum retina ganglion hücre aksonlarının çaprazlaştığı afferent görme yoludur. Huntington koresinde görsel yollar etkilenmez ve primer patoloji korpus striatum nöron kaybıdır."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Huntington Genetiği ve Antisipasyon",
+     "items": [
+      {
+       "text": "Hastalık otozomal dominant kalıtım modeline sahiptir.",
+       "isLie": false,
+       "explanation": "Tek bir mutant alelin taşınması hastalığın ortaya çıkması için yeterlidir."
+      },
+      {
+       "text": "CAG tekrar sayısının artması huntingtin proteininde poliglutamin zincirini uzatır.",
+       "isLie": false,
+       "explanation": "Uzamış poliglutamin toksik fonksiyon kazanımına ve nükleer agregasyona yol açar."
+      },
+      {
+       "text": "Antisipasyon olgusu özellikle mutant alelin anneden aktarıldığı durumlarda en belirgindir.",
+       "isLie": true,
+       "explanation": "Huntington'da instabilite ve belirgin antisipasyon spermatogenez sırasında (babadan aktarımda) görülür."
+      },
+      {
+       "text": "Kaudat çekirdeğin atrofisi sonucunda lateral ventriküllerin ön boynuzlarında genişleme izlenir.",
+       "isLie": false,
+       "explanation": "Kaudat başının erimesi frontal boynuzların kare şeklinde genişlemesine yol açar."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Genetikte bir hastalığın sonraki nesillerde daha erken yaşta ve daha ağır klinik tabloyla ortaya çıkmasına ne ad verilir?",
+     "answer": "Antisipasyon (anticipation) adı verilir."
+    }
+   ]
+  },
+  {
+   "id": "k2-53-d-s12",
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Hareket Bozuklukları ve Motor Nöron Genetiği",
+   "subtitle": "Kazanımların Pekiştirilmesi",
+   "section": "Parkinson Hastalığı",
+   "content": "Bu bölümde Parkinson, ALS ve Huntington hastalıklarını pekiştiriyoruz.\n\n- **Parkinson Mekanizması:** Substantia nigra dopamin kaybı; alfa-sinüklein Lewy cisimcikleri; LRRK2, PINK1 ve Parkin mutasyonları.\n- **ALS Karakteristiği:** Üst ve alt motor nöronun kombine kaybı; C9orf72 hekzanükleotid ve SOD1 mutasyonları.\n- **Huntington Genetiği:** Kromozom 4'teki HTT geninde CAG tekrar artışı; striatum atrofisi ve paternal antisipasyon.\n\n> [!IMPORTANT]\n> CAG tekrarları poliglutamin hastalıklarında toksik protein fonksiyon kazanımı ile nöron ölümünü tetikler.",
+   "synthesisNarrative": "Bu bölümde Parkinson, ALS ve Huntington hastalıklarını pekiştiriyoruz.\n\n- **Parkinson Mekanizması:** Substantia nigra dopamin kaybı; alfa-sinüklein Lewy cisimcikleri; LRRK2, PINK1 ve Parkin mutasyonları.\n- **ALS Karakteristiği:** Üst ve alt motor nöronun kombine kaybı; C9orf72 hekzanükleotid ve SOD1 mutasyonları.\n- **Huntington Genetiği:** Kromozom 4'teki HTT geninde CAG tekrar artışı; striatum atrofisi ve paternal antisipasyon.\n\n> [!IMPORTANT]\n> CAG tekrarları poliglutamin hastalıklarında toksik protein fonksiyon kazanımı ile nöron ölümünü tetikler.",
+   "slideNumber": 12,
+   "bolum": "2.2",
+   "pdfSayfalari": [
+    22,
+    35
+   ],
+   "sourcePdf": {
+    "startPage": 22,
+    "endPage": 35
+   },
+   "isCheckpoint": true,
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Huntington hastalığı patogenezinde rol oynayan CAG trinükleotid tekrarı poliglutamin amino asit dizisini uzatır.",
+     "maskedTerm": "poliglutamin",
+     "hint": "",
+     "explanation": "CAG kodonu glutamin kodladığı için bu gruba poliglutamin hastalıkları adı verilir."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdaki nörodejeneratif hastalık ve genetik mekanizma eşleştirmelerinden hangisi YANLIŞTIR?",
+     "options": [
+      {
+       "id": "o1",
+       "label": "A",
+       "text": "Parkinson Hastalığı - Kromozom 4 HTT geninde CAG trinükleotid artışı",
+       "isCorrect": true,
+       "explanation": "HTT genindeki CAG trinükleotid tekrar artışı Huntington koresine yol açan mutasyondur. Parkinson hastalığı ise SNCA, LRRK2, PRKN veya PINK1 gen mutasyonları ve alfa-sinüklein patolojisiyle ilişkilidir."
+      },
+      {
+       "id": "o2",
+       "label": "B",
+       "text": "Huntington Hastalığı - HTT geninde CAG trinükleotid tekrarı ve babadan antisipasyon",
+       "isCorrect": false,
+       "explanation": "Huntingtin geni kromozom 4p üzerinde yer alır ve CAG tekrar artışı kodlar. Tekrar sayısı 40 üzerine çıktığında tam penetranslı kore ve striatum atrofisi tablosu gelişir."
+      },
+      {
+       "id": "o3",
+       "label": "C",
+       "text": "Ailesel Motor Nöron Hastalığı - SOD1 süperoksit dismutaz mutasyonu",
+       "isCorrect": false,
+       "explanation": "Süperoksit dismutaz 1 geni ailesel ALS olgularının yaklaşık yüzde yirmisinden sorumludur. Enzim yanlış katlanarak sitozolik agregatlar oluşturur ve motor nöronları öldürür."
+      },
+      {
+       "id": "o4",
+       "label": "D",
+       "text": "Ailesel ALS/FTD Spektrumu - C9orf72 intronunda GGGGCC hekzanükleotid tekrarı",
+       "isCorrect": false,
+       "explanation": "C9orf72 genindeki hekzanükleotid tekrar uzaması hem motor nöron hasarı hem frontotemporal demans yapar. Ailesel ALS vakalarında en sık saptanan genetik nedendir."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Parkinson, ALS ve Huntington Karşılaştırması",
+     "items": [
+      {
+       "text": "ALS hastalarında göz hareketleri ve sfinkter fonksiyonları korunurken istemli motor kaslar zayıflar.",
+       "isLie": false,
+       "explanation": "Okülomotor çekirdekler ve Onuf çekirdeği dejenerasyondan etkilenmez."
+      },
+      {
+       "text": "Huntington hastalığında kaudat çekirdek ve putamendeki GABAerjik nöronlar selektif yıkıma uğrar.",
+       "isLie": false,
+       "explanation": "Striatum nöron kaybı kore ve istemsiz hareketlerin temel mekanizmasıdır."
+      },
+      {
+       "text": "Parkinson hastalığında biriken Lewy cisimcikleri primer olarak ekstraselüler tau fibrilleridir.",
+       "isLie": true,
+       "explanation": "Lewy cisimcikleri intraselüler yerleşimlidir ve temel bileşeni alfa-sinükleindir; tau Alzheimer'da görülür."
+      },
+      {
+       "text": "C9orf72 genindeki hekzanükleotid tekrar artışı hem ALS hem de demans tablosu yapabilir.",
+       "isLie": false,
+       "explanation": "C9orf72 ALS/FTD ortak moleküler genetik zeminini oluşturur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Huntington hastalığında tekrar sayısı 40 ve üzerinde olduğunda penetrans durumu nedir?",
+     "answer": "Yüzde yüz tam penetranstır; kişi yaşam süresi yeterli olduğu takdirde hastalığı kesinlikle geliştirir."
+    }
+   ]
+  },
+  {
+   "id": "k2-53-d-s13",
+   "title": "Multipl Skleroz: İmmünogenetik Yatkınlık ve Çevresel Tetikleyiciler",
+   "subtitle": "HLA İlişkisi ve Otoimmün Demiyelinizasyon",
+   "section": "Multipl Skleroz",
+   "content": "Multipl Skleroz (MS), MSS'nin kronik otoimmün demiyelinizan hastalığıdır.\n\n- **Demografik Özellikler:** Genç erişkinlerde (20-40 yaş) ve kadınlarda erkeklere kıyasla 2-3 kat daha sık görülür.\n- **İmmünogenetik Yatkınlık:** En güçlü genetik ilişki HLA-DRB1*15:01 aleli iledir; hastalık riskini 3 kat artırır.\n- **Çevresel Faktörler:** Epstein-Barr virüsü (EBV) enfeksiyonu, düşük D vitamini düzeyi ve sigara kullanımı riski yükseltir.\n- **Coğrafi Dağılım:** Ekvatordan kutuplara doğru uzaklaştıkça güneş ışığı azalmasına paralel olarak prevalans artar.\n\n> [!NOTE]\n> MS tek bir gene bağlı gelişmez; genetik yatkınlık zemininde çevresel tetikleyicilerin başlattığı otoimmün yanıttır.",
+   "synthesisNarrative": "Multipl Skleroz (MS), MSS'nin kronik otoimmün demiyelinizan hastalığıdır.\n\n- **Demografik Özellikler:** Genç erişkinlerde (20-40 yaş) ve kadınlarda erkeklere kıyasla 2-3 kat daha sık görülür.\n- **İmmünogenetik Yatkınlık:** En güçlü genetik ilişki HLA-DRB1*15:01 aleli iledir; hastalık riskini 3 kat artırır.\n- **Çevresel Faktörler:** Epstein-Barr virüsü (EBV) enfeksiyonu, düşük D vitamini düzeyi ve sigara kullanımı riski yükseltir.\n- **Coğrafi Dağılım:** Ekvatordan kutuplara doğru uzaklaştıkça güneş ışığı azalmasına paralel olarak prevalans artar.\n\n> [!NOTE]\n> MS tek bir gene bağlı gelişmez; genetik yatkınlık zemininde çevresel tetikleyicilerin başlattığı otoimmün yanıttır.",
+   "slideNumber": 13,
+   "bolum": "3.1",
+   "pdfSayfalari": [
+    36,
+    44
+   ],
+   "sourcePdf": {
+    "startPage": 36,
+    "endPage": 44
+   },
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Multipl Skleroz gelişiminde en güçlü genetik risk faktörü HLA-DRB1 lokusu allelleridir.",
+     "maskedTerm": "HLA-DRB1",
+     "hint": "",
+     "explanation": "MHC sınıf II molekülü olan HLA-DRB1*15:01 MS gelişim riskini belirgin artıran majör genetik faktördür."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Multipl Skleroz epidemiyolojisi ve çevresel risk etmenlerine dair aşağıdakilerden hangisi doğrudur?",
+     "options": [
+      {
+       "id": "o1",
+       "label": "A",
+       "text": "Genç erişkin kadınlarda daha sık görülür ve EBV enfeksiyonu ile D vitamini düşüklüğü riski artırır",
+       "isCorrect": true,
+       "explanation": "Multipl Skleroz genç erişkinlikte kadınlarda 2-3 kat daha yaygın ortaya çıkar. Epstein-Barr virüs seropozitifliği, yetersiz güneş ışığı ve düşük D vitamini otoimmüniteyi tetikleyen kanıtlanmış çevresel etmenlerdir."
+      },
+      {
+       "id": "o2",
+       "label": "B",
+       "text": "Yalnızca ileri yaştaki erkek bireylerde ortaya çıkan monogenik bir bozukluktur",
+       "isCorrect": false,
+       "explanation": "MS tipik olarak 20-40 yaş arası genç erişkinleri etkileyen otoimmün multifaktöriyel bir hastalıktır. Tek gen mutasyonuna bağlı monogenik bir hastalık değildir ve yaşlı erkeklerde nadiren başlar."
+      },
+      {
+       "id": "o3",
+       "label": "C",
+       "text": "Ekvatoral bölgelerde yaşayan toplumlarda kutuplara oranla belirgin olarak daha sıktır",
+       "isCorrect": false,
+       "explanation": "Güneş ışığı cildin D vitamini sentezlemesini sağlayarak immünomodülatör etki gösterir. Ekvatordan kutuplara doğru uzaklaşıldıkça güneş ışığı azalır ve MS görülme prevalansı tersine artış gösterir."
+      },
+      {
+       "id": "o4",
+       "label": "D",
+       "text": "Kromozom 4 üzerinde yer alan tek bir resesif gen delesyonuna bağlıdır",
+       "isCorrect": false,
+       "explanation": "Kromozom 4 üzerindeki trinükleotid tekrar artışı Huntington hastalığından sorumludur. Multipl Skleroz yüzlerce gen varyantının ve HLA lokuslarının çevresel faktörlerle etkileştiği karmaşık bir hastalıktır."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "MS Epidemiyolojisi ve İmmünogenetik Riskler",
+     "items": [
+      {
+       "text": "Otoimmün saldırı santral sinir sistemindeki oligodendrositleri ve miyelin kılıfı hedefler.",
+       "isLie": false,
+       "explanation": "T ve B hücreleri kan beyin bariyerini aşarak miyeline karşı inflamasyon başlatır."
+      },
+      {
+       "text": "Sigara kullanımı ve D vitamini eksikliği hastalığın çevresel tetikleyicileri arasındadır.",
+       "isLie": false,
+       "explanation": "Bu iki faktör immün toleransı bozarak demiyelinizasyon riskini artırır."
+      },
+      {
+       "text": "Multipl Skleroz hastalığı periferik Schwann hücrelerinin seçici nekrozuyla karakterizedir.",
+       "isLie": true,
+       "explanation": "MS santral sinir sistemi miyelinini (oligodendrosit) tutar; periferik sinir miyelini (Schwann) korunur."
+      },
+      {
+       "text": "HLA-DRB1*15:01 aleli taşıyıcılarında MS riski anlamlı derecede yüksektir.",
+       "isLie": false,
+       "explanation": "MHC sınıf II bölgesi en yüksek genetik ilişki gösteren lokustur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Multipl Sklerozda miyelin kılıfı hedef alan otoimmün reaksiyon santral sinir sisteminde hangi hücre tarafından üretilen miyeline yöneliktir?",
+     "answer": "Oligodendrositler tarafından üretilen MSS miyelin kılıfına yöneliktir."
+    }
+   ]
+  },
+  {
+   "id": "k2-53-d-s14",
+   "title": "Multipl Skleroz: Beyaz Cevher Plakları, Dawson Parmakları ve OKB",
+   "subtitle": "Klinik Seyir, Manyetik Rezonans ve BOS İncelemesi",
+   "section": "Multipl Skleroz",
+   "content": "MS'de inflamatuvar demiyelinizasyon beyaz cevherde odak plaklar oluşturur.\n\n- **Dawson Parmakları:** Ventriküllere dik yerleşimli perivenüler demiyelinizan plakların tipik radyolojik görünümüdür.\n- **Klinik Tipler:** En yaygın form Atak ve İyileşmelerle Seyreden MS'tir (RRMS); zamanla sekonder progresife (SPMS) evrilebilir.\n- **BOS Analizinde OKB:** Beyin omurilik sıvısında intratekal immünglobulin G sentezini gösteren oligoklonal bantlar pozitiftir.\n- **Aksonal Transection:** İleri dönemde miyelin kaybının ötesinde geri dönüşsüz akson hasarı ve nörodejenerasyon gelişir.\n\n> [!IMPORTANT]\n> BOS'ta oligoklonal bant pozitifliği ve artmış IgG indeksi intratekal plazma hücresi aktivasyonunun en net göstergesidir.",
+   "synthesisNarrative": "MS'de inflamatuvar demiyelinizasyon beyaz cevherde odak plaklar oluşturur.\n\n- **Dawson Parmakları:** Ventriküllere dik yerleşimli perivenüler demiyelinizan plakların tipik radyolojik görünümüdür.\n- **Klinik Tipler:** En yaygın form Atak ve İyileşmelerle Seyreden MS'tir (RRMS); zamanla sekonder progresife (SPMS) evrilebilir.\n- **BOS Analizinde OKB:** Beyin omurilik sıvısında intratekal immünglobulin G sentezini gösteren oligoklonal bantlar pozitiftir.\n- **Aksonal Transection:** İleri dönemde miyelin kaybının ötesinde geri dönüşsüz akson hasarı ve nörodejenerasyon gelişir.\n\n> [!IMPORTANT]\n> BOS'ta oligoklonal bant pozitifliği ve artmış IgG indeksi intratekal plazma hücresi aktivasyonunun en net göstergesidir.",
+   "slideNumber": 14,
+   "bolum": "3.1",
+   "pdfSayfalari": [
+    36,
+    44
+   ],
+   "sourcePdf": {
+    "startPage": 36,
+    "endPage": 44
+   },
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Multipl Skleroz tanısında BOS analizinde intratekal IgG sentezini gösteren oligoklonal bantlar saptanır.",
+     "maskedTerm": "oligoklonal",
+     "hint": "",
+     "explanation": "Serumda olmayıp BOS'ta bulunan oligoklonal bantlar MSS içinde klonal B hücresi yanıtını kanıtlar."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Multipl Sklerozlu bir hastanın kraniyal MRG incelemesinde periventriküler beyaz cevherde görülen ventriküle dik uzanımlı lezyonlara ne ad verilir?",
+     "options": [
+      {
+       "id": "o1",
+       "label": "A",
+       "text": "Dawson parmakları radyolojik görünümü",
+       "isCorrect": true,
+       "explanation": "Dawson parmakları ventrikül duvarına dik uzanan meduller venler çevresindeki perivenüler inflamasyonu yansıtır. Korpus kallozum ve lateral ventrikül komşuluğunda T2/FLAIR MRG sekanslarında tipik olarak izlenir."
+      },
+      {
+       "id": "o2",
+       "label": "B",
+       "text": "Kayser-Fleischer halkası korneal birikimi",
+       "isCorrect": false,
+       "explanation": "Kayser-Fleischer halkası Wilson hastalığında Descemet membranında bakır çökmesiyle oluşan oftalmolojik bulgudur. Santral sinir sistemi beyaz cevher plağı değildir ve MRG lezyonlarıyla karıştırılmamalıdır."
+      },
+      {
+       "id": "o3",
+       "label": "C",
+       "text": "İntraselüler eozinofilik Lewy cisimciği",
+       "isCorrect": false,
+       "explanation": "Lewy cisimcikleri alfa-sinüklein agregasyonu içeren mikroskopik intraselüler inklüzyonlardır. Parkinson hastalığı ve Lewy cisimcikli demansta substantia nigra ve kortikal nöronlarda histopatolojik olarak görülür."
+      },
+      {
+       "id": "o4",
+       "label": "D",
+       "text": "Hipokampal Hirano cisimciği oluşumu",
+       "isCorrect": false,
+       "explanation": "Hirano cisimciği Alzheimer hastalığında hipokampus CA1 bölgesinde aktin içeren eozinofilik bir inklüzyondur. Multipl Sklerozun beyaz cevher demiyelinizan lezyonları veya manyetik rezonans bulgularıyla ilgisizdir."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "MS Kliniği, BOS ve Manyetik Rezonans",
+     "items": [
+      {
+       "text": "Hastalığın başlangıcında en sık görülen klinik form atak ve iyileşmelerle seyreden (RRMS) tiptir.",
+       "isLie": false,
+       "explanation": "Olguların yaklaşık %85'i akut ataklar ve kısmi remisyonlarla başlayan RRMS formundadır."
+      },
+      {
+       "text": "BOS elektroforezinde saptanan oligoklonal IgG bantları santral immün aktivasyonu yansıtır.",
+       "isLie": false,
+       "explanation": "OKB hastaların %90'ından fazlasında pozitif saptanır."
+      },
+      {
+       "text": "MS plakları santral sinir sistemi beyaz cevherinde hiçbir zaman aksonal hasara yol açmaz.",
+       "isLie": true,
+       "explanation": "Miyelin harabiyetinin yanı sıra özellikle ilerleyen evrelerde kalıcı aksonal transection ve kayıp gelişir."
+      },
+      {
+       "text": "Manyetik rezonans görüntüleme (MRG) lezyonların zaman ve mekanda dağılımını göstermede temeldir.",
+       "isLie": false,
+       "explanation": "Farklı zamanlarda gelişen ve farklı bölgelere yerleşen lezyonlar tanının omurgasıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Multipl Skleroz hastalarında optik nörit atağı sonrasında ortaya çıkan en sık görsel şikayet nedir?",
+     "answer": "Genellikle tek taraflı görme kaybı, göz hareketleriyle ağrı ve renkli görmede (özellikle kırmızı) bozulmadır."
+    }
+   ]
+  },
+  {
+   "id": "k2-53-d-s15",
+   "title": "Prion Hastalıkları: PrPC'den PrPSc'ye Konformasyon, CJD, GSS ve FFI",
+   "subtitle": "Bulaşıcı Patojenik Proteinler ve Spongiform Hasar",
+   "section": "Prion Hastalıkları",
+   "content": "Prion hastalıkları bulaşıcı, nükleik asit içermeyen protein kaynaklı ensefalopatilerdir.\n\n- **Normal Hücresel Prion (PrPC):** Nöron zarlarında bol bulunan, ağırlıklı alfa-heliks yapılı ve proteaza duyarlı proteindir.\n- **Hastalık Yapıcı Prion (PrPSc):** Beta-kırmalı tabaka oranı artmış, çözünmeyen ve proteaz K sindirimine dirençli konformasyondur.\n- **Klinik Tipler:** CJD hızlı demans ve miyoklonus yapar; GSS serebellar ataksiyle seyreder; FFI talamik uykusuzluk oluşturur.\n\n> [!IMPORTANT]\n> Prionlar nükleik asit içermeksizin enfeksiyöz özellik taşıyan ve standart otoklavlamaya aşırı dirençli patojenlerdir.",
+   "synthesisNarrative": "Prion hastalıkları bulaşıcı, nükleik asit içermeyen protein kaynaklı ensefalopatilerdir.\n\n- **Normal Hücresel Prion (PrPC):** Nöron zarlarında bol bulunan, ağırlıklı alfa-heliks yapılı ve proteaza duyarlı proteindir.\n- **Hastalık Yapıcı Prion (PrPSc):** Beta-kırmalı tabaka oranı artmış, çözünmeyen ve proteaz K sindirimine dirençli konformasyondur.\n- **Klinik Tipler:** CJD hızlı demans ve miyoklonus yapar; GSS serebellar ataksiyle seyreder; FFI talamik uykusuzluk oluşturur.\n\n> [!IMPORTANT]\n> Prionlar nükleik asit içermeksizin enfeksiyöz özellik taşıyan ve standart otoklavlamaya aşırı dirençli patojenlerdir.",
+   "slideNumber": 15,
+   "bolum": "3.1",
+   "pdfSayfalari": [
+    45,
+    52
+   ],
+   "sourcePdf": {
+    "startPage": 45,
+    "endPage": 52
+   },
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Patojenik prion proteini olan PrPSc molekülünde beta-kırmalı tabaka oranı belirgin şekilde artmıştır.",
+     "maskedTerm": "beta-kırmalı",
+     "hint": "",
+     "explanation": "Normal PrPC alfa-heliks yapısındayken patojenik form yüksek beta-tabaka içeriğine sahiptir."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Ağır ve dirençli uykusuzluk, sirkadiyen ritim kaybı, talamus atrofisi ve otonom disfonksiyonla seyreden prion hastalığı hangisidir?",
+     "options": [
+      {
+       "id": "o1",
+       "label": "A",
+       "text": "Ölümcül Ailesel Uykusuzluk (Fatal Familial Insomnia - FFI)",
+       "isCorrect": true,
+       "explanation": "Ölümcül Ailesel Uykusuzluk PRNP genindeki D178N mutasyonuyla ilişkili otozomal dominant bir prion hastalığıdır. Talamusun anterior ve dorsomedial çekirdekleri dejenere olarak inatçı uykusuzluk ve otonom çöküş yaratır."
+      },
+      {
+       "id": "o2",
+       "label": "B",
+       "text": "Sporadik Creutzfeldt-Jakob Hastalığı (sCJD)",
+       "isCorrect": false,
+       "explanation": "CJD hızlı ilerleyen kortikal demans, miyoklonus ve serebellar ataksi tablosu ile seyreder. Primer lezyon talamus kaynaklı sirkadiyen uykusuzluk değil, diffüz kortikal ve subkortikal spongiform hasardır."
+      },
+      {
+       "id": "o3",
+       "label": "C",
+       "text": "Papua Yeni Gine Kuru Ensefalopatisi",
+       "isCorrect": false,
+       "explanation": "Kuru ritüel endokanibalizm ile bulaşan ve serebellar ataksi ile titreme nöbetleri oluşturan edinsel bir hastalıktır. Genetik talamus dejenerasyonu veya ailesel inatçı uykusuzluk kliniği sergilemez."
+      },
+      {
+       "id": "o4",
+       "label": "D",
+       "text": "Gerstmann-Sträussler-Scheinker Sendromu (GSS)",
+       "isCorrect": false,
+       "explanation": "GSS ailesel otozomal dominant bir prion hastalığı olup belirgin serebellar ataksi ve geniş prion amiloid plakları ile seyreder. FFI gibi selektif talamik uykusuzluk tablosu oluşturmaz."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Prion Hastalıklarının Moleküler ve Klinik Tipleri",
+     "items": [
+      {
+       "text": "CJD olgularında elektroensefalografide (EEG) periyodik keskin dalga kompleksleri saptanır.",
+       "isLie": false,
+       "explanation": "Tipik trifazik periyodik senkron deşarjlar CJD'nin karakteristik EEG bulgusudur."
+      },
+      {
+       "text": "Gerstmann-Sträussler-Scheinker sendromunda temel klinik bulgu erken başlayan serebellar ataksidir.",
+       "isLie": false,
+       "explanation": "GSS klinik olarak ataksi ağırlıklı seyreder ve geniş amiloid plakları içerir."
+      },
+      {
+       "text": "Ölümcül Ailesel Uykusuzluk hastalığında primer patolojik yıkım serebral korteksin motor sahasındadır.",
+       "isLie": true,
+       "explanation": "FFI'da patolojinin primer odağı talamusun medial ve ventral çekirdekleridir."
+      },
+      {
+       "text": "Prion proteinini kodlayan PRNP geni kromozom 20'nin kısa kolunda (20p) yer alır.",
+       "isLie": false,
+       "explanation": "PRNP insan kromozom 20 üzerinde lokalizedir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Creutzfeldt-Jakob hastalığı şüphesinde BOS analizinde bakılan ve hızlı nöron yıkımını gösteren belirteç nedir?",
+     "answer": "BOS 14-3-3 proteinidir."
+    }
+   ]
+  },
+  {
+   "id": "k2-53-d-s16",
+   "title": "Spinoserebellar Ataksiler (SCA): Purkinje Kaybı ve CAG Tekrarları",
+   "subtitle": "Poliglutamin Hastalıkları ve Serebellar Dejenerasyon",
+   "section": "Spinoserebellar Ataksiler",
+   "content": "Spinoserebellar ataksiler (SCA), ilerleyici serebellar disfonksiyonla giden heterojen gruptur.\n\n- **Kalıtım ve Sıklık:** Çoğunluğu otozomal dominant kalıtılır ve fenotipik çeşitliliği çok yüksektir.\n- **Purkinje Hücre Dejenerasyonu:** Serebellum korteksindeki Purkinje hücreleri ve spinoserebellar yolaklar selektif ölür.\n- **CAG Trinükleotid Tekrarları:** Birçok SCA formu (SCA1, 2, 3, 6, 7) kodlayan ekzonik bölgelerde CAG tekrar artışı içerir.\n- **Klinik Tablo:** İlerleyici yürüyüş ataksisi, dismetri, disdiadokokinez, nistagmus ve dizartri temel semptomlardır.\n\n> [!IMPORTANT]\n> Kodlayan bölgedeki CAG tekrarları ataksi genlerinin ürettiği proteinlerde toksik poliglutamin uzamasına neden olur.",
+   "synthesisNarrative": "Spinoserebellar ataksiler (SCA), ilerleyici serebellar disfonksiyonla giden heterojen gruptur.\n\n- **Kalıtım ve Sıklık:** Çoğunluğu otozomal dominant kalıtılır ve fenotipik çeşitliliği çok yüksektir.\n- **Purkinje Hücre Dejenerasyonu:** Serebellum korteksindeki Purkinje hücreleri ve spinoserebellar yolaklar selektif ölür.\n- **CAG Trinükleotid Tekrarları:** Birçok SCA formu (SCA1, 2, 3, 6, 7) kodlayan ekzonik bölgelerde CAG tekrar artışı içerir.\n- **Klinik Tablo:** İlerleyici yürüyüş ataksisi, dismetri, disdiadokokinez, nistagmus ve dizartri temel semptomlardır.\n\n> [!IMPORTANT]\n> Kodlayan bölgedeki CAG tekrarları ataksi genlerinin ürettiği proteinlerde toksik poliglutamin uzamasına neden olur.",
+   "slideNumber": 16,
+   "bolum": "3.2",
+   "pdfSayfalari": [
+    53,
+    61
+   ],
+   "sourcePdf": {
+    "startPage": 53,
+    "endPage": 61
+   },
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Spinoserebellar ataksilerde serebellum korteksinde temel olarak Purkinje nöronları dejenerasyona uğrar.",
+     "maskedTerm": "Purkinje",
+     "hint": "",
+     "explanation": "Purkinje hücreleri serebellar korteksin ana inhibitör çıkış nöronlarıdır ve ataksilerde erir."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "SCA hastalıklarının moleküler patogenezinde en sık rol oynayan nükleotid tekrar dizilimi hangisidir?",
+     "options": [
+      {
+       "id": "o1",
+       "label": "A",
+       "text": "Ekzonik CAG trinükleotid poliglutamin tekrar artışı",
+       "isCorrect": true,
+       "explanation": "SCA1, SCA2, SCA3, SCA6 ve SCA7 genlerinin kodlayan ekzonlarında CAG trinükleotid tekrarı bulunur. Bu tekrarlar protein üzerinde uzamış poliglutamin kuyrukları oluşturarak nükleer toksik agregasyona yol açar."
+      },
+      {
+       "id": "o2",
+       "label": "B",
+       "text": "İntronik CCTG tetranükleotid ekspansiyonu",
+       "isCorrect": false,
+       "explanation": "CCTG tetranükleotid tekrar artışı miyotonik distrofi tip 2 (DM2) patogenezinde yer alır. Spinoserebellar ataksilerin klasik poliglutamin formlarında rol oynayan temel mutasyon bu değildir."
+      },
+      {
+       "id": "o3",
+       "label": "C",
+       "text": "Promotör bölgesi GGGGCC hekzanükleotid tekrarı",
+       "isCorrect": false,
+       "explanation": "GGGGCC hekzanükleotid tekrar artışı C9orf72 geninde bulunur ve ailesel ALS/FTD spektrumuna yol açar. Spinoserebellar ataksilerin kodlanan poliglutamin mutasyonlarıyla yapısal olarak farklıdır."
+      },
+      {
+       "id": "o4",
+       "label": "D",
+       "text": "Frataksin genindeki GAA intronik tekrar artışı",
+       "isCorrect": false,
+       "explanation": "GAA trinükleotid artışı Friedreich ataksisinde görülür ve otozomal resesif kalıtılır. SCA grubu hastalıklar ise çoğunlukla otozomal dominant kalıtılan CAG tekrar hastalıklarıdır."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "SCA Kalıtımı ve Purkinje Dejenerasyonu",
+     "items": [
+      {
+       "text": "SCA grubu hastalıklar genellikle otozomal dominant kalıtım özelliği sergiler.",
+       "isLie": false,
+       "explanation": "OD serebellar ataksiler olarak sınıflandırılırlar."
+      },
+      {
+       "text": "Tanıda moleküler genetik analiz ve PCR ile CAG tekrar sayısının belirlenmesi esastır.",
+       "isLie": false,
+       "explanation": "Genetik test kesin tanı ve tip tayini için altın standarttır."
+      },
+      {
+       "text": "SCA olgularında klinik olarak yalnızca duyusal sinirler tutulur, serebellar koordinasyon tamamen normaldir.",
+       "isLie": true,
+       "explanation": "Hastalığın kardinal bulgusu serebellar koordinasyon kaybı, dengesizlik ve yürüyüş ataksisidir."
+      },
+      {
+       "text": "Poliglutamin kuyruğunun uzaması proteinin nükleer inklüzyonlar halinde çökmesine yol açar.",
+       "isLie": false,
+       "explanation": "Uzamış poliglutamin proteini yanlış katlanıp proteazom direncine ve nükleer agregasyona neden olur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Spinoserebellar ataksisi olan bir hastada muayenede saptanan ardışık hızlı hareketleri yapamama bozukluğuna ne ad verilir?",
+     "answer": "Disdiadokokinez adı verilir."
+    }
+   ]
+  },
+  {
+   "id": "k2-53-d-s17",
+   "title": "SCA Alt Tipleri: SCA1, SCA2, SCA3 (Machado-Joseph) ve SCA6",
+   "subtitle": "Klinik Ayrım ve CACNA1A Kalsiyum Kanalopatisi",
+   "section": "Spinoserebellar Ataksiler",
+   "content": "SCA alt tipleri etkilenen gen lokusuna ve eşlik eden nörolojik semptomlara göre ayrılır.\n\n- **SCA1 (Ataksin-1):** ATXN1 geninde CAG artışı; ataksiye piramidal yolak bulguları ve hiperrefleksi eşlik eder.\n- **SCA2 (Ataksin-2):** ATXN2 geninde CAG artışı; belirgin yavaş sakkadik göz hareketleri ve periferik polinöropati ile karakterizedir.\n- **SCA3 (Machado-Joseph):** ATXN3 geninde CAG artışı; dünya genelinde en sık görülen SCA tipidir, amiyotrofi ve distoni yapar.\n- **SCA6 (CACNA1A):** P/Q tipi voltaj kapılı kalsiyum kanal alt birimindeki küçük CAG artışıdır; saf serebellar sendromla seyreder.\n\n> [!NOTE]\n> SCA3 (Machado-Joseph) periferik amiyotrofi ve ekstrapiramidal bulgularla seyrederken; SCA6 hemen hemen saf serebellar tablodur.",
+   "synthesisNarrative": "SCA alt tipleri etkilenen gen lokusuna ve eşlik eden nörolojik semptomlara göre ayrılır.\n\n- **SCA1 (Ataksin-1):** ATXN1 geninde CAG artışı; ataksiye piramidal yolak bulguları ve hiperrefleksi eşlik eder.\n- **SCA2 (Ataksin-2):** ATXN2 geninde CAG artışı; belirgin yavaş sakkadik göz hareketleri ve periferik polinöropati ile karakterizedir.\n- **SCA3 (Machado-Joseph):** ATXN3 geninde CAG artışı; dünya genelinde en sık görülen SCA tipidir, amiyotrofi ve distoni yapar.\n- **SCA6 (CACNA1A):** P/Q tipi voltaj kapılı kalsiyum kanal alt birimindeki küçük CAG artışıdır; saf serebellar sendromla seyreder.\n\n> [!NOTE]\n> SCA3 (Machado-Joseph) periferik amiyotrofi ve ekstrapiramidal bulgularla seyrederken; SCA6 hemen hemen saf serebellar tablodur.",
+   "slideNumber": 17,
+   "bolum": "3.2",
+   "pdfSayfalari": [
+    53,
+    61
+   ],
+   "sourcePdf": {
+    "startPage": 53,
+    "endPage": 61
+   },
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Machado-Joseph hastalığı olarak da bilinen ve en yaygın görülen spinoserebellar ataksi türü SCA3 tipidir.",
+     "maskedTerm": "SCA3",
+     "hint": "",
+     "explanation": "SCA3 (Machado-Joseph) ATXN3 gen mutasyonuna bağlı olup en sık görülen OD ataksidir."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Spinoserebellar ataksiler içinde voltaj kapılı kalsiyum kanal genindeki (CACNA1A) mutasyona bağlı gelişen ve saf serebellar tablo yapan form hangisidir?",
+     "options": [
+      {
+       "id": "o1",
+       "label": "A",
+       "text": "SCA6 kalsiyum kanalopatisi",
+       "isCorrect": true,
+       "explanation": "SCA6 kromozom 19p üzerindeki CACNA1A voltaj bağımlı kalsiyum kanal genindeki küçük CAG tekrarlarına bağlıdır. Diğer formların aksine ekstrapiramidal bulgu yapmaz ve hemen hemen saf serebellar sendrom oluşturur."
+      },
+      {
+       "id": "o2",
+       "label": "B",
+       "text": "SCA1 ataksin-1 mutasyonu",
+       "isCorrect": false,
+       "explanation": "SCA1 kromozom 6p üzerindeki ATXN1 gen mutasyonuna bağlıdır. Serebellar ataksiye belirgin piramidal bulgular, hiperrefleksi ve spastisite eşlik eder; kalsiyum kanal defekti içermez."
+      },
+      {
+       "id": "o3",
+       "label": "C",
+       "text": "SCA2 ataksin-2 mutasyonu",
+       "isCorrect": false,
+       "explanation": "SCA2 kromozom 12q üzerindeki ATXN2 gen defekti sonucu gelişir. Klinik tablosunda yavaş sakkadik göz hareketleri ve periferik polinöropati son derece belirgindir."
+      },
+      {
+       "id": "o4",
+       "label": "D",
+       "text": "SCA3 Machado-Joseph hastalığı",
+       "isCorrect": false,
+       "explanation": "SCA3 kromozom 14q üzerindeki ATXN3 gen mutasyonudur ve en sık görülen tiptir. Serebellar bulguların yanında rijidite, fasikülasyon, ekstrapiramidal bulgular ve amiyotrofi izlenir."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "SCA Alt Tiplerinin Ayırıcı Tanısı",
+     "items": [
+      {
+       "text": "SCA2 formunda göz muayenesinde belirgin şekilde yavaşlamış sakkadik göz hareketleri görülür.",
+       "isLie": false,
+       "explanation": "Yavaş sakkadlar SCA2 için son derece karakteristik bir tanısal ipucudur."
+      },
+      {
+       "text": "SCA3 (Machado-Joseph) dünyada en sık rastlanan otozomal dominant spinoserebellar ataksidir.",
+       "isLie": false,
+       "explanation": "Epidemiyolojik çalışmalarda en yüksek prevalansa sahip dominant ataksi tipidir."
+      },
+      {
+       "text": "SCA6 hastalığı CACNA1A sodyum kanalının delesyonuna bağlı otozomal resesif bir bozukluktur.",
+       "isLie": true,
+       "explanation": "SCA6 kalsiyum kanalı (CACNA1A) geninde CAG tekrar artışına bağlıdır ve otozomal dominanttır."
+      },
+      {
+       "text": "SCA1 olgularında serebellar bulgulara ek olarak hiperrefleksi ve piramidal bulgular gözlenebilir.",
+       "isLie": false,
+       "explanation": "Kortikospinal traktus tutulumu SCA1 kliniğinde sık rastlanan bir tablodur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "SCA2 hastalarında göz hareketlerinde görülen en karakteristik nörolojik anomali nedir?",
+     "answer": "Sakkadik göz hareketlerinin hızında belirgin yavaşlamadır (yavaş sakkadlar)."
+    }
+   ]
+  },
+  {
+   "id": "k2-53-d-s18",
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Demiyelinizasyon, Prion ve Ataksiler",
+   "subtitle": "Kazanımların Pekiştirilmesi",
+   "section": "Multipl Skleroz",
+   "content": "Bu bölümde MS, Prion hastalıkları ve Spinoserebellar Ataksileri pekiştiriyoruz.\n\n- **MS Karakteristiği:** Genç kadında HLA-DRB1 ilişkisi; perivenüler Dawson parmakları ve BOS'ta OKB pozitifliği.\n- **Prion Proteopatisi:** PrPC'den PrPSc beta tabakasına dönüşüm; CJD'de hızlı demans ve miyoklonus; FFI'da inatçı uykusuzluk.\n- **SCA Poliglutamin Ailesi:** CAG trinükleotid tekrarı; Purkinje kaybı; en sık tip SCA3, sakkad yavaşlığı SCA2, kanalopati SCA6.\n\n> [!IMPORTANT]\n> Üç grupta da patolojik süreçler santral sinir sisteminin farklı anatomik merkezlerini selektif olarak etkiler.",
+   "synthesisNarrative": "Bu bölümde MS, Prion hastalıkları ve Spinoserebellar Ataksileri pekiştiriyoruz.\n\n- **MS Karakteristiği:** Genç kadında HLA-DRB1 ilişkisi; perivenüler Dawson parmakları ve BOS'ta OKB pozitifliği.\n- **Prion Proteopatisi:** PrPC'den PrPSc beta tabakasına dönüşüm; CJD'de hızlı demans ve miyoklonus; FFI'da inatçı uykusuzluk.\n- **SCA Poliglutamin Ailesi:** CAG trinükleotid tekrarı; Purkinje kaybı; en sık tip SCA3, sakkad yavaşlığı SCA2, kanalopati SCA6.\n\n> [!IMPORTANT]\n> Üç grupta da patolojik süreçler santral sinir sisteminin farklı anatomik merkezlerini selektif olarak etkiler.",
+   "slideNumber": 18,
+   "bolum": "3.2",
+   "pdfSayfalari": [
+    36,
+    61
+   ],
+   "sourcePdf": {
+    "startPage": 36,
+    "endPage": 61
+   },
+   "isCheckpoint": true,
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "SCA grubunda P/Q tipi voltaj kapılı kalsiyum kanal geni mutasyonuyla oluşan form SCA6 tipidir.",
+     "maskedTerm": "SCA6",
+     "hint": "",
+     "explanation": "SCA6 CACNA1A genindeki küçük CAG tekrarlarına bağlı saf serebellar ataksi formudur."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdaki hastalıklardan hangisi nükleik asit içermeyen enfeksiyöz bir protein konformasyonuyla aktarılır?",
+     "options": [
+      {
+       "id": "o1",
+       "label": "A",
+       "text": "Creutzfeldt-Jakob Hastalığı (Spongiform prion ensefalopatisi)",
+       "isCorrect": true,
+       "explanation": "Prion hastalıkları DNA veya RNA içermeyen patolojik PrPSc protein konformasyonunun yayılmasıyla bulaşır. Hastalık etkeni proteinaz direncine sahip olup nöronlarda süngerimsi vakuolizasyon oluşturur."
+      },
+      {
+       "id": "o2",
+       "label": "B",
+       "text": "Spinoserebellar Ataksi Tip 3 (Machado-Joseph CAG tekrar hastalığı)",
+       "isCorrect": false,
+       "explanation": "Machado-Joseph hastalığı ATXN3 genindeki CAG trinükleotid tekrar artışına bağlı otozomal dominant bir ataksidir. Poliglutamin zincir uzaması sonucu oluşur ve bulaşıcı bir prion hastalığı değildir."
+      },
+      {
+       "id": "o3",
+       "label": "C",
+       "text": "Multipl Skleroz (Otoimmün demiyelinizan beyaz cevher hastalığı)",
+       "isCorrect": false,
+       "explanation": "Multipl Skleroz santral sinir sistemi miyelinini hedef alan kronik otoimmün bir hastalıktır. Genetik yatkınlık ve çevresel etmenlerin tetiklediği T ve B lenfosit yanıtı ile seyreder."
+      },
+      {
+       "id": "o4",
+       "label": "D",
+       "text": "Amiyotrofik Lateral Skleroz (Motor nöron dejenerasyonu)",
+       "isCorrect": false,
+       "explanation": "ALS üst ve alt motor nöronların kombine dejenerasyonu ile giden ilerleyici nörodejeneratif bir tablodur. SOD1 ve C9orf72 gibi mutasyonlarla seyreder, enfeksiyöz protein bulaşı içermez."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "MS, Prion ve SCA Karşılaştırmalı Özellikleri",
+     "items": [
+      {
+       "text": "PrPSc proteaz K enzimiyle parçalanmaya karşı ileri derecede dirençlidir.",
+       "isLie": false,
+       "explanation": "Beta-tabaka yapısı proteolitik enzimlere direnç kazandırır."
+      },
+      {
+       "text": "SCA3 hastalığında kodlanan ATXN3 geninde CAG trinükleotid tekrar artışı izlenir.",
+       "isLie": false,
+       "explanation": "Machado-Joseph bir poliglutamin nörodejenerasyonudur."
+      },
+      {
+       "text": "Multipl Sklerozda intratekal IgG sentezi göstergesi olan oligoklonal bantlar BOS'ta daima negatiftir.",
+       "isLie": true,
+       "explanation": "Oligoklonal IgG bantları MS hastalarının %90'ından fazlasında BOS'ta pozitif saptanır."
+      },
+      {
+       "text": "SCA2 hastalarında göz hareketlerinde sakkadların belirgin yavaşlaması karakteristiktir.",
+       "isLie": false,
+       "explanation": "Yavaş sakkadlar SCA2 fenotipi için kardinal bir bulgudur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Prion hastalıklarında histopatolojik incelemede beyin parankiminde görülen süngerimsi vakuolizasyon görüntüsüne ne ad verilir?",
+     "answer": "Spongiform ensefalopati adı verilir."
+    }
+   ]
+  },
+  {
+   "id": "k2-53-d-s19",
+   "title": "Spinal Müsküler Atrofi (SMA): 5q13.2 Lokusu, SMN1 ve SMN2 Gen Farkı",
+   "subtitle": "Ön Boynuz Motor Nöron Yıkımı ve Ekzon 7 Splicing",
+   "section": "Spinal Müsküler Atrofi",
+   "content": "SMA, omurilik ön boynuz motor nöronlarının kaybı sonucu gelişen OR bir hastalıktır.\n\n- **Kromozom 5q13.2 Lokusu:** SMN1 geninin homozigot delesyonu olguların yüzde 95'inden fazlasından sorumludur.\n- **SMN1 ve SMN2 Farkı:** Ekzon 7'deki tek bir C'den T'ye nükleotid geçişi, SMN2'de ekzon 7'nin kırpılmasına (atlamasına) yol açar.\n- **Fonksiyonel Protein Miktarı:** SMN2 transkriptlerinin yalnızca yüzde 10-15'i tam boy SMN üretir; kalan kısmı kararsızdır.\n- **Kopya Sayısı ve Fenotip:** SMN2 kopya sayısı fenotipik şiddeti belirler; kopya sayısı arttıkça hastalık tablosu hafifler.\n\n> [!IMPORTANT]\n> SMN2 kopya sayısı genel popülasyonda 0 ile 8 arasında değişir; kopya sayısının fazlalığı SMN eksikliğini kısmen kompanse eder.",
+   "synthesisNarrative": "SMA, omurilik ön boynuz motor nöronlarının kaybı sonucu gelişen OR bir hastalıktır.\n\n- **Kromozom 5q13.2 Lokusu:** SMN1 geninin homozigot delesyonu olguların yüzde 95'inden fazlasından sorumludur.\n- **SMN1 ve SMN2 Farkı:** Ekzon 7'deki tek bir C'den T'ye nükleotid geçişi, SMN2'de ekzon 7'nin kırpılmasına (atlamasına) yol açar.\n- **Fonksiyonel Protein Miktarı:** SMN2 transkriptlerinin yalnızca yüzde 10-15'i tam boy SMN üretir; kalan kısmı kararsızdır.\n- **Kopya Sayısı ve Fenotip:** SMN2 kopya sayısı fenotipik şiddeti belirler; kopya sayısı arttıkça hastalık tablosu hafifler.\n\n> [!IMPORTANT]\n> SMN2 kopya sayısı genel popülasyonda 0 ile 8 arasında değişir; kopya sayısının fazlalığı SMN eksikliğini kısmen kompanse eder.",
+   "slideNumber": 19,
+   "bolum": "4.1",
+   "pdfSayfalari": [
+    62,
+    66
+   ],
+   "sourcePdf": {
+    "startPage": 62,
+    "endPage": 66
+   },
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "SMN2 geninde ekzon 7 bölgesindeki sitozinden timine geçiş ekzonun kırpılmasına ve dışlanmasına yol açar.",
+     "maskedTerm": "timine",
+     "hint": "",
+     "explanation": "C'den T'ye geçiş splicing ekzon güçlendirici motifi bozarak ekzon 7 atlamasına neden olur."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "SMN1 ve SMN2 genleri arasındaki temel fonksiyonel fark aşağıdakilerden hangisidir?",
+     "options": [
+      {
+       "id": "o1",
+       "label": "A",
+       "text": "SMN2 geninin splicing hatası nedeniyle ağırlıklı olarak kararsız ve eksik protein üretmesi",
+       "isCorrect": true,
+       "explanation": "SMN2 genindeki C'den T'ye nükleotid değişimi ekzon 7'nin kırpılmasına neden olur. Bu nedenle transkriptlerin %85-90'ı kararsızdır ve hızla parçalanır; yalnızca %10-15'lik kısmı tam boy fonksiyonel protein oluşturur."
+      },
+      {
+       "id": "o2",
+       "label": "B",
+       "text": "SMN2 geninin ribozomlarda mitokondriyal tRNA sentezini yönetmesi",
+       "isCorrect": false,
+       "explanation": "Mitokondriyal tRNA'lar dairesel mitokondriyal DNA tarafından kodlanan özel moleküllerdir. SMN2 nükleer bir gendir ve motor nöron canlılığı için gereken nükleer/sitoplazmik SMN proteinini üretir."
+      },
+      {
+       "id": "o3",
+       "label": "C",
+       "text": "Sağlıklı bireylerde SMN1 geninin hiçbir zaman transkripsiyona uğramaması",
+       "isCorrect": false,
+       "explanation": "Sağlıklı insanlarda tam boy ve stabil SMN proteininin temel kaynağı aktif SMN1 genidir. SMN1 geninin transkripsiyonu yaşamın her evresinde motor nöron fonksiyonlarının korunması için şarttır."
+      },
+      {
+       "id": "o4",
+       "label": "D",
+       "text": "SMN2 proteininin motor uç plakta asetilkolin reseptörü olarak davranması",
+       "isCorrect": false,
+       "explanation": "Asetilkolin reseptörleri çizgili kas sarkolemmasında yerleşen ligand kapılı membran kanallarıdır. SMN proteini ise snRNP biyogenezi ve RNA işlenmesinde görevli intraselüler bir moleküldür."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "SMN1-SMN2 Gen Mimarisi ve Kopya Sayısı",
+     "items": [
+      {
+       "text": "SMN1 ve SMN2 genleri aynı kromozom 5q13.2 üzerinde yer alır.",
+       "isLie": false,
+       "explanation": "İki gen aynı lokusta yan yana duplike olmuş olarak bulunur."
+      },
+      {
+       "text": "Bir SMA hastasında SMN2 gen kopya sayısı ne kadar fazlaysa klinik tablo genellikle o kadar hafif seyreder.",
+       "isLie": false,
+       "explanation": "Kopya sayısı arttıkça az oranda üretilen tam boy protein miktarı toplanarak eşik değeri aşar ve semptomları hafifletir."
+      },
+      {
+       "text": "SMN2 genindeki tek nükleotidlik fark ekzon 7'nin tam boy transkripte dahil edilmesini yüzde yüz artırır.",
+       "isLie": true,
+       "explanation": "Aksine, C'den T'ye geçiş ekzon 7'nin dışlanmasına (%85-90 kayba) yol açar."
+      },
+      {
+       "text": "Normal popülasyonda SMN2 gen kopya sayısı bireyden bireye 0 ile 8 arasında değişkenlik gösterir.",
+       "isLie": false,
+       "explanation": "SMN2 kopya sayısı genetik bir polimorfizmdir ve fenotipi modifiye eder."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "SMN2 geninin ürettiği transkriptlerin yaklaşık yüzde kaçı tam uzunlukta ve fonksiyonel SMN proteini sağlar?",
+     "answer": "Yalnızca yaklaşık yüzde 10 ile 15'i tam boy fonksiyonel SMN proteini sağlar."
+    }
+   ]
+  },
+  {
+   "id": "k2-53-d-s20",
+   "title": "SMA Klinik Tipleri: Tip 0'dan Tip 4'e Sınıflandırma",
+   "subtitle": "Başlangıç Yaşı ve Kazanılan Motor Basamaklar",
+   "section": "Spinal Müsküler Atrofi",
+   "content": "SMA, semptomların başlangıç yaşına ve kazanılan motor basamağa göre sınıflandırılır.\n\n- **Tip 0 (Konjenital):** Doğum öncesi başlar, ağır eklem kontraktürü ve solunum yetmezliği vardır (1 kopya SMN2).\n- **Tip 1 (Werdnig-Hoffmann):** İlk 6 ayda başlar, başını tutamaz, bağımsız oturamaz, kurbağa pozisyonu ve dil fasikülasyonu görülür (2 kopya).\n- **Tip 2 (Dubowitz):** 6-18 ayda başlar, desteksiz oturabilir fakat hiçbir zaman bağımsız yürüyemez (3 kopya).\n- **Tip 3 (Kugelberg-Welander):** 18 aydan sonra başlar, bağımsız yürümeyi başarır, ileri yaşta tekerlekli sandalyeye bağımlı olabilir (3-4 kopya).\n- **Tip 4 (Erişkin):** Genç erişkinlikte hafif proksimal güçsüzlükle başlar, yaşam süresi normaldir (4 ve üzeri kopya).\n\n> [!IMPORTANT]\n> Tip 1 (Werdnig-Hoffmann) tüm SMA olgularının yaklaşık yüzde ellisini oluşturan en yaygın formdur.",
+   "synthesisNarrative": "SMA, semptomların başlangıç yaşına ve kazanılan motor basamağa göre sınıflandırılır.\n\n- **Tip 0 (Konjenital):** Doğum öncesi başlar, ağır eklem kontraktürü ve solunum yetmezliği vardır (1 kopya SMN2).\n- **Tip 1 (Werdnig-Hoffmann):** İlk 6 ayda başlar, başını tutamaz, bağımsız oturamaz, kurbağa pozisyonu ve dil fasikülasyonu görülür (2 kopya).\n- **Tip 2 (Dubowitz):** 6-18 ayda başlar, desteksiz oturabilir fakat hiçbir zaman bağımsız yürüyemez (3 kopya).\n- **Tip 3 (Kugelberg-Welander):** 18 aydan sonra başlar, bağımsız yürümeyi başarır, ileri yaşta tekerlekli sandalyeye bağımlı olabilir (3-4 kopya).\n- **Tip 4 (Erişkin):** Genç erişkinlikte hafif proksimal güçsüzlükle başlar, yaşam süresi normaldir (4 ve üzeri kopya).\n\n> [!IMPORTANT]\n> Tip 1 (Werdnig-Hoffmann) tüm SMA olgularının yaklaşık yüzde ellisini oluşturan en yaygın formdur.",
+   "slideNumber": 20,
+   "bolum": "4.1",
+   "pdfSayfalari": [
+    67,
+    74
+   ],
+   "sourcePdf": {
+    "startPage": 67,
+    "endPage": 74
+   },
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "SMA Tip 1 hastaları infantil dönemde bağımsız oturma basamağını hiçbir zaman kazanamazlar.",
+     "maskedTerm": "oturma",
+     "hint": "",
+     "explanation": "Werdnig-Hoffmann (Tip 1) kliniğinde bebekler desteksiz oturamaz ve baş kontrolü sağlayamaz."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Bağımsız desteksiz oturabilen ancak yaşamının hiçbir evresinde desteksiz yürümeyi başaramayan bir SMA hastası hangi klinik tipe aittir?",
+     "options": [
+      {
+       "id": "o1",
+       "label": "A",
+       "text": "SMA Tip 2 (Dubowitz hastalığı ara form)",
+       "isCorrect": true,
+       "explanation": "SMA Tip 2 hastaları 6-18 ay arasında semptom verir ve desteksiz oturma motor basamağını kazanırlar. Ancak hiçbir zaman bağımsız yürüyemezler ve çoğunluğunda 3 kopya SMN2 geni bulunur."
+      },
+      {
+       "id": "o2",
+       "label": "B",
+       "text": "SMA Tip 1 (Werdnig-Hoffmann ağır infantil form)",
+       "isCorrect": false,
+       "explanation": "Werdnig-Hoffmann hastalığı yaşamın ilk altı ayında başlar ve ağır hipotonik gevşek bebek tablosu oluşturur. Bu bebekler baş kontrolü sağlayamazlar ve hiçbir zaman desteksiz oturamazlar."
+      },
+      {
+       "id": "o3",
+       "label": "C",
+       "text": "SMA Tip 3 (Kugelberg-Welander hafif juvenil form)",
+       "isCorrect": false,
+       "explanation": "Kugelberg-Welander hastalığı 18 aydan sonra ortaya çıkar ve hastalar bağımsız yürümeyi başarırlar. İlerleyen yaşlarda yürüme yetisini kaybetseler de çocuklukta yürümüş olmaları tanı kriteridir."
+      },
+      {
+       "id": "o4",
+       "label": "D",
+       "text": "SMA Tip 0 (Fetal başlangıçlı konjenital form)",
+       "isCorrect": false,
+       "explanation": "Tip 0 intrauterin dönemde başlar ve doğumda ağır eklem kontraktürleri ile solunum arrestine yol açar. Yenidoğan döneminde kaybedilir ve oturma gibi motor basamaklar kazanılamaz."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "SMA Klinik Tipleri ve Fenotipik Ayrım",
+     "items": [
+      {
+       "text": "Werdnig-Hoffmann (Tip 1) olgularında genellikle 2 kopya SMN2 geni bulunur.",
+       "isLie": false,
+       "explanation": "Tip 1'de tipik olarak 2 kopya SMN2 saptanır."
+      },
+      {
+       "text": "SMA Tip 3 (Kugelberg-Welander) hastaları çocuklukta bağımsız yürümeyi başarırlar.",
+       "isLie": false,
+       "explanation": "Tip 3 juvenil formdur ve motor basamak olarak yürümeyi kazanır."
+      },
+      {
+       "text": "SMA Tip 1 bebeklerinde ilk haftalarda hiperaktif derin tendon refleksleri ve spastisite görülür.",
+       "isLie": true,
+       "explanation": "Alt motor nöron hasarı nedeniyle DTR'ler tamamen kayıptır (arefleksi) ve hipotoni (kurbağa pozisyonu) vardır."
+      },
+      {
+       "text": "SMA Tip 4 erişkin yaşta başlar ve öngörülen yaşam süresi normaldir.",
+       "isLie": false,
+       "explanation": "Tip 4 hafif seyreder ve genellikle solunum yetmezliği yapmaz."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "SMA Tip 1 olgularında ağız içi muayenede saptanan en karakteristik alt motor nöron bulgusu nedir?",
+     "answer": "Dil fasikülasyonudur (dilde seyirme ve atrofi)."
+    }
+   ]
+  },
+  {
+   "id": "k2-53-d-s21",
+   "title": "SMA Fenotipini Belirleyen SMN2 Kopya Sayısı Dinamiği",
+   "subtitle": "Kopya Sayısı ile Klinik Tablo Arasındaki Ters Orantı",
+   "section": "Spinal Müsküler Atrofi",
+   "content": "SMA olgularında klinik prognozu belirleyen en kritik faktör SMN2 gen kopya sayısıdır.\n\n- **Kopya Sayısı Dağılımı:** Tip 0 olgularında 1 kopya; Tip 1'de 2 kopya; Tip 2'de 3 kopya; Tip 3'te 3-4 kopya bulunur.\n- **Kümülatif Protein Üretimi:** Her SMN2 kopyası yüzde 10-15 oranında tam boy protein üretir; kopya arttıkça toplam protein artar.\n- **Hafifletici Etki:** Kopya sayısı dörde ulaştığında (Tip 4) üretilen protein motor nöronların büyük kısmını korumaya yeter.\n\n> [!NOTE]\n> Bu korelasyon SMN2'yi moleküler hedefli tedaviler için en elverişli terapötik hedef haline getirmiştir.",
+   "synthesisNarrative": "SMA olgularında klinik prognozu belirleyen en kritik faktör SMN2 gen kopya sayısıdır.\n\n- **Kopya Sayısı Dağılımı:** Tip 0 olgularında 1 kopya; Tip 1'de 2 kopya; Tip 2'de 3 kopya; Tip 3'te 3-4 kopya bulunur.\n- **Kümülatif Protein Üretimi:** Her SMN2 kopyası yüzde 10-15 oranında tam boy protein üretir; kopya arttıkça toplam protein artar.\n- **Hafifletici Etki:** Kopya sayısı dörde ulaştığında (Tip 4) üretilen protein motor nöronların büyük kısmını korumaya yeter.\n\n> [!NOTE]\n> Bu korelasyon SMN2'yi moleküler hedefli tedaviler için en elverişli terapötik hedef haline getirmiştir.",
+   "slideNumber": 21,
+   "bolum": "4.1",
+   "pdfSayfalari": [
+    67,
+    74
+   ],
+   "sourcePdf": {
+    "startPage": 67,
+    "endPage": 74
+   },
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Werdnig-Hoffmann hastalarında genomda tipik olarak iki kopya SMN2 geni saptanır.",
+     "maskedTerm": "iki",
+     "hint": "",
+     "explanation": "SMA Tip 1 hastalarında genomda genellikle 2 kopya sentromerik SMN2 geni bulunur."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "SMA hastalarında SMN2 kopya sayısının artmasının klinik tablonun daha hafif seyretmesini sağlamasının mekanizması nedir?",
+     "options": [
+      {
+       "id": "o1",
+       "label": "A",
+       "text": "Her kopyadan üretilen az miktardaki tam boy SMN proteininin kümülatif olarak artması",
+       "isCorrect": true,
+       "explanation": "Her bir SMN2 gen kopyası transkriptlerinin yaklaşık %10-15'i kadar tam boy protein sentezler. Kopya sayısı arttıkça hücredeki toplam fonksiyonel SMN seviyesi yükselir ve motor nöron hasarı hafifler."
+      },
+      {
+       "id": "o2",
+       "label": "B",
+       "text": "SMN2 geninin mutasyon geçirerek doğrudan aktif SMN1 genine dönüşmesi",
+       "isCorrect": false,
+       "explanation": "SMN2 ve SMN1 genleri kromozom üzerinde bağımsız duplikasyon lokuslarıdır. Kopya sayısı artışı genetik dönüşüm (reversiyon) anlamına gelmez, kopyalar kendi sekanslarını korur."
+      },
+      {
+       "id": "o3",
+       "label": "C",
+       "text": "Kopya sayısı arttıkça motor nöronların asetilkolin yerine dopamin üretmesi",
+       "isCorrect": false,
+       "explanation": "Medulla spinalis ön boynuz alfa motor nöronları kolinerjik karakterdedir. SMN proteini RNA işleme kompleksidir ve nöronların transmitter fenotipini katekolaminerjike dönüştürmez."
+      },
+      {
+       "id": "o4",
+       "label": "D",
+       "text": "SMN2 kopyalarının kas liflerinde distrofin proteinini aşırı eksprese etmesi",
+       "isCorrect": false,
+       "explanation": "Distrofin X kromozomunda kodlanan subsarkolemmal yapısal kas proteinidir. SMA bir motor nöron hastalığı olup distrofin ekspresyonu ile doğrudan bir mekanik bağlantısı bulunmaz."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "SMN2 Kopya Sayısı ve Fenotipik Şiddet",
+     "items": [
+      {
+       "text": "SMA Tip 0 olgularında tipik olarak yalnızca 1 kopya SMN2 geni bulunur.",
+       "isLie": false,
+       "explanation": "Tek kopya SMN2 en ağır fetal başlangıçlı tabloya yol açar."
+      },
+      {
+       "text": "SMA Tip 2 hastalarında genomda genellikle 3 kopya SMN2 geni saptanır.",
+       "isLie": false,
+       "explanation": "Tip 2 oturabilen çocuklarda tipik kopya sayısı üçtür."
+      },
+      {
+       "text": "Genomdaki SMN2 kopya sayısı arttıkça hastaların solunum yetmezliği riski ve felç derecesi ağırlaşır.",
+       "isLie": true,
+       "explanation": "Kopya sayısı ile hastalık şiddeti arasında ters orantı vardır; kopya arttıkça klinik tablo hafifler."
+      },
+      {
+       "text": "Dört veya daha fazla SMN2 kopyasına sahip bireyler erişkin yaşta hafif Tip 4 fenotipi gösterirler.",
+       "isLie": false,
+       "explanation": "Yüksek kopya sayısı motor nöronları uzun yıllar korumaya yeter."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "SMA Tip 0 olgularında görülen tipik SMN2 kopya sayısı kaçtır?",
+     "answer": "Yalnızca 1 kopya SMN2 geni bulunur."
+    }
+   ]
+  },
+  {
+   "id": "k2-53-d-s22",
+   "title": "SMA Tanı Algoritması: MLPA Genetik Analizi ve Ayırıcı Tanı",
+   "subtitle": "Elektromiyografi ve Moleküler Tanı Basamakları",
+   "section": "Spinal Müsküler Atrofi",
+   "content": "SMA tanısında moleküler genetik yöntemler altın standarttır.\n\n- **Genetik Test (MLPA / qPCR):** SMN1 geninin ekzon 7 ve 8 homozigot delesyonunu ve SMN2 kopya sayısını saptar.\n- **Serum Biyokimyası:** Serum kreatin kinaz (CK) düzeyi genellikle normaldir veya hafif yükselmiştir (distrofiden ayırır).\n- **Elektromiyografi (EMG):** Duyu iletim hızları korunurken motor yanıtlarda yaygın denervasyon ve fasikülasyon izlenir.\n- **Ayırıcı Tanı:** İnfantlarda konjenital miyopatiler, Prader-Willi sendromu; erişkinde ALS ve spinal müsküler atrofi dışlanmalıdır.\n\n> [!NOTE]\n> Günümüzde kas biyopsisine gerek kalmaksızın periferik kandan yapılan moleküler delesyon analiziyle kesin tanı konur.",
+   "synthesisNarrative": "SMA tanısında moleküler genetik yöntemler altın standarttır.\n\n- **Genetik Test (MLPA / qPCR):** SMN1 geninin ekzon 7 ve 8 homozigot delesyonunu ve SMN2 kopya sayısını saptar.\n- **Serum Biyokimyası:** Serum kreatin kinaz (CK) düzeyi genellikle normaldir veya hafif yükselmiştir (distrofiden ayırır).\n- **Elektromiyografi (EMG):** Duyu iletim hızları korunurken motor yanıtlarda yaygın denervasyon ve fasikülasyon izlenir.\n- **Ayırıcı Tanı:** İnfantlarda konjenital miyopatiler, Prader-Willi sendromu; erişkinde ALS ve spinal müsküler atrofi dışlanmalıdır.\n\n> [!NOTE]\n> Günümüzde kas biyopsisine gerek kalmaksızın periferik kandan yapılan moleküler delesyon analiziyle kesin tanı konur.",
+   "slideNumber": 22,
+   "bolum": "4.2",
+   "pdfSayfalari": [
+    75,
+    77
+   ],
+   "sourcePdf": {
+    "startPage": 75,
+    "endPage": 77
+   },
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "SMA tanısında SMN1 ekzon 7 delesyonunu ve SMN2 kopya sayısını saptamada MLPA analizi yaygın kullanılır.",
+     "maskedTerm": "MLPA",
+     "hint": "",
+     "explanation": "Multiplex Ligation-dependent Probe Amplification delesyon ve kopya sayısını saptayan altın standarttır."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdaki laboratuvar bulgularından hangisi SMA'yı primer kas distrofilerinden (örneğin Duchenne) ayırt etmede en değerlidir?",
+     "options": [
+      {
+       "id": "o1",
+       "label": "A",
+       "text": "Serum kreatin kinaz (CK) düzeyinin normal/ılımlı olması ve EMG'de nörojenik tutulum",
+       "isCorrect": true,
+       "explanation": "Kreatin kinaz kas zedelenmesinde kana salınır ve distrofilerde binlerce üniteye fırlar. SMA primer motor nöron hastalığı olduğundan CK normal veya hafif yüksektir ve EMG'de nörojenik denervasyon gösterir."
+      },
+      {
+       "id": "o2",
+       "label": "B",
+       "text": "Beyin omurilik sıvısında protein konsantrasyonunun ileri derecede yükselmesi",
+       "isCorrect": false,
+       "explanation": "BOS proteini Guillain-Barré gibi demiyelinizan nöropatilerde albümino-sitolojik dissosiyasyonla artar. SMA patolojisinde kan beyin bariyeri sağlamdır ve BOS proteininde belirgin artış beklenmez."
+      },
+      {
+       "id": "o3",
+       "label": "C",
+       "text": "Periferik duyu sinir iletim hızlarının ve aksiyon potansiyellerinin tamamen silinmesi",
+       "isCorrect": false,
+       "explanation": "Duyu sinir iletimi Charcot-Marie-Tooth gibi herediter sensorimotor polinöropatilerde bozulur. SMA saf bir alt motor nöron hastalığıdır ve duyu iletim parametreleri tamamen normal kalır."
+      },
+      {
+       "id": "o4",
+       "label": "D",
+       "text": "Tam kan sayımında trombosit ve lökosit sayılarının aşırı düşmesi",
+       "isCorrect": false,
+       "explanation": "Hematolojik sitopeniler kemik iliği yetmezliklerinde veya hematolojik malignitelerde gözlenir. Spinal müsküler atrofi nöromüsküler bir hastalıktır ve kan hücre serilerinde düşüklük yapmaz."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "SMA Laboratuvar ve Tanı Yöntemleri",
+     "items": [
+      {
+       "text": "Hipotonik bir bebekte ilk basamak kesin tanı testi SMN1 genetik delesyon analizidir.",
+       "isLie": false,
+       "explanation": "Gereksiz invaziv biyopsiler yerine doğrudan genetik delesyon testi yapılır."
+      },
+      {
+       "text": "Elektromiyografide motor aksonda denervasyon bulguları görülürken duyu iletimi korunur.",
+       "isLie": false,
+       "explanation": "SMA saf motor nöron hastalığıdır."
+      },
+      {
+       "text": "SMA tanısının konulabilmesi için her hastaya mutlaka açık kas biyopsisi yapılması şarttır.",
+       "isLie": true,
+       "explanation": "Genetik MLPA/qPCR testleri kesin tanı sağladığından kas biyopsisi günümüzde terk edilmiştir."
+      },
+      {
+       "text": "Ayırıcı tanıda konjenital hipotoni yapan Prader-Willi sendromu ve miyopatiler düşünülmelidir.",
+       "isLie": false,
+       "explanation": "Gevşek bebek tablosunda santral ve periferal diğer hipotoni nedenleri dışlanmalıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "SMA hastalarında elektromiyografide (EMG) duyu sinir iletim hızları nasıldır?",
+     "answer": "Tamamen normaldir çünkü duyu nöronları ve lifleri SMA patolojisinde korunur."
+    }
+   ]
+  },
+  {
+   "id": "k2-53-d-s23",
+   "title": "SMA Tedavisinde Moleküler Devrim: Nusinersen (Spinraza) ve Gen Terapisi",
+   "subtitle": "Antisens Oligonükleotid ve Ekzon 7 Kurtarılması",
+   "section": "Spinal Müsküler Atrofi",
+   "content": "Nusinersen, SMA patogenezinde devrim yaratan hedefe yönelik bir tedavidir.\n\n- **Moleküler Yapı:** SMN2 pre-mRNA'sına bağlanan kimyasal modifiye bir antisens oligonükleotiddir (ASO).\n- **Etki Mekanizması:** İntron 7'deki splicing baskılayıcı bölgeyi bloke ederek ekzon 7'nin mRNA'ya dahil edilmesini sağlar.\n- **Fonksiyonel Protein Artışı:** SMN2 geninden tam boyutta ve kararlı SMN proteini üretimini belirgin düzeyde artırır.\n- **Uygulama Yolu ve Genom Etkisi:** Kan-beyin bariyerini geçemediği için intratekal uygulanır; genomdaki SMN2 kopya sayısını değiştirmez.\n\n> [!IMPORTANT]\n> Nusinersen mutasyonu düzeltmez veya kopya sayısını artırmaz; SMN2'nin post-transkripsiyonel splicing sürecini modifiye eder.",
+   "synthesisNarrative": "Nusinersen, SMA patogenezinde devrim yaratan hedefe yönelik bir tedavidir.\n\n- **Moleküler Yapı:** SMN2 pre-mRNA'sına bağlanan kimyasal modifiye bir antisens oligonükleotiddir (ASO).\n- **Etki Mekanizması:** İntron 7'deki splicing baskılayıcı bölgeyi bloke ederek ekzon 7'nin mRNA'ya dahil edilmesini sağlar.\n- **Fonksiyonel Protein Artışı:** SMN2 geninden tam boyutta ve kararlı SMN proteini üretimini belirgin düzeyde artırır.\n- **Uygulama Yolu ve Genom Etkisi:** Kan-beyin bariyerini geçemediği için intratekal uygulanır; genomdaki SMN2 kopya sayısını değiştirmez.\n\n> [!IMPORTANT]\n> Nusinersen mutasyonu düzeltmez veya kopya sayısını artırmaz; SMN2'nin post-transkripsiyonel splicing sürecini modifiye eder.",
+   "slideNumber": 23,
+   "bolum": "4.2",
+   "pdfSayfalari": [
+    78,
+    83
+   ],
+   "sourcePdf": {
+    "startPage": 78,
+    "endPage": 83
+   },
+   "interactiveElements": [
+    {
+     "type": "cloze_masking",
+     "sentence": "Nusinersen tedavisi SMN2 pre-mRNA'sında ekzon yedi bölgesinin dahil edilmesini artırarak tam boy protein üretir.",
+     "maskedTerm": "yedi",
+     "hint": "",
+     "explanation": "Ekzon 7'nin mRNA'ya dahil edilmesi (inclusion) kararlı SMN proteini sentezini sağlar."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "SMA tedavisinde kullanılan Nusinersen (Spinraza) ilacının moleküler etki mekanizması aşağıdakilerden hangisidir?",
+     "options": [
+      {
+       "id": "o1",
+       "label": "A",
+       "text": "SMN2 pre-mRNA splicingini modifiye ederek ekzon 7'nin dahil edilmesini sağlamak",
+       "isCorrect": true,
+       "explanation": "Nusinersen SMN2 pre-mRNA intron 7'deki susturucu motife bağlanan bir antisens oligonükleotiddir. Ekzon 7'nin transkripte dahil edilmesini sağlayarak tam boyutta fonksiyonel SMN proteini üretimini artırır."
+      },
+      {
+       "id": "o2",
+       "label": "B",
+       "text": "AAV9 virüs vektörü ile hücre çekirdeğine insan SMN1 genini aktarmak",
+       "isCorrect": false,
+       "explanation": "Adeno-ilişkili virüs vektörü ile ekzojen gen transferi Onasemnogene abeparvovec (Zolgensma) ilacının mekanizmasıdır. Nusinersen virüs içermez ve genoma yeni gen entegrasyonu yapmaz."
+      },
+      {
+       "id": "o3",
+       "label": "C",
+       "text": "Genomdaki sentromerik SMN2 gen kopya sayısını kalıcı olarak artırmak",
+       "isCorrect": false,
+       "explanation": "Gen kopya sayısı kromozom yapısına ait kalıtsal bir özelliktir ve ilaçlarla artırılamaz. Nusinersen var olan genlerin kopyasını değiştirmez, yalnız transkripsiyon sonrası RNA kırpılmasını düzenler."
+      },
+      {
+       "id": "o4",
+       "label": "D",
+       "text": "Motor son plakta postsinaptik nikotinik asetilkolin reseptörlerini bloke etmek",
+       "isCorrect": false,
+       "explanation": "Postsinaptik nikotinik reseptör blokajı kürar türevi nöromüsküler blokerlerin mekanizmasıdır ve kas felcine yol açar. Nusinersen bir nöromüsküler bloker değildir, motor nöronu kurtaran bir oligonükleotiddir."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Nusinersen Farmakokinetiği ve Etki Yolu",
+     "items": [
+      {
+       "text": "Nusinersen kimyasal olarak modifiye edilmiş bir antisens oligonükleotiddir (ASO).",
+       "isLie": false,
+       "explanation": "Hedef pre-mRNA dizisine komplementer bağlanan sentetik oligonükleotiddir."
+      },
+      {
+       "text": "İlaç sistemik dolaşımdan kan beyin bariyerini geçemediği için intratekal (BOS içine) yolla verilir.",
+       "isLie": false,
+       "explanation": "MSS hedefine ulaşabilmesi için lomber ponksiyonla intratekal uygulanır."
+      },
+      {
+       "text": "Nusinersen hastanın DNA'sındaki SMN2 gen kopya sayısını kalıcı olarak artıran bir gen tedavisidir.",
+       "isLie": true,
+       "explanation": "Nusinersen genoma dokunmaz ve kopya sayısını artırmaz; yalnız var olan SMN2 mRNA'sının olgunlaşmasını düzenler."
+      },
+      {
+       "text": "Tedavi sonucunda omurilik ön boynuz motor nöronlarının hayatta kalma oranı belirgin artar.",
+       "isLie": false,
+       "explanation": "Fonksiyonel SMN seviyesinin yükselmesi motor nöron dejenerasyonunu durdurur/yavaşlatır."
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "title": "Nusinersen Moleküler Tedavi Basamakları",
+     "steps": [
+      "1. İntratekal Enjeksiyon: Nusinersen'in BOS içine verilerek motor nöronlara ulaşması.",
+      "2. Hibritleşme: Antisens oligonükleotidin SMN2 pre-mRNA intron 7 bölgesine spesifik bağlanması.",
+      "3. Splicing Modülasyonu: Ekzon 7'yi dışlayan represör proteinin bağlanmasının engellenmesi.",
+      "4. Ekzon 7 Dahil Edilmesi: Ekzon 7 içeren tam boy olgun SMN2 mRNA'sının translasyona girmesi.",
+      "5. Kararlı Protein: Tam uzunlukta fonksiyonel SMN proteininin sentezlenerek motor nöronu koruması."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-53-d-s24",
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Nörodejeneratif Hastalıklar Genetiği",
+   "subtitle": "Kapsamlı Değerlendirme ve Pekiştirme Oyunları",
+   "section": "Ders Sonu Oyunları",
+   "content": "Tebrikler! Nörodejeneratif hastalıklar ve genetiği dersini başarıyla tamamladınız.\n\n- **Patogenetik Sıralama:** Nusinersen etki mekanizmasının moleküler adımlarını sıraya dizin.\n- **Klinik Değer Tahmini:** SMA Tip 1 olgularındaki tipik SMN2 kopya sayısını tahmin edin.\n- **Sistemik Bozulma Senaryosu:** Splicing yolundaki kilit bir bozulmanın hücresel sonucunu analiz edin.\n- **Hata Avı:** Cümledeki genetik ve farmakolojik yanılgıları tespit ederek düzeltin.\n\n> [!IMPORTANT]\n> Dersi bitirmeden önce oyunlardaki mekanizmaları dikkatle çözerek bilgilerinizi pekiştiriniz.",
+   "synthesisNarrative": "Tebrikler! Nörodejeneratif hastalıklar ve genetiği dersini başarıyla tamamladınız.\n\n- **Patogenetik Sıralama:** Nusinersen etki mekanizmasının moleküler adımlarını sıraya dizin.\n- **Klinik Değer Tahmini:** SMA Tip 1 olgularındaki tipik SMN2 kopya sayısını tahmin edin.\n- **Sistemik Bozulma Senaryosu:** Splicing yolundaki kilit bir bozulmanın hücresel sonucunu analiz edin.\n- **Hata Avı:** Cümledeki genetik ve farmakolojik yanılgıları tespit ederek düzeltin.\n\n> [!IMPORTANT]\n> Dersi bitirmeden önce oyunlardaki mekanizmaları dikkatle çözerek bilgilerinizi pekiştiriniz.",
+   "slideNumber": 24,
+   "bolum": "4.2",
+   "pdfSayfalari": [
+    1,
+    83
+   ],
+   "sourcePdf": {
+    "startPage": 1,
+    "endPage": 83
+   },
+   "isGameFinale": true,
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "prompt": "Nusinersen tedavisinin omurilik ön boynuzunda motor nöronları kurtarma aşamalarını doğru sıraya diziniz.",
+     "steps": [
+      "İlacın lomber ponksiyonla intratekal olarak beyin omurilik sıvısına uygulanması",
+      "Antisens oligonükleotidin SMN2 pre-mRNA intron 7 bölgesindeki susturucuya spesifik bağlanması",
+      "Ekzon 7'nin kırpılmadan transkripte dahil edilmesiyle tam boy olgun mRNA oluşması",
+      "Tam boyutta ve kararlı SMN proteininin sentezlenerek motor nöron sağkalımını artırması"
+     ],
+     "explanation": "Nusinersen intratekal uygulanır, intron 7'ye bağlanıp ekzon 7 dahil edilmesini sağlar ve tam boy SMN proteinini üretir."
+    },
+    {
+     "type": "estimate_slider",
+     "prompt": "Werdnig-Hoffmann hastalığı (SMA Tip 1) tablosundaki bebeklerin genomunda tipik olarak kaç kopya SMN2 geni bulunur?",
+     "min": 0,
+     "max": 8,
+     "answer": 2,
+     "tolerance": 0,
+     "explanation": "SMA Tip 1 hastalarında genomda tipik olarak 2 kopya SMN2 geni bulunur ve bu miktar ağır fenotipe yol açar."
+    },
+    {
+     "type": "perturbation",
+     "scenario": "Bir SMA Tip 1 hastasına düzenli intratekal Nusinersen tedavisi verilmeye başlanmıştır.",
+     "parameters": [
+      {
+       "name": "SMN2 pre-mRNA ekzon 7 dahil edilme oranı",
+       "correct": "up",
+       "explanation": "Nusinersen intron 7 susturucusunu bloke ederek ekzon 7'nin transkripte dahil edilmesini artırır."
+      },
+      {
+       "name": "Tam boyutta fonksiyonel SMN proteini sentezi",
+       "correct": "up",
+       "explanation": "Ekzon 7 dahil edilmesiyle olgunlaşan transkriptlerden kararlı ve tam boy SMN proteini üretimi artar."
+      },
+      {
+       "name": "Genomdaki SMN1 gen delesyonu veya mutasyonu",
+       "correct": "same",
+       "explanation": "Nusinersen post-transkripsiyonel bir modülatördür; hastanın DNA'sındaki SMN1 delesyonunu düzeltmez veya değiştirmez."
+      }
+     ]
+    },
+    {
+     "type": "fix_the_text",
+     "text": "Spinal müsküler atrofi hastalarında kullanılan Nusinersen tedavisi SMN1 genindeki delesyonu doğrudan tamir ederek etki gösteren bir gen replasman tedavisidir.",
+     "errors": [
+      {
+       "wrong": "delesyonu doğrudan tamir ederek",
+       "correct": "SMN2 pre-mRNA splicingini modifiye ederek",
+       "options": [
+        "DNA dizilimini mutasyona uğratarak",
+        "mitokondriyal tRNA sentezini engelleyerek"
+       ],
+       "explanation": "Nusinersen DNA'daki delesyonu düzeltmez, yalnızca var olan SMN2 pre-mRNA'sının splicingini düzenler."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "deckId": "k2p-y25-k2-53-norodejeneratif-hastaliklar-genetigi",
+ "arsiv": true,
+ "committee": "donem3-kurul2",
+ "confidence": "high",
+ "totalSlides": 24,
+ "matchedPastQuestionsCount": 3,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

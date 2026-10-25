@@ -135,6 +135,149 @@
         "kaynak": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
         "zaman": "2026-10-24"
       }
+    },
+    "etki_yarar_risk": {
+      "ad": "Etki → yararı ve riski",
+      "duzen": "tablo",
+      "basliklar": [
+        "Etki",
+        "Yararı",
+        "Riski"
+      ],
+      "ne_zaman": "bir ilaç etkisinin klinik kazancı ve aynı etkinin getirdiği risk",
+      "ornek": "uterus gevşemesi | manuel müdahaleyi kolaylaştırır | uterus kanaması",
+      "eklenme": {
+        "kaynak": "k2-07-genel-anestezik-ilaclar",
+        "zaman": "2026-10-24"
+      }
+    },
+    "tek_neden_cok_sonuc": {
+      "ad": "Bir olay → olası sonuçlar",
+      "duzen": "dal",
+      "basliklar": [
+        "Yol",
+        "Sonuç"
+      ],
+      "ne_zaman": "tek bir olay/lezyon farklı yollarla birden çok sonuca gidebilir (karar sorusu değil)",
+      "ornek": "trombotik tıkanıklık: ilerlerse → yayılım; parçalanırsa → distal emboli",
+      "eklenme": {
+        "kaynak": "y25-k2-04-serebrovaskuler-hastaliklar-ve-inme",
+        "zaman": "2026-10-25"
+      }
+    },
+    "zaman_gorunum": {
+      "ad": "Süre → görünüm / bulgu",
+      "duzen": "tablo",
+      "basliklar": [
+        "Süre",
+        "Görünüm / bulgu"
+      ],
+      "ne_zaman": "bir lezyonun zaman içindeki evreleri (saat/gün/hafta) ve her evrenin bulgusu",
+      "ornek": "48 saat | doku solgun, yumuşak, şişkin",
+      "eklenme": {
+        "kaynak": "y25-k2-04-serebrovaskuler-hastaliklar-ve-inme",
+        "zaman": "2026-10-25"
+      }
+    },
+    "muayene_sinir": {
+      "ad": "Muayene bileşeni → kraniyal sinir",
+      "duzen": "tablo",
+      "basliklar": [
+        "Muayene bileşeni",
+        "Kraniyal sinir"
+      ],
+      "ne_zaman": "bir muayene/test bileşeninin hangi kraniyal siniri değerlendirdiği",
+      "ornek": "koku | KS I",
+      "eklenme": {
+        "kaynak": "y25-k2-05-norolojik-muayene",
+        "zaman": "2026-10-25"
+      }
+    },
+    "yapi_sinir": {
+      "ad": "Yapı → innerve eden sinir",
+      "duzen": "tablo",
+      "basliklar": [
+        "Yapı",
+        "İnnerve eden sinir"
+      ],
+      "ne_zaman": "bir organ/bez/kasın hangi sinirle innerve edildiği (ayırt edilecek benzer yapılarla)",
+      "ornek": "parotis | glossofaringeal sinir",
+      "eklenme": {
+        "kaynak": "y25-k2-05-norolojik-muayene",
+        "zaman": "2026-10-25"
+      }
+    },
+    "kas_hareket": {
+      "ad": "Kas → yaptığı hareket",
+      "duzen": "tablo",
+      "basliklar": [
+        "Kas",
+        "Yaptığı hareket"
+      ],
+      "ne_zaman": "bir kasın (ya da kas grubunun) eklemde yaptırdığı hareket",
+      "ornek": "trapezius | omuz elevasyonu",
+      "eklenme": {
+        "kaynak": "y25-k2-05-norolojik-muayene",
+        "zaman": "2026-10-25"
+      }
+    },
+    "boyut_bolge": {
+      "ad": "Boyut → beyin bölgesi ve işlevi",
+      "duzen": "tablo",
+      "basliklar": [
+        "Boyut",
+        "Beyin bölgesi",
+        "İşlevi"
+      ],
+      "ne_zaman": "bir duyu/deneyimin boyutlarının hangi beyin bölgesinde işlendiği ve ne sağladığı",
+      "ornek": "duyusal-diskriminatif | somatosensoriyel korteks, talamus | yer, süre, şiddet",
+      "eklenme": {
+        "kaynak": "y25-k2-06-agri-yollari-ve-mekanizmalari",
+        "zaman": "2026-10-25"
+      }
+    },
+    "terim_tanim": {
+      "ad": "Terim → tanım",
+      "duzen": "tablo",
+      "basliklar": [
+        "Terim",
+        "Tanım"
+      ],
+      "ne_zaman": "birbirine karıştırılan terimlerin kısa tanımlarla yan yana listelenmesi (terminoloji)",
+      "ornek": "allodini | ağrılı olmayan uyaranın ağrı yapması",
+      "eklenme": {
+        "kaynak": "y25-k2-06-agri-yollari-ve-mekanizmalari",
+        "zaman": "2026-10-25"
+      }
+    },
+    "organ_yayilim": {
+      "ad": "Organ → ağrının yayıldığı bölge",
+      "duzen": "tablo",
+      "basliklar": [
+        "Organ / kaynak",
+        "Ağrının yayıldığı bölge"
+      ],
+      "ne_zaman": "visseral ağrının kaynak organdan uzak bir vücut bölgesine yayılması (yansıyan ağrı)",
+      "ornek": "miyokard | sol kol",
+      "eklenme": {
+        "kaynak": "y25-k2-06-agri-yollari-ve-mekanizmalari",
+        "zaman": "2026-10-25"
+      }
+    },
+    "ilac_etki": {
+      "ad": "İlaç → mekanizma → sonuç",
+      "duzen": "tablo",
+      "basliklar": [
+        "İlaç",
+        "Mekanizma",
+        "Sonuç"
+      ],
+      "ne_zaman": "bir ilacın etki mekanizması ve doğurduğu farmakolojik sonuç",
+      "ornek": "Lokal anestezik | Na kanalı blokajı | aksiyon potansiyeli durur",
+      "eklenme": {
+        "kaynak": "y25-k2-06-agri-yollari-ve-mekanizmalari",
+        "zaman": "2026-10-25"
+      }
     }
   }
 }

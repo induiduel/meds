@@ -87,7 +87,7 @@ import { guardedInterval } from '../../services/net';
 import { realtimeEventService, type RealtimeConnectionStatus } from '../../services/realtimeEvents';
 import '../../styles/manage-v9.css';
 import { Segmented } from '../ui/kit';
-import { isLocalHost, getPanelTarget, PANEL_TARGET_KEY, PANEL_ON_ORACLE_AT_BOOT } from '../../config/deployment';
+import { isLocalHost, canSwitchPanelTarget, getPanelTarget, PANEL_TARGET_KEY, PANEL_ON_ORACLE_AT_BOOT } from '../../config/deployment';
 import { Drawer, SearchBox, classifyNotice } from './consoleUi';
 import {
   InboxReport,
@@ -276,6 +276,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
   // Oracle hedefi yalnız /manage girişinde geçerli (PANEL_ON_ORACLE_AT_BOOT yolu /manage ister); /yonetim hep yereldir,
   // yoksa açılış bayrağı hiç tutmaz ve sayfa sonsuz yenilenir.
   const localHost = isLocalHost() && entry === 'manage';
+  const canSwitch = canSwitchPanelTarget() && entry === 'manage';
   const panelTarget = getPanelTarget();
   useEffect(() => {
     if (!localHost) return;
@@ -859,7 +860,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
       })),
     ];
     const currentGroup = section === 'overview' ? 'Konsol' : V12_SECTIONS.find((x) => x.id === section)?.group || current.group;
-    const sourceLive = localHost ? panelTarget === 'oracle' : !isLocalHost();
+    const sourceLive = canSwitch ? panelTarget === 'oracle' : !isLocalHost();
     const overviewHint = `${sourceLive ? 'Canlı veri (Oracle)' : 'Yerel veri'}${syncLabel ? ` · son eşitleme ${syncLabel}` : ''} · canlı kanal ${liveStatus === 'connected' ? 'bağlı' : liveStatus === 'connecting' ? 'bağlanıyor' : 'kopuk'}`;
     const Shell = v14ShellOn() ? ManageShellV14 : ManageShellV12;
     return (
@@ -876,7 +877,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
           onExit={onExit}
           adminEmail={adminEmail}
           sourceLive={sourceLive}
-          canSwitchSource={localHost}
+          canSwitchSource={canSwitch}
           onChooseSource={choosePanelTarget}
           liveStatus={liveStatus}
           syncLabel={syncLabel}

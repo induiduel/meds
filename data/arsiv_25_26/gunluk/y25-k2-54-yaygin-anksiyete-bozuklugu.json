@@ -1,0 +1,59 @@
+{
+  "key": "y25-k2-54-yaygin-anksiyete-bozuklugu",
+  "donem": "2025-2026",
+  "kurul": 2,
+  "brans": "Psikiyatri",
+  "baslik": "Yaygın Anksiyete Bozukluğu",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-10-25 14:41",
+      "neden": "2025-2026 geçmiş yıl arşiv dersi ilk üretimi ve Kurul 2 tam otomatik hat kapı doğrulaması",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi YAB DÖNEM 3.pdf (20 sayfa) kaynağından 0 atlanan sayfa ile 20 paragraf / 21 cümlelik sesli anlatım üretildi.",
+        "24 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 0 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 3.0 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 178,
+        "sureDk": 3.0,
+        "sayfaSayisi": 20,
+        "atlananSayfa": 0,
+        "bolumSayisi": 4,
+        "paragrafSayisi": 20,
+        "cumleSayisi": 21,
+        "slaytAdimSayisi": 24,
+        "cizimSayisi": 0,
+        "cikmisEslesme": 17
+      }
+    },
+    {
+      "surum": 2,
+      "tarih": "2026-10-25 15:07",
+      "neden": "2025-2026 geçmiş yıl arşiv dersi ilk üretimi ve Kurul 2 tam otomatik hat kapı doğrulaması",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi YAB DÖNEM 3.pdf (20 sayfa) kaynağından 0 atlanan sayfa ile 20 paragraf / 66 cümlelik sesli anlatım üretildi.",
+        "24 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 0 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 8.7 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 521,
+        "sureDk": 8.7,
+        "sayfaSayisi": 20,
+        "atlananSayfa": 0,
+        "bolumSayisi": 8,
+        "paragrafSayisi": 20,
+        "cumleSayisi": 66,
+        "slaytAdimSayisi": 24,
+        "cizimSayisi": 0,
+        "cikmisEslesme": 17
+      }
+    }
+  ]
+}

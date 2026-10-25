@@ -1,17 +1,17 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 344,
-  "baslik": "Kurul 2 Arşiv Dersleri 13-15: Spinal Travmalar, Beyin Tümörleri ve Şizofrenik Bozukluklar (2025-2026)",
+  "onem": 345,
+  "baslik": "Kurul 2 Arşiv Dersleri 53-55: Nörodejeneratif Hastalıklar, YAB ve Panik Bozukluk (2025-2026)",
   "maddeler": [
-    "Ders 15 (Psikiyatri - Şizofrenik Bozukluklar): 16 slayt Öğren destesi, 49 sayfa derinlemesine amfi dersi kapsamı (181 cümle, 4.325 kelime, 31,4 dk EMA GPU sesli anlatım), 36 canlı tuval çizimi, 16 çıkmış soru eşleşmesi ve gömülü .medspak (8.21 MB)",
-    "Ders 14 (Beyin ve Sinir Cerrahisi - İntrakraniyal Kitleler ve Beyin Tümörleri): 16 slayt Öğren destesi, 68 sayfa tam sesli kapsam, 114 cümle, 23,7 dk EMA GPU sesli anlatım, 33 canlı çizim, 25 çıkmış soru eşleşmesi ve gömülü .medspak (7.60 MB)",
-    "Ders 13 (Beyin ve Sinir Cerrahisi - Medulla Spinalis Lezyonları ve Spinal Travmalar): 16 slayt Öğren destesi, 57 sayfa tam sesli kapsam, 126 cümle, 24,7 dk EMA GPU sesli anlatım, 31 canlı çizim, 13 çıkmış soru eşleşmesi ve gömülü .medspak (8.96 MB)",
-    "Metin takip ve lazer vurgu sistemi: slayttaki tüm maddeler, tanı kriterleri, prognoz tabloları ve epidemiyolojik oranlar konuşmacı sesine birebir senkron biçimde PDF üzerinde satır satır aydınlatıldı"
+    "Ders 53 (Tıbbi Genetik - Nörodejeneratif Hastalıklar ve Genetiği): 24 slayt Öğren destesi, 83 sayfa tam amfi dersi kapsamı (166 cümle, 2.851 kelime, 20,8 dk EMA GPU sesli anlatım), 15 canlı tuval çizimi, 3 çıkmış soru eşleşmesi ve gömülü .medspak (7.78 MB)",
+    "Ders 54 (Psikiyatri - Yaygın Anksiyete Bozukluğu): 24 slayt Öğren destesi, 20 sayfa derinlemesine klinik kapsam (66 cümle, 1.165 kelime, 8,7 dk EMA GPU sesli anlatım), 15 canlı tuval çizimi, 3 çıkmış soru eşleşmesi ve gömülü .medspak (4.16 MB)",
+    "Ders 55 (Psikiyatri - Panik Bozukluk ve Fobiler): 24 slayt Öğren destesi, 38 sayfa tam klinik kapsam (113 cümle, 1.793 kelime, 12,8 dk EMA GPU sesli anlatım), 15 canlı tuval çizimi, 3 çıkmış soru eşleşmesi ve gömülü .medspak (3.93 MB)",
+    "Metin takip ve lazer vurgu sistemi: slayttaki tüm maddeler, tanı kriterleri, etiyoloji ve genetik mekanizmalar konuşmacı sesine birebir senkron biçimde PDF üzerinde satır satır aydınlatıldı"
   ],
   "eklenen": [
-    "Kurul 2 Psikiyatri 'Şizofrenik Bozukluklar' (2025-2026 Arşivi)",
-    "Kurul 2 Beyin ve Sinir Cerrahisi 'İntrakraniyal Kitleler ve Beyin Tümörleri' (2025-2026 Arşivi)",
-    "Kurul 2 Beyin ve Sinir Cerrahisi 'Medulla Spinalis Lezyonları ve Spinal Travmalar' (2025-2026 Arşivi)"
+    "Kurul 2 Tıbbi Genetik 'Nörodejeneratif Hastalıklar ve Genetiği' (2025-2026 Arşivi)",
+    "Kurul 2 Psikiyatri 'Yaygın Anksiyete Bozukluğu' (2025-2026 Arşivi)",
+    "Kurul 2 Psikiyatri 'Panik Bozukluk ve Fobik Bozukluklar' (2025-2026 Arşivi)"
   ],
   "degisen": [
     "meds/data/arsiv_25_26/sesli_anlatim/dersler.json",
@@ -19,7 +19,7 @@
     "meds/guncelleme_notu.json"
   ],
   "duzeltilen": [
-    "Şizofrenik Bozukluklar dersinde 49 sayfanın tamamı atlanmadan tüm detaylarıyla (prognoz matrisleri, katatoni, ayırıcı tanı) 4.325 kelimede tam amfi süresine çıkarıldı",
+    "Ders 53, 54 ve 55 amfi dersi standartlarında derinleştirildi; slaytlardaki tüm maddeler ve mekanizmalar atlanmadan tam akademik sürede anlatıldı",
     "PDF metin takip motoru konuşmacı sesine ve satırlara %100 uyumlu hale getirildi"
   ],
   "silinen": []

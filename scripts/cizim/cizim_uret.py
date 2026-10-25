@@ -690,14 +690,188 @@ def anlam_denetimi(W: Path, key: str, C: dict, komutlar: list) -> dict:
         return {}
 
 
+def dok_uret(belge, out_dir: Path, force: bool = False):
+    """PDF sayfalarını sNN.png (M# mavi madde, R# kırmızı resim kutuları) ve sNN.txt olarak üretir."""
+    out_dir.mkdir(parents=True, exist_ok=True)
+    import pymupdf
+    sys.path.insert(0, str(MEDS / "scripts" / "sesli_anlatim"))
+    from pdf_isaret import Sayfa
+    for i, pg in enumerate(belge, 1):
+        png_yol = out_dir / f"s{i:02d}.png"
+        txt_yol = out_dir / f"s{i:02d}.txt"
+        if not force and png_yol.exists() and txt_yol.exists():
+            continue
+        sy = Sayfa(pg)
+        satir = []
+        for mi, m in enumerate(sy.maddeler):
+            r = pymupdf.Rect(min(x[0] for x in m["satirlar"]), min(x[1] for x in m["satirlar"]),
+                             max(x[2] for x in m["satirlar"]), max(x[3] for x in m["satirlar"]))
+            pg.draw_rect(r, color=(0, 0, 1), width=0.8)
+            pg.insert_text((r.x0 - 2, r.y0 + 6), f"M{mi}", fontsize=7, color=(0, 0, 1))
+            satir.append(f"M{mi}: {' '.join(m['metin'])}")
+        for ri, b in enumerate(sy.resimler):
+            r = pymupdf.Rect(b)
+            pg.draw_rect(r, color=(1, 0, 0), width=1.2)
+            pg.insert_text((r.x0 + 2, r.y0 + 10), f"R{ri}", fontsize=10, color=(1, 0, 0))
+            satir.append(f"R{ri}: resim {sy.n(b)}")
+        pg.get_pixmap(dpi=80).save(str(png_yol))
+        txt_yol.write_text("\n".join(satir), encoding="utf-8")
+
+
+def cizim_aday_uret(taslak_dir: Path, pdf_yol: Path | None = None, paralel: int = 4, parti_boyu: int = 6) -> dict:
+    """Bir taslak klasörü (konusma_v2.json + baglam.json + PDF) için TALIMAT_CIZIM.md kurallarına tam uyumlu
+    zengin çizim komutları (kontur, akış oku, eğri fazı, şema) üretir ve cizim_aday.json olarak kaydeder."""
+    import hashlib
+    import pymupdf
+
+    taslak = Path(taslak_dir)
+    baglam = json.loads((taslak / "baglam.json").read_text(encoding="utf-8")) if (taslak / "baglam.json").exists() else {}
+    if not pdf_yol:
+        if baglam.get("pdf_yolu") and (MEDS.parent / baglam["pdf_yolu"]).exists():
+            pdf_yol = MEDS.parent / baglam["pdf_yolu"]
+        elif (taslak / f"{taslak.name}.pdf").exists():
+            pdf_yol = taslak / f"{taslak.name}.pdf"
+        else:
+            adaylar_pdf = list((MEDS.parent / "meds_database_25_26" / "pdf").rglob(f"*{taslak.name}*.pdf"))
+            if adaylar_pdf:
+                pdf_yol = adaylar_pdf[0]
+
+    if not pdf_yol or not Path(pdf_yol).exists():
+        raise FileNotFoundError(f"Ders PDF dosyası bulunamadı: {pdf_yol}")
+
+    belge = pymupdf.open(pdf_yol)
+    dok_dir = taslak / "cizim_dok"
+    dok_uret(belge, dok_dir)
+
+    v2_yol = taslak / "konusma_v2.json"
+    if not v2_yol.exists():
+        raise FileNotFoundError(f"konusma_v2.json bulunamadı: {v2_yol}")
+    v2 = json.loads(v2_yol.read_text(encoding="utf-8"))
+
+    C: dict[str, str] = {}
+    sayfa_cumle: dict[int, list[str]] = {}
+    cumle_satirlari = []
+    pi = 0
+    for b in v2.get("bolumler", []):
+        cumle_satirlari.append(f"\n### BÖLÜM: {b.get('baslik', '')}")
+        for p in b.get("paragraflar", []):
+            cumle_satirlari.append(f"\n## P{pi}")
+            for ci, c in enumerate(p.get("cumleler", [])):
+                cid = f"P{pi}.C{ci}"
+                metin = c.get("ses") or c.get("ekran") or ""
+                C[cid] = metin
+                s = int(c.get("slayt", {}).get("sayfa") or 1)
+                sayfa_cumle.setdefault(s, []).append(cid)
+                ks = metin.split()
+                cumle_satirlari.append(f"{cid}: " + " ".join(f"[{j}]{w}" for j, w in enumerate(ks)))
+            pi += 1
+    (dok_dir / "cumleler.md").write_text("\n".join(cumle_satirlari), encoding="utf-8")
+
+    sayfalar = sorted(sayfa_cumle)
+    partiler = [sayfalar[i:i + parti_boyu] for i in range(0, len(sayfalar), parti_boyu)]
+    W = taslak / "cizim_is"
+    W.mkdir(parents=True, exist_ok=True)
+
+    ADAY: dict[int, dict] = {}
+    ADAY_LISTE: dict[int, tuple] = {}
+    for s_ in sayfalar:
+        if 1 <= s_ <= belge.page_count:
+            ADAY_LISTE[s_] = adaylar(belge[s_ - 1])
+            ADAY[s_] = {x["id"]: x for x in ADAY_LISTE[s_][0] + ADAY_LISTE[s_][1]}
+
+    def parti_isle(i_sp):
+        i, sp = i_sp
+        d = W / f"parti{i:02d}"
+        d.mkdir(exist_ok=True)
+        if (d / "cizim.json").exists():
+            return i, "önceki"
+        satir = ["# Bu partinin sayfaları", ""]
+        for s in sp:
+            png = dok_dir / f"s{s:02d}.png"
+            satir.append(f"## Sayfa {s} — görüntü: {png}")
+            satir += [x for x in (dok_dir / f"s{s:02d}.txt").read_text(encoding="utf-8").splitlines() if x.startswith(("R", "M"))][:30] \
+                if (dok_dir / f"s{s:02d}.txt").exists() else []
+            if s in ADAY_LISTE:
+                ao, ae = ADAY_LISTE[s]
+                for x in ao:
+                    satir.append(f"Aday ok {x['id']} (PDF çiziminden, kesin): kuyruk {x['a']} → uç {x['b']} ({x['iliski']})")
+                for x in ae:
+                    satir.append(f"Aday eğri {x['id']} (görüntüden çıkarıldı, kesin): {len(x['nokta'])} nokta, fazlar "
+                                 + ", ".join(f"{f['faz']} {f['aralik']}" for f in x["fazlar"]))
+            for cid in sayfa_cumle[s]:
+                ks = C[cid].split()
+                satir.append(f"{cid}: " + " ".join(f"[{j}]{w}" for j, w in enumerate(ks)))
+            satir.append("")
+        (d / "sayfalar.md").write_text("\n".join(satir), encoding="utf-8")
+        (d / "sablonlar.json").write_text(SB.YOL.read_text(encoding="utf-8"), encoding="utf-8")
+        istem = (
+            f"{TALIMAT} talimatını uygula. Çalışma dizinindeki sayfalar.md'yi oku; listelenen her sayfa görüntüsünü (sNN.png) "
+            "Read aracı ile aç ve dikkatle incele.\n\n"
+            "ÖNEMLİ KURALLAR:\n"
+            "1. GÖRSEL/TABLO/ŞEMA SAYFALARI:\n"
+            "   - Anlatılan anatomik yapılar, lezyonlar, organlar, dokular, herniasyonlar, kanama odakları, anevrizmalar, "
+            "hücreler veya tablo bölgeleri için mutlaka `tur: 'kontur'` kullan. Yapının sınırını 5-20 nokta ile KENARI boyunca "
+            "sırayla dolan (nokta: [[x,y],...]). Bu alanlar oynatıcıda yarı saydam fosforlu sarı marker ile boyanacak ve kırmızı kontur hattıyla çevrilecektir!\n"
+            "   - Yapılar arası yön, etki, yolak veya neden-sonuç için `tur: 'akis'` ile ok rotası çiz (a: [x,y], b: [x,y], iliski: 'aktive'|'inhibe'|'donusur', etiket: '...'). "
+            "Eğer PDF'te zaten çizili bir ok varsa, onu kopyalamak yerine aday oktan seç veya odak çerçevesi çiz.\n"
+            "   - Bir kaynaktan birden çok yere giden dallanmalar için `dallar` kullan.\n"
+            "   - Grafik ve eğriler için `tur: 'egri_faz'` kullan.\n"
+            "   - Görsel üzerindeki tüm bu çizimler için konuşma anında anlatılan bölgeye oynatıcı tarafından otomatik ZOOM yapılacaktır!\n"
+            "2. YAZI AĞIRLIKLI SLAYTLAR:\n"
+            "   - sablonlar.json kütüphanesinden tıbbi anlama tam uyan şablonu seçerek `tur: 'sema'` paneli kur "
+            "(tani_tetkik, zehir_antidot, bulgu_dusundurur, lezyon_bulgu, neden_sonuc, siniflama, karsilastirma vb.).\n"
+            "Çıktıyı `cizim.json` dosyasına `{\"komutlar\": [...]}` olarak kaydet. Bitince: BİTTİ."
+        )
+        t = time.time()
+        r = claude(d, istem)
+        return i, f"{round((time.time() - t) / 60, 1)} dk {r.strip()[-80:]}"
+
+    with ThreadPoolExecutor(max_workers=paralel) as ex:
+        for i, durum in ex.map(parti_isle, enumerate(partiler)):
+            print(f"  parti {i}: {durum}", flush=True)
+
+    tum_komut = []
+    for f in sorted(W.glob("parti*/cizim.json")):
+        try:
+            tum_komut += json.loads(f.read_text(encoding="utf-8")).get("komutlar") or []
+        except Exception:
+            pass
+
+    for k in tum_komut:
+        if isinstance(k.get("yeni_sablon"), dict):
+            sid = SB.yeni_ekle(k["yeni_sablon"], taslak.name)
+            if sid:
+                k["sablon"] = sid
+
+    cikti_aday = {"komutlar": tum_komut}
+    (taslak / "cizim_aday.json").write_text(json.dumps(cikti_aday, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"[{taslak.name}] {len(tum_komut)} adet çizim komutu cizim_aday.json dosyasına kaydedildi.")
+    return cikti_aday
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("key"); ap.add_argument("--dok", required=True); ap.add_argument("--capa", required=True)
-    ap.add_argument("--isaret", required=True); ap.add_argument("--paralel", type=int, default=4)
-    ap.add_argument("--parti", type=int, default=6); ap.add_argument("--kuru", action="store_true")
+    ap.add_argument("key")
+    ap.add_argument("--taslak", default=None, help="Taslak klasörü yolu (verilirse otomatik aday üretir)")
+    ap.add_argument("--pdf", default=None, help="Doğrudan PDF dosya yolu")
+    ap.add_argument("--v2", default=None, help="konusma_v2.json dosya yolu")
+    ap.add_argument("--cikti", default=None, help="Çıktı JSON dosya yolu")
+    ap.add_argument("--dok", default=None)
+    ap.add_argument("--capa", default=None)
+    ap.add_argument("--isaret", default=None)
+    ap.add_argument("--paralel", type=int, default=4)
+    ap.add_argument("--parti", type=int, default=6)
+    ap.add_argument("--kuru", action="store_true")
     ap.add_argument("--is-dizini", default=None)
     a = ap.parse_args()
-    dok = Path(a.dok)
+
+    if a.taslak:
+        cizim_aday_uret(Path(a.taslak), pdf_yol=Path(a.pdf) if a.pdf else None, paralel=a.paralel, parti_boyu=a.parti)
+        return 0
+
+    W = Path(a.is_dizini or (MEDS.parent / "meds_temp" / "cizim" / a.key))
+    W.mkdir(parents=True, exist_ok=True)
+    dok = Path(a.dok) if a.dok else (W / "dok")
     C = cumleler(dok / "cumleler.md")
     capa = json.loads(Path(a.capa).read_text())["p"]
     isr = json.loads(Path(a.isaret).read_text())

@@ -501,3 +501,12 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   ("bu bilgi çıkmışta soruldu"); tavan yalnız çıkmış dayanağı olmayan "Burası önemli"ye uygulanır. Dayanaksız çıkmış anışı yasak.
 - Kapı: `isle.cikmis_ses_kapsam` (sesli_kapsam'a bağlı, Kurul 2+): ilgili çıkmış anlatılmamış / sesli uyarısız → HATA;
   "çıkmış/sınavda soruldu" geçen cümlede `cikmis` boş → HATA. Arama kurul filtresiyle <10 aday dönerse filtresiz yedek arama.
+
+## H58 — EMA cümle ortasında sesi düşürüp es veriyordu (2026-10-24, kullanıcı)
+- Kök: `ema_lightning/chunker.py` ~10 sn'yi (hız 1'de 180 harf) aşan metni son virgülde ya da düz boşlukta kesip parça
+  sonuna "." ekliyor, araya 0,12–0,25 sn es koyuyordu → cümle bitmiş gibi kapanış tonu. Virgülde de virgülsüz yerde de oluyordu.
+- Düzeltme: `ema_isci.model_yukle()` `chunker.MAX_SECONDS=30`, `MAX_LETTERS=750` (bütün EMA betikleri bu yoldan geçer);
+  kesim yalnız gerçek cümle sonunda. Kurul 1 sesleri bilerek yeniden üretilmedi (kullanıcı kararı); K2'de etkilenen tek
+  klip (k2farmakoloji 2f01 q-26) yenilendi.
+- Kural: bu sınır geri çekilmez; tek cümle 30 sn'yi aşıyorsa metin aşamasında bölünür. Sayım betiği: kütüphanenin
+  `chunker.chunk` çıktısında `SENTENCE_PAUSE` dışı kesim = hata.

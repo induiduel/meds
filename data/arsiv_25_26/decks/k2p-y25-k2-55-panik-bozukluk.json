@@ -1,0 +1,2418 @@
+{
+ "id": "k2p-y25-k2-55-panik-bozukluk",
+ "title": "Panik Bozukluk",
+ "kurul": 2,
+ "sayfaHaritasi": "teyitli",
+ "slides": [
+  {
+   "slideNumber": 1,
+   "title": "Panik Atak ve Panik Bozukluk: Tanım ve Klinik Çerçeve",
+   "content": "Panik atak aniden başlayan ve dakikalar içinde hızla şiddetlenen yoğun bir korku nöbetidir. Kişi belirgin bir tetikleyici olmadan yoğun içsel dehşet, ölüm tehlikesi veya delirme korkusu yaşar.\n\n- **Başlangıç Özelliği:** Semptomlar saniyeler içinde alevlenir ve çoğunlukla on ila otuz dakika içinde kendiliğinden yatışır.\n- **Kardinal Bulgular:** Çarpıntı, göğüs ağrısı, boğulma hissi ve titreme en sık eşlik eden otonomik belirtilerdir.\n\n> [!NOTE]\n> Panik atak tek başına bir hastalık tanısı değil, birçok psikiyatrik tabloda görülebilen akut bir semptom kümesidir.",
+   "synthesisNarrative": "Panik atak aniden başlayan ve dakikalar içinde hızla şiddetlenen yoğun bir korku nöbetidir. Kişi belirgin bir tetikleyici olmadan yoğun içsel dehşet, ölüm tehlikesi veya delirme korkusu yaşar.\n\n- **Başlangıç Özelliği:** Semptomlar saniyeler içinde alevlenir ve çoğunlukla on ila otuz dakika içinde kendiliğinden yatışır.\n- **Kardinal Bulgular:** Çarpıntı, göğüs ağrısı, boğulma hissi ve titreme en sık eşlik eden otonomik belirtilerdir.\n\n> [!NOTE]\n> Panik atak tek başına bir hastalık tanısı değil, birçok psikiyatrik tabloda görülebilen akut bir semptom kümesidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Panik atağın başlangıcı ve zamansal seyri hakkında aşağıdakilerden hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Semptomlar aniden başlar ve dakikalar içinde hızla şiddetlenerek doruğa ulaşır.",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Haftalar boyunca giderek artan sinsi bir seyir gösterir.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Hiçbir somatik veya fizyolojik belirti eşlik etmez.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Yalnızca gece uykusunun REM evresinde ortaya çıkabilir.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Panik atak aniden başlayan ve dakikalar içinde hızla şiddetlenen yoğun bir korku nöbetidir.",
+     "maskedTerm": "yoğun bir korku",
+     "hint": ""
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 1 Klinik Değerlendirme",
+     "items": [
+      {
+       "text": "Panik atak dakikalar içinde hızla doruğa ulaşır.",
+       "isLie": false,
+       "explanation": "Ataklar çok kısa süre içinde en yüksek şiddetine ulaşan paroksismal tablolardır."
+      },
+      {
+       "text": "Panik atak sırasında otonomik sempatik deşarj gerçekleşir.",
+       "isLie": false,
+       "explanation": "Taşikardi, terleme ve titreme sempatik sinir sistemi aktivasyonunu yansıtır."
+      },
+      {
+       "text": "Panik atak mutlaka günler süren sinsi prodromal evreyle başlar.",
+       "isLie": true,
+       "explanation": "Panik atağın kardinal vasfı aniden ve beklenmedik bir şekilde saniyeler içinde patlak vermesidir."
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Aşama: Beklenmedik anda ani bir korku ve tehlike hissi algılanır.",
+      "2. Aşama: Otonom sinir sistemi süratle aktive olarak sempatik deşarj başlatır.",
+      "3. Aşama: Dakikalar içinde çarpıntı ve dispne ile doruk noktaya varılır."
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    2,
+    4
+   ],
+   "sourcePdf": {
+    "startPage": 2,
+    "endPage": 4
+   },
+   "bolum": "1"
+  },
+  {
+   "slideNumber": 2,
+   "title": "Panik Bozukluğun Temel Doğası ve Beklenti Anksiyetesi",
+   "content": "Panik bozukluk beklenmeyen, yineleyici panik ataklarla giden kronik bir tablodur. Hastalarda ataklar arasında en yıpratıcı belirti beklenti anksiyetesi olarak adlandırılır.\n\n- **Beklenti Kaygısı:** Hasta yeni bir atak geçireceği korkusuyla sürekli tetikte yaşar.\n- **Epidemiyoloji:** Kadınlarda erkeklere oranla 2 ila 3 kat daha sık saptanır.\n- **Pik Yaşları:** Genç erişkinlik dönemi ve otuzlu yaşlar başlangıcında en sık görülür.\n\n> [!IMPORTANT]\n> Atakların beklenmedik olması ve ardından en az bir ay süren beklenti kaygısı panik bozukluğun merkezidir.",
+   "synthesisNarrative": "Panik bozukluk beklenmeyen, yineleyici panik ataklarla giden kronik bir tablodur. Hastalarda ataklar arasında en yıpratıcı belirti beklenti anksiyetesi olarak adlandırılır.\n\n- **Beklenti Kaygısı:** Hasta yeni bir atak geçireceği korkusuyla sürekli tetikte yaşar.\n- **Epidemiyoloji:** Kadınlarda erkeklere oranla 2 ila 3 kat daha sık saptanır.\n- **Pik Yaşları:** Genç erişkinlik dönemi ve otuzlu yaşlar başlangıcında en sık görülür.\n\n> [!IMPORTANT]\n> Atakların beklenmedik olması ve ardından en az bir ay süren beklenti kaygısı panik bozukluğun merkezidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Panik bozuklukta ataklar arasında görülen sürekli kaygı hali nasıl tanımlanır?",
+     "options": [
+      {
+       "text": "Beklenti anksiyetesi",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Katatonik stupor",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Retrograd amnezi",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Grandiyöz hezeyan",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Hastalarda ataklar arasında en yıpratıcı belirti beklenti anksiyetesi olarak adlandırılır.",
+     "maskedTerm": "beklenti anksiyetesi",
+     "hint": ""
+    },
+    {
+     "type": "swipe_matching",
+     "cards": [
+      {
+       "text": "Kadınlarda erkeklere göre 2-3 kat sık görülmesi",
+       "category": "left"
+      },
+      {
+       "text": "Yeni atak geleceğine dair sürekli yaşanan korku",
+       "category": "right"
+      },
+      {
+       "text": "Dakikalar içinde doruğa çıkan akut nöbet",
+       "category": "left"
+      },
+      {
+       "text": "En sık başlangıç yaşı olan genç erişkinlik dönemi",
+       "category": "right"
+      }
+     ],
+     "leftCategory": "Tanısal Özellikler",
+     "rightCategory": "Klinik Süreçler"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 2 Klinik Değerlendirme",
+     "items": [
+      {
+       "text": "Panik bozukluk kadınlarda erkeklere oranla daha sık görülür.",
+       "isLie": false,
+       "explanation": "Epidemiyolojik çalışmalar kadınlarda 2-3 kat daha yüksek prevalans göstermektedir."
+      },
+      {
+       "text": "Beklenti anksiyetesi ataklar arasındaki dönemde hastayı yıpratır.",
+       "isLie": false,
+       "explanation": "Yeni bir kriz yaşama endişesi hastanın günlük yaşam kalitesini ileri derecede bozar."
+      },
+      {
+       "text": "Panik bozukluk tanısı için hastada hiçbir zaman panik atak görülmemelidir.",
+       "isLie": true,
+       "explanation": "Panik bozukluk tanısının temel koşulu yineleyici ve beklenmedik panik atakların varlığıdır."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    2,
+    4
+   ],
+   "sourcePdf": {
+    "startPage": 2,
+    "endPage": 4
+   },
+   "bolum": "1"
+  },
+  {
+   "slideNumber": 3,
+   "title": "Panik Bozukluk Kliniği: Otonomik ve Somatik Semptomlar",
+   "content": "Panik atak esnasında otonom sinir sisteminin sempatik dalı şiddetle aktive olur. Bu sempatik uyarılma kardiyovasküler ve solunumsal otonomik semptomlar tablosunu doğurur.\n\n- **Kardiyovasküler Bulgular:** Çarpıntı, taşikardi, göğüste baskı ve ağrı hissi öne çıkar.\n- **Solunumsal Bulgular:** Nefes darlığı, hava açlığı ve boğuluyor gibi olma hissi gelişir.\n- **Diğer Somatik Yakınmalar:** Titreme, terleme, sersemlik, bulantı ve paresteziler sıkça görülür.\n\n> [!NOTE]\n> Hastalar sıklıkla kalp krizi geçirdiklerini düşünerek ilk olarak acil servislere başvururlar.",
+   "synthesisNarrative": "Panik atak esnasında otonom sinir sisteminin sempatik dalı şiddetle aktive olur. Bu sempatik uyarılma kardiyovasküler ve solunumsal otonomik semptomlar tablosunu doğurur.\n\n- **Kardiyovasküler Bulgular:** Çarpıntı, taşikardi, göğüste baskı ve ağrı hissi öne çıkar.\n- **Solunumsal Bulgular:** Nefes darlığı, hava açlığı ve boğuluyor gibi olma hissi gelişir.\n- **Diğer Somatik Yakınmalar:** Titreme, terleme, sersemlik, bulantı ve paresteziler sıkça görülür.\n\n> [!NOTE]\n> Hastalar sıklıkla kalp krizi geçirdiklerini düşünerek ilk olarak acil servislere başvururlar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Panik atak sırasında en sık acil servis başvurusuna yol açan kardiyovasküler belirti hangisidir?",
+     "options": [
+      {
+       "text": "Çarpıntı ve göğüs ağrısı",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Derin koma ve solunum durması",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Asit ve sarılık gelişimi",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Eklem içi hemartroz",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Bu sempatik uyarılma kardiyovasküler ve solunumsal otonomik semptomlar tablosunu doğurur.",
+     "maskedTerm": "otonomik semptomlar",
+     "hint": ""
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Aşama: Akut sempatik sinir sistemi deşarjı meydana gelir.",
+      "2. Aşama: Taşikardi ve periferik vazokonstriksiyon ile göğüste baskı oluşur.",
+      "3. Aşama: Hiperventilasyon dispne ve parestezileri tırmandırır."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 3 Klinik Değerlendirme",
+     "items": [
+      {
+       "text": "Çarpıntı ve terleme panik atağın sık otonomik bulgularıdır.",
+       "isLie": false,
+       "explanation": "Sempatik hiperaktivite kalp hızını artırır ve aşırı terlemeye yol açar."
+      },
+      {
+       "text": "Göğüs ağrısı hastada sıklıkla kalp krizi endişesi uyandırır.",
+       "isLie": false,
+       "explanation": "Göğüsteki baskı kardiyak iskemi sanılarak acil servise başvuruyu tetikler."
+      },
+      {
+       "text": "Panik atak esnasında kalp hızı daima dakikada 30 atımın altına iner.",
+       "isLie": true,
+       "explanation": "Panik atakta sempatik deşarj hakim olduğundan belirgin taşikardi görülür, bradikardi beklenmez."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    7,
+    11
+   ],
+   "sourcePdf": {
+    "startPage": 7,
+    "endPage": 11
+   },
+   "bolum": "1.3"
+  },
+  {
+   "slideNumber": 4,
+   "title": "Panik Atağın Bilişsel ve Algısal Belirtileri",
+   "content": "Panik atağın fiziksel semptomlarına yoğun algısal ve bilişsel belirtiler eşlik eder. Kişi içinde bulunduğu gerçeklikten koptuğunu hisseder veya bedenini yabancı gibi algılar.\n\n- **Derealizasyon:** Çevrenin yapay, rüya benzeri veya sisli algılanması durumudur.\n- **Depersonalizasyon:** Kişinin kendi bedenine veya benliğine yabancılaşmasıdır.\n- **Korku Boyutu:** Kontrolünü kaybetme korkusu, çıldırma endişesi ve ölüm korkusu eşlik eder.\n\n> [!IMPORTANT]\n> Bu algısal ve bilişsel belirtiler atağın şiddetini ve hastanın dehşet duygusunu katlayarak artırır.",
+   "synthesisNarrative": "Panik atağın fiziksel semptomlarına yoğun algısal ve bilişsel belirtiler eşlik eder. Kişi içinde bulunduğu gerçeklikten koptuğunu hisseder veya bedenini yabancı gibi algılar.\n\n- **Derealizasyon:** Çevrenin yapay, rüya benzeri veya sisli algılanması durumudur.\n- **Depersonalizasyon:** Kişinin kendi bedenine veya benliğine yabancılaşmasıdır.\n- **Korku Boyutu:** Kontrolünü kaybetme korkusu, çıldırma endişesi ve ölüm korkusu eşlik eder.\n\n> [!IMPORTANT]\n> Bu algısal ve bilişsel belirtiler atağın şiddetini ve hastanın dehşet duygusunu katlayarak artırır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Çevrenin gerçek dışı, yapay veya bir sis perdesi arkasındaymış gibi algılanması hangi terimle ifade edilir?",
+     "options": [
+      {
+       "text": "Derealizasyon",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Katapleksi",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Disartri",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Agnozi",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Panik atağın fiziksel semptomlarına yoğun algısal ve bilişsel belirtiler eşlik eder.",
+     "maskedTerm": "bilişsel belirtiler",
+     "hint": ""
+    },
+    {
+     "type": "interactive_table",
+     "title": "Panik Atakta Bilişsel ve Algısal Belirti Ayrımı",
+     "tableHeaders": [
+      "Belirti Türü",
+      "Tanım",
+      "Klinik Görünüm"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Derealizasyon"
+        },
+        {
+         "text": "Çevrenin yabancılaşması",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Dünyayı rüyada gibi algılama"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Depersonalizasyon"
+        },
+        {
+         "text": "Bedene yabancılaşma",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Kendi bedenini dışarıdan izleme"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Bilişsel Korku"
+        },
+        {
+         "text": "Ölüm veya delirme dehşeti",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Kontrolünü kaybetme korkusu"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 4 Klinik Değerlendirme",
+     "items": [
+      {
+       "text": "Depersonalizasyon kişinin kendi bedenine yabancılaşmasıdır.",
+       "isLie": false,
+       "explanation": "Kişi kendi organlarını ve bedenini kendine ait değilmiş gibi hisseder."
+      },
+      {
+       "text": "Ölüm ve çıldırma korkusu panik atakta sık görülen kognitif belirtilerdir.",
+       "isLie": false,
+       "explanation": "Atak anında kontrolü yitirme ve fatal felaket algısı son derece yoğundur."
+      },
+      {
+       "text": "Derealizasyon yaşayan hasta çevresindeki insanları tamamen tanıdık ve olağan bulur.",
+       "isLie": true,
+       "explanation": "Derealizasyonda hasta çevresini gerçek dışı, yabancı veya mekanik olarak algılar."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    7,
+    11
+   ],
+   "sourcePdf": {
+    "startPage": 7,
+    "endPage": 11
+   },
+   "bolum": "1.3"
+  },
+  {
+   "slideNumber": 5,
+   "title": "DSM-5 Panik Bozukluk Tanı Kriterleri ve 13 Kardinal Belirti",
+   "content": "DSM-5 kriterlerine göre panik atak tanısı için on üç kardinal semptom listelenmiştir. Bu belirtilerden en az dördünün dakikalar içinde doruk noktaya ulaşması tanı için gereklidir.\n\n- **Tanısal Eşik:** Listelenen on üç semptomdan en az 4 tanesi mevcudiyet göstermelidir.\n- **Dört Belirtiden Az İse:** Bu durum kısıtlı semptomlu atak olarak adlandırılır.\n- **Zaman Kriteri:** Bozukluk tanısı için en az 1 ay süren kaygı veya kaçınma davranışı aranır.\n\n> [!NOTE]\n> Ataklar madde kullanımına, ilaca veya organik bir tıbbi duruma doğrudan bağlanamamalıdır.",
+   "synthesisNarrative": "DSM-5 kriterlerine göre panik atak tanısı için on üç kardinal semptom listelenmiştir. Bu belirtilerden en az dördünün dakikalar içinde doruk noktaya ulaşması tanı için gereklidir.\n\n- **Tanısal Eşik:** Listelenen on üç semptomdan en az 4 tanesi mevcudiyet göstermelidir.\n- **Dört Belirtiden Az İse:** Bu durum kısıtlı semptomlu atak olarak adlandırılır.\n- **Zaman Kriteri:** Bozukluk tanısı için en az 1 ay süren kaygı veya kaçınma davranışı aranır.\n\n> [!NOTE]\n> Ataklar madde kullanımına, ilaca veya organik bir tıbbi duruma doğrudan bağlanamamalıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "DSM-5'e göre tam bir panik atak tanısı koyabilmek için 13 belirtiden en az kaç tanesi bulunmalıdır?",
+     "options": [
+      {
+       "text": "En az 4 tanesi bulunmalıdır.",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "13 belirtinin tamamı bulunmalıdır.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Sadece tek bir belirti yeterlidir.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "En az 10 belirti bulunmalıdır.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "DSM-5 kriterlerine göre panik atak tanısı için on üç kardinal semptom listelenmiştir.",
+     "maskedTerm": "kardinal semptom",
+     "hint": ""
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Aşama: Dakikalar içinde 13 kardinal semptomdan en az dördü belirir.",
+      "2. Aşama: Atak sonrası yeni atak korkusu (beklenti kaygısı) gelişir.",
+      "3. Aşama: En az 1 ay süren uyum bozucu davranışla panik bozukluk kesinleşir."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 5 Klinik Değerlendirme",
+     "items": [
+      {
+       "text": "Panik atak tanısı için en az 4 kardinal semptom aranır.",
+       "isLie": false,
+       "explanation": "DSM-5 kriterleri en az dört semptomun dakikalar içinde doruğa çıkmasını şart koşar."
+      },
+      {
+       "text": "Dörtten az semptom içeren nöbetlere kısıtlı semptomlu atak denir.",
+       "isLie": false,
+       "explanation": "Klinikte 1-3 belirtiyle giden tablolara kısıtlı semptomlu panik atağı denmektedir."
+      },
+      {
+       "text": "Panik bozukluk tanısı koymak için atakların daima alkol yoksunluğuna bağlı olması şarttır.",
+       "isLie": true,
+       "explanation": "Madde veya yoksunluğa bağlı ataklar doğrudan panik bozukluk olarak kodlanamaz."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    7,
+    11
+   ],
+   "sourcePdf": {
+    "startPage": 7,
+    "endPage": 11
+   },
+   "bolum": "1.3"
+  },
+  {
+   "slideNumber": 6,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Panik Atak ve Bozukluk Kliniği",
+   "content": "Bu bölümde panik atak ve panik bozukluğun temel klinik özelliklerini gözden geçirdik. Panik atağın akut ve beklenmedik doğası ile beklenti kaygısı ayırıcı tanının temelini oluşturur.\n\n- **Panik Atak Özeti:** Aniden başlayan, dakikalar içinde doruğa ulaşan 13 kardinal semptomlu krizdir.\n- **Panik Bozukluk Özeti:** Yineleyici ataklar ve en az 1 ay süren beklenti anksiyetesi tablosudur.\n- **Tanı Kriteri Özeti:** En az dört semptom ve organik nedenlerin dışlanması esastır.\n\n> [!IMPORTANT]\n> Şimdi bu bilgileri pekiştirmek için klinik karar ve eşleme senaryolarını tamamlayınız.",
+   "synthesisNarrative": "Bu bölümde panik atak ve panik bozukluğun temel klinik özelliklerini gözden geçirdik. Panik atağın akut ve beklenmedik doğası ile beklenti kaygısı ayırıcı tanının temelini oluşturur.\n\n- **Panik Atak Özeti:** Aniden başlayan, dakikalar içinde doruğa ulaşan 13 kardinal semptomlu krizdir.\n- **Panik Bozukluk Özeti:** Yineleyici ataklar ve en az 1 ay süren beklenti anksiyetesi tablosudur.\n- **Tanı Kriteri Özeti:** En az dört semptom ve organik nedenlerin dışlanması esastır.\n\n> [!IMPORTANT]\n> Şimdi bu bilgileri pekiştirmek için klinik karar ve eşleme senaryolarını tamamlayınız.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Panik atağı diğer anksiyete tablolarından ayıran en belirgin zamansal profil hangisidir?",
+     "options": [
+      {
+       "text": "Dakikalar içinde hızla doruğa çıkması ve kısa sürede yatışması",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Aylar boyunca hiç değişmeyen sabit anksiyete düzeyi",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Yalnızca sabah uyandıktan sonra 5 saniye sürmesi",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Hiçbir zaman kendiliğinden gerilemeyip cerrahi gerektirmesi",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Bu bölümde panik atak ve panik bozukluğun temel klinik özelliklerini gözden geçirdik.",
+     "maskedTerm": "klinik özelliklerini",
+     "hint": ""
+    },
+    {
+     "type": "swipe_matching",
+     "cards": [
+      {
+       "text": "13 belirtiden en az dördünün dakikalar içinde doruğa çıkması",
+       "category": "left"
+      },
+      {
+       "text": "Atak sonrası en az 1 ay süren yeni atak korkusu",
+       "category": "right"
+      },
+      {
+       "text": "Çevrenin gerçek dışı algılanması (derealizasyon)",
+       "category": "left"
+      },
+      {
+       "text": "Ataklardan kaçınmaya yönelik uyum bozucu davranış",
+       "category": "right"
+      }
+     ],
+     "leftCategory": "Tanısal Özellikler",
+     "rightCategory": "Klinik Süreçler"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 6 Klinik Değerlendirme",
+     "items": [
+      {
+       "text": "Panik ataklar yaklaşık 10-30 dakika içinde kendiliğinden yatışır.",
+       "isLie": false,
+       "explanation": "Fizyolojik regülasyon mekanizmalarıyla sempatik deşarj yarım saat içinde söner."
+      },
+      {
+       "text": "Beklenti anksiyetesi ataklar arasındaki dönemde devam eden kaygıdır.",
+       "isLie": false,
+       "explanation": "Hasta yeni atak geçirme endişesiyle sürekli alarm halinde yaşar."
+      },
+      {
+       "text": "Panik bozukluk tanısı için hastada hiçbir zaman korku veya otonomik semptom bulunmaz.",
+       "isLie": true,
+       "explanation": "Otonomik deşarj ve yoğun ölüm/delirme korkusu panik tablosunun merkezindedir."
+      }
+     ]
+    }
+   ],
+   "isCheckpoint": true
+  },
+  {
+   "slideNumber": 7,
+   "title": "Panik Bozukluk Etiyolojisi: Nörobiyolojik Modeller ve Katekolaminler",
+   "content": "Panik bozukluğun nörobiyolojik etiyolojisinde santral noradrenerjik alarm sistemi odak noktasıdır. Özellikle beyin sapındaki loküs seruleus nükleusunun aşırı uyarılması panik deşarjını tetikler.\n\n- **Loküs Seruleus:** Beyindeki noradrenalinin ana üretim merkezidir ve alarm reaksiyonunu yönetir.\n- **Korku Devresi:** Amigdala, prefrontal korteks ve hipokampus arasındaki dengesizlik korku ağını duyarlılaştırır.\n- **GABAerjik İletim:** İnhibitör GABA fonksiyonlarındaki yetersizlik santral uyarılabilirliği artırır.\n\n> [!NOTE]\n> Loküs seruleusun deneysel uyarılması panik benzeri krizler oluştururken, inhibisyonu anksiyeteyi yatıştırır.",
+   "synthesisNarrative": "Panik bozukluğun nörobiyolojik etiyolojisinde santral noradrenerjik alarm sistemi odak noktasıdır. Özellikle beyin sapındaki loküs seruleus nükleusunun aşırı uyarılması panik deşarjını tetikler.\n\n- **Loküs Seruleus:** Beyindeki noradrenalinin ana üretim merkezidir ve alarm reaksiyonunu yönetir.\n- **Korku Devresi:** Amigdala, prefrontal korteks ve hipokampus arasındaki dengesizlik korku ağını duyarlılaştırır.\n- **GABAerjik İletim:** İnhibitör GABA fonksiyonlarındaki yetersizlik santral uyarılabilirliği artırır.\n\n> [!NOTE]\n> Loküs seruleusun deneysel uyarılması panik benzeri krizler oluştururken, inhibisyonu anksiyeteyi yatıştırır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Panik bozuklukta noradrenerjik hiperaktivite ile panik deşarjını başlatan beyin sapı çekirdeği hangisidir?",
+     "options": [
+      {
+       "text": "Loküs seruleus",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Substansiya nigra pars kompaktası",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Nükleus kaudatus",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Tektum mezensefali",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Özellikle beyin sapındaki loküs seruleus nükleusunun aşırı uyarılması panik deşarjını tetikler.",
+     "maskedTerm": "loküs seruleus",
+     "hint": ""
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Aşama: Loküs seruleustaki nöronlar noradrenerjik aşırı deşarj başlatır.",
+      "2. Aşama: Amigdala uyarılması ile korku yanıtı ve alarm sistemi tetiklenir.",
+      "3. Aşama: Periferik otonomik semptomlar ve panik atağı ortaya çıkar."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 7 Klinik Değerlendirme",
+     "items": [
+      {
+       "text": "Loküs seruleus beyindeki temel noradrenerjik merkezdir.",
+       "isLie": false,
+       "explanation": "Beyin sapında yer alan bu çekirdek noradrenalin salınımını ve uyarılmışlığı düzenler."
+      },
+      {
+       "text": "Amigdala korku belleği ve tehlike algısının kilit yapısıdır.",
+       "isLie": false,
+       "explanation": "Korku devresinde emosyonel uyarılmayı ve tehlike yanıtını amigdala koordine eder."
+      },
+      {
+       "text": "GABAerjik iletim artışı panik bozukluğu doğrudan başlatan ana nedendir.",
+       "isLie": true,
+       "explanation": "GABA majör inhibitör nörotransmitterdir; yetersizliği veya duyarsızlığı anksiyeteyi artırır."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    5,
+    6
+   ],
+   "sourcePdf": {
+    "startPage": 5,
+    "endPage": 6
+   },
+   "bolum": "2.1"
+  },
+  {
+   "slideNumber": 8,
+   "title": "Bilişsel Davranışçı Model: Katastrofizasyon ve Tehdit Algısı",
+   "content": "Panik bozukluğun bilişsel davranışçı modelinde merkez kavram katastrofizasyon yani felaketleştirmedir. Hasta olağan fizyolojik bedensel duyumları ölümcül bir tehdit olarak yanlış yorumlar.\n\n- **Tetikleyici Duyum:** Merdiven çıkarken kalbin hızlanması veya hafif sersemlik hissi ortaya çıkar.\n- **Yanlış Yorum:** Kişi 'Kalp krizi geçiriyorum' veya 'Beyin kanaması yaşıyorum' şeklinde düşünür.\n- **Kısır Döngü:** Bu felaketleştirici biliş sempatik deşarjı artırır ve gerçek bir panik atağı patlak verir.\n\n> [!IMPORTANT]\n> Bilişsel model, atağın bedensel duyumların felaket senaryoları olarak algılanmasıyla beslendiğini gösterir.",
+   "synthesisNarrative": "Panik bozukluğun bilişsel davranışçı modelinde merkez kavram katastrofizasyon yani felaketleştirmedir. Hasta olağan fizyolojik bedensel duyumları ölümcül bir tehdit olarak yanlış yorumlar.\n\n- **Tetikleyici Duyum:** Merdiven çıkarken kalbin hızlanması veya hafif sersemlik hissi ortaya çıkar.\n- **Yanlış Yorum:** Kişi 'Kalp krizi geçiriyorum' veya 'Beyin kanaması yaşıyorum' şeklinde düşünür.\n- **Kısır Döngü:** Bu felaketleştirici biliş sempatik deşarjı artırır ve gerçek bir panik atağı patlak verir.\n\n> [!IMPORTANT]\n> Bilişsel model, atağın bedensel duyumların felaket senaryoları olarak algılanmasıyla beslendiğini gösterir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Zararsız bedensel duyumların kalp krizi veya ölüm olarak yanlış yorumlanması hangi bilişsel kavramdır?",
+     "options": [
+      {
+       "text": "Katastrofizasyon (felaketleştirme)",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Retrograd amnezi",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Çifte körleme",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Transdüksiyon yetersizliği",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Panik bozukluğun bilişsel davranışçı modelinde merkez kavram katastrofizasyon yani felaketleştirmedir.",
+     "maskedTerm": "katastrofizasyon",
+     "hint": ""
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Aşama: Merdiven çıkma gibi nedenlerle hafif taşikardi duyumsanır.",
+      "2. Aşama: Taşikardi 'kalp krizi geçiriyorum' şeklinde felaketleştirilir.",
+      "3. Aşama: Artan anksiyete sempatik deşarjı tırmandırarak panik atağı oluşturur."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 8 Klinik Değerlendirme",
+     "items": [
+      {
+       "text": "Katastrofizasyon zararsız duyumların felaket olarak yorumlanmasıdır.",
+       "isLie": false,
+       "explanation": "Bilişsel modelin temel direği bedensel duyumların ölümcül tehlike sayılmasıdır."
+      },
+      {
+       "text": "Korku algısı sempatik aktivasyonu tırmandırarak kısır döngü kurar.",
+       "isLie": false,
+       "explanation": "Tehdit düşüncesi adrenalin salınımını tetikler ve çarpıntıyı daha da şiddetlendirir."
+      },
+      {
+       "text": "Panik hastaları bedensel duyumlarına karşı tamamen duyarsız ve dikkatsizdir.",
+       "isLie": true,
+       "explanation": "Hastalar hipervijilans sergiler, kendi nabız ve nefeslerine aşırı odaklanmış durumdadırlar."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    5,
+    6
+   ],
+   "sourcePdf": {
+    "startPage": 5,
+    "endPage": 6
+   },
+   "bolum": "2.1"
+  },
+  {
+   "slideNumber": 9,
+   "title": "Panik Bozuklukta Tıbbi ve Organik Ayırıcı Tanı",
+   "content": "Panik bozukluk tanısı koymadan önce organik nedenler ve sistemik hastalıklar mutlaka taranmalıdır. Özellikle kardiyak, endokrin ve toksikopatolojik durumlar panik kliniğini taklit edebilir.\n\n- **Endokrin Nedenler:** Feokromositoma katekolamin fırtınası yapar; hipertiroidi taşikardiye yol açar.\n- **Kardiyovasküler Nedenler:** Paroksismal supraventriküler taşikardi ve koroner sendromlar dışlanmalıdır.\n- **Madde ve İlaçlar:** Aşırı kafein, amfetamin, kokain kullanımı veya sedatif yoksunluğu atak yapabilir.\n\n> [!NOTE]\n> EKG, tiroid fonksiyon testleri ve ayrıntılı anamnez ayırıcı tanının vazgeçilmez basamaklarıdır.",
+   "synthesisNarrative": "Panik bozukluk tanısı koymadan önce organik nedenler ve sistemik hastalıklar mutlaka taranmalıdır. Özellikle kardiyak, endokrin ve toksikopatolojik durumlar panik kliniğini taklit edebilir.\n\n- **Endokrin Nedenler:** Feokromositoma katekolamin fırtınası yapar; hipertiroidi taşikardiye yol açar.\n- **Kardiyovasküler Nedenler:** Paroksismal supraventriküler taşikardi ve koroner sendromlar dışlanmalıdır.\n- **Madde ve İlaçlar:** Aşırı kafein, amfetamin, kokain kullanımı veya sedatif yoksunluğu atak yapabilir.\n\n> [!NOTE]\n> EKG, tiroid fonksiyon testleri ve ayrıntılı anamnez ayırıcı tanının vazgeçilmez basamaklarıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Paroksismal hipertansiyon, terleme ve taşikardi nöbetleri ile panik atağı birebir taklit edebilen endokrin tümör hangisidir?",
+     "options": [
+      {
+       "text": "Feokromositoma",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Prolaktinoma",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "İnsülinoma",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Kraniyofarenjiyom",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "EKG, tiroid fonksiyon testleri ve ayrıntılı anamnez ayırıcı tanının vazgeçilmez basamaklarıdır.",
+     "maskedTerm": "ayırıcı tanının",
+     "hint": ""
+    },
+    {
+     "type": "interactive_table",
+     "title": "Panik Bozuklukta Tıbbi Ayırıcı Tanı Tablosu",
+     "tableHeaders": [
+      "Sistem",
+      "Patoloji",
+      "Ayırıcı Özellik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Endokrin"
+        },
+        {
+         "text": "Feokromositoma",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "İdrarda katekolamin ve VMA yüksekliği"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Endokrin"
+        },
+        {
+         "text": "Hipertiroidi",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "TSH baskılanması ve serbest T4 artışı"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Kardiyak"
+        },
+        {
+         "text": "PSVT",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "EKG'de paroksismal supraventriküler ritim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 9 Klinik Değerlendirme",
+     "items": [
+      {
+       "text": "Hipertiroidi panik atağa benzer taşikardi ve titreme oluşturabilir.",
+       "isLie": false,
+       "explanation": "Tiroid hormon fazlalığı adrenerjik reseptör duyarlılığını artırarak tabloyu taklit eder."
+      },
+      {
+       "text": "Kokain ve amfetamin gibi sempatomimetikler panik atağı tetikleyebilir.",
+       "isLie": false,
+       "explanation": "Merkezi sempatomimetik stimülasyon şiddetli anksiyete ve panik tablosuna yol açar."
+      },
+      {
+       "text": "Panik bozukluk tanısı koyarken hiçbir tıbbi tetkik veya tahlil yapılmasına gerek yoktur.",
+       "isLie": true,
+       "explanation": "EKG ve tiroid testleri gibi temel organik incelemeler ayırıcı tanı için şarttır."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    12,
+    15
+   ],
+   "sourcePdf": {
+    "startPage": 12,
+    "endPage": 15
+   },
+   "bolum": "2"
+  },
+  {
+   "slideNumber": 10,
+   "title": "Panik Bozukluk Seyri, Prognoz ve Komorbiditeler",
+   "content": "Panik bozukluk genellikle dalgalı, remisyon ve alevlenmelerle seyreden kronik bir tablodur. Zamanında ve uygun tedavi edilmediğinde belirgin sekonder komorbiditeler gelişir.\n\n- **Majör Depresyon:** Hastaların yaklaşık yarısında kronik çaresizlik sonucu depresyon eklenir.\n- **Alkol ve Madde Kötüye Kullanımı:** Anksiyeteyi kendi kendine yatıştırma amacıyla alkol tüketimi artabilir.\n- **Agorafobik Kaçınma:** Atakların yaşandığı yerlerden kaçınma davranışı yaşam alanını daraltır.\n\n> [!IMPORTANT]\n> Erken tanı ve çok yönlü tedavi yaklaşımı kronik sakatlığı ve komplikasyonları önlemede belirleyicidir.",
+   "synthesisNarrative": "Panik bozukluk genellikle dalgalı, remisyon ve alevlenmelerle seyreden kronik bir tablodur. Zamanında ve uygun tedavi edilmediğinde belirgin sekonder komorbiditeler gelişir.\n\n- **Majör Depresyon:** Hastaların yaklaşık yarısında kronik çaresizlik sonucu depresyon eklenir.\n- **Alkol ve Madde Kötüye Kullanımı:** Anksiyeteyi kendi kendine yatıştırma amacıyla alkol tüketimi artabilir.\n- **Agorafobik Kaçınma:** Atakların yaşandığı yerlerden kaçınma davranışı yaşam alanını daraltır.\n\n> [!IMPORTANT]\n> Erken tanı ve çok yönlü tedavi yaklaşımı kronik sakatlığı ve komplikasyonları önlemede belirleyicidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Tedavi edilmeyen panik bozukluk olgularında en sık gelişen psikiyatrik komorbidite hangisidir?",
+     "options": [
+      {
+       "text": "Majör depresyon",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Huntington koresi",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Wernicke-Korsakoff sendromu",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Creutzfeldt-Jakob hastalığı",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Zamanında ve uygun tedavi edilmediğinde belirgin sekonder komorbiditeler gelişir.",
+     "maskedTerm": "sekonder komorbiditeler",
+     "hint": ""
+    },
+    {
+     "type": "swipe_matching",
+     "cards": [
+      {
+       "text": "Kronikleşen panik hastalarında %50 sıklıkta tabloya eklenme",
+       "category": "left"
+      },
+      {
+       "text": "Anksiyeteyi baskılamak için sedatif tüketme davranışı",
+       "category": "right"
+      },
+      {
+       "text": "Ev dışına çıkmaktan ve kalabalıktan kaçınma",
+       "category": "left"
+      },
+      {
+       "text": "Alevlenmeler ve remisyonlarla dalgalı gidiş",
+       "category": "right"
+      }
+     ],
+     "leftCategory": "Tanısal Özellikler",
+     "rightCategory": "Klinik Süreçler"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 10 Klinik Değerlendirme",
+     "items": [
+      {
+       "text": "Panik bozukluk dalgalı ve kronik bir klinik seyir gösterebilir.",
+       "isLie": false,
+       "explanation": "Hastalık alevlenmeler ve geçici düzelme dönemleriyle kronikleşme eğilimindedir."
+      },
+      {
+       "text": "Tedavi edilmeyen hastalarda sekonder depresyon gelişme riski yüksektir.",
+       "isLie": false,
+       "explanation": "Sürekli kriz korkusu ve işlevsellik kaybı depresif süreci hızla tetikler."
+      },
+      {
+       "text": "Panik bozukluk hastaları alkol ve madde kötüye kullanımına karşı tamamen bağışıktır.",
+       "isLie": true,
+       "explanation": "Kendi kendini tedavi etme arayışıyla alkol bağımlılığı gelişimi sık bir komplikasyondur."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    12,
+    15
+   ],
+   "sourcePdf": {
+    "startPage": 12,
+    "endPage": 15
+   },
+   "bolum": "2"
+  },
+  {
+   "slideNumber": 11,
+   "title": "Panik Bozuklukta Farmakoterapi ve BDT İlkeleri",
+   "content": "Panik bozukluk tedavisinde altın standart farmakoterapi ve bilişsel davranışçı terapinin birlikteliğidir. İlaç tedavisinde ilk tercih seçici serotonin geri alım inhibitörleri (SSRI) grubu antidepresanlardır.\n\n- **SSRI Grubu:** Essitalopram, sertralin, sitalopram ve paroksetin ilk basamak ajanlardır.\n- **Tedavi Başlangıcı:** İlk günlerde anksiyete alevlenmesini önlemek için düşük dozla başlanıp kademeli artırılır.\n- **Benzodiazepinler:** Yalnızca ilk 2-4 haftada krizi yatıştırmak için kısa süreli eklenebilir.\n- **Bilişsel Davranışçı Terapi:** Felaketleştirici düşünceleri yeniden yapılandırarak kalıcı iyilik sağlar.\n\n> [!NOTE]\n> Farmakoterapiye yanıt alındıktan sonra nüksleri önlemek adına tedavi en az 1 yıl sürdürülmelidir.",
+   "synthesisNarrative": "Panik bozukluk tedavisinde altın standart farmakoterapi ve bilişsel davranışçı terapinin birlikteliğidir. İlaç tedavisinde ilk tercih seçici serotonin geri alım inhibitörleri (SSRI) grubu antidepresanlardır.\n\n- **SSRI Grubu:** Essitalopram, sertralin, sitalopram ve paroksetin ilk basamak ajanlardır.\n- **Tedavi Başlangıcı:** İlk günlerde anksiyete alevlenmesini önlemek için düşük dozla başlanıp kademeli artırılır.\n- **Benzodiazepinler:** Yalnızca ilk 2-4 haftada krizi yatıştırmak için kısa süreli eklenebilir.\n- **Bilişsel Davranışçı Terapi:** Felaketleştirici düşünceleri yeniden yapılandırarak kalıcı iyilik sağlar.\n\n> [!NOTE]\n> Farmakoterapiye yanıt alındıktan sonra nüksleri önlemek adına tedavi en az 1 yıl sürdürülmelidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Panik bozukluğun birinci basamak idame farmakoterapisinde hangi ilaç sınıfı tercih edilir?",
+     "options": [
+      {
+       "text": "Seçici serotonin geri alım inhibitörleri (SSRI)",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Yüksek doz tipik nöroleptikler",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Kronik barbitürat infüzyonları",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Santral sempatomimetik dekonjestanlar",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "İlaç tedavisinde ilk tercih seçici serotonin geri alım inhibitörleri (SSRI) grubu antidepresanlardır.",
+     "maskedTerm": "seçici serotonin",
+     "hint": ""
+    },
+    {
+     "type": "interactive_table",
+     "title": "Panik Bozukluk Tedavi Basamakları",
+     "tableHeaders": [
+      "Tedavi Türü",
+      "Kullanılan Ajan/Yöntem",
+      "Temel Amaç"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Birinci Basamak İlaç"
+        },
+        {
+         "text": "SSRI (sertralin, essitalopram)",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Serotonerjik düzenleme ve nüks önleme"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Kısa Süreli Köprü"
+        },
+        {
+         "text": "Benzodiazepin (alprazolam)",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "İlk haftalardaki akut anksiyeteyi kontrol"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Psikoterapi"
+        },
+        {
+         "text": "Bilişsel Davranışçı Terapi",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Katastrofizasyonu kırma ve duyarsızlaşma"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 11 Klinik Değerlendirme",
+     "items": [
+      {
+       "text": "SSRI grubu ilaçlar panik bozuklukta birinci basamak tedavidir.",
+       "isLie": false,
+       "explanation": "Güvenlik profilleri ve kanıtlanmış etkinlikleriyle kılavuzların ilk önerisidir."
+      },
+      {
+       "text": "Bilişsel davranışçı terapi felaketleştirici yorumları yeniden yapılandırır.",
+       "isLie": false,
+       "explanation": "BDT somatik duyumların tehlikesiz olduğunu öğreterek kalıcı şifa sağlar."
+      },
+      {
+       "text": "Benzodiazepinler hiçbir bağımlılık riski taşımadığından ömür boyu kesintisiz kullanılmalıdır.",
+       "isLie": true,
+       "explanation": "Benzodiazepinler tolerans ve bağımlılık riski taşır; yalnız kısa süreli köprü olarak verilir."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    12,
+    15
+   ],
+   "sourcePdf": {
+    "startPage": 12,
+    "endPage": 15
+   },
+   "bolum": "2"
+  },
+  {
+   "slideNumber": 12,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Etiyoloji, Ayırıcı Tanı ve Tedavi",
+   "content": "Bu bölümde panik bozukluğun nörobiyolojik etiyolojisi, ayırıcı tanısı ve tedavi protokollerini inceledik. Loküs seruleusun noradrenerjik aktivitesi ve felaketleştirici bilişsel mekanizmalar kilit unsurlardır.\n\n- **Etiyoloji Özeti:** Loküs seruleus aşırı uyarılması, amigdala duyarlılığı ve katastrofizasyon esastır.\n- **Ayırıcı Tanı Özeti:** Feokromositoma, hipertiroidi ve kardiyak aritmiler ekarte edilmelidir.\n- **Tedavi Özeti:** SSRI antidepresanlar, kısa süreli benzodiazepin köprüsü ve BDT esastır.\n\n> [!IMPORTANT]\n> Etiyoloji ve tedavi prensiplerini pekiştirmek için aşağıdaki adımları yanıtlayınız.",
+   "synthesisNarrative": "Bu bölümde panik bozukluğun nörobiyolojik etiyolojisi, ayırıcı tanısı ve tedavi protokollerini inceledik. Loküs seruleusun noradrenerjik aktivitesi ve felaketleştirici bilişsel mekanizmalar kilit unsurlardır.\n\n- **Etiyoloji Özeti:** Loküs seruleus aşırı uyarılması, amigdala duyarlılığı ve katastrofizasyon esastır.\n- **Ayırıcı Tanı Özeti:** Feokromositoma, hipertiroidi ve kardiyak aritmiler ekarte edilmelidir.\n- **Tedavi Özeti:** SSRI antidepresanlar, kısa süreli benzodiazepin köprüsü ve BDT esastır.\n\n> [!IMPORTANT]\n> Etiyoloji ve tedavi prensiplerini pekiştirmek için aşağıdaki adımları yanıtlayınız.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Panik bozukluk tedavisinde SSRI başlanırken ilk günlerde ilacın dozu nasıl ayarlanmalıdır?",
+     "options": [
+      {
+       "text": "Düşük dozla başlanıp yavaş yavaş hedef doza çıkılmalıdır.",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Doğrudan maksimum toksik dozda tek seferde yüklenmelidir.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "İlaçlar yalnızca haftada bir gün tek doz şeklinde alınmalıdır.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Hiçbir zaman oral yoldan kullanılmayıp intratekal verilmelidir.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Bu bölümde panik bozukluğun nörobiyolojik etiyolojisi, ayırıcı tanısı ve tedavi protokollerini inceledik.",
+     "maskedTerm": "tedavi protokollerini",
+     "hint": ""
+    },
+    {
+     "type": "swipe_matching",
+     "cards": [
+      {
+       "text": "Beyin sapında noradrenalin deşarjını yöneten merkez",
+       "category": "left"
+      },
+      {
+       "text": "Zararsız bedensel duyumları ölüm tehlikesi sayma",
+       "category": "right"
+      },
+      {
+       "text": "Katekolamin salgılayarak panik atağı taklit eden tümör",
+       "category": "left"
+      },
+      {
+       "text": "İlk basamak farmakoterapide tercih edilen antidepresan sınıfı",
+       "category": "right"
+      }
+     ],
+     "leftCategory": "Tanısal Özellikler",
+     "rightCategory": "Klinik Süreçler"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 12 Klinik Değerlendirme",
+     "items": [
+      {
+       "text": "Feokromositoma katekolamin salınımıyla panik krizini taklit edebilir.",
+       "isLie": false,
+       "explanation": "Paroksismal hipertansiyon ve taşikardi nöbetleri panik atağı taklit eder."
+      },
+      {
+       "text": "SSRI tedavisi en az bir yıl süreyle idame ettirilmelidir.",
+       "isLie": false,
+       "explanation": "Erken ilaç kesimi nüks riskini önemli ölçüde artırmaktadır."
+      },
+      {
+       "text": "Bilişsel davranışçı terapinin panik bozuklukta hiçbir bilimsel etkinliği yoktur.",
+       "isLie": true,
+       "explanation": "BDT panik bozuklukta en güçlü kanıt düzeyine sahip altın standart psikoterapidir."
+      }
+     ]
+    }
+   ],
+   "isCheckpoint": true
+  },
+  {
+   "slideNumber": 13,
+   "title": "Agorafobi: Tanım, Temel Patoloji ve Kaçınma Davranışı",
+   "content": "Agorafobi panik benzeri belirtiler olduğunda kaçmanın veya yardım almanın güç olabileceği yerlerden kaçınmadır. Kişi kalabalık ortamlarda, toplu taşımada veya tek başına dışarıda kaldığında yoğun dehşet yaşar.\n\n- **Çekirdek Korku:** Utanç verici bir durumda kalma, bayılma veya yardım bulamama kaygısıdır.\n- **Kaçınma Davranışı:** Kişi bu ortamlara girmekten tamamen kaçınır veya yanında bir refakatçiyle girebilir.\n- **İşlevsellik Kaybı:** Ağır olgularda hasta evden dahi çıkamaz hale gelerek eve bağımlı kalır.\n\n> [!NOTE]\n> DSM-5 ile birlikte agorafobi, panik bozukluktan bağımsız ayrı bir tanı kategorisi olarak sınıflandırılmıştır.",
+   "synthesisNarrative": "Agorafobi panik benzeri belirtiler olduğunda kaçmanın veya yardım almanın güç olabileceği yerlerden kaçınmadır. Kişi kalabalık ortamlarda, toplu taşımada veya tek başına dışarıda kaldığında yoğun dehşet yaşar.\n\n- **Çekirdek Korku:** Utanç verici bir durumda kalma, bayılma veya yardım bulamama kaygısıdır.\n- **Kaçınma Davranışı:** Kişi bu ortamlara girmekten tamamen kaçınır veya yanında bir refakatçiyle girebilir.\n- **İşlevsellik Kaybı:** Ağır olgularda hasta evden dahi çıkamaz hale gelerek eve bağımlı kalır.\n\n> [!NOTE]\n> DSM-5 ile birlikte agorafobi, panik bozukluktan bağımsız ayrı bir tanı kategorisi olarak sınıflandırılmıştır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Agorafobide görülen kaçınma davranışının temelinde yatan çekirdek kaygı nedir?",
+     "options": [
+      {
+       "text": "Panik benzeri belirtiler çıktığında kaçamama veya yardım alamama korkusu",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Yalnızca mikropların eline bulaşacağı endişesi",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Akrabalarının kendisini zehirleyeceği hezeyanı",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Daima tek başına kalmaktan aşırı zevk alma arzusu",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Agorafobi panik benzeri belirtiler olduğunda kaçmanın veya yardım almanın güç olabileceği yerlerden kaçınmadır.",
+     "maskedTerm": "yardım almanın güç",
+     "hint": ""
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Aşama: Kalabalık veya kapalı bir mekana girilir.",
+      "2. Aşama: 'Burada fenalaşırsam kaçamam veya yardım bulamam' düşüncesi gelişir.",
+      "3. Aşama: Yoğun anksiyete sonucu ortamdan kaçılır ve bir daha girilmez."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 13 Klinik Değerlendirme",
+     "items": [
+      {
+       "text": "Agorafobi DSM-5'te ayrı bir tanı kategorisi olarak kodlanır.",
+       "isLie": false,
+       "explanation": "Eski sınıflamaların aksine agorafobi artık bağımsız bir bozukluk olarak değerlendirilir."
+      },
+      {
+       "text": "Ağır agorafobi hastaları evden dışarı adım atamaz hale gelebilir.",
+       "isLie": false,
+       "explanation": "Şiddetli kaçınma davranışı hastanın yaşamını ev ortamıyla sınırlayabilir."
+      },
+      {
+       "text": "Agorafobik hastalar kalabalık alanlarda daima çok sakin ve huzurlu hissederler.",
+       "isLie": true,
+       "explanation": "Kalabalık yerler agorafobik anksiyeteyi en çok tetikleyen tipik ortamlardır."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    16,
+    21
+   ],
+   "sourcePdf": {
+    "startPage": 16,
+    "endPage": 21
+   },
+   "bolum": "3"
+  },
+  {
+   "slideNumber": 14,
+   "title": "Agorafobi DSM-5 Tanı Kriterleri ve Ayırıcı Tanı",
+   "content": "DSM-5'e göre agorafobi tanısı için tanımlanan beş durumdan en az ikisinde belirgin korku veya kaygı bulunmalıdır. Bu durumlar toplu taşıma, açık alanlar, kapalı yerler, sırada bekleme/kalabalık ve ev dışında tek başına olmadır.\n\n- **Süre Kriteri:** Korku, kaygı ya da kaçınma davranışı tipik olarak en az 6 ay sürmelidir.\n- **Orantısızlık:** Duyulan korku bulunulan ortamın gerçek tehlike derecesiyle orantısızdır.\n- **Ayırıcı Tanı:** Sosyal fobi (olumsuz değerlendirilme) ve özgül fobi (tek durum) ile ayrımı yapılmalıdır.\n\n> [!IMPORTANT]\n> Tek bir durumla sınırlı korku agorafobi tanısı koydurmaz; en az iki farklı durumun varlığı şarttır.",
+   "synthesisNarrative": "DSM-5'e göre agorafobi tanısı için tanımlanan beş durumdan en az ikisinde belirgin korku veya kaygı bulunmalıdır. Bu durumlar toplu taşıma, açık alanlar, kapalı yerler, sırada bekleme/kalabalık ve ev dışında tek başına olmadır.\n\n- **Süre Kriteri:** Korku, kaygı ya da kaçınma davranışı tipik olarak en az 6 ay sürmelidir.\n- **Orantısızlık:** Duyulan korku bulunulan ortamın gerçek tehlike derecesiyle orantısızdır.\n- **Ayırıcı Tanı:** Sosyal fobi (olumsuz değerlendirilme) ve özgül fobi (tek durum) ile ayrımı yapılmalıdır.\n\n> [!IMPORTANT]\n> Tek bir durumla sınırlı korku agorafobi tanısı koydurmaz; en az iki farklı durumun varlığı şarttır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "DSM-5 tanı sistemine göre agorafobi tanısı konulabilmesi için korku veya kaçınma belirtileri en az ne kadar sürmelidir?",
+     "options": [
+      {
+       "text": "En az 6 ay sürmelidir.",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "En az 2 gün sürmesi yeterlidir.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "En az 10 yıl sürmelidir.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Herhangi bir süre kısıtlaması yoktur, 1 saat yeterlidir.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Korku, kaygı ya da kaçınma davranışı tipik olarak en az 6 ay sürmelidir.",
+     "maskedTerm": "en az 6 ay",
+     "hint": ""
+    },
+    {
+     "type": "interactive_table",
+     "title": "DSM-5 Agorafobi Kriterinde Tanımlanan 5 Durum",
+     "tableHeaders": [
+      "Durum No",
+      "Agorafobik Ortam",
+      "Klinik Örnek"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Durum 1"
+        },
+        {
+         "text": "Toplu taşıma araçları",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Otobüs, tren, vapur veya uçak"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Durum 2"
+        },
+        {
+         "text": "Açık alanlarda bulunma",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Otoparklar, köprüler, pazar yerleri"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Durum 3"
+        },
+        {
+         "text": "Kapalı yerlerde bulunma",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Alışveriş merkezleri, sinemalar, tüneller"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Durum 4"
+        },
+        {
+         "text": "Sırada bekleme veya kalabalık",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Banka kuyrukları, konserler"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Durum 5"
+        },
+        {
+         "text": "Ev dışında tek başına olma",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Sokakta yalnız kalma"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 14 Klinik Değerlendirme",
+     "items": [
+      {
+       "text": "Agorafobi tanısı için tanımlanan 5 alandan en az ikisinde korku aranır.",
+       "isLie": false,
+       "explanation": "DSM-5 tanı kılavuzu beş agorafobik ortamdan en az ikisini şart koşmaktadır."
+      },
+      {
+       "text": "Belirtilerin en az altı aydır sürmesi tanı kriteridir.",
+       "isLie": false,
+       "explanation": "Kronik uyum bozucu davranışı teyit etmek için 6 ay süre kriteri mevcuttur."
+      },
+      {
+       "text": "Sadece asansöre binmekten korkan ve başka hiçbir korkusu olmayan bir hastaya agorafobi denir.",
+       "isLie": true,
+       "explanation": "Yalnızca tek bir durumla sınırlı korku durumsal özgül fobi tanısı alır, agorafobi değildir."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    16,
+    21
+   ],
+   "sourcePdf": {
+    "startPage": 16,
+    "endPage": 21
+   },
+   "bolum": "3"
+  },
+  {
+   "slideNumber": 15,
+   "title": "Agorafobide Klinik Seyir, Prognoz ve Tedavi",
+   "content": "Agorafobinin tedavisinde farmakoterapi ile davranışçı maruz bırakma teknikleri birlikte uygulanmalıdır. İlaç tedavisi anksiyete eşiğini düşürürken, in vivo maruz bırakma kaçınma davranışını doğrudan söndürür.\n\n- **Davranışçı Maruz Bırakma:** Hasta korktuğu ortamlara basamaklı olarak ve aşamalı biçimde sokulur.\n- **Kaçınmanın Kırılması:** Ortamda beklenerek anksiyetenin kendiliğinden sönmesi deneyimletilir.\n- **Farmakoterapi:** SSRI grubu antidepresanlar kaçınmanın şiddetini azaltmada birinci basamaktır.\n\n> [!NOTE]\n> Hastanın tek başına ortama girebilmesi tedavinin en kritik başarı göstergesidir.",
+   "synthesisNarrative": "Agorafobinin tedavisinde farmakoterapi ile davranışçı maruz bırakma teknikleri birlikte uygulanmalıdır. İlaç tedavisi anksiyete eşiğini düşürürken, in vivo maruz bırakma kaçınma davranışını doğrudan söndürür.\n\n- **Davranışçı Maruz Bırakma:** Hasta korktuğu ortamlara basamaklı olarak ve aşamalı biçimde sokulur.\n- **Kaçınmanın Kırılması:** Ortamda beklenerek anksiyetenin kendiliğinden sönmesi deneyimletilir.\n- **Farmakoterapi:** SSRI grubu antidepresanlar kaçınmanın şiddetini azaltmada birinci basamaktır.\n\n> [!NOTE]\n> Hastanın tek başına ortama girebilmesi tedavinin en kritik başarı göstergesidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Agorafobide kaçınma davranışını ortadan kaldırmada altın standart kabul edilen psikoterapi tekniği hangisidir?",
+     "options": [
+      {
+       "text": "Kademeli in vivo (gerçek ortamda) maruz bırakma",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Hastayı korkulan ortamlardan tamamen uzaklaştırma",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Yalnızca psikanalitik serbest çağrışım uygulama",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Ağır sedatiflerle hastayı sürekli uyutma",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "İlaç tedavisi anksiyete eşiğini düşürürken, in vivo maruz bırakma kaçınma davranışını doğrudan söndürür.",
+     "maskedTerm": "in vivo maruz bırakma",
+     "hint": ""
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Aşama: Korkulan mekanlar için kolaydan zora kaygı hiyerarşisi oluşturulur.",
+      "2. Aşama: En alt basamaktaki ortama in vivo olarak aşamalı girilir.",
+      "3. Aşama: Ortamda kalınarak anksiyetenin kendiliğinden sönmesi sağlanır."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 15 Klinik Değerlendirme",
+     "items": [
+      {
+       "text": "İn vivo maruz bırakma agorafobide en etkili davranışçı yöntemdir.",
+       "isLie": false,
+       "explanation": "Korkulan ortama aşamalı maruz kalma korku yanıtını duyarsızlaştırır."
+      },
+      {
+       "text": "SSRI grubu ilaçlar agorafobi tedavisinde anksiyete düzeyini düşürür.",
+       "isLie": false,
+       "explanation": "Antidepresanlar genel kaygıyı azaltarak maruz bırakmaya uyumu kolaylaştırır."
+      },
+      {
+       "text": "Agorafobi hastasına korktuğu ortamlara asla gitmemesi tembihlenmelidir.",
+       "isLie": true,
+       "explanation": "Kaçınmayı teşvik etmek hastalığı kronikleştirir; amaç ortama girmeyi sağlamaktır."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    16,
+    21
+   ],
+   "sourcePdf": {
+    "startPage": 16,
+    "endPage": 21
+   },
+   "bolum": "3"
+  },
+  {
+   "slideNumber": 16,
+   "title": "Özgül Fobi: Tanım, Epidemiyoloji ve Alt Tipleri",
+   "content": "Özgül fobi belirli bir nesne veya duruma karşı duyulan belirgin, orantısız ve mantık dışı korkudur. Kişi fobi nesnesiyle karşılaştığında hemen daima yoğun anksiyete yaşar ve kaçınma sergiler.\n\n- **Hayvan Tipi:** Örümcek, böcek, köpek veya yılan gibi canlılara yönelik korkudur.\n- **Doğal Çevre Tipi:** Fırtına, yükseklik ve sudan belirgin korku duyulmasıdır.\n- **Durumsal Tip:** Uçak, asansör veya kapalı mekanlara karşı duyulan fobilere denir.\n- **Kan-Enjeksiyon-Hasar:** Kan görme veya iğne yapılma anında ortaya çıkan özel tiptir.\n\n> [!NOTE]\n> Özgül fobiler toplumda en sık görülen anksiyete bozukluğu grubudur.",
+   "synthesisNarrative": "Özgül fobi belirli bir nesne veya duruma karşı duyulan belirgin, orantısız ve mantık dışı korkudur. Kişi fobi nesnesiyle karşılaştığında hemen daima yoğun anksiyete yaşar ve kaçınma sergiler.\n\n- **Hayvan Tipi:** Örümcek, böcek, köpek veya yılan gibi canlılara yönelik korkudur.\n- **Doğal Çevre Tipi:** Fırtına, yükseklik ve sudan belirgin korku duyulmasıdır.\n- **Durumsal Tip:** Uçak, asansör veya kapalı mekanlara karşı duyulan fobilere denir.\n- **Kan-Enjeksiyon-Hasar:** Kan görme veya iğne yapılma anında ortaya çıkan özel tiptir.\n\n> [!NOTE]\n> Özgül fobiler toplumda en sık görülen anksiyete bozukluğu grubudur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi DSM-5'e göre tanımlanan özgül fobi alt tiplerinden biri değildir?",
+     "options": [
+      {
+       "text": "Küresel varoluşsal fobi",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Hayvan tipi",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Doğal çevre tipi",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Kan-enjeksiyon-hasar tipi",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Özgül fobi belirli bir nesne veya duruma karşı duyulan belirgin, orantısız ve mantık dışı korkudur.",
+     "maskedTerm": "Özgül fobi",
+     "hint": ""
+    },
+    {
+     "type": "interactive_table",
+     "title": "Özgül Fobi Alt Tipleri ve Klinik Örnekler",
+     "tableHeaders": [
+      "Alt Tip",
+      "Tipik Uyaranlar",
+      "Başlangıç Yaşı"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Hayvan Tipi"
+        },
+        {
+         "text": "Köpek, yılan, örümcek",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Genellikle erken çocukluk"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Doğal Çevre"
+        },
+        {
+         "text": "Yükseklik, fırtına, su",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Çocukluk dönemi"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Kan-Enjeksiyon"
+        },
+        {
+         "text": "İğne vurulması, kan alma",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Çocukluk ve ergenlik"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Durumsal Tip"
+        },
+        {
+         "text": "Uçak, tünel, asansör",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Geç ergenlik veya 20'li yaşlar"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 16 Klinik Değerlendirme",
+     "items": [
+      {
+       "text": "Özgül fobiler toplumda en yaygın anksiyete bozuklukları arasındadır.",
+       "isLie": false,
+       "explanation": "Yaşam boyu prevalansı yaklaşık yüzde 10 civarında olan sık bir tablodur."
+      },
+      {
+       "text": "Uçak ve asansör korkusu durumsal alt tip kapsamında değerlendirilir.",
+       "isLie": false,
+       "explanation": "Kapalı mekan ve seyahat araçları durumsal fobi alt tipindedir."
+      },
+      {
+       "text": "Özgül fobi hastaları korkularının tamamen mantıklı ve gerçekçi olduğunu savunurlar.",
+       "isLie": true,
+       "explanation": "Hastalar korkularının orantısız ve mantık dışı olduğunu bilirler."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    22,
+    29
+   ],
+   "sourcePdf": {
+    "startPage": 22,
+    "endPage": 29
+   },
+   "bolum": "3.2"
+  },
+  {
+   "slideNumber": 17,
+   "title": "Özgül Fobide Klinik Özellikler, Vazovagal Yanıt ve Maruz Bırakma",
+   "content": "Kan-enjeksiyon-hasar tipi özgül fobi diğer tüm anksiyete bozukluklarından belirgin bir özellikle ayrılır. Bu alt tipte sempatik taşikardiyi ani bir parasempatik vagal aktivasyon izler.\n\n- **Bifazik Otonomik Yanıt:** Kısa süreli taşikardiyi derin bradikardi ve hipotansiyon izler.\n- **Vazovagal Senkop:** Kan basıncının aniden düşmesiyle hasta bayılır (senkop).\n- **Tedavi Yaklaşımı:** İlaç tedavisi etkisizdir; kademeli maruz bırakma ve uygulamalı germe uygulanır.\n\n> [!IMPORTANT]\n> Kan-enjeksiyon fobisi olan hastaya bayılmayı önlemek amacıyla kas germe egzersizleri öğretilir.",
+   "synthesisNarrative": "Kan-enjeksiyon-hasar tipi özgül fobi diğer tüm anksiyete bozukluklarından belirgin bir özellikle ayrılır. Bu alt tipte sempatik taşikardiyi ani bir parasempatik vagal aktivasyon izler.\n\n- **Bifazik Otonomik Yanıt:** Kısa süreli taşikardiyi derin bradikardi ve hipotansiyon izler.\n- **Vazovagal Senkop:** Kan basıncının aniden düşmesiyle hasta bayılır (senkop).\n- **Tedavi Yaklaşımı:** İlaç tedavisi etkisizdir; kademeli maruz bırakma ve uygulamalı germe uygulanır.\n\n> [!IMPORTANT]\n> Kan-enjeksiyon fobisi olan hastaya bayılmayı önlemek amacıyla kas germe egzersizleri öğretilir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kan-enjeksiyon-hasar tipi özgül fobide bayılmaya (senkopa) yol açan karakteristik otonomik mekanizma nedir?",
+     "options": [
+      {
+       "text": "Kısa sempatik artışı izleyen derin bradikardi ve hipotansiyon (bifazik yanıt)",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Sürekli devam eden dirençli hipertansif kriz",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Primer santral diabetes insipidus krizi",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Malign hipertermi ve rabdomiyoliz atağı",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Bu alt tipte sempatik taşikardiyi ani bir parasempatik vagal aktivasyon izler.",
+     "maskedTerm": "parasempatik vagal aktivasyon",
+     "hint": ""
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Aşama: İğne veya kan uyarısıyla karşılaşılır.",
+      "2. Aşama: Şiddetli vazovagal parasempatik deşarj başlar.",
+      "3. Aşama: Bradikardi ve hipotansiyon gelişerek vazovagal senkop oluşur."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 17 Klinik Değerlendirme",
+     "items": [
+      {
+       "text": "Kan-enjeksiyon fobisinde bifazik otonomik yanıt gözlenir.",
+       "isLie": false,
+       "explanation": "Sempatik uyarılmayı izleyen derin vagal bradikardi ve hipotansiyon tipiktir."
+      },
+      {
+       "text": "Özgül fobide maruz bırakma terapisi altın standart tedavidir.",
+       "isLie": false,
+       "explanation": "Korkulan uyaranla yüzleşme fobik anksiyeteyi söndüren en etkili yöntemdir."
+      },
+      {
+       "text": "Kan-enjeksiyon fobisi olan hastaların hepsinde sürekli ve kalıcı taşikardi kalır.",
+       "isLie": true,
+       "explanation": "Vagal aktivasyon sonucu kalp hızı hızla düşer (bradikardi) ve bayılma gerçekleşir."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    22,
+    29
+   ],
+   "sourcePdf": {
+    "startPage": 22,
+    "endPage": 29
+   },
+   "bolum": "3.2"
+  },
+  {
+   "slideNumber": 18,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Agorafobi ve Özgül Fobiler",
+   "content": "Bu bölümde agorafobi ve özgül fobi alt tiplerinin klinik dinamiklerini pekiştirdik. Agorafobide yardım alamama ve kaçamama korkusu, özgül fobide ise uyarana özgü kaçınma esastır.\n\n- **Agorafobi Özeti:** 5 alandan en az ikisinde en az 6 ay süren kaçınma tablosudur.\n- **Özgül Fobi Özeti:** Hayvan, çevre, durumsal ve bifazik kan-enjeksiyon tipleri mevcuttur.\n- **Ortak Tedavi Ekseni:** Kademeli in vivo maruz bırakma kaçınmanın kırılmasında temeldir.\n\n> [!IMPORTANT]\n> Şimdi bu bilgileri doğrulamak için aşağıdaki değerlendirme adımlarını tamamlayınız.",
+   "synthesisNarrative": "Bu bölümde agorafobi ve özgül fobi alt tiplerinin klinik dinamiklerini pekiştirdik. Agorafobide yardım alamama ve kaçamama korkusu, özgül fobide ise uyarana özgü kaçınma esastır.\n\n- **Agorafobi Özeti:** 5 alandan en az ikisinde en az 6 ay süren kaçınma tablosudur.\n- **Özgül Fobi Özeti:** Hayvan, çevre, durumsal ve bifazik kan-enjeksiyon tipleri mevcuttur.\n- **Ortak Tedavi Ekseni:** Kademeli in vivo maruz bırakma kaçınmanın kırılmasında temeldir.\n\n> [!IMPORTANT]\n> Şimdi bu bilgileri doğrulamak için aşağıdaki değerlendirme adımlarını tamamlayınız.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Agorafobi ile özgül fobinin durumsal alt tipi arasındaki en temel ayırıcı fark hangisidir?",
+     "options": [
+      {
+       "text": "Agorafobide çoklu ortamlardan kaçınma varken özgül fobide tek bir duruma odaklı korku vardır.",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Özgül fobide hiçbir zaman anksiyete veya kaçınma görülmez.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Agorafobinin tedavisinde maruz bırakma kesinlikle kontrendikedir.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Özgül fobi yalnızca 80 yaşından sonra başlayan bir tablodur.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Bu bölümde agorafobi ve özgül fobi alt tiplerinin klinik dinamiklerini pekiştirdik.",
+     "maskedTerm": "klinik dinamiklerini",
+     "hint": ""
+    },
+    {
+     "type": "swipe_matching",
+     "cards": [
+      {
+       "text": "Yardım alamama endişesiyle kalabalık ve açık yerlerden kaçınma",
+       "category": "left"
+      },
+      {
+       "text": "Kan görme anında bradikardi ve vazovagal senkop gelişmesi",
+       "category": "right"
+      },
+      {
+       "text": "Beş tanımlı durumdan en az ikisinde belirgin korku varlığı",
+       "category": "left"
+      },
+      {
+       "text": "Yalnızca asansöre binme korkusuyla sınırlı kaçınma",
+       "category": "right"
+      }
+     ],
+     "leftCategory": "Tanısal Özellikler",
+     "rightCategory": "Klinik Süreçler"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 18 Klinik Değerlendirme",
+     "items": [
+      {
+       "text": "Kan-enjeksiyon-hasar fobisinde bayılma riski yüksektir.",
+       "isLie": false,
+       "explanation": "Vagal refleks sonucu kan basıncının hızla düşmesi senkopa yol açar."
+      },
+      {
+       "text": "Agorafobide in vivo maruz bırakma tedavinin temel direğidir.",
+       "isLie": false,
+       "explanation": "Aşamalı maruziyet kaçınma davranışını etkili şekilde söndürür."
+      },
+      {
+       "text": "Özgül fobilerin tedavisi için hastaya ömür boyu elektroşok tedavisi verilmelidir.",
+       "isLie": true,
+       "explanation": "EKT'nin özgül fobi tedavisinde hiçbir yeri yoktur; tedavi davranışçı terapidir."
+      }
+     ]
+    }
+   ],
+   "isCheckpoint": true
+  },
+  {
+   "slideNumber": 19,
+   "title": "Sosyal Fobi (Toplumsal Kaygı Bozukluğu): Tanım ve Etiyoloji",
+   "content": "Sosyal fobi veya diğer adıyla toplumsal kaygı bozukluğu başkalarınca değerlendirilebilecek ortamlarda belirgin korkudur. Kişi küçük düşeceği, rezil olacağı veya olumsuz eleştirileceği endişesiyle aşırı anksiyete duyar.\n\n- **Korkunun Niteliği:** Eleştirilme, gülünç duruma düşme veya yetersiz görülme kaygısıdır.\n- **Fiziksel Belirtiler:** Yüz kızarması, el titremesi, terleme ve ses kısıklığı en sık yakınmalardır.\n- **Yüz Kızarması:** Sosyal fobiye özgü en patognomonik otonomik semptom kabul edilir.\n\n> [!NOTE]\n> Bu hastalar anksiyetelerinin dışarıdan fark edilmesinden de ayrıca derin utanç duyarlar.",
+   "synthesisNarrative": "Sosyal fobi veya diğer adıyla toplumsal kaygı bozukluğu başkalarınca değerlendirilebilecek ortamlarda belirgin korkudur. Kişi küçük düşeceği, rezil olacağı veya olumsuz eleştirileceği endişesiyle aşırı anksiyete duyar.\n\n- **Korkunun Niteliği:** Eleştirilme, gülünç duruma düşme veya yetersiz görülme kaygısıdır.\n- **Fiziksel Belirtiler:** Yüz kızarması, el titremesi, terleme ve ses kısıklığı en sık yakınmalardır.\n- **Yüz Kızarması:** Sosyal fobiye özgü en patognomonik otonomik semptom kabul edilir.\n\n> [!NOTE]\n> Bu hastalar anksiyetelerinin dışarıdan fark edilmesinden de ayrıca derin utanç duyarlar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sosyal anksiyete bozukluğunda diğer anksiyete tablolarına kıyasla oldukça tipik olan otonomik belirti hangisidir?",
+     "options": [
+      {
+       "text": "Yüz kızarması (blushing)",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Generalize kas atrofisi",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Opistotonus postürü",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Kardiyak üfürüm ve kapak vejetasyonu",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Yüz kızarması, el titremesi, terleme ve ses kısıklığı en sık yakınmalardır.",
+     "maskedTerm": "Yüz kızarması",
+     "hint": ""
+    },
+    {
+     "type": "interactive_table",
+     "title": "Sosyal Fobinin Temel Klinik Boyutları",
+     "tableHeaders": [
+      "Alan",
+      "Klinik Özellik",
+      "Hasta Yaşantısı"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Bilişsel"
+        },
+        {
+         "text": "Olumsuz değerlendirilme korkusu",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Rezil olacağım ve alay edileceğim"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Fizyolojik"
+        },
+        {
+         "text": "Yüz kızarması ve el titremesi",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Heyecanımın fark edilmesinden utanma"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Davranışsal"
+        },
+        {
+         "text": "Sosyal ortamlardan kaçınma",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Topluluk önünde konuşmaktan uzak durma"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 19 Klinik Değerlendirme",
+     "items": [
+      {
+       "text": "Sosyal fobide rezil olma ve eleştirilme korkusu hakimdir.",
+       "isLie": false,
+       "explanation": "Kişi başkalarının kendisini olumsuz değerlendireceğinden aşırı derecede korkar."
+      },
+      {
+       "text": "Yüz kızarması sosyal kaygıda sık görülen otonomik bir belirtidir.",
+       "isLie": false,
+       "explanation": "Vazodilatasyona bağlı flushing sosyal fobide hastayı en çok rahatsız eden tablolardandır."
+      },
+      {
+       "text": "Sosyal fobi hastaları topluluk önünde performans göstermekten büyük keyif alırlar.",
+       "isLie": true,
+       "explanation": "Topluluk önünde bulunmak ve performans göstermek bu hastalarda kriz düzeyinde dehşet yaratır."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    30,
+    38
+   ],
+   "sourcePdf": {
+    "startPage": 30,
+    "endPage": 38
+   },
+   "bolum": "4"
+  },
+  {
+   "slideNumber": 20,
+   "title": "Sosyal Fobide Bilişsel Davranışsal Kuram ve Tehdit Algısı",
+   "content": "Sosyal fobinin bilişsel modelinde Clark ve Wells tarafından tanımlanan aşırı içsel odaklanma esastır. Hasta sosyal bir duruma girdiğinde dikkatini tamamen kendi bedenine ve olası eksikliklerine çevirir.\n\n- **Kendine Odaklanmış Dikkat:** Kişi ses tonunu, ellerinin titremesini veya kızarmasını büyüterek inceler.\n- **Güvenlik Davranışları:** Göz temasından kaçınma, boğazı temizleme veya ter gizleyici giysiler giyme davranışı sergiler.\n- **Olay Sonrası İşleme:** Sosyal olay bittikten sonra 'Ne kadar kötü göründüm' şeklinde geviş getirir (post-event rumination).\n\n> [!IMPORTANT]\n> Güvenlik arama davranışları anlık rahatlama sağlasa da uzun vadede fobik inançların sürmesine yol açar.",
+   "synthesisNarrative": "Sosyal fobinin bilişsel modelinde Clark ve Wells tarafından tanımlanan aşırı içsel odaklanma esastır. Hasta sosyal bir duruma girdiğinde dikkatini tamamen kendi bedenine ve olası eksikliklerine çevirir.\n\n- **Kendine Odaklanmış Dikkat:** Kişi ses tonunu, ellerinin titremesini veya kızarmasını büyüterek inceler.\n- **Güvenlik Davranışları:** Göz temasından kaçınma, boğazı temizleme veya ter gizleyici giysiler giyme davranışı sergiler.\n- **Olay Sonrası İşleme:** Sosyal olay bittikten sonra 'Ne kadar kötü göründüm' şeklinde geviş getirir (post-event rumination).\n\n> [!IMPORTANT]\n> Güvenlik arama davranışları anlık rahatlama sağlasa da uzun vadede fobik inançların sürmesine yol açar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sosyal fobi hastalarının anksiyeteyi azaltmak amacıyla kullandığı ancak uzun vadede kaygıyı sürdüren önlemlere ne ad verilir?",
+     "options": [
+      {
+       "text": "Güvenlik arama davranışları (safety behaviors)",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Paradoksal niyetlenme",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "İnteroseptif alıştırma",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Katatonik maniyerizm",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sosyal fobinin bilişsel modelinde Clark ve Wells tarafından tanımlanan aşırı içsel odaklanma esastır.",
+     "maskedTerm": "içsel odaklanma",
+     "hint": ""
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Aşama: Sosyal ortama girildiğinde dikkat hızla içsel bedensel duyumlara odaklanır.",
+      "2. Aşama: Anksiyetenin dışarıdan fark edildiği düşünülerek güvenlik önlemleri alınır.",
+      "3. Aşama: Güvenlik davranışları performansı daha da yapaylaştırarak kaygıyı pekiştirir."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 20 Klinik Değerlendirme",
+     "items": [
+      {
+       "text": "Sosyal fobide kendine odaklanmış dikkat performansı olumsuz etkiler.",
+       "isLie": false,
+       "explanation": "Kişi iç duyumlarına odaklandıkça dış çevreyle doğal etkileşimi bozulur."
+      },
+      {
+       "text": "Olay sonrası ruminasyon hastanın geçmiş performansı sürekli eleştirmesidir.",
+       "isLie": false,
+       "explanation": "Hasta toplantı veya konuşma bittikten sonra saatlerce hata arar."
+      },
+      {
+       "text": "Güvenlik arama davranışları sosyal fobiyi tamamen ortadan kaldıran en etkili tedavidir.",
+       "isLie": true,
+       "explanation": "Güvenlik davranışları kaçınmayı pekiştirerek korku inancının sürmesine neden olur."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    30,
+    38
+   ],
+   "sourcePdf": {
+    "startPage": 30,
+    "endPage": 38
+   },
+   "bolum": "4"
+  },
+  {
+   "slideNumber": 21,
+   "title": "Sosyal Fobi DSM-5 Tanı Kriterleri ve Klinik Tablo",
+   "content": "DSM-5 kriterlerine göre sosyal anksiyete bozukluğu iki ana klinik görünümde değerlendirilir. Yalnızca performans tipi ve yaygın (generalize) tip ayırımı tedavi planlaması açısından çok önemlidir.\n\n- **Yalnızca Performans Tipi:** Korku sadece topluluk önünde konuşma, sunum yapma veya müzik icrasıyla sınırlıdır.\n- **Yaygın Tip:** Yemek yeme, ayırt edici bulgu atma, sohbet başlatma dahil hemen tüm sosyal durumlarda anksiyete vardır.\n- **Tanı Kriteri:** Korku, kaygı ve kaçınma belirtilerinin en az 6 aydır devam etmesi gerekir.\n\n> [!NOTE]\n> Performans tipinde kişiler birebir ikili ilişkilerde tamamen rahat ve işlevsel olabilirler.",
+   "synthesisNarrative": "DSM-5 kriterlerine göre sosyal anksiyete bozukluğu iki ana klinik görünümde değerlendirilir. Yalnızca performans tipi ve yaygın (generalize) tip ayırımı tedavi planlaması açısından çok önemlidir.\n\n- **Yalnızca Performans Tipi:** Korku sadece topluluk önünde konuşma, sunum yapma veya müzik icrasıyla sınırlıdır.\n- **Yaygın Tip:** Yemek yeme, ayırt edici bulgu atma, sohbet başlatma dahil hemen tüm sosyal durumlarda anksiyete vardır.\n- **Tanı Kriteri:** Korku, kaygı ve kaçınma belirtilerinin en az 6 aydır devam etmesi gerekir.\n\n> [!NOTE]\n> Performans tipinde kişiler birebir ikili ilişkilerde tamamen rahat ve işlevsel olabilirler.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sosyal anksiyete yalnızca topluluk önünde konuşma veya sunum yapma ile sınırlı olduğunda hangi belirteç eklenir?",
+     "options": [
+      {
+       "text": "Yalnızca performans (performance only)",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Generalize yaygın tip",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Dissosiyatif füg belirteci",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Siklotimik dalgalanma belirteci",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Yalnızca performans tipi ve yaygın (generalize) tip ayırımı tedavi planlaması açısından çok önemlidir.",
+     "maskedTerm": "Yalnızca performans",
+     "hint": ""
+    },
+    {
+     "type": "interactive_table",
+     "title": "Sosyal Fobi Alt Tiplerinin Karşılaştırılması",
+     "tableHeaders": [
+      "Özellik",
+      "Yalnızca Performans Tipi",
+      "Yaygın Tip"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Kapsam"
+        },
+        {
+         "text": "Yalnız topluluk önünde konuşma",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Tüm sosyal etkileşimler"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "İkili İletişim"
+        },
+        {
+         "text": "Tamamen normal ve rahat",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Kaygılı ve çekingen"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Medikal Tercih"
+        },
+        {
+         "text": "Gereğinde durumsal beta-blokör",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Günlük düzenli SSRI/SNRI"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 21 Klinik Değerlendirme",
+     "items": [
+      {
+       "text": "Yalnızca performans tipinde kaygı sunum ve konuşmalarla sınırlıdır.",
+       "isLie": false,
+       "explanation": "Kişi genel sosyal ilişkilerinde rahattır ancak sahne veya kürsüde kilitlenir."
+      },
+      {
+       "text": "Sosyal fobi tanısı için belirtilerin en az altı aydır sürmesi gerekir.",
+       "isLie": false,
+       "explanation": "DSM-5 tanı ölçütleri kalıcı işlev kaybını göstermek için 6 ay süre arar."
+      },
+      {
+       "text": "Yaygın tip sosyal fobi hastaları kalabalık yemeklerde son derece rahat sohbet ederler.",
+       "isLie": true,
+       "explanation": "Yaygın tipte kalabalıkta yemek yemek, yazı yazmak ve konuşmak şiddetli kaçınma yaratır."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    30,
+    38
+   ],
+   "sourcePdf": {
+    "startPage": 30,
+    "endPage": 38
+   },
+   "bolum": "4"
+  },
+  {
+   "slideNumber": 22,
+   "title": "Sosyal Fobide Ayırıcı Tanı ve Klinik Seyir",
+   "content": "Sosyal anksiyete bozukluğunun ayırıcı tanısında çekingen kişilik bozukluğu ve agorafobi titizlikle değerlendirilmelidir. Çekingen kişilik bozukluğu yaygın sosyal fobi ile yüksek örtüşme gösteren daha derin bir yapıdır.\n\n- **Çekingen Kişilik:** Yetersizlik duyguları ve eleştirilmeye aşırı duyarlılık tüm yaşam boyunca benliğe yerleşmiştir.\n- **Agorafobi Ayrımı:** Agorafobide yardım alamama korkusu varken, sosyal fobide olumsuz yargılanma korkusu vardır.\n- **Gidiş ve Sonlanış:** Erken ergenlikte sinsi başlar, tedavi edilmezse kronikleşerek sosyal izolasyon yaratır.\n\n> [!IMPORTANT]\n> Çekingen kişilik bozukluğu yaygın sosyal fobinin daha ağır ve yaygın formu olarak da yorumlanabilir.",
+   "synthesisNarrative": "Sosyal anksiyete bozukluğunun ayırıcı tanısında çekingen kişilik bozukluğu ve agorafobi titizlikle değerlendirilmelidir. Çekingen kişilik bozukluğu yaygın sosyal fobi ile yüksek örtüşme gösteren daha derin bir yapıdır.\n\n- **Çekingen Kişilik:** Yetersizlik duyguları ve eleştirilmeye aşırı duyarlılık tüm yaşam boyunca benliğe yerleşmiştir.\n- **Agorafobi Ayrımı:** Agorafobide yardım alamama korkusu varken, sosyal fobide olumsuz yargılanma korkusu vardır.\n- **Gidiş ve Sonlanış:** Erken ergenlikte sinsi başlar, tedavi edilmezse kronikleşerek sosyal izolasyon yaratır.\n\n> [!IMPORTANT]\n> Çekingen kişilik bozukluğu yaygın sosyal fobinin daha ağır ve yaygın formu olarak da yorumlanabilir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sosyal fobi ile agorafobinin ayırıcı tanısındaki en temel çekirdek korku farkı hangisidir?",
+     "options": [
+      {
+       "text": "Sosyal fobide olumsuz yargılanma korkusu, agorafobide yardım alamama korkusu esastır.",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Sosyal fobide hiçbir zaman kalp çarpıntısı görülmez.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Agorafobide hastalar daima topluluk önünde şarkı söylemek isterler.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Çekingen kişilik bozukluğu yalnızca bir haftalık geçici bir krizdir.",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sosyal anksiyete bozukluğunun ayırıcı tanısında çekingen kişilik bozukluğu ve agorafobi titizlikle değerlendirilmelidir.",
+     "maskedTerm": "çekingen kişilik",
+     "hint": ""
+    },
+    {
+     "type": "interactive_table",
+     "title": "Sosyal Fobi ve Benzer Tabloların Ayırıcı Tanısı",
+     "tableHeaders": [
+      "Tablo",
+      "Temel Çekirdek Kaygı",
+      "Kaçınma Nedeni"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Sosyal Fobi"
+        },
+        {
+         "text": "Küçük düşme ve rezil olma",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Olumsuz değerlendirilme korkusu"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Agorafobi"
+        },
+        {
+         "text": "Fenalaşma ve bayılma",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Ortamdan kaçamama veya yardım bulamama"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Çekingen Kişilik"
+        },
+        {
+         "text": "Genel yetersizlik duygusu",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Reddedilme ve eleştirilme aşırı duyarlılığı"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 22 Klinik Değerlendirme",
+     "items": [
+      {
+       "text": "Sosyal fobi genellikle erken ergenlik yıllarında sinsi bir başlangıç gösterir.",
+       "isLie": false,
+       "explanation": "Utangaçlık zemininde 10-15 yaşlarında sosyal taleplerin artmasıyla belirginleşir."
+      },
+      {
+       "text": "Çekingen kişilik bozukluğu yaygın sosyal fobiyle benzer özellikler taşır.",
+       "isLie": false,
+       "explanation": "İki tablo yüksek oranda örtüşür ve birbiriyle komorbid görülebilir."
+      },
+      {
+       "text": "Sosyal fobi hastalarının tek endişesi uzaylılar tarafından kaçırılmaktır.",
+       "isLie": true,
+       "explanation": "Sosyal fobinin merkezinde başkalarınca gülünç duruma düşme ve olumsuz değerlendirilme korkusu yatar."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    30,
+    38
+   ],
+   "sourcePdf": {
+    "startPage": 30,
+    "endPage": 38
+   },
+   "bolum": "4"
+  },
+  {
+   "slideNumber": 23,
+   "title": "Sosyal Fobide Kanıta Dayalı Tedavi: Farmakoterapi ve BDT",
+   "content": "Sosyal fobinin kanıta dayalı tedavisinde farmakoterapi ve bilişsel davranışçı terapi yüksek başarı sağlar. Yaygın tipte birinci seçenek antidepresanlar SSRI ve SNRI grubu ilaçlardır.\n\n- **Farmakoterapi Seçenekleri:** Essitalopram, sertralin, paroksetin ve venlafaksin ilk tercihtir.\n- **Performans Tipi İçin Beta-Blokörler:** Sunum öncesinde taşikardi ve el titremesini önlemek için propranolol kullanılır.\n- **Bilişsel Davranışçı Terapi:** Sosyal beceri eğitimi, maruz bırakma ve bilişsel yeniden yapılandırma içerir.\n\n> [!NOTE]\n> Rol oynama ve video geri bildirimi hastanın kendisi hakkındaki olumsuz imajını düzeltmede son derece etkilidir.\n\n- **Önemli Not:** Sunum öncesinde taşikardi ve el titremesini önlemek için Propranolol kullanılır.",
+   "synthesisNarrative": "Sosyal fobinin kanıta dayalı tedavisinde farmakoterapi ve bilişsel davranışçı terapi yüksek başarı sağlar. Yaygın tipte birinci seçenek antidepresanlar SSRI ve SNRI grubu ilaçlardır.\n\n- **Farmakoterapi Seçenekleri:** Essitalopram, sertralin, paroksetin ve venlafaksin ilk tercihtir.\n- **Performans Tipi İçin Beta-Blokörler:** Sunum öncesinde taşikardi ve el titremesini önlemek için propranolol kullanılır.\n- **Bilişsel Davranışçı Terapi:** Sosyal beceri eğitimi, maruz bırakma ve bilişsel yeniden yapılandırma içerir.\n\n> [!NOTE]\n> Rol oynama ve video geri bildirimi hastanın kendisi hakkındaki olumsuz imajını düzeltmede son derece etkilidir.\n\n- **Önemli Not:** Sunum öncesinde taşikardi ve el titremesini önlemek için Propranolol kullanılır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Performans tipi sosyal fobide sunum öncesi otonomik semptomları (taşikardi, el titremesi) kontrol etmek için kullanılan ilaç hangisidir?",
+     "options": [
+      {
+       "text": "Beta-adrenerjik reseptör blokörleri (örneğin propranolol)",
+       "isCorrect": true,
+       "explanation": "Bu seçenek tıbbi açıdan doğru bir klinik saptamadır ve klinik tabloyu tam açıklar. Tanısal ve patofizyolojik süreçte bu mekanizmanın kavranması hedeflenmektedir."
+      },
+      {
+       "text": "Yüksek doz parenteral lityum infüzyonu",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Direkt kardiyak sempatomimetik epinefrin",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      },
+      {
+       "text": "Birinci kuşak sedatif nöroleptikler",
+       "isCorrect": false,
+       "explanation": "Bu kavram tıp literatüründe farklı klinik durumlarda gözlenen özel bir mekanizmadır. Mevcut soru kökündeki panik ve anksiyete patolojisiyle doğrudan örtüşen seçenek bu değildir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sunum öncesinde taşikardi ve el titremesini önlemek için Propranolol kullanılır.",
+     "maskedTerm": "Propranolol",
+     "hint": ""
+    },
+    {
+     "type": "interactive_table",
+     "title": "Sosyal Fobide Tedavi Stratejileri",
+     "tableHeaders": [
+      "Tedavi Modeli",
+      "Uygulama Şekli",
+      "Hedeflenen Mekanizma"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "SSRI / SNRI İlaçlar"
+        },
+        {
+         "text": "Günlük düzenli idame tedavi",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Genel anksiyete eşiğini yükseltme"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Beta-Blokörler"
+        },
+        {
+         "text": "Performanstan 30-60 dk önce",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Taşikardi ve periferik titremeyi önleme"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Bilişsel Terapi"
+        },
+        {
+         "text": "Grup veya bireysel seanslar",
+         "isMasked": true,
+         "hint": ""
+        },
+        {
+         "text": "Olumsuz otomatik düşünceleri yapılandırma"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 23 Klinik Değerlendirme",
+     "items": [
+      {
+       "text": "SSRI grubu antidepresanlar yaygın sosyal fobide birinci seçenek tedavidir.",
+       "isLie": false,
+       "explanation": "Kanıtlanmış etkinlikleri ile uluslararası kılavuzlarda ilk basamakta yer alırlar."
+      },
+      {
+       "text": "Beta-blokörler performans öncesi otonomik semptomları başarıyla baskılar.",
+       "isLie": false,
+       "explanation": "Propranolol taşikardi ve el titremesini önleyerek sunum kaygısını hafifletir."
+      },
+      {
+       "text": "Sosyal fobinin tedavisi için hastanın tüm sosyal ilişkilerini ömür boyu kesmesi önerilir.",
+       "isLie": true,
+       "explanation": "İzolasyon kaçınmayı artırır; amaç maruz bırakma ile sağlıklı sosyal etkileşim kurmaktır."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    30,
+    38
+   ],
+   "sourcePdf": {
+    "startPage": 30,
+    "endPage": 38
+   },
+   "bolum": "4"
+  },
+  {
+   "slideNumber": 24,
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Panik Bozukluk",
+   "content": "Panik Bozukluk ve Anksiyete Bozuklukları dersini başarıyla tamamladınız! Bu oyun sayfasında öğrendiğiniz kritik klinik, tanısal ve farmakolojik kazanımları eğlenceli oyunlarla pekiştireceksiniz.\n\n- **Sıralama:** Panik atağın ortaya çıkışından bilişsel felaketleştirmeye uzanan patogenezi diziniz.\n- **Sürgü:** Panik bozukluğun kardinal belirti sayısı ve süre kriterlerini tahmin ediniz.\n- **Bozulma Analizi:** Loküs seruleus hiperaktivitesi ve SSRI tedavisinin parametre değişimlerini çözünüz.\n- **Metin Düzeltme:** Klinik vaka anlatımındaki tanısal hataları tespit edip düzeltiniz.",
+   "synthesisNarrative": "Panik Bozukluk ve Anksiyete Bozuklukları dersini başarıyla tamamladınız! Bu oyun sayfasında öğrendiğiniz kritik klinik, tanısal ve farmakolojik kazanımları eğlenceli oyunlarla pekiştireceksiniz.\n\n- **Sıralama:** Panik atağın ortaya çıkışından bilişsel felaketleştirmeye uzanan patogenezi diziniz.\n- **Sürgü:** Panik bozukluğun kardinal belirti sayısı ve süre kriterlerini tahmin ediniz.\n- **Bozulma Analizi:** Loküs seruleus hiperaktivitesi ve SSRI tedavisinin parametre değişimlerini çözünüz.\n- **Metin Düzeltme:** Klinik vaka anlatımındaki tanısal hataları tespit edip düzeltiniz.",
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "prompt": "Panik döngüsünün bilişsel davranışçı aşamalarını kronolojik sıraya diziniz:",
+     "steps": [
+      "Tetikleyici içsel bedensel duyumun (örneğin hafif taşikardi) algılanması",
+      "Bedensel duyumun kalp krizi veya ölüm olarak felaketleştirilmesi (katastrofizasyon)",
+      "Amigdala ve sempatik sinir sisteminin şiddetle aktive olması",
+      "Dakikalar içinde doruk noktaya ulaşan akut panik atağının ortaya çıkması"
+     ],
+     "explanation": "Panik atağı hafif fizyolojik duyumların felaketleştirilmesi ve ardından tetiklenen sempatik deşarjla gelişir."
+    },
+    {
+     "type": "estimate_slider",
+     "prompt": "DSM-5 tanı kriterlerine göre tam bir panik atak tanısı koyabilmek için 13 belirtiden en az kaç tanesi bulunmalıdır?",
+     "min": 1,
+     "max": 13,
+     "answer": 4,
+     "tolerance": 0,
+     "explanation": "DSM-5 tanı ölçütlerine göre en az 4 kardinal semptomun dakikalar içinde doruğa ulaşması zorunludur."
+    },
+    {
+     "type": "perturbation",
+     "scenario": "Panik bozukluğu olan hastaya birinci basamak seçici serotonin geri alım inhibitörü (SSRI) başlanıp 8 hafta düzenli uygulandığında sistem parametreleri nasıl değişir?",
+     "parameters": [
+      {
+       "name": "Panik ataklarının sıklığı ve şiddeti",
+       "explanation": "SSRI tedavisi serotonerjik modülasyonla panik krizlerinin sıklığını ve şiddetini belirgin şekilde azaltır.",
+       "correct": "down"
+      },
+      {
+       "name": "Ataklar arası beklenti anksiyetesi düzeyi",
+       "explanation": "Ataklar kontrol altına alındıkça yeni atak geçirme endişesi (beklenti kaygısı) kademeli olarak geriler.",
+       "correct": "down"
+      },
+      {
+       "name": "Hastanın sosyal ve mesleki işlevsellik düzeyi",
+       "explanation": "Kaçınma davranışlarının kırılması ve anksiyetenin yatışmasıyla yaşam kalitesi ve işlevsellik artar.",
+       "correct": "up"
+      }
+     ]
+    },
+    {
+     "type": "fix_the_text",
+     "text": "Panik ataklar tipik olarak yavaş yavaş haftalar içinde sinsi bir başlangıç gösterir ve hastada hiçbir zaman sempatik otonom sinir sistemi uyarılması gözlenmez.",
+     "errors": [
+      {
+       "wrong": "haftalar içinde sinsi",
+       "correct": "dakikalar içinde akut",
+       "options": [
+        "dakikalar içinde akut",
+        "yıllar süren prodromal",
+        "aylarca süren gizli"
+       ],
+       "explanation": "Panik ataklar sinsi değil, dakikalar içinde doruk noktaya ulaşan akut paroksismal nöbetlerdir."
+      },
+      {
+       "wrong": "hiçbir zaman sempatik",
+       "correct": "şiddetli sempatik",
+       "options": [
+        "şiddetli sempatik",
+        "hiçbir zaman parasempatik",
+        "sadece motor spinal"
+       ],
+       "explanation": "Sempatik hiperaktivite taşikardi, terleme ve titreme gibi kardinal panik belirtilerini doğurur."
+      }
+     ]
+    }
+   ],
+   "isGameFinale": true
+  }
+ ],
+ "discipline": "Psikiyatri",
+ "deckId": "k2p-y25-k2-55-panik-bozukluk",
+ "donem": "2025-2026",
+ "arsiv": true,
+ "committee": "donem3-kurul2",
+ "confidence": "high",
+ "totalSlides": 24,
+ "matchedPastQuestionsCount": 3,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

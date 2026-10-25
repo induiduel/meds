@@ -5,7 +5,7 @@
  */
 import { auth } from './auth';
 import { getCustomApiUrl } from './api';
-import { PANEL_ON_ORACLE_AT_BOOT } from '../config/deployment';
+import { PANEL_ON_ORACLE_AT_BOOT, getStoredPanelSecret } from '../config/deployment';
 
 export type PersonKind = 'account' | 'guest';
 /** insan: gerçek kişi; bot: arama motoru vb.; otomasyon: bizim tarama/sınama araçlarımız; bos: cihazı/etkinliği olmayan yedek */
@@ -185,6 +185,10 @@ export async function adminCall<T>(path: string, init: RequestInit = {}): Promis
   headers.set('Accept', 'application/json');
   if (init.body) headers.set('Content-Type', 'application/json');
   if (PANEL_ON_ORACLE_AT_BOOT) headers.set('x-panel-target', 'oracle');
+  const secret = getStoredPanelSecret();
+  if (secret && !headers.has('x-panel-secret')) {
+    headers.set('x-panel-secret', secret);
+  }
   const user = auth.currentUser;
   if (user) {
     try {

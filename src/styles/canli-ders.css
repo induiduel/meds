@@ -1094,3 +1094,52 @@
 .cd-kmb-kart { display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; border-radius: 12px; background: var(--color-white, #fff); border: 1px solid var(--color-line, #dde3ea); color: inherit; text-decoration: none; }
 .cd-kmb-kart:hover { border-color: #0e7490; }
 .cd-kmb-kart span { font-size: 12px; color: var(--color-ink-3, #6b7686); }
+
+/* ── Tam ekran: yüzen, yarı saydam ikon denetimleri (telefonda içerik tam görünsün) ── */
+.cd-ders.is-tam { padding-top: 0 !important; }
+.cd-ders.is-tam .cd-ders-bas {
+  position: absolute; top: calc(env(safe-area-inset-top, 0px) + 8px); right: calc(env(safe-area-inset-right, 0px) + 8px); left: auto; z-index: 20;
+  display: flex !important; flex-wrap: nowrap; align-items: center; gap: 4px; width: auto; max-width: calc(100% - 16px); padding: 4px; margin: 0;
+  border-radius: 14px; background: rgb(18 18 22 / .42); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  opacity: .6; transition: opacity .2s;
+}
+.cd-ders.is-tam .cd-ders-bas:is(:hover, :focus-within), .cd-ders.is-tam.is-arac-acik .cd-ders-bas { opacity: 1; }
+.cd-ders.is-tam .cd-ders-bas > :is(.cd-ders-baslik, .cd-ders-arac, .cd-geri) { display: none !important; }
+.cd-ders.is-tam .cd-ders-uc { display: flex; gap: 4px; margin: 0; }
+.cd-ders.is-tam .cd-ders-bas .cd-gorunum-dongu { display: inline-flex; }
+.cd-ders.is-tam .cd-ders-bas :is(.cd-btn, .cd-yazi-n) {
+  width: 36px; height: 36px; min-width: 0; padding: 0; justify-content: center; border: 0; border-radius: 10px; background: transparent; color: #fff; box-shadow: none;
+}
+.cd-ders.is-tam .cd-ders-bas .cd-btn > span:not(.cd-yazi-a) { display: none; }
+.cd-ders.is-tam .cd-ders-bas .cd-btn > svg { width: 18px; height: 18px; }
+.cd-ders.is-tam .cd-ders-bas .cd-btn:is(:hover, .is-on) { background: rgb(255 255 255 / .16); }
+.cd-ders.is-tam .cd-ders-bas .cd-yazi { display: inline-flex; align-items: center; gap: 0; }
+.cd-ders.is-tam .cd-ders-bas .cd-yazi-n { width: 28px; font-size: 12px; }
+/* PDF araç çubuğu: kapalıyken gizli, açılınca yüzen yarı saydam şerit */
+.cd-ders.is-tam:not(.is-arac-acik) .cd-pdf-bar { display: none; }
+.cd-ders.is-tam.is-arac-acik .cd-pdf-bar {
+  position: absolute; top: calc(env(safe-area-inset-top, 0px) + 56px); right: 8px; z-index: 19; max-width: calc(100% - 16px);
+  padding: 3px 6px; gap: 2px; border: 0; border-radius: 12px; color: #fff;
+  background: rgb(18 18 22 / .55); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+}
+.cd-ders.is-tam.is-arac-acik .cd-pdf-bar :is(> svg, .cd-pdf-ad, .cd-pdf-dosya, .cd-grow) { display: none; }
+.cd-ders.is-tam.is-arac-acik .cd-pdf-bar :is(.cd-ib, .cd-btn) { color: #fff; background: transparent; border: 0; }
+.cd-ders.is-tam .cd-pdf-govde { padding-top: 0; }
+.cd-ders.is-tam .cd-bolme { border: 0; border-radius: 0; }
+/* Alt oynatıcı: küçükken sağ altta yüzen yarı saydam hap (yalnız oynat + ince ilerleme + aç) */
+:root.cd-tam-ekran .cd-dock.is-tam.is-kucuk {
+  left: auto !important; right: calc(env(safe-area-inset-right, 0px) + 10px) !important; width: auto !important; max-width: none;
+  margin-bottom: calc(env(safe-area-inset-bottom, 0px) + 10px); background: none; box-shadow: none; border: 0;
+}
+:root.cd-tam-ekran .cd-dock.is-tam.is-kucuk .cd-kucuk {
+  display: flex; align-items: center; gap: 4px; padding: 4px; border: 0; border-radius: 999px; width: auto; max-width: none;
+  background: rgb(18 18 22 / .5); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); box-shadow: 0 4px 16px rgb(0 0 0 / .25);
+  opacity: .75; transition: opacity .2s;
+}
+:root.cd-tam-ekran .cd-dock.is-tam.is-kucuk .cd-kucuk:is(:hover, :focus-within) { opacity: 1; }
+:root.cd-tam-ekran .cd-dock.is-tam.is-kucuk .cd-kucuk .cd-oynat { width: 36px; height: 36px; }
+:root.cd-tam-ekran .cd-dock.is-tam.is-kucuk .cd-kucuk-ad { width: 48px; min-width: 0; padding: 0; background: none; border: 0; }
+:root.cd-tam-ekran .cd-dock.is-tam.is-kucuk .cd-kucuk-ad :is(b, small) { display: none; }
+:root.cd-tam-ekran .cd-dock.is-tam.is-kucuk .cd-kucuk-ilerleme { width: 100%; }
+:root.cd-tam-ekran .cd-dock.is-tam.is-kucuk .cd-kucuk .cd-ib { width: 32px; height: 32px; color: #fff; background: transparent; border: 0; }
+:root.cd-tam-oynatici:has(.cd-dock.is-kucuk) .cd-ders.is-tam :is(.cd-metin, .pdv) { padding-bottom: 64px; }

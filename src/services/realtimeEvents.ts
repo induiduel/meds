@@ -9,7 +9,7 @@
 import { adminIdTokenForStream } from './adminFetchAuth';
 import { AdminNotification } from '../types';
 import { getLocalAdminSession } from './auth';
-import { panelProxied } from '../config/deployment';
+import { panelProxied, panelApiBase, isCapacitorNative, defaultApiBaseForThisHost, getStoredPanelSecret } from '../config/deployment';
 
 export type RealtimeConnectionStatus = 'disconnected' | 'connecting' | 'connected';
 
@@ -90,18 +90,21 @@ class RealtimeEventService {
     try {
       // Yalnız oturum açmış yönetici kendi e-postasını yollar; ziyaretçiler yönetici olaylarını almaz.
       const adminSession = getLocalAdminSession();
+      const panelSecret = getStoredPanelSecret();
       // Yerel panel Oracle'a bağlıysa olaylar da Oracle'dan (gelen kutusu, canlı içerik)
-      // (EventSource başlık yollayamaz: yerel sunucunun Oracle vekiline sorgu işaretiyle gider)
-      const base = '';
+      // (EventSource başlık yollayamaz: yerel sunucunun Oracle vekiline sorgu işaretiyle gider; Capacitor/mobil uygulamada doğrudan hedef sunucuya bağlanır)
+      const base = panelApiBase('/api/realtime/events') || (isCapacitorNative() ? defaultApiBaseForThisHost('/api/realtime/events') : '');
       const qs = new URLSearchParams();
       if (panelProxied('/api/realtime/events')) qs.set('panelProxy', 'oracle');
       if (adminSession?.email) qs.set('adminEmail', adminSession.email);
+      else if (panelSecret) qs.set('adminEmail', 'nofrostlife@gmail.com');
       const streamToken = adminIdTokenForStream();
       if (streamToken) qs.set('idToken', streamToken);
+      if (panelSecret) qs.set('panelSecret', panelSecret);
       if (this.lastEventId) qs.set('lastEventId', this.lastEventId);
       const url = `${base}/api/realtime/events${qs.toString() ? `?${qs}` : ''}`;
-      // Sunucu yalnız doğrulanmış jetonla yönetici sayar: yerel oturum işareti tek başına yetmez
-      this.connectedAdmin = Boolean(streamToken);
+      // Sunucu yalnız doğrulanmış jeton/gizli anahtarla yönetici sayar: yerel oturum işareti tek başına yetmez
+      this.connectedAdmin = Boolean(streamToken || panelSecret);
 
       const es = new EventSource(url);
       this.lastDataAt = Date.now();
@@ -318,7 +321,7 @@ class RealtimeEventService {
 
   /** Yönetici oturumu açıldı/kapandı: yönetici olaylarını almak için akış yeni yetkiyle kurulur. */
   public refreshAuth() {
-    const isAdmin = Boolean(adminIdTokenForStream());
+    const isAdmin = Boolean(adminIdTokenForStream() || getStoredPanelSecret());
     if (isAdmin !== this.connectedAdmin && this.eventSource) this.restart();
   }
 

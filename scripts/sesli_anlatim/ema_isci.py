@@ -110,7 +110,13 @@ def model_yukle():
     import torch
 
     torch.set_num_threads(int(os.environ.get("EMA_IS_PARCACIGI", "4")))
-    from ema_lightning import EMA
+    from ema_lightning import EMA, chunker
+
+    # Cümle ortası es + kapanış tonu (2026-10-24): kitaplık ~10 sn'yi (hız 1'de 180 harf) aşan metni virgülde ya da
+    # düz boşlukta kesip her parçanın sonuna "." ekliyordu. 30 sn'ye dek tek parça okunur (23 sn'lik cümle Whisper'la
+    # temiz doğrulandı); kesim artık yalnız gerçek cümle sonunda, ancak tek cümle 30 sn'yi aşarsa ara işarette olur.
+    chunker.MAX_SECONDS = 30.0
+    chunker.MAX_LETTERS = 750
 
     t = time.time()
     cihaz = "cpu"

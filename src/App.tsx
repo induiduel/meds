@@ -189,11 +189,14 @@ import {
   isAdminUser,
   ADMIN_EMAIL,
   getLocalAdminSession,
+  setLocalAdminSession,
   clearLocalAdminSession,
   safeStorage,
   updateUserProfileData,
   AppUser,
 } from './services/auth';
+import { isAdminAppMode, getStoredPanelSecret, setStoredPanelSecret } from './config/deployment';
+import { AdminFloatingSwitcher } from './components/manage/AdminFloatingSwitcher';
 import { getDefaultActiveCommitteeId, filterCurrent2026_2027Committees } from './services/firestoreDb';
 import { 
   uploadBookletPdfToDrive, 
@@ -233,7 +236,7 @@ export default function App() {
           const past = /^\/(meds\/)?cikmis/.test(window.location.pathname);
           return { route: (past ? 'past_exams' : 'questions') as ValidAppTab, param: qId };
         }
-        if (/^manage\./i.test(window.location.hostname) && parsed.route === 'quick_add') {
+        if ((/^manage\./i.test(window.location.hostname) || isAdminAppMode()) && parsed.route === 'quick_add') {
           return { route: 'manage' as ValidAppTab, param: undefined as string | undefined };
         }
       }
@@ -471,6 +474,9 @@ export default function App() {
       const existingAdmin = getLocalAdminSession();
       if (existingAdmin && existingAdmin.email?.toLowerCase() === ADMIN_EMAIL.toLowerCase()) {
         return existingAdmin;
+      }
+      if (getStoredPanelSecret().length >= 24) {
+        return setLocalAdminSession(ADMIN_EMAIL);
       }
     } catch (e) {
       return null;
@@ -1490,31 +1496,33 @@ export default function App() {
     return () => window.clearTimeout(t);
   }, [justAddedId, questions]);
 
-  // Hesapsız giriş yok: tanıtım/kayıt ekranı kapatılamaz; yapay zekâ test çerezi doğrulanana dek de açık kalır
-  const girisKapisi = !currentUser && aiTest !== true && (showOnboarding || (authHazir && aiTest === false));
+  // Hesapsız giriş yok: tanıtım/kayıt ekranı kapatılamaz; yapay zekâ test çerezi doğrulanana dek de açık kalır.
+  // Yönetim konsolu (/manage, /yonetim) veya MeDSor Yönetim Android uygulaması açıkken öğrenci kayıt kapısı konsolu örtmez.
+  const isManageRoute = activeTab === 'manage' || activeTab === 'admin';
+  const girisKapisi = !isManageRoute && !isAdminAppMode() && !currentUser && aiTest !== true && (showOnboarding || (authHazir && aiTest === false));
 
   return (
     <GlossaryProvider>
     <MusicPlayerProvider>
-      {girisUyarisi && (
+      {girisUyarisi && !isManageRoute && (
         <Suspense fallback={null}>
           <GirisUyarisi onKabul={() => setGirisUyarisi(false)} />
         </Suspense>
       )}
       {girisKapisi && <Onboarding onAuthSuccess={handleAuthSuccess} />}
       {/* Başarım: dönem/kurul seçimi (girişte zorunlu) + ödül kutlamaları */}
-      {(currentUser?.uid || aiTest) && !girisKapisi && (
+      {(currentUser?.uid || aiTest) && !girisKapisi && !isManageRoute && (
         <Suspense fallback={null}>
           <BasarimKatmani uid={currentUser?.uid || 'ai-test'} ad={currentUser?.displayName} kapali={girisUyarisi} />
         </Suspense>
       )}
-      {showTour && (
+      {showTour && !isManageRoute && (
         <Suspense fallback={null}>
           <WelcomeTour name={currentUser?.displayName} onGo={setActiveTab} onClose={() => setShowTour(false)} />
         </Suspense>
       )}
       {/* v13 "Ada" daveti: açılışta bir kez sorulur (başka pencere açıkken beklenir) */}
-      {!girisUyarisi && !showTour && !girisKapisi && !getAppearance().v13Asked && (
+      {!girisUyarisi && !showTour && !girisKapisi && !isManageRoute && !getAppearance().v13Asked && (
         <Suspense fallback={null}>
           <V13Invite />
         </Suspense>
@@ -1524,6 +1532,11 @@ export default function App() {
       <CdVideoRozet />
       <ConfirmHost />
       <TooltipHost />
+      <AdminFloatingSwitcher
+        activeTab={activeTab}
+        onGoManage={() => setActiveTabState('manage')}
+        visible={isAdmin || isModerator || isAdminAppMode()}
+      />
       {activeTab !== 'music' && activeTab !== 'practice' && activeTab !== 'manage' && (
         <MiniMusicPlayer onOpen={() => setActiveTab('music')} />
       )}
@@ -1557,15 +1570,15 @@ export default function App() {
               <span className="w-12 h-12 rounded-2xl bg-ink text-white flex items-center justify-center">
                 <ShieldCheck className="w-6 h-6" />
               </span>
-              <h1 className="m-0 font-display font-bold text-2xl tracking-[-0.02em]">Yönetim Konsolu</h1>
-              <p className="m-0 text-md text-ink-2">Bu konsol yalnızca yöneticilere ve moderatörlere açık. Devam etmek için yetkili hesabınla giriş yap.</p>
-              <div className="flex gap-2 pt-1">
+              <h1 className="m-0 font-display font-bold text-2xl tracking-[-0.02em]">MeDSor Yönetim</h1>
+              <p className="m-0 text-md text-ink-2">Bu konsol yalnızca yöneticilere ve moderatörlere açık. Hesabınla veya kalıcı yönetici anahtarınla giriş yap.</p>
+              <div className="flex flex-wrap justify-center gap-2 pt-1 w-full">
                 <button
                   type="button"
                   onClick={() => setActiveTab('quick_add')}
                   className="h-11 px-4 rounded-xl border border-line-2 bg-white font-semibold text-md cursor-pointer"
                 >
-                  Ana sayfa
+                  Siteyi Kullan
                 </button>
                 <button
                   type="button"
@@ -1575,9 +1588,44 @@ export default function App() {
                   }}
                   className="h-11 px-5 rounded-xl bg-accent hover:bg-accent-hover text-white font-semibold text-md cursor-pointer"
                 >
-                  Yönetici girişi
+                  Yönetici Girişi
                 </button>
               </div>
+              <form
+                className="w-full pt-3 mt-2 border-t border-line flex flex-col gap-2 text-left"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const fd = new FormData(e.currentTarget);
+                  const sec = String(fd.get('panelSecret') || '').trim();
+                  if (sec.length < 24) {
+                    toast.error('Anahtar eksik', 'Geçerli bir MEDS_PANEL_SECRET (en az 24 karakter) girin.');
+                    return;
+                  }
+                  setStoredPanelSecret(sec);
+                  const adminUser = setLocalAdminSession(ADMIN_EMAIL);
+                  setCurrentUser(adminUser);
+                  safeStorage.setItem('medsoru_user_registered', 'true');
+                  toast.success('Yönetici oturumu açıldı', 'Kalıcı yönetici anahtarı kaydedildi.');
+                }}
+              >
+                <label className="text-xs font-semibold text-ink-2">
+                  Kalıcı Yönetici Anahtarı (MEDS_PANEL_SECRET) ile Doğrudan Bağlan
+                </label>
+                <div className="flex gap-2">
+                  <input
+                    name="panelSecret"
+                    type="password"
+                    placeholder="MEDS_PANEL_SECRET değerini yapıştırın…"
+                    className="flex-1 h-10 px-3 rounded-xl border border-line-2 bg-canvas text-sm font-mono"
+                  />
+                  <button
+                    type="submit"
+                    className="h-10 px-4 rounded-xl bg-ink text-white text-sm font-semibold cursor-pointer"
+                  >
+                    Bağlan
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         )

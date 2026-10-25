@@ -1,9 +1,27 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { ArrowLeft, Search, RefreshCw, Moon, Sun, ChevronDown, AlignJustify, Menu, X } from 'lucide-react';
+import {
+  ArrowLeft,
+  Search,
+  RefreshCw,
+  Moon,
+  Sun,
+  ChevronDown,
+  AlignJustify,
+  Menu,
+  X,
+  Smartphone,
+  LayoutDashboard,
+  Inbox,
+  Users,
+  DatabaseZap,
+  GitBranch,
+  Compass,
+} from 'lucide-react';
 import type { Committee } from '../../types';
 import type { ManageSection } from '../manage/ManageConsole';
 import type { RealtimeConnectionStatus } from '../../services/realtimeEvents';
 import type { M12NavGroup } from '../v12/ManageV12';
+import { AdminMobileBridgeModal, useAdminMobileRealtimeAlerts } from '../manage/AdminMobileBridgeModal';
 import '../../styles/v14/manage.css';
 
 /**
@@ -48,8 +66,11 @@ export const ManageShellV14: React.FC<{
 }> = (p) => {
   const [q, setQ] = useState('');
   const [navOpen, setNavOpen] = useState(false);
+  const [bridgeOpen, setBridgeOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
   const mainRef = useRef<HTMLElement>(null);
+
+  useAdminMobileRealtimeAlerts(true);
 
   // Tam alan çalışma alanları (Drawer) bu bayrağa bakar
   useEffect(() => {
@@ -71,6 +92,23 @@ export const ManageShellV14: React.FC<{
       .filter((g) => g.items.length > 0);
   }, [p.groups, q]);
   const flat = groups.flatMap((g) => g.items);
+  const allItems = useMemo(() => p.groups.flatMap((g) => g.items), [p.groups]);
+  const activeGroupItems = useMemo(() => {
+    const found = p.groups.find((g) => g.items.some((it) => it.id === p.section));
+    return found && found.items.length > 1 ? found.items : [];
+  }, [p.groups, p.section]);
+  const inboxTotalBadge = useMemo(() => {
+    const ids: ManageSection[] = ['inbox', 'pending', 'moderation'];
+    let n = 0;
+    let alert = false;
+    for (const it of allItems) {
+      if (ids.includes(it.id) && it.badge?.n) {
+        n += it.badge.n;
+        if (it.badge.alert) alert = true;
+      }
+    }
+    return n > 0 ? { n, alert } : undefined;
+  }, [allItems]);
   const liveText = LIVE_TEXT[p.liveStatus] || 'Bağlantı yok';
 
   const navButton = (it: M12NavGroup['items'][number]) => {
@@ -163,6 +201,26 @@ export const ManageShellV14: React.FC<{
             <span className={`m14-live is-${p.liveStatus}`} role="status" title={p.syncLabel ? `Son eşitleme ${p.syncLabel}` : undefined}>
               <i aria-hidden="true" />{liveText}
             </span>
+            <button
+              type="button"
+              className="m14-btn ghost"
+              onClick={() => setBridgeOpen(true)}
+              aria-label="Mobil Köprü, Uzaktan Sunucu ve Android APK"
+              title="Mobil Köprü, Uzaktan Sunucu, Kalıcı Yetki ve Android APK"
+            >
+              <Smartphone aria-hidden="true" />
+              <span className="m14-hide-xs">Köprü & APK</span>
+            </button>
+            <button
+              type="button"
+              className="m14-btn ghost"
+              onClick={p.onExit}
+              aria-label="Siteyi kullan (Öğrenci görünümüne geç)"
+              title="Siteyi kullan (tüm öğrenci işlevlerini test et ve kullan)"
+            >
+              <Compass aria-hidden="true" />
+              <span className="m14-hide-xs">Siteyi Kullan</span>
+            </button>
             <button type="button" className="m14-btn ghost icon" onClick={p.onToggleDense} aria-pressed={p.dense} aria-label={`Yoğunluk: ${p.dense ? 'Sıkı' : 'Rahat'}`} title="Yoğunluk">
               <AlignJustify aria-hidden="true" />
             </button>
@@ -178,13 +236,100 @@ export const ManageShellV14: React.FC<{
           </div>
         </header>
         {p.sourceLive && p.canSwitchSource && <div className="m14-livebar" role="note">Canlı veriye bağlısınız: yaptığınız değişiklikler doğrudan siteye yazılır.</div>}
+        {activeGroupItems.length > 1 && (
+          <div className="m14-quickstrip" role="navigation" aria-label={`${p.currentGroup} alt bölümleri`}>
+            {activeGroupItems.map((it) => {
+              const Icon = it.icon;
+              const on = it.id === p.section;
+              return (
+                <button
+                  key={it.id}
+                  type="button"
+                  className={`m14-qchip ${on ? 'on' : ''}`}
+                  onClick={() => p.onPick(it.id)}
+                  aria-current={on ? 'page' : undefined}
+                >
+                  <Icon aria-hidden="true" />
+                  <span>{it.label}</span>
+                  {it.badge && it.badge.n > 0 && (
+                    <b className={it.badge.alert && !on ? 'hot' : ''}>{it.badge.n}</b>
+                  )}
+                </button>
+              );
+            })}
+          </div>
+        )}
         <main ref={mainRef} key={p.section} className="ms-console-body m14-body" data-density={p.bodyDensity} aria-label={p.currentLabel}>
           <div className={`ms-cinner m14-inner ${p.wide ? 'is-wide' : ''}`}>
             {p.currentHint && <p className="m14-hint">{p.currentHint}</p>}
             {p.children}
           </div>
         </main>
+
+        {/* Telefona özel ergonomik alt gezinme çubuğu (≤ 960px) */}
+        <nav className="m14-mobbar" aria-label="Mobil hızlı yönetim sekmeleri">
+          <button
+            type="button"
+            className={`m14-mobtab ${p.section === 'overview' ? 'on' : ''}`}
+            onClick={() => p.onPick('overview')}
+          >
+            <LayoutDashboard aria-hidden="true" />
+            <span>Özet</span>
+          </button>
+          <button
+            type="button"
+            className={`m14-mobtab ${['inbox', 'pending', 'moderation'].includes(p.section) ? 'on' : ''}`}
+            onClick={() => p.onPick('inbox')}
+          >
+            <span className="m14-mobicon">
+              <Inbox aria-hidden="true" />
+              {inboxTotalBadge && (
+                <em className={inboxTotalBadge.alert ? 'hot' : ''}>{inboxTotalBadge.n > 99 ? '99+' : inboxTotalBadge.n}</em>
+              )}
+            </span>
+            <span>Gelen</span>
+          </button>
+          <button
+            type="button"
+            className={`m14-mobtab ${['people', 'study', 'basarim', 'users'].includes(p.section) ? 'on' : ''}`}
+            onClick={() => p.onPick('people')}
+          >
+            <Users aria-hidden="true" />
+            <span>Kişiler</span>
+          </button>
+          <button
+            type="button"
+            className={`m14-mobtab ${['dbexplorer', 'pool', 'raw_pool', 'data', 'datacore', 'database'].includes(p.section) ? 'on' : ''}`}
+            onClick={() => p.onPick('dbexplorer')}
+          >
+            <DatabaseZap aria-hidden="true" />
+            <span>Veri / PG</span>
+          </button>
+          <button
+            type="button"
+            className={`m14-mobtab ${['hat', 'system', 'automation', 'scripts'].includes(p.section) ? 'on' : ''}`}
+            onClick={() => p.onPick('hat')}
+          >
+            <GitBranch aria-hidden="true" />
+            <span>Hat / Sistem</span>
+          </button>
+          <button
+            type="button"
+            className="m14-mobtab is-site"
+            onClick={p.onExit}
+            title="Tüm site işlevlerini kullan"
+          >
+            <Compass aria-hidden="true" />
+            <span>Site</span>
+          </button>
+        </nav>
       </div>
+
+      <AdminMobileBridgeModal
+        open={bridgeOpen}
+        onClose={() => setBridgeOpen(false)}
+        onTargetChanged={p.onChooseSource}
+      />
     </div>
   );
 };

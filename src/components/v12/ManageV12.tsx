@@ -6,6 +6,7 @@ import type { Committee, QuestionItem, AdminNotification } from '../../types';
 import type { ManageSection } from '../manage/ManageConsole';
 import type { InboxReport, InboxComment } from '../../services/manageConsoleService';
 import { fetchSystemServices, fetchWorkerHeartbeat } from '../../services/manageConsoleService';
+import { loadPeople, type PeopleList, fmtDuration } from '../../services/peopleService';
 import { systemHealthMonitor, type SystemOverallHealth } from '../../services/systemHealthMonitor';
 import type { RealtimeConnectionStatus } from '../../services/realtimeEvents';
 import { StatRow, Card14, Tabs14, Pill, type Stat } from '../v14/pageKit';
@@ -282,19 +283,22 @@ export const ManageOverviewV12: React.FC<{
   const [health, setHealth] = useState<SystemOverallHealth>(() => systemHealthMonitor.getHealth());
   const [svc, setSvc] = useState<{ total: number; running: number } | null>(null);
   const [beat, setBeat] = useState<{ isOnline: boolean; message: string } | null>(null);
+  const [peopleSnap, setPeopleSnap] = useState<PeopleList | null>(null);
   const [qf, setQf] = useState<'all' | QGroup>('all');
   const [af, setAf] = useState<'all' | 'report' | 'comment' | 'notice'>('all');
+  const touchStartX = useRef<number | null>(null);
 
   useEffect(() => systemHealthMonitor.subscribe(setHealth), []);
   useEffect(() => {
     let live = true;
-    void Promise.all([fetchSystemServices(), fetchWorkerHeartbeat()]).then(([s, hb]) => {
+    void Promise.all([fetchSystemServices(), fetchWorkerHeartbeat(), loadPeople().catch(() => null)]).then(([s, hb, ppl]) => {
       if (!live) return;
       if (s.ok) {
         const running = s.services.filter((x) => /active|çalış|online|açık/i.test(`${x.status} ${x.statusLabel}`)).length;
         setSvc({ total: s.services.length, running });
       }
       setBeat({ isOnline: hb.isOnline, message: hb.message });
+      if (ppl) setPeopleSnap(ppl);
     });
     return () => {
       live = false;
@@ -375,17 +379,52 @@ export const ManageOverviewV12: React.FC<{
   const shownActs = (af === 'all' ? acts : acts.filter((a) => a.kind === af)).slice(0, 8);
 
   const dotTone = (d: HealthCell['dot']) => (d === 'ok' ? 'ok' : d === 'bad' ? 'bad' : d === 'warn' ? 'warn' : '');
+  const onlinePeople = useMemo(() => (peopleSnap?.people || []).filter((p) => p.online).slice(0, 6), [peopleSnap]);
   const stats: Stat[] = [
+    { label: 'Anlık çevrimiçi', value: peopleSnap ? peopleSnap.totals.online.toLocaleString('tr-TR') : '—', tone: peopleSnap?.totals.online ? 'ok' : undefined, onClick: () => onGo('people'), hint: 'Canlı Kişileri aç' },
     { label: 'Moderasyon bekleyen', value: pendingReports.length.toLocaleString('tr-TR'), tone: pendingReports.length ? 'bad' : undefined, onClick: () => onGo('moderation'), hint: 'Moderasyonu aç' },
     { label: 'Havuz sorusu', value: questionsCount.toLocaleString('tr-TR'), onClick: () => onGo('pool'), hint: 'Soru havuzunu aç' },
-    { label: 'Kayıtlı kullanıcı', value: usersCount.toLocaleString('tr-TR'), onClick: () => onGo('users'), hint: 'Kullanıcıları aç' },
+    { label: 'Kayıtlı kullanıcı', value: (peopleSnap?.totals.accounts || usersCount).toLocaleString('tr-TR'), onClick: () => onGo('people'), hint: 'Kişileri aç' },
     { label: 'Bekleyen taslak', value: drafts.length.toLocaleString('tr-TR'), tone: drafts.length ? 'acc' : undefined, onClick: () => onGo('drafts'), hint: 'Taslakları aç' },
-    { label: 'Yorum', value: comments.length.toLocaleString('tr-TR'), onClick: () => onGo('inbox'), hint: 'Gelen kutusunu aç' },
+    { label: 'Haftalık çalışma', value: peopleSnap ? fmtDuration(peopleSnap.totals.weekSeconds) : comments.length.toLocaleString('tr-TR'), onClick: () => onGo('study'), hint: 'Ders ilerlemesini aç' },
   ];
 
   return (
     <div className="ov14">
       <StatRow stats={stats} />
+
+      {/* Hızlı Mobil Yönetim Kısayolları */}
+      <Card14
+        title="Hızlı Müdahale & Uzaktan Denetim"
+        tools={<button type="button" className="m14-btn ghost" onClick={() => onGo('shortcuts')}>Tüm kısayollar <ChevronRight aria-hidden="true" /></button>}
+      >
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+          <button type="button" onClick={() => onGo('people')} className="m14-btn !justify-start !h-10 !px-3">
+            <span className="ov14-dot ok" /> Kişiler (Canlı)
+          </button>
+          <button type="button" onClick={() => onGo('study')} className="m14-btn !justify-start !h-10 !px-3">
+            <span className="ov14-dot ok" /> Ders İlerlemesi
+          </button>
+          <button type="button" onClick={() => onGo('dbexplorer')} className="m14-btn !justify-start !h-10 !px-3">
+            <span className="ov14-dot acc" /> meds-pg Gezgini
+          </button>
+          <button type="button" onClick={() => onGo('hat')} className="m14-btn !justify-start !h-10 !px-3">
+            <span className="ov14-dot warn" /> Hat Panosu (K2+)
+          </button>
+          <button type="button" onClick={() => onGo('system')} className="m14-btn !justify-start !h-10 !px-3">
+            Servis Denetimi
+          </button>
+          <button type="button" onClick={() => onGo('scripts')} className="m14-btn !justify-start !h-10 !px-3">
+            Betikler & Zincir
+          </button>
+          <button type="button" onClick={() => onGo('intake')} className="m14-btn !justify-start !h-10 !px-3">
+            Serbest Girdiler
+          </button>
+          <button type="button" onClick={() => onGo('kamp')} className="m14-btn !justify-start !h-10 !px-3">
+            Kamp Tüyoları
+          </button>
+        </div>
+      </Card14>
 
       <div className="ov14-grid">
         <Card14
@@ -406,7 +445,17 @@ export const ManageOverviewV12: React.FC<{
           ) : (
             <ul className="ov14-list">
               {shownQ.map((it) => (
-                <li key={it.key} className="ov14-row">
+                <li
+                  key={it.key}
+                  className="ov14-row"
+                  onTouchStart={(e) => { touchStartX.current = e.touches[0]?.clientX ?? null; }}
+                  onTouchEnd={(e) => {
+                    if (touchStartX.current == null) return;
+                    const dx = (e.changedTouches[0]?.clientX ?? touchStartX.current) - touchStartX.current;
+                    touchStartX.current = null;
+                    if (dx > 64) it.run();
+                  }}
+                >
                   <Pill tone={it.tone}>{it.type}</Pill>
                   <span className="ov14-mid">
                     <span className="tt">{it.title}</span>
@@ -420,7 +469,7 @@ export const ManageOverviewV12: React.FC<{
         </Card14>
 
         <Card14
-          title="Servis durumu"
+          title="Servis durumu & Canlı Öğrenciler"
           tools={<button type="button" className="m14-btn ghost" onClick={() => onGo('system')}>Sistem <ChevronRight aria-hidden="true" /></button>}
           flush
         >
@@ -432,6 +481,16 @@ export const ManageOverviewV12: React.FC<{
                 <Pill tone={dotTone(c.dot)}>{c.text}</Pill>
               </li>
             ))}
+            {onlinePeople.length > 0 && (
+              <li className="ov14-row">
+                <span className="ov14-dot ok" aria-hidden="true" />
+                <span className="ov14-mid">
+                  <span className="tt">Şu an çevrimiçi ({peopleSnap?.totals.online || onlinePeople.length})</span>
+                  <span className="mt">{onlinePeople.map((p) => p.name || p.email || 'Öğrenci').join(', ')}</span>
+                </span>
+                <button type="button" className="m14-btn" onClick={() => onGo('people')}>İzle</button>
+              </li>
+            )}
           </ul>
         </Card14>
       </div>

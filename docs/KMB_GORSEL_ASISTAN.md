@@ -25,7 +25,7 @@ Kayıttan net duyulamayan sayı/süre (`dogrulanacak: true`) öğrenciye kesin b
 | A4 | Sınav: dallanan OSCE akışı (`akislar`: karar noktası → yollar, numaralı yuvalar, akış haritası, basamak başına açılır ayrıntılı açıklama + ses) + vaka senaryoları (çoklu) + sahnede bul (hotspot); her şıkta ne/neden açıklaması | ✅ 02 |
 | A5 | EMA sesi (GPU, `cozucu_ses_gpu.sh`) → `data/kmb_cozucu/ses/<kod>/`, zamanlama `src/data/kmb/ses_<kod>.json` | ✅ 02 |
 | A6 | Doğrulama kapısı `scripts/kmb/dogrula.py` (hedef kapsamı, sahne/öge kimlikleri, şık açıklaması, Türkçe üslup) | ✅ |
-| A7 | Ekran: `/kamplar/kmb[/<beceri>[/ogren|sinav]]` (iç `/kmb`) | ✅ |
+| A7 | Ekran: `/dersler/kmb[/<beceri>[/ogren|hedef|video|sinav]] (eski /kamplar/kmb yönlenir)` (iç `/kmb`) | ✅ |
 | A8 | Lottie videoları: `scripts/kmb/lottie_dsl.py` (bölüm zaman çizelgesi, SVG yolu→Lottie, yol boyunca hareket, kırpma, degrade) + `lottie_uret.py` (12 video, 18–41 sn, EMA `l-<ad>` sesine kare kare oturur) → `src/data/kmb/lottie/`; oynatıcı `LottieVideo.tsx` (zaman çubuğu, bölümler, hız, altyazı, tam ekran); tam ekran ders videosu `DersVideo.tsx` (adım başına 2–3 görsel yatayda, altta altyazı) | ✅ 02 |
 | A9 | Kalan beceriler: NG sonda, atel, burun kanaması, hava yolu, enjeksiyon — **ses kaydı geldikçe** A2–A6 tekrar | ⏳ kaynak bekleniyor |
 | A10 | Bağımsız denetçi geçişi (yazar + denetçi), yayın (`dagit.sh`) | ⏳ |
