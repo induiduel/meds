@@ -67,39 +67,6 @@
     }
    ]
   },
-  "2": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "algoritma",
-     "sablon_ad": "Yaklaşım basamakları",
-     "duzen": "adimlar",
-     "ogeler": [
-      "Servikal lordoz",
-      "Torakal kifoz",
-      "Lomber lordoz"
-     ],
-     "baslik": "Sagittal Omurga Eğrilikleri",
-     "s": 3,
-     "k": [
-      0,
-      64
-     ],
-     "tip": "adimlar",
-     "konum": [
-      0.05,
-      1.015
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.345,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.38,
-     "ek_renk": "#fffeff"
-    }
-   ]
-  },
   "13": {
    "2": [
     {
@@ -263,39 +230,6 @@
     }
    ]
   },
-  "35": {
-   "2": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Üç kolon tutuluşu",
-      "İki komşu kolon tutuluşu",
-      "Orta kolon tutuluşu"
-     ],
-     "baslik": "Denis İnstabilite Kriterleri",
-     "s": 37,
-     "k": [
-      0,
-      80
-     ],
-     "tip": "liste",
-     "konum": [
-      0.03,
-      0.94
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.411,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.3708,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
   "40": {
    "1": [
     {
@@ -396,13 +330,12 @@
  },
  "rapor": {
   "aday": 31,
-  "gecti": 12,
+  "gecti": 10,
   "ret": {
-   "resim sayfasında panel (H51)": 15,
+   "resim sayfasında panel (H51)": 18,
    "panel metni 'Cerrahi tespit gerektirir' henüz anlatılmamış t": 1,
    "panel metni 'Yedi milimetreden fazla taşma' henüz anlatılmam": 1,
-   "panel metni 'Ekstansiyon teardrop ve ALL yı' henüz anlatılma": 1,
-   "panel metni 'Denis Dört Temel Kırık Tipi' henüz anlatılmamış": 1
+   "panel metni 'Ekstansiyon teardrop ve ALL yı' henüz anlatılma": 1
   }
  }
 }

@@ -3,6 +3,33 @@
  "metinHash": "19913bfdad0f9daaf78e8cb7121ec9b71a50500d",
  "q": [
   {
+   "id": "q-2__kurul_-1",
+   "kok": "Nörolojik hastalıkların başlangıç şekli değerlendirildiğinde, aşağıdakilerden hangisi tipik olarak akut başlangıçlı (dakikalar-saatler içinde yerleşen) bir tablodur?",
+   "cevap": "Hemipleji",
+   "yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
+   "p": 0,
+   "c": 4,
+   "skor": 0.92
+  },
+  {
+   "id": "past-q-_SKENDERUN_T_M_d_rl___ne0__1__230709_230251-7",
+   "kok": "Disk hernisinde görülen ağrı aşağıdaki ağrı tiplerinden hangisine örnek verilebilir?",
+   "cevap": "Nöropatik ağrı",
+   "yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
+   "p": 3,
+   "c": 3,
+   "skor": 0.92
+  },
+  {
+   "id": "966e1cde012c",
+   "kok": "Spinal müsküler atrofi tiplerinden en ağır kliniğe sahip olanı hangisidir?",
+   "cevap": "Akut infantil SMA (tip I)",
+   "yil": "2020-2021",
+   "p": 3,
+   "c": 3,
+   "skor": 0.92
+  },
+  {
    "id": "q-2__kurul_-1-cs2",
    "kok": "Aşağıdakilerden hangisi primer baş ağrıları arasında yer alır?",
    "cevap": "Trigeminal otonomik baş ağrısı",
@@ -21,6 +48,24 @@
    "skor": 0.92
   },
   {
+   "id": "58700c98a3db",
+   "kok": "Bağırsaklarda meydana gelen patolojilere bağlı ağrılar aşağıdaki ağrı tiplerinden hangisine örnek verilebilir?",
+   "cevap": "Visseral ağrı",
+   "yil": "2020-2021",
+   "p": 5,
+   "c": 0,
+   "skor": 0.92
+  },
+  {
+   "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-19",
+   "kok": "Bilinç bozukluğu olan hastanın ayırıcı tanısında aşağıdakilerden hangisi mutlaka düşünülmelidir?",
+   "cevap": "Hipoglisemi",
+   "yil": "2023",
+   "p": 6,
+   "c": 2,
+   "skor": 0.92
+  },
+  {
    "id": "d3-k2-nor-001",
    "kok": "Aşağıdaki baş ağrısı tiplerinden hangisinin tanısı tamamen ayrıntılı klinik öyküye dayanır; laboratuvar veya nörogörüntüleme yöntemlerinde karakteristik patolojik bir bulgu saptanmaz?",
    "cevap": "Migren",
@@ -34,6 +79,15 @@
    "kok": "Aşağıdakilerin hangisinde nörolojik tanı esas olarak anamnez bilgisi ile konabilir?",
    "cevap": "Migren",
    "yil": "2022-2023",
+   "p": 10,
+   "c": 0,
+   "skor": 0.92
+  },
+  {
+   "id": "4c4eb178b88b",
+   "kok": "Nörolojik öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği, zamanla düzelen ve tekrarlayan epizodlar geçirdiği anlaşılan bir hastada en olası tanı aşağıdakilerden hangisidir?",
+   "cevap": "Multipl skleroz (MS)",
+   "yil": "2020-2021",
    "p": 10,
    "c": 0,
    "skor": 0.92
@@ -102,6 +156,15 @@
    "skor": 0.92
   },
   {
+   "id": "4ba07c308e35",
+   "kok": "Öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği, zaman içinde atak ve düzelmelerle seyreden epizodlar geçirdiği anlaşılan hastada olası tanı nedir?",
+   "cevap": "Multipl skleroz (MS)",
+   "yil": "2020-2021",
+   "p": 14,
+   "c": 1,
+   "skor": 0.92
+  },
+  {
    "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-21",
    "kok": "Aşağıdakilerden hangisi sekonder baş ağrısını düşündüren öykü özelliğidir?",
    "cevap": "Erkek cinsiyet",
@@ -138,10 +201,28 @@
    "skor": 0.92
   },
   {
+   "id": "d3-k2-ftr-005",
+   "kok": "T6 ve üzeri kronik omurilik yaralanmalı bir hastada, dolu mesane veya gaita tıkacı gibi lezyon altı bir irritan uyaranla tetiklenen; lezyon üstünde paroksismal şiddetli hipertansiyon, zonklayıcı baş ağrısı, terleme ve refleks bradikardi ile karakterize medikal acil durum hangisidir?",
+   "cevap": "Otonomik disrefleksi (hiperrefleksi)",
+   "yil": "2021-2026",
+   "p": 15,
+   "c": 3,
+   "skor": 0.92
+  },
+  {
    "id": "3807e9b207c5",
    "kok": "Serebrovasküler hastalık ve hipertansiyon öyküsü olan, sol tarafta ani güç kaybı, dizartri ve baş ağrısı ile acile başvuran hastada öncelikle hangi tetkik istenir?",
    "cevap": "Kontrastsız beyin bilgisayarlı tomografi-difüzyon manyetik rezonans görüntüleme",
    "yil": "2020-2021",
+   "p": 17,
+   "c": 1,
+   "skor": 0.92
+  },
+  {
+   "id": "past-1790877045073-786870",
+   "kok": "C5 seviyesinde tetraplejik, 4 aylık omurilik yaralanması olan ve hipertansiyon öyküsü olmayan hasta akşam saatlerinde acil servise zonklayıcı baş ağrısı, kızarıklık ve terleme ile başvuruyor. Acil serviste kan basıncı 190/100 mmHg olarak ölçülüyor. İlk değerlendirmede üriner sondasının tıkanmış olduğu görülüyor. Bu hastada akla gelmesi gereken ilk tanı aşağıdakilerden hangisidir?",
+   "cevap": "Otonomik disrefleksi",
+   "yil": "2021-2022",
    "p": 17,
    "c": 1,
    "skor": 0.92
@@ -165,94 +246,13 @@
    "skor": 0.92
   },
   {
-   "id": "4c4eb178b88b",
-   "kok": "Nörolojik öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği, zamanla düzelen ve tekrarlayan epizodlar geçirdiği anlaşılan bir hastada en olası tanı aşağıdakilerden hangisidir?",
-   "cevap": "Multipl skleroz (MS)",
-   "yil": "2020-2021",
-   "p": 10,
-   "c": 0,
-   "skor": 0.625
-  },
-  {
-   "id": "4ba07c308e35",
-   "kok": "Öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği, zaman içinde atak ve düzelmelerle seyreden epizodlar geçirdiği anlaşılan hastada olası tanı nedir?",
-   "cevap": "Multipl skleroz (MS)",
-   "yil": "2020-2021",
-   "p": 14,
-   "c": 1,
-   "skor": 0.614
-  },
-  {
-   "id": "past-q-_SKENDERUN_T_M_d_rl___ne0__1__230709_230251-7",
-   "kok": "Disk hernisinde görülen ağrı aşağıdaki ağrı tiplerinden hangisine örnek verilebilir?",
-   "cevap": "Nöropatik ağrı",
-   "yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
-   "p": 3,
-   "c": 3,
-   "skor": 0.609
-  },
-  {
-   "id": "past-1790877045073-786870",
-   "kok": "C5 seviyesinde tetraplejik, 4 aylık omurilik yaralanması olan ve hipertansiyon öyküsü olmayan hasta akşam saatlerinde acil servise zonklayıcı baş ağrısı, kızarıklık ve terleme ile başvuruyor. Acil serviste kan basıncı 190/100 mmHg olarak ölçülüyor. İlk değerlendirmede üriner sondasının tıkanmış olduğu görülüyor. Bu hastada akla gelmesi gereken ilk tanı aşağıdakilerden hangisidir?",
-   "cevap": "Otonomik disrefleksi",
-   "yil": "2021-2022",
-   "p": 17,
-   "c": 1,
-   "skor": 0.616
-  },
-  {
-   "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-19",
-   "kok": "Bilinç bozukluğu olan hastanın ayırıcı tanısında aşağıdakilerden hangisi mutlaka düşünülmelidir?",
-   "cevap": "Hipoglisemi",
-   "yil": "2023",
-   "p": 6,
-   "c": 2,
-   "skor": 0.612
-  },
-  {
-   "id": "58700c98a3db",
-   "kok": "Bağırsaklarda meydana gelen patolojilere bağlı ağrılar aşağıdaki ağrı tiplerinden hangisine örnek verilebilir?",
-   "cevap": "Visseral ağrı",
-   "yil": "2020-2021",
-   "p": 5,
-   "c": 0,
-   "skor": 0.604
-  },
-  {
-   "id": "d3-k2-ftr-005",
-   "kok": "T6 ve üzeri kronik omurilik yaralanmalı bir hastada, dolu mesane veya gaita tıkacı gibi lezyon altı bir irritan uyaranla tetiklenen; lezyon üstünde paroksismal şiddetli hipertansiyon, zonklayıcı baş ağrısı, terleme ve refleks bradikardi ile karakterize medikal acil durum hangisidir?",
-   "cevap": "Otonomik disrefleksi (hiperrefleksi)",
-   "yil": "2021-2026",
-   "p": 15,
-   "c": 3,
-   "skor": 0.614
-  },
-  {
-   "id": "966e1cde012c",
-   "kok": "Spinal müsküler atrofi tiplerinden en ağır kliniğe sahip olanı hangisidir?",
-   "cevap": "Akut infantil SMA (tip I)",
-   "yil": "2020-2021",
-   "p": 3,
-   "c": 3,
-   "skor": 0.604
-  },
-  {
-   "id": "q-2__kurul_-1",
-   "kok": "Nörolojik hastalıkların başlangıç şekli değerlendirildiğinde, aşağıdakilerden hangisi tipik olarak akut başlangıçlı (dakikalar-saatler içinde yerleşen) bir tablodur?",
-   "cevap": "Hemipleji",
-   "yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
-   "p": 0,
-   "c": 4,
-   "skor": 0.627
-  },
-  {
    "id": "d3-k2-ah-008",
    "kok": "Asemptomatik yetişkin bireylerde kardiyovasküler risk taraması amacıyla birinci basamakta en az yılda bir kez yapılması önerilen en maliyet-etkin ve temel fizik muayene taraması hangisidir?",
    "cevap": "Kan basıncı (tansiyon) ölçümü",
    "yil": "2021-2026",
    "p": 18,
    "c": 3,
-   "skor": 0.652
+   "skor": 0.92
   }
  ]
 }

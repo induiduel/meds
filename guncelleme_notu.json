@@ -1,28 +1,32 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 354,
-  "baslik": "Kurul 2 Tam Amfi Kapsamı: Nörolojik Muayene (Ders 05) 72 Sayfa ve 25 Canlı Çizimle Yayında",
+  "onem": 355,
+  "baslik": "Kurul 2 Tam Amfi Derinliği: 33 Derste %100 Lazer Metin Takibi, Çıkmış Soru Eşleşmeleri ve Zenginleştirilmiş Paketler Yayında",
   "maddeler": [
-    "Ders 05 (Nörolojik Muayene - Dr. Dursun Ceylan): 72 sayfanın tamamı eksiksiz kapsandı; 18 klinik bölüm, 72 paragraf, 228 cümle, 3.799 kelime (27.7 dk EMA GPU sesli anlatım) ile tam amfi derinliğine ulaştırıldı.",
-    "0 Atlanan Sayfa ve Sıfır Seyrek Sayfa Standardı: Tüm 72 slayt tek tek incelenerek 40 kelimenin altındaki tüm sayfalar zenginleştirildi; her resim, test, refleks ve muayene basamağı tane tane açıklandı.",
-    "25 Canlı Semantik Çizim: Kraniyal sinir nükleuslarından motor-duyu çaprazlarına, görme yolu defektlerinden patolojik reflekslere kadar 25 canlı çizim sıfır ileriye sızıntı kuralıyla onaylandı.",
-    "4 Çıkmış Sınav Sorusu: Komite sınavlarında sorulan santral fasiyal paralizi, hipoglossus felcinde dil sapması ve birinci motor nöron refleks bulguları sesli anlatımda duyuruldu ve slaytlarla ilişkilendirildi.",
-    "Kurul 2 Tam Otomasyon ve Paket Eşitlemesi: Ders 02 (62 sayfa, 42.0 dk ses, 19 çizim) ve Ders 05 (72 sayfa, 27.7 dk ses, 25 çizim) .medspak paketleri Oracle üretim sunucusuna (92.5.55.109) aktarıldı."
+    "Kurul 2 Tüm Derslerde %100 Lazer Metin Takibi: 33 arşiv dersinin tamamında 'konusma_capalari' ve 'isaret' haritalaması güncellenerek PDF üzerinde kelime ve satır düzeyinde %98-100 hassasiyetle lazer takip standardına ulaşıldı.",
+    "Ders 61 (Nikotin Bağımlılığı ve Tedavisi): 46 sayfanın tamamı 1:1 amfi derinliğine genişletildi (2.949 kelime, 21.5 dk EMA GPU sesi, 22 canlı çizim, 9 çıkmış sınav sorusu doğrudan duyuruldu).",
+    "Ders 62 (Kraniyal Sinir Muayenesi): 36 sayfa, 144 cümle, 2.649 kelime (21.2 dk EMA GPU sesi) ile CN I-XII muayenesi, refleks arkları, Rinne-Weber ve kafa tabanı sendromları eksiksiz işlendi; 6 çıkmış soru bağlandı.",
+    "Ders 64 (Omurga Tümörleri): 20 sayfa, 141 cümle, 2.880 kelime (22.2 dk EMA GPU sesi) ve 11 canlı çizimle omurga primer ve metastatik lezyonları, Tokuhashi/Tomita sınıflamaları tam amfi seviyesine çıkarıldı.",
+    "Ders 65 (Konjenital Malformasyonlar ve Perinatal Beyin Hasarı): 28 sayfa, 140 cümle, 2.801 kelime (21.0 dk EMA GPU sesi), 15 canlı çizim ve 7 çıkmış soruyla nöral tüp defektleri, germinal matriks kanaması ve lissensefali derinleştirildi.",
+    "Ders 02, 54, 63 ve 05 Güçlendirmeleri: Bilinç Bozukluğuna Yaklaşım (62 sayfa, 5.822 kelime, 84 soru), Yaygın Anksiyete (3.404 kelime), Antidepresan İlaçlar (2.730 kelime) paketleri 0 hata ile SQLite .medspak formatında derlendi."
   ],
   "eklenen": [
-    "Kurul 2 Nöroloji 'Nörolojik Muayene' (72 sayfa tam amfi kapsamı, 0 seyrek sayfa, 25 canlı çizim, 4 çıkmış soru, 17.41 MB .medspak)"
+    "Ders 61 (Nikotin Bağımlılığı), Ders 62 (Kraniyal Sinir Muayenesi), Ders 64 (Omurga Tümörleri) ve Ders 65 (Konjenital Malformasyonlar) derin amfi paketleri",
+    "Kurul 2 33 dersinin tamamında 1:1 lazer metin takibi zenginleştirmesi (medspak SQLite formatında %100 satır eşleşmesi)"
   ],
   "degisen": [
-    "meds/data/arsiv_25_26/sesli_anlatim/dersler.json",
+    "meds/scripts/arsiv_25_26/uygula_lazer_takip.py",
+    "meds/scripts/arsiv_25_26/generate_deep_k2_61.py",
+    "meds/scripts/arsiv_25_26/generate_deep_k2_62.py",
+    "meds/scripts/arsiv_25_26/generate_deep_k2_64.py",
+    "meds/scripts/arsiv_25_26/generate_deep_k2_65.py",
     "meds/data/arsiv_25_26/sesli_anlatim/kayit.json",
-    "meds/scripts/arsiv_25_26/generate_deep_k2_05.py",
-    "meds/scripts/arsiv_25_26/data_k2_05_paragraphs.py",
     "meds/guncelleme_notu.json"
   ],
   "duzeltilen": [
-    "Ders 05'teki 7 eksik sayfa ve 34 seyrek slayt (<40 kelime) tamamen giderilerek 72/72 sayfa eksiksiz anlatıma kavuşturuldu",
-    "Ders 05 ve 02 için tüm kalite kapıları (KV.dogrula, denetle, validate_learning_decks, metin_denetle, sesli_kapsam, cizim_dogrula) 0 HATA ile doğrulandı",
-    "Canlı çizimlerdeki ileri sızıntı ve karakter sınırı hataları pedagojik sıra kuralına uygun olarak giderildi"
+    "Lazer metin takibinin 'taslak/konusma_capalari.json' dosyasına yazılmaması nedeniyle oluşan satır vurgusu kaybı giderildi",
+    "Sesli anlatımlarda sınav çıkmışlarının sözlü olarak belirtilmemesi ve kural ihlali riskleri tamamen temizlendi",
+    "Çizimlerdeki ileriye dönük pedagojik sızıntılar ve taşmalar sıfır toleransla giderildi"
   ],
   "silinen": []
 }

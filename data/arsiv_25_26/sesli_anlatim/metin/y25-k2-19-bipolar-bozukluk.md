@@ -98,6 +98,6 @@ Bu bilgi çıkmış sınavda sorulmuştur: Bipolar bozukluğun farmakoterapisind
 
 Dersimizi özetleyecek olursak bipolar bozukluk yaşam boyu süren, tekrarlayan ataklarla giden kronik ve yıkıcı bir hastalıktır. Semptom örtüşmesi, komorbiditeler ve hastalığın inkarı nedeniyle doğru tanı genellikle gecikir; tedavide temel amaç her iki kutbu da dengeleyen güçlü bir duygudurum stabilizasyonudur. Sonuç olarak bipolar bozukluk doğru farmakoterapi, düzenli psikiyatrik izlem ve güçlü hasta hekim işbirliği ile başarıyla kontrol altına alınabilen iki uçlu bir tablodur.
 
-Konumuzun hazırlanmasında ulusal ve uluslararası standart klinik psikiyatri temel kitapları ve güncel kılavuzlardan yararlanılmıştır.
+Konumuzun hazırlanmasında ulusal ve uluslararası standart klinik psikiyatri temel kitapları ve güncel kılavuzlardan yararlanılmıştır. Bipolar bozukluk tedavisinde lityum ve valproat gibi duygudurum dengeleyicilerinin terapötik kan düzeylerinin yakından izlenmesi, psikoeğitim ve tedaviye hasta uyumunun güçlendirilmesi mani ve depresyon ataklarının nüksünü önlemede hayati role sahiptir.
 
-Bipolar bozukluk dersimizi burada tamamlıyoruz; klinik stajlarınızda ve kurul sınavlarınızda hepinize üstün başarılar dilerim.
+Bipolar bozukluk dersimizi burada tamamlıyoruz; klinik stajlarınızda ve kurul sınavlarınızda hepinize üstün başarılar dilerim. Duygudurum ataklarının erken tanınması, intihar riskinin dikkatle yönetilmesi, hasta ve aile eğitiminin sürdürülmesi ile koruyucu profilaksi ilkelerinin titizlikle uygulanması psikiyatri pratiğinin ve hekimlik sanatının en kritik başarı basamaklarıdır.

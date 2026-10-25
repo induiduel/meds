@@ -3,6 +3,24 @@
  "metinHash": "b696dd85b3f2a5ae0f7923fde727df71b58bfa6a",
  "q": [
   {
+   "id": "cec65023ada1",
+   "kok": "Prematüre yenidoğanlarda intrakraniyal kanamayı göstermek için öncelikle hangi görüntüleme yöntemi kullanılır?",
+   "cevap": "Transkraniyal ultrasonografi",
+   "yil": "2020-2021",
+   "p": 4,
+   "c": 2,
+   "skor": 0.92
+  },
+  {
+   "id": "91425937cb81",
+   "kok": "Prematüre yenidoğanlarda intrakraniyal kanamayı göstermek için öncelikle hangi görüntüleme yöntemi kullanılır?",
+   "cevap": "Transkraniyal ultrasonografi",
+   "yil": "2020-2021",
+   "p": 4,
+   "c": 2,
+   "skor": 0.92
+  },
+  {
    "id": "d3-k2-bey-003",
    "kok": "Akut kafa travması ile acil servise getirilen, hemodinamisi stabil olmayan veya bilinci bozulan bir hastada kemik kırıklarını, akut kanamaları ve kitle etkisini en hızlı ve güvenilir şekilde gösteren ilk tetkik aşağıdakilerden hangisidir?",
    "cevap": "Kontrastsız beyin bilgisayarlı tomografisi (BT)",
@@ -18,6 +36,15 @@
    "yil": "2021-2026",
    "p": 8,
    "c": 0,
+   "skor": 0.92
+  },
+  {
+   "id": "d3-k2-nor-011",
+   "kok": "Genellikle genç erkeklerde, geceleri uykudan uyandıran, tek taraflı periorbital/temporal, delici-oyucu tarzda çok şiddetli ağrıya eşlik eden aynı tarafta göz yaşarması, burun tıkanıklığı ve konjonktival hiperemi ile seyreden primer baş ağrısı hangisidir?",
+   "cevap": "Küme baş ağrısı (trigeminal otonomik sefalalji)",
+   "yil": "2021-2026",
+   "p": 8,
+   "c": 2,
    "skor": 0.92
   },
   {
@@ -129,6 +156,15 @@
    "skor": 0.92
   },
   {
+   "id": "d3-k2-psi-006",
+   "kok": "Kafa travması veya hipoksik beyin hasarı sonrasında, olayın gerçekleştiği andan itibaren yeni bilgilerin öğrenilememesi ve kısa süreli bellekten uzun süreli belleğe aktarılamaması ile karakterize tablo aşağıdakilerden hangisidir?",
+   "cevap": "Anterograd amnezi",
+   "yil": "2021-2026",
+   "p": 48,
+   "c": 0,
+   "skor": 0.92
+  },
+  {
    "id": "6e0a49170b5b",
    "kok": "Kafa içi basınç artışı sendromu (KİBAS) ile ilgili aşağıdaki ifadeler verilmiştir:\nI. Kafa içi basıncı yapısal ve metabolik değişikliklere neden olan patolojik durumlarda artabilir.\nII. Hipertansiyon, bradikardi ve bradipne Cushing triadını oluşturur.\nIII. KİBAS tanısı koymada çoğunlukla klinik belirtiler ve göz dibi bulguları (papilödem) esas alınır.\nIV. Kafa içi basınç artışı yönetiminde hedef, serebral perfüzyon basıncını azaltarak beyin dokusunun zarar görmesini engellemektir.\nYukarıda verilen ifadelerden hangileri doğrudur?",
    "cevap": "I, II ve III",
@@ -136,42 +172,6 @@
    "p": 64,
    "c": 0,
    "skor": 0.92
-  },
-  {
-   "id": "d3-k2-nor-011",
-   "kok": "Genellikle genç erkeklerde, geceleri uykudan uyandıran, tek taraflı periorbital/temporal, delici-oyucu tarzda çok şiddetli ağrıya eşlik eden aynı tarafta göz yaşarması, burun tıkanıklığı ve konjonktival hiperemi ile seyreden primer baş ağrısı hangisidir?",
-   "cevap": "Küme baş ağrısı (trigeminal otonomik sefalalji)",
-   "yil": "2021-2026",
-   "p": 8,
-   "c": 2,
-   "skor": 0.602
-  },
-  {
-   "id": "d3-k2-psi-006",
-   "kok": "Kafa travması veya hipoksik beyin hasarı sonrasında, olayın gerçekleştiği andan itibaren yeni bilgilerin öğrenilememesi ve kısa süreli bellekten uzun süreli belleğe aktarılamaması ile karakterize tablo aşağıdakilerden hangisidir?",
-   "cevap": "Anterograd amnezi",
-   "yil": "2021-2026",
-   "p": 48,
-   "c": 0,
-   "skor": 0.602
-  },
-  {
-   "id": "cec65023ada1",
-   "kok": "Prematüre yenidoğanlarda intrakraniyal kanamayı göstermek için öncelikle hangi görüntüleme yöntemi kullanılır?",
-   "cevap": "Transkraniyal ultrasonografi",
-   "yil": "2020-2021",
-   "p": 4,
-   "c": 2,
-   "skor": 0.647
-  },
-  {
-   "id": "91425937cb81",
-   "kok": "Prematüre yenidoğanlarda intrakraniyal kanamayı göstermek için öncelikle hangi görüntüleme yöntemi kullanılır?",
-   "cevap": "Transkraniyal ultrasonografi",
-   "yil": "2020-2021",
-   "p": 4,
-   "c": 2,
-   "skor": 0.647
   }
  ]
 }

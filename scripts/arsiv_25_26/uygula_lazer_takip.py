@@ -104,8 +104,15 @@ def zenginlestir_ders(key: str) -> tuple[int, int, float, float]:
     # Kaydet capa ve v2
     capa_data["p"] = capas
     capa_yol.write_text(json.dumps(capa_data, ensure_ascii=False, indent=1), encoding="utf-8")
+    taslak_capa = DB_25_26 / "taslak" / key / "konusma_capalari.json"
+    if taslak_capa.exists():
+        taslak_capa.write_text(json.dumps(capas, ensure_ascii=False, indent=1), encoding="utf-8")
+
     if v2 and v2_yol.exists():
         v2_yol.write_text(json.dumps(v2, ensure_ascii=False, indent=1), encoding="utf-8")
+        taslak_v2 = DB_25_26 / "taslak" / key / "konusma_v2.json"
+        if taslak_v2.exists():
+            taslak_v2.write_text(json.dumps(v2, ensure_ascii=False, indent=1), encoding="utf-8")
 
     pars = AY.metin_paragraflari(metin_yol.read_text(encoding="utf-8"))
     hz = json.loads(hz_yol.read_text(encoding="utf-8"))

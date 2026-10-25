@@ -54,6 +54,31 @@
         "cizimSayisi": 15,
         "cikmisEslesme": 17
       }
+    },
+    {
+      "surum": 3,
+      "tarih": "2026-10-25 21:00",
+      "neden": "2025-2026 geçmiş yıl arşiv dersi ilk üretimi ve Kurul 2 tam otomatik hat kapı doğrulaması",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi KONJENİTAL MALFORMASYONLAR VE PERİNATAL BEYİN HASARI.pdf (28 sayfa) kaynağından 0 atlanan sayfa ile 28 paragraf / 140 cümlelik sesli anlatım üretildi.",
+        "18 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 15 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 21.0 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 1260,
+        "sureDk": 21.0,
+        "sayfaSayisi": 28,
+        "atlananSayfa": 0,
+        "bolumSayisi": 8,
+        "paragrafSayisi": 28,
+        "cumleSayisi": 140,
+        "slaytAdimSayisi": 18,
+        "cizimSayisi": 15,
+        "cikmisEslesme": 17
+      }
     }
   ]
 }

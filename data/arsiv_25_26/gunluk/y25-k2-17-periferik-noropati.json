@@ -54,6 +54,31 @@
         "cizimSayisi": 25,
         "cikmisEslesme": 21
       }
+    },
+    {
+      "surum": 3,
+      "tarih": "2026-10-25 21:16",
+      "neden": "2025-2026 geçmiş yıl arşiv dersi ilk üretimi ve Kurul 2 tam otomatik hat kapı doğrulaması",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi POLİNÖROPATİLER.pdf (23 sayfa) kaynağından 0 atlanan sayfa ile 49 paragraf / 236 cümlelik sesli anlatım üretildi.",
+        "16 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 25 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 29.6 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 1775,
+        "sureDk": 29.6,
+        "sayfaSayisi": 23,
+        "atlananSayfa": 0,
+        "bolumSayisi": 12,
+        "paragrafSayisi": 49,
+        "cumleSayisi": 236,
+        "slaytAdimSayisi": 16,
+        "cizimSayisi": 25,
+        "cikmisEslesme": 21
+      }
     }
   ]
 }
