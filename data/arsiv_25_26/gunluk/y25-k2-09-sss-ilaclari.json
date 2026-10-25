@@ -1,0 +1,34 @@
+{
+  "key": "y25-k2-09-sss-ilaclari",
+  "donem": "2025-2026",
+  "kurul": 2,
+  "brans": "Tıbbi Farmakoloji",
+  "baslik": "SSS İlaçları",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-10-25 04:45",
+      "neden": "2025-2026 Kurul 2 Tıbbi Farmakoloji 2 (SSS İlaçları) tam otomatik hat üretimi, EMA GPU seslendirme ve medspak yayını",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi 21 MSS İlaçları Farmakolojisine Giriş_251103_085815.pdf (56 sayfa) kaynağından 0 atlanan sayfa ile 56 paragraf / 171 cümlelik sesli anlatım üretildi.",
+        "20 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 28 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 25.7 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 1542,
+        "sureDk": 25.7,
+        "sayfaSayisi": 56,
+        "atlananSayfa": 0,
+        "bolumSayisi": 15,
+        "paragrafSayisi": 56,
+        "cumleSayisi": 171,
+        "slaytAdimSayisi": 20,
+        "cizimSayisi": 28,
+        "cikmisEslesme": 26
+      }
+    }
+  ]
+}

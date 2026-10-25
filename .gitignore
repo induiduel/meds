@@ -2,6 +2,12 @@ node_modules/
 build/
 dist/
 dist-gh/
+dist-android/
+public/apk/
+android/app/src/main/assets/public/
+android/app/build/
+android/.gradle/
+android/local.properties
 coverage/
 .DS_Store
 *.log
@@ -78,6 +84,7 @@ data/tts_cache/
 
 # Sesli anlatım: sesler ve çalışma durumu sunucuda üretilir (metin/ + dersler.json repoda)
 data/sesli_anlatim/ses/
+data/arsiv_25_26/sesli_anlatim/ses/
 data/sesli_anlatim/kayit.json
 data/sesli_anlatim/kuyruk.json
 data/sesli_anlatim/butce.json

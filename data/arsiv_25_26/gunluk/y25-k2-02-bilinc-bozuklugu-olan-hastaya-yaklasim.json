@@ -30,6 +30,31 @@
         "cizimSayisi": 25,
         "cikmisEslesme": 29
       }
+    },
+    {
+      "surum": 2,
+      "tarih": "2026-10-25 02:53",
+      "neden": "2025-2026 geçmiş yıl arşiv dersi ilk üretimi ve Kurul 2 tam otomatik hat kapı doğrulaması",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi 1. Bilinç Bozukluğu Olan Hastaya Yaklaşım.pdf (62 sayfa) kaynağından 0 atlanan sayfa ile 29 paragraf / 106 cümlelik sesli anlatım üretildi.",
+        "74 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 66 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 16.2 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 975,
+        "sureDk": 16.2,
+        "sayfaSayisi": 62,
+        "atlananSayfa": 0,
+        "bolumSayisi": 15,
+        "paragrafSayisi": 29,
+        "cumleSayisi": 106,
+        "slaytAdimSayisi": 74,
+        "cizimSayisi": 66,
+        "cikmisEslesme": 29
+      }
     }
   ]
 }

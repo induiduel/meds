@@ -1,0 +1,3191 @@
+{
+ "id": "k2p-y25-k2-09-sss-ilaclari",
+ "deckId": "k2p-y25-k2-09-sss-ilaclari",
+ "title": "Santral Sinir Sistemi İlaçlarına Giriş ve Genel İlkeler",
+ "shortTitle": "SSS İlaçları Farmakolojisi",
+ "discipline": "Tıbbi Farmakoloji",
+ "committee": "donem3-kurul2",
+ "instructor": "Prof. Dr. Mehmet Özdemir",
+ "matchedNoteId": "y25-k2-09",
+ "overview": "Bu interaktif öğrenme destesi, santral sinir sistemi farmakolojisinin temel ilkelerini, kan-beyin bariyeri dinamiklerini, glia hücrelerinin homeostatik rollerini, iyonotropik ve metabotropik reseptör mekanizmalarını, eksitatör ve inhibitör nöronal devre organizasyonunu ve santral nörotransmiter sistemlerini (glutamat, GABA, glisin, monoaminler, nöropeptitler ve atipik lipid/gaz haberciler) adım adım ve nedensel fizyopatolojik temelde ele alır.",
+ "highYieldPearls": [
+  "Kan-beyin bariyerinde polar dopamin geçemezken amino asit taşıyıcısını (LAT1) kullanan öncül molekül L-DOPA santrale geçerek dopamine dönüşür.",
+  "GABA-A reseptörü hızlı IPSP üreten iyonotropik klorür kanalıyken, GABA-B Gi/o kenetli metabotropik reseptördür ve seçici agonisti antispastik ilaç baklofendir.",
+  "NMDA reseptörünün açılabilmesi için membran depolarizasyonuyla voltaj-bağımlı Mg2+ bloğunun kalkması ve glisin ko-agonistinin bağlanması şarttır; Ca2+ girişi LTP ve bellek oluşumunu tetikler.",
+  "Serotonin (5-HT) reseptör ailesinde 5-HT3 reseptörü tek ligand kapılı iyonotropik katyon kanalıdır; diğer tüm tipler metabotropik GPCR yapısındadır.",
+  "Endokannabinoidler (anandamid, 2-AG) vezikülsüz sentezlenip geriye doğru difüze olarak presinaptik CB1 reseptörleri üzerinden retrograd sinaptik baskılama yaparlar."
+ ],
+ "kazanimlar": [
+  "MSS ilaçlarının etki hedeflerini, sinaptik ileti modülasyonunu ve patofizyolojik hastalık hipotezlerini açıklayabilme.",
+  "Kan-beyin bariyerinin yapısını, pasif difüzyon ve taşıyıcı aracılı ilaç taşınma mekanizmalarını ayırt edebilme.",
+  "İyonotropik ve metabotropik reseptörlerin iyonik iletkenlik, sinyal kaskadı ve hız farklarını karşılaştırabilme.",
+  "Hiyerarşik ve yaygın (diffüz) nöronal sistemlerin akson yapısı, iletim hızı ve varikosite organizasyonunu kavrayabilme.",
+  "Glutamat, GABA, glisin, monoaminler, nöropeptitler ve endokannabinoidlerin etki mekanizmalarını ve ilişkili farmakolojik ajanları analiz edebilme."
+ ],
+ "matchedPastQuestionsCount": 13,
+ "sayfaHaritasi": "teyitli",
+ "slides": [
+  {
+   "slideNumber": 1,
+   "id": "k2p-y25-k2-09-sss-ilaclari-s01",
+   "title": "MSS Farmakolojisine Giriş ve Sinaptik İleti Modülasyonu",
+   "subtitle": "Merkezi sinir sistemi ilaçları sinaptik iletiyi modüle ederek nörolojik ve psikiyatrik hastalıkların tedavisinde kullanılır.",
+   "badge": "Giriş ve İlkeler",
+   "bolum": 1,
+   "pdfSayfalari": [
+    2,
+    3
+   ],
+   "kaynakSayfa": "Sayfa 1-3",
+   "bilgi": "MSS ilaçlarının tarihsel önemi, etki hedefleri ve hastalık mekanizmalarına dayalı farmakolojik hipotezler.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "content": "Merkezi sinir sisteminde etkili ilaçlar, nörolojik ve psikiyatrik hastalıkların tedavisinde ve ağrının dindirilmesinde yaygın olarak kullanılan temel ajanlardır. Bu bileşikler hücresel düzeyde sinaptik iletiyi modüle ederek etki gösterirler.\n\n- **Reseptör Modülasyonu:** İlaçların büyük çoğunluğu doğal ileticileri taklit eden agonistler ya da iletimi engelleyen antagonistler olarak spesifik reseptörlere bağlanır.\n- **Reseptör Dışı Etkiler:** Genel anestezikler ve alkol gibi reseptör aracılı olmayan ajanlar dahi membran akışkanlığını değiştirerek sinaptik iletide belirgin değişiklikler oluşturur.\n- **Hastalık Hipotezleri:** Dopamin reseptör blokajı şizofreni patofizyolojisini, GABA reseptör etkileşimleri ise anksiyete ve epilepsi mekanizmalarını aydınlatmada temel oluşturmuştur.\n\n> [!NOTE]\n> Santral ilaçların klinik etkilerinin çözümlenmesi, nörolojik hastalık mekanizmalarının ve patofizyolojik süreçlerin anlaşılmasına doğrudan katkı sağlamıştır.",
+   "synthesisNarrative": "Merkezi sinir sisteminde etkili ilaçlar, nörolojik ve psikiyatrik hastalıkların tedavisinde ve ağrının dindirilmesinde yaygın olarak kullanılan temel ajanlardır. Bu bileşikler hücresel düzeyde sinaptik iletiyi modüle ederek etki gösterirler.\n\n- **Reseptör Modülasyonu:** İlaçların büyük çoğunluğu doğal ileticileri taklit eden agonistler ya da iletimi engelleyen antagonistler olarak spesifik reseptörlere bağlanır.\n- **Reseptör Dışı Etkiler:** Genel anestezikler ve alkol gibi reseptör aracılı olmayan ajanlar dahi membran akışkanlığını değiştirerek sinaptik iletide belirgin değişiklikler oluşturur.\n- **Hastalık Hipotezleri:** Dopamin reseptör blokajı şizofreni patofizyolojisini, GABA reseptör etkileşimleri ise anksiyete ve epilepsi mekanizmalarını aydınlatmada temel oluşturmuştur.\n\n> [!NOTE]\n> Santral ilaçların klinik etkilerinin çözümlenmesi, nörolojik hastalık mekanizmalarının ve patofizyolojik süreçlerin anlaşılmasına doğrudan katkı sağlamıştır.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Sinaptik İleti Modülasyonu",
+      "desc": "MSS ilaçlarının neredeyse tamamı sinaptik iletiyi modüle eden spesifik reseptörler veya membran mekanizmaları üzerinden etki gösterir.",
+      "isKey": true
+     },
+     {
+      "title": "Agonist ve Antagonist Araçlar",
+      "desc": "Doğal nörotransmiterleri taklit eden agonistler ve reseptörleri bloke eden antagonistler farmakolojik araştırmaların temelini oluşturur.",
+      "isKey": true
+     },
+     {
+      "title": "Patofizyoloji Hipotezleri",
+      "desc": "Dopamin antagonistleri şizofreni mekanizmasını, GABA modülatörleri ise anksiyete ve epilepsi patofizyolojisini aydınlatmıştır.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "MSS ilaçlarının büyük çoğunluğu kimyasal sinapslardaki spesifik reseptörleri modüle ederek terapötik etki gösterir.",
+    "Genel anestezikler ve alkol gibi reseptör aracılı olmayan ajanlar da sinaptik iletide ölçülebilir değişiklikler yapar."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Sinaptik İleti",
+     "explanation": "Nöronlar arasında aksiyon potansiyeli ve nörotransmiterler aracılığıyla elektriksel ve kimyasal sinyallerin aktarılma süreci."
+    },
+    {
+     "term": "Antipsikotik",
+     "explanation": "Şizofreni gibi psikotik bozukluklarda dopaminerjik aşırı aktiviteyi baskılamak amacıyla kullanılan farmakolojik ajan grubu."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-k2p-09-01",
+     "front": "MSS ilaçlarının neredeyse tamamının paylaştığı ortak hücresel etki hedefi nedir?",
+     "back": "Sinaptik iletiyi modüle eden spesifik reseptörler ve sinaptik iletim basamaklarıdır.",
+     "category": "Genel Farmakoloji"
+    },
+    {
+     "id": "fc-k2p-09-02",
+     "front": "Şizofreni ve anksiyete hastalık hipotezlerinin gelişiminde hangi nörotransmiter reseptör çalışmaları belirleyici olmuştur?",
+     "back": "Şizofrenide dopamin reseptörleri, anksiyete ve epilepside ise GABA reseptörleri belirleyici rol oynamıştır.",
+     "category": "Hastalık Hipotezleri"
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "21 MSS İlaçları Farmakolojisine Giriş_251103_085815.pdf",
+    "startPage": 2,
+    "endPage": 3,
+    "primaryPage": [
+     1,
+     2,
+     3
+    ],
+    "citation": "Sayfa 2–3 · Kurul 2 Tıbbi Farmakoloji · SSS İlaçları"
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "MSS farmakolojisinde klinik etkinliği bilinen ilaçların etki mekanizmalarının aydınlatılmasıyla ilgili hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Dopamin reseptörlerini bloke eden antipsikotikler şizofreni patofizyolojisi hipotezlerinin temelini oluşturmuştur.",
+       "isCorrect": true,
+       "explanation": "Antipsikotik ilaçların dopaminerjik iletimi ve D2 reseptörlerini bloke ettiği gösterilerek şizofrenide mezolimbik dopamin hipotezi geliştirilmiştir."
+      },
+      {
+       "key": "B",
+       "text": "Genel anestezikler ve alkol yalnızca spesifik protein reseptörlerine bağlanarak sinaptik iletiyi tamamen durdurur.",
+       "isCorrect": false,
+       "explanation": "Genel anestezikler ve alkol klasik ligand-reseptör bağlanması dışında membran özelliklerini etkileyen reseptör dışı mekanizmalarla da etki gösterirler."
+      },
+      {
+       "key": "C",
+       "text": "GABA reseptör agonist ve antagonistleri yalnızca nöromusküler kavşaktaki istemli kas kasılmalarını düzenler.",
+       "isCorrect": false,
+       "explanation": "GABA santral sinir sisteminin temel inhibitör nörotransmiteri olup anksiyete, sedasyon ve epilepsi gibi merkezi süreçlerin kontrolünde rol oynar."
+      },
+      {
+       "key": "D",
+       "text": "Santral etkili ilaçların tamamı nöron gövdesinde protein sentezini engelleyerek hücresel apoptozu tetikler.",
+       "isCorrect": false,
+       "explanation": "Santral ilaçlar hücre ölümüne yol açmak yerine aksiyon potansiyeli yayılımını ve sinaptik nörotransmiter iletimini işlevsel olarak düzenlerler."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "MSS ilaçları hücresel düzeyde sinaptik iletiyi modüle ederek etki gösterirler.",
+     "maskedTerm": "sinaptik iletiyi modüle",
+     "hint": "Nöronlar arası kimyasal sinyal aktarımını düzenleme süreci."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "MSS İlaçları ve Hastalık Mekanizmaları",
+     "items": [
+      {
+       "text": "MSS ilaçlarının neredeyse tamamı sinaptik iletiyi modüle eden reseptörler veya membran mekanizmaları üzerinden etkir.",
+       "isLie": false,
+       "explanation": "Farmakolojik ajanlar çoğunlukla sinapslardaki kimyasal ileti basamaklarını uyararak veya baskılayarak işlev görürler."
+      },
+      {
+       "text": "Genel anestezikler ve alkol gibi reseptör aracılı olmayan ajanlar sinaptik iletide hiçbir ölçülebilir değişiklik oluşturmaz.",
+       "isLie": true,
+       "explanation": "Genel anestezikler ve alkol reseptör aracılı olmayan fizikokimyasal etkilerle dahi sinaptik iletide belirgin ve ölçülebilir değişiklikler yaparlar."
+      },
+      {
+       "text": "Doğal transmiterleri taklit eden agonistler ve antagonistler santral ilaç araştırmalarında vazgeçilmez deneysel araçlardır.",
+       "isLie": false,
+       "explanation": "Agonist ve antagonist ligandlar reseptörlerin hücresel yanıtlarını ve nöronal devrelerdeki işlevlerini anlamada doğrudan kullanılır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "MSS ilaçlarının sinaptik iletiyi modüle etmesinde klasik reseptör aracılı olmayan etki mekanizmasına iki önemli örnek nedir?",
+     "answer": "Genel anestezikler ve alkol, doğrudan tek bir reseptöre bağımlı olmayan membran etkileriyle sinaptik iletide belirgin değişiklikler oluştururlar."
+    }
+   ]
+  },
+  {
+   "slideNumber": 2,
+   "id": "k2p-y25-k2-09-sss-ilaclari-s02",
+   "title": "Beynin Hücresel Mimarisi: Nöronlar, Dendritler ve Akson İletisi",
+   "subtitle": "İnsan beyni yaklaşık 100 milyar nöron içerir; dendritler girdiyi toplarken akson çıkış sinyalini sinapslara taşır.",
+   "badge": "Nöronal Mimari",
+   "bolum": 1,
+   "pdfSayfalari": [
+    4,
+    5
+   ],
+   "kaynakSayfa": "Sayfa 4-5",
+   "bilgi": "Nöronun yapısal kısımları, dendritik ağaçlar, akson terminali ve sinaps oluşumu.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "content": "İnsan beyni, destekleyici glia hücreleriyle çevrelenmiş yaklaşık yüz milyar birbiriyle bağlantılı nörondan oluşur. Nöronlar elektrokimyasal süreçlerle bilgiyi işleyen ve ileten uyarılabilir hücrelerdir.\n\n- **Hücre Gövdesi ve Dendritler:** Soma metabolik merkezi oluşturur. Çok dallı dendritik ağaçlar diğer nöronlardan gelen girdileri toplar, entegre eder ve gövdeye iletir.\n- **Akson ve İletim:** Nöronlar genellikle tek bir aksona sahiptir; bu yapı çıkış sinyalini uzun mesafelere taşır ve hedef bölgelerde distal olarak dallanabilir.\n- **Sinaps Teması:** Akson terminali hedef nöronlarla sinaps adı verilen özelleşmiş bağlantı noktalarında buluşur ve nörotransmiter salınımı gerçekleşir.\n\n> [!NOTE]\n> Nöronlar çekirdek adı verilen kümeler halinde veya serebellum ve hipokampus gibi katmanlı yapılarda organize olarak karmaşık santral devreleri kurarlar.",
+   "synthesisNarrative": "İnsan beyni, destekleyici glia hücreleriyle çevrelenmiş yaklaşık yüz milyar birbiriyle bağlantılı nörondan oluşur. Nöronlar elektrokimyasal süreçlerle bilgiyi işleyen ve ileten uyarılabilir hücrelerdir.\n\n- **Hücre Gövdesi ve Dendritler:** Soma metabolik merkezi oluşturur. Çok dallı dendritik ağaçlar diğer nöronlardan gelen girdileri toplar, entegre eder ve gövdeye iletir.\n- **Akson ve İletim:** Nöronlar genellikle tek bir aksona sahiptir; bu yapı çıkış sinyalini uzun mesafelere taşır ve hedef bölgelerde distal olarak dallanabilir.\n- **Sinaps Teması:** Akson terminali hedef nöronlarla sinaps adı verilen özelleşmiş bağlantı noktalarında buluşur ve nörotransmiter salınımı gerçekleşir.\n\n> [!NOTE]\n> Nöronlar çekirdek adı verilen kümeler halinde veya serebellum ve hipokampus gibi katmanlı yapılarda organize olarak karmaşık santral devreleri kurarlar.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Girdi ve Çıktı Kutuplaşması",
+      "desc": "Dendritler çok sayıda nörondan gelen sinaptik girdileri toplarken, tek bir akson entegre edilen sinyali hedefe iletir.",
+      "isKey": true
+     },
+     {
+      "title": "Dendritik Ağaçlar",
+      "desc": "Karmaşık dallanma gösteren dendritler sinir sistemindeki bilginin uzaysal ve zamansal integrasyonunu sağlar.",
+      "isKey": true
+     },
+     {
+      "title": "Sinaptik Temas Noktaları",
+      "desc": "Akson terminalleri nörotransmiter depolayan veziküller içerir ve postsinaptik yapılarla fonksiyonel bağlantı kurar.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "Nöronlar yüzlerce dendrite sahip olabilirken genellikle tek bir aksonla çıkış sinyalini iletirler.",
+    "Akson terminalleri kimyasal sinapslarda nörotransmiter salgılayarak hedef hücre reseptörlerini uyarır."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Soma",
+     "explanation": "Nöronun çekirdeğini ve temel organellerini barındıran, metabolik sentez merkezi olan hücre gövdesi."
+    },
+    {
+     "term": "Akson Terminali",
+     "explanation": "Aksonun ucunda yer alan, nörotransmiter veziküllerini depolayan ve sinaptik aralığa salan özelleşmiş sonlanma bölgesi."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-k2p-09-03",
+     "front": "Tipik bir nöronda sinaptik girdileri toplayıp entegre eden morfolojik yapı hangisidir?",
+     "back": "Çok dallı karmaşık yapılar oluşturan dendritler ve dendritik ağaçlardır.",
+     "category": "Nöronal Anatomi"
+    },
+    {
+     "id": "fc-k2p-09-04",
+     "front": "Nöronun çıkış sinyalini hedef hücrelere taşıyan ve distal olarak dallanabilen yapı nedir?",
+     "back": "Genellikle tek bir adet bulunan akson ve akson terminalleridir.",
+     "category": "Nöronal Anatomi"
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "21 MSS İlaçları Farmakolojisine Giriş_251103_085815.pdf",
+    "startPage": 4,
+    "endPage": 5,
+    "primaryPage": [
+     4,
+     5
+    ],
+    "citation": "Sayfa 4–5 · Kurul 2 Tıbbi Farmakoloji · SSS İlaçları"
+   },
+   "interactiveElements": [
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Dendritik Girdi: Diğer nöronlardan gelen kimyasal sinyaller dendritik ağaçlar tarafından algılanır ve toplanır.",
+      "2. Somatik İntegrasyon: Hücre gövdesinde toplanan voltaj değişiklikleri akson tepeciğinde elektrokimyasal olarak entegre edilir.",
+      "3. Aksonal İletim: Eşik değer aşıldığında oluşan aksiyon potansiyeli tek bir akson boyunca hızla yayılır.",
+      "4. Sinaptik Ekzositoz: Akson terminaline ulaşan potansiyel veziküllerden nörotransmiter salınımını tetikler."
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Çok dallı dendritik ağaçlar diğer nöronlardan gelen girdileri toplar, entegre eder ve gövdeye iletir.",
+     "maskedTerm": "dendritik ağaçlar",
+     "hint": "Nöronun dallanmış alıcı uzantılarının oluşturduğu geniş yapı."
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Dendritler",
+     "rightCategory": "Akson",
+     "cards": [
+      {
+       "text": "Çok sayıda dallanma göstererek diğer nöronlardan gelen girdileri toplar.",
+       "category": "left"
+      },
+      {
+       "text": "Nöron başına genellikle tek bir adet bulunur ve çıkış sinyalini taşır.",
+       "category": "right"
+      },
+      {
+       "text": "Hücre gövdesine doğru elektrokimyasal bilginin entegrasyonunu iletir.",
+       "category": "left"
+      },
+      {
+       "text": "Uç kısmındaki terminallerde nörotransmiter içeren sinaptik veziküller barındırır.",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "MSS'deki nöronların yapısal ve işlevsel organizasyonu hakkında hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Nöronlar genellikle tek bir aksona sahip olup çıkış sinyallerini uzun mesafelere taşırlar.",
+       "isCorrect": true,
+       "explanation": "Nöronlar yüzlerce dendrite sahip olabilirken elektriksel çıkış sinyalini taşıyan genellikle tek bir akson uzantısı bulunur."
+      },
+      {
+       "key": "B",
+       "text": "Dendritler aksiyon potansiyellerini hedef dokulara ileten miyelinli ana çıkış yolaklarıdır.",
+       "isCorrect": false,
+       "explanation": "Dendritler diğer nöronlardan gelen eksitatör ve inhibitör sinaptik girdileri toplayan, entegre ederek hücre gövdesine ileten dallanmış alıcı yapılardır."
+      },
+      {
+       "key": "C",
+       "text": "Akson terminalleri yalnızca elektriksel aralıklı bağlantılarla hücreleri birbirine yapıştırır.",
+       "isCorrect": false,
+       "explanation": "Akson terminalleri veziküllerde depolanan kimyasal nörotransmiterleri sinaptik aralığa salgılayarak hedef nöronların membran reseptörlerini özgül şekilde uyarırlar."
+      },
+      {
+       "key": "D",
+       "text": "İnsan beyninde nöronlar destekleyici glia hücreleri olmaksızın serbestçe yüzerler.",
+       "isCorrect": false,
+       "explanation": "Santral sinir sistemindeki nöronlar astrosit, oligodendrosit ve mikroglia gibi yoğun glia hücre toplulukları tarafından sarılarak yapısal ve metabolik olarak desteklenir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 3,
+   "id": "k2p-y25-k2-09-sss-ilaclari-s03",
+   "title": "Nöroglia Hücreleri: Astrositler, Oligodendrositler ve Mikroglia",
+   "subtitle": "Glia hücreleri metabolik destek sağlar, miyelin kılıfı oluşturur ve nöronal homeostazı korur.",
+   "badge": "Glial Hücreler",
+   "bolum": 1,
+   "pdfSayfalari": [
+    6,
+    7
+   ],
+   "kaynakSayfa": "Sayfa 6-7",
+   "bilgi": "Astrositlerin homeostazdaki yeri, oligodendrosit miyelinizasyonu ve mikroglia savunma rolleri.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "content": "Merkezi sinir sisteminde nöronlara ek olarak temel yaşamsal işlevleri yürüten çok sayıda nöronal olmayan glia hücresi bulunur. Bu hücreler sinir dokusunun yapısal ve biyokimyasal bütünlüğünü korur.\n\n- **Astrositler:** Beyindeki en bol bulunan hücrelerdir; nöronlara metabolik besin sağlar, hücre dışı iyon dengesini korur ve nörotransmiterlerin geri alımında görev alırlar.\n- **Oligodendrositler:** Projeksiyon aksonlarını sararak miyelin kılıfı üretirler. Elektriksel yalıtım sağlayarak aksiyon potansiyeli yayılma hızını belirgin şekilde artırırlar.\n- **Mikroglia:** Kemik iliği kökenli olup santral sinir sisteminin resident makrofajlarıdır; immün gözetim ve hücresel fagositoz süreçlerini yürütürler.\n\n> [!IMPORTANT]\n> Oligodendrosit hasarı ve miyelin kaybı multipl skleroz hastalığının temel patolojisidir ve modern ilaç araştırmalarının önemli hedeflerindendir.",
+   "synthesisNarrative": "Merkezi sinir sisteminde nöronlara ek olarak temel yaşamsal işlevleri yürüten çok sayıda nöronal olmayan glia hücresi bulunur. Bu hücreler sinir dokusunun yapısal ve biyokimyasal bütünlüğünü korur.\n\n- **Astrositler:** Beyindeki en bol bulunan hücrelerdir; nöronlara metabolik besin sağlar, hücre dışı iyon dengesini korur ve nörotransmiterlerin geri alımında görev alırlar.\n- **Oligodendrositler:** Projeksiyon aksonlarını sararak miyelin kılıfı üretirler. Elektriksel yalıtım sağlayarak aksiyon potansiyeli yayılma hızını belirgin şekilde artırırlar.\n- **Mikroglia:** Kemik iliği kökenli olup santral sinir sisteminin resident makrofajlarıdır; immün gözetim ve hücresel fagositoz süreçlerini yürütürler.\n\n> [!IMPORTANT]\n> Oligodendrosit hasarı ve miyelin kaybı multipl skleroz hastalığının temel patolojisidir ve modern ilaç araştırmalarının önemli hedeflerindendir.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Astrosit Homeostazı",
+      "desc": "Ekstraselüler potasyum dengesini korur, sinaptik aralıktan glutamat gibi transmiterleri uzaklaştırır ve enerji substratı sağlar.",
+      "isKey": true
+     },
+     {
+      "title": "Oligodendrosit ve Miyelinizasyon",
+      "desc": "Santral aksonların etrafında miyelin tabakası oluşturarak saltatorik iletiyi ve yüksek sinir iletim hızını sağlar.",
+      "isKey": true
+     },
+     {
+      "title": "Mikroglia ve İmmün Yanıt",
+      "desc": "Mononükleer fagositik sistemin santral temsilcisi olarak doku hasarında aktive olur ve hücresel artıkları temizler.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "Beyinde sayıca en bol bulunan hücre grubu astrositlerdir ve sinaptik mikroçevreyi düzenlerler.",
+    "Multipl skleroz hastalığında primer hasar gören ve otoimmün saldırıya uğrayan hücreler oligodendrositlerdir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Miyelin Kılıfı",
+     "explanation": "Aksonları sararak elektriksel yalıtım sağlayan, sinirsel ileti hızını onlarca kat artıran lipid zengini membran tabakası."
+    },
+    {
+     "term": "Multipl Skleroz",
+     "explanation": "Santral sinir sisteminde oligodendrositlerin ve miyelin kılıfının harabiyetiyle seyreden kronik otoimmün nörolojik hastalık."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-k2p-09-05",
+     "front": "Beyinde en bol bulunan ve sinaptik nörotransmiter temizliğinde rol oynayan glia hücresi hangisidir?",
+     "back": "Astrositlerdir; metabolik besin desteği ve iyon homeostazı da sağlarlar.",
+     "category": "Nöroglia"
+    },
+    {
+     "id": "fc-k2p-09-06",
+     "front": "Santral aksonların miyelin kılıfını üreten ve multipl sklerozda hasarlanan hücre grubu nedir?",
+     "back": "Oligodendrositlerdir.",
+     "category": "Nöroglia"
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "21 MSS İlaçları Farmakolojisine Giriş_251103_085815.pdf",
+    "startPage": 6,
+    "endPage": 7,
+    "primaryPage": [
+     6,
+     7
+    ],
+    "citation": "Sayfa 6–7 · Kurul 2 Tıbbi Farmakoloji · SSS İlaçları"
+   },
+   "interactiveElements": [
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Glial Hücre Tipi",
+      "Temel Fizyolojik Görevi",
+      "İlişkili Klinik Patoloji"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Astrositler"
+        },
+        {
+         "text": "İyon dengesi ve transmiter geri alımı",
+         "isMasked": true,
+         "hint": "Potasyum tamponlaması ve sinaptik mesafe temizliği."
+        },
+        {
+         "text": "Reaktif gliozis ve sinaps fonksiyon bozukluğu"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Oligodendrositler"
+        },
+        {
+         "text": "Aksonal miyelin kılıfı üretimi"
+        },
+        {
+         "text": "Multipl skleroz demiyelinizasyonu",
+         "isMasked": true,
+         "hint": "Santral akson iletimini bozan otoimmün hastalık."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Mikroglia"
+        },
+        {
+         "text": "Fagositoz ve immün gözetim",
+         "isMasked": true,
+         "hint": "Santral makrofaj benzeri hücresel savunma faaliyeti."
+        },
+        {
+         "text": "Nöroinflamatuvar yanıt ve doku hasarı"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Oligodendrositler projeksiyon aksonlarını sararak miyelin kılıfı üretirler.",
+     "maskedTerm": "oligodendrositler",
+     "hint": "Santral sinir sisteminde aksonları yalıtan hücreler."
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "Genç bir erişkin hastada görme bulanıklığı, ekstremitelerde güçsüzlük ve santral sinir sisteminde yaygın demiyelinizasyon plakları tespit edilmiştir.",
+     "options": [
+      {
+       "text": "Patolojiden santral aksonların miyelin kılıfını üreten oligodendrositlerin hasarı sorumludur.",
+       "isCorrect": true,
+       "feedback": "Multipl sklerozda santral sinir sistemi aksonlarını miyelinleyen oligodendrositler hasarlanır ve sinir iletim hızı ciddi oranda düşer."
+      },
+      {
+       "text": "Patoloji yalnızca periferik sinirlerde Schwann hücrelerinin aşırı çoğalmasıyla ilişkilidir.",
+       "isCorrect": false,
+       "feedback": "Schwann hücreleri periferik sinir sisteminde miyelin kılıfı üretir; beyin ve omurilikteki santral miyelinizasyonu ve aksonal yalıtımı ise oligodendrositler sağlar."
+      },
+      {
+       "text": "Klinik tablo beyin omurilik sıvısında glukoz emilimini yapan mikrogliadan kaynaklanır.",
+       "isCorrect": false,
+       "feedback": "Mikroglia santral sinir sisteminde immün savunma ve fagositoz yapan hücredir; aksonal miyelin üretiminden ve demiyelinizasyondan doğrudan oligodendrositler sorumludur."
+      }
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Santral sinir sisteminde astrositlerin yerine getirdiği işlevlerle ilgili hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Hücre dışı iyon dengesini korur ve salınan nörotransmiterlerin uzaklaştırılmasını sağlarlar.",
+       "isCorrect": true,
+       "explanation": "Astrositler sinaptik aralıkta biriken nörotransmiterleri geri alır ve hücre dışı potasyum konsantrasyonunu hassas biçimde tamponlayarak nöronal homeostazı korurlar."
+      },
+      {
+       "key": "B",
+       "text": "Aksiyon potansiyellerini uzak nöronlara iletmek için kalın aksonlar geliştirirler.",
+       "isCorrect": false,
+       "explanation": "Astrositler nöronlara metabolik besin sağlayan ve homeostazı sürdüren glial destek hücreleridir. Bu hücreler elektriksel aksiyon potansiyeli ileten aksonal uzantılar içermezler."
+      },
+      {
+       "key": "C",
+       "text": "Kemik iliğinden yeni göç etmiş lenfositler olarak antikor sentezi yaparlar.",
+       "isCorrect": false,
+       "explanation": "Astrositler nöroektoderm kökenli olup santral sinir sisteminde yapısal ve metabolik destek sağlarlar. İmmünoglobulin veya antikor sentezleme işlevleri bulunmaz."
+      },
+      {
+       "key": "D",
+       "text": "Yalnızca periferik motor nöronların Ranvier boğumlarında miyelin üretirler.",
+       "isCorrect": false,
+       "explanation": "Sinir sisteminde miyelin kılıfını santralde oligodendrositler, periferde ise Schwann hücreleri üretir. Astrositler ise miyelin yapmak yerine sinaptik mikroçevreyi ve iyon dengesini düzenlerler."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 4,
+   "id": "k2p-y25-k2-09-sss-ilaclari-s04",
+   "title": "Kan-Beyin Bariyeri (KBB): Yapısı, Geçirgenlik ve İlaç Taşınması",
+   "subtitle": "Endotel sıkı bağlantıları ve astrosit son ayakları KBB'yi oluşturarak ilaç girişini sınırlar.",
+   "badge": "Kan-Beyin Bariyeri",
+   "bolum": 1,
+   "pdfSayfalari": [
+    8,
+    9
+   ],
+   "kaynakSayfa": "Sayfa 8-9",
+   "bilgi": "KBB anatomik yapısı, pasif difüzyon, taşıyıcı sistemler ve Parkinson tedavisinde L-DOPA stratejisi.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "content": "Kan-beyin bariyeri, dolaşan kan ile santral sinir sisteminin ekstraselüler sıvısı arasında koruyucu işlevsel bir bariyerdir. Beyin kapiller endotel hücreleri arasındaki sıkı bağlantılar ve perivasküler astrosit son ayakları bu yapıyı oluşturur.\n\n- **Geçirgenlik İlkeleri:** Hidrofobik ve lipidde çözünen küçük moleküller pasif difüzyonla bariyeri kolayca aşabilirken polar maddeler geçemez.\n- **Spesifik Taşıyıcılar:** Glukoz ve esansiyel amino asitler gibi yaşamsal besin maddeleri özelleşmiş membran taşıyıcıları aracılığıyla beyne alınır.\n- **Farmakolojik Tasarım:** Dopamin KBB'yi geçemediğinden, Parkinson hastalığında amino asit taşıyıcısını kullanan öncül molekül L-DOPA uygulanır.\n\n> [!NOTE]\n> KBB'nin varlığı santral ilaç tasarımında en kritik belirleyicidir; periferde etkili olan birçok molekül bariyeri aşamadığı için MSS'de terapötik etkinlik gösteremez.",
+   "synthesisNarrative": "Kan-beyin bariyeri, dolaşan kan ile santral sinir sisteminin ekstraselüler sıvısı arasında koruyucu işlevsel bir bariyerdir. Beyin kapiller endotel hücreleri arasındaki sıkı bağlantılar ve perivasküler astrosit son ayakları bu yapıyı oluşturur.\n\n- **Geçirgenlik İlkeleri:** Hidrofobik ve lipidde çözünen küçük moleküller pasif difüzyonla bariyeri kolayca aşabilirken polar maddeler geçemez.\n- **Spesifik Taşıyıcılar:** Glukoz ve esansiyel amino asitler gibi yaşamsal besin maddeleri özelleşmiş membran taşıyıcıları aracılığıyla beyne alınır.\n- **Farmakolojik Tasarım:** Dopamin KBB'yi geçemediğinden, Parkinson hastalığında amino asit taşıyıcısını kullanan öncül molekül L-DOPA uygulanır.\n\n> [!NOTE]\n> KBB'nin varlığı santral ilaç tasarımında en kritik belirleyicidir; periferde etkili olan birçok molekül bariyeri aşamadığı için MSS'de terapötik etkinlik gösteremez.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Endotel Sıkı Bağlantıları",
+      "desc": "Kapiller endotel hücreleri arasındaki zonula okkludens bağlantıları paraselüler sızıntıyı engeller.",
+      "isKey": true
+     },
+     {
+      "title": "Astrosit Son Ayakları",
+      "desc": "Kapillerlerin dış yüzeyini çevreleyerek bariyer bütünlüğünü ve taşıyıcı ekspresyonunu indükler.",
+      "isKey": true
+     },
+     {
+      "title": "L-DOPA Taşıyıcı Stratejisi",
+      "desc": "Dopamin polar yapısıyla bariyeri geçemezken öncülü L-DOPA L-tipi amino asit taşıyıcısıyla (LAT1) beyne girer.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "KBB'nin temel anatomik substratı beyin kapiller endotel hücreleri arasındaki sıkı bağlantılardır (tight junctions).",
+    "Parkinson hastalığında doğrudan dopamin yerine L-DOPA verilmesinin temel nedeni L-DOPA'nın amino asit taşıyıcısıyla KBB'yi aşabilmesidir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Kan-Beyin Bariyeri",
+     "explanation": "Kan ile beyin dokusu arasındaki madde geçişini yüksek düzeyde kısıtlayan ve düzenleyen fizyolojik bariyer sistemi."
+    },
+    {
+     "term": "L-DOPA",
+     "explanation": "Dopaminin amino asit yapılı öncülü olup KBB'yi taşıyıcı aracılığıyla geçerek beyinde dopamine dönüşen antiparkinson ilaç."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-k2p-09-07",
+     "front": "Kan-beyin bariyerinde paraselüler madde geçişini engelleyen temel anatomik bağlantı nedir?",
+     "back": "Kapiller endotel hücreleri arasında bulunan sıkı bağlantılardır (tight junctions).",
+     "category": "KBB Farmakokinetiği"
+    },
+    {
+     "id": "fc-k2p-09-08",
+     "front": "Parkinson tedavisinde dopamin yerine neden L-DOPA tercih edilir?",
+     "back": "Dopamin polar yapısıyla KBB'yi geçemezken L-DOPA amino asit taşıyıcısını kullanarak beyne kolayca girebilir.",
+     "category": "KBB Farmakokinetiği"
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "21 MSS İlaçları Farmakolojisine Giriş_251103_085815.pdf",
+    "startPage": 8,
+    "endPage": 9,
+    "primaryPage": [
+     8,
+     9
+    ],
+    "citation": "Sayfa 8–9 · Kurul 2 Tıbbi Farmakoloji · SSS İlaçları"
+   },
+   "interactiveElements": [
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Lipofilik Pasif Difüzyon",
+     "rightTitle": "Taşıyıcı Aracılı Geçiş",
+     "leftPoints": [
+      "Lipidde çözünen yüksüz küçük moleküller doğrudan hücre membranından geçer.",
+      "Taşıyıcı protein veya enerji tüketimine ihtiyaç duymadan konsantrasyon farkıyla ilerler.",
+      "Genel anestezikler ve lipofilik sedatif ilaçlar bu yolla hızla beyne ulaşır."
+     ],
+     "rightPoints": [
+      "Polar ve hidrofilik besinler membran taşıyıcı proteinlerine bağlanarak taşınır.",
+      "Spesifik substrat bağlama bölgeleri doymuşluk ve yarışmalı inhibisyon sergileyebilir.",
+      "Glukoz ve amino asit öncülü L-DOPA bu spesifik taşıyıcılarla bariyeri aşar."
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Beyin kapiller endotel hücreleri arasındaki sıkı bağlantılar ve perivasküler astrosit son ayakları bu yapıyı oluşturur.",
+     "maskedTerm": "sıkı bağlantılar",
+     "hint": "Hücreler arası paraselüler geçişi engelleyen membranöz yapılar."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Kan-beyin bariyerinin farmakokinetik özellikleri ve ilaç geçişiyle ilgili hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "L-DOPA spesifik amino asit taşıyıcılarını kullanarak KBB'yi geçer ve santralde dopamine dönüşür.",
+       "isCorrect": true,
+       "explanation": "L-DOPA amino asit taşıyıcısıyla bariyeri aşıp santral nöronlarda dekarboksilaz enzimiyle dopamine dönüştürülerek terapötik etki sağlar."
+      },
+      {
+       "key": "B",
+       "text": "Dopamin molekülü yüksek lipid çözünürlüğü sayesinde beyin kapiller endotelinden pasif difüzyonla serbestçe geçer.",
+       "isCorrect": false,
+       "explanation": "Dopamin polar bir katekolamin yapısında olduğundan KBB'yi pasif olarak geçemez ve periferik uygulamada santral etki oluşturamaz."
+      },
+      {
+       "key": "C",
+       "text": "Beyin kapiller endotelleri arasında geniş fenestrasyonlar bulunduğu için tüm hidrofilik ilaçlar serbestçe sızar.",
+       "isCorrect": false,
+       "explanation": "Beyin kapiller endotelleri sıkı bağlantılar aracılığıyla birbirine kenetlenerek koruyucu bir bariyer oluşturur. Bu özel yapı nedeniyle hidrofilik moleküllerin kontrolsüz paraselüler geçişine izin verilmez."
+      },
+      {
+       "key": "D",
+       "text": "Glukoz molekülleri KBB'yi aşamadığından nöronlar enerjilerini yalnızca serbest yağ asitlerinden karşılarlar.",
+       "isCorrect": false,
+       "explanation": "Glukoz GLUT1 taşıyıcısı ile KBB'yi yüksek hızda geçer ve beynin temel enerji kaynağını oluşturur."
+      }
+     ]
+    },
+    {
+     "type": "feature_bidding",
+     "optionA": "L-DOPA Molekülü",
+     "optionB": "Dopamin Molekülü",
+     "rounds": [
+      {
+       "feature": "Spesifik amino asit taşıyıcı sistemini kullanarak kan-beyin bariyerini doğrudan aşabilme.",
+       "correct": "A"
+      },
+      {
+       "feature": "Periferden verildiğinde polar yapısı nedeniyle kan-beyin bariyerini aşamayarak etkisiz kalma.",
+       "correct": "B"
+      },
+      {
+       "feature": "Parkinson hastalarında oral yoldan uygulanarak santral dopamin eksikliğini yerine koyma.",
+       "correct": "A"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 5,
+   "id": "k2p-y25-k2-09-sss-ilaclari-s05",
+   "title": "İyon Kanalları ve İyonotropik Reseptörler",
+   "subtitle": "Voltaj-bağımlı ve ligand-bağımlı iyon kanalları sinir hücresi uyarılabilirliğini doğrudan kontrol eder.",
+   "badge": "İyon Kanalları",
+   "bolum": 2,
+   "pdfSayfalari": [
+    10,
+    12
+   ],
+   "kaynakSayfa": "Sayfa 10-12",
+   "bilgi": "Voltaj-bağımlı sodyum ve potasyum kanalları, iyonotropik reseptörler ve GABA-A klorür kanalı yapısı.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "content": "Nöron membranları, kapı kontrol mekanizmalarına göre voltaj-bağımlı ve ligand-bağımlı iyon kanalları içerir. Bu kanallar aksiyon potansiyelinin oluşumunu ve sinaptik iletim hızını belirler.\n\n- **Voltaj-Bağımlı Kanallar:** Hızlı sodyum kanalları depolarizasyonu başlatırken, potasyum kanalları repolarizasyonu sağlayarak kontrolsüz elektriksel deşarjları sınırlayan düzenleyici etki gösterir.\n- **Ligand-Bağımlı Kanallar:** Bu yapılar iyonotropik reseptörler olarak adlandırılırlar; nörotransmiterin bağlanmasıyla kanal gözeneğini milisaniyeler içinde açarak hızlı iyon akışı sağlarlar.\n- **GABA-A Örneği:** Pentamerik yapıda ligand kapılı bir klorür kanalıdır; GABA ve allosterik modülatör benzodiazepinler tarafından aktive edilir, flumazenil ile antagonize edilir.\n\n> [!IMPORTANT]\n> İyonotropik reseptörler hücre membranında doğrudan iyon kanalı yapısı taşıdıkları için santral iletide en hızlı postsinaptik elektriksel yanıtları üretirler.",
+   "synthesisNarrative": "Nöron membranları, kapı kontrol mekanizmalarına göre voltaj-bağımlı ve ligand-bağımlı iyon kanalları içerir. Bu kanallar aksiyon potansiyelinin oluşumunu ve sinaptik iletim hızını belirler.\n\n- **Voltaj-Bağımlı Kanallar:** Hızlı sodyum kanalları depolarizasyonu başlatırken, potasyum kanalları repolarizasyonu sağlayarak kontrolsüz elektriksel deşarjları sınırlayan düzenleyici etki gösterir.\n- **Ligand-Bağımlı Kanallar:** Bu yapılar iyonotropik reseptörler olarak adlandırılırlar; nörotransmiterin bağlanmasıyla kanal gözeneğini milisaniyeler içinde açarak hızlı iyon akışı sağlarlar.\n- **GABA-A Örneği:** Pentamerik yapıda ligand kapılı bir klorür kanalıdır; GABA ve allosterik modülatör benzodiazepinler tarafından aktive edilir, flumazenil ile antagonize edilir.\n\n> [!IMPORTANT]\n> İyonotropik reseptörler hücre membranında doğrudan iyon kanalı yapısı taşıdıkları için santral iletide en hızlı postsinaptik elektriksel yanıtları üretirler.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Voltaj Duyarlılığı",
+      "desc": "Membran potansiyeli değişimleriyle açılıp kapanan voltaj kapılı Na+, K+ ve Ca2+ kanalları elektriksel eksitabiliteyi yönetir.",
+      "isKey": true
+     },
+     {
+      "title": "İyonotropik Hız",
+      "desc": "Ligandın reseptöre bağlanması saniyeler değil doğrudan milisaniyeler düzeyinde kanal açılmasına yol açar.",
+      "isKey": true
+     },
+     {
+      "title": "GABA-A Kompleksi",
+      "desc": "GABA bağlanması klorür girişini artırarak nöronu hiperpolarize eder; benzodiazepinler kanal açılma frekansını artırır.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "Voltaj-bağımlı potasyum kanalları depolarizasyonun aşırı yayılmasını sınırlayan koruyucu düzenleyici işlev görür.",
+    "GABA-A reseptörü pentamerik yapılı bir ligand-bağımlı klorür kanalı olup flumazenil selektif kompetitif antagonistidir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "İyonotropik Reseptör",
+     "explanation": "Bünyesinde doğrudan iyon kanalı gözeneği barındıran ve ligand bağlanmasıyla milisaniyeler içinde açılan hızlı membran reseptörü."
+    },
+    {
+     "term": "Flumazenil",
+     "explanation": "GABA-A reseptör kompleksi üzerindeki benzodiazepin bağlanma bölgesini yarışmalı olarak bloke eden spesifik antagonist ilaç."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-k2p-09-09",
+     "front": "Ligand-bağımlı iyon kanallarının (iyonotropik reseptörler) temel işlevsel avantajı nedir?",
+     "back": "Ligand bağlandığında aracı ikincil ulaklara gerek duymadan milisaniyeler içinde doğrudan iyon akışı ve elektriksel yanıt oluşturmalarıdır.",
+     "category": "Reseptör Farmakolojisi"
+    },
+    {
+     "id": "fc-k2p-09-10",
+     "front": "GABA-A reseptör kompleksinde benzodiazepin etkisini geri çeviren spesifik antagonist hangisidir?",
+     "back": "Flumazenil molekülüdür; benzodiazepin bağlanma bölgesine oturarak allosterik aktivasyonu bloke eder.",
+     "category": "Reseptör Farmakolojisi"
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "21 MSS İlaçları Farmakolojisine Giriş_251103_085815.pdf",
+    "startPage": 10,
+    "endPage": 12,
+    "primaryPage": [
+     10,
+     11,
+     12
+    ],
+    "citation": "Sayfa 10–12 · Kurul 2 Tıbbi Farmakoloji · SSS İlaçları"
+   },
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "İyon kanalları ve iyonotropik reseptörlerin işleyiş mekanizmasıyla ilgili hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "İyonotropik GABA-A reseptörü klorür kanalı geçirgenliğini artırarak postsinaptik membranı hiperpolarize eder.",
+       "isCorrect": true,
+       "explanation": "GABA-A reseptörü ligand kapılı bir klorür kanalıdır; açıldığında hücre içine negatif klorür iyonu girişi sağlayarak nöronal uyarılabilirliği baskılar."
+      },
+      {
+       "key": "B",
+       "text": "Voltaj-bağımlı potasyum kanalları membran potansiyelindeki değişimlere tamamen duyarsız yapay porlardır.",
+       "isCorrect": false,
+       "explanation": "Voltaj kapılı potasyum kanalları membran depolarizasyonunu algılayarak açılır ve hücre dışına K+ çıkışı sağlayarak repolarizasyonu gerçekleştirirler."
+      },
+      {
+       "key": "C",
+       "text": "Flumazenil GABA-A reseptörünün klorür kanalını doğrudan kalıcı olarak tıkayan bir toksindir.",
+       "isCorrect": false,
+       "explanation": "Flumazenil benzodiazepin bağlanma cebine özgül olarak tutunan kompetitif bir antagonisttir; kanal porunu fiziksel olarak tıkamaz."
+      },
+      {
+       "key": "D",
+       "text": "İyonotropik reseptörler sinaptik iletimde daima hücre içi cAMP artışı üzerinden dakikalar sonra etkirler.",
+       "isCorrect": false,
+       "explanation": "İyonotropik reseptörler ikincil ulak kaskadlarına ihtiyaç duymaksızın milisaniyeler içinde doğrudan iyon kanalı açılmasıyla hızlı etki üretirler."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Ligand-bağımlı kanallar iyonotropik reseptörler olarak adlandırılırlar.",
+     "maskedTerm": "iyonotropik reseptörler",
+     "hint": "Doğrudan kanal yapısı barındıran hızlı iletim birimleri."
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Voltaj-Bağımlı Kanallar",
+     "rightCategory": "İyonotropik Reseptörler",
+     "cards": [
+      {
+       "text": "Membran elektriksel potansiyelindeki voltaj değişimleriyle tetiklenir.",
+       "category": "left"
+      },
+      {
+       "text": "Aksiyon potansiyelinin başlatılması ve repolarizasyonunda primer rol oynar.",
+       "category": "left"
+      },
+      {
+       "text": "Nörotransmiter molekülünün doğrudan bağlanmasıyla açılan iyon poru barındırır.",
+       "category": "right"
+      },
+      {
+       "text": "GABA-A reseptöründe olduğu gibi allosterik ilaç modülasyonu sergiler.",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Depolarizasyon ile açılan voltaj-bağımlı potasyum kanallarının nöronal uyarılabilirlikteki düzenleyici rolü nedir?",
+     "answer": "Depolarizasyonun kontrolsüzce ilerlemesini durdurur, repolarizasyonu sağlar ve aksiyon potansiyeli deşarj frekansını sınırlayarak koruyucu düzenleme yapar."
+    }
+   ]
+  },
+  {
+   "slideNumber": 6,
+   "id": "k2p-y25-k2-09-sss-ilaclari-s06",
+   "title": "Metabotropik Reseptörler ve G-Proteini Sinyal Yolakları",
+   "subtitle": "Metabotropik reseptörler G proteinleri aracılığıyla iyon kanallarını ve hücre içi enzimatik kaskadları modüle eder.",
+   "badge": "Metabotropik Reseptörler",
+   "bolum": 2,
+   "pdfSayfalari": [
+    13,
+    16
+   ],
+   "kaynakSayfa": "Sayfa 13-16",
+   "bilgi": "GPCR yapısı, Gs, Gi/o, Gq proteinleri, membranla sınırlı yolaklar ve ikincil ulak kaskadları.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "content": "Metabotropik reseptörler yedi transmembran sarmalına sahip G-proteini kenetli reseptörlerdir. Ligand bağlanması doğrudan kanal açmak yerine heterotrimerik G proteinlerini aktive eder.\n\n- **Membranla-Sınırlı Yolak:** Aktive olan G-proteini alt birimleri difüze olmadan komşu voltaj kapılı iyon kanallarıyla doğrudan etkileşir; örneğin presinaptik kalsiyum kanallarını inhibe eder.\n- **İkincil Ulak Kaskadı:** Gs adenilil siklazı uyararak cAMP düzeyini artırırken, Gi adenilil siklazı baskılar. Gq ise fosfolipaz C üzerinden IP3 ve DAG oluşturur.\n- **Etki Yayılımı:** Membranla sınırlı etkiler mikro bölgelerde gerçekleşirken, sitoplazmik ikincil ulaklar hücrenin uzak bölgelerine yayılarak gen ekspresyonunu dahi etkileyebilir.\n\n> [!NOTE]\n> Presinaptik metabotropik reseptörlerin Gi/o aracılığıyla voltaj kapılı kalsiyum kanallarını inhibe etmesi, nörotransmiter salınımını baskılayan temel presinaptik inhibisyon mekanizmasıdır.",
+   "synthesisNarrative": "Metabotropik reseptörler yedi transmembran sarmalına sahip G-proteini kenetli reseptörlerdir. Ligand bağlanması doğrudan kanal açmak yerine heterotrimerik G proteinlerini aktive eder.\n\n- **Membranla-Sınırlı Yolak:** Aktive olan G-proteini alt birimleri difüze olmadan komşu voltaj kapılı iyon kanallarıyla doğrudan etkileşir; örneğin presinaptik kalsiyum kanallarını inhibe eder.\n- **İkincil Ulak Kaskadı:** Gs adenilil siklazı uyararak cAMP düzeyini artırırken, Gi adenilil siklazı baskılar. Gq ise fosfolipaz C üzerinden IP3 ve DAG oluşturur.\n- **Etki Yayılımı:** Membranla sınırlı etkiler mikro bölgelerde gerçekleşirken, sitoplazmik ikincil ulaklar hücrenin uzak bölgelerine yayılarak gen ekspresyonunu dahi etkileyebilir.\n\n> [!NOTE]\n> Presinaptik metabotropik reseptörlerin Gi/o aracılığıyla voltaj kapılı kalsiyum kanallarını inhibe etmesi, nörotransmiter salınımını baskılayan temel presinaptik inhibisyon mekanizmasıdır.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Membranla Sınırlı Etki",
+      "desc": "G proteini alt birimlerinin sitoplazmaya geçmeden membran düzleminde komşu iyon kanallarını doğrudan modüle etmesidir.",
+      "isKey": true
+     },
+     {
+      "title": "İkincil Ulak Üretimi",
+      "desc": "cAMP, IP3 ve DAG gibi hücresel moleküller protein kinazları fosforilleyerek kalıcı nöronal yanıtlar başlatır.",
+      "isKey": true
+     },
+     {
+      "title": "Presinaptik İnhibisyon",
+      "desc": "Presinaptik metabotropik reseptörler kalsiyum girişini azaltarak vezikül ekzositozunu durdurur.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "Metabotropik reseptörler doğrudan iyon kanalı içermez; etkilerini G proteinleri ve enzim kaskadları üzerinden dolaylı yürütürler.",
+    "Membranla-sınırlı G-proteini etkileşiminde G-beta-gama alt birimleri voltaj kapılı kalsiyum ve potasyum kanallarını doğrudan regüle eder."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Metabotropik Reseptör",
+     "explanation": "G-proteinleri ve hücre içi ikincil haberci enzim sistemleri üzerinden yavaş ve uzun süreli hücresel yanıtlar üreten reseptör."
+    },
+    {
+     "term": "Membranla-Sınırlı Yolak",
+     "explanation": "G-proteini alt birimlerinin sitoplazmik aracı moleküllere ihtiyaç duymadan membran düzleminde doğrudan kanal modülasyonu yapması."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-k2p-09-11",
+     "front": "G proteinlerinin membranla-sınırlı etkileri ile ikincil ulak aracılı etkileri arasındaki temel mekansal fark nedir?",
+     "back": "Membranla sınırlı etkiler lokal mikro bölgelerde kalırken ikincil ulaklar sitoplazma boyunca hücrenin uzak bölgelerine difüze olabilir.",
+     "category": "Reseptör Farmakolojisi"
+    },
+    {
+     "id": "fc-k2p-09-12",
+     "front": "Presinaptik yerleşimli metabotropik reseptörlerin nörotransmiter salınımını azaltmadaki temel iyonik hedefi nedir?",
+     "back": "Voltaj kapılı kalsiyum kanallarının inhibisyonu ile vezikül ekzositozunun baskılanmasıdır.",
+     "category": "Reseptör Farmakolojisi"
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "21 MSS İlaçları Farmakolojisine Giriş_251103_085815.pdf",
+    "startPage": 13,
+    "endPage": 16,
+    "primaryPage": [
+     13,
+     14,
+     15,
+     16
+    ],
+    "citation": "Sayfa 13–16 · Kurul 2 Tıbbi Farmakoloji · SSS İlaçları"
+   },
+   "interactiveElements": [
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "G Proteini Tipi",
+      "Primer Enzim veya Hedef",
+      "Hücresel İkincil Ulak / Etki"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Gs Proteini"
+        },
+        {
+         "text": "Adenilil siklaz aktivasyonu",
+         "isMasked": true,
+         "hint": "cAMP sentezini başlatan enzim uyarımı."
+        },
+        {
+         "text": "Hücre içi cAMP düzeyinde belirgin artış"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Gi/o Proteini"
+        },
+        {
+         "text": "Adenilil siklaz inhibisyonu ve Ca kanalı blokajı"
+        },
+        {
+         "text": "cAMP azalması ve transmiter salınım baskılanması",
+         "isMasked": true,
+         "hint": "Presinaptik duraklama ve hücresel hiperpolarizasyon."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Gq Proteini"
+        },
+        {
+         "text": "Fosfolipaz C (PLC) aktivasyonu",
+         "isMasked": true,
+         "hint": "Zar yağlarını parçalayarak haberci üreten hücresel yolak."
+        },
+        {
+         "text": "IP3 ve DAG oluşumu ile kalsiyum salınımı"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Ligand bağlanması doğrudan kanal açmak yerine heterotrimerik G proteinlerini aktive eden reseptörler metabotropik reseptörler olarak bilinir.",
+     "maskedTerm": "metabotropik reseptörler",
+     "hint": "Yedi transmembranlı GPCR ailesine ait yavaş etkili sinyal alıcıları."
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "Bir farmakolog, presinaptik sinir ucunda yer alan Gi/o kenetli bir metabotropik otoreseptörü seçici bir agonist ile uyararak etkilerini izlemektedir.",
+     "options": [
+      {
+       "text": "Presinaptik voltaj kapılı kalsiyum kanalları inhibe edilir ve nörotransmiter ekzositozu azalır.",
+       "isCorrect": true,
+       "feedback": "Presinaptik Gi/o kenetli reseptörler membranla-sınırlı mekanizmayla kalsiyum kanallarını baskılar ve vezikül salınımını azaltırlar."
+      },
+      {
+       "text": "Hücre içine masif sodyum girişi gerçekleşerek spontan aksiyon potansiyelleri patlaması başlar.",
+       "isCorrect": false,
+       "feedback": "Gi/o aktivasyonu eksitasyon veya sodyum akımı oluşturmaz; aksine kalsiyum kanallarını bloke ederek nöronal iletimi baskılar."
+      },
+      {
+       "text": "Postsinaptik klorür kanalları doğrudan tıkanarak hücrede kontrolsüz depolarizasyon meydana gelir.",
+       "isCorrect": false,
+       "feedback": "Bu reseptörler presinaptik uçta yer alır ve kalsiyum bağımlı ekzositozu önler; klorür kanal blokajı yapmazlar."
+      }
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Metabotropik reseptörlerin membranla-sınırlı etkileriyle ikincil ulak kaskadları arasındaki temel fark nedir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Membranla-sınırlı etkiler lokal mikro bölgelerde oluşurken ikincil ulaklar hücrenin uzak kısımlarına yayılabilir.",
+       "isCorrect": true,
+       "explanation": "Membranla-sınırlı etkileşimler plazma zarında komşu kanallarda gerçekleşirken çözünür ikincil ulaklar sitoplazma boyunca difüze olarak geniş alanlara yayılırlar."
+      },
+      {
+       "key": "B",
+       "text": "İkincil ulak kaskadları yalnızca nükleer zardaki histon proteinlerini parçalayarak hücreyi öldürür.",
+       "isCorrect": false,
+       "explanation": "İkincil ulaklar hücresel enzim aktivitesini, protein kinaz fosforilasyonunu ve gen ekspresyonunu fizyolojik olarak düzenleyen sitoplazmik habercilerdir."
+      },
+      {
+       "key": "C",
+       "text": "Membranla-sınırlı yolaklar yalnızca mitokondri matriksinde ATP hidrolizini yöneten enzimlerdir.",
+       "isCorrect": false,
+       "explanation": "Membranla-sınırlı yolaklar plazma zarı üzerinde G proteini alt birimlerinin iyon kanallarıyla doğrudan etkileşimini tanımlar."
+      },
+      {
+       "key": "D",
+       "text": "Metabotropik reseptörlerin tamamı hücre membranında doğrudan açık sodyum kanalı yapısı taşır.",
+       "isCorrect": false,
+       "explanation": "Metabotropik reseptörler doğrudan por veya iyon kanalı içermezler; aracı G proteinleri üzerinden hücresel kaskadları harekete geçirirler."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 7,
+   "id": "k2p-y25-k2-09-sss-ilaclari-s07",
+   "title": "Kimyasal Sinaps ve Sinaptik Potansiyeller",
+   "subtitle": "Eksitatör (EPSP) ve inhibitör (IPSP) postsinaptik potansiyellerin entegrasyonu aksiyon potansiyeli üretimini yönetir.",
+   "badge": "Sinaptik İleti",
+   "bolum": 3,
+   "pdfSayfalari": [
+    17,
+    19
+   ],
+   "kaynakSayfa": "Sayfa 17-19",
+   "bilgi": "Kimyasal sinaps adımları, EPSP, IPSP, uzaysal/zamansal sumasyon ve presinaptik inhibisyon.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "content": "Merkezi sinir sisteminde nöronlar arası iletişim kimyasal sinapslar aracılığıyla yürütülür. Aksiyon potansiyelinin sinir ucuna ulaşması kalsiyum bağımlı nörotransmiter salınımını tetikler.\n\n- **Eksitatör Potansiyel (EPSP):** Katyon geçirgenliğinin artmasıyla membran potansiyeli depolarize olur ve nöron ateşleme eşiğine yaklaşır.\n- **İnhibitör Potansiyel (IPSP):** Klorür girişi veya potasyum çıkışı membranı hiperpolarize ederek aksiyon potansiyeli başlatılmasını zorlaştırır.\n- **Presinaptik İnhibisyon:** Duyusal lif uçlarında sonlanan aksoaksonik temaslar presinaptik inhibisyon oluşturarak voltaj kapılı kalsiyum akımını ve salınan transmiter miktarını düşürür.\n\n> [!IMPORTANT]\n> Bir nöronun aksiyon potansiyeli üretip üretmeyeceği, dendritik ve somatik membranında aynı anda toplanan EPSP ve IPSP sinyallerinin cebirsel sumasyonuna bağlıdır.",
+   "synthesisNarrative": "Merkezi sinir sisteminde nöronlar arası iletişim kimyasal sinapslar aracılığıyla yürütülür. Aksiyon potansiyelinin sinir ucuna ulaşması kalsiyum bağımlı nörotransmiter salınımını tetikler.\n\n- **Eksitatör Potansiyel (EPSP):** Katyon geçirgenliğinin artmasıyla membran potansiyeli depolarize olur ve nöron ateşleme eşiğine yaklaşır.\n- **İnhibitör Potansiyel (IPSP):** Klorür girişi veya potasyum çıkışı membranı hiperpolarize ederek aksiyon potansiyeli başlatılmasını zorlaştırır.\n- **Presinaptik İnhibisyon:** Duyusal lif uçlarında sonlanan aksoaksonik temaslar presinaptik inhibisyon oluşturarak voltaj kapılı kalsiyum akımını ve salınan transmiter miktarını düşürür.\n\n> [!IMPORTANT]\n> Bir nöronun aksiyon potansiyeli üretip üretmeyeceği, dendritik ve somatik membranında aynı anda toplanan EPSP ve IPSP sinyallerinin cebirsel sumasyonuna bağlıdır.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "EPSP Depolarizasyonu",
+      "desc": "Sodyum veya kalsiyum gibi pozitif katyonların içeri akması postsinaptik membranı eşik değere doğru yaklaştırır.",
+      "isKey": true
+     },
+     {
+      "title": "IPSP Hiperpolarizasyonu",
+      "desc": "Klorür iyonlarının girişi membranın dinlenim potansiyelini daha negatif değere çekerek ateşlemeyi engeller.",
+      "isKey": true
+     },
+     {
+      "title": "Aksoaksonik Kontrol",
+      "desc": "Presinaptik akson terminali üzerinde sonlanan inhibitör sinapslar kalsiyum girişini selektif olarak kısar.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "EPSP membranı depolarize ederek aksiyon potansiyeli eşiğine yaklaştırır; IPSP ise hiperpolarize ederek uzaklaştırır.",
+    "Aksoaksonik sinapslar presinaptik kalsiyum girişini azaltarak salınan nörotransmiter miktarını spesifik olarak düşürür."
+   ],
+   "medicalTerms": [
+    {
+     "term": "EPSP",
+     "explanation": "Eksitatör postsinaptik potansiyel; katyon akımıyla oluşan lokal ve eşik altı depolarizasyon dalgası."
+    },
+    {
+     "term": "IPSP",
+     "explanation": "İnhibitör postsinaptik potansiyel; klorür girişi veya potasyum çıkışıyla oluşan hiperpolarizan elektriksel yanıt."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-k2p-09-13",
+     "front": "Postsinaptik nöronda EPSP ve IPSP oluşumunun temel iyonik mekanizmaları nelerdir?",
+     "back": "EPSP sodyum gibi katyonların içeri girmesiyle depolarizasyon yapar; IPSP klorür girişi veya potasyum çıkışıyla hiperpolarizasyon yapar.",
+     "category": "Sinaptik Fizyoloji"
+    },
+    {
+     "id": "fc-k2p-09-14",
+     "front": "Presinaptik inhibisyon hangi özelleşmiş sinaps türüyle gerçekleştirilir?",
+     "back": "Eksitatör lif terminali üzerine kurulan aksoaksonik sinapslar aracılığıyla gerçekleştirilir.",
+     "category": "Sinaptik Fizyoloji"
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "21 MSS İlaçları Farmakolojisine Giriş_251103_085815.pdf",
+    "startPage": 17,
+    "endPage": 19,
+    "primaryPage": [
+     17,
+     18,
+     19
+    ],
+    "citation": "Sayfa 17–19 · Kurul 2 Tıbbi Farmakoloji · SSS İlaçları"
+   },
+   "interactiveElements": [
+    {
+     "type": "before_after_slider",
+     "leftTitle": "EPSP (Eksitatör Potansiyel)",
+     "rightTitle": "IPSP (İnhibitör Potansiyel)",
+     "leftPoints": [
+      "Membranda net katyon (sodyum/kalsiyum) akışı sağlayarak depolarizasyon oluşturur.",
+      "Nöronun membran potansiyelini aksiyon potansiyeli ateşleme eşiğine doğru yaklaştırır.",
+      "Ardışık uyaranlarla zamansal ve uzaysal olarak toplanarak eşik potansiyeli aşabilir."
+     ],
+     "rightPoints": [
+      "Membranda klorür girişi veya potasyum çıkışı sağlayarak hiperpolarizasyon oluşturur.",
+      "Nöronun membran potansiyelini dinlenim düzeyinin altına çekerek ateşlemeyi zorlaştırır.",
+      "Aynı anda oluşan EPSP depolarizasyonlarını nötralize ederek aksiyon potansiyelini engeller."
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Duyusal lif uçlarında sonlanan aksoaksonik sinapslar aktive edildiğinde presinaptik inhibisyon gerçekleşir.",
+     "maskedTerm": "presinaptik inhibisyon",
+     "hint": "Akson ucunda kalsiyum akışını kısarak vezikül boşalımını azaltma süreci."
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Aksoaksonik Aktivasyon: İnhibitör ara nöron eksitatör lifin akson terminali üzerindeki reseptörleri uyarır.",
+      "2. Kalsiyum Akımında Azalma: Terminaldeki voltaj kapılı kalsiyum kanalları inhibe edilir ve kalsiyum girişi sınırlanır.",
+      "3. Ekzositoz Baskılanması: Kalsiyum seviyesi düştüğü için sinaptik veziküllerden salınan eksitatör nörotransmiter miktarı azalır.",
+      "4. Postsinaptik Yanıt Zayıflaması: Hedef nöronun membranında oluşan EPSP genliği küçülür ve ileti baskılanır."
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Kimyasal sinapsta sinaptik potansiyellerin entegrasyonu ve presinaptik inhibisyon hakkında hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Aksoaksonik sinapslar presinaptik kalsiyum girişini azaltarak salınan nörotransmiter miktarını düşürürler.",
+       "isCorrect": true,
+       "explanation": "Aksoaksonik sinapsta açığa çıkan inhibitör mediyatörler presinaptik kalsiyum kanallarını baskılar ve vezikül ekzositozunu azaltarak presinaptik inhibisyon yaparlar."
+      },
+      {
+       "key": "B",
+       "text": "IPSP oluşumu sırasında hücre içine kontrolsüz sodyum akışı gerçekleşerek aksiyon potansiyeli tetiklenir.",
+       "isCorrect": false,
+       "explanation": "IPSP klorür girişi veya potasyum çıkışıyla hücreyi hiperpolarize eder; sodyum girişi ise eksitatör EPSP potansiyeli oluşturur."
+      },
+      {
+       "key": "C",
+       "text": "Postsinaptik nöron gövdesine gelen EPSP ve IPSP potansiyelleri birbirini asla etkilemeden yok olurlar.",
+       "isCorrect": false,
+       "explanation": "Postsinaptik potansiyeller uzaysal ve zamansal olarak toplanır; net depolarizasyon eşiği aşarsa akson tepeciğinde aksiyon potansiyeli doğar."
+      },
+      {
+       "key": "D",
+       "text": "Presinaptik inhibisyon yalnızca nükleusta DNA replikasyonunu durdurarak aylar içinde sonuç verir.",
+       "isCorrect": false,
+       "explanation": "Presinaptik inhibisyon milisaniyeler içinde gerçekleşen fonksiyonel bir elektrofizyolojik süreçtir. Bu olayın nükleer DNA replikasyonu veya bölünmeyle bir bağı yoktur."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 8,
+   "id": "k2p-y25-k2-09-sss-ilaclari-s08",
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] MSS Hücresel Mimarisi, Reseptör Tipleri ve Sinaptik İleti İlkeleri",
+   "subtitle": "KBB yapısı, glia rolleri, iyonotropik ve metabotropik reseptör mekanizmaları ile sinaptik potansiyellerin özeti.",
+   "badge": "Tekrar ve Pekiştirme",
+   "bolum": 3,
+   "pdfSayfalari": [
+    2,
+    19
+   ],
+   "kaynakSayfa": "Sayfa 1-19",
+   "bilgi": "İlk yedi adımın temel kazanımlarının entegrasyonu ve klinik farmakoloji temellerinin pekiştirilmesi.",
+   "isCheckpoint": true,
+   "checkpointNumber": 1,
+   "content": "Bu bölümde santral sinir sisteminin temel yapı taşları ve ilaç etkileşim ilkeleri ele alınmıştır. KBB sıkı endotel bağlantıları ve astrositlerle korunurken lipofilik ajanlar pasif difüzyonla, besinler ise taşıyıcılarla geçer.\n\n- **Hücresel Mimari:** Nöronlar dendritleriyle girdi toplayıp tek aksonla iletir; astrositler homeostazı, oligodendrositler miyelin kılıfını, mikroglia ise immün fagositozu sağlar.\n- **Reseptör Ayrımı:** İyonotropik reseptörler milisaniyeler içinde doğrudan iyon akışı başlatırken, metabotropik reseptörler G proteinleri üzerinden enzimatik kaskadları modüle eder.\n- **Sinaptik Entegrasyon:** Eksitatör EPSP katyon akımıyla eşiğe yaklaştırır, inhibitör IPSP klorürle hiperpolarize eder; aksoaksonik sinapslar presinaptik inhibisyon oluşturur.\n\n> [!NOTE]\n> Santral farmakolojide ilaçların büyük kısmı bu temel sinaptik mekanizmaları, iyon kanallarını veya G-proteini kenetli reseptör kaskadlarını hedef alarak klinik etkinlik gösterir.",
+   "synthesisNarrative": "Bu bölümde santral sinir sisteminin temel yapı taşları ve ilaç etkileşim ilkeleri ele alınmıştır. KBB sıkı endotel bağlantıları ve astrositlerle korunurken lipofilik ajanlar pasif difüzyonla, besinler ise taşıyıcılarla geçer.\n\n- **Hücresel Mimari:** Nöronlar dendritleriyle girdi toplayıp tek aksonla iletir; astrositler homeostazı, oligodendrositler miyelin kılıfını, mikroglia ise immün fagositozu sağlar.\n- **Reseptör Ayrımı:** İyonotropik reseptörler milisaniyeler içinde doğrudan iyon akışı başlatırken, metabotropik reseptörler G proteinleri üzerinden enzimatik kaskadları modüle eder.\n- **Sinaptik Entegrasyon:** Eksitatör EPSP katyon akımıyla eşiğe yaklaştırır, inhibitör IPSP klorürle hiperpolarize eder; aksoaksonik sinapslar presinaptik inhibisyon oluşturur.\n\n> [!NOTE]\n> Santral farmakolojide ilaçların büyük kısmı bu temel sinaptik mekanizmaları, iyon kanallarını veya G-proteini kenetli reseptör kaskadlarını hedef alarak klinik etkinlik gösterir.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Bariyer ve Taşınma",
+      "desc": "KBB sıkı bağlantılarla polar maddeleri engeller; dopamin geçemezken amino asit taşıyıcısıyla L-DOPA santrale girer.",
+      "isKey": true
+     },
+     {
+      "title": "İyonotropik ve Metabotropik İleti",
+      "desc": "İyonotropik GABA-A hızlı klorür akışı sağlar; metabotropik GPCR'lar kalsiyum ve cAMP kaskadlarını yönetir.",
+      "isKey": true
+     },
+     {
+      "title": "Sumasyon ve İnhibisyon",
+      "desc": "Postsinaptik EPSP ve IPSP cebirsel toplanır; presinaptik aksoaksonik inhibisyon transmiter ekzositozunu sınırlar.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "Santral farmakolojide KBB geçirgenliği, glia hücre homeostazı ve sinaptik reseptör dinamiği tedavinin temelini belirler.",
+    "GABA-A reseptörü klorür kanalı açarak hızlı IPSP oluştururken flumazenil ile spesifik olarak bloke edilir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Presinaptik İnhibisyon",
+     "explanation": "Aksoaksonik temasla presinaptik kalsiyum kanallarının kapatılması sonucu nörotransmiter salınımının azaltılması."
+    },
+    {
+     "term": "Saltatorik İleti",
+     "explanation": "Oligodendrositlerin ürettiği miyelin kılıfı sayesinde aksiyon potansiyelinin Ranvier boğumları arasında sıçrayarak hızla ilerlemesi."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-k2p-09-15",
+     "front": "MSS'de hızlı milisaniyelik sinaptik ileti ile yavaş saniyelik modülasyonu sağlayan iki reseptör ailesi nedir?",
+     "back": "Hızlı iletiyi doğrudan kanallı iyonotropik reseptörler, yavaş modülasyonu G-proteinli metabotropik reseptörler sağlar.",
+     "category": "Pekiştirme"
+    },
+    {
+     "id": "fc-k2p-09-16",
+     "front": "Aksoaksonik sinapsların presinaptik inhibisyon oluştururken hedef aldığı temel mekanizma nedir?",
+     "back": "Voltaj kapılı kalsiyum kanallarını baskılayarak sinaptik vezikül ekzositozunu ve transmiter salınımını azaltmaktır.",
+     "category": "Pekiştirme"
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "21 MSS İlaçları Farmakolojisine Giriş_251103_085815.pdf",
+    "startPage": 2,
+    "endPage": 19,
+    "primaryPage": [
+     2,
+     19
+    ],
+    "citation": "Sayfa 2–19 · Kurul 2 Tıbbi Farmakoloji · SSS İlaçları"
+   },
+   "interactiveElements": [
+    {
+     "type": "spot_the_lie",
+     "topic": "MSS Hücresel Yapısı ve Sinaptik Mekanizmalar",
+     "items": [
+      {
+       "text": "Oligodendrositler santral aksonların etrafında miyelin kılıfı üreterek aksiyon potansiyeli iletim hızını artırırlar.",
+       "isLie": false,
+       "explanation": "Oligodendrositler santral sinir sisteminin miyelinleyici hücreleridir ve hasarları multipl sklerozda görülür."
+      },
+      {
+       "text": "L-DOPA polar yapısına rağmen amino asit taşıyıcısını kullanarak KBB'yi geçerken dopamin bariyeri doğrudan aşamaz.",
+       "isLie": false,
+       "explanation": "L-DOPA taşıyıcı aracılı aktif transport ile beyne girer ve orada dopamine dönüştürülür."
+      },
+      {
+       "text": "İyonotropik reseptörler ligand bağlandığında doğrudan kanal açmak yerine daima hücre içi cAMP kaskadına bağımlıdır.",
+       "isLie": true,
+       "explanation": "İyonotropik reseptörler doğrudan kendi kanal gözeneğini milisaniyeler içinde açarlar; cAMP kaskadı metabotropik Gs/Gi reseptörlerine aittir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "İyonotropik reseptörler milisaniyeler içinde doğrudan iyon akışı başlatırken metabotropik reseptörler G proteinleri üzerinden enzimatik kaskadları modüle eder.",
+     "maskedTerm": "metabotropik reseptörler",
+     "hint": "G proteinleri ve aracı enzimlerle çalışan yavaş yanıt sistemleri."
+    },
+    {
+     "type": "venn_grid",
+     "labelA": "İyonotropik Reseptörler",
+     "labelB": "Metabotropik Reseptörler",
+     "items": [
+      {
+       "criterion": "Kendi yapısında doğrudan iyon kanalı gözeneği barındırma.",
+       "correct": "A"
+      },
+      {
+       "criterion": "Heterotrimerik G proteinleri ve hücre içi ikincil haberciler aracılığıyla sinyal iletme.",
+       "correct": "B"
+      },
+      {
+       "criterion": "Nörotransmiter molekülünün bağlanmasıyla konformasyonel değişim sergileme.",
+       "correct": "both"
+      },
+      {
+       "criterion": "Milisaniyeler düzeyinde son derece hızlı postsinaptik elektriksel yanıt üretme.",
+       "correct": "A"
+      }
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Santral sinir sistemi sinapsları ve ilaç hedefleriyle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "GABA-A reseptörü klorür kanalı açarak IPSP üretir ve flumazenil ile spesifik olarak antagonize edilir.",
+       "isCorrect": true,
+       "explanation": "GABA-A reseptörü klorür girişi sağlayarak hiperpolarizasyon ve inhibisyon yapar; benzodiazepin modülasyonu flumazenil ile seçici olarak engellenir."
+      },
+      {
+       "key": "B",
+       "text": "Astrositler aksiyon potansiyelini onlarca metre uzağa ileten santral projeksiyon nöronlarıdır.",
+       "isCorrect": false,
+       "explanation": "Astrositler iyon dengesini sağlayan ve nörotransmiterleri temizleyen glial destek hücreleridir. Bu hücreler uzak mesafelere aksiyon potansiyeli ileten projeksiyon nöronları değillerdir."
+      },
+      {
+       "key": "C",
+       "text": "Membranla-sınırlı G-proteini yolakları hücre çekirdeğine difüze olarak kromozomları yeniden düzenler.",
+       "isCorrect": false,
+       "explanation": "Membranla-sınırlı yolaklar plazma zarı mikroçevresinde kalarak komşu iyon kanallarını doğrudan regüle eder; nükleusa difüze olmazlar."
+      },
+      {
+       "key": "D",
+       "text": "Presinaptik inhibisyon akson ucundaki kalsiyum akışını artırarak nörotransmiter salınımını katlar.",
+       "isCorrect": false,
+       "explanation": "Presinaptik inhibisyon aksoaksonik sinaptik temasla voltaj kapılı kalsiyum kanallarını baskılar ve vezikül ekzositozunu azaltarak iletimi fizyolojik olarak zayıflatır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 9,
+   "id": "k2p-y25-k2-09-sss-ilaclari-s09",
+   "title": "İlaç Etki Yerleri ve Farmakolojik Hedefler",
+   "subtitle": "Santral ilaçlar presinaptik sentez, depolama, salınım, geri alım veya postsinaptik reseptörleri modifiye eder.",
+   "badge": "İlaç Etki Yerleri",
+   "bolum": 3,
+   "pdfSayfalari": [
+    20,
+    23
+   ],
+   "kaynakSayfa": "Sayfa 20-23",
+   "bilgi": "Presinaptik ve postsinaptik ilaç hedefleri: Rezerpin, kokain, antikolinesterazlar, striknin ve barbitüratlar.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "content": "Merkezi sinir sistemini etkileyen ilaçlar kimyasal sinaptik iletim basamaklarını modifiye ederek sonuç üretirler. Bu farmakolojik hedefler presinaptik ve postsinaptik olarak sınıflandırılır.\n\n- **Presinaptik Mekanizmalar:** Rezerpin veziküler depolamayı engelleyerek monoaminleri tüketir. Amfetamin salıverilmeyi artırırken kokain geri alımı bloke eder. Asetilkolin ise geri alımla değil kolinesteraz ile enzimatik olarak yıkılır.\n- **Postsinaptik Hedefler:** İlaçlar nörotransmiter agonistleri veya antagonistleri olarak bağlanır; örneğin striknin inhibitör glisin reseptörlerini bloke eder.\n- **Kanal Blokajı:** Barbitüratlar gibi bazı ajanlar doğrudan iyonotropik reseptörün kanal poruna girerek iyon geçişini fiziksel olarak tıkayabilirler.\n\n> [!IMPORTANT]\n> MSS'de ilaç etkisinin selektifliği, farklı nöronal devrelerin farklı nörotransmiterleri ve özgül reseptör alt tiplerini kullanmasına dayanır.",
+   "synthesisNarrative": "Merkezi sinir sistemini etkileyen ilaçlar kimyasal sinaptik iletim basamaklarını modifiye ederek sonuç üretirler. Bu farmakolojik hedefler presinaptik ve postsinaptik olarak sınıflandırılır.\n\n- **Presinaptik Mekanizmalar:** Rezerpin veziküler depolamayı engelleyerek monoaminleri tüketir. Amfetamin salıverilmeyi artırırken kokain geri alımı bloke eder. Asetilkolin ise geri alımla değil kolinesteraz ile enzimatik olarak yıkılır.\n- **Postsinaptik Hedefler:** İlaçlar nörotransmiter agonistleri veya antagonistleri olarak bağlanır; örneğin striknin inhibitör glisin reseptörlerini bloke eder.\n- **Kanal Blokajı:** Barbitüratlar gibi bazı ajanlar doğrudan iyonotropik reseptörün kanal poruna girerek iyon geçişini fiziksel olarak tıkayabilirler.\n\n> [!IMPORTANT]\n> MSS'de ilaç etkisinin selektifliği, farklı nöronal devrelerin farklı nörotransmiterleri ve özgül reseptör alt tiplerini kullanmasına dayanır.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Veziküler Deplesyon",
+      "desc": "Rezerpin monoaminlerin granüllere pompalanmasını engelleyerek sinaptik uçta transmiter tükenmesine yol açar.",
+      "isKey": true
+     },
+     {
+      "title": "Geri Alım ve Yıkım Farkı",
+      "desc": "Monoaminler transporter proteinleriyle geri alınırken asetilkolin sinaptik aralıkta kolinesterazla hızla parçalanır.",
+      "isKey": true
+     },
+     {
+      "title": "Postsinaptik Antagonizma",
+      "desc": "Striknin glisin reseptörünü bloke eder; barbitüratlar iyonotropik kanalı doğrudan tıkayarak iletiyi baskılar.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "Asetilkolin sinaptik aralıktan geri alımla değil, asetilkolinesteraz enzimi tarafından hidroliz edilerek uzaklaştırılır.",
+    "Striknin omurilikteki inhibitör glisin reseptörlerinin kompetitif blokörüdür ve konvülsiyonlara yol açar."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Rezerpin",
+     "explanation": "Veziküler monoamin taşıyıcısını bloke ederek adrenerjik terminallerde nörotransmiter tükenmesi yapan antihipertansif ajan."
+    },
+    {
+     "term": "Striknin",
+     "explanation": "Omurilik ve beyin sapındaki glisin reseptörlerini bloke ederek güçlü konvülsiyonlar oluşturan zehirli alkaloid."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-k2p-09-17",
+     "front": "Asetilkolinin sinaptik aralıktaki etkisinin sonlandırılma mekanizması monoaminlerden nasıl ayrılır?",
+     "back": "Monoaminler spesifik taşıyıcılarla geri alınırken asetilkolin asetilkolinesteraz enzimiyle parçalanarak inaktive edilir.",
+     "category": "İlaç Etki Yerleri"
+    },
+    {
+     "id": "fc-k2p-09-18",
+     "front": "İnhibitör glisin reseptörlerini bloke eden ve güçlü omurilik konvülsiyonlarına yol açan toksik ajan nedir?",
+     "back": "Striknin isimli alkaloiddir.",
+     "category": "İlaç Etki Yerleri"
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "21 MSS İlaçları Farmakolojisine Giriş_251103_085815.pdf",
+    "startPage": 20,
+    "endPage": 23,
+    "primaryPage": [
+     20,
+     21,
+     22,
+     23
+    ],
+    "citation": "Sayfa 20–23 · Kurul 2 Tıbbi Farmakoloji · SSS İlaçları"
+   },
+   "interactiveElements": [
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Farmakolojik Ajan",
+      "Primer Etki Bölgesi",
+      "Moleküler Etki Mekanizması"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Rezerpin"
+        },
+        {
+         "text": "Presinaptik vezikül zarı"
+        },
+        {
+         "text": "Veziküler depolanmayı engelleyerek tükenme",
+         "isMasked": true,
+         "hint": "Granüllere amin girişini durdurarak boşaltma."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Kokain"
+        },
+        {
+         "text": "Presinaptik membran taşıyıcısı",
+         "isMasked": true,
+         "hint": "Geri transport sisteminin yerleştiği plazma zarı bölgesi."
+        },
+        {
+         "text": "Katekolamin geri alımının bloke edilmesi"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Striknin"
+        },
+        {
+         "text": "Postsinaptik glisin reseptörü"
+        },
+        {
+         "text": "İnhibitör klorür kanalının blokajı",
+         "isMasked": true,
+         "hint": "Omurilik frenleme mekanizmasının durdurulması."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Rezerpin veziküler depolamayı engelleyerek monoaminleri tüketir.",
+     "maskedTerm": "rezerpin",
+     "hint": "Veziküler amin alımını durduran klasik deplesyon ajanı."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Santral kimyasal sinapslarda presinaptik ve postsinaptik ilaç hedefleriyle ilgili hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Kokain adrenerjik terminallerde geri alımı bloke ederek sinaptik aralıkta katekolamin konsantrasyonunu artırır.",
+       "isCorrect": true,
+       "explanation": "Kokain presinaptik membran taşıyıcılarını bloke eder ve salınan monoaminlerin geri alınmasını engelleyerek sinaptik etkilerini belirgin biçimde uzatır."
+      },
+      {
+       "key": "B",
+       "text": "Asetilkolin sinaptik aralıktan yalnızca yüksek afiniteli nöronal geri alım pompalarıyla temizlenir.",
+       "isCorrect": false,
+       "explanation": "Asetilkolin sinaptik aralıkta asetilkolinesteraz enzimi tarafından hidroliz edilir. Kolin geri alınır ancak asetilkolin bütünüyle geri taşınmaz."
+      },
+      {
+       "key": "C",
+       "text": "Striknin eksitatör sodyum kanallarını doğrudan açarak nöron membranını kalıcı olarak depolarize eder.",
+       "isCorrect": false,
+       "explanation": "Striknin postsinaptik glisin reseptörlerini bloke eden bir antagonisttir. Bu molekülün sodyum kanallarını doğrudan açma veya aktive etme özelliği bulunmaz."
+      },
+      {
+       "key": "D",
+       "text": "Rezerpin sinaptik veziküllerin sayısını ve içerdikleri nörotransmiter miktarını hızla artırır.",
+       "isCorrect": false,
+       "explanation": "Rezerpin veziküler amin pompasını inhibe eder. Bu durum veziküllerin boşalmasına ve transmiter deplesyonuna yol açar."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Barbitüratların eksitatör iyonotropik reseptörler üzerindeki kanal blokajı mekanizması nasıldır?",
+     "answer": "Barbitüratlar iyonotropik reseptör kompleksinin doğrudan iyon ileten kanal poruna girerek katyon akışını fiziksel olarak engellerler."
+    }
+   ]
+  },
+  {
+   "slideNumber": 10,
+   "id": "k2p-y25-k2-09-sss-ilaclari-s10",
+   "title": "Santral Nörotransmiter Kriterleri ve Hiyerarşik Sistemler",
+   "subtitle": "Transmiter kanıt ölçütleri lokalizasyon, salıverilme ve sinaptik benzerliktir; hiyerarşik yolaklar kalın miyelinli liflerden oluşur.",
+   "badge": "Transmiter Kriterleri",
+   "bolum": 4,
+   "pdfSayfalari": [
+    24,
+    26
+   ],
+   "kaynakSayfa": "Sayfa 24-26",
+   "bilgi": "Santral nörotransmiter tanımlama ölçütleri ve hiyerarşik projeksiyon nöronlarının organizasyonu.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "content": "Bir kimyasalın santral nörotransmiter kabul edilmesi için üç temel ölçütü karşılaması gerekir: presinaptik lokalizasyon, kalsiyum bağımlı salıverilme ve sinaptik benzerlik sergilemesi.\n\n- **Sinaptik Benzerlik:** Şüphelenilen maddenin ekzojen uygulanması elektriksel sinir uyarımıyla oluşan fizyolojik yanıtı birebir taklit etmeli ve selektif antagonistlerce bloke edilmelidir.\n- **Hiyerarşik Sistemler:** Duyusal algı ve motor kontrolde görevli yolaklardır. Aksiyon potansiyelini elli metre bölü saniyeden hızlı ileten kalın miyelinli liflerden kuruludur.\n- **Projeksiyon Nöronları:** Büyük hücre gövdelerine sahip olup uzak mesafelere sıralı röle çekirdekleri üzerinden sinyal taşırlar ve temel iletici olarak glutamat salgılarlar.\n\n> [!NOTE]\n> Hiyerarşik duyusal zincirdeki herhangi bir ara röle çekirdeğindeki fokal lezyon, sistemin tamamının işlev göremez hale gelmesine yol açar.",
+   "synthesisNarrative": "Bir kimyasalın santral nörotransmiter kabul edilmesi için üç temel ölçütü karşılaması gerekir: presinaptik lokalizasyon, kalsiyum bağımlı salıverilme ve sinaptik benzerlik sergilemesi.\n\n- **Sinaptik Benzerlik:** Şüphelenilen maddenin ekzojen uygulanması elektriksel sinir uyarımıyla oluşan fizyolojik yanıtı birebir taklit etmeli ve selektif antagonistlerce bloke edilmelidir.\n- **Hiyerarşik Sistemler:** Duyusal algı ve motor kontrolde görevli yolaklardır. Aksiyon potansiyelini elli metre bölü saniyeden hızlı ileten kalın miyelinli liflerden kuruludur.\n- **Projeksiyon Nöronları:** Büyük hücre gövdelerine sahip olup uzak mesafelere sıralı röle çekirdekleri üzerinden sinyal taşırlar ve temel iletici olarak glutamat salgılarlar.\n\n> [!NOTE]\n> Hiyerarşik duyusal zincirdeki herhangi bir ara röle çekirdeğindeki fokal lezyon, sistemin tamamının işlev göremez hale gelmesine yol açar.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Üç Kanıt Ölçütü",
+      "desc": "Lokalizasyon, kalsiyum bağımlı fizyolojik salıverilme ve farmakolojik sinaptik benzerlik (mimikri).",
+      "isKey": true
+     },
+     {
+      "title": "Hiyerarşik Hızlı İleti",
+      "desc": "Duyusal ve motor yolaklarda kalın miyelinli aksonlar 50 m/sn üzeri yüksek hızda iletim sağlar.",
+      "isKey": true
+     },
+     {
+      "title": "Projeksiyon Nöronları ve Glutamat",
+      "desc": "Uzak mesafeli röle nöronları büyük gövdelidir ve primer eksitatör iletici olarak glutamat kullanır.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "Nörotransmiter tanımlamasında maddenin kalsiyuma bağımlı salındığının ve sinaptik benzerlik gösterdiğinin kanıtlanması şarttır.",
+    "Hiyerarşik sistemlerdeki projeksiyon (röle) nöronları eksitatör karakterde olup uzak hedeflere glutamat iletir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Sinaptik Benzerlik",
+     "explanation": "Şüphelenilen maddenin ekzojen tatbik edildiğinde doğal sinirsel uyarımın oluşturduğu yanıtı birebir üretmesi."
+    },
+    {
+     "term": "Projeksiyon Nöronu",
+     "explanation": "Santral sinir sisteminde bir çekirdekten diğerine veya kortekse uzun aksonlarla sinyal taşıyan röle nöronu."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-k2p-09-19",
+     "front": "Bir maddenin santral nörotransmiter olduğunu kanıtlayan üç temel ölçüt nedir?",
+     "back": "Lokalizasyon (presinaptik varlık), salıverilme (kalsiyum bağımlı) ve sinaptik benzerliktir (farmakolojik mimikri).",
+     "category": "Transmiter Ölçütleri"
+    },
+    {
+     "id": "fc-k2p-09-20",
+     "front": "Hiyerarşik sistemlerin projeksiyon nöronları hangi hızda iletir ve hangi transmiteri salgılar?",
+     "back": "50 m/sn'den hızlı ileten kalın miyelinli liflere sahiptir ve başlıca eksitatör iletici glutamat salgılarlar.",
+     "category": "Hiyerarşik Sistemler"
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "21 MSS İlaçları Farmakolojisine Giriş_251103_085815.pdf",
+    "startPage": 24,
+    "endPage": 26,
+    "primaryPage": [
+     24,
+     25,
+     26
+    ],
+    "citation": "Sayfa 24–26 · Kurul 2 Tıbbi Farmakoloji · SSS İlaçları"
+   },
+   "interactiveElements": [
+    {
+     "type": "spot_the_lie",
+     "topic": "Santral Nörotransmiter Ölçütleri ve Projeksiyon Yolları",
+     "items": [
+      {
+       "text": "Salıverilmenin sinaptik iletimle ilişkili olduğunu kanıtlamak için kalsiyuma bağımlı olduğunun gösterilmesi gerekir.",
+       "isLie": false,
+       "explanation": "Fizyolojik ekzositoz voltaj kapılı kalsiyum kanallarından giren kalsiyum iyonlarına mutlak bağımlıdır."
+      },
+      {
+       "text": "Hiyerarşik sistemlerdeki projeksiyon lifleri 50 m/sn'den daha hızlı ileten kalın miyelinli aksonlardan oluşur.",
+       "isLie": false,
+       "explanation": "Duyusal ve motor projeksiyon yolakları hızlı bilgi işleme amacıyla kalın çaplı ve miyelinli aksonlar kullanır."
+      },
+      {
+       "text": "Hiyerarşik duyusal zincirdeki herhangi bir röle çekirdeğinin hasarlanması sistemin işleyişini hiçbir şekilde etkilemez.",
+       "isLie": true,
+       "explanation": "Hiyerarşik sistemler sıralı entegrasyonla çalışır. Herhangi bir bağlantı noktasındaki fokal lezyon tüm yolun fonksiyonunu bozar."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Bir kimyasalın nörotransmiter sayılması için presinaptik lokalizasyon, kalsiyum bağımlı salıverilme ve sinaptik benzerlik göstermesi şarttır.",
+     "maskedTerm": "sinaptik benzerlik",
+     "hint": "Ekzojen maddenin doğal sinirsel etkiyi birebir taklit etme özelliği."
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Hiyerarşik Projeksiyon Nöronu",
+     "rightCategory": "Transmiter Kanıt Kriteri",
+     "cards": [
+      {
+       "text": "Uzak hedeflere sinyal ileten büyük hücre gövdeli röle hücresidir.",
+       "category": "left"
+      },
+      {
+       "text": "Temel eksitatör nörotransmiter olarak çoğunlukla glutamat salgılar.",
+       "category": "left"
+      },
+      {
+       "text": "Şüphelenilen maddenin presinaptik sinir ucunda bulunduğunun gösterilmesi.",
+       "category": "right"
+      },
+      {
+       "text": "Uyarım sonucu toplanan sıvıda kalsiyum bağımlı ekzositozun saptanması.",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Santral nörotransmiter belirleme kriterleri ve hiyerarşik sistemlerin özellikleri hakkında hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Projeksiyon nöronları sıralı röle çekirdekleri üzerinden duyusal ve motor sinyalleri yüksek hızla iletirler.",
+       "isCorrect": true,
+       "explanation": "Hiyerarşik sistemdeki röle nöronları büyük gövdelere ve miyelinli liflere sahip olup duyusal bilgiyi kortekse doğru entegre ederek taşırlar."
+      },
+      {
+       "key": "B",
+       "text": "Santral transmiter salıverilmesinin fizyolojik sayılması için ortamda kalsiyum bulunmaması şarttır.",
+       "isCorrect": false,
+       "explanation": "Sinaptik vezikül ekzositozu hücre içine kalsiyum girişine kesinlikle bağımlıdır. Kalsiyumsuz ortamda fizyolojik nörotransmiter salınımı gerçekleşmez."
+      },
+      {
+       "key": "C",
+       "text": "Sinaptik benzerlik kriterinde ekzojen uygulanan maddenin hiçbir farmakolojik antagonist ile engellenememesi aranır.",
+       "isCorrect": false,
+       "explanation": "Sinaptik benzerlikte ekzojen uygulanan maddenin oluşturduğu yanıtın selektif bir antagonist ile tamamen bloke edilebilmesi zorunludur."
+      },
+      {
+       "key": "D",
+       "text": "Hiyerarşik sistemlerdeki projeksiyon nöronlarının tamamı miyelinsiz olup iletim hızları bir metrenin altındadır.",
+       "isCorrect": false,
+       "explanation": "Hiyerarşik projeksiyon lifleri kalın ve miyelinli aksonal yapılardır. Bu sistemlerin aksiyon potansiyeli iletim hızları saniyede 50 metrenin üzerindedir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 11,
+   "id": "k2p-y25-k2-09-sss-ilaclari-s11",
+   "title": "Hiyerarşik Sistemlerde Lokal Devre Nöronları ve İnhibitör Devreler",
+   "subtitle": "Lokal ara nöronlar GABA ve glisin salgılayarak geri-besleme ve ileri-besleme inhibisyonu sağlar.",
+   "badge": "İnhibitör Devreler",
+   "bolum": 4,
+   "pdfSayfalari": [
+    27,
+    29
+   ],
+   "kaynakSayfa": "Sayfa 27-29",
+   "bilgi": "Lokal devre ara nöronları, tekrarlayan geri-besleme, ileri-besleme ve pikrotoksin ile konvülsiyon modeli.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "content": "Hiyerarşik sistemlerde projeksiyon nöronlarının yanı sıra lokal devre nöronları bulunur. Bu ara nöronlar daha küçük hücre gövdelerine ve lokal dallanan kısa aksonlara sahiptir.\n\n- **İnhibitör İleticiler:** Lokal devre nöronlarının büyük kısmı inhibitördür; primer olarak GABA veya glisin salgılayarak projeksiyon nöronlarının gövde ve dendritleriyle sinaps yaparlar.\n- **Devre Mekanizmaları:** İki temel yolak tipi bulunur: projeksiyon nöronu kollateraliyle aktive olan tekrarlayan geri-besleme yolağı ve gelen uyaranla doğrudan aktive olan ileri-besleme yolağıdır.\n- **Eksitabilite Kontrolü:** Sınırlı sayıda inhibitör transmiter kullanılması genel eksitabiliteyi hassas kılar. Örneğin pikrotoksin ile GABA-A reseptörlerinin bloke edilmesi jeneralize konvülsiyonlara yol açar.\n\n> [!IMPORTANT]\n> Lokal inhibitör devrelerin farmakolojik olarak felce uğratılması, kontrolsüz senkronize nöronal deşarjlara ve yaygın epileptik nöbetlere neden olur.",
+   "synthesisNarrative": "Hiyerarşik sistemlerde projeksiyon nöronlarının yanı sıra lokal devre nöronları bulunur. Bu ara nöronlar daha küçük hücre gövdelerine ve lokal dallanan kısa aksonlara sahiptir.\n\n- **İnhibitör İleticiler:** Lokal devre nöronlarının büyük kısmı inhibitördür; primer olarak GABA veya glisin salgılayarak projeksiyon nöronlarının gövde ve dendritleriyle sinaps yaparlar.\n- **Devre Mekanizmaları:** İki temel yolak tipi bulunur: projeksiyon nöronu kollateraliyle aktive olan tekrarlayan geri-besleme yolağı ve gelen uyaranla doğrudan aktive olan ileri-besleme yolağıdır.\n- **Eksitabilite Kontrolü:** Sınırlı sayıda inhibitör transmiter kullanılması genel eksitabiliteyi hassas kılar. Örneğin pikrotoksin ile GABA-A reseptörlerinin bloke edilmesi jeneralize konvülsiyonlara yol açar.\n\n> [!IMPORTANT]\n> Lokal inhibitör devrelerin farmakolojik olarak felce uğratılması, kontrolsüz senkronize nöronal deşarjlara ve yaygın epileptik nöbetlere neden olur.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Lokal Devre Morfolojisi",
+      "desc": "Küçük boyutlu gövdeleri ve lokal arborizasyon gösteren kısa aksonlarıyla komşu röle nöronlarını denetlerler.",
+      "isKey": true
+     },
+     {
+      "title": "İki İnhibisyon Kalıbı",
+      "desc": "Tekrarlayan (rekürren) geri-besleme kendi kendini sınırlar; ileri-besleme (feed-forward) gelen sinyali daraltır.",
+      "isKey": true
+     },
+     {
+      "title": "Pikrotoksin Toksisitesi",
+      "desc": "GABA-A klorür kanal blokörü pikrotoksin, inhibitör kontrolü kaldırarak şiddetli jeneralize nöbetler başlatır.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "Lokal devre ara nöronları hiyerarşik devrelerde primer olarak GABA veya glisin salgılayarak inhibitör denetim kurar.",
+    "Pikrotoksin GABA-A reseptörlerini bloke ederek inhibitör tonusu kaldırır ve fatal konvülsiyonlara sebep olur."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Lokal Devre Nöronu",
+     "explanation": "Aksonları hücre gövdesinin hemen çevresinde sonlanan ve komşu nöronları regüle eden inhibitör ara nöron."
+    },
+    {
+     "term": "Pikrotoksin",
+     "explanation": "GABA-A reseptörünün klorür kanal porunu bloke ederek jeneralize konvülsiyonlar üreten bitkisel toksin."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-k2p-09-21",
+     "front": "Hiyerarşik sistemlerde lokal devre ara nöronlarının salgıladığı temel inhibitör transmiterler nelerdir?",
+     "back": "GABA ve glisindir; projeksiyon nöronlarının gövde ve dendritlerinde inhibitör sinaps kurarlar.",
+     "category": "İnhibitör Devreler"
+    },
+    {
+     "id": "fc-k2p-09-22",
+     "front": "Pikrotoksin maddesinin GABA-A reseptörlerini bloke etmesi organizmada hangi dramatik klinik tabloyu üretir?",
+     "back": "İnhibitör baskılama mekanizmasını kaldırarak jeneralize epileptik konvülsiyonlara yol açar.",
+     "category": "İnhibitör Devreler"
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "21 MSS İlaçları Farmakolojisine Giriş_251103_085815.pdf",
+    "startPage": 27,
+    "endPage": 29,
+    "primaryPage": [
+     27,
+     28,
+     29
+    ],
+    "citation": "Sayfa 27–29 · Kurul 2 Tıbbi Farmakoloji · SSS İlaçları"
+   },
+   "interactiveElements": [
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Tekrarlayan (Geri-Besleme)",
+     "rightTitle": "İleri-Besleme (Feed-Forward)",
+     "leftPoints": [
+      "Projeksiyon nöronunun akson kollaterali tarafından aktive edilen ara nörondur.",
+      "Ateşlenen projeksiyon nöronunun kendi aktivitesini sınırlandırmasını sağlar.",
+      "Renshaw hücrelerinin motor nöronları inhibe etmesi klasik fizyolojik örneğidir."
+     ],
+     "rightPoints": [
+      "Gelen afferent eksitatör lif tarafından doğrudan aktive edilen ara nörondur.",
+      "Gelen sinyalin hedef nörona ulaşmasıyla eş zamanlı veya hemen önce inhibisyon kurar.",
+      "Duyusal yolaklarda zıt kontrastı artırmak ve sinyal sınırlarını netleştirmek için kullanılır."
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Örneğin pikrotoksin ile GABA-A reseptörlerinin bloke edilmesi jeneralize konvülsiyonlara yol açar.",
+     "maskedTerm": "pikrotoksin",
+     "hint": "GABA-A klorür porunu tıkayan güçlü konvülsan toksik bileşik."
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "Deneysel bir çalışmada hayvan modeline GABA-A reseptör klorür porunu seçici olarak tıkayan pikrotoksin maddesi uygulanmıştır.",
+     "options": [
+      {
+       "text": "Santral inhibitör tonus ortadan kalkar ve kontrolsüz deşarjlarla jeneralize konvülsiyonlar gelişir.",
+       "isCorrect": true,
+       "feedback": "GABA-A blokajı santral sinir sistemindeki temel inhibitör kontrolü felç eder ve yaygın senkronize epileptik deşarjlar başlatır."
+      },
+      {
+       "text": "Hayvanda derin anestezi ve koma gelişerek solunum tamamen durur.",
+       "isCorrect": false,
+       "feedback": "GABA agonistleri ve sedatifler koma yapabilir. GABA antagonisti pikrotoksin ise sedasyon değil tam tersine şiddetli konvülsiyon oluşturur."
+      },
+      {
+       "text": "Yalnızca periferik nöromusküler kavşakta asetilkolin salınımı kalıcı olarak felç olur.",
+       "isCorrect": false,
+       "feedback": "Pikrotoksin santral GABA-A reseptörlerini bloke eden bir toksindir. Periferik nöromusküler kavşaktaki nikotinik asetilkolin iletimi üzerine doğrudan bir etkisi bulunmaz."
+      }
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Hiyerarşik sistemlerde görev alan lokal devre nöronlarının özellikleri hakkında hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Lokal devre nöronları çoğunlukla GABA veya glisin salgılayan küçük inhibitör ara hücrelerdir.",
+       "isCorrect": true,
+       "explanation": "Lokal devre nöronları projeksiyon nöronlarına kıyasla küçüktür; aksonları komşu nöron gövdesiyle sinaps yaparak inhibitör kontrol sağlarlar."
+      },
+      {
+       "key": "B",
+       "text": "Lokal devre nöronlarının aksonları omurilikten kortekse kadar metrelerce kesintisiz uzanır.",
+       "isCorrect": false,
+       "explanation": "Lokal devre nöronları kısa aksonludur ve dallanmaları hücre gövdesinin hemen çevresinde sınırlı kalır; uzun mesafeye uzanmazlar."
+      },
+      {
+       "key": "C",
+       "text": "GABA-A reseptörlerinin bloke edilmesi santral sinir sisteminde derin uyku ve sakinlik oluşturur.",
+       "isCorrect": false,
+       "explanation": "GABA-A reseptör blokajı santral inhibitör denetimi ortadan kaldırır ve jeneralize epileptik konvülsiyonlara yol açar."
+      },
+      {
+       "key": "D",
+       "text": "Lokal ara nöronların tamamı eksitatör nitelikte olup yalnızca yüksek dozda dopamin salgılarlar.",
+       "isCorrect": false,
+       "explanation": "Lokal devre nöronlarının ezici çoğunluğu inhibitör karakterde olup temel kimyasal iletici olarak GABA veya glisin kullanırlar."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 12,
+   "id": "k2p-y25-k2-09-sss-ilaclari-s12",
+   "title": "Yaygın (Diffüz) Nöronal Sistemler ve Santral Transmiterler",
+   "subtitle": "Miyelinsiz, yavaş ileten ve varikositeler içeren monoaminerjik sistemler geniş kortikal alanları modüle eder.",
+   "badge": "Diffüz Sistemler",
+   "bolum": 4,
+   "pdfSayfalari": [
+    30,
+    32
+   ],
+   "kaynakSayfa": "Sayfa 30-32",
+   "bilgi": "Yaygın sistemlerin aksonal yapısı, varikositeler, hacimsel ileti ve Tablo 21-2 transmiter sınıflandırması.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "content": "Yaygın nöronal sistemler, hiyerarşik sistemlerden yapısal ve işlevsel olarak tamamen farklıdır. Noradrenalin, dopamin ve serotonin içeren monoaminerjik yolaklar bu grubun tipik örnekleridir.\n\n- **Aksiyon İletim Hızı:** Aksonları ince ve miyelinsizdir; iletim hızları son derece yavaştır (yaklaşık 0,5 m/sn). Aksonlar tekrarlayan şekilde dallanarak geniş beyin alanlarına yayılır.\n- **Varikositeler ve Hacimsel İleti:** Aksonlar boyunca vezikül içeren şişkinlikler (varikositeler) bulunur; klasik sinaps yapmadan ekstraselüler aralığa yaygın nörotransmiter salabilirler.\n- **Metabotropik Etki:** Bu transmiterler başlıca metabotropik reseptörler üzerinden etkiyerek uzun süreli hücresel yanıtları ve genel uyanıklık modülasyonunu başlatırlar.\n\n> [!NOTE]\n> Tablo 21-2'de özetlendiği üzere santral nörotransmiterler amino asitler (glutamat, GABA, glisin), asetilkolin ve monoaminler olmak üzere spesifik anatomik yolaklara ayrılır.",
+   "synthesisNarrative": "Yaygın nöronal sistemler, hiyerarşik sistemlerden yapısal ve işlevsel olarak tamamen farklıdır. Noradrenalin, dopamin ve serotonin içeren monoaminerjik yolaklar bu grubun tipik örnekleridir.\n\n- **Aksiyon İletim Hızı:** Aksonları ince ve miyelinsizdir; iletim hızları son derece yavaştır (yaklaşık 0,5 m/sn). Aksonlar tekrarlayan şekilde dallanarak geniş beyin alanlarına yayılır.\n- **Varikositeler ve Hacimsel İleti:** Aksonlar boyunca vezikül içeren şişkinlikler (varikositeler) bulunur; klasik sinaps yapmadan ekstraselüler aralığa yaygın nörotransmiter salabilirler.\n- **Metabotropik Etki:** Bu transmiterler başlıca metabotropik reseptörler üzerinden etkiyerek uzun süreli hücresel yanıtları ve genel uyanıklık modülasyonunu başlatırlar.\n\n> [!NOTE]\n> Tablo 21-2'de özetlendiği üzere santral nörotransmiterler amino asitler (glutamat, GABA, glisin), asetilkolin ve monoaminler olmak üzere spesifik anatomik yolaklara ayrılır.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Miyelinsiz İnce Aksonlar",
+      "desc": "0,5 m/sn hızında yavaş iletim yapan lifler geniş korteks alanlarını monosinaptik olarak etkiler.",
+      "isKey": true
+     },
+     {
+      "title": "Varikozite Modülasyonu",
+      "desc": "Aksonal genişlemelerden salınan monoaminler parakrin benzeri hacimsel iletimle binlerce nöronu etkiler.",
+      "isKey": true
+     },
+     {
+      "title": "Tablo 21-2 Çerçevesi",
+      "desc": "Glutamat primer eksitatör, GABA ve glisin inhibitör; monoaminler ise yaygın modülatör sistemleri kurar.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "Yaygın nöronal sistemler ince, miyelinsiz ve 0,5 m/sn hızla ileten son derece dallı aksonlara sahiptir.",
+    "Varikositeler klasik sinaptik yarık oluşturmadan yaygın nörotransmiter salınımı (hacimsel ileti) yapabilirler."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Varikosite",
+     "explanation": "Diffüz nöronal aksonlar boyunca periyodik olarak dizilen, bol miktarda sinaptik vezikül içeren genişlemeler."
+    },
+    {
+     "term": "Hacimsel İleti",
+     "explanation": "Nörotransmiterin tek bir sinaptik aralığa değil, ekstraselüler sıvıya yayılarak geniş bir nöron grubunu etkilemesi."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-k2p-09-23",
+     "front": "Yaygın (diffüz) monoaminerjik sistemlerin akson yapısı ve iletim hızı nasıldır?",
+     "back": "İnce, miyelinsiz ve yaklaşık 0,5 m/sn hızında oldukça yavaş ileten aksonlardır.",
+     "category": "Diffüz Sistemler"
+    },
+    {
+     "id": "fc-k2p-09-24",
+     "front": "Diffüz aksonlar üzerindeki vezikül zengini periyodik genişlemelere ne ad verilir ve işlevi nedir?",
+     "back": "Varikositelerdir; klasik sinaps yapmadan ekstraselüler aralığa yaygın nörotransmiter salınımı sağlarlar.",
+     "category": "Diffüz Sistemler"
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "21 MSS İlaçları Farmakolojisine Giriş_251103_085815.pdf",
+    "startPage": 30,
+    "endPage": 32,
+    "primaryPage": [
+     30,
+     31,
+     32
+    ],
+    "citation": "Sayfa 30–32 · Kurul 2 Tıbbi Farmakoloji · SSS İlaçları"
+   },
+   "interactiveElements": [
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Hiyerarşik Sistemler",
+     "rightTitle": "Yaygın (Diffüz) Sistemler",
+     "leftPoints": [
+      "Kalın miyelinli aksonlar ve 50 m/sn üzeri yüksek iletim hızı sergiler.",
+      "Duyusal algılama ve istemli motor kontrolde kesin lokalize yollar kurar.",
+      "Doğrudan spesifik sinaptik bağlantılar üzerinden glutamat ve GABA ile çalışır."
+     ],
+     "rightPoints": [
+      "İnce miyelinsiz aksonlar ve 0,5 m/sn civarında yavaş iletim hızı sergiler.",
+      "Uyku-uyanıklık, dikkat, duygudurum ve motivasyonel durumları modüle eder.",
+      "Varikositelerden ekstraselüler sıvıya monoamin salarak hacimsel ileti oluşturur."
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Aksonlar boyunca vezikül içeren şişkinlikler yani varikositeler bulunur.",
+     "maskedTerm": "varikositeler",
+     "hint": "Diffüz aksonlarda vezikül depolayan periyodik şişkinlik yapıları."
+    },
+    {
+     "type": "venn_grid",
+     "labelA": "Hiyerarşik Sistem",
+     "labelB": "Yaygın Sistem",
+     "items": [
+      {
+       "criterion": "Duyusal algılama ve motor kontrolde doğrudan sıralı yolaklar kurma.",
+       "correct": "A"
+      },
+      {
+       "criterion": "İnce miyelinsiz liflerle yaklaşık 0,5 m/sn hızında yavaş ileti yapma.",
+       "correct": "B"
+      },
+      {
+       "criterion": "Merkezi sinir sisteminde kimyasal nörotransmiter salgılayarak işlev görme.",
+       "correct": "both"
+      },
+      {
+       "criterion": "Varikositeler aracılığıyla parakrin benzeri yaygın hacimsel salıverilme sergileme.",
+       "correct": "B"
+      }
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Yaygın (diffüz) nöronal sistemlerin yapısal ve işlevsel özellikleri hakkında hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Aksonlarındaki varikositelerden salınan monoaminler metabotropik reseptörlerle uzun süreli modülasyon sağlar.",
+       "isCorrect": true,
+       "explanation": "Diffüz monoaminerjik sistemler varikositelerden salınan ileticiler ve metabotropik reseptörler aracılığıyla geniş kortikal alanlarda kalıcı modülasyon yürütürler."
+      },
+      {
+       "key": "B",
+       "text": "Diffüz sistem lifleri 100 m/sn hızla ileten en kalın miyelinli primer motor aksonlardır.",
+       "isCorrect": false,
+       "explanation": "Diffüz sistem aksonları ince ve miyelinsiz olup iletim hızları yaklaşık 0,5 m/sn düzeyinde son derece yavaştır."
+      },
+      {
+       "key": "C",
+       "text": "Bu yolaklar yalnızca omurilik ön boynunda yer alıp iskelet kası kasılmasını doğrudan yönetirler.",
+       "isCorrect": false,
+       "explanation": "Monoaminerjik yaygın sistemler beyin sapı çekirdeklerinden köken alırlar. Bu lifler tüm beyin korteksine geniş ve yaygın projeksiyonlar gönderirler."
+      },
+      {
+       "key": "D",
+       "text": "Varikositeler sinaptik vezikül içermeyen ve nöronun atıklarını fagosite eden lizozomal yapılardır.",
+       "isCorrect": false,
+       "explanation": "Varikositeler bol miktarda nörotransmiter vezikülü içeren aksonal genişlemelerdir. Bu yapılar ekzositozla çevre dokuya yaygın kimyasal salıverilme yaparlar."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 13,
+   "id": "k2p-y25-k2-09-sss-ilaclari-s13",
+   "title": "Eksitatör Amino Asitler: Glutamat ve İyonotropik Reseptörler",
+   "subtitle": "Glutamat MSS'deki temel eksitatör nörotransmiterdir; AMPA ve kainat reseptörleri hızlı EPSP oluşturur.",
+   "badge": "Eksitatör İleti",
+   "bolum": 5,
+   "pdfSayfalari": [
+    33,
+    35
+   ],
+   "kaynakSayfa": "Sayfa 33-35",
+   "bilgi": "Glutamatın eksitatör rolü, AMPA, kainat reseptörleri, katyon iletkenliği ve CNQX antagonizması.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "content": "Santral sinir sisteminde hızlı eksitatör sinaptik iletiye glutamat aracılık eder. Test edilen nöronların neredeyse tamamı glutamat tarafından güçlü şekilde uyarılır.\n\n- **Reseptör Sınıfları:** Glutamat hem iyonotropik (AMPA, kainat, NMDA) hem de metabotropik (mGluR1-8) reseptör alt tipleri üzerinden etki gösterir.\n- **AMPA Reseptörleri:** Beyinde yaygın dağılım gösterir; ligand bağlandığında milisaniyeler içinde açılarak sodyum girişi ve potasyum çıkışı sağlar ve hızlı EPSP üretir.\n- **Kainat Reseptörleri:** Hipokampus ve serebellum gibi belirli bölgelerde yoğunlaşır; benzer şekilde katyon geçirgenliği oluşturur ancak desensitizasyon kinetiği farklıdır.\n\n> [!IMPORTANT]\n> AMPA ve kainat reseptörleri, klasik antagonistler olan CNQX ve NBQX bileşikleri tarafından seçici olarak bloke edilir ve hızlı eksitatör sinaptik akımlar baskılanır.",
+   "synthesisNarrative": "Santral sinir sisteminde hızlı eksitatör sinaptik iletiye glutamat aracılık eder. Test edilen nöronların neredeyse tamamı glutamat tarafından güçlü şekilde uyarılır.\n\n- **Reseptör Sınıfları:** Glutamat hem iyonotropik (AMPA, kainat, NMDA) hem de metabotropik (mGluR1-8) reseptör alt tipleri üzerinden etki gösterir.\n- **AMPA Reseptörleri:** Beyinde yaygın dağılım gösterir; ligand bağlandığında milisaniyeler içinde açılarak sodyum girişi ve potasyum çıkışı sağlar ve hızlı EPSP üretir.\n- **Kainat Reseptörleri:** Hipokampus ve serebellum gibi belirli bölgelerde yoğunlaşır; benzer şekilde katyon geçirgenliği oluşturur ancak desensitizasyon kinetiği farklıdır.\n\n> [!IMPORTANT]\n> AMPA ve kainat reseptörleri, klasik antagonistler olan CNQX ve NBQX bileşikleri tarafından seçici olarak bloke edilir ve hızlı eksitatör sinaptik akımlar baskılanır.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Temel Eksitatör İletici",
+      "desc": "Glutamat beyin ve omurilikteki sinapsların çoğunda hızlı depolarizasyonu başlatan primer amino asittir.",
+      "isKey": true
+     },
+     {
+      "title": "AMPA ve Hızlı EPSP",
+      "desc": "GluA alt birimlerinden oluşan kanal, sodyum girişiyle postsinaptik membranı hızla eşiğe taşır.",
+      "isKey": true
+     },
+     {
+      "title": "Kainat ve Antagonizma",
+      "desc": "Kainat reseptörleri bölgesel ekspresyon sergiler; her iki reseptör grubu da CNQX ile inhibe edilir.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "Glutamat MSS'deki başlıca eksitatör nörotransmiterdir ve hızlı uyarılmaya AMPA reseptörleri aracılık eder.",
+    "CNQX ve NBQX bileşikleri AMPA ve kainat reseptörlerinin kompetitif olmayan/kompetitif antagonistleridir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "AMPA Reseptörü",
+     "explanation": "Glutamat ile aktive olan, sodyum ve potasyum geçirgenliği yüksek, hızlı desensitize olan iyonotropik reseptör."
+    },
+    {
+     "term": "CNQX",
+     "explanation": "AMPA ve kainat reseptörlerini bloke ederek hızlı eksitatör sinaptik iletiyi durduran deneysel antagonist madde."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-k2p-09-25",
+     "front": "MSS'de hızlı eksitatör sinaptik potansiyeli (EPSP) üreten temel nörotransmiter ve iyonotropik reseptör hangisidir?",
+     "back": "Nörotransmiter glutamattır; hızlı EPSP'ye başlıca AMPA reseptörleri aracılık eder.",
+     "category": "Glutamat İletimi"
+    },
+    {
+     "id": "fc-k2p-09-26",
+     "front": "AMPA ve kainat reseptörlerini farmakolojik olarak bloke etmek için kullanılan prototip antagonistler nelerdir?",
+     "back": "CNQX ve NBQX bileşikleridir.",
+     "category": "Glutamat İletimi"
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "21 MSS İlaçları Farmakolojisine Giriş_251103_085815.pdf",
+    "startPage": 33,
+    "endPage": 35,
+    "primaryPage": [
+     33,
+     34,
+     35
+    ],
+    "citation": "Sayfa 33–35 · Kurul 2 Tıbbi Farmakoloji · SSS İlaçları"
+   },
+   "interactiveElements": [
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Reseptör Tipi",
+      "Hücresel Dağılımı",
+      "Temel İyonik İletkenlik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "AMPA Reseptörü"
+        },
+        {
+         "text": "Tüm beyinde yaygın ve homojen",
+         "isMasked": true,
+         "hint": "Santral korteks ve alt merkezlerin genelinde bulunma."
+        },
+        {
+         "text": "Yüksek sodyum girişi ve potasyum çıkışı"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Kainat Reseptörü"
+        },
+        {
+         "text": "Hipokampus ve serebellumda kümelenmiş"
+        },
+        {
+         "text": "Sodyum ve potasyum akımı",
+         "isMasked": true,
+         "hint": "Pozitif yüklü monovalan katyonların geçişi."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kainat reseptörleri hipokampus ve serebellum gibi belirli bölgelerde yoğunlaşır.",
+     "maskedTerm": "kainat reseptörleri",
+     "hint": "AMPA benzeri ancak bölgesel dağılım sergileyen glutamat alıcıları."
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "AMPA Reseptörü",
+     "rightCategory": "Kainat Reseptörü",
+     "cards": [
+      {
+       "text": "Santral sinir sisteminde son derece üniform ve yaygın bir dağılım sergiler.",
+       "category": "left"
+      },
+      {
+       "text": "Hipokampus CA3 bölgesi ve serebellar granül tabakasında belirgin olarak yoğunlaşır.",
+       "category": "right"
+      },
+      {
+       "text": "Hızlı eksitatör EPSP dalgasının en büyük ve ani bileşenini oluşturur.",
+       "category": "left"
+      },
+      {
+       "text": "Farklı alt birim bileşimiyle özgül sinaptik plastisite modülasyonu yapar.",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Santral sinir sisteminde glutamat ve iyonotropik reseptörleriyle ilgili hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "AMPA reseptörleri sodyum ve potasyum geçirgenliği sağlayarak hızlı eksitatör iletimi yürütürler.",
+       "isCorrect": true,
+       "explanation": "AMPA reseptörleri glutamat bağlandığında sodyum iyonlarının içeri akmasına izin vererek postsinaptik nöronda hızlı bir EPSP depolarizasyonu oluştururlar."
+      },
+      {
+       "key": "B",
+       "text": "Kainat reseptörleri yalnızca klorür iyonu geçirerek nöronu kalıcı olarak hiperpolarize ederler.",
+       "isCorrect": false,
+       "explanation": "Kainat reseptörleri sodyum ve potasyum katyonlarını geçiren eksitatör kanallardır. Bu reseptörler klorür geçirgenliği veya hiperpolarizasyon oluşturmazlar."
+      },
+      {
+       "key": "C",
+       "text": "CNQX bileşiği glutamat sentezini nükleusta durduran bir transkripsiyon inhibitörüdür.",
+       "isCorrect": false,
+       "explanation": "CNQX transkripsiyonu etkilemez; doğrudan AMPA ve kainat reseptörlerinin kompetitif antagonistidir ve sinaptik akımı bloke eder."
+      },
+      {
+       "key": "D",
+       "text": "Glutamat nöronların yalnızca binde birini etkileyen son derece zayıf bir transmitterdir.",
+       "isCorrect": false,
+       "explanation": "Glutamat santral sinir sisteminin temel eksitatör mediyatörüdür. Beyindeki nöronların neredeyse tamamını güçlü ve hızlı şekilde uyarır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 14,
+   "id": "k2p-y25-k2-09-sss-ilaclari-s14",
+   "title": "NMDA Reseptörü, Sinaptik Plastisite ve Metabotropik mGluR'lar",
+   "subtitle": "NMDA reseptörü voltaj-bağımlı magnezyum blokajı, kalsiyum geçirgenliği ve glisin ko-agonistiyle çalışır.",
+   "badge": "NMDA ve Plastisite",
+   "bolum": 5,
+   "pdfSayfalari": [
+    36,
+    39
+   ],
+   "kaynakSayfa": "Sayfa 36-39",
+   "bilgi": "NMDA reseptörünün Mg2+ blokajı, kalsiyum girişi, LTP mekanizması, eksitotoksisite ve mGluR alt tipleri.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "content": "NMDA reseptörleri benzersiz moleküler özelliklere sahiptir. İstirahat potansiyelinde kanal gözeneği ekstraselüler magnezyum iyonları tarafından fiziksel olarak tıkanır.\n\n- **Voltaj-Bağımlı Açılma:** Membran AMPA reseptörlerince depolarize edildiğinde magnezyum kanaldan dışarı itilir. Reseptörün açılması için glisin ko-agonist bağlanması şarttır.\n- **Kalsiyum Akışı ve LTP:** Kanal yüksek oranda kalsiyum geçirir; artan hücre içi kalsiyum saatler veya günler süren uzun süreli potansiyalizasyon (LTP) gelişimini tetikler.\n- **Metabotropik Glutamat Reseptörleri:** mGluR ailesinden Grup I (Gq) postsinaptik eksitasyonu artırırken, Grup II ve III (Gi/o) presinaptik kalsiyum kanallarını baskılayarak iletimi sınırlar.\n\n> [!IMPORTANT]\n> Aşırı NMDA reseptör aktivasyonu hücre içine kontrolsüz kalsiyum yığılmasına yol açar; bu durum eksitotoksisite ve geri dönüşsüz nöronal ölüm ile sonuçlanır.",
+   "synthesisNarrative": "NMDA reseptörleri benzersiz moleküler özelliklere sahiptir. İstirahat potansiyelinde kanal gözeneği ekstraselüler magnezyum iyonları tarafından fiziksel olarak tıkanır.\n\n- **Voltaj-Bağımlı Açılma:** Membran AMPA reseptörlerince depolarize edildiğinde magnezyum kanaldan dışarı itilir. Reseptörün açılması için glisin ko-agonist bağlanması şarttır.\n- **Kalsiyum Akışı ve LTP:** Kanal yüksek oranda kalsiyum geçirir; artan hücre içi kalsiyum saatler veya günler süren uzun süreli potansiyalizasyon (LTP) gelişimini tetikler.\n- **Metabotropik Glutamat Reseptörleri:** mGluR ailesinden Grup I (Gq) postsinaptik eksitasyonu artırırken, Grup II ve III (Gi/o) presinaptik kalsiyum kanallarını baskılayarak iletimi sınırlar.\n\n> [!IMPORTANT]\n> Aşırı NMDA reseptör aktivasyonu hücre içine kontrolsüz kalsiyum yığılmasına yol açar; bu durum eksitotoksisite ve geri dönüşsüz nöronal ölüm ile sonuçlanır.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Magnezyum Blokajı",
+      "desc": "Dinlenim voltajında Mg2+ kanal porunu tıkar; açılması için membran depolarizasyonu ve glisin zorunludur.",
+      "isKey": true
+     },
+     {
+      "title": "Kalsiyum ve LTP",
+      "desc": "Ca2+ girişi kinaz kaskadlarını uyararak sinaptik bağlantı gücünü artıran LTP ve bellek süreçlerini yürütür.",
+      "isKey": true
+     },
+     {
+      "title": "mGluR Regülasyonu",
+      "desc": "Grup I mGluR eksitasyonu güçlendirirken Grup II ve III presinaptik transmiter salınımını otoinhibitör olarak kısar.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "NMDA reseptörünün açılabilmesi için glutamat bağlanması, membran depolarizasyonu (Mg2+ çıkışı) ve glisin ko-agonizmi gerekir.",
+    "LTP (Uzun Süreli Potansiyalizasyon) öğrenme ve belleğin hücresel modeli olup NMDA reseptör aracılı kalsiyum girişine dayanır."
+   ],
+   "medicalTerms": [
+    {
+     "term": "LTP",
+     "explanation": "Uzun süreli potansiyalizasyon; sinapstaki tekrarlayan uyarım sonrası iletim gücünün uzun süreli artması."
+    },
+    {
+     "term": "Eksitotoksisite",
+     "explanation": "Aşırı glutamat uyarımı ve masif kalsiyum girişi sonucu nöronların enzimatik olarak parçalanıp ölmesi süreci."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-k2p-09-27",
+     "front": "NMDA reseptör kanal porunun dinlenim potansiyelinde açılmasını engelleyen iyon nedir ve nasıl çözülür?",
+     "back": "Magnezyum iyonudur (Mg2+); membran AMPA reseptörleriyle depolarize edildiğinde magnezyum pordan dışarı itilir.",
+     "category": "NMDA Mekanizması"
+    },
+    {
+     "id": "fc-k2p-09-28",
+     "front": "Grup II ve Grup III metabotropik glutamat reseptörlerinin (mGluR) temel sinaptik işlevi nedir?",
+     "back": "Presinaptik yerleşimli olup Gi/o aracılığıyla kalsiyum kanallarını baskılar ve transmiter salınımını otoinhibitör olarak azaltırlar.",
+     "category": "mGluR Reseptörleri"
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "21 MSS İlaçları Farmakolojisine Giriş_251103_085815.pdf",
+    "startPage": 36,
+    "endPage": 39,
+    "primaryPage": [
+     36,
+     37,
+     38,
+     39
+    ],
+    "citation": "Sayfa 36–39 · Kurul 2 Tıbbi Farmakoloji · SSS İlaçları"
+   },
+   "interactiveElements": [
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. AMPA Ön Depolarizasyonu: Glutamat AMPA reseptörlerini açarak sodyum girişi ve postsinaptik membran depolarizasyonu oluşturur.",
+      "2. Magnezyum Blokajının Kalkması: Pozitifleşen iç voltaj kanal poruna takılmış olan magnezyum iyonunu dışarı iter.",
+      "3. Glisin Ko-Aktivasyonu: Glisin ve glutamatın eşzamanlı bağlı olduğu NMDA kanalı açılarak hücreye kalsiyum akışı başlar.",
+      "4. İntraselüler Enzim Aktivasyonu ve LTP: Kalsiyum bağımlı enzimler sinaptik gücü kalıcı olarak artıran LTP sürecini başlatır."
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "İstirahat potansiyelinde kanal gözeneği ekstraselüler magnezyum iyonları tarafından fiziksel olarak tıkanır.",
+     "maskedTerm": "magnezyum",
+     "hint": "Dinlenim voltajında NMDA gözeneğini kapatan iki değerlikli element."
+    },
+    {
+     "type": "micro_quiz",
+     "question": "NMDA reseptörlerinin işleyişi ve sinaptik plastisitedeki rolüyle ilgili hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Açılması için membran depolarizasyonu ile magnezyum bloğunun kalkması ve glisin ko-agonizmi zorunludur.",
+       "isCorrect": true,
+       "explanation": "NMDA reseptörü voltaj ve ligand kapılı çift kontrollü bir kanaldır; depolarizasyon Mg2+ bloğunu çözerken glisin kofaktör olarak bağlanmalıdır."
+      },
+      {
+       "key": "B",
+       "text": "NMDA kanalları kalsiyum iyonlarına tamamen kapalı olup yalnızca lityum geçirgenliği sergiler.",
+       "isCorrect": false,
+       "explanation": "NMDA reseptörlerinin en belirgin fizyolojik niteliği son derece yüksek kalsiyum geçirgenliğine sahip olmaları ve sinaptik plastisiteyi tetiklemeleridir."
+      },
+      {
+       "key": "C",
+       "text": "LTP süreci nöronal bağlantıların kalıcı olarak susturulması ve unutmanın hızlanması demektir.",
+       "isCorrect": false,
+       "explanation": "LTP sinaptik iletim gücünün uzun süreli olarak artırılmasıdır ve hücresel öğrenme ile bellek mekanizmalarının temelini oluşturur."
+      },
+      {
+       "key": "D",
+       "text": "Grup I metabotropik glutamat reseptörleri presinaptik uçta transmiter salınımını tamamen durdurur.",
+       "isCorrect": false,
+       "explanation": "Grup I mGluR'lar Gq kenetli olup postsinaptik yerleşimlidir ve hücresel eksitabiliteyi artıran yolakları aktive ederler."
+      }
+     ]
+    },
+    {
+     "type": "feature_bidding",
+     "optionA": "Grup I mGluR (mGluR1, mGluR5)",
+     "optionB": "Grup II ve III mGluR (mGluR2-8)",
+     "rounds": [
+      {
+       "feature": "Gq proteini ile kenetli olup fosfolipaz C aktivasyonu ve IP3/DAG üretimi sağlama.",
+       "correct": "A"
+      },
+      {
+       "feature": "Presinaptik yerleşim göstererek voltaj kapılı kalsiyum kanallarını ve transmiter salınımını inhibe etme.",
+       "correct": "B"
+      },
+      {
+       "feature": "Gi/o proteini ile kenetli olup hücre içi adenilil siklazı ve cAMP üretimini baskılama.",
+       "correct": "B"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 15,
+   "id": "k2p-y25-k2-09-sss-ilaclari-s15",
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Nöronal Devreler, İlaç Hedefleri ve Eksitatör Sinaptik İleti",
+   "subtitle": "Hiyerarşik ve yaygın sistemler, inhibitör devreler, glutamat reseptörleri ve NMDA plastisitesinin sentezi.",
+   "badge": "Tekrar ve Pekiştirme",
+   "bolum": 5,
+   "pdfSayfalari": [
+    20,
+    39
+   ],
+   "kaynakSayfa": "Sayfa 20-39",
+   "bilgi": "İkinci bölümün temel kazanımlarının entegrasyonu, eksitatör ileti ve nöronal devre regülasyonunun pekiştirilmesi.",
+   "isCheckpoint": true,
+   "checkpointNumber": 2,
+   "content": "Bu bölümde sinaptik ilaç hedefleri, nöronal devre organizasyonu ve eksitatör iletim mekanizmaları incelenmiştir. Rezerpin vezikülleri boşaltırken kokain geri alımı bloke eder; striknin ise glisin reseptörlerini baskılar.\n\n- **Devre Ayrımı:** Hiyerarşik sistemler miyelinli hızlı aksonlarla sıralı çalışır; yaygın sistemler miyelinsiz yavaş aksonlar ve varikositelerle parakrin benzeri hacimsel ileti kurar.\n- **Lokal İnhibisyon:** GABA ve glisin salgılayan lokal ara nöronlar eksitabiliteyi dengeler; pikrotoksin ile klorür kanalı blokajı yaygın konvülsiyonlar doğurur.\n- **Eksitatör İleti:** Glutamat AMPA ile hızlı EPSP oluşturur; NMDA reseptöründe ise magnezyum bloğunun kalkması ve kalsiyum girişiyle LTP tetiklenir.\n\n> [!NOTE]\n> Aşırı glutamat salınımı veya temizlenememesi, NMDA üzerinden hücreye masif kalsiyum sokarak eksitotoksisiteye ve nöron ölümüne yol açar.",
+   "synthesisNarrative": "Bu bölümde sinaptik ilaç hedefleri, nöronal devre organizasyonu ve eksitatör iletim mekanizmaları incelenmiştir. Rezerpin vezikülleri boşaltırken kokain geri alımı bloke eder; striknin ise glisin reseptörlerini baskılar.\n\n- **Devre Ayrımı:** Hiyerarşik sistemler miyelinli hızlı aksonlarla sıralı çalışır; yaygın sistemler miyelinsiz yavaş aksonlar ve varikositelerle parakrin benzeri hacimsel ileti kurar.\n- **Lokal İnhibisyon:** GABA ve glisin salgılayan lokal ara nöronlar eksitabiliteyi dengeler; pikrotoksin ile klorür kanalı blokajı yaygın konvülsiyonlar doğurur.\n- **Eksitatör İleti:** Glutamat AMPA ile hızlı EPSP oluşturur; NMDA reseptöründe ise magnezyum bloğunun kalkması ve kalsiyum girişiyle LTP tetiklenir.\n\n> [!NOTE]\n> Aşırı glutamat salınımı veya temizlenememesi, NMDA üzerinden hücreye masif kalsiyum sokarak eksitotoksisiteye ve nöron ölümüne yol açar.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "İlaç Hedefleri",
+      "desc": "Rezerpin deplesyon yapar, kokain reuptake blokörüdür; striknin glisini, pikrotoksin GABA-A'yı antagonize eder.",
+      "isKey": true
+     },
+     {
+      "title": "Hiyerarşik ve Diffüz Karşıtlığı",
+      "desc": "Miyelinli hızlı hiyerarşik projeksiyonlar glutamat kullanırken, miyelinsiz diffüz varikositeler monoamin yayar.",
+      "isKey": true
+     },
+     {
+      "title": "AMPA ve NMDA İşbirliği",
+      "desc": "AMPA ön depolarizasyonu sağlar; voltajla Mg2+ bloğu kalkan NMDA kalsiyum geçirerek plastisite ve LTP üretir.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "LTP süreci NMDA reseptörlerinin kalsiyum iletkenliğiyle başlar ve hücresel bellek oluşumunu temsil eder.",
+    "Pikrotoksin GABA-A klorür porunu tıkayarak, striknin ise glisin reseptörünü bloke ederek ölümcül konvülsiyonlara yol açar."
+   ],
+   "medicalTerms": [
+    {
+     "term": "NMDA Blokajı",
+     "explanation": "Dinlenim potansiyelinde ekstraselüler magnezyum iyonlarının reseptör poruna oturarak iyon akışını engellemesi."
+    },
+    {
+     "term": "Grup II/III mGluR",
+     "explanation": "Presinaptik uçta yer alarak kalsiyum kanallarını baskılayan ve eksitatör salınımı azaltan Gi/o kenetli otoreseptörler."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-k2p-09-29",
+     "front": "NMDA reseptör aktivasyonu sırasında kalsiyum girişinin iki zıt hücresel sonucu nelerdir?",
+     "back": "Fizyolojik düzeyde LTP ve bellek oluşumunu sağlarken aşırı yüklenmede eksitotoksisite ve nöron ölümüne yol açar.",
+     "category": "Pekiştirme"
+    },
+    {
+     "id": "fc-k2p-09-30",
+     "front": "Diffüz monoaminerjik sistemlerin hiyerarşik sistemlerden en belirgin iki iletimsel farkı nedir?",
+     "back": "Miyelinsiz yavaş aksonlara (0,5 m/sn) sahip olmaları ve varikositelerden sinapssız hacimsel salıverilme yapmalarıdır.",
+     "category": "Pekiştirme"
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "21 MSS İlaçları Farmakolojisine Giriş_251103_085815.pdf",
+    "startPage": 20,
+    "endPage": 39,
+    "primaryPage": [
+     20,
+     39
+    ],
+    "citation": "Sayfa 20–39 · Kurul 2 Tıbbi Farmakoloji · SSS İlaçları"
+   },
+   "interactiveElements": [
+    {
+     "type": "spot_the_lie",
+     "topic": "Santral Nöronal Devreler ve Glutamaterjik İleti",
+     "items": [
+      {
+       "text": "AMPA reseptörleri glutamat ile aktive olan ve CNQX ile bloke edilen hızlı eksitatör katyon kanallarıdır.",
+       "isLie": false,
+       "explanation": "AMPA reseptörleri hızlı EPSP oluşturur ve kompetitif antagonistleri CNQX ve NBQX'tir."
+      },
+      {
+       "text": "NMDA reseptörünün açılabilmesi için depolarizasyonla magnezyum bloğunun çözülmesi ve glisin bağlanması şarttır.",
+       "isLie": false,
+       "explanation": "NMDA reseptörü voltaj ve ko-agonist bağımlı çalışan çift kilitli moleküler bir kanaldır."
+      },
+      {
+       "text": "Lokal devre nöronları hiyerarşik sistemlerde uzak kortikal alanlara glutamat taşıyan kalın miyelinli liflerdir.",
+       "isLie": true,
+       "explanation": "Uzak alanlara glutamat taşıyanlar projeksiyon nöronlarıdır; lokal devre nöronları ise küçük ve inhibitör (GABA/glisin) ara hücrelerdir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Hiyerarşik sistemler miyelinli hızlı aksonlarla sıralı çalışır.",
+     "maskedTerm": "hiyerarşik sistemler",
+     "hint": "Duyusal ve motor yolakları kuran sıralı santral iletim ağı."
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "Serebral iskemi geçiren bir hastada astrositlerin enerji yetmezliği nedeniyle sinaptik aralıktan glutamatı geri alamadığı gözlenmiştir.",
+     "options": [
+      {
+       "text": "Sinapsta biriken glutamat NMDA reseptörlerini aşırı uyarır; masif kalsiyum girişi eksitotoksisite ve nöron ölümü yapar.",
+       "isCorrect": true,
+       "feedback": "İskemide biriken glutamat kontrolsüz NMDA aktivasyonu ve intraselüler kalsiyum yüklenmesine yol açarak eksitotoksik hücre ölümünü tetikler."
+      },
+      {
+       "text": "Aşırı glutamat hücre membranındaki potasyum kanallarını kalıcı açarak hücreyi derin uykuya sokar.",
+       "isCorrect": false,
+       "feedback": "Glutamat santral sinir sisteminde hızlı eksitasyon sağlayan temel ileticidir. İskemi durumunda potasyum aktivasyonu veya uyku yerine sitotoksik hasar oluşturur."
+      },
+      {
+       "text": "Klinik durumda GABA-A reseptörleri aşırı klorür pompalayarak tüm nöronları iskemiden tamamen korur.",
+       "isCorrect": false,
+       "feedback": "GABA-A reseptörleri santral sinir sisteminin temel inhibitör kanallarıdır. Ancak masif glutamaterjik eksitotoksisite tablosunda tek başına nöronları hasardan koruyamazlar."
+      }
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Santral kimyasal sinapslar ve eksitatör iletim mekanizmaları hakkında hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "NMDA reseptörleri yüksek oranda kalsiyum geçirerek sinaptik plastisite ve LTP oluşumunu tetiklerler.",
+       "isCorrect": true,
+       "explanation": "NMDA reseptörleri kalsiyum akışına izin verir; artan hücre içi kalsiyum kinazları uyararak sinaptik güçlenme (LTP) ve plastisite başlatır."
+      },
+      {
+       "key": "B",
+       "text": "Kokain ve rezerpin sinaptik iletimi güçlendirmek için hücre çekirdeğinde yeni ribozom üretirler.",
+       "isCorrect": false,
+       "explanation": "Kokain membran transporter blokörü, rezerpin ise veziküler amin deplesyon ajanıdır. Bu ilaçların ribozom sentezlemek gibi bir hücresel etkileri bulunmaz."
+      },
+      {
+       "key": "C",
+       "text": "Pikrotoksin glisin reseptörlerini uyararak omurilikte tam kas gevşemesi ve sedasyon oluşturur.",
+       "isCorrect": false,
+       "explanation": "Pikrotoksin GABA-A klorür porunu tıkayarak jeneralize konvülsiyonlar üreten bir toksindir. Omurilikte kas gevşemesi veya sedasyon oluşturma özelliği yoktur."
+      },
+      {
+       "key": "D",
+       "text": "Grup II metabotropik glutamat reseptörleri postsinaptik membranda masif kalsiyum patlaması üretirler.",
+       "isCorrect": false,
+       "explanation": "Grup II mGluR'lar Gi/o kenetli presinaptik otoreseptörlerdir. Bu reseptörler kalsiyum kanallarını baskılayarak sinaptik iletimi ve transmiter salınımını azaltırlar."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 16,
+   "id": "k2p-y25-k2-09-sss-ilaclari-s16",
+   "title": "İnhibitör Amino Asitler: GABA ve Glisin Reseptörleri",
+   "subtitle": "GABA-A hızlı klorür akışı sağlarken GABA-B metabotropik yolla potasyumu artırır; glisin omurilikte baskılama yapar.",
+   "badge": "İnhibitör İleti",
+   "bolum": 6,
+   "pdfSayfalari": [
+    40,
+    41
+   ],
+   "kaynakSayfa": "Sayfa 40-41",
+   "bilgi": "GABA-A ve GABA-B reseptörleri, baklofen seçici agonizmi ve glisinin striknin duyarlı kanalları.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "content": "Merkezi sinir sisteminde temel inhibitör ileti nötral amino asitler olan GABA ve glisin ile sağlanır. Bu moleküller nöronal eksitabilitenin ana dengeleyicileridir.\n\n- **GABA-A Reseptörü:** Ligand kapılı bir klorür kanalıdır; GABA bağlandığında klorür girişi sağlayarak hızlı IPSP oluşturur. Benzodiazepinler ve barbitüratlar allosterik modülatörleridir.\n- **GABA-B Reseptörü:** Metabotropik Gi/o kenetli reseptördür; antispastik ilaç baklofen tarafından selektif olarak aktive edilir. Presinaptik kalsiyum kanallarını baskılar veya postsinaptik potasyum kanallarını açarak yavaş IPSP üretir.\n- **Glisin Reseptörü:** Omurilik ve beyin sapındaki temel inhibitör mediyatördür; ligand kapılı klorür kanalı yapısında olup striknin tarafından selektif olarak bloke edilir.\n\n> [!IMPORTANT]\n> Baklofen, santral etkili antispastik bir ilaç olarak seçici şekilde GABA-B reseptörlerini uyarır ve aşırı motor refleks arklarını presinaptik kalsiyum inhibisyonuyla baskılar.",
+   "synthesisNarrative": "Merkezi sinir sisteminde temel inhibitör ileti nötral amino asitler olan GABA ve glisin ile sağlanır. Bu moleküller nöronal eksitabilitenin ana dengeleyicileridir.\n\n- **GABA-A Reseptörü:** Ligand kapılı bir klorür kanalıdır; GABA bağlandığında klorür girişi sağlayarak hızlı IPSP oluşturur. Benzodiazepinler ve barbitüratlar allosterik modülatörleridir.\n- **GABA-B Reseptörü:** Metabotropik Gi/o kenetli reseptördür; antispastik ilaç baklofen tarafından selektif olarak aktive edilir. Presinaptik kalsiyum kanallarını baskılar veya postsinaptik potasyum kanallarını açarak yavaş IPSP üretir.\n- **Glisin Reseptörü:** Omurilik ve beyin sapındaki temel inhibitör mediyatördür; ligand kapılı klorür kanalı yapısında olup striknin tarafından selektif olarak bloke edilir.\n\n> [!IMPORTANT]\n> Baklofen, santral etkili antispastik bir ilaç olarak seçici şekilde GABA-B reseptörlerini uyarır ve aşırı motor refleks arklarını presinaptik kalsiyum inhibisyonuyla baskılar.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "İyonotropik GABA-A",
+      "desc": "Klorür kanalı açarak milisaniyeler içinde hızlı hiperpolarizasyon ve IPSP meydana getirir.",
+      "isKey": true
+     },
+     {
+      "title": "Metabotropik GABA-B ve Baklofen",
+      "desc": "Baklofen seçici agonistidir; presinaptik Ca2+ inhibisyonu ve postsinaptik K+ aktivasyonu yapar.",
+      "isKey": true
+     },
+     {
+      "title": "Glisin ve Striknin",
+      "desc": "Omurilik internöronlarından salınan glisin klorür kanalı açar; striknin blokajı ölümcül spazmlara yol açar.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "GABA-A iyonotropik klorür kanalıyken GABA-B metabotropik GPCR yapısındadır ve seçici agonisti baklofendir.",
+    "Glisin omurilikteki primer inhibitör iletici olup striknin tarafından seçici biçimde antagonize edilir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Baklofen",
+     "explanation": "GABA-B reseptörlerinin selektif agonisti olan, spastisite ve omurilik lezyonlarında kullanılan antispastik ilaç."
+    },
+    {
+     "term": "GABA-B Reseptörü",
+     "explanation": "Heterotrimerik Gi/o proteini ile kenetli, kalsiyumu azaltıp potasyumu artıran metabotropik GABA reseptörü."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-k2p-09-31",
+     "front": "GABA-A ile GABA-B reseptörlerinin temel yapısal ve iletimsel farkı nedir?",
+     "back": "GABA-A hızlı klorür akışı sağlayan iyonotropik kanaldır; GABA-B ise Gi/o kenetli metabotropik reseptördür.",
+     "category": "İnhibitör Transmiterler"
+    },
+    {
+     "id": "fc-k2p-09-32",
+     "front": "Spastisite tedavisinde kullanılan ve seçici GABA-B agonisti olan ilaç hangisidir?",
+     "back": "Baklofen molekülüdür; kalsiyum kanallarını baskılayarak refleks arklarını inhibe eder.",
+     "category": "İnhibitör Transmiterler"
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "21 MSS İlaçları Farmakolojisine Giriş_251103_085815.pdf",
+    "startPage": 40,
+    "endPage": 41,
+    "primaryPage": [
+     40,
+     41
+    ],
+    "citation": "Sayfa 40–41 · Kurul 2 Tıbbi Farmakoloji · SSS İlaçları"
+   },
+   "interactiveElements": [
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Reseptör Alt Tipi",
+      "Reseptör Yapısal Sınıfı",
+      "Özgül Agonist / Antagonist"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "GABA-A Reseptörü"
+        },
+        {
+         "text": "Ligand kapılı klorür kanalı",
+         "isMasked": true,
+         "hint": "Negatif halojen iyonu geçiren doğrudan membran poru."
+        },
+        {
+         "text": "Agonist: Muskimol / Antagonist: Pikrotoksin"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "GABA-B Reseptörü"
+        },
+        {
+         "text": "Metabotropik GPCR (Gi/o)"
+        },
+        {
+         "text": "Seçici Agonist: Baklofen",
+         "isMasked": true,
+         "hint": "Spastisitede kullanılan santral etkili ilaç."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Glisin Reseptörü"
+        },
+        {
+         "text": "Ligand kapılı klorür kanalı"
+        },
+        {
+         "text": "Seçici Antagonist: Striknin",
+         "isMasked": true,
+         "hint": "Omurilik spazmı oluşturan klasik bitkisel zehir."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "GABA-B reseptörü antispastik ilaç baklofen tarafından selektif olarak aktive edilir.",
+     "maskedTerm": "baklofen",
+     "hint": "GABA-B reseptörünü seçici biçimde uyaran spastisite ilacı."
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "İyonotropik GABA-A",
+     "rightTitle": "Metabotropik GABA-B",
+     "leftPoints": [
+      "Pentamerik protein alt birimlerinden oluşan ligand kapılı klorür kanalıdır.",
+      "Milisaniyeler içinde hızla açılarak ani ve kısa süreli IPSP dalgası üretir.",
+      "Benzodiazepinler, barbitüratlar ve etanol ile allosterik olarak modüle edilir."
+     ],
+     "rightPoints": [
+      "Heterotrimerik Gi/o proteini ile kenetli yedi transmembranlı GPCR yapısındadır.",
+      "Potasyum kanallarını açarak veya kalsiyumu kısarak yavaş ve uzun süreli IPSP üretir.",
+      "Seçici agonisti olan baklofen ile uyarılır ve spastisite tedavisinde kullanılır."
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Santral sinir sisteminde GABA ve glisin reseptör mekanizmalarıyla ilgili hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Baklofen GABA-B reseptörlerini uyararak presinaptik kalsiyum kanallarını baskılar ve spastisiteyi çözer.",
+       "isCorrect": true,
+       "explanation": "Baklofen seçici bir GABA-B agonistidir; Gi/o üzerinden presinaptik kalsiyum girişini azaltarak aşırı motor uyarımı ve spastisiteyi baskılar."
+      },
+      {
+       "key": "B",
+       "text": "GABA-A reseptörleri ligand bağlandığında hücre içine yoğun kalsiyum sokarak eksitotoksisite yapar.",
+       "isCorrect": false,
+       "explanation": "GABA-A reseptörleri klorür kanalıdır; negatif klorür iyonu girişi sağlayarak nöronu hiperpolarize eder ve yatıştırır."
+      },
+      {
+       "key": "C",
+       "text": "Glisin reseptörleri omurilikte yalnızca sodyum kanallarını açarak iskelet kasını doğrudan kasar.",
+       "isCorrect": false,
+       "explanation": "Glisin omurilikte klorür kanalı açarak motor nöronları hiperpolarize eden temel mediyatördür. Bu ileticinin sodyum geçirgenliği oluşturarak kas kasılması yapma etkisi bulunmaz."
+      },
+      {
+       "key": "D",
+       "text": "Striknin GABA-B reseptörlerine bağlanarak potasyum iletkenliğini yüz katına çıkarır.",
+       "isCorrect": false,
+       "explanation": "Striknin omurilikteki iyonotropik glisin reseptörlerini selektif olarak bloke eden zehirli bir bitkisel alkaloiddir. GABA-B reseptörleri veya potasyum kanalları üzerinde bir aktivitesi yoktur."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 17,
+   "id": "k2p-y25-k2-09-sss-ilaclari-s17",
+   "title": "Santral Monoaminler: Dopamin, Noradrenalin, Serotonin ve Histamin",
+   "subtitle": "Monoaminerjik yolaklar duyudurum, dikkat ve motor kontrolü düzenler; 5-HT3 tek iyonotropik istisnadır.",
+   "badge": "Monoaminerjik Sistemler",
+   "bolum": 7,
+   "pdfSayfalari": [
+    42,
+    45
+   ],
+   "kaynakSayfa": "Sayfa 42-45",
+   "bilgi": "Dopamin D1/D2 aileleri, noradrenalin alfa2 etkileri, 5-HT3 iyonotropik katyon kanalı ve histamin TMN nükleusu.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "content": "Santral monoaminler katekolaminleri (dopamin ve noradrenalin), serotonini ve histamini kapsar. Kokain ve amfetamin katekolamin sinapslarını güçlü şekilde uyarır.\n\n- **Dopamin Reseptörleri:** D1 benzeri (D1, D5) Gs ile kenetli olup cAMP artırır; D2 benzeri (D2, D3, D4) Gi ile kenetli olup cAMP azaltır ve antipsikotik ilaçların ana hedefidir.\n- **Noradrenalin:** Tüm reseptörleri metabotropiktir; alfa2 reseptörleri potasyum geçirgenliğini artırarak nöronları hiperpolarize eder ve presinaptik otoreseptör olarak salınımı kısar.\n- **Serotonin (5-HT):** Bir düzineden fazla reseptör alt tipine sahiptir; 5-HT3 hariç tümü metabotropiktir. İyonotropik 5-HT3 katyon kanalı hızlı eksitatör etki oluşturur.\n- **Histamin:** Yalnızca posterior hipotalamustaki tuberomammiller nükleusta (TMN) üretilir; yaygın projeksiyonlarla uyanıklık ve dikkati artırır.\n\n> [!NOTE]\n> Serotonin reseptör ailesinde 5-HT3 reseptörü tek ligand kapılı iyon kanalı istisnasıdır; kemoterapiye bağlı kusmanın önlenmesinde 5-HT3 antagonistleri (ondansetron) kullanılır.",
+   "synthesisNarrative": "Santral monoaminler katekolaminleri (dopamin ve noradrenalin), serotonini ve histamini kapsar. Kokain ve amfetamin katekolamin sinapslarını güçlü şekilde uyarır.\n\n- **Dopamin Reseptörleri:** D1 benzeri (D1, D5) Gs ile kenetli olup cAMP artırır; D2 benzeri (D2, D3, D4) Gi ile kenetli olup cAMP azaltır ve antipsikotik ilaçların ana hedefidir.\n- **Noradrenalin:** Tüm reseptörleri metabotropiktir; alfa2 reseptörleri potasyum geçirgenliğini artırarak nöronları hiperpolarize eder ve presinaptik otoreseptör olarak salınımı kısar.\n- **Serotonin (5-HT):** Bir düzineden fazla reseptör alt tipine sahiptir; 5-HT3 hariç tümü metabotropiktir. İyonotropik 5-HT3 katyon kanalı hızlı eksitatör etki oluşturur.\n- **Histamin:** Yalnızca posterior hipotalamustaki tuberomammiller nükleusta (TMN) üretilir; yaygın projeksiyonlarla uyanıklık ve dikkati artırır.\n\n> [!NOTE]\n> Serotonin reseptör ailesinde 5-HT3 reseptörü tek ligand kapılı iyon kanalı istisnasıdır; kemoterapiye bağlı kusmanın önlenmesinde 5-HT3 antagonistleri (ondansetron) kullanılır.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "D1 ve D2 Zıtlığı",
+      "desc": "D1 reseptörleri Gs ile adenilil siklazı uyarırken D2 reseptörleri Gi ile baskılar ve antipsikotik hedefidir.",
+      "isKey": true
+     },
+     {
+      "title": "5-HT3 İyonotropik İstisnası",
+      "desc": "Diğer tüm 5-HT reseptörleri GPCR iken 5-HT3 seçici olmayan katyon kanalı olup hızlı eksitasyon yapar.",
+      "isKey": true
+     },
+     {
+      "title": "Histamin ve TMN",
+      "desc": "Posterior hipotalamus TMN nükleusundan çıkan histaminerjik lifler uyanıklık ve hafızayı destekler.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "Serotonin reseptörleri içinde 5-HT3 tek iyonotropik ligand kapılı katyon kanalıdır; diğer tüm tipler metabotropiktir.",
+    "Santral histamin yalnızca posterior hipotalamustaki tuberomammiller nükleusta (TMN) sentezlenir ve uyanıklığı yönetir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "5-HT3 Reseptörü",
+     "explanation": "Serotonin reseptörleri arasındaki tek ligand kapılı iyonotropik katyon kanalı; kusma refleksinde rol oynar."
+    },
+    {
+     "term": "Tuberomammiller Nükleus",
+     "explanation": "Posterior hipotalamusta yer alan ve santral sinir sistemindeki tüm histamin üretimini sağlayan çekirdek."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-k2p-09-33",
+     "front": "Serotonin (5-HT) reseptör alt tipleri arasında tek iyonotropik kanal olan istisna hangisidir?",
+     "back": "5-HT3 reseptörüdür; doğrudan katyon kanalı açarak hızlı eksitasyon oluşturur.",
+     "category": "Monoaminler"
+    },
+    {
+     "id": "fc-k2p-09-34",
+     "front": "Santral sinir sisteminde histamin üreten nöronlar spesifik olarak nerede kümelenmiştir?",
+     "back": "Yalnızca posterior hipotalamusta yer alan tuberomammiller nükleustaki (TMN) nöronlarda bulunur.",
+     "category": "Monoaminler"
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "21 MSS İlaçları Farmakolojisine Giriş_251103_085815.pdf",
+    "startPage": 42,
+    "endPage": 45,
+    "primaryPage": [
+     42,
+     43,
+     44,
+     45
+    ],
+    "citation": "Sayfa 42–45 · Kurul 2 Tıbbi Farmakoloji · SSS İlaçları"
+   },
+   "interactiveElements": [
+    {
+     "type": "before_after_slider",
+     "leftTitle": "D1 Benzeri (D1, D5)",
+     "rightTitle": "D2 Benzeri (D2, D3, D4)",
+     "leftPoints": [
+      "Heterotrimerik Gs proteini ile kenetli olarak hücresel sinyal iletir.",
+      "Efektör enzim adenilil siklazı aktive ederek hücre içi cAMP düzeyini artırır.",
+      "Genellikle postsinaptik eksitatör modülasyon süreçlerinde görev alır."
+     ],
+     "rightPoints": [
+      "Heterotrimerik Gi/o proteini ile kenetli olarak hücresel sinyal iletir.",
+      "Adenilil siklazı inhibe eder, kalsiyumu kısar ve potasyum kanallarını açar.",
+      "Klasik ve atipik antipsikotik ilaçların temel terapötik hedefini oluşturur."
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "İyonotropik 5-HT3 katyon kanalı hızlı eksitatör etki oluşturur.",
+     "maskedTerm": "5-HT3",
+     "hint": "Serotonin ailesindeki tek iyonotropik kanal alt tipi."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Santral Monoamin Nörotransmiter Sistemleri",
+     "items": [
+      {
+       "text": "Noradrenalinin alfa2 reseptörleri potasyum iletkenliğini artırarak nöron membranını hiperpolarize eder.",
+       "isLie": false,
+       "explanation": "Alfa2 reseptörleri Gi/o kenetlidir ve potasyum kanallarını açarak hücresel uyarılabilirliği baskılar."
+      },
+      {
+       "text": "Serotonin reseptör ailesinde yer alan tüm reseptör alt tipleri istisnasız metabotropik GPCR yapısındadır.",
+       "isLie": true,
+       "explanation": "5-HT3 reseptörü önemli bir istisnadır; metabotropik değil ligand kapılı hızlı bir iyonotropik katyon kanalıdır."
+      },
+      {
+       "text": "Santral histamin yalnızca posterior hipotalamusta yer alan tuberomammiller nükleusta üretilir.",
+       "isLie": false,
+       "explanation": "Histaminerjik hücre gövdeleri yalnızca TMN nükleusunda kümelenmiştir ve beyne yaygın projeksiyon gönderir."
+      }
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Santral monoamin nörotransmiterlerin reseptörleri ve anatomik özellikleri hakkında hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "5-HT3 reseptörü serotonin ailesinin tek iyonotropik üyesi olup hızlı katyon akımıyla uyarılma oluşturur.",
+       "isCorrect": true,
+       "explanation": "Serotonin reseptörlerinden yalnız 5-HT3 ligand kapılı katyon kanalıdır; diğer tüm tipler G-proteini kenetli metabotropik reseptörlerdir."
+      },
+      {
+       "key": "B",
+       "text": "D2 benzeri dopamin reseptörleri adenilil siklazı güçlü şekilde aktive ederek hücre içi cAMP'yi katlar.",
+       "isCorrect": false,
+       "explanation": "D2 benzeri reseptörler Gi kenetlidir ve adenilil siklazı inhibe ederek cAMP düzeyini azaltırlar; cAMP artıranlar D1 ailesidir."
+      },
+      {
+       "key": "C",
+       "text": "Noradrenalinin santral sinir sistemindeki tüm reseptörleri pentamerik klorür kanalı yapısındadır.",
+       "isCorrect": false,
+       "explanation": "Tüm noradrenerjik reseptörler metabotropik GPCR ailesine aittir. Bu reseptörler klorür kanalı yapısı içermezler ve adenilil siklaz üzerinden sinyal iletirler."
+      },
+      {
+       "key": "D",
+       "text": "Histamin nöronları yalnızca omurilik gri cevherinde bulunup çizgili kas tonusunu doğrudan yönetir.",
+       "isCorrect": false,
+       "explanation": "Histamin santralde yalnızca hipotalamik tuberomammiller nükleusta üretilir. Bu amin grubu kortikal uyanıklığı ve dikkat mekanizmalarını modüle eder."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 18,
+   "id": "k2p-y25-k2-09-sss-ilaclari-s18",
+   "title": "MSS Nöropeptitleri: Veziküler Depolama, Madde P ve Oreksinler",
+   "subtitle": "Nöropeptitler büyük yoğun çekirdekli veziküllerde depolanır; oreksin uyanıklığı sürdürürken eksikliği narkolepsi yapar.",
+   "badge": "Nöropeptitler",
+   "bolum": 8,
+   "pdfSayfalari": [
+    46,
+    50
+   ],
+   "kaynakSayfa": "Sayfa 46-50",
+   "bilgi": "Nöropeptit veziküler özellikleri, Madde P ağrı iletimi ve oreksin (hipokretin) narkolepsi patolojisi.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "content": "Merkezi sinir sisteminde davranışsal ve nöronal aktiviteyi düzenleyen çok sayıda peptid keşfedilmiştir. Nöropeptitler ribozomlarda sentezlenir ve klasik transmiterlerden farklı özellikler taşır.\n\n- **Veziküler Paketleme:** Küçük sinaptik veziküller yerine büyük yoğun çekirdekli veziküllerde depolanırlar ve sıklıkla klasik bir amino asit ile birlikte salınırlar.\n- **Madde P:** Taşikinin ailesine aittir; omurilik ve beyin sapındaki miyelinsiz birincil duyusal liflerden salınarak yavaş ve kalıcı ağrı uyarımını iletir.\n- **Oreksin Sistemi:** Lateral ve posterior hipotalamustaki nöronlarda üretilir; uyanıklıkla ilişkili ateşleme gösterir ve glutamat ile birlikte salınarak uyarılma sağlar.\n\n> [!IMPORTANT]\n> Oreksin veya oreksin reseptörleri bulunmayan deney hayvanlarında ve insanlarda gündüz kontrolsüz uyku ataklarıyla seyreden narkolepsi tablosu gelişir.",
+   "synthesisNarrative": "Merkezi sinir sisteminde davranışsal ve nöronal aktiviteyi düzenleyen çok sayıda peptid keşfedilmiştir. Nöropeptitler ribozomlarda sentezlenir ve klasik transmiterlerden farklı özellikler taşır.\n\n- **Veziküler Paketleme:** Küçük sinaptik veziküller yerine büyük yoğun çekirdekli veziküllerde depolanırlar ve sıklıkla klasik bir amino asit ile birlikte salınırlar.\n- **Madde P:** Taşikinin ailesine aittir; omurilik ve beyin sapındaki miyelinsiz birincil duyusal liflerden salınarak yavaş ve kalıcı ağrı uyarımını iletir.\n- **Oreksin Sistemi:** Lateral ve posterior hipotalamustaki nöronlarda üretilir; uyanıklıkla ilişkili ateşleme gösterir ve glutamat ile birlikte salınarak uyarılma sağlar.\n\n> [!IMPORTANT]\n> Oreksin veya oreksin reseptörleri bulunmayan deney hayvanlarında ve insanlarda gündüz kontrolsüz uyku ataklarıyla seyreden narkolepsi tablosu gelişir.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Büyük Yoğun Veziküller",
+      "desc": "Ribozomda translasyon sonrası golgide paketlenip aksonal transportla terminale taşınırlar.",
+      "isKey": true
+     },
+     {
+      "title": "Madde P ve Ağrı",
+      "desc": "Primer nosiseptif C liflerinde bulunur ve NK1 reseptörleri üzerinden nosisepsiyonu yönetir.",
+      "isKey": true
+     },
+     {
+      "title": "Oreksin ve Narkolepsi",
+      "desc": "Hipotalamik oreksin kaybı uyku-uyanıklık siklusunu bozar ve katapleksili narkolepsiye neden olur.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "Nöropeptitler küçük berrak veziküller yerine büyük yoğun çekirdekli veziküllerde (dense-core) paketlenirler.",
+    "Oreksin (hipokretin) peptidi uyanıklığı destekler; oreksin nöronlarının harabiyeti narkolepsi hastalığına yol açar."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Narkolepsi",
+     "explanation": "Hipotalamustaki oreksin nöronlarının kaybına bağlı gelişen, gündüz aşırı uyku ve katapleksi atakları tablosu."
+    },
+    {
+     "term": "Madde P",
+     "explanation": "Primer duyusal afferent liflerden salınarak santral ağrı sinyallerini ileten taşikinin ailesi nöropeptit."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-k2p-09-35",
+     "front": "Klasik küçük moleküllü nörotransmiterler ile nöropeptitlerin veziküler paketlenme farkı nedir?",
+     "back": "Klasik ileticiler küçük berrak veziküllerde depolanırken nöropeptitler büyük yoğun çekirdekli veziküllerde depolanır.",
+     "category": "Nöropeptitler"
+    },
+    {
+     "id": "fc-k2p-09-36",
+     "front": "Hipotalamustan salınarak uyanıklığı sağlayan ve eksikliğinde narkolepsi gelişen nöropeptit sistemi nedir?",
+     "back": "Oreksin (hipokretin) sistemidir; uyanıklık merkezlerini aktive eder ve glutamatla ko-salınır.",
+     "category": "Nöropeptitler"
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "21 MSS İlaçları Farmakolojisine Giriş_251103_085815.pdf",
+    "startPage": 46,
+    "endPage": 50,
+    "primaryPage": [
+     46,
+     47,
+     48,
+     49,
+     50
+    ],
+    "citation": "Sayfa 46–50 · Kurul 2 Tıbbi Farmakoloji · SSS İlaçları"
+   },
+   "interactiveElements": [
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Nöropeptit Ajan",
+      "Temel Anatomik Kaynağı",
+      "İlişkili Fizyolojik Fonksiyon"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Madde P"
+        },
+        {
+         "text": "Miyelinsiz nosiseptif C lifleri",
+         "isMasked": true,
+         "hint": "Ağrı duyusunu omuriliğe taşıyan yavaş ileten aksonlar."
+        },
+        {
+         "text": "Yavaş ve kalıcı nosisepsiyon iletimi"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Oreksin (Hipokretin)"
+        },
+        {
+         "text": "Lateral ve posterior hipotalamus"
+        },
+        {
+         "text": "Uyanıklık idamesi ve enerji dengesi",
+         "isMasked": true,
+         "hint": "Dalmayı engelleyerek bilinci açık tutmaya yarayan metabolik destek."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Oreksin veya reseptörleri bulunmayan canlılarda gündüz aşırı uyku ataklarıyla seyreden narkolepsi gelişir.",
+     "maskedTerm": "narkolepsi",
+     "hint": "Oreksin eksikliğine bağlı istemsiz uykuya dalma hastalığı."
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "Bir hastada gündüzleri aniden ortaya çıkan karşı konulamaz uyku atakları ve duygusal durumlarda ani kas tonusu kaybı (katapleksi) saptanmıştır.",
+     "options": [
+      {
+       "text": "Hipotalamik oreksin (hipokretin) nöronlarının dejenerasyonu sonucu narkolepsi gelişmiştir.",
+       "isCorrect": true,
+       "feedback": "Oreksin uyanıklığı sürdüren ve motor tonusu stabilize eden temel peptiddir; kaybı katapleksili narkolepsiye yol açar."
+      },
+      {
+       "text": "Madde P reseptörlerinin aşırı uyarılması sonucu santral klorür kanalları kilitlenmiştir.",
+       "isCorrect": false,
+       "feedback": "Madde P ağrı iletiminde rol oynayan bir taşikinindir; narkolepsi ve katapleksi tablosundan oreksin yetmezliği sorumludur."
+      },
+      {
+       "text": "Santral nöronlarda tüm büyük yoğun veziküller parçalanarak dopamine dönüşmüştür.",
+       "isCorrect": false,
+       "feedback": "Büyük yoğun kor vezikülleri golgi aygıtından tomurcuklanan peptid depolarıdır. Bu klinik tablonun temeli vezikül hasarı değil oreksin üreten nöronların kaybıdır."
+      }
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "MSS nöropeptitlerinin sentezi, paketlenmesi ve işlevleri hakkında hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Nöropeptitler büyük yoğun çekirdekli veziküllerde paketlenir ve sıklıkla klasik ileticilerle birlikte salınırlar.",
+       "isCorrect": true,
+       "explanation": "Nöropeptitler soma ribozomlarında üretilip büyük yoğun çekirdekli veziküllerde paketlenirler ve klasik küçük transmiterlerle ko-transmisyon yaparlar."
+      },
+      {
+       "key": "B",
+       "text": "Oreksin nöronları GABA salgılayarak uyanıklık merkezlerini tamamen durduran derin hipnotiklerdir.",
+       "isCorrect": false,
+       "explanation": "Oreksin nöronları uyarıcıdır; glutamat ile birlikte salınarak monoamin ve asetilkolin sistemlerini aktive edip uyanıklığı desteklerler."
+      },
+      {
+       "key": "C",
+       "text": "Madde P yalnızca işitme yollarında yer alan ve yüksek frekanslı sesleri filtreleyen bir enzimdir.",
+       "isCorrect": false,
+       "explanation": "Madde P omurilik ve beyin sapında ağrı duyusunun iletilmesinde rol oynayan bir taşikinin peptitidir. Bu molekülün işitme yollarında bir filtre işlevi bulunmaz."
+      },
+      {
+       "key": "D",
+       "text": "Nöropeptitler presinaptik terminalde enzimler tarafından amino asitlerden saniyeler içinde baştan sentezlenirler.",
+       "isCorrect": false,
+       "explanation": "Nöropeptitler soma ribozomlarında üretildikten sonra veziküler aksonal transport ile terminale ulaştırılırlar. Presinaptik sinir ucunda sıfırdan enzimatik sentezleri gerçekleşmez."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 19,
+   "id": "k2p-y25-k2-09-sss-ilaclari-s19",
+   "title": "Atipik Sinyal Molekülleri: Endokannabinoidler, Nitrik Oksit ve Pürinler",
+   "subtitle": "Endokannabinoidler geriye doğru sinaptik baskılama yapar; nitrik oksit gaz ileticidir; pürinler presinaptik iletimi kısar.",
+   "badge": "Atipik İleticiler",
+   "bolum": 8,
+   "pdfSayfalari": [
+    51,
+    56
+   ],
+   "kaynakSayfa": "Sayfa 51-56",
+   "bilgi": "Endokannabinoidlerin retrograd sinyali, CB1 reseptörü, nitrik oksit sentaz ve pürinerjik sistemler (adenozin, ATP).",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "content": "Merkezi sinir sisteminde klasik veziküler salınım kurallarına uymayan atipik haberciler de görev yapar. Endokannabinoidler, nitrik oksit ve pürinler bu grubun başlıca üyeleridir.\n\n- **Endokannabinoidler ve Retrograd İleti:** Anandamid ve 2-AG veziküllerde depolanmaz; postsinaptik kalsiyum artışıyla sentezlenip sinapstan geriye doğru difüze olarak presinaptik CB1 reseptörlerini uyarır ve transmiter salınımını baskılar.\n- **Nitrik Oksit (NO):** NMDA kalsiyum akışıyla uyarılan nöronal NOS tarafından üretilen bir gazdır; zarlardan serbestçe yayılarak özellikle serebellumda sinaptik plastisiteyi modüle eder.\n- **Pürinerjik İleti:** Adenozin presinaptik A1 reseptörleriyle kalsiyumu baskılayarak transmiter salınımını kısar (kafein bu reseptörleri bloke eder). ATP ise hem iyonotropik P2X hem de metabotropik P2Y reseptörlerine bağlanır.\n\n> [!NOTE]\n> Katzung farmakoloji ilkelerine göre endokannabinoidlerin sinapstan geriye doğru giderek presinaptik salınımı baskılaması retrograd sinaptik iletimin en tipik örneğidir.",
+   "synthesisNarrative": "Merkezi sinir sisteminde klasik veziküler salınım kurallarına uymayan atipik haberciler de görev yapar. Endokannabinoidler, nitrik oksit ve pürinler bu grubun başlıca üyeleridir.\n\n- **Endokannabinoidler ve Retrograd İleti:** Anandamid ve 2-AG veziküllerde depolanmaz; postsinaptik kalsiyum artışıyla sentezlenip sinapstan geriye doğru difüze olarak presinaptik CB1 reseptörlerini uyarır ve transmiter salınımını baskılar.\n- **Nitrik Oksit (NO):** NMDA kalsiyum akışıyla uyarılan nöronal NOS tarafından üretilen bir gazdır; zarlardan serbestçe yayılarak özellikle serebellumda sinaptik plastisiteyi modüle eder.\n- **Pürinerjik İleti:** Adenozin presinaptik A1 reseptörleriyle kalsiyumu baskılayarak transmiter salınımını kısar (kafein bu reseptörleri bloke eder). ATP ise hem iyonotropik P2X hem de metabotropik P2Y reseptörlerine bağlanır.\n\n> [!NOTE]\n> Katzung farmakoloji ilkelerine göre endokannabinoidlerin sinapstan geriye doğru giderek presinaptik salınımı baskılaması retrograd sinaptik iletimin en tipik örneğidir.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Retrograd CB1 Baskılaması",
+      "desc": "Postsinaptik kalsiyumla üretilen lipidler presinaptik CB1'e bağlanarak hem eksitatör hem inhibitör salınımı kısar.",
+      "isKey": true
+     },
+     {
+      "title": "Gaz Haberci Nitrik Oksit",
+      "desc": "nNOS aktivasyonuyla üretilen gaz molekülü membranları hızla aşarak parakrin ve retrograd plastisite yönetir.",
+      "isKey": true
+     },
+     {
+      "title": "Adenozin ve ATP Ayrımı",
+      "desc": "Adenozin A1 ile presinaptik iletimi duraklatır; ATP ligand kapılı katyon kanalı P2X ve GPCR P2Y ile etkir.",
+      "isKey": true
+     }
+    ]
+   },
+   "spotPearls": [
+    "Endokannabinoidler (anandamid, 2-AG) vezikülsüz sentezlenip geriye doğru sinapstan geçerek presinaptik CB1'i aktive ederler.",
+    "Kafein presinaptik A1 ve A2A adenozin reseptörlerini bloke ederek adenozinin santral inhibitör etkisini ortadan kaldırır."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Retrograd İleti",
+     "explanation": "Sinyal molekülünün postsinaptik hücreden salınıp geriye doğru presinaptik terminale giderek iletimi düzenlemesi."
+    },
+    {
+     "term": "CB1 Reseptörü",
+     "explanation": "Beyinde presinaptik sinir uçlarında yoğun bulunan ve transmiter salınımını baskılayan G-proteini kenetli kannabinoid reseptörü."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-k2p-09-37",
+     "front": "Endokannabinoidlerin klasik nörotransmiterlerden en temel iki yapısal ve iletimsel farkı nedir?",
+     "back": "Veziküllerde depolanmayıp kalsiyumla ihtiyaç anında üretilmeleri ve geriye doğru retrograd etki göstermeleridir.",
+     "category": "Atipik Sinyaller"
+    },
+    {
+     "id": "fc-k2p-09-38",
+     "front": "ATP molekülünün bağlandığı iki farklı reseptör ailesi hangileridir?",
+     "back": "İyonotropik ligand kapılı katyon kanalı olan P2X ve metabotropik GPCR olan P2Y aileleridir.",
+     "category": "Atipik Sinyaller"
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "21 MSS İlaçları Farmakolojisine Giriş_251103_085815.pdf",
+    "startPage": 51,
+    "endPage": 56,
+    "primaryPage": [
+     51,
+     52,
+     53,
+     54,
+     55,
+     56
+    ],
+    "citation": "Sayfa 51–56 · Kurul 2 Tıbbi Farmakoloji · SSS İlaçları"
+   },
+   "interactiveElements": [
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Postsinaptik Kalsiyum Girişi: Membran depolarizasyonu postsinaptik nöronda hücre içi kalsiyum konsantrasyonunu artırır.",
+      "2. Lipid Habercilerin Sentezi: Kalsiyum etkisiyle membran fosfolipidlerinden anandamid ve 2-AG enzimatik olarak üretilir.",
+      "3. Retrograd Difüzyon: Lipofilik endokannabinoidler vezikülsüz olarak sinaptik aralıktan geriye doğru süzülür.",
+      "4. Presinaptik CB1 Baskılaması: Presinaptik uçtaki CB1 reseptörleri aktive edilerek nörotransmiter ekzositozu baskılanır."
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Endokannabinoidler postsinaptik kalsiyum artışıyla sentezlenip geriye doğru difüze olarak retrograd sinaptik baskılama yaparlar.",
+     "maskedTerm": "retrograd",
+     "hint": "Postsinaptik hücreden presinaptik uca geriye doğru ilerleyen yönelim."
+    },
+    {
+     "type": "venn_grid",
+     "labelA": "Endokannabinoidler",
+     "labelB": "Nitrik Oksit (NO)",
+     "items": [
+      {
+       "criterion": "Hücre içi sinaptik veziküllerde depolanmadan kalsiyum artışıyla anında üretilme.",
+       "correct": "both"
+      },
+      {
+       "criterion": "Presinaptik uçta yer alan CB1 G-proteini kenetli reseptörlerine bağlanarak etki gösterme.",
+       "correct": "A"
+      },
+      {
+       "criterion": "Serbestçe difüze olan gaz yapısında olup kalsiyum-kalmodulin bağımlı NOS ile üretilme.",
+       "correct": "B"
+      },
+      {
+       "criterion": "Sinaptik aralıkta retrograd haberci olarak sinyal modülasyonu yapabilme.",
+       "correct": "both"
+      }
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Endokannabinoidler ve pürinerjik sinyalleşmenin santral özellikleri hakkında hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Endokannabinoidler postsinaptik membrandan geriye doğru giderek presinaptik CB1 reseptörleri üzerinden salınımı baskılarlar.",
+       "isCorrect": true,
+       "explanation": "Anandamid ve 2-AG postsinaptik kalsiyumla üretilip retrograd olarak presinaptik CB1 reseptörlerine bağlanır ve nörotransmiter ekzositozunu durdururlar."
+      },
+      {
+       "key": "B",
+       "text": "Adenozin A1 reseptörleri presinaptik kalsiyum kanallarını aşırı açarak kontrolsüz monoamin fırtınası başlatır.",
+       "isCorrect": false,
+       "explanation": "Adenozin A1 reseptörleri inhibitör GPCR yapısındadır. Presinaptik kalsiyum kanallarını baskılayarak transmiter salınımını azaltır ve santral sedasyon oluştururlar."
+      },
+      {
+       "key": "C",
+       "text": "P2X pürin reseptörleri yedi transmembranlı klasik G-proteini kenetli metabotropik reseptörlerdir.",
+       "isCorrect": false,
+       "explanation": "P2X reseptörleri ATP ile aktive olan ligand kapılı katyon kanallarıdır. Metabotropik GPCR yapısında olan ve hücresel kaskadları başlatan grup ise P2Y ailesidir."
+      },
+      {
+       "key": "D",
+       "text": "Nitrik oksit gazı yalnızca lizozomlarda sentezlenip yoğun kor vezikülleriyle ekzositoz edilir.",
+       "isCorrect": false,
+       "explanation": "Nitrik oksit gaz fazında serbestçe difüze olan bir habercidir. Sentezlendikten sonra veziküllerde depolanamaz ve biyolojik zarları kolayca aşarak komşu hücreleri etkiler."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 20,
+   "id": "k2p-y25-k2-09-sss-ilaclari-s20",
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: SSS İlaçları Farmakolojisi",
+   "subtitle": "Katzung MSS farmakolojisinin tüm temel mekanizmalarını sıralama, sayısal tahmin, parametre değişimi ve metin düzeltme oyunlarıyla test edin.",
+   "badge": "Oyun Finali",
+   "bolum": 8,
+   "pdfSayfalari": [
+    2,
+    56
+   ],
+   "kaynakSayfa": "Sayfa 1-56",
+   "bilgi": "Tüm dersin pekiştirilmesi: Sıralama, sayısal tahmin, parametre analizi ve hatalı metin ayıklama oyunları.",
+   "isCheckpoint": false,
+   "checkpointNumber": null,
+   "isGameFinale": true,
+   "content": "Tebrikler! SSS İlaçları Farmakolojisi dersini başarıyla tamamladınız. Bu final oyun sayfasında sinaptik ileti aşamalarını doğru sıraya dizecek, kritik elektrofizyolojik ve anatomik sayısal parametreleri tahmin edecek, farmakolojik müdahalelerin sistemik yönünü belirleyecek ve hatalı klinik metinleri düzelterek bilginizi pekiştireceksiniz.",
+   "synthesisNarrative": "Tebrikler! SSS İlaçları Farmakolojisi dersini başarıyla tamamladınız. Bu final oyun sayfasında sinaptik ileti aşamalarını doğru sıraya dizecek, kritik elektrofizyolojik ve anatomik sayısal parametreleri tahmin edecek, farmakolojik müdahalelerin sistemik yönünü belirleyecek ve hatalı klinik metinleri düzelterek bilginizi pekiştireceksiniz.",
+   "sourcePdf": {
+    "fileName": "21 MSS İlaçları Farmakolojisine Giriş_251103_085815.pdf",
+    "startPage": 2,
+    "endPage": 56,
+    "primaryPage": [
+     2,
+     56
+    ],
+    "citation": "Sayfa 2–56 · Kurul 2 Tıbbi Farmakoloji · SSS İlaçları"
+   },
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "prompt": "Bir aksiyon potansiyelinin sinir ucuna ulaşmasından postsinaptik eksitasyona ve sinaptik plastisiteye (LTP) kadar uzanan olaylar zincirini kronolojik olarak sıralayınız:",
+     "steps": [
+      "1. Aksiyon potansiyeli presinaptik terminale ulaşarak voltaj-bağımlı kalsiyum kanallarını açar.",
+      "2. Presinaptik terminale giren kalsiyum veziküllerin füzyonunu ve glutamat ekzositozunu başlatır.",
+      "3. Salınan glutamat postsinaptik membrandaki iyonotropik AMPA reseptörlerini açarak sodyum girişi ve hızlı EPSP depolarizasyonu oluşturur.",
+      "4. Membran potansiyelinin pozitifleşmesi NMDA reseptör kanal poruna takılmış olan magnezyum iyonunu dışarı iter.",
+      "5. Magnezyum bloğu çözülen ve glisin bağlı NMDA kanalından hücre içine masif kalsiyum akışı gerçekleşir.",
+      "6. Yüksek kalsiyum düzeyi hücresel kinazları aktive ederek saatler veya günler süren uzun süreli potansiyalizasyon (LTP) yanıtını kurar."
+     ],
+     "explanation": "Sinaptik ileti presinaptik kalsiyum girişi ve vezikül ekzositozuyla başlar; AMPA aracılı sodyum depolarizasyonu NMDA'nın Mg2+ bloğunu çözer ve Ca2+ girişi LTP oluşturur."
+    },
+    {
+     "type": "estimate_slider",
+     "items": [
+      {
+       "prompt": "Yaygın (diffüz) monoaminerjik sistemlerde ince miyelinsiz aksonların aksiyon potansiyeli iletim hızı saniyede yaklaşık kaç metredir?",
+       "unit": "m/sn",
+       "min": 0.1,
+       "max": 2.0,
+       "step": 0.1,
+       "answer": 0.5,
+       "tolerance": 0.2,
+       "explanation": "Yaygın monoaminerjik sistemlerin ince miyelinsiz aksonları yaklaşık 0,5 m/sn hızında oldukça yavaş iletim yaparlar."
+      },
+      {
+       "prompt": "Hiyerarşik duyusal ve motor yolaklarda kalın miyelinli projeksiyon liflerinin aksiyon potansiyeli iletim hızı saniyede en az kaç metredir?",
+       "unit": "m/sn",
+       "min": 10,
+       "max": 100,
+       "step": 5,
+       "answer": 50,
+       "tolerance": 10,
+       "explanation": "Hiyerarşik sistemlerin miyelinli kalın projeksiyon lifleri saniyede 50 metrenin üzerinde son derece hızlı iletim gerçekleştirirler."
+      },
+      {
+       "prompt": "İnsan beyninde destekleyici glia hücreleriyle çevrelenmiş yaklaşık kaç milyar birbiriyle bağlantılı nöron bulunur?",
+       "unit": "milyar",
+       "min": 20,
+       "max": 200,
+       "step": 10,
+       "answer": 100,
+       "tolerance": 20,
+       "explanation": "İnsan beyni yaklaşık 100 milyar nöron ve bunların katbekat fazlası destekleyici glia hücresi barındırır."
+      }
+     ]
+    },
+    {
+     "type": "perturbation",
+     "scenario": "Bir farmakolojik deneyde sıçan beynine seçici GABA-B agonisti baklofen veriliyor, ardından GABA-A kanal blokörü pikrotoksin perfüzyonu yapılıyor ve eşzamanlı olarak presinaptik adenozin A1 reseptörlerini bloke eden kafein uygulanıyor.",
+     "parameters": [
+      {
+       "name": "Baklofen etkisiyle Gi/o aktivasyonu sonucu presinaptik voltaj kapılı kalsiyum iletkenliği ve nörotransmiter ekzositozu",
+       "correct": "down",
+       "explanation": "Baklofen Gi/o kenetli GABA-B reseptörlerini uyararak presinaptik kalsiyum kanallarını baskılar ve transmiter salınımını azaltır."
+      },
+      {
+       "name": "Pikrotoksin uygulanmasıyla GABA-A klorür porunun bloke edilmesi sonucu nöronal eksitabilite ve konvülsiyon eğilimi",
+       "correct": "up",
+       "explanation": "Pikrotoksin temel inhibitör kanal olan GABA-A klorür porunu tıkayarak inhibitör baskılamayı kaldırır ve konvülsiyonları artırır."
+      },
+      {
+       "name": "Kafeinin presinaptik inhibitör adenozin A1 reseptörlerini bloke etmesi sonucu uyanıklık ve santral uyarılma düzeyi",
+       "correct": "up",
+       "explanation": "Adenozin A1 reseptörleri inhibitör tonus sağlar; kafein bu reseptörleri antagonize ederek sedasyonu engeller ve uyanıklığı artırır."
+      }
+     ]
+    },
+    {
+     "type": "fix_the_text",
+     "text": "Santral sinir sisteminde baklofen iyonotropik GABA-A reseptörlerini doğrudan açan bir sedatiftir. Serotonin reseptörlerinin tamamı metabotropik GPCR yapısındadır. Endokannabinoidler küçük berrak veziküllerde depolanıp anterograd yolla salınırlar.",
+     "errors": [
+      {
+       "wrong": "baklofen iyonotropik GABA-A reseptörlerini doğrudan açan bir sedatiftir",
+       "correct": "baklofen metabotropik GABA-B reseptörlerini aktive eden antispastik bir ajandır",
+       "options": [
+        "baklofen presinaptik nikotinik reseptörleri bloke eden bir kürardır",
+        "baklofen striknin duyarlı glisin porunu kapatan bir toksindir"
+       ],
+       "explanation": "Baklofen Gi/o kenetli metabotropik GABA-B reseptörlerinin seçici agonistidir ve spastisite tedavisinde kullanılır."
+      },
+      {
+       "wrong": "Serotonin reseptörlerinin tamamı metabotropik GPCR yapısındadır",
+       "correct": "5-HT3 hariç serotonin reseptörlerinin tamamı metabotropik GPCR yapısındadır",
+       "options": [
+        "5-HT1A hariç serotonin reseptörlerinin tamamı iyonotropik klorür kanalıdır",
+        "serotonin reseptörlerinin tamamı tirozin kinaz kenetlidir"
+       ],
+       "explanation": "5-HT3 reseptörü tek ligand kapılı iyonotropik katyon kanalı istisnasıdır; diğer tüm 5-HT reseptörleri metabotropik GPCR'dır."
+      },
+      {
+       "wrong": "Endokannabinoidler küçük berrak veziküllerde depolanıp anterograd yolla salınırlar",
+       "correct": "Endokannabinoidler veziküllerde depolanmayıp retrograd yolla presinaptik uca difüze olurlar",
+       "options": [
+        "Endokannabinoidler ribozomlarda sentezlenip lizozomlarda parçalanırlar",
+        "Endokannabinoidler oligodendrositlerde depolanıp miyelin içine salınırlar"
+       ],
+       "explanation": "Endokannabinoidler lipid yapılı olup veziküllerde depolanmazlar; postsinaptik nörondan retrograd yayılarak presinaptik CB1 reseptörlerini baskılarlar."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "totalSlides": 20,
+ "totalInteractiveElements": 80,
+ "interactiveRatio": 1.0,
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

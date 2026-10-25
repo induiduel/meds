@@ -1,0 +1,1038 @@
+{
+ "surum": 1,
+ "metinHash": "cbb859a0b61697d26a2ed392c6320bd534101923",
+ "p": {
+  "1": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Nörolojik hastalıklar",
+      "Psikiyatrik hastalıklar",
+      "Ağrı ve bulantı"
+     ],
+     "baslik": "İlaçların Klinik Hedefleri",
+     "s": 2,
+     "k": [
+      0,
+      119
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "2": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Dopamin reseptör blokajı",
+      "Psikoz semptomlarını azaltma",
+      "Dopamin hipotezi"
+     ],
+     "s": 3,
+     "k": [
+      0,
+      121
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.417,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3773,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "4": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Hücre gövdesi soma",
+      "Dendritik ağaçlar",
+      "Akson uzantısı"
+     ],
+     "baslik": "Nöron Yapısal Kısımları",
+     "s": 5,
+     "k": [
+      0,
+      80
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "5": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Metabolik besin sağlama",
+      "İyon dengesini koruma",
+      "Sinaps oluşumu düzenleme"
+     ],
+     "baslik": "Astrosit Görevleri",
+     "s": 6,
+     "k": [
+      0,
+      91
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "7": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Endotel hücreleri",
+      "Sıkı bağlantılar",
+      "Astrosit uç ayakları"
+     ],
+     "baslik": "Kan Beyin Bariyeri",
+     "s": 8,
+     "k": [
+      0,
+      99
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "8": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "ilac_etki",
+     "sablon_ad": "İlaç → mekanizma → sonuç",
+     "duzen": "tablo",
+     "basliklar": [
+      "İlaç",
+      "Mekanizma",
+      "Sonuç"
+     ],
+     "satirlar": [
+      [
+       "Dopamin",
+       "Bariyeri doğrudan geçemez",
+       "Periferde kombine kullanım"
+      ],
+      [
+       "Le dopa",
+       "Amino asit taşıyıcısıyla",
+       "Beyne giriş"
+      ]
+     ],
+     "s": 9,
+     "k": [
+      0,
+      92
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2326,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "9": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Açılma mekanizması",
+       "Membran potansiyeli değişimi",
+       "Nörotransmiter molekülü bağlanması"
+      ],
+      [
+       "Kanal yanıtı",
+       "Elektriksel potansiyel yanıtı",
+       "Doğrudan açılma yanıtı"
+      ]
+     ],
+     "kutuplar": [
+      "Voltaj bağımlı",
+      "Ligand bağımlı"
+     ],
+     "s": 10,
+     "k": [
+      0,
+      116
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.333,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2926,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "10": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Transmiterin bağlanması",
+      "Kanalın doğrudan açılması",
+      "Milisaniyeler içinde açılma",
+      "Hızlı postsinaptik potansiyel"
+     ],
+     "s": 11,
+     "k": [
+      0,
+      124
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.45,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.4097,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "12": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Metabotropik reseptör uyarımı",
+      "G proteini etkileşimi",
+      "Membrana sınırlı yolak",
+      "Hızlı metabotropik yanıt"
+     ],
+     "s": 13,
+     "k": [
+      0,
+      103
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.45,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.4097,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "13": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Opioid peptit bağlanması",
+      "Kalsiyum kanalı inhibisyonu",
+      "Nörotransmiter salıverilmesinde azalma"
+     ],
+     "s": 14,
+     "k": [
+      0,
+      121
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.417,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3773,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "14": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Yanıt süresi",
+       "Milisaniyelik kısa yanıt",
+       "Saniyeler veya dakikalar"
+      ],
+      [
+       "Etki mekanizması",
+       "Doğrudan iyon kanalı",
+       "G proteini iletisi"
+      ]
+     ],
+     "kutuplar": [
+      "İyonotropik",
+      "Metabotropik"
+     ],
+     "s": 15,
+     "k": [
+      0,
+      131
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2326,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "16": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Aksiyon potansiyeli yayılımı",
+      "Kalsiyum kanalları aktivasyonu",
+      "Veziküler ekzositoz",
+      "Nörotransmiter salıverilmesi"
+     ],
+     "s": 17,
+     "k": [
+      0,
+      125
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.45,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.4097,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "17": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Eksitatör yolak uyarımı",
+      "Katyon geçirgenliği artışı",
+      "Eksitatör postsinaptik potansiyel"
+     ],
+     "s": 18,
+     "k": [
+      0,
+      123
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.417,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3773,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "20": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "ilac_etki",
+     "sablon_ad": "İlaç → mekanizma → sonuç",
+     "duzen": "tablo",
+     "basliklar": [
+      "İlaç",
+      "Mekanizma",
+      "Sonuç"
+     ],
+     "satirlar": [
+      [
+       "Rezerpin",
+       "Veziküler depolanmayı engelleme",
+       "Monoamin depolarını boşaltma"
+      ],
+      [
+       "Amfetamin",
+       "Katekolamin salıverilmesini tetikleme",
+       "Uyarıcı adrenerjik etki"
+      ]
+     ],
+     "s": 21,
+     "k": [
+      0,
+      139
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.333,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2926,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "23": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Lokalizasyon ölçütü",
+      "Salıverilme ölçütü",
+      "Sinaptik benzerlik ölçütü"
+     ],
+     "baslik": "Nörotransmiter Ölçütleri",
+     "s": 24,
+     "k": [
+      0,
+      114
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "26": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Hücre gövdesi",
+       "Büyük gövde yapısı",
+       "Küçük hücre yapısı"
+      ],
+      [
+       "İletici görevi",
+       "Eksitatör glutamat iletimi",
+       "İnhibitör gaba ve glisin"
+      ]
+     ],
+     "kutuplar": [
+      "Projeksiyon nöronları",
+      "Lokal ara nöronlar"
+     ],
+     "s": 27,
+     "k": [
+      0,
+      105
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2326,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "28": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Geri besleme devresi",
+      "İleriye yönelik devre",
+      "Presinaptik inhibisyon"
+     ],
+     "baslik": "Santral İnhibitör Devreler",
+     "s": 29,
+     "k": [
+      0,
+      133
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "29": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Aksoaksonik sinaps uyarımı",
+      "Presinaptik kalsiyum azalması",
+      "Salıverilen transmiterde azalma"
+     ],
+     "s": 30,
+     "k": [
+      0,
+      114
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3096,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "34": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Ampa reseptörleri",
+      "Kainik asit reseptörleri",
+      "En em de a reseptörleri"
+     ],
+     "baslik": "İyonotropik Glutamat Reseptörleri",
+     "s": 35,
+     "k": [
+      0,
+      89
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "35": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Kalsiyum geçirgenliği",
+       "Kalsiyuma geçirgen değil",
+       "Kalsiyuma yüksek geçirgen"
+      ],
+      [
+       "İyon kanalı yapısı",
+       "Sodyum ve potasyum",
+       "Sodyum potasyum kalsiyum"
+      ]
+     ],
+     "kutuplar": [
+      "Ampa ve kainat",
+      "En em de a"
+     ],
+     "s": 36,
+     "k": [
+      0,
+      80
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2326,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "37": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Baskın yerleşim",
+       "Beyin nöronları",
+       "Omurilik ve beyin sapı"
+      ],
+      [
+       "İnhibitör mekanizma",
+       "Hızlı postsinaptik inhibisyon",
+       "Klorür kanalı aktivasyonu"
+      ]
+     ],
+     "kutuplar": [
+      "Gaba",
+      "Glisin"
+     ],
+     "s": 37,
+     "k": [
+      0,
+      106
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.293,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2726,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "39": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Gaba B reseptör aktivasyonu",
+      "G proteini aracılığı",
+      "Potasyum kanallarını açma",
+      "İnhibitör hiperpolarizasyon"
+     ],
+     "s": 39,
+     "k": [
+      0,
+      115
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.45,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.4097,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "40": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "ilac_etki",
+     "sablon_ad": "İlaç → mekanizma → sonuç",
+     "duzen": "tablo",
+     "basliklar": [
+      "İlaç",
+      "Mekanizma",
+      "Sonuç"
+     ],
+     "satirlar": [
+      [
+       "Baklofen",
+       "Gaba B reseptör aktivasyonu",
+       "Spastisitede kas gevşetici"
+      ]
+     ],
+     "s": 41,
+     "k": [
+      0,
+      85
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1956,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "41": {
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Nigrostriatal yolak",
+      "Mezolimbik projeksiyon"
+     ],
+     "baslik": "Dopaminerjik Yolaklar",
+     "s": 42,
+     "k": [
+      0,
+      113
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2126,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "43": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "ilac_etki",
+     "sablon_ad": "İlaç → mekanizma → sonuç",
+     "duzen": "tablo",
+     "basliklar": [
+      "İlaç",
+      "Mekanizma",
+      "Sonuç"
+     ],
+     "satirlar": [
+      [
+       "Klonidin",
+       "Presinaptik alfa iki aktivasyonu",
+       "Noradrenalin salıverilmesini baskılama"
+      ]
+     ],
+     "s": 43,
+     "k": [
+      0,
+      118
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1956,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "45": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "ilac_etki",
+     "sablon_ad": "İlaç → mekanizma → sonuç",
+     "duzen": "tablo",
+     "basliklar": [
+      "İlaç",
+      "Mekanizma",
+      "Sonuç"
+     ],
+     "satirlar": [
+      [
+       "Antihistaminikler",
+       "Merkezi H bir antagonizması",
+       "Sedatif uyku etkisi"
+      ]
+     ],
+     "s": 45,
+     "k": [
+      0,
+      105
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1956,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "47": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Birincil duyusal nöronlar",
+      "Yavaş uyarıcı potansiyel",
+      "Ağrı iletiminde rol"
+     ],
+     "baslik": "Madde P Özellikleri",
+     "s": 48,
+     "k": [
+      0,
+      92
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "49": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Oreksin veya reseptör kaybı",
+      "Gündüz ani uyku krizleri",
+      "Narkolepsi tablosu"
+     ],
+     "s": 50,
+     "k": [
+      0,
+      100
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.417,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3773,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  }
+ },
+ "rapor": {
+  "aday": 28,
+  "gecti": 28,
+  "ret": {}
+ }
+}

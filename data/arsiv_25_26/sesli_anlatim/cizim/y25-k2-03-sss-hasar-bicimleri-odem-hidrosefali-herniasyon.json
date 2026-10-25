@@ -2,24 +2,92 @@
  "surum": 1,
  "metinHash": "eabb74f6ee94771a3458e6f8c7586197556155d1",
  "p": {
-  "1": {
-   "5": [
+  "0": {
+   "0": [
     {
      "tur": "sema",
      "sablon": "siniflama",
      "sablon_ad": "Sınıflama",
      "duzen": "liste",
      "ogeler": [
-      "Hücre boyutlarında küçülme",
-      "Nükleusta piknoz ve köşeli şekil",
-      "Nükleolusun ortadan kaybolması",
-      "Nissl kaybı ve kırmızı nöronlar"
+      "Hücresel hasar biçimleri",
+      "Serebral ödem",
+      "Hidrosefali",
+      "İntrakraniyal herniasyon"
      ],
-     "baslik": "Akut hipoksik nöron hasarı",
+     "baslik": "Sinir sistemi patolojisinin temeli",
+     "numarali": true,
+     "s": 1,
+     "k": [
+      87,
+      167
+     ],
+     "tip": "liste",
+     "konum": [
+      0.25,
+      0.31
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "1": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "zaman_gorunum",
+     "sablon_ad": "Süre → görünüm / bulgu",
+     "duzen": "tablo",
+     "basliklar": [
+      "Süre",
+      "Görünüm / bulgu"
+     ],
+     "satirlar": [
+      [
+       "Hipoksik-iskemik hasardan sonra ≤12 saat",
+       "H&E'de akut nöron hasarı belirgin"
+      ]
+     ],
      "s": 2,
      "k": [
-      0,
-      140
+      51,
+      136
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.84
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.261,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1208,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Hücre boyutunda küçülme",
+      "Nükleusta piknoz",
+      "Nükleolusun kaybolması",
+      "Nissl kaybı + sitoplazmada yoğun eozinofili"
+     ],
+     "baslik": "Akut nöron hasarı (kırmızı nöron)",
+     "s": 2,
+     "k": [
+      27,
+      147
      ],
      "tip": "liste",
      "konum": [
@@ -37,7 +105,321 @@
    ]
   },
   "2": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Akson hasarı (travma, iskemi, demiyelinizasyon)",
+      "Aksonal taşınma kesinti noktasında durur",
+      "Uçta fokal ampul benzeri şişme: sferoid"
+     ],
+     "s": 3,
+     "k": [
+      0,
+      86
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.77
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.466,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.2562,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Akut hasar",
+      "Kan-beyin bariyeri yıkılır",
+      "Değişen oranlarda beyin ödemi"
+     ],
+     "s": 3,
+     "k": [
+      7,
+      89
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.77
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.199,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "3": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.215,
+       0.2805
+      ],
+      [
+       0.225,
+       0.2894
+      ],
+      [
+       0.228,
+       0.3018
+      ],
+      [
+       0.224,
+       0.3161
+      ],
+      [
+       0.215,
+       0.3223
+      ],
+      [
+       0.205,
+       0.3161
+      ],
+      [
+       0.202,
+       0.3018
+      ],
+      [
+       0.206,
+       0.2876
+      ]
+     ],
+     "etiket": "büzüşmüş kırmızı nöron",
+     "s": 4,
+     "k": [
+      150,
+      253
+     ],
+     "etiket_konum": [
+      0.038,
+      0.1605
+     ],
+     "etiket_genislik": 0.315,
+     "etiket_hedef": [
+      0.202,
+      0.2805
+     ],
+     "etiket_boy": 0.0591,
+     "yakin": [
+      0,
+      0.1005,
+      0.413,
+      0.3823
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.5325,
+       0.3534
+      ],
+      [
+       0.541,
+       0.3587
+      ],
+      [
+       0.545,
+       0.373
+      ],
+      [
+       0.542,
+       0.3863
+      ],
+      [
+       0.533,
+       0.3916
+      ],
+      [
+       0.5245,
+       0.3854
+      ],
+      [
+       0.521,
+       0.3712
+      ],
+      [
+       0.5245,
+       0.3587
+      ]
+     ],
+     "etiket": "aksonal sferoid",
+     "s": 4,
+     "k": [
+      151,
+      193
+     ],
+     "etiket_konum": [
+      0.54,
+      0.16
+     ],
+     "etiket_genislik": 0.226,
+     "etiket_hedef": [
+      0.545,
+      0.3534
+     ],
+     "etiket_boy": 0.0591,
+     "yakin": [
+      0.461,
+      0.1,
+      0.826,
+      0.4516
+     ]
+    }
+   ],
+   "2": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.6751,
+       0.3445
+      ],
+      [
+       0.6976,
+       0.3605
+      ],
+      [
+       0.7076,
+       0.389
+      ],
+      [
+       0.7101,
+       0.429
+      ],
+      [
+       0.7026,
+       0.4735
+      ],
+      [
+       0.6826,
+       0.4957
+      ],
+      [
+       0.6601,
+       0.4824
+      ],
+      [
+       0.6486,
+       0.4423
+      ],
+      [
+       0.6476,
+       0.3979
+      ],
+      [
+       0.6561,
+       0.3623
+      ]
+     ],
+     "etiket": "şişkin yuvarlak nöron gövdesi",
+     "s": 4,
+     "k": [
+      52,
+      91
+     ],
+     "etiket_konum": [
+      0.26,
+      0.08
+     ],
+     "etiket_genislik": 0.404,
+     "etiket_hedef": [
+      0.6476,
+      0.3445
+     ],
+     "etiket_boy": 0.0591,
+     "yakin": [
+      0.2,
+      0.02,
+      0.7701,
+      0.5557
+     ]
+    }
+   ],
    "3": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.42,
+       0.4423
+      ],
+      [
+       0.43,
+       0.4495
+      ],
+      [
+       0.435,
+       0.4646
+      ],
+      [
+       0.4315,
+       0.4806
+      ],
+      [
+       0.4215,
+       0.4877
+      ],
+      [
+       0.411,
+       0.4806
+      ],
+      [
+       0.407,
+       0.4646
+      ],
+      [
+       0.411,
+       0.4495
+      ]
+     ],
+     "etiket": "kesinti ucunda sferoid",
+     "s": 4,
+     "k": [
+      143,
+      173
+     ],
+     "etiket_konum": [
+      0.1,
+      0.76
+     ],
+     "etiket_genislik": 0.315,
+     "etiket_hedef": [
+      0.407,
+      0.4877
+     ],
+     "etiket_boy": 0.0591,
+     "yakin": [
+      0.04,
+      0.3823,
+      0.495,
+      0.8791
+     ]
+    }
+   ]
+  },
+  "4": {
+   "1": [
     {
      "tur": "sema",
      "sablon": "karsilastirma",
@@ -48,111 +430,118 @@
      ],
      "satirlar": [
       [
-       "Hücre boyutu",
-       "Küçülme ve büzüşme",
-       "Büyüme ve yuvarlaklaşma"
+       "Hastalık",
+       "Parkinson",
+       "Alzheimer"
       ],
       [
-       "Nükleus ve nükleolus",
-       "Piknoz ve nükleolus kaybı",
-       "Perifere itilme ve nükleolusta büyüme"
-      ],
-      [
-       "Nissl maddesi",
-       "Nissl kaybı ve yoğun eozinofili",
-       "Nissl maddesinin periferik dağılımı"
+       "Biriken protein",
+       "Alfa sinüklein",
+       "Hiperfosforile tau"
       ]
      ],
      "kutuplar": [
-      "Kırmızı nöron",
-      "Santral kromatolizis"
-     ],
-     "s": 3,
-     "k": [
-      0,
-      211
-     ],
-     "tip": "karsit",
-     "konum": [
-      0.03,
-      0.77
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.52,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.3096,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "4": {
-   "4": [
-    {
-     "tur": "sema",
-     "sablon": "bulgu_dusundurur",
-     "sablon_ad": "Bulgu → düşündürdüğü tanı",
-     "duzen": "tablo",
-     "basliklar": [
-      "Bulgu",
-      "Düşündürdüğü"
-     ],
-     "satirlar": [
-      [
-       "Lewy cisimcikleri",
-       "Parkinson hastalığı"
-      ],
-      [
-       "Nörofibriler iğcikler",
-       "Alzheimer hastalığı"
-      ],
-      [
-       "Distrofik nörit",
-       "Nöronal uzantılarda kalınlaşma ve kıvrımlanma"
-      ],
-      [
-       "Lipofuksin birikimi",
-       "İlerleyen yaş ile kompleks lipid birikimi"
-      ]
+      "Lewy cisimciği",
+      "Nörofibriler iğcik"
      ],
      "s": 5,
      "k": [
-      0,
-      221
+      40,
+      252
      ],
-     "tip": "tablo",
+     "tip": "karsit",
      "konum": [
       0.03,
       0.78
      ],
      "genislik": 0.9,
      "doluluk": 0.0,
-     "kutu_h": 0.542,
+     "kutu_h": 0.337,
      "yon": "yatay",
      "olcek": 1.0,
-     "ek_alt": 0.3422,
+     "ek_alt": 0.1368,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Lewy cisimciği (Parkinson)",
+      "Nörofibriler iğcik (Alzheimer)",
+      "Viral inklüzyonlar",
+      "Distrofik nörit (kalınlaşmış, kıvrımlı uzantı)"
+     ],
+     "baslik": "Nöronlarda görülebilen değişiklikler",
+     "s": 5,
+     "k": [
+      134,
+      172
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.78
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2847,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "İlerleyen yaş, serbest radikal hasarı",
+      "Sitoplazma ve lizozomlarda lipofuksin birikimi"
+     ],
+     "s": 5,
+     "k": [
+      0,
+      230
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.78
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.378,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.1779,
      "ek_renk": "#ffffff"
     }
    ]
   },
   "5": {
-   "3": [
+   "0": [
     {
      "tur": "sema",
-     "sablon": "mekanizma_adimlari",
-     "sablon_ad": "Mekanizma basamakları",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
      "duzen": "zincir",
+     "bag": "yol açar",
      "ogeler": [
-      "Astrositlerde hipertrofi ve hiperplazi",
-      "Veziküler nükleus ve belirgin nükleolus",
-      "Parlak pembe sitoplazmalı gemistositik astrosit",
-      "Gliyozis ve glial skar oluşumu"
+      "Astrositler (makrofaj değil)",
+      "Onarım ve glial skar: gliyozis"
      ],
      "s": 6,
      "k": [
-      0,
-      209
+      17,
+      158
      ],
      "tip": "zincir",
      "konum": [
@@ -161,15 +550,298 @@
      ],
      "genislik": 0.9,
      "doluluk": 0.0,
-     "kutu_h": 0.6,
+     "kutu_h": 0.249,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0685,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Hipertrofi: hücre büyümesi",
+      "Hiperplazi: hücre çoğalması"
+     ],
+     "baslik": "Hasara astrosit yanıtı",
+     "s": 6,
+     "k": [
+      115,
+      233
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.8
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1568,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Gliyal fibriler asidik protein birikimi",
+      "Sitoplazma genişler, parlak pembe; dallanan uzantılar",
+      "Gemistositik astrosit"
+     ],
+     "s": 6,
+     "k": [
+      63,
+      231
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.8
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.466,
      "yon": "dikey",
      "olcek": 1.0,
-     "ek_alt": 0.4197,
+     "ek_alt": 0.2862,
      "ek_renk": "#ffffff"
     }
    ]
   },
+  "6": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.3702,
+       0.6783
+      ],
+      [
+       0.3814,
+       0.665
+      ],
+      [
+       0.3955,
+       0.67
+      ],
+      [
+       0.4077,
+       0.695
+      ],
+      [
+       0.4142,
+       0.7283
+      ],
+      [
+       0.4096,
+       0.7567
+      ],
+      [
+       0.3936,
+       0.7583
+      ],
+      [
+       0.3768,
+       0.7417
+      ],
+      [
+       0.3693,
+       0.7117
+      ]
+     ],
+     "etiket": "gemistositik astrosit",
+     "s": 7,
+     "k": [
+      72,
+      136
+     ],
+     "etiket_konum": [
+      0.5242,
+      0.665
+     ],
+     "etiket_genislik": 0.302,
+     "etiket_hedef": [
+      0.4142,
+      0.6946
+     ],
+     "etiket_boy": 0.0591,
+     "yakin": [
+      0.3093,
+      0.605,
+      0.8862,
+      0.8183
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.6186,
+       0.8083
+      ],
+      [
+       0.642,
+       0.8083
+      ],
+      [
+       0.6607,
+       0.825
+      ],
+      [
+       0.672,
+       0.8583
+      ],
+      [
+       0.6673,
+       0.9
+      ],
+      [
+       0.6607,
+       0.9333
+      ],
+      [
+       0.642,
+       0.9367
+      ],
+      [
+       0.6232,
+       0.925
+      ],
+      [
+       0.6111,
+       0.8917
+      ],
+      [
+       0.6111,
+       0.85
+      ]
+     ],
+     "s": 7,
+     "k": [
+      137,
+      254
+     ],
+     "yakin": [
+      0.5511,
+      0.7483,
+      0.732,
+      0.9967
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.2727,
+       0.1683
+      ],
+      [
+       0.2858,
+       0.16
+      ],
+      [
+       0.3046,
+       0.1633
+      ],
+      [
+       0.3177,
+       0.175
+      ],
+      [
+       0.3205,
+       0.2
+      ],
+      [
+       0.3149,
+       0.225
+      ],
+      [
+       0.3018,
+       0.2333
+      ],
+      [
+       0.2858,
+       0.2317
+      ],
+      [
+       0.2727,
+       0.22
+      ],
+      [
+       0.2709,
+       0.1967
+      ]
+     ],
+     "etiket": "şişkin gövde, veziküler çekirdek",
+     "s": 7,
+     "k": [
+      163,
+      253
+     ],
+     "etiket_konum": [
+      0.1305,
+      0.04
+     ],
+     "etiket_genislik": 0.42,
+     "etiket_hedef": [
+      0.3205,
+      0.16
+     ],
+     "etiket_boy": 0.0591,
+     "yakin": [
+      0.0705,
+      0,
+      0.6105,
+      0.2933
+     ]
+    }
+   ]
+  },
   "7": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "reaktif astrosit (şişkin sitoplazma)",
+      "kronik gliyozis: sitoplazma küçülür",
+      "uzantılar sıkıca birleşir",
+      "fibriler astrosit"
+     ],
+     "s": 8,
+     "k": [
+      68,
+      234
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.76
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.6,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3797,
+     "ek_renk": "#ffffff"
+    }
+   ],
    "2": [
     {
      "tur": "sema",
@@ -182,22 +854,18 @@
      ],
      "satirlar": [
       [
-       "Delici beyin travması ve apse çevresi",
-       "Sınırlı fibroblast rolü"
-      ],
-      [
-       "Fibriler astrositler",
-       "Uzun süreli gliyoziste sıkıca birleşen uzantılar"
+       "Rosenthal lifleri",
+       "uzun süreli kronik gliyozis"
       ],
       [
        "Rosenthal lifleri",
-       "Kronik gliyozis ve düşük dereceli gliom"
+       "pilositik astrositom (düşük dereceli gliom)"
       ]
      ],
      "s": 8,
      "k": [
-      0,
-      202
+      27,
+      137
      ],
      "tip": "tablo",
      "konum": [
@@ -206,11 +874,160 @@
      ],
      "genislik": 0.9,
      "doluluk": 0.0,
-     "kutu_h": 0.466,
+     "kutu_h": 0.39,
      "yon": "yatay",
      "olcek": 1.0,
-     "ek_alt": 0.2462,
+     "ek_alt": 0.1702,
      "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "8": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.6045,
+       0.4667
+      ],
+      [
+       0.6214,
+       0.4717
+      ],
+      [
+       0.6373,
+       0.495
+      ],
+      [
+       0.6626,
+       0.5167
+      ],
+      [
+       0.6935,
+       0.5283
+      ],
+      [
+       0.7151,
+       0.545
+      ],
+      [
+       0.7188,
+       0.5667
+      ],
+      [
+       0.7001,
+       0.575
+      ],
+      [
+       0.672,
+       0.57
+      ],
+      [
+       0.6467,
+       0.55
+      ],
+      [
+       0.6251,
+       0.5383
+      ],
+      [
+       0.612,
+       0.5167
+      ],
+      [
+       0.6026,
+       0.4883
+      ]
+     ],
+     "etiket": "Rosenthal lifi",
+     "s": 9,
+     "k": [
+      127,
+      214
+     ],
+     "etiket_konum": [
+      0.7688,
+      0.4267
+     ],
+     "etiket_genislik": 0.214,
+     "etiket_hedef": [
+      0.7188,
+      0.4667
+     ],
+     "etiket_boy": 0.0591,
+     "yakin": [
+      0.5426,
+      0.3667,
+      1,
+      0.635
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.1453,
+       0.5
+      ],
+      [
+       0.1668,
+       0.495
+      ],
+      [
+       0.1856,
+       0.5167
+      ],
+      [
+       0.2015,
+       0.5617
+      ],
+      [
+       0.2137,
+       0.605
+      ],
+      [
+       0.2231,
+       0.6383
+      ],
+      [
+       0.2165,
+       0.6667
+      ],
+      [
+       0.2015,
+       0.655
+      ],
+      [
+       0.1856,
+       0.6283
+      ],
+      [
+       0.1696,
+       0.6
+      ],
+      [
+       0.1546,
+       0.5667
+      ],
+      [
+       0.1434,
+       0.5383
+      ]
+     ],
+     "s": 9,
+     "k": [
+      24,
+      63
+     ],
+     "yakin": [
+      0.0834,
+      0.435,
+      0.2831,
+      0.7267
+     ]
     }
    ]
   },
@@ -218,19 +1035,19 @@
    "1": [
     {
      "tur": "sema",
-     "sablon": "neden_sonuc",
-     "sablon_ad": "Neden → sonuç",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
      "duzen": "zincir",
-     "bag": "yol açar",
      "ogeler": [
-      "Progresif multifokal lökoensefalopati",
-      "Oligodendrosit nükleusunda viral inklüzyon",
-      "Miyelin üreten hücre hasarı"
+      "poliomavirüs enfeksiyonu",
+      "progresif multifokal lökoensefalopati",
+      "oligodendrosit nükleusu büyür, bulanıklaşır",
+      "viral inklüzyonlar"
      ],
      "s": 10,
      "k": [
-      0,
-      247
+      69,
+      272
      ],
      "tip": "zincir",
      "konum": [
@@ -239,136 +1056,168 @@
      ],
      "genislik": 0.9,
      "doluluk": 0.0,
-     "kutu_h": 0.557,
+     "kutu_h": 0.6,
      "yon": "dikey",
      "olcek": 1.0,
-     "ek_alt": 0.1766,
+     "ek_alt": 0.2197,
      "ek_renk": "#ffffff"
     }
-   ]
-  },
-  "10": {
-   "3": [
+   ],
+   "2": [
     {
      "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
      "ogeler": [
-      "Kemik iliği kökenli yerleşik fagositler",
-      "Enfarktüs ve kanamada aktive makrofaj görünümü",
-      "Nörosifilizde uzamış nükleuslu çomak hücreler"
+      "oligodendrosit yıkımı (viral / otoimmün)",
+      "miyelin kılıfı parçalanır",
+      "beyaz cevherde multifokal demiyelinizasyon"
      ],
-     "baslik": "Mikrogliyal hücre özellikleri",
-     "s": 11,
+     "s": 10,
      "k": [
       0,
-      212
+      183
      ],
-     "tip": "liste",
-     "konum": [
-      0.03,
-      0.74
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.411,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.1708,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "11": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "karsilastirma",
-     "sablon_ad": "İki durumun karşılaştırması",
-     "duzen": "karsit",
-     "basliklar": [
-      "Özellik"
-     ],
-     "satirlar": [
-      [
-       "Görünüm",
-       "Hasar bölgesinde uzamış mikroglia kümeleri",
-       "Hasarlı nöron çevresinde nodüler topluluk"
-      ],
-      [
-       "Hücresel süreç",
-       "Fokal doku hasarı yanıtı",
-       "Hasarlı nöronların fagosite edilmesi"
-      ]
-     ],
-     "kutuplar": [
-      "Mikrogliyal nodüller",
-      "Nöronofaji"
-     ],
-     "s": 12,
-     "k": [
-      0,
-      200
-     ],
-     "tip": "karsit",
-     "konum": [
-      0.03,
-      0.55
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.444,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.0136,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "12": {
-   "3": [
-    {
-     "tur": "sema",
-     "sablon": "karsilastirma",
-     "sablon_ad": "İki durumun karşılaştırması",
-     "duzen": "karsit",
-     "basliklar": [
-      "Özellik"
-     ],
-     "satirlar": [
-      [
-       "Anatomik görev",
-       "Ventrikül ve santral kanalı döşeme",
-       "Beyin omurilik sıvısı salgılama"
-      ],
-      [
-       "Patolojik özellik",
-       "Sitomegalovirüs ile yaygın hasar ve inklüzyon",
-       "Ependim ile devamlı özelleşmiş epitel"
-      ]
-     ],
-     "kutuplar": [
-      "Ependimal hücreler",
-      "Koroid pleksus"
-     ],
-     "s": 13,
-     "k": [
-      0,
-      208
-     ],
-     "tip": "karsit",
+     "tip": "zincir",
      "konum": [
       0.03,
       0.6
      ],
      "genislik": 0.9,
      "doluluk": 0.0,
-     "kutu_h": 0.444,
+     "kutu_h": 0.466,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.0862,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "10": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "miyelin ve lipid yıkım ürünlerinin fagositozu",
+      "köpüksü aktive makrofaj görünümü"
+     ],
+     "s": 11,
+     "k": [
+      0,
+      213
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.74
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.378,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.1379,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "Çomak hücre (uzamış nükleuslu mikroglia)",
+       "nörosifiliz, subakut/kronik SSS enfeksiyonu"
+      ]
+     ],
+     "s": 11,
+     "k": [
+      7,
+      197
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.74
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.314,
      "yon": "yatay",
      "olcek": 1.0,
-     "ek_alt": 0.0636,
+     "ek_alt": 0.0742,
      "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "12": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Sitomegalovirüs enfeksiyonu",
+      "Yaygın ependimal hasar",
+      "İntranükleer ve intrasitoplazmik viral inklüzyonlar"
+     ],
+     "s": 13,
+     "k": [
+      0,
+      122
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.6
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.466,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.0862,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Koroid pleksus (özelleşmiş döşeyici epitel)",
+      "Beyin omurilik sıvısı salgılanması"
+     ],
+     "s": 13,
+     "k": [
+      0,
+      187
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.22,
+      0.6
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.378,
+     "yon": "dikey",
+     "olcek": 1.0
     }
    ]
   },
@@ -385,11 +1234,11 @@
       "Hidrosefali",
       "Yer kaplayan tümörler"
      ],
-     "sonuc": "Beyin hacminde ve kafa içi basınçta artış",
+     "sonuc": "Beyin hacminde artış ve kafa içi basınç artışı",
      "s": 14,
      "k": [
-      0,
-      180
+      27,
+      198
      ],
      "tip": "grup",
      "konum": [
@@ -407,21 +1256,51 @@
    ]
   },
   "14": {
-   "3": [
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Vazojenik ödem",
+      "Sitotoksik ödem"
+     ],
+     "baslik": "Serebral ödem tipleri",
+     "s": 15,
+     "k": [
+      162,
+      218
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.83
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1868,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
     {
      "tur": "sema",
      "sablon": "mekanizma_adimlari",
      "sablon_ad": "Mekanizma basamakları",
      "duzen": "zincir",
      "ogeler": [
-      "Normal kan beyin bariyeri bütünlüğünün bozulması",
-      "Plazma sıvısının beynin hücre dışı boşluklarına geçmesi",
-      "İnflamasyon ve tümörlerde yerel ya da yaygın vazojenik ödem"
+      "Kan beyin bariyeri yıkılır",
+      "Plazma sıvısı ve proteinler damar dışına sızar",
+      "Sıvı ekstraselüler boşluklara geçer"
      ],
      "s": 15,
      "k": [
       0,
-      184
+      156
      ],
      "tip": "zincir",
      "konum": [
@@ -436,55 +1315,67 @@
      "ek_alt": 0.3162,
      "ek_renk": "#ffffff"
     }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Yerel: apse, inflamasyon, beyin tümörü",
+      "Yaygın"
+     ],
+     "baslik": "Vazojenik ödemin yaygınlığı",
+     "s": 15,
+     "k": [
+      39,
+      184
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.83
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1868,
+     "ek_renk": "#ffffff"
+    }
    ]
   },
   "15": {
    "1": [
     {
      "tur": "sema",
-     "sablon": "karsilastirma",
-     "sablon_ad": "İki durumun karşılaştırması",
-     "duzen": "karsit",
-     "basliklar": [
-      "Özellik"
-     ],
-     "satirlar": [
-      [
-       "Bariyer ve membran",
-       "Kan beyin bariyeri yıkımı",
-       "Hücre membran hasarı"
-      ],
-      [
-       "Sıvı birikim yeri",
-       "Beynin hücre dışı boşlukları",
-       "Hücre içi sıvısında artış"
-      ],
-      [
-       "Tipik neden",
-       "İnflamasyon ve tümörler",
-       "Hipoksik iskemik hasar ve toksinler"
-      ]
-     ],
-     "kutuplar": [
-      "Vazojenik ödem",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Hipoksik-iskemik hasar ya da toksinler",
+      "Enerji bağımlı iyon pompalarının durması",
+      "Hücre içine su çekilmesi",
       "Sitotoksik ödem"
      ],
      "s": 16,
      "k": [
       0,
-      202
+      222
      ],
-     "tip": "karsit",
+     "tip": "zincir",
      "konum": [
       0.03,
       0.86
      ],
      "genislik": 0.9,
      "doluluk": 0.0,
-     "kutu_h": 0.52,
-     "yon": "yatay",
+     "kutu_h": 0.6,
+     "yon": "dikey",
      "olcek": 1.0,
-     "ek_alt": 0.3996,
+     "ek_alt": 0.4797,
      "ek_renk": "#ffffff"
     }
    ],
@@ -495,12 +1386,11 @@
      "sablon_ad": "Sınıflama",
      "duzen": "liste",
      "ogeler": [
-      "Yumuşak beyin ve kubbeyi tıka basa doldurma",
-      "Kortikal giruslarda düzleşme",
-      "Aradaki sulkuslarda daralma",
-      "Ventrikül boşluklarında sıkışma"
+      "Giruslar düzleşmiş",
+      "Sulkuslar daralmış",
+      "Ventrikül boşlukları sıkışmış"
      ],
-     "baslik": "Yaygın serebral ödem makroskopisi",
+     "baslik": "Yaygın beyin ödemi makroskopisi",
      "s": 16,
      "k": [
       0,
@@ -513,10 +1403,10 @@
      ],
      "genislik": 0.9,
      "doluluk": 0.0,
-     "kutu_h": 0.485,
+     "kutu_h": 0.411,
      "yon": "yatay",
      "olcek": 1.0,
-     "ek_alt": 0.3647,
+     "ek_alt": 0.2908,
      "ek_renk": "#ffffff"
     }
    ]
@@ -529,14 +1419,16 @@
      "sablon_ad": "Mekanizma basamakları",
      "duzen": "zincir",
      "ogeler": [
-      "Koroid pleksusta beyin omurilik sıvısı üretimi",
+      "Koroid pleksusta üretim",
       "Ventrikül sistemi içinde dolaşım",
-      "Luschka ve Magendie delikleriyle subaraknoid boşluğa akış",
-      "Araknoid granülasyonlar aracılığı ile geri emilim"
+      "Luschka ve Magendie delikleri",
+      "Subaraknoid boşluk",
+      "Araknoid granülasyonlarla geri emilim",
+      "Dural venöz sinüsler"
      ],
      "s": 17,
      "k": [
-      0,
+      49,
       198
      ],
      "tip": "zincir",
@@ -546,48 +1438,589 @@
      ],
      "genislik": 0.9,
      "doluluk": 0.0,
-     "kutu_h": 0.6,
+     "kutu_h": 0.867,
      "yon": "dikey",
      "olcek": 1.0,
-     "ek_alt": 0.2797,
+     "ek_alt": 0.5467,
      "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "Koroid pleksusta BOS üretimi",
+      "Araknoid granülasyonlarda geri emilim"
+     ],
+     "sonuc": "BOS hacmi ve basıncının dengesi",
+     "s": 17,
+     "k": [
+      0,
+      206
+     ],
+     "tip": "grup",
+     "konum": [
+      0.03,
+      0.66
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.275,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "17": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.457,
+       0.425
+      ],
+      [
+       0.478,
+       0.417
+      ],
+      [
+       0.506,
+       0.43
+      ],
+      [
+       0.53,
+       0.453
+      ],
+      [
+       0.528,
+       0.47
+      ],
+      [
+       0.488,
+       0.47
+      ],
+      [
+       0.464,
+       0.463
+      ],
+      [
+       0.457,
+       0.445
+      ]
+     ],
+     "etiket": "koroid pleksus",
+     "s": 18,
+     "k": [
+      89,
+      131
+     ],
+     "etiket_konum": [
+      0.64,
+      0.377
+     ],
+     "etiket_genislik": 0.214,
+     "etiket_hedef": [
+      0.53,
+      0.417
+     ],
+     "etiket_boy": 0.0591,
+     "yakin": [
+      0.397,
+      0.317,
+      0.914,
+      0.53
+     ]
+    },
+    {
+     "tur": "akis",
+     "a": [
+      0.445,
+      0.43
+     ],
+     "b": [
+      0.478,
+      0.515
+     ],
+     "iliski": "aktive",
+     "etiket": "foramen Monro'dan üçüncü ventriküle",
+     "s": 18,
+     "k": [
+      178,
+      219
+     ],
+     "odak": [
+      0.425,
+      0.41,
+      0.498,
+      0.535
+     ],
+     "etiket_konum": [
+      0.58,
+      0.08
+     ],
+     "etiket_genislik": 0.42,
+     "etiket_hedef": [
+      0.498,
+      0.41
+     ],
+     "etiket_boy": 0.0591,
+     "yakin": [
+      0.365,
+      0.02,
+      1,
+      0.595
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "akis",
+     "a": [
+      0.478,
+      0.515
+     ],
+     "b": [
+      0.527,
+      0.61
+     ],
+     "iliski": "aktive",
+     "etiket": "akuadukttan dördüncü ventriküle",
+     "s": 18,
+     "k": [
+      75,
+      151
+     ],
+     "odak": [
+      0.458,
+      0.495,
+      0.547,
+      0.63
+     ],
+     "etiket_konum": [
+      0.026,
+      0.5709
+     ],
+     "etiket_genislik": 0.42,
+     "yakin": [
+      0,
+      0.435,
+      0.607,
+      0.69
+     ]
+    }
+   ],
+   "2": [
+    {
+     "tur": "akis",
+     "a": [
+      0.527,
+      0.61
+     ],
+     "b": [
+      0.585,
+      0.69
+     ],
+     "iliski": "aktive",
+     "etiket": "subaraknoid boşluğa yayılım",
+     "s": 18,
+     "k": [
+      27,
+      132
+     ],
+     "odak": [
+      0.507,
+      0.59,
+      0.605,
+      0.71
+     ],
+     "etiket_konum": [
+      0.605,
+      0.55
+     ],
+     "etiket_genislik": 0.378,
+     "yakin": [
+      0.447,
+      0.49,
+      1,
+      0.77
+     ]
+    }
+   ]
+  },
+  "18": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.525,
+       0.308
+      ],
+      [
+       0.544,
+       0.297
+      ],
+      [
+       0.56,
+       0.317
+      ],
+      [
+       0.562,
+       0.35
+      ],
+      [
+       0.551,
+       0.38
+      ],
+      [
+       0.532,
+       0.38
+      ],
+      [
+       0.521,
+       0.353
+      ]
+     ],
+     "etiket": "araknoid granülasyon",
+     "s": 19,
+     "k": [
+      149,
+      203
+     ],
+     "etiket_konum": [
+      0.08,
+      0.08
+     ],
+     "etiket_genislik": 0.29,
+     "etiket_hedef": [
+      0.521,
+      0.297
+     ],
+     "etiket_boy": 0.0591,
+     "yakin": [
+      0.02,
+      0.02,
+      0.622,
+      0.44
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "akis",
+     "a": [
+      0.54,
+      0.394
+     ],
+     "b": [
+      0.49,
+      0.316
+     ],
+     "iliski": "aktive",
+     "etiket": "BOS venöz kana geçer",
+     "s": 19,
+     "k": [
+      70,
+      191
+     ],
+     "yol": [
+      [
+       0.54,
+       0.394
+      ],
+      [
+       0.5341,
+       0.3909
+      ],
+      [
+       0.5286,
+       0.3875
+      ],
+      [
+       0.5235,
+       0.3839
+      ],
+      [
+       0.5187,
+       0.3801
+      ],
+      [
+       0.5143,
+       0.3761
+      ],
+      [
+       0.5103,
+       0.3718
+      ],
+      [
+       0.5066,
+       0.3673
+      ],
+      [
+       0.5033,
+       0.3625
+      ],
+      [
+       0.5004,
+       0.3575
+      ],
+      [
+       0.4978,
+       0.3523
+      ],
+      [
+       0.4956,
+       0.3468
+      ],
+      [
+       0.4937,
+       0.3411
+      ],
+      [
+       0.4922,
+       0.3352
+      ],
+      [
+       0.4911,
+       0.329
+      ],
+      [
+       0.4904,
+       0.3226
+      ],
+      [
+       0.49,
+       0.316
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.2,
+      0.0
+     ],
+     "etiket_genislik": 0.29,
+     "etiket_hedef": [
+      0.48,
+      0.306
+     ],
+     "etiket_boy": 0.0591,
+     "yakin": [
+      0.14,
+      0,
+      0.6,
+      0.454
+     ]
+    }
+   ],
+   "2": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.412,
+       0.575
+      ],
+      [
+       0.439,
+       0.625
+      ],
+      [
+       0.356,
+       0.742
+      ],
+      [
+       0.328,
+       0.775
+      ],
+      [
+       0.321,
+       0.75
+      ],
+      [
+       0.403,
+       0.608
+      ]
+     ],
+     "etiket": "perivasküler boşluk",
+     "s": 19,
+     "k": [
+      47,
+      117
+     ],
+     "etiket_konum": [
+      0.032,
+      0.6454
+     ],
+     "etiket_genislik": 0.277,
+     "yakin": [
+      0,
+      0.515,
+      0.499,
+      0.835
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.469,
+       0.45
+      ],
+      [
+       0.525,
+       0.45
+      ],
+      [
+       0.514,
+       0.533
+      ],
+      [
+       0.511,
+       0.85
+      ],
+      [
+       0.483,
+       0.85
+      ],
+      [
+       0.48,
+       0.533
+      ]
+     ],
+     "etiket": "falks serebri",
+     "s": 19,
+     "k": [
+      146,
+      181
+     ],
+     "etiket_konum": [
+      0.256,
+      0.7909
+     ],
+     "etiket_genislik": 0.201,
+     "yakin": [
+      0.196,
+      0.39,
+      0.585,
+      0.91
+     ]
     }
    ]
   },
   "19": {
-   "2": [
+   "0": [
     {
      "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Beyin omurilik sıvısı akımında bozulma",
-      "Subaraknoid geri emilimde bozulma",
-      "Koroid pleksus tümörlerinde aşırı sıvı üretimi"
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
      ],
-     "baslik": "Hidrosefali gelişim nedenleri",
+     "satirlar": [
+      [
+       "Sıvı birikimi",
+       "Ventrikül sistemi içinde BOS",
+       "Beyin parankimi içinde"
+      ],
+      [
+       "Ventrikül",
+       "Genişler",
+       "—"
+      ]
+     ],
+     "kutuplar": [
+      "Hidrosefali",
+      "Serebral ödem"
+     ],
      "s": 20,
      "k": [
       0,
-      169
+      186
      ],
-     "tip": "liste",
+     "tip": "karsit",
+     "konum": [
+      0.19,
+      0.59
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.39,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "BOS akımında tıkanıklık",
+      "Subaraknoid boşluktan geri emilim bozulması",
+      "Aşırı BOS üretimi (koroid pleksus papillomu)"
+     ],
+     "sonuc": "Hidrosefali",
+     "s": 20,
+     "k": [
+      56,
+      197
+     ],
+     "tip": "grup",
      "konum": [
       0.03,
       0.59
      ],
      "genislik": 0.9,
      "doluluk": 0.0,
-     "kutu_h": 0.411,
+     "kutu_h": 0.458,
      "yon": "yatay",
      "olcek": 1.0,
-     "ek_alt": 0.0208,
+     "ek_alt": 0.068,
      "ek_renk": "#ffffff"
     }
    ]
   },
   "20": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "Foramen Monro'yu tıkayan kitle",
+      "Serebral akuadukta bası yapan kitle",
+      "Konjenital akuadukt stenozu"
+     ],
+     "sonuc": "Non-komünikan (obstrüktif) hidrosefali",
+     "s": 21,
+     "k": [
+      27,
+      187
+     ],
+     "tip": "grup",
+     "konum": [
+      0.03,
+      0.65
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.351,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0212,
+     "ek_renk": "#ffffff"
+    }
+   ],
    "2": [
     {
      "tur": "sema",
@@ -599,29 +2032,24 @@
      ],
      "satirlar": [
       [
+       "Genişleme",
+       "Ventriküllerin bir bölümü",
+       "Ventrikül sisteminin tamamı"
+      ],
+      [
        "Neden",
-       "Ventrikül içi akış önünde engel",
-       "Beyin omurilik sıvısı geri emiliminde azalma"
-      ],
-      [
-       "Ventrikül genişlemesi",
-       "Ventriküllerin yalnız bir bölümünde genişleme",
-       "Ventrikül sisteminin tamamında genişleme"
-      ],
-      [
-       "Tipik durum",
-       "Foramen Monro veya serebral akuadukt basısı",
-       "Subaraknoid emilim bozukluğu"
+       "Akış önünde engel (tıkanıklık)",
+       "BOS geri emiliminde azalma"
       ]
      ],
      "kutuplar": [
-      "Non-komünikan hidrosefali",
-      "Komünikan hidrosefali"
+      "Non-komünikan",
+      "Komünikan"
      ],
      "s": 21,
      "k": [
       0,
-      207
+      246
      ],
      "tip": "karsit",
      "konum": [
@@ -630,10 +2058,10 @@
      ],
      "genislik": 0.9,
      "doluluk": 0.0,
-     "kutu_h": 0.573,
+     "kutu_h": 0.444,
      "yon": "yatay",
      "olcek": 1.0,
-     "ek_alt": 0.243,
+     "ek_alt": 0.1136,
      "ek_renk": "#ffffff"
     }
    ]
@@ -642,48 +2070,165 @@
    "2": [
     {
      "tur": "sema",
-     "sablon": "bulgu_dusundurur",
-     "sablon_ad": "Bulgu → düşündürdüğü tanı",
-     "duzen": "tablo",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
      "basliklar": [
-      "Bulgu",
-      "Düşündürdüğü"
+      "Özellik"
      ],
      "satirlar": [
       [
-       "Sütürler kapanmadan önce bebeklikte hidrosefali",
-       "Kafa büyür (makrosefali)"
-      ],
-      [
-       "Sütürler kapandıktan sonra hidrosefali",
-       "Kafa büyümez, intrakraniyal basınç artar"
-      ],
-      [
-       "Enfarktüs ve dejeneratif hastalıkta parankim kaybı",
-       "Hidrosefalus eks vakuo"
+       "BOS artışı",
+       "Primer olay",
+       "İkincil, parankim kaybını kompanse eder"
       ]
+     ],
+     "kutuplar": [
+      "Gerçek hidrosefali",
+      "Hidrosefalus eks vakuo"
      ],
      "s": 22,
      "k": [
-      0,
-      196
+      48,
+      246
      ],
-     "tip": "tablo",
+     "tip": "karsit",
      "konum": [
       0.03,
       0.76
      ],
      "genislik": 0.9,
      "doluluk": 0.0,
-     "kutu_h": 0.52,
+     "kutu_h": 0.314,
      "yon": "yatay",
      "olcek": 1.0,
-     "ek_alt": 0.2996,
+     "ek_alt": 0.0942,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "Geniş serebral enfarktüs",
+      "Alzheimer gibi dejeneratif hastalıklar"
+     ],
+     "sonuc": "Hidrosefalus eks vakuo",
+     "s": 22,
+     "k": [
+      80,
+      235
+     ],
+     "tip": "grup",
+     "konum": [
+      0.03,
+      0.76
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.275,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0552,
      "ek_renk": "#ffffff"
     }
    ]
   },
   "23": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Doku ve sıvı hacmi kompansasyon limitini aşar",
+      "Kafa içi basıncı hızla yükselir"
+     ],
+     "s": 24,
+     "k": [
+      0,
+      246
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.89
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.378,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.2879,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Falks serebri: iki hemisferi ayırır",
+      "Tentoriyum serebelli: serebrumu arka çukurdan ayırır"
+     ],
+     "baslik": "Gergin dura mater katlantıları",
+     "s": 24,
+     "k": [
+      0,
+      187
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.89
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2468,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Odaksal genişleme",
+      "Parankim dura katlantılarına göre yer değiştirir",
+      "Herniasyon"
+     ],
+     "s": 24,
+     "k": [
+      27,
+      198
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.89
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.466,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3762,
+     "ek_renk": "#ffffff"
+    }
+   ],
    "3": [
     {
      "tur": "sema",
@@ -691,9 +2236,10 @@
      "sablon_ad": "Mekanizma basamakları",
      "duzen": "zincir",
      "ogeler": [
-      "Basınç artışı ve dura katlantılarında yer değiştirme",
-      "Herniasyonun sıkıştırdığı dokuda kan akımına baskı",
-      "Serebral enfarktüs ve daha fazla şişme",
+      "Herniasyon",
+      "Komşu damarlara bası",
+      "İkincil serebral enfarktüs",
+      "Daha fazla şişme",
       "Daha ileri herniasyon"
      ],
      "s": 24,
@@ -708,30 +2254,61 @@
      ],
      "genislik": 0.9,
      "doluluk": 0.0,
-     "kutu_h": 0.6,
+     "kutu_h": 0.733,
      "yon": "dikey",
      "olcek": 1.0,
-     "ek_alt": 0.5097,
+     "ek_alt": 0.6432,
      "ek_renk": "#ffffff"
     }
    ]
   },
   "24": {
-   "2": [
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Subfalsiyan (singulat)",
+      "Transtentoriyal (unsinat)",
+      "Tonsiller"
+     ],
+     "baslik": "İntrakraniyal herniasyon tipleri",
+     "numarali": true,
+     "s": 25,
+     "k": [
+      27,
+      220
+     ],
+     "tip": "liste",
+     "konum": [
+      0.59,
+      0.17
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "3": [
     {
      "tur": "sema",
      "sablon": "mekanizma_adimlari",
      "sablon_ad": "Mekanizma basamakları",
      "duzen": "zincir",
      "ogeler": [
-      "Serebral hemisferin tek taraflı asimetrik genişlemesi",
-      "Singulat girusun falks serebrinin altına itilmesi",
-      "Anterior serebral arterin sıkışması"
+      "Singulat girus falks altına sıkışır",
+      "Anterior serebral arter basısı",
+      "Bacak motor korteksi iskemisi",
+      "Karşı alt ekstremitede parezi"
      ],
      "s": 25,
      "k": [
       0,
-      137
+      192
      ],
      "tip": "zincir",
      "konum": [
@@ -740,106 +2317,190 @@
      ],
      "genislik": 0.9,
      "doluluk": 0.0,
-     "kutu_h": 0.466,
+     "kutu_h": 0.6,
      "yon": "dikey",
      "olcek": 1.0,
-     "ek_alt": 0.2962,
+     "ek_alt": 0.4297,
      "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "25": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.478,
+       0.25
+      ],
+      [
+       0.489,
+       0.233
+      ],
+      [
+       0.506,
+       0.23
+      ],
+      [
+       0.517,
+       0.247
+      ],
+      [
+       0.515,
+       0.275
+      ],
+      [
+       0.501,
+       0.292
+      ],
+      [
+       0.485,
+       0.283
+      ],
+      [
+       0.476,
+       0.267
+      ]
+     ],
+     "etiket": "subfalsiyan herniasyon",
+     "s": 26,
+     "k": [
+      146,
+      227
+     ],
+     "etiket_konum": [
+      0.567,
+      0.19
+     ],
+     "etiket_genislik": 0.315,
+     "etiket_hedef": [
+      0.517,
+      0.23
+     ],
+     "etiket_boy": 0.0591,
+     "yakin": [
+      0.416,
+      0.13,
+      0.942,
+      0.352
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.511,
+       0.525
+      ],
+      [
+       0.52,
+       0.508
+      ],
+      [
+       0.53,
+       0.525
+      ],
+      [
+       0.53,
+       0.558
+      ],
+      [
+       0.523,
+       0.583
+      ],
+      [
+       0.511,
+       0.58
+      ],
+      [
+       0.506,
+       0.558
+      ]
+     ],
+     "etiket": "unkus herniasyonu",
+     "s": 26,
+     "k": [
+      56,
+      143
+     ],
+     "etiket_konum": [
+      0.64,
+      0.598
+     ],
+     "etiket_genislik": 0.252,
+     "etiket_hedef": [
+      0.53,
+      0.583
+     ],
+     "etiket_boy": 0.0591,
+     "yakin": [
+      0.446,
+      0.448,
+      0.952,
+      0.7171
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.504,
+       0.703
+      ],
+      [
+       0.517,
+       0.692
+      ],
+      [
+       0.527,
+       0.713
+      ],
+      [
+       0.525,
+       0.742
+      ],
+      [
+       0.515,
+       0.758
+      ],
+      [
+       0.506,
+       0.747
+      ],
+      [
+       0.501,
+       0.725
+      ]
+     ],
+     "etiket": "tonsiller herniasyon",
+     "s": 26,
+     "k": [
+      165,
+      239
+     ],
+     "etiket_konum": [
+      0.237,
+      0.782
+     ],
+     "etiket_genislik": 0.29,
+     "etiket_hedef": [
+      0.501,
+      0.758
+     ],
+     "etiket_boy": 0.0591,
+     "yakin": [
+      0.177,
+      0.632,
+      0.587,
+      0.9011
+     ]
     }
    ]
   },
   "26": {
-   "4": [
-    {
-     "tur": "sema",
-     "sablon": "lezyon_bulgu",
-     "sablon_ad": "Lezyon yeri → bulgu",
-     "duzen": "tablo",
-     "basliklar": [
-      "Lezyon düzeyi",
-      "Bulgu"
-     ],
-     "satirlar": [
-      [
-       "Üçüncü kraniyal sinir sıkışması",
-       "Lezyon tarafında pupilla genişlemesi (şişmiş pupil)"
-      ],
-      [
-       "Posterior serebral arter sıkışması",
-       "Primer görme korteksi dahil iskemik hasar"
-      ],
-      [
-       "Karşı taraf serebral pedinkül sıkışması",
-       "Herniasyonla aynı tarafta hemiparezi (yanlış lokalizasyon)"
-      ]
-     ],
-     "s": 27,
-     "k": [
-      0,
-      201
-     ],
-     "tip": "tablo",
-     "konum": [
-      0.03,
-      0.86
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.52,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.3996,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "27": {
-   "2": [
-    {
-     "tur": "sema",
-     "sablon": "karsilastirma",
-     "sablon_ad": "İki durumun karşılaştırması",
-     "duzen": "karsit",
-     "basliklar": [
-      "Özellik"
-     ],
-     "satirlar": [
-      [
-       "Anatomik bölge",
-       "Karşı taraf serebral pedinkül",
-       "Orta beyin ve pons orta hat / paramediyan"
-      ],
-      [
-       "Kanama ve bası nedeni",
-       "Tentoriyum kenarıyla pedinkül basısı",
-       "Üst beyin sapını besleyen penetran damar yırtılması"
-      ]
-     ],
-     "kutuplar": [
-      "Kernohan oluğu",
-      "Duret kanamaları"
-     ],
-     "s": 28,
-     "k": [
-      0,
-      199
-     ],
-     "tip": "karsit",
-     "konum": [
-      0.03,
-      0.71
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.444,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.1736,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "28": {
    "2": [
     {
      "tur": "sema",
@@ -847,34 +2508,385 @@
      "sablon_ad": "Mekanizma basamakları",
      "duzen": "zincir",
      "ogeler": [
-      "Serebellar tonsillerin foramen magnuma yer değiştirmesi",
-      "Medulla oblongata ve beyin sapı sıkışması",
-      "Yaşamsal solunum ve kalp merkezlerinde fonksiyon bozukluğu"
+      "Unkus tentoriyum kenarında sıkışır",
+      "Üçüncü kraniyal sinir basısı",
+      "Lezyon tarafında midriyazis",
+      "Oküler hareket bozukluğu (şişmiş pupil)"
      ],
-     "s": 29,
+     "s": 27,
      "k": [
       0,
-      220
+      232
      ],
      "tip": "zincir",
      "konum": [
       0.03,
-      0.55
+      0.86
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.6,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.4797,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Posterior serebral arter basısı",
+      "Primer görme korteksi iskemisi"
+     ],
+     "s": 27,
+     "k": [
+      59,
+      235
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.86
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.249,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1285,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "tek_neden_cok_sonuc",
+     "sablon_ad": "Bir olay → olası sonuçlar",
+     "duzen": "dal",
+     "basliklar": [
+      "Yol",
+      "Sonuç"
+     ],
+     "soru": "Transtentoriyal herniasyon",
+     "dallar": [
+      [
+       "Üçüncü kraniyal sinir basısı",
+       "Şişmiş pupil"
+      ],
+      [
+       "Posterior serebral arter basısı",
+       "Görme korteksi iskemisi"
+      ],
+      [
+       "Karşı serebral pedinkül basısı",
+       "İpsilateral hemiparezi (yanlış lokalizasyon)"
+      ]
+     ],
+     "s": 27,
+     "k": [
+      0,
+      236
+     ],
+     "tip": "dal",
+     "konum": [
+      0.03,
+      0.86
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.444,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3236,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "27": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Karşı pedinkül tentoriyum kenarına dayanır",
+      "Kernohan oluğu (çentiği)"
+     ],
+     "s": 28,
+     "k": [
+      24,
+      233
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.71
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.249,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Üst beyin sapı aşağı itilir",
+      "Penetran arter ve venler gerilip yırtılır",
+      "Duret kanamaları (orta hat, paramediyan)"
+     ],
+     "s": 28,
+     "k": [
+      66,
+      217
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.71
      ],
      "genislik": 0.9,
      "doluluk": 0.0,
      "kutu_h": 0.466,
      "yon": "dikey",
      "olcek": 1.0,
-     "ek_alt": 0.0362,
+     "ek_alt": 0.1962,
      "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "29": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.504,
+       0.703
+      ],
+      [
+       0.517,
+       0.692
+      ],
+      [
+       0.527,
+       0.713
+      ],
+      [
+       0.525,
+       0.742
+      ],
+      [
+       0.515,
+       0.758
+      ],
+      [
+       0.506,
+       0.747
+      ],
+      [
+       0.501,
+       0.725
+      ]
+     ],
+     "etiket": "serebellar tonsiller",
+     "s": 30,
+     "k": [
+      107,
+      188
+     ],
+     "etiket_konum": [
+      0.237,
+      0.782
+     ],
+     "etiket_genislik": 0.29,
+     "etiket_hedef": [
+      0.501,
+      0.758
+     ],
+     "etiket_boy": 0.0591,
+     "yakin": [
+      0.177,
+      0.632,
+      0.587,
+      0.9011
+     ]
+    },
+    {
+     "tur": "akis",
+     "a": [
+      0.517,
+      0.69
+     ],
+     "b": [
+      0.511,
+      0.742
+     ],
+     "iliski": "aktive",
+     "etiket": "tonsiller foramen magnumdan iner",
+     "s": 30,
+     "k": [
+      81,
+      106
+     ],
+     "odak": [
+      0.491,
+      0.67,
+      0.537,
+      0.762
+     ],
+     "etiket_konum": [
+      0.537,
+      0.76
+     ],
+     "etiket_genislik": 0.42,
+     "yakin": [
+      0.431,
+      0.61,
+      1,
+      0.86
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.478,
+       0.25
+      ],
+      [
+       0.489,
+       0.233
+      ],
+      [
+       0.506,
+       0.23
+      ],
+      [
+       0.517,
+       0.247
+      ],
+      [
+       0.515,
+       0.275
+      ],
+      [
+       0.501,
+       0.292
+      ],
+      [
+       0.485,
+       0.283
+      ],
+      [
+       0.476,
+       0.267
+      ]
+     ],
+     "etiket": "subfalsiyan: ACA basısı",
+     "s": 30,
+     "k": [
+      55,
+      119
+     ],
+     "etiket_konum": [
+      0.527,
+      0.19
+     ],
+     "etiket_genislik": 0.328,
+     "yakin": [
+      0.416,
+      0.13,
+      0.915,
+      0.352
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.511,
+       0.525
+      ],
+      [
+       0.52,
+       0.508
+      ],
+      [
+       0.53,
+       0.525
+      ],
+      [
+       0.53,
+       0.558
+      ],
+      [
+       0.523,
+       0.583
+      ],
+      [
+       0.511,
+       0.58
+      ],
+      [
+       0.506,
+       0.558
+      ]
+     ],
+     "etiket": "transtentoriyal: III. sinir, PCA",
+     "s": 30,
+     "k": [
+      120,
+      224
+     ],
+     "etiket_konum": [
+      0.58,
+      0.448
+     ],
+     "etiket_genislik": 0.42,
+     "etiket_hedef": [
+      0.53,
+      0.508
+     ],
+     "etiket_boy": 0.0591,
+     "yakin": [
+      0.446,
+      0.388,
+      1,
+      0.643
+     ]
     }
    ]
   }
  },
  "rapor": {
-  "aday": 22,
-  "gecti": 22,
-  "ret": {}
+  "aday": 78,
+  "gecti": 68,
+  "ret": {
+   "panel metni 'Büyür, yuvarlaklaşır' henüz anlatılmamış terim ": 1,
+   "panel metni 'Fibroblast rolü' henüz anlatılmamış terim içeri": 1,
+   "panel metni 'Tanım' henüz anlatılmamış terim içeriyor (ileri": 1,
+   "panel metni 'Sıvının yeri' henüz anlatılmamış terim içeriyor": 1,
+   "noktaların %47'i çizgi üstünde (en az %70)": 1,
+   "panel metni 'Hayır (bebeklik)' henüz anlatılmamış terim içer": 1,
+   "noktaların %35'i çizgi üstünde (en az %70)": 1,
+   "noktaların %32'i çizgi üstünde (en az %70)": 1,
+   "a ile b çok yakın": 1,
+   "panel metni 'Ani kardiyorespiratuvar ölüm' henüz anlatılmamı": 1
+  }
  }
 }
