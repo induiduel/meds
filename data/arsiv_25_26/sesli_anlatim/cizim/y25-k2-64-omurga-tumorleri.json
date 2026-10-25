@@ -308,38 +308,6 @@
     }
    ]
   },
-  "1": {
-   "5": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Primer kemik tümörleri",
-      "Metastatik yayılım"
-     ],
-     "baslik": "Omurga kitleleri",
-     "s": 3,
-     "k": [
-      0,
-      47
-     ],
-     "tip": "liste",
-     "konum": [
-      0.03,
-      1.015
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.337,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.3718,
-     "ek_renk": "#343d0e"
-    }
-   ]
-  },
   "2": {
    "6": [
     {
@@ -983,9 +951,10 @@
  },
  "rapor": {
   "aday": 21,
-  "gecti": 18,
+  "gecti": 17,
   "ret": {
    "kelime aralığı geçersiz (0–15, cümle 15 kelime)": 1,
+   "lazer sayfası dışında çizim (H59)": 1,
    "noktaların %57'i çizgi üstünde (en az %70)": 1,
    "noktaların %47'i çizgi üstünde (en az %70)": 1
   },
@@ -998,6 +967,13 @@
     "komut": {
      "etiket": "Sklerotik/blastik metastaz (fildişi vertebra) ve litik lezyon"
     }
+   },
+   {
+    "cumle": "P1.C5",
+    "sayfa": 3,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
    },
    {
     "cumle": "P6.C1",

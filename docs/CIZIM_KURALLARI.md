@@ -138,3 +138,29 @@ yine düşerse çizim yayına gönderilmez (çıkış 14).
 1. `cizim_uret.py` → kapı 0 HATA. 2. Sınama sayfası (gerçek `CizimLayer` + `pdfDoc.css`): bütün paneller 366 / 567 /
    1100 px'te — ayrılan alan aşımı, sayfa/ek alan taşması, kırık yatay zincir, kesik etiket = 0. 3. Canlıda denetleyici
    (2× hız, telefon + masaüstü): panel/etiketin yazı kutusuyla kesişmesi, anlatılan satırın oynatıcı altında ≥1 sn kalması.
+
+## 10. Sıkı ders kapısı ve şekil cümlesi (H59, kullanıcı kararı 2026-10-25: "bir daha kimse çizim hatası yapmasın")
+
+`scripts/cizim/cizim_kapisi.py <key> --kok <data/sesli_anlatim | data/arsiv_25_26/sesli_anlatim>` — `cizim_dogrula.py`
+komutları tek tek süzer; bu kapı yayınlanacak dersin BÜTÜNÜNE bakar. 0 HATA olmadan çizim/işaret yayına gitmez:
+ders zinciri `cizim` adımı (çıkış 15), `arsiv_yayinla.py` (paket üretilmez), `sekil_cizim.py birlestir` (kapi_hata).
+
+| Kural | HATA |
+|---|---|
+| K1 | Şekil/tablo çapalı cümlenin lazeri yazıya/boşa düşüyor (şekil maddeye üstündür; çapa sayfasında görsel yoksa ±1 sayfa) |
+| K2 | Madde çapalarının >%15'i yazıya düşmüyor → çapa uydurulmuş (her cümleye madde/M0/`resim: 0` basan toplu betik yasak) |
+| K3 | Yazarın şekil dediği ve lazeri resim/tablo olan cümlelerin <%40'ı görsel üstü çizimli (≥5 cümlede) |
+| K4 | Lazeri resim olan cümlede panel (`sema`) |
+| K5 | Kontur resim kutusunun ≥%85'ini çevreliyor (anlatılan parça dolanmalı) |
+| K6 | Cümlede >2, sayfada >8 çizim |
+| K7 | Çizim lazerin gösterdiği sayfada değil |
+| K8 | Etiketsiz ok; kontur 5–20 nokta dışında; koordinat 0–1 dışında |
+| K9 | İşaret ve çizim farklı metin sürümünden (metinHash) |
+
+Üretim tarafındaki karşılıkları (kapıya gelmeden): `pdf_isaret.sekil_isareti` (şekil önceliği, komşu sayfa),
+`Sayfa.tekil_resim` (yinelenen kutu ve içinde ≥8 yazı kelimesi olan şablon/kart görseli resim sayılmaz; tam sayfa görsel
+yalnız metinsiz/taranmış slaytta zemin), `cizim_uret.lazer_uyumu` (K4/K7 komut düzeyinde ret), `TALIMAT_CIZIM.md` 21–26.
+Şekil cümlesi üretimi/onarımı: `scripts/arsiv_25_26/sekil_cizim.py hazirla → calistir → onar [--tur N] → birlestir`
+(★ = lazeri resim/tablo olan cümle; onar turunda kapının ret nedeni modele geri verilir).
+**Kapı gevşetilmez; eşik değiştirmek kullanıcı kararıdır.** Kapı düşerse içerik yeniden üretilir.
+

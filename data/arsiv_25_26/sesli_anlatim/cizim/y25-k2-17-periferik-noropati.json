@@ -471,38 +471,6 @@
     }
    ]
   },
-  "33": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Distal kas güçsüzlüğü",
-      "Proksimal kas güçsüzlüğü",
-      "Kramp ağrılı kasılmalar",
-      "Fasikülasyon seğirmeleri"
-     ],
-     "baslik": "Motor Belirtiler",
-     "s": 16,
-     "k": [
-      0,
-      45
-     ],
-     "tip": "liste",
-     "konum": [
-      0.31,
-      0.22
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.363,
-     "yon": "yatay",
-     "olcek": 1.0
-    }
-   ]
-  },
   "35": {
    "4": [
     {
@@ -532,85 +500,6 @@
      "kutu_h": 0.363,
      "yon": "yatay",
      "olcek": 1.0
-    }
-   ]
-  },
-  "38": {
-   "3": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Yüzeyel dokunma ve iki nokta ayrımı",
-      "Vibrasyon ve eklem pozisyon algılaması",
-      "Isı algılama ve ağrı algılama",
-      "Simetrik eldiven çorap tarzı duyu kaybı"
-     ],
-     "baslik": "Duyu Muayenesi",
-     "s": 18,
-     "k": [
-      0,
-      58
-     ],
-     "tip": "liste",
-     "konum": [
-      0.04,
-      0.75
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.363,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.1334,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "40": {
-   "3": [
-    {
-     "tur": "sema",
-     "sablon": "bulgu_dusundurur",
-     "sablon_ad": "Bulgu → düşündürdüğü tanı",
-     "duzen": "tablo",
-     "basliklar": [
-      "Bulgu",
-      "Düşündürdüğü"
-     ],
-     "satirlar": [
-      [
-       "Romberg testi pozitif",
-       "Eklem pozisyon duyusu kaybı ataksi"
-      ],
-      [
-       "Arka kök ganglionu tutulumu",
-       "Duysal nöronopati tablosu"
-      ],
-      [
-       "Medulla spinalis arka kordon lezyonu",
-       "B on iki eksikliği tablosu"
-      ]
-     ],
-     "s": 19,
-     "k": [
-      0,
-      43
-     ],
-     "tip": "tablo",
-     "konum": [
-      0.03,
-      0.78
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.31,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.1095,
-     "ek_renk": "#ffffff"
     }
    ]
   },
@@ -699,86 +588,6 @@
      "olcek": 1.0,
      "ek_alt": 0.1597,
      "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "45": {
-   "2": [
-    {
-     "tur": "sema",
-     "sablon": "refleks_duzey",
-     "sablon_ad": "Refleks → test ettiği düzey",
-     "duzen": "tablo",
-     "basliklar": [
-      "Refleks",
-      "Beyin sapı düzeyi / sinir"
-     ],
-     "satirlar": [
-      [
-       "Biseps refleksi",
-       "Ce beş ce altı muskulokütanöz sinir"
-      ],
-      [
-       "Triseps refleksi",
-       "Ce altı yedi sekiz radial sinir"
-      ],
-      [
-       "Patella refleksi",
-       "Le iki üç dört femoral sinir"
-      ],
-      [
-       "Aşil refleksi",
-       "Se bir iki siyatik sinir"
-      ]
-     ],
-     "s": 21,
-     "k": [
-      0,
-      56
-     ],
-     "tip": "tablo",
-     "konum": [
-      0.48,
-      0.42
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.527,
-     "yon": "yatay",
-     "olcek": 1.0
-    }
-   ]
-  },
-  "46": {
-   "5": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Guillain Barre sendromu",
-      "Lepra enfeksiyonu",
-      "Sarkoidoz granülomatöz tutulum",
-      "Lyme nöroborreliyoz",
-      "He-i-ve enfeksiyonu"
-     ],
-     "baslik": "Kraniyal Sinir VII ve Polinöropati",
-     "s": 22,
-     "k": [
-      0,
-      48
-     ],
-     "tip": "liste",
-     "konum": [
-      0.33,
-      0.18
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.419,
-     "yon": "yatay",
-     "olcek": 1.0
     }
    ]
   },
@@ -1607,17 +1416,53 @@
   }
  },
  "rapor": {
-  "aday": 45,
-  "gecti": 36,
+  "aday": 47,
+  "gecti": 31,
   "ret": {
+   "lazer sayfası dışında çizim (H59)": 5,
    "noktaların %68'i çizgi üstünde (en az %70)": 2,
    "noktaların %9'i çizgi üstünde (en az %70)": 2,
    "noktaların %29'i çizgi üstünde (en az %70)": 1,
    "noktaların %18'i çizgi üstünde (en az %70)": 1,
    "noktaların %45'i çizgi üstünde (en az %70)": 2,
-   "ok uçlarından biri boş alanda (yazı/çizim yok)": 1
+   "ok uçlarından biri boş alanda (yazı/çizim yok)": 3
   },
   "ret_ayrinti": [
+   {
+    "cumle": "P33.C1",
+    "sayfa": 16,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P38.C3",
+    "sayfa": 18,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P40.C3",
+    "sayfa": 19,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P45.C2",
+    "sayfa": 21,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P46.C5",
+    "sayfa": 22,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
    {
     "cumle": "P4.C2",
     "sayfa": 3,
@@ -1969,6 +1814,40 @@
       0.35
      ],
      "etiket": "hücre dışı"
+    }
+   },
+   {
+    "cumle": "P12.C0",
+    "sayfa": 8,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.33,
+      0.8
+     ],
+     "b": [
+      0.36,
+      0.725
+     ],
+     "etiket": "miyelin kılıf"
+    }
+   },
+   {
+    "cumle": "P21.C0",
+    "sayfa": 11,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.56,
+      0.3
+     ],
+     "b": [
+      0.46,
+      0.345
+     ],
+     "etiket": "travmatik sinir yaralanması"
     }
    }
   ]

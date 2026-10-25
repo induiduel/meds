@@ -518,6 +518,11 @@ def a_cizim(d, pk, W, kuru):
     if calistir(sin, cwd=MEDS, kuru=kuru):
         if calistir(f"CIZIM_PAY=1.4 {uret}", cwd=MEDS, kuru=kuru) or calistir(sin, cwd=MEDS, kuru=kuru):
             print(f"   {key}: çizim sınaması düştü — yayına gönderilmedi"); return 14
+    # sıkı ders kapısı (H59, scripts/cizim/cizim_kapisi.py K1–K9): şekil çapası görsele gitmeli, uydurma çapa yok,
+    # şekil cümlelerinin ≥%40'ı görsel üstü çizimli, resimde panel yok, bütün resmi çevreleyen kontur yok, çizim lazerin
+    # sayfasında. HATA varsa çizim yayına gitmez (çıkış 15); düzeltme yeniden üretimle, kapı gevşetilerek değil.
+    if calistir(f"{py} {MEDS}/scripts/cizim/cizim_kapisi.py {key} --kok {S}", cwd=MEDS, kuru=kuru):
+        print(f"   {key}: çizim kapısı (cizim_kapisi.py) düştü — yayına gönderilmedi"); return 15
     return calistir(f"rsync -az --rsync-path='flock /tmp/meds-deploy.lock sudo rsync' --chown=ubuntu:ubuntu {S}/cizim/{key}.json {uz}/cizim/", kuru=kuru)
 
 

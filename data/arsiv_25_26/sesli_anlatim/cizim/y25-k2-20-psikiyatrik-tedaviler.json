@@ -163,37 +163,6 @@
     }
    ]
   },
-  "18": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Yakın geçmişte miyokard infarktüsü",
-      "Serebrovasküler inme ve kanama riski",
-      "Aortik anevrizma ve feokromositoma"
-     ],
-     "baslik": "Yüksek Risk Faktörleri",
-     "s": 11,
-     "k": [
-      0,
-      46
-     ],
-     "tip": "liste",
-     "konum": [
-      0.4,
-      0.51
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.001,
-     "kutu_h": 0.308,
-     "yon": "yatay",
-     "olcek": 1.0
-    }
-   ]
-  },
   "22": {
    "3": [
     {
@@ -779,7 +748,18 @@
  },
  "rapor": {
   "aday": 18,
-  "gecti": 18,
-  "ret": {}
+  "gecti": 17,
+  "ret": {
+   "lazer sayfası dışında çizim (H59)": 1
+  },
+  "ret_ayrinti": [
+   {
+    "cumle": "P18.C1",
+    "sayfa": 11,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   }
+  ]
  }
 }

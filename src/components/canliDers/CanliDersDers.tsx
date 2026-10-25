@@ -1527,27 +1527,12 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
       // yalnız o an konuşulan kelimenin slayttaki karşılığı; karşılıksız kelimede işaret yok
       return ws.findIndex((w) => k.c >= w[0] && k.c < w[1]);
     });
-    // O anki sayfadaki tüm canlı çizimler toplanır (önceki cümlenin çizdiği kontur kaybolmasın)
-    const sayfaCizimleri: NonNullable<PdfMarks['cizim']> = [];
-    const zSet = new Set<string>();
-    if (detay.isaret && isr) {
-      for (const cs of Object.values(detay.isaret || {})) {
-        for (const x of cs || []) {
-          if (!x || x.s !== isr.s || x.d !== gor.dosya) continue;
-          for (const z of ((x as any).z || []) as NonNullable<PdfMarks['cizim']>) {
-            if (!z) continue;
-            const anahtar = `${z.tur}:${JSON.stringify(z.nokta || z.odak || z.a || z.hedef || '')}`;
-            if (!zSet.has(anahtar)) {
-              zSet.add(anahtar);
-              sayfaCizimleri.push(z);
-            }
-          }
-        }
-      }
-    }
-    const cizim = sayfaCizimleri.length > 0 ? sayfaCizimleri : ((isr as any).z as PdfMarks['cizim']);
+    // H60 / H61: Çizim KESİNLİKLE yalnız o an okunan cümlenin kendi çizimidir (isr.z).
+    // Sayfadaki tüm çizimler toplanamaz; aksi takdirde aynı anda 3 konum işaretlenir, iç içe çizgiler biner
+    // ve her yeni cümleye geçildiğinde animasyon baştan tekrar oynar.
+    const cizim = ((isr as any).z || undefined) as PdfMarks['cizim'];
     return { page: isr.s, kind: isr.t, lines: isr.l, words: ws.map((w) => w.slice(2)), useFocus, path: yol, useChar: yol || cizim?.length ? useChar : undefined, cizim };
-  }, [canli, durdu, isr, gor.dosya, gor.sayfa, detay.isaret]);
+  }, [canli, durdu, isr, gor.dosya, gor.sayfa]);
 
   useEffect(() => { if (!durdu) setElle(null); }, [durdu]);
 

@@ -104,3 +104,18 @@ Yalnız `cizim.json`'u yaz; başka dosyaya dokunma. Bitince tek satır: `BİTTİ
     slayta sığanı seçer. Satıra kırılan yatay zincir kullanılmaz → dikey (oklar aşağı). Ayrıntı: `docs/CIZIM_KURALLARI.md`.
 19. **Resim slaytında panel yok:** görsel slaytta anlatım görselin üstünde (kontur/akış/odak); panel yalnız yazı slaytında.
 20. **Yatay zincir tek satır:** kutular tek satıra sığmıyorsa dikey çizilir (betik seçer); sınama `panel_sinama.mjs` 0 hata.
+
+## Şekil cümlesi kuralları (H59, 2026-10-25 — ihlal eden ders yayına GİRMEZ, `cizim_kapisi.py`)
+21. **Şekil cümlesi çizilir:** sayfalar.md'de ★ ile işaretli (lazeri resim/tablo olan) her cümle için görselin üstünde
+    cümlenin ANLATTIĞI PARÇAYI gösteren çizim yaz: lezyon/yapı/bölge `kontur`, yapıdan yapıya `akis`, tablo satırı/hücre
+    grubu `kontur`. Seçilemiyorsa atla ve `atlanan` listesine nedenini yaz; uydurma yok. Ders başına ★ cümlelerin
+    en az %40'ı çizimli olmalı (sınama dersleri k2-02/k2-07 düzeyi).
+22. **Bütün resmi çevreleme:** kontur resim kutusunun %85'inden fazlasını kaplayamaz; "bu resim" demek için çizim
+    yapılmaz (lazer zaten resmi gösterir). Anlatılan parçayı dola.
+23. **Kontur çizginin üstünde:** noktaların en az %70'i görüntüdeki gerçek kenar/çizgi üstünde olmalı (görüntüyü yakından
+    incele). Sınırı çizgi olmayan bölge (yumuşak doku, yazı bloğu) için kontur değil kısa `akis` (boş yerden yapıya) yaz.
+24. **Doğru sayfa:** komutun `sayfa`'sı cümlenin listelendiği sayfadır (lazerin gösterdiği sayfa); başka sayfaya çizim
+    reddedilir.
+25. **Resim anlatılırken panel yok:** lazeri resim olan cümleye `sema` yazılmaz (sayfa yazı ağırlıklı olsa bile).
+26. **Arka plan/süs resim değildir:** slayt şablonu, logo, kenar süsü, kapak deseni, yazının arkasındaki kart görseli
+    için çizim yapılmaz; bunlar ★ olsa da atlanır.

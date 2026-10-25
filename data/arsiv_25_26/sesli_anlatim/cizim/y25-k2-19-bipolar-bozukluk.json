@@ -479,6 +479,86 @@
      "etiket_boy": 0.0443
     }
    ],
+   "1": [
+    {
+     "tur": "sema",
+     "s": 5,
+     "k": [
+      21,
+      170
+     ],
+     "dugum": [
+      {
+       "id": "d0",
+       "metin": "sanguin"
+      },
+      {
+       "id": "d1",
+       "metin": "bipolar mani"
+      }
+     ],
+     "kenar": [
+      {
+       "a": "d0",
+       "b": "d1",
+       "tur": "aktive"
+      }
+     ],
+     "kaynak": "ok",
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.106,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1413,
+     "ek_renk": "#e6ecd0"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "s": 5,
+     "k": [
+      0,
+      142
+     ],
+     "dugum": [
+      {
+       "id": "d0",
+       "metin": "melankolik"
+      },
+      {
+       "id": "d1",
+       "metin": "bipolar depresyon"
+      }
+     ],
+     "kenar": [
+      {
+       "a": "d0",
+       "b": "d1",
+       "tur": "aktive"
+      }
+     ],
+     "kaynak": "ok",
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.106,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1413,
+     "ek_renk": "#e6ecd0"
+    }
+   ],
    "3": [
     {
      "tur": "akis",
@@ -526,12 +606,172 @@
      ],
      "etiket_genislik": 0.252
     }
+   ],
+   "4": [
+    {
+     "tur": "sema",
+     "s": 5,
+     "k": [
+      73,
+      130
+     ],
+     "dugum": [
+      {
+       "id": "d0",
+       "metin": "kan"
+      },
+      {
+       "id": "d1",
+       "metin": "popüler, neşeli"
+      }
+     ],
+     "kenar": [
+      {
+       "a": "d0",
+       "b": "d1",
+       "tur": "aktive"
+      }
+     ],
+     "kaynak": "ok",
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.106,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1413,
+     "ek_renk": "#e6ecd0"
+    }
+   ],
+   "5": [
+    {
+     "tur": "sema",
+     "s": 5,
+     "k": [
+      14,
+      151
+     ],
+     "dugum": [
+      {
+       "id": "d0",
+       "metin": "sarı safra"
+      },
+      {
+       "id": "d1",
+       "metin": "asabi"
+      }
+     ],
+     "kenar": [
+      {
+       "a": "d0",
+       "b": "d1",
+       "tur": "aktive"
+      }
+     ],
+     "kaynak": "ok",
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.106,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1413,
+     "ek_renk": "#e6ecd0"
+    }
+   ],
+   "6": [
+    {
+     "tur": "sema",
+     "s": 5,
+     "k": [
+      50,
+      144
+     ],
+     "dugum": [
+      {
+       "id": "d0",
+       "metin": "kara safra"
+      },
+      {
+       "id": "d1",
+       "metin": "yaratıcı"
+      }
+     ],
+     "kenar": [
+      {
+       "a": "d0",
+       "b": "d1",
+       "tur": "aktive"
+      }
+     ],
+     "kaynak": "ok",
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.106,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1413,
+     "ek_renk": "#e6ecd0"
+    }
+   ],
+   "7": [
+    {
+     "tur": "sema",
+     "s": 5,
+     "k": [
+      51,
+      125
+     ],
+     "dugum": [
+      {
+       "id": "d0",
+       "metin": "balgam"
+      },
+      {
+       "id": "d1",
+       "metin": "soğukkanlı"
+      }
+     ],
+     "kenar": [
+      {
+       "a": "d0",
+       "b": "d1",
+       "tur": "aktive"
+      }
+     ],
+     "kaynak": "ok",
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.106,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1413,
+     "ek_renk": "#e6ecd0"
+    }
    ]
   }
  },
  "rapor": {
-  "aday": 28,
-  "gecti": 14,
+  "aday": 34,
+  "gecti": 20,
   "ret": {
    "noktalar tek bir resim kutusunun içinde değil": 7,
    "ok uçlarından biri boş alanda (yazı/çizim yok)": 7

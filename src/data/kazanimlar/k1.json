@@ -18750,38 +18750,6 @@
        ],
        "cikmisSorular": [
         {
-         "id": "d76a01737de9",
-         "questionNumber": 193,
-         "stem": "Yenidoğan bir bebekte ambigus genitalyanın en sık sebebi aşağıdakilerden hangisidir?",
-         "correctAnswer": "B",
-         "options": [
-          {
-           "key": "A",
-           "text": "Testiküler feminizasyon"
-          },
-          {
-           "key": "B",
-           "text": "Konjenital adrenal hiperplazi"
-          },
-          {
-           "key": "C",
-           "text": "Swyer sendromu"
-          },
-          {
-           "key": "D",
-           "text": "Kallmann sendromu"
-          },
-          {
-           "key": "E",
-           "text": "Sheehan sendromu"
-          }
-         ],
-         "year": "2018-2019",
-         "discipline": "Tıbbi Genetik",
-         "topic": "Doğumsal Kadın/Erkek Genital Gelişim Anomalileri",
-         "explanation": "Yenidoğanda ambigus genitalyanın en sık nedeni konjenital adrenal hiperplazidir; olguların %90-95'i 21-hidroksilaz (CYP21A2) eksikliğine bağlıdır ve 46,XX CGB'nin başlıca sebebidir.\n\n- **Patofizyoloji:** Kortizol yapımı bozulur, negatif geri bildirim kalkar ve ACTH artar; adrenal hiperplazi gelişir, 17-hidroksiprogesteron gibi öncüller androjen yoluna kayar.\n- **Klinik:** 46,XX bebekte klitoromegali, labioskrotal füzyon, ürogenital sinüs; iç genital organlar (uterus, over) normaldir. Tuz kaybettiren formda 2-3. haftada hiponatremi, hiperkalemi ve dehidratasyon krizi gelişir.\n- **Tanı:** Bazal veya ACTH ile uyarılmış 17-OH progesteron yüksekliği; ülkemizde yenidoğan tarama programındadır.\n- **Ayırıcı tanı:** İkinci sık neden miks gonadal disgenezidir (45,X/46,XY); 46,XY'de 5α-redüktaz 2 eksikliği ve parsiyel androjen duyarsızlığı akla gelir.\n- **Ayırt edici nokta:** Komplet androjen duyarsızlığı ve Swyer sendromunda dış genitalya dişidir; Kallmann ve Sheehan ise hipotalamo-hipofizer bozukluklardır.\n\nSınav: Ambigus genitalyalı yenidoğanda ilk istenecek tetkiklerden biri 17-OH progesteron ve elektrolitlerdir; atlanan tuz kaybı krizi ölümcül olabilir."
-        },
-        {
          "id": "past-1790877037891-59308",
          "questionNumber": 7,
          "stem": "Aşağıdaki enzim defektlerinden hangisi 46,XY cinsiyet farklılaşma bozukluğu (DSD) etiyolojisinde yer almaz?",
@@ -31196,7 +31164,7 @@
          "id": "past-q-18-84",
          "questionNumber": 84,
          "stem": "I. Southern blot tekniği\nII. Polimeraz zincir reaksiyonu\nIII. Yüksek rezolüsyonlu prometafaz bantlaması\nIV. Nükleotid dizi analizi\nNükleotid delesyon ve insersiyonları yukarıdaki moleküler yöntemlerin hangisi veya hangileri ile çalışılabilir?",
-         "correctAnswer": "E",
+         "correctAnswer": "C",
          "options": [
           {
            "key": "A",
@@ -31222,7 +31190,7 @@
          "year": "2018-2019",
          "discipline": "Tıbbi Genetik",
          "topic": "Prenatal Tanı Yöntemleri",
-         "explanation": "Delesyon ve insersiyonlar tek bir nükleotidden megabazlara kadar değişen büyüklükte olabildiğinden, boyutlarına göre sayılan dört yöntemin tümüyle çalışılabilir; doğru cevap E'dir.\n\n- **Küçük (birkaç bazlık) indel'ler:** PCR ile çoğaltılan bölgede fragman boyu farkıyla ya da mutasyona özgü primerlerle saptanır; dizi analizi (Sanger, yeni nesil dizileme) değişikliğin yerini ve türünü kesin olarak gösterir.\n- **Kilobaz düzeyindeki delesyon ve insersiyonlar:** Restriksiyon fragmanlarının boyunu değiştirdikleri için Southern blot ile gösterilir; gen yeniden düzenlenmeleri ve tekrar genişlemeleri (frajil X) de bu yöntemle incelenir.\n- **Megabaz düzeyindeki delesyonlar:** Yüksek rezolüsyonlu prometafaz bantlaması (550-850 bant) birkaç megabazlık delesyon ve insersiyonları görünür kılar; daha küçükleri için FISH ve mikroarray gerekir.\n- **Yöntem seçimi:** Aranan değişikliğin büyüklüğüne göre yapılır; tek bir yöntem tüm boyut aralığını kapsamaz.\n\nNot: Yalnız birkaç bazlık indel'ler kastedilseydi sitogenetik bantlama yetersiz kalırdı; sınav anahtarı ifadeyi tüm boyut yelpazesini kapsayacak biçimde yorumlar.\n\nSınav: Delesyon/insersiyon bir boyut yelpazesidir; baz düzeyi PCR ve dizileme, kilobaz düzeyi Southern blot, megabaz düzeyi sitogenetik yöntemlerle gösterilir."
+         "explanation": "Doğru cevap C'dir: nükleotid düzeyindeki delesyon ve insersiyonlar PCR ve nükleotid dizi analiziyle çalışılır.\n\n> [!IMPORTANT]\n> **Cevap anahtarı hatası:** Sınavın cevap dosyasında E (I, II, III ve IV) işaretlidir; bu tıbben hatalıdır. Yüksek rezolüsyonlu prometafaz bantlaması kromozom düzeyinde (megabaz) çalışır ve nükleotid değişikliğini göremez; Southern blot da yalnız büyük (kilobaz) kayıpları gösterir. Düzeltme: 2026-10-21, tıbbi bilgiye göre.\n\n- **PCR:** Hedef bölgeyi çoğaltır; birkaç bazlık indel fragman boyu farkıyla ya da mutasyona özgü primerlerle saptanır.\n- **Nükleotid dizi analizi:** Değişikliğin yerini ve türünü baz baz okur; altın standarttır.\n- **Southern blot:** Kilobaz düzeyindeki kayıp ve yeniden düzenlenmeleri gösterir; tek nükleotidi ayırt edemez.\n- **Prometafaz bantlaması:** 550–850 bant düzeyinde birkaç megabazlık değişiklikleri görünür kılar; nükleotid düzeyini göremez."
         }
        ],
        "ornekSorular": [
@@ -344110,40 +344078,7 @@
          "deckId": "k1-18-halk-sagligi-tarihcesi"
         }
        ],
-       "cikmisSorular": [
-        {
-         "id": "past-1790877047917-133223",
-         "questionNumber": 77,
-         "stem": "Geçmişte sağlığı etkileyen faktörlerle ilgili aşağıdaki öncüller veriliyor:\nI. Etkin ve düzenli bağışıklama\nII. Salgın hastalıklar\nIII. Değişen ve gelişen yaşam koşulları\nIV. Düzensiz sağlık hizmetleri\nBunlardan hangisi/hangileri geçmişte sağlığı olumsuz yönde etkileyen faktörlerdendir?",
-         "correctAnswer": "C",
-         "options": [
-          {
-           "key": "A",
-           "text": "I, II ve III"
-          },
-          {
-           "key": "B",
-           "text": "I ve III"
-          },
-          {
-           "key": "C",
-           "text": "II ve IV"
-          },
-          {
-           "key": "D",
-           "text": "Yalnız IV"
-          },
-          {
-           "key": "E",
-           "text": "I, II, III ve IV"
-          }
-         ],
-         "year": "2018-2019",
-         "discipline": "Halk Sağlığı",
-         "topic": "Halk Sağlığı Tarihçesi",
-         "explanation": "Geçmişte sağlığı olumsuz etkileyen faktörler arasında salgın hastalıklar ve düzensiz (örgütlenmemiş) sağlık hizmetleri yer alır; etkin bağışıklama ile değişen ve gelişen yaşam koşulları ise günümüzde sağlığı olumlu etkileyen faktörlerdir.\n\n- **Geçmişin olumsuz faktörleri:** Salgın hastalıklar, beslenme bozuklukları, kazalar, gebelik komplikasyonları, çocuk hastalıkları, bağışıklığın olmaması veya yetersizliği, olumsuz çevre koşulları ve savaşlar.\n- **Günümüzün olumlu faktörleri:** Örgütlenmiş sağlık hizmetleri, değişen ve gelişen yaşam koşulları, sosyal yardım olanakları, yasa ve düzenin değişmesi, kıtlıkla savaş, etkin ve düzenli bağışıklama, çevrenin olumlu hale getirilmesi, ana çocuk sağlığı ve aile planlamasına verilen önem.\n- **Karşıt çiftler:** Bağışıklığın olmaması ↔ etkin bağışıklama; olumsuz çevre ↔ çevreyi olumlu hale getirme; düzensiz hizmet ↔ örgütlenmiş hizmet.\n\nSınav: Tablodaki her olumsuz faktörün günümüzde olumlu bir karşılığı vardır; öncülleri bu karşıtlıkla eşleştirmek hatayı önler."
-        }
-       ],
+       "cikmisSorular": [],
        "ornekSorular": [
         {
          "id": "k1-18-q34",
@@ -345237,38 +345172,6 @@
        ],
        "cikmisSorular": [
         {
-         "id": "c93eb39996bd",
-         "questionNumber": 233,
-         "stem": "Aşağıdakilerden hangisi birincil koruma uygulamalarından biridir?",
-         "correctAnswer": "C",
-         "options": [
-          {
-           "key": "A",
-           "text": "Kadınlarda meme kanseri taraması yapmak"
-          },
-          {
-           "key": "B",
-           "text": "Poliklinik hastalarını tedavi etmek"
-          },
-          {
-           "key": "C",
-           "text": "Aşı yapmak"
-          },
-          {
-           "key": "D",
-           "text": "Rehabilitasyon hizmeti vermek"
-          },
-          {
-           "key": "E",
-           "text": "Yenidoğanlarda fenilketonüri taraması yapmak"
-          }
-         ],
-         "year": "2018-2019",
-         "discipline": "Halk Sağlığı",
-         "topic": "Halk Sağlığı Tarihçesi",
-         "explanation": "Aşılama, hastalık oluşmadan önce sağlıklı bireylere uygulanan spesifik bir korunma yöntemi olduğu için birincil korumadır.\n\n- **Primordial koruma:** Risk faktörlerinin toplumda hiç ortaya çıkmamasını hedefler (ör. çocuklarda sağlıklı beslenme alışkanlığı).\n- **Birincil koruma:** Hastalık oluşmadan önce uygulanır; sağlığın geliştirilmesi (sağlık eğitimi, beslenme, çevre sağlığı) ve spesifik korunma (aşı, kemoprofilaksi, iyotlu tuz) olarak iki bileşeni vardır.\n- **İkincil koruma:** Erken tanı ve tedavi; tarama programları (mamografi, Pap smear, yenidoğan taraması) ve poliklinik tedavisi.\n- **Üçüncül koruma:** Sakatlığın sınırlandırılması ve rehabilitasyon.\n- **Ayrım ipucu:** Hastalık başlamadan → birincil; başlamış ama belirti yok/erken → ikincil; yerleşmiş hasar → üçüncül.\n\nSınav: Tarama her zaman ikincil korumadır; “erken tanı” ifadesi gören öğrenci birincil korumayı elemelidir."
-        },
-        {
          "id": "past-1790877041995-894071",
          "questionNumber": 4,
          "stem": "Koruma düzeyleri ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
@@ -346070,6 +345973,70 @@
          "discipline": "Halk Sağlığı",
          "topic": "Koruyucu Sağlık Hizmetleri",
          "explanation": "Koruyucu sağlık hizmetleri kişiye ve çevreye yönelik olarak ikiye ayrılır. Bağışıklama, aile planlaması ve erken teşhis doğrudan bireye uygulanır; besin kontrolü ise çevreye yönelik bir hizmettir.\n\n- **Kişiye yönelik hizmetler:** Bağışıklama, ilaçla koruma (kemoprofilaksi), uygun beslenme, aile planlaması, erken tanı (tarama, periyodik muayene) ve sağlık eğitimi; bireyin bağışıklığını, davranışını ya da hastalık riskini doğrudan değiştirir.\n- **Çevreye yönelik hizmetler:** Güvenli içme ve kullanma suyu, dışkı, çöp ve atık suyun uzaklaştırılması, besin kontrolü, konut sağlığı, hava kirliliğinin önlenmesi, vektör ve haşere kontrolü; kişiyle değil, ortak yaşam çevresiyle uğraşır.\n- **Ayırt etme ipucu:** Hizmet tek tek kişilere uygulanıyorsa kişiye, toplumun paylaştığı çevredeki riski azaltıyorsa çevreye yöneliktir. Beslenme konusu kişiye yönelik (uygun beslenme) ve çevreye yönelik (besin denetimi) yönleriyle iki grupta da yer alabilir.\n- **Erken teşhis:** İkincil korunma basamağıdır; hastalığı belirti vermeden yakalayarak tedavi başarısını artırır (Pap smear, mamografi, yenidoğan taraması).\n\nSınav: Besin kontrolü, su ve atık yönetimi çevreye yönelik hizmetlerdir; kişiye yönelik listede yer almaz."
+        },
+        {
+         "id": "c93eb39996bd",
+         "questionNumber": 233,
+         "stem": "Aşağıdakilerden hangisi birincil koruma uygulamalarından biridir?",
+         "correctAnswer": "C",
+         "options": [
+          {
+           "key": "A",
+           "text": "Kadınlarda meme kanseri taraması yapmak"
+          },
+          {
+           "key": "B",
+           "text": "Poliklinik hastalarını tedavi etmek"
+          },
+          {
+           "key": "C",
+           "text": "Aşı yapmak"
+          },
+          {
+           "key": "D",
+           "text": "Rehabilitasyon hizmeti vermek"
+          },
+          {
+           "key": "E",
+           "text": "Yenidoğanlarda fenilketonüri taraması yapmak"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "Halk Sağlığı",
+         "topic": "Koruyucu Sağlık Hizmetleri",
+         "explanation": "Aşılama, hastalık oluşmadan önce sağlıklı bireylere uygulanan spesifik bir korunma yöntemi olduğu için birincil korumadır.\n\n- **Primordial koruma:** Risk faktörlerinin toplumda hiç ortaya çıkmamasını hedefler (ör. çocuklarda sağlıklı beslenme alışkanlığı).\n- **Birincil koruma:** Hastalık oluşmadan önce uygulanır; sağlığın geliştirilmesi (sağlık eğitimi, beslenme, çevre sağlığı) ve spesifik korunma (aşı, kemoprofilaksi, iyotlu tuz) olarak iki bileşeni vardır.\n- **İkincil koruma:** Erken tanı ve tedavi; tarama programları (mamografi, Pap smear, yenidoğan taraması) ve poliklinik tedavisi.\n- **Üçüncül koruma:** Sakatlığın sınırlandırılması ve rehabilitasyon.\n- **Ayrım ipucu:** Hastalık başlamadan → birincil; başlamış ama belirti yok/erken → ikincil; yerleşmiş hasar → üçüncül.\n\nSınav: Tarama her zaman ikincil korumadır; “erken tanı” ifadesi gören öğrenci birincil korumayı elemelidir."
+        },
+        {
+         "id": "5f3a29c8b257",
+         "questionNumber": 234,
+         "stem": "Yaşlılık dönemi ile ilgili aşağıda belirtilen ifadelerden hangisi doğrudur?",
+         "correctAnswer": "C",
+         "options": [
+          {
+           "key": "A",
+           "text": "Yaşlılar kendisinde hastalık bulunacağı kaygısı ile çok sık olarak sağlık kuruluşuna başvururlar"
+          },
+          {
+           "key": "B",
+           "text": "Yaşlı insanların yaşam kalitesini artırabilmek için sağlık, güvenlik ve katılım olanaklarını en uygun hâle getirme pasif yaşlanma sürecidir"
+          },
+          {
+           "key": "C",
+           "text": "Yaşlılar sorunlarının yaşlılıktan kaynaklandığını düşünüp sağlık kuruluşuna başvurmayı ihmal ederler"
+          },
+          {
+           "key": "D",
+           "text": "Yaşlılık döneminde görme-işitme bozukluklarının tedavisi ikincil koruma yaklaşımlarındandır"
+          },
+          {
+           "key": "E",
+           "text": "Yaşlılıkta ara sıra yapılan orta dereceli fiziksel egzersiz bazı kronik hastalıkların insidansını azaltır"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "Halk Sağlığı",
+         "topic": "Koruyucu Sağlık Hizmetleri",
+         "explanation": "Yaşlılar yakınmalarını yaşlılığın doğal sonucu olarak yorumladıklarından sağlık kuruluşuna başvurmayı ihmal ederler; bu, yaşlı sağlığında hastalıkların gizli kalmasının başlıca nedenidir.\n\n- **Az bildirim:** Bilişsel gerileme, depresyon, inkontinans, işitme kaybı ve düşmeler sıklıkla hekime söylenmez; periyodik geriatrik değerlendirme bu açığı kapatmak için yapılır.\n- **Aktif yaşlanma:** DSÖ tanımına göre sağlık, katılım ve güvenlik olanaklarının en uygun hâle getirilmesi sürecidir; pasif değil etkin bir yaklaşımdır.\n- **Koruma basamakları:** Birincil korumada aşılama ve sağlıklı yaşam; ikincilde tarama ve erken tanı; üçüncülde yerleşmiş yetersizliğin rehabilitasyonu (gözlük, işitme cihazı) yer alır.\n- **Fiziksel aktivite:** Düzenli orta yoğunlukta egzersiz kardiyovasküler hastalık, tip 2 diyabet, osteoporoz ve düşme riskini azaltır.\n\nSınav: Etkinin anahtarı egzersizin düzenliliğidir; 'ara sıra' ifadesi tipik çeldiricidir."
         },
         {
          "id": "k1-2019-2020-q001",
@@ -358191,6 +358158,38 @@
        ],
        "cikmisSorular": [
         {
+         "id": "777445c9f501",
+         "questionNumber": 232,
+         "stem": "Aşağıdakilerden hangisi aile sağlığı elemanı olarak çalışamaz?",
+         "correctAnswer": "C",
+         "options": [
+          {
+           "key": "A",
+           "text": "Ebe"
+          },
+          {
+           "key": "B",
+           "text": "Hemşire"
+          },
+          {
+           "key": "C",
+           "text": "Paramedik"
+          },
+          {
+           "key": "D",
+           "text": "Tıbbi sekreter"
+          },
+          {
+           "key": "E",
+           "text": "Sağlık Memuru"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "Halk Sağlığı",
+         "topic": "Türkiye’de Sağlık Hizmetleri",
+         "explanation": "Aile sağlığı elemanı olarak mevzuatta ebe, hemşire, sağlık memuru, acil tıp teknisyeni ve tıbbi sekreter sayılır; paramedik bu listede yer almaz. Doğru cevap C'dir.\n\n- **Aile sağlığı elemanı:** Aile hekimi ile birlikte aynı birimde çalışan, koruyucu ve birinci basamak tedavi hizmetlerine yardım eden personeldir.\n- **Öncelik sırası:** Öncelikle ebe veya hemşire; bulunmadığında sağlık memuru, acil tıp teknisyeni ya da tıbbi sekreter istihdam edilebilir.\n- **Ekip anlayışı:** Sağlığın sosyalleştirilmesi döneminden beri birinci basamak hizmeti hekim, hemşire, ebe, sağlık memuru ve tıbbi sekreterden oluşan bir ekiple üretilir.\n- **Paramedik:** Hastane öncesi acil sağlık hizmetleri (112) için yetiştirilir; görev alanı ambulans ve acil sağlık istasyonlarıdır.\n\nSınav: Tıbbi sekreter sağlık meslek mensubu olmasa da aile sağlığı elemanı olarak çalışabilir; asıl dışlanan meslek paramediktir.\n\nNot: Ayrıntılar Aile Hekimliği Uygulama Yönetmeliği değişiklikleriyle güncellenebilir."
+        },
+        {
          "id": "k1-2020-2021-d-q034",
          "questionNumber": 34,
          "stem": "Umumi Hıfzıssıhha Kanunu hangi yılda çıkarılmıştır?",
@@ -359656,7 +359655,40 @@
          "deckId": "k1-63-turkiye-de-saglik-hizmetleri"
         }
        ],
-       "cikmisSorular": [],
+       "cikmisSorular": [
+        {
+         "id": "95c346d2b20d",
+         "questionNumber": 237,
+         "stem": "Birinci basamakta görev yapan hekimin görevleri arasında olmayan aşağıdakilerden hangisidir?",
+         "correctAnswer": "D",
+         "options": [
+          {
+           "key": "A",
+           "text": "Aile planlaması için başvuran kişiyi değerlendirmek"
+          },
+          {
+           "key": "B",
+           "text": "Okul çocuklarında periyodik muayene ve taramalar yapmak"
+          },
+          {
+           "key": "C",
+           "text": "Soğuk zincirin kontrolünü ve takibini yapmak"
+          },
+          {
+           "key": "D",
+           "text": "Tedavi gerektiren hastaların yatışını yaparak tedavi etmek"
+          },
+          {
+           "key": "E",
+           "text": "Hizmet vereceği toplumun sosyo-kültürel ve sağlık yapısını tespit etmek"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "Halk Sağlığı",
+         "topic": "Türkiye’de Sağlık Hizmetleri",
+         "explanation": "Birinci basamak hekimi koruyucu, ayaktan tanı-tedavi ve toplum yönelimli hizmetler verir; hastaları yatırarak tedavi etmek ikinci ve üçüncü basamağın görevidir.\n\n- **Koruyucu hizmetler:** Aşılama ve soğuk zincir, aile planlaması, gebe-bebek-çocuk izlemi, okul sağlığı ve taramalar.\n- **Tedavi edici hizmetler:** Ayaktan tanı, tedavi ve rehabilitasyon; gerektiğinde sevk ve sevk sonrası takip.\n- **Toplum yönelimli yaklaşım:** Bölgenin sosyo-kültürel ve sağlık yapısının belirlenmesi, sağlık eğitimi, bulaşıcı hastalık bildirimi.\n- **Sürekli bakım:** Bireyi doğumdan ölüme kadar ailesi ve çevresiyle birlikte izlemek.\n\nSınav: 'Yatış', 'ameliyat' ve 'ileri tetkik' içeren seçenekler birinci basamak görevleri sorularında tipik doğru cevaptır."
+        }
+       ],
        "ornekSorular": [
         {
          "id": "k1-63-q16",
@@ -360690,7 +360722,40 @@
          "deckId": "k1-63-turkiye-de-saglik-hizmetleri"
         }
        ],
-       "cikmisSorular": [],
+       "cikmisSorular": [
+        {
+         "id": "82772df87168",
+         "questionNumber": 231,
+         "stem": "Ülkemizde şu anda uygulanmakta olan sağlık sistemine göre kişiye yönelik birinci basamak sağlık hizmetleri aşağıdaki birimlerden hangisi tarafından verilmektedir?",
+         "correctAnswer": "A",
+         "options": [
+          {
+           "key": "A",
+           "text": "Aile Sağlığı Merkezi (ASM)"
+          },
+          {
+           "key": "B",
+           "text": "Toplum Sağlığı Merkezi (TSM)"
+          },
+          {
+           "key": "C",
+           "text": "Semt polikliniği"
+          },
+          {
+           "key": "D",
+           "text": "Sağlık evleri"
+          },
+          {
+           "key": "E",
+           "text": "Sağlık merkezleri"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "Halk Sağlığı",
+         "topic": "Türkiye’de Sağlık Hizmetleri",
+         "explanation": "Günümüz Türkiye sağlık sisteminde kişiye yönelik birinci basamak sağlık hizmetleri aile hekimleri tarafından Aile Sağlığı Merkezlerinde verilir.\n\n- **Tarihçe:** 224 sayılı Sosyalleştirme Kanunu ile sağlık ocağı modeli kurulmuş, Sağlıkta Dönüşüm Programı ile 2005'te Düzce'de başlayan aile hekimliği 2010'da tüm ülkeye yaygınlaşmıştır.\n- **ASM:** Kayıtlı nüfusa koruyucu hizmet, periyodik muayene, ana-çocuk sağlığı, aşılama, birinci basamak tanı-tedavi ve sevk.\n- **TSM:** Topluma yönelik hizmetler; bulaşıcı hastalık sürveyansı, çevre sağlığı, sağlığın geliştirilmesi ve aile hekimlerinin desteklenmesi.\n- **Basamaklanma:** Birinci basamak ASM, ikinci basamak devlet hastaneleri, üçüncü basamak eğitim-araştırma ve üniversite hastaneleridir.\n\nSınav: Kişiye yönelik hizmet ASM'de, topluma yönelik hizmet TSM'de verilir; bu ayrım sık sorulur."
+        }
+       ],
        "ornekSorular": [
         {
          "id": "k1-63-q25",

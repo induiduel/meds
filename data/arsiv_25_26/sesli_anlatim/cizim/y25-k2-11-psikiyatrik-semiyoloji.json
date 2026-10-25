@@ -827,40 +827,6 @@
     }
    ]
   },
-  "35": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Ötimi normal duygudurum",
-      "Yükselmiş duygudurum mani",
-      "Çökkün duygudurum depresyon",
-      "İrritabl öfkeli duygudurum"
-     ],
-     "baslik": "Klinik Duygudurum",
-     "s": 35,
-     "k": [
-      0,
-      118
-     ],
-     "tip": "liste",
-     "konum": [
-      0.15,
-      0.9
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.485,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.4047,
-     "ek_renk": "#e8eed6"
-    }
-   ]
-  },
   "38": {
    "2": [
     {
@@ -910,10 +876,11 @@
  },
  "rapor": {
   "aday": 26,
-  "gecti": 24,
+  "gecti": 23,
   "ret": {
    "panel metni 'Beyin metabolizması' henüz anlatılmamış terim i": 1,
-   "resim sayfasında panel (H51)": 1
+   "resim sayfasında panel (H51)": 1,
+   "lazer sayfası dışında çizim (H59)": 1
   },
   "ret_ayrinti": [
    {
@@ -921,6 +888,13 @@
     "sayfa": 4,
     "tur": "sema",
     "neden": "panel metni 'Beyin metabolizması' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P35.C0",
+    "sayfa": 35,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    }
   ]

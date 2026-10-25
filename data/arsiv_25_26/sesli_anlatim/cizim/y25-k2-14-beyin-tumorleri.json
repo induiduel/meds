@@ -447,39 +447,6 @@
     }
    ]
   },
-  "27": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Serebral hemisferlerde çok sayıda intrakraniyal lezyon",
-      "Gri ve beyaz cevher bileşkesinde yerleşim",
-      "Nodül boyutuna oranla belirgin çevre ödemi"
-     ],
-     "baslik": "Beyin Metastazlarının Radyolojik Triadı",
-     "s": 48,
-     "k": [
-      0,
-      49
-     ],
-     "tip": "liste",
-     "konum": [
-      0.03,
-      1.015
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.308,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.343,
-     "ek_renk": "#808271"
-    }
-   ]
-  },
   "44": {
    "0": [
     {
@@ -519,6 +486,115 @@
      "olcek": 1.0,
      "ek_alt": 0.1413,
      "ek_renk": "#808271"
+    }
+   ]
+  },
+  "63": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.714,
+      0.24
+     ],
+     "b": [
+      0.631,
+      0.295
+     ],
+     "iliski": "aktive",
+     "etiket": "parankim dışı menenjiom",
+     "s": 64,
+     "k": [
+      101,
+      132
+     ],
+     "yol": [
+      [
+       0.714,
+       0.24
+      ],
+      [
+       0.7069,
+       0.2405
+      ],
+      [
+       0.7,
+       0.2414
+      ],
+      [
+       0.6934,
+       0.2427
+      ],
+      [
+       0.6871,
+       0.2444
+      ],
+      [
+       0.681,
+       0.2465
+      ],
+      [
+       0.6751,
+       0.249
+      ],
+      [
+       0.6696,
+       0.2518
+      ],
+      [
+       0.6643,
+       0.255
+      ],
+      [
+       0.6592,
+       0.2587
+      ],
+      [
+       0.6544,
+       0.2627
+      ],
+      [
+       0.6498,
+       0.2671
+      ],
+      [
+       0.6456,
+       0.2719
+      ],
+      [
+       0.6415,
+       0.2771
+      ],
+      [
+       0.6378,
+       0.2827
+      ],
+      [
+       0.6343,
+       0.2886
+      ],
+      [
+       0.631,
+       0.295
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.614,
+      0.12
+     ],
+     "etiket_genislik": 0.328,
+     "etiket_hedef": [
+      0.641,
+      0.285
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.554,
+      0.06,
+      1,
+      0.355
+     ]
     }
    ]
   },
@@ -829,43 +905,60 @@
       0.48
      ]
     }
+   ],
+   "2": [
+    {
+     "tur": "akis",
+     "a": [
+      0.82,
+      0.366
+     ],
+     "b": [
+      0.671,
+      0.44
+     ],
+     "iliski": "aktive",
+     "etiket": "sıvı infiltrasyonu (ödem)",
+     "s": 68,
+     "k": [
+      0,
+      60
+     ],
+     "yol": [
+      [
+       0.82,
+       0.366
+      ],
+      [
+       0.82,
+       0.44
+      ],
+      [
+       0.671,
+       0.44
+      ]
+     ],
+     "rota": "dirsek",
+     "etiket_konum": [
+      0.6435,
+      0.3877
+     ],
+     "etiket_genislik": 0.353,
+     "yakin": [
+      0.5835,
+      0.306,
+      1,
+      0.5
+     ]
+    }
    ]
   }
  },
  "rapor": {
-  "aday": 53,
-  "gecti": 16,
+  "aday": 55,
+  "gecti": 17,
   "ret": {
-   "panel metni 'Selim ile habis biyolojik davr' henüz anlatılma": 1,
-   "resim sayfasında panel (H51)": 1,
-   "panel metni 'Tümör Yerleşimine Bağlı Hayati' henüz anlatılma": 1,
-   "panel metni 'Progresif nörolojik defisit ve' henüz anlatılma": 1,
-   "panel metni 'Sabahları şiddetlenen baş ağrı' henüz anlatılma": 1,
-   "panel metni 'Posterior Fossa ve Serebellar ' henüz anlatılma": 1,
-   "panel metni 'Frontal lob: Abuli, kişilik de' henüz anlatılma": 1,
-   "panel metni 'Astrositom ve glioblastoma mul' henüz anlatılma": 1,
-   "panel metni 'Erkeklerde kadınlara göre iki ' henüz anlatılma": 1,
-   "panel metni 'Pediatrik yaş grubunda arka çu' henüz anlatılma": 1,
-   "panel metni 'Hücresel atipi ve nükleer poli' henüz anlatılma": 1,
-   "panel metni 'Düşük Dereceli' henüz anlatılmamış terim içeriy": 1,
-   "panel metni 'Glioblastoma Multiforme Özelli' henüz anlatılma": 1,
-   "panel metni 'Mikrovasküler endotelyal proli' henüz anlatılma": 1,
-   "panel metni 'Radyolojik kontrast sınırının ' henüz anlatılma": 1,
-   "panel metni 'Çoğunlukla frontal loblarda be' henüz anlatılma": 1,
-   "panel metni 'Tavuk teli damarlanma: İnce an' henüz anlatılma": 1,
-   "panel metni 'İntrakraniyal gliomların yüzde' henüz anlatılma": 1,
-   "panel metni 'Dördüncü ventrikül tavanında v' henüz anlatılma": 1,
-   "panel metni 'Adamantinomatoz' henüz anlatılmamış terim içeri": 1,
-   "panel metni 'Optik kiazmaya bası ile bitemp' henüz anlatılma": 1,
-   "panel metni 'İçinde anormal vasküler besley' henüz anlatılma": 1,
-   "panel metni 'Ekstranodal lenfomaların yüzde' henüz anlatılma": 1,
-   "panel metni 'Yavaş büyüyen, ekstraaksiyel g' henüz anlatılma": 1,
-   "panel metni 'Menenjiom Hormonal ve Genetik ' henüz anlatılma": 1,
-   "panel metni 'Dünya Sağlık Örgütü Menenjiom ' henüz anlatılma": 1,
-   "panel metni 'Nöral doku içerisine mantar be' henüz anlatılma": 1,
-   "panel metni 'Pontoserebellar köşede vestibü' henüz anlatılma": 1,
-   "panel metni 'Sistemik primer kanser odağını' henüz anlatılma": 1,
-   "panel metni 'Makroadenom' henüz anlatılmamış terim içeriyor ": 1,
+   "lazer sayfası dışında çizim (H59)": 31,
    "noktaların %53'i çizgi üstünde (en az %70)": 1,
    "noktalar tek bir resim kutusunun içinde değil": 2,
    "noktaların %62'i çizgi üstünde (en az %70)": 1,
@@ -878,203 +971,217 @@
     "cumle": "P0.C2",
     "sayfa": 2,
     "tur": "sema",
-    "neden": "panel metni 'Selim ile habis biyolojik davr' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P2.C0",
+    "sayfa": 4,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P2.C2",
     "sayfa": 5,
     "tur": "sema",
-    "neden": "panel metni 'Tümör Yerleşimine Bağlı Hayati' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P3.C2",
     "sayfa": 6,
     "tur": "sema",
-    "neden": "panel metni 'Progresif nörolojik defisit ve' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P4.C2",
     "sayfa": 8,
     "tur": "sema",
-    "neden": "panel metni 'Sabahları şiddetlenen baş ağrı' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P4.C3",
     "sayfa": 8,
     "tur": "sema",
-    "neden": "panel metni 'Posterior Fossa ve Serebellar ' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P5.C1",
     "sayfa": 9,
     "tur": "sema",
-    "neden": "panel metni 'Frontal lob: Abuli, kişilik de' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P6.C1",
     "sayfa": 11,
     "tur": "sema",
-    "neden": "panel metni 'Astrositom ve glioblastoma mul' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P7.C0",
     "sayfa": 12,
     "tur": "sema",
-    "neden": "panel metni 'Erkeklerde kadınlara göre iki ' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P8.C0",
     "sayfa": 14,
     "tur": "sema",
-    "neden": "panel metni 'Pediatrik yaş grubunda arka çu' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P8.C2",
     "sayfa": 15,
     "tur": "sema",
-    "neden": "panel metni 'Hücresel atipi ve nükleer poli' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P9.C0",
     "sayfa": 16,
     "tur": "sema",
-    "neden": "panel metni 'Düşük Dereceli' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P9.C2",
     "sayfa": 17,
     "tur": "sema",
-    "neden": "panel metni 'Glioblastoma Multiforme Özelli' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P10.C2",
     "sayfa": 19,
     "tur": "sema",
-    "neden": "panel metni 'Mikrovasküler endotelyal proli' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P11.C1",
     "sayfa": 20,
     "tur": "sema",
-    "neden": "panel metni 'Radyolojik kontrast sınırının ' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P12.C2",
     "sayfa": 22,
     "tur": "sema",
-    "neden": "panel metni 'Çoğunlukla frontal loblarda be' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P13.C0",
     "sayfa": 23,
     "tur": "sema",
-    "neden": "panel metni 'Tavuk teli damarlanma: İnce an' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P13.C2",
     "sayfa": 24,
     "tur": "sema",
-    "neden": "panel metni 'İntrakraniyal gliomların yüzde' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P14.C2",
     "sayfa": 26,
     "tur": "sema",
-    "neden": "panel metni 'Dördüncü ventrikül tavanında v' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P15.C0",
     "sayfa": 27,
     "tur": "sema",
-    "neden": "panel metni 'Adamantinomatoz' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P15.C2",
     "sayfa": 28,
     "tur": "sema",
-    "neden": "panel metni 'Optik kiazmaya bası ile bitemp' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P17.C1",
     "sayfa": 31,
     "tur": "sema",
-    "neden": "panel metni 'İçinde anormal vasküler besley' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P19.C1",
     "sayfa": 35,
     "tur": "sema",
-    "neden": "panel metni 'Ekstranodal lenfomaların yüzde' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P20.C2",
     "sayfa": 37,
     "tur": "sema",
-    "neden": "panel metni 'Yavaş büyüyen, ekstraaksiyel g' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P21.C2",
     "sayfa": 39,
     "tur": "sema",
-    "neden": "panel metni 'Menenjiom Hormonal ve Genetik ' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P22.C2",
     "sayfa": 41,
     "tur": "sema",
-    "neden": "panel metni 'Dünya Sağlık Örgütü Menenjiom ' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P23.C2",
     "sayfa": 43,
     "tur": "sema",
-    "neden": "panel metni 'Nöral doku içerisine mantar be' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P25.C3",
     "sayfa": 46,
     "tur": "sema",
-    "neden": "panel metni 'Pontoserebellar köşede vestibü' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P27.C0",
+    "sayfa": 48,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P30.C0",
     "sayfa": 53,
     "tur": "sema",
-    "neden": "panel metni 'Sistemik primer kanser odağını' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
     "cumle": "P31.C1",
     "sayfa": 55,
     "tur": "sema",
-    "neden": "panel metni 'Makroadenom' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {

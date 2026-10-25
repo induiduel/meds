@@ -1,3 +1,11 @@
+# ⚠️ TÜM AJANLARIN DİKKATİNE (KESİNLİKLE ZORUNLU KURAL):
+> **HER HATA ÇÖZÜMÜNDE HATANIN KÖK NEDENİ VE ÇÖZÜMÜ MUTLAKA BELGELENMELİ VE TÜM AJANLAR TARAFINDAN DİKKATLE İNCELENMELİDİR!**
+> Karşılaşılan ve çözülen her hata için:
+> 1. Belirti (Kullanıcının gördüğü problem)
+> 2. Kök neden (Teknik ve mantıksal kaynak problem)
+> 3. Çözüm ve geleceğe yönelik katı önleme kuralı
+> eksiksiz olarak bu deftere işlenmeli; hiçbir ajan kök nedeni anlamadan yüzeysel geçici yamalar yapmamalı ve bu defteri okumadan geliştirme yapmamalıdır!
+
 # Kurul 2 — Yapılmayacak Hatalar Defteri (ZORUNLU OKUMA)
 
 > Kurul 2'de sistem tam otomatik çalışacak: Drive'a gelen her yeni PDF'ten interaktif ders (Öğren), sesli spot / sınav asistanı
@@ -522,4 +530,26 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kural:** şekil/tablo çapası maddeye üstündür; `madde`/`resim` dizini toplu betikle uydurulmaz; kapsama oranı
   çapayı düzelterek yükseltilir. Döküm (capa_dok, cizim dok) yalnız tekil R# ve yeşil T# kutularını gösterir.
 - **Kapı:** `pdf_isaret.sekil_isareti` (şekil önceliği), `capa_dogrula.py` T# denetimi; `uygula_lazer_takip.py` çapa yazmaz.
+- **Ek (2026-10-25, çizim):** şekil cümlelerinin yalnız 59/853'ü görsel üstünde çiziliyordu; çizimler lazerden başka
+  sayfaya (paragraf sayfası) düşüyor, resim anlatılırken panel kuruluyor, yazı slaytının arkasındaki şablon/kart görseli
+  "resim" sayılıp bütün slayt çerçeveleniyordu. **Kural:** her ders `scripts/cizim/cizim_kapisi.py` (K1–K9) 0 HATA olmadan
+  yayına girmez; model talimatı `TALIMAT_CIZIM.md` 21–26; kapı gevşetilmez.
+
+## H60 — Slayt Çizimlerinin Toplu Gösterilmesi ve Erken/Tekrarlı Çizim Hatası (`sayfaCizimleri` Yasağı) (2026-10-25/26, kullanıcı)
+
+- **Belirti:** Kullanıcı ekranında aynı anda 3 farklı çizim birden gösteriliyordu (ör. Slayt 14'te falks, tentoryum ve transkalvaryal herniasyon aynı anda aktif). Ayrıca animasyon her yeni cümleye geçildiğinde baştan tekrar tekrar çiziliyordu ("Bir kere gösterilen animasyon tekrar tekrar gösteriliyor. Uygun cümle anlatılırken uygun konum işaretlenmeli, aynı anda 3 konumu işaretlemek ve tekrar tekrar işaretlemek hatalı").
+- **Kök Neden:** `CanliDersDers.tsx` içinde `sayfaCizimleri` adında bir toplayıcı yazılmış ve o sayfadaki tüm cümlelerin `z` komutları tek bir dizide birleştirilip `cizim` olarak iletilmişti. Karakter ilerleme sayacı `c` her yeni cümlede `0`'dan başladığı için, sayfadaki tüm çizimler her yeni cümlede kaybolup `c >= k[0]` olduğunda baştan oynuyordu. Ayrıca henüz sırası gelmemiş ileriki cümlelerin çizimleri de ekranda erkenden görünüyordu.
+- **Çözüm & Kural:**
+  1. `sayfaCizimleri` kökten kaldırıldı. `marks.cizim` KESİNLİKLE VE YALNIZCA o an konuşulan cümlenin `(isr as any).z` verisidir.
+  2. Bir slaytta birden fazla cümlenin çizimleri asla tek bir dizide toplanamaz. Yalnızca o an okunan cümlenin işaret ettiği tekil anatomi/bölge gösterilir.
+  3. `CizimLayer.tsx` içinde `tamamlananRef` eklendi: Bir çizim `t >= 1` seviyesine ulaştığında cümle bitene kadar sabit kalır (`t = 1`), zaman dalgalanması veya re-render'larda tekrar baştan oynamaz. Komutlara stabil anahtar atanarak unmount/remount döngüsü engellendi.
+
+## H61 — Üst Üste Çakışan ve İç İçe Geçen Çizgi/Kontur Hatası (2026-10-25/26, kullanıcı)
+
+- **Belirti:** Slayt 26'da hasta figürü üzerinde hem "dekortike postür" hem de "kollar fleksiyonda" konturları aynı anda çizilerek iç içe geçmiş iki kırmızı halka oluşturdu ("Aynı anda iki çizginin iç içe geçmesi de hatadır, hem önceki çizimin yeri belirsizleşiyor hem de kullanıcı hangisinin ne olduğunu anlamakta zorlanır").
+- **Kök Neden:** (1) `sayfaCizimleri`nin slayttaki ardışık iki cümlenin (C0 ve C1) çizimlerini aynı anda ekrana basması; (2) Aynı görsel üzerinde eşzamanlı çakışan veya iç içe geçen kontur koordinatlarının bulunması.
+- **Çözüm & Kural:**
+  1. Cümle bazlı çizim izolasyonu ile C0 bittiğinde "dekortike postür" kalkar, C1 başladığında "kollar fleksiyonda" gelir; asla aynı anda görünmezler.
+  2. Tek bir cümlede veya aynı görsel üzerinde eşzamanlı çakışan/iç içe geçen koordinatlar YASAKTIR. Çizim kapısı (`cizim_kapisi.py`) çakışan konturları denetler.
+
 

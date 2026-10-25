@@ -1,5 +1,13 @@
 # meds/ — Ajan Talimatı
 
+> ⚠️ **TÜM AJANLARIN DİKKATİNE (KESİNLİKLE ZORUNLU KURAL):**
+> **HER HATA ÇÖZÜMÜNDE HATANIN KÖK NEDENİ VE ÇÖZÜMÜ TÜM AJANLAR TARAFINDAN DİKKATLE İNCELENMELİDİR!**
+> Çözülen her sorunda:
+> 1. Belirti (kullanıcının gördüğü hata),
+> 2. Kök neden (kod/veri seviyesinde hatayı doğuran asıl mekanizma),
+> 3. Kalıcı çözüm ve geleceğe yönelik önleme kuralı
+> mutlaka `docs/KURUL2_YAPILMAYACAK_HATALAR.md` ve `../DEGISIKLIK_KAYDI.md` dosyalarına işlenmelidir. Hiçbir ajan kök nedeni anlamadan yüzeysel geçici yama yapamaz, hatayı geçiştiremez!
+
 Bu klasör MeDSor uygulamasının kodudur. Kurallar tek yerde tutulur:
 
 - **`../AGENTS.md`** — içerik, deste, etkileşim ve GPU kuralları (esas belge; çelişkide bu geçerlidir).

@@ -1537,6 +1537,38 @@
        "slaytlar": [],
        "cikmisSorular": [
         {
+         "id": "bfeb39a92f04",
+         "questionNumber": 221,
+         "stem": "Antidiüretik hormon (ADH) aşağıdakilerden hangisinde sentezlenir?",
+         "correctAnswer": "B",
+         "options": [
+          {
+           "key": "A",
+           "text": "Adenohipofiz"
+          },
+          {
+           "key": "B",
+           "text": "Hipotalamusun supraoptik nükleusu"
+          },
+          {
+           "key": "C",
+           "text": "Nörohipofiz"
+          },
+          {
+           "key": "D",
+           "text": "Hipotalamusun arkuat nükleusu"
+          },
+          {
+           "key": "E",
+           "text": "Pineal gland"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "Tıbbi Patoloji",
+         "topic": "Hipofiz ve Epifiz Patolojileri",
+         "explanation": "ADH hipotalamusta, başlıca supraoptik nükleusun magnoselüler nöronlarında sentezlenir; arka hipofiz yalnızca depolama ve salgı yeridir.\n\n- **Sentez ve taşınma:** Preprovazopresin, nörofizin II ve kopeptinle birlikte üretilir; hipotalamohipofizer trakt boyunca aksonal taşınmayla nörohipofize ulaşır.\n- **Supraoptik–paraventriküler ayrımı:** Klasik bilgiye göre supraoptik nükleus ağırlıklı ADH, paraventriküler nükleus ağırlıklı oksitosin üretir; iki çekirdek de her iki hormonu bir miktar sentezler.\n- **Salgı uyarıları:** Plazma osmolalitesinde artış (osmoreseptörler) ve belirgin hipovolemi/hipotansiyon ADH salgısını artırır.\n- **Etki:** Toplayıcı kanalda V2 reseptörü → cAMP → akuaporin-2 ile su geri emilimi; damarda V1 reseptörüyle vazokonstriksiyon.\n- **Klinik:** Santral diabetes insipidusta sentez/salgı bozuktur; kopeptin ölçümü ADH'nin vekil göstergesidir.\n\nSınav: “Sentez” hipotalamus, “depolama/salgı” nörohipofizdir; nörohipofiz şıkkı en güçlü çeldiricidir."
+        },
+        {
          "id": "past-1790877041938-905913",
          "questionNumber": 2,
          "stem": "Aşağıdaki hipofiz adenomlarından hangisinin mikroadenom boyutlarındayken yakalanma şansı en yüksektir?",
@@ -2107,7 +2139,7 @@
         {
          "id": "814132173979",
          "questionNumber": 1145,
-         "stem": "Kalsiyuma duyarlı reseptör (CaSR) geninde oluşan inaktive edici mutasyonlar aşağıdakilerden hangisine sebep olur?",
+         "stem": "CaSR reseptöründe geninde oluşan inaktive edici mutasyonlar hangisine sebep olur?",
          "correctAnswer": "D",
          "options": [
           {
@@ -2120,7 +2152,7 @@
           },
           {
            "key": "C",
-           "text": "Tersiyer hiperparatiroidi"
+           "text": "Terisyer hiperparatiroidi"
           },
           {
            "key": "D",
@@ -2134,7 +2166,7 @@
          "year": "2020-2021",
          "discipline": "Tıbbi Patoloji",
          "topic": "Tiroid ve Paratiroid Patolojileri",
-         "explanation": "Kalsiyuma duyarlı reseptörün inaktive edici heterozigot mutasyonları ailesel hipokalsiürik hiperkalsemiye yol açar.\n\n- **Mekanizma:** CaSR, paratiroid hücresinde kalsiyum arttığında PTH salgısını baskılar; reseptör işlev kaybında hücre kalsiyumu düşük algılar ve PTH salgısı devam eder.\n- **Böbrek etkisi:** Kalın çıkan kolda kalsiyum geri emilimi artar; idrar kalsiyum/kreatinin klirens oranı çok düşüktür (<0,01).\n- **Kalıtım:** Otozomal dominant; genellikle asemptomatik, hafif hiperkalsemi ve normal ya da hafif yüksek PTH.\n- **Homozigot form:** Yenidoğanda ağır primer hiperparatiroidi tablosu oluşturur.\n- **Klinik önemi:** Primer hiperparatiroidiyle karışır; gereksiz paratiroidektomiden kaçınmak için ayırt edilmelidir.\n\nSınav: Hiperkalsemi + düşük idrar kalsiyumu + aile öyküsü gördüğünde paratiroid cerrahisi öncesi ailesel hipokalsiürik hiperkalsemiyi düşün."
+         "explanation": "> [!IMPORTANT]\n> **Cevap anahtarı düzeltildi:** Önceki anahtar E (Pseudohiperparatiroidi) idi; ders kaynağına/tıbbi bilgiye göre doğru cevap D (Ailesel hipokalsiürik hiperkalsemi). Gerekçe: Kaynak Hiperkalsemi s.22: 'Ailesel hipokalsiürik hiperkalsemi ... otozomal dominant bozukluktur. Kalsiyum sensör reseptörün ...' inaktive edici mutasyonu → D. Aynı soru 814132173979 (D). Düzeltme: 2026-10-21.\n\nDoğru cevap D'dir: CaSR inaktivasyonu ailesel hipokalsiürik hiperkalsemiye yol açar.\n- **Mekanizma:** Paratiroid hücresi kalsiyumu algılayamaz; PTH baskılanması için daha yüksek kalsiyum gerekir, hafif hiperkalsemi gelişir.\n- **Böbrek etkisi:** Böbrekte de reseptör çalışmadığından kalsiyum geri emilimi artar; idrar kalsiyumu düşüktür.\n- **Klinik önemi:** Primer hiperparatiroididen ayrılmalıdır; paratiroidektomi gerekmez."
         },
         {
          "id": "829616ab903a",
@@ -2675,36 +2707,100 @@
          "explanation": "Medüller tiroid karsinomu parafoliküler C hücrelerinden köken alır; tümör hücrelerinin salgıladığı kalsitonin öncüllerinin stromada çökmesiyle amiloid birikimi oluşur.\n\n- **Histoloji:** Poligonal ya da iğsi hücreler yuvalar yapar; stromadaki amorf amiloid Kongo kırmızısıyla boyanır ve polarize ışıkta elma yeşili çift kırılım verir.\n- **Belirteçler:** Serum kalsitonini ve CEA yükselir; tümör kalsitonin, kromogranin ve CEA ile boyanır. Kalsitonin hem tanıda hem nüks izleminde kullanılır.\n- **Genetik:** Olguların yaklaşık %70'i sporadik, %30'u ailevidir; ailevi olgular MEN 2A, MEN 2B ya da ailevi medüller karsinomda RET proto-onkogeninin germline mutasyonuna bağlıdır.\n- **Öncül lezyon:** Ailevi olgularda çok odaklı C hücre hiperplazisi görülür; tümörler sıklıkla bilateraldir.\n- **Ayırıcı tanı:** Papiller karsinom buzlu cam çekirdek ve psammom cisimcikleriyle, foliküler karsinom kapsül ve damar invazyonuyla tanınır; bunlar foliküler hücre kökenlidir.\n\nSınav: Amiloid stroma ve kalsitonin medüller karsinomu, psammom cisimcikleri ise papiller karsinomu düşündürür."
         },
         {
-         "id": "55a3530197f0",
-         "questionNumber": 195,
-         "stem": "35 yaşında kadın hasta polikliniğe şiddetli boyun ağrısı ile başvuruyor. Yapılan fizik muayenesinde palpasyonla tiroid loju oldukça ağrılıdır. Laboratuvar bulgularında hafif düzeyde tirotoksikoz, CRP ve sedimentasyon yüksekliği mevcuttur. Bu hasta için en olası tanı aşağıdakilerden hangisidir?",
+         "id": "0056327ab79e",
+         "questionNumber": 212,
+         "stem": "Sekonder hiperparatiroidinin en sık nedeni aşağıdakilerden hangisidir?",
          "correctAnswer": "C",
          "options": [
           {
            "key": "A",
-           "text": "Hashimoto tiroiditi"
+           "text": "Paratiroid adenomu"
           },
           {
            "key": "B",
-           "text": "Postpartum tiroidit"
+           "text": "Diyetle yetersiz kalsiyum alınması"
           },
           {
            "key": "C",
-           "text": "Subakut granülomatöz tiroidit"
+           "text": "Kronik böbrek yetmezliği"
           },
           {
            "key": "D",
-           "text": "Amiodarona bağlı tirotoksikoz"
+           "text": "Vitamin D eksikliği"
           },
           {
            "key": "E",
-           "text": "Akut tiroidit"
+           "text": "Paraneoplastik sendromlar"
           }
          ],
          "year": "2018-2019",
          "discipline": "Tıbbi Patoloji",
          "topic": "Tiroid ve Paratiroid Patolojileri",
-         "explanation": "Ağrılı ve hassas tiroid, hafif tirotoksikoz ve yüksek sedimentasyon/CRP üçlüsü subakut granülomatöz (de Quervain) tiroiditi düşündürür.\n\n- **Etiyoloji:** Çoğunlukla viral enfeksiyonu izleyen, HLA-B35 ile ilişkili, kendini sınırlayan inflamasyon; 30-50 yaş kadınlarda sık.\n- **Patogenez:** Folliküllerin yıkımıyla depolanmış hormon kana salınır; tirotoksikoz yapım artışına değil salınıma bağlıdır, bu nedenle radyoaktif iyot tutulumu düşüktür.\n- **Morfoloji:** Kolloid çevresinde çok çekirdekli dev hücreli granülomlar, başlangıçta nötrofilik mikroabseler.\n- **Seyir:** Tirotoksik faz, geçici hipotiroidi ve 6-8 haftada ötiroidiye dönüş.\n- **Ayırıcı tanı:** Postpartum ve sessiz tiroidit ağrısızdır; akut süpüratif tiroidit bakteriyeldir ve tiroid fonksiyonları genellikle normaldir.\n\nSınav: Ağrılı tiroid + yüksek sedimentasyon + düşük iyot tutulumu klasik de Quervain tablosudur."
+         "explanation": "Sekonder hiperparatiroidi kronik hipokalsemiye paratiroidlerin uyumsal yanıtıdır ve en sık nedeni kronik böbrek yetmezliğidir.\n\n- **KBY mekanizması:** Fosfat atılımı azalır, FGF-23 yükselir, böbrekte kalsitriol sentezi düşer; bağırsak kalsiyum emilimi azalır ve PTH artar.\n- **Laboratuvar:** Primer formda kalsiyum yüksek, fosfat düşük; sekonder formda kalsiyum düşük-normal, fosfat (KBY'de) yüksek, PTH yüksektir.\n- **Patoloji:** Dört bezde diffüz ya da nodüler hiperplazi görülür; adenom tek bezi tutar.\n- **Komplikasyonlar:** Renal osteodistrofi (osteitis fibrosa kistika), vasküler kalsifikasyon ve kalsifilaksi gelişebilir.\n- **Tersiyer form:** Uzun süreli uyarı sonrası otonom hale gelen bezler hiperkalsemi yapar; genellikle böbrek nakli sonrası belirginleşir.\n\nSınav: Primer hiperparatiroidinin en sık nedeni adenom, sekonderin en sık nedeni KBY'dir."
+        },
+        {
+         "id": "87cbe7788b6d",
+         "questionNumber": 219,
+         "stem": "Tiroid stimülan hormon (TSH) için aşağıdakilerden hangisi yanlıştır?",
+         "correctAnswer": "B",
+         "options": [
+          {
+           "key": "A",
+           "text": "Tiroid bezinden tiroksin salgılanmasını artırır"
+          },
+          {
+           "key": "B",
+           "text": "Tiroglobülin proteaz enziminin yıkımını artırır"
+          },
+          {
+           "key": "C",
+           "text": "İyodür pompasının aktivitesini artırır"
+          },
+          {
+           "key": "D",
+           "text": "Tiroid hücrelerinin sayısını artırır"
+          },
+          {
+           "key": "E",
+           "text": "Tirozinin iyotlanmasını artırır"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "Tıbbi Patoloji",
+         "topic": "Tiroid ve Paratiroid Patolojileri",
+         "explanation": "Yanlış ifade B'dir: TSH tiroglobülin proteazını yıkmaz, aktivitesini artırarak hormon salınımını hızlandırır.\n\n- **Reseptör yolağı:** TSH, Gs kenetli reseptör üzerinden adenilat siklazı aktive eder; cAMP artışı hormon sentezinin tüm basamaklarını uyarır.\n- **İyodür tuzaklama:** NIS ekspresyonu ve aktivitesi artar.\n- **Organifikasyon ve kenetlenme:** Tiroid peroksidaz aktivitesi artar, MIT/DIT ve T4/T3 oluşumu hızlanır.\n- **Salınım:** Kolloid endositozu ve lizozomal proteoliz artar, tiroglobülinden T4 ve T3 ayrılır.\n- **Trofik etki:** Hipertrofi ve hiperplazi; kronik TSH uyarısı guatra yol açar.\n- **Geri bildirim:** T3 ve T4, hipofizde TRH etkisini ve hipotalamusta TRH sentezini baskılar.\n\nSınav: TSH'nin tüm etkileri 'artırıcı'dır; ifadede enzim ya da hormonun 'yıkımı' geçiyorsa çeldirici olma olasılığı yüksektir."
+        },
+        {
+         "id": "12c63929d8d1",
+         "questionNumber": 225,
+         "stem": "Aşağıdakilerden hangisi önlenebilir mental retardasyonun en önemli sebebidir?",
+         "correctAnswer": "D",
+         "options": [
+          {
+           "key": "A",
+           "text": "Turner sendromu"
+          },
+          {
+           "key": "B",
+           "text": "Hipopitüitarizm"
+          },
+          {
+           "key": "C",
+           "text": "Cushing sendromu"
+          },
+          {
+           "key": "D",
+           "text": "Hipotiroidi"
+          },
+          {
+           "key": "E",
+           "text": "Akromegali"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "Tıbbi Patoloji",
+         "topic": "Tiroid ve Paratiroid Patolojileri",
+         "explanation": "Tiroid hormonu eksikliği (konjenital hipotiroidi ve iyot eksikliği), dünyada önlenebilir zekâ geriliğinin en önemli nedenidir.\n\n- **Mekanizma:** Tiroid hormonu fetal ve erken postnatal dönemde nöronal göç, miyelinizasyon ve sinaps oluşumu için zorunludur; eksikliğinde kalıcı nörolojik hasar gelişir.\n- **Konjenital hipotiroidi:** En sık neden tiroid disgenezisidir; yenidoğanda belirtiler silik olduğundan topuk kanında TSH taraması yapılır. Türkiye'de tarama programı 2006'dan beri uygulanmaktadır.\n- **İyot eksikliği:** Gebelikte ağır eksiklik kretenizme yol açar; Türkiye'de 1994'ten beri sofra tuzunun iyotlanması zorunludur.\n- **Tedavi:** İlk iki hafta içinde L-tiroksin başlanırsa zekâ gelişimi büyük ölçüde normal seyreder.\n\nSınav: Önlenebilir zekâ geriliğinin en önemli nedeni iyot eksikliği ve konjenital hipotiroidi; genetik nedenlerin en sık olanı Down sendromudur."
         },
         {
          "id": "past-1790877038365-232590",
@@ -3221,34 +3317,34 @@
         {
          "id": "37030e8840bf",
          "questionNumber": 1353,
-         "stem": "Tiroid nodülleri için aşağıdakilerden hangisi yanlıştır?",
+         "stem": "Tiroid nodülleri için hangisi yanlıştır?",
          "correctAnswer": "C",
          "options": [
           {
            "key": "A",
-           "text": "Genç hastalardaki nodüllerin, yaşlılara göre neoplastik olma olasılığı daha yüksektir."
+           "text": "Geç hastalardaki nodüllerin, yaşlılara göre neoplastik olma olasılığı daha yüksektir"
           },
           {
            "key": "B",
-           "text": "Baş-boyun bölgesine radyasyon uygulanması, tiroid maligniteleri için artmış risk taşır."
+           "text": "Baş boyuna radyasyon uygulanması, tiroid maligniteleri için artmış risk taşır"
           },
           {
            "key": "C",
-           "text": "Radyoaktif iyot tutan nodüllerin malign olma olasılığı daha yüksektir."
+           "text": "Radyoaktif iyod tutan nodüllerin malign olma olasılığı daha yüksektir"
           },
           {
            "key": "D",
-           "text": "Soliter tiroid nodüllerinin, multipl nodüllere göre neoplastik olma olasılığı daha fazladır."
+           "text": "Soliter tiroid nodüllerin, multiple nodüllere göre neoplastik olma olasılığı daha fazladır"
           },
           {
            "key": "E",
-           "text": "Erkeklerdeki nodüllerin, kadınlara göre neoplastik olma olasılığı daha yüksektir."
+           "text": "Erkeklerdeki nodüllerin, kadınlara göre neoplastik olma olasılığı daha yüksektir"
           }
          ],
          "year": "2020-2021",
          "discipline": "Tıbbi Patoloji",
          "topic": "Tiroid ve Paratiroid Patolojileri",
-         "explanation": "Sıcak nodüller (radyoaktif iyot tutanlar) neredeyse her zaman benigndir; malignite olasılığı iyot tutmayan soğuk nodüllerde artar.\n\n- **Sintigrafi:** Soğuk nodüllerin yaklaşık %10'u malign iken sıcak nodüllerde malignite çok nadirdir.\n- **Soliter ve multipl:** Tek nodül, multinodüler guatra göre daha kuşkuludur.\n- **Yaş:** Genç hastada nodülün neoplastik olma olasılığı daha yüksektir.\n- **Cinsiyet:** Nodül kadınlarda sık, ancak erkekte bulunan nodül daha kuşkuludur.\n- **Radyasyon öyküsü:** Baş-boyun ışınlaması papiller karsinom riskini artırır.\n- **Tanı:** Kesin ayrım ince iğne aspirasyon sitolojisi ve gerektiğinde histopatoloji ile yapılır.\n\nSınav: \"İyot tutan nodül malign\" ifadesi klasik tuzaktır; fonksiyonel nodül çoğunlukla benigndir."
+         "explanation": "> [!IMPORTANT]\n> **Cevap anahtarı düzeltildi:** Önceki anahtar E (Erkeklerdeki nodüllerin, kadınlara göre neoplastik olma olasılığı daha yüksektir) idi; ders kaynağına/tıbbi bilgiye göre doğru cevap C (Radyoaktif iyod tutan nodüllerin malign olma olasılığı daha yüksektir). Gerekçe: K6 D8 D9 Tiroid Neopl özeti: 'Soğuk nodüller — Hormon üretmeyen, malign olasılığı daha yüksek. Sıcak nodüller — Hormon üreten, malign olasılığı çok düşüktür'; 'Erkeklerdeki tiroid nodüllerinde malignite olasılığı kadınlara göre daha yüksektir' → yanlış ifade C Düzeltme: 2026-10-21.\n\nDoğru cevap C'dir; radyoaktif iyot tutan sıcak nodüllerin malign olma olasılığı çok düşüktür.\n- **Sıcak ve soğuk nodül:** Hormon üreten nodül iyodu tutar ve çoğunlukla benigndir; iyot tutmayan soğuk nodülde malignite olasılığı daha yüksektir.\n- **Doğru ifadeler:** Genç yaş, erkek cinsiyet, soliter nodül ve baş-boyun radyasyonu neoplazi olasılığını artırır."
         },
         {
          "id": "293448e35848",
@@ -3657,38 +3753,6 @@
          "discipline": "Tıbbi Patoloji",
          "topic": "Adrenal Bez Patolojileri",
          "explanation": "Endojen Cushing sendromunun en sık nedeni hipofiz kaynaklı ACTH salgılayan mikroadenomdur (Cushing hastalığı); iyatrojenik glukokortikoid kullanımı ise tüm Cushing sendromlarının en sık nedenidir.\n\n- **ACTH bağımlı – hipofizer:** Olguların yaklaşık %70’i; ACTH yüksek, bilateral adrenal hiperplazi; yüksek doz deksametazon ile kısmen baskılanır.\n- **ACTH bağımsız – adrenal:** Adenom, karsinom ya da primer nodüler hiperplazi; ACTH düşük, karşı ve komşu korteks atrofiktir.\n- **Ektopik ACTH:** En sık küçük hücreli akciğer karsinomu, ayrıca karsinoid tümörler ve medüller tiroid karsinomu; hipokalemi ve hiperpigmentasyon belirgindir, deksametazonla baskılanmaz.\n- **Morfolojik iz:** Hipofiz ön lobunda Crooke hiyalin değişikliği hiperkortizolizmin işaretidir.\n- **Klinik:** Santral obezite, aydede yüzü, mor strialar, proksimal kas güçsüzlüğü, hipertansiyon, glukoz intoleransı ve osteoporoz.\n\nSınav: \"Tüm Cushing\" sorulursa ekzojen steroid; \"endojen Cushing\" sorulursa hipofiz mikroadenomu cevaptır."
-        },
-        {
-         "id": "f7200ece8df5",
-         "questionNumber": 194,
-         "stem": "Konjenital adrenal hiperplazinin en sık sebebi aşağıdakilerden hangisidir?",
-         "correctAnswer": "C",
-         "options": [
-          {
-           "key": "A",
-           "text": "3-beta hidroksisteroid dehidrogenaz eksikliği"
-          },
-          {
-           "key": "B",
-           "text": "17-alfa hidroksilaz eksikliği"
-          },
-          {
-           "key": "C",
-           "text": "21-alfa hidroksilaz eksikliği"
-          },
-          {
-           "key": "D",
-           "text": "11-beta hidroksilaz eksikliği"
-          },
-          {
-           "key": "E",
-           "text": "StAR eksikliği"
-          }
-         ],
-         "year": "2018-2019",
-         "discipline": "Tıbbi Patoloji",
-         "topic": "Adrenal Bez Patolojileri",
-         "explanation": "Konjenital adrenal hiperplazinin en sık nedeni 21-hidroksilaz (CYP21A2) eksikliğidir.\n\n- **Patogenez:** Otozomal resesif enzim eksikliği kortizol sentezini azaltır; negatif geri bildirimin kalkmasıyla ACTH artar, adrenal korteks hiperplazi gösterir ve blok öncesi öncüller androjen yoluna kayar.\n- **Klinik formlar:** Klasik tuz kaybettiren (aldosteron eksikliği → hiponatremi, hiperkalemi, şok), basit virilizan ve klasik olmayan (geç başlangıçlı, hirsutizm, düzensiz adet) formlar.\n- **Tanı:** Bazal ya da ACTH ile uyarılmış 17-hidroksiprogesteron yüksekliği; yenidoğan taramasında da kullanılır.\n- **Ayırıcı tanı:** 11β-hidroksilaz ve 17α-hidroksilaz eksikliklerinde hipertansiyon vardır; 21-hidroksilaz eksikliğinde yoktur.\n- **Tedavi:** Glukokortikoid (± mineralokortikoid) replasmanı ACTH'yi baskılayarak androjen fazlalığını azaltır.\n\nSınav: Kız yenidoğanda belirsiz genitale eşlik eden tuz kaybı krizi 21-hidroksilaz eksikliğini; virilizasyonla hipertansiyon 11β-hidroksilaz eksikliğini düşündürür."
         },
         {
          "id": "67cdc80fb99b",
@@ -5303,6 +5367,70 @@
          "explanation": "Hafif diyabet, anemi ve nekrolitik migratuvar eritem birlikteliği glukagonomayı düşündürür.\n\n- **Köken:** Pankreas adacıklarındaki alfa hücreleri; çoğu pankreas gövde-kuyruğunda yerleşir ve tanı anında sıklıkla metastatiktir.\n- **Hiperglisemi:** Glukagon glikojenoliz ve glukoneogenezi artırır; tablo genellikle hafif diyabet şeklindedir.\n- **Deri bulgusu:** Perine, kasık ve alt ekstremitelerde eritemli, ortası nekrotik büllöz ve kabuklanan, yer değiştiren lezyonlar; hipoaminoasidemi ve çinko eksikliği katkıda bulunur.\n- **Diğer bulgular:** Normokrom normositer anemi, kilo kaybı, glossit, derin ven trombozu.\n- **Tanı:** Plazma glukagonunun belirgin artışı ve görüntüleme; somatostatin analogları semptomları azaltır.\n\nSınav: Diyabet + nekrolitik migratuvar eritem = glukagonoma; diyabet + safra taşı + steatore = somatostatinoma."
         },
         {
+         "id": "283a1c5dc386",
+         "questionNumber": 215,
+         "stem": "Tip 1 diyabet patogenezi hakkında aşağıdakilerden hangisi yanlıştır?",
+         "correctAnswer": "C",
+         "options": [
+          {
+           "key": "A",
+           "text": "Temel immün bozukluk T hücrelerinde self toleransın kaybolmasıdır."
+          },
+          {
+           "key": "B",
+           "text": "Erken dönemde adacıklarda nekroz ve lenfosit infiltrasyonu gözlenebilir."
+          },
+          {
+           "key": "C",
+           "text": "Hastaların büyük çoğunluğunda delta hücrelerine karşı otoantikor varlığı saptanmıştır."
+          },
+          {
+           "key": "D",
+           "text": "CTLA4 ve PTPN22 genlerindeki polimorfizm T hücre aktivitesini artırır."
+          },
+          {
+           "key": "E",
+           "text": "Virüsler moleküler taklitçilik ile hastalığa neden olabilir."
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "Tıbbi Patoloji",
+         "topic": "Pankreas ve Nöroendokrin Tümörler ve MEN Sendromu",
+         "explanation": "Tip 1 diyabette otoimmün saldırı ve otoantikorlar beta hücrelerine yöneliktir; delta hücreleri hedef değildir.\n\n- **İmmün mekanizma:** Beta hücre antijenlerine karşı T hücre toleransının kaybı; CD8+ T hücre sitotoksisitesi ve Th1 kaynaklı sitokinler (IFN-γ, TNF, IL-1) beta hücre yıkımına yol açar.\n- **Otoantikorlar:** İnsülin, GAD65, IA-2 ve ZnT8 antikorları klinik başlangıçtan yıllar önce saptanabilir; hasar göstergesidir, doğrudan yıkıcı değildir.\n- **Genetik:** En güçlü katkı HLA-DR3 ve DR4 (DQ8) bölgesindendir; CTLA4, PTPN22, IL2RA ve insülin geni polimorfizmleri de risk artırır.\n- **Çevresel:** Viral enfeksiyonlar moleküler taklitçilik veya bystander hasarla süreci başlatabilir.\n- **Morfoloji:** Erken dönemde insülitis, geç dönemde adacık atrofisi ve beta hücre kaybı görülür.\n\nSınav: Tip 1 diyabette otoantikorlar beta hücre antijenlerine yöneliktir; GAD65 en sık kullanılan tanısal belirteçtir."
+        },
+        {
+         "id": "63f3f16ab99d",
+         "questionNumber": 216,
+         "stem": "Aşağıdakilerden hangisi diyabet komplikasyonlarının oluşmasında sorumlu tutulan mekanizmalardan biri değildir?",
+         "correctAnswer": "E",
+         "options": [
+          {
+           "key": "A",
+           "text": "İleri glikasyon son ürünlerinin oluşması"
+          },
+          {
+           "key": "B",
+           "text": "İntraselüler hiperglisemi"
+          },
+          {
+           "key": "C",
+           "text": "Poliol yolunda bozukluklar"
+          },
+          {
+           "key": "D",
+           "text": "Protein kinaz C aktivasyonu"
+          },
+          {
+           "key": "E",
+           "text": "Peroksizom proliferatörüyle aktive edilen reseptör-gama (PPAR-gama) aktivasyonu"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "Tıbbi Patoloji",
+         "topic": "Pankreas ve Nöroendokrin Tümörler ve MEN Sendromu",
+         "explanation": "PPAR-gama aktivasyonu diyabet komplikasyonlarına yol açan bir mekanizma değil, tiazolidindionların insülin duyarlılığını artıran tedavi hedefidir.\n\n- **Başlangıç olayı:** İnsülinden bağımsız glukoz alan dokularda (endotel, retina, glomerül, Schwann hücresi) kronik hiperglisemi hücre içi glukozu artırır.\n- **İleri glikasyon son ürünleri:** Protein ve matriksin glikasyonu, RAGE aracılı sitokin ve büyüme faktörü salınımı, bazal membran kalınlaşması.\n- **Protein kinaz C:** Diaçilgliserol artışıyla aktive olur; vasküler geçirgenlik ve anjiyogenez artar.\n- **Poliol yolu:** Sorbitol birikimi ve NADPH azalmasıyla oksidatif stres; lens ve periferik sinirde belirgindir.\n- **Heksozamin yolu ve oksidatif stres:** Mitokondriyal süperoksid artışı bu yolların ortak paydasıdır.\n\nSınav: PPAR-gama glitazonların, PPAR-alfa ise fibratların hedefidir; ikisi de komplikasyon mekanizması olarak sorulmaz."
+        },
+        {
          "id": "past-1790877041942-58428",
          "questionNumber": 4,
          "stem": "Aşağıdakilerden hangisi MEN 2B (Multipl Endokrin Neoplazi tip 2B) sendromunda görülmez?",
@@ -6058,38 +6186,6 @@
          "explanation": "Sülfonilüre türevi olan çiftler II (klorpropamid-tolbutamid, 1. kuşak) ve IV'tür (gliburid-glipizid, 2. kuşak).\n\n- **Birinci kuşak:** Tolbutamid, klorpropamid, tolazamid, asetoheksamid; daha düşük potens, daha çok ilaç etkileşimi.\n- **İkinci kuşak:** Gliburid, glipizid, gliklazid; glimepirid bazen üçüncü kuşak olarak sınıflanır. Daha potenttir, daha düşük dozda kullanılır.\n- **Meglitinidler (I):** Repaglinid, nateglinid; aynı reseptör üzerinden fakat farklı bağlanma bölgesiyle kısa süreli etki.\n- **Biguanidler (III):** Metformin, fenformin; hepatik glukoz üretimini azaltır, fenformin laktik asidoz nedeniyle kullanımdan kalkmıştır.\n- **Ortak sülfonilüre yan etkileri:** Hipoglisemi, kilo artışı; klorpropamidde disülfiram benzeri reaksiyon ve hiponatremi.\n\nSınav: \"-glinid\" meglitinid, \"-formin\" biguanid, \"gli-/glibenklamid, tolbutamid, klorpropamid\" sülfonilüre olarak ayrılmalıdır."
         },
         {
-         "id": "64fa829f47f6",
-         "questionNumber": 200,
-         "stem": "İnsülin hormonu, glukozun hücre içine alınmasında hangi glukoz taşıyıcısı (GLUT) izoformu üzerinden etki eder?",
-         "correctAnswer": "D",
-         "options": [
-          {
-           "key": "A",
-           "text": "GLUT-1"
-          },
-          {
-           "key": "B",
-           "text": "GLUT-2"
-          },
-          {
-           "key": "C",
-           "text": "GLUT-3"
-          },
-          {
-           "key": "D",
-           "text": "GLUT-4"
-          },
-          {
-           "key": "E",
-           "text": "PPAR-alfa"
-          }
-         ],
-         "year": "2018-2019",
-         "discipline": "Tıbbi Farmakoloji",
-         "topic": "Pankreatik Hormonlar ve Antidiyabetik İlaçlar",
-         "explanation": "İnsülin, kas ve yağ dokusunda GLUT-4 taşıyıcılarını hücre içi depolardan plazma membranına taşıyarak glukoz alımını artırır.\n\n- **Sinyal yolu:** İnsülin reseptörünün tirozin kinaz aktivitesi IRS-1'i fosforiller; PI3K ve Akt aktivasyonu GLUT-4 içeren veziküllerin membrana füzyonunu başlatır.\n- **İnsülinden bağımsız izoformlar:** GLUT-1 (eritrosit, beyin endoteli), GLUT-2 (beta hücresi, karaciğer), GLUT-3 (nöron) ve fruktoz taşıyıcısı GLUT-5.\n- **Egzersiz etkisi:** Kas kasılması AMPK üzerinden insülinden bağımsız olarak da GLUT-4 translokasyonu yapar; bu nedenle egzersiz insülin direncinde glukoz kontrolünü iyileştirir.\n- **Klinik bağlantı:** Tip 2 diyabette insülin direnci büyük ölçüde GLUT-4 translokasyonunun azalmasıyla ilişkilidir; tiazolidindionlar GLUT-4 ekspresyonunu artırır.\n\nSınav: Beta hücresinin glukoz sensörü GLUT-2, insüline yanıt veren taşıyıcı GLUT-4'tür."
-        },
-        {
          "id": "past-1790877037908-289919",
          "questionNumber": 11,
          "stem": "İnsülin hormonunun metabolik etkileri ile ilgili doğru olmayan ifade aşağıdakilerden hangisidir?",
@@ -6532,70 +6628,6 @@
        "slaytlar": [],
        "cikmisSorular": [
         {
-         "id": "past-1790877047452-960770",
-         "questionNumber": 16,
-         "stem": "Diyabetes mellitus tedavisi ile ilgili olarak aşağıdaki ifadeler veriliyor:\nI. Sülfonilürelerin en sık yan etkisi agranülositozdur.\nII. Yaşam tarzı değişikliği ve egzersiz ilk basamak tedavidir.\nIII. Dekompanse karaciğer yetmezliğinde biguanid tedavisi verilebilir.\nIV. Akarbozun en sık yan etkisi hazımsızlık ve şişkinliktir.\nBu ifadelerden hangileri yanlıştır?",
-         "correctAnswer": "B",
-         "options": [
-          {
-           "key": "A",
-           "text": "I, II ve III"
-          },
-          {
-           "key": "B",
-           "text": "I ve III"
-          },
-          {
-           "key": "C",
-           "text": "II ve IV"
-          },
-          {
-           "key": "D",
-           "text": "Yalnız IV"
-          },
-          {
-           "key": "E",
-           "text": "I, II, III ve IV"
-          }
-         ],
-         "year": "2018-2019",
-         "discipline": "Tıbbi Farmakoloji",
-         "topic": "Pankreatik Hormonlar ve Antidiyabetik İlaçlar",
-         "explanation": "Yanlış öncüller I ve III'tür: sülfonilürelerin en sık yan etkisi hipoglisemidir ve metformin dekompanse karaciğer yetmezliğinde verilmez.\n\n- **Sülfonilüreler:** Hipoglisemi (özellikle uzun etkili gliburid, yaşlı ve böbrek yetersizliğinde) ve kilo artışı başlıca yan etkilerdir; kan diskrazileri, kolestaz, döküntü nadirdir.\n- **Biguanidler:** Böbrekten değişmeden atılır; karaciğer ve böbrek yetmezliği, dekompanse kalp yetmezliği, ağır hipoksemi ve alkolizmde laktik asidoz riski nedeniyle kontrendikedir.\n- **Yaşam tarzı:** Diyet, kilo verme ve haftada ≥150 dakika orta yoğunlukta egzersiz ilk basamaktır.\n- **Akarboz:** Kolonda bakteriyel fermentasyon gaz, şişkinlik, diyare yapar; hipoglisemi gelişirse sukroz değil glukoz verilir.\n\nSınav: Metforminde korkulan yan etki laktik asidoz, sülfonilürede hipoglisemi, akarbozda GİS yakınmaları, glitazonlarda ödem ve kalp yetmezliğidir."
-        },
-        {
-         "id": "past-1790877047559-415942",
-         "questionNumber": 31,
-         "stem": "İntravenöz (İV) olarak da verilebilen insülin çeşidi aşağıdakilerden hangisidir?",
-         "correctAnswer": "D",
-         "options": [
-          {
-           "key": "A",
-           "text": "İnsülin lispro"
-          },
-          {
-           "key": "B",
-           "text": "İnsülin glarjin"
-          },
-          {
-           "key": "C",
-           "text": "İnsülin degludec"
-          },
-          {
-           "key": "D",
-           "text": "İnsülin regüler"
-          },
-          {
-           "key": "E",
-           "text": "İnsülin detemir"
-          }
-         ],
-         "year": "2018-2019",
-         "discipline": "Tıbbi Farmakoloji",
-         "topic": "Pankreatik Hormonlar ve Antidiyabetik İlaçlar",
-         "explanation": "Deri altı kullanımının yanı sıra intravenöz olarak da verilebilen insülin, regüler (kristalize) insan insülinidir.\n\n- **Fiziksel özellik:** Berrak çözelti; partikül ya da depo mekanizması yoktur.\n- **İV kinetik:** Etki hemen başlar, yarı ömrü 5–10 dakika; infüzyon durdurulunca etki hızla kaybolur, bu yüzden geçişte bazal insülin önceden yapılmalıdır.\n- **Uzun etkili analoglar:** Glarjin (çökelme), detemir (albümin bağlanması), degludek (multiheksamer) depo ilkesiyle çalışır; İV uygulama bu mekanizmayı ortadan kaldırır.\n- **Klinik endikasyonlar:** DKA ve HHS'de 0,1 Ü/kg/saat infüzyon; hiperkalemide 10 Ü regüler insülin + dekstroz.\n- **Uygulama:** İnfüzyon seti plastiğe adsorpsiyonu azaltmak için önceden insülinli sıvıyla yıkanır.\n\nSınav: İV insülin sorusunun cevabı hemen her zaman regüler insülindir; NPH ve bazal analoglar tuzaktır."
-        },
-        {
          "id": "final-2018-2019-q036",
          "questionNumber": 36,
          "stem": "Aşağıdaki insülin preparatlarından;\nI. Glarjin insülin\nII. Protamin insülin\nIII. Ultralente insülin\nIV. Kristalize insülin\nhangisi en kısa etkilidir?",
@@ -6658,38 +6690,6 @@
          "discipline": "Tıbbi Farmakoloji",
          "topic": "Pankreatik Hormonlar ve Antidiyabetik İlaçlar",
          "explanation": "Sülfonilürelerin kilo artışı, guatrojenik etki ve kardiyotoksisite/teratojenite ile ilişkili olduğu ifadeler doğru; her iki insülin fazında etkin oldukları ifadesi yanlıştır.\n\n- **Kilo artışı:** İnsülin düzeyinin artması yağ depolanmasını kolaylaştırır; hipoglisemi korkusuyla kalori alımı da artar.\n- **Guatrojenik etki:** Ders notunda disülfiram benzeri etki ve intrahepatik kolestazla birlikte sayılır; özellikle eski kuşak ilaçlarla tiroid iyot alımının bozulması bildirilmiştir.\n- **Kardiyak etki:** Kalp ve damar düz kasındaki SUR2 kanallarının blokajı iskemik ön koşullanmayı bozabilir; UGDP çalışması tolbutamidde kardiyovasküler ölüm artışı bildirmiştir.\n- **Gebelik:** Plasentayı geçerek fetal hiperinsülinemi ve neonatal hipoglisemi yapabilir; gebelikte insülin tercih edilir.\n- **Faz sorunu:** Tip 2 diyabette kaybolan 1. faz salgıyı en iyi taklit eden grup hızlı-kısa etkili meglitinidlerdir.\n\nSınav: Sülfonilürelerde en sık yan etki hipoglisemi ve kilo artışıdır; disülfiram benzeri reaksiyon ve hiponatremi klorpropamide özgü vurgulardır."
-        },
-        {
-         "id": "8003dd6c762d",
-         "questionNumber": 184,
-         "stem": "Aşağıdakilerden hangisi insülin tedavisinin yan etkilerinden biri değildir?",
-         "correctAnswer": "E",
-         "options": [
-          {
-           "key": "A",
-           "text": "Hipoglisemi"
-          },
-          {
-           "key": "B",
-           "text": "Kilo artışı"
-          },
-          {
-           "key": "C",
-           "text": "Lipohipertrofi"
-          },
-          {
-           "key": "D",
-           "text": "Lokal ağrı"
-          },
-          {
-           "key": "E",
-           "text": "Hiperglisemi"
-          }
-         ],
-         "year": "2018-2019",
-         "discipline": "Tıbbi Farmakoloji",
-         "topic": "Pankreatik Hormonlar ve Antidiyabetik İlaçlar",
-         "explanation": "İnsülinin etkisi kan glukozunu düşürmektir; hiperglisemi bu nedenle yan etki değil tedavi edilen durumdur. Hipoglisemi, kilo artışı ve enjeksiyon yeri reaksiyonları ise bilinen yan etkilerdir.\n\n- **Hipoglisemi:** En sık ve en önemli yan etki; bilinçli hastada 15–20 g hızlı emilen karbonhidrat, bilinç kaybında glukagon ya da intravenöz dekstroz verilir.\n- **Kilo artışı:** Anabolik etki ve glukozüri kaybının ortadan kalkması sonucu gelişir.\n- **Lipodistrofi:** Lipohipertrofi aynı bölgeye tekrarlanan enjeksiyonla, lipoatrofi ise eski saflaştırılmamış insülinlerle immün mekanizmayla görülürdü.\n- **Diğerleri:** Hipokalemi (potasyumun hücre içine geçişi), lokal ve nadiren sistemik alerji, insülin ödemi.\n- **Somogyi ve şafak fenomeni:** Sabah hiperglisemisi gece hipoglisemisine rebound (Somogyi) ya da sabah kontrregülatuar hormon artışına (şafak) bağlıdır; ilaç yan etkisi değil dozlama sorunudur.\n\nSınav: İnsülin tedavisinin elektrolit yan etkisi hipokalemidir; diyabetik ketoasidoz tedavisinde potasyum izlenir."
         },
         {
          "id": "past-1790877038193-673073",
@@ -7322,38 +7322,6 @@
          "explanation": "Gonadorelin, nafarelin ve triptorelin GnRH analoğudur; endorfin ise endojen bir opioid peptittir.\n\n- **GnRH yapısı:** 10 amino asitli (dekapeptit) hipotalamik hormondur; adenohipofizden LH ve FSH salınımını uyarır.\n- **Gonadorelin:** Doğal GnRH'nin sentetik eşidir; pulsatil pompa ile infertilitede ve tek doz LH yanıt testinde kullanılır.\n- **Uzun etkili agonistler:** Löprolid, goserelin, histrelin, nafarelin ve triptorelin; 6. pozisyondaki değişiklik peptidaz yıkımını azaltıp reseptör afinitesini artırır. Nafarelin nazal sprey olarak kullanılır.\n- **Antagonistler:** Ganireliks, setroreliks, degareliks; başlangıçta alevlenme yapmadan gonadotropinleri hemen düşürür.\n- **Endorfin:** POMC'den türeyen β-endorfin opioid reseptörleri üzerinden analjezi sağlar.\n\nSınav: “-relin” sonekli ilaçlar GnRH agonisti, “-reliks” sonekliler GnRH antagonistidir; bu ayrım sık sorulur."
         },
         {
-         "id": "7372509ce6cc",
-         "questionNumber": 198,
-         "stem": "Aşağıdakilerden hangisi adenohipofizden salgılanan hormonların salınımını baskılayıcı (inhibitör) etkisi olan hormondur?",
-         "correctAnswer": "C",
-         "options": [
-          {
-           "key": "A",
-           "text": "Folikül stimülan hormon"
-          },
-          {
-           "key": "B",
-           "text": "Prolaktin"
-          },
-          {
-           "key": "C",
-           "text": "Somatostatin"
-          },
-          {
-           "key": "D",
-           "text": "İnsülin"
-          },
-          {
-           "key": "E",
-           "text": "Luteinizan hormon"
-          }
-         ],
-         "year": "2018-2019",
-         "discipline": "Tıbbi Farmakoloji",
-         "topic": "Hipotalamohipofizer Sistem İlaçları",
-         "explanation": "Somatostatin, hipotalamustan salgılanan ve ön hipofizden büyüme hormonu ile TSH salınımını baskılayan inhibitör hormondur.\n\n- **Hipotalamik uyarıcılar:** GHRH, TRH, CRH ve GnRH ön hipofiz hormonlarının salınımını artırır.\n- **Hipotalamik inhibitörler:** Somatostatin (GH ve TSH) ve dopamin (prolaktin).\n- **Diğer kaynaklar:** Somatostatin pankreas delta hücrelerinden ve mide-barsak D hücrelerinden de salgılanır; insülin, glukagon, gastrin ve mide asidini baskılar.\n- **Farmakoloji:** Oktreotid ve lanreotid uzun etkili analoglardır; akromegali, nöroendokrin tümörler ve varis kanamasında kullanılır, safra taşı ve steatore yan etkileridir.\n- **Çeldirici hormonlar:** FSH, LH ve prolaktin ön hipofiz hormonlarının kendisidir; insülin ise periferik bir hormondur.\n\nSınav: Prolaktini baskılayan hipotalamik faktör dopamin, GH'yi baskılayan somatostatindir; ikisi sık karıştırılır."
-        },
-        {
          "id": "d52164df42e8",
          "questionNumber": 207,
          "stem": "Aşağıdakilerden hangisi somatotropin (büyüme hormonu) kullanım endikasyonudur?",
@@ -7969,38 +7937,6 @@
          "explanation": "Doğru kombinasyon I, II ve III'tür: amiodaron, beta-blokerler ve kortikosteroidler periferik 5'-deiyodinazı inhibe eder.\n\n- **Deiyodinasyon:** T4'ün dış halkadan monodeiyodinasyonu aktif T3'ü, iç halkadan deiyodinasyonu inaktif ters T3'ü (rT3) oluşturur.\n- **İnhibitörler:** Amiodaron, iyotlu kontrast maddeler, beta-blokerler, kortikosteroidler ve PTU; ağır hastalık ve beslenme yetersizliği de dönüşümü azaltır.\n- **Klinik yansıma:** T3 düşer, rT3 artar, TSH çoğunlukla değişmez (ötiroid hasta sendromuna benzer tablo).\n- **Tedavide kullanım:** Tiroid fırtınasında propranolol, PTU ve glukokortikoid kombinasyonu bu etkiden yararlanır.\n- **Liotironin:** Sentetik T3'tür; dönüşüm basamağını atladığı için enzim inhibitörü değildir.\n\nSınav: Deiyodinaz inhibitörlerini 'amiodaron, propranolol, kortikosteroid, PTU' dörtlüsüyle hatırlayın; liotironin bu listeye girmez."
         },
         {
-         "id": "722b6c92fd78",
-         "questionNumber": 201,
-         "stem": "Aşağıdaki hormonlardan hangisinin reseptörü çekirdekte bulunmaktadır?",
-         "correctAnswer": "D",
-         "options": [
-          {
-           "key": "A",
-           "text": "İnsülin"
-          },
-          {
-           "key": "B",
-           "text": "Norepinefrin"
-          },
-          {
-           "key": "C",
-           "text": "Glukagon"
-          },
-          {
-           "key": "D",
-           "text": "Tiroid hormonu"
-          },
-          {
-           "key": "E",
-           "text": "Kortizol"
-          }
-         ],
-         "year": "2018-2019",
-         "discipline": "Tıbbi Farmakoloji",
-         "topic": "Tiroit ve Antitiroid İlaçlar",
-         "explanation": "Reseptörü doğrudan çekirdekte yerleşik olan hormon tiroid hormonudur; kortizol reseptörü ise ligand bağlanana kadar sitoplazmadadır.\n\n- **Membran reseptörleri:** İnsülin (tirozin kinaz), norepinefrin ve glukagon (GPCR) gibi peptid ve katekolaminler hücreye girmeden ikinci haberci sistemleri kullanır.\n- **Sitoplazmik reseptörler:** Glukokortikoid, mineralokortikoid ve androjen reseptörleri hsp90'a bağlı sitoplazmik kompleks hâlindedir; hormon bağlanınca dimerize olup çekirdeğe geçer.\n- **Nükleer yerleşik reseptörler:** Tiroid hormonu, retinoik asit ve D vitamini reseptörleri çekirdekte DNA'ya bağlı bekler; RXR ile heterodimer oluşturur.\n- **Farmakolojik bağlantı:** T3, T4'ten yaklaşık 10 kat daha yüksek afiniteyle reseptöre bağlanır; T4 hücre içinde 5'-deiyodinaz ile T3'e dönüşerek etki eder.\n- **Klinik sonuç:** Genomik etkiler nedeniyle tiroid hormonu ve steroid etkileri saatler-günler içinde ortaya çıkar.\n\nSınav: 'Çekirdekte' denince tiroid hormonu; 'sitoplazmada' denince kortizol/steroid reseptörü düşünülmelidir."
-        },
-        {
          "id": "0a95340f1a11",
          "questionNumber": 208,
          "stem": "Tiroit hormonlarına ilişkin aşağıdakilerden hangisi doğrudur?",
@@ -8063,38 +7999,6 @@
          "discipline": "Tıbbi Farmakoloji",
          "topic": "Tiroit ve Antitiroid İlaçlar",
          "explanation": "Doğru ifade D'dir: PTU'nun iki klasik endikasyonu gebeliğin ilk trimesteri ve tiroid fırtınasıdır.\n\n- **Güç ve doz:** Metimazol PTU'dan yaklaşık 10 kat güçlüdür; uzun etkisi tek doz kullanımını sağlar.\n- **Kinetik:** Metimazol tama yakın emilir; iki ilaç da tiroidde birikir ve çoğunlukla böbrekle atılır.\n- **İlk trimester:** Metimazol aplazia kutis, koanal atrezi gibi malformasyonlarla ilişkili olduğundan PTU tercih edilir; ikinci trimesterden itibaren metimazole dönülür.\n- **Tiroid fırtınası:** PTU, sentez blokajına ek olarak 5'-deiyodinazı inhibe eder.\n- **Çapraz duyarlılık:** Agranülositoz ve ağır reaksiyonlarda bir tiyoamidden diğerine geçilmez; hafif deri reaksiyonlarında geçiş denenebilir.\n- **PTU hepatotoksisitesi:** Fulminan hepatit riski nedeniyle kullanımı bu sınırlı endikasyonlara ayrılmıştır.\n\nSınav: '10 kat güçlü' olan metimazoldür; çeldiricide oran ters çevrilerek sorulur."
-        },
-        {
-         "id": "87cbe7788b6d",
-         "questionNumber": 219,
-         "stem": "Tiroid stimülan hormon (TSH) için aşağıdakilerden hangisi yanlıştır?",
-         "correctAnswer": "B",
-         "options": [
-          {
-           "key": "A",
-           "text": "Tiroid bezinden tiroksin salgılanmasını artırır"
-          },
-          {
-           "key": "B",
-           "text": "Tiroglobülin proteaz enziminin yıkımını artırır"
-          },
-          {
-           "key": "C",
-           "text": "İyodür pompasının aktivitesini artırır"
-          },
-          {
-           "key": "D",
-           "text": "Tiroid hücrelerinin sayısını artırır"
-          },
-          {
-           "key": "E",
-           "text": "Tirozinin iyotlanmasını artırır"
-          }
-         ],
-         "year": "2018-2019",
-         "discipline": "Tıbbi Farmakoloji",
-         "topic": "Tiroit ve Antitiroid İlaçlar",
-         "explanation": "Yanlış ifade B'dir: TSH tiroglobülin proteazını yıkmaz, aktivitesini artırarak hormon salınımını hızlandırır.\n\n- **Reseptör yolağı:** TSH, Gs kenetli reseptör üzerinden adenilat siklazı aktive eder; cAMP artışı hormon sentezinin tüm basamaklarını uyarır.\n- **İyodür tuzaklama:** NIS ekspresyonu ve aktivitesi artar.\n- **Organifikasyon ve kenetlenme:** Tiroid peroksidaz aktivitesi artar, MIT/DIT ve T4/T3 oluşumu hızlanır.\n- **Salınım:** Kolloid endositozu ve lizozomal proteoliz artar, tiroglobülinden T4 ve T3 ayrılır.\n- **Trofik etki:** Hipertrofi ve hiperplazi; kronik TSH uyarısı guatra yol açar.\n- **Geri bildirim:** T3 ve T4, hipofizde TRH etkisini ve hipotalamusta TRH sentezini baskılar.\n\nSınav: TSH'nin tüm etkileri 'artırıcı'dır; ifadede enzim ya da hormonun 'yıkımı' geçiyorsa çeldirici olma olasılığı yüksektir."
         },
         {
          "id": "2327162bef33",
@@ -10041,7 +9945,7 @@
         {
          "id": "8b43d8f742df",
          "questionNumber": 638,
-         "stem": "Teofilin, nitrogliserin, izoproterenol ve histaminin paylaştıkları ortak etki hangisidir?",
+         "stem": "Tıbbi Farmakoloji Astım vd. akciğer Hastalıkları Kullan İlaçlar Teoślin, nitrogliserin, izoproterenol, ve histaminin paylaştıkları ortak etki hangisidir?",
          "correctAnswer": "B",
          "options": [
           {
@@ -10068,7 +9972,7 @@
          "year": "2020-2021",
          "discipline": "Tıbbi Farmakoloji",
          "topic": "Histamin, serotonin, melatonin ve Ergot Alkaloidleri",
-         "explanation": "Teofilin, nitrogliserin, izoproterenol ve histaminin ortak etkisi taşikardidir; ikisi doğrudan, ikisi refleks yolla kalp hızını artırır.\n\n- **İzoproterenol:** Seçici olmayan beta agonist; beta-1 ile doğrudan pozitif kronotropi ve inotropi, beta-2 ile vazodilatasyon.\n- **Teofilin:** Fosfodiesteraz inhibisyonu ve adenozin reseptör antagonizması; taşikardi ve yüksek düzeylerde aritmiler yapar.\n- **Nitrogliserin:** NO–cGMP aracılı venodilatasyon; kan basıncı düşünce baroreseptör refleksiyle taşikardi gelişir.\n- **Histamin:** H1 aracılı vazodilatasyon ile refleks taşikardi; ayrıca H2 ile doğrudan kronotropi.\n- **Diğer şıklar:** Baş ağrısı ve postural hipotansiyon vazodilatörlere, gastrik asit artışı histamine özgüdür.\n\nNot: Ham kayıtta işaretli 'zonklayıcı baş ağrısı' teofilin ve izoproterenol için tutarlı bir ortak etki değildir; Katzung/Trevor kaynaklı bu klasik soruda beklenen cevap taşikardidir.\n\nSınav: Ortak etki sorularında doğrudan ve refleks mekanizmaları birlikte düşün; vazodilatörler refleks taşikardi yapar."
+         "explanation": "> [!IMPORTANT]\n> **Cevap anahtarı düzeltildi:** Önceki anahtar E (Zonklayıcı tipte baş ağrısı) idi; ders kaynağına/tıbbi bilgiye göre doğru cevap B (Taşikardi). Gerekçe: Kaynak K6 Histamin s.25: histamin 'hipotansiyon, taşikardi, baş ağrısı' yapar; izoproterenol baş ağrısı tipik değil, dördünün ortak etkisi taşikardi (tıbbi bilgi). İkizler B. Düzeltme: 2026-10-21.\n\nDoğru cevap B'dir:\n- **Doğrudan etki:** Teofilin ve izoproterenol kalp hızını doğrudan artırır.\n- **Refleks etki:** Nitrogliserin ve histamin vazodilatasyonla kan basıncını düşürür, baroreseptör refleksi taşikardiye yol açar.\n- **Diğer şıklar:** Baş ağrısı, hipotansiyon ve asit artışı yalnız bazı ilaçlarda görülür, dördünde ortak değildir."
         },
         {
          "id": "ae5917d36a06",
@@ -10945,38 +10849,6 @@
          "explanation": "Primer beslenme hastalıkları, bir besin öğesinin yetersiz ya da aşırı alınmasının doğrudan sonucu olan durumlardır; marasmus, skorbüt ve raşitizm bu gruptadır.\n\n- **Marasmus:** Uzun süreli enerji ve protein yetersizliği; deri altı yağ ve kas kaybı, \"yaşlı yüz\" görünümü, ödem yoktur.\n- **Skorbüt:** C vitamini eksikliğinde prolin-lizin hidroksilasyonu bozulur; dişeti kanaması, perifoliküler hemoraji ve yara iyileşmesinde gecikme görülür.\n- **Raşitizm:** D vitamini eksikliğinde büyüme plağı mineralize olamaz; raşitik tespih, kemik eğrilikleri ve gecikmiş fontanel kapanması gelişir.\n- **Sekonder (beslenmeyle ilişkili) hastalıklar:** Hipertansiyon, tip 2 diyabet, koroner kalp hastalığı ve bazı kanserlerde beslenme risk etkenidir ama tek neden değildir.\n- **Halk sağlığı önemi:** Türkiye'de demir eksikliği anemisi, iyot eksikliği, D vitamini eksikliği ve şişmanlık önemli beslenme sorunları arasındadır.\n\nSınav: Bir besin öğesinin verilmesiyle düzelen tablo primerdir; çok etkenli kronik hastalıklar sekonderdir."
         },
         {
-         "id": "12c63929d8d1",
-         "questionNumber": 225,
-         "stem": "Aşağıdakilerden hangisi önlenebilir mental retardasyonun en önemli sebebidir?",
-         "correctAnswer": "D",
-         "options": [
-          {
-           "key": "A",
-           "text": "Turner sendromu"
-          },
-          {
-           "key": "B",
-           "text": "Hipopitüitarizm"
-          },
-          {
-           "key": "C",
-           "text": "Cushing sendromu"
-          },
-          {
-           "key": "D",
-           "text": "Hipotiroidi"
-          },
-          {
-           "key": "E",
-           "text": "Akromegali"
-          }
-         ],
-         "year": "2018-2019",
-         "discipline": "Halk Sağlığı",
-         "topic": "Önemli Beslenme Sorunları",
-         "explanation": "Tiroid hormonu eksikliği (konjenital hipotiroidi ve iyot eksikliği), dünyada önlenebilir zekâ geriliğinin en önemli nedenidir.\n\n- **Mekanizma:** Tiroid hormonu fetal ve erken postnatal dönemde nöronal göç, miyelinizasyon ve sinaps oluşumu için zorunludur; eksikliğinde kalıcı nörolojik hasar gelişir.\n- **Konjenital hipotiroidi:** En sık neden tiroid disgenezisidir; yenidoğanda belirtiler silik olduğundan topuk kanında TSH taraması yapılır. Türkiye'de tarama programı 2006'dan beri uygulanmaktadır.\n- **İyot eksikliği:** Gebelikte ağır eksiklik kretenizme yol açar; Türkiye'de 1994'ten beri sofra tuzunun iyotlanması zorunludur.\n- **Tedavi:** İlk iki hafta içinde L-tiroksin başlanırsa zekâ gelişimi büyük ölçüde normal seyreder.\n\nSınav: Önlenebilir zekâ geriliğinin en önemli nedeni iyot eksikliği ve konjenital hipotiroidi; genetik nedenlerin en sık olanı Down sendromudur."
-        },
-        {
          "id": "past-1790877038057-686361",
          "questionNumber": 8,
          "stem": "Eksikliğinde zekâ geriliği, kretinizm ve büyüme geriliği yapan mineral hangisidir?",
@@ -11586,12 +11458,12 @@
         {
          "id": "5908c114e681",
          "questionNumber": 1845,
-         "stem": "Sebze ve meyve grubu besinler ile ilgili aşağıdakilerden hangisi yanlıştır?",
+         "stem": "Yeterli ve dengeli beslenme sebze ve meyve grubu besinler ile ilgili hangisi yanlıştır?",
          "correctAnswer": "B",
          "options": [
           {
            "key": "A",
-           "text": "Az miktarda protein içerir"
+           "text": "Az miktarda protein, karbonhidrat içerir"
           },
           {
            "key": "B",
@@ -11613,7 +11485,7 @@
          "year": "2020-2021",
          "discipline": "Halk Sağlığı",
          "topic": "Yeterli ve Dengeli Beslenme",
-         "explanation": "Sebze ve meyveler yağdan değil; su, posa, vitamin (özellikle C ve A vitamini öncülleri) ve mineraller yönünden zengindir.\n\n- **Bileşim:** Büyük kısmı sudur, enerji ve yağ içerikleri düşüktür; protein içerikleri de azdır.\n- **Vitamin ve mineral:** A, E, C ve B vitaminleri ile kalsiyum ve demir sağlar; koyu yeşil yapraklılar folat açısından zengindir.\n- **Posa:** Bağırsak düzenini sağlar, kolesterol emilimini azaltır, kan glukozunu dengeler.\n- **Öneri:** Günde en az 5 porsiyon (400 g) sebze-meyve tüketilmelidir; gebe ve emziklilerde bu grup ayrıca vurgulanır.\n- **Dört besin grubu:** Süt ve ürünleri; et-yumurta-kurubaklagil; sebze-meyve; ekmek ve tahıllar. Yağ, ayrı bir grup olarak değil, eklenen enerji kaynağı olarak değerlendirilir.\n\nSınav: Sebze-meyve grubunun 'az protein, az yağ, bol su-posa-vitamin' profili, yağ ve protein kaynağı olan diğer gruplarla karıştırılır."
+         "explanation": "> [!IMPORTANT]\n> **Cevap anahtarı düzeltildi:** Önceki anahtar A (Az miktarda protein, karbonhidrat içerir) idi; ders kaynağına/tıbbi bilgiye göre doğru cevap B (Bol miktarda yağ içerir). Gerekçe: Kaynakta yok (sebze-meyve grubu metni bulunamadı) | tıbben sebze ve meyveler yağdan fakir, su ve posadan zengin, C vitamini kaynağıdır; 'bol yağ içerir' yanlıştır. İkiz 5908c114e681 B. Düzeltme: 2026-10-21.\n\nDoğru cevap B'dir:\n- **Yağ:** Sebze ve meyveler çok az yağ içerir (avokado ve zeytin dışında); bol yağ içerdiği ifadesi yanlıştır.\n- **A şıkkı:** Protein içeriği azdır; karbonhidrat içerikleri değişse de bu ifade grubu tanımlarken kabul edilen doğru bilgidir.\n- **Diğerleri:** Su ve posa içeriğinin yüksek olması, C vitamininden zenginlik doğru özelliklerdir."
         },
         {
          "id": "b33668f6e5f1",
@@ -13511,7 +13383,7 @@
         {
          "id": "f35575aff72b",
          "questionNumber": 1158,
-         "stem": "Akılcı olmayan ilaç kullanımı örneklerinden hangisi yanlıştır?",
+         "stem": "İlaç akılcı olmayan kullanımı örneklerinden hangisi yanlıştır?",
          "correctAnswer": "D",
          "options": [
           {
@@ -13528,7 +13400,7 @@
           },
           {
            "key": "D",
-           "text": "İlaç-ilaç ve besin-ilaç etkileşimlerinin dikkate alınması"
+           "text": "İlaç-ilaç etkileşimleri ve besin-ilaç etkileşimlerinin dikkate alınması"
           },
           {
            "key": "E",
@@ -13538,21 +13410,21 @@
          "year": "2020-2021",
          "discipline": "Halk Sağlığı",
          "topic": "Akılcı İlaç Kullanımı",
-         "explanation": "Etkileşimlerin dikkate alınması akılcı ilaç kullanımının bir parçasıdır; bu nedenle akılcı olmayan kullanım örneği olarak verilemez ve cevap D'dir.\n\n- **Gereksiz enjeksiyon:** Oral seçenek varken parenteral yol tercih edilmesi risk ve maliyet getirir.\n- **Vitamin ve takviyeler:** Endikasyonsuz kullanım yarar sağlamaz; toksisite ve etkileşim riski taşır.\n- **Antibiyotik:** Viral enfeksiyonlarda antibiyotik kullanımı direncin en önemli nedenidir.\n- **Polifarmasi:** Gereğinden fazla ilaç kullanımı özellikle yaşlıda yan etkileri artırır.\n- **Akılcı yaklaşım:** Doğru tanı, uygun ilaç-doz-süre, etkileşim kontrolü ve hasta bilgilendirmesi birlikte uygulanır.\n\nSınav: Olumsuz köklü listelerde akılcı bir uygulamanın 'örnek' gibi araya sokulması sık kullanılan tuzaktır."
+         "explanation": "> [!IMPORTANT]\n> **Cevap anahtarı düzeltildi:** Önceki anahtar A (Gereksiz yere enjeksiyon kullanımı) idi; ders kaynağına/tıbbi bilgiye göre doğru cevap D (İlaç-ilaç etkileşimleri ve besin-ilaç etkileşimlerinin dikkate alınması). Gerekçe: Kaynakta yok (akılcı ilaç dersi metni bulunamadı) | tıbben etkileşimlerin dikkate alınması akılcı kullanımın gereğidir; A-C-E akılcı olmayan örneklerdir. İkiz f35575aff72b D. Düzeltme: 2026-10-21.\n\nDoğru cevap D'dir:\n- **Akılcı kullanım:** Etkileşimleri dikkate almak doğru ilaç kullanımının parçasıdır.\n- **Akılcı olmayan örnekler:** Gereksiz enjeksiyon, vitamin, antibiyotik ve bilinçsiz bitkisel ürün kullanımıdır.\n- **A şıkkı:** Gereksiz enjeksiyon akılcı olmayan kullanımın klasik örneğidir, doğru bir örnektir."
         },
         {
          "id": "908c332f4177",
          "questionNumber": 1211,
-         "stem": "Akılcı olmayan ilaç kullanımının sonuçları ile ilgili aşağıdakilerden hangisi doğrudur?",
-         "correctAnswer": "B",
+         "stem": "Akılcı olmayan ilaç kullanımı nedeniyle ilgili nedir?",
+         "correctAnswer": "A",
          "options": [
           {
            "key": "A",
-           "text": "İlaçların yan etki riski azalması"
+           "text": "Hastalık ve ölümlerde artış olabilmesi"
           },
           {
            "key": "B",
-           "text": "Hastalık ve ölümlerde artış olabilmesi"
+           "text": "İlaçların yan etki riski azalması"
           },
           {
            "key": "C",
@@ -13564,13 +13436,13 @@
           },
           {
            "key": "E",
-           "text": "İlaç direnci sebebiyle yeni tedavilerin artması"
+           "text": "İ ilaç direnci sebebiyle yeni tedavilerin artması"
           }
          ],
          "year": "2020-2021",
          "discipline": "Halk Sağlığı",
          "topic": "Akılcı İlaç Kullanımı",
-         "explanation": "Akılcı olmayan ilaç kullanımı bireysel ve toplumsal düzeyde zarar doğurur; en önemli sonucu hastalık ve ölümlerin artabilmesidir.\n\n- **Klinik sonuç:** Yanlış veya yetersiz tedavi hastalığın uzamasına, komplikasyonlara ve ölüme yol açabilir.\n- **Advers etkiler:** Gereksiz ilaç ve ilaç etkileşimleri yan etki riskini artırır.\n- **Antimikrobiyal direnç:** Uygunsuz antibiyotik kullanımı dirençli suşları seçer; tedavi seçenekleri daralır.\n- **Ekonomik yük:** Ülke kaynakları israf edilir, temel ilaçlara erişim azalır.\n- **Güven kaybı:** Başarısız tedaviler hastanın sağlık sistemine güvenini sarsar ve kendi kendine ilaç kullanımını artırır.\n\nSınav: Şıklarda 'azalma' ve 'artma' yönleri ters çevrilerek çeldirici kurulur; her sonucun yönünü kontrol edin."
+         "explanation": "> [!IMPORTANT]\n> **Cevap anahtarı düzeltildi:** Önceki anahtar E (İ ilaç direnci sebebiyle yeni tedavilerin artması) idi; ders kaynağına/tıbbi bilgiye göre doğru cevap A (Hastalık ve ölümlerde artış olabilmesi). Gerekçe: Kaynakta yok (K6 ve kurulsuz 'akılcı olmayan ilaç kullanımı sonuçları' aramasında ilgili slayt çıkmadı; K1 akılcı antibiyotik özeti yalnız doğru kullanımı anlatıyor); tıbbi gerekçe: akılcı olmayan kullanım morbidite/mortaliteyi artırır (A); B, C, D ifadeleri ters yönde, E bozuk metinli. Düzeltme: 2026-10-21.\n\nDoğru cevap A'dır: akılcı olmayan ilaç kullanımı hastalık ve ölümleri artırabilir.\n- **Sağlık sonuçları:** Yanlış ilaç, doz veya süre tedaviyi başarısız kılar; morbidite ve mortalite artar, yan etkiler çoğalır.\n- **Direnç:** Gereksiz antibiyotik kullanımı direnç gelişimini artırır, azaltmaz.\n- **Ekonomik sonuç:** Kaynaklar israf edilir; temel ilaçlara erişim artmaz, azalır."
         }
        ],
        "ornekSorular": [],
@@ -14145,70 +14017,6 @@
        "slaytlar": [],
        "cikmisSorular": [
         {
-         "id": "past-1790877047344-450363",
-         "questionNumber": 7,
-         "stem": "Yaşlılık dönemi ile ilgili aşağıdaki ifadeler veriliyor:\nI. Karaciğer ve safra fonksiyonlarında azalma olur.\nII. Bazal metabolizma hızı artar.\nIII. Bağışıklık sistemi fonksiyonlarında azalma olur.\nIV. Diş sayısında azalma besinlerin parçalanmasını kolaylaştırır.\nBu ifadelerden hangisi ya da hangileri yanlıştır?",
-         "correctAnswer": "C",
-         "options": [
-          {
-           "key": "A",
-           "text": "I, II ve III"
-          },
-          {
-           "key": "B",
-           "text": "I ve III"
-          },
-          {
-           "key": "C",
-           "text": "II ve IV"
-          },
-          {
-           "key": "D",
-           "text": "Yalnız IV"
-          },
-          {
-           "key": "E",
-           "text": "I, II, III ve IV"
-          }
-         ],
-         "year": "2018-2019",
-         "discipline": "Halk Sağlığı",
-         "topic": "Yaşlı Sağlığı Sorunları ve Sağlık Hizmetleri",
-         "explanation": "Yaşlanmada bazal metabolizma hızı düşer ve diş kaybı beslenmeyi olumsuz etkiler; bu nedenle II ve IV yanlış ifadelerdir.\n\n- **Metabolizma:** Kas kütlesi (hücre kitlesi) azalır, yağ dokusu oranı artar; buna bağlı olarak bazal metabolizma ve enerji ihtiyacı düşer.\n- **Sindirim sistemi:** Karaciğer kütlesi ve kan akımı, safra salgısı, mide asidi ve sindirim enzimleri azalır; ilaç metabolizması yavaşlar.\n- **Ağız-diş:** Diş kaybı ve protez sorunları çiğnemeyi güçleştirir; yaşlı yumuşak, posası az besinlere yönelir ve yetersiz beslenme riski artar.\n- **Bağışıklık:** İmmünosenesans ile T hücre yanıtı ve antikor üretimi azalır; enfeksiyonlara yatkınlık ve aşılara zayıf yanıt görülür.\n- **Duyular:** Tat ve koku duyusu ile susama hissi azalır.\n\nSınav: Yaşlılıkta 'artan' bir metabolik gösterge beklenmez; bazal metabolizma ve enerji gereksinimi azalır."
-        },
-        {
-         "id": "5f3a29c8b257",
-         "questionNumber": 234,
-         "stem": "Yaşlılık dönemi ile ilgili aşağıda belirtilen ifadelerden hangisi doğrudur?",
-         "correctAnswer": "C",
-         "options": [
-          {
-           "key": "A",
-           "text": "Yaşlılar kendisinde hastalık bulunacağı kaygısı ile çok sık olarak sağlık kuruluşuna başvururlar"
-          },
-          {
-           "key": "B",
-           "text": "Yaşlı insanların yaşam kalitesini artırabilmek için sağlık, güvenlik ve katılım olanaklarını en uygun hâle getirme pasif yaşlanma sürecidir"
-          },
-          {
-           "key": "C",
-           "text": "Yaşlılar sorunlarının yaşlılıktan kaynaklandığını düşünüp sağlık kuruluşuna başvurmayı ihmal ederler"
-          },
-          {
-           "key": "D",
-           "text": "Yaşlılık döneminde görme-işitme bozukluklarının tedavisi ikincil koruma yaklaşımlarındandır"
-          },
-          {
-           "key": "E",
-           "text": "Yaşlılıkta ara sıra yapılan orta dereceli fiziksel egzersiz bazı kronik hastalıkların insidansını azaltır"
-          }
-         ],
-         "year": "2018-2019",
-         "discipline": "Halk Sağlığı",
-         "topic": "Yaşlı Sağlığı Sorunları ve Sağlık Hizmetleri",
-         "explanation": "Yaşlılar yakınmalarını yaşlılığın doğal sonucu olarak yorumladıklarından sağlık kuruluşuna başvurmayı ihmal ederler; bu, yaşlı sağlığında hastalıkların gizli kalmasının başlıca nedenidir.\n\n- **Az bildirim:** Bilişsel gerileme, depresyon, inkontinans, işitme kaybı ve düşmeler sıklıkla hekime söylenmez; periyodik geriatrik değerlendirme bu açığı kapatmak için yapılır.\n- **Aktif yaşlanma:** DSÖ tanımına göre sağlık, katılım ve güvenlik olanaklarının en uygun hâle getirilmesi sürecidir; pasif değil etkin bir yaklaşımdır.\n- **Koruma basamakları:** Birincil korumada aşılama ve sağlıklı yaşam; ikincilde tarama ve erken tanı; üçüncülde yerleşmiş yetersizliğin rehabilitasyonu (gözlük, işitme cihazı) yer alır.\n- **Fiziksel aktivite:** Düzenli orta yoğunlukta egzersiz kardiyovasküler hastalık, tip 2 diyabet, osteoporoz ve düşme riskini azaltır.\n\nSınav: Etkinin anahtarı egzersizin düzenliliğidir; 'ara sıra' ifadesi tipik çeldiricidir."
-        },
-        {
          "id": "past-1790877036352-491430",
          "questionNumber": 69,
          "stem": "Yaşlılığın temel özelliklerinden biri olan, iç dengenin devamlılığını sağlama yeteneğinde azalma olarak tanımlanan terim aşağıdakilerden hangisidir?",
@@ -14349,7 +14157,7 @@
         {
          "id": "725a959105c7",
          "questionNumber": 1307,
-         "stem": "Aşağıdakilerden hangisi yaşlılarda düşmeye neden olan sebeplerden biri değildir?",
+         "stem": "Yaşlılarda düşmeye neden olacak sebeplerden hangisi değildir?",
          "correctAnswer": "D",
          "options": [
           {
@@ -14362,7 +14170,7 @@
           },
           {
            "key": "C",
-           "text": "Kas güçsüzlüğü"
+           "text": "Kas Güçsüzlüğü"
           },
           {
            "key": "D",
@@ -14376,7 +14184,7 @@
          "year": "2020-2021",
          "discipline": "Halk Sağlığı",
          "topic": "Yaşlı Sağlığı Sorunları ve Sağlık Hizmetleri",
-         "explanation": "Senil purpura deri ve damar yaşlanmasının kozmetik bir bulgusudur; düşme mekanizmasında yeri yoktur.\n\n- **İntrinsik nedenler:** Görme bozukluğu, kas güçsüzlüğü (sarkopeni), artrit, yürüme ve denge bozuklukları, ortostatik hipotansiyon, bilişsel bozukluk, ayak sorunları.\n- **Ortostatik mekanizma:** Barorefleks duyarlılığının azalması ve damar sertleşmesi postür değişikliğinde kan basıncı düzenlemesini bozar; diüretik ve antihipertansifler katkıda bulunur.\n- **Ekstrinsik nedenler:** Kaygan zemin, yetersiz aydınlatma, halı kenarları, uygunsuz ayakkabı, tutunma barı olmaması.\n- **İlaçlar:** Sedatif-hipnotikler, antidepresanlar ve çoklu ilaç kullanımı düşme riskini artırır.\n- **Önem:** Düşmeler kalça kırığı, bağımlılık ve ölümün başlıca nedenlerindendir; denge-kuvvet egzersizi ve ev düzenlemesi korunmada etkilidir.\n\nSınav: Yaşlılığa özgü her bulgu düşme nedeni değildir; denge, görme, kas gücü ya da kan basıncını bozmayan deri bulguları elenir."
+         "explanation": "> [!IMPORTANT]\n> **Cevap anahtarı düzeltildi:** Önceki anahtar E (Ortostatik hipotansiyonla sonuçlanan barorefleks duyarlılığındaki düşüş) idi; ders kaynağına/tıbbi bilgiye göre doğru cevap D (Yaşlılığa bağlı senil purpura). Gerekçe: K6 Yaşlılıkta Güvenli Yaşam #5: kişiye ait düşme nedenleri 'güçsüzlük, eklem kısıtlılıkları, postürel hipotansiyon, görme bozuklukları'; senil purpura listede yok. İkiz 725a959105c7 D. Düzeltme: 2026-10-21.\n\nDoğru cevap D'dir:\n- **Senil purpura:** Deri damarlarının yaşla kırılganlaşmasına bağlı morarmadır, düşmeye yol açmaz.\n- **E şıkkı:** Yaşla azalan barorefleks duyarlılığı ortostatik hipotansiyon ve senkopla düşmeye neden olur.\n- **Diğer nedenler:** Görme bozukluğu, artrit ve kas güçsüzlüğü denge ve yürümeyi bozar."
         },
         {
          "id": "d3-k6-hal-002",
@@ -14420,38 +14228,6 @@
        "metin": "Yaşlı Sağlığı Sorunları ve Sağlık klinik yönetimini, farmakoterapi ilkelerini ve komplikasyonlardan korunma yaklaşımlarını sıralar.",
        "slaytlar": [],
        "cikmisSorular": [
-        {
-         "id": "past-1790877047370-151450",
-         "questionNumber": 9,
-         "stem": "Yaşlılık döneminde beslenme ile ilgili aşağıdaki ifadeler veriliyor:\nI. Vücudun enerji ihtiyacının büyük bir kısmı yağlardan karşılanır.\nII. 1 gram yağ 4 kalori verir.\nIII. İyi bir diyetle D vitamini ihtiyacı sadece besinlerden sağlanabilir.\nIV. Vitamin ve mineraller yüksek tansiyonun önlenmesinde etkilidir.\nBu ifadelerden hangisi ya da hangileri doğrudur?",
-         "correctAnswer": "D",
-         "options": [
-          {
-           "key": "A",
-           "text": "I, II ve III"
-          },
-          {
-           "key": "B",
-           "text": "I ve III"
-          },
-          {
-           "key": "C",
-           "text": "II ve IV"
-          },
-          {
-           "key": "D",
-           "text": "Yalnız IV"
-          },
-          {
-           "key": "E",
-           "text": "I, II, III ve IV"
-          }
-         ],
-         "year": "2018-2019",
-         "discipline": "Halk Sağlığı",
-         "topic": "Yaşlı Sağlığı Sorunları ve Sağlık Hizmetleri",
-         "explanation": "Yaşlı beslenmesinde yalnızca vitamin ve minerallerin yüksek tansiyonun önlenmesindeki rolüne ilişkin ifade doğrudur.\n\n- **Enerji kaynağı:** Günlük enerjinin yaklaşık %60'ı karbonhidratlardan, %25'i yağlardan, kalanı proteinlerden sağlanmalıdır; yağlar ana enerji kaynağı olmamalıdır.\n- **Enerji değerleri:** 1 g karbonhidrat ve 1 g protein 4 kalori, 1 g yağ 9 kalori verir.\n- **D vitamini:** En iyi kaynağı güneş ışığıdır; yaşlıda derideki sentez azaldığından ve güneşe çıkma kısıtlı olduğundan, iyi planlanmış bir diyette bile D vitamini dışındaki gereksinimler karşılanır, D vitamini için destek gerekebilir.\n- **Hipertansiyon:** Tuz kısıtlaması ile yeterli kalsiyum ve potasyum alımı yüksek tansiyonun önlenmesinde önerilir.\n\nSınav: '1 g yağ 4 kalori' ve 'D vitamini yalnız besinden' ifadeleri bu konunun klasik tuzaklarıdır."
-        },
         {
          "id": "e858483cb655",
          "questionNumber": 1340,
@@ -15762,70 +15538,6 @@
          "explanation": "Gestasyonel diyabetin risk faktörleri insülin direncini artıran durumlar ve önceki gebelikte hiperglisemiyi düşündüren bulgulardır; önceki gebelikte düşük doğum ağırlıklı bebek bunlardan biri değildir.\n\n- **Metabolik zemin:** Obezite, PCOS, birinci derece akrabada tip 2 diyabet, prediyabet ve fiziksel inaktivite insülin direncini artırır.\n- **Obstetrik öykü:** Önceki gebelikte gestasyonel diyabet, makrozomik (≥ 4000 g) bebek, açıklanamayan ölü doğum ya da konjenital anomali öyküsü risk göstergesidir.\n- **Demografik:** İleri anne yaşı ve yüksek riskli etnik köken riski artırır.\n- **İlaçlar:** Glukokortikoidler ve bazı antipsikotikler hiperglisemi eğilimi yaratır.\n- **Tarama:** Gebeliğin 24–28. haftalarında 75 g OGTT ile tarama yapılır; gestasyonel diyabet öyküsü olan kadına doğum sonrası 6–12. haftalarda OGTT önerilir.\n\nSınav: Makrozomi risk faktörü, düşük doğum ağırlığı değildir; “bebek ağırlığı” şıkkında yönün ters çevrilmesi klasik çeldiricidir."
         },
         {
-         "id": "283a1c5dc386",
-         "questionNumber": 215,
-         "stem": "Tip 1 diyabet patogenezi hakkında aşağıdakilerden hangisi yanlıştır?",
-         "correctAnswer": "C",
-         "options": [
-          {
-           "key": "A",
-           "text": "Temel immün bozukluk T hücrelerinde self toleransın kaybolmasıdır."
-          },
-          {
-           "key": "B",
-           "text": "Erken dönemde adacıklarda nekroz ve lenfosit infiltrasyonu gözlenebilir."
-          },
-          {
-           "key": "C",
-           "text": "Hastaların büyük çoğunluğunda delta hücrelerine karşı otoantikor varlığı saptanmıştır."
-          },
-          {
-           "key": "D",
-           "text": "CTLA4 ve PTPN22 genlerindeki polimorfizm T hücre aktivitesini artırır."
-          },
-          {
-           "key": "E",
-           "text": "Virüsler moleküler taklitçilik ile hastalığa neden olabilir."
-          }
-         ],
-         "year": "2018-2019",
-         "discipline": "İç Hastalıkları",
-         "topic": "Diabetes Mellitus Sınıflandırılması, Tanısı ve Komplikasyonları",
-         "explanation": "Tip 1 diyabette otoimmün saldırı ve otoantikorlar beta hücrelerine yöneliktir; delta hücreleri hedef değildir.\n\n- **İmmün mekanizma:** Beta hücre antijenlerine karşı T hücre toleransının kaybı; CD8+ T hücre sitotoksisitesi ve Th1 kaynaklı sitokinler (IFN-γ, TNF, IL-1) beta hücre yıkımına yol açar.\n- **Otoantikorlar:** İnsülin, GAD65, IA-2 ve ZnT8 antikorları klinik başlangıçtan yıllar önce saptanabilir; hasar göstergesidir, doğrudan yıkıcı değildir.\n- **Genetik:** En güçlü katkı HLA-DR3 ve DR4 (DQ8) bölgesindendir; CTLA4, PTPN22, IL2RA ve insülin geni polimorfizmleri de risk artırır.\n- **Çevresel:** Viral enfeksiyonlar moleküler taklitçilik veya bystander hasarla süreci başlatabilir.\n- **Morfoloji:** Erken dönemde insülitis, geç dönemde adacık atrofisi ve beta hücre kaybı görülür.\n\nSınav: Tip 1 diyabette otoantikorlar beta hücre antijenlerine yöneliktir; GAD65 en sık kullanılan tanısal belirteçtir."
-        },
-        {
-         "id": "63f3f16ab99d",
-         "questionNumber": 216,
-         "stem": "Aşağıdakilerden hangisi diyabet komplikasyonlarının oluşmasında sorumlu tutulan mekanizmalardan biri değildir?",
-         "correctAnswer": "E",
-         "options": [
-          {
-           "key": "A",
-           "text": "İleri glikasyon son ürünlerinin oluşması"
-          },
-          {
-           "key": "B",
-           "text": "İntraselüler hiperglisemi"
-          },
-          {
-           "key": "C",
-           "text": "Poliol yolunda bozukluklar"
-          },
-          {
-           "key": "D",
-           "text": "Protein kinaz C aktivasyonu"
-          },
-          {
-           "key": "E",
-           "text": "Peroksizom proliferatörüyle aktive edilen reseptör-gama (PPAR-gama) aktivasyonu"
-          }
-         ],
-         "year": "2018-2019",
-         "discipline": "İç Hastalıkları",
-         "topic": "Diabetes Mellitus Sınıflandırılması, Tanısı ve Komplikasyonları",
-         "explanation": "PPAR-gama aktivasyonu diyabet komplikasyonlarına yol açan bir mekanizma değil, tiazolidindionların insülin duyarlılığını artıran tedavi hedefidir.\n\n- **Başlangıç olayı:** İnsülinden bağımsız glukoz alan dokularda (endotel, retina, glomerül, Schwann hücresi) kronik hiperglisemi hücre içi glukozu artırır.\n- **İleri glikasyon son ürünleri:** Protein ve matriksin glikasyonu, RAGE aracılı sitokin ve büyüme faktörü salınımı, bazal membran kalınlaşması.\n- **Protein kinaz C:** Diaçilgliserol artışıyla aktive olur; vasküler geçirgenlik ve anjiyogenez artar.\n- **Poliol yolu:** Sorbitol birikimi ve NADPH azalmasıyla oksidatif stres; lens ve periferik sinirde belirgindir.\n- **Heksozamin yolu ve oksidatif stres:** Mitokondriyal süperoksid artışı bu yolların ortak paydasıdır.\n\nSınav: PPAR-gama glitazonların, PPAR-alfa ise fibratların hedefidir; ikisi de komplikasyon mekanizması olarak sorulmaz."
-        },
-        {
          "id": "past-1790877037917-676360",
          "questionNumber": 13,
          "stem": "Tip 1 diabetes mellitus (T1DM) ile ilgili ifadelerden hangisi yanlıştır?",
@@ -16332,6 +16044,70 @@
        "slaytlar": [],
        "cikmisSorular": [
         {
+         "id": "past-1790877047452-960770",
+         "questionNumber": 16,
+         "stem": "Diyabetes mellitus tedavisi ile ilgili olarak aşağıdaki ifadeler veriliyor:\nI. Sülfonilürelerin en sık yan etkisi agranülositozdur.\nII. Yaşam tarzı değişikliği ve egzersiz ilk basamak tedavidir.\nIII. Dekompanse karaciğer yetmezliğinde biguanid tedavisi verilebilir.\nIV. Akarbozun en sık yan etkisi hazımsızlık ve şişkinliktir.\nBu ifadelerden hangileri yanlıştır?",
+         "correctAnswer": "B",
+         "options": [
+          {
+           "key": "A",
+           "text": "I, II ve III"
+          },
+          {
+           "key": "B",
+           "text": "I ve III"
+          },
+          {
+           "key": "C",
+           "text": "II ve IV"
+          },
+          {
+           "key": "D",
+           "text": "Yalnız IV"
+          },
+          {
+           "key": "E",
+           "text": "I, II, III ve IV"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "İç Hastalıkları",
+         "topic": "Diabetes Mellitus Sınıflandırılması, Tanısı ve Komplikasyonları",
+         "explanation": "Yanlış öncüller I ve III'tür: sülfonilürelerin en sık yan etkisi hipoglisemidir ve metformin dekompanse karaciğer yetmezliğinde verilmez.\n\n- **Sülfonilüreler:** Hipoglisemi (özellikle uzun etkili gliburid, yaşlı ve böbrek yetersizliğinde) ve kilo artışı başlıca yan etkilerdir; kan diskrazileri, kolestaz, döküntü nadirdir.\n- **Biguanidler:** Böbrekten değişmeden atılır; karaciğer ve böbrek yetmezliği, dekompanse kalp yetmezliği, ağır hipoksemi ve alkolizmde laktik asidoz riski nedeniyle kontrendikedir.\n- **Yaşam tarzı:** Diyet, kilo verme ve haftada ≥150 dakika orta yoğunlukta egzersiz ilk basamaktır.\n- **Akarboz:** Kolonda bakteriyel fermentasyon gaz, şişkinlik, diyare yapar; hipoglisemi gelişirse sukroz değil glukoz verilir.\n\nSınav: Metforminde korkulan yan etki laktik asidoz, sülfonilürede hipoglisemi, akarbozda GİS yakınmaları, glitazonlarda ödem ve kalp yetmezliğidir."
+        },
+        {
+         "id": "past-1790877047559-415942",
+         "questionNumber": 31,
+         "stem": "İntravenöz (İV) olarak da verilebilen insülin çeşidi aşağıdakilerden hangisidir?",
+         "correctAnswer": "D",
+         "options": [
+          {
+           "key": "A",
+           "text": "İnsülin lispro"
+          },
+          {
+           "key": "B",
+           "text": "İnsülin glarjin"
+          },
+          {
+           "key": "C",
+           "text": "İnsülin degludec"
+          },
+          {
+           "key": "D",
+           "text": "İnsülin regüler"
+          },
+          {
+           "key": "E",
+           "text": "İnsülin detemir"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "İç Hastalıkları",
+         "topic": "Diabetes Mellitus Sınıflandırılması, Tanısı ve Komplikasyonları",
+         "explanation": "Deri altı kullanımının yanı sıra intravenöz olarak da verilebilen insülin, regüler (kristalize) insan insülinidir.\n\n- **Fiziksel özellik:** Berrak çözelti; partikül ya da depo mekanizması yoktur.\n- **İV kinetik:** Etki hemen başlar, yarı ömrü 5–10 dakika; infüzyon durdurulunca etki hızla kaybolur, bu yüzden geçişte bazal insülin önceden yapılmalıdır.\n- **Uzun etkili analoglar:** Glarjin (çökelme), detemir (albümin bağlanması), degludek (multiheksamer) depo ilkesiyle çalışır; İV uygulama bu mekanizmayı ortadan kaldırır.\n- **Klinik endikasyonlar:** DKA ve HHS'de 0,1 Ü/kg/saat infüzyon; hiperkalemide 10 Ü regüler insülin + dekstroz.\n- **Uygulama:** İnfüzyon seti plastiğe adsorpsiyonu azaltmak için önceden insülinli sıvıyla yıkanır.\n\nSınav: İV insülin sorusunun cevabı hemen her zaman regüler insülindir; NPH ve bazal analoglar tuzaktır."
+        },
+        {
          "id": "0f484d20521c",
          "questionNumber": 183,
          "stem": "Aşağıdakilerden hangisi diyabetin makrovasküler komplikasyonlarından biridir?",
@@ -16362,6 +16138,38 @@
          "discipline": "İç Hastalıkları",
          "topic": "Diabetes Mellitus Sınıflandırılması, Tanısı ve Komplikasyonları",
          "explanation": "Serebrovasküler hastalık, büyük ve orta çaplı arterleri tutan diyabetik makrovasküler komplikasyonlardandır.\n\n- **Makrovasküler:** Koroner arter hastalığı, serebrovasküler hastalık ve periferik arter hastalığı; temelde hızlanmış ateroskleroz vardır ve diyabetlilerde en sık ölüm nedenidir.\n- **Mikrovasküler:** Retinopati, nefropati ve nöropati; hiperglisemi süresi ve düzeyiyle yakından ilişkilidir.\n- **Mekanizmalar:** İleri glikasyon son ürünleri, poliol yolu, protein kinaz C aktivasyonu ve heksozamin yolu endotel hasarı ve bazal membran kalınlaşması yapar.\n- **Korunma:** Glisemik kontrol mikrovasküler riski güçlü biçimde azaltır; makrovasküler riskte kan basıncı, lipid kontrolü ve sigara bırakma daha belirleyicidir.\n\nSınav: Nöropati mikrovasküler grupta sayılır; hipoglisemi vasküler değil akut metabolik komplikasyondur."
+        },
+        {
+         "id": "8003dd6c762d",
+         "questionNumber": 184,
+         "stem": "Aşağıdakilerden hangisi insülin tedavisinin yan etkilerinden biri değildir?",
+         "correctAnswer": "E",
+         "options": [
+          {
+           "key": "A",
+           "text": "Hipoglisemi"
+          },
+          {
+           "key": "B",
+           "text": "Kilo artışı"
+          },
+          {
+           "key": "C",
+           "text": "Lipohipertrofi"
+          },
+          {
+           "key": "D",
+           "text": "Lokal ağrı"
+          },
+          {
+           "key": "E",
+           "text": "Hiperglisemi"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "İç Hastalıkları",
+         "topic": "Diabetes Mellitus Sınıflandırılması, Tanısı ve Komplikasyonları",
+         "explanation": "İnsülinin etkisi kan glukozunu düşürmektir; hiperglisemi bu nedenle yan etki değil tedavi edilen durumdur. Hipoglisemi, kilo artışı ve enjeksiyon yeri reaksiyonları ise bilinen yan etkilerdir.\n\n- **Hipoglisemi:** En sık ve en önemli yan etki; bilinçli hastada 15–20 g hızlı emilen karbonhidrat, bilinç kaybında glukagon ya da intravenöz dekstroz verilir.\n- **Kilo artışı:** Anabolik etki ve glukozüri kaybının ortadan kalkması sonucu gelişir.\n- **Lipodistrofi:** Lipohipertrofi aynı bölgeye tekrarlanan enjeksiyonla, lipoatrofi ise eski saflaştırılmamış insülinlerle immün mekanizmayla görülürdü.\n- **Diğerleri:** Hipokalemi (potasyumun hücre içine geçişi), lokal ve nadiren sistemik alerji, insülin ödemi.\n- **Somogyi ve şafak fenomeni:** Sabah hiperglisemisi gece hipoglisemisine rebound (Somogyi) ya da sabah kontrregülatuar hormon artışına (şafak) bağlıdır; ilaç yan etkisi değil dozlama sorunudur.\n\nSınav: İnsülin tedavisinin elektrolit yan etkisi hipokalemidir; diyabetik ketoasidoz tedavisinde potasyum izlenir."
         },
         {
          "id": "f047d34e78ff",
@@ -16426,6 +16234,38 @@
          "discipline": "İç Hastalıkları",
          "topic": "Diabetes Mellitus Sınıflandırılması, Tanısı ve Komplikasyonları",
          "explanation": "Seçenekler arasında çocukluk çağı tip 1 diyabetinde başvuruyu en sık belirleyen tablo diyabetik ketoasidozdur; ülkemizde ve dünyada yeni tanıların önemli bir bölümü DKA ile hastaneye gelir.\n\n- **Patofizyoloji:** Otoimmün beta hücre yıkımı → mutlak insülin eksikliği → glukagon/insülin oranı artışı → lipoliz, serbest yağ asitlerinden keton cismi üretimi.\n- **Klinik:** Poliüri, polidipsi, kilo kaybı; ardından karın ağrısı, kusma, dehidratasyon, Kussmaul solunumu, aseton kokusu.\n- **Laboratuvar:** Hiperglisemi, ketonemi/ketonüri, pH <7,30 veya bikarbonat <15–18 mEq/L, artmış anyon açığı.\n- **Risk:** Küçük yaş ve tanının gecikmesi DKA ile başvuru oranını artırır; beyin ödemi en korkulan komplikasyondur.\n- **Not:** Klasik semptomlar (poliüri-polidipsi) DKA'dan önce başlar; ancak seçenekler içinde bir klinik başvuru tablosu olarak yalnızca DKA yer alır.\n\nSınav: Tip 1 DM akut, ketozla seyreden; tip 2 DM sinsi, sıklıkla tarama ile yakalanan hastalıktır."
+        },
+        {
+         "id": "64fa829f47f6",
+         "questionNumber": 200,
+         "stem": "İnsülin hormonu, glukozun hücre içine alınmasında hangi glukoz taşıyıcısı (GLUT) izoformu üzerinden etki eder?",
+         "correctAnswer": "D",
+         "options": [
+          {
+           "key": "A",
+           "text": "GLUT-1"
+          },
+          {
+           "key": "B",
+           "text": "GLUT-2"
+          },
+          {
+           "key": "C",
+           "text": "GLUT-3"
+          },
+          {
+           "key": "D",
+           "text": "GLUT-4"
+          },
+          {
+           "key": "E",
+           "text": "PPAR-alfa"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "İç Hastalıkları",
+         "topic": "Diabetes Mellitus Sınıflandırılması, Tanısı ve Komplikasyonları",
+         "explanation": "İnsülin, kas ve yağ dokusunda GLUT-4 taşıyıcılarını hücre içi depolardan plazma membranına taşıyarak glukoz alımını artırır.\n\n- **Sinyal yolu:** İnsülin reseptörünün tirozin kinaz aktivitesi IRS-1'i fosforiller; PI3K ve Akt aktivasyonu GLUT-4 içeren veziküllerin membrana füzyonunu başlatır.\n- **İnsülinden bağımsız izoformlar:** GLUT-1 (eritrosit, beyin endoteli), GLUT-2 (beta hücresi, karaciğer), GLUT-3 (nöron) ve fruktoz taşıyıcısı GLUT-5.\n- **Egzersiz etkisi:** Kas kasılması AMPK üzerinden insülinden bağımsız olarak da GLUT-4 translokasyonu yapar; bu nedenle egzersiz insülin direncinde glukoz kontrolünü iyileştirir.\n- **Klinik bağlantı:** Tip 2 diyabette insülin direnci büyük ölçüde GLUT-4 translokasyonunun azalmasıyla ilişkilidir; tiazolidindionlar GLUT-4 ekspresyonunu artırır.\n\nSınav: Beta hücresinin glukoz sensörü GLUT-2, insüline yanıt veren taşıyıcı GLUT-4'tür."
         },
         {
          "id": "k1-2019-2020-q043",
@@ -17080,34 +16920,34 @@
         {
          "id": "past-1790877047290-8452",
          "questionNumber": 3,
-         "stem": "Diyabetin akut komplikasyonlarından olmayan aşağıdakilerden hangisidir?",
-         "correctAnswer": "D",
+         "stem": "Diyabetin akut komplikasyonlarından olmayan hangisidir?",
+         "correctAnswer": "A",
          "options": [
           {
            "key": "A",
-           "text": "Hipoglisemi"
-          },
-          {
-           "key": "B",
-           "text": "Hiperglisemi"
-          },
-          {
-           "key": "C",
-           "text": "Diyabetik ketoasidoz"
-          },
-          {
-           "key": "D",
            "text": "Diyabetik nefropati"
           },
           {
+           "key": "B",
+           "text": "Hipoglisemi"
+          },
+          {
+           "key": "C",
+           "text": "Hiperglisemi"
+          },
+          {
+           "key": "D",
+           "text": "Diyabetik ketoasidoz"
+          },
+          {
            "key": "E",
-           "text": "Hiperglisemik hiperosmolar nonketotik koma"
+           "text": "Hiperosmolar nonketotik koma"
           }
          ],
          "year": "2018-2019",
          "discipline": "İç Hastalıkları",
          "topic": "Diabetes Mellitus Sınıflandırılması, Tanısı ve Komplikasyonları",
-         "explanation": "Diyabetik nefropati kronik mikrovasküler bir komplikasyondur; diğer seçenekler akut metabolik komplikasyonlardır.\n\n- **Akut komplikasyonlar:** Hipoglisemi, diyabetik ketoasidoz, hiperglisemik hiperosmolar durum ve laktik asidoz; saatler-günler içinde gelişir, acil müdahale gerektirir.\n- **Kronik mikrovasküler:** Retinopati, nefropati, nöropati; hiperglisemi süresi ve düzeyiyle ilişkilidir.\n- **Kronik makrovasküler:** Koroner arter hastalığı, serebrovasküler hastalık, periferik arter hastalığı.\n- **Nefropati patogenezi:** Hiperfiltrasyon, ileri glikasyon son ürünleri ve RAAS aktivasyonu glomerüloskleroza (Kimmelstiel-Wilson nodülleri) yol açar; tarama idrar albümin/kreatinin oranıyla yapılır.\n\nSınav: Akut-kronik ayrımında zamanı düşün; nefropati, retinopati ve nöropati yıllar içinde gelişen kronik komplikasyonlardır."
+         "explanation": "> [!IMPORTANT]\n> **Cevap anahtarı düzeltildi:** Önceki anahtar B (Hipoglisemi) idi; ders kaynağına/tıbbi bilgiye göre doğru cevap A (Diyabetik nefropati). Gerekçe: K6 DM Tanı İzlem Komplikasyon özeti: 'Diyabetin Kronik Komplikasyonları Mikrovasküler … Nefropati'; D11 D12 Diyabet: 'İatrojenik Hipoglisemi en sık akut komplikasyon' → akut olmayan A Düzeltme: 2026-10-21.\n\nDoğru cevap A'dır; diyabetik nefropati akut değil, kronik mikrovasküler bir komplikasyondur.\n- **Akut komplikasyonlar:** Hipoglisemi, ağır hiperglisemi, diyabetik ketoasidoz ve hiperosmolar nonketotik koma saatler ya da günler içinde gelişir.\n- **Kronik komplikasyonlar:** Nefropati, retinopati ve nöropati yıllar süren hiperglisemiyle küçük damarlarda gelişir."
         },
         {
          "id": "past-q-Kurul_I_S_nav_-27",
@@ -17221,36 +17061,36 @@
        "slaytlar": [],
        "cikmisSorular": [
         {
-         "id": "bfeb39a92f04",
-         "questionNumber": 221,
-         "stem": "Antidiüretik hormon (ADH) aşağıdakilerden hangisinde sentezlenir?",
-         "correctAnswer": "B",
+         "id": "7372509ce6cc",
+         "questionNumber": 198,
+         "stem": "Aşağıdakilerden hangisi adenohipofizden salgılanan hormonların salınımını baskılayıcı (inhibitör) etkisi olan hormondur?",
+         "correctAnswer": "C",
          "options": [
           {
            "key": "A",
-           "text": "Adenohipofiz"
+           "text": "Folikül stimülan hormon"
           },
           {
            "key": "B",
-           "text": "Hipotalamusun supraoptik nükleusu"
+           "text": "Prolaktin"
           },
           {
            "key": "C",
-           "text": "Nörohipofiz"
+           "text": "Somatostatin"
           },
           {
            "key": "D",
-           "text": "Hipotalamusun arkuat nükleusu"
+           "text": "İnsülin"
           },
           {
            "key": "E",
-           "text": "Pineal gland"
+           "text": "Luteinizan hormon"
           }
          ],
          "year": "2018-2019",
          "discipline": "İç Hastalıkları",
          "topic": "Hipotalamus-Hipofiz hastalıklarına giriş",
-         "explanation": "ADH hipotalamusta, başlıca supraoptik nükleusun magnoselüler nöronlarında sentezlenir; arka hipofiz yalnızca depolama ve salgı yeridir.\n\n- **Sentez ve taşınma:** Preprovazopresin, nörofizin II ve kopeptinle birlikte üretilir; hipotalamohipofizer trakt boyunca aksonal taşınmayla nörohipofize ulaşır.\n- **Supraoptik–paraventriküler ayrımı:** Klasik bilgiye göre supraoptik nükleus ağırlıklı ADH, paraventriküler nükleus ağırlıklı oksitosin üretir; iki çekirdek de her iki hormonu bir miktar sentezler.\n- **Salgı uyarıları:** Plazma osmolalitesinde artış (osmoreseptörler) ve belirgin hipovolemi/hipotansiyon ADH salgısını artırır.\n- **Etki:** Toplayıcı kanalda V2 reseptörü → cAMP → akuaporin-2 ile su geri emilimi; damarda V1 reseptörüyle vazokonstriksiyon.\n- **Klinik:** Santral diabetes insipidusta sentez/salgı bozuktur; kopeptin ölçümü ADH'nin vekil göstergesidir.\n\nSınav: “Sentez” hipotalamus, “depolama/salgı” nörohipofizdir; nörohipofiz şıkkı en güçlü çeldiricidir."
+         "explanation": "Somatostatin, hipotalamustan salgılanan ve ön hipofizden büyüme hormonu ile TSH salınımını baskılayan inhibitör hormondur.\n\n- **Hipotalamik uyarıcılar:** GHRH, TRH, CRH ve GnRH ön hipofiz hormonlarının salınımını artırır.\n- **Hipotalamik inhibitörler:** Somatostatin (GH ve TSH) ve dopamin (prolaktin).\n- **Diğer kaynaklar:** Somatostatin pankreas delta hücrelerinden ve mide-barsak D hücrelerinden de salgılanır; insülin, glukagon, gastrin ve mide asidini baskılar.\n- **Farmakoloji:** Oktreotid ve lanreotid uzun etkili analoglardır; akromegali, nöroendokrin tümörler ve varis kanamasında kullanılır, safra taşı ve steatore yan etkileridir.\n- **Çeldirici hormonlar:** FSH, LH ve prolaktin ön hipofiz hormonlarının kendisidir; insülin ise periferik bir hormondur.\n\nSınav: Prolaktini baskılayan hipotalamik faktör dopamin, GH'yi baskılayan somatostatindir; ikisi sık karıştırılır."
         },
         {
          "id": "past-1790877042098-213516",
@@ -17587,38 +17427,6 @@
          "discipline": "İç Hastalıkları",
          "topic": "Hipotalamus-Hipofiz hastalıklarına giriş",
          "explanation": "Fizyolojik, ilaç, tiroid, böbrek ve karaciğer nedenleri dışlanmış amenore-galaktore tablosunun en olası nedeni prolaktinomadır.\n\n- **Epidemiyoloji:** En sık fonksiyonel hipofiz adenomudur; kadınlarda çoğunlukla mikroadenom, erkeklerde makroadenom olarak saptanır.\n- **Mekanizma:** Yüksek prolaktin GnRH pulsatilitesini bozar; LH-FSH azalır, amenore, infertilite, libido kaybı ve uzun dönemde osteoporoz gelişir.\n- **Hiperprolaktinemi nedenleri:** Gebelik, dopamin antagonistleri (antipsikotik, metoklopramid), primer hipotiroidi (TRH artışı), böbrek yetmezliği, sap basısı.\n- **Tanı:** Serum prolaktin düzeyi ve hipofiz MR; çok yüksek değerler makroprolaktinomayı düşündürür.\n- **Tedavi:** İlk seçenek dopamin agonisti kabergolindir; cerrahi direnç veya intoleransta düşünülür.\n\nSınav: Prolaktinoma, cerrahi değil medikal tedavinin (kabergolin) ilk seçenek olduğu hipofiz adenomudur."
-        },
-        {
-         "id": "4537bb35f22a",
-         "questionNumber": 202,
-         "stem": "Acil servise başvuran 45 yaşındaki kadın hastanın genel durumu kötü, bilinci konfüzedir. Yakınlarından alınan anamnezde 3 yıl önce hipofiz cerrahisi geçirdiği öğrenilmiştir. Fizik muayenede turgor-tonus azalmış, solunum sesleri doğal, kalp sesleri taşikardiktir. Batın muayenesi normaldir. Kan basıncı 60/40 mmHg ölçülmüştür. Laboratuvar bulgularında hiponatremi dikkati çekmektedir. Bu hastada en olası tanı aşağıdakilerden hangisidir?",
-         "correctAnswer": "A",
-         "options": [
-          {
-           "key": "A",
-           "text": "Akut adrenal yetmezlik"
-          },
-          {
-           "key": "B",
-           "text": "Hipotiroidi"
-          },
-          {
-           "key": "C",
-           "text": "Hipertiroidi"
-          },
-          {
-           "key": "D",
-           "text": "Cushing sendromu"
-          },
-          {
-           "key": "E",
-           "text": "Feokromositoma"
-          }
-         ],
-         "year": "2018-2019",
-         "discipline": "İç Hastalıkları",
-         "topic": "Hipotalamus-Hipofiz hastalıklarına giriş",
-         "explanation": "Hipofiz cerrahisi öyküsü, şok, konfüzyon, dehidratasyon ve hiponatremi birlikteliği ACTH eksikliğine bağlı akut adrenal yetmezliği düşündürür.\n\n- **Patofizyoloji:** Kortizol damar tonusunun katekolaminlere yanıtını sürdürür; eksikliğinde vazodilatasyon ve dirençli hipotansiyon gelişir.\n- **Hiponatremi:** Sekonder yetmezlikte aldosteron korunur; hiponatremi kortizol eksikliğiyle artan ADH salınımı ve serbest su atılımının bozulmasına bağlıdır. Hiperkalemi primer (Addison) formda belirgindir.\n- **Tetikleyiciler:** Enfeksiyon, cerrahi, travma veya replasman tedavisinin aksatılması.\n- **Tedavi:** Tanı testini beklemeden kan örneği alınıp 100 mg IV hidrokortizon ve bol izotonik sıvı verilir; hipoglisemi düzeltilir.\n- **Hasta eğitimi:** Stres dozları ve acil kartı krizi önler.\n\nSınav: Sekonder adrenal yetmezlikte hiperpigmentasyon ve hiperkalemi yoktur; hiponatremi her iki formda görülebilir."
         },
         {
          "id": "391f35006b1d",
@@ -18560,7 +18368,7 @@
          "year": "2020-2021",
          "discipline": "İç Hastalıkları",
          "topic": "Endokrin Sistem Hastalıklarına Genel Yaklaşım",
-         "explanation": "Seçeneklerin hepsi amino asit zincirinden oluşan hormonlardır; ayrım zincir uzunluğuna göre yapılır. Kısa peptitler (oligopeptit) ile 100 amino asidi aşan proteinler arasında kalan 51 amino asitlik insülin, polipeptit hormonun klasik örneğidir.\n\n- **Oligopeptitler:** GnRH (10 aa) ve oksitosin (9 aa) hipotalamik kökenli kısa zincirlerdir; TRH (3 aa) ve vazopressin (9 aa) de bu gruptadır.\n- **Polipeptitler:** İnsülin (51 aa, A ve B zinciri), glukagon (29 aa), ACTH (39 aa) ve kalsitonin (32 aa) gibi orta uzunluktaki zincirler.\n- **Proteinler:** Büyüme hormonu (191 aa) ve prolaktin (yaklaşık 199 aa) tek zincirli büyük moleküllerdir; FSH, LH ve TSH ise glikoprotein grubundadır.\n- **Ortak özellik:** Tümü suda çözünür, plazmada serbest taşınır ve hücre zarı reseptörleri üzerinden etki eder; steroid ve tiroid hormonlarından bu yönüyle ayrılır.\n- **Not:** Peptit/polipeptit/protein sınırı kaynaklara göre değişir; bazı kaynaklar büyüme hormonunu da polipeptit, insülini küçük protein olarak anar. Tek cevap boyut sınıflamasına göre verilmiştir.\n\nSınav: GnRH ve oksitosin kısa peptit, büyüme hormonu ve prolaktin protein, insülin ise iki zincirli polipeptit olarak sınıflanır."
+         "explanation": "> [!IMPORTANT]\n> **Soru notu:** GnRH (dekapeptit) ve oksitosin (nonapeptit) kısa peptitlerdir; büyüme hormonu ve prolaktin uzun zincirli polipeptit/protein hormonlarıdır. Sınavın beklediği klasik örnek insülindir (iki zincirli polipeptit) ve anahtar E korunur; büyüme hormonu ve prolaktin de polipeptit sayılabildiği için soru tartışmalıdır. (2026-10-21)\n\nSeçeneklerin hepsi amino asit zincirinden oluşan hormonlardır; ayrım zincir uzunluğuna göre yapılır. Kısa peptitler (oligopeptit) ile 100 amino asidi aşan proteinler arasında kalan 51 amino asitlik insülin, polipeptit hormonun klasik örneğidir.\n\n- **Oligopeptitler:** GnRH (10 aa) ve oksitosin (9 aa) hipotalamik kökenli kısa zincirlerdir; TRH (3 aa) ve vazopressin (9 aa) de bu gruptadır.\n- **Polipeptitler:** İnsülin (51 aa, A ve B zinciri), glukagon (29 aa), ACTH (39 aa) ve kalsitonin (32 aa) gibi orta uzunluktaki zincirler.\n- **Proteinler:** Büyüme hormonu (191 aa) ve prolaktin (yaklaşık 199 aa) tek zincirli büyük moleküllerdir; FSH, LH ve TSH ise glikoprotein grubundadır.\n- **Ortak özellik:** Tümü suda çözünür, plazmada serbest taşınır ve hücre zarı reseptörleri üzerinden etki eder; steroid ve tiroid hormonlarından bu yönüyle ayrılır.\n- **Not:** Peptit/polipeptit/protein sınırı kaynaklara göre değişir; bazı kaynaklar büyüme hormonunu da polipeptit, insülini küçük protein olarak anar. Tek cevap boyut sınıflamasına göre verilmiştir.\n\nSınav: GnRH ve oksitosin kısa peptit, büyüme hormonu ve prolaktin protein, insülin ise iki zincirli polipeptit olarak sınıflanır."
         },
         {
          "id": "cbafd7779955",
@@ -18653,7 +18461,40 @@
        "id": "k6-d6-c4-kz-2",
        "metin": "Endokrin Sistem Hastalıklarına Genel Yaklaşım ile ilişkili klinik semptomları, tanı kriterlerini ve ayırıcı tanı basamaklarını değerlendirir.",
        "slaytlar": [],
-       "cikmisSorular": [],
+       "cikmisSorular": [
+        {
+         "id": "722b6c92fd78",
+         "questionNumber": 201,
+         "stem": "Aşağıdaki hormonlardan hangisinin reseptörü çekirdekte bulunmaktadır?",
+         "correctAnswer": "D",
+         "options": [
+          {
+           "key": "A",
+           "text": "İnsülin"
+          },
+          {
+           "key": "B",
+           "text": "Norepinefrin"
+          },
+          {
+           "key": "C",
+           "text": "Glukagon"
+          },
+          {
+           "key": "D",
+           "text": "Tiroid hormonu"
+          },
+          {
+           "key": "E",
+           "text": "Kortizol"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "İç Hastalıkları",
+         "topic": "Endokrin Sistem Hastalıklarına Genel Yaklaşım",
+         "explanation": "Reseptörü doğrudan çekirdekte yerleşik olan hormon tiroid hormonudur; kortizol reseptörü ise ligand bağlanana kadar sitoplazmadadır.\n\n- **Membran reseptörleri:** İnsülin (tirozin kinaz), norepinefrin ve glukagon (GPCR) gibi peptid ve katekolaminler hücreye girmeden ikinci haberci sistemleri kullanır.\n- **Sitoplazmik reseptörler:** Glukokortikoid, mineralokortikoid ve androjen reseptörleri hsp90'a bağlı sitoplazmik kompleks hâlindedir; hormon bağlanınca dimerize olup çekirdeğe geçer.\n- **Nükleer yerleşik reseptörler:** Tiroid hormonu, retinoik asit ve D vitamini reseptörleri çekirdekte DNA'ya bağlı bekler; RXR ile heterodimer oluşturur.\n- **Farmakolojik bağlantı:** T3, T4'ten yaklaşık 10 kat daha yüksek afiniteyle reseptöre bağlanır; T4 hücre içinde 5'-deiyodinaz ile T3'e dönüşerek etki eder.\n- **Klinik sonuç:** Genomik etkiler nedeniyle tiroid hormonu ve steroid etkileri saatler-günler içinde ortaya çıkar.\n\nSınav: 'Çekirdekte' denince tiroid hormonu; 'sitoplazmada' denince kortizol/steroid reseptörü düşünülmelidir."
+        }
+       ],
        "ornekSorular": [],
        "sozlukTerimleri": [],
        "ozetler": []
@@ -18663,6 +18504,38 @@
        "metin": "Endokrin Sistem Hastalıklarına Genel Yaklaşım klinik yönetimini, farmakoterapi ilkelerini ve komplikasyonlardan korunma yaklaşımlarını sıralar.",
        "slaytlar": [],
        "cikmisSorular": [
+        {
+         "id": "4537bb35f22a",
+         "questionNumber": 202,
+         "stem": "Acil servise başvuran 45 yaşındaki kadın hastanın genel durumu kötü, bilinci konfüzedir. Yakınlarından alınan anamnezde 3 yıl önce hipofiz cerrahisi geçirdiği öğrenilmiştir. Fizik muayenede turgor-tonus azalmış, solunum sesleri doğal, kalp sesleri taşikardiktir. Batın muayenesi normaldir. Kan basıncı 60/40 mmHg ölçülmüştür. Laboratuvar bulgularında hiponatremi dikkati çekmektedir. Bu hastada en olası tanı aşağıdakilerden hangisidir?",
+         "correctAnswer": "A",
+         "options": [
+          {
+           "key": "A",
+           "text": "Akut adrenal yetmezlik"
+          },
+          {
+           "key": "B",
+           "text": "Hipotiroidi"
+          },
+          {
+           "key": "C",
+           "text": "Hipertiroidi"
+          },
+          {
+           "key": "D",
+           "text": "Cushing sendromu"
+          },
+          {
+           "key": "E",
+           "text": "Feokromositoma"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "İç Hastalıkları",
+         "topic": "Endokrin Sistem Hastalıklarına Genel Yaklaşım",
+         "explanation": "Hipofiz cerrahisi öyküsü, şok, konfüzyon, dehidratasyon ve hiponatremi birlikteliği ACTH eksikliğine bağlı akut adrenal yetmezliği düşündürür.\n\n- **Patofizyoloji:** Kortizol damar tonusunun katekolaminlere yanıtını sürdürür; eksikliğinde vazodilatasyon ve dirençli hipotansiyon gelişir.\n- **Hiponatremi:** Sekonder yetmezlikte aldosteron korunur; hiponatremi kortizol eksikliğiyle artan ADH salınımı ve serbest su atılımının bozulmasına bağlıdır. Hiperkalemi primer (Addison) formda belirgindir.\n- **Tetikleyiciler:** Enfeksiyon, cerrahi, travma veya replasman tedavisinin aksatılması.\n- **Tedavi:** Tanı testini beklemeden kan örneği alınıp 100 mg IV hidrokortizon ve bol izotonik sıvı verilir; hipoglisemi düzeltilir.\n- **Hasta eğitimi:** Stres dozları ve acil kartı krizi önler.\n\nSınav: Sekonder adrenal yetmezlikte hiperpigmentasyon ve hiperkalemi yoktur; hiponatremi her iki formda görülebilir."
+        },
         {
          "id": "ac4551bbc343",
          "questionNumber": 29,
@@ -19922,6 +19795,70 @@
        "slaytlar": [],
        "cikmisSorular": [
         {
+         "id": "66c044e6fa8f",
+         "questionNumber": 179,
+         "stem": "Aşağıdakilerden hangisi hipokalsemi nedenleri arasında yer almaz?",
+         "correctAnswer": "E",
+         "options": [
+          {
+           "key": "A",
+           "text": "DiGeorge sendromu"
+          },
+          {
+           "key": "B",
+           "text": "Hipomagnezemi"
+          },
+          {
+           "key": "C",
+           "text": "Kronik böbrek yetmezliği ile birlikte azalmış 1,25(OH)2D üretimi"
+          },
+          {
+           "key": "D",
+           "text": "Furosemid kullanımı"
+          },
+          {
+           "key": "E",
+           "text": "Primer hiperparatiroidi"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "İç Hastalıkları",
+         "topic": "Elektrolitler ve Endokrin Sistem Arasındaki ilişki",
+         "explanation": "Primer hiperparatiroidi hiperkalseminin en sık nedenidir; hipokalsemiye yol açmaz. Diğer seçenekler PTH eksikliği, PTH direnci, vitamin D eksikliği veya renal kalsiyum kaybıyla hipokalsemi oluşturur.\n\n- **PTH eksikliği:** Cerrahi sonrası, otoimmün, DiGeorge sendromu gibi gelişimsel nedenler.\n- **Magnezyum bozukluğu:** Hipomagnezemi PTH salınımını ve etkisini bozar; tedavide önce magnezyum yerine konur.\n- **Vitamin D eksikliği/direnci:** Böbrek yetmezliğinde kalsitriol azalır, hiperfosfatemi eklenir; sekonder hiperparatiroidi gelişir.\n- **İlaçlar:** Kıvrım diüretikleri, bisfosfonatlar, denosumab, fenitoin ve sitrat yüklü kan transfüzyonu.\n- **Primer hiperparatiroidi:** Yüksek kalsiyum, düşük fosfor, yüksek ya da uygunsuz normal PTH; böbrek taşı, osteoporoz, nöropsikiyatrik bulgular.\n\nSınav: Tiyazidler kalsiyumu tutarak hiperkalsemi, kıvrım diüretikleri kalsiüriyle hipokalsemi eğilimi yapar; bu ayrım sık sorulur."
+        },
+        {
+         "id": "663ad28be3de",
+         "questionNumber": 205,
+         "stem": "Kalsiyum metabolizması bozuklukları için aşağıdakilerden hangisi yanlıştır?",
+         "correctAnswer": "A",
+         "options": [
+          {
+           "key": "A",
+           "text": "Hiperkalsemili hastalarda Chvostek bulgusu görülebilir"
+          },
+          {
+           "key": "B",
+           "text": "Hipokalsemili hastalarda Trousseau bulgusu görülebilir"
+          },
+          {
+           "key": "C",
+           "text": "Hipokalsemide EKG'de QT mesafesi uzar"
+          },
+          {
+           "key": "D",
+           "text": "Paratiroid adenomlarının çıkarılmasını takiben gelişen akut hipokalsemi tablosunda hastalarda ameliyat sonrasında laringeal spazm ve bronkospazm ortaya çıkabilir"
+          },
+          {
+           "key": "E",
+           "text": "Kronik hipokalsemide ciltte kabalaşma, pullanma artışı ve saç dökülmesi gözlenebilir"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "İç Hastalıkları",
+         "topic": "Elektrolitler ve Endokrin Sistem Arasındaki ilişki",
+         "explanation": "Chvostek ve Trousseau bulguları hipokalseminin işaretidir; hiperkalsemide nöromüsküler eksitabilite tersine azaldığından Chvostek beklenmez.\n\n- **Hipokalsemi mekanizması:** Düşük iyonize kalsiyum sodyum kanallarının açılma eşiğini düşürür; parestezi, karpopedal spazm, tetani, laringospazm ve nöbetler gelişir.\n- **EKG:** Hipokalsemide QT uzar, hiperkalsemide QT kısalır.\n- **Postoperatif hipokalsemi:** Paratiroidektomi ya da tiroidektomi sonrası aç kemik sendromu veya hipoparatiroidiyle ani gelişir; akut tetanide intravenöz kalsiyum glukonat verilir.\n- **Kronik bulgular:** Kuru ve pullu cilt, saç dökülmesi, tırnak kırılganlığı, katarakt, bazal ganglion kalsifikasyonu.\n- **Hiperkalsemi:** Kas güçsüzlüğü, konstipasyon, poliüri, böbrek taşı, nöropsikiyatrik bulgular; 'taşlar, kemikler, karın ağrısı ve psişik yakınmalar'.\n\nSınav: Chvostek normal bireylerin yaklaşık %10'unda da pozitif olabilir; Trousseau hipokalsemi için daha güvenilirdir."
+        },
+        {
          "id": "past-1790877045298-803540",
          "questionNumber": 6,
          "stem": "Metabolik alkalozda görülme ihtimali en yüksek olan hangisidir?",
@@ -20325,6 +20262,70 @@
        "metin": "Cinsel Farklılaşma Bozuklukları UZM. ile ilişkili klinik semptomları, tanı kriterlerini ve ayırıcı tanı basamaklarını değerlendirir.",
        "slaytlar": [],
        "cikmisSorular": [
+        {
+         "id": "d76a01737de9",
+         "questionNumber": 193,
+         "stem": "Yenidoğan bir bebekte ambigus genitalyanın en sık sebebi aşağıdakilerden hangisidir?",
+         "correctAnswer": "B",
+         "options": [
+          {
+           "key": "A",
+           "text": "Testiküler feminizasyon"
+          },
+          {
+           "key": "B",
+           "text": "Konjenital adrenal hiperplazi"
+          },
+          {
+           "key": "C",
+           "text": "Swyer sendromu"
+          },
+          {
+           "key": "D",
+           "text": "Kallmann sendromu"
+          },
+          {
+           "key": "E",
+           "text": "Sheehan sendromu"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "İç Hastalıkları",
+         "topic": "Cinsel Farklılaşma Bozuklukları",
+         "explanation": "Yenidoğanda ambigus genitalyanın en sık nedeni konjenital adrenal hiperplazidir; olguların %90-95'i 21-hidroksilaz (CYP21A2) eksikliğine bağlıdır ve 46,XX CGB'nin başlıca sebebidir.\n\n- **Patofizyoloji:** Kortizol yapımı bozulur, negatif geri bildirim kalkar ve ACTH artar; adrenal hiperplazi gelişir, 17-hidroksiprogesteron gibi öncüller androjen yoluna kayar.\n- **Klinik:** 46,XX bebekte klitoromegali, labioskrotal füzyon, ürogenital sinüs; iç genital organlar (uterus, over) normaldir. Tuz kaybettiren formda 2-3. haftada hiponatremi, hiperkalemi ve dehidratasyon krizi gelişir.\n- **Tanı:** Bazal veya ACTH ile uyarılmış 17-OH progesteron yüksekliği; ülkemizde yenidoğan tarama programındadır.\n- **Ayırıcı tanı:** İkinci sık neden miks gonadal disgenezidir (45,X/46,XY); 46,XY'de 5α-redüktaz 2 eksikliği ve parsiyel androjen duyarsızlığı akla gelir.\n- **Ayırt edici nokta:** Komplet androjen duyarsızlığı ve Swyer sendromunda dış genitalya dişidir; Kallmann ve Sheehan ise hipotalamo-hipofizer bozukluklardır.\n\nSınav: Ambigus genitalyalı yenidoğanda ilk istenecek tetkiklerden biri 17-OH progesteron ve elektrolitlerdir; atlanan tuz kaybı krizi ölümcül olabilir."
+        },
+        {
+         "id": "f7200ece8df5",
+         "questionNumber": 194,
+         "stem": "Konjenital adrenal hiperplazinin en sık sebebi aşağıdakilerden hangisidir?",
+         "correctAnswer": "C",
+         "options": [
+          {
+           "key": "A",
+           "text": "3-beta hidroksisteroid dehidrogenaz eksikliği"
+          },
+          {
+           "key": "B",
+           "text": "17-alfa hidroksilaz eksikliği"
+          },
+          {
+           "key": "C",
+           "text": "21-alfa hidroksilaz eksikliği"
+          },
+          {
+           "key": "D",
+           "text": "11-beta hidroksilaz eksikliği"
+          },
+          {
+           "key": "E",
+           "text": "StAR eksikliği"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "İç Hastalıkları",
+         "topic": "Cinsel Farklılaşma Bozuklukları",
+         "explanation": "Konjenital adrenal hiperplazinin en sık nedeni 21-hidroksilaz (CYP21A2) eksikliğidir.\n\n- **Patogenez:** Otozomal resesif enzim eksikliği kortizol sentezini azaltır; negatif geri bildirimin kalkmasıyla ACTH artar, adrenal korteks hiperplazi gösterir ve blok öncesi öncüller androjen yoluna kayar.\n- **Klinik formlar:** Klasik tuz kaybettiren (aldosteron eksikliği → hiponatremi, hiperkalemi, şok), basit virilizan ve klasik olmayan (geç başlangıçlı, hirsutizm, düzensiz adet) formlar.\n- **Tanı:** Bazal ya da ACTH ile uyarılmış 17-hidroksiprogesteron yüksekliği; yenidoğan taramasında da kullanılır.\n- **Ayırıcı tanı:** 11β-hidroksilaz ve 17α-hidroksilaz eksikliklerinde hipertansiyon vardır; 21-hidroksilaz eksikliğinde yoktur.\n- **Tedavi:** Glukokortikoid (± mineralokortikoid) replasmanı ACTH'yi baskılayarak androjen fazlalığını azaltır.\n\nSınav: Kız yenidoğanda belirsiz genitale eşlik eden tuz kaybı krizi 21-hidroksilaz eksikliğini; virilizasyonla hipertansiyon 11β-hidroksilaz eksikliğini düşündürür."
+        },
         {
          "id": "past-1790877037807-583040",
          "questionNumber": 1,
@@ -20897,6 +20898,38 @@
        "slaytlar": [],
        "cikmisSorular": [
         {
+         "id": "55a3530197f0",
+         "questionNumber": 195,
+         "stem": "35 yaşında kadın hasta polikliniğe şiddetli boyun ağrısı ile başvuruyor. Yapılan fizik muayenesinde palpasyonla tiroid loju oldukça ağrılıdır. Laboratuvar bulgularında hafif düzeyde tirotoksikoz, CRP ve sedimentasyon yüksekliği mevcuttur. Bu hasta için en olası tanı aşağıdakilerden hangisidir?",
+         "correctAnswer": "C",
+         "options": [
+          {
+           "key": "A",
+           "text": "Hashimoto tiroiditi"
+          },
+          {
+           "key": "B",
+           "text": "Postpartum tiroidit"
+          },
+          {
+           "key": "C",
+           "text": "Subakut granülomatöz tiroidit"
+          },
+          {
+           "key": "D",
+           "text": "Amiodarona bağlı tirotoksikoz"
+          },
+          {
+           "key": "E",
+           "text": "Akut tiroidit"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "İç Hastalıkları",
+         "topic": "Tiroid Bezi Hastalıkları",
+         "explanation": "Ağrılı ve hassas tiroid, hafif tirotoksikoz ve yüksek sedimentasyon/CRP üçlüsü subakut granülomatöz (de Quervain) tiroiditi düşündürür.\n\n- **Etiyoloji:** Çoğunlukla viral enfeksiyonu izleyen, HLA-B35 ile ilişkili, kendini sınırlayan inflamasyon; 30-50 yaş kadınlarda sık.\n- **Patogenez:** Folliküllerin yıkımıyla depolanmış hormon kana salınır; tirotoksikoz yapım artışına değil salınıma bağlıdır, bu nedenle radyoaktif iyot tutulumu düşüktür.\n- **Morfoloji:** Kolloid çevresinde çok çekirdekli dev hücreli granülomlar, başlangıçta nötrofilik mikroabseler.\n- **Seyir:** Tirotoksik faz, geçici hipotiroidi ve 6-8 haftada ötiroidiye dönüş.\n- **Ayırıcı tanı:** Postpartum ve sessiz tiroidit ağrısızdır; akut süpüratif tiroidit bakteriyeldir ve tiroid fonksiyonları genellikle normaldir.\n\nSınav: Ağrılı tiroid + yüksek sedimentasyon + düşük iyot tutulumu klasik de Quervain tablosudur."
+        },
+        {
          "id": "past-1790877041972-273084",
          "questionNumber": 13,
          "stem": "Aşağıdakilerden hangisi, hipertiroidi semptom ve bulgularından biri değildir?",
@@ -21049,38 +21082,6 @@
          "explanation": "Hiperkalsemi olgularının yaklaşık %90'ından primer hiperparatiroidi ve malign hastalıklar sorumludur; diğer nedenler göreceli olarak nadirdir.\n\n- **Primer hiperparatiroidi:** Ayaktan, asemptomatik hastada en sık nedendir; çoğu soliter paratiroid adenomudur, PTH yüksek ya da uygunsuz normaldir.\n- **Malignite:** Yatan hastada en sık nedendir; humoral hiperkalsemi (PTHrP; skuamöz hücreli karsinom, böbrek kanseri), osteolitik metastaz (meme) ve multipl miyelom başlıca mekanizmalardır, PTH baskılıdır.\n- **Granülomatöz hastalıklar:** Sarkoidoz ve tüberkülozda makrofaj 1α-hidroksilazı kalsitriol üretimini artırır; nadir bir nedendir.\n- **Süt-alkali sendromu:** Fazla kalsiyum ve alkali alımıyla hiperkalsemi, metabolik alkaloz ve böbrek yetmezliği gelişir.\n\nSınav: Ayaktan hastada primer hiperparatiroidi, hastanede malignite — ikisi birlikte hiperkalseminin büyük çoğunluğudur."
         },
         {
-         "id": "66c044e6fa8f",
-         "questionNumber": 179,
-         "stem": "Aşağıdakilerden hangisi hipokalsemi nedenleri arasında yer almaz?",
-         "correctAnswer": "E",
-         "options": [
-          {
-           "key": "A",
-           "text": "DiGeorge sendromu"
-          },
-          {
-           "key": "B",
-           "text": "Hipomagnezemi"
-          },
-          {
-           "key": "C",
-           "text": "Kronik böbrek yetmezliği ile birlikte azalmış 1,25(OH)2D üretimi"
-          },
-          {
-           "key": "D",
-           "text": "Furosemid kullanımı"
-          },
-          {
-           "key": "E",
-           "text": "Primer hiperparatiroidi"
-          }
-         ],
-         "year": "2018-2019",
-         "discipline": "İç Hastalıkları",
-         "topic": "Paratiroid bezi hastalıkları",
-         "explanation": "Primer hiperparatiroidi hiperkalseminin en sık nedenidir; hipokalsemiye yol açmaz. Diğer seçenekler PTH eksikliği, PTH direnci, vitamin D eksikliği veya renal kalsiyum kaybıyla hipokalsemi oluşturur.\n\n- **PTH eksikliği:** Cerrahi sonrası, otoimmün, DiGeorge sendromu gibi gelişimsel nedenler.\n- **Magnezyum bozukluğu:** Hipomagnezemi PTH salınımını ve etkisini bozar; tedavide önce magnezyum yerine konur.\n- **Vitamin D eksikliği/direnci:** Böbrek yetmezliğinde kalsitriol azalır, hiperfosfatemi eklenir; sekonder hiperparatiroidi gelişir.\n- **İlaçlar:** Kıvrım diüretikleri, bisfosfonatlar, denosumab, fenitoin ve sitrat yüklü kan transfüzyonu.\n- **Primer hiperparatiroidi:** Yüksek kalsiyum, düşük fosfor, yüksek ya da uygunsuz normal PTH; böbrek taşı, osteoporoz, nöropsikiyatrik bulgular.\n\nSınav: Tiyazidler kalsiyumu tutarak hiperkalsemi, kıvrım diüretikleri kalsiüriyle hipokalsemi eğilimi yapar; bu ayrım sık sorulur."
-        },
-        {
          "id": "f7d9b904d40f",
          "questionNumber": 204,
          "stem": "Kalsiyum metabolizması ile ilgili aşağıdakilerden hangisi doğrudur?",
@@ -21111,38 +21112,6 @@
          "discipline": "İç Hastalıkları",
          "topic": "Paratiroid bezi hastalıkları",
          "explanation": "Kalsiyumun aktif emilimi esas olarak duodenum ve proksimal jejunumda, kalsitriol kontrolünde gerçekleşir.\n\n- **PTH:** Plazma iyonize kalsiyumu düşünce CaSR üzerinden salınır; kemik rezorpsiyonunu, distal tübülde kalsiyum geri emilimini ve 1α-hidroksilaz aktivitesini artırır, fosfat atılımını artırır.\n- **Kalsitriol:** Böbrekte 1α-hidroksilaz ile oluşur; bağırsaktan kalsiyum ve fosfor emilimini artırır, plazma düzeylerini yükseltir.\n- **Kalsitonin:** Tiroid C hücrelerinden salınır; osteoklastları baskılayarak kalsiyumu düşürür, insanda fizyolojik rolü sınırlıdır.\n- **Emilim:** Aktif transselüler yol duodenumda (düşük kalsiyum alımında belirleyici), pasif parasellüler yol tüm ince bağırsakta işler.\n- **Düzenlenme:** Bu hormonlar hipofizden bağımsız, doğrudan mineral düzeylerine yanıtla çalışır.\n\nSınav: Kalsitonin “tiroid C hücresi + kalsiyum düşürür”; paratiroid ya da “artırır” ifadeleri klasik çeldiricidir."
-        },
-        {
-         "id": "0056327ab79e",
-         "questionNumber": 212,
-         "stem": "Sekonder hiperparatiroidinin en sık nedeni aşağıdakilerden hangisidir?",
-         "correctAnswer": "C",
-         "options": [
-          {
-           "key": "A",
-           "text": "Paratiroid adenomu"
-          },
-          {
-           "key": "B",
-           "text": "Diyetle yetersiz kalsiyum alınması"
-          },
-          {
-           "key": "C",
-           "text": "Kronik böbrek yetmezliği"
-          },
-          {
-           "key": "D",
-           "text": "Vitamin D eksikliği"
-          },
-          {
-           "key": "E",
-           "text": "Paraneoplastik sendromlar"
-          }
-         ],
-         "year": "2018-2019",
-         "discipline": "İç Hastalıkları",
-         "topic": "Paratiroid bezi hastalıkları",
-         "explanation": "Sekonder hiperparatiroidi kronik hipokalsemiye paratiroidlerin uyumsal yanıtıdır ve en sık nedeni kronik böbrek yetmezliğidir.\n\n- **KBY mekanizması:** Fosfat atılımı azalır, FGF-23 yükselir, böbrekte kalsitriol sentezi düşer; bağırsak kalsiyum emilimi azalır ve PTH artar.\n- **Laboratuvar:** Primer formda kalsiyum yüksek, fosfat düşük; sekonder formda kalsiyum düşük-normal, fosfat (KBY'de) yüksek, PTH yüksektir.\n- **Patoloji:** Dört bezde diffüz ya da nodüler hiperplazi görülür; adenom tek bezi tutar.\n- **Komplikasyonlar:** Renal osteodistrofi (osteitis fibrosa kistika), vasküler kalsifikasyon ve kalsifilaksi gelişebilir.\n- **Tersiyer form:** Uzun süreli uyarı sonrası otonom hale gelen bezler hiperkalsemi yapar; genellikle böbrek nakli sonrası belirginleşir.\n\nSınav: Primer hiperparatiroidinin en sık nedeni adenom, sekonderin en sık nedeni KBY'dir."
         },
         {
          "id": "past-1790877037956-266874",
@@ -21394,38 +21363,6 @@
        "metin": "Paratiroid bezi hastalıkları ile ilişkili klinik semptomları, tanı kriterlerini ve ayırıcı tanı basamaklarını değerlendirir.",
        "slaytlar": [],
        "cikmisSorular": [
-        {
-         "id": "663ad28be3de",
-         "questionNumber": 205,
-         "stem": "Kalsiyum metabolizması bozuklukları için aşağıdakilerden hangisi yanlıştır?",
-         "correctAnswer": "A",
-         "options": [
-          {
-           "key": "A",
-           "text": "Hiperkalsemili hastalarda Chvostek bulgusu görülebilir"
-          },
-          {
-           "key": "B",
-           "text": "Hipokalsemili hastalarda Trousseau bulgusu görülebilir"
-          },
-          {
-           "key": "C",
-           "text": "Hipokalsemide EKG'de QT mesafesi uzar"
-          },
-          {
-           "key": "D",
-           "text": "Paratiroid adenomlarının çıkarılmasını takiben gelişen akut hipokalsemi tablosunda hastalarda ameliyat sonrasında laringeal spazm ve bronkospazm ortaya çıkabilir"
-          },
-          {
-           "key": "E",
-           "text": "Kronik hipokalsemide ciltte kabalaşma, pullanma artışı ve saç dökülmesi gözlenebilir"
-          }
-         ],
-         "year": "2018-2019",
-         "discipline": "İç Hastalıkları",
-         "topic": "Paratiroid bezi hastalıkları",
-         "explanation": "Chvostek ve Trousseau bulguları hipokalseminin işaretidir; hiperkalsemide nöromüsküler eksitabilite tersine azaldığından Chvostek beklenmez.\n\n- **Hipokalsemi mekanizması:** Düşük iyonize kalsiyum sodyum kanallarının açılma eşiğini düşürür; parestezi, karpopedal spazm, tetani, laringospazm ve nöbetler gelişir.\n- **EKG:** Hipokalsemide QT uzar, hiperkalsemide QT kısalır.\n- **Postoperatif hipokalsemi:** Paratiroidektomi ya da tiroidektomi sonrası aç kemik sendromu veya hipoparatiroidiyle ani gelişir; akut tetanide intravenöz kalsiyum glukonat verilir.\n- **Kronik bulgular:** Kuru ve pullu cilt, saç dökülmesi, tırnak kırılganlığı, katarakt, bazal ganglion kalsifikasyonu.\n- **Hiperkalsemi:** Kas güçsüzlüğü, konstipasyon, poliüri, böbrek taşı, nöropsikiyatrik bulgular; 'taşlar, kemikler, karın ağrısı ve psişik yakınmalar'.\n\nSınav: Chvostek normal bireylerin yaklaşık %10'unda da pozitif olabilir; Trousseau hipokalsemi için daha güvenilirdir."
-        },
         {
          "id": "past-1790877042236-407505",
          "questionNumber": 22,
@@ -21718,7 +21655,7 @@
          "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-128",
          "questionNumber": 128,
          "stem": "Klinik olarak belirti veren hiperkalseminin en sık nedeni hangisidir?",
-         "correctAnswer": "A",
+         "correctAnswer": "C",
          "options": [
           {
            "key": "A",
@@ -21744,7 +21681,7 @@
          "year": "Geçmiş Yıllar Çıkmışı (Arşiv)",
          "discipline": "İç Hastalıkları",
          "topic": "Paratiroid bezi hastalıkları",
-         "explanation": "Asemptomatik hiperkalseminin en sık nedeni primer hiperparatiroidi, klinik olarak belirgin hiperkalseminin en sık nedeni ise malignitedir.\n\n- **Malignite mekanizmaları:** Kemik metastazlarının lokal osteolizi (meme, akciğer, multipl miyelom) ve PTHrP salınımıyla humoral hiperkalsemi.\n- **Primer hiperparatiroidi:** Genellikle hafif, rutin biyokimyada saptanan hiperkalsemi yapar; PTH yüksektir.\n- **Malignitede PTH:** Negatif geri bildirimle baskılanmıştır; bu bulgu ayırıcı tanının anahtarıdır.\n- **Diğer nedenler:** Granülomatöz hastalıklar (sarkoidoz), D vitamini intoksikasyonu, immobilizasyon ve tiyazidler daha nadirdir.\n\nNot: Güncel endokrinoloji kaynaklarında malignite hiperkalsemisinin çoğunluğu PTHrP aracılıdır; patoloji anlatımı ve özgün anahtar ise kemik metastazını öne çıkarır. İki şık da maligniteyi temsil ettiğinden tartışmalı bir sorudur.\n\nSınav: 'Asemptomatik' derse primer hiperparatiroidi, 'klinik olarak belirgin' derse malignite düşünülür."
+         "explanation": "> [!IMPORTANT]\n> **Cevap anahtarı düzeltildi:** Önceki anahtar A (Metastatik kemik tümörü) idi; tıbbi bilgiye göre doğru cevap C (Paraneoplastik sendrom). Gerekçe: K6 kaynağı semptomatik hiperkalseminin en sık nedeninin malignite olduğunu söyler; malignite hiperkalsemisinin yaklaşık yüzde sekseni PTHrP salgısına bağlı humoral (paraneoplastik) mekanizmayla, daha azı osteolitik metastazla gelişir. Düzeltme: 2026-10-21.\n\nDoğru cevap C'dir: klinik olarak belirti veren hiperkalseminin en sık nedeni maligniteye bağlı paraneoplastik (humoral) hiperkalsemidir.\n\n- **Mekanizma:** tümörün salgıladığı PTH ilişkili peptit (PTHrP) kemik yıkımını ve böbrekten kalsiyum geri emilimini artırır.\n- **Sıklık:** malignite hiperkalsemisinin yaklaşık %80'i humoral, kalanı osteolitik metastaza bağlıdır.\n- **Primer hiperparatiroidi:** toplumda en sık nedendir ama çoğu olgu asemptomatiktir."
         }
        ],
        "ornekSorular": [],
@@ -22546,7 +22483,7 @@
         {
          "id": "17c5899961d8",
          "questionNumber": 1847,
-         "stem": "Obezitede tıbbi beslenme tedavisiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+         "stem": "İç Hastalıkları, Obzitede tıbbi beslenme tedavisiyle ilgili aşağıdakilerden hangisi yanlıştır?",
          "correctAnswer": "B",
          "options": [
           {
@@ -22573,7 +22510,7 @@
          "year": "2020-2021",
          "discipline": "İç Hastalıkları",
          "topic": "Obezite-Metabolizma-Endokrin İlişkisi",
-         "explanation": "Su tüketimi obezite tedavisinde desteklenen bir alışkanlıktır; 'çok su içmek hatalı beslenme davranışıdır' ifadesi yanlıştır.\n\n- **Bireyselleştirme:** Tıbbi beslenme tedavisi diyetisyen tarafından kişinin özelliklerine göre planlanır.\n- **Negatif enerji dengesi:** Harcanandan daha az enerji verilmesi kilo kaybının temel ilkesidir.\n- **Makro besin dağılımı:** Enerjinin yaklaşık %25-30'u yağlardan; karbonhidratlar kompleks ve lifli kaynaklardan; protein yeterli düzeyde tutulur.\n- **Hatalı davranışlar:** Öğün atlama, gece yeme, hızlı yeme, şekerli içecekler ve yüksek enerjili atıştırmalıklar.\n- **Bütüncül yaklaşım:** Beslenme, egzersiz ve davranış değişikliği birlikte uygulanır.\n\nNot: Özgün sınavda dört şık vardı ve anahtar B'ydi; site sürümünde eklenen E şıkkı da yanlış bir ifade olduğundan iki cevap oluşuyordu. E şıkkı doğru bir ifade ile değiştirilerek özgün anahtar B geri yüklendi.\n\nSınav: Su enerji içermez; şekerli içecek yerine su tüketmek kilo kontrolünde önerilir."
+         "explanation": "> [!IMPORTANT]\n> **Soru düzeltildi:** Bu kopyanın şıkları taramada bozulmuş/eksikti (önceki anahtar A); şıklar ve anahtar aynı sorunun temiz kopyasından alındı, doğru cevap B. Düzeltme: 2026-10-21.\n\nSu tüketimi obezite tedavisinde desteklenen bir alışkanlıktır; 'çok su içmek hatalı beslenme davranışıdır' ifadesi yanlıştır.\n\n- **Bireyselleştirme:** Tıbbi beslenme tedavisi diyetisyen tarafından kişinin özelliklerine göre planlanır.\n- **Negatif enerji dengesi:** Harcanandan daha az enerji verilmesi kilo kaybının temel ilkesidir.\n- **Makro besin dağılımı:** Enerjinin yaklaşık %25-30'u yağlardan; karbonhidratlar kompleks ve lifli kaynaklardan; protein yeterli düzeyde tutulur.\n- **Hatalı davranışlar:** Öğün atlama, gece yeme, hızlı yeme, şekerli içecekler ve yüksek enerjili atıştırmalıklar.\n- **Bütüncül yaklaşım:** Beslenme, egzersiz ve davranış değişikliği birlikte uygulanır.\n\nNot: Özgün sınavda dört şık vardı ve anahtar B'ydi; site sürümünde eklenen E şıkkı da yanlış bir ifade olduğundan iki cevap oluşuyordu. E şıkkı doğru bir ifade ile değiştirilerek özgün anahtar B geri yüklendi.\n\nSınav: Su enerji içermez; şekerli içecek yerine su tüketmek kilo kontrolünde önerilir."
         }
        ],
        "ornekSorular": [],
@@ -22920,6 +22857,38 @@
        "metin": "Yaşlanmada Metabolik Sorunlar UZM. ile ilişkili klinik semptomları, tanı kriterlerini ve ayırıcı tanı basamaklarını değerlendirir.",
        "slaytlar": [],
        "cikmisSorular": [
+        {
+         "id": "past-1790877047344-450363",
+         "questionNumber": 7,
+         "stem": "Yaşlılık dönemi ile ilgili aşağıdaki ifadeler veriliyor:\nI. Karaciğer ve safra fonksiyonlarında azalma olur.\nII. Bazal metabolizma hızı artar.\nIII. Bağışıklık sistemi fonksiyonlarında azalma olur.\nIV. Diş sayısında azalma besinlerin parçalanmasını kolaylaştırır.\nBu ifadelerden hangisi ya da hangileri yanlıştır?",
+         "correctAnswer": "C",
+         "options": [
+          {
+           "key": "A",
+           "text": "I, II ve III"
+          },
+          {
+           "key": "B",
+           "text": "I ve III"
+          },
+          {
+           "key": "C",
+           "text": "II ve IV"
+          },
+          {
+           "key": "D",
+           "text": "Yalnız IV"
+          },
+          {
+           "key": "E",
+           "text": "I, II, III ve IV"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "İç Hastalıkları",
+         "topic": "Yaşlanmada Metabolik Sorunlar",
+         "explanation": "Yaşlanmada bazal metabolizma hızı düşer ve diş kaybı beslenmeyi olumsuz etkiler; bu nedenle II ve IV yanlış ifadelerdir.\n\n- **Metabolizma:** Kas kütlesi (hücre kitlesi) azalır, yağ dokusu oranı artar; buna bağlı olarak bazal metabolizma ve enerji ihtiyacı düşer.\n- **Sindirim sistemi:** Karaciğer kütlesi ve kan akımı, safra salgısı, mide asidi ve sindirim enzimleri azalır; ilaç metabolizması yavaşlar.\n- **Ağız-diş:** Diş kaybı ve protez sorunları çiğnemeyi güçleştirir; yaşlı yumuşak, posası az besinlere yönelir ve yetersiz beslenme riski artar.\n- **Bağışıklık:** İmmünosenesans ile T hücre yanıtı ve antikor üretimi azalır; enfeksiyonlara yatkınlık ve aşılara zayıf yanıt görülür.\n- **Duyular:** Tat ve koku duyusu ile susama hissi azalır.\n\nSınav: Yaşlılıkta 'artan' bir metabolik gösterge beklenmez; bazal metabolizma ve enerji gereksinimi azalır."
+        },
         {
          "id": "2d71a2382c76",
          "questionNumber": 178,
@@ -23305,7 +23274,40 @@
        "id": "k6-d6-c14-kz-2",
        "metin": "Yaşlılıkta Beslenme Uzm. Dr BETÜL İVERENDİ ile ilişkili klinik semptomları, tanı kriterlerini ve ayırıcı tanı basamaklarını değerlendirir.",
        "slaytlar": [],
-       "cikmisSorular": [],
+       "cikmisSorular": [
+        {
+         "id": "past-1790877047370-151450",
+         "questionNumber": 9,
+         "stem": "Yaşlılık döneminde beslenme ile ilgili aşağıdaki ifadeler veriliyor:\nI. Vücudun enerji ihtiyacının büyük bir kısmı yağlardan karşılanır.\nII. 1 gram yağ 4 kalori verir.\nIII. İyi bir diyetle D vitamini ihtiyacı sadece besinlerden sağlanabilir.\nIV. Vitamin ve mineraller yüksek tansiyonun önlenmesinde etkilidir.\nBu ifadelerden hangisi ya da hangileri doğrudur?",
+         "correctAnswer": "D",
+         "options": [
+          {
+           "key": "A",
+           "text": "I, II ve III"
+          },
+          {
+           "key": "B",
+           "text": "I ve III"
+          },
+          {
+           "key": "C",
+           "text": "II ve IV"
+          },
+          {
+           "key": "D",
+           "text": "Yalnız IV"
+          },
+          {
+           "key": "E",
+           "text": "I, II, III ve IV"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "İç Hastalıkları",
+         "topic": "Yaşlılıkta Beslenme",
+         "explanation": "Yaşlı beslenmesinde yalnızca vitamin ve minerallerin yüksek tansiyonun önlenmesindeki rolüne ilişkin ifade doğrudur.\n\n- **Enerji kaynağı:** Günlük enerjinin yaklaşık %60'ı karbonhidratlardan, %25'i yağlardan, kalanı proteinlerden sağlanmalıdır; yağlar ana enerji kaynağı olmamalıdır.\n- **Enerji değerleri:** 1 g karbonhidrat ve 1 g protein 4 kalori, 1 g yağ 9 kalori verir.\n- **D vitamini:** En iyi kaynağı güneş ışığıdır; yaşlıda derideki sentez azaldığından ve güneşe çıkma kısıtlı olduğundan, iyi planlanmış bir diyette bile D vitamini dışındaki gereksinimler karşılanır, D vitamini için destek gerekebilir.\n- **Hipertansiyon:** Tuz kısıtlaması ile yeterli kalsiyum ve potasyum alımı yüksek tansiyonun önlenmesinde önerilir.\n\nSınav: '1 g yağ 4 kalori' ve 'D vitamini yalnız besinden' ifadeleri bu konunun klasik tuzaklarıdır."
+        }
+       ],
        "ornekSorular": [],
        "sozlukTerimleri": [],
        "ozetler": []
@@ -23609,7 +23611,7 @@
          "year": "2018-2019",
          "discipline": "Aile Hekimliği",
          "topic": "Yaşlılık Döneminde Güvenli Yaşamın İlkeleri",
-         "explanation": "Resmî anahtar tüm önerileri doğru kabul etmiştir; ancak ders notu ve güncel tarama kılavuzlarına göre yalnız 65 yaş üzerinde influenza aşısı önerisi tam olarak doğrudur.\n\nNot: Ders notunda mamografi 40-69 yaş kadınlara iki yılda bir, GGK 50-70 yaş arasında yıllık, abdominal aort anevrizması taraması ise sigara içen ya da içmiş 65-75 yaş erkeklerde USG ile bir kez önerilir. Bu ölçütlere göre şıklar arasında doğru kombinasyon (yalnız III) yoktur; cevap sınav kaydı olarak E bırakılmıştır.\n\n- **Meme kanseri:** Yılda bir hekim tarafından klinik meme muayenesi ve iki yılda bir mamografi.\n- **Kolorektal kanser:** 50 yaşında başlayan yıllık GGK, on yılda bir kolonoskopi; son iki testi negatif olan 70 yaş üzerinde tarama bırakılabilir.\n- **Aşılama:** 65 yaş üzerinde her yıl influenza ve pnömokok aşısı, on yılda bir Td rapeli.\n- **Kardiyovasküler tarama:** Yılda en az bir kez kan basıncı ölçümü; risk grubunda tek seferlik AAA ultrasonografisi.\n- **Düşme ve kırık riski:** Kemik yoğunluğu, görme ve işitme değerlendirmesi ile ev güvenliği önlemleri.\n\nSınav: AAA taraması tek seferlik USG ile yapılır; mamografi aralığı iki yıl, GGK aralığı bir yıldır."
+         "explanation": "> [!IMPORTANT]\n> **Soru notu:** Bu sorunun öncüllerinde hata var ve doğru seçenek bulunmuyor: güncel öneriye göre mamografi 40–69 yaşta iki yılda bir, gaitada gizli kan yılda bir yapılır, abdominal aort anevrizması 65–75 yaş erkeklerde ultrasonla bir kez taranır; yalnız III doğrudur ve şıklarda 'Yalnız III' yoktur. Sınav anahtarı E olarak bırakıldı. (2026-10-21)\n\nResmî anahtar tüm önerileri doğru kabul etmiştir; ancak ders notu ve güncel tarama kılavuzlarına göre yalnız 65 yaş üzerinde influenza aşısı önerisi tam olarak doğrudur.\n\nNot: Ders notunda mamografi 40-69 yaş kadınlara iki yılda bir, GGK 50-70 yaş arasında yıllık, abdominal aort anevrizması taraması ise sigara içen ya da içmiş 65-75 yaş erkeklerde USG ile bir kez önerilir. Bu ölçütlere göre şıklar arasında doğru kombinasyon (yalnız III) yoktur; cevap sınav kaydı olarak E bırakılmıştır.\n\n- **Meme kanseri:** Yılda bir hekim tarafından klinik meme muayenesi ve iki yılda bir mamografi.\n- **Kolorektal kanser:** 50 yaşında başlayan yıllık GGK, on yılda bir kolonoskopi; son iki testi negatif olan 70 yaş üzerinde tarama bırakılabilir.\n- **Aşılama:** 65 yaş üzerinde her yıl influenza ve pnömokok aşısı, on yılda bir Td rapeli.\n- **Kardiyovasküler tarama:** Yılda en az bir kez kan basıncı ölçümü; risk grubunda tek seferlik AAA ultrasonografisi.\n- **Düşme ve kırık riski:** Kemik yoğunluğu, görme ve işitme değerlendirmesi ile ev güvenliği önlemleri.\n\nSınav: AAA taraması tek seferlik USG ile yapılır; mamografi aralığı iki yıl, GGK aralığı bir yıldır."
         },
         {
          "id": "q-2021final_230619_142600-3-r18",
@@ -25947,34 +25949,34 @@
         {
          "id": "past-1790877048046-185788",
          "questionNumber": 97,
-         "stem": "Psödodemans deyimi için aşağıdakilerden hangisi doğrudur?",
+         "stem": "Psödemans deyimi için aşağıdakilerden hangisi doğrudur?",
          "correctAnswer": "D",
          "options": [
           {
            "key": "A",
-           "text": "Depresyonun demansla birlikte bulunması hâlidir."
+           "text": "Depresyonun demansla birlikte bulunması halidir"
           },
           {
            "key": "B",
-           "text": "Demans tanısı üzerine depresyon gelişmesi durumudur."
+           "text": "Demans tanısı üzerine depresyon gelişmesi durumudur"
           },
           {
            "key": "C",
-           "text": "Demansa eşlik eden ruhsal bozukluklar için kullanılır."
+           "text": "Demansa eşlik eden ruhsal bozukluklar için kullanılır"
           },
           {
            "key": "D",
-           "text": "Depresyonlu yaşlı popülasyonda bilişsel alanda gelişen belirtiler nedeniyle demansla karıştırılması durumuna denilir."
+           "text": "Depresyonlu yaşlı popülasyonda bilişsel alanda gelişen belirtileri nedeniyle demansla karıştırılması durumuna denilir"
           },
           {
            "key": "E",
-           "text": "Yaşlı depresyonuyla ilişkisi yoktur."
+           "text": "Yaşlı depresyonuyla ilişkisi yoktur"
           }
          ],
          "year": "2018-2019",
          "discipline": "Psikiyatri",
          "topic": "Yaşlılığa Özgü Ruhsal Sorunlar",
-         "explanation": "Psödodemans, depresyonun yaşlı hastada demansı taklit eden bilişsel bozulma ile seyretmesidir; tablo depresyon tedavisiyle büyük ölçüde geri döner.\n\n- **Mekanizma:** Depresyonda dikkat, konsantrasyon, psikomotor hız ve motivasyon azalır; bu bellek testlerinde düşük performans olarak yansır.\n- **Ayırıcı özellikler:** Akut başlangıç, kısa öykü, 'bilmiyorum' yanıtları, belirgin çökkün duygudurum ve yakınmaların abartılması.\n- **Demansla fark:** Demansta sinsi başlangıç, eksiklerin gizlenmesi, konfabulasyon ve ilerleyici seyir vardır.\n- **Tedavi:** Antidepresan tedavi ve gerekirse EKT ile bilişsel işlevler düzelir.\n- **Prognoz:** Bu hastalarda sonraki yıllarda gerçek demans gelişme riski artmıştır; izlem önerilir.\n\nSınav: Psödodemans geri dönüşlü, depresyona bağlı bilişsel bozulmadır; depresyon ile demansın birlikteliği değildir."
+         "explanation": "> [!IMPORTANT]\n> **Cevap anahtarı düzeltildi:** Önceki anahtar A (Depresyonun demansla birlikte bulunması halidir) idi; ders kaynağına/tıbbi bilgiye göre doğru cevap D (Depresyonlu yaşlı popülasyonda bilişsel alanda gelişen belirtileri nedeniyle demansla karıştırılması durumuna denilir). Gerekçe: Kaynakta yok (psödodemans tanımı bulunamadı) | tıbben psödodemans, depresyonlu yaşlıda bilişsel belirtilerin demansla karışmasıdır. İkizler D. Düzeltme: 2026-10-21.\n\nDoğru cevap D'dir:\n- **Psödodemans:** Depresyonlu yaşlıda dikkat ve bellek bozukluğuyla demansı taklit eden, tedaviyle geri dönebilen bilişsel tablodur.\n- **A şıkkı:** Depresyonun gerçek demansla birlikte bulunması ayrı bir durumdur, psödodemans değildir.\n- **Ayırım:** Psödodemanslı hasta bellek kaybından yakınır ve 'bilmiyorum' cevabı verir; demanslı hasta kaybı örtmeye çalışır."
         },
         {
          "id": "3b865f7bfe5c",

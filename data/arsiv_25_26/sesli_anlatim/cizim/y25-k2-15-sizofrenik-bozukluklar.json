@@ -33,198 +33,6 @@
     }
    ]
   },
-  "15": {
-   "0": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Biyokimyasal araştırmaların temeli",
-      "Dopaminerjik hiperaktivite ve pozitifler",
-      "Antipsikotik ilaçların reseptör blokajı"
-     ],
-     "baslik": "Dopamin Hipotezi",
-     "s": 17,
-     "k": [
-      0,
-      41
-     ],
-     "tip": "liste",
-     "konum": [
-      0.14,
-      0.92
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.308,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.248,
-     "ek_renk": "#e6ecd0"
-    }
-   ],
-   "3": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Fensiklidin ve reseptör blokajı",
-      "Glutamat reseptör hipofonksiyonu",
-      "Hem pozitif hem negatif belirti taklidi"
-     ],
-     "baslik": "Glutamaterjik Hipotez",
-     "s": 18,
-     "k": [
-      0,
-      42
-     ],
-     "tip": "liste",
-     "konum": [
-      0.54,
-      0.23
-     ],
-     "genislik": 0.42,
-     "doluluk": 0.0,
-     "kutu_h": 0.348,
-     "yon": "yatay",
-     "olcek": 1.0
-    }
-   ]
-  },
-  "19": {
-   "2": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Nörosifiliz gibi santral enfeksiyonlar",
-      "Sistemik lupus eritematozus vasküliti",
-      "Ağır metal zehirlenmeleri ve toksinler"
-     ],
-     "baslik": "Organik Psikoz Nedenleri",
-     "s": 23,
-     "k": [
-      0,
-      38
-     ],
-     "tip": "liste",
-     "konum": [
-      0.29,
-      0.25
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.308,
-     "yon": "yatay",
-     "olcek": 1.0
-    }
-   ]
-  },
-  "23": {
-   "2": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Anhedoni: hiçbir aktiviteden zevk alamama",
-      "Toplumsal içe çekilme ve ilişkilerden kopma",
-      "Duygusal tepkilerde belirgin kısıtlılık"
-     ],
-     "baslik": "Negatif Belirtiler",
-     "s": 27,
-     "k": [
-      0,
-      41
-     ],
-     "tip": "liste",
-     "konum": [
-      0.03,
-      1.015
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.308,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.343,
-     "ek_renk": "#e6ecd0"
-    }
-   ]
-  },
-  "30": {
-   "2": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Akut psikotik belirtilerin kontrolü",
-      "Nüksleri önlemek için aile terapileri",
-      "Sosyal beceri eğitimi ve rehabilitasyon"
-     ],
-     "baslik": "Psikososyal Tedaviler",
-     "s": 36,
-     "k": [
-      0,
-      39
-     ],
-     "tip": "liste",
-     "konum": [
-      0.03,
-      1.015
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.308,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.343,
-     "ek_renk": "#e6ecd0"
-    }
-   ]
-  },
-  "31": {
-   "2": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Akut başlangıç ve geç yaş iyi prognoz",
-      "Sinsi başlangıç ve negatif belirtiler kötü",
-      "Tedaviye erken başlanması kritik"
-     ],
-     "baslik": "Prognoz Ölçütleri",
-     "s": 37,
-     "k": [
-      0,
-      39
-     ],
-     "tip": "liste",
-     "konum": [
-      0.03,
-      1.015
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.308,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.343,
-     "ek_renk": "#e6ecd0"
-    }
-   ]
-  },
   "27": {
    "0": [
     {
@@ -511,7 +319,160 @@
     }
    ]
   },
+  "30": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.17347399436102973,
+      0.27220983152036315
+     ],
+     "b": [
+      0.19848610517713758,
+      0.27220983152036315
+     ],
+     "iliski": "aktive",
+     "etiket": "hastaneye yatırma",
+     "hedef_metin": "Hastaneye yatırma,",
+     "s": 31,
+     "k": [
+      190,
+      219
+     ],
+     "yol": [
+      [
+       0.1735,
+       0.2722
+      ],
+      [
+       0.1985,
+       0.2722
+      ]
+     ],
+     "rota": "duz",
+     "kaynak_kutu": [
+      0.1337,
+      0.2437,
+      0.1715,
+      0.3008
+     ],
+     "hedef_kutu": [
+      0.2005,
+      0.2404,
+      0.524,
+      0.3009
+     ],
+     "etiket_konum": [
+      0.0735,
+      0.3022
+     ],
+     "etiket_genislik": 0.252,
+     "yakin": [
+      0.0135,
+      0.1804,
+      0.584,
+      0.4022
+     ]
+    }
+   ]
+  },
   "39": {
+   "1": [
+    {
+     "tur": "akis",
+     "a": [
+      0.1564286872016059,
+      0.3143765343560113
+     ],
+     "b": [
+      0.1557361068725586,
+      0.3143765343560113
+     ],
+     "iliski": "aktive",
+     "etiket": "işlevsellik kötü",
+     "hedef_metin": "İşlevsellik kötü,",
+     "s": 40,
+     "k": [
+      22,
+      76
+     ],
+     "yol": [
+      [
+       0.1564,
+       0.3144
+      ],
+      [
+       0.1557,
+       0.3144
+      ]
+     ],
+     "rota": "duz",
+     "kaynak_kutu": [
+      0.1202,
+      0.2858,
+      0.1544,
+      0.3429
+     ],
+     "hedef_kutu": [
+      0.1577,
+      0.2826,
+      0.3925,
+      0.3431
+     ],
+     "etiket_konum": [
+      0.1577,
+      0.2263
+     ],
+     "etiket_genislik": 0.239
+    },
+    {
+     "tur": "akis",
+     "a": [
+      0.5714356214735243,
+      0.3143765343560113
+     ],
+     "b": [
+      0.5707361111111111,
+      0.3143765343560113
+     ],
+     "iliski": "aktive",
+     "etiket": "işlevsellik iyi",
+     "hedef_metin": "İşlevsellik iyi,",
+     "s": 40,
+     "k": [
+      85,
+      210
+     ],
+     "yol": [
+      [
+       0.5714,
+       0.3144
+      ],
+      [
+       0.5707,
+       0.3144
+      ]
+     ],
+     "rota": "duz",
+     "kaynak_kutu": [
+      0.5352,
+      0.2858,
+      0.5694,
+      0.3429
+     ],
+     "hedef_kutu": [
+      0.5727,
+      0.2826,
+      0.7776,
+      0.3431
+     ],
+     "etiket_konum": [
+      0.5727,
+      0.2263
+     ],
+     "etiket_genislik": 0.226
+    }
+   ],
    "2": [
     {
      "tur": "akis",
@@ -569,186 +530,85 @@
   }
  },
  "rapor": {
-  "aday": 40,
-  "gecti": 12,
+  "aday": 44,
+  "gecti": 9,
   "ret": {
-   "sayfada resim kutusu yok (kontur/eğri yalnız resim üstünde)": 10,
+   "lazer sayfası dışında çizim (H59)": 16,
    "noktaların %0'i çizgi üstünde (en az %70)": 1,
-   "ok uçlarından biri boş alanda (yazı/çizim yok)": 16,
-   "a/b noktası geçersiz": 1
+   "sayfada resim kutusu yok (kontur/eğri yalnız resim üstünde)": 5,
+   "ok uçlarından biri boş alanda (yazı/çizim yok)": 11,
+   "a/b noktası geçersiz": 2
   },
   "ret_ayrinti": [
    {
-    "cumle": "P28.C0",
-    "sayfa": 29,
-    "tur": "kontur",
-    "neden": "sayfada resim kutusu yok (kontur/eğri yalnız resim üstünde)",
-    "komut": {
-     "nokta": [
-      [
-       0.205,
-       0.343
-      ],
-      [
-       0.47,
-       0.343
-      ],
-      [
-       0.735,
-       0.343
-      ],
-      [
-       0.735,
-       0.367
-      ],
-      [
-       0.735,
-       0.39
-      ],
-      [
-       0.47,
-       0.39
-      ],
-      [
-       0.205,
-       0.39
-      ],
-      [
-       0.205,
-       0.367
-      ]
-     ],
-     "etiket": "başlangıç yaşı"
-    }
+    "cumle": "P15.C0",
+    "sayfa": 17,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P15.C3",
+    "sayfa": 18,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P19.C2",
+    "sayfa": 23,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P23.C2",
+    "sayfa": 27,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P30.C2",
+    "sayfa": 36,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P31.C2",
+    "sayfa": 37,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
    },
    {
     "cumle": "P28.C0",
     "sayfa": 29,
     "tur": "kontur",
-    "neden": "sayfada resim kutusu yok (kontur/eğri yalnız resim üstünde)",
-    "komut": {
-     "nokta": [
-      [
-       0.205,
-       0.497
-      ],
-      [
-       0.47,
-       0.497
-      ],
-      [
-       0.735,
-       0.497
-      ],
-      [
-       0.735,
-       0.518
-      ],
-      [
-       0.735,
-       0.54
-      ],
-      [
-       0.47,
-       0.54
-      ],
-      [
-       0.205,
-       0.54
-      ],
-      [
-       0.205,
-       0.518
-      ]
-     ],
-     "etiket": "hastalık süresi"
-    }
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P28.C0",
+    "sayfa": 29,
+    "tur": "kontur",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
    },
    {
     "cumle": "P29.C0",
     "sayfa": 30,
     "tur": "kontur",
-    "neden": "sayfada resim kutusu yok (kontur/eğri yalnız resim üstünde)",
-    "komut": {
-     "nokta": [
-      [
-       0.165,
-       0.43
-      ],
-      [
-       0.497,
-       0.43
-      ],
-      [
-       0.83,
-       0.43
-      ],
-      [
-       0.83,
-       0.455
-      ],
-      [
-       0.83,
-       0.48
-      ],
-      [
-       0.497,
-       0.48
-      ],
-      [
-       0.165,
-       0.48
-      ],
-      [
-       0.165,
-       0.455
-      ]
-     ],
-     "etiket": "nörolojik durum"
-    }
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
    },
    {
     "cumle": "P29.C0",
     "sayfa": 30,
     "tur": "kontur",
-    "neden": "sayfada resim kutusu yok (kontur/eğri yalnız resim üstünde)",
-    "komut": {
-     "nokta": [
-      [
-       0.165,
-       0.748
-      ],
-      [
-       0.505,
-       0.748
-      ],
-      [
-       0.845,
-       0.748
-      ],
-      [
-       0.845,
-       0.772
-      ],
-      [
-       0.845,
-       0.797
-      ],
-      [
-       0.505,
-       0.797
-      ],
-      [
-       0.165,
-       0.797
-      ],
-      [
-       0.165,
-       0.772
-      ]
-     ],
-     "etiket": "sosyokültürel özellikler"
-    }
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
    },
    {
     "cumle": "P30.C0",
@@ -797,44 +657,8 @@
     "cumle": "P31.C0",
     "sayfa": 32,
     "tur": "kontur",
-    "neden": "sayfada resim kutusu yok (kontur/eğri yalnız resim üstünde)",
-    "komut": {
-     "nokta": [
-      [
-       0.17,
-       0.21
-      ],
-      [
-       0.52,
-       0.21
-      ],
-      [
-       0.87,
-       0.21
-      ],
-      [
-       0.87,
-       0.252
-      ],
-      [
-       0.87,
-       0.293
-      ],
-      [
-       0.52,
-       0.293
-      ],
-      [
-       0.17,
-       0.293
-      ],
-      [
-       0.17,
-       0.252
-      ]
-     ],
-     "etiket": "en az üçü baskın"
-    }
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
    },
    {
     "cumle": "P39.C0",
@@ -1140,69 +964,29 @@
     "cumle": "P28.C0",
     "sayfa": 29,
     "tur": "akis",
-    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
-    "komut": {
-     "a": [
-      0.8,
-      0.365
-     ],
-     "b": [
-      0.68,
-      0.365
-     ],
-     "etiket": "başlangıç yaşı"
-    }
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
    },
    {
     "cumle": "P28.C0",
     "sayfa": 29,
     "tur": "akis",
-    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
-    "komut": {
-     "a": [
-      0.82,
-      0.517
-     ],
-     "b": [
-      0.7,
-      0.517
-     ],
-     "etiket": "hastalık süresi"
-    }
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
    },
    {
     "cumle": "P29.C0",
     "sayfa": 30,
     "tur": "akis",
-    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
-    "komut": {
-     "a": [
-      0.92,
-      0.455
-     ],
-     "b": [
-      0.78,
-      0.455
-     ],
-     "etiket": "nörolojik durum"
-    }
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
    },
    {
     "cumle": "P29.C0",
     "sayfa": 30,
     "tur": "akis",
-    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
-    "komut": {
-     "a": [
-      0.93,
-      0.772
-     ],
-     "b": [
-      0.8,
-      0.772
-     ],
-     "etiket": "sosyokültürel özellikler"
-    }
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
    },
    {
     "cumle": "P30.C0",
@@ -1225,18 +1009,8 @@
     "cumle": "P31.C0",
     "sayfa": 32,
     "tur": "akis",
-    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
-    "komut": {
-     "a": [
-      0.8,
-      0.16
-     ],
-     "b": [
-      0.7,
-      0.233
-     ],
-     "etiket": "en az üçü baskın"
-    }
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
    },
    {
     "cumle": "P39.C0",
@@ -1334,6 +1108,19 @@
       0.26
      ],
      "etiket": "en az ikisi"
+    }
+   },
+   {
+    "cumle": "P39.C0",
+    "sayfa": 40,
+    "tur": "akis",
+    "neden": "a/b noktası geçersiz",
+    "komut": {
+     "a": [
+      0.529,
+      0.2
+     ],
+     "etiket": "ayırıcı tanı"
     }
    }
   ]

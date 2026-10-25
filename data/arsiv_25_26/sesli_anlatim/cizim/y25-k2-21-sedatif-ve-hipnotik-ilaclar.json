@@ -133,262 +133,6 @@
     }
    ]
   },
-  "12": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Lorazepam",
-      "Oksazepam",
-      "Temazepam",
-      "Siroz hastasında güvenli"
-     ],
-     "baslik": "Doğrudan Konjuge Olanlar",
-     "s": 12,
-     "k": [
-      0,
-      23
-     ],
-     "tip": "liste",
-     "konum": [
-      0.05,
-      0.94
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.363,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.3234,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "21": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "karsilastirma",
-     "sablon_ad": "İki durumun karşılaştırması",
-     "duzen": "karsit",
-     "basliklar": [
-      "Klorür kanalı"
-     ],
-     "satirlar": [
-      [
-       "Etki biçimi",
-       "Açılma sıklığı artışı",
-       "Açık kalma süresi uzaması"
-      ]
-     ],
-     "kutuplar": [
-      "Benzodiazepin",
-      "Barbitürat"
-     ],
-     "s": 17,
-     "k": [
-      0,
-      55
-     ],
-     "tip": "karsit",
-     "konum": [
-      0.03,
-      0.96
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.196,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.1756,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "32": {
-   "2": [
-    {
-     "tur": "sema",
-     "sablon": "tani_tetkik",
-     "sablon_ad": "Durum → bakılacak tetkik",
-     "duzen": "tablo",
-     "basliklar": [
-      "Zehirlenme Tablosu",
-      "Flumazenil Yanıtı"
-     ],
-     "satirlar": [
-      [
-       "Benzodiazepin aşırı dozu",
-       "Yarışmalı antagonist etki"
-      ],
-      [
-       "Barbitürat veya alkol",
-       "Tamamen etkisizdir"
-      ]
-     ],
-     "s": 21,
-     "k": [
-      0,
-      43
-     ],
-     "tip": "tablo",
-     "konum": [
-      0.05,
-      0.94
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.253,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.2126,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "28": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "tani_tetkik",
-     "sablon_ad": "Durum → bakılacak tetkik",
-     "duzen": "tablo",
-     "basliklar": [
-      "Klinik Durum",
-      "Seçilen İlaç"
-     ],
-     "satirlar": [
-      [
-       "Akut nöbet ve status",
-       "İntravenöz diazepam veya lorazepam"
-      ],
-      [
-       "Kronik nöbet kontrolü",
-       "Fenobarbital"
-      ]
-     ],
-     "s": 27,
-     "k": [
-      0,
-      46
-     ],
-     "tip": "tablo",
-     "konum": [
-      0.03,
-      0.96
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.253,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.2326,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "36": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Akut krizde benzodiazepin",
-      "Uzun süreli tedavide antidepresan",
-      "Kronik tabloda buspiron"
-     ],
-     "baslik": "Anksiyete İlaç Seçimi",
-     "s": 31,
-     "k": [
-      0,
-      59
-     ],
-     "tip": "liste",
-     "konum": [
-      0.05,
-      0.94
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.308,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.268,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "35": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Midazolam: hızlı başlayan etki",
-      "Girişim öncesi anksiyolitik",
-      "Kısa etkili sedatif"
-     ],
-     "baslik": "Anestezi Öncesi Sedasyon",
-     "s": 35,
-     "k": [
-      0,
-      34
-     ],
-     "tip": "liste",
-     "konum": [
-      0.05,
-      0.94
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.308,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.268,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "44": {
-   "2": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Absans ve miyoklonik nöbet: klonazepam",
-      "Alkol yoksunluğu: diazepam ve klordiazepoksit",
-      "Koruyucu sedatif tedavi"
-     ],
-     "baslik": "Nöbet ve Alkol Yoksunluğu",
-     "s": 40,
-     "k": [
-      0,
-      43
-     ],
-     "tip": "liste",
-     "konum": [
-      0.05,
-      0.94
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.308,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.268,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
   "2": {
    "0": [
     {
@@ -438,7 +182,362 @@
     }
    ]
   },
+  "4": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.1791,
+       0.1467
+      ],
+      [
+       0.15,
+       0.1515
+      ],
+      [
+       0.1564,
+       0.1867
+      ],
+      [
+       0.1327,
+       0.2036
+      ],
+      [
+       0.12,
+       0.2424
+      ],
+      [
+       0.1173,
+       0.2812
+      ],
+      [
+       0.1327,
+       0.2691
+      ],
+      [
+       0.1627,
+       0.2679
+      ],
+      [
+       0.1645,
+       0.3091
+      ],
+      [
+       0.1964,
+       0.3176
+      ],
+      [
+       0.2091,
+       0.2824
+      ],
+      [
+       0.1936,
+       0.2473
+      ],
+      [
+       0.2064,
+       0.2133
+      ],
+      [
+       0.1909,
+       0.1782
+      ]
+     ],
+     "etiket": "diazepam",
+     "s": 5,
+     "k": [
+      24,
+      33
+     ],
+     "etiket_konum": [
+      0.1173,
+      0.0904
+     ],
+     "etiket_genislik": 0.138,
+     "yakin": [
+      0.0573,
+      0.0304,
+      0.3153,
+      0.3776
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.4436,
+       0.6085
+      ],
+      [
+       0.4691,
+       0.6315
+      ],
+      [
+       0.4527,
+       0.663
+      ],
+      [
+       0.4164,
+       0.6679
+      ],
+      [
+       0.4027,
+       0.7091
+      ],
+      [
+       0.4091,
+       0.7188
+      ],
+      [
+       0.4409,
+       0.7333
+      ],
+      [
+       0.4418,
+       0.7806
+      ],
+      [
+       0.4782,
+       0.783
+      ],
+      [
+       0.4864,
+       0.743
+      ],
+      [
+       0.4973,
+       0.6994
+      ],
+      [
+       0.5164,
+       0.663
+      ],
+      [
+       0.5109,
+       0.6242
+      ],
+      [
+       0.4745,
+       0.6242
+      ]
+     ],
+     "etiket": "alprazolam",
+     "s": 5,
+     "k": [
+      105,
+      142
+     ],
+     "etiket_konum": [
+      0.5284,
+      0.7387
+     ],
+     "etiket_genislik": 0.163,
+     "yakin": [
+      0.3427,
+      0.5485,
+      0.7514,
+      0.843
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.6264,
+       0.3527
+      ],
+      [
+       0.6218,
+       0.3818
+      ],
+      [
+       0.6036,
+       0.3915
+      ],
+      [
+       0.5909,
+       0.4121
+      ],
+      [
+       0.6018,
+       0.4279
+      ],
+      [
+       0.6064,
+       0.4582
+      ],
+      [
+       0.6264,
+       0.4667
+      ],
+      [
+       0.6355,
+       0.4655
+      ],
+      [
+       0.6518,
+       0.4521
+      ],
+      [
+       0.6527,
+       0.4194
+      ],
+      [
+       0.65,
+       0.3927
+      ],
+      [
+       0.6355,
+       0.3758
+      ]
+     ],
+     "etiket": "barbitürat çekirdeği",
+     "s": 5,
+     "k": [
+      27,
+      47
+     ],
+     "etiket_konum": [
+      0.6427,
+      0.2927
+     ],
+     "etiket_genislik": 0.29,
+     "yakin": [
+      0.5309,
+      0.2327,
+      0.9927,
+      0.5267
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.9873,
+       0.3891
+      ],
+      [
+       0.9655,
+       0.3952
+      ],
+      [
+       0.94,
+       0.3939
+      ],
+      [
+       0.9309,
+       0.4085
+      ],
+      [
+       0.9282,
+       0.4376
+      ],
+      [
+       0.9427,
+       0.4533
+      ],
+      [
+       0.9536,
+       0.4824
+      ],
+      [
+       0.98,
+       0.4824
+      ],
+      [
+       0.9873,
+       0.4582
+      ],
+      [
+       0.9873,
+       0.4242
+      ]
+     ],
+     "etiket": "fenobarbital",
+     "s": 5,
+     "k": [
+      129,
+      150
+     ],
+     "etiket_konum": [
+      0.74,
+      0.24
+     ],
+     "etiket_genislik": 0.188,
+     "etiket_hedef": [
+      0.9282,
+      0.3891
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.68,
+      0.18,
+      1,
+      0.5424
+     ]
+    }
+   ]
+  },
   "10": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.4864,
+       0.303
+      ],
+      [
+       0.5455,
+       0.3006
+      ],
+      [
+       0.6045,
+       0.303
+      ],
+      [
+       0.6073,
+       0.3127
+      ],
+      [
+       0.6045,
+       0.32
+      ],
+      [
+       0.5455,
+       0.3212
+      ],
+      [
+       0.4864,
+       0.32
+      ],
+      [
+       0.4818,
+       0.3115
+      ]
+     ],
+     "etiket": "ortak aktif metabolit desmetildiazepam",
+     "s": 11,
+     "k": [
+      102,
+      161
+     ],
+     "etiket_konum": [
+      0.5173,
+      0.2606
+     ],
+     "etiket_genislik": 0.42,
+     "yakin": [
+      0.4218,
+      0.2006,
+      0.9973,
+      0.3812
+     ]
+    }
+   ],
    "1": [
     {
      "tur": "kontur",
@@ -504,7 +603,307 @@
     }
    ]
   },
+  "12": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.5455,
+       0.7055
+      ],
+      [
+       0.6136,
+       0.7055
+      ],
+      [
+       0.68,
+       0.7067
+      ],
+      [
+       0.6818,
+       0.7139
+      ],
+      [
+       0.68,
+       0.7224
+      ],
+      [
+       0.6136,
+       0.7224
+      ],
+      [
+       0.5455,
+       0.7224
+      ],
+      [
+       0.5436,
+       0.7139
+      ]
+     ],
+     "etiket": "oksazepam: aktif metabolit yok",
+     "s": 13,
+     "k": [
+      50,
+      59
+     ],
+     "etiket_konum": [
+      0.4918,
+      0.6655
+     ],
+     "etiket_genislik": 0.416,
+     "yakin": [
+      0.4318,
+      0.6055,
+      0.9678,
+      0.7824
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.5455,
+       0.6667
+      ],
+      [
+       0.6136,
+       0.6667
+      ],
+      [
+       0.68,
+       0.6679
+      ],
+      [
+       0.6818,
+       0.6752
+      ],
+      [
+       0.68,
+       0.6824
+      ],
+      [
+       0.6136,
+       0.6836
+      ],
+      [
+       0.5455,
+       0.6824
+      ],
+      [
+       0.5436,
+       0.6752
+      ]
+     ],
+     "etiket": "lorazepam: aktif metabolit yok",
+     "s": 13,
+     "k": [
+      63,
+      121
+     ],
+     "etiket_konum": [
+      0.4918,
+      0.7567
+     ],
+     "etiket_genislik": 0.416,
+     "etiket_hedef": [
+      0.6818,
+      0.6836
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.4318,
+      0.6067,
+      0.9678,
+      0.861
+     ]
+    }
+   ]
+  },
+  "35": {
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.16,
+       0.4606
+      ],
+      [
+       0.3636,
+       0.4594
+      ],
+      [
+       0.5636,
+       0.4594
+      ],
+      [
+       0.8118,
+       0.4618
+      ],
+      [
+       0.8145,
+       0.4727
+      ],
+      [
+       0.6364,
+       0.4752
+      ],
+      [
+       0.4545,
+       0.4752
+      ],
+      [
+       0.2909,
+       0.4776
+      ],
+      [
+       0.2891,
+       0.4994
+      ],
+      [
+       0.2273,
+       0.5115
+      ],
+      [
+       0.16,
+       0.5091
+      ],
+      [
+       0.1573,
+       0.4848
+      ]
+     ],
+     "etiket": "sedasyon ve anterograd amnezi",
+     "s": 36,
+     "k": [
+      66,
+      132
+     ],
+     "etiket_konum": [
+      0.4108,
+      0.4031
+     ],
+     "etiket_genislik": 0.404,
+     "yakin": [
+      0.0973,
+      0.3431,
+      0.8748,
+      0.5715
+     ]
+    }
+   ]
+  },
   "43": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.0636,
+       0.3224
+      ],
+      [
+       0.3182,
+       0.3224
+      ],
+      [
+       0.5727,
+       0.3224
+      ],
+      [
+       0.5745,
+       0.5333
+      ],
+      [
+       0.5727,
+       0.7394
+      ],
+      [
+       0.3182,
+       0.7394
+      ],
+      [
+       0.0636,
+       0.7394
+      ],
+      [
+       0.0636,
+       0.5333
+      ]
+     ],
+     "etiket": "sedasyon dozları",
+     "s": 44,
+     "k": [
+      23,
+      31
+     ],
+     "etiket_konum": [
+      0.5645,
+      0.4124
+     ],
+     "etiket_genislik": 0.239
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.5782,
+       0.3224
+      ],
+      [
+       0.7591,
+       0.3224
+      ],
+      [
+       0.94,
+       0.3224
+      ],
+      [
+       0.9409,
+       0.5333
+      ],
+      [
+       0.94,
+       0.7394
+      ],
+      [
+       0.7591,
+       0.7394
+      ],
+      [
+       0.5782,
+       0.7394
+      ],
+      [
+       0.5764,
+       0.5333
+      ]
+     ],
+     "etiket": "hipnoz dozları",
+     "s": 44,
+     "k": [
+      35,
+      41
+     ],
+     "etiket_konum": [
+      0.7509,
+      0.2024
+     ],
+     "etiket_genislik": 0.214,
+     "etiket_hedef": [
+      0.8577,
+      0.3224
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.5164,
+      0.1424,
+      1,
+      0.7994
+     ]
+    }
+   ],
    "1": [
     {
      "tur": "kontur",
@@ -561,9 +960,10 @@
   }
  },
  "rapor": {
-  "aday": 32,
-  "gecti": 14,
+  "aday": 42,
+  "gecti": 17,
   "ret": {
+   "lazer sayfası dışında çizim (H59)": 7,
    "noktaların %13'i çizgi üstünde (en az %70)": 1,
    "noktaların %20'i çizgi üstünde (en az %70)": 1,
    "noktaların %60'i çizgi üstünde (en az %70)": 1,
@@ -576,6 +976,55 @@
    "a/b noktası geçersiz": 4
   },
   "ret_ayrinti": [
+   {
+    "cumle": "P12.C1",
+    "sayfa": 12,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P21.C1",
+    "sayfa": 17,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P32.C2",
+    "sayfa": 21,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P28.C1",
+    "sayfa": 27,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P36.C1",
+    "sayfa": 31,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P35.C1",
+    "sayfa": 35,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P44.C2",
+    "sayfa": 40,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
    {
     "cumle": "P4.C0",
     "sayfa": 5,

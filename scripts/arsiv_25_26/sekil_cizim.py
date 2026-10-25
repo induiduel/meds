@@ -50,6 +50,7 @@ ISTEM = (
     "- Etiket kısa (≤5 kelime) ve cümlede geçen terim. Cümle başına en çok 2, sayfa başına en çok 8 çizim.\n"
     "- Bu sayfalarda `sema` (panel) YAZMA. ★ olmayan cümleler için çizim zorunlu değil; yalnız gerçekten görseli "
     "anlatıyorsa yaz.\n"
+    "- Slayt şablonu, logo, kapak deseni, yazının arkasındaki kart görseli resim değildir: bunlara çizim yapma.\n"
     "- Görselde cümlenin anlattığı yapı gerçekten seçilemiyorsa o ★ cümleyi atla (uydurma yok) ve "
     "`atlanan`: [{\"cumle\": ..., \"neden\": ...}] listesine yaz.\n"
     "Çıktıyı `cizim.json` dosyasına `{\"komutlar\": [...], \"atlanan\": [...]}` olarak kaydet. Bitince: BİTTİ."
@@ -132,7 +133,7 @@ def birlestir(key: str) -> dict:
     W = taslak / "cizim_sekil"
     sayfalar = set(json.loads((W / "sayfalar.json").read_text()))
     yeni, atlanan = [], []
-    for f in sorted(W.glob("parti*/cizim.json")) + sorted((taslak / "cizim_sekil_onar").glob("parti*/cizim.json")):
+    for f in sorted(W.glob("parti*/cizim.json")) + sorted(taslak.glob("cizim_sekil_onar*/parti*/cizim.json")):
         try:
             j = json.loads(f.read_text(encoding="utf-8"))
         except Exception:
@@ -170,11 +171,13 @@ def birlestir(key: str) -> dict:
     sekil = [(pn, ci) for pn, l in isr.items() for ci, i in enumerate(l) if i and i["t"] in ("resim", "tablo")]
     P = cz.get("p") or {}
     cizimli = sum(1 for pn, ci in sekil if (P.get(pn) or {}).get(str(ci)))
-    return {"sekil": len(sekil), "cizimli": cizimli, "aday": len(yeni), "atlanan": len(atlanan),
+    import cizim_kapisi as KAPI
+    kapi_h, _ = KAPI.denetle(key, SA_KOK)
+    return {"kapi_hata": len(kapi_h), "sekil": len(sekil), "cizimli": cizimli, "aday": len(yeni), "atlanan": len(atlanan),
             "gecti": cz["rapor"]["gecti"], "ret": cz["rapor"]["ret"]}
 
 
-def onar_hazirla(key: str) -> int:
+def onar_hazirla(key: str, alt: str = "cizim_sekil_onar") -> int:
     """Çizimsiz kalan ★ cümleler için ikinci tur: reddedilen komut ve kapının nedeni pakete yazılır."""
     taslak, pdf_yol, pars, isr = ders(key)
     C = cumleler(pars)
@@ -189,7 +192,7 @@ def onar_hazirla(key: str) -> int:
             if i and i["t"] in ("resim", "tablo") and not (P.get(pn) or {}).get(str(ci)):
                 eksik.setdefault(int(i["s"]), []).append(f"P{pn}.C{ci}")
     dok = taslak / "cizim_dok"
-    W = taslak / "cizim_sekil_onar"
+    W = taslak / alt
     sayfalar = sorted(eksik)
     for i in range(0, len(sayfalar), PARTI):
         d = W / f"parti{i // PARTI:02d}"
@@ -220,11 +223,59 @@ ONAR_EK = (
 )
 
 
+SUS = ("süs", "kapak", "şablon", "arka plan", "logo", "dekoratif", "görselde yok", "görünmüyor", "başlık yazısı",
+       "görselde karşılığı yok", "resim yok", "görüntü yok")
+
+
+def sus_temizle(key: str) -> int:
+    """Modelin görüntüye bakıp "bu görsel süs/şablon ya da cümlenin anlattığı şey görselde yok" diye atladığı cümlelerde
+    yazarın şekil çapası yanlıştır: kaldırılır (lazer yazıya döner). El ile yazılmış (el: true) çapaya dokunulmaz."""
+    import pdf_isaret as PI_
+    taslak, pdf_yol, pars, isr = ders(key)
+    ats = []
+    for f in taslak.glob("cizim_sekil*/parti*/cizim.json"):
+        try:
+            ats += json.loads(f.read_text(encoding="utf-8")).get("atlanan") or []
+        except Exception:
+            pass
+    hedef = {str(a.get("cumle")) for a in ats if any(w in str(a.get("neden", "")).lower() for w in SUS)}
+    if not hedef:
+        return 0
+    capa = json.loads((SA_KOK / "capa" / f"{key}.json").read_text(encoding="utf-8"))
+    v2 = json.loads((SA_KOK / "v2" / f"{key}.json").read_text(encoding="utf-8"))
+    vs = {c["ses"].strip()[:40]: c for b in v2["bolumler"] for p in b["paragraflar"] for c in p["cumleler"]}
+    n = 0
+    for cid in hedef:
+        try:
+            pn, ci = int(cid[1:].split(".C")[0]), int(cid.split(".C")[1])
+            cc = PI_.cumle_capalari(pars[pn]["t"], PI_.cumle_sonlari(pars[pn]["t"]), capa["p"][pn])[ci]
+        except (ValueError, IndexError):
+            continue
+        for c in cc:
+            if c.get("el") or not (c.get("sekil") or c.get("tablo")):
+                continue
+            c["sekil"] = None
+            c.pop("tablo", None)
+            v = vs.get(c["ses"][:40])
+            if v and isinstance(v.get("slayt"), dict):
+                v["slayt"]["sekil"] = None
+                v["slayt"].pop("tablo", None)
+            n += 1
+    (SA_KOK / "capa" / f"{key}.json").write_text(json.dumps(capa, ensure_ascii=False, indent=1), encoding="utf-8")
+    (SA_KOK / "v2" / f"{key}.json").write_text(json.dumps(v2, ensure_ascii=False, indent=1), encoding="utf-8")
+    if (taslak / "konusma_capalari.json").exists():
+        (taslak / "konusma_capalari.json").write_text(json.dumps(capa["p"], ensure_ascii=False, indent=1), encoding="utf-8")
+    if (taslak / "konusma_v2.json").exists():
+        (taslak / "konusma_v2.json").write_text(json.dumps(v2, ensure_ascii=False, indent=1), encoding="utf-8")
+    return n
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("adim", choices=["hazirla", "calistir", "birlestir", "onar"])
+    ap.add_argument("adim", choices=["hazirla", "calistir", "birlestir", "onar", "sus"])
     ap.add_argument("keys", nargs="+")
     ap.add_argument("--paralel", type=int, default=4)
+    ap.add_argument("--tur", type=int, default=2, help="onar turu (2, 3, …): her tur ayrı dizin")
     a = ap.parse_args()
     if a.adim == "hazirla":
         for k in a.keys:
@@ -232,9 +283,13 @@ def main():
     elif a.adim == "calistir":
         calistir(a.keys, a.paralel)
     elif a.adim == "onar":  # hazırla + çalıştır (ikinci tur); sonra birlestir iki turu birlikte okur
+        alt = "cizim_sekil_onar" if a.tur == 2 else f"cizim_sekil_onar{a.tur}"
         for k in a.keys:
-            print(k, onar_hazirla(k), "eksik ★", flush=True)
-        calistir(a.keys, a.paralel, "cizim_sekil_onar", ISTEM + ONAR_EK)
+            print(k, onar_hazirla(k, alt), "eksik ★", flush=True)
+        calistir(a.keys, a.paralel, alt, ISTEM + ONAR_EK)
+    elif a.adim == "sus":  # sonra: uygula_lazer_takip.py <key> (işaret) + birlestir
+        for k in a.keys:
+            print(k, sus_temizle(k), "şekil çapası kaldırıldı (süs/görselde yok)", flush=True)
     else:
         for k in a.keys:
             print(k, json.dumps(birlestir(k), ensure_ascii=False), flush=True)

@@ -735,85 +735,6 @@
     }
    ]
   },
-  "37": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "karsilastirma",
-     "sablon_ad": "İki durumun karşılaştırması",
-     "duzen": "karsit",
-     "basliklar": [
-      "Özellik"
-     ],
-     "satirlar": [
-      [
-       "Baskın yerleşim",
-       "Beyin nöronları",
-       "Omurilik ve beyin sapı"
-      ],
-      [
-       "İnhibitör mekanizma",
-       "Hızlı postsinaptik inhibisyon",
-       "Klorür kanalı aktivasyonu"
-      ]
-     ],
-     "kutuplar": [
-      "Gaba",
-      "Glisin"
-     ],
-     "s": 37,
-     "k": [
-      0,
-      106
-     ],
-     "tip": "karsit",
-     "konum": [
-      0.03,
-      0.96
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.293,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.2726,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "39": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "mekanizma_adimlari",
-     "sablon_ad": "Mekanizma basamakları",
-     "duzen": "zincir",
-     "ogeler": [
-      "Gaba B reseptör aktivasyonu",
-      "G proteini aracılığı",
-      "Potasyum kanallarını açma",
-      "İnhibitör hiperpolarizasyon"
-     ],
-     "s": 39,
-     "k": [
-      0,
-      115
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.05,
-      0.94
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.45,
-     "yon": "dikey",
-     "olcek": 1.0,
-     "ek_alt": 0.4097,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
   "40": {
    "3": [
     {
@@ -881,84 +802,6 @@
      "yon": "yatay",
      "olcek": 1.0,
      "ek_alt": 0.2126,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "43": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "ilac_etki",
-     "sablon_ad": "İlaç → mekanizma → sonuç",
-     "duzen": "tablo",
-     "basliklar": [
-      "İlaç",
-      "Mekanizma",
-      "Sonuç"
-     ],
-     "satirlar": [
-      [
-       "Klonidin",
-       "Presinaptik alfa iki aktivasyonu",
-       "Noradrenalin salıverilmesini baskılama"
-      ]
-     ],
-     "s": 43,
-     "k": [
-      0,
-      118
-     ],
-     "tip": "tablo",
-     "konum": [
-      0.05,
-      0.94
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.236,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.1956,
-     "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "45": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "ilac_etki",
-     "sablon_ad": "İlaç → mekanizma → sonuç",
-     "duzen": "tablo",
-     "basliklar": [
-      "İlaç",
-      "Mekanizma",
-      "Sonuç"
-     ],
-     "satirlar": [
-      [
-       "Antihistaminikler",
-       "Merkezi H bir antagonizması",
-       "Sedatif uyku etkisi"
-      ]
-     ],
-     "s": 45,
-     "k": [
-      0,
-      105
-     ],
-     "tip": "tablo",
-     "konum": [
-      0.05,
-      0.94
-     ],
-     "genislik": 0.7,
-     "doluluk": 0.0,
-     "kutu_h": 0.236,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.1956,
      "ek_renk": "#ffffff"
     }
    ]
@@ -2881,8 +2724,9 @@
  },
  "rapor": {
   "aday": 79,
-  "gecti": 57,
+  "gecti": 53,
   "ret": {
+   "lazer sayfası dışında çizim (H59)": 4,
    "noktaların %54'i çizgi üstünde (en az %70)": 1,
    "noktaların %55'i çizgi üstünde (en az %70)": 1,
    "noktaların %67'i çizgi üstünde (en az %70)": 1,
@@ -2900,6 +2744,34 @@
    "a/b noktası geçersiz": 3
   },
   "ret_ayrinti": [
+   {
+    "cumle": "P37.C1",
+    "sayfa": 37,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P39.C1",
+    "sayfa": 39,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P43.C1",
+    "sayfa": 43,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P45.C1",
+    "sayfa": 45,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
    {
     "cumle": "P6.C1",
     "sayfa": 7,

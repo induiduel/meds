@@ -1,25 +1,28 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 358,
-  "baslik": "Geçen Yıl Sesli Derslerinde Lazer Şekil ve Tablolara Gidiyor",
+  "onem": 359,
+  "baslik": "Canlı Ders Çizim Senkronizasyonu ve Tekillik Standardı",
   "maddeler": [
-    "Lazer artık şekil ve tablo anlatılırken yazıya değil görselin kendisine gider: 33 arşiv dersinde resim işareti 169'dan 682'ye, tablo işareti 17'den 134'e çıktı.",
-    "Hoca görseli anlatırken lezyon, yapı ve bölgeler resmin üstünde çizilir: şekil anlatan cümlelerin yarıdan fazlasında (474/853) kontur ya da ok var.",
-    "Her cümleye rastgele madde işaretleyen eski toplu betik kaldırıldı; işaret yalnız anlatılan yere düşer."
+    "Slayttaki tüm çizimlerin aynı anda görünmesi ve iç içe geçmesi engellendi; her çizim yalnızca okunan aktif cümlesiyle tam eşzamanlı gösterilir.",
+    "Animasyonun her yeni cümlede baştan tekrar tekrar oynaması sorunu kökten çözüldü; tamamlanan çizimler cümle boyunca sabit ve kararlı kalır.",
+    "Her hata çözümünde kök neden analizi ve kalıcı dokümantasyon zorunlu kılındı (H60 ve H61)."
   ],
   "eklenen": [
-    "Şekil/tablo çapası (tablo: T# | true) ve T# tablo kutuları",
-    "Arşiv şekil cümlelerine görsel üstü çizim (sekil_cizim.py)"
+    "CizimLayer tamamlanan komut kilidi (tamamlananRef) ve stabil anahtarlar",
+    "KURUL2_YAPILMAYACAK_HATALAR H60 ve H61 maddeleri"
   ],
   "degisen": [
-    "meds/scripts/sesli_anlatim/pdf_isaret.py",
-    "meds/scripts/arsiv_25_26/sekil_cizim.py",
-    "meds/scripts/arsiv_25_26/uygula_lazer_takip.py",
-    "meds/data/arsiv_25_26/sesli_anlatim/{capa,isaret,cizim,v2}"
+    "meds/src/components/canliDers/CanliDersDers.tsx",
+    "meds/src/components/learn/pdf/CizimLayer.tsx",
+    "meds/docs/KURUL2_YAPILMAYACAK_HATALAR.md",
+    "AGENTS.md",
+    "DEGISIKLIK_KAYDI.md"
   ],
   "duzeltilen": [
-    "Radyoloji slaytlarında tüm resim alanını çevreleyen geniş kutuların yerine lezyonun kendisini saran dar odak kutusu getirildi",
-    "Kelime aralığı parametresi kaynaklı çizim budanması giderilerek okların ve odakların çizim katmanına tam geçmesi sağlandı"
+    "Aynı slaytta birden fazla çizimin aynı anda ekranda belirmesi ve iç içe geçmesi hatası giderildi",
+    "Cümle değişimlerinde karakter sayacının sıfırlanmasıyla çizim animasyonlarının tekrar tekrar baştan oynaması döngüsü durduruldu"
   ],
-  "silinen": []
+  "silinen": [
+    "CanliDersDers.tsx içerisindeki zamansız sayfaCizimleri toplayıcısı"
+  ]
 }

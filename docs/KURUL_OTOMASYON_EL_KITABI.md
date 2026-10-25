@@ -407,7 +407,10 @@ Tasarım: `ICERIK_MOTORU_V3.md` §2, §12, §15, §16. Model yok; ortam `meds/.v
 
 ### 18.3 Canlı çizim ve sesli ders ekranı (2026-10-24, k2-02 sınamasından; bütün dersler)
 
-- **Kurallar:** `docs/CIZIM_KURALLARI.md` (tek kaynak), model talimatı `scripts/cizim/TALIMAT_CIZIM.md` (1–20), hata defteri H40–H52.
+- **Kurallar:** `docs/CIZIM_KURALLARI.md` (tek kaynak), model talimatı `scripts/cizim/TALIMAT_CIZIM.md` (1–26), hata defteri H40–H52 + H59.
+- **Sıkı kapı (H59, 2026-10-25):** `cizim_uret` + `panel_sinama` sonrası `scripts/cizim/cizim_kapisi.py <key>` 0 HATA olmadan
+  çizim yayına gitmez (ders zinciri çıkış 15; arşivde `arsiv_yayinla.py` paket üretmez). Kurallar `CIZIM_KURALLARI.md` §10.
+  Kapı eşiği gevşetilmez; düşen ders `sekil_cizim.py onar` (arşiv) ya da ilgili partinin silinip yeniden üretilmesiyle düzeltilir.
 - **Akış (ders zinciri `cizim` adımı):** `cizim_uret.py` → sayfa partileri Claude (görüntüye bakarak; şablon seçer, uygun
   şablon yoksa `yeni_sablon` önerir) → `cizim_dogrula.py` kapısı → yeni şablon kaydı (`sablonlar.json`) → bağımsız tıbbi anlam
   denetimi (tamam/düzelt/sil, önbellek `<is>/anlam_denetimi/`) → yerleşim (rota, etiket, panel sürümü, ek alan) →

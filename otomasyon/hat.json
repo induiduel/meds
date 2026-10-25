@@ -212,10 +212,11 @@
         "meds/src/data/k{N}<brans>_onem|_cozucu|_asistan/",
         "meds_temp/hat/dersler/<id>.json"
       ],
-      "not": "Yayımlanmış her Kurul 2+ dersi: hazirla → onem → cozucu → denetim (bağımsız) → birlestir → asistan → ses (EMA) → oracle. Her adım kapılı; gece başına en çok 3 ders. Son adım capa (2026-10-21): anlamsal slayt çapası — capa_dok.py → Claude TALIMAT_CAPA.md → kapı capa_dogrula.py (≥%70 madde/resim/kutu) → data/sesli_anlatim/capa/<key>.json cihaz + Oracle (Oracle pdf_isaret 30 dk). Ardından cizim (2026-10-24, R6): cizim_uret.py → cizim_dogrula.py → data/sesli_anlatim/cizim/<key>.json cihaz + Oracle (sesli derste PDF üstünde kontur/akış/eğri/şema). Çizim kuralları docs/CIZIM_KURALLARI.md (H40–H52): anlam şablonu kütüphanesi scripts/cizim/sablonlar.json (+ yeni şablon kaydı), bağımsız tıbbi anlam denetimi (Claude, önbellekli), resim slaytında panel yok, PDF'in kendi oku çerçevelenir, yerleşim/ek alan betikte; yayından önce panel_sinama.mjs (3 genişlik, 0 hata; düşerse CIZIM_PAY=1.4 ile bir kez, yine düşerse yayın yok).",
+      "not": "Yayımlanmış her Kurul 2+ dersi: hazirla → onem → cozucu → denetim (bağımsız) → birlestir → asistan → ses (EMA) → oracle. Her adım kapılı; gece başına en çok 3 ders. Son adım capa (2026-10-21): anlamsal slayt çapası — capa_dok.py → Claude TALIMAT_CAPA.md → kapı capa_dogrula.py (≥%70 madde/resim/kutu) → data/sesli_anlatim/capa/<key>.json cihaz + Oracle (Oracle pdf_isaret 30 dk). Ardından cizim (2026-10-24, R6): cizim_uret.py → cizim_dogrula.py → data/sesli_anlatim/cizim/<key>.json cihaz + Oracle (sesli derste PDF üstünde kontur/akış/eğri/şema). Çizim kuralları docs/CIZIM_KURALLARI.md (H40–H52): anlam şablonu kütüphanesi scripts/cizim/sablonlar.json (+ yeni şablon kaydı), bağımsız tıbbi anlam denetimi (Claude, önbellekli), resim slaytında panel yok, PDF'in kendi oku çerçevelenir, yerleşim/ek alan betikte; yayından önce panel_sinama.mjs (3 genişlik, 0 hata; düşerse CIZIM_PAY=1.4 ile bir kez, yine düşerse yayın yok). Son kapı cizim_kapisi.py (H59, K1–K9: şekil çapası görsele, uydurma çapa yok, şekil cümlelerinin ≥%40'ı görsel üstü çizimli, resimde panel yok, bütün resmi çevreleyen kontur yok, çizim lazerin sayfasında); düşerse çıkış 15, yayın yok.",
       "kapi": [
         "scripts/cizim/cizim_dogrula.py",
-        "scripts/cizim/panel_sinama.mjs"
+        "scripts/cizim/panel_sinama.mjs",
+        "scripts/cizim/cizim_kapisi.py"
       ]
     },
     {

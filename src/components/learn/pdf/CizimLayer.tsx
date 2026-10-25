@@ -504,6 +504,16 @@ export const CizimLayer = memo(function CizimLayer({ z, useChar }: { z: CizimKom
   const kokRef = useRef<SVGSVGElement & HTMLSpanElement>(null);
   const bitis = useRef(new Map<string, number>());
   const [, yenile] = useState(0);
+
+  // H60: Bir kez tamamlanan (t >= 1) çizim cümle boyunca tamamlanmış (t = 1) kalır;
+  // re-render veya ufak zaman dalgalanmalarında animasyonun tekrar tekrar oynaması engellenir.
+  const tamamlananRef = useRef<Set<string>>(new Set());
+  const sonZRef = useRef(z);
+  if (sonZRef.current !== z) {
+    sonZRef.current = z;
+    tamamlananRef.current.clear();
+  }
+
   // Cümledeki bütün yakınlaşmalı çizimlerin birleşik bölgesi tek ve sabit hedeftir (ayrı ayrı hedefler arasında gidip
   // gelmesin): ilk çizim başlayınca yakınlaşır, sonuncusu bitip BEKLE ms geçince döner.
   let hedef: number[] | null = null;
@@ -544,6 +554,13 @@ export const CizimLayer = memo(function CizimLayer({ z, useChar }: { z: CizimKom
   const cizimler = z.filter((x) => x.tur !== 'sema');
   // şema yalnız betiğin boş bulduğu yerde (konum); boş yer yoksa (konum null) sayfanın önü kapanmasın diye gösterilmez
   const sema = z.find((x) => x.tur === 'sema' && (x.konum || x.konum === undefined));
+  const semaAnahtar = sema ? `sema:${sema.s}:${sema.k?.[0]}-${sema.k?.[1]}:${sema.sablon || sema.duzen || ''}` : '';
+  let semaT = sema ? (tamamlananRef.current.has(semaAnahtar) ? 1 : ilerleme(sema, c)) : -1;
+  if (sema && semaT >= 1) {
+    tamamlananRef.current.add(semaAnahtar);
+    semaT = 1;
+  }
+
   return (
     <>
       <span ref={kokRef} className="pdv-cz-kok" aria-hidden />
@@ -558,16 +575,29 @@ export const CizimLayer = memo(function CizimLayer({ z, useChar }: { z: CizimKom
             </marker>
           </defs>
           {cizimler.map((x, i) => {
-            // dallı okta dallar konuşma aralığını paylaşır: i. dal kendi diliminde çizilir (kaynak → 1. hedef → 2. hedef …)
-            const t0 = ilerleme(x, c);
-            const t = x.dal && t0 >= 0 && x.dal.i > 0 ? (t0 * x.dal.n - x.dal.i < 0 ? -1 : Math.min(1, t0 * x.dal.n - x.dal.i)) : x.dal && t0 > 0 ? Math.min(1, t0 * x.dal.n) : t0;
-            return t < 0 ? null : <g key={i}><Komut z={x} t={t} />{t >= 1 && <EtiketBag z={x} />}</g>;
+            const anahtar = `${x.tur}:${x.s}:${x.k?.[0]}-${x.k?.[1]}:${x.etiket || ''}:${i}`;
+            let t: number;
+            if (tamamlananRef.current.has(anahtar)) {
+              t = 1;
+            } else {
+              const t0 = ilerleme(x, c);
+              t = x.dal && t0 >= 0 && x.dal.i > 0 ? (t0 * x.dal.n - x.dal.i < 0 ? -1 : Math.min(1, t0 * x.dal.n - x.dal.i)) : x.dal && t0 > 0 ? Math.min(1, t0 * x.dal.n) : t0;
+              if (t >= 1) {
+                tamamlananRef.current.add(anahtar);
+                t = 1;
+              }
+            }
+            return t < 0 ? null : <g key={anahtar}><Komut z={x} t={t} />{t >= 1 && <EtiketBag z={x} />}</g>;
           })}
         </svg>
       )}
       {/* etiketler HTML katmanında: SVG oransız ölçeklendiği için yazı orada bozulurdu; boyut sayfa genişliğiyle orantılı */}
-      {cizimler.map((x, i) => (x.etiket && ilerleme(x, c) >= 1 ? <Etiket key={`e${i}`} z={x} /> : null))}
-      {sema && ilerleme(sema, c) >= 0 && (sema.duzen ? <SablonPanel z={sema} t={ilerleme(sema, c)} /> : <Sema z={sema} t={ilerleme(sema, c)} />)}
+      {cizimler.map((x, i) => {
+        const anahtar = `${x.tur}:${x.s}:${x.k?.[0]}-${x.k?.[1]}:${x.etiket || ''}:${i}`;
+        const hazir = tamamlananRef.current.has(anahtar) || ilerleme(x, c) >= 1;
+        return x.etiket && hazir ? <Etiket key={`e-${anahtar}`} z={x} /> : null;
+      })}
+      {sema && semaT >= 0 && (sema.duzen ? <SablonPanel z={sema} t={semaT} /> : <Sema z={sema} t={semaT} />)}
     </>
   );
 });

@@ -451,6 +451,8 @@ def cizim_dogrula_ve_yerlestir(taslak: Path, key: str, pdf_yol: Path, pars: list
     doc = pymupdf.open(pdf_yol)
     aday_yol = taslak / "cizim_aday.json"
     komutlar = json.loads(aday_yol.read_text(encoding="utf-8")).get("komutlar", []) if aday_yol.exists() else []
+    isr_yol = SA_KOK / "isaret" / f"{key}.json"
+    isr_veri = json.loads(isr_yol.read_text(encoding="utf-8")) if isr_yol.exists() else None
 
     # Cümle sözlüğü P<i>.C<j> ve k<N>-<NN>-c<NNNN> eşlemesi
     from pdf_isaret import Sayfa, cumle_sonlari
@@ -488,6 +490,11 @@ def cizim_dogrula_ve_yerlestir(taslak: Path, key: str, pdf_yol: Path, pars: list
         s = int(k.get("sayfa") or 0)
         if not (1 <= s <= doc.page_count):
             say["ret"]["geçersiz sayfa"] = say["ret"].get("geçersiz sayfa", 0) + 1
+            continue
+        neden_l = CU.lazer_uyumu(isr_veri, cid, k, s)
+        if neden_l:
+            say["ret"][neden_l] = say["ret"].get(neden_l, 0) + 1
+            say.setdefault("ret_ayrinti", []).append({"cumle": cid, "sayfa": s, "tur": k.get("tur"), "neden": neden_l, "komut": {}})
             continue
         if s not in raster:
             pg = doc[s - 1]
@@ -535,6 +542,9 @@ def cizim_dogrula_ve_yerlestir(taslak: Path, key: str, pdf_yol: Path, pars: list
         ) if x in k}
         komut.update(s=s, k=[ka[bas_k][0], ka[son_k][1]])
         yer = CU.yerlesim(komut, raster[s], sayfa_dolu.setdefault(s, []), satir_onbellek[s])
+        if CU.lazer_uyumu(isr_veri, cid, yer, s):  # oku_panele okun panele çevirdiği durum (H59)
+            say["ret"]["resim anlatılırken panel (H59)"] = say["ret"].get("resim anlatılırken panel (H59)", 0) + 1
+            continue
         yk = CU.yakinlasma(yer, resim_kutulari[s], CU.resim_sayfasi(resim_kutulari[s], satir_onbellek[s], raster[s]))
         if yk:
             yer["yakin"] = yk
@@ -795,6 +805,14 @@ def main() -> int:
     isr = pdf_isaret_yerel(a.key, pars, pdf_yol, hz, capalar_list, metin_sha1, v2)
     ck = cikmis_konum_yerel(a.key, pars, v2, baglam, metin_sha1)
     cz = cizim_dogrula_ve_yerlestir(taslak, a.key, pdf_yol, pars, capalar_list, metin_sha1, v2)
+    import cizim_kapisi as KAPI  # H59: ders bütünü kapısı; HATA varsa paket üretilmez
+    kapi_h, _ = KAPI.denetle(a.key, SA_KOK)
+    if kapi_h:
+        print(f"[{a.key}] ÇİZİM KAPISI {len(kapi_h)} HATA (scripts/cizim/cizim_kapisi.py):")
+        for h in kapi_h[:30]:
+            print("  -", h)
+        print("  Düzeltme: scripts/arsiv_25_26/sekil_cizim.py hazirla/calistir/onar/birlestir; kapı gevşetilmez.")
+        return 1
 
     # 5. Arşiv Öğren destesi ve ders paketini ayrı veritabanına kaydet
     print(f"[{a.key}] 5/6 Arşiv Öğren destesi ve ders paketi kaydediliyor...")

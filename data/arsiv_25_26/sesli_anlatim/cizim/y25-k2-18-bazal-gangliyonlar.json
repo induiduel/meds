@@ -2263,14 +2263,15 @@
   }
  },
  "rapor": {
-  "aday": 56,
+  "aday": 61,
   "gecti": 43,
   "ret": {
    "a/b noktası geçersiz": 2,
    "noktaların %0'i çizgi üstünde (en az %70)": 6,
    "noktaların %13'i çizgi üstünde (en az %70)": 1,
    "noktaların %7'i çizgi üstünde (en az %70)": 1,
-   "sayfada >8 çizim": 3
+   "sayfada >8 çizim": 3,
+   "ok uçlarından biri boş alanda (yazı/çizim yok)": 5
   },
   "ret_ayrinti": [
    {
@@ -2691,6 +2692,91 @@
       0.45,
       0.135
      ]
+    }
+   },
+   {
+    "cumle": "P12.C0",
+    "sayfa": 8,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.13,
+      0.25
+     ],
+     "b": [
+      0.18,
+      0.122
+     ],
+     "etiket": "direkt yol"
+    }
+   },
+   {
+    "cumle": "P12.C0",
+    "sayfa": 8,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.13,
+      0.4
+     ],
+     "b": [
+      0.17,
+      0.767
+     ],
+     "etiket": "indirekt yol"
+    }
+   },
+   {
+    "cumle": "P23.C2",
+    "sayfa": 11,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.45,
+      0.87
+     ],
+     "b": [
+      0.27,
+      0.745
+     ],
+     "etiket": "merkez çevre inhibisyonu"
+    }
+   },
+   {
+    "cumle": "P23.C4",
+    "sayfa": 11,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.62,
+      0.86
+     ],
+     "b": [
+      0.3,
+      0.745
+     ],
+     "etiket": "istem dışı hareketler"
+    }
+   },
+   {
+    "cumle": "P23.C4",
+    "sayfa": 11,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.68,
+      0.573
+     ],
+     "b": [
+      0.4,
+      0.573
+     ],
+     "etiket": "mikrografi, bradikinezi"
     }
    }
   ]

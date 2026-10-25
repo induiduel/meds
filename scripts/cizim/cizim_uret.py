@@ -690,6 +690,23 @@ def anlam_denetimi(W: Path, key: str, C: dict, komutlar: list) -> dict:
         return {}
 
 
+def lazer_uyumu(isr: dict | None, cid: str, k: dict, s: int) -> str | None:
+    """Çizim, öğrencinin o an baktığı yerde olmalı (H59, cizim_kapisi K4/K7): komutun sayfası cümlenin lazer sayfası
+    değilse ya da lazer bir resmi gösterirken panel (sema) yazılmışsa reddedilir."""
+    try:
+        pn, ci = cid[1:].split(".C")
+        i = ((isr or {}).get("c") or {}).get(pn)[int(ci)]
+    except (TypeError, ValueError, IndexError, AttributeError):
+        return None
+    if not i:
+        return None
+    if i.get("s") and int(i["s"]) != s:
+        return "lazer sayfası dışında çizim (H59)"
+    if k.get("tur") == "sema" and i.get("t") == "resim":
+        return "resim anlatılırken panel (H59)"
+    return None
+
+
 def dok_uret(belge, out_dir: Path, force: bool = False):
     """PDF sayfalarını sNN.png (M# mavi madde, R# kırmızı resim, T# yeşil tablo kutuları) ve sNN.txt olarak üretir."""
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -1004,6 +1021,10 @@ def main() -> int:
             if cid not in C:
                 say["ret"]["bilinmeyen cümle"] = say["ret"].get("bilinmeyen cümle", 0) + 1; continue
             s = int(k.get("sayfa") or 0)
+            neden_l = lazer_uyumu(isr, cid, k, s)
+            if neden_l:
+                say["ret"][neden_l] = say["ret"].get(neden_l, 0) + 1
+                continue
             ad = (ADAY.get(s) or {}).get(str(k.get("aday") or ""))
             if ad:                       # aday seçildi: koordinat betikle adaydan (tahmin değil, PDF/görüntü çizimi)
                 k = {**k, **{x: ad[x] for x in ("a", "b", "nokta", "fazlar") if x in ad}}
@@ -1081,6 +1102,9 @@ def main() -> int:
             if s not in satir_onbellek and belge is not None and 1 <= s <= belge.page_count:
                 satir_onbellek[s] = sayfa_satirlari(belge[s - 1])
             yer = yerlesim(komut, raster.get(s), sayfa_dolu.setdefault(s, []), satir_onbellek.get(s))
+            if lazer_uyumu(isr, cid, yer, s):  # yazıya düşen ok panele dönmüş olabilir (oku_panele): resim cümlesinde panel yok
+                say["ret"]["resim anlatılırken panel (H59)"] = say["ret"].get("resim anlatılırken panel (H59)", 0) + 1
+                continue
             kb = kutular(dok / f"s{s:02d}.txt")
             yk = yakinlasma(yer, kb, resim_sayfasi(kb, satir_onbellek.get(s), raster.get(s)))
             if yk:

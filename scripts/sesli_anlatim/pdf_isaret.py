@@ -208,6 +208,16 @@ class Sayfa:
                 self.resimler.append(b)
             elif a > 0.85 * alan:
                 self.zemin = (round(W * 0.04, 2), round(H * 0.04, 2), round(W * 0.96, 2), round(H * 0.96, 2))
+        # Yazının arkasındaki şablon/kart zemini resim değildir (H59: yazı slaytı bütünüyle "resim" diye işaretleniyordu):
+        # içinde ≥8 metin kelimesi olan görsel kutusu tekil resim listesinden çıkar (dizin kalıcı, yalnız seçilmez).
+        def _yazi_say(b):
+            return sum(1 for _, _, w in self.kelimeler if b[0] <= (w[0] + w[2]) / 2 <= b[2] and b[1] <= (w[1] + w[3]) / 2 <= b[3])
+        if not self.ocr:
+            self.tekil_resim = [i for i in self.tekil_resim if _yazi_say(self.resimler[i]) < 8]
+        # tam sayfa görsel ancak slaytın kendisiyse (taranmış, metin katmanı az ya da OCR) zemin yedeğidir; yazılı slaytın
+        # arkasındaki şablon görseli değil
+        if self.zemin and len(self.kelimeler) >= 15 and not self.ocr:
+            self.zemin = None
         # Metinsiz/az metinli tam slayt görseli ya da diyagramı (şema, anatomi, radyoloji)
         if not self.resimler and (not self.kelimeler or len(self.kelimeler) < 15) and pg.get_image_info():
             self.resimler.append((round(W * 0.04, 2), round(H * 0.04, 2), round(W * 0.96, 2), round(H * 0.96, 2)))
@@ -498,6 +508,14 @@ def capali_ic(cumle: str, capalar: list[dict], pdf: "Pdf | None") -> dict | None
         isr = sekil_isareti(sy, int(sayfa), capalar)
         if isr:
             return isr
+        # çapanın sayfasında görsel yok: hizalama kayması (±1) — komşu sayfadaki görsel (R# dizini o sayfaya ait değil)
+        yalin = [{k: v for k, v in c.items() if k not in ("resim", "kutu")} for c in capalar]
+        for s2 in (int(sayfa) + 1, int(sayfa) - 1):
+            sy2 = pdf.sayfa(s2)
+            if sy2 and (sy2.tekil_resim or sy2.tablolar):
+                isr = sekil_isareti(sy2, s2, yalin)
+                if isr:
+                    return isr
     if any(c.get("madde") for c in capalar):
         ms = {int(i) for c in capalar for i in (c.get("madde") or []) if 0 <= int(i) < len(sy.maddeler)}
         if ms:

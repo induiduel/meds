@@ -518,38 +518,6 @@
      ]
     }
    ],
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Subakut dönemde izodens görünüm",
-      "Kortikal sulkusların silinmesi",
-      "Ventriküllerde bası etkisi",
-      "İki taraflı olgular"
-     ],
-     "baslik": "İzodens Subdural Hematom İpuçları",
-     "s": 36,
-     "k": [
-      0,
-      94
-     ],
-     "tip": "liste",
-     "konum": [
-      0.05,
-      0.76
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.363,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.1434,
-     "ek_renk": "#ffffff"
-    }
-   ],
    "2": [
     {
      "tur": "kontur",
@@ -2402,147 +2370,6 @@
     }
    ]
   },
-  "39": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "siniflama",
-     "sablon_ad": "Sınıflama",
-     "duzen": "liste",
-     "ogeler": [
-      "Araknoid ile pia mater arası boşluk",
-      "Beyin omurilik sıvısına karışım",
-      "En sık neden kafa travması"
-     ],
-     "baslik": "Subaraknoid Kanama Özellikleri",
-     "s": 41,
-     "k": [
-      0,
-      98
-     ],
-     "tip": "liste",
-     "konum": [
-      0.05,
-      0.82
-     ],
-     "genislik": 0.5,
-     "doluluk": 0.0,
-     "kutu_h": 0.308,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.148,
-     "ek_renk": "#ffffff"
-    },
-    {
-     "tur": "kontur",
-     "nokta": [
-      [
-       0.525,
-       0.63
-      ],
-      [
-       0.55,
-       0.583
-      ],
-      [
-       0.573,
-       0.55
-      ],
-      [
-       0.578,
-       0.642
-      ],
-      [
-       0.544,
-       0.65
-      ]
-     ],
-     "etiket": "akut deoksihemoglobin",
-     "s": 40,
-     "k": [
-      26,
-      55
-     ],
-     "etiket_konum": [
-      0.24,
-      0.76
-     ],
-     "etiket_genislik": 0.302,
-     "etiket_hedef": [
-      0.525,
-      0.65
-     ],
-     "etiket_boy": 0.0443,
-     "yakin": [
-      0.18,
-      0.49,
-      0.638,
-      0.8643
-     ]
-    }
-   ],
-   "0": [
-    {
-     "tur": "kontur",
-     "nokta": [
-      [
-       0.469,
-       0.25
-      ],
-      [
-       0.512,
-       0.208
-      ],
-      [
-       0.575,
-       0.192
-      ],
-      [
-       0.588,
-       0.217
-      ],
-      [
-       0.556,
-       0.233
-      ],
-      [
-       0.512,
-       0.258
-      ],
-      [
-       0.481,
-       0.3
-      ],
-      [
-       0.463,
-       0.325
-      ]
-     ],
-     "etiket": "akut komponent",
-     "s": 40,
-     "k": [
-      46,
-      50
-     ],
-     "etiket_konum": [
-      0.578,
-      0.072
-     ],
-     "etiket_genislik": 0.214,
-     "etiket_hedef": [
-      0.588,
-      0.192
-     ],
-     "etiket_boy": 0.0443,
-     "yakin": [
-      0.403,
-      0.012,
-      0.852,
-      0.385
-     ]
-    }
-   ]
-  },
   "44": {
    "1": [
     {
@@ -2573,252 +2400,6 @@
      "olcek": 1.0,
      "ek_alt": 0.2297,
      "ek_renk": "#ffffff"
-    }
-   ]
-  },
-  "55": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "mekanizma_adimlari",
-     "sablon_ad": "Mekanizma basamakları",
-     "duzen": "zincir",
-     "ogeler": [
-      "Açısal ivmelenme yavaşlama",
-      "Farklı dokularda makaslama",
-      "Aksonal mikrotübül kopması",
-      "Koma ve vejetatif tablo"
-     ],
-     "s": 57,
-     "k": [
-      0,
-      91
-     ],
-     "tip": "zincir",
-     "konum": [
-      0.03,
-      0.97
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.45,
-     "yon": "dikey",
-     "olcek": 1.0,
-     "ek_alt": 0.4397,
-     "ek_renk": "#ffffff"
-    }
-   ],
-   "0": [
-    {
-     "tur": "kontur",
-     "nokta": [
-      [
-       0.294,
-       0.633
-      ],
-      [
-       0.3225,
-       0.625
-      ],
-      [
-       0.319,
-       0.5
-      ],
-      [
-       0.375,
-       0.333
-      ],
-      [
-       0.3875,
-       0.15
-      ],
-      [
-       0.3625,
-       0.133
-      ],
-      [
-       0.3375,
-       0.317
-      ],
-      [
-       0.281,
-       0.5
-      ]
-     ],
-     "s": 56,
-     "k": [
-      51,
-      90
-     ],
-     "yakin": [
-      0.221,
-      0.073,
-      0.4475,
-      0.693
-     ]
-    }
-   ]
-  },
-  "59": {
-   "1": [
-    {
-     "tur": "sema",
-     "sablon": "karsilastirma",
-     "sablon_ad": "İki durumun karşılaştırması",
-     "duzen": "karsit",
-     "basliklar": [
-      "Özellik"
-     ],
-     "satirlar": [
-      [
-       "Duyarlılık",
-       "Aksonal hasarda yetersiz",
-       "Çok yüksek duyarlılık"
-      ],
-      [
-       "Lezyon yakalama",
-       "Yalnız yüzde yirmi hemorajik odak",
-       "Nonhemorajik mikrotübül hasarı"
-      ],
-      [
-       "İdeal sekans",
-       "Kemik ve parankim penceresi",
-       "Difüzyon ve gradyan eko sekansları"
-      ]
-     ],
-     "kutuplar": [
-      "Bilgisayarlı Tomografi",
-      "Manyetik Rezonans"
-     ],
-     "s": 61,
-     "k": [
-      0,
-      88
-     ],
-     "tip": "karsit",
-     "konum": [
-      0.05,
-      0.79
-     ],
-     "genislik": 0.9,
-     "doluluk": 0.0,
-     "kutu_h": 0.39,
-     "yon": "yatay",
-     "olcek": 1.0,
-     "ek_alt": 0.1996,
-     "ek_renk": "#ffffff"
-    }
-   ],
-   "0": [
-    {
-     "tur": "kontur",
-     "nokta": [
-      [
-       0.172,
-       0.393
-      ],
-      [
-       0.185,
-       0.387
-      ],
-      [
-       0.195,
-       0.4
-      ],
-      [
-       0.196,
-       0.42
-      ],
-      [
-       0.19,
-       0.437
-      ],
-      [
-       0.177,
-       0.437
-      ],
-      [
-       0.17,
-       0.42
-      ]
-     ],
-     "etiket": "forniks hiperdens hemoraji",
-     "s": 60,
-     "k": [
-      35,
-      72
-     ],
-     "etiket_konum": [
-      0.0,
-      0.06
-     ],
-     "etiket_genislik": 0.366,
-     "etiket_hedef": [
-      0.1829,
-      0.387
-     ],
-     "etiket_boy": 0.0443,
-     "yakin": [
-      0,
-      0,
-      0.426,
-      0.497
-     ]
-    },
-    {
-     "tur": "kontur",
-     "nokta": [
-      [
-       0.169,
-       0.467
-      ],
-      [
-       0.188,
-       0.457
-      ],
-      [
-       0.21,
-       0.463
-      ],
-      [
-       0.215,
-       0.487
-      ],
-      [
-       0.203,
-       0.507
-      ],
-      [
-       0.181,
-       0.508
-      ],
-      [
-       0.166,
-       0.492
-      ]
-     ],
-     "etiket": "splenium hipodens alan",
-     "s": 60,
-     "k": [
-      76,
-      166
-     ],
-     "etiket_konum": [
-      0.0,
-      0.76
-     ],
-     "etiket_genislik": 0.315,
-     "etiket_hedef": [
-      0.166,
-      0.508
-     ],
-     "etiket_boy": 0.0443,
-     "yakin": [
-      0,
-      0.397,
-      0.375,
-      0.8643
-     ]
     }
    ]
   },
@@ -3908,6 +3489,118 @@
     }
    ]
   },
+  "39": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.469,
+       0.25
+      ],
+      [
+       0.512,
+       0.208
+      ],
+      [
+       0.575,
+       0.192
+      ],
+      [
+       0.588,
+       0.217
+      ],
+      [
+       0.556,
+       0.233
+      ],
+      [
+       0.512,
+       0.258
+      ],
+      [
+       0.481,
+       0.3
+      ],
+      [
+       0.463,
+       0.325
+      ]
+     ],
+     "etiket": "akut komponent",
+     "s": 40,
+     "k": [
+      46,
+      50
+     ],
+     "etiket_konum": [
+      0.578,
+      0.072
+     ],
+     "etiket_genislik": 0.214,
+     "etiket_hedef": [
+      0.588,
+      0.192
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.403,
+      0.012,
+      0.852,
+      0.385
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.525,
+       0.63
+      ],
+      [
+       0.55,
+       0.583
+      ],
+      [
+       0.573,
+       0.55
+      ],
+      [
+       0.578,
+       0.642
+      ],
+      [
+       0.544,
+       0.65
+      ]
+     ],
+     "etiket": "akut deoksihemoglobin",
+     "s": 40,
+     "k": [
+      26,
+      55
+     ],
+     "etiket_konum": [
+      0.24,
+      0.76
+     ],
+     "etiket_genislik": 0.302,
+     "etiket_hedef": [
+      0.525,
+      0.65
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.18,
+      0.49,
+      0.638,
+      0.8643
+     ]
+    }
+   ]
+  },
   "45": {
    "0": [
     {
@@ -4267,6 +3960,172 @@
       0.44,
       0.305,
       0.747
+     ]
+    }
+   ]
+  },
+  "55": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.294,
+       0.633
+      ],
+      [
+       0.3225,
+       0.625
+      ],
+      [
+       0.319,
+       0.5
+      ],
+      [
+       0.375,
+       0.333
+      ],
+      [
+       0.3875,
+       0.15
+      ],
+      [
+       0.3625,
+       0.133
+      ],
+      [
+       0.3375,
+       0.317
+      ],
+      [
+       0.281,
+       0.5
+      ]
+     ],
+     "s": 56,
+     "k": [
+      51,
+      90
+     ],
+     "yakin": [
+      0.221,
+      0.073,
+      0.4475,
+      0.693
+     ]
+    }
+   ]
+  },
+  "59": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.172,
+       0.393
+      ],
+      [
+       0.185,
+       0.387
+      ],
+      [
+       0.195,
+       0.4
+      ],
+      [
+       0.196,
+       0.42
+      ],
+      [
+       0.19,
+       0.437
+      ],
+      [
+       0.177,
+       0.437
+      ],
+      [
+       0.17,
+       0.42
+      ]
+     ],
+     "etiket": "forniks hiperdens hemoraji",
+     "s": 60,
+     "k": [
+      35,
+      72
+     ],
+     "etiket_konum": [
+      0.0,
+      0.06
+     ],
+     "etiket_genislik": 0.366,
+     "etiket_hedef": [
+      0.1829,
+      0.387
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0,
+      0,
+      0.426,
+      0.497
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.169,
+       0.467
+      ],
+      [
+       0.188,
+       0.457
+      ],
+      [
+       0.21,
+       0.463
+      ],
+      [
+       0.215,
+       0.487
+      ],
+      [
+       0.203,
+       0.507
+      ],
+      [
+       0.181,
+       0.508
+      ],
+      [
+       0.166,
+       0.492
+      ]
+     ],
+     "etiket": "splenium hipodens alan",
+     "s": 60,
+     "k": [
+      76,
+      166
+     ],
+     "etiket_konum": [
+      0.0,
+      0.76
+     ],
+     "etiket_genislik": 0.315,
+     "etiket_hedef": [
+      0.166,
+      0.508
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0,
+      0.397,
+      0.375,
+      0.8643
      ]
     }
    ]
@@ -4859,9 +4718,10 @@
  },
  "rapor": {
   "aday": 125,
-  "gecti": 95,
+  "gecti": 91,
   "ret": {
    "panel metni 'Duranın kemikten sıyrılması' henüz anlatılmamış": 1,
+   "lazer sayfası dışında çizim (H59)": 4,
    "resim sayfasında panel (H51)": 2,
    "noktaların %0'i çizgi üstünde (en az %70)": 4,
    "noktaların %31'i çizgi üstünde (en az %70)": 1,
@@ -4886,6 +4746,34 @@
     "sayfa": 18,
     "tur": "sema",
     "neden": "panel metni 'Duranın kemikten sıyrılması' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P34.C1",
+    "sayfa": 36,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P39.C1",
+    "sayfa": 41,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P55.C1",
+    "sayfa": 57,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P59.C1",
+    "sayfa": 61,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
     "komut": {}
    },
    {
