@@ -1,12 +1,12 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 372,
-  "baslik": "Terim Yardımcısı Denetimi: Over Tümörleri ve Prenatal Tanı",
+  "onem": 373,
+  "baslik": "Terim Yardımcısı Denetimi: Bebek Beslenmesi, Halk Sağlığı Tarihçesi, İzolasyon",
   "maddeler": [
-    "Over Tümörleri dersinde seröz, müsinoz, endometrioid, borderline, Tip I ve Tip II karsinom, STIC, psammoma cisimcikleri, bilateralite gibi 12 zor terim eklendi; gündelik sözcükler ayıklandı.",
-    "Prenatal Tanı Yöntemleri dersine invaziv ve non-invaziv yöntemler, CVS, NTD, AFP, PAPP-A, fetoskopi, koryon villus biyopsisi, de novo gibi 9 terim eklendi.",
-    "PDF'te madde imi kelimeye yapışık geldiğinde (oCVS, oFetoskopi) madde başındaki terimler artık işaretlenebiliyor.",
-    "Terimler sayfasındaki ortak sözlüğe 17 yeni terim eklendi."
+    "Bebek Beslenmesi dersinde gündelik sözcük işaretleri ayıklandı; whey, laktoz ve vejeteryan diyeti terimleri eklendi.",
+    "Halk Sağlığı Tarihçesi dersine epidemiyoloji, prevalans ve insidans terimleri eklendi.",
+    "İzolasyon Yöntemleri dersine direk ve indirek temas, Ultraviyole, zarflı virüs, antiseptik, N95 ve aerosol oluşturan işlemler eklendi (28 → 35).",
+    "Terimler sayfasındaki ortak sözlüğe 12 yeni terim eklendi."
   ],
   "eklenen": [
     "data/sesli_anlatim/terim/k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim.json",

@@ -135,6 +135,30 @@
   "uretici": "deepseek",
   "ders": "k1-17-cinsel-yolla-bulasan-enfeksiyonlarda-tedavi"
  },
+ "epidemiyoloji": {
+  "term": "Epidemiyoloji",
+  "category": "terim",
+  "definition": "Sağlık olaylarının toplumdaki dağılımını ve belirleyicilerini inceleyen bilim dalı. Salgınların kaynağını bulmakta kullanılır.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-18-halk-sagligi-tarihcesi"
+ },
+ "prevalans": {
+  "term": "Prevalans",
+  "category": "terim",
+  "definition": "Belirli bir anda toplumda var olan tüm hastalık olgularının oranı. Yeni ve eski olguları birlikte sayar.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-18-halk-sagligi-tarihcesi"
+ },
+ "insidans": {
+  "term": "İnsidans",
+  "category": "terim",
+  "definition": "Belirli bir sürede toplumda yeni ortaya çıkan hastalık olgularının oranı. Hastalığın ortaya çıkış hızını gösterir.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-18-halk-sagligi-tarihcesi"
+ },
  "46,xx erkek": {
   "term": "46,XX erkek",
   "category": "terim",
@@ -171,6 +195,30 @@
   "term": "Zayıflık / çelimsizlik",
   "category": "terim",
   "definition": "Çocuğun boyuna göre ağırlığının çok düşük olması.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-22-bebek-beslenmesi"
+ },
+ "laktoz": {
+  "term": "Laktoz",
+  "category": "terim",
+  "definition": "Sütte bulunan doğal şeker. Sindirimi için laktaz enzimi gerekir; enzim eksikliğinde ishal ve gaz yakınması olur.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-22-bebek-beslenmesi"
+ },
+ "vejeteryan diyeti": {
+  "term": "Vejeteryan diyeti",
+  "category": "terim",
+  "definition": "Hayvansal gıdaların kısıtlandığı beslenme biçimi. Emziren kadında çinko ve B12 yetersizliğine yol açabilir.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-22-bebek-beslenmesi"
+ },
+ "whey": {
+  "term": "Whey",
+  "category": "terim",
+  "definition": "Anne sütü proteininin çoğunu oluşturan, sindirimi kolay serum proteini. İnek sütünde ise kazein baskın proteindir.",
   "kaynak": "deepseek",
   "uretici": "deepseek",
   "ders": "k1-22-bebek-beslenmesi"
@@ -334,6 +382,54 @@
   "kaynak": "deepseek",
   "uretici": "deepseek",
   "ders": "k1-35-prenatal-tani-yontemleri"
+ },
+ "antiseptik": {
+  "term": "Antiseptik",
+  "category": "terim",
+  "definition": "Canlı doku yüzeyine uygulanan, mikroorganizmaları öldüren veya çoğalmasını durduran kimyasal madde.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-36-izolasyon-yontemleri"
+ },
+ "n95": {
+  "term": "N95",
+  "category": "terim",
+  "definition": "Partikül filtrasyonu yüksek, yüze tam oturan maske. Solunum izolasyonunda ve aerosol oluşturan işlemlerde kullanılır.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-36-izolasyon-yontemleri"
+ },
+ "aerosol olusturan islemler": {
+  "term": "Aerosol oluşturan işlemler",
+  "category": "terim",
+  "definition": "Havaya çok sayıda küçük partikül saçan girişimler. Entübasyon, bronkoskopi ve aspirasyon bu gruba girer.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-36-izolasyon-yontemleri"
+ },
+ "direk temas": {
+  "term": "Direk temas",
+  "category": "terim",
+  "definition": "Mikroorganizmanın kan veya enfekte vücut sıvısıyla doğrudan mukoza ya da hasarlı deriye geçmesi.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-36-izolasyon-yontemleri"
+ },
+ "indirek": {
+  "term": "İndirek",
+  "category": "terim",
+  "definition": "Etkenin kontamine alet, yüzey veya sağlık personelinin elleri aracılığıyla dolaylı taşınması.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-36-izolasyon-yontemleri"
+ },
+ "ultraviyole": {
+  "term": "Ultraviyole",
+  "category": "terim",
+  "definition": "Mikroorganizmaların DNA yapısını bozarak çoğalmasını durduran ışın. Ortam dezenfeksiyonunda kullanılır.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-36-izolasyon-yontemleri"
  },
  "henoch–schonlein purpurasi": {
   "term": "Henoch–Schönlein purpurası",
