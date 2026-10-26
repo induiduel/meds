@@ -648,3 +648,15 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** "Gebeliğin 20. ile 37. haftaları arasında gerçekleşen doğumdur" ya da "Geniş spektrumlu 3. kuşak sefalosporindir" gibi tek/iki cümlelik açıklamalar "en çok 2 cümle" HATAsı veriyordu; 167 terim bu yüzden canlıda kural dışı görünüyordu.
 - **Kök neden:** Denetim `[.!?](\s|$)` kalıbıyla her noktayı cümle sonu sayıyordu. Sıra sayısı ("3."), ölçü ("20.") ve tür kısaltması ("N. gonorrhoeae", "C. trachomatis") noktaları da sayıldığı için cümle sayısı şişiyordu.
 - **Kalıcı çözüm:** Cümle sonu ancak noktadan sonra **büyük harf** ya da metin sonu geliyorsa sayılır (`[.!?](?=\s+[A-ZÇĞİÖŞÜ]|\s*$)`). Gerçek üç cümleli açıklama hâlâ HATA alır; kural gevşemedi, yanlış sayım düzeldi. Ayrıca "frenler"/"çapası" gibi çeviri mecazları (8 terim) doğal Türkçeyle yeniden yazıldı.
+
+## H77 — Kısaltma katmanı eklenirken üç ayrı tuzak: büyük harfli Türkçe sözcük, tireyle bitişik yazım, dağıtım listesi (2026-10-26, Kurul 2 · 60 ders)
+- **Belirti:** Slayt kısaltmaları (ÜSYE, DD, VUR, DSM-5, MAO-A, 5-HTTLPR …) işaretlenirken (a) "BİLİNÇ", "KOMA", "NÖBET", "CEYLAN" gibi büyük harfli Türkçe sözcükler/başlıklar kısaltma sanıldı, (b) "DSM-5", "MAO-A", "HIV-1", "GABAA-reseptör", "5-HTTLPR", madde imli "o5-HTT" yazımlarında "kutular bulunamadı" HATAsı verdi, (c) kısaltma dosyaları yazıldığı hâlde canlıya hiç ulaşmadı.
+- **Kök neden:**
+  1. Kısaltma sezgiseli yalnız "büyük harf dizisi" kalıbına bakıyordu; Türkçe sözlük (hunspell) denetimi yoktu.
+  2. Kutu araması terim kapısının `bul()` kuralını kullanıyordu; bu kural yalnız **tam kelimeyi** (ya da Türkçe ekini) eşler. Tireyle/rakamla bitişik yazımlarda kısaltma ayrı bir kelime olmadığı için hiç bulunamıyordu. Ayrıca madde imi "o" yalnız ardından **büyük harf** gelirse ayrılıyor; "o5-HTT" gibi rakamla gelen yazımda "o5-" önek olarak kalıyordu.
+  3. `deploy-code.sh` [1b] veri listesine `kisaltma` eklenmemişti (H73'ün aynısı).
+- **Çözüm / kural:**
+  1. `kisaltma_mi()` artık `/usr/share/hunspell/tr_TR.dic` köklerini (ek soyma ile) kullanır: sözlükte bulunan büyük harfli sözcük kısaltma sayılmaz. Bilinen/elle sözlükte (`kisaltma_bilinen.json`, `kisaltma_elle/`) açıkça tanımlı kısaltmalar (SAK, KS gibi Türkçe sözcüğe benzeyenler) bu filtreden muaftır.
+  2. `kutular()` eklendi: tam eşleşme yoksa kısaltma, kelime içinde **önek/sonek sınırı** denetlenerek (ör. "o5-httlpr", "t12-l1", "dsm-iii-r", "gabaa-reseptor") karakter oranıyla daraltılmış kutuda işaretlenir. Kapı gevşetilmedi; yalnız doğru konum hesaplandı.
+  3. Dağıtım listesine `kisaltma` eklendi; canlı API'de `kisaltma` alanı `curl` ile doğrulandı.
+- **Önleme kuralı:** (i) Her yeni veri türü hem `canliDers.ts` yol tanımına hem `deploy-code.sh` [1b] listesine yazılır. (ii) Kısaltma/açılım **yalnız dersin kendi metninden ya da elle/bilinen sözlükten** alınır; metinde açılımı olmayan kısaltmaya tahminle açılım yazılmaz (yanlış açılım, eksik açılımdan kötüdür).

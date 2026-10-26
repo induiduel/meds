@@ -110,7 +110,7 @@ echo "==> [1b/4] sesli ders verisi (metin/hizalama/vurgu/çıkmış konumu → O
 # yönetildiği için gönderilmez; cumle_zaman/ de Oracle'da meds-cumle-zaman.timer ile üretilir (yereldeki eski kopya onu
 # ezmesin). Commit'lenmemiş değişikliği olan klasör (başka oturumun yarım işi) atlanır.
 SA="data/sesli_anlatim"
-for k in metin hizalama vurgu capa cizim ogrenci_not cikmis_konum terim; do
+for k in metin hizalama vurgu capa cizim ogrenci_not cikmis_konum terim kisaltma; do
   [[ -d "$MEDS_DIR/$SA/$k" ]] || continue
   if [[ -n "$(git -C "$MEDS_DIR" status --porcelain -- "$SA/$k" 2>/dev/null)" ]]; then
     echo "  ATLANDI $k: commit'lenmemiş değişiklik var (önce commit edin)"; continue

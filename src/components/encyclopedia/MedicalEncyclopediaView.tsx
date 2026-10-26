@@ -104,6 +104,7 @@ const CAT_LABEL: Record<string, string> = {
   tani: 'Tanı & yöntem',
   'halk-sagligi': 'Halk sağlığı',
   terim: 'Terim',
+  kisaltma: 'Kısaltma',
   fizyoloji: 'Fizyoloji',
   anatomi: 'Anatomi',
   tedavi: 'Tedavi',
@@ -113,7 +114,7 @@ const CAT_LABEL: Record<string, string> = {
 };
 const catLabel = (c?: string) => CAT_LABEL[c || ''] || (c ? c.charAt(0).toLocaleUpperCase('tr-TR') + c.slice(1) : 'Kavram');
 /** Araç çubuğunda segment olarak duran ana kategoriler; gerisi Süzgeç sayfasında */
-const SEGMENT_IDS = ['all', 'hastalik', 'patoloji', 'ilac', 'genetik', 'terim', 'kart'];
+const SEGMENT_IDS = ['all', 'hastalik', 'patoloji', 'ilac', 'genetik', 'terim', 'kisaltma', 'kart'];
 /** Veride İngilizce ya da eşanlamlı gelen kategori adları tek kimliğe indirilir */
 const CAT_ALIAS: Record<string, string> = { pathology: 'patoloji', genetic: 'genetik', epidemiyoloji: 'halk-sagligi' };
 

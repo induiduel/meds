@@ -1,504 +1,520 @@
 {
-  "surum": 1,
-  "aciklama": "MeDSor tam otomatik içerik hattı — aşama kayıt defteri. Tek doğruluk kaynağı. Yeni ürün/aşama eklemek için buraya bir aşama yazılır; hat.py sırayı 'gerekir' bağımlılıklarından kurar. 'durum': hazir = otomatik çalışır, el = betik var ama hatta bağlı değil (elle çalışır), plan = henüz yazılmadı. Ayrıntı: docs/GELECEK_PLANLAMASI.md",
-  "degiskenler": {
-    "KOK": "/home/indu/medsor",
-    "KURUL": "{aktif_kurul}",
-    "DERS": "{ders_id}"
+ "surum": 1,
+ "aciklama": "MeDSor tam otomatik içerik hattı — aşama kayıt defteri. Tek doğruluk kaynağı. Yeni ürün/aşama eklemek için buraya bir aşama yazılır; hat.py sırayı 'gerekir' bağımlılıklarından kurar. 'durum': hazir = otomatik çalışır, el = betik var ama hatta bağlı değil (elle çalışır), plan = henüz yazılmadı. Ayrıntı: docs/GELECEK_PLANLAMASI.md",
+ "degiskenler": {
+  "KOK": "/home/indu/medsor",
+  "KURUL": "{aktif_kurul}",
+  "DERS": "{ders_id}"
+ },
+ "tetikleyiciler": {
+  "drive_yeni_pdf": "Oracle meds-ders-isci izle.py (tarama_dk) yeni/değişen PDF bulunca → ders başına zincir",
+  "gece": "Her gece 02:30 (yerel) → hat.py --gece: kurul geneli aşamalar + olası soru",
+  "acilis": "Bilgisayar açılınca (systemd --user, gecikmeli) → hat.py --gece --kacirilan: kaçırılan gece işini tamamlar",
+  "elle": "hat.py --calistir <asama> [--ders <id>] ya da yönetim paneli"
+ },
+ "asamalar": [
+  {
+   "id": "saglik",
+   "kapsam": "genel",
+   "durum": "hazir",
+   "gerekir": [],
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "komut": "python3 meds/otomasyon/saglik.py --sessiz",
+   "cikti": [
+    "meds_temp/hat/saglik.json"
+   ],
+   "not": "Canlı API, Oracle SSH, yerel 3000, vektör ve EMA servisleri, disk. Sorun = kırmızı (panoda)."
   },
-  "tetikleyiciler": {
-    "drive_yeni_pdf": "Oracle meds-ders-isci izle.py (tarama_dk) yeni/değişen PDF bulunca → ders başına zincir",
-    "gece": "Her gece 02:30 (yerel) → hat.py --gece: kurul geneli aşamalar + olası soru",
-    "acilis": "Bilgisayar açılınca (systemd --user, gecikmeli) → hat.py --gece --kacirilan: kaçırılan gece işini tamamlar",
-    "elle": "hat.py --calistir <asama> [--ders <id>] ya da yönetim paneli"
+  {
+   "id": "db_goc",
+   "kapsam": "genel",
+   "durum": "hazir",
+   "gerekir": [
+    "saglik"
+   ],
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "komut": "python3 meds/scripts/db/goc.py --uygula && python3 meds/scripts/db/goc.py --uygula --oracle",
+   "cikti": [
+    "schema_migrations (yerel + Oracle)"
+   ],
+   "not": "deploy/pg/sql/goc/NNNN_ad.sql numaralı, yalnız ekleyen göçler; iki makinede aynı sırayla bir kez. İçerik sürümleri icerik_setleri tablosunda (0001)."
   },
-  "asamalar": [
-    {
-      "id": "saglik",
-      "kapsam": "genel",
-      "durum": "hazir",
-      "gerekir": [],
-      "tetik": [
-        "gece",
-        "elle"
-      ],
-      "komut": "python3 meds/otomasyon/saglik.py --sessiz",
-      "cikti": [
-        "meds_temp/hat/saglik.json"
-      ],
-      "not": "Canlı API, Oracle SSH, yerel 3000, vektör ve EMA servisleri, disk. Sorun = kırmızı (panoda)."
-    },
-    {
-      "id": "db_goc",
-      "kapsam": "genel",
-      "durum": "hazir",
-      "gerekir": [
-        "saglik"
-      ],
-      "tetik": [
-        "gece",
-        "elle"
-      ],
-      "komut": "python3 meds/scripts/db/goc.py --uygula && python3 meds/scripts/db/goc.py --uygula --oracle",
-      "cikti": [
-        "schema_migrations (yerel + Oracle)"
-      ],
-      "not": "deploy/pg/sql/goc/NNNN_ad.sql numaralı, yalnız ekleyen göçler; iki makinede aynı sırayla bir kez. İçerik sürümleri icerik_setleri tablosunda (0001)."
-    },
-    {
-      "id": "gorev_sinama",
-      "kapsam": "genel",
-      "durum": "hazir",
-      "gerekir": [
-        "saglik"
-      ],
-      "tetik": [
-        "gece",
-        "elle"
-      ],
-      "komut": "python3 meds/otomasyon/gorev.py sinama",
-      "cikti": [],
-      "not": "Görev sözleşmesi öz-sınaması (ICERIK_MOTORU_V3 §14.3): paket belirlenimciliği, gidiş-dönüş, iyi örnek geçer / kötü örnekler reddedilir. Model çağırmaz; HATA = görev kapısı arızası, yönlendiricili işler o gece güvenilmez."
-    },
-    {
-      "id": "golge",
-      "kapsam": "genel",
-      "durum": "hazir",
-      "gerekir": [
-        "gorev_sinama"
-      ],
-      "tetik": [
-        "gece",
-        "elle"
-      ],
-      "komut": "cd meds && nice -n 10 .venv-ocr/bin/python otomasyon/golge.py --butce 24",
-      "cikti": [
-        "meds_temp/golge/<gün>.jsonl",
-        "meds_temp/golge/ozet.json"
-      ],
-      "not": "R3 gölge kipi: ücretsiz modeller küçük örneklemlerle (K1 salt okunur) görevleri koşar; kapı, bağımsız denetim ve referans uyumu kaydedilir; gecis_esigi aşılınca görev 'geçişe hazır' (öneri, devir kullanıcı kararı)."
-    },
-    {
-      "id": "drive_tarama",
-      "kapsam": "genel",
-      "durum": "hazir",
-      "tetik": [
-        "drive_yeni_pdf"
-      ],
-      "komut": "Oracle: ders_isci/izle.py",
-      "cikti": [
-        "meds_downloads/",
-        "ders_isci/kuyruk.json"
-      ],
-      "not": "Ders Programı PDF'i değişirse takvim aşaması tetiklenir."
-    },
-    {
-      "id": "takvim",
-      "kapsam": "genel",
-      "durum": "hazir",
-      "gerekir": [],
-      "tetik": [
-        "gece",
-        "elle"
-      ],
-      "komut": "meds/.venv-ocr/bin/python meds/scripts/takvim/kurul_takvimi.py --yaz",
-      "cikti": [
-        "meds/src/data/kurul_takvimi.json",
-        "meds/src/data/kurul_takvimi_ozet.json"
-      ]
-    },
-    {
-      "id": "ders_kaydi",
-      "kapsam": "genel",
-      "durum": "hazir",
-      "gerekir": [
-        "takvim"
-      ],
-      "tetik": [
-        "gece",
-        "elle"
-      ],
-      "komut": "for k in 2 3 4 5 6; do python3 meds/scripts/dersler/ders_kaydi.py --kurul $k --yaz >/dev/null || exit 1; done",
-      "cikti": [
-        "meds/src/data/dersler/k{N}.json"
-      ],
-      "not": "Kurul ders kayıt defteri: kimlik k2-07, kod 2f01 (kararlı). Tüm üreticilerin ortak ders listesi."
-    },
-    {
-      "id": "okuma_ocr",
-      "kapsam": "ders",
-      "durum": "hazir",
-      "gerekir": [
-        "drive_tarama"
-      ],
-      "komut": "Oracle: ders_isci/cikar.py (PyMuPDF + tesseract)",
-      "cikti": [
-        "kaynak.md",
-        "sayfalar.json (tablolar, görsel oranı, hoca vurgusu)",
-        "sayfa_goruntu/<n>.png"
-      ],
-      "not": "2026-10-20: cikar.sayfa_varliklari — gerçek tablolar satır/sütun, görsel ağırlıklı sayfalar PNG (Claude Read ile görür), renkli/kalın ifadeler; görsel kanıt türü denetleyicide."
-    },
-    {
-      "id": "onem_haritasi",
-      "kapsam": "ders",
-      "durum": "hazir",
-      "gerekir": [
-        "okuma_ocr"
-      ],
-      "komut": "ders_zinciri.py hazirla adımı · .venv-ocr/bin/python meds/scripts/onem/onem_haritasi.py <kaynak.md> <cikmis.json>",
-      "cikti": [
-        "meds_temp/spot_cozucu/k{N}<brans>/onem_haritasi/<kod>.json"
-      ],
-      "not": "Sayfa başına 0–100: çıkmış benzerliği (bge-m3; genel köklüde kök+şıklar) × soruldu sayısı × yakınlık + hoca vurgusu. Spot/önem yazarı girdi alır (2026-10-20). Sınamada 3 K1 dersinde bağlanamayan çıkmış 0."
-    },
-    {
-      "id": "ders_paketi",
-      "kapsam": "ders",
-      "durum": "hazir",
-      "gerekir": [
-        "okuma_ocr"
-      ],
-      "komut": "Oracle: ders_isci/isle.py (Claude, TALIMAT.md)",
-      "kapi": "ders_isci/denetle.py",
-      "cikti": [
-        "ders_paketi.json",
-        "deck.json",
-        "ders_notu.md",
-        "ornek_sorular.json",
-        "sozluk.json",
-        "hastaliklar.json",
-        "cikmis_baglantilari.json",
-        "bilgi_havuzu.jsonl"
-      ],
-      "not": "Kurul 2+: denetle --kurul2, otomatik onay (kapılar 0 HATA + yüksek eşleşme + uyarısız), yayinla deste kapısı --kurul2 (Oracle'da, 2026-10-20)."
-    },
-    {
-      "id": "sesli_ders_metni",
-      "kapsam": "ders",
-      "durum": "hazir",
-      "gerekir": [
-        "ders_paketi"
-      ],
-      "komut": "Oracle: ders_isci TALIMAT_SESLI.md",
-      "kapi": "scripts/sesli_anlatim/metin_denetle.py",
-      "not": "Kurul 2+: konusma_v2.json (cümle kimliği, ses/ekran, vurgu, sayfa/slayt/çıkmış bağı) zorunlu; eski biçim türetilir."
-    },
-    {
-      "id": "yayin",
-      "kapsam": "ders",
-      "durum": "hazir",
-      "gerekir": [
-        "ders_paketi"
-      ],
-      "komut": "Oracle: yayinla.py --sunucu (meds-ders-yayin.timer)",
-      "not": "Kurul 2+ otomatik onay (ayar otomatik_onay, panelden kapatılabilir); Kurul 1 yönetici onayı."
-    },
-    {
-      "id": "ders_zinciri",
-      "kapsam": "kurul",
-      "durum": "hazir",
-      "gerekir": [
-        "ders_kaydi",
-        "yayin"
-      ],
-      "tetik": [
-        "gece",
-        "elle"
-      ],
-      "komut": "python3 meds/otomasyon/ders_zinciri.py --en-cok 3",
-      "cikti": [
-        "meds_temp/spot_cozucu/k{N}<brans>/",
-        "meds/src/data/k{N}<brans>_onem|_cozucu|_asistan/",
-        "meds_temp/hat/dersler/<id>.json"
-      ],
-      "not": "Yayımlanmış her Kurul 2+ dersi: hazirla → onem → cozucu → denetim (bağımsız) → birlestir → asistan → ses (EMA) → oracle. Her adım kapılı; gece başına en çok 3 ders. Son adım capa (2026-10-21): anlamsal slayt çapası — capa_dok.py → Claude TALIMAT_CAPA.md → kapı capa_dogrula.py (≥%70 madde/resim/kutu) → data/sesli_anlatim/capa/<key>.json cihaz + Oracle (Oracle pdf_isaret 30 dk). Ardından cizim (2026-10-24, R6): cizim_uret.py → cizim_dogrula.py → data/sesli_anlatim/cizim/<key>.json cihaz + Oracle (sesli derste PDF üstünde kontur/akış/eğri/şema). Çizim kuralları docs/CIZIM_KURALLARI.md (H40–H52): anlam şablonu kütüphanesi scripts/cizim/sablonlar.json (+ yeni şablon kaydı), bağımsız tıbbi anlam denetimi (Claude, önbellekli), resim slaytında panel yok, PDF'in kendi oku çerçevelenir, yerleşim/ek alan betikte; yayından önce panel_sinama.mjs (3 genişlik, 0 hata; düşerse CIZIM_PAY=1.4 ile bir kez, yine düşerse yayın yok). Son kapı cizim_kapisi.py (H59, K1–K9: şekil çapası görsele, uydurma çapa yok, şekil cümlelerinin ≥%40'ı görsel üstü çizimli, resimde panel yok, bütün resmi çevreleyen kontur yok, çizim lazerin sayfasında); düşerse çıkış 15, yayın yok.",
-      "kapi": [
-        "scripts/cizim/cizim_dogrula.py",
-        "scripts/cizim/panel_sinama.mjs",
-        "scripts/cizim/cizim_kapisi.py"
-      ]
-    },
-    {
-      "id": "pdf_terim",
-      "kapsam": "ders",
-      "durum": "hazir",
-      "gerekir": [
-        "yayin"
-      ],
-      "komut": "ders_zinciri.py adımı `terim` · scripts/sesli_anlatim/terim_sozlugu.py + TALIMAT_TERIM.md",
-      "kapi": "scripts/sesli_anlatim/terim_sozlugu.py dogrula <key> terimler.json",
-      "cikti": [
-        "data/sesli_anlatim/terim/<key>.json (cihaz + Oracle)"
-      ],
-      "not": "Sesli ders PDF terim yardımcısı (2026-10-26): ⓘ açıkken slayt altı panel, kapalıyken kesikli altı çizili terim + açılır kart. Claude düşerse doğrulanmış sözlükten otomatik yol."
-    },
-    {
-      "id": "bilgi_deposu",
-      "kapsam": "kurul",
-      "durum": "hazir",
-      "gerekir": [
-        "ders_zinciri"
-      ],
-      "tetik": [
-        "gece",
-        "elle"
-      ],
-      "komut": "python3 meds/scripts/dersler/bilgi_deposu.py",
-      "cikti": [
-        "meds_database_v2/ders_bilgi/<ders>/{manifest.json,ozet.md}"
-      ],
-      "not": "Her PDF bir kez okunur (ders işçisi, karma değişince). Depo: bilgi paketi + önem + tablolar + hoca vurgusu + çıkmışlar → ozet.md (kod:sayfa). Yeni ürünler PDF yerine bunu okur; girdiler değişmezse yeniden üretilmez."
-    },
-    {
-      "id": "kroki",
-      "kapsam": "kurul",
-      "durum": "hazir",
-      "gerekir": [
-        "bilgi_deposu"
-      ],
-      "tetik": [
-        "gece",
-        "elle"
-      ],
-      "komut": "cd meds && nice -n 10 .venv-ocr/bin/python scripts/kroki/zincir.py",
-      "cikti": [
-        "meds_database_v2/ders_bilgi/<ders>/l0/{sayfalar.json,sayfa_eslesme.json}",
-        "meds_database_v2/ders_bilgi/<ders>/l1/{tarama_plani.json,kanit.json}",
-        "meds_database_v2/cikmis_dizin/{dizin.json,vektor.npy,ters.json}",
-        "meds_temp/kroki/<ders>/som/"
-      ],
-      "not": "R1+R2 (ICERIK_MOTORU_V3 §2, §12, §15, §16): L0 kroki (sayfa izi, OCR yalnız metinsiz resim, aynı sayfa taşınır) → ok + SoM → çıkmış dizini (artımlı, yeni çıkmışın etkilediği dersler meds_temp/cikmis_dizin/degisen.json) → ders başına hedefli tarama planı → kanıt bölgeleri + tekrar listesi. Yalnız girdisi değişen adım çalışır. Model yok; bge-m3 CPU."
-    },
-    {
-      "id": "gorev_gece",
-      "kapsam": "kurul",
-      "durum": "hazir",
-      "gerekir": [
-        "kroki"
-      ],
-      "tetik": [
-        "gece",
-        "elle"
-      ],
-      "komut": "cd meds && nice -n 10 .venv-ocr/bin/python otomasyon/llm/gece.py --parti 20",
-      "cikti": [
-        "meds_database_v2/ders_bilgi/<ders>/l1/{kanit_model.json,kanit.json}"
-      ],
-      "not": "R4: aktif görevler (şimdilik kanit_bagla) Kurul 2+ derslerinin bekleyen olası/bağsız kanıtlarını 6'lık partilerle modele seçtirir; kapıdan geçen uygulanır, tekrar listesi güncellenir. Kurul 1 yalnız --k1."
-    },
-    {
-      "id": "spot_onem",
-      "kapsam": "ders",
-      "durum": "hazir",
-      "gerekir": [
-        "yayin"
-      ],
-      "komut": "ders_zinciri.py adımı · scripts/spot_cozucu TALIMAT_ONEM.md",
-      "kapi": "scripts/sinav_spotlari/dogrula.py --kurul2",
-      "not": "Kurul 2+: ders_zinciri.py içinde otomatik (2026-10-20). Kurul 1: elle."
-    },
-    {
-      "id": "soru_cozucu",
-      "kapsam": "ders",
-      "durum": "hazir",
-      "gerekir": [
-        "yayin"
-      ],
-      "komut": "ders_zinciri.py adımı · scripts/spot_cozucu TALIMAT_COZUCU.md",
-      "kapi": "scripts/spot_cozucu/cozucu_dogrula.py",
-      "not": "Kurul 2+: ders_zinciri.py içinde otomatik (2026-10-20). Kurul 1: elle."
-    },
-    {
-      "id": "sinav_asistani",
-      "kapsam": "ders",
-      "durum": "hazir",
-      "gerekir": [
-        "spot_onem"
-      ],
-      "komut": "ders_zinciri.py adımı · scripts/spot_cozucu TALIMAT_ASISTAN.md → asistan_plan/birlestir",
-      "kapi": "scripts/spot_cozucu/asistan_dogrula.py",
-      "not": "Kurul 2+: ders_zinciri.py içinde otomatik (2026-10-20). Kurul 1: elle."
-    },
-    {
-      "id": "ses_ema",
-      "kapsam": "ders",
-      "durum": "hazir",
-      "gerekir": [
-        "yayin",
-        "sinav_asistani",
-        "soru_cozucu"
-      ],
-      "komut": "ders_zinciri.py adımı · ogren_ses_uret.py {deste_id} --oracle; asistan_ses.py; cozucu_ses.py",
-      "not": "Sesli ders EMA işi yayinla.py içinde kuyruğa giriyor (hazir); Öğren adım sesi, asistan ve çözücü sesi elle. Kurul 2+: ders_zinciri.py içinde otomatik (2026-10-20). Kurul 1: elle."
-    },
-    {
-      "id": "cikmis_paket",
-      "kapsam": "kurul",
-      "durum": "hazir",
-      "gerekir": [
-        "soru_cozucu",
-        "ses_ema"
-      ],
-      "tetik": [
-        "gece",
-        "elle"
-      ],
-      "komut": "bash meds/scripts/cikmis_paket/not_ses.sh && python3 meds/scripts/cikmis_paket/paketle.py",
-      "cikti": [
-        "meds/src/data/cikmis_paket/k{kurul}.json"
-      ],
-      "not": "Sınava hazırlan › Çıkmış çözücü: branş başına sinav_dagilimi.json soru sayısı kadar paket; yalnız çözücüdeki slayt sayfalı + EMA sesli çıkmışlar (LLM yok). Yeni kurulun dağılımı JSON'a eklenmeden paket çıkmaz. Kısa not: sesli asistan noktası (kök eşleşmesi/slayt sayfası); asistanı olmayan derste scripts/cikmis_paket/notlar.json (slayttan, yazar+denetçi) + EMA n-<no> klibi. Yeni ders/kurulda eksik not paketle.py çıktısında 'yok' sayısıyla görünür. Ek modül (2026-10-22): çözücüde olmayan DB çıkmışları meds_temp/cikmis_paket/ek (TALIMAT/DENETIM, kapı ek_dogrula.py; yazar+denetçi, LLM) → ek_uygula(_gpu).sh → src/data/cikmis_paket/ek/<brans>/<klasör>.json (no ≥1001, kendi klipleri). Yeni kurulda bu adım elle/Claude ile."
-    },
-    {
-      "id": "hastalik_birlestir",
-      "kapsam": "genel",
-      "durum": "hazir",
-      "gerekir": [
-        "yayin"
-      ],
-      "komut": "python3 meds/otomasyon/hastalik_zinciri.py --en-cok 4",
-      "tetik": [
-        "gece",
-        "elle"
-      ],
-      "not": "Oracle önerileri → Claude şema 2 (TALIMAT_SEMA2.md) → yayinla.hastaliklari_uygula (diseases.json kirliyse bekler, denetim hatası artarsa geri alır) → Oracle data/content/diseases.json + POST /api/admin/icerik/diseases/degisti (panel sırrı) → SSE."
-    },
-    {
-      "id": "rag_vektor",
-      "kapsam": "genel",
-      "durum": "hazir",
-      "gerekir": [],
-      "tetik": [
-        "gece"
-      ],
-      "komut": "cd meds && .venv-ocr/bin/python scripts/advanced_ai/rag_vektor_hatti.py --oracle",
-      "not": "Şu an crontab 3 saatte bir; yayından sonra da tetiklenmeli — plan P1.6"
-    },
-    {
-      "id": "olasi_soru",
-      "kapsam": "kurul",
-      "durum": "hazir",
-      "gerekir": [],
-      "tetik": [
-        "gece",
-        "elle"
-      ],
-      "komut": "bash meds/scripts/olasi_soru/gece.sh",
-      "kapi": "meds/scripts/olasi_soru/dogrula.py --kurul {son_sinav}",
-      "cikti": [
-        "meds_temp/olasi_soru/k{son_sinav}/olasi_sorular.json"
-      ],
-      "not": "Sınav günü + sonrası: öğrenci kayıtları 100 yuvaya kümelenir, Claude her yuvanın olası sorusunu kurar. Yeni kanıt yoksa atlanır."
-    },
-    {
-      "id": "esitle_dagit",
-      "kapsam": "genel",
-      "durum": "el",
-      "gerekir": [
-        "yayin"
-      ],
-      "komut": "yayinla.py --esitle → guncelleme_notu.json onem+1 → deploy-code.sh --build",
-      "not": "Kod dağıtımı (deploy-code.sh) kullanıcı/oturum kararıyla; gece içerik dağıtımı icerik_dagit aşamasında. Kural 13: kod dağıtımında guncelleme_notu.json onem+1."
-    },
-    {
-      "id": "checkup",
-      "kapsam": "kurul",
-      "durum": "hazir",
-      "gerekir": [
-        "ders_zinciri"
-      ],
-      "tetik": [
-        "gece",
-        "elle"
-      ],
-      "komut": "python3 meds/otomasyon/checkup_zinciri.py",
-      "cikti": [
-        "meds/src/data/patoloji_checkup/k{N}/"
-      ],
-      "not": "Kurul 2+ patoloji Hızlı Check Up: ≥3 bağımsız denetimden geçmiş ders + onaylı küme değişince Claude (TALIMAT_CHECKUP.md) → dogrula.py --kurul N; geçmezse önceki sürüm. Sitede /patoloji-check-up?kurul=N."
-    },
-    {
-      "id": "kamp",
-      "kapsam": "kurul",
-      "durum": "hazir",
-      "gerekir": [
-        "bilgi_deposu"
-      ],
-      "tetik": [
-        "gece",
-        "elle"
-      ],
-      "komut": "python3 meds/otomasyon/kamp_zinciri.py",
-      "cikti": [
-        "meds/src/data/kamp/k{N}/<brans>.json",
-        "Oracle data/kamp/ses/k{N}/<brans>/"
-      ],
-      "not": "Kurul kampı: ONAYLI hoca tüyoları (/api/kamp/tuyolar) + ders bilgi deposu → Claude TALIMAT_KAMP.md → kapı scripts/kamp/dogrula.py (kaynak kod:sayfa, her tüyo işlenmiş, şık açıklama, üslup) → EMA (scripts/kamp/ses.py) → yayın. Kapı geçmezse önceki sürüm + bildirim."
-    },
-    {
-      "id": "son_prova",
-      "kapsam": "kurul",
-      "durum": "hazir",
-      "gerekir": [
-        "bilgi_deposu",
-        "soru_cozucu"
-      ],
-      "tetik": [
-        "gece",
-        "elle"
-      ],
-      "komut": "python3 meds/otomasyon/son_prova_zinciri.py",
-      "cikti": [
-        "meds/src/data/son_prova/k{N}/",
-        "meds/data/son_prova/pdf/k{N}-8x-son-prova-*.pdf",
-        "Oracle data/sesli_anlatim/{metin,hizalama,vurgu}/k{N}-8x-son-prova-*",
-        "Oracle data/k{N}<slug>_cozucu/ses/sNN/"
-      ],
-      "not": "Kurul 2+ Son Prova: sınava 9 gün kala açılır. plan_kurul.py (kayıt defteri + bilgi deposu, PDF okunmaz) → Claude yazar (TALIMAT + YENI_SORU) → kapı dogrula.py → bağımsız denetçi (DENETIM + YENI_DENETIM, H19 çıkmış anahtarı) → PART 0 HATA → derle → özet PDF → soru_dagit → EMA (yeni_ses) → Oracle ders-ekle (yalnizEma). Tüm partlar geçmeden sorular/yayın yok; sınav dağılımı duyurusu yoksa tahmin + bildirim."
-    },
-    {
-      "id": "quiz_havuzu",
-      "kapsam": "ders",
-      "durum": "hazir",
-      "gerekir": [
-        "sesli_ders_metni",
-        "yayin"
-      ],
-      "tetik": [
-        "gece",
-        "elle",
-        "drive_yeni_pdf"
-      ],
-      "komut": "python3 meds/scripts/quiz_motoru/pipeline_baglanti.py meds_downloads/taslak_{ders_id} --ders {ders_id}",
-      "kapi": "meds/scripts/quiz_motoru/quiz_dogrula.py meds_downloads/taslak_{ders_id}/quiz_havuzu.json",
-      "cikti": [
-        "atomik_bilgi_envanteri.json",
-        "quiz_havuzu.json"
-      ],
-      "not": "Faz 1-4 sıralı Quiz hattı: Farmakoloji için aktif (Scope Lock), course-agnostic altyapı. Sesli ders (konusma_v2.json) tamamlanmadan tetiklenmez (Priority Lock). Atomik Bilgi Envanteri ortak Single Source of Truth; N atom -> en az 2N soru (2x Çapraz Sorgulama, batch max 25 atom / 50 soru). Kapı: quiz_dogrula.py 0 HATA."
-    },
-    {
-      "id": "icerik_dagit",
-      "kapsam": "genel",
-      "durum": "hazir",
-      "gerekir": [
-        "checkup",
-        "ders_zinciri",
-        "hastalik_birlestir",
-        "kamp",
-        "olasi_soru"
-      ],
-      "tetik": [
-        "gece",
-        "elle"
-      ],
-      "komut": "python3 meds/otomasyon/icerik_dagit.py",
-      "cikti": [
-        "Oracle dist/ (yalnız içerik derlemesi)",
-        "Oracle src/data/k[2-6]*_*"
-      ],
-      "not": "origin/main temiz worktree + Oracle src/data + zincir çıktıları → vite build → yalnız dist. Çalışma ağacından derlemez; dağıtım kilidini paylaşır; değişiklik yoksa atlar; commit/onem artırımı yok."
-    }
-  ]
+  {
+   "id": "gorev_sinama",
+   "kapsam": "genel",
+   "durum": "hazir",
+   "gerekir": [
+    "saglik"
+   ],
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "komut": "python3 meds/otomasyon/gorev.py sinama",
+   "cikti": [],
+   "not": "Görev sözleşmesi öz-sınaması (ICERIK_MOTORU_V3 §14.3): paket belirlenimciliği, gidiş-dönüş, iyi örnek geçer / kötü örnekler reddedilir. Model çağırmaz; HATA = görev kapısı arızası, yönlendiricili işler o gece güvenilmez."
+  },
+  {
+   "id": "golge",
+   "kapsam": "genel",
+   "durum": "hazir",
+   "gerekir": [
+    "gorev_sinama"
+   ],
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "komut": "cd meds && nice -n 10 .venv-ocr/bin/python otomasyon/golge.py --butce 24",
+   "cikti": [
+    "meds_temp/golge/<gün>.jsonl",
+    "meds_temp/golge/ozet.json"
+   ],
+   "not": "R3 gölge kipi: ücretsiz modeller küçük örneklemlerle (K1 salt okunur) görevleri koşar; kapı, bağımsız denetim ve referans uyumu kaydedilir; gecis_esigi aşılınca görev 'geçişe hazır' (öneri, devir kullanıcı kararı)."
+  },
+  {
+   "id": "drive_tarama",
+   "kapsam": "genel",
+   "durum": "hazir",
+   "tetik": [
+    "drive_yeni_pdf"
+   ],
+   "komut": "Oracle: ders_isci/izle.py",
+   "cikti": [
+    "meds_downloads/",
+    "ders_isci/kuyruk.json"
+   ],
+   "not": "Ders Programı PDF'i değişirse takvim aşaması tetiklenir."
+  },
+  {
+   "id": "takvim",
+   "kapsam": "genel",
+   "durum": "hazir",
+   "gerekir": [],
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "komut": "meds/.venv-ocr/bin/python meds/scripts/takvim/kurul_takvimi.py --yaz",
+   "cikti": [
+    "meds/src/data/kurul_takvimi.json",
+    "meds/src/data/kurul_takvimi_ozet.json"
+   ]
+  },
+  {
+   "id": "ders_kaydi",
+   "kapsam": "genel",
+   "durum": "hazir",
+   "gerekir": [
+    "takvim"
+   ],
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "komut": "for k in 2 3 4 5 6; do python3 meds/scripts/dersler/ders_kaydi.py --kurul $k --yaz >/dev/null || exit 1; done",
+   "cikti": [
+    "meds/src/data/dersler/k{N}.json"
+   ],
+   "not": "Kurul ders kayıt defteri: kimlik k2-07, kod 2f01 (kararlı). Tüm üreticilerin ortak ders listesi."
+  },
+  {
+   "id": "okuma_ocr",
+   "kapsam": "ders",
+   "durum": "hazir",
+   "gerekir": [
+    "drive_tarama"
+   ],
+   "komut": "Oracle: ders_isci/cikar.py (PyMuPDF + tesseract)",
+   "cikti": [
+    "kaynak.md",
+    "sayfalar.json (tablolar, görsel oranı, hoca vurgusu)",
+    "sayfa_goruntu/<n>.png"
+   ],
+   "not": "2026-10-20: cikar.sayfa_varliklari — gerçek tablolar satır/sütun, görsel ağırlıklı sayfalar PNG (Claude Read ile görür), renkli/kalın ifadeler; görsel kanıt türü denetleyicide."
+  },
+  {
+   "id": "onem_haritasi",
+   "kapsam": "ders",
+   "durum": "hazir",
+   "gerekir": [
+    "okuma_ocr"
+   ],
+   "komut": "ders_zinciri.py hazirla adımı · .venv-ocr/bin/python meds/scripts/onem/onem_haritasi.py <kaynak.md> <cikmis.json>",
+   "cikti": [
+    "meds_temp/spot_cozucu/k{N}<brans>/onem_haritasi/<kod>.json"
+   ],
+   "not": "Sayfa başına 0–100: çıkmış benzerliği (bge-m3; genel köklüde kök+şıklar) × soruldu sayısı × yakınlık + hoca vurgusu. Spot/önem yazarı girdi alır (2026-10-20). Sınamada 3 K1 dersinde bağlanamayan çıkmış 0."
+  },
+  {
+   "id": "ders_paketi",
+   "kapsam": "ders",
+   "durum": "hazir",
+   "gerekir": [
+    "okuma_ocr"
+   ],
+   "komut": "Oracle: ders_isci/isle.py (Claude, TALIMAT.md)",
+   "kapi": "ders_isci/denetle.py",
+   "cikti": [
+    "ders_paketi.json",
+    "deck.json",
+    "ders_notu.md",
+    "ornek_sorular.json",
+    "sozluk.json",
+    "hastaliklar.json",
+    "cikmis_baglantilari.json",
+    "bilgi_havuzu.jsonl"
+   ],
+   "not": "Kurul 2+: denetle --kurul2, otomatik onay (kapılar 0 HATA + yüksek eşleşme + uyarısız), yayinla deste kapısı --kurul2 (Oracle'da, 2026-10-20)."
+  },
+  {
+   "id": "sesli_ders_metni",
+   "kapsam": "ders",
+   "durum": "hazir",
+   "gerekir": [
+    "ders_paketi"
+   ],
+   "komut": "Oracle: ders_isci TALIMAT_SESLI.md",
+   "kapi": "scripts/sesli_anlatim/metin_denetle.py",
+   "not": "Kurul 2+: konusma_v2.json (cümle kimliği, ses/ekran, vurgu, sayfa/slayt/çıkmış bağı) zorunlu; eski biçim türetilir."
+  },
+  {
+   "id": "yayin",
+   "kapsam": "ders",
+   "durum": "hazir",
+   "gerekir": [
+    "ders_paketi"
+   ],
+   "komut": "Oracle: yayinla.py --sunucu (meds-ders-yayin.timer)",
+   "not": "Kurul 2+ otomatik onay (ayar otomatik_onay, panelden kapatılabilir); Kurul 1 yönetici onayı."
+  },
+  {
+   "id": "ders_zinciri",
+   "kapsam": "kurul",
+   "durum": "hazir",
+   "gerekir": [
+    "ders_kaydi",
+    "yayin"
+   ],
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "komut": "python3 meds/otomasyon/ders_zinciri.py --en-cok 3",
+   "cikti": [
+    "meds_temp/spot_cozucu/k{N}<brans>/",
+    "meds/src/data/k{N}<brans>_onem|_cozucu|_asistan/",
+    "meds_temp/hat/dersler/<id>.json"
+   ],
+   "not": "Yayımlanmış her Kurul 2+ dersi: hazirla → onem → cozucu → denetim (bağımsız) → birlestir → asistan → ses (EMA) → oracle. Her adım kapılı; gece başına en çok 3 ders. Son adım capa (2026-10-21): anlamsal slayt çapası — capa_dok.py → Claude TALIMAT_CAPA.md → kapı capa_dogrula.py (≥%70 madde/resim/kutu) → data/sesli_anlatim/capa/<key>.json cihaz + Oracle (Oracle pdf_isaret 30 dk). Ardından cizim (2026-10-24, R6): cizim_uret.py → cizim_dogrula.py → data/sesli_anlatim/cizim/<key>.json cihaz + Oracle (sesli derste PDF üstünde kontur/akış/eğri/şema). Çizim kuralları docs/CIZIM_KURALLARI.md (H40–H52): anlam şablonu kütüphanesi scripts/cizim/sablonlar.json (+ yeni şablon kaydı), bağımsız tıbbi anlam denetimi (Claude, önbellekli), resim slaytında panel yok, PDF'in kendi oku çerçevelenir, yerleşim/ek alan betikte; yayından önce panel_sinama.mjs (3 genişlik, 0 hata; düşerse CIZIM_PAY=1.4 ile bir kez, yine düşerse yayın yok). Son kapı cizim_kapisi.py (H59, K1–K9: şekil çapası görsele, uydurma çapa yok, şekil cümlelerinin ≥%40'ı görsel üstü çizimli, resimde panel yok, bütün resmi çevreleyen kontur yok, çizim lazerin sayfasında); düşerse çıkış 15, yayın yok.",
+   "kapi": [
+    "scripts/cizim/cizim_dogrula.py",
+    "scripts/cizim/panel_sinama.mjs",
+    "scripts/cizim/cizim_kapisi.py"
+   ]
+  },
+  {
+   "id": "pdf_terim",
+   "kapsam": "ders",
+   "durum": "hazir",
+   "gerekir": [
+    "yayin"
+   ],
+   "komut": "ders_zinciri.py adımı `terim` · scripts/sesli_anlatim/terim_sozlugu.py + TALIMAT_TERIM.md",
+   "kapi": "scripts/sesli_anlatim/terim_sozlugu.py dogrula <key> terimler.json",
+   "cikti": [
+    "data/sesli_anlatim/terim/<key>.json (cihaz + Oracle)"
+   ],
+   "not": "Sesli ders PDF terim yardımcısı (2026-10-26): ⓘ açıkken slayt altı panel, kapalıyken kesikli altı çizili terim + açılır kart. Claude düşerse doğrulanmış sözlükten otomatik yol."
+  },
+  {
+   "id": "pdf_kisaltma",
+   "kapsam": "ders",
+   "durum": "hazir",
+   "gerekir": [
+    "yayin"
+   ],
+   "tetik": [
+    "elle"
+   ],
+   "komut": "python3 meds/scripts/sesli_anlatim/kisaltma_sozlugu.py otomatik {DERS} --yaz",
+   "cikti": [
+    "data/sesli_anlatim/kisaltma/{DERS}.json"
+   ],
+   "not": "Slayt kısaltmaları (ayrı katman): elle/bilinen eşleme + dersin metninden çıkan açılım; kapı 0 HATA olmadan yazmaz. Açılımlar derse özgü olabilir (kisaltma_elle/<ders>.json)."
+  },
+  {
+   "id": "bilgi_deposu",
+   "kapsam": "kurul",
+   "durum": "hazir",
+   "gerekir": [
+    "ders_zinciri"
+   ],
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "komut": "python3 meds/scripts/dersler/bilgi_deposu.py",
+   "cikti": [
+    "meds_database_v2/ders_bilgi/<ders>/{manifest.json,ozet.md}"
+   ],
+   "not": "Her PDF bir kez okunur (ders işçisi, karma değişince). Depo: bilgi paketi + önem + tablolar + hoca vurgusu + çıkmışlar → ozet.md (kod:sayfa). Yeni ürünler PDF yerine bunu okur; girdiler değişmezse yeniden üretilmez."
+  },
+  {
+   "id": "kroki",
+   "kapsam": "kurul",
+   "durum": "hazir",
+   "gerekir": [
+    "bilgi_deposu"
+   ],
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "komut": "cd meds && nice -n 10 .venv-ocr/bin/python scripts/kroki/zincir.py",
+   "cikti": [
+    "meds_database_v2/ders_bilgi/<ders>/l0/{sayfalar.json,sayfa_eslesme.json}",
+    "meds_database_v2/ders_bilgi/<ders>/l1/{tarama_plani.json,kanit.json}",
+    "meds_database_v2/cikmis_dizin/{dizin.json,vektor.npy,ters.json}",
+    "meds_temp/kroki/<ders>/som/"
+   ],
+   "not": "R1+R2 (ICERIK_MOTORU_V3 §2, §12, §15, §16): L0 kroki (sayfa izi, OCR yalnız metinsiz resim, aynı sayfa taşınır) → ok + SoM → çıkmış dizini (artımlı, yeni çıkmışın etkilediği dersler meds_temp/cikmis_dizin/degisen.json) → ders başına hedefli tarama planı → kanıt bölgeleri + tekrar listesi. Yalnız girdisi değişen adım çalışır. Model yok; bge-m3 CPU."
+  },
+  {
+   "id": "gorev_gece",
+   "kapsam": "kurul",
+   "durum": "hazir",
+   "gerekir": [
+    "kroki"
+   ],
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "komut": "cd meds && nice -n 10 .venv-ocr/bin/python otomasyon/llm/gece.py --parti 20",
+   "cikti": [
+    "meds_database_v2/ders_bilgi/<ders>/l1/{kanit_model.json,kanit.json}"
+   ],
+   "not": "R4: aktif görevler (şimdilik kanit_bagla) Kurul 2+ derslerinin bekleyen olası/bağsız kanıtlarını 6'lık partilerle modele seçtirir; kapıdan geçen uygulanır, tekrar listesi güncellenir. Kurul 1 yalnız --k1."
+  },
+  {
+   "id": "spot_onem",
+   "kapsam": "ders",
+   "durum": "hazir",
+   "gerekir": [
+    "yayin"
+   ],
+   "komut": "ders_zinciri.py adımı · scripts/spot_cozucu TALIMAT_ONEM.md",
+   "kapi": "scripts/sinav_spotlari/dogrula.py --kurul2",
+   "not": "Kurul 2+: ders_zinciri.py içinde otomatik (2026-10-20). Kurul 1: elle."
+  },
+  {
+   "id": "soru_cozucu",
+   "kapsam": "ders",
+   "durum": "hazir",
+   "gerekir": [
+    "yayin"
+   ],
+   "komut": "ders_zinciri.py adımı · scripts/spot_cozucu TALIMAT_COZUCU.md",
+   "kapi": "scripts/spot_cozucu/cozucu_dogrula.py",
+   "not": "Kurul 2+: ders_zinciri.py içinde otomatik (2026-10-20). Kurul 1: elle."
+  },
+  {
+   "id": "sinav_asistani",
+   "kapsam": "ders",
+   "durum": "hazir",
+   "gerekir": [
+    "spot_onem"
+   ],
+   "komut": "ders_zinciri.py adımı · scripts/spot_cozucu TALIMAT_ASISTAN.md → asistan_plan/birlestir",
+   "kapi": "scripts/spot_cozucu/asistan_dogrula.py",
+   "not": "Kurul 2+: ders_zinciri.py içinde otomatik (2026-10-20). Kurul 1: elle."
+  },
+  {
+   "id": "ses_ema",
+   "kapsam": "ders",
+   "durum": "hazir",
+   "gerekir": [
+    "yayin",
+    "sinav_asistani",
+    "soru_cozucu"
+   ],
+   "komut": "ders_zinciri.py adımı · ogren_ses_uret.py {deste_id} --oracle; asistan_ses.py; cozucu_ses.py",
+   "not": "Sesli ders EMA işi yayinla.py içinde kuyruğa giriyor (hazir); Öğren adım sesi, asistan ve çözücü sesi elle. Kurul 2+: ders_zinciri.py içinde otomatik (2026-10-20). Kurul 1: elle."
+  },
+  {
+   "id": "cikmis_paket",
+   "kapsam": "kurul",
+   "durum": "hazir",
+   "gerekir": [
+    "soru_cozucu",
+    "ses_ema"
+   ],
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "komut": "bash meds/scripts/cikmis_paket/not_ses.sh && python3 meds/scripts/cikmis_paket/paketle.py",
+   "cikti": [
+    "meds/src/data/cikmis_paket/k{kurul}.json"
+   ],
+   "not": "Sınava hazırlan › Çıkmış çözücü: branş başına sinav_dagilimi.json soru sayısı kadar paket; yalnız çözücüdeki slayt sayfalı + EMA sesli çıkmışlar (LLM yok). Yeni kurulun dağılımı JSON'a eklenmeden paket çıkmaz. Kısa not: sesli asistan noktası (kök eşleşmesi/slayt sayfası); asistanı olmayan derste scripts/cikmis_paket/notlar.json (slayttan, yazar+denetçi) + EMA n-<no> klibi. Yeni ders/kurulda eksik not paketle.py çıktısında 'yok' sayısıyla görünür. Ek modül (2026-10-22): çözücüde olmayan DB çıkmışları meds_temp/cikmis_paket/ek (TALIMAT/DENETIM, kapı ek_dogrula.py; yazar+denetçi, LLM) → ek_uygula(_gpu).sh → src/data/cikmis_paket/ek/<brans>/<klasör>.json (no ≥1001, kendi klipleri). Yeni kurulda bu adım elle/Claude ile."
+  },
+  {
+   "id": "hastalik_birlestir",
+   "kapsam": "genel",
+   "durum": "hazir",
+   "gerekir": [
+    "yayin"
+   ],
+   "komut": "python3 meds/otomasyon/hastalik_zinciri.py --en-cok 4",
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "not": "Oracle önerileri → Claude şema 2 (TALIMAT_SEMA2.md) → yayinla.hastaliklari_uygula (diseases.json kirliyse bekler, denetim hatası artarsa geri alır) → Oracle data/content/diseases.json + POST /api/admin/icerik/diseases/degisti (panel sırrı) → SSE."
+  },
+  {
+   "id": "rag_vektor",
+   "kapsam": "genel",
+   "durum": "hazir",
+   "gerekir": [],
+   "tetik": [
+    "gece"
+   ],
+   "komut": "cd meds && .venv-ocr/bin/python scripts/advanced_ai/rag_vektor_hatti.py --oracle",
+   "not": "Şu an crontab 3 saatte bir; yayından sonra da tetiklenmeli — plan P1.6"
+  },
+  {
+   "id": "olasi_soru",
+   "kapsam": "kurul",
+   "durum": "hazir",
+   "gerekir": [],
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "komut": "bash meds/scripts/olasi_soru/gece.sh",
+   "kapi": "meds/scripts/olasi_soru/dogrula.py --kurul {son_sinav}",
+   "cikti": [
+    "meds_temp/olasi_soru/k{son_sinav}/olasi_sorular.json"
+   ],
+   "not": "Sınav günü + sonrası: öğrenci kayıtları 100 yuvaya kümelenir, Claude her yuvanın olası sorusunu kurar. Yeni kanıt yoksa atlanır."
+  },
+  {
+   "id": "esitle_dagit",
+   "kapsam": "genel",
+   "durum": "el",
+   "gerekir": [
+    "yayin"
+   ],
+   "komut": "yayinla.py --esitle → guncelleme_notu.json onem+1 → deploy-code.sh --build",
+   "not": "Kod dağıtımı (deploy-code.sh) kullanıcı/oturum kararıyla; gece içerik dağıtımı icerik_dagit aşamasında. Kural 13: kod dağıtımında guncelleme_notu.json onem+1."
+  },
+  {
+   "id": "checkup",
+   "kapsam": "kurul",
+   "durum": "hazir",
+   "gerekir": [
+    "ders_zinciri"
+   ],
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "komut": "python3 meds/otomasyon/checkup_zinciri.py",
+   "cikti": [
+    "meds/src/data/patoloji_checkup/k{N}/"
+   ],
+   "not": "Kurul 2+ patoloji Hızlı Check Up: ≥3 bağımsız denetimden geçmiş ders + onaylı küme değişince Claude (TALIMAT_CHECKUP.md) → dogrula.py --kurul N; geçmezse önceki sürüm. Sitede /patoloji-check-up?kurul=N."
+  },
+  {
+   "id": "kamp",
+   "kapsam": "kurul",
+   "durum": "hazir",
+   "gerekir": [
+    "bilgi_deposu"
+   ],
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "komut": "python3 meds/otomasyon/kamp_zinciri.py",
+   "cikti": [
+    "meds/src/data/kamp/k{N}/<brans>.json",
+    "Oracle data/kamp/ses/k{N}/<brans>/"
+   ],
+   "not": "Kurul kampı: ONAYLI hoca tüyoları (/api/kamp/tuyolar) + ders bilgi deposu → Claude TALIMAT_KAMP.md → kapı scripts/kamp/dogrula.py (kaynak kod:sayfa, her tüyo işlenmiş, şık açıklama, üslup) → EMA (scripts/kamp/ses.py) → yayın. Kapı geçmezse önceki sürüm + bildirim."
+  },
+  {
+   "id": "son_prova",
+   "kapsam": "kurul",
+   "durum": "hazir",
+   "gerekir": [
+    "bilgi_deposu",
+    "soru_cozucu"
+   ],
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "komut": "python3 meds/otomasyon/son_prova_zinciri.py",
+   "cikti": [
+    "meds/src/data/son_prova/k{N}/",
+    "meds/data/son_prova/pdf/k{N}-8x-son-prova-*.pdf",
+    "Oracle data/sesli_anlatim/{metin,hizalama,vurgu}/k{N}-8x-son-prova-*",
+    "Oracle data/k{N}<slug>_cozucu/ses/sNN/"
+   ],
+   "not": "Kurul 2+ Son Prova: sınava 9 gün kala açılır. plan_kurul.py (kayıt defteri + bilgi deposu, PDF okunmaz) → Claude yazar (TALIMAT + YENI_SORU) → kapı dogrula.py → bağımsız denetçi (DENETIM + YENI_DENETIM, H19 çıkmış anahtarı) → PART 0 HATA → derle → özet PDF → soru_dagit → EMA (yeni_ses) → Oracle ders-ekle (yalnizEma). Tüm partlar geçmeden sorular/yayın yok; sınav dağılımı duyurusu yoksa tahmin + bildirim."
+  },
+  {
+   "id": "quiz_havuzu",
+   "kapsam": "ders",
+   "durum": "hazir",
+   "gerekir": [
+    "sesli_ders_metni",
+    "yayin"
+   ],
+   "tetik": [
+    "gece",
+    "elle",
+    "drive_yeni_pdf"
+   ],
+   "komut": "python3 meds/scripts/quiz_motoru/pipeline_baglanti.py meds_downloads/taslak_{ders_id} --ders {ders_id}",
+   "kapi": "meds/scripts/quiz_motoru/quiz_dogrula.py meds_downloads/taslak_{ders_id}/quiz_havuzu.json",
+   "cikti": [
+    "atomik_bilgi_envanteri.json",
+    "quiz_havuzu.json"
+   ],
+   "not": "Faz 1-4 sıralı Quiz hattı: Farmakoloji için aktif (Scope Lock), course-agnostic altyapı. Sesli ders (konusma_v2.json) tamamlanmadan tetiklenmez (Priority Lock). Atomik Bilgi Envanteri ortak Single Source of Truth; N atom -> en az 2N soru (2x Çapraz Sorgulama, batch max 25 atom / 50 soru). Kapı: quiz_dogrula.py 0 HATA."
+  },
+  {
+   "id": "icerik_dagit",
+   "kapsam": "genel",
+   "durum": "hazir",
+   "gerekir": [
+    "checkup",
+    "ders_zinciri",
+    "hastalik_birlestir",
+    "kamp",
+    "olasi_soru"
+   ],
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "komut": "python3 meds/otomasyon/icerik_dagit.py",
+   "cikti": [
+    "Oracle dist/ (yalnız içerik derlemesi)",
+    "Oracle src/data/k[2-6]*_*"
+   ],
+   "not": "origin/main temiz worktree + Oracle src/data + zincir çıktıları → vite build → yalnız dist. Çalışma ağacından derlemez; dağıtım kilidini paylaşır; değişiklik yoksa atlar; commit/onem artırımı yok."
+  }
+ ]
 }

@@ -1,29 +1,36 @@
 {
-  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 377,
-  "baslik": "Terim Açıklamalarında Cümle Sayımı Düzeltildi",
-  "maddeler": [
-    "Terim açıklamalarındaki sıra sayısı ve kısaltma noktaları (3. kuşak, 20. hafta, N. gonorrhoeae) artık cümle sonu sayılmıyor; 167 terim haksız yere kural dışı görünmekten kurtuldu.",
-    "Çeviri mecazı içeren 8 açıklama (frenler, çapası) doğal Türkçeyle yeniden yazıldı.",
-    "Bütün derslerin terim dosyaları tarandı: gündelik sözcük, uzunluk, kesme ve üslup kuralı ihlali kalmadı.",
-    "Kök neden H76 olarak hata defterine işlendi."
-  ],
-  "eklenen": [
-    "data/sesli_anlatim/terim/k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim.json",
-    "data/sesli_anlatim/terim/k2-07-genel-anestezik-ilaclar.json",
-    "src/data/terim_yardimcisi_sozluk.json",
-    "scripts/sesli_anlatim/terim_analiz.py"
-  ],
-  "degisen": [
-    "scripts/sesli_anlatim/terim_sozlugu.py",
-    "scripts/sesli_anlatim/pdf_isaret.py",
-    "scripts/sesli_anlatim/TALIMAT_TERIM.md",
-    "src/data/glossary.ts",
-    "src/components/canliDers/CdTerimKatman.tsx"
-  ],
-  "duzeltilen": [
-    "PDF'ten okunan kelimelerde 'u'+birleşik inceltme (ayrışık yazım) terim eşleşmesini bozuyordu; metin NFC biçimine çevriliyor.",
-    "Çok sözcüklü terimlerin son sözcüğü kısayken (serebral metabolik hız → hızın) ekli geçişler eşleşmiyordu."
-  ],
-  "silinen": []
+ "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
+ "onem": 378,
+ "baslik": "Slayt Kısaltmaları Artık Açılıyor (Ayrı Kısaltmalar Bölümü)",
+ "maddeler": [
+  "Sesli derste slayt üstündeki kısaltmalar mavi noktalı çizgiyle işaretleniyor; dokununca açılımı (ör. DD → Duygu durum, ÜSYE → Üst solunum yolu enfeksiyonu) kartta açılıyor.",
+  "Terimler sayfasına terimlerden ayrı 'Kısaltma' bölümü eklendi; kısaltmalar da arama ve süzgeçle bulunabiliyor.",
+  "Kısaltma açılımları dersin kendi slayt metninden ya da doğrulanmış sözlükten alınıyor; tahminle yanlış açılım yazılmıyor.",
+  "Kurul 2 derslerinin tamamı tarandı: 60 ders, 1 134 kısaltma işareti, 263 ayrı kısaltma.",
+  "Kök nedenler H77 olarak hata defterine işlendi (büyük harfli Türkçe sözcükler, tireyle bitişik yazım, dağıtım listesi)."
+ ],
+ "eklenen": [
+  "scripts/sesli_anlatim/kisaltma_sozlugu.py",
+  "data/sesli_anlatim/kisaltma/",
+  "data/arsiv_25_26/sesli_anlatim/kisaltma/",
+  "data/sesli_anlatim/kisaltma_bilinen.json",
+  "data/sesli_anlatim/kisaltma_elle/",
+  "src/data/kisaltma_sozluk.json"
+ ],
+ "degisen": [
+  "src/services/canliDers.ts",
+  "src/components/canliDers/canliDersStore.ts",
+  "src/components/canliDers/CdTerimKatman.tsx",
+  "src/components/canliDers/CanliDersDers.tsx",
+  "src/styles/canli-ders.css",
+  "src/data/glossary.ts",
+  "src/components/encyclopedia/MedicalEncyclopediaView.tsx",
+  "deploy/oracle/deploy-code.sh",
+  "otomasyon/hat.json"
+ ],
+ "duzeltilen": [
+  "Tireyle bitişik yazılan kısaltmalar (DSM-5, MAO-A, HIV-1, 5-HTTLPR) artık slaytta doğru yerde işaretleniyor.",
+  "Büyük harfli Türkçe sözcükler (BİLİNÇ, KOMA) kısaltma sayılmıyor."
+ ],
+ "silinen": []
 }

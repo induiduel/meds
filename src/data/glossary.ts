@@ -1,5 +1,6 @@
 import rawGlossary from './medical_glossary.json';
 import terimYardimci from './terim_yardimcisi_sozluk.json';
+import kisaltmaSozluk from './kisaltma_sozluk.json';
 import { safeJsonFetch } from '../services/api';
 import { contentReady, isContentChanged, onContentChanged } from '../services/contentLive';
 
@@ -30,6 +31,7 @@ const CATEGORY_LABELS: Record<string, string> = {
   bakteriyoloji: 'Bakteriyoloji',
   viroloji: 'Viroloji',
   terim: 'Tıbbi terim',
+  kisaltma: 'Kısaltma',
   protein: 'Protein & molekül',
   'halk-sagligi': 'Halk sağlığı',
   epidemiyoloji: 'Halk sağlığı',
@@ -131,6 +133,16 @@ function ingest(rawGlossary: unknown) {
       clinicalPearls: v.clinicalPearl || undefined, badgeColor: 'teal',
     });
   }
+}
+// Slayt kısaltmaları (scripts/sesli_anlatim/kisaltma_sozlugu.py): terimlerden ayrı "Kısaltmalar" bölümü
+for (const v of Object.values(kisaltmaSozluk as Record<string, any>)) {
+  const term = String(v?.term || '').trim();
+  if (!term || !v.definition || termMap.has(term.toLowerCase())) continue;
+  termMap.set(term.toLowerCase(), {
+    term, category: 'kisaltma', definition: String(v.definition),
+    discipline: Array.isArray(v.decks) && v.decks.length ? `${v.decks.length} derste` : undefined,
+    badgeColor: 'sky',
+  });
 }
 ingest(rawGlossary);
 

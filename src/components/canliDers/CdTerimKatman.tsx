@@ -91,10 +91,28 @@ function Kart({ x }: { x: CdTerim }) {
         <b>{x.t}</b>
         <span className={`cd-trm-tur is-${x.k}`}>{TERIM_TUR[x.k]}</span>
       </div>
-      <p>{x.a}</p>
+      {x.acilim && <p className="cd-trm-acilim"><b>{x.acilim}</b></p>}
+      {x.a && x.a !== x.acilim && <p>{x.a}</p>}
       {x.f && <p className="cd-trm-f">Karıştırılan: <b>{x.f}</b></p>}
     </>
   );
+}
+
+/** Terim ve kısaltma katmanlarını tek haritada birleştirir (PDF katmanı ve paragraf altı listesi aynı veriyi kullanır). */
+export function cdTerimKatmani(terim?: CdDetay['terim'], kisaltma?: CdDetay['kisaltma']): Record<string, Record<string, CdTerimSayfa>> | null {
+  if (!terim && !kisaltma) return null;
+  const out: Record<string, Record<string, CdTerimSayfa>> = {};
+  const ekle = (kaynak?: CdDetay['terim']) => {
+    for (const [dosya, sayfalar] of Object.entries(kaynak || {})) {
+      for (const [no, sy] of Object.entries(sayfalar || {})) {
+        const hedef = ((out[dosya] ||= {})[no] ||= { bos: sy.bos, t: [] });
+        for (const x of sy.t || []) if (!hedef.t.some((y) => y.t === x.t)) hedef.t.push(x);
+      }
+    }
+  };
+  ekle(terim);
+  ekle(kisaltma);
+  return Object.keys(out).length ? out : null;
 }
 
 /** Sayfa katmanı (pageOverlay içinde): yalnız yardımcı açıkken */
@@ -133,15 +151,16 @@ const uyar = (p: string, w: string) => w === p || (p.length > 4 && w.startsWith(
 /** Konuşmacı metninde paragrafın altı: dersin terimlerinden bu paragrafta (ekli hâli dahil) geçenler (seslendirilmez) */
 export function CdParagrafTerimleri({ detay, metin }: { detay: CdDetay; i?: number; metin: string }) {
   const acik = useTerimYardimci();
+  const katman = useMemo(() => cdTerimKatmani(detay.terim, detay.kisaltma), [detay.terim, detay.kisaltma]);
   const tum = useMemo(() => {
     const m = new Map<string, { x: CdTerim; p: string[] }>();
-    for (const d of Object.values(detay.terim || {})) for (const sy of Object.values(d)) for (const x of sy.t) {
+    for (const d of Object.values(katman || {})) for (const sy of Object.values(d)) for (const x of sy.t) {
       const p = (x.t.match(TOK) || []).map(katla).filter(Boolean);
       const k = p.join(' ');
       if (p.length && !m.has(k)) m.set(k, { x, p });
     }
     return [...m.values()];
-  }, [detay.terim]);
+  }, [katman]);
   const liste = useMemo(() => {
     if (!acik || !tum.length) return [];
     const w = (metin.match(TOK) || []).map(katla);
@@ -159,7 +178,7 @@ export function CdParagrafTerimleri({ detay, metin }: { detay: CdDetay; i?: numb
       {liste.map((x) => (
         <div key={x.t} className="cd-p-trm-oge">
           <dt>{x.t}<span className={`cd-trm-tur is-${x.k}`}>{TERIM_TUR[x.k]}</span></dt>
-          <dd>{x.a}{x.f && <i> Karıştırılan: {x.f}.</i>}</dd>
+          <dd>{x.acilim && <b>{x.acilim}{x.a && x.a !== x.acilim ? '. ' : ''}</b>}{x.a !== x.acilim ? x.a : ''}{x.f && <i> Karıştırılan: {x.f}.</i>}</dd>
         </div>
       ))}
     </dl>

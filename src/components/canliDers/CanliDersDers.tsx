@@ -68,7 +68,7 @@ function elementZoom(el: Element | null | undefined): number {
 
 const PdfDocView = lazy(() => import('../learn/pdf/PdfDocView'));
 import type { PdfMarks } from '../learn/pdf/PdfDocView';
-import { CdParagrafTerimleri, CdTerimKatman, PdfAyarlarMenu, PdfGorunumDugme, TerimBaslikDugme, TerimDugme, usePdfGorunum } from './CdTerimKatman';
+import { CdParagrafTerimleri, CdTerimKatman, PdfAyarlarMenu, PdfGorunumDugme, TerimBaslikDugme, TerimDugme, cdTerimKatmani, usePdfGorunum } from './CdTerimKatman';
 
 const TAKIP_ARA = 8000;
 
@@ -589,7 +589,7 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
                 </button>
               )}
               {tanitim.dugme}
-              {pdfVar && <PdfAyarlarMenu terimVar={!!detay.terim} />}
+              {pdfVar && <PdfAyarlarMenu terimVar={!!(detay.terim || detay.kisaltma)} />}
               {mod === 'ikisi' && (
             <div className="cd-duzen-arac" role="group" aria-label="Metin ve PDF bölme düzeni ve boyutu">
               <button
@@ -640,7 +640,7 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
           {kamp && !tamEkran && metinGoster && (
             <YaziAyar yazi={yazi} setYazi={setYazi} />
           )}
-          {detay.terim && <TerimBaslikDugme />}
+          {(detay.terim || detay.kisaltma) && <TerimBaslikDugme />}
           {tamEkran ? (
             <>
               <button
@@ -1163,7 +1163,7 @@ const MetinListe = memo(function MetinListe({ detay, onTik, kamp = false }: { de
             <div key={p.i} className="cd-p-sar">
               <p data-i={p.i} className="cd-p" onClick={() => onTik(p.i)}><VurguluMetin metin={p.metin} v={detay.vurgu?.[p.i]} i={p.i} /></p>
               {detay.v2?.p[p.i] && <CdV2Maddeler i={p.i} cs={detay.v2.p[p.i]} deste={detay.v2.deste} />}
-              {detay.terim && <CdParagrafTerimleri detay={detay} i={p.i} metin={p.metin} />}
+              {(detay.terim || detay.kisaltma) && <CdParagrafTerimleri detay={detay} i={p.i} metin={p.metin} />}
               <div className="cd-p-araclar">
                 <CdParagrafYildizDugme
                   dersKey={detay.key}
@@ -1516,7 +1516,9 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
     }
     return Object.keys(out).length ? out : null;
   }, [detay.isaret, gor.dosya]);
-  const terimDosya = detay.terim?.[String(gor.dosya)] || null;
+  // Terim + kısaltma katmanları tek haritada: PDF'te ikisi birlikte işaretlenir (kısaltmalar mavi kesikli)
+  const terimKatman = useMemo(() => cdTerimKatmani(detay.terim, detay.kisaltma), [detay.terim, detay.kisaltma]);
+  const terimDosya = terimKatman?.[String(gor.dosya)] || null;
   const gorunum = usePdfGorunum();
   // Kelime takibi yalnız işaret katmanında (useFocus): görüntüleyici cümle başına bir kez çizilir, kelimede yeniden çizilmez
   const marks = useMemo<PdfMarks | null>(() => {

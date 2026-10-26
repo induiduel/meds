@@ -37,6 +37,7 @@ const P = {
   v2: (k: string) => path.join(kokSec(k), 'v2', `${k}.json`),
   cikmisKonum: (k: string) => path.join(kokSec(k), 'cikmis_konum', `${k}.json`),
   terim: (k: string) => path.join(kokSec(k), 'terim', `${k}.json`),
+  kisaltma: (k: string) => path.join(kokSec(k), 'kisaltma', `${k}.json`),
   ogrenciNot: (fileId: string) => path.join(KOK, 'ogrenci_not', `${fileId.replace(/[^\w-]/g, '')}.json`),
   gunluk: (k: string) => path.join(arsivMi(k) ? ARSIV_GUNLUK_KOK : GUNLUK_KOK, `${k}.json`),
 };
@@ -409,6 +410,12 @@ export function registerCanliDersRoutes(app: Express) {
       // PDF'e bağlıdır (metin değişse de geçerli)
       terim: (() => {
         const t = oku<any>(P.terim(key), null);
+        return t?.d && Object.keys(t.d).length ? t.d : null;
+      })(),
+      // PDF kısaltma yardımcısı (scripts/sesli_anlatim/kisaltma_sozlugu.py): ayrı katman, terimlerle aynı kutup yapısı
+      // { "<dosya>": { "<sayfa>": { bos, t: [{ t, acilim, a, k: "kisaltma", b }] } } }
+      kisaltma: (() => {
+        const t = oku<any>(P.kisaltma(key), null);
         return t?.d && Object.keys(t.d).length ? t.d : null;
       })(),
     });

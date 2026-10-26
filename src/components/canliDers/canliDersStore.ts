@@ -123,9 +123,11 @@ export interface CdDetay {
   v2?: { deste: string; p: Record<string, CdV2Cumle[]> } | null;
   /** PDF terim yardımcısı: dosya dizini → sayfa → { alt boş oran, terimler } (terim_sozlugu.py) */
   terim?: Record<string, Record<string, CdTerimSayfa>> | null;
+  /** PDF kısaltma yardımcısı (ayrı katman): dosya dizini → sayfa → { alt boş oran, kısaltmalar } (kisaltma_sozlugu.py) */
+  kisaltma?: Record<string, Record<string, CdTerimSayfa>> | null;
 }
-/** k: terim | latince | karisan | kisaltma; f: karıştırılan terim; b: slayttaki kutular (sayfa oranı) */
-export interface CdTerim { t: string; a: string; k: 'terim' | 'latince' | 'karisan' | 'kisaltma'; f?: string; b: number[][] }
+/** k: terim | latince | karisan | kisaltma; f: karıştırılan terim; acilim: kısaltmanın açılımı; b: slayttaki kutular */
+export interface CdTerim { t: string; a: string; k: 'terim' | 'latince' | 'karisan' | 'kisaltma'; f?: string; acilim?: string; b: number[][] }
 export interface CdTerimSayfa { bos: number; t: CdTerim[] }
 export interface CdV2Cumle { e: string; d: number; v: [string, string][]; c: string[]; a: number | null; s?: unknown }
 export interface CdCikmisKonum { id: string; kok: string; cevap: string; yil?: number | string | null; p: number; c: number; skor: number }
