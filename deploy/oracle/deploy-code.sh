@@ -104,12 +104,13 @@ sed -n 's/^>f[^ ]* //p' "$CHANGED" > "$CHANGED.f" || true; mv "$CHANGED.f" "$CHA
 echo "  $(wc -l < "$CHANGED") dosya aktarıldı"
 
 echo "==> [1b/4] sesli ders verisi (metin/hizalama/vurgu/çıkmış konumu → Oracle data/sesli_anlatim)"
-# data/ yukarıda dışlanır; bu dört klasör metinle birlikte değişmezse canlıda paragraf/cümle zamanlaması ve PDF
-# eşlemesi kullanılamaz (2026-10-20: eski metin yüzünden 55 ses kaydı zamanlamasız kaldı). Ses dosyaları ve kayit.json
-# Oracle'da üretilip yönetildiği için gönderilmez; cumle_zaman/ de Oracle'da meds-cumle-zaman.timer ile üretilir
-# (yereldeki eski kopya onu ezmesin). Commit'lenmemiş değişikliği olan klasör (başka oturumun yarım işi) atlanır.
+# data/ yukarıda dışlanır; bu klasörler metinle birlikte değişmezse canlıda paragraf/cümle zamanlaması, PDF eşlemesi ve
+# terim yardımcısı kullanılamaz (2026-10-20: eski metin yüzünden 55 ses kaydı zamanlamasız kaldı; 2026-10-26: `terim`
+# klasörü listede olmadığı için terim JSON'ları canlıya hiç gitmiyordu). Ses dosyaları ve kayit.json Oracle'da üretilip
+# yönetildiği için gönderilmez; cumle_zaman/ de Oracle'da meds-cumle-zaman.timer ile üretilir (yereldeki eski kopya onu
+# ezmesin). Commit'lenmemiş değişikliği olan klasör (başka oturumun yarım işi) atlanır.
 SA="data/sesli_anlatim"
-for k in metin hizalama vurgu capa cizim ogrenci_not cikmis_konum; do
+for k in metin hizalama vurgu capa cizim ogrenci_not cikmis_konum terim; do
   [[ -d "$MEDS_DIR/$SA/$k" ]] || continue
   if [[ -n "$(git -C "$MEDS_DIR" status --porcelain -- "$SA/$k" 2>/dev/null)" ]]; then
     echo "  ATLANDI $k: commit'lenmemiş değişiklik var (önce commit edin)"; continue
