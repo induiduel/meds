@@ -1,0 +1,2851 @@
+{
+ "id": "k2p-y25-k2-48-lokal-anestezik-ilaclar",
+ "deckId": "k2p-y25-k2-48-lokal-anestezik-ilaclar",
+ "title": "Lokal Anestezik İlaçlar",
+ "courseId": "y25-k2-48-lokal-anestezik-ilaclar",
+ "committee": "donem3-kurul2",
+ "discipline": "farmakoloji",
+ "sayfaHaritasi": "teyitli",
+ "totalSlides": 32,
+ "slides": [
+  {
+   "slideNumber": 1,
+   "title": "Tababet Sanatı İlkeleri ve Lokal Anesteziye Giriş",
+   "bolum": "1",
+   "content": "Lokal anestezikler, santral sinir sistemi bilincini etkilemeksizin fokal duyu iletimini geçici ve geri dönüşümlü olarak durduran temel farmakolojik ajanlardır.\n\n- **Tababet Sanatının Temelleri:** Hekimlik sanatı üç ana sütun üzerine kuruludur: el mahareti ve aletler, rasyonel ilaç kullanımı ve tıp ahlakı.\n- **Rasyonel İlaç İlkeleri:** Doğru ilacın, doğru endikasyonda, uygun dozda ve hastaya zarar vermeden uygulanması hekimliğin en temel ahlaki sorumluluğudur.\n- **Lokal Etki Kavramı:** Sistemik bilinç kaybı oluşturmadan yalnızca hedeflenen periferik anatomik alandaki duyu iletiminin kesilmesi amaçlanır.\n\n> [!NOTE]\n> Lokal anestezi uygulanırken hekimlik sanatının üç unsuru da eş zamanlı devreye girer: anatomik el becerisi, farmakolojik ilaç bilgisi ve hasta güvenliğini önceleyen meslek ahlakı.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Hekimlik ve tababet sanatını oluşturan üç temel unsur hangisinde doğru ifade edilmiştir?",
+     "options": [
+      {
+       "text": "El mahareti ile aletler, rasyonel ilaç ve hekimlik ahlakı.",
+       "isCorrect": true,
+       "explanation": "El mahareti ile aletler, rasyonel ilaç ve hekimlik ahlakı ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "Yalnızca teorik bilgi ve laboratuvar tetkikleri.",
+       "isCorrect": false,
+       "explanation": "Yalnızca teorik bilgi ve laboratuvar tetkikleri kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Cerrahi aletler ve sınırsız farmakolojik müdahale.",
+       "isCorrect": false,
+       "explanation": "Cerrahi aletler ve sınırsız farmakolojik müdahale kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Geleneksel uygulamalar ve bitkisel kürler.",
+       "isCorrect": false,
+       "explanation": "Geleneksel uygulamalar ve bitkisel kürler kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s01-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Hekimlik sanatı el mahareti, ilaç kullanımı ve {tıp ahlakı} temelinde yükselir.",
+     "maskedTerm": "tıp ahlakı",
+     "id": "k48-s01-e2",
+     "hint": "Hedeflenen fizyopatolojik mekanizmadır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Hekimlik İlkeleri ve Lokal Anesteziye Giriş",
+     "items": [
+      {
+       "text": "Tababet sanatı el mahareti, ilaç ve ahlakın ayrılmaz sentezidir.",
+       "isLie": false,
+       "explanation": "Tababet sanatı el mahareti, ilaç ve ahlakın ayrılmaz sentezidir ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Lokal anestezikler fokal duyu iletimini geçici ve geri dönüşümlü olarak durdurur.",
+       "isLie": false,
+       "explanation": "Lokal anestezikler fokal duyu iletimini geçici ve geri dönüşümlü olarak durdurur ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Lokal anestezi uygulaması santral sinir sisteminde yaygın bilinç kaybı ve koma oluşturur.",
+       "isLie": true,
+       "explanation": "Lokal anestezi uygulaması santral sinir sisteminde yaygın bilinç kaybı ve koma oluşturur ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s01-e3"
+    },
+    {
+     "type": "active_recall",
+     "question": "Santral bilinç kaybı oluşturmaksızın hedef anatomik alanda fokal duyu iletimini durduran ilaç sınıfı nedir?",
+     "answer": "Lokal anestezik ilaçlar.",
+     "id": "k48-s01-e4"
+    }
+   ],
+   "id": "k2-48-d-s01",
+   "synthesisNarrative": "Lokal anestezikler, santral sinir sistemi bilincini etkilemeksizin fokal duyu iletimini geçici ve geri dönüşümlü olarak durduran temel farmakolojik ajanlardır.\n\n- **Tababet Sanatının Temelleri:** Hekimlik sanatı üç ana sütun üzerine kuruludur: el mahareti ve aletler, rasyonel ilaç kullanımı ve tıp ahlakı.\n- **Rasyonel İlaç İlkeleri:** Doğru ilacın, doğru endikasyonda, uygun dozda ve hastaya zarar vermeden uygulanması hekimliğin en temel ahlaki sorumluluğudur.\n- **Lokal Etki Kavramı:** Sistemik bilinç kaybı oluşturmadan yalnızca hedeflenen periferik anatomik alandaki duyu iletiminin kesilmesi amaçlanır.\n\n> [!NOTE]\n> Lokal anestezi uygulanırken hekimlik sanatının üç unsuru da eş zamanlı devreye girer: anatomik el becerisi, farmakolojik ilaç bilgisi ve hasta güvenliğini önceleyen meslek ahlakı.",
+   "pdfSayfalari": [
+    1,
+    1
+   ],
+   "sourcePdf": {
+    "startPage": 1,
+    "endPage": 1
+   }
+  },
+  {
+   "slideNumber": 2,
+   "title": "Lokal Anestezi Tarihçesi ve Fiziksel-Geleneksel Yöntemler",
+   "bolum": "1",
+   "content": "Ağrısız cerrahi arayışı insanlık tarihi kadar eskidir ve modern kimyasal moleküllerden önce fiziksel yöntemlerle başlatılmıştır.\n\n- **Fiziksel Yöntemler:** Eski çağlardan itibaren soğuk, buz, kar, basınç uygulama ve koterizasyon amacıyla aşırı ısı fokal duyu kaybı sağlamak için kullanılmıştır.\n- **İlk Kimyasal Molekül:** 1884 yılında Carl Koller, Sigmund Freud'un önerisiyle koka yapraklarından izole edilen kokaini ilk kez oftalmolojik kornea cerrahisinde topikal anestezik olarak uygulamıştır.\n- **Modern Gelişim:** Kokainin yüksek bağımlılık ve doku toksisitesi nedeniyle daha güvenli sentetik ester (prokain) ve amid türevleri geliştirilmiştir.\n\n> [!IMPORTANT]\n> Soğuk uygulaması sinir iletim hızını fiziksel olarak yavaşlatırken, kimyasal lokal anestezikler sinir membranındaki spesifik iyon kanallarını moleküler düzeyde bloke eder.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Tarihte ilk kez 1884 yılında kornea cerrahisinde topikal anestezik olarak uygulanan doğal molekül hangisidir?",
+     "options": [
+      {
+       "text": "Kokain alkaloidi.",
+       "isCorrect": true,
+       "explanation": "Kokain alkaloidi ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "Lidokain hidroklorür.",
+       "isCorrect": false,
+       "explanation": "Lidokain hidroklorür kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Bupivakain hidroklorür.",
+       "isCorrect": false,
+       "explanation": "Bupivakain hidroklorür kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Sentetik prokain tuzu.",
+       "isCorrect": false,
+       "explanation": "Sentetik prokain tuzu kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s02-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Modern kimyasal lokal anesteziklerin kullanımından önce bölgesel duyu kaybı için {soğuk uygulaması} ve buz kompresleri tercih edilmiştir.",
+     "maskedTerm": "soğuk uygulaması",
+     "id": "k48-s02-e2",
+     "hint": "Kritik tanısal belirteçtir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Lokal Anestezi Tarihçesi ve Fiziksel Yöntemler",
+     "items": [
+      {
+       "text": "Eski çağlarda fokal uyuşma sağlamak için buz, kar ve basınç kullanılmıştır.",
+       "isLie": false,
+       "explanation": "Eski çağlarda fokal uyuşma sağlamak için buz, kar ve basınç kullanılmıştır ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "1884 yılında Carl Koller kokaini kornea cerrahisinde ilk lokal anestezik olarak kullanmıştır.",
+       "isLie": false,
+       "explanation": "1884 yılında Carl Koller kokaini kornea cerrahisinde ilk lokal anestezik olarak kullanmıştır ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Kokain hiçbir bağımlılık ve doku toksisitesi oluşturmadığı için günümüzde en güvenli ajandır.",
+       "isLie": true,
+       "explanation": "Kokain hiçbir bağımlılık ve doku toksisitesi oluşturmadığı için günümüzde en güvenli ajandır ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s02-e3"
+    },
+    {
+     "type": "active_recall",
+     "question": "1884 yılında koka yapraklarından elde edilerek göze ilk uygulanan lokal anestezik alkaloid nedir?",
+     "answer": "Kokain molekülüdür.",
+     "id": "k48-s02-e4"
+    }
+   ],
+   "id": "k2-48-d-s02",
+   "synthesisNarrative": "Ağrısız cerrahi arayışı insanlık tarihi kadar eskidir ve modern kimyasal moleküllerden önce fiziksel yöntemlerle başlatılmıştır.\n\n- **Fiziksel Yöntemler:** Eski çağlardan itibaren soğuk, buz, kar, basınç uygulama ve koterizasyon amacıyla aşırı ısı fokal duyu kaybı sağlamak için kullanılmıştır.\n- **İlk Kimyasal Molekül:** 1884 yılında Carl Koller, Sigmund Freud'un önerisiyle koka yapraklarından izole edilen kokaini ilk kez oftalmolojik kornea cerrahisinde topikal anestezik olarak uygulamıştır.\n- **Modern Gelişim:** Kokainin yüksek bağımlılık ve doku toksisitesi nedeniyle daha güvenli sentetik ester (prokain) ve amid türevleri geliştirilmiştir.\n\n> [!IMPORTANT]\n> Soğuk uygulaması sinir iletim hızını fiziksel olarak yavaşlatırken, kimyasal lokal anestezikler sinir membranındaki spesifik iyon kanallarını moleküler düzeyde bloke eder.",
+   "pdfSayfalari": [
+    2,
+    2
+   ],
+   "sourcePdf": {
+    "startPage": 2,
+    "endPage": 2
+   }
+  },
+  {
+   "slideNumber": 3,
+   "title": "Genel, Rejyonel ve Lokal Anestezi Karşılaştırması",
+   "bolum": "1",
+   "content": "Anestezi yöntemleri etki sahasının genişliğine ve santral bilincin durumuna göre üç ana grupta sınıflandırılır.\n\n- **Genel Anestezi:** Tüm vücutta tam bilinç kaybı, amnezi ve hareketsizlik sağlar; santral sinir sistemi bütünüyle baskılanır.\n- **Rejyonel Anestezi:** Omurilik düzeyinde veya büyük sinir pleksuslarında belirli bir vücut bölgesinin duyu ve motor fonksiyonunu ortadan kaldırır; bilinç açıktır.\n- **Lokal Anestezi:** Yalnızca cerrahi müdahalenin yapılacağı küçük ve sınırlı doku alanında fokal anestezi oluşturur.\n- **Nöroaksiyel Girişim:** Spinal kord çevresinde epidural iğne ve kateter yerleşimi ile segmental blokaj sağlanabilir.\n\n> [!NOTE]\n> Rejyonel anestezide epidural kateter ligamentum flavum geçilerek epidural boşluğa yerleştirilirken, spinal anestezide dura delinerek subaraknoid mesafeye doğrudan girilir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Bilinç kaybı oluşturmaksızın geniş bir vücut bölgesinin duyu ve motor iletimini durduran yöntem hangisidir?",
+     "options": [
+      {
+       "text": "Rejyonel anestezi yaklaşımı.",
+       "isCorrect": true,
+       "explanation": "Rejyonel anestezi yaklaşımı ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "Genel inhalasyon anestezisi.",
+       "isCorrect": false,
+       "explanation": "Genel inhalasyon anestezisi kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Derin intravenöz sedasyon.",
+       "isCorrect": false,
+       "explanation": "Derin intravenöz sedasyon kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Santral genel anestezi indüksiyonu.",
+       "isCorrect": false,
+       "explanation": "Santral genel anestezi indüksiyonu kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s03-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Hastanın bilinci açıkken geniş bir ekstremite veya gövde alanını uyuşturan yöntem {rejyonel anestezi} olarak tanımlanır.",
+     "maskedTerm": "rejyonel anestezi",
+     "id": "k48-s03-e2",
+     "hint": "Uygulanan temel tedavi kuralıdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Anestezi Türleri ve Nöroaksiyel Anatomi",
+     "items": [
+      {
+       "text": "Genel anestezi tam bilinç kaybı ve tüm vücutta duyu blokajı sağlar.",
+       "isLie": false,
+       "explanation": "Genel anestezi tam bilinç kaybı ve tüm vücutta duyu blokajı sağlar ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Rejyonel ve lokal anestezide hastanın santral bilinci açık kalır.",
+       "isLie": false,
+       "explanation": "Rejyonel ve lokal anestezide hastanın santral bilinci açık kalır ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Lokal anestezi tüm vücutta yaygın felç ve solunum arresti oluşturur.",
+       "isLie": true,
+       "explanation": "Lokal anestezi tüm vücutta yaygın felç ve solunum arresti oluşturur ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s03-e3"
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Anestezi Türü",
+      "Bilinç Durumu",
+      "Etki Sahası"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Genel Anestezi",
+         "isMasked": false
+        },
+        {
+         "text": "Tam bilinç kaybı",
+         "isMasked": true,
+         "hint": "Kortikal uyanıklık bütünüyle baskılanır."
+        },
+        {
+         "text": "Tüm vücut",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Rejyonel Anestezi",
+         "isMasked": false
+        },
+        {
+         "text": "Bilinç tamamen açık",
+         "isMasked": true,
+         "hint": "Santral korteks uyanık kalır."
+        },
+        {
+         "text": "Geniş vücut bölgesi",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Lokal Anestezi",
+         "isMasked": false
+        },
+        {
+         "text": "Bilinç tamamen açık",
+         "isMasked": false
+        },
+        {
+         "text": "Sınırlı fokal alan",
+         "isMasked": true,
+         "hint": "Yalnızca girişim sahasını kapsar."
+        }
+       ]
+      }
+     ],
+     "id": "k48-s03-e4"
+    }
+   ],
+   "id": "k2-48-d-s03",
+   "synthesisNarrative": "Anestezi yöntemleri etki sahasının genişliğine ve santral bilincin durumuna göre üç ana grupta sınıflandırılır.\n\n- **Genel Anestezi:** Tüm vücutta tam bilinç kaybı, amnezi ve hareketsizlik sağlar; santral sinir sistemi bütünüyle baskılanır.\n- **Rejyonel Anestezi:** Omurilik düzeyinde veya büyük sinir pleksuslarında belirli bir vücut bölgesinin duyu ve motor fonksiyonunu ortadan kaldırır; bilinç açıktır.\n- **Lokal Anestezi:** Yalnızca cerrahi müdahalenin yapılacağı küçük ve sınırlı doku alanında fokal anestezi oluşturur.\n- **Nöroaksiyel Girişim:** Spinal kord çevresinde epidural iğne ve kateter yerleşimi ile segmental blokaj sağlanabilir.\n\n> [!NOTE]\n> Rejyonel anestezide epidural kateter ligamentum flavum geçilerek epidural boşluğa yerleştirilirken, spinal anestezide dura delinerek subaraknoid mesafeye doğrudan girilir.",
+   "pdfSayfalari": [
+    3,
+    4
+   ],
+   "sourcePdf": {
+    "startPage": 3,
+    "endPage": 4
+   }
+  },
+  {
+   "slideNumber": 4,
+   "title": "Bölgesel Anestezi İlkeleri ve Periferik Pleksus Blokları",
+   "bolum": "1",
+   "content": "Bölgesel anestezi, cerrahi sahanın innervasyonunu sağlayan anatomik sinir köklerinin hedeflenmesi prensibine dayanır.\n\n- **Yüzeyel ve Derin Servikal Pleksus:** Boyun cerrahilerinde ve karotis endarterektomisinde boyun fasyaları arasından geçen kökler bloke edilir.\n- **Brakiyal Pleksus Blokları:** Üst ekstremite cerrahilerinde interskalen, supraklaviküler, infraklaviküler veya aksiller yaklaşımlarla kolun tüm duyu ve motor innervasyonu geçici olarak durdurulur.\n- **Alt Ekstremite Blokları:** Femoral, siyatik ve obturatuar sinir blokları diz ve ayak bileği cerrahilerinde yaygın olarak uygulanır.\n- **Nöroaksiyel Seviyeler:** Torakal ve lomber düzeyde epidural ile spinal bloklar gövde ve alt ekstremite operasyonlarına olanak tanır.\n\n> [!IMPORTANT]\n> Pleksus bloklarında lokal anestezik sinir kılıfının dışına verilir; ilacın difüzyonla liflere ulaşması hedeflenir, doğrudan intranöral enjeksiyondan sinir hasarı riski nedeniyle kaçınılmalıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Üst ekstremite cerrahisinde kolun duyu ve motor fonksiyonunu durdurmak amacıyla hedeflenen temel pleksus hangisidir?",
+     "options": [
+      {
+       "text": "Brakiyal pleksus yapıları.",
+       "isCorrect": true,
+       "explanation": "Brakiyal pleksus yapıları ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "Lumbosakral pleksus kökleri.",
+       "isCorrect": false,
+       "explanation": "Lumbosakral pleksus kökleri kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Yalnızca yüzeyel servikal pleksus.",
+       "isCorrect": false,
+       "explanation": "Yalnızca yüzeyel servikal pleksus kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Çölyak otonomik pleksus ağı.",
+       "isCorrect": false,
+       "explanation": "Çölyak otonomik pleksus ağı kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s04-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Boyun bölgesi ve karotis cerrahilerinde fokal anestezi sağlamak amacıyla {servikal pleksus} blokajı uygulanır.",
+     "maskedTerm": "servikal pleksus",
+     "id": "k48-s04-e2",
+     "hint": "Önemli anatomik referanstır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Periferik ve Rejyonel Blokaj İlkeleri",
+     "items": [
+      {
+       "text": "Brakiyal pleksus blokları üst ekstremite cerrahisinde uygulanır.",
+       "isLie": false,
+       "explanation": "Brakiyal pleksus blokları üst ekstremite cerrahisinde uygulanır ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Pleksus bloklarında ilaç sinir kılıfı çevresine perinöral verilir.",
+       "isLie": false,
+       "explanation": "Pleksus bloklarında ilaç sinir kılıfı çevresine perinöral verilir ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Lokal anestezikler kalıcı hasar oluşturmak için doğrudan akson içine zerk edilmelidir.",
+       "isLie": true,
+       "explanation": "Lokal anestezikler kalıcı hasar oluşturmak için doğrudan akson içine zerk edilmelidir ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s04-e3"
+    },
+    {
+     "type": "active_recall",
+     "question": "Üst ekstremite ameliyatlarında kolun anestezisi için interskalen veya aksiller yolla hedeflenen sinir ağı nedir?",
+     "answer": "Brakiyal pleksustur.",
+     "id": "k48-s04-e4"
+    }
+   ],
+   "id": "k2-48-d-s04",
+   "synthesisNarrative": "Bölgesel anestezi, cerrahi sahanın innervasyonunu sağlayan anatomik sinir köklerinin hedeflenmesi prensibine dayanır.\n\n- **Yüzeyel ve Derin Servikal Pleksus:** Boyun cerrahilerinde ve karotis endarterektomisinde boyun fasyaları arasından geçen kökler bloke edilir.\n- **Brakiyal Pleksus Blokları:** Üst ekstremite cerrahilerinde interskalen, supraklaviküler, infraklaviküler veya aksiller yaklaşımlarla kolun tüm duyu ve motor innervasyonu geçici olarak durdurulur.\n- **Alt Ekstremite Blokları:** Femoral, siyatik ve obturatuar sinir blokları diz ve ayak bileği cerrahilerinde yaygın olarak uygulanır.\n- **Nöroaksiyel Seviyeler:** Torakal ve lomber düzeyde epidural ile spinal bloklar gövde ve alt ekstremite operasyonlarına olanak tanır.\n\n> [!IMPORTANT]\n> Pleksus bloklarında lokal anestezik sinir kılıfının dışına verilir; ilacın difüzyonla liflere ulaşması hedeflenir, doğrudan intranöral enjeksiyondan sinir hasarı riski nedeniyle kaçınılmalıdır.",
+   "pdfSayfalari": [
+    5,
+    6
+   ],
+   "sourcePdf": {
+    "startPage": 5,
+    "endPage": 6
+   }
+  },
+  {
+   "slideNumber": 5,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Giriş ve Temel Anestezi Kavramları",
+   "bolum": "1",
+   "isCheckpoint": true,
+   "content": "Bu tekrar sayfasında hekimlik sanatı ilkeleri, lokal anestezinin tarihsel gelişimi, anestezi sınıflaması ve periferik blok anatomisini pekiştiriyoruz.\n\n- **Hekimlik Sanatı:** El mahareti, rasyonel ilaç ve meslek ahlakının ortak sentezidir.\n- **Tarihsel Gelişim:** Fiziksel soğuk uygulamasından 1884'te Carl Koller'in kokain kullanımına uzanan süreç modern farmakolojinin temelini atmıştır.\n- **Anestezi Yelpazesi:** Genel anestezi tam bilinç kaybı sağlarken, rejyonel ve lokal anestezi bilinci koruyarak anatomik bölgeyi uyuşturur.\n- **Pleksus ve Nöroaksiyel Bloklar:** Servikal, brakiyal, femoral pleksuslar ile epidural ve spinal girişimler hedefe yönelik duyu blokajı sağlar.\n\n> [!NOTE]\n> Birinci bölümü tamamladınız; sonraki bölümde dermatom haritaları ve klinik uygulama biçimlerinin ayrıntılarına geçilecektir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Lokal anestezi uygulamasının genel anesteziden en belirgin klinik farkı hangisidir?",
+     "options": [
+      {
+       "text": "Santral bilincin tamamen korunması.",
+       "isCorrect": true,
+       "explanation": "Santral bilincin tamamen korunması ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "Tüm vücutta kas gevşemesi yapması.",
+       "isCorrect": false,
+       "explanation": "Tüm vücutta kas gevşemesi yapması kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Solunum reflekslerini bütünüyle durdurması.",
+       "isCorrect": false,
+       "explanation": "Solunum reflekslerini bütünüyle durdurması kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Kardiyak debiyi sıfırlaması.",
+       "isCorrect": false,
+       "explanation": "Kardiyak debiyi sıfırlaması kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s05-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Lokal anestezikler santral bilinç kaybı oluşturmaksızın hedef anatomik alanda {fokal duyu iletimini} geçici olarak durdurur.",
+     "maskedTerm": "fokal duyu iletimini",
+     "id": "k48-s05-e2",
+     "hint": "Standart kılavuz bilgisidir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Temel Anestezi Kavramları Özeti",
+     "items": [
+      {
+       "text": "Kokain tarihte kornea cerrahisinde ilk kullanılan kimyasal lokal anesteziktir.",
+       "isLie": false,
+       "explanation": "Kokain tarihte kornea cerrahisinde ilk kullanılan kimyasal lokal anesteziktir ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Rejyonel anestezi geniş bir bölgeyi uyuştururken hastanın bilinci açık kalır.",
+       "isLie": false,
+       "explanation": "Rejyonel anestezi geniş bir bölgeyi uyuştururken hastanın bilinci açık kalır ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Lokal anestezik ajanlar sinir liflerinde kalıcı nekroz oluşturarak etki eder.",
+       "isLie": true,
+       "explanation": "Lokal anestezik ajanlar sinir liflerinde kalıcı nekroz oluşturarak etki eder ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s05-e3"
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Genel Anestezi",
+     "rightTitle": "Rejyonel ve Lokal Anestezi",
+     "leftPoints": [
+      "Santral bilinç tamamen kapalıdır",
+      "Tüm vücutta yaygın duyu kaybı olur",
+      "Solunum cihazı ve entübasyon gerekebilir"
+     ],
+     "rightPoints": [
+      "Santral bilinç tamamen açıktır",
+      "Yalnızca hedeflenen bölge uyuşur",
+      "Spontan solunum refleksleri korunur"
+     ],
+     "id": "k48-s05-e4"
+    }
+   ],
+   "id": "k2-48-d-s05",
+   "synthesisNarrative": "Bu tekrar sayfasında hekimlik sanatı ilkeleri, lokal anestezinin tarihsel gelişimi, anestezi sınıflaması ve periferik blok anatomisini pekiştiriyoruz.\n\n- **Hekimlik Sanatı:** El mahareti, rasyonel ilaç ve meslek ahlakının ortak sentezidir.\n- **Tarihsel Gelişim:** Fiziksel soğuk uygulamasından 1884'te Carl Koller'in kokain kullanımına uzanan süreç modern farmakolojinin temelini atmıştır.\n- **Anestezi Yelpazesi:** Genel anestezi tam bilinç kaybı sağlarken, rejyonel ve lokal anestezi bilinci koruyarak anatomik bölgeyi uyuşturur.\n- **Pleksus ve Nöroaksiyel Bloklar:** Servikal, brakiyal, femoral pleksuslar ile epidural ve spinal girişimler hedefe yönelik duyu blokajı sağlar.\n\n> [!NOTE]\n> Birinci bölümü tamamladınız; sonraki bölümde dermatom haritaları ve klinik uygulama biçimlerinin ayrıntılarına geçilecektir."
+  },
+  {
+   "slideNumber": 6,
+   "title": "Spinal Dermatom Haritası ve Segmental Rejyonel Blokaj",
+   "bolum": "2",
+   "content": "Dermatom, tek bir spinal sinir arka kökü tarafından innerve edilen deri alanını temsil eder ve rejyonel anestezi derinliğinin takibinde temel kılavuzdur.\n\n- **Kritik Anatomik Referans Noktaları:** C6 dermatomu başparmağa, T4 dermatomu meme başı çizgisine, T10 dermatomu göbek hizasına, L1 dermatomu ise kasık bölgesine karşılık gelir.\n- **Segmental Seviye Belirleme:** Sezaryen cerrahisinde T4 seviyesinde, alt batın cerrahisinde T6-T8 seviyesinde, kalça ve diz cerrahisinde ise L1-L3 seviyesinde blokaj hedeflenir.\n- **Duyusal Seviye Testi:** İğne batırma (pin-prick) veya soğuk algısı (alkollü pamuk) testleri yapılarak blokajın hangi dermatom seviyesine ulaştığı objektif olarak değerlendirilir.\n\n> [!NOTE]\n> Soğuk duyusu miyelinli A-delta lifleriyle iletildiğinden, dokunma ve motor fonksiyondan daha önce kaybolur ve blok seviyesinin saptanmasında en hassas klinik belirteçtir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Göbek hizasındaki duyu innervasyonunu temsil eden ve spinal anestezide takip edilen kritik dermatom hangisidir?",
+     "options": [
+      {
+       "text": "T10 spinal dermatom düzeyi.",
+       "isCorrect": true,
+       "explanation": "T10 spinal dermatom düzeyi ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "T4 spinal dermatom düzeyi.",
+       "isCorrect": false,
+       "explanation": "T4 spinal dermatom düzeyi kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "C6 spinal dermatom düzeyi.",
+       "isCorrect": false,
+       "explanation": "C6 spinal dermatom düzeyi kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "L4 spinal dermatom düzeyi.",
+       "isCorrect": false,
+       "explanation": "L4 spinal dermatom düzeyi kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s06-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Meme başı hizasındaki duyusal innervasyonu temsil eden spinal dermatom seviyesi {T4 seviyesidir}.",
+     "maskedTerm": "T4 seviyesidir",
+     "id": "k48-s06-e2",
+     "hint": "Temel klinik prensiptir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Dermatom Haritası ve Seviye Değerlendirmesi",
+     "items": [
+      {
+       "text": "T10 dermatomu göbek hizasındaki duyu innervasyonuna karşılık gelir.",
+       "isLie": false,
+       "explanation": "T10 dermatomu göbek hizasındaki duyu innervasyonuna karşılık gelir ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Soğuk duyusu testi blokaj seviyesini saptamada hassas bir yöntemdir.",
+       "isLie": false,
+       "explanation": "Soğuk duyusu testi blokaj seviyesini saptamada hassas bir yöntemdir ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Meme başı çizgisi L1 spinal dermatomu tarafından innerve edilir.",
+       "isLie": true,
+       "explanation": "Meme başı çizgisi L1 spinal dermatomu tarafından innerve edilir ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s06-e3"
+    },
+    {
+     "type": "active_recall",
+     "question": "Rejyonel anestezi takibinde soğuk algısı ve iğne batırma ile seviyesi ölçülen anatomik duyu alanına ne ad verilir?",
+     "answer": "Spinal dermatom haritasıdır.",
+     "id": "k48-s06-e4"
+    }
+   ],
+   "id": "k2-48-d-s06",
+   "synthesisNarrative": "Dermatom, tek bir spinal sinir arka kökü tarafından innerve edilen deri alanını temsil eder ve rejyonel anestezi derinliğinin takibinde temel kılavuzdur.\n\n- **Kritik Anatomik Referans Noktaları:** C6 dermatomu başparmağa, T4 dermatomu meme başı çizgisine, T10 dermatomu göbek hizasına, L1 dermatomu ise kasık bölgesine karşılık gelir.\n- **Segmental Seviye Belirleme:** Sezaryen cerrahisinde T4 seviyesinde, alt batın cerrahisinde T6-T8 seviyesinde, kalça ve diz cerrahisinde ise L1-L3 seviyesinde blokaj hedeflenir.\n- **Duyusal Seviye Testi:** İğne batırma (pin-prick) veya soğuk algısı (alkollü pamuk) testleri yapılarak blokajın hangi dermatom seviyesine ulaştığı objektif olarak değerlendirilir.\n\n> [!NOTE]\n> Soğuk duyusu miyelinli A-delta lifleriyle iletildiğinden, dokunma ve motor fonksiyondan daha önce kaybolur ve blok seviyesinin saptanmasında en hassas klinik belirteçtir.",
+   "pdfSayfalari": [
+    7,
+    8
+   ],
+   "sourcePdf": {
+    "startPage": 7,
+    "endPage": 8
+   }
+  },
+  {
+   "slideNumber": 7,
+   "title": "Lokal Anestezi Klinik Uygulama Biçimleri",
+   "bolum": "2",
+   "content": "Lokal anestezikler cerrahi girişimin derinliğine, hedef dokuya ve anatomik lokalizasyona göre farklı tekniklerle uygulanır.\n\n- **Yüzeyel (Topikal) Blok:** Kornea, konjonktiva kesesi, burun, ağız boşluğu, trakeobronşiyal mukoza ve üretra epiteline damlatılarak, sürülerek veya püskürtülerek uygulanır; emilim mukozalarda son derece hızlıdır.\n- **İnfiltrasyon Anestezisi:** Küçük cerrahi kesiler, biyopsiler ve yara sütürasyonlarında cilt altı interstisyel dokuya doğrudan enjeksiyon yapılır; sinir uçları hedeflenir.\n- **Sinir Bloku (İletim Blokajı):** Cerrahi alanı innerve eden spesifik periferik sinir gövdesinin yakınına ilaç verilerek o sinirin dağıldığı tüm distal alanda anestezi sağlanır.\n- **İntravenöz Rejyonel Anestezi (Bier Bloku):** Ekstremiteye yerleştirilen pnömatik turnike ile dolaşım durdurulduktan sonra venöz yataktan lokal anestezik verilerek ekstremitede blokaj kurulur.\n\n> [!IMPORTANT]\n> Mukozal yüzeyler zengin kılcal damar ağına sahip olduğundan, topikal uygulamalarda hızla sistemik dolaşıma geçiş ve toksisite gelişme riski göz ardı edilmemelidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Ekstremiteye pnömatik turnike uygulandıktan sonra venöz yoldan lokal anestezik verilerek sağlanan rejyonel anestezi yöntemi hangisidir?",
+     "options": [
+      {
+       "text": "Bier bloku yöntemi.",
+       "isCorrect": true,
+       "explanation": "Bier bloku yöntemi ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "Topikal mukozal anestezi.",
+       "isCorrect": false,
+       "explanation": "Topikal mukozal anestezi kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Subaraknoid spinal anestezi.",
+       "isCorrect": false,
+       "explanation": "Subaraknoid spinal anestezi kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Deri altı infiltrasyon anestezisi.",
+       "isCorrect": false,
+       "explanation": "Deri altı infiltrasyon anestezisi kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s07-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Cilt altı interstisyel dokuya küçük cerrahi kesiler öncesinde doğrudan ilaç verilmesi {infiltrasyon anestezisi} olarak adlandırılır.",
+     "maskedTerm": "infiltrasyon anestezisi",
+     "id": "k48-s07-e2",
+     "hint": "Spesifik farmakolojik kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Klinik Uygulama Biçimleri",
+     "items": [
+      {
+       "text": "Topikal anestezi mukoza ve kornea epiteline sürülerek uygulanır.",
+       "isLie": false,
+       "explanation": "Topikal anestezi mukoza ve kornea epiteline sürülerek uygulanır ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Bier blokunda ekstremite dolaşımı pnömatik turnike ile geçici durdurulur.",
+       "isLie": false,
+       "explanation": "Bier blokunda ekstremite dolaşımı pnömatik turnike ile geçici durdurulur ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "İnfiltrasyon anestezisi doğrudan subaraknoid beyin omurilik sıvısına uygulanır.",
+       "isLie": true,
+       "explanation": "İnfiltrasyon anestezisi doğrudan subaraknoid beyin omurilik sıvısına uygulanır ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s07-e3"
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Uygulama Yolu",
+      "Hedef Doku",
+      "Klinik Özellik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Topikal Blok",
+         "isMasked": false
+        },
+        {
+         "text": "Mukoza ve kornea",
+         "isMasked": true,
+         "hint": "Yüzeyel epitel katmanıdır."
+        },
+        {
+         "text": "Hızlı vasküler emilim potansiyeli taşır",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "İnfiltrasyon",
+         "isMasked": false
+        },
+        {
+         "text": "Deri altı interstisyel doku",
+         "isMasked": false
+        },
+        {
+         "text": "Serbest sinir uçlarını hedefler",
+         "isMasked": true,
+         "hint": "Nosiseptif uç dallanmalarıdır."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Bier Bloku",
+         "isMasked": false
+        },
+        {
+         "text": "Ekstremite venöz yatağı",
+         "isMasked": true,
+         "hint": "Turnike altındaki damar ağıdır."
+        },
+        {
+         "text": "Pnömatik turnike kontrolünde yapılır",
+         "isMasked": false
+        }
+       ]
+      }
+     ],
+     "id": "k48-s07-e4"
+    }
+   ],
+   "id": "k2-48-d-s07",
+   "synthesisNarrative": "Lokal anestezikler cerrahi girişimin derinliğine, hedef dokuya ve anatomik lokalizasyona göre farklı tekniklerle uygulanır.\n\n- **Yüzeyel (Topikal) Blok:** Kornea, konjonktiva kesesi, burun, ağız boşluğu, trakeobronşiyal mukoza ve üretra epiteline damlatılarak, sürülerek veya püskürtülerek uygulanır; emilim mukozalarda son derece hızlıdır.\n- **İnfiltrasyon Anestezisi:** Küçük cerrahi kesiler, biyopsiler ve yara sütürasyonlarında cilt altı interstisyel dokuya doğrudan enjeksiyon yapılır; sinir uçları hedeflenir.\n- **Sinir Bloku (İletim Blokajı):** Cerrahi alanı innerve eden spesifik periferik sinir gövdesinin yakınına ilaç verilerek o sinirin dağıldığı tüm distal alanda anestezi sağlanır.\n- **İntravenöz Rejyonel Anestezi (Bier Bloku):** Ekstremiteye yerleştirilen pnömatik turnike ile dolaşım durdurulduktan sonra venöz yataktan lokal anestezik verilerek ekstremitede blokaj kurulur.\n\n> [!IMPORTANT]\n> Mukozal yüzeyler zengin kılcal damar ağına sahip olduğundan, topikal uygulamalarda hızla sistemik dolaşıma geçiş ve toksisite gelişme riski göz ardı edilmemelidir.",
+   "pdfSayfalari": [
+    9,
+    10
+   ],
+   "sourcePdf": {
+    "startPage": 9,
+    "endPage": 10
+   }
+  },
+  {
+   "slideNumber": 8,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Klinik Uygulama Biçimleri ve Duyu İnnervasyonu",
+   "bolum": "2",
+   "isCheckpoint": true,
+   "content": "Bu checkpoint sayfasında spinal dermatom referansları ve dört temel klinik anestezi uygulama tekniğini pekiştiriyoruz.\n\n- **Dermatom Referansları:** T4 meme başı, T10 göbek, L1 kasık seviyesini temsil eder ve soğuk pamuk testiyle blok seviyesi izlenir.\n- **Topikal Blok:** Mukoza ve kornea epiteline sürülerek uygulanır; hızlı vasküler emilim potansiyeline sahiptir.\n- **İnfiltrasyon:** Subkutan dokudaki serbest sinir uçlarını hedefleyen fokal infiltrasyondur.\n- **Sinir Bloku ve Bier Bloku:** Periferik sinir gövdeleri hedeflenir veya ekstremite turnikesi altında intravenöz yoldan rejyonel saha uyuşturulur.\n\n> [!NOTE]\n> İkinci bölüm tamamlandı; sonraki bölümde lokal anestezik moleküllerin kimyasal sınıflaması (ester ve amidler) ile potens farklılıklarına odaklanacağız.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sezaryen operasyonlarında yeterli cerrahi anestezi için hedeflenen kritik duyusal dermatom seviyesi hangisidir?",
+     "options": [
+      {
+       "text": "T4 meme başı dermatom seviyesi.",
+       "isCorrect": true,
+       "explanation": "T4 meme başı dermatom seviyesi ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "L4 diz kapağı seviyesi.",
+       "isCorrect": false,
+       "explanation": "L4 diz kapağı seviyesi kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "C8 küçük parmak seviyesi.",
+       "isCorrect": false,
+       "explanation": "C8 küçük parmak seviyesi kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "S2 perineal duyu bölgesi.",
+       "isCorrect": false,
+       "explanation": "S2 perineal duyu bölgesi kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s08-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Turnike altında ekstremite venöz yatağına lokal anestezik verilerek uygulanan yöntem {Bier bloku} yöntemidir.",
+     "maskedTerm": "Bier bloku",
+     "id": "k48-s08-e2",
+     "hint": "Klinik yaklaşımdaki kuramsal çerçevedir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Klinik Uygulama ve İnnervasyon Özeti",
+     "items": [
+      {
+       "text": "T10 dermatomu göbek çevresinin duyusunu temsil eder.",
+       "isLie": false,
+       "explanation": "T10 dermatomu göbek çevresinin duyusunu temsil eder ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "İnfiltrasyon anestezisi fokal cerrahi kesilerde sinir uçlarını uyuşturur.",
+       "isLie": false,
+       "explanation": "İnfiltrasyon anestezisi fokal cerrahi kesilerde sinir uçlarını uyuşturur ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Topikal anestezikler sağlam kalın deriden saniyeler içinde kendiliğinden emilir.",
+       "isLie": true,
+       "explanation": "Topikal anestezikler sağlam kalın deriden saniyeler içinde kendiliğinden emilir ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s08-e3"
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Yüzeyel ve İnfiltratif Yollar",
+     "rightCategory": "İletim ve Rejyonel Yollar",
+     "cards": [
+      {
+       "text": "Kornea ve burun mukozasına damlatma",
+       "category": "left"
+      },
+      {
+       "text": "Cilt altı interstisyel alana enjeksiyon",
+       "category": "left"
+      },
+      {
+       "text": "Brakiyal pleksus çevresine perinöral uygulama",
+       "category": "right"
+      },
+      {
+       "text": "Pnömatik turnike altında intravenöz uygulama",
+       "category": "right"
+      }
+     ],
+     "id": "k48-s08-e4"
+    }
+   ],
+   "id": "k2-48-d-s08",
+   "synthesisNarrative": "Bu checkpoint sayfasında spinal dermatom referansları ve dört temel klinik anestezi uygulama tekniğini pekiştiriyoruz.\n\n- **Dermatom Referansları:** T4 meme başı, T10 göbek, L1 kasık seviyesini temsil eder ve soğuk pamuk testiyle blok seviyesi izlenir.\n- **Topikal Blok:** Mukoza ve kornea epiteline sürülerek uygulanır; hızlı vasküler emilim potansiyeline sahiptir.\n- **İnfiltrasyon:** Subkutan dokudaki serbest sinir uçlarını hedefleyen fokal infiltrasyondur.\n- **Sinir Bloku ve Bier Bloku:** Periferik sinir gövdeleri hedeflenir veya ekstremite turnikesi altında intravenöz yoldan rejyonel saha uyuşturulur.\n\n> [!NOTE]\n> İkinci bölüm tamamlandı; sonraki bölümde lokal anestezik moleküllerin kimyasal sınıflaması (ester ve amidler) ile potens farklılıklarına odaklanacağız."
+  },
+  {
+   "slideNumber": 9,
+   "title": "Lokal Anesteziklerin Potens ve Etki Gücü Sınıflandırması",
+   "bolum": "3",
+   "content": "Lokal anestezik ajanlar klinik etki güçlerine (potenslerine) ve etki sürelerine göre belirgin farklılıklar gösterir.\n\n- **Düşük Potensli ve Kısa Etkili Ajanlar:** Prokain ve klorprokain bu grubun prototipidir; etki süreleri kısa, sistemik toksisite riskleri düşüktür.\n- **Orta Potensli ve Orta Etkili Ajanlar:** Lidokain, mepivakain ve prilokain klinik pratikte en sık kullanılan orta potensli moleküllerdir; infiltrasyon ve periferik bloklarda altın standarttır.\n- **Yüksek Potensli ve Uzun Etkili Ajanlar:** Bupivakain, tetrakain, ropivakain ve etidokain son derece güçlü ve uzun süreli anestezi sağlar.\n- **Lipofisite ve Potens İlişkisi:** Bir molekülün lipofilitesi ne kadar yüksekse sinir membranını o kadar kolay geçer ve potensi o derece artar.\n\n> [!NOTE]\n> Prokain referans potens (1 birim) kabul edildiğinde, lidokain 2-4 kat, bupivakain ve tetrakain ise 16 kata varan yüksek potense sahiptir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Prokaine kıyasla yaklaşık 16 kat yüksek potense sahip olan uzun etkili lokal anestezik hangisidir?",
+     "options": [
+      {
+       "text": "Bupivakain hidroklorür.",
+       "isCorrect": true,
+       "explanation": "Bupivakain hidroklorür ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "Klorprokain esteri.",
+       "isCorrect": false,
+       "explanation": "Klorprokain esteri kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Kısa etkili prokain.",
+       "isCorrect": false,
+       "explanation": "Kısa etkili prokain kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Düşük potensli benzokain.",
+       "isCorrect": false,
+       "explanation": "Düşük potensli benzokain kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s09-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Lokal anestezik molekülün lipofilitesi arttıkça membran geçirgenliği ve klinik {etki potensi} belirgin şekilde artar.",
+     "maskedTerm": "etki potensi",
+     "id": "k48-s09-e2",
+     "hint": "Hedeflenen fizyopatolojik mekanizmadır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Potens ve Etki Süresi Sınıflandırması",
+     "items": [
+      {
+       "text": "Prokain düşük potensli ve kısa etki süreli bir lokal anesteziktir.",
+       "isLie": false,
+       "explanation": "Prokain düşük potensli ve kısa etki süreli bir lokal anesteziktir ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Lidokain orta potensli ve orta etkili grupta yer alır.",
+       "isLie": false,
+       "explanation": "Lidokain orta potensli ve orta etkili grupta yer alır ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Bupivakain en düşük potensli ve birkaç dakika süren zayıf bir moleküldür.",
+       "isLie": true,
+       "explanation": "Bupivakain en düşük potensli ve birkaç dakika süren zayıf bir moleküldür ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s09-e3"
+    },
+    {
+     "type": "active_recall",
+     "question": "Klinik pratikte altın standart orta potensli ve orta etkili referans lokal anestezik molekül hangisidir?",
+     "answer": "Lidokain molekülüdür.",
+     "id": "k48-s09-e4"
+    }
+   ],
+   "id": "k2-48-d-s09",
+   "synthesisNarrative": "Lokal anestezik ajanlar klinik etki güçlerine (potenslerine) ve etki sürelerine göre belirgin farklılıklar gösterir.\n\n- **Düşük Potensli ve Kısa Etkili Ajanlar:** Prokain ve klorprokain bu grubun prototipidir; etki süreleri kısa, sistemik toksisite riskleri düşüktür.\n- **Orta Potensli ve Orta Etkili Ajanlar:** Lidokain, mepivakain ve prilokain klinik pratikte en sık kullanılan orta potensli moleküllerdir; infiltrasyon ve periferik bloklarda altın standarttır.\n- **Yüksek Potensli ve Uzun Etkili Ajanlar:** Bupivakain, tetrakain, ropivakain ve etidokain son derece güçlü ve uzun süreli anestezi sağlar.\n- **Lipofisite ve Potens İlişkisi:** Bir molekülün lipofilitesi ne kadar yüksekse sinir membranını o kadar kolay geçer ve potensi o derece artar.\n\n> [!NOTE]\n> Prokain referans potens (1 birim) kabul edildiğinde, lidokain 2-4 kat, bupivakain ve tetrakain ise 16 kata varan yüksek potense sahiptir.",
+   "pdfSayfalari": [
+    11,
+    11
+   ],
+   "sourcePdf": {
+    "startPage": 11,
+    "endPage": 11
+   }
+  },
+  {
+   "slideNumber": 10,
+   "title": "Ester Grubu Lokal Anestezikler ve Farmakolojik Üyeleri",
+   "bolum": "3",
+   "content": "Lokal anestezikler kimyasal ara zincirlerine göre esterler ve amidler olarak iki temel sınıfa ayrılır.\n\n- **Ester Yapısı:** Aromatik lipofilik halka ile hidrofilik amin grubu arasında bir ester bağı (-COO-) içerirler.\n- **Ester Grubu Üyeleri:** Benzokain, kokain, prokain (novokain), klorprokain, tetrakain ve proparakain bu sınıfın temel üyeleridir.\n- **Plazma Eliminasyonu:** Ester türevleri kanda psödokolinesteraz (butirilkolinesteraz) enzimi tarafından hızla hidroliz edilir.\n- **PABA ve Alerjik Potansiyel:** Esterlerin hidrolizi sonucu açığa çıkan para-aminobenzoik asit (PABA) güçlü alerjik reaksiyonlara ve anafilaksiye zemin hazırlayabilir.\n\n> [!IMPORTANT]\n> İlaç isminde tek bir 'i' harfi bulunan lokal anestezikler (procaine, cocaine, tetracaine, benzocaine) tipik olarak ester grubuna aittir ve alerji öyküsünde dikkatle sorgulanmalıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Ester grubu lokal anesteziklerin plazmada psödokolinesteraz ile hidrolizi sonucu oluşan alerjenik metabolit hangisidir?",
+     "options": [
+      {
+       "text": "Para-aminobenzoik asit (PABA).",
+       "isCorrect": true,
+       "explanation": "Para-aminobenzoik asit (PABA) ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "Asetilsalisilik asit türevi.",
+       "isCorrect": false,
+       "explanation": "Asetilsalisilik asit türevi kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Glukuronik asit konjugatı.",
+       "isCorrect": false,
+       "explanation": "Glukuronik asit konjugatı kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Homovanilik asit metaboliti.",
+       "isCorrect": false,
+       "explanation": "Homovanilik asit metaboliti kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s10-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Ester grubu lokal anestezikler dolaşımda {psödokolinesteraz enzimi} tarafından hızla hidroliz edilir.",
+     "maskedTerm": "psödokolinesteraz enzimi",
+     "id": "k48-s10-e2",
+     "hint": "Kritik tanısal belirteçtir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Ester Grubu Lokal Anestezikler",
+     "items": [
+      {
+       "text": "Benzokain, kokain ve prokain ester grubu lokal anesteziklerdir.",
+       "isLie": false,
+       "explanation": "Benzokain, kokain ve prokain ester grubu lokal anesteziklerdir ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Esterlerin yıkımı sonucu açığa çıkan PABA alerjik reaksiyon yapabilir.",
+       "isLie": false,
+       "explanation": "Esterlerin yıkımı sonucu açığa çıkan PABA alerjik reaksiyon yapabilir ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Ester grubu lokal anestezikler karaciğer mikrozomal CYP enzimleri ile yıkılır.",
+       "isLie": true,
+       "explanation": "Ester grubu lokal anestezikler karaciğer mikrozomal CYP enzimleri ile yıkılır ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s10-e3"
+    },
+    {
+     "type": "active_recall",
+     "question": "Plazmada psödokolinesteraz ile hızla yıkılarak PABA oluşturan kimyasal lokal anestezi grubu nedir?",
+     "answer": "Ester grubu lokal anesteziklerdir.",
+     "id": "k48-s10-e4"
+    }
+   ],
+   "id": "k2-48-d-s10",
+   "synthesisNarrative": "Lokal anestezikler kimyasal ara zincirlerine göre esterler ve amidler olarak iki temel sınıfa ayrılır.\n\n- **Ester Yapısı:** Aromatik lipofilik halka ile hidrofilik amin grubu arasında bir ester bağı (-COO-) içerirler.\n- **Ester Grubu Üyeleri:** Benzokain, kokain, prokain (novokain), klorprokain, tetrakain ve proparakain bu sınıfın temel üyeleridir.\n- **Plazma Eliminasyonu:** Ester türevleri kanda psödokolinesteraz (butirilkolinesteraz) enzimi tarafından hızla hidroliz edilir.\n- **PABA ve Alerjik Potansiyel:** Esterlerin hidrolizi sonucu açığa çıkan para-aminobenzoik asit (PABA) güçlü alerjik reaksiyonlara ve anafilaksiye zemin hazırlayabilir.\n\n> [!IMPORTANT]\n> İlaç isminde tek bir 'i' harfi bulunan lokal anestezikler (procaine, cocaine, tetracaine, benzocaine) tipik olarak ester grubuna aittir ve alerji öyküsünde dikkatle sorgulanmalıdır.",
+   "pdfSayfalari": [
+    12,
+    12
+   ],
+   "sourcePdf": {
+    "startPage": 12,
+    "endPage": 12
+   }
+  },
+  {
+   "slideNumber": 11,
+   "title": "Amid Grubu Lokal Anestezikler ve Farmakolojik Üyeleri",
+   "bolum": "3",
+   "content": "Amid grubu lokal anestezikler, lipofilik halka ile tersiyer amin arasında bir amid bağı (-NH-CO-) taşıyan modern bileşiklerdir.\n\n- **Amid Grubu Üyeleri:** Lidokain, bupivakain, levobupivakain, ropivakain, mepivakain, prilokain, artikain ve dibukain bu sınıfta yer alır.\n- **İsimlendirme Kuralı:** Amid grubu ilaçların jenerik isimlerinde 'caine' ekinden önce de bir 'i' harfi yer alır (lIdocaIne, bupIvacaIne, mepIvacaIne, prIlocaIne).\n- **Hepatik Metabolizma:** Amid türevleri plazma esterazlarıyla yıkılmaz; karaciğer mikrozomal sitokrom P450 enzim sistemleri tarafından metabolize edilir.\n- **Düşük Alerji Riski:** Amidlerin metabolizmasında PABA oluşmadığından gerçek alerjik reaksiyonlar son derece nadirdir.\n\n> [!NOTE]\n> Karaciğer yetmezliği veya hepatik kan akımını azaltan konjestif kalp yetmezliğinde amid grubu lokal anesteziklerin klerensi düşer ve toksisite riski artar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Amid grubu lokal anesteziklerin vücuttan eliminasyonunun gerçekleştiği temel anatomik organ ve mekanizma hangisidir?",
+     "options": [
+      {
+       "text": "Karaciğer mikrozomal CYP enzim metabolizması.",
+       "isCorrect": true,
+       "explanation": "Karaciğer mikrozomal CYP enzim metabolizması ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "Plazma psödokolinesteraz hidrolizi.",
+       "isCorrect": false,
+       "explanation": "Plazma psödokolinesteraz hidrolizi kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Akciğer alveollerinde spontan hava eliminasyonu.",
+       "isCorrect": false,
+       "explanation": "Akciğer alveollerinde spontan hava eliminasyonu kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Böbrek glomerüllerinde doğrudan değişmeden atılım.",
+       "isCorrect": false,
+       "explanation": "Böbrek glomerüllerinde doğrudan değişmeden atılım kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s11-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Amid grubu lokal anestezikler plazmada değil {karaciğer mikrozomal} enzim sistemlerinde metabolize edilir.",
+     "maskedTerm": "karaciğer mikrozomal",
+     "id": "k48-s11-e2",
+     "hint": "Uygulanan temel tedavi kuralıdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Amid Grubu Lokal Anestezikler",
+     "items": [
+      {
+       "text": "Lidokain, bupivakain ve prilokain amid grubu lokal anesteziklerdir.",
+       "isLie": false,
+       "explanation": "Lidokain, bupivakain ve prilokain amid grubu lokal anesteziklerdir ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Amid grubu lokal anesteziklerde gerçek alerjik reaksiyon riski düşüktür.",
+       "isLie": false,
+       "explanation": "Amid grubu lokal anesteziklerde gerçek alerjik reaksiyon riski düşüktür ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Amid grubu ilaçlar kanda dolaşırken psödokolinesteraz tarafından saniyeler içinde hidroliz edilir.",
+       "isLie": true,
+       "explanation": "Amid grubu ilaçlar kanda dolaşırken psödokolinesteraz tarafından saniyeler içinde hidroliz edilir ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s11-e3"
+    },
+    {
+     "type": "active_recall",
+     "question": "İsminde 'caine' ekinden önce de bir 'i' harfi bulunan ve karaciğer mikrozomal enzimlerince yıkılan anestezi sınıfı nedir?",
+     "answer": "Amid grubu lokal anesteziklerdir.",
+     "id": "k48-s11-e4"
+    }
+   ],
+   "id": "k2-48-d-s11",
+   "synthesisNarrative": "Amid grubu lokal anestezikler, lipofilik halka ile tersiyer amin arasında bir amid bağı (-NH-CO-) taşıyan modern bileşiklerdir.\n\n- **Amid Grubu Üyeleri:** Lidokain, bupivakain, levobupivakain, ropivakain, mepivakain, prilokain, artikain ve dibukain bu sınıfta yer alır.\n- **İsimlendirme Kuralı:** Amid grubu ilaçların jenerik isimlerinde 'caine' ekinden önce de bir 'i' harfi yer alır (lIdocaIne, bupIvacaIne, mepIvacaIne, prIlocaIne).\n- **Hepatik Metabolizma:** Amid türevleri plazma esterazlarıyla yıkılmaz; karaciğer mikrozomal sitokrom P450 enzim sistemleri tarafından metabolize edilir.\n- **Düşük Alerji Riski:** Amidlerin metabolizmasında PABA oluşmadığından gerçek alerjik reaksiyonlar son derece nadirdir.\n\n> [!NOTE]\n> Karaciğer yetmezliği veya hepatik kan akımını azaltan konjestif kalp yetmezliğinde amid grubu lokal anesteziklerin klerensi düşer ve toksisite riski artar.",
+   "pdfSayfalari": [
+    13,
+    13
+   ],
+   "sourcePdf": {
+    "startPage": 13,
+    "endPage": 13
+   }
+  },
+  {
+   "slideNumber": 12,
+   "title": "Değişik Kimyasal Yapılar ve Etki Süresi Sınıflandırması",
+   "bolum": "3",
+   "content": "Klasik ester ve amidlerin yanı sıra değişik kimyasal yapılarda lokal anestezik ajanlar da tıbbi tedavide kullanılır.\n\n- **Değişik Kimyasal Yapılar:** Benzil alkol (ThermoRheumon formülasyonunda) ve butilamin benzoat farklı kimyasal iskeletlere sahip lokal etkili bileşiklerdir.\n- **Kısa Etki Süreli Ajanlar:** Prokain ve klorprokain hızla plazmada hidrolize uğradıklarından etki süreleri 30-60 dakika ile sınırlıdır.\n- **Orta Etki Süreli Ajanlar:** Lidokain, mepivakain ve prilokain dokuda 1-2 saatlik klinik anestezi sağlar; vazokonstriktör ilavesiyle süre uzatılabilir.\n- **Uzun Etki Süreli Ajanlar:** Bupivakain, ropivakain ve tetrakain yüksek protein bağlama ve lipofiliteleri sayesinde 4-8 saate varan uzun etkili blokaj oluşturur.\n\n> [!NOTE]\n> Postoperatif ağrı kontrolünde veya uzun süreli cerrahilerde uzun etkili ajanlar tercih edilirken, günübirlik kısa girişimlerde klorprokain veya lidokain önceliklidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Postoperatif analjezi sağlamak amacıyla tercih edilen uzun etkili lokal anestezik prototipi hangisidir?",
+     "options": [
+      {
+       "text": "Bupivakain hidroklorür.",
+       "isCorrect": true,
+       "explanation": "Bupivakain hidroklorür ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "Kısa etkili prokain.",
+       "isCorrect": false,
+       "explanation": "Kısa etkili prokain kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Klorprokain esteri.",
+       "isCorrect": false,
+       "explanation": "Klorprokain esteri kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Benzil alkol çözeltisi.",
+       "isCorrect": false,
+       "explanation": "Benzil alkol çözeltisi kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s12-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Prokain ve klorprokain plazmada hızla yıkıldıklarından {kısa etkili} lokal anestezikler sınıfında yer alır.",
+     "maskedTerm": "kısa etkili",
+     "id": "k48-s12-e2",
+     "hint": "Önemli anatomik referanstır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Etki Süresi ve Değişik Kimyasal Yapılar",
+     "items": [
+      {
+       "text": "Bupivakain ve ropivakain uzun etkili lokal anesteziklerdir.",
+       "isLie": false,
+       "explanation": "Bupivakain ve ropivakain uzun etkili lokal anesteziklerdir ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Lidokain orta etkili grupta yer alıp klinik pratikte yaygın kullanılır.",
+       "isLie": false,
+       "explanation": "Lidokain orta etkili grupta yer alıp klinik pratikte yaygın kullanılır ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Klorprokain dokuda 12 saat boyunca yıkılmadan kalarak en uzun etkiyi gösterir.",
+       "isLie": true,
+       "explanation": "Klorprokain dokuda 12 saat boyunca yıkılmadan kalarak en uzun etkiyi gösterir ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s12-e3"
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Kısa Etkili Ajanlar (Prokain/Klorprokain)",
+     "rightTitle": "Uzun Etkili Ajanlar (Bupivakain/Ropivakain)",
+     "leftPoints": [
+      "Etki süresi 30-60 dakika arasındadır",
+      "Plazma esterazları ile hızla hidroliz edilir",
+      "Günübirlik cerrahide tercih edilir"
+     ],
+     "rightPoints": [
+      "Etki süresi 4-8 saate kadar uzayabilir",
+      "Yüksek doku ve protein bağlama gösterir",
+      "Postoperatif analjezi için tercih edilir"
+     ],
+     "id": "k48-s12-e4"
+    }
+   ],
+   "id": "k2-48-d-s12",
+   "synthesisNarrative": "Klasik ester ve amidlerin yanı sıra değişik kimyasal yapılarda lokal anestezik ajanlar da tıbbi tedavide kullanılır.\n\n- **Değişik Kimyasal Yapılar:** Benzil alkol (ThermoRheumon formülasyonunda) ve butilamin benzoat farklı kimyasal iskeletlere sahip lokal etkili bileşiklerdir.\n- **Kısa Etki Süreli Ajanlar:** Prokain ve klorprokain hızla plazmada hidrolize uğradıklarından etki süreleri 30-60 dakika ile sınırlıdır.\n- **Orta Etki Süreli Ajanlar:** Lidokain, mepivakain ve prilokain dokuda 1-2 saatlik klinik anestezi sağlar; vazokonstriktör ilavesiyle süre uzatılabilir.\n- **Uzun Etki Süreli Ajanlar:** Bupivakain, ropivakain ve tetrakain yüksek protein bağlama ve lipofiliteleri sayesinde 4-8 saate varan uzun etkili blokaj oluşturur.\n\n> [!NOTE]\n> Postoperatif ağrı kontrolünde veya uzun süreli cerrahilerde uzun etkili ajanlar tercih edilirken, günübirlik kısa girişimlerde klorprokain veya lidokain önceliklidir.",
+   "pdfSayfalari": [
+    14,
+    15
+   ],
+   "sourcePdf": {
+    "startPage": 14,
+    "endPage": 15
+   }
+  },
+  {
+   "slideNumber": 13,
+   "title": "Piyasadaki Farmasötik Preparatlar ve Formülasyonlar",
+   "bolum": "3",
+   "content": "Lokal anestezikler klinikte ampul, flakon, sprey, jel ve kremler halinde farklı konsantrasyonlarda kullanıma sunulmuştur.\n\n- **Lidokain Formülasyonları:** Aritmal (yüzde 2 ve yüzde 10 ampul), Xylocaine (yüzde 1-2 ampul ve sprey), Jetokain (adrenalin kombinasyonu) yaygın piyasa formlarıdır.\n- **Bupivakain Formülasyonları:** Marcaine (yüzde 0,5 flakon ve spinal formlar) uzun etkili cerrahi anestezi için standart preparattır.\n- **Prilokain Formülasyonları:** Citanest (yüzde 2 flakon, adrenalinli ve adrenalinsiz formları) diş hekimliğinde ve infiltrasyonda kullanılır.\n- **Artikain Formülasyonları:** Ultracain (adrenalinli dental kartuşlar) yüksek difüzyon gücüyle diş hekimliğinde en çok tercih edilen ajandır.\n- **EMLA Krem:** Yüzde 2,5 lidokain ve yüzde 2,5 prilokain içeren ötektik karışım olup sağlam deriye sürülür.\n\n> [!IMPORTANT]\n> İlaç flakonlarındaki yüzde konsantrasyon miligram hesabına çevrilirken yüzde 1'lik solüsyonun 1 mililitresinde 10 miligram etken madde bulunduğu unutulmamalıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Yüzde 2 konsantrasyona sahip bir lokal anestezik solüsyonunun 1 mililitresinde kaç miligram etken madde bulunur?",
+     "options": [
+      {
+       "text": "20 miligram etken madde.",
+       "isCorrect": true,
+       "explanation": "20 miligram etken madde ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "2 miligram etken madde.",
+       "isCorrect": false,
+       "explanation": "2 miligram etken madde kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "200 miligram etken madde.",
+       "isCorrect": false,
+       "explanation": "200 miligram etken madde kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "0,2 miligram etken madde.",
+       "isCorrect": false,
+       "explanation": "0,2 miligram etken madde kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s13-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sağlam deriden transdermal emilim sağlayan lidokain ve prilokain kombinasyonu {EMLA krem} formülasyonudur.",
+     "maskedTerm": "EMLA krem",
+     "id": "k48-s13-e2",
+     "hint": "Standart kılavuz bilgisidir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Farmasötik Formülasyonlar",
+     "items": [
+      {
+       "text": "Yüzde 1'lik lokal anestezik solüsyonun 1 mililitresinde 10 mg ilaç bulunur.",
+       "isLie": false,
+       "explanation": "Yüzde 1'lik lokal anestezik solüsyonun 1 mililitresinde 10 mg ilaç bulunur ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "EMLA krem lidokain ve prilokain karışımı içerir.",
+       "isLie": false,
+       "explanation": "EMLA krem lidokain ve prilokain karışımı içerir ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Tüm lokal anestezik ampulleri intravenöz bolus enjeksiyonla genel anestezi indüksiyonu için üretilmiştir.",
+       "isLie": true,
+       "explanation": "Tüm lokal anestezik ampulleri intravenöz bolus enjeksiyonla genel anestezi indüksiyonu için üretilmiştir ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s13-e3"
+    },
+    {
+     "type": "active_recall",
+     "question": "Dental anestezide yüksek difüzyon kapasitesi ve kemik dokusuna üstün geçişi ile yaygın kullanılan amid türevi nedir?",
+     "answer": "Artikain molekülüdür.",
+     "id": "k48-s13-e4"
+    }
+   ],
+   "id": "k2-48-d-s13",
+   "synthesisNarrative": "Lokal anestezikler klinikte ampul, flakon, sprey, jel ve kremler halinde farklı konsantrasyonlarda kullanıma sunulmuştur.\n\n- **Lidokain Formülasyonları:** Aritmal (yüzde 2 ve yüzde 10 ampul), Xylocaine (yüzde 1-2 ampul ve sprey), Jetokain (adrenalin kombinasyonu) yaygın piyasa formlarıdır.\n- **Bupivakain Formülasyonları:** Marcaine (yüzde 0,5 flakon ve spinal formlar) uzun etkili cerrahi anestezi için standart preparattır.\n- **Prilokain Formülasyonları:** Citanest (yüzde 2 flakon, adrenalinli ve adrenalinsiz formları) diş hekimliğinde ve infiltrasyonda kullanılır.\n- **Artikain Formülasyonları:** Ultracain (adrenalinli dental kartuşlar) yüksek difüzyon gücüyle diş hekimliğinde en çok tercih edilen ajandır.\n- **EMLA Krem:** Yüzde 2,5 lidokain ve yüzde 2,5 prilokain içeren ötektik karışım olup sağlam deriye sürülür.\n\n> [!IMPORTANT]\n> İlaç flakonlarındaki yüzde konsantrasyon miligram hesabına çevrilirken yüzde 1'lik solüsyonun 1 mililitresinde 10 miligram etken madde bulunduğu unutulmamalıdır.",
+   "pdfSayfalari": [
+    16,
+    16
+   ],
+   "sourcePdf": {
+    "startPage": 16,
+    "endPage": 16
+   }
+  },
+  {
+   "slideNumber": 14,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Kimyasal Sınıflandırma ve Farmasötik Özellikler",
+   "bolum": "3",
+   "isCheckpoint": true,
+   "content": "Bu checkpoint sayfasında ester ve amid ayrımını, metabolizma yollarını, potens düzeylerini ve piyasa preparatlarını pekiştiriyoruz.\n\n- **Esterler:** Benzokain, kokain, prokain, tetrakain; psödokolinesteraz ile plazmada yıkılır ve PABA alerjisi oluşturabilir.\n- **Amidler:** Lidokain, bupivakain, mepivakain, prilokain, ropivakain; karaciğerde mikrozomal CYP enzimleri ile metabolize edilir.\n- **Potens Yelpazesi:** Prokain düşük potensli, lidokain orta potensli, bupivakain ise yüksek potensli ajandır.\n- **Farmasötik Formlar:** Yüzde 1 solüsyon 10 mg/ml içerir; EMLA krem lidokain-prilokain ötektik karışımıdır.\n\n> [!NOTE]\n> Üçüncü bölüm tamamlandı; sonraki bölümde moleküler etki mekanizması, pKa değerleri, doku asidozu ve nöroaksiyel tekniklerin derinliklerine iniyoruz.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Ester grubu lokal anestezikler ile amid grubu arasındaki en temel eliminasyon ve metabolizma farkı hangisidir?",
+     "options": [
+      {
+       "text": "Esterler plazma psödokolinesterazıyla, amidler karaciğer mikrozomal enzimleriyle yıkılır.",
+       "isCorrect": true,
+       "explanation": "Esterler plazma psödokolinesterazıyla, amidler karaciğer mikrozomal enzimleriyle yıkılır ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "Esterler karaciğerde, amidler akciğerde metabolize edilir.",
+       "isCorrect": false,
+       "explanation": "Esterler karaciğerde, amidler akciğerde metabolize edilir kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Esterler hiç yıkılmadan böbrekten değişmeden atılır.",
+       "isCorrect": false,
+       "explanation": "Esterler hiç yıkılmadan böbrekten değişmeden atılır kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Amidler kanda spontan oksitlenerek parçalanır.",
+       "isCorrect": false,
+       "explanation": "Amidler kanda spontan oksitlenerek parçalanır kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s14-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Amid grubu lokal anesteziklerin metabolizmasında PABA oluşmadığı için {alerjik reaksiyon riski} son derece düşüktür.",
+     "maskedTerm": "alerjik reaksiyon riski",
+     "id": "k48-s14-e2",
+     "hint": "Temel klinik prensiptir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Kimyasal Sınıflandırma Özeti",
+     "items": [
+      {
+       "text": "Prokain ester, lidokain amid grubuna aittir.",
+       "isLie": false,
+       "explanation": "Prokain ester, lidokain amid grubuna aittir ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Bupivakain uzun etkili ve yüksek potensli bir moleküldür.",
+       "isLie": false,
+       "explanation": "Bupivakain uzun etkili ve yüksek potensli bir moleküldür ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Ester grubu ilaçlar karaciğer yetmezliğinde hiçbir şekilde kandan temizlenemez.",
+       "isLie": true,
+       "explanation": "Ester grubu ilaçlar karaciğer yetmezliğinde hiçbir şekilde kandan temizlenemez ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s14-e3"
+    },
+    {
+     "type": "venn_grid",
+     "title": "Ester Grubu ve Amid Grubu Karşılaştırması",
+     "labelA": "Ester Grubu Ajanlar",
+     "labelB": "Amid Grubu Ajanlar",
+     "items": [
+      {
+       "criterion": "Plazma psödokolinesteraz enzimi ile hızla hidroliz edilir",
+       "correct": "A"
+      },
+      {
+       "criterion": "Metabolit olarak para-aminobenzoik asit (PABA) açığa çıkarabilir",
+       "correct": "A"
+      },
+      {
+       "criterion": "Karaciğer mikrozomal CYP enzimleri tarafından metabolize edilir",
+       "correct": "B"
+      },
+      {
+       "criterion": "Voltaj bağımlı sodyum kanallarını bloke ederek fokal duyu kaybı sağlar",
+       "correct": "both"
+      }
+     ],
+     "id": "k48-s14-e4"
+    }
+   ],
+   "id": "k2-48-d-s14",
+   "synthesisNarrative": "Bu checkpoint sayfasında ester ve amid ayrımını, metabolizma yollarını, potens düzeylerini ve piyasa preparatlarını pekiştiriyoruz.\n\n- **Esterler:** Benzokain, kokain, prokain, tetrakain; psödokolinesteraz ile plazmada yıkılır ve PABA alerjisi oluşturabilir.\n- **Amidler:** Lidokain, bupivakain, mepivakain, prilokain, ropivakain; karaciğerde mikrozomal CYP enzimleri ile metabolize edilir.\n- **Potens Yelpazesi:** Prokain düşük potensli, lidokain orta potensli, bupivakain ise yüksek potensli ajandır.\n- **Farmasötik Formlar:** Yüzde 1 solüsyon 10 mg/ml içerir; EMLA krem lidokain-prilokain ötektik karışımıdır.\n\n> [!NOTE]\n> Üçüncü bölüm tamamlandı; sonraki bölümde moleküler etki mekanizması, pKa değerleri, doku asidozu ve nöroaksiyel tekniklerin derinliklerine iniyoruz."
+  },
+  {
+   "slideNumber": 15,
+   "title": "Zayıf Baz Yapısı, pKa Dengesi ve Bikarbonat Stratejisi",
+   "bolum": "4",
+   "content": "Lokal anestezikler kimyasal olarak zayıf bazlardır ve fizyolojik pH'da (7,4) iyonize ile non-iyonize formlar arasında dengede bulunurlar.\n\n- **pKa Değeri:** Bir ilacın iyonize ve non-iyonize fraksiyonlarının birbirine eşit olduğu pH değeridir (genellikle 7,5 - 9,1 arasındadır).\n- **Membran Geçişi:** Hücre zarının lipofilik çift katmanını yalnızca elektriksel olarak yüksüz olan non-iyonize (serbest baz) form aşabilir.\n- **Hücre İçi İyonizasyon:** Akson içine giren serbest baz, hücre içi ortamda proton alarak katyonik (iyonize) forma dönüşür ve reseptöre bağlanır.\n- **Enflamasyon ve Asidoz:** Apse veya enfeksiyonlu dokularda pH düştüğünde (örneğin 6,0) ilacın çoğu iyonize olur; zarı geçemez ve anestezi başarısız olur.\n- **Sodyum Bikarbonat İlavesi:** Enjeksiyon öncesi solüsyona bikarbonat eklenmesi ortamı alkalileştirir, non-iyonize fraksiyonu artırır ve etki başlangıcını hızlandırır.\n\n> [!IMPORTANT]\n> Non-iyonize form sinir kılıfını ve membranını geçmek için şarttır; ancak sodyum kanalını içeriden tıkayan aktif form iyonize katyondur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Enfekte ve asidik dokularda lokal anesteziklerin etkisiz kalmasının temel farmakolojik nedeni hangisidir?",
+     "options": [
+      {
+       "text": "Asidozda non-iyonize fraksiyonun azalarak lipofilik zarı geçememesi.",
+       "isCorrect": true,
+       "explanation": "Asidozda non-iyonize fraksiyonun azalarak lipofilik zarı geçememesi ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "Sodyum kanallarının tamamen genetik olarak yok olması.",
+       "isCorrect": false,
+       "explanation": "Sodyum kanallarının tamamen genetik olarak yok olması kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "İlacın bakteriler tarafından besin olarak tüketilmesi.",
+       "isCorrect": false,
+       "explanation": "İlacın bakteriler tarafından besin olarak tüketilmesi kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Damarların tamamen tıkanarak ilacın dokuya ulaşamaması.",
+       "isCorrect": false,
+       "explanation": "Damarların tamamen tıkanarak ilacın dokuya ulaşamaması kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s15-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Lokal anestezik solüsyonuna sodyum bikarbonat eklenmesi non-iyonize formu artırarak {etki başlangıcını hızlandırır}.",
+     "maskedTerm": "etki başlangıcını hızlandırır",
+     "id": "k48-s15-e2",
+     "hint": "Spesifik farmakolojik kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Zayıf Baz Özelliği ve pKa Dengesi",
+     "items": [
+      {
+       "text": "Lipofilik sinir membranını yalnızca non-iyonize baz formu aşabilir.",
+       "isLie": false,
+       "explanation": "Lipofilik sinir membranını yalnızca non-iyonize baz formu aşabilir ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Hücre içine girdikten sonra iyonize olan katyon kanal poruna bağlanır.",
+       "isLie": false,
+       "explanation": "Hücre içine girdikten sonra iyonize olan katyon kanal poruna bağlanır ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Asidik apseli dokularda lokal anestezikler kat kat daha güçlü anestezi sağlar.",
+       "isLie": true,
+       "explanation": "Asidik apseli dokularda lokal anestezikler kat kat daha güçlü anestezi sağlar ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s15-e3"
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "Lokal anesteziğin zayıf baz olarak dokuya enjekte edilmesi",
+      "Non-iyonize fraksiyonun lipofilik akson membranından hücre içine difüzyonu",
+      "Hücre içi ortamda proton alarak iyonize katyonik forma dönüşmesi",
+      "İyonize molekülün voltaj bağımlı sodyum kanal porunu içeriden tıkaması"
+     ],
+     "id": "k48-s15-e4"
+    }
+   ],
+   "id": "k2-48-d-s15",
+   "synthesisNarrative": "Lokal anestezikler kimyasal olarak zayıf bazlardır ve fizyolojik pH'da (7,4) iyonize ile non-iyonize formlar arasında dengede bulunurlar.\n\n- **pKa Değeri:** Bir ilacın iyonize ve non-iyonize fraksiyonlarının birbirine eşit olduğu pH değeridir (genellikle 7,5 - 9,1 arasındadır).\n- **Membran Geçişi:** Hücre zarının lipofilik çift katmanını yalnızca elektriksel olarak yüksüz olan non-iyonize (serbest baz) form aşabilir.\n- **Hücre İçi İyonizasyon:** Akson içine giren serbest baz, hücre içi ortamda proton alarak katyonik (iyonize) forma dönüşür ve reseptöre bağlanır.\n- **Enflamasyon ve Asidoz:** Apse veya enfeksiyonlu dokularda pH düştüğünde (örneğin 6,0) ilacın çoğu iyonize olur; zarı geçemez ve anestezi başarısız olur.\n- **Sodyum Bikarbonat İlavesi:** Enjeksiyon öncesi solüsyona bikarbonat eklenmesi ortamı alkalileştirir, non-iyonize fraksiyonu artırır ve etki başlangıcını hızlandırır.\n\n> [!IMPORTANT]\n> Non-iyonize form sinir kılıfını ve membranını geçmek için şarttır; ancak sodyum kanalını içeriden tıkayan aktif form iyonize katyondur.",
+   "pdfSayfalari": [
+    17,
+    17
+   ],
+   "sourcePdf": {
+    "startPage": 17,
+    "endPage": 17
+   }
+  },
+  {
+   "slideNumber": 16,
+   "title": "Voltaj Bağımlı Sodyum Kanal Blokaj Mekanizması",
+   "bolum": "4",
+   "content": "Lokal anesteziklerin birincil moleküler hedefi, akson membranında aksiyon potansiyelini başlatan voltaj bağımlı sodyum (Nav) kanallarıdır.\n\n- **Bağlanma Bölgesi:** İlaç molekülü sodyum kanalının hücre içi tarafındaki por bölgesine bağlanır.\n- **Depolarizasyonun Engellenmesi:** Sodyum iyonlarının hücre içine hızlı akışı durdurulur; eşik potansiyeline ulaşılamaz ve aksiyon potansiyeli başlatılamaz ya da iletilemez.\n- **Kullanım Bağımlı (Frekans Bağımlı) Blokaj:** Lokal anestezikler dinlenim durumundaki kanallara düşük, açık ve inaktif durumdaki kanallara ise çok yüksek afinite gösterir.\n- **Ağrı İletiminin Seçici Blokajı:** Ağrı lifleri sürekli ve yüksek frekansta uyarıldığından, sodyum kanalları sık sık açılır ve ilaç tarafından hızla bloke edilir.\n\n> [!NOTE]\n> Dinlenim halindeki bir sinir lifi, sürekli aksiyon potansiyeli ileten aktif bir liften çok daha yüksek lokal anestezik konsantrasyonu gerektirir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Lokal anesteziklerin voltaj kapılı sodyum kanallarında en yüksek afiniteyle bağlandığı kanal konformasyonu hangisidir?",
+     "options": [
+      {
+       "text": "Açık ve inaktif durumdaki kanallar.",
+       "isCorrect": true,
+       "explanation": "Açık ve inaktif durumdaki kanallar ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "Yalnızca kapalı dinlenim durumundaki kanallar.",
+       "isCorrect": false,
+       "explanation": "Yalnızca kapalı dinlenim durumundaki kanallar kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Kanalın sentez aşamasındaki öncül formları.",
+       "isCorrect": false,
+       "explanation": "Kanalın sentez aşamasındaki öncül formları kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Tamamen denatüre olmuş kanal artıkları.",
+       "isCorrect": false,
+       "explanation": "Tamamen denatüre olmuş kanal artıkları kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s16-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Lokal anestezikler akson membranında voltaj bağımlı {sodyum kanallarını} bloke ederek depolarizasyonu durdurur.",
+     "maskedTerm": "sodyum kanallarını",
+     "id": "k48-s16-e2",
+     "hint": "Klinik yaklaşımdaki kuramsal çerçevedir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Voltaj Bağımlı Sodyum Kanal Blokajı",
+     "items": [
+      {
+       "text": "Lokal anestezikler sodyum kanalının hücre içi poruna bağlanır.",
+       "isLie": false,
+       "explanation": "Lokal anestezikler sodyum kanalının hücre içi poruna bağlanır ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Açık ve inaktif kanallara bağlanma afinitesi dinlenim durumundan yüksektir.",
+       "isLie": false,
+       "explanation": "Açık ve inaktif kanallara bağlanma afinitesi dinlenim durumundan yüksektir ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Lokal anestezik bağlanması sodyum kanallarını kalıcı açık tutarak hücreyi patlatır.",
+       "isLie": true,
+       "explanation": "Lokal anestezik bağlanması sodyum kanallarını kalıcı açık tutarak hücreyi patlatır ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s16-e3"
+    },
+    {
+     "type": "active_recall",
+     "question": "Sodyum kanalının hücre içi poruna bağlanarak aksiyon potansiyeli oluşumunu engelleyen aktif iyonize form nedir?",
+     "answer": "Protonlanmış katyonik formdur.",
+     "id": "k48-s16-e4"
+    }
+   ],
+   "id": "k2-48-d-s16",
+   "synthesisNarrative": "Lokal anesteziklerin birincil moleküler hedefi, akson membranında aksiyon potansiyelini başlatan voltaj bağımlı sodyum (Nav) kanallarıdır.\n\n- **Bağlanma Bölgesi:** İlaç molekülü sodyum kanalının hücre içi tarafındaki por bölgesine bağlanır.\n- **Depolarizasyonun Engellenmesi:** Sodyum iyonlarının hücre içine hızlı akışı durdurulur; eşik potansiyeline ulaşılamaz ve aksiyon potansiyeli başlatılamaz ya da iletilemez.\n- **Kullanım Bağımlı (Frekans Bağımlı) Blokaj:** Lokal anestezikler dinlenim durumundaki kanallara düşük, açık ve inaktif durumdaki kanallara ise çok yüksek afinite gösterir.\n- **Ağrı İletiminin Seçici Blokajı:** Ağrı lifleri sürekli ve yüksek frekansta uyarıldığından, sodyum kanalları sık sık açılır ve ilaç tarafından hızla bloke edilir.\n\n> [!NOTE]\n> Dinlenim halindeki bir sinir lifi, sürekli aksiyon potansiyeli ileten aktif bir liften çok daha yüksek lokal anestezik konsantrasyonu gerektirir.",
+   "pdfSayfalari": [
+    18,
+    18
+   ],
+   "sourcePdf": {
+    "startPage": 18,
+    "endPage": 18
+   }
+  },
+  {
+   "slideNumber": 17,
+   "title": "Posterior Epidural Boşluk ve Subaraknoid Spinal Anestezi",
+   "bolum": "4",
+   "content": "Santral nöroaksiyel bloklar, epidural ve spinal anestezi olmak üzere iki temel anatomik yaklaşımla uygulanır.\n\n- **Epidural Boşluk Anatomisi:** Omurilik kanalı çevresinde dura mater ile ligamentum flavum arasında kalan vasküler ve yağ dokusundan zengin potansiyel boşluktur.\n- **Ligamentum Flavum Direnci:** Epidural iğne ilerletilirken ligamentum flavumda belirgin bir direnç hissedilir ve boşluğa girildiğinde direnç kaybı (loss of resistance) tekniğiyle tanı konur.\n- **Spinal (Subaraknoid) Blok:** İğne dura mater ve araknoid zarı delerek beyin omurilik sıvısının (BOS) bulunduğu subaraknoid mesafeye ulaşır.\n- **Doz ve Hacim Farkı:** Spinal anestezide küçük hacim ve düşük doz yeterliyken, epidural anestezide aynı segmental yayılım için çok daha yüksek doz ve hacim gerekir.\n\n> [!IMPORTANT]\n> Epidural boşluk zengin venöz pleksuslara sahip olduğundan, kateter yerleştirildikten sonra mutlaka negatif aspirasyon yapılmalı, yanlışlıkla intravasküler veya subaraknoid kaçış dışlanmalıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Epidural anestezi uygulamasında iğnenin ligamentum flavum arkasındaki epidural boşluğa girdiğini doğrulayan klasik klinik bulgu hangisidir?",
+     "options": [
+      {
+       "text": "Enjektör pistonunda direnç kaybı (loss of resistance).",
+       "isCorrect": true,
+       "explanation": "Enjektör pistonunda direnç kaybı (loss of resistance) ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "Pistondan serbestçe berrak BOS akışı gelmesi.",
+       "isCorrect": false,
+       "explanation": "Pistondan serbestçe berrak BOS akışı gelmesi kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Hastada ani bilinç kaybı ve koma gelişmesi.",
+       "isCorrect": false,
+       "explanation": "Hastada ani bilinç kaybı ve koma gelişmesi kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Ciltte geniş çaplı ekimoz oluşması.",
+       "isCorrect": false,
+       "explanation": "Ciltte geniş çaplı ekimoz oluşması kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s17-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Spinal anestezide lokal anestezik doğrudan {subaraknoid mesafeye} beyin omurilik sıvısı içine enjekte edilir.",
+     "maskedTerm": "subaraknoid mesafeye",
+     "id": "k48-s17-e2",
+     "hint": "Hedeflenen fizyopatolojik mekanizmadır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Epidural ve Spinal Blok Anatomisi",
+     "items": [
+      {
+       "text": "Epidural boşluk ligamentum flavum ile dura mater arasında yer alır.",
+       "isLie": false,
+       "explanation": "Epidural boşluk ligamentum flavum ile dura mater arasında yer alır ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Spinal anestezide ilaç doğrudan subaraknoid BOS içine verilir.",
+       "isLie": false,
+       "explanation": "Spinal anestezide ilaç doğrudan subaraknoid BOS içine verilir ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Spinal anestezide epidural anesteziye göre 20 kat daha fazla ilaç hacmi gerekir.",
+       "isLie": true,
+       "explanation": "Spinal anestezide epidural anesteziye göre 20 kat daha fazla ilaç hacmi gerekir ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s17-e3"
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Epidural Blokaj",
+     "rightTitle": "Spinal (Subaraknoid) Blokaj",
+     "leftPoints": [
+      "Ligamentum flavum arkasındaki epidural boşluğa verilir",
+      "Dura mater delinmez, BOS akışı görülmez",
+      "Geniş hacim ve yüksek doz lokal anestezik gerektirir"
+     ],
+     "rightPoints": [
+      "Dura ve araknoid delinerek doğrudan BOS içine verilir",
+      "İğneden berrak BOS gelişi doğrulanır",
+      "Çok küçük hacim ve düşük doz ile derin blok sağlanır"
+     ],
+     "id": "k48-s17-e4"
+    }
+   ],
+   "id": "k2-48-d-s17",
+   "synthesisNarrative": "Santral nöroaksiyel bloklar, epidural ve spinal anestezi olmak üzere iki temel anatomik yaklaşımla uygulanır.\n\n- **Epidural Boşluk Anatomisi:** Omurilik kanalı çevresinde dura mater ile ligamentum flavum arasında kalan vasküler ve yağ dokusundan zengin potansiyel boşluktur.\n- **Ligamentum Flavum Direnci:** Epidural iğne ilerletilirken ligamentum flavumda belirgin bir direnç hissedilir ve boşluğa girildiğinde direnç kaybı (loss of resistance) tekniğiyle tanı konur.\n- **Spinal (Subaraknoid) Blok:** İğne dura mater ve araknoid zarı delerek beyin omurilik sıvısının (BOS) bulunduğu subaraknoid mesafeye ulaşır.\n- **Doz ve Hacim Farkı:** Spinal anestezide küçük hacim ve düşük doz yeterliyken, epidural anestezide aynı segmental yayılım için çok daha yüksek doz ve hacim gerekir.\n\n> [!IMPORTANT]\n> Epidural boşluk zengin venöz pleksuslara sahip olduğundan, kateter yerleştirildikten sonra mutlaka negatif aspirasyon yapılmalı, yanlışlıkla intravasküler veya subaraknoid kaçış dışlanmalıdır.",
+   "pdfSayfalari": [
+    19,
+    20
+   ],
+   "sourcePdf": {
+    "startPage": 19,
+    "endPage": 20
+   }
+  },
+  {
+   "slideNumber": 18,
+   "title": "Sistemik Emilim Toksisitesi ve Kokain-Prokain Karşılaştırması",
+   "bolum": "4",
+   "content": "Lokal uygulanan anestezik ajanlar zamanla uygulama alanından sistemik dolaşıma emilir ve plazma konsantrasyonu kritik eşiği aşarsa toksisiteye yol açar.\n\n- **Sistemik Emilim Basamakları:** Enjeksiyon sahasındaki vaskülarite, ilacın dozu ve vazodilatör özelliği emilim hızını belirler.\n- **İlk Sistemik Semptomlar:** Plazma düzeyi yükseldiğinde hastada huzursuzluk, anksiyete, kulak çınlaması ve dilde uyuşma başlar.\n- **Kokain ve Prokain Potensi:** Kokain, prokaine kıyasla yaklaşık 2 kat daha yüksek potense sahiptir; ancak bağımlılık ve sempatomimetik etkileri nedeniyle klinik kullanımı çok kısıtlıdır.\n- **Vazomotor Farklılık:** Kokain sempatik sinir uçlarında noradrenalin geri alımını engelleyerek intrensek vazokonstriksiyon yapan tek lokal anesteziktir; prokain ve diğer çoğu ajan ise vazodilatatördür.\n\n> [!NOTE]\n> Kokain vazokonstriksiyon yaptığı için cerrahi kanamayı azaltır; ancak hipertansif kriz, koroner spazm ve aritmi oluşturma riski taşır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatik sinir uçlarında noradrenalin geri alımını bloke ederek intrensek vazokonstriksiyon oluşturan tek lokal anestezik hangisidir?",
+     "options": [
+      {
+       "text": "Kokain alkaloidi.",
+       "isCorrect": true,
+       "explanation": "Kokain alkaloidi ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "Sentetik prokain.",
+       "isCorrect": false,
+       "explanation": "Sentetik prokain kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Klasik lidokain.",
+       "isCorrect": false,
+       "explanation": "Klasik lidokain kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Klorprokain esteri.",
+       "isCorrect": false,
+       "explanation": "Klorprokain esteri kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s18-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Lokal anesteziklerin çoğu vazodilatasyon yaparken, {kokain molekülü} noradrenalin geri alımını bloke ederek vazokonstriksiyon oluşturur.",
+     "maskedTerm": "kokain molekülü",
+     "id": "k48-s18-e2",
+     "hint": "Kritik tanısal belirteçtir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Sistemik Emilim ve Kokain Özellikleri",
+     "items": [
+      {
+       "text": "Lokal anesteziklerin plazma düzeyi yükselirse kulak çınlaması ve dilde uyuşma olur.",
+       "isLie": false,
+       "explanation": "Lokal anesteziklerin plazma düzeyi yükselirse kulak çınlaması ve dilde uyuşma olur ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Kokain intrensek vazokonstriksiyon yapan tek lokal anesteziktir.",
+       "isLie": false,
+       "explanation": "Kokain intrensek vazokonstriksiyon yapan tek lokal anesteziktir ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Prokain noradrenalin geri alımını bloke ederek şiddetli hipertansif kriz yapar.",
+       "isLie": true,
+       "explanation": "Prokain noradrenalin geri alımını bloke ederek şiddetli hipertansif kriz yapar ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s18-e3"
+    },
+    {
+     "type": "active_recall",
+     "question": "Prokaine kıyasla 2 kat yüksek potens gösteren ve intrensek vazokonstriksiyon oluşturan doğal ester türevi nedir?",
+     "answer": "Kokain alkaloididir.",
+     "id": "k48-s18-e4"
+    }
+   ],
+   "id": "k2-48-d-s18",
+   "synthesisNarrative": "Lokal uygulanan anestezik ajanlar zamanla uygulama alanından sistemik dolaşıma emilir ve plazma konsantrasyonu kritik eşiği aşarsa toksisiteye yol açar.\n\n- **Sistemik Emilim Basamakları:** Enjeksiyon sahasındaki vaskülarite, ilacın dozu ve vazodilatör özelliği emilim hızını belirler.\n- **İlk Sistemik Semptomlar:** Plazma düzeyi yükseldiğinde hastada huzursuzluk, anksiyete, kulak çınlaması ve dilde uyuşma başlar.\n- **Kokain ve Prokain Potensi:** Kokain, prokaine kıyasla yaklaşık 2 kat daha yüksek potense sahiptir; ancak bağımlılık ve sempatomimetik etkileri nedeniyle klinik kullanımı çok kısıtlıdır.\n- **Vazomotor Farklılık:** Kokain sempatik sinir uçlarında noradrenalin geri alımını engelleyerek intrensek vazokonstriksiyon yapan tek lokal anesteziktir; prokain ve diğer çoğu ajan ise vazodilatatördür.\n\n> [!NOTE]\n> Kokain vazokonstriksiyon yaptığı için cerrahi kanamayı azaltır; ancak hipertansif kriz, koroner spazm ve aritmi oluşturma riski taşır.",
+   "pdfSayfalari": [
+    21,
+    22
+   ],
+   "sourcePdf": {
+    "startPage": 21,
+    "endPage": 22
+   }
+  },
+  {
+   "slideNumber": 19,
+   "title": "Lokal Anesteziklerin pKa, Maksimum Doz ve Konsantrasyonları",
+   "bolum": "4",
+   "content": "Lokal anesteziklerin güvenli klinik kullanımı için pKa değerleri, maksimum tek doz sınırları ve efektif konsantrasyon aralıkları iyi bilinmelidir.\n\n- **Klorprokain (pKa 8,7):** Hızlı hidroliz nedeniyle toksisitesi düşüktür; maksimum dozu 800 mg (adrenalinle 1000 mg) olup epiduralde yüzde 2-3 konsantrasyonda uygulanır.\n- **Lidokain (pKa 7,9):** Hızlı etki başlangıcına sahiptir; maksimum güvenli dozu tek başına 300 mg (4,5 mg/kg), adrenalinli kombinasyonda ise 500 mg'dır (7 mg/kg).\n- **Bupivakain (pKa 8,1):** Yüksek potens ve toksisiteye sahiptir; maksimum dozu 175 mg (adrenalinle 225 mg) olup epiduralde yüzde 0,25-0,5 konsantrasyonda kullanılır.\n- **Ropivakain (pKa 8,1):** Bupivakaine benzer profil sunar ancak kardiyak güvenlik aralığı daha geniştir; maksimum dozu yaklaşık 200 mg'dır.\n\n> [!IMPORTANT]\n> Maksimum doz sınırları tek seferlik enjeksiyonlar için kılavuzdur; vasküler bölgelerde veya yaşlı hastalarda bu dozların altında bile sistemik toksisite gelişebileceği akılda tutulmalıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Lidokainin vazokonstriktör içermeyen tek seferlik maksimum güvenli dozu ve kilogram başına karşılığı hangisinde doğru verilmiştir?",
+     "options": [
+      {
+       "text": "300 miligram ve 4,5 mg/kg.",
+       "isCorrect": true,
+       "explanation": "300 miligram ve 4,5 mg/kg ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "100 miligram ve 1,0 mg/kg.",
+       "isCorrect": false,
+       "explanation": "100 miligram ve 1,0 mg/kg kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "800 miligram ve 10 mg/kg.",
+       "isCorrect": false,
+       "explanation": "800 miligram ve 10 mg/kg kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "50 miligram ve 0,5 mg/kg.",
+       "isCorrect": false,
+       "explanation": "50 miligram ve 0,5 mg/kg kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s19-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Bupivakain yüksek kardiyotoksisite riski nedeniyle tek seferde en fazla {175 miligram} dozda uygulanmalıdır.",
+     "maskedTerm": "175 miligram",
+     "id": "k48-s19-e2",
+     "hint": "Uygulanan temel tedavi kuralıdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Maksimum Dozlar ve pKa Eşikleri",
+     "items": [
+      {
+       "text": "Lidokainin maksimum dozu adrenalin ilavesiyle 300 mg'dan 500 mg'a çıkar.",
+       "isLie": false,
+       "explanation": "Lidokainin maksimum dozu adrenalin ilavesiyle 300 mg'dan 500 mg'a çıkar ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Bupivakainin maksimum dozu yaklaşık 175 mg ile sınırlıdır.",
+       "isLie": false,
+       "explanation": "Bupivakainin maksimum dozu yaklaşık 175 mg ile sınırlıdır ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Lidokain için tek seferlik güvenli doz 2000 miligrama kadar serbestçe yükseltilebilir.",
+       "isLie": true,
+       "explanation": "Lidokain için tek seferlik güvenli doz 2000 miligrama kadar serbestçe yükseltilebilir ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s19-e3"
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "İlaç Adı",
+      "pKa Değeri",
+      "Maksimum Düz Doz"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Klorprokain",
+         "isMasked": false
+        },
+        {
+         "text": "8,7",
+         "isMasked": false
+        },
+        {
+         "text": "800 mg",
+         "isMasked": true,
+         "hint": "Yüksek doz toleranslı esterdir."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Lidokain",
+         "isMasked": false
+        },
+        {
+         "text": "7,9",
+         "isMasked": true,
+         "hint": "Fizyolojik pH'ya yakın pKa değeridir."
+        },
+        {
+         "text": "300 mg (4,5 mg/kg)",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Bupivakain",
+         "isMasked": false
+        },
+        {
+         "text": "8,1",
+         "isMasked": false
+        },
+        {
+         "text": "175 mg (2 mg/kg)",
+         "isMasked": true,
+         "hint": "Kardiyotoksisite riski kısıtlar."
+        }
+       ]
+      }
+     ],
+     "id": "k48-s19-e4"
+    }
+   ],
+   "id": "k2-48-d-s19",
+   "synthesisNarrative": "Lokal anesteziklerin güvenli klinik kullanımı için pKa değerleri, maksimum tek doz sınırları ve efektif konsantrasyon aralıkları iyi bilinmelidir.\n\n- **Klorprokain (pKa 8,7):** Hızlı hidroliz nedeniyle toksisitesi düşüktür; maksimum dozu 800 mg (adrenalinle 1000 mg) olup epiduralde yüzde 2-3 konsantrasyonda uygulanır.\n- **Lidokain (pKa 7,9):** Hızlı etki başlangıcına sahiptir; maksimum güvenli dozu tek başına 300 mg (4,5 mg/kg), adrenalinli kombinasyonda ise 500 mg'dır (7 mg/kg).\n- **Bupivakain (pKa 8,1):** Yüksek potens ve toksisiteye sahiptir; maksimum dozu 175 mg (adrenalinle 225 mg) olup epiduralde yüzde 0,25-0,5 konsantrasyonda kullanılır.\n- **Ropivakain (pKa 8,1):** Bupivakaine benzer profil sunar ancak kardiyak güvenlik aralığı daha geniştir; maksimum dozu yaklaşık 200 mg'dır.\n\n> [!IMPORTANT]\n> Maksimum doz sınırları tek seferlik enjeksiyonlar için kılavuzdur; vasküler bölgelerde veya yaşlı hastalarda bu dozların altında bile sistemik toksisite gelişebileceği akılda tutulmalıdır.",
+   "pdfSayfalari": [
+    23,
+    23
+   ],
+   "sourcePdf": {
+    "startPage": 23,
+    "endPage": 23
+   }
+  },
+  {
+   "slideNumber": 20,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 4] Etki Mekanizması, pKa ve Girişimsel Teknikler",
+   "bolum": "4",
+   "isCheckpoint": true,
+   "content": "Bu checkpoint sayfasında voltaj bağımlı sodyum kanal blokajını, pKa ve asidoz ilişkisini, epidural-spinal farklarını ve maksimum doz sınırlarını pekiştiriyoruz.\n\n- **Sodyum Kanal Poru:** Zarı non-iyonize form geçer; kanalın iç yüzeyindeki poru ise iyonize katyon formu bloke eder.\n- **Frekans Bağımlılık:** Açık ve inaktif kanallar ilaca en duyarlı durumlardır; aktif iletim yapan lifler hızla susturulur.\n- **Nöroaksiyel Seviyeler:** Epidural aralıkta direnç kaybı aranır ve yüksek hacim gerekir; spinalde BOS görülür ve küçük doz yeterlidir.\n- **Güvenli Doz Sınırları:** Lidokain için 300 mg (adrenalinle 500 mg), bupivakain için 175 mg kritik eşiklerdir.\n\n> [!NOTE]\n> Dördüncü bölüm tamamlandı; sonraki bölümde farmakokinetik emilim basamakları, lif duyarlılığı ve adrenalin sinerjisini inceleyeceğiz.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Enflamasyonlu dokuda asidoz nedeniyle lokal anesteziğin zarı geçememesi durumunda solüsyona ne ilave edilerek başarı artırılır?",
+     "options": [
+      {
+       "text": "Sodyum bikarbonat ilavesi.",
+       "isCorrect": true,
+       "explanation": "Sodyum bikarbonat ilavesi ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "Hidroklorik asit çözeltisi.",
+       "isCorrect": false,
+       "explanation": "Hidroklorik asit çözeltisi kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Saf distile su enjeksiyonu.",
+       "isCorrect": false,
+       "explanation": "Saf distile su enjeksiyonu kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Konsantre kalsiyum klorür.",
+       "isCorrect": false,
+       "explanation": "Konsantre kalsiyum klorür kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s20-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Lokal anestezikler dinlenim durumundan ziyade {açık ve inaktif} durumdaki sodyum kanallarına çok daha yüksek afinite gösterir.",
+     "maskedTerm": "açık ve inaktif",
+     "id": "k48-s20-e2",
+     "hint": "Önemli anatomik referanstır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Etki Mekanizması ve Girişimsel Teknikler Özeti",
+     "items": [
+      {
+       "text": "Sodyum kanalını içeriden tıkamak için katyonik form gereklidir.",
+       "isLie": false,
+       "explanation": "Sodyum kanalını içeriden tıkamak için katyonik form gereklidir ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Epidural anestezide ligamentum flavum arkasındaki direnç kaybı aranır.",
+       "isLie": false,
+       "explanation": "Epidural anestezide ligamentum flavum arkasındaki direnç kaybı aranır ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Spinal anestezi dura mater delinmeden sadece cilt altına yapılan enjeksiyondur.",
+       "isLie": true,
+       "explanation": "Spinal anestezi dura mater delinmeden sadece cilt altına yapılan enjeksiyondur ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s20-e3"
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Epidural Anestezi Özellikleri",
+     "rightCategory": "Spinal Anestezi Özellikleri",
+     "cards": [
+      {
+       "text": "Ligamentum flavum arkasında direnç kaybı tekniği",
+       "category": "left"
+      },
+      {
+       "text": "Segmental yayılım için yüksek doz ve hacim gerekir",
+       "category": "left"
+      },
+      {
+       "text": "Dura mater delinerek doğrudan BOS içine girilir",
+       "category": "right"
+      },
+      {
+       "text": "Çok küçük hacim ve miligram dozlarla tam blokaj kurulur",
+       "category": "right"
+      }
+     ],
+     "id": "k48-s20-e4"
+    }
+   ],
+   "id": "k2-48-d-s20",
+   "synthesisNarrative": "Bu checkpoint sayfasında voltaj bağımlı sodyum kanal blokajını, pKa ve asidoz ilişkisini, epidural-spinal farklarını ve maksimum doz sınırlarını pekiştiriyoruz.\n\n- **Sodyum Kanal Poru:** Zarı non-iyonize form geçer; kanalın iç yüzeyindeki poru ise iyonize katyon formu bloke eder.\n- **Frekans Bağımlılık:** Açık ve inaktif kanallar ilaca en duyarlı durumlardır; aktif iletim yapan lifler hızla susturulur.\n- **Nöroaksiyel Seviyeler:** Epidural aralıkta direnç kaybı aranır ve yüksek hacim gerekir; spinalde BOS görülür ve küçük doz yeterlidir.\n- **Güvenli Doz Sınırları:** Lidokain için 300 mg (adrenalinle 500 mg), bupivakain için 175 mg kritik eşiklerdir.\n\n> [!NOTE]\n> Dördüncü bölüm tamamlandı; sonraki bölümde farmakokinetik emilim basamakları, lif duyarlılığı ve adrenalin sinerjisini inceleyeceğiz."
+  },
+  {
+   "slideNumber": 21,
+   "title": "Sistemik Dolaşıma Geçiş: Doz, Enjeksiyon Bölgesi ve Vaskülarite",
+   "bolum": "5",
+   "content": "Lokal anesteziğin sistemik dolaşıma geçiş hızı, uygulanan toplam dozun yanı sıra enjeksiyon yapılan anatomik bölgenin vaskülaritesine doğrudan bağlıdır.\n\n- **Vaskülarite Sıralaması:** Sistemik emilimin en hızlıdan en yavaşa doğru sıralaması şöyledir: İntravenöz > Trakeal > İnterkostal > Kaudal > Epidural > Brakiyal Pleksus > Siyatik/Femoral > Subkutan.\n- **İnterkostal Blok Riski:** İnterkostal aralık zengin damar ağı içerdiğinden, periferik sinir blokları arasında en yüksek ve en hızlı pik plazma konsantrasyonu oluşturan bölgedir.\n- **Subkutan Doku Güvenliği:** Yağ dokusunun avasküler yapısı nedeniyle subkutan infiltrasyonda emilim yavaştır ve toksisite riski pleksus bloklarına göre düşüktür.\n- **Doz-Konsantrasyon Eğrisi:** Toplam enjekte edilen miligram miktarı arttıkça sistemik dolaşıma geçen serbest ilaç konsantrasyonu doğrusal biçimde yükselir.\n\n> [!IMPORTANT]\n> Çoklu interkostal blokaj uygulanan hastalarda toplam doz düşük tutulmalı ve plazma pik seviyesinin hızla yükselebileceği hesaba katılmalıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Periferik sinir blokları arasında en zengin damar ağına sahip olup en hızlı sistemik emilime yol açan bölge hangisidir?",
+     "options": [
+      {
+       "text": "İnterkostal aralık anatomisi.",
+       "isCorrect": true,
+       "explanation": "İnterkostal aralık anatomisi ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "Subkutan yağ dokusu sahası.",
+       "isCorrect": false,
+       "explanation": "Subkutan yağ dokusu sahası kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Siyatik sinir çevresi.",
+       "isCorrect": false,
+       "explanation": "Siyatik sinir çevresi kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Femoral üçgen interstisyumu.",
+       "isCorrect": false,
+       "explanation": "Femoral üçgen interstisyumu kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s21-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sistemik dolaşıma emilim hızının en yavaş olduğu doku tipi avasküler yapısıyla {subkutan yağ dokusudur}.",
+     "maskedTerm": "subkutan yağ dokusudur",
+     "id": "k48-s21-e2",
+     "hint": "Standart kılavuz bilgisidir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Sistemik Emilim ve Anatomik Vaskülarite",
+     "items": [
+      {
+       "text": "İnterkostal blokajda sistemik emilim oldukça hızlı gerçekleşir.",
+       "isLie": false,
+       "explanation": "İnterkostal blokajda sistemik emilim oldukça hızlı gerçekleşir ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Subkutan enjeksiyonlarda sistemik dolaşıma geçiş pleksus bloklarına göre daha yavaştır.",
+       "isLie": false,
+       "explanation": "Subkutan enjeksiyonlarda sistemik dolaşıma geçiş pleksus bloklarına göre daha yavaştır ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Lokal anesteziklerin emilim hızı uygulandığı bölgenin damar yapısından tamamen bağımsızdır.",
+       "isLie": true,
+       "explanation": "Lokal anesteziklerin emilim hızı uygulandığı bölgenin damar yapısından tamamen bağımsızdır ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s21-e3"
+    },
+    {
+     "type": "active_recall",
+     "question": "Periferik sinir blokları arasında zengin kılcal damarları nedeniyle en hızlı sistemik pik oluşturan anatomik bölge nedir?",
+     "answer": "İnterkostal sinir blokaj sahasıdır.",
+     "id": "k48-s21-e4"
+    }
+   ],
+   "id": "k2-48-d-s21",
+   "synthesisNarrative": "Lokal anesteziğin sistemik dolaşıma geçiş hızı, uygulanan toplam dozun yanı sıra enjeksiyon yapılan anatomik bölgenin vaskülaritesine doğrudan bağlıdır.\n\n- **Vaskülarite Sıralaması:** Sistemik emilimin en hızlıdan en yavaşa doğru sıralaması şöyledir: İntravenöz > Trakeal > İnterkostal > Kaudal > Epidural > Brakiyal Pleksus > Siyatik/Femoral > Subkutan.\n- **İnterkostal Blok Riski:** İnterkostal aralık zengin damar ağı içerdiğinden, periferik sinir blokları arasında en yüksek ve en hızlı pik plazma konsantrasyonu oluşturan bölgedir.\n- **Subkutan Doku Güvenliği:** Yağ dokusunun avasküler yapısı nedeniyle subkutan infiltrasyonda emilim yavaştır ve toksisite riski pleksus bloklarına göre düşüktür.\n- **Doz-Konsantrasyon Eğrisi:** Toplam enjekte edilen miligram miktarı arttıkça sistemik dolaşıma geçen serbest ilaç konsantrasyonu doğrusal biçimde yükselir.\n\n> [!IMPORTANT]\n> Çoklu interkostal blokaj uygulanan hastalarda toplam doz düşük tutulmalı ve plazma pik seviyesinin hızla yükselebileceği hesaba katılmalıdır.",
+   "pdfSayfalari": [
+    24,
+    24
+   ],
+   "sourcePdf": {
+    "startPage": 24,
+    "endPage": 24
+   }
+  },
+  {
+   "slideNumber": 22,
+   "title": "Metabolizma Yolları ve Frekans Bağımlı İletim Blokajı",
+   "bolum": "5",
+   "content": "Lokal anesteziklerin vücuttan uzaklaştırılması kimyasal sınıflarına göre iki temel yoldan yürütülür.\n\n- **Esterlerin Yıkımı:** Psödokolinesteraz tarafından damar yatağında saniyeler ve dakikalar içinde hidrolize uğratılırlar; karaciğer fonksiyonundan bağımsızdır.\n- **Amidlerin Yıkımı:** Karaciğer mikrozomal sitokrom P450 enzimleriyle metabolize edilirler; hepatik disfonksiyonda yarı ömürleri uzar.\n- **Aksiyon Potansiyeli Yayılımının Engellenmesi:** Sodyum kanalları bloke edildiğinde ranvier boğumları arasındaki iletim durur; ardışık en az 2-3 boğumun bloke edilmesi sinir iletiminin tam kesilmesi için şarttır.\n- **Frekans Bağımlı Blok:** Sinir hücresi ne kadar sık uyarılırsa kanal o kadar çok açık duruma geçer ve blok derinliği katlanarak artar.\n\n> [!NOTE]\n> Atipik psödokolinesteraz enzim eksikliği olan hastalarda ester grubu lokal anesteziklerin yıkımı gecikir ve toksisite tablosu uzayabilir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Miyelinli bir akson boyunca aksiyon potansiyeli yayılımını tamamen durdurmak için en az kaç ardışık Ranvier boğumunun bloke edilmesi gerekir?",
+     "options": [
+      {
+       "text": "En az 2-3 ardışık Ranvier boğumu.",
+       "isCorrect": true,
+       "explanation": "En az 2-3 ardışık Ranvier boğumu ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "Yalnızca tek bir Ranvier boğumunun onda biri.",
+       "isCorrect": false,
+       "explanation": "Yalnızca tek bir Ranvier boğumunun onda biri kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "En az 50 ardışık boğumun tamamı.",
+       "isCorrect": false,
+       "explanation": "En az 50 ardışık boğumun tamamı kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Boğumlar etkilenmez, yalnız hücre gövdesi bloke edilir.",
+       "isCorrect": false,
+       "explanation": "Boğumlar etkilenmez, yalnız hücre gövdesi bloke edilir kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s22-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Amid grubu lokal anesteziklerin eliminasyon yarılanma ömrü {karaciğer yetmezliği} veya siroz olgularında belirgin şekilde uzar.",
+     "maskedTerm": "karaciğer yetmezliği",
+     "id": "k48-s22-e2",
+     "hint": "Temel klinik prensiptir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Metabolizma ve Ranvier Boğum Blokajı",
+     "items": [
+      {
+       "text": "Miyelinli sinirlerde iletimin kesilmesi için en az 2-3 ardışık boğum bloke edilmelidir.",
+       "isLie": false,
+       "explanation": "Miyelinli sinirlerde iletimin kesilmesi için en az 2-3 ardışık boğum bloke edilmelidir ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Yüksek frekansta çalışan ağrı lifleri frekans bağımlı blokaj ile daha hızlı susturulur.",
+       "isLie": false,
+       "explanation": "Yüksek frekansta çalışan ağrı lifleri frekans bağımlı blokaj ile daha hızlı susturulur ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Amid grubu ilaçlar plazma esterazları ile karaciğere hiç gitmeden saniyede parçalanır.",
+       "isLie": true,
+       "explanation": "Amid grubu ilaçlar plazma esterazları ile karaciğere hiç gitmeden saniyede parçalanır ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s22-e3"
+    },
+    {
+     "type": "active_recall",
+     "question": "Sinir lifi daha yüksek frekansta uyarıldığında sodyum kanallarının daha etkin bloke olmasına ne ad verilir?",
+     "answer": "Frekans veya kullanım bağımlı blokajdır.",
+     "id": "k48-s22-e4"
+    }
+   ],
+   "id": "k2-48-d-s22",
+   "synthesisNarrative": "Lokal anesteziklerin vücuttan uzaklaştırılması kimyasal sınıflarına göre iki temel yoldan yürütülür.\n\n- **Esterlerin Yıkımı:** Psödokolinesteraz tarafından damar yatağında saniyeler ve dakikalar içinde hidrolize uğratılırlar; karaciğer fonksiyonundan bağımsızdır.\n- **Amidlerin Yıkımı:** Karaciğer mikrozomal sitokrom P450 enzimleriyle metabolize edilirler; hepatik disfonksiyonda yarı ömürleri uzar.\n- **Aksiyon Potansiyeli Yayılımının Engellenmesi:** Sodyum kanalları bloke edildiğinde ranvier boğumları arasındaki iletim durur; ardışık en az 2-3 boğumun bloke edilmesi sinir iletiminin tam kesilmesi için şarttır.\n- **Frekans Bağımlı Blok:** Sinir hücresi ne kadar sık uyarılırsa kanal o kadar çok açık duruma geçer ve blok derinliği katlanarak artar.\n\n> [!NOTE]\n> Atipik psödokolinesteraz enzim eksikliği olan hastalarda ester grubu lokal anesteziklerin yıkımı gecikir ve toksisite tablosu uzayabilir.",
+   "pdfSayfalari": [
+    25,
+    26
+   ],
+   "sourcePdf": {
+    "startPage": 25,
+    "endPage": 26
+   }
+  },
+  {
+   "slideNumber": 23,
+   "title": "Diferansiyel Sinir Lifi Duyarlılığı ve Manto-Kor Teorisi",
+   "bolum": "5",
+   "content": "Periferik bir sinir gövdesi farklı çap ve miyelin özelliklerine sahip lif demetlerinden oluşur; bu liflerin lokal anesteziklere duyarlılığı eşit değildir.\n\n- **Çap ve Miyelin Faktörü:** Küçük çaplı miyelinli lifler (A-delta) ve miyelinsiz lifler (C lifleri) lokal anestezik blokajına kalın miyelinli motor liflerden (A-alfa) çok daha duyarlıdır.\n- **Klinik Blokaj Sırası:** Anestezi başladığında ilk olarak ağrı ve ısı duyusu kaybolur; bunu dokunma ve derin basınç izler; en son motor fonksiyon ortadan kalkar.\n- **Derlenme Sırası:** Anestezi gerilerken blokaj tersine döner; ilk olarak motor fonksiyon geri gelir, en son ağrı duyusu uyanır.\n- **Manto-Kor Teorisi:** Sinir kılıfına yakın dış manto lifleri ilaca ilk maruz kaldığından proksimal bölgeler distalden önce uyuşur; derin kor lifleri ise en son bloke olur.\n\n> [!IMPORTANT]\n> Konsantrasyon titrasyonu ile motor bloğu minimal tutarak yalnızca ağrı duyusunun seçici olarak kesilmesi (diferansiyel blok) epidural doğum analjezisinin temelidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Lokal anestezi uygulamasında ilk kaybolan ve anestezi sonlandığında en son geri dönen duyu modalitesi hangisidir?",
+     "options": [
+      {
+       "text": "Ağrı ve ısı duyusu.",
+       "isCorrect": true,
+       "explanation": "Ağrı ve ısı duyusu ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "Kaba motor hareket yeteneği.",
+       "isCorrect": false,
+       "explanation": "Kaba motor hareket yeteneği kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Derin tendon refleksi.",
+       "isCorrect": false,
+       "explanation": "Derin tendon refleksi kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Titreşim ve propriyosepsiyon.",
+       "isCorrect": false,
+       "explanation": "Titreşim ve propriyosepsiyon kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s23-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Periferik bir sinir gövdesinde ilaca ilk temas eden dış katman lifleri {manto lifleri} olarak tanımlanır.",
+     "maskedTerm": "manto lifleri",
+     "id": "k48-s23-e2",
+     "hint": "Spesifik farmakolojik kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Diferansiyel Lif Duyarlılığı ve Manto-Kor Teorisi",
+     "items": [
+      {
+       "text": "Ağrı ve ısıyı taşıyan ince lifler kalın motor liflerden daha önce bloke olur.",
+       "isLie": false,
+       "explanation": "Ağrı ve ısıyı taşıyan ince lifler kalın motor liflerden daha önce bloke olur ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Manto lifleri ilaca erken maruz kalarak proksimal anestezinin önce başlamasını sağlar.",
+       "isLie": false,
+       "explanation": "Manto lifleri ilaca erken maruz kalarak proksimal anestezinin önce başlamasını sağlar ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Lokal anestezi verildiğinde ilk olarak motor hareket felç olur, ağrı en son kaybolur.",
+       "isLie": true,
+       "explanation": "Lokal anestezi verildiğinde ilk olarak motor hareket felç olur, ağrı en son kaybolur ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s23-e3"
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "Küçük çaplı A-delta ve C liflerinin blokajı ile ağrı ve ısının kaybolması",
+      "A-beta liflerinin blokajı ile dokunma duyusunun durması",
+      "Kalın duyusal liflerin blokajı ile derin basınç algısının kesilmesi",
+      "Kalın miyelinli A-alfa liflerinin blokajı ile motor felç gelişmesi"
+     ],
+     "id": "k48-s23-e4"
+    }
+   ],
+   "id": "k2-48-d-s23",
+   "synthesisNarrative": "Periferik bir sinir gövdesi farklı çap ve miyelin özelliklerine sahip lif demetlerinden oluşur; bu liflerin lokal anesteziklere duyarlılığı eşit değildir.\n\n- **Çap ve Miyelin Faktörü:** Küçük çaplı miyelinli lifler (A-delta) ve miyelinsiz lifler (C lifleri) lokal anestezik blokajına kalın miyelinli motor liflerden (A-alfa) çok daha duyarlıdır.\n- **Klinik Blokaj Sırası:** Anestezi başladığında ilk olarak ağrı ve ısı duyusu kaybolur; bunu dokunma ve derin basınç izler; en son motor fonksiyon ortadan kalkar.\n- **Derlenme Sırası:** Anestezi gerilerken blokaj tersine döner; ilk olarak motor fonksiyon geri gelir, en son ağrı duyusu uyanır.\n- **Manto-Kor Teorisi:** Sinir kılıfına yakın dış manto lifleri ilaca ilk maruz kaldığından proksimal bölgeler distalden önce uyuşur; derin kor lifleri ise en son bloke olur.\n\n> [!IMPORTANT]\n> Konsantrasyon titrasyonu ile motor bloğu minimal tutarak yalnızca ağrı duyusunun seçici olarak kesilmesi (diferansiyel blok) epidural doğum analjezisinin temelidir.",
+   "pdfSayfalari": [
+    27,
+    27
+   ],
+   "sourcePdf": {
+    "startPage": 27,
+    "endPage": 27
+   }
+  },
+  {
+   "slideNumber": 24,
+   "title": "Lokal Anesteziklere Vazokonstriktör İlavesinin Faydaları ve Sınırları",
+   "bolum": "5",
+   "content": "Lokal anestezik solüsyonlarına sıklıkla düşük konsantrasyonda vazokonstriktör (tipik olarak 1:200.000 adrenalin) ilave edilir.\n\n- **Vazokonstriktörün Avantajları:** Uygulama bölgesinde arteriyolleri büzerek ilacın sistemik emilimini yavaşlatır; lokal doku konsantrasyonunu koruyarak etki süresini yaklaşık 2 kat uzatır.\n- **Toksisite Koruması:** Pik plazma konsantrasyonunu düşürerek sistemik toksisite (LAST) gelişme riskini belirgin şekilde azaltır.\n- **Cerrahi Görüş Alanı:** Kılcal kanamayı azaltarak operasyon sahasında kansız ve net bir cerrahi görüş sağlar.\n- **Spinal Analjezi Sinerjisi:** Omurilikte arka boynuzdaki alfa-2 adrenerjik reseptörleri aktive ederek intrensek analjezik sinerji oluşturur.\n- **Uç Organ Kontrendikasyonu:** Parmak, ayak başparmağı, burun ucu, kulak memesi ve penis gibi kollateral dolaşımı olmayan uç organlarda iskemik gangren riski nedeniyle KESİNLİKLE KULLANILMAZ.\n\n> [!NOTE]\n> Adrenalin eklenmiş solüsyon yanlışlıkla intravasküler alana kaçarsa ani taşikardi, hipertansiyon ve palpitasyon oluşturarak erken test dozu uyarısı sağlar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Lokal anestezik solüsyonlarına vazokonstriktör (adrenalin) ilavesinin KESİNLİKLE kontrendike olduğu anatomik bölge hangisidir?",
+     "options": [
+      {
+       "text": "Parmak, burun ucu ve penis gibi uç organlar.",
+       "isCorrect": true,
+       "explanation": "Parmak, burun ucu ve penis gibi uç organlar ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "Geniş uyluk subkutan dokusu.",
+       "isCorrect": false,
+       "explanation": "Geniş uyluk subkutan dokusu kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Omuz derisi ve deltoid saha.",
+       "isCorrect": false,
+       "explanation": "Omuz derisi ve deltoid saha kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Sırt ve torakal cilt altı alanı.",
+       "isCorrect": false,
+       "explanation": "Sırt ve torakal cilt altı alanı kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s24-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Lokal anesteziğe adrenalin ilavesi lokal damarları büzerek ilacın {etki süresini uzatır} ve toksisite riskini azaltır.",
+     "maskedTerm": "etki süresini uzatır",
+     "id": "k48-s24-e2",
+     "hint": "Klinik yaklaşımdaki kuramsal çerçevedir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Vazokonstriktör İlavesi ve Klinik Sınırlar",
+     "items": [
+      {
+       "text": "Adrenalin eklenmesi lokal anestezik etki süresini belirgin uzatır.",
+       "isLie": false,
+       "explanation": "Adrenalin eklenmesi lokal anestezik etki süresini belirgin uzatır ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Sistemik pik konsantrasyonu düşürerek LAST riskini azaltır.",
+       "isLie": false,
+       "explanation": "Sistemik pik konsantrasyonu düşürerek LAST riskini azaltır ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Parmak ve penis gibi uç organ bloklarında mutlaka yüksek doz adrenalin kullanılmalıdır.",
+       "isLie": true,
+       "explanation": "Parmak ve penis gibi uç organ bloklarında mutlaka yüksek doz adrenalin kullanılmalıdır ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s24-e3"
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "Acil servise el parmağında derin cam kesisi ile başvuran bir hastaya sütürasyon için lokal anestezi planlanıyor.",
+     "question": "Bu klinik senaryoda lokal anestezik formülasyonu nasıl seçilmelidir?",
+     "choices": [
+      {
+       "text": "Adrenalinsiz saf lidokain solüsyonu ile digital blok uygulanmalıdır.",
+       "isCorrect": true,
+       "feedback": "Adrenalinsiz saf lidokain seçimi farmakoloji ilkelerine uygundur. Parmak gibi uç organlarda vazospazm ve gangren riski önlenerek güvenli anestezi sağlanır.",
+       "explanation": "Adrenalinsiz saf lidokain seçimi farmakoloji ilkelerine uygundur. Parmak gibi uç organlarda vazospazm ve gangren riski önlenerek güvenli anestezi sağlanır."
+      },
+      {
+       "text": "Etkiyi uzatmak için yüksek konsantrasyonda adrenalinli lidokain verilmelidir.",
+       "isCorrect": false,
+       "feedback": "Adrenalinli solüsyon tercihi klinik olarak hatalı bir yaklaşımdır. Kollateral dolaşımı bulunmayan uç organlarda arter spazmı ve kuru gangren riski doğurur.",
+       "explanation": "Adrenalinli solüsyon tercihi klinik olarak hatalı bir yaklaşımdır. Kollateral dolaşımı bulunmayan uç organlarda arter spazmı ve kuru gangren riski doğurur."
+      }
+     ],
+     "id": "k48-s24-e4"
+    }
+   ],
+   "id": "k2-48-d-s24",
+   "synthesisNarrative": "Lokal anestezik solüsyonlarına sıklıkla düşük konsantrasyonda vazokonstriktör (tipik olarak 1:200.000 adrenalin) ilave edilir.\n\n- **Vazokonstriktörün Avantajları:** Uygulama bölgesinde arteriyolleri büzerek ilacın sistemik emilimini yavaşlatır; lokal doku konsantrasyonunu koruyarak etki süresini yaklaşık 2 kat uzatır.\n- **Toksisite Koruması:** Pik plazma konsantrasyonunu düşürerek sistemik toksisite (LAST) gelişme riskini belirgin şekilde azaltır.\n- **Cerrahi Görüş Alanı:** Kılcal kanamayı azaltarak operasyon sahasında kansız ve net bir cerrahi görüş sağlar.\n- **Spinal Analjezi Sinerjisi:** Omurilikte arka boynuzdaki alfa-2 adrenerjik reseptörleri aktive ederek intrensek analjezik sinerji oluşturur.\n- **Uç Organ Kontrendikasyonu:** Parmak, ayak başparmağı, burun ucu, kulak memesi ve penis gibi kollateral dolaşımı olmayan uç organlarda iskemik gangren riski nedeniyle KESİNLİKLE KULLANILMAZ.\n\n> [!NOTE]\n> Adrenalin eklenmiş solüsyon yanlışlıkla intravasküler alana kaçarsa ani taşikardi, hipertansiyon ve palpitasyon oluşturarak erken test dozu uyarısı sağlar.",
+   "pdfSayfalari": [
+    28,
+    28
+   ],
+   "sourcePdf": {
+    "startPage": 28,
+    "endPage": 28
+   }
+  },
+  {
+   "slideNumber": 25,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 5] Farmakokinetik, Lif Duyarlılığı ve Vazokonstriktörler",
+   "bolum": "5",
+   "isCheckpoint": true,
+   "content": "Bu checkpoint sayfasında sistemik emilim yollarını, lif duyarlılık sırasını, manto-kor teorisini ve adrenalin kullanım ilkelerini pekiştiriyoruz.\n\n- **Emilim Hızı:** İnterkostal ve trakeal sahalardan emilim çok hızlı, subkutan dokudan ise yavaştır.\n- **Diferansiyel Blokaj:** Küçük çaplı A-delta ve C ağrı lifleri ilk bloke olan gruptur; motor lifler en son etkilenir.\n- **Manto-Kor Modeli:** Dış manto lifleri ilaca ilk maruz kalır; proksimal anestezi distalden önce başlar.\n- **Adrenalin Sinerjisi:** Etki süresini uzatır, LAST riskini azaltır; uç organlarda iskemik nekroz riski nedeniyle yasaktır.\n\n> [!NOTE]\n> Beşinci bölüm tamamlandı; son bölümde sistemik toksisite (LAST), kardiyotoksisite yönetimi, intravenöz lipid kurtarma tedavisi ve özel ilaç profillerine odaklanacağız.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Lokal anestezi uygulanırken periferik sinirde proksimal sahanın distalden daha önce uyuşmasını açıklayan anatomik model hangisidir?",
+     "options": [
+      {
+       "text": "Manto-Kor teorisi organizasyonu.",
+       "isCorrect": true,
+       "explanation": "Manto-Kor teorisi organizasyonu ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "Hep ya da hiç kanunu modeli.",
+       "isCorrect": false,
+       "explanation": "Hep ya da hiç kanunu modeli kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Sliding filament teorisi.",
+       "isCorrect": false,
+       "explanation": "Sliding filament teorisi kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Spreading depresyon modeli.",
+       "isCorrect": false,
+       "explanation": "Spreading depresyon modeli kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s25-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Uç organlarda gangren riskini önlemek amacıyla lokal anestezik solüsyonuna {vazokonstriktör ajan ilavesinden} kesinlikle kaçınılmalıdır.",
+     "maskedTerm": "vazokonstriktör ajan ilavesinden",
+     "id": "k48-s25-e2",
+     "hint": "Hedeflenen fizyopatolojik mekanizmadır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Farmakokinetik ve Lif Duyarlılığı Özeti",
+     "items": [
+      {
+       "text": "İnterkostal aralık zengin damarlarıyla hızlı sistemik emilime yol açar.",
+       "isLie": false,
+       "explanation": "İnterkostal aralık zengin damarlarıyla hızlı sistemik emilime yol açar ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Ağrı lifleri motor liflere kıyasla lokal anesteziğe çok daha duyarlıdır.",
+       "isLie": false,
+       "explanation": "Ağrı lifleri motor liflere kıyasla lokal anesteziğe çok daha duyarlıdır ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Adrenalin ilavesi ilacın dokuda kalış süresini kısaltarak etkisizleştirir.",
+       "isLie": true,
+       "explanation": "Adrenalin ilavesi ilacın dokuda kalış süresini kısaltarak etkisizleştirir ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s25-e3"
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Düz Lokal Anestezi",
+     "rightTitle": "Adrenalin Eklenmiş Lokal Anestezi",
+     "leftPoints": [
+      "Lokal damarlar vazodilatasyona uğrar",
+      "Sistemik dolaşıma emilim daha hızlıdır",
+      "Etki süresi nispeten daha kısadır"
+     ],
+     "rightPoints": [
+      "Lokal damarlar arteriyoler vazokonstriksiyona uğrar",
+      "Sistemik dolaşıma geçiş yavaşlar ve pik düşer",
+      "Etki süresi yaklaşık iki katına kadar uzar"
+     ],
+     "id": "k48-s25-e4"
+    }
+   ],
+   "id": "k2-48-d-s25",
+   "synthesisNarrative": "Bu checkpoint sayfasında sistemik emilim yollarını, lif duyarlılık sırasını, manto-kor teorisini ve adrenalin kullanım ilkelerini pekiştiriyoruz.\n\n- **Emilim Hızı:** İnterkostal ve trakeal sahalardan emilim çok hızlı, subkutan dokudan ise yavaştır.\n- **Diferansiyel Blokaj:** Küçük çaplı A-delta ve C ağrı lifleri ilk bloke olan gruptur; motor lifler en son etkilenir.\n- **Manto-Kor Modeli:** Dış manto lifleri ilaca ilk maruz kalır; proksimal anestezi distalden önce başlar.\n- **Adrenalin Sinerjisi:** Etki süresini uzatır, LAST riskini azaltır; uç organlarda iskemik nekroz riski nedeniyle yasaktır.\n\n> [!NOTE]\n> Beşinci bölüm tamamlandı; son bölümde sistemik toksisite (LAST), kardiyotoksisite yönetimi, intravenöz lipid kurtarma tedavisi ve özel ilaç profillerine odaklanacağız."
+  },
+  {
+   "slideNumber": 26,
+   "title": "Santral Sensitizasyon, Nörotoksisite ve LAST Santral Belirtileri",
+   "bolum": "6",
+   "content": "Lokal anestezikler cerrahi kesi öncesinde uygulanarak santral sensitizasyonu (arka boynuzdaki kronik ağrı hafızasını) baskılayabilir; ancak aşırı dozda ciddi toksisite oluştururlar.\n\n- **Preemptif Analjezi:** İnsizyon öncesi yapılan infiltrasyon veya sinir blokajı, nosiseptif uyarıların omuriliğe ulaşmasını engelleyerek ameliyat sonrası kronik ağrı gelişimini önler.\n- **Lokal Nörotoksisite:** Yüksek konsantrasyonda lokal anesteziğe uzun süre maruz kalan periferik sinir liflerinde mikrovasküler iskemi ve doğrudan nörotoksik hasar oluşabilir.\n- **LAST Erken Santral Belirtileri:** Sistemik toksisitede (LAST) ilk olarak dilde uyuşma, metalik tat, sersemlik, kulak çınlaması ve nistagmus ortaya çıkar.\n- **LAST İleri Santral Belirtileri:** Plazma düzeyi arttıkça inhibitör nöronların baskılanması sonucu kas seyirmeleri ve jeneralize tonik-klonik konvülsiyonlar gelişir; bunu solunum depresyonu ve koma izler.\n\n> [!IMPORTANT]\n> LAST tablosunda santral sinir sistemi eksitasyonunu önlemek ve konvülsiyonları kontrol altına almak için ilk tercih edilecek ilaçlar intravenöz benzodiazepinlerdir (midazolam).",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Lokal anestezik sistemik toksisitesinin (LAST) en erken subjektif santral sinir sistemi semptomu hangisidir?",
+     "options": [
+      {
+       "text": "Dilde metalik tat ve ağız çevresinde parestezi.",
+       "isCorrect": true,
+       "explanation": "Dilde metalik tat ve ağız çevresinde parestezi ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "Ani derin koma ve kardiyak arrest.",
+       "isCorrect": false,
+       "explanation": "Ani derin koma ve kardiyak arrest kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Ateş yüksekliği ve yaygın ürtiker.",
+       "isCorrect": false,
+       "explanation": "Ateş yüksekliği ve yaygın ürtiker kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Spastik paraparezi tablosu.",
+       "isCorrect": false,
+       "explanation": "Spastik paraparezi tablosu kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s26-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "LAST tablosunda gelişen epileptik konvülsiyonların acil tedavisinde ilk basamak ilaç seçeneği {intravenöz benzodiazepin} türevleridir.",
+     "maskedTerm": "intravenöz benzodiazepin",
+     "id": "k48-s26-e2",
+     "hint": "Kritik tanısal belirteçtir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Santral Sensitizasyon ve LAST SSS Belirtileri",
+     "items": [
+      {
+       "text": "Kesi öncesi lokal anestezi santral sensitizasyon gelişimini baskılar.",
+       "isLie": false,
+       "explanation": "Kesi öncesi lokal anestezi santral sensitizasyon gelişimini baskılar ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Dilde metalik tat ve kulak çınlaması erken LAST bulgularıdır.",
+       "isLie": false,
+       "explanation": "Dilde metalik tat ve kulak çınlaması erken LAST bulgularıdır ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "LAST konvülsiyonlarında ilk yapılması gereken hastaya yüksek doz adrenalin yüklemektir.",
+       "isLie": true,
+       "explanation": "LAST konvülsiyonlarında ilk yapılması gereken hastaya yüksek doz adrenalin yüklemektir ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s26-e3"
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "Lokal anesteziğin aşırı dozda veya kazara damar içine verilmesi",
+      "Ağız çevresinde parestezi, dilde metalik tat ve kulak çınlaması",
+      "İnhibitör yolların çökmesiyle kas seyirmeleri ve tonik-klonik konvülsiyon",
+      "Santral sinir sistemi depresyonu, solunum arresti ve koma tablosu"
+     ],
+     "id": "k48-s26-e4"
+    }
+   ],
+   "id": "k2-48-d-s26",
+   "synthesisNarrative": "Lokal anestezikler cerrahi kesi öncesinde uygulanarak santral sensitizasyonu (arka boynuzdaki kronik ağrı hafızasını) baskılayabilir; ancak aşırı dozda ciddi toksisite oluştururlar.\n\n- **Preemptif Analjezi:** İnsizyon öncesi yapılan infiltrasyon veya sinir blokajı, nosiseptif uyarıların omuriliğe ulaşmasını engelleyerek ameliyat sonrası kronik ağrı gelişimini önler.\n- **Lokal Nörotoksisite:** Yüksek konsantrasyonda lokal anesteziğe uzun süre maruz kalan periferik sinir liflerinde mikrovasküler iskemi ve doğrudan nörotoksik hasar oluşabilir.\n- **LAST Erken Santral Belirtileri:** Sistemik toksisitede (LAST) ilk olarak dilde uyuşma, metalik tat, sersemlik, kulak çınlaması ve nistagmus ortaya çıkar.\n- **LAST İleri Santral Belirtileri:** Plazma düzeyi arttıkça inhibitör nöronların baskılanması sonucu kas seyirmeleri ve jeneralize tonik-klonik konvülsiyonlar gelişir; bunu solunum depresyonu ve koma izler.\n\n> [!IMPORTANT]\n> LAST tablosunda santral sinir sistemi eksitasyonunu önlemek ve konvülsiyonları kontrol altına almak için ilk tercih edilecek ilaçlar intravenöz benzodiazepinlerdir (midazolam).",
+   "pdfSayfalari": [
+    29,
+    30
+   ],
+   "sourcePdf": {
+    "startPage": 29,
+    "endPage": 30
+   }
+  },
+  {
+   "slideNumber": 27,
+   "title": "Kardiyotoksisite Mekanizmaları ve İntravenöz Lipid Tedavisi",
+   "bolum": "6",
+   "content": "Lokal anestezik sistemik toksisitesinin en ölümcül bileşeni kardiyovasküler kollapstır ve özellikle lipofilik ajanlarla tetiklenir.\n\n- **Miyokardiyal İleti Blokajı:** Lokal anestezikler kardiyak sodyum kanallarını (Nav1.5) ve kalsiyum kanallarını bloke ederek PR ve QRS aralıklarını uzatır; negatif inotrop ve dromotrop etki yapar.\n- **Bupivakain Kardiyotoksisitesi:** Bupivakain miyokardiyal kanallara hızla bağlanır ancak son derece yavaş ayrılır ('fast in, slow out'); refrakter ventriküler taşikardi ve asistoliye yol açar.\n- **İntravenöz Lipid Tedavisi (Lipid Sink):** Kardiyovasküler kollaps geliştiğinde yüzde 20 intravenöz lipid emülsiyonu infüzyonu hayat kurtarıcıdır.\n- **Lipid Yutağı Hipotezi:** Dolaşımdaki lipit damlacıkları son derece lipofilik olan bupivakaini kandan çekerek hapseder ve hedef miyokard dokusundan uzaklaştırır.\n\n> [!IMPORTANT]\n> Bupivakaine bağlı kardiyak arrest durumunda standart resüsitasyon önlemleri yetersiz kalabilir; derhal yüzde 20 lipid emülsiyonu infüzyonuna başlanmalı ve vazopressin kullanımından kaçınılmalıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Bupivakain kardiyotoksisitesinde dolaşımdaki lipofilik ilacı hapsederek miyokarddan temizleyen spesifik antidot tedavisi hangisidir?",
+     "options": [
+      {
+       "text": "Yüzde 20 intravenöz lipid emülsiyonu infüzyonu.",
+       "isCorrect": true,
+       "explanation": "Yüzde 20 intravenöz lipid emülsiyonu infüzyonu ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "İntravenöz yüksek doz kalsiyum glukonat.",
+       "isCorrect": false,
+       "explanation": "İntravenöz yüksek doz kalsiyum glukonat kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Oral aktif kömür süspansiyonu.",
+       "isCorrect": false,
+       "explanation": "Oral aktif kömür süspansiyonu kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "İntravenöz hipertonik salin solüsyonu.",
+       "isCorrect": false,
+       "explanation": "İntravenöz hipertonik salin solüsyonu kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s27-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kardiyak iletide 'fast in, slow out' kinetiği ile en şiddetli kardiyotoksisite oluşturan uzun etkili ajan {bupivakain molekülüdür}.",
+     "maskedTerm": "bupivakain molekülüdür",
+     "id": "k48-s27-e2",
+     "hint": "Uygulanan temel tedavi kuralıdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Kardiyotoksisite ve Lipid Tedavisi",
+     "items": [
+      {
+       "text": "Bupivakain kardiyak sodyum kanallarından çok yavaş ayrılarak refrakter aritmi yapar.",
+       "isLie": false,
+       "explanation": "Bupivakain kardiyak sodyum kanallarından çok yavaş ayrılarak refrakter aritmi yapar ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Yüzde 20 intravenöz lipid emülsiyonu lipofilik ilacı plazmada hapseder.",
+       "isLie": false,
+       "explanation": "Yüzde 20 intravenöz lipid emülsiyonu lipofilik ilacı plazmada hapseder ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Lokal anestezikler miyokard kasılma gücünü ve iletim hızını kat kat artırır.",
+       "isLie": true,
+       "explanation": "Lokal anestezikler miyokard kasılma gücünü ve iletim hızını kat kat artırır ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s27-e3"
+    },
+    {
+     "type": "active_recall",
+     "question": "Bupivakain kardiyotoksisitesinde plazmadaki ilacı hapsederek hedef dokulardan uzaklaştıran yüzde 20 kurtarma solüsyonu nedir?",
+     "answer": "İntravenöz lipid emülsiyonudur (Lipid sink).",
+     "id": "k48-s27-e4"
+    }
+   ],
+   "id": "k2-48-d-s27",
+   "synthesisNarrative": "Lokal anestezik sistemik toksisitesinin en ölümcül bileşeni kardiyovasküler kollapstır ve özellikle lipofilik ajanlarla tetiklenir.\n\n- **Miyokardiyal İleti Blokajı:** Lokal anestezikler kardiyak sodyum kanallarını (Nav1.5) ve kalsiyum kanallarını bloke ederek PR ve QRS aralıklarını uzatır; negatif inotrop ve dromotrop etki yapar.\n- **Bupivakain Kardiyotoksisitesi:** Bupivakain miyokardiyal kanallara hızla bağlanır ancak son derece yavaş ayrılır ('fast in, slow out'); refrakter ventriküler taşikardi ve asistoliye yol açar.\n- **İntravenöz Lipid Tedavisi (Lipid Sink):** Kardiyovasküler kollaps geliştiğinde yüzde 20 intravenöz lipid emülsiyonu infüzyonu hayat kurtarıcıdır.\n- **Lipid Yutağı Hipotezi:** Dolaşımdaki lipit damlacıkları son derece lipofilik olan bupivakaini kandan çekerek hapseder ve hedef miyokard dokusundan uzaklaştırır.\n\n> [!IMPORTANT]\n> Bupivakaine bağlı kardiyak arrest durumunda standart resüsitasyon önlemleri yetersiz kalabilir; derhal yüzde 20 lipid emülsiyonu infüzyonuna başlanmalı ve vazopressin kullanımından kaçınılmalıdır.",
+   "pdfSayfalari": [
+    31,
+    32
+   ],
+   "sourcePdf": {
+    "startPage": 31,
+    "endPage": 32
+   }
+  },
+  {
+   "slideNumber": 28,
+   "title": "Konsantrasyon-Yanıt Eğrileri ve pH-pKa İyonizasyon Dinamikleri",
+   "bolum": "6",
+   "content": "Lokal anesteziklerin biyolojik etkisi uygulanan konsantrasyona, doku pH'sına ve ilacın pKa değerine doğrudan bağımlıdır.\n\n- **Konsantrasyon-Yanıt Eğrisi:** Sinir lifinde tam blokaj sağlanabilmesi için ilacın belirli bir eşik konsantrasyonun üzerinde olması gerekir; bu eşiğin altında blok gelişmez.\n- **İyonizasyon Eğrileri:** Bupivakainin pKa'sı 8,1 iken lidokainin pKa'sı 7,9'dur. Fizyolojik pH'da (7,4) pKa'sı fizyolojik pH'ya daha yakın olan lidokain daha yüksek oranda non-iyonize formda bulunur.\n- **Etki Başlama Hızı:** Non-iyonize oranı yüksek olan lidokain zardan hızla geçerek 2-4 dakika içinde etki gösterirken, bupivakainin etki başlangıcı daha yavaştır (10-15 dakika).\n- **Asidoz Kayması:** Doku pH'sı düştüğünde her iki ajanda da iyonize form katlanarak artar ve zardan geçebilen serbest baz miktarı dramatik şekilde çöker.\n\n> [!NOTE]\n> Bir lokal anesteziğin pKa değeri fizyolojik pH olan 7,4'e ne kadar yakınsa, ortamda o kadar çok non-iyonize fraksiyon bulunur ve etki başlangıcı o kadar hızlı gerçekleşir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Lidokainin (pKa 7,9) bupivakaine (pKa 8,1) kıyasla klinik olarak daha hızlı etki başlatmasının temel biyokimyasal gerekçesi hangisidir?",
+     "options": [
+      {
+       "text": "Fizyolojik pH'da non-iyonize fraksiyonunun daha yüksek olması.",
+       "isCorrect": true,
+       "explanation": "Fizyolojik pH'da non-iyonize fraksiyonunun daha yüksek olması ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "Molekül ağırlığının bupivakainden beş kat büyük olması.",
+       "isCorrect": false,
+       "explanation": "Molekül ağırlığının bupivakainden beş kat büyük olması kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Kalsiyum kanallarını bloke etmesi.",
+       "isCorrect": false,
+       "explanation": "Kalsiyum kanallarını bloke etmesi kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Plazma proteinlerine yüzde yüz bağlanması.",
+       "isCorrect": false,
+       "explanation": "Plazma proteinlerine yüzde yüz bağlanması kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s28-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Fizyolojik pH düzeyinde pKa değeri 7,4'e yakın olan lokal anesteziklerin {non-iyonize fraksiyonu} daha yüksektir.",
+     "maskedTerm": "non-iyonize fraksiyonu",
+     "id": "k48-s28-e2",
+     "hint": "Önemli anatomik referanstır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Konsantrasyon Eğrileri ve İyonizasyon",
+     "items": [
+      {
+       "text": "pKa değeri 7,4'e yakın moleküllerde non-iyonize serbest baz oranı yüksektir.",
+       "isLie": false,
+       "explanation": "pKa değeri 7,4'e yakın moleküllerde non-iyonize serbest baz oranı yüksektir ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Lidokain bupivakaine göre daha hızlı etki başlangıcı sergiler.",
+       "isLie": false,
+       "explanation": "Lidokain bupivakaine göre daha hızlı etki başlangıcı sergiler ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Asidik doku ortamında serbest non-iyonize baz fraksiyonu maksimum düzeye fırlar.",
+       "isLie": true,
+       "explanation": "Asidik doku ortamında serbest non-iyonize baz fraksiyonu maksimum düzeye fırlar ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s28-e3"
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Normal Doku (pH 7,4)",
+     "rightTitle": "Enflame ve Asidik Doku (pH 6,0)",
+     "leftPoints": [
+      "Yeterli non-iyonize baz fraksiyonu mevcuttur",
+      "Lipofilik zardan akson içine difüzyon hızlıdır",
+      "Klinik anestezi dakikalar içinde başarıyla kurulur"
+     ],
+     "rightPoints": [
+      "İlaç molekülleri yoğun şekilde protonlanarak iyonize olur",
+      "İyonize moleküller lipofilik sinir zarını geçemez",
+      "Klinik anestezi yetersiz kalır veya tamamen başarısız olur"
+     ],
+     "id": "k48-s28-e4"
+    }
+   ],
+   "id": "k2-48-d-s28",
+   "synthesisNarrative": "Lokal anesteziklerin biyolojik etkisi uygulanan konsantrasyona, doku pH'sına ve ilacın pKa değerine doğrudan bağımlıdır.\n\n- **Konsantrasyon-Yanıt Eğrisi:** Sinir lifinde tam blokaj sağlanabilmesi için ilacın belirli bir eşik konsantrasyonun üzerinde olması gerekir; bu eşiğin altında blok gelişmez.\n- **İyonizasyon Eğrileri:** Bupivakainin pKa'sı 8,1 iken lidokainin pKa'sı 7,9'dur. Fizyolojik pH'da (7,4) pKa'sı fizyolojik pH'ya daha yakın olan lidokain daha yüksek oranda non-iyonize formda bulunur.\n- **Etki Başlama Hızı:** Non-iyonize oranı yüksek olan lidokain zardan hızla geçerek 2-4 dakika içinde etki gösterirken, bupivakainin etki başlangıcı daha yavaştır (10-15 dakika).\n- **Asidoz Kayması:** Doku pH'sı düştüğünde her iki ajanda da iyonize form katlanarak artar ve zardan geçebilen serbest baz miktarı dramatik şekilde çöker.\n\n> [!NOTE]\n> Bir lokal anesteziğin pKa değeri fizyolojik pH olan 7,4'e ne kadar yakınsa, ortamda o kadar çok non-iyonize fraksiyon bulunur ve etki başlangıcı o kadar hızlı gerçekleşir.",
+   "pdfSayfalari": [
+    33,
+    34
+   ],
+   "sourcePdf": {
+    "startPage": 33,
+    "endPage": 34
+   }
+  },
+  {
+   "slideNumber": 29,
+   "title": "Geçici Nörolojik Semptomlar, Mepivakain ve Prilokain Methemoglobinemisi",
+   "bolum": "6",
+   "content": "Özel lokal anestezik ajanlar kendilerine özgü yan etki profilleri ve metabolik komplikasyonları ile ayrışır.\n\n- **Geçici Nörolojik Semptomlar (TNS):** Özellikle lidokain ile yapılan spinal anestezi sonrası kalçalarda ve bacaklarda şiddetli yanıcı ağrı ile karakterizedir; kalıcı motor defisit bırakmaz ancak konforu bozar.\n- **Mepivakain Özellikleri:** Vazodilatör etkisi en zayıf olan amid türevidir; vazokonstriktörsüz infiltrasyonlarda uzun etki sağlar ancak yenidoğanda metabolizması yavaş olduğundan obstetrik anestezide tercih edilmez.\n- **Prilokain ve Methemoglobinemi:** Prilokain karaciğerde metabolize edilirken o-toluidin molekülü açığa çıkar; o-toluidin hemoglobindeki demiri (Fe2+) oksitleyerek ferrik (Fe3+) methemoglobine dönüştürür.\n- **Methemoglobinemi Kliniği ve Tedavisi:** Oksijen tedavisine yanıtsız siyanoz ve çikolata renkli kan tablosu görülür; tedavisinde intravenöz metilen mavisi (1-2 mg/kg) uygulanır.\n\n> [!IMPORTANTDialog]\n> Benzokain içeren topikal spreyler de özellikle endoskopi öncesi aşırı kullanıldığında benzer şekilde methemoglobinemiye yol açabilir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Prilokain metaboliti o-toluidinin tetiklediği methemoglobinemi tablosunun spesifik antidot tedavisi hangisidir?",
+     "options": [
+      {
+       "text": "İntravenöz metilen mavisi enjeksiyonu.",
+       "isCorrect": true,
+       "explanation": "İntravenöz metilen mavisi enjeksiyonu ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "İntravenöz nalokson infüzyonu.",
+       "isCorrect": false,
+       "explanation": "İntravenöz nalokson infüzyonu kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Subkutan atropin sülfat.",
+       "isCorrect": false,
+       "explanation": "Subkutan atropin sülfat kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Oral dimerkaprol şelasyonu.",
+       "isCorrect": false,
+       "explanation": "Oral dimerkaprol şelasyonu kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s29-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Prilokainin metabolizması sonucu açığa çıkan {o-toluidin molekülü} hemoglobini oksitleyerek methemoglobinemiye yol açar.",
+     "maskedTerm": "o-toluidin molekülü",
+     "id": "k48-s29-e2",
+     "hint": "Standart kılavuz bilgisidir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "TNS, Mepivakain ve Prilokain Toksisitesi",
+     "items": [
+      {
+       "text": "Spinal lidokain sonrası geçici nörolojik semptomlar (TNS) görülebilir.",
+       "isLie": false,
+       "explanation": "Spinal lidokain sonrası geçici nörolojik semptomlar (TNS) görülebilir ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Prilokain kaynaklı methemoglobinemide metilen mavisi kullanılır.",
+       "isLie": false,
+       "explanation": "Prilokain kaynaklı methemoglobinemide metilen mavisi kullanılır ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Methemoglobinemi tablosunda venöz kan parlak pembe renk alır ve hasta iyileşir.",
+       "isLie": true,
+       "explanation": "Methemoglobinemi tablosunda venöz kan parlak pembe renk alır ve hasta iyileşir ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s29-e3"
+    },
+    {
+     "type": "active_recall",
+     "question": "Spinal lidokain uygulaması sonrası kalçalarda ve bacaklarda görülen, kalıcı motor defisit yapmayan ağrılı klinik tablo nedir?",
+     "answer": "Geçici nörolojik semptomlardır (TNS).",
+     "id": "k48-s29-e4"
+    }
+   ],
+   "id": "k2-48-d-s29",
+   "synthesisNarrative": "Özel lokal anestezik ajanlar kendilerine özgü yan etki profilleri ve metabolik komplikasyonları ile ayrışır.\n\n- **Geçici Nörolojik Semptomlar (TNS):** Özellikle lidokain ile yapılan spinal anestezi sonrası kalçalarda ve bacaklarda şiddetli yanıcı ağrı ile karakterizedir; kalıcı motor defisit bırakmaz ancak konforu bozar.\n- **Mepivakain Özellikleri:** Vazodilatör etkisi en zayıf olan amid türevidir; vazokonstriktörsüz infiltrasyonlarda uzun etki sağlar ancak yenidoğanda metabolizması yavaş olduğundan obstetrik anestezide tercih edilmez.\n- **Prilokain ve Methemoglobinemi:** Prilokain karaciğerde metabolize edilirken o-toluidin molekülü açığa çıkar; o-toluidin hemoglobindeki demiri (Fe2+) oksitleyerek ferrik (Fe3+) methemoglobine dönüştürür.\n- **Methemoglobinemi Kliniği ve Tedavisi:** Oksijen tedavisine yanıtsız siyanoz ve çikolata renkli kan tablosu görülür; tedavisinde intravenöz metilen mavisi (1-2 mg/kg) uygulanır.\n\n> [!IMPORTANTDialog]\n> Benzokain içeren topikal spreyler de özellikle endoskopi öncesi aşırı kullanıldığında benzer şekilde methemoglobinemiye yol açabilir.",
+   "pdfSayfalari": [
+    35,
+    35
+   ],
+   "sourcePdf": {
+    "startPage": 35,
+    "endPage": 35
+   }
+  },
+  {
+   "slideNumber": 30,
+   "title": "EMLA Ötektik Krem, Transdermal Anestezi ve Zakkum Toksisitesi",
+   "bolum": "6",
+   "content": "Lokal anestezi uygulamaları modern transdermal formülasyonlardan genel toksikolojik ilkelere kadar geniş bir yelpazeyi kapsar.\n\n- **EMLA Krem Bileşimi:** Yüzde 2,5 lidokain ve yüzde 2,5 prilokainin eşit oranlarda birleştirilmesiyle elde edilen ötektik bir karışımdır.\n- **Ötektik Nokta:** İki katı maddenin bir araya geldiğinde erime noktasının oda sıcaklığının altına (yaklaşık 18 dereceye) düşmesi ve sıvı-yağ fazına geçmesidir; bu sayede sağlam deriden hızla emilir.\n- **Klinik Endikasyonlar:** Çocuklarda ağrısız damar yolu açılması, kan alma, küçük deri biyopsileri ve dövme silme işlemlerinde deriye 1 saat önceden oklüzif pansumanla sürülür.\n- **Ders Kapanışı ve Zakkum Çiçeği:** Dersin kapanışında değinilen zakkum (Nerium oleander), kardiyak glikozitler içeren ve Na/K-ATPaz pompasını inhibe ederek ölümcül kardiyotoksisite oluşturan bitkisel bir toksindir.\n\n> [!NOTE]\n> EMLA krem mukozaya değil sağlam deriye uygulanmalıdır; geniş yanık sahalarında veya açık yaralarda sistemik emilime bağlı toksisite gelişebilir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "EMLA kremin sağlam deriden transdermal emilmesini sağlayan temel fizikokimyasal özellik hangisidir?",
+     "options": [
+      {
+       "text": "Erime noktası oda sıcaklığının altına düşen ötektik karışım olması.",
+       "isCorrect": true,
+       "explanation": "Erime noktası oda sıcaklığının altına düşen ötektik karışım olması ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "İçinde radyoaktif iyot kristalleri barındırması.",
+       "isCorrect": false,
+       "explanation": "İçinde radyoaktif iyot kristalleri barındırması kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Yalnızca saf su fazında tamamen donması.",
+       "isCorrect": false,
+       "explanation": "Yalnızca saf su fazında tamamen donması kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Deriyi kimyasal olarak asitle yakıp eritmesi.",
+       "isCorrect": false,
+       "explanation": "Deriyi kimyasal olarak asitle yakıp eritmesi kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s30-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "EMLA krem yüzde 2,5 lidokain ile {yüzde 2,5 prilokain} içeren ötektik bir formülasyondur.",
+     "maskedTerm": "yüzde 2,5 prilokain",
+     "id": "k48-s30-e2",
+     "hint": "Temel klinik prensiptir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "EMLA Krem ve Toksikoloji İlkeleri",
+     "items": [
+      {
+       "text": "EMLA krem sağlam deriye sürülerek ağrısız damar yolu açılması sağlar.",
+       "isLie": false,
+       "explanation": "EMLA krem sağlam deriye sürülerek ağrısız damar yolu açılması sağlar ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Ötektik karışımlar oda sıcaklığında eriyerek sıvı fazda emilir.",
+       "isLie": false,
+       "explanation": "Ötektik karışımlar oda sıcaklığında eriyerek sıvı fazda emilir ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "EMLA krem geniş yanık yaralarına bolca sürülerek saatlerce bekletilmelidir.",
+       "isLie": true,
+       "explanation": "EMLA krem geniş yanık yaralarına bolca sürülerek saatlerce bekletilmelidir ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s30-e3"
+    },
+    {
+     "type": "active_recall",
+     "question": "Sağlam deriye 1 saat önceden sürülerek ağrısız kan alma sağlayan lidokain-prilokain ötektik preparatı nedir?",
+     "answer": "EMLA krem formülasyonudur.",
+     "id": "k48-s30-e4"
+    }
+   ],
+   "id": "k2-48-d-s30",
+   "synthesisNarrative": "Lokal anestezi uygulamaları modern transdermal formülasyonlardan genel toksikolojik ilkelere kadar geniş bir yelpazeyi kapsar.\n\n- **EMLA Krem Bileşimi:** Yüzde 2,5 lidokain ve yüzde 2,5 prilokainin eşit oranlarda birleştirilmesiyle elde edilen ötektik bir karışımdır.\n- **Ötektik Nokta:** İki katı maddenin bir araya geldiğinde erime noktasının oda sıcaklığının altına (yaklaşık 18 dereceye) düşmesi ve sıvı-yağ fazına geçmesidir; bu sayede sağlam deriden hızla emilir.\n- **Klinik Endikasyonlar:** Çocuklarda ağrısız damar yolu açılması, kan alma, küçük deri biyopsileri ve dövme silme işlemlerinde deriye 1 saat önceden oklüzif pansumanla sürülür.\n- **Ders Kapanışı ve Zakkum Çiçeği:** Dersin kapanışında değinilen zakkum (Nerium oleander), kardiyak glikozitler içeren ve Na/K-ATPaz pompasını inhibe ederek ölümcül kardiyotoksisite oluşturan bitkisel bir toksindir.\n\n> [!NOTE]\n> EMLA krem mukozaya değil sağlam deriye uygulanmalıdır; geniş yanık sahalarında veya açık yaralarda sistemik emilime bağlı toksisite gelişebilir.",
+   "pdfSayfalari": [
+    36,
+    37
+   ],
+   "sourcePdf": {
+    "startPage": 36,
+    "endPage": 37
+   }
+  },
+  {
+   "slideNumber": 31,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 6] Sistemik Toksisite, Yan Etkiler ve Özel Ajanlar",
+   "bolum": "6",
+   "isCheckpoint": true,
+   "content": "Bu son checkpoint sayfasında LAST belirtilerini, kardiyotoksisite ve lipid kurtarma tedavisini, TNS'yi, methemoglobinemiyi ve EMLA kremi pekiştiriyoruz.\n\n- **LAST Yönetimi:** Erken belirti ağızda uyuşma ve metalik tattır; konvülsiyonda benzodiazepin, kardiyovasküler kollapsta yüzde 20 lipid emülsiyonu verilir.\n- **Bupivakain Tehlikesi:** Hızlı girip yavaş çıkan kinetiğiyle en şiddetli ventriküler aritmileri tetikler.\n- **Prilokain ve Methemoglobinemi:** O-toluidin metaboliti ferrik demir oluşturur; antidotu metilen mavisidir.\n- **Spinal Lidokain ve TNS:** Kalça ve bacaklarda geçici ağrı yapar; kalıcı hasar bırakmaz.\n- **EMLA Krem:** Sağlam deriden emilen lidokain-prilokain ötektik karışımıdır.\n\n> [!NOTE]\n> Tüm teorik bölümleri tamamladınız; şimdi finaldeki ders sonu oyunlarıyla öğrendiğiniz bilgileri dinamik olarak test etme zamanı!",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Lokal anestezik sistemik toksisitesinde (LAST) kardiyovasküler kollaps geliştiğinde ilk tercih edilecek hayat kurtarıcı infüzyon hangisidir?",
+     "options": [
+      {
+       "text": "Yüzde 20 intravenöz lipid emülsiyonu.",
+       "isCorrect": true,
+       "explanation": "Yüzde 20 intravenöz lipid emülsiyonu ifadesi tıbbi farmakoloji ilkeleriyle tam uyumludur. Bu seçenek soruda sorgulanan fizyopatolojik ve farmakolojik mekanizmayı eksiksiz açıklamaktadır."
+      },
+      {
+       "text": "Yüksek doz intravenöz vazopressin.",
+       "isCorrect": false,
+       "explanation": "Yüksek doz intravenöz vazopressin kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Konsantre kalsiyum klorür bolusu.",
+       "isCorrect": false,
+       "explanation": "Konsantre kalsiyum klorür bolusu kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      },
+      {
+       "text": "Saf dekstrozlu hipotonik sıvı.",
+       "isCorrect": false,
+       "explanation": "Saf dekstrozlu hipotonik sıvı kavramı farklı bir fizyolojik veya farmakolojik süreci tanımlar. Söz konusu seçenek bu soruda hedeflenen temel etki mekanizması ile örtüşmemektedir."
+      }
+     ],
+     "id": "k48-s31-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Prilokain kaynaklı methemoglobinemi tedavisinde intravenöz yoldan {metilen mavisi} uygulanır.",
+     "maskedTerm": "metilen mavisi",
+     "id": "k48-s31-e2",
+     "hint": "Spesifik farmakolojik kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Toksisite ve Özel Ajanlar Özeti",
+     "items": [
+      {
+       "text": "Bupivakain kardiyak arrestinde intravenöz lipid emülsiyonu hayat kurtarıcıdır.",
+       "isLie": false,
+       "explanation": "Bupivakain kardiyak arrestinde intravenöz lipid emülsiyonu hayat kurtarıcıdır ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Prilokain metaboliti o-toluidin methemoglobinemiye yol açabilir.",
+       "isLie": false,
+       "explanation": "Prilokain metaboliti o-toluidin methemoglobinemiye yol açabilir ifadesi standart tıbbi farmakoloji kaynakları ile tam uyumlu ve bilimsel olarak doğru bir tespittir."
+      },
+      {
+       "text": "Lokal anestezik zehirlenmesinde ilk hedef hastaya genel anestezi verip uyutmaktır.",
+       "isLie": true,
+       "explanation": "Lokal anestezik zehirlenmesinde ilk hedef hastaya genel anestezi verip uyutmaktır ifadesi gerçeği yansıtmaz ve hatalı bir tıbbi bilgidir. Doğru klinik mekanizma bu önermenin tam tersi yönde gerçekleşir."
+      }
+     ],
+     "id": "k48-s31-e3"
+    },
+    {
+     "type": "venn_grid",
+     "title": "Lidokain ve Bupivakain Özellikleri",
+     "labelA": "Lidokain Profili",
+     "labelB": "Bupivakain Profili",
+     "items": [
+      {
+       "criterion": "Spinal anestezi sonrası geçici nörolojik semptom (TNS) riski taşır",
+       "correct": "A"
+      },
+      {
+       "criterion": "Fizyolojik pH'ya yakın pKa (7,9) ile hızlı etki başlangıcı gösterir",
+       "correct": "A"
+      },
+      {
+       "criterion": "Kardiyak kanallardan yavaş ayrılarak refrakter kardiyotoksisite yapar",
+       "correct": "B"
+      },
+      {
+       "criterion": "Voltaj kapılı sodyum kanallarını bloke ederek fokal anestezi oluşturur",
+       "correct": "both"
+      }
+     ],
+     "id": "k48-s31-e4"
+    }
+   ],
+   "id": "k2-48-d-s31",
+   "synthesisNarrative": "Bu son checkpoint sayfasında LAST belirtilerini, kardiyotoksisite ve lipid kurtarma tedavisini, TNS'yi, methemoglobinemiyi ve EMLA kremi pekiştiriyoruz.\n\n- **LAST Yönetimi:** Erken belirti ağızda uyuşma ve metalik tattır; konvülsiyonda benzodiazepin, kardiyovasküler kollapsta yüzde 20 lipid emülsiyonu verilir.\n- **Bupivakain Tehlikesi:** Hızlı girip yavaş çıkan kinetiğiyle en şiddetli ventriküler aritmileri tetikler.\n- **Prilokain ve Methemoglobinemi:** O-toluidin metaboliti ferrik demir oluşturur; antidotu metilen mavisidir.\n- **Spinal Lidokain ve TNS:** Kalça ve bacaklarda geçici ağrı yapar; kalıcı hasar bırakmaz.\n- **EMLA Krem:** Sağlam deriden emilen lidokain-prilokain ötektik karışımıdır.\n\n> [!NOTE]\n> Tüm teorik bölümleri tamamladınız; şimdi finaldeki ders sonu oyunlarıyla öğrendiğiniz bilgileri dinamik olarak test etme zamanı!"
+  },
+  {
+   "slideNumber": 32,
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Lokal Anestezik İlaçlar",
+   "bolum": "6",
+   "isGameFinale": true,
+   "content": "Tebrikler! Lokal Anestezik İlaçlar dersini başarıyla tamamladınız.\n\nBu final bölümünde lokal anesteziklerin klinik duyu kaybı sırasını, maksimum güvenli dozlarını, hemodinamik ve fizyopatolojik pertürbasyon senaryolarını ve metin onarımlarını oyunlaştırılmış formatta test edeceksiniz.\n\n- **Sıralama:** Periferik sinir blokajında duyu modalitelerinin kayboluş sırasını diziniz.\n- **Sürgü:** Düz lidokainin tek seferlik kilogram başına maksimum güvenli dozunu tahmin ediniz.\n- **Dinamik Pertürbasyon:** Bupivakain toksisitesinde intravenöz lipid emülsiyonu infüzyonunun klinik parametreler üzerindeki yönünü belirleyiniz.\n- **Metin Onarımı:** Farmakolojik tanımdaki hatalı terimi saptayarak doğrusuyla değiştiriniz.",
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "prompt": "Periferik bir sinirde lokal anestezik blokajı başladığında duyu modalitelerinin kayboluş sırasını başlangıçtan sona doğru diziniz.",
+     "steps": [
+      "Ağrı duyusu",
+      "Isı duyusu",
+      "Dokunma duyusu",
+      "Derin basınç duyusu",
+      "Motor fonksiyon"
+     ],
+     "explanation": "Lokal anesteziye en duyarlı küçük miyelinli A-delta ve miyelinsiz C liflerinin ilettiği ağrı ve ısı ilk kaybolur; kalın miyelinli motor lifler ise en son bloke olur.",
+     "id": "k48-s32-e1"
+    },
+    {
+     "type": "estimate_slider",
+     "prompt": "Adrenalinsiz saf lidokainin tek seferlik enjeksiyonda önerilen kilogram başına maksimum güvenli dozunu (mg/kg) tahmin ediniz.",
+     "min": 1,
+     "max": 10,
+     "unit": "mg/kg",
+     "answer": 4.5,
+     "tolerance": 1.0,
+     "step": 0.5,
+     "explanation": "Saf lidokainin maksimum güvenli dozu 4,5 mg/kg (toplam düz dozda 300 mg); adrenalinli kombinasyonda ise 7 mg/kg'a (toplam 500 mg) kadar çıkabilir.",
+     "id": "k48-s32-e2"
+    },
+    {
+     "type": "perturbation",
+     "scenario": "Bupivakain enjeksiyonu sonrası şiddetli ventriküler aritmi ve kardiyovasküler kollaps gelişen hastaya acil yüzde 20 intravenöz lipid emülsiyonu infüzyonu başlanıyor.",
+     "parameters": [
+      {
+       "name": "Plazmada serbest bupivakain konsantrasyonu",
+       "correct": "down",
+       "explanation": "Lipid damlacıkları dolaşımdaki lipofilik bupivakaini hapsederek serbest fraksiyonu hızla düşürür."
+      },
+      {
+       "name": "Miyokardiyal elektriksel stabilite ve kardiyak debi",
+       "correct": "up",
+       "explanation": "Kardiyak sodyum kanallarının serbest kalmasıyla ventriküler ileti düzelir ve debi toparlar."
+      },
+      {
+       "name": "Refrakter ventriküler aritmi ve asistoli riski",
+       "correct": "down",
+       "explanation": "Miyokarddan ilacın temizlenmesi ölümcül kardiyak aritmi riskini ortadan kaldırır."
+      }
+     ],
+     "id": "k48-s32-e3"
+    },
+    {
+     "type": "fix_the_text",
+     "text": "Prilokain metaboliti olan o-toluidinin yol açtığı edinsel methemoglobinemi tablosunun acil tedavisinde intravenöz nalokson infüzyonu uygulanır.",
+     "errors": [
+      {
+       "wrong": "nalokson",
+       "correct": "metilen mavisi",
+       "options": [
+        "nalokson",
+        "metilen mavisi",
+        "flumazenil"
+       ],
+       "explanation": "Methemoglobinemide ferrik demiri indirgemek için intravenöz metilen mavisi kullanılır; nalokson ise opioid zehirlenmelerinin antidotudur."
+      }
+     ],
+     "id": "k48-s32-e4"
+    }
+   ],
+   "id": "k2-48-d-s32",
+   "synthesisNarrative": "Tebrikler! Lokal Anestezik İlaçlar dersini başarıyla tamamladınız.\n\nBu final bölümünde lokal anesteziklerin klinik duyu kaybı sırasını, maksimum güvenli dozlarını, hemodinamik ve fizyopatolojik pertürbasyon senaryolarını ve metin onarımlarını oyunlaştırılmış formatta test edeceksiniz.\n\n- **Sıralama:** Periferik sinir blokajında duyu modalitelerinin kayboluş sırasını diziniz.\n- **Sürgü:** Düz lidokainin tek seferlik kilogram başına maksimum güvenli dozunu tahmin ediniz.\n- **Dinamik Pertürbasyon:** Bupivakain toksisitesinde intravenöz lipid emülsiyonu infüzyonunun klinik parametreler üzerindeki yönünü belirleyiniz.\n- **Metin Onarımı:** Farmakolojik tanımdaki hatalı terimi saptayarak doğrusuyla değiştiriniz."
+  }
+ ],
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "matchedPastQuestionsCount": 1,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

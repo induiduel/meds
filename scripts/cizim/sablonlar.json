@@ -278,6 +278,269 @@
         "kaynak": "y25-k2-06-agri-yollari-ve-mekanizmalari",
         "zaman": "2026-10-25"
       }
+    },
+    "risk_artisi": {
+      "ad": "Durum → risk artışı",
+      "duzen": "tablo",
+      "basliklar": [
+        "Durum",
+        "Risk artışı"
+      ],
+      "ne_zaman": "bir olayın (tekrar, komplikasyon) riskini artıran durumlar ve artış oranları",
+      "ornek": "EEG'de epileptiform anomali → 2,16 kat",
+      "eklenme": {
+        "kaynak": "y25-k2-24-epilepsi",
+        "zaman": "2026-10-26"
+      }
+    },
+    "klinik_seyir": {
+      "ad": "Klinik seyir (sırayla gelişen evreler)",
+      "duzen": "adimlar",
+      "ne_zaman": "bir nöbetin/tablonun zaman içinde sırayla gelişen klinik evreleri (neden-sonuç değil, sıra)",
+      "ornek": "motor duraklama → oroalimanter otomatizma → diğer otomatizmalar",
+      "eklenme": {
+        "kaynak": "y25-k2-24-epilepsi",
+        "zaman": "2026-10-26"
+      }
+    },
+    "olcut_deger": {
+      "ad": "Ölçüt ve değeri",
+      "duzen": "tablo",
+      "basliklar": [
+        "Ölçüt",
+        "Değer"
+      ],
+      "ne_zaman": "epidemiyolojik ya da sayısal ölçütlerin değerleriyle listelenmesi",
+      "ornek": "İnsidans | yılda 20-50/100.000",
+      "eklenme": {
+        "kaynak": "y25-k2-24-epilepsi",
+        "zaman": "2026-10-26"
+      }
+    },
+    "sendrom_kromozom": {
+      "ad": "Sendrom → kromozom anomalisi",
+      "duzen": "tablo",
+      "basliklar": [
+        "Sendrom",
+        "Kromozom anomalisi"
+      ],
+      "ne_zaman": "isimli bir genetik sendromun altta yatan kromozom değişikliğiyle eşleşmesi",
+      "ornek": "Down sendromu | trizomi 21",
+      "eklenme": {
+        "kaynak": "y25-k2-24-epilepsi",
+        "zaman": "2026-10-26"
+      }
+    },
+    "kromozom_klinik": {
+      "ad": "Kromozom anomalisi → klinik tablo",
+      "duzen": "tablo",
+      "basliklar": [
+        "Kromozom anomalisi",
+        "Klinik tablo"
+      ],
+      "ne_zaman": "belirli bir kromozom yeniden düzenlemesinin kendine özgü klinik/EEG bulgularıyla eşleşmesi",
+      "ornek": "halka 20 kromozomu | uzamış yüksek voltajlı yavaş dalga, dirençli epilepsi",
+      "eklenme": {
+        "kaynak": "y25-k2-26-norolojik-hastaliklar-genetigi",
+        "zaman": "2026-10-26"
+      }
+    },
+    "gen_urun_epilepsi": {
+      "ad": "Gen → kodladığı ürün → ilişkili hastalık",
+      "duzen": "tablo",
+      "basliklar": [
+        "Gen",
+        "Kodladığı ürün",
+        "İlişkili hastalık"
+      ],
+      "ne_zaman": "tek gen hastalıklarında genin kodladığı protein ve mutasyonunun yol açtığı/ilişkili olduğu hastalık",
+      "ornek": "CHRNA4 | nöral asetilkolin reseptörü | OD nokturnal frontal lob epilepsisi",
+      "eklenme": {
+        "kaynak": "y25-k2-26-norolojik-hastaliklar-genetigi",
+        "zaman": "2026-10-26"
+      }
+    },
+    "gen_islev": {
+      "ad": "Gen ve işlevi",
+      "duzen": "tablo",
+      "basliklar": [
+        "Gen",
+        "Kodladığı ürün / işlevi"
+      ],
+      "ne_zaman": "bir hastalıkla ilişkili genlerin kodladığı protein ya da üstlendiği işlev",
+      "ornek": "SCN1A → voltaj kapılı sodyum kanalı",
+      "eklenme": {
+        "kaynak": "y25-k2-26-norolojik-hastaliklar-genetigi",
+        "zaman": "2026-10-26"
+      }
+    },
+    "gen_protein": {
+      "ad": "Gen → kodladığı protein",
+      "duzen": "tablo",
+      "basliklar": [
+        "Gen",
+        "Kodladığı protein"
+      ],
+      "ne_zaman": "bir genin kodladığı proteinle eşleşmesi (genetik hastalıklar)",
+      "ornek": "TSC1 | hamartin",
+      "eklenme": {
+        "kaynak": "y25-k2-26-norolojik-hastaliklar-genetigi",
+        "zaman": "2026-10-26"
+      }
+    },
+    "siniflama_olcut": {
+      "ad": "Sınıflama ölçütü ve grupları",
+      "duzen": "tablo",
+      "basliklar": [
+        "Sınıflama ölçütü",
+        "Gruplar"
+      ],
+      "ne_zaman": "bir hastalığın farklı ölçütlere göre gruplara ayrılması",
+      "ornek": "Başlama yaşı | prelingual / postlingual",
+      "eklenme": {
+        "kaynak": "y25-k2-26-norolojik-hastaliklar-genetigi",
+        "zaman": "2026-10-26"
+      }
+    },
+    "gebelik_haftasi_tarama": {
+      "ad": "Gebelik haftası → yapılan tarama",
+      "duzen": "tablo",
+      "basliklar": [
+        "Gebelik haftası",
+        "Tarama / uygulama"
+      ],
+      "ne_zaman": "doğum öncesi izlemde hangi gebelik haftasında hangi tarama ya da uygulamanın yapıldığı",
+      "ornek": "24-28. hafta | 75 g glukoz ile gestasyonel diyabet taraması",
+      "eklenme": {
+        "kaynak": "y25-k2-27-periyodik-muayeneler",
+        "zaman": "2026-10-26"
+      }
+    },
+    "muayene_bakilan": {
+      "ad": "Muayene bölümü → bakılanlar",
+      "duzen": "tablo",
+      "basliklar": [
+        "Muayene bölümü",
+        "Bakılanlar"
+      ],
+      "ne_zaman": "bir fizik muayenenin bölümlerinde neye bakıldığı/neyin ölçüldüğü (izlem, periyodik muayene)",
+      "ornek": "karın muayenesi | fundus yüksekliği",
+      "eklenme": {
+        "kaynak": "y25-k2-27-periyodik-muayeneler",
+        "zaman": "2026-10-26"
+      }
+    },
+    "izlem_tarama": {
+      "ad": "İzlem zamanı → yapılacak tarama",
+      "duzen": "tablo",
+      "basliklar": [
+        "İzlem / zaman",
+        "Yapılacak tarama / değerlendirme"
+      ],
+      "ne_zaman": "periyodik sağlık izleminde hangi zamanda/izlemde hangi taramanın yapıldığı",
+      "ornek": "41. gün izlemi | gelişimsel kalça displazisi taraması",
+      "eklenme": {
+        "kaynak": "y25-k2-27-periyodik-muayeneler",
+        "zaman": "2026-10-26"
+      }
+    },
+    "durum_yaklasim": {
+      "ad": "Durum → yaklaşım",
+      "duzen": "tablo",
+      "basliklar": [
+        "Durum",
+        "Yaklaşım"
+      ],
+      "ne_zaman": "bir klinik durum ya da tarama sonucunda yapılacak işlem (sevk, profilaksi, tedavi başlama)",
+      "ornek": "strabismus saptanan çocuk | her yaşta sevk",
+      "eklenme": {
+        "kaynak": "y25-k2-27-periyodik-muayeneler",
+        "zaman": "2026-10-26"
+      }
+    },
+    "yas_tarama": {
+      "ad": "Yaş / dönem → yapılacak tarama",
+      "duzen": "tablo",
+      "basliklar": [
+        "Yaş / dönem",
+        "Tarama"
+      ],
+      "ne_zaman": "periyodik muayenede hangi yaşta hangi tarama/muayene yapılır",
+      "ornek": "18–36 ay | otizm değerlendirmesi",
+      "eklenme": {
+        "kaynak": "y25-k2-27-periyodik-muayeneler",
+        "zaman": "2026-10-26"
+      }
+    },
+    "yas_siklik": {
+      "ad": "Yaş grubu → tarama sıklığı",
+      "duzen": "tablo",
+      "basliklar": [
+        "Yaş grubu",
+        "Sorgulama / tarama sıklığı"
+      ],
+      "ne_zaman": "periyodik muayenede bir taramanın yaş gruplarına göre ne sıklıkla yapıldığı",
+      "ornek": "0–6 yaş | her muayenede",
+      "eklenme": {
+        "kaynak": "y25-k2-27-periyodik-muayeneler",
+        "zaman": "2026-10-26"
+      }
+    },
+    "tarama_takvimi": {
+      "ad": "Hedef grup → tarama önerisi",
+      "duzen": "tablo",
+      "basliklar": [
+        "Hedef grup",
+        "Tarama / öneri"
+      ],
+      "ne_zaman": "periyodik muayene ve kanser taramasında hangi yaş/risk grubuna hangi test ne sıklıkla yapılır",
+      "ornek": "40-69 yaş kadın → iki yılda bir mamografi",
+      "eklenme": {
+        "kaynak": "y25-k2-27-periyodik-muayeneler",
+        "zaman": "2026-10-26"
+      }
+    },
+    "duzey_fonksiyon": {
+      "ad": "Yaralanma seviyesi ve fonksiyon",
+      "duzen": "tablo",
+      "basliklar": [
+        "Yaralanma seviyesi",
+        "Beklenen fonksiyon"
+      ],
+      "ne_zaman": "omurilik/sinir yaralanma seviyesine göre ulaşılabilecek fonksiyonel düzey",
+      "ornek": "T11-L2 → ev içi ambulasyon",
+      "eklenme": {
+        "kaynak": "y25-k2-28-norolojik-hastaliklarda-rehabilitasyon",
+        "zaman": "2026-10-26"
+      }
+    },
+    "yas_insidans": {
+      "ad": "Yaş grubu → insidans",
+      "duzen": "tablo",
+      "basliklar": [
+        "Yaş grubu",
+        "İnsidans"
+      ],
+      "ne_zaman": "bir hastalığın sıklığının yaş gruplarına göre artışı (yaş risk faktörü)",
+      "ornek": "75-84 yaş | %19",
+      "eklenme": {
+        "kaynak": "y25-k2-30-norodejeneratif-hastaliklar",
+        "zaman": "2026-10-26"
+      }
+    },
+    "hastalik_inkluzyon": {
+      "ad": "Hastalık → inklüzyon ve yerleşim",
+      "duzen": "tablo",
+      "basliklar": [
+        "Hastalık",
+        "İnklüzyon / yerleşim"
+      ],
+      "ne_zaman": "nörodejeneratif hastalıkların biriken protein inklüzyonu ve hücre yerleşimiyle eşleşmesi",
+      "ornek": "multipl sistem atrofisi | alfa sinüklein, oligodendrositlerde",
+      "eklenme": {
+        "kaynak": "y25-k2-30-norodejeneratif-hastaliklar",
+        "zaman": "2026-10-26"
+      }
     }
   }
 }

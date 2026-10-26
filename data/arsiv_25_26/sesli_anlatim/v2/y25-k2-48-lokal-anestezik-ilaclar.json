@@ -1,0 +1,2909 @@
+{
+ "surum": 2,
+ "ders_id": "k2-48",
+ "baslik": "Lokal Anestezik İlaçlar",
+ "bolumler": [
+  {
+   "id": "k2-48-b01",
+   "baslik": "Giriş ve Temel Anestezi Kavramları",
+   "paragraflar": [
+    {
+     "id": "k2-48-p0001",
+     "sayfa": 1,
+     "cumleler": [
+      {
+       "id": "k2-48-c0001",
+       "ekran": "Lokal Anestezik İlaçlar dersimize hoş geldiniz.",
+       "ses": "Lokal Anestezik İlaçlar dersimize hoş geldiniz.",
+       "tur": "kapak",
+       "duzey": 0,
+       "slayt_adim": "k2-48-d-s01",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Tababet sanatı üç şeydir 1 el mahareti ile aletler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0002",
+       "ekran": "Tababet ve hekimlik sanatı el mahareti ile aletler, rasyonel ilaç kullanımı ve yüksek meslek ahlakının ayrılmaz bir sentezidir.",
+       "ses": "Tababet ve hekimlik sanatı el mahareti ile aletler, rasyonel ilaç kullanımı ve yüksek meslek ahlakının ayrılmaz bir sentezidir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s01",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Tababet sanatı üç şeydir 1 el mahareti ile aletler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0003",
+       "ekran": "Klinik uygulamada erdem; hastaya şifayı maharetle, ilacı ise farmakolojik prensiplere sadık kalarak büyük bir rikkat ve özenle sunmaktır.",
+       "ses": "Klinik uygulamada erdem; hastaya şifayı maharetle, ilacı ise farmakolojik prensiplere sadık kalarak büyük bir rikkat ve özenle sunmaktır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s01",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Tababet sanatı üç şeydir 1 el mahareti ile aletler"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0002",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k2-48-c0004",
+       "ekran": "Lokal anestezi tarih boyunca hem fiziksel, hem kimyasal, hem de geleneksel tıbbi yöntemlerle elde edilmeye çalışılmıştır.",
+       "ses": "Lokal anestezi tarih boyunca hem fiziksel, hem kimyasal, hem de geleneksel tıbbi yöntemlerle elde edilmeye çalışılmıştır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s02",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Fiziksel tıbbi yöntemlerle Soğuk sıcak ışık ısı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0005",
+       "ekran": "Fiziksel yöntemler arasında soğuk, buz uygulamaları, ısı, ışık enerjisi ve mekanik bası gibi akson iletimini yavaşlatan metotlar yer alır.",
+       "ses": "Fiziksel yöntemler arasında soğuk, buz uygulamaları, ısı, ışık enerjisi ve mekanik bası gibi akson iletimini yavaşlatan metotlar yer alır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s02",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Fiziksel tıbbi yöntemlerle Soğuk sıcak ışık ısı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0006",
+       "ekran": "Kimyasal yöntemlerde ise koka bitkisinin özsuyundan elde edilen ekstreler ve modern moleküller kullanılmıştır.",
+       "ses": "Kimyasal yöntemlerde ise koka bitkisinin özsuyundan elde edilen ekstreler ve modern moleküller kullanılmıştır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s02",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Fiziksel tıbbi yöntemlerle Soğuk sıcak ışık ısı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0007",
+       "ekran": "Geleneksel tıpta ise akupunktur ve benzeri tradisyonel yaklaşımlarla bölgesel ağrı kontrolü sağlanmıştır.",
+       "ses": "Geleneksel tıpta ise akupunktur ve benzeri tradisyonel yaklaşımlarla bölgesel ağrı kontrolü sağlanmıştır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s02",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Fiziksel tıbbi yöntemlerle Soğuk sıcak ışık ısı"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0003",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k2-48-c0008",
+       "ekran": "Genel anestezi tüm vücutta yaygın bilinç kaybı ve santral sinir sistemi depresyonu oluştururken, lokal ve rejyonel anestezi bilinci tamamen korur.",
+       "ses": "Genel anestezi tüm vücutta yaygın bilinç kaybı ve santral sinir sistemi depresyonu oluştururken, lokal ve rejyonel anestezi bilinci tamamen korur.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s03",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Local treats only the location"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0009",
+       "ekran": "Lokal anestezi cerrahi girişimin yapılacağı sınırlı sahadaki serbest sinir uçlarını hedef alarak yalnızca o bölgedeki iletimi durdurur.",
+       "ses": "Lokal anestezi cerrahi girişimin yapılacağı sınırlı sahadaki serbest sinir uçlarını hedef alarak yalnızca o bölgedeki iletimi durdurur.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s03",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Local treats only the location"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0010",
+       "ekran": "Epidural blok ve periferik sinir blokları ise hedeflenen ekstremiteyi veya anatomik segmenti uyuşturarak daha geniş bir alanda anestezi sağlar.",
+       "ses": "Epidural blok ve periferik sinir blokları ise hedeflenen ekstremiteyi veya anatomik segmenti uyuşturarak daha geniş bir alanda anestezi sağlar.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s03",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Local treats only the location"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0011",
+       "ekran": "Bu sayede hasta uyanık ve koopere kalırken cerrahi operasyon güvenle ve ağrısız biçimde gerçekleştirilir.",
+       "ses": "Bu sayede hasta uyanık ve koopere kalırken cerrahi operasyon güvenle ve ağrısız biçimde gerçekleştirilir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s03",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Local treats only the location"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0004",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k2-48-c0012",
+       "ekran": "Spinal kord anatomisinde epidural aralık, ligamentum flavum ile dura mater arasında uzanan negatif basınçlı sanal bir boşluktur.",
+       "ses": "Spinal kord anatomisinde epidural aralık, ligamentum flavum ile dura mater arasında uzanan negatif basınçlı sanal bir boşluktur.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s03",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Spinal cord Catheter Epidural needle"
+        ],
+        "sekil": [
+         "Spinal kord anatomisi, epidural iğne girişi ve kateter yerleşimi ayrıntılı şeması"
+        ]
+       }
+      },
+      {
+       "id": "k2-48-c0013",
+       "ekran": "Tuohy iğnesi ile bu aralığa ulaşıldığında esnek bir epidural kateter yerleştirilerek sürekli infüzyon veya tekrarlayan dozlar verilebilir.",
+       "ses": "Tuohy iğnesi ile bu aralığa ulaşıldığında esnek bir epidural kateter yerleştirilerek sürekli infüzyon veya tekrarlayan dozlar verilebilir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s03",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Spinal cord Catheter Epidural needle"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0014",
+       "ekran": "Kateter sayesinde dura ponksiyonu yapılmadan segmental blokaj elde edilir ve ameliyat sonrası ağrı günlerce başarıyla kontrol edilir.",
+       "ses": "Kateter sayesinde dura ponksiyonu yapılmadan segmental blokaj elde edilir ve ameliyat sonrası ağrı günlerce başarıyla kontrol edilir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s03",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Spinal cord Catheter Epidural needle"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0005",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k2-48-c0015",
+       "ekran": "Rejyonel anestezide cerrahi sahanın duyusunu ve motor fonksiyonunu taşıyan periferik sinir demetleri hedeflenir.",
+       "ses": "Rejyonel anestezide cerrahi sahanın duyusunu ve motor fonksiyonunu taşıyan periferik sinir demetleri hedeflenir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s04",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Lokal anestezi genel bilgi 3"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0016",
+       "ekran": "Lokal anestezik solüsyon sinir stimülatörü veya ultrason eşliğinde sinir gövdesinin hemen komşuluğuna perinöral olarak enjekte edilir.",
+       "ses": "Lokal anestezik solüsyon sinir stimülatörü veya ultrason eşliğinde sinir gövdesinin hemen komşuluğuna perinöral olarak enjekte edilir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s04",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Lokal anestezi genel bilgi 3"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0017",
+       "ekran": "İlacın akson membranlarına difüzyonu ile impuls iletimi durdurulurken sinir içi doğrudan enjeksiyon nörolojik hasar riski nedeniyle önlenir.",
+       "ses": "İlacın akson membranlarına difüzyonu ile impuls iletimi durdurulurken sinir içi doğrudan enjeksiyon nörolojik hasar riski nedeniyle önlenir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s04",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Lokal anestezi genel bilgi 3"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0006",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k2-48-c0018",
+       "ekran": "Baş ve boyun girişimlerinde kafa derisi blokları ve yüzeyel servikal pleksus bloğu tercih edilir.",
+       "ses": "Baş ve boyun girişimlerinde kafa derisi blokları ve yüzeyel servikal pleksus bloğu tercih edilir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s04",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Axillary SA 2 Thoracic Epidural"
+        ],
+        "sekil": [
+         "Periferik pleksus ve nöroaksiyel sinir bloklarının anatomik sınıflandırmasını gösteren ayrıntılı klinik tablosu"
+        ]
+       }
+      },
+      {
+       "id": "k2-48-c0019",
+       "ekran": "Üst ekstremite cerrahisinde omuz için supraklavikular, kol ve el için infraklavikular veya aksiller pleksus blokları uygulanır.",
+       "ses": "Üst ekstremite cerrahisinde omuz için supraklavikular, kol ve el için infraklavikular veya aksiller pleksus blokları uygulanır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s04",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Axillary SA 2 Thoracic Epidural"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0020",
+       "ekran": "Gövde ve nöroaksiyel girişimlerde torakal epidural, paravertebral ve spinal anestezi teknikleri devreye girer.",
+       "ses": "Gövde ve nöroaksiyel girişimlerde torakal epidural, paravertebral ve spinal anestezi teknikleri devreye girer.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s04",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Axillary SA 2 Thoracic Epidural"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0021",
+       "ekran": "Alt ekstremitede ise lomber pleksus, femoral, safen, obturator ve siyatik sinir blokları hem tek enjeksiyon hem de kateterle uygulanabilir.",
+       "ses": "Alt ekstremitede ise lomber pleksus, femoral, safen, obturator ve siyatik sinir blokları hem tek enjeksiyon hem de kateterle uygulanabilir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s04",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Axillary SA 2 Thoracic Epidural"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-48-b02",
+   "baslik": "Klinik Uygulama Biçimleri ve Duyu İnnervasyonu",
+   "paragraflar": [
+    {
+     "id": "k2-48-p0007",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k2-48-c0022",
+       "ekran": "Spinal sinir dermatomları tek bir arka omurilik kökü tarafından innerve edilen segmental deri duyu alanlarını temsil eder.",
+       "ses": "Spinal sinir dermatomları tek bir arka omurilik kökü tarafından innerve edilen segmental deri duyu alanlarını temsil eder.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s05",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Spinal Sinir Dermatomları"
+        ],
+        "sekil": [
+         "Spinal sinir dermatom seviyeleri ve periferik duyu innervasyon alanlarını gösteren anatomik vücut haritası"
+        ]
+       }
+      },
+      {
+       "id": "k2-48-c0023",
+       "ekran": "Klinikte te dört seviyesi meme başı hizasını, te on seviyesi ise göbek çizgisini belirleyen temel anatomik referanslardır.",
+       "ses": "Klinikte te dört seviyesi meme başı hizasını, te on seviyesi ise göbek çizgisini belirleyen temel anatomik referanslardır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s05",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Spinal Sinir Dermatomları"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0024",
+       "ekran": "Rejyonel ve spinal anestezi derinliği soğuk pamuk ve iğne batırma testleri ile bu dermatom sınırları boyunca titizlikle izlenir.",
+       "ses": "Rejyonel ve spinal anestezi derinliği soğuk pamuk ve iğne batırma testleri ile bu dermatom sınırları boyunca titizlikle izlenir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s05",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Spinal Sinir Dermatomları"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0008",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k2-48-c0025",
+       "ekran": "Rejyonel anestezi tekniklerinde segmental blokaj cerrahi kesinin yerleştiği dermatom sınırları esas alınarak planlanır.",
+       "ses": "Rejyonel anestezi tekniklerinde segmental blokaj cerrahi kesinin yerleştiği dermatom sınırları esas alınarak planlanır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s05",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Lokal anestezi genel bilgi 5"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0026",
+       "ekran": "İntravenöz rejyonel anestezi yani Bier blokunda ekstremite kansızlaştırıldıktan sonra proksimale çift manşonlu turnike uygulanır.",
+       "ses": "İntravenöz rejyonel anestezi yani Bier blokunda ekstremite kansızlaştırıldıktan sonra proksimale çift manşonlu turnike uygulanır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s05",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Lokal anestezi genel bilgi 5"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0027",
+       "ekran": "Lidokain periferik vene verilerek turnikenin distali uyuşturulur; sistemik kaçışı ve kardiyotoksisiteyi önlemek için turnike en az yirmi dakika açılmaz.",
+       "ses": "Lidokain periferik vene verilerek turnikenin distali uyuşturulur; sistemik kaçışı ve kardiyotoksisiteyi önlemek için turnike en az yirmi dakika açılmaz.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s05",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Lokal anestezi genel bilgi 5"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0009",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k2-48-c0028",
+       "ekran": "Lokal anestezikler sinir liflerinde fokal duyu iletimini geçici, geri dönüşümlü ve seçici olarak durduran amfifilik ilaçlardır.",
+       "ses": "Lokal anestezikler sinir liflerinde fokal duyu iletimini geçici, geri dönüşümlü ve seçici olarak durduran amfifilik ilaçlardır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s06",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "PKRMACOLOGY NOTE 8 Local Anesthesia"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0029",
+       "ekran": "Bir lokal anesteziğin kimyasal yapısı lipofilik aromatik bir halka, ara bağlayıcı bir zincir ve hidrofilik bir tersiyer amin grubundan oluşur.",
+       "ses": "Bir lokal anesteziğin kimyasal yapısı lipofilik aromatik bir halka, ara bağlayıcı bir zincir ve hidrofilik bir tersiyer amin grubundan oluşur.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s06",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "PKRMACOLOGY NOTE 8 Local Anesthesia"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0030",
+       "ekran": "Lipofilik aromatik grup ilacın nöronal lipid membrana kolayca penetre olmasını sağlar.",
+       "ses": "Lipofilik aromatik grup ilacın nöronal lipid membrana kolayca penetre olmasını sağlar.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s06",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "PKRMACOLOGY NOTE 8 Local Anesthesia"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0031",
+       "ekran": "Tersiyer amin grubu ise hücre içinde protonlanarak sodyum kanal porunu içeriden tıkayacak iyonize katyona dönüşür.",
+       "ses": "Tersiyer amin grubu ise hücre içinde protonlanarak sodyum kanal porunu içeriden tıkayacak iyonize katyona dönüşür.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s06",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "PKRMACOLOGY NOTE 8 Local Anesthesia"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0010",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k2-48-c0032",
+       "ekran": "Birinci yöntem yüzeyel yani topikal anestezidir; solüsyon konjonktiva kesesi, kornea, burun, boğaz, trakeobronşiyal kanal, üretra ve mesane mukozalarına sürülür veya damlatılır.",
+       "ses": "Birinci yöntem yüzeyel yani topikal anestezidir; solüsyon konjonktiva kesesi, kornea, burun, boğaz, trakeobronşiyal kanal, üretra ve mesane mukozalarına sürülür veya damlatılır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s07",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "konjonktiva kesesi burun boğaz trakeo bronşiyal kanal"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0033",
+       "ekran": "İkinci yöntem infiltrasyon anestezisidir; lokal anestezik solüsyonu ağrı duyusu kaldırılacak kesi sahası ve çevresine subkutan olarak enjekte edilir.",
+       "ses": "İkinci yöntem infiltrasyon anestezisidir; lokal anestezik solüsyonu ağrı duyusu kaldırılacak kesi sahası ve çevresine subkutan olarak enjekte edilir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s07",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "konjonktiva kesesi burun boğaz trakeo bronşiyal kanal"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0034",
+       "ekran": "Üçüncü yöntem sinir blokajıdır; cerrahi sahayı innerve eden periferik sinir gövdesinin yakınına küçük hacimde fakat yüksek konsantrasyonda verilir.",
+       "ses": "Üçüncü yöntem sinir blokajıdır; cerrahi sahayı innerve eden periferik sinir gövdesinin yakınına küçük hacimde fakat yüksek konsantrasyonda verilir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s07",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "konjonktiva kesesi burun boğaz trakeo bronşiyal kanal"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0035",
+       "ekran": "Her üç yöntemde de amaç cerrahi dokuda tam duyu kaybı sağlarken sistemik toksisite riskini en aza indirmektir.",
+       "ses": "Her üç yöntemde de amaç cerrahi dokuda tam duyu kaybı sağlarken sistemik toksisite riskini en aza indirmektir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s07",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "konjonktiva kesesi burun boğaz trakeo bronşiyal kanal"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-48-b03",
+   "baslik": "Kimyasal Sınıflandırma ve Farmasötik Özellikler",
+   "paragraflar": [
+    {
+     "id": "k2-48-p0011",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k2-48-c0036",
+       "ekran": "Lokal anesteziklerin klinik potensleri kimyasal yapılarına, membran lipidlerinde çözünme katsayılarına ve kanala bağlanma güçlerine göre değişir.",
+       "ses": "Lokal anesteziklerin klinik potensleri kimyasal yapılarına, membran lipidlerinde çözünme katsayılarına ve kanala bağlanma güçlerine göre değişir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s08",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Lokal anestezikerin potenslerine göre karşılaştırılması"
+        ],
+        "sekil": [
+         "Lokal anestezik ilaçların klinik etki güçleri ve potenslerini karşılaştıran farmakolojik referans tablosu"
+        ]
+       }
+      },
+      {
+       "id": "k2-48-c0037",
+       "ekran": "Lipofilitesi yüksek olan moleküller akson zarına daha kolay nüfuz ettiğinden çok daha düşük konsantrasyonlarda bile güçlü anestezi oluşturur.",
+       "ses": "Lipofilitesi yüksek olan moleküller akson zarına daha kolay nüfuz ettiğinden çok daha düşük konsantrasyonlarda bile güçlü anestezi oluşturur.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s08",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Lokal anestezikerin potenslerine göre karşılaştırılması"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0038",
+       "ekran": "Klinik uygulamada potens arttıkça gereken miligram dozu düşerken olası kardiyak ve santral toksisite riski de paralel olarak artar.",
+       "ses": "Klinik uygulamada potens arttıkça gereken miligram dozu düşerken olası kardiyak ve santral toksisite riski de paralel olarak artar.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s08",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Lokal anestezikerin potenslerine göre karşılaştırılması"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0012",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k2-48-c0039",
+       "ekran": "Ester grubu lokal anestezikler kimyasal ara zincirinde ester bağı taşıyan benzokain, kokain, prokain, klorprokain, proparakain ve tetrakaini içerir.",
+       "ses": "Ester grubu lokal anestezikler kimyasal ara zincirinde ester bağı taşıyan benzokain, kokain, prokain, klorprokain, proparakain ve tetrakaini içerir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s09",
+       "vurgu": [
+        {
+         "metin": "Ester grubu lokal anestezikler",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-41"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Benzokain anesthesin Kokain Prokain novocain"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0040",
+       "ekran": "Ester yapılı ajanlar dolaşımda bulunan plazma psödokolinesterazı yani bütirilkolinesteraz enzimi tarafından çok hızlı hidrolize uğrarlar.",
+       "ses": "Ester yapılı ajanlar dolaşımda bulunan plazma psödokolinesterazı yani bütirilkolinesteraz enzimi tarafından çok hızlı hidrolize uğrarlar.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s09",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Benzokain anesthesin Kokain Prokain novocain"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0041",
+       "ekran": "Hidroliz sonucunda açığa çıkan paraminobenzoik asit türevleri alerjik reaksiyonlara ve immünolojik aşırı duyarlılığa yol açabilir.",
+       "ses": "Hidroliz sonucunda açığa çıkan paraminobenzoik asit türevleri alerjik reaksiyonlara ve immünolojik aşırı duyarlılığa yol açabilir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s09",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Benzokain anesthesin Kokain Prokain novocain"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0042",
+       "ekran": "Klorprokain bu grupta en hızlı metabolize olan ve fötusa geçiş riski en düşük bulunan obstetrik epidural ajandır.",
+       "ses": "Klorprokain bu grupta en hızlı metabolize olan ve fötusa geçiş riski en düşük bulunan obstetrik epidural ajandır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s09",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Benzokain anesthesin Kokain Prokain novocain"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0013",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k2-48-c0043",
+       "ekran": "Amid grubu lokal anestezikler ara zincirinde amid bağı bulunduran artikain, dibukain, bupivakain, levobupivakain, lidokain, mepivakain, prilokain ve ropivakaini kapsar.",
+       "ses": "Amid grubu lokal anestezikler ara zincirinde amid bağı bulunduran artikain, dibukain, bupivakain, levobupivakain, lidokain, mepivakain, prilokain ve ropivakaini kapsar.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s10",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Artikain Ultracain Dibukain Ultraproct Bupivakain"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0044",
+       "ekran": "Amid türevleri kanda değil karaciğer mikrozomal sitokrom p dört yüz elli enzim sistemi tarafından stabil bir şekilde metabolize edilir.",
+       "ses": "Amid türevleri kanda değil karaciğer mikrozomal sitokrom p dört yüz elli enzim sistemi tarafından stabil bir şekilde metabolize edilir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s10",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Artikain Ultracain Dibukain Ultraproct Bupivakain"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0045",
+       "ekran": "Klinikte sistemik emilimi azaltmak ve etki süresini uzatmak için artikain ve lidokain genellikle adrenalin ile kombine edilir.",
+       "ses": "Klinikte sistemik emilimi azaltmak ve etki süresini uzatmak için artikain ve lidokain genellikle adrenalin ile kombine edilir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s10",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Artikain Ultracain Dibukain Ultraproct Bupivakain"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0046",
+       "ekran": "Prilokain ise sentetik bir vazopressin analoğu olan felipressin ile kombine edilerek kardiyak aritmisi olan hastalarda güvenli bir alternatif sunar.",
+       "ses": "Prilokain ise sentetik bir vazopressin analoğu olan felipressin ile kombine edilerek kardiyak aritmisi olan hastalarda güvenli bir alternatif sunar.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s10",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Artikain Ultracain Dibukain Ultraproct Bupivakain"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0014",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k2-48-c0047",
+       "ekran": "Klasik ester ve amid yapısı dışında farklı kimyasal gruplara ait lokal anestezik ve analjezik moleküller de mevcuttur.",
+       "ses": "Klasik ester ve amid yapısı dışında farklı kimyasal gruplara ait lokal anestezik ve analjezik moleküller de mevcuttur.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s11",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Benzil alkol ThermoRheumon Butilamin benzoat"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0048",
+       "ekran": "Benzil alkol lokal pomadlarda anestezik ve antiseptik olarak yer alırken, butilamin benzoat ve butambenpikrat yüzeyel merhemlerde kullanılır.",
+       "ses": "Benzil alkol lokal pomadlarda anestezik ve antiseptik olarak yer alırken, butilamin benzoat ve butambenpikrat yüzeyel merhemlerde kullanılır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s11",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Benzil alkol ThermoRheumon Butilamin benzoat"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0049",
+       "ekran": "Etil klorür spreyi deriye sıkıldığında hızla buharlaşarak dokudan ısı çeker ve dondurucu fiziksel soğuk anestezisi sağlar.",
+       "ses": "Etil klorür spreyi deriye sıkıldığında hızla buharlaşarak dokudan ısı çeker ve dondurucu fiziksel soğuk anestezisi sağlar.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s11",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Benzil alkol ThermoRheumon Butilamin benzoat"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0050",
+       "ekran": "Kapsaisin krem ve pomadları vanilloid reseptörlerini uyararak periferik ağrı liflerindeki pe maddesini tüketir ve nöropatik ağrıyı dindirir.",
+       "ses": "Kapsaisin krem ve pomadları vanilloid reseptörlerini uyararak periferik ağrı liflerindeki pe maddesini tüketir ve nöropatik ağrıyı dindirir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s11",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Benzil alkol ThermoRheumon Butilamin benzoat"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0051",
+       "ekran": "Klorbutanol diş ağrısı damlalarında bulunurken, saligenin ise erkeklerde sistoskopi öncesi üretral mukoza anestezisinde kullanılan fenolik bir ajandır.",
+       "ses": "Klorbutanol diş ağrısı damlalarında bulunurken, saligenin ise erkeklerde sistoskopi öncesi üretral mukoza anestezisinde kullanılan fenolik bir ajandır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s11",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Benzil alkol ThermoRheumon Butilamin benzoat"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0015",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k2-48-c0052",
+       "ekran": "Lokal anestezikler etki sürelerine göre kısa etkili prokain ve klorprokain, orta etkili lidokain, mepivakain ve prilokain, uzun etkili bupivakain, ropivakain ve tetrakain olarak sınıflandırılır.",
+       "ses": "Lokal anestezikler etki sürelerine göre kısa etkili prokain ve klorprokain, orta etkili lidokain, mepivakain ve prilokain, uzun etkili bupivakain, ropivakain ve tetrakain olarak sınıflandırılır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s12",
+       "vurgu": [
+        {
+         "metin": "Lokal anestezikler etki sürelerine",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "past-1790877044485-534121",
+        "df7bc7d7d699"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Lokal Anesteziklerin Etki Sürelerine Göre Sınıflandırılması"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0053",
+       "ekran": "Subkutan uygulamada maksimal güvenli doz artikain için kilogram başına yedi miligram iken lidokain ve prilokain için kilogram başına beş miligramdır.",
+       "ses": "Subkutan uygulamada maksimal güvenli doz artikain için kilogram başına yedi miligram iken lidokain ve prilokain için kilogram başına beş miligramdır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s12",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Lokal Anesteziklerin Etki Sürelerine Göre Sınıflandırılması"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0054",
+       "ekran": "Uzun etkili bupivakain ve levobupivakain için subkutan üst sınır kilogram başına iki ila üç miligram, ropivakain için ise üç ila dört miligramdır.",
+       "ses": "Uzun etkili bupivakain ve levobupivakain için subkutan üst sınır kilogram başına iki ila üç miligram, ropivakain için ise üç ila dört miligramdır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s12",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Lokal Anesteziklerin Etki Sürelerine Göre Sınıflandırılması"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0055",
+       "ekran": "Bu maksimal dozların aşılması ilacın hızla sistemik dolaşıma geçerek ölümcül nörolojik ve kardiyak komplikasyonlara yol açmasına zemin hazırlar.",
+       "ses": "Bu maksimal dozların aşılması ilacın hızla sistemik dolaşıma geçerek ölümcül nörolojik ve kardiyak komplikasyonlara yol açmasına zemin hazırlar.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s12",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Lokal Anesteziklerin Etki Sürelerine Göre Sınıflandırılması"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0016",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k2-48-c0056",
+       "ekran": "Piyasada lidokain içeren Anestol pomat, Emla krem, Jetex krem, Lidestol jel ve Lokalen pomat gibi çok çeşitli topikal preparatlar bulunmaktadır.",
+       "ses": "Piyasada lidokain içeren Anestol pomat, Emla krem, Jetex krem, Lidestol jel ve Lokalen pomat gibi çok çeşitli topikal preparatlar bulunmaktadır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s13",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Emla 5 krem 5 gr 5 adet"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0057",
+       "ekran": "Emla kremi yüzde iki virgül beş lidokain ve yüzde iki virgül beş prilokain içeren ötektik bir formülasyondur.",
+       "ses": "Emla kremi yüzde iki virgül beş lidokain ve yüzde iki virgül beş prilokain içeren ötektik bir formülasyondur.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s13",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Emla 5 krem 5 gr 5 adet"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0058",
+       "ekran": "Girişimsel mukoza ve farenks anestezisinde Lincaine, Locanest, Prekoxin ve Vemcaine gibi yüzde on konsantrasyona sahip pump spreyler kullanılır.",
+       "ses": "Girişimsel mukoza ve farenks anestezisinde Lincaine, Locanest, Prekoxin ve Vemcaine gibi yüzde on konsantrasyona sahip pump spreyler kullanılır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s13",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Emla 5 krem 5 gr 5 adet"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0059",
+       "ekran": "Lmx dört krem ise lidokaini lipozomal taşıyıcı içine hapsederek sağlam deriden derin katmanlara hızlı difüzyon sağlayan özel bir formülasyondur.",
+       "ses": "Lmx dört krem ise lidokaini lipozomal taşıyıcı içine hapsederek sağlam deriden derin katmanlara hızlı difüzyon sağlayan özel bir formülasyondur.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s13",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Emla 5 krem 5 gr 5 adet"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0060",
+       "ekran": "Mukozal spreylerin yüksek konsantrasyonu nedeniyle fazla miktarda sıkılması hızla sistemik emilime ve toksisiteye yol açabilir.",
+       "ses": "Mukozal spreylerin yüksek konsantrasyonu nedeniyle fazla miktarda sıkılması hızla sistemik emilime ve toksisiteye yol açabilir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s13",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Emla 5 krem 5 gr 5 adet"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-48-b04",
+   "baslik": "Etki Mekanizması, pKa ve Girişimsel Teknikler",
+   "paragraflar": [
+    {
+     "id": "k2-48-p0017",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k2-48-c0061",
+       "ekran": "Lokal anestezikler genellikle zayıf bazik yapıda moleküllerdir ve lipofiliteleri oldukça yüksektir.",
+       "ses": "Lokal anestezikler genellikle zayıf bazik yapıda moleküllerdir ve lipofiliteleri oldukça yüksektir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s14",
+       "vurgu": [
+        {
+         "metin": "Lokal anestezikler genellikle zayıf",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "000e817b3ccc"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Lokal anestezikler genellikle zayıf bazlardır Lipofiliteleri yüksektir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0062",
+       "ekran": "Çoğu lokal anesteziğin pe ka a değeri yedi virgül beş ila dokuz virgül bir arasında yer alır; yani fizyolojik dokuda kısmen iyonize haldedirler.",
+       "ses": "Çoğu lokal anesteziğin pe ka a değeri yedi virgül beş ila dokuz virgül bir arasında yer alır; yani fizyolojik dokuda kısmen iyonize haldedirler.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s14",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Lokal anestezikler genellikle zayıf bazlardır Lipofiliteleri yüksektir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0063",
+       "ekran": "Solüsyona sodyum bikarbonat ilavesi ortamın bazikleşmesini sağlayarak zardan geçebilen non-iyonize lipofilik fraksiyonu belirgin biçimde artırır.",
+       "ses": "Solüsyona sodyum bikarbonat ilavesi ortamın bazikleşmesini sağlayarak zardan geçebilen non-iyonize lipofilik fraksiyonu belirgin biçimde artırır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s14",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Lokal anestezikler genellikle zayıf bazlardır Lipofiliteleri yüksektir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0064",
+       "ekran": "Böylece ilacın akson kılıfına penetrasyonu hızlanır, blok başlama süresi kısalır ve asidik enflame dokulardaki anestezi yetersizliği aşılır.",
+       "ses": "Böylece ilacın akson kılıfına penetrasyonu hızlanır, blok başlama süresi kısalır ve asidik enflame dokulardaki anestezi yetersizliği aşılır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s14",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Lokal anestezikler genellikle zayıf bazlardır Lipofiliteleri yüksektir"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0018",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k2-48-c0065",
+       "ekran": "Lokal anesteziğin yüksüz lipofilik baz formu nöronal lipid zardan pasif difüzyonla hücre sitoplazmasına geçer.",
+       "ses": "Lokal anesteziğin yüksüz lipofilik baz formu nöronal lipid zardan pasif difüzyonla hücre sitoplazmasına geçer.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s15",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Mechanism of action of local anaesthetics"
+        ],
+        "sekil": [
+         "Voltaj kapılı sodyum kanallarının alfa alt birimi ve hücre içi por blokajı moleküler şeması"
+        ]
+       }
+      },
+      {
+       "id": "k2-48-c0066",
+       "ekran": "Aksoplazma içinde proton alarak pozitif yüklü iyonize katyona dönüşür ve voltaj kapılı sodyum kanalının iç yüzündeki reseptörüne bağlanır.",
+       "ses": "Aksoplazma içinde proton alarak pozitif yüklü iyonize katyona dönüşür ve voltaj kapılı sodyum kanalının iç yüzündeki reseptörüne bağlanır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s15",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Mechanism of action of local anaesthetics"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0067",
+       "ekran": "Sodyum kanal porunun içeriden elektrostatik ve mekanik olarak tıkanması hücre içine sodyum akışını tamamen durdurur.",
+       "ses": "Sodyum kanal porunun içeriden elektrostatik ve mekanik olarak tıkanması hücre içine sodyum akışını tamamen durdurur.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s15",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Mechanism of action of local anaesthetics"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0068",
+       "ekran": "Bunun sonucunda membran depolarizasyonu engellenir, aksiyon potansiyeli genliği çöker ve ağrı iletimi tamamen kesilir.",
+       "ses": "Bunun sonucunda membran depolarizasyonu engellenir, aksiyon potansiyeli genliği çöker ve ağrı iletimi tamamen kesilir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s15",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Mechanism of action of local anaesthetics"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0019",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k2-48-c0069",
+       "ekran": "Epidural aralığa ulaşmak için ciltten itibaren supraspinöz ligament, interspinöz ligament ve ligamentum flavum katmanları sırasıyla geçilir.",
+       "ses": "Epidural aralığa ulaşmak için ciltten itibaren supraspinöz ligament, interspinöz ligament ve ligamentum flavum katmanları sırasıyla geçilir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s16",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Ligamentum flavum posterior longitüdinal ligament"
+        ],
+        "sekil": [
+         "Posterior epidural boşluk, ligamentum flavum ve dura mater anatomik ilişkilerini gösteren kesit şeması"
+        ]
+       }
+      },
+      {
+       "id": "k2-48-c0070",
+       "ekran": "Sarı elastik bağ olan ligamentum flavum aşıldığı anda iğne ucunda direnç aniden kaybolur ve epidural aralık doğrulanır.",
+       "ses": "Sarı elastik bağ olan ligamentum flavum aşıldığı anda iğne ucunda direnç aniden kaybolur ve epidural aralık doğrulanır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s16",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Ligamentum flavum posterior longitüdinal ligament"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0071",
+       "ekran": "Posterior epidural boşlukta yer alan venöz pleksuslara ve dura zarına dikkat edilerek ilaç subaraknoid boşluğa kaçırılmadan güvenle verilir.",
+       "ses": "Posterior epidural boşlukta yer alan venöz pleksuslara ve dura zarına dikkat edilerek ilaç subaraknoid boşluğa kaçırılmadan güvenle verilir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s16",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Ligamentum flavum posterior longitüdinal ligament"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0020",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k2-48-c0072",
+       "ekran": "Spinal anestezide lokal anestezik solüsyonu dura mater ve araknoid zarı geçilerek doğrudan subaraknoid boşluktaki beyin omurilik sıvısına enjekte edilir.",
+       "ses": "Spinal anestezide lokal anestezik solüsyonu dura mater ve araknoid zarı geçilerek doğrudan subaraknoid boşluktaki beyin omurilik sıvısına enjekte edilir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s16",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Anesthetic solution injected into spinal fluid"
+        ],
+        "sekil": [
+         "Subaraknoid boşluğa beyin omurilik sıvısı içine yapılan spinal lokal anestezik enjeksiyonu anatomik şeması"
+        ]
+       }
+      },
+      {
+       "id": "k2-48-c0073",
+       "ekran": "Mandren çekildiğinde berrak beyin omurilik sıvısının gelişi doğrulanır ve çok küçük hacimlerle yoğun bir sensorimotor blokaj sağlanır.",
+       "ses": "Mandren çekildiğinde berrak beyin omurilik sıvısının gelişi doğrulanır ve çok küçük hacimlerle yoğun bir sensorimotor blokaj sağlanır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s16",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Anesthetic solution injected into spinal fluid"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0074",
+       "ekran": "Kullanılan solüsyonun yoğunluğu beyin omurilik sıvısına göre izobarik veya glukoz ilaveli hiperbarik olarak seçilerek hastanın pozisyonuyla seviye ayarlanır.",
+       "ses": "Kullanılan solüsyonun yoğunluğu beyin omurilik sıvısına göre izobarik veya glukoz ilaveli hiperbarik olarak seçilerek hastanın pozisyonuyla seviye ayarlanır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s16",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Anesthetic solution injected into spinal fluid"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0021",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k2-48-c0075",
+       "ekran": "Lokal anestezikler hedef bölgeden kan dolaşımına kontrolsüz biçimde geçtiğinde iki aşamalı santral sinir sistemi toksisitesi ortaya çıkar.",
+       "ses": "Lokal anestezikler hedef bölgeden kan dolaşımına kontrolsüz biçimde geçtiğinde iki aşamalı santral sinir sistemi toksisitesi ortaya çıkar.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s17",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Restlessness convulsions respiratory paralysis"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0076",
+       "ekran": "Öncelikle kortikal inhibitör nöronlar baskılandığından huzursuzluk, sersemlik, nistagmus, kas seyirmeleri ve tonik klonik konvülsiyonlar gelişir.",
+       "ses": "Öncelikle kortikal inhibitör nöronlar baskılandığından huzursuzluk, sersemlik, nistagmus, kas seyirmeleri ve tonik klonik konvülsiyonlar gelişir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s17",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Restlessness convulsions respiratory paralysis"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0077",
+       "ekran": "Doz artışı sürerse tüm beyin depresyona girerek koma ve solunum durması meydana gelir.",
+       "ses": "Doz artışı sürerse tüm beyin depresyona girerek koma ve solunum durması meydana gelir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s17",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Restlessness convulsions respiratory paralysis"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0078",
+       "ekran": "Kardiyak düzeyde ise miyokard iletimi ve kasılması baskılanarak refrakter ventriküler aritmiler ve kardiyak arrest şekillenir.",
+       "ses": "Kardiyak düzeyde ise miyokard iletimi ve kasılması baskılanarak refrakter ventriküler aritmiler ve kardiyak arrest şekillenir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s17",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Restlessness convulsions respiratory paralysis"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0022",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k2-48-c0079",
+       "ekran": "Prokain yani novokain çok kısa etki süreli bir molekül olup farmakolojide potensi referans olarak bir kabul edilir.",
+       "ses": "Prokain yani novokain çok kısa etki süreli bir molekül olup farmakolojide potensi referans olarak bir kabul edilir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s18",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Kokain potensi prokaine göre 2 kattır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0080",
+       "ekran": "Kokainin potensi prokaine göre iki kattır; mepivakain de kokaine eşdeğer yani iki kat potense sahiptir.",
+       "ses": "Kokainin potensi prokaine göre iki kattır; mepivakain de kokaine eşdeğer yani iki kat potense sahiptir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s18",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Kokain potensi prokaine göre 2 kattır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0081",
+       "ekran": "Lidokain yani ksilokain referans prokainin yaklaşık dört katı potenste orta etkili bir moleküldür.",
+       "ses": "Lidokain yani ksilokain referans prokainin yaklaşık dört katı potenste orta etkili bir moleküldür.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s18",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Kokain potensi prokaine göre 2 kattır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0082",
+       "ekran": "Tetrakain, bupivakain, levobupivakain ve ropivakain ise prokainden on altı kat daha güçlü ve uzun etkilidir.",
+       "ses": "Tetrakain, bupivakain, levobupivakain ve ropivakain ise prokainden on altı kat daha güçlü ve uzun etkilidir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s18",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Kokain potensi prokaine göre 2 kattır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0083",
+       "ekran": "Benzokain suda çözünmediği için sadece yüzeyel mukozal anestezide kullanılırken, artikain hızlı eliminasyonuyla öne çıkar.",
+       "ses": "Benzokain suda çözünmediği için sadece yüzeyel mukozal anestezide kullanılırken, artikain hızlı eliminasyonuyla öne çıkar.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s18",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Kokain potensi prokaine göre 2 kattır"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0023",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k2-48-c0084",
+       "ekran": "Klorprokain pe ka a sekiz virgül yedi olup tek seferde kilogram başına on miligram dozda epiduralde güvenle kullanılır.",
+       "ses": "Klorprokain pe ka a sekiz virgül yedi olup tek seferde kilogram başına on miligram dozda epiduralde güvenle kullanılır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s19",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Chloroprocaine 8 7 10 15"
+        ],
+        "sekil": [
+         "Klinik lokal anesteziklerin pe-ka-a değerleri ve maksimum tek doz sınırlarını gösteren referans farmakoloji tablosu"
+        ]
+       }
+      },
+      {
+       "id": "k2-48-c0085",
+       "ekran": "Kokain pe ka a sekiz virgül altı ile yalnızca kulak burun boğazda topikal kullanılır; sistemik enjeksiyonu kesinlikle kontrendikedir.",
+       "ses": "Kokain pe ka a sekiz virgül altı ile yalnızca kulak burun boğazda topikal kullanılır; sistemik enjeksiyonu kesinlikle kontrendikedir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s19",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Chloroprocaine 8 7 10 15"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0086",
+       "ekran": "Tetrakain pe ka a sekiz virgül beş ile spinalde, bupivakain ise pe ka a sekiz virgül bir ile epiduralde kilogram başına iki ila üç miligram kullanılır.",
+       "ses": "Tetrakain pe ka a sekiz virgül beş ile spinalde, bupivakain ise pe ka a sekiz virgül bir ile epiduralde kilogram başına iki ila üç miligram kullanılır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s19",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Chloroprocaine 8 7 10 15"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0087",
+       "ekran": "Etidokain motor blok özellikleri aşırı güçlü olduğundan cerrahide sınırlı kalırken, mepivakain kilogram başına beş miligrama kadar verilebilir.",
+       "ses": "Etidokain motor blok özellikleri aşırı güçlü olduğundan cerrahide sınırlı kalırken, mepivakain kilogram başına beş miligrama kadar verilebilir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s19",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Chloroprocaine 8 7 10 15"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0088",
+       "ekran": "Lipozomal bupivakain olan Exparel iki yüz altmış altı miligram tek dozda cerrahi yaraya uygulanarak günlerce analjezi sağlar.",
+       "ses": "Lipozomal bupivakain olan Exparel iki yüz altmış altı miligram tek dozda cerrahi yaraya uygulanarak günlerce analjezi sağlar.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s19",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Chloroprocaine 8 7 10 15"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-48-b05",
+   "baslik": "Farmakokinetik, Lif Duyarlılığı ve Vazokonstriktörler",
+   "paragraflar": [
+    {
+     "id": "k2-48-p0024",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k2-48-c0089",
+       "ekran": "Lokal anesteziklerin sistemik dolaşıma emilimi uygulanan doza, enjeksiyon bölgesinin damarlanma yoğunluğuna ve doku kan akımına doğrudan bağlıdır.",
+       "ses": "Lokal anesteziklerin sistemik dolaşıma emilimi uygulanan doza, enjeksiyon bölgesinin damarlanma yoğunluğuna ve doku kan akımına doğrudan bağlıdır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s20",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Lokal anesteziklerin sistemik dolaşma girişi dozuna"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0090",
+       "ekran": "Vaskülarizasyonun çok zengin olduğu interkostal ve kaudal aralıklarda plazma ilaç düzeyi hızla pik yapar.",
+       "ses": "Vaskülarizasyonun çok zengin olduğu interkostal ve kaudal aralıklarda plazma ilaç düzeyi hızla pik yapar.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s20",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Lokal anesteziklerin sistemik dolaşma girişi dozuna"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0091",
+       "ekran": "Bupivakain ve ropivakainin plazma proteinlerine bağlanma oranı yüzde doksan beşin üzerindedir; bu da klerenslerini düşürüp yarı ömürlerini uzatır.",
+       "ses": "Bupivakain ve ropivakainin plazma proteinlerine bağlanma oranı yüzde doksan beşin üzerindedir; bu da klerenslerini düşürüp yarı ömürlerini uzatır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s20",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Lokal anesteziklerin sistemik dolaşma girişi dozuna"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0092",
+       "ekran": "Lidokain ve mepivakainin yarı ömrü daha kısa iken, prilokainin doku dağılım yarı ömrü yaklaşık beş dakikadır.",
+       "ses": "Lidokain ve mepivakainin yarı ömrü daha kısa iken, prilokainin doku dağılım yarı ömrü yaklaşık beş dakikadır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s20",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Lokal anesteziklerin sistemik dolaşma girişi dozuna"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0025",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k2-48-c0093",
+       "ekran": "Hedef sahaya verilen lokal anestezikler plazmada psödokolinesterazla veya karaciğerde mikrozomal enzimlerle inaktive edilir.",
+       "ses": "Hedef sahaya verilen lokal anestezikler plazmada psödokolinesterazla veya karaciğerde mikrozomal enzimlerle inaktive edilir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s21",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Hedef bir bölgeye enjekte edildikleri için sistemik dağılım"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0094",
+       "ekran": "Ester yapılı ajanlar dolaşımdaki psödokolinesteraz tarafından saniyeler içinde hidrolize edilerek idrarla atılır.",
+       "ses": "Ester yapılı ajanlar dolaşımdaki psödokolinesteraz tarafından saniyeler içinde hidrolize edilerek idrarla atılır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s21",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Hedef bir bölgeye enjekte edildikleri için sistemik dağılım"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0095",
+       "ekran": "Amid yapılı ajanlar ise karaciğer sitokrom enzimleri ile karmaşık bir biyotransformasyona tabi tutulur.",
+       "ses": "Amid yapılı ajanlar ise karaciğer sitokrom enzimleri ile karmaşık bir biyotransformasyona tabi tutulur.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s21",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Hedef bir bölgeye enjekte edildikleri için sistemik dağılım"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0096",
+       "ekran": "Amidlerin metabolizasyon hızları büyükten küçüğe doğru prilokain, lidokain, mepivakain, ropivakain, bupivakain ve levobupivakain şeklindedir.",
+       "ses": "Amidlerin metabolizasyon hızları büyükten küçüğe doğru prilokain, lidokain, mepivakain, ropivakain, bupivakain ve levobupivakain şeklindedir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s21",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Hedef bir bölgeye enjekte edildikleri için sistemik dağılım"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0026",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k2-48-c0097",
+       "ekran": "Lokal anesteziklerin voltaj kapılı sodyum kanallarını bloke etmesi ve kullanıma bağımlı blokaj oluşturması çıkmış sınavlarda da sorulan kritik bir bilgidir.",
+       "ses": "Lokal anesteziklerin voltaj kapılı sodyum kanallarını bloke etmesi ve kullanıma bağımlı blokaj oluşturması çıkmış sınavlarda da sorulan kritik bir bilgidir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s22",
+       "vurgu": [
+        {
+         "metin": "Lokal anesteziklerin voltaj kapılı",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "cikmis-k48-01",
+        "d3-k2-far-002"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "voltaj bağımlı sodyum kanallarını bloke ederler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0098",
+       "ekran": "Akonitin, veratridin, batrakotoksin ve bazı akrep zehirleri sodyum kanalını sürekli açık tutarak inaktivasyonunu engeller.",
+       "ses": "Akonitin, veratridin, batrakotoksin ve bazı akrep zehirleri sodyum kanalını sürekli açık tutarak inaktivasyonunu engeller.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s22",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "voltaj bağımlı sodyum kanallarını bloke ederler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0099",
+       "ekran": "Lokal anestezikler ise kanalın iç yüzüne bağlanarak kapalı inaktif konformasyonu stabilize eder ve kanalı kapatır.",
+       "ses": "Lokal anestezikler ise kanalın iç yüzüne bağlanarak kapalı inaktif konformasyonu stabilize eder ve kanalı kapatır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s22",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "voltaj bağımlı sodyum kanallarını bloke ederler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0100",
+       "ekran": "Yüksek ateşleme frekansına sahip nosiseptif lifler kanalları sık açılıp kapandığı için lokal anesteziklere istirahatteki liflerden çok daha duyarlıdır.",
+       "ses": "Yüksek ateşleme frekansına sahip nosiseptif lifler kanalları sık açılıp kapandığı için lokal anesteziklere istirahatteki liflerden çok daha duyarlıdır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s22",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "voltaj bağımlı sodyum kanallarını bloke ederler"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0027",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k2-48-c0101",
+       "ekran": "Miyelinli ve ince çaplı nosiseptif ağrı lifleri kalın motor liflerden çok daha önce ve düşük konsantrasyonda bloke olur.",
+       "ses": "Miyelinli ve ince çaplı nosiseptif ağrı lifleri kalın motor liflerden çok daha önce ve düşük konsantrasyonda bloke olur.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s23",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Miyelinli sinir lifleri miyelini olmayan sinir liflerinden"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0102",
+       "ekran": "Ağrı taşıyan a delta ve c lifleri yüksek ateşleme hızına ve uzun aksiyon potansiyeli süresine sahip olduklarından hızla uyuşurlar.",
+       "ses": "Ağrı taşıyan a delta ve c lifleri yüksek ateşleme hızına ve uzun aksiyon potansiyeli süresine sahip olduklarından hızla uyuşurlar.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s23",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Miyelinli sinir lifleri miyelini olmayan sinir liflerinden"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0103",
+       "ekran": "Buna karşın somatik motor lifler daha dirençlidir; örneğin doğumda epidural uygulandığında hastanın ağrısı kesilirken ıkınma refleksi kısmen zayıflayabilir.",
+       "ses": "Buna karşın somatik motor lifler daha dirençlidir; örneğin doğumda epidural uygulandığında hastanın ağrısı kesilirken ıkınma refleksi kısmen zayıflayabilir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s23",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Miyelinli sinir lifleri miyelini olmayan sinir liflerinden"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0104",
+       "ekran": "Lokal anestezik sinir gövdesine radyal olarak penetre olur; önce dıştaki manto lifleri uyuşur ve blok longitüdinal eksende proksimalden distale doğru ilerler.",
+       "ses": "Lokal anestezik sinir gövdesine radyal olarak penetre olur; önce dıştaki manto lifleri uyuşur ve blok longitüdinal eksende proksimalden distale doğru ilerler.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s23",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Miyelinli sinir lifleri miyelini olmayan sinir liflerinden"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0028",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k2-48-c0105",
+       "ekran": "Lokal anestezik solüsyonuna adrenalin gibi bir vazokonstriktör eklenmesi klinik açıdan son derece avantajlı bir uygulamadır.",
+       "ses": "Lokal anestezik solüsyonuna adrenalin gibi bir vazokonstriktör eklenmesi klinik açıdan son derece avantajlı bir uygulamadır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s24",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Lokal anesteziklere vazokonstriktör eklenmesi avantajlı bir olaydır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0106",
+       "ekran": "Adrenalin lokal damarları büzerek ilacın sistemik emilimini belirgin şekilde azaltır, etki süresini uzatır ve cerrahi kanamayı düşürür.",
+       "ses": "Adrenalin lokal damarları büzerek ilacın sistemik emilimini belirgin şekilde azaltır, etki süresini uzatır ve cerrahi kanamayı düşürür.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s24",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Lokal anesteziklere vazokonstriktör eklenmesi avantajlı bir olaydır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0107",
+       "ekran": "Aynı zamanda omurilik arka boynuzundaki postsinaptik alfa iki adrenoseptörleri uyararak doğrudan intrensek analjezik etki oluşturur; böylece bir taşla iki kuş vurulur.",
+       "ses": "Aynı zamanda omurilik arka boynuzundaki postsinaptik alfa iki adrenoseptörleri uyararak doğrudan intrensek analjezik etki oluşturur; böylece bir taşla iki kuş vurulur.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s24",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Lokal anesteziklere vazokonstriktör eklenmesi avantajlı bir olaydır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0108",
+       "ekran": "Ancak parmak, burun ucu, kulak ve penis gibi uç organlarda iskemi ve gangren riski nedeniyle adrenalin kesinlikle kullanılmamalıdır.",
+       "ses": "Ancak parmak, burun ucu, kulak ve penis gibi uç organlarda iskemi ve gangren riski nedeniyle adrenalin kesinlikle kullanılmamalıdır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s24",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Lokal anesteziklere vazokonstriktör eklenmesi avantajlı bir olaydır"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-48-b06",
+   "baslik": "Sistemik Toksisite, Yan Etkiler ve Özel Ajanlar",
+   "paragraflar": [
+    {
+     "id": "k2-48-p0029",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k2-48-c0109",
+       "ekran": "Lokal anestezikler kronik ağrı tedavisinde, sinir zedelenmelerinde ve santral sensitizasyonu baskılamak amacıyla da klinik kullanıma sahiptir.",
+       "ses": "Lokal anestezikler kronik ağrı tedavisinde, sinir zedelenmelerinde ve santral sensitizasyonu baskılamak amacıyla da klinik kullanıma sahiptir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s25",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Santral sensitizasyonu baskılamak amacıyla"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0110",
+       "ekran": "Ancak yüksek konsantrasyon ve dozlarda kullanıldıklarında sistemik toksisite riski taşırlar.",
+       "ses": "Ancak yüksek konsantrasyon ve dozlarda kullanıldıklarında sistemik toksisite riski taşırlar.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s25",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Santral sensitizasyonu baskılamak amacıyla"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0111",
+       "ekran": "Toksisite doğrudan damar içine enjeksiyonla olabileceği gibi dokudan aşırı emilim ve nöral etkileşim sonucu da ortaya çıkabilir.",
+       "ses": "Toksisite doğrudan damar içine enjeksiyonla olabileceği gibi dokudan aşırı emilim ve nöral etkileşim sonucu da ortaya çıkabilir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s25",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Santral sensitizasyonu baskılamak amacıyla"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0112",
+       "ekran": "Epidural anestezi veya büyük periferik bloklar için gereken lokal anestezik dozu kazaen damara verildiğinde bir insanı öldürmek için yeterlidir.",
+       "ses": "Epidural anestezi veya büyük periferik bloklar için gereken lokal anestezik dozu kazaen damara verildiğinde bir insanı öldürmek için yeterlidir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s25",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Santral sensitizasyonu baskılamak amacıyla"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0030",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k2-48-c0113",
+       "ekran": "Lokal anestezik sistemik toksisitesinin başlangıcında sedasyon, sersemlik, ağız çevresinde uyuşma, dilde metalik tat ve görsel işitsel bozukluklar görülür.",
+       "ses": "Lokal anestezik sistemik toksisitesinin başlangıcında sedasyon, sersemlik, ağız çevresinde uyuşma, dilde metalik tat ve görsel işitsel bozukluklar görülür.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s26",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "sedasyon sersemlik görsel ve işitsel bozukluklar orofaringeal amnezi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0114",
+       "ekran": "Bu tabloyu hızla nistagmus, kas seyirmeleri, jeneralize tonik klonik konvülsiyonlar, koma ve solunum durması takip eder.",
+       "ses": "Bu tabloyu hızla nistagmus, kas seyirmeleri, jeneralize tonik klonik konvülsiyonlar, koma ve solunum durması takip eder.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s26",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "sedasyon sersemlik görsel ve işitsel bozukluklar orofaringeal amnezi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0115",
+       "ekran": "Yüksek doz lokal anestezik girişimlerinden önce diazepam veya midazolam ile premedikasyon yapılması santral sinir sistemi toksisitesine karşı koruyucudur.",
+       "ses": "Yüksek doz lokal anestezik girişimlerinden önce diazepam veya midazolam ile premedikasyon yapılması santral sinir sistemi toksisitesine karşı koruyucudur.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s26",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "sedasyon sersemlik görsel ve işitsel bozukluklar orofaringeal amnezi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0116",
+       "ekran": "Nöbetlerle birlikte gelişen hipokalsemi ve asidoz tablosu lokal anestezik toksisitesini şiddetlendirerek ölümcül kardiyak kollapsı tetikler.",
+       "ses": "Nöbetlerle birlikte gelişen hipokalsemi ve asidoz tablosu lokal anestezik toksisitesini şiddetlendirerek ölümcül kardiyak kollapsı tetikler.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s26",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "sedasyon sersemlik görsel ve işitsel bozukluklar orofaringeal amnezi"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0031",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k2-48-c0117",
+       "ekran": "Lokal anesteziklerin en çok korkulan ölümcül komplikasyonu miyokardiyal ileti ve kontraktilite üzerine olan güçlü baskılayıcı etkileridir.",
+       "ses": "Lokal anesteziklerin en çok korkulan ölümcül komplikasyonu miyokardiyal ileti ve kontraktilite üzerine olan güçlü baskılayıcı etkileridir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s27",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Lokal anesteziklerin en korkulan komplikasyonu kardiyak ileti"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0118",
+       "ekran": "Nöral zedelenmenin önlenmesi ve güvenli profil açısından en çok önerilen referans lokal ajan lidokaindir.",
+       "ses": "Nöral zedelenmenin önlenmesi ve güvenli profil açısından en çok önerilen referans lokal ajan lidokaindir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s27",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Lokal anesteziklerin en korkulan komplikasyonu kardiyak ileti"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0119",
+       "ekran": "Artikain plazma yarı ömrü yirmi dakika kadar olan özel bir amid ajandır ve diş hekimliğinde yüzde dörtlük solüsyonu yaygın olarak kullanılır.",
+       "ses": "Artikain plazma yarı ömrü yirmi dakika kadar olan özel bir amid ajandır ve diş hekimliğinde yüzde dörtlük solüsyonu yaygın olarak kullanılır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s27",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Lokal anesteziklerin en korkulan komplikasyonu kardiyak ileti"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0120",
+       "ekran": "Prilokain artikaine benzer yüksek klerense sahiptir; benzokain ise aşırı lipofilik olup her ikisi de edinsel methemoglobinemi yapma riski taşır.",
+       "ses": "Prilokain artikaine benzer yüksek klerense sahiptir; benzokain ise aşırı lipofilik olup her ikisi de edinsel methemoglobinemi yapma riski taşır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s27",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Lokal anesteziklerin en korkulan komplikasyonu kardiyak ileti"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0032",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k2-48-c0121",
+       "ekran": "Bupivakain düşük konsantrasyonlarda uzun süreli analjezi sağlayarak spinal anestezide ve postoperatif ağrıda tercih edilir ancak günübirlik cerrahiye uygun değildir.",
+       "ses": "Bupivakain düşük konsantrasyonlarda uzun süreli analjezi sağlayarak spinal anestezide ve postoperatif ağrıda tercih edilir ancak günübirlik cerrahiye uygun değildir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s27",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Bupivakain Periferik anestezi ve postoperatif ağrı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0122",
+       "ekran": "Klorprokain sistemik toksisite ve fötal maruziyet riskinin son derece düşük olduğu obstetrik epidural anestezide yaygın olarak kullanılır.",
+       "ses": "Klorprokain sistemik toksisite ve fötal maruziyet riskinin son derece düşük olduğu obstetrik epidural anestezide yaygın olarak kullanılır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s27",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Bupivakain Periferik anestezi ve postoperatif ağrı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0123",
+       "ekran": "Kokain güçlü intrensek sempatomimetik vazokonstriktör etkisinden dolayı kulak burun boğaz girişimleri dışında sistemik riskleri nedeniyle terk edilmiştir.",
+       "ses": "Kokain güçlü intrensek sempatomimetik vazokonstriktör etkisinden dolayı kulak burun boğaz girişimleri dışında sistemik riskleri nedeniyle terk edilmiştir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s27",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Bupivakain Periferik anestezi ve postoperatif ağrı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0124",
+       "ekran": "Etidokain motor blok gücü aşırı yüksek olduğundan sınırlı kullanılırken, levobupivakain daha uzun etki ve daha düşük kardiyotoksisite sunar.",
+       "ses": "Etidokain motor blok gücü aşırı yüksek olduğundan sınırlı kullanılırken, levobupivakain daha uzun etki ve daha düşük kardiyotoksisite sunar.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s27",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Bupivakain Periferik anestezi ve postoperatif ağrı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0125",
+       "ekran": "Her bir ajanın farmakokinetik ve farmakodinamik profili cerrahi girişimin süresine ve hastanın klinik durumuna göre dikkatle seçilmelidir.",
+       "ses": "Her bir ajanın farmakokinetik ve farmakodinamik profili cerrahi girişimin süresine ve hastanın klinik durumuna göre dikkatle seçilmelidir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s27",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Bupivakain Periferik anestezi ve postoperatif ağrı"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0033",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k2-48-c0126",
+       "ekran": "Lokal anesteziğin uygulanan konsantrasyonu arttıkça sodyum kanallarının inaktivasyon yüzdesi sigmoidal bir farmakolojik artış gösterir.",
+       "ses": "Lokal anesteziğin uygulanan konsantrasyonu arttıkça sodyum kanallarının inaktivasyon yüzdesi sigmoidal bir farmakolojik artış gösterir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s28",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "1 10 01 Concentration mM 001"
+        ],
+        "sekil": [
+         "Lokal anestezik konsantrasyonu ile biyolojik blokaj yanıtı arasındaki ilişkiyi gösteren farmakolojik doz yanıt eğrisi"
+        ]
+       }
+      },
+      {
+       "id": "k2-48-c0127",
+       "ekran": "Sinir iletiminin tamamen durdurulabilmesi için kritik bir minimum bloke edici konsantrasyon eşiğinin aşılması zorunludur.",
+       "ses": "Sinir iletiminin tamamen durdurulabilmesi için kritik bir minimum bloke edici konsantrasyon eşiğinin aşılması zorunludur.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s28",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "1 10 01 Concentration mM 001"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0128",
+       "ekran": "Klinikte yeterli konsantrasyon sağlandığında akson boyunca ardışık en az üç Ranvier düğümü bloke edilerek aksiyon potansiyeli atlaması engellenir.",
+       "ses": "Klinikte yeterli konsantrasyon sağlandığında akson boyunca ardışık en az üç Ranvier düğümü bloke edilerek aksiyon potansiyeli atlaması engellenir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s28",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "1 10 01 Concentration mM 001"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0034",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k2-48-c0129",
+       "ekran": "Fizyolojik doku pe ha değeri yedi virgül kırkta pe ka a değeri yedi virgül dokuz olan lidokainin yaklaşık yüzde yirmi beşi non-iyonize lipofilik baz formdadır.",
+       "ses": "Fizyolojik doku pe ha değeri yedi virgül kırkta pe ka a değeri yedi virgül dokuz olan lidokainin yaklaşık yüzde yirmi beşi non-iyonize lipofilik baz formdadır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s28",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Bupivacaine pKa 8 1 Lidocaine pKa 7 9"
+        ],
+        "sekil": [
+         "Doku pe-ha düzeyi ve pe-ka-a değerine bağımlı iyonizasyon fraksiyonu değişimlerini gösteren farmakokinetik eğrisi"
+        ]
+       }
+      },
+      {
+       "id": "k2-48-c0130",
+       "ekran": "Buna karşın pe ka a değeri sekiz virgül bir olan bupivakainin fizyolojik dokuda yalnızca yüzde on beşi non-iyonize baz formunda bulunur.",
+       "ses": "Buna karşın pe ka a değeri sekiz virgül bir olan bupivakainin fizyolojik dokuda yalnızca yüzde on beşi non-iyonize baz formunda bulunur.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s28",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Bupivacaine pKa 8 1 Lidocaine pKa 7 9"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0131",
+       "ekran": "Bu durum lidokainin sinir kılıfından ve zarından çok daha hızlı difüze olarak anesteziyi daha erken başlatmasını sağlar.",
+       "ses": "Bu durum lidokainin sinir kılıfından ve zarından çok daha hızlı difüze olarak anesteziyi daha erken başlatmasını sağlar.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s28",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Bupivacaine pKa 8 1 Lidocaine pKa 7 9"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0132",
+       "ekran": "Enflamasyonlu ve apseli dokularda ortam asidik hale geldiğinde iyonize katyon oranı yüzde doksan dokuza fırlar ve zardan geçiş imkansızlaşarak anestezi çöker.",
+       "ses": "Enflamasyonlu ve apseli dokularda ortam asidik hale geldiğinde iyonize katyon oranı yüzde doksan dokuza fırlar ve zardan geçiş imkansızlaşarak anestezi çöker.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s28",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Bupivacaine pKa 8 1 Lidocaine pKa 7 9"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0035",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k2-48-c0133",
+       "ekran": "Lidokain spinal anestezi sonrası geçici nörolojik semptomlar oluşturma insidansının yüksek olması dışında mükemmel bir referans ajandır.",
+       "ses": "Lidokain spinal anestezi sonrası geçici nörolojik semptomlar oluşturma insidansının yüksek olması dışında mükemmel bir referans ajandır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s29",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Spinal uygulama sonrası geçici nörolojik semptomları"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0134",
+       "ekran": "Mepivakain klinik olarak lidokaine benzer ancak lidokain vazodilatasyon yaparken kendisi intrensek vazokonstriksiyon yaparak etki süresini uzatır.",
+       "ses": "Mepivakain klinik olarak lidokaine benzer ancak lidokain vazodilatasyon yaparken kendisi intrensek vazokonstriksiyon yaparak etki süresini uzatır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s29",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Spinal uygulama sonrası geçici nörolojik semptomları"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0135",
+       "ekran": "Mepivakain fötal karaciğerde yavaş metabolize olduğu ve fötal asidozda iyon tuzağına yakalandığı için epidural doğum anestezisinde önerilmez.",
+       "ses": "Mepivakain fötal karaciğerde yavaş metabolize olduğu ve fötal asidozda iyon tuzağına yakalandığı için epidural doğum anestezisinde önerilmez.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s29",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Spinal uygulama sonrası geçici nörolojik semptomları"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0136",
+       "ekran": "Prilokain amidler içinde en yüksek klerense sahip ajandır ancak toksik metaboliti orto-toluidinin yol açtığı methemoglobinemi riski kullanımını sınırlar.",
+       "ses": "Prilokain amidler içinde en yüksek klerense sahip ajandır ancak toksik metaboliti orto-toluidinin yol açtığı methemoglobinemi riski kullanımını sınırlar.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s29",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Spinal uygulama sonrası geçici nörolojik semptomları"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0137",
+       "ekran": "Ropivakain ise doğum ve postoperatif ağrıda motor bloğu zayıf, duyusal analjezisi güçlü olan ve kardiyotoksik potansiyeli bupivakaine göre belirgin düşük bir ajandır.",
+       "ses": "Ropivakain ise doğum ve postoperatif ağrıda motor bloğu zayıf, duyusal analjezisi güçlü olan ve kardiyotoksik potansiyeli bupivakaine göre belirgin düşük bir ajandır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s29",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Spinal uygulama sonrası geçici nörolojik semptomları"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0036",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "id": "k2-48-c0138",
+       "ekran": "Emla kremi iki katı maddenin eşit oranda birleşmesiyle oda sıcaklığında sıvılaşan ötektik bir lokal anestezik karışımıdır.",
+       "ses": "Emla kremi iki katı maddenin eşit oranda birleşmesiyle oda sıcaklığında sıvılaşan ötektik bir lokal anestezik karışımıdır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s30",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "Lokal anesteziklerin eşit yüzde oranlarda birleştirilmesini"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0139",
+       "ekran": "Yüzde iki virgül beş lidokain ve yüzde iki virgül beş prilokain içeren bu formülasyon çocuklarda damara iğne girmeden önce sağlam deriye sürülerek keratin tabakasından emilir.",
+       "ses": "Yüzde iki virgül beş lidokain ve yüzde iki virgül beş prilokain içeren bu formülasyon çocuklarda damara iğne girmeden önce sağlam deriye sürülerek keratin tabakasından emilir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s30",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "Lokal anesteziklerin eşit yüzde oranlarda birleştirilmesini"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0140",
+       "ekran": "Geleceğin ağrı tedavisinde lokal anesteziklerin lipozom ve biyolojik nanopartiküller içine hapsedilerek yavaş salıverilmesi hedeflenmektedir.",
+       "ses": "Geleceğin ağrı tedavisinde lokal anesteziklerin lipozom ve biyolojik nanopartiküller içine hapsedilerek yavaş salıverilmesi hedeflenmektedir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s30",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "Lokal anesteziklerin eşit yüzde oranlarda birleştirilmesini"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0141",
+       "ekran": "Böylece tek bir enjeksiyonla günlerce süren postoperatif analjezi sağlanması ve voltaj bağımlı kanalların selektif modülasyonu amaçlanmaktadır.",
+       "ses": "Böylece tek bir enjeksiyonla günlerce süren postoperatif analjezi sağlanması ve voltaj bağımlı kanalların selektif modülasyonu amaçlanmaktadır.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s30",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "Lokal anesteziklerin eşit yüzde oranlarda birleştirilmesini"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-48-p0037",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k2-48-c0142",
+       "ekran": "Lokal Anestezik İlaçlar dersimizin tüm farmakolojik prensiplerini ve klinik püf noktalarını başarıyla tamamlamış bulunuyoruz.",
+       "ses": "Lokal Anestezik İlaçlar dersimizin tüm farmakolojik prensiplerini ve klinik püf noktalarını başarıyla tamamlamış bulunuyoruz.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s30",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Beni dinlediğiniz için Teşekkür ederim Zakkum Nerium oleander"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0143",
+       "ekran": "Ders slaytımızın sonunda yer alan zakkum yani Nerium oleander bitkisi, sodyum potasyum pompasını inhibe eden kardiyak glikozitler içerdiğinden toksikolojide kritik bir örnektir.",
+       "ses": "Ders slaytımızın sonunda yer alan zakkum yani Nerium oleander bitkisi, sodyum potasyum pompasını inhibe eden kardiyak glikozitler içerdiğinden toksikolojide kritik bir örnektir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s30",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Beni dinlediğiniz için Teşekkür ederim Zakkum Nerium oleander"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-48-c0144",
+       "ekran": "Tıpkı lokal anestezik kardiyotoksisitesinde olduğu gibi miyokardiyal membran eksitabilitesi ve hücresel iyon dengesi insan hayatı için yaşamsal öneme sahiptir.",
+       "ses": "Tıpkı lokal anestezik kardiyotoksisitesinde olduğu gibi miyokardiyal membran eksitabilitesi ve hücresel iyon dengesi insan hayatı için yaşamsal öneme sahiptir.",
+       "tur": "anlatim",
+       "duzey": 1,
+       "slayt_adim": "k2-48-d-s30",
+       "vurgu": [],
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Beni dinlediğiniz için Teşekkür ederim Zakkum Nerium oleander"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "anahtar": "y25-k2-48-lokal-anestezik-ilaclar",
+ "donem": "2025-2026"
+}

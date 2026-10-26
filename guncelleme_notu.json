@@ -1,24 +1,25 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 364,
-  "baslik": "Kurul 2 Arşiv Tamamlama: Adrenoseptör Antagonist İlaçlar Yayında",
+  "onem": 365,
+  "baslik": "Kurul 2 Arşiv Tamamlama: Lokal Anestezik İlaçlar Kapsamlı Anlatımla Yayında (60. Ders)",
   "maddeler": [
-    "Kurul 2 Tıbbi Farmakoloji arşiv dersi 'Adrenoseptör Antagonist İlaçlar' (Ders 47) tam içerikle sisteme eklendi ve Oracle canlı ortamına alındı.",
-    "70 sayfalık amfi ders notunun tamamı sıfır bilgi kaybıyla 34 adımlık interaktif Öğren destesi, ders sonu oyunları ve EMA Lightning GPU seslendirmesiyle işlendi.",
-    "Moleküler adrenerjik farmakoloji, alfa ve beta blokör sınıflandırmaları, katekolamin sentezi ve hücresel sinyal yolaklarına yönelik canlı kontur çizimleri hazırlandı.",
-    "Oracle canlı ortamındaki aktif arşiv paketi sayısı 59'a ulaştı."
+    "Kurul 2 Tıbbi Farmakoloji arşiv dersi 'Lokal Anestezik İlaçlar' (Ders 48) sıfır bilgi kaybı ve tam amfi derinliği standardıyla sisteme eklendi ve Oracle canlı ortamına alındı.",
+    "37 sayfalık amfi ders notunun tamamı 144 cümle ve 2438 kelimelik zengin metinle (~18 dk kesintisiz EMA Lightning GPU seslendirmesi), 32 adımlık interaktif Öğren destesi ve ders sonu oyunlarıyla işlendi.",
+    "Klinik farmasötik preparatlar (Anestol, EMLA, Jetex, Lidestol, Lincaine, LMX-4), maksimal subkutan dozlar (Ultrakain, Citanest, Marcaine, Naropin), potens katsayıları, iyonizasyon eğrileri ve LAST tedavi protokolü eksiksiz kapsandı.",
+    "Şekil ve tablo slaytlarına yönelik 10 adet canlı kontur çizim şeması %100 kapsama oranıyla doğrulandı.",
+    "Oracle canlı ortamındaki aktif arşiv paketi sayısı 60'a ulaştı."
   ],
   "eklenen": [
-    "meds_database_25_26/medspak/kurul2/y25-k2-47-adrenoseptor-antagonist-ilaclar.medspak",
-    "meds_database_25_26/paketler/kurul2/y25-k2-47-adrenoseptor-antagonist-ilaclar.json",
-    "meds/data/arsiv_25_26/decks/k2p-y25-k2-47-adrenoseptor-antagonist-ilaclar.json"
+    "meds_database_25_26/medspak/kurul2/y25-k2-48-lokal-anestezik-ilaclar.medspak",
+    "meds_database_25_26/paketler/kurul2/y25-k2-48-lokal-anestezik-ilaclar.json",
+    "meds/data/arsiv_25_26/decks/k2p-y25-k2-48-lokal-anestezik-ilaclar.json"
   ],
   "degisen": [
     "meds/data/arsiv_25_26/sesli_anlatim/dersler.json",
     "meds/data/arsiv_25_26/sesli_anlatim/kayit.json"
   ],
   "duzeltilen": [
-    "Adrenoseptör antagonist ilaçlar dersinde şekil ve tablo sayfaları için canlı çizim (kontur) optimizasyonu tamamlandı"
+    "Mekanik 2 cümlelik yüzeysel şablon tamamen kaldırılarak amfi derinliğinde zengin içerik standardı (H70) kalıcı olarak getirildi"
   ],
   "silinen": []
 }
