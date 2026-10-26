@@ -268,7 +268,7 @@ def denetle(key: str, yazar: dict, sy: dict[str, Sayfa]) -> tuple[list[str], dic
                 hata.append(f"{y}: açıklama {len(a)} karakter ({A_ENAZ}–{A_ENCOK})")
             if "…" in a or "..." in a or not a.endswith((".", "!", "?")):
                 hata.append(f"{y}: açıklama tam cümleyle bitmeli (kesme yok)")
-            if len(re.findall(r"[.!?](?:\s|$)", a)) > 2:
+            if len(re.findall(r"[.!?](?=\s+[A-ZÇĞİÖŞÜ]|\s*$)", a)) > 2:
                 hata.append(f"{y}: açıklama en çok 2 cümle")
             if k == "karisan" and not str(x.get("f") or "").strip():
                 hata.append(f"{y}: karisan türünde karıştırılan terim (f) zorunlu")
