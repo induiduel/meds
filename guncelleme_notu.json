@@ -1,13 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 375,
-  "baslik": "Terim Yardımcısı: Gündelik Sözcükler Ayıklandı, 514 Yer Kaldırıldı",
+  "onem": 376,
+  "baslik": "Terim Yardımcısı: Gündelik Sözcükler Ayıklandı (Kök Neden Kaydı)",
   "maddeler": [
     "Bütün derslerde (Kurul 1, Kurul 2 ve arşiv) terim diye işaretlenmiş gündelik sözcükler kaldırıldı: büyüme, kanama, gelişim, sarılık, iyileşme gibi 514 işaret artık okuma ekranında çıkmıyor.",
     "Bu sözcükler tıbbi terim olmadığı için dokunulduğunda açıklama yerine yanıltıcı bilgi veriyordu; kaldırılmaları okumayı sadeleştirir.",
     "Enfeksiyon Epidemiyolojisi dersine konvelasan dönem portörlüğü, intrensek, ekzotoksin ve patojenlik eklendi (141 → 145).",
     "Ana Çocuk Sağlığı dersine lohusa, ana ölüm hızı, bebek ölüm hızı, çoğul gebelik ve doğum öncesi bakım eklendi (87 → 85, gündelik sözcükler çıkarıldı).",
-    "Terimler sayfasındaki ortak sözlüğe 9 yeni terim eklendi."
+    "Terimler sayfasındaki ortak sözlüğe 9 yeni terim eklendi.",
+    "Kök neden ve kalıcı önleme kuralı KURUL2_YAPILMAYACAK_HATALAR.md dosyasına H75 olarak işlendi."
   ],
   "eklenen": [
     "data/sesli_anlatim/terim/k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim.json",

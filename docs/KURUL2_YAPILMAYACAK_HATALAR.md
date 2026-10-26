@@ -637,3 +637,9 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** "CVS", "Fetoskopi", "Koryon villus biyopsisi", "PAPP-A", "İnvaziv yöntemler" terimleri slaytta açıkça yazdığı hâlde kapı "bu sayfanın metninde bulunamadı" HATAsı verdi.
 - **Kök neden:** Slaytlarda madde imi Wingdings "o" karakteridir ve PDF metnine kelimeye bitişik geliyor ("oCVS", "oFetoskopi", "oİnvaziv"). `TOK` bu birleşik diziyi tek kelime saydığı için "ocvs" üretiliyor, gerçek terim hiç eşleşmiyordu.
 - **Çözüm / kural:** `Sayfa` kelimeyi okurken baştaki "o" yalnız **ardından büyük harf geliyorsa** (madde imi kalıbı) ayrılır; kutu aynı kalır. Madde başındaki terimler de artık işaretlenir. Kapı gevşetilmedi.
+
+## H75 — Gündelik Türkçe sözcükler terim diye işaretlenmişti (2026-10-26, tüm dersler)
+- **Belirti:** Öğren ekranında "Büyüme", "Kanama", "Gelişim", "Sarılık", "İyileşme", "Kalp yetmezliği", "Bilinç" gibi gündelik sözcükler terim gibi altı çiziliyor, dokununca sözlük tanımı açılıyordu; okuma bölünüyordu.
+- **Kök neden:** Terim dosyalarının bir bölümü, `turkce_kokenli` kapısı eklenmeden önce `otomatik`/sözlük yolundan üretilmişti. Sözlükte bu sözcükler "terim" olarak kayıtlı olduğu için işaretlenmiş, kapı sonradan eklendiğinde dosyalar bir daha denetlenmediğinden canlıda kaldılar (kapı yalnız yeni yazımı denetliyor, var olan dosyayı taramıyordu).
+- **Kalıcı çözüm:** `terim_sozlugu.py ayikla [--yaz]` bütün terim dosyalarını (canlı + arşiv) tarayıp kapının reddettiği ögeleri çıkarır; terimi kalmayan sayfa/dosya kaydı silinir (hiçbir dosyada boş `t` dizisi bulunmaz). Bu turda 514 öge ayıklandı, kapı gevşetilmedi.
+- **Önleme kuralı:** Terim kapısı kuralı değiştiğinde yalnız yeni dosya değil, **tüm mevcut dosyalar** yeni kuralla yeniden taranır (`ayikla`), sonuç canlıya dağıtılır.
