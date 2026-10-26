@@ -68,7 +68,7 @@ function elementZoom(el: Element | null | undefined): number {
 
 const PdfDocView = lazy(() => import('../learn/pdf/PdfDocView'));
 import type { PdfMarks } from '../learn/pdf/PdfDocView';
-import { CdTerimKatman, TerimDugme, useTerimYardimci } from './CdTerimKatman';
+import { CdParagrafTerimleri, CdTerimKatman, PdfGorunumDugme, TerimDugme, usePdfGorunum } from './CdTerimKatman';
 
 const TAKIP_ARA = 8000;
 
@@ -1161,6 +1161,7 @@ const MetinListe = memo(function MetinListe({ detay, onTik, kamp = false }: { de
             <div key={p.i} className="cd-p-sar">
               <p data-i={p.i} className="cd-p" onClick={() => onTik(p.i)}><VurguluMetin metin={p.metin} v={detay.vurgu?.[p.i]} i={p.i} /></p>
               {detay.v2?.p[p.i] && <CdV2Maddeler i={p.i} cs={detay.v2.p[p.i]} deste={detay.v2.deste} />}
+              {detay.terim && <CdParagrafTerimleri detay={detay} i={p.i} metin={p.metin} />}
               <div className="cd-p-araclar">
                 <CdParagrafYildizDugme
                   dersKey={detay.key}
@@ -1513,23 +1514,8 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
     }
     return Object.keys(out).length ? out : null;
   }, [detay.isaret, gor.dosya]);
-  // Terim yardımcısı paneli slayt altına sığmazsa sayfa yalnız gerektiği kadar uzar (CdTerimKatman ölçer)
   const terimDosya = detay.terim?.[String(gor.dosya)] || null;
-  const terimAcik = useTerimYardimci();
-  const [terimEk, setTerimEk] = useState<Record<number, number>>({});
-  useEffect(() => { setTerimEk({}); }, [gor.dosya]);
-  const onTerimEk = useCallback((n: number, h: number) => {
-    setTerimEk((o) => ((o[n] || 0) === h ? o : { ...o, [n]: h }));
-  }, []);
-  const ekAltTum = useMemo(() => {
-    if (!terimAcik || !terimDosya) return ekAlt;
-    const out: Record<number, { h: number; renk?: string }> = { ...(ekAlt || {}) };
-    for (const [k, h] of Object.entries(terimEk)) {
-      const n = Number(k);
-      if (h > 0) out[n] = { h: (ekAlt?.[n]?.h || 0) + h, renk: ekAlt?.[n]?.renk };
-    }
-    return Object.keys(out).length ? out : null;
-  }, [ekAlt, terimEk, terimAcik, terimDosya]);
+  const gorunum = usePdfGorunum();
   // Kelime takibi yalnız işaret katmanında (useFocus): görüntüleyici cümle başına bir kez çizilir, kelimede yeniden çizilmez
   const marks = useMemo<PdfMarks | null>(() => {
     // Slayt aynıysa (gor.sayfa === isr.s) kullanıcı elle kaysa/durdursa bile işaret ve çizim gizlenmez (kullanıcı inceleyebilsin)
@@ -1548,9 +1534,22 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
     // H60 / H61: Çizim KESİNLİKLE yalnız o an okunan cümlenin kendi çizimidir (isr.z).
     // Sayfadaki tüm çizimler toplanamaz; aksi takdirde aynı anda 3 konum işaretlenir, iç içe çizgiler biner
     // ve her yeni cümleye geçildiğinde animasyon baştan tekrar oynar.
-    const cizim = ((isr as any).z || undefined) as PdfMarks['cizim'];
-    return { page: isr.s, kind: isr.t, lines: isr.l, words: ws.map((w) => w.slice(2)), useFocus, path: yol, useChar: yol || cizim?.length ? useChar : undefined, cizim };
-  }, [canli, durdu, isr, gor.dosya, gor.sayfa]);
+    let cizim = ((isr as any).z || undefined) as PdfMarks['cizim'];
+    // PDF görünüm anahtarları (2026-10-26): kapatılan işaretçi hiç çizilmez
+    if (!gorunum.tablo && isr.t === 'tablo') return null;
+    let lines = isr.l, words = ws.map((w) => w.slice(2)), path = yol;
+    if (!gorunum.resim) {
+      if (isr.t === 'resim') { lines = []; path = undefined; }
+      // resim üstü kontur/eğri/odak çizimi yok, yakınlaştırma yok
+      cizim = cizim?.filter((z) => z.tur !== 'kontur' && z.tur !== 'egri_faz' && !z.odak).map((z) => (z.yakin ? { ...z, yakin: undefined } : z));
+    }
+    if (!gorunum.iliski) cizim = cizim?.filter((z) => z.tur !== 'akis' && z.tur !== 'sema');
+    if (!gorunum.metin && isr.t !== 'resim') { lines = []; words = []; path = undefined; }
+    if (!gorunum.metin) words = [];
+    if (!cizim?.length) cizim = undefined;
+    if (!lines.length && !words.length && !path && !cizim) return null;
+    return { page: isr.s, kind: isr.t, lines, words, useFocus, path, useChar: path || cizim?.length ? useChar : undefined, cizim };
+  }, [canli, durdu, isr, gor.dosya, gor.sayfa, gorunum]);
 
   useEffect(() => { if (!durdu) setElle(null); }, [durdu]);
 
@@ -1594,10 +1593,10 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
       )}
       <SlideDrawingCanvas scope={`${cizimKok}:${n}`} controls={false} />
       {terimDosya?.[String(n)] && (
-        <CdTerimKatman sayfa={terimDosya[String(n)]} n={n} bas={ekAlt?.[n]?.h || 0} gizle={cizimAcik} onEk={onTerimEk} />
+        <CdTerimKatman sayfa={terimDosya[String(n)]} gizle={cizimAcik} />
       )}
     </React.Fragment>
-  ), [cizimKok, cikYer, cikSec, gor.dosya, terimDosya, ekAlt, cizimAcik, onTerimEk]);
+  ), [cizimKok, cikYer, cikSec, gor.dosya, terimDosya, cizimAcik]);
   const cikmisSec = useCallback((q: CdCikmisKonum | null) => {
     setCikSec(q);
     if (q) { setElle(null); durdur(); }
@@ -1623,6 +1622,7 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
         <span className="cd-grow" />
         {!!detay.cikmisKonum?.length && <CikmisKonumDugme liste={detay.cikmisKonum} secili={cikSec} onSec={cikmisSec} />}
         {terimDosya && <TerimDugme />}
+        <PdfGorunumDugme />
         <CizimDugme />
         <button type="button" className="cd-ib" onClick={undoLastDrawing} disabled={!geriAlinir} aria-label="Son çizimi geri al" title="Son çizimi geri al"><Undo2 /></button>
         <button type="button" className="cd-ib" onClick={() => setZoom((z) => Math.max(0.5, +(z - 0.25).toFixed(2)))} aria-label="Uzaklaştır"><Minus /></button>
@@ -1641,7 +1641,7 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
               highlight={cikYer && gor === cikYer ? [cikYer.sayfa, cikYer.sayfa] : canli && !durdu && es ? [hedef.sayfa, hedef.sayfa] : undefined}
               highlightLabel={cikYer && gor === cikYer ? `Çıkmış soru${cikSec?.yil ? ` · ${cikSec.yil}` : ''}` : 'Şu an anlatılan'}
               marks={marks}
-              notes={detay.ogrenciNot?.[String(gor.dosya)] || null}
+              notes={gorunum.not ? detay.ogrenciNot?.[String(gor.dosya)] || null : null}
               preload={preload}
               zoom={zoom}
               onZoom={setZoom}
@@ -1649,7 +1649,7 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
               onError={setHataMsj}
               fit="width"
               pageOverlay={pageOverlay}
-              ekAlt={ekAltTum}
+              ekAlt={gorunum.iliski ? ekAlt : null}
             />
           </Suspense>
         ) : (

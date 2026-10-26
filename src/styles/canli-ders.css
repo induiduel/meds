@@ -1148,10 +1148,9 @@
 .cd-trm-btn > svg { color: var(--color-accent); }
 .cd-trm-btn.is-on { border-color: var(--color-accent); color: var(--color-accent); background: color-mix(in srgb, var(--color-accent) 8%, var(--color-white)); }
 .cd-trm-kat { position: absolute; inset: 0; z-index: 6; pointer-events: none; }
-.cd-trm { position: absolute; pointer-events: auto; padding: 0; margin: 0; background: transparent; border: 0;
-  border-bottom: 1.5px dashed color-mix(in srgb, var(--color-accent) 75%, transparent); border-radius: 2px; cursor: help; }
-.cd-trm.is-karisan { border-bottom-color: color-mix(in srgb, var(--color-warn, #d97706) 85%, transparent); }
-.cd-trm:hover, .cd-trm[data-state="open"] { background: color-mix(in srgb, var(--color-accent) 12%, transparent); }
+.cd-trm { position: absolute; pointer-events: auto; padding: 0; margin: 0; border: 0; border-radius: 2px; cursor: help;
+  background: rgb(250 204 21 / .16); border-bottom: 1.5px dashed rgb(202 138 4 / .85); }
+.cd-trm:hover, .cd-trm[data-state="open"] { background: rgb(250 204 21 / .32); }
 .cd-trm:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }
 .cd-trm-kart { width: min(320px, calc(100vw - 32px)); padding: 12px 14px; border-radius: 12px; border: 1px solid var(--color-line);
   background: var(--color-white); box-shadow: 0 10px 30px rgb(0 0 0 / .14); font-size: 13.5px; line-height: 1.5; color: var(--color-ink); }
@@ -1164,12 +1163,21 @@
 .cd-trm-tur.is-latince { background: color-mix(in srgb, #7c3aed 12%, transparent); color: #7c3aed; }
 .cd-trm-tur.is-karisan { background: color-mix(in srgb, #d97706 14%, transparent); color: #b45309; }
 .cd-trm-tur.is-kisaltma { background: color-mix(in srgb, #0891b2 12%, transparent); color: #0e7490; }
-.cd-trm-panel { position: absolute; left: 3%; right: 3%; pointer-events: auto; display: grid; gap: 6px 14px;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); padding: 10px 12px; border-radius: 10px;
-  border: 1px solid var(--color-line); background: color-mix(in srgb, var(--color-white) 94%, var(--color-accent));
-  box-shadow: 0 2px 10px rgb(0 0 0 / .06); color: var(--color-ink); font-size: 12px; line-height: 1.42; }
-.cd-trm-oge { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-.cd-trm-oge-t { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-.cd-trm-oge-t > b { font-size: 12.5px; }
-.cd-trm-oge-a { color: var(--color-ink-2); }
-.cd-trm-oge-a i { color: var(--color-ink-3); }
+.cd-gor-btn > svg { color: var(--color-ink-2); }
+.cd-gor-btn.is-on { border-color: var(--color-accent); color: var(--color-accent); }
+.cd-gor-panel { width: 320px; padding: 10px; }
+.cd-gor-bas { font-size: 12px; font-weight: 700; color: var(--color-ink-3); text-transform: uppercase; letter-spacing: .04em; padding: 2px 4px 8px; }
+.cd-gor-oge { display: flex; align-items: center; gap: 12px; padding: 8px 6px; border-radius: 8px; cursor: pointer; }
+.cd-gor-oge:hover { background: var(--color-surface-2, rgb(0 0 0 / .04)); }
+.cd-gor-m { display: flex; flex-direction: column; flex: 1; min-width: 0; font-size: 13px; }
+.cd-gor-m small { color: var(--color-ink-3); font-size: 11.5px; line-height: 1.35; }
+.cd-gor-sw { appearance: none; width: 34px; height: 20px; border-radius: 999px; background: var(--color-line); position: relative; flex: none; cursor: pointer; transition: background .15s; }
+.cd-gor-sw::after { content: ''; position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; border-radius: 50%; background: #fff; box-shadow: 0 1px 2px rgb(0 0 0 / .2); transition: transform .15s; }
+.cd-gor-sw:checked { background: var(--color-accent); }
+.cd-gor-sw:checked::after { transform: translateX(14px); }
+.cd-gor-sw:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.cd-p-trm { margin: 6px 0 4px; padding: 8px 12px; border-left: 3px solid rgb(234 179 8 / .7); border-radius: 0 8px 8px 0;
+  background: rgb(250 204 21 / .07); display: grid; gap: 5px; font-size: .78em; line-height: 1.45; }
+.cd-p-trm-oge dt { font-weight: 700; display: inline-flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.cd-p-trm-oge dd { margin: 1px 0 0; color: var(--color-ink-2); }
+.cd-p-trm-oge dd i { color: var(--color-ink-3); }

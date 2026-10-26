@@ -1,26 +1,24 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 367,
-  "baslik": "Tüm AI Hatları Manuel Moda Alındı ve Öğrenci Drive Entegrasyonu Yayında",
+  "onem": 368,
+  "baslik": "Sesli Derste Terim Yardımcısı ve PDF Görünüm Anahtarları",
   "maddeler": [
-    "Kullanıcı talimatı doğrultusunda arka planda otonom çalışan tüm yapay zeka, LLM ve API süreçleri durduruldu; sistem tam manuel yönetim moduna geçirildi.",
-    "Öğrenci notları ve amfi ses kayıtlarının paylaşılacağı yeni Google Drive klasörü (17K7doMGg0xupQekTD5_Vz9xMXc5gd7BA) sisteme entegre edildi.",
-    "Ders işçisi ve izleyiciler manuel kontrol moduna alındı; yeni resmi okul PDF'leri yalnızca 'PDF görüldü, işlenmedi' olarak kayıt altına alınıyor.",
-    "Kullanıcı talimat verdiğinde öğrenci amfi sesleri/notları ile resmi hoca slaytlarını birlikte değerlendirip sentezleyen entegrasyon hattı ve yönetim API uçları (/api/admin/ogrenci-drive) devreye alındı.",
-    "Kurul 2 arşiv ve canlı ders iyileştirmeleri güncellendi."
+    "Sesli ders PDF çubuğuna 'Terimler' düğmesi eklendi: açıkken slayttaki tıbbi, Latince ve karıştırılabilir terimler hafif sarı ve kesikli altı çizili işaretlenir; dokununca anlamı kelimenin üstünde/altında açılır.",
+    "Terim açıklamaları konuşmacı metninde paragrafın altında da yazılır (seslendirilmez).",
+    "Yeni 'Görünüm' menüsü: canlı resim işaretçisi, tablo işaretçisi, kelime ilişki okları, metin vurgusu ve öğrenci/hoca vurgusu tek tek kapatılarak PDF sadeleştirilebilir."
   ],
   "eklenen": [
-    "scripts/ogrenci_drive/ogrenci_drive.py",
-    "src/services/ogrenciDriveRoutes.ts"
+    "src/components/canliDers/CdTerimKatman.tsx",
+    "scripts/sesli_anlatim/terim_sozlugu.py",
+    "scripts/sesli_anlatim/TALIMAT_TERIM.md"
   ],
   "degisen": [
-    "scripts/agents/watchdog.py",
-    "scripts/ders_isci/ayarlar.py",
-    "scripts/pipeline/config.mjs",
-    "server.ts"
+    "src/components/canliDers/CanliDersDers.tsx",
+    "src/styles/canli-ders.css",
+    "src/services/canliDers.ts",
+    "otomasyon/ders_zinciri.py",
+    "otomasyon/hat.json"
   ],
-  "duzeltilen": [
-    "Otonom arka plan süreçlerinin kontrolsüz API çağırması engellendi, manuel yönetim sağlandı."
-  ],
+  "duzeltilen": [],
   "silinen": []
 }
